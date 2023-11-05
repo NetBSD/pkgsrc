@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6654 2023/11/05 13:44:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6655 2023/11/05 15:17:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9645,3 +9645,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py27-cffi version 1.15.1 [wiz 2023-11-05]
 	Updated shells/oh-my-posh to 18.23.2 [pin 2023-11-05]
 	Updated devel/py-cffi to 1.16.0nb1 [wiz 2023-11-05]
+	Updated ham/rtl-sdr to 2.0.1 [gdt 2023-11-05]
