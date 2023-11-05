@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/17 10:44:49 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/11/05 23:52:20 wiz Exp $
 
-BLAKE2s (biopython-1.79.tar.gz) = ec26a4018cb514124d11a3c1beed6c995738b2016f044e2e3ca9691fe01dc44a
-SHA512 (biopython-1.79.tar.gz) = 81e2718f4015bb038637b4d1181e6bea48018fec1e769c5f0ab75442a769336899191f1222e82e1b9569c1fac470500d7582420e5cbe9bce0056b41751adeaaa
-Size (biopython-1.79.tar.gz) = 16738730 bytes
+BLAKE2s (biopython-1.81.tar.gz) = dbd9c3cab115b2b20dd320fd20e2c686681cbef4381d758b291b5643e9ba86ef
+SHA512 (biopython-1.81.tar.gz) = 1595fad6631bfb6cf4e1a92ed72e6093e2a0c24f3c0bd4182267ec9742fb03dff16099eedde139598aa6b5b8380bbac9e48246cb9ab8b44109333d60adfd00ed
+Size (biopython-1.81.tar.gz) = 19324875 bytes
