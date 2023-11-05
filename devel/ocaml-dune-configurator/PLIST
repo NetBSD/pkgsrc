@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/10 08:49:18 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/05 21:28:13 jaapb Exp $
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmi
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmt
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmti
@@ -45,3 +45,4 @@ ${OCAML_SITELIB}/dune-configurator/v1.mli
 share/doc/dune-configurator/CHANGES.md
 share/doc/dune-configurator/LICENSE.md
 share/doc/dune-configurator/README.md
+share/doc/dune-configurator/odoc-pages/index.mld
