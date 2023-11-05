@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/05 00:43:09 wiz Exp $
 ${PYSITELIB}/hamcrest/__init__.py
 ${PYSITELIB}/hamcrest/__init__.pyc
 ${PYSITELIB}/hamcrest/__init__.pyo
@@ -29,6 +29,9 @@ ${PYSITELIB}/hamcrest/core/core/anyof.pyo
 ${PYSITELIB}/hamcrest/core/core/described_as.py
 ${PYSITELIB}/hamcrest/core/core/described_as.pyc
 ${PYSITELIB}/hamcrest/core/core/described_as.pyo
+${PYSITELIB}/hamcrest/core/core/future.py
+${PYSITELIB}/hamcrest/core/core/future.pyc
+${PYSITELIB}/hamcrest/core/core/future.pyo
 ${PYSITELIB}/hamcrest/core/core/is_.py
 ${PYSITELIB}/hamcrest/core/core/is_.pyc
 ${PYSITELIB}/hamcrest/core/core/is_.pyo
