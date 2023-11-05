@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/05 09:26:47 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -72,6 +72,9 @@ ${PYSITELIB}/pypdf/_version.pyo
 ${PYSITELIB}/pypdf/_writer.py
 ${PYSITELIB}/pypdf/_writer.pyc
 ${PYSITELIB}/pypdf/_writer.pyo
+${PYSITELIB}/pypdf/_xobj_image_helpers.py
+${PYSITELIB}/pypdf/_xobj_image_helpers.pyc
+${PYSITELIB}/pypdf/_xobj_image_helpers.pyo
 ${PYSITELIB}/pypdf/annotations/__init__.py
 ${PYSITELIB}/pypdf/annotations/__init__.pyc
 ${PYSITELIB}/pypdf/annotations/__init__.pyo
@@ -114,6 +117,9 @@ ${PYSITELIB}/pypdf/generic/_rectangle.pyo
 ${PYSITELIB}/pypdf/generic/_utils.py
 ${PYSITELIB}/pypdf/generic/_utils.pyc
 ${PYSITELIB}/pypdf/generic/_utils.pyo
+${PYSITELIB}/pypdf/generic/_viewerpref.py
+${PYSITELIB}/pypdf/generic/_viewerpref.pyc
+${PYSITELIB}/pypdf/generic/_viewerpref.pyo
 ${PYSITELIB}/pypdf/pagerange.py
 ${PYSITELIB}/pypdf/pagerange.pyc
 ${PYSITELIB}/pypdf/pagerange.pyo
