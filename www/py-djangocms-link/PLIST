@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2021/01/16 09:58:24 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/11/05 11:06:45 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/djangocms_link/__init__.py
 ${PYSITELIB}/djangocms_link/__init__.pyc
 ${PYSITELIB}/djangocms_link/__init__.pyo
@@ -249,6 +248,9 @@ ${PYSITELIB}/djangocms_link/migrations/0014_link_file_link.pyo
 ${PYSITELIB}/djangocms_link/migrations/0015_auto_20190621_0407.py
 ${PYSITELIB}/djangocms_link/migrations/0015_auto_20190621_0407.pyc
 ${PYSITELIB}/djangocms_link/migrations/0015_auto_20190621_0407.pyo
+${PYSITELIB}/djangocms_link/migrations/0016_alter_link_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_link/migrations/0016_alter_link_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_link/migrations/0016_alter_link_cmsplugin_ptr.pyo
 ${PYSITELIB}/djangocms_link/migrations/__init__.py
 ${PYSITELIB}/djangocms_link/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_link/migrations/__init__.pyo
