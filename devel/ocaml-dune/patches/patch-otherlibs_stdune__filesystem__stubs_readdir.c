@@ -1,9 +1,7 @@
-$NetBSD: patch-src_dune__filesystem__stubs_readdir.c,v 1.1 2022/03/26 23:19:32 tnn Exp $
+$NetBSD: patch-otherlibs_stdune__filesystem__stubs_readdir.c,v 1.1 2023/11/05 21:26:42 jaapb Exp $
 
-no DT_REG on SunOS
-
---- src/dune_filesystem_stubs/readdir.c.orig	2022-01-26 15:17:00.000000000 +0000
-+++ src/dune_filesystem_stubs/readdir.c
+--- otherlibs/stdune/dune_filesystem_stubs/readdir.c.orig	2023-10-09 11:08:29.000000000 +0000
++++ otherlibs/stdune/dune_filesystem_stubs/readdir.c
 @@ -18,7 +18,7 @@ typedef struct dirent directory_entry;
  value val_file_type(int typ) {
    switch(typ)
@@ -13,7 +11,7 @@ no DT_REG on SunOS
     case DT_REG:
        return Val_int(0);
      case DT_DIR:
-@@ -59,7 +59,7 @@ CAMLprim value caml__dune_filesystem_stu
+@@ -64,7 +64,7 @@ CAMLprim value caml__dune_filesystem_stu
    v_filename = caml_copy_string(e->d_name);
    v_tuple = caml_alloc_small(2, 0);
    Field(v_tuple, 0) = v_filename;
