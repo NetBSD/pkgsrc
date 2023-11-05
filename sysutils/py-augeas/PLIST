@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/02/12 12:21:00 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/11/05 13:30:44 wiz Exp $
 ${PYSITELIB}/augeas.py
 ${PYSITELIB}/augeas.pyc
 ${PYSITELIB}/augeas.pyo
@@ -13,3 +8,9 @@ ${PYSITELIB}/augeas/__init__.pyo
 ${PYSITELIB}/augeas/ffi.py
 ${PYSITELIB}/augeas/ffi.pyc
 ${PYSITELIB}/augeas/ffi.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
