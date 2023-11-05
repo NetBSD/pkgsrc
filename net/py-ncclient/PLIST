@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2021/03/07 07:46:01 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2023/11/05 22:40:01 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ncclient/__init__.py
 ${PYSITELIB}/ncclient/__init__.pyc
 ${PYSITELIB}/ncclient/__init__.pyo
@@ -175,6 +176,9 @@ ${PYSITELIB}/ncclient/transport/third_party/junos/ioproc.pyo
 ${PYSITELIB}/ncclient/transport/third_party/junos/parser.py
 ${PYSITELIB}/ncclient/transport/third_party/junos/parser.pyc
 ${PYSITELIB}/ncclient/transport/third_party/junos/parser.pyo
+${PYSITELIB}/ncclient/transport/tls.py
+${PYSITELIB}/ncclient/transport/tls.pyc
+${PYSITELIB}/ncclient/transport/tls.pyo
 ${PYSITELIB}/ncclient/xml_.py
 ${PYSITELIB}/ncclient/xml_.pyc
 ${PYSITELIB}/ncclient/xml_.pyo
