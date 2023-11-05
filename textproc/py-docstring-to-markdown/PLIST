@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/06 09:45:03 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/11/05 09:49:49 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/docstring_to_markdown/__init__.py
 ${PYSITELIB}/docstring_to_markdown/__init__.pyc
 ${PYSITELIB}/docstring_to_markdown/__init__.pyo
+${PYSITELIB}/docstring_to_markdown/google.py
+${PYSITELIB}/docstring_to_markdown/google.pyc
+${PYSITELIB}/docstring_to_markdown/google.pyo
 ${PYSITELIB}/docstring_to_markdown/py.typed
 ${PYSITELIB}/docstring_to_markdown/rst.py
 ${PYSITELIB}/docstring_to_markdown/rst.pyc
