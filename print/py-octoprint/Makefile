@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/05 22:34:51 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-octoprint-1.6.1
@@ -15,7 +15,7 @@ LICENSE=	gnu-agpl-v3
 
 RCD_SCRIPTS=	octoprint
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.1:../../devel/py-cachelib
