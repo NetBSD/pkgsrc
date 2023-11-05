@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/08/24 20:15:11 wiz Exp $
+$NetBSD: distinfo,v 1.11 2023/11/05 01:07:23 wiz Exp $
 
-BLAKE2s (readme_renderer-41.0.tar.gz) = 46b8f71147148ed24ec088db1716612a598b1829dbc606ecf03747f597cb47a4
-SHA512 (readme_renderer-41.0.tar.gz) = 1c40084d75b864d942ea698efdae44ae33046bcdd1515afc78274ae1c5c3a921e19fe709feef1c6e7c1b14a26a1e2fc0c02e16e8476611a036a3e74f50dbea44
-Size (readme_renderer-41.0.tar.gz) = 32420 bytes
+BLAKE2s (readme_renderer-42.0.tar.gz) = c299f1b4f92f3ce44c215c19d9fe17664a29891746fb7193f90c4dfa03dee2e0
+SHA512 (readme_renderer-42.0.tar.gz) = 76d78fb2d92faa581679691feeb3cec50ef518417c6c1f187527209ac995f549b4de4b38c7449d1e4dfa7b93d30bfd599db7d01e5e5228c00a24261b0421ce66
+Size (readme_renderer-42.0.tar.gz) = 31532 bytes
