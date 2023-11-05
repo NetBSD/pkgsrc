@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/08/01 23:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/05 23:37:50 wiz Exp $
 
 DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://deeplearning.net/software/theano/
 COMMENT=	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
@@ -28,16 +29,11 @@ REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} theano-cache theano-cache-${PYVERSSUFFIX} && \
 	${MV} theano-nose theano-nose-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC}/theano && pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
