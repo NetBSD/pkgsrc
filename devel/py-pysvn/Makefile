@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/10/24 22:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/11/05 23:39:44 wiz Exp $
 
 VERS=		1.9.15
 DISTNAME=	pysvn-${VERS}
@@ -25,6 +25,8 @@ SUBST_VARS.path+=	PREFIX
 
 PYSETUPCONFIGARGS=	--verbose --pycxx-dir="../Import/pycxx-7.1.5"
 PYLIBVER=		${PYVERSSUFFIX:S/./_/g}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 INSTALLATION_DIRS+=	${PYSITELIB}/pysvn
 
