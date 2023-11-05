@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 07:57:06 kleink Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/05 13:42:01 wiz Exp $
 
 DISTNAME=	WeasyPrint-0.42.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	pango-[0-9]*:../../devel/pango
 DEPENDS+=	${PYPKGPREFIX}-cairosvg>=1.0.20<2:../../converters/py27-cairosvg
 DEPENDS+=	${PYPKGPREFIX}-cairocffi>=0.5:../../graphics/py-cairocffi
-DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py27-cffi
 DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.1:../../textproc/py27-cssselect2
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-pdfrw>=0.4:../../textproc/py-pdfrw
