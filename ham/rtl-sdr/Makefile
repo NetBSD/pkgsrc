@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2023/11/02 22:11:05 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/05 15:15:37 gdt Exp $
 
 DISTNAME=		rtl-sdr-2.0.0
 CATEGORIES=		ham
-MASTER_SITES=		${MASTER_SITE_GITHUB:=osmcocom/}
-GITHUB_TAG=		refs/tags/${PKGVERSION_NOREV}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=osmocom/}
+GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
 # There are multiple upstreams:
 #   https://gitea.osmocom.org/sdr/rtl-sdr/ (official sources)
 #   https://github.com/osmocom/rtl-sdr (official mirror)
