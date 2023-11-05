@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6652 2023/11/05 13:36:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6653 2023/11/05 13:38:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9643,3 +9643,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-augeas to 1.1.0nb9 [wiz 2023-11-05]
 	Updated sysutils/py-xattr to 0.10.1nb1 [wiz 2023-11-05]
 	Added devel/py27-cffi version 1.15.1 [wiz 2023-11-05]
+	Updated shells/oh-my-posh to 18.23.2 [pin 2023-11-05]
