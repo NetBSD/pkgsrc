@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/10/24 22:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/11/05 23:38:59 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 PKGREVISION=	6
@@ -18,7 +18,7 @@ PY_PATCHPLIST=		YES
 REPLACE_PYTHON=		tools/hook-scripts/mailer/mailer.py
 PYTHON_SELF_CONFLICT=	YES
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # typing
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 BUILD_TARGET=		swig-py
 INSTALL_TARGET=		install-swig-py
