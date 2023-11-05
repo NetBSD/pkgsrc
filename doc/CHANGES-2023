@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6670 2023/11/05 22:14:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6671 2023/11/05 22:23:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9661,3 +9661,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ocaml-lwt to 5.7.0 [jaapb 2023-11-05]
 	Updated devel/swagger-codegen to 3.0.50 [schmonz 2023-11-05]
 	Removed sysutils/py-pathtools [wiz 2023-11-05]
+	Updated sysutils/py-eliot to 1.15.0 [wiz 2023-11-05]
