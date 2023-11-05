@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.29 2023/11/05 18:04:20 nia Exp $
+# $NetBSD: hacks.mk,v 1.30 2023/11/05 18:18:46 nia Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -63,7 +63,8 @@ CFLAGS+=	-fno-reorder-blocks
 # of XCode (pkgsrc also contains this hack, in mk/). However,
 # very old versions of Darwin use GCC 4 which doesn't understand
 # this command line argument.
-.if ${OPSYS} == "Darwin" && empty(PKGSRC_COMPILER:M*clang*)
+.if ${OPSYS} == "Darwin" && ${CC_VERSION:Mgcc-*}
+PKG_HACKS+=	old-darwin-gcc
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 .endif
 
