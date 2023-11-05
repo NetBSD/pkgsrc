@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2023/09/28 15:47:39 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/05 11:09:14 wiz Exp $
 
 DISTNAME=	msgpack-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgpack/}
 
@@ -10,15 +11,12 @@ HOMEPAGE=	https://msgpack.org/
 COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++
 
-DISTUTILS_BUILDDIR_IN_TEST_ENV=		yes
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
-
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
