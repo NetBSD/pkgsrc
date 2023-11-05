@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6677 2023/11/05 23:27:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6678 2023/11/05 23:38:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9668,3 +9668,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-foolscap to 21.7.0nb3 [wiz 2023-11-05]
 	Updated math/py-pandas-datareader to 0.10.0nb1 [wiz 2023-11-05]
 	Removed math/py-astropy-helpers [wiz 2023-11-05]
+	Updated math/py-Theano to 1.0.4nb4 [wiz 2023-11-05]
