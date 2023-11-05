@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/05 17:51:31 bacon Exp $
+
+BLAKE2s (bcbio-gff-0.7.0.tar.gz) = cd9552901386757d625b2bcef204c6aba12f9219727aff4e866e9c0cb10904fb
+SHA512 (bcbio-gff-0.7.0.tar.gz) = 3251c31e714633e0ea97c2114392563051e4076ded1754c3064c2f79fcc108fffe80f76a49a711032c6871829f87548b4fc8b328a0ea272ec51fe41c6f85a356
+Size (bcbio-gff-0.7.0.tar.gz) = 20041 bytes
