@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/16 19:21:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/11/05 00:45:21 wiz Exp $
 
-BLAKE2s (pilkit-2.0.tar.gz) = de1e2a6d12891aa8359a1eff652447ccbe3191bf7579d19ca215f3c3fb284695
-SHA512 (pilkit-2.0.tar.gz) = 7618d7de125f2813b25d707b02b70ca9cb4e19105ed0eb3be3ff6b926a812ed2a609e54f8e86535641fc4baef265fae58d70290c14011eeea744e90066b7bdae
-Size (pilkit-2.0.tar.gz) = 161137 bytes
-SHA1 (patch-setup.py) = 529ed84d7770f103037ce46d6f998304bcbf7a80
+BLAKE2s (pilkit-3.0.tar.gz) = 602bbf3b365241e5f91ed09abd51d9c9597440053f9580fff2b172b323566fe5
+SHA512 (pilkit-3.0.tar.gz) = 07f85bcd0b8f429429cbc6c9e0d302c526200f53915757b6fe1f8ef3d1653dfedf96b6af25a5ed32d7cae5b2ee62f54b9e7cdf713302b66d78fc82340cb7ea10
+Size (pilkit-3.0.tar.gz) = 402342 bytes
