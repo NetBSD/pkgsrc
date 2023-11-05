@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1765 2023/11/02 02:35:00 pho Exp $
+# $NetBSD: Makefile,v 1.1766 2023/11/05 01:04:58 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -853,6 +853,7 @@ SUBDIR+=	py-nbclassic
 SUBDIR+=	py-nbclient
 SUBDIR+=	py-nbconvert
 SUBDIR+=	py-nbformat
+SUBDIR+=	py-nh3
 SUBDIR+=	py-notebook
 SUBDIR+=	py-notebook_shim
 SUBDIR+=	py-parsel
