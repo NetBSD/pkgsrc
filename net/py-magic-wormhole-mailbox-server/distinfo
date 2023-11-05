@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2022/11/14 19:01:21 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/11/05 22:45:48 wiz Exp $
 
 BLAKE2s (magic-wormhole-mailbox-server-0.4.1.tar.gz) = dff245eb1ef6cbda843b096749ca23f87444cc2cd6bed57b4b6d63e3c8f1e3f0
 SHA512 (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 17e66d61589b2a9620d56a4df82489d0c9aad40b6d61ff89c6b44e2ab96f8f4f12849879d5950025cbc7a657a2cd6f1afb36505adad52566f57571de645b70a4
 Size (magic-wormhole-mailbox-server-0.4.1.tar.gz) = 64830 bytes
 SHA1 (patch-setup.py) = 60b8b1061834f328dc866a716962f628484744cf
+SHA1 (patch-versioneer.py) = f9c50d788d018ca4aa50d421939a7b6e3b784c40
