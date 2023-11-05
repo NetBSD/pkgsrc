@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2023/09/27 15:09:43 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2023/11/05 11:09:14 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/msgpack/__init__.py
 ${PYSITELIB}/msgpack/__init__.pyc
 ${PYSITELIB}/msgpack/__init__.pyo
 ${PYSITELIB}/msgpack/_cmsgpack.cpp
 ${PYSITELIB}/msgpack/_cmsgpack.pyx
-${PLIST.py3x}${PYSITELIB}/msgpack/_cmsgpack.so
+${PYSITELIB}/msgpack/_cmsgpack.so
 ${PYSITELIB}/msgpack/_packer.pyx
 ${PYSITELIB}/msgpack/_unpacker.pyx
 ${PYSITELIB}/msgpack/buff_converter.h
