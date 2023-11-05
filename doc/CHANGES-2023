@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6627 2023/11/05 00:45:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6628 2023/11/05 00:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9618,3 +9618,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-cycler to 0.12.1 [wiz 2023-11-05]
 	Updated devel/py-hamcrest to 2.1.0 [wiz 2023-11-05]
 	Updated graphics/py-pilkit to 3.0 [wiz 2023-11-05]
+	Updated textproc/libuninameslist to 20230916 [wiz 2023-11-05]
