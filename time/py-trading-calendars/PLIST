@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/06 23:33:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/05 20:31:16 wiz Exp $
 bin/tcal-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/trading_calendars/__init__.py
 ${PYSITELIB}/trading_calendars/__init__.pyc
 ${PYSITELIB}/trading_calendars/__init__.pyo
@@ -72,6 +72,9 @@ ${PYSITELIB}/trading_calendars/exchange_calendar_xcse.pyo
 ${PYSITELIB}/trading_calendars/exchange_calendar_xdub.py
 ${PYSITELIB}/trading_calendars/exchange_calendar_xdub.pyc
 ${PYSITELIB}/trading_calendars/exchange_calendar_xdub.pyo
+${PYSITELIB}/trading_calendars/exchange_calendar_xetr.py
+${PYSITELIB}/trading_calendars/exchange_calendar_xetr.pyc
+${PYSITELIB}/trading_calendars/exchange_calendar_xetr.pyo
 ${PYSITELIB}/trading_calendars/exchange_calendar_xfra.py
 ${PYSITELIB}/trading_calendars/exchange_calendar_xfra.pyc
 ${PYSITELIB}/trading_calendars/exchange_calendar_xfra.pyo
@@ -156,6 +159,9 @@ ${PYSITELIB}/trading_calendars/exchange_calendar_xsto.pyo
 ${PYSITELIB}/trading_calendars/exchange_calendar_xswx.py
 ${PYSITELIB}/trading_calendars/exchange_calendar_xswx.pyc
 ${PYSITELIB}/trading_calendars/exchange_calendar_xswx.pyo
+${PYSITELIB}/trading_calendars/exchange_calendar_xtae.py
+${PYSITELIB}/trading_calendars/exchange_calendar_xtae.pyc
+${PYSITELIB}/trading_calendars/exchange_calendar_xtae.pyo
 ${PYSITELIB}/trading_calendars/exchange_calendar_xtai.py
 ${PYSITELIB}/trading_calendars/exchange_calendar_xtai.pyc
 ${PYSITELIB}/trading_calendars/exchange_calendar_xtai.pyo
@@ -171,6 +177,9 @@ ${PYSITELIB}/trading_calendars/exchange_calendar_xwar.pyo
 ${PYSITELIB}/trading_calendars/exchange_calendar_xwbo.py
 ${PYSITELIB}/trading_calendars/exchange_calendar_xwbo.pyc
 ${PYSITELIB}/trading_calendars/exchange_calendar_xwbo.pyo
+${PYSITELIB}/trading_calendars/lunisolar_holidays.py
+${PYSITELIB}/trading_calendars/lunisolar_holidays.pyc
+${PYSITELIB}/trading_calendars/lunisolar_holidays.pyo
 ${PYSITELIB}/trading_calendars/precomputed_trading_calendar.py
 ${PYSITELIB}/trading_calendars/precomputed_trading_calendar.pyc
 ${PYSITELIB}/trading_calendars/precomputed_trading_calendar.pyo
@@ -189,18 +198,12 @@ ${PYSITELIB}/trading_calendars/us_holidays.pyo
 ${PYSITELIB}/trading_calendars/utils/__init__.py
 ${PYSITELIB}/trading_calendars/utils/__init__.pyc
 ${PYSITELIB}/trading_calendars/utils/__init__.pyo
-${PYSITELIB}/trading_calendars/utils/compat.py
-${PYSITELIB}/trading_calendars/utils/compat.pyc
-${PYSITELIB}/trading_calendars/utils/compat.pyo
 ${PYSITELIB}/trading_calendars/utils/memoize.py
 ${PYSITELIB}/trading_calendars/utils/memoize.pyc
 ${PYSITELIB}/trading_calendars/utils/memoize.pyo
 ${PYSITELIB}/trading_calendars/utils/pandas_utils.py
 ${PYSITELIB}/trading_calendars/utils/pandas_utils.pyc
 ${PYSITELIB}/trading_calendars/utils/pandas_utils.pyo
-${PYSITELIB}/trading_calendars/utils/preprocess.py
-${PYSITELIB}/trading_calendars/utils/preprocess.pyc
-${PYSITELIB}/trading_calendars/utils/preprocess.pyo
 ${PYSITELIB}/trading_calendars/weekday_calendar.py
 ${PYSITELIB}/trading_calendars/weekday_calendar.pyc
 ${PYSITELIB}/trading_calendars/weekday_calendar.pyo
