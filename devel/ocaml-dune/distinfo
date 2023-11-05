@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2022/03/26 23:19:32 tnn Exp $
+$NetBSD: distinfo,v 1.11 2023/11/05 21:26:41 jaapb Exp $
 
-BLAKE2s (dune-2.9.3.tar.gz) = ac5f47b68db9e3055f112bcff7966b781bf7eaedd904fcc5ea28aa98f400a5de
-SHA512 (dune-2.9.3.tar.gz) = df6e06a9beebf41f3ed375384be781b5c87c7949048995cc0bbad13dd65c96bd8b27415cd41e43b1112bd86524a59a7dd418e14b5c72b4f1f8fd4ac5ca2d1494
-Size (dune-2.9.3.tar.gz) = 1387667 bytes
-SHA1 (patch-src_dune__filesystem__stubs_readdir.c) = 6cd667bfccc81ebcaddd8a36d55728c7e63233fd
+BLAKE2s (dune-3.11.1.tar.gz) = 3e657f115bcd7fca087a8dfff9a3a95802bf955626d4925445f2c54dd6172faa
+SHA512 (dune-3.11.1.tar.gz) = 8d2eef71ae04a95b1d69784311726cafc3b275e1f202851eb116d6e7740015ce2453ec00278ef3b28c0b1544b10dbff36d942b063d7bb0ebc0a03a9a5f8261d4
+Size (dune-3.11.1.tar.gz) = 2753844 bytes
+SHA1 (patch-otherlibs_stdune__filesystem__stubs_readdir.c) = 35b116317b5dcca85fe62467544e71935720bc69
