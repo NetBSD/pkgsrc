@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6643 2023/11/05 11:01:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6644 2023/11/05 11:09:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9634,3 +9634,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-werkzeug to 3.0.1 [wiz 2023-11-05]
 	Updated www/py-werkzeug-docs to 3.0.1 [wiz 2023-11-05]
 	Updated sysutils/wmbattery to 2.54nb2 [wiz 2023-11-05]
+	Updated devel/py-msgpack to 1.0.7nb1 [wiz 2023-11-05]
