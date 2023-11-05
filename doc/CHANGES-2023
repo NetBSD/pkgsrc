@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6665 2023/11/05 21:08:33 jaapb Exp $
+$NetBSD: CHANGES-2023,v 1.6666 2023/11/05 21:26:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9656,3 +9656,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-jsonrpc-server to 0.4.0nb2 [wiz 2023-11-05]
 	Updated devel/ocaml-csexp to 1.5.2 [jaapb 2023-11-05]
 	Updated misc/ocaml-topkg to 1.0.7 [jaapb 2023-11-05]
+	Updated devel/ocaml-dune to 3.11.1 [jaapb 2023-11-05]
