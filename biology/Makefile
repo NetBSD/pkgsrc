@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/11/05 17:55:08 bacon Exp $
+# $NetBSD: Makefile,v 1.98 2023/11/05 17:59:52 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -47,6 +47,7 @@ SUBDIR+=	igv
 SUBDIR+=	kallisto
 SUBDIR+=	lucy
 SUBDIR+=	maeparser
+SUBDIR+=	microsynteny-tools
 SUBDIR+=	miniasm
 SUBDIR+=	minimap2
 SUBDIR+=	molsketch
