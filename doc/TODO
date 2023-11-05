@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23560 2023/11/05 16:59:49 fcambus Exp $
+$NetBSD: TODO,v 1.23561 2023/11/05 21:03:54 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1022,7 +1022,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-29.1
 	o ocaml-5.1
 	o ocaml-cppo-1.6.9
-	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
 	o ocaml-dune-3.11.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
