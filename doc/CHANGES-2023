@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6672 2023/11/05 22:40:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6673 2023/11/05 22:43:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9663,3 +9663,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed sysutils/py-pathtools [wiz 2023-11-05]
 	Updated sysutils/py-eliot to 1.15.0 [wiz 2023-11-05]
 	Updated net/py-ncclient to 0.6.15 [wiz 2023-11-05]
+	Updated net/py-magic-wormhole-transit-relay to 0.2.1nb3 [wiz 2023-11-05]
