@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/18 05:37:40 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/11/05 22:22:55 wiz Exp $
 
-BLAKE2s (eliot-1.14.0.tar.gz) = ce0e4f821a4b99990260caea9686123ee0653da57cf32e4acb101f0fb02befa9
-SHA512 (eliot-1.14.0.tar.gz) = 58b458e921751fe67b1b9f80d6e56ee6f057a02d0f041f65f8542c2cf27988a2e6a43fb87840a7d5f4d79958b9dd61ae2e914e200a2e006ddce7ba83c3db7501
-Size (eliot-1.14.0.tar.gz) = 157192 bytes
+BLAKE2s (eliot-1.15.0.tar.gz) = dd7ecb25a590cc28849109c943ef1d7f15496d2ce3fbe1be33cdd01403b807b0
+SHA512 (eliot-1.15.0.tar.gz) = 325ac5485f3aa4e1c8462c2c33c3af4c67aee984a2515e1c0ccf100504e7462891769cdbc329dd53d2dae59d6bf18825eb92f4da20eabd183b6a913a9df1a347
+Size (eliot-1.15.0.tar.gz) = 721992 bytes
