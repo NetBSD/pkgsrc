@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.58 2022/11/23 13:15:02 jperkin Exp $
+# $NetBSD: plist.mk,v 1.59 2023/11/05 08:23:31 pho Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -72,13 +72,16 @@ PLIST_SRC_DFLT+=	${PKGDIR}/${f}
 #
 # If the following 3 conditions hold, then fail the package build:
 #
-#    (1) The package doesn't set PLIST_SRC.
-#    (2) The package doesn't set GENERATE_PLIST.
-#    (3) There are no PLIST files.
+#    (1) The package doesn't set PLIST_TYPE to dynamic.
+#    (2) The package doesn't set PLIST_SRC.
+#    (3) The package doesn't set GENERATE_PLIST.
+#    (4) There are no PLIST files.
 #
-.if !defined(PLIST_SRC) && !defined(GENERATE_PLIST)
-.  if !defined(PLIST_SRC_DFLT) || empty(PLIST_SRC_DFLT)
+.if ${PLIST_TYPE} == "static"
+.  if !defined(PLIST_SRC) && !defined(GENERATE_PLIST)
+.    if !defined(PLIST_SRC_DFLT) || empty(PLIST_SRC_DFLT)
 PKG_FAIL_REASON+=      "Missing PLIST file or PLIST/GENERATE_PLIST definition."
+.    endif
 .  endif
 .endif
 
@@ -245,12 +248,7 @@ _PLIST_IGNORE_CMD=							\
 _GENERATE_PLIST=							\
 	${FIND} ${DESTDIR}${PREFIX} \! -type d -print | ${SORT} |	\
 		${SED} -e "s|^${DESTDIR}${PREFIX}/||" | 		\
-		${_PLIST_IGNORE_CMD};					\
-	${FIND} ${DESTDIR}${PREFIX} -type d -print | ${SORT} -r |	\
-		${GREP} -v "^${PREFIX}$$" |				\
-		${_PLIST_IGNORE_CMD} |					\
-		${SED} -e "s|^${DESTDIR}${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
-		       -e "s,$$, 2>/dev/null || ${TRUE},";
+		${_PLIST_IGNORE_CMD}
 .else
 _GENERATE_PLIST=	${CAT} /dev/null ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
