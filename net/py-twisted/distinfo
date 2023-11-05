@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.45 2022/11/27 10:44:20 adam Exp $
+$NetBSD: distinfo,v 1.46 2023/11/05 10:38:35 wiz Exp $
 
-BLAKE2s (Twisted-22.10.0.tar.gz) = 2055f9cc5e64078d17a77e76dde0db0dc9d7eb7874fba29998e0d89b2d54b6a2
-SHA512 (Twisted-22.10.0.tar.gz) = 36adac424f6776c7db870d2291713da41054e974dfac0dbc1cbd55f76915a92073bcb25d4593b82e229d154d5297c67e7ba82d808921d206c97c8024bd5431a8
-Size (Twisted-22.10.0.tar.gz) = 3524935 bytes
+BLAKE2s (twisted-23.10.0.tar.gz) = 534921f7e5c305946e193bb850d2662ef4870147d6c9d3ba710b735fefb55147
+SHA512 (twisted-23.10.0.tar.gz) = da6cc663005776fca716503ec53ae367576e9c89ec2b90a367e73afb1e63c51a24dfad39b9ed1edb597e77e1d805dcbd179cefc1685faddd4044efc8f6c82d5f
+Size (twisted-23.10.0.tar.gz) = 3495627 bytes
