@@ -1,10 +1,10 @@
-$NetBSD: patch-crates_typst-cli_Cargo.toml,v 1.1 2023/10/07 18:44:56 pin Exp $
+$NetBSD: patch-crates_typst-cli_Cargo.toml,v 1.2 2023/11/05 08:38:39 pin Exp $
 
 Patch out the git source request for self-update.
 
---- crates/typst-cli/Cargo.toml.orig	2023-09-13 14:57:27.000000000 +0000
+--- crates/typst-cli/Cargo.toml.orig	2023-10-31 00:36:21.000000000 +0000
 +++ crates/typst-cli/Cargo.toml
-@@ -37,7 +37,7 @@ open = "5"
+@@ -38,7 +38,7 @@ open = "5"
  pathdiff = "0.2"
  same-file = "1"
  # https://github.com/mitsuhiko/self-replace/pull/16
