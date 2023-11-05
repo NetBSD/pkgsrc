@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2023/10/04 21:51:44 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/11/05 13:44:36 wiz Exp $
 
 DISTNAME=	cffi-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -10,24 +11,15 @@ HOMEPAGE=	https://cffi.readthedocs.io/
 COMMENT=	Foreign Function Interface for Python calling C code
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+
 USE_LANGUAGES=	c c++ # c++ for testing only
 USE_TOOLS+=	pkg-config
 
-DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
-DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
-
-# to avoid py-hypothesis
-TEST_ENV+=	PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
-TEST_ENV+=	TMPDIR=${WRKDIR}/tmp
-
-do-test:
-	${MKDIR} ${WRKDIR}/tmp
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
