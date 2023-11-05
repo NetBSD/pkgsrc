@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6632 2023/11/05 01:07:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6633 2023/11/05 02:20:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9623,3 +9623,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-css-parser to 1.0.10 [wiz 2023-11-05]
 	Added www/py-nh3 version 0.2.14 [wiz 2023-11-05]
 	Updated textproc/py-readme_renderer to 42.0 [wiz 2023-11-05]
+	Updated devel/p5-IPC-Run to 20231003.0 [wen 2023-11-05]
