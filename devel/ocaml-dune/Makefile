@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/05 21:26:41 jaapb Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jaapb@NetBSD.org
@@ -17,26 +16,15 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		# none
 UNLIMIT_RESOURCES+=	stacksize
 
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS=		--libdir ${PREFIX}/lib/ocaml --libdir ${PREFIX}/${OCAML_SITELIBDIR}
+
 BUILD_TARGET=		release
 MAKE_ENV+=		MAKE_JOBS=${MAKE_JOBS:U1}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/dune
 
 OCAML_USE_FINDLIB=	yes
-OCAML_FINDLIB_DIRS=	dune \
-			dune-action-plugin \
-			dune-build-info \
-			dune-glob \
-			dune-private-libs \
-			stublibs
-OCAML_USE_OPAM=		yes
-OPAM_INSTALL_FILES=	dune-glob \
-			dune-action-plugin \
-			dune-build-info \
-			dune \
-			dune-private-libs
-
-post-build:
-	${RUN} cd ${WRKSRC} && ./dune.exe build -p dune,dune-action-plugin,dune-build-info,dune-glob,dune-private-libs @install
+OCAML_FINDLIB_DIRS=	dune
 
 .include "../../lang/ocaml/ocaml.mk"
 
