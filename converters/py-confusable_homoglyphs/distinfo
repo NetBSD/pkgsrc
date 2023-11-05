@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:06:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/11/05 23:44:05 wiz Exp $
 
 BLAKE2s (confusable_homoglyphs-3.2.0.tar.gz) = 0f025fef9340a154bc75e351f53fffbe9ddb5f37af0ceccaaa375acbe1cf0276
 SHA512 (confusable_homoglyphs-3.2.0.tar.gz) = 0a46a5bc94393592f6fa088bbe2f95cc301972c55de08231f3607828fcd3c5cb462514b80013283ef8cd8d76eaa3e14258ac8f3433c9c2cd1a89bcebca8fa7f6
 Size (confusable_homoglyphs-3.2.0.tar.gz) = 161937 bytes
+SHA1 (patch-versioneer.py) = 3a8b5a2b650f935cd5173081b0f3d35375831f38
