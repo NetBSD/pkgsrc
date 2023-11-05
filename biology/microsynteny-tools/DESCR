@@ -1,0 +1,4 @@
+Microsynteny tools is a suite of fast, memory-efficient programs for
+exploring microsyntenic relationships between genes.
+The tools are designed to allow real-time exploration of gene
+landscapes via the command line and shell scripts.
