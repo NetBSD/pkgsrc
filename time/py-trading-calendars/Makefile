@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/05 20:31:16 wiz Exp $
 
-DISTNAME=	trading_calendars-1.11.2
+DISTNAME=	trading_calendars-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trading-calendars/}
 
@@ -11,21 +10,21 @@ HOMEPAGE=	https://github.com/quantopian/trading_calendars
 COMMENT=	Securities exchange calendars used by Zipline
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-lru-dict-[0-9]*:../../devel/py-lru-dict
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/tcal \
 		${DESTDIR}${PREFIX}/bin/tcal-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
