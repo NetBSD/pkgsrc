@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:46 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/11/05 00:02:25 wen Exp $
 
-BLAKE2s (IO-Interactive-1.023.tar.gz) = c2dcd4339598b873f0b0f66a4d69def422360d317addfc74b338cae322c33ac9
-SHA512 (IO-Interactive-1.023.tar.gz) = 82899c09adaf3699d5640b78bfbd5201972cf4c47ae90f7c6d6da9fc1f4470abc1bc5898b904c501d567537dc19f781febd7f05d0c06e60f1c193cf33abfb47f
-Size (IO-Interactive-1.023.tar.gz) = 12352 bytes
+BLAKE2s (IO-Interactive-1.025.tar.gz) = 165c0d3f029bdf3705096ec52af8e9ccca34238452e9a9bc5f82fdf8b56cac14
+SHA512 (IO-Interactive-1.025.tar.gz) = b9aca9d3920ea256e5b2c3e19559e7626ab076b36b38b58eecf087d8a2614b805a0226246bf035eb41b801a0972dfb19e1c99d2f8105bd403db5017e84b6e2dc
+Size (IO-Interactive-1.025.tar.gz) = 13097 bytes
