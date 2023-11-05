@@ -1,18 +1,18 @@
-$NetBSD: patch-tests_Cargo.toml,v 1.6 2023/10/07 18:44:56 pin Exp $
+$NetBSD: patch-tests_Cargo.toml,v 1.7 2023/11/05 08:38:39 pin Exp $
 
 Patch out the git source request for iai and oxipng.
 
---- tests/Cargo.toml.orig	2023-09-13 14:57:27.000000000 +0000
+--- tests/Cargo.toml.orig	2023-10-31 00:36:21.000000000 +0000
 +++ tests/Cargo.toml
 @@ -12,9 +12,9 @@ typst-library = { path = "../crates/typs
  clap = { version = "4.4", features = ["derive"] }
  comemo = "0.3"
- ecow = { version = "0.1.2", features = ["serde"] }
+ ecow = { version = "0.2", features = ["serde"] }
 -iai = { git = "https://github.com/typst/iai" }
 +iai = "0.1.1"
  once_cell = "1"
 -oxipng = { git = "https://github.com/typst/oxipng", rev = "b8ec65b", default-features = false, features = ["filetime", "parallel", "zopfli"] }
 +oxipng = { version = "8.0.0", default-features = false, features = ["filetime", "parallel", "zopfli"] }
  rayon = "1.7.0"
- tiny-skia = "0.10.0"
+ tiny-skia = "0.11"
  ttf-parser = "0.19.2"
