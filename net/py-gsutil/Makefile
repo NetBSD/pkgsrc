@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/10/19 14:25:19 nia Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/05 22:59:47 wiz Exp $
 
 DISTNAME=	gsutil-4.68
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 USE_PKG_RESOURCES=	yes
 
