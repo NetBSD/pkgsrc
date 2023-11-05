@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23546 2023/11/05 00:40:45 wiz Exp $
+$NetBSD: TODO,v 1.23547 2023/11/05 00:42:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cmake-language-server-0.1.8
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-css-parser-1.0.10
-	o py-cycler-0.12.1
 	o py-cyclonedx-python-lib-5.0.1
 	o py-cython-3.0.4
 	o py-diffoscope-242
