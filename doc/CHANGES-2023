@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6716 2023/11/06 21:56:52 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.6717 2023/11/06 22:04:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9715,3 +9715,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-city-lite to 2023.11 [fcambus 2023-11-06]
 	Updated net/dbip-country-lite to 2023.11 [fcambus 2023-11-06]
 	Updated lang/yabasic to 2.90.4 [fcambus 2023-11-06]
+	Updated devel/binaryen to 116 [fcambus 2023-11-06]
