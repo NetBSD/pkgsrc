@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/05 00:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/06 20:11:25 jperkin Exp $
 
 DISTNAME=	css-parser-1.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	src/css_parser/*.py
 REPLACE_PYTHON+=	src/css_parser/scripts/*.py
