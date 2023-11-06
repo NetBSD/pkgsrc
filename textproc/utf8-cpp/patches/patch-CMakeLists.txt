@@ -1,19 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2023/11/01 20:08:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2023/11/06 09:31:15 adam Exp $
 
 Do not install includes in a sub-directory.
 Install cmake files into lib/cmake.
 
 --- CMakeLists.txt.orig	2023-10-28 15:23:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -10,7 +10,7 @@ include(GNUInstallDirs)
- 
- target_include_directories(utf8cpp INTERFACE
-     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/source>"
--    $<INSTALL_INTERFACE:include/utf8cpp>
-+    $<INSTALL_INTERFACE:include>
- )
- 
- include(CMakePackageConfigHelpers)
 @@ -32,17 +32,17 @@ install(TARGETS ${PROJECT_NAME}
  configure_package_config_file(
      "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in"
