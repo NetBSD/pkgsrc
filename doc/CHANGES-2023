@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6686 2023/11/06 09:24:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6687 2023/11/06 09:31:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9679,3 +9679,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2 to 2.78.1 [adam 2023-11-06]
 	Updated devel/glib2-tools to 2.78.1 [adam 2023-11-06]
 	Updated devel/gdbus-codegen to 2.78.1 [adam 2023-11-06]
+	Updated textproc/ugrep to 4.3.2 [adam 2023-11-06]
+	Updated textproc/utf8-cpp to 4.0.2 [adam 2023-11-06]
