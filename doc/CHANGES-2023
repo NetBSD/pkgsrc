@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6694 2023/11/06 13:43:43 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6695 2023/11/06 13:44:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9692,3 +9692,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/exiv2 to 0.28.1 [wiz 2023-11-06]
 	Updated sysutils/restic to 0.16.2 [wiz 2023-11-06]
 	Updated fonts/py-fonttools to 4.44.0 [wiz 2023-11-06]
+	Updated graphics/jasper to 4.1.0 [wiz 2023-11-06]
