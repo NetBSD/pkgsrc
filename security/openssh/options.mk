@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.40 2023/10/19 12:28:01 wiz Exp $
+# $NetBSD: options.mk,v 1.41 2023/11/06 09:27:57 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
-PKG_SUGGESTED_OPTIONS=	editline fido openssl
+PKG_SUGGESTED_OPTIONS=	editline openssl
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	pam
+PKG_SUGGESTED_OPTIONS+=	fido pam
 .endif
 
 .include "../../mk/bsd.options.mk"
