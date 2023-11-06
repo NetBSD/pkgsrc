@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23578 2023/11/06 14:04:34 wiz Exp $
+$NetBSD: TODO,v 1.23579 2023/11/06 19:49:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1275,7 +1275,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
-	o re2-20231101
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
@@ -1369,6 +1368,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
+	o sudo-1.9.15p1
 	o sup-0.4
 	o superlu-5.2.2
 	o swapd-1.0.5
