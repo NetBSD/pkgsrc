@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6688 2023/11/06 10:42:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6689 2023/11/06 10:43:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9682,3 +9682,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 4.3.2 [adam 2023-11-06]
 	Updated textproc/utf8-cpp to 4.0.2 [adam 2023-11-06]
 	Updated devel/py-mocket to 3.12.0 [wiz 2023-11-06]
+	Removed www/py-http-parser [wiz 2023-11-06]
