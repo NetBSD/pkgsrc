@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6685 2023/11/06 09:23:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6686 2023/11/06 09:24:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9676,3 +9676,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/fclones version 0.34.0 [wiz 2023-11-06]
 	Updated wm/lefthk to 0.2.0 [pin 2023-11-06]
 	Updated misc/tailspin to 2.0.0 [pin 2023-11-06]
+	Updated devel/glib2 to 2.78.1 [adam 2023-11-06]
+	Updated devel/glib2-tools to 2.78.1 [adam 2023-11-06]
+	Updated devel/gdbus-codegen to 2.78.1 [adam 2023-11-06]
