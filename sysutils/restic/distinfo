@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2023/10/25 09:54:56 wiz Exp $
+$NetBSD: distinfo,v 1.9 2023/11/06 13:35:32 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.110.9.mod) = 0a94c8a27942cf651ed713697e1b5783774c8db13655ca3fef4abf3016534ea9
 SHA512 (cloud.google.com_go_@v_v0.110.9.mod) = d97008a57c3c68679589fe14efb16ed047248d4cb47988a73fe48a97bfd43ed2f724ce2c68dc826f3387bd7962cd96b3981cccaf374deda774a71233e4c999d5
@@ -882,6 +882,6 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
-BLAKE2s (restic-0.16.1.tar.gz) = ba44263deff04895f6168fcf53556912f7f8d9597e4730ae541f054f6f775790
-SHA512 (restic-0.16.1.tar.gz) = 0453dec413902e4ebc7207e3a4bd229c0aa45abe54037f17df718db3321bc2e248fa74c7fa922f84a1dc10976ff00ef6fe07d762e568298f5829e600b47f65cd
-Size (restic-0.16.1.tar.gz) = 23981439 bytes
+BLAKE2s (restic-0.16.2.tar.gz) = dbad77f874e6d860d435c356c82ec2f5b8ad66ada56afa139de0d4ed56f3fac8
+SHA512 (restic-0.16.2.tar.gz) = 319b0165def0a874b80314b8ff124a2460895660c55ebe5da260bfc92caeed0f0d886e9556043cfb3d83c1ca6b5f339ff5f74034989982f12c152505e347917c
+Size (restic-0.16.2.tar.gz) = 23981852 bytes
