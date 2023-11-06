@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2023/11/06 17:17:50 pho Exp $
+
+BLAKE2s (idris2-0.6.0.tgz) = fcf40270e9a4bcceeeeb1eb78c4d9087c5640046ca10efcd16afabcebf6833aa
+SHA512 (idris2-0.6.0.tgz) = 97dfdb4a8c115e7f2ed676649ee718f0e8ab257083b1d862a3da63bae92d6bc436cd2d3a9fb25942fc4ce7d69f7431418a3699955fe2dd41d137ac65e6e35755
+Size (idris2-0.6.0.tgz) = 3669129 bytes
+SHA1 (patch-Makefile) = 7c92742bf4923c04b1ccf636f1c8a4b6487305ad
+SHA1 (patch-libs_base_Makefile) = 49f1e858921fe1e5802fe5012f24034bbb25e83a
+SHA1 (patch-libs_contrib_Makefile) = 4faac24d8997291e9c61bf39ff3b5f3031412019
+SHA1 (patch-libs_linear_Makefile) = 910e8e8ccae3dd56692eb4494d14e1c643f7a1ed
+SHA1 (patch-libs_network_Makefile) = 34fe6c8869f238b8cbad3298fbe3504eff2b9fee
+SHA1 (patch-libs_prelude_Makefile) = 6d7e3e6d89b051ef34aa50ca93a9f1027373ec12
+SHA1 (patch-libs_test_Makefile) = 2a9e2b0fa3ed44afa03d49a24587362d4f2587c8
+SHA1 (patch-src_Core_Context.idr) = a1bb82b1f69ad08eea6c71640826fd08cf427dea
+SHA1 (patch-src_Core_Options.idr) = 2ff71d86f0f7213bfbcaebf32077dc2e286b061c
+SHA1 (patch-src_Idris_CommandLine.idr) = 3a613427843eb1e06eaef002b2c7c7243ed7824c
+SHA1 (patch-src_Idris_Package.idr) = b8e2e540cad084f63a70a534899b99d4e37c1c5c
+SHA1 (patch-src_Idris_SetOptions.idr) = b049b27a490741ab6994d55bdd4290b804b5acd0
+SHA1 (patch-support_c_Makefile) = ade742b02beac3675c08765c9cb3ea696004cd57
+SHA1 (patch-support_chez_Makefile) = 4797882ee4251b40e41d27eb9200b16b57d83ac5
+SHA1 (patch-support_refc_Makefile) = b7bc02e30e94d239ec0f766cd7405206eef80b62

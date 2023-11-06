@@ -1,0 +1,21 @@
+$NetBSD: patch-libs_base_Makefile,v 1.1 2023/11/06 17:17:51 pho Exp $
+
+Add DESTDIR support.
+
+TODO: Upstream this
+
+--- libs/base/Makefile.orig	2023-11-04 11:43:10.853911229 +0000
++++ libs/base/Makefile
+@@ -2,10 +2,10 @@ all:
+ 	${IDRIS2} --build base.ipkg
+ 
+ install:
+-	${IDRIS2} --install base.ipkg
++	${IDRIS2} --install base.ipkg $(if $(DESTDIR),--stage-dir "$(DESTDIR)")
+ 
+ install-with-src:
+-	${IDRIS2} --install-with-src base.ipkg
++	${IDRIS2} --install-with-src base.ipkg $(if $(DESTDIR),--stage-dir "$(DESTDIR)")
+ 
+ docs:
+ 	${IDRIS2} --mkdoc base.ipkg
