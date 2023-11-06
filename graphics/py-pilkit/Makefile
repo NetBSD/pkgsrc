@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/05 00:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/06 20:10:35 jperkin Exp $
 
 DISTNAME=	pilkit-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.6:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow>=0:../../graphics/py-Pillow
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
