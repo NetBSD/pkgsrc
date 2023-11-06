@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.44 2023/11/06 13:34:32 gdt Exp $
+# $NetBSD: options.mk,v 1.45 2023/11/06 13:48:41 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
@@ -47,8 +47,6 @@ PLIST_VARS+=	pam
 .if !empty(PKG_OPTIONS:Mpam)
 .include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
-MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
-MESSAGE_SUBST+=		EGDIR=${EGDIR}
 .  if ${OPSYS} == "Linux"
 PLIST.pam=	yes
 .  endif
