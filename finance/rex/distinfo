@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/08/02 17:33:50 pin Exp $
+$NetBSD: distinfo,v 1.3 2023/11/06 15:32:28 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -273,9 +273,9 @@ Size (remove_dir_all-0.5.3.crate) = 9184 bytes
 BLAKE2s (reqwest-0.11.12.crate) = 0c9187ab7c0892bfea454c613a6a54cb5fd369ec7341c178c4bcb5bf9fbd4e83
 SHA512 (reqwest-0.11.12.crate) = 7ce5e08b580beb3f514c913e3f931242cb6be27a3520285003d054e6ca2efd31eeb469aecd049569e46b7e12c6ee884f5cbcd9665c1e868a83d9bfa4c77e5d03
 Size (reqwest-0.11.12.crate) = 143820 bytes
-BLAKE2s (rex-0.1.12.tar.gz) = 1dc754638130da76017e78b1f9a05c46c1207a94d5d550c919dad515045f18e0
-SHA512 (rex-0.1.12.tar.gz) = 4e8ab17046df5c8d6bb7e12568821c5f39e812b124b0d051917b093794ffe105ebb9db03c8bca7950da9bad780f930990afe374731bc707b6455dc1027dc4943
-Size (rex-0.1.12.tar.gz) = 1344458 bytes
+BLAKE2s (rex-0.1.13.tar.gz) = da1e94042857f3615b9537ce220a3b3e8dbdae40bf35dd25f7a7ceac0395a410
+SHA512 (rex-0.1.13.tar.gz) = d746884b730cb7a3b65837f570e33e78cfcf759bde1e7b61145b9d2099de63e3cbcf476931a58fba91c16fa42ebd41de0a25553ed64c5fa5bdf6543e77e21eaf
+Size (rex-0.1.13.tar.gz) = 1344539 bytes
 BLAKE2s (rusqlite-0.29.0.crate) = 479600ed01058ad787ba71774a71f9e972bbe89dc145ed4921973fc49018021c
 SHA512 (rusqlite-0.29.0.crate) = 63e5722f7391a335773d2fe554ebf285f388ecdce7279f767f9c3293bc776abedd15badfaa29c4abaa356707667ffda11dd14bf50fb4bae670df0e102283e055
 Size (rusqlite-0.29.0.crate) = 137156 bytes
