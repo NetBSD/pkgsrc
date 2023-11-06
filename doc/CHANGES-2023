@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6696 2023/11/06 13:45:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6697 2023/11/06 13:46:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9694,3 +9694,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.44.0 [wiz 2023-11-06]
 	Updated graphics/jasper to 4.1.0 [wiz 2023-11-06]
 	Updated sysutils/ncdu to 1.19 [wiz 2023-11-06]
+	Updated devel/py-blinker to 1.7.0 [wiz 2023-11-06]
