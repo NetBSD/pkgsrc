@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1094 2023/11/05 22:14:08 wiz Exp $
+# $NetBSD: Makefile,v 1.1095 2023/11/06 09:18:06 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -228,6 +228,7 @@ SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fastfs
 SUBDIR+=	fatback
+SUBDIR+=	fclones
 SUBDIR+=	fd-find
 SUBDIR+=	fdtools
 SUBDIR+=	fdupes
