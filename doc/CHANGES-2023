@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6692 2023/11/06 13:35:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6693 2023/11/06 13:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9550,6 +9550,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/gucharmap to 15.1.2 [wiz 2023-11-03]
 	Updated math/genius to 1.0.27 [wiz 2023-11-03]
 	Removed math/gcalctool successor math/gnome-calculator [wiz 2023-11-03]
+	Updated net/grpc to 1.59.2 [wiz 2023-11-03]
+	Updated net/py-grpcio to 1.59.2 [wiz 2023-11-03]
+	Updated net/py-grpcio-testing to 1.59.2 [wiz 2023-11-03]
+	Updated net/py-grpcio-tools to 1.59.2 [wiz 2023-11-03]
 	Added x11/gtksourceview5 version 5.10.0 [wiz 2023-11-04]
 	Updated math/gnome-calculator to 45.0.2 [wiz 2023-11-04]
 	Updated mail/neomutt to 20231103 [wiz 2023-11-04]
