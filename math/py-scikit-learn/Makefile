@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/11/05 23:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/06 08:40:01 wiz Exp $
 
 DISTNAME=	scikit-learn-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=2.0.0:../../parallel/py-threadpoolctl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
-USE_LANGUAGES=	c c++11 fortran
+USE_LANGUAGES=	c c++ fortran
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
