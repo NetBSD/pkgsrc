@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2023/05/22 13:58:06 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/06 22:04:25 fcambus Exp $
 bin/binaryen-unittests
 bin/wasm-as
 bin/wasm-ctor-eval
 bin/wasm-dis
 bin/wasm-emscripten-finalize
+bin/wasm-fuzz-lattices
 bin/wasm-fuzz-types
 bin/wasm-merge
 bin/wasm-metadce
