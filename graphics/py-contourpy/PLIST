@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/06 13:47:24 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,13 +11,28 @@ ${PYSITELIB}/contourpy/_contourpy.so
 ${PYSITELIB}/contourpy/_version.py
 ${PYSITELIB}/contourpy/_version.pyc
 ${PYSITELIB}/contourpy/_version.pyo
+${PYSITELIB}/contourpy/array.py
+${PYSITELIB}/contourpy/array.pyc
+${PYSITELIB}/contourpy/array.pyo
 ${PYSITELIB}/contourpy/chunk.py
 ${PYSITELIB}/contourpy/chunk.pyc
 ${PYSITELIB}/contourpy/chunk.pyo
+${PYSITELIB}/contourpy/convert.py
+${PYSITELIB}/contourpy/convert.pyc
+${PYSITELIB}/contourpy/convert.pyo
+${PYSITELIB}/contourpy/dechunk.py
+${PYSITELIB}/contourpy/dechunk.pyc
+${PYSITELIB}/contourpy/dechunk.pyo
 ${PYSITELIB}/contourpy/enum_util.py
 ${PYSITELIB}/contourpy/enum_util.pyc
 ${PYSITELIB}/contourpy/enum_util.pyo
 ${PYSITELIB}/contourpy/py.typed
+${PYSITELIB}/contourpy/typecheck.py
+${PYSITELIB}/contourpy/typecheck.pyc
+${PYSITELIB}/contourpy/typecheck.pyo
+${PYSITELIB}/contourpy/types.py
+${PYSITELIB}/contourpy/types.pyc
+${PYSITELIB}/contourpy/types.pyo
 ${PYSITELIB}/contourpy/util/__init__.py
 ${PYSITELIB}/contourpy/util/__init__.pyc
 ${PYSITELIB}/contourpy/util/__init__.pyo
