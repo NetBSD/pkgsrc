@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/21 07:43:31 fcambus Exp $
+$NetBSD: distinfo,v 1.6 2023/11/06 22:07:51 fcambus Exp $
 
-BLAKE2s (ytree-2.04.tar.gz) = 6ceab4c50fb6c2bb8e8a763c82075864d309d88d1f7582c5963e9747623048c8
-SHA512 (ytree-2.04.tar.gz) = 9528f67cb4de6305b46e5ca4d79affab0433c357e58ed936fcf01ee16663924312e9ccb3d1bdd9009430a5a253e35ec04b7d52acaff74ff46c6a59904b90413b
-Size (ytree-2.04.tar.gz) = 123324 bytes
+BLAKE2s (ytree-2.05.tar.gz) = a600ea84d4bb5b9a0e7c401985a0ea6bfe3f46ab8ea9b6c651bc7223d3147422
+SHA512 (ytree-2.05.tar.gz) = 561255992492c0251892512999de1e8351e1f589fc38404755c4afe753873abb37b1ffec53de0a153a6870ccf6d665fccaa08f3dc9c8a04903175bcb6c278129
+Size (ytree-2.05.tar.gz) = 124141 bytes
