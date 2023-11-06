@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6689 2023/11/06 10:43:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6690 2023/11/06 11:03:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9683,3 +9683,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/utf8-cpp to 4.0.2 [adam 2023-11-06]
 	Updated devel/py-mocket to 3.12.0 [wiz 2023-11-06]
 	Removed www/py-http-parser [wiz 2023-11-06]
+	Updated math/arpack-ng to 3.9.1 [adam 2023-11-06]
+	Updated databases/py-asyncpg to 0.29.0 [adam 2023-11-06]
