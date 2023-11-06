@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6699 2023/11/06 13:48:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6700 2023/11/06 13:53:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9697,3 +9697,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-blinker to 1.7.0 [wiz 2023-11-06]
 	Updated graphics/py-contourpy to 1.2.0 [wiz 2023-11-06]
 	Updated textproc/py-markdown to 3.5.1 [wiz 2023-11-06]
+	Updated time/py-icalendar to 5.0.11 [wiz 2023-11-06]
