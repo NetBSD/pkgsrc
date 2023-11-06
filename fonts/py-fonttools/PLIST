@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.50 2023/10/11 09:02:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2023/11/06 13:43:31 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -908,4 +902,10 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
