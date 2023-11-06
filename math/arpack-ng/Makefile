@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/05/31 21:35:31 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/06 10:57:52 adam Exp $
 
-DISTNAME=	arpack-ng-3.9.0
+DISTNAME=	arpack-ng-3.9.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencollab/}
 
