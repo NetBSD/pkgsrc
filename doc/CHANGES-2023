@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6703 2023/11/06 14:04:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6704 2023/11/06 15:32:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9701,3 +9701,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libcares to 1.21.0 [wiz 2023-11-06]
 	Updated math/ltm to 1.2.1 [wiz 2023-11-06]
 	Updated games/lgogdownloader to 3.12 [wiz 2023-11-06]
+	Updated finance/rex to 0.1.13 [pin 2023-11-06]
