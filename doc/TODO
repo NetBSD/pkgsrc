@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23573 2023/11/06 13:47:38 wiz Exp $
+$NetBSD: TODO,v 1.23574 2023/11/06 13:48:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1213,7 +1213,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-llvmlite-0.39.0
 	o py-lsp-jsonrpc-1.1.2
 	o py-lsp-server-1.8.2
-	o py-markdown-3.5.1
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
