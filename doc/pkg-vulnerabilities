@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.58 2023/11/01 12:31:03 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.59 2023/11/06 13:19:23 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25752,3 +25752,4 @@ modular-xorg-server<21.1.9	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2
 modular-xorg-server-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-5574
 py{27,38,39,310,311,312}-pip<23.3	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-5752
 php{56,73,74,80,81,82}-roundcube<1.6.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-5631
+exiv2>=0.28<0.28.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-44398
