@@ -1,0 +1,19 @@
+$NetBSD: patch-support_chez_Makefile,v 1.1 2023/11/06 17:17:51 pho Exp $
+
+Add DESTDIR support.
+
+TODO: Upstream this
+
+--- support/chez/Makefile.orig	2023-11-04 13:10:25.634724475 +0000
++++ support/chez/Makefile
+@@ -10,8 +10,8 @@ clean:
+ build: support-sep.ss
+ 
+ install: build
+-	mkdir -p ${PREFIX}/idris2-${IDRIS2_VERSION}/support/chez
+-	install -m 644 *.ss ${PREFIX}/idris2-${IDRIS2_VERSION}/support/chez
++	mkdir -p ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/support/chez
++	install -m 644 *.ss ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/support/chez
+ 
+ support-sep.ss: support.ss
+ 	# start library header
