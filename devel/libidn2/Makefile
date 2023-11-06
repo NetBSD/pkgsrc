@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/10/30 11:19:21 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/06 11:38:57 nia Exp $
 
 DISTNAME=	libidn2-2.3.4
 CATEGORIES=	devel
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libidn2.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
+
+CONFIGURE_ARGS.Darwin+=	--disable-rpath
 
 # XXX: Kludge to avoid uncoditionally pick up some gtkdoc-* tools if gtk-doc
 # XXX: package is installed and then fails in the installation phase.
