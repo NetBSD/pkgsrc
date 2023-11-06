@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/31 19:56:48 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/06 19:46:46 jperkin Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -102,10 +102,17 @@ LDFLAGS+=			-lexecinfo
 .  endif
 LDFLAGS.FreeBSD+=		-lutil
 .elif ${OPSYS} == "SunOS"
-PLIST_VARS+=	inotify
-.  if exists(/usr/include/sys/inotify.h)
-PLIST.inotify=	yes
-.  endif
+CONFIGURE_ARGS+=		-no-inotify
+.endif
+
+#
+# Qt uses FP16 intrinsics, but GCC isn't inserting libgcc due to it being in
+# a shared library.  This isn't ideal but adding it via the usual variables
+# is proving to be difficult as they are placed before the object files.
+#
+.if ${OPSYS} == "SunOS"
+CWRAPPERS_APPEND.cc+=	-lgcc
+CWRAPPERS_APPEND.cxx+=	-lgcc
 .endif
 
 REPLACE_PERL+=		libexec/syncqt.pl
