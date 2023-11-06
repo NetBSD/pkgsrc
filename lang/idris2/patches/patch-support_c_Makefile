@@ -1,0 +1,22 @@
+$NetBSD: patch-support_c_Makefile,v 1.1 2023/11/06 17:17:51 pho Exp $
+
+Add DESTDIR support.
+
+TODO: Upstream this
+
+--- support/c/Makefile.orig	2023-11-04 13:09:21.513363755 +0000
++++ support/c/Makefile
+@@ -53,8 +53,8 @@ cleandep: clean
+ .PHONY: install
+ 
+ install: build
+-	mkdir -p ${PREFIX}/idris2-${IDRIS2_VERSION}/lib
+-	mkdir -p ${PREFIX}/idris2-${IDRIS2_VERSION}/support/c
+-	install -m 755 $(DYLIBTARGET) ${PREFIX}/idris2-${IDRIS2_VERSION}/lib
+-	install -m 644 $(LIBTARGET)   ${PREFIX}/idris2-${IDRIS2_VERSION}/lib
+-	install -m 644 *.h            ${PREFIX}/idris2-${IDRIS2_VERSION}/support/c
++	mkdir -p ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/lib
++	mkdir -p ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/support/c
++	install -m 755 $(DYLIBTARGET) ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/lib
++	install -m 644 $(LIBTARGET)   ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/lib
++	install -m 644 *.h            ${DESTDIR}${PREFIX}/idris2-${IDRIS2_VERSION}/support/c

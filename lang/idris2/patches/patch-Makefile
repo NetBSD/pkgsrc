@@ -1,0 +1,91 @@
+$NetBSD: patch-Makefile,v 1.1 2023/11/06 17:17:51 pho Exp $
+
+Don't try to use modules from base until it's built.
+
+TODO: Upstream this.
+
+--- Makefile.orig	2022-10-27 15:43:33.000000000 +0000
++++ Makefile
+@@ -86,7 +86,7 @@ contrib: base
+ test-lib: contrib
+ 	${MAKE} -C libs/test IDRIS2=${TARGET} IDRIS2_INC_CGS=${IDRIS2_CG} IDRIS2_PATH=${IDRIS2_BOOT_PATH}
+ 
+-linear: prelude
++linear: prelude base
+ 	${MAKE} -C libs/linear IDRIS2=${TARGET} IDRIS2_INC_CGS=${IDRIS2_CG} IDRIS2_PATH=${IDRIS2_BOOT_PATH}
+ 
+ papers: contrib linear
+@@ -192,25 +192,25 @@ install-with-src-api: src/IdrisPaths.idr
+ 	${IDRIS2_BOOT} --install-with-src ${IDRIS2_LIB_IPKG}
+ 
+ install-idris2:
+-	mkdir -p ${PREFIX}/bin/
+-	install ${TARGET} ${PREFIX}/bin
++	mkdir -p ${DESTDIR}${PREFIX}/bin/
++	install ${TARGET} ${DESTDIR}${PREFIX}/bin
+ ifeq ($(OS), windows)
+-	-install ${TARGET}.cmd ${PREFIX}/bin
++	-install ${TARGET}.cmd ${DESTDIR}${PREFIX}/bin
+ endif
+-	mkdir -p ${PREFIX}/lib/
+-	install support/c/${IDRIS2_SUPPORT} ${PREFIX}/lib
+-	mkdir -p ${PREFIX}/bin/${NAME}_app
+-	install ${TARGETDIR}/${NAME}_app/* ${PREFIX}/bin/${NAME}_app
++	mkdir -p ${DESTDIR}${PREFIX}/lib/
++	install support/c/${IDRIS2_SUPPORT} ${DESTDIR}${PREFIX}/lib
++	mkdir -p ${DESTDIR}${PREFIX}/bin/${NAME}_app
++	install ${TARGETDIR}/${NAME}_app/* ${DESTDIR}${PREFIX}/bin/${NAME}_app
+ 
+ install-support:
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/support/docs
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/support/racket
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/support/gambit
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/support/js
+-	install -m 644 support/docs/*.css ${PREFIX}/${NAME_VERSION}/support/docs
+-	install -m 644 support/racket/* ${PREFIX}/${NAME_VERSION}/support/racket
+-	install -m 644 support/gambit/* ${PREFIX}/${NAME_VERSION}/support/gambit
+-	install -m 644 support/js/* ${PREFIX}/${NAME_VERSION}/support/js
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/docs
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/racket
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/gambit
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/js
++	install -m 644 support/docs/*.css ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/docs
++	install -m 644 support/racket/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/racket
++	install -m 644 support/gambit/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/gambit
++	install -m 644 support/js/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/support/js
+ 	@${MAKE} -C support/c install
+ 	@${MAKE} -C support/refc install
+ 	@${MAKE} -C support/chez install
+@@ -234,19 +234,19 @@ install-with-src-libs:
+ 	${MAKE} -C libs/linear install-with-src    IDRIS2=${TARGET} IDRIS2_PATH=${IDRIS2_BOOT_PATH} IDRIS2_INC_CGS=${IDRIS2_CG}
+ 
+ install-libdocs: libdocs
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/prelude
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/base
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/contrib
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/network
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/test
+-	mkdir -p ${PREFIX}/${NAME_VERSION}/docs/linear
+-	cp -r libs/prelude/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/prelude
+-	cp -r libs/base/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/base
+-	cp -r libs/contrib/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/contrib
+-	cp -r libs/network/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/network
+-	cp -r libs/test/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/test
+-	cp -r libs/test/build/docs/* ${PREFIX}/${NAME_VERSION}/docs/linear
+-	install -m 644 support/docs/* ${PREFIX}/${NAME_VERSION}/docs
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/prelude
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/base
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/contrib
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/network
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/test
++	mkdir -p ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/linear
++	cp -r libs/prelude/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/prelude
++	cp -r libs/base/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/base
++	cp -r libs/contrib/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/contrib
++	cp -r libs/network/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/network
++	cp -r libs/test/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/test
++	cp -r libs/test/build/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs/linear
++	install -m 644 support/docs/* ${DESTDIR}${PREFIX}/${NAME_VERSION}/docs
+ 
+ 
+ .PHONY: bootstrap bootstrap-build bootstrap-racket bootstrap-racket-build bootstrap-test bootstrap-clean
