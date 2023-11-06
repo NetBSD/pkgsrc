@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/11/05 00:36:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/11/06 19:56:21 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,6 +28,9 @@ ${PYSITELIB}/ruamel/yaml/constructor.pyo
 ${PYSITELIB}/ruamel/yaml/cyaml.py
 ${PYSITELIB}/ruamel/yaml/cyaml.pyc
 ${PYSITELIB}/ruamel/yaml/cyaml.pyo
+${PYSITELIB}/ruamel/yaml/docinfo.py
+${PYSITELIB}/ruamel/yaml/docinfo.pyc
+${PYSITELIB}/ruamel/yaml/docinfo.pyo
 ${PYSITELIB}/ruamel/yaml/dumper.py
 ${PYSITELIB}/ruamel/yaml/dumper.pyc
 ${PYSITELIB}/ruamel/yaml/dumper.pyo
