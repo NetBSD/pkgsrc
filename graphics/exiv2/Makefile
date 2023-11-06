@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2023/08/02 19:34:35 nia Exp $
+# $NetBSD: Makefile,v 1.63 2023/11/06 13:18:08 wiz Exp $
 
-DISTNAME=	exiv2-0.28.0-Source
-PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	3
+DISTNAME=	exiv2-0.28.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exiv2/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://exiv2.org/
