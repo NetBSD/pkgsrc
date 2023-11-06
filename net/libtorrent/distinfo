@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 11:05:57 nia Exp $
+$NetBSD: distinfo,v 1.43 2023/11/06 11:26:45 nia Exp $
 
 BLAKE2s (libtorrent-0.13.8.tar.gz) = ebd9f2f152cf99b4987e736b88fceecc71377c3f66f1f783e796e00b9c666df2
 SHA512 (libtorrent-0.13.8.tar.gz) = 417177df5b27cd8c6a6317063b0846da2690de4633836466728605c2edad2de407d29d321cc481b8d1352dd0ff6dd89f4566a830424a8cf986f2fddb04704da4
@@ -7,4 +7,5 @@ SHA1 (patch-config.h.in) = 7ea6ef87727756afe3882aad769a48488fc22c86
 SHA1 (patch-src_Makefile.am) = d965bdfd967a71d14ebcad6b32564a1c0908739d
 SHA1 (patch-src_Makefile.in) = 05f55223073fb57cc11fbb307708ba262899d85f
 SHA1 (patch-src_data_chunk__list.cpp) = 92a5f36d7ae993667123051b39e6033c73169f4e
+SHA1 (patch-src_data_memory__chunk.cc) = 25c1e529223ab4873f61430e922949eeb29637c4
 SHA1 (patch-src_torrent_poll__kqueue.cc) = 9e5191d9a9802d46a7c7da20e2ec4c3ce9f45a11
