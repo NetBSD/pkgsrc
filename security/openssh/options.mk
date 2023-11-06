@@ -1,11 +1,19 @@
-# $NetBSD: options.mk,v 1.43 2023/11/06 10:21:09 jperkin Exp $
+# $NetBSD: options.mk,v 1.44 2023/11/06 13:34:32 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
 PKG_SUGGESTED_OPTIONS=	editline openssl
 
-PKG_SUGGESTED_OPTIONS.Darwin+=	fido
-PKG_SUGGESTED_OPTIONS.NetBSD+=	fido pam
+.include "../../mk/bsd.prefs.mk"
+
+# libfido2 does not build on SunOS
+.if ${OPSYS} != "SunOS"
+PKG_SUGGESTED_OPTIONS+=	fido
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	pam
+.endif
 
 .include "../../mk/bsd.options.mk"
 
