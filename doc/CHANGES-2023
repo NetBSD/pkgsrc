@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6682 2023/11/06 00:11:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6683 2023/11/06 09:18:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9673,3 +9673,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/py-biopython to 1.81 [wiz 2023-11-05]
 	Updated security/py-yubikey-manager to 5.2.1 [wiz 2023-11-05]
 	Updated security/ykman to 5.2.1 [wiz 2023-11-05]
+	Added sysutils/fclones version 0.34.0 [wiz 2023-11-06]
