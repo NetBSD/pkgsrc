@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6707 2023/11/06 17:40:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6708 2023/11/06 19:49:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9706,3 +9706,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/idris2 version 0.6.0 [pho 2023-11-06]
 	Updated www/py-httpcore to 1.0.1 [adam 2023-11-06]
 	Updated www/py-httpx to 0.25.1 [adam 2023-11-06]
+	Updated devel/re2 to 20231101 [wiz 2023-11-06]
