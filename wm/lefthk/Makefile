@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/10/21 18:54:53 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/06 09:21:44 pin Exp $
 
-DISTNAME=	lefthk-0.1.9
+DISTNAME=	lefthk-0.2.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
