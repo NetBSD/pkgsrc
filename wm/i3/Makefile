@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/11/03 08:31:40 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/11/06 11:11:44 nia Exp $
 
 DISTNAME=	i3-4.23
 CATEGORIES=	wm
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash pkg-config perl:run
 USE_LANGUAGES=	c99
 
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lgen -lsocket
 
 EGDIR=		${PREFIX}/share/examples/i3
