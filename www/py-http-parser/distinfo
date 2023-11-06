@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:41 nia Exp $
-
-BLAKE2s (http-parser-0.9.0.tar.gz) = 44019eaf33f49e2896b056d54a87651b08e05127d21253344839f3472bcaaf48
-SHA512 (http-parser-0.9.0.tar.gz) = b7c18c174c83ce36a45422be1ad277c8420787d553fb63eacfdd35f0e5fa27206686ce46e1c8857d4972c9a95b334323716a77ca0e7ab1210d3fd8c475c0d24c
-Size (http-parser-0.9.0.tar.gz) = 167091 bytes
