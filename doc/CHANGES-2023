@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6709 2023/11/06 19:51:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6710 2023/11/06 19:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9708,3 +9708,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpx to 0.25.1 [adam 2023-11-06]
 	Updated devel/re2 to 20231101 [wiz 2023-11-06]
 	Updated net/py-prometheus_client to 0.18.0 [wiz 2023-11-06]
+	Updated devel/py-ruamel-yaml to 0.18.5 [wiz 2023-11-06]
