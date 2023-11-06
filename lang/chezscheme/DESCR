@@ -1,0 +1,24 @@
+Chez Scheme is both a programming language and an implementation of that
+language, with supporting tools and documentation.
+
+As a superset of the language described in the Revised6 Report on the
+Algorithmic Language Scheme (R6RS), Chez Scheme supports all standard
+features of Scheme, including first-class procedures, proper treatment of
+tail calls, continuations, user-defined records, libraries, exceptions, and
+hygienic macro expansion.
+
+Chez Scheme also includes extensive support for interfacing with C and
+other languages, support for multiple threads possibly running on multiple
+cores, non-blocking I/O, and many other features.
+
+The Chez Scheme implementation consists of a compiler, run-time system, and
+programming environment. Although an interpreter is available, all code is
+compiled by default. Source code is compiled on-the-fly when loaded from a
+source file or entered via the shell. A source file can also be precompiled
+into a stored binary form and automatically recompiled when its
+dependencies change. Whether compiling on the fly or precompiling, the
+compiler produces optimized machine code, with some optimization across
+separately compiled library boundaries. The compiler can also be directed
+to perform whole-program compilation, which does full cross-library
+optimization and also reduces a program and the libraries upon which it
+depends to a single binary.
