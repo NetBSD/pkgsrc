@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6711 2023/11/06 20:00:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6712 2023/11/06 20:03:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9710,3 +9710,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-prometheus_client to 0.18.0 [wiz 2023-11-06]
 	Updated devel/py-ruamel-yaml to 0.18.5 [wiz 2023-11-06]
 	Updated archivers/py-zstandard to 0.22.0 [wiz 2023-11-06]
+	Updated multimedia/libva to 2.20.0 [wiz 2023-11-06]
