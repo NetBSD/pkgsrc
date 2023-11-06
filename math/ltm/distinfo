@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:55:48 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/11/06 14:00:23 wiz Exp $
 
-BLAKE2s (ltm-1.2.0.tar.xz) = 2b0800e6eb7135151a2599f09f37087d63a65b9d60f985377a9a7bf0bab83d64
-SHA512 (ltm-1.2.0.tar.xz) = 6f9ccd0691831f07f86ddc81cb6145504b3d5da66dd3e92312c64cce0ea986fa4e08ba65ca8991aaebe56702c2d7c15f309696785b813dffb4c112a4ad04b203
-Size (ltm-1.2.0.tar.xz) = 622120 bytes
+BLAKE2s (ltm-1.2.1.tar.xz) = c0661deb9c50d0f0ad74d3bd278b94d4c9ce3622571977fc91e55245df68c606
+SHA512 (ltm-1.2.1.tar.xz) = 50c9459357aa7f5076af93de6701c617da0dbbf2230a2f4468062704a6cd6e9d3c2fbb27016f68a7e1d6b35d6ddb2088630b24ea6acc20ed8c19594913d36e95
+Size (ltm-1.2.1.tar.xz) = 635728 bytes
 SHA1 (patch-bn__mp__set__double.c) = a9ceb70ee7935bd6026a97cf4adf82a0d5e0003c
