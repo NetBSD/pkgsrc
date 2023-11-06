@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2023/11/06 17:16:15 pho Exp $
+# $NetBSD: Makefile,v 1.709 2023/11/06 17:18:09 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -137,6 +137,7 @@ SUBDIR+=	hs-sourcemap
 SUBDIR+=	hugs
 SUBDIR+=	icon
 SUBDIR+=	idris
+SUBDIR+=	idris2
 SUBDIR+=	inform
 SUBDIR+=	intercal
 SUBDIR+=	ja-gawk
