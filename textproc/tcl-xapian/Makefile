@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/07 22:35:50 schmonz Exp $
 
 PKGNAME=		tcl-${PKGNAME_MODULE}
 COMMENT=		Tcl bindings for Xapian search engine
@@ -7,6 +7,7 @@ HOMEPAGE=		https://xapian.org/docs/bindings/tcl8/
 .include "../../lang/tcl/Makefile.version"
 
 CONFIGURE_ARGS+=	--with-tcl
+CONFIGURE_ENV+=		TCL_LIB=${PREFIX:Q}/lib/tcl
 
 REPLACE_INTERPRETER=	tcl
 REPLACE.tcl.old=	/usr/bin/env tclsh
