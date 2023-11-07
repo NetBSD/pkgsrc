@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6731 2023/11/07 09:22:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6732 2023/11/07 09:26:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9730,3 +9730,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-rapidfuzz to 3.5.2 [wiz 2023-11-07]
 	Updated lang/gawk to 5.3.0 [wiz 2023-11-07]
 	Updated devel/py-poetry-core to 1.8.1 [wiz 2023-11-07]
+	Updated devel/py-poetry to 1.7.0 [wiz 2023-11-07]
