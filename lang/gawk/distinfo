@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.49 2023/05/16 20:31:00 wiz Exp $
+$NetBSD: distinfo,v 1.50 2023/11/07 09:17:20 wiz Exp $
 
-BLAKE2s (gawk-5.2.2.tar.xz) = 439d20b3a60809d840718b757ccab0a6a9ba669250d104b1af991b5b87a621c1
-SHA512 (gawk-5.2.2.tar.xz) = 90611e4daba7226d5ce8230843bf479dc71c0101740c005d851ef7c5b935b6cd4c42089b858abc1619adc05ed25fc7234f993690a76d2ea0b8e61bcbb7dc5a58
-Size (gawk-5.2.2.tar.xz) = 3402872 bytes
+BLAKE2s (gawk-5.3.0.tar.xz) = fdba5a49e6cf12987ab02a669428d656ad2f6dcb4d76657feaecb44cfe824bb5
+SHA512 (gawk-5.3.0.tar.xz) = c274a62c7420e7b7769b8ed94db40024bd5917ff49bd50a77ad6df1f16ecf116968aaf85da94015479466bf5570b370b6fdd197f95212ae0c3509dfcb7d9e35a
+Size (gawk-5.3.0.tar.xz) = 3436180 bytes
 SHA1 (patch-Makefile.in) = f1ec17dc9dc39d631984399c46d641a5ec19d381
 SHA1 (patch-extension_Makefile.in) = 07184d54caadbdc4193d1ba2ee52eb557900bdf3
 SHA1 (patch-extension_gawkfts.c) = a88ac0ed14be5133cf081bf25ab8663f0f3372a7
