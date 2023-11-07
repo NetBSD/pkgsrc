@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/10/28 19:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/07 22:58:58 wiz Exp $
 
-DISTNAME=	cyclonedx_python_lib-4.1.0
+DISTNAME=	cyclonedx_python_lib-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
 
@@ -15,16 +14,18 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.9:../../devel/py-packageurl
 DEPENDS+=	${PYPKGPREFIX}-serializable>=0.11.1:../../devel/py-serializable
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.4.0:../../devel/py-sortedcontainers
-TEST_DEPENDS+=	${PYPKGPREFIX}-ddt-[0-9]*:../../devel/py-ddt
+DEPENDS+=	${PYPKGPREFIX}-license-expression>=0:../../devel/py-license-expression
+TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.6.0:../../devel/py-ddt
 TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff-[0-9]*:../../textproc/py-xmldiff
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/LICENSE
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/NOTICE
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/README.md
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
