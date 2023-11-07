@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/09/17 18:01:23 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:03 wiz Exp $
 
 DISTNAME=	python-subunit-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

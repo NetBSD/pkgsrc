@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/07/10 19:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	cloud_sptheme-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cloud_sptheme/sphinx-theme-cloud/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

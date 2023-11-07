@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/14 08:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/07 22:38:05 wiz Exp $
 
 DISTNAME=	sphinx-autoapi-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:

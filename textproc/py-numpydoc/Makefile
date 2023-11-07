@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/07/10 18:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/07 22:38:05 wiz Exp $
 
 DISTNAME=	numpydoc-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

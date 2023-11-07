@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinxcontrib-bibtex-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-pybtex-docutils>=0.2.0:../../textproc/py-pybtex-docutil
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/07/01 11:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinx_rtd_theme-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

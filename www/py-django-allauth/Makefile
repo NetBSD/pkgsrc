@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/08/31 17:36:13 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=	django-allauth-0.55.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oau
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

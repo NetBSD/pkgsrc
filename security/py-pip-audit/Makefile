@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/11/05 09:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/11/07 22:38:03 wiz Exp $
 
 DISTNAME=	pip_audit-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

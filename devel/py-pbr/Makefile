@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/02/21 09:03:56 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/11/07 22:37:59 wiz Exp $
 
 DISTNAME=	pbr-5.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
 
