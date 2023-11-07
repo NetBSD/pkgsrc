@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2023/06/28 21:14:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2023/11/07 09:36:30 nia Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -19,3 +19,21 @@ CONFLICTS=	gettext<=0.10.35
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures
+
+# Darwin does not support RPATH. It seems to attempt to force one anyway
+# with earlier versions such as 10.4, resulting in a build error.
+CONFIGURE_ARGS.Darwin+=	--disable-rpath
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# There is a bug in the 10.4 SDK that causes struct __darwin_ucontext
+# to be undefined when transcluding <sys/signal.h> via stdlib.h.
+#
+# This hack simply disables defining the mcontext_t typedefs, which
+# has no negative effects on this version.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+CPPFLAGS+=		-D_MCONTEXT_T=1
+CPPFLAGS+=		-D_MCONTEXT64_T=1
+CPPFLAGS+=		-D_UCONTEXT_T=1
+CPPFLAGS+=		-D_UCONTEXT64_T=1
+.endif
