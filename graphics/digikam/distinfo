@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.60 2023/09/26 21:22:36 wiz Exp $
+$NetBSD: distinfo,v 1.61 2023/11/07 08:40:33 wiz Exp $
 
 BLAKE2s (digiKam-8.1.0.tar.xz) = ecfd2e49843ebcce2e1e9716febb7e5ccbb23d3e5dfb03d558b9892353d04d3a
 SHA512 (digiKam-8.1.0.tar.xz) = cbf5a776b4138f4f05d074721324b046dfa07ddc01259f569ae46c46a6d5b0b00824ef0962a09041081703348e4defecf15cff800b2c6cf5e04a0e7e963a3ef4
 Size (digiKam-8.1.0.tar.xz) = 35712348 bytes
+SHA1 (patch-core_app_DigikamCoreTarget.cmake) = eb5e304dc8462e5f6309c96710020a54058c4b48
+SHA1 (patch-core_libs_metadataengine_CMakeLists.txt) = bb3d88e93c8ba82f0e037a27f0c6a79acc28b1fb
