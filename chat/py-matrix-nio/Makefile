@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/25 18:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/07 22:37:57 wiz Exp $
 
 DISTNAME=	matrix-nio-0.18.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-cachetools>=4.2.1:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.4.0:../../devel/py-atomicwrites
 
 # matrix-nio is only supported on python3
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-extract:
 	${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM} -f

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/04/29 23:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/07 22:38:01 wiz Exp $
 
 DISTNAME=	testscenarios-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0 OR modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TEST_TARGET=	check
 

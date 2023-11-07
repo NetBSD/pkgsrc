@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/11/07 22:38:02 wiz Exp $
 
 DISTNAME=	streamlink-5.5.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://streamlink.github.io/
 COMMENT=	Tool that pipes video streams into a video player
 LICENSE=	2-clause-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

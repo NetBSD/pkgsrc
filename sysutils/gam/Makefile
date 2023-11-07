@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:25:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/07 22:38:04 wiz Exp $
 
 DISTNAME=	gam-6.25
 PKGREVISION=	1
@@ -30,7 +30,7 @@ WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}/src
 
 INSTALLATION_DIRS=	bin ${PYSITELIB}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pathvalidate
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

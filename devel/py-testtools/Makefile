@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/07/08 07:30:34 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/11/07 22:38:01 wiz Exp $
 
 DISTNAME=	testtools-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pbr>=0.11:../../devel/py-pbr
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # circular test dependency
 # https://github.com/testing-cabal/testscenarios/issues/4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/17 09:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinx-gallery-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

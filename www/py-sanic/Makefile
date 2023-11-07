@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/08/11 12:54:02 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=	sanic-23.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -44,7 +44,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

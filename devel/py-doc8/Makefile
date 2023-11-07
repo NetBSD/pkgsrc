@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/07 22:37:59 wiz Exp $
 
 DISTNAME=	doc8-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYSETUP=	-c 'from setuptools import setup; setup()'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

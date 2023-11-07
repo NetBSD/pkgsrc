@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/05 22:22:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:04 wiz Exp $
 
 DISTNAME=	eliot-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 
