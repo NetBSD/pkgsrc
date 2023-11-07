@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/17 20:37:10 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/11/07 08:48:16 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/cleo/__init__.py
 ${PYSITELIB}/cleo/__init__.pyc
 ${PYSITELIB}/cleo/__init__.pyo
@@ -167,6 +166,9 @@ ${PYSITELIB}/cleo/loaders/factory_command_loader.py
 ${PYSITELIB}/cleo/loaders/factory_command_loader.pyc
 ${PYSITELIB}/cleo/loaders/factory_command_loader.pyo
 ${PYSITELIB}/cleo/py.typed
+${PYSITELIB}/cleo/terminal.py
+${PYSITELIB}/cleo/terminal.pyc
+${PYSITELIB}/cleo/terminal.pyo
 ${PYSITELIB}/cleo/testers/__init__.py
 ${PYSITELIB}/cleo/testers/__init__.pyc
 ${PYSITELIB}/cleo/testers/__init__.pyo
