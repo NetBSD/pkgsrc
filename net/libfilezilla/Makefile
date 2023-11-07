@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2023/10/24 22:10:22 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/07 21:41:20 wiz Exp $
 
-DISTNAME=	libfilezilla-0.44.0
-PKGREVISION=	1
+DISTNAME=	libfilezilla-0.45.0
 CATEGORIES=	net
 # some kind of direct-download disabling
 #MASTER_SITES=	https://dl3.cdn.filezilla-project.org/libfilezilla/
@@ -15,12 +14,11 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt pkg-config
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES=	c++17
 
 PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
-
-# for C++17
-GCC_REQD+=	8
 
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
