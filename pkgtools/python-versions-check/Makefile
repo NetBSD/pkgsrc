@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/07 22:49:02 wiz Exp $
 
-PKGNAME=		python-versions-check-1.5
-PKGREVISION=		1
+PKGNAME=		python-versions-check-1.6
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
