@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/08/14 05:25:15 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/11/07 22:38:04 wiz Exp $
 
 DISTNAME=	duplicity-0.8.20
 PKGREVISION=	4
@@ -32,7 +32,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 REPLACE_PYTHON+=	bin/duplicity
 REPLACE_PYTHON+=	bin/rdiffdir
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

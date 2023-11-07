@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2023/06/06 12:42:04 riastradh Exp $
+# $NetBSD: options.mk,v 1.6 2023/11/07 22:38:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-testruns
 
 # \XXX: 7 MB in size, but useful (although we could strip off some files).
 .if ${PKG_OPTIONS:Mdoc}
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .include "../../lang/python/tool.mk"
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme

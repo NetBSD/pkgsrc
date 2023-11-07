@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/10 19:04:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinx-issues-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

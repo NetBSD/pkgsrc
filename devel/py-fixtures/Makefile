@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/03 17:33:09 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/07 22:37:59 wiz Exp $
 
 DISTNAME=	fixtures-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/29 23:33:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/07 22:38:00 wiz Exp $
 
 DISTNAME=	testrepository-0.0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 

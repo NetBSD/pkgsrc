@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/06/06 12:42:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2023/11/07 22:38:08 wiz Exp $
 
 DISTNAME=	CherryPy-18.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

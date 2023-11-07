@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/07 22:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinxcontrib_applehelp-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,7 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0.0:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
