@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.156 2023/10/02 20:10:38 adam Exp $
+# $NetBSD: pyversion.mk,v 1.157 2023/11/07 11:36:57 nia Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -102,7 +102,11 @@ PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
+.if ${COMPILER_HAS_C11:Uyes} != "no"
 PYTHON_VERSION_DEFAULT?=		311
+.else
+PYTHON_VERSION_DEFAULT?=		310
+.endif
 PYTHON_VERSIONS_ACCEPTED?=		312 311 310 39 38 27
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
