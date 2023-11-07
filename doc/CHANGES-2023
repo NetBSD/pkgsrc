@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6742 2023/11/07 13:01:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6743 2023/11/07 14:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9741,3 +9741,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gobject-introspection to 1.78.1nb1 [prlw1 2023-11-07]
 	Updated audio/grip to 4.2.4 [wiz 2023-11-07]
 	Removed audio/jack-rack [wiz 2023-11-07]
+	Removed x11/py-sip successor x11/py-sip5 [wiz 2023-11-07]
