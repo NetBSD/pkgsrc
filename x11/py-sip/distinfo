@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.53 2021/11/07 11:38:26 adam Exp $
-
-BLAKE2s (sip-4.19.25.tar.gz) = fb9290de418db91c8597c0210dea5738eba23950ba469766ee427cb813c6d05b
-SHA512 (sip-4.19.25.tar.gz) = 60fb4133c68869bf0993144978b4847d94a0f9c7b477f64a346ea133cfe35bc11820204ab327dcf9a929b6f65a26d16cc7efbce65e49967c3347b39376e57001
-Size (sip-4.19.25.tar.gz) = 1056384 bytes
-SHA1 (patch-configure.py) = b200e5dc1b33e21d866136efa3809fc7a2ce4d82
-SHA1 (patch-sipgen_sipgen.sbf) = f90554d3d0e4cdcf33e69f492281a028ed6975fb
-SHA1 (patch-siputils.py) = 39436983efbf6719b376084a14b8c71b708ed329
