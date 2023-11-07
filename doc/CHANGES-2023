@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6747 2023/11/07 20:02:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6748 2023/11/07 21:35:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9747,3 +9747,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ptex to 2.4.2 [nros 2023-11-07]
 	Updated devel/libuv to 1.47.0 [adam 2023-11-07]
 	Updated devel/cvise to 2.9.0 [adam 2023-11-07]
+	Updated converters/TECkit to 2.5.12 [wiz 2023-11-07]
