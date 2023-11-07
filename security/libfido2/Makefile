@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/07 00:28:07 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/07 07:25:30 jperkin Exp $
 
 DISTNAME=	libfido2-1.13.0
 PKGREVISION=	1
@@ -19,6 +19,10 @@ BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-* MidnightBSD-*-*
 BROKEN_EXCEPT_ON_PLATFORM+=	Linux-*-*
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-*
 BROKEN_EXCEPT_ON_PLATFORM+=	OpenBSD-*-*
+
+# This library does not yet support illumos, but its developers and users
+# strongly value bulk build reports rather than hiding breakages.
+BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-*
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config mandoc
