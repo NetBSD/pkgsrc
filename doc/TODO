@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23599 2023/11/07 14:07:59 taca Exp $
+$NetBSD: TODO,v 1.23600 2023/11/07 17:57:08 nros Exp $
 
 Suggested new packages
 ======================
@@ -1162,7 +1162,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
-	o ptex-2.3.2
 	o ptlib-2.16.2
 	o pvs-6.0
 	o pwlib-1.11.1
