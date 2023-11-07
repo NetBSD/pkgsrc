@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/28 19:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/07 10:36:23 wiz Exp $
 
-DISTNAME=	python-lsp-server-1.7.4
+DISTNAME=	python-lsp-server-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
 
@@ -22,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-ujson>=3.0.0:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.0.0:../../devel/py-setuptools
 
 # optional dependencies
-DEPENDS+=	${PYPKGPREFIX}-autopep8>=1.6.0:../../devel/py-autopep8
+DEPENDS+=	${PYPKGPREFIX}-autopep8>=2.0.4:../../devel/py-autopep8
 DEPENDS+=	${PYPKGPREFIX}-flake8>=5.0.0:../../devel/py-flake8
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.7.0:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.9.0:../../devel/py-codestyle
@@ -47,18 +46,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-SUBST_CLASSES+=		pylint
-SUBST_FILES.pylint+=	test/plugins/test_pylint_lint.py
-SUBST_STAGE.pylint=	pre-build
-SUBST_MESSAGE.pylint=	Fix pylint executable name.
-SUBST_SED.pylint=	-e "s/'pylint'$$/'pylint-${PYVERSSUFFIX}'/"
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pylsp pylsp-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
-
+# for tests, some use 'python'
+.include "../../lang/python/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
