@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/04/30 14:53:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/11/07 08:13:18 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/clean
 ${GEM_LIBDIR}/lib/rouge/demos/clojure
 ${GEM_LIBDIR}/lib/rouge/demos/cmake
 ${GEM_LIBDIR}/lib/rouge/demos/cmhg
+${GEM_LIBDIR}/lib/rouge/demos/codeowners
 ${GEM_LIBDIR}/lib/rouge/demos/coffeescript
 ${GEM_LIBDIR}/lib/rouge/demos/common_lisp
 ${GEM_LIBDIR}/lib/rouge/demos/conf
@@ -193,6 +194,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/ssh
 ${GEM_LIBDIR}/lib/rouge/demos/stan
 ${GEM_LIBDIR}/lib/rouge/demos/stata
 ${GEM_LIBDIR}/lib/rouge/demos/supercollider
+${GEM_LIBDIR}/lib/rouge/demos/svelte
 ${GEM_LIBDIR}/lib/rouge/demos/swift
 ${GEM_LIBDIR}/lib/rouge/demos/systemd
 ${GEM_LIBDIR}/lib/rouge/demos/syzlang
@@ -273,6 +275,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/clean.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/clojure.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cmake.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cmhg.rb
+${GEM_LIBDIR}/lib/rouge/lexers/codeowners.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/coffeescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/common_lisp.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/conf.rb
@@ -446,6 +449,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/ssh.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/stan.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/stata.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/supercollider.rb
+${GEM_LIBDIR}/lib/rouge/lexers/svelte.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/systemd.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/syzlang.rb
@@ -503,3 +507,5 @@ ${GEM_LIBDIR}/lib/rouge/util.rb
 ${GEM_LIBDIR}/lib/rouge/version.rb
 ${GEM_LIBDIR}/rouge.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.1.0/plugins
+@pkgdir lib/ruby/gems/3.1.0/extensions
