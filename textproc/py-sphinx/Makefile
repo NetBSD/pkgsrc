@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2023/10/28 19:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2023/11/07 22:27:09 wiz Exp $
 
-DISTNAME=	sphinx-7.1.2
+DISTNAME=	sphinx-7.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -18,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.18.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize>=1.3:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pygments>=2.13:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.0:../../textproc/py-snowballstemmer
@@ -27,10 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp-[0-9]*:../../textproc/py-sphinxco
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.0:../../textproc/py-sphinxcontrib-htmlhelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcontrib-jsmath
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.5:../../textproc/py-sphinxcontrib-serializinghtml
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.9:../../textproc/py-sphinxcontrib-serializinghtml
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
@@ -48,9 +46,6 @@ post-install:
 	${MV} sphinx-autogen sphinx-autogen-${PYVERSSUFFIX} && \
 	${MV} sphinx-build sphinx-build-${PYVERSSUFFIX} && \
 	${MV} sphinx-quickstart sphinx-quickstart-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
