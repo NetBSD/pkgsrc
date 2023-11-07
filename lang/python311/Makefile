@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/10/25 21:33:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/11/07 11:27:22 nia Exp $
 
 .include "dist.mk"
 
@@ -35,6 +35,7 @@ PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
