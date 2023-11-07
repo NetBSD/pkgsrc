@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6745 2023/11/07 15:40:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6746 2023/11/07 17:57:08 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9744,3 +9744,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/py-sip successor x11/py-sip5 [wiz 2023-11-07]
 	Added devel/py-boolean.py version 4.0 [wiz 2023-11-07]
 	Added devel/py-license-expression version 30.1.1 [wiz 2023-11-07]
+	Updated graphics/ptex to 2.4.2 [nros 2023-11-07]
