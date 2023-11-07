@@ -1,0 +1,16 @@
+$NetBSD: patch-src_ptex_CMakeLists.txt,v 1.1 2023/11/07 17:56:56 nros Exp $
+
+alloca.h is non standard, check if it can be included 
+
+--- src/ptex/CMakeLists.txt.orig	2022-08-05 02:02:51.000000000 +0000
++++ src/ptex/CMakeLists.txt
+@@ -1,3 +1,9 @@
++include(CheckIncludeFileCXX)
++check_include_file_cxx("alloca.h" HAVE_ALLOCA_H)
++if(HAVE_ALLOCA_H)
++add_compile_definitions(PTEX_HAVE_ALLOCA_H)
++endif()
++
+ configure_file(PtexVersion.h.in
+     ${CMAKE_CURRENT_SOURCE_DIR}/PtexVersion.h @ONLY)
+ 

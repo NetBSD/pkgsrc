@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/07 17:56:56 nros Exp $
+
+Use extentions for alloca on NetBSD.
+Don't build docs.
+
+--- CMakeLists.txt.orig	2022-08-05 02:02:51.000000000 +0000
++++ CMakeLists.txt
+@@ -16,7 +16,7 @@ if (NOT DEFINED CMAKE_CXX_STANDARD)
+         set(CMAKE_CXX_STANDARD 98)
+     endif ()
+ endif()
+-set(CMAKE_CXX_EXTENSIONS OFF)
++set(CMAKE_CXX_EXTENSIONS ON)
+ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+ set(CMAKE_FIND_PACKAGE_RESOLVE_SYMLINKS ON)
+@@ -114,5 +114,5 @@ include_directories(src/ptex)
+ add_subdirectory(src/ptex)
+ add_subdirectory(src/utils)
+ add_subdirectory(src/tests)
+-add_subdirectory(src/doc)
++#add_subdirectory(src/doc)
+ add_subdirectory(src/build)
