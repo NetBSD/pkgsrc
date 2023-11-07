@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/07 15:37:18 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/CHANGELOG.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/README.rst
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/boolean/__init__.py
+${PYSITELIB}/boolean/__init__.pyc
+${PYSITELIB}/boolean/__init__.pyo
+${PYSITELIB}/boolean/boolean.py
+${PYSITELIB}/boolean/boolean.pyc
+${PYSITELIB}/boolean/boolean.pyo
+${PYSITELIB}/boolean/test_boolean.py
+${PYSITELIB}/boolean/test_boolean.pyc
+${PYSITELIB}/boolean/test_boolean.pyo
