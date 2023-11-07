@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6764 2023/11/07 22:56:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6765 2023/11/07 22:59:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9764,3 +9764,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/xapian-omega to 1.4.24 [schmonz 2023-11-07]
 	Updated pkgtools/python-versions-check to 1.6 [wiz 2023-11-07]
 	Updated devel/py-ddt to 1.6.0 [wiz 2023-11-07]
+	Updated security/py-cyclonedx-python-lib to 5.1.1 [wiz 2023-11-07]
