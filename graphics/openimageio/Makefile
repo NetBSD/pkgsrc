@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/11/06 17:20:41 nros Exp $
+# $NetBSD: Makefile,v 1.99 2023/11/07 12:13:57 nros Exp $
 
 DISTNAME=	OpenImageIO-2.5.4.0
 PKGNAME=	${DISTNAME:tl}
@@ -45,6 +45,8 @@ CMAKE_ARGS+=		-DUSE_OpenCV=OFF
 
 # We're using cmake...
 CHECK_PORTABILITY_SKIP+=	Makefile
+
+PKGCONFIG_OVERRIDE=	src/build-scripts/OpenImageIO.pc.in
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
