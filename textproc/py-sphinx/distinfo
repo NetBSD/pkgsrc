@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.64 2023/08/02 07:16:15 adam Exp $
+$NetBSD: distinfo,v 1.65 2023/11/07 22:27:09 wiz Exp $
 
-BLAKE2s (sphinx-7.1.2.tar.gz) = a0b5855143152743afc069321d4de407ab10ad1fd52bd37dd680b31cbe33681a
-SHA512 (sphinx-7.1.2.tar.gz) = d6bccdaa476c700bef444736bb439a4097b9cd40d9c2fce1c3bb889f3677b6d17fe2833b0d3cf4cd3e43927f5fe6f59825f290dabeb2736e77f7f1f26c84d2ec
-Size (sphinx-7.1.2.tar.gz) = 6828258 bytes
+BLAKE2s (sphinx-7.2.6.tar.gz) = a295d9572088b730601ac14eb300525eb8035133a1e7d6b01b79087fa34e75c2
+SHA512 (sphinx-7.2.6.tar.gz) = 9a42e38c3c54429cc008b58892297ade4ccdd67561ee671e42a1fae976955895bb5383d58cb66a4f9f7edd1cc50dc2d1f083efeef036eac9fffc205979d3ccbc
+Size (sphinx-7.2.6.tar.gz) = 7015183 bytes
