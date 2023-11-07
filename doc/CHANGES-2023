@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6733 2023/11/07 09:27:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6734 2023/11/07 09:30:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9732,3 +9732,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-poetry-core to 1.8.1 [wiz 2023-11-07]
 	Updated devel/py-poetry to 1.7.0 [wiz 2023-11-07]
 	Updated devel/py-poetry-plugin-export to 1.6.0 [wiz 2023-11-07]
+	Updated devel/py-rpds-py to 0.12.0 [wiz 2023-11-07]
