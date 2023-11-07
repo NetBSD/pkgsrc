@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4113 2023/11/05 13:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4114 2023/11/07 15:37:34 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2432,6 +2432,7 @@ SUBDIR+=	py-blessed
 SUBDIR+=	py-blessings
 SUBDIR+=	py-blinker
 SUBDIR+=	py-boltons
+SUBDIR+=	py-boolean.py
 SUBDIR+=	py-boost
 SUBDIR+=	py-bugzilla
 SUBDIR+=	py-build
