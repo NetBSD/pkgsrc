@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2023/11/02 13:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/11/07 12:46:58 prlw1 Exp $
 
 DISTNAME=	gobject-introspection-1.78.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -49,12 +50,7 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/girepository
 # Disable cache to keep fake homedir clean
 MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
-# remove after patch-giscanner_doctemplates_*_meson.build are removed,
-# probably in 1.72.0
-post-install:
-	${FIND} ${DESTDIR}${PREFIX} -name \*.orig -exec rm {} \;
-
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.78.0
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.78.1
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
