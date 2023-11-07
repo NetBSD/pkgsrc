@@ -1,0 +1,15 @@
+$NetBSD: patch-core_libs_metadataengine_CMakeLists.txt,v 1.1 2023/11/07 08:40:33 wiz Exp $
+
+Fix build with exiv2 0.28.1.
+
+--- core/libs/metadataengine/CMakeLists.txt.orig	2023-07-05 15:20:49.000000000 +0000
++++ core/libs/metadataengine/CMakeLists.txt
+@@ -112,7 +112,7 @@ include_directories(
+     $<TARGET_PROPERTY:KF5::ConfigCore,INTERFACE_INCLUDE_DIRECTORIES>
+     $<TARGET_PROPERTY:KF5::I18n,INTERFACE_INCLUDE_DIRECTORIES>
+ 
+-    $<TARGET_PROPERTY:exiv2lib,INTERFACE_INCLUDE_DIRECTORIES>
++    $<TARGET_PROPERTY:Exiv2::exiv2lib,INTERFACE_INCLUDE_DIRECTORIES>
+ )
+ 
+ # Used by digikamcore
