@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2023/11/07 10:51:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2023/11/07 13:19:47 nia Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -19,10 +19,6 @@ CONFLICTS=	gettext<=0.10.35
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures
-
-# Darwin does not support RPATH. It seems to attempt to force one anyway
-# with earlier versions such as 10.4, resulting in a build error.
-CONFIGURE_ARGS.Darwin+=	--disable-rpath
 
 .include "../../mk/bsd.fast.prefs.mk"
 
