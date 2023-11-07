@@ -3,7 +3,7 @@ general-purpose schema-less binary data format.
 
 From cbor.io:
 
-RFC 7049 Concise Binary Object Representation
+RFC 8949 Concise Binary Object Representation
 
 "The Concise Binary Object Representation (CBOR) is a data format
 whose design goals include the possibility of extremely small code
