@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.8 2023/10/15 19:45:33 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2023/11/07 20:29:25 nros Exp $
 
 BLAKE2s (OpenColorIO-2.2.1.tar.gz) = 5fd74fcfa9cc588b7252dcc32df273c69a62a49ccd22b3258f6b2a4d3022624a
 SHA512 (OpenColorIO-2.2.1.tar.gz) = d5f3a4b5bd661af7336c015d07e0feccb286464a08239a3c259a97217001161e7571f5137475fc2f4d1b9af6381bbfa03c0b60f41de282f114307961b8d84fc9
 Size (OpenColorIO-2.2.1.tar.gz) = 11336775 bytes
 SHA1 (patch-share_cmake_modules_Findyaml-cpp.cmake) = e0ae8f97d09ef9c762b419a96a0c091333b4a0c9
 SHA1 (patch-share_cmake_utils_CheckSupportGL.cmake) = f259440166689f7fd8970a61456f111981083733
+SHA1 (patch-share_cmake_utils_CppVersion.cmake) = cc546acc672771519f6c01bffedc60eab6c2d6fd
+SHA1 (patch-src_OpenColorIO_OCIOZArchive.cpp) = 07f6832350a400d98f273bacf16a82df1c1031f9
+SHA1 (patch-src_apps_ocioarchive_main.cpp) = 227dc6f8bee4415db6eb54deef8551aee8b2bb36
