@@ -1,3 +1,0 @@
-JACK Rack is a LADSPA effects rack for the JACK audio API.  It uses
-GTK+ 2 (and optionally GNOME 2) for the GUI, and also understands LRDF
-XML descriptions of LADSPA plugins.

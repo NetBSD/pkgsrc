@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2023/10/29 13:05:10 rhialto Exp $
+# $NetBSD: Makefile,v 1.680 2023/11/07 13:01:50 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -197,7 +197,6 @@ SUBDIR+=	id3v2
 SUBDIR+=	ifp-line
 SUBDIR+=	jack
 SUBDIR+=	jack-keyboard
-SUBDIR+=	jack-rack
 SUBDIR+=	jack_umidi
 SUBDIR+=	juke
 SUBDIR+=	kid3
