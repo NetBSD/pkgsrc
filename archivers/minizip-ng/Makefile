@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/07 19:50:35 nros Exp $
 
-DISTNAME=	minizip-ng-4.0.1
-PKGNAME=	${DISTNAME:S/-ng//}
-PKGREVISION=	1
+DISTNAME=	minizip-ng-4.0.2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zlib-ng/}
 GITHUB_PROJECT=	minizip-ng
@@ -22,7 +20,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=YES
 CMAKE_CONFIGURE_ARGS+=	-DMZ_BZIP2=YES
 CMAKE_CONFIGURE_ARGS+=	-DMZ_LZMA=YES
 CMAKE_CONFIGURE_ARGS+=	-DMZ_ZSTD=YES
-CMAKE_CONFIGURE_ARGS+=	-DINSTALL_INC_DIR=${PREFIX}/include/minizip-ng
+CMAKE_CONFIGURE_ARGS+=	-DMZ_COMPAT=NO
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
