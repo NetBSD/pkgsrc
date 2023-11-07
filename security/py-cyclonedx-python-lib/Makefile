@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/07 22:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/07 23:00:54 wiz Exp $
 
 DISTNAME=	cyclonedx_python_lib-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -22,6 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff-[0-9]*:../../textproc/py-xmldiff
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# https://github.com/CycloneDX/cyclonedx-python-lib/issues/435
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/LICENSE
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/NOTICE
