@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/17 20:37:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/11/07 08:48:16 wiz Exp $
 
-BLAKE2s (cleo-2.0.1.tar.gz) = 5d3b4ff5ef52b4013671c127c3f41052948df53023286eeb8556ae2122c02adf
-SHA512 (cleo-2.0.1.tar.gz) = fdfabdfdbf32cb600bb966e6649abee24c89f395e8a2207439fd2ff87d94714fdcc6ebffef69d3ef5cf78619b6a334eed6eed5fe2d0ca61ad7cff9098c9cc8bc
-Size (cleo-2.0.1.tar.gz) = 59723 bytes
+BLAKE2s (cleo-2.1.0.tar.gz) = e20874c68f71c0ee4829491d4756c8df7cecb39111a299220816b33fe317ce45
+SHA512 (cleo-2.1.0.tar.gz) = 0821a0cab3b1a64b5f67c8abcb860469b877a47772ad5fc5406daab95ccf6705acccefb537fb0d4bccf7757c1855e49429e2cb086e00dafc7594f1457de11deb
+Size (cleo-2.1.0.tar.gz) = 79957 bytes
