@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.168 2023/10/24 22:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2023/11/07 23:12:56 wiz Exp $
 
-DISTNAME=	Sigil-1.9.30
-PKGREVISION=	6
+DISTNAME=	Sigil-2.0.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_PROJECT=	Sigil
@@ -23,6 +22,8 @@ USE_LANGUAGES=	c c++0x
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
+# upstream defaults to Qt6, but this needs the unpackaged qt6-webengine
+CMAKE_ARGS+=	-DUSE_QT5=1
 CMAKE_ARGS+=	-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
 CMAKE_ARGS+=	-DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PYVERSSUFFIX}
 

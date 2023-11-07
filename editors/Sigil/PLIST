@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/03/12 17:26:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/11/07 23:12:56 wiz Exp $
 bin/sigil
 lib/sigil/libsigilgumbo.so
 lib/sigil/sigil
@@ -112,6 +112,6 @@ share/sigil/translations/sigil_sr.qm
 share/sigil/translations/sigil_sv.qm
 share/sigil/translations/sigil_th.qm
 share/sigil/translations/sigil_tr.qm
-share/sigil/translations/sigil_uk_UA.qm
+share/sigil/translations/sigil_uk.qm
 share/sigil/translations/sigil_zh_CN.qm
 share/sigil/translations/sigil_zh_TW.qm
