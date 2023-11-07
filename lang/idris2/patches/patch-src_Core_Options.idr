@@ -1,9 +1,6 @@
-$NetBSD: patch-src_Core_Options.idr,v 1.1 2023/11/06 17:17:51 pho Exp $
+$NetBSD: patch-src_Core_Options.idr,v 1.2 2023/11/07 03:40:19 pho Exp $
 
-Hunk #0, #1, #2:
-  Add DESTDIR support.
-
-  TODO: Upstream this
+Add DESTDIR support. Already done in upstream Git HEAD.
 
 --- src/Core/Options.idr.orig	2022-10-27 15:43:33.000000000 +0000
 +++ src/Core/Options.idr
