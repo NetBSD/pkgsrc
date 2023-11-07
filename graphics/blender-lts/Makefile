@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/10/24 22:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/07 18:07:05 nros Exp $
 
 DISTNAME=	blender-3.3.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -76,7 +76,6 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 .include "options.mk"
-.include "../../archivers/minizip-ng/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
