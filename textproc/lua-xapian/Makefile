@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2022/01/02 09:31:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/07 22:32:52 schmonz Exp $
 
 PKGNAME=		${LUA_PKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=		Lua bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/lua/
 
 CONFIGURE_ARGS+=	--with-lua
-CONFIGURE_ENV+=		LUA_INC=${BUILDLINK_INCDIRS.${LUA_PACKAGE}}
+CONFIGURE_ENV+=		LUA_CFLAGS=-I${PREFIX:Q}/${LUA_INCDIR:Q}
+CONFIGURE_ENV+=		LUA_LIBS=-L${PREFIX:Q}/${LUA_CDIR:Q}
 MAKE_ENV+=		LUA_PKGPREFIX=${LUA_PKGPREFIX:Q}
 
 REPLACE_LUA=		lua/docs/examples/*.lua
