@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6737 2023/11/07 10:44:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6738 2023/11/07 10:51:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9736,3 +9736,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-lsp-jsonrpc to 1.1.2 [wiz 2023-11-07]
 	Updated lang/py-lsp-server to 1.8.2 [wiz 2023-11-07]
 	Updated devel/py-trio to 0.23.1 [wiz 2023-11-07]
+	Updated devel/gettext-lib to 0.22.3 [wiz 2023-11-07]
