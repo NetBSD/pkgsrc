@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/10/24 22:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/07 23:16:43 wiz Exp $
 
-DISTNAME=	PageEdit-1.9.20
-PKGREVISION=	8
+DISTNAME=	PageEdit-2.0.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -19,6 +18,9 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O0
 USE_LANGUAGES=	c c++0x
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+# upstream defaults to Qt6, but this needs the unpackaged qt6-webengine
+CMAKE_ARGS+=	-DUSE_QT5=1
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
