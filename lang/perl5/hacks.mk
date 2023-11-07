@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.30 2023/11/05 18:18:46 nia Exp $
+# $NetBSD: hacks.mk,v 1.31 2023/11/07 09:54:49 nia Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -55,17 +55,6 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
 PKG_HACKS+=	gcc-4.5-codegen
 CFLAGS+=	-fno-reorder-blocks
 .  endif
-.endif
-
-### [Thu Nov 5 19:00:00 CEST 2023  : nia ]
-# The package includes a hack to disable the default of -Werror
-# for implicit function declarations in the newest versions
-# of XCode (pkgsrc also contains this hack, in mk/). However,
-# very old versions of Darwin use GCC 4 which doesn't understand
-# this command line argument.
-.if ${OPSYS} == "Darwin" && ${CC_VERSION:Mgcc-*}
-PKG_HACKS+=	old-darwin-gcc
-BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 .endif
 
 .endif  # PERL5_HACKS_MK

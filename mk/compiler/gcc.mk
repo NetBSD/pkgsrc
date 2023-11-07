@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.263 2023/10/09 13:36:13 nia Exp $
+# $NetBSD: gcc.mk,v 1.264 2023/11/07 09:54:49 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -324,6 +324,16 @@ _GCC_VERSION=	0
 .  endif
 .endif
 _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
+
+.if !empty(_GCC_VERSION:M[23]\..*) || !empty(_GCC_VERSION:M4.[01]\..*)
+# A lot of packages attempt to do this as a workaround for a
+# well-intentioned default in XCode 12+, but it's a common cause of
+# build failures on old versions of Darwin which use gcc and don't
+# understand this syntax.
+#
+# Note that pkgsrc also sets this flag itself for Darwin+clang.
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
+.endif
 
 .for _version_ in ${_C_STD_VERSIONS}
 _C_STD_FLAG.${_version_}?=	-std=${_version_}
