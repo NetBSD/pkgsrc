@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2023/06/29 18:03:17 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/11/07 22:31:11 he Exp $
 
 BLAKE2s (nDPI-4.6.tar.gz) = 43db6d82a24789622f8afe1f18ba3dcd33f5eb92b76f23932732789f47e50937
 SHA512 (nDPI-4.6.tar.gz) = 12dd50eeaae0aa5c2e3c89cb53cdb9989036759bd900312d3875eaba296646c2e42be31dc2b003cbc2401ccef8fbf8d2e460b9a604d7bece360f17f937d60cad
 Size (nDPI-4.6.tar.gz) = 29705235 bytes
 SHA1 (patch-src_include_ndpi__includes.h) = db5da9ca24ecf32fd8c264e193af280814dc74c6
 SHA1 (patch-src_lib_Makefile.in) = 2f0dd8c5bacf1f1036bfb81b1139e48131122592
+SHA1 (patch-src_lib_third__party_include_gcrypt_common.h) = 257a2c9b08793f8bca564dc7c6229f1d5168b5e1
