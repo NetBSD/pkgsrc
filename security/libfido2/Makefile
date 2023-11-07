@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/10/24 22:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/07 00:28:07 gdt Exp $
 
 DISTNAME=	libfido2-1.13.0
 PKGREVISION=	1
@@ -9,6 +9,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developers.yubico.com/libfido2/
 COMMENT=	U2F/FIDO/FIDO2 library and tools
 LICENSE=	2-clause-bsd
+
+# libfido2 has src/hid-foo.c for a variety of platforms, and the rest
+# are unimplemented.  Upstream has an option not to use hid, but USB
+# fido2 keys are the typical approach and thus far the package does
+# not support that option.
+BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-* MidnightBSD-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	Linux-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-*
+BROKEN_EXCEPT_ON_PLATFORM+=	OpenBSD-*-*
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config mandoc
