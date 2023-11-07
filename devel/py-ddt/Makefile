@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/07 22:56:13 wiz Exp $
 
-DISTNAME=	ddt-1.4.4
+DISTNAME=	ddt-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/ddt/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/txels/ddt
 COMMENT=	Data-Driven/Decorated Tests
 LICENSE=	mit
 
-.include "../../lang/python/pyversion.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
