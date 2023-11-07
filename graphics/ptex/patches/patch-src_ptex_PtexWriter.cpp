@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ptex_PtexWriter.cpp,v 1.1 2017/02/15 00:54:50 joerg Exp $
+$NetBSD: patch-src_ptex_PtexWriter.cpp,v 1.2 2023/11/07 17:56:56 nros Exp $
+
+unistd.h needed for declaration of unlink
 
 --- src/ptex/PtexWriter.cpp.orig	2017-02-15 00:33:54.858207702 +0000
 +++ src/ptex/PtexWriter.cpp
