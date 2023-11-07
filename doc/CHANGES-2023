@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6766 2023/11/07 23:06:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6767 2023/11/07 23:13:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9766,3 +9766,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ddt to 1.6.0 [wiz 2023-11-07]
 	Updated security/py-cyclonedx-python-lib to 5.1.1 [wiz 2023-11-07]
 	Updated devel/py-setuptools_scm to 8.0.4 [wiz 2023-11-07]
+	Updated editors/Sigil to 2.0.2 [wiz 2023-11-07]
