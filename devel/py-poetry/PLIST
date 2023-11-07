@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/07 09:25:52 wiz Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -95,6 +95,9 @@ ${PYSITELIB}/poetry/console/commands/env/use.pyo
 ${PYSITELIB}/poetry/console/commands/env_command.py
 ${PYSITELIB}/poetry/console/commands/env_command.pyc
 ${PYSITELIB}/poetry/console/commands/env_command.pyo
+${PYSITELIB}/poetry/console/commands/export.py
+${PYSITELIB}/poetry/console/commands/export.pyc
+${PYSITELIB}/poetry/console/commands/export.pyo
 ${PYSITELIB}/poetry/console/commands/group_command.py
 ${PYSITELIB}/poetry/console/commands/group_command.pyc
 ${PYSITELIB}/poetry/console/commands/group_command.pyo
