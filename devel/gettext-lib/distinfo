@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.42 2023/06/30 08:31:04 tnn Exp $
+$NetBSD: distinfo,v 1.43 2023/11/07 10:51:11 wiz Exp $
 
-BLAKE2s (gettext-0.22.tar.gz) = 6b3b0b9824a6c8d58b28717b2d9089ed4895bbf4a1f7b0979117d8449a28b4ba
-SHA512 (gettext-0.22.tar.gz) = e2a58dde1cae3e6b79c03e7ef3d888f7577c1f4cba283b3b0f31123ceea8c33d7c9700e83de57104644de23e5f5c374868caa0e091f9c45edbbe87b98ee51c04
-Size (gettext-0.22.tar.gz) = 26105696 bytes
+BLAKE2s (gettext-0.22.3.tar.gz) = 63d6e795669fce63611de7c55ef684d64d03b41c23cf058fb1c001c2a2109e90
+SHA512 (gettext-0.22.3.tar.gz) = cd27e73cc6c106951cca43a200555d279b8c877c4d17bf53de9e187e466c5e9dba0551c7bd21bba4f46772f198361fa37da320495516a5b8fd9e6c85b24eb859
+Size (gettext-0.22.3.tar.gz) = 26684585 bytes
 SHA1 (patch-gettext-runtime_intl_configure) = 6b873572ad946e069f2a999c5795c9618688d7a1
-SHA1 (patch-gettext-runtime_intl_intl-compat.c) = 34e7d01f425c307cec029ae67304cf788a4b8f51
+SHA1 (patch-gettext-runtime_intl_intl-compat.c) = aea23c1e93711514db567f7db51e9e72ab2266f8
