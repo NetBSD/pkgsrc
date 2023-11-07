@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2023/11/06 13:48:41 gdt Exp $
+# $NetBSD: options.mk,v 1.46 2023/11/07 00:40:43 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
@@ -6,8 +6,13 @@ PKG_SUGGESTED_OPTIONS=	editline openssl
 
 .include "../../mk/bsd.prefs.mk"
 
-# libfido2 does not build on SunOS
-.if ${OPSYS} != "SunOS"
+# libfido2 is BROKEN_EXCEPT_ON_PLATFORM; lacking a facility to query
+# that list, open code it here.
+.if ${OPSYS} == "Darwin" || \
+    ${OPSYS} == "FreeBSD" || ${OPSYS} == "MidnightBSD" || \
+    ${OPSYS} == "Linux" || \
+    ${OPSYS} == "NetBSD" || \
+    ${OPSYS} == "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=	fido
 .endif
 
