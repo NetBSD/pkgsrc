@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/28 19:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:18:20 wiz Exp $
 
-DISTNAME=	sphinxcontrib-htmlhelp-2.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	sphinxcontrib_htmlhelp-2.0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-htmlhelp/}
 
@@ -11,18 +10,13 @@ HOMEPAGE=	http://sphinx-doc.org/
 COMMENT=	Sphinx API for HTML help
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.0.0:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-sphinx
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
