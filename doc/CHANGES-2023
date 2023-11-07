@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6739 2023/11/07 10:51:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6740 2023/11/07 12:47:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9738,3 +9738,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-trio to 0.23.1 [wiz 2023-11-07]
 	Updated devel/gettext-lib to 0.22.3 [wiz 2023-11-07]
 	Updated devel/gettext to 0.22.3 [wiz 2023-11-07]
+	Updated devel/gobject-introspection to 1.78.1nb1 [prlw1 2023-11-07]
