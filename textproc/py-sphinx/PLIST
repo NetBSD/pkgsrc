@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2023/10/28 19:57:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2023/11/07 22:27:09 wiz Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -44,6 +44,9 @@ ${PYSITELIB}/sphinx/builders/gettext.pyo
 ${PYSITELIB}/sphinx/builders/html/__init__.py
 ${PYSITELIB}/sphinx/builders/html/__init__.pyc
 ${PYSITELIB}/sphinx/builders/html/__init__.pyo
+${PYSITELIB}/sphinx/builders/html/_assets.py
+${PYSITELIB}/sphinx/builders/html/_assets.pyc
+${PYSITELIB}/sphinx/builders/html/_assets.pyo
 ${PYSITELIB}/sphinx/builders/html/transforms.py
 ${PYSITELIB}/sphinx/builders/html/transforms.pyc
 ${PYSITELIB}/sphinx/builders/html/transforms.pyo
@@ -363,6 +366,9 @@ ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/fr_FR/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/fr_FR/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/fr_FR/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/gl/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/gl/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/gl/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/he/LC_MESSAGES/sphinx.po
@@ -631,9 +637,6 @@ ${PYSITELIB}/sphinx/templates/texinfo/Makefile
 ${PYSITELIB}/sphinx/testing/__init__.py
 ${PYSITELIB}/sphinx/testing/__init__.pyc
 ${PYSITELIB}/sphinx/testing/__init__.pyo
-${PYSITELIB}/sphinx/testing/comparer.py
-${PYSITELIB}/sphinx/testing/comparer.pyc
-${PYSITELIB}/sphinx/testing/comparer.pyo
 ${PYSITELIB}/sphinx/testing/fixtures.py
 ${PYSITELIB}/sphinx/testing/fixtures.pyc
 ${PYSITELIB}/sphinx/testing/fixtures.pyo
@@ -799,6 +802,9 @@ ${PYSITELIB}/sphinx/transforms/references.pyo
 ${PYSITELIB}/sphinx/util/__init__.py
 ${PYSITELIB}/sphinx/util/__init__.pyc
 ${PYSITELIB}/sphinx/util/__init__.pyo
+${PYSITELIB}/sphinx/util/_pathlib.py
+${PYSITELIB}/sphinx/util/_pathlib.pyc
+${PYSITELIB}/sphinx/util/_pathlib.pyo
 ${PYSITELIB}/sphinx/util/build_phase.py
 ${PYSITELIB}/sphinx/util/build_phase.pyc
 ${PYSITELIB}/sphinx/util/build_phase.pyo
@@ -835,6 +841,9 @@ ${PYSITELIB}/sphinx/util/i18n.pyo
 ${PYSITELIB}/sphinx/util/images.py
 ${PYSITELIB}/sphinx/util/images.pyc
 ${PYSITELIB}/sphinx/util/images.pyo
+${PYSITELIB}/sphinx/util/index_entries.py
+${PYSITELIB}/sphinx/util/index_entries.pyc
+${PYSITELIB}/sphinx/util/index_entries.pyo
 ${PYSITELIB}/sphinx/util/inspect.py
 ${PYSITELIB}/sphinx/util/inspect.pyc
 ${PYSITELIB}/sphinx/util/inspect.pyo
