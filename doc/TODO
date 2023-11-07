@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23589 2023/11/07 09:14:33 wiz Exp $
+$NetBSD: TODO,v 1.23590 2023/11/07 09:17:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
-	o gawk-5.3.0
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
