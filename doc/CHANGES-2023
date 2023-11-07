@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6723 2023/11/07 08:43:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6724 2023/11/07 08:44:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9722,3 +9722,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/bdf2psf to 1.223 [fcambus 2023-11-07]
 	Updated www/ruby-rouge to 4.2.0 [fcambus 2023-11-07]
 	Updated textproc/ispell to 3.4.06 [wiz 2023-11-07]
+	Updated textproc/ispell-en_GB to 3.4.06 [wiz 2023-11-07]
