@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4114 2023/11/07 15:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4115 2023/11/07 15:40:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2668,6 +2668,7 @@ SUBDIR+=	py-lib3to6
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
 SUBDIR+=	py-libusb1
+SUBDIR+=	py-license-expression
 SUBDIR+=	py-limits
 SUBDIR+=	py-line_profiler
 SUBDIR+=	py-linecache2
