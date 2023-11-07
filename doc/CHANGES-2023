@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6750 2023/11/07 21:41:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6751 2023/11/07 22:02:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9750,3 +9750,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/TECkit to 2.5.12 [wiz 2023-11-07]
 	Updated graphics/libheif to 1.17.3 [wiz 2023-11-07]
 	Updated net/libfilezilla to 0.45.0 [wiz 2023-11-07]
+	Updated net/filezilla to 3.66.1 [wiz 2023-11-07]
