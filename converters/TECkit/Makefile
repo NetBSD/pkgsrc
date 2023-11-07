@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/11/16 14:28:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/07 21:35:09 wiz Exp $
 
-DISTNAME=	TECkit-2.5.11
+DISTNAME=	TECkit-2.5.12
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=silnrsi/}
 GITHUB_PROJECT=	teckit
@@ -13,8 +13,10 @@ LICENSE=	gnu-lgpl-v2.1 OR cpl-1.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	aclocal autoconf automake gmake
+
+USE_CXX_FEATURES=	c++11
 
 PKGCONFIG_OVERRIDE=	teckit.pc.in
 
