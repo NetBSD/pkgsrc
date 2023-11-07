@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23600 2023/11/07 17:57:08 nros Exp $
+$NetBSD: TODO,v 1.23601 2023/11/07 21:35:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOPE5-5.8.4 [wip]
 	o SQLiteCpp-2.5.0
 	o Sigil-2.0.2
-	o TECkit-2.5.12
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
@@ -1407,7 +1406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0.2
+	o tor-browser-13.0.3
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
