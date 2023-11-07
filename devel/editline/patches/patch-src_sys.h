@@ -1,10 +1,20 @@
-$NetBSD: patch-src_sys.h,v 1.1 2020/04/21 13:07:01 jperkin Exp $
+$NetBSD: patch-src_sys.h,v 1.2 2023/11/07 10:23:12 nia Exp $
 
-Remove conflicting and unnecessary SunOS-specific defines.
+- Include stddef.h/string.h for wchar_t and ssize_t on older Darwin.
+- Remove conflicting and unnecessary SunOS-specific defines.
 
---- src/sys.h.orig	2018-05-25 17:50:45.000000000 +0000
+--- src/sys.h.orig	2022-10-30 05:35:40.000000000 +0000
 +++ src/sys.h
-@@ -115,13 +115,4 @@ typedef unsigned int	u_int32_t;
+@@ -80,6 +80,8 @@ typedef void	*ioctl_t;
+ #endif
+ 
+ #include <stdio.h>
++#include <stddef.h>
++#include <string.h>
+ 
+ #ifndef HAVE_STRLCAT
+ //#define	strlcat libedit_strlcat
+@@ -123,13 +125,4 @@ typedef unsigned int	u_int32_t;
  #define	REGEX		/* Use POSIX.2 regular expression functions */
  #undef	REGEXP		/* Use UNIX V8 regular expression functions */
  
