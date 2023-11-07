@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/10/16 12:52:41 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/07 19:50:35 nros Exp $
 
-BUILDLINK_TREE+=	minizip
+BUILDLINK_TREE+=	minizip-ng
 
-.if !defined(MINIZIP_BUILDLINK3_MK)
-MINIZIP_BUILDLINK3_MK:=
+.if !defined(MINIZIP_NG_BUILDLINK3_MK)
+MINIZIP_NG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.minizip+=	minizip>=3.0.10
-BUILDLINK_PKGSRCDIR.minizip?=	../../archivers/minizip-ng
+BUILDLINK_API_DEPENDS.minizip-ng+=	minizip-ng>=4.0.2
+BUILDLINK_PKGSRCDIR.minizip-ng?=	../../archivers/minizip-ng
 
-.endif	# MINIZIP_BUILDLINK3_MK
+.endif	# MINIZIP_NG_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-minizip
+BUILDLINK_TREE+=	-minizip-ng
