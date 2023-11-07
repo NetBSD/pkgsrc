@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 19:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/07 09:25:52 wiz Exp $
 
-DISTNAME=	poetry-1.6.1
+DISTNAME=	poetry-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
 
@@ -34,13 +33,13 @@ DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=2022.5.19:../../misc/py-trove-classi
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.4.7:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-deepdiff>=6.3:../../textproc/py-deepdiff
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpretty>=1.0:../../www/py-httpretty
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.9:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.12:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 
-USE_LANGUAGES=	# none
+# for tests
+USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
@@ -60,12 +59,6 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} poetry poetry-${PYVERSSUFFIX} || ${TRUE}
-
-# needs 'make install'
-# as of 1.5.1:
-# 1 failed, 1374 passed, 6 skipped
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 # some tests use 'python'
 .include "../../lang/python/tool.mk"
