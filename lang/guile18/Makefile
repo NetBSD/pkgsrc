@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/07 18:51:56 gdt Exp $
 
 DISTNAME=		guile-1.8.8
 PKGNAME=		${DISTNAME:S/guile/guile18/}
@@ -12,6 +12,11 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension (1.8 branch)
 LICENSE=		gnu-lgpl-v2.1
 
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]* guile>=1.8<2.0
+
+# BROKEN_ON is commented out pending IGNORE_BROKEN_ON
+# BROKEN_ON+=		SunOS-*-*
+# segmentation fault happens during
+#   GUILE="/home/pbulk/build/lang/guile18/work/guile-1.8.8/pre-inst-guile" ../scripts/snarf-check-and-output-texi
 
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_STRICT=	no # has several configure programs
