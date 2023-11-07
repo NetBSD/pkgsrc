@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6729 2023/11/07 09:14:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6730 2023/11/07 09:17:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9728,3 +9728,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask to 3.0.0 [wiz 2023-11-07]
 	Updated devel/py-libusb1 to 3.1.0 [wiz 2023-11-07]
 	Updated textproc/py-rapidfuzz to 3.5.2 [wiz 2023-11-07]
+	Updated lang/gawk to 5.3.0 [wiz 2023-11-07]
