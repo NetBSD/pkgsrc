@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: python-versions-check,v 1.6 2023/07/23 01:58:20 wiz Exp $
+# $NetBSD: python-versions-check,v 1.7 2023/11/07 22:49:02 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -244,6 +244,6 @@ while searchlist:
         if entry in dependencies:
             package_versions = supported_versions(package)
             if not entry_versions.issuperset(package_versions):
-                report_problem(package, package_versions, entry_versions, package_versions)
+                report_problem(package, package_versions, package_versions, entry_versions)
                 python_versions[package] = entry_versions
                 searchlist.add(package)
