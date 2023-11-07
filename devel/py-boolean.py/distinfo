@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/07 15:37:18 wiz Exp $
+
+BLAKE2s (boolean.py-4.0.tar.gz) = c19f2df8cea47b6c6f655d72993472b21cedd1901caf72f9a7fc54f5d3794b49
+SHA512 (boolean.py-4.0.tar.gz) = 2b0328d0ae8a4c75ad3093f63491edf8a104471a8fc915dfc735bf2e78edae89513f21f7c59c7235db55a56d1cf019ac4dbf0f5a9e972d930b0e5006458b1f33
+Size (boolean.py-4.0.tar.gz) = 34504 bytes
