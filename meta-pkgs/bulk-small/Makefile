@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/10/30 13:11:46 nia Exp $
+# $NetBSD: Makefile,v 1.57 2023/11/07 11:54:08 nia Exp $
 
-DISTNAME=	bulk-small-20231030
+DISTNAME=	bulk-small-20231107
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +14,7 @@ RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT}
 
 #
 # Note: The purpose of this package is to produce a small set of the
@@ -91,7 +91,8 @@ DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 # numbers of other packages depend on.
 #
 DEPENDS+=	perl>=5:../../lang/perl5
-DEPENDS+=	python311-[0-9]*:../../lang/python311
+
+.include "../../lang/python/pyversion.mk"
 DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 #
@@ -292,5 +293,4 @@ TRANSITIVE+=	libstroke-[0-9]*:../../devel/libstroke
 DEPENDS+=	${TRANSITIVE}
 .endif
 
-.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
