@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6756 2023/11/07 22:18:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6757 2023/11/07 22:19:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9756,3 +9756,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinxcontrib-applehelp to 1.0.7 [wiz 2023-11-07]
 	Updated textproc/py-sphinxcontrib-devhelp to 1.0.5 [wiz 2023-11-07]
 	Updated textproc/py-sphinxcontrib-htmlhelp to 2.0.4 [wiz 2023-11-07]
+	Updated textproc/py-sphinxcontrib-qthelp to 1.0.6 [wiz 2023-11-07]
