@@ -1,0 +1,14 @@
+$NetBSD: patch-tcl8_Makefile.in,v 1.1 2023/11/07 22:32:52 schmonz Exp $
+
+Just because it's Darwin doesn't mean we want '.dylib' here.
+
+--- tcl8/Makefile.in.orig	2023-11-07 22:26:11.341707469 +0000
++++ tcl8/Makefile.in
+@@ -529,6 +529,7 @@ TCL_INC = @TCL_INC@
+ TCL_LIB = @TCL_LIB@
+ TCL_LIBS = @TCL_LIBS@
+ TCL_SHLIB_EXT = @TCL_SHLIB_EXT@
++TCL_SHLIB_EXT = .so
+ THREAD_LOCAL = @THREAD_LOCAL@
+ VERSION = @VERSION@
+ VERSION_NO_SNAPSHOT = @VERSION_NO_SNAPSHOT@
