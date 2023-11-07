@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6718 2023/11/06 22:08:02 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.6719 2023/11/07 07:13:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9717,3 +9717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/yabasic to 2.90.4 [fcambus 2023-11-06]
 	Updated devel/binaryen to 116 [fcambus 2023-11-06]
 	Updated sysutils/ytree to 2.05 [fcambus 2023-11-06]
+	Updated shells/oh-my-posh to 18.23.3 [pin 2023-11-07]
