@@ -1,0 +1,16 @@
+Software project licenses are often a combination of several free
+and open source software licenses. License expressions - as specified
+by SPDX - provide a concise and human readable way to express these
+licenses without having to read long license texts, while still
+being machine-readable.
+
+License expressions are used by key FOSS projects such as Linux;
+several packages ecosystem use them to document package licensing
+metadata such as npm and Rubygems; they are important when exchanging
+software data (such as with SPDX and SBOM in general) as a way to
+express licensing precisely.
+
+license-expression is a comprehensive utility library to parse,
+compare, simplify and normalize these license expressions (such as
+SPDX license expressions) using boolean logic like in: GPL-2.0-or-later
+WITH Classpath-exception-2.0 AND MIT.

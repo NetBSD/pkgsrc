@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/07 15:39:04 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/CHANGELOG.rst
+${PYSITELIB}/${WHEEL_INFODIR}/CODE_OF_CONDUCT.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/apache-2.0.LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/license_expression/__init__.py
+${PYSITELIB}/license_expression/__init__.pyc
+${PYSITELIB}/license_expression/__init__.pyo
+${PYSITELIB}/license_expression/_pyahocorasick.ABOUT
+${PYSITELIB}/license_expression/_pyahocorasick.py
+${PYSITELIB}/license_expression/_pyahocorasick.pyc
+${PYSITELIB}/license_expression/_pyahocorasick.pyo
+${PYSITELIB}/license_expression/data/cc-by-4.0.LICENSE
+${PYSITELIB}/license_expression/data/license_key_index.json.ABOUT
+${PYSITELIB}/license_expression/data/scancode-licensedb-index.json
