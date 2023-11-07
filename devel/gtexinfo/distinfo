@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.63 2023/04/09 06:58:22 wiz Exp $
+$NetBSD: distinfo,v 1.64 2023/11/07 22:05:01 wiz Exp $
 
-BLAKE2s (texinfo-7.0.3.tar.gz) = f1877af51358b10594e380229af2c2d717465b33faf03146c3b1761e319d97d1
-SHA512 (texinfo-7.0.3.tar.gz) = b895cff965422274203f171636881e3b1e557eb9abb9723077a3a79e94e0adc5d6d7621cbaa7be47d3c5d65ffc93fbb26f07dbfb430c745a186eaee288840648
-Size (texinfo-7.0.3.tar.gz) = 10828552 bytes
-SHA1 (patch-ab) = c27f30eefc28f021835f118543e872089b1c3c52
+BLAKE2s (texinfo-7.1.tar.gz) = 1d35f2c04728812005a572cc10096d98964881c4cbf9b3dd9a274e967502fc7b
+SHA512 (texinfo-7.1.tar.gz) = 23f91bf9a3994209d25d20d038b154220d35852c2f54a5f734522310cd91f480194c76d3fc9661b78e5b409d38a35cb70e3669c4358491eadc6e75acdc609583
+Size (texinfo-7.1.tar.gz) = 12118819 bytes
+SHA1 (patch-ab) = 080583e20117c34516321f9266f6a2fac1acda33
 SHA1 (patch-ac) = 7f7226ee521fddba9f967be4fe199f6bedcfa148
 SHA1 (patch-gnulib_lib_malloc_dynarray-skeleton.c) = 6e683e689bfc7573bf9d62d2bc9a1abb64d521df
-SHA1 (patch-gnulib_lib_mbiter.h) = 34c291e6994c6eb51aba803f3ebf5f09d46e9bdd
-SHA1 (patch-gnulib_lib_mbuiter.h) = be293674c37cb91746527be07aa40acbd285d2f4
+SHA1 (patch-gnulib_lib_mbiter.h) = 3d932f20f69ec2531a2b797dcc02252e19ace163
+SHA1 (patch-gnulib_lib_mbuiter.h) = a248a56818e46ca501f9dc57415c40f766a065f8
 SHA1 (patch-util_texi2dvi) = 72be61e607a393edf0cbd67747f7e0b360441466

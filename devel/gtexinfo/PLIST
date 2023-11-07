@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2023/08/27 14:52:47 pho Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/11/07 22:05:01 wiz Exp $
 bin/info
 bin/install-info
 bin/makeinfo
@@ -64,13 +64,13 @@ share/texinfo/Texinfo/Translations.pm
 share/texinfo/Texinfo/XS/parsetexi/Parsetexi.pm
 share/texinfo/Texinfo/XSLoader.pm
 share/texinfo/ext/epub3.pm
+share/texinfo/ext/highlight_syntax.pm
 share/texinfo/ext/latex2html.pm
 share/texinfo/ext/tex4ht.pm
 share/texinfo/htmlxref.cnf
 share/texinfo/init/book.pm
 share/texinfo/init/chm.pm
 share/texinfo/init/documentation_examples.pm
-share/texinfo/init/highlight_syntax.pm
 share/texinfo/init/html32.pm
 share/texinfo/js/info.css
 share/texinfo/js/info.js
