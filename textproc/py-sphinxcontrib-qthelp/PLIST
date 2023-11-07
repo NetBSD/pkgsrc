@@ -1,12 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/21 20:54:10 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.2 2023/11/07 22:19:38 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.pyo
@@ -110,6 +102,7 @@ ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.qthelp
 ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.qthelp.po
 ${PYSITELIB}/sphinxcontrib/qthelp/templates/project.qhcp
 ${PYSITELIB}/sphinxcontrib/qthelp/templates/project.qhp
-${PYSITELIB}/sphinxcontrib/qthelp/version.py
-${PYSITELIB}/sphinxcontrib/qthelp/version.pyc
-${PYSITELIB}/sphinxcontrib/qthelp/version.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
