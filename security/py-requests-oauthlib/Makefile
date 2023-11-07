@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/02/06 19:04:17 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/07 22:38:03 wiz Exp $
 
 DISTNAME=	requests-oauthlib-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-JWT
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:03 wiz Exp $
 
 DISTNAME=	twython-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oau
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

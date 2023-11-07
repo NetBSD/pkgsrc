@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/10/23 06:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/07 22:38:04 wiz Exp $
 
 PKGREVISION= 2
 .include "../../sysutils/salt/Makefile.common"
@@ -23,7 +23,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 INSTALLATION_DIRS=	${HTMLDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # Contains hardcoded paths that may refer to paths used during the build, for
 # example /opt/tools on SmartOS.

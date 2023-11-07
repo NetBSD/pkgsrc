@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/28 19:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/11/07 22:37:59 wiz Exp $
 
 DISTNAME=	python-daemon-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

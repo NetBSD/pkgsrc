@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/07 22:37:59 wiz Exp $
 
 DISTNAME=	dictdiffer-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=3.7.0:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

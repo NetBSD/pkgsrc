@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/06 09:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/07 22:38:07 wiz Exp $
 
 DISTNAME=	sphobjinv-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-check>=0:../../devel/py-test-check
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

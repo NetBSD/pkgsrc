@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/11/07 22:37:56 wiz Exp $
 
 DISTNAME=		mpc-0.34
 PKGREVISION=		3
@@ -26,7 +26,7 @@ SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.16

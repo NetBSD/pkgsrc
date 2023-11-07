@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/17 09:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/07 22:38:05 wiz Exp $
 
 DISTNAME=	sphinx-astropy-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_sc
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

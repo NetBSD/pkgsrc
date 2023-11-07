@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=	python-swiftclient-3.11.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -21,7 +21,7 @@ SUBST_MESSAGE.manpath=	fixing man path
 SUBST_FILES.manpath=	setup.cfg
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

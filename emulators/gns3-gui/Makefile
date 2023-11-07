@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:01 wiz Exp $
 
 DISTNAME=	gns3-gui-2.2.1
 PKGREVISION=	6
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-raven>=5.23.0:../../www/py-raven
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

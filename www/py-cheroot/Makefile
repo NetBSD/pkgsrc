@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/06/06 12:42:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.37 2023/11/07 22:38:08 wiz Exp $
 
 DISTNAME=	cheroot-8.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-portend
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

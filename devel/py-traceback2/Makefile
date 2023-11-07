@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/29 23:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/07 22:38:01 wiz Exp $
 
 DISTNAME=		traceback2-1.4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=		python-software-foundation
 
 DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

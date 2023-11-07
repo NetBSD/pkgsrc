@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/10/23 06:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2023/11/07 22:37:57 wiz Exp $
 
 DISTNAME=	peewee-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # needs features from newer sphinx than python 2.7 supports
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 MAKE_FLAGS+=	SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
 

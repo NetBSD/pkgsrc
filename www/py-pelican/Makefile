@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=		pelican-4.8.0
 GITHUB_PROJECT=		pelican
@@ -23,7 +23,7 @@ DEPENDS+=		${PYPKGPREFIX}-rich>=10.1:../../comms/py-rich
 DEPENDS+=		${PYPKGPREFIX}-Unidecode>=1.1:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-markdown>=3.1:../../textproc/py-markdown
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

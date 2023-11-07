@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/08/27 03:28:28 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:04 wiz Exp $
 
 DISTNAME=	kubernetes-27.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
