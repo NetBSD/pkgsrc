@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6752 2023/11/07 22:05:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6753 2023/11/07 22:13:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9752,3 +9752,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libfilezilla to 0.45.0 [wiz 2023-11-07]
 	Updated net/filezilla to 3.66.1 [wiz 2023-11-07]
 	Updated devel/gtexinfo to 7.1 [wiz 2023-11-07]
+	Updated textproc/py-sphinx-autodoc-typehints to 1.24.1 [wiz 2023-11-07]
