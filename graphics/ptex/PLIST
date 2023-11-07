@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/18 02:47:16 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/07 17:56:55 nros Exp $
 bin/ptxinfo
+include/PtexExports.h
 include/PtexHalf.h
 include/PtexInt.h
+include/PtexPlatform.h
 include/PtexUtils.h
 include/PtexVersion.h
 include/Ptexture.h
 lib/libPtex.a
 lib/libPtex.so
+lib/libPtex.so.2.4
+share/cmake/Ptex/ptex-config-version.cmake
+share/cmake/Ptex/ptex-config.cmake
+share/cmake/Ptex/ptex-exports-release.cmake
+share/cmake/Ptex/ptex-exports.cmake

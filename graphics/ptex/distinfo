@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/07 17:56:55 nros Exp $
 
-BLAKE2s (ptex-2.1.28.tar.gz) = ab9e3218d18d3df658cdd845d0d16028795ee34de9018fde5c6d0e14652e9907
-SHA512 (ptex-2.1.28.tar.gz) = ddce3c79f14d196e550c1e8a5b371482f88190cd667a2e2aa84601de1639f7cabb8571c1b3a49b48df46ce550d27088a00a67b1403c3bfec2ed73437c3dca3e8
-Size (ptex-2.1.28.tar.gz) = 305327 bytes
-SHA1 (patch-src_ptex_PtexPlatform.h) = f3c859f62b3f4ef0b0274939c522c735681fb70e
-SHA1 (patch-src_ptex_PtexWriter.cpp) = 2340782b4f70da421134631b625c5b20d133d809
+BLAKE2s (ptex-2.4.2.tar.gz) = 87c646d8a875a4c4b7af1f0a5066fe8ab9838f1aabe41f3e5efb14ddf6724a1b
+SHA512 (ptex-2.4.2.tar.gz) = 3b9607b7803e7c857bb00a6d4d8bbe108810c622a3593fb5d655183f3e6689f274ee5e79bcaab6928de38daf05cf25eb56125f39477f134131a8ad45071551b3
+Size (ptex-2.4.2.tar.gz) = 312942 bytes
+SHA1 (patch-CMakeLists.txt) = d4bec23f0cd8ede9935829bd9c1ea565c3ec070c
+SHA1 (patch-src_ptex_CMakeLists.txt) = 0bc6395b6dbebb417972ada727fb6af4f4ae6b3d
+SHA1 (patch-src_ptex_PtexPlatform.h) = 8bbdeffb3afc18824b2d4991cdb561cc9b17ddc6
+SHA1 (patch-src_ptex_PtexWriter.cpp) = 1d4c30f9a30b3428f02d6cbed82cfa73042faee1
