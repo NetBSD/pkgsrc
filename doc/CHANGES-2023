@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6727 2023/11/07 08:57:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6728 2023/11/07 09:00:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9726,3 +9726,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/py-cleo to 2.1.0 [wiz 2023-11-07]
 	Updated security/py-josepy to 1.14.0 [wiz 2023-11-07]
 	Updated www/py-flask to 3.0.0 [wiz 2023-11-07]
+	Updated devel/py-libusb1 to 3.1.0 [wiz 2023-11-07]
