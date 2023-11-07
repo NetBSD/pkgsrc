@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.264 2023/11/07 09:54:49 nia Exp $
+# $NetBSD: gcc.mk,v 1.265 2023/11/07 11:36:57 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -333,6 +333,12 @@ _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 #
 # Note that pkgsrc also sets this flag itself for Darwin+clang.
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
+.endif
+
+.if !empty(_GCC_VERSION:M[23]\..*) || !empty(_GCC_VERSION:M4.[0-8]\..*)
+COMPILER_HAS_C11?=	no
+.else
+COMPILER_HAS_C11?=	yes
 .endif
 
 .for _version_ in ${_C_STD_VERSIONS}
