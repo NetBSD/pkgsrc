@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/11/07 09:17:20 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/11/07 13:19:47 nia Exp $
 
 DISTNAME=	gawk-5.3.0
 CATEGORIES=	lang
@@ -33,11 +33,6 @@ CHECK_PORTABILITY_SKIP+=	doc/it/gawktexi.in
 
 .if ${MACHINE_PLATFORM:MDarwin-*-x86_64}
 CFLAGS+=	-Dvm_region=vm_region_64
-.endif
-
-.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
-# ld does not have -rpath
-CONFIGURE_ARGS+=	--disable-rpath
 .endif
 
 PLIST_VARS+=		extension

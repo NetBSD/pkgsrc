@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.29 2022/04/04 11:23:06 riastradh Exp $
+# $NetBSD: gnu-configure.mk,v 1.30 2023/11/07 13:19:47 nia Exp $
 #
 # Package-settable variables:
 #
@@ -57,6 +57,11 @@ CONFIGURE_ENV+=	lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 
 .if ${OPSYS} == "MirBSD"
 CONFIGURE_ENV+=	lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|\.so|_pic\.a)$$'
+.endif
+
+.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
+# ld does not have -rpath
+CONFIGURE_ARGS+=	--disable-rpath
 .endif
 
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
