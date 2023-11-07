@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/10/24 22:08:11 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/11/07 13:00:14 wiz Exp $
 
-DISTNAME=	grip-4.2.0
-PKGREVISION=	13
+DISTNAME=	grip-4.2.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grip/}
 
@@ -15,13 +14,11 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
-.include "../../audio/grip/options.mk"
-
 CONFIGURE_ARGS+=	--disable-werror
 
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
+.include "options.mk"
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
