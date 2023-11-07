@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/08/02 21:29:11 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2023/11/07 22:36:53 schmonz Exp $
 
 Call it "xapian-omega" and follow hier(7).
 
---- Makefile.in.orig	2019-07-24 03:34:14.000000000 +0000
+--- Makefile.in.orig	2023-11-06 04:30:24.000000000 +0000
 +++ Makefile.in
 @@ -92,7 +92,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -13,7 +13,7 @@ Call it "xapian-omega" and follow hier(7).
  bin_PROGRAMS = omindex$(EXEEXT) scriptindex$(EXEEXT) \
  	omindex-list$(EXEEXT)
  check_PROGRAMS = atomparsetest$(EXEEXT) csvesctest$(EXEEXT) \
-@@ -805,7 +805,7 @@ AM_CPPFLAGS = \
+@@ -838,7 +838,7 @@ AM_CPPFLAGS = \
  	-DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\" \
  	-DPKGLIBBINDIR=\"$(pkglibbindir)\"
  
@@ -21,17 +21,17 @@ Call it "xapian-omega" and follow hier(7).
 +pkglibbindir = $(libexecdir)/cgi-bin
  dist_pkglibbin_SCRIPTS = mhtml2html outlookmsg2html rfc822tohtml vcard2text
  dist_bin_SCRIPTS = dbi2omega htdig2omega mbox2omega
- dist_check_SCRIPTS = omegatest sourcetest
-@@ -819,7 +819,7 @@ TESTS = atomparsetest$(EXEEXT)\
- 	urlenctest$(EXEEXT)\
- 	utf8converttest$(EXEEXT)
+ dist_check_SCRIPTS = omegatest.pl sourcetest
+@@ -855,7 +855,7 @@ TESTS = atomparsetest$(EXEEXT)\
  
+ TEST_EXTENSIONS = .pl
+ PL_LOG_COMPILER = $(PERL)
 -omegadatadir = $(datadir)/omega
 +omegadatadir = $(datadir)/xapian-omega
  dist_omegadata_DATA = htdig2omega.script mbox2omega.script
  dist_sysconf_DATA = omega.conf
  
-@@ -1120,8 +1120,8 @@ md5test$(EXEEXT): $(md5test_OBJECTS) $(m
+@@ -1157,8 +1157,8 @@ md5test$(EXEEXT): $(md5test_OBJECTS) $(m
  common/str.$(OBJEXT): common/$(am__dirstamp) \
  	common/$(DEPDIR)/$(am__dirstamp)
  
