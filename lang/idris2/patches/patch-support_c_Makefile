@@ -1,8 +1,6 @@
-$NetBSD: patch-support_c_Makefile,v 1.1 2023/11/06 17:17:51 pho Exp $
+$NetBSD: patch-support_c_Makefile,v 1.2 2023/11/07 03:40:19 pho Exp $
 
-Add DESTDIR support.
-
-TODO: Upstream this
+Add DESTDIR support. Already done in upstream Git HEAD.
 
 --- support/c/Makefile.orig	2023-11-04 13:09:21.513363755 +0000
 +++ support/c/Makefile
