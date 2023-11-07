@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/15 23:05:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/07 22:38:02 wiz Exp $
 
 DISTNAME=	aioresponses-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 PYSETUPTESTTARGET=	pytest
 

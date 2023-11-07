@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/09/05 13:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=	HyperKitty-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -34,7 +34,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-django-debug-toolbar-[0-9]*:../../www/py-django-de
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

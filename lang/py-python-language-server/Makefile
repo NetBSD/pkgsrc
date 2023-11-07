@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/10/11 13:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/07 22:38:02 wiz Exp $
 
 DISTNAME=	python-language-server-0.36.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

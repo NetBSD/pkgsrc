@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/03/29 10:47:50 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/07 22:38:03 wiz Exp $
 
 DISTNAME=	bandit-1.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 .for bin in bandit bandit-baseline bandit-config-generator

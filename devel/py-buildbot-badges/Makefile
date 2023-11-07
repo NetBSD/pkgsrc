@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:10 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/07 22:37:58 wiz Exp $
 
 DISTNAME=	buildbot-badges-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

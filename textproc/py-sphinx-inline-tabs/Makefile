@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:06 wiz Exp $
 
 DISTNAME=	sphinx_inline_tabs-2022.1.2b11
 PKGNAME=	${PYPKGPREFIX}-sphinx-inline-tabs-2022.1.2beta11
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

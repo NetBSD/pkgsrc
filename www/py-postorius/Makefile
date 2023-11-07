@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 03:08:41 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/07 22:38:09 wiz Exp $
 
 DISTNAME=	postorius-1.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-readme_renderer-[0-9]*:../../textproc/py-readme_rendere
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/08/14 05:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/07 22:38:08 wiz Exp $
 
 DISTNAME=	subliminal-2.1.0
 PKGREVISION=	5
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-dogpile-cache, py-stevedore
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 
