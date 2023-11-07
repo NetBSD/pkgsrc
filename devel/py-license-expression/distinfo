@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/07 15:39:04 wiz Exp $
+
+BLAKE2s (license-expression-30.1.1.tar.gz) = fb140f1812a44bbe07105af8b38fe5d0a133af39fa3ac3890e7297a0fbabe3a6
+SHA512 (license-expression-30.1.1.tar.gz) = 048431b9eb70f3e53c4f1ae73b8ef930ddcf8d4ebf17239e76b1a687d3fd8132c87d4e50150fef69a542d283401f7e63036aa417285f2717eae988735c3f0ee6
+Size (license-expression-30.1.1.tar.gz) = 169790 bytes
