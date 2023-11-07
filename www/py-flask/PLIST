@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/10/28 19:57:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/07 08:57:22 wiz Exp $
 bin/flask-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -48,9 +48,16 @@ ${PYSITELIB}/flask/logging.py
 ${PYSITELIB}/flask/logging.pyc
 ${PYSITELIB}/flask/logging.pyo
 ${PYSITELIB}/flask/py.typed
-${PYSITELIB}/flask/scaffold.py
-${PYSITELIB}/flask/scaffold.pyc
-${PYSITELIB}/flask/scaffold.pyo
+${PYSITELIB}/flask/sansio/README.md
+${PYSITELIB}/flask/sansio/app.py
+${PYSITELIB}/flask/sansio/app.pyc
+${PYSITELIB}/flask/sansio/app.pyo
+${PYSITELIB}/flask/sansio/blueprints.py
+${PYSITELIB}/flask/sansio/blueprints.pyc
+${PYSITELIB}/flask/sansio/blueprints.pyo
+${PYSITELIB}/flask/sansio/scaffold.py
+${PYSITELIB}/flask/sansio/scaffold.pyc
+${PYSITELIB}/flask/sansio/scaffold.pyo
 ${PYSITELIB}/flask/sessions.py
 ${PYSITELIB}/flask/sessions.pyc
 ${PYSITELIB}/flask/sessions.pyo
