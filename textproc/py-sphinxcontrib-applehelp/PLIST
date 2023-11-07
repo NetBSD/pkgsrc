@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/07 22:15:27 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyo
@@ -109,4 +109,3 @@ ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
