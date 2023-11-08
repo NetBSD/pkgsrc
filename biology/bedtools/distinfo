@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:03:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/08 16:46:44 bacon Exp $
 
-BLAKE2s (bedtools-2.30.0.tar.gz) = f4e0cdb0d7ca32da2724c1afcf707c02a02ab201b66b93e4ce26d9a51e0566c5
-SHA512 (bedtools-2.30.0.tar.gz) = 3d69d6a53d3e5d15597dfefa26f7895231adbf3c1fe3b16ee4213e497ef01a20698add2f0e6f03d8eb7cd7c70709955f0ebdf897a025a83d31ef17e2c91f9856
-Size (bedtools-2.30.0.tar.gz) = 20639858 bytes
-SHA1 (patch-Makefile) = d21b4a69ce18eac7de59d277a03d0a5f5e2e1cb5
+BLAKE2s (bedtools-2.31.1.tar.gz) = e5b3faf919f7aaf12251b29fa248e85248ec30dadab45c3fd23523d7ddc78c05
+SHA512 (bedtools-2.31.1.tar.gz) = b62feeb6ef211314a86e022b6104cc2291086b940913cff5878759c37a8be0ac50c174020d8555d71dbc29e6be56ea40fc3c6543b5ef444bc7535124814688d6
+Size (bedtools-2.31.1.tar.gz) = 21085970 bytes
+SHA1 (patch-Makefile) = f38634cad79026c0dd0cad6a6a70db933f002d5f
 SHA1 (patch-src_utils_BamTools_include_SamHeader.hpp) = 7ab168b247b5edf7f3eccd9ef7329a5e1605c787
 SHA1 (patch-src_utils_htslib_Makefile) = 8785ff3110f8df26e0cc5b2fdf1e2e02d6cdc836
 SHA1 (patch-test_test.sh) = e3a17815d6a30c17db7134613d25f08c6be3494e
