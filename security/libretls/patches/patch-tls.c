@@ -1,8 +1,8 @@
-$NetBSD: patch-tls.c,v 1.1 2023/09/03 06:23:41 vins Exp $
+$NetBSD: patch-tls.c,v 1.2 2023/11/08 14:10:20 schmonz Exp $
 
 Portability fix for OpenSSL 3.x.
 
-With OpenSSL 3.x the EVP_PKEY_get1_RSA returns a cashed copy of the
+With OpenSSL 3.x the EVP_PKEY_get1_RSA returns a cached copy of the
 provider's key, so changing it is meaningless, since other get1/get0
 calls will return the previously cached copy. Instead, we have to
 re-assign the changed rsa after the edit.
