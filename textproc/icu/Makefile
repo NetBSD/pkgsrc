@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.151 2023/10/26 07:37:12 adam Exp $
+# $NetBSD: Makefile,v 1.152 2023/11/08 12:56:49 wiz Exp $
 
-DISTNAME=	icu4c-73_2-src
+DISTNAME=	icu4c-74_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
-EXTRACT_SUFX=	.tgz
 GITHUB_PROJECT=	icu
-GITHUB_RELEASE=	release-73-2
+GITHUB_RELEASE=	release-74-1
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icu.unicode.org/
@@ -15,7 +14,9 @@ COMMENT=	Robust and full-featured Unicode services
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/icu/source
-USE_LANGUAGES=		c99 c++11
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		gmake pkg-config
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
