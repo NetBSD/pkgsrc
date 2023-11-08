@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6778 2023/11/08 13:36:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6779 2023/11/08 13:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9779,3 +9779,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/icu to 74.1 [wiz 2023-11-08]
 	Updated databases/ldb to 2.8.0 [wiz 2023-11-08]
 	Updated devel/jj to 0.11.0 [wiz 2023-11-08]
+	Removed x11/gtksourceviewmm [wiz 2023-11-08]
