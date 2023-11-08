@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/09/12 07:55:11 fox Exp $
+# $NetBSD: Makefile,v 1.48 2023/11/08 16:49:02 bacon Exp $
 
 DISTNAME=	din-57
 CATEGORIES=	audio
@@ -13,8 +13,19 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoreconf pkg-config gmake
 GNU_CONFIGURE=	yes
 
-LIBS+=		-ltcl -lSDL -lGL -lpthread
-LIBS.Darwin+=   -lSDLmain -lSDL -Wl,-framework,Cocoa
+.include "../../mk/bsd.prefs.mk"
+
+# Work around syntax errors from clang 15.0.0
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} >= 14
+CXXFLAGS+=	-std=c++20
+.endif
+
+# Don't depend on -lGL on Darwin, otherwise a black screen is produced
+.if ${OPSYS} == "Darwin"
+LIBS+=	-ltcl -lSDLmain -lSDL -framework Cocoa -framework OpenGL -lpthread
+.else
+LIBS+=	-ltcl -lSDL -lGL -lpthread
+.endif
 
 .include "options.mk"
 
