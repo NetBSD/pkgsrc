@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/04/11 01:31:18 markd Exp $
+# $NetBSD: Makefile,v 1.32 2023/11/08 09:16:34 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2023pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	66805
@@ -31,7 +31,7 @@ DEPENDS+=	tex-antt-[0-9]*:../../fonts/tex-antt
 DEPENDS+=	tex-archaic-[0-9]*:../../fonts/tex-archaic
 # depend archivo
 DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
-# depend arimo
+DEPENDS+=	tex-arimo-[0-9]*:../../fonts/tex-arimo
 # depend arvo
 DEPENDS+=	tex-asana-math-[0-9]*:../../fonts/tex-Asana-Math
 # depend asapsym
@@ -169,8 +169,8 @@ DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
 # depend frederika2016
 # depend frimurer
-# depend garamond-libre
-# depend garamond-math
+DEPENDS+=	tex-garamond-libre-[0-9]*:../../fonts/tex-garamond-libre
+DEPENDS+=	tex-garamond-math-[0-9]*:../../fonts/tex-garamond-math
 # depend gelasio
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
@@ -222,11 +222,11 @@ DEPENDS+=	tex-lato-[0-9]*:../../fonts/tex-lato
 DEPENDS+=	tex-lfb-[0-9]*:../../fonts/tex-lfb
 DEPENDS+=	tex-libertine-[0-9]*:../../fonts/tex-libertine
 # depend libertinegc
-# depend libertinus
-# depend libertinus-fonts
-# depend libertinus-otf
-# depend libertinus-type1
-# depend libertinust1math
+DEPENDS+=	tex-libertinus-[0-9]*:../../fonts/tex-libertinus
+DEPENDS+=	tex-libertinus-fonts-[0-9]*:../../fonts/tex-libertinus-fonts
+DEPENDS+=	tex-libertinus-otf-[0-9]*:../../fonts/tex-libertinus-otf
+DEPENDS+=	tex-libertinus-type1-[0-9]*:../../fonts/tex-libertinus-type1
+DEPENDS+=	tex-libertinust1math-[0-9]*:../../fonts/tex-libertinust1math
 DEPENDS+=	tex-librebaskerville-[0-9]*:../../fonts/tex-librebaskerville
 # depend librebodoni
 DEPENDS+=	tex-librecaslon-[0-9]*:../../fonts/tex-librecaslon
@@ -254,7 +254,7 @@ DEPENDS+=	tex-mnsymbol-[0-9]*:../../fonts/tex-mnsymbol
 # depend montserrat
 # depend mpfonts
 DEPENDS+=	tex-mweights-[0-9]*:../../print/tex-mweights
-# depend newcomputermodern
+DEPENDS+=	tex-newcomputermodern-[0-9]*:../../fonts/tex-newcomputermodern
 DEPENDS+=	tex-newpx-[0-9]*:../../fonts/tex-newpx
 DEPENDS+=	tex-newtx-[0-9]*:../../fonts/tex-newtx
 DEPENDS+=	tex-newtxsf-[0-9]*:../../fonts/tex-newtxsf
@@ -262,9 +262,9 @@ DEPENDS+=	tex-newtxtt-[0-9]*:../../fonts/tex-newtxtt
 # depend niceframe-type1
 # depend nimbus15
 DEPENDS+=	tex-nkarta-[0-9]*:../../fonts/tex-nkarta
-# depend noto
-# depend noto-emoji
-# depend notomath
+DEPENDS+=	tex-noto-[0-9]*:../../fonts/tex-noto
+DEPENDS+=	tex-noto-emoji-[0-9]*:../../fonts/tex-noto-emoji
+DEPENDS+=	tex-notomath-[0-9]*:../../fonts/tex-notomath
 # depend nunito
 DEPENDS+=	tex-obnov-[0-9]*:../../fonts/tex-obnov
 DEPENDS+=	tex-ocherokee-[0-9]*:../../fonts/tex-ocherokee
@@ -338,7 +338,7 @@ DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
 # depend theanodidot
 # depend theanomodern
 # depend theanooldstyle
-# depend tinos
+DEPENDS+=	tex-tinos-[0-9]*:../../fonts/tex-tinos
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 DEPENDS+=	tex-trajan-[0-9]*:../../fonts/tex-trajan
 # depend twemoji-colr
