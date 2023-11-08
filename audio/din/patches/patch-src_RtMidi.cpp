@@ -1,4 +1,4 @@
-$NetBSD: patch-src_RtMidi.cpp,v 1.1 2023/09/12 07:55:11 fox Exp $
+$NetBSD: patch-src_RtMidi.cpp,v 1.2 2023/11/08 16:49:02 bacon Exp $
 
 Use process scheduling from NetBSD instead of pthread.
 
@@ -8,7 +8,7 @@ Use process scheduling from NetBSD instead of pthread.
        return;
  
    while ( jack_ringbuffer_write_space(data->buff) < sizeof(nBytes) + size )
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__APPLE__)
 +      sched_yield();
 +#else
        pthread_yield();
