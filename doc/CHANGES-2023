@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6784 2023/11/08 14:14:52 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6785 2023/11/08 16:46:52 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9784,3 +9784,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cbor2 to 5.5.1 [adam 2023-11-08]
 	Updated devel/py-lru-dict to 1.3.0 [adam 2023-11-08]
 	Added x11/herbe version 1.0.0 [pin 2023-11-08]
+	Updated biology/bedtools to 2.31.1 [bacon 2023-11-08]
