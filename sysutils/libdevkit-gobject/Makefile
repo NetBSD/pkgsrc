@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/07/21 12:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/08 13:20:57 wiz Exp $
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 

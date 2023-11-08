@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/24 22:08:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/08 13:18:22 wiz Exp $
 
 DISTNAME=	anymeal-1.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wedesoft/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

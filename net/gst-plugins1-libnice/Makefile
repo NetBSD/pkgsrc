@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2023/10/24 22:10:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/08 13:20:26 wiz Exp $
 
 PKGNAME=	gst-plugins1-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT+=	(gstreamer plugin)
 
 INSTALL_DIRS=	# disable meson install

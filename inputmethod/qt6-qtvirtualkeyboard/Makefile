@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/10/31 19:56:51 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/08 13:19:47 wiz Exp $
 
 DISTNAME=	qtvirtualkeyboard-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtvirtualkeyboard-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 virtual keyboard
 CATEGORIES=	inputmethod
 

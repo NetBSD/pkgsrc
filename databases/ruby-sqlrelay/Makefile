@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/10/24 22:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/08 13:18:37 wiz Exp $
 
 COMMENT=	Ruby extension for SQL Relay
-PKGREVISION=	2
+PKGREVISION=	3
 
 .include "../../databases/sqlrelay/Makefile.common"
 

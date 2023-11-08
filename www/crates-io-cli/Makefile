@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/08 13:21:17 wiz Exp $
 
 DISTNAME=	crates-io-cli-4.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

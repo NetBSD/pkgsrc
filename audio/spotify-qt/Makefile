@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/10/24 22:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/11/08 13:18:10 wiz Exp $
 
 DISTNAME=	spotify-qt-3.10
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kraxarn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

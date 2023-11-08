@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/08/14 05:24:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/11/08 13:18:54 wiz Exp $
 
 BUILDLINK_TREE+=	libgnt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnt
 LIBGNT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnt+=	libgnt>=2.14.0
-BUILDLINK_ABI_DEPENDS.libgnt?=	libgnt>=2.14.0nb7
+BUILDLINK_ABI_DEPENDS.libgnt?=	libgnt>=2.14.0nb8
 BUILDLINK_PKGSRCDIR.libgnt?=	../../devel/libgnt
 
 .include "../../devel/glib2/buildlink3.mk"

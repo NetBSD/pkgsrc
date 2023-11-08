@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2023/10/24 22:09:10 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2023/11/08 13:19:13 wiz Exp $
 #
 
 DISTNAME=	gamazons-0.83
-PKGREVISION=	65
+PKGREVISION=	66
 CATEGORIES=	games
 MASTER_SITES=	http://www.yorgalily.org/gamazons/src/
 

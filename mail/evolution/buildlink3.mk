@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.109 2023/10/21 17:10:57 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.110 2023/11/08 13:19:55 wiz Exp $
 
 BUILDLINK_TREE+=	evolution
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evolution
 EVOLUTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.8.0
-BUILDLINK_ABI_DEPENDS.evolution+=	evolution>=3.34.1nb23
+BUILDLINK_ABI_DEPENDS.evolution+=	evolution>=3.34.1nb25
 BUILDLINK_PKGSRCDIR.evolution?=		../../mail/evolution
 
 .include "../../mail/evolution-data-server/buildlink3.mk"

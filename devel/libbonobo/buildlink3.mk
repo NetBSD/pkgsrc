@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2023/04/19 08:08:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2023/11/08 13:18:53 wiz Exp $
 
 BUILDLINK_TREE+=	libbonobo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libbonobo
 LIBBONOBO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.8.0
-BUILDLINK_ABI_DEPENDS.libbonobo+=	libbonobo>=2.32.1nb10
+BUILDLINK_ABI_DEPENDS.libbonobo+=	libbonobo>=2.32.1nb11
 BUILDLINK_PKGSRCDIR.libbonobo?=		../../devel/libbonobo
 
 BUILDLINK_FILES.libbonobo+=	share/idl/bonobo-2.0/*

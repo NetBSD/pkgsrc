@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2023/04/19 08:11:52 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/11/08 13:21:24 wiz Exp $
 
 DISTNAME=	swish-e-2.4.5
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	www textproc
 #MASTER_SITES=	http://swish-e.org/distribution/
 

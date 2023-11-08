@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/04/19 08:09:39 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/08 13:18:42 wiz Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dia2code/}
 

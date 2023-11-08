@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/10/24 22:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/08 13:21:05 wiz Exp $
 
 DISTNAME=	iksemel-1.4
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc
 MASTER_SITES=	http://iksemel.googlecode.com/files/
 

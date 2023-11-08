@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2023/10/24 22:09:08 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2023/11/08 13:19:11 wiz Exp $
 
 DISTNAME=	crossfire-1.71.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

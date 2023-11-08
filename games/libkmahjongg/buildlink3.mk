@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/10/24 22:09:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/11/08 13:19:19 wiz Exp $
 
 BUILDLINK_TREE+=	libkmahjongg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkmahjongg
 LIBKMAHJONGG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkmahjongg+=	libkmahjongg>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkmahjongg?=	libkmahjongg>=23.04.3nb1
+BUILDLINK_ABI_DEPENDS.libkmahjongg?=	libkmahjongg>=23.04.3nb2
 BUILDLINK_PKGSRCDIR.libkmahjongg?=	../../games/libkmahjongg
 
 .include "../../textproc/kcompletion/buildlink3.mk"

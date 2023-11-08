@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2023/10/24 22:08:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2023/11/08 13:18:43 wiz Exp $
 
 BUILDLINK_TREE+=	ecore
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ecore
 ECORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ecore+=	ecore>=1.7.7
-BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=1.7.10nb10
+BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=1.7.10nb11
 BUILDLINK_PKGSRCDIR.ecore?=	../../devel/ecore
 
 .include "../../converters/libiconv/buildlink3.mk"

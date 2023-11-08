@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/08/24 06:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/08 13:20:44 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/Botan/botan3/}

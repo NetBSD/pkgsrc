@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2023/10/24 22:08:22 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/11/08 13:18:17 wiz Exp $
 
 DISTNAME=		prosody-0.12.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 

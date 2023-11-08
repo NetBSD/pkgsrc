@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2023/10/24 22:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/11/08 13:19:18 wiz Exp $
 
 DISTNAME=	kubrick-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kubrick/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2023/04/19 08:08:30 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2023/11/08 13:20:04 wiz Exp $
 
 BUILDLINK_TREE+=	Addresses
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	Addresses
 ADDRESSES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.Addresses+=	Addresses>=0.4.8
-BUILDLINK_ABI_DEPENDS.Addresses+=	Addresses>=0.4.8nb24
+BUILDLINK_ABI_DEPENDS.Addresses+=	Addresses>=0.4.8nb25
 BUILDLINK_PKGSRCDIR.Addresses?=		../../misc/Addresses
 
 .include "../../devel/gnustep-make/gnustep.mk"

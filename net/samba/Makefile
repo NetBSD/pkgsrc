@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2023/10/24 22:10:33 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2023/11/08 13:20:35 wiz Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
 VERSION=	3.6.25
-PKGREVISION=	37
+PKGREVISION=	38
 
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* winbind-[0-9]*
 

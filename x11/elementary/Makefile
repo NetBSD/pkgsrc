@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/10/24 22:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/11/08 13:21:26 wiz Exp $
 
 DISTNAME=	elementary-1.7.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

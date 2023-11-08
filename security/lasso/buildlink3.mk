@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2023/10/24 22:10:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/11/08 13:20:47 wiz Exp $
 
 BUILDLINK_TREE+=	lasso
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lasso
 LASSO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lasso+=	lasso>=2.2.1
-BUILDLINK_ABI_DEPENDS.lasso+=	lasso>=2.7.0nb10
+BUILDLINK_ABI_DEPENDS.lasso+=	lasso>=2.7.0nb11
 BUILDLINK_PKGSRCDIR.lasso?=	../../security/lasso
 
 .include "../../security/xmlsec1/buildlink3.mk"

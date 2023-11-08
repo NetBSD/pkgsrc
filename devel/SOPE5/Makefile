@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:08:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/08 13:18:39 wiz Exp $
 #
 
 DISTNAME=	SOPE-5.5.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://packages.inverse.ca/SOGo/sources/
 
