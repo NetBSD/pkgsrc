@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.50 2023/11/08 04:44:09 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.51 2023/11/08 14:10:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -92,7 +92,7 @@ CARGO_CRATE_DEPENDS+=	either-1.9.0
 CARGO_CRATE_DEPENDS+=	enumflags2-0.7.8
 CARGO_CRATE_DEPENDS+=	enumflags2_derive-0.7.8
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.1
-CARGO_CRATE_DEPENDS+=	errno-0.3.5
+CARGO_CRATE_DEPENDS+=	errno-0.3.6
 CARGO_CRATE_DEPENDS+=	error-chain-0.10.0
 CARGO_CRATE_DEPENDS+=	error-code-2.3.1
 CARGO_CRATE_DEPENDS+=	event-listener-2.5.3
@@ -127,7 +127,7 @@ CARGO_CRATE_DEPENDS+=	gdk-pixbuf-sys-0.15.10
 CARGO_CRATE_DEPENDS+=	gdk-sys-0.15.1
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
 CARGO_CRATE_DEPENDS+=	gethostname-0.2.3
-CARGO_CRATE_DEPENDS+=	getrandom-0.2.10
+CARGO_CRATE_DEPENDS+=	getrandom-0.2.11
 CARGO_CRATE_DEPENDS+=	gimli-0.28.0
 CARGO_CRATE_DEPENDS+=	gio-0.15.12
 CARGO_CRATE_DEPENDS+=	gio-sys-0.15.10
@@ -253,7 +253,7 @@ CARGO_CRATE_DEPENDS+=	lingua-yoruba-language-model-1.1.0
 CARGO_CRATE_DEPENDS+=	lingua-zulu-language-model-1.1.0
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.3.8
-CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.10
+CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.11
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.11
 CARGO_CRATE_DEPENDS+=	log-0.4.20
 CARGO_CRATE_DEPENDS+=	mac-notification-sys-0.6.1
@@ -401,7 +401,7 @@ CARGO_CRATE_DEPENDS+=	toml-0.8.8
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.5
 CARGO_CRATE_DEPENDS+=	toml_edit-0.19.15
 CARGO_CRATE_DEPENDS+=	toml_edit-0.21.0
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.30.1
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.30.2
 CARGO_CRATE_DEPENDS+=	tracing-0.1.40
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.27
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.32
