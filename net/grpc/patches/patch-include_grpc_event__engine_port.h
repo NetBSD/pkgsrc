@@ -1,6 +1,6 @@
-$NetBSD: patch-include_grpc_event__engine_port.h,v 1.7 2023/11/08 11:34:39 nros Exp $
+$NetBSD: patch-include_grpc_event__engine_port.h,v 1.8 2023/11/08 14:04:18 nros Exp $
 
-<sys/filio.h> need for FIONREAD on Illumos/Solaris
+<sys/filio.h> is needed for FIONREAD on Illumos/Solaris
 
 --- include/grpc/event_engine/port.h.orig	2023-11-08 12:11:17.869350984 +0000
 +++ include/grpc/event_engine/port.h
