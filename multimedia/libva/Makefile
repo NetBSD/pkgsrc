@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/11/06 20:02:56 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/08 22:58:29 wiz Exp $
 
 DISTNAME=	libva-2.20.0
 CATEGORIES=	multimedia
@@ -14,6 +14,8 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+
+USE_CC_FEATURES=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
