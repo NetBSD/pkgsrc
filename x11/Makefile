@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1004 2023/11/08 13:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1005 2023/11/08 14:14:25 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -107,6 +107,7 @@ SUBDIR+=	gtkstep
 SUBDIR+=	gtkterm2
 SUBDIR+=	gxmessage
 SUBDIR+=	hanterm
+SUBDIR+=	herbe
 SUBDIR+=	hot-babe
 SUBDIR+=	hs-X11
 SUBDIR+=	hs-X11-xft
