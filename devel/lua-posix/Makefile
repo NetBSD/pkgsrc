@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/11/08 11:16:56 nia Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/08 11:19:44 nia Exp $
 
 DISTNAME=	luaposix-35.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
@@ -26,9 +26,9 @@ DEPENDS+=	${LUA_PKGPREFIX}-std-_debug-[0-9]*:../../devel/lua-std-_debug
 DEPENDS+=	lua51-bit32-[0-9]*:../../devel/lua-bit32
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
+.if ${OBJECT_FMT} != "Mach-O"
 LIBFLAG+=	${LDFLAGS} -shared -fPIC
 .else
 LIBFLAG+=	${LDFLAGS} -fPIC
