@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.70 2023/10/15 19:53:20 ryoon Exp $
+$NetBSD: distinfo,v 1.71 2023/11/08 09:10:30 nros Exp $
 
 BLAKE2s (blender-3.6.4.tar.xz) = ded83757e4ca9dff559dd36b4a59ae0a3d9e95c2f3948b83300f890a91f7dfdb
 SHA512 (blender-3.6.4.tar.xz) = 9121a31147f9f269cb7f64e4297c6a6ec517d37fa449876d1a55b3975562c8a0307730f64725a8e35e96d1e75e06f6f0d95da3d1c7a657c403708e6a8f31115e
 Size (blender-3.6.4.tar.xz) = 70443936 bytes
-SHA1 (patch-CMakeLists.txt) = d6600dbd26b30df21f9dd0b49f4e14287af9f34a
+SHA1 (patch-CMakeLists.txt) = edce950efc7e1c3760e19e9bbe671f4194f6675d
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
