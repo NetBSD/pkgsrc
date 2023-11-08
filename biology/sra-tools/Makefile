@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/08/29 00:00:24 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/08 13:18:12 wiz Exp $
 
 DISTNAME=		sra-tools-3.0.6
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=		984f1493e8612cd59a269569bf8c06e25e4e604c

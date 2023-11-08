@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2023/10/21 17:11:09 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2023/11/08 13:20:20 wiz Exp $
 
 BUILDLINK_TREE+=	totem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	totem
 TOTEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.totem+=	totem>=3.34.1
-BUILDLINK_ABI_DEPENDS.totem?=	totem>=3.34.1nb23
+BUILDLINK_ABI_DEPENDS.totem?=	totem>=3.34.1nb25
 BUILDLINK_PKGSRCDIR.totem?=	../../multimedia/totem
 
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"

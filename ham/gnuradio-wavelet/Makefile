@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2023/10/28 08:43:07 mef Exp $
+# $NetBSD: Makefile,v 1.55 2023/11/08 13:19:44 wiz Exp $
 
 PKGNAME=	gnuradio-wavelet-${VERSION}
+PKGREVISION=	1
 COMMENT=	Wavelet transform of GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

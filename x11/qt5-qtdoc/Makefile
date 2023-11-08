@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2023/10/24 22:11:45 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/11/08 13:21:37 wiz Exp $
 
 DISTNAME=	qtdoc-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtdoc-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt5 documentations
 
 MAKE_ENV+=		QTDIR=${QTDIR}

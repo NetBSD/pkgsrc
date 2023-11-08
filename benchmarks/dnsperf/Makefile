@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/10/24 22:08:17 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/11/08 13:18:11 wiz Exp $
 
 DISTNAME=	dnsperf-2.5.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	benchmarks net
 MASTER_SITES=	https://www.dns-oarc.net/files/dnsperf/
 

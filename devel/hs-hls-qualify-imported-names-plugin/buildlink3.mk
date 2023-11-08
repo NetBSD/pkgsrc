@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:36:40 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/11/08 13:18:47 wiz Exp $
 
 BUILDLINK_TREE+=	hs-hls-qualify-imported-names-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-qualify-imported-names-plugin
 HS_HLS_QUALIFY_IMPORTED_NAMES_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-qualify-imported-names-plugin+=	hs-hls-qualify-imported-names-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-qualify-imported-names-plugin+=	hs-hls-qualify-imported-names-plugin>=2.4.0.0nb1
+BUILDLINK_ABI_DEPENDS.hs-hls-qualify-imported-names-plugin+=	hs-hls-qualify-imported-names-plugin>=2.4.0.0nb2
 BUILDLINK_PKGSRCDIR.hs-hls-qualify-imported-names-plugin?=	../../devel/hs-hls-qualify-imported-names-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

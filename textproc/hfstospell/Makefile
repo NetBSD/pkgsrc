@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/08/31 18:55:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/08 13:21:05 wiz Exp $
 
 GITHUB_PROJECT=	hfst-ospell
 DISTNAME=	hfstospell-0.5.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hfst/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

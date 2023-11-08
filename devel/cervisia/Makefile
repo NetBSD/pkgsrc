@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2023/10/24 22:08:42 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2023/11/08 13:18:41 wiz Exp $
 
 DISTNAME=	cervisia-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/cervisia/

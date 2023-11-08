@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/10/24 22:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/08 13:21:20 wiz Exp $
 
 DISTNAME=	litmus-0.13
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	www
 #MASTER_SITES=	http://www.webdav.org/neon/litmus/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/04/19 08:08:37 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/11/08 13:20:31 wiz Exp $
 
 DISTNAME=	mono-nat-1.0.2
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	http://projects.qnetp.net/attachments/download/22/
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2023/08/14 05:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2023/11/08 13:18:39 wiz Exp $
 
-PKGREVISION= 17
+PKGREVISION= 18
 .include "../../devel/GConf/Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-gtk

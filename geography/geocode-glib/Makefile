@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/08/14 05:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/08 13:19:24 wiz Exp $
 
 DISTNAME=	geocode-glib-3.26.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=/sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography gnome
 EXTRACT_SUFX=	.tar.xz
 
