@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6771 2023/11/08 08:10:58 sborrill Exp $
+$NetBSD: CHANGES-2023,v 1.6772 2023/11/08 09:43:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9771,3 +9771,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/squid6 to 6.5 [sborrill 2023-11-07]
 	Updated editors/tp-note to 1.22.12 [pin 2023-11-08]
 	Updated textproc/sd to 1.0.0 [pin 2023-11-08]
+	Updated net/gupnp to 1.6.6 [adam 2023-11-08]
+	Updated textproc/py-black to 23.11.0 [adam 2023-11-08]
