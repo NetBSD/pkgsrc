@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/08/29 19:51:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/08 09:40:25 adam Exp $
 bin/gupnp-binding-tool-1.6
 include/gupnp-1.6/libgupnp/gupnp-acl.h
 include/gupnp-1.6/libgupnp/gupnp-context-filter.h
@@ -23,7 +23,7 @@ include/gupnp-1.6/libgupnp/gupnp.h
 lib/girepository-1.0/GUPnP-1.6.typelib
 lib/libgupnp-1.6.so
 lib/libgupnp-1.6.so.0
-lib/libgupnp-1.6.so.0.106.5
+lib/libgupnp-1.6.so.0.106.6
 lib/pkgconfig/gupnp-1.6.pc
 man/man1/gupnp-binding-tool-1.6.1
 share/gir-1.0/GUPnP-1.6.gir
