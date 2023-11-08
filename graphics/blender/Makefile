@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2023/11/07 20:34:51 nros Exp $
+# $NetBSD: Makefile,v 1.208 2023/11/08 09:10:30 nros Exp $
 
 DISTNAME=	blender-3.6.4
 PKGREVISION=	2
@@ -12,10 +12,7 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c gnu++17
-
-# Do not use alloca() in libc.
-BUILDLINK_TRANSFORM+=	rm:-std=c++17
+USE_LANGUAGES=	c c++
 
 # GCC 11.0.0 or later is required.
 GCC_REQD+=	12
