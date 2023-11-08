@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6773 2023/11/08 11:11:43 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.6774 2023/11/08 12:43:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9774,3 +9774,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gupnp to 1.6.6 [adam 2023-11-08]
 	Updated textproc/py-black to 23.11.0 [adam 2023-11-08]
 	Updated textproc/libhighlight to 4.10 [schmonz 2023-11-08]
+	Updated devel/tevent to 0.16.0 [wiz 2023-11-08]
