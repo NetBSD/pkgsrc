@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2023/04/19 08:06:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.55 2023/11/08 12:56:49 wiz Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -155,6 +155,8 @@ include/unicode/uiter.h
 include/unicode/uldnames.h
 include/unicode/ulistformatter.h
 include/unicode/uloc.h
+include/unicode/ulocale.h
+include/unicode/ulocbuilder.h
 include/unicode/ulocdata.h
 include/unicode/umachine.h
 include/unicode/umisc.h
@@ -213,28 +215,28 @@ lib/icu/current
 lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
+lib/libicudata.so.74
 lib/libicudata.so.${PKGVERSION}
-lib/libicudata.so.73
 lib/libicui18n.a
 lib/libicui18n.so
+lib/libicui18n.so.74
 lib/libicui18n.so.${PKGVERSION}
-lib/libicui18n.so.73
 lib/libicuio.a
 lib/libicuio.so
+lib/libicuio.so.74
 lib/libicuio.so.${PKGVERSION}
-lib/libicuio.so.73
 lib/libicutest.a
 lib/libicutest.so
+lib/libicutest.so.74
 lib/libicutest.so.${PKGVERSION}
-lib/libicutest.so.73
 lib/libicutu.a
 lib/libicutu.so
+lib/libicutu.so.74
 lib/libicutu.so.${PKGVERSION}
-lib/libicutu.so.73
 lib/libicuuc.a
 lib/libicuuc.so
+lib/libicuuc.so.74
 lib/libicuuc.so.${PKGVERSION}
-lib/libicuuc.so.73
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
