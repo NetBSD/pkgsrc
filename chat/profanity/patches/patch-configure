@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2023/11/08 16:37:46 nros Exp $
+
+sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
+
+--- configure.orig	2023-11-08 17:14:40.000760568 +0000
++++ configure
+@@ -2575,6 +2575,7 @@ as_fn_append ac_header_c_list " inttypes
+ as_fn_append ac_header_c_list " stdint.h stdint_h HAVE_STDINT_H"
+ as_fn_append ac_header_c_list " strings.h strings_h HAVE_STRINGS_H"
+ as_fn_append ac_header_c_list " sys/stat.h sys_stat_h HAVE_SYS_STAT_H"
++as_fn_append ac_header_c_list " sys/termios.h sys_termios_h HAVE_SYS_TERMIOS_H"
+ as_fn_append ac_header_c_list " sys/types.h sys_types_h HAVE_SYS_TYPES_H"
+ as_fn_append ac_header_c_list " unistd.h unistd_h HAVE_UNISTD_H"
+ 
