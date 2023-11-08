@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:53 nia Exp $
-
-BLAKE2s (gtksourceviewmm-3.2.0.tar.xz) = f23c8e25cb0ae79db90ae156fb889b13910c4c024e602ac6593ee9f694a96b01
-SHA512 (gtksourceviewmm-3.2.0.tar.xz) = f77ee09ee4966e705a5742af0d9caec306517faf998e99b26dc94340190e4a1326a4127e55e6d6b4035757805043f9460310ce9689c5478a5cc8a797a5cffef0
-Size (gtksourceviewmm-3.2.0.tar.xz) = 742028 bytes
