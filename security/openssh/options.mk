@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2023/11/07 00:40:43 gdt Exp $
+# $NetBSD: options.mk,v 1.47 2023/11/08 10:48:45 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
 PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	editline openssl
 
 # libfido2 is BROKEN_EXCEPT_ON_PLATFORM; lacking a facility to query
 # that list, open code it here.
-.if ${OPSYS} == "Darwin" || \
+.if (${OPSYS} == "Darwin" && empty(MACHINE_ARCH:Mpowerpc*)) || \
     ${OPSYS} == "FreeBSD" || ${OPSYS} == "MidnightBSD" || \
     ${OPSYS} == "Linux" || \
     ${OPSYS} == "NetBSD" || \
