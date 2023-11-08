@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/11/08 13:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2023/11/08 23:00:56 wiz Exp $
 
 DISTNAME=	lxml-4.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
+
+USE_CC_FEATURES=	c99
 
 # Path too long for nbtar (pax-as-tar)?
 # See pkg/56688: nbtar (archivers/pax) silently drops files
