@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2023/11/06 09:23:14 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/08 06:58:02 pin Exp $
 
 DISTNAME=	tailspin-2.0.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bensadeh/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/bensadeh/tailspin/
 COMMENT=	Log file highlighter
 LICENSE=	mit
