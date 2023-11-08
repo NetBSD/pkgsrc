@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:09:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/08 13:19:54 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi-mime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-mime
 AKONADI_MIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-mime+=	akonadi-mime>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi-mime?=	akonadi-mime>=23.04.3nb1
+BUILDLINK_ABI_DEPENDS.akonadi-mime?=	akonadi-mime>=23.04.3nb2
 BUILDLINK_PKGSRCDIR.akonadi-mime?=	../../mail/akonadi-mime
 
 .include "../../mail/akonadi/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2023/10/24 22:08:15 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2023/11/08 13:18:10 wiz Exp $
 
 DISTNAME=	qsynth-0.6.3
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	audio
 
 MAINTAINER=	adam@NetBSD.org

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2023/06/04 04:13:38 mef Exp $
+# $NetBSD: Makefile,v 1.24 2023/11/08 13:20:00 wiz Exp $
 
 R_PKGNAME=	XML
 R_PKGVER=	3.99-0.14
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tools for parsing and generating XML within R
+PKGREVISION=	1
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	R-bitops-[0-9]*:../../math/R-bitops

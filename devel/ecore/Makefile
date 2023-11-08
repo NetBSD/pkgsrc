@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2023/10/24 22:08:44 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/11/08 13:18:43 wiz Exp $
 
 DISTNAME=	ecore-1.7.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

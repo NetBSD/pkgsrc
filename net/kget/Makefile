@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2023/10/24 22:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2023/11/08 13:20:28 wiz Exp $
 
 DISTNAME=	kget-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/kget/

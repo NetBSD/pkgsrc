@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:37 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/08 13:18:46 wiz Exp $
 
 DISTNAME=	hls-eval-plugin-2.4.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2023/10/24 22:08:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/11/08 13:18:51 wiz Exp $
 
 BUILDLINK_TREE+=	kitemmodels
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kitemmodels
 KITEMMODELS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kitemmodels+=	kitemmodels>=5.18.0
-BUILDLINK_ABI_DEPENDS.kitemmodels?=	kitemmodels>=5.108.0nb1
+BUILDLINK_ABI_DEPENDS.kitemmodels?=	kitemmodels>=5.108.0nb2
 BUILDLINK_PKGSRCDIR.kitemmodels?=	../../devel/kitemmodels
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

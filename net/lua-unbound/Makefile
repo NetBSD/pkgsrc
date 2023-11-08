@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 22:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/08 13:20:31 wiz Exp $
 
 DISTNAME=	luaunbound-1.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://code.zash.se/dl/luaunbound/
 

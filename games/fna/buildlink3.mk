@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/05/06 19:08:50 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/11/08 13:19:12 wiz Exp $
 
 BUILDLINK_TREE+=	fna
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fna
 FNA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fna+=	fna>=22.05
-BUILDLINK_ABI_DEPENDS.fna?=	fna>=22.05nb5
+BUILDLINK_ABI_DEPENDS.fna?=	fna>=22.05nb6
 BUILDLINK_PKGSRCDIR.fna?=	../../games/fna
 
 .include "../../graphics/mojoshader/buildlink3.mk"
