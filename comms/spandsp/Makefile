@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/10/21 17:09:53 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/08 13:18:20 wiz Exp $
 #
 
 DISTNAME=	spandsp-0.0.6pre21
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	comms
 MASTER_SITES=	https://www.soft-switch.org/downloads/spandsp/
 EXTRACT_SUFX=	.tgz

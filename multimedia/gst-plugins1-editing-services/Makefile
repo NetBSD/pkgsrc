@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/08 13:20:16 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-editing-services-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz

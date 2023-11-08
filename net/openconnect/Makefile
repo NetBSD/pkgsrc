@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/10/24 22:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/08 13:20:33 wiz Exp $
 
 DISTNAME=		openconnect-9.12
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net security
 MASTER_SITES=		https://www.infradead.org/openconnect/download/ \
 			ftp://ftp.infradead.org/pub/openconnect/

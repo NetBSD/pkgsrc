@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/11/08 13:19:53 wiz Exp $
 #
 
 DISTNAME=	spl-1.0pre3
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	lang
 MASTER_SITES=	http://www.clifford.at/spl/releases/
 MASTER_SITES+=	http://www.clifford.at/spl/releases/OLD/

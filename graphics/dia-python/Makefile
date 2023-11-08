@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/10/21 17:10:24 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2023/11/08 13:19:28 wiz Exp $
 
 DIA_SUBPKG=		-python
-PKGREVISION=		26
+PKGREVISION=		27
 .include "../../graphics/dia/Makefile.common"
 
 COMMENT+=		(Python plugin)

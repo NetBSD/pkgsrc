@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2023/10/30 23:02:02 gutteridge Exp $
+# $NetBSD: Makefile,v 1.72 2023/11/08 13:21:41 wiz Exp $
 
 DISTNAME=	vte-0.72.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte

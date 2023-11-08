@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/11/02 06:36:36 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/08 13:18:45 wiz Exp $
 
 DISTNAME=	hls-call-hierarchy-plugin-2.4.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

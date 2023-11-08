@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2023/10/28 08:43:05 mef Exp $
+# $NetBSD: Makefile,v 1.55 2023/11/08 13:19:42 wiz Exp $
 
 PKGNAME=	gnuradio-channels-${VERSION}
+PKGREVISION=	1
 COMMENT=	Signal processing blocks to simulate channel models of GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/10/24 22:11:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/11/08 13:21:06 wiz Exp $
 
 BUILDLINK_TREE+=	libkolabxml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkolabxml
 LIBKOLABXML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkolabxml+=	libkolabxml>=1.1.6
-BUILDLINK_ABI_DEPENDS.libkolabxml?=	libkolabxml>=1.1.6nb10
+BUILDLINK_ABI_DEPENDS.libkolabxml?=	libkolabxml>=1.1.6nb11
 BUILDLINK_PKGSRCDIR.libkolabxml?=	../../textproc/libkolabxml
 
 .include "../../devel/boost-libs/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:10:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/08 13:20:12 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtsensors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtsensors
 QT6_QTSENSORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtsensors+=	qt6-qtsensors>=6.5.2
-BUILDLINK_ABI_DEPENDS.qt6-qtsensors+=	qt6-qtsensors>=6.5.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtsensors+=	qt6-qtsensors>=6.6.0nb1
 BUILDLINK_PKGSRCDIR.qt6-qtsensors?=	../../misc/qt6-qtsensors
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
