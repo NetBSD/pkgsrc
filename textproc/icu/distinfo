@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.102 2023/06/16 16:53:24 adam Exp $
+$NetBSD: distinfo,v 1.103 2023/11/08 12:56:49 wiz Exp $
 
-BLAKE2s (icu4c-73_2-src.tgz) = 310dfa9aa287bc6e8c8786b93537a85231e07bc4cf93be9cdd1978921475772d
-SHA512 (icu4c-73_2-src.tgz) = 76dd782db6205833f289d7eb68b60860dddfa3f614f0ba03fe7ec13117077f82109f0dc1becabcdf4c8a9c628b94478ab0a46134bdb06f4302be55f74027ce62
-Size (icu4c-73_2-src.tgz) = 26519906 bytes
+BLAKE2s (icu4c-74_1-src.tgz) = e76fb76e3a57d7ab2d90697b056ea45d6db443200b95b56c26e4bedebebb0a5b
+SHA512 (icu4c-74_1-src.tgz) = 32c28270aa5d94c58d2b1ef46d4ab73149b5eaa2e0621d4a4c11597b71d146812f5e66db95f044e8aaa11b94e99edd4a48ab1aa8efbe3d72a73870cd56b564c2
+Size (icu4c-74_1-src.tgz) = 26625850 bytes
 SHA1 (patch-Makefile.in) = 67440d3af9b62b8c0be258c490255ba17f778ab4
 SHA1 (patch-acinclude.m4) = f7de1a16aad0ca77c4bbc457ba76b6171199ce09
 SHA1 (patch-common_putil.cpp) = cc867aaef753c23ff12db019e41836c0dd5ac6d1
