@@ -1,0 +1,12 @@
+$NetBSD: patch-src_config.h.in,v 1.1 2023/11/08 16:37:46 nros Exp $
+
+sys/termios.h is needed for TIOCGWINZ on Solaris/Illumos
+
+--- src/config.h.in.orig	2023-11-08 17:16:05.246521504 +0000
++++ src/config.h.in
+@@ -158,3 +158,5 @@
+ 
+ /* Define for large files, on AIX-style hosts. */
+ #undef _LARGE_FILES
++
++#undef HAVE_SYS_TERMIOS_H
