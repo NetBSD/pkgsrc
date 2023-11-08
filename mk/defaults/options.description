@@ -115,7 +115,7 @@ columnstore		Enable the columnar storage engine.
 compface		Enable compface support.
 consolekit              Enable Consolekit support.
 coqide			Enable ide support for coq.
-coreaudio		Enable Core Audio library support.
+coreaudio		Enable Apple's Core Audio library support.
 couchdb			Support the CouchDB database.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
 courier-esmtp		ESMTP mail delivery.
