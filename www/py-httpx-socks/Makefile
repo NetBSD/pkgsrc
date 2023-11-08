@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/09/16 03:16:36 adam Exp $
+# $NetBSD: Makefile,v 1.17 2023/11/08 13:14:04 adam Exp $
 
-DISTNAME=	httpx-socks-0.7.8
+DISTNAME=	httpx-socks-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx-socks/}
