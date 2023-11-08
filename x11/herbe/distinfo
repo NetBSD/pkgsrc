@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/11/08 14:13:45 pin Exp $
+
+BLAKE2s (herbe-1.0.0.tar.gz) = 726f956b4b21a0d74a19a044c0b4831fec44efd9fe999638da01cc0f15ee3f1a
+SHA512 (herbe-1.0.0.tar.gz) = 3f49de25fd92194d1354054c207616343d9c21a9d82c6c4e3316ebc5228c0bd90650621438d14cd4730135f328c0438ef054a2b6843f3bd4d15f9cb47a22df12
+Size (herbe-1.0.0.tar.gz) = 4974 bytes
+SHA1 (patch-Makefile) = 9731572846cf63fc3be213102c070811d18c3845
