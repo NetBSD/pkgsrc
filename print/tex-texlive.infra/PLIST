@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/08 09:00:45 markd Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLConfFile.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLConfig.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLCrypto.pm
@@ -13,3 +13,4 @@ ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TLWinGoo.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/TeXLive/TeXCatalogue.pm
 share/texmf-dist/web2c/fmtutil-hdr.cnf
 share/texmf-dist/web2c/updmap-hdr.cfg
+share/tlpkg/texlive.tlpdb
