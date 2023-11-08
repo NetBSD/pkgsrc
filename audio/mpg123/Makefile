@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/02/11 12:39:17 adam Exp $
+# $NetBSD: Makefile,v 1.70 2023/11/08 10:58:25 nia Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -36,6 +36,12 @@ LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CPPFLAGS+=	-DDEVOSSSOUND="\"${DEVOSSSOUND}\""
 .endif
+
+# It attempts to remove all libtool artifacts after it's done installing
+# the sound modules, but somehow .a persists with some linkers (I found
+# this with old Darwin linkers), resulting in a PLIST conflict.
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/mpg123/*.a
 
 # MPG123_MODULE is not finally set yet, to avoid NOT_FOR_PLATFORM triggers
 .include "Makefile.common"
