@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2023/10/26 09:32:26 adam Exp $
+$NetBSD: distinfo,v 1.56 2023/11/08 17:43:42 adam Exp $
 
-BLAKE2s (certbot-dns-luadns-2.7.3.tar.gz) = 17f872591f102049aba032e0bb4f4b330082b1e1a9cf30ccd343bffb09b5fe0c
-SHA512 (certbot-dns-luadns-2.7.3.tar.gz) = 5f237bd2701c864fa6a95a5b6fe62edbf323a3db8da38ddefd80112bacabb7bc7292991382e479d6c1975fb5f68ffd96e4d8d219b951d28b96ce3c7dc03d37df
-Size (certbot-dns-luadns-2.7.3.tar.gz) = 11821 bytes
+BLAKE2s (certbot-dns-luadns-2.7.4.tar.gz) = 47b29043e6f7abdc3c4872065699a3c92dc91fb20c6ffe28d60420a86f86f43e
+SHA512 (certbot-dns-luadns-2.7.4.tar.gz) = 8c48a14f4fd23f0ed5fa7ec39eb9547ac0fe23a43637d482d33027ede18bc5cf79408541bbcd73299817a125cf2ffab318eb041f37049f7f2332ce7b4fe3daa6
+Size (certbot-dns-luadns-2.7.4.tar.gz) = 11804 bytes
