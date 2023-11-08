@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6769 2023/11/08 04:44:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6770 2023/11/08 06:57:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9769,3 +9769,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/Sigil to 2.0.2 [wiz 2023-11-07]
 	Updated editors/PageEdit to 2.0.2 [wiz 2023-11-07]
 	Updated editors/tp-note to 1.22.12 [pin 2023-11-08]
+	Updated textproc/sd to 1.0.0 [pin 2023-11-08]
