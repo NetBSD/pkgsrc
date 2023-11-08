@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/07/05 12:29:28 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/11/08 23:01:53 wiz Exp $
 
 DISTNAME=	Cython-0.29.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,6 +16,8 @@ REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
 USE_PKG_RESOURCES=	yes
+
+USE_CC_FEATURES=	c99
 
 # for test only
 #USE_LANGUAGES=	c c++
