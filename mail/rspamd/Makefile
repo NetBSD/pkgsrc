@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2023/11/04 07:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/11/08 12:47:23 wiz Exp $
 
-DISTNAME=	rspamd-3.7.1
-PKGREVISION=	1
+DISTNAME=	rspamd-3.7.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -14,9 +13,10 @@ DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 USE_TOOLS+=	perl pkg-config
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c c++
 BUILD_DEFS+=	VARBASE
 
+USE_CC_FEATURES=	c99
 USE_CXX_FEATURES+=	c++20
 
 .include "../../mk/bsd.prefs.mk"
