@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/31 16:46:51 sborrill Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/08 13:08:36 sborrill Exp $
 
 DISTNAME=	ufdbGuard-${VERSION}
 VERSION=	1.35.5
@@ -15,7 +15,7 @@ BUILD_DEFS+=	VARBASE
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run bash
 
 RCD_SCRIPTS+=	ufdbguardd
 
