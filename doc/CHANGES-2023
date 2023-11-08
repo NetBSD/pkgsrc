@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6774 2023/11/08 12:43:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6775 2023/11/08 12:47:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9775,3 +9775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-black to 23.11.0 [adam 2023-11-08]
 	Updated textproc/libhighlight to 4.10 [schmonz 2023-11-08]
 	Updated devel/tevent to 0.16.0 [wiz 2023-11-08]
+	Updated mail/rspamd to 3.7.3 [wiz 2023-11-08]
