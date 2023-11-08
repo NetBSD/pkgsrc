@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2023/11/07 12:13:57 nros Exp $
+# $NetBSD: Makefile,v 1.100 2023/11/08 17:49:29 nros Exp $
 
 DISTNAME=	OpenImageIO-2.5.4.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	OpenImageIO
@@ -32,7 +32,6 @@ CMAKE_ARGS+=		-DUSE_DCMTK=OFF
 CMAKE_ARGS+=		-DUSE_Libsquish=OFF
 CMAKE_ARGS+=		-DUSE_Nuke=OFF
 CMAKE_ARGS+=		-DUSE_OpenVDB=OFF
-CMAKE_ARGS+=		-DUSE_PTex=OFF
 CMAKE_ARGS+=		-DUSE_Field3D=OFF
 
 # disable imageviewer since it requires Qt5 to build
@@ -61,6 +60,7 @@ PKGCONFIG_OVERRIDE=	src/build-scripts/OpenImageIO.pc.in
 .include "../../graphics/opencolorio/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/ptex/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
