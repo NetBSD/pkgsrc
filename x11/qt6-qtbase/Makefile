@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/06 19:46:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/08 09:01:20 nros Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -196,16 +196,13 @@ pre-configure:
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	-- -DQT_DISABLE_RPATH:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DQT_DISABLE_RPATH:BOOL=ON
+
+.include "../../devel/cmake/configure-settings.mk"
+
+CONFIGURE_ARGS+=	-- ${CMAKE_CONFIGURE_ARGS}
 .if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
-.else
-CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=OFF
-CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
-.  if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-CONFIGURE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
-.  endif
 .endif
 
 TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet

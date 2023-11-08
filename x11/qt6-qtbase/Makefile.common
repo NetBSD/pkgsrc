@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2023/10/31 19:56:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.37 2023/11/08 09:01:20 nros Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -82,16 +82,9 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "x11/qt6-qtbase"
-#CONFIGURE_ARGS+=	-cmake-use-default-generator
-.  if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=ON
-.  else
-CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=OFF
-CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
-.    if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-CONFIGURE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
-.    endif
-.  endif
+CMAKE_INSTALL_PREFIX=	${QTPREFIX}
+.include "../../devel/cmake/configure-settings.mk"
+CONFIGURE_ARGS+=	-- ${CMAKE_CONFIGURE_ARGS}
 QTCONFDIR?=		.
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${QTCONFDIR} ${CONFIGURE_ARGS}
