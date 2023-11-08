@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6781 2023/11/08 14:10:27 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.6782 2023/11/08 14:11:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9780,3 +9780,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/jj to 0.11.0 [wiz 2023-11-08]
 	Removed x11/gtksourceviewmm [wiz 2023-11-08]
 	Updated security/libretls to 3.8.1 [schmonz 2023-11-08]
+	Updated editors/tp-note to 1.22.13 [pin 2023-11-08]
