@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2023/04/19 08:09:18 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/11/08 13:18:16 wiz Exp $
 
 PKGNAME=	pidgin-sametime-${PIDGIN_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Lotus Sametime plugin for the Pidgin instant messenger
 

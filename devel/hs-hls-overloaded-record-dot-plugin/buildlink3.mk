@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/08 13:18:47 wiz Exp $
 
 BUILDLINK_TREE+=	hs-hls-overloaded-record-dot-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-overloaded-record-dot-plugin
 HS_HLS_OVERLOADED_RECORD_DOT_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-overloaded-record-dot-plugin+=	hs-hls-overloaded-record-dot-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-overloaded-record-dot-plugin+=	hs-hls-overloaded-record-dot-plugin>=2.4.0.0nb1
+BUILDLINK_ABI_DEPENDS.hs-hls-overloaded-record-dot-plugin+=	hs-hls-overloaded-record-dot-plugin>=2.4.0.0nb2
 BUILDLINK_PKGSRCDIR.hs-hls-overloaded-record-dot-plugin?=	../../devel/hs-hls-overloaded-record-dot-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

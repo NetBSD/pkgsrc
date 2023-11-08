@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/04/19 08:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/08 13:18:11 wiz Exp $
 
 DISTNAME=	sysbench-0.4.12
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sysbench/}
 

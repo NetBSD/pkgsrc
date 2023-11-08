@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2023/10/24 22:10:19 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2023/11/08 13:20:27 wiz Exp $
 
 DISTNAME=		jigdo-0.7.3
-PKGREVISION=		63
+PKGREVISION=		64
 CATEGORIES=		net
 MASTER_SITES=		http://atterer.org/sites/atterer/files/2009-08/jigdo/
 EXTRACT_SUFX=		.tar.bz2

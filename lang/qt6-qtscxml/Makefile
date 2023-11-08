@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/10/31 19:56:50 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/08 13:19:52 wiz Exp $
 
 DISTNAME=	qtscxml-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtscxml-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 module for scxml language support
 CATEGORIES=	lang devel
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v3

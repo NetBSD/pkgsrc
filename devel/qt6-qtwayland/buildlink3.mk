@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:08:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/08 13:18:59 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtwayland
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtwayland
 QT6_QTWAYLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtwayland+=	qt6-qtwayland>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtwayland+=	qt6-qtwayland>=6.5.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtwayland+=	qt6-qtwayland>=6.6.0nb1
 BUILDLINK_PKGSRCDIR.qt6-qtwayland?=	../../devel/qt6-qtwayland
 
 BUILDLINK_LIBDIRS.qt6-qtwayland+=	qt6/plugins/platforms

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/11/02 06:36:38 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/11/08 13:18:47 wiz Exp $
 
 BUILDLINK_TREE+=	hs-hls-gadt-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-gadt-plugin
 HS_HLS_GADT_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-gadt-plugin+=	hs-hls-gadt-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-gadt-plugin+=	hs-hls-gadt-plugin>=2.4.0.0nb1
+BUILDLINK_ABI_DEPENDS.hs-hls-gadt-plugin+=	hs-hls-gadt-plugin>=2.4.0.0nb2
 BUILDLINK_PKGSRCDIR.hs-hls-gadt-plugin?=	../../devel/hs-hls-gadt-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

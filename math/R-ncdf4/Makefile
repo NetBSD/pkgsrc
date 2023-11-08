@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/10/24 22:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/08 13:20:01 wiz Exp $
 
 R_PKGNAME=	ncdf4
 R_PKGVER=	1.21
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to Unidata netCDF (Version 4 or Earlier) Format Data Files
-PKGREVISION=	1
+PKGREVISION=	2
 LICENSE=	gnu-gpl-v3
 
 # ./configure: 1833: Syntax error: Bad substitution

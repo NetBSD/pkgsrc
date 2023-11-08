@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/10/24 22:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/08 13:20:41 wiz Exp $
 
 DISTNAME=		cups-pdf-3.0.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		print
 MASTER_SITES=		${HOMEPAGE}src/
 DISTFILES=		${DISTNAME:S/pdf-/pdf_/}.tar.gz

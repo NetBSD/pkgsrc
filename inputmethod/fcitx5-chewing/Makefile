@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/08 13:19:44 wiz Exp $
 
 DISTNAME=	fcitx5-chewing-5.0.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-chewing/
 EXTRACT_SUFX=	.tar.xz

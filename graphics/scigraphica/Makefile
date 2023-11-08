@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2023/10/21 17:10:42 gdt Exp $
+# $NetBSD: Makefile,v 1.109 2023/11/08 13:19:40 wiz Exp $
 
 DISTNAME=	scigraphica-2.1.0
-PKGREVISION=	51
+PKGREVISION=	52
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:36:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/11/08 13:18:46 wiz Exp $
 
 BUILDLINK_TREE+=	hs-hls-explicit-imports-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-explicit-imports-plugin
 HS_HLS_EXPLICIT_IMPORTS_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-explicit-imports-plugin+=	hs-hls-explicit-imports-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-explicit-imports-plugin+=	hs-hls-explicit-imports-plugin>=2.4.0.0nb1
+BUILDLINK_ABI_DEPENDS.hs-hls-explicit-imports-plugin+=	hs-hls-explicit-imports-plugin>=2.4.0.0nb2
 BUILDLINK_PKGSRCDIR.hs-hls-explicit-imports-plugin?=	../../devel/hs-hls-explicit-imports-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"
