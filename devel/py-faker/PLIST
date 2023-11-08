@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2023/09/18 12:55:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2023/11/08 13:12:14 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -506,6 +506,9 @@ ${PYSITELIB}/faker/providers/color/bn_BD/__init__.pyo
 ${PYSITELIB}/faker/providers/color/color.py
 ${PYSITELIB}/faker/providers/color/color.pyc
 ${PYSITELIB}/faker/providers/color/color.pyo
+${PYSITELIB}/faker/providers/color/cs_CZ/__init__.py
+${PYSITELIB}/faker/providers/color/cs_CZ/__init__.pyc
+${PYSITELIB}/faker/providers/color/cs_CZ/__init__.pyo
 ${PYSITELIB}/faker/providers/color/da_DK/__init__.py
 ${PYSITELIB}/faker/providers/color/da_DK/__init__.pyc
 ${PYSITELIB}/faker/providers/color/da_DK/__init__.pyo
@@ -920,6 +923,9 @@ ${PYSITELIB}/faker/providers/geo/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.py
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/bn_BD/__init__.pyo
+${PYSITELIB}/faker/providers/geo/cs_CZ/__init__.py
+${PYSITELIB}/faker/providers/geo/cs_CZ/__init__.pyc
+${PYSITELIB}/faker/providers/geo/cs_CZ/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/de_AT/__init__.py
 ${PYSITELIB}/faker/providers/geo/de_AT/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/de_AT/__init__.pyo
