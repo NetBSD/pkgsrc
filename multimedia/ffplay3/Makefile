@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/11/08 13:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/11/09 16:32:25 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffplay3/}
 PKGREVISION=	7
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--disable-ffprobe
 CONFIGURE_ARGS+=	--disable-ffserver
 CONFIGURE_ARGS+=	--disable-encoders
 CONFIGURE_ARGS+=	--disable-decoders
+CONFIGURE_ARGS+=	--disable-htmlpages
 CONFIGURE_ARGS+=	--disable-hwaccels
 CONFIGURE_ARGS+=	--disable-muxers
 CONFIGURE_ARGS+=	--disable-demuxers
