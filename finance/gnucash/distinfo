@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.119 2023/06/28 10:00:40 wiz Exp $
+$NetBSD: distinfo,v 1.120 2023/11/09 08:41:30 wiz Exp $
 
-BLAKE2s (gnucash-5.3.tar.bz2) = 6ac5d8bd6212bb58f996e3233d0c6e5646da7933dc7213435716f9dc3b3faf00
-SHA512 (gnucash-5.3.tar.bz2) = f811ed66144f8689255970c6d925047eeb8d47dbefc862f42ab54ff3342e4710d822288a2d34ed1e7e873c7a7c5db0f95bdaa233787cd6828ff448af0eea325e
-Size (gnucash-5.3.tar.bz2) = 14928584 bytes
+BLAKE2s (gnucash-5.4-1.tar.bz2) = fea87d4e3b62ab1c7e30eb458da8771221608da249c22db4cb91df8f0bb46060
+SHA512 (gnucash-5.4-1.tar.bz2) = 25e221c6926594ca86097f1d34a4b035fd6853b7b6324809a0e9927e9b0958fd896deefdc8b4346717e3068bb8895697a5e3cd65e6cc02f8bc2fb19d8a8bb103
+Size (gnucash-5.4-1.tar.bz2) = 14928988 bytes
