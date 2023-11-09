@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2022/09/30 07:38:28 adam Exp $
+# $NetBSD: options.mk,v 1.22 2023/11/09 16:31:18 nia Exp $
 
 # Global and legacy options
 
@@ -13,7 +13,7 @@ PKG_SUPPORTED_OPTIONS=	ass bluray doc faac fdk-aac fontconfig freetype \
 			lame libvpx opencore-amr opus pulseaudio rtmp \
 			speex theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig gnutls libvpx \
-			opus speex theora vorbis x11 x264 x265 xvid
+			opus speex theora vorbis x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -31,6 +31,10 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vaapi
 PKG_SUGGESTED_OPTIONS+=	vaapi
+.endif
+
+.if ${OPSYS} != "Darwin"
+PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 
 .include "../../mk/bsd.options.mk"

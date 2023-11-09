@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.24 2023/11/08 13:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/09 16:31:18 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg5/}
-PKGREVISION=	6
+PKGREVISION=	7
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Decoding, encoding and streaming software (v5.x)
 
 CONFIGURE_ARGS+=	--enable-avfilter
 CONFIGURE_ARGS+=	--enable-postproc
-CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--disable-ffplay
 
 INSTALLATION_DIRS=	lib/ffmpeg5 share/doc/ffmpeg5
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_RPATH:tl} != "no"
+CONFIGURE_ARGS+=	--enable-rpath
+.endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ARGS+=	--enable-cross-compile
