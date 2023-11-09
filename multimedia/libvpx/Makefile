@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/10/01 08:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/11/09 16:48:03 nia Exp $
 
 DISTNAME=	libvpx-1.13.1
 CATEGORIES=	multimedia
@@ -91,6 +91,21 @@ CONFIGURE_ARGS+=	--target=generic-gnu
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-*arm*} || ${MACHINE_PLATFORM:MNetBSD-*-*aarch64*}
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
+.endif
+
+.include "../../mk/compiler.mk"
+
+# Requires special atomic support.
+# This is a mirror of the checks the software does in vpx_util/vpx_atomics.h
+#
+# There is inline assembler for i386, x86_64, arm, and mips.
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64" && \
+      !${MACHINE_ARCH:M*mips*} && !${MACHINE_ARCH:M*arm*}
+# All other platforms need the GCC atomic builtins.
+.  if !empty(GCC_VERSION:Mgcc-[2-3].*) || !empty(GCC_VERSION:Mgcc-4.[0-6].*) || \
+      (empty(PKGSRC_COMPILER:M*gcc*) && empty(PKGSRC_COMPILER:M*clang*))
+CONFIGURE_ARGS+=	--disable-multithread
+.  endif
 .endif
 
 BUILDLINK_TRANSFORM.MirBSD+=	rm:-lrt
