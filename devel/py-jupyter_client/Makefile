@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2023/10/29 16:54:57 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/11/09 12:23:47 adam Exp $
 
-DISTNAME=	jupyter_client-8.5.0
+DISTNAME=	jupyter_client-8.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=23.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.5:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.18:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
@@ -37,9 +36,6 @@ post-install:
 	${MV} jupyter-kernel jupyter-kernel-${PYVERSSUFFIX} && \
 	${MV} jupyter-kernelspec jupyter-kernelspec-${PYVERSSUFFIX} && \
 	${MV} jupyter-run jupyter-run-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
