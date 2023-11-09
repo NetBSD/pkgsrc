@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6788 2023/11/09 06:54:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6789 2023/11/09 07:56:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9807,3 +9807,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pep517 to 0.13.1 [adam 2023-11-09]
 	Updated devel/py-types-setuptools to 68.2.0.1 [adam 2023-11-09]
 	Updated www/py-test-django to 4.7.0 [adam 2023-11-09]
+	Updated net/tor to 0.4.8.8 [wiz 2023-11-09]
