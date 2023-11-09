@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.132 2023/10/28 22:29:47 nia Exp $
+# $NetBSD: Darwin.mk,v 1.133 2023/11/09 08:47:42 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -228,6 +228,14 @@ OPSYS_HAS_KQUEUE=	# defined
 # Set the target for Tiger systems to be 10.4.
 .if !empty(MACHINE_PLATFORM:MDarwin-8.*-powerpc)
 MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
+.endif
+
+# Convert to flags that the old toolchain understands.
+#
+# XXX: probably applies to more platforms too, but the GCC docs
+# unhelpfully describe -pthread as a "HP-UX/Solaris flag" to this day
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc)
+BUILDLINK_TRANSFORM+=	opt:-pthread:-lpthread
 .endif
 
 # El Capitan GM has a file system bug where a deep directory hierarchy can be
