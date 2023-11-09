@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:18:04 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/11/09 19:16:20 nia Exp $
 
 BLAKE2s (poco-1.6.1-all.tar.gz) = a5e68b3ee084de976a8a551c8868e30ef7cf4d97adc6da0aae9e42258547e149
 SHA512 (poco-1.6.1-all.tar.gz) = 6c68f3f2692bad8ad4a111e541e8da6376246517b2dca73f429539e9ceaa107e791c3673261467cf8a2e2efabd0dd2a5160d9d412e71af114b4a6b700c9c2393
 Size (poco-1.6.1-all.tar.gz) = 5636597 bytes
 SHA1 (patch-Crypto_src_CipherImpl.cpp) = ebaa5380c6ce90d1b2c9ca05f34d0ace66804b32
 SHA1 (patch-Crypto_src_DigestEngine.cpp) = 8a99eb509df15e1d413e58671545a78b971939e0
+SHA1 (patch-Crypto_src_RSACipherImpl.cpp) = bed8a67cf74b6557638d5356507cd08bb990c665
 SHA1 (patch-Crypto_src_RSAKeyImpl.cpp) = 3e6bbe58f3cc24f4a744e8e580765bcc2ad0efdc
 SHA1 (patch-Crypto_src_X509Certificate.cpp) = 2a119c3bb207bd121dd789121f49b94a4969f8f4
 SHA1 (patch-Foundation_Makefile) = 492b55268b6b848bfb0d5c255b59ae2745eb4f72
