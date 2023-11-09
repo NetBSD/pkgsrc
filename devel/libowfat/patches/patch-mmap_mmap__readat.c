@@ -1,13 +1,13 @@
-$NetBSD: patch-mmap_mmap__readat.c,v 1.1 2020/06/26 19:21:52 schmonz Exp $
+$NetBSD: patch-mmap_mmap__readat.c,v 1.2 2023/11/09 19:26:00 schmonz Exp $
 
 Fix Illumos build.
 
---- mmap/mmap_readat.c.orig	2016-09-16 16:22:00.000000000 +0000
+--- mmap/mmap_readat.c.orig	2019-04-23 13:25:27.000000000 +0000
 +++ mmap/mmap_readat.c
-@@ -4,6 +4,7 @@
+@@ -3,6 +3,7 @@
+ 
  #include <sys/types.h>
- #include <unistd.h>
- #ifndef __MINGW32__
+ #ifndef _WIN32
 +#include <sys/time.h>
  #include <sys/stat.h>
  #include <unistd.h>

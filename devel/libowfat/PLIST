@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/16 21:39:11 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/09 19:26:00 schmonz Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
 include/libowfat/case.h
 include/libowfat/cdb.h
 include/libowfat/cdb_make.h
+include/libowfat/compiler.h
 include/libowfat/compiletimeassert.h
 include/libowfat/critbit.h
 include/libowfat/dns.h
@@ -22,6 +23,7 @@ include/libowfat/mmap.h
 include/libowfat/ndelay.h
 include/libowfat/open.h
 include/libowfat/openreadclose.h
+include/libowfat/parse.h
 include/libowfat/rangecheck.h
 include/libowfat/readclose.h
 include/libowfat/safemult.h
@@ -56,6 +58,7 @@ man/man3/array_start.3
 man/man3/array_trunc.3
 man/man3/array_truncate.3
 man/man3/assign.3
+man/man3/bs_capacityassert.3
 man/man3/buffer.3
 man/man3/buffer_close.3
 man/man3/buffer_feed.3
@@ -79,6 +82,7 @@ man/man3/buffer_init.3
 man/man3/buffer_init_free.3
 man/man3/buffer_mmapread.3
 man/man3/buffer_peek.3
+man/man3/buffer_peekc.3
 man/man3/buffer_put.3
 man/man3/buffer_put8long.3
 man/man3/buffer_putalign.3
@@ -105,8 +109,13 @@ man/man3/byte_copy.3
 man/man3/byte_copyr.3
 man/man3/byte_diff.3
 man/man3/byte_equal.3
+man/man3/byte_equal_notimingattack.3
 man/man3/byte_rchr.3
+man/man3/byte_start.3
+man/man3/byte_starts.3
 man/man3/byte_zero.3
+man/man3/carp.3
+man/man3/carpsys.3
 man/man3/case_diffb.3
 man/man3/case_diffs.3
 man/man3/case_lowerb.3
@@ -128,6 +137,8 @@ man/man3/critbit0_clear.3
 man/man3/critbit0_contains.3
 man/man3/critbit0_delete.3
 man/man3/critbit0_insert.3
+man/man3/die.3
+man/man3/diesys.3
 man/man3/dns_ip4.3
 man/man3/dns_ip4_packet.3
 man/man3/dns_ip4_qualify.3
@@ -143,9 +154,12 @@ man/man3/dns_name6_domain.3
 man/man3/dns_name_packet.3
 man/man3/dns_txt.3
 man/man3/dns_txt_packet.3
+man/man3/errmsg_iam.3
 man/man3/fmt_8long.3
 man/man3/fmt_asn1derlength.3
 man/man3/fmt_asn1dertag.3
+man/man3/fmt_copybytes.3
+man/man3/fmt_copybytes_sizeof_minus1.3
 man/man3/fmt_double.3
 man/man3/fmt_fill.3
 man/man3/fmt_httpdate.3
@@ -166,6 +180,8 @@ man/man3/fmt_pad.3
 man/man3/fmt_plusminus.3
 man/man3/fmt_str.3
 man/man3/fmt_strm.3
+man/man3/fmt_strm_alloca.3
+man/man3/fmt_strm_malloc.3
 man/man3/fmt_strn.3
 man/man3/fmt_uint.3
 man/man3/fmt_uint0.3
@@ -241,6 +257,8 @@ man/man3/mmap_read.3
 man/man3/mmap_readat.3
 man/man3/mmap_shared.3
 man/man3/mmap_unmap.3
+man/man3/msg.3
+man/man3/msgsys.3
 man/man3/ndelay_off.3
 man/man3/ndelay_on.3
 man/man3/open_append.3
@@ -303,7 +321,13 @@ man/man3/scan_xlong.3
 man/man3/scan_xlonglong.3
 man/man3/scan_xshort.3
 man/man3/socket_accept4.3
+man/man3/socket_accept4_makenonblocking.3
+man/man3/socket_accept4_makenonblocking_setcloseonexec.3
+man/man3/socket_accept4_setcloseonexec.3
 man/man3/socket_accept6.3
+man/man3/socket_accept6_makenonblocking.3
+man/man3/socket_accept6_makenonblocking_setcloseonexec.3
+man/man3/socket_accept6_setcloseonexec.3
 man/man3/socket_bind4.3
 man/man3/socket_bind4_reuse.3
 man/man3/socket_bind6.3

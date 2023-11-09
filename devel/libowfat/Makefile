@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/10/14 16:52:54 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2023/11/09 19:26:00 schmonz Exp $
 
-DISTNAME=	libowfat-0.32
-PKGREVISION=	2
+DISTNAME=	libowfat-0.33
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.xz
@@ -21,5 +19,11 @@ post-extract:
 	${MV} tai/tai_pack.3 tai/tai_pack_libowfat.3; \
 	${MV} taia/taia_now.3 taia/taia_now_libowfat.3; \
 	${MV} taia/taia_pack.3 taia/taia_pack_libowfat.3
+
+# work around missing dependency for parallel builds
+pre-build:
+	cd ${WRKSRC}; \
+	${BUILD_MAKE_CMD} headers; \
+	${BUILD_MAKE_CMD} ent
 
 .include "../../mk/bsd.pkg.mk"
