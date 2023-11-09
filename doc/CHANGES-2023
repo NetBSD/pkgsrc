@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6796 2023/11/09 13:58:05 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6797 2023/11/09 14:21:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9820,3 +9820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-argcomplete to 3.1.4 [adam 2023-11-09]
 	Updated databases/py-apsw to 3.44.0.0 [adam 2023-11-09]
 	Updated graphics/gimp to 2.10.36 [wiz 2023-11-09]
+	Updated net/unbound to 1.19.0 [he 2023-11-09]
