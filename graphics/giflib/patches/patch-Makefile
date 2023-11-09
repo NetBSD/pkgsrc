@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2020/06/05 12:15:16 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.6 2023/11/09 20:31:00 nia Exp $
 
 - Inherit the PREFIX rather than hard-coding it.
 - Adjust location where manuals are installed.
@@ -8,7 +8,14 @@ $NetBSD: patch-Makefile,v 1.5 2020/06/05 12:15:16 jperkin Exp $
 
 --- Makefile.orig	2019-06-24 16:08:57.000000000 +0000
 +++ Makefile
-@@ -14,11 +14,11 @@ SHELL = /bin/sh
+@@ -8,17 +8,17 @@
+ #
+ OFLAGS = -O0 -g
+ OFLAGS  = -O2
+-CFLAGS  = -std=gnu99 -fPIC -Wall -Wno-format-truncation $(OFLAGS)
++CFLAGS += -std=gnu99 -fPIC
+ 
+ SHELL = /bin/sh
  TAR = tar
  INSTALL = install
  
