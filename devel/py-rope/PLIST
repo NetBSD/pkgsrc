@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2023/05/04 10:03:52 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2023/11/09 19:15:57 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/rope/__init__.py
 ${PYSITELIB}/rope/__init__.pyc
 ${PYSITELIB}/rope/__init__.pyo
