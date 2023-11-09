@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2023/05/03 15:20:41 triaxx Exp $
+$NetBSD: distinfo,v 1.20 2023/11/09 09:59:49 nros Exp $
 
 BLAKE2s (freeglut-3.4.0.tar.gz) = 710aa8aa2705736bfd941e0b94c4503235f82d1b687a40d891fd0c727b4b5fb7
 SHA512 (freeglut-3.4.0.tar.gz) = 4bb6d6c086bac7a9c0ec78062dce58987555785abe6375f462ee249f65210a964a28fb10ba7ee8a42d7fafb00eb8d196eb403d65d255f02f88467369c187228b
 Size (freeglut-3.4.0.tar.gz) = 413389 bytes
+SHA1 (patch-src_x11_fg__joystick__x11.c) = ac82cffd2a9cd6b801cbe1519ee84ef8738f7f82
