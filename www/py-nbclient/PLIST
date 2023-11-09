@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/09 16:59:10 adam Exp $
 bin/jupyter-execute-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -27,48 +27,6 @@ ${PYSITELIB}/nbclient/output_widget.py
 ${PYSITELIB}/nbclient/output_widget.pyc
 ${PYSITELIB}/nbclient/output_widget.pyo
 ${PYSITELIB}/nbclient/py.typed
-${PYSITELIB}/nbclient/tests/__init__.py
-${PYSITELIB}/nbclient/tests/__init__.pyc
-${PYSITELIB}/nbclient/tests/__init__.pyo
-${PYSITELIB}/nbclient/tests/base.py
-${PYSITELIB}/nbclient/tests/base.pyc
-${PYSITELIB}/nbclient/tests/base.pyo
-${PYSITELIB}/nbclient/tests/conftest.py
-${PYSITELIB}/nbclient/tests/conftest.pyc
-${PYSITELIB}/nbclient/tests/conftest.pyo
-${PYSITELIB}/nbclient/tests/fake_kernelmanager.py
-${PYSITELIB}/nbclient/tests/fake_kernelmanager.pyc
-${PYSITELIB}/nbclient/tests/fake_kernelmanager.pyo
-${PYSITELIB}/nbclient/tests/files/Autokill.ipynb
-${PYSITELIB}/nbclient/tests/files/Check History in Memory.ipynb
-${PYSITELIB}/nbclient/tests/files/Clear Output.ipynb
-${PYSITELIB}/nbclient/tests/files/Disable Stdin.ipynb
-${PYSITELIB}/nbclient/tests/files/Empty Cell.ipynb
-${PYSITELIB}/nbclient/tests/files/Error.ipynb
-${PYSITELIB}/nbclient/tests/files/Factorials.ipynb
-${PYSITELIB}/nbclient/tests/files/HelloWorld.ipynb
-${PYSITELIB}/nbclient/tests/files/Inline Image.ipynb
-${PYSITELIB}/nbclient/tests/files/Interrupt.ipynb
-${PYSITELIB}/nbclient/tests/files/JupyterWidgets.ipynb
-${PYSITELIB}/nbclient/tests/files/Other Comms.ipynb
-${PYSITELIB}/nbclient/tests/files/Output.ipynb
-${PYSITELIB}/nbclient/tests/files/Parallel Execute A.ipynb
-${PYSITELIB}/nbclient/tests/files/Parallel Execute B.ipynb
-${PYSITELIB}/nbclient/tests/files/SVG.ipynb
-${PYSITELIB}/nbclient/tests/files/Skip Exceptions with Cell Tags.ipynb
-${PYSITELIB}/nbclient/tests/files/Skip Exceptions.ipynb
-${PYSITELIB}/nbclient/tests/files/Skip Execution with Cell Tag.ipynb
-${PYSITELIB}/nbclient/tests/files/Sleep1s.ipynb
-${PYSITELIB}/nbclient/tests/files/Unicode.ipynb
-${PYSITELIB}/nbclient/tests/files/UnicodePy3.ipynb
-${PYSITELIB}/nbclient/tests/files/python.png
-${PYSITELIB}/nbclient/tests/files/update-display-id.ipynb
-${PYSITELIB}/nbclient/tests/test_client.py
-${PYSITELIB}/nbclient/tests/test_client.pyc
-${PYSITELIB}/nbclient/tests/test_client.pyo
-${PYSITELIB}/nbclient/tests/test_util.py
-${PYSITELIB}/nbclient/tests/test_util.pyc
-${PYSITELIB}/nbclient/tests/test_util.pyo
 ${PYSITELIB}/nbclient/util.py
 ${PYSITELIB}/nbclient/util.pyc
 ${PYSITELIB}/nbclient/util.pyo
