@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/09 17:30:44 adam Exp $
 
-DISTNAME=	jupyterlab-4.0.6
+DISTNAME=	jupyterlab-4.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/jupyterlab/
+HOMEPAGE=	https://github.com/jupyterlab/jupyterlab
 COMMENT=	Next-generation user interface for Project Jupyter
 LICENSE=	modified-bsd
 
