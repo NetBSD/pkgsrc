@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2023/08/30 12:33:23 adam Exp $
+# $NetBSD: Makefile,v 1.134 2023/11/09 22:27:01 wiz Exp $
 
 DISTNAME=	freetype-2.13.2
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -54,7 +54,6 @@ post-configure:
 	${MKDIR} ${WRKSRC}/.libs
 .endif
 
-.include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
