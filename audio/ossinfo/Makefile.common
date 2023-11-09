@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2022/05/05 08:28:16 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/11/09 19:20:59 nia Exp $
 # Common Makefile logic for commands included with the OSSv4 distribution.
 
 # used by audio/ossinfo/Makefile
@@ -30,6 +30,13 @@ LDFLAGS+=	${LIBOSSAUDIO}
     (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099983)
 PKG_SKIP_REASON+=	"Requires OSSv4 support"
 .endif
+
+# These OSSv4 definitions are missing in Sun's "boomer",
+# for whatever reason. However, they're the same as
+# PCM_ENABLE_(INPUT|OUTPUT), which are defined.
+CFLAGS.SunOS+=		-DOSS_OPEN_READ=0x00000001
+CFLAGS.SunOS+=		-DOSS_OPEN_WRITE=0x00000002
+CFLAGS.SunOS+=		-DOSS_OPEN_READWRITE=0x00000003
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
