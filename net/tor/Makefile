@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.182 2023/10/24 22:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.183 2023/11/09 07:56:37 wiz Exp $
 
-DISTNAME=	tor-0.4.8.4
-PKGREVISION=	1
+DISTNAME=	tor-0.4.8.8
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -10,7 +9,8 @@ HOMEPAGE=	https://www.torproject.org/
 COMMENT=	Anonymizing overlay network for TCP
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:test pkg-config bash:test
 GNU_CONFIGURE=		yes
