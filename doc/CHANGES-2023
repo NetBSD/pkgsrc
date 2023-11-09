@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6787 2023/11/09 03:26:52 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6788 2023/11/09 06:54:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9803,3 +9803,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-dns-sakuracloud to 2.7.4 [adam 2023-11-08]
 	Updated security/py-certbot-nginx to 2.7.4 [adam 2023-11-08]
 	Updated x11/libqtxdg to 3.12.0 [gutteridge 2023-11-09]
+	Updated www/py-django-reversion to 5.0.8 [adam 2023-11-09]
+	Updated devel/py-pep517 to 0.13.1 [adam 2023-11-09]
+	Updated devel/py-types-setuptools to 68.2.0.1 [adam 2023-11-09]
+	Updated www/py-test-django to 4.7.0 [adam 2023-11-09]
