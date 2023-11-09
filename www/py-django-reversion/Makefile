@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2023/10/10 17:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/09 06:49:49 adam Exp $
 
-DISTNAME=	django-reversion-5.0.6
+DISTNAME=	django-reversion-5.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
