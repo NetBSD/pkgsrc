@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.265 2023/11/07 11:36:57 nia Exp $
+# $NetBSD: gcc.mk,v 1.266 2023/11/09 08:47:42 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -325,7 +325,7 @@ _GCC_VERSION=	0
 .endif
 _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 
-.if !empty(_GCC_VERSION:M[23]\..*) || !empty(_GCC_VERSION:M4.[01]\..*)
+.if !empty(_GCC_VERSION:M[23]..*) || !empty(_GCC_VERSION:M4.[01].*)
 # A lot of packages attempt to do this as a workaround for a
 # well-intentioned default in XCode 12+, but it's a common cause of
 # build failures on old versions of Darwin which use gcc and don't
@@ -335,7 +335,17 @@ _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 .endif
 
-.if !empty(_GCC_VERSION:M[23]\..*) || !empty(_GCC_VERSION:M4.[0-8]\..*)
+.if !empty(_GCC_VERSION:M[23]..*) || !empty(_GCC_VERSION:M4.[012].*)
+# Added in GCC 4.3
+BUILDLINK_TRANSFORM+=	rm:-Wvla
+.endif
+
+.if !empty(_GCC_VERSION:M[23]..*) || !empty(_GCC_VERSION:M4.0.*)
+# Added in GCC 4.3
+BUILDLINK_TRANSFORM+=	rm:-Wc++-compat
+.endif
+
+.if !empty(_GCC_VERSION:M[23]..*) || !empty(_GCC_VERSION:M4.[0-8].*)
 COMPILER_HAS_C11?=	no
 .else
 COMPILER_HAS_C11?=	yes
