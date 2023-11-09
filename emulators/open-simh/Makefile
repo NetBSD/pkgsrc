@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2023/07/23 15:44:25 rhialto Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/09 21:28:15 rhialto Exp $
 
 DISTNAME=	open-simh-4.1.0
-PKGNAME=	open-simh-4.1.0.20230717
+PKGNAME=	open-simh-4.1.0.20231024
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	cf47a20fd459d63be6c2e5a4728f2d2a31eaf884
+GITHUB_TAG=	b23cde9c5d4ff3c04ccbec4f4c6853ea0daba46d
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -34,7 +34,7 @@ CFLAGS_O+=		-fno-strict-overflow
 CFLAGS_O+=		-fno-unsafe-loop-optimizations
 CFLAGS_O+=		-finline-functions
 CFLAGS_O+=		-fgcse-after-reload
-.if ${PKGSRC_COMPILER} == "gcc"
+.if !empty(PKGSRC_COMPILER:Mgcc)
 CFLAGS_O+=		-fpredictive-commoning
 CFLAGS_O+=		-fipa-cp-clone
 .endif
@@ -75,7 +75,7 @@ MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q}
 MAKE_ENV+=		CFLAGS_O=${CFLAGS_O:Q}
-MAKE_ENV+=		FONTPATH=${PREFIX:Q}/share/fonts/X11/TTF
+MAKE_ENV+=		FONTPATH=${PREFIX}/share/fonts/X11/TTF
 MAKE_ENV+=		WARNINGS=ALLOWED
 
 BUILD_MAKE_FLAGS=	TESTS=0
