@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.133 2023/11/09 08:47:42 nia Exp $
+# $NetBSD: Darwin.mk,v 1.134 2023/11/09 16:33:53 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -230,12 +230,18 @@ OPSYS_HAS_KQUEUE=	# defined
 MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 .endif
 
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc*)
 # Convert to flags that the old toolchain understands.
 #
 # XXX: probably applies to more platforms too, but the GCC docs
 # unhelpfully describe -pthread as a "HP-UX/Solaris flag" to this day
-.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc)
 BUILDLINK_TRANSFORM+=	opt:-pthread:-lpthread
+
+# unfortunately, many highly-depended-upon packages now include multiple
+# overlapping definitions. This changes them from an error to a warning.
+LDFLAGS+=		-Wl,-m
+CWRAPPERS_APPEND.ld+=	-m
+_WRAP_EXTRA_ARGS.LD+=	-m
 .endif
 
 # El Capitan GM has a file system bug where a deep directory hierarchy can be
