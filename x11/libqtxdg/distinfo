@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2023/04/18 09:35:29 pin Exp $
+$NetBSD: distinfo,v 1.12 2023/11/09 03:26:34 gutteridge Exp $
 
-BLAKE2s (libqtxdg-3.11.0.tar.xz) = 97a180400b24e8d903d300e9f96e2041fbf2b667b3af141c00c9c211f4197a11
-SHA512 (libqtxdg-3.11.0.tar.xz) = 494140fa35e184c128c851f06501b5c62324a796d3f61ed47b750dbdffff756c1a42240d4458797e2f2f01c9b06b997f0fbfc76fe7f99866f7cad084ac1342f7
-Size (libqtxdg-3.11.0.tar.xz) = 71688 bytes
+BLAKE2s (libqtxdg-3.12.0.tar.xz) = 138404cdeb342eb977a9c188ef68a1c5794d12e757ce8ce988ad7c00242e7e19
+SHA512 (libqtxdg-3.12.0.tar.xz) = 9db46b0dddb027a24e1c19a2e3679014735cc246f15d32bc5fb9e778cd7d8fb57c9b105f819091308002f0a2eff8269920ecc0d7bd5ce8a01fbaf0b37e61a76e
+Size (libqtxdg-3.12.0.tar.xz) = 71684 bytes
 SHA1 (patch-CMakeLists.txt) = 9935490d2250041107499df3a2324c6478922e5f
