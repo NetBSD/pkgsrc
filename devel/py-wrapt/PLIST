@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/31 08:43:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/09 16:35:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/wrapt/__init__.py
 ${PYSITELIB}/wrapt/__init__.pyc
 ${PYSITELIB}/wrapt/__init__.pyo
+${PYSITELIB}/wrapt/__wrapt__.py
+${PYSITELIB}/wrapt/__wrapt__.pyc
+${PYSITELIB}/wrapt/__wrapt__.pyo
 ${PYSITELIB}/wrapt/_wrappers.so
 ${PYSITELIB}/wrapt/arguments.py
 ${PYSITELIB}/wrapt/arguments.pyc
@@ -17,6 +20,12 @@ ${PYSITELIB}/wrapt/decorators.pyo
 ${PYSITELIB}/wrapt/importer.py
 ${PYSITELIB}/wrapt/importer.pyc
 ${PYSITELIB}/wrapt/importer.pyo
+${PYSITELIB}/wrapt/patches.py
+${PYSITELIB}/wrapt/patches.pyc
+${PYSITELIB}/wrapt/patches.pyo
+${PYSITELIB}/wrapt/weakrefs.py
+${PYSITELIB}/wrapt/weakrefs.pyc
+${PYSITELIB}/wrapt/weakrefs.pyo
 ${PYSITELIB}/wrapt/wrappers.py
 ${PYSITELIB}/wrapt/wrappers.pyc
 ${PYSITELIB}/wrapt/wrappers.pyo
