@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/29 16:58:53 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/09 17:27:09 adam Exp $
 
-DISTNAME=	jupyter_events-0.8.0
+DISTNAME=	jupyter_events-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-events/}
@@ -20,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 TEST_DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.19.0:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-console-scripts
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -38,9 +37,6 @@ SUBST_SED.tests=	-e 's,"jupyter-events","jupyter-events-${PYVERSSUFFIX}",g'
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} jupyter-events jupyter-events-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
