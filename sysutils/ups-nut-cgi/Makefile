@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.74 2023/10/21 17:11:29 gdt Exp $
+# $NetBSD: Makefile,v 1.75 2023/11/09 16:41:15 gdt Exp $
 
-PKGREVISION= 4
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
@@ -17,21 +16,6 @@ INSTALLATION_DIRS+=	${PREFIX}/${PKGMANDIR}/man8
 CONFIGURE_ARGS+=	--with-cgi
 CONFIGURE_ARGS+=	--with-cgipath=${NUT_CGIDIR:Q}
 
-#
-# This is horrendous, but configure script assumes everything is in /usr/X11R6
-# and hardcodes the list of libraries.  libXpm is optional in gd/buildlink3.mk
-# and the configure script assumes it, however it doesn't appear necessary so
-# is removed for now.
-#
-.include "../../mk/jpeg.buildlink3.mk"
-GD_LIBS=		-lm
-.for bl3 lib in gd gd png png zlib z ${JPEG_TYPE} jpeg freetype2 freetype
-GD_LIBS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${bl3}}/lib
-GD_LIBS+=		-L${BUILDLINK_PREFIX.${bl3}}/lib -l${lib}
-GD_INCS+=		-I${BUILDLINK_PREFIX.${bl3}}/include
-.endfor
-CONFIGURE_ARGS+=       --with-gd-libs="${GD_LIBS}"
-CONFIGURE_ARGS+=       --with-gd-includes="${GD_INCS}"
 
 BUILD_DEFS+=		NUT_STATEDIR
 
@@ -46,6 +30,10 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 do-install:
 	(cd ${WRKSRC}/clients && env ${MAKE_ENV} \
 	    ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install-cgiexecPROGRAMS)
+	# cgiexec is overzealous and installs libraries (which are in ups-nut)
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libnut*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libups*
+	${RMDIR} ${DESTDIR}${PREFIX}/lib
 	for f in hosts.conf.sample upsset.conf.sample \
 	    upsstats.html.sample upsstats-single.html.sample; do \
 		${INSTALL_DATA} ${WRKSRC}/conf/$$f ${DESTDIR}${NUT_EGDIR}; \
@@ -66,4 +54,5 @@ do-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
