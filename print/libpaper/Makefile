@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/10/19 14:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/11/09 18:58:02 nia Exp $
 
 DISTNAME=	libpaper-2.1.2
 CATEGORIES=	print
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+USE_FEATURES+=		getline strndup strnlen
 
 TEST_TARGET=		check
 
