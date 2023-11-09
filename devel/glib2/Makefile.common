@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.113 2023/11/06 09:21:54 adam Exp $
+# $NetBSD: Makefile.common,v 1.114 2023/11/09 03:33:15 gutteridge Exp $
 # used by devel/gdbus-codegen/Makefile
 # used by devel/glib2/Makefile
 # used by devel/glib2-tools/Makefile
@@ -12,8 +12,10 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://developer.gnome.org/glib/
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c c++ c99
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config xgettext
+
+USE_CC_FEATURES+=	c99
 
 # does snprintf %d with pid_t...
 BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
