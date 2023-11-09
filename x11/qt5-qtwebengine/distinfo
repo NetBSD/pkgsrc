@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2023/10/07 20:00:35 adam Exp $
+$NetBSD: distinfo,v 1.18 2023/11/09 07:37:47 wiz Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = 513fe5101f2f1946e1f6ef727aba187ccd5fccd603fafb9998396de7fb507a6c
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = cebda17b9023348c85e9397fce5ad0f8ee16cfe821b8e79cea7ce92f7bb00e7fe59594107ac9f9411df1bb2e675eb6ecbfe3366df67a05b45fe12ead97cdc76c
@@ -614,6 +614,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_fonts_fon
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc) = 8f6f28827d4a1f775cbeaf8665d524a23db3484f
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_graphics_video__frame__submitter.cc) = a51a91969f0ed4372316fc1297b94e4deb3f255c
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_scheduler_BUILD.gn) = 4101c0912e7ab69f8be9bad78eca84f5b11e973a
+SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_text_text__break__iterator.cc) = 83e8614032cbedbf8fc0539d5505fc2071ea94bc
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_wtf_container__annotations.h) = 9f90644f4a49e734aec9fa769763f4008505e609
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_wtf_stack__util.cc) = 5fc857bab34f5a711616a9694370989b7eca5faa
 SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn) = 56e189bbcefa0b6e40548a2f86b3f058f47f7501
