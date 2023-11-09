@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.384 2023/11/08 13:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.385 2023/11/09 13:54:39 wiz Exp $
 
-DISTNAME=	gimp-2.10.34
-PKGREVISION=	3
+DISTNAME=	gimp-2.10.36
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +17,8 @@ DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
 
 CONFLICTS+=	gimp-devel-[0-9]*
 
-USE_LANGUAGES+=		c c++14
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES=	c++14
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
