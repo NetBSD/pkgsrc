@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/11/03 08:21:59 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/09 06:54:18 adam Exp $
 
-DISTNAME=	pytest-django-4.6.0
+DISTNAME=	pytest-django-4.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-django/}
