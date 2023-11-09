@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6794 2023/11/09 12:29:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6795 2023/11/09 13:01:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9817,3 +9817,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_client to 8.6.0 [adam 2023-11-09]
 	Updated textproc/py-yamllint to 1.33.0 [adam 2023-11-09]
 	Updated misc/py-trove-classifiers to 2023.11.7 [adam 2023-11-09]
+	Updated devel/py-argcomplete to 3.1.4 [adam 2023-11-09]
+	Updated databases/py-apsw to 3.44.0.0 [adam 2023-11-09]
