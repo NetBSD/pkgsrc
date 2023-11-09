@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/08/14 05:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/11/09 08:33:40 wiz Exp $
 
 DISTNAME=		fish-3.6.1
 PKGREVISION=		1
@@ -49,6 +49,11 @@ REPLACE_PYTHON=	share/tools/create_manpage_completions.py
 # Avoid C++ <version> issues.
 post-extract:
 	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
+
+# wiz 20231109:
+# as of fish-3.6.1, the ninja generator has problems in some environments:
+# ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
+CMAKE_GENERATOR=	make
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
