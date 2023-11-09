@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2023/06/06 12:41:59 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.67 2023/11/09 16:31:18 nia Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -63,8 +63,10 @@ SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
 SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
 .endif
 
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 #TOOL_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
 TOOL_DEPENDS+=		nasm>=2.13:../../devel/nasm
+.endif
 
 REPLACE_PERL+=	doc/texi2pod.pl
 REPLACE_SH+=	configure version.sh

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2023/11/08 13:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/11/09 16:31:18 nia Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
-PKGREVISION=	13
+PKGREVISION=	14
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Decoding, encoding and streaming software (v3.x)
@@ -9,7 +9,6 @@ COMMENT=	Decoding, encoding and streaming software (v3.x)
 CONFIGURE_ARGS+=	--enable-avfilter
 CONFIGURE_ARGS+=	--enable-avresample
 CONFIGURE_ARGS+=	--enable-postproc
-CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--disable-ffplay
 
 INSTALLATION_DIRS=	lib/ffmpeg3 share/doc/ffmpeg3 share/examples/ffmpeg3
@@ -18,6 +17,10 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg3/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_RPATH:tl} != "no"
+CONFIGURE_ARGS+=	--enable-rpath
+.endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-cross-compile

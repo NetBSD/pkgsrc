@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/06/02 16:44:06 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2023/11/09 16:31:18 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ffmpeg6
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	ass aom bluray doc fdk-aac fontconfig freetype jack \
 			lame libvpx libwebp opencore-amr opus pulseaudio rav1e rpi rtmp \
 			speex tesseract theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	ass aom bluray freetype fontconfig gnutls lame \
-			libvpx libwebp opus speex theora vorbis x11 x264 x265 xvid
+			libvpx libwebp opus speex theora vorbis x264 x265 xvid
 
 PLIST_VARS+=		doc
 
@@ -24,6 +24,10 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+= vaapi
 PKG_SUGGESTED_OPTIONS+=	vaapi
+.endif
+
+.if ${OPSYS} != "Darwin"
+PKG_SUGGESTED_OPTIONS+=	x11
 .endif
 
 .include "../../mk/bsd.options.mk"
