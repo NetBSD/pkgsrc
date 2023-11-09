@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6801 2023/11/09 16:43:55 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.6802 2023/11/09 17:00:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9832,3 +9832,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ups-nut-snmp to 2.8.1 [gdt 2023-11-09]
 	Updated sysutils/ups-nut-usb to 2.8.1 [gdt 2023-11-09]
 	Updated sysutils/p5-UPS-Nut to 2.8.1 [gdt 2023-11-09]
+	Updated devel/py-wrapt to 1.16.0 [adam 2023-11-09]
+	Updated www/py-nbclient to 0.9.0 [adam 2023-11-09]
