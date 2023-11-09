@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.126 2023/08/24 18:56:42 wiz Exp $
+$NetBSD: distinfo,v 1.127 2023/11/09 07:56:37 wiz Exp $
 
-BLAKE2s (tor-0.4.8.4.tar.gz) = eb7678e72897deabc47aadd33997981da0c430ea6afc1ade19f6a877ad3d28ec
-SHA512 (tor-0.4.8.4.tar.gz) = a27380b3e0f33148fe86aa8815a9ff6476fe1531427990508d7cbe1770ddedbde56ac797674154a7ca590eb7ce08ebc56e0a4d84f9e27f6eaf1faf3a836faa8b
-Size (tor-0.4.8.4.tar.gz) = 8288772 bytes
-SHA1 (patch-src_ext_equix_hashx_src_virtual__memory.c) = f8a99bfb726923682fa61c57ddcaf1c75c805d95
+BLAKE2s (tor-0.4.8.8.tar.gz) = 703fc0331c16faf7de2055158f6f9649720b0d4b6c442225afab982d7812bc09
+SHA512 (tor-0.4.8.8.tar.gz) = 780c507ea3aaa66dafb5cd34551009979c6621217acb3c1b11727b5f5d7fb0edd08d7e79b9991014a95a185f4ee6fdd53098d2df587e3d801fb2d5100b9b6e23
+Size (tor-0.4.8.8.tar.gz) = 8261891 bytes
