@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.62 2023/11/08 13:19:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.63 2023/11/09 20:55:19 nia Exp $
 
 BUILDLINK_TREE+=	GraphicsMagick
 
@@ -20,10 +20,12 @@ pkgbase := GraphicsMagick
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .endif
+.if ${PKG_BUILD_OPTIONS.GraphicsMagick:Mzstd}
+.include "../../archivers/zstd/buildlink3.mk"
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
