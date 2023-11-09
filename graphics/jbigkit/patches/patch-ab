@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2017/07/06 13:13:30 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2023/11/09 17:55:32 nia Exp $
 
 * prevent to overwrite our CC/CFLAGS settings
 * libtoolize
@@ -32,22 +32,22 @@ $NetBSD: patch-ab,v 1.6 2017/07/06 13:13:30 wiz Exp $
 -pbmtojbg: pbmtojbg.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
 +pbmtojbg: pbmtojbg.lo ../libjbig/libjbig.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg pbmtojbg.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
  
 -jbgtopbm: jbgtopbm.o ../libjbig/libjbig.a
 -	$(CC) $(CFLAGS) -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
 +jbgtopbm: jbgtopbm.lo ../libjbig/libjbig.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm jbgtopbm.lo ../libjbig/libjbig.la -rpath ${PREFIX}/lib
  
 -pbmtojbg85: pbmtojbg85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
 +pbmtojbg85: pbmtojbg85.lo ../libjbig/libjbig85.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o pbmtojbg85 pbmtojbg85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
  
 -jbgtopbm85: jbgtopbm85.o ../libjbig/libjbig85.a
 -	$(CC) $(CFLAGS) -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
 +jbgtopbm85: jbgtopbm85.lo ../libjbig/libjbig85.la
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -R ${PREFIX}/lib
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o jbgtopbm85 jbgtopbm85.lo ../libjbig/libjbig85.la -rpath ${PREFIX}/lib
  
 -jbgtopbm.o: jbgtopbm.c ../libjbig/jbig.h
 -pbmtojbg.o: pbmtojbg.c ../libjbig/jbig.h
