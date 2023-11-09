@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/09/26 17:00:21 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/09 16:23:44 nia Exp $
 
 # Download https://code.videolan.org/videolan/x264/-/archive/stable/x264-stable.tar.bz2
 # Rename to x264-<last-commit-date>.tar.bz2 and upload to MASTER_SITE_LOCAL.
@@ -20,10 +20,12 @@ WRKSRC=		${WRKDIR}/x264-stable
 # Assembler code still needs to be disabled on at least SunOS.
 # NetBSD/i386 needs ASM disabled to avoid text relocations.
 # NetBSD/mips needs ASM disabled because it uses the MSA extension
+# Darwin/powerpc needs ASM disabled; it needs Altivec and build fails on G4.
 # (requires MIPS64 revision 2) and fails to build.
 .if ${OPSYS} == "SunOS" || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-mips*)
+    ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-mips*} || \
+    ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
 CONFIGURE_ARGS+=	--disable-asm
 .elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     (${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64")
