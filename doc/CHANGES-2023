@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6807 2023/11/09 21:28:27 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.6808 2023/11/09 22:47:05 kre Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9843,3 +9843,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-rope to 1.11.0 [adam 2023-11-09]
 	Updated devel/libowfat to 0.33 [schmonz 2023-11-09]
 	Updated emulators/open-simh to 4.1.0.20231024 [rhialto 2023-11-09]
+	Updated shells/bash to 5.2.21 [kre 2023-11-09]
