@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/28 20:04:21 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/11/09 06:21:05 pho Exp $
 
 BLAKE2s (unarchiver-3.10/TheUnarchiverSource.zip) = 2d40314838ce264233e2724a19da426e93cecbdc2af148849f29ae6f262450c2
 SHA512 (unarchiver-3.10/TheUnarchiverSource.zip) = b27c941f4ca03c8e9c348343fe43994fec5aa12a21c14ac9c7d53fecff234221fe37311d20f8894bc2d1e48b96df44e7446bcf81848112260d62c46be4a6cb92
 Size (unarchiver-3.10/TheUnarchiverSource.zip) = 2753163 bytes
+SHA1 (patch-XADUnarchiver.m) = fdd8dfef277affcdb63119a84fd419475841e77d
