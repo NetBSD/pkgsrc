@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.71 2023/06/22 05:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2023/11/09 16:41:15 gdt Exp $
 
-PKGREVISION= 6
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
@@ -19,8 +18,11 @@ TOOLS_SCRIPT.perl=	exit 1
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
+# nut, bizarrely, does not install headers by default
 CONFIGURE_ARGS+=	--with-dev
 CONFIGURE_ARGS+=	--without-snmp	# provided by sysutils/ups-nut-snmp
+# nut is overly aggressive about installing python files; tell it not to.
+CONFIGURE_ARGS+=	--without-python2 --without-python3
 
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
@@ -66,11 +68,12 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_EGDIR}
 	${MV} ${DESTDIR}${NUT_CONFDIR}/*.sample ${DESTDIR}${NUT_EGDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_DOCDIR}
-	for f in COPYING CREDITS ChangeLog NEWS README INSTALL UPGRADING; do \
+	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_DOCDIR}/detailed
+	for f in AUTHORS COPYING ChangeLog NEWS.adoc README.adoc UPGRADING.adoc; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${NUT_DOCDIR}; \
 	done
 	for f in ${WRKSRC}/docs/*.txt; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}; \
+		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/detailed; \
 	done
 	for f in ${WRKSRC}/docs/cables/*.txt; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/cables/; \
