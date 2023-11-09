@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/11/03 10:17:14 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/09 19:12:11 adam Exp $
 
-DISTNAME=	nbconvert-7.10.0
+DISTNAME=	nbconvert-7.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
@@ -30,7 +30,6 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
@@ -49,9 +48,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
