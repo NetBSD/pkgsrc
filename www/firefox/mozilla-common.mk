@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.268 2023/11/03 16:22:12 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.269 2023/11/09 00:04:43 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -44,7 +44,7 @@ CFLAGS+=		-msse2
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
 # "i486" when attempting to select the Rust compiler target.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
 CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
 .else
@@ -135,16 +135,16 @@ SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-SQLITE3OPTFLAG=		'-O0',
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+SQLITE3OPTFLAG=			'-O0',
 .else
-SQLITE3OPTFLAG=		# empty
+SQLITE3OPTFLAG=			# empty
 .endif
-SUBST_CLASSES+=				sqlite3-opt
-SUBST_STAGE.sqlite3-opt=		pre-configure
-SUBST_MESSAGE.sqlite3-opt=		Fixing segfault in libmozsqlite3.so
-SUBST_FILES.sqlite3-opt+=		${MOZILLA_DIR}third_party/sqlite3/src/moz.build
-SUBST_VARS.sqlite3-opt+=		SQLITE3OPTFLAG
+SUBST_CLASSES+=			sqlite3-opt
+SUBST_STAGE.sqlite3-opt=	pre-configure
+SUBST_MESSAGE.sqlite3-opt=	Fixing segfault in libmozsqlite3.so
+SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
+SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or rearlier.
 RUST_MAKE_JOBS=		# empty by default
@@ -191,10 +191,10 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 PLIST_VARS+=	v4l2_decode ffvpx
 
-PLIST_VARS+=	v4l2_decode
+PLIST_VARS+=		v4l2_decode
 .if ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH:M*arm*} || \
-    ${MACHINE_ARCH:Mriscv64}
+    ${MACHINE_ARCH} == riscv64
 PLIST.v4l2_decode=	yes	# see toolkit/moz.configure
 .endif
 
