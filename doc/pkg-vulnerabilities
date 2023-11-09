@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.60 2023/11/06 14:01:32 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.61 2023/11/09 14:00:08 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25754,3 +25754,6 @@ py{27,38,39,310,311,312}-pip<23.3	command-injection	https://nvd.nist.gov/vuln/de
 php{56,73,74,80,81,82}-roundcube<1.6.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-5631
 exiv2>=0.28<0.28.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-44398
 ltm<1.2.1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36328
+gimp<2.10.36	unknown-impact	https://www.gimp.org/news/2023/11/07/gimp-2-10-36-released/#security-and-bug-fixes
+tor<0.4.8.8	unknown-impact	https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE
+tor-[0-9]*	unknown-impact	https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE
