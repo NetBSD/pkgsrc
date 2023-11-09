@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/11/09 16:41:15 gdt Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/11/09 18:58:44 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -45,5 +45,6 @@ NUT_DATADIR=		${PREFIX}/share/nut
 NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_DRVDIR=		${PREFIX}/libexec/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
+# \todo Change to /var/run rather than /var/db
 NUT_STATEDIR?=		${VARBASE}/db/nut
 NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin
