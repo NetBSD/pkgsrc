@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.341 2023/11/08 13:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.342 2023/11/09 08:41:30 wiz Exp $
 
-DISTNAME=		gnucash-5.3
-PKGREVISION=		3
+DISTNAME=		gnucash-5.4-1
+# hotfix release, remove after next upgrade
+GITHUB_RELEASE=		5.4
+PKGNAME=		${DISTNAME:S/-1/.1/}
+WRKSRC=			${WRKDIR}/gnucash-5.4
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
+#GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.bz2
-GITHUB_RELEASE=		${PKGVERSION_NOREV}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
@@ -15,12 +18,13 @@ LICENSE=		gnu-gpl-v3
 DEPENDS+=		guile30-slib>=3.2.1:../../devel/guile30-slib
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
-GCC_REQD+=		8
-USE_LANGUAGES=		c c++17
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 USE_TOOLS+=		bash perl:run pkg-config
 USE_TOOLS+=		gmake
+
+USE_CXX_FEATURES=	c++17
 
 # build failure in test-tx_import and a couple test failures
 # https://bugzilla.gnome.org/show_bug.cgi?id=795251
@@ -39,11 +43,9 @@ CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
 CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
 
-# test status as of 5.0
-# before 'make install'
-# 46% tests passed, 68 tests failed out of 125
+# test status as of 5.4.1
 # after 'make install'
-# 90% tests passed, 13 tests failed out of 125
+# 89% tests passed, 14 tests failed out of 129
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
