@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6798 2023/11/09 14:32:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6799 2023/11/09 16:30:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9823,3 +9823,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/unbound to 1.19.0 [he 2023-11-09]
 	Updated devel/py-hatch-vcs to 0.4.0 [adam 2023-11-09]
 	Updated textproc/py-precis-i18n to 1.1.0 [adam 2023-11-09]
+	Updated mail/roundcube to 1.6.5 [taca 2023-11-09]
+	Updated mail/roundcube-plugin-enigma to 1.6.5 [taca 2023-11-09]
+	Updated mail/roundcube-plugin-password to 1.6.5 [taca 2023-11-09]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.5 [taca 2023-11-09]
