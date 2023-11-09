@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/07/17 11:27:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/09 06:53:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,7 @@ ${PYSITELIB}/pkg_resources-stubs/_vendor/packaging/markers.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendor/packaging/requirements.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendor/packaging/specifiers.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendor/packaging/version.pyi
+${PYSITELIB}/pkg_resources-stubs/py.typed
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/archive_util.pyi
@@ -80,6 +81,7 @@ ${PYSITELIB}/setuptools-stubs/monkey.pyi
 ${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
 ${PYSITELIB}/setuptools-stubs/package_index.pyi
+${PYSITELIB}/setuptools-stubs/py.typed
 ${PYSITELIB}/setuptools-stubs/py312compat.pyi
 ${PYSITELIB}/setuptools-stubs/sandbox.pyi
 ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
