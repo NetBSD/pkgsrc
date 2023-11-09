@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6793 2023/11/09 12:24:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6794 2023/11/09 12:29:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9815,3 +9815,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sudo to 1.9.15p1 [adam 2023-11-09]
 	Updated devel/py-zope.testrunner to 6.2 [adam 2023-11-09]
 	Updated devel/py-jupyter_client to 8.6.0 [adam 2023-11-09]
+	Updated textproc/py-yamllint to 1.33.0 [adam 2023-11-09]
+	Updated misc/py-trove-classifiers to 2023.11.7 [adam 2023-11-09]
