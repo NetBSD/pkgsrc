@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6791 2023/11/09 08:55:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6792 2023/11/09 12:17:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9811,3 +9811,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 5.4.1 [wiz 2023-11-09]
 	Updated devel/py-pdm to 2.10.1 [adam 2023-11-09]
 	Updated net/py-responses to 0.24.0 [adam 2023-11-09]
+	Updated sysutils/spice-server to 0.15.2 [adam 2023-11-09]
+	Updated security/sudo to 1.9.15p1 [adam 2023-11-09]
