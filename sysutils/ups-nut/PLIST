@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2023/11/09 16:41:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.32 2023/11/09 18:58:44 gdt Exp $
 bin/nut-scanner
 bin/upsc
 bin/upscmd
@@ -22,6 +22,8 @@ lib/pkgconfig/libnutclient.pc
 lib/pkgconfig/libnutclientstub.pc
 lib/pkgconfig/libnutscan.pc
 lib/pkgconfig/libupsclient.pc
+${PYSITELIB}/PyNUT.py
+${PYSITELIB}/test_nutclient.py
 libexec/nut/al175
 libexec/nut/apcsmart
 libexec/nut/apcsmart-old
