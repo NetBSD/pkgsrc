@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.27 2019/09/02 02:23:03 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.28 2023/11/09 18:56:45 nia Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -46,6 +46,7 @@
 #	* glob
 #	* regcomp
 #	* snprintf, vsnprintf
+#	* strndup
 #	* strnlen
 #	* utimes
 #	* nbcompat: All of the above.
