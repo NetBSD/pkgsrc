@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/07/05 20:02:42 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/11/09 19:45:46 nia Exp $
 
 DISTNAME=	p11-kit-0.25.0
 CATEGORIES=	security
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config readlink
+USE_FEATURES+=	strndup strnlen
 
 TEST_TARGET=	check
 
