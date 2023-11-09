@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6803 2023/11/09 17:31:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6804 2023/11/09 18:59:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9836,3 +9836,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbclient to 0.9.0 [adam 2023-11-09]
 	Updated devel/py-jupyter_events to 0.9.0 [adam 2023-11-09]
 	Updated www/py-jupyterlab to 4.0.8 [adam 2023-11-09]
+	Added textproc/py-jsonschema-path version 0.3.1 [adam 2023-11-09]
+	Updated textproc/py-openapi-spec-validator to 0.7.1 [adam 2023-11-09]
+	Updated textproc/py-openapi-core to 0.18.2 [adam 2023-11-09]
