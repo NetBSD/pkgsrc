@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/05/23 07:54:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/09 12:27:28 adam Exp $
 
-DISTNAME=	yamllint-1.32.0
+DISTNAME=	yamllint-1.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yamllint/}
@@ -10,12 +10,12 @@ HOMEPAGE=	https://github.com/adrienverge/yamllint
 COMMENT=	Linter for YAML files
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.5.3:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -23,5 +23,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} yamllint yamllint-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
