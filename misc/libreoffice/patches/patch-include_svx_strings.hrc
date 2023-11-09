@@ -1,0 +1,14 @@
+$NetBSD: patch-include_svx_strings.hrc,v 1.1 2023/11/09 07:37:12 wiz Exp $
+
+Fix build with icu 74.1
+
+--- include/svx/strings.hrc.orig	2023-09-22 19:07:01.000000000 +0000
++++ include/svx/strings.hrc
+@@ -1799,6 +1799,7 @@
+ #define RID_SUBSETSTR_KAKTOVIK_NUMERALS                     NC_("RID_SUBSETMAP", "Kaktovik Numerals")
+ #define RID_SUBSETSTR_KAWI                                  NC_("RID_SUBSETMAP", "Kawi")
+ #define RID_SUBSETSTR_NAG_MUNDARI                           NC_("RID_SUBSETMAP", "Nag Mundari")
++#define RID_SUBSETSTR_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_I    NC_("RID_SUBSETMAP", "CJK Unified Ideographs Extension I")
+ 
+ #define RID_SVXSTR_FRAMEDIR_LTR                             NC_("RID_SVXSTR_FRAMEDIR_LTR", "Left-to-right (LTR)")
+ #define RID_SVXSTR_FRAMEDIR_RTL                             NC_("RID_SVXSTR_FRAMEDIR_RTL", "Right-to-left (RTL)")
