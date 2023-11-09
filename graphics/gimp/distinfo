@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.115 2023/07/14 18:25:48 ryoon Exp $
+$NetBSD: distinfo,v 1.116 2023/11/09 13:54:39 wiz Exp $
 
-BLAKE2s (gimp-2.10.34.tar.bz2) = 95e31c30aac3e3f8009c90832ce1373ca829b70d59f5f0d1b5a76641207a0569
-SHA512 (gimp-2.10.34.tar.bz2) = 4802ce3758daba868570f1ac97a3f1cb41e1130fcc6376f9bf4c999441f8fd25937aa71b6f726d82d7c780f4153b11d2595bb76bc2356a42266909fbcc0bd34a
-Size (gimp-2.10.34.tar.bz2) = 31405329 bytes
+BLAKE2s (gimp-2.10.36.tar.bz2) = 933790785b15a3d1bfca95623cdeaa658243be7d301fe63c1acaba977c227acb
+SHA512 (gimp-2.10.36.tar.bz2) = dbe6152ea6ff99cca59bbf2c88a64fb4ff6b529d98ace7723eadf5dfb0e10d9cbaf2de1e0d5251e9ecf9abca73da9ae1a501f229997802fd4077fb9594f4ba66
+Size (gimp-2.10.36.tar.bz2) = 31532334 bytes
 SHA1 (patch-aa) = 403c46d7070de208769e99e512922ba3a5b7129b
 SHA1 (patch-ab) = 44d37daf37ec604f97bb5b3edf0908ada56ed6d6
 SHA1 (patch-app_core_gimpbrush-transform.cc) = 3bd3f69401ee7dabb53f7ebf533870ee9add856c

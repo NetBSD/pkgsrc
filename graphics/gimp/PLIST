@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2023/07/14 14:10:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2023/11/09 13:54:39 wiz Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -4076,6 +4076,8 @@ share/gimp/2.0/themes/Dark/ui/gimp-handle-h.png
 share/gimp/2.0/themes/Dark/ui/gimp-handle-v.png
 share/gimp/2.0/themes/Dark/ui/gimp-line-h.png
 share/gimp/2.0/themes/Dark/ui/gimp-line-v.png
+share/gimp/2.0/themes/Dark/ui/gimp-lock-button-active.png
+share/gimp/2.0/themes/Dark/ui/gimp-lock-button-prelight.png
 share/gimp/2.0/themes/Dark/ui/gimp-menu-line-h.png
 share/gimp/2.0/themes/Dark/ui/gimp-tooltip-bg.png
 share/gimp/2.0/themes/Dark/ui/list_header-pressed.png
