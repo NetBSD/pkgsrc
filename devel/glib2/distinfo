@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.317 2023/11/06 09:21:54 adam Exp $
+$NetBSD: distinfo,v 1.318 2023/11/09 03:34:55 gutteridge Exp $
 
 BLAKE2s (glib-2.78.1.tar.xz) = dd5d9e6e27dca44c6a43b02c5c6650bc3d26c6923cf13ca37dd8337172e3f68b
 SHA512 (glib-2.78.1.tar.xz) = aa9ed9195951b00ac8221e958ea337fbda82621a862ef8f29dc2ea396a6253ce51c2a0a498dfa4e12642f1836f85f9564f09991979ae85c5ed4368355d857376
@@ -12,6 +12,7 @@ SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495
 SHA1 (patch-gio_gunixmounts.c) = 48b6945fde5b1721ca246eb7e79f73b5b480e816
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 78544b4c32ef3b44e8721b1c07407f46a9e8c8a4
 SHA1 (patch-gio_meson.build) = 317da05e008d7bbdbc4c02c3057e8bef514fafae
+SHA1 (patch-gio_tests_gsubprocess-testprog.c) = 6ff2c5271ec8febf486f417f8b9d7f7abe841bb2
 SHA1 (patch-gio_tests_meson.build) = 9fa1bdc65768c288d273298a75280485b7bff350
 SHA1 (patch-glib_gatomic.c) = deb2e74010523ad41ce141aa2f49b807ba2672e6
 SHA1 (patch-glib_gatomic.h) = d1c39c3594a5c89d196349e5eafb5512795f55f8
