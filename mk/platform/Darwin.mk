@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.134 2023/11/09 16:33:53 nia Exp $
+# $NetBSD: Darwin.mk,v 1.135 2023/11/09 18:56:45 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -253,7 +253,7 @@ CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 
 # strnlen(3) and getline(3) are available from Lion onwards
 .if ${OPSYS_VERSION} < 100700
-_OPSYS_MISSING_FEATURES+= 	strnlen getline
+_OPSYS_MISSING_FEATURES+= 	strndup strnlen getline
 _OPSYS_SUPPORTS_MKTOOLS=	no
 .else
 _OPSYS_SUPPORTS_MKTOOLS=	yes
