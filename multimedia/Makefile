@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2023/09/05 06:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.338 2023/11/10 14:35:11 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -46,7 +46,6 @@ SUBDIR+=	frei0r
 SUBDIR+=	fxtv
 SUBDIR+=	gerbera
 SUBDIR+=	ggrab
-SUBDIR+=	gmencoder
 SUBDIR+=	gmp-api
 SUBDIR+=	gmplayer
 SUBDIR+=	gnome-mplayer

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:45 rillig Exp $
-bin/gmencoder
-share/examples/gmencoder/gmencoder_opts
-share/locale/en/LC_MESSAGES/gmencoder.mo
-share/locale/es/LC_MESSAGES/gmencoder.mo
-share/pixmaps/gmencoder/media-pause.png
-share/pixmaps/gmencoder/media-play.png
