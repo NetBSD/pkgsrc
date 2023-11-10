@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23624 2023/11/09 12:17:28 adam Exp $
+$NetBSD: TODO,v 1.23625 2023/11/10 11:27:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -1176,8 +1176,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-6.0
 	o py-google-api-python-client-2.106.0
-	o py-google-auth-2.23.4
-	o py-googleapis-common-protos-1.61.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
