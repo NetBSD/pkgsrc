@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/08 10:26:04 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/11/10 19:01:33 adam Exp $
 
-BLAKE2s (eth-utils-2.1.1.tar.gz) = d535f85fc5c0fc7502952ce02f2715e63927e18ed20d7fd34dd2f2a8c0fd27d5
-SHA512 (eth-utils-2.1.1.tar.gz) = c5495d5c0e30537d01af02a8dc099fe96a742caabfef2ab350d4458da2fea10e191f903fef7b7bb6f83dc7452e928285d7fb6b6754f5ffbad54897520bb38a88
-Size (eth-utils-2.1.1.tar.gz) = 20205 bytes
+BLAKE2s (eth-utils-2.3.1.tar.gz) = 593f94a24b17080797608111c8ad656c6dce272f4ccc12b1d336985a5cf07d8b
+SHA512 (eth-utils-2.3.1.tar.gz) = 4b38b551dc80a1994b1a931aec08c49fad2073afe78c3fd2cfd908bb86180972a69830f1cf3f6342efe95f1444e5662c8e61454a1efe88d24f1f7a99482e5b38
+Size (eth-utils-2.3.1.tar.gz) = 74831 bytes
