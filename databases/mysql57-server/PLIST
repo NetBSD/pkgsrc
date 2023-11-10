@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2023/10/02 10:31:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2023/11/10 06:04:12 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -5155,6 +5155,7 @@ share/mysql/test/suite/innodb/include/log_file_cleanup.inc
 share/mysql/test/suite/innodb/include/query_workload_itt.inc
 share/mysql/test/suite/innodb/include/show_i_s_tables.inc
 share/mysql/test/suite/innodb/include/show_i_s_tablespaces.inc
+share/mysql/test/suite/innodb/include/show_last_deadlock.inc
 share/mysql/test/suite/innodb/include/tablespace_filenames.inc
 share/mysql/test/suite/innodb/include/tablespace_portability.inc
 share/mysql/test/suite/innodb/include/wl5522_oom.inc
