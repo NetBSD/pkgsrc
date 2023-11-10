@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2023/11/08 13:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2023/11/10 12:32:51 nia Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${FVWM_VER}
@@ -48,7 +48,6 @@ CONFIGURE_ENV+=			ac_cv_path_PYTHON=${PYTHONBIN:Q}
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/libstroke/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
@@ -56,4 +55,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
