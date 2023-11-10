@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2022/07/12 07:27:18 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/11/10 19:01:33 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/eth_utils/__init__.py
 ${PYSITELIB}/eth_utils/__init__.pyc
 ${PYSITELIB}/eth_utils/__init__.pyo
+${PYSITELIB}/eth_utils/__json/eth_networks.json
 ${PYSITELIB}/eth_utils/__main__.py
 ${PYSITELIB}/eth_utils/__main__.pyc
 ${PYSITELIB}/eth_utils/__main__.pyo
@@ -59,6 +59,9 @@ ${PYSITELIB}/eth_utils/logging.pyo
 ${PYSITELIB}/eth_utils/module_loading.py
 ${PYSITELIB}/eth_utils/module_loading.pyc
 ${PYSITELIB}/eth_utils/module_loading.pyo
+${PYSITELIB}/eth_utils/network.py
+${PYSITELIB}/eth_utils/network.pyc
+${PYSITELIB}/eth_utils/network.pyo
 ${PYSITELIB}/eth_utils/numeric.py
 ${PYSITELIB}/eth_utils/numeric.pyc
 ${PYSITELIB}/eth_utils/numeric.pyo
