@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1005 2023/11/08 14:14:25 pin Exp $
+# $NetBSD: Makefile,v 1.1006 2023/11/10 14:30:38 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -69,7 +69,6 @@ SUBDIR+=	gnome-session
 SUBDIR+=	gnome-shell
 SUBDIR+=	gnome-terminal
 SUBDIR+=	gnome-themes
-SUBDIR+=	gnome-themes-extras
 SUBDIR+=	gnustep-back
 SUBDIR+=	gnustep-gui
 SUBDIR+=	gromit
