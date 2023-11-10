@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/10/28 19:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/10 18:54:09 adam Exp $
 
-DISTNAME=	asdf-2.15.2
+DISTNAME=	asdf-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
 
@@ -20,11 +19,15 @@ DEPENDS+=	${PYPKGPREFIX}-asdf-unit-schemas>=0.1:../../math/py-asdf-unit-schemas
 DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0":../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.8:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.8.2:../../sysutils/py-fsspec
+TEST_DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus-[0-9]*:../../devel/py-test-doctestplus
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata-[0-9]*:../../net/py-test-remotedata
 
 USE_LANGUAGES=	# none
 
