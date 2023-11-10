@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6816 2023/11/10 12:25:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6817 2023/11/10 14:24:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9855,3 +9855,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-google-api-core to 2.14.0 [adam 2023-11-10]
 	Updated www/py-google-api-python-client to 2.107.0 [adam 2023-11-10]
 	Updated archivers/unrar to 7.0.2 [wiz 2023-11-10]
+	Removed devel/guile-gnome [gdt 2023-11-10]
