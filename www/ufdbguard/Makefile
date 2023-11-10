@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/11/08 15:05:18 sborrill Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/10 13:19:49 sborrill Exp $
 
 DISTNAME=	ufdbGuard-${VERSION}
 VERSION=	1.35.5
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	ufdbguard-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ufdbguard/}
@@ -16,6 +16,7 @@ BUILD_DEFS+=	VARBASE
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
+REPLACE_PERL=	samples/URLblocked.cgi
 USE_TOOLS+=	perl:run bash
 
 RCD_SCRIPTS+=	ufdbguardd
