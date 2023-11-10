@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.87 2023/10/29 14:48:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.88 2023/11/10 15:45:06 bsiegert Exp $
 
 # Important: UI has to be manually built when updating. See instructions below.
 
 DISTNAME=	prometheus-2.40.5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
