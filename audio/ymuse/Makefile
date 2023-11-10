@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/29 14:48:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/10 15:45:04 bsiegert Exp $
 
 DISTNAME=	ymuse-0.22
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yktoo/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
