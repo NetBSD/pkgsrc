@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/11/10 12:13:22 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/11/10 16:55:32 nia Exp $
 
 .include "dist.mk"
 
@@ -219,6 +219,7 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
@@ -226,5 +227,4 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
