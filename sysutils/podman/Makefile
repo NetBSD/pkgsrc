@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/10/29 14:48:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/10 15:45:21 bsiegert Exp $
 
 DISTNAME=	podman-4.4.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 

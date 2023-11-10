@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/10/29 14:48:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2023/11/10 15:45:20 bsiegert Exp $
 
 DISTNAME=	trufflehog-3.24.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trufflesecurity/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
