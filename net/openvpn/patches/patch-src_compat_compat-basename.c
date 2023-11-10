@@ -1,12 +1,14 @@
-$NetBSD: patch-src_compat_compat-basename.c,v 1.1 2013/07/30 18:57:30 jperkin Exp $
+$NetBSD: patch-src_compat_compat-basename.c,v 1.2 2023/11/10 00:17:47 gdt Exp $
 
 Sun ld needs at least one symbol.  This is as good a place to put
 one as any..
 
---- src/compat/compat-basename.c.orig	2012-09-10 15:01:08.000000000 +0000
+\todo File this upstream.
+
+--- src/compat/compat-basename.c.orig	2023-11-08 15:49:40.000000000 +0000
 +++ src/compat/compat-basename.c
-@@ -28,6 +28,10 @@
- #include "config-msvc.h"
+@@ -25,6 +25,10 @@
+ #include "config.h"
  #endif
  
 +#ifdef __sun

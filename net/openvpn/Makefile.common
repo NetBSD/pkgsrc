@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.33 2023/08/26 14:21:42 gdt Exp $
+# $NetBSD: Makefile.common,v 1.34 2023/11/10 00:17:47 gdt Exp $
 # used by net/openvpn/Makefile
 # used by net/openvpn-acct-wtmpx/Makefile
 # used by net/openvpn-nagios/Makefile
 
-OPENVPN_DISTNAME=		openvpn-2.6.6
+OPENVPN_DISTNAME=		openvpn-2.6.7
 OPENVPN_DISTFILE=		${OPENVPN_DISTNAME}.tar.gz
 OPENVPN_MASTER_SITES=		https://swupdate.openvpn.org/community/releases/
 SITES.${OPENVPN_DISTFILE}=	${OPENVPN_MASTER_SITES}
