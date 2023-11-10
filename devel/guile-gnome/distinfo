@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:14:49 nia Exp $
-
-BLAKE2s (guile-gnome-platform-2.16.5.tar.gz) = e9dc58960210c21b3559b0fc2e67e43333010f27c5f1f893ad57d02fb6c3ef51
-SHA512 (guile-gnome-platform-2.16.5.tar.gz) = fc6afd4b1034f0ff8165611047928e71db445b81e17ef47e0327a511a3733f14a02d308998f7322375acc2713f8bab4de390df39616f55e586adb25fc3160033
-Size (guile-gnome-platform-2.16.5.tar.gz) = 2484146 bytes
