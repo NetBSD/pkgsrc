@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6827 2023/11/10 17:04:57 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6828 2023/11/10 18:32:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9867,3 +9867,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/go121 to 1.21.4 [bsiegert 2023-11-10]
 	Updated x11/qtermwidget to 1.4.0 [gutteridge 2023-11-10]
 	Updated x11/qterminal to 1.4.0 [gutteridge 2023-11-10]
+	Updated lang/oracle-jdk17 to 17.0.9 [adam 2023-11-10]
+	Updated misc/py-trove-classifiers to 2023.11.9 [adam 2023-11-10]
