@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2023/10/23 06:36:00 wiz Exp $
+$NetBSD: distinfo,v 1.27 2023/11/10 09:48:40 nia Exp $
 
 BLAKE2s (Python-3.10.13.tar.xz) = c714daeb2437980ce940e76db70f037d844bcddc06dddb6ac966cef281a2b514
 SHA512 (Python-3.10.13.tar.xz) = 7579772e501486b2b07f78142082dee1e99c7643640098860ac0cf2ca87daf7588b0c00b1db1960146b37f56a6ed98fd08297c25c9a19b612cf6e6a258984da8
@@ -7,10 +7,13 @@ SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 8a91e8f4f86517a62408c3a10ed5eb50c4091fbf
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 593c4e93c5653ab400f0a98b91db92630c0a7390
 SHA1 (patch-Lib_sysconfig.py) = bc6d91bf8f7121456b26ea7f080f588c96f2596f
+SHA1 (patch-Lib_test_test__shutil.py) = 2eb724d490544e77610a19a07dc0f9336dba3e2f
 SHA1 (patch-Makefile.pre.in) = 932a89313e8f26c435675f2487eb2141876a5f5a
+SHA1 (patch-Modules_clinic_posixmodule.c.h) = 3729243da6b4df47a956db9b784b056189c6403e
+SHA1 (patch-Modules_posixmodule.c) = 1a1b866c9190fda8ca9c547085614b0f1d5469e1
 SHA1 (patch-Modules_socketmodule.c) = 3e2db474b4ef08edd25528465605fff1d3d0f61b
 SHA1 (patch-Modules_socketmodule.h) = 8761c7238bc74e45adefb6e647dc3b39b7bdd81c
-SHA1 (patch-Python_thread__pthread.h) = bf1aeab011b3afedc02e68fcf5cef091b3e0aefa
+SHA1 (patch-Python_thread__pthread.h) = b8efa178380fe48da4a0bf2bfa906851a314824e
 SHA1 (patch-configure) = 8ffe98e51407d10e46e7d1531f2e0e0b58e1cfa6
 SHA1 (patch-pyconfig.h.in) = 1ab77914315acbf0352d242ed66200bea54548f6
 SHA1 (patch-setup.py) = 5ab776a53ad361fdea9004817a7157743ab42db7
