@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.45 2023/10/02 10:31:58 adam Exp $
+# $NetBSD: Makefile.common,v 1.46 2023/11/10 06:04:12 adam Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.43
+DISTNAME=	mysql-5.7.44
 CATEGORIES=	databases
 MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-5.7/
 DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
