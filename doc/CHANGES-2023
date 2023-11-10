@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6823 2023/11/10 14:41:43 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6824 2023/11/10 14:58:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9862,3 +9862,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/dctc [wiz 2023-11-10]
 	Removed multimedia/gmencoder [wiz 2023-11-10]
 	Removed ham/gmfsk [wiz 2023-11-10]
+	Removed mail/mail-notification [wiz 2023-11-10]
