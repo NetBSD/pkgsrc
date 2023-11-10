@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1547 2023/11/04 12:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1548 2023/11/10 14:32:58 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -94,8 +94,6 @@ SUBDIR+=	darkstat
 SUBDIR+=	dbip-asn-lite
 SUBDIR+=	dbip-city-lite
 SUBDIR+=	dbip-country-lite
-SUBDIR+=	dc_gui2
-SUBDIR+=	dctc
 SUBDIR+=	ddclient
 SUBDIR+=	deforaos-vncviewer
 SUBDIR+=	delegate
