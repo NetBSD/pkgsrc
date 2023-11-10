@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/11/08 13:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/11/10 12:13:22 nia Exp $
 
 .include "dist.mk"
 
@@ -248,11 +248,11 @@ CONFIGURE_ENV+=		ac_cv_type_socklen_t=yes
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
