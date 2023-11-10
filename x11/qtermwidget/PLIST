@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/18 10:05:04 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/11/10 17:02:28 gutteridge Exp $
 include/qtermwidget5/Emulation.h
 include/qtermwidget5/Filter.h
 include/qtermwidget5/KeyboardTranslator.h
@@ -19,6 +19,7 @@ share/qtermwidget5/color-schemes/BlackOnRandomLight.colorscheme
 share/qtermwidget5/color-schemes/BlackOnWhite.colorscheme
 share/qtermwidget5/color-schemes/BreezeModified.colorscheme
 share/qtermwidget5/color-schemes/DarkPastels.colorscheme
+share/qtermwidget5/color-schemes/Falcon.colorscheme
 share/qtermwidget5/color-schemes/GreenOnBlack.colorscheme
 share/qtermwidget5/color-schemes/Linux.colorscheme
 share/qtermwidget5/color-schemes/Solarized.colorscheme
@@ -60,6 +61,7 @@ share/qtermwidget5/translations/qtermwidget_de_CH.qm
 share/qtermwidget5/translations/qtermwidget_el.qm
 share/qtermwidget5/translations/qtermwidget_es.qm
 share/qtermwidget5/translations/qtermwidget_et.qm
+share/qtermwidget5/translations/qtermwidget_fi.qm
 share/qtermwidget5/translations/qtermwidget_fr.qm
 share/qtermwidget5/translations/qtermwidget_gl.qm
 share/qtermwidget5/translations/qtermwidget_he.qm
