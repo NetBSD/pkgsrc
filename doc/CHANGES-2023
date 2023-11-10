@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6811 2023/11/10 08:06:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6812 2023/11/10 11:27:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9848,3 +9848,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mysql57-client to 5.7.44 [adam 2023-11-10]
 	Updated databases/mysql57-server to 5.7.44 [adam 2023-11-10]
 	Updated net/tor to 0.4.8.9 [wiz 2023-11-10]
+	Updated devel/py-googleapis-common-protos to 1.61.0 [adam 2023-11-10]
+	Updated security/py-google-auth to 2.23.4 [adam 2023-11-10]
