@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/10 18:53:24 adam Exp $
 
-DISTNAME=	asdf_transform_schemas-0.3.0
+DISTNAME=	asdf_transform_schemas-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf-transform-schemas/}
 
