@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6808 2023/11/09 22:47:05 kre Exp $
+$NetBSD: CHANGES-2023,v 1.6809 2023/11/10 00:18:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9844,3 +9844,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libowfat to 0.33 [schmonz 2023-11-09]
 	Updated emulators/open-simh to 4.1.0.20231024 [rhialto 2023-11-09]
 	Updated shells/bash to 5.2.21 [kre 2023-11-09]
+	Updated net/openvpn to 2.6.7 [gdt 2023-11-10]
