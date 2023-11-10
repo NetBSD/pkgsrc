@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2019/12/27 16:43:44 scole Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/10 14:43:39 wiz Exp $
 bin/bski
 bin/bskinc
-${PLIST.gski}bin/gski
 bin/ski
 bin/ski-config
 bin/ski-fake-xterm
@@ -23,10 +22,8 @@ include/ski-1.3/std.h
 include/ski-1.3/types.h
 ${PLIST.xski}lib/X11/app-defaults/XSki
 lib/libski.la
-lib/libski.so
 man/man1/bski.1
 man/man1/bskinc.1
-${PLIST.gski}man/man1/gski.1
 man/man1/ski.1
 ${PLIST.xski}man/man1/xski.1
 share/ski/SkiManualMasterDoc.pdf
