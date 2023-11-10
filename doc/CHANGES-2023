@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6819 2023/11/10 14:30:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6820 2023/11/10 14:32:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9858,3 +9858,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/guile-gnome [gdt 2023-11-10]
 	Removed devel/distccmon-gnome [wiz 2023-11-10]
 	Removed x11/gnome-themes-extras [wiz 2023-11-10]
+	Removed net/dc_gui2 [wiz 2023-11-10]

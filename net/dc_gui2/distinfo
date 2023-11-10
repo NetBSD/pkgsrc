@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:05:30 nia Exp $
-
-BLAKE2s (dc_gui2-0.80.tar.gz) = db2d3baa7e5c8938cbcee6284c730d2cea161872e51a9d4dab3567c7fd364f69
-SHA512 (dc_gui2-0.80.tar.gz) = c85b23b02b95386319ea9a91768ad159555e5a365dad4317f960a8417ba6e29f9425f1e722f7be381a76e9cb642326b08da00a01871a456973d1e5b02c4db71f
-Size (dc_gui2-0.80.tar.gz) = 1340777 bytes
-SHA1 (patch-aa) = 3aafdb3d244ca6234c21c2f4f7ffc9106ce7d45e
-SHA1 (patch-ac) = 535f1853b4371320fd6c1acc6e6b26b9f832c3f4
-SHA1 (patch-af) = f867979e46a62611d2201a93e26deaf3c08b298e
-SHA1 (patch-ag) = 7748cc2665eda36b00c842f2ca338f59e1d59b0d
