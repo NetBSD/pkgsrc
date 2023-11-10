@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:33:50 nia Exp $
-
-BLAKE2s (gnome-themes-extras-2.22.0.tar.bz2) = 5446322f7cc0ad554dd470ace9556dc75b5307126d7b3c804a32cb48f79781ae
-SHA512 (gnome-themes-extras-2.22.0.tar.bz2) = c4b5d77d9555f71fa147cc1245606c92fa81f39d5416a54f40361a2f5a3000a5f54aebaac0a21efda5bbe22c699dfb28c317471d8ac8bfed84e6b60936a035e8
-Size (gnome-themes-extras-2.22.0.tar.bz2) = 4679632 bytes
