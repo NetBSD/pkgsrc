@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6810 2023/11/10 06:04:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6811 2023/11/10 08:06:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9847,3 +9847,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/openvpn to 2.6.7 [gdt 2023-11-10]
 	Updated databases/mysql57-client to 5.7.44 [adam 2023-11-10]
 	Updated databases/mysql57-server to 5.7.44 [adam 2023-11-10]
+	Updated net/tor to 0.4.8.9 [wiz 2023-11-10]
