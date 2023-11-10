@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.11 2023/01/18 07:43:16 vins Exp $
+# $NetBSD: options.mk,v 1.12 2023/11/10 12:32:51 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
 PKG_SUPPORTED_OPTIONS=		xrender xcursor xft2 fribidi debug svg
 PKG_SUPPORTED_OPTIONS+=		doc
-PKG_SUGGESTED_OPTIONS+=		svg xft2 xrender xcursor doc
+PKG_SUGGESTED_OPTIONS+=		xft2 xrender xcursor doc
 
 .include "../../mk/bsd.options.mk"
 
