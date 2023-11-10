@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/10/06 10:16:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/11/10 12:14:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -95,6 +95,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/batch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/biglake.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquery.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatatransfer.v1.json
@@ -220,6 +221,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1alpha.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dlp.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1beta2.json
@@ -418,6 +420,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/run.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/runtimeconfig.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/runtimeconfig.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/safebrowsing.v4.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/safebrowsing.v5.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sasportal.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/script.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/searchads360.v0.json
@@ -466,6 +469,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/tpu.v2alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/trafficdirector.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/trafficdirector.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/transcoder.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/transcoder.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/translate.v2.json
