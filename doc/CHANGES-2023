@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6815 2023/11/10 12:15:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6816 2023/11/10 12:25:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9854,3 +9854,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.25.0 [pin 2023-11-10]
 	Updated devel/py-google-api-core to 2.14.0 [adam 2023-11-10]
 	Updated www/py-google-api-python-client to 2.107.0 [adam 2023-11-10]
+	Updated archivers/unrar to 7.0.2 [wiz 2023-11-10]
