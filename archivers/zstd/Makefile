@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/04/30 01:37:27 dholland Exp $
+# $NetBSD: Makefile,v 1.49 2023/11/10 11:49:31 nia Exp $
 
 DISTNAME=	zstd-1.5.5
 CATEGORIES=	archivers
@@ -40,11 +40,26 @@ MAKE_FLAGS=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 
-BUILD_TARGET=		allmost
+PTHREAD_OPTS=		optional
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if ${PTHREAD_TYPE} == "native" || ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+BUILD_TARGET=		lib zstd zlibwrapper
 TEST_TARGET=		test
+.else
+BUILD_TARGET=		lib-nomt zstd zlibwrapper
+.endif
+
+.if ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+MAKE_FLAGS+=		LDFLAGS_DYNLIB="-single_module"
+MAKE_FLAGS+=		BACKTRACE=0
+.endif
 
 # Needed for nanosleep() on Solaris 10, PR pkg/56225
 LDFLAGS.SunOS+=		-lrt
+
+BUILDLINK_TRANSFORM.Darwin+=	opt:-shared:-dynamiclib
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
