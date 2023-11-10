@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6830 2023/11/10 18:54:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6831 2023/11/10 19:08:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9876,3 +9876,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-fsspec to 2023.10.0 [adam 2023-11-10]
 	Updated math/py-asdf-transform-schemas to 0.4.0 [adam 2023-11-10]
 	Updated math/py-asdf to 3.0.1 [adam 2023-11-10]
+	Updated finance/py-eth-utils to 2.3.1 [adam 2023-11-10]
+	Updated finance/py-eth-abi to 4.2.1 [adam 2023-11-10]
