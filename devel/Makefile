@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4116 2023/11/10 14:20:52 gdt Exp $
+# $NetBSD: Makefile,v 1.4117 2023/11/10 14:26:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -320,7 +320,6 @@ SUBDIR+=	diffuse
 SUBDIR+=	diffutils
 SUBDIR+=	distcc
 SUBDIR+=	distcc-pump
-SUBDIR+=	distccmon-gnome
 SUBDIR+=	distccmon-gtk
 SUBDIR+=	dlcompat
 SUBDIR+=	dmake

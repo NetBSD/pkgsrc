@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2022/06/04 18:54:38 adam Exp $
-bin/distccmon-gnome
-share/distcc/distccmon-gnome.png
-share/distcc/distccmon-gnome.desktop
