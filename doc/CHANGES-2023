@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6812 2023/11/10 11:27:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6813 2023/11/10 11:37:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9850,3 +9850,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/tor to 0.4.8.9 [wiz 2023-11-10]
 	Updated devel/py-googleapis-common-protos to 1.61.0 [adam 2023-11-10]
 	Updated security/py-google-auth to 2.23.4 [adam 2023-11-10]
+	Updated devel/cargo-modules to 0.10.4 [pin 2023-11-10]
