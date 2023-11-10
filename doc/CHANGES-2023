@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6813 2023/11/10 11:37:52 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6814 2023/11/10 11:38:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9851,3 +9851,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-googleapis-common-protos to 1.61.0 [adam 2023-11-10]
 	Updated security/py-google-auth to 2.23.4 [adam 2023-11-10]
 	Updated devel/cargo-modules to 0.10.4 [pin 2023-11-10]
+	Updated shells/oh-my-posh to 18.25.0 [pin 2023-11-10]
