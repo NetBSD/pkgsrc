@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6850 2023/11/11 12:32:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6851 2023/11/11 12:34:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9897,3 +9897,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-ffi to 1.16.3 [taca 2023-11-11]
 	Updated devel/ruby-globalid to 1.2.1 [taca 2023-11-11]
 	Updated devel/ruby-regexp_parser to 2.8.2 [taca 2023-11-11]
+	Updated devel/ruby-zeitwerk to 2.6.12 [taca 2023-11-11]
