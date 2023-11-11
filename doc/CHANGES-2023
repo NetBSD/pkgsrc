@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6838 2023/11/11 11:52:22 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.6839 2023/11/11 11:52:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9887,3 +9887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pandas to 2.1.3 [adam 2023-11-11]
 	Updated security/sudo to 1.9.15p2 [adam 2023-11-11]
 	Updated devel/skalibs to 2.14.0.0 [schmonz 2023-11-11]
+	Updated lang/execline to 2.9.4.0 [schmonz 2023-11-11]
