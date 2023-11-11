@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/30 11:40:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/11 13:05:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -53,6 +53,7 @@ ${GEM_LIBDIR}/app/validators/nil_validator.rb
 ${GEM_LIBDIR}/app/validators/parameters_validator.rb
 ${GEM_LIBDIR}/app/validators/password_is_strong_validator.rb
 ${GEM_LIBDIR}/config/locales/en.yml
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/lib/metasploit/model.rb
 ${GEM_LIBDIR}/lib/metasploit/model/association.rb
 ${GEM_LIBDIR}/lib/metasploit/model/association/error.rb
