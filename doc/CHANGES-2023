@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6847 2023/11/11 12:14:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6848 2023/11/11 12:20:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9896,3 +9896,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/tipidee version 0.0.1.0 [schmonz 2023-11-11]
 	Updated devel/ruby-ffi to 1.16.3 [taca 2023-11-11]
 	Updated devel/ruby-globalid to 1.2.1 [taca 2023-11-11]
+	Updated devel/ruby-regexp_parser to 2.8.2 [taca 2023-11-11]
