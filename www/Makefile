@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1767 2023/11/06 10:43:07 wiz Exp $
+# $NetBSD: Makefile,v 1.1768 2023/11/11 11:58:48 schmonz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1121,6 +1121,7 @@ SUBDIR+=	thin
 SUBDIR+=	thttpd
 SUBDIR+=	tidy
 SUBDIR+=	tinyproxy
+SUBDIR+=	tipidee
 SUBDIR+=	trac
 SUBDIR+=	tscrape
 SUBDIR+=	tuir
