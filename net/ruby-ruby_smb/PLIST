@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/03/17 14:33:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/11/11 12:49:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/examples/anonymous_auth.rb
 ${GEM_LIBDIR}/examples/append_file.rb
 ${GEM_LIBDIR}/examples/auth_capture.rb
@@ -49,6 +50,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/compression/lznt1.rb
 ${GEM_LIBDIR}/lib/ruby_smb/create_actions.rb
 ${GEM_LIBDIR}/lib/ruby_smb/crypto.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/alter_context.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/alter_context_resp.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/bind_ack.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/client.rb
@@ -97,8 +100,12 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_req_challenge_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/p_cont_list_t.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/p_result_list_t.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/p_result_t.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/p_syntax_id_t.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/pdu_header.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/port_any_t.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/print_system.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/print_system/rpc_add_printer_driver_ex_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/print_system/rpc_add_printer_driver_ex_response.rb
