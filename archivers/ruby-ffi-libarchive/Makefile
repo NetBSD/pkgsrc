@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/09/18 13:48:01 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/11 09:30:54 taca Exp $
 
-DISTNAME=	ffi-libarchive-1.1.3
+DISTNAME=	ffi-libarchive-1.1.13
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Ruby FFI binding to libarchive
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+DEPENDS+=	${RUBY_PKGPREFIX}-ffi>=1.0<2:../../devel/ruby-ffi
 
 .include "../../lang/ruby/gem.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
