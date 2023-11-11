@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 15:08:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/11 12:56:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/lib/train.rb
+${GEM_LIBDIR}/lib/train/audit_log.rb
 ${GEM_LIBDIR}/lib/train/errors.rb
 ${GEM_LIBDIR}/lib/train/extras.rb
 ${GEM_LIBDIR}/lib/train/extras/command_wrapper.rb
@@ -17,6 +18,7 @@ ${GEM_LIBDIR}/lib/train/file/remote/qnx.rb
 ${GEM_LIBDIR}/lib/train/file/remote/unix.rb
 ${GEM_LIBDIR}/lib/train/file/remote/windows.rb
 ${GEM_LIBDIR}/lib/train/globals.rb
+${GEM_LIBDIR}/lib/train/logger_ext.rb
 ${GEM_LIBDIR}/lib/train/options.rb
 ${GEM_LIBDIR}/lib/train/platforms.rb
 ${GEM_LIBDIR}/lib/train/platforms/common.rb
