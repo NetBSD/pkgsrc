@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/05/14 13:51:23 taca Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/11 12:25:39 taca Exp $
 
-DISTNAME=	thor-1.2.2
+DISTNAME=	thor-1.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
