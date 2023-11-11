@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6851 2023/11/11 12:34:44 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6852 2023/11/11 12:38:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9898,3 +9898,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-globalid to 1.2.1 [taca 2023-11-11]
 	Updated devel/ruby-regexp_parser to 2.8.2 [taca 2023-11-11]
 	Updated devel/ruby-zeitwerk to 2.6.12 [taca 2023-11-11]
+	Updated finance/ruby-braintree to 4.16.0 [taca 2023-11-11]
