@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6834 2023/11/11 09:51:20 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6835 2023/11/11 09:53:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9881,3 +9881,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/ruby-ffi-libarchive to 1.1.13 [taca 2023-11-11]
 	Updated databases/ruby-awesome_nested_set to 3.6.0 [taca 2023-11-11]
 	Updated databases/ruby-sequel to 5.74.0 [taca 2023-11-11]
+	Updated databases/ruby-sqlite3 to 1.6.8 [taca 2023-11-11]
