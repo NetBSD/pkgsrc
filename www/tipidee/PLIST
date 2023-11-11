@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/11 11:58:45 schmonz Exp $
+bin/tipidee-config
+bin/tipideed
+include/tipidee/conf.h
+include/tipidee/config.h
+include/tipidee/headers.h
+include/tipidee/log.h
+include/tipidee/method.h
+include/tipidee/resattr.h
+include/tipidee/response.h
+include/tipidee/rql.h
+include/tipidee/tipidee.h
+include/tipidee/uri.h
+include/tipidee/util.h
+lib/tipidee/libtipidee.a
+libexec/tipidee-config-preprocess
+man/man5/tipidee.conf.5
+man/man8/tipidee-config-preprocess.8
+man/man8/tipidee-config.8
+man/man8/tipideed.8
