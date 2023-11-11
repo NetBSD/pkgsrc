@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/11/11 12:25:39 taca Exp $
+$NetBSD: distinfo,v 1.18 2023/11/11 12:32:01 taca Exp $
 
-BLAKE2s (thor-1.3.0.gem) = 56f455aea8ef13f46cd7bee0b998effc0d78bea7523ef369f90b212e237cd41c
-SHA512 (thor-1.3.0.gem) = 13ec23ef4681d2e9aa948667b4989435812a93e2dd7918193626bbd61a4552b5b98b3ad84b2abc6c14f6b6ee032a44cce9e18df5ddd500516c5b7bba41a1f8c7
-Size (thor-1.3.0.gem) = 56320 bytes
+BLAKE2s (thor-1.2.2.gem) = 55c42e8f1c26dbf2b80289f19dafebd695743ddd51883c2492b5c36239d1f336
+SHA512 (thor-1.2.2.gem) = a896f9a876a3d9fedf132fe29dbf083d61bc79cd29720ff026a745b4c2ee4e02c840856e13dbd3f074b0be4efe01c32173785b8ad3b041c7cbd7d70459ddb192
+Size (thor-1.2.2.gem) = 53248 bytes

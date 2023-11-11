@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/11 12:25:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/11/11 12:32:01 taca Exp $
 bin/thor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -34,12 +34,7 @@ ${GEM_LIBDIR}/lib/thor/runner.rb
 ${GEM_LIBDIR}/lib/thor/shell.rb
 ${GEM_LIBDIR}/lib/thor/shell/basic.rb
 ${GEM_LIBDIR}/lib/thor/shell/color.rb
-${GEM_LIBDIR}/lib/thor/shell/column_printer.rb
 ${GEM_LIBDIR}/lib/thor/shell/html.rb
-${GEM_LIBDIR}/lib/thor/shell/lcs_diff.rb
-${GEM_LIBDIR}/lib/thor/shell/table_printer.rb
-${GEM_LIBDIR}/lib/thor/shell/terminal.rb
-${GEM_LIBDIR}/lib/thor/shell/wrapped_printer.rb
 ${GEM_LIBDIR}/lib/thor/util.rb
 ${GEM_LIBDIR}/lib/thor/version.rb
 ${GEM_LIBDIR}/thor.gemspec
