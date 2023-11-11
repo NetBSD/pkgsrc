@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/12 07:15:46 taca Exp $
+$NetBSD: distinfo,v 1.11 2023/11/11 09:47:04 taca Exp $
 
-BLAKE2s (awesome_nested_set-3.5.0.gem) = 6795a31e8a07a9b27e67010ec9dedde0eba13c04397bc8e46506b7db73166786
-SHA512 (awesome_nested_set-3.5.0.gem) = b092c61c8ccd20104abac9e3a5e09cb0222469dcd406a0ccc6874f48b914f424fab172f16b8afb8f55dd0c42a605e4b6a13068917a0c826e2c6294d7db820ea7
-Size (awesome_nested_set-3.5.0.gem) = 25600 bytes
+BLAKE2s (awesome_nested_set-3.6.0.gem) = d27f6487ad727c91f8369cac8e7f799087778f9bb4d5ff4e961a2fd9f7a5c6f2
+SHA512 (awesome_nested_set-3.6.0.gem) = 82973ac5b6236398b699722e85019f1fd4b65c4ee7a1d932ccf682ff662fad0d0a1889178c649a090c6a4c2d8e6bc53ebd2d9a669a5e3b887e9bd93dd7708a3b
+Size (awesome_nested_set-3.6.0.gem) = 21504 bytes
