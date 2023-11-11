@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/19 20:05:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/11 11:53:34 schmonz Exp $
+bin/s6-dns-hosts-compile
 bin/s6-dnsip
 bin/s6-dnsip4
 bin/s6-dnsip4-filter
@@ -18,6 +19,7 @@ bin/s6-randomip
 bin/skadnsd
 include/s6-dns/config.h
 include/s6-dns/dcache.h
+include/s6-dns/hosts.h
 include/s6-dns/s6dns-analyze.h
 include/s6-dns/s6dns-constants.h
 include/s6-dns/s6dns-debug.h
