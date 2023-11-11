@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6836 2023/11/11 09:57:53 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6837 2023/11/11 10:08:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9883,3 +9883,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/ruby-sequel to 5.74.0 [taca 2023-11-11]
 	Updated databases/ruby-sqlite3 to 1.6.8 [taca 2023-11-11]
 	Updated devel/ruby-async to 2.6.5 [taca 2023-11-11]
+	Updated textproc/py-sphinx-autodoc-typehints to 1.25.2 [adam 2023-11-11]
+	Updated math/py-pandas to 2.1.3 [adam 2023-11-11]
+	Updated security/sudo to 1.9.15p2 [adam 2023-11-11]
