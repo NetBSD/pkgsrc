@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6864 2023/11/11 13:53:05 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6865 2023/11/11 13:55:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9911,3 +9911,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-encoder to 0.1.7 [taca 2023-11-11]
 	Updated security/ruby-rex-exploitation to 0.1.39 [taca 2023-11-11]
 	Updated security/ruby-rex-java to 0.1.7 [taca 2023-11-11]
+	Updated security/ruby-rex-mime to 0.1.8 [taca 2023-11-11]
