@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/13 16:29:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/11 14:01:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/lib/rex/ole.rb
 ${GEM_LIBDIR}/lib/rex/ole/clsid.rb
 ${GEM_LIBDIR}/lib/rex/ole/difat.rb
