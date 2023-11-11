@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2023/10/29 17:39:51 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/11/11 10:04:38 adam Exp $
 
-DISTNAME=	pandas-2.1.2
+DISTNAME=	pandas-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -20,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.1:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.1:../../time/py-tzdata
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.34.2:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.3.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.17.0:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.2.0:../../devel/py-test-xdist
 
@@ -40,9 +39,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 # This would otherwise be installed, causing PLIST mismatch
 post-patch:
 	cd ${WRKSRC} && ${RM} -f pandas/_libs/window/aggregations.pyx.orig
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} pandas
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
