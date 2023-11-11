@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/01/16 21:49:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/11 11:53:34 schmonz Exp $
 
-DISTNAME=	s6-dns-2.3.5.5
+DISTNAME=	s6-dns-2.3.6.0
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
