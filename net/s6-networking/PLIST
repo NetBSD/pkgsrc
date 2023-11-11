@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/22 16:07:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/11/11 11:57:20 schmonz Exp $
 bin/s6-clockadd
 bin/s6-clockview
 bin/s6-getservbyname
@@ -10,12 +10,8 @@ bin/s6-taiclockd
 bin/s6-tcpclient
 bin/s6-tcpserver
 bin/s6-tcpserver-access
-bin/s6-tcpserver4
-bin/s6-tcpserver4-socketbinder
-bin/s6-tcpserver4d
-bin/s6-tcpserver6
-bin/s6-tcpserver6-socketbinder
-bin/s6-tcpserver6d
+bin/s6-tcpserver-socketbinder
+bin/s6-tcpserverd
 ${PLIST.tls}bin/s6-tlsc
 ${PLIST.tls}bin/s6-tlsc-io
 ${PLIST.tls}bin/s6-tlsclient
@@ -41,13 +37,9 @@ man/man8/s6-taiclock.8
 man/man8/s6-taiclockd.8
 man/man8/s6-tcpclient.8
 man/man8/s6-tcpserver-access.8
+man/man8/s6-tcpserver-socketbinder.8
 man/man8/s6-tcpserver.8
-man/man8/s6-tcpserver4-socketbinder.8
-man/man8/s6-tcpserver4.8
-man/man8/s6-tcpserver4d.8
-man/man8/s6-tcpserver6-socketbinder.8
-man/man8/s6-tcpserver6.8
-man/man8/s6-tcpserver6d.8
+man/man8/s6-tcpserverd.8
 man/man8/s6-tlsc-io.8
 man/man8/s6-tlsc.8
 man/man8/s6-tlsclient.8
