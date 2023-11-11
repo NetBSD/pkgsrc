@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2023/11/08 09:01:20 nros Exp $
+# $NetBSD: Makefile.common,v 1.38 2023/11/11 10:34:33 adam Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -73,9 +73,10 @@ MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 # this is needed by some ld:s to not
 # cause linking errors.
 .if ${OPSYS} == "Darwin"
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/lib
+CMAKE_INSTALL_NAME_DIR=	${QTPREFIX}/lib
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/lib
 .else
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 .endif
 
 # avoid creating a .qt directory in the users home directory
