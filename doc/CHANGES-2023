@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6854 2023/11/11 12:50:44 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6855 2023/11/11 12:56:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9901,3 +9901,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ruby-braintree to 4.16.0 [taca 2023-11-11]
 	Updated mail/ruby-mime-types-data to 3.2023.1003 [taca 2023-11-11]
 	Updated net/ruby-ruby_smb to 3.2.6 [taca 2023-11-11]
+	Updated net/ruby-train-core to 3.11.0 [taca 2023-11-11]
