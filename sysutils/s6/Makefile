@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/04/14 17:40:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/11 11:53:08 schmonz Exp $
 
-DISTNAME=	s6-2.11.3.2
-PKGREVISION=	2
+DISTNAME=	s6-2.12.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -12,7 +11,7 @@ COMMENT=	The s6 supervision suite
 LICENSE=	isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	2.11.3.2.4
+MANPAGES_VERSION=	2.12.0.0.1
 MANPAGES_DIST=		s6-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/s6-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
