@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/11 13:58:33 taca Exp $
 
-BLAKE2s (rex-nop-0.1.2.gem) = ef1436b48fd81f21c10874fb82674a3934e67a6b4f7f180027f680e2b5478530
-SHA512 (rex-nop-0.1.2.gem) = 897f9f7ef5722078d2532eff281013cee5ed7987afaa457602bdeaccdd0a20abaac828d89951627ef728288e1a1adef244dfc85ffe27efcd84b6882d0c6e7d13
-Size (rex-nop-0.1.2.gem) = 27648 bytes
+BLAKE2s (rex-nop-0.1.3.gem) = c01cb8d1f1183a471c1c9ec3624fbf3647a63505ae1307e7c6859156f28f89f5
+SHA512 (rex-nop-0.1.3.gem) = ddeb05488164dda0990da00dc4b612a2bde55f9aab534cba1426b86d323776054a2c84b646377b680250f61b96e264760d8e750e1ad35b25e7db7a9c4f12f81d
+Size (rex-nop-0.1.3.gem) = 27648 bytes
