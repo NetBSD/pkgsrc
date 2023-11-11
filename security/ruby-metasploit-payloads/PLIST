@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2023/05/14 14:04:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/11 13:17:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -13,8 +14,7 @@ ${GEM_LIBDIR}/data/android/meterpreter.dex
 ${GEM_LIBDIR}/data/android/meterpreter.jar
 ${GEM_LIBDIR}/data/android/metstage.jar
 ${GEM_LIBDIR}/data/android/shell.jar
-${GEM_LIBDIR}/data/java/com/metasploit/meterpreter/MemoryBufferURLConnection.class
-${GEM_LIBDIR}/data/java/com/metasploit/meterpreter/MemoryBufferURLStreamHandler.class
+${GEM_LIBDIR}/data/java/com/metasploit/meterpreter/JarFileClassLoader.class
 ${GEM_LIBDIR}/data/java/javapayload/stage/Meterpreter.class
 ${GEM_LIBDIR}/data/java/javapayload/stage/Shell.class
 ${GEM_LIBDIR}/data/java/javapayload/stage/Stage.class
@@ -103,7 +103,15 @@ ${GEM_LIBDIR}/data/meterpreter/screenshot.x64.debug.dll
 ${GEM_LIBDIR}/data/meterpreter/screenshot.x64.dll
 ${GEM_LIBDIR}/data/meterpreter/screenshot.x86.debug.dll
 ${GEM_LIBDIR}/data/meterpreter/screenshot.x86.dll
+${GEM_LIBDIR}/data/meterpreter/tests/test_ext_server_stdapi.py
 ${GEM_LIBDIR}/lib/metasploit-payloads.rb
+${GEM_LIBDIR}/lib/metasploit-payloads/crypto.rb
+${GEM_LIBDIR}/lib/metasploit-payloads/error.rb
 ${GEM_LIBDIR}/lib/metasploit-payloads/version.rb
+${GEM_LIBDIR}/manifest
+${GEM_LIBDIR}/manifest.uuid
 ${GEM_LIBDIR}/metasploit-payloads.gemspec
+${GEM_LIBDIR}/spec/metasploit_payloads/crypto_spec.rb
+${GEM_LIBDIR}/spec/metasploit_payloads/metasploit_payloads_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
