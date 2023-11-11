@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/11 13:55:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/11 14:06:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/data/templates/to_mem_dotnet.ps1.template
 ${GEM_LIBDIR}/data/templates/to_mem_msil.ps1.template
 ${GEM_LIBDIR}/data/templates/to_mem_old.ps1.template
