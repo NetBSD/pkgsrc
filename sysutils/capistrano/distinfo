@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2023/05/28 01:29:56 taca Exp $
+$NetBSD: distinfo,v 1.37 2023/11/11 14:49:00 taca Exp $
 
-BLAKE2s (capistrano-3.17.3.gem) = dad2839aabe308570e488096cd72729ce7bde780f16fa5db44306af8210b4b2b
-SHA512 (capistrano-3.17.3.gem) = b7b85ebf7309d93aed83f68dc897e5a6cb4c8a929f4427c8a29db2ef6f857ee110256ba80c2fe0ae15f8008597c47be5ec60c192f3268d0df66f761b90d0758f
-Size (capistrano-3.17.3.gem) = 70144 bytes
+BLAKE2s (capistrano-3.18.0.gem) = 2f1d8a9d0464f1775efeae43f3d37fcbd9a2d7c10c43ebce13718036f55633ee
+SHA512 (capistrano-3.18.0.gem) = 126abb8934bed1bd1c58f53c1e8cd0ead99499d7e99d09e51290df4619a2f570a3f2f1a5cbdb683f1286a2b9aa7b0a2690a4c165d07705c5157ebf3ed1118f3e
+Size (capistrano-3.18.0.gem) = 69632 bytes
