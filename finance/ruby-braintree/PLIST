@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/04/27 14:46:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/11/11 12:38:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -77,6 +77,8 @@ ${GEM_LIBDIR}/lib/braintree/merchant_account/funding_details.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account/individual_details.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_gateway.rb
+${GEM_LIBDIR}/lib/braintree/meta_checkout_card.rb
+${GEM_LIBDIR}/lib/braintree/meta_checkout_token.rb
 ${GEM_LIBDIR}/lib/braintree/modification.rb
 ${GEM_LIBDIR}/lib/braintree/oauth_credentials.rb
 ${GEM_LIBDIR}/lib/braintree/oauth_gateway.rb
@@ -132,6 +134,11 @@ ${GEM_LIBDIR}/lib/braintree/transaction/google_pay_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/installment.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/installment/adjustment.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/local_payment_details.rb
+${GEM_LIBDIR}/lib/braintree/transaction/meta_checkout_card_details.rb
+${GEM_LIBDIR}/lib/braintree/transaction/meta_checkout_token_details.rb
+${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt.rb
+${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt/card_present_data.rb
+${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt/merchant_address.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/paypal_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/paypal_here_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/samsung_pay_card_details.rb
@@ -254,6 +261,10 @@ ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_funded_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/merchant_account_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/modification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_customer_data_updated_metadata_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_payer_info_spec.rb
@@ -276,6 +287,8 @@ ${GEM_LIBDIR}/spec/unit/braintree/transaction/credit_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/customer_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/deposit_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/installment_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/local_payment_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/payment_receipt_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/paypal_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_gateway_spec.rb
