@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6832 2023/11/11 09:31:20 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6833 2023/11/11 09:47:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9879,3 +9879,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-eth-utils to 2.3.1 [adam 2023-11-10]
 	Updated finance/py-eth-abi to 4.2.1 [adam 2023-11-10]
 	Updated archivers/ruby-ffi-libarchive to 1.1.13 [taca 2023-11-11]
+	Updated databases/ruby-awesome_nested_set to 3.6.0 [taca 2023-11-11]
