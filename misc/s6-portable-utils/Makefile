@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/04/04 20:17:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/11 11:54:17 schmonz Exp $
 
-DISTNAME=	s6-portable-utils-2.3.0.2
-PKGREVISION=	1
+DISTNAME=	s6-portable-utils-2.3.0.3
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -12,7 +11,7 @@ COMMENT=	Tiny portable generic utilties
 LICENSE=	isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	2.3.0.2.2
+MANPAGES_VERSION=	2.3.0.3.1
 MANPAGES_DIST=		s6-portable-utils-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/s6-portable-utils-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
