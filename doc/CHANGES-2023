@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6857 2023/11/11 13:07:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6858 2023/11/11 13:18:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9904,3 +9904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-train-core to 3.11.0 [taca 2023-11-11]
 	Updated security/ruby-metasploit-concern to 5.0.2 [taca 2023-11-11]
 	Updated security/ruby-metasploit-model to 5.0.2 [taca 2023-11-11]
+	Updated security/ruby-metasploit-payloads to 2.0.159 [taca 2023-11-11]
