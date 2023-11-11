@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2023/11/08 13:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2023/11/11 18:59:09 gdt Exp $
 
 DISTNAME=	geeqie-2.1
 PKGREVISION=	3
@@ -19,6 +19,9 @@ TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
 MESON_ARGS+=	-Ddoxygen=disabled
+# Do not build html documentation.
+# \todo Consider depending on yelp instead
+MESON_ARGS+=	-Dyelp-build=disabled
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
