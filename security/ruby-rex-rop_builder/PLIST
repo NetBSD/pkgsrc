@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/13 18:39:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/11 14:16:39 taca Exp $
 bin/msfrop${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/console
 ${GEM_LIBDIR}/bin/msfrop
 ${GEM_LIBDIR}/bin/setup
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/lib/rex/rop_builder.rb
 ${GEM_LIBDIR}/lib/rex/rop_builder/rop.rb
 ${GEM_LIBDIR}/lib/rex/rop_builder/version.rb
