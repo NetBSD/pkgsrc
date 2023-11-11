@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6875 2023/11/11 14:31:49 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6876 2023/11/11 14:49:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9922,3 +9922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-struct2 to 0.1.4 [taca 2023-11-11]
 	Updated security/ruby-rex-text to 0.2.54 [taca 2023-11-11]
 	Updated security/ruby-rex-zip to 0.1.5 [taca 2023-11-11]
+	Updated sysutils/capistrano to 3.18.0 [taca 2023-11-11]
