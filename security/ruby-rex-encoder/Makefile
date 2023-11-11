@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/09/19 17:15:42 taca Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/11 13:44:30 taca Exp $
 
-DISTNAME=	rex-encoder-0.1.6
+DISTNAME=	rex-encoder-0.1.7
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org

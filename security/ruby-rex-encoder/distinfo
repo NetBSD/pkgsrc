@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/11/11 13:44:30 taca Exp $
 
-BLAKE2s (rex-encoder-0.1.6.gem) = 6417a2103c263997f27065d1f860ff89c3eaf5ccd84a23af0ecbfa255ae11b5c
-SHA512 (rex-encoder-0.1.6.gem) = afdbf7f3db54b391650f5fe39e56da0907a5dc208235bfefddde24a9a2f1624c95b6565f9fcc2cfb6dcfeed8d3e8480d8c8866f1413f229c25d870dc2ecd1ce0
-Size (rex-encoder-0.1.6.gem) = 40960 bytes
+BLAKE2s (rex-encoder-0.1.7.gem) = 4dd0591aac055155489b6ffc625b7d0be0a8e0dd8ef65a1a9da909300ad7ca11
+SHA512 (rex-encoder-0.1.7.gem) = 73be5125af4bef30a0bb7d0d3397d8fde26c278bbf7bc773c9fd6db071c6fd38d6b1c2b783ddb62d74dc6fd97dfbfd5faf44f3452f8b8f1915b1c096edc2f24c
+Size (rex-encoder-0.1.7.gem) = 41472 bytes
