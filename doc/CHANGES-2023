@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6870 2023/11/11 14:14:49 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6871 2023/11/11 14:17:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9917,3 +9917,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-powershell to 0.1.99 [taca 2023-11-11]
 	Updated security/ruby-rex-random_identifier to 0.1.11 [taca 2023-11-11]
 	Updated security/ruby-rex-registry to 0.1.5 [taca 2023-11-11]
+	Updated security/ruby-rex-rop_builder to 0.1.5 [taca 2023-11-11]
