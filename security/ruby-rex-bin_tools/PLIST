@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/13 18:11:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/11 13:42:29 taca Exp $
 bin/msfbinscan${RUBY_SUFFIX}
 bin/msfelfscan${RUBY_SUFFIX}
 bin/msfmachscan${RUBY_SUFFIX}
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/bin/msfbinscan
 ${GEM_LIBDIR}/bin/msfelfscan
 ${GEM_LIBDIR}/bin/msfmachscan
 ${GEM_LIBDIR}/bin/msfpescan
+${GEM_LIBDIR}/cortex.yaml
 ${GEM_LIBDIR}/data/identify.txt
 ${GEM_LIBDIR}/lib/rex/assembly/nasm.rb
 ${GEM_LIBDIR}/lib/rex/bin_tools.rb
