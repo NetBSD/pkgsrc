@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/06/11 12:26:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/12 13:34:34 wiz Exp $
 bin/drawing
 share/applications/com.github.maoschanz.drawing.desktop
 share/drawing/drawing.gresource
@@ -71,7 +71,7 @@ share/drawing/drawing/utilities_paths.py
 share/drawing/drawing/utilities_units.py
 share/drawing/drawing/window.py
 share/glib-2.0/schemas/com.github.maoschanz.drawing.gschema.xml
-share/help/C/drawing/figures/icon.png
+share/help/C/drawing/figures/drawing.svg
 share/help/C/drawing/figures/screenshot_arrow.png
 share/help/C/drawing/figures/screenshot_color_editor.png
 share/help/C/drawing/figures/screenshot_color_palette.png
@@ -96,7 +96,7 @@ share/help/C/drawing/tools_selection.page
 share/help/C/drawing/tools_transform.page
 share/help/C/drawing/whats_new.page
 share/help/C/drawing/zoom_preview.page
-share/help/es/drawing/figures/icon.png
+share/help/es/drawing/figures/drawing.svg
 share/help/es/drawing/figures/screenshot_arrow.png
 share/help/es/drawing/figures/screenshot_color_editor.png
 share/help/es/drawing/figures/screenshot_color_palette.png
@@ -121,7 +121,7 @@ share/help/es/drawing/tools_selection.page
 share/help/es/drawing/tools_transform.page
 share/help/es/drawing/whats_new.page
 share/help/es/drawing/zoom_preview.page
-share/help/ru/drawing/figures/icon.png
+share/help/ru/drawing/figures/drawing.svg
 share/help/ru/drawing/figures/screenshot_arrow.png
 share/help/ru/drawing/figures/screenshot_color_editor.png
 share/help/ru/drawing/figures/screenshot_color_palette.png
@@ -146,7 +146,7 @@ share/help/ru/drawing/tools_selection.page
 share/help/ru/drawing/tools_transform.page
 share/help/ru/drawing/whats_new.page
 share/help/ru/drawing/zoom_preview.page
-share/help/tr/drawing/figures/icon.png
+share/help/tr/drawing/figures/drawing.svg
 share/help/tr/drawing/figures/screenshot_arrow.png
 share/help/tr/drawing/figures/screenshot_color_editor.png
 share/help/tr/drawing/figures/screenshot_color_palette.png
@@ -186,6 +186,7 @@ share/locale/eu/LC_MESSAGES/drawing.mo
 share/locale/fi/LC_MESSAGES/drawing.mo
 share/locale/fr/LC_MESSAGES/drawing.mo
 share/locale/he/LC_MESSAGES/drawing.mo
+share/locale/hi/LC_MESSAGES/drawing.mo
 share/locale/hr/LC_MESSAGES/drawing.mo
 share/locale/hu/LC_MESSAGES/drawing.mo
 share/locale/id/LC_MESSAGES/drawing.mo
