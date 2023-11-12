@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2023/11/08 13:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/11/12 13:23:15 wiz Exp $
 
 DISTNAME=	wpa_supplicant-2.6
 PKGNAME=	${DISTNAME:S/supplicant/gui/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/04/07 23:33:30 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/12 13:21:25 wiz Exp $
 
 R_PKGNAME=	systemfonts
 R_PKGVER=	1.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

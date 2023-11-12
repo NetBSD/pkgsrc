@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/02/12 14:42:25 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/12 13:20:47 wiz Exp $
 
 DISTNAME=	opencascade-7.7.0
 PKGNAME=	${DISTNAME:S/opencascade/occt/}
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	https://distfiles.macports.org/opencascade/
 EXTRACT_SUFX=	.tgz

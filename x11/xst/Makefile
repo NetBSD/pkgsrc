@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/06/14 18:05:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/12 13:24:42 wiz Exp $
 
 DISTNAME=	xst-0.9.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnotclub/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

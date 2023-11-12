@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/03/30 08:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/12 13:24:19 wiz Exp $
 
 DISTNAME=	xwayland-23.1.1
 PKGNAME=	modular-xorg-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz

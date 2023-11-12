@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/09/04 14:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/12 13:20:52 wiz Exp $
 
 DISTNAME=	dvisvgm-2.1.3
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgieseki/}
 GITHUB_RELEASE=	2.1.3

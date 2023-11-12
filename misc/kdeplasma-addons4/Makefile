@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2023/11/08 13:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2023/11/12 13:22:47 wiz Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	misc
 COMMENT=	Plasmoids
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/01/29 21:16:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/12 13:21:27 wiz Exp $
 #
 
 DISTNAME=	otf2bdf-3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.math.nmsu.edu/~mleisher/Software/otf2bdf/
 EXTRACT_SUFX=	.tbz2

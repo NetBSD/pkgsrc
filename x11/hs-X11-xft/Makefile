@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/11/02 06:37:49 pho Exp $
+# $NetBSD: Makefile,v 1.20 2023/11/12 13:24:08 wiz Exp $
 
 DISTNAME=	X11-xft-0.3.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 graphics
 
 MAINTAINER=	esg@sdf.lonestar.org
