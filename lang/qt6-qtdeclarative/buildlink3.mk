@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/11/08 13:19:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/11/12 13:22:32 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtdeclarative
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtdeclarative
 QT6_QTDECLARATIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtdeclarative+=	qt6-qtdeclarative>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtdeclarative+=	qt6-qtdeclarative>=6.6.0nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtdeclarative+=	qt6-qtdeclarative>=6.6.0nb2
 BUILDLINK_PKGSRCDIR.qt6-qtdeclarative?=		../../lang/qt6-qtdeclarative
 
 BUILDLINK_INCDIRS.qt6-qtdeclarative+=	qt6/include

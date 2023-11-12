@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/29 21:15:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/11/12 13:24:31 wiz Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tk
 TK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tk+=	tk>=8.5.7<8.6
-BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.5.19nb3
+BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.5.19nb4
 BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk85
 
 BUILDLINK_FILES.tk+=	bin/wish*

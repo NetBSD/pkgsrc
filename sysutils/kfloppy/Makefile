@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2023/11/08 13:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/11/12 13:23:34 wiz Exp $
 
 DISTNAME=	kfloppy-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/applications/utilities/kfloppy/

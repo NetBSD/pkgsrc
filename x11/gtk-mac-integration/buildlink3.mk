@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2023/10/21 17:11:44 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/11/12 13:24:05 wiz Exp $
 
 BUILDLINK_TREE+=	gtk-mac-integration
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk-mac-integration
 GTK_MAC_INTEGRATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk-mac-integration+=	gtk-mac-integration>=2.0.0
-BUILDLINK_ABI_DEPENDS.gtk-mac-integration+=	gtk-mac-integration>=3.0.1nb5
+BUILDLINK_ABI_DEPENDS.gtk-mac-integration+=	gtk-mac-integration>=3.0.1nb6
 BUILDLINK_PKGSRCDIR.gtk-mac-integration?=	../../x11/gtk-mac-integration
 
 .include "../../x11/gtk2/buildlink3.mk"

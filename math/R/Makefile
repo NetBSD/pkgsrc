@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.246 2023/11/08 13:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.247 2023/11/12 13:22:37 wiz Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
 DISTNAME=	R-4.2.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 

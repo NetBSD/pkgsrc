@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.142 2023/10/21 17:11:37 gdt Exp $
+# $NetBSD: Makefile,v 1.143 2023/11/12 13:23:52 wiz Exp $
 
 DISTNAME=	WindowMaker-0.96.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm windowmaker
 MASTER_SITES=	${MASTER_SITE_GITHUB:=window-maker/}
 GITHUB_PROJECT=	wmaker

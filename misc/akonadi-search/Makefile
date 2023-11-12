@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/08 13:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/12 13:22:42 wiz Exp $
 
 DISTNAME=	akonadi-search-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

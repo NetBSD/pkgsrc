@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/08/14 05:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/12 13:22:55 wiz Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	multimedia
 MASTER_SITES=	http://v2v.cc/~j/ffmpeg2theora/downloads/
 EXTRACT_SUFX=	.tar.bz2

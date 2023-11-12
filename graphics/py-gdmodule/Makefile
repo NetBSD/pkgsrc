@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/10/21 17:10:39 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/12 13:22:13 wiz Exp $
 
 DISTNAME=	gdmodule-0.59
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Solomoriah/}
 GITHUB_PROJECT=	gdmodule

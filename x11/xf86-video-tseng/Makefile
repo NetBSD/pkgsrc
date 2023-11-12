@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:18:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/12 13:24:38 wiz Exp $
 
 DISTNAME=	xf86-video-tseng-1.2.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2

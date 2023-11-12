@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/08 13:20:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/12 13:23:06 wiz Exp $
 
-PKGREVISION= 11
+PKGREVISION= 12
 .include "../../net/ettercap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/ettercap-/ettercap-gtk-/1}

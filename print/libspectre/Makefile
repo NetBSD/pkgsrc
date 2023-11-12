@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2023/01/29 21:14:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2023/11/12 13:23:18 wiz Exp $
 
 DISTNAME=	libspectre-0.2.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://libspectre.freedesktop.org/releases/
 

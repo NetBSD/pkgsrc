@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/09/09 14:56:28 vins Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/12 13:21:27 wiz Exp $
 
 DISTNAME=	xmbdfed-4.7
+PKGREVISION=	1
 CATEGORIES=	fonts graphics x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 EXTRACT_SUFX=	.tar.bz2
