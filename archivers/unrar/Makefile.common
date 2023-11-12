@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.59 2023/11/10 12:25:37 wiz Exp $
+# $NetBSD: Makefile.common,v 1.60 2023/11/12 15:10:54 wiz Exp $
 #
 # used by archivers/libunrar/Makefile
 # used by archivers/unrar/Makefile
 
-DISTNAME=	unrarsrc-7.0.2
+DISTNAME=	unrarsrc-7.0.3
 PKGNAME=	${DISTNAME:S/src//}
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.rarlab.com/rar/
@@ -18,10 +18,11 @@ LICENSE=	unrar-license
 # From: Eugene Roshal <roshal@rarlab.com>
 # You can redistribute either original or modified binaries or sources.
 
-NO_CONFIGURE=	yes
-USE_LANGUAGES=	c++11
+NO_CONFIGURE=		yes
+USE_LANGUAGES=		c++
+USE_CXX_FEATURES=	c++11
 # XXX: makefile has DOS line endings
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 
 MAKE_FILE=	makefile
 MAKE_FLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
