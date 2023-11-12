@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6879 2023/11/12 10:30:22 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6880 2023/11/12 12:00:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9926,3 +9926,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-sip-qt6 to 13.6.0 [nros 2023-11-11]
 	Updated devel/goredo to 2.3.0 [schmonz 2023-11-12]
 	Removed devel/go-ed25519 [bsiegert 2023-11-12]
+	Updated geography/geos to 3.12.1 [gdt 2023-11-12]
