@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4117 2023/11/10 14:26:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4118 2023/11/12 10:29:30 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -443,7 +443,6 @@ SUBDIR+=	gnustep-base
 SUBDIR+=	gnustep-examples
 SUBDIR+=	gnustep-make
 SUBDIR+=	gnustep-objc
-SUBDIR+=	go-ed25519
 SUBDIR+=	go-gocode
 SUBDIR+=	go-golang-lru
 SUBDIR+=	go-gopkgs
