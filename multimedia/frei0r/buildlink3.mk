@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/01/29 21:14:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/11/12 13:22:56 wiz Exp $
 
 BUILDLINK_TREE+=	frei0r
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	frei0r
 FREI0R_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.frei0r+=	frei0r>=1.6.1
-BUILDLINK_ABI_DEPENDS.frei0r?=	frei0r>=1.8.0nb1
+BUILDLINK_ABI_DEPENDS.frei0r?=	frei0r>=1.8.0nb2
 BUILDLINK_PKGSRCDIR.frei0r?=	../../multimedia/frei0r
 
 .include "../../graphics/cairo/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/01/29 21:14:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/12 13:21:57 wiz Exp $
 
 DISTNAME=	ftgl-2.1.3-rc5
 PKGNAME=	${DISTNAME:S/-r/r/1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ftgl/}
 

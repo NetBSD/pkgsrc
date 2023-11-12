@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/08/02 16:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/12 13:24:09 wiz Exp $
 
 DISTNAME=	hsetroot-1.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=himdel/}
 

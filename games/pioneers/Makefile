@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2023/11/08 13:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/11/12 13:21:42 wiz Exp $
 #
 
 DISTNAME=	pioneers-15.6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pio/}
 

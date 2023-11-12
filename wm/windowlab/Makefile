@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2023/01/29 21:18:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2023/11/12 13:23:52 wiz Exp $
 #
 
 DISTNAME=	windowlab-1.33
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	wm
 MASTER_SITES=	http://nickgravgaard.com/windowlab/
 DIST_SUBDIR=	windowlab-1.33nb7

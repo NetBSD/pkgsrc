@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/03/08 22:30:52 vins Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/12 13:22:52 wiz Exp $
 
 DISTNAME=	plan9port-20230123
+PKGREVISION=	1
 CATEGORIES=	misc plan9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
 GITHUB_TAG=	e2a141ae0952c2d28a9f500bb9da6dc72e57be3c

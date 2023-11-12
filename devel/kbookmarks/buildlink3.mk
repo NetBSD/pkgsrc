@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2023/11/08 13:18:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2023/11/12 13:21:00 wiz Exp $
 
 BUILDLINK_TREE+=	kbookmarks
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kbookmarks
 KBOOKMARKS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kbookmarks+=	kbookmarks>=5.19.0
-BUILDLINK_ABI_DEPENDS.kbookmarks?=	kbookmarks>=5.108.0nb2
+BUILDLINK_ABI_DEPENDS.kbookmarks?=	kbookmarks>=5.108.0nb3
 BUILDLINK_PKGSRCDIR.kbookmarks?=	../../devel/kbookmarks
 
 .include "../../x11/kxmlgui/buildlink3.mk"

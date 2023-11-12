@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2023/11/08 13:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/11/12 13:21:35 wiz Exp $
 
 DISTNAME=	kblackbox-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kblackbox/

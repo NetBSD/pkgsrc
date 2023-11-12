@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2023/11/08 13:19:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2023/11/12 13:22:06 wiz Exp $
 
 BUILDLINK_TREE+=	libgnomecanvas
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomecanvas
 LIBGNOMECANVAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.30.3nb39
+BUILDLINK_ABI_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.30.3nb40
 BUILDLINK_PKGSRCDIR.libgnomecanvas?=	../../graphics/libgnomecanvas
 
 .include "../../devel/gettext-lib/buildlink3.mk"

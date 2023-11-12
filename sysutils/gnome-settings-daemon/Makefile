@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2023/11/08 13:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2023/11/12 13:23:32 wiz Exp $
 
 DISTNAME=	gnome-settings-daemon-3.38.1
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

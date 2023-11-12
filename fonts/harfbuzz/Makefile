@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.148 2023/08/24 12:02:49 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2023/11/12 13:21:26 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	OpenType text shaping engine

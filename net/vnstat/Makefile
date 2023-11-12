@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/10/21 17:11:14 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/12 13:23:15 wiz Exp $
 
 DISTNAME=	vnstat-1.14
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/
 #DISTFILES=	${DISTNAME}.tar.gz

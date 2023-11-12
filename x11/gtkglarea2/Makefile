@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/10/21 17:11:46 gdt Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/12 13:24:07 wiz Exp $
 
 DISTNAME=	gtkglarea-2.1.0
 PKGNAME=	${DISTNAME:S/gtkglarea/gtkglarea2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkglarea/2.1/}
 EXTRACT_SUFX=	.tar.xz

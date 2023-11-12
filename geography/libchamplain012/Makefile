@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2023/11/08 13:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/12 13:21:47 wiz Exp $
 
 DISTNAME=	libchamplain-0.12.20
 PKGNAME=	${DISTNAME:S/ain/ain012/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libchamplain/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

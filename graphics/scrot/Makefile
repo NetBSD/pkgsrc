@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2023/07/03 11:29:04 vins Exp $
+# $NetBSD: Makefile,v 1.48 2023/11/12 13:22:17 wiz Exp $
 
 DISTNAME=	scrot-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=resurrecting-open-source-projects/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

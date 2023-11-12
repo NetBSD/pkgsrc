@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/10/22 11:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/12 13:23:12 wiz Exp $
 
 DISTNAME=	nicotine-plus-2.2.2
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nicotine-plus/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
