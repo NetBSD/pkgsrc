@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23627 2023/11/10 12:25:50 wiz Exp $
+$NetBSD: TODO,v 1.23628 2023/11/12 15:16:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -424,6 +424,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o akonadi-16.08.1
 	o album-4.17
 	o alevt-1.6.2
+	o alex-3.4.0.1
 	o alsa-lib-1.2.10
 	o alsa-plugins-1.2.7.1
 	o amanda-3.5.2
@@ -627,6 +628,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-mapi-0.32.2
 	o ex-20050325
 	o exmh-2.8.0
+	o faad2-2.11.0
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
@@ -634,6 +636,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o ffmpeg5-5.1.4
+	o ffmpeg6-6.1
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
@@ -769,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-8.3.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -886,6 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
 	o liblzo-2.10
+	o libmaxminddb-1.8.0
 	o libmcs-0.7.2
 	o libmilter-8.16.1
 	o libmtag-0.3.6
@@ -972,6 +978,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mtail-1.2.0
 	o multitail-6.4.2
 	o munge-0.5.14
+	o mupdf-1.23.5
 	o muse-0.9.2
 	o musescore-4.1 [now has a fixed ALSA dependency, and some features were removed]
 	o mypaint-2.0.1
@@ -1126,6 +1133,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.27
+	o plasma-wayland-protocols-1.11.0
 	o ploticus-examples-230
 	o ply-3.11
 	o poco-1.12.4
@@ -1163,9 +1171,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-Routes-2.5.1
 	o py-Theano-1.0.5
 	o py-barman-3.0.1
+	o py-bcrypt-4.0.1
+	o py-bitstring-4.1.2
 	o py-cairo-1.25.1
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
+	o py-click-aliases-1.0.3
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cython-3.0.5
 	o py-diffoscope-242
@@ -1182,6 +1193,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
+	o py-lsp-server-1.9.0
+	o py-mako-1.3.0
+	o py-mercurial-6.5.3
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1191,13 +1205,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.9.0
+	o py-platformdirs-4.0.0
 	o py-postgresql-5.1.2
+	o py-priority-2.0.0
 	o py-protobuf-4.25.0
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.1.5
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1338,6 +1356,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
+	o tailspin-2.1.0
 	o taplo-lsp-0.7.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl-tDOM-0.9.2
@@ -1364,7 +1383,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
-	o texlab-5.10.1
+	o texlab-5.11.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
