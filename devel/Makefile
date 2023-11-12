@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4118 2023/11/12 10:29:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4119 2023/11/12 21:28:24 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -104,6 +104,7 @@ SUBDIR+=	RE-flex
 SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL2
+SUBDIR+=	SDL2-legacy-darwin
 SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
