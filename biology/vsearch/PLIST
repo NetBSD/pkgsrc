@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 14:15:38 bacon Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/12 15:32:12 bacon Exp $
 bin/vsearch
 man/man1/vsearch.1
