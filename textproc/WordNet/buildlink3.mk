@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/01/29 21:15:00 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/12 13:23:40 wiz Exp $
 
 BUILDLINK_TREE+=	WordNet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	WordNet
 WORDNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.WordNet+=	WordNet>=3.0nb7
-BUILDLINK_ABI_DEPENDS.WordNet?=	WordNet>=3.0nb10
+BUILDLINK_ABI_DEPENDS.WordNet?=	WordNet>=3.0nb11
 BUILDLINK_PKGSRCDIR.WordNet?=	../../textproc/WordNet
 
 .include "../../x11/tk/buildlink3.mk"

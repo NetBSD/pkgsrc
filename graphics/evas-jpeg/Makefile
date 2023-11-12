@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:09:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/12 13:21:55 wiz Exp $
 
 PKGNAME=	evas-jpeg-${EVAS_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Evas JPEG image loader
 
 EVAS_IMAGE_LOADERS=	jpeg

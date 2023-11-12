@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/10/21 17:11:49 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/12 13:24:15 wiz Exp $
 
-PKGREVISION= 16
+PKGREVISION= 17
 .include "../../x11/keybinder/Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}

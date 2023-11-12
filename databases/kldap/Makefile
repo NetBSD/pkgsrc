@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/11/08 13:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/11/12 13:20:54 wiz Exp $
 
 DISTNAME=	kldap-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

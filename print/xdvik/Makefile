@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2023/06/06 12:42:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.37 2023/11/12 13:23:21 wiz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	xdvik-22.87.06
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 
 HOMEPAGE=	http://xdvi.sourceforge.net/

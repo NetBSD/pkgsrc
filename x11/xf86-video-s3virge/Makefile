@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/02/13 20:16:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/12 13:24:36 wiz Exp $
 
 DISTNAME=	xf86-video-s3virge-1.11.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

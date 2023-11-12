@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/11/08 13:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/12 13:22:15 wiz Exp $
 
 DISTNAME=	qtsvg-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtsvg-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 module for SVG
 CATEGORIES=	graphics
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

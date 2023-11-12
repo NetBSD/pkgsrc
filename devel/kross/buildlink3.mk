@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2023/11/08 13:18:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/11/12 13:21:03 wiz Exp $
 
 BUILDLINK_TREE+=	kross
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kross
 KROSS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kross+=	kross>=5.64.0
-BUILDLINK_ABI_DEPENDS.kross?=	kross>=5.108.0nb2
+BUILDLINK_ABI_DEPENDS.kross?=	kross>=5.108.0nb3
 BUILDLINK_PKGSRCDIR.kross?=	../../devel/kross
 
 .include "../../devel/kparts/buildlink3.mk"

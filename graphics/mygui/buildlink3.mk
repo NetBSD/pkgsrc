@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/05/06 19:08:51 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/11/12 13:22:09 wiz Exp $
 
 BUILDLINK_TREE+=	mygui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mygui
 MYGUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mygui+=	mygui>=3.2.2
-BUILDLINK_ABI_DEPENDS.mygui?=	mygui>=3.2.3.20190707nb9
+BUILDLINK_ABI_DEPENDS.mygui?=	mygui>=3.2.3.20190707nb10
 BUILDLINK_PKGSRCDIR.mygui?=	../../graphics/mygui
 
 .include "../../devel/SDL2/buildlink3.mk"

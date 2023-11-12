@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/01/29 21:15:01 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/12 13:23:46 wiz Exp $
 
 BUILDLINK_TREE+=	blackbox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	blackbox
 BLACKBOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.blackbox+=	blackbox>=0.70.0
-BUILDLINK_ABI_DEPENDS.blackbox+=	blackbox>=0.77nb3
+BUILDLINK_ABI_DEPENDS.blackbox+=	blackbox>=0.77nb4
 BUILDLINK_PKGSRCDIR.blackbox?=		../../wm/blackbox
 
 pkgbase:= blackbox

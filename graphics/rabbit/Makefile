@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2023/10/21 17:10:40 gdt Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/12 13:22:15 wiz Exp $
 #
 
 DISTNAME=	rabbit-3.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/08 13:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/12 13:23:28 wiz Exp $
 
 DISTNAME=	yubikey-manager-qt-1.2.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/yubikey-manager-qt/Releases/
 

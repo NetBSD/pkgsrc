@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/29 21:14:45 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/11/12 13:22:16 wiz Exp $
 
 BUILDLINK_TREE+=	ruby-cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ruby-cairo
 RUBY_CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ruby-cairo+=	${RUBY_PKGPREFIX}-cairo>=1.6.0
-BUILDLINK_ABI_DEPENDS.ruby-cairo+=	${RUBY_PKGPREFIX}-cairo>=1.17.8nb1
+BUILDLINK_ABI_DEPENDS.ruby-cairo+=	${RUBY_PKGPREFIX}-cairo>=1.17.12nb1
 BUILDLINK_PKGSRCDIR.ruby-cairo?=	../../graphics/ruby-cairo
 
 .include "../../graphics/cairo/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2023/08/01 23:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/11/12 13:22:12 wiz Exp $
 
 DISTNAME=	pycairo-1.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycairo/}
 

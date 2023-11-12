@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/04/09 21:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/12 13:24:35 wiz Exp $
 
 DISTNAME=	xf86-video-neomagic-1.3.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.xz

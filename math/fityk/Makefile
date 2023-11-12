@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2023/10/21 17:10:59 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2023/11/12 13:22:38 wiz Exp $
 
 DISTNAME=	fityk-1.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wojdyr/}
 EXTRACT_SUFX=	.tar.bz2

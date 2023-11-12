@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2023/11/08 13:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2023/11/12 13:22:44 wiz Exp $
 
 DISTNAME=	fbreader-sources-0.99.4
 PKGNAME=	${DISTNAME:S/-sources//}
-PKGREVISION=	59
+PKGREVISION=	60
 CATEGORIES=	misc
 MASTER_SITES=	http://www.fbreader.org/files/desktop/
 EXTRACT_SUFX=	.tgz
