@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-concatkdf.c,v 1.1 2023/11/12 16:50:10 rillig Exp $
 
 Fix build on NetBSD.
 
