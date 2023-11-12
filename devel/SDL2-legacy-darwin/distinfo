@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2023/11/12 21:28:04 nia Exp $
+
+BLAKE2s (SDL2-2.0.3.tar.gz) = 8b452c9d005e8b6da7b1cb8ab3e019522894714aa75c3c5ff100b49b1e75d1f6
+SHA512 (SDL2-2.0.3.tar.gz) = b6d2485154fbc07ab86a4305485e116d35fac25a97033b9e1c65ee0eb8251a18209cb1de3a914d9c0ddc53aa1ffac66c865b111d218e79eb5a10ed00dfec7540
+Size (SDL2-2.0.3.tar.gz) = 3871267 bytes
+SHA1 (patch-include_SDL__platform.h) = 6342e9528e5f5ecaae76a9cc9b196e0a7c0994ab
+SHA1 (patch-include_SDL__syswm.h) = f0a20f2536a7c0079053ff3a5069a580b036e9ec
+SHA1 (patch-src_audio_coreaudio_SDL__coreaudio.h) = 74d1a7782a177407b5ed571a8b86ea0ce7638048
+SHA1 (patch-src_cpuinfo_SDL__cpuinfo.c) = aa77236a2f9e6a662bb7671eb3a5a481a1a9478f
+SHA1 (patch-src_file_cocoa_SDL__rwopsbundlesupport.m) = 0fbd9d7f0f07ae3d00eaee7228305859d1109fb4
+SHA1 (patch-src_filesystem_cocoa_SDL__sysfilesystem.m) = f19fffa10898ac8bc772089af5b020c5246d3c41
+SHA1 (patch-src_joystick_darwin_SDL__sysjoystick.c) = c3c0490b51413003bb09a68489cb8fd67dab6ee3
+SHA1 (patch-src_joystick_darwin_SDL__sysjoystick__c.h) = a6b1e701949b7ea7173e01c586138c5938c0e6d0
+SHA1 (patch-src_power_macosx_SDL__syspower.c) = fbca2984f8738ed3b74417a209c2bdef69f06dd0
+SHA1 (patch-src_thread_pthread_SDL__systhread.c) = 13772719c7a2d2a408d3b5838636d51f25575965
+SHA1 (patch-src_video_cocoa_SDL__cocoaclipboard.m) = a9af5f93b3c96cebd7495159f0cb6257ae0bbfd1
+SHA1 (patch-src_video_cocoa_SDL__cocoakeyboard.m) = 1795e77319d759b4c372fe72adf3c4a1ae02ede0
+SHA1 (patch-src_video_cocoa_SDL__cocoamessagebox.m) = d3195f9c560205531957d0380608ce60fc42abec
+SHA1 (patch-src_video_cocoa_SDL__cocoamodes.m) = ac7e6996da2323d9f8b0bbc0520839d98181b949
+SHA1 (patch-src_video_cocoa_SDL__cocoamouse.h) = 12128f15544e898c02f700f48a644e836848ca55
+SHA1 (patch-src_video_cocoa_SDL__cocoaopengl.m) = 6d1099e16c491577bd033a77d87f5b35e9a96829
+SHA1 (patch-src_video_cocoa_SDL__cocoavideo.h) = eb74c336f935c3308cd31ef2b7c344cae98372b6
+SHA1 (patch-src_video_cocoa_SDL__cocoavideo.m) = 0f508c257ed89b6c0680d277e5bfb5aa5391f97c
+SHA1 (patch-src_video_cocoa_SDL__cocoawindow.h) = 4a0fe88e8f6d22afeb3587e23309b548abd60568
+SHA1 (patch-src_video_cocoa_SDL__cocoawindow.m) = 93903df0d968994b4c1c88f588ac5c11324ba318
+SHA1 (patch-src_video_x11_SDL__x11opengl.c) = 6df31f56c49a2173ee4ac78286c93a54ae8a9156
