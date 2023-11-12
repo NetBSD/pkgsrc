@@ -1,19 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.19 2023/11/12 21:28:04 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2023/11/12 21:28:04 nia Exp $
 
 BUILDLINK_TREE+=	SDL2
-
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
-# This defines SDL2_BUILDLINK3_MK.
-.  include "../../devel/SDL2-legacy-darwin/buildlink3.mk"
-.endif
 
 .if !defined(SDL2_BUILDLINK3_MK)
 SDL2_BUILDLINK3_MK:=
 
-BUILDLINK_ABI_DEPENDS.SDL2+=	SDL2>=2.26.5nb1
-BUILDLINK_API_DEPENDS.SDL2+=	SDL2>=2.0
-BUILDLINK_PKGSRCDIR.SDL2?=	../../devel/SDL2
+BUILDLINK_ABI_DEPENDS.SDL2+=	SDL2>=2.0.3
+BUILDLINK_API_DEPENDS.SDL2+=	SDL2>=2.0.3<2.1.0
+BUILDLINK_PKGSRCDIR.SDL2?=	../../devel/SDL2-legacy-darwin
 BUILDLINK_INCDIRS.SDL2+=	include/SDL2
 
 pkgbase := SDL2
@@ -21,10 +15,6 @@ pkgbase := SDL2
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Malsa}
 .include "../../audio/alsa-lib/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.SDL2:Mjack}
-.include "../../audio/jack/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mpulseaudio}
@@ -43,12 +33,6 @@ pkgbase := SDL2
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
 .endif
 
-.if ${PKG_BUILD_OPTIONS.SDL2:Mwayland}
-.include "../../devel/wayland/buildlink3.mk"
-.include "../../devel/wayland-protocols/buildlink3.mk"
-.include "../../x11/libxkbcommon/buildlink3.mk"
-.endif
-
 .if ${PKG_BUILD_OPTIONS.SDL2:Mx11}
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
@@ -57,7 +41,6 @@ pkgbase := SDL2
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 
-.include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
