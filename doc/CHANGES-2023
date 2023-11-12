@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6877 2023/11/11 18:32:04 nros Exp $
+$NetBSD: CHANGES-2023,v 1.6878 2023/11/12 01:15:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9924,3 +9924,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-zip to 0.1.5 [taca 2023-11-11]
 	Updated sysutils/capistrano to 3.18.0 [taca 2023-11-11]
 	Updated x11/py-sip-qt6 to 13.6.0 [nros 2023-11-11]
+	Updated devel/goredo to 2.3.0 [schmonz 2023-11-12]
