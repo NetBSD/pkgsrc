@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6881 2023/11/12 13:34:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6882 2023/11/12 15:11:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9928,3 +9928,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/go-ed25519 [bsiegert 2023-11-12]
 	Updated geography/geos to 3.12.1 [gdt 2023-11-12]
 	Updated graphics/drawing to 1.0.2 [wiz 2023-11-12]
+	Updated archivers/unrar to 7.0.3 [wiz 2023-11-12]
