@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.26 2023/11/04 12:50:06 gdt Exp $
+# $NetBSD: gfortran.mk,v 1.27 2023/11/12 01:15:52 gdt Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -33,20 +33,30 @@ COMPILER_GFORTRAN_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# If the pkgsrc base compiler is GCC, define POSSIBLE_GORTRAN_VERSION
-# (meaning a candidate we would like) to match.  If that version is
-# known to be problematic on a platform, pick a better one.
-# \todo If the base compiler is clang, we probably should use flang
-# rather than gfortran, but this is gfortran.mk.
-POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
+# This file is gfortran.mk, which is defined to find, depend on, and
+# set up for a gfortran version.  Using gfortran is thus appropriate
+# even if the base compiler is clang; if flang usage is desired then
+# clang.mk or the user should set PKGSRC_FORTRAN to flang (and
+# implement as necessary).
 
+# If the pkgsrc base compiler is GCC, define POSSIBLE_GORTRAN_VERSION
+# (meaning a candidate we would like) to match.
+.if !empty(PKGSRC_COMPILER:Mgcc)
+POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
+.endif
+
+# On a variety of platforms various versions of gfortran are
+# problematic.
+
+# Choose gcc12 for Darwin/aarch64.  \todo Explain why.
+# gcc7 does not build on Darwin 12.6.x, so match aarch64.
 .if ${MACHINE_PLATFORM:MDarwin-*-*}
-# \todo For parallel structure this should set POSSIBLE_GFORTRAN_VERSION instead.
-GFORTRAN_VERSION?=	12
+POSSIBLE_GFORTRAN_VERSION=	12
 .endif
 
 # pkgsrc gcc9 is missing NetBSD patches for aarch64, so if 9 is
-# selected (historical current only?), advance to 10.
+# selected (historical current, or elevated gcc for this package on
+# NetBSD 9 or older), advance to 10.
 .if !empty(POSSIBLE_GFORTRAN_VERSION:M9) && \
     !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
 POSSIBLE_GFORTRAN_VERSION=	10
@@ -58,10 +68,9 @@ POSSIBLE_GFORTRAN_VERSION=	10
 POSSIBLE_GFORTRAN_VERSION=	10
 .endif
 
-# If we are using gcc, and the POSSIBLE version exists in pkgsrc, use it.
+# If the POSSIBLE version exists in pkgsrc, use it.
 # Otherwise, pick gcc 10 as a mainstream default.
-.if !empty(PKGSRC_COMPILER:Mgcc) && \
-    exists(${PKGSRCDIR}/lang/gcc${POSSIBLE_GFORTRAN_VERSION}/buildlink3.mk)
+.if exists(${PKGSRCDIR}/lang/gcc${POSSIBLE_GFORTRAN_VERSION}/buildlink3.mk)
 GFORTRAN_VERSION?=		${POSSIBLE_GFORTRAN_VERSION}
 .else
 GFORTRAN_VERSION?=		10
