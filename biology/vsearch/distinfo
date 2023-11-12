@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/10/27 14:15:38 bacon Exp $
+$NetBSD: distinfo,v 1.9 2023/11/12 15:32:12 bacon Exp $
 
-BLAKE2s (vsearch-2.24.0.tar.gz) = 625748c36daefd4722334f6653ffee2d811d795b6cfbf2e7b69c8da2a39071e5
-SHA512 (vsearch-2.24.0.tar.gz) = 47ee5ff12e6a6478c463569d80881a0a99f2fa95e0a32cc32d7478f1c51ebd651d0f694f6ff6d51d9d998e7cffd28a20db46295b690fe00d37efa208d8a93145
-Size (vsearch-2.24.0.tar.gz) = 267096 bytes
+BLAKE2s (vsearch-2.25.0.tar.gz) = 51ecf118015e928d07cf39548b8fe310ea82dc3451a9e111335acf4ed0dddfeb
+SHA512 (vsearch-2.25.0.tar.gz) = eba2cb3d6a571521d165f1da669731248232eab84908d0bdca6e16635dd0b93d0737afab75bf670c9c1d978b74cb1bcd045bbcf44438a9f66f6bdfd6a3de10a7
+Size (vsearch-2.25.0.tar.gz) = 267819 bytes
