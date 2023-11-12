@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/02/27 19:43:13 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/12 17:02:52 pin Exp $
 
-DISTNAME=	rust-bindgen-0.64.0
+DISTNAME=	rust-bindgen-0.69.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
