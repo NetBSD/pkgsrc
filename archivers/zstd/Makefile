@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/11/10 11:49:31 nia Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/12 21:40:38 nia Exp $
 
 DISTNAME=	zstd-1.5.5
 CATEGORIES=	archivers
@@ -44,7 +44,7 @@ PTHREAD_OPTS=		optional
 
 .include "../../mk/pthread.buildlink3.mk"
 
-.if ${PTHREAD_TYPE} == "native" || ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+.if ${PTHREAD_TYPE} == "native" && !${MACHINE_PLATFORM:MDarwin-*-powerpc*}
 BUILD_TARGET=		lib zstd zlibwrapper
 TEST_TARGET=		test
 .else
