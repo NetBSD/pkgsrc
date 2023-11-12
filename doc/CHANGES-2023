@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6888 2023/11/12 17:03:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6889 2023/11/12 21:28:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9935,3 +9935,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-core to 3.186.0 [taca 2023-11-12]
 	Updated misc/tailspin to 2.1.0 [pin 2023-11-12]
 	Updated devel/rust-bindgen to 0.69.1 [pin 2023-11-12]
+	Added devel/SDL2-legacy-darwin version 2.0.3 [nia 2023-11-12]
