@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6885 2023/11/12 16:32:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6886 2023/11/12 16:33:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9932,3 +9932,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/vsearch to 2.25.0 [bacon 2023-11-12]
 	Updated textproc/ruby-libxml to 4.1.2 [taca 2023-11-12]
 	Updated www/ruby-aws-partitions to 1.848.0 [taca 2023-11-12]
+	Updated www/ruby-aws-sdk-core to 3.186.0 [taca 2023-11-12]
