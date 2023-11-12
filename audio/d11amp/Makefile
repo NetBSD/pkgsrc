@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/11/08 13:18:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/12 13:20:35 wiz Exp $
 
 DISTNAME=		d11amp_0.61
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		https://www.dettus.net/d11amp/
 EXTRACT_SUFX=		.tar.bz2

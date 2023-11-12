@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2023/08/11 22:17:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2023/11/12 13:23:46 wiz Exp $
 
 DISTNAME=	blackbox-0.77
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_PROJECT=	blackboxwm

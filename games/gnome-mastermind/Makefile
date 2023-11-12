@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/11/03 21:14:53 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/11/12 13:21:33 wiz Exp $
 
 DISTNAME=	gnome-mastermind-0.4.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fargiolas/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

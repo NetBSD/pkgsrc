@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/03/13 10:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/12 13:23:41 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/catdoc/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/catdoc-/catdoc-tk-/}

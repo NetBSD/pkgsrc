@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2023/11/08 13:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/11/12 13:24:22 wiz Exp $
 
 .include "../../x11/vte/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	x11 python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/01/29 21:14:37 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/11/12 13:21:50 wiz Exp $
 #
 
 BUILDLINK_TREE+=	agg
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	agg
 AGG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.agg+=	agg>=2.5
-BUILDLINK_ABI_DEPENDS.agg+=	agg>=2.5nb6
+BUILDLINK_ABI_DEPENDS.agg+=	agg>=2.5nb7
 BUILDLINK_PKGSRCDIR.agg?=	../../graphics/agg
 
 .include "../../graphics/freetype2/buildlink3.mk"

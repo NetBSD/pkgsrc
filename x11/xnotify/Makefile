@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/09/10 11:37:28 vins Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/12 13:24:41 wiz Exp $
 
 DISTNAME=	xnotify-0.9.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

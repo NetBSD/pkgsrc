@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/21 17:09:39 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/12 13:20:32 wiz Exp $
 
 DISTNAME=	xarchiver-0.5.4.17
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ib/}
 GITHUB_PROJECT=	xarchiver

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/11/08 13:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/12 13:21:07 wiz Exp $
 #
 
 DISTNAME=	libsexymm-0.1.9
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	devel
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexymm/
 

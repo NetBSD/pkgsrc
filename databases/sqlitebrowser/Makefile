@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2023/11/08 13:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/11/12 13:20:55 wiz Exp $
 
 DISTNAME=	sqlitebrowser-3.12.2
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	databases x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqlitebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

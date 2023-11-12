@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/10/21 17:11:27 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/12 13:23:35 wiz Exp $
 
 DISTNAME=	lxpanel-0.10.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz

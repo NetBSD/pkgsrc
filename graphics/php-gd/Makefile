@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2023/10/21 17:10:38 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2023/11/12 13:22:11 wiz Exp $
 
 MODNAME=		gd
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
 LICENSE=		php

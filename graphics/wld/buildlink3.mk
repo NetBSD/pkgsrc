@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/01/29 21:14:46 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/11/12 13:22:19 wiz Exp $
 
 BUILDLINK_TREE+=	wld
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wld
 WLD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wld+=	wld>=0.0.0.20191211
-BUILDLINK_ABI_DEPENDS.wld?=	wld>=0.0.0.20200220nb5
+BUILDLINK_ABI_DEPENDS.wld?=	wld>=0.0.0.20200220nb6
 BUILDLINK_PKGSRCDIR.wld?=	../../graphics/wld
 
 .include "../../devel/wayland/buildlink3.mk"

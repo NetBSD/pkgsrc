@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/11/08 13:20:59 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/12 13:23:36 wiz Exp $
 
 DISTNAME=	qdirstat-1.8
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shundhammer/}
 

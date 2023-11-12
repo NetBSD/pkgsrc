@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/08/10 14:11:37 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/12 13:24:09 wiz Exp $
 
 DISTNAME=	jolly-0.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apgoetz/}
 

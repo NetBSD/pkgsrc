@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2023/10/21 17:09:42 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2023/11/12 13:20:36 wiz Exp $
 
 BUILDLINK_TREE+=	gmpc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gmpc
 GMPC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gmpc+=	gmpc>=0.20.0
-BUILDLINK_ABI_DEPENDS.gmpc+=	gmpc>=11.8.16nb43
+BUILDLINK_ABI_DEPENDS.gmpc+=	gmpc>=11.8.16nb45
 BUILDLINK_PKGSRCDIR.gmpc?=	../../audio/gmpc
 BUILDLINK_DEPMETHOD.gmpc?=	build
 

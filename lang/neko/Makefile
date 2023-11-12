@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/11/08 13:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/12 13:22:32 wiz Exp $
 
 DISTNAME=	neko-2.3.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HaxeFoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./-/g}

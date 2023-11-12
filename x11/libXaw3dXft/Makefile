@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/01/29 21:15:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/12 13:24:13 wiz Exp $
 
 DISTNAME=	libXaw3dXft-1.6.2h
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2

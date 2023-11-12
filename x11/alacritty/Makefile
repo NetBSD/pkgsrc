@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/10/24 22:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/12 13:23:59 wiz Exp $
 
 DISTNAME=	alacritty-0.12.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

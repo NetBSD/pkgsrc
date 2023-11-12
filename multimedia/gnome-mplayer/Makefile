@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2023/11/08 13:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2023/11/12 13:22:57 wiz Exp $
 
 DISTNAME=	gnome-mplayer-1.0.9
-PKGREVISION=	60
+PKGREVISION=	61
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gnome-mplayer.googlecode.com/svn/packages/
 

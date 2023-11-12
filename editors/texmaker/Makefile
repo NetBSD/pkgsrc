@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.136 2023/11/08 13:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2023/11/12 13:21:18 wiz Exp $
 
 DISTNAME=	texmaker-5.1.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
