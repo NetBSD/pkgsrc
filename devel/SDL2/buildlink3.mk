@@ -1,6 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/05/06 19:08:48 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/11/12 21:28:04 nia Exp $
 
 BUILDLINK_TREE+=	SDL2
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+# This defines SDL2_BUILDLINK3_MK.
+.  include "../../devel/SDL2-legacy-darwin/buildlink3.mk"
+.endif
 
 .if !defined(SDL2_BUILDLINK3_MK)
 SDL2_BUILDLINK3_MK:=

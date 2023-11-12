@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/11/02 19:34:12 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/11/12 21:28:04 nia Exp $
 
 DISTNAME=	SDL2-2.28.5
 CATEGORIES=	devel
@@ -15,6 +15,9 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
+
+# See devel/SDL2-legacy-darwin
+NOT_FOR_PLATFORM+=	Darwin-*-powerpc*
 
 # Let pkgsrc handle the rpath.
 CONFIGURE_ARGS+=	--disable-rpath
