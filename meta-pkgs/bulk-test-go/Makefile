@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/10/21 21:07:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/13 09:14:54 jperkin Exp $
 
 DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
@@ -27,7 +27,6 @@ DEPENDS+=	go-tools-[0-9]*:../../devel/go-tools
 DEPENDS+=	go-nbreader-[0-9]*:../../devel/go-nbreader
 DEPENDS+=	golint-[0-9]*:../../devel/golint
 DEPENDS+=	go-review-[0-9]*:../../devel/go-review
-DEPENDS+=	go-ed25519-[0-9]*:../../devel/go-ed25519
 DEPENDS+=	go-goptlib-[0-9]*:../../devel/go-goptlib
 DEPENDS+=	go-siphash-[0-9]*:../../devel/go-siphash
 DEPENDS+=	go-sys-[0-9]*:../../devel/go-sys
