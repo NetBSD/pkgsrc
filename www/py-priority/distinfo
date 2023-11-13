@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:30:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/11/13 11:21:06 wiz Exp $
 
-BLAKE2s (priority-1.3.0.tar.gz) = e00afa70dbdb854c98bcb8019198235f1fe5b023ae81e221e4fbc097c245872c
-SHA512 (priority-1.3.0.tar.gz) = cefb13b15e99ef98c37fdd1486466c9e1d7d04b4574cbca1665fde7b7b44cc7d66964bed41184315a9b51bd6f9d0e02bbe113bfa004a754ac270170309b71e0a
-Size (priority-1.3.0.tar.gz) = 13827 bytes
+BLAKE2s (priority-2.0.0.tar.gz) = 8b14e60ccc4ddef5f1da3dccff09447e22aaa5e2dfa71d5039ff714dc22c119b
+SHA512 (priority-2.0.0.tar.gz) = f90648a3ff1ee4131f30e99ecd8c36110abf484733f507edefcede8fdcb9ec3a618b9278e85724855709f41facee438061e4c5cae201b6e916c22f4a451db575
+Size (priority-2.0.0.tar.gz) = 24792 bytes
