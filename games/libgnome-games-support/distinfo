@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/13 17:38:38 wiz Exp $
+
+BLAKE2s (libgnome-games-support-2.0.0.tar.xz) = 891011c726ebe7a726d5622043575abeefa4aacaecb8b5571bc88ace10dae0fe
+SHA512 (libgnome-games-support-2.0.0.tar.xz) = 56d0bafd7cd9b8000c7b8be6ffd8d74ea4ba5164a60490665163d8f86d6f19a34b549eec21ae3a4feecb8313851c32621d8d48638dfdaeea812c5ba7c9447111
+Size (libgnome-games-support-2.0.0.tar.xz) = 46204 bytes
