@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.53 2023/10/02 20:37:21 triaxx Exp $
+# $NetBSD: version.mk,v 1.54 2023/11/13 14:36:55 wiz Exp $
 
-VERSION=	6.5.2
+VERSION=	6.5.3
