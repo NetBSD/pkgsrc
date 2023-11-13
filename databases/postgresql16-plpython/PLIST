@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/17 08:53:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/13 20:22:09 adam Exp $
 include/postgresql/server/plpy_cursorobject.h
 include/postgresql/server/plpy_elog.h
 include/postgresql/server/plpy_exec.h
@@ -35,6 +35,7 @@ ${PLIST.nls}share/locale/tr/LC_MESSAGES/plpython-16.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/plpython-16.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/plpython-16.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/plpython-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/plpython-16.mo
 share/postgresql/extension/hstore_plpython3u--1.0.sql
 share/postgresql/extension/hstore_plpython3u.control
 ${PLIST.py2x}share/postgresql/extension/plpython2u--1.0.sql
