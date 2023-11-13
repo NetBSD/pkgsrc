@@ -1,2 +1,4 @@
 libgnome-games-support is a small library intended for internal
 use by GNOME Games, but it may be used by others.
+
+This is major version 2 of the library, supporting GTK4.
