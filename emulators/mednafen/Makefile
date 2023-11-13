@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/07/18 18:02:46 nia Exp $
+# $NetBSD: Makefile,v 1.45 2023/11/13 08:38:46 nia Exp $
 
 DISTNAME=	mednafen-1.29.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	https://mednafen.github.io/releases/files/
 EXTRACT_SUFX=	.tar.xz
@@ -53,7 +53,7 @@ post-install:
 .include "options.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/tremor/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
