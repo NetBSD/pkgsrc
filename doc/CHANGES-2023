@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6913 2023/11/13 16:07:31 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6914 2023/11/13 16:34:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9960,3 +9960,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/ffplay6 to 6.1 [wiz 2023-11-13]
 	Updated mail/squirrelmail to 1.4.23pre14997 [taca 2023-11-13]
 	Updated www/moodle to 4.1nb1 [taca 2023-11-13]
+	Updated textproc/py-yaml to 6.0.1nb1 [wiz 2023-11-13]
