@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1096 2023/11/13 20:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.1097 2023/11/13 23:15:40 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -437,6 +437,7 @@ SUBDIR+=	lsof
 SUBDIR+=	lvm2
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
+SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxtask
 SUBDIR+=	m1n1
