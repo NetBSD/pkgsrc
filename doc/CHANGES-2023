@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6925 2023/11/13 18:57:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6926 2023/11/13 18:58:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9972,3 +9972,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/alex to 3.4.0.1 [wiz 2023-11-13]
 	Removed devel/libbonoboui [wiz 2023-11-13]
 	Removed devel/libgnomemm [wiz 2023-11-13]
+	Removed devel/at-spi [wiz 2023-11-13]

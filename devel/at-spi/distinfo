@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 10:14:17 nia Exp $
-
-BLAKE2s (at-spi-1.32.0.tar.bz2) = e146ea37fdadb7ef97bdfae7bd999dc49235455b4fdaa50818cf781fd01dcca9
-SHA512 (at-spi-1.32.0.tar.bz2) = 2cfff99940b23341bdf5da3ef0a0611e243c4e41079c492250e39405064bd524e151bd491a8d5f0cd12c9bf68278fd276119923e0beda142bc1d7a315ef57c25
-Size (at-spi-1.32.0.tar.bz2) = 845788 bytes
-SHA1 (patch-aa) = 8a0857d686da6a02d75897353918298f846301ac
-SHA1 (patch-ab) = e1252773dc4cb97b03d0e55f468521f6b8391dc9
