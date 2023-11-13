@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6932 2023/11/13 23:21:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6933 2023/11/13 23:36:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9985,3 +9985,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/postgresql16 to 16.1 [adam 2023-11-13]
 	Added sysutils/lxqt-menu-data version 1.4.1 [gutteridge 2023-11-13]
 	Removed devel/libbonobo [wiz 2023-11-13]
+	Removed archivers/py-czipfile [wiz 2023-11-13]
