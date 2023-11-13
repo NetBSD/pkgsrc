@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/11/12 13:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/11/13 18:53:07 wiz Exp $
 
 DISTNAME=	gobby-0.4.12
 PKGREVISION=	59
@@ -14,8 +14,6 @@ USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
-
-.include "options.mk"
 
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
