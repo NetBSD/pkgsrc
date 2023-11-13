@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2022/01/27 08:06:26 wiz Exp $
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.9 2023/11/13 15:01:19 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/hgext3rd/evolve/__init__.py
 ${PYSITELIB}/hgext3rd/evolve/__init__.pyc
 ${PYSITELIB}/hgext3rd/evolve/__init__.pyo
@@ -67,9 +67,6 @@ ${PYSITELIB}/hgext3rd/evolve/rewriteutil.pyo
 ${PYSITELIB}/hgext3rd/evolve/safeguard.py
 ${PYSITELIB}/hgext3rd/evolve/safeguard.pyc
 ${PYSITELIB}/hgext3rd/evolve/safeguard.pyo
-${PYSITELIB}/hgext3rd/evolve/serveronly.py
-${PYSITELIB}/hgext3rd/evolve/serveronly.pyc
-${PYSITELIB}/hgext3rd/evolve/serveronly.pyo
 ${PYSITELIB}/hgext3rd/evolve/stablerange.py
 ${PYSITELIB}/hgext3rd/evolve/stablerange.pyc
 ${PYSITELIB}/hgext3rd/evolve/stablerange.pyo
@@ -97,9 +94,6 @@ ${PYSITELIB}/hgext3rd/evolve/utility.pyo
 ${PYSITELIB}/hgext3rd/pullbundle.py
 ${PYSITELIB}/hgext3rd/pullbundle.pyc
 ${PYSITELIB}/hgext3rd/pullbundle.pyo
-${PYSITELIB}/hgext3rd/serverminitopic.py
-${PYSITELIB}/hgext3rd/serverminitopic.pyc
-${PYSITELIB}/hgext3rd/serverminitopic.pyo
 ${PYSITELIB}/hgext3rd/topic/__init__.py
 ${PYSITELIB}/hgext3rd/topic/__init__.pyc
 ${PYSITELIB}/hgext3rd/topic/__init__.pyo
