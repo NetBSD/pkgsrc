@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.35 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: msgfmt.sh,v 1.36 2023/11/13 18:54:56 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,12 +62,10 @@
 # of the *.po files in each of the following packages:
 #
 #	databases/libgnomedb
-#	devel/libgnome
 #	fonts/fontforge
 #	multimedia/gmencoder
 #	multimedia/gnome2-media
 #	net/gtk-gnutella
-#	sysutils/gnome-vfs
 #	wm/icewm
 #	www/epiphany
 #	x11/matchbox-panel
