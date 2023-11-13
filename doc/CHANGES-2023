@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6893 2023/11/13 10:50:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6894 2023/11/13 10:59:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9940,3 +9940,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/node_exporter to 1.7.0 [bsiegert 2023-11-13]
 	Updated devel/py-cython to 3.0.5 [wiz 2023-11-13]
 	Updated security/py-bcrypt to 4.0.1 [wiz 2023-11-13]
+	Updated devel/py-bitstring to 4.1.2 [wiz 2023-11-13]
