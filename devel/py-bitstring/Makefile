@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/13 10:59:21 wiz Exp $
 
-DISTNAME=	bitstring-3.1.9
+DISTNAME=	bitstring-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
 
@@ -11,11 +10,18 @@ HOMEPAGE=	https://github.com/scott-griffiths/bitstring
 COMMENT=	Simple construction, analysis and modification of binary data
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-bitarray>=2.8.0:../../devel/py-bitarray
+
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC}/test && \
-	${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+# remove broken test so others can run
+# https://github.com/scott-griffiths/bitstring/issues/301
+pre-test:
+	${RM} ${WRKSRC}/bitstring/plugin_test.py
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
