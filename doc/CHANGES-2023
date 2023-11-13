@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6908 2023/11/13 15:40:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6909 2023/11/13 15:41:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9955,3 +9955,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/harfbuzz to 8.3.0 [wiz 2023-11-13]
 	Updated fonts/harfbuzz-icu to 8.3.0 [wiz 2023-11-13]
 	Updated multimedia/ffmpeg5 to 5.1.4 [wiz 2023-11-13]
+	Updated multimedia/ffplay5 to 5.1.4 [wiz 2023-11-13]
