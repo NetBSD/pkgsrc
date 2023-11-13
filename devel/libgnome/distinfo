@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.43 2021/10/26 10:15:21 nia Exp $
-
-BLAKE2s (libgnome-2.32.1.tar.bz2) = 0188a8b0e53c6e812c94d2b3c31607fc27deb5dc159f8615ece5aba52babba19
-SHA512 (libgnome-2.32.1.tar.bz2) = f94e603255a93e73249e0fd9ed5604d732b44ad46f3cc3065afb46fc6162f6cf29304f49440b5c06303b8e68608b6fd16236076813febb5f1cbdcde4bfc3b3e3
-Size (libgnome-2.32.1.tar.bz2) = 1776006 bytes
-SHA1 (patch-libgnome_Makefile.in) = ccf3fcf5d0d7d609053ab2f36ce52d48f2321b82
-SHA1 (patch-libgnome_gnome-config.h) = 9339ac03448e5869f5f32b76c306f01f4dd5d58c
