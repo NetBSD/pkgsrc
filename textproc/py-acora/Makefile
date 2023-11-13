@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/11/14 14:11:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/13 23:37:34 wiz Exp $
 
 DISTNAME=	acora-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Fast multi-keyword search engine for text strings in Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # 2.3 distfile does not support python 3.11
 post-extract:
