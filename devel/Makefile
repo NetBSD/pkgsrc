@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4121 2023/11/13 18:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4122 2023/11/13 18:57:57 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -931,7 +931,6 @@ SUBDIR+=	libgit2
 SUBDIR+=	libglade
 SUBDIR+=	libglademm
 SUBDIR+=	libgnome
-SUBDIR+=	libgnomemm
 SUBDIR+=	libgnt
 SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
