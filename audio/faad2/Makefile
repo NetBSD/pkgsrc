@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/04/26 15:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/11/13 15:22:45 wiz Exp $
 
-DISTNAME=	faad2-2.10.1
+DISTNAME=	faad2-2.11.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=knik0/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -11,18 +11,14 @@ COMMENT=	AAC decoding library
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake autoreconf gmake
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/faad2
 
-LIBS+=			-lm
 CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1
 
-post-extract:
-	${MV} ${WRKSRC}/frontend/faad.man ${WRKSRC}/frontend/faad.1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -if
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/libfaad.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKSRC}/frontend/faad.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/faad.1
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
