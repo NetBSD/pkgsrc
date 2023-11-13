@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.35 2023/04/26 15:45:03 wiz Exp $
+$NetBSD: distinfo,v 1.36 2023/11/13 15:22:45 wiz Exp $
 
-BLAKE2s (faad2-2.10.1.tar.gz) = bf717748b2fefdb1c8897a7b8f7732a7420beef9deaf04b5bd84d47917d7385d
-SHA512 (faad2-2.10.1.tar.gz) = 8df69278350c68dd770c4bc482e42bc95eb04cd784eeea3f3fc58d615833c8b07dc3c72029bb7e5bfed612b7c1b8daefc9cb57be9789befb587120ef115e55b3
-Size (faad2-2.10.1.tar.gz) = 803488 bytes
-SHA1 (patch-configure.ac) = ed9d4e9d611d27d4add86884996a8e7fc001bc90
-SHA1 (patch-frontend_Makefile.am) = 32c8bede5773b2cb97777951b1a18366b4e10e3d
-SHA1 (patch-frontend_getopt.c) = 3eaf3e8318887eca49e354696cad1bd2c5bf5504
-SHA1 (patch-frontend_mp4read.c) = a72c20b69428809caf328850fd70a13ba5c82d41
-SHA1 (patch-libfaad_Makefile.am) = 7a5ff541d0b11a7d71d0ed5740bbf494501c6b7a
-SHA1 (patch-libfaad_common.h) = 60eccd8aebeb085760d6866f83ff5a613197918f
-SHA1 (patch-plugins_xmms_src_Makefile.am) = 4ba1dfefe1e351830ee990c711af6ac46db42c14
-SHA1 (patch-plugins_xmms_src_libmp4.c) = 7c6cd667999aab36efc9d713cf967c01b01916bf
+BLAKE2s (faad2-2.11.0.tar.gz) = e7394544aa994b0b78e5e2e80aad76a4d6d6a669595734bd360ecb122695d0b3
+SHA512 (faad2-2.11.0.tar.gz) = b85aab9b2d2afdca7096c999bcb7fabfccce4781760d9eb14d23fdd38691729927b09464708abf49a751e70c4475151ca14c5a7419b5cf4d9ec70c433dc86282
+Size (faad2-2.11.0.tar.gz) = 656610 bytes
+SHA1 (patch-CMakeLists.txt) = 28a4680cd053a96eba052d35e0c3661df077aaee
