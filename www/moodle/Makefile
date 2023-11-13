@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2023/01/08 01:45:43 wen Exp $
+# $NetBSD: Makefile,v 1.98 2023/11/13 16:07:01 taca Exp $
 
 DISTNAME=	moodle-4.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable401/
 EXTRACT_SUFX=	.tgz
@@ -14,9 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.3.0:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=7.3.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=7.3.0:../../net/php-xmlrpc
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=7.3.0:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.3.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.3.0:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=7.3.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=7.3.0:../../archivers/php-zlib
@@ -88,5 +87,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${MOODLEDATADIR}
 	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MOODLEDATADIR}
 
+.include "../../lang/php/json.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
