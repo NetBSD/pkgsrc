@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2023/11/13 18:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.538 2023/11/13 18:17:34 wiz Exp $
 #
 
 COMMENT=	Games
@@ -158,7 +158,6 @@ SUBDIR+=	frotz
 SUBDIR+=	frozen-bubble
 SUBDIR+=	fruit
 SUBDIR+=	galaxa
-SUBDIR+=	gamazons
 SUBDIR+=	gargoyle
 SUBDIR+=	gate88
 SUBDIR+=	gbrainy
