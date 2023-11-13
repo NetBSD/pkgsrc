@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/11/13 18:45:25 wiz Exp $
 
-BLAKE2s (teg-0.11.1.tar.gz) = 355ba6aa49c6d537e24c22f144fbbbe6ddc566a8af65f04b35dcf59e2d23a1f2
-SHA512 (teg-0.11.1.tar.gz) = fd0ec657234ef9f55845764eecfc8233d2c42648919e250e78aa723f1419f5157be28a533ac49067fc606e2f8164e105824fdec9cccd0cb079862c37d1b58ed5
-Size (teg-0.11.1.tar.gz) = 3805983 bytes
-SHA1 (patch-aa) = 8df1d95a0634d0683a55948947103ad300c8013e
-SHA1 (patch-ab) = afe615fa8df185429ff95d04e86af6aa6206d9e3
-SHA1 (patch-ac) = cff7c1cee55cb7b070591c5f02352f1a92b0cf3d
-SHA1 (patch-ad) = 33547b2f4d880e163657d703000a9ba82271f109
+BLAKE2s (teg-0.12.0.tar.gz) = 17a6ee28bac646e06bf147fdc780d47b4f60637416100d979515827a071feacb
+SHA512 (teg-0.12.0.tar.gz) = bcfeb0db386adb620ca4ea0a34a68c4f5dee1d1659fc8497c96ac17d60e0f2a16e306a51b4876495bdabda21faaddb7d224c305b3db22c909e0a28cfdb0ba4bc
+Size (teg-0.12.0.tar.gz) = 5193030 bytes
