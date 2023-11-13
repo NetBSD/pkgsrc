@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.71 2023/10/19 15:02:52 wiz Exp $
+$NetBSD: distinfo,v 1.72 2023/11/13 11:49:41 wiz Exp $
 
-BLAKE2s (mupdf-1.23.4-source.tar.gz) = 953b25bbf7e8fbbba483b1e0eeb54f380cc1859280c914e4e8dc1d7ac06ce5c6
-SHA512 (mupdf-1.23.4-source.tar.gz) = 038b80f5ca37c675069dd14d9f93f18548b765eb0e7f0063d433716a0e85941b6dc4bc5080866843d6bbe376c5666bc9f79210b8a045ca352bdff0728eff3802
-Size (mupdf-1.23.4-source.tar.gz) = 55146083 bytes
+BLAKE2s (mupdf-1.23.5-source.tar.gz) = f154318faf4cb36fae0206a6748424d5e124303e0f4edac4a471025a76df1aa5
+SHA512 (mupdf-1.23.5-source.tar.gz) = 9a9101e2a505520cd89247ee6cd1dd2cdeca50aef1d23fe7c34eed74c87657545b2987e93af328b99336817cc099e94373f0407082996ebaa1c4870125628b83
+Size (mupdf-1.23.5-source.tar.gz) = 55162335 bytes
 SHA1 (patch-Makelists) = 714157e21b2b609ac4f0adacc73c3e3a2156640a
 SHA1 (patch-ab) = 548361a64a7ef6777e60e48a2653120034a35338
 SHA1 (patch-ac) = 2377fe83c6ff3b976a20a912087694fcfe0e9168
