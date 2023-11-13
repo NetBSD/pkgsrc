@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/11/06 08:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/13 10:42:42 wiz Exp $
 
 DISTNAME=	scikit-learn-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
@@ -21,6 +22,7 @@ USE_LANGUAGES=	c c++ fortran
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
+BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=3
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
