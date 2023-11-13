@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.36 2021/10/26 10:15:14 nia Exp $
-
-BLAKE2s (libbonobo-2.32.1.tar.bz2) = ce06c64f2c9c2e0139c1f7fadaec3f5f245974a4c2873ff41e3c73a1f57ce51e
-SHA512 (libbonobo-2.32.1.tar.bz2) = 271e34ddb16a1ef756064c062e29bac333f3e109e3efd6db43857db3b2b4259c0c53d2480ac4945cd511b10bc7a1b770a966421bf80655bbfd301f565622c69a
-Size (libbonobo-2.32.1.tar.bz2) = 1377716 bytes
-SHA1 (patch-aa) = 1144bc79aef6990ba15c565a01438dd41d1a085a
-SHA1 (patch-ab) = 320fc0a2be131a0ab6b200643fb733f80899a005
-SHA1 (patch-activation-server_Makefile.in) = b0383df4988296abafe682a67ac162782301655d

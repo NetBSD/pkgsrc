@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4124 2023/11/13 19:50:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4125 2023/11/13 23:21:46 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -881,7 +881,6 @@ SUBDIR+=	libatomic_ops
 SUBDIR+=	libbegemot
 SUBDIR+=	libbinio
 SUBDIR+=	libblkid
-SUBDIR+=	libbonobo
 SUBDIR+=	libbsd
 SUBDIR+=	libcbor
 SUBDIR+=	libcerf
