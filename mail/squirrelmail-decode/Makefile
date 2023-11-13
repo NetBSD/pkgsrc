@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/13 16:01:45 taca Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/13 23:13:24 jperkin Exp $
 
 DISTNAME=	squirrelmail-decode-1.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 NO_BUILD=	yes
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.3:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-squirrelmail>=1.4.23pre14998:../../mail/squirrelmail
+DEPENDS+=	${PHP_PKG_PREFIX}-squirrelmail>=1.4.23pre14997:../../mail/squirrelmail
 
 do-install:
 	${INSTALL_DATA_DIR} \
