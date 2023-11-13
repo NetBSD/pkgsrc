@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6904 2023/11/13 15:23:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6905 2023/11/13 15:26:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9951,3 +9951,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-mercurial to 6.5.3 [wiz 2023-11-13]
 	Updated devel/py-hg-evolve to 11.1.0 [wiz 2023-11-13]
 	Updated audio/faad2 to 2.11.0 [wiz 2023-11-13]
+	Updated geography/libmaxminddb to 1.8.0 [wiz 2023-11-13]
