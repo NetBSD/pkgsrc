@@ -1,0 +1,14 @@
+$NetBSD: patch-menu_CMakeLists.txt,v 1.1 2023/11/13 23:13:01 gutteridge Exp $
+
+Install config files to pkgsrc standard location.
+
+--- menu/CMakeLists.txt.orig	2023-11-10 08:46:37.000000000 +0000
++++ menu/CMakeLists.txt
+@@ -21,6 +21,6 @@ install(FILES
+     lxqt-applications-simple.menu
+     lxqt-applications-fm.menu
+     lxqt-config.menu
+-    DESTINATION "${LXQT_ETC_XDG_DIR}/menus"
++    DESTINATION "share/examples/menus"
+     COMPONENT Runtime
+ )
