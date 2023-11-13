@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1095 2023/11/06 09:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.1096 2023/11/13 20:04:50 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -273,7 +273,6 @@ SUBDIR+=	gnome-nds-thumbnailer
 SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-tracker
 SUBDIR+=	gnome-tracker-miners
-SUBDIR+=	gnome-vfs
 SUBDIR+=	gnuit
 SUBDIR+=	goreman
 SUBDIR+=	gpart
