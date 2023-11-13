@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/10/28 19:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2023/11/13 23:38:47 wiz Exp $
 
 DISTNAME=	numpy-1.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://www.numpy.org/
 COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
