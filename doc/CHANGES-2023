@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6928 2023/11/13 19:50:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6929 2023/11/13 20:04:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9975,3 +9975,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/at-spi [wiz 2023-11-13]
 	Updated games/pioneers to 15.6nb13 [wiz 2023-11-13]
 	Removed devel/libgnome [wiz 2023-11-13]
+	Removed net/gnome-vfs-smb [wiz 2023-11-13]
+	Removed sysutils/gnome-vfs [wiz 2023-11-13]
