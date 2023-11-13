@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2023/10/23 06:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/11/13 15:01:19 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
-DISTNAME=	hg-evolve-11.0.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
-PKGREVISION=	1
+DISTNAME=	hg-evolve-11.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -25,12 +24,13 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__init__.py*
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__pycache__/__init__.*
 
-# Test status as of 11.0.2:
+# Test status as of 11.1.0
+# Failed test-amend.t: output changed
 # Failed test-check-compat-strings.t: output changed
 # Failed test-check-sdist.t: output changed
 # Failed test-evolve-content-divergent-case-A2.t: output changed
 # Failed test-version-install.t: output changed
-# Ran 226 tests, 6 skipped, 4 failed.
+# Ran 230 tests, 6 skipped, 5 failed.
 
 .if 0
 HG_WRKSRC=	cd ../py-mercurial && ${MAKE} show-var VARNAME=WRKSRC
@@ -40,5 +40,5 @@ do-test:
 .endif
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
