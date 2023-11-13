@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/02 16:44:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/13 15:46:54 wiz Exp $
 bin/ffmpeg6
 bin/ffprobe6
 include/ffmpeg6/libavcodec/ac3_parser.h
@@ -69,6 +69,7 @@ include/ffmpeg6/libavutil/downmix_info.h
 include/ffmpeg6/libavutil/encryption_info.h
 include/ffmpeg6/libavutil/error.h
 include/ffmpeg6/libavutil/eval.h
+include/ffmpeg6/libavutil/executor.h
 include/ffmpeg6/libavutil/ffversion.h
 include/ffmpeg6/libavutil/fifo.h
 include/ffmpeg6/libavutil/file.h
@@ -129,6 +130,7 @@ include/ffmpeg6/libavutil/tx.h
 include/ffmpeg6/libavutil/uuid.h
 include/ffmpeg6/libavutil/version.h
 include/ffmpeg6/libavutil/video_enc_params.h
+include/ffmpeg6/libavutil/video_hint.h
 include/ffmpeg6/libavutil/xtea.h
 include/ffmpeg6/libpostproc/postprocess.h
 include/ffmpeg6/libpostproc/version.h
@@ -142,35 +144,35 @@ include/ffmpeg6/libswscale/version_major.h
 lib/ffmpeg6/libavcodec.a
 lib/ffmpeg6/libavcodec.so
 lib/ffmpeg6/libavcodec.so.60
-lib/ffmpeg6/libavcodec.so.60.3.100
+lib/ffmpeg6/libavcodec.so.60.31.102
 lib/ffmpeg6/libavdevice.a
 lib/ffmpeg6/libavdevice.so
 lib/ffmpeg6/libavdevice.so.60
-lib/ffmpeg6/libavdevice.so.60.1.100
+lib/ffmpeg6/libavdevice.so.60.3.100
 lib/ffmpeg6/libavfilter.a
 lib/ffmpeg6/libavfilter.so
 lib/ffmpeg6/libavfilter.so.9
-lib/ffmpeg6/libavfilter.so.9.3.100
+lib/ffmpeg6/libavfilter.so.9.12.100
 lib/ffmpeg6/libavformat.a
 lib/ffmpeg6/libavformat.so
 lib/ffmpeg6/libavformat.so.60
-lib/ffmpeg6/libavformat.so.60.3.100
+lib/ffmpeg6/libavformat.so.60.16.100
 lib/ffmpeg6/libavutil.a
 lib/ffmpeg6/libavutil.so
 lib/ffmpeg6/libavutil.so.58
-lib/ffmpeg6/libavutil.so.58.2.100
+lib/ffmpeg6/libavutil.so.58.29.100
 lib/ffmpeg6/libpostproc.a
 lib/ffmpeg6/libpostproc.so
 lib/ffmpeg6/libpostproc.so.57
-lib/ffmpeg6/libpostproc.so.57.1.100
+lib/ffmpeg6/libpostproc.so.57.3.100
 lib/ffmpeg6/libswresample.a
 lib/ffmpeg6/libswresample.so
 lib/ffmpeg6/libswresample.so.4
-lib/ffmpeg6/libswresample.so.4.10.100
+lib/ffmpeg6/libswresample.so.4.12.100
 lib/ffmpeg6/libswscale.a
 lib/ffmpeg6/libswscale.so
 lib/ffmpeg6/libswscale.so.7
-lib/ffmpeg6/libswscale.so.7.1.100
+lib/ffmpeg6/libswscale.so.7.5.100
 lib/ffmpeg6/pkgconfig/libavcodec.pc
 lib/ffmpeg6/pkgconfig/libavdevice.pc
 lib/ffmpeg6/pkgconfig/libavfilter.pc

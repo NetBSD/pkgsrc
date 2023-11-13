@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.3 2023/08/17 08:56:10 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2023/11/13 15:46:54 wiz Exp $
 
-BLAKE2s (ffmpeg-6.0.tar.xz) = ce6f75464ac37374825b33d7b32b22f7e9dcea51026cc885cd6668fbada65c08
-SHA512 (ffmpeg-6.0.tar.xz) = 4d0e8f635d5a1633710f30cb3e0a854b6ca3bf85e33a289d1ec7aca2ad55dc4910010bc9cf3f13eee9f6decb9d50a0df6d7aa5a342f308c3868d2730f3a6b980
-Size (ffmpeg-6.0.tar.xz) = 10234012 bytes
+BLAKE2s (ffmpeg-6.1.tar.xz) = ba38f8fd83167fdca128dc36b2946e679e729fad804797b62276e1d4b234f54b
+SHA512 (ffmpeg-6.1.tar.xz) = 72f47924806b9b128672bd268aa2c8fc2c9b8491899a772b6f82421daa2b67de45a4bdd71f6071825814e599a73adb1e42682e202a12fc055e9a224c7d5baa4a
+Size (ffmpeg-6.1.tar.xz) = 10455956 bytes
 SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
 SHA1 (patch-configure) = 59195d37ae1a70b2eb4b6576e1680e0916e1e99f
 SHA1 (patch-doc_Makefile) = c513af183e374bff4fa5945d374ddae472d51bad
 SHA1 (patch-doc_general__contents.texi) = 13704795d2688dc0377a512dc6e65025ad674724
 SHA1 (patch-doc_indevs.texi) = 8cd421a67f34ebbe6099102bf1de7c6cdb13dcb7
 SHA1 (patch-doc_outdevs.texi) = 0aec04682b516016abe9b81f6efcbbef97b1c3b2
-SHA1 (patch-libavcodec_x86_mathops.h) = d70bbbfac56cf7d37ef8789ec4a7964ec82a2c7b
 SHA1 (patch-libavdevice_Makefile) = 526efd20021068245d8904c0d55508a540ae4054
 SHA1 (patch-libavdevice_alldevices.c) = a9e2a2027fb2c18d5509b68deb5fd8523305dfc7
 SHA1 (patch-libavdevice_sunau.c) = 554a5fc77c0e94828e9eadc7f1f9d4067a76d4ae
