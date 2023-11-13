@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2023/09/15 06:32:43 pin Exp $
+# $NetBSD: Makefile,v 1.536 2023/11/13 17:38:53 wiz Exp $
 #
 
 COMMENT=	Games
@@ -255,6 +255,7 @@ SUBDIR+=	lgeneral
 SUBDIR+=	lgeneral-data
 SUBDIR+=	lgogdownloader
 SUBDIR+=	libggz
+SUBDIR+=	libgnome-games-support
 SUBDIR+=	libkdegames
 SUBDIR+=	libkmahjongg
 SUBDIR+=	liblcf
