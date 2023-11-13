@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/11/13 19:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2023/11/13 23:15:25 wiz Exp $
 
 DISTNAME=	pioneers-15.6
 PKGREVISION=	13
@@ -16,8 +16,6 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
-
-#BUILDLINK_DEPMETHOD.librsvg=	build	# generates icons
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
