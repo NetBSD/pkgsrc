@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2023/07/19 14:40:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2023/11/13 14:36:55 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -460,10 +460,11 @@ ${PYSITELIB}/hgext/zeroconf/__init__.pyo
 ${PYSITELIB}/hgext3rd/__init__.py
 ${PYSITELIB}/hgext3rd/__init__.pyc
 ${PYSITELIB}/hgext3rd/__init__.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
