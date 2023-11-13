@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/29 22:43:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/11/13 11:00:29 wiz Exp $
 
-BLAKE2s (click_aliases-1.0.2.tar.gz) = 8484bc095f390ea8c397f3dc614a87e149409fbfeec6f25f05860e3f4fc2331d
-SHA512 (click_aliases-1.0.2.tar.gz) = ffa5cf2ee8791010d4bf3a575f8e340df6f3c0788ec4f169416646ed7578090454474d1e206cb18e24518f6c988de205053f811a84f8993b9640497ddfcc7a05
-Size (click_aliases-1.0.2.tar.gz) = 2843 bytes
+BLAKE2s (click_aliases-1.0.3.tar.gz) = e0bc45a81e0add7999032630768f8c3d4700e95f16c5ee9329a25fe9f1ee9c67
+SHA512 (click_aliases-1.0.3.tar.gz) = ffd63055d0ec06a433c924769276b6c1b04bac83ddba4778c15ed6baf7b42c955d68fab31e7dfd65f76cdfabc9ed18a8a2abfce95bbb9e369fa081ed997b8272
+Size (click_aliases-1.0.3.tar.gz) = 2863 bytes
