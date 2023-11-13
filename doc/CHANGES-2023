@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6910 2023/11/13 15:47:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6911 2023/11/13 15:47:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9957,3 +9957,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/ffmpeg5 to 5.1.4 [wiz 2023-11-13]
 	Updated multimedia/ffplay5 to 5.1.4 [wiz 2023-11-13]
 	Updated multimedia/ffmpeg6 to 6.1 [wiz 2023-11-13]
+	Updated multimedia/ffplay6 to 6.1 [wiz 2023-11-13]
