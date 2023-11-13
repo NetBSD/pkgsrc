@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6929 2023/11/13 20:04:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6930 2023/11/13 20:23:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9977,3 +9977,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/libgnome [wiz 2023-11-13]
 	Removed net/gnome-vfs-smb [wiz 2023-11-13]
 	Removed sysutils/gnome-vfs [wiz 2023-11-13]
+	Updated databases/postgresql11 to 11.22 [adam 2023-11-13]
+	Updated databases/postgresql12 to 12.17 [adam 2023-11-13]
+	Updated databases/postgresql13 to 13.13 [adam 2023-11-13]
+	Updated databases/postgresql14 to 14.10 [adam 2023-11-13]
+	Updated databases/postgresql15 to 15.5 [adam 2023-11-13]
+	Updated databases/postgresql16 to 16.1 [adam 2023-11-13]
