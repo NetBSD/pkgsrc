@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2023/11/13 16:07:01 taca Exp $
+# $NetBSD: Makefile,v 1.99 2023/11/13 16:34:03 taca Exp $
 
 DISTNAME=	moodle-4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable401/
 EXTRACT_SUFX=	.tgz

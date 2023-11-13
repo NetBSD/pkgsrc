@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/07/03 12:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/13 16:34:03 taca Exp $
 
 DISTNAME=	mserv-php-090
 PKGNAME=	mserv-php-0.90
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio www
 MASTER_SITES=	# 404: http://dougiamas.com/mserv/src/
 EXTRACT_SUFX=	.tgz
