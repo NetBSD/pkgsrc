@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2023/11/12 13:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/11/13 11:49:41 wiz Exp $
 
-DISTNAME=	mupdf-1.23.4-source
+DISTNAME=	mupdf-1.23.5-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -11,8 +10,11 @@ HOMEPAGE=	https://mupdf.com/
 COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=	c99 c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
+
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
