@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2022/12/19 14:35:35 taca Exp $
+# $NetBSD: Makefile,v 1.146 2023/11/13 15:59:03 taca Exp $
 
-DISTNAME=	squirrelmail-webmail-1.4.23pre14979
-PKGNAME=	${DISTNAME:S/-webmail//}
+DISTNAME=	squirrelmail-webmail-1.4.23pre14997
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-webmail//}
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
@@ -32,14 +32,8 @@ BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-EGDIR=			share/examples/squirrelmail
-SMDIR=			share/squirrelmail
-DATADIR=		${VARBASE}/spool/squirrelmail
 ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
-
-MESSAGE_SUBST+=		SMDIR=${PREFIX}/${SMDIR}
-FILES_SUBST+=		SMDIR=${PREFIX}/${SMDIR}
 
 CONF_FILES=		${SMDIR}/config/config_default.php \
 			${SMDIR}/config/config.php
@@ -93,5 +87,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail-conf.pl.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../mail/squirrelmail/squirrelmail.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
