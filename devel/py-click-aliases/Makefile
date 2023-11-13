@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/11/13 11:00:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/13 11:30:57 adam Exp $
 
 DISTNAME=	click_aliases-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click_aliases/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
