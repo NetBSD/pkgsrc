@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6890 2023/11/13 07:58:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6891 2023/11/13 09:26:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9937,3 +9937,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/rust-bindgen to 0.69.1 [pin 2023-11-12]
 	Added devel/SDL2-legacy-darwin version 2.0.3 [nia 2023-11-12]
 	Updated www/py-autobahn to 23.6.2nb1 [wiz 2023-11-13]
+	Updated sysutils/node_exporter to 1.7.0 [bsiegert 2023-11-13]
