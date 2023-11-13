@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/11/08 13:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/11/13 23:37:07 wiz Exp $
 
 DISTNAME=	libplist-2.2.0
 PKGREVISION=	5
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=		libplist++.pc.in
 PKGCONFIG_OVERRIDE+=		libplist.pc.in
 PY_PATCHPLIST=			yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"
