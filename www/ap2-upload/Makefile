@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/07/25 12:11:45 manu Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/13 16:34:03 taca Exp $
 
 DISTNAME=	mod_upload-0.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.espci.fr/pub/mod_upload/
 
