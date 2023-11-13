@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.38 2021/10/26 10:15:21 nia Exp $
-
-BLAKE2s (libgnomeui-2.24.5.tar.bz2) = e0966a02a040e1b7d9f3ff07df19f888080fd7ae9b40bb0511b59075508d753d
-SHA512 (libgnomeui-2.24.5.tar.bz2) = e78fbe909179161acb6f7a1d31b8a247c9007af55c7f9c36422791be8d2681d42edfa582c19db88459d36309a18c03cb859997fe6b5918f602884607a8b6d5d5
-Size (libgnomeui-2.24.5.tar.bz2) = 1440172 bytes
-SHA1 (patch-aa) = 188de82086b06d84f2c93678c04636df9bcd8de5
-SHA1 (patch-libgnomeui-gnome_scores.h) = 7e06012c2a5b117fe9c3a0cc891c351b15519e00
