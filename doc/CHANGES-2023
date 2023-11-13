@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6900 2023/11/13 11:28:20 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6901 2023/11/13 11:49:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9947,3 +9947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-platformdirs to 4.0.0 [wiz 2023-11-13]
 	Updated www/py-priority to 2.0.0 [wiz 2023-11-13]
 	Updated devel/py-ruff to 0.1.5 [wiz 2023-11-13]
+	Updated print/mupdf to 1.23.5 [wiz 2023-11-13]
