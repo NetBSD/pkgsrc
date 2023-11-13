@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23642 2023/11/13 15:26:24 wiz Exp $
+$NetBSD: TODO,v 1.23643 2023/11/13 15:32:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -772,7 +772,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
-	o harfbuzz-8.3.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
