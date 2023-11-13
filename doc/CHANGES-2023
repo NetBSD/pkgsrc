@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6918 2023/11/13 18:17:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6919 2023/11/13 18:19:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9965,3 +9965,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/libgnome-games-support1 version 1.8.2 [wiz 2023-11-13]
 	Updated games/atomix to 44.0 [wiz 2023-11-13]
 	Removed games/gamazons [wiz 2023-11-13]
+	Removed games/grhino [wiz 2023-11-13]
