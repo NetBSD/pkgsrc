@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:29 nia Exp $
-
-BLAKE2s (libscigraphica-2.1.1.tar.gz) = ea1c7a15c478c73ace7548e5ba1c18a52715cf4d6da44263c4b5e378121d9fdd
-SHA512 (libscigraphica-2.1.1.tar.gz) = 9b76b98a3fc119a5ae6355cbc857470754d3a03fabd17ec8ebac4acc3e730cf3046e0a4ec26232d793bd67b18058d26834cd4f183261b1275fbc7816ced29678
-Size (libscigraphica-2.1.1.tar.gz) = 774288 bytes
-SHA1 (patch-aa) = 950a445549cd55e2dbd1e20342b3dfec3e26fff7
-SHA1 (patch-ab) = 39b3cb4cade6a4a3ba49b61d46f87d1b12cd1181
-SHA1 (patch-ac) = f94f8de42e38d3b23c8646d3e72b0abee1a94d97
-SHA1 (patch-ad) = 2527a6dba7bcf429c322ec7cea0dceddaa97481f

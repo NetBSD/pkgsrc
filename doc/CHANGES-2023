@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6933 2023/11/13 23:36:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6934 2023/11/13 23:47:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9986,3 +9986,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/lxqt-menu-data version 1.4.1 [gutteridge 2023-11-13]
 	Removed devel/libbonobo [wiz 2023-11-13]
 	Removed archivers/py-czipfile [wiz 2023-11-13]
+	Removed graphics/scigraphica [wiz 2023-11-13]
+	Removed graphics/libscigraphica [wiz 2023-11-13]
