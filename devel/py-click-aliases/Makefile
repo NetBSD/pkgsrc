@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/30 23:18:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/13 11:00:29 wiz Exp $
 
-DISTNAME=	click_aliases-1.0.2
+DISTNAME=	click_aliases-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click_aliases/}
