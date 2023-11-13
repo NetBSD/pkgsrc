@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6921 2023/11/13 18:48:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6922 2023/11/13 18:51:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9968,3 +9968,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed games/grhino [wiz 2023-11-13]
 	Updated games/teg to 0.12.0 [wiz 2023-11-13]
 	Removed audio/liteamp [wiz 2023-11-13]
+	Removed devel/libgnomeui [wiz 2023-11-13]
