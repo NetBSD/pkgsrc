@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6916 2023/11/13 18:12:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6917 2023/11/13 18:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9963,3 +9963,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-yaml to 6.0.1nb1 [wiz 2023-11-13]
 	Added games/libgnome-games-support version 2.0.0 [wiz 2023-11-13]
 	Added games/libgnome-games-support1 version 1.8.2 [wiz 2023-11-13]
+	Updated games/atomix to 44.0 [wiz 2023-11-13]
