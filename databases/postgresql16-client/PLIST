@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/17 08:53:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/13 20:22:08 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -1105,6 +1105,7 @@ ${PLIST.nls}share/locale/ko/LC_MESSAGES/ecpg-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/ecpglib6-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/initdb-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/libpq5-16.mo
+${PLIST.nls}share/locale/ko/LC_MESSAGES/pg_amcheck-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/pg_archivecleanup-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/pg_basebackup-16.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/pg_checksums-16.mo
@@ -1271,8 +1272,24 @@ ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pg_waldump-16.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pgscripts-16.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/psql-16.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpg-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/ecpglib6-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/initdb-16.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/libpq5-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_amcheck-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_archivecleanup-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_basebackup-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_checksums-16.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_config-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_controldata-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_ctl-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_dump-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_resetwal-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_rewind-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_fsync-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_test_timing-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_upgrade-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_verifybackup-16.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pg_waldump-16.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/psql-16.mo
 share/postgresql/pg_service.conf.sample
 share/postgresql/psqlrc.sample
