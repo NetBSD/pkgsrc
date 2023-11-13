@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6915 2023/11/13 17:39:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6916 2023/11/13 18:12:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9962,3 +9962,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/moodle to 4.1nb1 [taca 2023-11-13]
 	Updated textproc/py-yaml to 6.0.1nb1 [wiz 2023-11-13]
 	Added games/libgnome-games-support version 2.0.0 [wiz 2023-11-13]
+	Added games/libgnome-games-support1 version 1.8.2 [wiz 2023-11-13]
