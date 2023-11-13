@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/11/13 15:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/11/13 15:28:54 wiz Exp $
 
 DISTNAME=	faad2-2.11.0
 CATEGORIES=	audio
@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3
+
+PKGCONFIG_OVERRIDE=	libfaad/faad2.pc.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/libfaad.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
