@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:15:21 nia Exp $
-
-BLAKE2s (libgnomemm-2.30.0.tar.bz2) = 152ed25df852593a7c1f4848196ef68cffdd495a2cff61f2a49b445c4e8fcc4a
-SHA512 (libgnomemm-2.30.0.tar.bz2) = 9d4cf332ad511600504e95a64decb3dcecc14943ebb7d928c2b1fff82b2d99727754fd0252802c700092e8efad0e14ab9aacaf9af63c6bb1f9e25334f667317f
-Size (libgnomemm-2.30.0.tar.bz2) = 364011 bytes
