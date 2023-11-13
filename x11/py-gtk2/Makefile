@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2023/11/12 13:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2023/11/13 23:45:35 wiz Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -72,8 +72,6 @@ REPLACE_PYTHON+=	examples/simple/simple.py
 REPLACE_PYTHON+=	examples/simple/tooltip.py
 REPLACE_PYTHON+=	setup.py
 REPLACE_PYTHON+=	tests/runtests.py
-
-.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
