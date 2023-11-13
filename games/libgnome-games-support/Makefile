@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/13 17:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/13 18:03:05 wiz Exp $
 
 DISTNAME=	libgnome-games-support-2.0.0
 CATEGORIES=	games
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/libgnome-games-support/
-COMMENT=	Small library intended for internal use by GNOME Games
+COMMENT=	Small library intended for internal use by GNOME Games (v2)
 LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=		c
