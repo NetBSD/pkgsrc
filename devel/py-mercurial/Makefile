@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2023/10/23 06:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/11/13 14:36:55 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -12,6 +11,9 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	gmake msgfmt
 
@@ -24,11 +26,8 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.5.2
-# Fixed in pkgsrc:
-# test-remotefilelog-gc.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6843
-# Ran 931 tests, 83 skipped, 1 failed.
+# Test status as of 6.5.3
+# Ran 932 tests, 83 skipped, 0 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
@@ -39,6 +38,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.rst  \
 		${DESTDIR}${PREFIX}/share/doc/mercurial
 
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} make tests ${TEST_MAKE_FLAGS}
+
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
