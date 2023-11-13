@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/04/06 14:36:48 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/13 16:34:02 taca Exp $
 
 DISTNAME=		phabricator-20170609
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 # Track the stable branch

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/08/14 05:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/13 16:34:02 taca Exp $
 
 DISTNAME=		arcanist-20170609
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 # Track the stable branch
