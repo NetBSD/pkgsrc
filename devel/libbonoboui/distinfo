@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:15:14 nia Exp $
-
-BLAKE2s (libbonoboui-2.24.5.tar.bz2) = 8ad27448a3394c4af6d3dedb3d6b6c95922927c3ccda5ff5cd5612b2b9147c89
-SHA512 (libbonoboui-2.24.5.tar.bz2) = 163a8f39d9dad7fc3f1afc55b1a779961d285abe2988ff74bfcad4376e9dbfb91bb3e8212f96f48f91c54a6aff749ba6e00ea2d9add10c76b650f3072b875100
-Size (libbonoboui-2.24.5.tar.bz2) = 976250 bytes
