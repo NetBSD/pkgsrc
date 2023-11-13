@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2023/11/07 13:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.681 2023/11/13 18:48:50 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -270,7 +270,6 @@ SUBDIR+=	libwildmidi
 SUBDIR+=	libxmp
 SUBDIR+=	libxspf
 SUBDIR+=	lilv
-SUBDIR+=	liteamp
 SUBDIR+=	liveice
 SUBDIR+=	lmms
 SUBDIR+=	lv2
