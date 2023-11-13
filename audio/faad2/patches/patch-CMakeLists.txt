@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/13 15:22:45 wiz Exp $
+
+Allow shared libraries.
+
+--- CMakeLists.txt.orig	2023-11-07 08:38:42.000000000 +0000
++++ CMakeLists.txt
+@@ -30,6 +30,8 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin"
+   set(CMAKE_INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib")
+ endif()
+ 
++option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
++
+ # Extract version information
+ 
+ set(CAPTURE_PACKAGE_VERSION "[ \\t]*\"PACKAGE_VERSION\"[ \\t]*:[ \\t]\"(.*)\"")
