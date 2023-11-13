@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/13 18:13:11 wiz Exp $
 
-BLAKE2s (atomix-2.14.0.tar.gz) = d84ae6c19cb64b11b78c9af88c83d52be02ff7dd8e36814407767fe6177df5ba
-SHA512 (atomix-2.14.0.tar.gz) = 29839dd40ecc7f5b1cfc97319543ea63bfc9e83f685d4fe8bf981d8f6b4cfe4dd17c20cfec5982e72a7100d1b6b4a53be90838544f831f48faaba9722a1ff31f
-Size (atomix-2.14.0.tar.gz) = 332485 bytes
+BLAKE2s (atomix-44.0.tar.xz) = baa2748c11cf9e4e91a549b0036c5abf534121448f4d24135e9a73f80d7d78b7
+SHA512 (atomix-44.0.tar.xz) = 396f5704dbdf4a090800d236ec6127ee6260daa2a274c2d6c55df38d671e44e3b06fd881c3883da7bd7442b604f4d393f735a44c758aee1bbc8f2d4799ab48de
+Size (atomix-44.0.tar.xz) = 535508 bytes
