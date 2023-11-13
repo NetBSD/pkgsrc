@@ -1,22 +1,28 @@
-# $NetBSD: Makefile,v 1.84 2023/11/12 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2023/11/13 18:45:25 wiz Exp $
 
-DISTNAME=		teg-0.11.1
-PKGREVISION=		74
+DISTNAME=		teg-0.12.0
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=teg/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=wfx/}
 
 MAINTAINER=		wrzymski@gmail.com
-HOMEPAGE=		http://teg.sourceforge.net/
-COMMENT=		Round-based computer board game
+HOMEPAGE=		https://github.com/wfx/teg
+COMMENT=		Round-based computer board game (similar to Risk)
+LICENSE=		gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		autoconf automake autopoint autoreconf gmake pkg-config
 
-GCONF_SCHEMAS+=	teg.schemas
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-.include "../../mk/readline.buildlink3.mk"
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
+.include "../../devel/glib2/schemas.mk"
+.include "../../graphics/goocanvas2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
