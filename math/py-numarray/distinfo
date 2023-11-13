@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:56:02 nia Exp $
-
-BLAKE2s (numarray-1.5.2.tar.gz) = 176e9b5cd4daab1e8ae8a79d5f5da8fd0070f7821c02a7fc16d7b7e0c4c84e91
-SHA512 (numarray-1.5.2.tar.gz) = 2b66b2031ddf069632abfa8497aa6f887943073e579089428428aaca83ffd25b9919992619d709e41545e855081d4dd04da4ae4bfa0b15fcfc6e616a3ddb86f5
-Size (numarray-1.5.2.tar.gz) = 1196014 bytes
-SHA1 (patch-Include_numarray_arraybase.h) = 4ea0b49b50a7cb0e9c9cb539eab5e750584795f7
-SHA1 (patch-Src___dotblas.c) = fcb6109d0c73ad50e0c33c79d6655a1b4cfeca0d
-SHA1 (patch-aa) = 6edaab221c6d52a47e5a52b3039e37b8fef814b1
-SHA1 (patch-cfg__packages.py) = 6ded69dabce1942624daa588fe3c64ef67758e34

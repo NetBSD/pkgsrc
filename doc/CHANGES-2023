@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6934 2023/11/13 23:47:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6935 2023/11/13 23:48:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9988,3 +9988,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed archivers/py-czipfile [wiz 2023-11-13]
 	Removed graphics/scigraphica [wiz 2023-11-13]
 	Removed graphics/libscigraphica [wiz 2023-11-13]
+	Removed math/py-numarray [wiz 2023-11-13]
