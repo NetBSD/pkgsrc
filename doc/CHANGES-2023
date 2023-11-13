@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6901 2023/11/13 11:49:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6902 2023/11/13 14:37:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9948,3 +9948,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-priority to 2.0.0 [wiz 2023-11-13]
 	Updated devel/py-ruff to 0.1.5 [wiz 2023-11-13]
 	Updated print/mupdf to 1.23.5 [wiz 2023-11-13]
+	Updated devel/py-mercurial to 6.5.3 [wiz 2023-11-13]
