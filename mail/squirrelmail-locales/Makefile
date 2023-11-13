@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 12:19:32 asau Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/13 16:02:03 taca Exp $
 
 DISTNAME=	all_locales-${VER}-20090526
-PKGNAME=	squirrelmail-locales-${VER}
+PKGNAME=	${PHP_PKG_PREFIX}-squirrelmail-locales-${VER}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +25,8 @@ do-build:
 do-install:
 	cd ${WRKDIR} && \
 		pax -rw -pp help images locale \
-			${DESTDIR}${PREFIX}/share/squirrelmail
+			${DESTDIR}${PREFIX}/${SMDIR}
 
-.include "../../mail/squirrelmail/buildlink3.mk"
+.include "../../mail/squirrelmail/squirrelmail.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
