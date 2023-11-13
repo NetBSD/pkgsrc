@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/10/30 13:02:49 nia Exp $
+# $NetBSD: Makefile,v 1.73 2023/11/13 23:17:41 jperkin Exp $
 
 DISTNAME=	bulk-large-20231030
 CATEGORIES=	meta-pkgs
@@ -82,7 +82,7 @@ DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 DEPENDS+=	claws-mail-[0-9]*:../../mail/claws-mail
 DEPENDS+=	${PHP_PKG_PREFIX}-roundcube-[0-9]*:../../mail/roundcube
-DEPENDS+=	squirrelmail-[0-9]*:../../mail/squirrelmail
+DEPENDS+=	${PHP_PKG_PREFIX}-squirrelmail-[0-9]*:../../mail/squirrelmail
 DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
 DEPENDS+=	thunderbird-l10n-[0-9]*:../../mail/thunderbird-l10n
 DEPENDS+=	R-[0-9]*:../../math/R
