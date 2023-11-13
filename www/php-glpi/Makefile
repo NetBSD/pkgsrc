@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/08/16 13:52:48 hauke Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/13 16:34:03 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
+PKGREVISION=	1
 GLPI_VERSION=	10.0.2
 CATEGORIES=	www
 
