@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2023/11/12 13:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/14 04:15:38 gutteridge Exp $
 
-DISTNAME=	lxqt-openssh-askpass-1.3.0
-PKGREVISION=	5
+DISTNAME=	lxqt-openssh-askpass-1.4.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
