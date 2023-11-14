@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/11/14 14:01:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/11/14 18:45:28 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
+CONFIGURE_ARGS+=	--without-unbound
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 069900
 CONFIGURE_ARGS+=	--without-srtp
@@ -139,18 +140,11 @@ PLIST.mgcp=	yes
 PLIST.mgcp=	yes
 .endif
 
-PLIST_VARS+=	timerfd
+PLIST_VARS+=		timerfd
 .if defined(OPSYS_HAS_TIMERFD)
-PLIST.timerfd=	yes
-.endif
-
-PLIST_VARS+=	unbound
-# unbound 1.5 or later is required.`
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 090000 && \
-    exists(/usr/include/unbound.h)
-CONFIGURE_ARGS+=	--without-unbound
+PLIST.timerfd=		yes
 .else
-PLIST.unbound=	yes
+CONFIGURE_ARGS+=	--without-timerfd
 .endif
 
 .include "options.mk"
