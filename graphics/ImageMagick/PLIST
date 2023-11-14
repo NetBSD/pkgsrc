@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.119 2023/03/13 10:45:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.120 2023/11/14 19:01:34 nia Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -167,7 +167,6 @@ lib/pkgconfig/MagickWand.pc
 share/ImageMagick-7/english.xml
 share/ImageMagick-7/francais.xml
 share/ImageMagick-7/locale.xml
-share/doc/ImageMagick-7/www/vpat.html
 share/examples/ImageMagick/colors.xml
 share/examples/ImageMagick/delegates.xml
 share/examples/ImageMagick/log.xml
