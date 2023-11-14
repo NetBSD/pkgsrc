@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6975 2023/11/14 19:41:54 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6976 2023/11/14 20:02:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10033,3 +10033,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cookiecutter to 2.4.0 [adam 2023-11-14]
 	Removed emulators/pcsxr [nia 2023-11-14]
 	Updated chat/matterircd to 0.28.0 [bsiegert 2023-11-14]
+	Removed emulators/libretro-dolphin [nia 2023-11-14]
