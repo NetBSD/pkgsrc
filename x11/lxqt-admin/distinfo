@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/04/18 10:09:57 pin Exp $
+$NetBSD: distinfo,v 1.11 2023/11/14 04:13:49 gutteridge Exp $
 
-BLAKE2s (lxqt-admin-1.3.0.tar.xz) = a44660b5ea018d6efc25c4d74cf10cebe8b95e67a5f7b8065e2c90af4a1519a4
-SHA512 (lxqt-admin-1.3.0.tar.xz) = 5538d20466a42c5a6e31925889ce2315bd63fc15b79ede0faacd485f10a33375f9799597601dcf3bba421e7b55797b0d7c898c2b579d878c32e79ef897735ef6
-Size (lxqt-admin-1.3.0.tar.xz) = 151148 bytes
+BLAKE2s (lxqt-admin-1.4.0.tar.xz) = 161d2b630db6b52637b423dccc7fba4ca33829e1a14583771fe7b744546194ce
+SHA512 (lxqt-admin-1.4.0.tar.xz) = f6292006f308cd435243577c5f6cf7e7ebb6cb3ed069b26a3e8cf295e299e482255f1d39801db1e5f94cf780ec6621c8100e2ab5a2c2d5599551f1c7a2c19610
+Size (lxqt-admin-1.4.0.tar.xz) = 152052 bytes
