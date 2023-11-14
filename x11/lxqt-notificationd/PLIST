@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/04/18 11:38:24 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/14 04:19:32 gutteridge Exp $
 bin/lxqt-config-notificationd
 bin/lxqt-notificationd
 share/applications/lxqt-config-notificationd.desktop
@@ -16,6 +16,7 @@ share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_el.q
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_en_GB.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_es.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_et.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_fi.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_fr.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_gl.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_he.qm
@@ -52,6 +53,7 @@ share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_el.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_en_GB.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_es.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_et.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_fi.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_fr.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_gl.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_he.qm
