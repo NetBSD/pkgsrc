@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6939 2023/11/14 00:39:14 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6940 2023/11/14 01:00:54 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9993,3 +9993,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-sqlalchemy-migrate to 0.13.0nb3 [wiz 2023-11-14]
 	Updated x11/qtxdg-tools to 3.12.0 [gutteridge 2023-11-14]
 	Updated x11/liblxqt to 1.4.0 [gutteridge 2023-11-14]
+	Updated x11/libfm-qt to 1.4.0 [gutteridge 2023-11-14]
