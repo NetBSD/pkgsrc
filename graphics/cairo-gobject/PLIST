@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2011/02/12 13:40:53 drochner Exp $
-include/cairo/cairo-gobject.h
-lib/libcairo-gobject.la
-lib/pkgconfig/cairo-gobject.pc

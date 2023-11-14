@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/14 13:58:36 wiz Exp $
 
 DISTNAME=	gjs-1.68.4
 PKGREVISION=	10
@@ -29,7 +29,8 @@ CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

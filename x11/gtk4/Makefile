@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/11/12 13:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/11/14 13:58:37 wiz Exp $
 
 DISTNAME=	gtk-4.12.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -56,8 +56,8 @@ PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 .include "../../devel/libexecinfo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

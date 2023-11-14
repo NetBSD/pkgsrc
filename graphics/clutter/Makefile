@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/11/12 13:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	clutter-1.26.2
 PKGREVISION=	13
@@ -47,8 +47,8 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.30.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo-gobject+=	cairo-gobject>=1.14.0
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cogl+=	cogl>=1.20.0
 .include "../../graphics/cogl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.12.0

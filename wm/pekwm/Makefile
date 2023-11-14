@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/11/12 13:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/11/14 13:58:37 wiz Exp $
 
 DISTNAME=	pekwm-0.3.0
 PKGREVISION=	1
@@ -29,8 +29,8 @@ CMAKE_ARG_PATH=	${WRKSRC}
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

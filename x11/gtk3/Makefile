@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2023/11/12 13:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2023/11/14 13:58:37 wiz Exp $
 
 DISTNAME=	gtk+-3.24.38
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -72,7 +72,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.57.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.30.0
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 
@@ -84,9 +83,8 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.41
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.14.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libepoxy+=	libepoxy>=1.4
 .include "../../graphics/libepoxy/buildlink3.mk"
