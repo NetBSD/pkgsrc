@@ -1,16 +1,25 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/12/04 12:15:41 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2023/11/14 13:22:29 jperkin Exp $
 
 Do not install duo_unix_support (very Linux specific, assumes /etc, not very
-useful in a pkgsrc context).
+useful in a pkgsrc context).  Also skip unnecessary license files.
 
---- Makefile.in.orig	2020-05-18 16:08:52.000000000 +0000
+--- Makefile.in.orig	2023-07-28 15:10:36.000000000 +0000
 +++ Makefile.in
-@@ -371,7 +371,7 @@ top_build_prefix = @top_build_prefix@
+@@ -380,7 +380,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I autotools
 -SUBDIRS = compat lib login_duo duo_unix_support $(am__append_1) tests \
 +SUBDIRS = compat lib login_duo $(am__append_1) tests \
  	tests/unity_tests
- dist_doc_DATA = README.md CONTRIBUTING.md AUTHORS CHANGES LICENSE
+ dist_doc_DATA = README.md CONTRIBUTING.md AUTHORS CHANGES $(wildcard sbom.spdx)
+ LICENSES = $(wildcard LICENSES/*.txt)
+@@ -796,7 +796,7 @@ install-data: install-data-recursive
+ uninstall: uninstall-recursive
  
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ 
+ installcheck: installcheck-recursive
+ install-strip:
