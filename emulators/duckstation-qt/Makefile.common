@@ -1,0 +1,57 @@
+# $NetBSD: Makefile.common,v 1.1 2023/11/14 17:57:40 nia Exp $
+
+# This is a separate file out of optimism that the non-qt version will
+# eventually be portable.
+
+GITHUB_TAG=	v0.1-5624
+DISTNAME=	duckstation-${GITHUB_TAG:S/-/./g:S/^v//g}
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=stenzek/}
+
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://www.duckstation.org/
+LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config pax
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/duckstation-qt/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/duckstation-qt/patches
+
+WRKSRC=		${WRKDIR}/duckstation-${GITHUB_TAG:S/^v//g}
+
+USE_CXX_FEATURES+=	c++17 c++20
+
+ONLY_FOR_PLATFORM+=	*-*-i386
+ONLY_FOR_PLATFORM+=	*-*-x86_64
+ONLY_FOR_PLATFORM+=	*-*-aarch64
+ONLY_FOR_PLATFORM+=	*-*-earmv7hf
+
+CMAKE_ARGS+=		-DENABLE_DISCORD_PRESENCE=OFF
+CMAKE_ARGS+=		-DBUILD_REGTEST=OFF
+CMAKE_ARGS+=		-DUSE_DBUS=OFF
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/pixmaps
+INSTALLATION_DIRS+=	share/duckstation
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/duckstation-qt/qthost.cpp
+SUBST_FILES.paths+=	src/duckstation-qt/qttranslations.cpp
+SUBST_VARS.paths=	PREFIX
+
+# Sigh...
+BUILDLINK_TRANSFORM+=	l:zlib:z
+
+# Stop cmake/build.mk overriding it.
+do-install:
+
+.include "../../devel/cmake/build.mk"
+.include "../../archivers/minizip/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../audio/soundtouch/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"

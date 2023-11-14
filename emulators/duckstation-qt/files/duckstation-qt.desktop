@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=DuckStation Qt
+Comment=Sony PlayStation emulator
+Icon=duckstation
+Exec=duckstation-qt
+Terminal=false
+Categories=Game;Emulator;
