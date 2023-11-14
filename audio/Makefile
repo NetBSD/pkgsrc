@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2023/11/13 18:48:50 wiz Exp $
+# $NetBSD: Makefile,v 1.682 2023/11/14 01:03:01 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -180,7 +180,6 @@ SUBDIR+=	gst-plugins1-vorbis
 SUBDIR+=	gst-plugins1-wavpack
 SUBDIR+=	gtick
 SUBDIR+=	gtkmserv
-SUBDIR+=	gtkpod
 SUBDIR+=	guspatches
 SUBDIR+=	herrie
 SUBDIR+=	hts_engine
