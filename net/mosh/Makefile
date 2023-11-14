@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/11/02 14:43:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/11/14 13:50:03 jperkin Exp $
 
 DISTNAME=	mosh-1.4.0
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Remote terminal application which allows roaming
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		gmake perl:run pkg-config
 USE_LANGUAGES+=		c c++
 USE_GCC_RUNTIME=	yes
 
