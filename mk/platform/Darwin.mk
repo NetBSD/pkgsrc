@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.135 2023/11/09 18:56:45 nia Exp $
+# $NetBSD: Darwin.mk,v 1.136 2023/11/14 13:41:09 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -236,6 +236,8 @@ MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 # XXX: probably applies to more platforms too, but the GCC docs
 # unhelpfully describe -pthread as a "HP-UX/Solaris flag" to this day
 BUILDLINK_TRANSFORM+=	opt:-pthread:-lpthread
+
+BUILDLINK_TRANSFORM+=	rm:-Wl,-no_compact_unwind
 
 # unfortunately, many highly-depended-upon packages now include multiple
 # overlapping definitions. This changes them from an error to a warning.
