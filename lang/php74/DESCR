@@ -21,3 +21,7 @@ PHP 7.4 comes with numerous improvements and new features such as
 For source downloads of PHP 7.4 please visit our downloads page Windows
 binaries can be found on the PHP for Windows site.  The list of changes is
 recorded in the ChangeLog.
+
+NOTE: This version reached End of Life on November 28 2022. Updating to
+a more recent version is strongly recommended. Please see
+https://www.php.net/supported-versions.php for additional details.
