@@ -1,0 +1,13 @@
+$NetBSD: patch-util_meson.build,v 1.1 2023/11/14 13:48:19 wiz Exp $
+
+Use library providing backtrace_symbols()
+
+--- util/meson.build.orig	2023-09-23 14:18:32.000000000 +0000
++++ util/meson.build
+@@ -43,5 +43,5 @@ foreach util : cairo_utils
+ endforeach
+ 
+ if conf.get('CAIRO_HAS_DLSYM', 0) == 1 and cc.has_header('execinfo.h')
+-  libmallocstats = library('malloc-stats', 'malloc-stats.c', dependencies : dl_dep)
++  libmallocstats = library('malloc-stats', 'malloc-stats.c', dependencies : [dl_dep, backtrace_dep])
+ endif
