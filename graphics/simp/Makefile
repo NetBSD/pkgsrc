@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/11/12 13:22:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	simp-3.4.1
 PKGREVISION=    3
@@ -24,8 +24,8 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

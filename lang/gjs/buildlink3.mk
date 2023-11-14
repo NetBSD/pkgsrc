@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2023/11/12 13:22:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/11/14 13:58:36 wiz Exp $
 
 BUILDLINK_TREE+=	gjs
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gjs?=	../../lang/gjs
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .endif	# GJS_BUILDLINK3_MK

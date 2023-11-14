@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2023/11/12 13:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.258 2023/11/14 13:58:33 wiz Exp $
 
 DISTNAME=	pango-1.50.14
 PKGREVISION=	2
@@ -67,9 +67,8 @@ BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=2.7.2
 .if ${LIBRSVG_TYPE} == "rust"
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
+BUILDLINK_API_DEPENDS.cairo+=   cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/14 13:58:34 wiz Exp $
 
 DISTNAME=	gerb-0.0.1alpha20230427
 PKGREVISION=	4
@@ -30,8 +30,8 @@ do-install:
 .include "../../lang/python/tool.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

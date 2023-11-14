@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1028 2023/11/14 01:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.1029 2023/11/14 13:58:34 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -69,7 +69,6 @@ SUBDIR+=	blinkentools
 SUBDIR+=	box2d
 SUBDIR+=	breeze-icons
 SUBDIR+=	cairo
-SUBDIR+=	cairo-gobject
 SUBDIR+=	cairomm
 SUBDIR+=	cairomm1.16
 SUBDIR+=	cal3d

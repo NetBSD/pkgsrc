@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/12 13:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	librsvg-2.40.21
 PKGREVISION=	15
@@ -47,10 +47,8 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.38
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_DEPMETHOD.cairo-gobject+=	build
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1

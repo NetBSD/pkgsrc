@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/11/12 13:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	Cairo-GObject-1.005
 PKGNAME=	p5-${DISTNAME:tl}
@@ -22,6 +22,7 @@ BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.224
 .include "../../devel/p5-glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.p5-cairo+=	p5-cairo>=1.080
 .include "../../graphics/p5-cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

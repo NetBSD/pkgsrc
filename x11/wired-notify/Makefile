@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/14 13:58:37 wiz Exp $
 
 DISTNAME=	wired-notify-0.10.2
 PKGREVISION=	3
@@ -29,8 +29,8 @@ post-install:
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
