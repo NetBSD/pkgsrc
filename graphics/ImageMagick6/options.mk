@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2022/09/29 09:21:11 nros Exp $
+# $NetBSD: options.mk,v 1.6 2023/11/14 19:03:37 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick
-PKG_SUPPORTED_OPTIONS=		doc x11 jp2 djvu openexr wmf fpx
-PKG_SUGGESTED_OPTIONS=		doc x11 jp2
+PKG_SUPPORTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 djvu openexr
+PKG_SUPPORTED_OPTIONS+=		wmf fpx
+PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2
 PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
 .include "../../mk/bsd.options.mk"
@@ -13,6 +14,20 @@ PLIST_SRC+=		PLIST
 PLIST_SRC+=		PLIST.doc
 .else
 CONFIGURE_ARGS+=	--disable-docs
+.endif
+
+.if !empty(PKG_OPTIONS:Mfontconfig)
+CONFIGURE_ARGS+=	--with-fontconfig
+.include "../../fonts/fontconfig/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-fontconfig
+.endif
+
+.if !empty(PKG_OPTIONS:Mghostscript)
+CONFIGURE_ARGS+=	--with-gslib
+.include "../../print/ghostscript/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gslib
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
