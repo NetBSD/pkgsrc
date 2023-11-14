@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2023/11/14 19:03:37 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/11/14 22:43:44 markd Exp $
 
 BUILDLINK_TREE+=	ImageMagick6
 
@@ -18,7 +18,7 @@ pkgbase := ImageMagick6
 .include "../../fonts/fontconfig/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick6:Mghostscript}
-.include "../../fonts/ghostscript/buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick6:Mjp2}
 .include "../../graphics/openjpeg/buildlink3.mk"
