@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6950 2023/11/14 03:55:14 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6951 2023/11/14 03:57:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10004,3 +10004,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/pavucontrol-qt to 1.4.0 [gutteridge 2023-11-14]
 	Removed graphics/libgnomecanvas [wiz 2023-11-14]
 	Updated x11/libkscreen to 5.27.9 [gutteridge 2023-11-14]
+	Updated x11/lxqt-config to 1.4.0 [gutteridge 2023-11-14]
