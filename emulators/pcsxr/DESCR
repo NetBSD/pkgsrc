@@ -1,6 +1,0 @@
-PCSX-Reloaded is a forked version of the dead PCSX PlayStation emulator, with
-a nicer interface and several improvements to stability and functionality.
-
-PCSX-Reloaded uses the PSEMU plugin interface to provide most functionality;
-without them, you will not be able to use it to play games. PCSX-Reloaded
-provides a number of plugins to provide basic functionality out of the box.
