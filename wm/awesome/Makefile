@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/11/12 13:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2023/11/14 13:58:37 wiz Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	13
@@ -58,8 +58,8 @@ pre-configure:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

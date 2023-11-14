@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2023/11/12 13:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.157 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	librsvg-2.56.3
 PKGREVISION=	3
@@ -25,7 +25,7 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # Requires gi-docgen to generate HTML format API documentation
 TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo-gobject}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo}/lib
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
@@ -61,9 +61,8 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.50.0
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.48.11
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9

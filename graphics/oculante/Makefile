@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/11/12 13:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/11/14 13:58:35 wiz Exp $
 
 DISTNAME=	oculante-0.7.7
 PKGREVISION=	2
@@ -43,8 +43,8 @@ DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"

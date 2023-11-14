@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/11/12 13:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/11/14 13:58:34 wiz Exp $
 
 DISTNAME=	osm-gps-map-1.2.0
 PKGREVISION=	11
@@ -19,10 +19,10 @@ PKGCONFIG_OVERRIDE+=	osmgpsmap-1.0.pc.in
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
