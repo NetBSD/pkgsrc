@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23646 2023/11/13 18:51:53 wiz Exp $
+$NetBSD: TODO,v 1.23647 2023/11/14 12:38:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -760,7 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o guacamole-server-1.3.0
 	o guile-gtk-2.1
 	o gummi-0.8.1
-	o gvfs-1.50.3
+	o gvfs-1.52.1
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
@@ -1126,7 +1126,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.27
-	o plasma-wayland-protocols-1.11.0
 	o ploticus-examples-230
 	o ply-3.11
 	o poco-1.12.4
