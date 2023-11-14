@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/12/04 12:15:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/14 13:22:29 jperkin Exp $
 include/common_ini_test.h
 include/duo.h
 include/duo_private.h
@@ -11,10 +11,5 @@ man/man3/duo.3
 man/man8/login_duo.8
 ${PLIST.pam}man/man8/pam_duo.8
 sbin/login_duo
-share/doc/duo_unix/AUTHORS
-share/doc/duo_unix/CHANGES
-share/doc/duo_unix/CONTRIBUTING.md
-share/doc/duo_unix/LICENSE
-share/doc/duo_unix/README.md
 share/examples/duo-unix/login_duo.conf
 ${PLIST.pam}share/examples/duo-unix/pam_duo.conf
