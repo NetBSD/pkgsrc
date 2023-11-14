@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:45 nia Exp $
-
-BLAKE2s (go-goptlib/1.0.0.tar.gz) = 59bfdea040d0ffa12bf3f5046fda31510193f44fbad0bd426fedfcd715f69713
-SHA512 (go-goptlib/1.0.0.tar.gz) = 6246dbc8207adfcd8c5690d38ce731387cf7280d9b3cc1fec6b26fc235a09832cb9d7d28f66787496e7ff5b57da94b195f4004d1614aff67286fa67a5cddeb58
-Size (go-goptlib/1.0.0.tar.gz) = 25843 bytes
