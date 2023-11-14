@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/11/10 01:41:25 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/14 00:18:07 gutteridge Exp $
 bin/screengrab
 share/applications/screengrab.desktop
 share/doc/screengrab/html/default.css
@@ -19,6 +19,7 @@ share/screengrab/translations/screengrab_de.qm
 share/screengrab/translations/screengrab_el.qm
 share/screengrab/translations/screengrab_es.qm
 share/screengrab/translations/screengrab_et.qm
+share/screengrab/translations/screengrab_fi.qm
 share/screengrab/translations/screengrab_fr.qm
 share/screengrab/translations/screengrab_gl.qm
 share/screengrab/translations/screengrab_he.qm
