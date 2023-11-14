@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:46:27 nia Exp $
-
-BLAKE2s (libgnomecanvas-2.30.3.tar.bz2) = 7de769e11ea6f6e89f1849bce81baa6ad3916ddbb6947eb775615f1df057a3d0
-SHA512 (libgnomecanvas-2.30.3.tar.bz2) = b5bfa2133f5172abd5228d467db4d980dd4ac125cdbf55dcc1d5055dc3330861320c12cccb52ea63ba7f69824504c9d25781cd78001dc7a92b11c6f7e0c550de
-Size (libgnomecanvas-2.30.3.tar.bz2) = 574139 bytes
