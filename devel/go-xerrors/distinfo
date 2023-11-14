@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:47 nia Exp $
-
-BLAKE2s (go-xerrors-20190719-9bdfabe685.tar.gz) = 1e2af469af6921525f3edaed252a114a33a11e7ceb5cabdac9c39d7602d0344a
-SHA512 (go-xerrors-20190719-9bdfabe685.tar.gz) = 9f6f524feda6c6fcf56c0a2347362a245d7a6f7f430826d2ccf56c521f6db6c913d8788f7894866dd6667c9ed65b5a6c35176e5952f8687f71cd7c7b179083f9
-Size (go-xerrors-20190719-9bdfabe685.tar.gz) = 13661 bytes
