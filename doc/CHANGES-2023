@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6964 2023/11/14 12:38:05 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6965 2023/11/14 13:22:38 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10018,3 +10018,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/lxqt-runner to 1.4.0 [gutteridge 2023-11-14]
 	Updated meta-pkgs/lxqt to 1.4.0 [gutteridge 2023-11-14]
 	Updated devel/plasma-wayland-protocols to 1.11.0 [wiz 2023-11-14]
+	Updated security/duo-unix to 2.0.2 [jperkin 2023-11-14]
