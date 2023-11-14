@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23651 2023/11/14 16:05:56 wiz Exp $
+$NetBSD: TODO,v 1.23652 2023/11/14 19:41:54 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -936,7 +936,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o matchbox-panel-0.9.3
 	o mate-system-monitor-1.26.0
 	o materia-gtk-theme-20210322
-	o matterircd-0.24.0
 	o mbuf-20141227
 	o mbuffer-20210328
 	o mcollective-2.3.2
