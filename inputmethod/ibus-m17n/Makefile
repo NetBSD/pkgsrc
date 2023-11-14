@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2023/11/12 13:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/11/14 14:02:18 wiz Exp $
 #
 
 DISTNAME=	ibus-m17n-1.3.4
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 

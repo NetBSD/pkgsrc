@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/11/12 13:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/11/14 14:01:37 wiz Exp $
 
 DISTNAME=	libindicator-12.10.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/libindicator/12.10/${PKGVERSION_NOREV}/+download/
 

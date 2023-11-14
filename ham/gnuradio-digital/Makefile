@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2023/11/12 13:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/11/14 14:02:14 wiz Exp $
 
 PKGNAME=	gnuradio-digital-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Digital related algorithms for GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"
