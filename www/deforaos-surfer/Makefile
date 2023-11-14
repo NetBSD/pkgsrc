@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2023/11/12 13:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/11/14 14:03:03 wiz Exp $
 
 DISTNAME=	Surfer-0.3.1
 PKGNAME=	deforaos-surfer-0.3.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Surfer/
 

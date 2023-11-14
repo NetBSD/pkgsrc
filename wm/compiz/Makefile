@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.152 2023/11/12 13:23:47 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2023/11/14 14:02:59 wiz Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	compiz-${PKGVER}
-PKGREVISION=	82
+PKGREVISION=	83
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 

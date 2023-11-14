@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2023/11/12 13:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/11/14 14:02:59 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-timer-plugin-1.7.2

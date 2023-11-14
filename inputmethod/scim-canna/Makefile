@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2023/11/12 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/11/14 14:02:21 wiz Exp $
 #
 
 DISTNAME=		scim-canna-1.0.1
-PKGREVISION=		39
+PKGREVISION=		40
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_OSDN:=scim-imengine/29155/}
 

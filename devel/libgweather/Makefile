@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2023/11/12 13:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2023/11/14 14:01:37 wiz Exp $
 
 DISTNAME=	libgweather-40.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=/sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

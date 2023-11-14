@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/11/14 13:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/14 14:01:40 wiz Exp $
 
 DISTNAME=	pygobject-3.36.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
