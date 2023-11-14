@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6944 2023/11/14 01:04:00 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6945 2023/11/14 01:05:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9998,3 +9998,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed audio/gtkpod [wiz 2023-11-14]
 	Updated archivers/lxqt-archiver to 0.9.0 [gutteridge 2023-11-14]
 	Updated graphics/lximage-qt to 1.4.0 [gutteridge 2023-11-14]
+	Removed graphics/libgnomecanvasmm [wiz 2023-11-14]
