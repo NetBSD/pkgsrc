@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6959 2023/11/14 04:21:27 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6960 2023/11/14 04:22:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10013,3 +10013,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/lxqt-notificationd to 1.4.0 [gutteridge 2023-11-14]
 	Updated sysutils/lxqt-powermanagement to 1.4.0 [gutteridge 2023-11-14]
 	Updated x11/lxqt-session to 1.4.0 [gutteridge 2023-11-14]
+	Updated security/lxqt-sudo to 1.4.0 [gutteridge 2023-11-14]
