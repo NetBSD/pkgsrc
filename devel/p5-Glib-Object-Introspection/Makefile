@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/11/12 13:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/11/14 13:58:33 wiz Exp $
 
 DISTNAME=	Glib-Object-Introspection-0.048
 PKGNAME=	p5-${DISTNAME}
@@ -21,8 +21,9 @@ PERL5_PACKLIST=		auto/Glib/Object/Introspection/.packlist
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-BUILDLINK_DEPMETHOD.cairo-gobject=	build
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_DEPMETHOD.cairo=	build
+BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .endif
 
 

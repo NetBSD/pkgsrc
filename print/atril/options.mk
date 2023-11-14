@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/10/28 21:49:22 maya Exp $
+# $NetBSD: options.mk,v 1.5 2023/11/14 13:58:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.atril
 PKG_SUPPORTED_OPTIONS=	dbus pdf ps xps dvi djvu tiff gdk-pixbuf keyring introspection
@@ -85,7 +85,8 @@ CONFIGURE_ARGS+=	--without-keyring
 .if !empty(PKG_OPTIONS:Mintrospection)
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-introspection
 PLIST.introspection=	yes
 .else
