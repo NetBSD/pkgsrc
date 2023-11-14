@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4127 2023/11/14 21:35:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4128 2023/11/14 21:44:23 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -449,15 +449,12 @@ SUBDIR+=	go-goreturns
 SUBDIR+=	go-gox
 SUBDIR+=	go-impl
 SUBDIR+=	go-nbreader
-SUBDIR+=	go-pty
 SUBDIR+=	go-review
-SUBDIR+=	go-siphash
 SUBDIR+=	go-staticcheck
 SUBDIR+=	go-swagger
 SUBDIR+=	go-sys
 SUBDIR+=	go-tools
 SUBDIR+=	go-wire
-SUBDIR+=	go-xerrors
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
 SUBDIR+=	golangci-lint
