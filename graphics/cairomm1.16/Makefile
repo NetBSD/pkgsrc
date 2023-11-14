@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/11/14 14:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/14 16:01:45 wiz Exp $
 
-DISTNAME=	cairomm-1.16.2
+DISTNAME=	cairomm-1.18.0
 PKGNAME=	${DISTNAME:S/cairomm/cairomm1.16/}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -14,27 +13,16 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl pkg-config
-# TODO: update
-PKGCONFIG_OVERRIDE+=	data/cairomm-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-ft-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-pdf-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-png-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-ps-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-quartz-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-quartz-font-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-quartz-image-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-svg-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-win32-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-win32-font-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-xlib-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	data/cairomm-xlib-xrender-1.0.pc.in
+
+PKGCONFIG_OVERRIDE+=		output/data/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 PLIST_VARS+=	x11 quartz
 
 .include "../../devel/libsigc++3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/mm-common/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.14
 .include "../../graphics/cairo/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.cairo:Mx11}
 PLIST.x11=	yes
