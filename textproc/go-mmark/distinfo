@@ -1,29 +1,23 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/14 21:28:38 bsiegert Exp $
 
-BLAKE2s (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 1e3e33c00707a3593021eb034c331e03c391be2a8977de8635ddcdd39b13ded4
-SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 320941bc3b7fb8bc595e6135cbc513a7583d129f0cd92508055291e141191066303cf75148e25198c21f6c6c539a790ea3210f3ecf5de6a2a03b70c753091146
-Size (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 34 bytes
-BLAKE2s (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = d25ca220e9adbe837dd982363249621f342dbe179d460f7367524c9529523007
-SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = 43ed64ae515738487e9b75a2290d0b2bc25e83c021a9f29b21487c37adbf34e74e1e7d3d5ec0dfe678c8396356f95c3993a5f5610d1791ff62056cd182a4272f
-Size (github.com__burnt_sushi_toml_@v_v0.3.1.zip) = 56132 bytes
-BLAKE2s (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.mod) = 2d8d61491ed132e1c3424366222419b28f853f7e73b22003c420ecfb9bf90b35
-SHA512 (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.mod) = 63263cc150ee2227348efd3b40bc03855bed69eedc25795edf5f33e419b0c70ec348c6970e87ffe5dc045f533f8b0e2ad1910214f34cf0a022ec53626c862669
-Size (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.mod) = 117 bytes
-BLAKE2s (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.zip) = 9cc04483b21975b68c4a441735fc79d9b7fc9e8b1749a8acd19430ccaa1c61b1
-SHA512 (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.zip) = 57e3ce5975c4eebc72a309d589ffd754fbc9612bd7d304a6c4b620620ac485fb7b0f9369b308374f68705e6dd5f8ff8598842bf0ff7a3d2921b3f10f927221aa
-Size (github.com_gomarkdown_markdown_@v_v0.0.0-20200817091206-6efd7696db82.zip) = 181182 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = cd3c2cea509a40639fa5501d594ba981c1385767f14e35780d21b8bd313977a4
+SHA512 (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = 0e8cdda81300811f629bce3a9307de05450036f750f8c3c0cd5b70854f8f95bd962ce99bfe1325c8d1bf562a5b7b94afb9e9fd2dbe4dcc45325fac6e27471102
+Size (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = 43 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 1c9f0c8270856133eafeeb2dadee458e38471a261fd5a2fc7f80e3571b1a6565
+SHA512 (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 6996d01ab26a4afbfa102b1c74ede682c51267278bf0d809590ce3b3d267aef2a3c42e5609f009ff2e235098739feba883372e080ef4f534d580ac20ccd656c5
+Size (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 303020 bytes
+BLAKE2s (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.mod) = 96cad588056a78adc85dab6adef87b633051790efe2c3d590cb7a423ede35937
+SHA512 (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.mod) = 82701935515fe97c53b95c3a47e090063ce7acf679b571f0e4e4b85f74db31259a119d1db20d0988768bb5b05e9f687d43f7823df3f837bcffb4f0749cb95cce
+Size (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.mod) = 47 bytes
+BLAKE2s (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.zip) = 46bbc91d61cc60a9df0c27719085147174df1cab6597d007b99c477d16a8256e
+SHA512 (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.zip) = 527d9a78b8677321d513829f7c3b903ab2924e5f8542f7c895105aa85294b2fe18bf345881378f2a24e79c2e3eac66894918e4bd3ac4e625ee76a415cabcdbea
+Size (github.com_gomarkdown_markdown_@v_v0.0.0-20230922112808-5421fefb8386.zip) = 192565 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.2.0.mod) = b527d9b12f3de3a8355f18e986847efb92bf07f76a2b9cb5d329b7249d42cb7d
 SHA512 (github.com_google_go-cmp_@v_v0.2.0.mod) = 7229d917bb0c788b07297e1b09b8f7952f951998a56f17ea1f69ff7c2f565a5686b212f42f45c6b8351905d6740a2ec5a235e493daa531ae00cb709faf67ae45
 Size (github.com_google_go-cmp_@v_v0.2.0.mod) = 32 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.2.0.zip) = 16c84cc1769bbd0db20da6807dadcb4d9e218af3ed9a60ccfeb54fd3c4e94ad9
 SHA512 (github.com_google_go-cmp_@v_v0.2.0.zip) = 7be2dd2b362f56ad7fb7be35b62a841ca051d4fe31ffe1ca784e393b0cfe44674a050cf1129a15094872bc16c8ed9bc62afe0e7017bcaf1a4eb9b2e39423f790
 Size (github.com_google_go-cmp_@v_v0.2.0.zip) = 74164 bytes
-BLAKE2s (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.mod) = 17f640fe01a00e5246c7ba72efea25799e36de50ff2eb88027a040c2e1645555
-SHA512 (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.mod) = 56b93febe493806b2048bcade992b0bae3f8d79c6c4eaf953eefeffb5b36c8b75adf8b9376bd61b16ffb921f6a3ec3b3485f977eff0a35ee9ce5eea8676102e3
-Size (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.mod) = 30 bytes
-BLAKE2s (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.zip) = bc3e2fe5446cd0b97c1536a834bd68a46563c43da3188734e6a8b365e84ac49e
-SHA512 (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.zip) = 231b0ce25c1df21f7f6f1985d4428d59fa58b992b8060caab019ba9ba50253db13a5576ffdb73d310a86c72a7168a7d6c8fd840df5f23ee60e3bb61e3de8847c
-Size (golang.org_dl_@v_v0.0.0-20190829154251-82a15e2f2ead.zip) = 52920 bytes
-BLAKE2s (mmark-2.2.10.tar.gz) = 4816c14de1d35e5bc89b8498d83f24bddd00d60c66813d161a29a47898f13c5f
-SHA512 (mmark-2.2.10.tar.gz) = 08b89b62998659aa647450ca760192f16c1d8a4fadee708412fda8e3a11583e5d2d7fa8dce4c41a0c343c6ec2d10d966f5f95547b32de128523a0be62ad92ad4
-Size (mmark-2.2.10.tar.gz) = 179663 bytes
+BLAKE2s (mmark-2.2.43.tar.gz) = 379c322ad26c5a271487fc305e010a35f2c25c72ce6503a3f9413bac175ff207
+SHA512 (mmark-2.2.43.tar.gz) = 7d3d3cc62fc750c734850f1e280408460b17b8533e15c735258157660c06eaf88e3bfdf8ad022101db99fe7e014f84ce116e745a4e998095e62d66ff61a8384e
+Size (mmark-2.2.43.tar.gz) = 255581 bytes
