@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.11 2012/09/13 15:50:08 jperkin Exp $
+$NetBSD: patch-util_cairo-missing_getline.c,v 1.1 2023/11/14 13:48:19 wiz Exp $
 
 The variable name is self-explanatory :)
 

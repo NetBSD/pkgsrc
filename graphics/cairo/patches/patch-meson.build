@@ -1,0 +1,14 @@
+$NetBSD: patch-meson.build,v 1.1 2023/11/14 13:48:19 wiz Exp $
+
+Look for library providing backtrace_symbols()
+
+--- meson.build.orig	2023-09-23 14:18:32.000000000 +0000
++++ meson.build
+@@ -167,6 +167,7 @@ check_thread_flags = [
+ ]
+ 
+ m_dep = cc.find_library('m', required: false)
++backtrace_dep = cc.find_library('execinfo', required: false)
+ # Used in util
+ gtk_dep = dependency('gtk+-2.0', required: get_option('gtk2-utils'))
+ 
