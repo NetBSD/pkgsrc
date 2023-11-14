@@ -1,3 +1,0 @@
-Go 1.13 contains new functions in the errors package for wrapping error
-values. This package contains compatibility code to provide equivalent
-APIs for older Go versions too.
