@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6984 2023/11/14 21:45:07 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6985 2023/11/14 23:40:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10017,7 +10017,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/lxqt-panel to 1.4.0 [gutteridge 2023-11-14]
 	Updated x11/lxqt-runner to 1.4.0 [gutteridge 2023-11-14]
 	Updated meta-pkgs/lxqt to 1.4.0 [gutteridge 2023-11-14]
-	Updated devel/plasma-wayland-protocols to 1.11.0 [wiz 2023-11-14]
 	Updated security/duo-unix to 2.0.2 [jperkin 2023-11-14]
 	Updated graphics/cairo to 1.18.0 [wiz 2023-11-14]
 	Removed graphics/cairo-gobject successor graphics/cairo [wiz 2023-11-14]
