@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6983 2023/11/14 21:36:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6984 2023/11/14 21:45:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10039,7 +10039,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cargo-modules to 0.11.0 [pin 2023-11-14]
 	Updated graphics/matugen to 0.11.0 [pin 2023-11-14]
 	Updated editors/tp-note to 1.23.1 [pin 2023-11-14]
-	Removed textproc/go-kr-text [bsiegert 2023-11-14]
+	Removed textproc/go-kr-text [bsiegert 2023-11-14 
 	Updated textproc/go-mmark to 2.2.43 [bsiegert 2023-11-14]
 	Removed textproc/go-text [bsiegert 2023-11-14]
-	Removed devel/go-goptlib [bsiegert 2023-11-14]
+        Removed devel/go-goptlib [bsiegert 2023-11-14]
+	Removed devel/go-pty [bsiegert 2023-11-14]
+	Removed devel/go-siphash [bsiegert 2023-11-14]
+	Removed devel/go-xerrors [bsiegert 2023-11-14]
