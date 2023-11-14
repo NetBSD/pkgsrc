@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/18 11:44:47 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/14 04:20:21 gutteridge Exp $
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
@@ -39,6 +39,7 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_tr.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_uk.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_zh_CN.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_zh_TW.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ar.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_arn.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ast.qm
