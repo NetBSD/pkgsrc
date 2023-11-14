@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/11/14 12:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/14 23:39:40 wiz Exp $
 
-DISTNAME=	plasma-wayland-protocols-1.11.0
+DISTNAME=	plasma-wayland-protocols-1.10.0
+PKGREVISION=	5
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=plasma-wayland-protocols/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,9 +13,9 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-.include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.qt5-qtbase=	build
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
