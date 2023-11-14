@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/11/12 13:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/11/14 10:30:43 nia Exp $
 
 PKGREVISION= 22
 .include "version.mk"
@@ -117,7 +117,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
-.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
