@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2023/05/12 09:25:24 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2023/11/14 13:22:29 jperkin Exp $
 
 Ensure openssl rpath flags are used.
 
---- configure.orig	2020-05-18 16:08:51.000000000 +0000
+--- configure.orig	2023-07-28 15:10:35.000000000 +0000
 +++ configure
-@@ -13013,7 +13013,7 @@ fi
+@@ -13023,7 +13023,7 @@ fi
  
  
              if test x"$PKG_CONFIG" != x""; then
 -                OPENSSL_LDFLAGS=`$PKG_CONFIG openssl --libs-only-L 2>/dev/null`
-+                OPENSSL_LDFLAGS=`$PKG_CONFIG openssl --libs-only-L --libs-only-other 2>/dev/null`
++                :
                  if test $? = 0; then
                      OPENSSL_LIBS=`$PKG_CONFIG openssl --libs-only-l 2>/dev/null`
                      OPENSSL_INCLUDES=`$PKG_CONFIG openssl --cflags-only-I 2>/dev/null`
