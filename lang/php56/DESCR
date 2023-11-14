@@ -7,4 +7,5 @@ write dynamically generated pages quickly.
 This package provides PHP version 5.6.x.
 
 NOTE: This version reached End of Life on December 31 2018. Updating to
-PHP 7.3.x, 7.4.x, or 8.0.x is strongly recommended.
+a more recent version is strongly recommended. Please see
+https://www.php.net/supported-versions.php for additional details.
