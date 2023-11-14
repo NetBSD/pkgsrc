@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2023/09/18 12:39:16 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/14 21:06:42 pin Exp $
 
-DISTNAME=	matugen-0.10.1
+DISTNAME=	matugen-0.11.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=InioX/}
 GITHUB_TAG=	matugen-v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/InioX/Matugen/
+HOMEPAGE=	https://github.com/InioX/matugen/
 COMMENT=	Material you color generation tool
 LICENSE=	gnu-gpl-v2
 
