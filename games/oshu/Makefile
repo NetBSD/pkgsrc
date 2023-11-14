@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/11/12 13:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/11/14 14:01:54 wiz Exp $
 
 DISTNAME=	oshu-2.0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fmang/}
 

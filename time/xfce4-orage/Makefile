@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2023/11/12 13:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/11/14 14:02:59 wiz Exp $
 
 VERSION=	4.18.0
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 MASTER_SITES=	https://archive.xfce.org/src/apps/orage/${VERSION:R}/
 

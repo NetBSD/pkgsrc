@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2023/11/12 13:22:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2023/11/14 14:02:07 wiz Exp $
 
 BUILDLINK_TREE+=	libgdiplus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgdiplus
 LIBGDIPLUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgdiplus+=	libgdiplus>=2.8.1
-BUILDLINK_ABI_DEPENDS.libgdiplus+=	libgdiplus>=6.1nb5
+BUILDLINK_ABI_DEPENDS.libgdiplus+=	libgdiplus>=6.1nb6
 BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
 
 .include "../../devel/glib2/buildlink3.mk"

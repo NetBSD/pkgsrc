@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2023/11/12 13:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/11/14 14:01:54 wiz Exp $
 
 DISTNAME=	rftg-0.9.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	http://keldon.net/rftg/
 EXTRACT_SUFX=	.tar.bz2

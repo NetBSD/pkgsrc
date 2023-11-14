@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/11/12 13:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/14 14:02:40 wiz Exp $
 #
 
 DISTNAME=	nfdump-1.6.12
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfdump/}
 

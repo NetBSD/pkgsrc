@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2023/11/12 13:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/11/14 14:03:23 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-eyes-plugin-4.6.0

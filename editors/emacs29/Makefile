@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/11/12 13:21:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/14 14:01:42 wiz Exp $
 
 CONFLICTS+=	emacs29-nox11-[0-9]*
 
-PKGREVISION=	6
+PKGREVISION=	7
 
 .include "../../editors/emacs29/Makefile.common"
 

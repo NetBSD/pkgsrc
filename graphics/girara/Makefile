@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/11/12 13:21:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/11/14 14:02:03 wiz Exp $
 
 DISTNAME=	girara-0.3.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	https://pwmt.org/projects/girara/download/
 EXTRACT_SUFX=	.tar.xz
