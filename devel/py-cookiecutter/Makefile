@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/08/27 20:13:12 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/14 17:58:37 adam Exp $
 
-DISTNAME=	cookiecutter-2.3.0
+DISTNAME=	cookiecutter-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/audreyr/cookiecutter
 COMMENT=	Command-line utility that creates projects from project templates
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-binaryornot>=0.4.4:../../devel/py-binaryornot
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
@@ -25,15 +27,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} cookiecutter cookiecutter-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
