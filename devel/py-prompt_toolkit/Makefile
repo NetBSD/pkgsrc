@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/07/05 12:04:13 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/11/14 17:38:44 adam Exp $
 
-DISTNAME=	prompt_toolkit-3.0.39
+DISTNAME=	prompt_toolkit-3.0.41
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prompt_toolkit/}
