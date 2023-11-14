@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/09/29 01:30:09 markd Exp $
+$NetBSD: distinfo,v 1.7 2023/11/14 03:53:46 gutteridge Exp $
 
-BLAKE2s (libkscreen-5.24.6.tar.xz) = 8f89d79cfedfc71fdf58faefb51832c40f83ceb1c862f1b780b12e1a10ca6963
-SHA512 (libkscreen-5.24.6.tar.xz) = 5fb86aae3c0be6f7f3108396a5f4a24aa0137dd65f53db84b9f703a309f3f695c083af3055b0f553dde07ffdc81f73794578ae8fa82bc8483460ace742a55b84
-Size (libkscreen-5.24.6.tar.xz) = 99496 bytes
+BLAKE2s (libkscreen-5.27.9.tar.xz) = d866f9caac31c52af2f46b6fd7961aad5f0fb33e4e11534fd3be845245052ef4
+SHA512 (libkscreen-5.27.9.tar.xz) = b876aecfaaefbe4c109588de1060b29f4f70dbb322ee005f302ec69f0c5b9a490b68dea537577edd65e8e19ed52f34406b6519ba06eaf6b49c60b4ff3902570a
+Size (libkscreen-5.27.9.tar.xz) = 116060 bytes
+SHA1 (patch-backends_kwayland_waylandoutputdevice.cpp) = 852d446fa14513206b494612094910bf37364ba3
