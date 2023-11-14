@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6937 2023/11/14 00:28:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6938 2023/11/14 00:34:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9991,3 +9991,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed math/py-numarray [wiz 2023-11-13]
 	Updated graphics/screengrab to 2.7.0 [gutteridge 2023-11-14]
 	Updated databases/py-sqlalchemy-migrate to 0.13.0nb3 [wiz 2023-11-14]
+	Updated x11/qtxdg-tools to 3.12.0 [gutteridge 2023-11-14]
