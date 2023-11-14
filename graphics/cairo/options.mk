@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2022/10/04 07:13:52 wiz Exp $
+# $NetBSD: options.mk,v 1.24 2023/11/14 13:48:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -11,31 +11,23 @@ PKG_SUGGESTED_OPTIONS=	x11 xcb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		x11 xcb quartz
+PLIST_VARS+=	x11 xcb quartz
 
 ###
 ### X11 and XCB support (XCB implies X11)
 ###
 .if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Mxcb)
-CONFIGURE_ARGS+=	--enable-xlib
-CONFIGURE_ARGS+=	--enable-xlib-xrender
-PLIST.x11=		yes
+PLIST.x11=	yes
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 
 .  if !empty(PKG_OPTIONS:Mxcb)
-CONFIGURE_ARGS+=	--enable-xcb
-PLIST.xcb=		yes
+PLIST.xcb=	yes
 .    include "../../x11/libxcb/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--disable-xcb
 .  endif
-
-.else
-CONFIGURE_ARGS+=	--disable-xlib
-CONFIGURE_ARGS+=	--disable-xlib-xrender
-CONFIGURE_ARGS+=	--disable-xcb
 .endif
 
 ###
@@ -49,13 +41,6 @@ CONFIGURE_ARGS+=	--disable-xcb
 # fonts in MacOS X system-default paths too so sticking with it will
 # not be a problem.
 .if !empty(PKG_OPTIONS:Mquartz)
-CONFIGURE_ARGS+=	--enable-quartz
-CONFIGURE_ARGS+=	--enable-quartz-font
-CONFIGURE_ARGS+=	--enable-quartz-image
-PLIST.quartz=		yes
-WARNINGS+=		"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
-.else
-CONFIGURE_ARGS+=	--disable-quartz
-CONFIGURE_ARGS+=	--disable-quartz-font
-CONFIGURE_ARGS+=	--disable-quartz-image
+PLIST.quartz=	yes
+WARNINGS+=	"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
 .endif
