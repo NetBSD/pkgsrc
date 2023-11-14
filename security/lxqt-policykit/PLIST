@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/18 10:08:40 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/14 03:59:44 gutteridge Exp $
 bin/lxqt-policykit-agent
 man/man1/lxqt-policykit-agent.1
 share/examples/autostart/lxqt-policykit-agent.desktop
@@ -14,6 +14,7 @@ share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_de.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_el.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_es.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_et.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_fi.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_fr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_gl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_he.qm
