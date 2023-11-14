@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2023/11/12 13:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/14 14:01:58 wiz Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
 # Date of the latest git commit
 DISTNAME=	adaptagrams-0.20160901
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjwybrow/}
 

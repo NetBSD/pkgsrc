@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/11/12 13:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/14 14:03:03 wiz Exp $
 
 DISTNAME=	badwolf-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://hacktivis.me/releases/
 

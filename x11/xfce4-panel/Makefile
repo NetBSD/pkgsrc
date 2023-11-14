@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2023/11/12 13:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2023/11/14 14:03:23 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-panel-4.18.4

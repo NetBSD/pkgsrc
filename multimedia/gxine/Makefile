@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.127 2023/11/12 13:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2023/11/14 14:02:34 wiz Exp $
 
 DISTNAME=	gxine-0.5.910
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xine/}
 EXTRACT_SUFX=	.tar.xz

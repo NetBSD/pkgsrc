@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/11/14 13:58:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/11/14 14:03:11 wiz Exp $
 
 BUILDLINK_TREE+=	gtk4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtk4
 GTK4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.0.3
-BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4>=4.12.3nb4
+BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4>=4.12.3nb5
 BUILDLINK_PKGSRCDIR.gtk4?=	../../x11/gtk4
 
 .include "../../devel/glib2/buildlink3.mk"

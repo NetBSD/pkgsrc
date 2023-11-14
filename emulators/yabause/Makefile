@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2023/11/12 13:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/11/14 14:01:49 wiz Exp $
 
 DISTNAME=	yabause-0.9.15
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.tuxfamily.org/yabause/releases/${PKGVERSION_NOREV}/
 

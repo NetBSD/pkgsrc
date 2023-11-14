@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2023/11/12 13:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/11/14 14:02:35 wiz Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://www.kdenlive.org/

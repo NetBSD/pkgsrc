@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2023/11/12 13:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/11/14 14:02:39 wiz Exp $
 
 DISTNAME=	guacamole-server-1.0.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_APACHE:=guacamole/${PKGVERSION_NOREV}/source/}
 

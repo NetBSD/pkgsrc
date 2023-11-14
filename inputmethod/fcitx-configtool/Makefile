@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/11/12 13:22:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/14 14:02:16 wiz Exp $
 
 DISTNAME=	fcitx-configtool-0.4.9
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx-configtool/
 EXTRACT_SUFX=	.tar.xz

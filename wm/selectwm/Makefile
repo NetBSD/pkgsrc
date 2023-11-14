@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2023/11/12 13:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/14 14:03:02 wiz Exp $
 #
 
 DISTNAME=	selectwm-0.4.1
-PKGREVISION=	42
+PKGREVISION=	43
 CATEGORIES=	wm
 MASTER_SITES=	http://ordiluc.net/selectwm/
 
