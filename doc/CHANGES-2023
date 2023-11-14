@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6967 2023/11/14 13:58:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6968 2023/11/14 16:01:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10021,3 +10021,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/duo-unix to 2.0.2 [jperkin 2023-11-14]
 	Updated graphics/cairo to 1.18.0 [wiz 2023-11-14]
 	Removed graphics/cairo-gobject successor graphics/cairo [wiz 2023-11-14]
+	Updated graphics/cairomm1.16 to 1.18.0 [wiz 2023-11-14]
