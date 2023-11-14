@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6943 2023/11/14 01:03:22 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6944 2023/11/14 01:04:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9997,3 +9997,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/pcmanfm-qt to 1.4.0 [gutteridge 2023-11-14]
 	Removed audio/gtkpod [wiz 2023-11-14]
 	Updated archivers/lxqt-archiver to 0.9.0 [gutteridge 2023-11-14]
+	Updated graphics/lximage-qt to 1.4.0 [gutteridge 2023-11-14]
