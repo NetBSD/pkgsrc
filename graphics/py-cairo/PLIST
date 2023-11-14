@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST,v 1.13 2023/07/20 13:41:25 ryoon Exp $
-include/pycairo/py3cairo.h
-lib/pkgconfig/py3cairo.pc
+@comment $NetBSD: PLIST,v 1.14 2023/11/14 16:08:43 wiz Exp $
 ${PYSITELIB}/cairo/__init__.py
 ${PYSITELIB}/cairo/__init__.pyc
 ${PYSITELIB}/cairo/__init__.pyi
+${PYSITELIB}/cairo/__init__.pyo
 ${PYSITELIB}/cairo/_cairo.so
 ${PYSITELIB}/cairo/include/py3cairo.h
 ${PYSITELIB}/cairo/py.typed
-${PYSITELIB}/pycairo-${PKGVERSION}.egg-info
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING-LGPL-2.1
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING-MPL-1.1
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
