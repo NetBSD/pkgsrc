@@ -1,9 +1,0 @@
-Xournal is an application for notetaking, sketching, keeping a
-journal using a stylus.  It is free software (GNU GPL) and runs on
-GTK+/Gnome platforms.  It is similar to Jarnal, Gournal, and NoteLab.
-
-Xournal allows to add annotations to PDF documents, including notes,
-multicolor highlighting and simple drawing, and can save those in
-another filename (distinguished by the suffix), to automatically
-load them back when opening the PDF document again.  It also
-remembers the previous page position.

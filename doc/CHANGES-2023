@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6946 2023/11/14 01:06:03 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6947 2023/11/14 01:08:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10000,3 +10000,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/lximage-qt to 1.4.0 [gutteridge 2023-11-14]
 	Removed graphics/libgnomecanvasmm [wiz 2023-11-14]
 	Updated x11/lxqt-qtplugin to 1.4.0 [gutteridge 2023-11-14]
+	Removed editors/xournal successor editors/xournalpp [wiz 2023-11-14]

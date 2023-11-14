@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:21:44 nia Exp $
-
-BLAKE2s (xournal-0.4.8.2016.tar.gz) = 47122a9dc75d1ed074431334875862f8ee15d34fce4f40f46dd14a821f5e7b19
-SHA512 (xournal-0.4.8.2016.tar.gz) = 1426d5c9ba3486fbe342d49fc19fcc162965cd6a7b7754f79665e43fe0e60e6f42f61969405ace78fdaa7b99cbb3d4b07b7fb5df246d68a329b52084b6eec76e
-Size (xournal-0.4.8.2016.tar.gz) = 646082 bytes
-SHA1 (patch-src_xo-paint.c) = 0c708b9aa0cb65be0c9817f09f9c78eb4e29568b
-SHA1 (patch-src_xo-shapes.c) = ab5a56780dd6fa37a3b51f89468c6100137454f3

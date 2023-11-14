@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2023/11/04 08:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.241 2023/11/14 01:08:48 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -186,7 +186,6 @@ SUBDIR+=	xemacs-packages
 SUBDIR+=	xfce4-mousepad
 SUBDIR+=	xjed
 SUBDIR+=	xnedit
-SUBDIR+=	xournal
 SUBDIR+=	xournalpp
 SUBDIR+=	xvile
 SUBDIR+=	xwpe
