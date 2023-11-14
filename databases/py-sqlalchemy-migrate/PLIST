@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/20 15:58:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/14 00:28:15 wiz Exp $
 bin/migrate-${PYVERSSUFFIX}
 bin/migrate-repository-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/migrate/__init__.py
 ${PYSITELIB}/migrate/__init__.pyc
 ${PYSITELIB}/migrate/__init__.pyo
@@ -238,3 +230,11 @@ ${PYSITELIB}/migrate/versioning/util/keyedinstance.pyo
 ${PYSITELIB}/migrate/versioning/version.py
 ${PYSITELIB}/migrate/versioning/version.pyc
 ${PYSITELIB}/migrate/versioning/version.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
