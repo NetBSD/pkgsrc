@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.19 2023/09/16 13:21:23 tnn Exp $
+# $NetBSD: build.mk,v 1.20 2023/11/14 12:42:34 wiz Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -141,6 +141,7 @@ meson-build:
 	    ninja -j ${_MAKE_JOBS_N:U1} -C output
 .endfor
 
+.if empty(${MESON_INSTALL:Mno})
 do-install: meson-install
 meson-install:
 .for d in ${INSTALL_DIRS}
@@ -153,6 +154,7 @@ meson-install:
 	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 	    ninja -j ${_MAKE_JOBS_N:U1} -C output install
 .endfor
+.endif
 
 do-test: meson-test
 meson-test:
