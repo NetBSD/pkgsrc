@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 09:59:01 nia Exp $
-
-BLAKE2s (gtkpod-1.0.0.tar.gz) = b75efcca73d6d5de9cec74561cb349d42b055479b6413c6d03b5e58dd1c0ab53
-SHA512 (gtkpod-1.0.0.tar.gz) = 96d365642d190d9187b6d4879e31fc2a48da1e54a6c1701c48ca0b176b1afa7f0d08b33fcae2d0a9573c15d36875c7e29ed0cd755afb9f210d8ef3275adbc9f7
-Size (gtkpod-1.0.0.tar.gz) = 1899869 bytes
-SHA1 (patch-bi) = 664a807d14318fd205a89dacc3084212cc9c6d5e
-SHA1 (patch-bj) = 6caafe347a5d4cdb6cdfa48d72121272d75e8a80
-SHA1 (patch-bk) = a1be464c20e1c291627a56c21892ddf7e599e896
-SHA1 (patch-src_mp4file.c) = 59cdfb1705d0051ebdefc009216c7482e4a7023e
