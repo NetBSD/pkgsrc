@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.329 2023/11/12 13:21:49 wiz Exp $
+# $NetBSD: Makefile,v 1.330 2023/11/14 19:03:37 nia Exp $
 
 PKGREVISION= 4
 .include "Makefile.common"
@@ -13,14 +13,10 @@ CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 USE_LANGUAGES=		c c++ c99
 USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
-CONFIGURE_ARGS+=	--with-fontconfig
 CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-xml=yes
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-# This one used to be optional, but it depends on ghostscript even if it's
-# disabled so having a way to disable it seems pointless.
-CONFIGURE_ARGS+=	--with-gslib
 # http://www.imagemagick.org/discourse-server/viewtopic.php?f=2&t=25475
 CONFIGURE_ARGS.NetBSD+=	--disable-openmp
 PKGCONFIG_OVERRIDE+=	MagickWand/MagickWand.pc.in
@@ -84,15 +80,9 @@ SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 CTF_FILES_SKIP+=	lib/libMagickCore-7.Q16HDRI.so.*
 CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
 
-.include "../../print/ghostscript/buildlink3.mk"
-.if ${PKG_BUILD_OPTIONS.ghostscript:Mghostscript-gpl}
-CFLAGS+=		-DPKGSRC_USE_OLD_GHOSTSCRIPT
-.endif
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
