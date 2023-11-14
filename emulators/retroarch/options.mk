@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.17 2021/02/02 12:05:48 ryoon Exp $
+# $NetBSD: options.mk,v 1.18 2023/11/14 10:30:43 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
-PKG_SUPPORTED_OPTIONS+=		debug caca ffmpeg freetype sixel qt5
+PKG_SUPPORTED_OPTIONS+=		debug caca ffmpeg freetype mbedtls sixel qt5
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -14,7 +14,7 @@ PKG_OPTIONS_GROUP.gl+=		rpi
 .endif
 
 PKG_OPTIONS_GROUP.gl+=		opengl
-PKG_SUGGESTED_OPTIONS=		freetype opengl
+PKG_SUGGESTED_OPTIONS=		freetype opengl mbedtls
 
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 
@@ -118,4 +118,11 @@ CONFIGURE_ARGS+=	--enable-caca
 .include "../../graphics/libcaca/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-caca
+.endif
+
+.if !empty(PKG_OPTIONS:Mmbedtls)
+CONFIGURE_ARGS+=	--enable-ssl
+.include "../../security/mbedtls/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssl
 .endif
