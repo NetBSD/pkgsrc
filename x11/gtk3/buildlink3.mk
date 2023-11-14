@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2023/11/12 13:24:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2023/11/14 13:58:37 wiz Exp $
 
 BUILDLINK_TREE+=	gtk3
 
@@ -20,7 +20,6 @@ pkgbase := gtk3
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libepoxy+=	libepoxy>=1.4

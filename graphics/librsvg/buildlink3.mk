@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.76 2023/11/12 13:22:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.77 2023/11/14 13:58:35 wiz Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -26,7 +26,6 @@ PKG_FAIL_REASON+=	"[graphics/librsvg/buildlink3.mk] Invalid value ${LIBRSVG_TYPE
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .endif # LIBRSVG_BUILDLINK3_MK
 

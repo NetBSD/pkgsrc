@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/12 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/14 13:58:34 wiz Exp $
 
 DISTNAME=	pygobject-3.36.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}
@@ -43,6 +43,7 @@ BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.46.0
 # https://bugzilla.gnome.org/show_bug.cgi?id=685094
 # https://bugzilla.gnome.org/show_bug.cgi?id=707196
 .include "../../graphics/py-cairo/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=   cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
