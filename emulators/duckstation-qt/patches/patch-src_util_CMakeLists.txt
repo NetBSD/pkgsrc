@@ -1,0 +1,12 @@
+$NetBSD: patch-src_util_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle libraries.
+
+--- src/util/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ src/util/CMakeLists.txt
+@@ -42,4 +42,4 @@ add_library(util
+ target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
+ target_include_directories(util PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+ target_link_libraries(util PUBLIC common simpleini)
+-target_link_libraries(util PRIVATE libchdr zlib soundtouch)
++target_link_libraries(util PRIVATE libchdr ${ZLIB_LIBRARIES} ${SOUNDTOUCH_LINK_LIBRARIES})

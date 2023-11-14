@@ -1,0 +1,24 @@
+$NetBSD: patch-src_frontend-common_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle libraries.
+
+--- src/frontend-common/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ src/frontend-common/CMakeLists.txt
+@@ -27,7 +27,7 @@ add_library(frontend-common
+   postprocessing_shadergen.h
+ )
+ 
+-target_link_libraries(frontend-common PUBLIC core common imgui tinyxml2 rapidjson scmversion)
++target_link_libraries(frontend-common PUBLIC core common imgui tinyxml2 ${RAPIDJSON_LIBRARIES} scmversion)
+ 
+ if(ENABLE_CUBEB)
+   target_sources(frontend-common PRIVATE
+@@ -145,7 +145,7 @@ if(ENABLE_CHEEVOS)
+     achievements.h
+   )
+   target_compile_definitions(frontend-common PUBLIC -DWITH_CHEEVOS=1)
+-  target_link_libraries(frontend-common PRIVATE rcheevos rapidjson)
++  target_link_libraries(frontend-common PRIVATE rcheevos ${RAPIDJSON_LIBRARIES})
+ endif()
+ 
+ # Copy the provided data directory to the output directory.

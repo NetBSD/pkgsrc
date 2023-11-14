@@ -1,0 +1,15 @@
+$NetBSD: patch-src_common_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle dependencies.
+
+--- src/common/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ src/common/CMakeLists.txt
+@@ -62,7 +62,7 @@ add_library(common
+ target_include_directories(common PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
+ target_include_directories(common PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+ target_link_libraries(common PUBLIC fmt Threads::Threads vulkan-headers GSL fast_float)
+-target_link_libraries(common PRIVATE stb libchdr zlib minizip Zstd::Zstd "${CMAKE_DL_LIBS}")
++target_link_libraries(common PRIVATE stb libchdr ${ZLIB_LIBRARIES} ${MINIZIP_LIBRARIES} ${ZSTD_LIBRARIES} "${CMAKE_DL_LIBS}")
+ 
+ if(WIN32)
+   target_sources(common PRIVATE

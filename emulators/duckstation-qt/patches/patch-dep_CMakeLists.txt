@@ -1,0 +1,31 @@
+$NetBSD: patch-dep_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle dependencies.
+
+--- dep/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ dep/CMakeLists.txt
+@@ -2,18 +2,19 @@ add_subdirectory(fmt)
+ add_subdirectory(gsl)
+ add_subdirectory(glad)
+ add_subdirectory(stb)
+-add_subdirectory(zlib)
+-add_subdirectory(zstd)
+-add_subdirectory(minizip)
+ add_subdirectory(lzma)
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(ZLIB REQUIRED zlib)
++pkg_check_modules(ZSTD REQUIRED libzstd)
++pkg_check_modules(MINIZIP REQUIRED minizip)
++pkg_check_modules(RAPIDJSON REQUIRED RapidJSON)
++pkg_check_modules(SOUNDTOUCH REQUIRED soundtouch)
+ add_subdirectory(libchdr)
+ add_subdirectory(xxhash)
+-add_subdirectory(rapidjson)
+ add_subdirectory(glslang)
+ add_subdirectory(imgui)
+ add_subdirectory(simpleini)
+ add_subdirectory(vulkan)
+-add_subdirectory(soundtouch)
+ add_subdirectory(tinyxml2)
+ add_subdirectory(googletest)
+ add_subdirectory(cpuinfo)
