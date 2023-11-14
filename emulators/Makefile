@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.352 2023/07/03 21:49:20 nia Exp $
+# $NetBSD: Makefile,v 1.353 2023/11/14 17:57:40 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -58,6 +58,7 @@ SUBDIR+=	dgen
 SUBDIR+=	dolphin-emu
 SUBDIR+=	dosbox
 SUBDIR+=	dosbox-x
+SUBDIR+=	duckstation-qt
 SUBDIR+=	dynagen
 SUBDIR+=	dynamips
 SUBDIR+=	e-uae

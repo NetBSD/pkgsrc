@@ -1,0 +1,15 @@
+$NetBSD: patch-src_duckstation-qt_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle dependencies.
+
+--- src/duckstation-qt/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ src/duckstation-qt/CMakeLists.txt
+@@ -170,7 +170,7 @@ qt6_add_translation(QM_FILES ${TS_FILES}
+ 
+ add_executable(duckstation-qt ${SRCS} ${QM_FILES})
+ target_include_directories(duckstation-qt PRIVATE "${Qt6Gui_PRIVATE_INCLUDE_DIRS}" "${CMAKE_CURRENT_SOURCE_DIR}")
+-target_link_libraries(duckstation-qt PRIVATE frontend-common core common imgui glad minizip scmversion Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
++target_link_libraries(duckstation-qt PRIVATE frontend-common core common imgui glad ${MINIZIP_LIBRARIES} ${SOUNDTOUCH_LIBRARIES} scmversion Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
+ 
+ if(WIN32)
+   # We want a Windows subsystem application not console.
