@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/11/05 11:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/14 23:59:23 wiz Exp $
 
 DISTNAME=	xmlschema-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/brunato/xmlschema
 COMMENT=	XML Schema validator and decoder
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-elementpath>=4.1.5:../../textproc/py-elementpath
 
