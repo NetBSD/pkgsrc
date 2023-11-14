@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/14 13:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/14 14:01:50 wiz Exp $
 
 DISTNAME=	gerb-0.0.1alpha20230427
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epilys/}
 GITHUB_PROJECT=	gerb

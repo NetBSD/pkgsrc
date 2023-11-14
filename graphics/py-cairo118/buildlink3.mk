@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/11/12 13:22:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/11/14 14:02:10 wiz Exp $
 
 BUILDLINK_TREE+=	py-cairo
 
@@ -8,7 +8,7 @@ PY_CAIRO_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-cairo+=	${PYPKGPREFIX}-cairo>=1.10.0
-BUILDLINK_ABI_DEPENDS.py-cairo?=	${PYPKGPREFIX}-cairo>=1.18.2nb4
+BUILDLINK_ABI_DEPENDS.py-cairo?=	${PYPKGPREFIX}-cairo>=1.18.2nb5
 BUILDLINK_PKGSRCDIR.py-cairo?=		../../graphics/py-cairo
 
 .include "../../graphics/cairo/buildlink3.mk"

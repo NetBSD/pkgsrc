@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2023/11/12 13:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/14 14:01:35 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
 
 .include "../../devel/distcc/Makefile.common"
