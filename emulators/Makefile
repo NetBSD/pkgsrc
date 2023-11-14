@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2023/11/14 18:03:43 nia Exp $
+# $NetBSD: Makefile,v 1.355 2023/11/14 20:02:01 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -114,7 +114,6 @@ SUBDIR+=	libretro-bsnes-mercury-performance
 SUBDIR+=	libretro-cap32
 SUBDIR+=	libretro-core-info
 SUBDIR+=	libretro-desmume
-SUBDIR+=	libretro-dolphin
 SUBDIR+=	libretro-fbneo
 SUBDIR+=	libretro-fceumm
 SUBDIR+=	libretro-flycast
