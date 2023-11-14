@@ -1,20 +1,9 @@
-$NetBSD: distinfo,v 1.97 2023/01/24 10:16:33 wiz Exp $
+$NetBSD: distinfo,v 1.98 2023/11/14 13:48:19 wiz Exp $
 
-BLAKE2s (cairo-1.16.0.tar.xz) = fba95926f57ad97d9c0c197c355ef646fd3cf9d17d1eb3270d343eef5d7bfa40
-SHA512 (cairo-1.16.0.tar.xz) = 9eb27c4cf01c0b8b56f2e15e651f6d4e52c99d0005875546405b64f1132aed12fbf84727273f493d84056a13105e065009d89e94a8bfaf2be2649e232b82377f
-Size (cairo-1.16.0.tar.xz) = 41997432 bytes
-SHA1 (patch-aa) = b01bc60f77a7122b0c0d0d9b25ad512bac7c190c
-SHA1 (patch-ab) = 11f7e0e59bd5c51a8fdacb48dcf2f2fefdf3b768
-SHA1 (patch-ac) = 1785bbef6bcab4781bf89e1b986a7eb96e5f2b64
-SHA1 (patch-ad) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
-SHA1 (patch-boilerplate_cairo-boilerplate.c) = 8a2099dcc6a6a0e3cd401482a563b35b447197f1
-SHA1 (patch-perf_cairo-analyse-trace.c) = 38e76dd4dbeb3d8e2eb8fe7219ba7bf98c724c31
-SHA1 (patch-perf_cairo-perf-report.c) = 34579b44238ead31aaf97dbb63347c883d23b5a3
-SHA1 (patch-perf_cairo-perf-trace.c) = 0f8cb89493a202b58b22e6244fe1c1bcc0a34b88
-SHA1 (patch-src_cairo-arc.c) = 77d1d76accf71f16de73866dd7237c9806005c72
-SHA1 (patch-src_cairo-ft-font.c) = 97288d79380473869f1049c1d8955a2f6fa3d178
-SHA1 (patch-src_cairo-image-compositor.c) = 83337d8211083d77b061c43b69da2b61080776d9
-SHA1 (patch-src_cairo-quartz-image-surface.c) = f3963afb665d70189c18de02b943313b7f7b6dcd
-SHA1 (patch-src_cairo-quartz-surface.c) = 870ff264a0046adad5a3c93e76da4684d6a365eb
-SHA1 (patch-src_cairo-type1-subset.c) = 741de4ec29cc4805aa51cbb4d89947a58dca0646
-SHA1 (patch-util_cairo-trace_trace.c) = 0979e99a2aeaeb711a9b7636a0e6ba5048f26077
+BLAKE2s (cairo-1.18.0.tar.xz) = d17e3d7a1b32769f02500ff3edaf8a7e18974873a128c61e607f05e5216e8a63
+SHA512 (cairo-1.18.0.tar.xz) = 6366c7d5e3fd3e12df2edc43aa4ed4c3a517de2ef0b1b3b30dfa8b69a7cae1dd55765801228cec308d2e9792037d0704ae49d95b7b12c06f20df092fa0534e1c
+Size (cairo-1.18.0.tar.xz) = 33761148 bytes
+SHA1 (patch-meson.build) = 3187c754af123be69e1b5651165f6310c8786558
+SHA1 (patch-test_pdf-structure.c) = dd3e5ee2cdbc19e77c2d5a60dab98195ecbe82bb
+SHA1 (patch-util_cairo-missing_getline.c) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
+SHA1 (patch-util_meson.build) = 344d29f84114b441bbfede8b77d7a2d02d756ce4
