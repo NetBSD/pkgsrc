@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/19 00:39:11 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/14 18:45:28 nia Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -292,7 +292,6 @@ lib/asterisk/modules/res_pjsip_xpidf_body_generator.so
 ${PLIST.mgcp}lib/asterisk/modules/res_pktccops.so
 lib/asterisk/modules/res_prometheus.so
 lib/asterisk/modules/res_realtime.so
-${PLIST.unbound}lib/asterisk/modules/res_resolver_unbound.so
 lib/asterisk/modules/res_rtp_asterisk.so
 lib/asterisk/modules/res_rtp_multicast.so
 lib/asterisk/modules/res_security_log.so
