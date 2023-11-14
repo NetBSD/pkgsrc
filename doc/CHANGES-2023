@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6979 2023/11/14 21:07:12 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6980 2023/11/14 21:08:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10037,3 +10037,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.28.1 [pin 2023-11-14]
 	Updated devel/cargo-modules to 0.11.0 [pin 2023-11-14]
 	Updated graphics/matugen to 0.11.0 [pin 2023-11-14]
+	Updated editors/tp-note to 1.23.1 [pin 2023-11-14]
