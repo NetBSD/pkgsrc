@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/11/07 22:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/14 00:28:15 wiz Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlalchemy-migrate/}
 
@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/stackforge/sqlalchemy-migrate
 COMMENT=	Schema migration tool for SQLAlchemy
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.8:../../databases/py-sqlalchemy
@@ -21,8 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.7.0:../../lang/py-six
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=		# none
-
-USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	migrate/tests/changeset/databases/test_ibmdb2.py
 REPLACE_PYTHON+=	migrate/tests/changeset/test_changeset.py
@@ -58,5 +58,5 @@ post-install:
 	${MV} migrate-repository migrate-repository-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
