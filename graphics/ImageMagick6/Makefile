@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/11/14 14:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2023/11/14 19:03:37 nia Exp $
 
 PKGREVISION= 5
 .include "Makefile.common"
@@ -13,14 +13,10 @@ CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 USE_LANGUAGES=		c c++ c99
 USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
-CONFIGURE_ARGS+=	--with-fontconfig
 CONFIGURE_ARGS+=	--with-xml=yes
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--program-suffix=6
-# This one used to be optional, but it depends on ghostscript even if it's
-# disabled so having a way to disable it seems pointless.
-CONFIGURE_ARGS+=	--with-gslib
 # http://www.imagemagick.org/discourse-server/viewtopic.php?f=2&t=25475
 CONFIGURE_ARGS.NetBSD+=	--disable-openmp
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
@@ -107,13 +103,11 @@ CTF_FILES_SKIP+=	lib/libMagickCore-6.Q16.so.*	# CPU limit exceeded
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../print/ghostscript/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

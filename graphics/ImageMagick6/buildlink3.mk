@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2023/11/12 13:21:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2023/11/14 19:03:37 nia Exp $
 
 BUILDLINK_TREE+=	ImageMagick6
 
@@ -13,6 +13,12 @@ pkgbase := ImageMagick6
 
 .if ${PKG_BUILD_OPTIONS.ImageMagick6:Mdjvu}
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mfontconfig}
+.include "../../fonts/fontconfig/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mghostscript}
+.include "../../fonts/ghostscript/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick6:Mjp2}
 .include "../../graphics/openjpeg/buildlink3.mk"
@@ -48,14 +54,12 @@ ImageMagick6-preconfigure:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../print/ghostscript/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif # IMAGEMAGICK6_BUILDLINK3_MK
 
