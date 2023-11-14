@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1440 2023/11/14 21:20:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1441 2023/11/14 21:32:26 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -246,7 +246,6 @@ SUBDIR+=	glow
 SUBDIR+=	gnome-dictionary
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
-SUBDIR+=	go-text
 SUBDIR+=	grep
 SUBDIR+=	grepcidr
 SUBDIR+=	groff
