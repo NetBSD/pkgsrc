@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2023/11/14 17:57:40 nia Exp $
+
+BLAKE2s (duckstation-0.1.5624.tar.gz) = 914ceaa61499ad1a53a0569daa966a2332a06fe1665866d825ca9b4e56cc359b
+SHA512 (duckstation-0.1.5624.tar.gz) = 88be9979e5c650a4582cdc4b23bc042fba7f456a187734140b61142d5ba4402a482a2419d01b509abad52ad41c6e9e964736759b51b32b9e16f7dbc5f2705a47
+Size (duckstation-0.1.5624.tar.gz) = 13553293 bytes
+SHA1 (patch-CMakeLists.txt) = d026c98fd72038ce051a1932efb9fc0343112ea5
+SHA1 (patch-dep_CMakeLists.txt) = e8264a079c25391fffa9f2fd4c1fbb45575c40af
+SHA1 (patch-src_common_CMakeLists.txt) = a90039c6d1c30040294f66a37f57cfdfe255696d
+SHA1 (patch-src_common_byte__stream.cpp) = 23fe22853041eaa22578b0a70a3fd324241dfba5
+SHA1 (patch-src_common_file__system.cpp) = 5c337a476e1cdda5d1b7a5b0aabc160bc2aed4ef
+SHA1 (patch-src_common_platform.h) = c7ffd141ccaf4c3293acab5dcc795f517aef6576
+SHA1 (patch-src_common_threading.cpp) = 46812162369b921b9d61e9185aa5a3bae4294f4d
+SHA1 (patch-src_core_CMakeLists.txt) = ce20985c85bd585dfa5d2a4d8432f1beb7ac18aa
+SHA1 (patch-src_core_cpu__recompiler__types.h) = e5de4ff35866db057c03b49b1dec989f71453cef
+SHA1 (patch-src_core_settings.h) = 27f2c0bb5cce0737a7dd7308bcc76ed704250804
+SHA1 (patch-src_duckstation-nogui_nogui__host.cpp) = e5865352a5ebd047a388363da6f76528453fe410
+SHA1 (patch-src_duckstation-qt_CMakeLists.txt) = 19a4dee7490789a2c9aeacba1194d3f218f7e6c8
+SHA1 (patch-src_duckstation-qt_qthost.cpp) = b43d9b5cfaec84597579fd71acde2e8fddeeda1c
+SHA1 (patch-src_duckstation-qt_qttranslations.cpp) = 8d55d4e57a61247561d79cdb947312fc7a758e2a
+SHA1 (patch-src_frontend-common_CMakeLists.txt) = 119ec00a78319b0519a077bb3f07a05b3d4e45c7
+SHA1 (patch-src_frontend-common_platform__misc__unix.cpp) = f7e6542c17168ba74a77a5b2358f6a753ef4598b
+SHA1 (patch-src_updater_CMakeLists.txt) = a78f6d713949a8c99beb54c741869f824110e3e3
+SHA1 (patch-src_util_CMakeLists.txt) = 0b0d034b22ccb70e4cda42e41dda04367a7fd777
+SHA1 (patch-src_util_jit__code__buffer.cpp) = 4605ac55fc05917e1a4789389f6505d5c98b40f4
+SHA1 (patch-src_util_memory__arena.cpp) = 2bc9d39ab7ac7a1328169252fc3079f63d1505bf
+SHA1 (patch-src_util_memory__arena.h) = 24ad75ad086e3f129ab55530d16e5455d02a87fc

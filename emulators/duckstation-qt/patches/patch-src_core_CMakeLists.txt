@@ -1,0 +1,17 @@
+$NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2023/11/14 17:57:41 nia Exp $
+
+Unbundle dependencies.
+
+--- src/core/CMakeLists.txt.orig	2023-08-12 04:46:09.000000000 +0000
++++ src/core/CMakeLists.txt
+@@ -119,8 +119,8 @@ set(RECOMPILER_SRCS
+ 
+ target_include_directories(core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
+ target_include_directories(core PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+-target_link_libraries(core PUBLIC Threads::Threads common util zlib)
+-target_link_libraries(core PRIVATE stb xxhash imgui rapidjson tinyxml2)
++target_link_libraries(core PUBLIC Threads::Threads common util ${ZLIB_LIBRARIES})
++target_link_libraries(core PRIVATE stb xxhash imgui ${RAPIDJSON_LIBRARIES} tinyxml2)
+ 
+ if(WIN32)
+   target_sources(core PRIVATE
