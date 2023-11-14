@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.26 2023/01/23 15:22:24 wiz Exp $
+# $NetBSD: builtin.mk,v 1.27 2023/11/14 17:51:58 adam Exp $
 #
 # Package-settable variables:
 #
@@ -30,7 +30,7 @@ BUILTIN_FIND_GREP.H_CITRUS_ICONV=	Copyright.*Citrus Project
 IS_BUILTIN.iconv=	no
 .  if empty(H_ICONV:M__nonexistent__) && \
       empty(H_ICONV:M${LOCALBASE}/*) && \
-      ${BUILTIN_LIB_FOUND.iconv:U:tl} == yes
+      ${BUILTIN_LIB_FOUND.iconv:tl} == yes
 IS_BUILTIN.iconv=	yes
 .  endif
 .endif
@@ -95,17 +95,18 @@ USE_BUILTIN.iconv!=							\
 # XXX
 .    if empty(H_GLIBC_ICONV:M__nonexistent__) && \
 	empty(H_GLIBC_ICONV:M${LOCALBASE}/*) && \
-	${BUILTIN_LIB_FOUND.iconv:U:tl} == no
+	${BUILTIN_LIB_FOUND.iconv:tl} == no
 USE_BUILTIN.iconv=	yes
 H_ICONV=		${H_GLIBC_ICONV}
 .    endif
 # XXX
 # XXX By default, assume that the Citrus project iconv implementation
 # XXX (if it exists) is good enough to replace GNU libiconv.
+# XXX On Darwin, libiconv.* exists.
 # XXX
 .    if empty(H_CITRUS_ICONV:M__nonexistent__) && \
 	empty(H_CITRUS_ICONV:M${LOCALBASE}/*) && \
-	${BUILTIN_LIB_FOUND.iconv:U:tl} == no
+	(${BUILTIN_LIB_FOUND.iconv:tl} == no || ${OPSYS} == "Darwin")
 USE_BUILTIN.iconv=	yes
 H_ICONV=		${H_CITRUS_ICONV}
 .    endif
@@ -135,7 +136,7 @@ USE_BUILTIN.iconv=	no
 # Define BUILTIN_LIBNAME.iconv to be the base name of the built-in
 # iconv library.
 #
-.if ${BUILTIN_LIB_FOUND.iconv:U:tl} == yes
+.if ${BUILTIN_LIB_FOUND.iconv:tl} == yes
 BUILTIN_LIBNAME.iconv=	iconv
 .else
 BUILTIN_LIBNAME.iconv=	# empty (part of the C library)
@@ -166,7 +167,7 @@ BUILDLINK_TRANSFORM+=		rm:-liconv
 .    endif
 .  endif
 
-.  if defined(GNU_CONFIGURE) && ${GNU_CONFIGURE_ICONV:Uyes:M[yY][eE][sS]}
+.  if defined(GNU_CONFIGURE) && ${GNU_CONFIGURE_ICONV:Uyes:tl} == yes
 .    if ${USE_BUILTIN.iconv:tl} == no
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 .    endif
