@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/12 13:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/14 03:56:51 gutteridge Exp $
 
-DISTNAME=	lxqt-config-1.3.0
-PKGREVISION=	5
+DISTNAME=	lxqt-config-1.4.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,13 +18,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 
 CMAKE_ARG_PATH=	..
-
-MENUS_CONF=		share/examples/menus
-PKG_SYSCONFSUBDIR=	xdg
-MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
-
-CONF_FILES+=	${MENUS_CONF}/lxqt-config.menu \
-		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
 # Requires xorg-libinput, which we lack in pkgsrc.
 CMAKE_ARGS+=	-DWITH_TOUCHPAD=OFF
@@ -52,9 +44,10 @@ SUBST_VARS.prefix+=	XKBSUB
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
+DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
+DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
