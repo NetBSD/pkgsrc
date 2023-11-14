@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23649 2023/11/14 14:03:49 wiz Exp $
+$NetBSD: TODO,v 1.23650 2023/11/14 16:01:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -507,8 +507,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o byobu-5.133
 	o cacti-1.2.19
 	o cacti-spine-1.2.16
-	o cairomm-1.18.0
-	o cairomm1.16-1.18.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-6.25.0 [requires py-qt6/py-qt6-webengine]
