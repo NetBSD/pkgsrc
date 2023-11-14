@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/18 09:39:27 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/11/14 01:00:45 gutteridge Exp $
 include/libfm-qt/appchoosercombobox.h
 include/libfm-qt/appchooserdialog.h
 include/libfm-qt/applaunchcontext.h
@@ -98,8 +98,8 @@ include/libfm-qt/utilities.h
 include/libfm-qt/utilities_p.h
 include/libfm-qt/xdndworkaround.h
 lib/libfm-qt.so
-lib/libfm-qt.so.13
-lib/libfm-qt.so.13.0.0
+lib/libfm-qt.so.14
+lib/libfm-qt.so.14.0.0
 lib/pkgconfig/libfm-qt.pc
 share/cmake/fm-qt/fm-qt-config-version.cmake
 share/cmake/fm-qt/fm-qt-config.cmake
@@ -120,6 +120,7 @@ share/libfm-qt/translations/libfm-qt_el.qm
 share/libfm-qt/translations/libfm-qt_en_GB.qm
 share/libfm-qt/translations/libfm-qt_es.qm
 share/libfm-qt/translations/libfm-qt_et.qm
+share/libfm-qt/translations/libfm-qt_fi.qm
 share/libfm-qt/translations/libfm-qt_fr.qm
 share/libfm-qt/translations/libfm-qt_gl.qm
 share/libfm-qt/translations/libfm-qt_he.qm
