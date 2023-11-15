@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4128 2023/11/14 21:44:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4129 2023/11/15 00:56:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1664,7 +1664,6 @@ SUBDIR+=	p5-Glib-Object-Introspection
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Graph-ReadWrite
 SUBDIR+=	p5-Gravatar-URL
-SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Guard
 SUBDIR+=	p5-Hash-Case
 SUBDIR+=	p5-Hash-FieldHash
