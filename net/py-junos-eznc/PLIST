@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/03/30 19:44:09 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/15 00:05:18 wiz Exp $
 ${PYSITELIB}/jnpr/junos/__init__.py
 ${PYSITELIB}/jnpr/junos/__init__.pyc
 ${PYSITELIB}/jnpr/junos/__init__.pyo
@@ -320,10 +320,9 @@ ${PYSITELIB}/jnpr/junos/utils/util.pyo
 ${PYSITELIB}/jnpr/junos/version.py
 ${PYSITELIB}/jnpr/junos/version.pyc
 ${PYSITELIB}/jnpr/junos/version.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/junos_eznc-${PKGVERSION}-py3.11-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

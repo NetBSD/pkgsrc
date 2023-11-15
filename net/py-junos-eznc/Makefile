@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/03/30 19:44:09 he Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/15 00:05:18 wiz Exp $
 
-DISTNAME=	junos-eznc-2.6.7
+DISTNAME=	junos-eznc-2.6.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
@@ -32,5 +32,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
