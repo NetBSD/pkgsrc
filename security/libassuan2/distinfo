@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.21 2023/06/26 19:40:01 adam Exp $
+$NetBSD: distinfo,v 1.22 2023/11/15 16:12:05 nia Exp $
 
 BLAKE2s (libassuan-2.5.6.tar.bz2) = 428130dfc9bde48abc3dfa6a30811f50068bd0aca4e85584135b935885fbd002
 SHA512 (libassuan-2.5.6.tar.bz2) = dcca942d222a2c226a7e34ba7988ee0c3c55bd6032166eb472caf2053db89aeeea7a40e93d8c2887c7ee73c5f838e8b0725e8cfb595accc1606646559362f7ee
 Size (libassuan-2.5.6.tar.bz2) = 577012 bytes
 SHA1 (patch-configure) = 0cb945282bd00a96b66d245f9723fd8d0bc32d8b
+SHA1 (patch-src_assuan-socket.c) = 1a7a4167a32d7f55b4c0e0d12e5993f9f100737e
 SHA1 (patch-src_assuan-uds.c) = 62d935c5fad5eb5bbc6721f89681b7be724c4916
