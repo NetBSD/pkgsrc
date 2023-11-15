@@ -1,0 +1,255 @@
+$NetBSD: patch-XSA439,v 1.1 2023/11/15 15:59:36 bouyer Exp $
+
+From d7b78041dc819efde0350f27754a61cb01a93496 Mon Sep 17 00:00:00 2001
+From: Andrew Cooper <andrew.cooper3@citrix.com>
+Date: Wed, 30 Aug 2023 20:24:25 +0100
+Subject: [PATCH 1/1] x86/spec-ctrl: Mitigate the Zen1 DIV leakage
+
+In the Zen1 microarchitecure, there is one divider in the pipeline which
+services uops from both threads.  In the case of #DE, the latched result from
+the previous DIV to execute will be forwarded speculatively.
+
+This is an interesting covert channel that allows two threads to communicate
+without any system calls.  In also allows userspace to obtain the result of
+the most recent DIV instruction executed (even speculatively) in the core,
+which can be from a higher privilege context.
+
+Scrub the result from the divider by executing a non-faulting divide.  This
+needs performing on the exit-to-guest paths, and ist_exit-to-Xen.
+
+Alternatives in IST context is believed safe now that it's done in NMI
+context.
+
+This is XSA-439 / CVE-2023-20588.
+
+Signed-off-by: Andrew Cooper <andrew.cooper3@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+(cherry picked from commit b5926c6ecf05c28ee99c6248c42d691ccbf0c315)
+---
+ docs/misc/xen-command-line.pandoc   |  6 +++-
+ xen/arch/x86/hvm/svm/entry.S        |  1 +
+ xen/arch/x86/spec_ctrl.c            | 49 ++++++++++++++++++++++++++++-
+ xen/include/asm-x86/cpufeatures.h   |  3 +-
+ xen/include/asm-x86/spec_ctrl_asm.h | 17 ++++++++++
+ 5 files changed, 73 insertions(+), 3 deletions(-)
+
+diff --git a/docs/misc/xen-command-line.pandoc b/docs/misc/xen-command-line.pandoc
+index 16a61ad858..f3d1009f2d 100644
+--- docs/misc/xen-command-line.pandoc.orig
++++ docs/misc/xen-command-line.pandoc
+@@ -2189,7 +2189,7 @@ By default SSBD will be mitigated at runtime (i.e `ssbd=runtime`).
+ >              {msr-sc,rsb,md-clear,ibpb-entry}=<bool>|{pv,hvm}=<bool>,
+ >              bti-thunk=retpoline|lfence|jmp, {ibrs,ibpb,ssbd,psfd,
+ >              eager-fpu,l1d-flush,branch-harden,srb-lock,
+->              unpriv-mmio,gds-mit}=<bool> ]`
++>              unpriv-mmio,gds-mit,div-scrub}=<bool> ]`
+ 
+ Controls for speculative execution sidechannel mitigations.  By default, Xen
+ will pick the most appropriate mitigations based on compiled in support,
+@@ -2309,6 +2309,10 @@ has elected not to lock the configuration, Xen will use GDS_CTRL to mitigate
+ GDS with.  Otherwise, Xen will mitigate by disabling AVX, which blocks the use
+ of the AVX2 Gather instructions.
+ 
++On all hardware, the `div-scrub=` option can be used to force or prevent Xen
++from mitigating the DIV-leakage vulnerability.  By default, Xen will mitigate
++DIV-leakage on hardware believed to be vulnerable.
++
+ ### sync_console
+ > `= <boolean>`
+ 
+diff --git a/xen/arch/x86/hvm/svm/entry.S b/xen/arch/x86/hvm/svm/entry.S
+index 0ff4008060..ad5ca50c12 100644
+--- xen/arch/x86/hvm/svm/entry.S.orig
++++ xen/arch/x86/hvm/svm/entry.S
+@@ -72,6 +72,7 @@ __UNLIKELY_END(nsvm_hap)
+ 1:          /* No Spectre v1 concerns.  Execution will hit VMRUN imminently. */
+         .endm
+         ALTERNATIVE "", svm_vmentry_spec_ctrl, X86_FEATURE_SC_MSR_HVM
++        ALTERNATIVE "", DO_SPEC_CTRL_DIV, X86_FEATURE_SC_DIV
+ 
+         pop  %r15
+         pop  %r14
+diff --git a/xen/arch/x86/spec_ctrl.c b/xen/arch/x86/spec_ctrl.c
+index e9cc6b586a..f75124117b 100644
+--- xen/arch/x86/spec_ctrl.c.orig
++++ xen/arch/x86/spec_ctrl.c
+@@ -22,6 +22,7 @@
+ #include <xen/param.h>
+ #include <xen/warning.h>
+ 
++#include <asm/amd.h>
+ #include <asm/hvm/svm/svm.h>
+ #include <asm/microcode.h>
+ #include <asm/msr.h>
+@@ -78,6 +79,7 @@ static int8_t __initdata opt_srb_lock = -1;
+ static bool __initdata opt_unpriv_mmio;
+ static bool __read_mostly opt_fb_clear_mmio;
+ static int8_t __initdata opt_gds_mit = -1;
++static int8_t __initdata opt_div_scrub = -1;
+ 
+ static int __init parse_spec_ctrl(const char *s)
+ {
+@@ -132,6 +134,7 @@ static int __init parse_spec_ctrl(const char *s)
+             opt_srb_lock = 0;
+             opt_unpriv_mmio = false;
+             opt_gds_mit = 0;
++            opt_div_scrub = 0;
+         }
+         else if ( val > 0 )
+             rc = -EINVAL;
+@@ -284,6 +287,8 @@ static int __init parse_spec_ctrl(const char *s)
+             opt_unpriv_mmio = val;
+         else if ( (val = parse_boolean("gds-mit", s, ss)) >= 0 )
+             opt_gds_mit = val;
++        else if ( (val = parse_boolean("div-scrub", s, ss)) >= 0 )
++            opt_div_scrub = val;
+         else
+             rc = -EINVAL;
+ 
+@@ -484,7 +489,7 @@ static void __init print_details(enum ind_thunk thunk)
+                "\n");
+ 
+     /* Settings for Xen's protection, irrespective of guests. */
+-    printk("  Xen settings: BTI-Thunk %s, SPEC_CTRL: %s%s%s%s%s, Other:%s%s%s%s%s\n",
++    printk("  Xen settings: BTI-Thunk %s, SPEC_CTRL: %s%s%s%s%s, Other:%s%s%s%s%s%s\n",
+            thunk == THUNK_NONE      ? "N/A" :
+            thunk == THUNK_RETPOLINE ? "RETPOLINE" :
+            thunk == THUNK_LFENCE    ? "LFENCE" :
+@@ -509,6 +514,7 @@ static void __init print_details(enum ind_thunk thunk)
+            opt_l1d_flush                             ? " L1D_FLUSH" : "",
+            opt_md_clear_pv || opt_md_clear_hvm ||
+            opt_fb_clear_mmio                         ? " VERW"  : "",
++           opt_div_scrub                             ? " DIV" : "",
+            opt_branch_harden                         ? " BRANCH_HARDEN" : "");
+ 
+     /* L1TF diagnostics, printed if vulnerable or PV shadowing is in use. */
+@@ -933,6 +939,45 @@ static void __init srso_calculations(bool hw_smt_enabled)
+         setup_force_cpu_cap(X86_FEATURE_SRSO_NO);
+ }
+ 
++/*
++ * The Div leakage issue is specific to the AMD Zen1 microarchitecure.
++ *
++ * However, there's no $FOO_NO bit defined, so if we're virtualised we have no
++ * hope of spotting the case where we might move to vulnerable hardware.  We
++ * also can't make any useful conclusion about SMT-ness.
++ *
++ * Don't check the hypervisor bit, so at least we do the safe thing when
++ * booting on something that looks like a Zen1 CPU.
++ */
++static bool __init has_div_vuln(void)
++{
++    if ( !(boot_cpu_data.x86_vendor &
++           (X86_VENDOR_AMD | X86_VENDOR_HYGON)) )
++        return false;
++
++    if ( boot_cpu_data.x86 != 0x17 && boot_cpu_data.x86 != 0x18 )
++        return false;
++
++    return is_zen1_uarch();
++}
++
++static void __init div_calculations(bool hw_smt_enabled)
++{
++    bool cpu_bug_div = has_div_vuln();
++
++    if ( opt_div_scrub == -1 )
++        opt_div_scrub = cpu_bug_div;
++
++    if ( opt_div_scrub )
++        setup_force_cpu_cap(X86_FEATURE_SC_DIV);
++
++    if ( opt_smt == -1 && !cpu_has_hypervisor && cpu_bug_div && hw_smt_enabled )
++        warning_add(
++            "Booted on leaky-DIV hardware with SMT/Hyperthreading\n"
++            "enabled.  Please assess your configuration and choose an\n"
++            "explicit 'smt=<bool>' setting.  See XSA-439.\n");
++}
++
+ static void __init ibpb_calculations(void)
+ {
+     bool def_ibpb_entry = false;
+@@ -1644,6 +1689,8 @@ void __init init_speculation_mitigations(void)
+ 
+     ibpb_calculations();
+ 
++    div_calculations(hw_smt_enabled);
++
+     /* Check whether Eager FPU should be enabled by default. */
+     if ( opt_eager_fpu == -1 )
+         opt_eager_fpu = should_use_eager_fpu();
+diff --git a/xen/include/asm-x86/cpufeatures.h b/xen/include/asm-x86/cpufeatures.h
+index bdb119a34c..d993e06e4c 100644
+--- xen/include/asm-x86/cpufeatures.h.orig
++++ xen/include/asm-x86/cpufeatures.h
+@@ -35,7 +35,8 @@ XEN_CPUFEATURE(SC_RSB_HVM,        X86_SYNTH(19)) /* RSB overwrite needed for HVM
+ XEN_CPUFEATURE(XEN_SELFSNOOP,     X86_SYNTH(20)) /* SELFSNOOP gets used by Xen itself */
+ XEN_CPUFEATURE(SC_MSR_IDLE,       X86_SYNTH(21)) /* Clear MSR_SPEC_CTRL on idle */
+ XEN_CPUFEATURE(XEN_LBR,           X86_SYNTH(22)) /* Xen uses MSR_DEBUGCTL.LBR */
+-/* Bits 23,24 unused. */
++XEN_CPUFEATURE(SC_DIV,            X86_SYNTH(23)) /* DIV scrub needed */
++/* Bit 24 unused. */
+ XEN_CPUFEATURE(SC_VERW_IDLE,      X86_SYNTH(25)) /* VERW used by Xen for idle */
+ XEN_CPUFEATURE(XEN_SHSTK,         X86_SYNTH(26)) /* Xen uses CET Shadow Stacks */
+ XEN_CPUFEATURE(XEN_IBT,           X86_SYNTH(27)) /* Xen uses CET Indirect Branch Tracking */
+
+--- xen/include/asm-x86/spec_ctrl_asm.h.orig	2023-08-07 14:08:26.000000000 +0200
++++ xen/include/asm-x86/spec_ctrl_asm.h	2023-11-15 14:50:58.771057793 +0100
+@@ -178,6 +178,19 @@
+ .L\@_verw_skip:
+ .endm
+ 
++.macro DO_SPEC_CTRL_DIV
++/*
++ * Requires nothing
++ * Clobbers %rax
++ *
++ * Issue a DIV for its flushing side effect (Zen1 uarch specific).  Any
++ * non-faulting DIV will do; a byte DIV has least latency, and doesn't clobber
++ * %rdx.
++ */
++    mov $1, %eax
++    div %al
++.endm
++
+ .macro DO_SPEC_CTRL_ENTRY maybexen:req
+ /*
+  * Requires %rsp=regs (also cpuinfo if !maybexen)
+@@ -231,6 +244,7 @@
+     wrmsr
+ 
+ .L\@_skip:
++    ALTERNATIVE "", DO_SPEC_CTRL_DIV, X86_FEATURE_SC_DIV
+ .endm
+ 
+ .macro DO_SPEC_CTRL_EXIT_TO_GUEST
+@@ -277,7 +291,8 @@
+ #define SPEC_CTRL_EXIT_TO_PV                                            \
+     ALTERNATIVE "",                                                     \
+         DO_SPEC_CTRL_EXIT_TO_GUEST, X86_FEATURE_SC_MSR_PV;              \
+-    DO_SPEC_CTRL_COND_VERW
++    DO_SPEC_CTRL_COND_VERW;                                             \
++    ALTERNATIVE "", DO_SPEC_CTRL_DIV, X86_FEATURE_SC_DIV
+ 
+ /*
+  * Use in IST interrupt/exception context.  May interrupt Xen or PV context.
+--- xen/include/asm-x86/amd.h.orig	2023-11-15 15:16:19.642351562 +0100
++++ xen/include/asm-x86/amd.h	2023-11-15 15:17:10.878437198 +0100
+@@ -140,6 +140,17 @@
+                        AMD_MODEL_RANGE(0x11, 0x0, 0x0, 0xff, 0xf),	\
+                        AMD_MODEL_RANGE(0x12, 0x0, 0x0, 0xff, 0xf))
+ 
++/*
++ * The Zen1 and Zen2 microarchitectures are implemented by AMD (Fam17h) and
++ * Hygon (Fam18h) but without simple model number rules.  Instead, use STIBP
++ * as a heuristic that distinguishes the two.
++ *
++ * The caller is required to perform the appropriate vendor/family checks
++ * first.
++ */
++#define is_zen1_uarch() (!boot_cpu_has(X86_FEATURE_AMD_STIBP))
++#define is_zen2_uarch()   boot_cpu_has(X86_FEATURE_AMD_STIBP)
++
+ struct cpuinfo_x86;
+ int cpu_has_amd_erratum(const struct cpuinfo_x86 *, int, ...);
+ 
