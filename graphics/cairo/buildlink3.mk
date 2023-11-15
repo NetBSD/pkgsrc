@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2023/11/14 14:01:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2023/11/15 15:17:21 tnn Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -18,9 +18,12 @@ pkgbase := cairo
 .include "../../x11/libxcb/buildlink3.mk"
 .endif
 
-.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb}
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb} || ${PKG_BUILD_OPTIONS.cairo:Mquartz}
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.cairo:Mx11} || ${PKG_BUILD_OPTIONS.cairo:Mxcb}
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .endif
