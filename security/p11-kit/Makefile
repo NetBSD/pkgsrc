@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/11/09 19:45:46 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/15 20:46:28 wiz Exp $
 
 DISTNAME=	p11-kit-0.25.0
+PKGREVISION=	1
 CATEGORIES=	security
 #MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
@@ -14,15 +15,12 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
-CONFIGURE_ARGS+=	--with-trust-paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
+MESON_ARGS+=	-Dtrust_paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c99
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config readlink
-USE_FEATURES+=	strndup strnlen
-
-TEST_TARGET=	check
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
+USE_TOOLS+=		pkg-config readlink
+USE_FEATURES+=		strndup strnlen
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
@@ -37,9 +35,10 @@ DLEXT.dylib=	dylib
 DLEXT=		${DLEXT.${SHLIB_TYPE}:Uso}
 PLIST_SUBST+=	DLEXT=${DLEXT:Q}
 
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/p11-kit:${WRKSRC}/output/trust
+
 PKGCONFIG_OVERRIDE+=	p11-kit/p11-kit-1.pc.in
 
-PKG_SYSCONFSUBDIR=	pkcs11
 CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 			${PKG_SYSCONFDIR}/pkcs11.conf
 
@@ -50,6 +49,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/p11-kit
 
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
