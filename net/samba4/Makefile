@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.175 2023/11/08 13:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2023/11/15 18:54:43 wiz Exp $
 
-DISTNAME=	samba-4.18.8
-PKGREVISION=	4
+DISTNAME=	samba-4.19.2
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -199,6 +198,7 @@ REPLACE_PERL+=		source4/script/*.pl
 REPLACE_PERL+=		source4/scripting/bin/nsupdate-gss
 REPLACE_PERL+=		third_party/nss_wrapper/nss_wrapper.pl
 REPLACE_PYTHON+=	buildtools/bin/waf
+REPLACE_PYTHON+=	source3/script/samba-log-parser
 REPLACE_PYTHON+=	source4/setup/wscript_build
 REPLACE_PYTHON+=	source4/scripting/bin/*
 
@@ -207,7 +207,7 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.7.2<2.8
+BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.8
 .include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
