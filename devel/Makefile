@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4129 2023/11/15 00:56:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4130 2023/11/15 15:23:12 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -1097,6 +1097,7 @@ SUBDIR+=	lwp
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	m17n-lib
 SUBDIR+=	m4
+SUBDIR+=	macports-legacy-support
 SUBDIR+=	mad-flute
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90

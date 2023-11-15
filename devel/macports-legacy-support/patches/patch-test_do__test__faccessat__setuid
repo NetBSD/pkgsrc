@@ -1,0 +1,130 @@
+$NetBSD: patch-test_do__test__faccessat__setuid,v 1.1 2023/11/15 15:23:13 nia Exp $
+
+Fix 10.4 support.
+https://github.com/macports/macports-legacy-support/pull/69
+
+--- test/do_test_faccessat_setuid.orig	2023-09-15 08:59:52.000000000 +0000
++++ test/do_test_faccessat_setuid
+@@ -16,6 +16,9 @@
+ 
+ # When run as root, test faccessat() properly
+ 
++# Note: On 10.4, this doesn't work because setreuid/setregid are incorrect.
++# They set effective uid/gid, but not real uid/gid.
++
+ if [ "$(whoami)" != root ]
+ then
+ 	echo 'Run "sudo make test_faccessat_setuid" to test faccessat properly'
+@@ -60,24 +63,32 @@ clean()
+ 	rm -rf $s $t
+ }
+ 
+-get_group()
++get_group() # Get the user's primary group name
+ {
+ 	echo $(id $1 | sed -E 's/^.*gid=-?[0-9]+\(//; s/\).*$//')
+ }
+ 
+-get_supp_group()
++get_supp_group() # Get the user's first supplementary group name, if any
+ {
+-	echo $(id $1 | sed -E 's/^.*groups=-?[0-9]+\([^)]+\),-?[0-9]+\(//; s/\).*$//')
++	echo $(id $1 | sed -E '
++		s/^uid=-?[0-9]+\([^)]+\) //;
++		s/^gid=-?[0-9]+\([^)]+\) //;
++		s/^groups=-?[0-9]+\([^)]+\)//;
++		s/^,//;
++		s/,.*$//;
++		s/^-?[0-9]+\(//;
++		s/\)$//
++	')
+ }
+ 
+-uucp_group=$(get_group _uucp)
++daemon_group=$(get_group daemon)
+ nobody_group=$(get_group nobody)
+ nobody_supp_group=$(get_supp_group nobody)
+ 
+-# Run normal test as setuid _uucp (to test AT_EACCESS)
++# Run normal test as setuid daemon (to test AT_EACCESS)
+ 
+-echo setuid _uucp
+-setup _uucp $uucp_group 4755
++echo setuid daemon
++setup daemon $daemon_group 4755
+ check sudo -u nobody $s
+ clean
+ 
+@@ -91,20 +102,20 @@ clean
+ # Test different numbers of leading dirs and leading dirs with different
+ # permissions (to test leading executable check)
+ 
+-setup _uucp $uucp_group 4755
+-setid _uucp $uucp_group 644 $t/f touch
+-setid _uucp $uucp_group 755 $t/d1 mkdir
+-setid _uucp $uucp_group 000 $t/d2 mkdir
+-setid _uucp $uucp_group 644 $t/d1/f touch
+-setid _uucp $uucp_group 644 $t/d2/f touch
++setup daemon $daemon_group 4755
++setid daemon $daemon_group 644 $t/f touch
++setid daemon $daemon_group 755 $t/d1 mkdir
++setid daemon $daemon_group 000 $t/d2 mkdir
++setid daemon $daemon_group 644 $t/d1/f touch
++setid daemon $daemon_group 644 $t/d2/f touch
+ 
+-echo leading dirs ruid=nobody euid=_uucp
++echo leading dirs ruid=nobody euid=daemon
+ check sudo -u nobody $s test test/ \
+ 	$t $t/ $t/f \
+ 	$t/d1 $t/d1/ $t/d1/f \
+ 	$t/d2 $t/d2/ $t/d2/f
+ 
+-echo leading dirs ruid=root euid=_uucp
++echo leading dirs ruid=root euid=daemon
+ check $s test test/ \
+ 	$t $t/ $t/f \
+ 	$t/d1 $t/d1/ $t/d1/f \
+@@ -152,32 +163,35 @@ checkperms nobody $nobody_group 755
+ # (to test when uid/gid don't match)
+ 
+ echo perm diff user
+-checkperms _uucp $uucp_group 755
++checkperms daemon $daemon_group 755
+ 
+ # Test lots of permissions without setuid/setgid with different user's files
+ # but the same group (to test when uid doesn't match but gid does match)
+ 
+ echo perm same group
+-checkperms _uucp $nobody_group 755
++checkperms daemon $nobody_group 755
+ 
+ # Test lots of permissions without setuid/setgid with different user's files
+ # but same supplementary group (to test when uid/gid don't match but a
+ # supplementary group matches)
+ 
+-echo perm same supp group
+-checkperms _uucp $nobody_supp_group 755
++if [ -n "$nobody_supp_group" ]
++then
++	echo perm same supp group
++	checkperms daemon $nobody_supp_group 755
++fi
+ 
+ # Test lots of permissions with setuid with different user's files
+ # (to test setuid)
+ 
+-echo perm setuid _uucp
+-checkperms _uucp $uucp_group 4755
++echo perm setuid daemon
++checkperms daemon $daemon_group 4755
+ 
+ # Test lots of permissions with setgid with different user's files
+ # (to test setgid)
+ 
+-echo perm setgid _uucp
+-checkperms _uucp $uucp_group 2755
++echo perm setgid daemon
++checkperms daemon $daemon_group 2755
+ 
+ exit $fail
+ 
