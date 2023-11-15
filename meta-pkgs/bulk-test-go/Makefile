@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/13 09:14:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/15 12:49:24 jperkin Exp $
 
 DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
@@ -27,20 +27,15 @@ DEPENDS+=	go-tools-[0-9]*:../../devel/go-tools
 DEPENDS+=	go-nbreader-[0-9]*:../../devel/go-nbreader
 DEPENDS+=	golint-[0-9]*:../../devel/golint
 DEPENDS+=	go-review-[0-9]*:../../devel/go-review
-DEPENDS+=	go-goptlib-[0-9]*:../../devel/go-goptlib
-DEPENDS+=	go-siphash-[0-9]*:../../devel/go-siphash
 DEPENDS+=	go-sys-[0-9]*:../../devel/go-sys
-DEPENDS+=	go-golang-lru-[0-9]*:../../devel/go-golang-lru
 DEPENDS+=	opa-[0-9]*:../../devel/opa
 DEPENDS+=	git-lfs-[0-9]*:../../devel/git-lfs
 DEPENDS+=	go-gopkgs-[0-9]*:../../devel/go-gopkgs
 DEPENDS+=	go-gocode-[0-9]*:../../devel/go-gocode
 DEPENDS+=	go-goreturns-[0-9]*:../../devel/go-goreturns
-DEPENDS+=	go-pty-[0-9]*:../../devel/go-pty
 DEPENDS+=	mob-[0-9]*:../../devel/mob
 DEPENDS+=	gopls-[0-9]*:../../devel/gopls
 DEPENDS+=	go-gox-[0-9]*:../../devel/go-gox
-DEPENDS+=	go-xerrors-[0-9]*:../../devel/go-xerrors
 DEPENDS+=	errcheck-[0-9]*:../../devel/errcheck
 DEPENDS+=	conftest-[0-9]*:../../devel/conftest
 DEPENDS+=	golangci-lint-[0-9]*:../../devel/golangci-lint
@@ -103,11 +98,9 @@ DEPENDS+=	node_exporter-[0-9]*:../../sysutils/node_exporter
 DEPENDS+=	vultr-[0-9]*:../../sysutils/vultr
 DEPENDS+=	direnv-[0-9]*:../../sysutils/direnv
 DEPENDS+=	restic-[0-9]*:../../sysutils/restic
-DEPENDS+=	go-text-[0-9]*:../../textproc/go-text
 DEPENDS+=	sift-[0-9]*:../../textproc/sift
 DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
 DEPENDS+=	go-mmark-[0-9]*:../../textproc/go-mmark
-DEPENDS+=	go-kr-text-[0-9]*:../../textproc/go-kr-text
 DEPENDS+=	glow-[0-9]*:../../textproc/glow
 DEPENDS+=	pup-[0-9]*:../../www/pup
 DEPENDS+=	caddy-[0-9]*:../../www/caddy
