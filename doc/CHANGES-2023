@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7014 2023/11/15 18:12:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7015 2023/11/15 18:52:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10083,3 +10083,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-eth-account to 0.10.0 [adam 2023-11-15]
 	Updated devel/protobuf to 25.0 [wiz 2023-11-15]
 	Updated devel/py-protobuf to 4.25.0 [wiz 2023-11-15]
+	Updated databases/ldb to 2.8.0 [wiz 2023-11-15]
