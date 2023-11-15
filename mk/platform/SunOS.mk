@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.87 2022/11/22 16:57:31 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.88 2023/11/15 14:14:09 nia Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -42,6 +42,11 @@ MOTIF_TYPE_DEFAULT?=	motif
 # Use SMF by default if available.
 .if ${OPSYS_VERSION} >= 051000
 INIT_SYSTEM?=		smf
+.endif
+
+# check for posix_spawn(3) support, added in SunOS-5.10
+.if ${OPSYS_VERSION} >= 051000
+OPSYS_HAS_POSIX_SPAWN=	# defined
 .endif
 
 # Comes with a builtin implementation based on mit-krb5
