@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/05 23:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/15 08:58:06 wiz Exp $
 
 DISTNAME=	biopython-1.81
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://biopython.org/
 COMMENT=	Python libraries for computational molecular biology
 LICENSE=	biopython
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
