@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7015 2023/11/15 18:52:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7016 2023/11/15 18:54:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10084,3 +10084,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/protobuf to 25.0 [wiz 2023-11-15]
 	Updated devel/py-protobuf to 4.25.0 [wiz 2023-11-15]
 	Updated databases/ldb to 2.8.0 [wiz 2023-11-15]
+	Updated net/samba4 to 4.19.2 [wiz 2023-11-15]
