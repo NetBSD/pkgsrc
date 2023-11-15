@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7018 2023/11/15 19:59:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7019 2023/11/15 20:46:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10087,3 +10087,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.19.2 [wiz 2023-11-15]
 	Updated print/texlab to 5.11.0 [wiz 2023-11-15]
 	Updated graphics/openexr to 3.2.1 [wiz 2023-11-15]
+	Updated security/p11-kit to 0.25.0nb1 [wiz 2023-11-15]
