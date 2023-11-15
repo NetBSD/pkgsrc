@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7002 2023/11/15 09:34:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7003 2023/11/15 10:06:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10065,3 +10065,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-cassandra-driver to 3.28.0 [wiz 2023-11-15]
 	Updated devel/plasma-wayland-protocols to 1.11.1 [wiz 2023-11-15]
 	Updated devel/py-pysvn to 1.9.20 [wiz 2023-11-15]
+	Updated devel/blosc2 to 2.11.2 [adam 2023-11-15]
+	Updated security/libgcrypt to 1.10.3 [adam 2023-11-15]
