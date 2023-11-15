@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.42 2023/10/29 17:07:15 wiz Exp $
+# $NetBSD: egg.mk,v 1.43 2023/11/15 15:24:09 nia Exp $
 #
 # The method used in this Makefile fragment is obsolete.
 # Please use wheel.mk instead.
@@ -82,7 +82,7 @@ privileged-install-hook:	fixup-egg-info
 fixup-egg-info:	# ensure egg-info directory contents are always 644
 	if ${TEST} -d "${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}"; then \
 	    ${FIND} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR} -type f \
-		-exec ${CHMOD} ${SHAREMODE} '{}' +; \
+		-exec ${CHMOD} ${SHAREMODE} '{}' ';' ; \
 	fi
 
 .include "../../lang/python/extension.mk"
