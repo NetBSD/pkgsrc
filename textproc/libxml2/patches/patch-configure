@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2023/01/22 10:30:09 wiz Exp $
+$NetBSD: patch-configure,v 1.6 2023/11/15 15:53:41 nia Exp $
 
  * Add run-path to XML_LIBDIR
 
@@ -9,7 +9,7 @@ $NetBSD: patch-configure,v 1.5 2023/01/22 10:30:09 wiz Exp $
  
  
 -XML_LIBDIR='-L${libdir}'
-+XML_LIBDIR='-Wl,-R${libdir} -L${libdir}'
++XML_LIBDIR='@COMPILER_RPATH_FLAG@${libdir} -L${libdir}'
  XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
