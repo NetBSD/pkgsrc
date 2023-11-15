@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2022/09/24 08:46:23 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/11/15 16:49:18 nia Exp $
 
 BLAKE2s (devilutionx-1.2.1.tar.gz) = 38022f5b5025687f909001c7ea554ee2d6db1489bdd321fa1fac3749064f1168
 SHA512 (devilutionx-1.2.1.tar.gz) = 9327b127d0ad22d640b1a13fad9bfa00ba0fc512dd7ed362a9e84a80278d84634cd039cba7c98f15425715b11a35dc6ac07d75c816c3cbc818e6ab8c4437cf18
 Size (devilutionx-1.2.1.tar.gz) = 3573200 bytes
 SHA1 (patch-3rdParty_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 1fdf31e70f72d4c4cadb76f64d06c3974e6f61d9
-SHA1 (patch-CMakeLists.txt) = 473f486534fc6d286ae04fe0d85502ee7a67d078
+SHA1 (patch-CMakeLists.txt) = 1bc95895aaad5e3e1f2f1d61843683585c3ef3eb
