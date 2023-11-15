@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23663 2023/11/15 18:55:20 wiz Exp $
+$NetBSD: TODO,v 1.23664 2023/11/15 18:58:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1349,7 +1349,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
-	o texlab-5.11.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
