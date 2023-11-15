@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6986 2023/11/15 00:02:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6987 2023/11/15 00:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10046,3 +10046,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/go-siphash [bsiegert 2023-11-14]
 	Removed devel/go-xerrors [bsiegert 2023-11-14]
 	Updated textproc/py-acora to 2.4 [wiz 2023-11-15]
+	Updated net/py-junos-eznc to 2.6.8 [wiz 2023-11-15]
