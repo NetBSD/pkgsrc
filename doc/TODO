@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23664 2023/11/15 18:58:15 wiz Exp $
+$NetBSD: TODO,v 1.23665 2023/11/15 19:59:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1015,7 +1015,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-4.8.1
 	o opendnssec-2.1.8
-	o openexr-3.2.1
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
