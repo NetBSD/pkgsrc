@@ -1,8 +1,6 @@
-$NetBSD: patch-configure,v 1.10 2023/11/15 10:06:12 adam Exp $
+$NetBSD: patch-configure,v 1.11 2023/11/15 10:35:26 wiz Exp $
 
 Fix unportable test(1) operator.
-
-Detect presence of getrandom(2). https://dev.gnupg.org/T6442
 
 --- configure.orig	2023-11-14 12:01:30.000000000 +0000
 +++ configure
