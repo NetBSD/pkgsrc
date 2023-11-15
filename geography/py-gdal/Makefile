@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/11/08 13:19:25 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/11/15 10:37:38 wiz Exp $
 
 PKGREVISION= 7
 .include "../../geography/gdal-lib/Makefile.common"
@@ -13,11 +13,11 @@ MAKE_FILE=	GNUmakefile
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-REPLACE_PYTHON+=	swig/python/scripts/*py
-
 INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.prefs.mk"
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 #For testing future versions from git:
 #EGG_NAME=		GDAL-3.5.0.dev0
@@ -31,7 +31,6 @@ PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
 
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
