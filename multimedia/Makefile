@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.338 2023/11/10 14:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.339 2023/11/15 00:58:45 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
 
-SUBDIR+=	acidrip
 SUBDIR+=	assimp
 SUBDIR+=	atomicparsley
 SUBDIR+=	audiocd-kio
