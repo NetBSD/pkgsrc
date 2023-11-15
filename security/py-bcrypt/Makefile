@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/13 10:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/11/15 15:28:53 tnn Exp $
 
 DISTNAME=	bcrypt-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,14 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "cargo-depends.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/bcrypt/_bcrypt.abi3.so \
+	${DESTDIR}${PREFIX}/${PYSITELIB}/bcrypt/_bcrypt.abi3.so
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
