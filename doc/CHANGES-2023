@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6997 2023/11/15 09:19:05 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6998 2023/11/15 09:21:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10057,3 +10057,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/p5-gtk2 successor x11/p5-gtk3 [wiz 2023-11-15]
 	Updated graphics/py-cairo to 1.25.1nb2 [wiz 2023-11-15]
 	Added geography/py-geomet version 1.1.0 [wiz 2023-11-15]
+	Updated textproc/py-tomlkit to 0.12.3 [adam 2023-11-15]
+	Updated textproc/py-jsonschema-path to 0.3.2 [adam 2023-11-15]
+	Updated net/py-responses to 0.24.1 [adam 2023-11-15]
+	Updated net/yt-dlp to 2023.11.14 [adam 2023-11-15]
