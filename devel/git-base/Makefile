@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/11/08 13:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/11/15 22:09:21 nia Exp $
 
 PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
@@ -58,6 +58,7 @@ CONFIGURE_ENV+=		HOME=${PREFIX}
 CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR}
 
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=		CC_LD_DYNPATH=${COMPILER_RPATH_FLAG}
 MAKE_ENV+=		NO_GITWEB=1
 MAKE_ENV+=		NO_PERL=1
 
@@ -88,6 +89,15 @@ SUBST_FILES.fix-cd-P=	t/test-lib.sh
 SUBST_MESSAGE.fix-cd-P=	Fixing cd arguments.
 SUBST_STAGE.fix-cd-P=	pre-build
 SUBST_SED.fix-cd-P=	-e "s/cd -P/cd/g"
+.endif
+
+.if ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+LDFLAGS+=		-lMacportsLegacySupport
+MAKE_FLAGS+=		NO_PTHREADS=YesPlease
+MAKE_FLAGS+=		NO_UNIX_SOCKETS=YesPlease
+CPPFLAGS+=		-DREG_ENHANCED=REG_EXTENDED
+CPPFLAGS+=		-DSHA1DC_BIGENDIAN
 .endif
 
 SUBST_CLASSES+=			test-shell
