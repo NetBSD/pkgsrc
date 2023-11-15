@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/31 15:57:00 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/15 21:20:49 wiz Exp $
 bin/sd
+man/man1/sd.1
