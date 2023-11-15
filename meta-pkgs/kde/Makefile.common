@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2023/11/02 23:47:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2023/11/15 22:07:47 gutteridge Exp $
 #
 # used by meta-pkgs/kde/applications.mk
 # used by meta-pkgs/kde/kf5.mk
-# used by meta-pkgs/kde/plasma.mk
+# used by meta-pkgs/kde/plasma5.mk
 
 MAINTAINER?=	markd@NetBSD.org
 
