@@ -368,6 +368,10 @@ ikiwiki-search		Enable full-text search using xapian.
 ikiwiki-sudo		Enable portable ikiwiki-mass-rebuild using sudo.
 ilbc			Enable the use of iLBC (Internet Low Bit Rate Codec).
 imagemagick		Use ImageMagick as imaging library.
+imagemagick-policy-limited	By default, use ImageMagick's "Limited" security policy.
+imagemagick-policy-open	By default, use ImageMagick's "Open" security policy.
+imagemagick-policy-secure	By default, use ImageMagick's "Secure" security policy.
+imagemagick-policy-websafe	By default, use ImageMagick's "Web-safe" security policy.
 imap			Enable imap support.
 imapuw-cleartextpwd	Allow cleartext passwords over non-encrypted connections.
 imapuw-whoson		Enable whoson support.
