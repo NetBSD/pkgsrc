@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:09:49 nia Exp $
+$NetBSD: distinfo,v 1.29 2023/11/15 09:24:57 wiz Exp $
 
-BLAKE2s (python-driver-3.15.1.tar.gz) = 9a4b8d136edbadc138efccf0ce1792aace0a88c1d27f5467358692a71f192bea
-SHA512 (python-driver-3.15.1.tar.gz) = 61d0a8b5e348de8a21e3ef6c30d40744e4499bce56c700fc180b31596a2d5e2310ccbcbc2bf1a5e25408ba34ef8c16724cceeb98ff4640a54c2ab23d1ca9c3d0
-Size (python-driver-3.15.1.tar.gz) = 582655 bytes
+BLAKE2s (python-driver-3.28.0.tar.gz) = 3b134ef4e874ad04b1214a69274f41ffb44a5c6fc6a71bd1e27829abd9ed5af5
+SHA512 (python-driver-3.28.0.tar.gz) = ecb7ef5b5e3cbc0a177ea52e578ac9a0f7c1a66089679a4bc0ec984aac2c6ab8de8cd639995694f5e330e386331f2155ba2e7c145fc122c2e0cbe0b3b2ed19fa
+Size (python-driver-3.28.0.tar.gz) = 793603 bytes
