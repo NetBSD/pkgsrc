@@ -1,0 +1,7 @@
+Pure-Python conversion library for common geospatial data formats.
+
+Supported formats include:
+- GeoJSON
+- WKT/WKB
+- Extended WKB/WKT
+- GeoPackage Binary
