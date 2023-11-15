@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2023/07/18 18:19:23 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/11/15 19:59:31 wiz Exp $
 
-DISTNAME=	openexr-3.1.9
+DISTNAME=	openexr-3.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
 GITHUB_PROJECT=	openexr
@@ -15,15 +15,19 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++14
 
+USE_TOOLS+=	pkg-config
+
 PKGCONFIG_OVERRIDE=	cmake/OpenEXR.pc.in
 
 PTHREAD_OPTS=	require
+
+CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 CHECK_PORTABILITY_SKIP+=	Contrib/DtexToExr/bootstrap
 CHECK_PORTABILITY_SKIP+=	util/reformat.sh
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/libdeflate/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
