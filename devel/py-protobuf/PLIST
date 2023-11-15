@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.21 2023/11/02 21:42:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/11/15 18:12:24 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -120,6 +125,9 @@ ${PYSITELIB}/google/protobuf/struct_pb2.pyo
 ${PYSITELIB}/google/protobuf/symbol_database.py
 ${PYSITELIB}/google/protobuf/symbol_database.pyc
 ${PYSITELIB}/google/protobuf/symbol_database.pyo
+${PYSITELIB}/google/protobuf/testdata/__init__.py
+${PYSITELIB}/google/protobuf/testdata/__init__.pyc
+${PYSITELIB}/google/protobuf/testdata/__init__.pyo
 ${PYSITELIB}/google/protobuf/text_encoding.py
 ${PYSITELIB}/google/protobuf/text_encoding.pyc
 ${PYSITELIB}/google/protobuf/text_encoding.pyo
@@ -142,8 +150,3 @@ ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
 ${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
