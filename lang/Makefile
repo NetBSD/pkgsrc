@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.709 2023/11/06 17:18:09 pho Exp $
+# $NetBSD: Makefile,v 1.710 2023/11/15 00:08:29 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -258,7 +258,6 @@ SUBDIR+=	py-pure-eval
 SUBDIR+=	py-py3c
 SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
-SUBDIR+=	py-python-language-server
 SUBDIR+=	py-python-lua
 SUBDIR+=	py-pythonz
 SUBDIR+=	py-six
