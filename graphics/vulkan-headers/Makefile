@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/15 08:58:04 nros Exp $
 
 DISTNAME=	Vulkan-Headers-1.3.224
 PKGNAME=	${DISTNAME:tl}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	Vulkan-Headers
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	nros@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/Vulkan-Headers
 COMMENT=	Headers for Vulkan Graphics API
 LICENSE=	apache-2.0
