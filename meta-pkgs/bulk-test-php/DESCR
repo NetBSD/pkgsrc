@@ -1,0 +1,2 @@
+Meta-package to help in testing PHP updates. It depends on mainstream
+packages that consume or use PHP.
