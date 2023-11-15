@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.38 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: FreeBSD.mk,v 1.39 2023/11/15 14:14:09 nia Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -69,6 +69,11 @@ SERIAL_DEVICES?=	/dev/cuaa0
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
 OPSYS_HAS_KQUEUE=	# defined
+.endif
+
+# check for posix_spawn(3) support, added in FreeBSD-8.0
+.if exists(/usr/include/spawn.h)
+OPSYS_HAS_POSIX_SPAWN=	# defined
 .endif
 
 # Register support for SSP on x86 architectures
