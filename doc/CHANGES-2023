@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6998 2023/11/15 09:21:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6999 2023/11/15 09:23:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10061,3 +10061,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-jsonschema-path to 0.3.2 [adam 2023-11-15]
 	Updated net/py-responses to 0.24.1 [adam 2023-11-15]
 	Updated net/yt-dlp to 2023.11.14 [adam 2023-11-15]
+	Updated print/poppler to 23.11.0 [wiz 2023-11-15]
