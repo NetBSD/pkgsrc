@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/15 09:18:27 wiz Exp $
+
+BLAKE2s (geomet-1.1.0.tar.gz) = 5e4557d1e6d8f831f564f937733754bf8130a829abf71d1af8917c766ecdf325
+SHA512 (geomet-1.1.0.tar.gz) = e447653ca33de589c539b37c60b84d315d8ffe2477fc126a669854e3fc30c047aef51a90aa237e2af10841c0ab6e8a9527d4ae7cd2b1b95f2d0a15c466d09f72
+Size (geomet-1.1.0.tar.gz) = 28732 bytes
