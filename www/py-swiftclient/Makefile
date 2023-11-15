@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/07 22:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/15 11:51:09 wiz Exp $
 
 DISTNAME=	python-swiftclient-3.11.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -28,7 +28,7 @@ USE_PKG_RESOURCES=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
 	${MV} bin/swift bin/swift-${PYVERSSUFFIX} && \
-	${MV} man/man1/swift.1 man/man1/swift-${PYVERSSUFFIX}.1 || ${TRUE}
+	${MV} ${PKGMANDIR}/man1/swift.1 ${PKGMANDIR}/man1/swift-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
