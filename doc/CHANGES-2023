@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7000 2023/11/15 09:25:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7001 2023/11/15 09:30:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10063,3 +10063,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/yt-dlp to 2023.11.14 [adam 2023-11-15]
 	Updated print/poppler to 23.11.0 [wiz 2023-11-15]
 	Updated databases/py-cassandra-driver to 3.28.0 [wiz 2023-11-15]
+	Updated devel/plasma-wayland-protocols to 1.11.1 [wiz 2023-11-15]
