@@ -1,0 +1,6 @@
+Installs wrapper headers and library functions that add common
+functions missing in various older OSX releases to bring them
+approximately up to current expected standards.
+
+This package differs from libnbcompat in that it includes
+Mac OS X specific APIs.
