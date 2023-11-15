@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.78 2023/10/05 16:31:51 rhialto Exp $
+# $NetBSD: NetBSD.mk,v 1.79 2023/11/15 14:14:09 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -124,6 +124,11 @@ SERIAL_DEVICES?=	/dev/null
 .if (${MACHINE_ARCH} == alpha)
 CFLAGS+=	-mieee
 FFLAGS+=	-mieee
+.endif
+
+# check for posix_spawn(3) support, added in NetBSD-6.0
+.if exists(${_CROSS_DESTDIR:U}/usr/include/spawn.h)
+OPSYS_HAS_POSIX_SPAWN=	# defined
 .endif
 
 # check for kqueue(2) support, added in NetBSD-1.6J

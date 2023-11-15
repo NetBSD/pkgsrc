@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.8 2022/03/03 07:30:06 nia Exp $
+$NetBSD: README,v 1.9 2023/11/15 14:14:09 nia Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -104,6 +104,8 @@ TODO: Document all these variables.
     OPSYS_HAS_TIMERFD is defined if timerfd(2) is supported.
 
     OPSYS_HAS_KQUEUE is defined if kqueue(2) is supported.
+
+    OPSYS_HAS_POSIX_SPAWN is defined is posix_spawn(3) is supported.
 
     OPSYS_HAS_STATIC_PIE is defined if "-static -pie" is
 	supported by the toolchain.  Position-independent executables
