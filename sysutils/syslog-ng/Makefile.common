@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2022/12/15 10:09:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2023/11/15 11:49:41 wiz Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/module.mk
 
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_inotify_init=no
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 REPLACE_AWK+=		contrib/syslog2ng
 REPLACE_PYTHON+=	lib/merge-grammar.py
