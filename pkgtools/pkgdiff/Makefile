@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.102 2022/11/06 13:22:01 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2023/11/15 16:15:47 schmonz Exp $
 
-PKGNAME=	pkgdiff-1.10
-PKGREVISION=	2
+PKGNAME=	pkgdiff-1.11
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
+HOMEPAGE=	https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/doc/pkgsrc.html
 COMMENT=	Tools to create, maintain, and send back patches for pkgsrc
 LICENSE=	2-clause-bsd AND original-bsd
 
@@ -13,7 +12,7 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	diff perl:run
 
 MAKE_ENV+=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
@@ -65,7 +64,7 @@ do-install:
 .for f in mkpatches patchdiff pkgdiff pkgvi feedback-patches
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .  if !empty(MANINSTALL:Mcatinstall)
-.    if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+.    if defined(CATMAN_SECTION_SUFFIX) && ${CATMAN_SECTION_SUFFIX:U:tl} == yes
 	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/${f}.1
 .    else
 	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1

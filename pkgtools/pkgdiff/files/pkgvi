@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.11 2011/08/23 21:47:18 abs Exp $
+# $NetBSD: pkgvi,v 1.12 2023/11/15 16:15:47 schmonz Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -31,80 +31,68 @@
 # SUCH DAMAGE.
 #
 
+set -e
+
+progname=`basename $0`
+editor="vi"
 if [ "$PKGEDITOR" != "" ]; then
 	editor="$PKGEDITOR"
 elif [ "$EDITOR" != "" ]; then
 	editor="$EDITOR"
-else
-	editor="vi"
 fi
 
-progname=`basename $0`
+die() {
+	_exitcode=$1; shift
+	warn "$@"
+	exit ${_exitcode}
+}
 
-if [ $# -eq 0 ]
-then
-	echo Usage: $progname file >&2
-	exit 1
-fi
+warn() {
+	echo >&2 "$@"
+}
 
-file="$1"
-cmd=""
-case x"$file" in
-        x+*) cmd="$1"; shift ; file="$1" ;;
-esac
+usage() {
+	die 1 "Usage: $progname [+cmd] file [...]"
+}
 
-if [ ! -f "$file" ]
-then
-	echo "$progname: $file: No such file"
-	exit 2
-fi
+prepare_backup_files() {
+	for file in $@; do
+		[ -f "$file" ] || die 2 "$progname: $file: No such file"
+		chmod u+w "$file"
+		if [ -f "$file.orig" ]; then
+			echo "$progname: Backup already exists."
+		else
+			cp "$file" "$file.orig"
+		fi
+	done
+}
 
-if [ -f "$file.orig" ]
-then
-	chmod u+w "$file"
-	$editor $cmd "$file"
-	echo "$progname: Backup already exists. For a diff type:"
-        echo "pkgdiff $file"
-	exit 0
-fi
+remove_unneeded_backup_files() {
+	for file in $@; do
+		if cmp "$file" "$file.orig" >/dev/null 2>&1; then
+			echo "$progname: File unchanged."
+			rm -f "$file.orig"
+		else
+			echo "$progname: File was modified. For a diff, type:"
+			echo "pkgdiff \"$file\""
+		fi
+	done
+}
 
-bfile=`basename "$file"`
-dfile=`dirname "$file"`
+main() {
+	[ $# -eq 0 ] && usage
 
-ext=`echo $bfile | awk -F. '{ print $NF }'`
+	cmd=""
+	case "$1" in
+		+*)	cmd="$1"; shift	;;
+	esac
 
-if [ "$bfile" != "$ext" ]; then
-	tmp="$dfile/$bfile.$$.$ext"
-else
-	tmp="$file.$$"
-fi
+	prepare_backup_files "$@"
 
-cp "$file" "$tmp"
-chmod u+w "$tmp"
+	$editor $cmd $@
 
-if [ $? -ne 0 ]; then
-	echo "$progname: unable to create temporary file"
-	exit 1
-fi
+	remove_unneeded_backup_files "$@"
+}
 
-$editor $cmd "$tmp"
-
-if cmp "$file" "$tmp" >/dev/null 2>&1
-then
-	echo "$progname: File unchanged."
-else
-	mv "$file" "$file.orig"
-	mv "$tmp" "$file"
-	echo "$progname: File was modified. For a diff, type:"
-	echo "pkgdiff \"$file\""
-fi
-
-if [ -f "$tmp" ]
-then
-	rm "$tmp"
-fi
-
-if [ -f "$tmp~" ]
-then
-	rm "$tmp~"
-fi
+main "$@"
+exit $?
