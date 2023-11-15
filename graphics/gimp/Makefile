@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.387 2023/11/14 14:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.388 2023/11/15 09:25:51 wiz Exp $
 
 DISTNAME=	gimp-2.10.36
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
