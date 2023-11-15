@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.330 2023/11/14 19:03:37 nia Exp $
+# $NetBSD: Makefile,v 1.331 2023/11/15 12:08:52 wiz Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
@@ -43,7 +42,6 @@ CONF_FILES+=		${EGDIR}/colors.xml ${PKG_SYSCONFDIR}/colors.xml
 CONF_FILES+=		${EGDIR}/delegates.xml ${PKG_SYSCONFDIR}/delegates.xml
 CONF_FILES+=		${EGDIR}/log.xml ${PKG_SYSCONFDIR}/log.xml
 CONF_FILES+=		${EGDIR}/mime.xml ${PKG_SYSCONFDIR}/mime.xml
-CONF_FILES+=		${EGDIR}/policy.xml ${PKG_SYSCONFDIR}/policy.xml
 CONF_FILES+=		${EGDIR}/thresholds.xml ${PKG_SYSCONFDIR}/thresholds.xml
 CONF_FILES+=		${EGDIR}/type-dejavu.xml ${PKG_SYSCONFDIR}/type-dejavu.xml
 CONF_FILES+=		${EGDIR}/type-ghostscript.xml ${PKG_SYSCONFDIR}/type-ghostscript.xml
@@ -79,6 +77,9 @@ SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/libMagickCore-7.Q16HDRI.so.*
 CTF_FILES_SKIP+=	lib/libMagickWand-7.Q16HDRI.so.*
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/config/policy*xml ${DESTDIR}${EGDIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
