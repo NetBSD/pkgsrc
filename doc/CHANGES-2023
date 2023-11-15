@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7021 2023/11/15 21:21:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7022 2023/11/15 23:19:34 jym Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10090,3 +10090,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p11-kit to 0.25.0nb1 [wiz 2023-11-15]
 	Updated security/p11-kit to 0.25.2 [wiz 2023-11-15]
 	Updated textproc/sd to 1.0.0nb1 [wiz 2023-11-15]
+	Added meta-pkgs/bulk-test-php version 20231115 [jym 2023-11-15]
