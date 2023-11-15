@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/14 17:57:40 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/15 18:01:03 wiz Exp $
 
 .include "../../emulators/duckstation-qt/Makefile.common"
 
@@ -27,4 +27,5 @@ do-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
