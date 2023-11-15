@@ -1,11 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/10 15:37:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/15 08:22:59 wiz Exp $
 bin/clawsker
 man/man1/clawsker.1
+share/applications/clawsker.desktop
+share/icons/hicolor/128x128/apps/clawsker.png
+share/icons/hicolor/48x48/apps/clawsker.png
+share/icons/hicolor/64x64/apps/clawsker.png
+share/locale/ca/LC_MESSAGES/clawsker.mo
+share/locale/da/LC_MESSAGES/clawsker.mo
 share/locale/es/LC_MESSAGES/clawsker.mo
 share/locale/fr/LC_MESSAGES/clawsker.mo
-share/locale/id/LC_MESSAGES/clawsker.mo
-share/locale/it/LC_MESSAGES/clawsker.mo
+share/locale/nb/LC_MESSAGES/clawsker.mo
+share/locale/nl/LC_MESSAGES/clawsker.mo
+share/locale/pl/LC_MESSAGES/clawsker.mo
 share/locale/pt_BR/LC_MESSAGES/clawsker.mo
-share/locale/sr/LC_MESSAGES/clawsker.mo
-share/locale/sr@latin/LC_MESSAGES/clawsker.mo
+share/locale/pt_PT/LC_MESSAGES/clawsker.mo
 share/locale/sv/LC_MESSAGES/clawsker.mo
+share/locale/tr/LC_MESSAGES/clawsker.mo
+share/locale/zh_TW/LC_MESSAGES/clawsker.mo
