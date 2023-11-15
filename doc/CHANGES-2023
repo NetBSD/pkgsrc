@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7010 2023/11/15 16:04:12 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7011 2023/11/15 16:15:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10076,3 +10076,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xenkernel415 to 4.15.5nb2 [bouyer 2023-11-15]
 	Updated sysutils/xentools415 to 4.15.5nb2 [bouyer 2023-11-15]
 	Updated www/goaccess to 1.8.1 [schmonz 2023-11-15]
+	Updated pkgtools/pkgdiff to 1.11 [schmonz 2023-11-15]
