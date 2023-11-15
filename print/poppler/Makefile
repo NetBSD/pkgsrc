@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.100 2023/11/14 14:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2023/11/15 09:23:19 wiz Exp $
 
-PKGREVISION= 3
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=	PDF rendering library
