@@ -1,0 +1,1370 @@
+$NetBSD: patch-XSA443,v 1.1 2023/11/15 15:59:36 bouyer Exp $
+
+From c4d597f63832a53bbb1b826af7a4677e40e9fded Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Thu, 14 Sep 2023 13:22:50 +0100
+Subject: [PATCH 01/11] libfsimage/xfs: Remove dead code
+
+xfs_info.agnolog (and related code) and XFS_INO_AGBNO_BITS are dead code
+that serve no purpose.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+---
+ tools/libfsimage/xfs/fsys_xfs.c | 18 ------------------
+ 1 file changed, 18 deletions(-)
+
+diff --git a/tools/libfsimage/xfs/fsys_xfs.c b/tools/libfsimage/xfs/fsys_xfs.c
+index d735a88e55f3..2800699f5985 100644
+--- tools/libfsimage/xfs/fsys_xfs.c.orig
++++ tools/libfsimage/xfs/fsys_xfs.c
+@@ -37,7 +37,6 @@ struct xfs_info {
+ 	int blklog;
+ 	int inopblog;
+ 	int agblklog;
+-	int agnolog;
+ 	unsigned int nextents;
+ 	xfs_daddr_t next;
+ 	xfs_daddr_t daddr;
+@@ -65,9 +64,7 @@ static struct xfs_info xfs;
+ 
+ #define	XFS_INO_MASK(k)		((xfs_uint32_t)((1ULL << (k)) - 1))
+ #define	XFS_INO_OFFSET_BITS	xfs.inopblog
+-#define	XFS_INO_AGBNO_BITS	xfs.agblklog
+ #define	XFS_INO_AGINO_BITS	(xfs.agblklog + xfs.inopblog)
+-#define	XFS_INO_AGNO_BITS	xfs.agnolog
+ 
+ static inline xfs_agblock_t
+ agino2agbno (xfs_agino_t agino)
+@@ -149,20 +146,6 @@ xt_len (xfs_bmbt_rec_32_t *r)
+ 	return le32(r->l3) & mask32lo(21);
+ }
+ 
+-static inline int
+-xfs_highbit32(xfs_uint32_t v)
+-{
+-	int i;
+-
+-	if (--v) {
+-		for (i = 0; i < 31; i++, v >>= 1) {
+-			if (v == 0)
+-				return i;
+-		}
+-	}
+-	return 0;
+-}
+-
+ static int
+ isinxt (xfs_fileoff_t key, xfs_fileoff_t offset, xfs_filblks_t len)
+ {
+@@ -472,7 +455,6 @@ xfs_mount (fsi_file_t *ffi, const char *options)
+ 
+ 	xfs.inopblog = super.sb_inopblog;
+ 	xfs.agblklog = super.sb_agblklog;
+-	xfs.agnolog = xfs_highbit32 (le32(super.sb_agcount));
+ 
+ 	xfs.btnode_ptr0_off =
+ 		((xfs.bsize - sizeof(xfs_btree_block_t)) /
+-- 
+2.42.0
+
+From f75b0a70da392672fb7d9feed2a9e9515d74df2c Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Thu, 14 Sep 2023 13:22:51 +0100
+Subject: [PATCH 02/11] libfsimage/xfs: Amend mask32lo() to allow the value 32
+
+agblklog could plausibly be 32, but that would overflow this shift.
+Perform the shift as ULL and cast to u32 at the end instead.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Acked-by: Jan Beulich <jbeulich@suse.com>
+---
+ tools/libfsimage/xfs/fsys_xfs.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/libfsimage/xfs/fsys_xfs.c b/tools/libfsimage/xfs/fsys_xfs.c
+index 2800699f5985..4720bb4505c8 100644
+--- tools/libfsimage/xfs/fsys_xfs.c.orig
++++ tools/libfsimage/xfs/fsys_xfs.c
+@@ -60,7 +60,7 @@ static struct xfs_info xfs;
+ #define inode		((xfs_dinode_t *)((char *)FSYS_BUF + 8192))
+ #define icore		(inode->di_core)
+ 
+-#define	mask32lo(n)	(((xfs_uint32_t)1 << (n)) - 1)
++#define	mask32lo(n)	((xfs_uint32_t)((1ull << (n)) - 1))
+ 
+ #define	XFS_INO_MASK(k)		((xfs_uint32_t)((1ULL << (k)) - 1))
+ #define	XFS_INO_OFFSET_BITS	xfs.inopblog
+-- 
+2.42.0
+
+From 25fae23b32ee4d990ae11368ee21e28e66dbfa25 Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Thu, 14 Sep 2023 13:22:52 +0100
+Subject: [PATCH 03/11] libfsimage/xfs: Sanity-check the superblock during
+ mounts
+
+Sanity-check the XFS superblock for wellformedness at the mount handler.
+This forces pygrub to abort parsing a potentially malformed filesystem and
+ensures the invariants assumed throughout the rest of the code hold.
+
+Also, derive parameters from previously sanitized parameters where possible
+(rather than reading them off the superblock)
+
+The code doesn't try to avoid overflowing the end of the disk, because
+that's an unlikely and benign error. Parameters used in calculations of
+xfs_daddr_t (like the root inode index) aren't in critical need of being
+sanitized.
+
+The sanitization of agblklog is basically checking that no obvious
+overflows happen on agblklog, and then ensuring agblocks is contained in
+the range (2^(sb_agblklog-1), 2^sb_agblklog].
+
+This is part of XSA-443 / CVE-2023-34325
+
+Reported-by: Ferdinand Nölscher <noelscher@google.com>
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+---
+ tools/libfsimage/xfs/fsys_xfs.c | 48 ++++++++++++++++++++++++++-------
+ tools/libfsimage/xfs/xfs.h      | 12 +++++++++
+ 2 files changed, 50 insertions(+), 10 deletions(-)
+
+diff --git a/tools/libfsimage/xfs/fsys_xfs.c b/tools/libfsimage/xfs/fsys_xfs.c
+index 4720bb4505c8..e4eb7e1ee26f 100644
+--- tools/libfsimage/xfs/fsys_xfs.c.orig
++++ tools/libfsimage/xfs/fsys_xfs.c
+@@ -17,6 +17,7 @@
+  *  along with this program; If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#include <stdbool.h>
+ #include <xenfsimage_grub.h>
+ #include "xfs.h"
+ 
+@@ -433,29 +434,56 @@ first_dentry (fsi_file_t *ffi, xfs_ino_t *ino)
+ 	return next_dentry (ffi, ino);
+ }
+ 
++static bool
++xfs_sb_is_invalid (const xfs_sb_t *super)
++{
++	return (le32(super->sb_magicnum) != XFS_SB_MAGIC)
++	    || ((le16(super->sb_versionnum) & XFS_SB_VERSION_NUMBITS) !=
++	        XFS_SB_VERSION_4)
++	    || (super->sb_inodelog < XFS_SB_INODELOG_MIN)
++	    || (super->sb_inodelog > XFS_SB_INODELOG_MAX)
++	    || (super->sb_blocklog < XFS_SB_BLOCKLOG_MIN)
++	    || (super->sb_blocklog > XFS_SB_BLOCKLOG_MAX)
++	    || (super->sb_blocklog < super->sb_inodelog)
++	    || (super->sb_agblklog > XFS_SB_AGBLKLOG_MAX)
++	    || ((1ull << super->sb_agblklog) < le32(super->sb_agblocks))
++	    || (((1ull << super->sb_agblklog) >> 1) >=
++	        le32(super->sb_agblocks))
++	    || ((super->sb_blocklog + super->sb_dirblklog) >=
++	        XFS_SB_DIRBLK_NUMBITS);
++}
++
+ static int
+ xfs_mount (fsi_file_t *ffi, const char *options)
+ {
+ 	xfs_sb_t super;
+ 
+ 	if (!devread (ffi, 0, 0, sizeof(super), (char *)&super)
+-	    || (le32(super.sb_magicnum) != XFS_SB_MAGIC)
+-	    || ((le16(super.sb_versionnum) 
+-		& XFS_SB_VERSION_NUMBITS) != XFS_SB_VERSION_4) ) {
++	    || xfs_sb_is_invalid(&super)) {
+ 		return 0;
+ 	}
+ 
+-	xfs.bsize = le32 (super.sb_blocksize);
+-	xfs.blklog = super.sb_blocklog;
+-	xfs.bdlog = xfs.blklog - SECTOR_BITS;
++	/*
++	 * Not sanitized. It's exclusively used to generate disk addresses,
++	 * so it's not important from a security standpoint.
++	 */
+ 	xfs.rootino = le64 (super.sb_rootino);
+-	xfs.isize = le16 (super.sb_inodesize);
+-	xfs.agblocks = le32 (super.sb_agblocks);
+-	xfs.dirbsize = xfs.bsize << super.sb_dirblklog;
+ 
+-	xfs.inopblog = super.sb_inopblog;
++	/*
++	 * Sanitized to be consistent with each other, only used to
++	 * generate disk addresses, so it's safe
++	 */
++	xfs.agblocks = le32 (super.sb_agblocks);
+ 	xfs.agblklog = super.sb_agblklog;
+ 
++	/* Derived from sanitized parameters */
++	xfs.bsize = 1 << super.sb_blocklog;
++	xfs.blklog = super.sb_blocklog;
++	xfs.bdlog = super.sb_blocklog - SECTOR_BITS;
++	xfs.isize = 1 << super.sb_inodelog;
++	xfs.dirbsize = 1 << (super.sb_blocklog + super.sb_dirblklog);
++	xfs.inopblog = super.sb_blocklog - super.sb_inodelog;
++
+ 	xfs.btnode_ptr0_off =
+ 		((xfs.bsize - sizeof(xfs_btree_block_t)) /
+ 		(sizeof (xfs_bmbt_key_t) + sizeof (xfs_bmbt_ptr_t)))
+diff --git a/tools/libfsimage/xfs/xfs.h b/tools/libfsimage/xfs/xfs.h
+index 40699281e44d..b87e37d3d7e9 100644
+--- tools/libfsimage/xfs/xfs.h.orig
++++ tools/libfsimage/xfs/xfs.h
+@@ -134,6 +134,18 @@ typedef struct xfs_sb
+         xfs_uint8_t       sb_dummy[7];    /* padding */
+ } xfs_sb_t;
+ 
++/* Bound taken from xfs.c in GRUB2. It doesn't exist in the spec */
++#define	XFS_SB_DIRBLK_NUMBITS	27
++/* Implied by the XFS specification. The minimum block size is 512 octets */
++#define	XFS_SB_BLOCKLOG_MIN	9
++/* Implied by the XFS specification. The maximum block size is 65536 octets */
++#define	XFS_SB_BLOCKLOG_MAX	16
++/* Implied by the XFS specification. The minimum inode size is 256 octets */
++#define	XFS_SB_INODELOG_MIN	8
++/* Implied by the XFS specification. The maximum inode size is 2048 octets */
++#define	XFS_SB_INODELOG_MAX	11
++/* High bound for sb_agblklog */
++#define	XFS_SB_AGBLKLOG_MAX	32
+ 
+ /* those are from xfs_btree.h */
+ 
+-- 
+2.42.0
+
+From e72c68e702dd930bc6013182bb44d3e8fbbb6bf4 Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Thu, 14 Sep 2023 13:22:53 +0100
+Subject: [PATCH 04/11] libfsimage/xfs: Add compile-time check to libfsimage
+
+Adds the common tools include folder to the -I compile flags
+of libfsimage. This allows us to use:
+  xen-tools/common-macros.h:BUILD_BUG_ON()
+
+With it, statically assert a sanitized "blocklog - SECTOR_BITS" cannot
+underflow.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+---
+ tools/libfsimage/Rules.mk       | 2 +-
+ tools/libfsimage/xfs/fsys_xfs.c | 4 +++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/tools/libfsimage/Rules.mk b/tools/libfsimage/Rules.mk
+index bb6d42abb494..80598fb70aa7 100644
+--- tools/libfsimage/Rules.mk.orig
++++ tools/libfsimage/Rules.mk
+@@ -1,6 +1,6 @@
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Wno-unknown-pragmas -I$(XEN_ROOT)/tools/libfsimage/common/ -DFSIMAGE_FSDIR=\"$(FSDIR)\"
++CFLAGS += -Wno-unknown-pragmas -I$(XEN_ROOT)/tools/libfsimage/common/ $(CFLAGS_xeninclude) -DFSIMAGE_FSDIR=\"$(FSDIR)\"
+ CFLAGS += -Werror -D_GNU_SOURCE
+ LDFLAGS += -L../common/
+ 
+diff --git a/tools/libfsimage/xfs/fsys_xfs.c b/tools/libfsimage/xfs/fsys_xfs.c
+index e4eb7e1ee26f..4a8dd6f2397b 100644
+--- tools/libfsimage/xfs/fsys_xfs.c.orig
++++ tools/libfsimage/xfs/fsys_xfs.c
+@@ -19,6 +19,7 @@
+ 
+ #include <stdbool.h>
+ #include <xenfsimage_grub.h>
++#include <xen-tools/libs.h>
+ #include "xfs.h"
+ 
+ #define MAX_LINK_COUNT	8
+@@ -477,9 +478,10 @@ xfs_mount (fsi_file_t *ffi, const char *options)
+ 	xfs.agblklog = super.sb_agblklog;
+ 
+ 	/* Derived from sanitized parameters */
++	BUILD_BUG_ON(XFS_SB_BLOCKLOG_MIN < SECTOR_BITS);
++	xfs.bdlog = super.sb_blocklog - SECTOR_BITS;
+ 	xfs.bsize = 1 << super.sb_blocklog;
+ 	xfs.blklog = super.sb_blocklog;
+-	xfs.bdlog = super.sb_blocklog - SECTOR_BITS;
+ 	xfs.isize = 1 << super.sb_inodelog;
+ 	xfs.dirbsize = 1 << (super.sb_blocklog + super.sb_dirblklog);
+ 	xfs.inopblog = super.sb_blocklog - super.sb_inodelog;
+-- 
+2.42.0
+
+From 75fdc03c5a6b7fac0c3a5ac06a5beaac73aad36f Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Mon, 25 Sep 2023 18:32:21 +0100
+Subject: [PATCH 05/11] tools/pygrub: Remove unnecessary hypercall
+
+There's a hypercall being issued in order to determine whether PV64 is
+supported, but since Xen 4.3 that's strictly true so it's not required.
+
+Plus, this way we can avoid mapping the privcmd interface altogether in the
+depriv pygrub.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Reviewed-by: Andrew Cooper <andrew.cooper3@citrix.com>
+---
+ tools/pygrub/src/pygrub | 12 +-----------
+ 1 file changed, 1 insertion(+), 11 deletions(-)
+
+diff --git a/tools/pygrub/src/pygrub b/tools/pygrub/src/pygrub
+index ce7ab0eb8cf3..ce4e07d3e823 100755
+--- tools/pygrub/src/pygrub.orig
++++ tools/pygrub/src/pygrub
+@@ -18,7 +18,6 @@ import os, sys, string, struct, tempfile, re, traceback, stat, errno
+ import copy
+ import logging
+ import platform
+-import xen.lowlevel.xc
+ 
+ import curses, _curses, curses.textpad, curses.ascii
+ import getopt
+@@ -668,14 +667,6 @@ def run_grub(file, entry, fs, cfg_args):
+ 
+     return grubcfg
+ 
+-def supports64bitPVguest():
+-    xc = xen.lowlevel.xc.xc()
+-    caps = xc.xeninfo()['xen_caps'].split(" ")
+-    for cap in caps:
+-        if cap == "xen-3.0-x86_64":
+-            return True
+-    return False
+-
+ # If nothing has been specified, look for a Solaris domU. If found, perform the
+ # necessary tweaks.
+ def sniff_solaris(fs, cfg):
+@@ -684,8 +675,7 @@ def sniff_solaris(fs, cfg):
+         return cfg
+ 
+     if not cfg["kernel"]:
+-        if supports64bitPVguest() and \
+-          fs.file_exists("/platform/i86xpv/kernel/amd64/unix"):
++        if fs.file_exists("/platform/i86xpv/kernel/amd64/unix"):
+             cfg["kernel"] = "/platform/i86xpv/kernel/amd64/unix"
+             cfg["ramdisk"] = "/platform/i86pc/amd64/boot_archive"
+         elif fs.file_exists("/platform/i86xpv/kernel/unix"):
+-- 
+2.42.0
+
+From 1083a16f63461e844e9515ac4d35d48bf55785af Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Mon, 25 Sep 2023 18:32:22 +0100
+Subject: [PATCH 06/11] tools/pygrub: Small refactors
+
+Small tidy up to ensure output_directory always has a trailing '/' to ease
+concatenating paths and that `output` can only be a filename or None.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Acked-by: Andrew Cooper <andrew.cooper3@citrix.com>
+---
+ tools/pygrub/src/pygrub | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/tools/pygrub/src/pygrub b/tools/pygrub/src/pygrub
+index ce4e07d3e823..1042c05b8676 100755
+--- tools/pygrub/src/pygrub.orig
++++ tools/pygrub/src/pygrub
+@@ -793,7 +793,7 @@ if __name__ == "__main__":
+     debug = False
+     not_really = False
+     output_format = "sxp"
+-    output_directory = "/var/run/xen/pygrub"
++    output_directory = "/var/run/xen/pygrub/"
+ 
+     # what was passed in
+     incfg = { "kernel": None, "ramdisk": None, "args": "" }
+@@ -815,7 +815,8 @@ if __name__ == "__main__":
+             usage()
+             sys.exit()
+         elif o in ("--output",):
+-            output = a
++            if a != "-":
++                output = a
+         elif o in ("--kernel",):
+             incfg["kernel"] = a
+         elif o in ("--ramdisk",):
+@@ -847,12 +848,11 @@ if __name__ == "__main__":
+             if not os.path.isdir(a):
+                 print("%s is not an existing directory" % a)
+                 sys.exit(1)
+-            output_directory = a
++            output_directory = a + '/'
+ 
+     if debug:
+         logging.basicConfig(level=logging.DEBUG)
+ 
+-
+     try:
+         os.makedirs(output_directory, 0o700)
+     except OSError as e:
+@@ -861,7 +861,7 @@ if __name__ == "__main__":
+         else:
+             raise
+ 
+-    if output is None or output == "-":
++    if output is None:
+         fd = sys.stdout.fileno()
+     else:
+         fd = os.open(output, os.O_WRONLY)
+-- 
+2.42.0
+
+From 350db30e33f39af40c1e3752d73c0a30ef2d26e7 Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Mon, 25 Sep 2023 18:32:23 +0100
+Subject: [PATCH 07/11] tools/pygrub: Open the output files earlier
+
+This patch allows pygrub to get ahold of every RW file descriptor it needs
+early on. A later patch will clamp the filesystem it can access so it can't
+obtain any others.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Acked-by: Andrew Cooper <andrew.cooper3@citrix.com>
+---
+ tools/pygrub/src/pygrub | 37 ++++++++++++++++++++++---------------
+ 1 file changed, 22 insertions(+), 15 deletions(-)
+
+diff --git a/tools/pygrub/src/pygrub b/tools/pygrub/src/pygrub
+index 1042c05b8676..91e2ec2ab105 100755
+--- tools/pygrub/src/pygrub.orig
++++ tools/pygrub/src/pygrub
+@@ -738,8 +738,7 @@ if __name__ == "__main__":
+     def usage():
+         print("Usage: %s [-q|--quiet] [-i|--interactive] [-l|--list-entries] [-n|--not-really] [--output=] [--kernel=] [--ramdisk=] [--args=] [--entry=] [--output-directory=] [--output-format=sxp|simple|simple0] [--offset=] <image>" %(sys.argv[0],), file=sys.stderr)
+ 
+-    def copy_from_image(fs, file_to_read, file_type, output_directory,
+-                        not_really):
++    def copy_from_image(fs, file_to_read, file_type, fd_dst, path_dst, not_really):
+         if not_really:
+             if fs.file_exists(file_to_read):
+                 return "<%s:%s>" % (file_type, file_to_read)
+@@ -750,21 +749,18 @@ if __name__ == "__main__":
+         except Exception as e:
+             print(e, file=sys.stderr)
+             sys.exit("Error opening %s in guest" % file_to_read)
+-        (tfd, ret) = tempfile.mkstemp(prefix="boot_"+file_type+".",
+-                                      dir=output_directory)
+         dataoff = 0
+         while True:
+             data = datafile.read(FS_READ_MAX, dataoff)
+             if len(data) == 0:
+-                os.close(tfd)
++                os.close(fd_dst)
+                 del datafile
+-                return ret
++                return
+             try:
+-                os.write(tfd, data)
++                os.write(fd_dst, data)
+             except Exception as e:
+                 print(e, file=sys.stderr)
+-                os.close(tfd)
+-                os.unlink(ret)
++                os.unlink(path_dst)
+                 del datafile
+                 sys.exit("Error writing temporary copy of "+file_type)
+             dataoff += len(data)
+@@ -861,6 +857,14 @@ if __name__ == "__main__":
+         else:
+             raise
+ 
++    if not_really:
++        fd_kernel =  path_kernel = fd_ramdisk = path_ramdisk = None
++    else:
++        (fd_kernel, path_kernel) = tempfile.mkstemp(prefix="boot_kernel.",
++                                                    dir=output_directory)
++        (fd_ramdisk, path_ramdisk) = tempfile.mkstemp(prefix="boot_ramdisk.",
++                                                      dir=output_directory)
++
+     if output is None:
+         fd = sys.stdout.fileno()
+     else:
+@@ -920,20 +924,23 @@ if __name__ == "__main__":
+     if fs is None:
+         raise RuntimeError("Unable to find partition containing kernel")
+ 
+-    bootcfg["kernel"] = copy_from_image(fs, chosencfg["kernel"], "kernel",
+-                                        output_directory, not_really)
++    copy_from_image(fs, chosencfg["kernel"], "kernel",
++                    fd_kernel, path_kernel, not_really)
++    bootcfg["kernel"] = path_kernel
+ 
+     if chosencfg["ramdisk"]:
+         try:
+-            bootcfg["ramdisk"] = copy_from_image(fs, chosencfg["ramdisk"],
+-                                                 "ramdisk", output_directory,
+-                                                 not_really)
++            copy_from_image(fs, chosencfg["ramdisk"], "ramdisk",
++                            fd_ramdisk, path_ramdisk, not_really)
+         except:
+             if not not_really:
+-                os.unlink(bootcfg["kernel"])
++                os.unlink(path_kernel)
+             raise
++        bootcfg["ramdisk"] = path_ramdisk
+     else:
+         initrd = None
++        if not not_really:
++            os.unlink(path_ramdisk)
+ 
+     args = None
+     if chosencfg["args"]:
+-- 
+2.42.0
+
+From 1548ad2291ec7a72ae6949c11d2e50cea135a48d Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Mon, 25 Sep 2023 18:32:24 +0100
+Subject: [PATCH 08/11] tools/libfsimage: Export a new function to preload all
+ plugins
+
+This is work required in order to let pygrub operate in highly deprivileged
+chroot mode. This patch adds a function that preloads every plugin, hence
+ensuring that a on function exit, every shared library is loaded in memory.
+
+The new "init" function is supposed to be used before depriv, but that's
+fine because it's not acting on untrusted data.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Acked-by: Andrew Cooper <andrew.cooper3@citrix.com>
+---
+ tools/libfsimage/common/fsimage_plugin.c |  4 ++--
+ tools/libfsimage/common/mapfile-GNU      |  1 +
+ tools/libfsimage/common/mapfile-SunOS    |  1 +
+ tools/libfsimage/common/xenfsimage.h     |  8 ++++++++
+ tools/pygrub/src/fsimage/fsimage.c       | 15 +++++++++++++++
+ 5 files changed, 27 insertions(+), 2 deletions(-)
+
+diff --git a/tools/libfsimage/common/fsimage_plugin.c b/tools/libfsimage/common/fsimage_plugin.c
+index de1412b4233a..d0cb9e96a654 100644
+--- tools/libfsimage/common/fsimage_plugin.c.orig
++++ tools/libfsimage/common/fsimage_plugin.c
+@@ -119,7 +119,7 @@ fail:
+ 	return (-1);
+ }
+ 
+-static int load_plugins(void)
++int fsi_init(void)
+ {
+ 	const char *fsdir = getenv("XEN_FSIMAGE_FSDIR");
+ 	struct dirent *dp = NULL;
+@@ -180,7 +180,7 @@ int find_plugin(fsi_t *fsi, const char *path, const char *options)
+ 	fsi_plugin_t *fp;
+ 	int ret = 0;
+ 
+-	if (plugins == NULL && (ret = load_plugins()) != 0)
++	if (plugins == NULL && (ret = fsi_init()) != 0)
+ 		goto out;
+ 
+ 	for (fp = plugins; fp != NULL; fp = fp->fp_next) {
+diff --git a/tools/libfsimage/common/mapfile-GNU b/tools/libfsimage/common/mapfile-GNU
+index 26d4d7a69ec7..2d54d527d7f5 100644
+--- tools/libfsimage/common/mapfile-GNU.orig
++++ tools/libfsimage/common/mapfile-GNU
+@@ -1,6 +1,7 @@
+ VERSION {
+ 	libfsimage.so.1.0 {
+ 		global:
++			fsi_init;
+ 			fsi_open_fsimage;
+ 			fsi_close_fsimage;
+ 			fsi_file_exists;
+diff --git a/tools/libfsimage/common/mapfile-SunOS b/tools/libfsimage/common/mapfile-SunOS
+index e99b90b65077..48deedb4252f 100644
+--- tools/libfsimage/common/mapfile-SunOS.orig
++++ tools/libfsimage/common/mapfile-SunOS
+@@ -1,5 +1,6 @@
+ libfsimage.so.1.0 {
+ 	global:
++		fsi_init;
+ 		fsi_open_fsimage;
+ 		fsi_close_fsimage;
+ 		fsi_file_exists;
+diff --git a/tools/libfsimage/common/xenfsimage.h b/tools/libfsimage/common/xenfsimage.h
+index 201abd54f23a..341883b2d71a 100644
+--- tools/libfsimage/common/xenfsimage.h.orig
++++ tools/libfsimage/common/xenfsimage.h
+@@ -35,6 +35,14 @@ extern C {
+ typedef struct fsi fsi_t;
+ typedef struct fsi_file fsi_file_t;
+ 
++/*
++ * Optional initialization function. If invoked it loads the associated
++ * dynamic libraries for the backends ahead of time. This is required if
++ * the library is to run as part of a highly deprivileged executable, as
++ * the libraries may not be reachable after depriv.
++ */
++int fsi_init(void);
++
+ fsi_t *fsi_open_fsimage(const char *, uint64_t, const char *);
+ void fsi_close_fsimage(fsi_t *);
+ 
+diff --git a/tools/pygrub/src/fsimage/fsimage.c b/tools/pygrub/src/fsimage/fsimage.c
+index 2ebbbe35df92..92fbf2851f01 100644
+--- tools/pygrub/src/fsimage/fsimage.c.orig
++++ tools/pygrub/src/fsimage/fsimage.c
+@@ -286,6 +286,15 @@ fsimage_getbootstring(PyObject *o, PyObject *args)
+ 	return Py_BuildValue("s", bootstring);
+ }
+ 
++static PyObject *
++fsimage_init(PyObject *o, PyObject *args)
++{
++	if (!PyArg_ParseTuple(args, ""))
++		return (NULL);
++
++	return Py_BuildValue("i", fsi_init());
++}
++
+ PyDoc_STRVAR(fsimage_open__doc__,
+     "open(name, [offset=off]) - Open the given file as a filesystem image.\n"
+     "\n"
+@@ -297,7 +306,13 @@ PyDoc_STRVAR(fsimage_getbootstring__doc__,
+     "getbootstring(fs) - Return the boot string needed for this file system "
+     "or NULL if none is needed.\n");
+ 
++PyDoc_STRVAR(fsimage_init__doc__,
++    "init() - Loads every dynamic library contained in xenfsimage "
++    "into memory so that it can be used in chrooted environments.\n");
++
+ static struct PyMethodDef fsimage_module_methods[] = {
++	{ "init", (PyCFunction)fsimage_init,
++	    METH_VARARGS, fsimage_init__doc__ },
+ 	{ "open", (PyCFunction)fsimage_open,
+ 	    METH_VARARGS|METH_KEYWORDS, fsimage_open__doc__ },
+ 	{ "getbootstring", (PyCFunction)fsimage_getbootstring,
+-- 
+2.42.0
+
+From 4d331b0b914dfc17bd2d883bc55aeb798930832a Mon Sep 17 00:00:00 2001
+From: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Date: Mon, 25 Sep 2023 18:32:25 +0100
+Subject: [PATCH 09/11] tools/pygrub: Deprivilege pygrub
+
+Introduce a --runas=<uid> flag to deprivilege pygrub on Linux and *BSDs. It
+also implicitly creates a chroot env where it drops a deprivileged forked
+process. The chroot itself is cleaned up at the end.
+
+If the --runas arg is present, then pygrub forks, leaving the child to
+deprivilege itself, and waiting for it to complete. When the child exists,
+the parent performs cleanup and exits with the same error code.
+
+This is roughly what the child does:
+  1. Initialize libfsimage (this loads every .so in memory so the chroot
+     can avoid bind-mounting /{,usr}/lib*
+  2. Create a temporary empty chroot directory
+  3. Mount tmpfs in it
+  4. Bind mount the disk inside, because libfsimage expects a path, not a
+     file descriptor.
+  5. Remount the root tmpfs to be stricter (ro,nosuid,nodev)
+  6. Set RLIMIT_FSIZE to a sensibly high amount (128 MiB)
+  7. Depriv gid, groups and uid
+
+With this scheme in place, the "output" files are writable (up to
+RLIMIT_FSIZE octets) and the exposed filesystem is immutable and contains
+the single only file we can't easily get rid of (the disk).
+
+If running on Linux, the child process also unshares mount, IPC, and
+network namespaces before dropping its privileges.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Alejandro Vallejo <alejandro.vallejo@cloud.com>
+Acked-by: Andrew Cooper <andrew.cooper3@citrix.com>
+---
+ tools/pygrub/setup.py   |   2 +-
+ tools/pygrub/src/pygrub | 162 +++++++++++++++++++++++++++++++++++++---
+ 2 files changed, 154 insertions(+), 10 deletions(-)
+
+diff --git a/tools/pygrub/setup.py b/tools/pygrub/setup.py
+index b8f1dc4590cf..f16187b6d118 100644
+--- tools/pygrub/setup.py.orig
++++ tools/pygrub/setup.py
+@@ -17,7 +17,7 @@ xenfsimage = Extension("xenfsimage",
+ pkgs = [ 'grub' ]
+ 
+ setup(name='pygrub',
+-      version='0.6',
++      version='0.7',
+       description='Boot loader that looks a lot like grub for Xen',
+       author='Jeremy Katz',
+       author_email='katzj@redhat.com',
+diff --git a/tools/pygrub/src/pygrub b/tools/pygrub/src/pygrub
+index 91e2ec2ab105..7cea496ade08 100755
+--- tools/pygrub/src/pygrub.orig
++++ tools/pygrub/src/pygrub
+@@ -16,8 +16,11 @@ from __future__ import print_function
+ 
+ import os, sys, string, struct, tempfile, re, traceback, stat, errno
+ import copy
++import ctypes, ctypes.util
+ import logging
+ import platform
++import resource
++import subprocess
+ 
+ import curses, _curses, curses.textpad, curses.ascii
+ import getopt
+@@ -27,10 +30,135 @@ import grub.GrubConf
+ import grub.LiloConf
+ import grub.ExtLinuxConf
+ 
+-PYGRUB_VER = 0.6
++PYGRUB_VER = 0.7
+ FS_READ_MAX = 1024 * 1024
+ SECTOR_SIZE = 512
+ 
++# Unless provided through the env variable PYGRUB_MAX_FILE_SIZE_MB, then
++# this is the maximum filesize allowed for files written by the depriv
++# pygrub
++LIMIT_FSIZE = 128 << 20
++
++CLONE_NEWNS = 0x00020000 # mount namespace
++CLONE_NEWNET = 0x40000000 # network namespace
++CLONE_NEWIPC = 0x08000000 # IPC namespace
++
++def unshare(flags):
++    if not sys.platform.startswith("linux"):
++        print("skip_unshare reason=not_linux platform=%s", sys.platform, file=sys.stderr)
++        return
++
++    libc = ctypes.CDLL(ctypes.util.find_library('c'), use_errno=True)
++    unshare_prototype = ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int, use_errno=True)
++    unshare = unshare_prototype(('unshare', libc))
++
++    if unshare(flags) < 0:
++        raise OSError(ctypes.get_errno(), os.strerror(ctypes.get_errno()))
++
++def bind_mount(src, dst, options):
++    open(dst, "a").close() # touch
++
++    rc = subprocess.call(["mount", "--bind", "-o", options, src, dst])
++    if rc != 0:
++        raise RuntimeError("bad_mount: src=%s dst=%s opts=%s" %
++                           (src, dst, options))
++
++def downgrade_rlimits():
++    # Wipe the authority to use unrequired resources
++    resource.setrlimit(resource.RLIMIT_NPROC,    (0, 0))
++    resource.setrlimit(resource.RLIMIT_CORE,     (0, 0))
++    resource.setrlimit(resource.RLIMIT_MEMLOCK,  (0, 0))
++
++    # py2's resource module doesn't know about resource.RLIMIT_MSGQUEUE
++    #
++    # TODO: Use resource.RLIMIT_MSGQUEUE after python2 is deprecated
++    if sys.platform.startswith('linux'):
++        RLIMIT_MSGQUEUE = 12
++        resource.setrlimit(RLIMIT_MSGQUEUE, (0, 0))
++
++    # The final look of the filesystem for this process is fully RO, but
++    # note we have some file descriptor already open (notably, kernel and
++    # ramdisk). In order to avoid a compromised pygrub from filling up the
++    # filesystem we set RLIMIT_FSIZE to a high bound, so that the file
++    # write permissions are bound.
++    fsize = LIMIT_FSIZE
++    if "PYGRUB_MAX_FILE_SIZE_MB" in os.environ.keys():
++        fsize = os.environ["PYGRUB_MAX_FILE_SIZE_MB"] << 20
++
++    resource.setrlimit(resource.RLIMIT_FSIZE, (fsize, fsize))
++
++def depriv(output_directory, output, device, uid, path_kernel, path_ramdisk):
++    # The only point of this call is to force the loading of libfsimage.
++    # That way, we don't need to bind-mount it into the chroot
++    rc = xenfsimage.init()
++    if rc != 0:
++        os.unlink(path_ramdisk)
++        os.unlink(path_kernel)
++        raise RuntimeError("bad_xenfsimage: rc=%d" % rc)
++
++    # Create a temporary directory for the chroot
++    chroot = tempfile.mkdtemp(prefix=str(uid)+'-', dir=output_directory) + '/'
++    device_path = '/device'
++
++    pid = os.fork()
++    if pid:
++        # parent
++        _, rc = os.waitpid(pid, 0)
++
++        for path in [path_kernel, path_ramdisk]:
++            # If the child didn't write anything, just get rid of it,
++            # otherwise we end up consuming a 0-size file when parsing
++            # systems without a ramdisk that the ultimate caller of pygrub
++            # may just be unaware of
++            if rc != 0 or os.path.getsize(path) == 0:
++                os.unlink(path)
++
++        # Normally, unshare(CLONE_NEWNS) will ensure this is not required.
++        # However, this syscall doesn't exist in *BSD systems and doesn't
++        # auto-unmount everything on older Linux kernels (At least as of
++        # Linux 4.19, but it seems fixed in 5.15). Either way,
++        # recursively unmount everything if needed. Quietly.
++        with open('/dev/null', 'w') as devnull:
++            subprocess.call(["umount", "-f", chroot + device_path],
++                            stdout=devnull, stderr=devnull)
++            subprocess.call(["umount", "-f", chroot],
++                            stdout=devnull, stderr=devnull)
++        os.rmdir(chroot)
++
++        sys.exit(rc)
++
++    # By unsharing the namespace we're making sure it's all bulk-released
++    # at the end, when the namespaces disappear. This means the kernel does
++    # (almost) all the cleanup for us and the parent just has to remove the
++    # temporary directory.
++    unshare(CLONE_NEWNS | CLONE_NEWIPC | CLONE_NEWNET)
++
++    # Set sensible limits using the setrlimit interface
++    downgrade_rlimits()
++
++    # We'll mount tmpfs on the chroot to ensure the deprivileged child
++    # cannot affect the persistent state. It's RW now in order to
++    # bind-mount the device, but note it's remounted RO after that.
++    rc = subprocess.call(["mount", "-t", "tmpfs", "none", chroot])
++    if rc != 0:
++        raise RuntimeError("mount_tmpfs rc=%d dst=\"%s\"" % (rc, chroot))
++
++    # Bind the untrusted device RO
++    bind_mount(device, chroot + device_path, "ro,nosuid,noexec")
++
++    rc = subprocess.call(["mount", "-t", "tmpfs", "-o", "remount,ro,nosuid,noexec,nodev", "none", chroot])
++    if rc != 0:
++        raise RuntimeError("remount_tmpfs rc=%d dst=\"%s\"" % (rc, chroot))
++
++    # Drop superpowers!
++    os.chroot(chroot)
++    os.chdir('/')
++    os.setgid(uid)
++    os.setgroups([uid])
++    os.setuid(uid)
++
++    return device_path
++
+ def read_size_roundup(fd, size):
+     if platform.system() != 'FreeBSD':
+         return size
+@@ -736,7 +864,7 @@ if __name__ == "__main__":
+     sel = None
+     
+     def usage():
+-        print("Usage: %s [-q|--quiet] [-i|--interactive] [-l|--list-entries] [-n|--not-really] [--output=] [--kernel=] [--ramdisk=] [--args=] [--entry=] [--output-directory=] [--output-format=sxp|simple|simple0] [--offset=] <image>" %(sys.argv[0],), file=sys.stderr)
++        print("Usage: %s [-q|--quiet] [-i|--interactive] [-l|--list-entries] [-n|--not-really] [--output=] [--kernel=] [--ramdisk=] [--args=] [--entry=] [--output-directory=] [--output-format=sxp|simple|simple0] [--runas=] [--offset=] <image>" %(sys.argv[0],), file=sys.stderr)
+ 
+     def copy_from_image(fs, file_to_read, file_type, fd_dst, path_dst, not_really):
+         if not_really:
+@@ -760,7 +888,8 @@ if __name__ == "__main__":
+                 os.write(fd_dst, data)
+             except Exception as e:
+                 print(e, file=sys.stderr)
+-                os.unlink(path_dst)
++                if path_dst:
++                    os.unlink(path_dst)
+                 del datafile
+                 sys.exit("Error writing temporary copy of "+file_type)
+             dataoff += len(data)
+@@ -769,7 +898,7 @@ if __name__ == "__main__":
+         opts, args = getopt.gnu_getopt(sys.argv[1:], 'qilnh::',
+                                    ["quiet", "interactive", "list-entries", "not-really", "help",
+                                     "output=", "output-format=", "output-directory=", "offset=",
+-                                    "entry=", "kernel=", 
++                                    "runas=", "entry=", "kernel=",
+                                     "ramdisk=", "args=", "isconfig", "debug"])
+     except getopt.GetoptError:
+         usage()
+@@ -790,6 +919,7 @@ if __name__ == "__main__":
+     not_really = False
+     output_format = "sxp"
+     output_directory = "/var/run/xen/pygrub/"
++    uid = None
+ 
+     # what was passed in
+     incfg = { "kernel": None, "ramdisk": None, "args": "" }
+@@ -813,6 +943,13 @@ if __name__ == "__main__":
+         elif o in ("--output",):
+             if a != "-":
+                 output = a
++        elif o in ("--runas",):
++            try:
++                uid = int(a)
++            except ValueError:
++                print("runas value must be an integer user id")
++                usage()
++                sys.exit(1)
+         elif o in ("--kernel",):
+             incfg["kernel"] = a
+         elif o in ("--ramdisk",):
+@@ -849,6 +986,10 @@ if __name__ == "__main__":
+     if debug:
+         logging.basicConfig(level=logging.DEBUG)
+ 
++    if interactive and uid:
++        print("In order to use --runas, you must also set --entry or -q", file=sys.stderr)
++        sys.exit(1)
++
+     try:
+         os.makedirs(output_directory, 0o700)
+     except OSError as e:
+@@ -870,6 +1011,9 @@ if __name__ == "__main__":
+     else:
+         fd = os.open(output, os.O_WRONLY)
+ 
++    if uid:
++        file = depriv(output_directory, output, file, uid, path_kernel, path_ramdisk)
++
+     # debug
+     if isconfig:
+         chosencfg = run_grub(file, entry, fs, incfg["args"])
+@@ -925,21 +1069,21 @@ if __name__ == "__main__":
+         raise RuntimeError("Unable to find partition containing kernel")
+ 
+     copy_from_image(fs, chosencfg["kernel"], "kernel",
+-                    fd_kernel, path_kernel, not_really)
++                    fd_kernel, None if uid else path_kernel, not_really)
+     bootcfg["kernel"] = path_kernel
+ 
+     if chosencfg["ramdisk"]:
+         try:
+             copy_from_image(fs, chosencfg["ramdisk"], "ramdisk",
+-                            fd_ramdisk, path_ramdisk, not_really)
++                            fd_ramdisk, None if uid else path_ramdisk, not_really)
+         except:
+-            if not not_really:
+-                os.unlink(path_kernel)
++            if not uid and not not_really:
++                    os.unlink(path_kernel)
+             raise
+         bootcfg["ramdisk"] = path_ramdisk
+     else:
+         initrd = None
+-        if not not_really:
++        if not uid and not not_really:
+             os.unlink(path_ramdisk)
+ 
+     args = None
+-- 
+2.42.0
+
+From 576e7aa02ab838b6768b498f310c70ca49537202 Mon Sep 17 00:00:00 2001
+From: Roger Pau Monne <roger.pau@citrix.com>
+Date: Mon, 25 Sep 2023 14:30:20 +0200
+Subject: [PATCH 10/11] libxl: add support for running bootloader in restricted
+ mode
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Much like the device model depriv mode, add the same kind of support for the
+bootloader.  Such feature allows passing a UID as a parameter for the
+bootloader to run as, together with the bootloader itself taking the necessary
+actions to isolate.
+
+Note that the user to run the bootloader as must have the right permissions to
+access the guest disk image (in read mode only), and that the bootloader will
+be run in non-interactive mode when restricted.
+
+If enabled bootloader restrict mode will attempt to re-use the user(s) from the
+QEMU depriv implementation if no user is provided on the configuration file or
+the environment.  See docs/features/qemu-deprivilege.pandoc for more
+information about how to setup those users.
+
+Bootloader restrict mode is not enabled by default as it requires certain
+setup to be done first (setup of the user(s) to use in restrict mode).
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Roger Pau Monné <roger.pau@citrix.com>
+Reviewed-by: Anthony PERARD <anthony.perard@citrix.com>
+---
+ docs/man/xl.1.pod.in                | 33 +++++++++++
+ tools/libs/light/libxl_bootloader.c | 89 ++++++++++++++++++++++++++++-
+ tools/libs/light/libxl_dm.c         |  8 +--
+ tools/libs/light/libxl_internal.h   |  8 +++
+ 4 files changed, 131 insertions(+), 7 deletions(-)
+
+diff --git a/docs/man/xl.1.pod.in b/docs/man/xl.1.pod.in
+index 45e1430aeb74..96e6fb1c32a3 100644
+--- docs/man/xl.1.pod.in.orig
++++ docs/man/xl.1.pod.in
+@@ -1976,6 +1976,39 @@ ignored:
+ 
+ =back
+ 
++=head1 ENVIRONMENT VARIABLES
++
++The following environment variables shall affect the execution of xl:
++
++=over 4
++
++=item LIBXL_BOOTLOADER_RESTRICT
++
++Attempt to restrict the bootloader after startup, to limit the
++consequences of security vulnerabilities due to parsing guest
++owned image files.
++
++See docs/features/qemu-deprivilege.pandoc for more information
++on how to setup the unprivileged users.
++
++Note that running the bootloader in restricted mode also implies using
++non-interactive mode, and the disk image must be readable by the
++restricted user.
++
++Having this variable set is equivalent to enabling the option, even if the
++value is 0.
++
++=item LIBXL_BOOTLOADER_USER
++
++When using bootloader_restrict, run the bootloader as this user.  If
++not set the default QEMU restrict users will be used.
++
++NOTE: Each domain MUST have a SEPARATE username.
++
++See docs/features/qemu-deprivilege.pandoc for more information.
++
++=back
++
+ =head1 SEE ALSO
+ 
+ The following man pages:
+diff --git a/tools/libs/light/libxl_bootloader.c b/tools/libs/light/libxl_bootloader.c
+index 18e9ebd7148c..97d9bf4ddc0a 100644
+--- tools/libs/light/libxl_bootloader.c.orig
++++ tools/libs/light/libxl_bootloader.c
+@@ -14,6 +14,7 @@
+ 
+ #include "libxl_osdeps.h" /* must come before any other headers */
+ 
++#include <pwd.h>
+ #include <termios.h>
+ #ifdef HAVE_UTMP_H
+ #include <utmp.h>
+@@ -46,8 +47,71 @@ static void bootloader_arg(libxl__bootloader_state *bl, const char *arg)
+     bl->args[bl->nargs++] = arg;
+ }
+ 
+-static void make_bootloader_args(libxl__gc *gc, libxl__bootloader_state *bl,
+-                                 const char *bootloader_path)
++static int bootloader_uid(libxl__gc *gc, domid_t guest_domid,
++                          const char *user, uid_t *intended_uid)
++{
++    struct passwd *user_base, user_pwbuf;
++    int rc;
++
++    if (user) {
++        rc = userlookup_helper_getpwnam(gc, user, &user_pwbuf, &user_base);
++        if (rc) return rc;
++
++        if (!user_base) {
++            LOGD(ERROR, guest_domid, "Couldn't find user %s", user);
++            return ERROR_INVAL;
++        }
++
++        *intended_uid = user_base->pw_uid;
++        return 0;
++    }
++
++    /* Re-use QEMU user range for the bootloader. */
++    rc = userlookup_helper_getpwnam(gc, LIBXL_QEMU_USER_RANGE_BASE,
++                                    &user_pwbuf, &user_base);
++    if (rc) return rc;
++
++    if (user_base) {
++        struct passwd *user_clash, user_clash_pwbuf;
++        uid_t temp_uid = user_base->pw_uid + guest_domid;
++
++        rc = userlookup_helper_getpwuid(gc, temp_uid, &user_clash_pwbuf,
++                                        &user_clash);
++        if (rc) return rc;
++
++        if (user_clash) {
++            LOGD(ERROR, guest_domid,
++                 "wanted to use uid %ld (%s + %d) but that is user %s !",
++                 (long)temp_uid, LIBXL_QEMU_USER_RANGE_BASE,
++                 guest_domid, user_clash->pw_name);
++            return ERROR_INVAL;
++        }
++
++        *intended_uid = temp_uid;
++        return 0;
++    }
++
++    rc = userlookup_helper_getpwnam(gc, LIBXL_QEMU_USER_SHARED, &user_pwbuf,
++                                    &user_base);
++    if (rc) return rc;
++
++    if (user_base) {
++        LOGD(WARN, guest_domid, "Could not find user %s, falling back to %s",
++             LIBXL_QEMU_USER_RANGE_BASE, LIBXL_QEMU_USER_SHARED);
++        *intended_uid = user_base->pw_uid;
++
++        return 0;
++    }
++
++    LOGD(ERROR, guest_domid,
++    "Could not find user %s or range base pseudo-user %s, cannot restrict",
++         LIBXL_QEMU_USER_SHARED, LIBXL_QEMU_USER_RANGE_BASE);
++
++    return ERROR_INVAL;
++}
++
++static int make_bootloader_args(libxl__gc *gc, libxl__bootloader_state *bl,
++                                const char *bootloader_path)
+ {
+     const libxl_domain_build_info *info = bl->info;
+ 
+@@ -65,6 +129,23 @@ static void make_bootloader_args(libxl__gc *gc, libxl__bootloader_state *bl,
+         ARG(GCSPRINTF("--ramdisk=%s", info->ramdisk));
+     if (info->cmdline && *info->cmdline != '\0')
+         ARG(GCSPRINTF("--args=%s", info->cmdline));
++    if (getenv("LIBXL_BOOTLOADER_RESTRICT") ||
++        getenv("LIBXL_BOOTLOADER_USER")) {
++        uid_t uid = -1;
++        int rc = bootloader_uid(gc, bl->domid, getenv("LIBXL_BOOTLOADER_USER"),
++                                &uid);
++
++        if (rc) return rc;
++
++        assert(uid != -1);
++        if (!uid) {
++            LOGD(ERROR, bl->domid, "bootloader restrict UID is 0 (root)!");
++            return ERROR_INVAL;
++        }
++        LOGD(DEBUG, bl->domid, "using uid %ld", (long)uid);
++        ARG(GCSPRINTF("--runas=%ld", (long)uid));
++        ARG("--quiet");
++    }
+ 
+     ARG(GCSPRINTF("--output=%s", bl->outputpath));
+     ARG("--output-format=simple0");
+@@ -83,6 +164,7 @@ static void make_bootloader_args(libxl__gc *gc, libxl__bootloader_state *bl,
+     /* Sentinel for execv */
+     ARG(NULL);
+ 
++    return 0;
+ #undef ARG
+ }
+ 
+@@ -447,7 +529,8 @@ static void bootloader_disk_attached_cb(libxl__egc *egc,
+             bootloader = bltmp;
+     }
+ 
+-    make_bootloader_args(gc, bl, bootloader);
++    rc = make_bootloader_args(gc, bl, bootloader);
++    if (rc) goto out;
+ 
+     bl->openpty.ao = ao;
+     bl->openpty.callback = bootloader_gotptys;
+diff --git a/tools/libs/light/libxl_dm.c b/tools/libs/light/libxl_dm.c
+index b86e8ccc858f..59de5c1ae22f 100644
+--- tools/libs/light/libxl_dm.c.orig
++++ tools/libs/light/libxl_dm.c
+@@ -80,10 +80,10 @@ static int libxl__create_qemu_logfile(libxl__gc *gc, char *name)
+  *  On error, return a libxl-style error code.
+  */
+ #define DEFINE_USERLOOKUP_HELPER(NAME,SPEC_TYPE,STRUCTNAME,SYSCONF)     \
+-    static int userlookup_helper_##NAME(libxl__gc *gc,                  \
+-                                        SPEC_TYPE spec,                 \
+-                                        struct STRUCTNAME *resultbuf,   \
+-                                        struct STRUCTNAME **out)        \
++    int userlookup_helper_##NAME(libxl__gc *gc,                         \
++                                 SPEC_TYPE spec,                        \
++                                 struct STRUCTNAME *resultbuf,          \
++                                 struct STRUCTNAME **out)               \
+     {                                                                   \
+         struct STRUCTNAME *resultp = NULL;                              \
+         char *buf = NULL;                                               \
+diff --git a/tools/libs/light/libxl_internal.h b/tools/libs/light/libxl_internal.h
+index cc27c72ecf30..8415d1feed16 100644
+--- tools/libs/light/libxl_internal.h.orig
++++ tools/libs/light/libxl_internal.h
+@@ -4864,6 +4864,14 @@ struct libxl__cpu_policy {
+     struct xc_msr *msr;
+ };
+ 
++struct passwd;
++_hidden int userlookup_helper_getpwnam(libxl__gc*, const char *user,
++                                       struct passwd *res,
++                                       struct passwd **out);
++_hidden int userlookup_helper_getpwuid(libxl__gc*, uid_t uid,
++                                       struct passwd *res,
++                                       struct passwd **out);
++
+ #endif
+ 
+ /*
+-- 
+2.42.0
+
+From 34221884752bb835bbdab66378b3cecbf133e3d3 Mon Sep 17 00:00:00 2001
+From: Roger Pau Monne <roger.pau@citrix.com>
+Date: Thu, 28 Sep 2023 12:22:35 +0200
+Subject: [PATCH 11/11] libxl: limit bootloader execution in restricted mode
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Introduce a timeout for bootloader execution when running in restricted mode.
+
+Allow overwriting the default time out with an environment provided value.
+
+This is part of XSA-443 / CVE-2023-34325
+
+Signed-off-by: Roger Pau Monné <roger.pau@citrix.com>
+Reviewed-by: Anthony PERARD <anthony.perard@citrix.com>
+---
+ docs/man/xl.1.pod.in                |  8 ++++++
+ tools/libs/light/libxl_bootloader.c | 40 +++++++++++++++++++++++++++++
+ tools/libs/light/libxl_internal.h   |  2 ++
+ 3 files changed, 50 insertions(+)
+
+diff --git a/docs/man/xl.1.pod.in b/docs/man/xl.1.pod.in
+index 96e6fb1c32a3..8f056450a730 100644
+--- docs/man/xl.1.pod.in.orig
++++ docs/man/xl.1.pod.in
+@@ -2007,6 +2007,14 @@ NOTE: Each domain MUST have a SEPARATE username.
+ 
+ See docs/features/qemu-deprivilege.pandoc for more information.
+ 
++=item LIBXL_BOOTLOADER_TIMEOUT
++
++Timeout in seconds for bootloader execution when running in restricted mode.
++Otherwise the build time default in LIBXL_BOOTLOADER_TIMEOUT will be used.
++
++If defined the value must be an unsigned integer between 0 and INT_MAX,
++otherwise behavior is undefined.  Setting to 0 disables the timeout.
++
+ =back
+ 
+ =head1 SEE ALSO
+diff --git a/tools/libs/light/libxl_bootloader.c b/tools/libs/light/libxl_bootloader.c
+index 97d9bf4ddc0a..3ca6463e5f63 100644
+--- tools/libs/light/libxl_bootloader.c.orig
++++ tools/libs/light/libxl_bootloader.c
+@@ -34,6 +34,8 @@ static void bootloader_keystrokes_copyfail(libxl__egc *egc,
+        libxl__datacopier_state *dc, int rc, int onwrite, int errnoval);
+ static void bootloader_display_copyfail(libxl__egc *egc,
+        libxl__datacopier_state *dc, int rc, int onwrite, int errnoval);
++static void bootloader_timeout(libxl__egc *egc, libxl__ev_time *ev,
++                               const struct timeval *requested_abs, int rc);
+ static void bootloader_domaindeath(libxl__egc*, libxl__domaindeathcheck *dc,
+                                    int rc);
+ static void bootloader_finished(libxl__egc *egc, libxl__ev_child *child,
+@@ -301,6 +303,7 @@ void libxl__bootloader_init(libxl__bootloader_state *bl)
+     bl->ptys[0].master = bl->ptys[0].slave = 0;
+     bl->ptys[1].master = bl->ptys[1].slave = 0;
+     libxl__ev_child_init(&bl->child);
++    libxl__ev_time_init(&bl->time);
+     libxl__domaindeathcheck_init(&bl->deathcheck);
+     bl->keystrokes.ao = bl->ao;  libxl__datacopier_init(&bl->keystrokes);
+     bl->display.ao = bl->ao;     libxl__datacopier_init(&bl->display);
+@@ -318,6 +321,7 @@ static void bootloader_cleanup(libxl__egc *egc, libxl__bootloader_state *bl)
+     libxl__domaindeathcheck_stop(gc,&bl->deathcheck);
+     libxl__datacopier_kill(&bl->keystrokes);
+     libxl__datacopier_kill(&bl->display);
++    libxl__ev_time_deregister(gc, &bl->time);
+     for (i=0; i<2; i++) {
+         libxl__carefd_close(bl->ptys[i].master);
+         libxl__carefd_close(bl->ptys[i].slave);
+@@ -379,6 +383,7 @@ static void bootloader_stop(libxl__egc *egc,
+ 
+     libxl__datacopier_kill(&bl->keystrokes);
+     libxl__datacopier_kill(&bl->display);
++    libxl__ev_time_deregister(gc, &bl->time);
+     if (libxl__ev_child_inuse(&bl->child)) {
+         r = kill(bl->child.pid, SIGTERM);
+         if (r) LOGED(WARN, bl->domid, "%sfailed to kill bootloader [%lu]",
+@@ -641,6 +646,25 @@ static void bootloader_gotptys(libxl__egc *egc, libxl__openpty_state *op)
+ 
+     struct termios termattr;
+ 
++    if (getenv("LIBXL_BOOTLOADER_RESTRICT") ||
++        getenv("LIBXL_BOOTLOADER_USER")) {
++        const char *timeout_env = getenv("LIBXL_BOOTLOADER_TIMEOUT");
++        int timeout = timeout_env ? atoi(timeout_env)
++                                  : LIBXL_BOOTLOADER_TIMEOUT;
++
++        if (timeout) {
++            /* Set execution timeout */
++            rc = libxl__ev_time_register_rel(ao, &bl->time,
++                                            bootloader_timeout,
++                                            timeout * 1000);
++            if (rc) {
++                LOGED(ERROR, bl->domid,
++                      "unable to register timeout for bootloader execution");
++                goto out;
++            }
++        }
++    }
++
+     pid_t pid = libxl__ev_child_fork(gc, &bl->child, bootloader_finished);
+     if (pid == -1) {
+         rc = ERROR_FAIL;
+@@ -706,6 +730,21 @@ static void bootloader_display_copyfail(libxl__egc *egc,
+     libxl__bootloader_state *bl = CONTAINER_OF(dc, *bl, display);
+     bootloader_copyfail(egc, "bootloader output", bl, 1, rc,onwrite,errnoval);
+ }
++static void bootloader_timeout(libxl__egc *egc, libxl__ev_time *ev,
++                               const struct timeval *requested_abs, int rc)
++{
++    libxl__bootloader_state *bl = CONTAINER_OF(ev, *bl, time);
++    STATE_AO_GC(bl->ao);
++
++    libxl__ev_time_deregister(gc, &bl->time);
++
++    assert(libxl__ev_child_inuse(&bl->child));
++    LOGD(ERROR, bl->domid, "killing bootloader because of timeout");
++
++    libxl__ev_child_kill_deregister(ao, &bl->child, SIGKILL);
++
++    bootloader_callback(egc, bl, rc);
++}
+ 
+ static void bootloader_domaindeath(libxl__egc *egc,
+                                    libxl__domaindeathcheck *dc,
+@@ -722,6 +761,7 @@ static void bootloader_finished(libxl__egc *egc, libxl__ev_child *child,
+     STATE_AO_GC(bl->ao);
+     int rc;
+ 
++    libxl__ev_time_deregister(gc, &bl->time);
+     libxl__datacopier_kill(&bl->keystrokes);
+     libxl__datacopier_kill(&bl->display);
+ 
+diff --git a/tools/libs/light/libxl_internal.h b/tools/libs/light/libxl_internal.h
+index 8415d1feed16..a9581289f462 100644
+--- tools/libs/light/libxl_internal.h.orig
++++ tools/libs/light/libxl_internal.h
+@@ -103,6 +103,7 @@
+ #define LIBXL_QMP_CMD_TIMEOUT 10
+ #define LIBXL_STUBDOM_START_TIMEOUT 30
+ #define LIBXL_QEMU_BODGE_TIMEOUT 2
++#define LIBXL_BOOTLOADER_TIMEOUT 120
+ #define LIBXL_XENCONSOLE_LIMIT 1048576
+ #define LIBXL_XENCONSOLE_PROTOCOL "vt100"
+ #define LIBXL_MAXMEM_CONSTANT 1024
+@@ -3738,6 +3739,7 @@ struct libxl__bootloader_state {
+     libxl__openpty_state openpty;
+     libxl__openpty_result ptys[2];  /* [0] is for bootloader */
+     libxl__ev_child child;
++    libxl__ev_time time;
+     libxl__domaindeathcheck deathcheck;
+     int nargs, argsspace;
+     const char **args;
+-- 
+2.42.0
+
