@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.167 2023/11/14 14:02:43 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2023/11/15 09:25:53 wiz Exp $
 
 DISTNAME=	evince-43.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
