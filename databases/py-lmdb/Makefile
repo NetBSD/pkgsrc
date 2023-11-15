@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/04/17 09:32:48 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/15 09:28:50 wiz Exp $
 
 DISTNAME=	lmdb-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/jnwatson/py-lmdb
 COMMENT=	Universal Python binding for the LMDB
 LICENSE=	modified-bsd
+
+USE_TOOLS+=	patch
 
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../lang/python/egg.mk"
