@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/11/13 15:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/11/15 09:30:48 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
@@ -13,6 +13,8 @@ HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
 TEST_DEPENDS+=	curl-[0-9]*:../../www/curl
 
