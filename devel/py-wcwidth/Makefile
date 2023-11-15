@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/10/31 20:37:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/15 17:54:03 adam Exp $
 
-DISTNAME=	wcwidth-0.2.9
+DISTNAME=	wcwidth-0.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcwidth/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://github.com/jquast/wcwidth
 COMMENT=	Measures number of Terminal column cells of wide-character codes
 LICENSE=	mit
 
+USE_LANGUAGES=	# none
+
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache>=1.2.1:../../devel/py-backports.functools_lru_cache
 .endif
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
