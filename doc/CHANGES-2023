@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7003 2023/11/15 10:06:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7004 2023/11/15 12:09:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10067,3 +10067,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pysvn to 1.9.20 [wiz 2023-11-15]
 	Updated devel/blosc2 to 2.11.2 [adam 2023-11-15]
 	Updated security/libgcrypt to 1.10.3 [adam 2023-11-15]
+	Updated graphics/ImageMagick to 7.1.1.21 [wiz 2023-11-15]
