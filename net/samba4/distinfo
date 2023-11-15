@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.98 2023/10/10 16:05:01 taca Exp $
+$NetBSD: distinfo,v 1.99 2023/11/15 18:54:43 wiz Exp $
 
-BLAKE2s (samba-4.18.8.tar.gz) = 29c777cfe80f360809ee6a3d62aa6729890f581ac0e5be632a930891a4133333
-SHA512 (samba-4.18.8.tar.gz) = 2924c360f6299129527457547b13c1b282e2907a0ecde1036dbca894c752935d693914b4846a9eab436b33798c53c9974692e51fd071301b1174598be944a246
-Size (samba-4.18.8.tar.gz) = 41335959 bytes
+BLAKE2s (samba-4.19.2.tar.gz) = 49ff9bc974e87a6a210897868132ea7523b6b000d80f29777d1e8dd00b1c52b2
+SHA512 (samba-4.19.2.tar.gz) = d2fb64013e77d138a52b100377a042951c132884936b2b6dbf60506355e3f6882d5f3008a6bb855dd19b8981f7dc14da4f91ddbea7458978c1c4ab009608faf5
+Size (samba-4.19.2.tar.gz) = 41817924 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
@@ -12,11 +12,9 @@ SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_pthreadpool_pthreadpool.c) = 4b0c3d49d578b5ab12f5bad1ebeb50efb43e756c
 SHA1 (patch-lib_replace_system_passwd.h) = 652be067b2560310ce3a4bbf37c24cb2fa8eb82d
-SHA1 (patch-lib_replace_wscript) = f75dff520034ed976c15134c950eebf78598a60b
 SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = 109e7a516dc291372e982b9f21c6ce8c0e5d3ca4
 SHA1 (patch-lib_tevent_tevent__threads.c) = e5e82db82cff4d550451cd9290b3a351b25d4de4
-SHA1 (patch-lib_tevent_wscript) = fbbe2024096b57d651d90064f53489a974db9d7a
 SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 0ac414e02ee3a326d3dd34515bfffce6e8da5e46
 SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f73bb791217c26
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
@@ -38,5 +36,5 @@ SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b
 SHA1 (patch-source4_scripting_wscript__build) = 816d44f48b6cbc6d999995e00eaea1d2dc477159
 SHA1 (patch-third__party_heimdal__build_roken.h) = 59d5523676fe8c0315e969247f26b4ea2f900402
 SHA1 (patch-third__party_heimdal_include_heim__threads.h) = 5ad13530cf9688e46f9ad487bb0fddab668c8276
-SHA1 (patch-third__party_heimdal_lib_hcrypto_evp.c) = db1be175f7328d7aa9551ba2e641be15e348c84a
+SHA1 (patch-third__party_heimdal_lib_hcrypto_evp.c) = 8e8e23198ef4afdc24a6930bd57aa5a898f1826f
 SHA1 (patch-third__party_heimdal_lib_roken_getauxval.h) = 23c9cf574d9f042c9f6dd1b0377c91045e755b5b
