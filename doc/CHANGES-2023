@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6992 2023/11/15 00:59:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6993 2023/11/15 02:10:05 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10052,3 +10052,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/p5-Gtk2-GladeXML [wiz 2023-11-15]
 	Removed multimedia/acidrip [wiz 2023-11-15]
 	Removed multimedia/dvdrip [wiz 2023-11-15]
+	Updated sysutils/intel-microcode-netbsd to 20231114 [msaitoh 2023-11-15]
