@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.34 2023/11/12 13:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/15 09:23:19 wiz Exp $
 
-PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-includes-${POPPLER_VERS}
@@ -12,6 +11,9 @@ CONFLICTS+=	poppler-0.5.1{,nb*}
 NO_BUILD=	yes
 
 INCDIR=	${DESTDIR}${PREFIX}/include
+
+CMAKE_ARGS+=	-DENABLE_QT5:BOOL=OFF
+CMAKE_ARGS+=	-DENABLE_QT6:BOOL=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
