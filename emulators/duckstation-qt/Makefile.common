@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.1 2023/11/14 17:57:40 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/11/15 08:28:04 wiz Exp $
 
 # This is a separate file out of optimism that the non-qt version will
 # eventually be portable.
 
-GITHUB_TAG=	v0.1-5624
 DISTNAME=	duckstation-${GITHUB_TAG:S/-/./g:S/^v//g}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stenzek/}
+GITHUB_PROJECT=	duckstation
+GITHUB_TAG=	v0.1-5624
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.duckstation.org/
