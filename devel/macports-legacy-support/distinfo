@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2023/11/15 15:23:13 nia Exp $
+
+BLAKE2s (macports-legacy-support-1.1.1.tar.gz) = c5bee6e20f1ad45d17cc9c3b0649d5918cd40c4a41444b4f0c7c6c5800320e3c
+SHA512 (macports-legacy-support-1.1.1.tar.gz) = 5bb7108ed23a17ab13e5774211cffdc79ad8c050ce6501d7f5c61e7131f053ebfdb4389e63c68d4fc7da9b08692d6564177747685cb6694f471b1dc026f446a2
+Size (macports-legacy-support-1.1.1.tar.gz) = 72248 bytes
+SHA1 (patch-include_dirent.h) = 965b0d3e44d401b906badf26979411524bf23372
+SHA1 (patch-src_fdopendir.c) = 5cbfa0a7a5b98646c5f57e5965ecd67de904c123
+SHA1 (patch-test_do__test__faccessat__setuid) = b59e8a3c2b25604b187d50d489fe27600a893cc9
+SHA1 (patch-test_test__faccessat.c) = efd8945a452ac34fd3e2bcc434f93abfcafeba27
