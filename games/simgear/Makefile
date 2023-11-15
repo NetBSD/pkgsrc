@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.153 2023/11/14 14:01:55 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2023/11/15 09:25:51 wiz Exp $
 
 DISTNAME=	simgear-2020.3.11
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
