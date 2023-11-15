@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:59 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/11/15 00:01:55 wiz Exp $
 
-BLAKE2s (acora-2.3.tar.gz) = d088a086edacd994c4553651762ae0e2f1a22344b9cee0a52296c00374e4c36c
-SHA512 (acora-2.3.tar.gz) = d193c0be36b23d27f912327a648abdd340242a28e6dc3d3b4c500ddddfc2bcc5bed4eafeffc30053ece65cd0362e62206978602848301c7f5354ca73489aad2c
-Size (acora-2.3.tar.gz) = 215601 bytes
+BLAKE2s (acora-2.4.tar.gz) = d1d434240c65e9355860eb6a8adbd8346248d866c5548f9601f6d0fe3a3a8043
+SHA512 (acora-2.4.tar.gz) = 023762a56ebc9af875f15b85c400e36d9348898160c5f8bb85f9d18a6d168c8c583e89b2d0c0608a46b95af05eec16c3676c64a4a574135e9a2da89bab06bf1c
+Size (acora-2.4.tar.gz) = 266246 bytes
