@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2022/07/27 14:34:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2023/11/15 15:21:18 tnn Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
@@ -60,6 +60,11 @@ post-install:
 	  ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f:Q}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f:Q}.1; \
 	fi
 .endfor
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/libexec/coreutils/libstdbuf.so \
+	${DESTDIR}${PREFIX}/libexec/coreutils/libstdbuf.so
+.endif
+
 
 #CONFIGURE_ARGS+=	--enable-install-program=su
 #.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
