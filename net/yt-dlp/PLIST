@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.23 2023/10/15 07:51:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/11/15 08:29:22 adam Exp $
 bin/yt-dlp
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/yt_dlp/YoutubeDL.py
 ${PYSITELIB}/yt_dlp/YoutubeDL.pyc
 ${PYSITELIB}/yt_dlp/YoutubeDL.pyo
@@ -1410,6 +1411,9 @@ ${PYSITELIB}/yt_dlp/extractor/laola1tv.pyo
 ${PYSITELIB}/yt_dlp/extractor/lastfm.py
 ${PYSITELIB}/yt_dlp/extractor/lastfm.pyc
 ${PYSITELIB}/yt_dlp/extractor/lastfm.pyo
+${PYSITELIB}/yt_dlp/extractor/laxarxames.py
+${PYSITELIB}/yt_dlp/extractor/laxarxames.pyc
+${PYSITELIB}/yt_dlp/extractor/laxarxames.pyo
 ${PYSITELIB}/yt_dlp/extractor/lazy_extractors.py
 ${PYSITELIB}/yt_dlp/extractor/lazy_extractors.pyc
 ${PYSITELIB}/yt_dlp/extractor/lazy_extractors.pyo
@@ -2220,6 +2224,9 @@ ${PYSITELIB}/yt_dlp/extractor/radiobremen.pyo
 ${PYSITELIB}/yt_dlp/extractor/radiocanada.py
 ${PYSITELIB}/yt_dlp/extractor/radiocanada.pyc
 ${PYSITELIB}/yt_dlp/extractor/radiocanada.pyo
+${PYSITELIB}/yt_dlp/extractor/radiocomercial.py
+${PYSITELIB}/yt_dlp/extractor/radiocomercial.pyc
+${PYSITELIB}/yt_dlp/extractor/radiocomercial.pyo
 ${PYSITELIB}/yt_dlp/extractor/radiode.py
 ${PYSITELIB}/yt_dlp/extractor/radiode.pyc
 ${PYSITELIB}/yt_dlp/extractor/radiode.pyo
@@ -2394,6 +2401,9 @@ ${PYSITELIB}/yt_dlp/extractor/savefrom.pyo
 ${PYSITELIB}/yt_dlp/extractor/sbs.py
 ${PYSITELIB}/yt_dlp/extractor/sbs.pyc
 ${PYSITELIB}/yt_dlp/extractor/sbs.pyo
+${PYSITELIB}/yt_dlp/extractor/sbscokr.py
+${PYSITELIB}/yt_dlp/extractor/sbscokr.pyc
+${PYSITELIB}/yt_dlp/extractor/sbscokr.pyo
 ${PYSITELIB}/yt_dlp/extractor/screen9.py
 ${PYSITELIB}/yt_dlp/extractor/screen9.pyc
 ${PYSITELIB}/yt_dlp/extractor/screen9.pyo
@@ -2745,9 +2755,6 @@ ${PYSITELIB}/yt_dlp/extractor/theweatherchannel.pyo
 ${PYSITELIB}/yt_dlp/extractor/thisamericanlife.py
 ${PYSITELIB}/yt_dlp/extractor/thisamericanlife.pyc
 ${PYSITELIB}/yt_dlp/extractor/thisamericanlife.pyo
-${PYSITELIB}/yt_dlp/extractor/thisav.py
-${PYSITELIB}/yt_dlp/extractor/thisav.pyc
-${PYSITELIB}/yt_dlp/extractor/thisav.pyo
 ${PYSITELIB}/yt_dlp/extractor/thisoldhouse.py
 ${PYSITELIB}/yt_dlp/extractor/thisoldhouse.pyc
 ${PYSITELIB}/yt_dlp/extractor/thisoldhouse.pyo
@@ -3366,6 +3373,9 @@ ${PYSITELIB}/yt_dlp/networking/__init__.pyo
 ${PYSITELIB}/yt_dlp/networking/_helper.py
 ${PYSITELIB}/yt_dlp/networking/_helper.pyc
 ${PYSITELIB}/yt_dlp/networking/_helper.pyo
+${PYSITELIB}/yt_dlp/networking/_requests.py
+${PYSITELIB}/yt_dlp/networking/_requests.pyc
+${PYSITELIB}/yt_dlp/networking/_requests.pyo
 ${PYSITELIB}/yt_dlp/networking/_urllib.py
 ${PYSITELIB}/yt_dlp/networking/_urllib.pyc
 ${PYSITELIB}/yt_dlp/networking/_urllib.pyo
