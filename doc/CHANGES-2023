@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6989 2023/11/15 00:52:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6990 2023/11/15 00:56:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10049,3 +10049,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-junos-eznc to 2.6.8 [wiz 2023-11-15]
 	Removed lang/py-python-language-server successor lang/py-lsp-server [wiz 2023-11-15]
 	Updated finance/py-empyrical to 0.5.0nb1 [wiz 2023-11-15]
+	Removed devel/p5-Gtk2-GladeXML [wiz 2023-11-15]
