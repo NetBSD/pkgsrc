@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6991 2023/11/15 00:58:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6992 2023/11/15 00:59:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10051,3 +10051,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-empyrical to 0.5.0nb1 [wiz 2023-11-15]
 	Removed devel/p5-Gtk2-GladeXML [wiz 2023-11-15]
 	Removed multimedia/acidrip [wiz 2023-11-15]
+	Removed multimedia/dvdrip [wiz 2023-11-15]

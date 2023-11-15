@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2023/11/15 00:58:45 wiz Exp $
+# $NetBSD: Makefile,v 1.340 2023/11/15 00:59:37 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -23,7 +23,6 @@ SUBDIR+=	dvd-slideshow
 SUBDIR+=	dvd-vr
 SUBDIR+=	dvdauthor
 SUBDIR+=	dvdbackup
-SUBDIR+=	dvdrip
 SUBDIR+=	dvdstyler
 SUBDIR+=	dvdview
 SUBDIR+=	ffmpeg2
