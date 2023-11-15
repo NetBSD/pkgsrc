@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.92 2023/05/18 00:04:26 schmonz Exp $
+# $NetBSD: Linux.mk,v 1.93 2023/11/15 14:14:09 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -214,3 +214,4 @@ MAKE_ENV+=	NOGCCERROR=true
 
 OPSYS_HAS_EVENTFD=	# defined
 OPSYS_HAS_TIMERFD=	# defined
+OPSYS_HAS_POSIX_SPAWN=	# defined
