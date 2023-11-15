@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/11/15 10:06:12 adam Exp $
+# $NetBSD: Makefile,v 1.111 2023/11/15 15:26:49 nia Exp $
 
 DISTNAME=	libgcrypt-1.10.3
 CATEGORIES=	security
@@ -42,6 +42,14 @@ CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 # instead.
 CONFIGURE_ARGS+=	GPGRT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpgrt-config
 CONFIGURE_ARGS+=	GPG_ERROR_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpg-error-config
+.endif
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
+
+.if ${MACHINE_PLATFORM:MDarwin-*-powerpc}
+CPPFLAGS+=	-D__powerpc__
 .endif
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.13
