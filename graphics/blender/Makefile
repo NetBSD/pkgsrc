@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.210 2023/11/12 13:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2023/11/15 20:00:37 wiz Exp $
 
 DISTNAME=	blender-3.6.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
