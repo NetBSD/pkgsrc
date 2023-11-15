@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2023/11/14 14:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2023/11/15 21:01:23 wiz Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -77,7 +77,7 @@ REPLACE_PYTHON+=	tests/runtests.py
 .include "../../lang/python/extension.mk"
 
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../graphics/py-cairo118/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.15.3
 .include "../../devel/py-gobject/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
