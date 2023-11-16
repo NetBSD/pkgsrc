@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/03 08:53:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/16 11:52:06 wiz Exp $
 include/ibus-anthy-1.0/anthygcontext.h
 lib/girepository-1.0/Anthy-9000.typelib
 lib/libanthygobject-1.0.la
@@ -6,6 +6,7 @@ libexec/ibus-engine-anthy
 libexec/ibus-setup-anthy
 share/applications/ibus-setup-anthy.desktop
 share/gir-1.0/Anthy-9000.gir
+share/glib-2.0/schemas/org.freedesktop.ibus.engine.anthy.gschema.xml
 share/ibus-anthy/dicts/emoji.t
 share/ibus-anthy/dicts/era.t
 share/ibus-anthy/dicts/oldchar.t
@@ -57,7 +58,22 @@ share/ibus-anthy/setup/prefs.pyo
 share/ibus-anthy/setup/setup.ui
 share/ibus/component/anthy.xml
 share/icons/hicolor/scalable/apps/ibus-anthy.svg
+share/locale/ca/LC_MESSAGES/ibus-anthy.mo
+share/locale/cs/LC_MESSAGES/ibus-anthy.mo
+share/locale/de/LC_MESSAGES/ibus-anthy.mo
 share/locale/el/LC_MESSAGES/ibus-anthy.mo
+share/locale/es/LC_MESSAGES/ibus-anthy.mo
+share/locale/fi/LC_MESSAGES/ibus-anthy.mo
 share/locale/fr/LC_MESSAGES/ibus-anthy.mo
+share/locale/hu/LC_MESSAGES/ibus-anthy.mo
 share/locale/ja/LC_MESSAGES/ibus-anthy.mo
+share/locale/ka/LC_MESSAGES/ibus-anthy.mo
+share/locale/ko/LC_MESSAGES/ibus-anthy.mo
+share/locale/pt_BR/LC_MESSAGES/ibus-anthy.mo
+share/locale/pt_PT/LC_MESSAGES/ibus-anthy.mo
+share/locale/si/LC_MESSAGES/ibus-anthy.mo
+share/locale/sv/LC_MESSAGES/ibus-anthy.mo
+share/locale/tr/LC_MESSAGES/ibus-anthy.mo
+share/locale/uk/LC_MESSAGES/ibus-anthy.mo
 share/locale/zh_CN/LC_MESSAGES/ibus-anthy.mo
+share/metainfo/org.freedesktop.ibus.engine.anthy.metainfo.xml
