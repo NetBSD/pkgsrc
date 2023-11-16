@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2023/11/15 18:54:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2023/11/16 16:37:31 dogcow Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -759,7 +759,7 @@ lib/samba/private/libMESSAGING-samba4.so
 lib/samba/private/libREG-FULL-samba4.so
 lib/samba/private/libRPC-SERVER-LOOP-samba4.so
 lib/samba/private/libRPC-WORKER-samba4.so
-lib/samba/private/libad-claims-samba4.so
+${PLIST.ads}lib/samba/private/libad-claims-samba4.so
 lib/samba/private/libaddns-samba4.so
 lib/samba/private/libads-samba4.so
 lib/samba/private/libasn1-samba4.so
@@ -768,7 +768,7 @@ lib/samba/private/libauth-samba4.so
 lib/samba/private/libauth-unix-token-samba4.so
 lib/samba/private/libauth4-samba4.so
 lib/samba/private/libauthkrb5-samba4.so
-lib/samba/private/libauthn-policy-util-samba4.so
+${PLIST.ads}lib/samba/private/libauthn-policy-util-samba4.so
 lib/samba/private/libcli-cldap-samba4.so
 lib/samba/private/libcli-ldap-common-samba4.so
 lib/samba/private/libcli-ldap-samba4.so
