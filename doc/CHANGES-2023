@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7040 2023/11/16 12:13:27 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7041 2023/11/16 12:16:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10118,3 +10118,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated inputmethod/ibus-array to 0.2.2 [wiz 2023-11-16]
 	Updated security/p11-kit to 0.25.3 [adam 2023-11-16]
 	Updated textproc/ugrep to 4.3.3 [adam 2023-11-16]
+	Updated net/syncthing-gtk to 0.9.4.5 [wiz 2023-11-16]
