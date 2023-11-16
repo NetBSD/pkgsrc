@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/11/16 07:51:41 mrg Exp $
+# $NetBSD: Makefile,v 1.32 2023/11/16 12:11:27 adam Exp $
 
-DISTNAME=	p11-kit-0.25.2
+DISTNAME=	p11-kit-0.25.3
 CATEGORIES=	security
-#MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
@@ -16,10 +15,10 @@ DEPENDS+=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 MESON_ARGS+=	-Dtrust_paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 
-USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
-USE_TOOLS+=		pkg-config readlink
 USE_FEATURES+=		strndup strnlen
+USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config readlink
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
@@ -44,11 +43,11 @@ CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 INSTALLATION_DIRS+=	share/examples/p11-kit
 
 post-install:
-	mv ${DESTDIR}${PKG_SYSCONFDIR}/pkcs11/pkcs11.conf.example \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/pkcs11/pkcs11.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/p11-kit
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
