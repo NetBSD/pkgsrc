@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/03/11 14:05:03 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/11/16 08:55:38 adam Exp $
 man/man8/exim.8
 sbin/${DISTNAME}-1
 sbin/exicyclog
@@ -8,7 +8,9 @@ sbin/exim_checkaccess
 sbin/exim_dbmbuild
 sbin/exim_dumpdb
 sbin/exim_fixdb
+sbin/exim_id_update
 sbin/exim_lock
+sbin/exim_msgdate
 sbin/exim_tidydb
 sbin/eximstats
 sbin/exinext

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.200 2023/11/08 13:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.201 2023/11/16 08:55:38 adam Exp $
 
-DISTNAME=	exim-4.96.2
-PKGREVISION=	2
+DISTNAME=	exim-4.97
 CATEGORIES=	mail net
 MASTER_SITES=	https://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	https://ftp.exim.org/pub/exim/exim4/fixes/
@@ -15,6 +14,8 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	exim-exiscan-[0-9]*
+
+DEPENDS+=	p5-File-FcntlLock>=0.22:../../sysutils/p5-File-FcntlLock
 
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c99
@@ -58,6 +59,7 @@ SPECIAL_PERMS+=		sbin/${PKGSRC_EXIM_VERSION} ${SETUID_ROOT_PERMS}
 
 # pay attention to CPPFLAGS as well
 CFLAGS+=		${CPPFLAGS}
+LDFLAGS.NetBSD+=	-lexecinfo
 
 PKGSRC_EXIM_VERSION=	${DISTNAME}-1
 SUBST_CLASSES+=		exim
@@ -86,7 +88,7 @@ post-extract:
 	cp ${WRKSRC}/exim_monitor/EDITME ${WRKSRC}/Local/eximon.conf.pkgsrc
 
 pre-configure:
-	sed	-e 's:@PREFIX@:${PREFIX}:' \
+	${SED}	-e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 		-e 's:@EXIM_USER@:${EXIM_USER}:' \
 		-e 's:@EXIM_GROUP@:${EXIM_GROUP}:' \
@@ -110,13 +112,13 @@ pre-configure:
 .if !empty(EXIM_MAX_INCLUDE_SIZE)
 	${ECHO} MAX_INCLUDE_SIZE=${EXIM_MAX_INCLUDE_SIZE} >> ${WRKSRC}/Local/Makefile
 .endif
-	sed	-e 's:@PREFIX@:${PREFIX}:' \
+	${SED}	-e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
 
 post-build:
-	sed -e 's:@PREFIX@:${PREFIX}:' \
+	${SED}	-e 's:@PREFIX@:${PREFIX}:' \
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
