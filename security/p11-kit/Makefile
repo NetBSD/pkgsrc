@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/11/15 20:47:45 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/11/16 07:51:41 mrg Exp $
 
 DISTNAME=	p11-kit-0.25.2
 CATEGORIES=	security
@@ -44,7 +44,7 @@ CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 INSTALLATION_DIRS+=	share/examples/p11-kit
 
 post-install:
-	mv ${DESTDIR}${PREFIX}/etc/pkcs11/pkcs11.conf.example \
+	mv ${DESTDIR}${PKG_SYSCONFDIR}/pkcs11/pkcs11.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/p11-kit
 
 .include "../../devel/libffi/buildlink3.mk"
