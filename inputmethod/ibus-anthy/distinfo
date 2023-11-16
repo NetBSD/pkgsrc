@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:49:33 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/11/16 11:52:06 wiz Exp $
 
-BLAKE2s (ibus-anthy-1.5.6.tar.gz) = 36d1e4256b039e92164c4e18cd782ea05b85cb48e498f0dcff93ee2a0c0c7ee3
-SHA512 (ibus-anthy-1.5.6.tar.gz) = a70ab060366426c9fb9f49817d81faf589f1badb9ddf4c5cfdea232a312afa5962daa9c3e48d7d0574ed4c4af4a7efbb334b59cc453507a6bd1a2d90ab5d0926
-Size (ibus-anthy-1.5.6.tar.gz) = 710569 bytes
+BLAKE2s (ibus-anthy-1.5.15.tar.gz) = 9e99ce70754fd501046b97946d0a0e3676be7acb79f59af832c6be241615b59e
+SHA512 (ibus-anthy-1.5.15.tar.gz) = 1da813167bfa610a49a3b931c7484f488e4119df22434f5b89e64161b70058b421abb37ffb6a3017602e868a744821024c9f5e7b8df31ab2931444078d8f7ffe
+Size (ibus-anthy-1.5.15.tar.gz) = 866318 bytes
