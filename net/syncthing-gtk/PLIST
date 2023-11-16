@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/14 15:01:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/16 12:16:04 wiz Exp $
 bin/syncthing-gtk
-${PYSITELIB}/${EGG_INFODIR}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/syncthing_gtk/__init__.py
 ${PYSITELIB}/syncthing_gtk/__init__.pyc
 ${PYSITELIB}/syncthing_gtk/__init__.pyo
@@ -40,6 +44,9 @@ ${PYSITELIB}/syncthing_gtk/finddaemondialog.pyo
 ${PYSITELIB}/syncthing_gtk/foldereditor.py
 ${PYSITELIB}/syncthing_gtk/foldereditor.pyc
 ${PYSITELIB}/syncthing_gtk/foldereditor.pyo
+${PYSITELIB}/syncthing_gtk/http.py
+${PYSITELIB}/syncthing_gtk/http.pyc
+${PYSITELIB}/syncthing_gtk/http.pyo
 ${PYSITELIB}/syncthing_gtk/iddialog.py
 ${PYSITELIB}/syncthing_gtk/iddialog.pyc
 ${PYSITELIB}/syncthing_gtk/iddialog.pyo
@@ -233,21 +240,6 @@ share/icons/hicolor/64x64/emblems/emblem-syncthing-active.png
 share/icons/hicolor/64x64/emblems/emblem-syncthing-error.png
 share/icons/hicolor/64x64/emblems/emblem-syncthing-offline.png
 share/icons/hicolor/64x64/emblems/emblem-syncthing.png
-share/locale/cs/LC_MESSAGES/syncthing-gtk.mo
-share/locale/de/LC_MESSAGES/syncthing-gtk.mo
-share/locale/en/LC_MESSAGES/syncthing-gtk.mo
-share/locale/es/LC_MESSAGES/syncthing-gtk.mo
-share/locale/fr/LC_MESSAGES/syncthing-gtk.mo
-share/locale/hu/LC_MESSAGES/syncthing-gtk.mo
-share/locale/it/LC_MESSAGES/syncthing-gtk.mo
-share/locale/lt/LC_MESSAGES/syncthing-gtk.mo
-share/locale/nl/LC_MESSAGES/syncthing-gtk.mo
-share/locale/pl/LC_MESSAGES/syncthing-gtk.mo
-share/locale/pt/LC_MESSAGES/syncthing-gtk.mo
-share/locale/ru/LC_MESSAGES/syncthing-gtk.mo
-share/locale/sk/LC_MESSAGES/syncthing-gtk.mo
-share/locale/vi/LC_MESSAGES/syncthing-gtk.mo
-share/locale/zh_CN/LC_MESSAGES/syncthing-gtk.mo
 share/metainfo/me.kozec.syncthingtk.appdata.xml
 share/pixmaps/syncthing-gtk.png
 share/syncthing-gtk/about.glade
