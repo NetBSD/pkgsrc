@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/09/04 17:51:10 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2023/11/16 23:17:15 schmonz Exp $
 
-DISTNAME=		daemontools-run-20230904
+DISTNAME=		daemontools-run-20231116
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,6 +10,7 @@ COMMENT=		Configures daemontools to run supervised services
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		{daemontools>=0.76nb5,daemontools-encore-[0-9]*}:../../sysutils/daemontools
+DEPENDS+=		{ucspi-tcp6>=1.10.7nb1,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp6
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -29,8 +29,6 @@ FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 BUILD_DEFS+=		VARBASE DAEMONTOOLS_LOG_USER
-
-.include "options.mk"
 
 do-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/daemontools-run
