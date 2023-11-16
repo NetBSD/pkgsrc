@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/22 09:54:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/16 09:20:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,6 +22,9 @@ ${PYSITELIB}/minio/credentials/credentials.pyo
 ${PYSITELIB}/minio/credentials/providers.py
 ${PYSITELIB}/minio/credentials/providers.pyc
 ${PYSITELIB}/minio/credentials/providers.pyo
+${PYSITELIB}/minio/crypto.py
+${PYSITELIB}/minio/crypto.pyc
+${PYSITELIB}/minio/crypto.pyo
 ${PYSITELIB}/minio/datatypes.py
 ${PYSITELIB}/minio/datatypes.pyc
 ${PYSITELIB}/minio/datatypes.pyo
