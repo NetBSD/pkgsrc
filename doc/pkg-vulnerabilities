@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.64 2023/11/15 21:18:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.65 2023/11/16 09:42:02 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25765,3 +25765,12 @@ webkit-gtk<2.38.4	ui-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2022-46725
 webkit-gtk<2.42	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-32359
 webkit-gtk<2.42.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41983
 webkit-gtk<2.42.2	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42852
+gst-plugins1-base<1.22.4	heap-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2023-37328
+gst-plugins1-base<1.22.4	heap-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2023-37329
+gst-plugins1-ugly<1.22.5	integer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0004.html
+gst-plugins1-ugly<1.22.5	integer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0005.html
+gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40474
+gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40475
+gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40476
+gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-44429
+gst-plugins1-bad<1.22.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-44446
