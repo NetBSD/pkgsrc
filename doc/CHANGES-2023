@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7022 2023/11/15 23:19:34 jym Exp $
+$NetBSD: CHANGES-2023,v 1.7023 2023/11/16 06:16:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10083,6 +10083,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-eth-account to 0.10.0 [adam 2023-11-15]
 	Updated devel/protobuf to 25.0 [wiz 2023-11-15]
 	Updated devel/py-protobuf to 4.25.0 [wiz 2023-11-15]
+	Updated lang/nodejs to 21.2.0 [adam 2023-11-15]
+	Updated devel/yarn to 1.22.21 [adam 2023-11-15]
 	Updated databases/ldb to 2.8.0 [wiz 2023-11-15]
 	Updated net/samba4 to 4.19.2 [wiz 2023-11-15]
 	Updated print/texlab to 5.11.0 [wiz 2023-11-15]
@@ -10091,3 +10093,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p11-kit to 0.25.2 [wiz 2023-11-15]
 	Updated textproc/sd to 1.0.0nb1 [wiz 2023-11-15]
 	Added meta-pkgs/bulk-test-php version 20231115 [jym 2023-11-15]
+	Updated devel/protobuf to 25.1 [adam 2023-11-16]
+	Updated devel/py-protobuf to 4.25.1 [adam 2023-11-16]
