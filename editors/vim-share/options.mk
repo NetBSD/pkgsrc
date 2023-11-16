@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2023/03/29 09:34:10 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2023/11/16 09:54:10 wiz Exp $
 
-PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
+PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
 
 .include "../../mk/bsd.options.mk"
 
