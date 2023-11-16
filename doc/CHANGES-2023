@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7037 2023/11/16 11:43:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7038 2023/11/16 11:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10114,3 +10114,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rust-bin to 1.73.0 [he 2023-11-16]
 	Removed inputmethod/ibus-tegaki [wiz 2023-11-16]
 	Removed inputmethod/ibus-python [wiz 2023-11-16]
+	Updated inputmethod/ibus-anthy to 1.5.15 [wiz 2023-11-16]
