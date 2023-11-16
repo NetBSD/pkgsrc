@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:59 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/11/16 12:16:04 wiz Exp $
 
-BLAKE2s (syncthing-gtk-0.9.4.4.tar.gz) = 7e258f2088faa9356bd1128316b823e74428c814341c499484ae076ce0217024
-SHA512 (syncthing-gtk-0.9.4.4.tar.gz) = 71b9d96116e1f395d70059eba24fcb8df237c4f0e3027fca332013467fed318f88b26250aa3da5c23f73fa9cfce004c28b7a3a2d6f2fc6e4f424aac9661f3502
-Size (syncthing-gtk-0.9.4.4.tar.gz) = 887762 bytes
-SHA1 (patch-locale_fr_LC__MESSAGES_syncthing-gtk.po) = 15200a08aec16a502ae233097d0ed18083dda771
-SHA1 (patch-setup.py) = c7487b2b196dfbc97b25780c391234db7aa2fc15
+BLAKE2s (syncthing-gtk-0.9.4.5.tar.gz) = 577b8d287d6f60e6499cc2bd0f015b792128d637ff5b7fe969e65bab96a1f8de
+SHA512 (syncthing-gtk-0.9.4.5.tar.gz) = 25d3c111651c02a5d6d281ae04710b3c54f50d944cc1a72d3d94493e897b9bd432ae2e6dc782d7f0c17b12b3ba86ff30f8654bd46161a3a832d14e8c86c9cba7
+Size (syncthing-gtk-0.9.4.5.tar.gz) = 755007 bytes
+SHA1 (patch-setup.py) = 4d71f7aec015176f7ef56ac358245d326a0cc737

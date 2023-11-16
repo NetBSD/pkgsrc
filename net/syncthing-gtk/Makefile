@@ -1,27 +1,29 @@
-# $NetBSD: Makefile,v 1.39 2023/11/14 14:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/11/16 12:16:04 wiz Exp $
 
-DISTNAME=	syncthing-gtk-0.9.4.4
-PKGREVISION=	15
+DISTNAME=	syncthing-gtk-0.9.4.5
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=kozec/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing-gtk/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/syncthing/syncthing-gtk
+HOMEPAGE=	https://github.com/syncthing-gtk/syncthing-gtk
 COMMENT=	GTK3 & Python based GUI for Syncthing
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
-DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking # GIO GnuTLS support
-DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc # for killall
+DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
+DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc
+DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-PYTHON_VERSIONS_ACCEPTED=	27
-
-EGG_NAME=	${DISTNAME:S/0/v0/:S/-/_/}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=		*.py scripts/*.py syncthing_gtk/*.py
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		path_s
 SUBST_STAGE.path_s=	pre-build
@@ -43,18 +45,15 @@ SUBST_SED.path_b=	-e 's|/usr/bin/%s|${PREFIX}/bin/%s|'
 SUBST_SED.path_b+=	-e 's|/usr/bin/syncthing|${PREFIX}/bin/syncthing|'
 SUBST_SED.path_b+=	-e 's|"/usr/bin"|"${PREFIX}/bin"|'
 
-SUBST_CLASSES+=		int
-SUBST_STAGE.int=	pre-build
-SUBST_MESSAGE.int=	Replacing hard-coded python interpreter
-SUBST_FILES.int=	syncthing_gtk/tools.py
-SUBST_SED.int=		-e 's|/usr/bin/env python2|${PYTHONBIN}|'
+post-install:
+	cd ${DESTDIR}${PREFIX} && ${MV} share/man/man1/* ${PKGMANDIR}/man1
 
 BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.7.8
 .include "../../sysutils/libnotify/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.42.2		# for introspection
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
