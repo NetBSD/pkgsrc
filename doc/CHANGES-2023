@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7029 2023/11/16 08:56:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7030 2023/11/16 09:24:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10104,3 +10104,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/p5-File-FcntlLock version 0.22 [adam 2023-11-16]
 	Updated mail/exim to 4.97 [adam 2023-11-16]
 	Updated mail/exim-html to 4.97 [adam 2023-11-16]
+	Updated net/py-minio to 7.2.0 [adam 2023-11-16]
+	Updated devel/py-test-xdist to 3.4.0 [adam 2023-11-16]
