@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7031 2023/11/16 09:31:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7032 2023/11/16 09:40:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10107,3 +10107,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-minio to 7.2.0 [adam 2023-11-16]
 	Updated devel/py-test-xdist to 3.4.0 [adam 2023-11-16]
 	Updated multimedia/gstreamer1 to 1.22.7 [wiz 2023-11-16]
+	Updated devel/py-pyte to 0.8.2 [adam 2023-11-16]
+	Updated www/py-test-httpx to 0.27.0 [adam 2023-11-16]
