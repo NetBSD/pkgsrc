@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7038 2023/11/16 11:52:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7039 2023/11/16 12:01:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10115,3 +10115,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed inputmethod/ibus-tegaki [wiz 2023-11-16]
 	Removed inputmethod/ibus-python [wiz 2023-11-16]
 	Updated inputmethod/ibus-anthy to 1.5.15 [wiz 2023-11-16]
+	Updated inputmethod/ibus-array to 0.2.2 [wiz 2023-11-16]
