@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.167 2023/09/16 12:43:14 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.168 2023/11/16 09:54:10 wiz Exp $
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
 # used by editors/vim-gtk3/Makefile
@@ -24,7 +24,8 @@ LICENSE=		vim-license OR gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c99
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
 CHECK_INTERPRETER_SKIP=	share/vim/${VIM_SUBDIR}/tools/vim132

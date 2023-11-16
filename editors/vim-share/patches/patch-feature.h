@@ -1,4 +1,6 @@
-$NetBSD: patch-feature.h,v 1.5 2021/12/01 21:36:59 wiz Exp $
+$NetBSD: patch-feature.h,v 1.6 2023/11/16 09:54:10 wiz Exp $
+
+Use pkgsrc configuration directory.
 
 --- src/feature.h.orig	2019-12-03 21:59:23.000000000 +0000
 +++ src/feature.h
