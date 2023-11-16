@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/16 08:54:16 adam Exp $
+
+BLAKE2s (File-FcntlLock-0.22.tar.gz) = 999471fcb0de344ea9b22c3b1700e25437a38fc0ebb71c7b5b5101b95f4f7125
+SHA512 (File-FcntlLock-0.22.tar.gz) = c57bc73ce220fc3379dd88e6f1c422ce05dbf659e4ac676614b4fc6967d2ea5e27b476c0a1e29caf1e469a4ace7d23a1b0e86284403b2443d19df7fc52b308db
+Size (File-FcntlLock-0.22.tar.gz) = 16994 bytes
