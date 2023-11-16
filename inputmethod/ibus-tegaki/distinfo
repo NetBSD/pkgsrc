@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:49:35 nia Exp $
-
-BLAKE2s (ibus-tegaki-0.3.1.tar.gz) = 6fd5711341ac215131afcc23c7c2b6bdd0e3e5458e1bc1f5a64f1c8fa136ec63
-SHA512 (ibus-tegaki-0.3.1.tar.gz) = 74626107e53fd2db689f3a2b23ccae248a6b747edefc926625ae23c27cf594d832c8d25e3076fd782dee5b80f5e6ce787a8c505c78419da2e9f1ba52a052755a
-Size (ibus-tegaki-0.3.1.tar.gz) = 17026 bytes
-SHA1 (patch-aa) = 95d27f41ebd9c0a464e4738e7a475750fd34d6b2

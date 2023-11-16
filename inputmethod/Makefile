@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2023/11/04 23:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2023/11/16 11:42:32 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -59,7 +59,6 @@ SUBDIR+=	ibus-t9
 SUBDIR+=	ibus-table
 SUBDIR+=	ibus-table-chinese
 SUBDIR+=	ibus-table-others
-SUBDIR+=	ibus-tegaki
 SUBDIR+=	ibus-unikey
 SUBDIR+=	iiimecf
 SUBDIR+=	im-ja
