@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7046 2023/11/16 22:55:42 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7047 2023/11/16 23:09:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10125,3 +10125,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/adaptagrams to 0.20231102 [wiz 2023-11-16]
 	Updated devel/mold to 2.3.3 [fcambus 2023-11-16]
 	Updated net/publicfile to 0.52nb3 [schmonz 2023-11-16]
+	Updated mail/qmail-conf to 0.60nb6 [schmonz 2023-11-16]
