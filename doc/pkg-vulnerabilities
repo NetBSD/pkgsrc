@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.65 2023/11/16 09:42:02 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.66 2023/11/16 18:02:50 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24360,16 +24360,16 @@ gitea<1.17.3	command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-42968
 squid<5.7	arbitrary-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2022-41318
 squid>=4.9<4.17	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41317
 squid>=5.0.6<5.7	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41317
-tiff-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0804
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0803
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0802
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0801
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0800
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0799
-tiff-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0798
-tiff-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0797
-tiff-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0796
-tiff-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0795
+tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0804
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0803
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0802
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0801
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0800
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0799
+tiff<4.5.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0798
+tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0797
+tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0796
+tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-0795
 xpdf-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-45587
 xpdf-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-45586
 py{36,37,38,39,310,311}-werkzeug<2.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-25577
@@ -25657,7 +25657,7 @@ nats-server>=2.2.0<2.8.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CV
 qpdf<10.1.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25786
 gawk<5.1.1	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-4156
 tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2731
-tiff-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-26965
+tiff<4.5.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-26965
 tiff>=3.9.0<4.5.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-3316
 tiff<4.5.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-3618
 tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-40090
