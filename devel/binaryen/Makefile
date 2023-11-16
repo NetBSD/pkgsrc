@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/11/06 22:04:25 fcambus Exp $
+# $NetBSD: Makefile,v 1.22 2023/11/16 09:57:43 nia Exp $
 
 VERSION=	116
 DISTNAME=	binaryen-${VERSION}
@@ -19,7 +19,7 @@ CMAKE_ARGS+=	-DENABLE_WERROR=OFF
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
+.include "options.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
