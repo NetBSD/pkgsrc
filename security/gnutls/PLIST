@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2023/08/08 09:33:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.80 2023/11/16 12:31:11 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -580,6 +580,8 @@ man/man3/gnutls_priority_string_list.3
 man/man3/gnutls_privkey_decrypt_data.3
 man/man3/gnutls_privkey_decrypt_data2.3
 man/man3/gnutls_privkey_deinit.3
+man/man3/gnutls_privkey_derive_secret.3
+man/man3/gnutls_privkey_export_dh_raw.3
 man/man3/gnutls_privkey_export_dsa_raw.3
 man/man3/gnutls_privkey_export_dsa_raw2.3
 man/man3/gnutls_privkey_export_ecc_raw.3
@@ -596,6 +598,7 @@ man/man3/gnutls_privkey_get_pk_algorithm.3
 man/man3/gnutls_privkey_get_seed.3
 man/man3/gnutls_privkey_get_spki.3
 man/man3/gnutls_privkey_get_type.3
+man/man3/gnutls_privkey_import_dh_raw.3
 man/man3/gnutls_privkey_import_dsa_raw.3
 man/man3/gnutls_privkey_import_ecc_raw.3
 man/man3/gnutls_privkey_import_ext.3
@@ -655,6 +658,7 @@ man/man3/gnutls_pubkey_deinit.3
 man/man3/gnutls_pubkey_encrypt_data.3
 man/man3/gnutls_pubkey_export.3
 man/man3/gnutls_pubkey_export2.3
+man/man3/gnutls_pubkey_export_dh_raw.3
 man/man3/gnutls_pubkey_export_dsa_raw.3
 man/man3/gnutls_pubkey_export_dsa_raw2.3
 man/man3/gnutls_pubkey_export_ecc_raw.3
@@ -670,6 +674,7 @@ man/man3/gnutls_pubkey_get_pk_algorithm.3
 man/man3/gnutls_pubkey_get_preferred_hash_algorithm.3
 man/man3/gnutls_pubkey_get_spki.3
 man/man3/gnutls_pubkey_import.3
+man/man3/gnutls_pubkey_import_dh_raw.3
 man/man3/gnutls_pubkey_import_dsa_raw.3
 man/man3/gnutls_pubkey_import_ecc_raw.3
 man/man3/gnutls_pubkey_import_ecc_x962.3
@@ -1181,6 +1186,7 @@ man/man3/gnutls_x509_privkey_get_seed.3
 man/man3/gnutls_x509_privkey_get_spki.3
 man/man3/gnutls_x509_privkey_import.3
 man/man3/gnutls_x509_privkey_import2.3
+man/man3/gnutls_x509_privkey_import_dh_raw.3
 man/man3/gnutls_x509_privkey_import_dsa_raw.3
 man/man3/gnutls_x509_privkey_import_ecc_raw.3
 man/man3/gnutls_x509_privkey_import_gost_raw.3
