@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/08/29 09:48:47 nia Exp $
+# $NetBSD: Makefile,v 1.45 2023/11/16 09:24:04 nia Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -28,6 +28,9 @@ MKPIE_SUPPORTED=	no
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
 NOT_FOR_PLATFORM=	Interix-*-*
+
+# Earliest possible GCC you can use on NetBSD/aarch64 is gcc7
+NOT_FOR_PLATFORM+=	NetBSD-*-aarch64*
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed tar:build
