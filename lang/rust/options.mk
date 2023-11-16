@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2023/10/10 13:12:33 pin Exp $
+# $NetBSD: options.mk,v 1.33 2023/11/16 09:49:12 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -39,6 +39,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=15
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 #CONFIGURE_ARGS+=	--llvm-libunwind=system
