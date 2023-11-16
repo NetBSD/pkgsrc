@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2023/11/15 16:15:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.104 2023/11/16 16:29:20 schmonz Exp $
 
 PKGNAME=	pkgdiff-1.11
 CATEGORIES=	pkgtools devel
@@ -12,7 +12,7 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
-USE_TOOLS+=	diff perl:run
+USE_TOOLS+=	diff:run perl:run
 
 MAKE_ENV+=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
@@ -25,9 +25,9 @@ BUILD_DEFS+=	MANINSTALL
 	${OPSYS} == "OSF1" ||	\
 	${OPSYS} == "Darwin" && empty(OSX_VERSION:M[0-9].*) && empty(OSX_VERSION:M1[0-2].*)
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
-DIFF?=		${PREFIX}/bin/gdiff
+PKGDIFF_DIFF?=	${PREFIX}/bin/gdiff
 .else
-DIFF?=		diff
+PKGDIFF_DIFF?=	${DIFF}
 .endif
 
 INSTALLATION_DIRS=	bin
@@ -48,7 +48,7 @@ do-build:
 		< ${FILESDIR}/${f}.pl			\
 		> ${WRKSRC}/${f}
 .endfor
-	${SED} -e 's|@DIFF@|${DIFF}|g'			\
+	${SED} -e 's|@DIFF@|${PKGDIFF_DIFF}|g'		\
 		-e 's|@SH@|${SH}|g'			\
 		< ${FILESDIR}/pkgdiff			\
 		> ${WRKSRC}/pkgdiff
