@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/11/15 18:14:44 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/11/16 16:15:25 schmonz Exp $
 
 DISTNAME=	mosh-1.4.0
 PKGREVISION=	1
@@ -27,6 +27,7 @@ REPLACE_PERL+=	src/tests/print-exitstatus
 
 TEST_TARGET=	check
 
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
