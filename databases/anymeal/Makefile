@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/12 13:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/16 10:01:53 nia Exp $
 
 DISTNAME=	anymeal-1.18
 PKGREVISION=	4
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	ax_cv_qt_test_result=yes
 
 .include "../../converters/recode/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/googletest/buildlink3.mk"
+#.include "../../devel/googletest/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
