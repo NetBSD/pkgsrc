@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7027 2023/11/16 08:03:36 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7028 2023/11/16 08:05:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10100,3 +10100,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/leftwm to 0.5.0 [pin 2023-11-16]
 	Updated shells/nushell to 0.87.0 [pin 2023-11-16]
 	Updated shells/oh-my-posh to 18.25.1 [pin 2023-11-16]
+	Updated graphics/qrrs to 0.1.9 [pin 2023-11-16]
