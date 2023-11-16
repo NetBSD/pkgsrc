@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2023/11/16 12:05:39 tnn Exp $
+
+Don't error if the appleframeworks dependency is not needed.
+
+--- meson.build.orig	2023-11-16 11:59:25
++++ meson.build
+@@ -67,7 +67,7 @@ if get_option('nls') and cc.has_header('libintl.h')
+     if cc.has_function('dgettext', dependencies : libintl)
+       libintl_deps += libintl
+       if ['darwin', 'ios'].contains(host_system)
+-        appleframeworks = dependency('appleframeworks', modules : 'foundation')
++        appleframeworks = dependency('appleframeworks', modules : 'foundation', required : false)
+         if appleframeworks.found()
+           libintl_deps += appleframeworks
+         endif

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/15 20:46:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/16 12:05:38 tnn Exp $
 bin/p11-kit
 bin/trust
 include/p11-kit-1/p11-kit/deprecated.h
@@ -14,7 +14,7 @@ lib/libp11-kit.so.0
 lib/libp11-kit.so.0.3.0
 lib/p11-kit-proxy.${DLEXT}
 lib/pkcs11/p11-kit-client.so
-lib/pkcs11/p11-kit-trust.so
+lib/pkcs11/p11-kit-trust.${DLEXT}
 lib/pkgconfig/p11-kit-1.pc
 libexec/p11-kit/p11-kit-remote
 libexec/p11-kit/p11-kit-server
