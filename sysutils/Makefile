@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1097 2023/11/13 23:15:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1098 2023/11/16 08:54:16 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -510,6 +510,7 @@ SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Daemon-Generic
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Copy-Recursive-Reduced
+SUBDIR+=	p5-File-FcntlLock
 SUBDIR+=	p5-File-Inplace
 SUBDIR+=	p5-File-Remove
 SUBDIR+=	p5-File-chmod
