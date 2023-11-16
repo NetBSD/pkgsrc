@@ -1,4 +1,6 @@
-$NetBSD: patch-fetch.c,v 1.1 2013/05/23 14:57:32 joerg Exp $
+$NetBSD: patch-fetch.c,v 1.2 2023/11/16 22:55:37 schmonz Exp $
+
+Add missing includes.
 
 --- fetch.c.orig	1999-11-09 07:23:46.000000000 +0000
 +++ fetch.c
