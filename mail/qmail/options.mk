@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.71 2023/04/24 17:22:59 schmonz Exp $
+# $NetBSD: options.mk,v 1.72 2023/11/16 23:13:16 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
+PKG_SUPPORTED_OPTIONS+=		eai pam syncdir tai-system-clock tls
 PKG_SUPPORTED_OPTIONS+=		qmail-customerror qmail-srs
 PKG_SUGGESTED_OPTIONS+=		eai syncdir tls
 PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
@@ -105,9 +105,4 @@ DEPENDS+=			ucspi-ssl>=0.999.10.11nb2:../../net/ucspi-ssl
 .else
 BUILDLINK_TRANSFORM+=		rm:-lssl
 BUILDLINK_TRANSFORM+=		rm:-lcrypto
-.  if !empty(PKG_OPTIONS:Minet6)
-DEPENDS+=			ucspi-tcp6>=1.10.7nb1:../../net/ucspi-tcp6
-.  else
-DEPENDS+=			{ucspi-tcp6>=1.10.7nb1,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
-.  endif
 .endif
