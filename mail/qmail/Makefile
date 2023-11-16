@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2023/11/15 16:49:26 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.130 2023/11/16 23:13:16 schmonz Exp $
 
 DISTNAME=		notqmail-1.08
 PKGNAME=		qmail-1.03
-PKGREVISION=		53
+PKGREVISION=		54
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=notqmail/}
 GITHUB_PROJECT=		notqmail
@@ -15,6 +14,7 @@ COMMENT=		Community-driven open-source successor to qmail
 LICENSE=		public-domain
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
+DEPENDS+=		{ucspi-tcp6>=1.10.7nb1,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp6
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
 CONFLICTS+=		courier-mta-[0-9]*
