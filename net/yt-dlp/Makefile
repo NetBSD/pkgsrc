@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/15 08:29:22 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/16 06:34:50 adam Exp $
 
-DISTNAME=	yt-dlp-2023.11.14
+DISTNAME=	yt-dlp-2023.11.16
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
 # TODO: create symlink, as mpv makes use of youtube-dl?
@@ -12,7 +12,7 @@ COMMENT=	Youtube-dl fork with new features and patches
 LICENSE=	unlicense
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=  ${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
