@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.66 2023/11/16 18:02:50 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.67 2023/11/16 18:10:44 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24242,9 +24242,9 @@ tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2869
 tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2868
 tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2867
 tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2953
-tiff-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2521
-tiff-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2022-2519
-tiff-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2520
+tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2521
+tiff<4.5.0	double-free	https://nvd.nist.gov/vuln/detail/CVE-2022-2519
+tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2520
 tiff<4.4.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1355
 tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1354
 tiff<4.5.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3599
@@ -24253,7 +24253,7 @@ tiff<4.5.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3627
 tiff<4.5.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3626
 tiff<4.5.0	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-3570
 tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3970
-tiff-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-48281
+tiff<4.5.1	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-48281
 libraw<0.21.1	ut-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35535
 libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35533
 libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35531
