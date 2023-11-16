@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/21 17:10:12 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/16 09:36:45 nia Exp $
 
 DISTNAME=	amnesia-tdd-0.3.2
 PKGREVISION=	3
@@ -22,6 +22,12 @@ CMAKE_ARGS+=	./amnesia/src
 
 USE_CXX_FEATURES+=	c++11
 FORCE_CXX_STD=		c++11
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} != "x86_64"
+# Disables SSE use in HPL2/dependencies/Newton
+CFLAGS+=		-D_SCALAR_ARITHMETIC_ONLY=1
+.endif
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
