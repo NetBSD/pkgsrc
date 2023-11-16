@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2023/07/20 21:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/11/16 09:22:51 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-python-${GST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=	.tar.xz
