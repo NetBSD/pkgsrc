@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/11/15 18:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/16 06:15:46 adam Exp $
 
-DISTNAME=	protobuf-4.25.0
+DISTNAME=	protobuf-4.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/protobuf/}
@@ -13,7 +13,8 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_LANGUAGES+=	c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES+=		c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
