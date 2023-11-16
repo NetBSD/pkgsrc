@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7026 2023/11/16 08:02:16 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7027 2023/11/16 08:03:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10099,3 +10099,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.44.3 [adam 2023-11-16]
 	Updated wm/leftwm to 0.5.0 [pin 2023-11-16]
 	Updated shells/nushell to 0.87.0 [pin 2023-11-16]
+	Updated shells/oh-my-posh to 18.25.1 [pin 2023-11-16]
