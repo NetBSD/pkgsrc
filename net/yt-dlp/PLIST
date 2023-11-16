@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/11/15 08:29:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/11/16 06:34:50 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -850,6 +850,9 @@ ${PYSITELIB}/yt_dlp/extractor/elonet.pyo
 ${PYSITELIB}/yt_dlp/extractor/elpais.py
 ${PYSITELIB}/yt_dlp/extractor/elpais.pyc
 ${PYSITELIB}/yt_dlp/extractor/elpais.pyo
+${PYSITELIB}/yt_dlp/extractor/eltrecetv.py
+${PYSITELIB}/yt_dlp/extractor/eltrecetv.pyc
+${PYSITELIB}/yt_dlp/extractor/eltrecetv.pyo
 ${PYSITELIB}/yt_dlp/extractor/embedly.py
 ${PYSITELIB}/yt_dlp/extractor/embedly.pyc
 ${PYSITELIB}/yt_dlp/extractor/embedly.pyo
@@ -1315,6 +1318,9 @@ ${PYSITELIB}/yt_dlp/extractor/japandiet.pyo
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.py
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyo
+${PYSITELIB}/yt_dlp/extractor/jiosaavn.py
+${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyc
+${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyo
 ${PYSITELIB}/yt_dlp/extractor/jixie.py
 ${PYSITELIB}/yt_dlp/extractor/jixie.pyc
 ${PYSITELIB}/yt_dlp/extractor/jixie.pyo
@@ -1846,9 +1852,6 @@ ${PYSITELIB}/yt_dlp/extractor/nintendo.pyo
 ${PYSITELIB}/yt_dlp/extractor/nitter.py
 ${PYSITELIB}/yt_dlp/extractor/nitter.pyc
 ${PYSITELIB}/yt_dlp/extractor/nitter.pyo
-${PYSITELIB}/yt_dlp/extractor/njpwworld.py
-${PYSITELIB}/yt_dlp/extractor/njpwworld.pyc
-${PYSITELIB}/yt_dlp/extractor/njpwworld.pyo
 ${PYSITELIB}/yt_dlp/extractor/nobelprize.py
 ${PYSITELIB}/yt_dlp/extractor/nobelprize.pyc
 ${PYSITELIB}/yt_dlp/extractor/nobelprize.pyo
