@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7054 2023/11/17 07:46:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7055 2023/11/17 09:15:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10133,3 +10133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/leftwm to 0.5.1 [pin 2023-11-17]
 	Updated editors/tp-note to 1.23.2 [pin 2023-11-17]
 	Updated sysutils/xcp to 0.12.1 [pin 2023-11-17]
+	Updated devel/glib2 to 2.78.1nb1 [ryoon 2023-11-17]
