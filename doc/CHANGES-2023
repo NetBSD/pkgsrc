@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7065 2023/11/17 18:08:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7066 2023/11/17 18:49:13 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10148,3 +10148,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-subunit to 1.4.4 [adam 2023-11-17]
 	Updated finance/py-empyrical to 0.5.5 [adam 2023-11-17]
 	Updated devel/py-argcomplete to 3.1.6 [adam 2023-11-17]
+	Updated pkgtools/pkg_chk to 2.0.12 [abs 2023-11-17]
