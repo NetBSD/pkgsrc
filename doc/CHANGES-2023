@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7058 2023/11/17 10:03:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7059 2023/11/17 15:14:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10139,3 +10139,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/vim to 9.0.2112 [wiz 2023-11-17]
 	Updated math/octave to 8.4.0 [adam 2023-11-17]
 	Updated devel/py-poetry to 1.7.1 [adam 2023-11-17]
+	Updated textproc/p5-XML-LibXML to 2.0209 [schmonz 2023-11-17]
