@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/11/08 22:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/17 08:18:08 nia Exp $
 
 DISTNAME=	libva-2.20.0
 CATEGORIES=	multimedia
@@ -16,6 +16,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 USE_CC_FEATURES=	c99
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD=		gnu99
 
 .include "../../mk/bsd.prefs.mk"
 
