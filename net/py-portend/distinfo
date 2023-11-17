@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/11/06 18:19:52 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/11/17 20:52:26 adam Exp $
 
-BLAKE2s (portend-3.1.0.tar.gz) = 7debc9b88212e72740c0841d523c4a31b6857766275fae2804be09966bf3de74
-SHA512 (portend-3.1.0.tar.gz) = 017dff68ea85f48d19398f71fbd8189329ca9c27c05d8599dd5e53632eb5ddc6dea322e94c924a0653f25f042a3c8ee1cda5f8450b02f3406a72036d54cd1aaf
-Size (portend-3.1.0.tar.gz) = 9448 bytes
+BLAKE2s (portend-3.2.0.tar.gz) = 8a283b1249fc609a464b9f3a65deffc9c904ceda34c7614ec224a14358551b8a
+SHA512 (portend-3.2.0.tar.gz) = 56790cdb6d1619e8873acc2498f9bee758a64ad8f8e47f31e48ae1ac7b6f038fc81af5d52cbc4bc4797dd6dc25d453d391d73d454c98559b1d6a8e9061837d7f
+Size (portend-3.2.0.tar.gz) = 10514 bytes
