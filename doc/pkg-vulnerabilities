@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.68 2023/11/17 08:05:29 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.69 2023/11/17 09:49:25 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25774,3 +25774,5 @@ gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-20
 gst-plugins1-bad<1.22.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40476
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-44429
 gst-plugins1-bad<1.22.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-44446
+vim<9.0.2106	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-48231
+vim<9.0.2112	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-48237
