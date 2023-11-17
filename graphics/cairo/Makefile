@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2023/11/17 08:16:40 nia Exp $
+# $NetBSD: Makefile,v 1.158 2023/11/17 08:17:04 nia Exp $
 
 DISTNAME=	cairo-1.18.0
 CATEGORIES=	graphics
@@ -11,7 +11,7 @@ COMMENT=	Vector graphics library with cross-device output support
 LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=		c99
+FORCE_C_STD=		gnu99
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
