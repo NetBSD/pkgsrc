@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.67 2023/11/16 18:10:44 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.68 2023/11/17 08:05:29 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23558,8 +23558,8 @@ moodle<4.0.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-3059
 moodle<4.0.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-30597
 moodle<4.0.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-30598
 moodle<4.0.1	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-30600
-mupdf-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2022-30974
-mupdf-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-30975
+mupdf<1.3.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2022-30974
+mupdf<1.3.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-30975
 njs<0.7.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29779
 njs<0.7.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29780
 njs<0.7.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-30503
