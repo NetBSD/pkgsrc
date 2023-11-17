@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.298 2023/11/02 13:26:33 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2023/11/17 09:14:56 ryoon Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
 
@@ -11,6 +12,7 @@ MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=disabled
 MESON_ARGS+=	-Dlocalstatedir=${VARBASE}
+MESON_ARGS+=	-Druntime_dir=${VARBASE}/run
 .if ${OPSYS} == "FreeBSD"
 MESON_ARGS+=	-Db_lundef=false
 .endif
