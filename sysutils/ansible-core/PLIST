@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/23 07:22:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/17 20:07:33 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -11,13 +11,12 @@ bin/ansible-pull
 bin/ansible-test
 bin/ansible-vault
 @pkgdir etc/ansible
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ansible/__init__.py
 ${PYSITELIB}/ansible/__init__.pyc
 ${PYSITELIB}/ansible/__init__.pyo
@@ -373,6 +372,9 @@ ${PYSITELIB}/ansible/module_utils/compat/__init__.pyo
 ${PYSITELIB}/ansible/module_utils/compat/_selectors2.py
 ${PYSITELIB}/ansible/module_utils/compat/_selectors2.pyc
 ${PYSITELIB}/ansible/module_utils/compat/_selectors2.pyo
+${PYSITELIB}/ansible/module_utils/compat/datetime.py
+${PYSITELIB}/ansible/module_utils/compat/datetime.pyc
+${PYSITELIB}/ansible/module_utils/compat/datetime.pyo
 ${PYSITELIB}/ansible/module_utils/compat/importlib.py
 ${PYSITELIB}/ansible/module_utils/compat/importlib.pyc
 ${PYSITELIB}/ansible/module_utils/compat/importlib.pyo
@@ -668,9 +670,6 @@ ${PYSITELIB}/ansible/module_utils/yumdnf.pyo
 ${PYSITELIB}/ansible/modules/__init__.py
 ${PYSITELIB}/ansible/modules/__init__.pyc
 ${PYSITELIB}/ansible/modules/__init__.pyo
-${PYSITELIB}/ansible/modules/_include.py
-${PYSITELIB}/ansible/modules/_include.pyc
-${PYSITELIB}/ansible/modules/_include.pyo
 ${PYSITELIB}/ansible/modules/add_host.py
 ${PYSITELIB}/ansible/modules/add_host.pyc
 ${PYSITELIB}/ansible/modules/add_host.pyo
@@ -1939,9 +1938,6 @@ ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/cs.pyo
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/digitalocean.py
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/digitalocean.pyc
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/digitalocean.pyo
-${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/foreman.py
-${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/foreman.pyc
-${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/foreman.pyo
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/galaxy.py
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/galaxy.pyc
 ${PYSITELIB}/ansible_test/_internal/commands/integration/cloud/galaxy.pyo
@@ -2300,6 +2296,9 @@ ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/config/default.cfg
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/deprecated.py
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/deprecated.pyc
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/deprecated.pyo
+${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/hide_unraisable.py
+${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/hide_unraisable.pyc
+${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/hide_unraisable.pyo
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/string_format.py
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/string_format.pyc
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pylint/plugins/string_format.pyo
@@ -2358,6 +2357,9 @@ ${PYSITELIB}/ansible_test/_util/target/injector/python.py
 ${PYSITELIB}/ansible_test/_util/target/injector/python.pyc
 ${PYSITELIB}/ansible_test/_util/target/injector/python.pyo
 ${PYSITELIB}/ansible_test/_util/target/injector/virtualenv.sh
+${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_forked.py
+${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_forked.pyc
+${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_forked.pyo
 ${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_pytest_collections.py
 ${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_pytest_collections.pyc
 ${PYSITELIB}/ansible_test/_util/target/pytest/plugins/ansible_pytest_collections.pyo
@@ -2370,7 +2372,6 @@ ${PYSITELIB}/ansible_test/_util/target/sanity/compile/compile.pyo
 ${PYSITELIB}/ansible_test/_util/target/sanity/import/importer.py
 ${PYSITELIB}/ansible_test/_util/target/sanity/import/importer.pyc
 ${PYSITELIB}/ansible_test/_util/target/sanity/import/importer.pyo
-${PYSITELIB}/ansible_test/_util/target/setup/ConfigureRemotingForAnsible.ps1
 ${PYSITELIB}/ansible_test/_util/target/setup/bootstrap.sh
 ${PYSITELIB}/ansible_test/_util/target/setup/check_systemd_cgroup_v1.sh
 ${PYSITELIB}/ansible_test/_util/target/setup/probe_cgroups.py
