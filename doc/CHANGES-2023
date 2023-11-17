@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7072 2023/11/17 21:00:13 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7073 2023/11/17 21:19:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10161,3 +10161,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-braintree to 4.24.0 [adam 2023-11-17]
 	Updated net/py-portend to 3.2.0 [adam 2023-11-17]
 	Added sysutils/ssh-agent-switcher version 0.0.20231117 [schmonz 2023-11-17]
+	Updated textproc/py-referencing to 0.31.0 [adam 2023-11-17]
+	Updated devel/py-rpds-py to 0.13.0 [adam 2023-11-17]
