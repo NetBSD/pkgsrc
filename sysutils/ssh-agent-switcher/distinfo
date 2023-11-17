@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/17 21:00:05 schmonz Exp $
+
+BLAKE2s (ssh-agent-switcher-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8.tar.gz) = 38b8b28617f987d6b81cee17c8450d610e1ee5f721babcab13133035d885c24f
+SHA512 (ssh-agent-switcher-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8.tar.gz) = 2b3a3f59284dbf18dfaceb2df151e6b4ecd88dcd44dc389e09f3000bfa2de0aa3da58c036d8aa1dba8eb68f32e08f07bcc200f31847d8a145989d99236cf7377
+Size (ssh-agent-switcher-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8-3d5835ee0eeafdb2dd792f26d1decbed2c06dce8.tar.gz) = 7399 bytes
