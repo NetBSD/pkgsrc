@@ -1,0 +1,10 @@
+ssh-agent-switcher is a daemon that proxies SSH agent connections to any valid
+forwarded agent provided by sshd.  This allows long-lived processes such as
+terminal multiplexers like `tmux` or `screen` to access the connection-specific
+forwarded agents.
+
+The ssh-agent-switcher daemon solves this problem by exposing an SSH agent
+socket at a well-known location, allowing you to set `SSH_AUTH_SOCK` to a path
+that does *not* change across different connections.  The daemon then looks for
+a valid socket every time it receives a request and forwards the request to the
+real forwarded agent.
