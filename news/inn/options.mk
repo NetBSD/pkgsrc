@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2023/04/30 14:58:58 spz Exp $
+# $NetBSD: options.mk,v 1.11 2023/11/17 00:52:53 sekiya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
 PKG_SUPPORTED_OPTIONS=	perl python uucp kerberos gnupg2 canlock
@@ -27,6 +27,9 @@ CONFIGURE_ARGS+=	--disable-uucp-rnews
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5:Q}
+DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
+DEPENDS+=		p5-GD-[0-9]*:../../graphics/p5-GD
+DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 .include "../../lang/perl5/buildlink3.mk"
 .else
