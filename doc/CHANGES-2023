@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7056 2023/11/17 09:28:13 nia Exp $
+$NetBSD: CHANGES-2023,v 1.7057 2023/11/17 09:33:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10136,3 +10136,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2 to 2.78.1nb1 [ryoon 2023-11-17]
 	Updated emulators/libretro-flycast to 2.2 [nia 2023-11-17]
 	Updated emulators/flycast to 2.2 [nia 2023-11-17]
+	Updated editors/vim to 9.0.2112 [wiz 2023-11-17]
