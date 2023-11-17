@@ -1,0 +1,1 @@
+bin/wormhole @PREFIX@/bin/wormhole-@PYVERSSUFFIX@
