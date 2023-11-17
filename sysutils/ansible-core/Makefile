@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/10/11 08:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/17 20:07:33 adam Exp $
 
-DISTNAME=	ansible-core-2.15.5
+DISTNAME=	ansible-core-2.16.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
 
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ansible<2.10
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
@@ -50,7 +52,7 @@ OWN_DIRS=		${PREFIX}/share/ansible
 CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
