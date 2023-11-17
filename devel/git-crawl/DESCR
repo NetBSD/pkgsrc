@@ -1,0 +1,2 @@
+git-crawl is a shell script that extends the git api allowing one to
+'crawl' through their commits.
