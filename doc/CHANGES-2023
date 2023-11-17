@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7073 2023/11/17 21:19:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7074 2023/11/17 21:22:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10163,3 +10163,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/ssh-agent-switcher version 0.0.20231117 [schmonz 2023-11-17]
 	Updated textproc/py-referencing to 0.31.0 [adam 2023-11-17]
 	Updated devel/py-rpds-py to 0.13.0 [adam 2023-11-17]
+	Updated devel/git-crawl to 0.0.20161010 [schmonz 2023-11-17]
