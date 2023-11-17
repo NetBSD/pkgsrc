@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config-override.mk,v 1.5 2020/05/04 18:06:56 rillig Exp $
+# $NetBSD: pkg-config-override.mk,v 1.6 2023/11/17 10:20:25 nros Exp $
 
 # Package-settable variables:
 #
@@ -27,7 +27,7 @@ pkg-config-override:
 pkg-config-override: subst-pkgconfig
 
 PKGCONFIG_OVERRIDE_SED=	\
-	'/^Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
+	'/^[ 	]*Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
 PKGCONFIG_OVERRIDE_STAGE?=	pre-configure
 
 SUBST_CLASSES+=			_pkgconfig
