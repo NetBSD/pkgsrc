@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2023/10/30 13:02:49 nia Exp $
+# $NetBSD: Makefile,v 1.109 2023/11/17 08:22:58 nia Exp $
 
-DISTNAME=	bulk-medium-20231030
+DISTNAME=	bulk-medium-20231117
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -96,7 +96,11 @@ DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 DEPENDS+=	alpine-[0-9]*:../../mail/alpine
 DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
-DEPENDS+=	bind>=9.16<9.17:../../net/bind916
+.if ${OPSYS} != "NetBSD"
+DEPENDS+=	bind>=9.18<9.19:../../net/bind918
+DEPENDS+=	unbound-[0-9]*:../../net/unbound
+.endif
+DEPENDS+=	nsd-[0-9]*:../../net/nsd
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
 DEPENDS+=	rtorrent-[0-9]*:../../net/rtorrent
 DEPENDS+=	samba>=4.2:../../net/samba4
