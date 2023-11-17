@@ -1,41 +1,37 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/07/07 07:31:50 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/11/17 09:27:51 nia Exp $
 
-- Always prefer SDL2 from pkgsrc.
 - Treat APPLE less specially.
 - Use proper dependencies when building libretro core.
 
---- CMakeLists.txt.orig	2023-02-15 17:59:44.000000000 +0000
+--- CMakeLists.txt.orig	2023-10-27 22:19:54.000000000 +0000
 +++ CMakeLists.txt
-@@ -207,7 +207,7 @@ if(NINTENDO_SWITCH)
- endif()
- 
- if(NOT LIBRETRO)
--	if((WIN32 AND NOT MSVC) OR (UNIX AND NOT APPLE AND NOT CMAKE_SYSTEM_NAME MATCHES "(FreeBSD|OpenBSD|NetBSD)"))
-+	if((WIN32 AND NOT MSVC) OR (CMAKE_SYSTEM_NAME MATCHES "Linux"))
- 		add_subdirectory(core/deps/breakpad)
- 		if(WIN32)
- 			target_link_options(${PROJECT_NAME} PRIVATE "-Wl,--build-id")
-@@ -356,9 +356,7 @@ if(NOT LIBRETRO)
+@@ -429,12 +429,6 @@ if(NOT LIBRETRO)
+ 		endif()
  	endif()
  
- 	if(NOT ANDROID AND NOT IOS)
--		if(NOT APPLE AND (NOT UNIX OR CMAKE_SYSTEM_NAME MATCHES "(FreeBSD|OpenBSD|NetBSD)"))
--			find_package(SDL2)
--		endif()
-+		find_package(SDL2)
- 		if(NOT SDL2_FOUND)
- 			add_subdirectory(core/deps/SDL EXCLUDE_FROM_ALL)
- 			set(SDL2_FOUND 1)
-@@ -395,7 +393,7 @@ if(NOT LIBRETRO)
- 	endif()
- 
- 	find_package(Lua)
--	if(NOT APPLE AND LUA_FOUND)
-+	if(LUA_FOUND)
+-	find_package(ZLIB)
+-	if(TARGET ZLIB::ZLIB AND NOT ANDROID AND (NOT WIN32 OR WINDOWS_STORE))
+-		set(WITH_SYSTEM_ZLIB ON CACHE BOOL "Use system provided zlib library")
+-		target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
+-	endif()
+-
+ 	find_package(Lua 5.2)
+ 	if(NOT APPLE AND LUA_FOUND)
  		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LUA)
- 		target_include_directories(${PROJECT_NAME} PRIVATE ${LUA_INCLUDE_DIR} core/deps/luabridge/Source)
- 		list(TRANSFORM LUA_LIBRARIES REPLACE "\.dll" "")
-@@ -418,7 +416,7 @@ if(NOT WITH_SYSTEM_ZLIB)
+@@ -448,6 +442,12 @@ add_subdirectory(core/deps/libchdr EXCLU
+ target_link_libraries(${PROJECT_NAME} PRIVATE chdr-static)
+ target_include_directories(${PROJECT_NAME} PRIVATE core/deps/libchdr/include)
+ 
++find_package(ZLIB)
++if(TARGET ZLIB::ZLIB AND NOT ANDROID AND (NOT WIN32 OR WINDOWS_STORE))
++	set(WITH_SYSTEM_ZLIB ON CACHE BOOL "Use system provided zlib library")
++	target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
++endif()
++
+ if(NOT WITH_SYSTEM_ZLIB)
+ 	target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/core/deps/libchdr/deps/zlib-1.2.11")
+ 	target_link_libraries(${PROJECT_NAME} PRIVATE zlib)
+@@ -459,7 +459,7 @@ if(NOT WITH_SYSTEM_ZLIB)
  endif()
  
  find_package(PkgConfig)
@@ -44,50 +40,27 @@ $NetBSD: patch-CMakeLists.txt,v 1.2 2023/07/07 07:31:50 nia Exp $
  	pkg_check_modules(AO IMPORTED_TARGET ao)
  	if(AO_FOUND)
  		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LIBAO)
-@@ -445,22 +443,22 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND 
+@@ -485,7 +485,9 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND 
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_PULSEAUDIO)
  		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBPULSE)
  	endif()
- 
--	if(USE_HOST_LIBZIP)
--		pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
--		if(LIBZIP_FOUND)
--			target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBZIP)
--		endif()
--	endif()
--
- 	if(ENABLE_OPROFILE)
- 		target_compile_definitions(${PROJECT_NAME} PRIVATE DYNA_OPROF)
- 		target_link_libraries(${PROJECT_NAME} PRIVATE opagent)
- 	endif()
 +endif()
  
--	find_package(MiniUPnPc)
--	if(MINIUPNP_FOUND)
--		target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
--		target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
-+find_package(MiniUPnPc)
-+if(MINIUPNP_FOUND)
-+	target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
-+	target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
-+endif()
-+
-+if(USE_HOST_LIBZIP)
-+	pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
-+	if(LIBZIP_FOUND)
-+		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBZIP)
- 	endif()
++if(PKG_CONFIG_FOUND)
+ 	if(USE_HOST_LIBZIP)
+ 		pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
+ 		if(LIBZIP_FOUND)
+@@ -510,7 +512,7 @@ if(NINTENDO_SWITCH AND USE_GLES)
+ 	target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::GLESV2)
  endif()
  
-@@ -1664,10 +1662,14 @@ if(IOS)
- elseif(NINTENDO_SWITCH AND NOT LIBRETRO)
- 	install(FILES ${CMAKE_BINARY_DIR}/flycast.nro DESTINATION "${CMAKE_INSTALL_BINDIR}")
- else()
--	install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_BINDIR}")
-+	if(NOT LIBRETRO)
-+		install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_BINDIR}")
-+	else()
-+		install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_LIBDIR}/libretro")
-+	endif()
+-if(UNIX AND NOT APPLE AND NOT ANDROID)
++if(UNIX AND NOT ANDROID)
+ 	add_definitions(
+ 		-DFLYCAST_DATADIR="${CMAKE_INSTALL_FULL_DATADIR}/${PROJECT_NAME}/"
+ 		-DFLYCAST_SYSCONFDIR="${CMAKE_INSTALL_FULL_SYSCONFDIR}/${PROJECT_NAME}/"
+@@ -1795,7 +1797,7 @@ else()
+ 	install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_BINDIR}")
  endif()
  
 -if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT LIBRETRO)
