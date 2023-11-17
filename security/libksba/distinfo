@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2023/06/26 19:37:25 adam Exp $
+$NetBSD: distinfo,v 1.31 2023/11/17 21:31:02 adam Exp $
 
-BLAKE2s (libksba-1.6.4.tar.bz2) = 6bed76c8816e4767e9a8295c19c340f1b704283723f00a03fb13f9e99ea9b086
-SHA512 (libksba-1.6.4.tar.bz2) = 07bc26584d1901b2975a02012d90084e3c247a7aeab56d7bcc7197ef0210ece0c4ffd5cb468b998ef696deadfcfdc5fa5dc367077863926503e8f7a8d06856a5
-Size (libksba-1.6.4.tar.bz2) = 668445 bytes
+BLAKE2s (libksba-1.6.5.tar.bz2) = c2b666b6810d0c351475b87edb0c11c94f9ae81508450b56927a2deec17ec88f
+SHA512 (libksba-1.6.5.tar.bz2) = 959312ac0bb2dabcdd22217266daccdf3938d62ff2936c767cade76888757ece1bb6fe79f2c679db03d1baf3919757265d0ded216fee8b8d235e94a70fcf05de
+Size (libksba-1.6.5.tar.bz2) = 708400 bytes
 SHA1 (patch-aa) = f2e63361afb95d5469153efaecebcb8719938d58
