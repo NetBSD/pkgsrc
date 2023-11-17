@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7069 2023/11/17 20:08:01 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7070 2023/11/17 20:18:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10154,3 +10154,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libpano13 to 2.9.22 [adam 2023-11-17]
 	Updated graphics/hugin to 2023.0.0 [adam 2023-11-17]
 	Updated math/py-numpy to 1.26.2 [wiz 2023-11-17]
+	Updated sysutils/ansible-core to 2.16.0 [adam 2023-11-17]
+	Updated sysutils/ansible to 8.6.1 [adam 2023-11-17]
