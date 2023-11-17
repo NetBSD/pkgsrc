@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/11/14 14:03:22 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/17 19:44:10 adam Exp $
 
-DISTNAME=	wxWidgets-3.2.3
+DISTNAME=	wxWidgets-3.2.4
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -15,8 +14,8 @@ COMMENT=	Cross-platform wxWidgets GUI library (3.2 stable branch)
 # LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		pkg-config msgfmt
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config msgfmt
 
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 
@@ -47,7 +46,6 @@ PKG_SUPPORTED_OPTIONS=	cmake
 
 .if !empty(PKG_OPTIONS:Mcmake)
 
-USE_CMAKE=		yes
 PLIST_SRC+=		PLIST.cmake
 
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
@@ -69,6 +67,8 @@ SUBST_SED.unwrap=	-e 's,EGREP=.*,EGREP=${EGREP},'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CC}",echo "${CC}",'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CXX}",echo "${CXX}",'
 SUBST_SED.unwrap+=	-e 's,echo.*/${CXX} -o",echo "${CXX} -o",'
+
+.include "../../devel/cmake/build.mk"
 
 .else # empty(PKG_OPTIONS:Mcmake)
 
@@ -130,22 +130,22 @@ post-install:
 	${LN} -sf ../libexec/wx-3.2/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.2
 
 .if ${OPSYS} != "Darwin"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 PLIST_SRC+=	PLIST.gtk3
 .endif
 
 .include "../../archivers/libmspack/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
