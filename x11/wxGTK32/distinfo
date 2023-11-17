@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2023/10/19 14:40:00 wiz Exp $
+$NetBSD: distinfo,v 1.11 2023/11/17 19:44:10 adam Exp $
 
-BLAKE2s (wxWidgets-3.2.3.tar.bz2) = 1e70d3dc27a2f3b3b755c4eca484ae839cf58a6b72f47de16e00a051cf0c3b4c
-SHA512 (wxWidgets-3.2.3.tar.bz2) = 72e00cea25ab82d5134592f85bedeecb7b9512c00be32f37f6879ca5c437569b3b2b77de61a38e980e5c96baad9b1b0c8ad70773d610afbe9421fa4941d31f99
-Size (wxWidgets-3.2.3.tar.bz2) = 27537724 bytes
+BLAKE2s (wxWidgets-3.2.4.tar.bz2) = 01ecd5fa0d145f3a8070be88e73b2747115278228cbe8b9ebaa50a72b9b359f1
+SHA512 (wxWidgets-3.2.4.tar.bz2) = 8592e8b7ddf4afe83c9dd4894faa43bbf8a5d57d1ac408b3b6b3b77a809063493ef3e2eefa3155214e1c91c5fad2dc6c0760dd79ada3e73f73ec4d06021b6fff
+Size (wxWidgets-3.2.4.tar.bz2) = 27505949 bytes
 SHA1 (patch-build_cmake_config.cmake) = 61ea8fe846de12d5bad6c1f4fa7fe8af6ab78152
 SHA1 (patch-build_cmake_install.cmake) = b14a0e4ddd52fd5d73c4453fa35e1db67c1c0806
 SHA1 (patch-build_cmake_utils_CMakeLists.txt) = dcf6165e260ed56a9908e9e3095c02d0537a4364
