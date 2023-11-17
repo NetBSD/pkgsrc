@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 09:57:20 nia Exp $
+$NetBSD: distinfo,v 1.25 2023/11/17 15:25:13 schmonz Exp $
 
 BLAKE2s (zziplib-0.13.72.tar.gz) = 6eed02a909c501f6b36043e49986cf8517459adc158f59e2e6c65b25239c6afd
 SHA512 (zziplib-0.13.72.tar.gz) = 4bb089e74813c6fac9657cd96e44e4a6469bf86aba3980d885c4573e8db45e74fd07bbdfcec9f36297c72227c8c0b2c37dab1bc4326cef8529960e482fe501c8
 Size (zziplib-0.13.72.tar.gz) = 1162175 bytes
 SHA1 (patch-zzip_CMakeLists.txt) = 3ffad6de6dcb48189880d972052d917653f138aa
+SHA1 (patch-zzip_mmapped.c) = 70efa0b817f36a462d250ed8b1d5f86cd7357188
 SHA1 (patch-zzipwrap_CMakeLists.txt) = be632707cecafcdae76a7633d60cac6261f720d8
