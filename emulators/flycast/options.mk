@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/07/02 17:32:30 nia Exp $
+# $NetBSD: options.mk,v 1.2 2023/11/17 09:27:51 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.flycast
 
@@ -7,10 +7,10 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*)
+.if ${MACHINE_ARCH:M*arm*}
 PKG_SUPPORTED_OPTIONS+=		rpi
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf)
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv6hf}
 PKG_SUGGESTED_OPTIONS+=		rpi
 .endif
 
