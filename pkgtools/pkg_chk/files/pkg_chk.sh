@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.76 2019/11/10 10:25:43 triaxx Exp $
+# $Id: pkg_chk.sh,v 1.77 2023/11/17 17:40:48 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -35,7 +35,7 @@
 PATH=${PATH}:/usr/sbin:/usr/bin
 
 SUMMARY_FILES="pkg_summary.bz2 pkg_summary.gz pkg_summary.txt"
-DO_CLEAN="CLEANDEPENDS=yes"
+DO_CLEAN="'DEPENDS_TARGET=package-install clean'"
 
 bin_pkg_info2pkgdb()
     {
