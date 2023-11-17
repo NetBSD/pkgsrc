@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7057 2023/11/17 09:33:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7058 2023/11/17 10:03:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10137,3 +10137,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/libretro-flycast to 2.2 [nia 2023-11-17]
 	Updated emulators/flycast to 2.2 [nia 2023-11-17]
 	Updated editors/vim to 9.0.2112 [wiz 2023-11-17]
+	Updated math/octave to 8.4.0 [adam 2023-11-17]
+	Updated devel/py-poetry to 1.7.1 [adam 2023-11-17]
