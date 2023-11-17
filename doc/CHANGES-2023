@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7060 2023/11/17 16:33:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7061 2023/11/17 16:41:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10141,3 +10141,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-poetry to 1.7.1 [adam 2023-11-17]
 	Updated textproc/p5-XML-LibXML to 2.0209 [schmonz 2023-11-17]
 	Updated textproc/git-delta to 0.16.5nb2 [wiz 2023-11-17]
+	Updated net/py-magic-wormhole to 0.13.0nb2 [wiz 2023-11-17]
