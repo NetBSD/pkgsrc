@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/10 18:32:02 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/11/17 17:47:10 adam Exp $
 
-BLAKE2s (trove-classifiers-2023.11.9.tar.gz) = ed3f5847ac65bd7da06a5c50b32e2858b1be26a6ec5c484d6292db5468c93b7f
-SHA512 (trove-classifiers-2023.11.9.tar.gz) = c7d3f7ebe06a1f8b0d7d7d7abe5d00f29fdab35e4577c726f2a3e279e0863c43cc0ceaa29b46bf2856becbead5a2468fc80f0200f199f9821e3336356425e693
-Size (trove-classifiers-2023.11.9.tar.gz) = 15893 bytes
+BLAKE2s (trove-classifiers-2023.11.14.tar.gz) = fdc6623a005683175ca8c1f41fd110be992e14317ef41f2bc6bf99415868bdb3
+SHA512 (trove-classifiers-2023.11.14.tar.gz) = f014eb404902a42b7ceac23b1f5cd1b256c05c2de2d1a630c067528826593cfb1a10d6de0851fa68715665e3165889eb39b61a518138fd81bf29c72489847146
+Size (trove-classifiers-2023.11.14.tar.gz) = 15895 bytes
