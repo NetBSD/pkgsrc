@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7062 2023/11/17 17:40:49 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.7063 2023/11/17 17:41:24 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10143,3 +10143,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/git-delta to 0.16.5nb2 [wiz 2023-11-17]
 	Updated net/py-magic-wormhole to 0.13.0nb2 [wiz 2023-11-17]
 	Updated fonts/spleen to 2.0.1 [fcambus 2023-11-17]
+	Added graphics/argyllcms version 3.0.2 [jakllsch 2023-11-17]
