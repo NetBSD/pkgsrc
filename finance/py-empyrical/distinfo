@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/11/15 00:52:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/11/17 18:05:21 adam Exp $
 
-BLAKE2s (empyrical-0.5.0.tar.gz) = 5e577d91af90d921ef496eb1868a663c7dc9e310c7bec5c5608c185ba66e3049
-SHA512 (empyrical-0.5.0.tar.gz) = 0715414e7781b9593aba4e748ad6198c4a9694423727286a437c5b8d68d11797d7b7ce475a96aa56a05916d10bc303effea964c3254a4fda3a8d9d26f3eacaaf
-Size (empyrical-0.5.0.tar.gz) = 49802 bytes
+BLAKE2s (empyrical-0.5.5.tar.gz) = 29dfdb15ed89c50482cda88031de2616bdbf175d244d175c02e40313b2acd372
+SHA512 (empyrical-0.5.5.tar.gz) = ebe2c4100bae83415e21a7761c163ec040b1dc9fcce095c1171d4e412125e9241d9b3b91dc39c339c9a82659c2a028437fa07c561b14f8f8da7c579fa9a8228f
+Size (empyrical-0.5.5.tar.gz) = 52787 bytes
 SHA1 (patch-versioneer.py) = a131c7607694dd46c4c60d4573b447c70f988189
