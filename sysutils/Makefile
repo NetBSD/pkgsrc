@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1098 2023/11/16 08:54:16 adam Exp $
+# $NetBSD: Makefile,v 1.1099 2023/11/17 21:00:07 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -705,6 +705,7 @@ SUBDIR+=	spice-gtk
 SUBDIR+=	spice-protocol
 SUBDIR+=	spice-server
 SUBDIR+=	sredird
+SUBDIR+=	ssh-agent-switcher
 SUBDIR+=	sshsh
 SUBDIR+=	stow
 SUBDIR+=	strace
