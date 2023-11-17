@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1029 2023/11/14 13:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.1030 2023/11/17 17:38:27 jakllsch Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -54,6 +54,7 @@ SUBDIR+=	agg
 SUBDIR+=	ansilove
 SUBDIR+=	apngasm
 SUBDIR+=	arc-theme
+SUBDIR+=	argyllcms
 SUBDIR+=	artist
 SUBDIR+=	asymptote
 SUBDIR+=	autopano-sift-C
