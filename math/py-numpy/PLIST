@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2023/11/17 19:08:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2023/11/17 20:07:47 wiz Exp $
 bin/f2py-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -634,6 +634,7 @@ ${PYSITELIB}/numpy/distutils/checks/cpu_xop.c
 ${PYSITELIB}/numpy/distutils/checks/extra_avx512bw_mask.c
 ${PYSITELIB}/numpy/distutils/checks/extra_avx512dq_mask.c
 ${PYSITELIB}/numpy/distutils/checks/extra_avx512f_reduce.c
+${PYSITELIB}/numpy/distutils/checks/extra_vsx3_half_double.c
 ${PYSITELIB}/numpy/distutils/checks/extra_vsx4_mma.c
 ${PYSITELIB}/numpy/distutils/checks/extra_vsx_asm.c
 ${PYSITELIB}/numpy/distutils/checks/test_flags.c
