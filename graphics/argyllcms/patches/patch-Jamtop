@@ -1,0 +1,74 @@
+$NetBSD: patch-Jamtop,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+
+Search and use pkgsrc ${X11BASE} and ${PREFIX} paths.
+Recognize pkgsrc libpng16.so (somewhat haphazardly).
+Recognize NetBSD.
+
+--- Jamtop.orig	2023-10-23 00:55:56.000000000 +0000
++++ Jamtop
+@@ -83,7 +83,11 @@ if $(UNIX) {
+ 
+ 	# Hmm. Would be nice to use pkg-config here, if system has it.
+ 	} else {
+-		if [ GLOB /usr/X11R6/include/X11 : X.h ] {
++		if [ GLOB $(X11BASE)/include/X11 : X.h ] {
++			LibWinH = $(X11BASE)/include ;
++		} else if [ GLOB $(PREFIX)/include/X11 : X.h ] {
++			LibWinH = $(PREFIX)/include ;
++		} else if [ GLOB /usr/X11R6/include/X11 : X.h ] {
+ 			LibWinH = /usr/X11R6/include ;
+ 		} else if [ GLOB /usr/include/X11 : X.h ] {
+ 			LibWinH = /usr/include ;
+@@ -94,7 +98,11 @@ if $(UNIX) {
+ 		}
+ 
+ 		if $(HOST64) {
+-			if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
++			if [ GLOB $(X11BASE)/lib : libX11.so libX11.a ] {
++				LibWinD = $(X11BASE)/lib ;
++			} else if [ GLOB $(PREFIX)/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib ;
++			} else if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
+ 				LibWinD = /usr/X11R6/lib ;
+ 			} else if [ GLOB /usr/lib/x86_64-linux-gnu : libX11.so libX11.a ] {
+ 				LibWinD = /usr/lib/x86_64-linux-gnu ;
+@@ -108,7 +116,11 @@ if $(UNIX) {
+ 				ECHO Unable to locate the 64 bit X11 library files ;
+ 			}
+ 		} else {
+-			if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
++			if [ GLOB $(X11BASE)/lib : libX11.so libX11.a ] {
++				LibWinD = $(X11BASE)/lib ;
++			} else if [ GLOB $(PREFIX)/lib : libX11.so libX11.a ] {
++				LibWinD = $(PREFIX)/lib ;
++			} else if [ GLOB /usr/X11R6/lib : libX11.so libX11.a ] {
+ 				LibWinD = /usr/X11R6/lib ;
+ 			} else if [ GLOB /usr/lib/i386-linux-gnu : libX11.so libX11.a ] {
+ 				LibWinD = /usr/lib/i386-linux-gnu ;
+@@ -123,6 +135,9 @@ if $(UNIX) {
+ 		if $(OS) = FREEBSD {
+ 			LINKFLAGS += -g -lrt -lusb ;
+ 			GUILINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss  ;
++		} else if $(OS) = NETBSD {
++			LINKFLAGS += -L$(PREFIX)/lib ${COMPILER_RPATH_FLAG}$(PREFIX)/lib -g -lrt -lusbhid ;
++			GUILINKFLAGS += -L$(LibWinD) ${COMPILER_RPATH_FLAG}$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss ;
+ 		} else if $(OS) = OPENBSD {
+ 			LINKFLAGS += ;
+ 			GUILINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -L/usr/local/lib ;
+@@ -153,11 +168,14 @@ rule CheckForLibrary {
+ 	}
+ 
+ 	if ! $(BUILTIN_$(UCASE)) && $(UNIX) {
+-		if  [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
++		if  [ GLOB $(PREFIX)/include$(subd) : $(lcase).h $(lcase)lib.h ]
++		 || [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
+ 	     || [ GLOB /usr/local/include$(subd) : $(lcase).h $(lcase)lib.h ]
+ 		 || [ GLOB /usr/include/x86_64-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
+ 	     || [ GLOB /usr/include/i386-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ] {
+-			if  [ GLOB /usr/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
++			if  [ GLOB $(PREFIX)/lib : lib$(lcase).so ] || [ GLOB $(PREFIX)/lib : lib$(lcase).a ]
++			 || [ GLOB $(PREFIX)/lib : lib$(lcase)16.so ] || [ GLOB $(PREFIX)/lib : lib$(lcase)16.a ]
++			 || [ GLOB /usr/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
+ 			 || [ GLOB /usr/local/lib : lib$(lcase).so ] || [ GLOB /usr/local/lib : lib$(lcase).a ]
+ 			 || [ GLOB /usr/lib64 : lib$(lcase).so ] || [ GLOB /usr/lib64 : lib$(lcase).a ]
+ 			 || [ GLOB /usr/lib/x86_64-linux-gnu : lib$(lcase).so ]

@@ -1,0 +1,15 @@
+$NetBSD: patch-spectro_Jamfile,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+
+Try to make linking work on NetBSD 9.3
+
+--- spectro/Jamfile.orig	2023-10-23 00:56:14.000000000 +0000
++++ spectro/Jamfile
+@@ -166,7 +166,7 @@ LINKLIBS = libinst libinstapp 
+ 		   ../ccast/libccast $(SSLLIB) ../yajl/libyajl
+            $(TIFFLIB) $(JPEGLIB) $(PNGLIB) $(ZLIB)
+            ../numlib/libui libconv ../numlib/libnum
+-           $(CMMLIBS) ;
++           $(CMMLIBS) libconv ;
+ 
+ if $(LIBUSB_IS_DLL) = true {
+ 	LINKSHLIBS = $(LIBUSBDIR)/$(LIBUSB) ;
