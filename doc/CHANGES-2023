@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7050 2023/11/17 03:21:08 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7051 2023/11/17 03:21:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10129,3 +10129,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/qmail to 1.03nb54 [schmonz 2023-11-16]
 	Updated sysutils/daemontools-run to 20231116 [schmonz 2023-11-16]
 	Updated www/firefox to 119.0.1 [ryoon 2023-11-17]
+	Updated www/firefox-l10n to 119.0.1 [ryoon 2023-11-17]
