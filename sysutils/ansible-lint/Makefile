@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/10/28 19:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/11/17 21:34:08 adam Exp $
 
-DISTNAME=	ansible-lint-6.21.1
-PKGREVISION=	1
+DISTNAME=	ansible-lint-6.22.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -21,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.3:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.31.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.0.0:../../comms/py-rich
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.17.31:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.18.5:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.1.2:../../textproc/py-wcmatch
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
