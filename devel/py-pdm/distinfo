@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/11/09 08:52:43 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/17 21:24:21 adam Exp $
 
-BLAKE2s (pdm-2.10.1.tar.gz) = cb382fee1585f95044a9a91304aed3267cba98f1f3f69f65ee01c3c5f10886fa
-SHA512 (pdm-2.10.1.tar.gz) = 9f4f47586c1452feeb79f45b127ee799206564795ca238f0e69abff5d14e096af5583eb3749cc2635dfc15e883353c885e796f614195efdf58e08f77637b42f2
-Size (pdm-2.10.1.tar.gz) = 2588192 bytes
+BLAKE2s (pdm-2.10.3.tar.gz) = 6d80aefe4cda6e3e547bff006836e80b9e39a37eb3be68853740f6d226b01fca
+SHA512 (pdm-2.10.3.tar.gz) = 09a08a6f225a346d841ebadd394ac4d86313369de6482f4caf15cc401b7deb5b928bf5894178d1334596c430f3f14b87f8e29d15ec5d73e1f7d40be717211ddc
+Size (pdm-2.10.3.tar.gz) = 2588935 bytes
