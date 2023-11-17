@@ -1,19 +1,17 @@
-$NetBSD: distinfo,v 1.2 2023/07/07 07:31:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2023/11/17 09:27:51 nia Exp $
 
-BLAKE2s (flycast-2.1.tar.gz) = 00b437bf7ff8731b0784cbc919641a1ead0c518f49e146a3ed82faa8e4f1cf49
-SHA512 (flycast-2.1.tar.gz) = 98db9c4c2b843bbfd3a6b9d15ed1d487891c42e4c91113f6167c5afcbf0bcd70a034e1d488c2ec0c74e71fc829a117d7f61f0a094cf25326b655be94e8a6e556
-Size (flycast-2.1.tar.gz) = 13006518 bytes
-BLAKE2s (flyinghead-mingw-breakpad-4c3d5fce1a4fef4decfbfeaf20f3746ecd209775.tar.gz) = a4f0710f929156a43117286b72de0f7b9a70ed39b4ded3d4f6b1528d10906470
-SHA512 (flyinghead-mingw-breakpad-4c3d5fce1a4fef4decfbfeaf20f3746ecd209775.tar.gz) = 0eb0b9fff44c87a6cbb55e958de8ba8a4e32a4a30dac58472a04dd3a143e6a3d980de5bda5740c4b82561296e236b655b76159e6b74868248b0c5a8c8b36b044
-Size (flyinghead-mingw-breakpad-4c3d5fce1a4fef4decfbfeaf20f3746ecd209775.tar.gz) = 5384166 bytes
-BLAKE2s (rtissera-libchdr-2781322c4a7f8315c5fd6499129ad4b718e35843.tar.gz) = 3d2bd14f6aa24f0102b7f1dbacbd1826625baa1b1e7585353ec44aaae2940cf2
-SHA512 (rtissera-libchdr-2781322c4a7f8315c5fd6499129ad4b718e35843.tar.gz) = 49bf3133667dde34ddb1e84c52f65d1d132c2e55f32685175465ee224202321e153c63c605154a3e9b1f57e7c108c94f88c57e30478537f86c6845760428ccb1
-Size (rtissera-libchdr-2781322c4a7f8315c5fd6499129ad4b718e35843.tar.gz) = 416898 bytes
+BLAKE2s (flycast-2.2.tar.gz) = 3df8031cf57a9031883ebe03c2d0812f71e6f48025d1f7fee6401992a6a41d6a
+SHA512 (flycast-2.2.tar.gz) = 23415ca804f9a6b3c77cf5c94c8de2813b8ce15ad04b9a726a3817cb81a84de2a6c3057684c18832955f2bf537ca30f5bff7ae34c26bd3684bb68723143d6b74
+Size (flycast-2.2.tar.gz) = 14510385 bytes
+BLAKE2s (flyinghead-libchdr-925400c4c4b67bafdff8dfad9a1474b22d980777.tar.gz) = fe973a99dc88e956e7ced84d2bcd10461abaebb409efc00da762354991554359
+SHA512 (flyinghead-libchdr-925400c4c4b67bafdff8dfad9a1474b22d980777.tar.gz) = 2c439fd1f8b1e97deaf2b92968ec069c067e8824bacb03f2a65570eec032d3af9ff2b2f28eb2066d4ab25b5c8e90fc87462de47c53b7b86b6839b39850fe7235
+Size (flyinghead-libchdr-925400c4c4b67bafdff8dfad9a1474b22d980777.tar.gz) = 1748616 bytes
+BLAKE2s (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 8ac9757b984e33bd7d486f0719758671e07aab5101c3ad3b80cecc8eeb7c04c6
+SHA512 (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 57f0ef0f5f05343d516c1bcc2af372d02c535dfbdb25d6dc0d8a4587411385d5da3c73383e1a61d30ba028fff8f806bf0a337a278f214caee79d50868aa568ed
+Size (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 5383206 bytes
 BLAKE2s (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 2b0d728012815bb58fa974be88e37abaf37e8509eec9fa68356a2eff9616954d
 SHA512 (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = b47ac42637d615bd6497a8d09f6c7c6e8f7a762b80fc1a4b284cb65754302def2a7b1339c8aeb146900ad5ad247a5b33fb381ce07451f97b60a155f7f1b41a9a
 Size (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 543800 bytes
-SHA1 (patch-CMakeLists.txt) = 72339dbcf395a8a91c1684700cfb61d9165f1e7d
-SHA1 (patch-core_khronos_GL4_gl3w.c) = 83f5d38c3cdcb6ffaf4a0d7ff45a2185d55dec33
-SHA1 (patch-core_linux_context.cpp) = 4640cb74d38f0919deadd7efc740b353dc387571
-SHA1 (patch-core_log_StringUtil.h) = dc0cf0ee8a6926ca2e63b01e636c49646c534cf3
+SHA1 (patch-CMakeLists.txt) = d33897aa0b53fdf1f559909b6e194263c9489f5d
+SHA1 (patch-core_deps_khronos_GL4_gl3w.c) = f987eb1415f9155b590a7d319ba2aa2994973236
 SHA1 (patch-core_rend_gui.cpp) = 8cf1beb83758dc72e1ceb4097f660449400fb666

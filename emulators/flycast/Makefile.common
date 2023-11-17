@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.4 2023/08/04 14:27:56 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/11/17 09:27:51 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
-DISTNAME=	flycast-2.1
+DISTNAME=	flycast-2.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flyinghead/}
 GITHUB_PROJECT=	flycast
-GITHUB_TAG=	V${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://github.com/flyinghead/flycast
 LICENSE=	gnu-gpl-v2
@@ -23,9 +23,11 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	10
 
 CMAKE_ARGS+=	-DUSE_HOST_LIBZIP=ON
+CMAKE_ARGS+=	-DUSE_HOST_SDL=ON
 CMAKE_ARGS+=	-DUSE_VULKAN=OFF
 CMAKE_ARGS+=	-DUSE_DX9=OFF
 CMAKE_ARGS+=	-DUSE_DX11=OFF
+CMAKE_ARGS+=	-DWITH_SYSTEM_ZLIB=ON
 
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
 
@@ -34,8 +36,8 @@ PATCHDIR=	${.CURDIR}/../../emulators/flycast/patches
 
 USE_CXX_FEATURES+=	c++17
 
-GITHUB_SUBMODULES+=	rtissera libchdr 2781322c4a7f8315c5fd6499129ad4b718e35843 core/deps/libchdr
-GITHUB_SUBMODULES+=	flyinghead mingw-breakpad 4c3d5fce1a4fef4decfbfeaf20f3746ecd209775 core/deps/breakpad
+GITHUB_SUBMODULES+=	flyinghead libchdr 925400c4c4b67bafdff8dfad9a1474b22d980777 core/deps/libchdr
+GITHUB_SUBMODULES+=	flyinghead mingw-breakpad 1ab24bcc817ebe629bf77daa53529d02361cb1e9 core/deps/breakpad
 GITHUB_SUBMODULES+=	vinniefalco LuaBridge fab7b33b896a42dcc865ba5ecdbacd9f40 core/deps/luabridge
 
 .include "../../archivers/libzip/buildlink3.mk"
