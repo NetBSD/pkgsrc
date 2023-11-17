@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7059 2023/11/17 15:14:20 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7060 2023/11/17 16:33:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10140,3 +10140,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/octave to 8.4.0 [adam 2023-11-17]
 	Updated devel/py-poetry to 1.7.1 [adam 2023-11-17]
 	Updated textproc/p5-XML-LibXML to 2.0209 [schmonz 2023-11-17]
+	Updated textproc/git-delta to 0.16.5nb2 [wiz 2023-11-17]
