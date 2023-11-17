@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2023/11/14 21:08:10 pin Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/17 07:44:56 pin Exp $
 
-DISTNAME=	tp-note-1.23.1
+DISTNAME=	tp-note-1.23.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
-GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
@@ -11,8 +10,6 @@ COMMENT=	Minimalistic note taking and template system
 LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
-
-WRKSRC=		${WRKDIR}/tp-note-v1.23.1-9d873aad30f5e47ecb983f64eaf9f135e3765e00
 
 USE_TOOLS+=	pkg-config
 
