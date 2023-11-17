@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/09/17 18:01:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/17 17:52:06 adam Exp $
 bin/subunit-1to2-${PYVERSSUFFIX}
 bin/subunit-2to1-${PYVERSSUFFIX}
 bin/subunit-filter-${PYVERSSUFFIX}
@@ -13,12 +13,12 @@ bin/subunit2gtk-${PYVERSSUFFIX}
 bin/subunit2junitxml-${PYVERSSUFFIX}
 bin/subunit2pyunit-${PYVERSSUFFIX}
 bin/tap2subunit-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/subunit/__init__.py
 ${PYSITELIB}/subunit/__init__.pyc
 ${PYSITELIB}/subunit/__init__.pyo
