@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/10/12 07:16:42 adam Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/17 20:17:48 adam Exp $
 
-DISTNAME=	ansible-8.5.0
+DISTNAME=	ansible-8.6.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -11,7 +11,9 @@ LICENSE=	gnu-gpl-v3
 
 PREV_PKGPATH=	sysutils/ansible2
 
-DEPENDS+=	ansible-core>=2.15.5:../../sysutils/ansible-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	ansible-core>=2.15.6:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -76,5 +78,5 @@ post-extract:
 	${FIND} ${WRKSRC}/ansible_collections -name .DS_Store -delete
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
