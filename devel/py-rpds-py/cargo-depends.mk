@@ -1,6 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2023/11/07 09:30:16 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2023/11/17 21:01:51 adam Exp $
 
-CARGO_CRATE_DEPENDS+=	archery-1.0.0
+CARGO_CRATE_DEPENDS+=	archery-1.1.0
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
@@ -20,12 +20,13 @@ CARGO_CRATE_DEPENDS+=	pyo3-macros-0.20.0
 CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.20.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.31
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
-CARGO_CRATE_DEPENDS+=	rpds-1.0.1
+CARGO_CRATE_DEPENDS+=	rpds-1.1.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.11.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	syn-2.0.32
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.9
+CARGO_CRATE_DEPENDS+=	triomphe-0.1.9
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.11
 CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	windows-targets-0.48.1
