@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/05/31 21:37:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/11/17 09:54:20 adam Exp $
 bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
@@ -766,6 +766,11 @@ include/${PKGNAME}/octave/vx-s-crv.h
 include/${PKGNAME}/octave/xdiv.h
 include/${PKGNAME}/octave/xnorm.h
 include/${PKGNAME}/octave/xpow.h
+include/octave-${PKGVERSION}/octave/ov-base-diag.cc
+include/octave-${PKGVERSION}/octave/ov-base-int.cc
+include/octave-${PKGVERSION}/octave/ov-base-mat.cc
+include/octave-${PKGVERSION}/octave/ov-base-scalar.cc
+include/octave-${PKGVERSION}/octave/ov-base-sparse.cc
 info/liboctave.info
 info/octave.info
 lib/octave/${PKGVERSION}/__delaunayn__.a
@@ -1366,6 +1371,8 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/audioread.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/convhulln.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/fftw.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/gzip.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-base-mat.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-base-sparse.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-bool-mat.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-cell.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-class.cc-tst
