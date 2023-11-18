@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.101 2023/11/14 14:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/11/18 07:13:42 tsutsui Exp $
 
-PKGREVISION= 5
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
@@ -34,18 +33,8 @@ CONFIGURE_ARGS+=	--with-unicode-emoji-dir=${PREFIX}/share/unicode/emoji
 CONFIGURE_ARGS+=	--with-emoji-annotation-dir=${PREFIX}/share/unicode/cldr/common/annotations
 CONFIGURE_ARGS+=	--with-ucd-dir=${PREFIX}/share/unicode/ucd
 
-.include "../../mk/bsd.prefs.mk"
-
-# Workaround X11_LOCALEDATADIR for NetBSD etc.
-#  https://github.com/ibus/ibus/pull/2478
-.if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
-SUBST_CLASSES+=		xlocale
-SUBST_STAGE.xlocale=	pre-configure
-SUBST_FILES.xlocale=	src/gencomposetable.c \
-			src/ibuscomposetable.c \
-			src/ibusenginesimple.c src/tests/ibus-compose.c
-SUBST_SED.xlocale=	-e 's,/share/X11/locale,/lib/X11/locale,g'
-.endif
+# XXX lack of dbusmenu-glib
+CONFIGURE_ARGS+=	--disable-appindicator
 
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure

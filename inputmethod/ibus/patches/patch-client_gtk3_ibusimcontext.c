@@ -1,11 +1,11 @@
-$NetBSD: patch-client_gtk3_ibusimcontext.c,v 1.4 2022/09/03 14:14:41 tsutsui Exp $
+$NetBSD: patch-client_gtk3_ibusimcontext.c,v 1.5 2023/11/18 07:13:42 tsutsui Exp $
 
 NetBSD 6.99.25's gcc says:
    error: #pragma GCC diagnostic not allowed inside functions
 
---- client/gtk3/ibusimcontext.c.orig	2022-08-22 15:32:16.000000000 +0000
+--- client/gtk3/ibusimcontext.c.orig	2023-11-09 06:08:27.000000000 +0000
 +++ client/gtk3/ibusimcontext.c
-@@ -801,6 +801,9 @@ daemon_name_vanished (GDBusConnection *c
+@@ -870,6 +870,9 @@ daemon_name_vanished (GDBusConnection *c
      _daemon_is_running = FALSE;
  }
  
@@ -15,7 +15,7 @@ NetBSD 6.99.25's gcc says:
  static void
  ibus_im_context_class_init (IBusIMContextClass *class)
  {
-@@ -921,10 +924,7 @@ ibus_im_context_class_init (IBusIMContex
+@@ -1038,10 +1041,7 @@ ibus_im_context_class_init (IBusIMContex
  #if !GTK_CHECK_VERSION (3, 98, 4)
      /* always install snooper */
      if (_key_snooper_id == 0) {
@@ -26,7 +26,7 @@ NetBSD 6.99.25's gcc says:
      }
  #endif
  
-@@ -936,23 +936,24 @@ ibus_im_context_class_init (IBusIMContex
+@@ -1053,23 +1053,24 @@ ibus_im_context_class_init (IBusIMContex
                                                NULL,
                                                NULL);
  }
