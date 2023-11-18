@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1099 2023/11/17 21:00:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.1100 2023/11/18 02:39:05 riastradh Exp $
 #
 
 COMMENT=	System utilities
@@ -488,6 +488,7 @@ SUBDIR+=	neofetch
 SUBDIR+=	netbt-hcidump
 SUBDIR+=	netmask
 SUBDIR+=	news
+SUBDIR+=	nmrpflash
 SUBDIR+=	nnn
 SUBDIR+=	node_exporter
 SUBDIR+=	noice
