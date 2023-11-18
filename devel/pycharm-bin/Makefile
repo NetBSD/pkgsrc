@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/09/11 13:48:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/18 15:04:27 abs Exp $
 
 
 VERSION=	2023.2.1
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-USE_JAVA2=	9
+USE_JAVA2=	11
 
 PKG_JVMS_ACCEPTED=	openjdk17 oracle-jdk17
 PKG_JVMS_ACCEPTED+=	openjdk11 adoptopenjdk11-bin openjdk-bin
