@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/21 18:24:28 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/18 15:45:58 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/FUNDING.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
@@ -19,15 +19,21 @@ ${GEM_LIBDIR}/test/assets/gpg-fixtures/data
 ${GEM_LIBDIR}/test/assets/gpg-fixtures/data.asc
 ${GEM_LIBDIR}/test/assets/gpg-fixtures/data.invalid.asc
 ${GEM_LIBDIR}/test/assets/patch 1.diff
+${GEM_LIBDIR}/test/assets/pkgconf/libxml2/libxml-2.0.pc
+${GEM_LIBDIR}/test/assets/pkgconf/libxslt/libexslt.pc
+${GEM_LIBDIR}/test/assets/pkgconf/libxslt/libxslt.pc
 ${GEM_LIBDIR}/test/assets/test mini portile-1.0.0/configure
 ${GEM_LIBDIR}/test/assets/test-cmake-1.0/CMakeLists.txt
 ${GEM_LIBDIR}/test/assets/test-cmake-1.0/hello.c
 ${GEM_LIBDIR}/test/assets/test-download-archive.tar.gz
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_activate.rb
 ${GEM_LIBDIR}/test/test_cmake.rb
 ${GEM_LIBDIR}/test/test_cook.rb
 ${GEM_LIBDIR}/test/test_digest.rb
 ${GEM_LIBDIR}/test/test_download.rb
 ${GEM_LIBDIR}/test/test_execute.rb
+${GEM_LIBDIR}/test/test_mkmf_config.rb
 ${GEM_LIBDIR}/test/test_proxy.rb
+${GEM_LIBDIR}/test/test_recipe.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
