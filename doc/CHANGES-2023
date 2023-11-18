@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7078 2023/11/18 02:39:32 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.7079 2023/11/18 04:06:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10170,3 +10170,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.22.0 [adam 2023-11-17]
 	Updated devel/goredo to 2.4.0 [schmonz 2023-11-18]
 	Added sysutils/nmrpflash version 0.9.22 [riastradh 2023-11-18]
+	Updated net/bind916 to 9.16.45 [taca 2023-11-18]
