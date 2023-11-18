@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7077 2023/11/18 00:51:25 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7078 2023/11/18 02:39:32 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10169,3 +10169,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/libksba to 1.6.5 [adam 2023-11-17]
 	Updated sysutils/ansible-lint to 6.22.0 [adam 2023-11-17]
 	Updated devel/goredo to 2.4.0 [schmonz 2023-11-18]
+	Added sysutils/nmrpflash version 0.9.22 [riastradh 2023-11-18]
