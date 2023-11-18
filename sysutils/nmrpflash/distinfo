@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/18 02:39:05 riastradh Exp $
+
+BLAKE2s (nmrpflash-0.9.22.tar.gz) = ae19c1e811c1340ff45adc335a2a981a88a74dde2c83bd7a25e59ad7ab9db239
+SHA512 (nmrpflash-0.9.22.tar.gz) = 4b235236e297582b3d214d83cc4270f72d8fe608ac3a2c31e7e3fe197ea6276a641503ad9beb79f99d51ff892e544493c98bc87a42a5b35cf1fd5c871897c3e5
+Size (nmrpflash-0.9.22.tar.gz) = 61856 bytes
