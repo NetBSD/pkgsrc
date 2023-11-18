@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/08/06 02:26:24 tsutsui Exp $
+$NetBSD: distinfo,v 1.17 2023/11/18 14:22:15 tsutsui Exp $
 
-BLAKE2s (public_suffix-5.0.3.gem) = 8207e3124358ef77bbb18acb845c469a421f8541d67153b2bbc759f850a94cd4
-SHA512 (public_suffix-5.0.3.gem) = 7d8c1c0ff951458060dfee4247cfdb04a3f875f97e8451e2955b05335c9ea8480612be1455280ee86c9b2a1c62d0dac663d67b68825d8ce3a99ef63c5841017d
-Size (public_suffix-5.0.3.gem) = 113152 bytes
+BLAKE2s (public_suffix-5.0.4.gem) = 80fb476caaaf09466bc37484fa9675237b6f089b4df4975fda383c6eeda0025c
+SHA512 (public_suffix-5.0.4.gem) = a9bfce01a5d6c075ed626ea91ea6458b40611b42d18ccb82a6e96586793c570fc934d4268742fd7e44aa73632fada9cda2b63179b018255ad64f6d3a41672c9c
+Size (public_suffix-5.0.4.gem) = 102912 bytes
