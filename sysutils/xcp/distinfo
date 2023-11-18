@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/11/17 07:46:05 pin Exp $
+$NetBSD: distinfo,v 1.4 2023/11/18 14:26:37 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -210,9 +210,9 @@ Size (tempfile-3.8.1.crate) = 32164 bytes
 BLAKE2s (termcolor-1.1.3.crate) = 883230b86f7f9bd79101af7c2fe83f0b3b76831712b963ae422d7609ee7c5f12
 SHA512 (termcolor-1.1.3.crate) = 5838fcbfd70f300cb4b62aab50565db52074c56b152ccc8ac1173e4676c0d5a636271bf5a645a77da6e1d4edbf0091af2cd4dd6d73b85c3d198c760898c06f3a
 Size (termcolor-1.1.3.crate) = 17242 bytes
-BLAKE2s (test-case-3.2.1.crate) = 3c632704e00ad52bb9bda478a1df1b5baa6b97319d0babaff3a5e6f97917e882
-SHA512 (test-case-3.2.1.crate) = 60724384f47ed37089362c30eed7365de240c86fcd5dafe05061a29ce313fe9d91cc40a021455acc32fb4bbe7225aa81874f3e79c097fb41876e7d18cb4a2337
-Size (test-case-3.2.1.crate) = 8664 bytes
+BLAKE2s (test-case-3.3.1.crate) = 2fb5bf98a7d0631833ecfb09950f15a02075f16d5c1941081780c691a9b8f649
+SHA512 (test-case-3.3.1.crate) = 9d6836759dcd71a61ab4e395db7c1a75a14ac3102a36c39b09868ba96d28a2265d8ded385942e55cf95dafc7f4b53fc498b30b6473cedc9b558977878e831b3c
+Size (test-case-3.3.1.crate) = 8797 bytes
 BLAKE2s (test-case-core-3.2.1.crate) = 295e591560a06ec6527127159fc5552a0b0f0b260b92617026dd6306189798ec
 SHA512 (test-case-core-3.2.1.crate) = aa794947a737e8cdc8323cd55f7166eb1d93718f887388dd9537721cd26100ccd2afa27d0a017104024ca3d032ced686c9f778cd01cdd6b15577ae7d3ce1ab3e
 Size (test-case-core-3.2.1.crate) = 13783 bytes
@@ -330,6 +330,6 @@ Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
 BLAKE2s (xattr-1.0.1.crate) = 9a625cf9672f430aa8cd8be544a3327f9ac9a02d9be7f561855565b4d9d0bfc3
 SHA512 (xattr-1.0.1.crate) = f26860cf452e158ddded144d96b80614068dc6271f38ec3794ced4272c9ad01b9baf4938cf7a249e9716947b9c1b2700266bbd6ec9bc7645a3a2fbca9ab67c67
 Size (xattr-1.0.1.crate) = 12258 bytes
-BLAKE2s (xcp-0.12.1.tar.gz) = 38c56c361fcc1495010c16f48c930a620c0d6c4ad3867deaee10d8a78040ae5f
-SHA512 (xcp-0.12.1.tar.gz) = 029013a7804e4ad872ec25e7d92a73b1c9a324302817c3d93def4d8182d05828a9797581867dfc936f03f73ee39502082d6fd9896f266980dcfda044fad9721b
-Size (xcp-0.12.1.tar.gz) = 46578 bytes
+BLAKE2s (xcp-0.12.2.tar.gz) = 43ec1867fc408e0954e8cb714b27f937d552e97a988956c9908faca94cd7b700
+SHA512 (xcp-0.12.2.tar.gz) = 432e12382a4fdee50f999ba1c01885cd623ac3654af0102e7c6ece93d45d4f1ac3929b22e5fa2f9984d3361f237b40de00dd50db38bbed09d9cdbb21b5df0d49
+Size (xcp-0.12.2.tar.gz) = 46704 bytes
