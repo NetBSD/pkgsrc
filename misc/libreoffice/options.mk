@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2023/10/19 15:51:20 ryoon Exp $
+# $NetBSD: options.mk,v 1.26 2023/11/18 15:02:53 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -23,7 +23,7 @@ PLIST_VARS+=	ldap gtk3
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
-USE_JAVA2=		9
+USE_JAVA2=		11
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
 TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant

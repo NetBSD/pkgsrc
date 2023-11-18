@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/09/11 13:47:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/18 15:04:02 abs Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
@@ -16,7 +16,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
 WRKSRC=		${WRKDIR}/idea-IC-232.9559.62
-USE_JAVA2=	9
+USE_JAVA2=	11
 
 USE_TOOLS+=	bash pax sed
 
