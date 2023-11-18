@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7087 2023/11/18 15:01:15 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7088 2023/11/18 15:40:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10179,3 +10179,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/matugen to 0.11.1 [pin 2023-11-18]
 	Updated sysutils/xcp to 0.12.2 [pin 2023-11-18]
 	Updated sysutils/ripdrag to 0.4.5 [pin 2023-11-18]
+	Updated textproc/ruby-nokogiri to 1.15.5 [tsutsui 2023-11-18]
