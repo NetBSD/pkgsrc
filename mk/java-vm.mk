@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.134 2022/12/25 19:18:05 abs Exp $
+# $NetBSD: java-vm.mk,v 1.135 2023/11/18 14:38:07 abs Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -28,10 +28,10 @@
 #
 # USE_JAVA2
 #	When the package needs a Java 2 implementation, this variable
-#	should be set to "yes". It can also be set to "1.4", "1.5", "6".
-#	"7", "8", "9" and "17" require an even more recent implementation.
+#	should be set to "yes". It can also be set to "1.4", "1.5", "6", "7",
+#	"8", "9", "11" and "17" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5 6 7 8 9 17
+#	Possible values: yes no 1.4 1.5 6 7 8 9 11 17
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
@@ -77,10 +77,11 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # adoptopenjdk11-bin and openjdk-bin do not provide native NetBSD binaries
 _PKG_JVMS.17=		openjdk17 oracle-jdk17
 .if ${OPSYS} == "NetBSD"
-_PKG_JVMS.9=		${_PKG_JVMS.17} openjdk11 adoptopenjdk11-bin openjdk-bin
+_PKG_JVMS.11=		${_PKG_JVMS.17} openjdk11 adoptopenjdk11-bin openjdk-bin
 .else
-_PKG_JVMS.9=		${_PKG_JVMS.17} adoptopenjdk11-bin openjdk-bin openjdk11
+_PKG_JVMS.11=		${_PKG_JVMS.17} adoptopenjdk11-bin openjdk-bin openjdk11
 .endif
+_PKG_JVMS.9=		${_PKG_JVMS.11}
 _PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} jdk16
