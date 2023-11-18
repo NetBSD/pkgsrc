@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7082 2023/11/18 07:45:38 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.7083 2023/11/18 12:51:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10174,3 +10174,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind918 to 9.18.20 [taca 2023-11-18]
 	Updated inputmethod/ibus to 1.5.29 [tsutsui 2023-11-18]
 	Updated emulators/PC6001VX to 4.2.4 [tsutsui 2023-11-18]
+	Updated net/openvpn to 2.6.8 [gdt 2023-11-18]
