@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/14 14:02:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/18 15:00:34 pin Exp $
 
-DISTNAME=	ripdrag-0.4.4
-PKGREVISION=	3
+DISTNAME=	ripdrag-0.4.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/ripdrag/
 EXTRACT_SUFX=	.crate
