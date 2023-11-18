@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/11/17 07:46:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/11/18 14:26:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
 CARGO_CRATE_DEPENDS+=	anstream-0.6.4
@@ -70,7 +70,7 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.39
 CARGO_CRATE_DEPENDS+=	tempfile-3.8.1
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
-CARGO_CRATE_DEPENDS+=	test-case-3.2.1
+CARGO_CRATE_DEPENDS+=	test-case-3.3.1
 CARGO_CRATE_DEPENDS+=	test-case-core-3.2.1
 CARGO_CRATE_DEPENDS+=	test-case-macros-3.2.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.50
