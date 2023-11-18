@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7076 2023/11/17 21:34:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7077 2023/11/18 00:51:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10168,3 +10168,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.10.3 [adam 2023-11-17]
 	Updated security/libksba to 1.6.5 [adam 2023-11-17]
 	Updated sysutils/ansible-lint to 6.22.0 [adam 2023-11-17]
+	Updated devel/goredo to 2.4.0 [schmonz 2023-11-18]
