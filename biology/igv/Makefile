@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/24 13:54:25 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/18 15:03:23 abs Exp $
 
 DISTNAME=	IGV_2.9.2
 PKGNAME=	${DISTNAME:S/IGV_/igv-/}
@@ -12,7 +12,7 @@ COMMENT=	Visualization tool for genomic datasets
 LICENSE=	mit
 
 USE_JAVA=	yes
-USE_JAVA2=	9	# Actually needs 11, not supported by java-vm.mk
+USE_JAVA2=	11
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
