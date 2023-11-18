@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/18 02:39:05 riastradh Exp $
+sbin/nmrpflash
