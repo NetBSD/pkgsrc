@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2023/11/12 13:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/11/19 15:56:25 wiz Exp $
 
-DISTNAME=	matplotlib-3.8.1
+DISTNAME=	matplotlib-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
@@ -24,12 +23,9 @@ DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.22.0:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.3.1:../../devel/py-pyparsing
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-
-PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
