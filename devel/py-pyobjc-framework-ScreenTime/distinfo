@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/06/18 05:03:06 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/11/19 17:03:04 adam Exp $
 
-BLAKE2s (pyobjc-framework-ScreenTime-9.2.tar.gz) = 82e209d16d4d9330f513e981185dc6906e52aa4be9abe6016e2d34ab7686e63b
-SHA512 (pyobjc-framework-ScreenTime-9.2.tar.gz) = d8e630d21eb47e79130a4ddab92b63445461e96d9d5ce97ce8abd3d66b53f710ca494fdd4ae3915270ac582cd59e4b1a87263c47e5ff27e31169e040869cf555
-Size (pyobjc-framework-ScreenTime-9.2.tar.gz) = 12927 bytes
+BLAKE2s (pyobjc-framework-ScreenTime-10.0.tar.gz) = 99877434a7d4ff498ab0286c24ca67259bad0d144b63c5c835eedc6a2f8b867b
+SHA512 (pyobjc-framework-ScreenTime-10.0.tar.gz) = 1412debf68b9845b695a8a20d3d9a5291570ae894cb6387ae4b3ff59624cee0d574458ac18a1557147813ba8bf8d478a077586f8b78a2507fc191cd177c7143f
+Size (pyobjc-framework-ScreenTime-10.0.tar.gz) = 13470 bytes

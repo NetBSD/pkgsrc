@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:03:08 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:03:07 adam Exp $
 
-BLAKE2s (pyobjc-framework-SpriteKit-9.2.tar.gz) = 343117c912fb215b458f1c9dfb1164d0a26ee64efab06aa681a4b13eba1bc7f8
-SHA512 (pyobjc-framework-SpriteKit-9.2.tar.gz) = 30747578341d6d2a3d429b66020d914ffb0821bc60adbd41e219e65b757507e3fec8e0af3ecc79ed69581b34dbbe64fe0d8ab0a3969ccb90281663005fa98b04
-Size (pyobjc-framework-SpriteKit-9.2.tar.gz) = 94639 bytes
+BLAKE2s (pyobjc-framework-SpriteKit-10.0.tar.gz) = 88cd4f96d969f7140839d56b57cfcf66ed1dfbe8278c0b7ae06443f3c9b08521
+SHA512 (pyobjc-framework-SpriteKit-10.0.tar.gz) = 420e13d1a0968c51f5ab0a97d20cfd7513a789058bccd256f5df0abe735ff500fb99572405da84210eff5388d71e2838b59bdd8da9cf2c717d63675a03c48999
+Size (pyobjc-framework-SpriteKit-10.0.tar.gz) = 127188 bytes

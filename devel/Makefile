@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4132 2023/11/17 21:24:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.4133 2023/11/19 17:02:49 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2839,7 +2839,6 @@ SUBDIR+=	py-pyobjc-framework-GameController
 SUBDIR+=	py-pyobjc-framework-GameKit
 SUBDIR+=	py-pyobjc-framework-GameplayKit
 SUBDIR+=	py-pyobjc-framework-HealthKit
-SUBDIR+=	py-pyobjc-framework-IMServicePlugIn
 SUBDIR+=	py-pyobjc-framework-IOBluetooth
 SUBDIR+=	py-pyobjc-framework-IOBluetoothUI
 SUBDIR+=	py-pyobjc-framework-IOSurface

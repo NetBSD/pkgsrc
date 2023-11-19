@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/06/18 05:03:09 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/11/19 17:03:08 adam Exp $
 
-BLAKE2s (pyobjc-framework-VideoSubscriberAccount-9.2.tar.gz) = 4cc19dad3150daf1f53b6a7d4cd6f548c13f2dd2ba5874821be4a2bee4675ac2
-SHA512 (pyobjc-framework-VideoSubscriberAccount-9.2.tar.gz) = f66ec75d35644978ffc21d1ca842ad13da30d5d3489cee416f2b4a0db1b3fbaa6f49d247789d21d6a298701cb92e2efc9699f14f6f9ef200a57bf0ad31bb17c2
-Size (pyobjc-framework-VideoSubscriberAccount-9.2.tar.gz) = 23624 bytes
+BLAKE2s (pyobjc-framework-VideoSubscriberAccount-10.0.tar.gz) = c58eaba5791133236424e917b8cbbd4dd903718b041899714c0589204316d6e4
+SHA512 (pyobjc-framework-VideoSubscriberAccount-10.0.tar.gz) = 5fd24e0011d33cc0ad16d0150b9292315287b3b1e4aa9f73347741d420e379f95940ae67b44de5805574dcb26435cdbb7d5486d95680e52c3a9232ee3a577ad5
+Size (pyobjc-framework-VideoSubscriberAccount-10.0.tar.gz) = 28264 bytes

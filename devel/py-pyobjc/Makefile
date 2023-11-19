@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/18 05:02:52 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/19 17:02:49 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -193,7 +193,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-AVFoundation>=${PYOBJC_VERS}:../../dev
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreMedia>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreMedia
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-CoreMediaIO>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-CoreMediaIO
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-DVDPlayback>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-DVDPlayback
-DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-IMServicePlugIn>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-IMServicePlugIn
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-SceneKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-SceneKit
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-StoreKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-StoreKit
 .endif
