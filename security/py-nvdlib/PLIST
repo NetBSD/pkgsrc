@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/19 01:16:31 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/nvdlib/__init__.py
+${PYSITELIB}/nvdlib/__init__.pyc
+${PYSITELIB}/nvdlib/__init__.pyo
+${PYSITELIB}/nvdlib/classes.py
+${PYSITELIB}/nvdlib/classes.pyc
+${PYSITELIB}/nvdlib/classes.pyo
+${PYSITELIB}/nvdlib/cpe.py
+${PYSITELIB}/nvdlib/cpe.pyc
+${PYSITELIB}/nvdlib/cpe.pyo
+${PYSITELIB}/nvdlib/cve.py
+${PYSITELIB}/nvdlib/cve.pyc
+${PYSITELIB}/nvdlib/cve.pyo
+${PYSITELIB}/nvdlib/get.py
+${PYSITELIB}/nvdlib/get.pyc
+${PYSITELIB}/nvdlib/get.pyo
