@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/19 01:16:31 wiz Exp $
+
+BLAKE2s (nvdlib-0.7.6.tar.gz) = c339d83c027cc423880b7e68bc0ec93ab12bd8ffbd5bf5752b1b6a219e18e535
+SHA512 (nvdlib-0.7.6.tar.gz) = c7cf283b6926bf0ec9d34f1520bc74c410e92f233070cc27796c6ca88154826c665483894114b57a1f58ffb2c479e0d2ef85aeb3c60ae5f5d29b7afc65c679d8
+Size (nvdlib-0.7.6.tar.gz) = 541676 bytes
