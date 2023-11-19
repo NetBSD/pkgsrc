@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/09/03 12:37:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/19 23:38:27 nia Exp $
 bin/exaile
 lib/exaile/exaile.py
 lib/exaile/xl/__init__.py
@@ -21,6 +21,7 @@ lib/exaile/xl/metadata/_apev2.py
 lib/exaile/xl/metadata/_base.py
 lib/exaile/xl/metadata/_id3.py
 lib/exaile/xl/metadata/_matroska.py
+lib/exaile/xl/metadata/aac.py
 lib/exaile/xl/metadata/aiff.py
 lib/exaile/xl/metadata/ape.py
 lib/exaile/xl/metadata/asf.py
@@ -44,6 +45,7 @@ lib/exaile/xl/migrations/database/from1to2.py
 lib/exaile/xl/migrations/database/to_bsddb.py
 lib/exaile/xl/migrations/settings/__init__.py
 lib/exaile/xl/migrations/settings/engine.py
+lib/exaile/xl/migrations/settings/flac_tempo.py
 lib/exaile/xl/migrations/settings/osd.py
 lib/exaile/xl/migrations/settings/rating.py
 lib/exaile/xl/nls.py
@@ -217,6 +219,7 @@ share/exaile/data/ui/splash.ui
 share/exaile/data/ui/trackproperties_dialog.ui
 share/exaile/data/ui/trackproperties_dialog_cover_row.ui
 share/exaile/data/ui/widgets/filter_dialog.ui
+share/exaile/data/ui/widgets/info_dialog.ui
 share/exaile/data/ui/widgets/progress.ui
 share/exaile/data/ui/widgets/track_info.ui
 share/exaile/data/ui/widgets/volume_control.ui
@@ -267,6 +270,10 @@ share/exaile/plugins/bpm/__init__.py
 share/exaile/plugins/bpm/__init__.pyc
 share/exaile/plugins/bpm/__init__.pyo
 share/exaile/plugins/bpm/bpm.ui
+share/exaile/plugins/bpm/bpm_prefs.py
+share/exaile/plugins/bpm/bpm_prefs.pyc
+share/exaile/plugins/bpm/bpm_prefs.pyo
+share/exaile/plugins/bpm/bpm_prefs.ui
 share/exaile/plugins/bpm/bpmdetect.py
 share/exaile/plugins/bpm/bpmdetect.pyc
 share/exaile/plugins/bpm/bpmdetect.pyo
@@ -282,6 +289,15 @@ share/exaile/plugins/cd/cdprefs.py
 share/exaile/plugins/cd/cdprefs.pyc
 share/exaile/plugins/cd/cdprefs.pyo
 share/exaile/plugins/cd/cdprefs_pane.ui
+share/exaile/plugins/cd/discid_parser.py
+share/exaile/plugins/cd/discid_parser.pyc
+share/exaile/plugins/cd/discid_parser.pyo
+share/exaile/plugins/cd/linux_cd_parser.py
+share/exaile/plugins/cd/linux_cd_parser.pyc
+share/exaile/plugins/cd/linux_cd_parser.pyo
+share/exaile/plugins/cd/musicbrainzngs_parser.py
+share/exaile/plugins/cd/musicbrainzngs_parser.pyc
+share/exaile/plugins/cd/musicbrainzngs_parser.pyo
 share/exaile/plugins/console/PLUGININFO
 share/exaile/plugins/console/__init__.py
 share/exaile/plugins/console/__init__.pyc
@@ -394,20 +410,6 @@ share/exaile/plugins/ipconsole/ipconsoleprefs.pyo
 share/exaile/plugins/ipconsole/ipython_view.py
 share/exaile/plugins/ipconsole/ipython_view.pyc
 share/exaile/plugins/ipconsole/ipython_view.pyo
-share/exaile/plugins/jamendo/PLUGININFO
-share/exaile/plugins/jamendo/__init__.py
-share/exaile/plugins/jamendo/__init__.pyc
-share/exaile/plugins/jamendo/__init__.pyo
-share/exaile/plugins/jamendo/jamapi.py
-share/exaile/plugins/jamendo/jamapi.pyc
-share/exaile/plugins/jamendo/jamapi.pyo
-share/exaile/plugins/jamendo/jamtree.py
-share/exaile/plugins/jamendo/jamtree.pyc
-share/exaile/plugins/jamendo/jamtree.pyo
-share/exaile/plugins/jamendo/menu.py
-share/exaile/plugins/jamendo/menu.pyc
-share/exaile/plugins/jamendo/menu.pyo
-share/exaile/plugins/jamendo/ui/jamendo_panel.ui
 share/exaile/plugins/karaoke/PLUGININFO
 share/exaile/plugins/karaoke/__init__.py
 share/exaile/plugins/karaoke/__init__.pyc
@@ -464,10 +466,6 @@ share/exaile/plugins/lyricsmania/PLUGININFO
 share/exaile/plugins/lyricsmania/__init__.py
 share/exaile/plugins/lyricsmania/__init__.pyc
 share/exaile/plugins/lyricsmania/__init__.pyo
-share/exaile/plugins/lyricwiki/PLUGININFO
-share/exaile/plugins/lyricwiki/__init__.py
-share/exaile/plugins/lyricwiki/__init__.pyc
-share/exaile/plugins/lyricwiki/__init__.pyo
 share/exaile/plugins/mainmenubutton/PLUGININFO
 share/exaile/plugins/mainmenubutton/__init__.py
 share/exaile/plugins/mainmenubutton/__init__.pyc
@@ -642,6 +640,13 @@ share/exaile/plugins/winmmkeys/__init__.pyc
 share/exaile/plugins/winmmkeys/__init__.pyo
 share/examples/xdg/exaile/settings.ini
 share/fish/vendor_completions.d/exaile.fish
+share/icons/hicolor/128x128/apps/exaile.png
+share/icons/hicolor/16x16/apps/exaile.png
+share/icons/hicolor/22x22/apps/exaile.png
+share/icons/hicolor/24x24/apps/exaile.png
+share/icons/hicolor/32x32/apps/exaile.png
+share/icons/hicolor/48x48/apps/exaile.png
+share/icons/hicolor/scalable/apps/exaile.svg
 share/locale/af/LC_MESSAGES/exaile.mo
 share/locale/ar/LC_MESSAGES/exaile.mo
 share/locale/ast/LC_MESSAGES/exaile.mo
@@ -716,7 +721,7 @@ share/locale/ts/LC_MESSAGES/exaile.mo
 share/locale/uk/LC_MESSAGES/exaile.mo
 share/locale/ur/LC_MESSAGES/exaile.mo
 share/locale/vi/LC_MESSAGES/exaile.mo
+share/locale/zh/LC_MESSAGES/exaile.mo
 share/locale/zh_CN/LC_MESSAGES/exaile.mo
 share/locale/zh_TW/LC_MESSAGES/exaile.mo
 share/metainfo/exaile.appdata.xml
-share/pixmaps/exaile.png
