@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2023/11/19 17:38:36 adam Exp $
+# $NetBSD: Makefile,v 1.56 2023/11/19 19:53:33 wiz Exp $
 
 DISTNAME=	urllib3-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
 
@@ -15,8 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 # "socks"; higher requirement from dev_requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
 # "brotli"
-#DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.9:../../archivers/py-brotli
-# but also needs unpackaged brotlicffi
+DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.9:../../archivers/py-brotli
+DEPENDS+=	${PYPKGPREFIX}-brotlicffi>=0:../../archivers/py-brotlicffi
 # "zstd"
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 # "secure"
@@ -42,14 +43,13 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 309
 TEST_DEPENDS+=	${PYPKGPREFIX}-backports.zoneinfo>=0.2.1:../../time/py-backports.zoneinfo
 .endif
 
-# as of 2.0.0 with the two missing dependencies above
-# 35 failed, 1477 passed, 769 skipped, 136 warnings
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
+# as of 2.1.0 with the missing dependencies above
+# 36 failed, 1501 passed, 507 skipped, 108 warnings
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
