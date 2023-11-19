@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/28 19:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/19 14:09:31 wiz Exp $
 
-DISTNAME=	cattrs-23.1.2
+DISTNAME=	cattrs-23.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
 
@@ -11,15 +10,25 @@ HOMEPAGE=	https://github.com/python-attrs/cattrs
 COMMENT=	Composable complex class support for attrs and dataclasses
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-attrs>=20:../../devel/py-attrs
-# no tests included in pypi distfile
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
+# optional dependency
+# https://github.com/py-bson/bson/issues/122
+#TEST_DEPENDS+=	${PYPKGPREFIX}-bson>=0:../../wip/py-bson
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-immutables>=0:../../misc/py-immutables
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# bson, see above
+# as of 23.2.1
+# 597 passed, 1 skipped, 15 xfailed
+pre-test:
+	${RM} -f ${WRKSRC}/tests/test_preconf.py
 
 .include "../../lang/python/pyversion.mk"
 
