@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2023/11/19 14:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/19 20:27:49 wiz Exp $
 # Changes:
 # https://github.com/microsoft/lsprotocol/releases
 
 DISTNAME=	lsprotocol-2023.0.0
 # remove on next update
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}.3
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lsprotocol/}
 
