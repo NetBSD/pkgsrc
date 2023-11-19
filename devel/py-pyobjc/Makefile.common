@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2023/06/18 05:02:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2023/11/19 17:02:49 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -65,7 +65,6 @@
 # used by devel/py-pyobjc-framework-GameKit/Makefile
 # used by devel/py-pyobjc-framework-GameplayKit/Makefile
 # used by devel/py-pyobjc-framework-HealthKit/Makefile
-# used by devel/py-pyobjc-framework-IMServicePlugIn/Makefile
 # used by devel/py-pyobjc-framework-IOBluetooth/Makefile
 # used by devel/py-pyobjc-framework-IOBluetoothUI/Makefile
 # used by devel/py-pyobjc-framework-IOSurface/Makefile
@@ -151,13 +150,18 @@
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 # used by devel/py-pyobjc-framework-libxpc/Makefile
 
-PYOBJC_VERS=	9.2
+PYOBJC_VERS=	10.0
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 ONLY_FOR_PLATFORM=	Darwin-*-* # only for macOS
+
+USE_LANGUAGES=	c objc
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

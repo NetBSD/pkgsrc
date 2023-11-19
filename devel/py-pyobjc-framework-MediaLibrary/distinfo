@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:03:02 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:03:00 adam Exp $
 
-BLAKE2s (pyobjc-framework-MediaLibrary-9.2.tar.gz) = d8962a0e120b98be23c0c9384f1dd4d31b774d08e13bb3bb35b7357a49332769
-SHA512 (pyobjc-framework-MediaLibrary-9.2.tar.gz) = b402d5094ce1655156e6139657a92b2f9b1485013f17fb0963f5c29d01aeebe53cc6644345df85b013161bd469aef6e24ea3afab6de0cb2e01427dc91882333a
-Size (pyobjc-framework-MediaLibrary-9.2.tar.gz) = 17305 bytes
+BLAKE2s (pyobjc-framework-MediaLibrary-10.0.tar.gz) = c8d3ec8126f0df85efe0c289cdc57cb78eaf1dc10472a730d78624f8a37b3480
+SHA512 (pyobjc-framework-MediaLibrary-10.0.tar.gz) = f1c6d448a1a57329f998ea619aad3fdf5a5ddb9dcd7e8022581d3a260b25a68b4806bb73b9c77c79a715ca552554bfda16a470bce317ecee6d05b2e47eeaa371
+Size (pyobjc-framework-MediaLibrary-10.0.tar.gz) = 18219 bytes

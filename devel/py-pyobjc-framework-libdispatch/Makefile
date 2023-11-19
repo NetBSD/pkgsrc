@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/09/27 18:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/19 17:03:09 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
@@ -11,9 +11,8 @@ COMMENT=	Wrappers for the framework libdispatch on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-1].*-* Darwin-[0-9].*-* # 10.8+
 
-USE_LANGUAGES=	c objc
-
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-core>=${PYOBJC_VERS}:../../devel/py-pyobjc-core
 
-.include "../../lang/python/egg.mk"
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:03:01 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:02:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-LocalAuthentication-9.2.tar.gz) = b7b8827ab43a6d0887457b66d60770d225255957b6e2cd9a7654f189a729e0fa
-SHA512 (pyobjc-framework-LocalAuthentication-9.2.tar.gz) = 84318f4a10bd5dfe089c90306013fe9cae6620db50e3c9fee1674a388eb3e9f55ea2d9f98d5cf914d3cf7d1dc8aba4c48a3d71736a983954a904037459e361b9
-Size (pyobjc-framework-LocalAuthentication-9.2.tar.gz) = 21710 bytes
+BLAKE2s (pyobjc-framework-LocalAuthentication-10.0.tar.gz) = 59d901192086bde47dfd30c2d5ef85b2b109fa9129882fbc45c573b4e29e89ed
+SHA512 (pyobjc-framework-LocalAuthentication-10.0.tar.gz) = 1488d74c1dc9e2909f6ace99fb59bcabb08985191aa298edf3d2a822917ebdb48d332c5b2498958fa86fed6aa7e5e00e4171152f282611c145f88f8f78948f71
+Size (pyobjc-framework-LocalAuthentication-10.0.tar.gz) = 26496 bytes
