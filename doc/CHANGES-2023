@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7098 2023/11/19 13:35:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7099 2023/11/19 13:39:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10193,3 +10193,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added editors/qemacs version 6.1.1b [bacon 2023-11-19]
 	Updated devel/gopls to 0.14.2 [wiz 2023-11-19]
 	Updated net/libcares to 1.22.0 [wiz 2023-11-19]
+	Updated print/mupdf to 1.23.6 [wiz 2023-11-19]
