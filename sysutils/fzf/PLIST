@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/15 15:05:55 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/19 00:38:13 iquiw Exp $
 bin/fzf
+bin/fzf-preview.sh
 bin/fzf-tmux
 man/man1/fzf-tmux.1
 man/man1/fzf.1
