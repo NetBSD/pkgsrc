@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.54 2023/11/02 12:46:44 wiz Exp $
+$NetBSD: distinfo,v 1.55 2023/11/19 11:08:00 adam Exp $
 
-BLAKE2s (grpcio-1.59.2.tar.gz) = 454f0a82bf648c6acd6124704759d244418e64860daba223d6dd756112d608b6
-SHA512 (grpcio-1.59.2.tar.gz) = 3092cdecac3b5b0569a621654560ee95ae1be10ff43371d8c3f6fa0f0abce022fe76b1dd6a77f3a9aa4d1b03bbbd65fbc07dcd593950befcfc24f7f905dc041a
-Size (grpcio-1.59.2.tar.gz) = 24849789 bytes
+BLAKE2s (grpcio-1.59.3.tar.gz) = 290d550b4331e177f4fc79c90c7a196fd408da43823ae569135989b92f4871c3
+SHA512 (grpcio-1.59.3.tar.gz) = ddf03f0c37d4856cdde2c773300815d5c4f223e159bdae0d6c1d8151a901175bdaa251e8d143220921457ac46099d3e066c22916aa7b85a5fa15499b10d3c43c
+Size (grpcio-1.59.3.tar.gz) = 24866732 bytes
 SHA1 (patch-setup.py) = c069957e57dc1bf0f3d09caa518f3b19e6057146
 SHA1 (patch-src_core_lib_iomgr_port.h) = 8f088cbf22110c03a684c24c9e17ef5fc64e925a
