@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/11/16 06:15:46 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/11/19 13:21:41 bacon Exp $
 #
 # When updating this, please also update devel/py-protobuf
 #
@@ -20,6 +20,9 @@ LICENSE=	modified-bsd
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++14
 
 CMAKE_ARGS+=		-Dprotobuf_ABSL_PROVIDER=package
 CMAKE_ARGS+=		-Dprotobuf_BUILD_SHARED_LIBS=ON
