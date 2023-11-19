@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/10/10 15:58:55 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/19 14:17:02 wiz Exp $
 
-DISTNAME=	fastjsonschema-2.18.1
+DISTNAME=	fastjsonschema-2.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastjsonschema/}
@@ -10,15 +10,13 @@ HOMEPAGE=	https://github.com/horejsek/python-fastjsonschema
 COMMENT=	Fastest Python implementation of JSON schema
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
