@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2023/11/10 15:45:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.77 2023/11/19 00:38:13 iquiw Exp $
 
-DISTNAME=	fzf-0.43.0
-PKGREVISION=	3
+DISTNAME=	fzf-0.44.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 
@@ -17,6 +16,7 @@ GO_BUILD_PATTERN=	.
 .include "go-modules.mk"
 
 REPLACE_BASH+=	bin/fzf-tmux
+REPLACE_BASH+=	bin/fzf-preview.sh
 
 FZF_SHELL_FILES+=	completion.bash completion.zsh
 FZF_SHELL_FILES+=	key-bindings.bash key-bindings.fish key-bindings.zsh
@@ -25,6 +25,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/fzf/plugin share/fzf/shell
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/fzf-tmux ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/fzf-preview.sh ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf-tmux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/plugin/fzf.vim ${DESTDIR}${PREFIX}/share/fzf/plugin
