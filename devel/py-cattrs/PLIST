@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/19 14:09:31 wiz Exp $
 ${PYSITELIB}/cattr/__init__.py
 ${PYSITELIB}/cattr/__init__.pyc
 ${PYSITELIB}/cattr/__init__.pyo
@@ -42,10 +42,10 @@ ${PYSITELIB}/cattr/preconf/ujson.py
 ${PYSITELIB}/cattr/preconf/ujson.pyc
 ${PYSITELIB}/cattr/preconf/ujson.pyo
 ${PYSITELIB}/cattr/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cattrs/__init__.py
 ${PYSITELIB}/cattrs/__init__.pyc
 ${PYSITELIB}/cattrs/__init__.pyo
@@ -67,6 +67,9 @@ ${PYSITELIB}/cattrs/dispatch.pyo
 ${PYSITELIB}/cattrs/errors.py
 ${PYSITELIB}/cattrs/errors.pyc
 ${PYSITELIB}/cattrs/errors.pyo
+${PYSITELIB}/cattrs/fns.py
+${PYSITELIB}/cattrs/fns.pyc
+${PYSITELIB}/cattrs/fns.pyo
 ${PYSITELIB}/cattrs/gen/__init__.py
 ${PYSITELIB}/cattrs/gen/__init__.pyc
 ${PYSITELIB}/cattrs/gen/__init__.pyo
@@ -116,6 +119,9 @@ ${PYSITELIB}/cattrs/py.typed
 ${PYSITELIB}/cattrs/strategies/__init__.py
 ${PYSITELIB}/cattrs/strategies/__init__.pyc
 ${PYSITELIB}/cattrs/strategies/__init__.pyo
+${PYSITELIB}/cattrs/strategies/_class_methods.py
+${PYSITELIB}/cattrs/strategies/_class_methods.pyc
+${PYSITELIB}/cattrs/strategies/_class_methods.pyo
 ${PYSITELIB}/cattrs/strategies/_subclasses.py
 ${PYSITELIB}/cattrs/strategies/_subclasses.pyc
 ${PYSITELIB}/cattrs/strategies/_subclasses.pyo
