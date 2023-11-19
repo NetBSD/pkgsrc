@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7115 2023/11/19 17:16:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7116 2023/11/19 17:38:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10212,3 +10212,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-scipy to 1.11.4 [adam 2023-11-19]
 	Updated devel/cmake to 3.27.8 [adam 2023-11-19]
 	Updated devel/cmake-gui to 3.27.8 [adam 2023-11-19]
+	Updated net/py-tldextract to 5.1.1 [adam 2023-11-19]
+	Updated www/py-urllib3 to 2.1.0 [adam 2023-11-19]
