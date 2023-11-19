@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7112 2023/11/19 16:18:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7113 2023/11/19 16:26:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10207,3 +10207,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typeguard to 4.1.5nb2 [wiz 2023-11-19]
 	Updated lang/py-pygls to 1.2.0 [wiz 2023-11-19]
 	Updated textproc/py-pygments to 2.17.1 [wiz 2023-11-19]
+	Updated devel/py-ruff to 0.1.6 [wiz 2023-11-19]
