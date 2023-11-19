@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7091 2023/11/19 01:16:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7092 2023/11/19 01:20:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10183,3 +10183,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/ruby-mini_portile2 to 2.8.5 [tsutsui 2023-11-18]
 	Updated sysutils/fzf to 0.44.1 [iquiw 2023-11-19]
 	Added security/py-nvdlib version 0.7.6 [wiz 2023-11-19]
+	Added databases/py-tinydb version 4.8.0 [wiz 2023-11-19]
