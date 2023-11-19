@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2023/10/28 19:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/11/19 17:06:18 adam Exp $
 
-DISTNAME=	scipy-1.11.3
+DISTNAME=	scipy-1.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
