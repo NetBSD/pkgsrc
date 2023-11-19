@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7097 2023/11/19 13:34:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7098 2023/11/19 13:35:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10192,3 +10192,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-grpcio-tools to 1.59.3 [adam 2023-11-19]
 	Added editors/qemacs version 6.1.1b [bacon 2023-11-19]
 	Updated devel/gopls to 0.14.2 [wiz 2023-11-19]
+	Updated net/libcares to 1.22.0 [wiz 2023-11-19]
