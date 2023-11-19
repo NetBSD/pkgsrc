@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/10/28 19:57:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/11/19 14:20:08 wiz Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -21,6 +21,7 @@ ${PYSITELIB}/keyring/_properties_compat.pyo
 ${PYSITELIB}/keyring/backend.py
 ${PYSITELIB}/keyring/backend.pyc
 ${PYSITELIB}/keyring/backend.pyo
+${PYSITELIB}/keyring/backend_complete.bash
 ${PYSITELIB}/keyring/backend_complete.zsh
 ${PYSITELIB}/keyring/backends/SecretService.py
 ${PYSITELIB}/keyring/backends/SecretService.pyc
