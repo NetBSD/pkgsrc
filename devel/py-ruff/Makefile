@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2023/11/13 11:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/19 16:26:35 wiz Exp $
 
-DISTNAME=	ruff-0.1.5
+DISTNAME=	ruff-0.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/charliermarsh/ruff
+HOMEPAGE=	https://github.com/astral-sh/ruff
 COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
