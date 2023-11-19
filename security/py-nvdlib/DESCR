@@ -1,0 +1,18 @@
+NVDlib is a Python library that allows you to interface with the
+NIST National Vulnerability Database (NVD), pull vulnerabilities
+(CVEs), and Common Platform Enumeration (CPEs) into easily accessible
+objects.
+
+### Features
+
+- Search the NVD for CVEs using all parameters allowed by the NVD
+  API (recently updated to utilize version 2 of the API). Including
+  search criteria such as CVE publish and modification date, keywords,
+  severity, score, or CPE name.
+- Search CPE names by keywords, CPE match strings, or modification
+  dates. Then pull the CVE ID's that are relevant to those CPEs.
+- Retrieve details on individual CVEs, their relevant CPE names,
+  and more.
+- Built in rate limiting according to NIST NVD recommendations.
+  Get an API key to allow for a delay argument to be passed. Otherwise
+  it is 6 seconds between requests by default.
