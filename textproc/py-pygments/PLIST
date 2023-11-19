@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.26 2023/10/28 19:57:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2023/11/19 16:17:50 wiz Exp $
 bin/pygmentize-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pygments/__init__.py
 ${PYSITELIB}/pygments/__init__.pyc
 ${PYSITELIB}/pygments/__init__.pyo
@@ -439,6 +438,9 @@ ${PYSITELIB}/pygments/lexers/jslt.pyo
 ${PYSITELIB}/pygments/lexers/jsonnet.py
 ${PYSITELIB}/pygments/lexers/jsonnet.pyc
 ${PYSITELIB}/pygments/lexers/jsonnet.pyo
+${PYSITELIB}/pygments/lexers/jsx.py
+${PYSITELIB}/pygments/lexers/jsx.pyc
+${PYSITELIB}/pygments/lexers/jsx.pyo
 ${PYSITELIB}/pygments/lexers/julia.py
 ${PYSITELIB}/pygments/lexers/julia.pyc
 ${PYSITELIB}/pygments/lexers/julia.pyo
@@ -448,6 +450,15 @@ ${PYSITELIB}/pygments/lexers/jvm.pyo
 ${PYSITELIB}/pygments/lexers/kuin.py
 ${PYSITELIB}/pygments/lexers/kuin.pyc
 ${PYSITELIB}/pygments/lexers/kuin.pyo
+${PYSITELIB}/pygments/lexers/kusto.py
+${PYSITELIB}/pygments/lexers/kusto.pyc
+${PYSITELIB}/pygments/lexers/kusto.pyo
+${PYSITELIB}/pygments/lexers/ldap.py
+${PYSITELIB}/pygments/lexers/ldap.pyc
+${PYSITELIB}/pygments/lexers/ldap.pyo
+${PYSITELIB}/pygments/lexers/lean.py
+${PYSITELIB}/pygments/lexers/lean.pyc
+${PYSITELIB}/pygments/lexers/lean.pyo
 ${PYSITELIB}/pygments/lexers/lilypond.py
 ${PYSITELIB}/pygments/lexers/lilypond.pyc
 ${PYSITELIB}/pygments/lexers/lilypond.pyo
@@ -565,6 +576,9 @@ ${PYSITELIB}/pygments/lexers/prolog.pyo
 ${PYSITELIB}/pygments/lexers/promql.py
 ${PYSITELIB}/pygments/lexers/promql.pyc
 ${PYSITELIB}/pygments/lexers/promql.pyo
+${PYSITELIB}/pygments/lexers/prql.py
+${PYSITELIB}/pygments/lexers/prql.pyc
+${PYSITELIB}/pygments/lexers/prql.pyo
 ${PYSITELIB}/pygments/lexers/ptx.py
 ${PYSITELIB}/pygments/lexers/ptx.pyc
 ${PYSITELIB}/pygments/lexers/ptx.pyo
@@ -742,6 +756,12 @@ ${PYSITELIB}/pygments/lexers/verification.pyo
 ${PYSITELIB}/pygments/lexers/verifpal.py
 ${PYSITELIB}/pygments/lexers/verifpal.pyc
 ${PYSITELIB}/pygments/lexers/verifpal.pyo
+${PYSITELIB}/pygments/lexers/vip.py
+${PYSITELIB}/pygments/lexers/vip.pyc
+${PYSITELIB}/pygments/lexers/vip.pyo
+${PYSITELIB}/pygments/lexers/vyper.py
+${PYSITELIB}/pygments/lexers/vyper.pyc
+${PYSITELIB}/pygments/lexers/vyper.pyo
 ${PYSITELIB}/pygments/lexers/web.py
 ${PYSITELIB}/pygments/lexers/web.pyc
 ${PYSITELIB}/pygments/lexers/web.pyo
@@ -802,6 +822,9 @@ ${PYSITELIB}/pygments/style.pyo
 ${PYSITELIB}/pygments/styles/__init__.py
 ${PYSITELIB}/pygments/styles/__init__.pyc
 ${PYSITELIB}/pygments/styles/__init__.pyo
+${PYSITELIB}/pygments/styles/_mapping.py
+${PYSITELIB}/pygments/styles/_mapping.pyc
+${PYSITELIB}/pygments/styles/_mapping.pyo
 ${PYSITELIB}/pygments/styles/abap.py
 ${PYSITELIB}/pygments/styles/abap.pyc
 ${PYSITELIB}/pygments/styles/abap.pyo
