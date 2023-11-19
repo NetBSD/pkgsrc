@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.84 2023/11/14 14:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2023/11/19 23:38:27 nia Exp $
 
-DISTNAME=	exaile-4.1.2
-PKGREVISION=	6
+DISTNAME=	exaile-4.1.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
 GITHUB_PROJECT=	exaile
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.exaile.org/
 COMMENT=	Music Player for GTK+
 LICENSE=	gnu-gpl-v2 # or later
@@ -62,6 +61,8 @@ SUBST_FILES.py+=	exaile
 SUBST_VARS.py+=		PYTHONBIN
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

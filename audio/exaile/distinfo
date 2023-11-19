@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2022/09/03 12:37:54 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/11/19 23:38:27 nia Exp $
 
-BLAKE2s (exaile-4.1.2.tar.gz) = f3cf06d3b91ca02c0e5c5d85bf0d064f10e69aa7fde6b60462f7ac77bf8ba726
-SHA512 (exaile-4.1.2.tar.gz) = 926f6a975020f566e05174acc9e87c5f8211ee6e5b14d985a0e295d1947b5a0dc4ab140e9a8b7bc153b4acf4a6dece6e88c147b82b2b21cced3866c1b7657ea9
-Size (exaile-4.1.2.tar.gz) = 3770994 bytes
+BLAKE2s (exaile-4.1.3.tar.gz) = e8e61f030f1c5fdf66fc84313ebd8eff5d078f4843a8e26de903ecb4efcf5a34
+SHA512 (exaile-4.1.3.tar.gz) = f01dba6e66cfa71ba79746af9dea9294c85994ff38f4be56a9d074f62f1a656d71aebc344a4a00ecb926c94ca0aeabdde44a142a210842b86dd15f7f0d3ca823
+Size (exaile-4.1.3.tar.gz) = 3919798 bytes
 SHA1 (patch-exaile) = 738848e3f57ff4cf202478be6d1fe30bc3a93533
