@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/19 13:00:26 bacon Exp $
+${PLIST.html}bin/html2png
+bin/qe
+bin/qemacs
+man/man1/qe.1
+share/qe/kmaps
+share/qe/ligatures

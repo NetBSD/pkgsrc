@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2023/11/19 13:00:26 bacon Exp $
+
+Added NetBSD support. The main reason for this is that it prevents
+DLLIBS from getting set to "-ldl" in the Makefile.
+
+--- configure.orig	2023-03-09 11:57:59.000000000 +0000
++++ configure
+@@ -115,6 +115,14 @@ case $targetos in
+     ptsname="no"
+     dllibs=
+     ;;
++  NetBSD)
++    extralibs="-lm"
++    make="gmake"
++    doc="no"
++    plugins="no"
++    ptsname="no"
++    dllibs=
++    ;;
+   FreeBSD)
+     extralibs="-lm"
+     make="gmake"

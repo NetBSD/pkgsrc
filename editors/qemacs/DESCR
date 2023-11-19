@@ -1,0 +1,12 @@
+qemacs - small but powerful UNIX editor with many features
+that even big editors lack.
+
+QEmacs is a text editor targeted at embedded systems or debugging.
+Although it is very small, it has some very interesting features
+that even big editors lack such as an Emacs look and feel with all
+common Emacs features, can edit huge files, has full Unicode support,
+has various syntax modes for common programming langauges, a shell
+mode with full color VT100 terminal emulation, input methods for
+most languages (including Chinese), binary and hexadecimal in place
+editing mode, no termcap requirement, X11 support, and PNG/bitmap
+support.

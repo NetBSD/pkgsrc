@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/11/19 13:00:26 bacon Exp $
+
+BLAKE2s (qemacs-6.1.1b-06b3d373bbcc52b51ccb438bf3cab38a49492ff0.tar.gz) = e2f93e3d2baf0e0e65a7e4a4c884b79cdad069f75bfd84f4d700bba8f6073b47
+SHA512 (qemacs-6.1.1b-06b3d373bbcc52b51ccb438bf3cab38a49492ff0.tar.gz) = a16ce78c703ceb734310225c16c36a3041bf5e7b14eaf7ba3322deacd04e9f099b75fd07471b8f3d75b043689655600cfa8a651d7edf6318fe750fddb6479218
+Size (qemacs-6.1.1b-06b3d373bbcc52b51ccb438bf3cab38a49492ff0.tar.gz) = 2106879 bytes
+SHA1 (patch-configure) = 3293b811e138b468fec6621d27745dd5897c0455
+SHA1 (patch-cutils.h) = 9bc6e83e388a23df420232ebad3c8e55a17adc1d
+SHA1 (patch-tty.c) = 8117e459a07b6a2e72c0446dcea7950252c8de4d
