@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23693 2023/11/19 19:54:43 wiz Exp $
+$NetBSD: TODO,v 1.23694 2023/11/19 21:53:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1236,7 +1236,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
-	o rspamd-3.7.4
+	o rspamd-3.7.4 [https://github.com/rspamd/rspamd/issues/4702, https://github.com/rspamd/rspamd/issues/4703]
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
