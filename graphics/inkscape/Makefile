@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.278 2023/11/15 09:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2023/11/19 19:54:30 wiz Exp $
 
-DISTNAME=	inkscape-1.3
-PKGREVISION=	6
+DISTNAME=	inkscape-1.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -15,12 +14,13 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 DEPENDS+=		adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
+TOOL_DEPENDS+=		${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 # for inkex.py, needed by most python extension scripts
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 
-WRKSRC=		${WRKDIR}/inkscape-1.3_2023-07-21_0e150ed6c4
+WRKSRC=		${WRKDIR}/inkscape-1.3.1_2023-11-16_91b66b0783
 
 CPPFLAGS.NetBSD+=	-Urounddown
 CPPFLAGS.NetBSD+=	-Uroundup
@@ -45,8 +45,6 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
-REPLACE_PERL+=		share/extensions/*.p[lm]
-REPLACE_PERL+=		share/templates/create_defaults.pl
 
 UNLIMIT_RESOURCES=	datasize
 
@@ -128,10 +126,10 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.2
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
-.include "../../textproc/aspell/buildlink3.mk"
-.include "../../textproc/gtkspell3/buildlink3.mk"
+.include "../../textproc/gspell/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24
 .include "../../x11/gtkmm3/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.gtk3:Mquartz}
 .include "../../x11/gtk-mac-integration/buildlink3.mk"
 .endif
