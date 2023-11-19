@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/11/19 17:38:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -27,21 +27,9 @@ ${PYSITELIB}/urllib3/connectionpool.pyo
 ${PYSITELIB}/urllib3/contrib/__init__.py
 ${PYSITELIB}/urllib3/contrib/__init__.pyc
 ${PYSITELIB}/urllib3/contrib/__init__.pyo
-${PYSITELIB}/urllib3/contrib/_securetransport/__init__.py
-${PYSITELIB}/urllib3/contrib/_securetransport/__init__.pyc
-${PYSITELIB}/urllib3/contrib/_securetransport/__init__.pyo
-${PYSITELIB}/urllib3/contrib/_securetransport/bindings.py
-${PYSITELIB}/urllib3/contrib/_securetransport/bindings.pyc
-${PYSITELIB}/urllib3/contrib/_securetransport/bindings.pyo
-${PYSITELIB}/urllib3/contrib/_securetransport/low_level.py
-${PYSITELIB}/urllib3/contrib/_securetransport/low_level.pyc
-${PYSITELIB}/urllib3/contrib/_securetransport/low_level.pyo
 ${PYSITELIB}/urllib3/contrib/pyopenssl.py
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyc
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyo
-${PYSITELIB}/urllib3/contrib/securetransport.py
-${PYSITELIB}/urllib3/contrib/securetransport.pyc
-${PYSITELIB}/urllib3/contrib/securetransport.pyo
 ${PYSITELIB}/urllib3/contrib/socks.py
 ${PYSITELIB}/urllib3/contrib/socks.pyc
 ${PYSITELIB}/urllib3/contrib/socks.pyo
