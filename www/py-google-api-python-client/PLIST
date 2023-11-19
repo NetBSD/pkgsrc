@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.17 2023/11/10 12:14:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/11/19 14:18:18 wiz Exp $
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -324,6 +324,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/licensing.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/lifesciences.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/localservices.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/logging.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/looker.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1beta1.json
