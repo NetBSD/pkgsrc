@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7093 2023/11/19 10:27:02 fox Exp $
+$NetBSD: CHANGES-2023,v 1.7094 2023/11/19 10:37:19 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10185,3 +10185,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/py-nvdlib version 0.7.6 [wiz 2023-11-19]
 	Added databases/py-tinydb version 4.8.0 [wiz 2023-11-19]
 	Updated security/wolfssl to 5.6.4 [fox 2023-11-19]
+	Updated audio/fasttracker2 to 1.73 [fox 2023-11-19]
