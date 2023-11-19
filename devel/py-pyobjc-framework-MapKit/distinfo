@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:03:02 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:03:00 adam Exp $
 
-BLAKE2s (pyobjc-framework-MapKit-9.2.tar.gz) = 1982ab8e173c4f8a9652c8102b58dfaa38a5d0e90f8f92baa133ecb6837ad5c0
-SHA512 (pyobjc-framework-MapKit-9.2.tar.gz) = 303438831a7ba4412bcb6b4943e90bd5db7115c621cb23713968b4f672bbff6bdb3c58170847b8fb9ab1af36129653d24198e1f4dd03af7c36e03132660bb9fe
-Size (pyobjc-framework-MapKit-9.2.tar.gz) = 131905 bytes
+BLAKE2s (pyobjc-framework-MapKit-10.0.tar.gz) = bf4d5518af631927ce699823c49570ce410249f3e16cd17653f2e7e29497b05e
+SHA512 (pyobjc-framework-MapKit-10.0.tar.gz) = c0a742cfe3ecc2e0f0938886cb61b8eaf1bd797c384ed95247558da4c32184fcbf2d995508d6210de8f41a186a3a74a73284c2e231aa1e60caee210893c0c91e
+Size (pyobjc-framework-MapKit-10.0.tar.gz) = 155253 bytes

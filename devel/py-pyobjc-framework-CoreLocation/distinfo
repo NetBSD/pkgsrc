@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/06/18 05:02:56 adam Exp $
+$NetBSD: distinfo,v 1.17 2023/11/19 17:02:53 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreLocation-9.2.tar.gz) = 55fced2585c7e760455f52d2064467f92c2ebe78dc7112f97ef59bfeee559732
-SHA512 (pyobjc-framework-CoreLocation-9.2.tar.gz) = 6e7ca00b91222974b7d82e023e21a0437f36333ad379e80614f2165e0a189d964f47cb0291345af416e96db1c0b26248b0ddc90e55651e7de59882ab5cb33124
-Size (pyobjc-framework-CoreLocation-9.2.tar.gz) = 88391 bytes
+BLAKE2s (pyobjc-framework-CoreLocation-10.0.tar.gz) = 35d420f87292bf897aae9585c5d6eebd6004135b809bad4a90367f17fb95909c
+SHA512 (pyobjc-framework-CoreLocation-10.0.tar.gz) = 328a95eccfa575ede0b3e416829f0b28f4ec0830d40e70adf64f22e28b04598f7ffd3a2873ad411a9b6068415e3d212932b2093ff9d2cf56bfa181a8cd1b15d4
+Size (pyobjc-framework-CoreLocation-10.0.tar.gz) = 97556 bytes

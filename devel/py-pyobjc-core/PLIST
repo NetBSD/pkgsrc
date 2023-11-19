@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/06/18 05:02:52 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/include/pyobjc-api.h
-${PYSITELIB}/${EGG_INFODIR}/include/pyobjc-compat.h
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:02:49 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/include/pyobjc-api.h
+${PYSITELIB}/${WHEEL_INFODIR}/include/pyobjc-compat.h
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.py
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.pyc
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.pyo

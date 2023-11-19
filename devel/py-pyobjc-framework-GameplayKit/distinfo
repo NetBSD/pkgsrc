@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:02:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:02:57 adam Exp $
 
-BLAKE2s (pyobjc-framework-GameplayKit-9.2.tar.gz) = 4f36e67c8385d9cf92dfdb731e1a0822447608972a3bc9531a40bb778dac2155
-SHA512 (pyobjc-framework-GameplayKit-9.2.tar.gz) = ac48dcbe87f24f69e8a245d1359a05a0859063398fe02eea0cdc9a4a1f123a12d943fec3e9947a070646638fd7dab8223410ab5c48fd2df53dd98fbca469a66f
-Size (pyobjc-framework-GameplayKit-9.2.tar.gz) = 39869 bytes
+BLAKE2s (pyobjc-framework-GameplayKit-10.0.tar.gz) = fd0a7e62cd90b4256591eafc9aabfee953e4a4509d04ccdd109f6c622cebe6fc
+SHA512 (pyobjc-framework-GameplayKit-10.0.tar.gz) = 57f855825273c915b17a0efcb49c6dcf5b2943e03608e4ccf5264ccf1a864dc74fa6b00432f2feeea21b3b6fb5fcb7633405008b9fbb6812c5f8a7e2dd9e5730
+Size (pyobjc-framework-GameplayKit-10.0.tar.gz) = 55200 bytes
