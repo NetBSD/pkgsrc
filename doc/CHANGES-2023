@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7107 2023/11/19 14:21:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7108 2023/11/19 15:56:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10202,3 +10202,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-google-api-python-client to 2.108.0 [wiz 2023-11-19]
 	Updated security/py-keyring to 24.3.0 [wiz 2023-11-19]
 	Updated lang/py-lsprotocol to 2023.0.0.1 [wiz 2023-11-19]
+	Updated graphics/py-matplotlib to 3.8.2 [wiz 2023-11-19]
