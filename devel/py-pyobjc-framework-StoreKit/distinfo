@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/06/18 05:03:08 adam Exp $
+$NetBSD: distinfo,v 1.17 2023/11/19 17:03:07 adam Exp $
 
-BLAKE2s (pyobjc-framework-StoreKit-9.2.tar.gz) = 2f11362f81f592f08773a14e90a45b5ff29864d3fdddd8a53dde4e40f5612166
-SHA512 (pyobjc-framework-StoreKit-9.2.tar.gz) = b64405306d418ef2876a751a6cd7e09fa539c47411eb895d017f4689cc56decc6b83fcfbc3225c7a109907f442db6c75b350da2dd3c46584ca33422963b498c8
-Size (pyobjc-framework-StoreKit-9.2.tar.gz) = 73468 bytes
+BLAKE2s (pyobjc-framework-StoreKit-10.0.tar.gz) = 3b3c91c0efd90c3b040499cc7ee338ff790d1b63c27cc6dd8b23debb09a8e0ab
+SHA512 (pyobjc-framework-StoreKit-10.0.tar.gz) = 302d12f2a6f0a01c46dcd9c2d2262decf5a8d73bbe711a42df8814c1a9d0210f9f6a280c11692b3ada94f8fbec559ec78a0d9010a31dca4ade599877c8db47a9
+Size (pyobjc-framework-StoreKit-10.0.tar.gz) = 83849 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/18 05:02:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/11/19 17:02:57 adam Exp $
 
-BLAKE2s (pyobjc-framework-FinderSync-9.2.tar.gz) = dc237ef27e596dfdd8fb39e3c1d54f190a0869420f948beb913cb6b76a699224
-SHA512 (pyobjc-framework-FinderSync-9.2.tar.gz) = a601b473e6bf72c83411cd0a4dbb0332a382402e23e644d0cf72d2ea3fab64599cfc0d4e1014f3fdde8a07ecf989eb6f396e6741993ac1d69dbaf904e198db2a
-Size (pyobjc-framework-FinderSync-9.2.tar.gz) = 13935 bytes
+BLAKE2s (pyobjc-framework-FinderSync-10.0.tar.gz) = 628c1d39a6f1a687cf3acd4c3ea3e78b6fcfc2eb83bf8fd9f47513b9401a200c
+SHA512 (pyobjc-framework-FinderSync-10.0.tar.gz) = 7d20a702fadb161194da58ec6c0204948a0799dda59984d17eb3c0aba1d10d1db50d5b19e13f1dac2ae0557887f7604667bdd7895bde4be0c492b17f623a0a53
+Size (pyobjc-framework-FinderSync-10.0.tar.gz) = 14533 bytes
