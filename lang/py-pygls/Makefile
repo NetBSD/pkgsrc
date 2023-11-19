@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/02 08:33:13 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/19 16:14:07 wiz Exp $
 
-DISTNAME=	pygls-1.1.2
+DISTNAME=	pygls-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-lsprotocol>=2023.0.0b1:../../lang/py-lsprotocol
-DEPENDS+=	${PYPKGPREFIX}-typeguard>=3.0.0:../../devel/py-typeguard
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
 
