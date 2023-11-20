@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.69 2023/11/17 09:49:25 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.70 2023/11/20 20:26:34 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25754,7 +25754,10 @@ py{27,38,39,310,311,312}-pip<23.3	command-injection	https://nvd.nist.gov/vuln/de
 php{56,73,74,80,81,82}-roundcube<1.6.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-5631
 exiv2>=0.28<0.28.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-44398
 ltm<1.2.1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36328
-gimp<2.10.36	unknown-impact	https://www.gimp.org/news/2023/11/07/gimp-2-10-36-released/#security-and-bug-fixes
+gimp<2.10.36	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-44441
+qimp<2.10.36	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-44442
+gimp<2.10.36	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-44443
+gimp<2.10.36	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-44444
 tor<0.4.8.8	unknown-impact	https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE
 tor<0.4.8.9	unknown-impact	https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/TROVE
 yt-dlp<2023.11.14	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-46121
@@ -25776,3 +25779,4 @@ gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-202
 gst-plugins1-bad<1.22.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-44446
 vim<9.0.2106	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-48231
 vim<9.0.2112	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-48237
+gnutls<3.8.2	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-5981
