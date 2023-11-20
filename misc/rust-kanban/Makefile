@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/24 22:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/20 11:26:14 pin Exp $
 
-DISTNAME=	rust-kanban-0.8.1
-PKGREVISION=	1
+DISTNAME=	rust-kanban-0.8.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yashs662/}
 GITHUB_PROJECT=	rust_kanban
