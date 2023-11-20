@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/09 17:30:44 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/20 08:13:47 adam Exp $
 
-DISTNAME=	jupyterlab-4.0.8
+DISTNAME=	jupyterlab-4.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab/}
