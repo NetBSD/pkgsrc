@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2022/05/03 17:09:19 nia Exp $
+# $NetBSD: options.mk,v 1.6 2023/11/20 10:19:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snes9x-gtk
-PKG_SUPPORTED_OPTIONS=		alsa opengl pulseaudio portaudio wayland
+PKG_SUPPORTED_OPTIONS=		alsa pulseaudio portaudio wayland
 
-PKG_SUGGESTED_OPTIONS+=		opengl
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/oss.buildlink3.mk"
@@ -23,33 +22,23 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-MESON_ARGS+=	-Dalsa=false
-.endif
-
-.if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/MesaLib/buildlink3.mk"
-MESON_ARGS+=	-Dopengl=true
-.else
-MESON_ARGS+=	-Dopengl=false
+CMAKE_ARGS+=	-DUSE_ALSA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
-MESON_ARGS+=	-Dpulseaudio=true
 .else
-MESON_ARGS+=	-Dpulseaudio=false
+CMAKE_ARGS+=	-DUSE_PULSEAUDIO=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 .include "../../audio/portaudio/buildlink3.mk"
-MESON_ARGS+=	-Dportaudio=true
 .else
-MESON_ARGS+=	-Dportaudio=false
+CMAKE_ARGS+=	-DUSE_PORTAUDIO=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
 .include "../../devel/wayland/buildlink3.mk"
-MESON_ARGS+=	-Dwayland=true
 .else
-MESON_ARGS+=	-Dwayland=false
+CMAKE_ARGS+=	-DUSE_WAYLAND=ON
 .endif
