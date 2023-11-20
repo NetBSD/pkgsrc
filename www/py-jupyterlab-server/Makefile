@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/28 19:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/20 06:29:56 adam Exp $
 
-DISTNAME=	jupyterlab_server-2.25.0
+DISTNAME=	jupyterlab_server-2.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab_server/}
 
@@ -20,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.21:../../www/py-jupyter_server
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.31:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-[0-9]*:../../devel/py-ruamel-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-console-scripts
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-jupyter>=0.6.2:../../www/py-test-jupyter
@@ -35,9 +34,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.3:../../devel/py-importlib-metadata
 .endif
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
