@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/20 15:52:18 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/20 16:42:43 gdt Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,8 +15,6 @@ USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# upstream does not yet support modern cython
-#   \todo file bug upstream about lack of cython3 support
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
