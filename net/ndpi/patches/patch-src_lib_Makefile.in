@@ -1,11 +1,11 @@
-$NetBSD: patch-src_lib_Makefile.in,v 1.6 2023/06/29 18:03:17 adam Exp $
+$NetBSD: patch-src_lib_Makefile.in,v 1.7 2023/11/20 17:57:31 adam Exp $
 
 Fix building on Darwin.
 
---- src/lib/Makefile.in.orig	2023-02-01 17:29:59.000000000 +0000
+--- src/lib/Makefile.in.orig	2023-10-23 09:45:30.000000000 +0000
 +++ src/lib/Makefile.in
 @@ -25,8 +25,15 @@ OBJECTS   = $(patsubst protocols/%.c, pr
- HEADERS   = $(wildcard ../include/*.h)
+ HEADERS   = $(wildcard ../include/*.h) $(wildcard ../include/*.h)
  NDPI_VERSION_MAJOR   = @NDPI_MAJOR@
  NDPI_LIB_STATIC      = libndpi.a
 +ifeq ($(OS),Darwin)
@@ -24,7 +24,7 @@ Fix building on Darwin.
  BUILD_MINGW    		 = @BUILD_MINGW@
  
  ifeq ($(OS),Darwin)
--CC=clang
+-CC=clang -fno-color-diagnostics
 -SONAME_FLAG=
 +SONAME_FLAG=-install_name $(PREFIX)$(libdir)/${NDPI_LIB_SHARED}
  else
