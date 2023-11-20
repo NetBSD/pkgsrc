@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7137 2023/11/20 14:43:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7138 2023/11/20 17:55:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10244,3 +10244,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/tailspin to 2.2.0 [pin 2023-11-20]
 	Updated www/xh to 0.20.1 [pin 2023-11-20]
 	Updated shells/sheldon to 0.7.4 [pin 2023-11-20]
+	Updated x11/libdrm to 2.4.118 [wiz 2023-11-20]
