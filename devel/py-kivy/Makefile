@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/11/20 06:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/20 15:52:18 gdt Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
@@ -10,25 +11,47 @@ HOMEPAGE=	https://kivy.org/
 COMMENT=	Library for rapid development of multitouch applications
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
-# not mentioned, but used
-DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
-DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
-
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	${CHMOD} -R go-w ${WRKSRC}
+# upstream does not yet support modern cython
+#   \todo file bug upstream about lack of cython3 support
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+# \todo Understand upstream's dependency rules and add/fix.
+# (Upstream's docs are very confusing as they are not listed in a
+# generic manner but only for a few specific operating systems, and
+# blur what is in their wheels for various platforms vs what
+# dependencies are needed.)
+# \todo Consider options as audio/video may be too heavy.
+
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+# \todo File upstream bug that dependency on enchant is undocumented.
+DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
+
+# Despite bad permissions in the distfile, extraction seems to result
+# in ok permissions, at least on NetBSD.  Commented out code remains
+# because this is semi-likely to be an issue in some circumstances,
+# and can be selectively re-enabled with an explanation.
+#pre-configure:
+#	${CHMOD} -R go-w ${WRKSRC}
+
+# Include various packages needed for SDL2.
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../audio/SDL2_sound/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
