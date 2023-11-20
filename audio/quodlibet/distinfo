@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/04/10 15:01:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/11/20 00:04:50 nia Exp $
 
-BLAKE2s (quodlibet-4.5.0.tar.gz) = 2e4c3b174b67e3cd6fd36c1600cc3119135b99107874e74185f1d42395ac5774
-SHA512 (quodlibet-4.5.0.tar.gz) = fc2403788d53e2675876a22a7903d22dd0badfbac0e7db7026c69e5fd4a96f2935478172390e4dba5b5ba116d199f91f28b3318ae1a4e2c24a973f87f5b88706
-Size (quodlibet-4.5.0.tar.gz) = 5294493 bytes
+BLAKE2s (quodlibet-4.6.0.tar.gz) = 9f3af18dcc09c3afd7560419b2bf0cdc3ac8bc454a6490e5d3b106bab8007a98
+SHA512 (quodlibet-4.6.0.tar.gz) = d17ed0ba14aa86eaf103fdc5feaeda74575e4bd9d9e55dae07679afb50e279c82b66b7429b0435c36663a9865141c168d3ff56a25c64f9694818f722362db7e9
+Size (quodlibet-4.6.0.tar.gz) = 5432575 bytes
