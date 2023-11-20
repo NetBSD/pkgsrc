@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.416 2023/10/31 23:20:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.417 2023/11/20 07:23:02 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -951,6 +951,7 @@ SUBDIR+=	urw-fonts
 SUBDIR+=	uw-ttyp0
 SUBDIR+=	vera-ttf
 SUBDIR+=	vfontcap-kochi
+SUBDIR+=	victor-mono
 SUBDIR+=	vlgothic-ttf
 SUBDIR+=	watanabe_vfont
 SUBDIR+=	woff2
