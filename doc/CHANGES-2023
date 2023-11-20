@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7138 2023/11/20 17:55:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7139 2023/11/20 17:59:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10245,3 +10245,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/xh to 0.20.1 [pin 2023-11-20]
 	Updated shells/sheldon to 0.7.4 [pin 2023-11-20]
 	Updated x11/libdrm to 2.4.118 [wiz 2023-11-20]
+	Updated net/ndpi to 4.8 [adam 2023-11-20]
+	Updated net/ntopng to 6.0 [adam 2023-11-20]
