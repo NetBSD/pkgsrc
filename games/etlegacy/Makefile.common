@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2023/02/04 16:13:26 nia Exp $
+# $NetBSD: Makefile.common,v 1.9 2023/11/20 01:17:39 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
-ETL_VERSION=	2.81.0
+ETL_VERSION=	2.81.1
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
