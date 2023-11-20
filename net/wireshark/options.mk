@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.33 2023/08/04 05:26:59 adam Exp $
+# $NetBSD: options.mk,v 1.34 2023/11/20 18:34:49 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=		http2 lua spandsp
+PKG_SUPPORTED_OPTIONS=		http2 http3 ilbc lua spandsp
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		qt5 qt6
-PKG_SUGGESTED_OPTIONS=		http2 lua qt6
+PKG_SUGGESTED_OPTIONS=		http2 http3 lua qt6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		icons lua qt spandsp
+PLIST_VARS+=		icons ilbc qt spandsp
 
 .if !empty(PKG_OPTIONS:Mhttp2)
 .  include "../../www/nghttp2/buildlink3.mk"
@@ -16,16 +16,29 @@ PLIST_VARS+=		icons lua qt spandsp
 CMAKE_ARGS+=		-DENABLE_NGHTTP2=OFF
 .endif
 
+.if !empty(PKG_OPTIONS:Mhttp3)
+.  include "../../www/nghttp3/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DENABLE_NGHTTP3=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Milbc)
+.  include "../../audio/libilbc/buildlink3.mk"
+PLIST.ilbc=		yes
+.else
+CMAKE_ARGS+=		-DENABLE_ILBC=OFF
+.endif
+
 .if !empty(PKG_OPTIONS:Mlua)
 LUA_VERSIONS_ACCEPTED=	52 51
 .  include "../../lang/lua/buildlink3.mk"
-PLIST.lua=		yes
 .else
 CMAKE_ARGS+=		-DENABLE_LUA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt5) || !empty(PKG_OPTIONS:Mqt6)
 .  if !empty(PKG_OPTIONS:Mqt5)
+CMAKE_ARGS+=		-DUSE_qt6=OFF
 .    include "../../x11/qt5-qtsvg/buildlink3.mk"
 .    include "../../x11/qt5-qttools/buildlink3.mk"
 .    if ${OPSYS} == "Darwin"
@@ -34,7 +47,6 @@ CMAKE_ARGS+=		-DENABLE_LUA=OFF
 .      include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .    endif
 .  elif !empty(PKG_OPTIONS:Mqt6)
-GCC_REQD+=		9 # std::filesystem & version used by qt6
 CMAKE_ARGS+=		-DUSE_qt6=ON
 .    include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .    include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
@@ -63,7 +75,7 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 
 .PHONY: install-icons
 install-icons:
-	${INSTALL_DATA} ${WRKSRC}/resources/icons/wsicon.svg \
+	${INSTALL_DATA} ${WRKSRC}/resources/historic/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
 .    for d in ${MIMEICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/resources/icons/WiresharkDoc-${d}.png \
