@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7127 2023/11/20 07:23:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7128 2023/11/20 07:44:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10230,3 +10230,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-jupyterlab-server to 2.25.2 [adam 2023-11-20]
 	Updated devel/py-kivy to 2.2.1 [wiz 2023-11-20]
 	Added fonts/victor-mono version 1.5.5 [wiz 2023-11-20]
+	Updated devel/garden to 0.9.1 [pin 2023-11-20]
