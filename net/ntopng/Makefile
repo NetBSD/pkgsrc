@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/11/14 14:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/20 17:59:35 adam Exp $
 
-DISTNAME=	ntopng-5.6
-PKGREVISION=	4
+DISTNAME=	ntopng-6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -31,7 +30,8 @@ SITES.${HTTPDOCS_DIST}=	${MASTER_SITE_LOCAL}
 # comment out this when running make update-ui
 DISTFILES=		${DEFAULT_DISTFILES} ${HTTPDOCS_DIST}
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake bash gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -73,6 +73,7 @@ post-install:
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua54/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
@@ -82,5 +83,6 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
