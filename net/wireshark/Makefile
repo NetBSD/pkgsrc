@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.305 2023/11/12 13:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.306 2023/11/20 18:34:49 adam Exp $
 
-DISTNAME=	wireshark-4.0.10
-PKGREVISION=	4
+DISTNAME=	wireshark-4.2.0
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +11,8 @@ COMMENT=	Network protocol analyzer
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	ethereal-[0-9]*
+
+DEPENDS+=	lemon-[0-9]*:../../devel/lemon
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
@@ -63,13 +64,20 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 # [-Wint-conversion]
 BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 
-.include "../../devel/cmake/build.mk"
+SUBST_CLASSES+=		lemon
+SUBST_STAGE.lemon=	pre-configure
+SUBST_MESSAGE.lemon=	Fixing hard-coded path to lemon/lempar.c.
+SUBST_FILES.lemon=	cmake/modules/UseLemon.cmake
+SUBST_SED.lemon=	-e 's,/usr/share,${PREFIX}/share,g'
+
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/opencore-amr/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsmi/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
