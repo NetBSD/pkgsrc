@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/11/08 13:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/20 00:04:50 nia Exp $
 
-DISTNAME=	quodlibet-4.5.0
-PKGREVISION=	7
+DISTNAME=	quodlibet-4.6.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet
@@ -46,6 +45,6 @@ post-install:
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
