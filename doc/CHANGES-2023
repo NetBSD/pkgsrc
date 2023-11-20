@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7140 2023/11/20 18:35:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7141 2023/11/20 18:54:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10249,3 +10249,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ntopng to 6.0 [adam 2023-11-20]
 	Added audio/libilbc version 3.0.4 [adam 2023-11-20]
 	Updated net/wireshark to 4.2.0 [adam 2023-11-20]
+	Updated devel/py-rpds-py to 0.13.1 [adam 2023-11-20]
+	Updated math/py-jplephem to 2.20 [adam 2023-11-20]
