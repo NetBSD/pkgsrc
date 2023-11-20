@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/20 18:26:25 adam Exp $
+
+BLAKE2s (libilbc-3.0.4.tar.gz) = 3c4708b70f441da8ce8c065e7dc03e159463a2621ed79478b19d32b7c50a2080
+SHA512 (libilbc-3.0.4.tar.gz) = cdbfe17074d4fdcff511f753d7dc67be6859f255e8f6eaa25dca7ecf87365a74eedac2b31e58b402715606291b6c900a3911bccf4ff27480301ad3cc7b82c194
+Size (libilbc-3.0.4.tar.gz) = 232253 bytes
