@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/20 18:26:25 adam Exp $
+bin/ilbc_test
+include/ilbc.h
+include/ilbc_export.h
+lib/libilbc.so
+lib/libilbc.so.${PKGVERSION}
+lib/libilbc.so.3
+lib/pkgconfig/libilbc.pc
+share/doc/libilbc/CONTRIBUTING.md
+share/doc/libilbc/NEWS.md
+share/doc/libilbc/README.md
