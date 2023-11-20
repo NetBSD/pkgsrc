@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/13 10:39:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/20 00:04:50 nia Exp $
 bin/exfalso
 bin/operon
 bin/quodlibet
@@ -36,9 +36,6 @@ ${PYSITELIB}/quodlibet/browsers/albums/models.pyo
 ${PYSITELIB}/quodlibet/browsers/albums/prefs.py
 ${PYSITELIB}/quodlibet/browsers/albums/prefs.pyc
 ${PYSITELIB}/quodlibet/browsers/albums/prefs.pyo
-${PYSITELIB}/quodlibet/browsers/audiofeeds.py
-${PYSITELIB}/quodlibet/browsers/audiofeeds.pyc
-${PYSITELIB}/quodlibet/browsers/audiofeeds.pyo
 ${PYSITELIB}/quodlibet/browsers/collection/__init__.py
 ${PYSITELIB}/quodlibet/browsers/collection/__init__.pyc
 ${PYSITELIB}/quodlibet/browsers/collection/__init__.pyo
@@ -57,9 +54,15 @@ ${PYSITELIB}/quodlibet/browsers/covergrid/__init__.pyo
 ${PYSITELIB}/quodlibet/browsers/covergrid/main.py
 ${PYSITELIB}/quodlibet/browsers/covergrid/main.pyc
 ${PYSITELIB}/quodlibet/browsers/covergrid/main.pyo
+${PYSITELIB}/quodlibet/browsers/covergrid/models.py
+${PYSITELIB}/quodlibet/browsers/covergrid/models.pyc
+${PYSITELIB}/quodlibet/browsers/covergrid/models.pyo
 ${PYSITELIB}/quodlibet/browsers/covergrid/prefs.py
 ${PYSITELIB}/quodlibet/browsers/covergrid/prefs.pyc
 ${PYSITELIB}/quodlibet/browsers/covergrid/prefs.pyo
+${PYSITELIB}/quodlibet/browsers/covergrid/widgets.py
+${PYSITELIB}/quodlibet/browsers/covergrid/widgets.pyc
+${PYSITELIB}/quodlibet/browsers/covergrid/widgets.pyo
 ${PYSITELIB}/quodlibet/browsers/filesystem.py
 ${PYSITELIB}/quodlibet/browsers/filesystem.pyc
 ${PYSITELIB}/quodlibet/browsers/filesystem.pyo
@@ -99,6 +102,9 @@ ${PYSITELIB}/quodlibet/browsers/playlists/prefs.pyo
 ${PYSITELIB}/quodlibet/browsers/playlists/util.py
 ${PYSITELIB}/quodlibet/browsers/playlists/util.pyc
 ${PYSITELIB}/quodlibet/browsers/playlists/util.pyo
+${PYSITELIB}/quodlibet/browsers/podcasts.py
+${PYSITELIB}/quodlibet/browsers/podcasts.pyc
+${PYSITELIB}/quodlibet/browsers/podcasts.pyo
 ${PYSITELIB}/quodlibet/browsers/soundcloud/__init__.py
 ${PYSITELIB}/quodlibet/browsers/soundcloud/__init__.pyc
 ${PYSITELIB}/quodlibet/browsers/soundcloud/__init__.pyo
@@ -228,9 +234,6 @@ ${PYSITELIB}/quodlibet/ext/events/animosd/prefs.pyo
 ${PYSITELIB}/quodlibet/ext/events/appinfo.py
 ${PYSITELIB}/quodlibet/ext/events/appinfo.pyc
 ${PYSITELIB}/quodlibet/ext/events/appinfo.pyo
-${PYSITELIB}/quodlibet/ext/events/auto_library_update.py
-${PYSITELIB}/quodlibet/ext/events/auto_library_update.pyc
-${PYSITELIB}/quodlibet/ext/events/auto_library_update.pyo
 ${PYSITELIB}/quodlibet/ext/events/auto_update_tags_in_files.py
 ${PYSITELIB}/quodlibet/ext/events/auto_update_tags_in_files.pyc
 ${PYSITELIB}/quodlibet/ext/events/auto_update_tags_in_files.pyo
@@ -246,6 +249,9 @@ ${PYSITELIB}/quodlibet/ext/events/bansheeimport.pyo
 ${PYSITELIB}/quodlibet/ext/events/clock.py
 ${PYSITELIB}/quodlibet/ext/events/clock.pyc
 ${PYSITELIB}/quodlibet/ext/events/clock.pyo
+${PYSITELIB}/quodlibet/ext/events/discord_status.py
+${PYSITELIB}/quodlibet/ext/events/discord_status.pyc
+${PYSITELIB}/quodlibet/ext/events/discord_status.pyo
 ${PYSITELIB}/quodlibet/ext/events/equalizer.py
 ${PYSITELIB}/quodlibet/ext/events/equalizer.pyc
 ${PYSITELIB}/quodlibet/ext/events/equalizer.pyo
@@ -267,6 +273,12 @@ ${PYSITELIB}/quodlibet/ext/events/jep118.pyo
 ${PYSITELIB}/quodlibet/ext/events/language.py
 ${PYSITELIB}/quodlibet/ext/events/language.pyc
 ${PYSITELIB}/quodlibet/ext/events/language.pyo
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/__init__.py
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/__init__.pyc
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/__init__.pyo
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/listenbrainz.py
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/listenbrainz.pyc
+${PYSITELIB}/quodlibet/ext/events/listenbrainz/listenbrainz.pyo
 ${PYSITELIB}/quodlibet/ext/events/mediaserver.py
 ${PYSITELIB}/quodlibet/ext/events/mediaserver.pyc
 ${PYSITELIB}/quodlibet/ext/events/mediaserver.pyo
@@ -300,6 +312,9 @@ ${PYSITELIB}/quodlibet/ext/events/musicbrainzsync.pyo
 ${PYSITELIB}/quodlibet/ext/events/notify.py
 ${PYSITELIB}/quodlibet/ext/events/notify.pyc
 ${PYSITELIB}/quodlibet/ext/events/notify.pyo
+${PYSITELIB}/quodlibet/ext/events/notify_bookmarks.py
+${PYSITELIB}/quodlibet/ext/events/notify_bookmarks.pyc
+${PYSITELIB}/quodlibet/ext/events/notify_bookmarks.pyo
 ${PYSITELIB}/quodlibet/ext/events/qlscrobbler.py
 ${PYSITELIB}/quodlibet/ext/events/qlscrobbler.pyc
 ${PYSITELIB}/quodlibet/ext/events/qlscrobbler.pyo
@@ -456,6 +471,9 @@ ${PYSITELIB}/quodlibet/ext/query/pythonexpression.pyo
 ${PYSITELIB}/quodlibet/ext/query/savedsearch.py
 ${PYSITELIB}/quodlibet/ext/query/savedsearch.pyc
 ${PYSITELIB}/quodlibet/ext/query/savedsearch.pyo
+${PYSITELIB}/quodlibet/ext/query/unique.py
+${PYSITELIB}/quodlibet/ext/query/unique.pyc
+${PYSITELIB}/quodlibet/ext/query/unique.pyo
 ${PYSITELIB}/quodlibet/ext/songsmenu/__init__.py
 ${PYSITELIB}/quodlibet/ext/songsmenu/__init__.pyc
 ${PYSITELIB}/quodlibet/ext/songsmenu/__init__.pyo
@@ -956,12 +974,6 @@ ${PYSITELIB}/quodlibet/plugins/gstelement.pyo
 ${PYSITELIB}/quodlibet/plugins/gui.py
 ${PYSITELIB}/quodlibet/plugins/gui.pyc
 ${PYSITELIB}/quodlibet/plugins/gui.pyo
-${PYSITELIB}/quodlibet/plugins/listenbrainz/__init__.py
-${PYSITELIB}/quodlibet/plugins/listenbrainz/__init__.pyc
-${PYSITELIB}/quodlibet/plugins/listenbrainz/__init__.pyo
-${PYSITELIB}/quodlibet/plugins/listenbrainz/listenbrainz.py
-${PYSITELIB}/quodlibet/plugins/listenbrainz/listenbrainz.pyc
-${PYSITELIB}/quodlibet/plugins/listenbrainz/listenbrainz.pyo
 ${PYSITELIB}/quodlibet/plugins/playlist.py
 ${PYSITELIB}/quodlibet/plugins/playlist.pyc
 ${PYSITELIB}/quodlibet/plugins/playlist.pyo
