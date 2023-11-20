@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/20 07:22:50 wiz Exp $
+
+BLAKE2s (victor-mono-1.5.5/VictorMonoAll.zip) = b573b0c68a5d073b2fc48fecaeee283d1c083b55e92393710193b2432591c324
+SHA512 (victor-mono-1.5.5/VictorMonoAll.zip) = aa1b24bac802a2e30dc13939df03ca2c5a6fea49e4de3f74009b9c878ef7e2bcc72ddae8ac7853bd1bc3c3caef33f5d5fe87203e106531b48d1e68db66b444e4
+Size (victor-mono-1.5.5/VictorMonoAll.zip) = 9165795 bytes
