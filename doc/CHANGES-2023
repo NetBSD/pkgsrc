@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7132 2023/11/20 10:19:50 nia Exp $
+$NetBSD: CHANGES-2023,v 1.7133 2023/11/20 11:25:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10239,3 +10239,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/libretro-snes9x to 1.62.3 [nia 2023-11-20]
 	Updated emulators/snes9x-gtk to 1.62.3 [nia 2023-11-20]
 	Updated emulators/snes9x to 1.62.3 [nia 2023-11-20]
+	Updated sysutils/dua-cli to 2.20.2 [pin 2023-11-20]
