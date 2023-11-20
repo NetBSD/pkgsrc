@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7130 2023/11/20 08:17:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7131 2023/11/20 09:18:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10234,3 +10234,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.26.1 [pin 2023-11-20]
 	Updated www/py-jupyterlab to 4.0.9 [adam 2023-11-20]
 	Updated www/py-notebook to 7.0.6 [adam 2023-11-20]
+	Updated net/rabbitmq to 3.12.9 [adam 2023-11-20]
+	Updated devel/py-jaraco.functools to 4.0.0 [adam 2023-11-20]
