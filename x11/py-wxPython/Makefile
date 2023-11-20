@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/14 14:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/20 00:07:41 gdt Exp $
 
 DISTNAME=	wxPython-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,9 +22,15 @@ USE_TOOLS+=			pkg-config
 MAKE_ENV+=			WX_CONFIG=wx-config-3.2
 PYDISTUTILSPKG=			no
 
+TOOL_DEPENDS+=			${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+
 BUILD_ARGS+=			--use_syswx
 BUILD_ARGS+=			--prefix=${PREFIX}
 BUILD_ARGS+=			--destdir=${DESTDIR}
+
+post-patch:
+	# upstream (incorrectly) installs patch .orig files
+	${RM} -f ${WRKSRC}/wx/svg/_nanosvg.pyx.orig
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} build.py ${BUILD_ARGS} build_py
