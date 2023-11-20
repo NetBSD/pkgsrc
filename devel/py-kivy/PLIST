@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/20 06:36:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/20 15:52:18 gdt Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -66,6 +66,7 @@ ${PYSITELIB}/kivy/core/audio/audio_gstplayer.pyo
 ${PYSITELIB}/kivy/core/audio/audio_pygame.py
 ${PYSITELIB}/kivy/core/audio/audio_pygame.pyc
 ${PYSITELIB}/kivy/core/audio/audio_pygame.pyo
+${PYSITELIB}/kivy/core/audio/audio_sdl2.so
 ${PYSITELIB}/kivy/core/camera/__init__.py
 ${PYSITELIB}/kivy/core/camera/__init__.pyc
 ${PYSITELIB}/kivy/core/camera/__init__.pyo
@@ -87,6 +88,7 @@ ${PYSITELIB}/kivy/core/clipboard/__init__.pyo
 ${PYSITELIB}/kivy/core/clipboard/_clipboard_ext.py
 ${PYSITELIB}/kivy/core/clipboard/_clipboard_ext.pyc
 ${PYSITELIB}/kivy/core/clipboard/_clipboard_ext.pyo
+${PYSITELIB}/kivy/core/clipboard/_clipboard_sdl2.so
 ${PYSITELIB}/kivy/core/clipboard/clipboard_android.py
 ${PYSITELIB}/kivy/core/clipboard/clipboard_android.pyc
 ${PYSITELIB}/kivy/core/clipboard/clipboard_android.pyo
@@ -123,6 +125,7 @@ ${PYSITELIB}/kivy/core/gl/__init__.pyo
 ${PYSITELIB}/kivy/core/image/__init__.py
 ${PYSITELIB}/kivy/core/image/__init__.pyc
 ${PYSITELIB}/kivy/core/image/__init__.pyo
+${PYSITELIB}/kivy/core/image/_img_sdl2.so
 ${PYSITELIB}/kivy/core/image/img_dds.py
 ${PYSITELIB}/kivy/core/image/img_dds.pyc
 ${PYSITELIB}/kivy/core/image/img_dds.pyo
@@ -153,6 +156,8 @@ ${PYSITELIB}/kivy/core/spelling/spelling_osxappkit.pyo
 ${PYSITELIB}/kivy/core/text/__init__.py
 ${PYSITELIB}/kivy/core/text/__init__.pyc
 ${PYSITELIB}/kivy/core/text/__init__.pyo
+${PYSITELIB}/kivy/core/text/_text_pango.so
+${PYSITELIB}/kivy/core/text/_text_sdl2.so
 ${PYSITELIB}/kivy/core/text/markup.py
 ${PYSITELIB}/kivy/core/text/markup.pyc
 ${PYSITELIB}/kivy/core/text/markup.pyo
@@ -188,6 +193,7 @@ ${PYSITELIB}/kivy/core/video/video_null.pyo
 ${PYSITELIB}/kivy/core/window/__init__.py
 ${PYSITELIB}/kivy/core/window/__init__.pyc
 ${PYSITELIB}/kivy/core/window/__init__.pyo
+${PYSITELIB}/kivy/core/window/_window_sdl2.so
 ${PYSITELIB}/kivy/core/window/window_attrs.pxi
 ${PYSITELIB}/kivy/core/window/window_egl_rpi.py
 ${PYSITELIB}/kivy/core/window/window_egl_rpi.pyc
@@ -444,6 +450,7 @@ ${PYSITELIB}/kivy/lib/ddsfile.pyo
 ${PYSITELIB}/kivy/lib/gstplayer/__init__.py
 ${PYSITELIB}/kivy/lib/gstplayer/__init__.pyc
 ${PYSITELIB}/kivy/lib/gstplayer/__init__.pyo
+${PYSITELIB}/kivy/lib/gstplayer/_gstplayer.so
 ${PYSITELIB}/kivy/lib/mtdev.py
 ${PYSITELIB}/kivy/lib/mtdev.pyc
 ${PYSITELIB}/kivy/lib/mtdev.pyo
