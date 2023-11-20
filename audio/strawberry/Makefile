@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/11/15 18:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/11/20 00:58:09 nia Exp $
 
-DISTNAME=	strawberry-1.0.18
-PKGREVISION=	5
+DISTNAME=	strawberry-1.0.21
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -54,6 +53,7 @@ post-install:
 
 .include "options.mk"
 .include "../../audio/chromaprint/buildlink3.mk"
+.include "../../audio/libebur128/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -62,7 +62,6 @@ post-install:
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
