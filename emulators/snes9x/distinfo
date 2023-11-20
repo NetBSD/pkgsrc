@@ -1,13 +1,18 @@
-$NetBSD: distinfo,v 1.28 2022/05/03 17:09:19 nia Exp $
+$NetBSD: distinfo,v 1.29 2023/11/20 10:19:00 nia Exp $
 
-BLAKE2s (KhronosGroup-SPIRV-Cross-1458bae62ec67ea7d12c5a13b740e23ed4bb226c.tar.gz) = 0217ec92d9e149ca71c21c4046a135c461127c8e60e4345208750771952a2ff7
-SHA512 (KhronosGroup-SPIRV-Cross-1458bae62ec67ea7d12c5a13b740e23ed4bb226c.tar.gz) = bfa3cc944450db59a57a685eea12b0ed0b5059d55a092ac5cdf6f4dc03c1e2d2e62fa5a576156c772340e12136b10d7ed790bb35b4aece2ee8405e64f826e31b
-Size (KhronosGroup-SPIRV-Cross-1458bae62ec67ea7d12c5a13b740e23ed4bb226c.tar.gz) = 676662 bytes
-BLAKE2s (KhronosGroup-glslang-bcf6a2430e99e8fc24f9f266e99316905e6d5134.tar.gz) = 906f6c53907cd74869fa64351c9e3ef188c8f51cfd737e7d8be234904a9968b3
-SHA512 (KhronosGroup-glslang-bcf6a2430e99e8fc24f9f266e99316905e6d5134.tar.gz) = de2ebc0cd89d22582c079006ac45a812e3aaaad9a44c77c68530aa1468fbc840c6ae25a4356d4e9fc697524cd721d26506d85bc35eac98452eabce0bc098b5a4
-Size (KhronosGroup-glslang-bcf6a2430e99e8fc24f9f266e99316905e6d5134.tar.gz) = 3188787 bytes
-BLAKE2s (snes9x-1.61.tar.gz) = 9bef648bce8d223b9f64ab45bd1037a00fed51e25e853f6674949a073009b20c
-SHA512 (snes9x-1.61.tar.gz) = 8b644f5b7136e89fd222bcb430fc736c74a3e383d7e6c7f0880235f6fa4c0f77abbf02493f8d654a12e87701111643e33877bc21bb3dfcc9b82a056fa1b1d880
-Size (snes9x-1.61.tar.gz) = 3016890 bytes
-SHA1 (patch-unix_configure) = e28781df414fa8b983157e5f063c7fad2fd24dd4
-SHA1 (patch-unix_unix.cpp) = 6490903a931792c7d7abb68e8478e7ecaf3d902f
+BLAKE2s (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = 13efb2c6ee687bc849b16e406028fdd04dd56aa52dc68ec5f3f766f2243e416b
+SHA512 (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = ec47b1d966006c6e654e84e7fa16124c774de3ca6fd508d3cfe0568e3df79eee3f5aeedfae1d744b99e162beeee23afe498249b2291091bc14c0357db304bebe
+Size (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = 1714902 bytes
+BLAKE2s (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = 400ab5b06150ea9b53c0937f36c8ac811540cf5534b870de71e99378c64f8283
+SHA512 (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = b35541413efb5124691e0d13403acc00a85af51e3165828e892e90f059a7d7dc83f9bde43c6a7a1f471ae6eb8ec0155ee873adcc7afb537d5adbaccafcd7d849
+Size (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = 1832285 bytes
+BLAKE2s (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = bb3a1f149905af1a1830ad9d8bcef27e5ec1df7ce87f03f24cfcfc065f67ccb4
+SHA512 (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = 49efe8841bbe2d603d5dd03bdb273bb991ee6ea509081048c01b7c4de6d4cad42f223755e1cb391c426993fba72ed3878e28bcce8dd7f6eeb5adf873705b7d62
+Size (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = 3694607 bytes
+BLAKE2s (snes9x-1.62.3.tar.gz) = 6a516b64fc0bba5770b2659cfb32eb8e68f5108a5d2e339a086972f5f27795bb
+SHA512 (snes9x-1.62.3.tar.gz) = 005222bc054fbdfef92acc3ce5ad1f4b18eaff4382ab352d61e5c9c3fbe952ca085e964535e628730976f795c568e9e8751e6ef997f864c719c421d67d9e04db
+Size (snes9x-1.62.3.tar.gz) = 3423799 bytes
+SHA1 (patch-gtk_CMakeLists.txt) = d096662fc1ffa88fe70e68175fedadf950df0d24
+SHA1 (patch-shaders_shader__platform.h) = b026b27fb2fb7f6a3df9ec0c40bf334729d30f28
+SHA1 (patch-unix_configure) = 99a9693d98462430e2fa072bad648089f7035d39
+SHA1 (patch-unix_unix.cpp) = 46e2edc50769e040bc729492f213f455cd1f61c1

@@ -1,20 +1,24 @@
-# $NetBSD: Makefile.common,v 1.6 2022/05/03 17:09:19 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/11/20 10:19:00 nia Exp $
 
 # used by emulators/libretro-snes9x/Makefile
 # used by emulators/snes9x/Makefile
 # used by emulators/snes9x-gtk/Makefile
 
-SNES9X_VERSION=		1.61
+SNES9X_VERSION=		1.62.3
 DISTNAME=		snes9x-${SNES9X_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=snes9xgit/}
 GITHUB_PROJECT=		snes9x
 GITHUB_TAG=		${SNES9X_VERSION}
 
-GITHUB_SUBMODULES+=	KhronosGroup SPIRV-Cross 1458bae62ec67ea7d12c5a13b740e23ed4bb226c shaders/SPIRV-Cross
-GITHUB_SUBMODULES+=	KhronosGroup glslang bcf6a2430e99e8fc24f9f266e99316905e6d5134 shaders/glslang
+GITHUB_SUBMODULES+=	KhronosGroup SPIRV-Cross 4e2fdb25671c742a9fbe93a6034eb1542244c7e1 external/SPIRV-Cross
+GITHUB_SUBMODULES+=	KhronosGroup glslang 6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7 external/glslang
+GITHUB_SUBMODULES+=	KhronosGroup Vulkan-Headers a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2 external/vulkan-headers
 
 HOMEPAGE=		http://www.snes9x.com/
 LICENSE=		snes9x-license
 
 USE_LANGUAGES=		c c++
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/snes9x/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/snes9x/patches
