@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7135 2023/11/20 11:27:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7136 2023/11/20 11:28:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10242,3 +10242,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dua-cli to 2.20.2 [pin 2023-11-20]
 	Updated misc/rust-kanban to 0.8.2 [pin 2023-11-20]
 	Updated misc/tailspin to 2.2.0 [pin 2023-11-20]
+	Updated www/xh to 0.20.1 [pin 2023-11-20]
