@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.10 2023/10/09 17:19:30 adam Exp $
+# $NetBSD: build.mk,v 1.11 2023/11/20 09:51:48 nia Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -81,15 +81,14 @@ cmake-configure:
 		--install-prefix ${PREFIX} \
 		-B ${CMAKE_BUILD_DIR} \
 		-G ${_CMAKE_BUILD_SYSTEM:Q} \
-		${CMAKE_CONFIGURE_ARGS} \
-		${WRKSRC}
+		${CMAKE_CONFIGURE_ARGS}
 .endif
 
 .if !target(do-build)
 do-build: cmake-build
 cmake-build:
 .  for d in ${BUILD_DIRS}
-	${RUN} cd ${WRKSRC}/${CMAKE_BUILD_DIR}/${d} && \
+	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
 		${SETENV} ${MAKE_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS} ${BUILD_TARGET}
 .  endfor
@@ -99,7 +98,7 @@ cmake-build:
 do-test: cmake-test
 cmake-test:
 .  for d in ${TEST_DIRS}
-	${RUN} cd ${WRKSRC}/${CMAKE_BUILD_DIR}/${d} && \
+	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
 		${SETENV} ${TEST_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS} ${TEST_TARGET}
 .  endfor
@@ -109,7 +108,7 @@ cmake-test:
 do-install: cmake-install
 cmake-install:
 .  for d in ${INSTALL_DIRS}
-	${RUN} cd ${WRKSRC}/${CMAKE_BUILD_DIR}/${d} && \
+	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
 		${SETENV} ${INSTALL_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_INSTALL_ARGS} ${INSTALL_TARGET}
 .  endfor
