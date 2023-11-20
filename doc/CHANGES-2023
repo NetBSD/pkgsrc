@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7123 2023/11/20 01:18:03 nia Exp $
+$NetBSD: CHANGES-2023,v 1.7124 2023/11/20 06:05:51 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10224,3 +10224,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/strawberry to 1.0.21 [nia 2023-11-20]
 	Updated games/etlegacy-server to 2.81.1 [nia 2023-11-20]
 	Updated games/etlegacy to 2.81.1 [nia 2023-11-20]
+	Updated sysutils/eza to 0.16.0 [fox 2023-11-20]
