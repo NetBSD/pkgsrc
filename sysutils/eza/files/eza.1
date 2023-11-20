@@ -99,7 +99,14 @@ terminal color.
 Manually setting this option overrides \f[V]NO_COLOR\f[R] environment.
 .TP
 \f[V]--color-scale\f[R], \f[V]--colour-scale\f[R]
-Colour file sizes on a scale.
+highlight levels of \f[V]field\f[R] distinctly.
+Use comma(,) separated list of all, age, size
+.TP
+\f[V]--color-scale-mode\f[R], \f[V]--colour-scale-mode\f[R]
+Use gradient or fixed colors in \f[V]--color-scale\f[R].
+.PP
+Valid options are \f[V]fixed\f[R] or \f[V]gradient\f[R].
+The default value is \f[V]gradient\f[R].
 .TP
 \f[V]--icons=WHEN\f[R]
 Display icons next to file names.
@@ -124,9 +131,16 @@ Display entries as hyperlinks
 .TP
 \f[V]-w\f[R], \f[V]--width=COLS\f[R]
 Set screen width in columns.
-.TP
-\f[V]--smart-group\f[R]
-Only show group if it has a different name from owner
+.PP
+Valid options are \f[V]none\f[R], \f[V]absolute\f[R] or
+\f[V]relative\f[R].
+The default value is \f[V]none\f[R]
+.PP
+\f[V]absolute\f[R] mode highlights based on file modification time
+relative to the past year.
+\f[V]relative\f[R] mode highlights based on file modification time in
+relation to other files.
+\f[V]none\f[R] disables highlighting.
 .SH FILTERING AND SORTING OPTIONS
 .TP
 \f[V]-a\f[R], \f[V]--all\f[R]
@@ -196,6 +210,9 @@ Use the changed timestamp field.
 \f[V]-g\f[R], \f[V]--group\f[R]
 List each file\[cq]s group.
 .TP
+\f[V]--smart-group\f[R]
+Only show group if it has a different name from owner
+.TP
 \f[V]-h\f[R], \f[V]--header\f[R]
 Add a header row to each column.
 .TP
@@ -231,6 +248,9 @@ can use a \f[V]custom\f[R] style with `\f[V]+\f[R]' as prefix.
 \[lq]\f[V]2023/9/30, 12:00\f[R]\[rq]).
 for more details about format syntax, please read:
 https://docs.rs/chrono/latest/chrono/format/strftime/index.html
+.TP
+\f[V]--total-size\f[R]
+Show recursive directory size (unix only).
 .TP
 \f[V]-u\f[R], \f[V]--accessed\f[R]
 Use the accessed timestamp field.
@@ -359,6 +379,18 @@ the eza_colors.5.md manual page.
 .SS \f[V]EZA_OVERRIDE_GIT\f[R]
 .PP
 Overrides any \f[V]--git\f[R] or \f[V]--git-repos\f[R] argument
+.SS \f[V]EZA_MIN_LUMINANCE\f[R]
+.PP
+Specifies the minimum luminance to use when decay is active.
+It\[cq]s value can be between -100 to 100.
+.SS \f[V]EZA_ICONS_AUTO\f[R]
+.PP
+If set, automates the same behavior as using \f[V]--icons\f[R] or
+\f[V]--icons=auto\f[R].
+Useful for if you always want to have icons enabled.
+.PP
+Any explicit use of the \f[V]--icons=WHEN\f[R] flag overrides this
+behavior.
 .SH EXIT STATUSES
 .TP
 0
