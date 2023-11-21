@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2023/11/21 19:56:37 markd Exp $
+#
+# used by graphics/py-cairo/Makefile
+# used by graphics/py-cairo-shared/Makefile
+
+PYCAIRO_VER=	1.25.1
+DISTNAME=	pycairo-${PYCAIRO_VER}
+CATEGORIES=	graphics python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycairo/}
+
+MAINTAINER=	leuzi@trash.net
+HOMEPAGE=	https://cairographics.org/pycairo/
+LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
+
+DISTINFO_FILE=	${.CURDIR}/../../graphics/py-cairo/distinfo
+#PATCHDIR=	${.CURDIR}/../../graphics/py-cairo/patches
