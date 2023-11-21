@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23697 2023/11/20 18:35:11 adam Exp $
+$NetBSD: TODO,v 1.23698 2023/11/21 16:09:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -631,6 +631,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o firefox-120
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -1215,7 +1216,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o raine-0.64.9
 	o rasmol-2.7.5.2
 	o rat-4.2.25
-	o rawtherapee-5.8
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
