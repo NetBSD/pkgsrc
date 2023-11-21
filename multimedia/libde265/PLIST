@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/31 17:18:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/21 21:00:00 adam Exp $
 bin/acceleration_speed
 bin/bjoentegaard
 bin/block-rate-estim
 bin/dec265
 bin/enc265
 bin/gen-enc-table
-bin/hdrcopy
 bin/rd-curves
 bin/tests
 bin/yuv-distortion
