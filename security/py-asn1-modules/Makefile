@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/26 16:07:13 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/21 18:56:13 adam Exp $
 
 DISTNAME=	pyasn1_modules-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.5.0:../../security/py-asn1
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-asn1
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
