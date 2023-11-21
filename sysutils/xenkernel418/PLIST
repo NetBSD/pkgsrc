@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/21 11:38:26 bouyer Exp $
+xen418-kernel/xen-debug.gz
+xen418-kernel/xen.gz
