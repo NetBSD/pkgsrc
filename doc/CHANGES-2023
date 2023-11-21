@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7156 2023/11/21 21:00:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7157 2023/11/21 21:33:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10271,3 +10271,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-xdist to 3.5.0 [adam 2023-11-21]
 	Updated devel/git to 2.43.0 [adam 2023-11-21]
 	Updated multimedia/libde265 to 1.0.14 [adam 2023-11-21]
+	Updated mail/thunderbird to 115.4.3 [ryoon 2023-11-21]
