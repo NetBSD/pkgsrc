@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7144 2023/11/21 11:40:16 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.7145 2023/11/21 12:10:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10255,3 +10255,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/nushell to 0.87.1 [pin 2023-11-21]
 	Added sysutils/xenkernel418 version 20231116 [bouyer 2023-11-21]
 	Added sysutils/xentools418 version 20231116 [bouyer 2023-11-21]
+	Updated math/four-bar-rs to 6.0.0 [pin 2023-11-21]
