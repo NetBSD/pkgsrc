@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2023/11/21 11:38:26 bouyer Exp $
+
+BLAKE2s (xen418/xen-d75f1e9.tar.gz) = 378782f6af3fb609a0fce4c7e76a3fc22d3ad691b89aa2d328be3310431dfbcf
+SHA512 (xen418/xen-d75f1e9.tar.gz) = e928b980f6bff13b9754f705d6b01ed0d4c4083187d74105dc4fad5af5c6bae0dd97b36ebc21482750ddbc038538e38a1296d4a3cf782fdcd2dc2b8b97d6dbd5
+Size (xen418/xen-d75f1e9.tar.gz) = 6820424 bytes
+SHA1 (patch-Config.mk) = 9372a09efd05c9fbdbc06f8121e411fcb7c7ba65
+SHA1 (patch-xen_Makefile) = 0c400e8054e907ce44faf2be955e0c2d63b768ed
+SHA1 (patch-xen_arch_x86_Rules.mk) = b0bc391f2ca3e96ce2bcaec5e1fcd66139ff16f9
+SHA1 (patch-xen_arch_x86_boot_build32.lds) = 9157f22876085254844f720853761a2cd0f4876e
+SHA1 (patch-xen_arch_x86_extable.c) = f64b956be1167901a60bf9be1abd98dbfaffb100
+SHA1 (patch-xen_arch_x86_mm_p2m.c) = 6e9b84dc8448eca9677f184e720bbfcb3c6d314e
+SHA1 (patch-xen_tools_check-endbr.sh) = a7268ee5ff11f21fdc5b0bc213498a1923b693be
