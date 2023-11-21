@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2023/10/24 22:11:50 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/11/21 19:19:01 rhialto Exp $
 
 DISTNAME=	suite3270-${VER}-src
 PKGNAME=	x3270-${VER}
-PKGREVISION=	1
-VER=		4.2ga10
+VER=		4.3ga4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
@@ -15,7 +14,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 
-WRKSRC=		${WRKDIR}/suite3270-4.2
+WRKSRC=		${WRKDIR}/suite3270-4.3
 USE_TOOLS+=	bdftopcf gmake
 
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/misc
@@ -38,6 +37,8 @@ SUBST_STAGE.share=	pre-configure
 SUBST_MESSAGE.share=	Fixing /usr/share
 SUBST_FILES.share=	x3270/Makefile.obj.in
 SUBST_SED.share+=	-e 's;/usr/share;${PREFIX}/share;'
+
+REPLACE_SH+=		Common/pr3287/prtodir.sh
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/ibm_hosts ${DESTDIR}/${EGDIR}
