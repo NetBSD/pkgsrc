@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7152 2023/11/21 18:59:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7153 2023/11/21 19:19:16 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10264,3 +10264,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/eternal-lands to 1.9.6.1 [nia 2023-11-21]
 	Updated security/py-asn1 to 0.5.1 [adam 2023-11-21]
 	Updated devel/py-minidump to 0.0.22 [adam 2023-11-21]
+	Updated x11/x3270 to 4.3ga4 [rhialto 2023-11-21]
