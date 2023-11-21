@@ -1,11 +1,11 @@
-$NetBSD: patch-git-gui_Makefile,v 1.1 2019/11/08 12:24:31 adam Exp $
+$NetBSD: patch-git-gui_Makefile,v 1.2 2023/11/21 20:51:21 adam Exp $
 
 Fix installation.
 Do not build Git Gui.app on Darwin.
 
---- git-gui/Makefile.orig	2019-11-04 05:07:07.000000000 +0000
+--- git-gui/Makefile.orig	2023-11-20 02:07:41.000000000 +0000
 +++ git-gui/Makefile
-@@ -48,11 +48,11 @@ endif
+@@ -50,11 +50,11 @@ endif
  RM_RF     ?= rm -rf
  RMDIR     ?= rmdir
  
@@ -20,7 +20,7 @@ Do not build Git Gui.app on Darwin.
  INSTALL_X1 =
  INSTALL_A0 = find # space is required here
  INSTALL_A1 = | cpio -pud
-@@ -76,11 +76,11 @@ ifndef V
+@@ -78,11 +78,11 @@ ifndef V
  	QUIET_2DEVNULL = 2>/dev/null
  
  	INSTALL_D0 = dir=
@@ -35,8 +35,8 @@ Do not build Git Gui.app on Darwin.
  	INSTALL_A0 = src=
  	INSTALL_A1 = && echo '   ' INSTALL '   ' `basename "$$src"` && find "$$src" | cpio -pud
  
-@@ -157,7 +157,7 @@ else
- endif
+@@ -144,7 +144,7 @@ endif
+ gg_libdir_sed_in := $(gg_libdir)
  ifeq ($(uname_S),Darwin)
  	ifeq ($(shell test -d $(TKFRAMEWORK) && echo y),y)
 -		GITGUI_MACOSXAPP := YesPlease
