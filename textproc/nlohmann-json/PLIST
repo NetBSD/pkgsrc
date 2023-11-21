@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/28 20:18:21 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/21 17:37:52 nia Exp $
 include/nlohmann/adl_serializer.hpp
 include/nlohmann/byte_container_with_subtype.hpp
 include/nlohmann/detail/abi_macros.hpp
@@ -43,7 +43,7 @@ include/nlohmann/json_fwd.hpp
 include/nlohmann/ordered_map.hpp
 include/nlohmann/thirdparty/hedley/hedley.hpp
 include/nlohmann/thirdparty/hedley/hedley_undef.hpp
-include/test_data.hpp
+${PLIST.tests}include/test_data.hpp
 share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake
 share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake
 share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake
