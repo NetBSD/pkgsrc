@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/28 20:18:21 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/21 17:37:52 nia Exp $
 
 DISTNAME=	nlohmann-json-3.11.2
 CATEGORIES=	textproc
@@ -11,11 +11,8 @@ HOMEPAGE=	https://json.nlohmann.me/
 COMMENT=	JSON library for Modern C++
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
-# FIXME: Downloads test data from a fixed tag in a git repository,
-# package https://github.com/nlohmann/json_test_data to prevent downloads.
-# FIXME: A small number of tests assume that WRKSRC is a git checkout.
-TEST_TARGET=	test
 
+.include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
