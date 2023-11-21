@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2023/10/23 06:37:48 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2023/11/21 21:32:51 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,7 +6,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
@@ -85,7 +85,9 @@ CONFIGURE_ARGS+=	--enable-system-pixman
 # webrtc option requires internal libvpx
 #CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--with-system-icu
+# icu-74.1 produces invalid timezone string.
+# https://unicode-org.atlassian.net/browse/ICU-22132
+CONFIGURE_ARGS+=	--without-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
@@ -195,7 +197,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.25
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.53
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
