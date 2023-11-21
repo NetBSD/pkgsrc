@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2023/11/21 16:09:25 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/11/21 16:26:36 wiz Exp $
 
 BLAKE2s (rawtherapee-5.9.tar.xz) = 7c1c20e6504d34752b70f597df97b37eb1be68803528eb3e00343d58fa3ff692
 SHA512 (rawtherapee-5.9.tar.xz) = 0d848a36293eb5cac3212910eaf1d011315269c6bbe780c4c2e5f91719721e25a7d1678a7e4453fa4a9694618978b04828612dc03e1d50cb9c11ad4d238e7ca8
 Size (rawtherapee-5.9.tar.xz) = 16219076 bytes
-SHA1 (patch-CMakeLists.txt) = fcbfca37cbf5c1952aea44376a5d5e8a556acc87
+SHA1 (patch-CMakeLists.txt) = f96c3edf8dd61f595f4e447dfb8c843ab132bcd6
 SHA1 (patch-rtgui_CMakeLists.txt) = 563c3fa1efcbe9767fbecbd8c866fa7362dd3e8b
