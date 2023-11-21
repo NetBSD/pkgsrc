@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7142 2023/11/21 00:44:08 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7143 2023/11/21 07:00:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10252,3 +10252,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-rpds-py to 0.13.1 [adam 2023-11-20]
 	Updated math/py-jplephem to 2.20 [adam 2023-11-20]
 	Updated databases/postgresql-postgis2 to 3.4.1 [gdt 2023-11-21]
+	Updated shells/nushell to 0.87.1 [pin 2023-11-21]
