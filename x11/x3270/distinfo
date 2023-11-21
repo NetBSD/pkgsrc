@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.26 2023/08/26 13:23:37 rhialto Exp $
+$NetBSD: distinfo,v 1.27 2023/11/21 19:19:01 rhialto Exp $
 
-BLAKE2s (suite3270-4.2ga10-src.tgz) = 60ebc7afc96bb6c62726bb7bc467da14320c7aaf7964bd9d5bbaa12bc94e4028
-SHA512 (suite3270-4.2ga10-src.tgz) = fc848760263359fd844c4cd8b51e4f3829d000a66efce7064cb32d0e82d8ba4346031d561c4311733a447931a75942d06083772191143a68c6c4f4a2c231ac96
-Size (suite3270-4.2ga10-src.tgz) = 12739495 bytes
+BLAKE2s (suite3270-4.3ga4-src.tgz) = 6832ea9453ac22a18adcd76c29b855f98364f40d7a38e1a0f8cadcdc4c318518
+SHA512 (suite3270-4.3ga4-src.tgz) = 8333046dfac1f9b860effa5dbcc944994da5561636c52bf41a01f3240d5885cf2f9ea2e365823cdaedb2a0b8aa81b6bc468e41bcd1a71cc50bb5c18ffc70afab
+Size (suite3270-4.3ga4-src.tgz) = 13163509 bytes
+SHA1 (patch-pr3287_Makefile.obj.in) = c9ac0ba1f55369f6a8ab4d6bd4d27e58445d93cd

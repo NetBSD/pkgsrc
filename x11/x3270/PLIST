@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2021/12/29 13:25:47 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/21 19:19:01 rhialto Exp $
 bin/b3270
 ${PLIST.curses}bin/c3270
 bin/pr3287
+bin/prtodir
 bin/s3270
 ${PLIST.tcl}bin/tcl3270
 ${PLIST.x11}bin/x3270
