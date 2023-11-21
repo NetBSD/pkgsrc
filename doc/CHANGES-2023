@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7158 2023/11/21 21:35:09 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7159 2023/11/21 21:48:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10273,3 +10273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libde265 to 1.0.14 [adam 2023-11-21]
 	Updated mail/thunderbird to 115.4.3 [ryoon 2023-11-21]
 	Updated mail/thunderbird-l10n to 115.4.3 [ryoon 2023-11-21]
+	Updated mail/thunderbird102 to 102.15.1 [ryoon 2023-11-21]
