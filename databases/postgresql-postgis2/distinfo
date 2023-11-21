@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2023/08/16 14:36:39 gdt Exp $
+$NetBSD: distinfo,v 1.39 2023/11/21 00:33:33 gdt Exp $
 
-BLAKE2s (postgis-3.4.0.tar.gz) = cffe1c915b7f7e902f0d83f3cf6a0ce4b8186c519b5dbf664f6d5d63700ceca9
-SHA512 (postgis-3.4.0.tar.gz) = d8c5329e5394bfe1d77a207d35cf8100217d39236cfeb228e268c796e16e24068df2191403830bf190b7ae9fabb21003675a091a8cc6dbfeed9b4b02cbbb9d33
-Size (postgis-3.4.0.tar.gz) = 14693348 bytes
+BLAKE2s (postgis-3.4.1.tar.gz) = f41a9d108939f5c67d90b01b243b88cb19db05b36f18315dbd3e58fa7bca39a8
+SHA512 (postgis-3.4.1.tar.gz) = 66f460077066372276783d8e7acefb0d61ae5fbf7e2d3bbb7008d9289a65adfe78eb8431eee4bbdd3f8e5a9e37653e396d659f46bb285edab00ed57277fae2c7
+Size (postgis-3.4.1.tar.gz) = 14942851 bytes
