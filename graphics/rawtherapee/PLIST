@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/21 16:09:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/21 16:26:36 wiz Exp $
 bin/rawtherapee
 bin/rawtherapee-cli
+man/man1/rawtherapee.1
 share/applications/rawtherapee.desktop
 share/doc/rawtherapee/AUTHORS.txt
 share/doc/rawtherapee/AboutThisBuild.txt
@@ -563,7 +564,6 @@ share/rawtherapee/languages/Serbian (Cyrilic Characters)
 share/rawtherapee/languages/Slovenian
 share/rawtherapee/languages/Swedish
 share/rawtherapee/languages/default
-share/rawtherapee/man/man1/rawtherapee.1
 share/rawtherapee/options
 share/rawtherapee/profiles/Auto-Matched Curve - ISO High.pp3
 share/rawtherapee/profiles/Auto-Matched Curve - ISO Low.pp3

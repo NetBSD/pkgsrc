@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/11/21 16:09:25 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/21 16:26:36 wiz Exp $
 
 DISTNAME=	rawtherapee-5.9
 CATEGORIES=	graphics
@@ -14,11 +14,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+# for patch-CMakeLists.txt
 CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
-
-# ReleaseInfo.cmake must exist or it will try to use git(1) to regen it.
-pre-configure:
-	touch ${WRKSRC}/ReleaseInfo.cmake
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
