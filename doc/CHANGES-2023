@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7150 2023/11/21 16:09:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7151 2023/11/21 18:06:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10261,3 +10261,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/7kaa to 2.15.6 [nia 2023-11-21]
 	Updated games/abbayedesmorts to 2.0.2 [nia 2023-11-21]
 	Updated graphics/rawtherapee to 5.9 [wiz 2023-11-21]
+	Updated games/eternal-lands to 1.9.6.1 [nia 2023-11-21]
