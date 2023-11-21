@@ -1,17 +1,19 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:43:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/11/21 18:05:59 nia Exp $
 
-BLAKE2s (eternal-lands-1.9.5.8/EL_music_full.zip) = 74caeaf9788d78b4800c0ad159f925154ee0677147d9aa7955e01505adcdc045
-SHA512 (eternal-lands-1.9.5.8/EL_music_full.zip) = dbd24cb20331d3640b3a5891faaf88aa0e71ba0564dfde347f2ea0fcb7e0f2700f1324ee8e988c551efb943183bbc823d4ee0373ed2b1f6d0300df76e25a524c
-Size (eternal-lands-1.9.5.8/EL_music_full.zip) = 65511882 bytes
-BLAKE2s (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = 27ff85bd5b6c3221989870f87d5fdcf232b23b511edd9d3625e9abb1d1f9d137
-SHA512 (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = e5e89ec6e7df2b1ac80722b6daf5bbb350d2f1bc4c70c819992b528f25c2ac11434d053ff844ff5873deea16c5bbe305834ffeae7b5ecb6daea5638625851ce0
-Size (eternal-lands-1.9.5.8/Eternal-Lands-1.9.5.8.tar.gz) = 2863932 bytes
-BLAKE2s (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 509c186a0671d280874f0442f95e9bf08e6980199fce996418b877ce6722eeb1
-SHA512 (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 8fdbb9959a8f3a7265651c676ef4510be33461a7934090cfd892892c92678b59885335552b7b0159b212171695379d78155625c9895509251e2b40d47b4dfcf6
-Size (eternal-lands-1.9.5.8/el_195_p7_data_files.zip) = 63878875 bytes
-BLAKE2s (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 38ec5918eb343ec07592b244ef6628c921fafcc88f819a9facd422d096695014
-SHA512 (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 0954d657eb7c810e3182390bbf89d9ba0d6a4e7c053e3e50520e38d5b898d822f024353c1bacd26cdd04845a025d2797a19dff30800314b9958707be29277043
-Size (eternal-lands-1.9.5.8/eternallands-sound_1.9.5.zip) = 42908278 bytes
+BLAKE2s (eternal-lands-1.9.6.1/Eternal-Lands-1.9.6.1.tar.gz) = cd0e15830cb6ae25174afd4f6c0be19f1da393c7ef3a2eeeb47525d264902a59
+SHA512 (eternal-lands-1.9.6.1/Eternal-Lands-1.9.6.1.tar.gz) = ac0704b22e8f7525f0319a454b5be695e1640fc1be9fa5c5bbb5a0e32fde634fecb5bf33c23dd58115464d3c26b945ffb1bfb323f057f1c454601a7416d95b66
+Size (eternal-lands-1.9.6.1/Eternal-Lands-1.9.6.1.tar.gz) = 3877154 bytes
+BLAKE2s (eternal-lands-1.9.6.1/eternallands-data_1.9.6.0.zip) = 8d29b9c35fe08fbb59b3fc15ec30e0ee7582e45874d307ee39555a5a856c3188
+SHA512 (eternal-lands-1.9.6.1/eternallands-data_1.9.6.0.zip) = c88c457a8322820ee3d91e39eb607c0ee149874543b3a47ddc7f00b4e515bdf5d38dc9224aec2bd4c121a9a0a639f06b1cb498c588daa7c11f37fc65979cc2b4
+Size (eternal-lands-1.9.6.1/eternallands-data_1.9.6.0.zip) = 148701134 bytes
+BLAKE2s (eternal-lands-1.9.6.1/eternallands-music_1.9.5.9.zip) = 74caeaf9788d78b4800c0ad159f925154ee0677147d9aa7955e01505adcdc045
+SHA512 (eternal-lands-1.9.6.1/eternallands-music_1.9.5.9.zip) = dbd24cb20331d3640b3a5891faaf88aa0e71ba0564dfde347f2ea0fcb7e0f2700f1324ee8e988c551efb943183bbc823d4ee0373ed2b1f6d0300df76e25a524c
+Size (eternal-lands-1.9.6.1/eternallands-music_1.9.5.9.zip) = 65511882 bytes
+BLAKE2s (eternal-lands-1.9.6.1/eternallands-sound_1.9.5.9.zip) = 0b2a7952295d364f7814d88107a82e0fd5c6eb3ddd3e2c5d5803be1f86097b49
+SHA512 (eternal-lands-1.9.6.1/eternallands-sound_1.9.5.9.zip) = bfe493e9352a6500d3bf8017466397064f3bed5a588db11a0732bc4d802dff9aa635e5cbb80b62f64b1b7c800e798401271a8006b5cae28b30ff65290e0f7894
+Size (eternal-lands-1.9.6.1/eternallands-sound_1.9.5.9.zip) = 42907788 bytes
 SHA1 (patch-CMakeLists.txt) = 466007e5c4cdb27d009b44395ec600bf49566889
+SHA1 (patch-books.cpp) = d17631e9cbb9089a2eff46bd830e022eb78794d0
 SHA1 (patch-image.h) = b6f13fa7f0b467289a646401cdd03e50d019f97f
-SHA1 (patch-platform.h) = 20d11caec43a39e5f4d023c5c3a5a3833f6c77e5
+SHA1 (patch-quest__log.cpp) = f20a2ec0c8670beb7f4f90040fa79785c00d349e
+SHA1 (patch-textpopup.cpp) = 8cdfaee30c3f327c7010757cb33bab54995bab74
