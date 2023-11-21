@@ -1,0 +1,22 @@
+$NetBSD: patch-tools_hotplug_common_Makefile,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+
+--- tools/hotplug/common/Makefile.orig	2023-10-06 19:17:42.000000000 +0200
++++ tools/hotplug/common/Makefile	2023-10-11 16:12:44.756127842 +0200
+@@ -18,14 +18,14 @@
+ 
+ .PHONY: install-scripts
+ install-scripts: all
+-	$(INSTALL_DIR) $(DESTDIR)$(XEN_SCRIPT_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts
+ 	set -e; for i in $(XEN_SCRIPTS); \
+ 	   do \
+-	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	   $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts; \
+ 	done
+ 	set -e; for i in $(XEN_SCRIPT_DATA); \
+ 	   do \
+-	   $(INSTALL_DATA) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	   $(INSTALL_DATA) $$i $(DESTDIR)$(XEN_EXAMPLES_DIR)/scripts; \
+ 	done
+ 
+ .PHONY: uninstall-scripts
