@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7154 2023/11/21 20:06:45 markd Exp $
+$NetBSD: CHANGES-2023,v 1.7155 2023/11/21 20:38:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10267,3 +10267,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/x3270 to 4.3ga4 [rhialto 2023-11-21]
 	Updated graphics/py-cairo to 1.25.1nb3 [markd 2023-11-21]
 	Added graphics/py-cairo-shared version 1.25.1 [markd 2023-11-21]
+	Updated devel/py-wcwidth to 0.2.11 [adam 2023-11-21]
+	Updated devel/py-test-xdist to 3.5.0 [adam 2023-11-21]
