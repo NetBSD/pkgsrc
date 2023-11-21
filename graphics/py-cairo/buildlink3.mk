@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2023/11/15 21:03:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/11/21 19:56:37 markd Exp $
 
 BUILDLINK_TREE+=	py-cairo
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.py-cairo?=		../../graphics/py-cairo
 BUILDLINK_INCDIRS.py-cairo+=		${PYSITELIB}/cairo/include
 
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/py-cairo-shared/buildlink3.mk"
 .endif	# PY_CAIRO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-cairo
