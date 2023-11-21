@@ -1,26 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/11/21 16:09:25 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/11/21 16:26:36 wiz Exp $
 
-Adapt man path.
+Fix man page installation path.
 
---- CMakeLists.txt.orig	2022-11-27 18:04:23.000000000 +0000
+--- CMakeLists.txt.orig	2023-11-21 16:16:22.166786047 +0000
 +++ CMakeLists.txt
-@@ -757,18 +757,8 @@ install(
- 
- # The standard location for man pages in Linux is /usr/share/man Use "manpath"
- # to see the search paths for man pages on your system.
--if(BUILD_BUNDLE)
--    if(APPLE)
--        install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1"
-+install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1"
-                 DESTINATION "${DATADIR}/man/man1")
--    else()
--        install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1"
--                DESTINATION "${DATADIR}/share/man/man1")
--    endif()
--else()
--    install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1"
+@@ -767,7 +767,7 @@ if(BUILD_BUNDLE)
+     endif()
+ else()
+     install(FILES "${PROJECT_SOURCE_DIR}/doc/manpage/rawtherapee.1"
 -            DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1")
--endif()
++            DESTINATION "${CMAKE_INSTALL_PREFIX}/${PKGMANDIR}/man1")
+ endif()
  
  if(WIN32)
-     install(DIRECTORY "licenses" DESTINATION "${LICENCEDIR}")
