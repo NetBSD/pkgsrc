@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2023/11/20 11:25:10 pin Exp $
+$NetBSD: distinfo,v 1.25 2023/11/21 12:53:39 pin Exp $
 
 BLAKE2s (anstream-0.6.4.crate) = c9b06c7ea4af4a8fb696fb43c921063f74a793088ef0f441cb398852e72e0404
 SHA512 (anstream-0.6.4.crate) = 0b983d626c53d1edc184f04cbd2c004eb9c40d14486b23cce86ebf50cbd3d916d32cb0423ae1d67c2b83b966690090af740538538ef846c0b126c686a1ebe159
@@ -81,9 +81,9 @@ Size (crosstermion-0.10.1.crate) = 9114 bytes
 BLAKE2s (diff-0.1.13.crate) = f7ceba7e29d20d30066c8df5dc67d5b8c87889cc6042a036bf53614de944dd64
 SHA512 (diff-0.1.13.crate) = 45e259c9fe7c23bd9e9454891b42d4aef6d681d35ee039d21fdb05ae9ed5856161a40f29889e7880ac2a2daf85f1b7d752d213b4a99a1a74ed2682c18a3ae7fb
 Size (diff-0.1.13.crate) = 46216 bytes
-BLAKE2s (dua-cli-2.20.2.tar.gz) = f0fb5eb1f52c214eeab7d2df0c7aef19de5abe5a650ab68009e410c0511217ab
-SHA512 (dua-cli-2.20.2.tar.gz) = a6a35c5e08bcc4a86ae6f2017260bfa411fa5a77b45fbbc53913b6151757919d6dc77837f3f315b82223428266ab896a1926e5fe9cca16cf42424babbb9a99a5
-Size (dua-cli-2.20.2.tar.gz) = 105791 bytes
+BLAKE2s (dua-cli-2.20.3.tar.gz) = 4a06fdbf85f91bd6ff210a21c402bb80b8024bde0143baa7ef7deebf23e0ef09
+SHA512 (dua-cli-2.20.3.tar.gz) = b592d3a80e703ef9a31eb541cdab2de1f393f1959384f1c126907c729882d0387cc0ac841fc10df78831ba170058351256ee97cfb521a273f693122c490f3cdd
+Size (dua-cli-2.20.3.tar.gz) = 106372 bytes
 BLAKE2s (either-1.9.0.crate) = 5a2a8926fcb3b40b49b9bae0b6e35d54568dc40215691afa9bb355400b0eb180
 SHA512 (either-1.9.0.crate) = 4978d50842386f51e31a47ad037d5e491106a668bc701bb833e6ec3998afe3ebd80efddc47756b2f300f534b39b26fc01386dc878d3b02cc8c1fec6a474c2177
 Size (either-1.9.0.crate) = 16660 bytes
