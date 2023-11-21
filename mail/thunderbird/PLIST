@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2023/08/26 10:45:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.92 2023/11/21 21:32:51 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.sys.mjs
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.sys.mjs
@@ -185,6 +185,7 @@ lib/thunderbird/chrome/calendar/skin/classic/calendar/calendar-task-view.css
 lib/thunderbird/chrome/calendar/skin/classic/calendar/calendar-unifinder.css
 lib/thunderbird/chrome/calendar/skin/classic/calendar/calendar-views.css
 lib/thunderbird/chrome/calendar/skin/classic/calendar/calendar.css
+lib/thunderbird/chrome/calendar/skin/classic/calendar/dialogs/calendar-uri-redirect-dialog.css
 lib/thunderbird/chrome/calendar/skin/classic/calendar/imip.css
 lib/thunderbird/chrome/calendar/skin/classic/calendar/shared/attendee-icons.png
 lib/thunderbird/chrome/calendar/skin/classic/calendar/shared/calendar-alarms.css
@@ -4097,6 +4098,7 @@ lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/unified-toolba
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/unified-toolbar-tab.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/unified-toolbar.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/unifiedToolbarWebextensions.css
+lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/view-picker-button.mjs
 lib/thunderbird/chrome/messenger/content/messenger/viewLog.js
 lib/thunderbird/chrome/messenger/content/messenger/viewLog.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/viewSource.js
@@ -6274,7 +6276,6 @@ lib/thunderbird/modules/MailE10SUtils.jsm
 lib/thunderbird/modules/MailExtensionShortcuts.jsm
 lib/thunderbird/modules/MailGlue.jsm
 lib/thunderbird/modules/MailMigrator.jsm
-lib/thunderbird/modules/MailNewsCommandLineHandler.jsm
 lib/thunderbird/modules/MailNotificationManager.jsm
 lib/thunderbird/modules/MailNotificationService.jsm
 lib/thunderbird/modules/MailServices.jsm
@@ -7085,4 +7086,3 @@ lib/thunderbird/thunderbird-bin
 lib/thunderbird/vaapitest
 share/applications/thunderbird.desktop
 share/pixmaps/thunderbird.png
-@pkgdir lib/thunderbird/extensions
