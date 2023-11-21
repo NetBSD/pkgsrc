@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/28 07:36:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/21 14:05:36 nia Exp $
 bin/abbayev2
 share/abbayev2/data/enemies.txt
 share/abbayev2/data/map.txt
@@ -35,5 +35,6 @@ share/abbayev2/sounds/mechanismn.ogg
 share/abbayev2/sounds/onedeathn.ogg
 share/abbayev2/sounds/shoot.ogg
 share/abbayev2/sounds/slash.ogg
+share/appdata/abbaye.appdata.xml
 share/applications/abbaye.desktop
 share/pixmaps/abbaye.png
