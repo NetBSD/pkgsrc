@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2023/11/08 13:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/21 13:58:03 nia Exp $
 
-DISTNAME=	7kaa-2.15.4p1
-PKGREVISION=	13
+DISTNAME=	7kaa-2.15.6
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=the3dfxdude/}
-EXTRACT_SUFX=	.tar.xz
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=skfans/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://7kfans.com/
