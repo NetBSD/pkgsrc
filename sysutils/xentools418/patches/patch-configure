@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+
+Don't try to build stubdom
+
+--- configure.orig	2023-10-11 16:40:52.386364019 +0200
++++ configure	2023-10-11 16:41:06.088121617 +0200
+@@ -2127,7 +2127,7 @@
+ 
+ case "$host_cpu" in
+     i[3456]86|x86_64)
+-        arch_enable_stubdom=y
++        arch_enable_stubdom=n
+         ;;
+     *)
+         arch_enable_stubdom=n
