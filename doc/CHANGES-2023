@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7153 2023/11/21 19:19:16 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.7154 2023/11/21 20:06:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10265,3 +10265,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-asn1 to 0.5.1 [adam 2023-11-21]
 	Updated devel/py-minidump to 0.0.22 [adam 2023-11-21]
 	Updated x11/x3270 to 4.3ga4 [rhialto 2023-11-21]
+	Updated graphics/py-cairo to 1.25.1nb3 [markd 2023-11-21]
+	Added graphics/py-cairo-shared version 1.25.1 [markd 2023-11-21]
