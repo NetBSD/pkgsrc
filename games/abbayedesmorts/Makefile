@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/05/06 19:09:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/21 14:05:36 nia Exp $
 
-DISTNAME=	abbayedesmorts-gpl-2.0.1
+DISTNAME=	abbayedesmorts-gpl-2.0.2
 PKGNAME=	${DISTNAME:S/-gpl//1}
-PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nevat/}
 GITHUB_PROJECT=	abbayedesmorts-gpl
@@ -12,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nevat/abbayedesmorts-gpl
 COMMENT=	Obsolete video game for a dark passage of history
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
