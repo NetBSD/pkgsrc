@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/11/21 18:56:53 adam Exp $
 
 DISTNAME=	ldap3-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-asn1>=0.4.6:../../security/py-asn1
 TEST_DEPENDS+=	${PYPKGPREFIX}-gssapi-[0-9]*:../../security/py-gssapi
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-asn1
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} -m unittest discover -v -s test
