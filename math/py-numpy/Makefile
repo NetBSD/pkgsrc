@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/11/17 20:07:47 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/11/21 21:58:01 ryoon Exp $
 
 DISTNAME=	numpy-1.26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,6 +32,14 @@ USE_TOOLS+=		pkg-config
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+.include "../../lang/python/pyversion.mk"
+PLIST_VARS+=		distutils
+# Python 3.12 has no distutils anymore.
+.if ${PYTHON_VERSION} < 312
+PLIST.distutils=	yes
+.endif
+PRINT_PLIST_AWK+=	/\/distutils\// { $$0 = "$${PLIST.distutils}" $$0 }
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
