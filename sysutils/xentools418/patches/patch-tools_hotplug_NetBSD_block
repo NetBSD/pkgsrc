@@ -1,0 +1,27 @@
+$NetBSD: patch-tools_hotplug_NetBSD_block,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+
+work around an issue in NetBSD 9.99.x kernel: pass the vnd name to vnconfig,
+not the path to the block device.
+
+--- tools/hotplug/NetBSD/block.orig	2022-01-31 10:42:09.000000000 +0100
++++ tools/hotplug/NetBSD/block	2022-05-30 10:50:42.821527086 +0200
+@@ -64,8 +64,9 @@
+ 		for disk in $available_disks; do
+ 			eval status=\$$disk
+ 			if [ "$status" = "free" ] && \
+-			    vnconfig /dev/${disk}d $xparams >/dev/null; then
++			    vnconfig ${disk} $xparams >/dev/null; then
+ 				device=/dev/${disk}d
++				vnd_device=$disk
+ 				break	
+ 			fi
+ 		done
+@@ -73,7 +74,7 @@
+ 		if [ x$device = x ] ; then
+ 			error "no available vnd device"
+ 		fi
+-		xenstore-write $xpath/vnd $device
++		xenstore-write $xpath/vnd $vnd_device
+ 		;;
+ 	phy)
+ 		device=$xparams
