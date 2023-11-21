@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1030 2023/11/17 17:38:27 jakllsch Exp $
+# $NetBSD: Makefile,v 1.1031 2023/11/21 19:56:36 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -497,6 +497,7 @@ SUBDIR+=	py-blockdiag
 SUBDIR+=	py-blurhash
 SUBDIR+=	py-brewer2mpl
 SUBDIR+=	py-cairo
+SUBDIR+=	py-cairo-shared
 SUBDIR+=	py-cairo118
 SUBDIR+=	py-cairocffi
 SUBDIR+=	py-chart
