@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/11/12 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/21 18:05:59 nia Exp $
 
-EL_VER=		1.9.5.8
+EL_VER=		1.9.6.1
 PKGNAME=	eternal-lands-${EL_VER}
-PKGREVISION=	14
 CATEGORIES=	games
 
 # latest versions of everything available...
@@ -10,23 +9,23 @@ CATEGORIES=	games
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 DISTFILES+=	Eternal-Lands-${EL_VER}.tar.gz
-DISTFILES+=	eternallands-sound_1.9.5.zip
-DISTFILES+=	EL_music_full.zip
-DISTFILES+=	el_195_p7_data_files.zip
+DISTFILES+=	eternallands-data_1.9.6.0.zip
+DISTFILES+=	eternallands-sound_1.9.5.9.zip
+DISTFILES+=	eternallands-music_1.9.5.9.zip
 
 SITES.Eternal-Lands-${EL_VER}.tar.gz=	\
 	-https://github.com/raduprv/Eternal-Lands/archive/refs/tags/${EL_VER}.tar.gz
 
-SITES.eternallands-sound_1.9.5.zip=	\
-	http://www.gm.fh-koeln.de/~linke/EL-Downloads/
+SITES.eternallands-data_1.9.6.0.zip=	\
+	https://github.com/raduprv/Eternal-Lands/releases/download/1.9.6.0/
 
-SITES.EL_music_full.zip=	\
-	http://www.gm.fh-koeln.de/~linke/EL-Downloads/
+SITES.eternallands-music_1.9.5.9.zip=	\
+	https://github.com/raduprv/Eternal-Lands/releases/download/1.9.6.0/
 
-EXTRACT_DIR.EL_music_full.zip=	${WRKDIR}/music
+EXTRACT_DIR.eternallands-music_1.9.5.9.zip=	${WRKDIR}/music
 
-SITES.el_195_p7_data_files.zip=	\
-	https://github.com/raduprv/Eternal-Lands/releases/download/1.9.5.7/
+SITES.eternallands-sound_1.9.5.9.zip=	\
+	https://github.com/raduprv/Eternal-Lands/releases/download/1.9.6.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eternal-lands.com/
@@ -84,5 +83,6 @@ do-install:
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
