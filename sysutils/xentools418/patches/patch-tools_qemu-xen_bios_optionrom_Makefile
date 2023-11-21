@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_qemu-xen_bios_optionrom_Makefile,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+
+force ld in 32bit mode
+
+--- tools/qemu-xen/pc-bios/optionrom/Makefile.orig	2023-10-12 12:31:23.365032012 +0200
++++ tools/qemu-xen/pc-bios/optionrom/Makefile	2023-10-12 12:32:10.391775796 +0200
+@@ -36,7 +36,7 @@
+ 	    $(call cc-option,-Wno-array-bounds)) 3> config-cc.mak
+ -include config-cc.mak
+ 
+-override LDFLAGS = -nostdlib -Wl,-T,$(SRC_DIR)/flat.lds
++override LDFLAGS = -nostdlib -Wl,-melf_i386 -Wl,-T,$(SRC_DIR)/flat.lds
+ 
+ pvh.img: pvh.o pvh_main.o
+ 
