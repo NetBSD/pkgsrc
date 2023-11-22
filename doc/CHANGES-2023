@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7173 2023/11/22 13:05:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7174 2023/11/22 13:32:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10296,3 +10296,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/viu to 1.5.0 [pin 2023-11-22]
 	Updated devel/py-exceptiongroup to 1.2.0 [adam 2023-11-22]
 	Updated databases/py-mongo to 4.6.0 [adam 2023-11-22]
+	Updated www/firefox to 120.0 [ryoon 2023-11-22]
