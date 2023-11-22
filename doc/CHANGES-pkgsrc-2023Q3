@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.7 2023/11/04 17:32:51 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.8 2023/11/22 09:38:42 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -202,4 +202,14 @@ devel/libatomic; build fix
 
 Pullup ticket #6819 - requested by gutteridge
 audio/openal-soft: build fix
+
+Pullup ticket #6820 - requested by abs
+www/arcticfox: security and build fixes
+
+Pullup ticket #6821 - requested by nia
+devel/poco: build fix
+
+Pullup ticket #6823 - requested by bouyer
+sysutils/xenkernel415: security fix
+sysutils/xentools415: security fix
 
