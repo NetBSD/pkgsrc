@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/04/25 11:28:24 adam Exp $
+$NetBSD: distinfo,v 1.18 2023/11/22 10:34:25 adam Exp $
 
-BLAKE2s (mechanize-0.4.8.tar.gz) = 78c83bd48a7603741989948b25808a886ccad937f619220c4dea6ba5c4a7bcd0
-SHA512 (mechanize-0.4.8.tar.gz) = 71087481d27359b3ce795eae440ebb3a146f8dd5a6d5ac5dc91ae3c63f2c487beb472aa06b2925d6121faa038a0a8be50f6cecc54ee7209eb2b61e16242ffaa3
-Size (mechanize-0.4.8.tar.gz) = 218055 bytes
+BLAKE2s (mechanize-0.4.9.tar.gz) = 56e2f23c71da11183b8cf414c788c0e13c086656283ce69b4cd3a24fda2b26c5
+SHA512 (mechanize-0.4.9.tar.gz) = a0c5d6e01ddabd35dded9908e4f7e24cb0a8c20a674af603cd2f5f146c75d38dc96c36af0898646691206ce41745dff9a736ce53efd03ff48e55e763814b893c
+Size (mechanize-0.4.9.tar.gz) = 218286 bytes
