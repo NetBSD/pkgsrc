@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2023/10/24 22:11:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/11/22 08:05:43 wiz Exp $
 
 BUILDLINK_TREE+=	apache
 
@@ -8,10 +8,6 @@ APACHE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.4.7<2.5
 BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.58nb1
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache24
-BUILDLINK_DEPMETHOD.apache?=	build
-.if defined(APACHE_MODULE)
-BUILDLINK_DEPMETHOD.apache+=	full
-.endif
 
 BUILDLINK_FILES.apache+=	sbin/apxs
 ${BUILDLINK_DIR}/bin/apxs: buildlink-directories
