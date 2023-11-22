@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2023/10/18 09:38:41 adam Exp $
+# $NetBSD: Makefile,v 1.46 2023/11/22 10:31:16 adam Exp $
 
-DISTNAME=	mypy-1.6.1
+DISTNAME=	mypy-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -10,14 +10,14 @@ HOMEPAGE=	https://www.mypy-lang.org/
 COMMENT=	Optional static typing for Python
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.30.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
@@ -34,5 +34,5 @@ post-install:
 .endfor
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
