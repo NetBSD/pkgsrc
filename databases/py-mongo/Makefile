@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/08/27 03:42:27 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/22 13:04:32 adam Exp $
 
-DISTNAME=	pymongo-4.5.0
+DISTNAME=	pymongo-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymongo/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/mongodb/mongo-python-driver
 COMMENT=	Python driver for MongoDB
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=63.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.16.0:../../net/py-dns
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
