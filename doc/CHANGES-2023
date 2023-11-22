@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7161 2023/11/22 05:56:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7162 2023/11/22 07:32:49 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10277,3 +10277,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/thunderbird102-l10n to 102.15.1 [ryoon 2023-11-21]
 	Updated net/qbittorrent to 4.6.1 [adam 2023-11-22]
 	Updated devel/py-wcwidth to 0.2.12 [adam 2023-11-22]
+	Updated net/lagrange to 1.17.4 [yhardy 2023-11-22]
