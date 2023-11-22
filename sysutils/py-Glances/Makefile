@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/10/23 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/22 20:35:45 wiz Exp $
 
 DISTNAME=	Glances-3.4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}
 
@@ -11,22 +11,21 @@ HOMEPAGE=	https://nicolargo.github.io/glances/
 COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-psutil>=5.3.0:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
+DEPENDS+=	${PYPKGPREFIX}-ujson>=5.4.0:../../textproc/py-ujson
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
-SUBST_FILES.prefix=	${WRKSRC}/setup.py
+SUBST_FILES.prefix=	setup.py
 SUBST_SED.prefix=	-e 's,share/man,${PKGMANDIR},'
 
 post-extract:
@@ -41,5 +40,5 @@ post-install:
 	${MV} share/examples/glances share/examples/glances-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
