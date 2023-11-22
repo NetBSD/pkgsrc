@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7162 2023/11/22 07:32:49 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.7163 2023/11/22 10:10:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10278,3 +10278,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/qbittorrent to 4.6.1 [adam 2023-11-22]
 	Updated devel/py-wcwidth to 0.2.12 [adam 2023-11-22]
 	Updated net/lagrange to 1.17.4 [yhardy 2023-11-22]
+	Updated textproc/py-pygments to 2.17.2 [adam 2023-11-22]
+	Updated net/py-prometheus_client to 0.19.0 [adam 2023-11-22]
