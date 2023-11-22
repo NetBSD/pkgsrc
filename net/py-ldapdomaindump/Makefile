@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/17 11:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/22 14:11:59 jperkin Exp $
 
 DISTNAME=	ldapdomaindump-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.7:../../databases/py-ldap3
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	dns
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in ldapdomaindump ldd2bloodhound ldd2pretty
