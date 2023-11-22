@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7165 2023/11/22 10:43:20 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7166 2023/11/22 11:20:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10283,3 +10283,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-mypy to 1.7.0 [adam 2023-11-22]
 	Updated www/py-mechanize to 0.4.9 [adam 2023-11-22]
 	Updated textproc/p5-Text-ChaSen to 1.04nb15 [wiz 2023-11-22]
+	Updated games/angband-sdl to 4.2.5 [nia 2023-11-22]
+	Updated games/angband to 4.2.5 [nia 2023-11-22]
