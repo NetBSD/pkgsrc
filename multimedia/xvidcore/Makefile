@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/06/06 12:42:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.51 2023/11/22 16:23:28 tsutsui Exp $
 
 DISTNAME=	xvidcore-1.3.7
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://downloads.xvid.com/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +22,7 @@ USE_TOOLS+=		gmake
 # http://bugs.gentoo.org/show_bug.cgi?id=90287
 .if ${OPSYS} == "SunOS" || ${MACHINE_ARCH} == "x86_64" || \
     !empty(MACHINE_PLATFORM:MDarwin-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=	--disable-assembly
 .elif ${MACHINE_ARCH} == "i386"
 TOOL_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
