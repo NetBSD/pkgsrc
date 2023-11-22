@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/09/11 12:51:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/11/22 08:02:51 wiz Exp $
 
 BUILDLINK_TREE+=	libfishsound
 
@@ -12,15 +12,15 @@ BUILDLINK_PKGSRCDIR.libfishsound?=	../../audio/libfishsound
 pkgbase := libfishsound
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libfishsound:Mflac)
+.if ${PKG_BUILD_OPTIONS.libfishsound:Mflac}
 .include "../../audio/flac/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libfishsound:Mspeex)
+.if ${PKG_BUILD_OPTIONS.libfishsound:Mspeex}
 .include "../../audio/speex/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.libfishsound:Mvorbis)
+.if ${PKG_BUILD_OPTIONS.libfishsound:Mvorbis}
 .include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
