@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2023/11/12 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/22 11:19:36 nia Exp $
 
-PKGREVISION= 2
 .include "../../games/angband/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/angband-/angband-sdl-/}
@@ -13,27 +12,11 @@ CONFLICTS+=	angband-tty-[0-9]*
 CONFLICTS+=	angband-x11-[0-9]*
 SUPERSEDES=	angband-x11-[0-9]*
 
-ICON_SIZES=	16 32 128 256 512
-
 # XXX the SDL2 frontend doesn't seem particularly ready yet
 # e.g. selecting fonts, a tileset, or windowed mode doesn't seem to work
 # please switch this when it's ready.
 #CONFIGURE_ARGS+=	--enable-sdl2
 CONFIGURE_ARGS+=	--enable-sdl
-
-INSTALLATION_DIRS+=	share/applications
-.for s in ${ICON_SIZES}
-INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
-.endfor
-
-post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/share/angband/icons/angband-x11.desktop
-	${MV} ${DESTDIR}${PREFIX}/share/angband/icons/angband-sdl.desktop \
-	    ${DESTDIR}${PREFIX}/share/applications
-.for s in ${ICON_SIZES}
-	${INSTALL_DATA} ${WRKSRC}/lib/icons/att-${s}.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/angband.png
-.endfor
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 #.include "../../audio/SDL2_mixer/buildlink3.mk"
