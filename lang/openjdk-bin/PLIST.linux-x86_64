@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.5 2021/04/10 18:21:44 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.6 2023/11/22 14:11:32 ryoon Exp $
 bin/openjdk-bin-jar
 bin/openjdk-bin-jarsigner
 bin/openjdk-bin-java
@@ -51,10 +51,11 @@ java/openjdk-bin/bin/jshell
 java/openjdk-bin/bin/jstack
 java/openjdk-bin/bin/jstat
 java/openjdk-bin/bin/jstatd
+java/openjdk-bin/bin/jwebserver
 java/openjdk-bin/bin/keytool
-java/openjdk-bin/bin/rmid
 java/openjdk-bin/bin/rmiregistry
 java/openjdk-bin/bin/serialver
+java/openjdk-bin/conf/jaxp.properties
 java/openjdk-bin/conf/logging.properties
 java/openjdk-bin/conf/management/jmxremote.access
 java/openjdk-bin/conf/management/jmxremote.password.template
@@ -110,13 +111,14 @@ java/openjdk-bin/jmods/jdk.dynalink.jmod
 java/openjdk-bin/jmods/jdk.editpad.jmod
 java/openjdk-bin/jmods/jdk.hotspot.agent.jmod
 java/openjdk-bin/jmods/jdk.httpserver.jmod
-java/openjdk-bin/jmods/jdk.incubator.foreign.jmod
 java/openjdk-bin/jmods/jdk.incubator.vector.jmod
 java/openjdk-bin/jmods/jdk.internal.ed.jmod
 java/openjdk-bin/jmods/jdk.internal.jvmstat.jmod
 java/openjdk-bin/jmods/jdk.internal.le.jmod
 java/openjdk-bin/jmods/jdk.internal.opt.jmod
 java/openjdk-bin/jmods/jdk.internal.vm.ci.jmod
+java/openjdk-bin/jmods/jdk.internal.vm.compiler.jmod
+java/openjdk-bin/jmods/jdk.internal.vm.compiler.management.jmod
 java/openjdk-bin/jmods/jdk.jartool.jmod
 java/openjdk-bin/jmods/jdk.javadoc.jmod
 java/openjdk-bin/jmods/jdk.jcmd.jmod
@@ -138,6 +140,7 @@ java/openjdk-bin/jmods/jdk.naming.dns.jmod
 java/openjdk-bin/jmods/jdk.naming.rmi.jmod
 java/openjdk-bin/jmods/jdk.net.jmod
 java/openjdk-bin/jmods/jdk.nio.mapmode.jmod
+java/openjdk-bin/jmods/jdk.random.jmod
 java/openjdk-bin/jmods/jdk.sctp.jmod
 java/openjdk-bin/jmods/jdk.security.auth.jmod
 java/openjdk-bin/jmods/jdk.security.jgss.jmod
@@ -171,6 +174,7 @@ java/openjdk-bin/legal/java.desktop/jpeg.md
 java/openjdk-bin/legal/java.desktop/lcms.md
 java/openjdk-bin/legal/java.desktop/libpng.md
 java/openjdk-bin/legal/java.desktop/mesa3d.md
+java/openjdk-bin/legal/java.desktop/pipewire.md
 java/openjdk-bin/legal/java.desktop/xwd.md
 java/openjdk-bin/legal/java.instrument/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/java.instrument/ASSEMBLY_EXCEPTION
@@ -266,9 +270,6 @@ java/openjdk-bin/legal/jdk.hotspot.agent/LICENSE
 java/openjdk-bin/legal/jdk.httpserver/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.httpserver/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.httpserver/LICENSE
-java/openjdk-bin/legal/jdk.incubator.foreign/ADDITIONAL_LICENSE_INFO
-java/openjdk-bin/legal/jdk.incubator.foreign/ASSEMBLY_EXCEPTION
-java/openjdk-bin/legal/jdk.incubator.foreign/LICENSE
 java/openjdk-bin/legal/jdk.incubator.vector/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.incubator.vector/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.incubator.vector/LICENSE
@@ -289,6 +290,12 @@ java/openjdk-bin/legal/jdk.internal.opt/jopt-simple.md
 java/openjdk-bin/legal/jdk.internal.vm.ci/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.internal.vm.ci/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.internal.vm.ci/LICENSE
+java/openjdk-bin/legal/jdk.internal.vm.compiler.management/ADDITIONAL_LICENSE_INFO
+java/openjdk-bin/legal/jdk.internal.vm.compiler.management/ASSEMBLY_EXCEPTION
+java/openjdk-bin/legal/jdk.internal.vm.compiler.management/LICENSE
+java/openjdk-bin/legal/jdk.internal.vm.compiler/ADDITIONAL_LICENSE_INFO
+java/openjdk-bin/legal/jdk.internal.vm.compiler/ASSEMBLY_EXCEPTION
+java/openjdk-bin/legal/jdk.internal.vm.compiler/LICENSE
 java/openjdk-bin/legal/jdk.jartool/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.jartool/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.jartool/LICENSE
@@ -356,6 +363,9 @@ java/openjdk-bin/legal/jdk.net/LICENSE
 java/openjdk-bin/legal/jdk.nio.mapmode/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.nio.mapmode/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.nio.mapmode/LICENSE
+java/openjdk-bin/legal/jdk.random/ADDITIONAL_LICENSE_INFO
+java/openjdk-bin/legal/jdk.random/ASSEMBLY_EXCEPTION
+java/openjdk-bin/legal/jdk.random/LICENSE
 java/openjdk-bin/legal/jdk.sctp/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.sctp/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.sctp/LICENSE
@@ -392,7 +402,6 @@ java/openjdk-bin/lib/libawt_xawt.so
 java/openjdk-bin/lib/libdt_socket.so
 java/openjdk-bin/lib/libextnet.so
 java/openjdk-bin/lib/libfontmanager.so
-java/openjdk-bin/lib/libharfbuzz.so
 java/openjdk-bin/lib/libinstrument.so
 java/openjdk-bin/lib/libj2gss.so
 java/openjdk-bin/lib/libj2pcsc.so
@@ -406,7 +415,9 @@ java/openjdk-bin/lib/libjimage.so
 java/openjdk-bin/lib/libjli.so
 java/openjdk-bin/lib/libjsig.so
 java/openjdk-bin/lib/libjsound.so
+java/openjdk-bin/lib/libjsvml.so
 java/openjdk-bin/lib/liblcms.so
+java/openjdk-bin/lib/lible.so
 java/openjdk-bin/lib/libmanagement.so
 java/openjdk-bin/lib/libmanagement_agent.so
 java/openjdk-bin/lib/libmanagement_ext.so
@@ -418,12 +429,13 @@ java/openjdk-bin/lib/librmi.so
 java/openjdk-bin/lib/libsaproc.so
 java/openjdk-bin/lib/libsctp.so
 java/openjdk-bin/lib/libsplashscreen.so
+java/openjdk-bin/lib/libsyslookup.so
 java/openjdk-bin/lib/libverify.so
 java/openjdk-bin/lib/libzip.so
 java/openjdk-bin/lib/modules
 java/openjdk-bin/lib/psfont.properties.ja
 java/openjdk-bin/lib/psfontj2d.properties
-java/openjdk-bin/lib/security/blacklisted.certs
+java/openjdk-bin/lib/security/blocked.certs
 java/openjdk-bin/lib/security/cacerts
 java/openjdk-bin/lib/security/default.policy
 java/openjdk-bin/lib/security/public_suffix_list.dat
