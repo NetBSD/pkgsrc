@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:51:46 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/11/22 14:11:32 ryoon Exp $
 
-BLAKE2s (openjdk-16_linux-x64_bin.tar.gz) = 03eb885b8a6e8571dfc5e9a231fa66361d08a26a8a86cde7a133b1b2d7b4cc4a
-SHA512 (openjdk-16_linux-x64_bin.tar.gz) = 6a4fb63377965870e7d225b07cc448db5dbe6f7ead547c41ede5a247c3569185d9468a37a112828eac431cb6f8ef6915739ed592bf3961b793602309ff755bd1
-Size (openjdk-16_linux-x64_bin.tar.gz) = 184303539 bytes
+BLAKE2s (openjdk-21.0.1_linux-x64_bin.tar.gz) = 8a84b0ecfb449b2293e82f7aa04c6b781496f56215818766cda860a69e44f566
+SHA512 (openjdk-21.0.1_linux-x64_bin.tar.gz) = e7ddfab1e4d07100fddf09f712bd429cc44fea5e4ca97b145da61821a80313d0bfbdb0c8991a3996ee0fe0f29cc80e067e39d05296d6eb961820742bcd59d969
+Size (openjdk-21.0.1_linux-x64_bin.tar.gz) = 203394062 bytes
