@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/27 15:04:46 yhardy Exp $
+$NetBSD: distinfo,v 1.7 2023/11/22 07:32:25 yhardy Exp $
 
-BLAKE2s (lagrange-1.15.8.tar.gz) = a528315ca5299286b80072aaf98e597c9e3a5976ae4a3d385bf8697839912450
-SHA512 (lagrange-1.15.8.tar.gz) = d386bdbac133bc1dad73e0c5593875c234b567aba3706ef6c9b43d3aaa3761593beb20229182d1c00e941583d1ce81138d55941033df01112d4cc49b8ad8c9ee
-Size (lagrange-1.15.8.tar.gz) = 9961734 bytes
+BLAKE2s (lagrange-1.17.4.tar.gz) = d566151644f02c9909aa0790de26be9f75ada6acbe94c3dc60453b2654a76da9
+SHA512 (lagrange-1.17.4.tar.gz) = 772c19b7507de6f86c2d46479f625b132e1a3f97d1efd6fbdf9ad6c74d30b3f17626b0953ff0f3d79af2e457ef2c47f486316a19f4f014aae5807466ad6044d3
+Size (lagrange-1.17.4.tar.gz) = 10209579 bytes
