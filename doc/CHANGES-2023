@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7178 2023/11/22 14:20:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7179 2023/11/22 19:47:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10301,3 +10301,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/openjdk21 version 1.21.0.1.12 [ryoon 2023-11-22]
 	Updated lang/openjdk-bin to 21.0.1 [ryoon 2023-11-22]
 	Updated net/py-ldapdomaindump to 0.9.4nb1 [wiz 2023-11-22]
+	Updated filesystems/fuse-sshfs to 3.7.4a [wiz 2023-11-22]
