@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2022/05/15 18:54:44 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/11/22 11:19:36 nia Exp $
 # used by games/angband-sdl/Makefile
 # used by games/angband/Makefile
 
-DISTNAME=	angband-4.2.4
+DISTNAME=	angband-4.2.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angband/}
 GITHUB_PROJECT=	angband
