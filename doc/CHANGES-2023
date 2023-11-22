@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7166 2023/11/22 11:20:08 nia Exp $
+$NetBSD: CHANGES-2023,v 1.7167 2023/11/22 11:43:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10285,3 +10285,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Text-ChaSen to 1.04nb15 [wiz 2023-11-22]
 	Updated games/angband-sdl to 4.2.5 [nia 2023-11-22]
 	Updated games/angband to 4.2.5 [nia 2023-11-22]
+	Updated net/haproxy to 2.8.4 [adam 2023-11-22]
+	Updated devel/py-cattrs to 23.2.2 [adam 2023-11-22]
