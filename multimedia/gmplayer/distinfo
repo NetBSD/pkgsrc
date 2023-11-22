@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2022/12/15 07:10:55 wiz Exp $
+$NetBSD: distinfo,v 1.113 2023/11/22 16:31:22 tsutsui Exp $
 
 BLAKE2s (mplayer/Abyss-1.7.tar.bz2) = 8f2e3b2454234f396d8eec5916617133627621aa1690e68a876beb4716bdb2da
 SHA512 (mplayer/Abyss-1.7.tar.bz2) = e60aae7a6a264023ebb49421696bc78ec46b463ce6d7f869cc5561e183a6d5abd3846b71a45656c8ad2a6f35bafd76d15235216dcba3b4936ff7b364b7a66407
@@ -235,6 +235,7 @@ SHA1 (patch-libao2_ao__alsa.c) = da568da8b9290f1ed49ecedec7dc9141408698b1
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
 SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
 SHA1 (patch-mplayer.c) = 8cfdca9d062d4a10320a0471c91dd7c264aa963c
+SHA1 (patch-mpx86asm.h) = 513547bd86ad68c18d61ff04c5c7eb43f21734ca
 SHA1 (patch-stream_ai__alsa.c) = 1ed116931f4fde910c9bbe23680463a71631185c
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03
 SHA1 (patch-stream_dvbin.h) = ee4f74eb786100e7cc62be228d73ce29d88638d1
