@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.29 2023/08/25 11:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/11/22 10:31:16 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
 bin/stubtest-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mypy/__init__.py
 ${PYSITELIB}/mypy/__init__.pyc
 ${PYSITELIB}/mypy/__init__.pyo
@@ -226,6 +226,9 @@ ${PYSITELIB}/mypy/plugins/enums.pyo
 ${PYSITELIB}/mypy/plugins/functools.py
 ${PYSITELIB}/mypy/plugins/functools.pyc
 ${PYSITELIB}/mypy/plugins/functools.pyo
+${PYSITELIB}/mypy/plugins/proper_plugin.py
+${PYSITELIB}/mypy/plugins/proper_plugin.pyc
+${PYSITELIB}/mypy/plugins/proper_plugin.pyo
 ${PYSITELIB}/mypy/plugins/singledispatch.py
 ${PYSITELIB}/mypy/plugins/singledispatch.pyc
 ${PYSITELIB}/mypy/plugins/singledispatch.pyo
@@ -371,6 +374,12 @@ ${PYSITELIB}/mypy/test/helpers.pyo
 ${PYSITELIB}/mypy/test/meta/__init__.py
 ${PYSITELIB}/mypy/test/meta/__init__.pyc
 ${PYSITELIB}/mypy/test/meta/__init__.pyo
+${PYSITELIB}/mypy/test/meta/_pytest.py
+${PYSITELIB}/mypy/test/meta/_pytest.pyc
+${PYSITELIB}/mypy/test/meta/_pytest.pyo
+${PYSITELIB}/mypy/test/meta/test_diff_helper.py
+${PYSITELIB}/mypy/test/meta/test_diff_helper.pyc
+${PYSITELIB}/mypy/test/meta/test_diff_helper.pyo
 ${PYSITELIB}/mypy/test/meta/test_parse_data.py
 ${PYSITELIB}/mypy/test/meta/test_parse_data.pyc
 ${PYSITELIB}/mypy/test/meta/test_parse_data.pyo
@@ -535,6 +544,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_heapq.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_imp.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_json.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_locale.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_markupbase.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_msi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_operator.pyi
