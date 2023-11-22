@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2023/09/08 14:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/22 19:46:10 wiz Exp $
 
-DISTNAME=		sshfs-3.7.3.0.20230311
+DISTNAME=		sshfs-3.7.4a
 PKGNAME=		fuse-${DISTNAME}
 CATEGORIES=		filesystems
 #MASTER_SITES=		${MASTER_SITE_GITHUB:=libfuse/}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=deadbeefsociety/}
 GITHUB_PROJECT=		sshfs
-GITHUB_TAG=		23b94a5ac5b0253e7b3edd0f2d25cf818a550729
-#GITHUB_RELEASE=	${DISTNAME}
-#EXTRACT_SUFX=		.tar.xz
+GITHUB_RELEASE=		${DISTNAME}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/deadbeefsociety/sshfs/
