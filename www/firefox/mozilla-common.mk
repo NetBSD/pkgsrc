@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.269 2023/11/09 00:04:43 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.270 2023/11/22 13:32:12 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,7 +6,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312 # 120.0 will accept Python 3.12.
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
@@ -15,7 +15,7 @@ REPLACE_PYTHON=		build/cargo-linker
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake gm4 unzip zip # autoconf213
-UNLIMIT_RESOURCES+=	datasize virtualsize
+UNLIMIT_RESOURCES+=	datasize stacksize virtualsize
 
 USE_LANGUAGES+=		c c++
 
