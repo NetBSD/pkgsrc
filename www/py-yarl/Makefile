@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/04/26 13:46:13 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/22 12:27:21 adam Exp $
 
-DISTNAME=	yarl-1.9.2
+DISTNAME=	yarl-1.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -10,16 +10,21 @@ HOMEPAGE=	https://github.com/aio-libs/yarl
 COMMENT=	Yet another URL library
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+.endif
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
