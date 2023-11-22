@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2023/09/24 23:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/22 18:32:47 schmonz Exp $
 
 DISTNAME=	Brotli-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brotli/}
+# distfile is distinct from brotli's but filename differs only by case
+DIST_SUBDIR=	py-brotli
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/brotli
