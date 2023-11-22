@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7167 2023/11/22 11:43:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7168 2023/11/22 11:54:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10287,3 +10287,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/angband to 4.2.5 [nia 2023-11-22]
 	Updated net/haproxy to 2.8.4 [adam 2023-11-22]
 	Updated devel/py-cattrs to 23.2.2 [adam 2023-11-22]
+	Updated net/libcares to 1.22.1 [adam 2023-11-22]
+	Updated textproc/py-html5-parser to 0.4.12 [adam 2023-11-22]
