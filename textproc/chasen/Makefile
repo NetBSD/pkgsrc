@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:13 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.15 2023/11/22 10:44:20 wiz Exp $
 
 DISTNAME=	chasen-${CHASEN_VERSION}
-CATEGORIES=	japanese textproc
+CATEGORIES=	textproc japanese
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
