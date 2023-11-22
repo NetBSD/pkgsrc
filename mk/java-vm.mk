@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.136 2023/11/18 15:07:17 abs Exp $
+# $NetBSD: java-vm.mk,v 1.137 2023/11/22 14:13:13 ryoon Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -13,6 +13,7 @@
 #		adoptopenjdk11-bin
 #		openjdk-bin openjdk11
 #		openjdk17 oracle-jdk17
+#		openjdk21
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -31,7 +32,7 @@
 #	should be set to "yes". It can also be set to "1.4", "1.5", "6",
 #       "7", "8", "11" and "17" require an even more recent implementation.
 #
-#	Possible values: yes no 1.4 1.5 6 7 8 11 17
+#	Possible values: yes no 1.4 1.5 6 7 8 11 17 21
 #	Default value: no
 #
 # PKG_JVMS_ACCEPTED
@@ -75,11 +76,12 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # This is a list of all of the JDKs that may be used.
 #
 # adoptopenjdk11-bin and openjdk-bin do not provide native NetBSD binaries
-_PKG_JVMS.17=		openjdk17 oracle-jdk17
+_PKG_JVMS.21=		openjdk21 openjdk-bin
+_PKG_JVMS.17=		${_PKG_JVMS.21} openjdk17 oracle-jdk17
 .if ${OPSYS} == "NetBSD"
-_PKG_JVMS.11=		${_PKG_JVMS.17} openjdk11 adoptopenjdk11-bin openjdk-bin
+_PKG_JVMS.11=		${_PKG_JVMS.17} openjdk11 adoptopenjdk11-bin
 .else
-_PKG_JVMS.11=		${_PKG_JVMS.17} adoptopenjdk11-bin openjdk-bin openjdk11
+_PKG_JVMS.11=		${_PKG_JVMS.17} adoptopenjdk11-bin openjdk11
 .endif
 _PKG_JVMS.8=		${_PKG_JVMS.11} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} sun-jdk7
@@ -193,6 +195,8 @@ _ONLY_FOR_PLATFORMS.oracle-jdk17= \
 	NetBSD-9.*-x86_64		NetBSD-1[0-9].*-x86_64		\
 	Darwin-*-aarch64		Darwin-*-x86_64			\
 	Linux-*-aarch64			Linux-*-x86_64
+_ONLY_FOR_PLATFORMS.openjdk21= \
+	NetBSD-9.*-x86_64		NetBSD-1[0-9].*-x86_64
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}
@@ -217,6 +221,7 @@ _JAVA_PKGBASE.openjdk-bin=	openjdk-bin
 _JAVA_PKGBASE.openjdk11=	openjdk11
 _JAVA_PKGBASE.openjdk17=	openjdk17
 _JAVA_PKGBASE.oracle-jdk17=	oracle-jdk17
+_JAVA_PKGBASE.openjdk21=	openjdk21
 
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.kaffe=		kaffe
@@ -228,6 +233,7 @@ _JAVA_NAME.openjdk-bin=		openjdk-bin
 _JAVA_NAME.openjdk11=		openjdk11
 _JAVA_NAME.openjdk17=		openjdk17
 _JAVA_NAME.oracle-jdk17=	oracle-jdk17
+_JAVA_NAME.openjdk21=		openjdk21
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -286,6 +292,7 @@ BUILDLINK_API_DEPENDS.openjdk-bin?=	openjdk-bin-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk11?=	openjdk11-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk17?=	openjdk17-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jdk17?=	oracle-jdk17-[0-9]*
+BUILDLINK_API_DEPENDS.openjdk21?=	openjdk21-[0-9]*
 
 _JRE.kaffe=		kaffe
 _JRE.openjdk8=		openjdk8
@@ -296,6 +303,7 @@ _JRE.openjdk-bin=	openjdk-bin
 _JRE.openjdk11=		openjdk11
 _JRE.openjdk17=		openjdk17
 _JRE.oracle-jdk17=	oracle-jdk17
+_JRE.openjdk21=		openjdk21
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -340,6 +348,11 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 _JDK_PKGSRCDIR=		../../lang/oracle-jdk17
 _JRE_PKGSRCDIR=		../../lang/oracle-jdk17
 _JAVA_HOME=		${LOCALBASE}/java/oracle-jdk17
+UNLIMIT_RESOURCES+=	datasize virtualsize
+.elif ${_PKG_JVM} == "openjdk21"
+_JDK_PKGSRCDIR=		../../lang/openjdk21
+_JRE_PKGSRCDIR=		../../lang/openjdk21
+_JAVA_HOME=		${LOCALBASE}/java/openjdk21
 UNLIMIT_RESOURCES+=	datasize virtualsize
 .endif
 
