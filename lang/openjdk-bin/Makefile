@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/04/10 18:21:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/22 14:11:32 ryoon Exp $
 
-DISTNAME=	openjdk-16_linux-x64_bin
+DISTNAME=	openjdk-21.0.1_linux-x64_bin
 PKGNAME=	${DISTNAME:S/_linux-x64_bin//:S/openjdk-/openjdk-bin-/}
 CATEGORIES=	lang
-MASTER_SITES=	https://download.java.net/java/GA/jdk16/7863447f0ab643c585b9bdebf67c69db/36/GPL/
+MASTER_SITES=	https://download.java.net/java/GA/jdk21.0.1/415e3f918a1f4062a0074a2794853d0d/12/GPL/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://jdk.java.net/
@@ -20,7 +20,7 @@ CHECK_SSP_SUPPORTED=	no
 CTF_SUPPORTED=		no
 
 EMUL_PLATFORMS=		linux-x86_64
-EMUL_MODULES.linux=	compat locale x11
+EMUL_MODULES.linux=	locale x11
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
