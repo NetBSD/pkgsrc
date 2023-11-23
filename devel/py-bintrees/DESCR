@@ -1,6 +1,0 @@
-This package provides Binary- RedBlack- and AVL-Trees written in Python and
-Cython/C.
-
-This Classes are much slower than the built-in *dict* class, but all
-iterators/generators yielding data in sorted key order. Trees can be
-uses as drop in replacement for *dicts* in most cases.
