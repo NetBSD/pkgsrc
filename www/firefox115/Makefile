@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2023/11/14 14:03:04 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/23 12:47:01 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		115.3
-MOZ_BRANCH_MINOR=	.1esr
+MOZ_BRANCH=		115.5
+MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//:S/firefox-/firefox115-/}
-PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
