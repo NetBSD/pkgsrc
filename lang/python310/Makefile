@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/11/10 16:55:31 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/23 12:43:35 jperkin Exp $
 
 .include "dist.mk"
 
@@ -85,7 +85,6 @@ PKG_CXX=		clang++
 # Used in socketmodule.c to determine if a sethostname declaration is required
 CFLAGS.SunOS+=		-DPKGSRC_OPSYS_VERSION=${OPSYS_VERSION}
 LIBS.SunOS+=		-lrt	# fdatasync()
-LIBS.SunOS+=		-luuid
 .if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Replacing crypt with crypt_i
