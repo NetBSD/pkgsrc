@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2023/11/14 14:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2023/11/23 16:19:58 tsutsui Exp $
 
 DISTNAME=	mlterm-3.9.3
 PKGREVISION=	6
@@ -11,9 +11,6 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 LICENSE=	modified-bsd
-
-# CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
-NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-* NetBSD-1.5[A-S]-*
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
