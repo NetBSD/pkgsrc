@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2023/11/21 21:58:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.115 2023/11/23 08:54:23 wiz Exp $
 
 DISTNAME=	numpy-1.26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,9 @@ USE_LANGUAGES=		c c++ fortran
 FORCE_C_STD=		c99
 
 USE_CXX_FEATURES+=	c++17
+
+# checks for gcc 8.4
+GCC_REQD+=		8
 
 USE_TOOLS+=		pkg-config
 
