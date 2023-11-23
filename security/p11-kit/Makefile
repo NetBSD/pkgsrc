@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/11/16 12:11:27 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/23 15:31:39 jperkin Exp $
 
 DISTNAME=	p11-kit-0.25.3
 CATEGORIES=	security
@@ -26,7 +26,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 # reallocarray(3)
 CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
-CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS -D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 DLEXT.dylib=	dylib
