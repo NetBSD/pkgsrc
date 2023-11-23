@@ -1,16 +1,16 @@
-$NetBSD: patch-renpy_____init____.py,v 1.1 2023/03/10 21:14:39 ryoon Exp $
+$NetBSD: patch-renpy_____init____.py,v 1.2 2023/11/23 15:41:21 ryoon Exp $
 
 * Remove 'n' from version number to avoid invalid version number error.
   I should revisit this problem.
 
---- renpy/__init__.py.orig	2022-09-08 03:49:02.959533000 +0000
+--- renpy/__init__.py.orig	2023-09-18 22:22:33.609540000 +0000
 +++ renpy/__init__.py
-@@ -98,7 +98,7 @@ else:
+@@ -94,7 +94,7 @@ version_tuple = VersionTuple(*(int(i) fo
  version_only = ".".join(str(i) for i in version_tuple)
  
  if not official:
--    version_only += "u"
-+    pass # version_only += "u"
+-    version_only += "+unofficial"
++    pass
  elif nightly:
-     version_only += "n"
+     version_only += "+nightly"
  
