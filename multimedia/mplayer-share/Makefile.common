@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2023/11/23 17:21:51 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.68 2023/11/23 17:24:36 tsutsui Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -51,7 +51,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 # avoid text relocations caused by asm ops in #if HAVE_SSE4_INTERNAL block
 # in libmpcodecs/vf_ass.c
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--disable-sse4
 .endif
 
@@ -60,8 +60,8 @@ CONFIGURE_ARGS+=	--disable-sse4
 CONFIGURE_ARGS+=	--enable-big-endian
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-arm*} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-earm*}
 
 # autodetect code enables these options on NetBSD/arm but it should not
 CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
