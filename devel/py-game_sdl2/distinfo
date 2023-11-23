@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1 2023/03/10 21:06:07 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2023/11/23 15:39:05 ryoon Exp $
 
-BLAKE2s (pygame_sdl2-2.1.0-for-renpy-8.0.3.tar.gz) = cb25ff76ea4555e8156c92064f8749454b96c0213274aea5bbf438bfbbe851e2
-SHA512 (pygame_sdl2-2.1.0-for-renpy-8.0.3.tar.gz) = 135779d4de6e2bc8ade069c11d521dd0dc2bebae6dc63a374d478785fe7534626e9dc3c7f8f50c3291f4a60b26eb474c14e3971f0b9487215125bbcd5af6782c
-Size (pygame_sdl2-2.1.0-for-renpy-8.0.3.tar.gz) = 4053740 bytes
+BLAKE2s (pygame_sdl2-2.1.0+renpy8.1.3.tar.gz) = da635704fee0885d0b29e6930479e05a581a41563d1f1f73e108072f5b69e248
+SHA512 (pygame_sdl2-2.1.0+renpy8.1.3.tar.gz) = 3754a29996aa1992748d49b3d178d18e0cefdf17a63c7181027a3210f7360ac01b3a1d90691bb9789085cb8b61331118e6db93be24ea81b2e24e77e3b0de556c
+Size (pygame_sdl2-2.1.0+renpy8.1.3.tar.gz) = 4252499 bytes
+SHA1 (patch-src_pygame__sdl2_image.pyx) = 91bd8fb9da47d4e70837d78fabb9adeb3e2ea25b
+SHA1 (patch-src_pygame__sdl2_mixer.pyx) = 71bd73d47360a7e384fcc3db4767e1808d21d280
+SHA1 (patch-src_pygame__sdl2_mixer__music.pyx) = 098415b8235d9da74933651e472852125661b02d
+SHA1 (patch-src_pygame__sdl2_rwobject.pyx) = a87e264d3f512264ac91508d30a8083294e45341
