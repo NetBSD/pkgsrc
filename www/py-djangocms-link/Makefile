@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/05 11:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/23 08:53:23 wiz Exp $
 
 DISTNAME=	djangocms-link-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/divio/djangocms-link
 COMMENT=	Django CMS plugin that allows to add links
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.7:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.7:../../www/py-django-filer
