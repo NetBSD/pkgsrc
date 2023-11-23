@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.7 2023/03/10 21:14:39 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2023/11/23 15:41:21 ryoon Exp $
 
-BLAKE2s (renpy-8.0.3-source.tar.bz2) = 925dd1d89feb5b8e786b911e89f3cbb8e76e7262345b62804808f71585075df8
-SHA512 (renpy-8.0.3-source.tar.bz2) = 4cd0a12b48f4dab7b3dc81366d2e5a1913ead34f58f51b83d720cafdaac06366bbb2bcda4bc6361880571527193479ea3ff4f5d8d577c89722c271269cea12e3
-Size (renpy-8.0.3-source.tar.bz2) = 66167869 bytes
+BLAKE2s (renpy-8.1.3-source.tar.bz2) = b9155b726cdd4ddb9fd739f2829542ddc7cf2b5a2f71c9297936f2e358ced545
+SHA512 (renpy-8.1.3-source.tar.bz2) = 22304cf8e7328c50ff897761ec0a504e8618d53484491f4196ad93015656dd08c2197c11adea83069682912a5b8d05d3223e3ad34fa68881abdad5f73e51884b
+Size (renpy-8.1.3-source.tar.bz2) = 69220231 bytes
+SHA1 (patch-launcher_game_gui7_code.py) = da58df02611db214e8aebf53f6929fad5cbc4207
 SHA1 (patch-launcher_game_translations.rpy) = 4ac93764ddfed2eccc64a10f127cace2117d0208
-SHA1 (patch-module_renpybidicore.c) = 631452e7d88f95998bf0d1eb2bb2a2735a714282
-SHA1 (patch-module_setup.py) = 3b2cb5caadb0667ef597cda9793257f9c63b0c5e
-SHA1 (patch-module_setuplib.py) = d3615a7d66c006073bea486ba0c0bdcadfba855b
-SHA1 (patch-renpy_____init____.py) = c84c03dda5a4ecc86a1a45b614a3405d88f84057
-SHA1 (patch-renpy_common_00build.rpy) = 1f86540edef8fd7d7cd3b8788eb6532de20e5621
-SHA1 (patch-renpy_python.py) = ab22f4507958c95ed27d892cfc08934775c1764e
-SHA1 (patch-renpy_script.py) = cb4831416eda2bab14f832c6347c98515bbd488d
-SHA1 (patch-renpy_sl2_slast.py) = 70e5fe2a3e495e7fa8ba9e935ab69881f34b7514
+SHA1 (patch-module_renpybidicore.c) = 1aceeb4388c8386721e6ee9422952167c5a35add
+SHA1 (patch-module_setup.py) = 51112a4a6829b002c261068ae662e7eee7736809
+SHA1 (patch-module_tinyfiledialogs_tinyfiledialogs.c) = c1e5f0507c5145028337e608775937309667c688
+SHA1 (patch-renpy_____init____.py) = 52aa676ac6eb82d8367151422415557ec4ba08f8
+SHA1 (patch-renpy_audio_renpysound.pyx) = 37ced3a36097b01c3e84a1ab3e7a04b93f414c7a
+SHA1 (patch-renpy_text_ftfont.pyx) = dc7634ae6322136c55800e67f13405c8aaa882da
