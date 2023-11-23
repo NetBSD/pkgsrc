@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7210 2023/11/23 19:04:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7211 2023/11/23 19:10:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10336,3 +10336,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/tipidee to 0.0.2.0 [schmonz 2023-11-23]
 	Updated devel/swagger-codegen to 3.0.51 [schmonz 2023-11-23]
 	Updated mail/postforward to 1.1.1 [bsiegert 2023-11-23]
+	Updated net/vultr-cli to 2.20.0 [bsiegert 2023-11-23]
