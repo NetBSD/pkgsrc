@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/11/08 13:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/23 16:57:37 jperkin Exp $
 
 DISTNAME=	node-v18.18.2
 PKGREVISION=	3
@@ -44,9 +44,8 @@ minusx:
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 
-.include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/nodejs/Makefile.common"
+
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"
 .include "../../mk/atomic64.mk"
