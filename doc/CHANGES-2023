@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7186 2023/11/23 10:46:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7187 2023/11/23 11:23:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10312,3 +10312,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-bintrees [wiz 2023-11-23]
 	Updated www/py-django-appconf to 1.0.6 [adam 2023-11-23]
 	Updated www/py-django-filer to 3.1.1 [adam 2023-11-23]
+	Updated geography/py-proj to 3.2.1nb6 [wiz 2023-11-23]
