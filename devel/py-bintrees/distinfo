@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:13 nia Exp $
-
-BLAKE2s (bintrees-2.2.0.zip) = c03d8f3f2e380bab3d3e835f665c4e1678aeb11507ec922ed457ef71f9611afb
-SHA512 (bintrees-2.2.0.zip) = 897109b658354c91c0a04cb79d928048c787a4f63b70b557390ea7898fdb63bf6742c52891f1b2c2d6cc170f0e89e0269c8904cc958532e7295aba9d42cbf764
-Size (bintrees-2.2.0.zip) = 108273 bytes
