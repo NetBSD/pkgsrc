@@ -1,14 +1,14 @@
-$NetBSD: patch-ae,v 1.10 2023/11/23 16:15:04 ryoon Exp $
+$NetBSD: patch-ae,v 1.11 2023/11/23 16:19:41 wiz Exp $
 
  - Don't assert GNU ld on Solaris, where it might not be true.
  - Add endian compat.
 
---- include/local.h.orig	2023-05-04 07:16:16.000000000 +0000
+--- include/local.h.orig	2023-09-01 15:35:48.000000000 +0000
 +++ include/local.h
-@@ -45,6 +45,15 @@
- #endif
- #ifndef __BIG_ENDIAN
- #define __BIG_ENDIAN BIG_ENDIAN
+@@ -34,6 +34,15 @@
+ #include <endian.h>
+ #elif defined(HAVE_SYS_ENDIAN_H)
+ #include <sys/endian.h>
 +#elif defined(__sun)
 +#include <sys/byteorder.h>
 +#define __LITTLE_ENDIAN 1234
@@ -18,10 +18,10 @@ $NetBSD: patch-ae,v 1.10 2023/11/23 16:15:04 ryoon Exp $
 +#else
 +#define __BYTE_ORDER __LITTLE_ENDIAN
 +#endif
+ #else
+ #error Header defining endianness not defined
  #endif
- #include <stdarg.h>
- #include <poll.h>
-@@ -274,7 +283,9 @@ extern snd_lib_error_handler_t snd_err_m
+@@ -279,7 +288,9 @@ extern snd_lib_error_handler_t snd_err_m
  
  /*
   */
