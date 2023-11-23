@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7198 2023/11/23 15:39:19 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7199 2023/11/23 15:41:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10324,3 +10324,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/openjdk11 to 1.11.0.21.9 [ryoon 2023-11-23]
 	Updated lang/openjdk17 to 1.17.0.9.9 [ryoon 2023-11-23]
 	Updated devel/py-game_sdl2 to 2.1.0.8.1.3 [ryoon 2023-11-23]
+	Updated games/py-renpy to 8.1.3 [ryoon 2023-11-23]
