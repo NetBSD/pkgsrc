@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7188 2023/11/23 12:47:18 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7189 2023/11/23 12:47:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10314,3 +10314,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-filer to 3.1.1 [adam 2023-11-23]
 	Updated geography/py-proj to 3.2.1nb6 [wiz 2023-11-23]
 	Updated www/firefox115 to 115.5.0 [ryoon 2023-11-23]
+	Updated www/firefox115-l10n to 115.5.0 [ryoon 2023-11-23]
