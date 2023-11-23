@@ -1,14 +1,14 @@
-$NetBSD: patch-bi,v 1.3 2022/07/15 21:17:25 wiz Exp $
+$NetBSD: patch-bi,v 1.4 2023/11/23 16:15:04 ryoon Exp $
 
 For dlopen(), dlclose()...
 
---- src/pcm/pcm_ladspa.c.orig	2022-06-17 09:42:05.000000000 +0000
+--- src/pcm/pcm_ladspa.c.orig	2023-09-01 15:35:48.000000000 +0000
 +++ src/pcm/pcm_ladspa.c
-@@ -34,6 +34,7 @@
-   
- #include "config.h"
+@@ -35,6 +35,7 @@
+ #include "pcm_local.h"
+ #include "pcm_plugin.h"
  #include <dirent.h>
 +#include <dlfcn.h>
  #include <locale.h>
  #include <math.h>
- #include "pcm_local.h"
+ 
