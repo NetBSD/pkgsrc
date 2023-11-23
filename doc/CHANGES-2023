@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7204 2023/11/23 18:50:36 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7205 2023/11/23 18:51:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10330,3 +10330,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/vlc to 3.0.20 [ryoon 2023-11-23]
 	Updated lang/nim to 2.0.0 [ryoon 2023-11-23]
 	Updated devel/skalibs to 2.14.0.1 [schmonz 2023-11-23]
+	Updated sysutils/s6 to 2.12.0.2 [schmonz 2023-11-23]
