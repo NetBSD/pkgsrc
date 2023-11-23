@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:03:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/11/23 09:04:24 wiz Exp $
 
 BLAKE2s (plinkseq-0.08.tar.gz) = 4ea19b9ed7945d1ba1fc9485e147ee86bbf1a5537e2a5d41c8f160a963100f21
 SHA512 (plinkseq-0.08.tar.gz) = c82db774df26988f9af377d5493cf579bbf1a219b43987f74381f795ade2340dd486c8d7d629612fd6068a023ea605540f2c972bf7fb71d665730262ef94cb80
 Size (plinkseq-0.08.tar.gz) = 2991871 bytes
-SHA1 (patch-browser_main.c) = 2bbeed764180b0a0e30f134b40c650cfa20bdcec
+SHA1 (patch-browser_main.c) = 14df91271b4705ed06321b6acecd73f026963d01
 SHA1 (patch-browser_mongoose.c) = 02716eb71171edd37ae483d98a045c261e65defe
-SHA1 (patch-lib_annot.cpp) = b405bca26186ea08241ad5936c2a1b43212d8dec
-SHA1 (patch-lib_annot.h) = 5efccddf878b4628ae7186d59a726a157d356196
-SHA1 (patch-lib_token.cpp) = 848e7b790db6a4784697482ea330b4d474731368
+SHA1 (patch-lib_annot.cpp) = 408756e64603e01c19d57fe0431e6b4629a7687c
+SHA1 (patch-lib_annot.h) = 518bab5356a662cdc685050ee5e6c9d73bcff50c
+SHA1 (patch-lib_token.cpp) = d30b25f867dd79ef0c0c6e8b089fcc437f5ef777

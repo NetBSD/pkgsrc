@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_token.cpp,v 1.1 2014/02/08 12:27:14 wiedi Exp $
+$NetBSD: patch-lib_token.cpp,v 1.2 2023/11/23 09:04:24 wiz Exp $
 
 fix math ambiguity on sunos
+
 --- lib/token.cpp.orig	2012-03-17 17:06:01.000000000 +0000
 +++ lib/token.cpp
 @@ -1232,7 +1232,7 @@ Token Token::operator^(const Token & rhs
