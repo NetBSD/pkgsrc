@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/06/28 10:10:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/11/23 16:15:04 ryoon Exp $
 bin/aserver
 include/alsa/asoundef.h
 include/alsa/asoundlib.h
@@ -44,6 +44,8 @@ include/alsa/sound/uapi/sscape_ioctl.h
 include/alsa/sound/uapi/tlv.h
 include/alsa/timer.h
 include/alsa/topology.h
+include/alsa/ump.h
+include/alsa/ump_msg.h
 include/alsa/use-case.h
 include/alsa/version.h
 include/asoundlib.h

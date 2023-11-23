@@ -1,17 +1,13 @@
-$NetBSD: patch-amidi_amidi.c,v 1.1 2022/01/24 10:09:30 wiz Exp $
+$NetBSD: patch-amidi_amidi.c,v 1.2 2023/11/23 16:15:04 ryoon Exp $
 
-NetBSD does not provide CLOCK_MONOTONIC_RAW.
-
---- amidi/amidi.c.orig	2021-12-06 10:17:28.000000000 +0000
+--- amidi/amidi.c.orig	2023-09-01 15:36:26.000000000 +0000
 +++ amidi/amidi.c
-@@ -536,8 +536,10 @@ int main(int argc, char *argv[])
- 				cid = CLOCK_REALTIME;
- 			else if (strcasecmp(optarg, "monotonic") == 0)
- 				cid = CLOCK_MONOTONIC;
-+#if defined(CLOCK_MONOTONIC_RAW)
- 			else if (strcasecmp(optarg, "raw") == 0)
- 				cid = CLOCK_MONOTONIC_RAW;
-+#endif
- 			else
- 				error("Clock type not known");
- 			break;
+@@ -446,7 +446,7 @@ static void print_byte(unsigned char byt
+ 	printf("%02X", byte);
+ }
+ 
+-static void sig_handler(int)
++static void sig_handler(int sig ATTRIBUTE_UNUSED)
+ {
+ 	stop = 1;
+ }
