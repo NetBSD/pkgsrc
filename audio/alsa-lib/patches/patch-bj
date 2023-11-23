@@ -1,17 +1,17 @@
-$NetBSD: patch-bj,v 1.1 2008/12/25 13:18:00 hasso Exp $
+$NetBSD: patch-bj,v 1.2 2023/11/23 16:15:04 ryoon Exp $
 
---- src/pcm/pcm_direct.c.orig	2008-12-25 07:49:08 +0200
-+++ src/pcm/pcm_direct.c	2008-12-25 07:48:37 +0200
-@@ -44,7 +44,7 @@
-  *
+--- src/pcm/pcm_direct.c.orig	2023-05-04 07:16:16.000000000 +0000
++++ src/pcm/pcm_direct.c
+@@ -45,7 +45,7 @@
   */
   
+ #if !defined(__OpenBSD__) && !defined(__DragonFly__) && !defined(__ANDROID__)
 -union semun {
 +union semun_l {
  	int              val;    /* Value for SETVAL */
  	struct semid_ds *buf;    /* Buffer for IPC_STAT, IPC_SET */
  	unsigned short  *array;  /* Array for GETALL, SETALL */
-@@ -58,7 +58,7 @@ union semun {
+@@ -62,7 +62,7 @@ union semun {
  
  int snd_pcm_direct_semaphore_create_or_connect(snd_pcm_direct_t *dmix)
  {

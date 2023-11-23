@@ -1,13 +1,13 @@
-$NetBSD: patch-src_seq_seq__midi__event.c,v 1.2 2021/05/12 14:12:13 ryoon Exp $
+$NetBSD: patch-src_seq_seq__midi__event.c,v 1.3 2023/11/23 16:15:04 ryoon Exp $
 
---- src/seq/seq_midi_event.c.orig	2020-06-29 10:51:08.000000000 +0000
+--- src/seq/seq_midi_event.c.orig	2023-05-04 07:16:16.000000000 +0000
 +++ src/seq/seq_midi_event.c
-@@ -28,7 +28,7 @@
-  *   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-  */
+@@ -30,6 +30,8 @@
  
--#include <malloc.h>
+ #if HAVE_MALLOC_H
+ #include <malloc.h>
++#else
 +#include <stdlib.h>
+ #endif
  #include "local.h"
  
- #ifndef DOC_HIDDEN
