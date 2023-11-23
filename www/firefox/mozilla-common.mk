@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.270 2023/11/22 13:32:12 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.271 2023/11/23 05:03:38 snj Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -146,7 +146,7 @@ SUBST_MESSAGE.sqlite3-opt=	Fixing segfault in libmozsqlite3.so
 SUBST_FILES.sqlite3-opt+=	${MOZILLA_DIR}third_party/sqlite3/src/moz.build
 SUBST_VARS.sqlite3-opt+=	SQLITE3OPTFLAG
 
-# Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or rearlier.
+# Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or earlier.
 RUST_MAKE_JOBS=		# empty by default
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090400
 .  if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
