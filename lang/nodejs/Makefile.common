@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2023/11/22 16:30:23 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.55 2023/11/23 16:57:37 jperkin Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs14/Makefile
 # used by lang/nodejs16/Makefile
@@ -101,6 +101,7 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.41
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/nodejs/application.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
