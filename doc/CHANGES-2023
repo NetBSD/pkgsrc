@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7200 2023/11/23 16:15:30 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7201 2023/11/23 16:16:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10326,3 +10326,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-game_sdl2 to 2.1.0.8.1.3 [ryoon 2023-11-23]
 	Updated games/py-renpy to 8.1.3 [ryoon 2023-11-23]
 	Updated audio/alsa-lib to 1.2.10 [ryoon 2023-11-23]
+	Updated audio/alsa-utils to 1.2.10 [ryoon 2023-11-23]
