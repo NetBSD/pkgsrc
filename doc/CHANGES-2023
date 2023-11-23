@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7185 2023/11/23 09:03:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7186 2023/11/23 10:46:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10310,3 +10310,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitstring to 4.1.3 [adam 2023-11-23]
 	Updated devel/py-aiostream to 0.5.2 [adam 2023-11-23]
 	Removed devel/py-bintrees [wiz 2023-11-23]
+	Updated www/py-django-appconf to 1.0.6 [adam 2023-11-23]
+	Updated www/py-django-filer to 3.1.1 [adam 2023-11-23]
