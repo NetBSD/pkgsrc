@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/06 22:04:25 fcambus Exp $
-bin/binaryen-unittests
+@comment $NetBSD: PLIST,v 1.8 2023/11/23 11:11:25 wiz Exp $
+${PLIST.test}bin/binaryen-unittests
 bin/wasm-as
 bin/wasm-ctor-eval
 bin/wasm-dis
