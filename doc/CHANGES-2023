@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7193 2023/11/23 15:27:46 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7194 2023/11/23 15:28:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10319,3 +10319,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox102 to 102.15.1 [ryoon 2023-11-23]
 	Updated www/firefox102-l10n to 102.15.1 [ryoon 2023-11-23]
 	Updated mail/thunderbird to 115.5.0 [ryoon 2023-11-23]
+	Updated mail/thunderbird-l10n to 115.5.0 [ryoon 2023-11-23]
