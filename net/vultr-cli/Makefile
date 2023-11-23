@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.24 2023/11/10 15:45:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/23 19:10:20 bsiegert Exp $
 
-VERSION=	2.14.2
+VERSION=	2.20.0
 DISTNAME=	vultr-cli-${VERSION}
-PKGREVISION=	18
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_TAG=	v${VERSION}
 
-DIST_SUBDIR=	${DISTNAME}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vultr/vultr-cli/
 COMMENT=	Official command line tool for Vultr services
 LICENSE=	apache-2.0
 
-GO_DIST_BASE=		${PKGNAME_NOREV}
-GO_SRCPATH=		github.com/vultr/vultr-cli/v2
+GO_BUILD_PATTERN=	.
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/v2 ${DESTDIR}${PREFIX}/bin/vultr-cli
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/vultr-cli ${DESTDIR}${PREFIX}/bin/vultr-cli
 
+.include "go-modules.mk"
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
