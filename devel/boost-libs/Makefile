@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2023/11/08 13:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2023/11/23 18:50:41 jperkin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -64,6 +64,7 @@ do-build: bjam-build
 do-install: boost-install-libs
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
