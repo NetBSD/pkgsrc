@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/10/13 05:45:53 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/11/23 08:52:12 wiz Exp $
 
-DISTNAME=	zeroconf-0.116.0
+DISTNAME=	zeroconf-0.127.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
@@ -11,6 +11,8 @@ COMMENT=	Pure Python Multicast DNS Service Discovery Library
 LICENSE=	gnu-lgpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ifaddr>=0.1.7:../../net/py-ifaddr
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
@@ -29,5 +31,5 @@ DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.1:../../devel/py-async-timeout
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
