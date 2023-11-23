@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23702 2023/11/23 17:04:53 wiz Exp $
+$NetBSD: TODO,v 1.23703 2023/11/23 22:04:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1023,6 +1023,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openslp-2.0.0
+	o openssl-3.2.0
 	o openxenmanager-0.83
 	o opera-26
 	o opus-1.4
@@ -1207,7 +1208,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qcad-3.28.1.0
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qtcreator-10.0
+	o qtcreator-12.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
 	o radiance-5.3
@@ -1365,7 +1366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0.4
+	o tor-browser-13.0.5
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
