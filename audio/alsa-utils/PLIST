@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/12 14:13:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/23 16:15:04 ryoon Exp $
 bin/aconnect
 bin/alsabat
 bin/alsaloop
@@ -15,7 +15,9 @@ bin/aseqdump
 bin/aseqnet
 bin/axfer
 bin/iecset
+bin/nhlt-dmic-info
 bin/speaker-test
+lib/alsa-topology/libalsatplg_module_nhlt.la
 man/fr/man8/alsaconf.8
 man/man1/aconnect.1
 man/man1/alsa-info.sh.1
@@ -35,6 +37,7 @@ man/man1/axfer-list.1
 man/man1/axfer-transfer.1
 man/man1/axfer.1
 man/man1/iecset.1
+man/man1/nhlt-dmic-info.1
 man/man1/speaker-test.1
 man/man7/alsactl_init.7
 man/man8/alsaconf.8
@@ -49,7 +52,6 @@ share/alsa/init/hda
 share/alsa/init/help
 share/alsa/init/info
 share/alsa/init/test
-share/alsa/speaker-test/sample_map.csv
 share/sounds/alsa/Front_Center.wav
 share/sounds/alsa/Front_Left.wav
 share/sounds/alsa/Front_Right.wav

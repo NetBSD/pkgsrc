@@ -1,8 +1,8 @@
-$NetBSD: patch-alsaloop_alsaloop.c,v 1.3 2016/02/18 15:16:33 wiz Exp $
+$NetBSD: patch-alsaloop_alsaloop.c,v 1.4 2023/11/23 16:15:04 ryoon Exp $
 
---- alsaloop/alsaloop.c.orig	2015-10-27 16:34:26.000000000 +0000
+--- alsaloop/alsaloop.c.orig	2023-09-01 15:36:26.000000000 +0000
 +++ alsaloop/alsaloop.c
-@@ -24,6 +24,16 @@
+@@ -25,6 +25,16 @@
  #include <stdlib.h>
  #include <string.h>
  #include <sched.h>
@@ -19,9 +19,9 @@ $NetBSD: patch-alsaloop_alsaloop.c,v 1.3 2016/02/18 15:16:33 wiz Exp $
  #include <errno.h>
  #include <getopt.h>
  #include <alsa/asoundlib.h>
-@@ -34,6 +44,10 @@
- #include <signal.h>
+@@ -36,6 +46,10 @@
  #include "alsaloop.h"
+ #include "os_compat.h"
  
 +#if !defined(ESTRPIPE)
 +#define ESTRPIPE	EPIPE
@@ -30,3 +30,12 @@ $NetBSD: patch-alsaloop_alsaloop.c,v 1.3 2016/02/18 15:16:33 wiz Exp $
  struct loopback_thread {
  	int threaded;
  	pthread_t thread;
+@@ -821,7 +835,7 @@ static void send_to_all(int sig)
+ 	}
+ }
+ 
+-static void signal_handler(int)
++static void signal_handler(int sig ATTRIBUTE_UNUSED)
+ {
+ 	quit = 1;
+ 	send_to_all(SIGUSR2);

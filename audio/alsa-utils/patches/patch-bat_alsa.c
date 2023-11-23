@@ -1,10 +1,10 @@
-$NetBSD: patch-bat_alsa.c,v 1.1 2021/05/12 14:13:22 ryoon Exp $
+$NetBSD: patch-bat_alsa.c,v 1.2 2023/11/23 16:15:04 ryoon Exp $
 
---- bat/alsa.c.orig	2020-10-15 11:32:33.000000000 +0000
+--- bat/alsa.c.orig	2023-09-01 15:36:26.000000000 +0000
 +++ bat/alsa.c
-@@ -29,6 +29,10 @@
- #include "alsa.h"
+@@ -31,6 +31,10 @@
  #include "latencytest.h"
+ #include "os_compat.h"
  
 +#if !defined(ESTRPIPE)
 +#define ESTRPIPE EPIPE

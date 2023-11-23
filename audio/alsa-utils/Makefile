@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/07/19 14:16:11 vins Exp $
+# $NetBSD: Makefile,v 1.28 2023/11/23 16:15:04 ryoon Exp $
 
-DISTNAME=	alsa-utils-1.2.6
+DISTNAME=	alsa-utils-1.2.10
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/utils/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,7 @@ USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 LDFLAGS.Linux+=		-lm -lpthread
+LDFLAGS.NetBSD=		-lm -pthread
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
 CPPFLAGS.NetBSD+=	-Doff64_t=off_t
