@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2022/04/24 15:00:42 nia Exp $
+# $NetBSD: Makefile.common,v 1.67 2023/11/23 17:21:51 tsutsui Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -51,7 +51,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 # avoid text relocations caused by asm ops in #if HAVE_SSE4_INTERNAL block
 # in libmpcodecs/vf_ass.c
-.if !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=	--disable-sse4
 .endif
 
