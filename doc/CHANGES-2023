@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7206 2023/11/23 18:51:38 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7207 2023/11/23 18:51:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10332,3 +10332,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/skalibs to 2.14.0.1 [schmonz 2023-11-23]
 	Updated sysutils/s6 to 2.12.0.2 [schmonz 2023-11-23]
 	Updated net/s6-dns to 2.3.7.0 [schmonz 2023-11-23]
+	Updated net/s6-networking to 2.7.0.0 [schmonz 2023-11-23]
