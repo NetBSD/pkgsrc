@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/23 09:01:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/23 16:16:36 jperkin Exp $
 
 DISTNAME=	aiostream-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 # tests not included in pypi distfile
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
