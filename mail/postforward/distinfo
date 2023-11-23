@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:54:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/11/23 19:03:48 bsiegert Exp $
 
-BLAKE2s (postforward-1.1.0.tar.gz) = 1ff3e43b369ccf1723c9ed756ad7b94abac6d8658e31b98b676cc442411f1da1
-SHA512 (postforward-1.1.0.tar.gz) = 39d7a33c454b1529a691b24fd69b311ba368caf59168d39146654cfe319ebc3cf73835e66e6c95a43747f389a6b954ac8da0d7e934e562c16cb85dc20c0f4804
-Size (postforward-1.1.0.tar.gz) = 5707 bytes
+BLAKE2s (postforward-1.1.1.tar.gz) = b1bca72cb1d51423da6be7c9711d4151d30c8f5b2c19407ebcea539edab77577
+SHA512 (postforward-1.1.1.tar.gz) = 1f29e1731ef9fd1292f932a8e195577ce238f69c2e6ae1ffac81a577607fda98563b454564841011ce077cc8453e5ad78d2ab904fdf0fea67c15a69f6b2a3d92
+Size (postforward-1.1.1.tar.gz) = 6086 bytes
