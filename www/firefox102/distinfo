@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2023/09/10 14:42:28 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/11/23 14:22:32 ryoon Exp $
 
-BLAKE2s (firefox-102.15.0esr.source.tar.xz) = 0902dc8bd56f583010de778e62be623d82e3345776eab24b8d2d817ec22097b9
-SHA512 (firefox-102.15.0esr.source.tar.xz) = 87db6e32fda215253f9b3bd233ef7fa91a64349310064b8482e5c634f34cbe99a2a111d74d2b9f2a99a0b3b510dbf9039ebe4ccfc176c2554d65bc9cfb508bf9
-Size (firefox-102.15.0esr.source.tar.xz) = 486592324 bytes
+BLAKE2s (firefox-102.15.1esr.source.tar.xz) = 1dae9aa46405c07d2dcff2c0f74677925b646020c1722ff1034a39c2adb1e5bd
+SHA512 (firefox-102.15.1esr.source.tar.xz) = bdb66b4fb5622af3e60580a3bcd464d98ef13cb38d6ac6c9e5fc046e567a003cf080125d7748950c91c442fde5e8024c50c4180d2f551aa3528160a3c05ae187
+Size (firefox-102.15.1esr.source.tar.xz) = 483198220 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
@@ -16,6 +16,7 @@ SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e656
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
 SHA1 (patch-gfx_skia_skia_src_core_SkVM.cpp) = cdb2c2b0d512c0eb8403abba9b74c218d3a306ea
 SHA1 (patch-gfx_wr_swgl_build.rs) = df6ebfaabb4d27994e59a9d0eaf12c7cf08415fb
+SHA1 (patch-intl_lwbrk_LineBreaker.cpp) = e2eaf7d66f1255ba5baf7f7edadbb1fa8cb39b13
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 6cdd0fe60455eab8f9846257c2bfea207f19478b
