@@ -1,13 +1,13 @@
-$NetBSD: patch-src_pcm_pcm__mmap.c,v 1.3 2021/05/12 14:12:13 ryoon Exp $
+$NetBSD: patch-src_pcm_pcm__mmap.c,v 1.4 2023/11/23 16:15:04 ryoon Exp $
 
---- src/pcm/pcm_mmap.c.orig	2020-06-29 10:51:08.000000000 +0000
+--- src/pcm/pcm_mmap.c.orig	2023-05-04 07:16:16.000000000 +0000
 +++ src/pcm/pcm_mmap.c
-@@ -20,7 +20,7 @@
- 
- #include "config.h"
+@@ -22,6 +22,8 @@
  #include <stdio.h>
--#include <malloc.h>
+ #if HAVE_MALLOC_H
+ #include <malloc.h>
++#else
 +#include <stdlib.h>
+ #endif
  #include <string.h>
  #include <poll.h>
- #include <sys/mman.h>
