@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7182 2023/11/23 08:45:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7183 2023/11/23 08:52:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10306,3 +10306,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/py-pypika-tortoise version 0.1.6 [adam 2023-11-23]
 	Updated databases/py-tortoise-orm to 0.20.0 [adam 2023-11-23]
 	Updated net/gst-rtsp-server to 1.22.7 [wiz 2023-11-23]
+	Updated net/py-zeroconf to 0.127.0 [wiz 2023-11-23]
