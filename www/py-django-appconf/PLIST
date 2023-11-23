@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/06/05 11:36:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/23 10:43:28 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/appconf/__init__.py
 ${PYSITELIB}/appconf/__init__.pyc
 ${PYSITELIB}/appconf/__init__.pyo
@@ -8,8 +14,3 @@ ${PYSITELIB}/appconf/base.pyo
 ${PYSITELIB}/appconf/utils.py
 ${PYSITELIB}/appconf/utils.pyc
 ${PYSITELIB}/appconf/utils.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
