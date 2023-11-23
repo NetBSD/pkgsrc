@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2023/10/23 06:37:56 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2023/11/23 14:22:32 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,14 +6,14 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 gm4 unzip zip
-UNLIMIT_RESOURCES+=	datasize virtualsize
+UNLIMIT_RESOURCES+=	datasize stacksize virtualsize
 
 USE_LANGUAGES+=		c c++
 
@@ -108,21 +108,7 @@ CONFIGURE_ARGS+=	--with-clang-path=${PREFIX}/bin/clang
 .endif
 CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 
-# RLBox WASM sandbox
-.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
-# For wasm-ld command
-TOOL_DEPENDS+=		lld-[0-9]*:../../devel/lld
-.include "../../lang/wasi-libc/buildlink3.mk"
-.include "../../lang/wasi-libcxx/buildlink3.mk"
-# NB the exact versions of the clang and wasi-compiler-rt dependencies must
-# be kept in sync, or build failures will occur due to path mismatches.
-.include "../../lang/wasi-compiler-rt/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
-CONFIGURE_ENV+=		WASM_CC=${PREFIX}/bin/clang
-CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
-.else
 CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
-.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
