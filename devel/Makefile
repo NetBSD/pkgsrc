@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4133 2023/11/19 17:02:49 adam Exp $
+# $NetBSD: Makefile,v 1.4134 2023/11/23 09:03:33 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2413,7 +2413,6 @@ SUBDIR+=	py-backports_abc
 SUBDIR+=	py-behave
 SUBDIR+=	py-beniget
 SUBDIR+=	py-binaryornot
-SUBDIR+=	py-bintrees
 SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blessed
