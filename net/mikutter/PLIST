@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2022/01/08 15:17:54 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.53 2023/11/23 13:29:53 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -814,6 +814,16 @@ share/mikutter/plugin/web/.mikutter.yml
 share/mikutter/plugin/web/model/web.rb
 share/mikutter/plugin/web/web.rb
 share/mikutter/plugin/world/.mikutter.yml
+share/mikutter/plugin/world/blowfish_ecb/LICENSE.txt
+share/mikutter/plugin/world/blowfish_ecb/README.md
+share/mikutter/plugin/world/blowfish_ecb/blowfish_ecb.rb
+share/mikutter/plugin/world/blowfish_ecb/lib/cipher.rb
+share/mikutter/plugin/world/blowfish_ecb/lib/common.rb
+share/mikutter/plugin/world/blowfish_ecb/lib/ecb.rb
+share/mikutter/plugin/world/blowfish_ecb/lib/key.rb
+share/mikutter/plugin/world/blowfish_ecb/test/cipher_test.rb
+share/mikutter/plugin/world/blowfish_ecb/test/key_test.rb
+share/mikutter/plugin/world/blowfish_ecb/test/run_test.rb
 share/mikutter/plugin/world/error.rb
 share/mikutter/plugin/world/keep.rb
 share/mikutter/plugin/world/model/lost_world.rb
