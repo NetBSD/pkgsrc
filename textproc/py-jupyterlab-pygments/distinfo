@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/05/04 19:18:23 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/11/23 21:00:30 adam Exp $
 
-BLAKE2s (jupyterlab_pygments-0.2.2.tar.gz) = 133680bcc66a1244fef7d101618f0ccafe28d1d092470e43ed7b94df28c16cec
-SHA512 (jupyterlab_pygments-0.2.2.tar.gz) = 59d328522b11ecae6ae67ef8f9eb7168b0e4241cc6a68765096bf0ad26a20489f302179d50e7e46efd5b9de711520e2c67ab1e634cc583416277a98a5f663daa
-Size (jupyterlab_pygments-0.2.2.tar.gz) = 132378 bytes
+BLAKE2s (jupyterlab_pygments-0.3.0.tar.gz) = c6b03f43b698589b29f685e8fc1b915e70397849e9169ccca53872d6e536a2e4
+SHA512 (jupyterlab_pygments-0.3.0.tar.gz) = 8bf9bd445fc8216ea4b02ab3dd4c5a65a2b36933a04264f04897ed578078b1a0a2acf6cd956fccdd789d13ac1d5f889758f5c674b5d330a2bd43385337f26251
+Size (jupyterlab_pygments-0.3.0.tar.gz) = 512900 bytes
