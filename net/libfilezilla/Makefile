@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/11/08 13:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/11/23 11:15:13 wiz Exp $
 
 DISTNAME=	libfilezilla-0.45.0
 PKGREVISION=	1
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES=	c++17
+# NetBSD 9's gcc 7 is not good enough
+GCC_REQD+=		8
 
 PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 
