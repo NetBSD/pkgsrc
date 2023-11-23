@@ -1,10 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Mikutter
-GenericName=Twitter Client
-GenericName[ja]=ツイッター・クライアント
-Comment=Simple, powerful, and moeful twitter client
-Comment[ja]=全てのミク廃、そしてツイッター中毒に贈る 至高のTwitterクライアント
+GenericName=Mastodon Client
+GenericName[ja]=Mastodonクライアント
+Comment=Simple, powerful, and moeful Mastodon client
+Comment[ja]=全てのミク廃、そしてマイクロブログ中毒者へ贈る、至高のMastodonクライアント
 Exec=@PREFIX@/share/mikutter/mikutter.rb %u
 Icon=@PREFIX@/share/mikutter/core/skin/data/icon.png
 StartupNotify=false
