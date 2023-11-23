@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7196 2023/11/23 15:33:35 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7197 2023/11/23 15:34:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10322,3 +10322,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/thunderbird-l10n to 115.5.0 [ryoon 2023-11-23]
 	Updated lang/openjdk8 to 1.8.392 [ryoon 2023-11-23]
 	Updated lang/openjdk11 to 1.11.0.21.9 [ryoon 2023-11-23]
+	Updated lang/openjdk17 to 1.17.0.9.9 [ryoon 2023-11-23]
