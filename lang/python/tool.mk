@@ -1,4 +1,4 @@
-# $NetBSD: tool.mk,v 1.4 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: tool.mk,v 1.5 2023/11/23 11:00:52 jperkin Exp $
 #
 # Create `python' interpreter wrapper for applicable Python bin.
 #
@@ -12,6 +12,7 @@
 PYTHON_TOOL_MK=	defined
 
 .if !defined(PYTHON_PYVERSION_MK)
+PYTHON_FOR_BUILD_ONLY?=	tool
 .include "../../lang/python/pyversion.mk"
 .endif
 
