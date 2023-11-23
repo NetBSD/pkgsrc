@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/08 13:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/23 16:57:37 jperkin Exp $
 
 DISTNAME=	node-v20.9.0
 EXTRACT_SUFX=	.tar.xz
@@ -44,9 +44,8 @@ minusx:
 .endif
 
 .include "../../lang/nodejs/Makefile.common"
+
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/tool.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
