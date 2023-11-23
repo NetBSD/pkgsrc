@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7190 2023/11/23 13:30:21 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.7191 2023/11/23 14:22:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10316,3 +10316,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox115 to 115.5.0 [ryoon 2023-11-23]
 	Updated www/firefox115-l10n to 115.5.0 [ryoon 2023-11-23]
 	Updated net/mikutter to 5.0.5nb4 [tsutsui 2023-11-23]
+	Updated www/firefox102 to 102.15.1 [ryoon 2023-11-23]
