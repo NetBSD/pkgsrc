@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2023/11/12 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/23 15:39:05 ryoon Exp $
 
-DISTNAME=	pygame_sdl2-2.1.0-for-renpy-8.0.3
-PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0
-PKGREVISION=	2
+DISTNAME=	pygame_sdl2-2.1.0+renpy8.1.3
+PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0.8.1.3
 CATEGORIES=	devel games python
-MASTER_SITES=	https://www.renpy.org/dl/8.0.3/
+MASTER_SITES=	https://www.renpy.org/dl/8.1.3/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/renpy/pygame_sdl2
 COMMENT=	Set of Python modules designed for writing games for RenPy
 LICENSE=	gnu-lgpl-v2.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 USE_TOOLS+=	pkg-config
 
-EGG_NAME=	pygame_sdl2-${PKGVERSION_NOREV}
+EGG_NAME=	pygame_sdl2-2.1.0
 
 REPLACE_PYTHON+=	examples/*.py
 REPLACE_PYTHON+=	setup.py
@@ -40,8 +39,9 @@ PLIST.unix=		yes
 post-extract:
 	# Do not use pre-generated cython results.
 	# *_api.h is missing and it faild in install stage.
-	# These requires correct cython_dommand.
+	# These requires correct cython_command.
 	${RM} -f ${WRKSRC}/gen/*
+	${RM} -f ${WRKSRC}/gen-static/*
 	${RM} -f ${WRKSRC}/gen3/*
 	# Do not use invalid version number.
 	${RM} -f ${WRKSRC}/setup.cfg
