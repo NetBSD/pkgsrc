@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2023/11/17 08:17:04 nia Exp $
+# $NetBSD: Makefile,v 1.159 2023/11/23 10:57:44 jperkin Exp $
 
 DISTNAME=	cairo-1.18.0
 CATEGORIES=	graphics
@@ -17,6 +17,7 @@ USE_TOOLS+=		pkg-config
 
 # For snprintf() and ctime_r()
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS.SunOS+=		-lsocket
 
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
