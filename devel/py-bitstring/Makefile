@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/11/13 10:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/23 08:56:51 adam Exp $
 
-DISTNAME=	bitstring-4.1.2
+DISTNAME=	bitstring-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
@@ -17,11 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-bitarray>=2.8.0:../../devel/py-bitarray
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# remove broken test so others can run
-# https://github.com/scott-griffiths/bitstring/issues/301
-pre-test:
-	${RM} ${WRKSRC}/bitstring/plugin_test.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
