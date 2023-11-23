@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/06 20:13:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/23 09:02:51 wiz Exp $
 
-PKGREVISION=	6
+PKGREVISION=	7
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-manticore-[0-9]*:../../devel/py-manticore
 DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-pefile-[0-9]*:../../sysutils/py-pefile
 DEPENDS+=	${PYPKGPREFIX}-ana-[0-9]*:../../databases/py-ana
-DEPENDS+=	${PYPKGPREFIX}-bintrees-[0-9]*:../../devel/py-bintrees
 DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../devel/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-cooldict-[0-9]*:../../devel/py-cooldict
 DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
