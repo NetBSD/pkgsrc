@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/02 21:09:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2023/11/23 16:20:03 wiz Exp $
 
 BUILTIN_PKG:=	alsa-lib
 
@@ -13,9 +13,9 @@ PKGCONFIG_BASE.alsa-lib=	/usr
 ###
 
 CHECK_BUILTIN.alsa-lib?=	no
-.if !empty(CHECK_BUILTIN.alsa-lib:M[nN][oO])
+.if ${CHECK_BUILTIN.alsa-lib:tl} == no
 
-.  if !empty(USE_BUILTIN.alsa-lib:M[yY][eE][sS])
+.  if ${USE_BUILTIN.alsa-lib:tl} == yes
 BUILDLINK_PREFIX.alsa-lib=	/usr
 BUILDLINK_FILES.alsa-lib+=	lib/pkgconfig/alsa.pc
 .  endif
