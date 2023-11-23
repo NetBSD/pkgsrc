@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2023/11/19 01:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.696 2023/11/23 07:56:01 adam Exp $
 
 COMMENT=	Databases
 
@@ -399,6 +399,7 @@ SUBDIR+=	py-postgresql
 SUBDIR+=	py-psycopg2
 SUBDIR+=	py-pymysql
 SUBDIR+=	py-pypika
+SUBDIR+=	py-pypika-tortoise
 SUBDIR+=	py-python-sql
 SUBDIR+=	py-redis
 SUBDIR+=	py-rrdtool
