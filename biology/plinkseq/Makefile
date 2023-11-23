@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/11/15 18:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/23 09:04:41 wiz Exp $
 
 DISTNAME=	plinkseq-0.08
 PKGREVISION=	8
@@ -12,9 +12,12 @@ LICENSE=	gnu-gpl-v2	# Assuming same as plink.  No info on web.
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS=	bash:run
 REPLACE_BASH=	browser/pbrowse.in index/index.in
+
+USE_CXX_FEATURES=	c++14
+FORCE_CXX_STD=		c++14
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
