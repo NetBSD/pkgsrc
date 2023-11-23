@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.216 2023/11/14 14:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.217 2023/11/23 13:29:53 tsutsui Exp $
 
 DISTNAME=	mikutter-5.0.5
+DIST_SUBDIR=	${DISTNAME}	# for a pending patch in upstream Redmine
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
+
+PATCHFILES=		1585-use-own-blowfish-impl.patch
+PATCH_SITES=		https://dev.mikutter.hachune.net/attachments/download/813/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
-LICENSE=	mit AND cc-by-sa-v3.0
+LICENSE=	mit AND apache-2.0 AND cc-by-sa-v3.0
 
 .include "../../lang/ruby/rubyversion.mk"
 
@@ -42,7 +47,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mikutter.rb ${DESTDIR}${PREFIX}/share/mikutter
 	${INSTALL_DATA} ${WRKSRC}/Gemfile ${DESTDIR}${PREFIX}/share/mikutter
-	cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' core plugin ${DESTDIR}${PREFIX}/share/mikutter
+	cd ${WRKSRC} && pax -rwpp -s ':^.*\.orig$$::' -s ':^.*\.orig_dist$$::' core plugin ${DESTDIR}${PREFIX}/share/mikutter
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mikutter
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
