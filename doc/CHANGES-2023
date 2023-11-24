@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7220 2023/11/24 11:12:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7221 2023/11/24 12:56:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10348,3 +10348,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/difftastic to 0.53.0 [pin 2023-11-24]
 	Updated textproc/inlyne to 0.3.2 [pin 2023-11-24]
 	Added wm/oatbar version 0.0.27 [pin 2023-11-24]
+	Updated math/bc to 1.07.1 [ryoon 2023-11-24]
