@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/11/08 13:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/24 16:37:29 wiz Exp $
 
 DISTNAME=		sra-tools-3.0.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=		984f1493e8612cd59a269569bf8c06e25e4e604c
@@ -88,6 +88,7 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
