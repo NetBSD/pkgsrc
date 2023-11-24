@@ -1,6 +1,6 @@
-$NetBSD: patch-Coro_libcoro_coro.c,v 1.1 2020/09/21 22:46:11 wiz Exp $
+$NetBSD: patch-Coro_libcoro_coro.c,v 1.2 2023/11/24 16:32:37 wiz Exp $
 
-Workaround for libpthread bug in NetBSD.
+Workaround for libpthread bug in NetBSD, see PR 57721.
 
 --- Coro/libcoro/coro.c.orig	2018-08-14 15:37:40.000000000 +0000
 +++ Coro/libcoro/coro.c
