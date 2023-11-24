@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7216 2023/11/24 06:02:11 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7217 2023/11/24 06:04:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10344,3 +10344,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-frozendict to 2.3.9 [adam 2023-11-24]
 	Updated devel/py-pdm to 2.10.4 [adam 2023-11-24]
 	Updated lang/php81 to 8.1.25 [taca 2023-11-24]
+	Updated lang/php81 to 8.1.26 [taca 2023-11-24]
