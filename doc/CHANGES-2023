@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7224 2023/11/24 13:59:00 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7225 2023/11/24 14:03:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10352,3 +10352,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/socat to 1.8.0.0 [ryoon 2023-11-24]
 	Updated security/stunnel to 5.71 [ryoon 2023-11-24]
 	Updated lang/mono to 6.12.0.199 [ryoon 2023-11-24]
+	Updated misc/libreoffice to 7.6.3.2 [ryoon 2023-11-24]
