@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/24 20:25:39 jakllsch Exp $
 
 DISTNAME=	Argyll_V3.0.2_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	zlib/zlib.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
-BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
+TOOL_DEPENDS+=	jam>=2.5.2:../../devel/jam
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \
