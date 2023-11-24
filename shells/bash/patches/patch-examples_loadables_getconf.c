@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_loadables_getconf.c,v 1.2 2023/01/19 10:50:21 sborrill Exp $
+$NetBSD: patch-examples_loadables_getconf.c,v 1.3 2023/11/24 01:41:04 nia Exp $
 
 Handle _SC_RTSIG_MAX not being defined (NetBSD 9) as well as other missing
 definitions (_SC_REALTIME_SIGNALS, _SC_TIMER_MAX, _SC_CPUTIME,
@@ -6,8 +6,24 @@ _SC_THREAD_CPUTIME, SC_DELAYTIMER_MAX, _SC_SIGQUEUE_MAX) on earlier OS
 versions.
 
 --- examples/loadables/getconf.c.orig	2021-12-03 16:46:22.000000000 +0000
-+++ examples/loadables/getconf.c	2023-01-18 16:04:51.328120013 +0000
-@@ -329,7 +329,9 @@
++++ examples/loadables/getconf.c
+@@ -269,9 +269,15 @@ static const struct conf vars[] =
+ #ifdef _SC_AVPHYS_PAGES
+     { "_AVPHYS_PAGES", _SC_AVPHYS_PAGES, SYSCONF },
+ #endif
++#ifdef _SC_NPROCESSORS_CONF
+     { "_NPROCESSORS_CONF", _SC_NPROCESSORS_CONF, SYSCONF },
++#endif
++#ifdef _SC_NPROCESSORS_ONLN
+     { "_NPROCESSORS_ONLN", _SC_NPROCESSORS_ONLN, SYSCONF },
++#endif
++#ifdef _SC_PHYS_PAGES
+     { "_PHYS_PAGES", _SC_PHYS_PAGES, SYSCONF },
++#endif
+ #ifdef _SC_ARG_MAX
+     { "_POSIX_ARG_MAX", _SC_ARG_MAX, SYSCONF },
+ #else
+@@ -329,7 +335,9 @@ static const struct conf vars[] =
      { "_POSIX_PRIORITIZED_IO", _SC_PRIORITIZED_IO, SYSCONF },
  #endif
      { "_POSIX_PRIORITY_SCHEDULING", _SC_PRIORITY_SCHEDULING, SYSCONF },
@@ -17,7 +33,7 @@ versions.
      { "_POSIX_SAVED_IDS", _SC_SAVED_IDS, SYSCONF },
  #ifdef _SC_SELECT
      { "_POSIX_SELECT", _SC_SELECT, SYSCONF },
-@@ -366,7 +368,9 @@
+@@ -366,7 +374,9 @@ static const struct conf vars[] =
      { "_POSIX_THREAD_PROCESS_SHARED", _SC_THREAD_PROCESS_SHARED, SYSCONF },
      { "_POSIX_THREAD_SAFE_FUNCTIONS", _SC_THREAD_SAFE_FUNCTIONS, SYSCONF },
      { "_POSIX_TIMERS", _SC_TIMERS, SYSCONF },
@@ -27,7 +43,7 @@ versions.
  #ifdef _POSIX_TZNAME_MAX
      { "_POSIX_TZNAME_MAX", _SC_TZNAME_MAX, SYSCONF },
  #else
-@@ -743,8 +747,12 @@
+@@ -743,8 +753,12 @@ static const struct conf vars[] =
      { "_POSIX_C_LANG_SUPPORT_R", _SC_C_LANG_SUPPORT_R, SYSCONF },
  #endif
      { "_POSIX_CLOCK_SELECTION", _SC_CLOCK_SELECTION, SYSCONF },
@@ -40,7 +56,7 @@ versions.
  #ifdef _SC_DEVICE_SPECIFIC
      { "_POSIX_DEVICE_SPECIFIC", _SC_DEVICE_SPECIFIC, SYSCONF },
  #endif
-@@ -826,7 +834,9 @@
+@@ -826,7 +840,9 @@ static const struct conf vars[] =
  #ifdef _SC_AIO_PRIO_DELTA_MAX
      { "AIO_PRIO_DELTA_MAX", _SC_AIO_PRIO_DELTA_MAX, SYSCONF },
  #endif
@@ -50,7 +66,7 @@ versions.
      { "HOST_NAME_MAX", _SC_HOST_NAME_MAX, SYSCONF },
      { "LOGIN_NAME_MAX", _SC_LOGIN_NAME_MAX, SYSCONF },
      { "MQ_OPEN_MAX", _SC_MQ_OPEN_MAX, SYSCONF },
-@@ -846,14 +856,18 @@
+@@ -846,14 +862,18 @@ static const struct conf vars[] =
  #ifdef _SC_TRACE_LOG
      { "_POSIX_TRACE_LOG", _SC_TRACE_LOG, SYSCONF },
  #endif
