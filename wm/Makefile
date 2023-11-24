@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2023/04/12 10:26:47 pin Exp $
+# $NetBSD: Makefile,v 1.175 2023/11/24 11:11:50 pin Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -68,6 +68,7 @@ SUBDIR+=	musca
 SUBDIR+=	mutter
 SUBDIR+=	notion
 SUBDIR+=	novawm
+SUBDIR+=	oatbar
 SUBDIR+=	obconf
 SUBDIR+=	obconf-qt
 SUBDIR+=	obpager
