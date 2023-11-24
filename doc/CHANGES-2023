@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7218 2023/11/24 07:49:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7219 2023/11/24 07:50:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10346,3 +10346,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php81 to 8.1.25 [taca 2023-11-24]
 	Updated lang/php81 to 8.1.26 [taca 2023-11-24]
 	Updated devel/difftastic to 0.53.0 [pin 2023-11-24]
+	Updated textproc/inlyne to 0.3.2 [pin 2023-11-24]
