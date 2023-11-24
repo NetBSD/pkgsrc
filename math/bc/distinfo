@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:55:36 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/11/24 12:56:30 ryoon Exp $
 
-BLAKE2s (bc-1.06.95.tar.bz2) = c1f9a0bdd820e1540a5cfff855357bcc57ca1af987ddfeb8044beb2bccdfca14
-SHA512 (bc-1.06.95.tar.bz2) = 16ec13f87ef76ad4de77d378ef8d65a582adca1bf661c9d7675e78d940680c77e81a00a01817fde7c1ad1524562d6f933caa5c42a0686f3f85aadbb39393afb1
-Size (bc-1.06.95.tar.bz2) = 290069 bytes
-SHA1 (patch-bc_storage.c) = e4b4304d40bf131a262b634f5b728b232048a2f1
+BLAKE2s (bc-1.07.1.tar.gz) = 66d1fdcafa0528f8062cb700e319992bce3e72e6c83acb51263a71cb2cf31d64
+SHA512 (bc-1.07.1.tar.gz) = 02126d0db6b6ed06d56cfc292d6f5475ff1e574779d7e69c7809bbb1e13f946f57ea07da2a7666baa092507a951a822044b0970075f75eefe65a5c1999b75d34
+Size (bc-1.07.1.tar.gz) = 419850 bytes
