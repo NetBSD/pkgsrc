@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+# $NetBSD: version.mk,v 1.2 2023/11/24 10:26:14 bouyer Exp $
 #
 # Version number is used by xenkernel418, xentools418 and xenstoretools
 
@@ -21,7 +21,7 @@ QEMU_VERSION=		${VERSION}
 QEMU_DIST=		qemu-xen-${QEMU_VERSION}
 QEMU_DISTFILE=		${QEMU_DIST}.tar.gz
 DISTFILES+=		${QEMU_DISTFILE}
-SITES.${QEMU_DISTFILE}=	 ${MASTER_SITE_LOCAL}
+SITES.${QEMU_DISTFILE}=	 ${MASTER_SITE_LOCAL}xen418/
 
 QEMUTRAD_VERSION=	3d273dd05e51e5a1ffba3d98c7437ee84e8f8764
 QEMUTRAD_DIST=		qemu-xen-traditional-3d273dd
