@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/14 22:43:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/24 13:14:12 ryoon Exp $
 bin/filan
 bin/procan
 bin/socat
+bin/socat-broker.sh
+bin/socat-chain.sh
+bin/socat-mux.sh
+bin/socat1
 man/man1/socat.1
+man/man1/socat1.1
