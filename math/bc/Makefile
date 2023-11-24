@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:32:50 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/24 12:56:30 ryoon Exp $
 
-DISTNAME=	bc-1.06.95
+DISTNAME=	bc-1.07.1
 CATEGORIES=	math
-MASTER_SITES=	ftp://alpha.gnu.org/gnu/bc/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNU:=bc/}
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://www.gnu.org/software/bc/bc.html
