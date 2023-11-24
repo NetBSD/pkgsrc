@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/12 13:23:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/24 07:49:43 pin Exp $
 
-DISTNAME=	inlyne-0.3.1
-PKGREVISION=	2
+DISTNAME=	inlyne-0.3.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trimental/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
