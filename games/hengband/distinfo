@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:44:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/11/24 01:59:32 pho Exp $
 
 BLAKE2s (heng-graf-16x16.tar.gz) = 1e2910487e334c4f5d930d58f6aa4a7cffa6498da895347957ad9dee3085d7c9
 SHA512 (heng-graf-16x16.tar.gz) = 4641e12122b13015d03f8a7f3dcba72797495451f15c04eab2d6ea1fd57d082e11eea3115056c2a2203032db973bea01476ecb2389a7a730e98e972c41756dfa
@@ -11,4 +11,5 @@ SHA1 (patch-lib_edit_Makefile.am) = 9fd33498d6d83eeeb187e2491eac3ac15e7d412c
 SHA1 (patch-lib_xtra_graf_Makefile.am) = 71d8e17bfc39a689ab30f3a02b5f052687bcf1db
 SHA1 (patch-src_Makefile.am) = b71e0e4cc828c98d5bd4d89e3b263a406c0c8620
 SHA1 (patch-src_cmd3.c) = d2e4e61524b125069a5709462add001a7e7388ff
+SHA1 (patch-src_files.c) = 5d3d91072b828e10e0d09fb134308aa550cc5f82
 SHA1 (patch-src_init2.c) = fe7064f23bce494ced5a524f2a60117ac0ef56ff
