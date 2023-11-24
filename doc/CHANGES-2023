@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7222 2023/11/24 13:14:27 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7223 2023/11/24 13:33:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10350,3 +10350,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added wm/oatbar version 0.0.27 [pin 2023-11-24]
 	Updated math/bc to 1.07.1 [ryoon 2023-11-24]
 	Updated net/socat to 1.8.0.0 [ryoon 2023-11-24]
+	Updated security/stunnel to 5.71 [ryoon 2023-11-24]
