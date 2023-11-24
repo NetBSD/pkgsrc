@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/01/16 05:14:26 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/24 01:59:32 pho Exp $
 
 DISTNAME=	hengband-2.2.1r
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_OSDN:=hengband/72520/}
 
