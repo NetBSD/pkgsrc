@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1101 2023/11/21 11:39:06 bouyer Exp $
+# $NetBSD: Makefile,v 1.1102 2023/11/24 16:33:41 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -686,6 +686,7 @@ SUBDIR+=	sarah
 SUBDIR+=	screenbrightness
 SUBDIR+=	screenfetch
 SUBDIR+=	screentest
+SUBDIR+=	scriptisto
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
 SUBDIR+=	setquota
