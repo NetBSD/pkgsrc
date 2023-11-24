@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/08/04 09:36:10 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/24 14:09:19 ryoon Exp $
 
-ESR_VER=	102
+ESR_VER=	115
 PKGNAME=	firefox-esr-${ESR_VER}
 CATEGORIES=	www meta-pkgs
 DISTFILES=	#
