@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7217 2023/11/24 06:04:22 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7218 2023/11/24 07:49:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10345,3 +10345,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.10.4 [adam 2023-11-24]
 	Updated lang/php81 to 8.1.25 [taca 2023-11-24]
 	Updated lang/php81 to 8.1.26 [taca 2023-11-24]
+	Updated devel/difftastic to 0.53.0 [pin 2023-11-24]
