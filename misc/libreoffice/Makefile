@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.320 2023/11/14 14:02:31 wiz Exp $
+# $NetBSD: Makefile,v 1.321 2023/11/24 14:03:09 ryoon Exp $
 
-VERREL=		7.6.2
-VERRC=		1
+VERREL=		7.6.3
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -105,7 +104,7 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.1.8-src.tar.gz \
+	mariadb-connector-c-3.3.7-src.tar.gz \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
@@ -126,7 +125,7 @@ MORE_DISTFILES= \
 	pdfium-5778.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m111-a31e897fb3dcbc96b2b40999751611d029bf5404.tar.xz \
-	libcmis-0.5.2.tar.xz
+	libcmis-0.6.1.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
