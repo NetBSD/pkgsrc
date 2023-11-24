@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2023/10/24 22:11:00 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2023/11/24 13:32:48 ryoon Exp $
 
-DISTNAME=		stunnel-5.70
-PKGREVISION=		1
+DISTNAME=		stunnel-5.71
 CATEGORIES=		security
 MASTER_SITES=		https://www.stunnel.org/archive/5.x/
 
