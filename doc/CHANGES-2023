@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7214 2023/11/24 03:51:56 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7215 2023/11/24 05:29:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10341,3 +10341,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-mypy to 1.7.1 [adam 2023-11-23]
 	Updated textproc/py-jupyterlab-pygments to 0.3.0 [adam 2023-11-23]
 	Updated www/php-nextcloud to 27.1.3 [ryoon 2023-11-24]
+	Updated devel/py-frozendict to 2.3.9 [adam 2023-11-24]
+	Updated devel/py-pdm to 2.10.4 [adam 2023-11-24]
