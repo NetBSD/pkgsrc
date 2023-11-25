@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7229 2023/11/25 10:32:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7230 2023/11/25 10:32:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10357,3 +10357,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/scriptisto version 2.1.1 [pin 2023-11-24]
 	Updated graphics/xv to 3.10anb30 [tsutsui 2023-11-25]
 	Updated security/mozilla-rootcerts to 1.0.20231115 [wiz 2023-11-25]
+	Updated security/mozilla-rootcerts-openssl to 2.13 [wiz 2023-11-25]
