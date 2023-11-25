@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7238 2023/11/25 21:07:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7239 2023/11/25 21:59:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10366,3 +10366,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/fp-checkpassword to 0.0.20171108nb1 [schmonz 2023-11-25]
 	Updated sysutils/qmail-dovecot-checkpassword to 0.0.20141125nb1 [schmonz 2023-11-25]
 	Updated databases/sqlite3 to 3.44.2 [adam 2023-11-25]
+	Updated wm/spectrwm to 3.5.1 [pin 2023-11-25]
