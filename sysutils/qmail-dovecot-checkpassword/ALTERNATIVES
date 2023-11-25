@@ -1,0 +1,1 @@
+bin/nbcheckpassword @PREFIX@/bin/checkpasswd-dovecot
