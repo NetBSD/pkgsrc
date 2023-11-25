@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/23 20:30:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/25 19:10:29 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20171108
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Moosemorals/}
 GITHUB_PROJECT=		fp-checkpassword
