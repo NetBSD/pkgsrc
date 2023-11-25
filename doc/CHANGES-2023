@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7232 2023/11/25 16:29:47 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7233 2023/11/25 18:45:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10360,3 +10360,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/mozilla-rootcerts-openssl to 2.13 [wiz 2023-11-25]
 	Updated security/pcsc-lite to 2.0.1 [gdt 2023-11-25]
 	Updated geography/qgis to 3.28.12 [gdt 2023-11-25]
+	Updated sysutils/checkpassword-phpbb to 0.0.20150326nb2 [schmonz 2023-11-25]
