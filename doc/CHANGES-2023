@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7234 2023/11/25 19:03:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7235 2023/11/25 19:05:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10362,3 +10362,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/qgis to 3.28.12 [gdt 2023-11-25]
 	Updated sysutils/checkpassword-phpbb to 0.0.20150326nb2 [schmonz 2023-11-25]
 	Updated devel/fq to 0.9.0 [wiz 2023-11-25]
+	Updated sysutils/checkpw to 1.03 [schmonz 2023-11-25]
