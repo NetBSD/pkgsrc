@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/24 17:38:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/25 19:05:21 schmonz Exp $
 bin/checkapoppw
 bin/checkpw
 bin/loginlog
 bin/selectcheckpw
+share/doc/checkpw/INSTALL
+share/examples/checkpw/run-apop
+share/examples/checkpw/run-both
+share/examples/checkpw/run-multidir
+share/examples/checkpw/run-multipw
+share/examples/checkpw/run-pop
+share/examples/checkpw/run-rules

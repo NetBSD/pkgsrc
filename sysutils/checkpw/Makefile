@@ -1,15 +1,28 @@
-# $NetBSD: Makefile,v 1.1 2023/04/24 17:38:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/25 19:05:21 schmonz Exp $
 
 DISTNAME=		checkpw-1.03
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=checkpw/checkpw/${DISTNAME}/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://checkpw.sourceforge.net/
+HOMEPAGE=		https://checkpw.sourceforge.net/checkpw/
 COMMENT=		Password-checking tools for password files in Maildir
 LICENSE=		public-domain
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/examples/${PKGBASE}
+
+post-extract:
+	cd ${WRKSRC};							\
+	${MV} INSTALL INSTALL.txt
+
+post-install:
+	cd ${WRKSRC};							\
+	${INSTALL_DATA} INSTALL.txt					\
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/INSTALL;	\
+	for f in pop rules apop both multipw multidir; do		\
+		${INSTALL_DATA} run-$$f				\
+			${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/; \
+	done
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
