@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/16 19:03:46 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/11/25 14:05:09 gdt Exp $
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
 include/PCSC/pcsclite.h
@@ -11,3 +11,4 @@ man/man5/reader.conf.5
 man/man8/pcscd.8
 sbin/pcscd
 share/doc/pcsc-lite/README.polkit
+share/polkit-1/actions/org.debian.pcsc-lite.policy
