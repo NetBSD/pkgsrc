@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/07/09 09:58:29 nia Exp $
+# $NetBSD: Makefile,v 1.39 2023/11/25 14:05:09 gdt Exp $
 
-DISTNAME=	pcsc-lite-2.0.0
+DISTNAME=	pcsc-lite-2.0.1
 CATEGORIES=	security
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -37,6 +37,7 @@ BUILD_DEFS+=		VARBASE
 RCD_SCRIPTS=		pcscd
 
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
