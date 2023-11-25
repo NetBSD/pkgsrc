@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2023/11/07 12:46:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.91 2023/11/25 05:10:27 tsutsui Exp $
 
 DISTNAME=	gobject-introspection-1.78.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -28,7 +28,7 @@ SUBST_STAGE.timet=	pre-configure
 SUBST_FILES.timet=	giscanner/ast.py
 SUBST_FILES.timet+=	tests/scanner/Regress-1.0-expected.gir
 .include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_PLATFORM:MNetBSD-5.99.*} || ${MACHINE_PLATFORM:MNetBSD-[6-9].*} || ${MACHINE_PLATFORM:MMirBSD-*}
+.if ${MACHINE_PLATFORM:MNetBSD-*} || ${MACHINE_PLATFORM:MMirBSD-*}
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_INT64,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 .else
