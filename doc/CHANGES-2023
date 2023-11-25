@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7230 2023/11/25 10:32:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7231 2023/11/25 14:05:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10358,3 +10358,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/xv to 3.10anb30 [tsutsui 2023-11-25]
 	Updated security/mozilla-rootcerts to 1.0.20231115 [wiz 2023-11-25]
 	Updated security/mozilla-rootcerts-openssl to 2.13 [wiz 2023-11-25]
+	Updated security/pcsc-lite to 2.0.1 [gdt 2023-11-25]
