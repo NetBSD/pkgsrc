@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/11/25 08:03:01 tsutsui Exp $
+$NetBSD: distinfo,v 1.29 2023/11/25 08:19:15 tsutsui Exp $
 
 BLAKE2s (xv-3.10a-enhancements.20070520-20081216.diff) = 1333e3066444f6adf64e83c33a129a46143678d4b2c805f3740baae1320d3449
 SHA512 (xv-3.10a-enhancements.20070520-20081216.diff) = d7152799f6ec65404496b8d83a93681122fe1280741ffe4d20d7dc1b3791873081c778b3d9806f1217b9d45f5b5bfce6fdbfb655c26ed5e87388a6f517c4f2f7
@@ -23,4 +23,4 @@ SHA1 (patch-xvmisc.c) = ad326175632736e2d6dd257972d8cba5b24635a3
 SHA1 (patch-xvpcd.c) = 1825015f441b9af91916f9a62e8d1dee6ddfdef9
 SHA1 (patch-xvpng.c) = 2bda08bae67fcf127c49b9ed780b7a247579c088
 SHA1 (patch-xvwebp.c) = 9bffcb775d641f50d778ad026cb66880b74e7462
-SHA1 (patch-xvxbm.c) = efd77451cbf7ddc7bd904518478d1f91d1bfdebc
+SHA1 (patch-xvxbm.c) = b856397794a4025e001c3a5867010288ed61bedb
