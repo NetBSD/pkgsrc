@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/11/25 19:05:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/25 19:06:50 schmonz Exp $
 
 DISTNAME=		checkpw-1.03
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=checkpw/checkpw/${DISTNAME}/}
 
