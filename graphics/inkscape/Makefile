@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2023/11/19 19:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.280 2023/11/25 23:37:45 tnn Exp $
 
 DISTNAME=	inkscape-1.3.1
 CATEGORIES=	graphics
@@ -94,9 +94,18 @@ post-build:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	install_name_tool -change ${PREFIX}/lib/libinkscape_base.dylib \
-		${PREFIX}/lib/inkscape/libinkscape_base.dylib \
-		${DESTDIR}${PREFIX}/bin/inkscape
+	${RUN} cd ${DESTDIR}${PREFIX} && \
+		for f in lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.dylib; do	\
+			install_name_tool -id						\
+			${PREFIX}/$$f $$f;						\
+		done
+	${RUN} cd ${DESTDIR}${PREFIX} && \
+		for f in bin/inkscape bin/inkview; do					\
+			install_name_tool -change					\
+			${PREFIX}/lib/libinkscape_base.${PKGVERSION_NOREV}.0.dylib	\
+			${PREFIX}/lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.dylib	\
+			$$f;								\
+		done
 .endif
 
 .include "../../devel/cmake/build.mk"
