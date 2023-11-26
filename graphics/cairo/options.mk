@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2023/11/15 15:11:39 tnn Exp $
+# $NetBSD: options.mk,v 1.26 2023/11/26 18:45:03 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 PKG_SUPPORTED_OPTIONS=	x11 xcb
@@ -11,25 +11,27 @@ PKG_SUGGESTED_OPTIONS=	x11 xcb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	fontconfig freetype x11 xcb quartz
+PLIST_VARS+=	x11 xcb quartz
 
 ###
 ### X11 and XCB support (XCB implies X11)
 ###
 .if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Mxcb)
-PLIST.fontconfig=	yes
-PLIST.freetype=		yes
 PLIST.x11=		yes
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-
+MESON_ARGS+=		-Dxlib=enabled
 .  if !empty(PKG_OPTIONS:Mxcb)
 PLIST.xcb=	yes
 .    include "../../x11/libxcb/buildlink3.mk"
+MESON_ARGS+=		-Dxcb=enabled
+.  else
+MESON_ARGS+=		-Dxcb=disabled
 .  endif
+.else
+MESON_ARGS+=		-Dxlib=disabled
+MESON_ARGS+=		-Dxcb=disabled
 .endif
 
 ###
@@ -43,12 +45,9 @@ PLIST.xcb=	yes
 # fonts in MacOS X system-default paths too so sticking with it will
 # not be a problem.
 .if !empty(PKG_OPTIONS:Mquartz)
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-MESON_ARGS+=		-Dfreetype=enabled
-MESON_ARGS+=		-Dfontconfig=enabled
-PLIST.fontconfig=	yes
-PLIST.freetype=		yes
 PLIST.quartz=		yes
 WARNINGS+=		"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
+MESON_ARGS+=		-Dquartz=enabled
+.else
+MESON_ARGS+=		-Dquartz=disabled
 .endif
