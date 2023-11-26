@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/11/13 10:27:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/11/26 14:16:48 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
@@ -458,6 +458,7 @@ ${PYSITELIB}/Cython/Runtime/refnanny.pyx
 ${PYSITELIB}/Cython/Runtime/refnanny.so
 ${PYSITELIB}/Cython/Shadow.py
 ${PYSITELIB}/Cython/Shadow.pyc
+${PYSITELIB}/Cython/Shadow.pyi
 ${PYSITELIB}/Cython/Shadow.pyo
 ${PYSITELIB}/Cython/StringIOTree.py
 ${PYSITELIB}/Cython/StringIOTree.pyc
