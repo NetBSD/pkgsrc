@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/10/29 17:16:51 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/26 09:55:40 adam Exp $
 
-DISTNAME=	limits-3.6.0
+DISTNAME=	limits-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/limits/}
