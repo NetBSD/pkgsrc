@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/20 16:42:43 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/26 14:52:31 adam Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -42,14 +42,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 #pre-configure:
 #	${CHMOD} -R go-w ${WRKSRC}
 
+.include "../../mk/bsd.prefs.mk"
+
 # Include various packages needed for SDL2.
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/SDL2_sound/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .include "../../lang/python/wheel.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
