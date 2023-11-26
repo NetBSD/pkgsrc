@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7251 2023/11/26 10:27:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7252 2023/11/26 10:36:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10386,3 +10386,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.18.0 [adam 2023-11-26]
 	Updated devel/py-anyio to 4.1.0 [adam 2023-11-26]
 	Updated misc/py-trove-classifiers to 2023.11.22 [adam 2023-11-26]
+	Updated emulators/qemu to 8.1.3 [adam 2023-11-26]
+	Updated devel/py-test-rerunfailures to 13.0 [adam 2023-11-26]
