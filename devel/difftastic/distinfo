@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.27 2023/11/24 07:48:41 pin Exp $
+$NetBSD: distinfo,v 1.28 2023/11/26 16:07:51 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
 Size (ahash-0.7.6.crate) = 38030 bytes
-BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
-SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
-Size (aho-corasick-1.1.2.crate) = 183136 bytes
+BLAKE2s (aho-corasick-1.0.5.crate) = 2199caecbc50c93a65ce7d60055f1bcb6885adb15f1153c994432df75aa27240
+SHA512 (aho-corasick-1.0.5.crate) = 6b0a64dbfe0c166341a34cd169bc46d28e40f72db4d599a1aff5327a6e891408f39e8e92e983cf9396a8e8135f93e41550237ff3e5c8c05a5325688746fd814b
+Size (aho-corasick-1.0.5.crate) = 172064 bytes
 BLAKE2s (assert_cmd-2.0.5.crate) = b751ad8e502d403c769e39d036f93e3d160373ca1e0b8e7f7e7db2e5bc635c8a
 SHA512 (assert_cmd-2.0.5.crate) = 21046c01a6ca5b6cc679dd69914fdda75a5c9c17a572378d59ca17fce3952416dd95d25e3639d6f416f811f4c6485191c92f6bececd53c3644bbfd0a0c3b9c8f
 Size (assert_cmd-2.0.5.crate) = 22683 bytes
@@ -342,6 +342,9 @@ Size (thread_local-1.1.7.crate) = 13585 bytes
 BLAKE2s (tree-sitter-0.20.9.crate) = f2b05edf2121814c71c257ba615f7a60866a1ead59dc3fb9e96dac0fc42df441
 SHA512 (tree-sitter-0.20.9.crate) = 03e38b5252dd94b65c096ba9d07e6aecbb582c8460e2f1e0ad46122e372be7139462d7c411094ba557abd6566bd89faeaf7ff01bddb9283d2d7285d13e38c5a6
 Size (tree-sitter-0.20.9.crate) = 132102 bytes
+BLAKE2s (tree_magic_mini-3.0.2.crate) = 9dff021bae09d21eb378cbea84c1704331f6c4c4f9ab7012fa6e9f42b8705069
+SHA512 (tree_magic_mini-3.0.2.crate) = edc2665f8dec0b1a2f3db7d97686a3e6a17e9cd781160128bd5f29820145f50f9654776c3f4d9d4c0e6d9cab25ce1eb0c6ae30bdb70e9c9765e101ba14686406
+Size (tree_magic_mini-3.0.2.crate) = 15372 bytes
 BLAKE2s (tree_magic_mini-3.0.3.crate) = 90b0970dfbc21188cb29f4ce23e17f2fbba16bd6e200e2ebfb0e3a46a00cb246
 SHA512 (tree_magic_mini-3.0.3.crate) = 6299f42c3286a9a4b38a1503810b0eee302e99cfd386256dde275bd5df402ba6800cf94b4bb94444b011898657d687f89642634d20f6f07e2a7719c27188d684
 Size (tree_magic_mini-3.0.3.crate) = 15406 bytes
