@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7241 2023/11/26 01:30:47 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.7242 2023/11/26 01:33:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10369,3 +10369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/spectrwm to 3.5.1 [pin 2023-11-25]
 	Updated devel/xfce4-conf to 4.18.3 [gutteridge 2023-11-26]
 	Updated x11/xfce4-panel to 4.18.5 [gutteridge 2023-11-26]
+	Updated sysutils/xfce4-thunar to 4.18.8 [gutteridge 2023-11-26]
