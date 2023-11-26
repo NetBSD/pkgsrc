@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.111 2023/11/14 14:02:28 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/11/26 02:08:02 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
@@ -21,7 +21,7 @@ DEPENDS+=	xfce4-wavelan-plugin>=0.6.3:../../net/xfce4-wavelan-plugin
 DEPENDS+=	xfce4-battery-plugin>=1.1.5:../../sysutils/xfce4-battery-plugin
 DEPENDS+=	xfce4-calculator-plugin>=0.7.0:../../misc/xfce4-calculator-plugin
 DEPENDS+=	xfce4-clipman-plugin>=1.6.5:../../x11/xfce4-clipman-plugin
-DEPENDS+=	xfce4-dict>=0.8.5:../../textproc/xfce4-dict
+DEPENDS+=	xfce4-dict>=0.8.6:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.6.0:../../x11/xfce4-eyes-plugin
 DEPENDS+=	xfce4-fsguard-plugin>=1.1.3:../../sysutils/xfce4-fsguard-plugin
 DEPENDS+=	xfce4-genmon-plugin>=4.1.1:../../sysutils/xfce4-genmon-plugin
@@ -39,7 +39,7 @@ DEPENDS+=	xfce4-time-out-plugin>=1.1.3:../../misc/xfce4-time-out-plugin
 DEPENDS+=	xfce4-timer-plugin>=1.7.2:../../time/xfce4-timer-plugin
 DEPENDS+=	xfce4-verve-plugin>=2.0.3:../../sysutils/xfce4-verve-plugin
 DEPENDS+=	xfce4-weather-plugin>=0.11.1:../../misc/xfce4-weather-plugin
-DEPENDS+=	xfce4-whiskermenu-plugin>=2.8.0:../../x11/xfce4-whiskermenu-plugin
+DEPENDS+=	xfce4-whiskermenu-plugin>=2.8.1:../../x11/xfce4-whiskermenu-plugin
 DEPENDS+=	xfce4-xkb-plugin>=0.8.3:../../sysutils/xfce4-xkb-plugin
 
 # File Manager Plugins
