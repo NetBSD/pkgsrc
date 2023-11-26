@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7254 2023/11/26 12:36:03 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.7255 2023/11/26 14:22:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10390,3 +10390,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-rerunfailures to 13.0 [adam 2023-11-26]
 	Updated devel/py-pexpect to 4.9.0nb1 [wiz 2023-11-26]
 	Updated biology/vsearch to 2.26.1 [bacon 2023-11-26]
+	Updated devel/py-cython to 3.0.6 [adam 2023-11-26]
+	Updated devel/py-makefun to 1.15.2 [adam 2023-11-26]
