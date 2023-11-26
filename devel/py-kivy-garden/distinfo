@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/01/03 10:46:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/11/26 14:34:00 adam Exp $
 
-BLAKE2s (kivy-garden-0.1.4.tar.gz) = f2617c00235962a0b67b895d556e3add3c5f473ad0d465ec1d62a4f2fad49fb0
-SHA512 (kivy-garden-0.1.4.tar.gz) = 69b8fa2e2e80cc215eaad0eca78e1e207726ef2f611ba328863191580c19e77de970347b206c82927d92fbc821811956f8c45ac3613dafb2db706a491c50585f
-Size (kivy-garden-0.1.4.tar.gz) = 6849 bytes
+BLAKE2s (Kivy%20Garden-0.1.5.tar.gz) = 7301acef0c759de289a3b82a3b5843d7b9a254ceb3ef54213ee10367a16f62c0
+SHA512 (Kivy%20Garden-0.1.5.tar.gz) = 04c840e90551505e315d825c548589550fc4217d4c1b17860dfcccc4fb2d806a8c5414d7cc1277556df37dc0c5e12a8c0c68705bd860320fce1c38683d6fdb83
+Size (Kivy%20Garden-0.1.5.tar.gz) = 4130 bytes
+SHA1 (patch-setup.py) = 45322cc79f2a5c803ab0e532edcdd94f07adcaed
