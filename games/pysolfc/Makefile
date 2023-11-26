@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2023/10/22 11:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/11/26 16:45:02 adam Exp $
 
-DISTNAME=	PySolFC-2.14.1
+DISTNAME=	PySolFC-2.21.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +11,7 @@ HOMEPAGE=	https://pysolfc.sourceforge.io/
 COMMENT=	Over 1000 solitaire games
 LICENSE=	gnu-gpl-v3
 
-CARDSETS_NAME=	PySolFC-Cardsets-2.0
+CARDSETS_NAME=	PySolFC-Cardsets-2.2
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	${CARDSETS_NAME}.tar.bz2
 
@@ -24,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-kivy-[0-9]*:../../devel/py-kivy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pycotap-[0-9]*:../../devel/py-pycotap
 # not listed in setup.py, but needed
-DEPENDS+=       ${PYPKGPREFIX}-Pillow>=9.4:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.4:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 312
