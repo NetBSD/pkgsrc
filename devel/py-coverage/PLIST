@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/10/28 19:56:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/11/26 10:21:37 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -123,6 +123,7 @@ ${PYSITELIB}/coverage/templite.pyo
 ${PYSITELIB}/coverage/tomlconfig.py
 ${PYSITELIB}/coverage/tomlconfig.pyc
 ${PYSITELIB}/coverage/tomlconfig.pyo
+${PYSITELIB}/coverage/tracer.pyi
 ${PYSITELIB}/coverage/tracer.so
 ${PYSITELIB}/coverage/types.py
 ${PYSITELIB}/coverage/types.pyc
