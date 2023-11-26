@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7260 2023/11/26 16:07:15 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7261 2023/11/26 16:08:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10398,3 +10398,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-xattr to 1.0.0 [adam 2023-11-26]
 	Updated devel/py-pygit2 to 1.13.3 [adam 2023-11-26]
 	Updated devel/cargo-modules to 0.11.1 [pin 2023-11-26]
+	Updated devel/difftastic to 0.53.0 [pin 2023-11-26]
