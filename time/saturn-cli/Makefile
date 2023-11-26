@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/24 22:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/26 16:09:59 pin Exp $
 
-DISTNAME=	saturn-0.4.3
-PKGNAME=	saturn-cli-0.4.3
-PKGREVISION=	1
+DISTNAME=	saturn-0.4.4
+PKGNAME=	saturn-cli-0.4.4
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erikh/}
 GITHUB_PROJECT=	saturn
