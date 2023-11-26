@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/01/14 17:51:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/11/26 10:04:16 adam Exp $
 ${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -15,8 +15,14 @@ ${PYSITELIB}/pexpect/__init__.py
 ${PYSITELIB}/pexpect/__init__.pyc
 ${PYSITELIB}/pexpect/__init__.pyo
 ${PYSITELIB}/pexpect/_async.py
-${PLIST.py3x}${PYSITELIB}/pexpect/_async.pyc
-${PLIST.py3x}${PYSITELIB}/pexpect/_async.pyo
+${PYSITELIB}/pexpect/_async.pyc
+${PYSITELIB}/pexpect/_async.pyo
+${PYSITELIB}/pexpect/_async_pre_await.py
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_pre_await.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_pre_await.pyo
+${PYSITELIB}/pexpect/_async_w_await.py
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_w_await.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_w_await.pyo
 ${PYSITELIB}/pexpect/bashrc.sh
 ${PYSITELIB}/pexpect/exceptions.py
 ${PYSITELIB}/pexpect/exceptions.pyc
@@ -45,6 +51,9 @@ ${PYSITELIB}/pexpect/run.pyo
 ${PYSITELIB}/pexpect/screen.py
 ${PYSITELIB}/pexpect/screen.pyc
 ${PYSITELIB}/pexpect/screen.pyo
+${PYSITELIB}/pexpect/socket_pexpect.py
+${PLIST.py3x}${PYSITELIB}/pexpect/socket_pexpect.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/socket_pexpect.pyo
 ${PYSITELIB}/pexpect/spawnbase.py
 ${PYSITELIB}/pexpect/spawnbase.pyc
 ${PYSITELIB}/pexpect/spawnbase.pyo
