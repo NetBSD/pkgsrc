@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7250 2023/11/26 10:06:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7251 2023/11/26 10:27:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10384,3 +10384,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-parse to 1.20.0 [adam 2023-11-26]
 	Updated devel/py-pexpect to 4.9.0 [adam 2023-11-26]
 	Updated devel/py-ipython to 8.18.0 [adam 2023-11-26]
+	Updated devel/py-anyio to 4.1.0 [adam 2023-11-26]
+	Updated misc/py-trove-classifiers to 2023.11.22 [adam 2023-11-26]
