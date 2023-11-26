@@ -1,0 +1,1 @@
+bin/pysol_cards @PREFIX@/bin/pysol_cards-@PYVERSSUFFIX@
