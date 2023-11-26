@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7257 2023/11/26 14:45:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7258 2023/11/26 15:00:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10393,3 +10393,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-makefun to 1.15.2 [adam 2023-11-26]
 	Updated devel/py-kivy-garden to 0.1.5 [adam 2023-11-26]
 	Updated games/py-pysol_cards to 0.14.3 [adam 2023-11-26]
+	Updated audio/SDL2_sound to 2.0.2 [adam 2023-11-26]
+	Updated devel/py-pebble to 5.0.4 [adam 2023-11-26]
