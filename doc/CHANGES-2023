@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7249 2023/11/26 07:59:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7250 2023/11/26 10:06:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10379,3 +10379,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp3 to 1.1.0 [adam 2023-11-26]
 	Updated lang/nodejs20 to 20.10.0 [adam 2023-11-26]
 	Updated textproc/ugrep to 4.3.4 [adam 2023-11-26]
+	Updated www/py-idna to 3.6 [adam 2023-11-26]
+	Updated devel/py-limits to 3.7.0 [adam 2023-11-26]
+	Updated textproc/py-parse to 1.20.0 [adam 2023-11-26]
+	Updated devel/py-pexpect to 4.9.0 [adam 2023-11-26]
+	Updated devel/py-ipython to 8.18.0 [adam 2023-11-26]
