@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7248 2023/11/26 07:30:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7249 2023/11/26 07:59:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10377,3 +10377,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/protobuf-c to 1.5.0 [wiz 2023-11-26]
 	Updated net/ngtcp2 to 1.1.0 [adam 2023-11-26]
 	Updated www/nghttp3 to 1.1.0 [adam 2023-11-26]
+	Updated lang/nodejs20 to 20.10.0 [adam 2023-11-26]
+	Updated textproc/ugrep to 4.3.4 [adam 2023-11-26]
