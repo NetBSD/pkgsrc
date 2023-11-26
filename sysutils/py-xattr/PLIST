@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/05 13:32:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/26 15:51:56 adam Exp $
 bin/xattr-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -10,12 +10,11 @@ ${PYSITELIB}/xattr/__init__.py
 ${PYSITELIB}/xattr/__init__.pyc
 ${PYSITELIB}/xattr/__init__.pyo
 ${PYSITELIB}/xattr/_lib.abi3.so
-${PYSITELIB}/xattr/compat.py
-${PYSITELIB}/xattr/compat.pyc
-${PYSITELIB}/xattr/compat.pyo
 ${PYSITELIB}/xattr/lib.py
 ${PYSITELIB}/xattr/lib.pyc
 ${PYSITELIB}/xattr/lib.pyo
+${PYSITELIB}/xattr/lib_build.c
+${PYSITELIB}/xattr/lib_build.h
 ${PYSITELIB}/xattr/lib_build.py
 ${PYSITELIB}/xattr/lib_build.pyc
 ${PYSITELIB}/xattr/lib_build.pyo
