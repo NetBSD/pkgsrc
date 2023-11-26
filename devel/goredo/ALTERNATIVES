@@ -1,0 +1,16 @@
+bin/redo @PREFIX@/bin/goredo
+bin/redo-affects @PREFIX@/bin/goredo-affects
+bin/redo-always @PREFIX@/bin/goredo-always
+bin/redo-cleanup @PREFIX@/bin/goredo-cleanup
+bin/redo-dep2rec @PREFIX@/bin/goredo-dep2rec
+bin/redo-depfix @PREFIX@/bin/goredo-depfix
+bin/redo-dot @PREFIX@/bin/goredo-dot
+bin/redo-ifchange @PREFIX@/bin/goredo-ifchange
+bin/redo-ifcreate @PREFIX@/bin/goredo-ifcreate
+bin/redo-inode @PREFIX@/bin/goredo-inode
+bin/redo-log @PREFIX@/bin/goredo-log
+bin/redo-ood @PREFIX@/bin/goredo-ood
+bin/redo-sources @PREFIX@/bin/goredo-sources
+bin/redo-stamp @PREFIX@/bin/goredo-stamp
+bin/redo-targets @PREFIX@/bin/goredo-targets
+bin/redo-whichdo @PREFIX@/bin/goredo-whichdo
