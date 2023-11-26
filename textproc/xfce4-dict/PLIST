@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/23 17:57:47 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/26 02:02:27 gutteridge Exp $
 bin/xfce4-dict
 lib/xfce4/panel/plugins/libxfce4dict.la
 man/man1/xfce4-dict.1
@@ -8,6 +8,8 @@ share/icons/hicolor/16x16/apps/org.xfce.Dictionary.png
 share/icons/hicolor/24x24/apps/org.xfce.Dictionary.png
 share/icons/hicolor/32x32/apps/org.xfce.Dictionary.png
 share/icons/hicolor/48x48/apps/org.xfce.Dictionary.png
+share/icons/hicolor/64x64/apps/org.xfce.Dictionary.png
+share/icons/hicolor/96x96/apps/org.xfce.Dictionary.png
 share/icons/hicolor/scalable/apps/org.xfce.Dictionary.svg
 share/locale/ar/LC_MESSAGES/xfce4-dict.mo
 share/locale/ast/LC_MESSAGES/xfce4-dict.mo

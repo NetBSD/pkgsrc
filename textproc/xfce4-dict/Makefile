@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/11/14 14:02:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/11/26 02:02:27 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-dict-0.8.5
+DISTNAME=	xfce4-dict-0.8.6
 CATEGORIES=	textproc
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-dict/0.8/
 
