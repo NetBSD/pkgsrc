@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/02 13:41:55 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/26 14:47:09 adam Exp $
 include/SDL2/SDL_sound.h
+lib/cmake/SDL2_sound/SDL2_sound-shared-targets-noconfig.cmake
+lib/cmake/SDL2_sound/SDL2_sound-shared-targets.cmake
+lib/cmake/SDL2_sound/SDL2_sound-static-targets-noconfig.cmake
+lib/cmake/SDL2_sound/SDL2_sound-static-targets.cmake
+lib/cmake/SDL2_sound/SDL2_soundConfig.cmake
+lib/cmake/SDL2_sound/SDL2_soundConfigVersion.cmake
 lib/libSDL2_sound.a
 lib/libSDL2_sound.so
-lib/libSDL2_sound.so.2
 lib/libSDL2_sound.so.${PKGVERSION}
+lib/libSDL2_sound.so.2
+lib/pkgconfig/SDL2_sound.pc
