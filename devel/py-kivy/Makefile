@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/26 14:52:31 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/26 16:28:38 adam Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +14,9 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# For share/kivy-examples
+PYTHON_SELF_CONFLICT=	yes
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
