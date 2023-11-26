@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2023/11/26 12:30:46 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.14 2023/11/26 14:45:28 wiz Exp $
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pexpect/ANSI.py
 ${PYSITELIB}/pexpect/ANSI.pyc
 ${PYSITELIB}/pexpect/ANSI.pyo
@@ -17,11 +18,11 @@ ${PYSITELIB}/pexpect/_async.py
 ${PYSITELIB}/pexpect/_async.pyc
 ${PYSITELIB}/pexpect/_async.pyo
 ${PYSITELIB}/pexpect/_async_pre_await.py
-${PYSITELIB}/pexpect/_async_pre_await.pyc
-${PYSITELIB}/pexpect/_async_pre_await.pyo
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_pre_await.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_pre_await.pyo
 ${PYSITELIB}/pexpect/_async_w_await.py
-${PYSITELIB}/pexpect/_async_w_await.pyc
-${PYSITELIB}/pexpect/_async_w_await.pyo
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_w_await.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/_async_w_await.pyo
 ${PYSITELIB}/pexpect/bashrc.sh
 ${PYSITELIB}/pexpect/exceptions.py
 ${PYSITELIB}/pexpect/exceptions.pyc
@@ -51,8 +52,8 @@ ${PYSITELIB}/pexpect/screen.py
 ${PYSITELIB}/pexpect/screen.pyc
 ${PYSITELIB}/pexpect/screen.pyo
 ${PYSITELIB}/pexpect/socket_pexpect.py
-${PYSITELIB}/pexpect/socket_pexpect.pyc
-${PYSITELIB}/pexpect/socket_pexpect.pyo
+${PLIST.py3x}${PYSITELIB}/pexpect/socket_pexpect.pyc
+${PLIST.py3x}${PYSITELIB}/pexpect/socket_pexpect.pyo
 ${PYSITELIB}/pexpect/spawnbase.py
 ${PYSITELIB}/pexpect/spawnbase.pyc
 ${PYSITELIB}/pexpect/spawnbase.pyo
