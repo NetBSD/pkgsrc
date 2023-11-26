@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/26 14:34:00 adam Exp $
 
-DISTNAME=	kivy-garden-0.1.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	Kivy%20Garden-0.1.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/%20/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kivy-garden/}
 
@@ -11,18 +10,20 @@ HOMEPAGE=	https://github.com/kivy-garden/garden
 COMMENT=	Garden tool for kivy flowers
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-
-USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/kivy-//}
-EGG_NAME=	Kivy_Garden-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/%20/\ /}
+WHEEL_NAME=	Kivy_Garden-${PKGVERSION_NOREV}
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/garden  ${DESTDIR}${PREFIX}/bin/garden-${PYVERSSUFFIX}
-	${MV} ${DESTDIR}${PREFIX}/bin/garden.bat  ${DESTDIR}${PREFIX}/bin/garden.bat-${PYVERSSUFFIX}
+.for bin in garden garden.bat
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
