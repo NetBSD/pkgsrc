@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2023/09/03 20:22:36 gutteridge Exp $
+$NetBSD: distinfo,v 1.38 2023/11/26 01:33:08 gutteridge Exp $
 
-BLAKE2s (thunar-4.18.7.tar.bz2) = 3d4e96f72b47f92c82292a811b75fb3bd2e02a07a2e210b4dfc027bd84679349
-SHA512 (thunar-4.18.7.tar.bz2) = bbe567bad7c020489c3895109daf14edceef4d6301ac430f36c3036017a5d66d706aecd85471b9e41d25b7cbcfd86fefc4c14f904d4b38d19fb7ecea081f6eb9
-Size (thunar-4.18.7.tar.bz2) = 2841751 bytes
+BLAKE2s (thunar-4.18.8.tar.bz2) = 8e6da9fa700dd6e0f6cd586247f7b45b4b0e9c01209c007825326195dc9510b9
+SHA512 (thunar-4.18.8.tar.bz2) = 38f1f0af93df873e14d7e85851424c85272defa1c19c3d1f61c79fc6a8c79b16f568240c70237c6b490093447a5d947eab6fdf828f93e432cc4d28100c5cf59b
+Size (thunar-4.18.8.tar.bz2) = 2844536 bytes
 SHA1 (patch-ac) = ea36f7085ad7ebfc113ab6b7bb049e3da31f4e36
 SHA1 (patch-org.xfce.FileManager.service.in) = 6c47d3e55d13deaad6024ed9f5ec1ebe2c42a192
 SHA1 (patch-org.xfce.Thunar.service.in) = 135924d555e486a7e2a689f8d53f3a442e72754e
