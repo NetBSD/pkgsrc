@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/01/02 23:23:42 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/11/26 14:37:02 adam Exp $
 
-BLAKE2s (pysol_cards-0.14.2.tar.gz) = 33126723331a499aee2bf53c154c72296f9dce1cefd218cde00a770dfab3c1a5
-SHA512 (pysol_cards-0.14.2.tar.gz) = 5e296819ebd6a874175c098b0000524defeb22456bdce961270ecfe26de48fb0d5f5b56eeb3457a12c51f72c9d90abdd35ebaf91244ceaa7d3034caff2b59386
-Size (pysol_cards-0.14.2.tar.gz) = 18113 bytes
+BLAKE2s (pysol_cards-0.14.3.tar.gz) = 78f47f51714ad3ce714ad2b854affee544b8bbbce443143630ac4ce2442a79d5
+SHA512 (pysol_cards-0.14.3.tar.gz) = 00bb25393eab855d7444324b33e0561bfbcc86ae53306b58623fa15ea005378aff6af51846aab4634b43fdba5497c3872c32baf3a51013ee01d5ab2d7a7a9d51
+Size (pysol_cards-0.14.3.tar.gz) = 18322 bytes
