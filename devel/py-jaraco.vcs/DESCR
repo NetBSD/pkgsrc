@@ -1,0 +1,7 @@
+jaraco.vcs provides classes for inspecting and working with repositories in the
+Mercurial and Git version control systems (VCS).
+
+The classes provided are designed to use subprocess invocation to leverage the
+command-line interfaces of the VCS tools hg and git. An in-process RepoManager
+for Mercurial exists but has been disabled due to issues that arise when run in
+certain environments (namely setuptools sandboxing).
