@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7274 2023/11/27 15:07:06 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.7275 2023/11/27 15:26:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10419,3 +10419,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/nih to 0.15.0 [cheusov 2023-11-27]
 	Updated devel/py-gobject-shared to 2.28.7nb10 [jperkin 2023-11-27]
 	Updated devel/py-gobject to 2.28.7nb5 [jperkin 2023-11-27]
+	Updated devel/py-traitlets to 5.14.0 [adam 2023-11-27]
+	Updated devel/py-ipython to 8.18.1 [adam 2023-11-27]
