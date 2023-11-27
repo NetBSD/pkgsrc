@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/11/27 20:27:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/27 20:28:35 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.47.2
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/distbb/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/
+HOMEPAGE=	https://github.com/cheusov/distbb
 COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd
 
