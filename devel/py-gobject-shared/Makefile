@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2023/11/14 14:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/27 15:06:25 jperkin Exp $
 
 PKGNAME=	py-${DISTNAME:S/^py//:S/-/-shared-/1}
-PKGREVISION=	9
+PKGREVISION=	10
 
 .include "../../devel/py-gobject/Makefile.common"
 
@@ -24,11 +24,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pygobject-2.0.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cairo=	build
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
