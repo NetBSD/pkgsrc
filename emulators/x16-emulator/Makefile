@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/05/16 06:01:45 thorpej Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/27 03:20:59 thorpej Exp $
 
-DISTNAME=	x16-emulator-41
-PKGREVISION=	4
+DISTNAME=	x16-emulator-46
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=commanderx16/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=X16Community/}
 GITHUB_PROJECT=	x16-emulator
 GITHUB_TAG=	r${PKGVERSION_NOREV}
 
@@ -12,9 +11,11 @@ HOMEPAGE=	http://commanderx16.com/
 COMMENT=	Emulator for the Commander X16 computer system
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	x16-rom-41{,nb*}:../../emulators/x16-rom
+DEPENDS+=	x16-rom-46{,nb*}:../../emulators/x16-rom
 MAKE_ENV+=	ROM_RELATIVE_PATH=../share/x16/
+MAKE_ENV+=	GIT_REV=${GITHUB_TAG}
 
+USE_LANGUAGES=	c99 c++17
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS+= bin

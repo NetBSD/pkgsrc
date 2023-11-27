@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/27 03:21:00 thorpej Exp $
 
-DISTNAME=	x16-rom-41
-PKGREVISION=	1
+DISTNAME=	x16-rom-46
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=commanderx16/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=X16Community/}
 GITHUB_PROJECT=	x16-rom
 GITHUB_TAG=	r${PKGVERSION_NOREV}
 
@@ -13,6 +12,9 @@ COMMENT=	ROM for the Commander X16 computer system
 LICENSE=	commander-x16-rom-license
 
 TOOL_DEPENDS+=	cc65-[0-9]*:../../cross/cc65
+TOOL_DEPENDS+=	lzsa-[0-9]*:../../archivers/lzsa
+
+MAKE_ENV+=	GIT_REV=${GITHUB_TAG}
 
 USE_TOOLS+=	gmake bash
 
