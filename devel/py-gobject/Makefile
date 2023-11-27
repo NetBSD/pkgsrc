@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/11/06 13:31:00 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2023/11/27 15:06:25 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	4
+PKGREVISION=	5
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cairo
 
@@ -35,6 +35,7 @@ BUILDLINK_API_DEPENDS.py-gobject-shared+=	py-gobject-shared>=${PKGVERSION_NOREV}
 
 CONFIGURE_ARGS+=	--disable-introspection
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
