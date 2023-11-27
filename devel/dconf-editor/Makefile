@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/11/14 14:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/11/27 11:16:40 jperkin Exp $
 
 DISTNAME=	dconf-editor-3.38.3
 PKGREVISION=	14
@@ -25,8 +25,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.46.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_DEPMETHOD.vala= build
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.40.0
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0

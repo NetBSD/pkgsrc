@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/11/14 14:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	gnome-sudoku-40.2
 PKGREVISION=	13
@@ -35,7 +35,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
 BUILDLINK_API_DEPENDS.qqwing+=	qqwing>=1.3.4
 .include "../../games/qqwing/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala:= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
