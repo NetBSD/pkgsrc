@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2023/11/02 11:01:10 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/11/27 15:37:10 adam Exp $
 
-DISTNAME=	jsonschema-4.19.2
+DISTNAME=	jsonschema-4.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
@@ -34,10 +34,6 @@ post-install:
 	${MV} jsonschema jsonschema-${PYVERSSUFFIX} || ${TRUE}
 
 TEST_ENV+=	JSON_SCHEMA_TEST_SUITE=${WRKSRC}/json
-
-# after 'make install'
-do-test:
-	cd ${WRKSRC}/jsonschema && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
