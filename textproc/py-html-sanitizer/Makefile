@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/11/30 16:43:32 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/27 20:21:00 adam Exp $
 
-DISTNAME=	html_sanitizer-1.9.3
+DISTNAME=	html_sanitizer-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html-sanitizer/}
@@ -10,12 +10,13 @@ HOMEPAGE=	https://github.com/matthiask/html-sanitizer
 COMMENT=	White-list based HTML sanitizer
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.5:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.9.1:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
