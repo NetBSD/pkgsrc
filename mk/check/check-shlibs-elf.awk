@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.19 2021/10/11 20:26:28 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.20 2023/11/27 12:51:38 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -38,7 +38,7 @@
 # Check that the resolved DSO belongs to full dependency.
 #
 
-function shquote(IN, out) {
+function shquote(IN,	out) {
 	out = IN;
 	gsub("\\\\", "\\\\", out);
 	gsub("\n", "\\n", out);
@@ -68,19 +68,19 @@ function shquote(IN, out) {
 	return out;
 }
 
-function check_pkg(DSO, pkg, found) {
+function check_pkg(DSO, lib,	pkg, found) {
 	if (destdir == "")
 		return 0
-	if (DSO in pkgcache) {
-		pkg = pkgcache[DSO]
+	if (lib in pkgcache) {
+		pkg = pkgcache[lib]
 	} else {
-		cmd = pkg_info_cmd " -Fe " shquote(DSO) " 2> /dev/null"
+		cmd = pkg_info_cmd " -Fe " shquote(lib) " 2>/dev/null"
 		if ((cmd | getline pkg) < 0) {
 			close(cmd)
 			return 0
 		}
 		close(cmd)
-		pkgcache[DSO] = pkg
+		pkgcache[lib] = pkg
 	}
 	if (pkg == "")
 		return 0
@@ -95,9 +95,9 @@ function check_pkg(DSO, pkg, found) {
 		}
 	}
 	if (found)
-		print DSO ": " pkg " is not a runtime dependency"
+		print DSO ": " lib ": " pkg " is not a runtime dependency"
 	# Not yet:
-	# print DSO ": " pkg " is not a dependency"
+	# print DSO ": " lib ": " pkg " is not a dependency"
 	close(depends_file)
 }
 
@@ -137,7 +137,7 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 				libcache[libfile] = system("test -f " shquote(libfile))
 			}
 			if (!libcache[libfile]) {
-				check_pkg(rpath[p] "/" lib)
+				check_pkg(DSO, rpath[p] "/" lib)
 				for (t = 1; t <= ntpaths; t++) {
 					if (match(rpath[p] "/" lib, tpaths[t])) {
 						print DSO ": resolved path " rpath[p] "/" lib " matches toxic " tpaths[t]
