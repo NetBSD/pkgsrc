@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/27 02:21:51 thorpej Exp $
+
+BLAKE2s (lzsa-1.4.1.tar.gz) = 5596b8694df3787d4a6d15a8a982e4d67592ecb848aa218eb940db8bd854ce5c
+SHA512 (lzsa-1.4.1.tar.gz) = 08fed665bf24c7435f98e80d3560d2cdd346c863850227468af9dcfea9dded47168de8c4584e3b24c83dc57dd13ae94f5842c1b7cec68ed10e7e6c7c97f5b20b
+Size (lzsa-1.4.1.tar.gz) = 152571 bytes
