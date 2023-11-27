@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/11/23 15:31:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/27 09:38:16 jperkin Exp $
 
 DISTNAME=	p11-kit-0.25.3
 CATEGORIES=	security
@@ -18,7 +18,7 @@ MESON_ARGS+=	-Dtrust_paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 USE_CC_FEATURES=	c99
 USE_FEATURES+=		strndup strnlen
 USE_LANGUAGES=		c
-USE_TOOLS+=		pkg-config readlink
+USE_TOOLS+=		msgfmt pkg-config readlink
 
 # dirfd(3)
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
