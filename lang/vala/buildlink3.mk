@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2023/11/12 13:22:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2023/11/27 09:45:02 jperkin Exp $
 
 BUILDLINK_TREE+=	vala
 
@@ -16,9 +16,12 @@ VAPIGEN=	${PREFIX}/bin/vapigen-0.56
 CONFIGURE_ENV+=	VALAC=${VALAC} VAPIGEN=${VAPIGEN}
 .endif
 
+.if ${BUILDLINK_DEPMETHOD.vala:U:Mfull}
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
+.endif
+
 .endif	# VALA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-vala
