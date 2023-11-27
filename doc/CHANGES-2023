@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7267 2023/11/26 18:45:08 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7268 2023/11/27 02:23:28 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10405,3 +10405,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/pysolfc to 2.21.0 [adam 2023-11-26]
 	Updated devel/goredo to 2.5.0 [schmonz 2023-11-26]
 	Updated graphics/cairo to 1.18.0nb1 [schmonz 2023-11-26]
+	Added archivers/lzsa version 1.4.1 [thorpej 2023-11-26]
