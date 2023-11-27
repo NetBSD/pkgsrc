@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/27 02:21:51 thorpej Exp $
+bin/lzsa
