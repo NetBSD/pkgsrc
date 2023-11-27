@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2023/11/27 20:26:04 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.11 2023/11/27 20:29:43 cheusov Exp $
 #
 # used by pkgtools/pkg_online-client/Makefile
 # used by pkgtools/pkg_online-server/Makefile
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/pkg_online/
 
 VERSION=	0.13.1
 
-HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
+HOMEPAGE=	https://github.com/cheusov/pkg_online
 COMMENT=	Client/Server package searcher for pkgsrc
 
 LICENSE=		2-clause-bsd
