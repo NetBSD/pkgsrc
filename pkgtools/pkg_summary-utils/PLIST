@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/01 14:58:47 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/27 12:31:33 cheusov Exp $
 bin/cvs_checksum
 bin/makefiles2deps
 bin/pkg_assignments2pkgpath
 bin/pkg_bin_summary
 bin/pkg_cksum2summary
+bin/pkg_cleanup_dir
 bin/pkg_cleanup_distdir
+bin/pkg_cleanup_packages
 bin/pkg_cmp_summary
 bin/pkg_digger
 bin/pkg_digger_backend
@@ -37,7 +39,9 @@ man/man1/cvs_checksum.1
 man/man1/makefiles2deps.1
 man/man1/pkg_bin_summary.1
 man/man1/pkg_cksum2summary.1
+man/man1/pkg_cleanup_dir.1
 man/man1/pkg_cleanup_distdir.1
+man/man1/pkg_cleanup_packages.1
 man/man1/pkg_cmp_summary.1
 man/man1/pkg_digger.1
 man/man1/pkg_digger_installed.1
