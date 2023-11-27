@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2022/11/26 17:08:20 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/11/27 06:55:57 adam Exp $
 
 BLAKE2s (autocommand-2.2.2.tar.gz) = cf173d9a16ed4589ee0105b9fed237f8a71c5001444f1d2aa42807eb1caf36ec
 SHA512 (autocommand-2.2.2.tar.gz) = 7e78b3bb7eb62be8a308fe4406b0c72170f9a057010b02a1f8f0d2b33b5d19682d8795bb573728ebe941957ec60d86edd9db57659f63a4a2d788c7176907f067
 Size (autocommand-2.2.2.tar.gz) = 22894 bytes
+SHA1 (patch-setup.py) = e66b22146001d4162480c55b2032bee773472dd0
