@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-macho.awk,v 1.10 2023/11/01 11:46:00 pho Exp $
+# $NetBSD: check-shlibs-macho.awk,v 1.11 2023/11/27 12:51:38 jperkin Exp $
 
 #
 # Read a list of potential Mach-O binaries from stdin.
@@ -37,19 +37,19 @@ function shquote(IN,	out) {
 	return out;
 }
 
-function check_pkg(DSO, 	pkg, found) {
+function check_pkg(DSO, lib,	pkg, found) {
 	if (destdir == "")
 		return 0
-	if (DSO in pkgcache) {
-		pkg = pkgcache[DSO]
+	if (lib in pkgcache) {
+		pkg = pkgcache[lib]
 	} else {
-		cmd = pkg_info_cmd " -Fe " shquote(DSO) " 2>/dev/null"
+		cmd = pkg_info_cmd " -Fe " shquote(lib) " 2>/dev/null"
 		if ((cmd | getline pkg) < 0) {
 			close(cmd)
 			return 0
 		}
 		close(cmd)
-		pkgcache[DSO] = pkg
+		pkgcache[lib] = pkg
 	}
 	if (pkg == "")
 		return 0
@@ -64,7 +64,7 @@ function check_pkg(DSO, 	pkg, found) {
 		}
 	}
 	if (found)
-		print DSO ": " pkg " is not a runtime dependency"
+		print DSO ": " lib ": " pkg " is not a runtime dependency"
 	close(depends_file)
 }
 
