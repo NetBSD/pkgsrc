@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7275 2023/11/27 15:26:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7276 2023/11/27 15:40:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10421,3 +10421,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-gobject to 2.28.7nb5 [jperkin 2023-11-27]
 	Updated devel/py-traitlets to 5.14.0 [adam 2023-11-27]
 	Updated devel/py-ipython to 8.18.1 [adam 2023-11-27]
+	Updated sysutils/py-loguru to 0.7.2 [adam 2023-11-27]
+	Updated textproc/py-jsonschema to 4.20.0 [adam 2023-11-27]
+	Updated textproc/py-jsonschema-specifications to 2023.11.1 [adam 2023-11-27]
