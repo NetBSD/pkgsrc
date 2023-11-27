@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/08/25 21:32:35 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/27 15:40:24 adam Exp $
 
-DISTNAME=	jsonschema_specifications-2023.7.1
+DISTNAME=	jsonschema_specifications-2023.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema-specifications/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/python-jsonschema/jsonschema-specifications
 COMMENT=	JSON Schema meta-schemas and vocabularies
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-DEPENDS+=	${PYPKGPREFIX}-referencing>=0.28.0:../../textproc/py-referencing
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-referencing>=0.31.0:../../textproc/py-referencing
 
 USE_LANGUAGES=	# none
 
