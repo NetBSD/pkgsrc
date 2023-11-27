@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/31 08:23:29 sborrill Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/11/27 20:30:58 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pathvalidate/__init__.py
 ${PYSITELIB}/pathvalidate/__init__.pyc
 ${PYSITELIB}/pathvalidate/__init__.pyo
@@ -31,6 +31,9 @@ ${PYSITELIB}/pathvalidate/_ltsv.pyo
 ${PYSITELIB}/pathvalidate/_symbol.py
 ${PYSITELIB}/pathvalidate/_symbol.pyc
 ${PYSITELIB}/pathvalidate/_symbol.pyo
+${PYSITELIB}/pathvalidate/_types.py
+${PYSITELIB}/pathvalidate/_types.pyc
+${PYSITELIB}/pathvalidate/_types.pyo
 ${PYSITELIB}/pathvalidate/argparse.py
 ${PYSITELIB}/pathvalidate/argparse.pyc
 ${PYSITELIB}/pathvalidate/argparse.pyo
