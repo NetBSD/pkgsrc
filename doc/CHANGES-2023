@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7269 2023/11/27 03:23:50 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.7270 2023/11/27 06:59:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10408,3 +10408,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added archivers/lzsa version 1.4.1 [thorpej 2023-11-26]
 	Updated emulators/x16-rom to 46 [thorpej 2023-11-27]
 	Updated emulators/x16-emulator to 46 [thorpej 2023-11-27]
+	Updated misc/py-autocommand to 2.2.2nb1 [adam 2023-11-27]
+	Updated devel/py-wheel to 0.42.0 [adam 2023-11-27]
+	Updated www/py-aiohttp to 3.9.1 [adam 2023-11-27]
