@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2023/10/23 06:39:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2023/11/27 09:58:35 adam Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/override.py
@@ -22,6 +22,7 @@ ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/_legacy.py
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/_legacy.pyc
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/abc.py
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/abc.pyc
+${PYSITELIB}/pkg_resources/_vendor/importlib_resources/py.typed
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/readers.py
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/readers.pyc
 ${PYSITELIB}/pkg_resources/_vendor/importlib_resources/simple.py
@@ -36,10 +37,14 @@ ${PYSITELIB}/pkg_resources/_vendor/jaraco/text/__init__.py
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/text/__init__.pyc
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/__init__.py
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/__init__.pyc
+${PYSITELIB}/pkg_resources/_vendor/more_itertools/__init__.pyi
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/more.py
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/more.pyc
+${PYSITELIB}/pkg_resources/_vendor/more_itertools/more.pyi
+${PYSITELIB}/pkg_resources/_vendor/more_itertools/py.typed
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/recipes.py
 ${PYSITELIB}/pkg_resources/_vendor/more_itertools/recipes.pyc
+${PYSITELIB}/pkg_resources/_vendor/more_itertools/recipes.pyi
 ${PYSITELIB}/pkg_resources/_vendor/packaging/__init__.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/_elffile.py
@@ -58,6 +63,7 @@ ${PYSITELIB}/pkg_resources/_vendor/packaging/markers.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/metadata.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/metadata.pyc
+${PYSITELIB}/pkg_resources/_vendor/packaging/py.typed
 ${PYSITELIB}/pkg_resources/_vendor/packaging/requirements.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/specifiers.py
@@ -78,6 +84,7 @@ ${PYSITELIB}/pkg_resources/_vendor/platformdirs/api.py
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/api.pyc
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/macos.py
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/macos.pyc
+${PYSITELIB}/pkg_resources/_vendor/platformdirs/py.typed
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/unix.py
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/unix.pyc
 ${PYSITELIB}/pkg_resources/_vendor/platformdirs/version.py
@@ -113,6 +120,8 @@ ${PYSITELIB}/setuptools/_distutils/_log.py
 ${PYSITELIB}/setuptools/_distutils/_log.pyc
 ${PYSITELIB}/setuptools/_distutils/_macos_compat.py
 ${PYSITELIB}/setuptools/_distutils/_macos_compat.pyc
+${PYSITELIB}/setuptools/_distutils/_modified.py
+${PYSITELIB}/setuptools/_distutils/_modified.pyc
 ${PYSITELIB}/setuptools/_distutils/_msvccompiler.py
 ${PYSITELIB}/setuptools/_distutils/_msvccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/archive_util.py
@@ -251,6 +260,7 @@ ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_py39compat.py
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_py39compat.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_text.py
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_text.pyc
+${PYSITELIB}/setuptools/_vendor/importlib_metadata/py.typed
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/__init__.py
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/_adapters.py
@@ -265,6 +275,7 @@ ${PYSITELIB}/setuptools/_vendor/importlib_resources/_legacy.py
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/_legacy.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/abc.py
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/abc.pyc
+${PYSITELIB}/setuptools/_vendor/importlib_resources/py.typed
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/readers.py
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/readers.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_resources/simple.py
@@ -279,10 +290,14 @@ ${PYSITELIB}/setuptools/_vendor/jaraco/text/__init__.py
 ${PYSITELIB}/setuptools/_vendor/jaraco/text/__init__.pyc
 ${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/__init__.pyi
 ${PYSITELIB}/setuptools/_vendor/more_itertools/more.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/more.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/more.pyi
+${PYSITELIB}/setuptools/_vendor/more_itertools/py.typed
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyc
+${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyi
 ${PYSITELIB}/setuptools/_vendor/ordered_set.py
 ${PYSITELIB}/setuptools/_vendor/ordered_set.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/__init__.py
@@ -303,6 +318,7 @@ ${PYSITELIB}/setuptools/_vendor/packaging/markers.py
 ${PYSITELIB}/setuptools/_vendor/packaging/markers.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/metadata.py
 ${PYSITELIB}/setuptools/_vendor/packaging/metadata.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/py.typed
 ${PYSITELIB}/setuptools/_vendor/packaging/requirements.py
 ${PYSITELIB}/setuptools/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/specifiers.py
@@ -321,6 +337,7 @@ ${PYSITELIB}/setuptools/_vendor/tomli/_re.py
 ${PYSITELIB}/setuptools/_vendor/tomli/_re.pyc
 ${PYSITELIB}/setuptools/_vendor/tomli/_types.py
 ${PYSITELIB}/setuptools/_vendor/tomli/_types.pyc
+${PYSITELIB}/setuptools/_vendor/tomli/py.typed
 ${PYSITELIB}/setuptools/_vendor/typing_extensions.py
 ${PYSITELIB}/setuptools/_vendor/typing_extensions.pyc
 ${PYSITELIB}/setuptools/_vendor/zipp.py
@@ -434,6 +451,8 @@ ${PYSITELIB}/setuptools/launch.py
 ${PYSITELIB}/setuptools/launch.pyc
 ${PYSITELIB}/setuptools/logging.py
 ${PYSITELIB}/setuptools/logging.pyc
+${PYSITELIB}/setuptools/modified.py
+${PYSITELIB}/setuptools/modified.pyc
 ${PYSITELIB}/setuptools/monkey.py
 ${PYSITELIB}/setuptools/monkey.pyc
 ${PYSITELIB}/setuptools/msvc.py
