@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/27 09:50:47 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jaraco/versioning.py
+${PYSITELIB}/jaraco/versioning.pyc
+${PYSITELIB}/jaraco/versioning.pyo
