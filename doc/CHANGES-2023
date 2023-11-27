@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7271 2023/11/27 09:58:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7272 2023/11/27 12:31:48 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10415,3 +10415,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-jaraco.vcs version 1.1.0 [adam 2023-11-27]
 	Added devel/py-jaraco.develop version 8.3.0 [adam 2023-11-27]
 	Updated devel/py-setuptools to 69.0.2 [adam 2023-11-27]
+	Updated pkgtools/pkg_summary-utils to 0.67.0 [cheusov 2023-11-27]
