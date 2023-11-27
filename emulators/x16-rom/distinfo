@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/08/07 17:36:52 thorpej Exp $
+$NetBSD: distinfo,v 1.5 2023/11/27 03:21:00 thorpej Exp $
 
-BLAKE2s (x16-rom-41.tar.gz) = ad1c5ce4fe1fb3b2642f59fdedf0d3895e097663c68f71fb016479ba7b31277a
-SHA512 (x16-rom-41.tar.gz) = 21afe719d1447e289a210607fde0a54847d2dcc6216933146b2a96f13e83c72158827c98a2c2dcc2f9b4fd1aee18d1b25947ca0ef3cb60bad0518f7952c10512
-Size (x16-rom-41.tar.gz) = 630172 bytes
-SHA1 (patch-scripts_symbolize.sh) = 1d5c75ccd3015508ab8510a1b0890a376aca80eb
+BLAKE2s (x16-rom-46.tar.gz) = 3efd6965342935fb5d588038cf11df869c9eeedd38eb7cd88c21aff0aa564606
+SHA512 (x16-rom-46.tar.gz) = 2eb9a9e4f2cf86e71897e900bfa528f79a3e9e8bedc5bcc25868c3508afc85cdd087a39be37d1ceab7441b3d91553e0056a67efcd575dfa11fda468f9065181a
+Size (x16-rom-46.tar.gz) = 899784 bytes
+SHA1 (patch-Makefile) = cea4a06b0545215ceec4ed36eb84534737ec2f5f
