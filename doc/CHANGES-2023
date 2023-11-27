@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7276 2023/11/27 15:40:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7277 2023/11/27 17:20:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10424,3 +10424,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-loguru to 0.7.2 [adam 2023-11-27]
 	Updated textproc/py-jsonschema to 4.20.0 [adam 2023-11-27]
 	Updated textproc/py-jsonschema-specifications to 2023.11.1 [adam 2023-11-27]
+	Updated net/samba4 to 4.19.3 [adam 2023-11-27]
+	Updated devel/py-pooch to 1.8.0 [adam 2023-11-27]
