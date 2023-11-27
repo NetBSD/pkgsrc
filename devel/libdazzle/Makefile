@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/11/14 14:01:37 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	libdazzle-3.38.0
 PKGREVISION=	13
@@ -28,7 +28,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=incompatible-pointer-types
 BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

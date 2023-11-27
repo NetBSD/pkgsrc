@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/11/12 13:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	libgee-0.20.3
 PKGREVISION=	10
@@ -23,7 +23,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala:= build
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.25.1
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
