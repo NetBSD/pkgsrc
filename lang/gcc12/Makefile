@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/20 10:37:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/27 14:45:40 jperkin Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC12_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -13,8 +13,7 @@ LANGS=			c
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
-## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*} ${LDFLAGS:M-Wl,-z*}
+LDFLAGS_FOR_TARGET=	${LDFLAGS:M-Wl,-z*}
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
@@ -25,7 +24,7 @@ BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
-# Work around ld bug in Xcode 15
+# Work around ld bug in Xcode 15
 .if ${OPSYS} == "Darwin" && ${CC_VERSION:Mclang-15.*}
 LDFLAGS_FOR_TARGET+=	-Wl,-ld_classic
 .endif
