@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/11/14 14:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	cheese-3.34.0
 PKGREVISION=	19
@@ -38,7 +38,6 @@ BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/clutter-gst/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"

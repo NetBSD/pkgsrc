@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2023/11/14 14:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2023/11/27 11:16:42 jperkin Exp $
 
 DISTNAME=	corebird-1.7.4
 PKGREVISION=	22
@@ -32,7 +32,6 @@ BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=1.2.8
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

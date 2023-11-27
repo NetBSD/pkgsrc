@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/11/15 09:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	pdfpc-4.4.0
 PKGREVISION=	25
@@ -21,7 +21,6 @@ EGDIR=		${PREFIX}/share/examples/pdfpc
 CONF_FILES+=	${EGDIR}/pdfpcrc	${PKG_SYSCONFDIR}/pdfpcrc
 
 .include "../../devel/libgee/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"

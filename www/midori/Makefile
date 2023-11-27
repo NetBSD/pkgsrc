@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2023/11/14 14:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2023/11/27 11:16:42 jperkin Exp $
 
 DISTNAME=	midori-v9.0
 PKGNAME=	${DISTNAME:S/v//}
@@ -35,7 +35,6 @@ CONFIGURE_ENV+=	VALAC=${VALAC}
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala= build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
