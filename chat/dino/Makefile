@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/11/14 14:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/11/27 11:16:40 jperkin Exp $
 
 DISTNAME=	dino-0.3.0
 PKGREVISION=	16
@@ -28,7 +28,6 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.24
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"

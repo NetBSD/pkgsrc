@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/11/14 14:01:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/11/27 11:16:41 jperkin Exp $
 
 DISTNAME=	libhandy-1.8.0
 PKGREVISION=	7
@@ -21,7 +21,6 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/libhandy-1.pc
 BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
