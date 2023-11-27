@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/03/14 14:10:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/11/27 17:20:29 adam Exp $
 
-BLAKE2s (pooch-1.7.0.tar.gz) = 6c365d070c1ef4849009cea21729f4762b2efc17996271abceee1e462b5eeb79
-SHA512 (pooch-1.7.0.tar.gz) = 60126b893a9a1422aad12349143fbe72e485004f79b06da752f51ae374f375efae693304210c8d62b211433d7ce75fab53a50a6f267b1952df83fdccc2de13a7
-Size (pooch-1.7.0.tar.gz) = 57457 bytes
+BLAKE2s (pooch-1.8.0.tar.gz) = 3cb732aa77b9f464c24cdf35e974af044d5985c1c0a8add2d563b85b7433ebf3
+SHA512 (pooch-1.8.0.tar.gz) = d97e3e1098d1eeee30108affc64ed5a12f679e9122d35494598a03f3a548bb83b57dc54ac5a2c85bc42e664cb90f713bdb55b47b430ff000a722ffad58010497
+Size (pooch-1.8.0.tar.gz) = 59408 bytes
