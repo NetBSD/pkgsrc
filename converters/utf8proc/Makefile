@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/23 14:04:18 micha Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/28 10:13:20 nros Exp $
 
 DISTNAME=	utf8proc-2.9.0
 CATEGORIES=	converters
@@ -15,6 +15,8 @@ USE_CC_FEATURES+=	c99
 USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig
+
+PKGCONFIG_OVERRIDE=	libutf8proc.pc.in
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
 MAJOR=	3
