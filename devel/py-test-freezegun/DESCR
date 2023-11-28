@@ -1,5 +1,0 @@
-Wrap tests with fixtures in freeze_time
-
-Features
-* Freeze time in both the test and fixtures
-* Access the freezer when you need it
