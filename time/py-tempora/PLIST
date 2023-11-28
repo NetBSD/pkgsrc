@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:57:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/11/28 17:15:22 adam Exp $
 bin/calc-prorate-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -12,12 +12,6 @@ ${PYSITELIB}/tempora/__init__.pyo
 ${PYSITELIB}/tempora/schedule.py
 ${PYSITELIB}/tempora/schedule.pyc
 ${PYSITELIB}/tempora/schedule.pyo
-${PYSITELIB}/tempora/tests/test_schedule.py
-${PYSITELIB}/tempora/tests/test_schedule.pyc
-${PYSITELIB}/tempora/tests/test_schedule.pyo
-${PYSITELIB}/tempora/tests/test_timing.py
-${PYSITELIB}/tempora/tests/test_timing.pyc
-${PYSITELIB}/tempora/tests/test_timing.pyo
 ${PYSITELIB}/tempora/timing.py
 ${PYSITELIB}/tempora/timing.pyc
 ${PYSITELIB}/tempora/timing.pyo
