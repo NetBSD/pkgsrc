@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2023/11/23 08:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/11/28 15:03:55 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-2.3.8
+PKGNAME=		sbcl-2.3.11
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,10 +23,6 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MKPIE_SUPPORTED=no
-
-# creates process that needs to be 'kill -9'ed
-# https://mail-index.netbsd.org/pkgsrc-bulk/2023/11/21/msg024562.html
-BROKEN_ON_PLATFORM=	NetBSD-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,6 +50,12 @@ TOOL_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == abcl
 TOOL_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
+.endif
+
+PLIST_VARS+=		simd
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.simd=		yes
 .endif
 
 SUBST_CLASSES+=			fix-paths
