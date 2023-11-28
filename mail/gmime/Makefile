@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/12/08 16:02:18 adam Exp $
+# $NetBSD: Makefile,v 1.44 2023/11/28 17:28:32 jperkin Exp $
 
 DISTNAME=	gmime-2.6.23
 PKGREVISION=	4
@@ -20,10 +20,7 @@ CONFIGURE_ARGS+=	--disable-mono
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
 TEST_TARGET=		check
 
-BUILDLINK_DEPMETHOD.libgpg-error=	build
-
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
-.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
