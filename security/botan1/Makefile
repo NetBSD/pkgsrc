@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/28 16:12:57 jperkin Exp $
 
 DISTNAME=	Botan-1.10.17
 PKGNAME=	${DISTNAME:tl}
@@ -15,7 +15,6 @@ LICENSE=	2-clause-bsd
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++03
 
-PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.8.14; 1.10 is supposedly better
 
 CONFIG_SHELL=		${PYTHONBIN}
@@ -44,5 +43,5 @@ CONFIGURE_ARGS+=	--cpu=ppc64
 CONFIGURE_ARGS+=	--cpu=arm
 .endif
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
