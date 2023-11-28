@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7283 2023/11/28 10:53:42 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.7284 2023/11/28 15:16:30 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10436,3 +10436,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.23.3 [pin 2023-11-28]
 	Updated graphics/freetype-utils to 1.5nb2 [jperkin 2023-11-28]
 	Updated wm/windowmaker to 0.96.0nb4 [jperkin 2023-11-28]
+	Updated lang/sbcl to 2.3.11 [rjs 2023-11-28]
