@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7278 2023/11/27 20:31:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7279 2023/11/28 01:16:23 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10431,3 +10431,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-html-sanitizer to 2.2.0 [adam 2023-11-27]
 	Updated devel/py-allpairspy to 2.5.1 [adam 2023-11-27]
 	Updated devel/py-pathvalidate to 3.2.0 [adam 2023-11-27]
+	Updated net/gh to 2.39.1 [nonaka 2023-11-28]
