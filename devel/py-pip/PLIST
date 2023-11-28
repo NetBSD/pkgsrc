@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/10/15 19:37:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/11/28 21:51:31 abs Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -489,6 +489,7 @@ ${PYSITELIB}/pip/_vendor/cachecontrol/filewrapper.pyo
 ${PYSITELIB}/pip/_vendor/cachecontrol/heuristics.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/heuristics.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/heuristics.pyo
+${PYSITELIB}/pip/_vendor/cachecontrol/py.typed
 ${PYSITELIB}/pip/_vendor/cachecontrol/serialize.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/serialize.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/serialize.pyo
@@ -505,6 +506,7 @@ ${PYSITELIB}/pip/_vendor/certifi/cacert.pem
 ${PYSITELIB}/pip/_vendor/certifi/core.py
 ${PYSITELIB}/pip/_vendor/certifi/core.pyc
 ${PYSITELIB}/pip/_vendor/certifi/core.pyo
+${PYSITELIB}/pip/_vendor/certifi/py.typed
 ${PYSITELIB}/pip/_vendor/chardet/__init__.py
 ${PYSITELIB}/pip/_vendor/chardet/__init__.pyc
 ${PYSITELIB}/pip/_vendor/chardet/__init__.pyo
@@ -625,6 +627,7 @@ ${PYSITELIB}/pip/_vendor/chardet/metadata/__init__.pyo
 ${PYSITELIB}/pip/_vendor/chardet/metadata/languages.py
 ${PYSITELIB}/pip/_vendor/chardet/metadata/languages.pyc
 ${PYSITELIB}/pip/_vendor/chardet/metadata/languages.pyo
+${PYSITELIB}/pip/_vendor/chardet/py.typed
 ${PYSITELIB}/pip/_vendor/chardet/resultdict.py
 ${PYSITELIB}/pip/_vendor/chardet/resultdict.pyc
 ${PYSITELIB}/pip/_vendor/chardet/resultdict.pyo
@@ -742,6 +745,7 @@ ${PYSITELIB}/pip/_vendor/distro/__main__.pyo
 ${PYSITELIB}/pip/_vendor/distro/distro.py
 ${PYSITELIB}/pip/_vendor/distro/distro.pyc
 ${PYSITELIB}/pip/_vendor/distro/distro.pyo
+${PYSITELIB}/pip/_vendor/distro/py.typed
 ${PYSITELIB}/pip/_vendor/idna/__init__.py
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyc
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyo
@@ -763,6 +767,7 @@ ${PYSITELIB}/pip/_vendor/idna/intranges.pyo
 ${PYSITELIB}/pip/_vendor/idna/package_data.py
 ${PYSITELIB}/pip/_vendor/idna/package_data.pyc
 ${PYSITELIB}/pip/_vendor/idna/package_data.pyo
+${PYSITELIB}/pip/_vendor/idna/py.typed
 ${PYSITELIB}/pip/_vendor/idna/uts46data.py
 ${PYSITELIB}/pip/_vendor/idna/uts46data.pyc
 ${PYSITELIB}/pip/_vendor/idna/uts46data.pyo
@@ -796,6 +801,7 @@ ${PYSITELIB}/pip/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/pip/_vendor/packaging/markers.py
 ${PYSITELIB}/pip/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pip/_vendor/packaging/markers.pyo
+${PYSITELIB}/pip/_vendor/packaging/py.typed
 ${PYSITELIB}/pip/_vendor/packaging/requirements.py
 ${PYSITELIB}/pip/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/pip/_vendor/packaging/requirements.pyo
@@ -829,6 +835,7 @@ ${PYSITELIB}/pip/_vendor/platformdirs/api.pyo
 ${PYSITELIB}/pip/_vendor/platformdirs/macos.py
 ${PYSITELIB}/pip/_vendor/platformdirs/macos.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/macos.pyo
+${PYSITELIB}/pip/_vendor/platformdirs/py.typed
 ${PYSITELIB}/pip/_vendor/platformdirs/unix.py
 ${PYSITELIB}/pip/_vendor/platformdirs/unix.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/unix.pyo
@@ -964,6 +971,7 @@ ${PYSITELIB}/pip/_vendor/pyparsing/exceptions.pyo
 ${PYSITELIB}/pip/_vendor/pyparsing/helpers.py
 ${PYSITELIB}/pip/_vendor/pyparsing/helpers.pyc
 ${PYSITELIB}/pip/_vendor/pyparsing/helpers.pyo
+${PYSITELIB}/pip/_vendor/pyparsing/py.typed
 ${PYSITELIB}/pip/_vendor/pyparsing/results.py
 ${PYSITELIB}/pip/_vendor/pyparsing/results.pyc
 ${PYSITELIB}/pip/_vendor/pyparsing/results.pyo
@@ -1057,6 +1065,7 @@ ${PYSITELIB}/pip/_vendor/resolvelib/compat/collections_abc.pyo
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.py
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/providers.pyo
+${PYSITELIB}/pip/_vendor/resolvelib/py.typed
 ${PYSITELIB}/pip/_vendor/resolvelib/reporters.py
 ${PYSITELIB}/pip/_vendor/resolvelib/reporters.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/reporters.pyo
@@ -1243,6 +1252,7 @@ ${PYSITELIB}/pip/_vendor/rich/prompt.pyo
 ${PYSITELIB}/pip/_vendor/rich/protocol.py
 ${PYSITELIB}/pip/_vendor/rich/protocol.pyc
 ${PYSITELIB}/pip/_vendor/rich/protocol.pyo
+${PYSITELIB}/pip/_vendor/rich/py.typed
 ${PYSITELIB}/pip/_vendor/rich/region.py
 ${PYSITELIB}/pip/_vendor/rich/region.pyc
 ${PYSITELIB}/pip/_vendor/rich/region.pyo
@@ -1321,6 +1331,7 @@ ${PYSITELIB}/pip/_vendor/tenacity/before_sleep.pyo
 ${PYSITELIB}/pip/_vendor/tenacity/nap.py
 ${PYSITELIB}/pip/_vendor/tenacity/nap.pyc
 ${PYSITELIB}/pip/_vendor/tenacity/nap.pyo
+${PYSITELIB}/pip/_vendor/tenacity/py.typed
 ${PYSITELIB}/pip/_vendor/tenacity/retry.py
 ${PYSITELIB}/pip/_vendor/tenacity/retry.pyc
 ${PYSITELIB}/pip/_vendor/tenacity/retry.pyo
@@ -1345,6 +1356,7 @@ ${PYSITELIB}/pip/_vendor/tomli/_re.pyo
 ${PYSITELIB}/pip/_vendor/tomli/_types.py
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyc
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyo
+${PYSITELIB}/pip/_vendor/tomli/py.typed
 ${PYSITELIB}/pip/_vendor/truststore/__init__.py
 ${PYSITELIB}/pip/_vendor/truststore/__init__.pyc
 ${PYSITELIB}/pip/_vendor/truststore/__init__.pyo
@@ -1363,6 +1375,7 @@ ${PYSITELIB}/pip/_vendor/truststore/_ssl_constants.pyo
 ${PYSITELIB}/pip/_vendor/truststore/_windows.py
 ${PYSITELIB}/pip/_vendor/truststore/_windows.pyc
 ${PYSITELIB}/pip/_vendor/truststore/_windows.pyo
+${PYSITELIB}/pip/_vendor/truststore/py.typed
 ${PYSITELIB}/pip/_vendor/typing_extensions.py
 ${PYSITELIB}/pip/_vendor/typing_extensions.pyc
 ${PYSITELIB}/pip/_vendor/typing_extensions.pyo
