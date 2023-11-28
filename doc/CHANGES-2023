@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7286 2023/11/28 17:10:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7287 2023/11/28 17:19:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10440,3 +10440,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/eza to 0.16.1 [fox 2023-11-28]
 	Added devel/py-test-freezer version 0.4.8 [adam 2023-11-28]
 	Updated devel/py-virtualenv to 20.24.7 [adam 2023-11-28]
+	Updated time/py-tempora to 5.5.0 [adam 2023-11-28]
+	Removed devel/py-test-freezegun [adam 2023-11-28]
