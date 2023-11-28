@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7284 2023/11/28 15:16:30 rjs Exp $
+$NetBSD: CHANGES-2023,v 1.7285 2023/11/28 17:06:40 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10437,3 +10437,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/freetype-utils to 1.5nb2 [jperkin 2023-11-28]
 	Updated wm/windowmaker to 0.96.0nb4 [jperkin 2023-11-28]
 	Updated lang/sbcl to 2.3.11 [rjs 2023-11-28]
+	Updated sysutils/eza to 0.16.1 [fox 2023-11-28]
