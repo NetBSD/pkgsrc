@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7289 2023/11/28 17:32:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7290 2023/11/28 17:37:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10445,3 +10445,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/py-borgmatic version 1.8.5 [he 2023-11-28]
 	Added archivers/bzip3 version 1.3.2 [adam 2023-11-28]
 	Updated net/py-aioresponses to 0.7.6 [adam 2023-11-28]
+	Updated security/py-cryptography to 41.0.7 [adam 2023-11-28]
+	Updated security/py-cryptography_vectors to 41.0.7 [adam 2023-11-28]
