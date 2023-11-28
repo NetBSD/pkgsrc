@@ -273,6 +273,11 @@ Suppress the user field.
 \f[V]--no-time\f[R]
 Suppress the time field.
 .TP
+\f[V]--stdin\f[R]
+When you wish to pipe directories to eza/read from stdin.
+Separate one per line or define custom separation char in
+\f[V]EZA_STDIN_SEPARATOR\f[R] env variable.
+.TP
 \f[V]-\[at]\f[R], \f[V]--extended\f[R]
 List each file\[cq]s extended attributes and sizes.
 .TP
@@ -391,6 +396,10 @@ Useful for if you always want to have icons enabled.
 .PP
 Any explicit use of the \f[V]--icons=WHEN\f[R] flag overrides this
 behavior.
+.SS \f[V]EZA_STDIN_SEPARATOR\f[R]
+.PP
+Specifies the separator to use when file names are piped from stdin.
+Defaults to newline.
 .SH EXIT STATUSES
 .TP
 0
