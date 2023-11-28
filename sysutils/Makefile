@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1102 2023/11/24 16:33:41 pin Exp $
+# $NetBSD: Makefile,v 1.1103 2023/11/28 17:22:12 he Exp $
 #
 
 COMMENT=	System utilities
@@ -574,6 +574,7 @@ SUBDIR+=	py-ansible-compat
 SUBDIR+=	py-appnope
 SUBDIR+=	py-augeas
 SUBDIR+=	py-borgbackup
+SUBDIR+=	py-borgmatic
 SUBDIR+=	py-collectd
 SUBDIR+=	py-cpuinfo
 SUBDIR+=	py-crontab
