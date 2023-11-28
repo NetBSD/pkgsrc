@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/05/07 11:51:43 leot Exp $
+# $NetBSD: Makefile,v 1.36 2023/11/28 20:21:31 jperkin Exp $
 
 DISTNAME=		vnc-4_1_3-unixsrc
 PKGNAME=		vncviewer-4.1.3
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-zlib
 
+LDFLAGS.SunOS+=		-lsocket -lnsl
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
@@ -28,12 +30,9 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
