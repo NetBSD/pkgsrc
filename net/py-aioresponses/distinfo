@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/12/15 23:05:27 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/11/28 17:30:21 adam Exp $
 
-BLAKE2s (aioresponses-0.7.4.tar.gz) = 27e03a7f762d8d6ae6669960d6558c17eef9c71cec3e593ec7ec556a3f706fb4
-SHA512 (aioresponses-0.7.4.tar.gz) = 00392f8481e600e2c18563193aaf5b75a324ea49e90606e43a28ea787f75c55712bc2caff0a70411f51a9615b01a252fca1ebb9efd2cc314f6358eeeef6d1e59
-Size (aioresponses-0.7.4.tar.gz) = 35248 bytes
+BLAKE2s (aioresponses-0.7.6.tar.gz) = 216ca3238e1b6fe388aa6ae6ee36d4795123e179c313818828dffeeac8e8ca07
+SHA512 (aioresponses-0.7.6.tar.gz) = d02fa848a5d6588e32c203591f842cb212aae60d5e060a3fa13993bbb575922e516f04d47f9428c5f4b8103bc9990aa45cdde3c17bd2c47d8eff714f93976450
+Size (aioresponses-0.7.6.tar.gz) = 35846 bytes
