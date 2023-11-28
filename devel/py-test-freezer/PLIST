@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/28 17:05:27 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/pytest_freezer.py
+${PYSITELIB}/pytest_freezer.pyc
+${PYSITELIB}/pytest_freezer.pyo
