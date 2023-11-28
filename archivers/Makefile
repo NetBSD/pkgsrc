@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2023/11/27 02:21:50 thorpej Exp $
+# $NetBSD: Makefile,v 1.208 2023/11/28 17:25:37 adam Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -23,6 +23,7 @@ SUBDIR+=	brotli
 SUBDIR+=	bsdtar
 SUBDIR+=	bunzip
 SUBDIR+=	bzip2
+SUBDIR+=	bzip3
 SUBDIR+=	cabextract
 SUBDIR+=	dact
 SUBDIR+=	dar
