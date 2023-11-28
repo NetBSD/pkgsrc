@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/11/29 20:37:32 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/28 20:28:52 jperkin Exp $
 #
 
 DISTNAME=	xsel-1.2.0
@@ -12,8 +12,6 @@ COMMENT=	Manipulate the X selection
 GNU_CONFIGURE=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xsel.1x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xsel.1
