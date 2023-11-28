@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/12/11 14:16:16 taca Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/28 16:29:52 taca Exp $
 
 MODNAME=		mbstring
 CATEGORIES+=		converters
@@ -11,8 +11,7 @@ INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/mbstring/libmbfl/filters
 INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/mbstring/libmbfl/mbfl
 INSTALLATION_DIRS+=	${PREFIX}/include/php/ext/mbstring/libmbfl/nls
 
-PLIST_SRC+=		${.CURDIR}/PLIST
-PLIST_VARS+=		jisxf php7 php81 sbf
+PLIST_SRC+=		${.CURDIR}/PLIST.${PHP_PKG_PREFIX}
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
@@ -23,16 +22,4 @@ post-install:
 
 .include "../../lang/php/ext.mk"
 .include "../../textproc/oniguruma/buildlink3.mk"
-
-.if ${PKG_PHP_VERSION} <=80
-PLIST.sbf=	yes
-.  if ${PKG_PHP_VERSION} <80
-PLIST.php7=	yes
-.  endif
-.else
-PLIST.php81=	yes
-.endif
-.if ${PKG_PHP_VERSION} < 82
-PLIST.jisxf=	yes
-.endif
 .include "../../mk/bsd.pkg.mk"
