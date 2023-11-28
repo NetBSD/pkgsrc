@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/28 17:05:27 adam Exp $
+
+BLAKE2s (pytest_freezer-0.4.8.tar.gz) = cc844581b7ae28713348f2f473da683dbeeb59da9ea6bac0f428907eda2bdff0
+SHA512 (pytest_freezer-0.4.8.tar.gz) = b5b3665dcc0400787ea61be3ea59437e126325697874e4190abd9821f9c5a5620ca6af3602721fb7b777037fc191aef6aac37be5d00cc38e7c2de808cdf5bf67
+Size (pytest_freezer-0.4.8.tar.gz) = 3212 bytes
