@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2023/11/14 14:02:59 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2023/11/28 15:49:17 jperkin Exp $
 #
 
 PKGVER=		0.8.8
@@ -72,7 +72,6 @@ post-install:
 .endfor
 
 # this is as much as needed for the basic window decorator
-BUILDLINK_DEPMETHOD.pango=	build
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
