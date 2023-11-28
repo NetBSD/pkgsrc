@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4136 2023/11/28 17:05:27 adam Exp $
+# $NetBSD: Makefile,v 1.4137 2023/11/28 17:19:00 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3011,7 +3011,6 @@ SUBDIR+=	py-test-env
 SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
-SUBDIR+=	py-test-freezegun
 SUBDIR+=	py-test-freezer
 SUBDIR+=	py-test-httpserver
 SUBDIR+=	py-test-isort

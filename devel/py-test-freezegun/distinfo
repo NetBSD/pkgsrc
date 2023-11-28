@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/05/04 12:38:39 adam Exp $
-
-BLAKE2s (pytest-freezegun-0.4.2.zip) = f61c5e7df2189638444cedbdc20cfd9cbf83010b1c31e0e2ac2d178447bfd925
-SHA512 (pytest-freezegun-0.4.2.zip) = 0f1f8e75081ddc285f1fe5e985d434ad396cdf80efc585f9957462ccb1eebe23f3e2a260f141a637d2d523119ac9be498ce36900fbaabfeaa60590ca64788c29
-Size (pytest-freezegun-0.4.2.zip) = 9059 bytes
