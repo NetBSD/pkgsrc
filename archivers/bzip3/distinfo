@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/28 17:25:38 adam Exp $
+
+BLAKE2s (bzip3-1.3.2.tar.xz) = fe40f2a6908a4157678ad048a5e9a9c9744cf63209166d6d3c003f82833d4aeb
+SHA512 (bzip3-1.3.2.tar.xz) = 76521377adfe737b30e77f5c3241c1c12214165492fba5acbc5ba09c8e7b91396b772f9fec936d6603413c3ef179a13597b13509df99bd8a2d56cbf14a70a84f
+Size (bzip3-1.3.2.tar.xz) = 277768 bytes
