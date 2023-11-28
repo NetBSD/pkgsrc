@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/06/03 12:42:24 rjs Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/11/28 15:03:55 rjs Exp $
 bin/sbcl
 lib/sbcl/contrib/asdf.fasl
 lib/sbcl/contrib/sb-aclrepl.asd
@@ -33,8 +33,8 @@ lib/sbcl/contrib/sb-rotate-byte.asd
 lib/sbcl/contrib/sb-rotate-byte.fasl
 lib/sbcl/contrib/sb-rt.asd
 lib/sbcl/contrib/sb-rt.fasl
-lib/sbcl/contrib/sb-simd.asd
-lib/sbcl/contrib/sb-simd.fasl
+${PLIST.simd}lib/sbcl/contrib/sb-simd.asd
+${PLIST.simd}lib/sbcl/contrib/sb-simd.fasl
 lib/sbcl/contrib/sb-simple-streams.asd
 lib/sbcl/contrib/sb-simple-streams.fasl
 lib/sbcl/contrib/sb-sprof.asd
