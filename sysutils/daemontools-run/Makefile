@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/16 23:17:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/29 15:18:21 schmonz Exp $
 
-DISTNAME=		daemontools-run-20231116
+DISTNAME=		daemontools-run-20231129
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -25,6 +25,7 @@ RCD_SCRIPTS=		svscan
 SMF_NAME=		svscan
 FILES_SUBST+=		VARBASE=${VARBASE:Q}
 FILES_SUBST+=		DAEMONTOOLS_LOG_USER=${DAEMONTOOLS_LOG_USER:Q}
+FILES_SUBST+=		OPSYS=${OPSYS:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
