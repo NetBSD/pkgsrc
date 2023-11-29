@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7298 2023/11/29 13:45:28 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7299 2023/11/29 15:18:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10456,3 +10456,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/oatbar to 0.0.29 [pin 2023-11-29]
 	Updated textproc/ripgrep to 14.0.3 [pin 2023-11-29]
 	Updated misc/tui-journal to 0.5.1 [pin 2023-11-29]
+	Updated sysutils/daemontools-run to 20231129 [schmonz 2023-11-29]
