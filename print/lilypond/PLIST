@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/12/27 15:57:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/11/29 16:58:05 schmonz Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -297,6 +297,7 @@ share/lilypond/${PKGVERSION}/ly/voice-tkit.ly
 share/lilypond/${PKGVERSION}/ps/encodingdefs.ps
 share/lilypond/${PKGVERSION}/ps/lilyponddefs.ps
 share/lilypond/${PKGVERSION}/ps/music-drawing-routines.ps
+share/lilypond/${PKGVERSION}/ps/nocache.ps
 share/lilypond/${PKGVERSION}/python/book_base.py
 share/lilypond/${PKGVERSION}/python/book_docbook.py
 share/lilypond/${PKGVERSION}/python/book_html.py
