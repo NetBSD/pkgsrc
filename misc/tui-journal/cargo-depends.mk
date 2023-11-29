@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2023/11/26 16:10:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2023/11/29 13:44:41 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -29,8 +29,8 @@ CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.83
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.31
-CARGO_CRATE_DEPENDS+=	clap-4.4.8
-CARGO_CRATE_DEPENDS+=	clap_builder-4.4.8
+CARGO_CRATE_DEPENDS+=	clap-4.4.9
+CARGO_CRATE_DEPENDS+=	clap_builder-4.4.9
 CARGO_CRATE_DEPENDS+=	clap_derive-4.4.7
 CARGO_CRATE_DEPENDS+=	clap_lex-0.6.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.0
