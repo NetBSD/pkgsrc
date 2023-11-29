@@ -1,11 +1,11 @@
-$NetBSD: patch-.._package.xml,v 1.10 2022/02/20 13:15:14 taca Exp $
+$NetBSD: patch-.._package.xml,v 1.11 2023/11/29 15:53:27 taca Exp $
 
 * Drop MD5 for replacing shbang line.
 
---- ../package.xml.orig	2022-02-16 17:41:21.000000000 +0000
+--- ../package.xml.orig	2023-11-23 09:13:57.000000000 +0000
 +++ ../package.xml
-@@ -64,7 +64,7 @@ Ignore tests/debug.log and .gitattribute
-    <file baseinstalldir="/" md5sum="8fb0283a2cc4f1b5f97df1b9f57ab7e8" name="data/pinentry-cli.xml" role="data">
+@@ -63,7 +63,7 @@ Fix bug in parsing USERID_HINT status ca
+    <file baseinstalldir="/" md5sum="a24568c8817511eb3e299eb2d93182db" name="data/pinentry-cli.xml" role="data">
      <tasks:replace from="@package-version@" to="version" type="package-info" />
     </file>
 -   <file baseinstalldir="/" md5sum="069d671c63366eaf64b050132dd76da3" name="scripts/crypt-gpg-pinentry" role="script">
