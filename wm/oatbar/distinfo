@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/11/24 11:11:01 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/11/29 13:42:04 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -303,9 +303,9 @@ Size (num-format-0.4.4.crate) = 61509 bytes
 BLAKE2s (num-traits-0.2.17.crate) = 530620ccedda0523701a4a52f47054989b48bfef7852defc9592e2dbc6796bec
 SHA512 (num-traits-0.2.17.crate) = 4d47d3e2f5a31019e038e609897cb0cef1ba061b35cee7e2a02e65179dcdd4960bd5b9bc759b5c013d699b3fbd9b014940a15e36658f7d4fd12cb0c7841c5b4e
 Size (num-traits-0.2.17.crate) = 50190 bytes
-BLAKE2s (oatbar-0.0.27.tar.gz) = 57d4992e6737c9c20cbc06c5dbe6cffdbd543c82dddf926457a734dd6bbb9f5f
-SHA512 (oatbar-0.0.27.tar.gz) = e416055cfe17877b68a4f728b8b941726e5bc97bf3425fcdceedc71546707d9aa1f4b8c3a628ce571da7e5b4b951dade597374b809eb64e7fcb87de5a5dd3297
-Size (oatbar-0.0.27.tar.gz) = 187399 bytes
+BLAKE2s (oatbar-0.0.29.tar.gz) = bdae455bec6a3b9d588e0bf4b4e546b54e96732818dda617e858351f04f1f5f9
+SHA512 (oatbar-0.0.29.tar.gz) = 2c65b67a25aa015927ba4f4bc4181a870ffec64a1c6d23847488249515492f119d98a93df3e56113f505e9f8e8750613e1799de652ab4e5ec04bc705e9b1e183
+Size (oatbar-0.0.29.tar.gz) = 223682 bytes
 BLAKE2s (object-0.32.1.crate) = 6941b78cde96078b4cbe3914be999d88fc58ca3bfb544ce6ce22b566ac19ee54
 SHA512 (object-0.32.1.crate) = 5bfd3b8960fd80bb48691fdef35d7a9fc3d752a1cf5f29cb4e146a17d427e878d972d208e8aefe5015b3c62d065ed9a66f2f9f790b4743d1a4a3f9c0b8e581e3
 Size (object-0.32.1.crate) = 275463 bytes
