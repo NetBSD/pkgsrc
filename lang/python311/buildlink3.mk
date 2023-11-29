@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/10/31 09:52:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/29 11:02:41 jperkin Exp $
 
 BUILDLINK_TREE+=	python311
 
@@ -16,9 +16,12 @@ BUILDLINK_INCDIRS.python311+=	include/python3.11
 BUILDLINK_LIBDIRS.python311+=	lib/python3.11/config
 BUILDLINK_TRANSFORM+=		l:python:python3.11
 
+.if !${BUILDLINK_DEPMETHOD.python311:U:Mbuild}
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif
+
 .endif # PYTHON311_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-python311
