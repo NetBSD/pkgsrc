@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2021/08/12 14:30:27 taca Exp $
+# $NetBSD: Makefile,v 1.61 2023/11/29 16:02:12 taca Exp $
 #
 
-DISTNAME=	PEAR-1.10.13
+DISTNAME=	PEAR-1.10.14
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
