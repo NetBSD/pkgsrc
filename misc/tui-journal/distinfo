@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2023/11/26 16:10:59 pin Exp $
+$NetBSD: distinfo,v 1.12 2023/11/29 13:44:41 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -87,12 +87,12 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.31.crate) = 55600c5f451c6e311360b3a7fc223841f73fa4e00c8e606d2b8d2386de4c73c0
 SHA512 (chrono-0.4.31.crate) = 23276daa2c1bc3b7b2327dc84200fb40cc995a8b599d1a537e92e08138ab8a0d1548a510a8155dcdda18820120d7204e89a4686c866fc3a8d2460cdb30ac6089
 Size (chrono-0.4.31.crate) = 214513 bytes
-BLAKE2s (clap-4.4.8.crate) = ffe662eec5fe76a886fb085aaac4cd66c93c7ea6fc6f20b1fa5ecfe7d9d43ad0
-SHA512 (clap-4.4.8.crate) = 579cee9b0b582d23c3b78fffcbef4c33ce47a67f511276922daee838aa5ad26134ba81a454bfdfb72d7e23df69b78227f0b60e57d2ca7455402d37dbbf099dbc
-Size (clap-4.4.8.crate) = 54609 bytes
-BLAKE2s (clap_builder-4.4.8.crate) = 69bf075f7057fffc06a4a3a4e319debcd64d900dffd1061c9b62f6488acd81fe
-SHA512 (clap_builder-4.4.8.crate) = 83a3a4c81bcfd769a787b4f91b29488e65cb3d4e9e5160ab7b7289e5860a7d4058aa08077b62b9e8d10e4c1cc7c949439b677444d94c8ae00a7bebb2e0e8af8b
-Size (clap_builder-4.4.8.crate) = 163164 bytes
+BLAKE2s (clap-4.4.9.crate) = 2430bc8adeba860c552e88982fb7c5a476ae9f5c6933a47f5b04236a1e97c79c
+SHA512 (clap-4.4.9.crate) = 2aaa67fe6e7c2dce92e752e17e4207821a74a04b8508d3c4a4017415dab43d5c54ba6aaaf7bb802abcac7405c739e9ee41c4bfc921e71044acd7aa869fad2799
+Size (clap-4.4.9.crate) = 54616 bytes
+BLAKE2s (clap_builder-4.4.9.crate) = 10592f76745fef2cd6d5ea6ad869748439b200596ad2e33820694bb1d1277fd1
+SHA512 (clap_builder-4.4.9.crate) = 1853ffa3d6a03a5fc6eaa9f93668f1c96a1169b972e93cde75226b12598942398d8727a598af89510b8d897a6023f5b70f6e1885119c9bc07adde67b95ba19c3
+Size (clap_builder-4.4.9.crate) = 163198 bytes
 BLAKE2s (clap_derive-4.4.7.crate) = cc93e0ab7a4ba21b778f726768b6fd0e3588d7bbf6b74757c990fb618f9ebe2c
 SHA512 (clap_derive-4.4.7.crate) = 4be40460468f7ce22906cdc9eea8d01bb07cb206d4ce0c3df2abd929d6925b175a49cf63907925ca16ae6297d6f4d933087fa5b35958e551117ec7ae050be167
 Size (clap_derive-4.4.7.crate) = 29046 bytes
@@ -642,9 +642,9 @@ Size (tracing-attributes-0.1.27.crate) = 32241 bytes
 BLAKE2s (tracing-core-0.1.32.crate) = b8e1bc2af3635843ee11b3868850bc1923fe19626fb57c245409d7834fdf571c
 SHA512 (tracing-core-0.1.32.crate) = 164f79cacfcca533a53b7dbbdc2015aaf851a16e00c72fbc4e5f515b6a6dedfa464e964810009b54f08cbcdc5a314e50245ac7b1b01a71fce4c63db135bf5521
 Size (tracing-core-0.1.32.crate) = 61221 bytes
-BLAKE2s (tui-journal-0.5.0.crate) = 5db767102a9643f91633b4a5369a3d0386d85267ddc9217912eee16cfbd49658
-SHA512 (tui-journal-0.5.0.crate) = e9373f13da348e52c527ecc4affbaedb4c9eadcb08dd19c085e2feb354ed0e953f0e079c62be8a918d5bd6b844585566905ef1449fc89799dc84011ddf3ab49b
-Size (tui-journal-0.5.0.crate) = 1978327 bytes
+BLAKE2s (tui-journal-0.5.1.crate) = 41586c83a3ad978e2e865a90ed2a68bb8070037bdc7722c3f6f7c9c868ed74b7
+SHA512 (tui-journal-0.5.1.crate) = bcf7e86224f7fc21549161338fce214b43115a562e0d9208001c9111cd108516daf026e0c8d7d94b9ffb0c76ac5c0394d6a7db898dfc03464c677a83556a28a4
+Size (tui-journal-0.5.1.crate) = 1978508 bytes
 BLAKE2s (tui-textarea-0.4.0.crate) = 16eea9284e4ab5ae185e7496019f87587d86641a3b0739f7bbc683e18802716d
 SHA512 (tui-textarea-0.4.0.crate) = 5151c527a7f45feece8b1cccbb3104670678b63abb8eefb11595d7dcf609e68010ad7b00e984d986700a6cff4c21a75f3073d29480e97164344a845688b162dc
 Size (tui-textarea-0.4.0.crate) = 61789 bytes

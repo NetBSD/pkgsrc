@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2023/11/26 16:10:59 pin Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/29 13:44:41 pin Exp $
 
-DISTNAME=	tui-journal-0.5.0
+DISTNAME=	tui-journal-0.5.1
 CATEGORIES=	misc
 MASTER_SITES=	https://static.crates.io/crates/tui-journal/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/ammarabouzor/tui-journal/
 COMMENT=	Your journal app if you live in a terminal
 LICENSE=	mit
