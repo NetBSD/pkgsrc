@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7291 2023/11/29 02:54:25 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7292 2023/11/29 09:13:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10448,3 +10448,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 41.0.7 [adam 2023-11-28]
 	Updated security/py-cryptography_vectors to 41.0.7 [adam 2023-11-28]
 	Updated sysutils/etckeeper to 1.18.21 [schmonz 2023-11-29]
+	Updated devel/py-types-setuptools to 69.0.0.0 [adam 2023-11-29]
+	Updated textproc/py-pyaml to 23.9.7 [adam 2023-11-29]
