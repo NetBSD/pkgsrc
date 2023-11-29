@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2023/07/18 22:37:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2023/11/29 04:41:56 pho Exp $
 
 BUILDLINK_TREE+=	exiv2
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.exiv2?=	../../graphics/exiv2
 
 USE_CXX_FEATURES+=	filesystem
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
