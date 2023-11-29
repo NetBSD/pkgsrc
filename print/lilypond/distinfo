@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.35 2023/09/07 13:26:16 schmonz Exp $
+$NetBSD: distinfo,v 1.36 2023/11/29 16:58:05 schmonz Exp $
 
-BLAKE2s (lilypond-2.24.2.tar.gz) = e53be2284ded4e1a9a7ac7ba6b238cc797dfce57dbd98d50b77f6276b1cc9fab
-SHA512 (lilypond-2.24.2.tar.gz) = 14a37e3346cad2fe78a9ce7189d21797c9d78016c675b6a20ae25de7bf3de2916c6982ef753b0d051600c0ac15317a8ecb423746be4419db023b6eb829dfc3de
-Size (lilypond-2.24.2.tar.gz) = 19439984 bytes
+BLAKE2s (lilypond-2.24.3.tar.gz) = f1428e3ffc39c3dc196d99616a989062c4bbc3cb5f03ee026a6547f8dd3d2d33
+SHA512 (lilypond-2.24.3.tar.gz) = 5153f6cbe5e68e4b3dfcc03a8299ef6b82fbfb487eb3e4f9d631b9dc5a07a972168c3f141d6d50eac936f5c7aeeacd19837c0c9ab70f11dfd5c7efe085d5b56e
+Size (lilypond-2.24.3.tar.gz) = 19441299 bytes
 SHA1 (patch-GNUmakefile.in) = 86e4d55ebf3b718178d019d7946943ae28d8e9b1
 SHA1 (patch-configure) = 198dd20364e829911efc45e30d42d7f90c949702
