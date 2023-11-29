@@ -1,18 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2022/10/31 21:49:13 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/11/29 09:12:49 adam Exp $
+bin/pyaml
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyaml/__init__.py
 ${PYSITELIB}/pyaml/__init__.pyc
 ${PYSITELIB}/pyaml/__init__.pyo
 ${PYSITELIB}/pyaml/__main__.py
 ${PYSITELIB}/pyaml/__main__.pyc
 ${PYSITELIB}/pyaml/__main__.pyo
+${PYSITELIB}/pyaml/cli.py
+${PYSITELIB}/pyaml/cli.pyc
+${PYSITELIB}/pyaml/cli.pyo
 ${PYSITELIB}/pyaml/tests/__init__.py
 ${PYSITELIB}/pyaml/tests/__init__.pyc
 ${PYSITELIB}/pyaml/tests/__init__.pyo
+${PYSITELIB}/pyaml/tests/test_cli.py
+${PYSITELIB}/pyaml/tests/test_cli.pyc
+${PYSITELIB}/pyaml/tests/test_cli.pyo
 ${PYSITELIB}/pyaml/tests/test_dump.py
 ${PYSITELIB}/pyaml/tests/test_dump.pyc
 ${PYSITELIB}/pyaml/tests/test_dump.pyo
