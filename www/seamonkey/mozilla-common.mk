@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.20 2023/10/23 06:37:57 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.21 2023/11/29 05:38:25 dholland Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -25,8 +25,8 @@ PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
 .else
-TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
-ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
+TOOL_DEPENDS+=			python39-[0-9]*:../../lang/python39
+ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.9
 .endif
 
 TOOL_DEPENDS+=			cbindgen>=0.24.3:../../devel/cbindgen
