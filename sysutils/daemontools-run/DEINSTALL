@@ -1,9 +1,15 @@
-# $NetBSD: DEINSTALL,v 1.1 2023/09/04 17:51:10 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.2 2023/11/29 15:18:21 schmonz Exp $
+
+OPSYS=@OPSYS@
 
 case "${STAGE}" in
 
 DEINSTALL)
-	${RM} -f /service
+	if [ ${OPSYS} = "Darwin" ]; then
+		${ECHO} "please remove /etc/synthetic.conf entry 'service	${VARBASE}/service' (and reboot when ready)"
+	else
+		${RM} -f /service
+	fi
 
 	;;
 

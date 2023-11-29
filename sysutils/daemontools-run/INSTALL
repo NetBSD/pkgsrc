@@ -1,11 +1,19 @@
-# $NetBSD: INSTALL,v 1.1 2023/09/04 17:51:10 schmonz Exp $
+# $NetBSD: INSTALL,v 1.2 2023/11/29 15:18:21 schmonz Exp $
 
 VARBASE=@VARBASE@
+OPSYS=@OPSYS@
 
 case "${STAGE}" in
 
 POST-INSTALL)
-	${LN} -s ${VARBASE}/service		/service
+	if [ ! -e /service ]; then
+		if [ ${OPSYS} = "Darwin" ]; then
+			${ECHO} "please create /etc/synthetic.conf entry 'service	${VARBASE}/service' (and reboot when ready)"
+		else
+			${LN} -s ${VARBASE}/service /service
+		fi
+	fi
+
 
 	;;
 
