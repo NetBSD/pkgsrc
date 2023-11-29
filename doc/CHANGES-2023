@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7303 2023/11/29 16:58:11 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7304 2023/11/29 21:48:24 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10461,3 +10461,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/pear to 1.10.14 [taca 2023-11-29]
 	Added devel/ruby-redmine51 version 5.1.0 [taca 2023-11-29]
 	Updated print/lilypond to 2.24.3 [schmonz 2023-11-29]
+	Updated pkgtools/nih to 0.15.1 [cheusov 2023-11-29]
