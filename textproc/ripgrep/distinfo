@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2023/11/28 10:12:28 pin Exp $
+$NetBSD: distinfo,v 1.10 2023/11/29 13:43:22 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -102,9 +102,9 @@ Size (regex-automata-0.4.3.crate) = 617011 bytes
 BLAKE2s (regex-syntax-0.8.2.crate) = 1d0622805a79f44450950cd96e4eb8f213180b3de639601cebf9c8ca9ba771bb
 SHA512 (regex-syntax-0.8.2.crate) = 301dde555f300298f2594490ccd8b92033e4917fe9b8671b8a97db6c827793c73969be85a92999964dcaf3177edda51abeb576811ad6cab9772964dc0a77e728
 Size (regex-syntax-0.8.2.crate) = 347228 bytes
-BLAKE2s (ripgrep-14.0.2.tar.gz) = 05bc639350bff4c9773f0ba8a7a02cbfb4bbeb5b063a8fe60154d35641b13896
-SHA512 (ripgrep-14.0.2.tar.gz) = be80aea9b5e3645d96ca657898975214bbd72da7c18d514d31dde1af7f8cfb24e0e9d4c783868e499621252becea4cd962325d2301bf594036e07cfc07ee31d2
-Size (ripgrep-14.0.2.tar.gz) = 583769 bytes
+BLAKE2s (ripgrep-14.0.3.tar.gz) = 25e4afc9159da8b1b9f8a42d1c3464b644203012b45cfa004a705da3b2296bfd
+SHA512 (ripgrep-14.0.3.tar.gz) = ffe0a7fa619c94cb48642854f0660cc091a09e38d3b9a59baac76f54f0ba2d59a693849fc73b34a09e2fff26f3059dfe396b34a6864b9332bbd3daffe490d4b0
+Size (ripgrep-14.0.3.tar.gz) = 583882 bytes
 BLAKE2s (ryu-1.0.15.crate) = 9cd8b57860ba906eaae35b47878818e4e574fb5463963cb95a0134a0acae6eee
 SHA512 (ryu-1.0.15.crate) = 4655b5647f919082a9b84b889539ae7fb23a1201057cf280efe79c58cb5f040864efb7812cda5021bf6d34838a15d173ac8bdb0fb9fa2dba85173d3efa5a826b
 Size (ryu-1.0.15.crate) = 46906 bytes
