@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.150 2023/11/14 14:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2023/11/29 16:58:05 schmonz Exp $
 
-DISTNAME=		lilypond-2.24.2
-PKGREVISION=		2
+DISTNAME=		lilypond-2.24.3
 CATEGORIES=		print
 MASTER_SITES=		https://lilypond.org/download/sources/v2.24/
 
@@ -34,14 +33,15 @@ DEPENDS+=		potrace>=1.8:../../graphics/potrace
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
 USE_TOOLS+=		bison gmake gs:run makeinfo perl pkg-config msgfmt
 USE_TOOLS+=		texi2html zip
 MAKE_FILE=		GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
 
-TEXINFO_REQD=		6.1
+TEXINFO_REQD+=		6.1
 
 GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
 INFO_DIR=		${GNU_CONFIGURE_INFODIR}
@@ -62,7 +62,7 @@ post-install:
 .include "../../devel/boehm-gc/buildlink3.mk"
 # needs FlexLexer.h
 # make sure we use the same version for that file and the flex binary
-FLEX_REQD=		2.6.0
+FLEX_REQD+=		2.6.0
 BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
