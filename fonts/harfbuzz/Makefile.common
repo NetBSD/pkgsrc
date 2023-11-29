@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2023/11/23 11:11:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.43 2023/11/29 11:08:51 jperkin Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-8.3.0
@@ -47,9 +47,6 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 LDFLAGS.OpenBSD+=	-lz
 
-# glib2 must come before gtk-doc otherwise its dependencies are only
-# registered as build dependencies, causing potential runtime failures.
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../fonts/harfbuzz/options.mk"
 
 # gcc too old
@@ -81,11 +78,10 @@ REPLACE_PYTHON+=		src/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
-#.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .if ${LIBRSVG_TYPE} == "rust"
 # graphite2 support breaks graphics/librsvg-c
