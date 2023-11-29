@@ -1,0 +1,18 @@
+Redmine is a flexible project management web application using the
+Ruby on Rails framework, it is cross-platform and cross-database.
+
+Redmine 5.1 introduces these new features in these categories:
+
+* Migrate to Rails 6.1 with Zeitwerk autoloading.
+* Introduced CommonMark Markdown (GitHub Flavored) formatter as an
+  alternative to existing Markdown formatter based on Redcarpet.
+* Users can be mention now using @ autocomplete by other users with add
+  watchers permission.
+* Issue custom query: default query per instance, project and user.
+* Default project custom query: per instance and per user.
+* Ability to add watchers to Wiki pages.
+* Issues can now be filtered by notes or by file description.
+* "Contains" operator supports now multiple search items.
+  Using wilcard characters (_ or %) is no longer supported.
+* Two-factor authentication improvements: you can enable it only for certain
+  groups or for users with administration rights.

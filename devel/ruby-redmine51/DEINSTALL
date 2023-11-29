@@ -1,0 +1,12 @@
+#!@SH@
+#
+# $NetBSD: DEINSTALL,v 1.1 2023/11/29 16:10:19 taca Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+RM_DIR="@PREFIX@/@RM_DIR@"
+
+case "${STAGE}" in
+DEINSTALL)
+	cd ${RM_DIR} && ${RM} -f Gemfile.lock;;
+esac

@@ -1,0 +1,11 @@
+$NetBSD: patch-config_additional__environment.rb.example,v 1.1 2023/11/29 16:10:19 taca Exp $
+
+Explictly allow permissions to class for ActiveRecord 6.1.6.1.
+
+--- config/additional_environment.rb.example.orig	2022-06-21 05:20:43.000000000 +0000
++++ config/additional_environment.rb.example
+@@ -8,3 +8,4 @@
+ #   ...
+ #
+ 
++config.active_record.yaml_column_permitted_classes = [Symbol, ActiveSupport::HashWithIndifferentAccess]
