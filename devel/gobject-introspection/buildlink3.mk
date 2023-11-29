@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/08/14 05:24:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/11/29 10:57:19 jperkin Exp $
 
 BUILDLINK_TREE+=	gobject-introspection
 
@@ -11,8 +11,11 @@ BUILDLINK_PKGSRCDIR.gobject-introspection?=	../../devel/gobject-introspection
 
 ALL_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
+.if !${BUILDLINK_DEPMETHOD.gobject-introspection:U:Mbuild}
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.endif
+
 .endif	# GOBJECT_INTROSPECTION_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gobject-introspection
