@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.93 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: Linux.mk,v 1.94 2023/11/29 17:13:47 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -88,8 +88,8 @@ _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .  endif
 .elif exists(/etc/arch-release)
-_OPSYS_SYSTEM_RPATH=	/lib:/usr/lib
-_OPSYS_LIB_DIRS?=	/lib /usr/lib
+_OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .elif exists(/etc/NIXOS)
 # NixOS has no fixed locations for system libraries.
 _OPSYS_INCLUDE_DIRS!=	echo "" | cpp -v 2>&1 | grep '^[[:space:]]*/.*include$$' | tr '\n' ' '
