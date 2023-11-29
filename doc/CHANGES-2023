@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7300 2023/11/29 15:53:59 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7301 2023/11/29 16:03:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10458,3 +10458,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/tui-journal to 0.5.1 [pin 2023-11-29]
 	Updated sysutils/daemontools-run to 20231129 [schmonz 2023-11-29]
 	Updated security/pear-Crypt_GPG to 1.6.8 [taca 2023-11-29]
+	Updated lang/pear to 1.10.14 [taca 2023-11-29]
