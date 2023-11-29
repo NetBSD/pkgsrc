@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.195 2023/09/29 09:24:33 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.196 2023/11/29 19:34:51 zafer Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1440,7 +1440,7 @@ c, c++, fortran, fortran77, java, objc, obj-c++, and ada.
     written in C++, usually need a C compiler for the configure
     phase.</para>
 
-    <para>To declare which features a package requies from the
+    <para>To declare which features a package requires from the
     compiler, set either <varname>USE_CC_FEATURES</varname>
     or <varname>USE_CXX_FEATURES</varname>. Allowed values for
     <varname>USE_CC_FEATURES</varname> are currently:
