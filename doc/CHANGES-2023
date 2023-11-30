@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7315 2023/11/30 15:20:48 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7316 2023/11/30 15:23:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10483,3 +10483,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-activemodel71 version 7.1.2 [taca 2023-11-30]
 	Added devel/ruby-activejob71 version 7.1.2 [taca 2023-11-30]
 	Added www/ruby-actionview71 version 7.1.2 [taca 2023-11-30]
+	Added www/ruby-actionpack71 version 7.1.2 [taca 2023-11-30]
