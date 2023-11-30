@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/30 15:39:07 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
