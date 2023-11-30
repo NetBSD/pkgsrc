@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7328 2023/11/30 16:27:39 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7329 2023/11/30 16:31:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10496,3 +10496,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added meta-pkgs/php83-extensions version 8.3.0 [taca 2023-11-30]
 	Updated www/php-http4 to 4.2.4 [taca 2023-11-30]
 	Updated archivers/php-pecl-zip to 1.22.3 [taca 2023-11-30]
+	Updated www/php-apcu to 5.1.23 [taca 2023-11-30]
