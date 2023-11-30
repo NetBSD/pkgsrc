@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/27 18:40:31 rhialto Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/11/30 05:53:26 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fastbencode/__init__.py
 ${PYSITELIB}/fastbencode/__init__.pyc
 ${PYSITELIB}/fastbencode/__init__.pyo
 ${PYSITELIB}/fastbencode/_bencode_py.py
 ${PYSITELIB}/fastbencode/_bencode_py.pyc
 ${PYSITELIB}/fastbencode/_bencode_py.pyo
+${PYSITELIB}/fastbencode/_bencode_pyx.pyi
 ${PYSITELIB}/fastbencode/_bencode_pyx.so
+${PYSITELIB}/fastbencode/py.typed
