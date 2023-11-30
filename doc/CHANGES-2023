@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7333 2023/11/30 21:56:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7334 2023/11/30 21:58:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10534,3 +10534,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/blosc2 to 2.11.3 [adam 2023-11-30]
 	Updated devel/py-test-env to 1.1.3 [adam 2023-11-30]
 	Updated net/trippy to 0.9.0 [pin 2023-11-30]
+	Updated shells/oh-my-posh to 18.27.0 [pin 2023-11-30]
