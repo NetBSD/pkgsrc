@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2023/11/17 21:34:08 adam Exp $
+# $NetBSD: Makefile,v 1.48 2023/11/30 09:51:49 adam Exp $
 
-DISTNAME=	ansible-lint-6.22.0
+DISTNAME=	ansible-lint-6.22.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
