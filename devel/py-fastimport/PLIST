@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/05 08:17:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/30 05:44:15 adam Exp $
 bin/fast-import-filter-${PYVERSSUFFIX}
 bin/fast-import-info-${PYVERSSUFFIX}
 bin/fast-import-query-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fastimport/__init__.py
 ${PYSITELIB}/fastimport/__init__.pyc
 ${PYSITELIB}/fastimport/__init__.pyo
@@ -39,6 +41,7 @@ ${PYSITELIB}/fastimport/processors/info_processor.pyo
 ${PYSITELIB}/fastimport/processors/query_processor.py
 ${PYSITELIB}/fastimport/processors/query_processor.pyc
 ${PYSITELIB}/fastimport/processors/query_processor.pyo
+${PYSITELIB}/fastimport/py.typed
 ${PYSITELIB}/fastimport/reftracker.py
 ${PYSITELIB}/fastimport/reftracker.pyc
 ${PYSITELIB}/fastimport/reftracker.pyo
