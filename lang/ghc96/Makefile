@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/01 17:53:53 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/30 16:20:48 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -301,12 +301,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .if ${MACHINE_PLATFORM:MNetBSD-*-*} && ${OPSYS_VERSION} >= 099000
 TOOL_DEPENDS+=	compat90-[0-9]*:../../emulators/compat90
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib
-.endif
-
-# On Solaris-based platforms our bootkit tends to depend on
-# pkgsrc-installed shlibs.
-.if ${OPSYS} == "SunOS"
-ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
