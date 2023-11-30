@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7325 2023/11/30 16:16:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7326 2023/11/30 16:18:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10493,3 +10493,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/ruby-actiontext71 version 7.1.2 [taca 2023-11-30]
 	Added www/ruby-rails71 version 7.1.2 [taca 2023-11-30]
 	Added lang/php83 version 8.3.0 [taca 2023-11-30]
+	Added meta-pkgs/php83-extensions version 8.3.0 [taca 2023-11-30]
