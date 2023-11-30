@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/11/19 15:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2023/11/30 10:12:25 jperkin Exp $
 
 DISTNAME=	matplotlib-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,11 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+# py-pybind11's bl3 defaults to PYTHON_FOR_BUILD_ONLY?=yes as it is primarily
+# used by packages that only have a build dependency on it.  Therefore we need
+# to ensure that we set it to "no" first to get accurate dependencies.
+PYTHON_FOR_BUILD_ONLY=	no
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
