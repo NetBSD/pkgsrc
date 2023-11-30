@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/30 16:20:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/30 16:23:59 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -309,3 +309,8 @@ ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# ghc has UTF-8 issues, this is needed to avoid problems during build that
+# may manifest from the bootstrap kit.  It comes after bsd.pkg.mk as that
+# sets LC_ALL=C first.
+ALL_ENV+=	LC_ALL=en_US.UTF-8
