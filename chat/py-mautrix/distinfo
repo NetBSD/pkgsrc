@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/04/23 12:35:57 js Exp $
+$NetBSD: distinfo,v 1.12 2023/11/30 06:20:23 adam Exp $
 
-BLAKE2s (python-0.16.3.tar.gz) = 143b11adcfc7241f0331f00a973ad1b5400183387491be81c4b68e80765b9608
-SHA512 (python-0.16.3.tar.gz) = eff3e1486975b8a0b22a94b87e80c61a3e6663af1a36abfd780fbf480225f77b8ae1002ffbcbd8cbb214253e307abdc9bc9d2f82df038a47bdc25d5fd9c67756
-Size (python-0.16.3.tar.gz) = 214649 bytes
+BLAKE2s (mautrix-0.20.3.tar.gz) = 75df09283dd7cd9b5b08af0f308e1a84f7dedc90e2b04f8220ee660ed6e7b768
+SHA512 (mautrix-0.20.3.tar.gz) = 646693244305fa7cd5079d9a595d91e9d7253035139b841c4247dbbca5211d87d219d027669304765625ac17a1a8389a454045f8b06b47b13ba344c5134080af
+Size (mautrix-0.20.3.tar.gz) = 243007 bytes
