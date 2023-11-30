@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2022/04/25 13:58:46 tnn Exp $
+$NetBSD: distinfo,v 1.7 2023/11/30 06:08:51 adam Exp $
 
-BLAKE2s (olm-3.2.10.tar.bz2) = 84c6a275ef0dda8371152f198ea0559d2531f51509a152223b148698d1b722c8
-SHA512 (olm-3.2.10.tar.bz2) = 127a81f8585550fb59b922e656b877251fbc96b5b61629a9faaf10b82c88c28f5036de815803c654d9d82c436c75e11dd3b96c6a6cb14d4ae686b24ce3dcff94
-Size (olm-3.2.10.tar.bz2) = 2733952 bytes
+BLAKE2s (olm-3.2.16.tar.bz2) = 137b52fb94d123d1fcc89408b8da1d58e701df76018bdc47b267130405eedcc3
+SHA512 (olm-3.2.16.tar.bz2) = 504ddc91297e7aef99e9b25f73b33bac29716ca33eb333bf1217b719d8862438e2cdaadd88cef3dc84e9f618bcc9eeeaf7e513f2d6909cc4a3d98a5dd79b0581
+Size (olm-3.2.16.tar.bz2) = 2744360 bytes
+SHA1 (patch-CMakeLists.txt) = 6fb95f572476546346ce3e3739185840ffb51dd2
 SHA1 (patch-tests_include_doctest.h) = d0da2f52ce14c454bc644e37fae238fab79e1c10
