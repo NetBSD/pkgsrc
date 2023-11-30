@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7311 2023/11/30 10:35:53 nros Exp $
+$NetBSD: CHANGES-2023,v 1.7312 2023/11/30 15:13:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10479,3 +10479,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.22.1 [adam 2023-11-30]
 	Updated security/gpgme to 1.23.2 [adam 2023-11-30]
 	Updated chat/dino to 0.3.1 [nros 2023-11-30]
+	Added devel/ruby-activesupport71 version 7.1.2 [taca 2023-11-30]
