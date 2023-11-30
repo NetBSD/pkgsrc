@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7305 2023/11/30 05:50:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7306 2023/11/30 06:17:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10466,3 +10466,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-fastimport to 0.9.14nb2 [adam 2023-11-30]
 	Updated net/py-aiodns to 3.1.1nb1 [adam 2023-11-30]
 	Updated textproc/py-toml to 0.10.2nb2 [adam 2023-11-30]
+	Updated converters/py-fastbencode to 0.2nb1 [adam 2023-11-30]
+	Updated devel/py-ordered-set to 4.1.0nb1 [adam 2023-11-30]
+	Updated security/olm to 3.2.16 [adam 2023-11-30]
+	Updated security/py-olm to 3.2.16 [adam 2023-11-30]
