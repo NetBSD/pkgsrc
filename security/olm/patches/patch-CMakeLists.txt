@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/30 06:08:51 adam Exp $
+
+Install pkg-config file also on Darwin.
+
+--- CMakeLists.txt.orig	2023-11-30 06:06:35.518160276 +0000
++++ CMakeLists.txt
+@@ -101,7 +101,7 @@ install(FILES
+     ${CMAKE_CURRENT_SOURCE_DIR}/include/olm/error.h
+     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/olm)
+ 
+-if (UNIX AND NOT APPLE)
++if (UNIX)
+     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc
+             DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
+     )
