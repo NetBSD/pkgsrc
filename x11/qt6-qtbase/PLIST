@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/31 19:56:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/11/30 20:11:26 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -535,6 +535,7 @@ qt6/include/QtCore/QObjectData
 qt6/include/QtCore/QObjectList
 qt6/include/QtCore/QOperatingSystemVersion
 qt6/include/QtCore/QOperatingSystemVersionBase
+qt6/include/QtCore/QOperatingSystemVersionUnexported
 qt6/include/QtCore/QOverload
 qt6/include/QtCore/QPair
 qt6/include/QtCore/QParallelAnimationGroup
@@ -1211,6 +1212,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpaintengine_raster_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpaintengineex_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpainter_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpainterpath_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpalette_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpathclipper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpathsimplifier_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qpdf_p.h
@@ -3289,10 +3291,6 @@ qt6/mkspecs/common/macx.conf
 qt6/mkspecs/common/msvc-based-version.conf
 qt6/mkspecs/common/msvc-desktop.conf
 qt6/mkspecs/common/msvc-version.conf
-qt6/mkspecs/common/nacl/g++-nacl32.conf
-qt6/mkspecs/common/nacl/g++-nacl64.conf
-qt6/mkspecs/common/nacl/nacl-base.conf
-qt6/mkspecs/common/nacl/qplatformdefs.h
 qt6/mkspecs/common/posix/qplatformdefs.h
 qt6/mkspecs/common/qcc-base-qnx-aarch64le.conf
 qt6/mkspecs/common/qcc-base-qnx-armle-v7.conf
@@ -3444,7 +3442,6 @@ qt6/mkspecs/features/default_pre.prf
 qt6/mkspecs/features/designer_defines.prf
 qt6/mkspecs/features/device_config.prf
 qt6/mkspecs/features/egl.prf
-qt6/mkspecs/features/entrypoint.prf
 qt6/mkspecs/features/exceptions.prf
 qt6/mkspecs/features/exceptions_off.prf
 qt6/mkspecs/features/exclusive_builds.prf
@@ -3704,10 +3701,6 @@ qt6/mkspecs/unsupported/macx-watchos-clang/Info.plist.app
 qt6/mkspecs/unsupported/macx-watchos-clang/Info.plist.lib
 qt6/mkspecs/unsupported/macx-watchos-clang/qmake.conf
 qt6/mkspecs/unsupported/macx-watchos-clang/qplatformdefs.h
-qt6/mkspecs/unsupported/nacl-g++/qmake.conf
-qt6/mkspecs/unsupported/nacl-g++/qplatformdefs.h
-qt6/mkspecs/unsupported/nacl64-g++/qmake.conf
-qt6/mkspecs/unsupported/nacl64-g++/qplatformdefs.h
 qt6/mkspecs/unsupported/qmake.conf
 qt6/mkspecs/unsupported/qnx-X11-g++/qmake.conf
 qt6/mkspecs/unsupported/qnx-X11-g++/qplatformdefs.h

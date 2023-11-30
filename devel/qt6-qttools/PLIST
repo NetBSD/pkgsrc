@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/30 20:11:29 adam Exp $
 lib/pkgconfig/Qt6Designer.pc
 lib/pkgconfig/Qt6Help.pc
 lib/pkgconfig/Qt6Linguist.pc
@@ -111,8 +111,11 @@ qt6/include/QtDesigner/QAbstractFormBuilder
 qt6/include/QtDesigner/QDesignerActionEditorInterface
 qt6/include/QtDesigner/QDesignerComponents
 qt6/include/QtDesigner/QDesignerContainerExtension
+qt6/include/QtDesigner/QDesignerCustomWidgetCollectionInterface
+qt6/include/QtDesigner/QDesignerCustomWidgetInterface
 qt6/include/QtDesigner/QDesignerDnDItemInterface
 qt6/include/QtDesigner/QDesignerDynamicPropertySheetExtension
+qt6/include/QtDesigner/QDesignerExportWidget
 qt6/include/QtDesigner/QDesignerExtraInfoExtension
 qt6/include/QtDesigner/QDesignerFormEditorInterface
 qt6/include/QtDesigner/QDesignerFormEditorPluginInterface
@@ -169,6 +172,7 @@ qt6/include/QtDesigner/abstractwidgetbox.h
 qt6/include/QtDesigner/abstractwidgetdatabase.h
 qt6/include/QtDesigner/abstractwidgetfactory.h
 qt6/include/QtDesigner/container.h
+qt6/include/QtDesigner/customwidget.h
 qt6/include/QtDesigner/default_extensionfactory.h
 qt6/include/QtDesigner/dynamicpropertysheet.h
 qt6/include/QtDesigner/extension.h
@@ -180,6 +184,7 @@ qt6/include/QtDesigner/membersheet.h
 qt6/include/QtDesigner/propertysheet.h
 qt6/include/QtDesigner/qdesigner_components.h
 qt6/include/QtDesigner/qdesigner_components_global.h
+qt6/include/QtDesigner/qdesignerexportwidget.h
 qt6/include/QtDesigner/qextensionmanager.h
 qt6/include/QtDesigner/qtdesignerversion.h
 qt6/include/QtDesigner/sdk_global.h

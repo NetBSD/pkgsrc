@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/11/30 20:11:27 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsQmlModels.pc
@@ -1117,6 +1117,7 @@ qt6/include/QtQuickParticles/qtquickparticlesversion.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquadpath_p.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshape_p.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshape_p_p.h
+qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshapeabstractcurvenode_p.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshapecurvenode_p.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshapecurvenode_p_p.h
 qt6/include/QtQuickShapes/${PKGVERSION}/QtQuickShapes/private/qquickshapecurverenderer_p.h

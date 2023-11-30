@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/11/12 13:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/30 20:11:26 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-psql-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	Qt6 PostgreSQL driver
 CATEGORIES=	databases
 
