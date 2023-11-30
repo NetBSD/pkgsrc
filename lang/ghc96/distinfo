@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/02 15:29:31 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/11/30 13:36:05 jperkin Exp $
 
-BLAKE2s (ghc-9.2.1-boot-hadrian.tar.gz) = 363fea08f46524eab654b3225650be4938bd0404e8c44145381f97a0c4489dca
-SHA512 (ghc-9.2.1-boot-hadrian.tar.gz) = a006ab38df77bc22e51ee75808065ad75781f85eb52cae54ed8995942ba16e70f4d68d4097f2597bca09e8b7890858d0a28a0f66216e6a4b21a3c68bb8082c59
-Size (ghc-9.2.1-boot-hadrian.tar.gz) = 1501585 bytes
-BLAKE2s (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 1d70d79ad765f0222e27f0a98915231d75dcb61b1ba4fb044ab531bc9930dc5f
-SHA512 (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 7e55f4a002808aa1ae3c6053b129f0f0c0ac2d9f6b9ad5e4fc7c0fa9a09defeea2ed46a7e8d4c5a81213b631aacfa4cdd92b3bc724a6ee4de8b9d201840f3185
-Size (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 69490428 bytes
 BLAKE2s (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = a691117b405b9f7954b954acc382b3357a9ff8c98151514c82d18d83da397940
 SHA512 (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = 1c917a52a020be3a1878f9d7e8e4c47d31180e54248c127a60706c1053a95b2d8a487f79e7fb5daa725178f271a7cc17e4e7b47ce2119f8546e259c63b9864d8
 Size (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = 90305900 bytes
@@ -24,6 +18,9 @@ Size (ghc-9.4.7-boot-x86_64-unknown-freebsd.tar.xz) = 77145928 bytes
 BLAKE2s (ghc-9.4.7-boot-x86_64-unknown-netbsd.tar.xz) = b920b6b54f5c1c6ab5fcbad14298ae742942e14da8105831df535926b9b9f529
 SHA512 (ghc-9.4.7-boot-x86_64-unknown-netbsd.tar.xz) = 4821dbf8f50c42a3427322c7488a07738d41da2236102571fc3051fd4d41a7a75754a1b27769365fc7f9d01ba0af65b87e51933077b3c36c2084ee3053479040
 Size (ghc-9.4.7-boot-x86_64-unknown-netbsd.tar.xz) = 77029664 bytes
+BLAKE2s (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 82abea5431d6d106c7eb4388c196594a050446f8164aecd5c76e263a96114a03
+SHA512 (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = c6dd73fce67dd8a4933a7f31318af662bc3fd873e3d96fa6aa2e0c72282c554cc2e13abdecc29919231c3cf346d878f5f738bb72f2db53d63dd79bf07a1e2d91
+Size (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 128747936 bytes
 BLAKE2s (ghc-9.6.3-src.tar.xz) = 37591e3c04a97568e13928fa236774650bc7619f0a61f32e1598e22a2d7b08cb
 SHA512 (ghc-9.6.3-src.tar.xz) = 91f1a695746669b81f0102ad163d622ad43a1f09d95d104ef294be7896e47beeccb41294349bc45b50b0d84fe3fca013506eabd9d49cccb27176db1d934477e8
 Size (ghc-9.6.3-src.tar.xz) = 29346888 bytes
