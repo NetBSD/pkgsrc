@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2023/10/30 19:35:14 adam Exp $
+# $NetBSD: Makefile,v 1.117 2023/11/30 09:53:07 adam Exp $
 
-DISTNAME=	gpgme-1.23.1
+DISTNAME=	gpgme-1.23.2
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
