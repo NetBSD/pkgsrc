@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/10/31 19:56:49 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/11/30 20:11:28 adam Exp $
 
-BLAKE2s (qtmultimedia-everywhere-src-6.6.0.tar.xz) = cf2e046cd6de29e18d482788f8def7436a14973f550075f5263459284c799152
-SHA512 (qtmultimedia-everywhere-src-6.6.0.tar.xz) = ccfdd1aaed76dfb06692e212405d9b2804aa3da924c903febf5ee3fde057f4543f76284a543c808f600d61b5eadfbfe2437932f5ff4a7d19941c9ab3eae2d8a0
-Size (qtmultimedia-everywhere-src-6.6.0.tar.xz) = 6575240 bytes
+BLAKE2s (qtmultimedia-everywhere-src-6.6.1.tar.xz) = 8db54f5a59627c557a28c2608dbe8576f2f2654b9049b0e21758b9243fdcb3d7
+SHA512 (qtmultimedia-everywhere-src-6.6.1.tar.xz) = 11fb3e421a80fee82d30a817f20277505868de0c1a870c55dd488114a0302f6a1bf41694ed64d904e4d29b1a3ad1ba01ce8399ae11f03ae2f6994359698e9c94
+Size (qtmultimedia-everywhere-src-6.6.1.tar.xz) = 6723296 bytes
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 34cc0a4cb416a008392e6392366e3e14a5da8106
