@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7304 2023/11/29 21:48:24 cheusov Exp $
+$NetBSD: CHANGES-2023,v 1.7305 2023/11/30 05:50:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10462,3 +10462,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-redmine51 version 5.1.0 [taca 2023-11-29]
 	Updated print/lilypond to 2.24.3 [schmonz 2023-11-29]
 	Updated pkgtools/nih to 0.15.1 [cheusov 2023-11-29]
+	Updated devel/py-pyutil to 3.3.6nb1 [adam 2023-11-30]
+	Updated devel/py-fastimport to 0.9.14nb2 [adam 2023-11-30]
+	Updated net/py-aiodns to 3.1.1nb1 [adam 2023-11-30]
+	Updated textproc/py-toml to 0.10.2nb2 [adam 2023-11-30]
