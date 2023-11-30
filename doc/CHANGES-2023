@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7306 2023/11/30 06:17:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7307 2023/11/30 06:22:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10470,3 +10470,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ordered-set to 4.1.0nb1 [adam 2023-11-30]
 	Updated security/olm to 3.2.16 [adam 2023-11-30]
 	Updated security/py-olm to 3.2.16 [adam 2023-11-30]
+	Updated chat/py-mautrix to 0.20.3 [adam 2023-11-30]
+	Updated x11/gtk4 to 4.12.4 [adam 2023-11-30]
