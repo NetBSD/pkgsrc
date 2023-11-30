@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/11/27 11:16:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/30 10:35:02 nros Exp $
 
-DISTNAME=	dino-0.3.0
-PKGREVISION=	16
+DISTNAME=	dino-0.3.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dino/}
 GITHUB_PROJECT=	dino
@@ -17,6 +16,8 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 
+CMAKE_ARGS+=		-DUSE_SOUP3:BOOL=ON
+
 # Failed with exports/xmpp-vala.vapi target as of 0.1.0.
 MAKE_JOBS_SAFE=		no
 
@@ -31,7 +32,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.24
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
