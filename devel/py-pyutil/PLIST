@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/02/07 11:00:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/11/30 05:41:48 adam Exp $
 bin/lines
 bin/passphrase
 bin/randcookie
@@ -7,13 +7,14 @@ bin/tailx
 bin/try_decoding
 bin/unsort
 bin/verinfo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.GPL
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.SPL.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.TGPPL.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyutil/PickleSaver.py
 ${PYSITELIB}/pyutil/PickleSaver.pyc
 ${PYSITELIB}/pyutil/PickleSaver.pyo
