@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7330 2023/11/30 20:12:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7331 2023/11/30 20:19:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10529,3 +10529,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/qt6-qtwebchannel to 6.6.1 [adam 2023-11-30]
 	Updated net/qt6-qtwebsockets to 6.6.1 [adam 2023-11-30]
 	Updated devel/qt6-qtwayland to 6.6.1 [adam 2023-11-30]
+	Updated devel/cmake to 3.27.9 [adam 2023-11-30]
+	Updated devel/cmake-gui to 3.27.9 [adam 2023-11-30]
