@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.626 2023/11/30 15:29:20 taca Exp $
+# $NetBSD: Makefile,v 1.627 2023/11/30 15:31:31 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -374,6 +374,7 @@ SUBDIR+=	rspamd
 SUBDIR+=	rss2email
 SUBDIR+=	ruby-actionmailbox61
 SUBDIR+=	ruby-actionmailbox70
+SUBDIR+=	ruby-actionmailbox71
 SUBDIR+=	ruby-actionmailer61
 SUBDIR+=	ruby-actionmailer70
 SUBDIR+=	ruby-actionmailer71
