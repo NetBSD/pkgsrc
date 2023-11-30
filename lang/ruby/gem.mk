@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.52 2023/06/06 12:41:46 riastradh Exp $
+# $NetBSD: gem.mk,v 1.53 2023/11/30 00:21:12 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -150,7 +150,7 @@ _RUBYGEM_MK=	# defined
 REPLACE_RUBY_DIRS?=	bin
 REPLACE_RUBY_PAT?=	*
 
-# Default to using rake to build the local gem from the unpacked files.
+# Default to using gemspec to build the local gem from the unpacked files.
 GEM_BUILD?=	gemspec
 
 OVERRIDE_GEMSPEC?=	# default is empty
