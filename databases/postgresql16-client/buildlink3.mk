@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/10/24 22:08:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/11/30 10:35:44 jperkin Exp $
 
 BUILDLINK_TREE+=	postgresql16-client
 
@@ -30,6 +30,7 @@ pkgbase := postgresql16-client
 .include "../../security/openssl/buildlink3.mk"
 
 .if ${PKG_BUILD_OPTIONS.postgresql16-client:Mgssapi}
+BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.11	# gss_store_cred_into
 .  include "../../security/mit-krb5/buildlink3.mk"
 .endif
 .endif # POSTGRESQL16_CLIENT_BUILDLINK3_MK
