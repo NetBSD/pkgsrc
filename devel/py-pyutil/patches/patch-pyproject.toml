@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2023/11/30 05:41:48 adam Exp $
+
+Fix build with newer setuptools.
+
+--- pyproject.toml.orig	2023-11-30 05:37:32.780484987 +0000
++++ pyproject.toml
+@@ -4,7 +4,7 @@ authors = [
+   { name = "tpltnt", email = "tpltnt+pyutil@nkawtg.net" },
+ ]
+ description = "a collection of utilities for Python programmers"
+-dynamic = ["version"]
++dynamic = ["scripts", "version"]
+ readme = "README.rst"
+ license = { text = "GPL-2.0-or-later" }
+ requires-python = ">=2.7"
