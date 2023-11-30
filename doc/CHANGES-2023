@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7319 2023/11/30 15:29:41 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7320 2023/11/30 15:31:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10487,3 +10487,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/ruby-activerecord71 version 7.1.2 [taca 2023-11-30]
 	Added devel/ruby-activestorage71 version 7.1.2 [taca 2023-11-30]
 	Added mail/ruby-actionmailer71 version 7.1.2 [taca 2023-11-30]
+	Added mail/ruby-actionmailbox71 version 7.1.2 [taca 2023-11-30]
