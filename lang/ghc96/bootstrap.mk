@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2023/10/23 09:09:34 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2023/11/30 13:36:05 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -61,7 +61,7 @@ DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in L
 .endif
 
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-BOOT_VERSION:=		9.2.1
+BOOT_VERSION:=		9.4.7
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
 SITES.${BOOT_ARCHIVE}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in LOCAL_PORTS
@@ -82,13 +82,6 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
-
-# Current bootstrap binary kit for SunOS is built with GNU libiconv
-# and ncurses6.
-.if ${OPSYS} == "SunOS"
-TOOL_DEPENDS+=	libiconv>=1.9.1:../../converters/libiconv
-TOOL_DEPENDS+=	ncurses>=6.0:../../devel/ncurses
-.endif
 
 .if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"
 # Also cpp is missing from /usr/bin. Why? This leads
