@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4143 2023/11/30 15:35:22 taca Exp $
+# $NetBSD: Makefile,v 1.4144 2023/12/01 11:28:24 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -245,6 +245,7 @@ SUBDIR+=	cmockery2
 SUBDIR+=	cmph
 SUBDIR+=	cobol-mode
 SUBDIR+=	coccinelle
+SUBDIR+=	cocogitto
 SUBDIR+=	coconut
 SUBDIR+=	cogito
 SUBDIR+=	colordiff
