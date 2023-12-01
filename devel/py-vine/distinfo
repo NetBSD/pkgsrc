@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:19:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/12/01 19:34:52 adam Exp $
 
-BLAKE2s (vine-5.0.0.tar.gz) = 6a36b152f18c295d6258e09783c9a473add379d640d46531936f4db6d6880e59
-SHA512 (vine-5.0.0.tar.gz) = ff8f4b3f675220772ed0523e468eedbaec4aca793877b984e9a215603d1288cc3cc71dfeb152219d22f98de0ac7e9f9fa0cc35c2424ff36044cfc8f28192c159
-Size (vine-5.0.0.tar.gz) = 48758 bytes
+BLAKE2s (vine-5.1.0.tar.gz) = 03bb315b933864a33966319cdf09f7be755b145aa2fc24c76480fae2c4a45728
+SHA512 (vine-5.1.0.tar.gz) = 899a494d26ce8236ba12451e8da42fad03803df0a9cf69829f650c23c0d4f6232b9246230fd984fa6616edbad8b2c08f0efe95e3692bee756dfc094f14e3432d
+Size (vine-5.1.0.tar.gz) = 48980 bytes
