@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7353 2023/12/01 19:03:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7354 2023/12/01 19:17:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10558,3 +10558,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-automodapi to 0.16.0 [adam 2023-12-01]
 	Updated textproc/py-humanize to 4.9.0 [adam 2023-12-01]
 	Updated devel/py-frozendict to 2.3.10 [adam 2023-12-01]
+	Updated databases/py-mongo to 4.6.1 [adam 2023-12-01]
+	Updated www/py-flask-jwt-extended to 4.5.3 [adam 2023-12-01]
+	Updated textproc/py-jsonschema-specifications to 2023.11.2 [adam 2023-12-01]
+	Updated misc/py-trove-classifiers to 2023.11.29 [adam 2023-12-01]
