@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/10/28 19:57:08 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/12/01 19:30:50 adam Exp $
 
-DISTNAME=	tox-4.11.3
+DISTNAME=	tox-4.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
 
@@ -34,7 +33,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.10:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.7:../../devel/py-distlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.5:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.4:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.11.1:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.3.1:../../devel/py-test-xdist
@@ -53,10 +51,6 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} tox tox-${PYVERSSUFFIX} || ${TRUE}
-
-# needs to be installed first
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
