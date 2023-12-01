@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/12/01 10:45:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/01 15:29:29 ryoon Exp $
 
 DISTNAME=	duckdb-0.9.2
 CATEGORIES=	databases
@@ -11,11 +11,11 @@ HOMEPAGE=	https://duckdb.org/
 COMMENT=	In-process SQL OLAP database management system
 LICENSE=	mit
 
-USE_LANGUAGES=	gnu99 gnu++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 # for alloca(3)
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
+FORCE_CXX_STD+=	gnu++11
 
 CMAKE_ARGS+=	-DBUILD_CORE_FUNCTIONS_EXTENSION=ON
 CMAKE_ARGS+=	-DBUILD_ICU_EXTENSION=ON
