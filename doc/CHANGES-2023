@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7343 2023/12/01 12:58:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7344 2023/12/01 13:30:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10545,3 +10545,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/qgis to 3.28.13 [gdt 2023-12-01]
 	Updated net/qbittorrent to 4.6.2 [adam 2023-12-01]
 	Updated devel/py-cattrs to 23.2.3 [adam 2023-12-01]
+	Updated x11/py-sip6 to 6.8.0 [adam 2023-12-01]
+	Updated x11/py-qt-builder to 1.15.4 [adam 2023-12-01]
