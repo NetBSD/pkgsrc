@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7351 2023/12/01 18:35:39 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.7352 2023/12/01 18:56:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10554,3 +10554,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/nss to 3.95 [ryoon 2023-12-01]
 	Updated print/qpdf to 11.6.3 [ryoon 2023-12-01]
 	Updated lang/algol68g to 3.4.4 [rhialto 2023-12-01]
+	Updated math/py-patsy to 0.5.4 [adam 2023-12-01]
+	Updated textproc/py-sphinx-automodapi to 0.16.0 [adam 2023-12-01]
