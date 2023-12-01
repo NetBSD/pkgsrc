@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2023/10/06 19:15:21 adam Exp $
+$NetBSD: distinfo,v 1.34 2023/12/01 18:27:22 jperkin Exp $
 
 BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
 SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
@@ -9,4 +9,4 @@ Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
 BLAKE2s (libunwind-16.0.6.src.tar.xz) = a34c9ff82a3d889c4b9278bca3a96429f285dd38961d49309570bc60600e5fb6
 SHA512 (libunwind-16.0.6.src.tar.xz) = abc1463bbebd771832c5da34aeb1dfe4c168b90c8257abfcfda573f495359b5968a2169f528dbf8276ed0b9bc1c42f27f4b4383d335d6e6416b6a536074b3f3f
 Size (libunwind-16.0.6.src.tar.xz) = 115032 bytes
-SHA1 (patch-src_CMakeLists.txt) = a8ac316fddf0d71c75d7f64695335a6f4842fead
+SHA1 (patch-src_CMakeLists.txt) = 84e31c445264c70b281374c43f46c5e9f1802bfa
