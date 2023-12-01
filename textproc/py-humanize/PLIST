@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/10/28 19:57:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/12/01 19:01:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -36,6 +36,8 @@ ${PYSITELIB}/humanize/locale/fi_FI/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/fi_FI/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/fr_FR/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/fr_FR/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/he_IL/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/he_IL/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/hu_HU/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/hu_HU/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/id_ID/LC_MESSAGES/humanize.mo
@@ -46,6 +48,8 @@ ${PYSITELIB}/humanize/locale/ja_JP/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/ja_JP/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/ko_KR/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/ko_KR/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/nb/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/nb/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/nl_NL/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/nl_NL/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/pl_PL/LC_MESSAGES/humanize.mo
@@ -62,6 +66,8 @@ ${PYSITELIB}/humanize/locale/sl_SI/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/sl_SI/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/sv_SE/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/sv_SE/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/tlh/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/tlh/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/tr_TR/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/tr_TR/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/uk_UA/LC_MESSAGES/humanize.mo
