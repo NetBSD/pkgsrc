@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/05/10 12:46:08 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/01 19:13:14 adam Exp $
 
-DISTNAME=	Flask-JWT-Extended-4.4.4
+DISTNAME=	Flask-JWT-Extended-4.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-JWT-Extended/}
@@ -12,16 +12,12 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-flask>=2.0:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.3.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.14:../../www/py-werkzeug
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
