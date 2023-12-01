@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2023/10/20 14:30:17 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/12/01 13:28:40 adam Exp $
 
-BLAKE2s (sip-6.7.12.tar.gz) = a4f96fa780f4a432c84a9572605107be33c4f73c759aba8d40e04da4c08cd93b
-SHA512 (sip-6.7.12.tar.gz) = 885c32a051e882b82b59bf1365050933f8fc1c619b19f4bc03235edc5741a5e14aae8edf90479ad0283f74ba5c5233a2589c151ec865b130199a6db9800a2294
-Size (sip-6.7.12.tar.gz) = 1169656 bytes
+BLAKE2s (sip-6.8.0.tar.gz) = f6c62272c15b96ac07b6267ac7fd6e4e44cc4c4d78697a7641cdbd270395b61c
+SHA512 (sip-6.8.0.tar.gz) = 09e25e3937339b6dbaa0b693bf0b99e5c225751ca79e0a307387c331f2b84e4e5a276897b471a123d24715e5d9cb85e84d244cf07960ff6f53f75859bbb2f901
+Size (sip-6.8.0.tar.gz) = 985563 bytes
 SHA1 (patch-sipbuild_buildable.py) = a914fcd890f5f1228a09f40617e5da0e1ed9830b
