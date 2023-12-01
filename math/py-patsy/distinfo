@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/22 13:10:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/12/01 18:53:08 adam Exp $
 
-BLAKE2s (patsy-0.5.3.tar.gz) = 1309c5d3c2f1ef4a11d9449b7bac4a20a7fb6150aa9e1e798ef7e3ec4a6f5163
-SHA512 (patsy-0.5.3.tar.gz) = 9a6ea2382287208013e02bab7cba9378311a8e18fe059593aa99090bb6191efa74badff011424a7f6b3c8ec72c1b8650637322b71617f23357bb4b38ac6a79a0
-Size (patsy-0.5.3.tar.gz) = 397680 bytes
+BLAKE2s (patsy-0.5.4.tar.gz) = cb3fef0034b1fefe5b74ec14497c541c40a2ad86c0cb15032a146290d0dc5e11
+SHA512 (patsy-0.5.4.tar.gz) = 4fa6b099a12464b1ad1685e0d9ca0e9640c059d5021631e6c52f4025ff100899824e722d9b12107c49dc987e8f3e377aeeb007889d8b35b3f1e4cdf5ca491d2f
+Size (patsy-0.5.4.tar.gz) = 397809 bytes
