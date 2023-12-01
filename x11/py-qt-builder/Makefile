@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/10/20 14:31:08 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/01 13:30:32 adam Exp $
 
-DISTNAME=	PyQt-builder-1.15.3
+DISTNAME=	PyQt-builder-1.15.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt/qt/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt-builder/
 COMMENT=	PyQt-world build tool (sip extension)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6.7:../../x11/py-sip6
 
@@ -24,5 +26,5 @@ post-install:
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
