@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2023/12/01 18:35:12 rhialto Exp $
+
+* don't assume glibc is required for --enable-long-types.
+* Unconditionally use -I ${PREFIX}/include for the compiler.
+
+--- configure.orig	2023-10-27 20:16:54.000000000 +0000
++++ configure
+@@ -5689,7 +5689,7 @@ fi
+ 
+ if test "x$enable_generic" = "xyes"; then
+   enable_standard_types=yes
+-  enable_long_types=no
++  #enable_long_types=no
+ fi
+ 
+ if test "x$enable_core" = "xyes"; then
+@@ -5717,11 +5717,11 @@ EXTRA_INCLUDES=""
+ 
+ # Set -I/usr/local/include for *BSD
+ 
+-if test "x$bsd_include_dirs" = "xyes"; then
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... /usr/local/include" >&5
+-printf "%s\n" "$as_me: ... /usr/local/include" >&6;}
+-  EXTRA_INCLUDES="-I/usr/local/include"
+-fi
++#if test "x$bsd_include_dirs" = "xyes"; then
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: ... @PREFIX@/include" >&5
++printf "%s\n" "$as_me: ... @PREFIX@/include" >&6;}
++  EXTRA_INCLUDES="-I@PREFIX@/include"
++#fi
+ 
+ # Homebrew on macOS
+ 
