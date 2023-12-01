@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/07/11 08:39:57 adam Exp $
+$NetBSD: distinfo,v 1.27 2023/12/01 19:37:47 adam Exp $
 
-BLAKE2s (amqp-5.1.1.tar.gz) = 286810921d3aecfc0fb862d2c59a06b38d8ff934644a54453bff7001d347da10
-SHA512 (amqp-5.1.1.tar.gz) = f549a85e4f04543dd8e844edb68350ca185de9259aa896af31ae5ee5dfdfe73f904d95821c403dc797c7f3ada17ce6bff4e0fd9fcdf2abc1b33a94d079f99179
-Size (amqp-5.1.1.tar.gz) = 127869 bytes
+BLAKE2s (amqp-5.2.0.tar.gz) = 054440b39f60224242f0319350dc192b9cff31dc5f2da22619691475e3c762d6
+SHA512 (amqp-5.2.0.tar.gz) = 923eae80721ec35e329085e680950db7167c401fac396c74d401331ef7efe369e1cf4420bfde9a1d9005052f49cedef6d2ee621e795b9127614fd5742aa5e0db
+Size (amqp-5.2.0.tar.gz) = 128754 bytes
