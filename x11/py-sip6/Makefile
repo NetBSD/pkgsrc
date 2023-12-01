@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/10/20 14:30:17 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/01 13:28:40 adam Exp $
 
-DISTNAME=	sip-6.7.12
+DISTNAME=	sip-6.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
@@ -25,5 +25,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
