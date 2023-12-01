@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7342 2023/12/01 12:21:53 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7343 2023/12/01 12:58:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10543,3 +10543,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/nih to 0.15.2 [cheusov 2023-12-01]
 	Updated shells/oh-my-posh to 18.27.1 [pin 2023-12-01]
 	Updated geography/qgis to 3.28.13 [gdt 2023-12-01]
+	Updated net/qbittorrent to 4.6.2 [adam 2023-12-01]
+	Updated devel/py-cattrs to 23.2.3 [adam 2023-12-01]
