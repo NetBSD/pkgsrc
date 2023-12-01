@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7350 2023/12/01 17:24:24 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7351 2023/12/01 18:35:39 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10553,3 +10553,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/notmuch-emacs to 0.38.2 [ryoon 2023-12-01]
 	Updated devel/nss to 3.95 [ryoon 2023-12-01]
 	Updated print/qpdf to 11.6.3 [ryoon 2023-12-01]
+	Updated lang/algol68g to 3.4.4 [rhialto 2023-12-01]
