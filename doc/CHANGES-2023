@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7355 2023/12/01 19:31:08 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7356 2023/12/01 19:38:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10564,3 +10564,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-trove-classifiers to 2023.11.29 [adam 2023-12-01]
 	Updated devel/py-configupdater to 3.2 [adam 2023-12-01]
 	Updated devel/py-tox to 4.11.4 [adam 2023-12-01]
+	Updated devel/py-vine to 5.1.0 [adam 2023-12-01]
+	Updated net/py-amqp to 5.2.0 [adam 2023-12-01]
