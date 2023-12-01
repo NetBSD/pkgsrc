@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.697 2023/11/30 15:24:59 taca Exp $
+# $NetBSD: Makefile,v 1.698 2023/12/01 10:47:09 ryoon Exp $
 
 COMMENT=	Databases
 
@@ -29,6 +29,7 @@ SUBDIR+=	db6
 SUBDIR+=	dbfsak
 SUBDIR+=	deforaos-libdatabase
 SUBDIR+=	diesel-cli
+SUBDIR+=	duckdb
 SUBDIR+=	edb
 SUBDIR+=	elasticsearch
 SUBDIR+=	erlang-eredis
