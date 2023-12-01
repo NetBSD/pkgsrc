@@ -1,0 +1,20 @@
+Cocogitto is a CLI and GitOps toolbox for the Conventional Commits and
+Semver specifications.
+
+Cocogitto was designed to help you respect the conventional and semver standard
+and is not intended to be used in any other context.
+
+It strives to be a set of simple, modern and fast command line interfaces.
+
+Goals
+ - Make using the conventional commits spec easy and fun.
+ - Enable people to focus on their work instead of correcting small mistakes
+   and typos.
+ - Enforce correctness regarding Semver and Conventional Commits.
+ - Automate things when possible (ex: bumping versions).
+
+Non goals
+ - Cocogitto is not a git replacement. It uses some of libgit2 but only to
+   provide features related to the Conventional Commits specification.
+   Anything else shall be done with git.
+ - Supporting other commit conventions or git workflows.
