@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7354 2023/12/01 19:17:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7355 2023/12/01 19:31:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10562,3 +10562,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask-jwt-extended to 4.5.3 [adam 2023-12-01]
 	Updated textproc/py-jsonschema-specifications to 2023.11.2 [adam 2023-12-01]
 	Updated misc/py-trove-classifiers to 2023.11.29 [adam 2023-12-01]
+	Updated devel/py-configupdater to 3.2 [adam 2023-12-01]
+	Updated devel/py-tox to 4.11.4 [adam 2023-12-01]
