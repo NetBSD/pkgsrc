@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2023/05/26 11:13:52 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2023/12/01 11:03:36 nia Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -109,7 +109,8 @@ CMAKE_ARGS+=	-DWITH_READLINE="system"
 CMAKE_ARGS+=	-DWITH_EDITLINE="system"
 .endif
 
-.if ${OPSYS} != "SunOS"
+.include "../../security/libfido2/platform.mk"
+.if ${PLATFORM_SUPPORTS_FIDO2:tl} != "no"
 CMAKE_ARGS+=		-DWITH_FIDO="system"
 .include "../../security/libfido2/buildlink3.mk"
 .endif
