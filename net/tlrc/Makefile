@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/31 17:18:26 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/01 07:48:04 pin Exp $
 
-DISTNAME=	tlrc-1.7.1
+DISTNAME=	tlrc-1.8.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tldr-pages/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
