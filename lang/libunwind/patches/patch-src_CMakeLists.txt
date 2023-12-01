@@ -1,9 +1,11 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.5 2023/01/12 22:47:25 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.6 2023/12/01 18:27:22 jperkin Exp $
 
 Fix building assembler files.
 https://github.com/llvm/llvm-project/issues/59978
 
---- src/CMakeLists.txt.orig	2023-01-12 07:12:30.000000000 +0000
+Use correct flags to link.
+
+--- src/CMakeLists.txt.orig	2023-06-10 22:58:16.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -1,4 +1,5 @@
  # Get sources
@@ -27,3 +29,21 @@ https://github.com/llvm/llvm-project/issues/59978
  set(LIBUNWIND_HEADERS
      AddressSpace.hpp
      assembly.h
+@@ -160,7 +152,7 @@ if (LIBUNWIND_ENABLE_SHARED)
+   set_target_properties(unwind_shared
+     PROPERTIES
+       LINK_FLAGS "${LIBUNWIND_LINK_FLAGS}"
+-      LINKER_LANGUAGE C
++      LINKER_LANGUAGE CXX
+       OUTPUT_NAME "${LIBUNWIND_SHARED_OUTPUT_NAME}"
+       VERSION "1.0"
+       SOVERSION "1"
+@@ -200,7 +192,7 @@ if (LIBUNWIND_ENABLE_STATIC)
+   set_target_properties(unwind_static
+     PROPERTIES
+       LINK_FLAGS "${LIBUNWIND_LINK_FLAGS}"
+-      LINKER_LANGUAGE C
++      LINKER_LANGUAGE CXX
+       OUTPUT_NAME "${LIBUNWIND_STATIC_OUTPUT_NAME}"
+   )
+ 
