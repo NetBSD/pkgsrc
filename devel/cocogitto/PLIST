@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/01 11:27:38 pin Exp $
+bin/cocogitto
