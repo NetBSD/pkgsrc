@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/11 09:35:58 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2023/12/02 07:17:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/adminsortable2/__init__.py
 ${PYSITELIB}/adminsortable2/__init__.pyc
 ${PYSITELIB}/adminsortable2/__init__.pyo
@@ -41,20 +40,13 @@ ${PYSITELIB}/adminsortable2/models.pyc
 ${PYSITELIB}/adminsortable2/models.pyo
 ${PYSITELIB}/adminsortable2/static/adminsortable2/css/sortable.css
 ${PYSITELIB}/adminsortable2/static/adminsortable2/icons/drag.png
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-sortable.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-stacked.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/inline-tabular.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.core-1.11.4.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.core-1.7.1.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.mouse-1.11.4.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.sortable-1.11.4.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.sortable-1.7.1.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.touch-punch-0.2.3.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.touch-punch.min-0.2.3.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/libs/jquery.ui.widget-1.11.4.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/list-sortable.js
-${PYSITELIB}/adminsortable2/static/adminsortable2/js/plugins/admincompat.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.js
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.min.js
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/change_list.html
-${PYSITELIB}/adminsortable2/templates/adminsortable2/includes/fieldset.html
-${PYSITELIB}/adminsortable2/templates/adminsortable2/stacked.html
-${PYSITELIB}/adminsortable2/templates/adminsortable2/tabular.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-4.0.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-4.1.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-4.2.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.0.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.1.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html.orig
