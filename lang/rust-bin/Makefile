@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2023/11/16 09:57:51 he Exp $
+# $NetBSD: Makefile,v 1.60 2023/12/02 21:32:39 he Exp $
 
 DISTNAME=	rust-1.73.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 DIST_SUBDIR=	${PKGNAME_NOREV}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -148,21 +149,12 @@ DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
-#.  if ${OPSYS_VERSION} >= 090000
-RUST_ARCH:=	powerpc-unknown-netbsd90
+RUST_ARCH:=	powerpc-unknown-netbsd-nb1
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
 DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
-#.  else
-#RUST_ARCH:=	powerpc-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.  endif
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
