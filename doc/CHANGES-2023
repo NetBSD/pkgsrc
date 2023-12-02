@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7361 2023/12/02 09:03:08 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7362 2023/12/02 09:59:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10576,3 +10576,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-exifread to 3.0.0 [adam 2023-12-02]
 	Updated www/py-django-sortedm2m to 3.1.1 [adam 2023-12-02]
 	Updated www/py-django-photologue to 3.17 [adam 2023-12-02]
+	Updated devel/py-termcolor to 2.4.0 [adam 2023-12-02]
+	Updated math/py-pywavelets to 1.5.0 [adam 2023-12-02]
