@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7368 2023/12/02 22:11:51 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7369 2023/12/02 22:13:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10584,3 +10584,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/moreutils to 0.68 [schmonz 2023-12-02]
 	Updated lang/rust-bin to 1.73.0nb1 [he 2023-12-02]
 	Updated shells/oh-my-posh to 19.1.1 [pin 2023-12-02]
+	Updated textproc/tuc to 1.1.0 [pin 2023-12-02]
