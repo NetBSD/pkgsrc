@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2023/03/28 20:31:17 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/12/02 16:02:45 pin Exp $
 bin/arqiver
 share/applications/arqiver.desktop
 share/arqiver/translations/arqiver_ca.qm
 share/arqiver/translations/arqiver_cs.qm
 share/arqiver/translations/arqiver_eo.qm
 share/arqiver/translations/arqiver_et.qm
+share/arqiver/translations/arqiver_fi.qm
 share/arqiver/translations/arqiver_fr.qm
+share/arqiver/translations/arqiver_he.qm
 share/arqiver/translations/arqiver_hi.qm
 share/arqiver/translations/arqiver_hr.qm
 share/arqiver/translations/arqiver_hu.qm
