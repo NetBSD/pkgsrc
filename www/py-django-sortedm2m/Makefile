@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/07/13 10:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/02 09:01:10 adam Exp $
 
-DISTNAME=	django-sortedm2m-3.0.2
+DISTNAME=	django-sortedm2m-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sortedm2m/}
 
@@ -11,7 +10,9 @@ HOMEPAGE=	https://github.com/gregmuellegger/django-sortedm2m
 COMMENT=	Drop-in replacement for Django's many to many field
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none
 
@@ -20,5 +21,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 post-extract:
 	${RM} ${WRKSRC}/sortedm2m/locale/es/.DS_Store
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
