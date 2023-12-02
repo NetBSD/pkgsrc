@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/02 19:57:28 schmonz Exp $
 
-DISTNAME=	moreutils-0.67
-PKGREVISION=	1
+DISTNAME=	moreutils-0.68
 CATEGORIES=	misc
 MASTER_SITES=	https://git.joeyh.name/index.cgi/moreutils.git/snapshot/
 
@@ -18,7 +17,7 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 
-USE_LANGUAGES=	c99
+USE_CC_FEATURES=	c99
 
 REPLACE_PERL+=	chronic
 REPLACE_PERL+=	combine
