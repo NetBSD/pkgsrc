@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/31 01:14:36 joerg Exp $
+$NetBSD: distinfo,v 1.2 2023/12/02 08:07:41 adam Exp $
 
-BLAKE2s (django-localflavor-3.1.tar.gz) = fea224aee75f6df900ededd3c4a0b6615dc53ade21d0774b7959d29d4fb6c018
-SHA512 (django-localflavor-3.1.tar.gz) = e256a36df358831c4e0b4a94ef53ba7227a48796cdd1514f3765bfd59ba3e47fabec8dad4f4f993f6d73e2c061e7d97d301fca91a619e615cc06f9bfb76891cc
-Size (django-localflavor-3.1.tar.gz) = 4643499 bytes
+BLAKE2s (django-localflavor-4.0.tar.gz) = ada41dc79203ef53c5e24c9d24379517162137a89fbb5ed1439a477f3fe86d3d
+SHA512 (django-localflavor-4.0.tar.gz) = 1a1e9004befb853f7e18219266da7f0733e8cf30c89ecf1c1bb8592745c2bb1bf1847d3671dfdd20dd650d6f84d79627fe132e2c9ae09ae91d11241a0c75da4b
+Size (django-localflavor-4.0.tar.gz) = 4884470 bytes
