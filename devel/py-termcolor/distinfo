@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/04/25 14:02:40 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/12/02 09:50:25 adam Exp $
 
-BLAKE2s (termcolor-2.3.0.tar.gz) = 4e42f9e0932b6f3f1342d403f4efab33e52314c44bcf14623b2b7234bf6688ad
-SHA512 (termcolor-2.3.0.tar.gz) = 0ccfd9320235215b85ddbf099399aaa325dd7176be7a39225377a81c372f9733105dcfe4a9e577cdca451be1f9b5538a071fc511bccd226fe0c4cbecb536bbf3
-Size (termcolor-2.3.0.tar.gz) = 12163 bytes
+BLAKE2s (termcolor-2.4.0.tar.gz) = 024823f8f2443e426d8c3f109c01cb8511329a454d1f793b0d7c697e46d2d4e1
+SHA512 (termcolor-2.4.0.tar.gz) = e715940ccc8863baae020345cabc8fc90b5bbbd5ef4b384de96920a90d97508cee6f863aa39a2c08971e58f45cf85ec73c0659715f54072bbc57612681138355
+Size (termcolor-2.4.0.tar.gz) = 12664 bytes
