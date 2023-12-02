@@ -1,21 +1,28 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/10 19:03:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/02 08:57:40 adam Exp $
 bin/exifread-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/exifread/__init__.py
 ${PYSITELIB}/exifread/__init__.pyc
 ${PYSITELIB}/exifread/__init__.pyo
 ${PYSITELIB}/exifread/classes.py
 ${PYSITELIB}/exifread/classes.pyc
 ${PYSITELIB}/exifread/classes.pyo
+${PYSITELIB}/exifread/exceptions.py
+${PYSITELIB}/exifread/exceptions.pyc
+${PYSITELIB}/exifread/exceptions.pyo
 ${PYSITELIB}/exifread/exif_log.py
 ${PYSITELIB}/exifread/exif_log.pyc
 ${PYSITELIB}/exifread/exif_log.pyo
 ${PYSITELIB}/exifread/heic.py
 ${PYSITELIB}/exifread/heic.pyc
 ${PYSITELIB}/exifread/heic.pyo
+${PYSITELIB}/exifread/jpeg.py
+${PYSITELIB}/exifread/jpeg.pyc
+${PYSITELIB}/exifread/jpeg.pyo
 ${PYSITELIB}/exifread/tags/__init__.py
 ${PYSITELIB}/exifread/tags/__init__.pyc
 ${PYSITELIB}/exifread/tags/__init__.pyo
