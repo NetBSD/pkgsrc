@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/11/29 20:41:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/02 08:11:21 adam Exp $
 
-DISTNAME=	django-debug-toolbar-3.7.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_debug_toolbar-4.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-debug-toolbar/}
 
@@ -10,12 +10,13 @@ HOMEPAGE=	https://github.com/jazzband/django-debug-toolbar
 COMMENT=	Debugging toolbar for Django
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.2.0:../../databases/py-sqlparse
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2.4:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2.4:../../www/py-django
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2022/11/29 20:41:28 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/12/02 08:11:21 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/debug_toolbar/__init__.py
 ${PYSITELIB}/debug_toolbar/__init__.pyc
 ${PYSITELIB}/debug_toolbar/__init__.pyo
+${PYSITELIB}/debug_toolbar/_stubs.py
+${PYSITELIB}/debug_toolbar/_stubs.pyc
+${PYSITELIB}/debug_toolbar/_stubs.pyo
 ${PYSITELIB}/debug_toolbar/apps.py
 ${PYSITELIB}/debug_toolbar/apps.pyc
 ${PYSITELIB}/debug_toolbar/apps.pyo
@@ -92,9 +93,6 @@ ${PYSITELIB}/debug_toolbar/panels/history/panel.pyo
 ${PYSITELIB}/debug_toolbar/panels/history/views.py
 ${PYSITELIB}/debug_toolbar/panels/history/views.pyc
 ${PYSITELIB}/debug_toolbar/panels/history/views.pyo
-${PYSITELIB}/debug_toolbar/panels/logging.py
-${PYSITELIB}/debug_toolbar/panels/logging.pyc
-${PYSITELIB}/debug_toolbar/panels/logging.pyo
 ${PYSITELIB}/debug_toolbar/panels/profiling.py
 ${PYSITELIB}/debug_toolbar/panels/profiling.pyc
 ${PYSITELIB}/debug_toolbar/panels/profiling.pyo
@@ -163,7 +161,6 @@ ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/cache.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/headers.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history_tr.html
-${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/logging.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/profiling.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/request.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/request_variables.html
