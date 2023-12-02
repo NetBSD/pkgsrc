@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7360 2023/12/02 08:26:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7361 2023/12/02 09:03:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10573,3 +10573,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.28.0 [pin 2023-12-02]
 	Updated devel/py-fakefs to 5.3.2 [adam 2023-12-02]
 	Updated graphics/py-pygal to 3.0.4 [adam 2023-12-02]
+	Updated graphics/py-exifread to 3.0.0 [adam 2023-12-02]
+	Updated www/py-django-sortedm2m to 3.1.1 [adam 2023-12-02]
+	Updated www/py-django-photologue to 3.17 [adam 2023-12-02]
