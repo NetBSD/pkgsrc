@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2023/11/16 09:57:51 he Exp $
+$NetBSD: distinfo,v 1.33 2023/12/02 21:32:39 he Exp $
 
 BLAKE2s (rust-bin-1.73.0/rust-1.73.0-aarch64-apple-darwin.tar.gz) = 6d789c5a388ba8db0d1eb906187fc57415cfe7c91fc20a75f051f944d9efc2c6
 SHA512 (rust-bin-1.73.0/rust-1.73.0-aarch64-apple-darwin.tar.gz) = 6c7093851069584312228c39f7f2ec67739278afd776ba4194684ec27dd523676acf4d97bc7ae662e50f3d0d955c31f356502bf6cd5aebe4f76b0b89a3b202c3
@@ -9,9 +9,9 @@ Size (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-linux-gnu.tar.gz) = 460971740 
 BLAKE2s (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-linux-musl.tar.gz) = 848a7d285e082b71e1effee16409ce979adf687639ff5ff09a937abceb70171a
 SHA512 (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-linux-musl.tar.gz) = fa9c338bb6508867ec7dc2ac60c5bd6eb42e95160fbbc296ce45dc6d11906ecaee0d7591346b98c5a9564fa1ab938aede04787e43dc040ec86fbca92c8b10103
 Size (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-linux-musl.tar.gz) = 375142860 bytes
-BLAKE2s (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = 3fb3fb5793cb2202d7ec7f57c0657c1cb694b679d49c167aab5c0d788babb1d1
-SHA512 (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = 3b7e8a654a0a65b2e6833436974199de0d621e47bdc01a470096a0b11a7f3952cde9cdf7279759a5569be04bd597dcab4f098b4dd2b3ac09763844586869479a
-Size (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = 161533276 bytes
+BLAKE2s (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = 8f4ff1a3920035db498baf74624910b5fe81fe533101e3c92ba7b3cff8db4cb3
+SHA512 (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = bb4560dae59569ca4385fcca9239e3970825de3a2bcad21f5026548a53779b98f3b549f9819f1eb23c0c8bc91670833abf29f63930bcaccca6ef5da6d9a805f6
+Size (rust-bin-1.73.0/rust-1.73.0-aarch64-unknown-netbsd.tar.xz) = 161515964 bytes
 BLAKE2s (rust-bin-1.73.0/rust-1.73.0-aarch64_be-unknown-netbsd.tar.xz) = 387b9ddc1f942046a8257953c6ec417289ed015acf92949426e3a591e9bc2825
 SHA512 (rust-bin-1.73.0/rust-1.73.0-aarch64_be-unknown-netbsd.tar.xz) = c3633f9b741f1ef6276c7a40d9d3cfd5d11ed3a60107258c6b1a2f0c9f44183e8bb91210ce46f2ff0cb4a2e71d6f3134cb2e9f988785b724d70993906508b22a
 Size (rust-bin-1.73.0/rust-1.73.0-aarch64_be-unknown-netbsd.tar.xz) = 160607376 bytes
@@ -30,9 +30,9 @@ Size (rust-bin-1.73.0/rust-1.73.0-i686-unknown-linux-gnu.tar.gz) = 409345618 byt
 BLAKE2s (rust-bin-1.73.0/rust-1.73.0-mipsel-unknown-netbsd.tar.xz) = b670e15ca50ac0c32f0a2222e9a93165331213d1e1afb1380f6d208845e5f16e
 SHA512 (rust-bin-1.73.0/rust-1.73.0-mipsel-unknown-netbsd.tar.xz) = 4d7f83a72f5d0056e9cf37dfbdf3ccbb26cec366d483c6a819e9ca84077ef3fec825841b306016f69c9186ad0eedddcf9307c6b6826ef154ab7ff4d4d93ad3d0
 Size (rust-bin-1.73.0/rust-1.73.0-mipsel-unknown-netbsd.tar.xz) = 141338300 bytes
-BLAKE2s (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd90.tar.xz) = fddd8a666775bc4b6d0ceccb06c15ff6ff2ec0d5bb26d991797e13e38d386fed
-SHA512 (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd90.tar.xz) = 271dd07d27968f892fd7df7eab9a029dfac3df7560df30c6366438ae4d39a76a6b0eb18cd19216105b58924871c3fea2bd92ef8558137c87a72c134fcab32868
-Size (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd90.tar.xz) = 189791984 bytes
+BLAKE2s (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd-nb1.tar.xz) = 7cd38d529d47d801f8a38f31d8c9090156102893778bb10796ef088da2c4df3d
+SHA512 (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd-nb1.tar.xz) = c40f2a7c4ef86c3509da7bc9bf9ee3d6aee23092f2879638fefe8ecc525a1d9957daeb28e8f06a7912717ca0000849ffc214ce94b43a4daadbd0d05eef1585da
+Size (rust-bin-1.73.0/rust-1.73.0-powerpc-unknown-netbsd-nb1.tar.xz) = 69744268 bytes
 BLAKE2s (rust-bin-1.73.0/rust-1.73.0-riscv64gc-unknown-netbsd.tar.xz) = c2e9034c10cfb2d15afc76ee4f556094f95938c66e99cc6ea9501e507a391b99
 SHA512 (rust-bin-1.73.0/rust-1.73.0-riscv64gc-unknown-netbsd.tar.xz) = 5e3b31ab747f3bfbb8732375bbce92fc0d8fea3fba422d81522090ab94ee2760a59b6e92b1a6a96742dde787cd34993ba1a76ac53e9d661b1e562fdc54acec91
 Size (rust-bin-1.73.0/rust-1.73.0-riscv64gc-unknown-netbsd.tar.xz) = 174577224 bytes
