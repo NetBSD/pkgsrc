@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7359 2023/12/02 08:22:01 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7360 2023/12/02 08:26:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10571,3 +10571,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-localflavor to 4.0 [adam 2023-12-02]
 	Updated www/py-django-debug-toolbar to 4.2.0 [adam 2023-12-02]
 	Updated shells/oh-my-posh to 18.28.0 [pin 2023-12-02]
+	Updated devel/py-fakefs to 5.3.2 [adam 2023-12-02]
+	Updated graphics/py-pygal to 3.0.4 [adam 2023-12-02]
