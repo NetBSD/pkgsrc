@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7364 2023/12/02 16:03:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7365 2023/12/02 16:04:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10580,3 +10580,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pywavelets to 1.5.0 [adam 2023-12-02]
 	Updated devel/mk-configure to 0.38.3 [cheusov 2023-12-02]
 	Updated archivers/arqiver to 0.12.0 [pin 2023-12-02]
+	Updated shells/oh-my-posh to 19.1.0 [pin 2023-12-02]
