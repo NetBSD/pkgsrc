@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/03/28 20:31:17 pin Exp $
+$NetBSD: distinfo,v 1.13 2023/12/02 16:02:45 pin Exp $
 
-BLAKE2s (Arqiver-0.11.0.tar.gz) = 071e2de63d07597a60cf46f3267f080de8fb4717bcb0f8f3ef6fede35a6cf566
-SHA512 (Arqiver-0.11.0.tar.gz) = d25956993d0c134e2615178853b9d25cbd84550165958496c752e733e1b42575a7526cb51b70d670549fb27076d5c77620f6ad5a774aa576af1123ee41abe30c
-Size (Arqiver-0.11.0.tar.gz) = 151477 bytes
+BLAKE2s (Arqiver-0.12.0.tar.gz) = 292ca7d607bcc406f521bca205aaaa22d798a0e5137fd9e28050e63d39aee5eb
+SHA512 (Arqiver-0.12.0.tar.gz) = 48e21bbfabe8ef017110b13ea3d33f20ac5013d7f5d28a6b9d8feb170000bc0c2b92f60144aad485872c23d3d8aec74a82183a8a673b0efa7a18b4b7d783e5c3
+Size (Arqiver-0.12.0.tar.gz) = 161687 bytes
