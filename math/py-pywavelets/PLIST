@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/14 23:50:35 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/12/02 09:59:10 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/pywt/__init__.py
 ${PYSITELIB}/pywt/__init__.pyc
 ${PYSITELIB}/pywt/__init__.pyo
@@ -19,9 +18,6 @@ ${PYSITELIB}/pywt/_doc_utils.pyo
 ${PYSITELIB}/pywt/_dwt.py
 ${PYSITELIB}/pywt/_dwt.pyc
 ${PYSITELIB}/pywt/_dwt.pyo
-${PYSITELIB}/pywt/_extensions/__init__.py
-${PYSITELIB}/pywt/_extensions/__init__.pyc
-${PYSITELIB}/pywt/_extensions/__init__.pyo
 ${PYSITELIB}/pywt/_extensions/_cwt.so
 ${PYSITELIB}/pywt/_extensions/_dwt.so
 ${PYSITELIB}/pywt/_extensions/_pywt.so
@@ -75,7 +71,7 @@ ${PYSITELIB}/pywt/data/create_dat.py
 ${PYSITELIB}/pywt/data/create_dat.pyc
 ${PYSITELIB}/pywt/data/create_dat.pyo
 ${PYSITELIB}/pywt/data/ecg.npy
-${PYSITELIB}/pywt/data/sst_nino3.npz
+${PYSITELIB}/pywt/data/sst_nino3.npy
 ${PYSITELIB}/pywt/tests/data/cwt_matlabR2015b_result.npz
 ${PYSITELIB}/pywt/tests/data/dwt_matlabR2012a_result.npz
 ${PYSITELIB}/pywt/tests/data/generate_matlab_data.py
