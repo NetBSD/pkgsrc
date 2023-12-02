@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7357 2023/12/02 07:27:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7358 2023/12/02 08:11:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10568,3 +10568,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-amqp to 5.2.0 [adam 2023-12-01]
 	Updated www/py-django-admin-sortable2 to 2.1.10 [adam 2023-12-02]
 	Updated www/py-django-allauth to 0.58.2 [adam 2023-12-02]
+	Updated www/py-django-localflavor to 4.0 [adam 2023-12-02]
+	Updated www/py-django-debug-toolbar to 4.2.0 [adam 2023-12-02]
