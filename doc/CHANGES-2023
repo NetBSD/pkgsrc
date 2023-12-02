@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7356 2023/12/01 19:38:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7357 2023/12/02 07:27:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10566,3 +10566,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-tox to 4.11.4 [adam 2023-12-01]
 	Updated devel/py-vine to 5.1.0 [adam 2023-12-01]
 	Updated net/py-amqp to 5.2.0 [adam 2023-12-01]
+	Updated www/py-django-admin-sortable2 to 2.1.10 [adam 2023-12-02]
+	Updated www/py-django-allauth to 0.58.2 [adam 2023-12-02]
