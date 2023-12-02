@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/12/02 09:01:10 adam Exp $
 
-BLAKE2s (django-sortedm2m-3.0.2.tar.gz) = e60869061fb5191d192278cea8abe4f9dd80734c16d4782ce958d27e8da8fb3c
-SHA512 (django-sortedm2m-3.0.2.tar.gz) = 8c508b8bd8d661b81853624b6aa52dd1e22cef3aa3877b4b2f81962e302c8472fc01b17ec9cd95cd388e981857e247fddf04a184be3389cd1042dda7bf3ef789
-Size (django-sortedm2m-3.0.2.tar.gz) = 46464 bytes
+BLAKE2s (django-sortedm2m-3.1.1.tar.gz) = a72fcf4aa011af2eefe0e52468eb66a0bc67e2cca775797ab1f6a9158b25499c
+SHA512 (django-sortedm2m-3.1.1.tar.gz) = 644a4a1c9235ab55d878981a9ddf7654f9b68ee69ea24edf07e30f614640c34f4617f9ef4ca3ce0ec4cf82975eacea8c004702dff5d399b6b41ba2367ff7e3a1
+Size (django-sortedm2m-3.1.1.tar.gz) = 41344 bytes
