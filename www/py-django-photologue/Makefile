@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/07/13 10:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/02 09:02:49 adam Exp $
 
-DISTNAME=	django-photologue-3.13
+DISTNAME=	django-photologue-3.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-photologue/}
 
@@ -11,14 +10,14 @@ HOMEPAGE=	https://github.com/jdriscoll/django-photologue
 COMMENT=	Plug-in photo management application for the Django framework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=3.0.0:../../www/py-django-sortedm2m
-DEPENDS+=	${PYPKGPREFIX}-exifread>=2.1.2:../../graphics/py-exifread
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=3.1.1:../../www/py-django-sortedm2m
+DEPENDS+=	${PYPKGPREFIX}-exifread>=3:../../graphics/py-exifread
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

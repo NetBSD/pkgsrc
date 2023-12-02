@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/10 19:07:06 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2023/12/02 09:02:49 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/photologue/__init__.py
 ${PYSITELIB}/photologue/__init__.pyc
 ${PYSITELIB}/photologue/__init__.pyo
 ${PYSITELIB}/photologue/admin.py
 ${PYSITELIB}/photologue/admin.pyc
 ${PYSITELIB}/photologue/admin.pyo
+${PYSITELIB}/photologue/apps.py
+${PYSITELIB}/photologue/apps.pyc
+${PYSITELIB}/photologue/apps.pyo
 ${PYSITELIB}/photologue/forms.py
 ${PYSITELIB}/photologue/forms.pyc
 ${PYSITELIB}/photologue/forms.pyo
@@ -52,6 +54,8 @@ ${PYSITELIB}/photologue/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.po
+${PYSITELIB}/photologue/locale/tr_TR/LC_MESSAGES/django.mo
+${PYSITELIB}/photologue/locale/tr_TR/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/zh_Hans/LC_MESSAGES/django.mo
@@ -107,6 +111,12 @@ ${PYSITELIB}/photologue/migrations/0010_auto_20160105_1307.pyo
 ${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.py
 ${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.pyc
 ${PYSITELIB}/photologue/migrations/0011_auto_20190223_2138.pyo
+${PYSITELIB}/photologue/migrations/0012_alter_photo_effect.py
+${PYSITELIB}/photologue/migrations/0012_alter_photo_effect.pyc
+${PYSITELIB}/photologue/migrations/0012_alter_photo_effect.pyo
+${PYSITELIB}/photologue/migrations/0013_alter_watermark_image.py
+${PYSITELIB}/photologue/migrations/0013_alter_watermark_image.pyc
+${PYSITELIB}/photologue/migrations/0013_alter_watermark_image.pyo
 ${PYSITELIB}/photologue/migrations/__init__.py
 ${PYSITELIB}/photologue/migrations/__init__.pyc
 ${PYSITELIB}/photologue/migrations/__init__.pyo
