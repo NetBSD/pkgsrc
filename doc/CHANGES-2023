@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7378 2023/12/03 04:23:30 wen Exp $
+$NetBSD: CHANGES-2023,v 1.7379 2023/12/03 04:36:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10594,3 +10594,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p5-CryptX to 0.080 [wen 2023-12-03]
 	Updated security/p5-Mozilla-CA to 20230821 [wen 2023-12-03]
 	Updated mail/p5-Email-Abstract to 3.010 [wen 2023-12-03]
+	Updated mail/p5-Mail-AuthenticationResults to 2.20231031 [wen 2023-12-03]
+
