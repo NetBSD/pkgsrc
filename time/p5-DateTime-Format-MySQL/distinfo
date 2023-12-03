@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:24:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/12/03 00:59:39 wen Exp $
 
-BLAKE2s (DateTime-Format-MySQL-0.0701.tar.gz) = 9545b052af0c31e8d083634a2f2ea12bc52dfd2420ac57bde8e865acfdb3cb5b
-SHA512 (DateTime-Format-MySQL-0.0701.tar.gz) = 74cbe1dcf6d708c643b24eb25f837f56715fee6685a1071bce9e5e5114347155018b8c14247233910bd6e6208996532962b93cc024a816fbeb37a41116a6265c
-Size (DateTime-Format-MySQL-0.0701.tar.gz) = 13817 bytes
+BLAKE2s (DateTime-Format-MySQL-0.08.tar.gz) = e0a66bcdf365ad3285ece2a26ea9c844e20e7f78e46e6e4c492d5c5f58aa7811
+SHA512 (DateTime-Format-MySQL-0.08.tar.gz) = 55ef89a12e13abfe4f95f82bd7a5ff6a53e2d96be7360c0ccbbd5fed8b20037d3c950fe005c4b81f2b78820381681cbd92d1e0d8a64f30938791b90ec4116662
+Size (DateTime-Format-MySQL-0.08.tar.gz) = 13951 bytes
