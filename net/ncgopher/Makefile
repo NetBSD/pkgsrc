@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/08 13:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/03 20:48:21 pin Exp $
 
-DISTNAME=	ncgopher-0.5.0
-PKGREVISION=	4
+DISTNAME=	ncgopher-0.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jansc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,8 @@ LICENSE=	2-clause-bsd
 
 .include "cargo-depends.mk"
 
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config perl gmake
 USE_NCURSES=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
