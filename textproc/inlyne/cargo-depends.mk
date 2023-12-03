@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/11/24 07:49:43 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/12/03 20:45:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -506,7 +506,7 @@ CARGO_CRATE_DEPENDS+=	wayland-sys-0.31.1
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.65
 CARGO_CRATE_DEPENDS+=	weezl-0.1.7
 CARGO_CRATE_DEPENDS+=	wgpu-0.17.2
-CARGO_CRATE_DEPENDS+=	wgpu-core-0.17.1
+CARGO_CRATE_DEPENDS+=	wgpu-core-0.17.0
 CARGO_CRATE_DEPENDS+=	wgpu-hal-0.17.2
 CARGO_CRATE_DEPENDS+=	wgpu-types-0.17.0
 CARGO_CRATE_DEPENDS+=	wgpu_glyph-0.21.0
