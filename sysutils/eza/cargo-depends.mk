@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2023/11/28 17:06:13 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2023/12/03 15:34:38 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -164,13 +164,22 @@ CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	windows-0.48.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.48.0
+CARGO_CRATE_DEPENDS+=	windows-sys-0.52.0
 CARGO_CRATE_DEPENDS+=	windows-targets-0.48.5
+CARGO_CRATE_DEPENDS+=	windows-targets-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.0
 CARGO_CRATE_DEPENDS+=	winnow-0.5.15
 CARGO_CRATE_DEPENDS+=	zoneinfo_compiled-0.5.1
