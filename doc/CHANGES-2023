@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7370 2023/12/03 00:50:48 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.7371 2023/12/03 01:10:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10586,3 +10586,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 19.1.1 [pin 2023-12-02]
 	Updated textproc/tuc to 1.1.0 [pin 2023-12-02]
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.2 [gutteridge 2023-12-03]
+	Updated time/p5-DateTime-Format-MySQL to 0.08 [wen 2023-12-03]
