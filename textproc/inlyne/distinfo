@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/11/24 07:49:43 pin Exp $
+$NetBSD: distinfo,v 1.4 2023/12/03 20:45:15 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.23.crate) = dcb87d5c70395693fe96390c3c9b9fa0ba1f246fe3bc1e4a49afa09c166a4732
 SHA512 (ab_glyph-0.2.23.crate) = 169aaea8daf54cae7b3123b088f95217dda53f5e11b42a962d4607f546b8ecbdbab769d292cd2f50206f58d015785361479b4dfc42915b28bc5bdfff4340c151
@@ -636,9 +636,9 @@ Size (indexmap-2.1.0.crate) = 68224 bytes
 BLAKE2s (infer-0.2.3.crate) = 27e4fb849f2abc62f1f9de3e32d88c2187f210f20e815409d4668f4f091ac2b6
 SHA512 (infer-0.2.3.crate) = ac349efe070df8a0e6ff50d233882124402cacccf60a1279ac3b0a43289297ddbcc964346f7bb60ab8e8022a6aaedb42d9f0d9cb69ace0d112a31bce4ec381d9
 Size (infer-0.2.3.crate) = 12401 bytes
-BLAKE2s (inlyne-0.3.2.tar.gz) = faab2cc99fd02d5036c71f5e8c572218cf596985c044ae50d27b06c9b153f63c
-SHA512 (inlyne-0.3.2.tar.gz) = 80ebaa8e9f1b5a415a1fb904d9eede43ba643e36359f4be3b4d71cc053916a5a9b491a86cbe78e0c0ee768ef30afe2682706cce98c0beb1f8dd9daa6a74a0f19
-Size (inlyne-0.3.2.tar.gz) = 421712 bytes
+BLAKE2s (inlyne-0.3.3.tar.gz) = 45c92347cfc68598459182b4f548e1840d4318b69e36b731425cc7ac8697ee52
+SHA512 (inlyne-0.3.3.tar.gz) = 9e8b9ccc9d48228c510b8e613f5e1839bccf6c22af0fce8b16880cca7d050fdecc07da1ffcc3e40e375da4b177f78ead2d377e4e9a08f2c6cf4faecaf8b380d9
+Size (inlyne-0.3.3.tar.gz) = 422149 bytes
 BLAKE2s (inotify-0.9.6.crate) = d700f63ede66e396802c99dec5f8b91c69aba8aac7088e8033a9d0c9ae7893cb
 SHA512 (inotify-0.9.6.crate) = 39c3db1b6da620df9eaaa41cc20c2f22b9a372e181ed7d8ba0c7ad4e711ba4486bcec7ff86bb4d814d9c53e071cc4e43845567069e45b897c562cb677fc872b2
 Size (inotify-0.9.6.crate) = 22971 bytes
@@ -1521,9 +1521,9 @@ Size (weezl-0.1.7.crate) = 42166 bytes
 BLAKE2s (wgpu-0.17.2.crate) = 666e7fb544ae75792b2dbd499d19e187de10f9f1bddfe62f0b6504cb0e59d28c
 SHA512 (wgpu-0.17.2.crate) = 99d5fb6a9be9475a0b886529a8213cb8dd59302b192e85a26a273a6034bc85fa9166e5769639c73da8cc4c889c9242acc427ba000f4348f851f100b1ec322979
 Size (wgpu-0.17.2.crate) = 93866 bytes
-BLAKE2s (wgpu-core-0.17.1.crate) = 43eae5960ec32649184807bf3e2d20e27a00eda58c411e6f4286cc494d2ddb40
-SHA512 (wgpu-core-0.17.1.crate) = f493913b12eb9c0fa347755eb3f59786f48fd73ac9faa249a7e37c98562176ba539be8076706331071d8f3e34fdc4995e9e67ca0d5f2c3961a98884767b6709d
-Size (wgpu-core-0.17.1.crate) = 217989 bytes
+BLAKE2s (wgpu-core-0.17.0.crate) = c3fdca05355061fba59212a1a3deb3807cba934177c4533087cf1d23ee3ff0c9
+SHA512 (wgpu-core-0.17.0.crate) = 7e6869d111d039f977ee729913796d9bf0cdc8b1bdef6ec7050e2eb5a146913acc227d4168a063c13bc4edf5fff55f9c9ab92bf99b1f7e788e00fcffa95c8da5
+Size (wgpu-core-0.17.0.crate) = 217697 bytes
 BLAKE2s (wgpu-hal-0.17.2.crate) = 7f24cc59553717f6bf995833eac46a5c6a85ff7300a43136950f4e16796baeca
 SHA512 (wgpu-hal-0.17.2.crate) = 6f32c9f663e316019b833a4c97bf237c78b9ab01f8ff25a0b27c79f86911a2a072695c2adaf2f8c541e095f0d529386367a7f68918c93f35741a3328a56301a7
 Size (wgpu-hal-0.17.2.crate) = 252657 bytes
