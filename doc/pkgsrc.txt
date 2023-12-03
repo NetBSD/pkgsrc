@@ -6865,7 +6865,7 @@ c, c++, fortran, fortran77, java, objc, obj-c++, and ada.
 scripts, even if written in C++, usually need a C compiler for the configure
 phase.
 
-To declare which features a package requies from the compiler, set either
+To declare which features a package requires from the compiler, set either
 USE_CC_FEATURES or USE_CXX_FEATURES. Allowed values for USE_CC_FEATURES are
 currently:
 
