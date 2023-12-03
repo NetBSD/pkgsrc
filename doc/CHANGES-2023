@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7385 2023/12/03 20:48:47 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7386 2023/12/03 20:50:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10601,3 +10601,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/inlyne to 0.3.3 [pin 2023-12-03]
 	Updated graphics/matugen to 0.11.2 [pin 2023-12-03]
 	Updated net/ncgopher to 0.6.0 [pin 2023-12-03]
+	Updated audio/spotify-player to 0.16.0 [pin 2023-12-03]
