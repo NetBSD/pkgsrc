@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/09 12:01:15 wen Exp $
+$NetBSD: distinfo,v 1.6 2023/12/03 02:09:15 wen Exp $
 
-BLAKE2s (Crypt-OpenSSL-AES-0.15.tar.gz) = 9309b40de8f37e52e518c56dff5059302a520b60a5c47926d40e59789a245f2c
-SHA512 (Crypt-OpenSSL-AES-0.15.tar.gz) = 9d00f85b2e8a5324005e79afbc38652718e85f2111531dd7aba4f8c9671f22de16b2d2ce48a1f18b288d2d87a917b11ad91614bed14a079cec9ffbd448bbefad
-Size (Crypt-OpenSSL-AES-0.15.tar.gz) = 155089 bytes
+BLAKE2s (Crypt-OpenSSL-AES-0.19.tar.gz) = b0172d3145510b4951a168afe1537baf35b351cbba6f3309475eeb862f47b482
+SHA512 (Crypt-OpenSSL-AES-0.19.tar.gz) = a95efddb59e56db9b125bc1f03aa7ad65b6acfcf6406c91125b444d769fa45901288e35bd529335302982426ccbe833bf1bce22865041c844a7886e6b5b8ac97
+Size (Crypt-OpenSSL-AES-0.19.tar.gz) = 156698 bytes
