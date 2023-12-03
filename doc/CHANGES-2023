@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7382 2023/12/03 15:35:17 fox Exp $
+$NetBSD: CHANGES-2023,v 1.7383 2023/12/03 20:45:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10598,3 +10598,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Mail-Box-POP3 to 3.006 [wen 2023-12-03]
 	Updated mail/p5-Mail-DKIM to 1.20230911 [wen 2023-12-03]
 	Updated sysutils/eza to 0.16.2 [fox 2023-12-03]
+	Updated textproc/inlyne to 0.3.3 [pin 2023-12-03]
