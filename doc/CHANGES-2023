@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7372 2023/12/03 01:17:50 wen Exp $
+$NetBSD: CHANGES-2023,v 1.7373 2023/12/03 01:30:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10588,3 +10588,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.2 [gutteridge 2023-12-03]
 	Updated time/p5-DateTime-Format-MySQL to 0.08 [wen 2023-12-03]
 	Updated time/p5-DateTime-Format-Natural to 1.18 [wen 2023-12-03]
+	Updated time/p5-DateTime-Locale to 1.40 [wen 2023-12-03]
