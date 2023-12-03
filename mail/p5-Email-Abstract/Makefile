@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/07/06 09:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/12/03 03:47:49 wen Exp $
 
-DISTNAME=	Email-Abstract-3.009
+DISTNAME=	Email-Abstract-3.010
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
