@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2022/11/21 20:16:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/04 06:11:30 adam Exp $
 bin/vulture
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/vulture/__init__.py
 ${PYSITELIB}/vulture/__init__.pyc
 ${PYSITELIB}/vulture/__init__.pyo
@@ -42,12 +42,18 @@ ${PYSITELIB}/vulture/whitelists/collections_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/ctypes_whitelist.py
 ${PYSITELIB}/vulture/whitelists/ctypes_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/ctypes_whitelist.pyo
+${PYSITELIB}/vulture/whitelists/enum_whitelist.py
+${PYSITELIB}/vulture/whitelists/enum_whitelist.pyc
+${PYSITELIB}/vulture/whitelists/enum_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.py
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/logging_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/pint_whitelist.py
 ${PYSITELIB}/vulture/whitelists/pint_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/pint_whitelist.pyo
+${PYSITELIB}/vulture/whitelists/socketserver_whitelist.py
+${PYSITELIB}/vulture/whitelists/socketserver_whitelist.pyc
+${PYSITELIB}/vulture/whitelists/socketserver_whitelist.pyo
 ${PYSITELIB}/vulture/whitelists/string_whitelist.py
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyc
 ${PYSITELIB}/vulture/whitelists/string_whitelist.pyo
