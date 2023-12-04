@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2023/11/26 10:48:46 tnn Exp $
+$NetBSD: distinfo,v 1.16 2023/12/04 01:08:16 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = b632092d25292e795a2d7567ec55d03f21021dbba27eab3e81a48aed5e5bdd68
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = fb86749d56be94cc1509f92d8fbdec481b0c7f6fdd5e731826098e6eaa668539052571ffd09125346c1920262b07857ea675799ab8476fcff53c03e158536c1d
@@ -15,6 +15,7 @@ Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
 BLAKE2s (jdk17u-jdk-17.0.9-9-1.tar.gz) = a16b75771899e552e2fe247a14f5aaddfa3e454f14e1edffbfd1312d5ed950ef
 SHA512 (jdk17u-jdk-17.0.9-9-1.tar.gz) = a9ebd92601f6f0aea22940446a52c0c58e1af4d1238e03e58d7e062741780d6f0b8fac611cd1c3230cd3511c494dbda4d073f39ec205b761af7abbba58855f09
 Size (jdk17u-jdk-17.0.9-9-1.tar.gz) = 106526772 bytes
+SHA1 (patch-make_autoconf_build-performance.m4) = 1617779af212d6c7f8ffba19c9cb45554392b714
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 0379aeecc6181cbd15f6f31518b73ca915f1f73b
 SHA1 (patch-make_autoconf_hotspot.m4) = 6370c6cb2a3f225c502e7916342104cf1288f4cf
