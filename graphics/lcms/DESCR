@@ -5,3 +5,6 @@ you can color-enable your application without the pain of ActiveX,
 OCX, redistributables or binaries of any kind. We are using little cms
 in several commercial projects, however, we are offering lcms library
 free for anybody under an extremely liberal open source license.
+
+This is version 1, which has not been maintained by upstream since
+2009.
