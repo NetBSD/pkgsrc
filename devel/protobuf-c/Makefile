@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/26 06:06:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/04 14:02:29 jperkin Exp $
 
 DISTNAME=	protobuf-c-1.5.0
 CATEGORIES=	devel
@@ -17,6 +17,9 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	protobuf-c/libprotobuf-c.pc.in
 TEST_TARGET=		check
+
+pre-configure:
+	${LN} -s ${BUILDLINK_DIR}/include/google ${WRKSRC}/google
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/atomic64.mk"
