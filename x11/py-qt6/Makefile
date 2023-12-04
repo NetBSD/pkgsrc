@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/04 19:24:09 adam Exp $
 
-DISTNAME=	PyQt6-6.6.0
+DISTNAME=	PyQt6-6.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt6/qt6/}
-PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
 
@@ -14,8 +13,8 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.15:../../x11/py-qt-builder
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.5:../../x11/py-sip6
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
