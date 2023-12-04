@@ -1,6 +1,6 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.24 2023/12/04 01:08:16 tnn Exp $
 
---- common/autoconf/generated-configure.sh.orig	2023-07-19 02:06:20.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2023-10-18 04:28:25.000000000 +0000
 +++ common/autoconf/generated-configure.sh
 @@ -4202,7 +4202,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
  # These toolchains are valid on different platforms
@@ -282,7 +282,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -42372,6 +42368,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42401,6 +42397,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
        SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
        SET_SHARED_LIBRARY_MAPFILE=''
@@ -295,7 +295,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
-@@ -42443,7 +42445,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42472,7 +42474,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xsolaris; then
      CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
      CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
@@ -306,7 +306,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
    fi
    # The (cross) compiler is now configured, we can now test capabilities
    # of the target platform.
-@@ -42603,7 +42607,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42632,7 +42636,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    elif test "x$TOOLCHAIN_TYPE" = xgcc; then
      LEGACY_EXTRA_CFLAGS="$LEGACY_EXTRA_CFLAGS -fstack-protector"
      LEGACY_EXTRA_CXXFLAGS="$LEGACY_EXTRA_CXXFLAGS -fstack-protector"
@@ -315,7 +315,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
        LDFLAGS_JDK="$LDFLAGS_JDK -Wl,-z,relro"
        LEGACY_EXTRA_LDFLAGS="$LEGACY_EXTRA_LDFLAGS -Wl,-z,relro"
      fi
-@@ -43462,7 +43466,9 @@ $as_echo "$supports" >&6; }
+@@ -43491,7 +43495,9 @@ $as_echo "$supports" >&6; }
        # Enabling pie on 32 bit builds prevents the JVM from allocating a continuous
        # java heap.
        if test "x$OPENJDK_TARGET_CPU_BITS" != "x32"; then
@@ -326,7 +326,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
        fi
      fi
    fi
-@@ -43950,7 +43956,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -43979,7 +43985,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -336,7 +336,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -45180,7 +45187,7 @@ $as_echo "$as_me: WARNING: Can't find pr
+@@ -45209,7 +45216,7 @@ $as_echo "$as_me: WARNING: Can't find pr
      BUILD_FREETYPE=no
    fi
    # Now check if configure found a version of 'msbuild.exe'
@@ -345,7 +345,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&5
  $as_echo "$as_me: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&2;}
      BUILD_FREETYPE=no
-@@ -45619,6 +45626,10 @@ $as_echo "$as_me: WARNING: --with-freety
+@@ -45648,6 +45655,10 @@ $as_echo "$as_me: WARNING: --with-freety
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
          POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"
@@ -356,7 +356,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -48937,7 +48948,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -48966,7 +48977,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -365,7 +365,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -49081,7 +49092,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -49110,7 +49121,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -374,7 +374,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
        fi
      fi
  
-@@ -50416,9 +50427,6 @@ fi
+@@ -50445,9 +50456,6 @@ fi
  
  
  
@@ -384,7 +384,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -50461,7 +50469,7 @@ fi
+@@ -50490,7 +50498,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
@@ -393,3 +393,12 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25
      LIBCXX="${SYSROOT}/usr/lib${OPENJDK_TARGET_CPU_ISADIR}/libCrun.so.1"
    fi
  
+@@ -55474,7 +55482,7 @@ $as_echo_n "checking for memory size... 
+     FOUND_MEM=yes
+   elif test "x$OPENJDK_BUILD_OS" = xbsd && test "x$(uname -s | grep -o BSD)" = xBSD; then
+     # Looks like a BSD system
+-    MEMORY_SIZE=`/sbin/sysctl -n hw.physmem`
++    MEMORY_SIZE=`/sbin/sysctl -n hw.physmem64 || /sbin/sysctl -n hw.physmem`
+     MEMORY_SIZE=`expr $MEMORY_SIZE / 1024 / 1024`
+     FOUND_MEM=yes
+   elif test "x$OPENJDK_BUILD_OS" = xwindows; then

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2023/11/23 15:33:19 ryoon Exp $
+$NetBSD: distinfo,v 1.41 2023/12/04 01:08:16 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = f93572f551f242344e5d6d5e46b9812e5b426772842b5fa06fea4422e327c871
 SHA512 (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = c4030c99e4c1bb209f0c1ca6c10665c3f4c906f9d7dc13b912c3fbb8031f3dbb6f8d2e5e966cbbc452c307ba5d6de816c0f000b5b7c5d4e3fe8511baf12aab49
@@ -15,6 +15,7 @@ Size (bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz) = 99673444 byt
 BLAKE2s (jdk11u-jdk-11.0.21-9-1.tar.gz) = a0293421abd167f192499d560abf11b4c0077734a990380643608bc570009025
 SHA512 (jdk11u-jdk-11.0.21-9-1.tar.gz) = 79839637e3ca057c4ee833cb56467fc1876569d5f98fd20cb03c371828f732ca1b8dd26b1656779f01a0b06ac4266c9a24fbf1bd54e5ca3daf93baae12ed4ac2
 Size (jdk11u-jdk-11.0.21-9-1.tar.gz) = 116433451 bytes
+SHA1 (patch-make_autoconf_build-performance.m4) = d52cb5897e9fb6e3b0cdbe34641d8caa218b21b7
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = d0b600237853c17ecc2864604f0bd847ba6b0149
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 3b37853298805e2ffb92d3babd700d0048f24d8d
 SHA1 (patch-make_autoconf_hotspot.m4) = 437c8b09114933cca22c4a847a90a415cd113e5a
