@@ -1,0 +1,1 @@
+bin/pydoctor @PREFIX@/bin/pydoctor-@PYVERSSUFFIX@
