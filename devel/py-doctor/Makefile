@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/08/12 00:31:02 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/04 06:07:50 adam Exp $
 
-DISTNAME=	pydoctor-23.4.1
+DISTNAME=	pydoctor-23.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydoctor/}
@@ -24,9 +24,15 @@ DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests-[0-9]*:../../devel/py-test-subtests
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pydoctor pydoctor-${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
