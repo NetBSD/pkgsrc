@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/10/24 22:11:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/12/04 10:35:21 jperkin Exp $
 
 BUILDLINK_TREE+=	c-icap
 
@@ -23,6 +23,10 @@ pkgbase:= c-icap
 
 .if ${PKG_BUILD_OPTIONS.c-icap:Mopenssl}
 .  include "../../security/openssl/buildlink3.mk"
+.endif
+
+.if ${PKG_BUILD_OPTIONS.c-icap:Mpcre}
+.  include "../../devel/pcre/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.c-icap:Mzlib}
