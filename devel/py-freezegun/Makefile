@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/10/23 06:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/04 08:28:22 adam Exp $
 
-DISTNAME=	freezegun-1.2.2
+DISTNAME=	freezegun-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/freezegun/}
 
@@ -11,15 +10,14 @@ HOMEPAGE=	https://github.com/spulec/freezegun
 COMMENT=	Let your Python tests travel through time
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
