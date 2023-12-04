@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/08/11 13:01:29 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/12/04 06:07:50 adam Exp $
 
-BLAKE2s (pydoctor-23.4.1.tar.gz) = e63f3d8251d0f74688b9e92465e10cd29b42cdf22acadb3c841b76a8ad117308
-SHA512 (pydoctor-23.4.1.tar.gz) = c310cc6267389a1fc13f7e48e42ffd1d4fca8f71d312350fa35edc602869460cbba0e59b138e68bbb179bb2df1f7236e287a965be17466c7512eec6ca4ac0e57
-Size (pydoctor-23.4.1.tar.gz) = 914980 bytes
+BLAKE2s (pydoctor-23.9.1.tar.gz) = 713e53082fc08a320244a9bcb55d2297b5c0900d047a4987e1446c8819896b74
+SHA512 (pydoctor-23.9.1.tar.gz) = f5c396fd22b42b937d9bf703f4eb94fc87941031af1db4bd4ece9a580410b50f88fd2e3553aa1cc02b097198f954ed69ebb690d8fc2ffa7aeee1de627e61418e
+Size (pydoctor-23.9.1.tar.gz) = 926934 bytes
