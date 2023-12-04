@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.67 2023/11/22 12:55:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.68 2023/12/04 20:45:58 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.8
@@ -242,6 +242,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	toml-0.8.8
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.5
 CARGO_CRATE_DEPENDS+=	toml_edit-0.21.0
+CARGO_CRATE_DEPENDS+=	trash-3.1.2
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.19.2
 CARGO_CRATE_DEPENDS+=	umask-2.1.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.13
@@ -276,15 +277,24 @@ CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.6
 CARGO_CRATE_DEPENDS+=	winapi-wsapoll-0.1.1
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	windows-0.44.0
 CARGO_CRATE_DEPENDS+=	windows-core-0.51.1
 CARGO_CRATE_DEPENDS+=	windows-sys-0.48.0
+CARGO_CRATE_DEPENDS+=	windows-targets-0.42.2
 CARGO_CRATE_DEPENDS+=	windows-targets-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.48.5
+CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	winnow-0.5.19
 CARGO_CRATE_DEPENDS+=	x11-clipboard-0.8.1
