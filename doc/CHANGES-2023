@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7394 2023/12/04 17:31:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7395 2023/12/04 18:57:05 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10613,3 +10613,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/mate to 1.26.1nb5 [gutteridge 2023-12-04]
 	Updated www/py-django to 4.2.8 [adam 2023-12-04]
 	Updated devel/py-bitarray to 2.8.4 [adam 2023-12-04]
+	Updated net/get_iplayer to 3.34 [prlw1 2023-12-04]
+	Updated net/get_iplayer to 3.34 [prlw1 2023-12-04]
