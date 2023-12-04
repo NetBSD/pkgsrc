@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7389 2023/12/04 06:11:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7390 2023/12/04 08:11:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10606,3 +10606,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/thunderbird-l10n to 115.5.1 [ryoon 2023-12-04]
 	Updated devel/py-doctor to 23.9.1 [adam 2023-12-04]
 	Updated devel/py-vulture to 2.10 [adam 2023-12-04]
+	Updated graphics/oculante to 0.8.1 [pin 2023-12-04]
