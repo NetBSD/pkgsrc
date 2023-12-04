@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7396 2023/12/04 19:26:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7397 2023/12/04 20:46:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10617,3 +10617,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/get_iplayer to 3.34 [prlw1 2023-12-04]
 	Updated x11/py-qt6 to 6.6.1 [adam 2023-12-04]
 	Updated misc/py-platformdirs to 4.1.0 [adam 2023-12-04]
+	Updated sysutils/broot to 1.30.0 [pin 2023-12-04]
