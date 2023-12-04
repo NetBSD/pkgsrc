@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7386 2023/12/03 20:50:06 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7387 2023/12/04 03:46:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10602,3 +10602,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/matugen to 0.11.2 [pin 2023-12-03]
 	Updated net/ncgopher to 0.6.0 [pin 2023-12-03]
 	Updated audio/spotify-player to 0.16.0 [pin 2023-12-03]
+	Updated mail/thunderbird to 115.5.1 [ryoon 2023-12-04]
