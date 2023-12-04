@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/11/30 10:12:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2023/12/04 10:12:14 jperkin Exp $
 
 DISTNAME=	matplotlib-3.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,6 +33,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 # used by packages that only have a build dependency on it.  Therefore we need
 # to ensure that we set it to "no" first to get accurate dependencies.
 PYTHON_FOR_BUILD_ONLY=	no
+.include "../../lang/python/pyversion.mk"
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
