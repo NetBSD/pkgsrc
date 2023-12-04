@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/10 23:55:45 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/04 09:51:55 jperkin Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake perl
 WRKSRC=		${WRKDIR}/${DISTNAME}/utils/xindy
 INSTALL_DIRS=	xindy-src/src xindy-src/tex2xindy
 
+GNU_CONFIGURE_ICONV=	no
+
 CONFIGURE_ARGS+=	--disable-xindy-docs
 CONFIGURE_ARGS+=	--disable-xindy-rules
 CONFIGURE_ARGS+=	--with-clisp-runtime=default
@@ -32,9 +34,15 @@ post-install:
 	# man page conflicts with tex-xindy-doc
 	${RM} -f -r ${DESTDIR}${PREFIX}/${PKGMANDIR}
 
+# clisp does not honour buildlink, and will happily link against any
+# libraries found in PREFIX.  This means we need to duplicate any libraries
+# that clisp uses here so that this package does not have runtime issues.
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_DEPMETHOD.clisp=	build
+.include "../../lang/clisp/buildlink3.mk"
+
 .include "../../devel/libffcall/buildlink3.mk"
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_DEPMETHOD.clisp=	build
-.include "../../lang/clisp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
