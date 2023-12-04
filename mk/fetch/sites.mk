@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.184 2023/12/04 12:49:50 zafer Exp $
+# $NetBSD: sites.mk,v 1.185 2023/12/04 13:45:43 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -13,7 +13,6 @@ MASTER_SITE_XCONTRIB+=  \
 MASTER_SITE_GNU+=       \
 	https://mirrors.dotsrc.org/gnu/ \
 	https://ftp.nluug.nl/pub/gnu/ \
-	ftp://ftp.lip6.fr/pub/gnu/ \
 	http://mirrors.kernel.org/gnu/ \
 	http://ftp.funet.fi/pub/gnu/prep/ \
 	https://ftp.gnu.org/pub/gnu/
@@ -32,11 +31,8 @@ MASTER_SITE_OSDN+=	\
 	http://iij.dl.osdn.jp/ \
 	http://tcpdiag.dl.osdn.jp/ \
 	http://c3sl.dl.osdn.jp/ \
-	http://cznic.dl.osdn.jp/ \
 	http://onet.dl.osdn.jp/ \
 	http://nchc.dl.osdn.jp/ \
-	http://rwthaachen.dl.osdn.jp/ \
-	http://giganet.dl.osdn.jp/ \
 	http://osdn.dl.osdn.jp/
 
 MASTER_SITE_PERL_CPAN+= \
@@ -52,16 +48,10 @@ MASTER_SITE_R_CRAN+=    \
 	http://cran.at.r-project.org/src/ \
 	ftp://cran.at.r-project.org/pub/R/src/ \
 	https://cran.ch.r-project.org/src/ \
-	http://cran.ch.r-project.org/src/ \
 	https://cran.uk.r-project.org/src/ \
-	http://cran.uk.r-project.org/src/ \
-	https://cran.us.r-project.org/src/ \
-	http://cran.us.r-project.org/src/ \
 	http://lib.stat.cmu.edu/R/CRAN/src/ \
 	https://stat.ethz.ch/CRAN/src/ \
-	http://stat.ethz.ch/CRAN/src/ \
-	https://www.stats.bris.ac.uk/R/src/ \
-	http://www.stats.bris.ac.uk/R/src/
+	https://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
 	http://ftp.funet.fi/pub/TeX/CTAN/ \
@@ -117,22 +107,17 @@ MASTER_SITE_XEMACS+=    \
 MASTER_SITE_APACHE+=    \
 	https://downloads.apache.org/ \
 	https://archive.apache.org/dist/ \
-	http://www.eu.apache.org/dist/ \
 	http://apache.oregonstate.edu/ \
-	http://apache.mirrors.tds.net/ \
 	http://ftp.unicamp.br/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
-	http://www.meisei-u.ac.jp/mirror/apache/dist/ \
 	http://ftp.twaren.net/Unix/Web/apache/ \
 	http://ftp.cuhk.edu.hk/pub/packages/apache.org/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.mirrors.tds.net/pub/apache.org/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
 	ftp://ftp.meisei-u.ac.jp/pub/www/apache/dist/ \
-	ftp://ftp.twaren.net/Unix/Web/apache/
 
 MASTER_SITE_MYSQL+=	\
-	http://mysql.mirror.kangaroot.net/Downloads/ \
 	http://mysql.linux.cz/Downloads/ \
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/ \
 	http://mirrors.dotsrc.org/mysql/Downloads/ \
@@ -145,9 +130,7 @@ MASTER_SITE_MYSQL+=	\
 	http://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	http://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
-	ftp://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
-	http://mysql.inspire.net.nz/Downloads/ \
-	ftp://mysql.inspire.net.nz/mysql/Downloads/
+	ftp://ftp.iij.ad.jp/pub/db/mysql/Downloads/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
@@ -179,14 +162,7 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.us.debian.org/debian/
 
 MASTER_SITE_OPENOFFICE+=	\
-	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
-	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/OpenOffice/ \
-	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
-	http://ftp.ntua.gr/pub/OpenOffice/ \
-	http://na.mirror.garr.it/mirrors/openoffice/ \
-	http://vlaai.snt.utwente.nl/pub/software/openoffice/ \
-	ftp://ftp.dnsbalance.ring.gr.jp/pub/misc/openoffice/ \
-	ftp://ftp.kr.freebsd.org/pub/openoffice/
+	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/
 
 MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
@@ -195,23 +171,16 @@ MASTER_SITE_CYGWIN+= \
 	http://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
-	http://ifarchive.flavorplex.com/if-archive/ \
-	http://ifarchive.heanet.ie/if-archive/
+	http://ifarchive.flavorplex.com/if-archive/
 
 MASTER_SITE_PGSQL+=	\
 	http://ftp.postgresql.org/pub/
 
 MASTER_SITE_GENTOO+= \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
-	http://ftp.heanet.ie/pub/gentoo/ \
 	http://mirror.bytemark.co.uk/gentoo/ \
-	http://gentoo.mirror.dkm.cz/pub/gentoo/ \
-	http://ftp.ds.karen.hj.se/gentoo/ \
 	ftp://ftp.free.fr/mirrors/ftp.gentoo.org/ \
-	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/ \
-	http://gentoo-euetib.upc.es/mirror/gentoo/ \
 	http://ftp.ntua.gr/pub/linux/gentoo/ \
-	http://www.las.ic.unicamp.br/pub/gentoo/ \
 	http://mirror.yandex.ru/gentoo-distfiles/ \
 	http://ftp.swin.edu.au/gentoo/ \
 	http://ftp.iij.ad.jp/pub/linux/gentoo/ \
@@ -253,6 +222,5 @@ MASTER_SITE_CRATESIO+=	\
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	http://cdn.NetBSD.org/pub/pkgsrc/distfiles/ \
-	http://ftp6.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp.fr.NetBSD.org/pub/pkgsrc/distfiles/ \
 	http://ftp.NetBSD.org/pub/pkgsrc/distfiles/
