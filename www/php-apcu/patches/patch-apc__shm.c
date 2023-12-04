@@ -1,10 +1,10 @@
-$NetBSD: patch-apc__shm.c,v 1.1 2023/12/04 01:34:54 gdt Exp $
+$NetBSD: patch-apc__shm.c,v 1.2 2023/12/04 01:42:14 gdt Exp $
 
 The code assumes key_t is printable with %d (int), but POSIX requires
 only that key_t is an arithmetic type.  Dismiss floating point as
 unreasonable and cast to intmax_t.
 
-Not yet reported upstream.
+https://github.com/krakjoe/apcu/issues/500
 
 --- apc_shm.c.orig	2023-12-04 01:27:07.199895899 +0000
 +++ apc_shm.c
