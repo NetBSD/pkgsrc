@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2023/11/01 20:14:51 adam Exp $
+# $NetBSD: Makefile,v 1.123 2023/12/04 17:25:15 adam Exp $
 
-DISTNAME=	Django-4.2.7
+DISTNAME=	Django-4.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.3.1:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
