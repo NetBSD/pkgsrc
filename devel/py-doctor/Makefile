@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/12/04 06:07:50 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/12/04 06:08:54 adam Exp $
 
 DISTNAME=	pydoctor-23.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/twisted/pydoctor
 COMMENT=	Python API document generator
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
