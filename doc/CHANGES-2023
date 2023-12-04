@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7395 2023/12/04 18:57:05 prlw1 Exp $
+$NetBSD: CHANGES-2023,v 1.7396 2023/12/04 19:26:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10615,3 +10615,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.8.4 [adam 2023-12-04]
 	Updated net/get_iplayer to 3.34 [prlw1 2023-12-04]
 	Updated net/get_iplayer to 3.34 [prlw1 2023-12-04]
+	Updated x11/py-qt6 to 6.6.1 [adam 2023-12-04]
+	Updated misc/py-platformdirs to 4.1.0 [adam 2023-12-04]
