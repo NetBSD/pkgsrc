@@ -1,0 +1,9 @@
+This little number can be used to introduce smtp banner delays for
+qmail. When run between tcpserver and rblsmtpd, it'll do a reverse
+lookup of the connecting IP, compare that PTR to a regex, and then apply
+long banner delays if there was no PTR or if the PTR matches the
+"dialup" regex. The program depends on the fact that tcpserver will set
+TCPREMOTEIP, and will take advantage of TCPREMOTEHOST if it's set. If
+the client tries to pipeline (ram SMTP commands down our throat before
+we show them an SMTP banner), RBLSMTPD is set, notifying rblsmtpd to
+refuse their mail.

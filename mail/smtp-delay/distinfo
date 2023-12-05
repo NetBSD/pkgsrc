@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/05 17:36:16 schmonz Exp $
+
+BLAKE2s (smtp-delay-0.20/smtp-delay.c) = 7e72d14cc3715e18caece85b2c47451e892a7547932ba8360f7d6e2fe991eaee
+SHA512 (smtp-delay-0.20/smtp-delay.c) = f8b9b0043f9eba7d68f693349a4c2f9c9bda9607cef1d6f24b7d0230410b0f499ad16922c9e81421271c234a6db3d5a4ff263a87c83b9e4a984e92f49aa5185d
+Size (smtp-delay-0.20/smtp-delay.c) = 14569 bytes
