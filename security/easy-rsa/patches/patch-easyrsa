@@ -1,10 +1,10 @@
-$NetBSD: patch-easyrsa,v 1.4 2023/06/07 11:10:38 leot Exp $
+$NetBSD: patch-easyrsa,v 1.5 2023/12/05 18:29:16 adam Exp $
 
-- Set a sane default for config file. Needs to be SUBSTed.
+Set a sane default for config file. Needs to be SUBSTed.
 
---- easyrsa.orig	2023-05-24 12:02:30.000000000 +0000
+--- easyrsa.orig	2023-10-13 22:27:51.000000000 +0000
 +++ easyrsa
-@@ -1308,7 +1308,7 @@ install_data_to_pki() {
+@@ -1443,7 +1443,7 @@ install_data_to_pki() {
  	# '/usr/local/share/easy-rsa' - Default user installed
  	# '/usr/share/easy-rsa' - Default system installed
  	# Room for more..
@@ -13,7 +13,7 @@ $NetBSD: patch-easyrsa,v 1.4 2023/06/07 11:10:38 leot Exp $
  
  	# Find and optionally copy data-files, in specific order
  	for area in \
-@@ -1318,7 +1318,7 @@ install_data_to_pki() {
+@@ -1453,7 +1453,7 @@ install_data_to_pki() {
  		"${0%/*}" \
  		'/usr/local/share/easy-rsa' \
  		'/usr/share/easy-rsa' \
@@ -22,12 +22,3 @@ $NetBSD: patch-easyrsa,v 1.4 2023/06/07 11:10:38 leot Exp $
  		# EOL
  	do
  		if [ "$context" = x509-types-only ]; then
-@@ -5143,6 +5143,8 @@ The 'vars' file was not found:
- 		# Some other place vars, out of scope.
- 		if [ "$EASYRSA" ]; then
- 			easy_vars="${EASYRSA}/vars"
-+		elif [ -f "@SYSCONFDIR@/vars" ]; then
-+			easy_vars="@SYSCONFDIR@/vars"
- 		else
- 			unset -v easy_vars
- 		fi
