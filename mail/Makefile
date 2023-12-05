@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2023/11/30 15:31:31 taca Exp $
+# $NetBSD: Makefile,v 1.628 2023/12/05 17:36:18 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -398,6 +398,7 @@ SUBDIR+=	sid-milter
 SUBDIR+=	sieve-connect
 SUBDIR+=	sigrot
 SUBDIR+=	sma
+SUBDIR+=	smtp-delay
 SUBDIR+=	smtp-vilter
 SUBDIR+=	smtpd-starttls-proxy
 SUBDIR+=	smtpfeed
