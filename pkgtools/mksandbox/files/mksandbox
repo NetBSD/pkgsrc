@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.18 2021/01/22 11:59:52 jperkin Exp $
+# $NetBSD: mksandbox,v 1.19 2023/12/05 20:45:27 agc Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -26,8 +26,9 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]
-#		   [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]
+# Usage: mksandbox [--mounthost=host] [--pkgsrc=dir]
+#		   [--rodirs=dir1,...] [--rwdirs=dir1,...]
+#		   [--src=srcdir] [--xsrc=xsrcdir]
 #		   [--without-src] [--without-pkgsrc] [--without-xsrc]
 #		   [--without-x] [--verbose] sandbox-dir
 #
@@ -418,10 +419,15 @@ if [ -n "$rwdirs" ]; then
 	done
 fi
 
+date > $sandbox/.sandbox_mounted
+
 cat >> $sandbox_script <<EOS
 "
 case x\$1 in
 xmount)
+	if [ -s \$sandbox/.sandbox_mounted ]; then
+		echo \$sandbox already mounted && exit 1
+	fi
 	set dummy \$fses
 	shift
 	while [ \$# -ge 3 ]; do
@@ -446,8 +452,12 @@ xmount)
 		$mountprog -F fd fd \$sandbox/dev/fd
 		;;
 	esac
+	date > \$sandbox/.sandbox_mounted
 	;;
 xumount)
+	if [ ! -s \$sandbox/.sandbox_mounted ]; then
+		echo \$sandbox not mounted && exit 1
+	fi
 	set dummy \`r3 \$fses\`
 	shift
 	while [ \$# -ge 3 ]; do
@@ -469,8 +479,12 @@ xumount)
 		umount \$sandbox/dev
 		;;
 	esac
+	rm -f \$sandbox/.sandbox_mounted
 	;;
 xchroot)
+	if [ ! -s \$sandbox/.sandbox_mounted ]; then
+		echo \$sandbox not mounted && exit 1
+	fi
 	case x\$2 in
 	x)	rootshell=/bin/ksh ;;
 	*)	rootshell="\$2" ;;
@@ -481,6 +495,13 @@ xchroot)
 	chmod +x \$script
 	ENV=/etc/shrc chroot \$sandbox /tmp/\`basename \$script\`
 	rm -f \$script
+	;;
+xismounted)
+	if [ -s \$sandbox/.sandbox_mounted ]; then
+		echo \$sandbox is mounted && exit 0
+	else
+		echo \$sandbox is not mounted && exit 1
+	fi
 	;;
 *)
 	if [ \$# -eq 0 ]; then
