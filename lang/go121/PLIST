@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/10 15:39:34 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/12/05 19:28:27 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -2318,6 +2318,7 @@ go121/src/cmd/go/testdata/script/mod_domain_root.txt
 go121/src/cmd/go/testdata/script/mod_dot.txt
 go121/src/cmd/go/testdata/script/mod_download.txt
 go121/src/cmd/go/testdata/script/mod_download_concurrent_read.txt
+go121/src/cmd/go/testdata/script/mod_download_exec_toolchain.txt
 go121/src/cmd/go/testdata/script/mod_download_git_bareRepository.txt
 go121/src/cmd/go/testdata/script/mod_download_git_decorate_full.txt
 go121/src/cmd/go/testdata/script/mod_download_hash.txt
@@ -2445,6 +2446,7 @@ go121/src/cmd/go/testdata/script/mod_init_glide.txt
 go121/src/cmd/go/testdata/script/mod_init_invalid_major.txt
 go121/src/cmd/go/testdata/script/mod_init_path.txt
 go121/src/cmd/go/testdata/script/mod_init_tidy.txt
+go121/src/cmd/go/testdata/script/mod_insecure_issue63845.txt
 go121/src/cmd/go/testdata/script/mod_install_hint.txt
 go121/src/cmd/go/testdata/script/mod_install_pkg_version.txt
 go121/src/cmd/go/testdata/script/mod_install_versioned.txt
@@ -11589,6 +11591,8 @@ go121/test/fixedbugs/issue6295.dir/p1.go
 go121/test/fixedbugs/issue6295.dir/p2.go
 go121/test/fixedbugs/issue6295.go
 go121/test/fixedbugs/issue6298.go
+go121/test/fixedbugs/issue63657.go
+go121/test/fixedbugs/issue63955.go
 go121/test/fixedbugs/issue6399.go
 go121/test/fixedbugs/issue6402.go
 go121/test/fixedbugs/issue6403.go
