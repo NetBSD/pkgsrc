@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2022/11/09 11:39:43 he Exp $
+$NetBSD: distinfo,v 1.11 2023/12/05 12:20:40 he Exp $
 
-BLAKE2s (opendnssec-2.1.12.tar.gz) = 3adb1fe7d7a0326ed367f536b78d1d3e9333343cd68937881c502fa2c4d8819a
-SHA512 (opendnssec-2.1.12.tar.gz) = 6b3a7458c8a1e73d5d35320c48f81b37cb8ed7939ea2bd05335cd1b710bcf99c0b461e44dd66e14068ee77fe43af6fb91e7466bc4e3ba135a8fb37bc03919bb7
-Size (opendnssec-2.1.12.tar.gz) = 1157828 bytes
 SHA1 (patch-conf_Makefile.in) = b0a782916a9603138c09b484cc1534b938bf8330
+SHA1 (patch-enforcer_src_keystate_keystate__ds.c) = 0f000dc6a37cb05776a1361726082f4db35e3a45
+SHA1 (patch-signer_src_hsm.c) = da5d35b22e189c7eef0b6344e7137662fe439c3e
+SHA1 (patch-signer_src_wire_query.c) = c026ae230ad6bcb73800700823ca33be00d26fcb
