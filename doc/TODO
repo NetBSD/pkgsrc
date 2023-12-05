@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23707 2023/11/27 15:40:47 adam Exp $
+$NetBSD: TODO,v 1.23708 2023/12/05 13:01:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -420,7 +420,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o afbinit-1.0.1
 	o afl++-4.00c
 	o aide-0.16
-	o akonadi-16.08.1
 	o album-4.17
 	o alevt-1.6.2
 	o alsa-plugins-1.2.7.1
@@ -494,8 +493,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
+	o blas-3.12.0
 	o blender-4.0
-	o blender-lts-3.3
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o boolean-7.1
@@ -622,6 +621,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-mapi-0.32.2
 	o ex-20050325
 	o exmh-2.8.0
+	o faad2-2.11.1
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
@@ -669,6 +669,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gdb7-7.12
 	o geneweb-7.0.0
 	o gens-2.15.5
+	o gettext-lib-0.22.4
 	o gfract-0.33
 	o ghc-9.8.1
 	o gimp-docs-de-2.10.0
@@ -831,22 +832,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kcron-21.04.0
 	o kdenetwork-filesharing-20.12.3
-	o kdenlive-23.04
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
-	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
+	o khard-0.19.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
 	o kitty-0.30.1 [wip]
 	o knot-resolver-1.1.1
 	o kodi-16.1
-	o konversation-1.7.7
 	o kqtquickcharts4-20.12.3
 	o krita-5.1.3
 	o kronolith-4.2.14
@@ -872,12 +871,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.17.5
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
+	o liblangtag-0.6.5
 	o liblzo-2.10
 	o libmcs-0.7.2
 	o libmilter-8.16.1
@@ -895,6 +896,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libusb-compat-0.1.8
 	o libvirt-9.9.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -903,7 +905,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.8 [wip, https://github.com/litehtml/litehtml/issues/266]
-	o llvm-17.0.5 [wip]
+	o llvm-17.0.6 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -938,11 +940,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mcollective-2.3.2
 	o mcsim-6.2.0
 	o md-whois-5.5.9
-	o mdd-20201207
 	o mecab-ipadic-2.7.0.20070801
 	o memached-1.5.6
 	o memtestplus-6.20
 	o merkaator-0.18.3
+	o meson-1.3.0
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -961,8 +963,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mozc-server-2.29.5268.102
+	o mpv-0.37.0
 	o mserv-devel-0.41
 	o mtail-1.2.0
+	o mujs-1.3.4
 	o multitail-6.4.2
 	o munge-0.5.14
 	o muse-0.9.2
@@ -1055,7 +1059,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Net-INET6Glue-0.604
 	o p5-Net-Jabber-2.1.7
 	o p5-Parse-PMFile-0.43
-	o p5-Pod-POM-Web-1.24
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
 	o p5-Rose-DB-0.819
@@ -1074,7 +1077,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-passwdqc-2.0.2
 	o papirus-folders-1.8.0
 	o paprefs-1.1
-	o parley-20.12.3
 	o parrot-8.1.0
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
 	o pdf-redact-tools-0.1.2
@@ -1161,15 +1163,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.45.1
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-gi-docgen-2023.3
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.6
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1245,13 +1250,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sablecc-3.7
 	o sarg-2.4.0
 	o sasm-3.12.1
-	o sbcl-2.3.5
 	o scamper-20210324
 	o scew-1.1.7
 	o scidavis-2.9.0
 	o scilab-5.5.2
 	o scm-5f3 [dholland has a partial update]
 	o scm-blackbox-2.0.0
+	o scons4-4.6.0
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
@@ -1383,6 +1388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o unicode-screensaver-0.5.2
 	o unifont-15.0.05
 	o units-2.21
+	o unrar-7.0.4
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
 	o urlgrabber-3.10.2
@@ -1490,7 +1496,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zabbix-proxy-6.4.1
 	o zabbix-server-6.4.1
 	o zabbix-agent-6.4.1
-	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenicb-1.31 [needs merge with lots of local changes]
 	o zeroconf-ioslave-20.12.3
 	o zile-2.6.1
 	o zlib-1.3
