@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7400 2023/12/05 17:36:22 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7401 2023/12/05 17:59:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10621,3 +10621,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/opendnssec2 to 2.1.12nb7 [he 2023-12-05]
 	Added chat/twitch-tui version 2.6.1 [schmonz 2023-12-05]
 	Added mail/smtp-delay version 0.20 [schmonz 2023-12-05]
+	Updated devel/py-freezegun to 1.3.1 [adam 2023-12-05]
+	Updated devel/py-test-asyncio to 0.23.2 [adam 2023-12-05]
