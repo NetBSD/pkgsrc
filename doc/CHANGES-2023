@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7399 2023/12/05 16:04:20 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7400 2023/12/05 17:36:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10620,3 +10620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.30.0 [pin 2023-12-04]
 	Updated security/opendnssec2 to 2.1.12nb7 [he 2023-12-05]
 	Added chat/twitch-tui version 2.6.1 [schmonz 2023-12-05]
+	Added mail/smtp-delay version 0.20 [schmonz 2023-12-05]
