@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/10 15:39:34 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/12/05 19:17:57 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -2271,6 +2271,7 @@ go120/src/cmd/go/testdata/script/mod_init_glide.txt
 go120/src/cmd/go/testdata/script/mod_init_invalid_major.txt
 go120/src/cmd/go/testdata/script/mod_init_path.txt
 go120/src/cmd/go/testdata/script/mod_init_tidy.txt
+go120/src/cmd/go/testdata/script/mod_insecure_issue63845.txt
 go120/src/cmd/go/testdata/script/mod_install_hint.txt
 go120/src/cmd/go/testdata/script/mod_install_pkg_version.txt
 go120/src/cmd/go/testdata/script/mod_install_versioned.txt
@@ -11053,6 +11054,7 @@ go120/test/fixedbugs/issue6295.dir/p1.go
 go120/test/fixedbugs/issue6295.dir/p2.go
 go120/test/fixedbugs/issue6295.go
 go120/test/fixedbugs/issue6298.go
+go120/test/fixedbugs/issue63955.go
 go120/test/fixedbugs/issue6399.go
 go120/test/fixedbugs/issue6402.go
 go120/test/fixedbugs/issue6403.go
