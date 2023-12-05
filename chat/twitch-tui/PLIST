@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/05 16:04:13 schmonz Exp $
+bin/twt

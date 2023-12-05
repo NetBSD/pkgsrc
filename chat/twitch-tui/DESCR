@@ -1,0 +1,7 @@
+Twitch chat in the terminal. Feature list:
+
+- Read/send/search messages
+- Switch channels
+- Create and toggle filters
+- Command, channel, and mention suggestions
+- Customize functionality and looks to your liking using a config file
