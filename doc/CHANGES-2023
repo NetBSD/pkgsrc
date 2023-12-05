@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7406 2023/12/05 19:28:46 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7407 2023/12/05 19:36:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10631,3 +10631,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/easy-rsa to 3.1.7 [adam 2023-12-05]
 	Updated lang/go120 to 1.20.12 [bsiegert 2023-12-05]
 	Updated lang/go121 to 1.21.5 [bsiegert 2023-12-05]
+	Updated lang/perl5 to 5.38.2 [wiz 2023-12-05]
