@@ -1,13 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mpd.sh,v 1.2 2004/11/11 03:15:41 simonb Exp $
+# $NetBSD: mpd.sh,v 1.3 2023/12/05 13:05:23 triaxx Exp $
 #
 
 # PROVIDE: mpd
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="mpd"
 rcvar=$name
