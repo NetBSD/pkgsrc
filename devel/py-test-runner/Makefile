@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/10/28 19:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/05 18:21:59 adam Exp $
 
-DISTNAME=	pytest-runner-6.0.0
+DISTNAME=	pytest-runner-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-runner/}
 
@@ -14,7 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 # unpackaged
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-black>=0.3.7:../../devel/py-test-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
@@ -30,9 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-types-setuptools-[0-9]*:../../devel/py-types-setup
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
