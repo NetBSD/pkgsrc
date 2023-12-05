@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2022/10/13 11:08:43 wiz Exp $
+$NetBSD: distinfo,v 1.40 2023/12/05 20:15:23 markd Exp $
 
-BLAKE2s (shared-mime-info-2.2.tar.bz2) = b9c873ddc28ef0760605e5a2a0e088660ed23841df6fa41e84e3d96c701698d4
-SHA512 (shared-mime-info-2.2.tar.bz2) = e32e78435b6bbcdd5abcd1b7708a715d14310f920742e762ce1d4a4f27c1215dbd6493f816d3bf8cf32cf8635a4cee031cf7ea7bad56c4034302273f25da1065
-Size (shared-mime-info-2.2.tar.bz2) = 6428871 bytes
-SHA1 (patch-src_update-mime-database.c) = c4477e3f1e1a71931be67df2556cdcf9357acb95
+BLAKE2s (shared-mime-info-2.4.tar.bz2) = 6032696550d949c4b7d62713c82e2d85c9b19cc1c3f8f294bc22509d655e92c0
+SHA512 (shared-mime-info-2.4.tar.bz2) = 712f414e80919bf2a0f5083ced44c54a350948a526850466a6e9f35365dcfd97fad8bcdbb29945de2715a8f9b70a108e931c8500209a4d6e3dddf97af02771cb
+Size (shared-mime-info-2.4.tar.bz2) = 7096347 bytes
+SHA1 (patch-src_update-mime-database.cpp) = 4e4c0370c78cacdd5392099bedd30b4bc8d7e8f0
