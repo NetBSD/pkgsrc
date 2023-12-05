@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2023/11/28 01:08:10 nonaka Exp $
+# $NetBSD: Makefile,v 1.70 2023/12/05 19:46:10 bsiegert Exp $
 
 # Please also update GH_REL_DATE when upgrading to a new release.
 
 DISTNAME=	gh-2.39.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cli/}
 GITHUB_PROJECT=	cli
