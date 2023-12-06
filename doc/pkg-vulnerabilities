@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.72 2023/12/05 13:47:19 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.73 2023/12/06 08:07:49 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25784,3 +25784,11 @@ vim<9.0.2121	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-48706
 samba4>=4.0<4.19.3	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
 py{27,38,39,310,311,312}-cryptography>=3.1<41.0.6	NULL-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-49083
 perl>=5.30.0<5.38.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-47038
+webkit-gtk<2.42.3	disclose-sensitive-information	https://nvd.nist.gov/vuln/detail/CVE-2023-42916
+webkit-gtk<2.42.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42917
+go120<1.20.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39326
+go121<1.21.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39326
+go120<1.20.12	insecure-fallback	https://nvd.nist.gov/vuln/detail/CVE-2023-45285
+go121<1.21.5	insecure-fallback	https://nvd.nist.gov/vuln/detail/CVE-2023-45285
+curl>=7.46.0<8.5.0	information-exposure-through-sent-data	https://nvd.nist.gov/vuln/detail/CVE-2023-46218
+curl>=7.84.0<8.5.0	missing-encryption-of-sensitive-data	https://nvd.nist.gov/vuln/detail/CVE-2023-46219
