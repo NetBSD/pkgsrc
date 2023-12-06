@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7410 2023/12/06 02:15:35 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7411 2023/12/06 07:56:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10635,3 +10635,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/shared-mime-info to 2.4 [markd 2023-12-05]
 	Updated shells/oksh to 7.4 [gdt 2023-12-06]
 	Updated cad/klayout to 0.28.13 [mef 2023-12-06]
+	Updated x11/libdrm to 2.4.118nb1 [wiz 2023-12-06]
