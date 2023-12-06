@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7413 2023/12/06 09:29:11 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7414 2023/12/06 10:15:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10638,3 +10638,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libdrm to 2.4.118nb1 [wiz 2023-12-06]
 	Updated shells/oh-my-posh to 19.2.0 [pin 2023-12-06]
 	Updated graphics/oculante to 0.8.2 [pin 2023-12-06]
+	Added games/chess-tui version 1.0.1 [pin 2023-12-06]
