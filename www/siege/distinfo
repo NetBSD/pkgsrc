@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.8 2023/04/30 18:17:39 nils Exp $
+$NetBSD: distinfo,v 1.9 2023/12/06 15:56:56 abs Exp $
 
 BLAKE2s (siege-4.1.6.tar.gz) = 6e392874863ff175d99ab987358fa210e3b317e43ef708b63f78bcd7d7e249cd
 SHA512 (siege-4.1.6.tar.gz) = cc674c9dc33aac35988708cd73b5061343cb1939e8a10b4dc50ceab42e65647b58557b6f3b48a03f5c992109bcac233425bf363e1f899135cfd9333d2517cfb2
 Size (siege-4.1.6.tar.gz) = 527103 bytes
-SHA1 (patch-src_init.c) = 88ee2383af55c71a647ef778b728d967a6199fb2
+SHA1 (patch-configure) = 390d5e74c40a71e90b1f19b76c8f6f2b68de54d5
+SHA1 (patch-configure.ac) = 508c1b9cf6bdfde3ba6c6636b9ebc4a4723eea69
+SHA1 (patch-src_init.c) = ce88e31253e09fde3f7bcb52c777eb93f7d3b441
+SHA1 (patch-src_sock.c) = dd2452398e5ccfde9eddce116d397c484851313d

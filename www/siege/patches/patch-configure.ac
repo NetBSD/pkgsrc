@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/12/06 15:56:56 abs Exp $
+
+Add check for getaddrinfo(), for non __GLIBC__ systems
+
+Submitted upstream as https://github.com/JoeDog/siege/pull/232
+
+--- configure.ac.orig	2023-12-02 16:23:14.538447643 +0000
++++ configure.ac
+@@ -332,6 +332,7 @@ AC_CHECK_FUNCS(snprintf)
+ AC_CHECK_FUNCS(strdup)
+ AC_CHECK_FUNCS(rand_r)
+ AC_CHECK_FUNCS(localtime_r)
++AC_CHECK_FUNCS(getaddrinfo)
+ AC_CHECK_FUNCS(gethostbyname_r)
+ AC_CHECK_FUNCS(gmtime_r)
+ AC_CHECK_FUNCS(getipnodebyname)
