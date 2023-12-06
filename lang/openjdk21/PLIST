@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/22 14:06:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/12/06 12:51:24 tnn Exp $
 bin/openjdk21-jar
 bin/openjdk21-jarsigner
 bin/openjdk21-java
@@ -260,6 +260,7 @@ java/openjdk21/legal/java.base/cldr.md
 java/openjdk21/legal/java.base/icu.md
 java/openjdk21/legal/java.base/public_suffix.md
 java/openjdk21/legal/java.base/unicode.md
+${PLIST.jdk_bundled_zlib}java/openjdk21/legal/java.base/zlib.md
 java/openjdk21/legal/java.compiler/ADDITIONAL_LICENSE_INFO
 java/openjdk21/legal/java.compiler/ASSEMBLY_EXCEPTION
 java/openjdk21/legal/java.compiler/LICENSE
