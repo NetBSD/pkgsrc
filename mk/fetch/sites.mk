@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.185 2023/12/04 13:45:43 zafer Exp $
+# $NetBSD: sites.mk,v 1.186 2023/12/06 10:34:20 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -111,7 +111,6 @@ MASTER_SITE_APACHE+=    \
 	http://ftp.unicamp.br/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
 	http://ftp.twaren.net/Unix/Web/apache/ \
-	http://ftp.cuhk.edu.hk/pub/packages/apache.org/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.mirrors.tds.net/pub/apache.org/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
