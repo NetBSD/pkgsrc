@@ -1,4 +1,4 @@
-# $NetBSD: find-pkgconfig-files.mk,v 1.3 2022/06/13 06:54:10 rillig Exp $
+# $NetBSD: find-pkgconfig-files.mk,v 1.4 2023/12/06 22:27:22 tnn Exp $
 #
 # Copyright (c) 2020 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,6 +57,7 @@
 # Keywords: pkg-config pc
 
 BUILTIN_PKGCONFIG_DIRS?=	/usr/lib/pkgconfig				\
+				/usr/lib64/pkgconfig				\
 				/usr/share/pkgconfig				\
 			       	/usr/libdata/pkgconfig				\
 				/usr/lib/x86_64-linux-gnu/pkgconfig		\
