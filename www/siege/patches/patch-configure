@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2023/12/06 15:56:56 abs Exp $
+
+Add check for getaddrinfo(), for non __GLIBC__ systems
+
+Submitted upstream as https://github.com/JoeDog/siege/pull/232
+
+--- configure.orig	2023-01-05 15:53:01.000000000 +0000
++++ configure
+@@ -21148,6 +21148,17 @@ _ACEOF
+ fi
+ done
+ 
++for ac_func in getaddrinfo
++do :
++  ac_fn_c_check_func "$LINENO" "getaddrinfo" "ac_cv_func_getaddrinfo"
++if test "x$ac_cv_func_getaddrinfo" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_GETADDRINFO 1
++_ACEOF
++
++fi
++done
++
+ for ac_func in gethostbyname_r
+ do :
+   ac_fn_c_check_func "$LINENO" "gethostbyname_r" "ac_cv_func_gethostbyname_r"
