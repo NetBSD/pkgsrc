@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2023/11/12 13:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/12/06 02:15:22 mef Exp $
 
-DISTNAME=	klayout-0.28.12
-PKGREVISION=	3
+DISTNAME=	klayout-0.28.13
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -62,6 +61,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/klayout \
 		${INSTALL_BINDIR}
 
+.include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
