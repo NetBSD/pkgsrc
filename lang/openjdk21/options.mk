@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2023/11/26 19:00:51 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2023/12/06 12:51:24 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk21
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
 PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
-PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp
+PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp jdk-bundled-zlib
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
 
 .if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
@@ -11,6 +11,10 @@ PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
 .else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
+.endif
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+PKG_SUGGESTED_OPTIONS+=		jdk-bundled-zlib
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -108,3 +112,12 @@ BUILD_VARIANT=		server
 PLIST.hotspot=		yes
 .endif
 CONFIGURE_ARGS+=	--with-jvm-variants=${BUILD_VARIANT}
+
+PLIST_VARS+=		jdk_bundled_zlib
+.if !empty(PKG_OPTIONS:Mjdk-bundled-zlib)
+PLIST.jdk_bundled_zlib=	yes
+CONFIGURE_ARGS+=	--with-zlib=bundled
+.else
+CONFIGURE_ARGS+=	--with-zlib=system
+.include "../../devel/zlib/buildlink3.mk"
+.endif
