@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2023/11/20 17:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/12/06 07:56:42 wiz Exp $
 
 DISTNAME=		libdrm-2.4.118
+PKGREVISION=		1
 CATEGORIES=		x11 graphics
 MASTER_SITES=		https://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.xz
@@ -9,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://dri.freedesktop.org/wiki/DRM
 COMMENT=		Userspace interface to kernel DRM services
 LICENSE=		mit
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 # Platforms with kernel support for DRM
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
@@ -76,8 +79,14 @@ MESON_ARGS+=	-Dtegra=disabled
 MESON_ARGS+=	-Dvc4=disabled
 .endif
 
-MESON_ARGS+=	-Dman-pages=disabled
+MESON_ARGS+=	-Dman-pages=enabled
 MESON_ARGS+=	-Dvalgrind=disabled
+
+SUBST_CLASSES+=		doc
+SUBST_MESSAGE.doc=	Fixing rst2man name due to python versioning.
+SUBST_STAGE.doc=	pre-configure
+SUBST_FILES.doc=	meson.build
+SUBST_SED.doc=		-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
 
 LDFLAGS.NetBSD+=	-lpci
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__	# posix_memalign, ...
@@ -85,4 +94,5 @@ CPPFLAGS.SunOS+=	-D__EXTENSIONS__	# posix_memalign, ...
 X11_LIB_NAME?=		libdrm
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
