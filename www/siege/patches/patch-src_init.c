@@ -1,6 +1,8 @@
-$NetBSD: patch-src_init.c,v 1.1 2019/08/18 20:32:59 nils Exp $
+$NetBSD: patch-src_init.c,v 1.2 2023/12/06 15:56:56 abs Exp $
 
 Signals are defined in signal.h in *BSD
+
+Submitted upstream as https://github.com/JoeDog/siege/pull/230
 
 --- src/init.c.orig	2017-09-11 17:36:08.000000000 +0000
 +++ src/init.c
