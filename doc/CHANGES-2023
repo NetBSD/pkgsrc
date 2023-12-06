@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7409 2023/12/06 00:09:44 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7410 2023/12/06 02:15:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10634,3 +10634,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/perl5 to 5.38.2 [wiz 2023-12-05]
 	Updated databases/shared-mime-info to 2.4 [markd 2023-12-05]
 	Updated shells/oksh to 7.4 [gdt 2023-12-06]
+	Updated cad/klayout to 0.28.13 [mef 2023-12-06]
