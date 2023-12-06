@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/08/24 15:46:18 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2023/12/06 00:09:38 gdt Exp $
 
-BLAKE2s (oksh-7.3.tar.gz) = 8d0ddb83953556ae99e7730ffa9cc7d62eca6c7043c4976ddb5e55c2ab49d5f6
-SHA512 (oksh-7.3.tar.gz) = c7ff73ac9024d73cef387ceb9df76dda707ddd42a2cccb54f2c12bd688b79ac1e963a302f86c5180bffe642caae94a755b951f4b5da31fa479de1065916e848b
-Size (oksh-7.3.tar.gz) = 308690 bytes
+BLAKE2s (oksh-7.4.tar.gz) = bd836a43e363c1e219383a15e09f85a03f551eb37c8eb7ac9be59ce9d995be82
+SHA512 (oksh-7.4.tar.gz) = c6b97242abf1a2c68570dfbc3a47badf7b622788a35b9971929a235e195fbdf9f6cfc8019b975394f2e79b35b8a89a762619eddb6966052a64551289aee240f2
+Size (oksh-7.4.tar.gz) = 308650 bytes
