@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8.2.1 2023/10/22 18:44:03 spz Exp $
+@comment $NetBSD: PLIST,v 1.8.2.2 2023/12/06 12:08:36 spz Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -6972,6 +6972,7 @@ go120/src/path/filepath/export_windows_test.go
 go120/src/path/filepath/match.go
 go120/src/path/filepath/match_test.go
 go120/src/path/filepath/path.go
+go120/src/path/filepath/path_nonwindows.go
 go120/src/path/filepath/path_plan9.go
 go120/src/path/filepath/path_test.go
 go120/src/path/filepath/path_unix.go
