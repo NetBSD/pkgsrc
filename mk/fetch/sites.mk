@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.186 2023/12/06 10:34:20 zafer Exp $
+# $NetBSD: sites.mk,v 1.187 2023/12/06 10:56:55 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -102,19 +102,9 @@ MASTER_SITE_XEMACS+=    \
 	http://ftp.uk.xemacs.org/sites/ftp.xemacs.org/pub/xemacs/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/text/xemacs/
 
-# http://www.ibiblio.org/pub/mirrors/apache/ returns 200 for missing
-# files, which is incompatible with resuming transfers.
 MASTER_SITE_APACHE+=    \
 	https://downloads.apache.org/ \
-	https://archive.apache.org/dist/ \
-	http://apache.oregonstate.edu/ \
-	http://ftp.unicamp.br/pub/apache/ \
-	http://www.mirrorservice.org/sites/ftp.apache.org/ \
-	http://ftp.twaren.net/Unix/Web/apache/ \
-	ftp://ftp.oregonstate.edu/pub/apache/ \
-	ftp://apache.mirrors.tds.net/pub/apache.org/ \
-	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
-	ftp://ftp.meisei-u.ac.jp/pub/www/apache/dist/ \
+	https://archive.apache.org/dist/
 
 MASTER_SITE_MYSQL+=	\
 	http://mysql.linux.cz/Downloads/ \
