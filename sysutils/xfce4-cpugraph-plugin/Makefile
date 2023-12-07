@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/12/07 02:14:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.71 2023/12/07 02:23:52 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -13,7 +13,7 @@ USE_LANGUAGES=	c c++
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17
-FORCE_C_STD=		c99
+# https://gitlab.xfce.org/panel-plugins/xfce4-cpugraph-plugin/-/issues/43
 FORCE_CXX_STD=		c++17
 
 CXXFLAGS.SunOS+=	-fpermissive
