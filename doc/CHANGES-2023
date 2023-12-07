@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7432 2023/12/07 08:39:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7433 2023/12/07 08:40:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10657,3 +10657,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cyclonedx-python-lib to 5.2.0 [wiz 2023-12-07]
 	Updated security/py-google-auth to 2.24.0 [wiz 2023-12-07]
 	Updated www/py-google-api-python-client to 2.109.0 [wiz 2023-12-07]
+	Updated devel/py-serializable to 0.16.0 [wiz 2023-12-07]
