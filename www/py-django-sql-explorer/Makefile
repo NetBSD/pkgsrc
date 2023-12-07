@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/07/13 10:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/07 18:10:26 adam Exp $
 
-DISTNAME=	django-sql-explorer-1.1.3
+DISTNAME=	django-sql-explorer-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sql-explorer/}
 
@@ -11,18 +10,14 @@ HOMEPAGE=	https://github.com/epantry/django-sql-explorer
 COMMENT=	Pluggable app that allows to execute SQL, view, and export the results
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.1.18:../../databases/py-sqlparse
-DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-unicodecsv>=0.14.1:../../databases/py-unicodecsv
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2.12:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.4.0:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# remove cache files from the distribution
-post-extract:
-	${FIND} ${WRKSRC} -type f -name '*.pyc' -print -delete
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
