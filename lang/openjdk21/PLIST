@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/06 17:53:00 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/07 16:26:37 tnn Exp $
 bin/openjdk21-jar
 bin/openjdk21-jarsigner
 bin/openjdk21-java
@@ -219,9 +219,9 @@ java/openjdk21/jmods/jdk.internal.ed.jmod
 java/openjdk21/jmods/jdk.internal.jvmstat.jmod
 java/openjdk21/jmods/jdk.internal.le.jmod
 java/openjdk21/jmods/jdk.internal.opt.jmod
-java/openjdk21/jmods/jdk.internal.vm.ci.jmod
-java/openjdk21/jmods/jdk.internal.vm.compiler.jmod
-java/openjdk21/jmods/jdk.internal.vm.compiler.management.jmod
+${PLIST.jvmci}java/openjdk21/jmods/jdk.internal.vm.ci.jmod
+${PLIST.internal_vm_compiler}java/openjdk21/jmods/jdk.internal.vm.compiler.jmod
+${PLIST.internal_vm_compiler}java/openjdk21/jmods/jdk.internal.vm.compiler.management.jmod
 java/openjdk21/jmods/jdk.jartool.jmod
 java/openjdk21/jmods/jdk.javadoc.jmod
 java/openjdk21/jmods/jdk.jcmd.jmod
@@ -387,15 +387,15 @@ java/openjdk21/legal/jdk.internal.opt/ADDITIONAL_LICENSE_INFO
 java/openjdk21/legal/jdk.internal.opt/ASSEMBLY_EXCEPTION
 java/openjdk21/legal/jdk.internal.opt/LICENSE
 java/openjdk21/legal/jdk.internal.opt/jopt-simple.md
-java/openjdk21/legal/jdk.internal.vm.ci/ADDITIONAL_LICENSE_INFO
-java/openjdk21/legal/jdk.internal.vm.ci/ASSEMBLY_EXCEPTION
-java/openjdk21/legal/jdk.internal.vm.ci/LICENSE
-java/openjdk21/legal/jdk.internal.vm.compiler.management/ADDITIONAL_LICENSE_INFO
-java/openjdk21/legal/jdk.internal.vm.compiler.management/ASSEMBLY_EXCEPTION
-java/openjdk21/legal/jdk.internal.vm.compiler.management/LICENSE
-java/openjdk21/legal/jdk.internal.vm.compiler/ADDITIONAL_LICENSE_INFO
-java/openjdk21/legal/jdk.internal.vm.compiler/ASSEMBLY_EXCEPTION
-java/openjdk21/legal/jdk.internal.vm.compiler/LICENSE
+${PLIST.jvmci}java/openjdk21/legal/jdk.internal.vm.ci/ADDITIONAL_LICENSE_INFO
+${PLIST.jvmci}java/openjdk21/legal/jdk.internal.vm.ci/ASSEMBLY_EXCEPTION
+${PLIST.jvmci}java/openjdk21/legal/jdk.internal.vm.ci/LICENSE
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler.management/ADDITIONAL_LICENSE_INFO
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler.management/ASSEMBLY_EXCEPTION
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler.management/LICENSE
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler/ADDITIONAL_LICENSE_INFO
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler/ASSEMBLY_EXCEPTION
+${PLIST.internal_vm_compiler}java/openjdk21/legal/jdk.internal.vm.compiler/LICENSE
 java/openjdk21/legal/jdk.jartool/ADDITIONAL_LICENSE_INFO
 java/openjdk21/legal/jdk.jartool/ASSEMBLY_EXCEPTION
 java/openjdk21/legal/jdk.jartool/LICENSE
