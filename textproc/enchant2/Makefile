@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/11/04 16:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/07 08:55:35 wiz Exp $
 
-DISTNAME=		enchant-2.6.2
+DISTNAME=		enchant-2.6.3
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}
@@ -32,8 +32,8 @@ USE_CXX_FEATURES+=	c++11
 CONFIGURE_ARGS+=	--without-hspell
 CONFIGURE_ARGS+=	--without-voikko
 
-# As of 2.3.2
-# FAILURE: 230 out of 425 tests failed (390 failures).
+# needed for testing
+CONFIGURE_ARGS+=	--enable-relocatable
 TEST_TARGET=		check
 
 post-install:
