@@ -1,5 +1,4 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2022/09/21 18:56:32 wiz Exp $
+$NetBSD: README.NetBSD,v 1.1 2023/12/07 17:41:55 gdt Exp $
 
 To use the NetBSD/amd64 Virtual Memory Monitor (NVMM) for QEMU :
 
@@ -18,5 +17,3 @@ $ qemu-system-x86_64 -smp 4 -m 8G -cdrom Win10_2004_English_x64.iso -accel nvmm
 
 See nvmm(4) and nvmmctl(8) or visit
    https://m00nbsd.net/4e0798b7f2620c965d0dd9d6a7a2f296.html for more info.
-
-===========================================================================
