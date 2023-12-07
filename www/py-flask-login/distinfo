@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/09/26 11:11:02 kleink Exp $
+$NetBSD: distinfo,v 1.18 2023/12/07 17:17:55 adam Exp $
 
-BLAKE2s (Flask-Login-0.6.2.tar.gz) = 11d591749b2a6785e45b44fa8d97985cb3058134f99ff669739a03d123c70ab7
-SHA512 (Flask-Login-0.6.2.tar.gz) = 7e6e108841e96f4da0f2a4b062084d7ac83edb2e0bcc85dd19e34cb58dee5e52c1180097544755783372747381ea923fdacf315914170872de832b6115ccc74a
-Size (Flask-Login-0.6.2.tar.gz) = 48671 bytes
+BLAKE2s (Flask-Login-0.6.3.tar.gz) = 7c651ba6f19aa8340d51213d57db63acd7209a2b4cb6e239787eabc09d400e7b
+SHA512 (Flask-Login-0.6.3.tar.gz) = abff3c4088d7c0998aa73976cce79b864d9d41eccb3430d26c75727379df9a45626d64693cb97c85037b29c061f244e82ea6f296dbd4cfb5ac73e103f8b53294
+Size (Flask-Login-0.6.3.tar.gz) = 48834 bytes
