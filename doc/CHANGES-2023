@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7443 2023/12/07 09:35:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7444 2023/12/07 10:10:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10666,3 +10666,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/mupdf to 1.23.7 [wiz 2023-12-07]
 	Updated lang/mujs to 1.3.4 [nia 2023-12-07]
 	Updated devel/py-mercurial to 6.6 [wiz 2023-12-07]
+	Updated sysutils/xcp to 0.12.4 [pin 2023-12-07]
