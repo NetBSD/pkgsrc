@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.17 2022/08/18 16:48:30 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.18 2023/12/07 17:08:05 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
 ${PYSITELIB}/tornado/__init__.pyo
@@ -110,6 +111,9 @@ ${PYSITELIB}/tornado/test/auth_test.pyo
 ${PYSITELIB}/tornado/test/autoreload_test.py
 ${PYSITELIB}/tornado/test/autoreload_test.pyc
 ${PYSITELIB}/tornado/test/autoreload_test.pyo
+${PYSITELIB}/tornado/test/circlerefs_test.py
+${PYSITELIB}/tornado/test/circlerefs_test.pyc
+${PYSITELIB}/tornado/test/circlerefs_test.pyo
 ${PYSITELIB}/tornado/test/concurrent_test.py
 ${PYSITELIB}/tornado/test/concurrent_test.pyc
 ${PYSITELIB}/tornado/test/concurrent_test.pyo
