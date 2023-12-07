@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2023/10/10 16:52:30 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/07 17:51:49 adam Exp $
 
-DISTNAME=	djangocms-googlemap-2.1.1
+DISTNAME=	djangocms-googlemap-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-googlemap/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/divio/djangocms-googlemap
+HOMEPAGE=	https://github.com/django-cms/djangocms-googlemap
 COMMENT=	Google Maps plugin for django CMS
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.7:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.7:../../www/py-django-filer
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.3:../../www/py-django-treebeard
@@ -18,5 +20,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
