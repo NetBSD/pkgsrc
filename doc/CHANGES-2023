@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7438 2023/12/07 09:05:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7439 2023/12/07 09:10:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10663,3 +10663,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/enchant2 to 2.6.3 [wiz 2023-12-07]
 	Updated devel/liblangtag to 0.6.7 [wiz 2023-12-07]
 	Updated net/libcares to 1.23.0 [wiz 2023-12-07]
+	Updated print/mupdf to 1.23.7 [wiz 2023-12-07]
