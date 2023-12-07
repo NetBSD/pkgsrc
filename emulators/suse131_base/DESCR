@@ -4,3 +4,7 @@ Linux.
 
 This package supports running ELF binaries linked with glibc2 that
 don't require X11 shared libraries.
+
+While this package contains binaries, shared libraries, man pages, and
+similar files, it does nothing to cause your operating system to be
+able to execute Linux binaries.
