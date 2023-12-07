@@ -1,3 +1,7 @@
 abcde is a frontend command-line utility (actually, a shell script) that
 grabs tracks off a CD, encodes them to ogg, mp3 or flac formats, and tags them,
 all in one go.
+
+abcde requires an encoder at runtime, but the package does not contain
+any encoders or depend on any encoder.  (Possibilities are bladeenc,
+fdk-aac, flac, lame, musepack, speex, and vorbis-tools.)
