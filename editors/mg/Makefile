@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/07/03 11:29:03 vins Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/07 23:57:25 tnn Exp $
 
 DISTNAME=	mg-20230501
 PKGREVISION=	1
@@ -31,11 +31,17 @@ SUBST_FILES.path=	GNUmakefile mg.1
 SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-extract:
+	cp ${FILESDIR}/tree.h ${WRKSRC}
+.endif
+
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/tutorial ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/tutorial
 
-.include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MLinux-*-*)
+.if ${OPSYS} == "Linux"
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
 .include "../../devel/ncursesw/buildlink3.mk"
