@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7446 2023/12/07 10:28:11 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7447 2023/12/07 12:25:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10669,3 +10669,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xcp to 0.12.4 [pin 2023-12-07]
 	Updated shells/oh-my-posh to 19.2.1 [pin 2023-12-07]
 	Updated devel/cargo-modules to 0.12.0 [pin 2023-12-07]
+	Updated lang/nodejs to 21.4.0 [adam 2023-12-07]
+	Updated www/py-yarl to 1.9.4 [adam 2023-12-07]
