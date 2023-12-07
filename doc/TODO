@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23716 2023/12/07 08:23:24 wiz Exp $
+$NetBSD: TODO,v 1.23717 2023/12/07 08:25:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1192,7 +1192,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-octoprint-1.9.3
-	o py-olefile-0.47
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
