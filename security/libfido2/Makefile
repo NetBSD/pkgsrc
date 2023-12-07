@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/07 07:25:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/07 12:35:46 adam Exp $
 
-DISTNAME=	libfido2-1.13.0
-PKGREVISION=	1
+DISTNAME=	libfido2-1.14.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://developers.yubico.com/libfido2/Releases/
 
