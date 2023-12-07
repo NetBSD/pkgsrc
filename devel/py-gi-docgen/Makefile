@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/01 05:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/07 18:10:38 wiz Exp $
 
-DISTNAME=	gi-docgen-2023.1
+DISTNAME=	gi-docgen-2023.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi-docgen/}
@@ -42,5 +42,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
