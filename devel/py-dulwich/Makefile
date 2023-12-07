@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/09/09 21:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/12/07 18:23:24 adam Exp $
 
-DISTNAME=	dulwich-0.21.6
+DISTNAME=	dulwich-0.21.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.dulwich.io/
 COMMENT=	Python implementation of Git
 LICENSE=	apache-2.0 OR gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
 TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
@@ -20,13 +22,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} dul-receive-pack dul-receive-pack-${PYVERSSUFFIX} && \
 	${MV} dul-upload-pack dul-upload-pack-${PYVERSSUFFIX} && \
 	${MV} dulwich dulwich-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
