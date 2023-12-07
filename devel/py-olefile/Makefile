@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/07 08:25:33 wiz Exp $
 
-DISTNAME=	olefile-0.46
+DISTNAME=	olefile-0.47
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/olefile/}
 EXTRACT_SUFX=	.zip
