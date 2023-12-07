@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2023/11/13 14:36:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2023/12/07 09:31:36 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -226,27 +226,6 @@ ${PYSITELIB}/hgext/hooklib/reject_merge_commits.pyo
 ${PYSITELIB}/hgext/hooklib/reject_new_heads.py
 ${PYSITELIB}/hgext/hooklib/reject_new_heads.pyc
 ${PYSITELIB}/hgext/hooklib/reject_new_heads.pyo
-${PYSITELIB}/hgext/infinitepush/__init__.py
-${PYSITELIB}/hgext/infinitepush/__init__.pyc
-${PYSITELIB}/hgext/infinitepush/__init__.pyo
-${PYSITELIB}/hgext/infinitepush/bundleparts.py
-${PYSITELIB}/hgext/infinitepush/bundleparts.pyc
-${PYSITELIB}/hgext/infinitepush/bundleparts.pyo
-${PYSITELIB}/hgext/infinitepush/common.py
-${PYSITELIB}/hgext/infinitepush/common.pyc
-${PYSITELIB}/hgext/infinitepush/common.pyo
-${PYSITELIB}/hgext/infinitepush/fileindexapi.py
-${PYSITELIB}/hgext/infinitepush/fileindexapi.pyc
-${PYSITELIB}/hgext/infinitepush/fileindexapi.pyo
-${PYSITELIB}/hgext/infinitepush/indexapi.py
-${PYSITELIB}/hgext/infinitepush/indexapi.pyc
-${PYSITELIB}/hgext/infinitepush/indexapi.pyo
-${PYSITELIB}/hgext/infinitepush/sqlindexapi.py
-${PYSITELIB}/hgext/infinitepush/sqlindexapi.pyc
-${PYSITELIB}/hgext/infinitepush/sqlindexapi.pyo
-${PYSITELIB}/hgext/infinitepush/store.py
-${PYSITELIB}/hgext/infinitepush/store.pyc
-${PYSITELIB}/hgext/infinitepush/store.pyo
 ${PYSITELIB}/hgext/journal.py
 ${PYSITELIB}/hgext/journal.pyc
 ${PYSITELIB}/hgext/journal.pyo
@@ -477,6 +456,15 @@ ${PYSITELIB}/mercurial/__modulepolicy__.pyo
 ${PYSITELIB}/mercurial/__version__.py
 ${PYSITELIB}/mercurial/__version__.pyc
 ${PYSITELIB}/mercurial/__version__.pyo
+${PYSITELIB}/mercurial/admin/__init__.py
+${PYSITELIB}/mercurial/admin/__init__.pyc
+${PYSITELIB}/mercurial/admin/__init__.pyo
+${PYSITELIB}/mercurial/admin/verify.py
+${PYSITELIB}/mercurial/admin/verify.pyc
+${PYSITELIB}/mercurial/admin/verify.pyo
+${PYSITELIB}/mercurial/admin_commands.py
+${PYSITELIB}/mercurial/admin_commands.pyc
+${PYSITELIB}/mercurial/admin_commands.pyo
 ${PYSITELIB}/mercurial/ancestor.py
 ${PYSITELIB}/mercurial/ancestor.pyc
 ${PYSITELIB}/mercurial/ancestor.pyo
@@ -560,6 +548,7 @@ ${PYSITELIB}/mercurial/config.pyo
 ${PYSITELIB}/mercurial/configitems.py
 ${PYSITELIB}/mercurial/configitems.pyc
 ${PYSITELIB}/mercurial/configitems.pyo
+${PYSITELIB}/mercurial/configitems.toml
 ${PYSITELIB}/mercurial/context.py
 ${PYSITELIB}/mercurial/context.pyc
 ${PYSITELIB}/mercurial/context.pyo
@@ -1319,6 +1308,18 @@ ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyc
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyi
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyo
 ${PYSITELIB}/mercurial/thirdparty/sha1dc.so
+${PYSITELIB}/mercurial/thirdparty/tomli/__init__.py
+${PYSITELIB}/mercurial/thirdparty/tomli/__init__.pyc
+${PYSITELIB}/mercurial/thirdparty/tomli/__init__.pyo
+${PYSITELIB}/mercurial/thirdparty/tomli/_parser.py
+${PYSITELIB}/mercurial/thirdparty/tomli/_parser.pyc
+${PYSITELIB}/mercurial/thirdparty/tomli/_parser.pyo
+${PYSITELIB}/mercurial/thirdparty/tomli/_re.py
+${PYSITELIB}/mercurial/thirdparty/tomli/_re.pyc
+${PYSITELIB}/mercurial/thirdparty/tomli/_re.pyo
+${PYSITELIB}/mercurial/thirdparty/tomli/_types.py
+${PYSITELIB}/mercurial/thirdparty/tomli/_types.pyc
+${PYSITELIB}/mercurial/thirdparty/tomli/_types.pyo
 ${PYSITELIB}/mercurial/thirdparty/zope/__init__.py
 ${PYSITELIB}/mercurial/thirdparty/zope/__init__.pyc
 ${PYSITELIB}/mercurial/thirdparty/zope/__init__.pyo
