@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2023/11/26 10:34:23 adam Exp $
+# $NetBSD: Makefile,v 1.331 2023/12/07 17:41:55 gdt Exp $
 
 DISTNAME=	qemu-8.1.3
 CATEGORIES=	emulators
@@ -184,6 +184,8 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
+		${DESTDIR}${PREFIX}/share/doc/qemu/
+	${INSTALL_DATA} ${FILESDIR}/README.NetBSD \
 		${DESTDIR}${PREFIX}/share/doc/qemu/
 	${RM} -f ${DESTDIR}${PREFIX}/share/doc/qemu/interop/.buildinfo
 	${RM} -f ${DESTDIR}${PREFIX}/share/doc/qemu/specs/.buildinfo
