@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7453 2023/12/07 17:57:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7454 2023/12/07 18:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10688,3 +10688,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-djangocms-googlemap to 2.2.0 [adam 2023-12-07]
 	Updated www/py-djangocms-icon to 2.1.0 [adam 2023-12-07]
 	Updated www/py-djangocms-style to 3.1.0 [adam 2023-12-07]
+	Updated devel/py-click-aliases to 1.0.4 [wiz 2023-12-07]
