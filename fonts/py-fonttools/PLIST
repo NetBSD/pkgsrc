@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2023/11/06 13:43:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2023/12/07 08:30:20 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -855,6 +855,18 @@ ${PYSITELIB}/fontTools/varLib/instancer/solver.pyo
 ${PYSITELIB}/fontTools/varLib/interpolatable.py
 ${PYSITELIB}/fontTools/varLib/interpolatable.pyc
 ${PYSITELIB}/fontTools/varLib/interpolatable.pyo
+${PYSITELIB}/fontTools/varLib/interpolatableHelpers.py
+${PYSITELIB}/fontTools/varLib/interpolatableHelpers.pyc
+${PYSITELIB}/fontTools/varLib/interpolatableHelpers.pyo
+${PYSITELIB}/fontTools/varLib/interpolatablePlot.py
+${PYSITELIB}/fontTools/varLib/interpolatablePlot.pyc
+${PYSITELIB}/fontTools/varLib/interpolatablePlot.pyo
+${PYSITELIB}/fontTools/varLib/interpolatableTestContourOrder.py
+${PYSITELIB}/fontTools/varLib/interpolatableTestContourOrder.pyc
+${PYSITELIB}/fontTools/varLib/interpolatableTestContourOrder.pyo
+${PYSITELIB}/fontTools/varLib/interpolatableTestStartingPoint.py
+${PYSITELIB}/fontTools/varLib/interpolatableTestStartingPoint.pyc
+${PYSITELIB}/fontTools/varLib/interpolatableTestStartingPoint.pyo
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.py
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyc
 ${PYSITELIB}/fontTools/varLib/interpolate_layout.pyo
