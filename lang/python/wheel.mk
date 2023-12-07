@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.11 2023/10/29 22:50:35 wiz Exp $
+# $NetBSD: wheel.mk,v 1.12 2023/12/07 17:59:17 thor Exp $
 #
 # Build and install Python wheels
 #
@@ -10,6 +10,7 @@
 # USE_PYTEST:		If set to yes, depend on py-test and use it for testing.
 #			Default: yes
 #
+# WHEEL_ARGS:		additional arguments to pass during build of the wheel
 
 PY_PATCHPLIST?=	yes
 
@@ -17,6 +18,7 @@ WHEELFILE?=	${WRKSRC}/dist/*.whl
 WHEEL_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 _WHEEL_INFODIR=	${WHEEL_NAME}.dist-info
 PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
+WHEEL_ARGS?=	# empty
 
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 
@@ -24,7 +26,8 @@ PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 TOOL_DEPENDS+= ${PYPKGPREFIX}-build>=0:../../devel/py-build
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
-		-m build --wheel --skip-dependency-check --no-isolation
+		-m build --wheel --skip-dependency-check --no-isolation \
+		${WHEEL_ARGS}
 .endif
 
 .if !target(do-install)
