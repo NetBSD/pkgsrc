@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/07 08:25:33 wiz Exp $
 
-BLAKE2s (olefile-0.46.zip) = 377df2a1afb9cd9ed580bbb4a12bfe10d28a7f9bb87f1ae88d9f0c5ccf96ebcc
-SHA512 (olefile-0.46.zip) = 2a19c443c1e4519680027ff557b5f737e6d0e707c1932a759ea85105717f4f6393149e0eb04589fe2b2b7e0c474042cfe34801faad38517799483b711001b4ac
-Size (olefile-0.46.zip) = 112226 bytes
+BLAKE2s (olefile-0.47.zip) = 3fd73d76afbafeea8cb76566404df26ee056f5e439e7b6471df84c0c4d9e003c
+SHA512 (olefile-0.47.zip) = b797c0e419132fbd469b121b6d6a9f69a83d156b3b14be0ea227776ecbd6a912be5c38e74ec5fbced79eacbb4a19c7c6365b6fde2167e02bd92031c5f8b3f928
+Size (olefile-0.47.zip) = 112240 bytes
