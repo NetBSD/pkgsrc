@@ -1,9 +1,9 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2023/04/25 21:53:01 nikita Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2023/12/07 23:57:25 tnn Exp $
 
 
---- GNUmakefile.orig	2023-04-06 05:06:27.000000000 +0200
-+++ GNUmakefile	2023-04-25 23:05:43.954953743 +0200
-@@ -13,14 +13,18 @@
+--- GNUmakefile.orig	2023-05-01 15:27:50.000000000 +0000
++++ GNUmakefile
+@@ -13,14 +13,20 @@ libdir=		$(prefix)/lib
  includedir=	$(prefix)/include
  mandir=		$(prefix)/man
  
@@ -18,10 +18,12 @@ $NetBSD: patch-GNUmakefile,v 1.1 2023/04/25 21:53:01 nikita Exp $
  ifeq ($(UNAME),FreeBSD)
    BSD_CPPFLAGS:= -DHAVE_UTIL_H
    BSD_LIBS:=	 -lutil
-+endif
-+ifeq ($(UNAME),NetBSD)
++else ifeq ($(UNAME),NetBSD)
 +  BSD_CPPFLAGS:= -DHAVE_UTIL_H
 +  BSD_LIBS:=	 -lutil
++else ifeq ($(UNAME),Darwin)
++  BSD_CPPFLAGS:= $(shell $(PKG_CONFIG) --cflags libbsd-overlay)
++  BSD_LIBS:=	 $(shell $(PKG_CONFIG) --libs libbsd-overlay) -lutil
  else
    BSD_CPPFLAGS:= $(shell $(PKG_CONFIG) --cflags libbsd-overlay) -DHAVE_PTY_H
    BSD_LIBS:=	 $(shell $(PKG_CONFIG) --libs libbsd-overlay) -lutil
