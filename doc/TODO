@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23715 2023/12/07 08:22:54 wiz Exp $
+$NetBSD: TODO,v 1.23716 2023/12/07 08:23:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -872,7 +872,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
-	o libheif-1.17.5
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
