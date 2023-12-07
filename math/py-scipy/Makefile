@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/11/19 17:06:18 adam Exp $
+# $NetBSD: Makefile,v 1.74 2023/12/07 20:47:13 thor Exp $
 
 DISTNAME=	scipy-1.11.4
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -52,6 +53,12 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
+# Same as for py-numpy.
+BLAS_ACCEPTED=		${_BLAS_TYPES}
+BLAS_C_INTERFACE=	yes
+WHEEL_ARGS+=		-Csetup-args=-Dblas=${CBLAS_PC}
+WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
@@ -80,7 +87,7 @@ do-test:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../math/openblas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.21.6
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
