@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.15 2023/05/02 07:26:15 nikita Exp $
+$NetBSD: distinfo,v 1.16 2023/12/07 23:57:25 tnn Exp $
 
 BLAKE2s (mg-20230501-20230501.tar.gz) = b421e2d5d5bca4114f77e075a4de0fc8e15b1e921f853f7e2fce5b36a2a999b7
 SHA512 (mg-20230501-20230501.tar.gz) = db7b9815a01dc9fb1ff92741748d24d558c329135e591c24450d0a3bc10e38a992ef346dd744854864538f330a018415df539d06543570a3566dbabc6c88a8fd
 Size (mg-20230501-20230501.tar.gz) = 158315 bytes
-SHA1 (patch-GNUmakefile) = b79834c2f125db8338c16697cde1719d3e039b13
+SHA1 (patch-GNUmakefile) = cf73228c0cee00a7e4526bd97276a4aec3b6a53b
 SHA1 (patch-af) = 678983bc292b41a2d67f969182bc377a47b89d2b
+SHA1 (patch-def.h) = fa27b6e7d45c5fcd0f48490e3f515602095cdbd6
 SHA1 (patch-paragraph.c) = d68754b802c99fecb63a6cfa634f0360945f034f
+SHA1 (patch-tags.c) = 1f7bbaf75a8cced86499bc5f8f6426fc6fa1232a
 SHA1 (patch-ttyio.c) = 125cbdf461aec3f629340affc3c9f600bb9d7102
