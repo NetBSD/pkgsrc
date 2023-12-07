@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/08/28 10:37:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/12/07 22:57:23 gdt Exp $
 bin/chirp
 bin/chirpc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -73,6 +73,12 @@ ${PYSITELIB}/chirp/drivers/ap510.pyo
 ${PYSITELIB}/chirp/drivers/baofeng_common.py
 ${PYSITELIB}/chirp/drivers/baofeng_common.pyc
 ${PYSITELIB}/chirp/drivers/baofeng_common.pyo
+${PYSITELIB}/chirp/drivers/baofeng_uv17.py
+${PYSITELIB}/chirp/drivers/baofeng_uv17.pyc
+${PYSITELIB}/chirp/drivers/baofeng_uv17.pyo
+${PYSITELIB}/chirp/drivers/baofeng_uv17Pro.py
+${PYSITELIB}/chirp/drivers/baofeng_uv17Pro.pyc
+${PYSITELIB}/chirp/drivers/baofeng_uv17Pro.pyo
 ${PYSITELIB}/chirp/drivers/baofeng_uv3r.py
 ${PYSITELIB}/chirp/drivers/baofeng_uv3r.pyc
 ${PYSITELIB}/chirp/drivers/baofeng_uv3r.pyo
@@ -352,6 +358,9 @@ ${PYSITELIB}/chirp/drivers/puxing_px888k.pyo
 ${PYSITELIB}/chirp/drivers/radioddity_r2.py
 ${PYSITELIB}/chirp/drivers/radioddity_r2.pyc
 ${PYSITELIB}/chirp/drivers/radioddity_r2.pyo
+${PYSITELIB}/chirp/drivers/radtel_rt490.py
+${PYSITELIB}/chirp/drivers/radtel_rt490.pyc
+${PYSITELIB}/chirp/drivers/radtel_rt490.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
@@ -548,6 +557,7 @@ ${PYSITELIB}/chirp/locale/es/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/fr/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/hu/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/it/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/ja_JP/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
