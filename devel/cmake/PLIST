@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2023/08/25 08:05:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.78 2023/12/07 17:34:27 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -174,6 +174,7 @@ share/cmake-${CMAKE_API}/Help/envvar/CMAKE_BUILD_TYPE.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_COLOR_DIAGNOSTICS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CONFIGURATION_TYPES.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CONFIG_TYPE.rst
+share/cmake-${CMAKE_API}/Help/envvar/CMAKE_CROSSCOMPILING_EMULATOR.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_EXPORT_COMPILE_COMMANDS.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_FRAMEWORK_PATH.rst
 share/cmake-${CMAKE_API}/Help/envvar/CMAKE_GENERATOR.rst
@@ -213,6 +214,7 @@ share/cmake-${CMAKE_API}/Help/envvar/FC.rst
 share/cmake-${CMAKE_API}/Help/envvar/FFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/HIPCXX.rst
 share/cmake-${CMAKE_API}/Help/envvar/HIPFLAGS.rst
+share/cmake-${CMAKE_API}/Help/envvar/HIPHOSTCXX.rst
 share/cmake-${CMAKE_API}/Help/envvar/ISPC.rst
 share/cmake-${CMAKE_API}/Help/envvar/ISPCFLAGS.rst
 share/cmake-${CMAKE_API}/Help/envvar/LANG_FLAGS.txt
@@ -270,6 +272,7 @@ share/cmake-${CMAKE_API}/Help/manual/cmake-buildsystem.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-commands.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-compile-features.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-configure-log.7.rst
+share/cmake-${CMAKE_API}/Help/manual/cmake-cxxmodules.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-developer.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-env-variables.7.rst
 share/cmake-${CMAKE_API}/Help/manual/cmake-file-api.7.rst
@@ -719,6 +722,10 @@ share/cmake-${CMAKE_API}/Help/policy/CMP0148.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0149.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0150.rst
 share/cmake-${CMAKE_API}/Help/policy/CMP0151.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0152.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0153.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0154.rst
+share/cmake-${CMAKE_API}/Help/policy/CMP0155.rst
 share/cmake-${CMAKE_API}/Help/policy/DEPRECATED.txt
 share/cmake-${CMAKE_API}/Help/policy/DISALLOWED_COMMAND.txt
 share/cmake-${CMAKE_API}/Help/prop_cache/ADVANCED.rst
@@ -875,6 +882,7 @@ share/cmake-${CMAKE_API}/Help/prop_test/FAIL_REGULAR_EXPRESSION.rst
 share/cmake-${CMAKE_API}/Help/prop_test/FIXTURES_CLEANUP.rst
 share/cmake-${CMAKE_API}/Help/prop_test/FIXTURES_REQUIRED.rst
 share/cmake-${CMAKE_API}/Help/prop_test/FIXTURES_SETUP.rst
+share/cmake-${CMAKE_API}/Help/prop_test/GENERATED_RESOURCE_SPEC_FILE.rst
 share/cmake-${CMAKE_API}/Help/prop_test/LABELS.rst
 share/cmake-${CMAKE_API}/Help/prop_test/MEASUREMENT.rst
 share/cmake-${CMAKE_API}/Help/prop_test/PASS_REGULAR_EXPRESSION.rst
@@ -1031,6 +1039,11 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/IMPLICIT_DEPENDS_INCLUDE_TRANSFORM.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_COMMON_LANGUAGE_RUNTIME.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CONFIGURATIONS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_DEFINITIONS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_FEATURES.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_OPTIONS.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CXX_MODULES_INCLUDE_DIRECTORIES.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_CXX_MODULES_LINK_LIBRARIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_GLOBAL.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_IMPLIB.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/IMPORTED_IMPLIB_CONFIG.rst
@@ -1307,6 +1320,7 @@ share/cmake-${CMAKE_API}/Help/release/3.24.rst
 share/cmake-${CMAKE_API}/Help/release/3.25.rst
 share/cmake-${CMAKE_API}/Help/release/3.26.rst
 share/cmake-${CMAKE_API}/Help/release/3.27.rst
+share/cmake-${CMAKE_API}/Help/release/3.28.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
 share/cmake-${CMAKE_API}/Help/release/3.5.rst
@@ -1533,6 +1547,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_GLOBAL_AUTORCC_TARGET_NAME.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_GNUtoMS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_HIP_ARCHITECTURES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_HIP_EXTENSIONS.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_HIP_PLATFORM.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_HIP_STANDARD.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_HIP_STANDARD_REQUIRED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_HOME_DIRECTORY.rst
@@ -1620,6 +1635,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_FLAGS_RELEASE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_FLAGS_RELEASE_INIT.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_FLAGS_RELWITHDEBINFO.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_FLAGS_RELWITHDEBINFO_INIT.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_HOST_COMPILER.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_IGNORE_EXTENSIONS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_IMPLICIT_INCLUDE_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_IMPLICIT_LINK_DIRECTORIES.rst
@@ -2072,6 +2088,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeCXXInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeCommonLanguageInclude.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeCompilerABI.h
+share/cmake-${CMAKE_API}/Modules/CMakeCompilerCUDAArch.h
 share/cmake-${CMAKE_API}/Modules/CMakeCompilerIdDetection.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeConfigurableFile.in
 share/cmake-${CMAKE_API}/Modules/CMakeDependentOption.cmake
@@ -2194,7 +2211,6 @@ share/cmake-${CMAKE_API}/Modules/CTestCoverageCollectGCOV.cmake
 share/cmake-${CMAKE_API}/Modules/CTestScriptMode.cmake
 share/cmake-${CMAKE_API}/Modules/CTestTargets.cmake
 share/cmake-${CMAKE_API}/Modules/CTestUseLaunchers.cmake
-share/cmake-${CMAKE_API}/Modules/CUDA/architectures.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCCompilerFlag.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCSourceCompiles.cmake
 share/cmake-${CMAKE_API}/Modules/CheckCSourceRuns.cmake
@@ -2300,6 +2316,10 @@ share/cmake-${CMAKE_API}/Modules/Compiler/Cray-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayClang-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayClang-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayClang-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayClang.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Fortran.cmake
@@ -2394,10 +2414,17 @@ share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVHPC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA-HIP.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/NVIDIA.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/OpenWatcom-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/OpenWatcom-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/OpenWatcom.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/OrangeC-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/OrangeC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/OrangeC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/OrangeC-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/OrangeC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/PGI-DetermineCompiler.cmake
@@ -2703,6 +2730,13 @@ share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/CMakeLists.txt
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/detect.cmake
 share/cmake-${CMAKE_API}/Modules/IntelVSImplicitPath/hello.f
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeCUDAArchitecturesAll.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeCUDAArchitecturesNative.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeCUDAArchitecturesValidate.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeCUDAFilterImplicitLibs.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeCUDAFindToolkit.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeNVCCFilterImplicitInfo.cmake
+share/cmake-${CMAKE_API}/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CMakeTryCompilerOrLinkerFlag.cmake
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/CPack.DS_Store.in
 share/cmake-${CMAKE_API}/Modules/Internal/CPack/CPack.Description.plist.in
@@ -3115,6 +3149,9 @@ share/cmake-${CMAKE_API}/Modules/Platform/Windows-NVIDIA-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-OpenWatcom-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-OpenWatcom-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-OpenWatcom.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-OrangeC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-OrangeC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Windows-OrangeC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-PGI-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-PGI-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Windows-PGI.cmake
@@ -3131,6 +3168,10 @@ share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE-Initialize.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE-MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE-MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsCE.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/WindowsKernelModeDriver-Initialize.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/WindowsKernelModeDriver-MSVC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/WindowsKernelModeDriver-MSVC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/WindowsKernelModeDriver.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsPaths.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsPhone-Clang-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/WindowsPhone-Clang-C.cmake
@@ -3167,6 +3208,9 @@ share/cmake-${CMAKE_API}/Modules/Platform/syllable.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/tvOS-Determine-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/tvOS-Initialize.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/tvOS.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/visionOS-Determine-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/visionOS-Initialize.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/visionOS.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/watchOS-Determine-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/watchOS-Initialize.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/watchOS.cmake
