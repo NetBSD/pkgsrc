@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/12/07 17:28:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,12 +14,6 @@ ${PYSITELIB}/terminado/management.py
 ${PYSITELIB}/terminado/management.pyc
 ${PYSITELIB}/terminado/management.pyo
 ${PYSITELIB}/terminado/py.typed
-${PYSITELIB}/terminado/tests/__init__.py
-${PYSITELIB}/terminado/tests/__init__.pyc
-${PYSITELIB}/terminado/tests/__init__.pyo
-${PYSITELIB}/terminado/tests/basic_test.py
-${PYSITELIB}/terminado/tests/basic_test.pyc
-${PYSITELIB}/terminado/tests/basic_test.pyo
 ${PYSITELIB}/terminado/uimod_embed.js
 ${PYSITELIB}/terminado/uimodule.py
 ${PYSITELIB}/terminado/uimodule.pyc
