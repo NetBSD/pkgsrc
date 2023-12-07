@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7450 2023/12/07 17:33:09 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7451 2023/12/07 17:37:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10679,3 +10679,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbconvert to 7.12.0 [adam 2023-12-07]
 	Updated www/py-terminado to 0.18.0 [adam 2023-12-07]
 	Updated www/py-jupyter_server to 2.12.1 [adam 2023-12-07]
+	Updated devel/cmake to 3.28.0 [adam 2023-12-07]
+	Updated devel/cmake-gui to 3.28.0 [adam 2023-12-07]
+	Updated textproc/ugrep to 4.3.5 [adam 2023-12-07]
