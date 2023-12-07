@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/20 18:54:24 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/12/07 17:49:10 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/djangocms_video/__init__.py
 ${PYSITELIB}/djangocms_video/__init__.pyc
 ${PYSITELIB}/djangocms_video/__init__.pyo
@@ -192,6 +191,9 @@ ${PYSITELIB}/djangocms_video/migrations/0009_removed_null_values.pyo
 ${PYSITELIB}/djangocms_video/migrations/0010_videoplayer_parameters.py
 ${PYSITELIB}/djangocms_video/migrations/0010_videoplayer_parameters.pyc
 ${PYSITELIB}/djangocms_video/migrations/0010_videoplayer_parameters.pyo
+${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.py
+${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.pyc
+${PYSITELIB}/djangocms_video/migrations/0011_alter_videoplayer_cmsplugin_ptr_and_more.pyo
 ${PYSITELIB}/djangocms_video/migrations/__init__.py
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyo
