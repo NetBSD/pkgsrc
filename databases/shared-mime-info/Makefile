@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/12/05 20:15:23 markd Exp $
+# $NetBSD: Makefile,v 1.82 2023/12/07 17:38:13 wiz Exp $
 
 DISTNAME=	shared-mime-info-2.4
 CATEGORIES=	databases
@@ -15,6 +15,7 @@ TOOL_DEPENDS+=		xmlto>=0:../../textproc/xmlto
 
 USE_LANGUAGES+=		c99 c++
 USE_TOOLS+=		bash:test msgfmt pkg-config xgettext
+USE_CXX_FEATURES=	filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
