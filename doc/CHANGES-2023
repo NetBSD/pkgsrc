@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7448 2023/12/07 12:37:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7449 2023/12/07 17:19:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10673,3 +10673,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-yarl to 1.9.4 [adam 2023-12-07]
 	Updated security/libfido2 to 1.14.0 [adam 2023-12-07]
 	Updated devel/py-bitstring to 4.1.4 [adam 2023-12-07]
+	Updated www/py-tornado to 6.4 [adam 2023-12-07]
+	Updated devel/py-ipykernel to 6.27.1 [adam 2023-12-07]
+	Updated www/py-flask-login to 0.6.3 [adam 2023-12-07]
