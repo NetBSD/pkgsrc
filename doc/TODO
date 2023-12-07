@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23717 2023/12/07 08:25:42 wiz Exp $
+$NetBSD: TODO,v 1.23718 2023/12/07 08:26:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1180,7 +1180,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
-	o py-importlib-metadata-6.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-license-expression-30.2.0
