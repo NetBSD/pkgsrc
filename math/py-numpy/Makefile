@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2023/11/23 08:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2023/12/07 20:45:56 thor Exp $
 
 DISTNAME=	numpy-1.26.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -59,10 +60,18 @@ PYSETUPBUILDARGS+=	--fcompiler=gnu
 # linking, so ensure that we pass through requisite options.
 LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 
-BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
+# Check if the numpy/scipy ecosystem is ready for full ILP64 before
+# allowing/setting BLAS_INDEX64=yes. Scipy needs both variants right now,
+# wich does not work without standardized symbol suffix.
+# Will need -Csetup-args=Duse-ilp64, too.
+# TODO: accelerate.framework has no pkg-config yet (see blas.buildlink3.mk).
+BLAS_ACCEPTED=		${_BLAS_TYPES}
 BLAS_C_INTERFACE=	yes
-CPPFLAGS+=		${BLAS_INCLUDES}
-LDFLAGS+=		${CBLAS_LIBS} ${LAPACK_LIBS}
+# Yes, cblas and lapack API (not lapacke) is desired.
+# Meson build uses pkg-config since 1.26.2 (or elaborate own logic not
+# suitable here).
+WHEEL_ARGS+=		-Csetup-args=-Dblas=${CBLAS_PC}
+WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
