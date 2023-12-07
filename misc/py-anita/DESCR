@@ -3,3 +3,6 @@ procedure and the installed system.  Using anita, you can fully
 automate the process of downloading a NetBSD distribution, installing
 it in a qemu/gxemul/Xen virtual machine, booting the installed system,
 and running its test suite.
+
+By default, this package contains only anita, and does not depend on
+any of the four packages one might use to run systems being tested.
