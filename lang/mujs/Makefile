@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/09/10 09:57:36 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/07 09:21:34 nia Exp $
 
-DISTNAME=	mujs-1.3.3
-PKGREVISION=	2
+DISTNAME=	mujs-1.3.4
 CATEGORIES=	lang
 MASTER_SITES=	https://mujs.com/downloads/
 
