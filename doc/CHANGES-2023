@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7455 2023/12/07 18:10:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7456 2023/12/07 18:14:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10690,3 +10690,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-djangocms-style to 3.1.0 [adam 2023-12-07]
 	Updated devel/py-click-aliases to 1.0.4 [wiz 2023-12-07]
 	Updated devel/py-gi-docgen to 2023.3 [wiz 2023-12-07]
+	Updated devel/py-maturin to 1.4.0 [wiz 2023-12-07]
