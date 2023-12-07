@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7437 2023/12/07 09:03:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7438 2023/12/07 09:05:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10662,3 +10662,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-pygls to 1.2.1 [wiz 2023-12-07]
 	Updated textproc/enchant2 to 2.6.3 [wiz 2023-12-07]
 	Updated devel/liblangtag to 0.6.7 [wiz 2023-12-07]
+	Updated net/libcares to 1.23.0 [wiz 2023-12-07]
