@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/08/14 05:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/12/07 22:28:43 abs Exp $
 
 DISTNAME=	desktop-file-utils-0.26
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://freedesktop.org/software/desktop-file-utils/releases/
 EXTRACT_SUFX=	.tar.xz

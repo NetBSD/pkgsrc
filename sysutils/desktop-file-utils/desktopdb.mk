@@ -1,4 +1,4 @@
-# $NetBSD: desktopdb.mk,v 1.6 2022/08/19 22:05:10 abs Exp $
+# $NetBSD: desktopdb.mk,v 1.7 2023/12/07 22:28:43 abs Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # desktop entries.  It takes care of registering them in the global database
@@ -12,8 +12,8 @@ DESKTOP_FILE_UTILS_MIMEDB_MK=	# defined
 INSTALL_TEMPLATES+=	${.CURDIR}/../../sysutils/desktop-file-utils/files/install.tmpl
 DEINSTALL_TEMPLATES+=	${.CURDIR}/../../sysutils/desktop-file-utils/files/install.tmpl
 
-FILES_SUBST+=		APPLICATIONS_PATH="${BUILDLINK_PREFIX.desktop-file-utils}/share/applications"
-FILES_SUBST+=		UPDATE_DESKTOPDB="${BUILDLINK_PREFIX.desktop-file-utils}/bin/update-desktop-database"
+FILES_SUBST+=		APPLICATIONS_PATH="${PREFIX}/share/applications"
+FILES_SUBST+=		UPDATE_DESKTOPDB="${PREFIX}/bin/update-desktop-database"
 
 PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ { next }
 
