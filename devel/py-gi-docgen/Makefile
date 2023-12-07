@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/12/07 18:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/07 20:05:10 wiz Exp $
 
 DISTNAME=	gi-docgen-2023.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi-docgen/}
 
@@ -12,6 +13,7 @@ LICENSE=	gnu-gpl-v3 AND apache-2.0 AND cc0-1.0-universal
 
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.2:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=1:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
