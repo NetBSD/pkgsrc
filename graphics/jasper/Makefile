@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2023/11/06 13:44:30 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2023/12/07 08:11:44 wiz Exp $
 
-DISTNAME=	jasper-4.1.0
+DISTNAME=	jasper-4.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jasper-software/}
 GITHUB_RELEASE=	version-${PKGVERSION_NOREV}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://jasper-software.github.io/jasper/
 COMMENT=	Software-based reference implementation of the JPEG-2000 codec
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c c++
+FORCE_C_STD=	c99
 USE_TOOLS+=	bash:test
 CMAKE_ARGS+=	-DALLOW_IN_SOURCE_BUILD=ON
 CMAKE_ARGS+=	-DJAS_ENABLE_DOC=OFF
