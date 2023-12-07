@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.54 2023/09/09 21:02:23 wiz Exp $
+$NetBSD: distinfo,v 1.55 2023/12/07 18:23:24 adam Exp $
 
-BLAKE2s (dulwich-0.21.6.tar.gz) = fe7b8ef0ea1f602b5701f318700a1e3cc2586e29ff7a348803c64ef881d9cb98
-SHA512 (dulwich-0.21.6.tar.gz) = 24f1d82be08b6ee78e41cd86ec2323a51dd6bff3714b1eae1f8484eda316c9d1c8089ded853511d587898ba789d36ee014c8f3b7c718bf7168519725f4d9dc2c
-Size (dulwich-0.21.6.tar.gz) = 445545 bytes
+BLAKE2s (dulwich-0.21.7.tar.gz) = e3aac931ce0b1aff1f4b3419fd9fe743ae3e9a667aae087a21d914d6367c33f2
+SHA512 (dulwich-0.21.7.tar.gz) = 56ddf8db21088b264623c568f28caa80d8687d26e5127093daaa4d556b0f49218ac51491a47ced00e9af073bd7ca05b2eb8b29d64aae8b93dd4bd47ca67ee443
+Size (dulwich-0.21.7.tar.gz) = 448028 bytes
