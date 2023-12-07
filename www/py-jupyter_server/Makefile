@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/20 06:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/07 17:32:33 adam Exp $
 
-DISTNAME=	jupyter_server-2.10.1
+DISTNAME=	jupyter_server-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server/}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jupyter_events>=0.9.0:../../devel/py-jupyter_events
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server_terminals-[0-9]*:../../comms/py-jupyter_server_terminals
 DEPENDS+=	${PYPKGPREFIX}-nbconvert>=6.4.4:../../www/py-nbconvert
+DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.3.0:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-overrides-[0-9]*:../../devel/py-overrides
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
