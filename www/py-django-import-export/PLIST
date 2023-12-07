@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/16 08:59:38 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.9 2023/12/07 18:17:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/import_export/__init__.py
 ${PYSITELIB}/import_export/__init__.pyc
 ${PYSITELIB}/import_export/__init__.pyo
@@ -43,6 +42,10 @@ ${PYSITELIB}/import_export/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/es/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/es_AR/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/es_AR/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/locale/fa/LC_MESSAGES/django.mo
+${PYSITELIB}/import_export/locale/fa/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/locale/fi/LC_MESSAGES/django.mo
+${PYSITELIB}/import_export/locale/fi/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/it/LC_MESSAGES/django.mo
@@ -80,6 +83,7 @@ ${PYSITELIB}/import_export/signals.py
 ${PYSITELIB}/import_export/signals.pyc
 ${PYSITELIB}/import_export/signals.pyo
 ${PYSITELIB}/import_export/static/import_export/action_formats.js
+${PYSITELIB}/import_export/static/import_export/guess_format.js
 ${PYSITELIB}/import_export/static/import_export/import.css
 ${PYSITELIB}/import_export/templates/admin/import_export/base.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list.html
