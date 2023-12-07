@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/30 17:12:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/07 18:10:38 wiz Exp $
 bin/gi-docgen
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/Apache-2.0.txt
+${PYSITELIB}/${WHEEL_INFODIR}/GPL-3.0-or-later.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gidocgen/__init__.py
 ${PYSITELIB}/gidocgen/__init__.pyc
 ${PYSITELIB}/gidocgen/__init__.pyo
