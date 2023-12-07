@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7449 2023/12/07 17:19:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7450 2023/12/07 17:33:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10676,3 +10676,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-tornado to 6.4 [adam 2023-12-07]
 	Updated devel/py-ipykernel to 6.27.1 [adam 2023-12-07]
 	Updated www/py-flask-login to 0.6.3 [adam 2023-12-07]
+	Updated www/py-nbconvert to 7.12.0 [adam 2023-12-07]
+	Updated www/py-terminado to 0.18.0 [adam 2023-12-07]
+	Updated www/py-jupyter_server to 2.12.1 [adam 2023-12-07]
