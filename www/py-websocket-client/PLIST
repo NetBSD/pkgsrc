@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2022/05/11 17:57:24 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/12/07 18:20:48 adam Exp $
 bin/wsdump-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/websocket/__init__.py
 ${PYSITELIB}/websocket/__init__.pyc
 ${PYSITELIB}/websocket/__init__.pyo
@@ -48,6 +48,7 @@ ${PYSITELIB}/websocket/_utils.pyo
 ${PYSITELIB}/websocket/_wsdump.py
 ${PYSITELIB}/websocket/_wsdump.pyc
 ${PYSITELIB}/websocket/_wsdump.pyo
+${PYSITELIB}/websocket/py.typed
 ${PYSITELIB}/websocket/tests/__init__.py
 ${PYSITELIB}/websocket/tests/__init__.pyc
 ${PYSITELIB}/websocket/tests/__init__.pyo
