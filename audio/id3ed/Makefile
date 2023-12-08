@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2017/08/16 20:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/12/08 14:15:42 zafer Exp $
 #
 
 DISTNAME=	id3ed-1.10.4
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://users.dakotacom.net/~donut/programs/id3ed/
+MASTER_SITES=	https://www.aydogan.net/distfiles/audio/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://users.dakotacom.net/~donut/programs/id3ed.html
