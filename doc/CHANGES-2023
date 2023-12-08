@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7464 2023/12/08 07:37:24 tron Exp $
+$NetBSD: CHANGES-2023,v 1.7465 2023/12/08 09:23:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10701,3 +10701,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/nickle to 2.95 [wiz 2023-12-07]
 	Updated devel/py-gi-docgen to 2023.3nb1 [wiz 2023-12-07]
 	Added devel/py-argparse-addons version 0.12.0 [wiz 2023-12-08]
+	Updated lang/python312 to 3.12.1 [adam 2023-12-08]
+	Updated lang/py312-html-docs to 3.12.1 [adam 2023-12-08]
