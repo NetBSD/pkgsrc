@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/08 07:11:33 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/argparse_addons.py
+${PYSITELIB}/argparse_addons.pyc
+${PYSITELIB}/argparse_addons.pyo
