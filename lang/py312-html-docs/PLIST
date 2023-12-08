@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/02 20:07:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/12/08 09:22:42 adam Exp $
 share/doc/python3.12/.buildinfo
 share/doc/python3.12/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.12/_images/hashlib-blake2-tree.png
@@ -161,6 +161,7 @@ share/doc/python3.12/_sources/library/cgitb.rst.txt
 share/doc/python3.12/_sources/library/chunk.rst.txt
 share/doc/python3.12/_sources/library/cmath.rst.txt
 share/doc/python3.12/_sources/library/cmd.rst.txt
+share/doc/python3.12/_sources/library/cmdline.rst.txt
 share/doc/python3.12/_sources/library/code.rst.txt
 share/doc/python3.12/_sources/library/codecs.rst.txt
 share/doc/python3.12/_sources/library/codeop.rst.txt
@@ -512,6 +513,7 @@ share/doc/python3.12/_static/pydoctheme.css
 share/doc/python3.12/_static/pydoctheme_dark.css
 share/doc/python3.12/_static/pygments.css
 share/doc/python3.12/_static/pygments_dark.css
+share/doc/python3.12/_static/search-focus.js
 share/doc/python3.12/_static/searchtools.js
 share/doc/python3.12/_static/sidebar.js
 share/doc/python3.12/_static/themetoggle.js
@@ -702,6 +704,7 @@ share/doc/python3.12/library/cgitb.html
 share/doc/python3.12/library/chunk.html
 share/doc/python3.12/library/cmath.html
 share/doc/python3.12/library/cmd.html
+share/doc/python3.12/library/cmdline.html
 share/doc/python3.12/library/code.html
 share/doc/python3.12/library/codecs.html
 share/doc/python3.12/library/codeop.html
