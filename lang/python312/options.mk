@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2023/10/02 20:07:14 adam Exp $
+# $NetBSD: options.mk,v 1.2 2023/12/08 09:22:42 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python312
-PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11
+PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.prefs.mk"
@@ -12,6 +12,14 @@ PLIST_VARS+=		dtrace
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
 PLIST.dtrace=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mtkinter)
+PLIST.tkinter=	yes
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		py_cv_module__tkinter="n/a"
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)

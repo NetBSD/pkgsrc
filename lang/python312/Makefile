@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/11/23 12:43:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/08 09:22:42 adam Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python312-${PY_DISTVERSION}
-PKGREVISION=	4
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -44,7 +43,6 @@ CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 CONFIGURE_ENV+=		py_cv_module__gdbm="n/a"
-CONFIGURE_ENV+=		py_cv_module__tkinter="n/a"
 # example module
 CONFIGURE_ENV+=		py_cv_module_xxlimited="n/a"
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
@@ -111,7 +109,7 @@ CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 
 LDFLAGS.SunOS+=	-lresolv
 
-PLIST_VARS+=	dbm nis
+PLIST_VARS+=	dbm nis tkinter
 .if ${OPSYS} != "Linux"
 PLIST.dbm=	yes
 .endif
