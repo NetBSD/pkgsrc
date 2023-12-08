@@ -1,4 +1,4 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2023/12/07 23:57:25 tnn Exp $
+$NetBSD: patch-GNUmakefile,v 1.3 2023/12/08 00:03:44 tnn Exp $
 
 
 --- GNUmakefile.orig	2023-05-01 15:27:50.000000000 +0000
@@ -22,8 +22,8 @@ $NetBSD: patch-GNUmakefile,v 1.2 2023/12/07 23:57:25 tnn Exp $
 +  BSD_CPPFLAGS:= -DHAVE_UTIL_H
 +  BSD_LIBS:=	 -lutil
 +else ifeq ($(UNAME),Darwin)
-+  BSD_CPPFLAGS:= $(shell $(PKG_CONFIG) --cflags libbsd-overlay)
-+  BSD_LIBS:=	 $(shell $(PKG_CONFIG) --libs libbsd-overlay) -lutil
++  BSD_CPPFLAGS:= -DHAVE_UTIL_H
++  BSD_LIBS:=	 -lutil
  else
    BSD_CPPFLAGS:= $(shell $(PKG_CONFIG) --cflags libbsd-overlay) -DHAVE_PTY_H
    BSD_LIBS:=	 $(shell $(PKG_CONFIG) --libs libbsd-overlay) -lutil
