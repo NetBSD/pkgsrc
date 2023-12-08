@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7463 2023/12/08 07:12:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7464 2023/12/08 07:37:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8152,7 +8152,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sqlmap to 1.7.8 [hubertf 2023-09-25]
 	Updated mail/amavisd-new to 2.12.2nb1 [jperkin 2023-09-25]
 	Updated devel/goredo to 1.32.0 [schmonz 2023-09-26]
-	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q3 branch [gdt 2022-09-26]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q3 branch [gdt 2023-09-26]
 	Added cross/64tass version 1.59.3120 [wiz 2023-09-26]
 	Updated audio/chromaprint to 1.5.1nb5 [wiz 2023-09-26]
 	Updated graphics/digikam to 8.1.0 [wiz 2023-09-26]
