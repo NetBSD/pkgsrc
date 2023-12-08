@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7467 2023/12/08 12:28:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7468 2023/12/08 19:59:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10707,3 +10707,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-markdown2 to 2.4.11 [adam 2023-12-08]
 	Updated lang/py-findpython to 0.4.1 [adam 2023-12-08]
 	Updated databases/py-apsw to 3.44.2.0 [adam 2023-12-08]
+	Updated shells/fish to 3.6.2 [wiz 2023-12-08]
