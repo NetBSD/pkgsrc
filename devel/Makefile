@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4145 2023/12/07 07:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4146 2023/12/08 07:11:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2390,6 +2390,7 @@ SUBDIR+=	py-approvaltests
 SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argparse
+SUBDIR+=	py-argparse-addons
 SUBDIR+=	py-argparse-manpage
 SUBDIR+=	py-args
 SUBDIR+=	py-astor
