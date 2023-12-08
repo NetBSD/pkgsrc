@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/08 07:11:33 wiz Exp $
+
+BLAKE2s (argparse_addons-0.12.0.tar.gz) = 9f4bdfbd2fc748df9833684a24bea703e8b5f6f37fb432e127862943878c0346
+SHA512 (argparse_addons-0.12.0.tar.gz) = 31cdbf8d6a227068559d9c7cfb0e135851db40d029020c7825787d985b2de2aeb460d7ff87d09eea4c6ddc29b16000c43944b6ad754e877b45a217186eb34967
+Size (argparse_addons-0.12.0.tar.gz) = 3780 bytes
