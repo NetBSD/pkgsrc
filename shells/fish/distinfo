@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2023/05/16 17:04:56 wiz Exp $
+$NetBSD: distinfo,v 1.34 2023/12/08 19:59:46 wiz Exp $
 
-BLAKE2s (fish-3.6.1.tar.xz) = 5b007915483fc83345adbda7f531352019ba44c7122dbcded5cb7b949dd4252b
-SHA512 (fish-3.6.1.tar.xz) = ee6f5c7699307d515f111c8c4f1633d9eb9703e045a93cfc2fcec722a03cca4ab25e4e09f6fd94ff2d07180d8b37c6ab733323bb2645065fdeb4e94771347597
-Size (fish-3.6.1.tar.xz) = 2866100 bytes
+BLAKE2s (fish-3.6.2.tar.xz) = b0edd7c7c7f205360a7d785aedb8c43f13446024cea19b1d268deee1ec414b35
+SHA512 (fish-3.6.2.tar.xz) = ee28b49a8c19cdc2613ed0b729eb6c8b686062a5e505357b045b67a64c9e4f5f6a308c58c6756a39c5edc4a9237afee9fc25763ce6b73b30cdb5ee5f21b2ac5d
+Size (fish-3.6.2.tar.xz) = 2911032 bytes
 SHA1 (patch-build__tools_git__version__gen.sh) = d66abecc900fa411f6da9c5fbb9f70f533025a49
 SHA1 (patch-cmake_ConfigureChecks.cmake) = e1a80dcd64dde555483b0253d4463f570ca16cc6
 SHA1 (patch-cmake_Install.cmake) = 1defcb125ab0082649f1b6e592df96a9c5d49c0a
