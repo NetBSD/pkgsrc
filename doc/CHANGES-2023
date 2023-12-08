@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7462 2023/12/07 20:05:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7463 2023/12/08 07:12:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10700,3 +10700,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.25.0 [wiz 2023-12-07]
 	Updated math/nickle to 2.95 [wiz 2023-12-07]
 	Updated devel/py-gi-docgen to 2023.3nb1 [wiz 2023-12-07]
+	Added devel/py-argparse-addons version 0.12.0 [wiz 2023-12-08]
