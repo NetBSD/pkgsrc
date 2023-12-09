@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/12/06 10:14:02 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/12/09 10:22:47 pin Exp $
 
 BLAKE2s (ahash-0.8.6.crate) = c7ecdf122e7a34429eb48e7855ae47923b0f263167ab871b542c96fa43097698
 SHA512 (ahash-0.8.6.crate) = 46428b27e96be1f30058b9383a94988beeb5064dfb4df04d6959b451d0c77ef69fc51f07fdf9511ab9728295eb6beee7783c31a2297f9e473fc537883e722b73
@@ -21,9 +21,9 @@ Size (cassowary-0.3.0.crate) = 22876 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (chess-tui-1.0.1.crate) = 00dd8360ecb572a3c7801eb7f40ca9fc9da124c8a51dccae9d970f9c40b3f624
-SHA512 (chess-tui-1.0.1.crate) = aa276f12833cd81eb5a64ed7ce6d0829e352fd329f20872c496f0c091c5522bf3158f5d1ab4c44b640aa708b0f6a895df45363964d98f675c257a7c9be8449f3
-Size (chess-tui-1.0.1.crate) = 402247 bytes
+BLAKE2s (chess-tui-1.1.0.tar.gz) = 02c69a0e03ab068d9995709830357adb6cdb4473d982c66bcb1b694281661e38
+SHA512 (chess-tui-1.1.0.tar.gz) = a80b7b11842b0f687ccea31ff893723e3ac011cfcd7c7101e89e661d02fae51c6604cde6d2b704c33520b354b51271a4267fef4b1fa8e5ab93003415cf6cda94
+Size (chess-tui-1.1.0.tar.gz) = 402735 bytes
 BLAKE2s (crossterm-0.26.1.crate) = 4af6bb316fb54ec34bf0a20fd55279c516d711a13cc7a5853f1849cb93d28c8a
 SHA512 (crossterm-0.26.1.crate) = 598431aee3067c071cc2561def7055f15f5bb91c70246f975d6227bb385fe8b1aa6b59096c465a92e09c8a934bd2a6d45790edc453d5c820a96b8fae1f66e81b
 Size (crossterm-0.26.1.crate) = 122317 bytes
