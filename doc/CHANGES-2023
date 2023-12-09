@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7472 2023/12/09 01:48:51 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7473 2023/12/09 06:10:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10711,3 +10711,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.8.4 [pin 2023-12-08]
 	Updated lang/openjdk11 to 1.11.0.21.9nb1 [ryoon 2023-12-09]
 	Updated sysutils/bup to 0.33.2 [gdt 2023-12-09]
+	Updated net/knot to 3.3.2 [ryoon 2023-12-09]
