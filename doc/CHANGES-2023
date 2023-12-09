@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7483 2023/12/09 15:58:21 jun Exp $
+$NetBSD: CHANGES-2023,v 1.7484 2023/12/09 16:07:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10722,3 +10722,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/mame to 0.261 [wiz 2023-12-09]
 	Updated sysutils/zabbix50-server to 5.0.40 [otis 2023-12-09]
 	Updated emulators/nono to 0.6.3 [jun 2023-12-10]
+	Updated sysutils/dua-cli to 2.22.0 [pin 2023-12-09]
