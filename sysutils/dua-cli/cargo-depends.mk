@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2023/12/06 12:25:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2023/12/09 16:06:42 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.4
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.4
@@ -38,6 +38,7 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.14.2
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.3
+CARGO_CRATE_DEPENDS+=	human_format-1.0.3
 CARGO_CRATE_DEPENDS+=	idna-0.4.0
 CARGO_CRATE_DEPENDS+=	indexmap-2.1.0
 CARGO_CRATE_DEPENDS+=	is-docker-0.2.0
