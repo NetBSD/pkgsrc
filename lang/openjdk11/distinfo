@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2023/12/04 01:08:16 tnn Exp $
+$NetBSD: distinfo,v 1.42 2023/12/09 01:19:54 ryoon Exp $
 
 BLAKE2s (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = f93572f551f242344e5d6d5e46b9812e5b426772842b5fa06fea4422e327c871
 SHA512 (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = c4030c99e4c1bb209f0c1ca6c10665c3f4c906f9d7dc13b912c3fbb8031f3dbb6f8d2e5e966cbbc452c307ba5d6de816c0f000b5b7c5d4e3fe8511baf12aab49
@@ -17,13 +17,14 @@ SHA512 (jdk11u-jdk-11.0.21-9-1.tar.gz) = 79839637e3ca057c4ee833cb56467fc1876569d
 Size (jdk11u-jdk-11.0.21-9-1.tar.gz) = 116433451 bytes
 SHA1 (patch-make_autoconf_build-performance.m4) = d52cb5897e9fb6e3b0cdbe34641d8caa218b21b7
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = d0b600237853c17ecc2864604f0bd847ba6b0149
-SHA1 (patch-make_autoconf_flags-cflags.m4) = 3b37853298805e2ffb92d3babd700d0048f24d8d
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 29d1301ca7c0a0c92daa377cf58580f325a4eb07
 SHA1 (patch-make_autoconf_hotspot.m4) = 437c8b09114933cca22c4a847a90a415cd113e5a
 SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
 SHA1 (patch-make_autoconf_lib-bundled.m4) = 35a4cdb3c4c3e4893b583cc73a0a79fda6f487e0
 SHA1 (patch-make_autoconf_lib-freetype.m4) = 3dbdfea4011dc69593ab302626b9ec4dfc7a7d54
 SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 9fd9f6ef4af0eece0b4ca0acbb44331566f17e07
+SHA1 (patch-make_launcher_LauncherCommon.gmk) = e306dac42c5bdd908775b78c80128c9a96781b06
 SHA1 (patch-src_hotspot_os__cpu_bsd__arm_bsd__arm__32.s) = 474a66abfb25030d4e32134816c14b157d1ebe6a
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 6322cbdda03dee528e89ac8b725f3df5e2165797
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 7bb57f82f3a93adc1970ed4215148fc02ecbcd5a
