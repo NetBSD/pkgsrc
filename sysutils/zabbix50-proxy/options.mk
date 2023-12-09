@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2023/01/03 13:59:15 otis Exp $
+# $NetBSD: options.mk,v 1.3 2023/12/09 13:26:49 otis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-proxy
-PKG_SUPPORTED_OPTIONS+=		inet6 ipmi libssh libssh2 snmp
+PKG_SUPPORTED_OPTIONS+=		inet6 openipmi libssh libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql sqlite3
 PKG_SUGGESTED_OPTIONS+=		libssh2 pgsql snmp
+PKG_OPTIONS_LEGACY_OPTS=	ipmi:openipmi
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=		inet6
@@ -59,7 +60,7 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 ZABBIX_DB_TYPE=		sqlite3
 .endif
 
-.if !empty(PKG_OPTIONS:Mipmi)
+.if !empty(PKG_OPTIONS:Mopenipmi)
 CONFIGURE_ARGS+=	--with-openipmi=${PREFIX}
 .include "../../sysutils/openipmi/buildlink3.mk"
 .endif
