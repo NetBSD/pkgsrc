@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/12/09 01:46:30 gdt Exp $
 
-DISTNAME=	bup-0.32.1
-PKGREVISION=	1
+DISTNAME=	bup-0.33.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -18,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # Upstream should have a tag, but doesn't.
 # EXTRACT_SUFX default value is set too late, so using it in SITES.* fails.
 EXTRACT_SUFX=		.tar.gz
-MAN_TAG=		2fe35faff1fb9c5e7b0ea357de371ac219f2cc38
+MAN_TAG=		a9757d6fe3509130622a636d35e92049f9e20fce
 MAN_UNPACK=		bup-${MAN_TAG}
 MAN_DISTFILE=		bup-man-${MAN_TAG}${EXTRACT_SUFX}
 SITES.${MAN_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
@@ -32,6 +31,7 @@ COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	bash gmake perl:run
 HAS_CONFIGURE=	yes
 
 # On macOS 10.13, building bup fails with defaults but builds with
@@ -46,11 +46,22 @@ TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
 
-DOCDIR=		${WRKDIR}/${MAN_UNPACK}
+DIST_MANPAGES=		${WRKDIR}/${MAN_UNPACK}
 
 # Note that tests 1) will fail on a fs mounted noatime and 2) need a
 # lot of space, perhaps 1 GB.
 TEST_TARGET=	test
+TEST_ENV+=	TZ=UTC
+
+# bup's configure is buggy and ends up with a make->make symlink.
+# Whack it to something sensible.  Reported upstream 20221204.
+#
+# bup's Makefile is buggy in that there is no install target.  Whack
+# Makefile from GNUmakefile so that the install target will be run.
+# Reported upstream 20221204.
+post-configure:
+	cd ${WRKSRC}/config/bin && rm -f make && ln -s ${TOOLS_PATH.gmake} make
+	cd ${WRKSRC} && cp -pf GNUmakefile Makefile
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
@@ -59,32 +70,75 @@ MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 # Even if converters/pandoc is installed, pretend as if it weren't.
 MAKE_FLAGS+=	PANDOC=
 
-USE_TOOLS+=		bash gmake perl:run
+REPLACE_BASH+=		lib/cmd/bup-import-rdiff-backup
+REPLACE_BASH+=		dev/checksum
+REPLACE_BASH+=		dev/compare-trees
+REPLACE_BASH+=		dev/configure-sampledata
+REPLACE_BASH+=		dev/force-delete
+REPLACE_BASH+=		dev/git-cat-tree
+REPLACE_BASH+=		dev/perf-glance
+REPLACE_BASH+=		dev/prep-for-debianish-build
+REPLACE_BASH+=		dev/prep-for-macos-build
+REPLACE_BASH+=		dev/refresh
+REPLACE_BASH+=		dev/sync-tree
+REPLACE_BASH+=		dev/system-info
+REPLACE_BASH+=		dev/update-checkout-info
+REPLACE_BASH+=		dev/update-doc-branches
+REPLACE_BASH+=		dev/validate-python
+REPLACE_BASH+=		pylint
+REPLACE_BASH+=		test/ext/test-cat-file
+REPLACE_BASH+=		test/ext/test-command-without-init-fails
+REPLACE_BASH+=		test/ext/test-comparative-split-join
+REPLACE_BASH+=		test/ext/test-compression
+REPLACE_BASH+=		test/ext/test-drecurse
+REPLACE_BASH+=		test/ext/test-fsck
+REPLACE_BASH+=		test/ext/test-fuse
+REPLACE_BASH+=		test/ext/test-gc
+REPLACE_BASH+=		test/ext/test-help
+REPLACE_BASH+=		test/ext/test-import-duplicity
+REPLACE_BASH+=		test/ext/test-import-rdiff-backup
+REPLACE_BASH+=		test/ext/test-index
+REPLACE_BASH+=		test/ext/test-index-check-device
+REPLACE_BASH+=		test/ext/test-index-clear
+REPLACE_BASH+=		test/ext/test-index-save-type-change
+REPLACE_BASH+=		test/ext/test-list-idx
+REPLACE_BASH+=		test/ext/test-ls
+REPLACE_BASH+=		test/ext/test-ls-remote
+REPLACE_BASH+=		test/ext/test-main
+REPLACE_BASH+=		test/ext/test-meta
+REPLACE_BASH+=		test/ext/test-misc
+REPLACE_BASH+=		test/ext/test-on
+REPLACE_BASH+=		test/ext/test-packsizelimit
+REPLACE_BASH+=		test/ext/test-redundant-saves
+REPLACE_BASH+=		test/ext/test-release-archive
+REPLACE_BASH+=		test/ext/test-restore-map-owner
+REPLACE_BASH+=		test/ext/test-restore-single-file
+REPLACE_BASH+=		test/ext/test-rm
+REPLACE_BASH+=		test/ext/test-rm-between-index-and-save
+REPLACE_BASH+=		test/ext/test-save-creates-no-unrefs
+REPLACE_BASH+=		test/ext/test-save-data-race
+REPLACE_BASH+=		test/ext/test-save-errors
+REPLACE_BASH+=		test/ext/test-save-restore
+REPLACE_BASH+=		test/ext/test-save-restore-excludes
+REPLACE_BASH+=		test/ext/test-save-smaller
+REPLACE_BASH+=		test/ext/test-save-strip-graft
+REPLACE_BASH+=		test/ext/test-save-symlink-race
+REPLACE_BASH+=		test/ext/test-save-with-valid-parent
+REPLACE_BASH+=		test/ext/test-sparse-files
+REPLACE_BASH+=		test/ext/test-split-join
+REPLACE_BASH+=		test/ext/test-tz
+REPLACE_BASH+=		test/ext/test-web
+REPLACE_BASH+=		test/ext/test-xdev
+REPLACE_BASH+=		.sh
 
-CONFIGURE_ENV+=		MAKE=${TOOLS_PATH.gmake}
+DOCDIR=			share/doc/${PKGBASE}
 
-REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
-REPLACE_BASH+=		t/compare-trees
-REPLACE_BASH+=		t/configure-sampledata
-REPLACE_BASH+=		t/force-delete
-REPLACE_BASH+=		t/subtree-hash
-REPLACE_BASH+=		t/test-cat-file.sh
-REPLACE_BASH+=		t/test-command-without-init-fails.sh
-REPLACE_BASH+=		t/test-index-check-device.sh
-REPLACE_BASH+=		t/test-meta.sh
-REPLACE_BASH+=		t/test-redundant-saves.sh
-REPLACE_BASH+=		t/test-restore-single-file.sh
-REPLACE_BASH+=		t/test-rm-between-index-and-save.sh
-REPLACE_BASH+=		t/test-save-creates-no-unrefs.sh
-REPLACE_BASH+=		t/test.sh
-REPLACE_BASH+=		wvtest-bup.sh
-
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${DOCDIR}
 
 post-install:
-	${INSTALL_DATA} ${DOCDIR}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/DESIGN ${DESTDIR}${PREFIX}/share/doc/bup
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bup
+	${INSTALL_DATA} ${DIST_MANPAGES}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/DESIGN ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "options.mk"
 
