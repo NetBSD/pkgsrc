@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7475 2023/12/09 09:52:34 otis Exp $
+$NetBSD: CHANGES-2023,v 1.7476 2023/12/09 10:23:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10714,3 +10714,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/knot to 3.3.2 [ryoon 2023-12-09]
 	Updated net/nsd to 4.8.0 [ryoon 2023-12-09]
 	Updated sysutils/zabbix60-server to 6.0.24 [otis 2023-12-09]
+	Updated games/chess-tui to 1.1.0 [pin 2023-12-09]
