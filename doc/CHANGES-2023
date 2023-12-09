@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7474 2023/12/09 06:50:36 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7475 2023/12/09 09:52:34 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10713,3 +10713,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/bup to 0.33.2 [gdt 2023-12-09]
 	Updated net/knot to 3.3.2 [ryoon 2023-12-09]
 	Updated net/nsd to 4.8.0 [ryoon 2023-12-09]
+	Updated sysutils/zabbix60-server to 6.0.24 [otis 2023-12-09]
