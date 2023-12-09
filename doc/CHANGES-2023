@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7478 2023/12/09 10:25:21 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7479 2023/12/09 12:19:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10717,3 +10717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/chess-tui to 1.1.0 [pin 2023-12-09]
 	Updated sysutils/felix to 2.11.0 [pin 2023-12-09]
 	Updated audio/spotify-player to 0.16.1 [pin 2023-12-09]
+	Updated graphics/feh to 3.10.2 [pin 2023-12-09]
