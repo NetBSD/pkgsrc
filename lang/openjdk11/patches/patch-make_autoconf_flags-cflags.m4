@@ -1,8 +1,9 @@
-$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.2 2021/06/27 08:53:54 tnn Exp $
+$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.3 2023/12/09 01:19:54 ryoon Exp $
 
 We prefer to use explicit run paths.
+Add lib/jli to link libjli.so dynamically. Fix runtime error of Bazel.
 
---- make/autoconf/flags-cflags.m4.orig	2021-04-24 02:47:22.000000000 +0000
+--- make/autoconf/flags-cflags.m4.orig	2023-10-18 04:30:34.000000000 +0000
 +++ make/autoconf/flags-cflags.m4
 @@ -39,8 +39,8 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
  
@@ -10,7 +11,7 @@ We prefer to use explicit run paths.
      SHARED_LIBRARY_FLAGS='-shared'
 -    SET_EXECUTABLE_ORIGIN='-Wl,-rpath,\$$ORIGIN[$]1'
 -    SET_SHARED_LIBRARY_ORIGIN="-Wl,-z,origin $SET_EXECUTABLE_ORIGIN"
-+    SET_EXECUTABLE_ORIGIN='@COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib @COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib/server'
++    SET_EXECUTABLE_ORIGIN='@COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib @COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib/server @COMPILER_RPATH_FLAG@@PREFIX@/java/@JAVA_NAME@/lib/jli'
 +    SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
      SET_SHARED_LIBRARY_NAME='-Wl,-soname=[$]1'
      SET_SHARED_LIBRARY_MAPFILE='-Wl,-version-script=[$]1'
