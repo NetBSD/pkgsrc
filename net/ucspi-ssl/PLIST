@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/03 10:44:07 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/12/09 19:10:12 schmonz Exp $
 bin/https@
 bin/sslcat
 bin/sslclient
@@ -12,11 +12,10 @@ man/man1/sslconnect.1
 man/man1/sslhandle.1
 man/man1/sslserver.1
 man/man2/ucspi-tls.2
-share/doc/ucspi-ssl/CERTS
 share/doc/ucspi-ssl/CHAIN-SSL
 share/doc/ucspi-ssl/CHANGES
 share/doc/ucspi-ssl/TLSVERSION_CIPHERSUITES
 share/doc/ucspi-ssl/TLS_1_3
 share/doc/ucspi-ssl/TODO
 share/doc/ucspi-ssl/UCSPI-SSL
-share/examples/ucspi-ssl/dh1024.pem
+share/examples/ucspi-ssl/dh2048.pem
