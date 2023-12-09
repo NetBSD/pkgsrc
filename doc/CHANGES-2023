@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7469 2023/12/08 21:56:22 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7470 2023/12/09 01:20:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10709,3 +10709,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-apsw to 3.44.2.0 [adam 2023-12-08]
 	Updated shells/fish to 3.6.2 [wiz 2023-12-08]
 	Updated graphics/oculante to 0.8.4 [pin 2023-12-08]
+	Updated lang/openjdk11 to 1.11.0.21.9nb1 [ryoon 2023-12-09]
