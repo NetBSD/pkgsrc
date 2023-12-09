@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7481 2023/12/09 13:02:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7482 2023/12/09 13:27:05 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10720,3 +10720,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/feh to 3.10.2 [pin 2023-12-09]
 	Updated geography/py-geojson to 3.1.0 [kleink 2023-12-09]
 	Updated emulators/mame to 0.261 [wiz 2023-12-09]
+	Updated sysutils/zabbix50-server to 5.0.40 [otis 2023-12-09]
