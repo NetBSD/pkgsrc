@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2023/10/24 22:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/12/09 19:10:12 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.12.7
+DISTNAME=		ucspi-ssl-0.12.10
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
-PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -32,13 +31,13 @@ PKG_SYSCONFSUBDIR=	${PKGBASE}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
-CONF_FILES+=		${EGDIR}/dh1024.pem ${PKG_SYSCONFDIR}/dh1024.pem
+CONF_FILES+=		${EGDIR}/dh2048.pem ${PKG_SYSCONFDIR}/dh2048.pem
 
 DJB_CONFIG_DIR=		${WRKSRC}
 DJB_CONFIG_CMDS=							\
 	${ECHO} > conf-ssl;						\
 	${ECHO} ${SSLDIR}/certs > conf-cadir;				\
-	${ECHO} ${PKG_SYSCONFDIR}/dh1024.pem > conf-dhfile;		\
+	${ECHO} ${PKG_SYSCONFDIR}/dh2048.pem > conf-dhfile;		\
 	${ECHO} ${DEFAULT_MEDIUM_CIPHERS} > conf-ciphers;		\
 	${ECHO} it-base > src/it=d;
 
@@ -70,11 +69,11 @@ do-install: do-install-sslperl
 	  ${INSTALL_MAN} ${WRKSRC}/man/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man2
 .endfor
 
-.for i in dh1024.pem
+.for i in dh2048.pem
 	  ${INSTALL_DATA} ${WRKSRC}/etc/${i} ${DESTDIR}${EGDIR}
 .endfor
 
-.for i in CERTS CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
+.for i in CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
 	  ${INSTALL_DATA} ${WRKSRC}/doc/${i} \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
