@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/10 02:17:02 riastradh Exp $
+
+BLAKE2s (inlinedef.r15878.tar.xz) = d41751fb4e87e40c11087c50b78c9a5afdc5cf8329722fd5ef28932aea875213
+SHA512 (inlinedef.r15878.tar.xz) = b98b83ff26b5ecc9826f111d9faef5aa0f51ebcec7978881da2a61287af7aee022dc1b7812ee457885c7813eee0d2200d250ef45648619f3d105e2df54cd21d0
+Size (inlinedef.r15878.tar.xz) = 3696 bytes

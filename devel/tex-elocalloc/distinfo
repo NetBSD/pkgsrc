@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/10 02:17:02 riastradh Exp $
+
+BLAKE2s (elocalloc.r42712.tar.xz) = c1aa482b1921ca2daf06dacc4cb1035d8edd16f9977082d66d5725948a8928a2
+SHA512 (elocalloc.r42712.tar.xz) = 7bd72984c7bc1530e2659364b5e93b643db1accc8a034f6fe8333e26ecc12b8dca9cf40ada0b5986576e266e0eb7c801f9a3e4c2cb7dbe4d8c373ba0f0486ba9
+Size (elocalloc.r42712.tar.xz) = 1084 bytes

@@ -1,0 +1,11 @@
+The package provides a macro \Inline that precedes a \def or
+\gdef. Within the definition text of an inlined definition,
+keywords such as \Expand may be used to selectively inline
+certain expansions at definition-time. This eases the process
+of redefining macros in terms of the original definition, as
+well as definitions in which the token that must be expanded is
+deep within, where \expandafter would be difficult and \edef is
+not suitable. Another application is as an easier version of
+\aftergroup, by defining a macro in terms of expanded local
+variables, then ending the group with
+\expandafter\endgroup\macro.

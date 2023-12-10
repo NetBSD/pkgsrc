@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/10 02:17:02 riastradh Exp $
+share/texmf-dist/makeindex/forest/forest-doc.ist
+share/texmf-dist/tex/latex/forest/forest-compat.sty
+share/texmf-dist/tex/latex/forest/forest-doc.sty
+share/texmf-dist/tex/latex/forest/forest-index.sty
+share/texmf-dist/tex/latex/forest/forest-lib-edges.sty
+share/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
+share/texmf-dist/tex/latex/forest/forest.sty

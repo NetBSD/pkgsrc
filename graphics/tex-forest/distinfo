@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/10 02:17:02 riastradh Exp $
+
+BLAKE2s (forest.r57398.tar.xz) = 8b74852b0269a209b91900a62904ae20cbbd5b1a2e2bbb804864d99fe469eb4e
+SHA512 (forest.r57398.tar.xz) = edc3341b84e7e89fba3bb76004562c0bc889f944ed33474ba9cf5ed5e63a690202e851a30f44158caa8351b874b8e91659bd91c50d59ec43de9460869e4213f1
+Size (forest.r57398.tar.xz) = 56176 bytes

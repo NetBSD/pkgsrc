@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2023/10/29 13:59:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.42 2023/12/10 02:17:03 riastradh Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2023pre3
+PKGNAME=	texlive-${DISTNAME}-2023pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	67297
@@ -69,7 +69,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend figput
 # depend fitbox
 # depend flowchart
-# depend forest
+DEPENDS+=	tex-forest-[0-9]*:../../graphics/tex-forest
 # depend genealogytree
 # depend getmap
 DEPENDS+=	tex-gincltex-[0-9]*:../../print/tex-gincltex
