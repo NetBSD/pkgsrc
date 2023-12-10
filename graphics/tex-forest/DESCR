@@ -1,0 +1,10 @@
+The package provides a PGF/TikZ-based mechanism for drawing
+linguistic (and other kinds of) trees. Its main features are: a
+packing algorithm which can produce very compact trees; a
+user-friendly interface consisting of the familiar bracket
+encoding of trees plus the key-value interface to
+option-setting; many tree-formatting options, with control over
+option values of individual nodes and mechanisms for their
+manipulation; the possibility to decorate the tree using the
+full power of PGF/TikZ; and an externalization mechanism
+sensitive to code-changes.
