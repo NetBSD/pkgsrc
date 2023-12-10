@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7500 2023/12/10 22:11:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7501 2023/12/10 22:12:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10745,3 +10745,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/mirrormagic to 3.3.1 [adam 2023-12-10]
 	Updated games/rocksndiamonds to 4.3.7.1 [adam 2023-12-10]
 	Updated textproc/csvlens to 0.4.0 [pin 2023-12-10]
+	Updated sysutils/navi to 2.23.0 [pin 2023-12-10]
