@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2023/10/22 19:32:21 pin Exp $
+$NetBSD: distinfo,v 1.15 2023/12/10 22:11:11 pin Exp $
 
 BLAKE2s (aho-corasick-1.0.1.crate) = 8e677f89dbadbbfbc2ccd8fffda4c371bda28309eb9935695879405b93ed4c8d
 SHA512 (aho-corasick-1.0.1.crate) = 7cea5b2305b90aebc54f78446cfc91f275b1be8489d2d80c3baa9ff8b913f9b2296adbdf4aefb0d8fce8f57812963fb9450b200d133a9d61e100cef324068070
@@ -69,9 +69,9 @@ Size (csv-core-0.1.10.crate) = 25668 bytes
 BLAKE2s (csv-sniffer-0.3.1.crate) = ba7cd670c609dc03d37cca1cc683ebe0de081a9575fc8af5db1555449a0eb96f
 SHA512 (csv-sniffer-0.3.1.crate) = 2ac1f01176d436d0aeaa57fbb427a61083a97642b8344202de85e0970f8a623cd4f96c3825d53ae3907024ed4598444626f092db9ccd94b39e4d039538a42c72
 Size (csv-sniffer-0.3.1.crate) = 14845 bytes
-BLAKE2s (csvlens-0.3.2.tar.gz) = a7ad71e356b8fbe9acb5c34e8069176b14d8a1a110a6bd4f8efff2b16ba61129
-SHA512 (csvlens-0.3.2.tar.gz) = 7174aed78686eec1a732283300d8236bb5ec37e001a5fe07a7f64aeb6765439296e6db61071d2e34cd8c2b99307e08ce1a5a93e17c4e5d219cdbcb7716ebecc0
-Size (csvlens-0.3.2.tar.gz) = 296472 bytes
+BLAKE2s (csvlens-0.4.0.tar.gz) = 96c1bccee8cb24c8bb5269dea5e67585ee8d0aa74f0e8f962d7349f49ff4c2ad
+SHA512 (csvlens-0.4.0.tar.gz) = 208e04ea27f9bcd93801cee2f7e398435edf22b8d3c48d2f0e7f56156f9b99cb194a7b8db3c819adb235d25b9911387b00b601bbc0af8404e55f9c9dd435a583
+Size (csvlens-0.4.0.tar.gz) = 299730 bytes
 BLAKE2s (errno-0.3.1.crate) = 22841396f43e888a7e319ac2982c0dd6d9561dd89f3877a098787320d5e06077
 SHA512 (errno-0.3.1.crate) = 00d64157d066f1e7601c522c0f4e777eb662ca5cce64682f616de0734857765c343396f7161ac2908c3db0c474995ae157bfe9d8a9880743724d9bd428dfdf54
 Size (errno-0.3.1.crate) = 10348 bytes
