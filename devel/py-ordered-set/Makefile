@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/30 05:54:55 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/10 09:35:35 wiz Exp $
 
 DISTNAME=	ordered-set-4.1.0
 PKGREVISION=	1
@@ -11,8 +11,7 @@ HOMEPAGE=	https://github.com/LuminosoInsight/ordered-set
 COMMENT=	MutableSet that remembers its order
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
