@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/10 18:33:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,7 @@ ${PYSITELIB}/pytest_jupyter/jupyter_core.pyo
 ${PYSITELIB}/pytest_jupyter/jupyter_server.py
 ${PYSITELIB}/pytest_jupyter/jupyter_server.pyc
 ${PYSITELIB}/pytest_jupyter/jupyter_server.pyo
+${PYSITELIB}/pytest_jupyter/py.typed
 ${PYSITELIB}/pytest_jupyter/pytest_tornasync.py
 ${PYSITELIB}/pytest_jupyter/pytest_tornasync.pyc
 ${PYSITELIB}/pytest_jupyter/pytest_tornasync.pyo
