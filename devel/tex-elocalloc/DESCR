@@ -1,0 +1,2 @@
+Local allocation macros, with names taken from etex.sty but
+with implementation based on the LaTeX 2015 allocation macros.
