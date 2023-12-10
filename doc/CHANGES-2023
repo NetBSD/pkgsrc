@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7486 2023/12/09 22:02:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7487 2023/12/10 02:19:48 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10725,3 +10725,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dua-cli to 2.22.0 [pin 2023-12-09]
 	Updated net/ucspi-ssl to 0.999.12.10 [schmonz 2023-12-09]
 	Updated textproc/typst to 0.10.0 [pin 2023-12-09]
+	Added devel/tex-inlinedef version 1.0 [riastradh 2023-12-10]
+	Added devel/tex-elocalloc version 0.03 [riastradh 2023-12-10]
+	Added graphics/tex-forest version 2.1.5 [riastradh 2023-12-10]
+	Updated meta-pkgs/texlive-collection-latexextra to 2023pre8 [riastradh 2023-12-10]
+	Updated meta-pkgs/texlive-collection-pictures to 2023pre4 [riastradh 2023-12-10]
