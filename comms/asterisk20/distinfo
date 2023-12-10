@@ -1,0 +1,36 @@
+$NetBSD: distinfo,v 1.1 2023/12/10 06:40:20 ryoon Exp $
+
+BLAKE2s (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 7c735f257956737dffaf6fe434f291dacb1c6b38c930502cbe35fd4657250e23
+SHA512 (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 4490ceff4fa5f455f2b4ed15e4c58fdc9b4da275006190b7e7e027b5fcc6a96d018574e6f68e69e05090af8303054ad243d34bbbeb0633bb91f253a9963a2a8b
+Size (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 28214209 bytes
+BLAKE2s (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
+SHA512 (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+BLAKE2s (asterisk-20.5.0/pjproject-2.13.1.md5) = 933be89ea03bc24a3a965d37a8985a2af3ea404e24a8fdd296a2be07d5390de0
+SHA512 (asterisk-20.5.0/pjproject-2.13.1.md5) = 5a8c35e79d10760f74d02332f35aad3517fc3c72e62e2b1c35fcb1d613bbad4d96fa07f1cea89514dba2d237a36a698e94b1242be938d492d20b76a130c0d0f1
+Size (asterisk-20.5.0/pjproject-2.13.1.md5) = 172 bytes
+BLAKE2s (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7c04ae740c66f92502684de834b4055e7f4842bcb35f0efc12f183c8d8c37f7f
+SHA512 (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 2f1eb3cb8f52a5536c355b02b1abfa24c7d2263b5338568a7cd8167d349e007c34afafcdd7ed510bfc4fc859494383fac05e8325e46fd66219dbead86c5c3562
+Size (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7825201 bytes
+SHA1 (patch-Makefile) = 7d278c52ace3e972ee0e17b0aec137549d4b8d7c
+SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
+SHA1 (patch-configure) = 262036a7bcdf6e8e8431212a99dbcd65a7be8329
+SHA1 (patch-configure.ac) = 98690ecc0e1cc99b6d7a0cd13412bd1b2b05397a
+SHA1 (patch-contrib_scripts_vmail.cgi) = 7935ce96ea319eb19cc2ce999813eb837d5357c0
+SHA1 (patch-include_asterisk_autoconfig.h.in) = 2f8a986bd3b35ebb384280f0dbf81c32d689ddd2
+SHA1 (patch-include_asterisk_sha1.h) = c332c45a4e8e19926c59d222b1061a6c901b1064
+SHA1 (patch-main_Makefile) = d8b2cdd76dbf4dfa3ae082ce39cc0f8396b368aa
+SHA1 (patch-main_acl.c) = 06a9d247b19d648e9ff54ac2a234dc8ac8c023bb
+SHA1 (patch-main_bridge__channel.c) = 2120e3d623843113066413a5980cef6ece81bd82
+SHA1 (patch-main_pbx__builtins.c) = 7c1d518f05afc1523b247f50b0363e25832c8636
+SHA1 (patch-main_stdtime_localtime.c) = d530bea8f93667a07b707e6fb01c6744aa264d40
+SHA1 (patch-main_taskprocessor.c) = f90805bd78fd4096beb9ee1cf9c794c50b87481a
+SHA1 (patch-main_utils.c) = ab85be3687dd7f39b742bd5e4036f9e297f3e272
+SHA1 (patch-pbx_pbx__dundi.c) = d2a50650a19463304c81fc19c460565b94f91b72
+SHA1 (patch-res_res__rtp__asterisk.c) = a5952d7e25538cdf9786684a05fb05b8f9e1872c
+SHA1 (patch-res_res__xmpp.c) = 8e8951b8a57eac168e9bf4429392ddfe808ef590
+SHA1 (patch-sounds_Makefile) = acc15088ae2545f2822246466bfe783b5215fc54
+SHA1 (patch-tests_test__locale.c) = f3f1edc86356f2a7b4d3493433c772e164c77f66
+SHA1 (patch-third-party_pjproject_patches_0000-pjlib__src__pj__os____core____unix.c.patch) = 4d486aa22c2fb6ea58726830d1b4d1fe5b2b827a
+SHA1 (patch-utils_Makefile) = f8e0e554b74fadff45987d11cf3aa32dca8119ba
+SHA1 (patch-utils_db1-ast_include_db.h) = 03b43353b7967f999ace3eb160828c530e2e8fae
