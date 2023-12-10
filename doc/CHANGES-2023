@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7498 2023/12/10 18:34:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7499 2023/12/10 18:48:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10742,3 +10742,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-mercurial to 6.6.1 [wiz 2023-12-10]
 	Updated textproc/utf8-cpp to 4.0.4 [adam 2023-12-10]
 	Updated www/py-test-jupyter to 0.8.0 [adam 2023-12-10]
+	Updated games/mirrormagic to 3.3.1 [adam 2023-12-10]
+	Updated games/rocksndiamonds to 4.3.7.1 [adam 2023-12-10]
