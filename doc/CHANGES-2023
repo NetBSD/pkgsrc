@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7495 2023/12/10 12:00:15 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7496 2023/12/10 12:39:20 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10738,3 +10738,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added x11/zutty version 0.14 [wiz 2023-12-10]
 	Updated misc/libreoffice to 7.6.4.1 [ryoon 2023-12-10]
 	Updated chat/weechat to 4.1.2 [ryoon 2023-12-10]
+	Updated multimedia/sickgear to 3.30.5 [js 2023-12-10]
