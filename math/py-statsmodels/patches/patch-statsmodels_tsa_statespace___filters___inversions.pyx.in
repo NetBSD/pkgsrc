@@ -1,0 +1,15 @@
+$NetBSD: patch-statsmodels_tsa_statespace___filters___inversions.pyx.in,v 1.1 2023/12/10 09:41:36 wiz Exp $
+
+Cython 3 compatibility.
+https://github.com/statsmodels/statsmodels/pull/8961/
+
+--- statsmodels/tsa/statespace/_filters/_inversions.pyx.in.orig	2021-10-06 09:51:52.000000000 +0000
++++ statsmodels/tsa/statespace/_filters/_inversions.pyx.in
+@@ -1,6 +1,7 @@
+ #cython: boundscheck=False
+ #cython: wraparound=False
+ #cython: cdivision=False
++#cython: cpow=True
+ """
+ State Space Models
+ 
