@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/04/11 08:42:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/12/10 22:12:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	aligned-0.4.1
@@ -26,15 +26,18 @@ CARGO_CRATE_DEPENDS+=	directories-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.2
 CARGO_CRATE_DEPENDS+=	dns_common-0.2.1
 CARGO_CRATE_DEPENDS+=	dns_common_derive-0.2.1
+CARGO_CRATE_DEPENDS+=	dunce-1.0.4
 CARGO_CRATE_DEPENDS+=	edit-0.1.4
 CARGO_CRATE_DEPENDS+=	either-1.6.1
 CARGO_CRATE_DEPENDS+=	errno-0.3.0
 CARGO_CRATE_DEPENDS+=	errno-dragonfly-0.1.2
+CARGO_CRATE_DEPENDS+=	etcetera-0.7.1
 CARGO_CRATE_DEPENDS+=	fs_at-0.1.4
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.1
+CARGO_CRATE_DEPENDS+=	home-0.5.4
 CARGO_CRATE_DEPENDS+=	indexmap-1.9.3
 CARGO_CRATE_DEPENDS+=	io-lifetimes-1.0.9
 CARGO_CRATE_DEPENDS+=	is-terminal-0.4.6
@@ -43,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.140
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.3.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.6
-CARGO_CRATE_DEPENDS+=	log-0.4.14
+CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	matchers-0.1.0
 CARGO_CRATE_DEPENDS+=	memchr-2.4.0
 CARGO_CRATE_DEPENDS+=	mio-0.8.3
