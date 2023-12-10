@@ -1,6 +1,7 @@
-$NetBSD: patch-src_options.h,v 1.1 2023/12/10 11:46:09 wiz Exp $
+$NetBSD: patch-src_options.h,v 1.2 2023/12/10 11:50:43 wiz Exp $
 
 Improve NetBSD support.
+https://github.com/tomscii/zutty/pull/132
 
 --- src/options.h.orig	2023-12-10 11:42:36.219352467 +0000
 +++ src/options.h

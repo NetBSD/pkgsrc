@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2023/12/10 11:46:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/12/10 11:50:43 wiz Exp $
 
 BLAKE2s (zutty-0.14.tar.gz) = 8c9dbd8c8e5aa46adfddfc7dae98e62e98179782b908461444397f1e771570ad
 SHA512 (zutty-0.14.tar.gz) = d73894feefa1fb58c76aa5f9d68a47b9871ab8d02eb5dd2575769c4f082a65cb9df2bdb2478e5aa54d121eb19a16269f169e79d72f0df779760520f2d501c086
 Size (zutty-0.14.tar.gz) = 351015 bytes
-SHA1 (patch-src_options.h) = ff5d39444b7c9174a992685a9b710b3d8e7622cf
-SHA1 (patch-wscript) = d7ba3069964d4a3f84fc1f971f7f04d962f0b488
+SHA1 (patch-src_options.h) = 8cc5c4d7916506eff006a672d8b1acc34827daf4
+SHA1 (patch-wscript) = 2b43dc2f946ac61542840cc4fb8ea3a572c1c85b
