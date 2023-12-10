@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.9 2023/12/09 21:54:52 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.10 2023/12/10 17:10:54 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -215,4 +215,7 @@ sysutils/xentools415: security fix
 
 Pullup ticket #6825 - requested by taca
 net/samba4: security fix
+
+Pullup ticket #6824 - requested by morr
+editors/vim-share: security fix
 
