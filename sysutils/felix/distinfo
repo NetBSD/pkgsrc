@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2023/12/09 10:23:47 pin Exp $
+$NetBSD: distinfo,v 1.61 2023/12/10 06:58:40 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -114,9 +114,9 @@ Size (either-1.9.0.crate) = 16660 bytes
 BLAKE2s (equivalent-1.0.1.crate) = 915ff7ece3e11b5de2f2f26d2da9c4dfa1c7484416c53025c08507677cebebbd
 SHA512 (equivalent-1.0.1.crate) = b2bc60e804c1b02c461dcefcfd60fc37145af710d183ebe65f9a4d63f2b2072d23193f98dc550a9213c7fdc6a2a837af23b04a89294ebbb681a4aaf5d5031140
 Size (equivalent-1.0.1.crate) = 6615 bytes
-BLAKE2s (felix-2.11.0.tar.gz) = ef55d444d79fa7771b57a0df4ce0ccdd92a6266badec109dbaa5cf7bfe1da949
-SHA512 (felix-2.11.0.tar.gz) = f0d4d707b72a14c4ca218d1d18e11a22ebd884d60d800a9663e579a3e3b085079f381127d4cf564d56166330f4c28e3afa60ecf99eb2dc2d4139fcb71c22a729
-Size (felix-2.11.0.tar.gz) = 13353344 bytes
+BLAKE2s (felix-2.11.1.tar.gz) = ac7b2b1dd622d02a9b067f29ef50cc66e522cf2361acde3ddedd55021c3be08a
+SHA512 (felix-2.11.1.tar.gz) = f195b02429fed91552be5c0f712543239e54c549d7944bab3ed743f64b91564366943c36920ee4051ea81103bf3f94ab9b126dd95aaea73adf0905cfe9574ed1
+Size (felix-2.11.1.tar.gz) = 13353415 bytes
 BLAKE2s (filetime-0.2.22.crate) = 935dbfe20d564f94b05fcee2cd3d2069bcd62b4510f587b03b0287e56d50e4d3
 SHA512 (filetime-0.2.22.crate) = d40d8baeb57ec85bb9ccf76ff0f898915c4e6cf384020121b53f4a2a1ef2840af5b4c9e8e1ff177034273f4f7a6bf81d2dd7a02cf498b61ea31ceaa30b877067
 Size (filetime-0.2.22.crate) = 15029 bytes
