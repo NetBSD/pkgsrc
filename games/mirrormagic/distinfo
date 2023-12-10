@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2023/10/20 09:53:38 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/12/10 18:47:20 adam Exp $
 
-BLAKE2s (mirrormagic-3.3.0-linux.tar.gz) = eca14ba828b5e75f094e95433c5ad629fcc37c854ce3a6056318bbcda854f0a6
-SHA512 (mirrormagic-3.3.0-linux.tar.gz) = 5dca010db2f4f2d1ae1a4ab83d0d78d44e59948728f0756c7f2dede3d09ddd92e853fa848ce509a4826609e33daf32a3dde8c2b8bd67af0d91fb7a86dfdc05ff
-Size (mirrormagic-3.3.0-linux.tar.gz) = 5686178 bytes
+BLAKE2s (mirrormagic-3.3.1-linux.tar.gz) = d12abd6a5931c70123abc46c187f4acdbe97a2ea9a7d857d5185ab95485f9cf3
+SHA512 (mirrormagic-3.3.1-linux.tar.gz) = 04f82a4f6616b9676cb493f7796e1ec43d71874d5f55286b3ae55539f1d5fb422cac35dc7d248b59af3142cf598e0c4212f9401654d7bf91e28c69c0839665a7
+Size (mirrormagic-3.3.1-linux.tar.gz) = 5691433 bytes
 SHA1 (patch-src_Makefile) = 0636da56f74733cc1f7babb25851b20cc57fdaee
 SHA1 (patch-src_libgame_joystick.c) = 2c2e93718743ed8be1fa009ae870fe9c85cb9a30
 SHA1 (patch-src_libgame_joystick.h) = a6bae0443a6285b9e4179119f1101ba7bf8d6727
