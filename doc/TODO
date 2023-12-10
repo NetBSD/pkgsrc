@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23740 2023/12/07 18:32:37 wiz Exp $
+$NetBSD: TODO,v 1.23741 2023/12/10 09:34:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,6 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-23.3.0
@@ -457,7 +458,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-1.1.10
+	o arti-1.1.11
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -629,6 +630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o fish-3.6.4
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -664,7 +666,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcc-mips-current-7.1.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
-	o gdb-13.2
+	o gdb-14.1
 	o gdb7-7.12
 	o geneweb-7.0.0
 	o gens-2.15.5
@@ -823,6 +825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.12.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -981,6 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nedit-5.7
 	o netramet-50
 	o newmail-1.0.2
+	o nickle-2.96
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -1116,6 +1120,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.27
+	o plasma-wayland-protocols-1.12.0
 	o ploticus-examples-230
 	o ply-3.11
 	o poco-1.12.4
@@ -1151,31 +1156,47 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-Theano-1.0.5
+	o py-acme-2.8.0
 	o py-barman-3.0.1
+	o py-bitarray-2.8.5
 	o py-borgbackup-1.2.7
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
+	o py-certbot-2.8.0
+	o py-certbot-nginx-2.8.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-diffoscope-242
+	o py-django-5.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-core-2.15.0
+	o py-google-api-python-client-2.110.0
+	o py-google-auth-2.25.2
+	o py-googleapis-common-protos-1.62.0
+	o py-grpcio-1.60.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-importlib-metadata-7.0.0
 	o py-input-pad-1.4.2
+	o py-isort-5.13.0
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.6.1
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
+	o py-nh3-0.2.15
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-packageurl-0.12.0
+	o py-pathspec-0.12.0
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
@@ -1183,6 +1204,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.1.7
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1191,7 +1213,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-typing-extensions-4.9.0
 	o py-uliweb-0.6
+	o py-urwid-2.3.4
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1362,7 +1386,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0.5
+	o tor-browser-13.0.6
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
@@ -1497,6 +1521,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.8.0
 	o zopeedit-0.8
+	o zxing-cpp-2.2.0
 
 Licenses of packages
 ====================
