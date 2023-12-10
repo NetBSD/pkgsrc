@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2023/10/31 13:47:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.86 2023/12/10 02:17:03 riastradh Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre7
+PKGNAME=	texlive-${DISTNAME}-2023pre8
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	67376
@@ -418,7 +418,7 @@ DEPENDS+=	tex-ecv-[0-9]*:../../print/tex-ecv
 # depend elements
 DEPENDS+=	tex-ellipsis-[0-9]*:../../print/tex-ellipsis
 # depend elmath
-# depend elocalloc
+DEPENDS+=	tex-elocalloc-[0-9]*:../../print/tex-elocalloc
 # depend elpres
 # depend elzcards
 # depend emarks
@@ -701,7 +701,7 @@ DEPENDS+=	tex-import-[0-9]*:../../print/tex-import
 DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend indextools
 # depend inline-images
-# depend inlinedef
+DEPENDS+=	tex-inlinedef-[0-9]*:../../print/tex-inlinedef
 # depend inlinelabel
 DEPENDS+=	tex-inputenx-[0-9]*:../../print/tex-inputenx
 # depend inputtrc

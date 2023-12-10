@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/10 02:17:02 riastradh Exp $
+share/texmf-dist/doc/latex/inlinedef/README
+share/texmf-dist/doc/latex/inlinedef/inlinedef.pdf
+share/texmf-dist/doc/latex/inlinedef/inlinetest.tex

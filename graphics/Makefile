@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1031 2023/11/21 19:56:36 markd Exp $
+# $NetBSD: Makefile,v 1.1032 2023/12/10 02:17:02 riastradh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -664,6 +664,8 @@ SUBDIR+=	tex-feynmp-auto
 SUBDIR+=	tex-feynmp-auto-doc
 SUBDIR+=	tex-fiziko
 SUBDIR+=	tex-fiziko-doc
+SUBDIR+=	tex-forest
+SUBDIR+=	tex-forest-doc
 SUBDIR+=	tex-garrigues
 SUBDIR+=	tex-garrigues-doc
 SUBDIR+=	tex-gmp

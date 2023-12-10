@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4146 2023/12/08 07:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4147 2023/12/10 02:17:02 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -3482,8 +3482,12 @@ SUBDIR+=	tet3
 SUBDIR+=	tevent
 SUBDIR+=	tex-doclicense
 SUBDIR+=	tex-doclicense-doc
+SUBDIR+=	tex-elocalloc
+SUBDIR+=	tex-elocalloc-doc
 SUBDIR+=	tex-etoolbox
 SUBDIR+=	tex-etoolbox-doc
+SUBDIR+=	tex-inlinedef
+SUBDIR+=	tex-inlinedef-doc
 SUBDIR+=	tex-l3backend
 SUBDIR+=	tex-l3backend-doc
 SUBDIR+=	tex-l3experimental
