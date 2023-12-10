@@ -1,6 +1,7 @@
-$NetBSD: patch-wscript,v 1.1 2023/12/10 11:46:09 wiz Exp $
+$NetBSD: patch-wscript,v 1.2 2023/12/10 11:50:43 wiz Exp $
 
 Import NetBSD support.
+https://github.com/tomscii/zutty/pull/132
 
 --- wscript.orig	2023-12-10 11:43:29.529577950 +0000
 +++ wscript
