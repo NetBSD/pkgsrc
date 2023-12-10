@@ -1,0 +1,50 @@
+$NetBSD: patch-configure,v 1.1 2023/12/10 06:40:20 ryoon Exp $
+
+--- configure.orig	2023-10-18 17:10:25.000000000 +0000
++++ configure
+@@ -9229,7 +9229,7 @@ $as_echo_n "checking for clang -fblocks.
+ 				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+-			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
++			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
+ 				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
+ 				AST_CLANG_BLOCKS="-fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -15322,7 +15322,7 @@ fi
+ done
+ 
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+ 
+ else
+@@ -17539,7 +17539,7 @@ rm -f core conftest.err conftest.$ac_obj
+ LDFLAGS=${old_LDFLAGS}
+ rm -f conftest.dynamics
+ 
+-ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
++ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_poll_h" = xyes; then :
+   HAS_POLL=1
+ 
+@@ -18199,6 +18199,18 @@ if test "${ac_cv_pthread_once_needsbrace
+ $as_echo "#define PTHREAD_ONCE_INIT_NEEDS_BRACES 1" >>confdefs.h
+ 
+ fi
++ac_fn_c_check_func "$LINENO" "strftime_l" "ac_cv_func_strftime_l"
++if test "x$ac_cv_func_strftime_l" = xyes
++then :
++  printf "%s\n" "#define HAVE_STRFTIME_L 1" >>confdefs.h
++
++fi
++ac_fn_c_check_func "$LINENO" "strptime_l" "ac_cv_func_strptime_l"
++if test "x$ac_cv_func_strptime_l" = xyes
++then :
++  printf "%s\n" "#define HAVE_STRPTIME_L 1" >>confdefs.h
++
++fi
+ 
+ 
+     if test "x${PBX_PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP}" != "x1"; then
