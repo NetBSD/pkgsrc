@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7487 2023/12/10 02:19:48 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.7488 2023/12/10 06:40:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10730,3 +10730,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/tex-forest version 2.1.5 [riastradh 2023-12-10]
 	Updated meta-pkgs/texlive-collection-latexextra to 2023pre8 [riastradh 2023-12-10]
 	Updated meta-pkgs/texlive-collection-pictures to 2023pre4 [riastradh 2023-12-10]
+	Added comms/asterisk20 version 20.5.0 [ryoon 2023-12-10]
