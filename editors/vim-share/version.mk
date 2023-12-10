@@ -1,7 +1,7 @@
-# $NetBSD: version.mk,v 1.142 2023/09/16 12:21:18 rhialto Exp $
+# $NetBSD: version.mk,v 1.142.2.1 2023/12/10 17:09:35 bsiegert Exp $
 
 VIM_VERSION=		9.0
-VIM_PATCHLEVEL=		1900
+VIM_PATCHLEVEL=		2122
 # Changelog: see http://ftp.vim.org/pub/vim/patches/9.0/
 VIM_SUBDIR=		vim90
 
