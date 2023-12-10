@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7490 2023/12/10 07:00:23 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7491 2023/12/10 09:22:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10733,3 +10733,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added comms/asterisk20 version 20.5.0 [ryoon 2023-12-10]
 	Updated sysutils/felix to 2.11.1 [pin 2023-12-10]
 	Updated sysutils/xcp to 0.13.0 [pin 2023-12-10]
+	Updated www/php-nextcloud to 27.1.4 [ryoon 2023-12-10]
