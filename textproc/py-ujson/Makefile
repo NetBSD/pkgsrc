@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/06/12 10:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/11 16:57:49 adam Exp $
 
-DISTNAME=	ujson-5.8.0
+DISTNAME=	ujson-5.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/ujson/}
@@ -10,17 +10,13 @@ HOMEPAGE=	https://github.com/esnme/ultrajson
 COMMENT=	Ultra fast JSON encoder and decoder for Python
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
