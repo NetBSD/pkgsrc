@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7521 2023/12/11 12:22:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7522 2023/12/11 17:18:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10769,3 +10769,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pathspec to 0.12.1 [adam 2023-12-11]
 	Updated security/py-bcrypt to 4.1.1 [adam 2023-12-11]
 	Updated devel/py-greenlet to 3.0.2 [adam 2023-12-11]
+	Updated textproc/py-ujson to 5.9.0 [adam 2023-12-11]
+	Updated devel/py-fixtures to 4.1.0 [adam 2023-12-11]
+	Updated devel/py-testtools to 2.7.1 [adam 2023-12-11]
+	Updated security/py-bandit to 1.7.6 [adam 2023-12-11]
