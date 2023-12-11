@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2023/12/07 11:56:25 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/12/11 09:52:13 wiz Exp $
 
-DISTNAME=	importlib_metadata-6.9.0
+DISTNAME=	importlib_metadata-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf-[0-9]*:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
 
