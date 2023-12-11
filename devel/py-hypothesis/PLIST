@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.40 2023/10/04 20:40:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/12/11 20:46:39 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_hypothesis_ftz_detector.py
 ${PYSITELIB}/_hypothesis_ftz_detector.pyc
 ${PYSITELIB}/_hypothesis_ftz_detector.pyo
@@ -16,9 +15,6 @@ ${PYSITELIB}/_hypothesis_pytestplugin.pyo
 ${PYSITELIB}/hypothesis/__init__.py
 ${PYSITELIB}/hypothesis/__init__.pyc
 ${PYSITELIB}/hypothesis/__init__.pyo
-${PYSITELIB}/hypothesis/_error_if_old.py
-${PYSITELIB}/hypothesis/_error_if_old.pyc
-${PYSITELIB}/hypothesis/_error_if_old.pyo
 ${PYSITELIB}/hypothesis/_settings.py
 ${PYSITELIB}/hypothesis/_settings.pyc
 ${PYSITELIB}/hypothesis/_settings.pyo
@@ -199,9 +195,9 @@ ${PYSITELIB}/hypothesis/internal/healthcheck.pyo
 ${PYSITELIB}/hypothesis/internal/intervalsets.py
 ${PYSITELIB}/hypothesis/internal/intervalsets.pyc
 ${PYSITELIB}/hypothesis/internal/intervalsets.pyo
-${PYSITELIB}/hypothesis/internal/lazyformat.py
-${PYSITELIB}/hypothesis/internal/lazyformat.pyc
-${PYSITELIB}/hypothesis/internal/lazyformat.pyo
+${PYSITELIB}/hypothesis/internal/observability.py
+${PYSITELIB}/hypothesis/internal/observability.pyc
+${PYSITELIB}/hypothesis/internal/observability.pyo
 ${PYSITELIB}/hypothesis/internal/reflection.py
 ${PYSITELIB}/hypothesis/internal/reflection.pyc
 ${PYSITELIB}/hypothesis/internal/reflection.pyo
