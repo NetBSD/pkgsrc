@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23749 2023/12/11 09:52:28 wiz Exp $
+$NetBSD: TODO,v 1.23750 2023/12/11 09:55:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1179,7 +1179,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
-	o py-isort-5.13.0
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
 	o py-mock-5.0.2
