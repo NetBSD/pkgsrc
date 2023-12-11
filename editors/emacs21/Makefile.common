@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2021/10/06 15:33:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2023/12/11 01:03:55 gdt Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -10,6 +10,9 @@ MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
+
+# configure: error: Emacs hasn't been ported to `x86_64-apple-darwin17' systems.
+BROKEN_ON_PLATFORM=	Darwin-*-*
 
 CONFLICTS=	mule-[0-9]*
 
