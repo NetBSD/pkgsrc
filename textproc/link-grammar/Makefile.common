@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/10/15 06:39:25 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/12/11 16:32:19 jperkin Exp $
 #
 # used by textproc/link-grammar/Makefile
 # used by textproc/py-link-grammar/Makefile
@@ -24,5 +24,7 @@ CONFIGURE_ARGS+=	--disable-java-bindings
 # The configure script purports to check whether the compiler
 # supports it, but doesn't do so correctly.
 BUILDLINK_TRANSFORM+=	rm:-Wformat-signedness
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../devel/pcre2/buildlink3.mk"
