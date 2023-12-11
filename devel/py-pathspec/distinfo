@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/12/11 09:59:52 wiz Exp $
+$NetBSD: distinfo,v 1.20 2023/12/11 11:01:45 adam Exp $
 
-BLAKE2s (pathspec-0.12.0.tar.gz) = b90139cc8471dca2c8d67f2658402cb501446cd763261585dddd0b29ed593221
-SHA512 (pathspec-0.12.0.tar.gz) = c95546a0301333ab42e2af63f0729c3b6ad9ec3b9d3773f3201912866d8544a233ffe8878d1cf96abc6cbb7b46743927cc78233c11812c8d5ffed38be8a4e328
-Size (pathspec-0.12.0.tar.gz) = 50357 bytes
+BLAKE2s (pathspec-0.12.1.tar.gz) = bca2f7ff0049079d452846d4a26c956c722effa7ecf2961e52f9d677b9e36421
+SHA512 (pathspec-0.12.1.tar.gz) = 19d1a8ae5936e76eacd691b0e2fb33d0de376556751a9ae007f6b09d0aa36af7d171101df620cab3e93c9913be578ff3d6bba9d4460351ac248e5c9e015380ad
+Size (pathspec-0.12.1.tar.gz) = 51043 bytes
