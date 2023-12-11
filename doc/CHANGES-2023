@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7522 2023/12/11 17:18:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7523 2023/12/11 20:54:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10773,3 +10773,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-fixtures to 4.1.0 [adam 2023-12-11]
 	Updated devel/py-testtools to 2.7.1 [adam 2023-12-11]
 	Updated security/py-bandit to 1.7.6 [adam 2023-12-11]
+	Updated devel/py-hypothesis to 6.92.0 [adam 2023-12-11]
+	Updated devel/py-hypothesmith to 0.3.1 [adam 2023-12-11]
+	Updated devel/py-isort to 5.13.1 [adam 2023-12-11]
