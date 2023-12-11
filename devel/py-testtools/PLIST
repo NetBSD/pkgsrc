@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2022/01/27 11:24:18 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2023/12/11 17:16:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/testtools/__init__.py
 ${PYSITELIB}/testtools/__init__.pyc
 ${PYSITELIB}/testtools/__init__.pyo
+${PYSITELIB}/testtools/_version.py
+${PYSITELIB}/testtools/_version.pyc
+${PYSITELIB}/testtools/_version.pyo
 ${PYSITELIB}/testtools/assertions.py
 ${PYSITELIB}/testtools/assertions.pyc
 ${PYSITELIB}/testtools/assertions.pyo
@@ -21,12 +22,6 @@ ${PYSITELIB}/testtools/content.pyo
 ${PYSITELIB}/testtools/content_type.py
 ${PYSITELIB}/testtools/content_type.pyc
 ${PYSITELIB}/testtools/content_type.pyo
-${PYSITELIB}/testtools/deferredruntest.py
-${PYSITELIB}/testtools/deferredruntest.pyc
-${PYSITELIB}/testtools/deferredruntest.pyo
-${PYSITELIB}/testtools/distutilscmd.py
-${PYSITELIB}/testtools/distutilscmd.pyc
-${PYSITELIB}/testtools/distutilscmd.pyo
 ${PYSITELIB}/testtools/helpers.py
 ${PYSITELIB}/testtools/helpers.pyc
 ${PYSITELIB}/testtools/helpers.pyo
@@ -144,9 +139,6 @@ ${PYSITELIB}/testtools/tests/test_content.pyo
 ${PYSITELIB}/testtools/tests/test_content_type.py
 ${PYSITELIB}/testtools/tests/test_content_type.pyc
 ${PYSITELIB}/testtools/tests/test_content_type.pyo
-${PYSITELIB}/testtools/tests/test_distutilscmd.py
-${PYSITELIB}/testtools/tests/test_distutilscmd.pyc
-${PYSITELIB}/testtools/tests/test_distutilscmd.pyo
 ${PYSITELIB}/testtools/tests/test_fixturesupport.py
 ${PYSITELIB}/testtools/tests/test_fixturesupport.pyc
 ${PYSITELIB}/testtools/tests/test_fixturesupport.pyo
