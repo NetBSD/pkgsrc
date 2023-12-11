@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2023/10/20 11:33:03 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.14 2023/12/11 10:07:09 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/urwid/__init__.py
 ${PYSITELIB}/urwid/__init__.pyc
 ${PYSITELIB}/urwid/__init__.pyo
@@ -93,7 +92,7 @@ ${PYSITELIB}/urwid/signals.pyo
 ${PYSITELIB}/urwid/split_repr.py
 ${PYSITELIB}/urwid/split_repr.pyc
 ${PYSITELIB}/urwid/split_repr.pyo
-${PYSITELIB}/urwid/str_util.so
+${PYSITELIB}/urwid/str_util.abi3.so
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
