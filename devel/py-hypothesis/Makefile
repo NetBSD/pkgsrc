@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2023/12/11 20:46:39 adam Exp $
+# $NetBSD: Makefile,v 1.131 2023/12/11 20:51:28 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/HypothesisWorks/hypothesis
 COMMENT=	Python library for property based testing
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.1.0:../../devel/py-sortedcontainers
 
