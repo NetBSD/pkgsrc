@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7519 2023/12/11 10:27:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7520 2023/12/11 11:02:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10765,3 +10765,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py311-html-docs to 3.11.7 [adam 2023-12-11]
 	Updated graphics/ImageMagick to 7.1.1.23 [wiz 2023-12-11]
 	Updated graphics/p5-PerlMagick to 7.1.1.23 [wiz 2023-12-11]
+	Updated devel/py-packageurl to 0.13.0 [adam 2023-12-11]
+	Updated devel/py-pathspec to 0.12.1 [adam 2023-12-11]
