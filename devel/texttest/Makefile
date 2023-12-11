@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/11/14 14:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/12/11 21:41:06 schmonz Exp $
 
-DISTNAME=		texttest-4.3.0
+DISTNAME=		texttest-4.3.1
 GITHUB_TAG=		${PKGVERSION_NOREV}
 PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		4
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=texttest/}
 
@@ -19,6 +18,7 @@ USE_LANGUAGES=		# none
 
 REPLACE_PYTHON+=	texttestlib/default/batch/__init__.py
 REPLACE_PYTHON+=	texttestlib/default/virtualdisplay.py
+REPLACE_PYTHON+=	texttestlib/log/logconfiggen_setup.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
