@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/11 09:51:33 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_perf/deco.py
+${PYSITELIB}/pytest_perf/deco.pyc
+${PYSITELIB}/pytest_perf/deco.pyo
+${PYSITELIB}/pytest_perf/plugin.py
+${PYSITELIB}/pytest_perf/plugin.pyc
+${PYSITELIB}/pytest_perf/plugin.pyo
+${PYSITELIB}/pytest_perf/runner.py
+${PYSITELIB}/pytest_perf/runner.pyc
+${PYSITELIB}/pytest_perf/runner.pyo
