@@ -1,0 +1,7 @@
+Run performance tests against the mainline code.
+
+To use it, include pytest-perf in the test dependencies for your
+project, then create some Python module in your package. The plugin
+will include any module that contains the text "pytest_perf" and
+will run performance tests on each function containing "perf" in
+the name.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/11 09:51:33 wiz Exp $
+
+BLAKE2s (pytest-perf-0.13.1.tar.gz) = 7071b13f12e77ed12063a073fb3e8538e526625459769affc2730604674c2073
+SHA512 (pytest-perf-0.13.1.tar.gz) = 745f10ea3077913405f41d52a2af7cd97aebcb9d4ec1281a5cb170d7436c798bb4f77f09d78bbf5f4ba12c4a505e4dc69b538bb5acb7914174ecb633375f0d85
+Size (pytest-perf-0.13.1.tar.gz) = 11804 bytes
