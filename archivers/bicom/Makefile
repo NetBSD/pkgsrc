@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 14:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/12/11 23:52:52 zafer Exp $
 #
 
 DISTNAME=		bicom101
 PKGNAME=		bicom-1.01
 PKGREVISION=		2
 CATEGORIES=		archivers
-MASTER_SITES=		http://www3.sympatico.ca/mt0000/bicom/
+MASTER_SITES=		https://www.aydogan.net/distfiles/archivers/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
