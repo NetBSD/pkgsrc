@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2023/10/26 08:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.130 2023/12/11 20:46:39 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
-DISTNAME=	hypothesis-6.88.1
+DISTNAME=	hypothesis-6.92.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -12,12 +12,10 @@ HOMEPAGE=	https://github.com/HypothesisWorks/hypothesis
 COMMENT=	Python library for property based testing
 LICENSE=	mpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.1.0:../../devel/py-sortedcontainers
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -30,5 +28,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} hypothesis hypothesis-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
