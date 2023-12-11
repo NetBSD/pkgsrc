@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7517 2023/12/11 10:24:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7518 2023/12/11 10:25:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10763,3 +10763,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/nickle to 2.96 [wiz 2023-12-11]
 	Updated lang/python311 to 3.11.7 [adam 2023-12-11]
 	Updated lang/py311-html-docs to 3.11.7 [adam 2023-12-11]
+	Updated graphics/ImageMagick to 7.1.1.23 [wiz 2023-12-11]
