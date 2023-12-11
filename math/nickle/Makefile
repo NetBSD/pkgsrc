@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/12/07 18:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/12/11 10:11:04 wiz Exp $
 
-DISTNAME=	nickle-2.95
+DISTNAME=	nickle-2.96
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 
