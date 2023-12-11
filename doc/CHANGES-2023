@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7505 2023/12/11 09:41:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7506 2023/12/11 09:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10750,3 +10750,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ruff to 0.1.7 [wiz 2023-12-11]
 	Updated shells/fish to 3.6.4 [wiz 2023-12-11]
 	Updated devel/jj to 0.12.0 [wiz 2023-12-11]
+	Updated devel/py-bitarray to 2.8.5 [wiz 2023-12-11]
