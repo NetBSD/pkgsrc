@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7512 2023/12/11 10:00:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7513 2023/12/11 10:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10757,3 +10757,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nh3 to 0.2.15 [wiz 2023-12-11]
 	Updated devel/py-packageurl to 0.12.0 [wiz 2023-12-11]
 	Updated devel/py-pathspec to 0.12.0 [wiz 2023-12-11]
+	Updated devel/py-typing-extensions to 4.9.0 [wiz 2023-12-11]
