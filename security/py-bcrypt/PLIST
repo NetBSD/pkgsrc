@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/13 10:50:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/12/11 12:14:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/bcrypt/__about__.py
-${PYSITELIB}/bcrypt/__about__.pyc
-${PYSITELIB}/bcrypt/__about__.pyo
 ${PYSITELIB}/bcrypt/__init__.py
 ${PYSITELIB}/bcrypt/__init__.pyc
+${PYSITELIB}/bcrypt/__init__.pyi
 ${PYSITELIB}/bcrypt/__init__.pyo
 ${PYSITELIB}/bcrypt/_bcrypt.abi3.so
-${PYSITELIB}/bcrypt/_bcrypt.pyi
 ${PYSITELIB}/bcrypt/py.typed

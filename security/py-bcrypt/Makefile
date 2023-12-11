@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/11/15 15:28:53 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/11 12:14:36 adam Exp $
 
-DISTNAME=	bcrypt-4.0.1
+DISTNAME=	bcrypt-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
@@ -10,10 +10,9 @@ HOMEPAGE=	https://github.com/pyca/bcrypt
 COMMENT=	Modern password hashing for your software and your servers
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
