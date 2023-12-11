@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7508 2023/12/11 09:52:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7509 2023/12/11 09:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10753,3 +10753,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.8.5 [wiz 2023-12-11]
 	Added devel/py-test-perf version 0.13.1 [wiz 2023-12-11]
 	Updated devel/py-importlib-metadata to 7.0.0 [wiz 2023-12-11]
+	Updated devel/py-isort to 5.13.0 [wiz 2023-12-11]
