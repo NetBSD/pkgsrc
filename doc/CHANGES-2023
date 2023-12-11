@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7514 2023/12/11 10:07:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7515 2023/12/11 10:10:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10759,3 +10759,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pathspec to 0.12.0 [wiz 2023-12-11]
 	Updated devel/py-typing-extensions to 4.9.0 [wiz 2023-12-11]
 	Updated devel/py-urwid to 2.3.4 [wiz 2023-12-11]
+	Updated graphics/zxing-cpp to 2.2.1 [wiz 2023-12-11]
