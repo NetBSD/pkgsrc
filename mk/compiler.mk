@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.107 2023/08/02 15:59:58 nia Exp $
+# $NetBSD: compiler.mk,v 1.108 2023/12/12 16:28:45 gdt Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -50,17 +50,24 @@
 # The following variables may be set by a package:
 #
 # USE_LANGUAGES
-#	Declares the languages that should be made available via
-#	pkgsrc's compiler wrappers.
+#	Declares the languages that should be made available
+#	via pkgsrc's compiler wrappers.
 #
-#	If the package assumes the compiler defaults to a specific
-#	language version, the USE_LANGUAGES variable can also be used
-#	to force the inclusion of flags such as -std=c++11. In this case,
-#	USE_CC_FEATURES/USE_CXX_FEATURES should also be set.
+#	Valid values are: c, c++, fortran, fortran77, java, objc,
+#	obj-c++, ada.
 #
-#	Valid values are: c, c99, gnu99, c11, gnu11, c17, gnu17, c++, c++03,
-#	gnu++03, c++0x, gnu++0x, c++11, gnu++11, c++14, gnu++14, c++17,
-#	gnu++17, c++20, gnu++20, fortran, fortran77, java, objc, obj-c++, ada.
+#	There is deprecated support for expressing a specific language
+#	dialect (e.g. c++17) in USE_LANGUAGES.  This both requires a
+#	compiler that supports that dialect, and adds -std= flags via
+#	the wrappers.  (Instead, following the documentation below,
+#	the language dialect should be added to USE_C_FEATURES or
+#	USE_CXX_FEATURES to require a compiler with support, and if
+#	the package does not add -std flags itself, then FORCE_C_STD
+#	or FORCE_CXX_STD should be set.)
+#
+#       Deprecated values are: c99, gnu99, c11, gnu11, c17, gnu17,
+#	c++03, gnu++03, c++0x, gnu++0x, c++11, gnu++11, c++14,
+#	gnu++14, c++17, gnu++17, c++20, gnu++20.
 #
 #	The default is "c".
 #
@@ -102,7 +109,7 @@
 #	uses features from a later or earlier C++ standard but doesn't set
 #	-std=c++XX, since the default dialect choice of different compiler
 #	versions is not consistent.  It is also useful if a package
-#	wants to use GNU language extensions without setting -std=gnu++XX.
+#	uses GNU language extensions without setting -std=gnu++XX.
 #
 #	Valid values are: c++03, c++11, c++14, c++17, c++20, gnu++03,
 #	gnu++11, gnu++17, gnu++20
