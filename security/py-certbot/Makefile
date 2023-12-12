@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/10/26 09:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/12/12 16:39:34 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 # Needed for the test target
 # https://github.com/certbot/certbot/issues/2956
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
@@ -48,7 +47,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

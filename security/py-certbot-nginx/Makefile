@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/10/19 14:25:19 nia Exp $
+# $NetBSD: Makefile,v 1.22 2023/12/12 16:39:35 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -19,7 +19,7 @@ SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	certbot_nginx/_internal/constants.py
 SUBST_VARS.paths=	PKG_SYSCONFDIR
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
