@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7525 2023/12/11 21:41:12 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7526 2023/12/12 14:42:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10779,3 +10779,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.9.0 [adam 2023-12-11]
 	Updated devel/py-argcomplete to 3.2.1 [adam 2023-12-11]
 	Updated devel/texttest to 4.3.1 [schmonz 2023-12-11]
+	Updated audio/spotify-player to 0.16.2 [wiz 2023-12-12]
