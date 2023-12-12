@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7526 2023/12/12 14:42:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7527 2023/12/12 16:40:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10780,3 +10780,19 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-argcomplete to 3.2.1 [adam 2023-12-11]
 	Updated devel/texttest to 4.3.1 [schmonz 2023-12-11]
 	Updated audio/spotify-player to 0.16.2 [wiz 2023-12-12]
+	Updated security/py-acme to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-apache to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-digitalocean to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-dnsimple to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-gehirn to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-google to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-linode to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-luadns to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-nsone to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-ovh to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-rfc2136 to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-route53 to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-dns-sakuracloud to 2.8.0 [adam 2023-12-12]
+	Updated security/py-certbot-nginx to 2.8.0 [adam 2023-12-12]
