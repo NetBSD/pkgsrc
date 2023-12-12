@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/12/05 16:04:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/12 01:04:45 schmonz Exp $
 
 DISTNAME=		twitch-tui-2.6.1
 CATEGORIES=		chat
@@ -13,4 +13,5 @@ LICENSE=		apache-2.0 AND mit
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
