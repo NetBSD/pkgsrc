@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/05/31 19:06:27 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/12/12 21:58:59 adam Exp $
 
-BLAKE2s (QScintilla_src-2.14.0.tar.gz) = b9358db2dd8fdc72acad908e4c39b59a59a8e16495a308da9b3cd7b406d6aa44
-SHA512 (QScintilla_src-2.14.0.tar.gz) = 28a38fa9a5ea80f846ad940870ad6201cb6ff91bd10ebeb2c353aa6c2ce727f92beb62bdd9fb20715f92b1f8753088a6e1b2ca7f92c6b81a9f1c242e9974f0fd
-Size (QScintilla_src-2.14.0.tar.gz) = 3234541 bytes
+BLAKE2s (QScintilla_src-2.14.1.tar.gz) = 356f4eb5d49f0a81eb10a28da6353ff2ba61a770cba6c190ed6993f7576c1081
+SHA512 (QScintilla_src-2.14.1.tar.gz) = 19e2f9e0a14947501c575018df368d24eb7f8c74e74faa5246db36415bf28dc0beee507ed0e73107c02b36a99bbaf55f0ef3349f479d2332e1b92b2c4a32788a
+Size (QScintilla_src-2.14.1.tar.gz) = 3233610 bytes
