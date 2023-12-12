@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2017/06/26 09:48:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/12 12:18:07 zafer Exp $
 
 DISTNAME=		unalz-0.65
 CATEGORIES=		archivers
-MASTER_SITES=		https://kippler.com/win/unalz/
+MASTER_SITES=		http://kippler.com/win/unalz/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://kippler.com/win/unalz/
+HOMEPAGE=		http://kippler.com/win/unalz/
 COMMENT=		Alzip archive (.alz) extractor
 LICENSE=		zlib
 
