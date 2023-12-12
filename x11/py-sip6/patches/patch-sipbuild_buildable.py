@@ -1,7 +1,12 @@
-$NetBSD: patch-sipbuild_buildable.py,v 1.1 2023/08/06 19:18:35 adam Exp $
+$NetBSD: patch-sipbuild_buildable.py,v 1.2 2023/12/12 14:14:15 gdt Exp $
 
 Fix for Python < 3.11: importlib.machinery has to be imported directly.
 For consitent PLISTs across platforms, always return .abi3 suffix.
+
+Sent upstream 202312.  Upstream has applied the first hunk.
+Upstream said the that second hunk is wrong; things really do change
+with the limited api.  To be dropped on update to 6.8.1 and we'll have
+to revisit the original problem.
 
 --- sipbuild/buildable.py.orig	2023-08-02 11:50:08.000000000 +0000
 +++ sipbuild/buildable.py
