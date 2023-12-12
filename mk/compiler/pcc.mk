@@ -1,4 +1,4 @@
-# $NetBSD: pcc.mk,v 1.9 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: pcc.mk,v 1.10 2023/12/12 16:41:49 gdt Exp $
 #
 # This is the compiler definition for the PCC compiler.
 #
@@ -50,10 +50,9 @@ PKG_${t}:=		${PCCBASE}/bin/${n}
 .  endfor
 .endfor
 
-# Turn on C99 support if required
-#.if !empty(USE_LANGUAGES:Mc99)
-#_WRAP_EXTRA_ARGS.CC+=	-xc99
-#.endif
+# Export flags to turn on c99 mode to the generic processing code in ../compiler.mk.
+# TODO: enable and test
+# _C_STD_FLAG.c99=	-xc99
 
 _LINKER_RPATH_FLAG=	-R
 
