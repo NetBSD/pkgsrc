@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2022/05/25 20:00:56 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2023/12/12 12:37:44 ryoon Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 8"
@@ -40,6 +40,6 @@ DISTFILES+=			${BOOT.nb8-earmv6hf}
 EXTRACT_ONLY+=			${BOOT.nb8-earmv6hf}
 .endif
 
-CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
+CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib:${ALT_BOOTDIR}/lib/jli
 
 ALT_BOOTDIR=		${WRKDIR}/bootstrap
