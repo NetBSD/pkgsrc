@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2017/10/27 01:28:53 nat Exp $
+$NetBSD: MESSAGE,v 1.2 2023/12/12 12:57:13 nat Exp $
 
-To enable dma for use with NetBSD-8 or above.
+To enable dma for use with NetBSD-8.x only:
 
 Set the following environment variables:
 	SDL_DSP_DMA_PRECISION
