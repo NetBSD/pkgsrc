@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2019/11/02 22:54:28 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2023/12/12 13:58:26 zafer Exp $
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
 PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	http://sunsite.bilkent.edu.tr/pub/tex/ctan/tools/xbin/
+MASTER_SITES=	https://www.aydogan.net/distfiles/archivers/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
