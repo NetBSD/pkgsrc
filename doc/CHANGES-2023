@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7530 2023/12/12 18:40:04 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7531 2023/12/12 21:59:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10801,3 +10801,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-astroid to 3.0.2 [adam 2023-12-12]
 	Updated devel/py-pylint to 3.0.3 [adam 2023-12-12]
 	Updated x11/py-sip6 to 6.8.1 [gdt 2023-12-12]
+	Updated x11/qt5-qscintilla to 2.14.1 [adam 2023-12-12]
+	Updated x11/py-qt5-qscintilla to 2.14.1 [adam 2023-12-12]
