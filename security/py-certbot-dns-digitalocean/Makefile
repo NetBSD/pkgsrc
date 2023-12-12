@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/03/17 12:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/12 16:39:34 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -11,5 +11,5 @@ DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-digitalocean>=1.11:../../net/py-digitalocean
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
