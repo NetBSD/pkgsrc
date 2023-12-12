@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/12/09 01:19:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2023/12/12 12:37:44 ryoon Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -179,7 +179,7 @@ ${WRKDIR}/cacerts.out:
 
 do-build:
 	rm -f ${WRKSRC}/make/data/fontconfig/*.orig
-	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib ${MAKE_PROGRAM}
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib:${ALT_BOOTDIR}/lib/jli ${MAKE_PROGRAM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}
