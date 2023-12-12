@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:16:42 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/12/12 22:47:57 mef Exp $
 
-BLAKE2s (Glib-Object-Introspection-0.048.tar.gz) = 3c3bb1856f66e785ea14d2b9e2d2a63e17ef15066f22562b24d748a8bd3ec0d8
-SHA512 (Glib-Object-Introspection-0.048.tar.gz) = b43b1070f3a8804e13a745904dc14c82a8c028d7a6679b9801c684f5349ea9d5701f282d491ff2259ea1cf13c3c6356ae4c5533bda5feba289705881faef59cc
-Size (Glib-Object-Introspection-0.048.tar.gz) = 87660 bytes
+BLAKE2s (Glib-Object-Introspection-0.051.tar.gz) = ae421cf0de7c97083f8f3cd3bb9cf75a5fef5d0efbce5d345da29886a0d93e89
+SHA512 (Glib-Object-Introspection-0.051.tar.gz) = 93ebe81b586270cbeca4296bfdd1d337d931b6349ca16a8e50bfc631c89a77d93f4d8076289e91bdcec0fdb732a2900b2a6c5e78e571c0c0fd4c7f5239cc0de5
+Size (Glib-Object-Introspection-0.051.tar.gz) = 89445 bytes
