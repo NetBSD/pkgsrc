@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2023/05/31 19:06:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/12/12 21:58:59 adam Exp $
 #
 # used by x11/qt5-qscintilla/Makefile
 # used by x11/py-qt5-qscintilla/Makefile
 
-DISTNAME=	QScintilla_src-2.14.0
+DISTNAME=	QScintilla_src-2.14.1
 CATEGORIES=	x11
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/QScintilla/${PKGVERSION_NOREV}/
 
