@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/11/14 17:38:44 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/12 16:45:55 adam Exp $
 
-DISTNAME=	prompt_toolkit-3.0.41
+DISTNAME=	prompt_toolkit-3.0.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prompt_toolkit/}
@@ -10,14 +10,13 @@ HOMEPAGE=	https://github.com/jonathanslenders/python-prompt-toolkit
 COMMENT=	Library for building powerful interactive command lines
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
