@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/11/15 10:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/12/12 17:57:19 adam Exp $
 
 PKGREVISION= 7
 .include "../../geography/gdal-lib/Makefile.common"
@@ -30,7 +30,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
 				"$${EGG_INFODIR}") }
 
 .include "../../geography/gdal-lib/buildlink3.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
