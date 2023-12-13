@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2023/12/07 08:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/12/13 13:48:11 wiz Exp $
 
-DISTNAME=	google-api-python-client-2.109.0
+DISTNAME=	google-api-python-client-2.111.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/google-api-python-client
 COMMENT=	Python client library for Google's discovery based APIs
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.3.1:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.19.0:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.1.0:../../security/py-google-auth-httplib2
@@ -22,5 +23,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
