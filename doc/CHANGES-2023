@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7538 2023/12/13 11:29:47 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7539 2023/12/13 11:37:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10810,3 +10810,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/MoarVM to 2023.11 [mef 2023-12-13]
 	Updated lang/nqp to 2023.11 [mef 2023-12-13]
 	Updated lang/rakudo to 2023.11 [mef 2023-12-13]
+	Updated devel/p5-App-Cmd to 0.336 [mef 2023-12-13]
