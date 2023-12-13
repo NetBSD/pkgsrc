@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7533 2023/12/12 22:54:26 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7534 2023/12/13 07:45:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10805,3 +10805,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-qt5-qscintilla to 2.14.1 [adam 2023-12-12]
 	Updated devel/p5-Glib-Object-Introspection to 0.051 [mef 2023-12-12]
 	Updated devel/p5-Date-Manip to 6.93 [mef 2023-12-12]
+	Updated x11/modular-xorg-server to 21.1.10 [wiz 2023-12-13]
