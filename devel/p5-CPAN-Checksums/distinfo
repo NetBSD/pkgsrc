@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/11/30 00:00:48 wen Exp $
+$NetBSD: distinfo,v 1.13 2023/12/13 12:57:55 mef Exp $
 
-BLAKE2s (CPAN-Checksums-2.13.tar.gz) = 6095864bcc8ffd433fcd68163ab0997dd6c3da9661fec6884b031064f48cdb4e
-SHA512 (CPAN-Checksums-2.13.tar.gz) = 607e3e861dcef47136a79cddca14eaaa08f84e415389dfe99303ce5712c7ff49999d99ed2762722105b2d3c15451e0b5d468e6bdd612e375dcb3d0419da8a425
-Size (CPAN-Checksums-2.13.tar.gz) = 16021 bytes
+BLAKE2s (CPAN-Checksums-2.14.tar.gz) = 499dc2f5562f17c94d44d8d4329a01cbedee23930ffe86af79584d83cf9640c4
+SHA512 (CPAN-Checksums-2.14.tar.gz) = 58a0ae846100a1c5a3a5b5120927512b1f821ecac0bdcc40fa19cb6567d493f81594479a52d1aaf4b86745620101e39e368cc89259130304e2d13626b023b4f0
+Size (CPAN-Checksums-2.14.tar.gz) = 16039 bytes
