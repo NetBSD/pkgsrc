@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/06/30 13:24:26 mef Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/12/13 11:15:11 mef Exp $
 bin/moar
 include/mimalloc/mimalloc-atomic.h
 include/mimalloc/mimalloc-internal.h
@@ -40,6 +40,7 @@ include/moar/6model/reprs/MVMNull.h
 include/moar/6model/reprs/MVMOSHandle.h
 include/moar/6model/reprs/MVMSpeshCandidate.h
 include/moar/6model/reprs/MVMSpeshLog.h
+include/moar/6model/reprs/MVMStat.h
 include/moar/6model/reprs/MVMStaticFrame.h
 include/moar/6model/reprs/MVMStaticFrameSpesh.h
 include/moar/6model/reprs/MVMString.h
