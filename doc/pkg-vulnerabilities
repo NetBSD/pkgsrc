@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.76 2023/12/13 07:48:08 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.77 2023/12/13 15:55:24 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25796,3 +25796,4 @@ curl>=7.84.0<8.5.0	missing-encryption-of-sensitive-data	https://nvd.nist.gov/vul
 fish<3.6.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-49284
 modular-xorg-server<21.1.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6377
 modular-xorg-server<21.1.10	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6478
+opensc>=0.17.0<0.24.0	potential-pin-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-40660
