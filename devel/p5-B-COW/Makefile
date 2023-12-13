@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/07/06 09:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/13 12:34:17 mef Exp $
 
-DISTNAME=	B-COW-0.004
+DISTNAME=	B-COW-0.007
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AT/ATOOMIC/}
 
