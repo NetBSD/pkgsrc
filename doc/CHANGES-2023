@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7548 2023/12/13 12:58:07 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7549 2023/12/13 13:20:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10820,3 +10820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-CHI to 0.61 [mef 2023-12-13]
 	Updated devel/p5-CPAN-Changes to 0.500002 [mef 2023-12-13]
 	Updated devel/p5-CPAN-Checksums to 2.14 [mef 2023-12-13]
+	Updated devel/p5-CPAN-FindDependencies to 3.13 [mef 2023-12-13]
