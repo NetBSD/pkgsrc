@@ -1,14 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/10 11:25:32 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/google/api/__init__.py
-${PYSITELIB}/google/api/__init__.pyc
-${PYSITELIB}/google/api/__init__.pyo
+@comment $NetBSD: PLIST,v 1.8 2023/12/13 13:55:29 wiz Exp $
 ${PYSITELIB}/google/api/annotations.proto
 ${PYSITELIB}/google/api/annotations_pb2.py
 ${PYSITELIB}/google/api/annotations_pb2.pyc
@@ -149,16 +139,10 @@ ${PYSITELIB}/google/cloud/location/locations.proto
 ${PYSITELIB}/google/cloud/location/locations_pb2.py
 ${PYSITELIB}/google/cloud/location/locations_pb2.pyc
 ${PYSITELIB}/google/cloud/location/locations_pb2.pyo
-${PYSITELIB}/google/gapic/metadata/__init__.py
-${PYSITELIB}/google/gapic/metadata/__init__.pyc
-${PYSITELIB}/google/gapic/metadata/__init__.pyo
 ${PYSITELIB}/google/gapic/metadata/gapic_metadata.proto
 ${PYSITELIB}/google/gapic/metadata/gapic_metadata_pb2.py
 ${PYSITELIB}/google/gapic/metadata/gapic_metadata_pb2.pyc
 ${PYSITELIB}/google/gapic/metadata/gapic_metadata_pb2.pyo
-${PYSITELIB}/google/logging/type/__init__.py
-${PYSITELIB}/google/logging/type/__init__.pyc
-${PYSITELIB}/google/logging/type/__init__.pyo
 ${PYSITELIB}/google/logging/type/http_request.proto
 ${PYSITELIB}/google/logging/type/http_request_pb2.py
 ${PYSITELIB}/google/logging/type/http_request_pb2.pyc
@@ -167,9 +151,6 @@ ${PYSITELIB}/google/logging/type/log_severity.proto
 ${PYSITELIB}/google/logging/type/log_severity_pb2.py
 ${PYSITELIB}/google/logging/type/log_severity_pb2.pyc
 ${PYSITELIB}/google/logging/type/log_severity_pb2.pyo
-${PYSITELIB}/google/longrunning/__init__.py
-${PYSITELIB}/google/longrunning/__init__.pyc
-${PYSITELIB}/google/longrunning/__init__.pyo
 ${PYSITELIB}/google/longrunning/operations.proto
 ${PYSITELIB}/google/longrunning/operations_grpc.py
 ${PYSITELIB}/google/longrunning/operations_grpc.pyc
@@ -189,16 +170,10 @@ ${PYSITELIB}/google/longrunning/operations_proto.pyo
 ${PYSITELIB}/google/longrunning/operations_proto_pb2.py
 ${PYSITELIB}/google/longrunning/operations_proto_pb2.pyc
 ${PYSITELIB}/google/longrunning/operations_proto_pb2.pyo
-${PYSITELIB}/google/rpc/__init__.py
-${PYSITELIB}/google/rpc/__init__.pyc
-${PYSITELIB}/google/rpc/__init__.pyo
 ${PYSITELIB}/google/rpc/code.proto
 ${PYSITELIB}/google/rpc/code_pb2.py
 ${PYSITELIB}/google/rpc/code_pb2.pyc
 ${PYSITELIB}/google/rpc/code_pb2.pyo
-${PYSITELIB}/google/rpc/context/__init__.py
-${PYSITELIB}/google/rpc/context/__init__.pyc
-${PYSITELIB}/google/rpc/context/__init__.pyo
 ${PYSITELIB}/google/rpc/context/attribute_context.proto
 ${PYSITELIB}/google/rpc/context/attribute_context_pb2.py
 ${PYSITELIB}/google/rpc/context/attribute_context_pb2.pyc
@@ -219,9 +194,6 @@ ${PYSITELIB}/google/rpc/status.proto
 ${PYSITELIB}/google/rpc/status_pb2.py
 ${PYSITELIB}/google/rpc/status_pb2.pyc
 ${PYSITELIB}/google/rpc/status_pb2.pyo
-${PYSITELIB}/google/type/__init__.py
-${PYSITELIB}/google/type/__init__.pyc
-${PYSITELIB}/google/type/__init__.pyo
 ${PYSITELIB}/google/type/calendar_period.proto
 ${PYSITELIB}/google/type/calendar_period_pb2.py
 ${PYSITELIB}/google/type/calendar_period_pb2.pyc
@@ -290,3 +262,8 @@ ${PYSITELIB}/google/type/timeofday.proto
 ${PYSITELIB}/google/type/timeofday_pb2.py
 ${PYSITELIB}/google/type/timeofday_pb2.pyc
 ${PYSITELIB}/google/type/timeofday_pb2.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
