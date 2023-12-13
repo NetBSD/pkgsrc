@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2023/11/15 00:05:18 wiz Exp $
+$NetBSD: distinfo,v 1.13 2023/12/13 19:21:35 wiz Exp $
 
 BLAKE2s (junos-eznc-2.6.8.tar.gz) = 930e03236bb55ea21d10e30bd597aa529bafc494c2796177fbde8f6c566fff65
 SHA512 (junos-eznc-2.6.8.tar.gz) = 67443c274d51bd62c30d0a30cac06a8c70bd2932f7c9e4d56854fea591bf118a45caeb857f2b733e990f99716ad9162a1a8c3244975479f82125b3861acf53ab
 Size (junos-eznc-2.6.8.tar.gz) = 157594 bytes
+SHA1 (patch-versioneer.py) = 90f3b0e610f3a0380dcb89a5d9da3aca8f6c6ded
