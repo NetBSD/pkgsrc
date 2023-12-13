@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7537 2023/12/13 11:19:09 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7538 2023/12/13 11:29:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10809,3 +10809,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/modular-xorg-xephyr to 21.1.10 [wiz 2023-12-13]
 	Updated devel/MoarVM to 2023.11 [mef 2023-12-13]
 	Updated lang/nqp to 2023.11 [mef 2023-12-13]
+	Updated lang/rakudo to 2023.11 [mef 2023-12-13]
