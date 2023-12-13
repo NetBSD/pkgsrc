@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23764 2023/12/13 13:55:42 wiz Exp $
+$NetBSD: TODO,v 1.23765 2023/12/13 13:57:25 mef Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o owncloudclient-2.10.1
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
-	o p5-Carp-Assert-More-1.26
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clipboard-0.28
 	o p5-DBD-DB2-1.86
