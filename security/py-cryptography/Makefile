@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/11/28 17:37:24 adam Exp $
+# $NetBSD: Makefile,v 1.107 2023/12/13 17:39:07 schmonz Exp $
 
 DISTNAME=	cryptography-41.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,13 +32,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-build:
 	cd ${WRKSRC} && ${LN} -f -s src/rust/.cargo .cargo
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so \
-	${DESTDIR}${PREFIX}/${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
-.endif
 
 .include "cargo-depends.mk"
 

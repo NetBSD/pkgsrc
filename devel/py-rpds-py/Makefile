@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/30 09:23:07 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/13 17:39:06 schmonz Exp $
 
 DISTNAME=	rpds_py-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,13 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/rpds/rpds.so \
-	${DESTDIR}${PREFIX}/${PYSITELIB}/rpds/rpds.so
-.endif
 
 .include "cargo-depends.mk"
 
