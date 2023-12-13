@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7540 2023/12/13 11:40:52 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7541 2023/12/13 11:44:42 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10812,3 +10812,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rakudo to 2023.11 [mef 2023-12-13]
 	Updated devel/p5-App-Cmd to 0.336 [mef 2023-12-13]
 	Updated devel/p5-App-cpanminus to 1.7047 [mef 2023-12-13]
+	Updated devel/c++gsl to 4.0.0 [nros 2023-12-13]
