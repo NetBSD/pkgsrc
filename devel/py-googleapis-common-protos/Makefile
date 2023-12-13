@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/10 11:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/13 13:55:29 wiz Exp $
 
-DISTNAME=	googleapis-common-protos-1.61.0
+DISTNAME=	googleapis-common-protos-1.62.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
@@ -10,16 +10,13 @@ HOMEPAGE=	https://github.com/googleapis/python-api-common-protos
 COMMENT=	Python support for Public interface definitions of Google APIs
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
