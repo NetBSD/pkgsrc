@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/13 20:18:36 wiz Exp $
 
-DISTNAME=	tables-3.7.0
+DISTNAME=	tables-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -11,26 +10,15 @@ HOMEPAGE=	https://www.pytables.org/
 COMMENT=	Database package for large amounts of data
 LICENSE=	modified-bsd
 
-PYSETUPBUILDARGS+=	--blosc=${BUILDLINK_PREFIX.blosc}
-PYSETUPBUILDARGS+=	--bzip2=${BUILDLINK_PREFIX.bzip2}
-PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
-PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
-
-# check if cython dependency and post-extract target are still
-# needed when updating > 3.7.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
 
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
-USE_PKG_RESOURCES=	yes
-
-post-extract:
-	cd ${WRKSRC}/tables && ${RM} _comp_*.c *extension.c
-	cythonize-${PYVERSSUFFIX} -3 ${WRKSRC}/tables/*.pxd
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -40,16 +28,17 @@ post-install:
 	${MV} pttree pttree-${PYVERSSUFFIX} || ${TRUE}
 
 # needs to be installed first
-# as of 3.7.0:
-# FAILED (errors=2, skipped=55)
+# as of 3.9.2:
+# Ran 6799 tests
+# FAILED (errors=2, skipped=58)
 do-test:
 	${PYTHONBIN} -m tables.tests.test_all
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
-.include "../../devel/blosc/buildlink3.mk"
+.include "../../devel/blosc2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
