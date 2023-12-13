@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:16:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/12/13 13:20:42 mef Exp $
 
-BLAKE2s (CPAN-FindDependencies-3.10.tar.gz) = 0b68228ca04bc621c48ee39b9b28beb7b21bf856f12bfb57e3afd82de881b7a0
-SHA512 (CPAN-FindDependencies-3.10.tar.gz) = a8efacf5bf60b4cd94830843693d6b563f9c84a3e579c16bb1c2c133eb58e2a6da444dc9c0581439e26abd32273aa717ebd5ed824d281b0f8b88aace9e830e20
-Size (CPAN-FindDependencies-3.10.tar.gz) = 49078 bytes
+BLAKE2s (CPAN-FindDependencies-3.13.tar.gz) = 053de5de2e5fc5bc249f96470feeb09254d1ae50f4a1a14de398ba52d5ce40dd
+SHA512 (CPAN-FindDependencies-3.13.tar.gz) = 2834fd8fe657405094b7dd56cbfde6fb8a0241eb8ce2e19b095a9bdd6aeab14b9b704131a9358271b4378dad6f1857baa714494fef06e99a0af46ad7885af53b
+Size (CPAN-FindDependencies-3.13.tar.gz) = 50833 bytes
