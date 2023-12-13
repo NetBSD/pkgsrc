@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.11 2023/08/31 11:58:40 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/12/13 20:29:09 wiz Exp $
 
-BLAKE2s (h5py-3.9.0.tar.gz) = 32e67c2ac8c5c4d97abb295d8d1e8653d4f1cfbfd7e08d79af44a455124c8a3c
-SHA512 (h5py-3.9.0.tar.gz) = f87cb36ba874e86b179776031c3345ad83bc7b5eff2f3ee54acb6b0997cc7925c17dc478957103ab6bb07d8aaa8593af1d51c3547021a205e9d01c0e36d833a9
-Size (h5py-3.9.0.tar.gz) = 402856 bytes
+BLAKE2s (h5py-3.10.0.tar.gz) = 42c235c96ecd36a218f468ae07fdd1aeecd2a613a44cc8038e0b8227b2e90202
+SHA512 (h5py-3.10.0.tar.gz) = 840d7f2b9b9d5e22e8edae21c84884abec64acdd6c36437a4921ce9dc1b343c55f66f72b699146d71fe55688f6f948787b62335a24906288e9565b2b19b24b01
+Size (h5py-3.10.0.tar.gz) = 403716 bytes
+SHA1 (patch-h5py___errors.pxd) = 8b180360c0e594e74fe856af34e2586b9f6c30ee
+SHA1 (patch-h5py___errors.pyx) = 2c85ae5247458e7239c62d6c5673f9382a5364f6
+SHA1 (patch-h5py___locks.pxi) = 6d85f0081e05e2159fa1110a0ad2e29a899e3fc9
+SHA1 (patch-h5py___proxy.pyx) = 78ddd6984ad9007464c5705cff53b870d9a9d2b8
+SHA1 (patch-h5py_api__compat.h) = 6821a1fb845a5613959b7958bf1748c37fb44e94
+SHA1 (patch-h5py_api__types__hdf5.pxd) = c10621fad075e4bd0e392ca702950186b55fb255
+SHA1 (patch-h5py_h5fd.pyx) = 518132ff0258595bb49725c46145a59ad3429f40
+SHA1 (patch-h5py_tests_test__dataset.py) = de44c0e74ce9b53aa060be0dfacc39162f335698
+SHA1 (patch-pyproject.toml) = ad08e90ed3f8b642978df15d130c6a3e81f3fa9c
