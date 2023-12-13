@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7544 2023/12/13 12:37:34 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7545 2023/12/13 12:42:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10816,3 +10816,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-App-perlbrew to 0.98 [mef 2023-12-13]
 	Updated devel/p5-B-COW to 0.007 [mef 2023-12-13]
 	Updated devel/p5-B-Keywords to 1.26 [mef 2023-12-13]
+	Updated devel/p5-Carp-Assert to 0.22 [mef 2023-12-13]
