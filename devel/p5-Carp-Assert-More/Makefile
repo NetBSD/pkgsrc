@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/07/06 09:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/13 13:57:15 mef Exp $
 
-DISTNAME=	Carp-Assert-More-1.20
+DISTNAME=	Carp-Assert-More-2.3.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
 
