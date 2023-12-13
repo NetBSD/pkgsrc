@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.35 2023/05/16 06:10:52 wiz Exp $
+# $NetBSD: cargo.mk,v 1.36 2023/12/13 17:39:06 schmonz Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -97,3 +97,13 @@ do-cargo-install:
 	# remove files cargo uses for tracking installations
 	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
 	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
+
+.if ${OPSYS} == "Darwin"
+.PHONY: do-cargo-post-install-darwin-fix-rpath
+post-install: do-cargo-post-install-darwin-fix-rpath
+do-cargo-post-install-darwin-fix-rpath:
+	${RUN} cd ${DESTDIR};								\
+	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
+	  install_name_tool -id /$$i $$i;						\
+	done
+.endif
