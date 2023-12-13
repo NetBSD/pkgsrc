@@ -1,24 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/05 07:05:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/12/13 20:18:36 wiz Exp $
 bin/pt2to3-${PYVERSSUFFIX}
 bin/ptdump-${PYVERSSUFFIX}
 bin/ptrepack-${PYVERSSUFFIX}
 bin/pttree-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
-${PYSITELIB}/tables/_comp_bzip2.c
 ${PYSITELIB}/tables/_comp_bzip2.pyx
 ${PYSITELIB}/tables/_comp_bzip2.so
-${PYSITELIB}/tables/_comp_lzo.c
 ${PYSITELIB}/tables/_comp_lzo.pyx
 ${PYSITELIB}/tables/_comp_lzo.so
+${PYSITELIB}/tables/_version.py
+${PYSITELIB}/tables/_version.pyc
+${PYSITELIB}/tables/_version.pyo
 ${PYSITELIB}/tables/array.py
 ${PYSITELIB}/tables/array.pyc
 ${PYSITELIB}/tables/array.pyo
@@ -59,7 +59,6 @@ ${PYSITELIB}/tables/flavor.pyo
 ${PYSITELIB}/tables/group.py
 ${PYSITELIB}/tables/group.pyc
 ${PYSITELIB}/tables/group.pyo
-${PYSITELIB}/tables/hdf5extension.c
 ${PYSITELIB}/tables/hdf5extension.pxd
 ${PYSITELIB}/tables/hdf5extension.pyx
 ${PYSITELIB}/tables/hdf5extension.so
@@ -72,7 +71,6 @@ ${PYSITELIB}/tables/index.pyo
 ${PYSITELIB}/tables/indexes.py
 ${PYSITELIB}/tables/indexes.pyc
 ${PYSITELIB}/tables/indexes.pyo
-${PYSITELIB}/tables/indexesextension.c
 ${PYSITELIB}/tables/indexesextension.pyx
 ${PYSITELIB}/tables/indexesextension.so
 ${PYSITELIB}/tables/leaf.py
@@ -81,10 +79,8 @@ ${PYSITELIB}/tables/leaf.pyo
 ${PYSITELIB}/tables/link.py
 ${PYSITELIB}/tables/link.pyc
 ${PYSITELIB}/tables/link.pyo
-${PYSITELIB}/tables/linkextension.c
 ${PYSITELIB}/tables/linkextension.pyx
 ${PYSITELIB}/tables/linkextension.so
-${PYSITELIB}/tables/lrucacheextension.c
 ${PYSITELIB}/tables/lrucacheextension.pxd
 ${PYSITELIB}/tables/lrucacheextension.pyx
 ${PYSITELIB}/tables/lrucacheextension.so
@@ -145,7 +141,6 @@ ${PYSITELIB}/tables/scripts/pttree.pyo
 ${PYSITELIB}/tables/table.py
 ${PYSITELIB}/tables/table.pyc
 ${PYSITELIB}/tables/table.pyo
-${PYSITELIB}/tables/tableextension.c
 ${PYSITELIB}/tables/tableextension.pyx
 ${PYSITELIB}/tables/tableextension.so
 ${PYSITELIB}/tables/tests/Table2_1_lzo_nrv2e_shuffle.h5
@@ -158,6 +153,7 @@ ${PYSITELIB}/tables/tests/__init__.pyc
 ${PYSITELIB}/tables/tests/__init__.pyo
 ${PYSITELIB}/tables/tests/array_mdatom.h5
 ${PYSITELIB}/tables/tests/attr-u16.h5
+${PYSITELIB}/tables/tests/b2nd-no-chunkshape.h5
 ${PYSITELIB}/tables/tests/blosc_bigendian.h5
 ${PYSITELIB}/tables/tests/bug-idx.h5
 ${PYSITELIB}/tables/tests/check_leaks.py
@@ -166,7 +162,6 @@ ${PYSITELIB}/tables/tests/check_leaks.pyo
 ${PYSITELIB}/tables/tests/common.py
 ${PYSITELIB}/tables/tests/common.pyc
 ${PYSITELIB}/tables/tests/common.pyo
-${PYSITELIB}/tables/tests/create-nested-type.c
 ${PYSITELIB}/tables/tests/create_backcompat_indexes.py
 ${PYSITELIB}/tables/tests/create_backcompat_indexes.pyc
 ${PYSITELIB}/tables/tests/create_backcompat_indexes.pyo
@@ -251,6 +246,9 @@ ${PYSITELIB}/tables/tests/test_indexes.pyo
 ${PYSITELIB}/tables/tests/test_indexvalues.py
 ${PYSITELIB}/tables/tests/test_indexvalues.pyc
 ${PYSITELIB}/tables/tests/test_indexvalues.pyo
+${PYSITELIB}/tables/tests/test_large_tables.py
+${PYSITELIB}/tables/tests/test_large_tables.pyc
+${PYSITELIB}/tables/tests/test_large_tables.pyo
 ${PYSITELIB}/tables/tests/test_links.py
 ${PYSITELIB}/tables/tests/test_links.pyc
 ${PYSITELIB}/tables/tests/test_links.pyo
@@ -311,7 +309,6 @@ ${PYSITELIB}/tables/unimplemented.pyo
 ${PYSITELIB}/tables/utils.py
 ${PYSITELIB}/tables/utils.pyc
 ${PYSITELIB}/tables/utils.pyo
-${PYSITELIB}/tables/utilsextension.c
 ${PYSITELIB}/tables/utilsextension.pxd
 ${PYSITELIB}/tables/utilsextension.pyx
 ${PYSITELIB}/tables/utilsextension.so
