@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.19 2023/12/07 08:39:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/12/13 13:48:11 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -81,6 +81,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1beta4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1beta5.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/apphub.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/apphub.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/area120tables.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta1.json
@@ -256,6 +258,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebase.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedatabase.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedynamiclinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1.json
@@ -496,6 +499,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/vmmigration.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vmwareengine.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vpcaccess.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/vpcaccess.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/walletobjects.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webfonts.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webmasters.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/webrisk.v1.json
