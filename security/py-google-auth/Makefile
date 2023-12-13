@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2023/12/07 08:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/12/13 13:52:45 wiz Exp $
 
-DISTNAME=	google-auth-2.24.0
+DISTNAME=	google-auth-2.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/google-auth-library-python
 COMMENT=	Google Authentication Library
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.2.1:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=2.0.0:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
@@ -19,7 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-u2f-[0-9]*:../../security/py-u2f
 
@@ -27,14 +27,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# hack
-post-install:
-	${RM} -r ${DESTDIR}${PREFIX}/${PYSITELIB}/build
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
