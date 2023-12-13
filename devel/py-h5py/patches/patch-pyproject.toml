@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2023/12/13 20:29:09 wiz Exp $
+
+Fix build with Cython 3.
+https://github.com/h5py/h5py/pull/2345
+
+--- pyproject.toml.orig	2023-10-04 09:21:14.000000000 +0000
++++ pyproject.toml
+@@ -1,6 +1,6 @@
+ [build-system]
+ requires = [
+-    "Cython >=0.29.31,<1",
++    "Cython >=0.29.31,<4",
+     "oldest-supported-numpy",
+     "pkgconfig",
+     "setuptools >=61",
