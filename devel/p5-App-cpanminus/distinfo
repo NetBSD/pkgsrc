@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 10:16:02 nia Exp $
+$NetBSD: distinfo,v 1.42 2023/12/13 11:40:44 mef Exp $
 
-BLAKE2s (App-cpanminus-1.7044.tar.gz) = f7e0d23ae27cdd37f8c1dbbce950604762b0eebe5942dd68d162cf14332eddfd
-SHA512 (App-cpanminus-1.7044.tar.gz) = 85e88de8fbefabdfd84fe8aeaa8294d58d63e27276cd6d8b8dfc5dc4cd6c30c12f5859f30e4930842d6d06af50c88d71358dee49c93821234c811aa39de822d7
-Size (App-cpanminus-1.7044.tar.gz) = 316368 bytes
+BLAKE2s (App-cpanminus-1.7047.tar.gz) = 316f2cfe76ad6fd5cb6c89b98a87a34841ccb2674e02bbdaedb93e78d941da57
+SHA512 (App-cpanminus-1.7047.tar.gz) = c58b58773b5cd06f346228af46136beffcf07cf49dd51c6d914e2fe4c2a592b5c94901510da8c7ff55795e6beb25bf5344ac798d817ab0a1f2450ff75cbaa17d
+Size (App-cpanminus-1.7047.tar.gz) = 316779 bytes
