@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/10/07 20:14:31 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/13 17:39:07 schmonz Exp $
 
 DISTNAME=	libcst-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,13 +29,6 @@ pre-build:
 	cd ${WRKSRC}/.cargo && ${LN} -f -s ../native/.cargo/config config
 
 CHECK_WRKREF_SKIP+=	${PYSITELIB}/libcst/native.so
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/libcst/native.so \
-	${DESTDIR}${PREFIX}/${PYSITELIB}/libcst/native.so
-.endif
 
 .include "cargo-depends.mk"
 
