@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/12/15 20:25:04 abs Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/13 03:01:14 zafer Exp $
 
 DISTNAME=	bfg-1.12.14
 CATEGORIES=	devel
-MASTER_SITES=	http://repo1.maven.org/maven2/com/madgag/bfg/1.12.14/
+MASTER_SITES=	https://repo1.maven.org/maven2/com/madgag/bfg/1.12.14/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
