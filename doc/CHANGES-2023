@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7551 2023/12/13 13:38:30 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7552 2023/12/13 13:44:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10823,3 +10823,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-CPAN-FindDependencies to 3.13 [mef 2023-12-13]
 	Updated devel/p5-CPAN-Meta-Check to 0.018 [mef 2023-12-13]
 	Updated devel/p5-CPAN-Perl-Releases to 5.20231129 [mef 2023-12-13]
+	Updated devel/py-google-api-core to 2.15.0 [wiz 2023-12-13]
