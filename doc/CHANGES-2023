@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7554 2023/12/13 13:48:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7555 2023/12/13 13:48:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10826,3 +10826,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-google-api-core to 2.15.0 [wiz 2023-12-13]
 	Updated devel/p5-CPAN-Reporter to 1.2019 [mef 2023-12-13]
 	Updated www/py-google-api-python-client to 2.111.0 [wiz 2023-12-13]
+	Updated devel/p5-CPAN-Uploader to 0.103018 [mef 2023-12-13]
