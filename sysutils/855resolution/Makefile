@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2016/02/26 10:24:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/13 14:53:44 zafer Exp $
 #
 
 DISTNAME=	855resolution-0.4
 PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	https://www.aydogan.net/distfiles/sysutils/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
