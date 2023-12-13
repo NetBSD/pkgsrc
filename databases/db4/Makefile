@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2019/02/14 14:36:06 thorpej Exp $
+# $NetBSD: Makefile,v 1.73 2023/12/13 13:39:23 zafer Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -10,8 +10,7 @@ DISTNAME=	db-4.8.30
 PKGNAME=	${DISTNAME:S/db/db4/}
 PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://download.oracle.com/berkeley-db/
-MASTER_SITES+=	http://download-uk.oracle.com/berkeley-db/
+MASTER_SITES=	https://download.oracle.com/berkeley-db/
 
 #PATCHFILES=	patch.4.8.30.1
 #PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/4.8.30/
