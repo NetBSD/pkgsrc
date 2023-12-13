@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7559 2023/12/13 20:18:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7560 2023/12/13 20:29:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10831,3 +10831,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-googleapis-common-protos to 1.62.0 [wiz 2023-12-13]
 	Updated devel/p5-Carp-Assert-More to 2.3.0 [mef 2023-12-13]
 	Updated math/py-tables to 3.9.2 [wiz 2023-12-13]
+	Updated devel/py-h5py to 3.10.0 [wiz 2023-12-13]
