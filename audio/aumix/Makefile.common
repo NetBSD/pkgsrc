@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.common,v 1.13 2022/08/09 12:08:32 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/12/13 02:47:33 zafer Exp $
 # used by audio/aumix/Makefile
 # used by audio/aumix-gtk/Makefile
 
 DISTNAME=	aumix-2.9.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aumix/}
-MASTER_SITES+=	http://jpj.net/~trevor/aumix/
-MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	trevor@jpj.net
