@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/11/23 07:58:34 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/13 19:14:29 wiz Exp $
 
 DISTNAME=	tortoise_orm-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/tortoise/tortoise-orm
 COMMENT=	Easy async ORM for Python, built with relations in mind
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-aiosqlite>=0.16.0:../../databases/py-aiosqlite
 DEPENDS+=	${PYPKGPREFIX}-iso8601>=0.1.13:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-pypika-tortoise>=0.1.6:../../databases/py-pypika-tortoise
