@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/10/24 22:09:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/13 17:39:06 schmonz Exp $
 
 GITHUB_PROJECT=	helix
 DISTNAME=	22.12
@@ -41,6 +41,7 @@ SUBST_SED.datadir+=	-e 's,%%DATADIR%%,${PREFIX}/share/helix,g'
 post-build:
 	${RUN} cd ${WRKSRC} && env HELIX_RUNTIME=${WRKSRC}/runtime \
 		./target/release/hx --grammar build
+# not under ${PREFIX}/lib, or else lang/rust/cargo.mk would handle it
 .if ${OPSYS} == "Darwin"
 	${RUN} cd ${WRKSRC}/runtime/grammars &&				\
 	for f in *.so; do						\
