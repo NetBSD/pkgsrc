@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:16:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/12/13 12:51:59 mef Exp $
 
-BLAKE2s (CPAN-Changes-0.400002.tar.gz) = 7d0daf1354917abae5e951c6491f682e62ad9213a2311a8cd3e37b50bf4b0aad
-SHA512 (CPAN-Changes-0.400002.tar.gz) = d359073d9d5ed2126835d4895c1ee5288cc09e72202ba77441bb25cf13e9cd0f16d4040b7e2cf1785efd6e8ccbe7908415fb4fefeebe9c0548d838d2ac850dfb
-Size (CPAN-Changes-0.400002.tar.gz) = 21361 bytes
+BLAKE2s (CPAN-Changes-0.500002.tar.gz) = 0d417d5e69c599fb6799908d4841dfdf3d0ae0d6c932d08efea34ed32989eb4b
+SHA512 (CPAN-Changes-0.500002.tar.gz) = cd9f46dec256d42fd26f5e0e581dec37c649c77f0aedc77c122624fba1de8f05feb0cac43075c6982f460e3ef2e2535add1e28260928f46c87ba1331f6c4c1e5
+Size (CPAN-Changes-0.500002.tar.gz) = 546283 bytes
