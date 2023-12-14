@@ -1,0 +1,27 @@
+$NetBSD: patch-cl__headers_CMakeLists.txt,v 1.1 2023/12/14 13:16:06 adam Exp $
+
+Fix standalone build
+https://github.com/intel/opencl-clang/pull/485
+
+--- cl_headers/CMakeLists.txt.orig	2023-04-13 01:08:59.000000000 +0000
++++ cl_headers/CMakeLists.txt
+@@ -1,5 +1,9 @@
+ set(CL_HEADERS_LIB cl_headers)
+-set(CLANG_COMMAND $<TARGET_FILE:clang> )
++if(USE_PREBUILT_LLVM)
++  find_program(CLANG_COMMAND clang PATHS ${LLVM_TOOLS_BINARY_DIR} NO_DEFAULT_PATH)
++else()
++  set(CLANG_COMMAND $<TARGET_FILE:clang> )
++endif()
+ if(LLVM_USE_HOST_TOOLS AND NOT OPENCL_CLANG_BUILD_EXTERNAL)
+   build_native_tool(clang CLANG_COMMAND)
+ endif()
+@@ -16,7 +20,7 @@ endfunction(copy_file)
+ 
+ if(USE_PREBUILT_LLVM)
+     set(OPENCL_HEADERS_DIR
+-      "${LLVM_LIBRARY_DIRS}/clang/${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH}/include/")
++      "${LLVM_LIBRARY_DIRS}/clang/${LLVM_VERSION_MAJOR}/include/")
+ else(USE_PREBUILT_LLVM)
+     set(OPENCL_HEADERS_DIR "${CLANG_SOURCE_DIR}/lib/Headers")
+ endif(USE_PREBUILT_LLVM)
