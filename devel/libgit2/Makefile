@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/11/08 13:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/12/14 11:29:19 wiz Exp $
 
 DISTNAME=	libgit2-1.7.1
 PKGREVISION=	2
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-# as of 1.7.1, 2 tests fail (with 2 and 1 subtest each)
+# In some environments, two tests might fail with permission problems
 # https://github.com/libgit2/libgit2/issues/6647
 do-test:
 	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ctest
