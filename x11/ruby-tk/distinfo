@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 11:34:27 nia Exp $
+$NetBSD: distinfo,v 1.30 2023/12/14 15:52:04 taca Exp $
 
-BLAKE2s (tk-0.4.0.gem) = 4b7858a51797c306639fb47ee3d28d9c026865ef997507f1eb8ec55be955cac6
-SHA512 (tk-0.4.0.gem) = 6890e15ccfa979c20419ed030c68d49223d483c81aef9c3cd792636bc600e26701b4b75a07c55c5ea867428dfc5e02cee9f000ad2a4cb952aeaecf266fc267b1
-Size (tk-0.4.0.gem) = 1721856 bytes
+BLAKE2s (tk-0.5.0.gem) = 54da6fe38300b2741ce99418ad5eec71ffeaedb17d121ec1841109629e9a6cd2
+SHA512 (tk-0.5.0.gem) = 3576cecad607befa47acfd2b20c2bf05ffb76fc0334e4418ea4d796f9e138e1c4be63647ee7a59600f600e1fa6c192b424fb17ee981745c5aac754f88077da1d
+Size (tk-0.5.0.gem) = 1721856 bytes
