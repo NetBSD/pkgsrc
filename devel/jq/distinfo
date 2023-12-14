@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2023/09/09 19:52:53 wiz Exp $
+$NetBSD: distinfo,v 1.17 2023/12/14 08:08:03 adam Exp $
 
-BLAKE2s (jq-1.7.tar.gz) = 185d736bb910d644bd3075806bbc7239e71ab9fac04455d3c1c138d2e538e201
-SHA512 (jq-1.7.tar.gz) = 4f8a6b0401e6c881dcb97d948fe38871062599a43fff667ede21cf185ec9de33e61878f0a6ea12786d0a632eea592ea0ff860520ba02dbb32f2fa2d2b5db7a0a
-Size (jq-1.7.tar.gz) = 1905863 bytes
-SHA1 (patch-Makefile.in) = b07a388dc5ca2cd966a41b5bb1ebae07c5c10aa8
+BLAKE2s (jq-1.7.1.tar.gz) = ff4a9505b42b62ef0efd45fab9fd2b4b560596f9779f41f93e6893b67fb20435
+SHA512 (jq-1.7.1.tar.gz) = 464861fb2e0d6934b616f1dc7f8002d7dae727c8c0c07b385b813e7522ba1ada8ead4165e1d99c892e3ea76e238c55a15b718c738805419721920f88f8d8478c
+Size (jq-1.7.1.tar.gz) = 1950645 bytes
+SHA1 (patch-Makefile.in) = 657b308e7276a687ffdcdf86b0b70bd805dd9947
