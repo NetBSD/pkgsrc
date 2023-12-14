@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2023/10/28 19:56:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2023/12/14 16:50:15 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1056,6 +1056,9 @@ ${PYSITELIB}/synapse/rest/media/__init__.pyo
 ${PYSITELIB}/synapse/rest/media/config_resource.py
 ${PYSITELIB}/synapse/rest/media/config_resource.pyc
 ${PYSITELIB}/synapse/rest/media/config_resource.pyo
+${PYSITELIB}/synapse/rest/media/create_resource.py
+${PYSITELIB}/synapse/rest/media/create_resource.pyc
+${PYSITELIB}/synapse/rest/media/create_resource.pyo
 ${PYSITELIB}/synapse/rest/media/download_resource.py
 ${PYSITELIB}/synapse/rest/media/download_resource.pyc
 ${PYSITELIB}/synapse/rest/media/download_resource.pyo
@@ -1390,7 +1393,6 @@ ${PYSITELIB}/synapse/storage/schema/__init__.pyo
 ${PYSITELIB}/synapse/storage/schema/common/delta/25/00background_updates.sql
 ${PYSITELIB}/synapse/storage/schema/common/delta/35/00background_updates_add_col.sql
 ${PYSITELIB}/synapse/storage/schema/common/delta/58/00background_update_ordering.sql
-${PYSITELIB}/synapse/storage/schema/common/full_schemas/54/full.sql
 ${PYSITELIB}/synapse/storage/schema/common/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/common/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/common/schema_version.sql
@@ -1834,23 +1836,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/80/03_read_write_locks_triggers.s
 ${PYSITELIB}/synapse/storage/schema/main/delta/80/04_read_write_locks_deadlock.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/82/02_scheduled_tasks_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/82/04_add_indices_for_purging_rooms.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/im.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/keys.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/media_repository.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/presence.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/profiles.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/push.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/redactions.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/room_aliases.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/state.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/transactions.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/users.sql
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/full.sql.postgres
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/full.sql.sqlite
-${PYSITELIB}/synapse/storage/schema/main/full_schemas/54/stream_positions.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/82/05gaps.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/83/01_drop_old_tables.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/83/03_instance_name_receipts.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/83/05_cross_signing_key_update_grant.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/83/06_event_push_summary_room.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1864,8 +1854,6 @@ ${PYSITELIB}/synapse/storage/schema/state/delta/47/state_group_seq.pyo
 ${PYSITELIB}/synapse/storage/schema/state/delta/56/state_group_room_idx.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/61/02state_groups_state_n_distinct.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/delta/70/08_state_group_edges_unique.sql
-${PYSITELIB}/synapse/storage/schema/state/full_schemas/54/full.sql
-${PYSITELIB}/synapse/storage/schema/state/full_schemas/54/sequence.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/types.py
