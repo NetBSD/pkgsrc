@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/12/07 18:17:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/12/14 10:47:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -94,6 +94,7 @@ ${PYSITELIB}/import_export/templates/admin/import_export/change_list_import_expo
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list_import_item.html
 ${PYSITELIB}/import_export/templates/admin/import_export/export.html
 ${PYSITELIB}/import_export/templates/admin/import_export/import.html
+${PYSITELIB}/import_export/templates/admin/import_export/resource_fields_list.html
 ${PYSITELIB}/import_export/templatetags/__init__.py
 ${PYSITELIB}/import_export/templatetags/__init__.pyc
 ${PYSITELIB}/import_export/templatetags/__init__.pyo
