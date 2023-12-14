@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7560 2023/12/13 20:29:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7561 2023/12/14 08:09:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10832,3 +10832,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Carp-Assert-More to 2.3.0 [mef 2023-12-13]
 	Updated math/py-tables to 3.9.2 [wiz 2023-12-13]
 	Updated devel/py-h5py to 3.10.0 [wiz 2023-12-13]
+	Updated devel/jq to 1.7.1 [adam 2023-12-14]
+	Updated sysutils/ansible-core to 2.16.2 [adam 2023-12-14]
