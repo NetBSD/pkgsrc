@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2023/10/05 21:11:36 triaxx Exp $
+# $NetBSD: pgsql.sh,v 1.3 2023/12/14 11:46:43 adam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -18,7 +18,9 @@
 #	pgsql_home="/path/to/home"	# path to pgsql database directory
 # See postmaster(1) for possible options.
 
-$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+  . @SYSCONFBASE@/rc.subr
+fi
 
 name="pgsql"
 rcvar=${name}
