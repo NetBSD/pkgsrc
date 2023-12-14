@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/11/08 13:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/14 13:16:05 adam Exp $
 
-DISTNAME=	opencl-clang-15.0.0
-PKGREVISION=	3
+DISTNAME=	opencl-clang-16.0.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_PROJECT=	opencl-clang	# do not remove this, it breaks cwrappers
@@ -12,15 +11,16 @@ HOMEPAGE=	https://github.com/intel/opencl-clang
 COMMENT=	OpenCL-oriented wrapper library around clang
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
+USE_LANGUAGES=		c c++
 
-# C++14
-GCC_REQD+=	7 # sync with llvm/clang
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,-Bsymbolic
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script=${WRKSRC}/opencl_clang.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/opencl_clang.map
 
-BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script=${WRKSRC}/common_clang.map
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/common_clang.map
-
+.include "../../devel/cmake/build.mk"
 .include "../../parallel/spirv-llvm-translator/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
