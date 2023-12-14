@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/12/14 16:54:51 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2023/12/14 16:59:28 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.98.0
 CATEGORIES=	chat
@@ -110,8 +110,8 @@ post-install:
 	${INSTALL_DATA} files/README.pkgsrc.NetBSD.txt ${DESTDIR}${DOCDIR}
 
 # \todo Grok upstream's new test scheme and port to it.
-# test status as of 1.51.0
-# 51 warnings, 1 error
+# As of 1.98.0 all tests fail, most of them failing to import
+# synapse.synapse_rust.
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
