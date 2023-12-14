@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.19 2021/02/03 15:50:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/12/14 15:52:04 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/tcltklib.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/tkutil.${RUBY_DLEXT}
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -33,6 +34,7 @@ ${GEM_LIBDIR}/lib/multi-tk.rb
 ${GEM_LIBDIR}/lib/remote-tk.rb
 ${GEM_LIBDIR}/lib/tcltk.rb
 ${GEM_LIBDIR}/lib/tcltklib.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/thread_tk.rb
 ${GEM_LIBDIR}/lib/tk.rb
 ${GEM_LIBDIR}/lib/tk/after.rb
 ${GEM_LIBDIR}/lib/tk/autoload.rb
