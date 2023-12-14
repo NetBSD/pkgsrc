@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7571 2023/12/14 15:52:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7572 2023/12/14 16:53:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10851,3 +10851,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/php-igbinary to 3.2.15 [taca 2023-12-14]
 	Updated devel/php-xdebug to 3.3.0 [taca 2023-12-14]
 	Updated x11/ruby-tk to 0.5.0 [taca 2023-12-14]
+	Updated chat/matrix-synapse to 1.98.0 [gdt 2023-12-14]
