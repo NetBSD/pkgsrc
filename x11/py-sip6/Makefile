@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/12/12 18:39:55 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/14 15:58:34 gdt Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build ok.  The 6.8.0 release of
@@ -9,8 +9,8 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 
-
-MAINTAINER=	rhialto@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
+#MAINTAINER+=	rhialto@NetBSD.org
 HOMEPAGE=	https://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
