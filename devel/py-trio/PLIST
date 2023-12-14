@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/07 10:44:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/14 13:20:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
@@ -135,6 +135,9 @@ ${PYSITELIB}/trio/_core/_tests/test_windows.pyo
 ${PYSITELIB}/trio/_core/_tests/tutil.py
 ${PYSITELIB}/trio/_core/_tests/tutil.pyc
 ${PYSITELIB}/trio/_core/_tests/tutil.pyo
+${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.py
+${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.pyc
+${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.pyo
 ${PYSITELIB}/trio/_core/_thread_cache.py
 ${PYSITELIB}/trio/_core/_thread_cache.pyc
 ${PYSITELIB}/trio/_core/_thread_cache.pyo
@@ -213,9 +216,6 @@ ${PYSITELIB}/trio/_sync.pyo
 ${PYSITELIB}/trio/_tests/__init__.py
 ${PYSITELIB}/trio/_tests/__init__.pyc
 ${PYSITELIB}/trio/_tests/__init__.pyo
-${PYSITELIB}/trio/_tests/check_type_completeness.py
-${PYSITELIB}/trio/_tests/check_type_completeness.pyc
-${PYSITELIB}/trio/_tests/check_type_completeness.pyo
 ${PYSITELIB}/trio/_tests/module_with_deprecations.py
 ${PYSITELIB}/trio/_tests/module_with_deprecations.pyc
 ${PYSITELIB}/trio/_tests/module_with_deprecations.pyo
@@ -321,6 +321,15 @@ ${PYSITELIB}/trio/_tests/tools/test_gen_exports.pyo
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.py
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.pyc
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.pyo
+${PYSITELIB}/trio/_tests/type_tests/check_wraps.py
+${PYSITELIB}/trio/_tests/type_tests/check_wraps.pyc
+${PYSITELIB}/trio/_tests/type_tests/check_wraps.pyo
+${PYSITELIB}/trio/_tests/type_tests/open_memory_channel.py
+${PYSITELIB}/trio/_tests/type_tests/open_memory_channel.pyc
+${PYSITELIB}/trio/_tests/type_tests/open_memory_channel.pyo
+${PYSITELIB}/trio/_tests/type_tests/path.py
+${PYSITELIB}/trio/_tests/type_tests/path.pyc
+${PYSITELIB}/trio/_tests/type_tests/path.pyo
 ${PYSITELIB}/trio/_threads.py
 ${PYSITELIB}/trio/_threads.pyc
 ${PYSITELIB}/trio/_threads.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/11/07 10:44:10 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/12/14 13:20:52 adam Exp $
 
-BLAKE2s (trio-0.23.1.tar.gz) = 0ef3eafe9a74c468057072dc220c36376772e3d2b59d9c136b85207ed5ec2be2
-SHA512 (trio-0.23.1.tar.gz) = 6d3e71da39ae8945212529dcaac6487459059feb88e28aa99533ff91dd24de49f00453aa53a0747110cbe572c600eed7dbd975389fe9b7d06eff65af700a4b82
-Size (trio-0.23.1.tar.gz) = 535860 bytes
+BLAKE2s (trio-0.23.2.tar.gz) = d0e0d56f2af50be9c3089b8cc745b1e21ec64d766d06fed7a39003d9ca177ad5
+SHA512 (trio-0.23.2.tar.gz) = e73b10e5116a9cfac3e48bc324de532e4ef21c0ea2671a35774d310542527e9350abf82c0812e8284364dca67dd7f99350451bf8d179a0440e69f4e42ca5baba
+Size (trio-0.23.2.tar.gz) = 544557 bytes
