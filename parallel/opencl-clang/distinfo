@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/11/14 19:02:04 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/12/14 13:16:05 adam Exp $
 
-BLAKE2s (opencl-clang-15.0.0.tar.gz) = 24dd74013a9a4f889626d002582cc87dd00bfb0015b6d6c35f252f6358789321
-SHA512 (opencl-clang-15.0.0.tar.gz) = a2ffce43493793524e9512be2e7bd46c0183b86b35a6f79018d355d07a83303a944e6dacebfb768e88ce75a7020a44939be872a2d4e754544198a9829f4febd4
-Size (opencl-clang-15.0.0.tar.gz) = 26212 bytes
+BLAKE2s (opencl-clang-16.0.0.tar.gz) = cd3f135e8cb3f788680e30704d5880732da241ae6652f48670d38cff585e1c8e
+SHA512 (opencl-clang-16.0.0.tar.gz) = bf723edab7dc7a028eb79d01fd2306690a2169472760bf2783d593ffec4eb788f28f184c66b204cc074cb95a4149fcc63a1dcbee5563c620a9dc2c76bb5a2d5a
+Size (opencl-clang-16.0.0.tar.gz) = 28413 bytes
+SHA1 (patch-CMakeLists.txt) = 844cac5dedb87b2de098955cebae1bf83341d9e5
+SHA1 (patch-cl__headers_CMakeLists.txt) = fc3d935aff7314d1a194b5802c63cdb125f8ec34
