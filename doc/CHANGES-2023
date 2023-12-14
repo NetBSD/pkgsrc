@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7562 2023/12/14 10:47:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7563 2023/12/14 13:21:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10836,3 +10836,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-core to 2.16.2 [adam 2023-12-14]
 	Updated textproc/icu to 74.2 [adam 2023-12-14]
 	Updated www/py-django-import-export to 3.3.4 [adam 2023-12-14]
+	Updated parallel/opencl-clang to 16.0.0 [adam 2023-12-14]
+	Updated devel/py-packageurl to 0.13.1 [adam 2023-12-14]
+	Updated devel/py-isort to 5.13.2 [adam 2023-12-14]
+	Updated devel/py-trio to 0.23.2 [adam 2023-12-14]
