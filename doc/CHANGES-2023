@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7563 2023/12/14 13:21:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7564 2023/12/14 13:33:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10840,3 +10840,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-packageurl to 0.13.1 [adam 2023-12-14]
 	Updated devel/py-isort to 5.13.2 [adam 2023-12-14]
 	Updated devel/py-trio to 0.23.2 [adam 2023-12-14]
+	Updated net/syncthing to 1.26.1 [gdt 2023-12-14]
