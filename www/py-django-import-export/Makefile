@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/12/07 18:17:11 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/14 10:47:19 adam Exp $
 
-DISTNAME=	django-import-export-3.3.3
+DISTNAME=	django-import-export-3.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-diff-match-patch-[0-9]*:../../textproc/py-diff-match-patch
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-tablib>=3.5.0:../../textproc/py-tablib
 
 USE_LANGUAGES=	# none
