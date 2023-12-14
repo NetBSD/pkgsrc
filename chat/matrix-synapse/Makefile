@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/12/14 16:50:15 gdt Exp $
+# $NetBSD: Makefile,v 1.89 2023/12/14 16:54:51 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.98.0
 CATEGORIES=	chat
@@ -115,11 +115,13 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
+# New upstream releases typically add/change cargo depends.
+update-cargo:
+	make; make print-cargo-depends > cargo-depends.mk && make distinfo
+
 # guide says "Prepend .include "cargo-depends.mk" to any other .includes."
 # To start:
 #   make CARGO_ARGS="build --release" build && make print-cargo-depends > cargo-depends.mk
-# To update:
-#   make; make print-cargo-depends > cargo-depends.mk && make distinfo
 .include "cargo-depends.mk"
 
 .include "../../lang/python/batteries-included.mk"
