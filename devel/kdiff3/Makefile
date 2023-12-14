@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2023/12/14 22:47:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.105 2023/12/14 22:54:24 gutteridge Exp $
 
 DISTNAME=	kdiff3-1.10.7
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+# Upstream states GCC < 8.2 support is "best effort only"; it is presently
+# confirmed to work without issue on NetBSD 9.x with GCC 7.5.
 USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
