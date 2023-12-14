@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2023/12/14 15:25:24 taca Exp $
+
+BLAKE2s (net-pop-0.1.2.gem) = 4df1569d46081a41c96d0ae34d4ff0a00b39858d61af63617d84359e9acc090a
+SHA512 (net-pop-0.1.2.gem) = 4a15a59374b00a00cc121b2d3d69558bec1719981cd9cd7516a35341627c160f454504c8b1731994039baca2f644bc3e62fbf8149b433f737fe6f0a6af9b6be0
+Size (net-pop-0.1.2.gem) = 14336 bytes
