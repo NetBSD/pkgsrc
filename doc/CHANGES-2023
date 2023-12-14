@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7566 2023/12/14 15:27:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7567 2023/12/14 15:32:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10846,3 +10846,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/ruby-net-imap version 0.3.7 [taca 2023-12-14]
 	Added net/ruby-net-pop version 0.1.2 [taca 2023-12-14]
 	Added net/ruby-net-smtp version 0.3.3 [taca 2023-12-14]
+	Updated devel/ruby-redmine50 to 5.0.7 [taca 2023-12-14]
