@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/14 13:56:23 adam Exp $
+bin/wireguard-go
