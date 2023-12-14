@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2023/12/05 19:46:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.110 2023/12/14 20:08:29 wiz Exp $
 
 DISTNAME=	grafana-10.1.0
 PKGREVISION=	5
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://grafana.com/
 COMMENT=	Metrics dashboard and graph editor
-LICENSE=	apache-2.0
+LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
