@@ -1,36 +1,26 @@
-$NetBSD: patch-Gemfile,v 1.1 2023/11/29 16:10:19 taca Exp $
+$NetBSD: patch-Gemfile,v 1.2 2023/12/14 15:35:43 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2023-09-30 06:40:03.000000000 +0000
+--- Gemfile.orig	2023-11-27 20:30:03.000000000 +0000
 +++ Gemfile
-@@ -3,9 +3,9 @@ source 'https://rubygems.org'
- ruby '>= 2.5.0', '< 3.2.0'
- gem 'bundler', '>= 1.12.0'
+@@ -2,7 +2,7 @@ source 'https://rubygems.org'
+ 
+ ruby '>= 2.7.0', '< 3.3.0'
  
 -gem 'rails', '6.1.7.6'
 +gem 'rails', '~> 6.1.7'
- gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
--gem 'rouge', '~> 3.28.0'
-+gem 'rouge', '>= 3.28'
+ gem 'rouge', '~> 4.2.0'
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
- gem "actionpack-xml_parser"
-@@ -18,10 +18,10 @@ gem 'nokogiri', (if Gem.ruby_version < G
-                  elsif Gem.ruby_version < Gem::Version.new('2.7.0')
-                    '~> 1.13.10'
-                  else
--                   '~> 1.15.2'
-+                   '~> 1.15'
-                  end)
- gem "rexml", require: false if Gem.ruby_version >= Gem::Version.new('3.0')
--gem 'i18n', '~> 1.10.0'
-+gem 'i18n', '>= 1.10.0'
- gem 'rbpdf', '~> 1.21.3'
- gem 'addressable'
- gem 'rubyzip', '~> 2.3.0'
-@@ -40,12 +40,12 @@ gem 'rqrcode'
+@@ -31,17 +31,17 @@ gem 'rotp', '>= 5.0.0'
+ gem 'rqrcode'
+ 
+ # HTML pipeline and sanitization
+-gem "html-pipeline", "~> 2.13.2"
++gem "html-pipeline", ">= 2.13.2"
+ gem "sanitize", "~> 6.0"
  
  # Optional gem for LDAP authentication
  group :ldap do
@@ -40,30 +30,12 @@ $NetBSD: patch-Gemfile,v 1.1 2023/11/29 16:10:19 taca Exp $
  
  # Optional gem for exporting the gantt to a PNG file
  group :minimagick do
--  gem 'mini_magick', '~> 4.11.0'
-+  gem 'mini_magick', '>= 4.11.0'
+-  gem 'mini_magick', '~> 4.12.0'
++  gem 'mini_magick', '>= 4.12.0'
  end
  
- # Optional Markdown support, not for JRuby
-@@ -54,7 +54,7 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
- 
- # Optional CommonMark support, not for JRuby
- group :common_mark do
--  gem "html-pipeline", "~> 2.13.2"
-+  gem "html-pipeline", "~> 2.13"
-   gem "commonmarker", (Gem.ruby_version < Gem::Version.new('2.6.0') ? '0.21.0' : '~> 0.23.8')
-   gem "sanitize", "~> 6.0"
-   gem 'deckar01-task_list', '2.3.2'
-@@ -75,7 +75,7 @@ if File.exist?(database_file)
-       when 'mysql2'
-         gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
-       when /postgresql/
--        gem "pg", "~> 1.2.2", :platforms => [:mri, :mingw, :x64_mingw]
-+        gem "pg", "~> 1.2", :platforms => [:mri, :mingw, :x64_mingw]
-       when /sqlite3/
-         gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
-       when /sqlserver/
-@@ -92,6 +92,7 @@ else
+ # Optional Markdown support
+@@ -88,6 +88,7 @@ else
    warn("Please configure your config/database.yml first")
  end
  
@@ -71,11 +43,3 @@ $NetBSD: patch-Gemfile,v 1.1 2023/11/29 16:10:19 taca Exp $
  group :development do
    gem 'listen', '~> 3.3'
    gem "yard"
-@@ -118,6 +119,7 @@ group :test do
-   gem 'rubocop-performance', '~> 1.13.0'
-   gem 'rubocop-rails', '~> 2.14.0'
- end
-+end
- 
- local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
- if File.exist?(local_gemfile)

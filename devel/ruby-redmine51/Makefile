@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/29 16:10:19 taca Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/14 15:35:43 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,12 +10,13 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	5.1.0
+RM_VERSION=	5.1.1
 
 NO_BUILD=	yes
 
-RUBY_VERSIONS_ACCEPTED=	31 32
+USE_LANGUAGES=	# none
 
+RUBY_VERSIONS_ACCEPTED=	31 32
 RUBY_RAILS_ACCEPTED=	61
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -46,8 +47,16 @@ DEPENDS+=	${RUBY_PKGPREFIX}-deckar01-task_list>=2.3.2:../../textproc/ruby-deckar
 DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pipeline
 DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.1<1:../../textproc/ruby-commonmarker
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
+DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.6:../../textproc/ruby-csv
 
 .include "../../lang/ruby/modules.mk"
+
+.if ${RUBY_VER} == 31
+DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.3.4:../../net/ruby-net-imap
+DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.2:../../net/ruby-net-pop
+DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.3.3:../../net/ruby-net-smtp
+.endif
+
 .include "options.mk"
 
 REPLACE_RUBY+=	${DISTNAME}/bin/*
@@ -60,8 +69,6 @@ SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine51_*${RUBY_SUFFIX}.sh
 SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
 SUBST_VARS.shell=	PREFIX RUBY RM_DIR
 SUBST_STAGE.shell=	post-install
-
-USE_LANGUAGES=	# none
 
 EGDIR=		${PREFIX}/share/examples/${RUBY_PKGPREFIX}-redmine51
 INSTALLATION_DIRS=	bin ${EGDIR} ${RM_DIR} ${RM_DIR}/config
