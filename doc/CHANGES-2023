@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7564 2023/12/14 13:33:11 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7565 2023/12/14 13:59:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10841,3 +10841,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-isort to 5.13.2 [adam 2023-12-14]
 	Updated devel/py-trio to 0.23.2 [adam 2023-12-14]
 	Updated net/syncthing to 1.26.1 [gdt 2023-12-14]
+	Added net/wireguard-go version 0.0.20230223 [adam 2023-12-14]
+	Updated textproc/ugrep to 4.3.6 [adam 2023-12-14]
