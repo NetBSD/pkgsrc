@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/03/15 13:53:54 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/14 15:39:22 taca Exp $
 
 MODNAME=	igbinary
-PECL_VERSION=	3.2.14
+PECL_VERSION=	3.2.15
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
