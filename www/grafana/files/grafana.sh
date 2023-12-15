@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: grafana.sh,v 1.6 2022/11/29 22:06:47 wiz Exp $
+# $NetBSD: grafana.sh,v 1.7 2023/12/15 18:35:48 wiz Exp $
 #
 # PROVIDE: grafana
 # REQUIRE: DAEMON
@@ -22,8 +22,8 @@ grafana_user="@GRAFANA_USER@"
 grafana_group="@GRAFANA_GROUP@"
 grafana_home="@PREFIX@/share/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
-command="@PREFIX@/bin/grafana-server"
-command_args="-homepath ${grafana_home} -config @PKG_SYSCONFDIR@/grafana.conf -pidfile ${pidfile} < /dev/null > /dev/null 2>&1 &"
+command="@PREFIX@/bin/grafana"
+command_args="server -homepath ${grafana_home} -config @PKG_SYSCONFDIR@/grafana.conf -pidfile ${pidfile} < /dev/null > /dev/null 2>&1 &"
 start_precmd="grafana_precmd"
 
 grafana_precmd() {
