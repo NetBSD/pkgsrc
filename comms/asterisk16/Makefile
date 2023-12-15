@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/11/14 18:45:28 nia Exp $
+# $NetBSD: Makefile,v 1.107 2023/12/15 12:57:45 gdt Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -30,6 +30,9 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		bash bison gmake perl:run pkg-config tar
+# sed: 1: "/^\s*(<[?]xml|<.DOCTYPE ...": RE error: trailing backslash (\)
+# not reported upstream because this version is EOL
+USE_TOOLS+=		gsed
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
