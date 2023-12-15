@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/06/28 11:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/12/15 13:49:38 wiz Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	13
@@ -9,7 +9,7 @@ DISTFILES=	ghc-6.8.3-src.tar.bz2 \
 		ghc-6.4.2-src.tar.bz2 \
 		ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz
 
-OWNER=		kristerw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
