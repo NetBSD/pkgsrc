@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/12/10 09:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/15 09:48:02 adam Exp $
 
-DISTNAME=	statsmodels-0.14.0
+DISTNAME=	statsmodels-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
 
@@ -17,17 +16,12 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.21:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5.2:../../math/py-patsy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.3:../../math/py-scipy
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-# FIXME: conflicts with installed tests
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} statsmodels
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.18
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
