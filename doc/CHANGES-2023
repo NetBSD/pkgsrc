@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7573 2023/12/14 22:47:16 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.7574 2023/12/15 05:34:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10853,3 +10853,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/ruby-tk to 0.5.0 [taca 2023-12-14]
 	Updated chat/matrix-synapse to 1.98.0 [gdt 2023-12-14]
 	Updated devel/kdiff3 to 1.10.7 [gutteridge 2023-12-14]
+	Updated devel/py-coverage to 7.3.3 [adam 2023-12-15]
+	Updated devel/py-prompt_toolkit to 3.0.43 [adam 2023-12-15]
