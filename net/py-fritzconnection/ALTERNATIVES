@@ -1,0 +1,8 @@
+bin/fritzcall @PREFIX@/bin/fritzcall-@PYVERSSUFFIX@
+bin/fritzconnection @PREFIX@/bin/fritzconnection-@PYVERSSUFFIX@
+bin/fritzhomeauto @PREFIX@/bin/fritzhomeauto-@PYVERSSUFFIX@
+bin/fritzhosts @PREFIX@/bin/fritzhosts-@PYVERSSUFFIX@
+bin/fritzmonitor @PREFIX@/bin/fritzmonitor-@PYVERSSUFFIX@
+bin/fritzphonebook @PREFIX@/bin/fritzphonebook-@PYVERSSUFFIX@
+bin/fritzstatus @PREFIX@/bin/fritzstatus-@PYVERSSUFFIX@
+bin/fritzwlan @PREFIX@/bin/fritzwlan-@PYVERSSUFFIX@
