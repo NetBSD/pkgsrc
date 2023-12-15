@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2022/03/30 07:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/15 13:49:37 wiz Exp $
 
 DISTNAME=	libtecla-1.6.1
 PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.astro.caltech.edu/~mcs/tecla/
 
-MAINTAINER=	kristerw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.astro.caltech.edu/~mcs/tecla/
 COMMENT=	Interactive command line editing facilities
 
