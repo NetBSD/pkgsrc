@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7577 2023/12/15 13:16:28 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7578 2023/12/15 15:00:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10857,3 +10857,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-prompt_toolkit to 3.0.43 [adam 2023-12-15]
 	Updated math/py-pandas to 2.1.4 [adam 2023-12-15]
 	Updated math/py-statsmodels to 0.14.1 [adam 2023-12-15]
+	Updated databases/prometheus to 2.40.5nb14 [wiz 2023-12-15]
