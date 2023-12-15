@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7578 2023/12/15 15:00:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7579 2023/12/15 18:35:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10858,3 +10858,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pandas to 2.1.4 [adam 2023-12-15]
 	Updated math/py-statsmodels to 0.14.1 [adam 2023-12-15]
 	Updated databases/prometheus to 2.40.5nb14 [wiz 2023-12-15]
+	Updated www/grafana to 10.1.0nb7 [wiz 2023-12-15]
