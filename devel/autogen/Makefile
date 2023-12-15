@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/11/08 13:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/12/15 13:49:37 wiz Exp $
 
 DISTNAME=	autogen-5.18.16
 PKGREVISION=	11
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=autogen/rel${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	kristerw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/autogen/
 COMMENT=	The Automated Text and Program Generation Tool
 LICENSE=	gnu-gpl-v3
