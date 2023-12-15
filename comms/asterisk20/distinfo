@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/12/10 06:40:20 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2023/12/15 14:18:16 gdt Exp $
 
 BLAKE2s (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 7c735f257956737dffaf6fe434f291dacb1c6b38c930502cbe35fd4657250e23
 SHA512 (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 4490ceff4fa5f455f2b4ed15e4c58fdc9b4da275006190b7e7e027b5fcc6a96d018574e6f68e69e05090af8303054ad243d34bbbeb0633bb91f253a9963a2a8b
@@ -13,6 +13,7 @@ BLAKE2s (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7c04ae740c66f92502684de834b
 SHA512 (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 2f1eb3cb8f52a5536c355b02b1abfa24c7d2263b5338568a7cd8167d349e007c34afafcdd7ed510bfc4fc859494383fac05e8325e46fd66219dbead86c5c3562
 Size (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7825201 bytes
 SHA1 (patch-Makefile) = 7d278c52ace3e972ee0e17b0aec137549d4b8d7c
+SHA1 (patch-build__tools_make__xml__documentation) = 9ee091af60ea480a88ce036dad2be7b257142ae0
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-configure) = 262036a7bcdf6e8e8431212a99dbcd65a7be8329
 SHA1 (patch-configure.ac) = 98690ecc0e1cc99b6d7a0cd13412bd1b2b05397a
