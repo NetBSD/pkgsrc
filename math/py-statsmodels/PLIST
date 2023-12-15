@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/08 08:51:03 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2023/12/15 09:48:02 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/statsmodels/LICENSE.txt
 ${PYSITELIB}/statsmodels/__init__.py
 ${PYSITELIB}/statsmodels/__init__.pyc
@@ -2882,6 +2881,13 @@ ${PYSITELIB}/statsmodels/tsa/stl/mstl.pyo
 ${PYSITELIB}/statsmodels/tsa/stl/tests/__init__.py
 ${PYSITELIB}/statsmodels/tsa/stl/tests/__init__.pyc
 ${PYSITELIB}/statsmodels/tsa/stl/tests/__init__.pyo
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/__init__.py
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/__init__.pyc
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/__init__.pyo
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/mstl_elec_vic.csv
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/mstl_test_results.csv
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/stl_co2.csv
+${PYSITELIB}/statsmodels/tsa/stl/tests/results/stl_test_results.csv
 ${PYSITELIB}/statsmodels/tsa/stl/tests/test_mstl.py
 ${PYSITELIB}/statsmodels/tsa/stl/tests/test_mstl.pyc
 ${PYSITELIB}/statsmodels/tsa/stl/tests/test_mstl.pyo
@@ -2974,6 +2980,7 @@ ${PYSITELIB}/statsmodels/tsa/tests/results/results_arma_acf.py
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_arma_acf.pyc
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_arma_acf.pyo
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_arma_forecasts.csv
+${PYSITELIB}/statsmodels/tsa/tests/results/results_ccf.csv
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_corrgram.csv
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_process.py
 ${PYSITELIB}/statsmodels/tsa/tests/results/results_process.pyc
