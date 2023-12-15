@@ -1,0 +1,8 @@
+This is a prometheus exporter for AVM Fritz! home network devices
+commonly found in Europe. This exporter uses the devices builtin
+TR-064 API via the fritzconnection python module.
+
+The exporter should work with Fritz!Box and Fritz!Repeater Devices
+(and maybe others). It actively checks for supported metrics and
+queries the for all devices configured (Yes, it has multi-device
+support for all you Mesh users out there.)
