@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/12/10 06:40:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/12/15 16:11:22 gdt Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -92,6 +92,7 @@ lib/asterisk/modules/chan_audiosocket.so
 lib/asterisk/modules/chan_bridge_media.so
 lib/asterisk/modules/chan_iax2.so
 lib/asterisk/modules/chan_mgcp.so
+${PLIST.jabber}lib/asterisk/modules/chan_motif.so
 lib/asterisk/modules/chan_pjsip.so
 lib/asterisk/modules/chan_rtp.so
 lib/asterisk/modules/chan_unistim.so
@@ -310,6 +311,7 @@ lib/asterisk/modules/res_stun_monitor.so
 lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
 lib/asterisk/modules/res_tonedetect.so
+${PLIST.jabber}lib/asterisk/modules/res_xmpp.so
 lib/libasteriskssl.so
 lib/libasteriskssl.so.1
 lib/pkgconfig/asterisk.pc
