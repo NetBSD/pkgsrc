@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7574 2023/12/15 05:34:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7575 2023/12/15 09:48:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10855,3 +10855,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/kdiff3 to 1.10.7 [gutteridge 2023-12-14]
 	Updated devel/py-coverage to 7.3.3 [adam 2023-12-15]
 	Updated devel/py-prompt_toolkit to 3.0.43 [adam 2023-12-15]
+	Updated math/py-pandas to 2.1.4 [adam 2023-12-15]
+	Updated math/py-statsmodels to 0.14.1 [adam 2023-12-15]
