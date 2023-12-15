@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/12/15 15:06:48 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/12/15 17:58:18 wiz Exp $
 
 DISTNAME=	grafana-10.1.0
 PKGREVISION=	6
@@ -91,6 +91,7 @@ do-install:
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
+	${RM} ${DESTDIR}${PREFIX}/share/grafana/conf/sample.ini.orig
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
