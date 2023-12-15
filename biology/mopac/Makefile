@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/08/14 05:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/15 13:50:36 wiz Exp $
 
 DISTNAME=	mopac-22.0.6
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openmopac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openmopac.net/
 COMMENT=	Semi-empirical (MNDO, etc.) molecular orbital calculation
 LICENSE=	gnu-gpl-v3
