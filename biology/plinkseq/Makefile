@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/12/15 18:16:31 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/15 18:23:29 zafer Exp $
 
 DISTNAME=	plinkseq-0.08
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	https://atgu.mgh.harvard.edu/plinkseq/dist/version-0.08/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://zzz.bwh.harvard.edu/plinkseq/install.shtml
+HOMEPAGE=	https://zzz.bwh.harvard.edu/plinkseq/index.shtml
 COMMENT=	C/C++ library for working with human genetic variation data
 LICENSE=	gnu-gpl-v2	# Assuming same as plink.  No info on web.
 
