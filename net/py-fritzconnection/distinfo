@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/15 19:00:32 wiz Exp $
+
+BLAKE2s (fritzconnection-1.13.2.tar.gz) = d4dece860c39278215d9e3dac15a4e15726a7fd711061685c9111b5528a58e45
+SHA512 (fritzconnection-1.13.2.tar.gz) = 24f7d284e9f147fc6b37d34263ff06589ff9157ee7ef92940e4ac3f426b38e59e1e4e81e82ebe63e0f5ba861ba28b9b708cd58c8b5c2853f5145bc89827c4fcc
+Size (fritzconnection-1.13.2.tar.gz) = 54328 bytes
