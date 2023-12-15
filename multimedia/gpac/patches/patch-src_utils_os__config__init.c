@@ -1,4 +1,4 @@
-$NetBSD: patch-src_utils_os__config__init.c,v 1.1 2021/09/17 00:10:21 nia Exp $
+$NetBSD: patch-src_utils_os__config__init.c,v 1.2 2023/12/15 13:05:53 schmonz Exp $
 
 Support NetBSD.
 
@@ -26,19 +26,19 @@ Support NetBSD.
  
  	/*on OSX, Linux & co, user home is where we store the cfg file*/
  	if (path_type==GF_PATH_CFG) {
-@@ -342,6 +350,15 @@ static Bool get_default_install_path(cha
- 			return 1;
- 		}
- 
+@@ -339,6 +347,15 @@ static Bool get_default_install_path(cha
+ 			realpath(app_path, file_path);
+ 			sep = strrchr(file_path, '/');
+ 			if (sep) sep[0] = 0;
++			return 1;
++		}
++
 +#elif defined(__NetBSD__)
 +		size = sizeof(app_path);
 +		if (sysctl(mib, 4, app_path, &size, NULL, 0) != -1) {
 +			realpath(app_path, file_path);
 +			sep = strrchr(file_path, '/');
 +			if (sep) sep[0] = 0;
-+			return 1;
-+		}
-+
- #elif defined(GPAC_CONFIG_LINUX)
- 		size = readlink("/proc/self/exe", file_path, GF_MAX_PATH-1);
- 		if (size>0) {
+ 			return 1;
+ 		}
+ 
