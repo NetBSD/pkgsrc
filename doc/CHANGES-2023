@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7575 2023/12/15 09:48:18 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7576 2023/12/15 13:05:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10857,3 +10857,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-prompt_toolkit to 3.0.43 [adam 2023-12-15]
 	Updated math/py-pandas to 2.1.4 [adam 2023-12-15]
 	Updated math/py-statsmodels to 0.14.1 [adam 2023-12-15]
+	Updated multimedia/gpac to 1.0.1nb17 [schmonz 2023-12-15]
