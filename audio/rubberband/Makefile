@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/08/14 05:23:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/15 13:53:13 schmonz Exp $
 
 DISTNAME=	rubberband-3.1.2
 PKGREVISION=	2
@@ -25,6 +25,14 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/rubberband.pc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=			SOEXT="dylib"
+.else
+PLIST_SUBST+=			SOEXT="so"
+.endif
 
 .include "../../mk/atomic64.mk"
 .include "../../audio/ladspa/buildlink3.mk"
