@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.188 2023/12/08 04:21:44 zafer Exp $
+# $NetBSD: sites.mk,v 1.189 2023/12/15 17:25:14 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -55,8 +55,7 @@ MASTER_SITE_TEX_CTAN+= \
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
-	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
-	ftp://ftp.lip6.fr/pub/linux/sunsite/
+	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/
 
 MASTER_SITE_GNOME+=     \
 	https://download.gnome.org/ \
