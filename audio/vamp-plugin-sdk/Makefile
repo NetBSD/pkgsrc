@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/07/18 12:56:06 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/15 13:26:50 schmonz Exp $
 
 DISTNAME=	vamp-plugin-sdk-2.10.0
 PKGREVISION=	3
@@ -28,6 +28,18 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-sdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp.pc.in
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=build/vamp-plugin.map
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+.PHONY: post-install-darwin-fix-rpath
+post-install: post-install-darwin-fix-rpath
+post-install-darwin-fix-rpath:
+	cd ${DESTDIR};									\
+	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
+	  install_name_tool -id /$$i $$i;						\
+	done
+.endif
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
