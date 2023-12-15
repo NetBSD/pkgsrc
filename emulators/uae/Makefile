@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.91 2023/11/14 14:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/12/15 13:49:37 wiz Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	41
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
 
-MAINTAINER=	kristerw@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://uae.coresystems.de/
 COMMENT=	The UAE Amiga Emulator
 
