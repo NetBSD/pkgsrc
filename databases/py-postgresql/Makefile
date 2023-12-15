@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2022/01/04 20:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2023/12/15 13:48:12 wiz Exp $
 
 DISTNAME=	PyGreSQL-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyGreSQL/postgresql/}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pygresql.org/files/
 
-OWNER=		darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.PyGreSQL.org/
 COMMENT=	Python interface to PostgreSQL
 LICENSE=	postgresql-license

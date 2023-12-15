@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2023/08/16 07:58:14 nia Exp $
-#
+# $NetBSD: Makefile,v 1.29 2023/12/15 13:48:12 wiz Exp $
 
 DISTNAME=	generate-2.8
 CATEGORIES=	devel
 MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
-#OWNER=		darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://darcy.druid.net/readme-generate.html
 COMMENT=	Simple text pre-processor
 
