@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/08/02 19:20:17 nia Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/15 17:58:52 zafer Exp $
 
 DISTNAME=	mp3check-0.8.7
 CATEGORIES=	audio
-MASTER_SITES=	http://mp3check.googlecode.com/files/
+MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mp3check/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
