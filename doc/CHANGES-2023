@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7580 2023/12/15 19:00:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7581 2023/12/15 19:05:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10860,3 +10860,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/prometheus to 2.40.5nb14 [wiz 2023-12-15]
 	Updated www/grafana to 10.1.0nb7 [wiz 2023-12-15]
 	Added net/py-fritzconnection version 1.13.2 [wiz 2023-12-15]
+	Added sysutils/py-fritz_exporter version 2.3.0 [wiz 2023-12-15]
