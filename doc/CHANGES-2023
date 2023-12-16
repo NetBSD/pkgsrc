@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7615 2023/12/16 23:31:48 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7616 2023/12/16 23:41:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10898,3 +10898,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/fritzbox_exporter version 1.1.0 [wiz 2023-12-16]
 	Added devel/p5-match-simple version 0.012 [mef 2023-12-16]
 	Updated devel/p5-IO-Prompter to 0.005001 [mef 2023-12-16]
+	Updated devel/p5-IO-Tty to 1.18 [mef 2023-12-16]
