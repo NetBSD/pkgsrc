@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7582 2023/12/16 05:12:28 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7583 2023/12/16 07:18:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10862,3 +10862,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/py-fritzconnection version 1.13.2 [wiz 2023-12-15]
 	Added sysutils/py-fritz_exporter version 2.3.0 [wiz 2023-12-15]
 	Updated textproc/ruby-csv to 3.2.8 [taca 2023-12-16]
+	Removed lang/ghc [wiz 2023-12-16]
