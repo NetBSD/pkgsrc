@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2023/08/02 19:20:16 nia Exp $
+# $NetBSD: Makefile,v 1.30 2023/12/16 00:02:57 zafer Exp $
 #
 
 DISTNAME=		pbzip2-1.1.13
 CATEGORIES=		archivers
-MASTER_SITES=		http://compression.ca/pbzip2/
 MASTER_SITES=		https://launchpad.net/pbzip2/1.1/1.1.13/+download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://compression.ca/pbzip2/
+HOMEPAGE=		http://compression.great-site.net/pbzip2/
 COMMENT=		Parallel implementation of the bzip2 block-sorting file compressor
 #LICENSE=		pbzip2-license
 
