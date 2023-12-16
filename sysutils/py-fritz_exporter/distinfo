@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/12/16 08:00:50 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/12/16 08:53:58 wiz Exp $
 
-BLAKE2s (fritz_exporter-2.3.0.tar.gz) = eb16915b268c5f23a919e63c73a39415af6ecf2075504aec9716d5bff8a19c3a
-SHA512 (fritz_exporter-2.3.0.tar.gz) = fa917e9a55bb44f13ca7a686b3bde1f97f2e14ce8b717623144f6917db3714a88c83c25e84f600f4dbe11582eeb8d125655ec3a8e3d722d9b8ceeb4f950f8023
-Size (fritz_exporter-2.3.0.tar.gz) = 843346 bytes
-SHA1 (patch-pyproject.toml) = 45610124570e83cb69df1ed5e37ca09b43e4cc22
+BLAKE2s (fritz_exporter-2.3.1.tar.gz) = 2f951f3c930cc13db311085a9d781cc2b71867c5bb67630a9d2b7ee91a0eede7
+SHA512 (fritz_exporter-2.3.1.tar.gz) = a95fd9b66f2ecb91eb013b6aff07ad9ef8dc93ae6c5c73b2c58c332955a7b41d1898dc984a1137e41aac225d2fbc1f1f5cf3521f86021695ad8af79a8bc955a7
+Size (fritz_exporter-2.3.1.tar.gz) = 842962 bytes
