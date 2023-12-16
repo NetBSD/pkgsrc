@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7610 2023/12/16 15:18:19 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7611 2023/12/16 15:42:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10893,3 +10893,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-frozenlist to 1.4.1 [adam 2023-12-16]
 	Updated devel/php-xdebug to 3.3.1 [taca 2023-12-16]
 	Added devel/ruby-minitest version 5.20.0 [taca 2023-12-16]
+	Updated devel/hoe to 4.1.0 [taca 2023-12-16]
