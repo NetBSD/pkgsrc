@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:16:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/16 11:53:46 mef Exp $
 
-BLAKE2s (Git-Version-Compare-1.004.tar.gz) = 7210f0b00be90fd1f308a013a4d408709fba9449a0af71462c016947a9e69af7
-SHA512 (Git-Version-Compare-1.004.tar.gz) = 465cda21d88449c2dbef9785bff5781ba75f8360692d316ae623960ebe2d4d3bac5f004b0b59024d640096482851307e42b59c3bc2ff06efee8a2ce3c25fda39
-Size (Git-Version-Compare-1.004.tar.gz) = 17769 bytes
+BLAKE2s (Git-Version-Compare-1.005.tar.gz) = 56ddda38604df7fb554a17191b1db65238eb50e30a49c2af25de67453fa015fa
+SHA512 (Git-Version-Compare-1.005.tar.gz) = f58502ec282d4c36411c27143ae7a0f0abc751d508b90329a55a87d9812e43dfdba7dda372c7ae63783faa17ec61bf83ad4c99fa4be2a673fa4bc9489a13e246
+Size (Git-Version-Compare-1.005.tar.gz) = 17899 bytes
