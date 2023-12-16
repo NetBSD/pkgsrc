@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7597 2023/12/16 10:26:22 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7598 2023/12/16 10:39:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10877,3 +10877,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-Munge to 0.10 [mef 2023-12-16]
 	Updated devel/p5-Data-Printer to 1.001001 [mef 2023-12-16]
 	Updated devel/p5-Devel-CallChecker to 0.009 [mef 2023-12-16]
+	Updated devel/p5-Devel-NYTProf to 6.14 [mef 2023-12-16]
