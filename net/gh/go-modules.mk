@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.28 2023/11/28 01:08:11 nonaka Exp $
+# $NetBSD: go-modules.mk,v 1.29 2023/12/16 20:21:07 bsiegert Exp $
 
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.mod
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.zip
@@ -24,8 +24,8 @@ GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.5.0.zip
 GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/cli/browser/@v/v1.3.0.zip
-GO_MODULE_FILES+=	github.com/cli/go-gh/v2/@v/v2.4.1-0.20231024095351-47a83eeb1778.mod
-GO_MODULE_FILES+=	github.com/cli/go-gh/v2/@v/v2.4.1-0.20231024095351-47a83eeb1778.zip
+GO_MODULE_FILES+=	github.com/cli/go-gh/v2/@v/v2.4.1-0.20231120145612-d32c104a9a25.mod
+GO_MODULE_FILES+=	github.com/cli/go-gh/v2/@v/v2.4.1-0.20231120145612-d32c104a9a25.zip
 GO_MODULE_FILES+=	github.com/cli/oauth/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/cli/oauth/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/cli/safeexec/@v/v1.0.0.mod
@@ -37,8 +37,8 @@ GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.17.mod
-GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.20.mod
-GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.20.zip
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.21.mod
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.21.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.9.mod
 GO_MODULE_FILES+=	github.com/danieljoos/wincred/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/danieljoos/wincred/@v/v1.2.0.zip
