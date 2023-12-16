@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/09/09 14:38:46 taca Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/16 05:11:43 taca Exp $
 
-DISTNAME=	csv-3.2.7
+DISTNAME=	csv-3.2.8
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
