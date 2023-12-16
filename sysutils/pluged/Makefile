@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2014/09/29 08:29:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/16 15:46:44 zafer Exp $
 #
 
 PKGNAME=	pluged-0.1
 DISTNAME=	pluged
 CATEGORIES=	sysutils
-MASTER_SITES=	http://plug.gnux.info/
+MASTER_SITES=	https://www.aydogan.net/distfiles/sysutils/
 EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://plug.gnux.info/
+HOMEPAGE=	https://gnux.info/
 COMMENT=	USB plug/unplug monitoring daemon
 #LICENSE=	# TODO: (see mk/license.mk)
 
