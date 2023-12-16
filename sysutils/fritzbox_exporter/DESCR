@@ -1,0 +1,5 @@
+This exporter exports some variables from an AVM Fritzbox to
+prometheus.
+
+This exporter is tested with a Fritzbox 7590 software version 07.12,
+07.20 and 07.21.
