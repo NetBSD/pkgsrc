@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4148 2023/12/11 09:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4149 2023/12/16 15:17:59 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3288,6 +3288,7 @@ SUBDIR+=	ruby-mercenary
 SUBDIR+=	ruby-metaid
 SUBDIR+=	ruby-metasm
 SUBDIR+=	ruby-middleware
+SUBDIR+=	ruby-minitest
 SUBDIR+=	ruby-mixlib-authentication
 SUBDIR+=	ruby-mixlib-cli
 SUBDIR+=	ruby-mixlib-config
