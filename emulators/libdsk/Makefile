@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 23:59:42 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/16 11:40:47 zafer Exp $
 #
 
 DISTNAME=	libdsk-1.3.8
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.seasip.info/Unix/LibDsk/
+MASTER_SITES=	https://www.seasip.info/Unix/LibDsk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.seasip.info/Unix/LibDsk/
