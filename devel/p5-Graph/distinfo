@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/01/21 01:33:59 wen Exp $
+$NetBSD: distinfo,v 1.19 2023/12/16 12:08:47 mef Exp $
 
-BLAKE2s (Graph-0.9725.tar.gz) = e4346aa5dbc55060f3b2a6e805d3fbbbc0b659e215801ae67f9e9579abbd0d3c
-SHA512 (Graph-0.9725.tar.gz) = 51638c45dd7b21a87e3d6771f06dd5fae1e71da7dea4d337de2e540de4ab625a53e349799ee4c0cc77108fff4c47027d33f501edafb52daaef699f82edd5c3d3
-Size (Graph-0.9725.tar.gz) = 147502 bytes
+BLAKE2s (Graph-0.9727.tar.gz) = 48107537144ba60045ff70b23ede1ca9418081e6c8eebd1a4b884c7f79e30bce
+SHA512 (Graph-0.9727.tar.gz) = e5274aa86f0c0fab6acff29af1253accb4159785fa6c32edefd080bc2b840c959c1a18e2f6db193fda469871294ec02b4d726f73c4b0076fe97b4c61cccd2c3e
+Size (Graph-0.9727.tar.gz) = 147842 bytes
