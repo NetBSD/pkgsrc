@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/11/30 20:11:26 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/16 09:56:37 nros Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
@@ -64,7 +65,7 @@ CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
 
-PLIST_VARS+=	egl x11
+PLIST_VARS+=	egl egldevice x11
 
 .include "../../mk/compiler.mk"
 
@@ -245,6 +246,10 @@ PLIST.x11=	yes
 .include "../../graphics/glu/buildlink3.mk"
 .  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
+EGL_EXT_FILE=	cat ${X11BASE}/include/EGL/eglext.h
+.    if exists(${X11BASE}/include/EGL/eglext.h) && !empty(EGL_EXT_FILE:sh:MEGL_DRM_MASTER_FD_EXT)
+PLIST.egldevice=	yes
+.    endif
 .  endif
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11
 .include "../../x11/libxcb/buildlink3.mk"
