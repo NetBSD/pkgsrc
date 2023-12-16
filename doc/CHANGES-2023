@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7607 2023/12/16 12:09:16 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7608 2023/12/16 12:17:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10887,3 +10887,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Function-Parameters to 2.002004 [mef 2023-12-16]
 	Updated devel/p5-Git-Version-Compare to 1.005 [mef 2023-12-16]
 	Updated devel/p5-Graph to 0.9727 [mef 2023-12-16]
+	Updated security/py-bcrypt to 4.1.2 [adam 2023-12-16]
+	Updated devel/py-lazy-object-proxy to 1.10.0 [adam 2023-12-16]
+	Updated devel/py-pebble to 5.0.5 [adam 2023-12-16]
+	Updated devel/py-frozenlist to 1.4.1 [adam 2023-12-16]
