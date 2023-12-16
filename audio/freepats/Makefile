@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:42 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/16 11:34:44 zafer Exp $
 #
 
 DISTNAME=	freepats-20060219
 CATEGORIES=	audio
-MASTER_SITES=	http://freepats.zenvoid.org/
+MASTER_SITES=	https://freepats.zenvoid.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
