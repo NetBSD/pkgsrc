@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/07/06 09:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/16 09:57:50 mef Exp $
 
-DISTNAME=	Config-MVP-2.200012
+DISTNAME=	Config-MVP-2.200013
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
@@ -24,8 +23,9 @@ DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 #TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # for make test
-TOOL_DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
-TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
++=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+TEST_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 
 USE_LANGUAGES=		# empty
