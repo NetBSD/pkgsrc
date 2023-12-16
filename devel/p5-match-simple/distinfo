@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/12/16 23:21:45 mef Exp $
+
+BLAKE2s (match-simple-0.012.tar.gz) = eb31243a348ee175fcfc5394041c2fefe450cf40024c9c70f30af7d286a42f08
+SHA512 (match-simple-0.012.tar.gz) = c6abe6ea332f74bbe95f513ab67bf029f0fbcb56141e9884bd48479293ed207e604c80d16fea7c75b9a38a1b9c825eb4bb27a41cbb40ff6a1c099932691f3039
+Size (match-simple-0.012.tar.gz) = 24294 bytes
