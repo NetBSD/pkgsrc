@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7592 2023/12/16 10:01:41 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7593 2023/12/16 10:04:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10872,3 +10872,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Config-INI to 0.029 [mef 2023-12-16]
 	Updated devel/p5-Config-MVP to 2.200013 [mef 2023-12-16]
 	Updated devel/p5-Config-MVP-Reader-INI to 2.101465 [mef 2023-12-16]
+	Updated devel/p5-Config-Tiny to 2.30 [mef 2023-12-16]
