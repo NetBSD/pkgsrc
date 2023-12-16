@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2023/11/08 13:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/16 12:16:10 zafer Exp $
 
 DISTNAME=	lua-sqlite3-0.4.1
 PKGNAME=	${LUA_PKGPREFIX}-sqlite3-0.4.1
 PKGREVISION=	25
 CATEGORIES=	databases lua
-MASTER_SITES=	https://www.mroth.net/lua-sqlite3/
+MASTER_SITES=	https://mroth.net/lua-sqlite3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mroth.net/lua-sqlite3/
+HOMEPAGE=	https://mroth.net/lua-sqlite3/
 COMMENT=	SQLite3 binding for LUA
 LICENSE=	mit
 
