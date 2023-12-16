@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/12/15 19:04:40 wiz Exp $
-bin/fritzexporter-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2023/12/16 08:00:50 wiz Exp $
 ${PYSITELIB}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/fritzexporter/__init__.py
 ${PYSITELIB}/fritzexporter/__init__.pyc
 ${PYSITELIB}/fritzexporter/__init__.pyo
