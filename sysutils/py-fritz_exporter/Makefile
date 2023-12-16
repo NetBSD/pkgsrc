@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/12/16 08:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/16 08:53:58 wiz Exp $
 
-DISTNAME=	fritz_exporter-2.3.0
+DISTNAME=	fritz_exporter-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pdreker/}
 # latest pypi distfile is older
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	fritzexporter-v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	fritz_exporter
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/fritz_exporter-${GITHUB_TAG}
 
 USE_LANGUAGES=	# none
 
