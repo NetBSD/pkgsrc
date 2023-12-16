@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7612 2023/12/16 20:21:21 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7613 2023/12/16 22:25:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10895,3 +10895,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/ruby-minitest version 5.20.0 [taca 2023-12-16]
 	Updated devel/hoe to 4.1.0 [taca 2023-12-16]
 	Updated net/gh to 2.40.1 [bsiegert 2023-12-16]
+	Added sysutils/fritzbox_exporter version 1.1.0 [wiz 2023-12-16]
