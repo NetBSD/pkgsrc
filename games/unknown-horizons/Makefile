@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2023/10/23 06:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/16 14:58:52 zafer Exp $
 
 DISTNAME=	unknown-horizons-2019.1
 PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unknown-horizons/}
+GITHUB_TAG= "refs/tags/${PKGVERSION_NOREV}"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://unknown-horizons.org/
