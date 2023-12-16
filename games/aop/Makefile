@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/04/26 13:54:59 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/16 19:01:10 zafer Exp $
 
 DISTNAME=	aop-0.6
 PKGREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	http://raffi.at/code/aop/
+MASTER_SITES=	https://raffi.at/code/aop/
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://raffi.at/view/code/aop/
