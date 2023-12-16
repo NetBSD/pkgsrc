@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/16 12:16:24 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/16 22:31:40 wiz Exp $
 
 DISTNAME=	frozenlist-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/aio-libs/frozenlist
 COMMENT=	List-like structure which implements collections.abc.MutableSequence
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
