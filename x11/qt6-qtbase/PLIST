@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/30 20:11:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/12/16 09:56:37 nros Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -2888,12 +2888,12 @@ ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfigVersion.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfigVersionImpl.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-release.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfigVersion.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfigVersionImpl.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-release.cmake
-${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfigVersion.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfigVersionImpl.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-release.cmake
+${PLIST.egldevice}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake
 ${PLIST.egl}qt6/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfigVersion.cmake
@@ -3752,7 +3752,7 @@ qt6/modules/Widgets.json
 ${PLIST.x11}qt6/modules/XcbQpaPrivate.json
 qt6/modules/Xml.json
 ${PLIST.egl}qt6/plugins/egldeviceintegrations/libqeglfs-emu-integration.so
-${PLIST.egl}qt6/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so
+${PLIST.egldevice}qt6/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so
 ${PLIST.egl}qt6/plugins/egldeviceintegrations/libqeglfs-kms-integration.so
 ${PLIST.egl}qt6/plugins/egldeviceintegrations/libqeglfs-x11-integration.so
 qt6/plugins/generic/libqtuiotouchplugin.so
