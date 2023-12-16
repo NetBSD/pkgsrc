@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1104 2023/12/15 19:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1105 2023/12/16 22:25:20 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -246,6 +246,7 @@ SUBDIR+=	fluent-bit
 SUBDIR+=	foremost
 SUBDIR+=	fp-checkpassword
 SUBDIR+=	free
+SUBDIR+=	fritzbox_exporter
 SUBDIR+=	fs-kit
 SUBDIR+=	fscd
 SUBDIR+=	fsviewer
