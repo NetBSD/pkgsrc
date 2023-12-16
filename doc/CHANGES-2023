@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7600 2023/12/16 11:10:10 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7601 2023/12/16 11:29:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10880,3 +10880,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Devel-NYTProf to 6.14 [mef 2023-12-16]
 	Updated devel/p5-Dist-Zilla to 6.031 [mef 2023-12-16]
 	Updated devel/p5-EV to 4.34 [mef 2023-12-16]
+	Updated devel/p5-File-Find-Object to 0.3.8 [mef 2023-12-16]
