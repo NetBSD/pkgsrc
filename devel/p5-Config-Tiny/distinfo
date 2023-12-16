@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/05/20 07:12:41 wiz Exp $
+$NetBSD: distinfo,v 1.20 2023/12/16 10:04:13 mef Exp $
 
-BLAKE2s (Config-Tiny-2.29.tgz) = 333862b98a779b0c7de19c24695219842643e51c0bf1c47f114af80fcf01d03f
-SHA512 (Config-Tiny-2.29.tgz) = 48f84d198430762333c10c57437bfdf20b99ad79d5b39d8215fdf8853a756cb476d99b85ff145193358a56e0bad2e470431af929869b17f153cd3ef0723804d9
-Size (Config-Tiny-2.29.tgz) = 22910 bytes
+BLAKE2s (Config-Tiny-2.30.tgz) = bea306ffe37ced1581ae3e7464bc5bc9472ac0740c9b5c272e6ffd999e9ade22
+SHA512 (Config-Tiny-2.30.tgz) = 2933f6a040cd712d06cccb5c511eaa914080df7ffea952f1e445f99bd021cdb9277ebd109c55365b62e713715aa431a97627ef3898df45c5b2b244270a107710
+Size (Config-Tiny-2.30.tgz) = 26973 bytes
