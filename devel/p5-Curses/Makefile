@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2023/07/06 09:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2023/12/16 10:16:48 mef Exp $
 
-DISTNAME=	Curses-1.38
+DISTNAME=	Curses-1.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v1 OR artistic
 PERL5_PACKLIST=		auto/Curses/.packlist
 
 MAKE_PARAMS+=	FORMS MENUS
+REPLACE_PERL+=	makeConfig
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/curses.buildlink3.mk"
