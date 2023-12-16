@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7611 2023/12/16 15:42:32 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7612 2023/12/16 20:21:21 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10894,3 +10894,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/php-xdebug to 3.3.1 [taca 2023-12-16]
 	Added devel/ruby-minitest version 5.20.0 [taca 2023-12-16]
 	Updated devel/hoe to 4.1.0 [taca 2023-12-16]
+	Updated net/gh to 2.40.1 [bsiegert 2023-12-16]
