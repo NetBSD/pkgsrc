@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:30:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/12/16 15:59:41 zafer Exp $
 #
 
 DISTNAME=	mstream-1.3
 PKGREVISION=	10
 CATEGORIES=	audio
-MASTER_SITES=	http://software.kimmo.suominen.com/
+MASTER_SITES=	https://software.kimmo.suominen.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kimmo.suominen.com/gwradio/
