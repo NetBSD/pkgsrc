@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7602 2023/12/16 11:32:00 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7603 2023/12/16 11:34:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10882,3 +10882,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-EV to 4.34 [mef 2023-12-16]
 	Updated devel/p5-File-Find-Object to 0.3.8 [mef 2023-12-16]
 	Updated devel/p5-File-Listing to 6.16 [mef 2023-12-16]
+	Updated devel/p5-File-MimeInfo to 0.34 [mef 2023-12-16]
