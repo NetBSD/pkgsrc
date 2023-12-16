@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7588 2023/12/16 09:20:14 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7589 2023/12/16 09:23:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10868,3 +10868,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Cache-Memcached-Fast to 0.28 [mef 2023-12-16]
 	Updated devel/p5-Carton to 1.0.35 [mef 2023-12-16]
 	Updated devel/p5-Commandable to 0.11 [mef 2023-12-16]
+	Updated devel/p5-Config-Any to 0.33 [mef 2023-12-16]
