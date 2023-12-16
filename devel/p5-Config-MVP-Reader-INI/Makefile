@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/07/06 09:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/16 10:01:30 mef Exp $
 
-DISTNAME=	Config-MVP-Reader-INI-2.101464
+DISTNAME=	Config-MVP-Reader-INI-2.101465
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
@@ -15,7 +14,7 @@ DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-Config-MVP>=2.0:../../devel/p5-Config-MVP
 DEPENDS+=	p5-Moose>=0.91:../../devel/p5-Moose
 # for make test
-TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Config/MVP/Reader/INI/.packlist
