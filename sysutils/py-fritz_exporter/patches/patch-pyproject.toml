@@ -1,0 +1,17 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2023/12/16 08:00:51 wiz Exp $
+
+Remove broken script.
+https://github.com/pdreker/fritz_exporter/issues/265
+
+--- pyproject.toml.orig	2023-12-16 07:57:40.612264540 +0000
++++ pyproject.toml
+@@ -26,9 +26,6 @@ classifiers = [
+ include = [ "LICENSE.md" ]
+ packages = [{include = "fritzexporter"}]
+ 
+-[tool.poetry.scripts]
+-fritzexporter = 'fritzexporter:__main__'
+-
+ [tool.poetry.dependencies]
+ python = "^3.10"
+ prometheus-client = ">=0.6.0"
