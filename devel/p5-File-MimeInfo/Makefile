@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/07/06 09:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/12/16 11:34:30 mef Exp $
 
-DISTNAME=	File-MimeInfo-0.33
+DISTNAME=	File-MimeInfo-0.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -16,7 +15,7 @@ DEPENDS+=	p5-File-DesktopEntry-[0-9]*:../../devel/p5-File-DesktopEntry
 DEPENDS+=	p5-Encode-Locale-[0-9]*:../../textproc/p5-Encode-Locale
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
 # for make test (when t/05_more.t 'require (File::DesktopEntry);'
-TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+TEST_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/File/MimeInfo/.packlist
 
