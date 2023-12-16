@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/12/16 11:37:02 mef Exp $
 
-BLAKE2s (File-Valet-1.08.tar.gz) = 97ec4fc7071568a8856ad401155c205e32cdae90754ed0c337ac52b33baef1b8
-SHA512 (File-Valet-1.08.tar.gz) = adcf699a4eb7744871a6858c5aaa45937de8e09dbb56df4b5c82d4d503e2f0f5a073d655afd29375b6233de57c2d3225fb5172a88348a68dac521317c7dc5e60
-Size (File-Valet-1.08.tar.gz) = 26305 bytes
+BLAKE2s (File-Valet-1.11.tar.gz) = 4eb1ad03a4674c74f378ad42c469d4159736a8f126c3468e629c4799c9bfc8b1
+SHA512 (File-Valet-1.11.tar.gz) = 6816aabff41f2a54b1ffaea04d3c410e80fc37b0fc82fa124e7e3f6517f4d6f881a32637682de58b5006911deccc01830e4528dcd55d2bcdb9a44b31396e8454
+Size (File-Valet-1.11.tar.gz) = 26423 bytes
