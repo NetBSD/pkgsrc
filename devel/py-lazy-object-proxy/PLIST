@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/20 23:24:57 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2023/12/16 12:05:52 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/lazy_object_proxy/__init__.py
 ${PYSITELIB}/lazy_object_proxy/__init__.pyc
 ${PYSITELIB}/lazy_object_proxy/__init__.pyo
 ${PYSITELIB}/lazy_object_proxy/_version.py
 ${PYSITELIB}/lazy_object_proxy/_version.pyc
 ${PYSITELIB}/lazy_object_proxy/_version.pyo
+${PYSITELIB}/lazy_object_proxy/cext.c
 ${PYSITELIB}/lazy_object_proxy/cext.so
 ${PYSITELIB}/lazy_object_proxy/compat.py
 ${PYSITELIB}/lazy_object_proxy/compat.pyc
