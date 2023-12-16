@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:16:19 nia Exp $
+$NetBSD: distinfo,v 1.24 2023/12/16 10:16:48 mef Exp $
 
-BLAKE2s (Curses-1.38.tar.gz) = 9466e9683eded62d1843453e2d53727f70b2cd587b63bf9451efeb5a41fc2a5c
-SHA512 (Curses-1.38.tar.gz) = 27999e71f19576c930a794c9f478e8a3b6b3b1d1e68c4ca57b712f20c98a83dba46295c012a6c618d097b661ec30441c8147e26579218ecef977d7c7996c7442
-Size (Curses-1.38.tar.gz) = 135789 bytes
+BLAKE2s (Curses-1.44.tar.gz) = d0b9a25d5448c91554c3b0ef3e095f974b55d6bcc0c8a22c2ce0a9800f77acc3
+SHA512 (Curses-1.44.tar.gz) = 2c7f9ad9971c1afe6c1bee59581466f848ab1128e546effccd2118cb7bce1962ec7f6a8da60be3cdd1405f6b0a44f7c29c5f7900cbc436940592b1075fbfb6f7
+Size (Curses-1.44.tar.gz) = 139766 bytes
