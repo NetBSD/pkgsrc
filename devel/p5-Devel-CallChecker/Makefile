@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/07/06 09:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/16 10:26:12 mef Exp $
 
-DISTNAME=	Devel-CallChecker-0.008
-PKGREVISION=	4
+DISTNAME=	Devel-CallChecker-0.009
 CATEGORIES=	devel
 PKGNAME=	p5-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Z/ZE/ZEFRAM/}
