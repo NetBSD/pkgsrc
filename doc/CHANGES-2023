@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7608 2023/12/16 12:17:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7609 2023/12/16 14:02:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10891,3 +10891,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-lazy-object-proxy to 1.10.0 [adam 2023-12-16]
 	Updated devel/py-pebble to 5.0.5 [adam 2023-12-16]
 	Updated devel/py-frozenlist to 1.4.1 [adam 2023-12-16]
+	Updated devel/php-xdebug to 3.3.1 [taca 2023-12-16]
