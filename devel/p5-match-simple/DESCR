@@ -1,0 +1,5 @@
+match::smart provides a match operator |M| that acts like more or less
+identically to the (as of Perl 5.18) deprecated smart match operator.
+
+If you don't like the crazy Sub::Infix operator, you can alternatively
+export a more normal function:
