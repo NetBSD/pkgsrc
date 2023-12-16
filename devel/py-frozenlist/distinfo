@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/07/18 08:49:01 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/12/16 12:16:24 adam Exp $
 
-BLAKE2s (frozenlist-1.4.0.tar.gz) = cf8730906ce08ff1e92b397afcc3d2fa757df798f650c386629dbf041f6d241f
-SHA512 (frozenlist-1.4.0.tar.gz) = 2b5ff165250d1d2e95f987f95084f46a0adb85e09d4f413435ef4bd50d2717f74096afc678b2c23528d8f1af68638145d5414f36a735299a57bae7ff8e87c18d
-Size (frozenlist-1.4.0.tar.gz) = 90722 bytes
+BLAKE2s (frozenlist-1.4.1.tar.gz) = 9a98fc06260cb08451c7ac665f76989d2bda27879330b9d64d524794b4536b6a
+SHA512 (frozenlist-1.4.1.tar.gz) = 5ec5f8cff67d7f1aae517507122bc6c7af66a8ef23cac8b490edf65180c723277a33628e1395f24ffbd793de1eb65f429fd0b39a50115f740ce614a5577ffae2
+Size (frozenlist-1.4.1.tar.gz) = 37820 bytes
