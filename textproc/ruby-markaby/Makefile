@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2018/03/14 15:47:03 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/17 15:52:08 taca Exp $
 
-DISTNAME=	markaby-0.9.0
+DISTNAME=	markaby-0.9.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://markaby.github.com/markaby/
+HOMEPAGE=	https://github.com/markaby/markaby
 COMMENT=	HTML Markup as Ruby
 LICENSE=	mit
 

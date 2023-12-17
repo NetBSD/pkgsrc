@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/03/14 15:47:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/12/17 15:52:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -15,9 +15,15 @@ ${GEM_LIBDIR}/lib/markaby.rb
 ${GEM_LIBDIR}/lib/markaby/builder.rb
 ${GEM_LIBDIR}/lib/markaby/builder_tags.rb
 ${GEM_LIBDIR}/lib/markaby/cssproxy.rb
+${GEM_LIBDIR}/lib/markaby/html5.rb
 ${GEM_LIBDIR}/lib/markaby/kernel_method.rb
 ${GEM_LIBDIR}/lib/markaby/rails.rb
-${GEM_LIBDIR}/lib/markaby/tags.rb
+${GEM_LIBDIR}/lib/markaby/tagset.rb
+${GEM_LIBDIR}/lib/markaby/version.rb
+${GEM_LIBDIR}/lib/markaby/xhtml_frameset.rb
+${GEM_LIBDIR}/lib/markaby/xhtml_strict.rb
+${GEM_LIBDIR}/lib/markaby/xhtml_transitional.rb
+${GEM_LIBDIR}/lib/markaby/xml_tagset.rb
 ${GEM_LIBDIR}/spec/markaby/builder_spec.rb
 ${GEM_LIBDIR}/spec/markaby/css_proxy_spec.rb
 ${GEM_LIBDIR}/spec/markaby/fragment_spec.rb
