@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7656 2023/12/17 14:41:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7657 2023/12/17 14:43:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10939,3 +10939,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-domain_name to 0.6.20231109 [taca 2023-12-17]
 	Updated net/ruby-nio4r to 2.7.0 [taca 2023-12-17]
 	Updated net/ruby-ruby_smb to 3.3.1 [taca 2023-12-17]
+	Updated security/ruby-airbrussh to 1.5.0 [taca 2023-12-17]
