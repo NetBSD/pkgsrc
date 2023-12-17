@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7706 2023/12/17 20:25:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7707 2023/12/17 20:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11000,3 +11000,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-ini2toml to 0.13 [adam 2023-12-17]
 	Updated textproc/py-jsbeautifier to 1.14.11 [adam 2023-12-17]
 	Updated sysutils/py-fsspec to 2023.12.2 [adam 2023-12-17]
+	Updated devel/py-extension-helpers to 1.1.1 [adam 2023-12-17]
+	Updated textproc/py-referencing to 0.32.0 [adam 2023-12-17]
