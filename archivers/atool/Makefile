@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/17 16:04:51 zafer Exp $
 
 DISTNAME=	atool-0.39.0
 PKGREVISION=	5
 CATEGORIES=	archivers
-MASTER_SITES=	http://savannah.nongnu.org/download/atool/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/atool/
 
 MAINTAINER=	mcy@lm7.fr
 HOMEPAGE=	https://www.nongnu.org/atool/
