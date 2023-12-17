@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2023/12/03 20:46:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2023/12/17 07:01:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -189,6 +189,7 @@ CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.22
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
 CARGO_CRATE_DEPENDS+=	update-informer-1.1.0
+CARGO_CRATE_DEPENDS+=	upon-0.8.0
 CARGO_CRATE_DEPENDS+=	ureq-2.9.1
 CARGO_CRATE_DEPENDS+=	url-2.5.0
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
