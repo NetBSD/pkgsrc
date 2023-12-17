@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23777 2023/12/17 22:15:43 wiz Exp $
+$NetBSD: TODO,v 1.23778 2023/12/17 22:18:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1154,7 +1154,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-Theano-1.0.5
-	o py-babel-2.14.0
 	o py-barman-3.0.1
 	o py-black-23.12.0
 	o py-borgbackup-1.2.7
