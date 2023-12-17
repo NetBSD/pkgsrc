@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.164 2023/12/17 17:01:59 thor Exp $
+# $NetBSD: Makefile,v 1.165 2023/12/17 17:56:37 wiz Exp $
 
 VERSION_BASE=	4.6.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc3
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
@@ -25,6 +25,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
+CONFIGURE_ARGS+=	--disable-libdeflate
 CONFIGURE_ARGS+=	--disable-sphinx
 CONFIGURE_ARGS+=	--disable-webp
 CONFIGURE_ARGS+=	--disable-zstd
@@ -42,7 +43,6 @@ post-install:
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libdeflate/buildlink3.mk"
 # XXX for liblzma; there are more potential suppliers
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
