@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/11/11 12:49:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/12/17 14:40:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -72,17 +72,17 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/drsr/drs_get_nc_changes_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/drsr/drs_get_nc_changes_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/drsr/drs_unbind_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/drsr/drs_unbind_response.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_decrypt_file_srv_request.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_decrypt_file_srv_response.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_encrypt_file_srv_request.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_encrypt_file_srv_response.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_open_file_raw_request.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_open_file_raw_response.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_query_recover_agents_request.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_query_recover_agents_response.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_query_users_on_file_request.rb
-${GEM_LIBDIR}/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_query_users_on_file_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_decrypt_file_srv_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_decrypt_file_srv_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_encrypt_file_srv_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_encrypt_file_srv_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_open_file_raw_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_open_file_raw_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_query_recovery_agents_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_query_recovery_agents_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_query_users_on_file_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/efsrpc/efs_rpc_query_users_on_file_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_ept_map_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_ept_map_response.rb
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/fault.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ndr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request.rb
