@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.344 2023/11/14 14:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.345 2023/12/17 22:38:38 wiz Exp $
 
-DISTNAME=		gnucash-5.4-1
-# hotfix release, remove after next upgrade
-GITHUB_RELEASE=		5.4
-PKGNAME=		${DISTNAME:S/-1/.1/}
-PKGREVISION=		2
-WRKSRC=			${WRKDIR}/gnucash-5.4
+DISTNAME=		gnucash-5.5
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
-#GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_RELEASE=		${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
