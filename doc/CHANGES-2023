@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7690 2023/12/17 16:35:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7691 2023/12/17 16:44:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10976,3 +10976,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-pygments.rb to 2.4.1 [taca 2023-12-17]
 	Updated www/ruby-rack-cache to 1.15.0 [taca 2023-12-17]
 	Updated www/ruby-rack-contrib to 2.4.0 [taca 2023-12-17]
+	Updated www/ruby-selenium-webdriver to 4.16.0 [taca 2023-12-17]
