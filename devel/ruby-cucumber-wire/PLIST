@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/18 15:27:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/17 17:29:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CHANGELOG.old.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -18,10 +19,4 @@ ${GEM_LIBDIR}/lib/cucumber/wire/request_handler.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/snippet.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/step_argument.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/step_definition.rb
-${GEM_LIBDIR}/lib/cucumber/wire/version
-${GEM_LIBDIR}/spec/cucumber/wire/configuration_spec.rb
-${GEM_LIBDIR}/spec/cucumber/wire/connection_spec.rb
-${GEM_LIBDIR}/spec/cucumber/wire/connections_spec.rb
-${GEM_LIBDIR}/spec/cucumber/wire/data_packet_spec.rb
-${GEM_LIBDIR}/spec/cucumber/wire/exception_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
