@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.10 2023/05/06 09:46:45 taca Exp $
+# $NetBSD: common.mk,v 1.11 2023/12/17 16:18:36 zafer Exp $
 # used by lang/php56/Makefile.common
 # used by lang/php74/Makefile.common
 # used by lang/php80/Makefile.common
@@ -11,10 +11,7 @@ PHPCOMMON_MK=	defined
 DISTNAME?=		php-${PHP_VERSION}
 
 .if !defined(PECL_VERSION)
-MASTER_SITES?=		https://www.php.net/distributions/ \
-			https://uk.php.net/distributions/ \
-			https://de.php.net/distributions/ \
-			https://us.php.net/distributions/
+MASTER_SITES?=		https://www.php.net/distributions/
 EXTRACT_SUFX?=		.tar.xz
 .endif
 
