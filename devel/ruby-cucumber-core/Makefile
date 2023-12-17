@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/02/12 12:23:14 taca Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/17 17:28:32 taca Exp $
 
-DISTNAME=	cucumber-core-10.1.1
+DISTNAME=	cucumber-core-13.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,9 +8,9 @@ HOMEPAGE=	http://cukes.info/
 COMMENT=	Core library for the Cucumber BDD app
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-gherkin>=22.0<23:../../lang/ruby-cucumber-gherkin
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=17.1<18:../../devel/ruby-cucumber-messages
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-tag-expressions>=4.0<5:../../devel/ruby-cucumber-tag-expressions
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-gherkin>=27<28:../../lang/ruby-cucumber-gherkin
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=20<23:../../devel/ruby-cucumber-messages
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-tag-expressions>=5.0<7:../../devel/ruby-cucumber-tag-expressions
 
 USE_LANGUAGES=	# none
 
