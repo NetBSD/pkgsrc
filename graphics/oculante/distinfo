@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2023/12/08 21:55:45 pin Exp $
+$NetBSD: distinfo,v 1.56 2023/12/17 07:03:50 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.23.crate) = dcb87d5c70395693fe96390c3c9b9fa0ba1f246fe3bc1e4a49afa09c166a4732
 SHA512 (ab_glyph-0.2.23.crate) = 169aaea8daf54cae7b3123b088f95217dda53f5e11b42a962d4607f546b8ecbdbab769d292cd2f50206f58d015785361479b4dfc42915b28bc5bdfff4340c151
@@ -408,6 +408,9 @@ Size (ecolor-0.23.0.crate) = 8106 bytes
 BLAKE2s (egui-0.23.0.crate) = 29f35277ac61a26efb5679d1ae06a6b6af5186135f94943cc503c91b74a5ef2f
 SHA512 (egui-0.23.0.crate) = 441b362b22827dea9faef1dfd813018305d947c75d240d393510fa67b0c490bf425c1b2707920b1685998795ef3951aee65dc45c517d1123824698cb063baab9
 Size (egui-0.23.0.crate) = 244783 bytes
+BLAKE2s (egui-notify-0.10.0.crate) = b3e78189d3da8d985a2781a9655e743c6b2f21c8c9608fe4ff8e7d21befffb65
+SHA512 (egui-notify-0.10.0.crate) = b07825c6f5a9928e4bfc267f369556a732db34a081e7520d819523335d60a8ec52cc650d7f4d5e8f0bd6b98bd5c7f5ad1f61872e3296c3e562ffe1bf80dff246
+Size (egui-notify-0.10.0.crate) = 103612 bytes
 BLAKE2s (egui-phosphor-0.3.0.crate) = 030c57e32dd5466412216361c55ab20bc86cfed921ba7aec29fcb974cb163c2a
 SHA512 (egui-phosphor-0.3.0.crate) = 132a6f32807ca0df13e42f05296ff2a02518618f72f281eb0beba42acca5c485aa8231fedb589bc86dba7f923ccbc2f292b25a3d57e9544e7f2332e93763b17a
 Size (egui-phosphor-0.3.0.crate) = 776514 bytes
@@ -1131,9 +1134,9 @@ Size (objc_id-0.1.1.crate) = 3258 bytes
 BLAKE2s (object-0.32.1.crate) = 6941b78cde96078b4cbe3914be999d88fc58ca3bfb544ce6ce22b566ac19ee54
 SHA512 (object-0.32.1.crate) = 5bfd3b8960fd80bb48691fdef35d7a9fc3d752a1cf5f29cb4e146a17d427e878d972d208e8aefe5015b3c62d065ed9a66f2f9f790b4743d1a4a3f9c0b8e581e3
 Size (object-0.32.1.crate) = 275463 bytes
-BLAKE2s (oculante-0.8.4.tar.gz) = d9eacd1c938cbbffb18389311cd708bbd9a2db7e5ca079c6780fdab849a23a21
-SHA512 (oculante-0.8.4.tar.gz) = 965aa5abd75de4c57badc112f63ef53a0b3387cd15142a48af2ed386fb7df2f52830c88b5c0542b21f6847b658b57e24b5f3c3b0cd9fc56967106a96eb254e33
-Size (oculante-0.8.4.tar.gz) = 58511441 bytes
+BLAKE2s (oculante-0.8.5.tar.gz) = 57d37dc89ea522f3f8867aca27cdb979ed7f925e1ed70ab4706eb4a8acabeb5a
+SHA512 (oculante-0.8.5.tar.gz) = 7c12a0bd7918d7d49b9c47ebb9d8ed1fb8e69031d85f66ca5331eb2f6044de3315ea3a133cad57b8935ba194574d8a9ca93f25a78291ab39b19717e6429c9903
+Size (oculante-0.8.5.tar.gz) = 58511163 bytes
 BLAKE2s (oklab-1.0.1.crate) = 645e2989a68383a16040d1fcf83c9ea31a6440e611bfc876f9800ddf3acad884
 SHA512 (oklab-1.0.1.crate) = 4accdedac95439e271eed2a6d6450dd7118b46e935bc35d968faa46d3dfa6134b0ce3ada3455c8bb32ab525cd4fcd8abaff0d71f4e5821ca283bb33ae845b552
 Size (oklab-1.0.1.crate) = 3987 bytes
