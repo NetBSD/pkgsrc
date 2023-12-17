@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2023/11/18 07:13:42 tsutsui Exp $
+# $NetBSD: Makefile,v 1.103 2023/12/17 09:04:10 nros Exp $
 
 .include "Makefile.common"
 
@@ -55,6 +55,16 @@ CONF_FILES+=		${PREFIX}/share/examples/ibus/dconf/profile/ibus \
 .include "../../mk/compiler.mk"
 .if ${CC_VERSION:Mgcc-4.1.[0-9]*}
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
+.endif
+
+# wayland or not
+PLIST_VARS+=		wayland
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+CONFIGURE_ARGS+=	--enable-wayland
+PLIST.wayland=		yes
+.else
+CONFIGURE_ARGS+=	--disable-wayland
 .endif
 
 # Trigger .vala->.c regeneration of files that contain
