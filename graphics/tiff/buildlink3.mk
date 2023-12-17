@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2023/12/17 17:01:59 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/12/17 17:56:37 wiz Exp $
 
 BUILDLINK_TREE+=	tiff
 
@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.tiff+=	tiff>=4.6.0
 BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libdeflate/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
