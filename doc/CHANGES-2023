@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7632 2023/12/17 07:05:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7633 2023/12/17 07:15:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10915,3 +10915,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/ncspot to 1.0.0 [pin 2023-12-17]
 	Updated graphics/oculante to 0.8.5 [pin 2023-12-17]
 	Updated misc/tui-journal to 0.6.0 [pin 2023-12-17]
+	Updated multimedia/svt-av1 to 1.8.0 [wiz 2023-12-17]
