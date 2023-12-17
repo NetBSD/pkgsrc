@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7696 2023/12/17 17:26:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7697 2023/12/17 17:27:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10982,3 +10982,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-cucumber-expressions to 17.0.1 [taca 2023-12-17]
 	Updated devel/ruby-cucumber-messages to 22.0.0 [taca 2023-12-17]
 	Updated lang/ruby-cucumber-gherkin to 27.0.0 [taca 2023-12-17]
+	Updated devel/ruby-cucumber-tag-expressions to 6.0.0 [taca 2023-12-17]
