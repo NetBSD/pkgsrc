@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7717 2023/12/17 22:32:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7718 2023/12/17 22:34:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11013,3 +11013,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-google-auth-httplib2 to 0.2.0 [wiz 2023-12-17]
 	Updated textproc/enchant2 to 2.6.4 [wiz 2023-12-17]
 	Updated www/restish to 0.20.0 [wiz 2023-12-17]
+	Updated textproc/tree-sitter-elixir to 0.1.1 [wiz 2023-12-17]
