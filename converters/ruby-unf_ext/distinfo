@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/09/03 14:50:32 taca Exp $
+$NetBSD: distinfo,v 1.15 2023/12/17 13:58:26 taca Exp $
 
-BLAKE2s (unf_ext-0.0.8.2.gem) = e8a1e067f84503887bef59c4425c1eee2aeb097c222e941d1a2455015837cb81
-SHA512 (unf_ext-0.0.8.2.gem) = c9d3e54c96a525031d3b2fe349b5ffa1d03e3f28f74c3a2715af299e5274c7514526d07be5d7244a2cf9561c11e170b15c75d34c5e2a7143cef1ee25d32d2137
-Size (unf_ext-0.0.8.2.gem) = 399360 bytes
+BLAKE2s (unf_ext-0.0.9.1.gem) = ab743eba95903a0fb00379381c344b0bdecae4bc7e60dc15b215a1d4344998e8
+SHA512 (unf_ext-0.0.9.1.gem) = f2d0d58dc0ed30e3e99ac75022c8ea78bf4ad51c8803009c059de087b1cd439e06a8e7ef4c1be5c75048f85afe6c301f402ed21405ff02ad36ea73209416994d
+Size (unf_ext-0.0.9.1.gem) = 399872 bytes
