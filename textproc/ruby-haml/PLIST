@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.21 2022/12/18 14:43:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/12/17 15:39:47 taca Exp $
 bin/haml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/gem.build_complete
-${GEM_EXTSDIR}/haml/haml.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.github/FUNDING.yml
 ${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
@@ -21,10 +19,6 @@ ${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/bin/stackprof
 ${GEM_LIBDIR}/bin/test
 ${GEM_LIBDIR}/exe/haml
-${GEM_LIBDIR}/ext/haml/extconf.rb
-${GEM_LIBDIR}/ext/haml/haml.c
-${GEM_LIBDIR}/ext/haml/hescape.c
-${GEM_LIBDIR}/ext/haml/hescape.h
 ${GEM_LIBDIR}/haml.gemspec
 ${GEM_LIBDIR}/lib/haml.rb
 ${GEM_LIBDIR}/lib/haml/ambles.rb
@@ -62,7 +56,6 @@ ${GEM_LIBDIR}/lib/haml/filters/scss.rb
 ${GEM_LIBDIR}/lib/haml/filters/text_base.rb
 ${GEM_LIBDIR}/lib/haml/filters/tilt_base.rb
 ${GEM_LIBDIR}/lib/haml/force_escape.rb
-${GEM_LIBDIR}/lib/haml/haml.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/haml/helpers.rb
 ${GEM_LIBDIR}/lib/haml/html.rb
 ${GEM_LIBDIR}/lib/haml/identity.rb
