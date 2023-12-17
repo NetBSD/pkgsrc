@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/09/18 17:35:36 taca Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/17 15:24:42 taca Exp $
 
-DISTNAME=	vault-0.18.1
+DISTNAME=	vault-0.18.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
