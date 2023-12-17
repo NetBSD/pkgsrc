@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7680 2023/12/17 16:14:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7681 2023/12/17 16:15:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10965,3 +10965,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sigv4 to 1.8.0 [taca 2023-12-17]
 	Updated www/ruby-aws-sdk-core to 3.190.0 [taca 2023-12-17]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.87.0 [taca 2023-12-17]
+	Updated devel/py-colorlog to 6.8.0 [adam 2023-12-17]
+	Updated security/py-gnupg to 0.5.2 [adam 2023-12-17]
