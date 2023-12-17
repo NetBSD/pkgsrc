@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/09/19 17:36:42 taca Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/17 16:05:59 taca Exp $
 
-DISTNAME=	aws-eventstream-1.2.0
+DISTNAME=	aws-eventstream-1.3.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
