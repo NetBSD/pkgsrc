@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/23 13:59:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/17 16:30:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/lib/rack/cache/cachecontrol.rb
 ${GEM_LIBDIR}/lib/rack/cache/context.rb
 ${GEM_LIBDIR}/lib/rack/cache/entity_store.rb
 ${GEM_LIBDIR}/lib/rack/cache/entitystore.rb
+${GEM_LIBDIR}/lib/rack/cache/headers.rb
 ${GEM_LIBDIR}/lib/rack/cache/key.rb
 ${GEM_LIBDIR}/lib/rack/cache/meta_store.rb
 ${GEM_LIBDIR}/lib/rack/cache/metastore.rb
