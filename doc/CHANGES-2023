@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7641 2023/12/17 08:57:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7642 2023/12/17 13:22:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10924,3 +10924,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-URI to 5.21 [wiz 2023-12-17]
 	Updated cad/klayout to 0.28.14 [mef 2023-12-17]
 	Updated x11/py-qwt-qt5 to 1.02.02nb11 [wiz 2023-12-17]
+	Updated net/knot to 3.3.3 [ryoon 2023-12-17]
