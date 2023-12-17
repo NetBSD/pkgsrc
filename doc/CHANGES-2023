@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7703 2023/12/17 19:17:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7704 2023/12/17 19:21:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10995,3 +10995,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pip to 23.3.2 [adam 2023-12-17]
 	Updated print/py-weasyprint to 60.2 [adam 2023-12-17]
 	Updated textproc/py-rapidjson to 1.14 [adam 2023-12-17]
+	Updated sysutils/xcp to 0.15.2 [pin 2023-12-17]
