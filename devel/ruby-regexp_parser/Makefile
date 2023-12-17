@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/11/11 12:20:33 taca Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/17 14:22:12 taca Exp $
 
-DISTNAME=	regexp_parser-2.8.2
+DISTNAME=	regexp_parser-2.8.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
