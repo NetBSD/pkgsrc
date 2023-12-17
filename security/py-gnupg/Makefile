@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/10/28 19:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/12/17 16:13:59 adam Exp $
 
-DISTNAME=	python-gnupg-0.5.1
+DISTNAME=	python-gnupg-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gnupg/}
 
@@ -20,8 +19,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	GPGBINARY=${LOCALBASE}/bin/gpg2
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
