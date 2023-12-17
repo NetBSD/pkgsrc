@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/05/04 07:43:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/17 14:12:38 taca Exp $
 
-DISTNAME=	algorithms-1.0.0
+DISTNAME=	algorithms-1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
