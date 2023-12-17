@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2023/05/08 09:34:40 wiz Exp $
+$NetBSD: distinfo,v 1.31 2023/12/17 22:15:30 wiz Exp $
 
-BLAKE2s (libatomic_ops-7.8.0.tar.gz) = 32bd02d8f9dfb21cbf7b27a57a1d6f5fc28672687822bc94596e84ccbd74006e
-SHA512 (libatomic_ops-7.8.0.tar.gz) = b0d2b3c6f8672d599e05087688e7793a3c648c1728f48b27bffecc95b70afd5921ed36ec016985b2e22b82de7b7013bf5ebbb8b434a736d3fd680310b7af903d
-Size (libatomic_ops-7.8.0.tar.gz) = 526300 bytes
+BLAKE2s (libatomic_ops-7.8.2.tar.gz) = 6b2f4911982b413da8ba59d24a33120ba1201f0f712a0277890ea10c9a197bd7
+SHA512 (libatomic_ops-7.8.2.tar.gz) = 0559087c99b941990f189ea4ed5b3b371faf086bc1d517da6b878ba609c200eef24358768fd4361900101cdb474e28cea8408eb0b0222d23ef3154ce77f6acc0
+Size (libatomic_ops-7.8.2.tar.gz) = 524637 bytes
 SHA1 (patch-src_atomic__ops.h) = 244324fb2ecf738a9407c128fc33930eb81f26d8
