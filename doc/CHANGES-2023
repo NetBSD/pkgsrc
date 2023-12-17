@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7623 2023/12/17 06:49:36 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7624 2023/12/17 06:50:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10906,3 +10906,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Log-Any-Adapter-Screen to 0.141 [mef 2023-12-17]
 	Updated devel/p5-Log-Dispatchouli to 3.007 [mef 2023-12-17]
 	Updated sysutils/broot to 1.30.1 [pin 2023-12-17]
+	Updated devel/p5-Log-Report to 1.36 [mef 2023-12-17]
