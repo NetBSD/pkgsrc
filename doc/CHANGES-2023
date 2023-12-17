@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7644 2023/12/17 14:00:36 nros Exp $
+$NetBSD: CHANGES-2023,v 1.7645 2023/12/17 14:02:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10927,3 +10927,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/knot to 3.3.3 [ryoon 2023-12-17]
 	Updated converters/ruby-unf_ext to 0.0.9.1 [taca 2023-12-17]
 	Updated devel/libtecla to 1.6.3 [nros 2023-12-17]
+	Updated databases/ruby-sequel to 5.75.0 [taca 2023-12-17]
