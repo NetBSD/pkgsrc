@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7642 2023/12/17 13:22:19 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7643 2023/12/17 13:59:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10925,3 +10925,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/klayout to 0.28.14 [mef 2023-12-17]
 	Updated x11/py-qwt-qt5 to 1.02.02nb11 [wiz 2023-12-17]
 	Updated net/knot to 3.3.3 [ryoon 2023-12-17]
+	Updated converters/ruby-unf_ext to 0.0.9.1 [taca 2023-12-17]
