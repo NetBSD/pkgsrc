@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/12/11 17:14:48 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/17 08:29:04 wiz Exp $
 
 DISTNAME=	fixtures-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/fixtures/
 COMMENT=	Fixtures, reusable state for writing clean tests and more
 LICENSE=	apache-2.0 OR modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=36.6.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=0:../../devel/py-pbr
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # needs py-testtools for testing, but that depends on this
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
