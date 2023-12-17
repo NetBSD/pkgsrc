@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/12/17 05:43:44 mef Exp $
 
-BLAKE2s (Lexical-SealRequireHints-0.011.tar.gz) = 32ac671db084c3734eca28314dce281d72134d0382256719679f86a0a3cae850
-SHA512 (Lexical-SealRequireHints-0.011.tar.gz) = b31d3527e3ea1d28ebcac58cfdb35893643c7c371dba96cf06509cc7b1ce61c38f6cc37f420c2ec93b0a57adfc3d3cd797af97fad9aeb6e1000ef1769e26c31e
-Size (Lexical-SealRequireHints-0.011.tar.gz) = 20649 bytes
+BLAKE2s (Lexical-SealRequireHints-0.012.tar.gz) = 5a8a830f265848b64657e286be208df52e489ca573b51d4ddffd7d1ced240091
+SHA512 (Lexical-SealRequireHints-0.012.tar.gz) = 14326aeb9ee6ff0bf60d155709758f24cb8626b7848273ebbc4a58ee587091e9ad302b2f380dff90e5a9bf8801d6823f7f93be1761909ed8778fd2871311e728
+Size (Lexical-SealRequireHints-0.012.tar.gz) = 28463 bytes
