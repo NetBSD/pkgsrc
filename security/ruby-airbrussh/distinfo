@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/08/11 11:08:21 taca Exp $
+$NetBSD: distinfo,v 1.11 2023/12/17 14:43:16 taca Exp $
 
-BLAKE2s (airbrussh-1.4.2.gem) = b324a15015e8692a69e511c5543dd324294ca6823924ec9444489352ce5a9281
-SHA512 (airbrussh-1.4.2.gem) = 0a2dda2d812ae96987225360447f68b9eec4bebc16176c0f1ab00d258995d2be0455bfba9b306019f9fc455acdea8c70cee3c55f7e61a9b797ca81b63133bce0
-Size (airbrussh-1.4.2.gem) = 21504 bytes
+BLAKE2s (airbrussh-1.5.0.gem) = c29ab74d858c623aadaffc314d10751084390016037273b40a8cdd86e3ed8248
+SHA512 (airbrussh-1.5.0.gem) = 2efa78876473df81abaa5823d65fca25b51eddd51d4be304e14fd61f03ba5e1c574f68511110e5dc6228e0e5fb84634ee429a0cba3f3dc525786799c8ecade9b
+Size (airbrussh-1.5.0.gem) = 21504 bytes
