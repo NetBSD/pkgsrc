@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/12/17 05:47:03 mef Exp $
 
-BLAKE2s (Log-Any-Adapter-Callback-0.101.tar.gz) = 3233333e94a3f8cad5055563efff06ada6c0e555621730861d60b992131be12c
-SHA512 (Log-Any-Adapter-Callback-0.101.tar.gz) = de3b4c0bec44bcd36f6ab3cd6077c65a9c45d793cd6c67269c5c7b45f39dd84b144064d05264359011c8e329462d896d6e6ad5ba0682c5fabb82d3e77d83f2e3
-Size (Log-Any-Adapter-Callback-0.101.tar.gz) = 15512 bytes
+BLAKE2s (Log-Any-Adapter-Callback-0.102.tar.gz) = 85793c363818ca4232cada4800c9826889aa073743bc0800bb8ce5a39992390a
+SHA512 (Log-Any-Adapter-Callback-0.102.tar.gz) = bcf0a8d97d8b9b403e9552dfa8b7a5f6ad8b7608faa47576b92704eedbc223e9e5e086d01e4c9073b17418fd74bc02758b62afb8f85ba35825e5c8779ab4e447
+Size (Log-Any-Adapter-Callback-0.102.tar.gz) = 16941 bytes
