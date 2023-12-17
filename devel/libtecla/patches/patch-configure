@@ -1,28 +1,46 @@
-$NetBSD: patch-configure,v 1.1 2020/03/15 23:41:54 tnn Exp $
+$NetBSD: patch-configure,v 1.2 2023/12/17 13:59:38 nros Exp $
 
 Always link shared. Honour LDFLAGS.
+Install manpages on solaris just like on 
+the other systems.
 
---- configure.orig	2004-11-04 01:16:58.000000000 +0000
+--- configure.orig	2014-11-09 22:15:29.000000000 +0000
 +++ configure
-@@ -4152,7 +4152,7 @@ _ACEOF
+@@ -4161,9 +4161,9 @@ case $target in
+ *solaris*)
+   $as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
  
-   SHARED_EXT=".so.${MAJOR_VER}"
-   SHARED_ALT=".so"
+-  SHARED_EXT=".so.${MAJOR_VER}"
+-  SHARED_ALT=".so"
 -  LINK_SHARED="$LD"' -G -M $$(srcdir)/libtecla.map -o $$@ -h $$(@F) -z defs -i $$(LIB_OBJECTS) $$(LIBS) -lc'
++  SHARED_EXT=".so.${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}"
++  SHARED_ALT=".so .so.${MAJOR_VER}"
 +  LINK_SHARED="$LD"' $$(LDFLAGS) -G -M $$(srcdir)/libtecla.map -o $$@ -h $$(@F) -z defs -i $$(LIB_OBJECTS) $$(LIBS) -lc'
    SHARED_CFLAGS="-Kpic"
    case $CC in
    */cc|cc) SHARED_CFLAGS="$SHARED_CFLAGS -xstrconst" ;;
-@@ -4172,7 +4172,7 @@ _ACEOF
-   FILE_MANDIR="man4"
-   FILE_MANEXT="4"
+@@ -4171,19 +4171,8 @@ case $target in
+   case $target_cpu in
+   sparc) SHARED_CFLAGS="$SHARED_CFLAGS -xregs=no%appl"
+   esac
+-  case $target_os in
+-  solaris2.[89]*|solaris2.1[0-9]*)
+-    LIBR_MANEXT=3lib
+-    FUNC_MANEXT=3tecla
+-    LIBR_MANDIR=man$LIBR_MANEXT
+-    FUNC_MANDIR=man$FUNC_MANEXT
+-  esac
+-  MISC_MANDIR="man5"
+-  MISC_MANEXT="5"
+-  FILE_MANDIR="man4"
+-  FILE_MANEXT="4"
    ;;
 -*linux*)
 +*linux*|*netbsd*)
    SHARED_EXT=".so.${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}"
    SHARED_ALT=".so .so.${MAJOR_VER}"
  
-@@ -4200,7 +4200,7 @@ echo "${ECHO_T}$tecla_cv_gnu_ld_script" 
+@@ -4211,7 +4200,7 @@ $as_echo "$tecla_cv_gnu_ld_script" >&6;
      VERSION_OPT=''
    fi
  
@@ -31,7 +49,7 @@ Always link shared. Honour LDFLAGS.
    SHARED_CFLAGS="-fpic"
  
  
-@@ -4219,7 +4219,7 @@ echo "${ECHO_T}$tecla_cv_gnu_ld_script" 
+@@ -4230,7 +4219,7 @@ $as_echo "$tecla_cv_gnu_ld_script" >&6;
  *darwin*)
    SHARED_EXT=".${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}.dylib"
    SHARED_ALT=".dylib .${MAJOR_VER}.dylib"
@@ -40,7 +58,7 @@ Always link shared. Honour LDFLAGS.
    SHARED_CFLAGS=""
    ;;
  *dec-osf*)
-@@ -4232,7 +4232,7 @@ _ACEOF
+@@ -4241,7 +4230,7 @@ $as_echo "$tecla_cv_gnu_ld_script" >&6;
    SHARED_EXT=".so.${MAJOR_VER}"
    SHARED_ALT=".so"
    VERSION_OPT='--version-script=$$(srcdir)/libtecla.map'
@@ -49,11 +67,3 @@ Always link shared. Honour LDFLAGS.
    SHARED_CFLAGS="-fpic"
    ;;
  mips-sgi-irix*)
-@@ -4254,7 +4254,6 @@ if test "$GCC"_ = "yes"_ && test "$LINK_
-     SHARED_CFLAGS=""
-     ;;
-   esac
--  LINK_SHARED="$LINK_SHARED `gcc -print-libgcc-file-name`"
- fi
- 
- 

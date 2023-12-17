@@ -1,35 +1,35 @@
-$NetBSD: patch-aa,v 1.4 2020/03/22 13:38:28 tnn Exp $
+$NetBSD: patch-aa,v 1.5 2023/12/17 13:59:38 nros Exp $
 
 Patch out bogus rpaths that point to the build directory.
 Add missing LDFLAGS, needed when termcap provides by pkgsrc.
 
---- Makefile.rules.orig	2002-12-04 06:26:56.000000000 +0000
+--- Makefile.rules.orig	2014-11-09 21:36:53.000000000 +0000
 +++ Makefile.rules
 @@ -54,20 +54,20 @@ libtecla.map.opt: $(srcdir)/libtecla.map
  demos: $(DEMO_PROGS)
  
- demo$(SUFFIX): $(OBJDIR)/demo.o
+ demo$(SUFFIX): $(OBJDIR)/demo.o $(TARGETS)
 -	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:`pwd`" $(CC) $(CFLAGS) -o $@ \
 - $(OBJDIR)/demo.o -L. -ltecla$(SUFFIX) $(LIBS)
-+	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH" $(CC) $(CFLAGS) -o $@ \
++	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:" $(CC) $(CFLAGS) -o $@ \
 + $(OBJDIR)/demo.o -L. -ltecla$(SUFFIX) $(LDFLAGS) $(LIBS)
  
- demo2$(SUFFIX): $(OBJDIR)/demo2.o
+ demo2$(SUFFIX): $(OBJDIR)/demo2.o $(TARGETS)
 -	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:`pwd`" $(CC) $(CFLAGS) -o $@ \
 - $(OBJDIR)/demo2.o -L. -ltecla$(SUFFIX) $(LIBS)
-+	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH" $(CC) $(CFLAGS) -o $@ \
++	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:" $(CC) $(CFLAGS) -o $@ \
 + $(OBJDIR)/demo2.o -L. -ltecla$(SUFFIX) $(LDFLAGS) $(LIBS)
  
- demo3$(SUFFIX): $(OBJDIR)/demo3.o
+ demo3$(SUFFIX): $(OBJDIR)/demo3.o $(TARGETS)
 -	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:`pwd`" $(CC) $(CFLAGS) -o $@ \
 - $(OBJDIR)/demo3.o -L. -ltecla$(SUFFIX) $(LIBS)
-+	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH" $(CC) $(CFLAGS) -o $@ \
++	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:" $(CC) $(CFLAGS) -o $@ \
 + $(OBJDIR)/demo3.o -L. -ltecla$(SUFFIX) $(LDFLAGS) $(LIBS)
  
- enhance$(SUFFIX): $(OBJDIR)/enhance.o
+ enhance$(SUFFIX): $(OBJDIR)/enhance.o $(TARGETS)
 -	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:`pwd`" $(CC) $(CFLAGS) -o $@ \
 - $(OBJDIR)/enhance.o -L. -ltecla$(SUFFIX) $(LIBS)
-+	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH" $(CC) $(CFLAGS) -o $@ \
++	LD_RUN_PATH="$(LIBDIR):$$LD_RUN_PATH:" $(CC) $(CFLAGS) -o $@ \
 + $(OBJDIR)/enhance.o -L. -ltecla$(SUFFIX) $(LDFLAGS) $(LIBS)
  
  #-----------------------------------------------------------------------
