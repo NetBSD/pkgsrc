@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7700 2023/12/17 17:30:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7701 2023/12/17 19:03:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10987,3 +10987,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-cucumber-wire to 7.0.0 [taca 2023-12-17]
 	Updated devel/py-path to 16.9.0 [adam 2023-12-17]
 	Updated comms/py-jupyter_server_terminals to 0.5.0 [adam 2023-12-17]
+	Updated net/grpc to 1.60.0 [adam 2023-12-17]
+	Updated net/py-grpcio to 1.60.0 [adam 2023-12-17]
+	Updated net/py-grpcio-testing to 1.60.0 [adam 2023-12-17]
+	Updated net/py-grpcio-tools to 1.60.0 [adam 2023-12-17]
