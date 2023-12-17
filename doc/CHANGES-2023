@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7639 2023/12/17 07:46:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7640 2023/12/17 08:13:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10922,3 +10922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/p5-Perl-LanguageServer to 2.6.1 [wiz 2023-12-17]
 	Updated textproc/p5-Text-CSV_XS to 1.52 [wiz 2023-12-17]
 	Updated www/p5-URI to 5.21 [wiz 2023-12-17]
+	Updated cad/klayout to 0.28.14 [mef 2023-12-17]
