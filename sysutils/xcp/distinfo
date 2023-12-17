@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2023/12/17 07:00:21 pin Exp $
+$NetBSD: distinfo,v 1.8 2023/12/17 19:20:34 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -357,6 +357,6 @@ Size (windows_x86_64_msvc-0.52.0.crate) = 821600 bytes
 BLAKE2s (xattr-1.0.1.crate) = 9a625cf9672f430aa8cd8be544a3327f9ac9a02d9be7f561855565b4d9d0bfc3
 SHA512 (xattr-1.0.1.crate) = f26860cf452e158ddded144d96b80614068dc6271f38ec3794ced4272c9ad01b9baf4938cf7a249e9716947b9c1b2700266bbd6ec9bc7645a3a2fbca9ab67c67
 Size (xattr-1.0.1.crate) = 12258 bytes
-BLAKE2s (xcp-0.15.0.tar.gz) = fa7cfd7e7a6c49f395b3f69a7cd7efd144c246112faf2aa8a139a52d46ade55f
-SHA512 (xcp-0.15.0.tar.gz) = 82f12c636a289981316f4d48a9660be647a39fdee1e477e01b7008396924fab8ab37f26fdf24c44839a3f72f20c85fafd1bce385dbbc6424c8a642879846aabc
-Size (xcp-0.15.0.tar.gz) = 47912 bytes
+BLAKE2s (xcp-0.15.2.tar.gz) = af82cc17f1570b0c6c5dd92c81b0f49524906797f593891a71583812cf11c4ac
+SHA512 (xcp-0.15.2.tar.gz) = d0666ce98d5f825180ff2b909e84cb499c75284cf52b7cb924c4ea5d36edfce5d068fdebb1d9d0eed3b1d7c0353e3e00b4cdc5c7807a23825f2314bd7bf8e418
+Size (xcp-0.15.2.tar.gz) = 47875 bytes
