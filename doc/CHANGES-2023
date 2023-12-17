@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7670 2023/12/17 15:58:38 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7671 2023/12/17 16:00:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10953,3 +10953,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-redcloth to 4.3.3 [taca 2023-12-17]
 	Updated textproc/ruby-temple to 0.10.3 [taca 2023-12-17]
 	Updated textproc/ruby-unicode-blocks to 1.9.0 [taca 2023-12-17]
+	Updated textproc/ruby-unicode-display_width to 2.5.0 [taca 2023-12-17]
