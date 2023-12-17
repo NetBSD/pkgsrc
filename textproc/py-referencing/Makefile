@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/30 09:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/17 20:31:36 adam Exp $
 
-DISTNAME=	referencing-0.31.1
+DISTNAME=	referencing-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/referencing/}
