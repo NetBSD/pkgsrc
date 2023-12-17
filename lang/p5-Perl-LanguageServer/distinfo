@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/05/20 06:18:18 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/12/17 07:43:38 wiz Exp $
 
-BLAKE2s (Perl-LanguageServer-2.5.0.tar.gz) = b41977e040818d7976e9fe57d6658aa294c2498219a1ffd185173bed77dff3ad
-SHA512 (Perl-LanguageServer-2.5.0.tar.gz) = d56f79296b516586671093e3f29b0ae695fb985afc91d29827cef30b1911eede26d2c4897c7acea21e3a6aac714d0d0a7cafdabe9a3e66b0654208110466a4bf
-Size (Perl-LanguageServer-2.5.0.tar.gz) = 50245 bytes
+BLAKE2s (Perl-LanguageServer-2.6.1.tar.gz) = 49df30fe8f2187fc4af2c625adda660c3f5350e0c532ed9e0ad585e0fcbce626
+SHA512 (Perl-LanguageServer-2.6.1.tar.gz) = c20661844449ac012de2af5069649b6fc98484536c929ef9423df554c1f0e285d7b1ff4a1de7711f0e3c01b491e93bf014ce652b9cb82e9fa971558817a6fef9
+Size (Perl-LanguageServer-2.6.1.tar.gz) = 53390 bytes
