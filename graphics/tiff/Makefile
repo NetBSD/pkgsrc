@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.162 2023/10/16 15:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2023/12/17 16:46:18 thor Exp $
 
-# Please do not update to 4.6.0 before the branch; it withdraws a lot!
 VERSION_BASE=	4.6.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc3
+PKGREVISION=	1
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
@@ -18,14 +18,13 @@ WRKSRC=		${WRKDIR}/tiff-${VERSION_BASE}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_LANGUAGES=		c99 c++
-USE_TOOLS=		gmake # Not documented by upstream
+USE_TOOLS=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
-CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
 CONFIGURE_ARGS+=	--disable-sphinx
 CONFIGURE_ARGS+=	--disable-webp
 CONFIGURE_ARGS+=	--disable-zstd
