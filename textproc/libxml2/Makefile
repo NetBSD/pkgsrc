@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2023/12/17 15:42:08 thor Exp $
+# $NetBSD: Makefile,v 1.175 2023/12/17 15:43:08 thor Exp $
 
 PKGREVISION= 5
 .include "../../textproc/libxml2/Makefile.common"
@@ -14,8 +14,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
-#CONFIGURE_ARGS+=	--with-ftp
-#CONFIGURE_ARGS+=	--with-legacy
+CONFIGURE_ARGS+=	--with-ftp
+CONFIGURE_ARGS+=	--with-legacy
 CONFIGURE_ARGS+=	--without-python
 
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
