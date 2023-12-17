@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/10/18 08:53:08 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/12/17 16:02:34 adam Exp $
 
-DISTNAME=	psutil-5.9.6
+DISTNAME=	psutil-5.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/giampaolo/psutil
 COMMENT=	Cross-platform process and system utilities module for Python
 LICENSE=	modified-bsd
 
-# from wheel.bdist_wheel import bdist_wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=43:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -29,5 +29,5 @@ PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} psutil/tests/runner.py
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
