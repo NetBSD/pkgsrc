@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:40 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/17 16:06:35 zafer Exp $
 #
 
 DISTNAME=		gzrt-0.8
 PKGNAME=		gzrecover-0.8
 CATEGORIES=		archivers
-MASTER_SITES=		http://www.urbanophile.com/arenn/hacking/gzrt/
+MASTER_SITES=		https://www.urbanophile.com/arenn/hacking/gzrt/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.urbanophile.com/arenn/hacking/gzrt/
