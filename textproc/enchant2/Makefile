@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/12/07 08:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/12/17 22:31:22 wiz Exp $
 
-DISTNAME=		enchant-2.6.3
+DISTNAME=		enchant-2.6.4
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}
@@ -19,9 +19,6 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
-INSTALLATION_DIRS+=	share/examples
-MAKE_DIRS+=		${PREFIX}/share/enchant
-CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/enchant.ordering
 
 # Mostly needed due to hunspell headers making c++98 default unacceptable.
 FORCE_CXX_STD=		c++11
@@ -35,9 +32,6 @@ CONFIGURE_ARGS+=	--without-voikko
 # needed for testing
 CONFIGURE_ARGS+=	--enable-relocatable
 TEST_TARGET=		check
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/share && ${MV} enchant/enchant.ordering examples/enchant.ordering
 
 .include "options.mk"
 
