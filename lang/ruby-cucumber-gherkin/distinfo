@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/11/23 14:05:24 taca Exp $
+$NetBSD: distinfo,v 1.10 2023/12/17 17:26:07 taca Exp $
 
-BLAKE2s (cucumber-gherkin-22.0.0.gem) = 921d3fa162464b24826f4b03737d49c3ea45e29e02318739c3b6e0010703bee5
-SHA512 (cucumber-gherkin-22.0.0.gem) = 51bb88282cae4f531a4ef6c2f2e0672497d167c43b8ccd8c994c45134748bced388ef11e7c85f585fd623df0c8eb7a06657ed789a9aef469df7bb10d6c9db2a4
-Size (cucumber-gherkin-22.0.0.gem) = 33792 bytes
+BLAKE2s (cucumber-gherkin-27.0.0.gem) = b2218fc591e86a88d57e93664e32aee5a21e1dc969cd814b064da9be39dc8ca9
+SHA512 (cucumber-gherkin-27.0.0.gem) = 705c5a312ee76c3cf10bdd98ecc581f4e3a253a278b4cc7a62e4046ff5e1422891eaebeaba5dcbdf7e8a5fab993afc3925b2af83c8bc470d5513cc8b284a3e42
+Size (cucumber-gherkin-27.0.0.gem) = 34816 bytes
