@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/04 16:07:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/17 15:56:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/temple/filters/ambles.rb
 ${GEM_LIBDIR}/lib/temple/filters/code_merger.rb
 ${GEM_LIBDIR}/lib/temple/filters/control_flow.rb
 ${GEM_LIBDIR}/lib/temple/filters/dynamic_inliner.rb
+${GEM_LIBDIR}/lib/temple/filters/dynamic_merger.rb
 ${GEM_LIBDIR}/lib/temple/filters/encoding.rb
 ${GEM_LIBDIR}/lib/temple/filters/eraser.rb
 ${GEM_LIBDIR}/lib/temple/filters/escapable.rb
@@ -58,30 +59,5 @@ ${GEM_LIBDIR}/lib/temple/templates/rails.rb
 ${GEM_LIBDIR}/lib/temple/templates/tilt.rb
 ${GEM_LIBDIR}/lib/temple/utils.rb
 ${GEM_LIBDIR}/lib/temple/version.rb
-${GEM_LIBDIR}/spec/engine_spec.rb
-${GEM_LIBDIR}/spec/erb_spec.rb
-${GEM_LIBDIR}/spec/filter_spec.rb
-${GEM_LIBDIR}/spec/filters/code_merger_spec.rb
-${GEM_LIBDIR}/spec/filters/control_flow_spec.rb
-${GEM_LIBDIR}/spec/filters/dynamic_inliner_spec.rb
-${GEM_LIBDIR}/spec/filters/eraser_spec.rb
-${GEM_LIBDIR}/spec/filters/escapable_spec.rb
-${GEM_LIBDIR}/spec/filters/multi_flattener_spec.rb
-${GEM_LIBDIR}/spec/filters/static_analyzer_spec.rb
-${GEM_LIBDIR}/spec/filters/static_merger_spec.rb
-${GEM_LIBDIR}/spec/filters/string_splitter_spec.rb
-${GEM_LIBDIR}/spec/generator_spec.rb
-${GEM_LIBDIR}/spec/grammar_spec.rb
-${GEM_LIBDIR}/spec/html/attribute_merger_spec.rb
-${GEM_LIBDIR}/spec/html/attribute_remover_spec.rb
-${GEM_LIBDIR}/spec/html/attribute_sorter_spec.rb
-${GEM_LIBDIR}/spec/html/fast_spec.rb
-${GEM_LIBDIR}/spec/html/pretty_spec.rb
-${GEM_LIBDIR}/spec/map_spec.rb
-${GEM_LIBDIR}/spec/mixins/dispatcher_spec.rb
-${GEM_LIBDIR}/spec/mixins/grammar_dsl_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/static_analyzer_spec.rb
-${GEM_LIBDIR}/spec/utils_spec.rb
 ${GEM_LIBDIR}/temple.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
