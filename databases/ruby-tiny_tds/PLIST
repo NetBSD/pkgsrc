@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.11 2021/05/23 08:12:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/12/17 14:06:21 taca Exp $
 bin/defncopy-ttds${RUBY_SUFFIX}
 bin/tsql-ttds${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/tiny_tds/tiny_tds.${RUBY_DLEXT}
+${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.gitattributes
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/Gemfile
@@ -17,7 +17,6 @@ ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bin/defncopy-ttds
 ${GEM_LIBDIR}/bin/tsql-ttds
 ${GEM_LIBDIR}/docker-compose.yml
@@ -41,6 +40,8 @@ ${GEM_LIBDIR}/lib/tiny_tds/version.rb
 ${GEM_LIBDIR}/patches/freetds/1.00.27/0001-mingw_missing_inet_pton.diff
 ${GEM_LIBDIR}/patches/freetds/1.00.27/0002-Don-t-use-MSYS2-file-libws2_32.diff
 ${GEM_LIBDIR}/patches/libiconv/1.14/1-avoid-gets-error.patch
+${GEM_LIBDIR}/setup_cimgruby_dev.sh
+${GEM_LIBDIR}/start_dev.sh
 ${GEM_LIBDIR}/tasks/native_gem.rake
 ${GEM_LIBDIR}/tasks/package.rake
 ${GEM_LIBDIR}/tasks/ports.rake
@@ -49,14 +50,15 @@ ${GEM_LIBDIR}/tasks/ports/libiconv.rb
 ${GEM_LIBDIR}/tasks/ports/openssl.rb
 ${GEM_LIBDIR}/tasks/ports/recipe.rb
 ${GEM_LIBDIR}/tasks/test.rake
-${GEM_LIBDIR}/test/appveyor/dbsetup.ps1
-${GEM_LIBDIR}/test/appveyor/dbsetup.sql
 ${GEM_LIBDIR}/test/benchmark/query.rb
 ${GEM_LIBDIR}/test/benchmark/query_odbc.rb
 ${GEM_LIBDIR}/test/benchmark/query_tinytds.rb
 ${GEM_LIBDIR}/test/bin/install-freetds.sh
+${GEM_LIBDIR}/test/bin/install-mssql.ps1
+${GEM_LIBDIR}/test/bin/install-mssqltools.sh
 ${GEM_LIBDIR}/test/bin/install-openssl.sh
-${GEM_LIBDIR}/test/bin/setup.sh
+${GEM_LIBDIR}/test/bin/setup_tinytds_db.sh
+${GEM_LIBDIR}/test/bin/setup_volume_permissions.sh
 ${GEM_LIBDIR}/test/client_test.rb
 ${GEM_LIBDIR}/test/gem_test.rb
 ${GEM_LIBDIR}/test/result_test.rb
@@ -69,6 +71,8 @@ ${GEM_LIBDIR}/test/schema/sqlserver_2016.sql
 ${GEM_LIBDIR}/test/schema/sqlserver_azure.sql
 ${GEM_LIBDIR}/test/schema/sybase_ase.sql
 ${GEM_LIBDIR}/test/schema_test.rb
+${GEM_LIBDIR}/test/sql/db-create.sql
+${GEM_LIBDIR}/test/sql/db-login.sql
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/thread_test.rb
 ${GEM_LIBDIR}/tiny_tds.gemspec
