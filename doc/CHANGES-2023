@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7683 2023/12/17 16:17:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7684 2023/12/17 16:20:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10969,3 +10969,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-gnupg to 0.5.2 [adam 2023-12-17]
 	Updated www/ruby-aws-sdk-kms to 1.75.0 [taca 2023-12-17]
 	Updated www/ruby-aws-sdk-s3 to 1.141.0 [taca 2023-12-17]
+	Updated www/ruby-excon to 0.108.0 [taca 2023-12-17]
