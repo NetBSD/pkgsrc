@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2023/12/06 02:15:22 mef Exp $
+# $NetBSD: Makefile,v 1.77 2023/12/17 08:13:35 mef Exp $
 
-DISTNAME=	klayout-0.28.13
+DISTNAME=	klayout-0.28.14
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
