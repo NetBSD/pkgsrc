@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/11/11 12:49:18 taca Exp $
+# $NetBSD: Makefile,v 1.22 2023/12/17 14:40:43 taca Exp $
 
-DISTNAME=	ruby_smb-3.2.6
+DISTNAME=	ruby_smb-3.3.1
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
