@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7711 2023/12/17 22:15:43 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7712 2023/12/17 22:18:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11007,3 +11007,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/unrar to 7.0.5 [wiz 2023-12-17]
 	Updated devel/py-ruff to 0.1.8 [wiz 2023-12-17]
 	Updated devel/libatomic_ops to 7.8.2 [wiz 2023-12-17]
+	Updated devel/py-babel to 2.14.0 [wiz 2023-12-17]
