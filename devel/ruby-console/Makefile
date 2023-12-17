@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/26 13:17:12 taca Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/17 14:16:37 taca Exp $
 
-DISTNAME=	console-1.23.2
+DISTNAME=	console-1.23.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
