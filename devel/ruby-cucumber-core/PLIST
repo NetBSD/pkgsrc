@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/09/13 15:36:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/17 17:28:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -33,27 +33,4 @@ ${GEM_LIBDIR}/lib/cucumber/core/test/runner.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/step.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/tag.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/timer.rb
-${GEM_LIBDIR}/lib/cucumber/core/version.rb
-${GEM_LIBDIR}/spec/coverage.rb
-${GEM_LIBDIR}/spec/cucumber/core/compiler_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/event_bus_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/event_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/filter_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/gherkin/parser_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/gherkin/writer_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/report/summary_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/action_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/case_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/data_table_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/doc_string_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/duration_matcher.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/empty_multiline_argument_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/filters/locations_filter_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/location_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/result_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/runner_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/step_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core/test/timer_spec.rb
-${GEM_LIBDIR}/spec/cucumber/core_spec.rb
-${GEM_LIBDIR}/spec/report_api_spy.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
