@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/07 22:58:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/12/17 22:22:06 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
+${PYSITELIB}/cyclonedx/_internal/__init__.py
+${PYSITELIB}/cyclonedx/_internal/__init__.pyc
+${PYSITELIB}/cyclonedx/_internal/__init__.pyo
+${PYSITELIB}/cyclonedx/_internal/compare.py
+${PYSITELIB}/cyclonedx/_internal/compare.pyc
+${PYSITELIB}/cyclonedx/_internal/compare.pyo
+${PYSITELIB}/cyclonedx/_internal/hash.py
+${PYSITELIB}/cyclonedx/_internal/hash.pyc
+${PYSITELIB}/cyclonedx/_internal/hash.pyo
+${PYSITELIB}/cyclonedx/_internal/time.py
+${PYSITELIB}/cyclonedx/_internal/time.pyc
+${PYSITELIB}/cyclonedx/_internal/time.pyo
 ${PYSITELIB}/cyclonedx/exception/__init__.py
 ${PYSITELIB}/cyclonedx/exception/__init__.pyc
 ${PYSITELIB}/cyclonedx/exception/__init__.pyo
@@ -14,6 +26,9 @@ ${PYSITELIB}/cyclonedx/exception/model.pyo
 ${PYSITELIB}/cyclonedx/exception/output.py
 ${PYSITELIB}/cyclonedx/exception/output.pyc
 ${PYSITELIB}/cyclonedx/exception/output.pyo
+${PYSITELIB}/cyclonedx/exception/serialization.py
+${PYSITELIB}/cyclonedx/exception/serialization.pyc
+${PYSITELIB}/cyclonedx/exception/serialization.pyo
 ${PYSITELIB}/cyclonedx/factory/__init__.py
 ${PYSITELIB}/cyclonedx/factory/__init__.pyc
 ${PYSITELIB}/cyclonedx/factory/__init__.pyo
@@ -62,9 +77,6 @@ ${PYSITELIB}/cyclonedx/output/json.pyo
 ${PYSITELIB}/cyclonedx/output/xml.py
 ${PYSITELIB}/cyclonedx/output/xml.pyc
 ${PYSITELIB}/cyclonedx/output/xml.pyo
-${PYSITELIB}/cyclonedx/parser/__init__.py
-${PYSITELIB}/cyclonedx/parser/__init__.pyc
-${PYSITELIB}/cyclonedx/parser/__init__.pyo
 ${PYSITELIB}/cyclonedx/py.typed
 ${PYSITELIB}/cyclonedx/schema/__init__.py
 ${PYSITELIB}/cyclonedx/schema/__init__.pyc
@@ -83,6 +95,8 @@ ${PYSITELIB}/cyclonedx/schema/_res/bom-1.3.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.3.SNAPSHOT.xsd
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.4.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.4.SNAPSHOT.xsd
+${PYSITELIB}/cyclonedx/schema/_res/bom-1.5.SNAPSHOT.schema.json
+${PYSITELIB}/cyclonedx/schema/_res/bom-1.5.SNAPSHOT.xsd
 ${PYSITELIB}/cyclonedx/schema/_res/jsf-0.82.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.xsd
