@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7621 2023/12/17 05:50:01 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7622 2023/12/17 06:02:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10904,3 +10904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Lexical-SealRequireHints to 0.012 [mef 2023-12-17]
 	Updated devel/p5-Log-Any-Adapter-Callback to 0.102 [mef 2023-12-17]
 	Updated devel/p5-Log-Any-Adapter-Screen to 0.141 [mef 2023-12-17]
+	Updated devel/p5-Log-Dispatchouli to 3.007 [mef 2023-12-17]
