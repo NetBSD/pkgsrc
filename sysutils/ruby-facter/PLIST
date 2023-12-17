@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2023/06/17 15:22:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.42 2023/12/17 15:33:49 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -720,7 +720,6 @@ ${GEM_LIBDIR}/lib/facter/models/fact_collection.rb
 ${GEM_LIBDIR}/lib/facter/models/loaded_fact.rb
 ${GEM_LIBDIR}/lib/facter/models/resolved_fact.rb
 ${GEM_LIBDIR}/lib/facter/models/searched_fact.rb
-${GEM_LIBDIR}/lib/facter/patches/sysfilesystem/sys/statvfs.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aio_agent_version.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/architecture.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/aix/disks.rb
