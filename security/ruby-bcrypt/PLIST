@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2022/08/28 05:13:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/12/17 14:46:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.github/workflows/ruby.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bcrypt.gemspec
 ${GEM_LIBDIR}/ext/jruby/bcrypt_jruby/BCrypt.java
 ${GEM_LIBDIR}/ext/mri/bcrypt_ext.c
 ${GEM_LIBDIR}/ext/mri/crypt.c
@@ -28,9 +22,4 @@ ${GEM_LIBDIR}/lib/bcrypt/engine.rb
 ${GEM_LIBDIR}/lib/bcrypt/error.rb
 ${GEM_LIBDIR}/lib/bcrypt/password.rb
 ${GEM_LIBDIR}/lib/bcrypt_ext.${RUBY_DLEXT}
-${GEM_LIBDIR}/spec/TestBCrypt.java
-${GEM_LIBDIR}/spec/bcrypt/engine_spec.rb
-${GEM_LIBDIR}/spec/bcrypt/error_spec.rb
-${GEM_LIBDIR}/spec/bcrypt/password_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
