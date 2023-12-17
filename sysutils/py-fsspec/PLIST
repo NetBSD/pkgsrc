@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/12/17 20:25:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -67,6 +67,9 @@ ${PYSITELIB}/fsspec/implementations/cached.pyo
 ${PYSITELIB}/fsspec/implementations/dask.py
 ${PYSITELIB}/fsspec/implementations/dask.pyc
 ${PYSITELIB}/fsspec/implementations/dask.pyo
+${PYSITELIB}/fsspec/implementations/data.py
+${PYSITELIB}/fsspec/implementations/data.pyc
+${PYSITELIB}/fsspec/implementations/data.pyo
 ${PYSITELIB}/fsspec/implementations/dbfs.py
 ${PYSITELIB}/fsspec/implementations/dbfs.pyc
 ${PYSITELIB}/fsspec/implementations/dbfs.pyo
