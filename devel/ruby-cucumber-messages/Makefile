@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/09/18 14:01:03 taca Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/17 17:22:57 taca Exp $
 
-DISTNAME=	cucumber-messages-17.1.1
+DISTNAME=	cucumber-messages-22.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cucumber/cucumber-messages-ruby
+HOMEPAGE=	https://github.com/cucumber/messages
 COMMENT=	Cucumber Messages for Ruby (Protocol Buffers)
 LICENSE=	mit
 
