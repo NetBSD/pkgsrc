@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/28 19:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/17 17:25:34 adam Exp $
 
-DISTNAME=	jupyter_server_terminals-0.4.4
+DISTNAME=	jupyter_server_terminals-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server-terminals/}
 
@@ -13,9 +12,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-terminado>=0.8.3:../../www/py-terminado
-# TODO: import py-test_jupyter
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.0.0:../../www/py-jupyter_server
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-jupyter>=0.5.3:../../www/py-test-jupyter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
@@ -23,9 +21,6 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
