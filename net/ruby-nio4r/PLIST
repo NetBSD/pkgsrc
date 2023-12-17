@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/30 08:47:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/12/17 14:35:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nio4r_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.github/workflows/workflow.yml
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/changes.md
 ${GEM_LIBDIR}/examples/echo_server.rb
 ${GEM_LIBDIR}/ext/libev/Changes
 ${GEM_LIBDIR}/ext/libev/LICENSE
@@ -43,6 +43,7 @@ ${GEM_LIBDIR}/lib/nio/bytebuffer.rb
 ${GEM_LIBDIR}/lib/nio/monitor.rb
 ${GEM_LIBDIR}/lib/nio/selector.rb
 ${GEM_LIBDIR}/lib/nio/version.rb
+${GEM_LIBDIR}/lib/nio4r.rb
 ${GEM_LIBDIR}/lib/nio4r_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/license.md
 ${GEM_LIBDIR}/logo.png
@@ -50,6 +51,7 @@ ${GEM_LIBDIR}/nio4r.gemspec
 ${GEM_LIBDIR}/rakelib/extension.rake
 ${GEM_LIBDIR}/rakelib/rspec.rake
 ${GEM_LIBDIR}/rakelib/rubocop.rake
+${GEM_LIBDIR}/readme.md
 ${GEM_LIBDIR}/spec/nio/acceptables_spec.rb
 ${GEM_LIBDIR}/spec/nio/bytebuffer_spec.rb
 ${GEM_LIBDIR}/spec/nio/monitor_spec.rb
