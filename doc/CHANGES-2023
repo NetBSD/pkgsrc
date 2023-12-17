@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7646 2023/12/17 14:06:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7647 2023/12/17 14:08:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10929,3 +10929,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libtecla to 1.6.3 [nros 2023-12-17]
 	Updated databases/ruby-sequel to 5.75.0 [taca 2023-12-17]
 	Updated databases/ruby-tiny_tds to 2.1.6 [taca 2023-12-17]
+	Updated databases/ruby-sqlite3 to 1.6.9 [taca 2023-12-17]
