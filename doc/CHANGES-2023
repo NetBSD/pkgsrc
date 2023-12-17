@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7705 2023/12/17 19:34:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7706 2023/12/17 20:25:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10998,3 +10998,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xcp to 0.15.2 [pin 2023-12-17]
 	Updated devel/py-hatchling to 1.20.0 [adam 2023-12-17]
 	Updated textproc/py-ini2toml to 0.13 [adam 2023-12-17]
+	Updated textproc/py-jsbeautifier to 1.14.11 [adam 2023-12-17]
+	Updated sysutils/py-fsspec to 2023.12.2 [adam 2023-12-17]
