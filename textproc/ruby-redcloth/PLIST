@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/10/18 14:43:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/12/17 15:54:25 taca Exp $
 bin/redcloth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -61,6 +61,7 @@ ${GEM_LIBDIR}/spec/formatters/sanitized_html_spec.rb
 ${GEM_LIBDIR}/spec/formatters/style_filtered_html_spec.rb
 ${GEM_LIBDIR}/spec/parser_spec.rb
 ${GEM_LIBDIR}/spec/security/CVE-2012-6684_spec.rb
+${GEM_LIBDIR}/spec/security/CVE-2023-31606_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/compile.rake
 ${GEM_LIBDIR}/tasks/ragel_extension_task.rb
