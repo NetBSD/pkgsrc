@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7628 2023/12/17 07:00:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7629 2023/12/17 07:01:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10911,3 +10911,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hexyl to 0.14.0 [pin 2023-12-17]
 	Updated sysutils/dua-cli to 2.23.0 [pin 2023-12-17]
 	Updated sysutils/xcp to 0.15.0 [pin 2023-12-17]
+	Updated graphics/matugen to 1.1.1 [pin 2023-12-17]
