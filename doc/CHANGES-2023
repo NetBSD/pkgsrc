@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7667 2023/12/17 15:52:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7668 2023/12/17 15:54:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10950,3 +10950,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-haml to 6.3.0 [taca 2023-12-17]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.4 [taca 2023-12-17]
 	Updated textproc/ruby-markaby to 0.9.3 [taca 2023-12-17]
+	Updated textproc/ruby-redcloth to 4.3.3 [taca 2023-12-17]
