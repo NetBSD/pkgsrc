@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/11/30 13:55:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/12/17 14:26:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/matchers/have_rendered.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/redirect_to.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/relation_match_array.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/routing_matchers.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/send_email.rb
 ${GEM_LIBDIR}/lib/rspec/rails/tasks/rspec.rake
 ${GEM_LIBDIR}/lib/rspec/rails/vendor/capybara.rb
 ${GEM_LIBDIR}/lib/rspec/rails/version.rb
