@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7693 2023/12/17 16:49:11 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7694 2023/12/17 17:22:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10979,3 +10979,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-selenium-webdriver to 4.16.0 [taca 2023-12-17]
 	Updated www/ruby-typhoeus to 1.4.1 [taca 2023-12-17]
 	Updated www/ruby-websocket to 1.2.10 [taca 2023-12-17]
+	Updated devel/ruby-cucumber-expressions to 17.0.1 [taca 2023-12-17]
