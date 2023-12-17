@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/09/11 19:46:53 asau Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/17 16:27:36 zafer Exp $
 
 DISTNAME=	fcrackzip-1.0
 PKGREVISION=	1
-MASTER_SITES=	http://home.schmorp.de/marc/data/
+MASTER_SITES=	http://oldhome.schmorp.de/marc/data/
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.schmorp.de/marc/fcrackzip.html
+HOMEPAGE=	http://software.schmorp.de/pkg/fcrackzip.html
 COMMENT=	Zip password cracker
 LICENSE=	gnu-gpl-v2
 
