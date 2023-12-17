@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/23 09:37:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/17 17:26:07 taca Exp $
 bin/gherkin-ruby${RUBY_SUFFIX}
 bin/gherkin${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/gherkin
 ${GEM_LIBDIR}/bin/gherkin-ruby
