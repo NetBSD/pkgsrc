@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/09/14 11:29:28 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/12/17 16:10:57 adam Exp $
 
-BLAKE2s (colorlog-6.7.0.tar.gz) = 060dfcc81a9370e394e29227f9ca738c59ea808ff07422839f7c7e78983384c0
-SHA512 (colorlog-6.7.0.tar.gz) = 19b3c04beb8ac26d3db69f78bc1e7db40288c95ba7edc7c1d2495d592262dea9a1bf91e42dce0e575341eb2a572f0050866970f23d3be8c5adae518c4115787d
-Size (colorlog-6.7.0.tar.gz) = 29920 bytes
+BLAKE2s (colorlog-6.8.0.tar.gz) = 70f5e4e1da8a00b415c784d53aadbfb8515e4729b1822c3f8c8d72a1ca0a0598
+SHA512 (colorlog-6.8.0.tar.gz) = a16752be362ed1ed5104e54d872d847873b9bc9138d59a8e525e32b386c8824c7a21689c354517392de6f16035601ce0f30daebc32d08b911c18ca4004292e02
+Size (colorlog-6.8.0.tar.gz) = 29939 bytes
