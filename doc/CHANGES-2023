@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7687 2023/12/17 16:27:40 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7688 2023/12/17 16:29:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10973,3 +10973,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-faraday to 2.7.12 [taca 2023-12-17]
 	Updated www/ruby-loofah to 2.22.0 [taca 2023-12-17]
 	Updated www/ruby-puma to 6.4.0 [taca 2023-12-17]
+	Updated www/ruby-pygments.rb to 2.4.1 [taca 2023-12-17]
