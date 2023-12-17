@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/17 16:17:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/17 16:34:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
@@ -40,4 +40,5 @@ ${GEM_LIBDIR}/lib/rack/contrib/simple_endpoint.rb
 ${GEM_LIBDIR}/lib/rack/contrib/static_cache.rb
 ${GEM_LIBDIR}/lib/rack/contrib/time_zone.rb
 ${GEM_LIBDIR}/lib/rack/contrib/try_static.rb
+${GEM_LIBDIR}/lib/rack/contrib/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
