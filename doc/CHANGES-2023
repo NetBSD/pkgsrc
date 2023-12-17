@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7616 2023/12/16 23:41:52 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7617 2023/12/17 01:51:14 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10899,3 +10899,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/p5-match-simple version 0.012 [mef 2023-12-16]
 	Updated devel/p5-IO-Prompter to 0.005001 [mef 2023-12-16]
 	Updated devel/p5-IO-Tty to 1.18 [mef 2023-12-16]
+	Updated ham/chirp to 20231213 [gdt 2023-12-17]
