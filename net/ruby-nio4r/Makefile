@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/04/30 08:47:34 taca Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/17 14:35:07 taca Exp $
 
-DISTNAME=	nio4r-2.5.9
+DISTNAME=	nio4r-2.7.0
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
