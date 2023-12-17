@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.39 2023/12/08 21:55:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.40 2023/12/17 07:03:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -136,6 +136,7 @@ CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	downcast-rs-1.2.0
 CARGO_CRATE_DEPENDS+=	ecolor-0.23.0
 CARGO_CRATE_DEPENDS+=	egui-0.23.0
+CARGO_CRATE_DEPENDS+=	egui-notify-0.10.0
 CARGO_CRATE_DEPENDS+=	egui-phosphor-0.3.0
 CARGO_CRATE_DEPENDS+=	egui_plot-0.23.0
 CARGO_CRATE_DEPENDS+=	either-1.9.0
