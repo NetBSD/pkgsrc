@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/11/18 07:13:42 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/12/17 09:04:10 nros Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -53,7 +53,7 @@ libexec/ibus-extension-gtk3
 libexec/ibus-portal
 libexec/ibus-ui-emojier
 libexec/ibus-ui-gtk3
-libexec/ibus-wayland
+${PLIST.wayland}libexec/ibus-wayland
 libexec/ibus-x11
 man/man1/ibus-daemon.1
 man/man1/ibus-setup.1
@@ -64,7 +64,7 @@ man/man7/ibus-emoji.7
 share/GConf/gsettings/ibus.convert
 share/applications/org.freedesktop.IBus.Panel.Emojier.desktop
 share/applications/org.freedesktop.IBus.Panel.Extension.Gtk3.desktop
-share/applications/org.freedesktop.IBus.Panel.Wayland.Gtk3.desktop
+${PLIST.wayland}share/applications/org.freedesktop.IBus.Panel.Wayland.Gtk3.desktop
 share/applications/org.freedesktop.IBus.Setup.desktop
 share/bash-completion/completions/ibus.bash
 share/dbus-1/services/org.freedesktop.IBus.service
