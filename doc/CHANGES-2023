@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7653 2023/12/17 14:29:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7654 2023/12/17 14:31:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10936,3 +10936,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-regexp_parser to 2.8.3 [taca 2023-12-17]
 	Updated devel/ruby-rspec-rails to 6.1.0 [taca 2023-12-17]
 	Updated mail/ruby-mime-types-data to 3.2023.1205 [taca 2023-12-17]
+	Updated net/ruby-domain_name to 0.6.20231109 [taca 2023-12-17]
