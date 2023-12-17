@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/06/14 10:07:48 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/17 14:10:03 nros Exp $
 
 DISTNAME=	filebench-1.4.9.1
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filebench/}
 
