@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/07 19:50:35 nros Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/17 09:37:24 nros Exp $
 
 DISTNAME=	minizip-ng-4.0.2
 CATEGORIES=	archivers
@@ -25,6 +25,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMZ_COMPAT=NO
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
