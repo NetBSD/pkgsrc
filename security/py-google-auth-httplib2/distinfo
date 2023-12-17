@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/10/04 16:04:56 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/12/17 22:23:50 wiz Exp $
 
-BLAKE2s (google-auth-httplib2-0.1.1.tar.gz) = a8fafad851288376013ee53bc5aba6fc55c1d7a26b125ed82fc70336fbf22f43
-SHA512 (google-auth-httplib2-0.1.1.tar.gz) = adcda6f61a6d4c40e8b3215dd4c1b88d9bac33c6a748201f0ea2f068b34a173526782e42fd8aea46628acd2b40941685e9dcf88d07dba498fde110801e65cb8d
-Size (google-auth-httplib2-0.1.1.tar.gz) = 10817 bytes
+BLAKE2s (google-auth-httplib2-0.2.0.tar.gz) = 7a8fc1cd24fc233f314940b1a7e6bab83103d5a88781a47199a68f69debacc67
+SHA512 (google-auth-httplib2-0.2.0.tar.gz) = 82ffe87172056cd6d15e3d5f12c155ff9e09fdea9d8e6385fd3ddc2db374df41a74dcfb3aff3df1d046d2b537f0a98ee9b5c7dd7818d2274af9462df48e7bdf8
+Size (google-auth-httplib2-0.2.0.tar.gz) = 10842 bytes
