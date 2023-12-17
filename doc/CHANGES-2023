@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7664 2023/12/17 15:34:19 taca Exp $
+$NetBSD: CHANGES-2023,v 1.7665 2023/12/17 15:40:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10947,3 +10947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-sshkit to 1.21.6 [taca 2023-12-17]
 	Updated security/ruby-vault to 0.18.2 [taca 2023-12-17]
 	Updated sysutils/ruby-facter to 4.5.1 [taca 2023-12-17]
+	Updated textproc/ruby-haml to 6.3.0 [taca 2023-12-17]
