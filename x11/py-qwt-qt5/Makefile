@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/17 08:57:20 wiz Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt
@@ -24,6 +24,8 @@ WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c++
 
+PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
+
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
@@ -31,8 +33,8 @@ pre-configure:
 
 .if ${OPSYS} == "Darwin"
 post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.abi3.so \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.abi3.so
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.cpython-${PYTHON_VERSION}.so \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.cpython-${PYTHON_VERSION}.so
 .endif
 
 .include "../../lang/python/wheel.mk"
