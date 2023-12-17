@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2023/11/14 14:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/12/17 19:12:36 adam Exp $
 
-DISTNAME=	weasyprint-60.1
+DISTNAME=	weasyprint-60.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weasyprint/}
 
@@ -32,9 +31,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} weasyprint weasyprint-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 BUILDLINK_API_DEPENDS.pango+=   pango>=1.44.0
 .include "../../devel/pango/buildlink3.mk"
