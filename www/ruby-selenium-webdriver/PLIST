@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/05 12:26:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/12/17 16:43:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -54,12 +54,11 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_cdp.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_context.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_debugger.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_devtools.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_file_downloads.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_launching.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_location.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_log_events.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_logs.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_conditions.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_connection.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_network_interception.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_permissions.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_pinned_scripts.rb
@@ -146,6 +145,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/firefox/util.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/ie/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote.rb
@@ -153,6 +153,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/capabilities.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/driver.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/remote/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/curb.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/http/default.rb
