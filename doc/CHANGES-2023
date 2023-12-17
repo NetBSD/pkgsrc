@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7619 2023/12/17 05:44:00 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7620 2023/12/17 05:47:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10902,3 +10902,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/chirp to 20231213 [gdt 2023-12-17]
 	Updated devel/p5-IPC-Shareable to 1.13 [mef 2023-12-17]
 	Updated devel/p5-Lexical-SealRequireHints to 0.012 [mef 2023-12-17]
+	Updated devel/p5-Log-Any-Adapter-Callback to 0.102 [mef 2023-12-17]
