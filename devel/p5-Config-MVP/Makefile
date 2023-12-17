@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/12/16 09:57:50 mef Exp $
+# $NetBSD: Makefile,v 1.29 2023/12/17 09:55:38 jperkin Exp $
 
 DISTNAME=	Config-MVP-2.200013
 PKGNAME=	p5-${DISTNAME}
@@ -20,13 +20,11 @@ DEPENDS+=	p5-Throwable-[0-9]*:../../devel/p5-Throwable
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
-TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 #TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # for make test
-TEST_DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
-+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
-TEST_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-
+TEST_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Config/MVP/.packlist
