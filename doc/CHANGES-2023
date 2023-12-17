@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7636 2023/12/17 07:42:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7637 2023/12/17 07:43:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -10919,3 +10919,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/prometheus to 2.48.1 [wiz 2023-12-17]
 	Updated security/p5-IO-Socket-SSL to 2.084 [wiz 2023-12-17]
 	Updated net/p5-Net-DNS to 1.40 [wiz 2023-12-17]
+	Updated lang/p5-Perl-LanguageServer to 2.6.1 [wiz 2023-12-17]
