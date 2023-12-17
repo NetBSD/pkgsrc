@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.SunOS,v 1.3 2023/12/17 13:59:38 nros Exp $
+lib/libtecla_r.a
+lib/libtecla_r.so
+lib/libtecla_r.so.1
+lib/libtecla_r.so.${PKGVERSION}
