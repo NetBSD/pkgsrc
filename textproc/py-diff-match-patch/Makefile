@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/18 09:38:55 adam Exp $
 
-DISTNAME=	diff-match-patch-20200713
+DISTNAME=	diff-match-patch-20230430
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diff-match-patch/}
 
@@ -11,18 +10,11 @@ HOMEPAGE=	https://github.com/diff-match-patch-python/diff-match-patch
 COMMENT=	Robust algorithms for synchronizing plain text
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-do-test:
-.if ${PYTHON_VERSION} == 207
-	cd ${WRKSRC} && ${PYTHONBIN} diff_match_patch/tests/diff_match_patch_test_py2.py
-.else
-	cd ${WRKSRC} && ${PYTHONBIN} diff_match_patch/tests/diff_match_patch_test.py
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
