@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/12/18 12:55:21 mef Exp $
 
-BLAKE2s (Metrics-Any-0.07.tar.gz) = 7abb4590f28d077a11acb09aa6f57156f81fd91f7d212aa8159c954988096fce
-SHA512 (Metrics-Any-0.07.tar.gz) = 69eb7c029ed89497ee3a19bbf0547fbfa0b23a3a0e64768497fecc8bd27b3c45c65b672c9bf834b6480742a3b2ae383d3f0363439887a88d3ad6ba7503fee40f
-Size (Metrics-Any-0.07.tar.gz) = 31028 bytes
+BLAKE2s (Metrics-Any-0.10.tar.gz) = 5e6ff7f67ed6a87b5e5b68a6cdac9f800dbd0367a59f06174e161c16c6ce6623
+SHA512 (Metrics-Any-0.10.tar.gz) = 5d0261459fa0f315470b48297e726c4a9e91a8318b30321147d4d9cc2f37a4fb0f8225fc0c2dc01c03f6c96e7316eb2b08905d244be94efc254920c8d681ee52
+Size (Metrics-Any-0.10.tar.gz) = 33586 bytes
