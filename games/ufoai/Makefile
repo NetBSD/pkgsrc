@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2023/11/12 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/12/18 22:29:43 rillig Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		games
 
 DISTFILES=	${DISTNAME}-source.tar.bz2
@@ -23,6 +23,12 @@ INSTALLATION_DIRS=	share/ufoai
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 CHECK_INTERPRETER_SKIP+=	share/ufoai/base/maps/*
+
+SUBST_CLASSES+=			rm-destdir
+SUBST_STAGE.rm-destdir=		post-install
+SUBST_FILES.rm-destdir=		${DESTDIR}${PREFIX}/bin/ufo
+SUBST_FILES.rm-destdir+=	${DESTDIR}${PREFIX}/bin/ufoded
+SUBST_SED.rm-destdir=		-e 's,cd ${DESTDIR}/,cd /,'
 
 do-extract:
 	cd ${WRKDIR} && ${BZIP2} -d -c ${DISTDIR}/${DISTNAME}-source.tar.bz2 | ${TAR} -xf -
