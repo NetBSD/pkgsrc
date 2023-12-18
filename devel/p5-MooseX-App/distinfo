@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:17:03 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/12/18 13:40:25 mef Exp $
 
-BLAKE2s (MooseX-App-1.42.tar.gz) = d0fe991d7b03a463f5f2095ce7444e43860310ef2b08b169892a97de66d1ef0f
-SHA512 (MooseX-App-1.42.tar.gz) = 33c2ecd2ccfc13a0be199c664b0c9aea2e90d80ef415ace50c06bb8e3121f36bd607c6bb6ac5ebf301bb4a793149f0c43d99e35204ea90f464e3bdbb5da6a0b7
-Size (MooseX-App-1.42.tar.gz) = 77929 bytes
+BLAKE2s (MooseX-App-1.43.tar.gz) = e464bb3616345a057c7c1f44d137d93d9e2d7fd0f13f8af1cf613e405ac25ee6
+SHA512 (MooseX-App-1.43.tar.gz) = 0a69aad7f9a835d8c44933be083693bef88fca5a939de2b862aa9f6d8908ca9a1c7fb0f8db5c2028a281bbc7879105c0bc1cdc27070100c9b7eef44f0446f5f2
+Size (MooseX-App-1.43.tar.gz) = 74975 bytes
