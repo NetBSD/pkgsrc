@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7733 2023/12/18 11:06:40 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7734 2023/12/18 11:08:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11034,3 +11034,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libebml to 1.4.5 [adam 2023-12-18]
 	Updated devel/py-faker to 21.0.0 [adam 2023-12-18]
 	Updated wm/lefthk to 0.2.1 [pin 2023-12-18]
+	Updated net/netop to 0.1.4 [pin 2023-12-18]
