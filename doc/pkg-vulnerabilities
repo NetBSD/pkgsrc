@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.81 2023/12/18 08:56:42 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.82 2023/12/18 10:27:11 thor Exp $
 #
 #FORMAT 1.0.0
 #
@@ -15069,7 +15069,7 @@ ming-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-11226
 apache-tomcat>=7.0.0<7.0.89	insecure-defaults	https://nvd.nist.gov/vuln/detail/CVE-2018-8014
 apache-tomcat>=8.0.0<8.0.53  	insecure-defaults	https://nvd.nist.gov/vuln/detail/CVE-2018-8014
 apache-tomcat>=8.5.0<8.5.32  	insecure-defaults	https://nvd.nist.gov/vuln/detail/CVE-2018-8014
-hdf5-[0-9]*		multiple-vulnerabilities	https://github.com/Twi1ight/fuzzing-pocs/tree/master/hdf5
+hdf5<1.12.2		multiple-vulnerabilities	https://github.com/Twi1ight/fuzzing-pocs/tree/master/hdf5
 git-base<2.16.4		remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-11235
 git-base>=2.17<2.17.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-11235
 jpeg<9c		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-11212
