@@ -1,0 +1,16 @@
+$NetBSD: patch-scripts_dtc_pylibfdt_Makefile,v 1.1 2023/12/18 21:57:35 gutteridge Exp $
+
+Fix build with py-setuptools >= 69.0, which strictly enforces PEP 440
+versioning.
+
+--- scripts/dtc/pylibfdt/Makefile.orig	2022-01-10 13:46:34.000000000 -0500
++++ scripts/dtc/pylibfdt/Makefile
+@@ -17,7 +17,7 @@
+       cmd_pymod = unset CROSS_COMPILE; unset CFLAGS; \
+ 		CC="$(HOSTCC)" LDSHARED="$(HOSTCC) -shared " \
+ 		LDFLAGS="$(HOSTLDFLAGS)" \
+-		VERSION="u-boot-$(UBOOTVERSION)" \
++		VERSION="$(UBOOTVERSION)" \
+ 		CPPFLAGS="$(HOSTCFLAGS) -I$(LIBFDT_srcdir)" OBJDIR=$(obj) \
+ 		SOURCES="$(PYLIBFDT_srcs)" \
+ 		SWIG_OPTS="-I$(LIBFDT_srcdir) -I$(LIBFDT_srcdir)/.." \
