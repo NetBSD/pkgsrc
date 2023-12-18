@@ -1,7 +1,0 @@
-$NetBSD: distinfo-2021.01-rc3,v 1.1 2021/06/25 08:47:32 mrg Exp $
-
-SHA1 (u-boot-2021.01-rc3.tar.bz2) = be748544928dec0117608cdbf067da2ec9fa2dce
-RMD160 (u-boot-2021.01-rc3.tar.bz2) = ce12dd23023829fe671a502e4cbaf5fd8cf34097
-SHA512 (u-boot-2021.01-rc3.tar.bz2) = 4c88bbdeb1e39e52bb069c4bf65c9829290a51da9a21de8e60d50b62c74ae98a35d22a235fdc0a86467aedc34f85dff5d63b874af247323d0d5bdcb2e82cd4a3
-Size (u-boot-2021.01-rc3.tar.bz2) = 16363623 bytes
-SHA1 (patch-lib_bch.c) = 01a1704adfb60fd3a7e72eaf6396c86d63a4d450
