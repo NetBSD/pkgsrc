@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/06/03 19:35:50 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/18 11:07:58 pin Exp $
 
-DISTNAME=	netop-0.1.2
+DISTNAME=	netop-0.1.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ZingerLittleBee/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
