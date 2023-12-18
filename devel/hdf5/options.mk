@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2023/12/18 10:33:28 thor Exp $
+# $NetBSD: options.mk,v 1.12 2023/12/18 15:53:27 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hdf5
-PKG_SUPPORTED_OPTIONS=	szip threads unsafe-threads
+PKG_SUPPORTED_OPTIONS=	szip threads hdf5-unsafe-threads
 PKG_SUGGESTED_OPTIONS=	szip
 
 .include "../../mk/bsd.options.mk"
@@ -22,7 +22,7 @@ PLIST.hl=	yes
 
 # You can still enable threads if you are adventurous. There
 # are scientists like that. Not supported, but possible.
-.if !empty(PKG_OPTIONS:Munsafe-threads)
+.if !empty(PKG_OPTIONS:Mhdf5-unsafe-threads)
 CONFIGURE_ARGS+=       --enable-threadsafe --enable-unsupported
 .include "../../mk/pthread.buildlink3.mk"
 .endif

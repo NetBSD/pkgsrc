@@ -340,6 +340,7 @@ gzip			Enable compression using gzip.
 hal			Support for the freedesktop.org Hardware Abstraction Layer.
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hawknl			Enable HawkNL network API support.
+hdf5-unsafe-threads     Enable unsupported threaded hdf5 with high-level and C++ APIs.
 heif			Enable HEIF graphics image support.
 hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
