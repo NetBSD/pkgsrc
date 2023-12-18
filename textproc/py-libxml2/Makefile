@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/12/18 16:08:32 thor Exp $
+# $NetBSD: Makefile,v 1.92 2023/12/18 16:09:47 wiz Exp $
 
 PKGREVISION= 4
 .include "../../textproc/libxml2/Makefile.common"
@@ -57,5 +57,7 @@ EGG_NAME=	${DISTNAME:S/-/_python-/}
 .include "../../lang/python/egg.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION_NOREV}
+# for added symbols
+BUILDLINK_ABI_DEPENDS.libxml2+= libxml2>=2.10.4nb6
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
