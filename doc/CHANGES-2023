@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7742 2023/12/18 13:24:29 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7743 2023/12/18 13:27:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11043,3 +11043,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Module-Build-Tiny to 0.047 [mef 2023-12-18]
 	Updated devel/p5-Module-CPANTS-Analyse to 1.02 [mef 2023-12-18]
 	Updated devel/p5-Module-ExtractUse to 0.345 [mef 2023-12-18]
+	Updated devel/p5-Module-Find to 0.16 [mef 2023-12-18]
