@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:16:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/18 12:58:59 mef Exp $
 
-BLAKE2s (Mixin-ExtraFields-0.140002.tar.gz) = 3c96f088fd77c03778825c61a471f00566407716ca30ae62e846b770db23d4cc
-SHA512 (Mixin-ExtraFields-0.140002.tar.gz) = 653e0bcbe5af77c11c1e4965759a4e3e8e463a5f27dac591ecda9dee60b3710dabbcc4c38c0d89f34cf31f98463211b62ddd6b31f2ab9c1a30107fee2ba906e8
-Size (Mixin-ExtraFields-0.140002.tar.gz) = 21094 bytes
+BLAKE2s (Mixin-ExtraFields-0.140003.tar.gz) = 376dc1af141356cc3c0530cfcaa516fcdff09d4598e50079f40d32f2ff0e91b1
+SHA512 (Mixin-ExtraFields-0.140003.tar.gz) = 45af62f1f28e6c47666bd6bbd07e1966cf69cdf9a877a995676cff9e30aea39a8ab6e4aace24bea09bac822fffa17632b409d82e1d22c09aacf1139a22c0b04f
+Size (Mixin-ExtraFields-0.140003.tar.gz) = 25342 bytes
