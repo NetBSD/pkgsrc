@@ -1,11 +1,11 @@
-$NetBSD: patch-gfx_thebes_gfxFont.cpp,v 1.1 2021/06/21 14:21:28 martin Exp $
+$NetBSD: patch-gfx_thebes_gfxFont.cpp,v 1.2 2023/12/18 09:31:44 abs Exp $
 
 Add an explicit template instantiation to make it work
 with newer gcc (older gcc did not create specialized inline
 clones).
 
---- gfx/thebes/gfxFont.cpp.orig	2017-04-11 04:13:08.000000000 +0200
-+++ gfx/thebes/gfxFont.cpp	2021-06-21 15:18:43.789260654 +0200
+--- gfx/thebes/gfxFont.cpp.orig	2017-04-11 02:13:08.000000000 +0000
++++ gfx/thebes/gfxFont.cpp
 @@ -2614,6 +2614,18 @@ gfxFont::GetShapedWord(DrawTarget *aDraw
      return sw;
  }
@@ -25,4 +25,3 @@ clones).
  bool
  gfxFont::CacheHashEntry::KeyEquals(const KeyTypePointer aKey) const
  {
-
