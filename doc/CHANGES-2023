@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7730 2023/12/18 09:28:52 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.7731 2023/12/18 09:40:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11029,3 +11029,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gnuplot to 5.4.10 [adam 2023-12-18]
 	Updated devel/py-hatchling to 1.21.0 [adam 2023-12-18]
 	Updated sysutils/duplicity to 2.1.4 [ffaubert 2023-12-18]
+	Updated textproc/py-diff-match-patch to 20230430 [adam 2023-12-18]
+	Updated textproc/py-pdf to 3.17.3 [adam 2023-12-18]
