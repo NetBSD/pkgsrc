@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2023/10/06 19:15:21 adam Exp $
+$NetBSD: distinfo,v 1.23 2023/12/18 17:32:36 jperkin Exp $
 
 BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
 SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
@@ -9,5 +9,6 @@ Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
 BLAKE2s (libcxxabi-16.0.6.src.tar.xz) = 62b0fea4aa05c44ecf34f188f8aec8fc1a41bc34ff42fdc3831eb515c31a282c
 SHA512 (libcxxabi-16.0.6.src.tar.xz) = 5f49ad34d5d00a3cd5ca92c8570b0cd77123a818456fe30a3fab7c14a2fe134ada5215466f729c9e1da12a38a9e2b2254b80775bda2986c505a2cad5af5cb70e
 Size (libcxxabi-16.0.6.src.tar.xz) = 573564 bytes
+SHA1 (patch-.._libcxx-16.0.6.src_include_____type__traits_is__convertible.h) = 87f27e36f1d7b33842d0258eb0012b8b8567b6a9
 SHA1 (patch-src_CMakeLists.txt) = da127de7603ed0ea5530c4a8cd2ffcee61d2ff90
 SHA1 (patch-src_demangle_Utility.h) = 7a4850869f9f4ce858d2cceeb999934c28292a95
