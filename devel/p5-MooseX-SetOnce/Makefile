@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/07/06 09:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/18 13:43:45 mef Exp $
 #
 
-DISTNAME=	MooseX-SetOnce-0.200002
+DISTNAME=	MooseX-SetOnce-0.203
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -13,8 +12,8 @@ COMMENT=	Write-once, read-many attributes for Moose
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose>=0.90:../../devel/p5-Moose
-# for make test
-TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/SetOnce/.packlist
