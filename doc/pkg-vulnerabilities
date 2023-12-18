@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.80 2023/12/16 07:08:54 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.81 2023/12/18 08:56:42 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25804,3 +25804,5 @@ asterisk<18		eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 asterisk>=19<20		eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 jq<1.7.1		buffer-overflow	http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-50246
 jq<1.7.1		buffer-overflow	http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-50268
+webkit-gtk<2.42.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42883
+webkit-gtk<2.42.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42890
