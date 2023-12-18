@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.82 2023/12/18 10:27:11 thor Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.83 2023/12/18 19:25:13 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25806,3 +25806,9 @@ jq<1.7.1		buffer-overflow	http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-20
 jq<1.7.1		buffer-overflow	http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-50268
 webkit-gtk<2.42.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42883
 webkit-gtk<2.42.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42890
+openssh<9.6	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
+putty<0.80	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
+py{38,39,310,311,321}-asyncssh<2.14.2	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
+py{38,39,310,311,321}-asyncssh<2.14.2	extension-negotiation-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-46445
+py{38,39,310,311,321}-asyncssh<2.14.2	session-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-46446
+libssh<0.106	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
