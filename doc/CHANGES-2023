@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7731 2023/12/18 09:40:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7732 2023/12/18 10:02:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11031,3 +11031,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/duplicity to 2.1.4 [ffaubert 2023-12-18]
 	Updated textproc/py-diff-match-patch to 20230430 [adam 2023-12-18]
 	Updated textproc/py-pdf to 3.17.3 [adam 2023-12-18]
+	Updated devel/libebml to 1.4.5 [adam 2023-12-18]
+	Updated devel/py-faker to 21.0.0 [adam 2023-12-18]
