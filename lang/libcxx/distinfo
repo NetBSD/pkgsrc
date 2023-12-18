@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2023/10/06 19:15:21 adam Exp $
+$NetBSD: distinfo,v 1.27 2023/12/18 17:48:42 jperkin Exp $
 
 BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
 SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
@@ -11,6 +11,9 @@ SHA512 (libcxxabi-16.0.6.src.tar.xz) = 5f49ad34d5d00a3cd5ca92c8570b0cd77123a8184
 Size (libcxxabi-16.0.6.src.tar.xz) = 573564 bytes
 SHA1 (patch-include_____locale) = 2eafcf7f70f67df907593fe8cc0cc1ec1c0e0552
 SHA1 (patch-include_____support_solaris_xlocale.h) = c6a969ed48b4df78401fea76c7a936c258cf869f
+SHA1 (patch-include_____type__traits_is__convertible.h) = 0f5e9050b0b62843e08bd0361f5cb68b81ce4d81
+SHA1 (patch-include_____type__traits_remove__cv.h) = b509dec32439aacaa4365b823afc2d059253e707
+SHA1 (patch-include_____type__traits_remove__cvref.h) = 74184b32cbd236b36263b32688dfc4a7ffb4167a
 SHA1 (patch-src_charconv.cpp) = b8569ae77df4a5a7b627b3a9cb6691be73699dca
 SHA1 (patch-src_filesystem_filesystem__common.h) = 7b088ae8e577b482e05906434b510daed40469ae
 SHA1 (patch-src_include_to__chars__floating__point.h) = f7f880905609b87830ea657c7510fb3987448a09
