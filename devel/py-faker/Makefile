@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2023/11/08 13:12:14 adam Exp $
+# $NetBSD: Makefile,v 1.76 2023/12/18 10:01:51 adam Exp $
 
-DISTNAME=	Faker-19.13.0
+DISTNAME=	Faker-21.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -10,16 +10,15 @@ HOMEPAGE=	https://github.com/joke2k/faker
 COMMENT=	Python package that generates fake data for you
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4:../../time/py-dateutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
 TEST_DEPENDS+=	${PYPKGPREFIX}-validators>=0.13.0:../../textproc/py-validators
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -27,8 +26,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} faker faker-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
