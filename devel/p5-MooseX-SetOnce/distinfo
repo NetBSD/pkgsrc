@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:17:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/18 13:43:45 mef Exp $
 
-BLAKE2s (MooseX-SetOnce-0.200002.tar.gz) = 89c3928db24bbb7acafdc4a934b235e5635b74113dd85ce3108ce4f8459e5be3
-SHA512 (MooseX-SetOnce-0.200002.tar.gz) = 7783496c0d9c82793bd730894ffb8e640caa199fc1b320c9007fc482eaf123c415914780801b9907fc6d1fd460d47fbb38824b75ae1dce6130f7f80a248b2166
-Size (MooseX-SetOnce-0.200002.tar.gz) = 13849 bytes
+BLAKE2s (MooseX-SetOnce-0.203.tar.gz) = 112ddb62cc8db3a714f5e3177900cf980052a2bf53015e21d834655baa030cfb
+SHA512 (MooseX-SetOnce-0.203.tar.gz) = 87a7080f379c496c90c21ef25f00ae6db39169d4e9e72a97ead8d5cdb3f188d2e21d84e9af87ddf5cb899bafc4f4998447be2b638a0ca69bfa55381e062af683
+Size (MooseX-SetOnce-0.203.tar.gz) = 17000 bytes
