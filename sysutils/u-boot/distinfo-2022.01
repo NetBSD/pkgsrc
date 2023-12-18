@@ -1,4 +1,4 @@
-$NetBSD: distinfo-2022.01,v 1.4 2023/08/27 23:38:07 gutteridge Exp $
+$NetBSD: distinfo-2022.01,v 1.5 2023/12/18 17:11:31 gutteridge Exp $
 
 BLAKE2s (u-boot-2022.01.tar.bz2) = 54855aa008e78886dd48a25042eebedb1aee301571e578325131ed93d248c329
 SHA512 (u-boot-2022.01.tar.bz2) = d83c62bd8f0f51664d2aca329a3ce1379cfd1dfff439dccd6cfc2cb33cfef89a2b01855c97716f591b5550bfdf99e2f3aef7efa33f2e7834c820648f9eef3825
@@ -15,3 +15,4 @@ SHA1 (patch-drivers_usb_host_usb-uclass.c) = 754504a9dc08f888a4ef09f5ccc3cb56b5c
 SHA1 (patch-include_config_distro_bootcmd.h) = d37da930903d9d80829ac3cd0da98334057b6188
 SHA1 (patch-include_configs_rockchip-common.h) = d9aa111ec38f2f8ad64c45d42d3bc5519e27382d
 SHA1 (patch-include_configs_rockpro64_rk3399.h) = 7efd0b09cbf627dc59d2a23a76dd6506c9efc4c9
+SHA1 (patch-scripts_dtc_pylibfdt_Makefile) = fc3fb6c2aa6ad8e71aecb30839c9e474adcf5229
