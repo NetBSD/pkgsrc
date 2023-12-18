@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/12/24 09:58:20 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/12/18 22:47:53 thor Exp $
 
-BLAKE2s (PDAL-2.2.0-src.tar.gz) = 5dbf57ed8d96abbcf5f48aeffc00a636b44b29496d65c9d35fa8af0edc6f846f
-SHA512 (PDAL-2.2.0-src.tar.gz) = c54770973de714473bf6cfe6a69e2c880d516abcf71cce755495304093acb41471b4264cb84f11973a482f3de80a8922d7d8b54994fb91c6b012a6894a8bdac5
-Size (PDAL-2.2.0-src.tar.gz) = 99876283 bytes
+BLAKE2s (PDAL-2.5.6-src.tar.gz) = 7b7deadef1c483aa1f6aa7a06657a5f3ba1d9d68143b8013b4f9596e53203c93
+SHA512 (PDAL-2.5.6-src.tar.gz) = 059f18443a258e139ab3efa9146baeb51e21778ff46540961d9e6f2ef0b605d072240f68ca4b3def0c25ab6d477a14c7c75cd84cab6a7d7be543adab5f52e069
+Size (PDAL-2.5.6-src.tar.gz) = 89593391 bytes
 SHA1 (patch-pdal_util_private_BacktraceExecinfo.cpp) = 594e8c5452e83b52731e161b323917d41aaf2cbe
