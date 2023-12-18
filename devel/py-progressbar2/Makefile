@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/10/31 15:27:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/18 05:48:47 adam Exp $
 
-DISTNAME=	progressbar2-4.2.0
+DISTNAME=	progressbar2-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
@@ -10,16 +10,21 @@ HOMEPAGE=	https://github.com/WoLpH/python-progressbar
 COMMENT=	Text progress bar library for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-utils>=3.0.0:../../devel/py-utils
+DEPENDS+=	${PYPKGPREFIX}-utils>=3.8.1:../../devel/py-utils
+TEST_DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.6:../../textproc/py-dill
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.7.7:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.11:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.9:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.6.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-[0-9]*:../../devel/py-test-mypy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-utils
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} cli-name cli-name-${PYVERSSUFFIX} || ${TRUE}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
@@ -27,5 +32,5 @@ do-test:
 	${LN} -f ${WRKSRC}/examples.py ${WRKSRC}/tests/examples.py
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
