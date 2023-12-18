@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7726 2023/12/18 05:49:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7727 2023/12/18 06:45:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11024,3 +11024,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake-gui to 3.28.1 [adam 2023-12-18]
 	Updated textproc/py-markdown2 to 2.4.12 [adam 2023-12-18]
 	Updated devel/py-progressbar2 to 4.3.0 [adam 2023-12-18]
+	Updated shells/nushell to 0.88.1 [pin 2023-12-18]
