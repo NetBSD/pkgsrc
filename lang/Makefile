@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.713 2023/12/16 07:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.714 2023/12/18 16:52:37 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -90,7 +90,6 @@ SUBDIR+=	gcc8-libs
 SUBDIR+=	gcc9
 SUBDIR+=	gcc9-libs
 SUBDIR+=	gforth
-SUBDIR+=	ghc-bootstrap
 SUBDIR+=	ghc7
 SUBDIR+=	ghc80
 SUBDIR+=	ghc810
