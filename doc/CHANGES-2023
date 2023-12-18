@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7746 2023/12/18 13:35:54 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7747 2023/12/18 13:40:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11047,3 +11047,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Module-Install to 1.21 [mef 2023-12-18]
 	Updated devel/p5-Module-Install-RTx to 0.43 [mef 2023-12-18]
 	Updated devel/p5-Module-ScanDeps to 1.35 [mef 2023-12-18]
+	Updated devel/p5-MooseX-App to 1.43nb2 [mef 2023-12-18]
