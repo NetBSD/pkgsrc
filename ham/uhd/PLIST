@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/02/03 21:19:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/12/18 22:44:41 mef Exp $
 bin/rfnoc_image_builder
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
@@ -34,6 +34,7 @@ include/uhd/features/adc_self_calibration_iface.hpp
 include/uhd/features/discoverable_feature.hpp
 include/uhd/features/discoverable_feature_getter_iface.hpp
 include/uhd/features/gpio_power_iface.hpp
+include/uhd/features/internal_sync_iface.hpp
 include/uhd/features/ref_clk_calibration_iface.hpp
 include/uhd/features/spi_getter_iface.hpp
 include/uhd/features/trig_io_mode_iface.hpp
@@ -187,7 +188,7 @@ lib/cmake/uhd/UHDBoost.cmake
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.4.4.0
+lib/libuhd.so.4.6.0
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/gpio
@@ -243,7 +244,8 @@ lib/uhd/tests/devtest/devtest_e320.py
 lib/uhd/tests/devtest/devtest_e3xx.py
 lib/uhd/tests/devtest/devtest_n3x0.py
 lib/uhd/tests/devtest/devtest_x3x0.py
-lib/uhd/tests/devtest/devtest_x4x0.py
+lib/uhd/tests/devtest/devtest_x410.py
+lib/uhd/tests/devtest/devtest_x440.py
 lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
 lib/uhd/tests/devtest/multi_usrp_test.py
@@ -270,6 +272,7 @@ lib/uhd/tests/error_c_test
 lib/uhd/tests/error_test
 lib/uhd/tests/expert_test
 lib/uhd/tests/fe_conn_test
+lib/uhd/tests/ferrum_radio_block_test
 lib/uhd/tests/fft_block_test
 lib/uhd/tests/fir_filter_block_test
 lib/uhd/tests/fosphor_block_test
@@ -333,6 +336,7 @@ lib/uhd/tests/vector_iir_block_test
 lib/uhd/tests/vrt_test
 lib/uhd/tests/window_block_test
 lib/uhd/tests/x400_rfdc_control_test
+lib/uhd/tests/x4xx_radio_block_test
 lib/uhd/tests/xport_adapter_ctrl_test
 lib/uhd/tests/zbx_cpld_test
 lib/uhd/utils/b2xx_fx3_utils
@@ -394,3 +398,4 @@ share/uhd/rfnoc/core/rfnoc_imagebuilder_args.json
 share/uhd/rfnoc/core/x300_bsp.yml
 share/uhd/rfnoc/core/x310_bsp.yml
 share/uhd/rfnoc/core/x410_bsp.yml
+share/uhd/rfnoc/core/x440_bsp.yml
