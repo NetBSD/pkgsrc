@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2023/12/18 20:00:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/18 22:46:42 gutteridge Exp $
 
-PKGREVISION=		1
-UBOOT_VERSION=		2021.01-rc3
+UBOOT_VERSION=		2021.01
 UBOOT_TARGET=		pinephone
 UBOOT_CONFIG=		pinephone_defconfig
 UBOOT_BIN=		u-boot-sunxi-with-spl.bin
 
 UBOOT_INSTALLBOOT_PLIST=	installboot.plist
-
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-pinephone/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-pinephone/patches
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 

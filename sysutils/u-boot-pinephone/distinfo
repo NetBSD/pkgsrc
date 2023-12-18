@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:20 nia Exp $
-
-BLAKE2s (u-boot-2021.01-rc3.tar.bz2) = cff1c9e5121da7dc46585711335369d1e7006d2afc9d1d626f29fbde6cebc4fc
-SHA512 (u-boot-2021.01-rc3.tar.bz2) = 4c88bbdeb1e39e52bb069c4bf65c9829290a51da9a21de8e60d50b62c74ae98a35d22a235fdc0a86467aedc34f85dff5d63b874af247323d0d5bdcb2e82cd4a3
-Size (u-boot-2021.01-rc3.tar.bz2) = 16363623 bytes
