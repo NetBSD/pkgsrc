@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:48:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/18 14:22:24 mef Exp $
 
-BLAKE2s (nec2c-1.3.tar.bz2) = dcddd5e6af06c726146978a1aaef0973a5defd9fca5d153c1554f2685f813f04
-SHA512 (nec2c-1.3.tar.bz2) = a451153bf13c82731a4c7213201a2afae34f3a12a40fccc06323aefc2156333b6eedbca6553dfd5076b9eb5e9b54c5b504b82b12a2e4b68e58112c829e5b2cbb
-Size (nec2c-1.3.tar.bz2) = 159933 bytes
+BLAKE2s (nec2c-1.3.1.tar.bz2) = 6c83557e124906a9089865f5ec2a9e67c7b68057928dec21d4c3035ae58371df
+SHA512 (nec2c-1.3.1.tar.bz2) = ad1c98655fbb8c5a219e0178cc25ad8701dc38174f8403d2c3aa61e397c9ef9cf86578102c1848a47e3b4b2c2a71e9f24185d8a2eaa9154d6794cd6f2e2d7a1b
+Size (nec2c-1.3.1.tar.bz2) = 186124 bytes
