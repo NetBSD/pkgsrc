@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/08/14 05:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/18 22:49:15 thor Exp $
 
 DISTNAME=	itstool-2.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 # debugging problems with that version.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.10.4nb4:../../textproc/py-libxml2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
