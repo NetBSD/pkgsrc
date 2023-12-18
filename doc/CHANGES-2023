@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7756 2023/12/18 16:25:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7757 2023/12/18 16:52:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11057,3 +11057,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-asyncssh to 2.14.2 [wiz 2023-12-18]
 	Updated www/squid6 to 6.6 [sborrill 2023-12-18]
 	Updated security/py-paramiko to 3.3.1nb1 [wiz 2023-12-18]
+	Removed lang/ghc-bootstrap [wiz 2023-12-18]
