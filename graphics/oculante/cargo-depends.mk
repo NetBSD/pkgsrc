@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.40 2023/12/17 07:03:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.41 2023/12/18 11:09:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -664,8 +664,8 @@ CARGO_CRATE_DEPENDS+=	yuv-0.1.5
 CARGO_CRATE_DEPENDS+=	zbus-3.14.1
 CARGO_CRATE_DEPENDS+=	zbus_macros-3.14.1
 CARGO_CRATE_DEPENDS+=	zbus_names-2.6.0
-CARGO_CRATE_DEPENDS+=	zerocopy-0.7.28
-CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.28
+CARGO_CRATE_DEPENDS+=	zerocopy-0.7.31
+CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.31
 CARGO_CRATE_DEPENDS+=	zune-core-0.4.11
 CARGO_CRATE_DEPENDS+=	zune-inflate-0.2.54
 CARGO_CRATE_DEPENDS+=	zune-png-0.4.0
