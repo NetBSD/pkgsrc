@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/18 20:00:44 gutteridge Exp $
 
+PKGREVISION=		1
 UBOOT_VERSION=		2021.01-rc3
 UBOOT_TARGET=		pinephone
 UBOOT_CONFIG=		pinephone_defconfig
@@ -15,21 +16,20 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 ALL_ENV+=		PYTHON3=${PYTHONBIN}
 
 SUBST_CLASSES+=		python3
-SUBST_STAGE.python3+=	pre-build
-SUBST_FILES.python3+=	Makefile
-SUBST_SED.python3+=	-e 's,^PYTHON3.*=.*python3$$,PYTHON3='${PYTHONBIN:Q}',g'
+SUBST_STAGE.python3=	pre-build
+SUBST_FILES.python3=	Makefile
+SUBST_SED.python3=	-e 's,^PYTHON3.*=.*python3$$,PYTHON3='${PYTHONBIN:Q}',g'
 
 REPLACE_INTERPRETER+=	python3
-REPLACE.python3.old+=	/usr/bin/env python3
-REPLACE.python3.new+=	${PYTHONBIN}
-REPLACE_FILES.python3+=	scripts/dtc/pylibfdt/setup.py
+REPLACE.python3.old=	/usr/bin/env python3
+REPLACE.python3.new=	${PYTHONBIN}
+REPLACE_FILES.python3=	scripts/dtc/pylibfdt/setup.py
 
 CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh
 
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}
 
-PKGREVISION= 1
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
 .include "../../mk/bsd.pkg.mk"
