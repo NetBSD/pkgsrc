@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/18 22:47:53 thor Exp $
 
-DISTNAME=	PDAL-2.2.0-src
+DISTNAME=	PDAL-2.5.6-src
 PKGNAME=	${DISTNAME:S/PDAL/pdal-lib/:S/-src//}
-PKGREVISION=	21
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PDAL/}
 GITHUB_PROJECT=	PDAL
@@ -16,6 +15,7 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++17
 
 TEST_TARGET=	test
 
@@ -57,6 +57,7 @@ CMAKE_ARGS+=	-DWITH_ZSTD=ON
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/pcl/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
