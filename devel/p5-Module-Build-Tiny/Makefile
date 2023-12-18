@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/08/31 23:34:16 wen Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/18 13:15:53 mef Exp $
 
-DISTNAME=	Module-Build-Tiny-0.046
+DISTNAME=	Module-Build-Tiny-0.047
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
