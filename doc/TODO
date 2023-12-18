@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23789 2023/12/18 19:23:21 wiz Exp $
+$NetBSD: TODO,v 1.23790 2023/12/18 19:54:30 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1407,6 +1407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vms-empire-1.16
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.14
+	o vte3-0.74.2
 	o wMosaic-3.8.22
 	o waf-2.0.26
 	o wandio-4.2.3
