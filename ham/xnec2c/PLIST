@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/08/16 13:43:49 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/18 14:19:35 mef Exp $
 bin/xnec2c
 man/man1/xnec2c.1
 share/applications/xnec2c.desktop
@@ -17,4 +17,5 @@ share/examples/xnec2c/link.svg
 share/examples/xnec2c/unlink.svg
 share/examples/xnec2c/xnec2c.glade
 share/examples/xnec2c/xnec2c.svg
+share/examples/xnec2c/xnec2c.ui
 share/pixmaps/xnec2c.svg

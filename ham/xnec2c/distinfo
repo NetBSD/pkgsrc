@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/10 11:54:48 mef Exp $
+$NetBSD: distinfo,v 1.15 2023/12/18 14:19:35 mef Exp $
 
-BLAKE2s (xnec2c-4.2.1.tar.bz2) = cf62831aef4fcfc9a664d5d04dddb8cb1f476bafff29ad7cba33f26247ecbbb6
-SHA512 (xnec2c-4.2.1.tar.bz2) = 3b242cde8303619cb6784e50f9830c858a59fe169018fced726a2ac5d75a62d0ac110335d42f23b480a803da91aba85ce52c4f2a2f03ea8ad3b86989415e173d
-Size (xnec2c-4.2.1.tar.bz2) = 951290 bytes
+BLAKE2s (xnec2c-4.2.3.tar.bz2) = 0cb4248bfda2d52fa9d7cae2bb0c6e7f48b7864abc516638713dbd90a405e358
+SHA512 (xnec2c-4.2.3.tar.bz2) = e5007c42d630f4894a58884ec6c1bae4594b9346f4a68ff0babee52878402ae5d400d3de4b0c822e5eed113d3e914d2a4e22d064140d7d95da883712dcd66519
+Size (xnec2c-4.2.3.tar.bz2) = 951890 bytes
