@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:57 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/12/18 13:24:16 mef Exp $
 
-BLAKE2s (Module-ExtractUse-0.344.tar.gz) = 17055eb0cd875352db4ade5274c204d06625d9a9ce9a4f7b1f52090c53fb94ba
-SHA512 (Module-ExtractUse-0.344.tar.gz) = 556b27c1be753344f75e6ebf57fd95731b393c80fa1c5220bd233b0d015679d9e91b39522d48828c97e11158c511cba71a5d36e4683b7dbc1b1f2a1c5c793117
-Size (Module-ExtractUse-0.344.tar.gz) = 47429 bytes
+BLAKE2s (Module-ExtractUse-0.345.tar.gz) = 9905c5bc27fe4aff2b7c0cc1dab9764f3b2dc662d571d6532aa94ed6315f2e27
+SHA512 (Module-ExtractUse-0.345.tar.gz) = c821a9c3fb0b22d77aef07e3990c457d1979a243533e67eb924d50145baff96d8beefcd6d103fd6ddcb451559cb8002ab60e2889e74703b6ff15434d089f7f9b
+Size (Module-ExtractUse-0.345.tar.gz) = 48264 bytes
