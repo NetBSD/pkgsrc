@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7723 2023/12/18 02:11:54 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.7724 2023/12/18 02:14:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11019,3 +11019,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/texlab to 5.12.0 [wiz 2023-12-17]
 	Updated biology/libpll to 0.3.2 [thor 2023-12-18]
 	Updated sysutils/xfce4-power-manager to 4.18.3 [gutteridge 2023-12-18]
+	Updated meta-pkgs/xfce4 to 4.18.1nb6 [gutteridge 2023-12-18]
