@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.23 2023/06/07 10:09:46 wiz Exp $
+# $NetBSD: options.mk,v 1.24 2023/12/18 08:22:51 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
-PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua qt5 wxwidgets x11
-PKG_SUGGESTED_OPTIONS=	cairo cerf gd x11
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gnuplot
+PKG_SUPPORTED_OPTIONS=		cairo cerf gd gnuplot-pdf-doc lua wxwidgets x11
+PKG_OPTIONS_OPTIONAL_GROUPS=	gui
+PKG_OPTIONS_GROUP.gui=		qt5 qt6
+PKG_SUGGESTED_OPTIONS=		cairo cerf gd x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -59,13 +61,22 @@ post-install:
 	${INSTALL_DATA} gnuplot.pdf ${DESTDIR}${PREFIX}/share/gnuplot/${API_VERSION}
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt5)
+.if !empty(PKG_OPTIONS:Mqt5) || !empty(PKG_OPTIONS:Mqt6)
+PLIST.qt=		yes
+.  if !empty(PKG_OPTIONS:Mqt5)
 USE_LANGUAGES+=		c++11
 CONFIGURE_ARGS+=	--with-qt=qt5
-PLIST.qt=		yes
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+.    include "../../x11/qt5-qtbase/buildlink3.mk"
+.    include "../../x11/qt5-qtsvg/buildlink3.mk"
+.    include "../../x11/qt5-qttools/buildlink3.mk"
+.  elif !empty(PKG_OPTIONS:Mqt6)
+USE_LANGUAGES+=		c++17
+CONFIGURE_ARGS+=	--with-qt=qt6
+.    include "../../devel/qt6-qt5compat/buildlink3.mk"
+.    include "../../devel/qt6-qttools/buildlink3.mk"
+.    include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.    include "../../x11/qt6-qtbase/buildlink3.mk"
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-qt=no
 .endif
