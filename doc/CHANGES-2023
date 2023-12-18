@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7759 2023/12/18 19:20:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7760 2023/12/18 21:16:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11060,3 +11060,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed lang/ghc-bootstrap [wiz 2023-12-18]
 	Updated security/libssh to 0.106 [wiz 2023-12-18]
 	Updated devel/nss to 3.96.1 [wiz 2023-12-18]
+	Updated security/py-paramiko to 3.4.0 [wiz 2023-12-18]
