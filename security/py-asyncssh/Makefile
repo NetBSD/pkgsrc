@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/11/17 20:45:34 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/12/18 15:52:05 wiz Exp $
 
 DISTNAME=	asyncssh-2.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,15 +8,17 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncssh/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://asyncssh.readthedocs.io/
 COMMENT=	Asynchronous SSHv2 client and server library
-LICENSE=	eclipse-license
+LICENSE=	epl-v2.0
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.3:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.2.0:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6:../../devel/py-typing-extensions
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
