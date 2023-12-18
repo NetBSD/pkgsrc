@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7737 2023/12/18 12:59:10 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7738 2023/12/18 13:04:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11038,3 +11038,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.8.6 [pin 2023-12-18]
 	Updated devel/p5-Metrics-Any to 0.10 [mef 2023-12-18]
 	Updated devel/p5-Mixin-ExtraFields to 0.140.003 [mef 2023-12-18]
+	Updated devel/p5-Mixin-ExtraFields-Param to 0.022 [mef 2023-12-18]
