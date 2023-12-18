@@ -1,0 +1,20 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/12/18 01:39:13 thor Exp $
+
+Make stupid checks for bison and flex a bit less stupid.
+
+--- configure.ac.orig	2023-02-13 21:28:47.785056736 +0000
++++ configure.ac
+@@ -20,11 +20,11 @@ AC_PROG_LEX
+ AC_PROG_YACC
+ AC_PROG_INSTALL
+ 
+-if test "x$LEX" != xflex; then
++if test "x$(basename "$LEX")" != xflex; then
+   AC_MSG_ERROR(could not find required installation of FLEX)
+ fi
+ 
+-if test "x$YACC" != x"bison -y"; then
++if test "x$(basename "$YACC")" != x"bison -y"; then
+   AC_MSG_ERROR(could not find required installation of BISON)
+ fi
+ 
