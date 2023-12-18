@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7760 2023/12/18 21:16:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7761 2023/12/18 22:45:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11061,3 +11061,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/libssh to 0.106 [wiz 2023-12-18]
 	Updated devel/nss to 3.96.1 [wiz 2023-12-18]
 	Updated security/py-paramiko to 3.4.0 [wiz 2023-12-18]
+	Updated ham/uhd to 4.6.0.0 [mef 2023-12-18]
