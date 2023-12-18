@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2023/12/17 07:03:50 pin Exp $
+$NetBSD: distinfo,v 1.57 2023/12/18 11:09:02 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.23.crate) = dcb87d5c70395693fe96390c3c9b9fa0ba1f246fe3bc1e4a49afa09c166a4732
 SHA512 (ab_glyph-0.2.23.crate) = 169aaea8daf54cae7b3123b088f95217dda53f5e11b42a962d4607f546b8ecbdbab769d292cd2f50206f58d015785361479b4dfc42915b28bc5bdfff4340c151
@@ -1134,9 +1134,9 @@ Size (objc_id-0.1.1.crate) = 3258 bytes
 BLAKE2s (object-0.32.1.crate) = 6941b78cde96078b4cbe3914be999d88fc58ca3bfb544ce6ce22b566ac19ee54
 SHA512 (object-0.32.1.crate) = 5bfd3b8960fd80bb48691fdef35d7a9fc3d752a1cf5f29cb4e146a17d427e878d972d208e8aefe5015b3c62d065ed9a66f2f9f790b4743d1a4a3f9c0b8e581e3
 Size (object-0.32.1.crate) = 275463 bytes
-BLAKE2s (oculante-0.8.5.tar.gz) = 57d37dc89ea522f3f8867aca27cdb979ed7f925e1ed70ab4706eb4a8acabeb5a
-SHA512 (oculante-0.8.5.tar.gz) = 7c12a0bd7918d7d49b9c47ebb9d8ed1fb8e69031d85f66ca5331eb2f6044de3315ea3a133cad57b8935ba194574d8a9ca93f25a78291ab39b19717e6429c9903
-Size (oculante-0.8.5.tar.gz) = 58511163 bytes
+BLAKE2s (oculante-0.8.6.tar.gz) = 847d5c7c99a22f21bfb00e533aae55eac3910075e7f3110b041eeb123bb6fc80
+SHA512 (oculante-0.8.6.tar.gz) = d842ef5f86df1522862dc4c01dc32008ed18fefb55f8cd65cb21b9207b8b3d4f3c797060af01c0b22c015feffd4d5f708459e264dbf1bd5ee9b1650dbc47252a
+Size (oculante-0.8.6.tar.gz) = 58511241 bytes
 BLAKE2s (oklab-1.0.1.crate) = 645e2989a68383a16040d1fcf83c9ea31a6440e611bfc876f9800ddf3acad884
 SHA512 (oklab-1.0.1.crate) = 4accdedac95439e271eed2a6d6450dd7118b46e935bc35d968faa46d3dfa6134b0ce3ada3455c8bb32ab525cd4fcd8abaff0d71f4e5821ca283bb33ae845b552
 Size (oklab-1.0.1.crate) = 3987 bytes
@@ -1995,12 +1995,12 @@ Size (zbus_macros-3.14.1.crate) = 25893 bytes
 BLAKE2s (zbus_names-2.6.0.crate) = 671f4ccac422a3806037bdb0c3168007711eb1c982db2e30e9708bf182967b2e
 SHA512 (zbus_names-2.6.0.crate) = 3d0e5fb5aab3d2955b4516168b19be5c86d04cf2cc7d7f83779ba1d0f637a5670f16bc2f34e57bef0692477c3e2c1821f820214424c45f0411c40be954e38741
 Size (zbus_names-2.6.0.crate) = 9638 bytes
-BLAKE2s (zerocopy-0.7.28.crate) = bf9b883f8494ac58c3389076fb5c4f5c360bb884107a4f32ab80faca94031ae9
-SHA512 (zerocopy-0.7.28.crate) = 34ed0ef56c007d25982b925db5bf3abb7a19ffbee93306d8369803ce0cfb7c10c2ca27fa2aee64be6e1925f830b7d4476b20603d82c7b6558fbf9134a25afca2
-Size (zerocopy-0.7.28.crate) = 147263 bytes
-BLAKE2s (zerocopy-derive-0.7.28.crate) = c20ff2467774a4ca03dae134ed5b5ea0db5e0cca006dff2e30082ed0b95cec14
-SHA512 (zerocopy-derive-0.7.28.crate) = d34bea0f61e19f723d56c45c5ac526ae73ff810a8b8613c6891ef70f7efe0de2d62d83184e76b5cfe42f4fd3a982f49e27320ec735ad60a6aeb3882e6fe5c156
-Size (zerocopy-derive-0.7.28.crate) = 533073 bytes
+BLAKE2s (zerocopy-0.7.31.crate) = faf93c1aeaf1fa7a19a8817e7eaf569a1337d2540ccfb5257baf8ddd67bfcf53
+SHA512 (zerocopy-0.7.31.crate) = 672c71003c26a6cae1fc0704e13210b20055e66ccb1682e590effda094ab6c0409d56060c7dc8e94e4a0295b55e476f50bd2145096cbdad7b14c4abf613a251e
+Size (zerocopy-0.7.31.crate) = 151100 bytes
+BLAKE2s (zerocopy-derive-0.7.31.crate) = 32177c5e7d6ff9b68a50b9ed136e4dac88595560c0600f8cd2d0ed5ab1d7e7c1
+SHA512 (zerocopy-derive-0.7.31.crate) = 33a0e2b1045c6f584fd67c34a64d4262c848090acbeafbc75e4c553ec2e2d14dcb70285a1a2d840257757b1836fdb44778737aa06199cd4e831ac74623932827
+Size (zerocopy-derive-0.7.31.crate) = 533507 bytes
 BLAKE2s (zune-core-0.4.11.crate) = 5ffa72b72426ad0ff7ea5acf692829bf26ebb42ea267d6e040eee1c0917e219c
 SHA512 (zune-core-0.4.11.crate) = 39b468e1e5c7b26c9bef00a94ac15027cc311ec85046029e375443ee6bc7257c74390a7836d404c4a42412002906761d427ea19969a17b10b450d2e23e953dbe
 Size (zune-core-0.4.11.crate) = 17369 bytes
