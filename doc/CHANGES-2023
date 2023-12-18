@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7724 2023/12/18 02:14:58 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.7725 2023/12/18 05:37:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11020,3 +11020,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/libpll to 0.3.2 [thor 2023-12-18]
 	Updated sysutils/xfce4-power-manager to 4.18.3 [gutteridge 2023-12-18]
 	Updated meta-pkgs/xfce4 to 4.18.1nb6 [gutteridge 2023-12-18]
+	Updated devel/cmake to 3.28.1 [adam 2023-12-18]
+	Updated devel/cmake-gui to 3.28.1 [adam 2023-12-18]
