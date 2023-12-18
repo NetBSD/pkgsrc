@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:16:57 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/12/18 13:27:20 mef Exp $
 
-BLAKE2s (Module-Find-0.15.tar.gz) = e2c3f2b9da55880a07ab8bbcdd06df7ad539d0720a87f0c82fe9e18b1fcea899
-SHA512 (Module-Find-0.15.tar.gz) = 769f1ee8836a127cb3c08edc858240c88e6481243d15b79b348c66d960213a98963bd9c453756645982c730a3c895a7dc35b06a970a0d6300690a605f4487dac
-Size (Module-Find-0.15.tar.gz) = 7427 bytes
+BLAKE2s (Module-Find-0.16.tar.gz) = 1c6f51c70115ac4cd29e83032eed432f5fa93bfffad5182952e6e2316ee44328
+SHA512 (Module-Find-0.16.tar.gz) = a0c935fd229320ce74052180571c0da9667dc87a717e039bec27120a8ac1552988352038efd1805d62ac40fcaf7985c44b6d9c56648b379f1ca0f03727e550bd
+Size (Module-Find-0.16.tar.gz) = 9560 bytes
