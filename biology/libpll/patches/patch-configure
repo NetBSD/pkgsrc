@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2023/12/18 01:39:13 thor Exp $
+
+Make stupid check for bison and flex a bit less stupid.
+
+--- configure.orig	2023-02-13 21:30:40.779472369 +0000
++++ configure
+@@ -11880,11 +11880,11 @@ test -n "$YACC" || YACC="yacc"
+ 
+ 
+ 
+-if test "x$LEX" != xflex; then
++if test "x$(basename "$LEX")" != xflex; then
+   as_fn_error $? "could not find required installation of FLEX" "$LINENO" 5
+ fi
+ 
+-if test "x$YACC" != x"bison -y"; then
++if test "x$(basename "$YACC")" != x"bison -y"; then
+   as_fn_error $? "could not find required installation of BISON" "$LINENO" 5
+ fi
+ 
