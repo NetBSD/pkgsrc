@@ -1,0 +1,15 @@
+The aim of this project is to implement a versatile high-performance
+software library for phylogenetic analysis. The library should serve
+as a lower-level interface of PLL (Flouri et al. 2015) and should
+have the following properties:
+
+    open source code with an appropriate open source license.
+    64-bit multi-threaded design that handles very large datasets.
+    easy to use and well-documented.
+    SIMD implementations of time-consuming parts.
+    as fast or faster likelihood computations than RAxML (Stamatakis 2014).
+    fast implementation of the site repeats algorithm (Kobert 2017).
+    functions for tree visualization.
+    bindings for Python.
+    generic and clean design.
+    Linux, Mac, and Microsoft Windows compatibility.
