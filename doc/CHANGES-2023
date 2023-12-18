@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7721 2023/12/17 22:44:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7722 2023/12/18 01:39:26 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11017,3 +11017,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 5.5 [wiz 2023-12-17]
 	Updated finance/gnucash-docs to 5.5 [wiz 2023-12-17]
 	Updated print/texlab to 5.12.0 [wiz 2023-12-17]
+	Updated biology/libpll to 0.3.2 [thor 2023-12-18]
