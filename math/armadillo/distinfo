@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/12/19 12:28:50 thor Exp $
+
+BLAKE2s (armadillo-12.6.7.tar.xz) = 6953048ef4570294c4851f6684147106a33b8abade8cc36fe49be35a0a6827ab
+SHA512 (armadillo-12.6.7.tar.xz) = bf792ab2655b1cf957a29f1bdd7a692fd75c79f4f2df1eca35d84969908784f3542b82dd5a5b0a339ab88719c2c602a175dee7fd1e9dbd2884eb19a81d061fa3
+Size (armadillo-12.6.7.tar.xz) = 6813060 bytes
+SHA1 (patch-CMakeLists.txt) = 9c6d822e52b1020c594116156018e7434cda3e17
