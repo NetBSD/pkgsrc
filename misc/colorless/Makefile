@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/07/12 19:24:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/19 12:35:20 zafer Exp $
 #
 
 DISTNAME=		colorless-109
 CATEGORIES=		misc
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Enable colorised command output and pipe it to less
