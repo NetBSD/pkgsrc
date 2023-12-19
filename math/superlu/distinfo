@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:56:08 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/12/19 10:34:09 thor Exp $
 
-BLAKE2s (superlu-5.2.1.tar.gz) = 5117aa82f3ae63e6c9aaa9906044b5783be52927fba045ebe039a2299dc5bb2b
-SHA512 (superlu-5.2.1.tar.gz) = c5f9ca6055b6861dcc89e31c446c9f57a4e16333f9f24f109e8f375eded878005fa520ab39d2c1dd0ce12f289f9e251aef47da58c975bf5b1f09ca7539194e90
-Size (superlu-5.2.1.tar.gz) = 2468374 bytes
+BLAKE2s (superlu-6.0.1.tar.gz) = 1a4be5a5755a388fabc078e1ab6d48f8da4205f3877a51e064c8579077ca75bc
+SHA512 (superlu-6.0.1.tar.gz) = 6dd2baeff9ca7ed4761845b9a30c6dca4e19ca498e10ea7360013b3aece576ca996a8bf31c4479321feda6f5266235d68ea9a2e256f0ffe91f804d4cdecd3847
+Size (superlu-6.0.1.tar.gz) = 2521228 bytes
