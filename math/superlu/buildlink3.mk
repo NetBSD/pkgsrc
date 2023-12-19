@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2022/06/28 11:34:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/12/19 12:23:18 thor Exp $
 
 BUILDLINK_TREE+=	superlu
 
@@ -7,9 +7,8 @@ SUPERLU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.superlu+=	superlu>=5.0
 
-BUILDLINK_ABI_DEPENDS.superlu?=	superlu>=5.2.1nb4
+BUILDLINK_ABI_DEPENDS.superlu?=	superlu>=6.0.1
 BUILDLINK_PKGSRCDIR.superlu?=	../../math/superlu
-BUILDLINK_DEPMETHOD.superlu?=	build
 .endif # SUPERLU_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-superlu
