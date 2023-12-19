@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/11/14 14:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2023/12/19 15:08:00 zafer Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
@@ -7,11 +7,10 @@ DISTNAME=	Squeak-${SQUEAK_VERSION}-src
 PKGNAME=	squeak-vm-${SQUEAK_VERSION:C/-/./}
 PKGREVISION=	32
 CATEGORIES=	lang
-MASTER_SITES=	http://squeakvm.org/unix/release/
-MASTER_SITES+=	http://ftp.squeak.org/3.10/unix-linux/
+MASTER_SITES=	https://files.squeak.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://squeakvm.org/unix/
+HOMEPAGE=	https://squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 LICENSE=	2-clause-bsd
 
