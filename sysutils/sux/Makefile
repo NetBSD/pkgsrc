@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2019/12/01 05:18:56 kim Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/19 17:26:09 zafer Exp $
 #
 
 DISTNAME=		sux-1.0
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Set user id, preserving shell and environment, checking ssh agent
