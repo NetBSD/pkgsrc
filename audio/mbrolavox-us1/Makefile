@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 23:47:57 asau Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/19 11:02:09 zafer Exp $
 
 DISTNAME=	us1-980512
 PKGNAME=	mbrolavox-us1-980512
 PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	http://tcts.fpms.ac.be/synthesis/mbrola/dba/us1/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/mbrola/
+HOMEPAGE=	https://github.com/numediart/MBROLA
 COMMENT=	American English female voice for MBROLA
 LICENSE=	no-commercial-use
 
