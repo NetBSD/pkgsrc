@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2012/10/03 11:43:35 asau Exp $
+# $NetBSD: Makefile,v 1.29 2023/12/19 23:56:00 gdt Exp $
 #
-PKGNAME=		jed-0.99.16
-PKGREVISION=		2
+PKGNAME=		jed-0.99.19
+LICENSE=		gnu-gpl-v2
 
 .include "../../editors/jed/Makefile.common"
 COMMENT=		Extensible folding editor with Emacs/WordStar/EDT emulations

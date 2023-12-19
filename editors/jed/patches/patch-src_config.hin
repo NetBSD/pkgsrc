@@ -1,8 +1,10 @@
-$NetBSD: patch-src_config.hin,v 1.1 2013/10/20 18:15:02 joerg Exp $
+$NetBSD: patch-src_config.hin,v 1.2 2023/12/19 23:56:00 gdt Exp $
 
---- src/config.hin.orig	2002-10-20 06:55:31.000000000 +0000
+Remove Undefined of HAVE_SYS_STROPTS_H
+
+--- src/config.hin.orig	2023-11-29 01:54:22.766379393 +0000
 +++ src/config.hin
-@@ -29,6 +29,9 @@
+@@ -35,6 +35,9 @@
  /* define if you have sys/fcntl.h */
  #undef HAVE_SYS_FCNTL_H
  
@@ -10,5 +12,5 @@ $NetBSD: patch-src_config.hin,v 1.1 2013/10/20 18:15:02 joerg Exp $
 +#undef HAVE_SYS_STROPTS_H
 +
  #undef HAVE_PTY_H
+ #undef HAVE_SYS_PTY_H
  
- /* define if you have memset */

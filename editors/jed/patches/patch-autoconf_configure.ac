@@ -1,0 +1,14 @@
+$NetBSD: patch-autoconf_configure.ac,v 1.1 2023/12/19 23:56:00 gdt Exp $
+
+Add in stropts library
+
+--- autoconf/configure.ac.orig	2023-11-29 01:48:10.235315068 +0000
++++ autoconf/configure.ac
+@@ -33,6 +33,7 @@ termios.h \
+ fcntl.h \
+ sys/fcntl.h \
+ sys/pty.h \
++sys/stropts.h \
+ pty.h \
+ )
+ 
