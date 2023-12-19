@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2019/11/02 16:25:25 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2023/12/19 12:47:08 zafer Exp $
 #
 # used by mail/perdition-bdb/Makefile
 # used by mail/perdition-gdbm/Makefile
@@ -10,10 +10,10 @@
 
 DISTNAME=	perdition-${PERDITION_VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	http://www.vergenet.net/linux/perdition/download/${PERDITION_VERSION}/
+MASTER_SITES=	https://projects.horms.net/projects/perdition/download/${PERDITION_VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vergenet.net/linux/perdition/
+HOMEPAGE=	https://projects.horms.net/projects/perdition/
 COMMENT=	IMAP/POP3 proxy redirector (${PERDITION_COMMENT})
 
 PERDITION_VERSION=	1.18
