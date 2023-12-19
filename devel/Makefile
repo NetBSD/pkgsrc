@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4150 2023/12/16 23:23:49 mef Exp $
+# $NetBSD: Makefile,v 1.4151 2023/12/19 09:49:23 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -264,6 +264,7 @@ SUBDIR+=	cproto
 SUBDIR+=	cpu_features
 SUBDIR+=	cpuflags
 SUBDIR+=	cqual
+SUBDIR+=	crates-query
 SUBDIR+=	cre2
 SUBDIR+=	creduce
 SUBDIR+=	cscope
