@@ -1,0 +1,241 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/12/19 12:28:50 thor Exp $
+
+Make the build just use the modern FindBLAS and FindLAPACK builtins
+of a recent-ish cmake. That avoids so much trouble forcing choices.
+
+--- CMakeLists.txt.orig	2016-06-16 16:27:07.000000000 +0000
++++ CMakeLists.txt
+@@ -28,7 +28,7 @@
+ ## NOTE: More details: https://arma.sourceforge.net/faq.html
+ 
+ 
+-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
+ 
+ if(NOT (${CMAKE_MAJOR_VERSION} LESS 3))
+   if(POLICY CMP0025)
+@@ -249,194 +249,21 @@ message(STATUS "*** Looking for external
+ ## Find LAPACK and BLAS libraries, or their optimised versions
+ ##
+ 
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake_aux/Modules/")
+-
+-if(APPLE)
+-  message(STATUS "Detected macOS")
+-  
+-  set(ARMA_USE_LAPACK     true)
+-  set(ARMA_USE_BLAS       true)
+-  set(ARMA_USE_ACCELERATE true)
+-  
+-  if(ALLOW_OPENBLAS_MACOS)
+-    include(ARMA_FindOpenBLAS)
+-    message(STATUS "OpenBLAS_FOUND = ${OpenBLAS_FOUND}")
+-    message(STATUS "")
+-    message(STATUS "*** If use of OpenBLAS is causing problems,")
+-    message(STATUS "*** rerun cmake with detection of OpenBLAS disabled:")
+-    message(STATUS "*** cmake -D ALLOW_OPENBLAS_MACOS=false .")
+-    message(STATUS "")
+-    
+-    if(OpenBLAS_FOUND)
+-      set(ARMA_LIBS ${ARMA_LIBS} ${OpenBLAS_LIBRARIES})
+-      set(ARMA_USE_ACCELERATE false)
+-    endif()
+-  endif()
+-  
+-  if(ALLOW_BLAS_LAPACK_MACOS)
+-    include(ARMA_FindBLAS)
+-    include(ARMA_FindLAPACK)
+-    message(STATUS "  BLAS_FOUND = ${BLAS_FOUND}"  )
+-    message(STATUS "LAPACK_FOUND = ${LAPACK_FOUND}")
+-    message(STATUS "")
+-    message(STATUS "*** If use of BLAS and LAPACK is causing problems,")
+-    message(STATUS "*** rerun cmake with detection of BLAS and LAPACK disabled:")
+-    message(STATUS "*** cmake -D ALLOW_BLAS_LAPACK_MACOS=false .")
+-    message(STATUS "")
+-    
+-    if(BLAS_FOUND AND LAPACK_FOUND)
+-      set(ARMA_LIBS ${ARMA_LIBS} ${BLAS_LIBRARIES})
+-      set(ARMA_LIBS ${ARMA_LIBS} ${LAPACK_LIBRARIES})
+-      set(ARMA_USE_ACCELERATE false)
+-    endif()
+-  endif()
+-  
+-  if(ARMA_USE_ACCELERATE)
+-    set(ARMA_LIBS ${ARMA_LIBS} "-framework Accelerate")  # or "-framework accelerate" ?
+-    message(STATUS "Added '-framework Accelerate' to compiler flags")
+-  endif()
+-  
+-  if(DEFINED CMAKE_CXX_COMPILER_ID)
+-    if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+-      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+-      message(STATUS "Detected Clang compiler on macOS. Added '-stdlib=libc++' to compiler flags")
+-    endif()
+-    
+-    if(NOT (${CMAKE_MAJOR_VERSION} LESS 3))
+-      if(CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+-        message(STATUS "Detected AppleClang compiler on macOS. Added '-stdlib=libc++' to compiler flags")
+-      endif()
+-    endif()
+-  endif()
+-  
+-  set(CMAKE_MACOSX_RPATH 1)
+-  
+-else()
+-  
+-  if(ALLOW_FLEXIBLAS_LINUX AND (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
+-    include(ARMA_FindFlexiBLAS)
+-  else()
+-    set(FlexiBLAS_FOUND false)
+-  endif()
+-  
+-  include(ARMA_FindMKL)
+-  include(ARMA_FindOpenBLAS)
+-  include(ARMA_FindATLAS)     # TODO: remove support for ATLAS in next major version
+-  include(ARMA_FindBLAS)
+-  include(ARMA_FindLAPACK)
+-  
+-  message(STATUS "FlexiBLAS_FOUND = ${FlexiBLAS_FOUND}" )
+-  message(STATUS "      MKL_FOUND = ${MKL_FOUND}"       )
+-  message(STATUS " OpenBLAS_FOUND = ${OpenBLAS_FOUND}"  )
+-  message(STATUS "    ATLAS_FOUND = ${ATLAS_FOUND}"     )
+-  message(STATUS "     BLAS_FOUND = ${BLAS_FOUND}"      )
+-  message(STATUS "   LAPACK_FOUND = ${LAPACK_FOUND}"    )
+-  
+-  if(FlexiBLAS_FOUND)
+-    
+-    set(ARMA_USE_LAPACK true)
+-    set(ARMA_USE_BLAS   true)
+-    
+-    set(ARMA_LIBS ${ARMA_LIBS} ${FlexiBLAS_LIBRARIES})
+-    
+-    message(STATUS "")
+-    message(STATUS "*** Using FlexiBLAS to access BLAS and LAPACK functions.")
+-    message(STATUS "*** https://www.mpi-magdeburg.mpg.de/projects/flexiblas")
+-    message(STATUS "*** WARNING: SuperLU and ARPACK must also link with FlexiBLAS.")
+-    message(STATUS "")
+-    message(STATUS "*** If using FlexiBLAS causes problems, ")
+-    message(STATUS "*** rerun cmake with FlexiBLAS detection disabled:")
+-    message(STATUS "*** cmake -D ALLOW_FLEXIBLAS_LINUX=false .")
+-    message(STATUS "")
+-    
+-  elseif(MKL_FOUND)
+-    
+-    set(ARMA_USE_LAPACK true)
+-    set(ARMA_USE_BLAS   true)
+-    set(ARMA_LIBS ${ARMA_LIBS} ${MKL_LIBRARIES})
+-    
+-    message(STATUS "")
+-    message(STATUS "*** If the MKL libraries are installed in non-standard locations such as")
+-    message(STATUS "*** /opt/intel/mkl, /opt/intel/composerxe/, /usr/local/intel/mkl")
+-    message(STATUS "*** make sure the run-time linker can find them.")
+-    message(STATUS "*** On Linux systems this can be done by editing /etc/ld.so.conf")
+-    message(STATUS "*** or modifying the LD_LIBRARY_PATH environment variable.")
+-    message(STATUS "")
+-    message(STATUS "*** On systems with SELinux enabled (eg. Fedora, RHEL),")
+-    message(STATUS "*** you may need to change the SELinux type of all MKL libraries")
+-    message(STATUS "*** to fix permission problems that may occur during run-time.")
+-    message(STATUS "")
+-    
+-  else()
+-    
+-    if(OpenBLAS_FOUND AND ATLAS_FOUND)
+-      message(STATUS "")
+-      message(STATUS "*** NOTE: found both OpenBLAS and ATLAS; ATLAS will not be used")
+-    endif()
+-    
+-    if(OpenBLAS_FOUND AND BLAS_FOUND)
+-      message(STATUS "")
+-      message(STATUS "*** NOTE: found both OpenBLAS and BLAS; BLAS will not be used")
+-    endif()
+-    
+-    if(OpenBLAS_FOUND)
+-      
+-      set(ARMA_USE_BLAS true)
+-      set(ARMA_LIBS ${ARMA_LIBS} ${OpenBLAS_LIBRARIES})
+-      
+-      if(OPENBLAS_PROVIDES_LAPACK)
+-        set(ARMA_USE_LAPACK true)
+-      else()
+-        message(STATUS "")
+-        message(STATUS "*** NOTE: if OpenBLAS is known to provide LAPACK functions, recommend to")
+-        message(STATUS "*** NOTE: rerun cmake with the OPENBLAS_PROVIDES_LAPACK option enabled:")
+-        message(STATUS "*** NOTE: cmake -D OPENBLAS_PROVIDES_LAPACK=true .")
+-      endif()
+-      
+-      message(STATUS "")
+-      message(STATUS "*** If the OpenBLAS library is installed in")
+-      message(STATUS "*** /usr/local/lib or /usr/local/lib64")
+-      message(STATUS "*** make sure the run-time linker can find it.")
+-      message(STATUS "*** On Linux systems this can be done by editing /etc/ld.so.conf")
+-      message(STATUS "*** or modifying the LD_LIBRARY_PATH environment variable.")
+-      message(STATUS "")
+-      
+-    else()
+-      
+-      if(ATLAS_FOUND)
+-        set(ARMA_USE_ATLAS true)
+-        set(ARMA_LIBS ${ARMA_LIBS} ${ATLAS_LIBRARIES})
+-        
+-        message(STATUS "")
+-        message(STATUS "*** NOTE: support for ATLAS is deprecated and will be removed;")
+-        message(STATUS "*** NOTE: recommend to use OpenBLAS or FlexiBLAS instead.")
+-        message(STATUS "")
+-      endif()
+-      
+-      if(BLAS_FOUND)
+-        set(ARMA_USE_BLAS true)
+-        set(ARMA_LIBS ${ARMA_LIBS} ${BLAS_LIBRARIES})
+-      endif()
+-      
+-    endif()
+-    
+-    if(LAPACK_FOUND)
+-      if(OpenBLAS_FOUND AND OPENBLAS_PROVIDES_LAPACK)
+-        message(STATUS "*** NOTE: found both OpenBLAS and LAPACK;")
+-        message(STATUS "*** NOTE: option OPENBLAS_PROVIDES_LAPACK is enabled,")
+-        message(STATUS "*** NOTE: so will not link with plain LAPACK.")
+-        message(STATUS "")
+-      else()
+-        set(ARMA_USE_LAPACK true)
+-        set(ARMA_LIBS ${ARMA_LIBS} ${LAPACK_LIBRARIES})
+-      endif()
+-    endif()
+-    
+-  endif()
+-  
++# In a nice world, this encompasses any implementation, including
++# Acclerate.
++find_package(BLAS)
++find_package(LAPACK)
++message(STATUS "     BLAS_FOUND = ${BLAS_FOUND} (${BLAS_LIBRARIES})"      )
++message(STATUS "   LAPACK_FOUND = ${LAPACK_FOUND} (${LAPACK_LIBRARIES})"  )
++if(BLAS_FOUND AND LAPACK_FOUND)
++  set(ARMA_LIBS ${ARMA_LIBS} ${BLAS_LIBRARIES})
++  set(ARMA_LIBS ${ARMA_LIBS} ${LAPACK_LIBRARIES})
++  set(ARMA_USE_LAPACK  true)
++  set(ARMA_USE_BLAS    true)
++  set(ARMA_USE_ACCELERATE false)
+ endif()
+ 
++set (CMAKE_MODULE_PATH "/data/projekte/pkgsrc/work/math/armadillo/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake_aux/Modules/")
+ 
+ include(ARMA_FindARPACK)
+ message(STATUS "ARPACK_FOUND = ${ARPACK_FOUND}")
+@@ -462,16 +289,6 @@ if(NOT ARMA_USE_LAPACK)
+   message(STATUS "")
+   message(STATUS "*** WARNING: Use of LAPACK is not enabled, as no LAPACK compatible library has been found.")
+   message(STATUS "*** WARNING: This will materially degrade the available functionality in Armadillo.")
+-
+-  if(OpenBLAS_FOUND)
+-    message(STATUS "")
+-    message(STATUS "*** NOTE: OpenBLAS found but LAPACK not found.")
+-    message(STATUS "*** NOTE: OpenBLAS may have been built without LAPACK functions,")
+-    message(STATUS "*** NOTE: so cannot assume that LAPACK functions are available.")
+-    message(STATUS "*** NOTE: To forcefully assume that OpenBLAS provides LAPACK functions,")
+-    message(STATUS "*** NOTE: rerun cmake with the OPENBLAS_PROVIDES_LAPACK option enabled:")
+-    message(STATUS "*** NOTE: cmake -D OPENBLAS_PROVIDES_LAPACK=true .")
+-  endif()
+ endif()
+ 
+ 
