@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2012/12/04 10:32:53 msaitoh Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/19 14:50:37 zafer Exp $
 #
 
 DISTNAME=	ramspeed-2.6.0
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://alasir.com/software/ramspeed/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alasir.com/software/ramspeed/
+HOMEPAGE=	https://github.com/cruvolo/ramspeed
 COMMENT=	RAMspeed, a cache and memory benchmarking tool
 
 MAKE_JOBS_SAFE=		no
