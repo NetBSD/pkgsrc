@@ -1,0 +1,10 @@
+Command line tool to query crates.io index.
+
+It contains several query subcommands:
+ * Dependencies - list-a-given-crates-dependencies
+ * Rust Version - get-the-minimum-rust-version
+ * Features - query-features-available
+ * Versions - get-versions-published
+
+By default crates-query will always use the latest available, but a specific
+version can be specified using the --ver flag.
