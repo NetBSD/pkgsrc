@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7767 2023/12/19 12:16:36 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7768 2023/12/19 12:20:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11068,3 +11068,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/superlu to 6.0.1 [thor 2023-12-19]
 	Updated devel/p5-PAR to 1.019 [mef 2023-12-19]
 	Updated devel/p5-PAR-Dist to 0.52 [mef 2023-12-19]
+	Updated devel/p5-PAR-Packer to 1.059 [mef 2023-12-19]
