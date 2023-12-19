@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/12/19 14:22:07 zafer Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/19 14:23:46 zafer Exp $
 #
 
 DISTNAME=	tlf-0.9.31-2
@@ -7,7 +7,7 @@ CATEGORIES=	ham
 MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.iae.nl/users/reinc/TLF-0.2.html
+HOMEPAGE=	https://tlf.github.io/
 COMMENT=	Advanced hamradio logging and contest program
 LICENSE=	gnu-gpl-v2
 
