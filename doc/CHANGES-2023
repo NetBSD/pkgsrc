@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7764 2023/12/19 09:49:49 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7765 2023/12/19 10:34:18 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11065,3 +11065,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/pdal-lib to 2.5.6 [thor 2023-12-18]
 	Updated sysutils/u-boot-pinephone to 2021.01 [gutteridge 2023-12-18]
 	Added devel/crates-query version 0.1.1 [pin 2023-12-19]
+	Updated math/superlu to 6.0.1 [thor 2023-12-19]
