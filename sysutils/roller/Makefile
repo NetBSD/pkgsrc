@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2022/06/28 11:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/12/19 17:24:36 zafer Exp $
 #
 
 DISTNAME=		roller-1.21
 PKGREVISION=		#
 PKGREVISION=		3
 CATEGORIES=		sysutils
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Roll log files
