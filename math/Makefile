@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2023/11/13 23:48:53 wiz Exp $
+# $NetBSD: Makefile,v 1.582 2023/12/19 12:28:50 thor Exp $
 
 COMMENT=	Mathematics
 
@@ -141,6 +141,7 @@ SUBDIR+=	analitza
 SUBDIR+=	antixls
 SUBDIR+=	apecrunch
 SUBDIR+=	aribas
+SUBDIR+=	armadillo
 SUBDIR+=	arpack-ng
 SUBDIR+=	basic-stats
 SUBDIR+=	bc
