@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2020/01/26 17:30:50 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2023/12/19 12:17:54 zafer Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
 CATEGORIES=	comms
-MASTER_SITES=	http://www.ohse.de/uwe/releases/
+MASTER_SITES=	https://www.ohse.de/uwe/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ohse.de/uwe/software/lrzsz.html
