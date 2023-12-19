@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/19 23:56:00 gdt Exp $
 bin/jed
 bin/jed-script
-bin/rgrep
 man/man1/jed.1
 man/man1/rgrep.1
 share/examples/jed/jed.conf
 share/jed/doc/README
+share/jed/doc/hlp/jedfuns.hlp
+share/jed/doc/hlp/libfuns.hlp
 share/jed/doc/manual/jed.tex
 share/jed/doc/txt/abbrev.txt
 share/jed/doc/txt/color.txt
@@ -18,8 +19,6 @@ share/jed/doc/txt/fold.txt
 share/jed/doc/txt/hooks.txt
 share/jed/doc/txt/ide-mode.txt
 share/jed/doc/txt/jed_faq.txt
-share/jed/doc/txt/jedfuns.txt
-share/jed/doc/txt/libfuns.txt
 share/jed/doc/txt/linux-keys.txt
 share/jed/doc/txt/menus.txt
 share/jed/doc/txt/mouse.txt
@@ -30,17 +29,12 @@ share/jed/doc/txt/rmail.txt
 share/jed/doc/txt/script.txt
 share/jed/doc/txt/syntax.txt
 share/jed/doc/txt/undo.txt
+share/jed/doc/txt/utf8.txt
 share/jed/doc/txt/wjed.txt
 share/jed/doc/txt/wordstar.txt
 share/jed/doc/txt/xjed.txt
 share/jed/doc/txt/xrenderfont.txt
 share/jed/doc/txt/yankpop.txt
-share/jed/info/dir.info
-share/jed/info/info.info
-share/jed/info/jed.1in
-share/jed/info/jed.2in
-share/jed/info/jed.3in
-share/jed/info/jed.info
 share/jed/lib/abbrev.sl
 share/jed/lib/abbrmisc.sl
 share/jed/lib/aboutjed.hlp
@@ -60,11 +54,15 @@ share/jed/lib/chglog.sl
 share/jed/lib/cmisc.sl
 share/jed/lib/cmode.sl
 share/jed/lib/colors/README
+share/jed/lib/colors/Xjed/black4.sl
 share/jed/lib/colors/Xjed/elegant.sl
+share/jed/lib/colors/Xjed/modern.sl
+share/jed/lib/colors/Xjed/night.sl
 share/jed/lib/colors/Xjed/pastel0.sl
 share/jed/lib/colors/black1.sl
 share/jed/lib/colors/black2.sl
 share/jed/lib/colors/black3.sl
+share/jed/lib/colors/black4.sl
 share/jed/lib/colors/blue1.sl
 share/jed/lib/colors/blue2.sl
 share/jed/lib/colors/blue3.sl
@@ -76,7 +74,9 @@ share/jed/lib/compile.sl
 share/jed/lib/compress.sl
 share/jed/lib/cpright.hlp
 share/jed/lib/ctags.sl
+share/jed/lib/cua.hlp
 share/jed/lib/cua.sl
+share/jed/lib/cuamisc.sl
 share/jed/lib/dabbrev.sl
 share/jed/lib/dcl.sl
 share/jed/lib/digraph.sl
@@ -97,6 +97,7 @@ share/jed/lib/filter.sl
 share/jed/lib/folding.sl
 share/jed/lib/fortran.sl
 share/jed/lib/generic.hlp
+share/jed/lib/gpg.sl
 share/jed/lib/help.sl
 share/jed/lib/history.sl
 share/jed/lib/hooks.sl
@@ -126,9 +127,12 @@ share/jed/lib/linux.sl
 share/jed/lib/lisp.sl
 share/jed/lib/ltx-comp.dat
 share/jed/lib/ltx-math.sl
+share/jed/lib/lua.sl
 share/jed/lib/macro.sl
 share/jed/lib/mail.sl
 share/jed/lib/mailalias.sl
+share/jed/lib/mailedit.sl
+share/jed/lib/mailutils.sl
 share/jed/lib/man.sl
 share/jed/lib/maple.sl
 share/jed/lib/matlab.sl
@@ -148,7 +152,9 @@ share/jed/lib/mutekeys.sl
 share/jed/lib/nroff.sl
 share/jed/lib/occur.sl
 share/jed/lib/os.sl
+share/jed/lib/paste.sl
 share/jed/lib/perl.sl
+share/jed/lib/perlxtra.sl
 share/jed/lib/php.sl
 share/jed/lib/pipe.sl
 share/jed/lib/popups.sl
@@ -177,6 +183,7 @@ share/jed/lib/sort.sl
 share/jed/lib/sortmisc.sl
 share/jed/lib/spicemod.sl
 share/jed/lib/srchmisc.sl
+share/jed/lib/syncproc.sl
 share/jed/lib/syntax.sl
 share/jed/lib/tabs.sl
 share/jed/lib/tclmode.sl
@@ -186,6 +193,7 @@ share/jed/lib/textmode.sl
 share/jed/lib/tiasm.sl
 share/jed/lib/tmisc.sl
 share/jed/lib/tmmode.sl
+share/jed/lib/tmpfile.sl
 share/jed/lib/tpascal.sl
 share/jed/lib/untab.sl
 share/jed/lib/util.sl
@@ -197,4 +205,5 @@ share/jed/lib/wmark.sl
 share/jed/lib/wmenu.sl
 share/jed/lib/wordstar.hlp
 share/jed/lib/wordstar.sl
+share/jed/lib/xformreg.sl
 share/jed/lib/yankpop.sl
