@@ -1,4 +1,4 @@
-$NetBSD: patch-src_daemon.c,v 1.1 2018/06/11 23:55:50 youri Exp $
+$NetBSD: patch-src_daemon.c,v 1.2 2023/12/19 00:49:52 gutteridge Exp $
 
 Add NetBSD backend inspired from OpenBSD ports.
 
@@ -32,7 +32,7 @@ Add NetBSD backend inspired from OpenBSD ports.
  
 +/*
 + * Under NetBSD there is no /etc/login.defs (for USERGROUPS_ENAB), so
-+ * we need to explicitely remove the user's group if it contains no more
++ * we need to explicitly remove the user's group if it contains no other
 + * members and matches the username.
 + */
 +#ifdef __NetBSD__

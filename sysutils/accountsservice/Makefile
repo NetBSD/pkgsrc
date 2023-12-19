@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/12/08 16:02:36 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/19 00:49:52 gutteridge Exp $
 
 DISTNAME=	accountsservice-0.6.42
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.freedesktop.org/software/accountsservice/
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-systemd \
 CONFIGURE_ENV.SunOS+=	ac_cv_have_decl_WTMPX_FILENAME=yes
 CPPFLAGS.SunOS+=	-DWTMPX_FILENAME=WTMPX_FILE
 
-LDFLAGS.NetBSD+=	-lutil # pw_getpwconf
+LDFLAGS.NetBSD+=	-lutil -lcrypt # pw_getpwconf & pw_gensalt
 
 ALL_ENV+=	EGDIR=${EGDIR}
 
