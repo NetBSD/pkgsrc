@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 13:01:42 asau Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/19 14:34:57 zafer Exp $
 #
 
 DISTNAME=	7pl225sr
 PKGNAME=	7plus-225
 PKGREVISION=	1
 CATEGORIES=	ham
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 DISTFILES=	7pl225sr.tgz \
 		7pl210mg.tgz
 
