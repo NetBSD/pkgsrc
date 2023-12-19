@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2019/12/01 05:18:56 kim Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/19 12:32:24 zafer Exp $
 #
 
 DISTNAME=		srsh-1.3
 CATEGORIES=		net
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Emulate rsh client behavior using ssh
