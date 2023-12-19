@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/18 05:48:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/19 21:10:47 nros Exp $
 
 DISTNAME=	progressbar2-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/WoLpH/python-progressbar
 COMMENT=	Text progress bar library for Python
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-utils>=3.8.1:../../devel/py-utils
 TEST_DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.6:../../textproc/py-dill
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.7.7:../../devel/py-flake8
