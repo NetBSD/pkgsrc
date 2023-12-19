@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.51 2023/11/13 15:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/12/19 14:41:19 zafer Exp $
 
 DISTNAME=	qmmp-1.6.5
 PKGREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	http://qmmp.ylsoftware.com/files/qmmp/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	https://qmmp.ylsoftware.com/files/qmmp/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qmmp.ylsoftware.com/
+HOMEPAGE=	https://qmmp.ylsoftware.com/
 COMMENT=	Audio player similar to Winamp/XMMS using Qt5
 LICENSE=	gnu-gpl-v2
 
