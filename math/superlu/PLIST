@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/26 16:29:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/12/19 10:34:09 thor Exp $
 include/slu_Cnames.h
 include/slu_cdefs.h
 include/slu_dcomplex.h
@@ -7,6 +7,14 @@ include/slu_scomplex.h
 include/slu_sdefs.h
 include/slu_util.h
 include/slu_zdefs.h
+include/superlu_config.h
 include/superlu_enum_consts.h
 include/supermatrix.h
-lib/libsuperlu.a
+lib/cmake/superlu/superluConfig.cmake
+lib/cmake/superlu/superluConfigVersion.cmake
+lib/cmake/superlu/superluTargets-noconfig.cmake
+lib/cmake/superlu/superluTargets.cmake
+lib/libsuperlu.so
+lib/libsuperlu.so.6
+lib/libsuperlu.so.${PKGVERSION}
+lib/pkgconfig/superlu.pc
