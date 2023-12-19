@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 03:45:12 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/19 23:57:55 gdt Exp $
 #
-PKGNAME=		xjed-0.99.16
+PKGNAME=		xjed-0.99.19
 PKGREVISION=		1
+LICENSE=		gnu-gpl-v2
 
 .include "../../editors/jed/Makefile.common"
 COMMENT=		Extensible folding editor + Emacs/WordStar/EDT emulations, X11 version
@@ -12,8 +13,8 @@ CONFIGURE_ARGS+=	--with-x
 
 BUILD_TARGET=		xjed
 
-MESSAGE_SRC=		${.CURDIR}/../jed/MESSAGE
-PLIST_SRC=		${.CURDIR}/../jed/PLIST
+MESSAGE_SRC=		${.CURDIR}/../../editors/jed/MESSAGE
+PLIST_SRC=		${.CURDIR}/../../editors/jed/PLIST
 PLIST_SRC+=		${.CURDIR}/PLIST.xjed
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,4 +29,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
