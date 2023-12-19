@@ -1,4 +1,4 @@
-$NetBSD: patch-src_user.c,v 1.1 2018/06/11 23:55:50 youri Exp $
+$NetBSD: patch-src_user.c,v 1.2 2023/12/19 00:49:52 gutteridge Exp $
 
 Add NetBSD backend inspired from OpenBSD ports.
 
@@ -27,7 +27,7 @@ Add NetBSD backend inspired from OpenBSD ports.
  #ifdef HAVE_SHADOW_H
          struct spwd *spent;
 +#else
-+	struct passwd *pw;
++        struct passwd *pw;
  #endif
          gchar *real_name;
          gboolean changed;
@@ -44,7 +44,7 @@ Add NetBSD backend inspired from OpenBSD ports.
 +#endif
 +
 +
-+/* On NetBSD, a locked account has it's password
++/* On NetBSD, a locked account has its password
 + * prepended by "*LOCKED*"
 + */
 +#ifdef __NetBSD__
@@ -60,7 +60,7 @@ Add NetBSD backend inspired from OpenBSD ports.
          gboolean locked = GPOINTER_TO_INT (data);
          GError *error;
 +#ifdef __NetBSD__
-+	const gchar *argv[6];
++        const gchar *argv[6];
 +#else
          const gchar *argv[5];
 +#endif
@@ -71,7 +71,7 @@ Add NetBSD backend inspired from OpenBSD ports.
                           locked ? "locking" : "unlocking", user->user_name, user->uid);
 +#ifdef __NetBSD__
 +                argv[0] = "/usr/sbin/usermod";
-+		argv[1] = "-C";
++                argv[1] = "-C";
 +                argv[2] = locked ? "yes" : "no";
 +                argv[3] = "--";
 +                argv[4] = user->user_name;
@@ -126,7 +126,7 @@ Add NetBSD backend inspired from OpenBSD ports.
                  else if (user->locked) {
 +#ifdef __NetBSD__
 +                        argv[0] = "/usr/sbin/usermod";
-+			argv[1] = "-C";
++                        argv[1] = "-C";
 +                        argv[2] = "no";
 +                        argv[3] = "--";
 +                        argv[4] = user->user_name;
