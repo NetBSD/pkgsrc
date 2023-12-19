@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/12/01 05:18:56 kim Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/19 12:31:08 zafer Exp $
 #
 
 DISTNAME=		ywho-1.3
 CATEGORIES=		net
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Who, users, uptime on clients in a sun-RPC network

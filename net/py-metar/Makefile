@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2022/01/10 20:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/19 12:34:05 zafer Exp $
 
 DISTNAME=	pymetar-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 PKGREVISION=	1
 CATEGORIES=	net python
-MASTER_SITES=	http://www.schwarzvogel.de/pkgs/
+MASTER_SITES=	https://www.schwarzvogel.de/pkgs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.schwarzvogel.de/software-pymetar.shtml

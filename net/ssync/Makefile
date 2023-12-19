@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2019/12/01 05:18:56 kim Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/19 12:31:49 zafer Exp $
 #
 
 DISTNAME=		ssync-1.9.1
 CATEGORIES=		net
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Invoke rsync to distribute files to a set of hosts
