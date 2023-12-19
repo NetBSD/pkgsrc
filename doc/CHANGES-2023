@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7769 2023/12/19 12:21:49 mef Exp $
+$NetBSD: CHANGES-2023,v 1.7770 2023/12/19 12:25:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11070,3 +11070,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-PAR-Dist to 0.52 [mef 2023-12-19]
 	Updated devel/p5-PAR-Packer to 1.059 [mef 2023-12-19]
 	Updated devel/p5-Parse-PMFile to 0.44 [mef 2023-12-19]
+	Updated devel/p5-Perl-Critic to 1.152 [mef 2023-12-19]
