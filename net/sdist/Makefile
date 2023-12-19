@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/12/01 05:18:55 kim Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/19 12:33:03 zafer Exp $
 #
 
 DISTNAME=		sdist-1.9
 CATEGORIES=		net
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Invoke rdist to distribute files to a set of hosts
