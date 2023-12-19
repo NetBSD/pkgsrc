@@ -1,0 +1,15 @@
+$NetBSD: patch-src_multimedia_configure.json,v 1.1 2023/12/19 12:36:37 thor Exp $
+
+Add configure knob for openal. Taken from FreeBSD ports.
+Did they push that oversight upstream?
+
+--- src/multimedia/configure.json.orig	2020-10-27 08:02:12.000000000 +0000
++++ src/multimedia/configure.json
+@@ -13,6 +13,7 @@
+             "directshow": { "type": "boolean" },
+             "wmf": { "type": "boolean" },
+             "gstreamer": { "type": "optionalString", "values": [ "no", "yes", "0.10", "1.0" ] },
++            "openal": "boolean",
+             "pulseaudio": "boolean"
+         }
+     },
