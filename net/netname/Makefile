@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/12/01 05:18:55 kim Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/19 12:34:36 zafer Exp $
 #
 
 DISTNAME=	netname-2.2
 CATEGORIES=	net
-MASTER_SITES=	http://software.kimmo.suominen.com/
+MASTER_SITES=	https://software.kimmo.suominen.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Return the canonical network name of a host
