@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7771 2023/12/19 12:29:02 thor Exp $
+$NetBSD: CHANGES-2023,v 1.7772 2023/12/19 13:07:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11072,3 +11072,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Parse-PMFile to 0.44 [mef 2023-12-19]
 	Updated devel/p5-Perl-Critic to 1.152 [mef 2023-12-19]
 	Updated math/armadillo to 12.6.7 [thor 2023-12-19]
+	Updated shells/oh-my-posh to 19.3.0 [pin 2023-12-19]
