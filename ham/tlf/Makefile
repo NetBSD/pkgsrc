@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 19:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2023/12/19 14:22:07 zafer Exp $
 #
 
 DISTNAME=	tlf-0.9.31-2
 PKGNAME=	${DISTNAME:C/([0-9])-/\1./}
 CATEGORIES=	ham
-MASTER_SITES=	http://sharon.pi8zaa.ampr.org/pub/linux/ham/tlf/
+MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.iae.nl/users/reinc/TLF-0.2.html
