@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 15:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/19 14:31:45 zafer Exp $
 
 DISTNAME=	tfkiss-1.2.4
 PKGREVISION=	1
 CATEGORIES=	ham
-#MASTER_SITES=	ftp://ftp.ping.net.au/pub/unix/ham/
+MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hamradio.ping.net.au/index.php?mode=tfkiss
