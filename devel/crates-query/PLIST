@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/19 09:48:20 pin Exp $
+bin/crates-query
