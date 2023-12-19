@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:17:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/12/19 12:21:41 mef Exp $
 
-BLAKE2s (Parse-PMFile-0.42.tar.gz) = 087ef7c021d0b3879cac3f8e5669b50ffe76a36abbcc0b50f0fc78b94722cdee
-SHA512 (Parse-PMFile-0.42.tar.gz) = 444c4b70e3c93620084dd34c50c6e26f879637686944fcc5e763d45b4f5e5b2ee054a7278d593b0a9fcd1f3e67faf4c1d82110be080875385c6ec265611e58a6
-Size (Parse-PMFile-0.42.tar.gz) = 15632 bytes
+BLAKE2s (Parse-PMFile-0.44.tar.gz) = 542bd93e181afa42db74e1690d5084044793fc1ecf723be73aaaccd7565ce500
+SHA512 (Parse-PMFile-0.44.tar.gz) = 2a62d6536a726264467938d921b767523eeaa76b13322acf37250b49bda53df1d198c7b27d4521bed6492de3561828ecf748ab35344fd9fe87c4fe5b9b45fd67
+Size (Parse-PMFile-0.44.tar.gz) = 16141 bytes
