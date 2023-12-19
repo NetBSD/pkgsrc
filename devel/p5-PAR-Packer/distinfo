@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/29 14:33:12 prlw1 Exp $
+$NetBSD: distinfo,v 1.2 2023/12/19 12:19:51 mef Exp $
 
-BLAKE2s (PAR-Packer-1.052.tar.gz) = 2e6c75bbeb1f2089aa187aa7e367d920528b1089142b5d30c8581139fe9838f1
-SHA512 (PAR-Packer-1.052.tar.gz) = 5acd1efcb2bf6ebfca46e88f840cd8575f601443037fbf627f4a03b88119628a66ae522cd8de2488f0a143e6320c94e8b47f45db0ecffa61593715c848ebd379
-Size (PAR-Packer-1.052.tar.gz) = 204526 bytes
+BLAKE2s (PAR-Packer-1.059.tar.gz) = 6f4b1aabd36d1b944b35e4cce62f3b845e63917ec581d9ec1db63c21c652034e
+SHA512 (PAR-Packer-1.059.tar.gz) = 0026720ca30682dab50fc92d820dc12cffd090e3bcd568fb6d7764f40e3c50c2f7578aaa1a62f01a29d0669cc4435f30da56b12516e813cec080e4a1dad204f2
+Size (PAR-Packer-1.059.tar.gz) = 198725 bytes
