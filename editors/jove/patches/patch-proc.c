@@ -1,4 +1,4 @@
-# $NetBSD: patch-proc.c,v 1.1 2019/09/06 14:51:42 christos Exp $
+$NetBSD: patch-proc.c,v 1.2 2023/12/19 01:00:27 gutteridge Exp $
 
 Don't smash the stack by using the same variable for input and output.
 
