@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2020/01/26 17:31:06 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16 2023/12/19 23:56:00 gdt Exp $
 #
 # used by editors/jed/Makefile
 # used by editors/xjed/Makefile
 
-DISTNAME=		jed-0.99-16
+DISTNAME=		jed-0.99-19
 CATEGORIES=		editors
 MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/v0.99/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/editors/jed/v0.99/
@@ -17,6 +17,7 @@ HOMEPAGE=		https://www.jedsoft.org/jed/
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-slang=${PREFIX}
 
 LIBS.SunOS+=		-lnsl -lresolv
 
@@ -26,9 +27,7 @@ CONF_FILES=		${EGDIR}/jed.conf ${PREFIX}/etc/jed.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/bin
-	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/lib/tm
 	${INSTALL_DATA} ${WRKSRC}/lib/jed.conf ${DESTDIR}${EGDIR}
 
-.include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/libslang2/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
