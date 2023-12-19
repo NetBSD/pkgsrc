@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2019/12/01 05:18:56 kim Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/19 17:23:13 zafer Exp $
 #
 
 DISTNAME=		genpasswd-1.5
 CATEGORIES=		sysutils
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Random password generator
