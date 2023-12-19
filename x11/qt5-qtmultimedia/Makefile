@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2023/11/12 13:24:25 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/12/19 12:36:37 thor Exp $
 
 DISTNAME=	qtmultimedia-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt5 module for multimedia
 
 BUILD_TARGET=		sub-src
@@ -21,6 +21,7 @@ post-install:
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
+QMAKE_ARGS+=	--
 .include "options.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

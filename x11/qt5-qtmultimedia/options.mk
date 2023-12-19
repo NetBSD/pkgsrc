@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2021/07/16 13:33:02 nia Exp $
+# $NetBSD: options.mk,v 1.9 2023/12/19 12:36:37 thor Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qt5-qtmultimedia
 PKG_SUPPORTED_OPTIONS=		alsa gstreamer openal pulseaudio
@@ -18,38 +18,38 @@ PLIST.openal=	yes
 PLIST_VARS+=	alsa
 .if !empty(PKG_OPTIONS:Malsa)
 PLIST.alsa=	yes
-MAKE_ENV+=	QT_CONFIG+=alsa
+QMAKE_ARGS+=	-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-MAKE_ENV+=	QT_CONFIG+=-alsa
+QMAKE_ARGS+=	-no-alsa
 .endif
 
 PLIST_VARS+=	gst
 .if !empty(PKG_OPTIONS:Mgstreamer)
 PLIST.gst=	yes
-MAKE_ENV+=	QT_CONFIG+=gstreamer-1.0
+QMAKE_ARGS+=	-gstreamer 1.0
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .else
-MAKE_ENV+=	QT_CONFIG+=-gstreamer-1.0
+QMAKE_ARGS+=	-no-gstreamer
 .endif
 
 PLIST_VARS+=	openal
 .if !empty(PKG_OPTIONS:Mopenal)
 PLIST.openal=	yes
-MAKE_ENV+=	QT_CONFIG+=openal
+QMAKE_ARGS+=	-openal
 .include "../../audio/openal-soft/buildlink3.mk"
 .else
-MAKE_ENV+=	QT_CONFIG+=-openal
+QMAKE_ARGS+=	-no-openal
 .endif
 
 PLIST_VARS+=	pulse
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 PLIST.pulse=	yes
 MAKE_ENV+=	LFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib/pulseaudio
-MAKE_ENV+=	QT_CONFIG+=pulseaudio
+QMAKE_ARGS+=	-pulseaudio
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-MAKE_ENV+=	QT_CONFIG+=-pulseaudio
+QMAKE_ARGS+=	-no-pulseaudio
 .endif
 
 PLIST_VARS+=		audioengine
