@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.931 2023/11/19 01:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.932 2023/12/20 16:43:06 schmonz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -648,6 +648,7 @@ SUBDIR+=	sudo
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
+SUBDIR+=	terrapin-scanner
 SUBDIR+=	tkpasman
 SUBDIR+=	tlswrapper
 SUBDIR+=	tlsx
