@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/10/23 14:41:05 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/20 18:46:53 wiz Exp $
 
-DISTNAME=	otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
+DISTNAME=	otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/otp_doc_html_/erlang-doc-/}
 CATEGORIES=	lang
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=erlang/otp/releases/download/OTP-${PKGVERSION_NOREV}/}
