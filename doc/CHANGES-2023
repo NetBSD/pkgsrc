@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7775 2023/12/19 23:58:05 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7776 2023/12/20 00:00:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11076,3 +11076,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/marswm to 0.5.3 [pin 2023-12-19]
 	Updated editors/jed to 0.99.19 [gdt 2023-12-19]
 	Updated editors/xjed to 0.99.19nb1 [gdt 2023-12-19]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q4 branch [gdt 2023-12-20]
