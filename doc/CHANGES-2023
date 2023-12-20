@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7777 2023/12/20 08:11:40 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7778 2023/12/20 16:43:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11078,3 +11078,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/xjed to 0.99.19nb1 [gdt 2023-12-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q4 branch [gdt 2023-12-20]
 	Updated sysutils/xcp to 0.16.0 [pin 2023-12-20]
+	Added security/terrapin-scanner version 1.0.3 [schmonz 2023-12-20]
