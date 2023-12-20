@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2023/12/20 16:43:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/20 18:47:06 abs Exp $
 
 DISTNAME=	Terrapin-Scanner-1.0.3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RUB-NDS/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://terrapin-attack.com/
