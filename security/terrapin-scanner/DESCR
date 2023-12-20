@@ -1,0 +1,10 @@
+The Terrapin Vulnerability Scanner is a small utility program written in
+Go, which can be used to determine the vulnerability of an SSH client or
+server against the Terrapin Attack. The vulnerability scanner requires a
+single connection with the peer to gather all supported algorithms.
+However, it does not perform a fully fledged SSH key exchange, will
+never attempt authentication on a server, and does not perform the
+attack in practice. Instead, vulnerability is determined by checking the
+supported algorithms and support for known countermeasures (strict key
+exchange). This may falsely claim vulnerability in case the peer
+supports countermeasures unknown to this tool.
