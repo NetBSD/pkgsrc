@@ -1,0 +1,14 @@
+$NetBSD: patch-src_makefiles_Makefile.solaris,v 1.1 2023/12/20 18:38:39 nros Exp $
+
+Install manpages on solaris with the same ending and in the same directory
+as other pkgsrc platforms so that the PLIST for postgreql16-docs is correct
+on solaris platforms.
+
+--- src/makefiles/Makefile.solaris.orig	2023-12-20 19:27:54.656820314 +0000
++++ src/makefiles/Makefile.solaris
+@@ -4,5 +4,3 @@ rpath = -Wl,-rpath,'$(rpathdir)'
+ # Rule for building a shared library from a single .o file
+ %.so: %.o
+ 	$(CC) $(CFLAGS) $< $(LDFLAGS) $(LDFLAGS_SL) -shared -o $@
+-
+-sqlmansect = 5sql
