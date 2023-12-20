@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/14 14:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/20 15:07:28 nros Exp $
 
 DISTNAME=	fcitx5-gtk-5.0.4
 PKGREVISION=	8
@@ -27,4 +27,5 @@ PKGCONFIG_OVERRIDE+=	fcitx-gclient/Fcitx5GClient.pc.in
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtk4/buildlink3.mk"
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
