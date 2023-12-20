@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2023/10/23 14:41:05 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/20 18:46:53 wiz Exp $
 
-DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
+DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/otp_doc_man_/erlang-man-/}
 CATEGORIES=	lang
-MASTER_SITES=	https://www.erlang.org/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/otp/releases/download/OTP-${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.erlang.org/
