@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2023/10/23 14:41:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2023/12/20 18:46:53 wiz Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -857,8 +857,6 @@ lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_x_encode.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/ei_x_encode.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/eidef.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/eiext.h
-lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/eimd5.c
-lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/eimd5.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/get_type.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/putget.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/misc/show_msg.c
@@ -1926,6 +1924,7 @@ lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_ocsp.beam
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_os_cacerts.beam
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_pbe.beam
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_pem.beam
+lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_policy_tree.beam
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/pubkey_ssh.beam
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/public_key.app
 lib/erlang/lib/public_key-${VERSION.public_key}/ebin/public_key.appup
@@ -1943,6 +1942,7 @@ lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_ocsp.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_os_cacerts.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_pbe.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_pem.erl
+lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_policy_tree.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_ssh.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/public_key.erl
 lib/erlang/lib/reltool-${VERSION.reltool}/ebin/reltool.app
@@ -3534,7 +3534,6 @@ lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_xs.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_xsd.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_xsd_type.erl
 lib/erlang/misc/format_man_pages
-lib/erlang/misc/makewhatis
 lib/erlang/releases/${VERSION}/OTP_VERSION
 lib/erlang/releases/${VERSION}/installed_application_versions
 lib/erlang/releases/${VERSION}/no_dot_erlang.boot
