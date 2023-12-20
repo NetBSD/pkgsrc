@@ -1,6 +1,6 @@
-$NetBSD: patch-src_pidfile.c,v 1.1 2021/10/16 19:46:42 tm Exp $
+$NetBSD: patch-src_pidfile.c,v 1.2 2023/12/20 17:05:01 wiz Exp $
 
-dprintf is not availble on SunOS (illumos)
+dprintf is not available on SunOS (illumos)
 
 --- src/pidfile.c.orig	Fri Oct 15 10:11:49 2021
 +++ src/pidfile.c	Fri Oct 15 10:11:58 2021
