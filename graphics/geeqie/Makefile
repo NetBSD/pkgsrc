@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2023/11/14 14:02:01 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2023/12/21 12:24:36 nros Exp $
 
 DISTNAME=	geeqie-2.1
 PKGREVISION=	5
@@ -31,6 +31,9 @@ REPLACE_BASH+=		plugins/*/*
 REPLACE_BASH+=		doc/*.sh
 REPLACE_BASH+=		g*.sh
 REPLACE_BASH+=		version.sh
+
+MESON_ARGS+=	-Dgq_localedir='${PREFIX}/${PKGLOCALEDIR}/locale'
+MESON_ARGS+=	--localedir='${PKGLOCALEDIR}/locale'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
