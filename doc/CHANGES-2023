@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7783 2023/12/21 07:04:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7784 2023/12/21 21:24:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11086,3 +11086,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang-man to 26.2.1 [wiz 2023-12-20]
 	Updated devel/cargo-modules to 0.13.1 [pin 2023-12-20]
 	Updated security/libssh2 to 1.11.0nb2 [wiz 2023-12-21]
+	Updated graphics/wallust to 2.8.0 [pin 2023-12-21]
