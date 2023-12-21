@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/12 13:23:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/21 16:34:12 wiz Exp $
 
 DISTNAME=	yubikey-manager-qt-1.2.5
 PKGREVISION=	7
@@ -35,6 +35,6 @@ post-install:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
