@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/12/01 05:18:57 kim Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/21 02:54:46 zafer Exp $
 #
 
 DISTNAME=		urlget-1.5
 CATEGORIES=		www
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Simple command-line tool to retrieve an HTTP URL

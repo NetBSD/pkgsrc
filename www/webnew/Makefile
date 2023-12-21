@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/21 02:55:37 zafer Exp $
 
 DISTNAME=		webnew-1.3
 PKGREVISION=		11
 CATEGORIES=		www
-MASTER_SITES=		http://software.kimmo.suominen.com/
+MASTER_SITES=		https://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://kimmo.suominen.com/sw/webnew/
