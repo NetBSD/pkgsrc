@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/21 10:46:15 nros Exp $
 
 PKGREVISION= 1
 .include "../../graphics/giflib/Makefile.common"
@@ -10,6 +10,8 @@ COMMENT=	GIF image format utility
 CONFLICTS+=	libungif-[0-9]*
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
+INSTALL_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 HTMLDIR=		share/doc/giflib
 INSTALLATION_DIRS=	${HTMLDIR} ${HTMLDIR}/gifstandard \
