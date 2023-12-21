@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.6 2023/11/14 19:03:37 nia Exp $
+# $NetBSD: options.mk,v 1.7 2023/12/21 02:27:26 charlotte Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick
+PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick6
 PKG_SUPPORTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 djvu openexr
 PKG_SUPPORTED_OPTIONS+=		wmf fpx
 PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2
