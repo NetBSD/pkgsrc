@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2023/12/16 15:52:28 zafer Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/21 08:57:01 spz Exp $
 #
 
-DISTNAME=	cracklib%2C2.7
+DISTNAME=	cracklib,2.7
 PKGNAME=	libcrack-2.7
 PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	https://alecmuffett.com/alecm/software/cracklib/
+MASTER_SITES=	-https://alecmuffett.com/alecm/software/cracklib/cracklib%2C2.7.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://alecmuffett.com/alecm/software/cracklib/cracklib%2C2.7.txt
