@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/12/21 13:10:01 zafer Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
 PKGREVISION=		13
 CATEGORIES=		benchmarks
-MASTER_SITES=		http://www.tux.org/pub/tux/benchmarks/System/unixbench/
+MASTER_SITES=		https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/byte-unixbench/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
