@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/11/08 13:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/12/21 08:16:56 nros Exp $
 
 DISTNAME=	repmgr-5.4.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
 
@@ -51,5 +51,6 @@ PLIST_SUBST+=	SOEXT=${SOEXT}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
