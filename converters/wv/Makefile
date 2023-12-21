@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.101 2023/11/12 13:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/12/21 14:18:15 zafer Exp $
 
 DISTNAME=	wv-1.2.9
 PKGREVISION=	26
 CATEGORIES=	converters
-MASTER_SITES=	http://www.abiword.com/downloads/wv/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://www.nl.abisource.com/downloads/wv/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://wvware.sourceforge.net/
+HOMEPAGE=	http://www.nl.abisource.com/
 COMMENT=	Library and executables to access Microsoft Word files
 
 USE_LIBTOOL=		yes
