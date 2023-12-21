@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/11/28 20:28:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/21 02:58:40 zafer Exp $
 #
 
 DISTNAME=	xsel-1.2.0
 CATEGORIES=	x11
-MASTER_SITES=	http://www.vergenet.net/~conrad/software/xsel/download/
+MASTER_SITES=	https://vergenet.net/~conrad/software/xsel/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vergenet.net/~conrad/software/xsel/
