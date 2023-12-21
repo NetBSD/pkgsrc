@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2019/05/23 19:22:55 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/21 13:07:17 zafer Exp $
 #
 
 DISTNAME=	ampache-3.5.3
 PKGREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	http://ampache.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ampache/}
+GITHUB_PROJECT=	ampache
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://ampache.org/
+HOMEPAGE=	https://ampache.org/
 COMMENT=	Web-based Audio file manager
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
