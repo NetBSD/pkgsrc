@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2023/08/02 19:21:53 nia Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/22 19:24:26 zafer Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
 PKGNAME=		xnibbles-1.0b4
 PKGREVISION=		4
 CATEGORIES=		games x11
-MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 # HOMEPAGE=		http://www.tjhsst.edu/xnibbles/

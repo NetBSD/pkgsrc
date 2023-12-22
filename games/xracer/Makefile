@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.75 2023/07/21 12:31:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2023/12/22 19:22:24 zafer Exp $
 #
 
 DISTNAME=		xracer-0.96.9
 PKGREVISION=		29
 CATEGORIES=		games x11
-MASTER_SITES=		http://www.annexia.org/_file/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.annexia.org/freeware/xracer
