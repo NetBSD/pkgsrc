@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/07/21 12:22:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/22 20:00:03 zafer Exp $
 
 DISTNAME=	libgfshare-1.0.5
 CATEGORIES=	security
-MASTER_SITES=	http://www.digital-scurf.org/files/libgfshare/
+MASTER_SITES=	https://www.digital-scurf.org/files/libgfshare/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
