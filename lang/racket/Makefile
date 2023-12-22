@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.101 2023/11/14 14:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/12/22 19:53:54 zafer Exp $
 
 DISTNAME=		racket-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
 PKGREVISION=		7
 CATEGORIES=		lang
-MASTER_SITES_PLT=	https://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	https://plt.eecs.northwestern.edu/racket-mirror/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	https://www.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	http://mirror.informatik.uni-tuebingen.de/mirror/racket/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	http://mirror.csclub.uwaterloo.ca/racket/racket-installers/${PKGVERSION_NOREV}/
-MASTER_SITES_PLT+=	https://racket.infogroep.be/${PKGVERSION_NOREV}/
+MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
+MASTER_SITES_PLT+=	https://www-old.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/
+MASTER_SITES_PLT+=	https://mirror.csclub.uwaterloo.ca/racket/racket-installers/${PKGVERSION_NOREV}/
 # Pre-release:
 #MASTER_SITES_PLT=	http://pre-release.racket-lang.org/installers/
 MASTER_SITES=		${MASTER_SITES_PLT}
