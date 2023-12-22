@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:19:37 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/12/22 13:38:31 nros Exp $
 
 BLAKE2s (FSViewer.app-0.2.5.tar.gz) = aa48be88a0f839ef8295be4acbbf48526b0a160f6cda2a8f076c5cc9cb3bb5c0
 SHA512 (FSViewer.app-0.2.5.tar.gz) = 758b3e08e9873e76a9b3896ab3aa8dfd00ee5804547bd399e8d7ee94db5f6d291f63b1707fe1214ccaa4b67c0a8b593c4f14310ac556c79973808a9467a0a998
@@ -11,7 +11,7 @@ SHA1 (patch-Makefile.in) = 7b707482d0ec2d29c0cba3dd8a7f964dd9b5eedd
 SHA1 (patch-aa) = 790b6a6810bf38ffebb0b00f68f29e5ebe01a83d
 SHA1 (patch-ab) = a0894d4fc9a1e925f1df331c26f23c915699a73f
 SHA1 (patch-ag) = 5496345589bdf7cbf8bd64449f93a7270ce046a0
-SHA1 (patch-configure) = 7a3adb0294ca5c22aa2b6bf5c5e9702767e22d71
+SHA1 (patch-configure) = 57687ecc2507bf168a53f84685cabb0a1c7dc739
 SHA1 (patch-src_FSFileButton.c) = 128ebcd74177133d87363cdafad8cf5aa1868d20
 SHA1 (patch-src_FSPanel.c) = 9c9315e50335086e4c0ba7166731dfdefc1967c3
 SHA1 (patch-src_extnInspector.c) = 280d65c66b081b313dc6ee0496cd0381ba2ea6f6
