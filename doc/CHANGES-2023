@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7788 2023/12/22 13:25:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7789 2023/12/22 16:41:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11091,3 +11091,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/opencv-contrib-face to 3.4.17 [thor 2023-12-22]
 	Updated mail/neomutt to 20231221 [wiz 2023-12-22]
 	Updated devel/py-nihtest to 1.3.0 [wiz 2023-12-22]
+	Downgraded devel/cargo-modules to 0.12.0 [wiz 2023-12-22]
