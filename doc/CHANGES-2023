@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7792 2023/12/22 17:44:09 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7793 2023/12/22 19:15:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11095,3 +11095,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/postfix to 3.8.4 [wiz 2023-12-22]
 	Updated databases/mysqld_exporter to 0.15.1 [bsiegert 2023-12-22]
 	Updated databases/postgres_exporter to 0.15.0 [bsiegert 2023-12-22]
+	Updated devel/git-lfs to 3.4.1 [bsiegert 2023-12-22]
