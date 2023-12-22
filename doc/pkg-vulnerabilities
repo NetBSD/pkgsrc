@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.90 2023/12/22 18:31:00 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.91 2023/12/22 19:17:31 bsiegert Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25822,3 +25822,4 @@ mysqld_exporter<0.15.1	auth-bypass	https://pkg.go.dev/vuln/GO-2022-1130
 mysqld_exporter<0.15.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
 postgres_exporter<0.15.0	auth-bypass	https://pkg.go.dev/vuln/GO-2022-1130
 postgres_exporter<0.15.0	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
+git-lfs<3.4.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
