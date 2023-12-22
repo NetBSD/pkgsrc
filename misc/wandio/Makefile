@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2023/11/08 13:20:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/22 19:11:07 zafer Exp $
 
 DISTNAME=	wandio-4.2.2
 PKGREVISION=	12
 CATEGORIES=	misc
-MASTER_SITES=	https://research.wand.net.nz/software/wandio/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://research.wand.net.nz/software/libwandio.php
