@@ -1,8 +1,9 @@
-$NetBSD: patch-configure,v 1.1 2020/04/12 19:44:55 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2023/12/22 13:38:31 nros Exp $
 
 get-wraster is dead, long live pkg-config.
+also use pkg-config to get WINGs lib.
 
---- configure.orig	2020-04-12 14:57:14.176711976 +0000
+--- configure.orig	2002-12-11 21:20:02.000000000 +0000
 +++ configure
 @@ -2757,30 +2757,7 @@ fi
  #CFLAGS="$CFLAGS -I/usr/X11/include"
@@ -32,7 +33,7 @@ get-wraster is dead, long live pkg-config.
 -fi
 -fi
 -GET_WRASTER_FLAGS=$ac_cv_prog_GET_WRASTER_FLAGS
-+GET_WRASTER_FLAGS="pkg-config wrlib"
++GET_WRASTER_FLAGS="pkg-config wrlib WINGs"
  if test -n "$GET_WRASTER_FLAGS"; then
    echo "$as_me:2785: result: $GET_WRASTER_FLAGS" >&5
  echo "${ECHO_T}$GET_WRASTER_FLAGS" >&6
