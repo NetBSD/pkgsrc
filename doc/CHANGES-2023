@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7786 2023/12/22 07:35:44 thor Exp $
+$NetBSD: CHANGES-2023,v 1.7787 2023/12/22 08:00:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11089,3 +11089,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.8.0 [pin 2023-12-21]
 	Updated graphics/opencv to 3.4.17 [thor 2023-12-22]
 	Updated graphics/opencv-contrib-face to 3.4.17 [thor 2023-12-22]
+	Updated mail/neomutt to 20231221 [wiz 2023-12-22]
