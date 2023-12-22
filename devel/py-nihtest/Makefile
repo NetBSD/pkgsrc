@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/22 13:25:01 wiz Exp $
 
-DISTNAME=	nihtest-1.2.0
+DISTNAME=	nihtest-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	cmake:test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
