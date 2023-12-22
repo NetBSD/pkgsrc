@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/22 17:44:47 zafer Exp $
 
 DISTNAME=	cvs2svn-2.3.0
 PKGREVISION=	7
 CATEGORIES=	devel scm
-MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/46528/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cvs2svn.tigris.org/
+HOMEPAGE=	https://github.com/mhagger/cvs2svn
 COMMENT=	Converts a CVS repository to a Subversion repository
 
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
