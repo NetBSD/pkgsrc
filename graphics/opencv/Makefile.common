@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2023/12/22 07:35:07 thor Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/12/22 14:30:55 thor Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -46,6 +46,7 @@ CMAKE_ARGS+=		-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
 CMAKE_ARGS+=		-DBLA_PKGCONFIG_LAPACK=${LAPACK_PC}
 CMAKE_ARGS+=		-DBLA_PKGCONFIG_CBLAS=${CBLAS_PC}
 CMAKE_ARGS+=		-DBLA_PKGCONFIG_LAPACKE=${LAPACKE_PC}
+CMAKE_ARGS+=		-DOPENCV_SKIP_LAPACK_EXTERN_C=ON
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=address
 BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
