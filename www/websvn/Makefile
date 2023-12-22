@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2019/12/09 14:20:57 taca Exp $
+# $NetBSD: Makefile,v 1.26 2023/12/22 17:51:18 zafer Exp $
 #
 
 DISTNAME=	websvn-2.2.1
 PKGREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/45918/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.websvn.info/
