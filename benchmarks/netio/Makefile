@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2020/03/27 16:02:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/22 02:42:19 zafer Exp $
 
 DISTNAME=	netio133
 PKGNAME=	netio-1.33
 CATEGORIES=	benchmarks net
-MASTER_SITES=	http://www.ars.de/
+MASTER_SITES=	https://www.aydogan.net/distfiles/benchmarks/
 EXTRACT_SUFX=	.zip
 
 HOMEPAGE=	https://web.ars.de/netio/
