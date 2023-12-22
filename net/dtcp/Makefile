@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2021/07/21 14:40:30 taca Exp $
+# $NetBSD: Makefile,v 1.34 2023/12/22 19:09:39 zafer Exp $
 #
 
 DISTNAME=	dtcp-20130602
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://www.mahoroba.org/~ume/ipv6/
-MASTER_SITES+=	http://home.jp.FreeBSD.org/~ume/ipv6/
-MASTER_SITES+=	http://www.imasy.or.jp/~ume/ipv6/
+MASTER_SITES=	https://www.mahoroba.org/~ume/ipv6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
