@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2017/09/04 18:08:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/22 19:25:13 zafer Exp $
 #
 
 DISTNAME=	statist-1.0.1
 PKGREVISION=	3
 CATEGORIES=	math
-MASTER_SITES=	http://www.usf.uni-osnabrueck.de/~breiter/tools/statist/v${PKGVERSION}/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.usf.uni-osnabrueck.de/~breiter/tools/statist/index.en.html
