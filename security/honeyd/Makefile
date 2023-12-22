@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.83 2023/11/14 14:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2023/12/22 18:12:01 zafer Exp $
 #
 
 DISTNAME=	honeyd-1.5c
 PKGREVISION=	11
 CATEGORIES=	security net
-MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
+MASTER_SITES=	https://www.honeyd.org/uploads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.honeyd.org/
+HOMEPAGE=	https://www.honeyd.org/
 COMMENT=	Small daemon that creates virtual hosts on a network
 LICENSE=	gnu-gpl-v2 # or later
 
