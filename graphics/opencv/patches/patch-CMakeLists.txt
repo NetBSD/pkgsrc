@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.9 2019/12/29 10:00:08 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.10 2023/12/22 07:35:07 thor Exp $
 
 Don't add to CMAKE_LIBRARY_PATH, may cause other versions of packages
 to be found in preference to pkgsrc ones.
 Do not build third party libraries on Darwin.
 
---- CMakeLists.txt.orig	2019-10-09 11:42:29.000000000 +0000
+--- CMakeLists.txt.orig	2021-12-24 16:39:15.000000000 +0000
 +++ CMakeLists.txt
-@@ -151,34 +151,6 @@ OCV_OPTION(ENABLE_CXX11 "Enable C++11 co
+@@ -169,34 +169,6 @@ OCV_OPTION(ENABLE_CXX11 "Enable C++11 co
  include(cmake/OpenCVDetectCXXCompiler.cmake)
  ocv_cmake_hook(POST_DETECT_COMPILER)
  
@@ -41,7 +41,7 @@ Do not build third party libraries on Darwin.
  # Add these standard paths to the search paths for FIND_PATH
  # to find include files from these locations first
  if(MINGW)
-@@ -201,13 +173,13 @@ OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable
+@@ -219,13 +191,13 @@ OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable
  
  # 3rd party libs
  OCV_OPTION(OPENCV_FORCE_3RDPARTY_BUILD   "Force using 3rdparty code from source" OFF)
@@ -50,14 +50,13 @@ Do not build third party libraries on Darwin.
 -OCV_OPTION(BUILD_JASPER             "Build libjasper from source"        (WIN32 OR ANDROID OR APPLE OR OPENCV_FORCE_3RDPARTY_BUILD) )
 -OCV_OPTION(BUILD_JPEG               "Build libjpeg from source"          (WIN32 OR ANDROID OR APPLE OR OPENCV_FORCE_3RDPARTY_BUILD) )
 -OCV_OPTION(BUILD_PNG                "Build libpng from source"           (WIN32 OR ANDROID OR APPLE OR OPENCV_FORCE_3RDPARTY_BUILD) )
--OCV_OPTION(BUILD_OPENEXR            "Build openexr from source"          (((WIN32 OR ANDROID OR APPLE) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
--OCV_OPTION(BUILD_WEBP               "Build WebP from source"             (((WIN32 OR ANDROID OR APPLE) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_ZLIB               "Build zlib from source"             (WIN32 OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_TIFF               "Build libtiff from source"          (WIN32 OR ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_JASPER             "Build libjasper from source"        (WIN32 OR ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_JPEG               "Build libjpeg from source"          (WIN32 OR ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_PNG                "Build libpng from source"           (WIN32 OR ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
-+OCV_OPTION(BUILD_OPENEXR            "Build openexr from source"          (((WIN32 OR ANDROID) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
+ OCV_OPTION(BUILD_OPENEXR            "Build openexr from source"          (OPENCV_FORCE_3RDPARTY_BUILD) )
+-OCV_OPTION(BUILD_WEBP               "Build WebP from source"             (((WIN32 OR ANDROID OR APPLE) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
 +OCV_OPTION(BUILD_WEBP               "Build WebP from source"             (((WIN32 OR ANDROID) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
  OCV_OPTION(BUILD_TBB                "Download and build TBB from source" (ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
  OCV_OPTION(BUILD_IPP_IW             "Build IPP IW from source"           (NOT MINGW OR OPENCV_FORCE_3RDPARTY_BUILD) IF (X86_64 OR X86) AND NOT WINRT )

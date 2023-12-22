@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2023/11/02 21:48:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2023/12/22 07:35:07 thor Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
 # DO NOT FORGET to regen graphics/opencv-contrib-face/distinfo!
 
-OPENCV_VERSION=	3.4.16
+OPENCV_VERSION=	3.4.17
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
@@ -35,6 +35,17 @@ CMAKE_ARGS+=		-DWITH_EIGEN=OFF
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
+
+# Pulled in via numpy, too, but we need to handle it explicitly
+# for LAPACK C API and CMake tests here.
+BLAS_C_INTERFACE=	yes
+.include "../../mk/blas.buildlink3.mk"
+CMAKE_ARGS+=		-DWITH_LAPACK=ON
+CMAKE_ARGS+=		-DBLA_PREFER_PKGCONFIG=ON
+CMAKE_ARGS+=		-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
+CMAKE_ARGS+=		-DBLA_PKGCONFIG_LAPACK=${LAPACK_PC}
+CMAKE_ARGS+=		-DBLA_PKGCONFIG_CBLAS=${CBLAS_PC}
+CMAKE_ARGS+=		-DBLA_PKGCONFIG_LAPACKE=${LAPACKE_PC}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=address
 BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
