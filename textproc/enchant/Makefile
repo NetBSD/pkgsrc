@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.46 2023/08/02 19:36:51 nia Exp $
+# $NetBSD: Makefile,v 1.47 2023/12/22 18:27:39 zafer Exp $
 #
 
 DISTNAME=		enchant-1.6.0
 PKGREVISION=		10
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.6.0/
+MASTER_SITES=		http://www.nl.abisource.com/downloads/enchant/1.6.0/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.abisource.com/projects/enchant/
+HOMEPAGE=		http://www.nl.abisource.com/projects/enchant/
 COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
