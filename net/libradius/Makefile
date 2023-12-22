@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2014/02/24 12:43:11 wiedi Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/22 19:07:22 zafer Exp $
 
 DISTNAME=	libradius-linux-20040827
 PKGNAME=	${DISTNAME:S/-linux//}
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://portal-to-web.de/tacacs/
+MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	RADIUS client library
