@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2019/11/04 22:10:14 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2023/12/22 18:04:31 zafer Exp $
 
 DISTNAME=	borges-1.1.0
 PKGREVISION=	2
 CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/574/
-MASTER_SITES+=	http://segment7.net/projects/ruby/borges/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://borges.rubyforge.org/
