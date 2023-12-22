@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2023/11/12 13:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/12/22 18:32:12 zafer Exp $
 #
 
 DISTNAME=	rat-3.0.28
 PKGREVISION=	12
 CATEGORIES=	mbone
-MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/3.0.28/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
