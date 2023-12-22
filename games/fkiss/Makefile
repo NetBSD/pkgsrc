@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/12/22 19:41:42 zafer Exp $
 #
 
 DISTNAME=		fkiss-0.33
 PKGNAME=		fkiss-0.33a
 PKGREVISION=		1
 CATEGORIES=		games
-MASTER_SITES=		http://www.oersted.co.jp/~yav/soft/fkiss/
+MASTER_SITES=		https://www2s.biglobe.ne.jp/~yav/soft/fkiss/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
+HOMEPAGE=		https://www2s.biglobe.ne.jp/~yav/soft/indexe.html#fkiss
 COMMENT=		Kisekae viewer
 
 PATCH_SITES=		${MASTER_SITES}
