@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/08 04:31:44 triaxx Exp $
-#
+# $NetBSD: Makefile,v 1.5 2023/12/22 17:29:17 wiz Exp $
 
 COMMENT=		Postfix SMTP server cdb backend module
 

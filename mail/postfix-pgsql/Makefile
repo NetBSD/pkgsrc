@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/03/04 06:26:42 taca Exp $
-#
+# $NetBSD: Makefile,v 1.9 2023/12/22 17:29:18 wiz Exp $
 
 COMMENT=		Postfix SMTP server PostgreSQL backend module
 
