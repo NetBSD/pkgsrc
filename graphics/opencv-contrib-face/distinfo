@@ -1,25 +1,23 @@
-$NetBSD: distinfo,v 1.26 2021/11/15 17:49:44 wiz Exp $
+$NetBSD: distinfo,v 1.27 2023/12/22 07:35:07 thor Exp $
 
-BLAKE2s (opencv-3.4.16.tar.gz) = 153eb897082e2f0b98bd5bee22fdff8a7c5d3f0cb2276f90ae2232286e34ebde
-SHA512 (opencv-3.4.16.tar.gz) = 2fa9243625309a1c12c916737c94f0e2f9566f0828469b148cc1683dd1b8db8d1d58f90a36cfcaa72052964a718929451f04cda5361d8b546a63da69217d040a
-Size (opencv-3.4.16.tar.gz) = 87694121 bytes
-BLAKE2s (opencv_contrib-3.4.16.tar.gz) = d117c1d7b7fc42e52ce6484efb7aaf002e34330061d6037ff66d4a3b1f3b1d18
-SHA512 (opencv_contrib-3.4.16.tar.gz) = 31bd55617d3a54fa020d4255e463c90caf41e10136c82a05c24ee19890f0cdc4fc049136874841dc84037dedb0562471ea0345ab1dcd5ad8a5b0218f24ae9a35
-Size (opencv_contrib-3.4.16.tar.gz) = 55215391 bytes
+BLAKE2s (opencv-3.4.17.tar.gz) = f8cbf244836026ef700534a4aa35a96f0e1521a6a5aa05ffecb90b1cdbcb75d3
+SHA512 (opencv-3.4.17.tar.gz) = b17a4a04ab29f0f966681a825af782039a2cc6564956894aba639731542fdb86d316b16b96e2d45de8b5e0db7c79ce4b4c348b82ccd124d125aacb7c02026841
+Size (opencv-3.4.17.tar.gz) = 87758183 bytes
+BLAKE2s (opencv_contrib-3.4.17.tar.gz) = 35896b85853444d826d574903a6b8d61fea93b7ab0d8d77292eb98b7507f3858
+SHA512 (opencv_contrib-3.4.17.tar.gz) = 33be143aa3a3b30fd903e4d3c4ae6b26911171d956fe40fd2b38df37855822547013f44470271a366fbfecf6efbaa746cd9aea3088a71028752bff0bda90a00f
+Size (opencv_contrib-3.4.17.tar.gz) = 54708858 bytes
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
 SHA1 (patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc) = f1b77384ea8110d2bf3a30ff3fe9f2fa39608caf
-SHA1 (patch-CMakeLists.txt) = 029368ab14163640d1651f572810eb8eb0c043d9
+SHA1 (patch-CMakeLists.txt) = 86a524683091aad65dfaf719d56c5f76056596b6
 SHA1 (patch-apps_visualisation_opencv__visualisation.cpp) = b62c32172049c6369fd62a5c72325eef995fd1d0
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = ac7deccedcc5071d3785c7827a06419713ba0529
 SHA1 (patch-cmake_OpenCVDetectPython.cmake) = 4f3bfe574edf083ebc7e78d347355c58461b2c6b
-SHA1 (patch-cmake_OpenCVFindOpenEXR.cmake) = 202d0fdc84464d563dead955d5299b42098d52a6
-SHA1 (patch-cmake_checks_lapack__check.cpp) = dd25d34fff25e0d46651789cf5577391d7b48c81
+SHA1 (patch-cmake_OpenCVFindLAPACK.cmake) = e8c474d91ba6de7c3204fcd753a33d33847b18b8
 SHA1 (patch-modules_core_include_opencv2_core_bindings__utils.hpp) = 44a8602670141b2a3bc90c5e1c23a8e7f96a1d40
 SHA1 (patch-modules_core_include_opencv2_core_opencl_opencl__info.hpp) = f0cff24b2a760086f54ab66536bdfee4f4f1a6d7
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_check.cpp) = c8dac4e0fb6fa4a0dca6a2794bd598ba114e78b6
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
-SHA1 (patch-modules_core_src_hal__internal.cpp) = 22beba5ee93fc468999479227d7ef07397848b22
 SHA1 (patch-modules_core_src_rand.cpp) = aa87ee5a538deb1a2ed3e89dd3dd4ee9b86ae0de
 SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
 SHA1 (patch-modules_dnn_src_layers_accum__layer.cpp) = 20a12489f7e7fcbc90d47871f12ac500ab8ae6ed
