@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2017/08/01 17:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/22 18:14:52 zafer Exp $
 #
 
 DISTNAME=		fluxter-0.1.0
 CATEGORIES=		wm x11
-MASTER_SITES=		http://benedict.isomedia.com/homes/stevencooper/files/
+MASTER_SITES=		#
 
 MAINTAINER=		mj@turner.org.za
 #HOMEPAGE=		http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
