@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2012/10/08 09:25:49 asau Exp $
+# $NetBSD: Makefile,v 1.21 2023/12/22 18:34:26 zafer Exp $
 
 DISTNAME=	common-1.2.16
 PKGNAME=	common-mml-1.2.16
 PKGREVISION=	4
 CATEGORIES=	mbone
-MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
+MASTER_SITES=	#
 
 MAINTAINER=	psham@cs.nmsu.edu
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
