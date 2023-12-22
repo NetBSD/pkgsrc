@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2021/06/10 23:43:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/22 18:26:19 zafer Exp $
 
 .include	"../../textproc/ispell/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-${DICT_LANG}-/1}
 CATEGORIES=	textproc
-MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
+MASTER_SITES=	https://www.cs.hmc.edu/~geoff/tars/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
+HOMEPAGE=	https://www.cs.hmc.edu/~geoff/ispell.html
 COMMENT=	British dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-british-[0-9]*
