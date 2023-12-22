@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:28 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/22 18:22:41 zafer Exp $
 #
 
 DISTNAME=	iswedish-1.2.1
 PKGNAME=	${DISTNAME:S/wedish/pell-sv/1}
 CATEGORIES=	textproc
-MASTER_SITES=	http://sv.sslug.dk/locale/ispell/iswedish/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/ispell/ispell.html
