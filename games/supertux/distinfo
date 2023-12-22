@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2023/07/18 14:50:45 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2023/12/22 20:53:49 prlw1 Exp $
 
 BLAKE2s (SuperTux-v0.6.3-Source.tar.gz) = 9a3227e7426b437b3e529654897a95fd52b2c15135ff1ae08957c37704d62d24
 SHA512 (SuperTux-v0.6.3-Source.tar.gz) = c6540bab1b3befbd975756031c4587e5569d9613d9539dc829c728b574d1a4da92816d6a7e68947b32963cc13d9b8b52312701c199138640e9f89e5885433798
 Size (SuperTux-v0.6.3-Source.tar.gz) = 182065428 bytes
 SHA1 (patch-external_SDL__ttf_configure) = da5e257847458e0a4410be3b03299062d167d441
+SHA1 (patch-external_partio__zip_zip__manager.hpp) = 9b91692444a55d8a4d3c5c7c82cc591ee52454c3
 SHA1 (patch-external_physfs_src_physfs__platform__unix.c) = 2c8c6d7be1e02098065f5b177038ef71bac35dc5
 SHA1 (patch-external_squirrel_CMakeLists.txt) = 4376efef866ca4d03365724409ffbaf635707d01
 SHA1 (patch-external_tinygettext_include_tinygettext_iconv.hpp) = 4e9cf8c227af45ca2ae149fb18f29a9ad2a31b98
