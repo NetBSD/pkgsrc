@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:31:07 asau Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/22 17:59:34 zafer Exp $
 #
 
 DISTNAME=		visitors-0.7
 CATEGORIES=		www
-MASTER_SITES=		http://www.hping.org/visitors/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hping.org/visitors/
