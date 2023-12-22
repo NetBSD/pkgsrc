@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7793 2023/12/22 19:15:23 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7794 2023/12/22 20:54:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11096,3 +11096,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mysqld_exporter to 0.15.1 [bsiegert 2023-12-22]
 	Updated databases/postgres_exporter to 0.15.0 [bsiegert 2023-12-22]
 	Updated devel/git-lfs to 3.4.1 [bsiegert 2023-12-22]
+	Updated games/supertux to 0.6.3nb4 [prlw1 2023-12-22]
