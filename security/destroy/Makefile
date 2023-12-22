@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/22 18:13:23 zafer Exp $
 #
 
 DISTNAME=	destroy-20040415
 CATEGORIES=	security
-MASTER_SITES=	http://www.impurity.org/mirrors/destroy/
+MASTER_SITES=	#
 
 MAINTAINER=	shane@freebsdhackers.net
 #HOMEPAGE=	http://www.freebsdhackers.net/destroy/
