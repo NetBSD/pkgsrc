@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7784 2023/12/21 21:24:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7785 2023/12/22 07:35:24 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11087,3 +11087,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cargo-modules to 0.13.1 [pin 2023-12-20]
 	Updated security/libssh2 to 1.11.0nb2 [wiz 2023-12-21]
 	Updated graphics/wallust to 2.8.0 [pin 2023-12-21]
+	Updated graphics/opencv to 3.4.17 [thor 2023-12-22]
