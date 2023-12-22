@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/23 17:19:18 asau Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/22 18:49:22 zafer Exp $
 #
 
 DISTNAME=	whatmask-1.2
 CATEGORIES=	net
-MASTER_SITES=	http://downloads.laffeycomputer.com/current_builds/whatmask/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.laffeycomputer.com/whatmask.html
