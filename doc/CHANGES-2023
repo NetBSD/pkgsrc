@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7789 2023/12/22 16:41:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7790 2023/12/22 17:29:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11092,3 +11092,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/neomutt to 20231221 [wiz 2023-12-22]
 	Updated devel/py-nihtest to 1.3.0 [wiz 2023-12-22]
 	Downgraded devel/cargo-modules to 0.12.0 [wiz 2023-12-22]
+	Updated mail/postfix to 3.8.4 [wiz 2023-12-22]
