@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 17:04:24 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2023/12/22 19:19:13 zafer Exp $
 
 DISTNAME=	lv451
 PKGNAME=	lv-4.51
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://www.ff.iij4u.or.jp/~nrt/freeware/
+MASTER_SITES=	#
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 #HOMEPAGE=	http://www.ff.iij4u.or.jp/~nrt/lv/
+HOMEPAGE=	https://github.com/ttdoda/lv/
 COMMENT=	Powerful Multilingual File Viewer
 LICENSE=	gnu-gpl-v2
 
