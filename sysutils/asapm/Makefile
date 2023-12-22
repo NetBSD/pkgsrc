@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2019/11/04 21:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/22 18:06:53 zafer Exp $
 #
 
 DISTNAME=	asapm-2.11
 PKGREVISION=	4
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://www.tigr.net/afterstep/download/asapm/
-MASTER_SITES+=	ftp://ftp.afterstep.org/apps/asapm/
+MASTER_SITES=	ftp://ftp.afterstep.org/apps/asapm/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tigr.net/afterstep/view.php?applet=asapm/data
