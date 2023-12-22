@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:47 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2023/12/22 18:17:22 zafer Exp $
 #
 
 DISTNAME=		RTF-1.10
 PKGNAME=		rtf-tools-1.10
 PKGREVISION=		3
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.snake.net/software/RTF/
+MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.Z
 
 PATCHFILES=		rtf-tools-jumbo-patch-20111006.gz
