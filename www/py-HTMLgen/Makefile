@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2019/11/04 22:10:12 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/23 20:38:53 zafer Exp $
 
 DISTNAME=	HTMLgen
 PKGNAME=	${PYPKGPREFIX}-HTMLgen-2.2.2
 PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://starship.python.net/crew/friedrich/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	py-HTMLgen-2.2.2
 

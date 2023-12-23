@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/12/23 20:48:18 zafer Exp $
 #
 
 DISTNAME=	cronolog-1.6.2
 PKGREVISION=	11
 CATEGORIES=	www
-MASTER_SITES=	http://cronolog.org/download/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fordmason/cronolog/
