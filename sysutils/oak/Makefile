@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:10 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/23 10:03:26 zafer Exp $
 #
 
 DISTNAME=		oak-1.5.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.ktools.org/dist/oak/
+MASTER_SITES=		https://www.ktools.org/dist/oak/
 
 MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		https://www.ktools.org/dist/oak/
