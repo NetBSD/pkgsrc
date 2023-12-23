@@ -1,4 +1,4 @@
-# $NetBSD: blas.buildlink3.mk,v 1.4 2022/09/26 09:33:01 thor Exp $
+# $NetBSD: blas.buildlink3.mk,v 1.5 2023/12/23 19:24:49 thor Exp $
 #
 # This Makefile fragment is meant to be included by packages that use any
 # BLAS (Basic Linear Algebra System) implementation instead of one particular
@@ -82,7 +82,8 @@ MK_BLAS_BUILDLINK3_MK=
 
 BUILD_DEFS+=		PKGSRC_BLAS_TYPES
 BUILD_DEFS_EFFECTS+=	BLAS_TYPE BLAS_LIBS LAPACK_LIBS \
-			CBLAS_LIBS LAPACKE_LIBS BLAS_INCLUDES
+			CBLAS_LIBS LAPACKE_LIBS BLAS_INCLUDES \
+			BLAS_PC CBLAS_PC LAPACK_PC LAPACKE_PC
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -203,6 +204,8 @@ PKG_FAIL_REASON+=	\
 .    include "../../${_LAPACKE_PKGPATH}/buildlink3.mk"
 .  endif
 .else
+.  undef	CBLAS_LIBS
+.  undef	LAPACKE_LIBS
 .  undef	BLAS_INCLUDES
 .  undef	CBLAS_PC
 .  undef	LAPACKE_PC
