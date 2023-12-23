@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 09:14:21 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2023/12/23 09:39:08 zafer Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
 PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	http://www.handhelds.org/download/projects/xscribble/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
