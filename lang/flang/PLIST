@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/06 19:15:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/12/23 13:13:36 nros Exp $
 bin/bbc
 bin/f18-parse-demo
 bin/fir-opt
@@ -269,20 +269,37 @@ lib/cmake/flang/FlangConfigVersion.cmake
 lib/cmake/flang/FlangTargets-release.cmake
 lib/cmake/flang/FlangTargets.cmake
 lib/libFIRAnalysis.so
+${PLIST.notdarwin}lib/libFIRAnalysis.so.16
 lib/libFIRBuilder.so
+${PLIST.notdarwin}lib/libFIRBuilder.so.16
 lib/libFIRCodeGen.so
+${PLIST.notdarwin}lib/libFIRCodeGen.so.16
 lib/libFIRDialect.so
+${PLIST.notdarwin}lib/libFIRDialect.so.16
 lib/libFIRSupport.so
+${PLIST.notdarwin}lib/libFIRSupport.so.16
 lib/libFIRTransforms.so
+${PLIST.notdarwin}lib/libFIRTransforms.so.16
 lib/libFortranCommon.so
+${PLIST.notdarwin}lib/libFortranCommon.so.16
 lib/libFortranDecimal.so
+${PLIST.notdarwin}lib/libFortranDecimal.so.16
 lib/libFortranEvaluate.so
+${PLIST.notdarwin}lib/libFortranEvaluate.so.16
 lib/libFortranLower.so
+${PLIST.notdarwin}lib/libFortranLower.so.16
 lib/libFortranParser.so
+${PLIST.notdarwin}lib/libFortranParser.so.16
 lib/libFortranRuntime.so
+${PLIST.notdarwin}lib/libFortranRuntime.so.16
 lib/libFortranSemantics.so
+${PLIST.notdarwin}lib/libFortranSemantics.so.16
 lib/libFortran_main.a
 lib/libHLFIRDialect.so
+${PLIST.notdarwin}lib/libHLFIRDialect.so.16
 lib/libHLFIRTransforms.so
+${PLIST.notdarwin}lib/libHLFIRTransforms.so.16
 lib/libflangFrontend.so
+${PLIST.notdarwin}lib/libflangFrontend.so.16
 lib/libflangFrontendTool.so
+${PLIST.notdarwin}lib/libflangFrontendTool.so.16

@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_Frontend_CMakeLists.txt,v 1.1 2023/12/23 13:13:36 nros Exp $
+
+Fix: flang/Optimizer/CodeGen/CGPasses.h.inc: No such file or directory
+Solution taken from Github:
+https://github.com/llvm/llvm-project/pull/71691
+
+--- lib/Frontend/CMakeLists.txt.orig	2023-12-23 11:42:38.817766101 +0000
++++ lib/Frontend/CMakeLists.txt
+@@ -16,6 +16,7 @@ add_flang_library(flangFrontend
+   FIRBuilder
+   FIRDialect
+   FIRSupport
++  FIROptCodeGenPassIncGen
+   FIROptTransformsPassIncGen
+   HLFIRDialect
+   MLIRIR
