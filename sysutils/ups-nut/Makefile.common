@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2023/11/09 18:58:44 gdt Exp $
+# $NetBSD: Makefile.common,v 1.15 2023/12/23 09:25:37 zafer Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -7,7 +7,7 @@
 
 DISTNAME=		nut-2.8.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES=		https://networkupstools.org/source/${PKGVERSION_NOREV:R}/
 
 MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
