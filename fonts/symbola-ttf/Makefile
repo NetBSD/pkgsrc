@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:26 maya Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/23 08:50:33 zafer Exp $
 
 DISTNAME=	Symbola
 PKGNAME=	symbola-ttf-9.17
 CATEGORIES=	fonts
-MASTER_SITES=	http://users.teilar.gr/~g1951d/
+MASTER_SITES=	#
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
