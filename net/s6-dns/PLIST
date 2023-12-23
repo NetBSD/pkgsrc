@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/11 11:53:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/12/23 20:10:49 schmonz Exp $
 bin/s6-dns-hosts-compile
 bin/s6-dnsip
 bin/s6-dnsip4
@@ -32,6 +32,5 @@ include/s6-dns/s6dns-rci.h
 include/s6-dns/s6dns-resolve.h
 include/s6-dns/s6dns.h
 include/s6-dns/skadns.h
-lib/s6-dns/libdcache.a
 lib/s6-dns/libs6dns.a
 lib/s6-dns/libskadns.a
