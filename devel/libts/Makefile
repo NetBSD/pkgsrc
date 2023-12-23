@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2014/07/15 10:01:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/23 08:23:31 zafer Exp $
 #
 
 DISTNAME=		TS-1.08
 PKGNAME=		libts-1.08
 CATEGORIES=		devel
-MASTER_SITES=		http://www.snake.net/software/TS/
+MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
