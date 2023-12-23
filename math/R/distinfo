@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.97 2023/03/22 13:53:29 wiz Exp $
+$NetBSD: distinfo,v 1.98 2023/12/23 20:10:56 thor Exp $
 
-BLAKE2s (R-4.2.0.tar.gz) = 387280cfca2ea0ed9963f4a9ed4f8cd1a2a81fc9235808659dd22a516e5ddd22
-SHA512 (R-4.2.0.tar.gz) = 99e71dad00b63e44bfcb8dc9539ff1951809112882d9ee7e06a4e99bce2e6ceac24e8348fd598c21e6d5ab0e0629a85170cde208bfa8145af91c398ac4ef7bcd
-Size (R-4.2.0.tar.gz) = 37585694 bytes
+BLAKE2s (R-4.2.3.tar.gz) = 68ba598f6aec52d4464bb9c4bca99398af63d31257f1bff95d8aeb0547e9dbc8
+SHA512 (R-4.2.3.tar.gz) = 060bb4e1d1f1a5a0383a3b4372ac9247c0a20285020da17cebeb40ddc54da12d5f369ea243ea04d2c6970986fe22b3f9c37fbdfb3405cd8aa4f2353091ea9c5c
+Size (R-4.2.3.tar.gz) = 34010655 bytes
 SHA1 (patch-configure.ac) = d6661984716a131bbfa1a2aa56385c535881d43d
-SHA1 (patch-m4_R.m4) = c55ae5a10bb995e147aceb12fd7393d8a6a64876
+SHA1 (patch-m4_R.m4) = f21948d2c1f662611e0bca3922dc2dedeabd473e
 SHA1 (patch-src_library_stats_src_Makefile.in) = 4eb93292858392792c37a706399e2cef91821bbe
 SHA1 (patch-src_main_character.c) = 842ae5d291f36f2beead4d32c1d41b18cbff878d
