@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/11/19 09:35:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/23 02:43:37 zafer Exp $
 
 DISTNAME=		cdb-0.75
 CATEGORIES=		databases
-MASTER_SITES=		http://cr.yp.to/cdb/
+MASTER_SITES=		https://cr.yp.to/cdb/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://cr.yp.to/cdb.html
