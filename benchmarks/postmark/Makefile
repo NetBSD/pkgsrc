@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2017/09/03 08:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/23 01:43:32 zafer Exp $
 
 DISTNAME=	postmark-1_5.c
 PKGNAME=	postmark-1.5
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://fsbench.filesystems.org/bench/
+MASTER_SITES=	https://fsbench.filesystems.org/bench/
 EXTRACT_SUFX=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
