@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/08/09 16:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/23 08:44:34 zafer Exp $
 
 DISTNAME=	Aegean
 PKGNAME=	aegean-ttf-7.42
 CATEGORIES=	fonts
-MASTER_SITES=	http://users.teilar.gr/~g1951d/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.zip
 DISTFILES+=	${DISTNAME}.zip Cretan.zip CyproMinoan.zip LinearA.zip
 
