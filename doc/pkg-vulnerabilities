@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.91 2023/12/22 19:17:31 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.92 2023/12/23 14:59:24 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25823,3 +25823,4 @@ mysqld_exporter<0.15.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
 postgres_exporter<0.15.0	auth-bypass	https://pkg.go.dev/vuln/GO-2022-1130
 postgres_exporter<0.15.0	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
 git-lfs<3.4.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
+exim-[0-9]*	email-spoofing	https://bugs.exim.org/show_bug.cgi?id=3063
