@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2012/10/31 11:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.42 2023/12/23 09:08:08 zafer Exp $
 #
 
 DISTNAME=	maketool-0.7-src
 PKGNAME=	maketool-0.7
 PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	http://home.alphalink.com.au/~gnb/maketool/
+MASTER_SITES=	https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.alphalink.com.au/~gnb/maketool/
