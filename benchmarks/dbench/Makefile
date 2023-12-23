@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2016/02/25 11:09:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/23 01:41:42 zafer Exp $
 
 DISTNAME=	dbench-4.0
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://samba.org/ftp/tridge/dbench/
+MASTER_SITES=	https://www.samba.org/ftp/tridge/dbench/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://samba.org/ftp/tridge/dbench/README

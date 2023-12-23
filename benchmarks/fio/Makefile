@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2023/08/14 05:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/23 01:42:39 zafer Exp $
 
 DISTNAME=	fio-3.19
 PKGREVISION=	3
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://brick.kernel.dk/snaps/
+MASTER_SITES=	https://brick.kernel.dk/snaps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.kernel.dk/?p=fio.git;a=summary
