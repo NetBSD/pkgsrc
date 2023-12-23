@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:38 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/23 08:45:32 zafer Exp $
 
 DISTNAME=	Aegyptus
 PKGNAME=	aegyptus-ttf-5.03
 CATEGORIES=	fonts
-MASTER_SITES=	http://users.teilar.gr/~g1951d/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.zip
 DISTFILES+=	${DISTNAME}.zip Nilus.zip Gardiner.zip
 
