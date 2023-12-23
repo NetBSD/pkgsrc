@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7796 2023/12/23 16:23:29 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.7797 2023/12/23 16:35:45 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11099,3 +11099,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/supertux to 0.6.3nb4 [prlw1 2023-12-22]
 	Updated biology/py-macs2 to 2.2.9.1 [bacon 2023-12-23]
 	Updated biology/atac-seq to 1.3 [bacon 2023-12-23]
+	Updated biology/chip-seq to 1.2 [bacon 2023-12-23]
