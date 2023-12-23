@@ -1,8 +1,8 @@
-$NetBSD: patch-m4_R.m4,v 1.2 2023/03/22 13:53:29 wiz Exp $
+$NetBSD: patch-m4_R.m4,v 1.3 2023/12/23 20:10:56 thor Exp $
 
 Ensure tests for clog & co. fail, not just emit warning
 
---- m4/R.m4.orig	2022-04-03 22:15:01.000000000 +0000
+--- m4/R.m4.orig	2022-11-01 23:15:01.000000000 +0000
 +++ m4/R.m4
 @@ -225,7 +225,7 @@ if test -z "${texi2any_version_maj}" \
  elif test ${texi2any_version_maj} -gt 5; then
@@ -33,7 +33,7 @@ Ensure tests for clog & co. fail, not just emit warning
  int main () {
      Rcomplex z[3];
  
-@@ -3733,9 +3739,9 @@ R_CHECK_FUNCS([cabs carg cexp clog csqrt
+@@ -3763,9 +3769,9 @@ R_CHECK_FUNCS([cabs carg cexp clog csqrt
  AC_DEFUN([R_CHECK_DECL],
  [AS_VAR_PUSHDEF([ac_Symbol], [ac_cv_have_decl_$1])dnl
  AC_CACHE_CHECK([whether $1 exists and is declared], ac_Symbol,
@@ -46,8 +46,8 @@ Ensure tests for clog & co. fail, not just emit warning
  #endif
  ])],
                     [AS_VAR_SET(ac_Symbol, yes)],
-@@ -4277,9 +4283,9 @@ AC_CACHE_CHECK([if libcurl is version 7 
- int main() 
+@@ -4307,9 +4313,9 @@ AC_CACHE_CHECK([if libcurl is version 7
+ int main(int argc, const char * argv[]) 
  {
  #ifdef LIBCURL_VERSION_MAJOR
 -#if LIBCURL_VERSION_MAJOR > 7
