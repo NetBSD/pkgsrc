@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/09/04 18:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/23 09:36:04 zafer Exp $
 #
 
 DISTNAME=	slocate-3.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://fossies.org/unix/misc/old/
+MASTER_SITES=	https://fossies.org/linux/misc/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/slocate/

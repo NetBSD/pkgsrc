@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2017/08/01 14:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/23 09:34:10 zafer Exp $
 
 DISTNAME=	socket-1.1
 CATEGORIES=	sysutils net
-MASTER_SITES=	https://www.freebsd.org/~wosch/src/
+MASTER_SITES=	https://people.freebsd.org/~wosch/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Create tcp socket and connect to stdin/out
