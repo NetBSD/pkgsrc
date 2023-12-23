@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/11/23 18:50:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/23 20:09:18 schmonz Exp $
 
-DISTNAME=		skalibs-2.14.0.1
+DISTNAME=		skalibs-2.14.1.0
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
