@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/23 09:23:23 zafer Exp $
 
 DISTNAME=	vip-19971113
 PKGREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.cs.duke.edu/~des/scripts/
+MASTER_SITES=	https://users.cs.duke.edu/~des/scripts/
 DISTFILES=	vip vip.man
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
