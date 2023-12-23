@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2016/01/23 05:22:00 zafer Exp $
+# $NetBSD: Makefile,v 1.30 2023/12/23 00:43:27 zafer Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
 CATEGORIES=		archivers
-MASTER_SITES=		http://homes.cs.washington.edu/~suciu/XMILL/
+MASTER_SITES=		https://homes.cs.washington.edu/~suciu/XMILL/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
