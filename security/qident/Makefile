@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/12/22 18:07:49 zafer Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/23 09:15:58 zafer Exp $
 
 DISTNAME=	qident-1.2
 CATEGORIES=	security net
-MASTER_SITES=	#
+MASTER_SITES=	https://www.aydogan.net/distfiles/security/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.hairylemon.org/~ad/software/qident/
