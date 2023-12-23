@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/04/29 19:57:51 maya Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/23 09:12:15 zafer Exp $
 
 DISTNAME=		i2ocfg-1.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.hairylemon.org/~ad/software/download/i2ocfg/
+MASTER_SITES=		https://www.aydogan.net/distfiles/sysutils/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.hairylemon.org/~ad/software/i2ocfg/
