@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/23 08:16:19 zafer Exp $
 #
 
 DISTNAME=		MemMgr-1.04
 PKGNAME=		libmemmgr-1.04
 CATEGORIES=		devel
-MASTER_SITES=		http://www.snake.net/software/MemMgr/
+MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
