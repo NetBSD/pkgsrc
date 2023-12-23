@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2023/11/23 18:52:16 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2023/12/23 20:12:24 schmonz Exp $
 
-BLAKE2s (tipidee-0.0.2.0.tar.gz) = 089638850200cf05e999429652e2f9001ae66d34c5d10af5e3599418b4ef3ee1
-SHA512 (tipidee-0.0.2.0.tar.gz) = 2a6f87f78b7ccdeb4efd123d8daa93131d8ce4448b2a87c63af8b93a21fd1ef9ed10b9683f6ed788122dbe5a4f0872f46729580428b730cea554c0655b193094
-Size (tipidee-0.0.2.0.tar.gz) = 80778 bytes
-BLAKE2s (tipidee-man-pages-0.0.2.0.1.tar.gz) = 70a56d02264fb873f4c0368897ca0056e819de1cf9c0dba4cf4150e77fe8fe57
-SHA512 (tipidee-man-pages-0.0.2.0.1.tar.gz) = 92e98fbb0a1860cb4e4f118b30b2c42aaee02bb1cb88268ef0e28319394d3af6511a1a397aff399352a3dd9e8298aa20c4eea784566f6fc641eef872e232cc6a
-Size (tipidee-man-pages-0.0.2.0.1.tar.gz) = 20513 bytes
+BLAKE2s (tipidee-0.0.3.0.tar.gz) = 4f995e9e8357f3d5c5365d5d9fbbc3b34aec981c3582d420aff55a2f9e6afaad
+SHA512 (tipidee-0.0.3.0.tar.gz) = c5ffa5ff04a52804b664200e15eb43e8cb2a08fa4bd55be960fed76e6b8f973330ac596e48002f9570ebcfea83cbe05ee148d4abb794ff073c2c92d4e03572bd
+Size (tipidee-0.0.3.0.tar.gz) = 83329 bytes
+BLAKE2s (tipidee-man-pages-0.0.3.0.1.tar.gz) = b87c4a6734c1cda2706e344edf6a545b569d3f5896967cc9811b0984fa522441
+SHA512 (tipidee-man-pages-0.0.3.0.1.tar.gz) = a71012594cc12d5f04489aabf2bef723618bc89c07500696d67ed05d3fbdd2d708677cc92861f710eb7940c40e5e1452d7f4b1c819d42a17c249862d6e16a082
+Size (tipidee-man-pages-0.0.3.0.1.tar.gz) = 21010 bytes
