@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/05/18 10:20:13 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/23 20:53:15 zafer Exp $
 
 DISTNAME=	tree-1.8.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://mama.indstate.edu/users/ice/tree/src/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
