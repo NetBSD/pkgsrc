@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2021/12/28 01:02:42 nros Exp $
+# $NetBSD: Makefile.common,v 1.28 2023/12/23 09:50:09 zafer Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -35,13 +35,13 @@
 # used by sysutils/py-collectd/Makefile
 
 DISTNAME=	collectd-5.12.0
-MASTER_SITES=	http://collectd.org/files/
+MASTER_SITES=	https://storage.googleapis.com/collectd-tarballs/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://collectd.org/
+HOMEPAGE=	https://www.collectd.org/
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
