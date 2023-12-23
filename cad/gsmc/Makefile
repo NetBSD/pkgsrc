@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2023/11/14 14:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/12/23 01:55:28 zafer Exp $
 #
 
 DISTNAME=	gsmc-1.1
 PKGREVISION=	42
 CATEGORIES=	cad
-MASTER_SITES=	http://www.qsl.net/ik5nax/
+MASTER_SITES=	https://www.qsl.net/ik5nax/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.qsl.net/ik5nax/
