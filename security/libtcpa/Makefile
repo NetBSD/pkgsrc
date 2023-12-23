@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/23 21:02:19 zafer Exp $
 #
 
 DISTNAME=		tpm-1.1b
 PKGNAME=		${DISTNAME:S/tpm/libtcpa/}
 PKGREVISION=		9
 CATEGORIES=		security
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		#
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} tcpa_man_20031210.tgz
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -14,8 +14,6 @@ COMMENT=		TCPA libraries and test programs from IBM
 LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/TPM
-
-SITES.tcpa_man_20031210.tgz=	http://www.citi.umich.edu/u/rwash/projects/trusted/
 
 BUILD_DIRS=		libtcpa examples
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man3 share/doc/${PKGBASE}

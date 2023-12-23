@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 22:09:51 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/23 20:51:24 zafer Exp $
 
 DISTNAME=		mod_encoding-20021209
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=		www
-MASTER_SITES=		http://webdav.todo.gr.jp/download/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://webdav.todo.gr.jp/
