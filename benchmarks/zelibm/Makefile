@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2023/11/12 13:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/12/23 01:45:01 zafer Exp $
 #
 
 DISTNAME=		zelibm
 PKGNAME=		zelibm-0
 PKGREVISION=		25
 CATEGORIES=		benchmarks
-MASTER_SITES=		http://people.redhat.com/drepper/libm/
+MASTER_SITES=		https://akkadia.org/drepper/libm/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://people.redhat.com/drepper/libm/
