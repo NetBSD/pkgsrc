@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.95 2023/12/23 20:18:16 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.96 2023/12/23 20:23:40 thor Exp $
 #
 #FORMAT 1.0.0
 #
@@ -11346,7 +11346,7 @@ libupnp<1.6.21	arbitrary-code-execution	https://web.nvd.nist.gov/view/vuln/detai
 tiff<4.0.6	denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-5315
 firefox45<45.8	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2017-06/
 webkit24-gtk{,3}-[0-9]*	denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-9643
-R-[0-9]*		buffer-overflow		https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-8714
+R<3.3.3		buffer-overflow		https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-8714
 wavpack<5.1.0		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10169
 wavpack<5.1.0		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10170
 wavpack<5.1.0		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10171
