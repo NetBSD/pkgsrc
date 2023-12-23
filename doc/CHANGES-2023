@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7799 2023/12/23 20:09:24 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7800 2023/12/23 20:10:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11102,3 +11102,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/chip-seq to 1.2 [bacon 2023-12-23]
 	Updated textproc/glow to 1.5.1 [bsiegert 2023-12-23]
 	Updated devel/skalibs to 2.14.1.0 [schmonz 2023-12-23]
+	Updated sysutils/s6 to 2.12.0.3 [schmonz 2023-12-23]
