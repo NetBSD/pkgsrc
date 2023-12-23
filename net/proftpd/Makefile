@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/12/20 17:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/12/23 23:30:57 nros Exp $
 
 .include "../../net/proftpd/Makefile.common"
 
@@ -38,6 +38,9 @@ MODULES+=	\
 		mod_wrap2_sql
 
 CONFIGURE_ARGS+=	--with-shared=${MODULES:ts:}
+
+# needed for memset_s
+CFLAGS.SunOS+=		-D__STDC_WANT_LIB_EXT1__=1
 
 RCD_SCRIPTS=		proftpd
 REPLACE_PERL+=		contrib/ftpasswd
