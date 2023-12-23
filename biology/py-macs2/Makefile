@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/11/05 23:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/23 16:15:02 bacon Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-macs2-2.2.8
+PKGNAME=	${PYPKGPREFIX}-macs2-2.2.9.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
@@ -14,18 +14,19 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
+# Requires new python features
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
 # Distributed .c files do not support python > 3.9
-post-extract:
+pre-configure:
 	${MV} ${WRKSRC}/MACS2/cPosValCalculation.c ${WRKSRC}
 	${RM} -f ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
 	cd ${WRKSRC} && ${CYTHONIZE} ${WRKSRC}/MACS2/*.pyx
 	cd ${WRKSRC} && ${CYTHONIZE} ${WRKSRC}/MACS2/*/*.pyx
 	${MV} ${WRKSRC}/cPosValCalculation.c ${WRKSRC}/MACS2
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
