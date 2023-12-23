@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2012/10/31 11:17:19 asau Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/23 08:20:52 zafer Exp $
 #
 
 DISTNAME=		portlib-1.01
 PKGNAME=		libportlib-1.01
 CATEGORIES=		devel
-MASTER_SITES=		http://www.snake.net/software/portlib/
+MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}

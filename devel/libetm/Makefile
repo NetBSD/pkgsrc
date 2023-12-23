@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2023/12/23 08:11:46 zafer Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/23 08:26:05 zafer Exp $
 #
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
 CATEGORIES=		devel
-MASTER_SITES=		#
+MASTER_SITES=		https://www.aydogan.net/distfiles/devel/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
