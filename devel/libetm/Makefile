@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2014/07/14 19:20:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/23 08:11:46 zafer Exp $
 #
 
 DISTNAME=		ETM-1.09
 PKGNAME=		libetm-1.09
 CATEGORIES=		devel
-MASTER_SITES=		http://www.snake.net/software/ETM/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
