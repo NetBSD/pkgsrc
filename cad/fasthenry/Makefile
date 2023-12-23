@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2023/07/17 22:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.34 2023/12/23 01:49:25 zafer Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
 PKGNAME=	fasthenry-3.0.19961112
 CATEGORIES=	cad
-MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	dmcmahill@NetBSD.org
