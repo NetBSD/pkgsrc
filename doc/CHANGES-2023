@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7802 2023/12/23 20:11:10 thor Exp $
+$NetBSD: CHANGES-2023,v 1.7803 2023/12/23 20:11:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11105,3 +11105,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/s6 to 2.12.0.3 [schmonz 2023-12-23]
 	Updated net/s6-dns to 2.3.7.1 [schmonz 2023-12-23]
 	Updated math/R to 4.2.3 [thor 2023-12-23]
+	Updated net/s6-networking to 2.7.0.1 [schmonz 2023-12-23]
