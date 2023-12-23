@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/12/20 20:56:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/23 10:10:11 zafer Exp $
 #
 
 DISTNAME=		memtester-4.6.0
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}old-versions/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://pyropus.ca/software/memtester/
+HOMEPAGE=		https://pyropus.ca./software/memtester/
 COMMENT=		Utility for testing the memory subsystem for faults
 LICENSE=		gnu-gpl-v2
 
