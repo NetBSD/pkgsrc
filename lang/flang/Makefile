@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/08 13:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/23 13:13:36 nros Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	flang-${LLVM_VERSION}.src
@@ -24,9 +24,13 @@ CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=YES
 
 REPLACE_BASH=	tools/f18/flang-to-external-fc.in
 
+PLIST_VARS=	notdarwin
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+.else
+PLIST.notdarwin=	yes
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 .endif
 
 .include "../../devel/cmake/build.mk"

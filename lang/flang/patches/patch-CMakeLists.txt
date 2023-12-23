@@ -1,0 +1,25 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/12/23 13:13:36 nros Exp $
+
+Don't create empty directories in ${PREFIX}/include
+
+--- CMakeLists.txt.orig	2023-06-10 22:58:16.000000000 +0000
++++ CMakeLists.txt
+@@ -481,12 +481,17 @@ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
+     PATTERN "*.td"
+     PATTERN "config.h" EXCLUDE
+     PATTERN ".git"     EXCLUDE
+-    PATTERN "CMakeFiles" EXCLUDE)
++    PATTERN "CMakeFiles" EXCLUDE
++    PATTERN "OpenMP" EXCLUDE
++    PATTERN "Config" EXCLUDE)
+ 
+   install(DIRECTORY ${FLANG_INCLUDE_DIR}/flang
+     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+     COMPONENT flang-headers
+     FILES_MATCHING
+     PATTERN "*.inc"
++    PATTERN "CMakeFiles" EXCLUDE
++    PATTERN "OpenMP" EXCLUDE
++    PATTERN "Config" EXCLUDE
+     )
+ endif()
