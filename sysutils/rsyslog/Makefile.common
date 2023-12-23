@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2023/05/02 16:21:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2023/12/23 09:37:41 zafer Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -16,7 +16,7 @@
 
 DISTNAME=		rsyslog-8.38.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
+MASTER_SITES=		https://www.rsyslog.com/files/download/rsyslog/
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.rsyslog.com/
