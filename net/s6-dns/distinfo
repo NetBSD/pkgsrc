@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/23 18:51:33 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2023/12/23 20:10:49 schmonz Exp $
 
-BLAKE2s (s6-dns-2.3.7.0.tar.gz) = 9d893cfc9622057ed99b73904459b4411292e169e6b486fd542b9b445f56babe
-SHA512 (s6-dns-2.3.7.0.tar.gz) = 7e862a6f31e1ef854fd04a901037e560747ace2637da2dbb73cceeabcbf8c7ed8350508beaca830057147e0e8f3c94df90acfae11568adde4b951c85a7be46f8
-Size (s6-dns-2.3.7.0.tar.gz) = 96494 bytes
+BLAKE2s (s6-dns-2.3.7.1.tar.gz) = 6f979b3563033a08cefd7e2d14e1ef5a33f5c915b2cd1ade7964ac8ecca77bc7
+SHA512 (s6-dns-2.3.7.1.tar.gz) = 9dabee86d9a27fb0e4a3c10563694bb5734c08c4d730a69daec17dad140274aa104bd6edbd501261c7a7c7bcee505f79134b7119457d5fbedcbb2be6b352ebb0
+Size (s6-dns-2.3.7.1.tar.gz) = 92354 bytes
