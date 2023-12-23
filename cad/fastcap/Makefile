@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2023/07/17 22:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/23 01:47:55 zafer Exp $
 
 DISTNAME=	fastcap-2.0-18Sep92
 PKGNAME=	fastcap-2.0.19920918
 PKGREVISION=	4
 CATEGORIES=	cad
-MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
+MASTER_SITES=	https://www.rle.mit.edu/cpg/codes/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
