@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/08/09 16:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/12/23 08:47:31 zafer Exp $
 
 DISTNAME=	Asea
 PKGNAME=	asea-ttf-4.13
 CATEGORIES=	fonts
-MASTER_SITES=	http://users.teilar.gr/~g1951d/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

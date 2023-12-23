@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/08/23 17:54:05 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/23 08:38:24 zafer Exp $
 
 DISTNAME=	fsx-2009
 CATEGORIES=	filesystems
-MASTER_SITES=	http://codemonkey.org.uk/projects/fsx/fsx-macosforge/
+MASTER_SITES=	#
 DISTFILES=	fsx.c Makefile APPLE_LICENSE
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
