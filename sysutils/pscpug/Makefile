@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2021/05/14 11:26:47 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/23 09:19:39 zafer Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
 PKGREVISION=		3
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.diablonet.net/~mercadal/projects/pscpug/
+MASTER_SITES=		https://www.aydogan.net/distfiles/sysutils/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bartosz.kuzma@gmail.com
