@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2023/09/03 14:58:38 mef Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/24 14:23:05 zafer Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	6
 CATEGORIES=	devel
-MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/flim/flim-1.14/
+MASTER_SITES=	#
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://git.chise.org/elisp/flim/
