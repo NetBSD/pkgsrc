@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/24 16:26:42 bacon Exp $
 
 DISTNAME=	plink-1.07-src
 PKGNAME=	${DISTNAME:-src=}
@@ -14,6 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++ fortran77
 USE_TOOLS+=	gmake
+
+SUBST_CLASSES.Darwin+=	crypt
+SUBST_STAGE.crypt=	pre-build
+SUBST_SED.crypt=	-e 's|-lcrypt||g'
+SUBST_FILES.crypt=	Makefile
 
 CXXFLAGS+=	-Dfopen64=fopen
 
