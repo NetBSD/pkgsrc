@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2023/06/06 12:41:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.40 2023/12/24 14:24:52 zafer Exp $
 #
 
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/semi/semi-1.14-for-flim-1.14/
+MASTER_SITES=	#
 
 # This fix will be unnecessary for the next release.
 PATCH_SITES=		${MASTER_SITE_LOCAL}
