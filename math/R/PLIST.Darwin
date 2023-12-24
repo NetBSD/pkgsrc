@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.13 2023/12/24 14:59:31 bacon Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.14 2023/12/24 15:17:38 wiz Exp $
 @comment
 @comment The configure script has explicit check for darwin and sets
 @comment   --with-internal-tzcode=yes
@@ -12,7 +12,6 @@
 @comment
 @comment Even darwin 10.10.3 (osx 14D131) still shows zic --version of 7.116
 @comment
-
 lib/R/share/zoneinfo/Africa/Abidjan
 lib/R/share/zoneinfo/Africa/Accra
 lib/R/share/zoneinfo/Africa/Addis_Ababa
