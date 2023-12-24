@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/10/21 20:45:02 bacon Exp $
+# $NetBSD: Makefile,v 1.19 2023/12/24 10:07:51 nros Exp $
 
 DISTNAME=	auto-admin-0.8.0
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
+
+INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
