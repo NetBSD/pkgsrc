@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2022/08/27 11:38:13 rhialto Exp $
+$NetBSD: distinfo,v 1.116 2023/12/24 09:10:16 spz Exp $
 
 BLAKE2s (calibre-5.44.0.tar.xz) = 536482fd1b06589adf1af036a55e81c718a7a4713293a281825e10315418e249
 SHA512 (calibre-5.44.0.tar.xz) = 3d79e76d820cd1a41605dfd4c1d992599a6e4a759e57a8383d42d86982177e4539313f59e647758ab1896ce5874cb2a93c7678bf962e332c44171651aabf0230
@@ -7,5 +7,6 @@ SHA1 (patch-setup_build.py) = 32cd46adf8a1c516639b4920191fa1527e86c2cc
 SHA1 (patch-setup_extensions.json) = 6ac0a6a7e80dc4a01cb18a61c733ee375085ad06
 SHA1 (patch-setup_install.py) = 758dc31959a6a850602abfcd5d58b19f6b9c6939
 SHA1 (patch-src_calibre_constants.py) = e35f904d075ddb2cf2256895b564a55490fb5897
+SHA1 (patch-src_calibre_ebooks_chardet.py) = da1163e97b1f22425af2fc2837173eb528681743
 SHA1 (patch-src_calibre_linux.py) = 382191b8c8c6c893c4f2385613c599fcfc3bff09
 SHA1 (patch-src_calibre_utils_icu.c) = 219257d68925b5c4a0df897d89324457f2ff7289
