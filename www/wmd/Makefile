@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:31:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/24 14:37:57 zafer Exp $
 #
 
 DISTNAME=		wmd-1.0.1
 CATEGORIES=		www
-MASTER_SITES=		http://wmd-editor.com/downloads/
+MASTER_SITES=		#
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		schmonz@NetBSD.org
