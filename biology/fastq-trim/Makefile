@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/10/28 20:35:44 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/24 10:18:27 nros Exp $
 
 DISTNAME=	fastq-trim-0.1.3
 CATEGORIES=	biology
@@ -10,6 +10,7 @@ COMMENT=	Lightening fast sequence read trimmer
 LICENSE=	2-clause-bsd
 
 MAKE_ENV=	VERSION=${PKGVERSION}
+INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 LDFLAGS.SunOS=	-lresolv
 
