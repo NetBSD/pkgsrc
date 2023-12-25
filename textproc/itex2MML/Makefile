@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/16 20:21:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/25 14:49:51 wiz Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	itex2MML-1.2.3
@@ -10,7 +10,7 @@ HOMEPAGE=	https://golem.ph.utexas.edu/~distler/blog/itex2MML.html
 COMMENT=	Converts itex equations to MathML
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison flex
+USE_TOOLS+=	bison flex gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/itex-src
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
