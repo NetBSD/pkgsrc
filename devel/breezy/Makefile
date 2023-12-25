@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/25 18:16:48 wiz Exp $
 
 DISTNAME=	breezy-3.2.2
 PKGREVISION=	3
@@ -24,7 +24,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311 312
 
 USE_PKG_RESOURCES=	yes
 
