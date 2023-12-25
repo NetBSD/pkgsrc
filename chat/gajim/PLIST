@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2022/03/04 09:34:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/12/25 10:54:20 wiz Exp $
 bin/gajim
 bin/gajim-history-manager
 bin/gajim-remote
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gajim/__init__.py
 ${PYSITELIB}/gajim/__init__.pyc
 ${PYSITELIB}/gajim/__init__.pyo
@@ -1197,6 +1198,7 @@ ${PYSITELIB}/gajim/gtk/emoji_chooser.pyc
 ${PYSITELIB}/gajim/gtk/emoji_chooser.pyo
 ${PYSITELIB}/gajim/gtk/emoji_data.py
 ${PYSITELIB}/gajim/gtk/emoji_data.pyc
+${PYSITELIB}/gajim/gtk/emoji_data.pyi
 ${PYSITELIB}/gajim/gtk/emoji_data.pyo
 ${PYSITELIB}/gajim/gtk/exception.py
 ${PYSITELIB}/gajim/gtk/exception.pyc
