@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 19:15:10 markd Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/25 13:48:41 spz Exp $
 
 DISTNAME=	rt-5.0.5
 PKGNAME=	${DISTNAME:S/rt/rt5/}
@@ -29,6 +29,7 @@ DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-SearchBuilder>=1.77:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-Data-ICal-[0-9]*:../../time/p5-Data-ICal
+DEPENDS+=	p5-Data-Page-[0-9]*:../../devel/p5-Data-Page
 DEPENDS+=	p5-Date-Extract>=0.02:../../time/p5-Date-Extract
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-DateTime>=0.44:../../time/p5-DateTime
