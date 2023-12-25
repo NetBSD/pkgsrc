@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/08/14 05:25:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2023/12/25 16:53:27 wiz Exp $
 
 DISTNAME=	fsh-1.2
 PKGREVISION=	10
@@ -13,6 +12,7 @@ COMMENT=	Fast remote command execution
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	yes
+USE_TOOLS+=	gsed
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
