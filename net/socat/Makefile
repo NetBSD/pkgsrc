@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/11/24 13:14:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2023/12/25 23:43:31 mef Exp $
 
 DISTNAME=	socat-1.8.0.0
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 
-USE_TOOLS+=	bash:test
+USE_TOOLS+=	bash
 REPLACE_BASH+=	*.sh
 
 TEST_TARGET=	test
