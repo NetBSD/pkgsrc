@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.20 2023/05/05 17:53:08 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/12/25 17:04:50 wiz Exp $
 bin/streamlink
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/LICENSE
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/METADATA
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/RECORD
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/WHEEL
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/entry_points.txt
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/top_level.txt
 ${PYSITELIB}/streamlink/__init__.py
 ${PYSITELIB}/streamlink/__init__.pyc
 ${PYSITELIB}/streamlink/__init__.pyo
@@ -50,6 +50,7 @@ ${PYSITELIB}/streamlink/plugin/api/__init__.pyc
 ${PYSITELIB}/streamlink/plugin/api/__init__.pyo
 ${PYSITELIB}/streamlink/plugin/api/http_session.py
 ${PYSITELIB}/streamlink/plugin/api/http_session.pyc
+${PYSITELIB}/streamlink/plugin/api/http_session.pyi
 ${PYSITELIB}/streamlink/plugin/api/http_session.pyo
 ${PYSITELIB}/streamlink/plugin/api/useragents.py
 ${PYSITELIB}/streamlink/plugin/api/useragents.pyc
@@ -646,6 +647,7 @@ ${PYSITELIB}/streamlink_cli/output/http.pyo
 ${PYSITELIB}/streamlink_cli/output/player.py
 ${PYSITELIB}/streamlink_cli/output/player.pyc
 ${PYSITELIB}/streamlink_cli/output/player.pyo
+${PYSITELIB}/streamlink_cli/py.typed
 ${PYSITELIB}/streamlink_cli/streamrunner.py
 ${PYSITELIB}/streamlink_cli/streamrunner.pyc
 ${PYSITELIB}/streamlink_cli/streamrunner.pyo
