@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 05:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/25 18:17:44 wiz Exp $
 
 EGG_NAME=	qbrz-0.4.1
 DISTNAME=	breezy-qbrz-0.4.1.0.${VER}
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-fastbencode>0:../../converters/py-fastbencode
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.15:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../x11/py-sip6
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311 312
 
 USE_TOOLS+=	msgfmt
 WRKSRC=		${WRKDIR}/~qbrz/qbrz/trunk
