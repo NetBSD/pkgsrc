@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:21:37 nia Exp $
-
-BLAKE2s (Padre-Plugin-Nopaste-0.08.tar.gz) = abd5a84593a94076da50b2f2d7b6d495b229a0a84d27fbcdc3b0845c4f2096d3
-SHA512 (Padre-Plugin-Nopaste-0.08.tar.gz) = 1267da587b9c5e9afca4b12626d45d0dca147736ce4eac475a23293c39fc3f03f104444b6aef1b3bf195a10eb6f89235f40f49eddfec7ab28c1f5e4291301799
-Size (Padre-Plugin-Nopaste-0.08.tar.gz) = 32009 bytes
