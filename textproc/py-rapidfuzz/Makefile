@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/07 09:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/25 22:19:59 spz Exp $
 
 DISTNAME=	rapidfuzz-3.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,10 +21,17 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2
-# Only x86_64 is guaranteed to have avx2; while some i386 CPUs do, our
-# build target does not.
+PLIST_VARS+=	sse2
+# x86_64 may use avx2, i386 may use avx2 or sse2
+# docs say it'll build them in any case and then autodetect at runtime
+# whether the system supports it (using _feature_detector_cpp.so)
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.avx2=	yes
+.else
+. if ${MACHINE_ARCH} == "i386"
+PLIST.avx2=	yes
+PLIST.sse2=	yes
+. endif
 .endif
 
 USE_CXX_FEATURES=	c++17
