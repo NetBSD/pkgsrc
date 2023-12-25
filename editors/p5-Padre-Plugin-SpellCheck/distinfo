@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:21:37 nia Exp $
-
-BLAKE2s (Padre-Plugin-SpellCheck-1.33.tar.gz) = a2d7a9df9f0b42ea1beadeaaf5524b4b9266065ac67871a8b9428a993b068f75
-SHA512 (Padre-Plugin-SpellCheck-1.33.tar.gz) = c0ce22b2cd8aefcce299013aa88f8175d0c6a5a4a7bd1358ffcf6b620e02f8bcc3905bfd583cde5cf31f91d9efcac11ca517f91dc8b00d9daeede8a7ec9099b1
-Size (Padre-Plugin-SpellCheck-1.33.tar.gz) = 52171 bytes
