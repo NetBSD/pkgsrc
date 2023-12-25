@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/08/17 14:45:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/12/25 18:01:48 wiz Exp $
 
 DISTNAME=	libime-1.0.4
 PKGREVISION=	8
@@ -29,8 +29,9 @@ SITES.${f}=	https://download.fcitx-im.org/data/
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
 # possibly fixed in 1.0.17?
-PYTHON_VERSIONS_INCOMPATIBLE+=	311
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 312
 
 post-extract:
 .for f in ${DICTDISTFILES}
