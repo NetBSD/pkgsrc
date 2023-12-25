@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/25 16:02:47 nros Exp $
 
 DISTNAME=	libiptcdata-1.0.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	libiptcdata/libiptcdata.pc.in
 
 CONFIGURE_ARGS+=	--disable-python
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
