@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/07 09:14:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/25 22:19:59 spz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -112,6 +112,7 @@ ${PYSITELIB}/rapidfuzz/distance/_initialize_py.pyo
 ${PYSITELIB}/rapidfuzz/distance/metrics_cpp.pyi
 ${PYSITELIB}/rapidfuzz/distance/metrics_cpp.so
 ${PLIST.avx2}${PYSITELIB}/rapidfuzz/distance/metrics_cpp_avx2.so
+${PLIST.sse2}${PYSITELIB}/rapidfuzz/distance/metrics_cpp_sse2.so
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.py
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyc
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyo
@@ -121,6 +122,7 @@ ${PYSITELIB}/rapidfuzz/fuzz.pyi
 ${PYSITELIB}/rapidfuzz/fuzz.pyo
 ${PYSITELIB}/rapidfuzz/fuzz_cpp.so
 ${PLIST.avx2}${PYSITELIB}/rapidfuzz/fuzz_cpp_avx2.so
+${PLIST.sse2}${PYSITELIB}/rapidfuzz/fuzz_cpp_sse2.so
 ${PYSITELIB}/rapidfuzz/fuzz_py.py
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyc
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyo
