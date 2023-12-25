@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7810 2023/12/25 14:51:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7811 2023/12/25 17:13:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11113,3 +11113,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/quodlibet to 4.6.0nb1 [wiz 2023-12-25]
 	Updated chat/gajim to 1.3.3nb9 [wiz 2023-12-25]
 	Updated sysutils/zabbix-frontend to 4.0.49nb2 [wiz 2023-12-25]
+	Updated multimedia/libtheora-docs to 1.1.1nb8 [wiz 2023-12-25]
