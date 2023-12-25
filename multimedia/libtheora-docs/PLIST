@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/05/24 07:29:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/12/25 17:13:10 wiz Exp $
 share/doc/libtheora-${PKGVERSION}/color.html
 share/doc/libtheora-${PKGVERSION}/doxygen-build.stamp
 share/doc/libtheora-${PKGVERSION}/draft-ietf-avt-rtp-theora-00.txt
@@ -40,6 +40,8 @@ share/doc/libtheora-${PKGVERSION}/html/index.html
 share/doc/libtheora-${PKGVERSION}/html/jquery.js
 share/doc/libtheora-${PKGVERSION}/html/menu.js
 share/doc/libtheora-${PKGVERSION}/html/menudata.js
+share/doc/libtheora-${PKGVERSION}/html/minus.svg
+share/doc/libtheora-${PKGVERSION}/html/minusd.svg
 share/doc/libtheora-${PKGVERSION}/html/modules.html
 share/doc/libtheora-${PKGVERSION}/html/nav_f.png
 share/doc/libtheora-${PKGVERSION}/html/nav_fd.png
@@ -47,6 +49,8 @@ share/doc/libtheora-${PKGVERSION}/html/nav_g.png
 share/doc/libtheora-${PKGVERSION}/html/nav_h.png
 share/doc/libtheora-${PKGVERSION}/html/nav_hd.png
 share/doc/libtheora-${PKGVERSION}/html/open.png
+share/doc/libtheora-${PKGVERSION}/html/plus.svg
+share/doc/libtheora-${PKGVERSION}/html/plusd.svg
 share/doc/libtheora-${PKGVERSION}/html/splitbar.png
 share/doc/libtheora-${PKGVERSION}/html/splitbard.png
 share/doc/libtheora-${PKGVERSION}/html/structth__comment.html
@@ -80,6 +84,7 @@ share/doc/libtheora-${PKGVERSION}/html/theoradec_8h.html
 share/doc/libtheora-${PKGVERSION}/html/theoradec_8h_source.html
 share/doc/libtheora-${PKGVERSION}/html/theoraenc_8h.html
 share/doc/libtheora-${PKGVERSION}/html/theoraenc_8h_source.html
+share/doc/libtheora-${PKGVERSION}/html/topics.html
 share/doc/libtheora-${PKGVERSION}/latex/Makefile
 share/doc/libtheora-${PKGVERSION}/latex/annotated.tex
 share/doc/libtheora-${PKGVERSION}/latex/codec_8h.tex
@@ -115,4 +120,5 @@ share/doc/libtheora-${PKGVERSION}/latex/theoradec_8h.tex
 share/doc/libtheora-${PKGVERSION}/latex/theoradec_8h_source.tex
 share/doc/libtheora-${PKGVERSION}/latex/theoraenc_8h.tex
 share/doc/libtheora-${PKGVERSION}/latex/theoraenc_8h_source.tex
+share/doc/libtheora-${PKGVERSION}/latex/topics.tex
 share/doc/libtheora-${PKGVERSION}/vp3-format.txt
