@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/17 22:31:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/25 21:19:46 tnn Exp $
 bin/enchant-2
 bin/enchant-lsmod-2
 include/enchant-2/enchant++.h
@@ -15,4 +15,5 @@ man/man5/enchant.5
 share/doc/enchant/enchant-2.html
 share/doc/enchant/enchant-lsmod-2.html
 share/doc/enchant/enchant.html
+${PLIST.Darwin}share/enchant-2/AppleSpell.config
 share/enchant-2/enchant.ordering
