@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2023/11/19 13:03:34 bacon Exp $
+# $NetBSD: Makefile,v 1.243 2023/12/25 18:11:41 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -120,7 +120,6 @@ SUBDIR+=	p5-Padre-Plugin-Nopaste
 SUBDIR+=	p5-Padre-Plugin-PerlCritic
 SUBDIR+=	p5-Padre-Plugin-PerlTidy
 SUBDIR+=	p5-Padre-Plugin-SVN
-SUBDIR+=	p5-Padre-Plugin-SpellCheck
 SUBDIR+=	p5-Padre-Plugin-XS
 SUBDIR+=	pico
 SUBDIR+=	pluma
