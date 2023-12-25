@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7813 2023/12/25 18:14:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7814 2023/12/25 18:19:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11116,3 +11116,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libtheora-docs to 1.1.1nb8 [wiz 2023-12-25]
 	Removed editors/p5-Padre-Plugin-SpellCheck [wiz 2023-12-25]
 	Removed editors/p5-Padre-Plugin-Nopaste [wiz 2023-12-25]
+	Removed databases/gobang [wiz 2023-12-25]
