@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/11/20 00:04:50 nia Exp $
+# $NetBSD: Makefile,v 1.27 2023/12/25 10:18:37 wiz Exp $
 
 DISTNAME=	quodlibet-4.6.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet
@@ -11,9 +12,13 @@ HOMEPAGE=	https://quodlibet.readthedocs.io/
 COMMENT=	Ex Falso / Quod Libet - Music Library / Editor / Player
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+DEPENDS+=	gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
+DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
 
 DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
 DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
@@ -35,13 +40,12 @@ USE_TOOLS+=	msgfmt
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-# Requires Python 3.5 or higher
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"

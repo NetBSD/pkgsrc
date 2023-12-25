@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/20 00:04:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/12/25 10:18:37 wiz Exp $
 bin/exfalso
 bin/operon
 bin/quodlibet
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/quodlibet/__init__.py
 ${PYSITELIB}/quodlibet/__init__.pyc
 ${PYSITELIB}/quodlibet/__init__.pyo
@@ -889,6 +890,7 @@ ${PYSITELIB}/quodlibet/packages/raven/versioning.pyc
 ${PYSITELIB}/quodlibet/packages/raven/versioning.pyo
 ${PYSITELIB}/quodlibet/packages/senf/__init__.py
 ${PYSITELIB}/quodlibet/packages/senf/__init__.pyc
+${PYSITELIB}/quodlibet/packages/senf/__init__.pyi
 ${PYSITELIB}/quodlibet/packages/senf/__init__.pyo
 ${PYSITELIB}/quodlibet/packages/senf/_argv.py
 ${PYSITELIB}/quodlibet/packages/senf/_argv.pyc
