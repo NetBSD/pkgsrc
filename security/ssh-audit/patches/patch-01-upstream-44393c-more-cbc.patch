@@ -1,3 +1,5 @@
+$NetBSD: patch-01-upstream-44393c-more-cbc.patch,v 1.2 2023/12/26 17:54:02 wiz Exp $
+
 From 44393c56b3238daf43215504f5f4272e1bd9d1bb Mon Sep 17 00:00:00 2001
 From: Joe Testa <jtesta@positronsecurity.com>
 Date: Thu, 21 Dec 2023 15:30:43 -0500
