@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/11/18 15:39:16 tsutsui Exp $
+# $NetBSD: Makefile,v 1.86 2023/12/26 18:56:09 wiz Exp $
 
 DISTNAME=	nokogiri-1.15.5
 CATEGORIES=	textproc
@@ -12,6 +12,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.8.2:../../misc/ruby-mini_portile2
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
+CPPFLAGS+=		-I${PREFIX}/include/libxml2
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.11.6.tar.gz= \
