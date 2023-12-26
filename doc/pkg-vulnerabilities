@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.99 2023/12/26 19:27:49 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.100 2023/12/26 19:46:34 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25842,3 +25842,5 @@ authelia-[0-9]*	out-of-bounds-read	https://pkg.go.dev/vuln/GO-2021-0113
 apisprout-[0-9]*	denial-of-service	https://pkg.go.dev/vuln/GO-2021-0061
 gitea-[0-9]*	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 gitea-[0-9]*	improper-rendering	https://pkg.go.dev/vuln/GO-2023-1988
+openssh<9.6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-51385
+libssh<0.10.6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-6004
