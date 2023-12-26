@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/12/25 21:19:46 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2023/12/26 13:33:48 tnn Exp $
 
 DISTNAME=		enchant-2.6.4
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -32,13 +32,6 @@ CONFIGURE_ARGS+=	--without-voikko
 # needed for testing
 CONFIGURE_ARGS+=	--enable-relocatable
 TEST_TARGET=		check
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	Darwin
-.if ${OPSYS} == "Darwin"
-PLIST.Darwin=	yes
-.endif
 
 .include "options.mk"
 
