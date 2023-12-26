@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2023/11/14 14:02:28 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/26 11:43:05 wiz Exp $
 
-DISTNAME=	wxmaxima-17.10.1
-PKGREVISION=	23
+DISTNAME=	wxmaxima-23.12.0
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_GITHUB:=andrejv/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wxMaxima-developers/}
 GITHUB_TAG=	Version-${PKGVERSION_NOREV}
 
 MAINTAINER=	helgoman@users.sourceforge.net
-HOMEPAGE=	https://andrejv.github.io/wxmaxima/
+HOMEPAGE=	https://github.com/wxMaxima-developers/wxmaxima/
 COMMENT=	Graphical UI for maxima
 LICENSE=	gnu-gpl-v2
 
@@ -26,6 +25,6 @@ SUBST_SED.paths=	-e 's,share/locale,${PKGLOCALEDIR}/locale,g'
 SUBST_SED.paths+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_NOOP_OK.paths=	yes
 
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
