@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:56:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/12/26 11:43:05 wiz Exp $
 
-BLAKE2s (wxmaxima-17.10.1.tar.gz) = 05d62e3cb367baad7bad2f07c3f279386a1bee12cad515415c2308ef1054a5dc
-SHA512 (wxmaxima-17.10.1.tar.gz) = 015f4a05e48d3c8918adcb4c69334b80cff8d0b97af7527742aabc438d34a6e5841e129a68f0d5e7f60c5ff7b415525874e6785c9b5a9f63925968a476ebc457
-Size (wxmaxima-17.10.1.tar.gz) = 8690844 bytes
+BLAKE2s (wxmaxima-23.12.0.tar.gz) = 8dc5b1d6c6af491a730b3d492fd03447a7a7127d03ecf3ae4f58be68f7d53371
+SHA512 (wxmaxima-23.12.0.tar.gz) = f0b8f17cd9e367fbd95dd9304926742b05ab6d04da07aed54b183d5fa97a5d0054481626182874daf54011bd3f2d3f4b467b1daf600d003976483331578eed89
+Size (wxmaxima-23.12.0.tar.gz) = 16491009 bytes
