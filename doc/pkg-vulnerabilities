@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.98 2023/12/24 12:47:46 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.99 2023/12/26 19:27:49 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25826,7 +25826,7 @@ git-lfs<3.4.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
 exim-[0-9]*	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2023-51766
 nuclei<3.1.3	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 glow<1.5.1	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
-sendmail-[0-9]*	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-51765
+sendmail<8.18.0.2	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-51765
 packer<1.9.5	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 ssh-chat-[0-9]*	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 influxdb-[0-9]*	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
