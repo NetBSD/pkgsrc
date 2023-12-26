@@ -1,0 +1,47 @@
+From 44393c56b3238daf43215504f5f4272e1bd9d1bb Mon Sep 17 00:00:00 2001
+From: Joe Testa <jtesta@positronsecurity.com>
+Date: Thu, 21 Dec 2023 15:30:43 -0500
+Subject: [PATCH] Expanded filter of CBC ciphers to flag for the Terrapin
+ vulnerability.
+
+---
+ README.md                  | 3 +++
+ src/ssh_audit/ssh_audit.py | 4 ++--
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git README.md README.md
+index a8d0c2b8..d748db01 100644
+--- README.md
++++ README.md
+@@ -178,6 +178,9 @@ For convenience, a web front-end on top of the command-line tool is available at
+ 
+ ## ChangeLog
+ 
++### v3.2.0 (???)
++ - Expanded filter of CBC ciphers to flag for the Terrapin vulnerability.  It now includes more rarely found ciphers.
++
+ ### v3.1.0 (2023-12-20)
+  - Added test for the Terrapin message prefix truncation vulnerability ([CVE-2023-48795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48795)).
+  - Dropped support for Python 3.7 (EOL was reached in June 2023).
+diff --git src/ssh_audit/ssh_audit.py src/ssh_audit/ssh_audit.py
+index 481fc8e5..61e8c10d 100755
+--- src/ssh_audit/ssh_audit.py
++++ src/ssh_audit/ssh_audit.py
+@@ -491,7 +491,7 @@ def _get_cbc_ciphers_enabled(algs: Algorithms) -> List[str]:
+         if algs.ssh2kex is not None:
+             ciphers_supported = algs.ssh2kex.client.encryption if client_audit else algs.ssh2kex.server.encryption
+             for cipher in ciphers_supported:
+-                if cipher.endswith("-cbc"):
++                if cipher.endswith("-cbc") or cipher.endswith("-cbc@openssh.org") or cipher.endswith("-cbc@ssh.com") or cipher == "rijndael-cbc@lysator.liu.se":
+                     ret.append(cipher)
+ 
+         return ret
+@@ -501,7 +501,7 @@ def _get_cbc_ciphers_not_enabled(db: Dict[str, Dict[str, List[List[Optional[str]
+         ret = []
+ 
+         for cipher in db["enc"]:
+-            if cipher.endswith("-cbc") and cipher not in _get_cbc_ciphers_enabled(algs):
++            if (cipher.endswith("-cbc") or cipher.endswith("-cbc@openssh.org") or cipher.endswith("-cbc@ssh.com") or cipher == "rijndael-cbc@lysator.liu.se") and cipher not in _get_cbc_ciphers_enabled(algs):
+                 ret.append(cipher)
+ 
+         return ret
