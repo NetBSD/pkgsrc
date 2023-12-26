@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7815 2023/12/26 09:11:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7816 2023/12/26 11:43:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11118,3 +11118,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed editors/p5-Padre-Plugin-Nopaste [wiz 2023-12-25]
 	Removed databases/gobang [wiz 2023-12-25]
 	Updated www/py-django-js-asset to 2.2.0 [wiz 2023-12-26]
+	Updated math/wxmaxima to 23.12.0 [wiz 2023-12-26]
