@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_ssl__compat_Makefile.in,v 1.1 2023/12/26 12:29:56 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- lib/ssl_compat/Makefile.in.orig	2023-12-26 12:28:57.453225566 +0000
++++ lib/ssl_compat/Makefile.in
+@@ -111,7 +111,7 @@ $(devdir)/log_server.pb-c.c: $(srcdir)/l
+ 	    echo "$$cmd"; eval $$cmd; \
+ 	    cmd='$(scriptdir)/unanon $(devdir)/log_server.pb-c.h $(devdir)/log_server.pb-c.c'; \
+ 	    echo "$$cmd"; eval $$cmd; \
+-	    if [ "$(devdir)" == "$(srcdir)" ]; then \
++	    if [ "$(devdir)" = "$(srcdir)" ]; then \
+ 		cmd='mv -f $(devdir)/log_server.pb-c.h $(incdir)/log_server.pb-c.h'; \
+ 	    else \
+ 		cmd='mv -f $(devdir)/log_server.pb-c.h $(top_builddir)/log_server.pb-c.h'; \
