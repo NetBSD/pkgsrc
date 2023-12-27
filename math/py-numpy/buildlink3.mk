@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2023/07/20 21:07:12 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2023/12/27 09:06:03 thor Exp $
 
 BUILDLINK_TREE+=	py-numpy
 
@@ -22,10 +22,7 @@ BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy
 
 .include "../../math/py-numpy/make_env.mk"
 
-# Mimick the choice from Makefile. Or better store/load build choice?
-BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
 BLAS_C_INTERFACE=	yes
-CPPFLAGS+=		${BLAS_INCLUDES}
 .include "../../mk/blas.buildlink3.mk"
 
 .endif # PY_NUMPY_BUILDLINK3_MK
