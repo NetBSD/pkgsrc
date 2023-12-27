@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2023/12/07 20:47:13 thor Exp $
+# $NetBSD: Makefile,v 1.75 2023/12/27 22:42:02 thor Exp $
 
 DISTNAME=	scipy-1.11.4
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -54,9 +54,15 @@ FFLAGS+=	-fPIC
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
 # Same as for py-numpy.
+# Except that py-scipy needs explicit linkage to libblas.so for
+# netlib (otherwise there will be missing symbols in _superlu.so (vendored).
+# Meson will locate libcblas itself with -Dblas=blas by guesswork,
+# satisfying the meson setup. Proper fix is a future meson build where
+# one can specify blas and cblas separately. The distinction
+# does not matter for openblas.
 BLAS_ACCEPTED=		${_BLAS_TYPES}
 BLAS_C_INTERFACE=	yes
-WHEEL_ARGS+=		-Csetup-args=-Dblas=${CBLAS_PC}
+WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
