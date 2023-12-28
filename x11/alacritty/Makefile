@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.30 2023/11/12 13:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/12/28 20:40:34 pin Exp $
 
-DISTNAME=	alacritty-0.12.3
-PKGREVISION=	3
+DISTNAME=	alacritty-0.13.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/alacritty/alacritty
+HOMEPAGE=	https://alacritty.org/
 COMMENT=	Cross-platform, GPU-accelerated terminal emulator
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
@@ -45,22 +45,30 @@ SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS=	bin share/applications share/examples/alacritty \
-			${PKGMANDIR}/man1 share/icons/hicolor/scalable/apps
+INSTALLATION_DIRS=	bin share/applications ${PKGMANDIR}/man1 \
+			${PKGMANDIR}/man5 share/icons/hicolor/scalable/apps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/alacritty.yml \
-		${DESTDIR}${PREFIX}/share/examples/alacritty
-	${INSTALL_MAN} ${WRKSRC}/extra/alacritty.man \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty.1
-	${INSTALL_MAN} ${WRKSRC}/extra/alacritty-msg.man \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
 	${INSTALL_DATA} ${WRKSRC}/extra/linux/Alacritty.desktop \
                  ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
+
+post-install:
+	scdoc < ${WRKSRC}/extra/man/alacritty-msg.1.scd > ${WRKSRC}/extra/man/alacritty-msg.1
+	scdoc < ${WRKSRC}/extra/man/alacritty.1.scd > ${WRKSRC}/extra/man/alacritty.1
+	scdoc < ${WRKSRC}/extra/man/alacritty.5.scd > ${WRKSRC}/extra/man/alacritty.5
+	scdoc < ${WRKSRC}/extra/man/alacritty-bindings.5.scd > ${WRKSRC}/extra/man/alacritty-bindings.5
+	${INSTALL_MAN} ${WRKSRC}/extra/man/alacritty.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty.1
+	${INSTALL_MAN} ${WRKSRC}/extra/man/alacritty-msg.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
+	${INSTALL_MAN} ${WRKSRC}/extra/man/alacritty.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/alacritty.5
+	${INSTALL_MAN} ${WRKSRC}/extra/man/alacritty-bindings.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/alacritty-bindings.5
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
