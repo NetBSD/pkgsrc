@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2023/11/14 14:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/12/28 23:43:33 zafer Exp $
 
 DISTNAME=	gmpc-jamendo-11.8.16
 PKGREVISION=	42
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=musicpd/}
+MASTER_SITES=	https://download.sarine.nl/Programs/gmpc/11.8/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmpc.wikia.com/wiki/GMPC_PLUGIN_JAMENDO
