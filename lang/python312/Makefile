@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/12/08 09:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/28 13:12:59 thor Exp $
 
 .include "dist.mk"
 
@@ -114,10 +114,16 @@ PLIST_VARS+=	dbm nis tkinter
 PLIST.dbm=	yes
 .endif
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
-.  if (exists(${incdir}/rpc/rpc.h) || exists(${incdir}/tirpc/rpc/rpc.h))
+.  if exists(${incdir}/rpc/rpc.h)
+HAVE_RPC_H=	yes
+.  elif exists(${incdir}/tirpc/rpc/rpc.h)
+CPPFLAGS+=	-I${incdir}/tirpc
 HAVE_RPC_H=	yes
 .  endif
-.  if (exists(${incdir}/rpcsvc/yp_prot.h) || exists(${incdir}/nsl/rpcsvc/yp_prot.h))
+.  if exists(${incdir}/rpcsvc/yp_prot.h)
+HAVE_YP_PROT_H=	yes
+.  elif exists(${incdir}/nsl/rpcsvc/yp_prot.h)
+CPPFLAGS+=	-I${incdir}/nsl
 HAVE_YP_PROT_H=	yes
 .  endif
 .endfor
