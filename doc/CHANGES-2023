@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7822 2023/12/28 16:38:55 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.7823 2023/12/28 17:22:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11124,3 +11124,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ssh-audit to 3.1.0nb1 [thor 2023-12-26]
 	Updated security/wolfssl to 5.6.6 [fox 2023-12-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q4 branch [gdt 2023-12-28]
+	Updated emulators/qemu to 8.2.0 [adam 2023-12-28]
+	Updated devel/py-setuptools to 69.0.3 [adam 2023-12-28]
+	Updated games/rocksndiamonds to 4.3.8.0 [adam 2023-12-28]
+	Updated devel/py-freezegun to 1.4.0 [adam 2023-12-28]
