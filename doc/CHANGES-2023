@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7828 2023/12/28 20:43:08 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7829 2023/12/28 20:44:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11135,3 +11135,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/alacritty to 0.13.0 [pin 2023-12-28]
 	Updated sysutils/broot to 1.30.2 [pin 2023-12-28]
 	Updated sysutils/dua-cli to 2.24.2 [pin 2023-12-28]
+	Updated sysutils/fd-find to 9.0.0 [pin 2023-12-28]
