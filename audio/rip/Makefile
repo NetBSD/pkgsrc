@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/12/28 23:55:13 zafer Exp $
 #
 
 DISTNAME=	rip-1.07
 PKGREVISION=	10
 CATEGORIES=	audio perl5
-MASTER_SITES=	http://rip.sourceforge.net/download/
+MASTER_SITES=	https://rip.sourceforge.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rip.sourceforge.net/
