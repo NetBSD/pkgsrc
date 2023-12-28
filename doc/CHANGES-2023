@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7831 2023/12/28 20:46:42 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7832 2023/12/28 20:47:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11138,3 +11138,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/fd-find to 9.0.0 [pin 2023-12-28]
 	Updated devel/garden to 1.0.0 [pin 2023-12-28]
 	Updated graphics/matugen to 1.2.1 [pin 2023-12-28]
+	Updated graphics/wallust to 2.9.0 [pin 2023-12-28]
