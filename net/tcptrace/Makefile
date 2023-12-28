@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2013/02/06 19:31:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2023/12/28 22:44:22 zafer Exp $
 
 DISTNAME=	tcptrace-6.6.7
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.tcptrace.org/download/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tcptrace.org/
+HOMEPAGE=	https://github.com/blitz/tcptrace
 COMMENT=	TCP dump file analysis tool
 
 GNU_CONFIGURE=		yes
