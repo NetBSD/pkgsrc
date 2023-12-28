@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2020/07/13 20:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/28 23:36:31 zafer Exp $
 
 DISTNAME=	freeswitch-sounds-en-${VERSION}
 VERSION=	1.0.22
 CATEGORIES=	audio
-MASTER_SITES=	http://files.freeswitch.org/
+MASTER_SITES=	https://files.freeswitch.org/releases/sounds/
 DIST_SUBDIR=	freeswitch
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/07/13 20:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/12/28 23:35:19 zafer Exp $
 
 DISTNAME=	freeswitch-music-1.0.8
 CATEGORIES=	audio
-MASTER_SITES=	http://files.freeswitch.org/
+MASTER_SITES=	https://files.freeswitch.org/releases/sounds/
 DIST_SUBDIR=	freeswitch
 EXTRACT_SUFX=	.tar.bz2
 
