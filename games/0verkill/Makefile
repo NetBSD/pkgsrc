@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2019/05/23 19:23:01 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/28 23:19:28 zafer Exp $
 
 DISTNAME=	0verkill-0.16
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/release/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

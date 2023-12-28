@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2013/02/01 22:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/28 23:14:03 zafer Exp $
 #
 
 DISTNAME=		librfuncs-1.0.7
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		http://www.johnrshannon.com/NetBSD/
+MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
