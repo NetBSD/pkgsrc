@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/10/28 20:28:20 bacon Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/12/28 15:02:17 bacon Exp $
 include/xtend/common.h
 include/xtend/ctype.h
 include/xtend/dsv-accessors.h
