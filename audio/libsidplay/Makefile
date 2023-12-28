@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2018/02/05 16:10:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2023/12/28 23:47:11 zafer Exp $
 #
 
 DISTNAME=	libsidplay-1.36.59
 PKGREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	http://tnsp.org/xs-files/
+MASTER_SITES=	https://tnsp.org/xs-files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
