@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.mirrors,v 1.14 2021/04/21 08:48:44 wiz Exp $
+# $NetBSD: Makefile.mirrors,v 1.15 2023/12/28 23:07:16 zafer Exp $
 #
 # This Makefile fragment contains the mirror sites for fetching Samba.
 
@@ -7,17 +7,6 @@
 ###	http://www.samba.org/samba/download/ftp_mirrors.html
 ###
 SAMBA_MIRRORS=	\
+	https://download.samba.org/pub/samba/ \
 	ftp://mirrors.dotsrc.org/samba/ \
-	ftp://de3.samba.org/pub/samba/ \
-	ftp://ftp.ntua.gr/pub/net/samba/ \
-	ftp://ftp.hkmirror.org/pub/samba/sambaftp/ \
-	ftp://ftp.heanet.ie/pub/samba/ \
-	ftp://ftp.ring.gr.jp/pub/net/samba/ \
-	http://samba.osmirror.nl/samba/ftp/ \
-	ftp://ftp.bit.nl/mirror/samba/ \
-	ftp://www.bibsyst.no/pub/samba/ \
-	ftp://pl.samba.org/pub/unix/net/samba/ \
-	ftp://ftp.chg.ru/packages/samba/ \
-	ftp://ftp.oss.eznetsols.org/samba/ \
-	ftp://download.samba.org/pub/samba/ \
-	http://www.samba.org/samba/ftp/
+	ftp://ftp.ntua.gr/pub/net/samba/
