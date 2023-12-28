@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2023/11/16 23:09:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2023/12/28 23:10:09 zafer Exp $
 
 DISTNAME=		qmail-conf-0.60
 PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		http://woodsheep.jp/qmail-conf/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} djbdns-1.05${EXTRACT_SUFX}
-SITES.djbdns-1.05.tar.gz= http://cr.yp.to/djbdns/ ftp://cr.yp.to/djbdns/
+SITES.djbdns-1.05.tar.gz= http://cr.yp.to/djbdns/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://woodsheep.jp/qmail-conf.html
