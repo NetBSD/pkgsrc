@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/18 12:00:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/12/28 19:11:14 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/zope.testrunner-6.2.1-py3.12-nspkg.pth
 ${PYSITELIB}/zope/testrunner/__init__.py
 ${PYSITELIB}/zope/testrunner/__init__.pyc
 ${PYSITELIB}/zope/testrunner/__init__.pyo
