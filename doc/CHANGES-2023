@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7826 2023/12/28 20:40:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7827 2023/12/28 20:42:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11133,3 +11133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-lxml to 4.9.4 [adam 2023-12-28]
 	Updated devel/py-zope.testrunner to 6.2.1 [adam 2023-12-28]
 	Updated x11/alacritty to 0.13.0 [pin 2023-12-28]
+	Updated sysutils/broot to 1.30.2 [pin 2023-12-28]
