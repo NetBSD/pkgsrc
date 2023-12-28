@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2022/01/10 18:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/28 22:37:15 zafer Exp $
 
 DISTNAME=	pytemplate-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	devel python
-MASTER_SITES=	http://www.bulot.org/downloads/
+MASTER_SITES=	#
 
 MAINTAINER=	imil@gcu.info
 #HOMEPAGE=	http://bulot.org/wiki/doku.php?id=projects:python:pytemplate
