@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.28 2023/06/27 10:27:54 riastradh Exp $
+# $NetBSD: check-wrkref.mk,v 1.29 2023/12/28 22:27:27 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -18,6 +18,7 @@
 #		wrkobjdir	WRKOBJDIR
 #		pkgsrc		PKGSRCDIR
 #		buildlink	BUILDLINK_DIR and BUILDLINK_X11_DIR
+#		destdir		DESTDIR
 #		extra		see CHECK_WRKREF_EXTRA_DIRS
 #		cross		TOOLBASE (only if distinct from LOCALBASE)
 #
@@ -64,6 +65,7 @@ _CHECK_WRKREF_DIR.buildlink=	${BUILDLINK_DIR}
 .if defined(USE_X11) && ${X11_TYPE} != "modular"
 _CHECK_WRKREF_DIR.buildlink+=	${BUILDLINK_X11_DIR}
 .endif
+_CHECK_WRKREF_DIR.destdir=	${DESTDIR}
 _CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
 _CHECK_WRKREF_DIR.cross=	\
 	${${TOOLBASE} != ${LOCALBASE}:?${TOOLBASE}:}
@@ -73,7 +75,7 @@ _CHECK_WRKREF_DIRS=	# none
 .  if !defined(_CHECK_WRKREF_DIR.${d})
 PKG_FAIL_REASON+=	"[check-wrkref.mk] Invalid value \"${d:Q}\" for CHECK_WRKREF."
 PKG_FAIL_REASON+=	"[check-wrkref.mk] Valid options are:"
-.    for refvar in work tools wrappers home wrkobjdir wrksrc pkgsrc buildlink extra cross
+.    for refvar in work tools wrappers home wrkobjdir wrksrc pkgsrc buildlink destdir extra cross
 PKG_FAIL_REASON+=	"[check-wrkref.mk]	${refvar}"
 .    endfor
 .  else
