@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/12/03 15:34:38 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/12/28 22:02:37 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -87,7 +87,7 @@ CARGO_CRATE_DEPENDS+=	os_pipe-1.1.4
 CARGO_CRATE_DEPENDS+=	palette-0.7.3
 CARGO_CRATE_DEPENDS+=	palette_derive-0.7.3
 CARGO_CRATE_DEPENDS+=	partition-identity-0.3.0
-CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.0
+CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	phf-0.11.2
 CARGO_CRATE_DEPENDS+=	phf_generator-0.11.2
 CARGO_CRATE_DEPENDS+=	phf_macros-0.11.2
