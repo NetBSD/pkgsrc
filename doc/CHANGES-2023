@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7823 2023/12/28 17:22:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7824 2023/12/28 18:46:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11128,3 +11128,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 69.0.3 [adam 2023-12-28]
 	Updated games/rocksndiamonds to 4.3.8.0 [adam 2023-12-28]
 	Updated devel/py-freezegun to 1.4.0 [adam 2023-12-28]
+	Updated textproc/py-xmlschema to 2.5.1 [adam 2023-12-28]
+	Updated textproc/py-pdf to 3.17.4 [adam 2023-12-28]
