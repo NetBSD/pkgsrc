@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/07/17 19:08:10 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/28 13:29:26 thor Exp $
 
 DISTNAME=	pybind11-2.11.1
+PATCHLEVEL=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
@@ -12,7 +13,11 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_SELF_CONFLICT=	yes
+.include "../../lang/python/pyversion.mk"
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pybind11-config pybind11-config-${PYVERSSUFFIX} || ${TRUE}
 
 USE_PKG_RESOURCES=	yes
 
