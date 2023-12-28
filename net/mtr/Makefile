@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.122 2023/11/14 14:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2023/12/28 22:57:05 zafer Exp $
 
 DISTNAME=	mtr-0.95
 PKGREVISION=	5
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.bitwizard.nl/mtr/
+MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.bitwizard.nl/mtr/
