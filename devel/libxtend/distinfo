@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/10/28 20:28:20 bacon Exp $
+$NetBSD: distinfo,v 1.17 2023/12/28 15:02:17 bacon Exp $
 
-BLAKE2s (libxtend-0.2.0.tar.gz) = 7798d30eafb8131cb7ad6a8402ba795e3383ac234084a42532b1a5a78dde0d23
-SHA512 (libxtend-0.2.0.tar.gz) = ecdc77782ddeee04aa528c037189d83fb3e901d74db72eefc9bf0ace9ea168d575cd5bcdab7a35958a4be01c3510bb5d04b2286cc11827643b2de2f361416be1
-Size (libxtend-0.2.0.tar.gz) = 87784 bytes
+BLAKE2s (libxtend-0.2.0.2-5f45f635517a1877166ab1a7ca8a73d841b666bb.tar.gz) = 07759d1826fdc0463bb78b6a87d724d07634b4deee9ba63abaa919809664e950
+SHA512 (libxtend-0.2.0.2-5f45f635517a1877166ab1a7ca8a73d841b666bb.tar.gz) = 8e65a7ae5f1f5a1757e4baa36cfaaf4412efbd783067f9014aed75a76e5bf0eeb09304e6babef3e9b2ec7966b7f6ee3097dd97be134c9e4981f4ccec99cb29b9
+Size (libxtend-0.2.0.2-5f45f635517a1877166ab1a7ca8a73d841b666bb.tar.gz) = 88086 bytes
