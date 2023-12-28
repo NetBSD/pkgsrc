@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.16 2020/04/26 06:23:58 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2023/12/28 22:47:13 zafer Exp $
 # used by comms/p5-pilot-link/Makefile
 # used by comms/pilot-link/Makefile
 # used by comms/pilot-link-libs/Makefile
 
 DISTNAME=		pilot-link-${PILOT_LINK_VERS}
 CATEGORIES=		comms
-MASTER_SITES=		http://downloads.pilot-link.org/
+MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.bz2
 
 PILOT_LINK_VERS=	0.12.5
