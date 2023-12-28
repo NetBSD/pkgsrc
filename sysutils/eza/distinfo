@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2023/12/03 15:34:38 fox Exp $
+$NetBSD: distinfo,v 1.12 2023/12/28 22:02:37 fox Exp $
 
 BLAKE2s (aho-corasick-1.0.5.crate) = 2199caecbc50c93a65ce7d60055f1bcb6885adb15f1153c994432df75aa27240
 SHA512 (aho-corasick-1.0.5.crate) = 6b0a64dbfe0c166341a34cd169bc46d28e40f72db4d599a1aff5327a6e891408f39e8e92e983cf9396a8e8135f93e41550237ff3e5c8c05a5325688746fd814b
@@ -132,9 +132,9 @@ Size (errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza-0.16.2.tar.gz) = 3f9e1a721f3097b736c81aa1ef6c1e6891839e66ca9e5d929be3d7e5f506f69d
-SHA512 (eza-0.16.2.tar.gz) = d3ad82a634a7deb55156e47adf69d26e206bab1e92952b4ad7320db8876f3ea16b602295e9406a584f16489a85c8b4681935009100265756755286ccfe914dac
-Size (eza-0.16.2.tar.gz) = 1518796 bytes
+BLAKE2s (eza-0.16.3.tar.gz) = ec39b9fab41efaf38ffcd921372aabf67ade1ad91f41715b9e49a9a64a8ef2fd
+SHA512 (eza-0.16.3.tar.gz) = 30919cd94a178b1511505e0d0987877cbc3070e95c971f1486ae906062f6785ec23c8306e845fce5a7eaf3276ad0afa96fdcf2f7b799c968666d8108e59c206c
+Size (eza-0.16.3.tar.gz) = 1518802 bytes
 BLAKE2s (fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -264,9 +264,9 @@ Size (palette_derive-0.7.3.crate) = 14344 bytes
 BLAKE2s (partition-identity-0.3.0.crate) = 054e762c7c0d7e1ef37b0f79be8448640b45335438b8286ebe68a1de17e8752f
 SHA512 (partition-identity-0.3.0.crate) = 153843ea6c6a76fed350a24fad206304aa88f66755737c50b9f17bea3be434b7fe8940fdb8e31d43415accd4435c6b0c16f5ffcb5d5a1da72cdb8056c7b66bdb
 Size (partition-identity-0.3.0.crate) = 6711 bytes
-BLAKE2s (percent-encoding-2.3.0.crate) = 05999f6de1e647e105fbf3c409917a8a047d6ec80627bb6fb5f79667c706223f
-SHA512 (percent-encoding-2.3.0.crate) = 54ba129b0f3b43627707be994a281cdb69d5a7bdbc91dfeaa0226cf2834adeff7d2597dca5d11dd48b5731e831acf1284497b251abfebc0618761f98fe3c01cd
-Size (percent-encoding-2.3.0.crate) = 10196 bytes
+BLAKE2s (percent-encoding-2.3.1.crate) = 8594a9f1915da7ce4063312903905c640ff52cd3a0361bebc09357eee53aac26
+SHA512 (percent-encoding-2.3.1.crate) = 5951ea8315e52cf3acfbaa023cb9e13a136b114c54a7da0bd44619ae24cd2159d4a96469d7572a2fdabd94e19513a033387117d7ca81d0eb409fb383e4acda44
+Size (percent-encoding-2.3.1.crate) = 10235 bytes
 BLAKE2s (phf-0.11.2.crate) = 331cfe8a083739796742daa289758e91070388cbb40420771272aeebfb94ec21
 SHA512 (phf-0.11.2.crate) = 97752bfb44f3d1f9347b4ccfb6fa2fb80b3263d6f67aa703c52ae90d693c537a0db878acef828c79bd4c41e8f7ca0ea45588dee073d12c9bb0f2980c511b65b4
 Size (phf-0.11.2.crate) = 21569 bytes
