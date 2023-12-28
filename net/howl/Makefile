@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2017/08/16 20:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/12/28 23:21:40 zafer Exp $
 
 DISTNAME=		howl-1.0.0
 CATEGORIES=		net
-MASTER_SITES=		http://www.porchdogsoft.com/download/
+MASTER_SITES=		#
 
 MAINTAINER=		nathanw@NetBSD.org
 #HOMEPAGE=		http://www.porchdogsoft.com/products/howl/
