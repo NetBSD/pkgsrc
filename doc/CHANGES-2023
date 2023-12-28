@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7833 2023/12/28 21:34:53 fox Exp $
+$NetBSD: CHANGES-2023,v 1.7834 2023/12/28 22:08:15 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11140,3 +11140,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/matugen to 1.2.1 [pin 2023-12-28]
 	Updated graphics/wallust to 2.9.0 [pin 2023-12-28]
 	Updated audio/fasttracker2 to 1.74 [fox 2023-12-28]
+	Updated sysutils/eza to 0.16.3 [fox 2023-12-28]
