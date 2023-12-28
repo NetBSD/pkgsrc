@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/11/29 10:53:11 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/12/28 13:29:26 thor Exp $
 
 BUILDLINK_TREE+=	py-pybind11
 
@@ -9,6 +9,9 @@ PY_PYBIND11_BUILDLINK3_MK:=
 # to build, and avoid pulling in unwanted indirect buildlink3 dependencies.
 PYTHON_FOR_BUILD_ONLY?=		yes
 .include "../../lang/python/pyversion.mk"
+
+pre-configure:
+	${LN} -sf ${PREFIX}/bin/pybind11-config-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/pybind11-config
 
 BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.5.0
 BUILDLINK_PKGSRCDIR.py-pybind11?=	../../devel/py-pybind11
