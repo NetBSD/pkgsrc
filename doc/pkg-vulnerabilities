@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.102 2023/12/29 19:42:58 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.103 2023/12/29 20:29:51 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25845,3 +25845,4 @@ gitea-[0-9]*	improper-rendering	https://pkg.go.dev/vuln/GO-2023-1988
 openssh<9.6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-51385
 libssh<0.10.6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-6004
 p5-Spreadsheet-ParseExcel<0.6600		remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-7101
+filezilla<3.66.4	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
