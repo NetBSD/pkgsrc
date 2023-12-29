@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7842 2023/12/29 17:35:40 he Exp $
+$NetBSD: CHANGES-2023,v 1.7843 2023/12/29 19:38:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11159,3 +11159,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/seamonkey to 2.53.16nb9 [he 2023-12-29]
 	Updated www/firefox115 to 115.5.0nb1 [he 2023-12-29]
 	Updated mail/thunderbird to 115.5.1nb1 [he 2023-12-29]
+	Updated archivers/xarchiver to 0.5.4.22 [wiz 2023-12-29]
