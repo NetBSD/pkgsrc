@@ -1,8 +1,8 @@
-# $NetBSD: bjam.mk,v 1.25 2023/08/22 20:16:09 adam Exp $
+# $NetBSD: bjam.mk,v 1.26 2023/12/29 09:16:26 adam Exp $
 
 .include "../../devel/boost-build/toolset.mk"
 
-TOOL_DEPENDS+=	boost-jam-1.83.*:../../devel/boost-jam
+TOOL_DEPENDS+=	boost-jam-${BOOST_VERSION}:../../devel/boost-jam
 
 BJAM=		${TOOLBASE}/bin/b2
 
