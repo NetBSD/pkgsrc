@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.191 2023/12/23 09:04:25 zafer Exp $
+# $NetBSD: sites.mk,v 1.192 2023/12/29 00:14:04 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -42,8 +42,6 @@ MASTER_SITE_PERL_CPAN+= \
 
 MASTER_SITE_R_CRAN+=    \
 	https://cran.r-project.org/src/ \
-	ftp://cran.r-project.org/pub/R/src/ \
-	ftp://cran.at.r-project.org/pub/R/src/ \
 	http://lib.stat.cmu.edu/R/CRAN/src/ \
 	https://stat.ethz.ch/CRAN/src/ \
 	https://www.stats.bris.ac.uk/R/src/
