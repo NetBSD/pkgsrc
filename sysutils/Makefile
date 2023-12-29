@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1105 2023/12/16 22:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1106 2023/12/29 20:55:52 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -486,6 +486,7 @@ SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-wipe
 SUBDIR+=	neofetch
+SUBDIR+=	netbsd_exporter
 SUBDIR+=	netbt-hcidump
 SUBDIR+=	netmask
 SUBDIR+=	news
@@ -704,6 +705,7 @@ SUBDIR+=	sleepwatcher
 SUBDIR+=	slocate
 SUBDIR+=	smartmontools
 SUBDIR+=	smbldap-tools
+SUBDIR+=	snmp_exporter
 SUBDIR+=	socket
 SUBDIR+=	solid
 SUBDIR+=	spice-gtk
