@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7837 2023/12/29 11:33:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7838 2023/12/29 16:43:48 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11152,3 +11152,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/boost to 1.84.0 [adam 2023-12-29]
 	Updated devel/subversion to 1.14.3 [adam 2023-12-29]
 	Updated security/py-cryptodome to 3.19.1 [adam 2023-12-29]
+	Added math/py-hmmlearn version 0.3.0 [bacon 2023-12-29]
