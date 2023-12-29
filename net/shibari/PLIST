@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/29 16:55:09 schmonz Exp $
+bin/shibari-server-tcp
+bin/shibari-server-udp
+include/shibari/cache.h
+include/shibari/client.h
+include/shibari/common.h
+include/shibari/config.h
+include/shibari/constants.h
+include/shibari/dcache.h
+include/shibari/log.h
+include/shibari/packet.h
+include/shibari/server.h
+include/shibari/shibari.h
+include/shibari/tdb.h
+include/shibari/util.h
+lib/shibari/libdcache.a
+lib/shibari/libshibari-common.a
+lib/shibari/libshibari-server.a
+man/man8/shibari-server-tcp.8
+man/man8/shibari-server-udp.8
