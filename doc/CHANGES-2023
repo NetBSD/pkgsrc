@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7835 2023/12/29 00:45:12 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7836 2023/12/29 09:18:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11142,3 +11142,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/fasttracker2 to 1.74 [fox 2023-12-28]
 	Updated sysutils/eza to 0.16.3 [fox 2023-12-28]
 	Updated chat/twitch-tui to 2.6.2 [schmonz 2023-12-29]
+	Updated devel/boost-build to 1.84.0 [adam 2023-12-29]
+	Updated devel/boost-docs to 1.84.0 [adam 2023-12-29]
+	Updated devel/boost-headers to 1.84.0 [adam 2023-12-29]
+	Updated devel/boost-jam to 1.84.0 [adam 2023-12-29]
+	Updated devel/boost-libs to 1.84.0 [adam 2023-12-29]
+	Updated devel/boost-mpi to 1.84.0 [adam 2023-12-29]
+	Updated devel/py-boost to 1.84.0 [adam 2023-12-29]
+	Updated meta-pkgs/boost to 1.84.0 [adam 2023-12-29]
