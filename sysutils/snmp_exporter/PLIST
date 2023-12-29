@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/29 20:55:44 wiz Exp $
+bin/generator
+bin/snmp_exporter
+share/doc/snmp_exporter/README.md
+share/examples/snmp_exporter/snmp.yml
