@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2023/11/08 13:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2023/12/29 11:30:53 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	7
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
@@ -18,7 +17,7 @@ PY_PATCHPLIST=		YES
 REPLACE_PYTHON=		tools/hook-scripts/mailer/mailer.py
 PYTHON_SELF_CONFLICT=	YES
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_TARGET=		swig-py
 INSTALL_TARGET=		install-swig-py
