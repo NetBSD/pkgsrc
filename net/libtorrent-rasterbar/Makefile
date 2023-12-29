@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/10/24 22:10:23 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/29 18:24:56 adam Exp $
 
 DISTNAME=	libtorrent-rasterbar-2.0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arvidn/}
 GITHUB_PROJECT=	libtorrent

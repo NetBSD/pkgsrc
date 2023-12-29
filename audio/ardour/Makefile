@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2023/11/14 14:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2023/12/29 18:24:34 adam Exp $
 
 DISTNAME=	Ardour-6.9.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	audio
 # currently, distfiles must be downloaded by hand from ardour.org
 # and uploaded using `make upload-distfiles`.
