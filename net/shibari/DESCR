@@ -1,0 +1,5 @@
+shibari is a collection of DNS tools for Unix systems, as an alternative
+to BIND, Unbound, djbdns or other similar suites of programs.
+
+At the moment, only a DNS server is provided. shibari aims to integrate
+s6-dns over time, and eventually replace it.
