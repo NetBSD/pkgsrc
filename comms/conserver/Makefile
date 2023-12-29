@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2023/07/30 11:49:48 hauke Exp $
+# $NetBSD: Makefile,v 1.37 2023/12/29 01:02:35 zafer Exp $
 #
 
 DISTNAME=	conserver-7.2.7
 PKGREVISION=	6
 CATEGORIES=	comms
-MASTER_SITES=	http://www.conserver.com/
+MASTER_SITES=	https://www.conserver.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.conserver.com/
