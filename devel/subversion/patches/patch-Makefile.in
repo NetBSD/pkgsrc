@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/05/27 16:10:08 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2023/12/29 11:30:53 adam Exp $
 
 Apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
 
---- Makefile.in.orig	2019-01-22 13:55:54.000000000 +0000
+--- Makefile.in.orig	2022-11-16 04:00:03.000000000 +0000
 +++ Makefile.in
 @@ -96,7 +96,7 @@ swig_rbdir = $(SWIG_RB_SITE_ARCH_DIR)/sv
  toolsdir = @bindir@/svn-tools
@@ -13,7 +13,7 @@ Apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
  
  javahl_javadir = @libdir@/svn-javahl
  javahl_javahdir = @libdir@/svn-javahl/include
-@@ -873,11 +873,11 @@ clean-swig-headers:
+@@ -880,11 +880,11 @@ clean-swig-headers:
  extraclean-swig-headers: clean-swig-headers
  	$(EXTRACLEAN_SWIG_HEADERS)
  
@@ -22,8 +22,8 @@ Apply https://bugs.gentoo.org/show_bug.cgi?id=388607 for MAKE_JOBS_SAFE=yes
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: libsvn_swig_perl $(SWIG_PL_DIR)/native/Makefile.PL
--	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix)
-+	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL PREFIX=$(prefix) INSTALLDIRS=vendor
+-	cd $(SWIG_PL_DIR)/native; $(SWIG_PL_PERL) Makefile.PL PREFIX=$(prefix)
++	cd $(SWIG_PL_DIR)/native; $(SWIG_PL_PERL) Makefile.PL PREFIX=$(prefix) INSTALLDIRS=vendor
  
  # There is a "readlink -f" command on some systems for the same purpose,
  # but it's not as portable (e.g. Mac OS X doesn't have it).  These should

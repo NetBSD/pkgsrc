@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2023/11/08 13:19:00 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2023/12/29 11:30:53 adam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
-PKGREVISION=	8
 COMMENT=	Version control system, base programs and libraries
 
 # on at least solaris, configure fails to figure out
@@ -14,6 +13,7 @@ USE_TOOLS+=		msgfmt msgmerge xgettext pkg-config
 TOOLS_BROKEN+=		perl
 
 CONFIGURE_ARGS+=	--without-apxs
+TEST_TARGET=		check
 
 APU_OPTIONS=		PKG_BUILD_OPTIONS.apr-util
 BUILD_DEFS+=		${APU_OPTIONS}
