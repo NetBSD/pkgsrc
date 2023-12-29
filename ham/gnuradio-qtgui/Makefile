@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2023/11/14 14:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/12/29 18:24:50 adam Exp $
 
 PKGNAME=	gnuradio-qtgui-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt GUI module of GNU Radio
 
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5

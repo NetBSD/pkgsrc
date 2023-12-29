@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2023/11/08 13:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/12/29 18:24:36 adam Exp $
 
 DISTNAME=	znc-1.8.2
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	chat
 MASTER_SITES=	https://znc.in/releases/archive/
 

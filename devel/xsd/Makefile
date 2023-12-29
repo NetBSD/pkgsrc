@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.43 2023/12/29 18:24:42 adam Exp $
 
 DISTNAME=		xsd-4.0.0+dep
 PKGNAME=		${DISTNAME:S/+dep//1}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel textproc
 MASTER_SITES=		https://www.codesynthesis.com/download/xsd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=		.tar.bz2
