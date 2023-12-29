@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2020/05/22 09:09:58 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/12/29 00:57:37 zafer Exp $
 
 DISTNAME=	gsm-1.0.19
 CATEGORIES=	audio
-MASTER_SITES=	http://www.quut.com/gsm/
+MASTER_SITES=	https://www.quut.com/gsm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quut.com/gsm/
