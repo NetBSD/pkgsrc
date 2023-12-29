@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7840 2023/12/29 17:06:50 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7841 2023/12/29 17:20:16 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11155,3 +11155,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/py-hmmlearn version 0.3.0 [bacon 2023-12-29]
 	Added net/shibari version 0.0.1.0 [schmonz 2023-12-29]
 	Updated mail/exim to 4.97.1 [bsiegert 2023-12-29]
+	Updated www/firefox to 120.0.1nb1 [he 2023-12-29]
