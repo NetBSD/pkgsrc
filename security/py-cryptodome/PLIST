@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2023/09/27 15:36:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/12/29 11:33:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -109,6 +109,9 @@ ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_siv.pyo
 ${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.abi3.so
 ${PLIST.py2x}${PYSITELIB}/Crypto/Cipher/_pkcs1_decode.so
+${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.py
+${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.pyc
+${PYSITELIB}/Crypto/Cipher/_pkcs1_oaep_decode.pyo
 ${PYSITELIB}/Crypto/Cipher/_raw_aes.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_arc2.${SOEXT}
 ${PYSITELIB}/Crypto/Cipher/_raw_blowfish.${SOEXT}
@@ -527,6 +530,9 @@ ${PYSITELIB}/Crypto/SelfTest/Math/test_Primality.pyo
 ${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.py
 ${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.pyc
 ${PYSITELIB}/Crypto/SelfTest/Math/test_modexp.pyo
+${PYSITELIB}/Crypto/SelfTest/Math/test_modmult.py
+${PYSITELIB}/Crypto/SelfTest/Math/test_modmult.pyc
+${PYSITELIB}/Crypto/SelfTest/Math/test_modmult.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyo
