@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2023/12/19 12:28:50 thor Exp $
+# $NetBSD: Makefile,v 1.583 2023/12/29 16:44:07 bacon Exp $
 
 COMMENT=	Mathematics
 
@@ -400,6 +400,7 @@ SUBDIR+=	py-ephem
 SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gwcs
+SUBDIR+=	py-hmmlearn
 SUBDIR+=	py-infinity
 SUBDIR+=	py-intervals
 SUBDIR+=	py-jplephem
