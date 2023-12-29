@@ -1,0 +1,11 @@
+This exporter is the recommended way to expose SNMP data in a format
+which Prometheus can ingest.
+
+To simply get started, it's recommended to use the `if_mib` module
+with switches, access points, or routers using the `public_v2` auth
+module, which should be a read-only access community on the target
+device.
+
+Note, community strings in SNMP are not considered secrets, as they
+are sent unencrypted in SNMP v1 and v2c. For secure access, SNMP
+v3 is required.
