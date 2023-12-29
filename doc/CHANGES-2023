@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7841 2023/12/29 17:20:16 he Exp $
+$NetBSD: CHANGES-2023,v 1.7842 2023/12/29 17:35:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11156,3 +11156,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/shibari version 0.0.1.0 [schmonz 2023-12-29]
 	Updated mail/exim to 4.97.1 [bsiegert 2023-12-29]
 	Updated www/firefox to 120.0.1nb1 [he 2023-12-29]
+	Updated www/seamonkey to 2.53.16nb9 [he 2023-12-29]
+	Updated www/firefox115 to 115.5.0nb1 [he 2023-12-29]
+	Updated mail/thunderbird to 115.5.1nb1 [he 2023-12-29]
