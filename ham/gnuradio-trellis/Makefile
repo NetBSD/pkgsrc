@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2023/11/14 14:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2023/12/29 18:24:50 adam Exp $
 
 PKGNAME=	gnuradio-trellis-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Trellis-based encoding and decoding algorithms for GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

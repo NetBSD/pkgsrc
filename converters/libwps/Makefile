@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/07/18 13:01:21 nia Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/29 18:24:38 adam Exp $
 
 DISTNAME=	libwps-0.4.12
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwps/}
 EXTRACT_SUFX=	.tar.xz

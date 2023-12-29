@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/07/21 08:40:04 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/12/29 18:24:41 adam Exp $
 
 BUILDLINK_TREE+=	libcutl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libcutl
 LIBCUTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcutl+=	libcutl>=1.10.0
+BUILDLINK_ABI_DEPENDS.libcutl?=	libcutl>=1.10.0nb6
 BUILDLINK_PKGSRCDIR.libcutl?=	../../devel/libcutl
 
 .include "../../devel/boost-headers/buildlink3.mk"

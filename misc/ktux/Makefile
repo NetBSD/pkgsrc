@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/11/12 13:22:50 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/12/29 18:24:53 adam Exp $
 
 DISTNAME=	ktux-15.08.3
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	misc
 COMMENT=	Tux Screen Saver
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
