@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2023/12/29 20:55:02 wiz Exp $
+
+Allow overriding installation paths.
+
+--- Makefile.orig	2023-12-27 17:56:57.000000000 +0000
++++ Makefile
+@@ -2,6 +2,8 @@ CC=cc
+ CFLAGS=-Wall -Wextra
+ TARGET=netbsd_exporter
+ 
++PREFIX?=/usr
++MANDIR?=share/man
+ PACKAGE=$(TARGET)-$(VERSION).tar.gz
+ 
+ all: $(TARGET)
+@@ -21,7 +23,9 @@ dist:	$(TARGET)
+ 	(cd dist;tar -cvf ../$(PACKAGE) .)
+ 
+ install: $(TARGET)
+-	cp $(TARGET) /usr/libexec
+-	cp $(TARGET).8 /usr/share/man/man8
++	install -d $(DESTDIR)$(PREFIX)/libexec
++	cp $(TARGET) $(DESTDIR)$(PREFIX)/libexec
++	install -d $(DESTDIR)$(PREFIX)/$(MANDIR)/man8
++	cp $(TARGET).8 $(DESTDIR)$(PREFIX)/$(MANDIR)/man8
+ 
+ .PHONY: all clean install
