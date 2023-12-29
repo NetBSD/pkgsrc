@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7836 2023/12/29 09:18:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7837 2023/12/29 11:33:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11150,3 +11150,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/boost-mpi to 1.84.0 [adam 2023-12-29]
 	Updated devel/py-boost to 1.84.0 [adam 2023-12-29]
 	Updated meta-pkgs/boost to 1.84.0 [adam 2023-12-29]
+	Updated devel/subversion to 1.14.3 [adam 2023-12-29]
+	Updated security/py-cryptodome to 3.19.1 [adam 2023-12-29]
