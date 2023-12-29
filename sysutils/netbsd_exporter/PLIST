@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/29 20:55:02 wiz Exp $
+libexec/netbsd_exporter
+man/man8/netbsd_exporter.8
