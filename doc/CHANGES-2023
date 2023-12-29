@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7845 2023/12/29 19:53:18 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.7846 2023/12/29 20:29:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11162,3 +11162,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/xarchiver to 0.5.4.22 [wiz 2023-12-29]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.6600 [wiz 2023-12-29]
 	Updated lang/go-bin to 1.21.5 [bsiegert 2023-12-29]
+	Updated net/filezilla to 3.66.4 [wiz 2023-12-29]
