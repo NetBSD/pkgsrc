@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2017/01/19 18:52:03 agc Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/29 00:38:59 zafer Exp $
 #
 
 DISTNAME=		hmmer-3.0
 CATEGORIES=		biology
-MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
-MASTER_SITES+=		http://selab.janelia.org/software/hmmer3/3.0/
-MASTER_SITES+=		ftp://selab.janelia.org/pub/software/hmmer3/3.0/
+MASTER_SITES=		http://eddylab.org/software/hmmer/
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://hmmer.janelia.org/
+HOMEPAGE=		http://hmmer.org/
 COMMENT=		Implementation of profile HMM software for protein sequence analysis
 LICENSE=		gnu-gpl-v3
 
