@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/12/05 16:04:13 schmonz Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/12/29 00:45:05 schmonz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -27,8 +27,8 @@ CARGO_CRATE_DEPENDS+=	cc-1.0.82
 CARGO_CRATE_DEPENDS+=	cesu8-1.1.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.31
-CARGO_CRATE_DEPENDS+=	clap-4.4.8
-CARGO_CRATE_DEPENDS+=	clap_builder-4.4.8
+CARGO_CRATE_DEPENDS+=	clap-4.4.11
+CARGO_CRATE_DEPENDS+=	clap_builder-4.4.11
 CARGO_CRATE_DEPENDS+=	clap_derive-4.4.7
 CARGO_CRATE_DEPENDS+=	clap_lex-0.6.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-4.5.0
@@ -152,11 +152,11 @@ CARGO_CRATE_DEPENDS+=	num-traits-0.2.16
 CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
 CARGO_CRATE_DEPENDS+=	objc-0.2.7
 CARGO_CRATE_DEPENDS+=	object-0.31.1
-CARGO_CRATE_DEPENDS+=	once_cell-1.18.0
-CARGO_CRATE_DEPENDS+=	openssl-0.10.56
+CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
+CARGO_CRATE_DEPENDS+=	openssl-0.10.60
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
-CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.91
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.96
 CARGO_CRATE_DEPENDS+=	owo-colors-3.5.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.11.2
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
@@ -233,7 +233,7 @@ CARGO_CRATE_DEPENDS+=	time-core-0.1.1
 CARGO_CRATE_DEPENDS+=	time-macros-0.2.11
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-CARGO_CRATE_DEPENDS+=	tokio-1.34.0
+CARGO_CRATE_DEPENDS+=	tokio-1.35.0
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.2.0
 CARGO_CRATE_DEPENDS+=	tokio-native-tls-0.3.1
 CARGO_CRATE_DEPENDS+=	tokio-stream-0.1.14
