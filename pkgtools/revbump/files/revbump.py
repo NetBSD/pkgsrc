@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.5 2023/08/14 05:12:15 wiz Exp $
+# $NetBSD: revbump.py,v 1.6 2023/12/29 21:23:40 adam Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,7 @@ import glob
 import os
 import pathlib
 import re
+import shutil
 import subprocess
 import sys
 
@@ -57,7 +58,8 @@ def bl3bump(path):
         return
     new_path = old_path + '.modified'
 
-    version_process = subprocess.run(['make', 'show-var', 'VARNAME=PKGNAME'],
+    make_bin = shutil.which('bmake') or shutil.which('make')
+    version_process = subprocess.run([make_bin, 'show-var', 'VARNAME=PKGNAME'],
                                      capture_output=True,
                                      check=True,
                                      cwd=args.pkgsrcdir + '/' + path,
