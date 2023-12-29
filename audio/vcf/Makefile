@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2019/12/29 17:36:15 sevan Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/29 01:07:02 zafer Exp $
 #
 
 DISTNAME=	vcf-0.0.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.suse.de/~mana/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
