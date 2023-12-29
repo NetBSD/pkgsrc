@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/12/19 19:23:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/29 19:52:06 bsiegert Exp $
 
-PKGNAME=	go-bin-1.19.4
+PKGNAME=	go-bin-1.21.5
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.google.com/go/
 
@@ -20,8 +20,9 @@ WRKSRC=		${WRKDIR}/go
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
 REPLACE_BASH+=			*/*.bash */*/*.bash */*/*/*.bash */*/*/*/*/*/*.bash
-REPLACE_BASH+=			*/*/*.sh */*/*/*.sh */*/*/*/*.sh
+REPLACE_BASH+=			*/*/*.sh */*/*/*.sh */*/*/*/*.sh */*/*/*/*/*/*/*.sh
 REPLACE_BASH+=			misc/arm/a misc/wasm/go_js_wasm_exec
+REPLACE_BASH+=			misc/wasm/go_wasip1_wasm_exec
 CHECK_INTERPRETER_SKIP+=	*/*.rc
 CHECK_PORTABILITY_SKIP+=	misc/ios/clangwrap.sh
 CHECK_SHLIBS_SUPPORTED=		no
@@ -72,8 +73,7 @@ EXTRACT_ONLY+=			${DIST.linux-arm64}
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
-DIST.netbsd-arm64=		go1.19.4.netbsd-arm64.tar.gz
-SITES.${DIST.netbsd-arm64}=	https://cdn.NetBSD.org/pub/pkgsrc/misc/tnn/golang-aarch64/
+DIST.netbsd-arm64=		go${PKGVERSION_NOREV}.netbsd-arm64.tar.gz
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(mdi)
 .  if !make(distinfo)
 PKGNAME=			go-bin-1.19.4
