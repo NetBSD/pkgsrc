@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.12 2023/12/04 03:46:03 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.13 2023/12/29 17:34:38 he Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -62,6 +62,7 @@ USE_TOOLS+=		bsdtar
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
+CFLAGS+=		-mstackrealign
 .endif
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}third_party/python/glean_parser/Makefile
