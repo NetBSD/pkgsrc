@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7849 2023/12/29 20:58:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7850 2023/12/29 21:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11166,3 +11166,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/netbsd_exporter version 0.9.3 [wiz 2023-12-29]
 	Added sysutils/snmp_exporter version 0.25.0 [wiz 2023-12-29]
 	Added mail/aerc version 0.16.0 [wiz 2023-12-29]
+	Updated games/rocksndiamonds to 4.3.8.1 [adam 2023-12-29]
+	Updated devel/py-cython to 3.0.7 [adam 2023-12-29]
