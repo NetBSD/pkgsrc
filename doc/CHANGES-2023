@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7848 2023/12/29 20:56:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7849 2023/12/29 20:58:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11165,3 +11165,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/filezilla to 3.66.4 [wiz 2023-12-29]
 	Added sysutils/netbsd_exporter version 0.9.3 [wiz 2023-12-29]
 	Added sysutils/snmp_exporter version 0.25.0 [wiz 2023-12-29]
+	Added mail/aerc version 0.16.0 [wiz 2023-12-29]
