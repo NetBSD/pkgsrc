@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/11/14 14:02:59 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2023/12/29 15:16:52 zafer Exp $
 #
 
 PKGVER=		0.8.8
@@ -6,7 +6,7 @@ PKGNAME=	compiz-fusion-plugins-extra-${PKGVER}
 DISTNAME=	compiz-plugins-extra-${PKGVER}
 PKGREVISION=	64
 CATEGORIES=	wm x11
-MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiz.org/
