@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.98 2023/08/22 20:16:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.99 2023/12/29 09:16:25 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -10,7 +10,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.83.0
+BOOST_VERSION=		1.84.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
