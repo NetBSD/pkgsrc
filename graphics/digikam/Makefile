@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.217 2023/11/15 20:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2023/12/29 18:24:46 adam Exp $
 
 DISTNAME=	digiKam-8.1.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
