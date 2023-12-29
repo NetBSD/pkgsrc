@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2013/12/10 12:06:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/29 01:17:06 zafer Exp $
 #
 
 DISTNAME=		cvsclone
 PKGNAME=		cvsclone-0.00
 CATEGORIES=		devel scm
-MASTER_SITES=		http://samba.org/ftp/tridge/rtc/
+MASTER_SITES=		https://www.samba.org/ftp/tridge/rtc/
 EXTRACT_SUFX=		.l
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
