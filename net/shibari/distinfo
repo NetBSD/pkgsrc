@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/12/29 16:55:09 schmonz Exp $
+
+BLAKE2s (shibari-0.0.1.0.tar.gz) = ffbcf349cc7945d5c27e157b46a8ed79746563fed6a735de30b5c17e83a564b9
+SHA512 (shibari-0.0.1.0.tar.gz) = 735c18398d25248c6fde2be791ee1443b40856fe9bfce82b7569a09456648088250ea0cdebe3ff5247970624df32202e365922ec38a446948fe4f1e5cc1cc8d1
+Size (shibari-0.0.1.0.tar.gz) = 33559 bytes
+BLAKE2s (shibari-man-pages-0.0.1.0.1.tar.gz) = 4ff68bcd6df6c419217efc76d408597422ba49f4a9f86da2671f6b03236aff8e
+SHA512 (shibari-man-pages-0.0.1.0.1.tar.gz) = d54184040acc43f87ad49f259764a915b19c14f627d0f96142c0b966e96451a45b849625a4a6f6a4c3ab4cdc9fc2e62c748284cfbf831c14ce1ef6177639508f
+Size (shibari-man-pages-0.0.1.0.1.tar.gz) = 5545 bytes
