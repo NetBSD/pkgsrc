@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7834 2023/12/28 22:08:15 fox Exp $
+$NetBSD: CHANGES-2023,v 1.7835 2023/12/29 00:45:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11141,3 +11141,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.9.0 [pin 2023-12-28]
 	Updated audio/fasttracker2 to 1.74 [fox 2023-12-28]
 	Updated sysutils/eza to 0.16.3 [fox 2023-12-28]
+	Updated chat/twitch-tui to 2.6.2 [schmonz 2023-12-29]
