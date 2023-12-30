@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2019/05/23 19:22:55 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2023/12/30 01:13:18 zafer Exp $
 #
 
 DISTNAME=	juke-0.7
 PKGREVISION=	5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
+MASTER_SITES=	https://www.moll.no/oyvind/distfiles/
 
 MAINTAINER=	mob@bicekru.org
 #HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/

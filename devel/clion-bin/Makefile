@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/30 01:20:30 zafer Exp $
 
 VERSION=	2021.2
 DISTNAME=	CLion-${VERSION}
 PKGNAME=	clion-bin-${VERSION}
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	http://download.jetbrains.com/cpp/
+MASTER_SITES=	https://download.jetbrains.com/cpp/
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.jetbrains.org/

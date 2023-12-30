@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/07/18 14:11:14 nia Exp $
+# $NetBSD: Makefile,v 1.34 2023/12/30 01:22:35 zafer Exp $
 
 DISTNAME=	cppunit-1.15.1
 CATEGORIES=	devel
-MASTER_SITES=	http://dev-www.libreoffice.org/src/
+MASTER_SITES=	https://dev-www.libreoffice.org/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/cppunit
