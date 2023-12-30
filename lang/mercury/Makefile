@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.69 2023/06/06 12:41:44 riastradh Exp $
+# $NetBSD: Makefile,v 1.70 2023/12/30 19:56:18 zafer Exp $
 
 DISTNAME=		mercury-srcdist-14.01.1
 PKGNAME=		mercury-14.01.1
 PKGREVISION=		13
 CATEGORIES=		lang
-MASTER_SITES=		http://dl.mercurylang.org/release/
-MASTER_SITES+=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/
-MASTER_SITES+=		http://www.mercury.cs.mu.oz.au/download/files/
-MASTER_SITES+=		${MASTER_SITE_SUNSITE:=devel/lang/mercury/}
+MASTER_SITES=		https://dl.mercurylang.org/release/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.mercurylang.org/
