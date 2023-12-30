@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/05/03 23:25:16 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/12/30 02:24:50 gutteridge Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -66,6 +66,7 @@ share/gtk-doc/html/tumbler/tumbler.devhelp2
 share/gtk-doc/html/tumbler/up-insensitive.png
 share/gtk-doc/html/tumbler/up.png
 share/icons/hicolor/32x32/apps/org.xfce.tumbler.png
+share/icons/hicolor/64x64/apps/org.xfce.tumbler.png
 share/locale/ar/LC_MESSAGES/tumbler.mo
 share/locale/ast/LC_MESSAGES/tumbler.mo
 share/locale/be/LC_MESSAGES/tumbler.mo
