@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.239 2023/12/28 17:18:58 adam Exp $
+# $NetBSD: Makefile,v 1.240 2023/12/30 16:20:19 wiz Exp $
 
 DISTNAME=	setuptools-69.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/pypa/setuptools
 COMMENT=	New Python packaging system
 LICENSE=	python-software-foundation OR zpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-ini2toml>=0.9:../../textproc/py-ini2toml
@@ -24,29 +26,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.0.0:../../textproc/py-tomli_w
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=13.0.0:../../devel/py-virtualenv
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYDISTUTILSPKG=		no
-PY_PATCHPLIST=		yes
-
-do-build: ensurepip
-.PHONY: ensurepip
-
-ensurepip:
-	${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} -m ensurepip --user
-
-do-install:
-	cd ${WRKSRC} && PYTHONPATH=${WRKDIR}/.home/.local/lib/python${PYVERSSUFFIX}/site-packages \
-        ${TOOL_PYTHONBIN} -m pip install --no-cache-dir --no-deps --disable-pip-version-check \
-                --root ${DESTDIR} --prefix ${PREFIX} --compile --force-reinstall -I .
-
 # Pick setuptools.tests which are not built nor installed.
+# 3 failed, 1155 passed, 28 skipped, 6 xfailed, 4 xpassed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
