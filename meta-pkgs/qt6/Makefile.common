@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2023/11/30 20:11:26 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/12/30 21:39:26 zafer Exp $
 # used by x11/qt6-qtbase/Makefile.common
 
 QTVERSION=	6.6.1
 
 .include "../../mk/bsd.prefs.mk"
 
-MASTER_SITES=	http://download.qt.io/archive/qt/${QTVERSION:R}/${QTVERSION}/submodules/
+MASTER_SITES=	https://download.qt.io/archive/qt/${QTVERSION:R}/${QTVERSION}/submodules/
 
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
