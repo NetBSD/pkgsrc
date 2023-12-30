@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2020/12/23 13:23:52 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2023/12/30 21:30:47 zafer Exp $
 #
 
 DISTNAME=	splint-3.1.2.src
 PKGNAME=	${DISTNAME:S/.src$//}
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	https://www.splint.org/downloads/
+MASTER_SITES=	https://splint.org/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
