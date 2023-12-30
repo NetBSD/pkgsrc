@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/11/07 22:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/12/30 10:14:45 wiz Exp $
 
-DISTNAME=		mpc-0.34
-PKGREVISION=		3
+DISTNAME=		mpc-0.35
 CATEGORIES=		audio
 MASTER_SITES=		https://www.musicpd.org/download/mpc/0/
 EXTRACT_SUFX=		.tar.xz
