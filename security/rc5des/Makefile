@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2018/01/02 05:37:24 maya Exp $
+# $NetBSD: Makefile,v 1.23 2023/12/30 20:31:52 zafer Exp $
 #
 
 DISTNAME=		rc5-mlg-004
 PKGNAME=		rc5des-0.4
 PKGREVISION=		1
 CATEGORIES=		security
-MASTER_SITES=		http://www.flame.org/netbsd-rc5/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.distributed.net/rc5/
