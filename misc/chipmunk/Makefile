@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2019/11/03 17:04:20 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2023/12/30 12:19:32 zafer Exp $
 #
 
 DISTNAME=	chipmunk-1.4
 PKGREVISION=	2
 CATEGORIES=	misc
-MASTER_SITES=	http://www.bitwizard.nl/chipmunk/
+MASTER_SITES=	https://www.aydogan.net/distfiles/misc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.bitwizard.nl/chipmunk/index.html
+#HOMEPAGE=	https://www.bitwizard.nl/chipmunk/index.html
 COMMENT=	Shell-like tool for hardware debugging
 
 BUILD_TARGET=	chipmunk

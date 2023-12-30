@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2023/12/30 12:15:44 zafer Exp $
 
 DISTNAME=	same-1.8
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.bitwizard.nl/same/
+MASTER_SITES=	https://www.aydogan.net/distfiles/sysutils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.bitwizard.nl/
