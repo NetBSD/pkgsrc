@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7867 2023/12/30 10:26:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7868 2023/12/30 10:28:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11185,3 +11185,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/libde265 to 1.0.15 [wiz 2023-12-30]
 	Updated textproc/py-black to 23.12.1 [wiz 2023-12-30]
 	Updated security/py-cyclonedx-python-lib to 6.1.0 [wiz 2023-12-30]
+	Updated fonts/py-fonttools to 4.47.0 [wiz 2023-12-30]
