@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7875 2023/12/30 10:51:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7876 2023/12/30 10:55:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11193,3 +11193,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/scons4 to 4.6.0 [wiz 2023-12-30]
 	Updated geography/shapelib to 1.6.0 [wiz 2023-12-30]
 	Updated textproc/tree-sitter-go-mod to 1.0.1 [wiz 2023-12-30]
+	Updated devel/plasma-wayland-protocols to 1.12.0 [wiz 2023-12-30]
