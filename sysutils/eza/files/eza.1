@@ -231,6 +231,15 @@ Show mount details (Linux and Mac only)
 \f[V]-n\f[R], \f[V]--numeric\f[R]
 List numeric user and group IDs.
 .TP
+\f[V]-O\f[R], \f[V]--flags\f[R]
+List file flags on Mac and BSD systems and file attributes on Windows
+systems.
+By default, Windows attributes are displayed in a long form.
+To display in attributes as single character set the environment
+variable \f[V]EZA_WINDOWS_ATTRIBUTES=short\f[R].
+On BSD systems see chflags(1) for a list of file flags and their
+meanings.
+.TP
 \f[V]-S\f[R], \f[V]--blocksize\f[R]
 List each file\[cq]s size of allocated file system blocks.
 .TP
@@ -242,12 +251,20 @@ Valid timestamp fields are `\f[V]modified\f[R]', `\f[V]changed\f[R]',
 \f[V]--time-style=STYLE\f[R]
 How to format timestamps.
 Valid timestamp styles are `\f[V]default\f[R]', `\f[V]iso\f[R]',
-`\f[V]long-iso\f[R]', `\f[V]full-iso\f[R]', `\f[V]relative\f[R]', or you
-can use a \f[V]custom\f[R] style with `\f[V]+\f[R]' as prefix.
-(Ex: \[lq]\f[V]+%Y/%m/%d, %H:%M\f[R]\[rq] =>
-\[lq]\f[V]2023/9/30, 12:00\f[R]\[rq]).
-for more details about format syntax, please read:
-https://docs.rs/chrono/latest/chrono/format/strftime/index.html
+`\f[V]long-iso\f[R]', `\f[V]full-iso\f[R]', `\f[V]relative\f[R]', or a
+custom style `\f[V]+<FORMAT>\f[R]' (e.g., `\f[V]+%Y-%m-%d %H:%M\f[R]' =>
+`\f[V]2023-09-30 13:00\f[R]').
+.PP
+\f[V]<FORMAT>\f[R] should be a chrono format string.
+For details on the chrono format syntax, please read:
+https://docs.rs/chrono/latest/chrono/format/strftime/index.html .
+.PP
+Alternatively, \f[V]<FORMAT>\f[R] can be a two line string, the first
+line will be used for non-recent files and the second for recent files.
+E.g., if \f[V]<FORMAT>\f[R] is
+\[lq]\f[V]%Y-%m-%d %H<newline>--%m-%d %H:%M\f[R]\[rq], non-recent files
+=> \[lq]\f[V]2022-12-30 13\f[R]\[rq], recent files =>
+\[lq]\f[V]--09-30 13:34\f[R]\[rq].
 .TP
 \f[V]--total-size\f[R]
 Show recursive directory size (unix only).
