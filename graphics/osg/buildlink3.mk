@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.130 2023/11/15 20:00:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.131 2023/12/30 12:57:53 wiz Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	osg
 OSG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.osg+=	osg>=2.8.3
-BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.6.5nb44
+BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.6.5nb45
 BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -35,7 +35,8 @@ pkgbase := osg
 .endif
 
 .if ${PKG_BUILD_OPTIONS.osg:Mpdf}
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.osg:Msvg}

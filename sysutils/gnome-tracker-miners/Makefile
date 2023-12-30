@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2023/11/15 09:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/12/30 12:57:55 wiz Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker-miners/3.0/}
 EXTRACT_SUFX=	.tar.xz
@@ -56,7 +56,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/gnome-tracker/buildlink3.mk"
 .include "../../sysutils/upower/buildlink3.mk"

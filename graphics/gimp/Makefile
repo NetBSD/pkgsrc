@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.389 2023/11/15 20:00:38 wiz Exp $
+# $NetBSD: Makefile,v 1.390 2023/12/30 12:57:52 wiz Exp $
 
 DISTNAME=	gimp-2.10.36
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -89,7 +89,8 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.38
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
