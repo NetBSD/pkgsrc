@@ -9,10 +9,10 @@ Interactive Voice Response, Call Queuing. It has support for
 three-way calling, caller ID services, ADSI, SIP and H.323 (as both
 client and gateway).
 
-This is a long term support version.  It is scheduled to go to
-security fixes only on 2020-10-24, and EOL on 2021-10-24. For more
-information about Asterisk versions, see
-https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+This is an EOL long term support version.  It went to security fixes
+only on 2020-10-24, and EOL on 2021-10-24. For more information about
+Asterisk versions, see
+https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
 
 NOTE:  This version does not work with the zaptel drivers.  It
 requires the newer DAHDI drivers which are still being ported.
