@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2023/12/15 13:48:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/12/30 21:27:19 zafer Exp $
 
 DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	http://darcy.druid.net/
+MASTER_SITES=	https://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
