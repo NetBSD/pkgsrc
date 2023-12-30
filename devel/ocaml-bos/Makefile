@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/06/03 08:00:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/30 21:17:27 zafer Exp $
 
 DISTNAME=	bos-0.2.1
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://erratique.ch/software/bos/releases/
+MASTER_SITES=	https://erratique.ch/software/bos/releases/
 EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	jaapb@NetBSD.org

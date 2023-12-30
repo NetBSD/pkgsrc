@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/30 21:21:10 zafer Exp $
 #
 
 DISTNAME=		gate-2.06
 PKGREVISION=		1
 CATEGORIES=		editors
-MASTER_SITES=		http://www.unixpapa.com/software/
+MASTER_SITES=		https://www.unixpapa.com/software/
 
 MAINTAINER=		hugor@users.sourceforge.net
 HOMEPAGE=		https://www.unixpapa.com/gate.html

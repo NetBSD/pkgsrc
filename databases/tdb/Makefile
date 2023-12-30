@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2023/08/14 05:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/12/30 21:19:05 zafer Exp $
 
 DISTNAME=	tdb-1.4.9
 PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	http://www.samba.org/ftp/tdb/
+MASTER_SITES=	https://www.samba.org/ftp/tdb/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tdb.samba.org/
