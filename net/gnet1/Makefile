@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2021/12/08 16:02:26 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/12/30 21:56:41 zafer Exp $
 #
 
 DISTNAME=		gnet-1.1.8
 PKGNAME=		gnet1-1.1.8
 PKGREVISION=		10
 CATEGORIES=		net
-MASTER_SITES=		http://www.gnetlibrary.org/src/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnetlibrary.org/
