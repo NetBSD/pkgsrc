@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2023/12/17 13:59:38 nros Exp $
+# $NetBSD: Makefile,v 1.21 2023/12/30 21:02:47 zafer Exp $
 
 DISTNAME=	libtecla-1.6.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.astro.caltech.edu/~mcs/tecla/
+MASTER_SITES=	https://sites.astro.caltech.edu/~mcs/tecla/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.astro.caltech.edu/~mcs/tecla/
