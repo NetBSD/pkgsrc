@@ -9,7 +9,7 @@ Interactive Voice Response, Call Queuing. It has support for
 three-way calling, caller ID services, ADSI, SIP and H.323 (as both
 client and gateway).
 
-This is a long term support version.  It is scheduled to go to
+This is a Long Term Support version.  It is scheduled to go to
 security fixes only on October 20th, 2024, and EOL on October 20th,
 2025.  See here for more information about Asterisk versions:
-https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
