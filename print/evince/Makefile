@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.168 2023/11/15 09:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2023/12/30 12:57:54 wiz Exp $
 
 DISTNAME=	evince-43.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -40,7 +40,8 @@ BUILDLINK_API_DEPENDS.libhandy+=	libhandy>=1.5.0
 .include "../../devel/py-gi-docgen/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0

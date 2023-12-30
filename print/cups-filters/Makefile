@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.181 2023/11/15 09:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2023/12/30 12:57:53 wiz Exp $
 
 DISTNAME=	cups-filters-1.28.16
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -94,7 +94,8 @@ post-install:
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/ijs/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/qpdf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
