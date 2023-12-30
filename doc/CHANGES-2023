@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7865 2023/12/30 10:24:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7866 2023/12/30 10:25:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11183,3 +11183,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libdrm to 2.4.119 [wiz 2023-12-30]
 	Updated fonts/fontconfig to 2.15.0 [wiz 2023-12-30]
 	Updated multimedia/libde265 to 1.0.15 [wiz 2023-12-30]
+	Updated textproc/py-black to 23.12.1 [wiz 2023-12-30]
