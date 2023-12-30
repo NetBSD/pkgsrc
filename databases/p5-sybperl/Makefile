@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/11/08 13:18:28 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/12/30 19:01:47 zafer Exp $
 
 DISTNAME=	sybperl-2.19
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	http://www.peppler.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.peppler.org/freeware/sybperl.html
+HOMEPAGE=	https://github.com/mpeppler/sybperl
 COMMENT=	Perl modules for using Sybase/MS-SQL databases
 
 PERL5_PACKLIST=		auto/Sybase/.packlist
