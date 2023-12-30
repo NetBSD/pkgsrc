@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7871 2023/12/30 10:41:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7872 2023/12/30 10:44:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11189,3 +11189,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-importlib-metadata to 7.0.1 [wiz 2023-12-30]
 	Updated security/py-pip-audit to 2.6.2 [wiz 2023-12-30]
 	Updated devel/py-ruff to 0.1.9 [wiz 2023-12-30]
+	Updated mail/rspamd to 3.7.5 [wiz 2023-12-30]
