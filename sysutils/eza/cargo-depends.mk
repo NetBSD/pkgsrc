@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2023/12/28 22:02:37 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2023/12/30 03:08:48 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -64,7 +64,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.9
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.22
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
-CARGO_CRATE_DEPENDS+=	libc-0.2.150
+CARGO_CRATE_DEPENDS+=	libc-0.2.151
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.16.1+1.7.1
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.2
 CARGO_CRATE_DEPENDS+=	line-wrap-0.1.1
@@ -79,7 +79,7 @@ CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
 CARGO_CRATE_DEPENDS+=	number_prefix-0.4.0
-CARGO_CRATE_DEPENDS+=	once_cell-1.18.0
+CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
 CARGO_CRATE_DEPENDS+=	openssl-src-111.26.0+1.1.1u
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.61
