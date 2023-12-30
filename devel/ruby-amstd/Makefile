@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:19:40 asau Exp $
+# $NetBSD: Makefile,v 1.17 2023/12/30 21:28:56 zafer Exp $
 
 DISTNAME=	amstd-2.0.0
 PKGREVISION=	2
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://www.loveruby.net/archive/amstd/
+MASTER_SITES=	https://i.loveruby.net/archive/amstd/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://i.loveruby.net/en/projects/amstd/
