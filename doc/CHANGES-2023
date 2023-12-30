@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7879 2023/12/30 14:24:52 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.7880 2023/12/30 15:34:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11198,3 +11198,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed print/poppler-glib successor print/poppler [wiz 2023-12-30]
 	Updated graphics/ImageMagick to 7.1.1.23nb1 [schmonz 2023-12-30]
 	Updated graphics/p5-PerlMagick to 7.1.1.23nb1 [schmonz 2023-12-30]
+	Updated sysutils/bup to 0.33.3 [gdt 2023-12-30]
