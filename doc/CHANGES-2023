@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7861 2023/12/30 10:17:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7862 2023/12/30 10:18:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11179,3 +11179,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libcares to 1.24.0 [wiz 2023-12-30]
 	Updated audio/mpc to 0.35 [wiz 2023-12-30]
 	Updated audio/musicpd to 0.23.15 [wiz 2023-12-30]
+	Updated graphics/libheif to 1.17.6 [wiz 2023-12-30]
