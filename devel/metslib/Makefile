@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/12/30 21:11:42 zafer Exp $
 
 DISTNAME=	metslib-0.5.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.coin-or.org/download/source/metslib/
+MASTER_SITES=	https://www.coin-or.org/download/source/metslib/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
