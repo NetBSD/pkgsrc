@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.75 2023/10/24 22:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/12/30 19:42:59 zafer Exp $
 
 DISTNAME=		sge-8.1.6
 PKGREVISION=		12
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://arc.liv.ac.uk/downloads/SGE/releases/8.1.6/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gridengine/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://arc.liv.ac.uk/trac/SGE
