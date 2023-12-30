@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/12/09 01:46:30 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2023/12/30 15:34:49 gdt Exp $
 
-DISTNAME=	bup-0.33.2
+DISTNAME=	bup-0.33.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
