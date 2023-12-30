@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/05/06 00:30:33 gdt Exp $
+$NetBSD: distinfo,v 1.8 2023/12/30 10:49:33 wiz Exp $
 
-BLAKE2s (shapelib-1.5.0.tar.gz) = e2332b021384d1bac8a16a1783f53a73d7e05503112c0af23476ffa5eeae5380
-SHA512 (shapelib-1.5.0.tar.gz) = 6dbd5fc7929ca403e65017ef58211f351608d9ad08221bf68bde047ceecfd27013ce731f9ae4edcfd040bc3db7fe9054b5d96e46128d2968788bef19532b1721
-Size (shapelib-1.5.0.tar.gz) = 547686 bytes
+BLAKE2s (shapelib-1.6.0.tar.gz) = 12e5c5196b4bad3b070f2383fde447c59795793746b3d169ed72357c1b66e3f2
+SHA512 (shapelib-1.6.0.tar.gz) = cc0b5841da5039c0467291994b9cd3aa99bebe70adf8db01719336a0eb2f0d7362395806f99228ba1f7ec68f0c5ecf9f7f5f1018093cf8dad9e06f0ae147c3fc
+Size (shapelib-1.6.0.tar.gz) = 528882 bytes
