@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2023/08/02 19:21:51 nia Exp $
+# $NetBSD: Makefile,v 1.32 2023/12/30 20:05:02 zafer Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
 PKGREVISION=		2
 CATEGORIES=		games x11
-MASTER_SITES=		http://public.planetmirror.com/pub/abuse/
+MASTER_SITES=		#
 DISTFILES=		${DISTNAME}.tgz abuse_data.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
