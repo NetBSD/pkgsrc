@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 12:55:22 asau Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/30 20:07:58 zafer Exp $
 #
 
 DISTNAME=		xyame038
 PKGNAME=		xyame-038
 PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.emuxhaven.net/emuxhaven/multis/
+MASTER_SITES=		#
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.geocities.co.jp/Stylish/2068/yame.html
