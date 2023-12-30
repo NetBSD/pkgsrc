@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 10:39:11 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/30 01:52:19 zafer Exp $
 
 DISTNAME=	ftnchek-3.3.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.dsm.fordham.edu/~ftnchek/download/
+MASTER_SITES=	https://www.dsm.fordham.edu/~ftnchek/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.dsm.fordham.edu/~ftnchek/
