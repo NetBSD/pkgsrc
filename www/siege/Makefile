@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2023/12/06 15:56:56 abs Exp $
+# $NetBSD: Makefile,v 1.14 2023/12/30 21:42:48 zafer Exp $
 #
 
 DISTNAME=		siege-4.1.6
 PKGREVISION=		2
 CATEGORIES=		www
-MASTER_SITES=		http://download.joedog.org/siege/
+MASTER_SITES=		https://download.joedog.org/siege/
 
 MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
