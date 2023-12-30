@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:32:21 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/30 01:42:51 zafer Exp $
 #
 
 DISTNAME=	matcha-sns-1.3.7
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	https://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
