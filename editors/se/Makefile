@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/05/20 06:09:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/30 21:23:22 zafer Exp $
 
 DISTNAME=	se-3.0.1
 PKGREVISION=	1
 CATEGORIES=	editors
-MASTER_SITES=	http://se-editor.org/dist/
+MASTER_SITES=	https://www.se-editor.org/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://se-editor.org/
