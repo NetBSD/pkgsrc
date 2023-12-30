@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7858 2023/12/30 10:12:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7859 2023/12/30 10:14:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11176,3 +11176,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4 to 4.18.1nb7 [gutteridge 2023-12-30]
 	Updated sysutils/eza to 0.17.0 [fox 2023-12-30]
 	Updated devel/autoconf to 2.72 [wiz 2023-12-30]
+	Updated net/libcares to 1.24.0 [wiz 2023-12-30]
