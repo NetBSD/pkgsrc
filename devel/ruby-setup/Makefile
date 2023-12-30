@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2022/12/28 13:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/30 21:29:43 zafer Exp $
 
 DISTNAME=	setup-3.4.1
 PKGREVISION=	1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://i.loveruby.net/archive/setup/
+MASTER_SITES=	https://i.loveruby.net/archive/setup/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.loveruby.net/en/setup.html
