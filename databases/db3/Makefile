@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2019/11/02 15:38:00 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2023/12/30 01:57:36 zafer Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
 PKGREVISION=	4
 CATEGORIES=	databases
-MASTER_SITES=	http://download.oracle.com/berkeley-db/
+MASTER_SITES=	https://download.oracle.com/berkeley-db/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.oracle.com/database/berkeley-db.html
