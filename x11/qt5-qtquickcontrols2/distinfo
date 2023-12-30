@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2023/10/07 20:00:34 adam Exp $
+$NetBSD: distinfo,v 1.30 2023/12/30 16:18:33 adam Exp $
 
-BLAKE2s (qtquickcontrols2-everywhere-opensource-src-5.15.11.tar.xz) = ee3b7e79a7734bf73170f17f3e8d0d9cb24e9ce6be3afd9ff75089fa68996bb9
-SHA512 (qtquickcontrols2-everywhere-opensource-src-5.15.11.tar.xz) = 2621ae1d0c8ebb38ec2c9a0ff28b9bdb3a7aebfd2b6477d145a9772002abdae832aa7daeb8843a8372b32ebe476262650ba23cc977257fd5932499cde796eb32
-Size (qtquickcontrols2-everywhere-opensource-src-5.15.11.tar.xz) = 8294208 bytes
+BLAKE2s (qtquickcontrols2-everywhere-opensource-src-5.15.12.tar.xz) = 110af51a887fdef341e5165b05e2953d80b72df55384b36190d1bd7347c4b20b
+SHA512 (qtquickcontrols2-everywhere-opensource-src-5.15.12.tar.xz) = 725fb03907973fdca4479017b8f792110a4620a6e4d39f97c81c3be16280b81135394f6ce5be507fd734926307d33a249e790234139e01f387d2362cd7027128
+Size (qtquickcontrols2-everywhere-opensource-src-5.15.12.tar.xz) = 8294356 bytes

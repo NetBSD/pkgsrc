@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/11/17 04:46:35 mcf Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/12/30 16:18:33 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -325,12 +325,12 @@ qt5/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri
 ${PLIST.alsa}qt5/plugins/audio/libqtaudio_alsa.so
-${PLIST.audioengine}qt5/plugins/mediaservice/libqtmedia_audioengine.so
 ${PLIST.pulse}qt5/plugins/audio/libqtmedia_pulse.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstaudiodecoder.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstcamerabin.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstmediacapture.so
 ${PLIST.gst}qt5/plugins/mediaservice/libgstmediaplayer.so
+${PLIST.audioengine}qt5/plugins/mediaservice/libqtmedia_audioengine.so
 qt5/plugins/playlistformats/libqtmultimedia_m3u.so
 ${PLIST.openal}qt5/qml/QtAudioEngine/libdeclarative_audioengine.so
 ${PLIST.openal}qt5/qml/QtAudioEngine/plugins.qmltypes

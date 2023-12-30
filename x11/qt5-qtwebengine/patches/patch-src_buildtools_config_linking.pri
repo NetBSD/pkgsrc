@@ -1,4 +1,4 @@
-$NetBSD: patch-src_buildtools_config_linking.pri,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_buildtools_config_linking.pri,v 1.3 2023/12/30 16:18:35 adam Exp $
 
 --- src/buildtools/config/linking.pri.orig
 +++ src/buildtools/config/linking.pri
@@ -22,7 +22,7 @@ $NetBSD: patch-src_buildtools_config_linking.pri,v 1.2 2022/04/18 11:18:19 adam 
  }
  
 -linux {
-+unix {
++unix:!macos {
      !static {
          QMAKE_LFLAGS += @$${RSP_OBJECT_FILE}
          QMAKE_LFLAGS += -Wl,--start-group @$${RSP_ARCHIVE_FILE} -Wl,--end-group
@@ -31,7 +31,7 @@ $NetBSD: patch-src_buildtools_config_linking.pri,v 1.2 2022/04/18 11:18:19 adam 
  unix:qtConfig(webengine-noexecstack): \
      QMAKE_LFLAGS += -Wl,-z,noexecstack
 -linux {
-+unix {
++unix:!macos {
      # add chromium flags
      for(flag, NINJA_LFLAGS) {
          # filter out some flags
