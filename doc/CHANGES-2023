@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7850 2023/12/29 21:23:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7851 2023/12/30 01:33:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11168,3 +11168,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/aerc version 0.16.0 [wiz 2023-12-29]
 	Updated games/rocksndiamonds to 4.3.8.1 [adam 2023-12-29]
 	Updated devel/py-cython to 3.0.7 [adam 2023-12-29]
+	Updated misc/libmateweather to 1.26.3 [gutteridge 2023-12-30]
