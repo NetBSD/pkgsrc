@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.23 2023/12/09 01:46:30 gdt Exp $
+$NetBSD: distinfo,v 1.24 2023/12/30 15:34:49 gdt Exp $
 
-BLAKE2s (bup-0.33.2.tar.gz) = 73b8d736c437c65eef34b7419e19d687ac28d364606fe142214ac15a1aa1cf87
-SHA512 (bup-0.33.2.tar.gz) = a7427961b70a8a2e831c8f1cfaf8acfe7a5c7975e7435d73e8867c20c47cc626bd3f03a0aa3b9ec83ca182fd786b21c1702a01ef040cfe6f3f2030bb4000488c
-Size (bup-0.33.2.tar.gz) = 473096 bytes
+BLAKE2s (bup-0.33.3.tar.gz) = 9f4e9d8094f5298d9d9eb95cbe06cf7ca4d54b649bdfda89fe74bb5cc1fad3a5
+SHA512 (bup-0.33.3.tar.gz) = 0442210c9874230bc6a0a431f8ba18b81e3f34f3ca1970767c09707440387a3cc76171c9c9b815c8ee8fd4a5282301f40f3e0db9da87f50ab33a25e0650d4fc5
+Size (bup-0.33.3.tar.gz) = 474307 bytes
 BLAKE2s (bup-man-a9757d6fe3509130622a636d35e92049f9e20fce.tar.gz) = 0ceb47259da90d1945ad2b56ba7eb01bcacde989fa6904564f9565f9af800ef5
 SHA512 (bup-man-a9757d6fe3509130622a636d35e92049f9e20fce.tar.gz) = 21e14f6927bd71712d7fe3dc21eb7bb3100215fab89e3c4fcd3c74eefb0d06042643f49f974c8430fcec2f7d7e96d6fdfcdef1972b550ff07d9d61f825780a77
 Size (bup-man-a9757d6fe3509130622a636d35e92049f9e20fce.tar.gz) = 32575 bytes
+SHA1 (patch-lib_bup_bupsplit.h) = 990ac747cada00651f1e0674f79c86f7e80bd5eb
+SHA1 (patch-lib_bup_hashsplit.py) = cae1a7be0006e02492ae84f0b407adf6d830ed3d
