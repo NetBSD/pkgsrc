@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/12/30 20:58:29 zafer Exp $
 #
 
 DISTNAME=	liboil-0.3.17
 CATEGORIES=	devel
-MASTER_SITES=	http://liboil.freedesktop.org/download/
+MASTER_SITES=	https://liboil.freedesktop.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://liboil.freedesktop.org/wiki/
