@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.14 2023/01/20 13:10:09 wiz Exp $
+$NetBSD: patch-ac,v 1.15 2023/12/30 10:21:52 wiz Exp $
 
---- conf.d/Makefile.in.orig	2022-10-21 07:33:38.000000000 +0000
+--- conf.d/Makefile.in.orig	2023-12-22 13:55:23.000000000 +0000
 +++ conf.d/Makefile.in
-@@ -411,7 +411,7 @@ CONF_LINKS = \
+@@ -412,7 +412,7 @@ CONF_LINKS = \
  
  EXTRA_DIST = $(template_DATA) $(DOC_SOURCES)
  CLEANFILES = $(DOC_FILES)
@@ -11,11 +11,11 @@ $NetBSD: patch-ac,v 1.14 2023/01/20 13:10:09 wiz Exp $
  config_DATA = $(DOC_FILES)
  templatedir = $(TEMPLATEDIR)
  template_DATA = \
-@@ -713,6 +713,7 @@ README: $(srcdir)/README.in
+@@ -714,6 +714,7 @@ README: $(srcdir)/README.in
+ 35-lang-normalize.conf: ../fc-lang/Makefile.am
  	cd ../fc-lang && $(MAKE) $(AM_MAKEFLAGS) $(top_builddir)/conf.d/35-lang-normalize.conf
  
  install-data-hook:
 +xinstall-data-hook:
- 	mkdir -p $(DESTDIR)$(configdir)
- 	@(echo cd $(DESTDIR)$(configdir);			\
- 	  cd $(DESTDIR)$(configdir);				\
+ 	$(PYTHON) $(srcdir)/link_confs.py $(templatedir) $(configdir) $(CONF_LINKS)
+ uninstall-local:

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2023/01/20 13:10:08 wiz Exp $
+# $NetBSD: builtin.mk,v 1.15 2023/12/30 10:21:52 wiz Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -78,7 +78,6 @@ CHECK_BUILTIN.fontconfig?=	no
 
 .  if ${USE_BUILTIN.fontconfig:tl} == no
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  endif
 
 .endif	# CHECK_BUILTIN.fontconfig
