@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.18 2023/11/09 07:37:47 wiz Exp $
+$NetBSD: distinfo,v 1.19 2023/12/30 16:18:35 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = 513fe5101f2f1946e1f6ef727aba187ccd5fccd603fafb9998396de7fb507a6c
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = cebda17b9023348c85e9397fce5ad0f8ee16cfe821b8e79cea7ce92f7bb00e7fe59594107ac9f9411df1bb2e675eb6ecbfe3366df67a05b45fe12ead97cdc76c
-Size (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = 316078212 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = f3f13f6b52697c09e2ff2683667108da280348d9d853249ae5097920a02aa333
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = 84ebdab10ea3138671c0612cc558dd3257264410d2776719c34d41b8f846424183742abc7185fa61c7bb3d35d471ab2341d064eec57b92c34e30325dbc3eff63
+Size (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = 316611168 bytes
 SHA1 (patch-configure.pri) = e9d971f18d0a7a8a58d635eb6688193fb92020f3
 SHA1 (patch-mkspecs_features_functions.prf) = 6bf237521df3d60649b603b7cb7d21f793df1386
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 228416b6472c48727df1a6c86ac97814fd5cb3b5
-SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 839b97c34e0aaf1309c89af6c9f8e65ebf77a7e5
+SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = adf0963ccc2a9ec5a55c73f6b6420219df022193
 SHA1 (patch-src_3rdparty_chromium_base_allocator_BUILD.gn) = 1d1a911a3cbbce34c216c181dee8a899a6f92ea6
 SHA1 (patch-src_3rdparty_chromium_base_allocator_allocator__shim__unittest.cc) = bf1f998f9c8c8868c520ca37acd9358e6ea7d944
 SHA1 (patch-src_3rdparty_chromium_base_allocator_partition__allocator_page__allocator__internals__posix.h) = d56e8e9d84c882150f99f41ecc9ad419e66d8bea
@@ -483,6 +483,7 @@ SHA1 (patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn) = 5e787efded87713412f5
 SHA1 (patch-src_3rdparty_chromium_sandbox_linux_services_init__process__reaper.cc) = 377b07ac68d584dd10337c444dbffabc868e3f27
 SHA1 (patch-src_3rdparty_chromium_sandbox_linux_services_libc__interceptor.cc) = 8794f97d5b6ac1c848e36998820c34a38c6430fe
 SHA1 (patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn) = d86f40dd0ddf24bd5e6e6d1fb046b8f5539025b5
+SHA1 (patch-src_3rdparty_chromium_sandbox_policy_mac_package__sb__file.py) = 14daef686be8698fcba34f8876a1df4c8cb9a8f5
 SHA1 (patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.cc) = 695cc9ed75111e789638e774bf08dff6e9d1ad58
 SHA1 (patch-src_3rdparty_chromium_sandbox_policy_netbsd_sandbox__netbsd.h) = 6dd5ca10722fc1f87bb55272f4ae6c5585f31f42
 SHA1 (patch-src_3rdparty_chromium_sandbox_policy_openbsd_sandbox__openbsd.cc) = 025aa816dcaa55a078a065e1c868b16b5dc809e6
@@ -593,16 +594,13 @@ SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_blink__
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.cc) = 3b50557e62c208eb7086f1f3d43338468cb84270
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.h) = 005f45e67069dfe42c3b549c0b9318e9b5b1caa0
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_editing_editing__behavior.cc) = f97b716364a9625e85f623bd1cdf19ad6ab55334
-SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_editing_finder_text__finder.cc) = 12e299d50eae886abbf18312bc1b6257713e81d6
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_html_canvas_canvas__async__blob__creator.cc) = 4e0640f4eefb9264622e312ff3d4528939816a85
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_html_forms_internal__popup__menu.cc) = e3002dff8d18a27c2d3cb8ebc0bf98bbfac58485
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_inspector_inspector__memory__agent.cc) = 20a650b7494c445dcc3b4074660a36a84c896dae
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_layout_BUILD.gn) = 8e7f40f060b7fd2d0856196ab1fb4879c675bf6a
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_layout_layout__view.cc) = 56e8ccad2afc2816817b783de71683eda9691a25
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_paint_paint__layer.cc) = 66c03d64d1ed36c91bf1895bdc9ced6e6edc2056
-SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_paint_paint__timing__detector.cc) = e95e219bc1413562d7f37bc1b5eafffee18c2cae
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_core_scroll_scrollbar__theme__aura.cc) = 9dfc46d97549891722e678f14271ef19b0ec80ea
-SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_modules_exported_web__ax__object.cc) = 6c7b09decf58479893b00d7bbaeea6387f14271d
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_modules_media_audio_web__audio__device__factory.cc) = 9600a0cde019fa643f6f313ae26ead384c149802
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_modules_mediastream_processed__local__audio__source.cc) = db9b64ed2ebd100cc2fa0fa80a0503f96171d668
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_BUILD.gn) = 2bd42053fc24ba9b3dbd966691ea9f2a1a64e5d9
@@ -787,7 +785,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_BUILD.gn)
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_source_cpu__info.cc) = 34c8f11a2211fc64fae3bec08bf9bebcb25e960b
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn) = cf10aa3e5135639a9cbb09c8a74ef409519528ee
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_webrtc.gni) = 501ac49f4dd406057089ac65196a7c0eff2560c4
-SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = 62aaf06c068908a61ad4cc484eeacce5f68386a6
+SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = d48d4b8ab33d9c650b3d7ab1fd4d5c034029443e
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_cpu__features.c) = 2ae5c09b935a94fc50c052f199a945875d3d9127
 SHA1 (patch-src_3rdparty_chromium_third_party_skia_src_utils_SkParseColor.cpp) = 09e2a2144d6819e4ff4649dac3b4b198c3033f46
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_BUILD.gn) = 1952774426515651e3f2797a296be102e9ef55b2
@@ -918,7 +916,7 @@ SHA1 (patch-src_3rdparty_gn_tools_gn_qmake_link_writer.cc) = f05536612a16c52c1cb
 SHA1 (patch-src_3rdparty_gn_tools_gn_tool.h) = 9bf6c5101981dde11e89d5efb29add5092c47654
 SHA1 (patch-src_3rdparty_gn_util_sys__info.cc) = c99b378334e80342f2e33e1ca76b30a6744d0069
 SHA1 (patch-src_buildtools_buildtools.pro) = 95d6195a43e14eb246d97787ffb39c45d16729f5
-SHA1 (patch-src_buildtools_config_linking.pri) = c8b58ecc15e0ee3115745eb5abbbe187c832026a
+SHA1 (patch-src_buildtools_config_linking.pri) = 05fed8ab2e2c48a556cc3e6e121ad7c51776bd0f
 SHA1 (patch-src_buildtools_config_support.pri) = c40b66756fe4bdf9436949c071e2f1eae843370f
 SHA1 (patch-src_buildtools_configure.json) = 0f3176896e6feaca721ae595e06780099e1a9290
 SHA1 (patch-src_core_api_core_api.pro) = 06f074a11fc20b956c91d34dd5ce4a05599ee706
