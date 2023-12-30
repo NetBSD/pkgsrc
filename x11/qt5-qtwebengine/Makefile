@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2023/11/15 09:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/12/30 12:57:55 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}

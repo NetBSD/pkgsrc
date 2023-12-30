@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.281 2023/12/29 18:24:47 adam Exp $
+# $NetBSD: Makefile,v 1.282 2023/12/30 12:57:52 wiz Exp $
 
 DISTNAME=	inkscape-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -134,7 +134,8 @@ BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.2
 .include "../../math/double-conversion/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24

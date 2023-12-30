@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2023/11/15 09:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/12/30 12:57:54 wiz Exp $
 
 DISTNAME=	electrix-0.2.0
-PKGREVISION=	91
+PKGREVISION=	92
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=electrix/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,8 @@ WAF_HAS_LIBDIR=	no
 WAF_HAS_MANDIR=	no
 
 .include "../../devel/waf/waf.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

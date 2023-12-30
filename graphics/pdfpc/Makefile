@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/11/27 11:16:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/30 12:57:53 wiz Exp $
 
 DISTNAME=	pdfpc-4.4.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pdfpc/}
 GITHUB_PROJECT=	pdfpc
@@ -24,6 +24,7 @@ CONF_FILES+=	${EGDIR}/pdfpcrc	${PKG_SYSCONFDIR}/pdfpcrc
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2023/11/15 09:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2023/12/30 12:57:54 wiz Exp $
 
 DISTNAME=	epdfview-0.1.8
-PKGREVISION=	105
+PKGREVISION=	106
 CATEGORIES=	print
 MASTER_SITES=	http://anduin.linuxfromscratch.org/BLFS/epdfview/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,8 @@ USE_TOOLS+=		pkg-config msgfmt
 
 .include "options.mk"
 
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
