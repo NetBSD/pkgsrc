@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/01/22 15:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/30 20:23:01 zafer Exp $
 
 DISTNAME=	yenc-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	converters
-MASTER_SITES=	http://www.golug.it/pub/yenc/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc128@fastmail.us
 HOMEPAGE=	https://www.golug.it/yenc.html
