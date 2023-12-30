@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2023/02/27 21:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/12/30 21:33:13 zafer Exp $
 #
 
 DISTNAME=	userspace-rcu-0.12.1
 CATEGORIES=	devel
-MASTER_SITES=	http://lttng.org/files/urcu/
+MASTER_SITES=	https://lttng.org/files/urcu/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pettai@NetBSD.org
