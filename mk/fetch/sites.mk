@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.192 2023/12/29 00:14:04 zafer Exp $
+# $NetBSD: sites.mk,v 1.193 2023/12/30 17:26:42 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -62,8 +62,6 @@ MASTER_SITE_KDE+=	\
 	https://download.kde.org/stable/ \
 	ftp://www.dnsbalance.ring.gr.jp/pub/X/kde/stable/ \
 	http://www.dnsbalance.ring.gr.jp/archives/X/kde/stable/ \
-	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/stable/ \
-	ftp://mirrors.dotsrc.org/kde/stable/ \
 	ftp://ftp.fi.muni.cz/pub/kde/stable/
 
 MASTER_SITE_SOURCEFORGE+=	\
