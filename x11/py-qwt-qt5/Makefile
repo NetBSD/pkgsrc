@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/12/17 08:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/12/30 07:57:55 wiz Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
@@ -24,7 +24,7 @@ WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c++
 
-PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
+PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
