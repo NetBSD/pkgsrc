@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/12/30 10:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/30 20:01:48 ryoon Exp $
 
 DISTNAME=	SCons-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -30,6 +30,9 @@ SUBST_FILES.rflag=	SCons/Tool/gnulink.py
 SUBST_SED.rflag=	-e 's|-Wl,-rpath=|${COMPILER_RPATH_FLAG}|g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+post-patch:
+	${RM} -fr ${WRKSRC}/SCons/Tool/docbook/__pycache__
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} scons scons-${PYVERSSUFFIX}
