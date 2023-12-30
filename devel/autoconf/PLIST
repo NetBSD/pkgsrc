@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/01/02 20:38:56 js Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/12/30 10:12:46 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -61,4 +61,4 @@ share/autoconf/m4sugar/m4sh.m4
 share/autoconf/m4sugar/m4sh.m4f
 share/autoconf/m4sugar/m4sugar.m4
 share/autoconf/m4sugar/m4sugar.m4f
-share/autoconf/m4sugar/version.m4
+share/autoconf/version.m4
