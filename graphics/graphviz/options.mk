@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2023/06/07 13:32:49 micha Exp $
+# $NetBSD: options.mk,v 1.37 2023/12/30 12:57:52 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua perl poppler svg tcl x11
@@ -57,7 +57,8 @@ CONFIGURE_ARGS+=	--without-gnomeui
 .endif
 
 .if !empty(PKG_OPTIONS:Mpoppler)
-.  include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.  include "../../print/poppler/buildlink3.mk"
 PLIST.poppler=		yes
 CONFIGURE_ARGS+=	--with-poppler
 .else

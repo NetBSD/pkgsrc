@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2023/11/15 09:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/12/30 12:57:50 wiz Exp $
 
 DISTNAME=		gummi-0.6.6
-PKGREVISION=		59
+PKGREVISION=		60
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=alexandervdm/}
 GITHUB_PROJECT=		gummi
@@ -32,7 +32,8 @@ pre-configure:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

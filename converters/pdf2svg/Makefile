@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/11/15 09:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/12/30 12:57:50 wiz Exp $
 
 DISTNAME=	pdf2svg-0.2.3
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dawbarton/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 
 BUILD_TARGET=	pdf2svg
 
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
