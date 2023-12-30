@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2023/11/14 14:03:08 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/12/30 19:31:38 zafer Exp $
 
 DISTNAME=	gcolor2-0.4
 PKGREVISION=	23
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcolor2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gcolor2.sourceforge.net/
