@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 03:45:09 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/30 01:24:25 zafer Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
 PKGREVISION=	1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
+MASTER_SITES=	https://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	motoyuki@bsdclub.org
