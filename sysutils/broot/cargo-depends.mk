@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.69 2023/12/28 20:41:40 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.70 2023/12/30 17:24:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.8
@@ -305,6 +305,6 @@ CARGO_CRATE_DEPENDS+=	xmlwriter-0.1.0
 CARGO_CRATE_DEPENDS+=	xterm-query-0.1.0
 CARGO_CRATE_DEPENDS+=	xterm-query-0.2.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
-CARGO_CRATE_DEPENDS+=	zerocopy-0.7.26
-CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.26
+CARGO_CRATE_DEPENDS+=	zerocopy-0.7.32
+CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.32
 CARGO_CRATE_DEPENDS+=	zune-inflate-0.2.54
