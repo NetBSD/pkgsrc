@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23831 2023/12/30 10:51:26 wiz Exp $
+$NetBSD: TODO,v 1.23832 2023/12/30 10:55:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1124,7 +1124,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.27
-	o plasma-wayland-protocols-1.12.0
 	o ploticus-examples-230
 	o ply-3.11
 	o poco-1.12.4
