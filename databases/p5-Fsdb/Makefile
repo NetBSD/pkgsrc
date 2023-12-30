@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2023/07/06 09:38:26 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/12/30 20:57:37 zafer Exp $
 
 DISTNAME=	Fsdb-2.69
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	databases
-MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/FSDB/
+MASTER_SITES=	https://ant.isi.edu/~johnh/SOFTWARE/FSDB/
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	https://www.isi.edu/~johnh/SOFTWARE/FSDB/index.html
