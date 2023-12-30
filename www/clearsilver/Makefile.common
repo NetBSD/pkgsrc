@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2019/11/04 22:09:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2023/12/30 21:45:59 zafer Exp $
 #
 # used by www/clearsilver-base/Makefile
 # used by www/py-clearsilver/Makefile
@@ -7,7 +7,7 @@
 DISTNAME=		clearsilver-0.10.5
 CLEARSILVER_BASE=	${DISTNAME:S/-/-base-/}
 CATEGORIES=		www
-MASTER_SITES=		http://www.clearsilver.net/downloads/
+MASTER_SITES=		http://clearsilver.net/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.clearsilver.net/
