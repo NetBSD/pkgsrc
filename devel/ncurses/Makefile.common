@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2023/01/19 12:09:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.52 2023/12/30 20:17:19 zafer Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -7,8 +7,6 @@ DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
-MASTER_SITES+=	ftp://dickey.his.com/ncurses/
-MASTER_SITES+=	ftp://dickey.his.com/ncurses/${NC_VERS}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://invisible-island.net/ncurses/ncurses.html
