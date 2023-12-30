@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/11/03 11:45:37 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/30 19:21:46 zafer Exp $
 #
 
 DISTNAME=		hping3-alpha-2
 PKGNAME=		hping3-3a2
 PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		http://wiki.hping.org/uploadedfiles/101/
+MASTER_SITES=		#
 
 MAINTAINER=		pettai@NetBSD.org
 HOMEPAGE=		http://wiki.hping.org/
