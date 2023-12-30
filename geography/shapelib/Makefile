@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/05/06 00:30:33 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.10 2023/12/30 10:49:33 wiz Exp $
 
-DISTNAME=		shapelib-1.5.0
+DISTNAME=		shapelib-1.6.0
 CATEGORIES=		geography
 MASTER_SITES=		https://download.osgeo.org/shapelib/
 
