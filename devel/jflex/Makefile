@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:30:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/30 20:53:47 zafer Exp $
 #
 
 DISTNAME=	jflex-1.6.0
 CATEGORIES=	devel
-MASTER_SITES=	http://jflex.de/
+MASTER_SITES=	https://jflex.de/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jflex.de/
