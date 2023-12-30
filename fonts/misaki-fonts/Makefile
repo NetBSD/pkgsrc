@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2020/05/12 11:27:57 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/12/30 16:55:21 zafer Exp $
 
 DISTNAME=		misaki_bdf_2012-06-03
 PKGNAME=		${DISTNAME:S/-//g:S/misaki_bdf_/misaki-fonts-1.0./}
 PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
-MASTER_SITES=		https://web.archive.org/web/20120808230338/http://www.geocities.jp/littlimi/arc/misaki/
+MASTER_SITES=		https://www.aydogan.net/distfiles/fonts/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		https://web.archive.org/web/20121008163534/http://www.geocities.jp/littlimi/misaki.htm
