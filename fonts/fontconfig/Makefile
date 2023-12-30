@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2023/11/23 11:03:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.132 2023/12/30 10:21:52 wiz Exp $
 
-DISTNAME=	fontconfig-2.14.2
-PKGREVISION=	3
+DISTNAME=	fontconfig-2.15.0
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.xz
@@ -32,7 +31,7 @@ PKG_SYSCONFSUBDIR=	fontconfig
 .include "../../mk/compiler.mk"
 # Workaround for GCC 4.2 bug, http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46861
 # GCC 4.2 and -fPIC with visibility
-.if !empty(CC_VERSION:Mgcc-4.2.*)
+.if ${CC_VERSION:Mgcc-4.2.*}
 SUBST_CLASSES+=			visibility
 SUBST_STAGE.visibility=		pre-configure
 SUBST_MESSAGE.visibility=	Removing visibility
@@ -74,6 +73,7 @@ FC_STDCONF=	\
 	10-yes-antialias.conf	\
 	10-sub-pixel-none.conf	\
 	11-lcdfilter-default.conf \
+	11-lcdfilter-none.conf \
 	20-unhint-small-vera.conf \
 	30-metric-aliases.conf \
 	40-nonlatin.conf \
@@ -118,7 +118,6 @@ post-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

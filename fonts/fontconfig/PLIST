@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2023/01/31 15:25:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2023/12/30 10:21:52 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-conflist
@@ -492,6 +492,7 @@ share/fontconfig/conf.avail/10-yes-antialias.conf
 share/fontconfig/conf.avail/11-lcdfilter-default.conf
 share/fontconfig/conf.avail/11-lcdfilter-legacy.conf
 share/fontconfig/conf.avail/11-lcdfilter-light.conf
+share/fontconfig/conf.avail/11-lcdfilter-none.conf
 share/fontconfig/conf.avail/20-unhint-small-vera.conf
 share/fontconfig/conf.avail/25-unhint-nonlatin.conf
 share/fontconfig/conf.avail/30-metric-aliases.conf
