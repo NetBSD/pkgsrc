@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2023/11/08 13:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/12/30 01:36:47 zafer Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
 PKGREVISION=	39
 CATEGORIES=	chat
-MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
+MASTER_SITES=	https://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

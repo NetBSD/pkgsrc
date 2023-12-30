@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2023/11/08 13:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/12/30 01:44:57 zafer Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
 PKGREVISION=	28
 CATEGORIES=	www
-MASTER_SITES=	http://www.autistici.org/bakunin/libmrss/
+MASTER_SITES=	https://www.autistici.org/bakunin/libmrss/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.autistici.org/bakunin/libmrss/
