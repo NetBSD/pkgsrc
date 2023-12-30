@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/08/01 17:40:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/12/30 01:28:55 zafer Exp $
 #
 
 DISTNAME=	gflib
 PKGNAME=	gflib-20030604
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cs.utk.edu/~plank/plank/gflib/
+MASTER_SITES=	 https://web.eecs.utk.edu/~jplank/plank/gflib/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
