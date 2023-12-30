@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2021/09/28 12:55:12 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/12/30 21:01:49 zafer Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -9,7 +9,7 @@
 POCO_VERSION=	1.6.1
 
 DISTNAME=	poco-${POCO_VERSION}-all
-MASTER_SITES=	http://pocoproject.org/releases/poco-${POCO_VERSION}/
+MASTER_SITES=	https://pocoproject.org/releases/poco-${POCO_VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pocoproject.org/
