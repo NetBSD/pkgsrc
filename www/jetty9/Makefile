@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:32:21 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/30 01:46:22 zafer Exp $
 
 JETTYVER=	9.2.14.v20151106
 DISTNAME=	jetty-distribution-${JETTYVER}
 PKGNAME=	${DISTNAME:S/distribution-//:S/.v/./}
 CATEGORIES=	www
-MASTER_SITES=	http://download.eclipse.org/jetty/${JETTYVER}/dist/
+MASTER_SITES=	https://archive.eclipse.org/jetty/${JETTYVER}/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.eclipse.org/jetty/
