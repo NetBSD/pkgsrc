@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2017/08/01 14:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/30 01:23:45 zafer Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
 PKGREVISION=	1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
+MASTER_SITES=	https://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
