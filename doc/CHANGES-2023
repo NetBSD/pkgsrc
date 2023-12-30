@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7869 2023/12/30 10:29:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7870 2023/12/30 10:35:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11187,3 +11187,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cyclonedx-python-lib to 6.1.0 [wiz 2023-12-30]
 	Updated fonts/py-fonttools to 4.47.0 [wiz 2023-12-30]
 	Updated devel/py-importlib-metadata to 7.0.1 [wiz 2023-12-30]
+	Updated security/py-pip-audit to 2.6.2 [wiz 2023-12-30]
