@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2023/12/04 13:58:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.52 2023/12/30 01:35:24 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -18,7 +18,7 @@ DEPENDS+=	engrampa>=${VERSION}:../../archivers/engrampa
 DEPENDS+=	eom>=${VERSION}:../../graphics/eom
 DEPENDS+=	libmatekbd>=${VERSION}:../../x11/libmatekbd
 DEPENDS+=	libmatemixer>=${VERSION}:../../audio/libmatemixer
-DEPENDS+=	libmateweather>=${VERSION:R}.2:../../misc/libmateweather
+DEPENDS+=	libmateweather>=${VERSION:R}.3:../../misc/libmateweather
 DEPENDS+=	marco>=${VERSION:R}.2:../../wm/marco
 DEPENDS+=	mate-applets>=${VERSION}:../../x11/mate-applets
 DEPENDS+=	mate-backgrounds>=${VERSION:R}.0:../../graphics/mate-backgrounds
