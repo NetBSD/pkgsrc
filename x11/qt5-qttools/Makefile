@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.96 2023/12/19 13:01:37 thor Exp $
+# $NetBSD: Makefile,v 1.97 2023/12/30 16:18:34 adam Exp $
 
 DISTNAME=	qttools-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
-PKGREVISION=	4
 COMMENT=	Qt5 tools
 
-DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
@@ -20,8 +19,8 @@ PLIST_VARS+=		llvm
 
 QMAKE_ARGS+= --
 .if !empty(PKG_OPTIONS:Mllvm)
-PLIST.llvm=		yes
-MAKE_ENV+=		LLVM_INSTALL_DIR=${BUILDLINK_PREFIX.clang}
+PLIST.llvm=	yes
+MAKE_ENV+=	LLVM_INSTALL_DIR=${BUILDLINK_PREFIX.clang}
 .include "../../lang/clang/buildlink3.mk"
 QMAKE_ARGS+=	-qdoc
 .else
