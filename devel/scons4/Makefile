@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/12/30 10:47:36 wiz Exp $
 
-DISTNAME=	SCons-4.5.2
+DISTNAME=	SCons-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SCons/}
 EXTRACT_USING=	bsdtar
@@ -12,9 +11,10 @@ HOMEPAGE=	https://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_PKG_RESOURCES=	yes
+USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	script/scons
 REPLACE_PYTHON+=	script/scons-configure-cache
@@ -40,5 +40,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} sconsign.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sconsign-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
