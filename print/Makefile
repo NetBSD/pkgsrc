@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.918 2023/10/31 13:46:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.919 2023/12/30 12:58:43 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -122,7 +122,6 @@ SUBDIR+=	podofo
 SUBDIR+=	poppler
 SUBDIR+=	poppler-cpp
 SUBDIR+=	poppler-data
-SUBDIR+=	poppler-glib
 SUBDIR+=	poppler-includes
 SUBDIR+=	poppler-qt5
 SUBDIR+=	poppler-qt6
