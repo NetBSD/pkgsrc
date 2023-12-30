@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7881 2023/12/30 15:47:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7882 2023/12/30 16:19:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11200,3 +11200,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/p5-PerlMagick to 7.1.1.23nb1 [schmonz 2023-12-30]
 	Updated sysutils/bup to 0.33.3 [gdt 2023-12-30]
 	Updated devel/gettext to 0.22.4 [wiz 2023-12-30]
+	Updated lang/nodejs to 21.5.0 [adam 2023-12-30]
+	Updated x11/qt5 to 5.15.12 [adam 2023-12-30]
