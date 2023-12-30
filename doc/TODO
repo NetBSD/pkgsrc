@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23814 2023/12/29 21:23:16 adam Exp $
+$NetBSD: TODO,v 1.23815 2023/12/30 10:12:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o attr-2.5.1 [wip, https://savannah.nongnu.org/bugs/index.php?63920]
 	o audacity-3.4
 	o authelia-4.28.0
-	o autoconf-2.72
 	o autoconvert-0.3.16
 	o autosetup-0.7.0
 	o avidemux-2.8
