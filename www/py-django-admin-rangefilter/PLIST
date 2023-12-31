@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/30 13:53:25 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2023/12/31 22:06:57 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/rangefilter/__init__.py
 ${PYSITELIB}/rangefilter/__init__.pyc
 ${PYSITELIB}/rangefilter/__init__.pyo
 ${PYSITELIB}/rangefilter/apps.py
 ${PYSITELIB}/rangefilter/apps.pyc
 ${PYSITELIB}/rangefilter/apps.pyo
-${PYSITELIB}/rangefilter/filter.py
-${PYSITELIB}/rangefilter/filter.pyc
-${PYSITELIB}/rangefilter/filter.pyo
 ${PYSITELIB}/rangefilter/filters.py
 ${PYSITELIB}/rangefilter/filters.pyc
 ${PYSITELIB}/rangefilter/filters.pyo
@@ -46,6 +43,8 @@ ${PYSITELIB}/rangefilter/locale/pt_PT/LC_MESSAGES/django.mo
 ${PYSITELIB}/rangefilter/locale/pt_PT/LC_MESSAGES/django.po
 ${PYSITELIB}/rangefilter/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/rangefilter/locale/ru/LC_MESSAGES/django.po
+${PYSITELIB}/rangefilter/locale/tr/LC_MESSAGES/django.mo
+${PYSITELIB}/rangefilter/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/rangefilter/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/rangefilter/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/rangefilter/locale/zh_CN/LC_MESSAGES/django.mo
@@ -55,13 +54,8 @@ ${PYSITELIB}/rangefilter/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/rangefilter/models.py
 ${PYSITELIB}/rangefilter/models.pyc
 ${PYSITELIB}/rangefilter/models.pyo
-${PYSITELIB}/rangefilter/settings.py
-${PYSITELIB}/rangefilter/settings.pyc
-${PYSITELIB}/rangefilter/settings.pyo
-${PYSITELIB}/rangefilter/static/rangefilter/iife.js
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_1_8.html
-${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_csp.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_range_quick_select_list_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/numeric_filter.html
 ${PYSITELIB}/rangefilter/templatetags/__init__.py
