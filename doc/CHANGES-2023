@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7898 2023/12/31 18:50:53 leot Exp $
+$NetBSD: CHANGES-2023,v 1.7899 2023/12/31 19:12:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11222,3 +11222,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/evince to 45.0 [prlw1 2023-12-31]
 	Updated devel/sparse to 0.6.4 [riastradh 2023-12-31]
 	Updated devel/opa to 0.60.0 [leot 2023-12-31]
+	Updated net/inetutils to 2.5 [adam 2023-12-31]
+	Updated devel/py-test to 7.4.4 [adam 2023-12-31]
