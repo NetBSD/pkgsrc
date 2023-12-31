@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2023/11/13 15:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2023/12/31 08:57:19 adam Exp $
 
-DISTNAME=	scummvm-2.7.1
-PKGREVISION=	4
+DISTNAME=	scummvm-2.8.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,8 @@ HOMEPAGE=	https://www.scummvm.org/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
