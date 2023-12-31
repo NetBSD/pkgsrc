@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7887 2023/12/31 08:01:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7888 2023/12/31 09:04:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11208,3 +11208,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.31.0 [pin 2023-12-30]
 	Updated net/yt-dlp to 2023.12.30 [adam 2023-12-31]
 	Updated devel/py-attrs to 23.2.0 [adam 2023-12-31]
+	Updated www/firefox to 121.0 [ryoon 2023-12-31]
