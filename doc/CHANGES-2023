@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7914 2023/12/31 21:55:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7915 2023/12/31 22:07:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11242,3 +11242,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed multimedia/gst-plugins1-egl-gl [wiz 2023-12-31]
 	Updated devel/py-random2 to 1.0.2 [adam 2023-12-31]
 	Updated www/py-django-reversion to 5.0.10 [adam 2023-12-31]
+	Updated www/py-django-import-export to 3.3.5 [adam 2023-12-31]
+	Updated www/py-django-admin-rangefilter to 0.12.0 [adam 2023-12-31]
