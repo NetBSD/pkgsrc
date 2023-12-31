@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7908 2023/12/31 21:34:05 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7909 2023/12/31 21:35:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11235,3 +11235,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-distro to 1.9.0 [wiz 2023-12-31]
 	Updated textproc/py-lxml to 5.0.0 [wiz 2023-12-31]
 	Updated textproc/py-rapidfuzz to 3.6.1 [wiz 2023-12-31]
+	Updated devel/py-pdm_backend to 2.1.8 [wiz 2023-12-31]
