@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7913 2023/12/31 21:53:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7914 2023/12/31 21:55:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11240,3 +11240,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.1.25 [wiz 2023-12-31]
 	Updated lang/elixir to 1.16.0 [wiz 2023-12-31]
 	Removed multimedia/gst-plugins1-egl-gl [wiz 2023-12-31]
+	Updated devel/py-random2 to 1.0.2 [adam 2023-12-31]
+	Updated www/py-django-reversion to 5.0.10 [adam 2023-12-31]
