@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/10/19 10:43:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/12/31 21:20:57 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -103,9 +103,11 @@ share/locale/fr/LC_MESSAGES/aspell.mo
 share/locale/fur/LC_MESSAGES/aspell.mo
 share/locale/ga/LC_MESSAGES/aspell.mo
 share/locale/hr/LC_MESSAGES/aspell.mo
+share/locale/hu/LC_MESSAGES/aspell.mo
 share/locale/id/LC_MESSAGES/aspell.mo
 share/locale/it/LC_MESSAGES/aspell.mo
 share/locale/ja/LC_MESSAGES/aspell.mo
+share/locale/ka/LC_MESSAGES/aspell.mo
 share/locale/mn/LC_MESSAGES/aspell.mo
 share/locale/ms/LC_MESSAGES/aspell.mo
 share/locale/nl/LC_MESSAGES/aspell.mo
@@ -117,6 +119,7 @@ share/locale/ru/LC_MESSAGES/aspell.mo
 share/locale/rw/LC_MESSAGES/aspell.mo
 share/locale/sk/LC_MESSAGES/aspell.mo
 share/locale/sl/LC_MESSAGES/aspell.mo
+share/locale/sq/LC_MESSAGES/aspell.mo
 share/locale/sr/LC_MESSAGES/aspell.mo
 share/locale/sv/LC_MESSAGES/aspell.mo
 share/locale/tg/LC_MESSAGES/aspell.mo
