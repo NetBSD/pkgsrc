@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7903 2023/12/31 21:15:57 leot Exp $
+$NetBSD: CHANGES-2023,v 1.7904 2023/12/31 21:19:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11230,3 +11230,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/ffmpeg6 to 6.1.1 [adam 2023-12-31]
 	Updated multimedia/ffplay6 to 6.1.1 [adam 2023-12-31]
 	Updated devel/conftest to 0.47.0 [leot 2023-12-31]
+	Updated devel/regal to 0.14.0 [leot 2023-12-31]
