@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/12/31 10:40:41 pin Exp $
+bin/qcalc
