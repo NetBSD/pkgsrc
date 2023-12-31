@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7912 2023/12/31 21:47:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7913 2023/12/31 21:53:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11239,3 +11239,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/tinyxml2 to 10.0.0 [wiz 2023-12-31]
 	Updated graphics/ImageMagick to 7.1.1.25 [wiz 2023-12-31]
 	Updated lang/elixir to 1.16.0 [wiz 2023-12-31]
+	Removed multimedia/gst-plugins1-egl-gl [wiz 2023-12-31]
