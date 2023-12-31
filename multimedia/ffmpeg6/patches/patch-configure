@@ -1,17 +1,16 @@
-$NetBSD: patch-configure,v 1.1 2023/06/02 16:44:06 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2023/12/31 20:49:27 adam Exp $
 
 Sun audio support.
 
-Enable PIC and section_data_rel_ro on NetBSD, even on i386,
-to avoid text relocations.
+Enable PIC on NetBSD, even on i386, to avoid text relocations.
 
 Fix install_name_dir on Darwin.
 
 Do not use 'rsync'.
 
---- configure.orig	2022-04-04 14:40:22.000000000 +0000
+--- configure.orig	2023-12-31 00:07:26.000000000 +0000
 +++ configure
-@@ -2196,6 +2196,7 @@ HEADERS_LIST="
+@@ -2231,6 +2231,7 @@ HEADERS_LIST="
      sys_resource_h
      sys_select_h
      sys_soundcard_h
@@ -19,7 +18,7 @@ Do not use 'rsync'.
      sys_time_h
      sys_un_h
      sys_videoio_h
-@@ -2337,7 +2338,6 @@ TOOLCHAIN_FEATURES="
+@@ -2374,7 +2375,6 @@ TOOLCHAIN_FEATURES="
      inline_asm_labels
      inline_asm_nonlocal_labels
      pragma_deprecated
@@ -27,7 +26,7 @@ Do not use 'rsync'.
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -3521,6 +3521,8 @@ opengl_outdev_deps="opengl"
+@@ -3598,6 +3598,8 @@ opengl_outdev_deps="opengl"
  opengl_outdev_suggest="sdl2"
  oss_indev_deps_any="sys_soundcard_h"
  oss_outdev_deps_any="sys_soundcard_h"
@@ -36,16 +35,15 @@ Do not use 'rsync'.
  pulse_indev_deps="libpulse"
  pulse_outdev_deps="libpulse"
  sdl2_outdev_deps="sdl2"
-@@ -5491,6 +5493,8 @@ case $target_os in
-         ;;
-     netbsd)
+@@ -5554,6 +5556,7 @@ case $target_os in
+     android)
          disable symver
-+        enable section_data_rel_ro
+         enable section_data_rel_ro
 +        enable pic
-         oss_indev_extralibs="-lossaudio"
-         oss_outdev_extralibs="-lossaudio"
-         enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5516,7 +5520,7 @@ case $target_os in
+         add_cflags -fPIE
+         add_ldexeflags -fPIE -pie
+         SLIB_INSTALL_NAME='$(SLIBNAME)'
+@@ -5612,7 +5615,7 @@ case $target_os in
          ;;
      darwin)
          enabled ppc && add_asflags -force_cpusubtype_ALL
@@ -54,7 +52,7 @@ Do not use 'rsync'.
          SHFLAGS='-dynamiclib -Wl,-single_module -Wl,-install_name,$(INSTALL_NAME_DIR)/$(SLIBNAME_WITH_MAJOR),-current_version,$(LIBVERSION),-compatibility_version,$(LIBMAJOR)'
          enabled x86_32 && append SHFLAGS -Wl,-read_only_relocs,suppress
          strip="${strip} -x"
-@@ -5889,10 +5893,13 @@ done
+@@ -5989,10 +5992,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -71,7 +69,7 @@ Do not use 'rsync'.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6305,6 +6312,7 @@ check_headers malloc.h
+@@ -6460,6 +6466,7 @@ check_headers malloc.h
  check_headers mftransform.h
  check_headers net/udplite.h
  check_headers poll.h
@@ -79,7 +77,7 @@ Do not use 'rsync'.
  check_headers sys/param.h
  check_headers sys/resource.h
  check_headers sys/select.h
-@@ -6783,7 +6791,6 @@ enabled makeinfo \
+@@ -6972,7 +6979,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
