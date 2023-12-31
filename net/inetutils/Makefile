@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/06/26 09:26:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2023/12/31 19:06:15 adam Exp $
 
-DISTNAME=	inetutils-2.4
+DISTNAME=	inetutils-2.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=inetutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,11 +10,13 @@ HOMEPAGE=	https://www.gnu.org/software/inetutils/
 COMMENT=	GNU network utilities
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+
 AUTO_MKDIRS=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ENV+=		inetutils_cv_path_cp=${CP}
+CONFIGURE_ENV+=		inetutils_cv_path_cp=${CP:Q}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
