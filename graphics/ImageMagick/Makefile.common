@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.275 2023/12/11 10:25:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.276 2023/12/31 21:42:38 wiz Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 #
 # Changelog: https://github.com/ImageMagick/Website/blob/main/ChangeLog.md
 
 IM_MAJOR_VER=		7.1.1
-IM_MINOR_VER=		23
+IM_MINOR_VER=		25
 IM_MAJOR_LIB_VER=	7
 
 .if (${IM_MINOR_VER} != NONE)
