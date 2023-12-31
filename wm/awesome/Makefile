@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/11/14 14:02:59 wiz Exp $
+# $NetBSD: Makefile,v 1.88.2.1 2023/12/31 21:50:35 bsiegert Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	14
@@ -44,8 +44,17 @@ CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
 
 .include "../../lang/ruby/rubyversion.mk"
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
-TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
+
+# Switched to ImageMagick6 to work around image conversion failures with
+# the convert tool provided by the most recent ImageMagick 7 releases.
+TOOL_DEPENDS+=	ImageMagick6-[0-9]*:../../graphics/ImageMagick6
+
+SUBST_CLASSES+=		convert
+SUBST_STAGE.convert=	pre-configure
+SUBST_MESSAGE.convert=	Fixing ImageMagick convert executable name.
+SUBST_FILES.convert+=	awesomeConfig.cmake
+SUBST_SED.convert=	-e 's|CONVERT_EXECUTABLE convert|CONVERT_EXECUTABLE convert6|'
 
 SUBST_CLASSES+=		lua
 SUBST_STAGE.lua=	pre-configure
