@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2023/11/17 07:43:54 pin Exp $
+$NetBSD: distinfo,v 1.12 2023/12/31 08:58:57 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -501,3 +501,4 @@ Size (x11-dl-2.21.0.crate) = 66823 bytes
 BLAKE2s (xdg-2.5.2.crate) = 0f174fa5ab3c513b691bf1bf0a4cb628e25bc0f9a2af9700ec21c07cfe8f8609
 SHA512 (xdg-2.5.2.crate) = 12c7f42d2afd63d8d196511fa069519a0c495fc2555c87c059b96b46d7e2a2c51c31836c48fb329806d312a45a2fd67b4243793aa91e2139e2aa3f05230b2edd
 Size (xdg-2.5.2.crate) = 14394 bytes
+SHA1 (patch-display-servers_xlib-display-server_src_xwrap_setters.rs) = 600a05b3735ecebf91ee18a2b5f12d39358d9a0d
