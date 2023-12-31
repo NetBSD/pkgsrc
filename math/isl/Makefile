@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/05/03 18:16:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/12/31 09:51:42 wiz Exp $
 
-DISTNAME=	isl-0.24
+DISTNAME=	isl-0.26
 CATEGORIES=	math
 MASTER_SITES=	https://libisl.sourceforge.io/
 EXTRACT_SUFX=	.tar.xz
