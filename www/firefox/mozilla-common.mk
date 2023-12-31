@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.272 2023/12/29 17:18:38 he Exp $
+# $NetBSD: mozilla-common.mk,v 1.273 2023/12/31 09:03:55 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -69,7 +69,6 @@ USE_TOOLS+=		tar
 
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
-CXXFLAGS+=	-mstackrealign
 CFLAGS+=	-mstackrealign
 .endif
 
