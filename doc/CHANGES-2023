@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7889 2023/12/31 09:05:01 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.7890 2023/12/31 09:07:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11210,3 +11210,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-attrs to 23.2.0 [adam 2023-12-31]
 	Updated www/firefox to 121.0 [ryoon 2023-12-31]
 	Updated www/firefox-l10n to 121.0 [ryoon 2023-12-31]
+	Updated games/scummvm to 2.8.0 [adam 2023-12-31]
+	Updated time/py-tzdata to 2023.4 [adam 2023-12-31]
+	Updated devel/py-jupyter_core to 5.5.1 [adam 2023-12-31]
+	Updated devel/py-hatch-fancy-pypi-readme to 23.2.0 [adam 2023-12-31]
