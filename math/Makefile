@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2023/12/29 16:44:07 bacon Exp $
+# $NetBSD: Makefile,v 1.584 2023/12/31 10:41:28 pin Exp $
 
 COMMENT=	Mathematics
 
@@ -445,6 +445,7 @@ SUBDIR+=	py-xgboost
 SUBDIR+=	py-z3
 SUBDIR+=	qalculate
 SUBDIR+=	qalculate-gtk
+SUBDIR+=	qcalc
 SUBDIR+=	qhull
 SUBDIR+=	qrupdate
 SUBDIR+=	quadpack
