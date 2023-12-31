@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/08/28 09:55:49 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/12/31 08:59:01 adam Exp $
 
-BLAKE2s (tzdata-2023.3.tar.gz) = be52c9be3fb9bd13c10dec4e2a626453dbfe857ad5c5cb69d3e216f5c52a5a99
-SHA512 (tzdata-2023.3.tar.gz) = d19878d83dec768297ceab69fdadb3dd11f5304726e1796e494b17ff9e8b6b5ac86646a2ae3bad47794872392c28eedd0db3c799e8bc9d37b8f223f969ee25bf
-Size (tzdata-2023.3.tar.gz) = 187483 bytes
+BLAKE2s (tzdata-2023.4.tar.gz) = b032e7c42b219169f983ca56a44e23cd5a405520545886b3a16ff791ca3e6bf9
+SHA512 (tzdata-2023.4.tar.gz) = 374892ab666d3af276605e6c91c7722efcdc295e931f40f5452f8a98b5f94dce19dda5c756c6ffecb8e47a6ad08ebb387b8a43c79482d2c7d32ea556bf5441fe
+Size (tzdata-2023.4.tar.gz) = 191298 bytes
