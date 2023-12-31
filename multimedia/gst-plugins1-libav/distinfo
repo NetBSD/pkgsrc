@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2023/11/16 09:31:35 wiz Exp $
+$NetBSD: distinfo,v 1.49 2023/12/31 22:03:00 wiz Exp $
 
-BLAKE2s (gst-libav-1.22.7.tar.xz) = 5c96d4bd677d3d1d8f8d314b1efc9d103d6190ae00afb1db9b791f8eb4ef63a4
-SHA512 (gst-libav-1.22.7.tar.xz) = 2675bd286b20be1eadcb660d9c01c89c8a534ddf250e08f0fc53715b9cc4c0d473e063341e1813eec86cad02685300c784d12f735405ac87a3a9e9bb97a7f91e
-Size (gst-libav-1.22.7.tar.xz) = 203504 bytes
+BLAKE2s (gst-libav-1.22.8.tar.xz) = 6ae75bb67c8957983906b4da32ec0730ab9f6d7796db72a670afaeb9b7606008
+SHA512 (gst-libav-1.22.8.tar.xz) = 483d5ffeebbe87e78872a3c859a9f5f64d112ec1fbad841b61c209a3837d349f918689e7a80586a4114bd2688a6f7495e4c77cc37ccb52519aac80b7bd77c437
+Size (gst-libav-1.22.8.tar.xz) = 204864 bytes
