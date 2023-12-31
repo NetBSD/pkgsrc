@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:19:56 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/12/31 17:59:47 riastradh Exp $
 
-BLAKE2s (sparse-0.4.4.tar.xz) = 304c819a48d80294b5a00050d00cbcdd3e8adb6d5c97ed47bd4889d2e073a2aa
-SHA512 (sparse-0.4.4.tar.xz) = de466c9ea2ff666891d776241912d7ee742bf8c90ff0c57e2049b0a31eaba74361448c065e517fef5f84a8f917d22a3e85227116babe9056ad23d0686583a417
-Size (sparse-0.4.4.tar.xz) = 178152 bytes
-SHA1 (patch-Makefile) = 7c099c1cf275c324ab7cd7a2a701c2fb3a3a7be4
+BLAKE2s (sparse-0.6.4.tar.xz) = 9b893e260884c6615d445182e4e190f098e1c418c54cc209c6ae20ee89b590e7
+SHA512 (sparse-0.6.4.tar.xz) = 4ada31e588469d15862579dd7eb926ce1ad717bf96d38d425b9153f2efe73949fdda5bc59d05d926614a08d70e656e4ff531a5f0a1cf8e7725c596dcdba169f9
+Size (sparse-0.6.4.tar.xz) = 370840 bytes
+SHA1 (patch-Makefile) = 57e430d4d3c3a3d88537d4cccc9d24234588d6df
 SHA1 (patch-ab) = aed1b3bd22529e8ec9ec2a359dd250cfec1af2c1
-SHA1 (patch-dissect.h) = 850271dbec6758380134c3e36fb5a885cf69259e
