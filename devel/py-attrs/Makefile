@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/10/28 19:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/12/31 08:01:32 adam Exp $
 
-DISTNAME=	attrs-23.1.0
+DISTNAME=	attrs-23.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/attrs/}
 
@@ -18,7 +17,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatc
 #TEST_DEPENDS+=	${PYPKGPREFIX}-Pympler-[0-9]*:../../devel/py-Pympler
 #TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../wip/py-cloudpickle
 #TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.3.0:../../devel/py-test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.1.1:../../lang/py-mypy
 #TEST_DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 #TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3:../../devel/py-coverage
@@ -27,13 +25,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-#do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
+#.include "../../lang/python/pyversion.mk"
+#.if ${PYTHON_VERSION} < 311
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-plugins-[0-9]*:../../devel/py-test-mypy-plugins
-.endif
+#.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
