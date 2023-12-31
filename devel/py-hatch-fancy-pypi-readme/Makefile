@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/12/31 09:06:03 adam Exp $
 
-DISTNAME=	hatch_fancy_pypi_readme-23.1.0
+DISTNAME=	hatch_fancy_pypi_readme-23.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-fancy-pypi-readme/}
 
@@ -13,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.0:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
@@ -29,9 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} hatch-fancy-pypi-readme hatch-fancy-pypi-readme-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
