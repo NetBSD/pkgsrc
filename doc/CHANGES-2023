@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7915 2023/12/31 22:07:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7916 2023/12/31 22:09:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11244,3 +11244,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-reversion to 5.0.10 [adam 2023-12-31]
 	Updated www/py-django-import-export to 3.3.5 [adam 2023-12-31]
 	Updated www/py-django-admin-rangefilter to 0.12.0 [adam 2023-12-31]
+	Updated multimedia/gstreamer1 to 1.22.8 [wiz 2023-12-31]
