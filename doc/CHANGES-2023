@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7900 2023/12/31 19:50:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7901 2023/12/31 20:40:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11226,3 +11226,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test to 7.4.4 [adam 2023-12-31]
 	Updated textproc/py-fastjsonschema to 2.19.1 [adam 2023-12-31]
 	Updated devel/py-coverage to 7.4.0 [adam 2023-12-31]
+	Updated graphics/ImageMagick6 to 6.9.13.2 [gutteridge 2023-12-31]
