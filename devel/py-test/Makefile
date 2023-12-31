@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2023/10/25 08:37:18 adam Exp $
+# $NetBSD: Makefile,v 1.121 2023/12/31 19:11:55 adam Exp $
 
-DISTNAME=	pytest-7.4.3
+DISTNAME=	pytest-7.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://pytest.org/
 COMMENT=	Python testing tool
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-iniconfig-[0-9]*:../../devel/py-iniconfig
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
@@ -28,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
 
-USE_PKG_RESOURCES=	yes
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
@@ -43,12 +41,6 @@ post-install:
 	${MV} py.test py.test-${PYVERSSUFFIX} && \
 	${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
 
-# needs to be installed before testing
-# as of 7.2.0
-# 6 failed, 3324 passed, 39 skipped, 11 xfailed
-do-test:
-	cd ${WRKSRC}/testing && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
