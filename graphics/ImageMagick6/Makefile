@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.65 2023/11/15 20:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/12/31 20:40:31 gutteridge Exp $
 
-PKGREVISION= 6
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick6-${DISTVERSION}
@@ -10,7 +9,7 @@ COMMENT=	Package for display and interactive manipulation of images
 
 CONFLICTS=	geomview<1.8.1nb2  # used to have a program named 'animate'
 
-USE_LANGUAGES=		c c++ c99
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config:run
 CONFIGURE_ARGS+=	--disable-assert
 CONFIGURE_ARGS+=	--with-xml=yes
@@ -50,6 +49,7 @@ SUBST_NOOP_OK.pkgcfg=	yes
 # "Requires:" line.
 
 USE_CC_FEATURES+=	c99
+FORCE_C_STD=		c99
 
 TEST_TARGET=		check
 
