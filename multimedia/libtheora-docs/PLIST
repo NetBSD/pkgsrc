@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/12/25 17:13:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/12/31 09:49:19 wiz Exp $
 share/doc/libtheora-${PKGVERSION}/color.html
 share/doc/libtheora-${PKGVERSION}/doxygen-build.stamp
 share/doc/libtheora-${PKGVERSION}/draft-ietf-avt-rtp-theora-00.txt
@@ -7,16 +7,18 @@ share/doc/libtheora-${PKGVERSION}/html/annotated.html
 share/doc/libtheora-${PKGVERSION}/html/bc_s.png
 share/doc/libtheora-${PKGVERSION}/html/bc_sd.png
 share/doc/libtheora-${PKGVERSION}/html/classes.html
+share/doc/libtheora-${PKGVERSION}/html/clipboard.js
 share/doc/libtheora-${PKGVERSION}/html/closed.png
 share/doc/libtheora-${PKGVERSION}/html/codec_8h.html
 share/doc/libtheora-${PKGVERSION}/html/codec_8h_source.html
-share/doc/libtheora-${PKGVERSION}/html/dir_000000.html
-share/doc/libtheora-${PKGVERSION}/html/dir_000001.html
+share/doc/libtheora-${PKGVERSION}/html/dir_5b2027f988bb10104ff6bde3c5145ee6.html
+share/doc/libtheora-${PKGVERSION}/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
 share/doc/libtheora-${PKGVERSION}/html/doc.svg
 share/doc/libtheora-${PKGVERSION}/html/docd.svg
 share/doc/libtheora-${PKGVERSION}/html/doxygen.css
 share/doc/libtheora-${PKGVERSION}/html/doxygen.png
 share/doc/libtheora-${PKGVERSION}/html/doxygen.svg
+share/doc/libtheora-${PKGVERSION}/html/doxygen_crawl.html
 share/doc/libtheora-${PKGVERSION}/html/dynsections.js
 share/doc/libtheora-${PKGVERSION}/html/files.html
 share/doc/libtheora-${PKGVERSION}/html/folderclosed.svg
@@ -89,8 +91,8 @@ share/doc/libtheora-${PKGVERSION}/latex/Makefile
 share/doc/libtheora-${PKGVERSION}/latex/annotated.tex
 share/doc/libtheora-${PKGVERSION}/latex/codec_8h.tex
 share/doc/libtheora-${PKGVERSION}/latex/codec_8h_source.tex
-share/doc/libtheora-${PKGVERSION}/latex/dir_000000.tex
-share/doc/libtheora-${PKGVERSION}/latex/dir_000001.tex
+share/doc/libtheora-${PKGVERSION}/latex/dir_5b2027f988bb10104ff6bde3c5145ee6.tex
+share/doc/libtheora-${PKGVERSION}/latex/dir_d436eb0fd9de10b54a828ce6435f7e81.tex
 share/doc/libtheora-${PKGVERSION}/latex/doxygen.sty
 share/doc/libtheora-${PKGVERSION}/latex/etoc_doxygen.sty
 share/doc/libtheora-${PKGVERSION}/latex/files.tex

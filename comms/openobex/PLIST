@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/09/21 14:49:14 vins Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/12/31 09:49:19 wiz Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -15,14 +15,16 @@ share/doc/openobex/html/api_8c.html
 share/doc/openobex/html/bc_s.png
 share/doc/openobex/html/bc_sd.png
 share/doc/openobex/html/classes.html
+share/doc/openobex/html/clipboard.js
 share/doc/openobex/html/closed.png
-share/doc/openobex/html/dir_000000.html
-share/doc/openobex/html/dir_000001.html
-share/doc/openobex/html/dir_000002.html
+share/doc/openobex/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
+share/doc/openobex/html/dir_e386a5083970e0fa2b6c728895c57698.html
+share/doc/openobex/html/dir_e8acc63b1e238f3255c900eed37254b8.html
 share/doc/openobex/html/doc.svg
 share/doc/openobex/html/docd.svg
 share/doc/openobex/html/doxygen.css
 share/doc/openobex/html/doxygen.svg
+share/doc/openobex/html/doxygen_crawl.html
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
 share/doc/openobex/html/folderclosed.svg
@@ -77,5 +79,3 @@ share/doc/openobex/html/tab_sd.png
 share/doc/openobex/html/tabs.css
 share/doc/openobex/html/unionobex__headerdata__t.html
 share/doc/openobex/html/unionobex__interface__t.html
-@pkgdir man/man1
-@pkgdir bin
