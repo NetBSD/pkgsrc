@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7892 2023/12/31 09:48:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7893 2023/12/31 09:51:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11216,3 +11216,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hatch-fancy-pypi-readme to 23.2.0 [adam 2023-12-31]
 	Updated multimedia/libaom to 3.8.0 [ryoon 2023-12-31]
 	Updated devel/doxygen to 1.10.0 [wiz 2023-12-31]
+	Updated math/isl to 0.26 [wiz 2023-12-31]
