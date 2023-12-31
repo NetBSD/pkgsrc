@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23845 2023/12/31 09:51:57 wiz Exp $
+$NetBSD: TODO,v 1.23846 2023/12/31 11:30:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,6 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.25
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-23.3.2
@@ -422,6 +423,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aide-0.16
 	o album-4.17
 	o alevt-1.6.2
+	o alex-3.5.0.0
 	o alsa-plugins-1.2.7.1
 	o amanda-3.5.2
 	o amavis-perl-0.3.12 [called just amavis]
@@ -461,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
+	o aspell-0.60.8.1
 	o aspell-nb-2.0.10
 	o asunder-2.9.7
 	o attr-2.5.1 [wip, https://savannah.nongnu.org/bugs/index.php?63920]
@@ -512,6 +515,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o camlp4-4.12
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cargo-c-0.9.29
 	o cargo-modules-0.13.1 [needs rust 1.74]
 	o cddbd-1.5.2
 	o cdrdao-1.2.5
@@ -634,6 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o ffmpeg6-6.1.1
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
@@ -751,6 +756,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.12
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.22.8
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -854,6 +860,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o krita-5.1.3
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
+	o lapack-3.12.0
 	o lastpass-cli-1.3.3
 	o latexmk-472b
 	o lbdb-49
@@ -1020,7 +1027,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
-	o opencv-4.8.1
+	o opencv-4.9.0
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
@@ -1161,8 +1168,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-diffoscope-242
+	o py-distro-1.9.0
 	o py-django-5.0
 	o py-ephem3-3.7.6.0
+	o py-fastjsonschema-2.19.1
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-foolscap-23.3.0
@@ -1174,6 +1183,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-llvmlite-0.39.0
+	o py-lxml-5.0.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1182,12 +1192,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pdm_backend-2.1.8
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-rapidfuzz-3.6.1
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1354,6 +1366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
 	o tile-0.7.4
+	o tinyxml2-10.0.0
 	o tkcon-2.7.3
 	o tkhylafax-3.2
 	o tkinfo-2.11
