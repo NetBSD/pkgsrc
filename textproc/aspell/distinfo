@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 11:21:34 nia Exp $
+$NetBSD: distinfo,v 1.35 2023/12/31 21:20:57 wiz Exp $
 
-BLAKE2s (aspell-0.60.8.tar.gz) = 1974d2ee04d5c27c82758f2bad66a4aa2253d2a610dec0cff5f378c05c29caa0
-SHA512 (aspell-0.60.8.tar.gz) = 8ef4952c553b6234dfe777240d2d97beb13ef9201e18d56bee3b5068d13525db3625b7130d9f5122f7c529da0ccb0c70eb852a81472a7d15fb7c4ee5ba21cd29
-Size (aspell-0.60.8.tar.gz) = 3486448 bytes
+BLAKE2s (aspell-0.60.8.1.tar.gz) = f1adcb82ff9069159ba4347a385d550875e63cce02fcb4ab32be8477f1501a1c
+SHA512 (aspell-0.60.8.1.tar.gz) = 80fa9d7f5f4b8bf66388825ae28403713a2e3eda81fc31f2f452c3e2fe8349cd0fa8f0e4d0d3f8cffe215817229af25aa7be2dba358cb9cdc97e9d2834ba5ca7
+Size (aspell-0.60.8.1.tar.gz) = 3567205 bytes
 SHA1 (patch-ab) = 615a676128dab7d79e697f56330c8aaa6c901d3f
 SHA1 (patch-ac) = e748877b22ca116454155d3659c16efaf02e7963
 SHA1 (patch-ad) = 5e525ed1e91b3271567f4255729e94159be86f58
