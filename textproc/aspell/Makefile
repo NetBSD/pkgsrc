@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2022/06/28 11:36:08 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2023/12/31 21:20:57 wiz Exp $
 
-DISTNAME=		aspell-0.60.8
-PKGREVISION=		4
+DISTNAME=		aspell-0.60.8.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
@@ -34,12 +33,12 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 .include "../../mk/bsd.prefs.mk"
 
 # aspell does not work with curses in NetBSD <= 8.0.
-.if !empty(MACHINE_PLATFORM:MNetBSD-8.0*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[0-7].*)
+.if ${MACHINE_PLATFORM:MNetBSD-8.0.*} || \
+    ${MACHINE_PLATFORM:MNetBSD-[0-7].*}
 USE_CURSES=	ncurses
 .endif
 
-.if !empty(MACHINE_PLATFORM:MIRIX-5*)
+.if ${MACHINE_PLATFORM:MIRIX-5.*}
 CPPFLAGS+=	-DDECLARE_VSNPRINTF -DDECLARE_SNPRINTF
 # IRIX 5 has an older implementation of signal()
 CPPFLAGS+=	-DHAVE_OLD_SIGNAL
