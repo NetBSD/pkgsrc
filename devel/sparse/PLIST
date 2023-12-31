@@ -1,24 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/02 15:27:11 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/12/31 17:59:47 riastradh Exp $
 bin/cgcc
 bin/sparse
-include/sparse/allocate.h
-include/sparse/bitmap.h
-include/sparse/compat.h
-include/sparse/dissect.h
-include/sparse/expression.h
-include/sparse/flow.h
-include/sparse/ident-list.h
-include/sparse/lib.h
-include/sparse/linearize.h
-include/sparse/parse.h
-include/sparse/ptrlist.h
-include/sparse/scope.h
-include/sparse/storage.h
-include/sparse/symbol.h
-include/sparse/target.h
-include/sparse/token.h
-lib/libsparse.a
-lib/pkgconfig/sparse.pc
 man/man1/cgcc.1
 man/man1/sparse.1
 share/doc/sparse/FAQ
