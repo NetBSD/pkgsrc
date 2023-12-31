@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7890 2023/12/31 09:07:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.7891 2023/12/31 09:09:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11214,3 +11214,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/py-tzdata to 2023.4 [adam 2023-12-31]
 	Updated devel/py-jupyter_core to 5.5.1 [adam 2023-12-31]
 	Updated devel/py-hatch-fancy-pypi-readme to 23.2.0 [adam 2023-12-31]
+	Updated multimedia/libaom to 3.8.0 [ryoon 2023-12-31]
