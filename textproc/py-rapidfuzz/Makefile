@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/12/25 22:19:59 spz Exp $
+# $NetBSD: Makefile,v 1.18 2023/12/31 21:33:52 wiz Exp $
 
-DISTNAME=	rapidfuzz-3.5.2
+DISTNAME=	rapidfuzz-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
@@ -28,10 +28,10 @@ PLIST_VARS+=	sse2
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.avx2=	yes
 .else
-. if ${MACHINE_ARCH} == "i386"
+.  if ${MACHINE_ARCH} == "i386"
 PLIST.avx2=	yes
 PLIST.sse2=	yes
-. endif
+.  endif
 .endif
 
 USE_CXX_FEATURES=	c++17
