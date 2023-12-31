@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/03/16 09:11:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/12/31 09:48:58 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	cpu_features-0.7.0
@@ -29,6 +29,11 @@ PLIST_SUBST+=		CPU_FEATURES_ARCH=mips
 .else
 PKG_FAIL_REASON+=	"${MACHINE_ARCH} unsupported, see CMakeLists.txt"
 .endif
+
+# wiz 20231231:
+# as of 0.7.0, the ninja generator has problems in some environments:
+# ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
+CMAKE_GENERATOR=	make
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
