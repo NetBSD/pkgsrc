@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:10:05 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/12/31 15:27:26 abs Exp $
 
-BLAKE2s (Workbench-Build127.zip) = 148e11004b29a51f616f4ee5bccf4a15ac51e2edb68cf067b4b576c998c7ea63
-SHA512 (Workbench-Build127.zip) = 4d675136767d8d347ced22214fab036fb24c6e6c844bdef07c3290f6890c8f96a0555ae7dd00df639bc5832deb79ac79329fbc062f0f93f2a9b89d0a12c61156
-Size (Workbench-Build127.zip) = 8275806 bytes
+BLAKE2s (Workbench-Build130.zip) = aa560c7f5f6b6180d646ccf23dae0554c7c29f4eb5606db1f9303ea5719e9137
+SHA512 (Workbench-Build130.zip) = 580f7b0ac15a2388bb2e039de756e82cdb324d6c4acbc0402fd298607c60307bdb7a711ddff09311e473289fe8016a83a1ec485e05f5408dd7fe46e59c0b90e5
+Size (Workbench-Build130.zip) = 9563223 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/09/30 15:50:33 abs Exp $
+# $NetBSD: Makefile,v 1.9 2023/12/31 15:27:26 abs Exp $
 
-DISTNAME=	Workbench-Build127
-PKGNAME=	sql-workbench-127
+DISTNAME=	Workbench-Build130
+PKGNAME=	sql-workbench-130
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sql-workbench.net/
 EXTRACT_SUFX=	.zip
@@ -21,7 +21,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 EXTRACT_DIR=	${WRKSRC}
 
 USE_JAVA=		run
-USE_JAVA2=		8
+USE_JAVA2=		11
 USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}

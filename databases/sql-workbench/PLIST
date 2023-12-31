@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/09/30 15:50:33 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/12/31 15:27:26 abs Exp $
 bin/sqlworkbench
 share/sql-workbench/LICENSE
 share/sql-workbench/SQLWorkbench.cfg.sample
@@ -9,6 +9,7 @@ share/sql-workbench/download_jre.ps1
 share/sql-workbench/download_jre.sh
 share/sql-workbench/ext/README_EXT
 share/sql-workbench/ext/flatlaf.jar
+share/sql-workbench/ext/jsch.jar
 share/sql-workbench/log4j-sample.xml
 share/sql-workbench/manual/SQLWorkbench-Manual.pdf
 share/sql-workbench/manual/annotations.html
