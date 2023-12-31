@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/11/09 06:49:49 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/12/31 21:55:02 adam Exp $
 
-DISTNAME=	django-reversion-5.0.8
+DISTNAME=	django-reversion-5.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/etianen/django-reversion
 COMMENT=	Version control facilities for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
