@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/10/28 19:57:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/12/31 08:59:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -673,4 +673,5 @@ ${PYSITELIB}/tzdata/zoneinfo/leapseconds
 ${PYSITELIB}/tzdata/zoneinfo/tzdata.zi
 ${PYSITELIB}/tzdata/zoneinfo/zone.tab
 ${PYSITELIB}/tzdata/zoneinfo/zone1970.tab
+${PYSITELIB}/tzdata/zoneinfo/zonenow.tab
 ${PYSITELIB}/tzdata/zones
