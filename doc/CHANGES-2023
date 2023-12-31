@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7905 2023/12/31 21:21:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.7906 2023/12/31 21:23:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11232,3 +11232,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/conftest to 0.47.0 [leot 2023-12-31]
 	Updated devel/regal to 0.14.0 [leot 2023-12-31]
 	Updated textproc/aspell to 0.60.8.1 [wiz 2023-12-31]
+	Updated devel/py-distro to 1.9.0 [wiz 2023-12-31]
