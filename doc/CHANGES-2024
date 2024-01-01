@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.31 2024/01/01 16:06:40 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.32 2024/01/01 16:06:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -39,3 +39,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/mozc-tool to 2.26.4282.100nb25 [ryoon 2024-01-01]
 	Updated inputmethod/mozc-elisp to 2.26.4282.100nb26 [ryoon 2024-01-01]
 	Updated inputmethod/ibus-mozc to 2.26.4282.100nb25 [ryoon 2024-01-01]
+	Updated inputmethod/uim-mozc to 2.26.4282.100nb24 [ryoon 2024-01-01]
