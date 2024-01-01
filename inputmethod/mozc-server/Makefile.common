@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2024/01/01 11:53:12 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.40 2024/01/01 16:05:23 ryoon Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -83,7 +83,7 @@ do-configure:
 		--gypdir=${LOCALBASE}/bin
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/protobuf/buildlink3.mk"
+#.include "../../devel/protobuf/buildlink3.mk"
 # gmock is not used yet...
 #.include "../../devel/gmock/buildlink3.mk"
 .include "../../inputmethod/zinnia/buildlink3.mk"
