@@ -1,0 +1,20 @@
+$NetBSD: patch-src_main_native_BUILD,v 1.1 2024/01/01 12:00:59 ryoon Exp $
+
+--- src/main/native/BUILD.orig	2023-11-28 16:45:20.409299941 +0000
++++ src/main/native/BUILD
+@@ -3,6 +3,7 @@ genrule(
+     srcs = select({
+         "//src/conditions:darwin": ["@bazel_tools//tools/jdk:jni_md_header-darwin"],
+         "//src/conditions:freebsd": ["@bazel_tools//tools/jdk:jni_md_header-freebsd"],
++        "//src/conditions:netbsd": ["@bazel_tools//tools/jdk:jni_md_header-netbsd"],
+         "//src/conditions:openbsd": ["@bazel_tools//tools/jdk:jni_md_header-openbsd"],
+         "//src/conditions:windows": ["@bazel_tools//tools/jdk:jni_md_header-windows"],
+         "//conditions:default": ["@bazel_tools//tools/jdk:jni_md_header-linux"],
+@@ -38,6 +39,7 @@ filegroup(
+             "darwin/util.h",
+         ],
+         "//src/conditions:freebsd": ["unix_jni_bsd.cc"],
++        "//src/conditions:netbsd": ["unix_jni_bsd.cc"],
+         "//src/conditions:openbsd": ["unix_jni_bsd.cc"],
+         "//conditions:default": ["unix_jni_linux.cc"],
+     }),

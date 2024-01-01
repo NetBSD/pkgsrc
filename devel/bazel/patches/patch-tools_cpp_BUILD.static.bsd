@@ -1,0 +1,57 @@
+$NetBSD: patch-tools_cpp_BUILD.static.bsd,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- tools/cpp/BUILD.static.bsd.orig	2023-11-28 16:29:55.502670885 +0000
++++ tools/cpp/BUILD.static.bsd
+@@ -34,9 +34,11 @@ cc_toolchain_suite(
+     toolchains = {
+         "armeabi-v7a|compiler": ":cc-compiler-armeabi-v7a",
+         "freebsd|compiler": ":cc-compiler-freebsd",
++        "netbsd|compiler": ":cc-compiler-netbsd",
+         "openbsd|compiler": ":cc-compiler-openbsd",
+         "armeabi-v7a": ":cc-compiler-armeabi-v7a",
+         "freebsd": ":cc-compiler-freebsd",
++        "netbsd": ":cc-compiler-netbsd",
+         "openbsd": ":cc-compiler-openbsd",
+     },
+ )
+@@ -76,6 +78,40 @@ toolchain(
+ )
+ 
+ cc_toolchain(
++    name = "cc-compiler-netbsd",
++    all_files = ":empty",
++    ar_files = ":empty",
++    as_files = ":empty",
++    compiler_files = ":empty",
++    dwp_files = ":empty",
++    linker_files = ":empty",
++    objcopy_files = ":empty",
++    strip_files = ":empty",
++    supports_param_files = 0,
++    toolchain_config = ":local_netbsd",
++    toolchain_identifier = "local_netbsd",
++)
++
++cc_toolchain_config(
++    name = "local_netbsd",
++    cpu = "netbsd",
++)
++
++toolchain(
++    name = "cc-toolchain-netbsd",
++    exec_compatible_with = [
++        "@platforms//cpu:x86_64",
++        "@platforms//os:netbsd",
++    ],
++    target_compatible_with = [
++        "@platforms//cpu:x86_64",
++        "@platforms//os:netbsd",
++    ],
++    toolchain = ":cc-compiler-netbsd",
++    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
++)
++
++cc_toolchain(
+     name = "cc-compiler-openbsd",
+     all_files = ":empty",
+     ar_files = ":empty",

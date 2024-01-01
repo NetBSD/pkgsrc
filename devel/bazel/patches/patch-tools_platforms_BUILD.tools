@@ -1,0 +1,32 @@
+$NetBSD: patch-tools_platforms_BUILD.tools,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- tools/platforms/BUILD.tools.orig	1979-12-31 15:00:00.000000000 +0000
++++ tools/platforms/BUILD.tools
+@@ -72,6 +72,11 @@ alias(
+ )
+ 
+ alias(
++    name = "netbsd",
++    actual = "@platforms//os:netbsd",
++)
++
++alias(
+     name = "openbsd",
+     actual = "@platforms//os:openbsd",
+ )
+@@ -114,6 +119,7 @@ platform(
+     os_constraints = [
+         "@platforms//os:osx",
+         "@platforms//os:freebsd",
++        "@platforms//os:netbsd",
+         "@platforms//os:openbsd",
+         "@platforms//os:linux",
+         "@platforms//os:windows",
+@@ -137,6 +143,7 @@ platform(
+     os_constraints = [
+         "@platforms//os:osx",
+         "@platforms//os:freebsd",
++        "@platforms//os:netbsd",
+         "@platforms//os:openbsd",
+         "@platforms//os:linux",
+         "@platforms//os:windows",
