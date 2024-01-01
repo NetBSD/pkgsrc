@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:17:05 nia Exp $
+$NetBSD: distinfo,v 1.34 2024/01/01 08:30:15 mef Exp $
 
-BLAKE2s (MooseX-Getopt-0.75.tar.gz) = d3191d3899c803dbb7ebf4bc9cab46ac49cafe2363184a759b96e4ea611b6683
-SHA512 (MooseX-Getopt-0.75.tar.gz) = b02a8aad4c1c12fc98bf68d68cd72bcc32c82103d5f4ab79345e09354b32f697876571fb7a15987db5d0fc44af113a8d9e588cb2447b9db4d2ff6da242a8010a
-Size (MooseX-Getopt-0.75.tar.gz) = 59084 bytes
+BLAKE2s (MooseX-Getopt-0.76.tar.gz) = 0740c687415959c1f49c959337e53ea454cbb30777dd05529d33a1976cae6306
+SHA512 (MooseX-Getopt-0.76.tar.gz) = 96a0bae5d538b4e54a824e2e21e8dedb05e3a30d0de30e85bf3aedb9da45ab5a1859177a562ea838f786e25c50ab63236b27f75077388103af23ef954e1c89f8
+Size (MooseX-Getopt-0.76.tar.gz) = 59303 bytes
