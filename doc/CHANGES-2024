@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.19 2024/01/01 13:41:52 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.20 2024/01/01 14:10:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -27,3 +27,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/bazel version 6.4.0 [ryoon 2024-01-01]
 	Added pkgtools/pkgchkxx version 0.1.6nb1 [bsiegert 2024-01-01]
 	Updated geography/qgis to 3.28.14 [gdt 2024-01-01]
+	Updated lang/joker to 1.3.4 [gdt 2024-01-01]
