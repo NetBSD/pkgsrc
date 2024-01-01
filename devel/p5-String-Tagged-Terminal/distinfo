@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/30 17:47:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/01 09:13:29 mef Exp $
 
-BLAKE2s (String-Tagged-Terminal-0.06.tar.gz) = 5c0eccbb18a69d03147225680ac9aa8ebdbea0b01db7e33c8b984d1d6a296c5e
-SHA512 (String-Tagged-Terminal-0.06.tar.gz) = d09146bec329fcd0f11e47dce8549a8a22d7ac13a5ad310c2060e8ecd8726687ad4db3a50b5d6cfac3cd580eac9a28d5b678bbe475c0058af44aac95de9c7d7d
-Size (String-Tagged-Terminal-0.06.tar.gz) = 18425 bytes
+BLAKE2s (String-Tagged-Terminal-0.07.tar.gz) = c0cd08c0d99f3e598dd9cd25ce7017e953162b2a4bd2f695c3db2347c4037cec
+SHA512 (String-Tagged-Terminal-0.07.tar.gz) = d8120e6be0f5cb688312b196f0af5ca759b7023be0d40cf12a3dfc8bf3f45add452ea1c96d5a126e70706376b0bd8c7a1296b854a056258a1a4e27fcbe698e11
+Size (String-Tagged-Terminal-0.07.tar.gz) = 20653 bytes
