@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2023/01/10 17:09:08 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2024/01/01 18:20:49 schmonz Exp $
 
-BLAKE2s (dq-20230101.tar.gz) = c3a8d30cbae75e9f6ef1becb880489b88c11e989dcdf8d54affd44baa3a9c8af
-SHA512 (dq-20230101.tar.gz) = 9de0cefd6650d302af01ca01e0749194fd4eafdc18f3158f4bad300d896c2d215db6e8a633a188fc5dbf5efa62968289296fbd4bf5ac14daac55e8d2a157375f
-Size (dq-20230101.tar.gz) = 70279 bytes
+BLAKE2s (dq-20240101.tar.gz) = 7da1a5a8a29a0e9dbeaafabdf488ee9242b755bd6a1cc02bd874edf3a28caf2b
+SHA512 (dq-20240101.tar.gz) = 9508963c26b9a0c4fa06b7be2fc01f07c829acba5637bb9bbf87baf781d5a637966b92d9e9336cc166c971f79d5536bae250d95cc34c58b3c2f5d6d2d5cd06c8
+Size (dq-20240101.tar.gz) = 72409 bytes
 SHA1 (patch-Makefile) = bcea88dbd1c9d31e290dcf8a98f4eed4ec34968f

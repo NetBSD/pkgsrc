@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2023/01/10 17:09:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/01 18:20:49 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}
 PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=janmojzis/}
 GITHUB_PROJECT=		dq
-GITHUB_TAG=		20230101
+GITHUB_TAG=		20240101
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/janmojzis/dq/
