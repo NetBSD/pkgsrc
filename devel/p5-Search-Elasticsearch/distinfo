@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:17:27 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/01/01 08:43:58 mef Exp $
 
-BLAKE2s (Search-Elasticsearch-7.30.tar.gz) = 0ed55e373b9f0d09a24a8e246c690e02369defb045c4e004bd6f9d89bca43200
-SHA512 (Search-Elasticsearch-7.30.tar.gz) = fac52f485df3aa33c48a00cfd093f2342ea1774aaf7ef86702370843fc7bcb558a8371682fffccdca104fb2d0523702d17fa2c40f0769600bee9a83adb6d6c77
-Size (Search-Elasticsearch-7.30.tar.gz) = 127260 bytes
+BLAKE2s (Search-Elasticsearch-8.00.tar.gz) = e393cb25c8f90631e985bac54c67ec64735e83cba9a49d47533626eb390fd0fc
+SHA512 (Search-Elasticsearch-8.00.tar.gz) = 2a62efc1434b40584dec5b5baf165ccb03e19b981883bfc313b297e03ea973f9ed85047b15294ce0742b6901b98cc4050214abbd29f02f46e175c410777ff42d
+Size (Search-Elasticsearch-8.00.tar.gz) = 132514 bytes
