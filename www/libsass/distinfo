@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:29:37 nia Exp $
+$NetBSD: distinfo,v 1.24 2024/01/01 11:39:43 adam Exp $
 
-BLAKE2s (libsass-3.6.5.tar.gz) = 821dd9be7d52135f6546b74ce9dda6590f8b99341b468267aef6ff96cd25a317
-SHA512 (libsass-3.6.5.tar.gz) = 98cc7e12fdf74cd9e92d8d4a62b821956d3ad186fcee9a8d77b677a621342aa161b73d9adad4c1849678a3bac890443120cc8febe1b7429aab374321d635b8f7
-Size (libsass-3.6.5.tar.gz) = 342426 bytes
+BLAKE2s (libsass-3.6.6.tar.gz) = 97ff0e27460ee1ca77fd9d40cbda287d565ebfa9c1c74c8de10294a410609248
+SHA512 (libsass-3.6.6.tar.gz) = 659828c854af391c10a16954425fbeeb5fa036189dea45555cd8046338f7469eb7f8d84134030ce644921514b8f397ef6070b56dfb116ea7ce94328d64576518
+Size (libsass-3.6.6.tar.gz) = 342625 bytes
 SHA1 (patch-src_sass.hpp) = 0c003be73e3891f9a24866a099e1dfec1065c6cb
 SHA1 (patch-src_units.hpp) = 7d00a300e65b3e0dd042c8d8661ce3f30ebad4b0
