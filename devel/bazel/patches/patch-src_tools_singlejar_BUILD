@@ -1,0 +1,20 @@
+$NetBSD: patch-src_tools_singlejar_BUILD,v 1.1 2024/01/01 12:00:59 ryoon Exp $
+
+--- src/tools/singlejar/BUILD.orig	2023-11-28 16:49:45.631463476 +0000
++++ src/tools/singlejar/BUILD
+@@ -76,6 +76,7 @@ cc_binary(
+     ],
+     linkopts = select({
+         "//src/conditions:freebsd": ["-lm"],
++        "//src/conditions:netbsd": ["-lm"],
+         "//src/conditions:openbsd": ["-lm"],
+         "//conditions:default": [],
+     }),
+@@ -95,6 +96,7 @@ cc_binary(
+     ],
+     linkopts = select({
+         "//src/conditions:freebsd": ["-lm"],
++        "//src/conditions:netbsd": ["-lm"],
+         "//src/conditions:openbsd": ["-lm"],
+         "//conditions:default": [],
+     }),

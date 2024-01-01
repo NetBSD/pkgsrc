@@ -1,0 +1,12 @@
+$NetBSD: patch-scripts_packages_BUILD,v 1.1 2024/01/01 12:00:58 ryoon Exp $
+
+--- scripts/packages/BUILD.orig	2023-11-28 16:36:12.390418705 +0000
++++ scripts/packages/BUILD
+@@ -23,6 +23,7 @@ filegroup(
+             ":zip-bazel-exe_nojdk",
+         ],
+         "//src/conditions:freebsd": [],
++        "//src/conditions:netbsd": [],
+         "//src/conditions:openbsd": [],
+         "//src/conditions:darwin": [
+             ":with-jdk/install.sh",
