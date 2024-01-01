@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2023/11/04 09:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2024/01/01 13:39:04 bsiegert Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -53,6 +53,7 @@ SUBDIR+=	pkg_rolling-replace
 SUBDIR+=	pkg_select
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkg_tarup
+SUBDIR+=	pkgchkxx
 SUBDIR+=	pkgclean
 SUBDIR+=	pkgdep
 SUBDIR+=	pkgdepgraph
