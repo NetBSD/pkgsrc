@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/01 13:39:05 bsiegert Exp $
+
+BLAKE2s (pkgchkxx-0.1.6.tar.gz) = 39e49d86f6a48d87ed37178fc3fdb3d3567e28b58a55a05352cfa016ed4846c8
+SHA512 (pkgchkxx-0.1.6.tar.gz) = c1ad0ebb57f02b9a75ad38b0cacf9d82d89fd74efbf5aec15507215cb39b529fd633763b1dcdd383573b5090ff23f26ee3fe12400dd84c0542c781c905934bf2
+Size (pkgchkxx-0.1.6.tar.gz) = 523672 bytes
