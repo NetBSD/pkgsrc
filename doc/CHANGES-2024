@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.12 2024/01/01 11:41:20 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.13 2024/01/01 11:48:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -15,3 +15,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/stellarium to 23.4 [adam 2024-01-01]
 	Updated devel/blosc2 to 2.12.0 [adam 2024-01-01]
 	Updated graphics/geeqie to 2.1nb6 [wiz 2024-01-01]
+	Updated www/libsass to 3.6.6 [adam 2024-01-01]
+	Updated security/pcsc-tools to 1.7.1 [adam 2024-01-01]
+	Updated net/py-netaddr to 0.10.0 [adam 2024-01-01]
+	Updated www/py-httpx to 0.26.0 [adam 2024-01-01]
+	Updated www/py-test-httpx to 0.28.0 [adam 2024-01-01]
