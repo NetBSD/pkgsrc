@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.10 2024/01/01 09:45:12 adam Exp $
+$NetBSD: CHANGES-2024,v 1.11 2024/01/01 11:34:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -12,3 +12,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-String-Tagged to 0.22 [mef 2024-01-01]
 	Updated devel/p5-String-Tagged-Terminal to 0.07 [mef 2024-01-01]
 	Updated textproc/utf8-cpp to 4.0.5 [adam 2024-01-01]
+	Updated misc/stellarium to 23.4 [adam 2024-01-01]
+	Updated devel/blosc2 to 2.12.0 [adam 2024-01-01]
