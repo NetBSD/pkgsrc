@@ -1,0 +1,20 @@
+$NetBSD: patch-src_BUILD,v 1.1 2024/01/01 12:00:58 ryoon Exp $
+
+--- src/BUILD.orig	2023-11-29 11:57:08.056842619 +0000
++++ src/BUILD
+@@ -34,6 +34,7 @@ md5_cmd = "set -e -o pipefail && %s $(SR
+     cmd = select({
+         "//src/conditions:darwin": md5_cmd % ("/sbin/md5", "/sbin/md5", "head -c 32"),
+         "//src/conditions:freebsd": md5_cmd % ("/sbin/md5", "/sbin/md5", "head -c 32"),
++        "//src/conditions:netbsd": md5_cmd % ("/usr/bin/md5", "/usr/bin/md5", "head -c 32"),
+         # We avoid using the `head` tool's `-c` option, since it does not exist
+         # on OpenBSD.
+         "//src/conditions:openbsd": md5_cmd % ("/bin/md5", "/bin/md5", "dd bs=32 count=1"),
+@@ -349,6 +350,7 @@ genrule(
+     srcs = ["package-bazel.sh"],
+     outs = ["package-bazel-on-host-platform.sh"],
+     cmd = select({
++        "//src/conditions:netbsd": "cat $(SRCS) | sed -e 's@#!/bin/bash@#!/usr/pkg/bin/bash@' > $@",
+         "//src/conditions:openbsd": "cat $(SRCS) | sed -e 's@#!/bin/bash@#!/usr/local/bin/bash@' > $@",
+         "//conditions:default": "cp $(SRCS) $@",
+     }),
