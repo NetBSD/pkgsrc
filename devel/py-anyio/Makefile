@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/11/26 10:25:50 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/01 17:01:57 adam Exp $
 
-DISTNAME=	anyio-4.1.0
+DISTNAME=	anyio-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -14,7 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.1:../../misc/py-sniffio
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.2.0:../../devel/py-exceptiongroup
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
@@ -29,6 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.2:../../devel/py-exceptiongroup
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
