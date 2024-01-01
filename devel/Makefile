@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4151 2023/12/19 09:49:23 pin Exp $
+# $NetBSD: Makefile,v 1.4152 2024/01/01 12:02:22 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -170,6 +170,7 @@ SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bam
 SUBDIR+=	bats
+SUBDIR+=	bazel
 SUBDIR+=	bcc
 SUBDIR+=	bfg
 SUBDIR+=	bglibs
