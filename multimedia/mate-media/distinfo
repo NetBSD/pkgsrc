@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/05/17 03:27:08 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2024/01/01 02:17:15 gutteridge Exp $
 
-BLAKE2s (mate-media-1.26.1.tar.xz) = d229402f18d6eafbc665943351d75fa46a2bf2845131e2b4a59f2bcf6885934c
-SHA512 (mate-media-1.26.1.tar.xz) = 2d9768628b6ad2f167f9f6759ac6d7cb69fc2a52c0ee261be6848a09b4f6e427c6ead3304951f74f07786944c29d5b79f56fecb4063b04bc0087e78562339f08
-Size (mate-media-1.26.1.tar.xz) = 579176 bytes
+BLAKE2s (mate-media-1.26.2.tar.xz) = 8e75829ccca21939210167f5030793c1329466b52fc80d42531b4788eab01267
+SHA512 (mate-media-1.26.2.tar.xz) = 2dc5885889b3f97056ce402cac4eb30d19d71ebee4feca4a47d35992e3ef0385289508af5188c8e51c96a31ef2a4b8a240a2a9b66b9ccd86d4c2e7643855cdb5
+Size (mate-media-1.26.2.tar.xz) = 579440 bytes
