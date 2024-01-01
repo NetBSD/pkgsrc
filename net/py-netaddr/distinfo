@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/09/20 07:29:14 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/01/01 11:43:26 adam Exp $
 
-BLAKE2s (netaddr-0.9.0.tar.gz) = ee97b415b65d7bc6e00511bce09ac66786f00f5be7a0cc4dd232e7f0ea2ffb2b
-SHA512 (netaddr-0.9.0.tar.gz) = 250b00a930f7180e1b4e18cb90de579733ffea9cd4ac93a3b7d2f7796b30c6b49d70da4b05ed522ebc9389600f4db8ecaed9345f7d0076632d0beae41e11c3ae
-Size (netaddr-0.9.0.tar.gz) = 2196428 bytes
+BLAKE2s (netaddr-0.10.0.tar.gz) = 1f20cf6c7f3b92053a9a41ac2ee7b91a11667a8f4ffa8041220f31297365ea27
+SHA512 (netaddr-0.10.0.tar.gz) = 120c7276c39f4d2e17265c5b09842408f7cc211035239a6fb540d538fa8d9c75cf1e201d4ae459d5319096b0c4d9c39a3f171364b2f1d2f5265d0535691fc2b3
+Size (netaddr-0.10.0.tar.gz) = 2225176 bytes
