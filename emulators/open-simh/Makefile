@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/11/12 13:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/01 19:51:20 schmonz Exp $
 
 DISTNAME=	open-simh-4.1.0
 PKGNAME=	open-simh-4.1.0.20231024
@@ -32,12 +32,12 @@ PREFER.zlib=		pkgsrc
 # due to the compiler wrapper, it may not always output the expected text.
 # So we hardcode the options here.
 CFLAGS_O+=		-fno-strict-overflow
-CFLAGS_O+=		-fno-unsafe-loop-optimizations
 CFLAGS_O+=		-finline-functions
-CFLAGS_O+=		-fgcse-after-reload
 .if !empty(PKGSRC_COMPILER:Mgcc)
 CFLAGS_O+=		-fpredictive-commoning
 CFLAGS_O+=		-fipa-cp-clone
+CFLAGS_O+=		-fgcse-after-reload
+CFLAGS_O+=		-fno-unsafe-loop-optimizations
 .endif
 
 .if (${MACHINE_ARCH} == "arm")
