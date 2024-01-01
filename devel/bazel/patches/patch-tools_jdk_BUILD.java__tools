@@ -1,0 +1,33 @@
+$NetBSD: patch-tools_jdk_BUILD.java__tools,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- tools/jdk/BUILD.java_tools.orig	1979-12-31 15:00:00.000000000 +0000
++++ tools/jdk/BUILD.java_tools
+@@ -130,6 +130,12 @@ config_setting(
+ )
+ 
+ config_setting(
++    name = "netbsd",
++    constraint_values = ["@platforms//os:netbsd"],
++    visibility = ["//visibility:public"],
++)
++
++config_setting(
+     name = "openbsd",
+     constraint_values = ["@platforms//os:openbsd"],
+     visibility = ["//visibility:public"],
+@@ -372,6 +378,7 @@ cc_binary(
+     copts = SUPRESSED_WARNINGS,
+     linkopts = select({
+         ":freebsd": ["-lm"],
++        ":netbsd": ["-lm"],
+         ":openbsd": ["-lm"],
+         "//conditions:default": [],
+     }),
+@@ -397,6 +404,7 @@ cc_binary(
+     copts = SUPRESSED_WARNINGS,
+     linkopts = select({
+         ":freebsd": ["-lm"],
++        ":netbsd": ["-lm"],
+         ":openbsd": ["-lm"],
+         "//conditions:default": [],
+     }),

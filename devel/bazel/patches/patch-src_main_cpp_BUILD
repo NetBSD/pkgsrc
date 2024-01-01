@@ -1,0 +1,33 @@
+$NetBSD: patch-src_main_cpp_BUILD,v 1.1 2024/01/01 12:00:58 ryoon Exp $
+
+--- src/main/cpp/BUILD.orig	2023-11-28 16:40:47.721393251 +0000
++++ src/main/cpp/BUILD
+@@ -26,6 +26,10 @@ cc_library(
+             "blaze_util_bsd.cc",
+             "blaze_util_posix.cc",
+         ],
++        "//src/conditions:netbsd": [
++            "blaze_util_bsd.cc",
++            "blaze_util_posix.cc",
++        ],
+         "//src/conditions:openbsd": [
+             "blaze_util_bsd.cc",
+             "blaze_util_posix.cc",
+@@ -49,6 +53,8 @@ cc_library(
+         ],
+         "//src/conditions:freebsd": [
+         ],
++        "//src/conditions:netbsd": [
++        ],
+         "//src/conditions:openbsd": [
+         ],
+         "//src/conditions:windows": WIN_LINK_OPTS,
+@@ -110,6 +116,8 @@ cc_binary(
+             "-lprocstat",
+             "-lm",
+         ],
++        "//src/conditions:netbsd": [
++        ],
+         "//src/conditions:openbsd": [
+         ],
+         "//src/conditions:windows": [

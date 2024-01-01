@@ -1,0 +1,24 @@
+$NetBSD: patch-third__party_BUILD,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- third_party/BUILD.orig	2023-11-28 16:50:15.975516749 +0000
++++ third_party/BUILD
+@@ -625,6 +625,7 @@ UNNECESSARY_DYNAMIC_LIBRARIES = select({
+     "//src/conditions:linux_ppc": "*.so *.jnilib *.dll",
+     "//src/conditions:linux_s390x": "*.so *.jnilib *.dll",
+     "//src/conditions:freebsd": "*.so *.jnilib *.dll",
++    "//src/conditions:netbsd": "*.so *.jnilib *.dll",
+     "//src/conditions:openbsd": "*.so *.jnilib *.dll",
+     # Default is to play it safe -- better have a big binary than a slow binary
+     #   The empty string means nothing is to be removed from the library;
+@@ -899,6 +900,11 @@ config_setting(
+ )
+ 
+ config_setting(
++    name = "netbsd",
++    values = {"host_cpu": "netbsd"},
++)
++
++config_setting(
+     name = "openbsd",
+     values = {"host_cpu": "openbsd"},
+ )

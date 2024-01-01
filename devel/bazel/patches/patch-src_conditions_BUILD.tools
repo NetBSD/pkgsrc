@@ -1,0 +1,17 @@
+$NetBSD: patch-src_conditions_BUILD.tools,v 1.1 2024/01/01 12:00:58 ryoon Exp $
+
+--- src/conditions/BUILD.tools.orig	2023-11-28 16:36:42.721951524 +0000
++++ src/conditions/BUILD.tools
+@@ -7,6 +7,12 @@ config_setting(
+ )
+ 
+ config_setting(
++    name = "netbsd",
++    constraint_values = ["@platforms//os:netbsd"],
++    visibility = ["//visibility:public"],
++)
++
++config_setting(
+     name = "openbsd",
+     constraint_values = ["@platforms//os:openbsd"],
+     visibility = ["//visibility:public"],

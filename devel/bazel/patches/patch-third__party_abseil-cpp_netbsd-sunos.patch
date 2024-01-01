@@ -1,0 +1,90 @@
+$NetBSD: patch-third__party_abseil-cpp_netbsd-sunos.patch,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- third_party/abseil-cpp/netbsd-sunos.patch.orig	2023-11-29 10:06:39.399538673 +0000
++++ third_party/abseil-cpp/netbsd-sunos.patch
+@@ -0,0 +1,85 @@
++--- absl/debugging/internal/vdso_support.cc	2021-11-04 00:26:14.000000000 +0900
+++++ absl/debugging/internal/vdso_support.cc	2023-11-29 18:58:33.941707708 +0900
++@@ -50,8 +50,14 @@
++ #define AT_SYSINFO_EHDR 33  // for crosstoolv10
++ #endif
++ 
+++#if defined(__NetBSD__)
+++using Elf32_auxv_t = Aux32Info;
+++using Elf64_auxv_t = Aux64Info;
+++#endif
++ #if defined(__FreeBSD__)
+++#if defined(__ELF_WORD_SIZE) && __ELF_WORD_SIZE == 64
++ using Elf64_auxv_t = Elf64_Auxinfo;
+++#endif
++ using Elf32_auxv_t = Elf32_Auxinfo;
++ #endif
++ 
++@@ -93,6 +101,9 @@
++     }
++   }
++ #endif  // ABSL_HAVE_GETAUXVAL
+++#if defined(__sun)
+++      return nullptr;
+++#else // !__sun
++   if (vdso_base_.load(std::memory_order_relaxed) == kInvalidBase) {
++     int fd = open("/proc/self/auxv", O_RDONLY);
++     if (fd == -1) {
++@@ -104,8 +115,13 @@
++     ElfW(auxv_t) aux;
++     while (read(fd, &aux, sizeof(aux)) == sizeof(aux)) {
++       if (aux.a_type == AT_SYSINFO_EHDR) {
+++#if defined(__NetBSD__)
+++        vdso_base_.store(reinterpret_cast<void *>(aux.a_v),
+++                         std::memory_order_relaxed);
+++#else
++         vdso_base_.store(reinterpret_cast<void *>(aux.a_un.a_val),
++                          std::memory_order_relaxed);
+++#endif
++         break;
++       }
++     }
++@@ -127,6 +143,7 @@
++   // from assigning to getcpu_fn_ more than once.
++   getcpu_fn_.store(fn, std::memory_order_relaxed);
++   return vdso_base_.load(std::memory_order_relaxed);
+++#endif // __sun
++ }
++ 
++ const void *VDSOSupport::SetBase(const void *base) {
++
++--- absl/debugging/internal/elf_mem_image.cc	2021-11-04 00:26:14.000000000 +0900
+++++ absl/debugging/internal/elf_mem_image.cc	2023-09-18 23:40:01.000000000 +0900
++@@ -351,7 +350,11 @@
++   const ElfW(Versym) *version_symbol = image->GetVersym(index_);
++   ABSL_RAW_CHECK(symbol && version_symbol, "");
++   const char *const symbol_name = image->GetDynstr(symbol->st_name);
+++#if defined(__NetBSD__)
+++  const int version_index = version_symbol->vs_vers & VERSYM_VERSION;
+++#else
++   const ElfW(Versym) version_index = version_symbol[0] & VERSYM_VERSION;
+++#endif
++   const ElfW(Verdef) *version_definition = nullptr;
++   const char *version_name = "";
++   if (symbol->st_shndx == SHN_UNDEF) {
++
++--- absl/base/config.h.orig	2023-11-29 11:18:01.165394118 +0000
+++++ absl/base/config.h
++@@ -414,7 +414,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
++     defined(_AIX) || defined(__ros__) || defined(__native_client__) ||    \
++     defined(__asmjs__) || defined(__wasm__) || defined(__Fuchsia__) ||    \
++     defined(__sun) || defined(__ASYLO__) || defined(__myriad2__) ||       \
++-    defined(__HAIKU__)
+++    defined(__HAIKU__) || defined(__NetBSD__)
++ #define ABSL_HAVE_MMAP 1
++ #endif
++ 
++@@ -425,7 +425,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMES
++ #ifdef ABSL_HAVE_PTHREAD_GETSCHEDPARAM
++ #error ABSL_HAVE_PTHREAD_GETSCHEDPARAM cannot be directly set
++ #elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
++-    defined(_AIX) || defined(__ros__)
+++    defined(_AIX) || defined(__ros__) || defined(__NetBSD__)
++ #define ABSL_HAVE_PTHREAD_GETSCHEDPARAM 1
++ #endif
++ 

@@ -1,0 +1,24 @@
+$NetBSD: patch-third__party_upb_upb-bazel-clang.patch,v 1.1 2024/01/01 12:01:00 ryoon Exp $
+
+--- third_party/upb/upb-bazel-clang.patch.orig	2023-12-14 08:14:28.011171125 +0000
++++ third_party/upb/upb-bazel-clang.patch
+@@ -0,0 +1,19 @@
++--- bazel/build_defs.bzl.orig	2023-12-14 07:54:10.464989126 +0000
+++++ bazel/build_defs.bzl
++@@ -36,6 +36,8 @@ _DEFAULT_CPPOPTS.extend([
++     # "-Wshorten-64-to-32",  # not in GCC (and my Kokoro images doesn't have Clang)
++     "-Werror",
++     "-Wno-long-long",
+++    "-Wno-deprecated-copy",
+++    "-Wno-deprecated-builtins",
++ ])
++ _DEFAULT_COPTS.extend([
++     "-std=c99",
++@@ -43,6 +45,7 @@ _DEFAULT_COPTS.extend([
++     "-Werror=pedantic",
++     "-Wall",
++     "-Wstrict-prototypes",
+++    "-Wno-gnu-offsetof-extensions",
++     # GCC (at least) emits spurious warnings for this that cannot be fixed
++     # without introducing redundant initialization (with runtime cost):
++     #   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=80635
