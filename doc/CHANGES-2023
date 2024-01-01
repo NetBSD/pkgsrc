@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.7917 2023/12/31 23:52:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.7918 2024/01/01 10:50:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -11246,3 +11246,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-admin-rangefilter to 0.12.0 [adam 2023-12-31]
 	Updated multimedia/gstreamer1 to 1.22.8 [wiz 2023-12-31]
 	Updated audio/spotify-qt to 3.11 [pin 2023-12-31]
+	Updated databases/sql-workbench to 130 [abs 2023-12-31]
