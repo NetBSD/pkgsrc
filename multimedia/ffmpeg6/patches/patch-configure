@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2023/12/31 20:49:27 adam Exp $
+$NetBSD: patch-configure,v 1.3 2024/01/01 09:06:25 adam Exp $
 
 Sun audio support.
 
@@ -35,14 +35,14 @@ Do not use 'rsync'.
  pulse_indev_deps="libpulse"
  pulse_outdev_deps="libpulse"
  sdl2_outdev_deps="sdl2"
-@@ -5554,6 +5556,7 @@ case $target_os in
-     android)
+@@ -5586,6 +5588,7 @@ case $target_os in
+     netbsd)
          disable symver
          enable section_data_rel_ro
 +        enable pic
-         add_cflags -fPIE
-         add_ldexeflags -fPIE -pie
-         SLIB_INSTALL_NAME='$(SLIBNAME)'
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         enabled gcc || check_ldflags -Wl,-zmuldefs
 @@ -5612,7 +5615,7 @@ case $target_os in
          ;;
      darwin)
