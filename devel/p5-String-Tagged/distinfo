@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/30 17:39:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/01 09:11:18 mef Exp $
 
-BLAKE2s (String-Tagged-0.20.tar.gz) = 0d23d3b143a7f2ade9c62adc8f5c29d0e8c9c105a3fd08d04f7631f846bc6d44
-SHA512 (String-Tagged-0.20.tar.gz) = 785c07115c6c1ce2a3c4304efac99b5d58cc49f090aa9c41de86e25fdff7ab8e71ae6d9605aad598ba8f72d7bca3f4ec4d14926424d6479be02b99b4d07c69cb
-Size (String-Tagged-0.20.tar.gz) = 44136 bytes
+BLAKE2s (String-Tagged-0.22.tar.gz) = c9522426d98caed225f6b3e0bcf0b4b7b2b0ba8136344246cadb780a850d9922
+SHA512 (String-Tagged-0.22.tar.gz) = 09aaeabb0f2c59b970356023fbedd8111cafec8650bcb8af568b5c5f37dc864120581f2364bdd8d278bb7cce6d8630f331416253efd848b0dda57ca92d6920e5
+Size (String-Tagged-0.22.tar.gz) = 45824 bytes
