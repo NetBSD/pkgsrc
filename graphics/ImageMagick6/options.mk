@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2023/12/21 02:27:26 charlotte Exp $
+# $NetBSD: options.mk,v 1.8 2024/01/01 02:15:27 gutteridge Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick6
 PKG_SUPPORTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 djvu openexr
 PKG_SUPPORTED_OPTIONS+=		wmf fpx
-PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2
+PKG_OPTIONS_REQUIRED_GROUPS=	policy
+PKG_OPTIONS_GROUP.policy=	imagemagick-policy-limited imagemagick-policy-open imagemagick-policy-secure imagemagick-policy-websafe
+PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 imagemagick-policy-open
 PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
 .include "../../mk/bsd.options.mk"
@@ -71,4 +73,17 @@ CONFIGURE_ARGS+=	--without-wmf
 CONFIGURE_ARGS+=	--with-fpx
 .else
 CONFIGURE_ARGS+=	--without-fpx
+.endif
+
+.if !empty(PKG_OPTIONS:Mimagemagick-policy-limited)
+CONF_FILES+=		${EGDIR}/policy-limited.xml ${PKG_SYSCONFDIR}/policy.xml
+.endif
+.if !empty(PKG_OPTIONS:Mimagemagick-policy-open)
+CONF_FILES+=		${EGDIR}/policy-open.xml ${PKG_SYSCONFDIR}/policy.xml
+.endif
+.if !empty(PKG_OPTIONS:Mimagemagick-policy-secure)
+CONF_FILES+=		${EGDIR}/policy-secure.xml ${PKG_SYSCONFDIR}/policy.xml
+.endif
+.if !empty(PKG_OPTIONS:Mimagemagick-policy-websafe)
+CONF_FILES+=		${EGDIR}/policy-websafe.xml ${PKG_SYSCONFDIR}/policy.xml
 .endif
