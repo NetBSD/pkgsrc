@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/07/06 09:39:39 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/01/01 08:30:15 mef Exp $
 
-DISTNAME=	MooseX-Getopt-0.75
+DISTNAME=	MooseX-Getopt-0.76
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -18,6 +17,8 @@ DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 TEST_DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
+TEST_DEPENDS+=		p5-MooseX-ConfigFromFile-[0-9]*:../../devel/p5-MooseX-ConfigFromFile
+TEST_DEPENDS+=		p5-MooseX-SimpleConfig>=0.07:../../devel/p5-MooseX-SimpleConfig
 TEST_DEPENDS+=		p5-Path-Tiny>=0.009:../../filesystems/p5-Path-Tiny
 TEST_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 TEST_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
@@ -31,8 +32,6 @@ TEST_DEPENDS+=		p5-Test-Warnings>=0.009:../../devel/p5-Test-Warnings
 # recommended modules ...
 #TOOL_DEPENDS+=	p5-CPAN-Meta-[0-9]*:../../devel/p5-CPAN-Meta
 #TOOL_DEPENDS+=	p5-CPAN-Meta-Requirements>=2.120900:../../devel/p5-CPAN-Meta-Requirements
-#TOOL_DEPENDS+=	p5-MooseX-ConfigFromFile-[0-9]*:../../devel/p5-MooseX-ConfigFromFile
-#TOOL_DEPENDS+=	p5-MooseX-SimpleConfig>=0.07:../../devel/p5-MooseX-SimpleConfig
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build::Tiny
