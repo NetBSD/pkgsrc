@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.104 2023/12/30 12:04:21 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.105 2024/01/01 00:11:56 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25848,3 +25848,4 @@ p5-Spreadsheet-ParseExcel<0.6600		remote-code-execution	https://nvd.nist.gov/vul
 filezilla<3.66.4	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detail/CVE-2023-48795
 libheif<1.17.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49462
 libde265<1.0.15	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49468
+gst-plugins1-bad<1.22.8	buffer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0011.html
