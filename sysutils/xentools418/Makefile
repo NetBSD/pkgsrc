@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/01 00:30:18 gdt Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
@@ -241,7 +241,10 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-#.include "../../devel/SDL/buildlink3.mk"
+# SDL2 is forced off via a patch.  With that removed and the bl3
+# uncommented, the build completes with one additional file.  However,
+# there is no reason to add SDL2.
+#.include "../../devel/SDL2/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
