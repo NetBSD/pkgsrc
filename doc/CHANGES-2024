@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.25 2024/01/01 15:44:08 leot Exp $
+$NetBSD: CHANGES-2024,v 1.26 2024/01/01 15:50:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated news/sfeed to 2.0 [leot 2024-01-01]
 	Added graphics/py-glad2 version 2.0.4 [leot 2024-01-01]
 	Added multimedia/libplacebo version 6.338.1 [leot 2024-01-01]
+	Updated multimedia/mpv to 0.37.0 [leot 2024-01-01]
