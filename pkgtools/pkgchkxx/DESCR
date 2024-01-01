@@ -1,0 +1,6 @@
+pkgchkxx and pkgrrxx are complete rewrites of pkgsrc pkg_chk and
+pkg_rolling-replace respectively. These are functionally compatible but run
+faster.
+
+This implementation achieves better performance by using a faster language,
+better algorithms, and making use of many CPUs whenever possible.
