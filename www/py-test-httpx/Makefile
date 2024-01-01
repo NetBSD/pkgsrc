@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/16 09:39:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/01 11:47:34 adam Exp $
 
-DISTNAME=	pytest_httpx-0.27.0
+DISTNAME=	pytest_httpx-0.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpx/}
@@ -10,17 +10,16 @@ HOMEPAGE=	https://colin-b.github.io/pytest_httpx/
 COMMENT=	Send responses to httpx
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.25:../../www/py-httpx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.26:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.21:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.23:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
