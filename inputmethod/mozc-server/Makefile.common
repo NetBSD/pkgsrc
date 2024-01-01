@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2023/07/18 18:22:11 nia Exp $
+# $NetBSD: Makefile.common,v 1.39 2024/01/01 11:53:12 ryoon Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -78,7 +78,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		GYP_DEFINES="use_libprotobuf=1" \
 		${PYTHONBIN} build_mozc.py \
 		gyp \
 		--gypdir=${LOCALBASE}/bin
