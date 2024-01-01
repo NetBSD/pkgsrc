@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2021/05/21 07:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/01 11:39:43 adam Exp $
 
-DISTNAME=	libsass-3.6.5
+DISTNAME=	libsass-3.6.6
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sass/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://sass-lang.com/libsass/
+HOMEPAGE=	https://sass-lang.com/libsass/
 COMMENT=	C/C++ port of the Sass CSS precompiler
 LICENSE=	mit
 
