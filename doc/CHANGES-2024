@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.8 2024/01/01 09:11:27 mef Exp $
+$NetBSD: CHANGES-2024,v 1.9 2024/01/01 09:13:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-PAR-Packer to 1.061 [mef 2024-01-01]
 	Updated devel/p5-Search-Elasticsearch to 8.00 [mef 2024-01-01]
 	Updated devel/p5-String-Tagged to 0.22 [mef 2024-01-01]
+	Updated devel/p5-String-Tagged-Terminal to 0.07 [mef 2024-01-01]
