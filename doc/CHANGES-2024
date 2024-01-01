@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.22 2024/01/01 14:30:43 leot Exp $
+$NetBSD: CHANGES-2024,v 1.23 2024/01/01 15:13:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/joker to 1.3.4 [gdt 2024-01-01]
 	Updated sysutils/direnv to 2.33.0 [leot 2024-01-01]
 	Updated sysutils/entr to 5.5 [leot 2024-01-01]
+	Updated news/sfeed to 2.0 [leot 2024-01-01]
