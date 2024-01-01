@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/10/23 06:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/01 22:18:12 nros Exp $
 
 DISTNAME=	zziplib-0.13.72
 PKGREVISION=	3
@@ -18,6 +18,10 @@ USE_TOOLS+=	bash:build
 CMAKE_ARGS+=	-DZZIPTEST=NO
 
 CHECK_PORTABILITY_SKIP+=	old.configure
+
+PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/zzip/*.pc
+PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/zzipwrap/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
