@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/01 13:39:04 bsiegert Exp $
+man/man8/pkgchkxx.8
+man/man8/pkgrrxx.8
+sbin/pkgchkxx
+sbin/pkgrrxx
