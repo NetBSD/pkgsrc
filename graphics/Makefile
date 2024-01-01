@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1032 2023/12/10 02:17:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.1033 2024/01/01 15:40:20 leot Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -508,6 +508,7 @@ SUBDIR+=	py-exifread
 SUBDIR+=	py-gdchart
 SUBDIR+=	py-gdmodule
 SUBDIR+=	py-ggplot
+SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
 SUBDIR+=	py-gtkglext
 SUBDIR+=	py-imageio
