@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/12/31 20:40:31 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/01/01 02:15:27 gutteridge Exp $
 bin/Magick++-config6
 bin/Magick-config6
 bin/MagickCore-config6
@@ -170,6 +170,10 @@ share/examples/ImageMagick6/delegates.xml
 share/examples/ImageMagick6/log.xml
 share/examples/ImageMagick6/magic.xml
 share/examples/ImageMagick6/mime.xml
+share/examples/ImageMagick6/policy-limited.xml
+share/examples/ImageMagick6/policy-open.xml
+share/examples/ImageMagick6/policy-secure.xml
+share/examples/ImageMagick6/policy-websafe.xml
 share/examples/ImageMagick6/policy.xml
 share/examples/ImageMagick6/quantization-table.xml
 share/examples/ImageMagick6/thresholds.xml
