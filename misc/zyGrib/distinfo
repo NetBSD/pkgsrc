@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 10:59:39 nia Exp $
+$NetBSD: distinfo,v 1.26 2024/01/01 19:01:06 plunky Exp $
 
 BLAKE2s (zyGrib-8.0.1.tgz) = d382684327d2fd8f2191bfee490be2f35ea98946980638d9e5316294a90e7229
 SHA512 (zyGrib-8.0.1.tgz) = bb7146289d0966a174e0d888d6edc2830a2399f9cf51eb439371d90656fb9529fb08eebde8ea74f21f3c2aa7e625a258a318b9388523636815c8348269adb73d
@@ -9,5 +9,6 @@ SHA1 (patch-SkewT.h) = 5318b576bb4eeeb0b0a8bf0130cf9ac9907dac7f
 SHA1 (patch-Terrain.cpp) = 98aba88e5704cdf0771c757d86d962ee043cecf4
 SHA1 (patch-aa) = 1de327ef2cb5ea601ffbd6e5f3ba760dfe9543b0
 SHA1 (patch-ab) = 1da0e837a68b7942ab8d4a829b92eef6b8e359e8
-SHA1 (patch-g2clib_enc_jpeg2000.c) = 2119373fe7a0032edb9b9ff31ff79c974c513ce3
+SHA1 (patch-g2clib_dec__jpeg2000.c) = 45de487f139a65414f1ca5adea4690008aa33884
+SHA1 (patch-g2clib_enc_jpeg2000.c) = ebd6c2cd706462c3ea21310fba269f19684f70c7
 SHA1 (patch-util_Util.h) = a7ae101a11de7ca29e8e6e8ccf173c5216ea3ac7
