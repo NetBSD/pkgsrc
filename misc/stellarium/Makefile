@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.155 2023/11/12 13:22:52 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2024/01/01 11:32:45 adam Exp $
 
-DISTNAME=	stellarium-23.3
-PKGREVISION=	3
+DISTNAME=	stellarium-23.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Stellarium/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -32,6 +31,7 @@ PLIST.desktop=		yes
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/qt6-qtcharts/buildlink3.mk"

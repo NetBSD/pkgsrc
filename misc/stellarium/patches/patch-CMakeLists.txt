@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.10 2023/09/30 17:14:46 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.11 2024/01/01 11:32:45 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2023-09-25 12:49:36.000000000 +0000
+--- CMakeLists.txt.orig	2023-12-23 10:10:33.000000000 +0000
 +++ CMakeLists.txt
-@@ -196,7 +196,7 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -197,7 +197,7 @@ IF(OPENGL_DEBUG_LOGGING)
  ENDIF()
  
  # Use ccache if possible
@@ -14,7 +14,7 @@ Do not use application bundle on Darwin.
       FIND_PROGRAM(CCACHE_PROGRAM ccache)
       IF(CCACHE_PROGRAM)
            MESSAGE(STATUS "Found ccache ${CCACHE_PROGRAM}")
-@@ -250,7 +250,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
+@@ -251,7 +251,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
       ENDIF()
  ENDIF()
  
@@ -23,7 +23,7 @@ Do not use application bundle on Darwin.
       SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
-@@ -355,7 +355,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
+@@ -356,7 +356,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
       IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)
            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-const-variable -Wno-unused-result")
       ENDIF()
@@ -32,7 +32,7 @@ Do not use application bundle on Darwin.
  	  SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter -Wno-string-plus-int")
  	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option -Wno-string-plus-int")
       ENDIF()
-@@ -811,7 +811,7 @@ ENDIF()
+@@ -826,7 +826,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -41,7 +41,7 @@ Do not use application bundle on Darwin.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -957,7 +957,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -975,7 +975,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### macOS Bundling ###############
