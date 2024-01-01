@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2023/12/21 12:24:36 nros Exp $
+# $NetBSD: Makefile,v 1.121 2024/01/01 11:41:12 wiz Exp $
 
 DISTNAME=	geeqie-2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 # .../geeqie-2.0.1/scripts/generate-ClayRGB1998-icc-h.sh: xxd: not found
 TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
+DEPENDS+=	webp-pixbuf-loader-[0-9]*:../../graphics/webp-pixbuf-loader
 
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
@@ -51,7 +52,6 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
-.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
