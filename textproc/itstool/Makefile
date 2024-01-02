@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/12/18 22:49:15 thor Exp $
+# $NetBSD: Makefile,v 1.26 2024/01/02 06:17:15 ryoon Exp $
 
 DISTNAME=	itstool-2.0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
 EXTRACT_SUFX=	.tar.bz2
