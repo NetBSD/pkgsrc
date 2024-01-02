@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.59 2023/08/30 13:01:12 adam Exp $
+$NetBSD: distinfo,v 1.60 2024/01/02 11:59:02 adam Exp $
 
-BLAKE2s (ccache-4.8.3.tar.gz) = 00a2d0d9a9dca6ab2362372011ae031d0bde487caf7e384d2e2952efdc9335c3
-SHA512 (ccache-4.8.3.tar.gz) = 65c870c25dff1a88c92b99e697312fcc2d61f6718fc1f20203ac2bc16975ff376d943bdb4462716a5b2d84081502fb18a93caac7739f75f37f3acc66fa468498
-Size (ccache-4.8.3.tar.gz) = 774216 bytes
+BLAKE2s (ccache-4.9.tar.gz) = ea40fa0095ec5a6c1f775faf62ed40ccfa580bb3817b2a9b267a946b96d10e08
+SHA512 (ccache-4.9.tar.gz) = 14ef4088fd38d14ef0b5c253ff64fbb2f3923356542857119eaa3bff8a09b926c1889d7781d7ca5a6adfb4c5fde68ce48d5c2e80ab4b8793e5128aeaebb31c79
+Size (ccache-4.9.tar.gz) = 791543 bytes
