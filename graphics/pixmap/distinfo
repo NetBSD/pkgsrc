@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:46:41 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/01/02 20:41:47 nros Exp $
 
 BLAKE2s (pixmap2.6.tar.gz) = 191d681fd102a90f99369f8def34fc0dbfa5394a180db7eb25076f9dd2bf6a3f
 SHA512 (pixmap2.6.tar.gz) = 2943c8f9fdab8fcb979711bbace95595fcccd4b498041016ba7b82fa20ad9fbbba68c7359b3bfe4eb05555b4913ff0316752640f40efe0ace31ff4b401bb008f
@@ -15,6 +15,9 @@ Size (pixmap_2.6.patch3.gz) = 10208 bytes
 BLAKE2s (pixmap_2.6.patch4.gz) = 6912c8375886d917106c8b662a6eee40cb39ce44a4cf3d0f59567a96e8f65188
 SHA512 (pixmap_2.6.patch4.gz) = f30cfe7018a1a16db9f5c2b6c692b082c3ab83a4f79262cfbff2580734a420db4137242e64a83dfabc2dcacfbdea00cd353f3ca4174f23907ff983b3778ff0f5
 Size (pixmap_2.6.patch4.gz) = 1269 bytes
-SHA1 (patch-aa) = b51ced9659d8360f96d9434d670ad66016e81988
+SHA1 (patch-Dialog.c) = a59038561837ff2377277821bcf841c965bab924
+SHA1 (patch-PixEdit.c) = 96b9bddb9d4d597176f09527e12f9d6c5de0b748
+SHA1 (patch-Pixmap.c) = 7a30b060fb82c617c11e574088898cdec61473a7
+SHA1 (patch-aa) = e0912b53bc09dcea4d233aa3a2c63997a53d5c50
 SHA1 (patch-ab) = d7da0a7998bbac1e25763eea5a64afb79d98d1e6
-SHA1 (patch-ac) = c42f312a041693f2ab94ad7efbbaba7c91cf2c30
+SHA1 (patch-ac) = 5872ddb3275e2939152df87596e4bbf0b2ff5e35
