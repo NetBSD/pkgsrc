@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:22:12 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/01/02 06:17:15 ryoon Exp $
 
 BLAKE2s (itstool-2.0.7.tar.bz2) = ffdceacf15e35d1b806d0bfb0b1145c9c84203ae60f0ec05a97f221fcc6aefa7
 SHA512 (itstool-2.0.7.tar.bz2) = 710c188e518a7eccbf9d31df59692fd6acc79430589a93ef4333f33f74440c311c340614ca74cc43191830567a98024d0981325ccd83a8fd9b75410d9dd91992
 Size (itstool-2.0.7.tar.bz2) = 104648 bytes
+SHA1 (patch-itstool.in) = 08c015abf47ed42c61b42a703526d615f1f85608
