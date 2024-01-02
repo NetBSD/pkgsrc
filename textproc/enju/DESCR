@@ -1,0 +1,9 @@
+Enju is an accurate natural language parser for English. With a
+wide-coverage probabilistic HPSG grammar and an efficient parsing
+algorithm, this parser can effectively analyze syntactic/semantic
+structures of English sentences and provide a user with phrase
+structures and predicate-argument structures.  Those outputs would
+be especially useful for high-level NLP applications, including
+information extraction, automatic summarization, question answering,
+and machine translation, where the "meaning" of a sentence plays
+a central role.
