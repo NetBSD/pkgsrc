@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.932 2023/12/20 16:43:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.933 2024/01/02 21:00:41 leot Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -626,6 +626,7 @@ SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
 SUBDIR+=	softhsm2
+SUBDIR+=	sops
 SUBDIR+=	spiped
 SUBDIR+=	sqlmap
 SUBDIR+=	srm
