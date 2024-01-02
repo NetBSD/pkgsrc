@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.10 2023/08/28 07:01:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/01/02 14:18:07 gdt Exp $
 
-BLAKE2s (minetest-5.7.0/irrlicht.tar.gz) = e68f98b5b1e24e21919eab7fed281cac3a5b935c6b4c93db7cdcd428ddc7f15a
-SHA512 (minetest-5.7.0/irrlicht.tar.gz) = 216221b5073d2b234b2d19658b30517c3abb2677c16e3a9b7fd31c15431bd2ffc047a68851c5bebf94aeb178d6b761a80c2f5744a7498cdac1d7b65fed139cc0
-Size (minetest-5.7.0/irrlicht.tar.gz) = 898774 bytes
-BLAKE2s (minetest-5.7.0/minetest-game.tar.gz) = 43289ce39f1649030122c7a21b73affe46477b9b8f3dc5bb27b5e4cda756526f
-SHA512 (minetest-5.7.0/minetest-game.tar.gz) = 7eb2a222d48ef48d728f55710efb0651577e8037fedc6c93dd20e51661ae93bdbcfff1c2ff0e1e29a154f8c35468182058f39017e7fec9c7411698a038fe722f
-Size (minetest-5.7.0/minetest-game.tar.gz) = 2592158 bytes
-BLAKE2s (minetest-5.7.0/minetest.tar.gz) = b52ea7b8eedb22f70f13a6b309afb526eee297f3dfccef8e0518ccace37cc996
-SHA512 (minetest-5.7.0/minetest.tar.gz) = 6a934db5fd2c7c14fcfa87fb306662fa1ccf20a0eee056aea5c4c863986875017a4fa58ddf14319d385ee0400d00fb6a90f68b8f34527c98a746c6410360a529
-Size (minetest-5.7.0/minetest.tar.gz) = 10115973 bytes
-SHA1 (patch-lib_irrlichtmt_source_Irrlicht_CIrrDeviceLinux.cpp) = 22099c0803dcdb74055d69bb810e54b9832f2d3e
-SHA1 (patch-lib_irrlichtmt_source_Irrlicht_os.cpp) = c7f2c8529874f76029641f0281d7cda0f3797971
+BLAKE2s (minetest-5.8.0/irrlicht.tar.gz) = 01ae00e621c1c3911e436dffa76b16d67aa0e2922b7c0aff9f364bfce100b4f6
+SHA512 (minetest-5.8.0/irrlicht.tar.gz) = 5226d78eaacf8b56eafbbb6359bfb6137f9d6a555a252224e33d39c0d219fcb7d0d29fd3828961eee37d55940f3aa6e767fea31c96fb772dd5eca3889f5ac16e
+Size (minetest-5.8.0/irrlicht.tar.gz) = 754056 bytes
+BLAKE2s (minetest-5.8.0/minetest.tar.gz) = 4c4a2bf3ec87c12bfe248289804f76002eef2dc93cce3413436c0d7cf4f2d084
+SHA512 (minetest-5.8.0/minetest.tar.gz) = 0b376ecc051032ccb542f2f76e2b1f5c351b32f1c211027825b1538095f44cb1447cd0976cb85a4cde4ecb53873bcb9f3778799271ed65b038a031dc137c2aba
+Size (minetest-5.8.0/minetest.tar.gz) = 10419348 bytes
+SHA1 (patch-lib_irrlichtmt_source_Irrlicht_CIrrDeviceLinux.cpp) = b7438ca35758a319fed3f36d01dd699141a63ea7
+SHA1 (patch-lib_irrlichtmt_source_Irrlicht_os.cpp) = 48e29772199a173969b86aca83dee1d9fbe41c0b
 SHA1 (patch-src_util_string.cpp) = f240efd440fa540c1f767735892b9177089a8f30

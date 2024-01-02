@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_irrlichtmt_source_Irrlicht_os.cpp,v 1.1 2023/08/18 10:51:52 pin Exp $
+$NetBSD: patch-lib_irrlichtmt_source_Irrlicht_os.cpp,v 1.2 2024/01/02 14:18:07 gdt Exp $
 
 Add NetBSD's endian functions
 
---- lib/irrlichtmt/source/Irrlicht/os.cpp.orig	2023-03-05 20:45:09.000000000 +0000
+--- lib/irrlichtmt/source/Irrlicht/os.cpp.orig	2023-10-27 15:48:29.000000000 +0000
 +++ lib/irrlichtmt/source/Irrlicht/os.cpp
-@@ -33,6 +33,11 @@
+@@ -31,6 +31,11 @@
  	#define bswap_16(X) letoh16(X)
  	#define bswap_32(X) letoh32(X)
  	#define bswap_64(X) letoh64(X)
