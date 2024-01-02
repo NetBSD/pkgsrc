@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2023/12/30 17:11:19 pin Exp $
+# $NetBSD: Makefile,v 1.29 2024/01/02 20:07:15 pin Exp $
 
-DISTNAME=	starship-1.17.0
+DISTNAME=	starship-1.17.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-# We need to pull from one commit after release to include a fix for NetBSD
-# in the gix-index crate, see:
-# https://github.com/starship/starship/issues/5659
-GITHUB_TAG=	89dc19214bb671fe50a8f1be79a4594e7998ddea
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	mj@mjturner.net
 HOMEPAGE=	https://github.com/starship/starship/
