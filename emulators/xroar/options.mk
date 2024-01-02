@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/07/09 21:48:44 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/01/02 00:21:01 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xroar
 
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--without-alsa
 
 .if !empty(PKG_OPTIONS:Moss)
 .include "../../mk/oss.buildlink3.mk"
-LDFLAGS=		${LIBOSSAUDIO}
+LDFLAGS+=		${LIBOSSAUDIO}
 CONFIGURE_ARGS+=	--with-oss
 
 SUBST_CLASSES+=		oss
