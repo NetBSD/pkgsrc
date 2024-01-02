@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/12/29 16:43:41 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/02 10:54:57 jperkin Exp $
 
 DISTNAME=	hmmlearn-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>0.19:../../math/py-scipy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # 2023-12-29: Tests currently fail due to known upstream issues
 do-test:
