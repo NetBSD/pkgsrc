@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.52 2024/01/02 20:49:46 plunky Exp $
+$NetBSD: CHANGES-2024,v 1.53 2024/01/02 21:00:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -60,3 +60,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/broot to 1.32.0 [pin 2024-01-02]
 	Updated shells/starship to 1.17.1 [pin 2024-01-02]
 	Updated net/nextcloud-client to 3.11.0 [plunky 2024-01-02]
+	Added security/sops version 3.8.1 [leot 2024-01-02]
