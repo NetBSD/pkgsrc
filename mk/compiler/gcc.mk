@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.268 2024/01/02 23:35:00 gdt Exp $
+# $NetBSD: gcc.mk,v 1.269 2024/01/02 23:37:48 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -159,6 +159,7 @@ GCC_REQD+=	2.8.0
 # Whenever reasonable, we choose a gcc version shipped with a NetBSD
 # release, because those are known to work well, and because it is
 # simpler to limit selection to fewer versions.  Thus we tend to:
+#   - gcc 4.8, shipped with NetBSD 7 
 #   - gcc 5, shipped with NetBSD 8
 #   - gcc 7, shipped with NetBSD 9
 #   - gcc 10, shipped with NetBSD 10
