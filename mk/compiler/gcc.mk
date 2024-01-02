@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.267 2023/11/10 11:52:27 nia Exp $
+# $NetBSD: gcc.mk,v 1.268 2024/01/02 23:35:00 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -154,9 +154,14 @@ GCC_REQD+=	2.8.0
 
 #
 # Most of the time, GCC adds support for features of new C and C++
-# standards incrementally, so USE_CXX_FEATURES=	c++XX is for
-# establishing an idealistic baseline, usually based on compiler
-# versions shipped with NetBSD.
+# standards incrementally; we define USE_CXX_FEATURES=c++XX as
+# intending to require a compiler that fully supports the standard.
+# Whenever reasonable, we choose a gcc version shipped with a NetBSD
+# release, because those are known to work well, and because it is
+# simpler to limit selection to fewer versions.  Thus we tend to:
+#   - gcc 5, shipped with NetBSD 8
+#   - gcc 7, shipped with NetBSD 9
+#   - gcc 10, shipped with NetBSD 10
 #
 # Resources:
 # https://gcc.gnu.org/projects/cxx-status.html
