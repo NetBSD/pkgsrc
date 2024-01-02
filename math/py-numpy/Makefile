@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2023/12/07 20:45:56 thor Exp $
+# $NetBSD: Makefile,v 1.117 2024/01/02 19:57:46 thor Exp $
 
 DISTNAME=	numpy-1.26.2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -67,10 +67,12 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 # TODO: accelerate.framework has no pkg-config yet (see blas.buildlink3.mk).
 BLAS_ACCEPTED=		${_BLAS_TYPES}
 BLAS_C_INTERFACE=	yes
-# Yes, cblas and lapack API (not lapacke) is desired.
+# Cblas and lapack API (not lapacke) is desired.
 # Meson build uses pkg-config since 1.26.2 (or elaborate own logic not
-# suitable here).
-WHEEL_ARGS+=		-Csetup-args=-Dblas=${CBLAS_PC}
+# suitable here) and guesses for cblas if blas lib does not contain the
+# C interface. That covers netlib for us, and openblas builds serve
+# all APIs.
+WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 
 # Remove invalid __STDC_VERSION__ setting
