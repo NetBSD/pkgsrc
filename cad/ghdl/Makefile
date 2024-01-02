@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/12/25 10:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/02 00:42:03 ryoon Exp $
 
 DISTNAME=	ghdl-3.0.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://ghdl.github.io/ghdl/
 COMMENT=	Open-source simulator/compiler/analyzer for the VHDL
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		"Does not support llvm 16."
+#BROKEN=		"Does not support llvm 16."
 
 USE_TOOLS+=		bash:run gmake
 
