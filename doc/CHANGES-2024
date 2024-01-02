@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.45 2024/01/02 08:43:19 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.46 2024/01/02 11:59:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/itstool to 2.0.7nb5 [ryoon 2024-01-02]
 	Updated audio/parlatype to 4.0 [ryoon 2024-01-02]
 	Updated devel/scons4 to 4.6.0.post1 [wiz 2024-01-02]
+	Updated devel/ccache to 4.9 [adam 2024-01-02]
