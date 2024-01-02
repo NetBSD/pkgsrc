@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2013/01/19 21:04:43 riastradh Exp $
+# $NetBSD: Makefile,v 1.36 2024/01/02 20:41:47 nros Exp $
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4
 PKGREVISION=		8
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/pixmap/}
+LICENSE=		x11
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		pixmap_2.6.patch1.gz \

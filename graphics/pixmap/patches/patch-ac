@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2008/11/30 08:43:16 obache Exp $
+$NetBSD: patch-ac,v 1.7 2024/01/02 20:41:47 nros Exp $
+
+Use Motif to build pixmap.
+Use rgb.txt from x11/rgb.
+Use pkgsrc libXpm.
 
 --- Imakefile.orig	1994-05-13 11:04:38.000000000 +0000
 +++ Imakefile
