@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/16 09:20:27 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/01/03 07:03:00 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/minio/__init__.py
 ${PYSITELIB}/minio/__init__.pyc
 ${PYSITELIB}/minio/__init__.pyo
@@ -52,6 +53,7 @@ ${PYSITELIB}/minio/notificationconfig.pyo
 ${PYSITELIB}/minio/objectlockconfig.py
 ${PYSITELIB}/minio/objectlockconfig.pyc
 ${PYSITELIB}/minio/objectlockconfig.pyo
+${PYSITELIB}/minio/py.typed
 ${PYSITELIB}/minio/replicationconfig.py
 ${PYSITELIB}/minio/replicationconfig.pyc
 ${PYSITELIB}/minio/replicationconfig.pyo
