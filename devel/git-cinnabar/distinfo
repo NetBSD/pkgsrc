@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/10/06 10:20:18 riastradh Exp $
+$NetBSD: distinfo,v 1.6 2024/01/03 04:01:38 riastradh Exp $
 
 BLAKE2s (addr2line-0.20.0.crate) = 325dbd01710a578526165bf191bc3df1e1b7afa6492f90662ecb33b2c2643d2d
 SHA512 (addr2line-0.20.0.crate) = f9794772a31dd01096b168b4b4ffe311d4850c69fd77dd72c1e532a94ef7b23c31cccb9033848822521510f1fcc2ad0fdd824cf7efb9ed43828dc0165165b319
@@ -114,9 +114,9 @@ Size (getset-0.1.2.crate) = 8831 bytes
 BLAKE2s (gimli-0.27.3.crate) = eca280c132a1693edcb70c9b3b522b1dca92681c826c533945fbe7c78db23869
 SHA512 (gimli-0.27.3.crate) = b3782d510bbfcbcfd8801b4343a6864b91cf954808e935745caaf1b7e7b3f2f94814f1543de9a36a8d4e5c29d08d69be9361aa2b31e7a261d5dc6e7b66ef4ccd
 Size (gimli-0.27.3.crate) = 287904 bytes
-BLAKE2s (git-cinnabar-0.6.2.tar.gz) = 9f4f8b3fa73d8cc1111b38f195c76272e66aa232a21d2cc7184cc9d281536dd8
-SHA512 (git-cinnabar-0.6.2.tar.gz) = dcf3cc667b52bc4171536de56343b2f7480af349812a5c35b766841c4b0738d83210c579714a4acdc153cd50436110fe4567986f99fa8d65a5b4faf49eadb3b6
-Size (git-cinnabar-0.6.2.tar.gz) = 188604 bytes
+BLAKE2s (git-cinnabar-0.6.3.tar.gz) = 828d4a5df0d9cbf36d2135ac9895c7494b83a45d5ba8147994a1b6ad52fae1cf
+SHA512 (git-cinnabar-0.6.3.tar.gz) = 166c5443163b0f060c9f3041411be9f24a7584f639d7cad343570f37bebae31bf92efabdf627260f30d8eed55a10afdffddfc6ffa6960d521ee497b01d05a203
+Size (git-cinnabar-0.6.3.tar.gz) = 189940 bytes
 BLAKE2s (git-for-windows-git-v2.41.0.windows.1.tar.gz) = 1008f55064e08b59d3614e0c7876080a1caa83ece083e44b3f311103ebe2ae69
 SHA512 (git-for-windows-git-v2.41.0.windows.1.tar.gz) = 7ac1e5b685dff80a15606aa8a804760830427085eb8f615bb10043195941157d1ef995ba4886c708b008b95a802ffa6122f7b6120372e46f10f287ba9b02bfe0
 Size (git-for-windows-git-v2.41.0.windows.1.tar.gz) = 11001220 bytes
@@ -330,4 +330,3 @@ Size (zstd-safe-6.0.5+zstd.1.5.4.crate) = 20863 bytes
 BLAKE2s (zstd-sys-2.0.8+zstd.1.5.5.crate) = 6b0ec4a18acadf02653ceb28a5d25cac6314c8b457f722c5ff8d8df17bf171ec
 SHA512 (zstd-sys-2.0.8+zstd.1.5.5.crate) = acfbf6c464678438bcab289c8be2e67a2bdfb910143d77363bf1ad5227dffc4b60e224388b7e59186fd4d1e017b63fef49734e99e383cbda19b82b4ed382fcd8
 Size (zstd-sys-2.0.8+zstd.1.5.5.crate) = 736270 bytes
-SHA1 (patch-src_cinnabar-fast-import.c) = deff3f60be790748c64708c637c8a23119765e01
