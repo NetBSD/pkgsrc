@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2024/01/03 16:13:57 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/01/03 16:28:36 wiz Exp $
 
 BLAKE2s (nihtest-1.4.0.tar.gz) = 88ed5330bdaad6ebdfab96f1e9b5a44b7d1b6ccc53860b8b093b11ccd4b61ee2
 SHA512 (nihtest-1.4.0.tar.gz) = f574cc5192f73d2bf650e92635e9a521f70297ac387ff741c7dd64e2578162851c9ddb3d526476e13802e9408353b4201d6315a0bbbf83cbcb959f5b341a8be3
 Size (nihtest-1.4.0.tar.gz) = 39082 bytes
+SHA1 (patch-nihtest_File.py) = 699ba3891cab3dcc9b4c87ad53127729a5e136c2
