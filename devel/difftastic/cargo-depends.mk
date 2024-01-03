@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2023/11/26 16:07:51 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2024/01/03 15:35:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
@@ -114,7 +114,6 @@ CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.7
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.20.9
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.0.3
-CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.0.2
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.9
@@ -146,4 +145,3 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	wu-diff-0.1.2
 CARGO_CRATE_DEPENDS+=	yansi-0.5.1
-

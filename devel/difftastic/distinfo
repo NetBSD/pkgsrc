@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/11/26 16:07:51 pin Exp $
+$NetBSD: distinfo,v 1.29 2024/01/03 15:35:02 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -78,9 +78,9 @@ Size (diff-0.1.12.crate) = 10223 bytes
 BLAKE2s (difflib-0.4.0.crate) = 9dedf118200e28f553a5eac255f0d880196f1e55fb258011866d9f8421cb0122
 SHA512 (difflib-0.4.0.crate) = fcb57859424fea6958a4407061c421599fbca111357b1fe72faa65d8fb0b74425c993a24484e8414f475fa146cd8368c4f82e1ceb4e8dd9f95741149345b37a9
 Size (difflib-0.4.0.crate) = 7638 bytes
-BLAKE2s (difftastic-0.53.0.tar.gz) = 1b05555959e17b01f824571643483e09efa1c15ce551b641c105bc1471bca12d
-SHA512 (difftastic-0.53.0.tar.gz) = af99d6046f9fa0171ec47179ecb1628be8a06f8db9dbb4ea4891e5fbd0c6b0948ed4ce2165f061ac4ed812517a1af372c3de7b0026147d1d6b1fa4ffc159f30d
-Size (difftastic-0.53.0.tar.gz) = 57615690 bytes
+BLAKE2s (difftastic-0.53.1.tar.gz) = a3a00187ef2c6e4cd25824f8a90e6314355e5791ed89bef065e634b47e142602
+SHA512 (difftastic-0.53.1.tar.gz) = 7df72cef440372bb042937b7b8b1d333984f8dadec79697295c0760dc84f159d0c122ffc53619bae6b52a2885a4a609155d2b7d9d2ebc88ee34a7c4548cf791c
+Size (difftastic-0.53.1.tar.gz) = 57615806 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
@@ -342,9 +342,6 @@ Size (thread_local-1.1.7.crate) = 13585 bytes
 BLAKE2s (tree-sitter-0.20.9.crate) = f2b05edf2121814c71c257ba615f7a60866a1ead59dc3fb9e96dac0fc42df441
 SHA512 (tree-sitter-0.20.9.crate) = 03e38b5252dd94b65c096ba9d07e6aecbb582c8460e2f1e0ad46122e372be7139462d7c411094ba557abd6566bd89faeaf7ff01bddb9283d2d7285d13e38c5a6
 Size (tree-sitter-0.20.9.crate) = 132102 bytes
-BLAKE2s (tree_magic_mini-3.0.2.crate) = 9dff021bae09d21eb378cbea84c1704331f6c4c4f9ab7012fa6e9f42b8705069
-SHA512 (tree_magic_mini-3.0.2.crate) = edc2665f8dec0b1a2f3db7d97686a3e6a17e9cd781160128bd5f29820145f50f9654776c3f4d9d4c0e6d9cab25ce1eb0c6ae30bdb70e9c9765e101ba14686406
-Size (tree_magic_mini-3.0.2.crate) = 15372 bytes
 BLAKE2s (tree_magic_mini-3.0.3.crate) = 90b0970dfbc21188cb29f4ce23e17f2fbba16bd6e200e2ebfb0e3a46a00cb246
 SHA512 (tree_magic_mini-3.0.3.crate) = 6299f42c3286a9a4b38a1503810b0eee302e99cfd386256dde275bd5df402ba6800cf94b4bb94444b011898657d687f89642634d20f6f07e2a7719c27188d684
 Size (tree_magic_mini-3.0.3.crate) = 15406 bytes
