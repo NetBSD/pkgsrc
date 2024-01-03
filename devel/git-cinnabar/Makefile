@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/08 13:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/03 04:01:38 riastradh Exp $
 
-DISTNAME=	git-cinnabar-0.6.2
-PKGREVISION=	3
+DISTNAME=	git-cinnabar-0.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
@@ -33,6 +32,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/git-cinnabar ${DESTDIR}${PREFIX}/libexec/git-core
 	cd ${DESTDIR}${PREFIX}/libexec/git-core && ${LN} git-cinnabar git-remote-hg
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/git-cinnabar
+
+CARGO_TEST_ARGS=	test ${DEFAULT_CARGO_ARGS}
+
+do-test:
+	${RUN} cd ${CARGO_WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_TEST_ARGS}
 
 .include "cargo-depends.mk"
 
