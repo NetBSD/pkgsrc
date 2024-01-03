@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/12/05 19:46:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/03 15:30:06 pin Exp $
 
-DISTNAME=	senpai-v0.2.0
+DISTNAME=	senpai-v0.3.0
 PKGNAME=	${DISTNAME:S,-v,-,}
-PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	-https://git.sr.ht/~taiite/senpai/archive/v${PKGVERSION_NOREV}.tar.gz
 
