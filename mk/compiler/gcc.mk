@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.270 2024/01/03 08:11:51 mef Exp $
+# $NetBSD: gcc.mk,v 1.271 2024/01/03 14:06:30 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -156,13 +156,20 @@ GCC_REQD+=	2.8.0
 # Most of the time, GCC adds support for features of new C and C++
 # standards incrementally; we define USE_CXX_FEATURES=c++XX as
 # intending to require a compiler that fully supports the standard.
-# Whenever reasonable, we choose a gcc version shipped with a NetBSD
-# release, because those are known to work well, and because it is
-# simpler to limit selection to fewer versions.  Thus we tend to:
+# We tend towards a gcc version shipped with a NetBSD release, because
+# those are known to work well, and because it is simpler to limit
+# selection to fewer versions.  This tendency is much stronger for C++
+# versions, and less so for c11.
+#
+# Thus we tend to:
 #   - gcc 4.8, shipped with NetBSD 7 
 #   - gcc 5, shipped with NetBSD 8
 #   - gcc 7, shipped with NetBSD 9
 #   - gcc 10, shipped with NetBSD 10
+#
+# Other systems have different versions, and we note a few:
+#
+#  - gcc 8, shipped with Enterprise Linux 8
 #
 # Resources:
 # https://gcc.gnu.org/projects/cxx-status.html
@@ -211,6 +218,7 @@ GCC_REQD+=	5
 GCC_REQD+=	3
 .endif
 
+# 4.9 supports c11; don't reject it by rounding up to 5
 .if !empty(USE_CC_FEATURES:Mc11)
 GCC_REQD+=	4.9
 .endif
@@ -222,10 +230,12 @@ GCC_REQD+=	4.9
 GCC_REQD+=	10.0
 .endif
 
+# Don't round to gcc 5.
 .if !empty(USE_CXX_FEATURES:Munique_ptr)
 GCC_REQD+=	4.9
 .endif
 
+# Don't round to gcc 5.
 .if !empty(USE_CXX_FEATURES:Mregex)
 GCC_REQD+=	4.9
 .endif
@@ -251,6 +261,7 @@ GCC_REQD+=	10
 GCC_REQD+=	10
 .endif
 
+# Don't round to gcc10.
 .if !empty(USE_CXX_FEATURES:Mcharconv)
 GCC_REQD+=	8
 .endif
