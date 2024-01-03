@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/08/26 15:04:18 taca Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/03 15:58:42 taca Exp $
 
 DISTNAME=	html-proofer-5.0.8
 CATEGORIES=	www
@@ -19,7 +19,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zeitwerk>=2.5<3:../../devel/ruby-zeitwerk
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	31 32
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
