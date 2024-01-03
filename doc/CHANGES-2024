@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.57 2024/01/03 15:30:23 pin Exp $
+$NetBSD: CHANGES-2024,v 1.58 2024/01/03 15:31:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-netaddr to 0.10.1 [adam 2024-01-03]
 	Updated net/py-minio to 7.2.3 [adam 2024-01-03]
 	Updated chat/senpai to 0.3.0 [pin 2024-01-03]
+	Updated misc/rust-kanban to 0.9.0 [pin 2024-01-03]
