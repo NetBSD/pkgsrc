@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/03 15:33:37 pin Exp $
 
-BLAKE2s (lsix-1.8.tar.gz) = b75b6afe90d40c502158ad57bd7f0d8a4fd087128c13da014412b0760beaba3e
-SHA512 (lsix-1.8.tar.gz) = 2bc670c408563923f28b291c6247e73a3e183e7ccd3b56f48065ce98f2703b62aa3f7287ef30ffffa05de91a22725a1986193800d75892db516a84a4f7a97d8a
-Size (lsix-1.8.tar.gz) = 554423 bytes
+BLAKE2s (lsix-1.8.2.tar.gz) = c78377fb21c013fee4f6f1d19f43e2361773344c70cca004f406d93f7ccf64d0
+SHA512 (lsix-1.8.2.tar.gz) = 735b1b052123aee2562a41f6aa3c386a0e1cc147e09add4b33092a68071ed95b8f77461a803e6a212ab445ba56ca37d0fed616296437c07235d38ac0c1ba06b8
+Size (lsix-1.8.2.tar.gz) = 554540 bytes
