@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/01/01 11:43:26 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/03 06:53:25 adam Exp $
 
-DISTNAME=	netaddr-0.10.0
+DISTNAME=	netaddr-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netaddr/}
