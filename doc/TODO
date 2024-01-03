@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23866 2024/01/03 04:01:51 riastradh Exp $
+$NetBSD: TODO,v 1.23867 2024/01/03 09:34:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -982,6 +982,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o nedit-5.7
 	o netramet-50
+	o netsurf-3.11
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
@@ -1393,6 +1394,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o verilator-4.204
 	o vfu-4.09
 	o vicq-0.4.2
+	o vim-9.1
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-3.2.0
