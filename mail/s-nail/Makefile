@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/03 23:32:11 gdt Exp $
 
 DISTNAME=		s-nail-14.9.22
 PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		https://www.sdaoden.eu/downloads/
 
-MAINTAINER=		jgw@sdf.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.sdaoden.eu/code.html
 COMMENT=		BSD mail utility with MIME extensions
 LICENSE=		original-bsd AND osl AND mpl-1.1
