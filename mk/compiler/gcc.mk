@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.269 2024/01/02 23:37:48 gdt Exp $
+# $NetBSD: gcc.mk,v 1.270 2024/01/03 08:11:51 mef Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -213,6 +213,13 @@ GCC_REQD+=	3
 
 .if !empty(USE_CC_FEATURES:Mc11)
 GCC_REQD+=	4.9
+.endif
+
+.if !empty(USE_CC_FEATURES:Mc17)
+# See http://mail-index.netbsd.org/pkgsrc-users/2024/01/02/msg038697.html
+# Actually gcc-9.x is enough, but it is not in any NetBSD
+# base system, thus for convenience
+GCC_REQD+=	10.0
 .endif
 
 .if !empty(USE_CXX_FEATURES:Munique_ptr)
