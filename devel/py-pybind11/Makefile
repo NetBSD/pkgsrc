@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/28 13:29:26 thor Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/03 15:22:06 wiz Exp $
 
 DISTNAME=	pybind11-2.11.1
 PATCHLEVEL=	1
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 
 post-install:
@@ -20,8 +22,6 @@ post-install:
 	${MV} pybind11-config pybind11-config-${PYVERSSUFFIX} || ${TRUE}
 
 USE_PKG_RESOURCES=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
