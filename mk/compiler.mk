@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.109 2024/01/03 08:11:51 mef Exp $
+# $NetBSD: compiler.mk,v 1.110 2024/01/03 12:20:21 gdt Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -78,7 +78,7 @@
 #	This is used to (optionally) install a newer compiler
 #	than provided by the system, or to skip building the package.
 #
-#	Valid values are: c11, c17, c99, has_include.
+#	Valid values are: c99, c11, c17, has_include.
 #
 # USE_CXX_FEATURES
 #
