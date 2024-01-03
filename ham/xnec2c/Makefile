@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/12/18 14:19:35 mef Exp $
+# $NetBSD: Makefile,v 1.37 2024/01/03 08:33:39 mef Exp $
 
 DISTNAME=	xnec2c-4.2.3
 CATEGORIES=	ham
@@ -23,6 +23,8 @@ INSTALLATION_DIRS=	share/doc/xnec2c
 #/tmp/ham/xnec2c/work/xnec2c-4.2.1/src/optimize.c:124: undefined reference to `inotify_init1'
 #ld: /tmp/ham/xnec2c/work/xnec2c-4.2.1/src/optimize.c:132: undefined reference to `inotify_add_watch'
 CFLAGS+=		-linotify -L${PREFIX}/lib
+
+USE_CC_FEATURES+=	c17
 
 post-install:
 	cd ${WRKSRC}/doc && ${PAX} -pp -rw * ${DESTDIR}${PREFIX}/share/doc/xnec2c
