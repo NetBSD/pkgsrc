@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:55:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/01/04 10:55:57 wiz Exp $
 
-BLAKE2s (Math-Round-0.07.tar.gz) = fef56763f765cd28dff4215bbf86f9cc37a4426f35470ab92820f15ed573891e
-SHA512 (Math-Round-0.07.tar.gz) = 7b25c907b4d2c7d8f9d9318991739ea6dfd104d75f9d7f88057739a21072a003306669a9affafed752a20ec97d6341560216492a80ac49f7b456ea54121211b7
-Size (Math-Round-0.07.tar.gz) = 5221 bytes
+BLAKE2s (Math-Round-0.08.tar.gz) = 23ac00abff626d92f5bfe2f65f2b0daa3ea41b8e13d0e6a3dc0a5adb79b969f3
+SHA512 (Math-Round-0.08.tar.gz) = 00ef34f541acef09b80588492a3502ac13d1c6c806709b5403a59dc757540b8a9094f2b304f4242a2a8f67d90c06ed7c52626b56e9309fd01b07229ff538f15a
+Size (Math-Round-0.08.tar.gz) = 12039 bytes
