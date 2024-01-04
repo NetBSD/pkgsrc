@@ -1,20 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/18 05:48:47 adam Exp $
-bin/cli-name-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2024/01/04 22:42:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/docs/_theme/LICENSE
-${PYSITELIB}/docs/_theme/flask_theme_support.py
-${PYSITELIB}/docs/_theme/flask_theme_support.pyc
-${PYSITELIB}/docs/_theme/flask_theme_support.pyo
-${PYSITELIB}/docs/_theme/wolph/layout.html
-${PYSITELIB}/docs/_theme/wolph/relations.html
-${PYSITELIB}/docs/_theme/wolph/static/flasky.css_t
-${PYSITELIB}/docs/_theme/wolph/static/small_flask.css
-${PYSITELIB}/docs/_theme/wolph/theme.conf
 ${PYSITELIB}/progressbar/__about__.py
 ${PYSITELIB}/progressbar/__about__.pyc
 ${PYSITELIB}/progressbar/__about__.pyo
