@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.108 2024/01/04 22:08:21 adam Exp $
+$NetBSD: CHANGES-2024,v 1.109 2024/01/04 22:29:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -122,3 +122,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cad/qcad to 3.28.2.2 [plunky 2024-01-04]
 	Updated math/py-numpy to 1.26.3 [adam 2024-01-04]
 	Updated math/py-patsy to 0.5.6 [adam 2024-01-04]
+	Updated archivers/py-lz4 to 4.3.3 [adam 2024-01-04]
+	Updated devel/py-test-check to 2.2.3 [adam 2024-01-04]
+	Updated lang/py-mypy to 1.8.0 [adam 2024-01-04]
+	Updated www/py-jwcrypto to 1.5.1 [adam 2024-01-04]
