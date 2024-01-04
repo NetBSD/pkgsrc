@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/11/22 10:31:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/01/04 22:27:13 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -780,8 +780,12 @@ ${PYSITELIB}/mypy/typeshed/stdlib/importlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/machinery.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/_meta.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/readers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/abc.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/readers.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/simple.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/simple.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/inspect.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/io.pyi
@@ -905,6 +909,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/netrc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/nis.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/nntplib.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/nt.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ntpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/nturl2path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/numbers.pyi
@@ -978,7 +983,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/subprocess.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sunau.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/symbol.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/symtable.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/sys.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/sys/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/sys/_monitoring.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/sysconfig.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/syslog.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/tabnanny.pyi
