@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/12/20 18:52:12 nros Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/04 22:42:52 adam Exp $
 
-DISTNAME=	progressbar2-4.3.0
+DISTNAME=	progressbar2-4.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
@@ -23,10 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-[0-9]*:../../devel/py-test-mypy
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} cli-name cli-name-${PYVERSSUFFIX} || ${TRUE}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
