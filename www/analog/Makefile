@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2024/01/04 00:07:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2024/01/04 00:10:36 gutteridge Exp $
 
 DISTNAME=	analog-6.0
 PKGREVISION=	3
@@ -8,6 +8,7 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.web42.com/analog/
 COMMENT=	Extremely fast program for analysing WWW logfiles
+LICENSE=	gnu-gpl-v2 # and others, for included 3rd party code
 
 WRKSRC=		${WRKDISTDIR}/src
 BUILD_TARGET=	analog
