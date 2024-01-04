@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/30 17:55:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/04 11:14:03 wiz Exp $
 
-BLAKE2s (Syntax-Keyword-Match-0.10.tar.gz) = 4b2e5cbef65eef48082bad6bb1495f27d73afc3de7f3c4d9776d44a646f694f1
-SHA512 (Syntax-Keyword-Match-0.10.tar.gz) = 02d46f94d7c79ab5a34c6a0fed8185a9aed7d05bd21a34ab15876d7f532cb3ef0407dfaaaeef5b68438f00de583701dc18931de399c952e5d686da5a3c073895
-Size (Syntax-Keyword-Match-0.10.tar.gz) = 24952 bytes
+BLAKE2s (Syntax-Keyword-Match-0.13.tar.gz) = 7325cb495f9b265aec296a6516320b20a2b446341bd0c7573da7b2b3dc2d5a41
+SHA512 (Syntax-Keyword-Match-0.13.tar.gz) = 472a0b25b8f19a09f0a7d51963bb76382a6273e505b4141148353f0375610e77d2d458fc7cf6e1cb02aa127f252f882559b186bc35b441af5fa1dad7e3aa4e25
+Size (Syntax-Keyword-Match-0.13.tar.gz) = 31320 bytes

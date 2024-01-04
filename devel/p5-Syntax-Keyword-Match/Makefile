@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/02 16:17:16 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/04 11:14:03 wiz Exp $
 
-DISTNAME=	Syntax-Keyword-Match-0.10
+DISTNAME=	Syntax-Keyword-Match-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Syntax/}
 
@@ -11,7 +10,8 @@ HOMEPAGE=	https://metacpan.org/pod/Syntax::Keyword::Match
 COMMENT=	Perl5 module to provide a match/case syntax
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-XS-Parse-Keyword>=0.23:../../devel/p5-XS-Parse-Keyword
+DEPENDS+=	p5-XS-Parse-Keyword>=0.36:../../devel/p5-XS-Parse-Keyword
+TEST_DEPENDS+=	p5-Test2-Suite>=0:../../devel/p5-Test2-Suite
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
