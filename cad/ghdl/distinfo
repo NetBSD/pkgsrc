@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2024/01/02 00:42:03 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2024/01/04 07:10:14 wiz Exp $
 
 BLAKE2s (ghdl-3.0.0.tar.gz) = 3dfcd821e81a470eb1f5b9e42ff69cf56634af8edf531f90ac9839c0c85aa7a6
 SHA512 (ghdl-3.0.0.tar.gz) = 11b638d0ae757ce2e247ab438c15a8f5cd78c3a025ba6272aa05df548d2a7276c25dbbf83b846284ded8c9864eca3dcdb8342cb532faecd01e7cefaada524ab0
 Size (ghdl-3.0.0.tar.gz) = 7160245 bytes
 SHA1 (patch-configure) = a6f8f11f5d636d5838461c7b88fc3830891433dd
-SHA1 (patch-src_ortho_llvm6_llvm-cbindings.cpp) = 70de26f55e16c010264236dc1f8e14c3e92f7df9
+SHA1 (patch-src_ortho_llvm6_llvm-cbindings.cpp) = da2af39f238fa496db687a7a52f8f2f122fa651d
 SHA1 (patch-src_ortho_mcode_memsegs__c.c) = 5669dda0130ade50caf7538c3f2c6cfed061ac5b
