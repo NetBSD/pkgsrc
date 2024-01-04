@@ -1,12 +1,11 @@
-$NetBSD: patch-src_stemmer_stemmer.pro,v 1.4 2023/03/25 13:16:11 wiz Exp $
+$NetBSD: patch-src_stemmer_stemmer.pro,v 1.5 2024/01/04 21:50:29 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- src/stemmer/stemmer.pro.orig	2020-09-04 08:28:36.000000000 +0000
+--- src/stemmer/stemmer.pro.orig	2023-09-04 18:51:52.000000000 +0000
 +++ src/stemmer/stemmer.pro
-@@ -7,9 +7,8 @@ HEADERS = \
- TEMPLATE = lib
+@@ -8,8 +8,7 @@ TEMPLATE = lib
  CONFIG += plugin
  TARGET = $${RLIBNAME}stemmer
  LIBS += -lstemmer
