@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/10/01 08:10:38 wen Exp $
+$NetBSD: distinfo,v 1.14 2024/01/04 11:15:28 wiz Exp $
 
-BLAKE2s (Test-Differences-0.69.tar.gz) = 15df46836586472ca40036d9d567a3ab13d4ee5afe0a0338aec2d30391f5dcd6
-SHA512 (Test-Differences-0.69.tar.gz) = 506859b6d983f6b81366bdaa365b02091d7a1ef1b3a29397b19175e37cde93a3b8e1d8765438630ecfc6ca1755868aefa47dcde0f1f45951f4610362c5d904bd
-Size (Test-Differences-0.69.tar.gz) = 14526 bytes
+BLAKE2s (Test-Differences-0.71.tar.gz) = 8552d01275ce5e51eb68743027f4f30d4b9d3390be0e9fd1a4a21645a929b14f
+SHA512 (Test-Differences-0.71.tar.gz) = 6e6c882b41dd25cbb91d28ec947e669f660df0d8e477a347237a39eba51c74c9e8bcabe8ffccaec7d5912c62cf6ae837e2d2f28551bd9fc110d9503acc86e72e
+Size (Test-Differences-0.71.tar.gz) = 15304 bytes
