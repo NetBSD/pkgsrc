@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.70 2024/01/04 10:47:43 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.71 2024/01/04 10:49:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/p5-Alien-Libxml2 to 0.19 [wiz 2024-01-04]
 	Updated textproc/p5-Convert-ASN1 to 0.34 [wiz 2024-01-04]
 	Updated databases/p5-DBD-SQLite to 1.74 [wiz 2024-01-04]
+	Updated databases/p5-DBM-Deep to 2.0019 [wiz 2024-01-04]
