@@ -1,0 +1,11 @@
+Every hash variable in Perl has its own internal iterator, accessed
+by the builtin each, keys, and values functions. The iterator is
+also implicitly used whenever the hash is evaluated in list context.
+The iterator is "reset" whenever keys or values is called on a
+hash, including the implicit calls when the hash is evaluated in
+list context. That makes it dangerous to do certain hash operations
+inside a while ... each loop.
+
+Hash::SafeKeys provides alternate functions to access the keys,
+values, or entire contents of a hash in a way that does not reset
+the iterator, making them safe to use in such contexts.
