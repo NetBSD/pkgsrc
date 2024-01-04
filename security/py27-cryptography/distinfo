@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/04/21 10:48:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/04 20:49:27 triaxx Exp $
 
 BLAKE2s (cryptography-3.3.2.tar.gz) = 8ff42f679d01215069547cd6ca98b9f9f828ef7d85397b5d7af260c5a67718f1
 SHA512 (cryptography-3.3.2.tar.gz) = 55f6ee13342b3209b1fcb310f4c4d33d22856ee785cb2347e6ad36c34e9b42f6e0d5bece8e458b09663a5b78e34c4567fe7a211b51ca71f55ccc93e3f62dc5e4
 Size (cryptography-3.3.2.tar.gz) = 539883 bytes
+SHA1 (patch-src___cffi__src_openssl_err.py) = 79b61e66b37fe7c63dad710fb2c9c09d61ff36c6
+SHA1 (patch-src___cffi__src_openssl_fips.py) = 3254d5508d44b8a72f49d2564ad413e2ed3cbfc8
