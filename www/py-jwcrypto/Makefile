@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/08/26 11:56:43 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/04 22:29:23 adam Exp $
 
-DISTNAME=	jwcrypto-1.5.0
+DISTNAME=	jwcrypto-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jwcrypto/}
@@ -18,6 +18,6 @@ PYTHON_VERSIONED_DEPENDENCIES=	cryptography
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
