@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/08/21 20:31:59 markd Exp $
+$NetBSD: distinfo,v 1.16 2024/01/04 10:45:41 wiz Exp $
 
-BLAKE2s (Convert-ASN1-0.33.tar.gz) = 55d3b216abad08e22d53d61834b5dd697d102b1cc9c54ac4d0c762abf295ecd8
-SHA512 (Convert-ASN1-0.33.tar.gz) = be66298816d41965d1d579ea60186f62d0f00585fbeba8422eee71e4ec4a06026d36eab5144c305da2525c5d652b5f1eed7ade039d93136bfc81d28b496c74f8
-Size (Convert-ASN1-0.33.tar.gz) = 79306 bytes
+BLAKE2s (Convert-ASN1-0.34.tar.gz) = 47ff9d0c8096a061230830f816e98da4207b19f69b79428cbb76aa94e873bc70
+SHA512 (Convert-ASN1-0.34.tar.gz) = f19734b5c267705467b59ddb4c4c7e0e23916da2aac2ac59629fef1c06e033d032fd27c68533beb3f928c02d8780e52ada2092630c72ef3da4561eadafd7936a
+Size (Convert-ASN1-0.34.tar.gz) = 79762 bytes
