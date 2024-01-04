@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.25 2005/08/25 10:09:48 grant Exp $
+$NetBSD: patch-aa,v 1.26 2024/01/04 00:07:04 gutteridge Exp $
 
 --- Makefile.orig	2004-12-20 00:51:30.000000000 +1100
 +++ Makefile
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.25 2005/08/25 10:09:48 grant Exp $
 +	-DDEFAULTCONFIGFILE=\"${SYSCONFDIR}/analog.cfg\" \
 +	-DIMAGEDIR=\"/images/\" \
 +	-DLANGDIR=\"${PREFIX}/lib/analog/lang/\" \
-+	-DLOGFILE=\"/var/log/httpd-access.log\"
++	-DLOGFILE=\"${VARBASE}/log/httpd-access.log\"
  #                 ... -DNOOPEN -DNOFOLLOW -DNOALARM -DNOGRAPHICS -DNOGMTIME ...
  #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP ...
  #                 ... -DHAVE_GD -DHAVE_ZLIB -DHAVE_BZLIB -DHAVE_PCRE ...
