@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2023/07/06 09:41:36 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.46 2024/01/04 10:45:41 wiz Exp $
 
-DISTNAME=		Convert-ASN1-0.33
+DISTNAME=		Convert-ASN1-0.34
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
-CATEGORIES=		converters perl5 textproc
+CATEGORIES=		textproc converters perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
