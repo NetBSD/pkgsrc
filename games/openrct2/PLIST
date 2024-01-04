@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/09/08 08:52:16 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/01/04 21:37:29 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -68,8 +68,10 @@ share/openrct2/object/official/music/openrct2.music.dodgems.parkobj
 share/openrct2/object/official/music/openrct2.music.extraterrestrial.parkobj
 share/openrct2/object/official/music/openrct2.music.fairground2.parkobj
 share/openrct2/object/official/music/openrct2.music.galaxy.parkobj
+share/openrct2/object/official/music/openrct2.music.mystic.parkobj
 share/openrct2/object/official/music/openrct2.music.prehistoric.parkobj
 share/openrct2/object/official/music/openrct2.music.ragtime2.parkobj
+share/openrct2/object/official/music/openrct2.music.rock4.parkobj
 share/openrct2/object/official/ride/openrct2.ride.alpine_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.hybrid_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.single_rail_coaster.parkobj
@@ -112,6 +114,7 @@ share/openrct2/object/rct1/footpath_railings/rct1ll.footpath_railings.space.park
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.crazy_paving.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.dirt.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.queue_blue.parkobj
+share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.road.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.tarmac.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.tiles_brown.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1aa.footpath_surface.ash.parkobj
