@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/01/30 07:53:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/01/04 14:51:04 adam Exp $
 bin/convertfilestopdf
 bin/convertfilestops
 bin/convertformat
@@ -52,4 +52,4 @@ lib/cmake/leptonica/LeptonicaTargets.cmake
 lib/libleptonica.so
 lib/libleptonica.so.6
 lib/libleptonica.so.6.0.0
-lib/pkgconfig/lept.pc
+lib/pkgconfig/lept_Release.pc
