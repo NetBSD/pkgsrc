@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2018/11/06 14:21:51 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2024/01/04 22:36:43 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/channels/__init__.py
 ${PYSITELIB}/channels/__init__.pyc
 ${PYSITELIB}/channels/__init__.pyo
@@ -31,12 +31,6 @@ ${PYSITELIB}/channels/generic/http.pyo
 ${PYSITELIB}/channels/generic/websocket.py
 ${PYSITELIB}/channels/generic/websocket.pyc
 ${PYSITELIB}/channels/generic/websocket.pyo
-${PYSITELIB}/channels/hacks.py
-${PYSITELIB}/channels/hacks.pyc
-${PYSITELIB}/channels/hacks.pyo
-${PYSITELIB}/channels/http.py
-${PYSITELIB}/channels/http.pyc
-${PYSITELIB}/channels/http.pyo
 ${PYSITELIB}/channels/layers.py
 ${PYSITELIB}/channels/layers.pyc
 ${PYSITELIB}/channels/layers.pyo
@@ -46,9 +40,6 @@ ${PYSITELIB}/channels/management/__init__.pyo
 ${PYSITELIB}/channels/management/commands/__init__.py
 ${PYSITELIB}/channels/management/commands/__init__.pyc
 ${PYSITELIB}/channels/management/commands/__init__.pyo
-${PYSITELIB}/channels/management/commands/runserver.py
-${PYSITELIB}/channels/management/commands/runserver.pyc
-${PYSITELIB}/channels/management/commands/runserver.pyo
 ${PYSITELIB}/channels/management/commands/runworker.py
 ${PYSITELIB}/channels/management/commands/runworker.pyc
 ${PYSITELIB}/channels/management/commands/runworker.pyo
@@ -67,12 +58,6 @@ ${PYSITELIB}/channels/security/websocket.pyo
 ${PYSITELIB}/channels/sessions.py
 ${PYSITELIB}/channels/sessions.pyc
 ${PYSITELIB}/channels/sessions.pyo
-${PYSITELIB}/channels/signals.py
-${PYSITELIB}/channels/signals.pyc
-${PYSITELIB}/channels/signals.pyo
-${PYSITELIB}/channels/staticfiles.py
-${PYSITELIB}/channels/staticfiles.pyc
-${PYSITELIB}/channels/staticfiles.pyo
 ${PYSITELIB}/channels/testing/__init__.py
 ${PYSITELIB}/channels/testing/__init__.pyc
 ${PYSITELIB}/channels/testing/__init__.pyo
