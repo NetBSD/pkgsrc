@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2023/11/12 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2024/01/04 21:50:29 plunky Exp $
 
-DISTNAME=		qcad-3.27.9.0
-PKGREVISION=		7
+DISTNAME=		qcad-3.28.2.2
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -23,7 +22,6 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
 SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
-SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_VARS.paths=	PREFIX
 
 SUBST_CLASSES+=		icon
