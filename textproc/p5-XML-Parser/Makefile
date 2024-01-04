@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2023/07/06 09:42:03 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/01/04 11:23:19 wiz Exp $
 
-DISTNAME=	XML-Parser-2.46
+DISTNAME=	XML-Parser-2.47
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/XML-Parser
 COMMENT=	Perl extension interface to James Clark's XML parser, expat
 LICENSE=	${PERL5_LICENSE}
 
-#TEST_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PERL5_PACKLIST=		auto/XML/Parser/.packlist
 MAKE_PARAMS+=		EXPATLIBPATH=${BUILDLINK_PREFIX.expat}/lib
