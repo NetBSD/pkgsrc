@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.85 2024/01/04 11:13:02 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.86 2024/01/04 11:14:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -96,3 +96,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/p5-Perl-LanguageServer to 2.6.2 [wiz 2024-01-04]
 	Updated devel/p5-Sub-Exporter to 0.991 [wiz 2024-01-04]
 	Updated devel/p5-XS-Parse-Keyword to 0.39 [wiz 2024-01-04]
+	Updated devel/p5-Syntax-Keyword-Match to 0.13 [wiz 2024-01-04]
