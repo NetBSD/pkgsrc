@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:30:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/01/04 10:51:25 wiz Exp $
 
-BLAKE2s (HTTP-Cookies-6.10.tar.gz) = 3168413b03de6217c1784dbf5790fa89c6245ffc19f0a78865a0e855bcfcddd8
-SHA512 (HTTP-Cookies-6.10.tar.gz) = c24a986e524ebf5d8b13b4580c3ee6aed018e79c203fd62208bfe970744482832fe9c41bb3195a596af1e11058053ed7615a09a26fbcef4433e270f0f5d38658
-Size (HTTP-Cookies-6.10.tar.gz) = 42448 bytes
+BLAKE2s (HTTP-Cookies-6.11.tar.gz) = 2536d8f28aca44a8734086f450de9d50b58e7f9cc876efac54109ea8bba631b3
+SHA512 (HTTP-Cookies-6.11.tar.gz) = 3ebfa742407a623fdcb23fe7fc559a1667b9510c4c152f98c6d98bcea3df6f336183920636244cd5175b9e9ada4a599bae87433c1ea518739b4eac90a4ca5342
+Size (HTTP-Cookies-6.11.tar.gz) = 46131 bytes
