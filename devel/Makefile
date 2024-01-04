@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4152 2024/01/01 12:02:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.4153 2024/01/04 10:43:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1306,6 +1306,7 @@ SUBDIR+=	p5-Algorithm-Merge
 SUBDIR+=	p5-Algorithm-Permute
 SUBDIR+=	p5-Alien-Base-ModuleBuild
 SUBDIR+=	p5-Alien-Build
+SUBDIR+=	p5-Alien-Build-Plugin-Download-GitLab
 SUBDIR+=	p5-Alien-Packages
 SUBDIR+=	p5-Alien-SDL
 SUBDIR+=	p5-AnnoCPAN-Perldoc
