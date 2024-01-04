@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/04 11:04:19 wiz Exp $
+
+BLAKE2s (Hash-SafeKeys-0.04.tar.gz) = 482c846b491ea7f60ccc01ed9e9af34fba48cf600d97852ee66532e8a7028ef8
+SHA512 (Hash-SafeKeys-0.04.tar.gz) = bb1bec9e4bedcaaf20c8fd22c46650025f005b1db1888c01752df4690878268ee1ade9b1a2ce6588cfcf66fd651aa359843e3228fc9620b18a787427c2dc566a
+Size (Hash-SafeKeys-0.04.tar.gz) = 9262 bytes
