@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2023/11/12 13:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/01/04 21:37:29 triaxx Exp $
 
-DISTNAME=	openrct2-0.4.6
-PKGREVISION=	4
+DISTNAME=	openrct2-0.4.7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c
 
 # C++17
 GCC_REQD+=	9
@@ -30,6 +29,8 @@ CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+USE_CXX_FEATURES=	c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
