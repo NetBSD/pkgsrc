@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/04 10:43:23 wiz Exp $
+
+BLAKE2s (Alien-Build-Plugin-Download-GitLab-0.01.tar.gz) = a07b2596ba8aa43401755a32bd60cc2097b295bb5e31c672c56b7cd529519c07
+SHA512 (Alien-Build-Plugin-Download-GitLab-0.01.tar.gz) = 5a1a1dcefbec09732e377c47a961d57cc21a54fef154158dbad1738a93a143348ddc69430b35207d9db111a74592a7120b2abf2f7045818a74a6397bbf07fb06
+Size (Alien-Build-Plugin-Download-GitLab-0.01.tar.gz) = 16629 bytes
