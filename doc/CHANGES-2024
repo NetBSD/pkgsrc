@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.89 2024/01/04 11:16:13 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.90 2024/01/04 11:19:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Term-Table to 0.018 [wiz 2024-01-04]
 	Updated devel/p5-Test-Differences to 0.7100 [wiz 2024-01-04]
 	Updated devel/p5-Test-Output to 1.034 [wiz 2024-01-04]
+	Updated devel/p5-Test2-Suite to 0.000159 [wiz 2024-01-04]
