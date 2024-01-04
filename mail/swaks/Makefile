@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:34:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/04 11:28:17 schmonz Exp $
 
-DISTNAME=		swaks-20201014.0
-PKGREVISION=		2
+DISTNAME=		swaks-20240103.0
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}files/
 
@@ -13,6 +12,7 @@ LICENSE=		gnu-gpl-v2
 #DEPENDS+=		p5-Authen-NTLM (not in pkgsrc)
 DEPENDS+=		p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
+DEPENDS+=		p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# none
@@ -24,7 +24,5 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
-
-.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
