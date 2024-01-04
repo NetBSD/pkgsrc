@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4153 2024/01/04 10:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4154 2024/01/04 11:06:23 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1678,6 +1678,7 @@ SUBDIR+=	p5-Hash-Merge
 SUBDIR+=	p5-Hash-Merge-Simple
 SUBDIR+=	p5-Hash-MoreUtils
 SUBDIR+=	p5-Hash-MultiValue
+SUBDIR+=	p5-Hash-SafeKeys
 SUBDIR+=	p5-Hash-Util-FieldHash-Compat
 SUBDIR+=	p5-Heap
 SUBDIR+=	p5-Hook-LexWrap
