@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.99 2024/01/04 12:29:59 pin Exp $
+$NetBSD: CHANGES-2024,v 1.100 2024/01/04 12:31:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -110,3 +110,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/pixman to 0.43.0 [wiz 2024-01-04]
 	Updated sysutils/dua-cli to 2.25.0 [pin 2024-01-04]
 	Updated sysutils/xplr to 0.21.5 [pin 2024-01-04]
+	Updated audio/spotify-player to 0.16.3 [pin 2024-01-04]
