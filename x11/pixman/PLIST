@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/06/16 03:15:31 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/04 11:33:38 wiz Exp $
 include/pixman-1/pixman-version.h
 include/pixman-1/pixman.h
-lib/libpixman-1.la
+lib/libpixman-1.so
+lib/libpixman-1.so.0
+lib/libpixman-1.so.${PKGVERSION}
 lib/pkgconfig/pixman-1.pc
