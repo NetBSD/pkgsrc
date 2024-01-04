@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/08/31 23:10:12 wen Exp $
+$NetBSD: distinfo,v 1.14 2024/01/04 11:11:09 wiz Exp $
 
-BLAKE2s (Sub-Exporter-0.990.tar.gz) = a95bae95d9dbb960ef5a9190288f00f82ee739b27c41f62e5c8f705b52339351
-SHA512 (Sub-Exporter-0.990.tar.gz) = 49cc16efe0e44a5d8d1aa49bd2f35ebb43640ce27030d480e1acae1da13444a877007f7eb924d6e3743691222505d646744cc651fbd09850cd965673fac2d92b
-Size (Sub-Exporter-0.990.tar.gz) = 57553 bytes
+BLAKE2s (Sub-Exporter-0.991.tar.gz) = 55f92e53fa8f0ac2142c157182902b7319980abd57a6fe8cc823622684489b40
+SHA512 (Sub-Exporter-0.991.tar.gz) = 7829bbca1eb332156ba33dd0cbde7f57c178ad56cc03e76c1b7d5327c94ce15bb5172894eeef011e12e472071a7d7a07f514a1121535d96ae05ed0ef6734b329
+Size (Sub-Exporter-0.991.tar.gz) = 57552 bytes
