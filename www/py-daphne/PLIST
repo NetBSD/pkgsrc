@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/01 09:00:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/04 22:34:29 adam Exp $
 bin/daphne-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/daphne/__init__.py
 ${PYSITELIB}/daphne/__init__.pyc
 ${PYSITELIB}/daphne/__init__.pyo
@@ -16,6 +15,12 @@ ${PYSITELIB}/daphne/__main__.pyo
 ${PYSITELIB}/daphne/access.py
 ${PYSITELIB}/daphne/access.pyc
 ${PYSITELIB}/daphne/access.pyo
+${PYSITELIB}/daphne/apps.py
+${PYSITELIB}/daphne/apps.pyc
+${PYSITELIB}/daphne/apps.pyo
+${PYSITELIB}/daphne/checks.py
+${PYSITELIB}/daphne/checks.pyc
+${PYSITELIB}/daphne/checks.pyo
 ${PYSITELIB}/daphne/cli.py
 ${PYSITELIB}/daphne/cli.pyc
 ${PYSITELIB}/daphne/cli.pyo
@@ -25,6 +30,15 @@ ${PYSITELIB}/daphne/endpoints.pyo
 ${PYSITELIB}/daphne/http_protocol.py
 ${PYSITELIB}/daphne/http_protocol.pyc
 ${PYSITELIB}/daphne/http_protocol.pyo
+${PYSITELIB}/daphne/management/__init__.py
+${PYSITELIB}/daphne/management/__init__.pyc
+${PYSITELIB}/daphne/management/__init__.pyo
+${PYSITELIB}/daphne/management/commands/__init__.py
+${PYSITELIB}/daphne/management/commands/__init__.pyc
+${PYSITELIB}/daphne/management/commands/__init__.pyo
+${PYSITELIB}/daphne/management/commands/runserver.py
+${PYSITELIB}/daphne/management/commands/runserver.pyc
+${PYSITELIB}/daphne/management/commands/runserver.pyo
 ${PYSITELIB}/daphne/server.py
 ${PYSITELIB}/daphne/server.pyc
 ${PYSITELIB}/daphne/server.pyo
