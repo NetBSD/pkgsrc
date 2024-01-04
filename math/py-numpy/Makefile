@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2024/01/02 19:57:46 thor Exp $
+# $NetBSD: Makefile,v 1.118 2024/01/04 22:06:13 adam Exp $
 
-DISTNAME=	numpy-1.26.2
-PKGREVISION=	2
+DISTNAME=	numpy-1.26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -82,6 +81,11 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
 post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/command/config.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/log.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
 # as of 1.26.1

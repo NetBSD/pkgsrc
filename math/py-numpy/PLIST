@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2023/11/21 21:58:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/01/04 22:06:13 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -666,7 +666,6 @@ ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/build_src.py
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/build_src.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/build_src.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/config.py
-${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/config.py.orig
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/config.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/config.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/command/config_compiler.py
@@ -709,7 +708,6 @@ ${PLIST.distutils}${PYSITELIB}/numpy/distutils/extension.py
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/extension.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/extension.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/__init__.py
-${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/__init__.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/__init__.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/absoft.py
@@ -728,11 +726,9 @@ ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/fujitsu.py
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/fujitsu.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/fujitsu.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/g95.py
-${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/g95.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/g95.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/gnu.py
-${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/gnu.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/gnu.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/fcompiler/hpux.py
@@ -787,7 +783,6 @@ ${PLIST.distutils}${PYSITELIB}/numpy/distutils/line_endings.py
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/line_endings.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/line_endings.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/log.py
-${PLIST.distutils}${PYSITELIB}/numpy/distutils/log.py.orig
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/log.pyc
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/log.pyo
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/mingw/gfortran_vs2003_hack.c
@@ -912,6 +907,9 @@ ${PYSITELIB}/numpy/f2py/_backends/meson.build.template
 ${PYSITELIB}/numpy/f2py/_isocbind.py
 ${PYSITELIB}/numpy/f2py/_isocbind.pyc
 ${PYSITELIB}/numpy/f2py/_isocbind.pyo
+${PYSITELIB}/numpy/f2py/_src_pyf.py
+${PYSITELIB}/numpy/f2py/_src_pyf.pyc
+${PYSITELIB}/numpy/f2py/_src_pyf.pyo
 ${PYSITELIB}/numpy/f2py/auxfuncs.py
 ${PYSITELIB}/numpy/f2py/auxfuncs.pyc
 ${PYSITELIB}/numpy/f2py/auxfuncs.pyo
@@ -969,9 +967,13 @@ ${PYSITELIB}/numpy/f2py/tests/src/block_docstring/foo.f
 ${PYSITELIB}/numpy/f2py/tests/src/callback/foo.f
 ${PYSITELIB}/numpy/f2py/tests/src/callback/gh17797.f90
 ${PYSITELIB}/numpy/f2py/tests/src/callback/gh18335.f90
+${PYSITELIB}/numpy/f2py/tests/src/callback/gh25211.f
+${PYSITELIB}/numpy/f2py/tests/src/callback/gh25211.pyf
+${PYSITELIB}/numpy/f2py/tests/src/cli/gh_22819.pyf
 ${PYSITELIB}/numpy/f2py/tests/src/cli/hi77.f
 ${PYSITELIB}/numpy/f2py/tests/src/cli/hiworld.f90
 ${PYSITELIB}/numpy/f2py/tests/src/common/block.f
+${PYSITELIB}/numpy/f2py/tests/src/common/gh19161.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/accesstype.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/data_common.f
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/data_multiplier.f
@@ -1007,6 +1009,8 @@ ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_integer.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_non_compound.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_real.f90
 ${PYSITELIB}/numpy/f2py/tests/src/quoted_character/foo.f
+${PYSITELIB}/numpy/f2py/tests/src/regression/gh25337/data.f90
+${PYSITELIB}/numpy/f2py/tests/src/regression/gh25337/use_data.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/inout.f90
 ${PYSITELIB}/numpy/f2py/tests/src/return_character/foo77.f
 ${PYSITELIB}/numpy/f2py/tests/src/return_character/foo90.f90
@@ -1022,6 +1026,10 @@ ${PYSITELIB}/numpy/f2py/tests/src/size/foo.f90
 ${PYSITELIB}/numpy/f2py/tests/src/string/char.f90
 ${PYSITELIB}/numpy/f2py/tests/src/string/fixed_string.f90
 ${PYSITELIB}/numpy/f2py/tests/src/string/gh24008.f
+${PYSITELIB}/numpy/f2py/tests/src/string/gh24662.f90
+${PYSITELIB}/numpy/f2py/tests/src/string/gh25286.f90
+${PYSITELIB}/numpy/f2py/tests/src/string/gh25286.pyf
+${PYSITELIB}/numpy/f2py/tests/src/string/gh25286_bc.pyf
 ${PYSITELIB}/numpy/f2py/tests/src/string/scalar_string.f90
 ${PYSITELIB}/numpy/f2py/tests/src/string/string.f
 ${PYSITELIB}/numpy/f2py/tests/src/value_attrspec/gh21665.f90
@@ -1079,6 +1087,9 @@ ${PYSITELIB}/numpy/f2py/tests/test_module_doc.pyo
 ${PYSITELIB}/numpy/f2py/tests/test_parameter.py
 ${PYSITELIB}/numpy/f2py/tests/test_parameter.pyc
 ${PYSITELIB}/numpy/f2py/tests/test_parameter.pyo
+${PYSITELIB}/numpy/f2py/tests/test_pyf_src.py
+${PYSITELIB}/numpy/f2py/tests/test_pyf_src.pyc
+${PYSITELIB}/numpy/f2py/tests/test_pyf_src.pyo
 ${PYSITELIB}/numpy/f2py/tests/test_quoted_character.py
 ${PYSITELIB}/numpy/f2py/tests/test_quoted_character.pyc
 ${PYSITELIB}/numpy/f2py/tests/test_quoted_character.pyo
