@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.63 2024/01/03 16:28:44 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.64 2024/01/04 00:03:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/difftastic to 0.53.1 [pin 2024-01-03]
 	Updated devel/py-nihtest to 1.4.0 [wiz 2024-01-03]
 	Updated devel/py-nihtest to 1.4.0nb1 [wiz 2024-01-03]
+	Updated finance/p5-Finance-Quote to 1.59 [gutteridge 2024-01-04]
