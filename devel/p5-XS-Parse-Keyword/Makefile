@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/07/06 09:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/04 11:12:54 wiz Exp $
 
-DISTNAME=	XS-Parse-Keyword-0.34
+DISTNAME=	XS-Parse-Keyword-0.39
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 
@@ -12,6 +11,7 @@ COMMENT=	XS functions to assist in parsing keyword syntax
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-ExtUtils-CChecker-[0-9]*:../../devel/p5-ExtUtils-CChecker
+TEST_DEPENDS+=	p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite
 
 PERL5_PACKLIST=		auto/XS/Parse/Keyword/.packlist
 PERL5_MODULE_TYPE=	Module::Build
