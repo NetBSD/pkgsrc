@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.93 2024/01/04 11:23:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.94 2024/01/04 11:25:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -104,3 +104,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/p5-Text-CSV to 2.04 [wiz 2024-01-04]
 	Updated textproc/p5-Text-CSV_XS to 1.53 [wiz 2024-01-04]
 	Updated textproc/p5-XML-Parser to 2.47 [wiz 2024-01-04]
+	Updated www/p5-libwww to 6.72 [wiz 2024-01-04]
