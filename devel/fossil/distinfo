@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.51 2023/06/25 18:01:14 js Exp $
+$NetBSD: distinfo,v 1.52 2024/01/04 18:26:29 js Exp $
 
-BLAKE2s (fossil-src-2.22.tar.gz) = bd8fa34fa030d8245b45ab68d6e34d6dcdd1ebd29b85a4b6e2ace795dbd9220f
-SHA512 (fossil-src-2.22.tar.gz) = 99a456301ae4ac72449985ff3b8b2139b805ff84e27ffe4325bad0c90643dd51c655b0210cbfa290a621e33e42e1e35b75a6cdc1beb093221d2b5d23d64591bc
-Size (fossil-src-2.22.tar.gz) = 6730858 bytes
+BLAKE2s (fossil-src-2.23.tar.gz) = e1581c5e194e14f1eef03e71cce3656dd9d5769147474900c7ea32f88e28ddc5
+SHA512 (fossil-src-2.23.tar.gz) = bba67e16b26b97aa40023a4a2aa3b2abfc9393ec8d3244ec88dab5b7d2c4d46e7d6ee89b008a6bce1f18c96c351c8d41d64f02ba28c0eb3eb04d01e308f3335b
+Size (fossil-src-2.23.tar.gz) = 6799177 bytes
