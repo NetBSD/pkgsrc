@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/08/29 07:08:09 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/04 18:42:57 adam Exp $
 
-DISTNAME=	fmt-10.1.1
+DISTNAME=	fmt-10.2.1
 PKGNAME=	${DISTNAME:S/fmt/fmtlib/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fmtlib/}
@@ -11,7 +11,8 @@ HOMEPAGE=	https://fmt.dev/
 COMMENT=	Formatting library
 LICENSE=	mit
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	support/cmake/fmt.pc.in
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
