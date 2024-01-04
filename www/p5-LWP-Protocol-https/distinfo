@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:30:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/01/04 10:55:23 wiz Exp $
 
-BLAKE2s (LWP-Protocol-https-6.10.tar.gz) = 43daacda03e6dc9342d259cc5d115ab922db39fc45cf63d00eee32744f98ef8b
-SHA512 (LWP-Protocol-https-6.10.tar.gz) = 4d3c89dab6fadcb574c176977ca6debba177ee3f817e87319d9cd81e0a0b09214e271c2e97edc456dad2f4a1ebf8c6266a4ae52c3a93144880a5b32db97e7a31
-Size (LWP-Protocol-https-6.10.tar.gz) = 33691 bytes
-SHA1 (patch-lib_LWP_Protocol_https.pm) = b4129bf47059955b8527761c81674ee44318f8a0
-SHA1 (patch-t_https__proxy.t) = 0653e29cdbe683329ccfa065d527a2e37bd3fde7
+BLAKE2s (LWP-Protocol-https-6.11.tar.gz) = 03ed33635863d9ec8953566a8cbcbd729db650c88336be1c38f0f12e76b2d6bd
+SHA512 (LWP-Protocol-https-6.11.tar.gz) = 1e74c45898778c58d00eefbdd04a3ed47cf38164296278bec66c9b85f48ad635931873d2bf5423be8562df2c22b4bbf8eff0502bd29ba1c790bbbf76f3616ecf
+Size (LWP-Protocol-https-6.11.tar.gz) = 32599 bytes
