@@ -1,9 +1,9 @@
-$NetBSD: patch-shared__app.pri,v 1.5 2023/03/25 13:16:11 wiz Exp $
+$NetBSD: patch-shared__app.pri,v 1.6 2024/01/04 21:50:29 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
 
---- shared_app.pri.orig	2022-03-25 09:42:54.000000000 +0000
+--- shared_app.pri.orig	2023-09-04 18:51:52.000000000 +0000
 +++ shared_app.pri
 @@ -1,25 +1,24 @@
  include($$PWD/shared.pri)
@@ -27,7 +27,7 @@ and create an install target
 +    -L$$PWD/src/entity -l$${RLIBNAME}entity \
 +    -L$$PWD/src/operations -l$${RLIBNAME}operations \
 +    -L$$PWD/src/spatialindex -l$${RLIBNAME}spatialindex \
-+    -L$$PWD/src/3rdparty/spatialindexnavel -lspatialindexnavel \
++    -L$$PWD/src/3rdparty/legacy/spatialindexnavel -lspatialindexnavel \
 +    -L$$PWD/src/grid -l$${RLIBNAME}grid \
 +    -L$$PWD/src/snap -l$${RLIBNAME}snap \
 +    -L$$PWD/src/core -l$${RLIBNAME}core \
