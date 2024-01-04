@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/04/29 15:26:19 wen Exp $
+$NetBSD: distinfo,v 1.19 2024/01/04 11:00:03 wiz Exp $
 
-BLAKE2s (Net-HTTP-6.22.tar.gz) = f32355d4d3181462a09f1c0efe4069a4635e92c880c57d96f89fd1f4721a24a4
-SHA512 (Net-HTTP-6.22.tar.gz) = 8d0af85baee8a3b257995c6dd277c2eb578d1feeec89f3e4be0548959d2cf07934764d9d16a542a50f72a4611e3f4b6335ff7e969a28cd74fbb0ec3961588131
-Size (Net-HTTP-6.22.tar.gz) = 39087 bytes
+BLAKE2s (Net-HTTP-6.23.tar.gz) = 323a67594c8616101ae106a0394fa1ef771c095dce952d8cbf0aa40c2ecf5557
+SHA512 (Net-HTTP-6.23.tar.gz) = be926d12f6a8be504f221b54dbe9b1cbe1ff18b7dc8075ce308cc8c436ed9e4fe959516ce81c858a70de80df13cedd8cd78fd153cc5eb763f1bc3c9893ceaa05
+Size (Net-HTTP-6.23.tar.gz) = 42998 bytes
