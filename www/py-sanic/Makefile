@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/11/07 22:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/05 18:23:02 adam Exp $
 
-DISTNAME=	sanic-23.6.0
+DISTNAME=	sanic-23.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/sanic-org/sanic
 COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-html5tagger>=1.2.1:../../textproc/py-html5tagger
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
-DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=23.6.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0:../../databases/py-multidict
+DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=23.12.0:../../www/py-sanic-routing
 DEPENDS+=	${PYPKGPREFIX}-tracerite>=1.0.0:../../devel/py-tracerite
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
@@ -32,7 +34,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.901:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 #TEST_DEPENDS+=	${PYPKGPREFIX}-sanic-testing>=23.6.0:../../www/py-sanic-testing
 #TEST_DEPENDS+=	${PYPKGPREFIX}-slotscheck>=0.8.0:../../??/py-slotscheck
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sanic-[0-9]*:../../www/py-test-sanic
@@ -50,8 +51,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} sanic sanic-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
