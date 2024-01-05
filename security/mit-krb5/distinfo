@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.80 2022/07/29 20:22:44 jperkin Exp $
+$NetBSD: distinfo,v 1.81 2024/01/05 23:46:29 adam Exp $
 
-BLAKE2s (krb5-1.19.3.tar.gz) = 25b6d084dcc560252f6ee576da976a6f6a1972537eb355dc0aa240dcab4400d2
-SHA512 (krb5-1.19.3.tar.gz) = 18235440d6f7d8a72c5d7ca5cd8c6465e8adf091d85c483225c7b00d64b4688c1c7924cb800c2fc17e590b2709f1a9de48e6ec79f6debd11dcb7d6fa16c6f351
-Size (krb5-1.19.3.tar.gz) = 8741343 bytes
+BLAKE2s (krb5-1.21.2.tar.gz) = 409811ddde6dd93f489a655aa558e668af2a9fcf6768973d2109442feb828907
+SHA512 (krb5-1.21.2.tar.gz) = 4e09296b412383d53872661718dbfaa90201e0d85f69db48e57a8d4bd73c95a90c7ec7b6f0f325f6bc967f8d203b256b071c0191facf080aca0e2caec5d0ac49
+Size (krb5-1.21.2.tar.gz) = 8622513 bytes
 SHA1 (patch-Makefile.in) = 24f915d7a4340b9a4a454b9b67c94147fdc49c34
 SHA1 (patch-aclocal.m4) = 07b5d9ae38c74eaea6ba62aed9062dca1bf7f3fb
 SHA1 (patch-build-tools_krb5-config.in) = 4ab922df1d86d86f9ef043f2c5cdf048c0477d3a
@@ -15,7 +15,7 @@ SHA1 (patch-config_pre.in) = 255973132db9327190211214c3e33b4551bd283b
 SHA1 (patch-config_shlib.conf) = 74859f18c5bf7c723face05873a219a839b28942
 SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
 SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
-SHA1 (patch-kprop_kproplog.c) = 9b751de7eb70d026b54e15275bb878bdb0ce52eb
+SHA1 (patch-kprop_kproplog.c) = cbfd43495d40ecd9edf427c3dfb135b0fe2c9546
 SHA1 (patch-lib_apputils_Makefile.in) = 085004041a2bb8c4bb3074c2e71e71f22f4f06d7
 SHA1 (patch-lib_apputils_udppktinfo.c) = 47ac861181faebfe5f95c28be329ce917ece872c
 SHA1 (patch-lib_gssapi_Makefile.in) = 806b089d3b12ea9a17c6caab59cbdeb6ec17bbc3
@@ -28,5 +28,5 @@ SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c493157
 SHA1 (patch-plugins_kdb_ldap_ldap__util_Makefile.in) = 7aa0f44cc02c523c837e7e3e1766624d2323deb9
 SHA1 (patch-plugins_preauth_otp_Makefile.in) = 8c779e3b37cab4138f300f4a09325387092c79f8
 SHA1 (patch-plugins_preauth_pkinit_Makefile.in) = 7d9e5429737536bf1577a41040e6587bb55d8142
-SHA1 (patch-util_k5ev_verto-k5ev.c) = 8f074ddccbaaa03576f0302437aed3aaad1b738d
 SHA1 (patch-util_ss_Makefile.in) = 5ca0bf7295a8f4c1d8e59097863940f88d224ee7
+SHA1 (patch-util_verto_verto-k5ev.c) = 8f074ddccbaaa03576f0302437aed3aaad1b738d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/07/03 13:36:57 hauke Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/01/05 23:46:29 adam Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -62,9 +62,11 @@ include/krb5/pwqual_plugin.h
 include/profile.h
 include/verto-module.h
 include/verto.h
+@pkgdir lib/krb5/plugins/authdata
 lib/krb5/plugins/kdb/db2.la
 ${PLIST.ldap}lib/krb5/plugins/kdb/kldap.la
 lib/krb5/plugins/kdb/klmdb.la
+@pkgdir lib/krb5/plugins/libkrb5
 lib/krb5/plugins/preauth/otp.la
 lib/krb5/plugins/preauth/pkinit.la
 lib/krb5/plugins/preauth/spake.la
@@ -91,6 +93,10 @@ lib/pkgconfig/krb5-gssapi.pc
 lib/pkgconfig/krb5.pc
 lib/pkgconfig/mit-krb5-gssapi.pc
 lib/pkgconfig/mit-krb5.pc
+@pkgdir man/cat1
+@pkgdir man/cat5
+@pkgdir man/cat7
+@pkgdir man/cat8
 man/man1/compile_et.1
 man/man1/k5srvutil.1
 man/man1/kadmin.1
@@ -139,12 +145,7 @@ share/et/et_h.awk
 share/examples/krb5/kdc.conf
 share/examples/krb5/krb5.conf
 share/examples/krb5/services.append
+@pkgdir share/gnats
 share/locale/de/LC_MESSAGES/mit-krb5.mo
 share/locale/en_US/LC_MESSAGES/mit-krb5.mo
-@pkgdir share/gnats
-@pkgdir man/cat8
-@pkgdir man/cat7
-@pkgdir man/cat5
-@pkgdir man/cat1
-@pkgdir lib/krb5/plugins/libkrb5
-@pkgdir lib/krb5/plugins/authdata
+share/locale/ka/LC_MESSAGES/mit-krb5.mo
