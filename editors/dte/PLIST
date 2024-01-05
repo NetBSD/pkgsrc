@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/24 06:46:01 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/05 14:41:20 bacon Exp $
+@comment
+@comment X11 related files aren't installed when on Darwin:
+@comment https://gitlab.com/craigbarnes/dte/-/blob/v1.11.1/GNUmakefile#L44
+@comment
 bin/dte
 man/man1/dte.1
 man/man5/dte-syntax.5
 man/man5/dterc.5
+share/applications/dte.desktop
+share/bash-completion/completions/dte
+share/metainfo/dte.appdata.xml
