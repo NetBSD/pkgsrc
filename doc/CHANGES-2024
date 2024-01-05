@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.123 2024/01/05 12:11:04 adam Exp $
+$NetBSD: CHANGES-2024,v 1.124 2024/01/05 14:41:26 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/libhighway to 1.0.7 [nros 2024-01-05]
 	Updated devel/py-packageurl to 0.13.2 [adam 2024-01-05]
 	Updated security/py-authlib to 1.3.0 [adam 2024-01-05]
+	Updated editors/dte to 1.11.1 [bacon 2024-01-05]
