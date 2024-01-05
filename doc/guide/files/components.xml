@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.63 2023/07/22 22:47:22 gutteridge Exp $ -->
+<!-- $NetBSD: components.xml,v 1.64 2024/01/05 19:23:53 gdt Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -97,23 +97,38 @@ converters    games         mbone         print         x11
   <para>The third section contains the following variables.
   <itemizedlist>
 
-    <listitem><para><varname>MAINTAINER</varname> is the email
-    address of the person who feels responsible for this package,
-    and who is most likely to look at problems or questions regarding
-    this package which have been reported with &man.send-pr.1;.
-    Other developers may contact the <varname>MAINTAINER</varname>
-    before making changes to the package, but are not required to
-    do so. When packaging a new program, set <varname>MAINTAINER</varname>
-    to yourself. If you really can't maintain the package for future
-    updates, set it to
-    <email>pkgsrc-users@NetBSD.org</email>.</para></listitem>
+    <listitem><para><varname>MAINTAINER</varname> is the email address
+    of the person who is currently responsible for this package.  In
+    theory, the maintainer will be aware of upstream release, keep it
+    updated, and generally resolve problems.  Others contemplating
+    significant changes should ask the maintainer for advice or review
+    of a proposed change.  This is not necessary for micro updates,
+    bug fixes, pkgsrc-wide changes affecting many packages, and other
+    things expected to be uncontroversial.  It goes with this "should
+    ask" that the maintainer should respond to inquiries reasonably
+    promptly (most of the time), and either approve changes or provide
+    reasons why not.  Typically, when packaging a new program, set
+    <varname>MAINTAINER</varname> to yourself.  If you don't intend to
+    maintain the package (especially if you feel you have no special
+    insight), set it to <email>pkgsrc-users@NetBSD.org</email>.  This
+    special value is a code point indicating that there is no
+    maintainer, but the variable is mandatory, absent
+    <varname>OWNER</varname>.</para></listitem>
 
-    <listitem><para><varname>OWNER</varname> should be used instead
-    of <varname>MAINTAINER</varname> when you do not want other
-    developers to update or change the package without contacting
-    you first. A package Makefile should contain one of
-    <varname>MAINTAINER</varname> or <varname>OWNER</varname>, but
-    not both.</para></listitem>
+    <listitem><para><varname>OWNER</varname> can be used instead of
+    <varname>MAINTAINER</varname> in relatively rare circumstances
+    when the package is such that modifying it is riskier than normal.
+    This is a stronger form of being the maintainer, with an
+    expectation that others will ask for almost all changes, except
+    revbumps and accommodating structural changes.  Someone who becomes
+    <varname>OWNER</varname> has a strong obligation to keep the
+    package very well maintained, to answer queries promptly and to be
+    a steward of the package on behalf of users.  In this case,
+    <varname>MAINTAINER</varname> should be omitted.</para>
+
+    <para>Because of the friction that <varname>OWNER</varname> adds,
+    PMC may downgrade it to <varname>MAINTAINER</varname> at any
+    time.</para></listitem>
 
     <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
     find more information about the package.</para></listitem>
