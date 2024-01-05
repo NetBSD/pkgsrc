@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.540 2023/12/06 10:14:52 pin Exp $
+# $NetBSD: Makefile,v 1.541 2024/01/05 17:55:52 wiz Exp $
 #
 
 COMMENT=	Games
@@ -170,6 +170,7 @@ SUBDIR+=	glaxium
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
 SUBDIR+=	gnome-mastermind
+SUBDIR+=	gnome-nibbles
 SUBDIR+=	gnome-sudoku
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
