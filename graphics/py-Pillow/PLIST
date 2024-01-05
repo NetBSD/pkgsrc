@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2023/07/05 20:10:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/01/05 23:47:53 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -270,7 +276,9 @@ ${PYSITELIB}/PIL/_deprecate.py
 ${PYSITELIB}/PIL/_deprecate.pyc
 ${PYSITELIB}/PIL/_deprecate.pyo
 ${PYSITELIB}/PIL/_imaging.so
+${PYSITELIB}/PIL/_imagingcms.pyi
 ${PYSITELIB}/PIL/_imagingcms.so
+${PYSITELIB}/PIL/_imagingft.pyi
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
 ${PYSITELIB}/PIL/_imagingmorph.so
@@ -278,6 +286,9 @@ ${PYSITELIB}/PIL/_imagingtk.so
 ${PYSITELIB}/PIL/_tkinter_finder.py
 ${PYSITELIB}/PIL/_tkinter_finder.pyc
 ${PYSITELIB}/PIL/_tkinter_finder.pyo
+${PYSITELIB}/PIL/_typing.py
+${PYSITELIB}/PIL/_typing.pyc
+${PYSITELIB}/PIL/_typing.pyo
 ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
@@ -288,9 +299,3 @@ ${PYSITELIB}/PIL/_webp.so
 ${PYSITELIB}/PIL/features.py
 ${PYSITELIB}/PIL/features.pyc
 ${PYSITELIB}/PIL/features.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
