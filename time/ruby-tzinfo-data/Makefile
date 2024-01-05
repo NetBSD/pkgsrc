@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/04/24 14:17:28 taca Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/05 02:22:28 taca Exp $
 
-DISTNAME=	tzinfo-data-1.2023.3
+DISTNAME=	tzinfo-data-1.2023.4
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
