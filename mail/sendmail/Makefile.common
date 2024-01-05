@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2021/07/04 07:57:13 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.68 2024/01/05 01:17:09 gdt Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/past-releases/
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
 
-OWNER?=		jnemeth@NetBSD.org
+MAINTAINER?=	jnemeth@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
 LICENSE=	sendmail-license
 
