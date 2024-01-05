@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2023/08/04 19:37:01 adam Exp $
+@comment $NetBSD: PLIST.dummy,v 1.1 2024/01/05 08:35:25 nros Exp $
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/dummy_helper_p.h
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothsocket_dummy_p.h
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_dummy_p.h

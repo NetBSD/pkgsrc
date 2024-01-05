@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/30 20:11:26 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/05 08:35:25 nros Exp $
 
 DISTNAME=	qtconnectivity-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtconnectivity-${QTVERSION}
@@ -11,6 +11,10 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Bluetooth.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Nfc.pc
+
+.if ${OPSYS} != "Darwin"
+PLIST_SRC= PLIST PLIST.dummy
+.endif
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
