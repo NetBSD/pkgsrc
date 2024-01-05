@@ -1,0 +1,22 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2024/01/05 14:41:20 bacon Exp $
+
+Keep the desktop and appstream files on Darwin
+
+--- GNUmakefile.orig	2024-01-05 03:02:19.383401126 +0000
++++ GNUmakefile
+@@ -38,13 +38,8 @@ endef
+ 
+ all: $(dte)
+ check: check-tests check-opts
+-install: install-bin install-man install-bash-completion
+-uninstall: uninstall-bin uninstall-man uninstall-bash-completion
+-
+-ifneq "$(KERNEL)" "Darwin"
+- install: install-desktop-file install-appstream
+- uninstall: uninstall-desktop-file uninstall-appstream
+-endif
++install: install-bin install-man install-bash-completion install-desktop-file install-appstream
++uninstall: uninstall-bin uninstall-man uninstall-bash-completion uninstall-desktop-file uninstall-appstream
+ 
+ install-bin: all
+ 	$(Q) $(INSTALL) -d -m755 '$(DESTDIR)$(bindir)'
