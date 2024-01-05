@@ -1,21 +1,15 @@
-$NetBSD: patch-src_bc_configure.ac,v 1.2 2023/09/20 22:37:40 vins Exp $
-
-Directly link against ncurses and terminfo libraries, not by
-hard-coding the static library path out of /usr/pkg.
-https://github.com/racket/racket/issues/4734
+$NetBSD: patch-src_bc_configure.ac,v 1.3 2024/01/05 14:55:39 riastradh Exp $
 
 Allow CONFIGURE_ENV to set PAXCTL so user need not have /usr/sbin in
 PATH.
 
---- src/bc/configure.ac.orig	2023-07-18 00:36:36.000000000 +0000
+--- src/bc/configure.ac.orig	2023-11-20 06:06:53.000000000 +0000
 +++ src/bc/configure.ac
-@@ -547,8 +547,8 @@ case "$host_os" in
-   netbsd*)
+@@ -548,7 +548,7 @@ case "$host_os" in
      LIBS="$LIBS -rdynamic"
-     skip_curses_check=yes
--    add_curses_lib="/usr/pkg/lib/libncurses.a"
+     skip_iconv_check=yes
+     add_curses_lib="-lterminfo"
 -    default_post_linker="paxctl +m"
-+    add_curses_lib="-lcurses -lterminfo"
 +    default_post_linker="${PAXCTL:-paxctl} +m"
      ;;
    irix*)
