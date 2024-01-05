@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/03/03 09:24:20 fcambus Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/05 01:57:57 taca Exp $
 
 DISTNAME=	zkt-1.1.6
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--enable-bind_util_path=/usr/sbin
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--enable-bind_util_path=${BUILDLINK_PREFIX.bind}/sbin
-.include "../../net/bind916/buildlink3.mk"
+.include "../../net/bind918/buildlink3.mk"
 .endif
 
 do-install:
