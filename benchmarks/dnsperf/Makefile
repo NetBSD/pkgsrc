@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/11/08 13:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/01/05 01:55:52 taca Exp $
 
 DISTNAME=	dnsperf-2.5.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	benchmarks net
 MASTER_SITES=	https://www.dns-oarc.net/files/dnsperf/
 
@@ -26,7 +26,7 @@ REPLACE_SH+=	src/resperf-report
 .include "../../devel/concurrencykit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
-.include "../../net/bind916/buildlink3.mk"
+.include "../../net/bind918/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
