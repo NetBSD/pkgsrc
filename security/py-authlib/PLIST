@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2023/06/27 11:44:53 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2024/01/05 12:10:46 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/authlib/__init__.py
 ${PYSITELIB}/authlib/__init__.pyc
 ${PYSITELIB}/authlib/__init__.pyo
@@ -515,6 +514,24 @@ ${PYSITELIB}/authlib/oauth2/rfc8628/models.pyo
 ${PYSITELIB}/authlib/oauth2/rfc8693/__init__.py
 ${PYSITELIB}/authlib/oauth2/rfc8693/__init__.pyc
 ${PYSITELIB}/authlib/oauth2/rfc8693/__init__.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/__init__.py
+${PYSITELIB}/authlib/oauth2/rfc9068/__init__.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/__init__.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/claims.py
+${PYSITELIB}/authlib/oauth2/rfc9068/claims.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/claims.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/introspection.py
+${PYSITELIB}/authlib/oauth2/rfc9068/introspection.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/introspection.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/revocation.py
+${PYSITELIB}/authlib/oauth2/rfc9068/revocation.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/revocation.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/token.py
+${PYSITELIB}/authlib/oauth2/rfc9068/token.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/token.pyo
+${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.py
+${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyc
+${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyo
 ${PYSITELIB}/authlib/oidc/__init__.py
 ${PYSITELIB}/authlib/oidc/__init__.pyc
 ${PYSITELIB}/authlib/oidc/__init__.pyo
