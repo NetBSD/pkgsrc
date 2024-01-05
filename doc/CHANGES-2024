@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.127 2024/01/05 18:09:30 adam Exp $
+$NetBSD: CHANGES-2024,v 1.128 2024/01/05 18:23:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -152,3 +152,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-urwid to 2.4.1 [adam 2024-01-05]
 	Updated devel/py-memcached to 1.61 [adam 2024-01-05]
 	Updated devel/py-pebble to 5.0.6 [adam 2024-01-05]
+	Updated www/py-sanic-routing to 23.12.0 [adam 2024-01-05]
+	Updated www/py-sanic to 23.12.0 [adam 2024-01-05]
