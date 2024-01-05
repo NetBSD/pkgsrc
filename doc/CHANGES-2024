@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.130 2024/01/05 20:37:00 nros Exp $
+$NetBSD: CHANGES-2024,v 1.131 2024/01/05 22:05:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-braintree to 4.25.0 [adam 2024-01-05]
 	Updated devel/py-proto-plus to 1.23.0 [adam 2024-01-05]
 	Added graphics/libavif version 1.0.3 [nros 2024-01-05]
+	Updated print/qpdf to 11.7.0 [ryoon 2024-01-05]
