@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/12/11 10:07:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/05 18:01:44 adam Exp $
 
-DISTNAME=	urwid-2.3.4
+DISTNAME=	urwid-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -10,7 +10,8 @@ HOMEPAGE=	http://urwid.org/
 COMMENT=	Curses-based Python user interface library
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
 TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
