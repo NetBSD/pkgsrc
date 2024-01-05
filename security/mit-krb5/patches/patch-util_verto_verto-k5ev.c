@@ -1,4 +1,4 @@
-$NetBSD: patch-util_k5ev_verto-k5ev.c,v 1.4 2018/06/15 20:46:01 tez Exp $
+$NetBSD: patch-util_verto_verto-k5ev.c,v 1.1 2024/01/05 23:46:29 adam Exp $
 
 Fix include file path
 
