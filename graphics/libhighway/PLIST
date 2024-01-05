@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/10/07 11:15:54 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/05 11:09:53 nros Exp $
 include/hwy/aligned_allocator.h
 include/hwy/base.h
 include/hwy/cache_control.h
@@ -8,12 +8,14 @@ include/hwy/contrib/algo/transform-inl.h
 include/hwy/contrib/dot/dot-inl.h
 include/hwy/contrib/image/image.h
 include/hwy/contrib/math/math-inl.h
+include/hwy/contrib/sort/order.h
 include/hwy/contrib/sort/shared-inl.h
 include/hwy/contrib/sort/sorting_networks-inl.h
 include/hwy/contrib/sort/traits-inl.h
 include/hwy/contrib/sort/traits128-inl.h
 include/hwy/contrib/sort/vqsort-inl.h
 include/hwy/contrib/sort/vqsort.h
+include/hwy/contrib/unroller/unroller-inl.h
 include/hwy/detect_compiler_arch.h
 include/hwy/detect_targets.h
 include/hwy/foreach_target.h
@@ -24,9 +26,12 @@ include/hwy/ops/arm_neon-inl.h
 include/hwy/ops/arm_sve-inl.h
 include/hwy/ops/emu128-inl.h
 include/hwy/ops/generic_ops-inl.h
+include/hwy/ops/ppc_vsx-inl.h
+include/hwy/ops/rvv-inl.h
 include/hwy/ops/scalar-inl.h
 include/hwy/ops/set_macros-inl.h
 include/hwy/ops/shared-inl.h
+include/hwy/ops/tuple-inl.h
 include/hwy/ops/wasm_128-inl.h
 include/hwy/ops/x86_128-inl.h
 include/hwy/ops/x86_256-inl.h
@@ -34,10 +39,16 @@ include/hwy/ops/x86_512-inl.h
 include/hwy/per_target.h
 include/hwy/print-inl.h
 include/hwy/print.h
+include/hwy/robust_statistics.h
 include/hwy/targets.h
 include/hwy/tests/hwy_gtest.h
 include/hwy/tests/test_util-inl.h
 include/hwy/tests/test_util.h
+include/hwy/timer-inl.h
+include/hwy/timer.h
+lib/cmake/hwy/hwy-config-relwithdebinfo.cmake
+lib/cmake/hwy/hwy-config-version.cmake
+lib/cmake/hwy/hwy-config.cmake
 lib/libhwy.so
 lib/libhwy.so.1
 lib/libhwy.so.${PKGVERSION}
