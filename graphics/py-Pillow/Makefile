@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2023/11/12 13:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/01/05 23:47:53 adam Exp $
 
-DISTNAME=	Pillow-10.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	pillow-10.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
 CATEGORIES=	graphics python
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://python-pillow.org/
@@ -15,19 +14,16 @@ USE_TOOLS+=	pkg-config
 
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYSETUPBUILDTARGET=	build_ext
-PYSETUPBUILDARGS+=	--disable-xcb
-
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -36,6 +32,6 @@ do-test:
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
