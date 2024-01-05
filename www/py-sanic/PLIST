@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2023/08/11 12:54:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/01/05 18:23:02 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sanic/__init__.py
 ${PYSITELIB}/sanic/__init__.pyc
 ${PYSITELIB}/sanic/__init__.pyo
@@ -69,6 +69,9 @@ ${PYSITELIB}/sanic/cli/arguments.pyo
 ${PYSITELIB}/sanic/cli/base.py
 ${PYSITELIB}/sanic/cli/base.pyc
 ${PYSITELIB}/sanic/cli/base.pyo
+${PYSITELIB}/sanic/cli/console.py
+${PYSITELIB}/sanic/cli/console.pyc
+${PYSITELIB}/sanic/cli/console.pyo
 ${PYSITELIB}/sanic/cli/inspector.py
 ${PYSITELIB}/sanic/cli/inspector.pyc
 ${PYSITELIB}/sanic/cli/inspector.pyo
@@ -247,6 +250,9 @@ ${PYSITELIB}/sanic/server/async_server.pyo
 ${PYSITELIB}/sanic/server/events.py
 ${PYSITELIB}/sanic/server/events.pyc
 ${PYSITELIB}/sanic/server/events.pyo
+${PYSITELIB}/sanic/server/goodbye.py
+${PYSITELIB}/sanic/server/goodbye.pyc
+${PYSITELIB}/sanic/server/goodbye.pyo
 ${PYSITELIB}/sanic/server/loop.py
 ${PYSITELIB}/sanic/server/loop.pyc
 ${PYSITELIB}/sanic/server/loop.pyo
@@ -346,6 +352,9 @@ ${PYSITELIB}/sanic/worker/process.pyo
 ${PYSITELIB}/sanic/worker/reloader.py
 ${PYSITELIB}/sanic/worker/reloader.pyc
 ${PYSITELIB}/sanic/worker/reloader.pyo
+${PYSITELIB}/sanic/worker/restarter.py
+${PYSITELIB}/sanic/worker/restarter.pyc
+${PYSITELIB}/sanic/worker/restarter.pyo
 ${PYSITELIB}/sanic/worker/serve.py
 ${PYSITELIB}/sanic/worker/serve.pyc
 ${PYSITELIB}/sanic/worker/serve.pyo
