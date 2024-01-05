@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:21:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/01/05 14:41:20 bacon Exp $
 
-BLAKE2s (dte-1.9.1.tar.gz) = 380c4520611254aa2fae867a498a80a0ac65b1b7d2f0b7e2a44ae418d0453dff
-SHA512 (dte-1.9.1.tar.gz) = f8bea92f518d5f5dec1a1052c4ee9fbd3175cd149140c43163bd4e2f2e5c3e68ee9289d3388555c635ce10a30a490907f8959fde74c49e357821cb85c9275358
-Size (dte-1.9.1.tar.gz) = 281750 bytes
+BLAKE2s (dte-1.11.1.tar.gz) = 1930bd74fe54962a8a808bf48a171bc19aabedc624b328fa02a1d777d32e7437
+SHA512 (dte-1.11.1.tar.gz) = bdc2100d1d9db8ed24fd5df37154c681625f1d8af66b3e544450f25fa90341d2ff151504b3718e7b2a69ebc28dac41a1841d1024cab9a60c82cc4807b88a4887
+Size (dte-1.11.1.tar.gz) = 415294 bytes
+SHA1 (patch-GNUmakefile) = f8de9c3a3d84d89c996f72bad933a72ca2ad734a
+SHA1 (patch-src_buffer.c) = 0118730fde1e72a7f86cbcebc20f3061eda478a2
