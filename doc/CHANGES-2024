@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.112 2024/01/05 01:56:18 taca Exp $
+$NetBSD: CHANGES-2024,v 1.113 2024/01/05 01:58:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -132,3 +132,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-progressbar2 to 4.3.2 [adam 2024-01-04]
 	Updated net/bind918 to 9.18.21 [taca 2024-01-05]
 	Updated benchmarks/dnsperf to 2.5.1nb8 [taca 2024-01-05]
+	Updated security/zkt to 1.1.6nb1 [taca 2024-01-05]
