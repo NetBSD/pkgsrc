@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2023/11/24 06:03:45 taca Exp $
+$NetBSD: distinfo,v 1.31 2024/01/05 02:10:34 taca Exp $
 
-BLAKE2s (php-8.1.26.tar.xz) = e1c38d5d43d772c40bdc201924fb64ee975dca58a67bb167c5d876bae5bab6fc
-SHA512 (php-8.1.26.tar.xz) = 5bc40077e57c0fccdf17810d688baea416f22ac248bb01b73d2e2590fc4cfabc7001c1c3833281a60870c74178f7b06cbc85474eba695aabf969ad0081a98417
-Size (php-8.1.26.tar.xz) = 11809448 bytes
+BLAKE2s (php-8.1.27.tar.xz) = adeaa2ba18ec7bf532947556261be717e6be2a6c8dc191a839eadcb6b682dc62
+SHA512 (php-8.1.27.tar.xz) = 07fb2b8e10e2487635e26bfd8a27949a26b85f76bc3984ad8599224bb7a7f9498d84299335ae5a0bba16599275e9747ab141f73f4f2076ddf49ebec8e76fd0ed
+Size (php-8.1.27.tar.xz) = 11915228 bytes
 SHA1 (patch-configure) = bf9d652aa5b5509b08ce7cdb6168936ca7b80584
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
 SHA1 (patch-ext_enchant_enchant.c) = 7924acc5fdadea89b3a385cf744ef982795bf89d
