@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/05 17:55:39 wiz Exp $
+
+BLAKE2s (gnome-nibbles-4.0.1.tar.xz) = 035a4ec7b6627e4f29a57fcf308fcf3ed402a925b72171a8a0ce57fc3eda1ace
+SHA512 (gnome-nibbles-4.0.1.tar.xz) = 802bf7f320613b3a1d57cbe7ab804ba07781ad3c5e6ea3e5d1d2ee0d744055265b05895987d84714ca6eeb7eca832f138a2427f5c00d25ef14c8ef8976ddae2f
+Size (gnome-nibbles-4.0.1.tar.xz) = 417716 bytes
