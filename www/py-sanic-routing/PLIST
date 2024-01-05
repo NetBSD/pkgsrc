@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/28 12:11:13 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/05 18:17:13 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sanic_routing/__init__.py
 ${PYSITELIB}/sanic_routing/__init__.pyc
 ${PYSITELIB}/sanic_routing/__init__.pyo
@@ -18,6 +19,7 @@ ${PYSITELIB}/sanic_routing/line.pyo
 ${PYSITELIB}/sanic_routing/patterns.py
 ${PYSITELIB}/sanic_routing/patterns.pyc
 ${PYSITELIB}/sanic_routing/patterns.pyo
+${PYSITELIB}/sanic_routing/py.typed
 ${PYSITELIB}/sanic_routing/route.py
 ${PYSITELIB}/sanic_routing/route.pyc
 ${PYSITELIB}/sanic_routing/route.pyo
