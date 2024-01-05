@@ -1,16 +1,16 @@
-# $NetBSD: builtin.mk,v 1.18 2022/07/29 20:22:44 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.19 2024/01/05 23:46:29 adam Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_FIND_HEADERS_VAR:=		H_MIT_KRB5
-.if !(empty(MACHINE_PLATFORM:MDarwin-9.*-*) && \
+.if !(!${MACHINE_PLATFORM:MDarwin-9.*-*} && \
       empty(MACHINE_PLATFORM:MDarwin-1?.*-*))
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
-.elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
+.elif ${MACHINE_PLATFORM:MSunOS-*-*}
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	kerberosv5/krb5.h
-.elif !empty(MACHINE_PLATFORM:MLinux-*)
+.elif ${MACHINE_PLATFORM:MLinux-*}
 # Assuming mit-krb5 >= 1.5 on GNU/Linux.
 BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5/krb5.h
 .else
@@ -41,7 +41,7 @@ MAKEVARS+=		IS_BUILTIN.mit-krb5
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.mit-krb5) && \
-    !empty(IS_BUILTIN.mit-krb5:M[yY][eE][sS])
+    ${IS_BUILTIN.mit-krb5:tl} == yes
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILTIN_VERSION.mit-krb5!=	${SH_KRB5_CONFIG} --version | \
 				${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
@@ -61,12 +61,12 @@ USE_BUILTIN.mit-krb5=	no
 .  else
 USE_BUILTIN.mit-krb5=	${IS_BUILTIN.mit-krb5}
 .    if defined(BUILTIN_PKG.mit-krb5) && \
-        !empty(IS_BUILTIN.mit-krb5:M[yY][eE][sS])
+        ${IS_BUILTIN.mit-krb5:tl} == yes
 USE_BUILTIN.mit-krb5=	yes
 .      for dep__ in ${BUILDLINK_API_DEPENDS.mit-krb5}
-.        if !empty(USE_BUILTIN.mit-krb5:M[yY][eE][sS])
+.        if ${USE_BUILTIN.mit-krb5:tl} == yes
 USE_BUILTIN.mit-krb5!=							\
-	if ${PKG_ADMIN} pmatch ${dep__:Q} ${BUILTIN_PKG.mit-krb5:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep__:Q} ${BUILTIN_PKG.mit-krb5}; then \
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
@@ -83,8 +83,8 @@ MAKEVARS+=		USE_BUILTIN.mit-krb5
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.mit-krb5?=	no
-.if !empty(CHECK_BUILTIN.mit-krb5:M[nN][oO])
-.  if !empty(USE_BUILTIN.mit-krb5:M[yY][eE][sS])
+.if ${CHECK_BUILTIN.mit-krb5:tl} == no
+.  if ${USE_BUILTIN.mit-krb5:tl} == yes
 KRB5_CONFIG?=	${SH_KRB5_CONFIG}
 ALL_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 
