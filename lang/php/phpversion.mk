@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.416 2023/11/30 16:14:00 taca Exp $
+# $NetBSD: phpversion.mk,v 1.417 2024/01/05 02:08:41 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -93,7 +93,7 @@ PHP74_VERSION=	7.4.33
 PHP80_VERSION=	8.0.30
 PHP81_VERSION=	8.1.26
 PHP82_VERSION=	8.2.13
-PHP83_VERSION=	8.3.0
+PHP83_VERSION=	8.3.1
 
 # Define API version or initial release of major version.
 PHP56_RELDATE=	20140828
