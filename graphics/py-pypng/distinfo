@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/06 09:18:01 adam Exp $
+
+BLAKE2s (pypng-0.20220715.0.tar.gz) = d9ea2eebe2b9b3f3ed8a488af91efe262d3d769151b57fe4d687beddd473d669
+SHA512 (pypng-0.20220715.0.tar.gz) = 0c89f79603befbc8aff70b23d13989346fe7943cdcb41242b5089dd4a07c6db5c91937c570a72bcb589abee6597278588d945b6154dcdc2c378d7e2f9ff15ccf
+Size (pypng-0.20220715.0.tar.gz) = 128992 bytes

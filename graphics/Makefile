@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2024/01/05 11:14:02 nros Exp $
+# $NetBSD: Makefile,v 1.1035 2024/01/06 09:18:01 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -530,6 +530,7 @@ SUBDIR+=	py-pillow_heif
 SUBDIR+=	py-pycha
 SUBDIR+=	py-pygal
 SUBDIR+=	py-pygraphviz
+SUBDIR+=	py-pypng
 SUBDIR+=	py-qrcode
 SUBDIR+=	py-scour
 SUBDIR+=	py-seaborn

@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/06 09:18:01 adam Exp $
+bin/prichunkpng-${PYVERSSUFFIX}
+bin/pricolpng-${PYVERSSUFFIX}
+bin/priditherpng-${PYVERSSUFFIX}
+bin/priforgepng-${PYVERSSUFFIX}
+bin/prigreypng-${PYVERSSUFFIX}
+bin/pripalpng-${PYVERSSUFFIX}
+bin/pripamtopng-${PYVERSSUFFIX}
+bin/priplan9topng-${PYVERSSUFFIX}
+bin/pripnglsch-${PYVERSSUFFIX}
+bin/pripngtopam-${PYVERSSUFFIX}
+bin/prirowpng-${PYVERSSUFFIX}
+bin/priweavepng-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENCE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/png.py
+${PYSITELIB}/png.pyc
+${PYSITELIB}/png.pyo
