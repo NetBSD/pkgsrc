@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2023/10/30 19:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/01/06 13:48:35 gdt Exp $
 
-DISTNAME=	ccid-1.5.4
+DISTNAME=	ccid-1.5.5
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ccid.apdu.fr/
 COMMENT=	Middleware to access a smart card using SCard API (PC/SC)
 LICENSE=	gnu-lgpl-v2.1
