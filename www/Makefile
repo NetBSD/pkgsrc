@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1772 2023/11/30 15:39:48 taca Exp $
+# $NetBSD: Makefile,v 1.1773 2024/01/06 23:11:17 leot Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -866,6 +866,7 @@ SUBDIR+=	py-protego
 SUBDIR+=	py-publicsuffix2
 SUBDIR+=	py-purl
 SUBDIR+=	py-pylint-django
+SUBDIR+=	py-pylsqpack
 SUBDIR+=	py-pysaml2
 SUBDIR+=	py-pystache
 SUBDIR+=	py-python-mimeparse
