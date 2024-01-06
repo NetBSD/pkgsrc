@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/12/11 09:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/01/06 04:22:15 maya Exp $
 
 DISTNAME=		fish-3.6.4
 CATEGORIES=		shells
@@ -28,6 +28,8 @@ CPPFLAGS+=		-DHAVE_BACKTRACE_SYMBOLS
 CXXFLAGS.NetBSD+=	-fpermissive
 LDFLAGS+=		-lexecinfo
 .endif
+# Needed for cur_term
+LDFLAGS.NetBSD+=	-lterminfo
 
 # Upstream intentionally omits open.1 on Darwin, but adds realpath.1
 PLIST_VARS+=	open realpath
@@ -54,6 +56,7 @@ post-extract:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
 CMAKE_GENERATOR=	make
 
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
