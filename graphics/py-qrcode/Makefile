@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.17 2022/01/05 15:41:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/01/06 09:24:27 adam Exp $
 
-DISTNAME=	qrcode-6.1
+DISTNAME=	qrcode-7.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/qrcode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/qrcode
-COMMENT=	Python QR Code image generator
+HOMEPAGE=	https://github.com/lincolnloop/python-qrcode
+COMMENT=	QR Code image generator
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
-
-USE_PKG_RESOURCES=	yes
+DEPENDS+=	${PYPKGPREFIX}-pypng-[0-9]*:../../graphics/py-pypng
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+# pil
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	qrcode/console_scripts.py
 
@@ -35,6 +35,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qr-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
