@@ -1,0 +1,6 @@
+This repository contains mitmproxy's Rust bits, most notably:
+
+- WireGuard Mode: The ability to proxy any device that can be
+  configured as a WireGuard client.
+- Local Redirect Mode: The ability to proxy arbitrary macOS or Windows
+  applications by name or pid.
