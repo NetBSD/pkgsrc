@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2019/09/24 09:45:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/06 09:40:40 adam Exp $
+bin/collect_namespace_mappings
+bin/gds_collect_namespace_mappings.py
 bin/gends_extract_simple_types
 bin/gends_extract_simple_types.py
 bin/gends_generate_django
@@ -11,11 +13,18 @@ bin/generateds_gui
 bin/generateds_gui.py
 bin/process_includes
 bin/process_includes.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/libgenerateDS/__init__.py
+${PYSITELIB}/libgenerateDS/__init__.pyc
+${PYSITELIB}/libgenerateDS/__init__.pyo
+${PYSITELIB}/libgenerateDS/gui/__init__.py
+${PYSITELIB}/libgenerateDS/gui/__init__.pyc
+${PYSITELIB}/libgenerateDS/gui/__init__.pyo
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.py
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyc
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui.pyo
@@ -23,8 +32,8 @@ ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.py
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyc
 ${PYSITELIB}/libgenerateDS/gui/generateds_gui_session.pyo
 ${PYSITELIB}/libgenerateDS/process_includes.py
-${PLIST.py2x}${PYSITELIB}/libgenerateDS/process_includes.pyc
-${PLIST.py2x}${PYSITELIB}/libgenerateDS/process_includes.pyo
+${PYSITELIB}/libgenerateDS/process_includes.pyc
+${PYSITELIB}/libgenerateDS/process_includes.pyo
 ${PYSITELIB}/process_includes.py
 ${PYSITELIB}/process_includes.pyc
 ${PYSITELIB}/process_includes.pyo

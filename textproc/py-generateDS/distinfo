@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:23:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/01/06 09:40:40 adam Exp $
 
-BLAKE2s (generateDS-2.28b0.tar.gz) = 2bb39c1e85c5e419c975c8369550ab695be993208381b7033987953f330a8587
-SHA512 (generateDS-2.28b0.tar.gz) = b363d4bcdc421a22abb14e41f0d6ce36aa456cd3826cd7ac46a6da30522751630ae0ca5d519b30e9d152e1eaa5f8867db6daa33dc8c77a31c2776c5dd7442bdd
-Size (generateDS-2.28b0.tar.gz) = 846693 bytes
+BLAKE2s (generateDS-2.43.3.tar.gz) = 05a49e9dc941f4791cc07e8615ac3ab81e7330c26b9fb37a245642c1fa459787
+SHA512 (generateDS-2.43.3.tar.gz) = 263a0d9b369e37e3d9d0cde83966e911b43b53e4efee6d08909af43a9d0e24aa23b849fefe648d5936d21bc75dec6f0fe369ab6cad0a270989ebc6c882a9a10b
+Size (generateDS-2.43.3.tar.gz) = 1291230 bytes
