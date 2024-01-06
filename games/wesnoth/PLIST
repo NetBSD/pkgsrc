@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.65 2023/04/24 15:24:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.66 2024/01/06 19:49:58 adam Exp $
 bin/wesnoth
 bin/wesnothd
+man/bg/man6/wesnoth.6
+man/bg/man6/wesnothd.6
 man/ca/man6/wesnoth.6
 man/ca/man6/wesnothd.6
 man/cs/man6/wesnoth.6
@@ -26,6 +28,8 @@ man/pt_BR/man6/wesnoth.6
 man/pt_BR/man6/wesnothd.6
 man/ru/man6/wesnoth.6
 man/ru/man6/wesnothd.6
+man/sk/man6/wesnoth.6
+man/sk/man6/wesnothd.6
 man/tr/man6/wesnoth.6
 man/tr/man6/wesnothd.6
 man/zh_CN/man6/wesnoth.6
@@ -15916,6 +15920,7 @@ share/wesnoth/data/languages/bg_BG.cfg
 share/wesnoth/data/languages/ca_ES.cfg
 share/wesnoth/data/languages/ca_ES@valencia.cfg
 share/wesnoth/data/languages/cs_CZ.cfg
+share/wesnoth/data/languages/cy_GB.cfg
 share/wesnoth/data/languages/da_DK.cfg
 share/wesnoth/data/languages/de_DE.cfg
 share/wesnoth/data/languages/el_GR.cfg
@@ -18373,6 +18378,31 @@ share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-wc.mo
 share/wesnoth/translations/cs/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-anl.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-dm.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-dw.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-help.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-low.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-sota.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth-wc.mo
+share/wesnoth/translations/cy/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/da/LC_MESSAGES/wesnoth-anl.mo
 share/wesnoth/translations/da/LC_MESSAGES/wesnoth-did.mo
 share/wesnoth/translations/da/LC_MESSAGES/wesnoth-dm.mo
