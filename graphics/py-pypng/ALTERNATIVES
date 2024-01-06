@@ -1,0 +1,12 @@
+bin/prichunkpng @PREFIX@/bin/prichunkpng-@PYVERSSUFFIX@
+bin/pricolpng @PREFIX@/bin/pricolpng-@PYVERSSUFFIX@
+bin/priditherpng @PREFIX@/bin/priditherpng-@PYVERSSUFFIX@
+bin/priforgepng @PREFIX@/bin/priforgepng-@PYVERSSUFFIX@
+bin/prigreypng @PREFIX@/bin/prigreypng-@PYVERSSUFFIX@
+bin/pripalpng @PREFIX@/bin/pripalpng-@PYVERSSUFFIX@
+bin/pripamtopng @PREFIX@/bin/pripalpng-@PYVERSSUFFIX@
+bin/priplan9topng @PREFIX@/bin/priplan9topng-@PYVERSSUFFIX@
+bin/pripnglsch @PREFIX@/bin/pripnglsch-@PYVERSSUFFIX@
+bin/pripngtopam @PREFIX@/bin/pripngtopam-@PYVERSSUFFIX@
+bin/prirowpng @PREFIX@/bin/prirowpng-@PYVERSSUFFIX@
+bin/priweavepng @PREFIX@/bin/priweavepng-@PYVERSSUFFIX@
