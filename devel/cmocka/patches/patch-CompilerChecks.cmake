@@ -1,10 +1,10 @@
-$NetBSD: patch-CompilerChecks.cmake,v 1.1 2018/12/03 15:16:33 adam Exp $
+$NetBSD: patch-CompilerChecks.cmake,v 1.2 2024/01/06 09:07:07 pin Exp $
 
 Let PkgSrc handle security features.
 
---- CompilerChecks.cmake.orig	2018-12-03 09:42:07.000000000 +0000
+--- CompilerChecks.cmake.orig	2024-01-05 09:27:46.665856486 +0000
 +++ CompilerChecks.cmake
-@@ -62,28 +62,6 @@ if (UNIX)
+@@ -66,29 +66,6 @@ if (UNIX)
          endif()
      endif()
  
@@ -30,6 +30,7 @@ Let PkgSrc handle security features.
 -    if (WITH_STACK_CLASH_PROTECTION)
 -        list(APPEND SUPPORTED_COMPILER_FLAGS "-fstack-clash-protection")
 -    endif()
- 
+-
      if (PICKY_DEVELOPER)
          add_c_compiler_flag("-Wno-error=deprecated-declarations" SUPPORTED_COMPILER_FLAGS)
+         add_c_compiler_flag("-Wno-error=tautological-compare" SUPPORTED_COMPILER_FLAGS)
