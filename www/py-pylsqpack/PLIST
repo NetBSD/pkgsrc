@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/06 23:10:39 leot Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pylsqpack/__init__.py
+${PYSITELIB}/pylsqpack/__init__.pyc
+${PYSITELIB}/pylsqpack/__init__.pyo
+${PYSITELIB}/pylsqpack/_binding.abi3.so
+${PYSITELIB}/pylsqpack/binding.c
