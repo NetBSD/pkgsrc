@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/01/06 19:11:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/06 19:13:38 wiz Exp $
 
 BLAKE2s (OpenJPH-0.10.0.tar.gz) = 98466b65e8a15602f0d9054f74e3a0dfb225c57f85f9db35be75eb3f3703bc90
 SHA512 (OpenJPH-0.10.0.tar.gz) = 2e013e3cd3b96e8377bf22e4e360b7903a69f50b6b154ab225c737c7e6fcf37ebac8365dae95f93fa2b01fc3b63e9428743de4f9fcf2b5da0fbe55085ffbb091
 Size (OpenJPH-0.10.0.tar.gz) = 359847 bytes
-SHA1 (patch-CMakeLists.txt) = 9f9ff43629e7c7a79a316ee463a357d3a41f23c9
+SHA1 (patch-CMakeLists.txt) = a51134fd1cc08e5d2a684ee4c835b08ad64bd583
