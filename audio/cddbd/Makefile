@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/09/11 23:59:28 asau Exp $
+# $NetBSD: Makefile,v 1.18 2024/01/06 00:06:25 rillig Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
 PKGNAME=	cddbd-1.3.1p1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/cddbd-1.3.1/}
 
