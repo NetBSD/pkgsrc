@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.178 2023/11/14 14:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2024/01/06 15:35:26 rhialto Exp $
 
-DISTNAME=	vice-3.7.1
-PKGREVISION=	6
+DISTNAME=	vice-3.8
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -21,7 +20,7 @@ USE_LANGUAGES=		c c++11
 USE_TOOLS+=		bash gmake pkg-config perl flex yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
-CONFIGURE_ARGS+=	--enable-lame
+CONFIGURE_ARGS+=	--with-lame
 CONFIGURE_ARGS+=	--with-fastsid
 CONFIGURE_ARGS+=	--with-flac
 CONFIGURE_ARGS+=	--with-gif
@@ -29,6 +28,13 @@ CONFIGURE_ARGS+=	--with-mpg123
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--with-vorbis
 CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--with-fastsid
+CONFIGURE_ARGS+=	--with-libcurl
+CONFIGURE_ARGS+=	--without-libieee1284
+CONFIGURE_ARGS+=	--disable-hardsid
+CONFIGURE_ARGS+=	--disable-parsid
+CONFIGURE_ARGS+=	--disable-catweasel
+CONFIGURE_ARGS+=	--disable-midi
 CONFIGURE_ARGS.NetBSD+=	--with-sun
 CONFIGURE_ARGS.NetBSD+=	--without-oss
 
@@ -72,5 +78,6 @@ post-install:
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
