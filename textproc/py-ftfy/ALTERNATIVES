@@ -1,1 +1,1 @@
-bin/ftfy @PREFIX@/bin/ftfy@PYVERSSUFFIX@
+bin/ftfy @PREFIX@/bin/ftfy-@PYVERSSUFFIX@
