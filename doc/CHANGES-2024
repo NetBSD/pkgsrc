@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.148 2024/01/06 23:24:52 leot Exp $
+$NetBSD: CHANGES-2024,v 1.149 2024/01/06 23:39:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added www/py-pylsqpack version 0.3.18 [leot 2024-01-06]
 	Added www/py-aioquic version 0.9.24 [leot 2024-01-06]
 	Added net/py-mitmproxy_rs version 0.5.1 [leot 2024-01-06]
+	Updated net/mitmproxy to 10.2.1 [leot 2024-01-06]
