@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.36 2022/09/29 02:25:15 charlotte Exp $
+$NetBSD: README,v 1.37 2024/01/06 22:42:42 gutteridge Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -148,6 +148,6 @@ Platforms believed to have no users
   Haiku
   IRIX
   Interix
-  MirBSD
+  MirBSD (patched libtool support removed August 2022)
   * OSF1
   QNX (no README)
