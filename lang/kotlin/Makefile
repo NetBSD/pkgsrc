@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/03/20 13:56:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/06 00:19:30 rillig Exp $
 
 DISTNAME=	kotlin-compiler-1.8.10
 PKGNAME=	${DISTNAME:S/-compiler//}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/kotlinc
 USE_LANGUAGES=	# none
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run pax
 
 SUBST_CLASSES+=		java
 SUBST_STAGE.java=	pre-configure
