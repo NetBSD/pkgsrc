@@ -1,7 +1,10 @@
-$NetBSD: patch-vendor_libc-0.2.146_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.146_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2024/01/06 19:00:19 he Exp $
 
 Add support for NetBSD/mipsel and NetBSD/riscv64.
 Also try to enable backtrace support.
+
+Add fix to cpuid_t definition by applying
+  https://github.com/rust-lang/libc/pull/3386
 
 --- vendor/libc-0.2.146/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-07-12 05:06:31.000000000 +0000
 +++ vendor/libc-0.2.146/src/unix/bsd/netbsdlike/netbsd/mod.rs

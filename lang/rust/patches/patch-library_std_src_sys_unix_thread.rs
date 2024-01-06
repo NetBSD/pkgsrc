@@ -1,10 +1,17 @@
-$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.14 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.15 2024/01/06 19:00:19 he Exp $
 
 Fix stack-clash on SunOS.
-Undo new way of counting the number of cores we have affinity to
-on NetBSD, untli the cpuid_t definition is properly fixed, since
-this will get a type error otherwise.  Earlier, this caused a crash
-on our 32-bit ports.
+
+Undo new(ish) code (from 1.72.0) which attempts to count threads/CPUs
+on NetBSD; somehow it is causing crashes in bootstrap() on certain
+CPU architectures (i386, powerpc, armv7, but not riscv64, aarch64
+or amd64); _cpuset_isset() crashes with SEGV.  And according to
+what I hear, the code is bogus; by default threads do not have
+affinity to any specific set of CPUs in NetBSD, and trying to
+replicate this with a simple C program always results in 0.
+So rip the newish code out with prejudice, and instead fallback to
+the sysctl() method of getting "number of CPUs" which was used
+before (and is still present, following the ripped-out code).
 
 --- library/std/src/sys/unix/thread.rs.orig	2020-10-07 07:53:22.000000000 +0000
 +++ library/std/src/sys/unix/thread.rs
