@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.136 2024/01/06 09:24:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.137 2024/01/06 09:43:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -165,3 +165,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/tui-journal to 0.7.0 [pin 2024-01-06]
 	Added graphics/py-pypng version 0.20220715.0 [adam 2024-01-06]
 	Updated graphics/py-qrcode to 7.4.2 [adam 2024-01-06]
+	Updated textproc/py-generateDS to 2.43.3 [adam 2024-01-06]
+	Updated devel/py-wcwidth to 0.2.13 [adam 2024-01-06]
