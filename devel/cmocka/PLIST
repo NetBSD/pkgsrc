@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/23 07:23:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/06 09:07:07 pin Exp $
 include/cmocka.h
 include/cmocka_pbc.h
+lib/cmake/cmocka/cmocka-config-noconfig.cmake
 lib/cmake/cmocka/cmocka-config-version.cmake
 lib/cmake/cmocka/cmocka-config.cmake
 lib/libcmocka.so
 lib/libcmocka.so.0
-lib/libcmocka.so.0.7.0
+lib/libcmocka.so.0.8.0
 lib/pkgconfig/cmocka.pc
