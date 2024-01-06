@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1553 2023/12/29 16:55:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.1554 2024/01/06 23:24:35 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -751,6 +751,7 @@ SUBDIR+=	py-magic-wormhole-transit-relay
 SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
 SUBDIR+=	py-minio
+SUBDIR+=	py-mitmproxy_rs
 SUBDIR+=	py-moto
 SUBDIR+=	py-namecheap
 SUBDIR+=	py-ncclient
