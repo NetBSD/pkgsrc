@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2024/01/06 19:11:38 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/01/06 19:13:38 wiz Exp $
 
 Make sure library search path is in pkg-config file.
+https://github.com/aous72/OpenJPH/pull/116
 
 --- CMakeLists.txt.orig	2024-01-06 19:10:34.138110748 +0000
 +++ CMakeLists.txt
