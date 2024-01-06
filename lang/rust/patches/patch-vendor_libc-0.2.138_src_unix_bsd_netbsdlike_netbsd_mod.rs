@@ -1,7 +1,10 @@
-$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.4 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.5 2024/01/06 19:00:19 he Exp $
 
 Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips
 and NetBSD/riscv64.
+
+Add fix to cpuid_t definition by applying
+  https://github.com/rust-lang/libc/pull/3386
 
 --- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
 +++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs
