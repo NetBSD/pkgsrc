@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2022/12/31 18:30:00 rhialto Exp $
+# $NetBSD: options.mk,v 1.17 2024/01/06 15:35:26 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory pulseaudio alsa
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		gtk3 ffmpeg
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gtk sdl x64 desktop
+PLIST_VARS+=	gtk sdl sdl1 sdl2 x64 desktop
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-gtk3ui
@@ -45,6 +45,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 .if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--enable-sdl1ui
 PLIST.sdl=		yes
+PLIST.sdl1=		yes
 .  include "../../devel/SDL/buildlink3.mk"
 .  include "../../graphics/SDL_image/buildlink3.mk"
 .endif
@@ -52,6 +53,7 @@ PLIST.sdl=		yes
 .if !empty(PKG_OPTIONS:Msdl2)
 CONFIGURE_ARGS+=	--enable-sdl2ui
 PLIST.sdl=		yes
+PLIST.sdl2=		yes
 .  include "../../devel/SDL2/buildlink3.mk"
 .  include "../../graphics/SDL2_image/buildlink3.mk"
 .endif
