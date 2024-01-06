@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:58:50 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/01/06 00:06:25 rillig Exp $
 
 BLAKE2s (cddbd-1.3.1.tar.gz) = fe85274c17cfde9a5a3c28f8f3f9adda43da78278dba76a9a244bd4724ca99f4
 SHA512 (cddbd-1.3.1.tar.gz) = 73c649d123cc3616c4df7af3ecd47b7a2d431b25d98bca6afd0a7703fdfbc2e9273bcd9d0eba81f8ab486b9f81241af8688e266456657fb56a453da8af21d051
@@ -6,7 +6,7 @@ Size (cddbd-1.3.1.tar.gz) = 93959 bytes
 BLAKE2s (cddbd-1.3.1.patch1.gz) = ac63d508879323ccf9e4a83a4cb0b88c8c334de11d1a8435dc14ab13097ead21
 SHA512 (cddbd-1.3.1.patch1.gz) = c65c7bc8e803ee6355c2c6c14647f10fd5446beb5b3c6e491a73d1ac1fa6470622a9280fe415a5cdb1b47d6168fbe0037c2f1a41ad8d1eeba5c85717bfa8ef21
 Size (cddbd-1.3.1.patch1.gz) = 416 bytes
-SHA1 (patch-aa) = 2402782d37dbe92c1ff8a1a7106b5ca04146292e
+SHA1 (patch-aa) = 731b5112bebbcfa8621396b2192e7220c4b42790
 SHA1 (patch-ab) = defcebf777b5eae603074dc56afe597c456cc211
 SHA1 (patch-ac) = b15d149593298a6859d67ba81ec13a2e653a12cf
 SHA1 (patch-ad) = d9237c9e3e7f5544921d6597440d9785629cb7af

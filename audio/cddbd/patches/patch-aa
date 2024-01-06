@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2011/08/28 22:30:17 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2024/01/06 00:06:25 rillig Exp $
 
 - avoid interactive install
 - configure for pkgsrc
@@ -113,6 +113,36 @@ $NetBSD: patch-aa,v 1.6 2011/08/28 22:30:17 dholland Exp $
 +BASEDIR=${DESTDIR}`cat .accessfile`
  WORKDIR=${BASEDIR}
  CDDBDIR=`dirname ${BASEDIR}`
+ 
+@@ -415,13 +396,13 @@ else
+ 	logging=none
+ fi
+ 
+-$ECHO "logfile:      ${WORKDIR}/log" >> access
+-$ECHO "motdfile:     ${MOTD}" >> access
+-$ECHO "sitefile:     ${SITE}" >> access
+-$ECHO "lockdir:      ${WORKDIR}/locks" >> access
+-$ECHO "hashdir:      ${WORKDIR}/hash" >> access
+-$ECHO "histfile:     ${WORKDIR}/history" >> access
+-$ECHO "cddbdir:      ${CDDBDIR}" >> access
++$ECHO "logfile:      ${WORKDIR#${DESTDIR}}/log" >> access
++$ECHO "motdfile:     ${MOTD#${DESTDIR}}" >> access
++$ECHO "sitefile:     ${SITE#${DESTDIR}}" >> access
++$ECHO "lockdir:      ${WORKDIR#${DESTDIR}}/locks" >> access
++$ECHO "hashdir:      ${WORKDIR#${DESTDIR}}/hash" >> access
++$ECHO "histfile:     ${WORKDIR#${DESTDIR}}/history" >> access
++$ECHO "cddbdir:      ${CDDBDIR#${DESTDIR}}" >> access
+ 
+ YNDEF=n
+ if getyn "Do you want configure your site as a master database hub"
+@@ -455,7 +436,7 @@ then
+ 	$ECHO "admin_email:  ${EMAILADDR}" >> access
+ 	$ECHO "bounce_email: ${EMAILADDR}" >> access
+ else
+-	$ECHO "postdir:      ${CDDBDIR}" >> access
++	$ECHO "postdir:      ${CDDBDIR#${DESTDIR}}" >> access
+ 	$ECHO "dup_policy:   always" >> access
+ fi
  
 @@ -588,7 +569,7 @@ fi
  
