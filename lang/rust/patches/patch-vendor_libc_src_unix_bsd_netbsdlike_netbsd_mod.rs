@@ -1,8 +1,10 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.8 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.9 2024/01/06 19:00:19 he Exp $
 
 Copy execinfo function definitions from openbsd's mod.rs.
 Add entries for NetBSD/mipsel and NetBSD/riscv64.
-Fix cpuid_t definition.
+
+Add fix to cpuid_t definition by applying
+  https://github.com/rust-lang/libc/pull/3386
 
 --- vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-05-10 20:59:35.217463943 +0000
 +++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs
