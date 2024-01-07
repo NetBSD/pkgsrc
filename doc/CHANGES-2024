@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.186 2024/01/07 16:25:07 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.187 2024/01/07 16:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-flakes to 3.2.0 [wiz 2024-01-07]
 	Updated www/py-google-api-python-client to 2.112.0 [wiz 2024-01-07]
 	Updated security/py-google-auth to 2.26.1 [wiz 2024-01-07]
+	Updated devel/py-hatch-fancy-pypi-readme to 24.1.0 [wiz 2024-01-07]
