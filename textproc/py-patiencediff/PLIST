@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/12 18:43:05 rhialto Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/07 16:33:50 rhialto Exp $
+bin/patiencediff
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/patiencediff/__init__.py
 ${PYSITELIB}/patiencediff/__init__.pyc
 ${PYSITELIB}/patiencediff/__init__.pyo
 ${PYSITELIB}/patiencediff/__main__.py
 ${PYSITELIB}/patiencediff/__main__.pyc
 ${PYSITELIB}/patiencediff/__main__.pyo
+${PYSITELIB}/patiencediff/_patiencediff_c.pyi
 ${PYSITELIB}/patiencediff/_patiencediff_c.so
 ${PYSITELIB}/patiencediff/_patiencediff_py.py
 ${PYSITELIB}/patiencediff/_patiencediff_py.pyc
 ${PYSITELIB}/patiencediff/_patiencediff_py.pyo
+${PYSITELIB}/patiencediff/py.typed
 ${PYSITELIB}/patiencediff/test_patiencediff.py
 ${PYSITELIB}/patiencediff/test_patiencediff.pyc
 ${PYSITELIB}/patiencediff/test_patiencediff.pyo

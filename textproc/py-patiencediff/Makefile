@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/07 16:33:50 rhialto Exp $
 
-DISTNAME=	patiencediff-0.2.2
+DISTNAME=	patiencediff-0.2.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_PYPI:source/=90/ca/13cdabb3c491a0ccd7d580419b96abce3d227d4a6ba674364e6b19d4d67e/}
+MASTER_SITES=	${MASTER_SITE_PYPI:source/=57/9f/0973293d232696ae191cef7c4e8eb1ebbdb7728c48662ebf04c26fd576e4/}
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://www.breezy-vcs.org/
@@ -15,5 +14,5 @@ USE_LANGUAGES+=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
