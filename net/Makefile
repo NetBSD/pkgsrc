@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1554 2024/01/06 23:24:35 leot Exp $
+# $NetBSD: Makefile,v 1.1555 2024/01/07 10:17:26 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -293,6 +293,7 @@ SUBDIR+=	jftpgw
 SUBDIR+=	jigdo
 SUBDIR+=	jumpgate
 SUBDIR+=	jwhois
+SUBDIR+=	k6
 SUBDIR+=	kdenetwork-filesharing
 SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdnssd
