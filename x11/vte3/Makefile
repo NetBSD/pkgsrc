@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2023/11/14 14:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2024/01/07 02:14:16 gutteridge Exp $
 
-DISTNAME=	vte-0.72.3
+DISTNAME=	vte-0.74.2
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
@@ -21,6 +20,8 @@ USE_LANGUAGES=		c c++
 
 USE_CXX_FEATURES+=	c++20
 
+# GTK4 widget not yet needed in pkgsrc.
+MESON_ARGS+=		-Dgtk4=false
 # Otherwise, this will fail on Linux distributions that don't
 # have libsystemd.
 MESON_ARGS+=		-D_systemd=false
