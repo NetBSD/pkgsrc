@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23882 2024/01/07 16:15:09 wiz Exp $
+$NetBSD: TODO,v 1.23883 2024/01/07 16:17:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1158,7 +1158,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
-	o py-flake8-7.0.0
 	o py-flakes-3.2.0
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
