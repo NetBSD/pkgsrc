@@ -1,10 +1,10 @@
-# $NetBSD: plugin.mk,v 1.1 2023/01/01 14:12:05 rhialto Exp $
+# $NetBSD: plugin.mk,v 1.2 2024/01/07 15:13:12 rhialto Exp $
 
-BREEZY_PLUGIN_NAME?=	${PKGBASE:S/^breezy-//}
-BREEZY_PLUGIN_TEST?=	yes
+BREEZY_PLUGIN_NAME?=		${PKGBASE:S/^breezy-//}
+BREEZY_PLUGIN_TEST?=		yes
 BREEZY_PLUGIN_TEST_DIR?=	${WRKSRC}/build/lib/breezylib/plugins
 
-DEPENDS+=		breezy>=3.0:../../devel/breezy
+DEPENDS+=			breezy>=3.0:../../devel/breezy
 
 # stolen from graphics/hicolor-icon-theme
 .include "../../mk/bsd.fast.prefs.mk"
