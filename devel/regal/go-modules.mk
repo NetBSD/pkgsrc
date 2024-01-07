@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2023/12/31 21:19:24 leot Exp $
+# $NetBSD: go-modules.mk,v 1.7 2024/01/07 10:42:23 leot Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -34,8 +34,8 @@ GO_MODULE_FILES+=	github.com/gdamore/tcell/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/go-ini/ini/@v/v1.67.0.mod
 GO_MODULE_FILES+=	github.com/go-ini/ini/@v/v1.67.0.zip
 GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.2.2.mod
-GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.3.0.mod
-GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.3.0.zip
+GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.4.0.mod
+GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/go-logr/stdr/@v/v1.2.2.mod
 GO_MODULE_FILES+=	github.com/go-logr/stdr/@v/v1.2.2.zip
 GO_MODULE_FILES+=	github.com/gobwas/glob/@v/v0.2.3.mod
@@ -51,9 +51,10 @@ GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.9.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.zip
 GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20211214055906-6f57359322fd.mod
-GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20211214055906-6f57359322fd.zip
-GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.4.0.zip
+GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20231212022811-ec68065c825e.mod
+GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20231212022811-ec68065c825e.zip
+GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.5.0.mod
+GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.5.0.zip
 GO_MODULE_FILES+=	github.com/gorilla/mux/@v/v1.8.1.mod
 GO_MODULE_FILES+=	github.com/gorilla/mux/@v/v1.8.1.zip
 GO_MODULE_FILES+=	github.com/grpc-ecosystem/grpc-gateway/v2/@v/v2.18.0.mod
@@ -85,8 +86,8 @@ GO_MODULE_FILES+=	github.com/matttproud/golang_protobuf_extensions/v2/@v/v2.0.0.
 GO_MODULE_FILES+=	github.com/matttproud/golang_protobuf_extensions/v2/@v/v2.0.0.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.zip
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.59.0.mod
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.59.0.zip
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.60.0.mod
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v0.60.0.zip
 GO_MODULE_FILES+=	github.com/owenrumney/go-sarif/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/owenrumney/go-sarif/v2/@v/v2.3.0.mod
 GO_MODULE_FILES+=	github.com/owenrumney/go-sarif/v2/@v/v2.3.0.zip
