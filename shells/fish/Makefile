@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/01/06 04:22:15 maya Exp $
+# $NetBSD: Makefile,v 1.50 2024/01/07 16:08:52 wiz Exp $
 
-DISTNAME=		fish-3.6.4
+DISTNAME=		fish-3.7.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=		fish-shell
@@ -28,8 +28,6 @@ CPPFLAGS+=		-DHAVE_BACKTRACE_SYMBOLS
 CXXFLAGS.NetBSD+=	-fpermissive
 LDFLAGS+=		-lexecinfo
 .endif
-# Needed for cur_term
-LDFLAGS.NetBSD+=	-lterminfo
 
 # Upstream intentionally omits open.1 on Darwin, but adds realpath.1
 PLIST_VARS+=	open realpath
