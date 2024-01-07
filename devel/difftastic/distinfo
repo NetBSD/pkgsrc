@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2024/01/03 15:35:02 pin Exp $
+$NetBSD: distinfo,v 1.30 2024/01/07 19:43:45 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -78,9 +78,9 @@ Size (diff-0.1.12.crate) = 10223 bytes
 BLAKE2s (difflib-0.4.0.crate) = 9dedf118200e28f553a5eac255f0d880196f1e55fb258011866d9f8421cb0122
 SHA512 (difflib-0.4.0.crate) = fcb57859424fea6958a4407061c421599fbca111357b1fe72faa65d8fb0b74425c993a24484e8414f475fa146cd8368c4f82e1ceb4e8dd9f95741149345b37a9
 Size (difflib-0.4.0.crate) = 7638 bytes
-BLAKE2s (difftastic-0.53.1.tar.gz) = a3a00187ef2c6e4cd25824f8a90e6314355e5791ed89bef065e634b47e142602
-SHA512 (difftastic-0.53.1.tar.gz) = 7df72cef440372bb042937b7b8b1d333984f8dadec79697295c0760dc84f159d0c122ffc53619bae6b52a2885a4a609155d2b7d9d2ebc88ee34a7c4548cf791c
-Size (difftastic-0.53.1.tar.gz) = 57615806 bytes
+BLAKE2s (difftastic-0.54.0.tar.gz) = 773c507b769eb41b8f3f046d20452f4124ee9bc2a237cac09403e199c21a1f97
+SHA512 (difftastic-0.54.0.tar.gz) = 8dd476fedc9638cddb7391b127dc563f1dfeba5a2c74c00eda6673dd4aa59b6e1eb5ddf3d72ca34996a6aca4cd5de545d5fbe1419ceaa0062cc9f3bf8c82c9e7
+Size (difftastic-0.54.0.tar.gz) = 58647254 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
