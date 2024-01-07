@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.166 2024/01/07 15:13:21 rhialto Exp $
+$NetBSD: CHANGES-2024,v 1.167 2024/01/07 15:20:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -198,3 +198,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/p5-Pod-Markdown to 3.400 [wen 2024-01-07]
 	Updated security/trufflehog to 3.63.7 [leot 2024-01-07]
 	Updated devel/breezy to 3.3.4 [rhialto 2024-01-07]
+	Updated databases/ruby-sequel to 5.76.0 [taca 2024-01-07]
