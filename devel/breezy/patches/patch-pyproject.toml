@@ -1,0 +1,17 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/01/07 15:13:12 rhialto Exp $
+
+Allow setup.py to dynamically add "scripts", which it will do because
+we're setting CIBUILDWHEEL=1. We do this because we prefer the small
+python console script over a 611 KB rust program.
+
+--- pyproject.toml.orig	2024-01-07 14:05:06.371272997 +0000
++++ pyproject.toml
+@@ -35,7 +35,7 @@ dependencies = [
+     "urllib3>=1.24.1",
+     "pyyaml",
+ ]
+-dynamic = ["version"]
++dynamic = ["version", "scripts"]
+ 
+ [project.urls]
+ Homepage = "https://www.breezy-vcs.org/"
