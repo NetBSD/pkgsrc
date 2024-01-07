@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23893 2024/01/07 19:43:03 pin Exp $
+$NetBSD: TODO,v 1.23894 2024/01/07 21:21:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -937,7 +937,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o md-whois-5.5.9
 	o mecab-ipadic-2.7.0.20070801
 	o memached-1.5.6
-	o memtestplus-6.20
+	o memtestplus-7.0
 	o mercury-22.01.8
 	o merkaator-0.18.3
 	o mesure-0.7.2
@@ -1010,7 +1010,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o open-vm-tools-12.3.0 [security fix: CVE-2023-20900]
-	o openblas-0.3.25
+	o openblas-0.3.26
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
