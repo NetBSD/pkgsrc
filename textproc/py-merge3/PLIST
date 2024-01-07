@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/07 15:57:02 rhialto Exp $
+bin/merge3
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/merge3/__init__.py
+${PYSITELIB}/merge3/__init__.pyc
+${PYSITELIB}/merge3/__init__.pyo
+${PYSITELIB}/merge3/__main__.py
+${PYSITELIB}/merge3/__main__.pyc
+${PYSITELIB}/merge3/__main__.pyo
+${PYSITELIB}/merge3/py.typed

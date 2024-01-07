@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/07 15:57:02 rhialto Exp $
+
+BLAKE2s (merge3-0.0.14.tar.gz) = ac1bcf93f5aed202e96178f180ad3c9f7d796539702087ebfa00f0be49270963
+SHA512 (merge3-0.0.14.tar.gz) = 5fea61ff655299b1186d3cb060688210d80df117c049fdc283afeaa630db211a88acc6fdbaeba51f8bb58a1ec311a125f4b6027ea6ad101769eb13feec639894
+Size (merge3-0.0.14.tar.gz) = 17742 bytes
