@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1555 2024/01/07 10:17:26 leot Exp $
+# $NetBSD: Makefile,v 1.1556 2024/01/07 19:49:42 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -902,6 +902,7 @@ SUBDIR+=	sipcalc
 SUBDIR+=	siproxd
 SUBDIR+=	sipsak
 SUBDIR+=	sitescooper
+SUBDIR+=	slumber
 SUBDIR+=	slurm
 SUBDIR+=	smokeping
 SUBDIR+=	sniffit
