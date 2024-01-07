@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.192 2024/01/07 16:35:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.193 2024/01/07 16:57:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-serializable to 0.17.1 [wiz 2024-01-07]
 	Updated textproc/py-patiencediff to 0.2.14 [rhialto 2024-01-07]
 	Updated print/texlab to 5.12.1 [wiz 2024-01-07]
+	Updated print/poppler to 24.01.0 [wiz 2024-01-07]
