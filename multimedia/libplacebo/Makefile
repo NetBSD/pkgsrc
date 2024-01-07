@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/01 15:43:25 leot Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/07 21:13:54 wiz Exp $
 
 DISTNAME=	libplacebo-v6.338.1
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -33,7 +33,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/libplacebo.pc
 
