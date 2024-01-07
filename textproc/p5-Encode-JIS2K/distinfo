@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:22:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/07 12:47:31 wen Exp $
 
-BLAKE2s (Encode-JIS2K-0.03.tar.gz) = 199511b329e1d495eb84e18f5ec2f12c036cad6fbf01e3779cb033758d88de1a
-SHA512 (Encode-JIS2K-0.03.tar.gz) = 93d73a84e394faf8411d158ead0bc398ff1935ba14e35c64992d9fc8c2aa4ce1a71b5f46dbb1a765d3b160b19a9216bec68d42c8be1940d271dde418a62db4ec
-Size (Encode-JIS2K-0.03.tar.gz) = 419693 bytes
+BLAKE2s (Encode-JIS2K-0.05.tar.gz) = e2f8ff57768ad1e4a0b31ce49149db37fdbbdcfbb774a2ad8c9f09cdd91a12d8
+SHA512 (Encode-JIS2K-0.05.tar.gz) = 967849b89f7ece6488ceb7ea394a6f4c1659f8d62939b3cf6e9ba8ec8328ba7c180194dcef534450af0f110c786e67489d39f914e015330d16cd4414e3440afe
+Size (Encode-JIS2K-0.05.tar.gz) = 416222 bytes
