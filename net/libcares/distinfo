@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2023/12/30 10:14:00 wiz Exp $
+$NetBSD: distinfo,v 1.35 2024/01/07 16:05:32 wiz Exp $
 
-BLAKE2s (c-ares-1.24.0.tar.gz) = 22d02b411022b0c750a8d5a7d2fcb350ca08009523839ca39d806dd6d5443fec
-SHA512 (c-ares-1.24.0.tar.gz) = 3701853e263de94daf19734185ad913848c19b825e0738926b418a54b0628ee1ac95a49ebfaa2ddf3eed74a7ef209e1a0a8f573df3e507ef1f11fcc53fc5eb68
-Size (c-ares-1.24.0.tar.gz) = 1368749 bytes
+BLAKE2s (c-ares-1.25.0.tar.gz) = 68538255387c5d74156b4a013a2ec60ed52b80c26a0968b36d6f5068ec2e40cb
+SHA512 (c-ares-1.25.0.tar.gz) = f73ffc45c17f1e952ea5fae8a1d9e1508427f21c821ff470ff0b728cc4a1e21d1274f95d9192c22f704bc7e0f58a633608cfdc1704dfe8950902fdfc3dfa2e1c
+Size (c-ares-1.25.0.tar.gz) = 1264129 bytes

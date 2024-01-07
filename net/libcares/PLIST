@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/12/30 10:14:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/01/07 16:05:32 wiz Exp $
 bin/adig
 bin/ahost
 include/ares.h
@@ -14,7 +14,7 @@ lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.10.0
+lib/libcares.so.2.10.1
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
 man/man1/adig.1
