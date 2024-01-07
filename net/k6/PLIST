@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/07 10:16:54 leot Exp $
+bin/k6
