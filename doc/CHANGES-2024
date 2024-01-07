@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.171 2024/01/07 15:47:04 taca Exp $
+$NetBSD: CHANGES-2024,v 1.172 2024/01/07 15:48:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -203,3 +203,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/php-pecl-mcrypt to 1.0.7 [taca 2024-01-07]
 	Updated mail/pear-Auth_SASL to 1.2.0 [taca 2024-01-07]
 	Updated www/ruby-aws-partitions to 1.877.0 [taca 2024-01-07]
+	Updated www/ruby-aws-sdk-core to 3.190.1 [taca 2024-01-07]
