@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2023/11/08 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/01/07 03:28:09 scole Exp $
 
-ST_VERSION=	2.27
+ST_VERSION=	2.28
 PKGNAME=	split-thai-${ST_VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	scole@NetBSD.org
@@ -11,8 +10,8 @@ COMMENT=	Utilities and an emacs library to split UTF-8 Thai text into words
 # pthai.el, other code, icu dict, swath dict, libreoffice dict
 LICENSE=	2-clause-bsd AND public-domain AND mit AND gnu-gpl-v2 AND gnu-lgpl-v3
 
-GITHUB_ICU_TAG=		61607c27732906d36c5bd4d23ecc092f89f53a2b
-LIBREOFFICE_VERSION=	7-2-0
+GITHUB_ICU_TAG=		929cf40ecbf464bb133113995185c7353f2e106d
+LIBREOFFICE_VERSION=	7-6-4
 LIBREOFFICE_SITE=	https://cgit.freedesktop.org/libreoffice/dictionaries/plain/th_TH/th_TH.dic?h=libreoffice-${LIBREOFFICE_VERSION}
 DISTFILES=		split-thai-${ST_VERSION}.tgz thaidict-${GITHUB_ICU_TAG}.txt th_TH-${LIBREOFFICE_VERSION}.dic
 
@@ -20,8 +19,9 @@ SITES.split-thai-${ST_VERSION}.tgz=	${MASTER_SITE_LOCAL}
 SITES.thaidict-${GITHUB_ICU_TAG}.txt=	-${MASTER_SITE_GITHUB:=unicode-org/}/icu/raw/${GITHUB_ICU_TAG}/icu4c/source/data/brkitr/dictionaries/thaidict.txt
 SITES.th_TH-${LIBREOFFICE_VERSION}.dic=	-${LIBREOFFICE_SITE}
 
-# darwin needed 11 to compile icu program?
-USE_LANGUAGES=	c++11
+# darwin needs 11 to compile icu program
+USE_LANGUAGES=		c++
+FORCE_CXX_STD=		c++11
 
 USE_TOOLS=	pkg-config mkdir cp sh:run env awk cat sort uniq grep wc echo
 USE_TOOLS+=	perl:run
