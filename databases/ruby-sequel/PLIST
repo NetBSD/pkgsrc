@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.114 2023/12/17 14:01:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.115 2024/01/07 15:20:20 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -101,6 +101,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.72.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.73.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.74.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.75.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.76.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
@@ -202,6 +203,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/any_not_empty.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/async_thread_pool.rb
+${GEM_LIBDIR}/lib/sequel/extensions/auto_cast_date_and_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/auto_literal_strings.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/caller_logging.rb
