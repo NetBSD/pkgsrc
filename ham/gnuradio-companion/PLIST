@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/04/24 06:36:55 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/01/07 12:24:20 mef Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -169,15 +169,6 @@ ${PYSITELIB}/gnuradio/grc/core/schema_checker/validator.pyo
 ${PYSITELIB}/gnuradio/grc/core/utils/__init__.py
 ${PYSITELIB}/gnuradio/grc/core/utils/__init__.pyc
 ${PYSITELIB}/gnuradio/grc/core/utils/__init__.pyo
-${PYSITELIB}/gnuradio/grc/core/utils/backports/__init__.py
-${PYSITELIB}/gnuradio/grc/core/utils/backports/__init__.pyc
-${PYSITELIB}/gnuradio/grc/core/utils/backports/__init__.pyo
-${PYSITELIB}/gnuradio/grc/core/utils/backports/chainmap.py
-${PYSITELIB}/gnuradio/grc/core/utils/backports/chainmap.pyc
-${PYSITELIB}/gnuradio/grc/core/utils/backports/chainmap.pyo
-${PYSITELIB}/gnuradio/grc/core/utils/backports/shlex.py
-${PYSITELIB}/gnuradio/grc/core/utils/backports/shlex.pyc
-${PYSITELIB}/gnuradio/grc/core/utils/backports/shlex.pyo
 ${PYSITELIB}/gnuradio/grc/core/utils/descriptors/__init__.py
 ${PYSITELIB}/gnuradio/grc/core/utils/descriptors/__init__.pyc
 ${PYSITELIB}/gnuradio/grc/core/utils/descriptors/__init__.pyo
