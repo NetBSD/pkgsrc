@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/01/07 15:13:12 rhialto Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/07 16:13:43 rhialto Exp $
 
 DISTNAME=	breezy-3.3.4
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -15,9 +16,9 @@ DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-dulwich>=0.20.23:../../devel/py-dulwich
 DEPENDS+=		${PYPKGPREFIX}-fastbencode>=0.0.9:../../converters/py-fastbencode
 DEPENDS+=		${PYPKGPREFIX}-fastimport>0:../../devel/py-fastimport
+DEPENDS+=		${PYPKGPREFIX}-merge3>=0.0.14:../../textproc/py-merge3
 DEPENDS+=		${PYPKGPREFIX}-patiencediff>=0.2.2:../../textproc/py-patiencediff
 DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=1.8.1:../../devel/py-setuptools-rust
-DEPENDS+=		${PYPKGPREFIX}-six>0:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 # Not yet packaged; only needed for lp: shortcuts.
 #DEPENDS+=		${PYPKGPREFIX}-launchpadlib>=1.6.3:../../devel/py-launchpadlib
