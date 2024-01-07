@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/07 16:33:50 rhialto Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/07 16:36:46 wiz Exp $
 
 DISTNAME=	patiencediff-0.2.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://www.breezy-vcs.org/
 COMMENT=	Python implementation of the patiencediff algorithm
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # or later
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES+=	c
 
