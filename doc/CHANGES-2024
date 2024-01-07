@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.174 2024/01/07 15:51:26 taca Exp $
+$NetBSD: CHANGES-2024,v 1.175 2024/01/07 15:52:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-aws-sdk-core to 3.190.1 [taca 2024-01-07]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.88.0 [taca 2024-01-07]
 	Updated www/ruby-aws-sdk-kms to 1.76.0 [taca 2024-01-07]
+	Updated www/ruby-aws-sdk-s3 to 1.142.0 [taca 2024-01-07]
