@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:54:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/01/07 15:43:09 taca Exp $
 
-BLAKE2s (pear/Auth_SASL-1.1.0.tgz) = 48a76f2cd10df6dd89c4cde3c889bd69cc16036562b1ce8b7b0ccacbeefbb041
-SHA512 (pear/Auth_SASL-1.1.0.tgz) = 446ffa37fe7669d3993613167b07fb173c2e17664dcfb56d96a889b4a0cb2c83cc73d307aee15fc8fa7e666502835c15d09c32d8a491060bdd23c9093346bc40
-Size (pear/Auth_SASL-1.1.0.tgz) = 9380 bytes
+BLAKE2s (pear/Auth_SASL-1.2.0.tgz) = b55e329d33ad6fdc7cff1c7828af7f4e63faa26cb972f4c05692b5f0a1222482
+SHA512 (pear/Auth_SASL-1.2.0.tgz) = 47f74d43a1081260771ebb32cebd4ce1b2b87d4fe09d3b84d16e60c2bde9be97b1f0d1962e10528c39d58ec5b88dcbef62bedcc22ca73d960a89f64b15d3c31d
+Size (pear/Auth_SASL-1.2.0.tgz) = 9524 bytes
