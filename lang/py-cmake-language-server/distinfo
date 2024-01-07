@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/10/23 11:09:04 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/01/07 16:13:16 wiz Exp $
 
-BLAKE2s (cmake_language_server-0.1.8.tar.gz) = 2bc1127818855899b9b42b9d5a80d5cb8b7dd9b6f6c15fec5ca80137a49c2d97
-SHA512 (cmake_language_server-0.1.8.tar.gz) = 975196ff5206233a3a588c6142c80daa6327b786965c34ce0ae54f66fc7b4d41f6dd6173107ea59ed878e7cc8c765ed43aff4d4bbe85c81b735e2b082b583857
-Size (cmake_language_server-0.1.8.tar.gz) = 11364 bytes
-SHA1 (patch-pyproject.toml) = c57efb291fa1e668f15e0f296438962dde3242bc
+BLAKE2s (cmake_language_server-0.1.9.tar.gz) = ceafb8542783499603ab1675e639f7a8746749eb276452b823ebb4432412974e
+SHA512 (cmake_language_server-0.1.9.tar.gz) = 598737c5cd907d143fbd5993a460a1491f7c88576d98febc9ca5fb199eb8f0777ef3b6014ed2d908ebeb95d06b79201270fb22cc9aea53999db66cc5782441dd
+Size (cmake_language_server-0.1.9.tar.gz) = 11477 bytes
