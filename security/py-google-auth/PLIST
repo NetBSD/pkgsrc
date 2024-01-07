@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/12/13 13:52:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/01/07 16:25:00 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -26,6 +26,9 @@ ${PYSITELIB}/google/auth/_jwt_async.pyo
 ${PYSITELIB}/google/auth/_oauth2client.py
 ${PYSITELIB}/google/auth/_oauth2client.pyc
 ${PYSITELIB}/google/auth/_oauth2client.pyo
+${PYSITELIB}/google/auth/_refresh_worker.py
+${PYSITELIB}/google/auth/_refresh_worker.pyc
+${PYSITELIB}/google/auth/_refresh_worker.pyo
 ${PYSITELIB}/google/auth/_service_account_info.py
 ${PYSITELIB}/google/auth/_service_account_info.pyc
 ${PYSITELIB}/google/auth/_service_account_info.pyo
