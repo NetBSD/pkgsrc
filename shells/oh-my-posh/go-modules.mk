@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.36 2023/12/19 13:07:38 pin Exp $
+# $NetBSD: go-modules.mk,v 1.37 2024/01/07 19:46:12 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -183,8 +183,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.17.0.zip
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.3.0.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20231006140011-7918f672742d.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20231006140011-7918f672742d.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.14.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.14.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.15.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.15.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.14.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.6.0-dev.0.20220419223038-86c51ed26bb4.mod
@@ -208,8 +208,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220811171246-fbc7d0a398ab.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.11.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.13.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.16.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.16.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.2.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
