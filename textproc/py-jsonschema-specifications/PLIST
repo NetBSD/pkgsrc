@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/08 12:00:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -29,6 +29,9 @@ ${PYSITELIB}/jsonschema_specifications/schemas/draft3/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft4/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft6/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft7/metaschema.json
+${PYSITELIB}/jsonschema_specifications/tests/__init__.py
+${PYSITELIB}/jsonschema_specifications/tests/__init__.pyc
+${PYSITELIB}/jsonschema_specifications/tests/__init__.pyo
 ${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.py
 ${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.pyc
 ${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.pyo
