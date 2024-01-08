@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.6 2022/03/23 21:16:44 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.7 2024/01/08 23:03:50 mef Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
@@ -84,8 +84,8 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
  : ${CXXPICFLAGS="${cxxpicflags}"}
  if test -n "${CXX}" -a -z "${CXXPICFLAGS}"; then
    case "${host_os}" in
--    aix*|mingw*)
-+    aix*|mingw*|darwin*)
+-    aix*|mingw*|msys)
++    aix*|mingw*||msys|darwin*)
        ;;
      *)
        warn_cxxpicflags="I could not determine CXXPICFLAGS."
