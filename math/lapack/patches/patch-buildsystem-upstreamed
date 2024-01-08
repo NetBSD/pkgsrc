@@ -1,0 +1,140 @@
+$NetBSD: patch-buildsystem-upstreamed,v 1.1 2024/01/08 21:28:56 thor Exp $
+
+A changeset that I pushed upstream in a PR, to enable separate libblas build,
+un-break standalone CBLAS build with included BLAS, not unconditionally
+require unnecessary C++ compiler.
+
+See: https://github.com/Reference-LAPACK/lapack/pull/972
+
+diff --git a/BLAS/CMakeLists.txt b/BLAS/CMakeLists.txt
+index a33f38f25..8e34fa858 100644
+--- BLAS/CMakeLists.txt
++++ BLAS/CMakeLists.txt
+@@ -14,3 +14,8 @@ install(FILES
+   DESTINATION ${PKG_CONFIG_DIR}
+   COMPONENT Development
+   )
++
++install(EXPORT ${BLASLIB}-targets
++  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${BLASLIB}-${LAPACK_VERSION}
++  COMPONENT Development
++  )
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5c3818db5..279286393 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ cmake_minimum_required(VERSION 3.6)
+ 
+-project(LAPACK)
++project(LAPACK Fortran C)
+ 
+ set(LAPACK_MAJOR_VERSION 3)
+ set(LAPACK_MINOR_VERSION 12)
+@@ -245,8 +245,12 @@ endif()
+ # Neither user specified or optimized BLAS libraries can be used
+ if(NOT BLAS_FOUND)
+   message(STATUS "Using supplied NETLIB BLAS implementation")
++  set(LAPACK_INSTALL_EXPORT_NAME_CACHE ${LAPACK_INSTALL_EXPORT_NAME})
++  set(LAPACK_INSTALL_EXPORT_NAME ${BLASLIB}-targets)
+   add_subdirectory(BLAS)
+   set(BLAS_LIBRARIES ${BLASLIB})
++  set(LAPACK_INSTALL_EXPORT_NAME ${LAPACK_INSTALL_EXPORT_NAME_CACHE})
++  unset(LAPACK_INSTALL_EXPORT_NAME_CACHE)
+ else()
+   set(CMAKE_EXE_LINKER_FLAGS
+     "${CMAKE_EXE_LINKER_FLAGS} ${BLAS_LINKER_FLAGS}"
+@@ -278,6 +282,10 @@ endif()
+ 
+ option(USE_OPTIMIZED_LAPACK "Whether or not to use an optimized LAPACK library instead of included netlib LAPACK" OFF)
+ 
++option(LAPACK "Whether to build or use LAPACK (to enable a BLAS-only build)")
++
++if(LAPACK)
++
+ # --------------------------------------------------
+ # LAPACK
+ # User did not provide a LAPACK Library but specified to search for one
+@@ -349,6 +357,8 @@ else()
+     CACHE STRING "Linker flags for shared libs" FORCE)
+ endif()
+ 
++endif()
++
+ if(BUILD_TESTING)
+   add_subdirectory(TESTING)
+ endif()
+@@ -414,6 +424,7 @@ function(_display_cpp_implementation_msg name)
+   message(STATUS "----------------")
+ endfunction()
+ if (BLAS++)
++  enable_language(CXX)
+   _display_cpp_implementation_msg("BLAS")
+   include(ExternalProject)
+   ExternalProject_Add(blaspp
+@@ -425,6 +436,7 @@ if (BLAS++)
+   ExternalProject_Add_StepDependencies(blaspp build ${BLAS_LIBRARIES})
+ endif()
+ if (LAPACK++)
++  enable_language(CXX)
+ 	message (STATUS "linking lapack++ against ${LAPACK_LIBRARIES}")
+   _display_cpp_implementation_msg("LAPACK")
+   include(ExternalProject)
+@@ -483,10 +495,14 @@ if(NOT BLAS_FOUND)
+   set(ALL_TARGETS ${ALL_TARGETS} ${BLASLIB})
+ endif()
+ 
++if(LAPACK)
+ if(NOT LATESTLAPACK_FOUND)
+   set(ALL_TARGETS ${ALL_TARGETS} ${LAPACKLIB})
++  set(BUILD_LAPACK ON)
++endif()
+ endif()
+ 
++if(LAPACK)
+ # Export lapack targets, not including lapacke, from the
+ # install tree, if any.
+ set(_lapack_config_install_guard_target "")
+@@ -500,6 +516,7 @@ if(ALL_TARGETS)
+   # lapack-config.cmake to load targets from the install tree.
+   list(GET ALL_TARGETS 0 _lapack_config_install_guard_target)
+ endif()
++endif()
+ 
+ # Include cblas in targets exported from the build tree.
+ if(CBLAS)
+@@ -515,6 +532,8 @@ if(NOT LAPACK_WITH_TMGLIB_FOUND AND LAPACKE_WITH_TMG)
+   set(ALL_TARGETS ${ALL_TARGETS} ${TMGLIB})
+ endif()
+ 
++if(BUILD_LAPACK)
++
+ # Export lapack and lapacke targets from the build tree, if any.
+ set(_lapack_config_build_guard_target "")
+ if(ALL_TARGETS)
+@@ -552,6 +571,9 @@ install(FILES
+   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${LAPACKLIB}-${LAPACK_VERSION}
+   COMPONENT Development
+   )
++
++endif() # BUILD_LAPACK
++
+ if (LAPACK++)
+   install(
+   DIRECTORY "${LAPACK_BINARY_DIR}/lib/"
+@@ -563,6 +585,7 @@ if (LAPACK++)
+     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+     FILES_MATCHING REGEX "\\.(h|hh)$"
+   )
++  include(CMakePackageConfigHelpers)
+   write_basic_package_version_file(
+     "lapackppConfigVersion.cmake"
+     VERSION 2020.10.02
+@@ -576,6 +599,7 @@ if (LAPACK++)
+ 
+ endif()
+ if (BLAS++)
++  include(CMakePackageConfigHelpers)
+   write_basic_package_version_file(
+     "blasppConfigVersion.cmake"
+     VERSION 2020.10.02
