@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/06/10 00:18:52 thor Exp $
-lib/liblapack.a
+@comment $NetBSD: PLIST,v 1.7 2024/01/08 21:28:55 thor Exp $
 lib/liblapack.so
 lib/liblapack.so.3
 lib/liblapack.so.${PKGVERSION}

@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/23 22:45:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/08 21:28:57 thor Exp $
 include/cblas.h
+include/cblas_64.h
 include/cblas_f77.h
 include/cblas_mangling.h
 include/netlib/cblas.h
+include/netlib/cblas_64.h
 include/netlib/cblas_f77.h
 include/netlib/cblas_mangling.h
-lib/libcblas.a
 lib/libcblas.so
 lib/libcblas.so.3
 lib/libcblas.so.${PKGVERSION}
