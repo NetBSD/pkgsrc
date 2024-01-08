@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.214 2024/01/08 21:29:35 thor Exp $
+$NetBSD: CHANGES-2024,v 1.215 2024/01/08 21:29:42 thor Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/lapack to 3.12.0 [thor 2024-01-08]
 	Updated math/lapack64 to 3.12.0 [thor 2024-01-08]
 	Updated math/lapacke to 3.12.0 [thor 2024-01-08]
+	Updated math/lapacke64 to 3.12.0 [thor 2024-01-08]
