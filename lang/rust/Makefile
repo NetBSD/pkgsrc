@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2024/01/06 19:00:19 he Exp $
+# $NetBSD: Makefile,v 1.300 2024/01/08 08:16:52 tnn Exp $
 
 DISTNAME=	rustc-1.74.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -158,6 +158,8 @@ CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/dox.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run-docker.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/style.sh
+
+CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 
 .if ${OPSYS} == "NetBSD"
 # This block contains information about known trouble on NetBSD and workarounds.
