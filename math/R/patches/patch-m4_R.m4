@@ -1,10 +1,10 @@
-$NetBSD: patch-m4_R.m4,v 1.3 2023/12/23 20:10:56 thor Exp $
+$NetBSD: patch-m4_R.m4,v 1.4 2024/01/08 23:03:50 mef Exp $
 
 Ensure tests for clog & co. fail, not just emit warning
 
---- m4/R.m4.orig	2022-11-01 23:15:01.000000000 +0000
-+++ m4/R.m4
-@@ -225,7 +225,7 @@ if test -z "${texi2any_version_maj}" \
+--- m4/R.m4.orig	2023-07-30 07:15:01.000000000 +0900
++++ m4/R.m4	2024-01-09 08:02:14.228733733 +0900
+@@ -226,7 +226,7 @@ if test -z "${texi2any_version_maj}" \
  elif test ${texi2any_version_maj} -gt 5; then
    r_cv_prog_texi2any_v5=yes
  elif test ${texi2any_version_maj} -lt 5 \
@@ -13,7 +13,7 @@ Ensure tests for clog & co. fail, not just emit warning
    r_cv_prog_texi2any_v5=no
  else
    r_cv_prog_texi2any_v5=yes
-@@ -904,6 +904,9 @@ dnl Yes we need to double quote this ...
+@@ -905,6 +905,9 @@ dnl Yes we need to double quote this ...
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -23,7 +23,7 @@ Ensure tests for clog & co. fail, not just emit warning
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -996,6 +999,9 @@ typedef struct {
+@@ -1000,6 +1003,9 @@ typedef union {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -33,7 +33,7 @@ Ensure tests for clog & co. fail, not just emit warning
  int main () {
      Rcomplex z[3];
  
-@@ -3763,9 +3769,9 @@ R_CHECK_FUNCS([cabs carg cexp clog csqrt
+@@ -3858,9 +3864,9 @@ R_CHECK_FUNCS([cabs carg cexp clog csqrt
  AC_DEFUN([R_CHECK_DECL],
  [AS_VAR_PUSHDEF([ac_Symbol], [ac_cv_have_decl_$1])dnl
  AC_CACHE_CHECK([whether $1 exists and is declared], ac_Symbol,
@@ -46,15 +46,15 @@ Ensure tests for clog & co. fail, not just emit warning
  #endif
  ])],
                     [AS_VAR_SET(ac_Symbol, yes)],
-@@ -4307,9 +4313,9 @@ AC_CACHE_CHECK([if libcurl is version 7
- int main(int argc, const char * argv[]) 
+@@ -4682,9 +4688,9 @@ AC_CACHE_CHECK([if libcurl is >= 7.28.0]
+ int main(void) 
  {
  #ifdef LIBCURL_VERSION_MAJOR
 -#if LIBCURL_VERSION_MAJOR > 7
 +#if LIBCURL_VERSION_MAJOR > 8
-   exit(1);
+   exit(0);
 -#elif LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28
-+#elif (LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28) || LIBCURL_VERSION_MAJOR == 8
++#elif LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28 || LIBCURL_VERSION_MAJOR == 8
    exit(0);
  #else
    exit(1);
