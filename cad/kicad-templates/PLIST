@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/06/06 10:23:19 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/08 08:04:36 tnn Exp $
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_ASMEY1435-2014_EN.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_DE.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_EN.kicad_wks
@@ -101,6 +101,22 @@ share/kicad/template/Hammond_1593K_Enclosure/meta/1593K3B.jpg
 share/kicad/template/Hammond_1593K_Enclosure/meta/brd.png
 share/kicad/template/Hammond_1593K_Enclosure/meta/icon.png
 share/kicad/template/Hammond_1593K_Enclosure/meta/info.html
+share/kicad/template/KiCad_MR_diagrams_large_parts/meta/example.png
+share/kicad/template/KiCad_MR_diagrams_large_parts/meta/icon.png
+share/kicad/template/KiCad_MR_diagrams_large_parts/meta/icon.svg
+share/kicad/template/KiCad_MR_diagrams_large_parts/meta/info.html
+share/kicad/template/KiCad_MR_diagrams_large_parts/mr_diagrams_large_parts.kicad_pcb
+share/kicad/template/KiCad_MR_diagrams_large_parts/mr_diagrams_large_parts.kicad_prl
+share/kicad/template/KiCad_MR_diagrams_large_parts/mr_diagrams_large_parts.kicad_pro
+share/kicad/template/KiCad_MR_diagrams_large_parts/mr_diagrams_large_parts.kicad_sch
+share/kicad/template/KiCad_MR_diagrams_small_parts/meta/example.png
+share/kicad/template/KiCad_MR_diagrams_small_parts/meta/icon.png
+share/kicad/template/KiCad_MR_diagrams_small_parts/meta/icon.svg
+share/kicad/template/KiCad_MR_diagrams_small_parts/meta/info.html
+share/kicad/template/KiCad_MR_diagrams_small_parts/mr_diagrams_small_parts.kicad_pcb
+share/kicad/template/KiCad_MR_diagrams_small_parts/mr_diagrams_small_parts.kicad_prl
+share/kicad/template/KiCad_MR_diagrams_small_parts/mr_diagrams_small_parts.kicad_pro
+share/kicad/template/KiCad_MR_diagrams_small_parts/mr_diagrams_small_parts.kicad_sch
 share/kicad/template/RaspberryPi-HAT/RaspberryPi-HAT.kicad_pcb
 share/kicad/template/RaspberryPi-HAT/RaspberryPi-HAT.kicad_prl
 share/kicad/template/RaspberryPi-HAT/RaspberryPi-HAT.kicad_pro

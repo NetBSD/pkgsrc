@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2023/06/06 10:20:58 bouyer Exp $
+$NetBSD: distinfo,v 1.24 2024/01/08 08:04:35 tnn Exp $
 
-BLAKE2s (kicad-7.0.5.tar.bz2) = f61bf73159005879d96b05382163ae5ed5e24f31cd6cf10cc027ce83812289ae
-SHA512 (kicad-7.0.5.tar.bz2) = 72f35bca74f29f9e8066fa15564d58bc14d8a196c762406e68ee1dac99ccc2d69056e1d4005ecf7aaed97f0be4c33a49065f5bfc03b4fc713ee5f12edacf3d6a
-Size (kicad-7.0.5.tar.bz2) = 43490022 bytes
+BLAKE2s (kicad-7.0.10.tar.bz2) = ced7ab7517831b7822a85d5e9842fbd5e1b8d2ef3575ca79de475be2aa64c89c
+SHA512 (kicad-7.0.10.tar.bz2) = ee3da23edf9e5e7939af7b8f7ed1bed955c9ef83e17ba01d17e3b93e7ef2c9c35f6ec986aca6b43dec902a8b88a91403ebf10d60bf5b27c7993073d2b7c3e3dd
+Size (kicad-7.0.10.tar.bz2) = 43991808 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-cmake_config.h.cmake) = 325b9c81e90477152b778e04c4fabe41548aa51d
 SHA1 (patch-cvpcb_CMakeLists.txt) = 80a3735a7a4a7c54dd577b436e2c3b3527d5e496
