@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:16 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.apache2
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.mit
+@comment $NetBSD: PLIST,v 1.8 2024/01/08 19:56:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-MIT
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
 ${PYSITELIB}/structlog/__init__.py
 ${PYSITELIB}/structlog/__init__.pyc
 ${PYSITELIB}/structlog/__init__.pyo
@@ -26,9 +26,12 @@ ${PYSITELIB}/structlog/_greenlets.pyo
 ${PYSITELIB}/structlog/_log_levels.py
 ${PYSITELIB}/structlog/_log_levels.pyc
 ${PYSITELIB}/structlog/_log_levels.pyo
-${PYSITELIB}/structlog/_loggers.py
-${PYSITELIB}/structlog/_loggers.pyc
-${PYSITELIB}/structlog/_loggers.pyo
+${PYSITELIB}/structlog/_native.py
+${PYSITELIB}/structlog/_native.pyc
+${PYSITELIB}/structlog/_native.pyo
+${PYSITELIB}/structlog/_output.py
+${PYSITELIB}/structlog/_output.pyc
+${PYSITELIB}/structlog/_output.pyo
 ${PYSITELIB}/structlog/_utils.py
 ${PYSITELIB}/structlog/_utils.pyc
 ${PYSITELIB}/structlog/_utils.pyo
@@ -54,9 +57,15 @@ ${PYSITELIB}/structlog/testing.pyo
 ${PYSITELIB}/structlog/threadlocal.py
 ${PYSITELIB}/structlog/threadlocal.pyc
 ${PYSITELIB}/structlog/threadlocal.pyo
+${PYSITELIB}/structlog/tracebacks.py
+${PYSITELIB}/structlog/tracebacks.pyc
+${PYSITELIB}/structlog/tracebacks.pyo
 ${PYSITELIB}/structlog/twisted.py
 ${PYSITELIB}/structlog/twisted.pyc
 ${PYSITELIB}/structlog/twisted.pyo
 ${PYSITELIB}/structlog/types.py
 ${PYSITELIB}/structlog/types.pyc
 ${PYSITELIB}/structlog/types.pyo
+${PYSITELIB}/structlog/typing.py
+${PYSITELIB}/structlog/typing.pyc
+${PYSITELIB}/structlog/typing.pyo
