@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_R.m4,v 1.4 2024/01/08 23:03:50 mef Exp $
+$NetBSD: patch-m4_R.m4,v 1.5 2024/01/08 23:15:39 mef Exp $
 
 Ensure tests for clog & co. fail, not just emit warning
 
@@ -54,7 +54,7 @@ Ensure tests for clog & co. fail, not just emit warning
 +#if LIBCURL_VERSION_MAJOR > 8
    exit(0);
 -#elif LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28
-+#elif LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28 || LIBCURL_VERSION_MAJOR == 8
++#elif (LIBCURL_VERSION_MAJOR == 7 && LIBCURL_VERSION_MINOR >= 28) || LIBCURL_VERSION_MAJOR == 8
    exit(0);
  #else
    exit(1);
