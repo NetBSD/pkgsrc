@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2022/10/21 08:51:19 wiz Exp $
+$NetBSD: distinfo,v 1.20 2024/01/08 19:34:40 wiz Exp $
 
-BLAKE2s (imake-1.0.9.tar.xz) = 72525a0d45881d9113978c2099dbfa3d561a4c5963e43043052c199291e9ee30
-SHA512 (imake-1.0.9.tar.xz) = e7587cf80369c8f4fcc1207c13bcb74a53d838b504ac8a7f3b98fb8f5f595cc7b8e5e9fad50cadcf40cf27bd02ef4eae7fe458854bbed7bea27d474d66520644
-Size (imake-1.0.9.tar.xz) = 153332 bytes
+BLAKE2s (imake-1.0.10.tar.xz) = 5fcd25a098e6df426278e8cbb0446db2d5486e1932d89c3c5fb44095bcf4af8e
+SHA512 (imake-1.0.10.tar.xz) = ea96db27a6da13ea2d64652936e508b5e3d5d712347a2eb248376dc1f262c18720d9934b8ae69b4c0fc65b135c847be42da084fe924e4825ce1d359f4ef7e60f
+Size (imake-1.0.10.tar.xz) = 155284 bytes
 SHA1 (patch-imake.c) = d184f054ef71e37135e5dfdd990332ce996bcd0a
 SHA1 (patch-imakemdep.h) = 12b05670954812197d18008c0209112e77d79826

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/06/30 06:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/08 19:34:39 wiz Exp $
 
-DISTNAME=		imake-1.0.9
-PKGREVISION=		1
+DISTNAME=		imake-1.0.10
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
