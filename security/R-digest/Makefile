@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/12/31 10:22:04 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/08 07:31:50 mef Exp $
 
 R_PKGNAME=	digest
-R_PKGVER=	0.6.31
+R_PKGVER=	0.6.33
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
 
-# Packages suggested but not available: 'tinytest', 'simplermarkdown'
-#TEST_DEPENDS+=
+# Packages suggested but not available: 'simplermarkdown'
+TEST_DEPENDS+=	R-tinytst-[0-9]*:../../devel/R-tinytest
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
