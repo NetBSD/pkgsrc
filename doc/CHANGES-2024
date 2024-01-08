@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.203 2024/01/08 07:18:36 mef Exp $
+$NetBSD: CHANGES-2024,v 1.204 2024/01/08 07:31:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -235,3 +235,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cad/klayout to 0.28.15 [mef 2024-01-07]
 	Updated emulators/nono to 0.6.4 [jun 2024-01-08]
 	Updated math/R to 4.3.2 [mef 2024-01-08]
+	Updated security/R-digest to 0.6.33 [mef 2024-01-08]
