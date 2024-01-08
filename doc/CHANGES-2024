@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.207 2024/01/08 08:07:25 tnn Exp $
+$NetBSD: CHANGES-2024,v 1.208 2024/01/08 12:00:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -244,3 +244,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cad/kicad-packages3d to 7.0.10 [tnn 2024-01-08]
 	Updated cad/kicad-symbols to 7.0.10 [tnn 2024-01-08]
 	Updated cad/kicad-templates to 7.0.10 [tnn 2024-01-08]
+	Updated devel/py-immutabledict to 4.1.0 [adam 2024-01-08]
+	Updated textproc/py-jsonschema-specifications to 2023.12.1 [adam 2024-01-08]
