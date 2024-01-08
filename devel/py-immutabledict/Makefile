@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/08 11:57:05 adam Exp $
 
-DISTNAME=	immutabledict-2.2.5
+DISTNAME=	immutabledict-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/immutabledict/}
 
@@ -12,14 +11,10 @@ COMMENT=	Immutable wrapper around dictionaries for Python 3
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
