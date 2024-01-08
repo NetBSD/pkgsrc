@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/01/07 16:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/01/08 21:30:05 maya Exp $
 
 DISTNAME=		fish-3.7.0
 CATEGORIES=		shells
@@ -54,7 +54,6 @@ post-extract:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
 CMAKE_GENERATOR=	make
 
-.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
