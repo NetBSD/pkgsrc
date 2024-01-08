@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/02/13 07:59:01 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/01/08 08:04:35 tnn Exp $
 bin/_cvpcb.kiface
 bin/_eeschema.kiface
 bin/_gerbview.kiface
@@ -314,7 +314,7 @@ share/kicad/internat/nl/kicad.mo
 share/kicad/internat/no/kicad.mo
 share/kicad/internat/pl/kicad.mo
 share/kicad/internat/pt/kicad.mo
-share/kicad/internat/pt_br/kicad.mo
+share/kicad/internat/pt_BR/kicad.mo
 share/kicad/internat/ru/kicad.mo
 share/kicad/internat/sv/kicad.mo
 share/kicad/internat/th/kicad.mo

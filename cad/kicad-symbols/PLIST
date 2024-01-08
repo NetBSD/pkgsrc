@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/06/06 10:23:19 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/01/08 08:04:36 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -20,6 +20,7 @@ share/kicad/symbols/Battery_Management.kicad_sym
 share/kicad/symbols/Buffer.kicad_sym
 share/kicad/symbols/CPLD_Altera.kicad_sym
 share/kicad/symbols/CPLD_Microchip.kicad_sym
+share/kicad/symbols/CPLD_Renesas.kicad_sym
 share/kicad/symbols/CPLD_Xilinx.kicad_sym
 share/kicad/symbols/CPU.kicad_sym
 share/kicad/symbols/CPU_NXP_6800.kicad_sym
@@ -146,6 +147,7 @@ share/kicad/symbols/MCU_SiliconLabs.kicad_sym
 share/kicad/symbols/MCU_Texas.kicad_sym
 share/kicad/symbols/MCU_Texas_MSP430.kicad_sym
 share/kicad/symbols/MCU_Texas_SimpleLink.kicad_sym
+share/kicad/symbols/MCU_WCH_CH32V0.kicad_sym
 share/kicad/symbols/Mechanical.kicad_sym
 share/kicad/symbols/Memory_EEPROM.kicad_sym
 share/kicad/symbols/Memory_EPROM.kicad_sym
@@ -209,6 +211,7 @@ share/kicad/symbols/Transformer.kicad_sym
 share/kicad/symbols/Transistor_Array.kicad_sym
 share/kicad/symbols/Transistor_BJT.kicad_sym
 share/kicad/symbols/Transistor_FET.kicad_sym
+share/kicad/symbols/Transistor_FET_Other.kicad_sym
 share/kicad/symbols/Transistor_IGBT.kicad_sym
 share/kicad/symbols/Transistor_Power_Module.kicad_sym
 share/kicad/symbols/Triac_Thyristor.kicad_sym
