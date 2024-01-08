@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.2 2024/01/03 20:17:45 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.3 2024/01/08 22:06:30 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -10,4 +10,7 @@ graphics/ImageMagick: bugfix
 
 Pullup ticket #6829 - requested by wiz
 devel/py-pybind11: build fix
+
+Pullup ticket #6830 - requested by wiz
+devel/py-setuptools: build fix
 
