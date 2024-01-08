@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.249 2023/12/23 20:10:56 thor Exp $
+# $NetBSD: Makefile,v 1.250 2024/01/08 07:18:26 mef Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.2.3
+DISTNAME=	R-4.3.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -111,7 +111,7 @@ CONFIGURE_ARGS.Darwin+=	--disable-openmp
 # https://trac.macports.org/ticket/66095
 # Darwin 21 corresponds to macOS 12
 .if ${OPSYS} == "Darwin" && ${OS_VERSION:R} > 21
-MAKE_ENV.Darwin+= MACOSX_DEPLOYMENT_TARGET="12.0"
+MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="12.0"
 .endif
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
@@ -159,6 +159,30 @@ SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
+SUBST_CLASSES+=		strtoi
+SUBST_STAGE.strtoi=	pre-configure
+SUBST_MESSAGE.strtoi=	Renaming strtoi to strtoiR to avoid conflict
+SUBST_FILES.strtoi=	\
+	tests/reg-tests-1d.R \
+	doc/NEWS.3 \
+	doc/html/NEWS.2.html \
+	doc/html/NEWS.3.html \
+	doc/NEWS.2 \
+	doc/NEWS.3.Rd \
+	doc/NEWS.2.Rd \
+	src/include/Internal.h \
+	src/library/base/man/hexmode.Rd \
+	src/library/base/man/octmode.Rd \
+	src/library/base/man/strtoi.Rd \
+	src/library/base/R/octhex.R \
+	src/library/base/R/version.R \
+	src/library/base/R/character.R \
+	src/gnuwin32/Rdll.hide \
+	src/main/names.c \
+	src/main/character.c
+
+SUBST_SED.strtoi=	-e "s,strtoi,strtoiR,g"
+
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 # failed to convert strong functions and variables: Invalid type identifier
@@ -181,6 +205,10 @@ fix-darwin-install-name:
 		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
+
+# remove orig version left out
+post-install:
+	${RM}	${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"

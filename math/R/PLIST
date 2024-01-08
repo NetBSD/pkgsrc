@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2022/04/22 14:01:19 wen Exp $
+@comment $NetBSD: PLIST,v 1.37 2024/01/08 07:18:26 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -64,6 +64,7 @@ lib/R/doc/html/SearchOn.html
 lib/R/doc/html/about.html
 lib/R/doc/html/favicon.ico
 lib/R/doc/html/index.html
+lib/R/doc/html/katex-check.js
 lib/R/doc/html/katex-config.js
 lib/R/doc/html/katex/LICENSE
 lib/R/doc/html/katex/README.md
@@ -273,9 +274,7 @@ lib/R/library/MASS/scripts/ch13.R
 lib/R/library/MASS/scripts/ch14.R
 lib/R/library/MASS/scripts/ch15.R
 lib/R/library/MASS/scripts/ch16.R
-lib/R/library/Matrix/Copyrights
 lib/R/library/Matrix/DESCRIPTION
-lib/R/library/Matrix/Doxyfile
 lib/R/library/Matrix/INDEX
 lib/R/library/Matrix/LICENCE
 lib/R/library/Matrix/Meta/Rd.rds
@@ -296,7 +295,6 @@ lib/R/library/Matrix/data/KNex.R
 lib/R/library/Matrix/data/USCounties.R
 lib/R/library/Matrix/data/datalist
 lib/R/library/Matrix/data/wrld_1deg.R
-lib/R/library/Matrix/doc/Announce.txt
 lib/R/library/Matrix/doc/Comparisons.R
 lib/R/library/Matrix/doc/Comparisons.Rnw
 lib/R/library/Matrix/doc/Comparisons.pdf
@@ -314,7 +312,6 @@ lib/R/library/Matrix/doc/SuiteSparse/CHOLMOD.txt
 lib/R/library/Matrix/doc/SuiteSparse/COLAMD.txt
 lib/R/library/Matrix/doc/SuiteSparse/SPQR.txt
 lib/R/library/Matrix/doc/SuiteSparse/SuiteSparse_config.txt
-lib/R/library/Matrix/doc/SuiteSparse/UserGuides.txt
 lib/R/library/Matrix/doc/index.html
 lib/R/library/Matrix/doc/sparseModels.R
 lib/R/library/Matrix/doc/sparseModels.Rnw
@@ -706,6 +703,10 @@ lib/R/library/grDevices/enc/MacRoman.enc
 lib/R/library/grDevices/enc/PDFDoc.enc
 lib/R/library/grDevices/enc/TeXtext.enc
 lib/R/library/grDevices/enc/WinAnsi.enc
+lib/R/library/grDevices/fonts/Montserrat/static/Montserrat-BoldItalic.ttf
+lib/R/library/grDevices/fonts/Montserrat/static/Montserrat-Medium.ttf
+lib/R/library/grDevices/fonts/Roboto/LICENSE.txt
+lib/R/library/grDevices/fonts/Roboto/Roboto-Medium.ttf
 lib/R/library/grDevices/help/AnIndex
 lib/R/library/grDevices/help/aliases.rds
 lib/R/library/grDevices/help/grDevices.rdb
@@ -797,8 +798,9 @@ lib/R/library/lattice/Meta/hsearch.rds
 lib/R/library/lattice/Meta/links.rds
 lib/R/library/lattice/Meta/nsInfo.rds
 lib/R/library/lattice/Meta/package.rds
+lib/R/library/lattice/Meta/vignette.rds
 lib/R/library/lattice/NAMESPACE
-lib/R/library/lattice/NEWS
+lib/R/library/lattice/NEWS.md
 lib/R/library/lattice/R/lattice
 lib/R/library/lattice/R/lattice.rdb
 lib/R/library/lattice/R/lattice.rdx
@@ -809,6 +811,10 @@ lib/R/library/lattice/demo/intervals.R
 lib/R/library/lattice/demo/labels.R
 lib/R/library/lattice/demo/lattice.R
 lib/R/library/lattice/demo/panel.R
+lib/R/library/lattice/doc/grid.R
+lib/R/library/lattice/doc/grid.Rnw
+lib/R/library/lattice/doc/grid.pdf
+lib/R/library/lattice/doc/index.html
 lib/R/library/lattice/help/AnIndex
 lib/R/library/lattice/help/aliases.rds
 lib/R/library/lattice/help/lattice.rdb
@@ -873,6 +879,8 @@ lib/R/library/mgcv/po/en@quot/LC_MESSAGES/R-mgcv.mo
 lib/R/library/mgcv/po/en@quot/LC_MESSAGES/mgcv.mo
 lib/R/library/mgcv/po/fr/LC_MESSAGES/R-mgcv.mo
 lib/R/library/mgcv/po/fr/LC_MESSAGES/mgcv.mo
+lib/R/library/mgcv/po/it/LC_MESSAGES/R-mgcv.mo
+lib/R/library/mgcv/po/it/LC_MESSAGES/mgcv.mo
 lib/R/library/mgcv/po/ko/LC_MESSAGES/R-mgcv.mo
 lib/R/library/mgcv/po/ko/LC_MESSAGES/mgcv.mo
 lib/R/library/mgcv/po/pl/LC_MESSAGES/R-mgcv.mo
@@ -1174,6 +1182,9 @@ lib/R/library/survival/doc/discrim.R
 lib/R/library/survival/doc/discrim.Rnw
 lib/R/library/survival/doc/discrim.pdf
 lib/R/library/survival/doc/index.html
+lib/R/library/survival/doc/matrix.R
+lib/R/library/survival/doc/matrix.Rnw
+lib/R/library/survival/doc/matrix.pdf
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
 lib/R/library/survival/doc/other.Rnw
@@ -1181,6 +1192,9 @@ lib/R/library/survival/doc/other.pdf
 lib/R/library/survival/doc/population.R
 lib/R/library/survival/doc/population.Rnw
 lib/R/library/survival/doc/population.pdf
+lib/R/library/survival/doc/redistribute.R
+lib/R/library/survival/doc/redistribute.Rnw
+lib/R/library/survival/doc/redistribute.pdf
 lib/R/library/survival/doc/splines.R
 lib/R/library/survival/doc/splines.Rnw
 lib/R/library/survival/doc/splines.pdf
