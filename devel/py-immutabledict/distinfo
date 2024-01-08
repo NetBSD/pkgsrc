@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/07/05 15:48:20 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/01/08 11:57:05 adam Exp $
 
-BLAKE2s (immutabledict-2.2.5.tar.gz) = e5fadb7498ed947cc3687cd43cfa35137810c602c31efbb0768f5033b96c5e11
-SHA512 (immutabledict-2.2.5.tar.gz) = 3bd94d077f599b6e96a4e17a0d9ecf6365975afe73048f9d9de4df35a8272af1baed264ad84ae6826dd6359ad0d371cd90082b4a064cc6350a0e61bc1cf8c713
-Size (immutabledict-2.2.5.tar.gz) = 4316 bytes
+BLAKE2s (immutabledict-4.1.0.tar.gz) = a35085f1a47d41653151f0d97d0464dfcf6a7536b4ed89562002c5ec0df89e83
+SHA512 (immutabledict-4.1.0.tar.gz) = 28d5a918da19919f550dea457646aca09462ad27a13b22dd4320288c93d33226be0022c1a96e5870760f3a2f1c909ae43f4ec2e21b0b2609462408281aa240b5
+Size (immutabledict-4.1.0.tar.gz) = 5941 bytes
