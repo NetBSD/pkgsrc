@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/29 19:52:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/09 11:38:35 tnn Exp $
 
 PKGNAME=	go-bin-1.21.5
 CATEGORIES=	lang
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/go
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
 REPLACE_BASH+=			*/*.bash */*/*.bash */*/*/*.bash */*/*/*/*/*/*.bash
+REPLACE_BASH+=			*/*/*/*/*/*/*/*.bash
 REPLACE_BASH+=			*/*/*.sh */*/*/*.sh */*/*/*/*.sh */*/*/*/*/*/*/*.sh
 REPLACE_BASH+=			misc/arm/a misc/wasm/go_js_wasm_exec
 REPLACE_BASH+=			misc/wasm/go_wasip1_wasm_exec
@@ -75,9 +76,6 @@ EXTRACT_ONLY+=			${DIST.linux-arm64}
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
 DIST.netbsd-arm64=		go${PKGVERSION_NOREV}.netbsd-arm64.tar.gz
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(mdi)
-.  if !make(distinfo)
-PKGNAME=			go-bin-1.19.4
-.  endif
 DISTFILES+=			${DIST.netbsd-arm64}
 EXTRACT_ONLY+=			${DIST.netbsd-arm64}
 .endif
