@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/12/23 20:11:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/09 16:24:03 schmonz Exp $
 
-DISTNAME=	s6-networking-2.7.0.1
+DISTNAME=	s6-networking-2.7.0.2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
