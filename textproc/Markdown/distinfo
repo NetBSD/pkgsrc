@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:21:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/01/09 13:34:50 sborrill Exp $
 
 BLAKE2s (Markdown-1.0.1/Markdown_1.0.1.zip) = ea420f4fa2ab744cc4f3bae26bf1bc698648c8f2a5c32aa64752b68181f94a46
 SHA512 (Markdown-1.0.1/Markdown_1.0.1.zip) = 962df356e641326fbf29cdedc36dafb5f04683f0b3f5eb1efb8e15994e1e000b5a6882c84f09db4a6f8f948811ebbe76759e27871c644e690884db31705eab1f
 Size (Markdown-1.0.1/Markdown_1.0.1.zip) = 17823 bytes
+SHA1 (patch-Markdown.pl) = afded5fadd7b81e2ed97bb56be034a4b64ebcaaf

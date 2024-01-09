@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/09 13:34:50 sborrill Exp $
 #
 
 DISTNAME=	Markdown_1.0.1
 PKGNAME=	Markdown-1.0.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc converters
 MASTER_SITES=	http://daringfireball.net/projects/downloads/
 EXTRACT_SUFX=	.zip
