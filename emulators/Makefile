@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2023/11/14 20:02:01 nia Exp $
+# $NetBSD: Makefile,v 1.356 2024/01/09 12:09:14 ryoon Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -72,6 +72,7 @@ SUBDIR+=	freebsd_lib
 SUBDIR+=	fs-uae
 SUBDIR+=	fs-uae-arcade
 SUBDIR+=	fs-uae-launcher
+SUBDIR+=	fs-uae-qemu-uae
 SUBDIR+=	fuse-emulator
 SUBDIR+=	fuse-emulator-utils
 SUBDIR+=	gearboy
