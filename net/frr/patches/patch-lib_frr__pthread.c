@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_frr__pthread.c,v 1.1 2022/05/16 11:54:20 kardel Exp $
+$NetBSD: patch-lib_frr__pthread.c,v 1.2 2024/01/09 20:17:41 chopps Exp $
 
 	avoid tripping over NULL pointer
 
---- lib/frr_pthread.c.orig	2022-03-13 15:59:48.000000000 +0000
+--- lib/frr_pthread.c.orig	2023-11-27 13:45:33.000000000 +0000
 +++ lib/frr_pthread.c
-@@ -141,7 +141,7 @@ int frr_pthread_set_name(struct frr_pthr
+@@ -128,7 +128,7 @@ int frr_pthread_set_name(struct frr_pthr
  # ifdef GNU_LINUX
  	ret = pthread_setname_np(fpt->thread, fpt->os_name);
  # elif defined(__NetBSD__)
