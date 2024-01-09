@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/01/09 15:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/01/09 17:30:00 gdt Exp $
 
 DISTNAME=	dkim-milter-2.8.3
 PKGREVISION=	7
@@ -16,7 +16,12 @@ NOT_FOR_UNPRIVILEGED=	yes
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-filter
 USE_BUILTIN.libmilter=	no
-USE_TOOLS+=		gm4 gmake
+USE_TOOLS+=		gm4
+# The makefiles appear to be buggy, by having a .->. cycle.
+# \todo File a bug about the cycle with upstream.
+# \todo Check if upstream documents that gmake is needed, and if not
+# convert this todo to revert back after the cycle bug is fixed.
+USE_TOOLS+=		gmake
 EGDIR=			${PREFIX}/share/examples/dkim-milter
 FILES_SUBST+=		DKIM_USER=${DKIM_USER:Q} DKIM_GROUP=${DKIM_GROUP:Q}
 BUILD_DEFS+=		VARBASE DKIM_USER DKIM_GROUP
