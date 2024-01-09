@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/01/09 12:08:13 ryoon Exp $
+
+BLAKE2s (qemu-uae-3.8.6.tar.gz) = 7617cff88b59e4a4f2ee34d7b4fef881aa5eba919cc6d7a4ae540b4f678d5d91
+SHA512 (qemu-uae-3.8.6.tar.gz) = 9f5ed0e212e42759b7719eee38b31bcbb4e085f6fc02a0ee75a54b9576abdd2c780cb0bf1b0d428c7943d421f0c3fdee856a031c5c757c2670f43e2bec0e175c
+Size (qemu-uae-3.8.6.tar.gz) = 10532978 bytes
+SHA1 (patch-Makefile) = 4b9e4e29e57c61c8ce43dd9cc89034bffc5501fa
