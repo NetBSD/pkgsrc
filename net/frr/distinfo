@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2022/05/16 11:54:19 kardel Exp $
+$NetBSD: distinfo,v 1.9 2024/01/09 20:17:41 chopps Exp $
 
-BLAKE2s (frr-8.2.2.tar.gz) = e815bbd44cc9bf04031ed2aae259d863c11e8573bcfd6bb97b0b720f13a0f49e
-SHA512 (frr-8.2.2.tar.gz) = 52d8e82979823f61ec6f117db1eb41b23fd8ad3197ae3f9d2cfa3ad9d96636a3d2f0b36720b2041a9261c8b639ddd48e46a2351ce41cb596f7dc432cddf29256
-Size (frr-8.2.2.tar.gz) = 9439460 bytes
-SHA1 (patch-lib_frr__pthread.c) = 24d695d906e2d4461080d6cdcd82f473e6eee6d8
-SHA1 (patch-pimd_pim__mroute.c) = d0c306ba3fa400532978d18a220c283aae34c7f4
-SHA1 (patch-pimd_pim__sock.c) = 5c99f7671d35813eb1b2e76ef23fa049053b1141
-SHA1 (patch-pkgsrc_zebra.sh.in) = d458e74a1f3319f6e075d3d3a81414bc7d7022f2
-SHA1 (patch-zebra_kernel__socket.c) = 74ef772fa70b69a1767ad11ce89d907504c7528e
+BLAKE2s (frr-9.1.tar.gz) = c09d3967700a1a385d2b055d603e5291c6863767581a9115d46c96e40908a296
+SHA512 (frr-9.1.tar.gz) = 77b278a3ea87da9dfd7b87e4f9ae67f08ed0f24809f6dd228d2ab2e2c29e2b3191d59d50fc474e53e159ac6c79c302481b462125d0657889516f07b8e05e8562
+Size (frr-9.1.tar.gz) = 10779477 bytes
+SHA1 (patch-configure.ac) = d10b406ff371ffab7ce8eb63392c856a87300aa3
+SHA1 (patch-lib_frr__pthread.c) = 566b2a54ebbcf79abaae7f39e563b4b83bd8f474
+SHA1 (patch-pkgsrc_zebra.sh.in) = a466eef102995b1627f031986d10b1d1519dc59e
+SHA1 (patch-zebra_kernel__socket.c) = 118acf4a3d5424a45d1d1c037f1198f6162f4993

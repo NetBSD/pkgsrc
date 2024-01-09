@@ -1,18 +1,18 @@
-$NetBSD: patch-zebra_kernel__socket.c,v 1.4 2022/05/16 11:54:20 kardel Exp $
+$NetBSD: patch-zebra_kernel__socket.c,v 1.5 2024/01/09 20:17:41 chopps Exp $
 
 	Pass IFP interface index if known (normal case) to make
 	interface specific routes work such as in
 
 		ipv6 route ::/0 <ipv6 address> carp0 100
-		ivv6 route ::/0 <other ipv6 address> 200
+		ipv6 route ::/0 <other ipv6 address> 200
 
 	frr-8 now enables SO_RERROR but exits cowardly when the
 	routing socket returns ENOBUFS. ensure at least a bit more
 	socket buffer space by increasing SO_RCVBUF.
 
---- zebra/kernel_socket.c.orig	2022-03-13 15:59:48.000000000 +0000
+--- zebra/kernel_socket.c.orig	2023-11-27 13:45:33.000000000 +0000
 +++ zebra/kernel_socket.c
-@@ -39,6 +39,7 @@
+@@ -24,6 +24,7 @@
  #include "privs.h"
  #include "vrf.h"
  #include "lib_errors.h"
@@ -20,7 +20,7 @@ $NetBSD: patch-zebra_kernel__socket.c,v 1.4 2022/05/16 11:54:20 kardel Exp $
  
  #include "zebra/rt.h"
  #include "zebra/interface.h"
-@@ -1249,6 +1250,20 @@ int rtm_write(int message, union sockuni
+@@ -1234,6 +1235,20 @@ int rtm_write(int message, union sockuni
  #ifdef __OpenBSD__
  	SOCKADDRSET(mpls, RTA_SRC);
  #endif
@@ -41,7 +41,7 @@ $NetBSD: patch-zebra_kernel__socket.c,v 1.4 2022/05/16 11:54:20 kardel Exp $
  
  	msg.rtm.rtm_msglen = pnt - (caddr_t)&msg;
  
-@@ -1434,6 +1449,9 @@ static void routing_socket(struct zebra_
+@@ -1431,6 +1446,9 @@ static void routing_socket(struct zebra_
  		return;
  	}
  
