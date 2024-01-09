@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2024/01/09 12:08:13 ryoon Exp $
+
+* Do not build BIOS. It causes build time errors and not used at all.
+
+--- Makefile.orig	2024-01-08 10:53:05.544415759 +0000
++++ Makefile
+@@ -196,11 +196,11 @@ dtc/%:
+ 
+ $(SUBDIR_RULES): libqemuutil.a libqemustub.a $(common-obj-y)
+ 
+-ROMSUBDIR_RULES=$(patsubst %,romsubdir-%, $(ROMS))
+-romsubdir-%:
+-	$(call quiet-command,$(MAKE) $(SUBDIR_MAKEFLAGS) -C pc-bios/$* V="$(V)" TARGET_DIR="$*/",)
+-
+-ALL_SUBDIRS=$(TARGET_DIRS) $(patsubst %,pc-bios/%, $(ROMS))
++#ROMSUBDIR_RULES=$(patsubst %,romsubdir-%, $(ROMS))
++#romsubdir-%:
++#	$(call quiet-command,$(MAKE) $(SUBDIR_MAKEFLAGS) -C pc-bios/$* V="$(V)" TARGET_DIR="$*/",)
++#
++#ALL_SUBDIRS=$(TARGET_DIRS) $(patsubst %,pc-bios/%, $(ROMS))
+ 
+ recurse-all: $(SUBDIR_RULES) $(ROMSUBDIR_RULES)
+ 
