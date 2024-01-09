@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/09 12:08:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/09 12:57:05 wiz Exp $
 
 DISTNAME=	qemu-uae-3.8.6
 PKGNAME=	fs-uae-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/FrodeSolheim/qemu-uae/
-COMMENT=	FS-UAE plugin for PPC and nwtworking support
+COMMENT=	FS-UAE plugin for PPC and networking support
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	fs-uae>=3.1.66nb4:../../emulators/fs-uae
