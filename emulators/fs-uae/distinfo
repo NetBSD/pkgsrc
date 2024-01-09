@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2022/09/29 09:24:00 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/01/09 12:05:12 ryoon Exp $
 
 BLAKE2s (fs-uae-3.1.66.tar.xz) = 35559710ac49120df22391be7c1617a892a5afc211043096c233c7ff00e24d8e
 SHA512 (fs-uae-3.1.66.tar.xz) = 3d93c6481d4aebb21607fa6cd0716bb809a902a5e6e20cda97751f7878157a0737b80df1290c2e1cf4e13f1e9a824b750c52479cd05e56bff291be7471d167a1
 Size (fs-uae-3.1.66.tar.xz) = 3627688 bytes
+SHA1 (patch-configure) = 9e94af2c55c68b06567bc321b185a1584a318f49
+SHA1 (patch-configure.ac) = b945c3175bb6b17ab55e2d17f23cc8642505a829
 SHA1 (patch-manymouse_x11__xinput2.c) = 9b2891d1ce62affb694ac11b2386115799ed6fa9
 SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = 78ecdd2efe903fdebfb0e144a4fc775296b73048
