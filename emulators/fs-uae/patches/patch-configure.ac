@@ -1,0 +1,20 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/01/09 12:05:12 ryoon Exp $
+
+* Support plugins under NetBSD.
+
+--- configure.ac.orig	2024-01-09 05:41:57.377910513 +0000
++++ configure.ac
+@@ -390,6 +390,13 @@ AS_CASE([$host_os],
+     OS_CPPFLAGS="-DDRAGONFLYBSD"
+     LOADABLE_MODULE_EXT=".so"
+ ],
++[dragonfly*], [
++    OS_NAME="netbsd"
++    OS_NAME_2="NetBSD"
++    OS_NAME_3="NetBSD"
++    OS_CPPFLAGS="-DNETBSD"
++    LOADABLE_MODULE_EXT=".so"
++],
+ [
+     OS_NAME="unknown"
+     OS_NAME_2="Unknown OS"
