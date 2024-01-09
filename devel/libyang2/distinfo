@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/09 15:53:59 chopps Exp $
 
-BLAKE2s (libyang/v2.0.7.tar.gz) = 34c6bdf38d145dffe6002661ec62100397457d491676af03f039c3f53c688f79
-SHA512 (libyang/v2.0.7.tar.gz) = edb1d8d372b25ed820fa312e0dc96d4af7c8cd5ddeb785964de73f64774062ea7a5586bb27e2039ad24189d4a2ba04268921ca86e82423fc48647d1d10a2a0a7
-Size (libyang/v2.0.7.tar.gz) = 1031818 bytes
+BLAKE2s (libyang/v2.1.128.tar.gz) = d23c83ad49389ec4e0a7351373dbce1f467082f3a99ad4a75af4fc3f55532001
+SHA512 (libyang/v2.1.128.tar.gz) = 506dcb58e6d8682cd1ad47252ddd98b8e093c11be8198169b754834a8e36315884672ee534b1c30abc27be1399417f4497291a2589aa35740189e60f5c9532d8
+Size (libyang/v2.1.128.tar.gz) = 1262102 bytes
+SHA1 (patch-CMakeModules_UseCompat.cmake) = 8511976a8c789e6a8476e57bb5f3ac10ae19af5b
+SHA1 (patch-compat_compat.c) = 9ba1bbbb1efc7e738fbc80e6af6b0f3d7a86e1be
