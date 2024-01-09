@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/08/11 09:49:42 kardel Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/09 15:53:59 chopps Exp $
 
 GITHUB_PROJECT=	libyang
-GITHUB_TAG=	v2.0.7
-DISTNAME=	v2.0.7
+GITHUB_TAG=	v2.1.128
+DISTNAME=	v2.1.128
 PKGNAME=	${GITHUB_PROJECT}2-${DISTNAME:S,^v,,}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CESNET/}
@@ -14,8 +14,7 @@ HOMEPAGE=	https://github.com/CESNET/libyang/
 COMMENT=	YANG data modeling language library
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/libyang-2.0.7
-USE_CMAKE=	yes
+WRKSRC=		${WRKDIR}/libyang-2.1.128
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -24,16 +23,12 @@ TOOL_DEPENDS+=	cmocka>=1.1.5:../../devel/cmocka
 PKGCONFIG_OVERRIDE+=	libyang.pc.in
 PKGCONFIG_OVERRIDE+=	swig/libyang-cpp.pc.in
 
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_build
-
 .include "../../mk/bsd.prefs.mk"
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/_build
+CMAKE_ARGS?=	-DENABLE_TESTS=ON -DCMAKE_BUILD_TYPE:String="Release"
+TEST_TARGET?=	test
 
-CMAKE_ARGS?=	-DCMAKE_BUILD_TYPE:String="Release"
-
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

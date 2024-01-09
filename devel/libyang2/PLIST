@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/11 09:49:42 kardel Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/09 15:53:59 chopps Exp $
 bin/yanglint
 bin/yangre
 include/libyang/config.h
 include/libyang/context.h
 include/libyang/dict.h
+include/libyang/hash_table.h
 include/libyang/in.h
 include/libyang/libyang.h
 include/libyang/log.h
+include/libyang/metadata.h
 include/libyang/out.h
 include/libyang/parser_data.h
 include/libyang/parser_schema.h
 include/libyang/plugins.h
 include/libyang/plugins_exts.h
-include/libyang/plugins_exts_compile.h
-include/libyang/plugins_exts_print.h
 include/libyang/plugins_types.h
 include/libyang/printer_data.h
 include/libyang/printer_schema.h
@@ -25,6 +25,15 @@ include/libyang/tree_schema.h
 include/libyang/version.h
 lib/libyang.so
 lib/libyang.so.2
-lib/libyang.so.2.1.4
+lib/libyang.so.2.41.0
 lib/pkgconfig/libyang.pc
 man/man1/yanglint.1
+man/man1/yangre.1
+share/yang/modules/libyang/ietf-datastores@2018-02-14.yang
+share/yang/modules/libyang/ietf-inet-types@2013-07-15.yang
+share/yang/modules/libyang/ietf-yang-library@2019-01-04.yang
+share/yang/modules/libyang/ietf-yang-metadata@2016-08-05.yang
+share/yang/modules/libyang/ietf-yang-schema-mount@2019-01-14.yang
+share/yang/modules/libyang/ietf-yang-structure-ext@2020-06-17.yang
+share/yang/modules/libyang/ietf-yang-types@2013-07-15.yang
+share/yang/modules/libyang/yang@2022-06-16.yang
