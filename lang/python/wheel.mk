@@ -1,6 +1,11 @@
-# $NetBSD: wheel.mk,v 1.12 2023/12/07 17:59:17 thor Exp $
+# $NetBSD: wheel.mk,v 1.13 2024/01/09 22:48:13 gutteridge Exp $
 #
 # Build and install Python wheels
+#
+# Note per PEP-518, the minimum and default requirements to create .whl files
+# are py-setuptools plus py-wheel; however, there are various other possible
+# tools that projects can use. Thus inclusion of this file does not imply these
+# defaults are defined as TOOL_DEPENDS. This must be done in the package Makefile.
 #
 # Variables:
 #
