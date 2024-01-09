@@ -1,9 +1,9 @@
-$NetBSD: patch-pkgsrc_zebra.sh.in,v 1.1 2020/12/10 16:43:24 kardel Exp $
+$NetBSD: patch-pkgsrc_zebra.sh.in,v 1.2 2024/01/09 20:17:41 chopps Exp $
 
 	don't hard-code quagga.quagga in chown command in
 	pkgsrc/zebra.sh.in.
 
---- pkgsrc/zebra.sh.in.orig	2020-06-30 11:08:57.000000000 +0000
+--- pkgsrc/zebra.sh.in.orig	2023-11-27 13:45:33.000000000 +0000
 +++ pkgsrc/zebra.sh.in
 @@ -28,7 +28,7 @@ pidfile="${socket_dir}/${name}.pid"
  zebra_precmd()
