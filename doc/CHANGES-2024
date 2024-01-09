@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.219 2024/01/08 21:30:13 thor Exp $
+$NetBSD: CHANGES-2024,v 1.220 2024/01/09 05:40:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -258,3 +258,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/blas64 to 3.12.0 [thor 2024-01-08]
 	Updated math/cblas to 3.12.0 [thor 2024-01-08]
 	Updated math/cblas64 to 3.12.0 [thor 2024-01-08]
+	Updated devel/py-jupyter_core to 5.7.1 [adam 2024-01-09]
+	Updated devel/py-ipykernel to 6.28.0 [adam 2024-01-09]
