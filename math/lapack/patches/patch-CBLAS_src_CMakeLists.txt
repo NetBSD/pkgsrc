@@ -1,0 +1,14 @@
+$NetBSD: patch-CBLAS_src_CMakeLists.txt,v 1.6 2024/01/09 03:32:48 ryoon Exp $
+
+* Use fortran compiler as linker to fix gfortran from lang/gcc10 link.
+
+--- CBLAS/src/CMakeLists.txt.orig	2024-01-09 03:26:10.559613758 +0000
++++ CBLAS/src/CMakeLists.txt
+@@ -164,7 +164,6 @@ add_library(${CBLASLIB}
+ 
+ set_target_properties(
+   ${CBLASLIB} PROPERTIES
+-  LINKER_LANGUAGE C
+   VERSION ${LAPACK_VERSION}
+   SOVERSION ${LAPACK_MAJOR_VERSION}
+   POSITION_INDEPENDENT_CODE ON
