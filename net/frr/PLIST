@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2023/05/28 16:03:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/01/09 20:17:41 chopps Exp $
 bin/mtracebis
 bin/vtysh
+include/frr/admin_group.h
+include/frr/affinitymap.h
 include/frr/agg_table.h
+include/frr/asn.h
 include/frr/assert.h
 include/frr/atomlist.h
+include/frr/base64.h
 include/frr/bfd.h
 include/frr/bfdd/bfddp_packet.h
 include/frr/bitfield.h
@@ -13,7 +17,9 @@ include/frr/command.h
 include/frr/command_graph.h
 include/frr/command_match.h
 include/frr/compiler.h
+include/frr/cspf.h
 include/frr/csv.h
+include/frr/darr.h
 include/frr/db.h
 include/frr/debug.h
 include/frr/defaults.h
@@ -23,14 +29,15 @@ include/frr/eigrpd/eigrp_topology.h
 include/frr/eigrpd/eigrpd.h
 include/frr/ferr.h
 include/frr/filter.h
+include/frr/flex_algo.h
 include/frr/freebsd-queue.h
 include/frr/frr_pthread.h
 include/frr/frratomic.h
 include/frr/frrcu.h
+include/frr/frrevent.h
 include/frr/frrlua.h
 include/frr/frrscript.h
 include/frr/frrstr.h
-include/frr/getopt.h
 include/frr/graph.h
 include/frr/hash.h
 include/frr/hook.h
@@ -40,6 +47,7 @@ include/frr/if.h
 include/frr/if_rmap.h
 include/frr/imsg.h
 include/frr/ipaddr.h
+include/frr/iso.h
 include/frr/jhash.h
 include/frr/json.h
 include/frr/keychain.h
@@ -55,6 +63,12 @@ include/frr/log.h
 include/frr/log_vty.h
 include/frr/md5.h
 include/frr/memory.h
+include/frr/mgmt.pb-c.h
+include/frr/mgmt_be_client.h
+include/frr/mgmt_fe_client.h
+include/frr/mgmt_msg.h
+include/frr/mgmt_pb.h
+include/frr/mgmtd/mgmt_defines.h
 include/frr/mlag.h
 include/frr/module.h
 include/frr/monotime.h
@@ -69,7 +83,6 @@ include/frr/northbound_db.h
 include/frr/ns.h
 include/frr/openbsd-queue.h
 include/frr/openbsd-tree.h
-include/frr/ospfapi/ospf_apiclient.h
 include/frr/ospfd/ospf_api.h
 include/frr/ospfd/ospf_asbr.h
 include/frr/ospfd/ospf_dump.h
@@ -97,6 +110,7 @@ include/frr/route_types.h
 include/frr/routemap.h
 include/frr/routing_nb.h
 include/frr/sbuf.h
+include/frr/segment_routing.h
 include/frr/seqlock.h
 include/frr/sha256.h
 include/frr/sigevent.h
@@ -111,8 +125,8 @@ include/frr/srv6.h
 include/frr/stream.h
 include/frr/systemd.h
 include/frr/table.h
+include/frr/tc.h
 include/frr/termtable.h
-include/frr/thread.h
 include/frr/trace.h
 include/frr/typerb.h
 include/frr/typesafe.h
@@ -132,6 +146,8 @@ include/frr/yang_wrappers.h
 include/frr/zclient.h
 include/frr/zebra.h
 include/frr/zlog.h
+include/frr/zlog_5424.h
+include/frr/zlog_live.h
 include/frr/zlog_targets.h
 ${PLIST.doc}info/frr.info
 lib/frr/modules/bgpd_bmp.la
@@ -139,8 +155,10 @@ lib/frr/modules/dplane_sample_plugin.la
 lib/frr/modules/pathd_pcep.la
 lib/frr/modules/zebra_fpm.la
 lib/libfrr.la
+lib/libfrr_pb.la
 lib/libfrrcares.la
-lib/libfrrospfapiclient.la
+lib/libfrrfpm_pb.la
+lib/libmgmt_be_nb.la
 ${PLIST.doc}man/man1/frr.1
 ${PLIST.doc}man/man1/vtysh.1
 ${PLIST.doc}man/man8/frr-bfdd.8
@@ -154,6 +172,7 @@ ${PLIST.doc}man/man8/frr-pbrd.8
 ${PLIST.doc}man/man8/frr-pimd.8
 ${PLIST.doc}man/man8/frr-ripd.8
 ${PLIST.doc}man/man8/frr-ripngd.8
+${PLIST.doc}man/man8/frr-sharpd.8
 ${PLIST.doc}man/man8/frr-staticd.8
 ${PLIST.doc}man/man8/frr-watchfrr.8
 ${PLIST.doc}man/man8/frr-zebra.8
@@ -172,6 +191,7 @@ sbin/frrinit.sh
 sbin/generate_support_bundle.py
 sbin/isisd
 sbin/ldpd
+sbin/mgmtd
 sbin/ospf6d
 sbin/ospfd
 sbin/pathd
@@ -179,6 +199,7 @@ sbin/pbrd
 sbin/pimd
 sbin/ripd
 sbin/ripngd
+sbin/sharpd
 sbin/ssd
 sbin/staticd
 sbin/watchfrr
@@ -198,6 +219,7 @@ ${PLIST.doc}share/doc/frr/html/_images/fig_topologies_rs.png
 ${PLIST.doc}share/doc/frr/html/_images/pathd_config.png
 ${PLIST.doc}share/doc/frr/html/_images/pathd_general.png
 ${PLIST.doc}share/doc/frr/html/_images/pathd_initiated_multi.png
+${PLIST.doc}share/doc/frr/html/_sources/affinitymap.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/babeld.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/basic.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/bfd.rst.txt
@@ -205,6 +227,8 @@ ${PLIST.doc}share/doc/frr/html/_sources/bgp.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/bmp.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/bugs.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/eigrpd.rst.txt
+${PLIST.doc}share/doc/frr/html/_sources/evpn.rst.txt
+${PLIST.doc}share/doc/frr/html/_sources/extlog.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/fabricd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/filter.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/frr-reload.rst.txt
@@ -216,6 +240,8 @@ ${PLIST.doc}share/doc/frr/html/_sources/ipv6.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/isisd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/kernel.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/ldpd.rst.txt
+${PLIST.doc}share/doc/frr/html/_sources/mgmtd.rst.txt
+${PLIST.doc}share/doc/frr/html/_sources/nexthop_groups.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/nhrpd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/ospf6d.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/ospfd.rst.txt
@@ -224,6 +250,7 @@ ${PLIST.doc}share/doc/frr/html/_sources/packet-dumps.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/pathd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/pbr.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/pim.rst.txt
+${PLIST.doc}share/doc/frr/html/_sources/pimv6.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/ripd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/ripngd.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/routemap.rst.txt
@@ -254,6 +281,7 @@ ${PLIST.doc}share/doc/frr/html/_static/pygments.css
 ${PLIST.doc}share/doc/frr/html/_static/searchtools.js
 ${PLIST.doc}share/doc/frr/html/_static/sidebar.js
 ${PLIST.doc}share/doc/frr/html/_static/sphinx_highlight.js
+${PLIST.doc}share/doc/frr/html/affinitymap.html
 ${PLIST.doc}share/doc/frr/html/babeld.html
 ${PLIST.doc}share/doc/frr/html/basic.html
 ${PLIST.doc}share/doc/frr/html/bfd.html
@@ -261,6 +289,8 @@ ${PLIST.doc}share/doc/frr/html/bgp.html
 ${PLIST.doc}share/doc/frr/html/bmp.html
 ${PLIST.doc}share/doc/frr/html/bugs.html
 ${PLIST.doc}share/doc/frr/html/eigrpd.html
+${PLIST.doc}share/doc/frr/html/evpn.html
+${PLIST.doc}share/doc/frr/html/extlog.html
 ${PLIST.doc}share/doc/frr/html/fabricd.html
 ${PLIST.doc}share/doc/frr/html/filter.html
 ${PLIST.doc}share/doc/frr/html/frr-reload.html
@@ -273,6 +303,8 @@ ${PLIST.doc}share/doc/frr/html/ipv6.html
 ${PLIST.doc}share/doc/frr/html/isisd.html
 ${PLIST.doc}share/doc/frr/html/kernel.html
 ${PLIST.doc}share/doc/frr/html/ldpd.html
+${PLIST.doc}share/doc/frr/html/mgmtd.html
+${PLIST.doc}share/doc/frr/html/nexthop_groups.html
 ${PLIST.doc}share/doc/frr/html/nhrpd.html
 ${PLIST.doc}share/doc/frr/html/objects.inv
 ${PLIST.doc}share/doc/frr/html/ospf6d.html
@@ -282,6 +314,7 @@ ${PLIST.doc}share/doc/frr/html/packet-dumps.html
 ${PLIST.doc}share/doc/frr/html/pathd.html
 ${PLIST.doc}share/doc/frr/html/pbr.html
 ${PLIST.doc}share/doc/frr/html/pim.html
+${PLIST.doc}share/doc/frr/html/pimv6.html
 ${PLIST.doc}share/doc/frr/html/ripd.html
 ${PLIST.doc}share/doc/frr/html/ripngd.html
 ${PLIST.doc}share/doc/frr/html/routemap.html
@@ -297,6 +330,7 @@ ${PLIST.doc}share/doc/frr/html/vrrp.html
 ${PLIST.doc}share/doc/frr/html/vtysh.html
 ${PLIST.doc}share/doc/frr/html/watchfrr.html
 ${PLIST.doc}share/doc/frr/html/zebra.html
+share/yang/frr-affinity-map.yang
 share/yang/frr-bfdd.yang
 share/yang/frr-bgp-bmp.yang
 share/yang/frr-bgp-common-multiprotocol.yang
@@ -313,6 +347,7 @@ share/yang/frr-deviations-bgp-datacenter.yang
 share/yang/frr-eigrpd.yang
 share/yang/frr-filter.yang
 share/yang/frr-gmp.yang
+share/yang/frr-if-rmap.yang
 share/yang/frr-interface.yang
 share/yang/frr-isisd.yang
 share/yang/frr-module-translator.yang

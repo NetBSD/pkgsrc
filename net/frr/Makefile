@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2023/08/14 05:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/09 20:17:41 chopps Exp $
 
 GITHUB_PROJECT=	frr
-VERSION=	8.2.2
+VERSION=	9.1
 GITHUB_TAG=	frr-${VERSION}
 DISTNAME=	frr-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FRRouting/}
 
@@ -88,6 +88,9 @@ CONFIGURE_ARGS+=	--enable-vty-group=${FRR_VTY_GROUP}
 CONFIGURE_ARGS+=	--enable-configfile-mask=${FRR_CONF_MODE}
 CONFIGURE_ARGS+=	--enable-logfile-mask=${FRR_LOG_MODE}
 CONFIGURE_ARGS+=	--enable-fpm
+CONFIGURE_ARGS+=	--disable-ospfclient
+CONFIGURE_ARGS+=	--enable-protobuf
+CONFIGURE_ARGS+=	--enable-sharpd
 CONFIGURE_ARGS+=	--with-pkg-git-version
 CONFIGURE_ARGS+=	--with-pkg-extra-version=/${DISTNAME}
 # CONFIGURE_ARGS+=	--enable-address-sanitizer
@@ -102,6 +105,7 @@ post-build:
 	cd ${WRKSRC} && rm -f doc/user/_build/html/_static/jquery-*.js doc/user/_build/html/_static/underscore-*.js
 
 .include "../../devel/libyang2/buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libcares/buildlink3.mk"
