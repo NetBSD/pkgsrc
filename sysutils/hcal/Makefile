@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/05/09 21:50:09 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/09 11:20:41 pin Exp $
 
-DISTNAME=	hcal-0.3.4
+DISTNAME=	hcal-0.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=0xflotus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
