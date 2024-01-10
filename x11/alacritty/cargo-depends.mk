@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2023/12/28 20:40:34 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2024/01/10 21:39:54 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.6
@@ -237,7 +237,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
-CARGO_CRATE_DEPENDS+=	winit-0.29.7
+CARGO_CRATE_DEPENDS+=	winit-0.29.9
 CARGO_CRATE_DEPENDS+=	winnow-0.5.30
 CARGO_CRATE_DEPENDS+=	winreg-0.51.0
 CARGO_CRATE_DEPENDS+=	wio-0.2.2
