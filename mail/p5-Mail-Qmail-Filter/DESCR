@@ -1,0 +1,15 @@
+Mail::Qmail::Filter and its submodules are designed to help you filter
+incoming e-mails when using qmail as MTA.
+
+You should use it like so:
+
+1. Write a frontend script to configure your filters
+2. In the run file for your qmail-smtpd instance, e.g.
+   /var/qmail/supervise/qmail-smtpd/run, export
+   QMAILQUEUE=path_to_your_frontend_script
+
+In each filter, you may do various things:
+
+- examine and change envelope data (RFC5321.MailFrom and recipients)
+- examine and modify the e-mail message (header and/or body)
+- "reject" e-mails (or defer them)
