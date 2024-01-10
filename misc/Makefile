@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2023/11/22 12:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.635 2024/01/10 10:25:39 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -327,6 +327,7 @@ SUBDIR+=	py-trytond-stock-package-shipping-dpd
 SUBDIR+=	py-trytond-stock-package-shipping-ups
 SUBDIR+=	py-trytond-stock-product-location
 SUBDIR+=	py-trytond-stock-split
+SUBDIR+=	py-watchfiles
 SUBDIR+=	qbrew
 SUBDIR+=	qt6-qtsensors
 SUBDIR+=	qt6gtk2
