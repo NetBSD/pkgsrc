@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2023/12/05 19:46:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.98 2024/01/10 19:14:39 bsiegert Exp $
 
 DISTNAME=		beats-6.8.13
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
