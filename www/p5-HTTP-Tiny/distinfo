@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.17 2024/01/10 16:05:12 schmonz Exp $
+
+BLAKE2s (HTTP-Tiny-0.088.tar.gz) = ea6a3a4ef526c855b4f53b0553b902dbf5fff1f92e02ffd10869d82aaafeba9c
+SHA512 (HTTP-Tiny-0.088.tar.gz) = 3f4fb7a5ecf4bc664c0370f66b738bf171478767770400f5774be49a14ed95ce6430e6ac8fb755068e3d73bb3f074268cb6d6da7e6f0aceffbbdc76b0563bb0a
+Size (HTTP-Tiny-0.088.tar.gz) = 77140 bytes
