@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/12/19 09:47:31 thor Exp $
+# $NetBSD: Makefile,v 1.100 2024/01/10 15:17:50 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -73,6 +73,7 @@ SUBDIR+=	py-cutadapt
 SUBDIR+=	py-dna-features-viewer
 SUBDIR+=	py-dnaio
 SUBDIR+=	py-macs2
+SUBDIR+=	py-macs3
 SUBDIR+=	py-multiqc
 SUBDIR+=	py-pydicom
 SUBDIR+=	racon
