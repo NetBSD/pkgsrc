@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2023/12/29 14:50:03 tnn Exp $
+$NetBSD: distinfo,v 1.20 2024/01/10 21:39:54 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -9,9 +9,9 @@ Size (ahash-0.8.6.crate) = 42780 bytes
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
 Size (aho-corasick-1.1.2.crate) = 183136 bytes
-BLAKE2s (alacritty-0.13.0.tar.gz) = af65c54c5c259dd2fd583010dee2017b902f52dd477b33ae8a297c02641bb247
-SHA512 (alacritty-0.13.0.tar.gz) = 135d78f699c2496f4aafe4eee14832ffc7835a88fb0a7740769fad6323dab475e2dfd78f583b0febbbe28aea714d5da98b661c6ddeaa4519dc169c90e6863855
-Size (alacritty-0.13.0.tar.gz) = 1628187 bytes
+BLAKE2s (alacritty-0.13.1.tar.gz) = 68013affc0558dee08e900ed531ceee71c56d3b3d81c68947221040af90695e1
+SHA512 (alacritty-0.13.1.tar.gz) = d88359879dd25b8b36e649076852d86957cab64996b8d21cb1ca930658664a6f6e4fd5f9f5266fc6aa3889e122a10001da4922f635eff6a5c62db13af963f342
+Size (alacritty-0.13.1.tar.gz) = 1629538 bytes
 BLAKE2s (android-activity-0.5.1.crate) = 34b5d56d54b2b9f80cc3cf761a29e9b2eae70ac9adf6a9273e8ea41086ceb68d
 SHA512 (android-activity-0.5.1.crate) = 3376bfc8aca5a8fd2161244e17e6aa969d499bdd4123b174359885a977899a6fb10e1fd2a3039da9faa9aaa7160f1739417e4711de1fbaa8bf5a435c69c1103f
 Size (android-activity-0.5.1.crate) = 258268 bytes
@@ -714,9 +714,9 @@ Size (windows_x86_64_msvc-0.42.2.crate) = 666936 bytes
 BLAKE2s (windows_x86_64_msvc-0.48.5.crate) = 5ba69908b0a28c92202626d76822599bf1b8a8db6cddce66137b133bf1d75a4b
 SHA512 (windows_x86_64_msvc-0.48.5.crate) = fa1c5cd14ca2ff0082e2504cf59d317dc4dc6f7138d35c12f95d4476a9c13d8b7f5537d0ee251eee7c99411ad31b22263171b7fbd391daa5d3ea3488ceaa61a0
 Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
-BLAKE2s (winit-0.29.7.crate) = b4b9570aa316c563e946da065d38fb45c624b532b697b6aaa06a60ee53b3ff08
-SHA512 (winit-0.29.7.crate) = a9779f06fc8786b551618590eeae08793015b6b98b34fad57aa2545a2c2dc0389622832e0991e08cd3883bc0b85408ea4e94a6cd3a1f18b22fb24aa7c56b1966
-Size (winit-0.29.7.crate) = 572618 bytes
+BLAKE2s (winit-0.29.9.crate) = 0339b455ef2ae06ac0883b690d87ff93e3f5adf9df1a8bbac99306abdb6e6ca6
+SHA512 (winit-0.29.9.crate) = fcbb979df14f76d092f6f4c609ea6fcbe6e53dd53521995bc930487c656fbb1f9f362bbb1ab4fbb321d14ecb39a357461887703f850d1d85c6b385d48585ae67
+Size (winit-0.29.9.crate) = 573854 bytes
 BLAKE2s (winnow-0.5.30.crate) = 15cb7066f96695a37886edac024a9ba67ed504866dfc0a43dd62b39b0b7c9a2c
 SHA512 (winnow-0.5.30.crate) = d0c6f393481bb153d185d8990afa4c5c014d4699bea58af6499edb8bacc5ea7d33d5beb44d11cca18cb467ca388c45696742bccfe85268b8c39bfbf761666e1e
 Size (winnow-0.5.30.crate) = 152904 bytes
