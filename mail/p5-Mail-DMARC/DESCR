@@ -1,0 +1,11 @@
+This module is a suite of tools for implementing DMARC. It adheres
+to the 2013 DMARC draft, intending to implement every MUST and
+every SHOULD.
+
+This module can be used by...
+
+- MTAs and filtering tools like SpamAssassin to validate that incoming
+  messages are aligned with the purported sender's policy.
+- email senders, to receive DMARC reports from other mail servers and
+  display them via CLI and web interfaces.
+- MTA operators to send DMARC reports to DMARC author domains.
