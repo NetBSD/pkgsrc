@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.171 2024/01/09 10:14:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.172 2024/01/10 06:23:56 wiz Exp $
 
 DISTNAME=	evince-45.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -42,6 +42,7 @@ BUILDLINK_API_DEPENDS.libhandy+=	libhandy>=1.5.0
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 # PDF backend no longer requires libxml2 (others do)
 .include "../../textproc/libxml2/buildlink3.mk"
