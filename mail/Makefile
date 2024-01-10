@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.631 2024/01/10 16:15:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.632 2024/01/10 16:20:34 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -274,6 +274,7 @@ SUBDIR+=	p5-Net-IMAP-Simple
 SUBDIR+=	p5-Net-LMTP
 SUBDIR+=	p5-Net-ManageSieve
 SUBDIR+=	p5-Net-SMTP-SSL
+SUBDIR+=	p5-Net-SMTPS
 SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Parse-MIME
