@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/11/15 14:57:48 nikita Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/01/10 16:50:10 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -153,5 +153,7 @@ share/examples/gotosocial/web/template/oob.tmpl
 share/examples/gotosocial/web/template/profile.tmpl
 share/examples/gotosocial/web/template/sign-in.tmpl
 share/examples/gotosocial/web/template/status.tmpl
+share/examples/gotosocial/web/template/status_attachments.tmpl
+share/examples/gotosocial/web/template/status_poll.tmpl
 share/examples/gotosocial/web/template/tag.tmpl
 share/examples/gotosocial/web/template/thread.tmpl
