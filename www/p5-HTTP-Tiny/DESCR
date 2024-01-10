@@ -1,0 +1,5 @@
+This is a very simple HTTP/1.1 client, designed for doing simple
+requests without the overhead of a large framework like LWP::UserAgent.
+
+It is more correct and more complete than HTTP::Lite. It supports
+proxies and redirection. It also correctly resumes after EINTR.
