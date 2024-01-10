@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/11/23 16:41:31 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/01/10 15:46:09 ryoon Exp $
 bin/nim
 bin/nim-gdb
 bin/nim-gdb.bash
@@ -519,6 +519,7 @@ nim/nimsuggest/crashtester.nim
 nim/nimsuggest/nimsuggest.nim
 nim/nimsuggest/nimsuggest.nim.cfg
 nim/nimsuggest/nimsuggest.nimble
+nim/nimsuggest/procmonitor.nim
 nim/nimsuggest/sexp.nim
 nim/nimsuggest/tester.nim
 nim/nimsuggest/tests/fixtures/mclass_macro.nim
@@ -570,6 +571,7 @@ nim/nimsuggest/tests/ttemplate_highlight.nim
 nim/nimsuggest/tests/ttype_decl.nim
 nim/nimsuggest/tests/ttype_highlight.nim
 nim/nimsuggest/tests/tuse.nim
+nim/nimsuggest/tests/tuse_enum.nim
 nim/nimsuggest/tests/tuse_structure.nim
 nim/nimsuggest/tests/tv3.nim
 nim/nimsuggest/tests/tv3_definition.nim
@@ -580,3 +582,4 @@ nim/nimsuggest/tests/tv3_outline.nim
 nim/nimsuggest/tests/tv3_typeDefinition.nim
 nim/nimsuggest/tests/twithin_macro.nim
 nim/nimsuggest/tests/twithin_macro_prefix.nim
+@pkgdir nim/data
