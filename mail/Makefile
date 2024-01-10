@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.629 2023/12/29 20:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.630 2024/01/10 11:51:50 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -276,6 +276,7 @@ SUBDIR+=	p5-Net-SMTP-SSL
 SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Parse-MIME
+SUBDIR+=	p5-Qmail-Deliverable
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-Sendmail-PMilter
 SUBDIR+=	p5-Test-Email
