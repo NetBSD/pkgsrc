@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.763 2023/12/18 13:53:18 rillig Exp $
+# $NetBSD: Makefile,v 1.764 2024/01/10 19:14:36 bsiegert Exp $
 
 DISTNAME=	pkglint-23.2.5
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rillig/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
