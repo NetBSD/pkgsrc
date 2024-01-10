@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/19 13:42:04 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/10 09:28:44 pin Exp $
 
 DISTNAME=	marswm-0.5.3
 CATEGORIES=	wm
@@ -8,6 +8,11 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jzbor/marswm/
 COMMENT=	Modern window manager featuring dynamic tiling
 LICENSE=	mit
+
+# Marswm does not build on 32bit systems.
+# Support for building on 32bit is not planed, see:
+# https://github.com/jzbor/marswm/issues/14
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 
 .include "cargo-depends.mk"
 
