@@ -75,7 +75,7 @@ blocklist		Enable blocklist support.
 bluez			Enable bluetooth support via bluez for Linux.
 bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
-botan           Enable Botan support.
+botan			Enable Botan support.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 brotli			Enable support for Google's Brotli compression.
 bugzilla-charts		Enable generation of charts.
@@ -533,7 +533,7 @@ libwebp			Enable libwebp support.
 libwildmidi		Enable MIDI support using libwildmidi.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.).
 libxml2			Use the libxml2 library for XML support.
-libyang         Enable libyang support.
+libyang			Enable libyang support.
 lighttpd		Enable support for lighttpd web server.
 lilypond		Enable LilyPond music typesetter support.
 links			Use and enable support for the links browser.
