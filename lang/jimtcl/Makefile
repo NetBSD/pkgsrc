@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/10/24 22:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/10 08:20:10 tnn Exp $
 
 DISTNAME=	jimtcl-0.82
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msteveb/}
 
@@ -39,6 +39,7 @@ PLIST_SUBST+=	SOEXT=${SOEXT} SONAME=${SONAME}
 post-install:
 	${LN} -sf ${SONAME} ${DESTDIR}${PREFIX}/lib/libjim.${SOEXT}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
