@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2023/12/18 09:28:38 triaxx Exp $
+# $NetBSD: Makefile,v 1.62 2024/01/10 16:46:20 triaxx Exp $
 
-DISTNAME=	duplicity-2.1.4
+DISTNAME=	duplicity-2.1.5
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -41,8 +41,6 @@ REPLACE_PYTHON+=	bin/rdiffdir
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-USE_PKG_RESOURCES=	yes
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing hard coded directories
@@ -57,6 +55,6 @@ SUBST_FILES.gpgpath=		duplicity/gpginterface.py
 SUBST_VARS.gpgpath=		GPGPATH
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../net/librsync/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
