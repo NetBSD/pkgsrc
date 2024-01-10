@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4154 2024/01/04 11:06:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4155 2024/01/10 14:22:49 bacon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2495,6 +2495,7 @@ SUBDIR+=	py-cppy
 SUBDIR+=	py-crayons
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cwcwidth
+SUBDIR+=	py-cykhash
 SUBDIR+=	py-cyordereddict
 SUBDIR+=	py-cython
 SUBDIR+=	py-cytoolz
