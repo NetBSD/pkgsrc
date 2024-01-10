@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/10/28 19:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/01/10 10:33:07 adam Exp $
 
-DISTNAME=	uvicorn-0.18.3
+DISTNAME=	uvicorn-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
 
@@ -16,21 +15,20 @@ DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.8:../../www/py-h11
 # standard
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.13:../../devel/py-dotenv
-DEPENDS+=	${PYPKGPREFIX}-httptools>=0.4.0:../../www/py-httptools
+DEPENDS+=	${PYPKGPREFIX}-httptools>=0.5.0:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.2:../../devel/py-uvloop
-DEPENDS+=	${PYPKGPREFIX}-websockets>=10.0:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-watchfiles>=0.13:../../misc/py-watchfiles
+DEPENDS+=	${PYPKGPREFIX}-websockets>=10.4:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
 .endif
-
-USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
