@@ -1,11 +1,10 @@
-$NetBSD: patch-nsswitch_winbind__nss__netbsd.c,v 1.2 2020/07/21 18:42:25 christos Exp $
+$NetBSD: patch-nsswitch_winbind__nss__netbsd.c,v 1.3 2024/01/10 08:39:30 adam Exp $
 
-Syntax error fix.
 Add primary group support
 
---- nsswitch/winbind_nss_netbsd.c.orig	2020-01-31 05:25:36.000000000 -0500
-+++ nsswitch/winbind_nss_netbsd.c	2020-07-21 10:24:19.651265315 -0400
-@@ -176,6 +176,7 @@
+--- nsswitch/winbind_nss_netbsd.c.orig	2024-01-08 14:34:28.213466000 +0000
++++ nsswitch/winbind_nss_netbsd.c
+@@ -176,6 +176,7 @@ netbsdwinbind_getgroupmembership(void *n
  {
  	int		*result	= va_arg(ap, int *);
  	const char 	*uname	= va_arg(ap, const char *);
@@ -13,12 +12,7 @@ Add primary group support
  	gid_t		*groups	= va_arg(ap, gid_t *);
  	int		 maxgrp	= va_arg(ap, int);
  	int		*groupc	= va_arg(ap, int *);
-@@ -185,10 +186,17 @@
- 	};
- 	struct winbindd_response response = {
- 		.length = 0,
--	}
-+	};
+@@ -189,6 +190,13 @@ netbsdwinbind_getgroupmembership(void *n
  	gid_t	*wblistv;
  	int	wblistc, i, isdup, dupc;
  
