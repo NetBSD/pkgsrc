@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.57 2020/08/21 21:17:04 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/01/10 17:57:15 adam Exp $
 
-DISTNAME=	atari800-4.2.0-src
-PKGNAME=	${DISTNAME:S/-src//}
-CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=atari800/}
-MASTER_SITES+=	http://www.emulators.com/freefile/
-EXTRACT_SUFX=	.tgz
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} pcxf380.zip
-GITHUB_PROJECT=	atari800
-GITHUB_RELEASE=	ATARI800_${PKGVERSION_NOREV:S/./_/g}
+DISTNAME=		atari800-5.2.0-src
+PKGNAME=		${DISTNAME:S/-src//}
+CATEGORIES=		emulators
+MASTER_SITES=		${MASTER_SITE_GITHUB:=atari800/}
+GITHUB_RELEASE=		ATARI800_${PKGVERSION_NOREV:S/./_/g}
+EXTRACT_SUFX=		.tgz
+DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} pcxf380.zip
+SITES.pcxf380.zip=	http://www.emulators.com/freefile/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://atari800.github.io/
