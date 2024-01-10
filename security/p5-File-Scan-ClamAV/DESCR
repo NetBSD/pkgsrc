@@ -1,0 +1,2 @@
+A library for connecting to and sending commands to a local ClamAV clamd
+service - an anti-virus daemon process.
