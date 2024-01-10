@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/20 08:13:47 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/10 20:48:50 adam Exp $
 
-BLAKE2s (jupyterlab-4.0.9.tar.gz) = 1bfca0e6f1abf1b4783aa0c81ee425a5daac965f9fb2c634b040cabcb1ffe04d
-SHA512 (jupyterlab-4.0.9.tar.gz) = c87451821afa28e7016acdcff315cc48578ea1735b74c2732ed2570c326901acc38fa333344e89ba1c15799ac6bf3f9332c67cdd0ce8ac38713e0be6973d1c1a
-Size (jupyterlab-4.0.9.tar.gz) = 18347162 bytes
+BLAKE2s (jupyterlab-4.0.10.tar.gz) = 96808e698e557b1f092f6362dc2abe50b8b5a54f3e31a696a248daa72009b112
+SHA512 (jupyterlab-4.0.10.tar.gz) = e5203a17dcf682927cd480363d5952765e8c02c243f2a8fcbef785ffe4b58ea669a196c9040f516a3b4cecd323d54d005a91ce6ce5dfffb32d4e610c14a6f1e5
+Size (jupyterlab-4.0.10.tar.gz) = 18347775 bytes
