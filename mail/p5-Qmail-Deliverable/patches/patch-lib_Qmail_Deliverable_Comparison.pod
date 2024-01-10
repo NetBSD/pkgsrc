@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_Qmail_Deliverable_Comparison.pod,v 1.1 2024/01/10 11:51:46 schmonz Exp $
+
+Honor pkgsrc-specified QMAILDIR.
+
+--- lib/Qmail/Deliverable/Comparison.pod.orig	2024-01-10 11:42:48.674383628 +0000
++++ lib/Qmail/Deliverable/Comparison.pod
+@@ -190,7 +190,7 @@ http://www.maiers.de/qmail/art38,71.html
+ Written in sh, checks against a directory tree and dot-qmail.
+ 
+ This is like vpopmail_check_recipient, but for local users only. It does not
+-actually query /var/qmail/users/assign or getpw for home directories, but
++actually query @QMAILDIR@/users/assign or getpw for home directories, but
+ requires /home/username, where username is directly taken from the email
+ address. Probably needs to be suid root to function correctly.
+ 
