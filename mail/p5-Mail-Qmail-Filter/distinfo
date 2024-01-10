@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/01/10 16:48:23 schmonz Exp $
+
+BLAKE2s (Mail-Qmail-Filter-1.32.tar.gz) = ae670d12b23266d10d5f775af569c40edf4c29c7526497b633073639d19b1278
+SHA512 (Mail-Qmail-Filter-1.32.tar.gz) = 7490e987962800b5114a41ddcef7872e72f567e6c14d2f548366e6b8823955d322c63bdc9af75d4e26cdaf081b1300114498e6d31969bb2611335fcceadbff20
+Size (Mail-Qmail-Filter-1.32.tar.gz) = 28561 bytes
+SHA1 (patch-lib_Mail_Qmail_Filter.pm) = f08924456fefa6f51bb74bc28daae7a549bce264
