@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/01/10 16:46:20 triaxx Exp $
+# $NetBSD: Makefile,v 1.63 2024/01/10 16:51:52 wiz Exp $
 
 DISTNAME=	duplicity-2.1.5
 CATEGORIES=	sysutils net python
@@ -13,6 +13,7 @@ USE_PKGLOCALEDIR=	yes
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=44.1.1:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5.0.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-fasteners-[0-9]*:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
