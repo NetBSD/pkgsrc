@@ -1,14 +1,11 @@
-Author: Reiner Herrmann <reiner@reiner-h.de>
-Date: 2016-07-01 16:00:02 UTC
-Bug-Debian: https://bugs.debian.org/829249
+$NetBSD: patch-ncftp_main.c,v 1.1 2024/01/10 18:01:55 adam Exp $
 
-	make ncftp build reproducible.
+Make ncftp build reproducible.
+https://bugs.debian.org/829249
 
-diff --git a/ncftp/main.c b/ncftp/main.c
-index a7fccac..b27a94e 100644
---- ncftp/main.c.orig
+--- ncftp/main.c.orig	2016-11-16 00:29:47.000000000 +0000
 +++ ncftp/main.c
-@@ -62,7 +62,7 @@ static void
+@@ -65,7 +65,7 @@ __attribute__ ((noreturn))
  Usage(void)
  {
  	FILE *fp;
@@ -17,7 +14,7 @@ index a7fccac..b27a94e 100644
  	char s[80];
  #endif
  
-@@ -76,7 +76,7 @@ Usage(void)
+@@ -79,7 +79,7 @@ Usage(void)
    -F     Dump a sample $HOME/.ncftp/firewall prefs file to stdout and exit.\n");
  
  	(void) fprintf(fp, "\nProgram version:  %s\nLibrary version:  %s\n", gVersion + 5, gLibNcFTPVersion + 5);
@@ -26,4 +23,3 @@ index a7fccac..b27a94e 100644
  	AbbrevStr(s, UNAME, 60, 1);
  	(void) fprintf(fp, "Build system:     %s\n", s);
  #endif
-
