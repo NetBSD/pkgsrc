@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 10:23:46 nia Exp $
+$NetBSD: distinfo,v 1.28 2024/01/10 17:57:15 adam Exp $
 
-BLAKE2s (atari800-4.2.0-src.tgz) = 282d1243c844bea25a1f0e9055763be8aaef12f9b2b50b7e0f663e596f88c06e
-SHA512 (atari800-4.2.0-src.tgz) = 1236a8e05bf878e4514ae8e9f1556e0961a7f11ff0333eef415af455d217f712d5c6ededdd343dff6ba1aab777e19997bf9ecb859408187d69fc141301ecba31
-Size (atari800-4.2.0-src.tgz) = 7047710 bytes
+BLAKE2s (atari800-5.2.0-src.tgz) = 0dac1ba0884b08da39d986712bc8cb67328021be4500db37fe87048c619d97b6
+SHA512 (atari800-5.2.0-src.tgz) = c1ac728cb0733937175040bbdb4d5653cdbedeaa1ab399165dd1a9c841ba6930953801da65c0f747e28d293c26ad85e5e014947ebb5090ec03aef77cbd1d2627
+Size (atari800-5.2.0-src.tgz) = 1935364 bytes
 BLAKE2s (pcxf380.zip) = 0d2ae9eaa11f62f3a6e8a6d4ee3f26393efcdcf61792adc49b895e33fd439786
 SHA512 (pcxf380.zip) = 98181f0f3a30edcadb3c704dc4afda06708da3982a378e31a47d6b7ac8d3f8661753843de8fc8e599970ee9adf5f94f08213447d0c2dd75486a07f9d98ade78c
 Size (pcxf380.zip) = 590041 bytes
-SHA1 (patch-configure) = cbc99c9073186335148cdaf06bd1f77aabd33e94
-SHA1 (patch-src_rdevice.c) = a6ec9f45c5f27704a47e306496213615a9bb5f09
+SHA1 (patch-configure) = d0e7cac90637e82cd472922725a4434381bcc0c2
+SHA1 (patch-src_rdevice.c) = c4c15dda0b476b633862fb2122e7463f35d9d69f
 SHA1 (patch-src_sound__oss.c) = 73b51491aee42e5657584bd8b58127e9cd8e5d87

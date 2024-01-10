@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/18 21:33:13 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/10 17:57:15 adam Exp $
 bin/atari800
+bin/cart
 man/man1/atari800.1
 share/atari800/advent1.atr
 share/atari800/analog51.xfd
