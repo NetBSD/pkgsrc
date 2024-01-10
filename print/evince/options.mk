@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2022/10/25 08:38:09 prlw1 Exp $
+# $NetBSD: options.mk,v 1.9 2024/01/10 06:23:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
 PKG_SUPPORTED_OPTIONS=	dbus djvu dvi gstreamer ps tiff xps
@@ -20,7 +20,6 @@ MESON_ARGS+=	-Ddbus=false
 
 .if !empty(PKG_OPTIONS:Mdjvu)
 PLIST.djvu=	yes
-BUILDLINK_API_DEPENDS.djvulibre-lib+=	djvulibre-lib>=3.5.22
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .else
 MESON_ARGS+=	-Ddjvu=disabled
