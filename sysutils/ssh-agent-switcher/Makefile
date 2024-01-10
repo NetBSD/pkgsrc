@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/12/05 19:46:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/10 19:14:41 bsiegert Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20231117
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jmmv/}
 GITHUB_PROJECT=		ssh-agent-switcher
