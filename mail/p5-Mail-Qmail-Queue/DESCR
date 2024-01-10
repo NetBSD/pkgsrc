@@ -1,0 +1,3 @@
+Mail::Qmail::Queue is a small collection of modules to help with talking
+to qmail-queue and/or writing replacements for it. It also contains some
+handy command-line tools for testing qmail-queue or its replacements.

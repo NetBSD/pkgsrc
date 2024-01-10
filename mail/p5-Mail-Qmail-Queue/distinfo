@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2024/01/10 16:45:16 schmonz Exp $
+
+BLAKE2s (Mail-Qmail-Queue-0.02.tar.gz) = 90ee39daa3d7321f72aea1999db41e5428ed7fca4d2906c698d34748d3788753
+SHA512 (Mail-Qmail-Queue-0.02.tar.gz) = 92905e1b92454f0f17b090ebcfc9081aa7dc02db18c8ca49e01e2b1fe0e1e7c80842d50aff45acdcd8ddf868d31a8019c5e818b2426734ba362b58423bec3cf9
+Size (Mail-Qmail-Queue-0.02.tar.gz) = 18851 bytes
+SHA1 (patch-t_30Send.t) = 203f69513e790a4aa37de9f4f8dbc488a688a81b
+SHA1 (patch-t_40Message.t) = 0d5fa7a1a1969742fb019941c4a17fd593de7e11
