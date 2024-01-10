@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/01/10 19:34:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/10 19:34:26 schmonz Exp $
 
 DISTNAME=	tmate-2.4.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tmate-io/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tmate.io
+HOMEPAGE=	https://tmate.io/
 COMMENT=	Terminal multiplexer with instant terminal sharing
 LICENSE=	isc
 
