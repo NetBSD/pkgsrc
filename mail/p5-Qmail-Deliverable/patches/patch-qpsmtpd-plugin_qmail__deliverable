@@ -1,0 +1,24 @@
+$NetBSD: patch-qpsmtpd-plugin_qmail__deliverable,v 1.1 2024/01/10 11:51:46 schmonz Exp $
+
+Honor pkgsrc-specified QMAILDIR.
+
+--- qpsmtpd-plugin/qmail_deliverable.orig	2024-01-10 11:42:48.669202870 +0000
++++ qpsmtpd-plugin/qmail_deliverable
+@@ -27,7 +27,7 @@ none is specified, the default (127.0.0.
+ =item server smtproutes:host:port
+ 
+ If the specification is prepended by the literal text C<smtproutes:>, then for
+-recipient domains listed in your /var/qmail/control/smtproutes use their
++recipient domains listed in your @QMAILDIR@/control/smtproutes use their
+ respective hosts for the check. For other domains, the given host is used. The
+ port has to be the same across all servers.
+ 
+@@ -134,7 +134,7 @@ sub register {
+ 
+             my ($fallback, $port) = $args{server} =~ /:(?:(.*?):?)(\d+)/;
+ 
+-            open my $fh, "/var/qmail/control/smtproutes"
++            open my $fh, "@QMAILDIR@/control/smtproutes"
+                 or warn "Could not read smtproutes";
+             for (readline $fh) {
+                 my ($domain, $mx) = /^(.*?) : \[? ( [^\]:\s]* )/x;
