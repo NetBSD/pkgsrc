@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2023/12/28 22:58:40 zafer Exp $
+# $NetBSD: Makefile,v 1.39 2024/01/10 18:01:55 adam Exp $
 
-DISTNAME=	ncftp-3.2.6-src
+DISTNAME=	ncftp-3.2.7-src
 PKGNAME=	${DISTNAME:S/ncftp/ncftp3/:S/-src//}
-PKGREVISION=	6
 CATEGORIES=	net
-MASTER_SITES=	https://www.ncftp.com/downloads/ncftp/
+MASTER_SITES=	https://www.ncftp.com/public_ftp/ncftp/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
