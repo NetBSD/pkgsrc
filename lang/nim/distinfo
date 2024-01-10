@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.27 2023/11/23 16:41:31 ryoon Exp $
+$NetBSD: distinfo,v 1.28 2024/01/10 15:46:09 ryoon Exp $
 
-BLAKE2s (nim-2.0.0.tar.xz) = adeacdfab12d0ca63cf6da15cb78d07eeaf9b817c1ab1f5a93d3630cbd894f2f
-SHA512 (nim-2.0.0.tar.xz) = 828aec9b8634c5a662e13bd0542b62f23056af2022b5459577795871debfe4de1889ed4175a805f034e202931f8e5abb9b4e87b4fca725f0113da9f97397e6bd
-Size (nim-2.0.0.tar.xz) = 7491724 bytes
+BLAKE2s (nim-2.0.2.tar.xz) = b7af43e67958c149b137b296f5e68dd37baf224c017d00a4ea8a3e626376ca52
+SHA512 (nim-2.0.2.tar.xz) = 76b612b364dde0a23915f8d6fd979594a33e3d43c1ed09bf0bc4861f7b38061832375aa8fc3f858062b354dc08cd1c994fe1ef95c211233afc5bd8bdb5c54310
+Size (nim-2.0.2.tar.xz) = 7381172 bytes
 SHA1 (patch-bin_nim-gdb) = 0d4e9ae4cc8687ca7821891b63808fa1d175069c
-SHA1 (patch-tests_stdlib_tssl.nim) = 5ed65bba80afaab88dc8d43534e455f7b9af7e93
