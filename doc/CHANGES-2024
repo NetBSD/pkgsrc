@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.263 2024/01/10 21:39:05 pin Exp $
+$NetBSD: CHANGES-2024,v 1.264 2024/01/10 21:40:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/protobuf to 25.2 [adam 2024-01-10]
 	Updated devel/py-protobuf to 4.25.2 [adam 2024-01-10]
 	Updated shells/oh-my-posh to 19.5.0 [pin 2024-01-10]
+	Updated x11/alacritty to 0.13.1 [pin 2024-01-10]
