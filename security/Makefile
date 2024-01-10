@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.933 2024/01/02 21:00:41 leot Exp $
+# $NetBSD: Makefile,v 1.934 2024/01/10 15:46:07 schmonz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -346,6 +346,7 @@ SUBDIR+=	p5-Digest-Perl-MD5
 SUBDIR+=	p5-Digest-SHA1
 SUBDIR+=	p5-Digest-SHA3
 SUBDIR+=	p5-File-KeePass
+SUBDIR+=	p5-File-Scan-ClamAV
 SUBDIR+=	p5-GSSAPI
 SUBDIR+=	p5-GnuPG-Interface
 SUBDIR+=	p5-IO-Socket-SSL
