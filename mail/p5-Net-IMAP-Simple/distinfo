@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/10 16:15:21 schmonz Exp $
+
+BLAKE2s (Net-IMAP-Simple-1.2212.tar.gz) = 65d70e6b559a5501b6c65b5949371ba0d136bd20918256d4ecceae62a8920e37
+SHA512 (Net-IMAP-Simple-1.2212.tar.gz) = 0c34388e9358864f74aacdd7bb046590a4d821f025ccfdc2490db4dfe017fb5ee3dea1cae96a408ed6518cc7e3bae20fe92296b9822d62c9ab2b20f26f873e74
+Size (Net-IMAP-Simple-1.2212.tar.gz) = 45917 bytes

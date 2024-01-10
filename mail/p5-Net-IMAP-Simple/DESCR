@@ -1,0 +1,3 @@
+This module is a simple way to access IMAP accounts. The
+Net::IMAP::Simple constructor takes one required parameter which is the
+server to connect to, and additional optional parameters.
