@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/10 16:20:32 schmonz Exp $
+
+BLAKE2s (Net-SMTPS-0.10.tar.gz) = ddc80bf28a76457d738fdfbcbe341b3017af57daf6d147a7956851a972e0f860
+SHA512 (Net-SMTPS-0.10.tar.gz) = e9d2202f63c5149ea72d8b37e27a5c0a7d0259de6a2afd7dad4b59ce00121cedb212d73c1f50d2b6ac77a0e0934bdc750fed3be4865c5f84b805befbdab802c4
+Size (Net-SMTPS-0.10.tar.gz) = 5309 bytes
