@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/12/17 17:25:34 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/01/10 06:40:35 adam Exp $
 
-BLAKE2s (jupyter_server_terminals-0.5.0.tar.gz) = a4749ae8461335eb292adbbfc3366d7bdcc4b794b6895b35738566d0f1bb6d1e
-SHA512 (jupyter_server_terminals-0.5.0.tar.gz) = 398419590bfad09846dd4f283896962af772700f6bf43b2cd3c2516830a9693ce4f383a9e3620e9d5613985f4d60c0758fad8961e7ba023f7f5b73200679ee25
-Size (jupyter_server_terminals-0.5.0.tar.gz) = 30616 bytes
+BLAKE2s (jupyter_server_terminals-0.5.1.tar.gz) = c9dd57ae67063d2342fdd746881df218583b1f036714dfc0e7480ba06c8f9ee7
+SHA512 (jupyter_server_terminals-0.5.1.tar.gz) = e3006e61aa712675bcdcf85dcb1f775da8064b8a621d852f51063707ebe3462ffe75efbb646dd76075d9ee075b80458290a075f502f270487b9390ba3f6881c5
+Size (jupyter_server_terminals-0.5.1.tar.gz) = 30742 bytes
