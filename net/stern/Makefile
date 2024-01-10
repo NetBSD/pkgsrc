@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/12/05 19:46:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/10 19:14:34 bsiegert Exp $
 
 DISTNAME=	stern-1.26.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stern/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
