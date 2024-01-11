@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/27 09:56:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/11 09:57:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -25,6 +25,9 @@ ${PYSITELIB}/jaraco/develop/cpython-sync.pyo
 ${PYSITELIB}/jaraco/develop/create-github-release.py
 ${PYSITELIB}/jaraco/develop/create-github-release.pyc
 ${PYSITELIB}/jaraco/develop/create-github-release.pyo
+${PYSITELIB}/jaraco/develop/filters.py
+${PYSITELIB}/jaraco/develop/filters.pyc
+${PYSITELIB}/jaraco/develop/filters.pyo
 ${PYSITELIB}/jaraco/develop/finalize.py
 ${PYSITELIB}/jaraco/develop/finalize.pyc
 ${PYSITELIB}/jaraco/develop/finalize.pyo
@@ -49,6 +52,9 @@ ${PYSITELIB}/jaraco/develop/merge.pyo
 ${PYSITELIB}/jaraco/develop/print-meta.py
 ${PYSITELIB}/jaraco/develop/print-meta.pyc
 ${PYSITELIB}/jaraco/develop/print-meta.pyo
+${PYSITELIB}/jaraco/develop/projects-run.py
+${PYSITELIB}/jaraco/develop/projects-run.pyc
+${PYSITELIB}/jaraco/develop/projects-run.pyo
 ${PYSITELIB}/jaraco/develop/pypi.py
 ${PYSITELIB}/jaraco/develop/pypi.pyc
 ${PYSITELIB}/jaraco/develop/pypi.pyo
