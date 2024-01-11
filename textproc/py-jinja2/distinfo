@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/04/28 18:13:35 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/01/11 08:39:30 adam Exp $
 
-BLAKE2s (Jinja2-3.1.2.tar.gz) = cfa57934d007e46224821105f7441ff0d4de24161b5c524cfa12e697ac7134ff
-SHA512 (Jinja2-3.1.2.tar.gz) = 5dfe122c1beef5305b34d25f22f96607bd3a6cba098b03091850ea36fefe62b645a7218d7584b35bea252393ac922c9bb3654a9e90f23bcfb273e811fcf2f2c1
-Size (Jinja2-3.1.2.tar.gz) = 268239 bytes
+BLAKE2s (Jinja2-3.1.3.tar.gz) = 7020cb8e7cb72f96405b9dc32b9d92dbc0b7dd00e124456781691ec866ead483
+SHA512 (Jinja2-3.1.3.tar.gz) = 5c36d0cd094b40626511f30c561176c095c49ef4066c2752a9edc3e6feb2430dafa866c17deebddcd0168aa1f0fd3944916d592c5c999639b8152e7c1009c700
+Size (Jinja2-3.1.3.tar.gz) = 268261 bytes
