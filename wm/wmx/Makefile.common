@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2020/05/14 18:56:23 joerg Exp $
+# $NetBSD: Makefile.common,v 1.29 2024/01/11 11:28:36 jperkin Exp $
 #
 # used by wm/wmx/Makefile
 # used by wm/wmx-gnome/Makefile
@@ -31,8 +31,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmx
 	${INSTALL_DATA} ${WRKSRC}/README.contrib ${DESTDIR}${PREFIX}/share/doc/wmx
-
-BUILDLINK_DEPMETHOD.libXt+=	build
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
