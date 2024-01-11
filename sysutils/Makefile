@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1106 2023/12/29 20:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1107 2024/01/11 20:49:11 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -760,6 +760,7 @@ SUBDIR+=	tphdisk
 SUBDIR+=	trash
 SUBDIR+=	tre-command
 SUBDIR+=	tree
+SUBDIR+=	treegrep
 SUBDIR+=	trusted-firmware-a-fiptool
 SUBDIR+=	trusted-firmware-a-rk3328
 SUBDIR+=	trusted-firmware-a-rk3399
