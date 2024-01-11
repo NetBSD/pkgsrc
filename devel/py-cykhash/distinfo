@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/01/10 14:22:24 bacon Exp $
+$NetBSD: distinfo,v 1.2 2024/01/11 19:22:20 bacon Exp $
 
 BLAKE2s (cykhash-2.0.1.tar.gz) = 7cebf2ab0c483fe1d02b6b452a7e9fd6ef1614a777166a6a00fe9af03d43aad4
 SHA512 (cykhash-2.0.1.tar.gz) = 259fe46af74bf230b6269b7cc4b9adff20512b1a38539079188e326056f8689e6cc61753541d0e71dfd59f038149b52ecf5fc9dc64adcf846d6e32651c5b8692
