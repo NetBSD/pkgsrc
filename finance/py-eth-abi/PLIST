@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/10 19:08:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/11 10:15:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -34,7 +34,6 @@ ${PYSITELIB}/eth_abi/grammar.pyo
 ${PYSITELIB}/eth_abi/packed.py
 ${PYSITELIB}/eth_abi/packed.pyc
 ${PYSITELIB}/eth_abi/packed.pyo
-${PYSITELIB}/eth_abi/py.typed
 ${PYSITELIB}/eth_abi/registry.py
 ${PYSITELIB}/eth_abi/registry.pyc
 ${PYSITELIB}/eth_abi/registry.pyo
@@ -44,6 +43,7 @@ ${PYSITELIB}/eth_abi/tools/__init__.pyo
 ${PYSITELIB}/eth_abi/tools/_strategies.py
 ${PYSITELIB}/eth_abi/tools/_strategies.pyc
 ${PYSITELIB}/eth_abi/tools/_strategies.pyo
+${PYSITELIB}/eth_abi/tools/py.typed
 ${PYSITELIB}/eth_abi/utils/__init__.py
 ${PYSITELIB}/eth_abi/utils/__init__.pyc
 ${PYSITELIB}/eth_abi/utils/__init__.pyo
@@ -53,6 +53,7 @@ ${PYSITELIB}/eth_abi/utils/numeric.pyo
 ${PYSITELIB}/eth_abi/utils/padding.py
 ${PYSITELIB}/eth_abi/utils/padding.pyc
 ${PYSITELIB}/eth_abi/utils/padding.pyo
+${PYSITELIB}/eth_abi/utils/py.typed
 ${PYSITELIB}/eth_abi/utils/string.py
 ${PYSITELIB}/eth_abi/utils/string.pyc
 ${PYSITELIB}/eth_abi/utils/string.pyo
