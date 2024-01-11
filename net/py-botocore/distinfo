@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.61 2023/11/02 10:28:52 adam Exp $
+$NetBSD: distinfo,v 1.62 2024/01/11 08:56:09 adam Exp $
 
-BLAKE2s (botocore-1.31.76.tar.gz) = 9148b6493e792653a1d5a174be8e7c9cfaa92b09eacdb3f681a3fd718cd7e4fc
-SHA512 (botocore-1.31.76.tar.gz) = 0950d4c2d5eb84976945517f00431e376274d01ef43d72fd97d4d3d201b8630605ab2458e30eb19343da8229a339105bbe4816830d59eef580a33c49681e7d0d
-Size (botocore-1.31.76.tar.gz) = 11426672 bytes
+BLAKE2s (botocore-1.34.16.tar.gz) = 72bd2a28bd6e2c215b4de1be814dc586af695bdfc93c953d9b16b837b519cf27
+SHA512 (botocore-1.34.16.tar.gz) = 6a5fcfa120f9fabe6a9a2782584b3d6f2c3922d3c3c19a8834032b98bc87d7fa264a825469d5410cb20435de7c04debf75489f8faf8b6448b4eb70979586ceea
+Size (botocore-1.34.16.tar.gz) = 12101789 bytes
 SHA1 (patch-setup.py) = 0a6e233f5e76c5a5821317811db89cdf0da34ac6
