@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2024/01/07 19:48:35 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/11 08:57:22 pin Exp $
 
-DISTNAME=	slumber-0.11.0
+DISTNAME=	slumber-0.12.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://slumber.lucaspickering.me/
 COMMENT=	Terminal-based REST client
 LICENSE=	mit
