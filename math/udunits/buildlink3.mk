@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/08/08 21:55:54 brook Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/01/11 11:29:47 jperkin Exp $
 
 BUILDLINK_TREE+=	udunits
 
@@ -8,5 +8,7 @@ UDUNITS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.udunits+=	udunits>=2.2.26
 BUILDLINK_PKGSRCDIR.udunits?=	../../math/udunits
 .endif	# UDUNITS_BUILDLINK3_MK
+
+.include "../../textproc/expat/buildlink3.mk"
 
 BUILDLINK_TREE+=	-udunits
