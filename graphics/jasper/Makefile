@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2023/12/07 08:11:44 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/01/11 16:31:10 adam Exp $
 
-DISTNAME=	jasper-4.1.1
+DISTNAME=	jasper-4.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jasper-software/}
 GITHUB_RELEASE=	version-${PKGVERSION_NOREV}
@@ -19,7 +19,6 @@ CMAKE_ARGS+=	-DJAS_ENABLE_DOC=OFF
 PKGCONFIG_OVERRIDE=	build/jasper.pc.in
 REPLACE_BASH=		test/bin/*
 TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src/libjasper
-#TEST_ENV+=		DYLD_LIBRARY_PATH=${DESTDIR}${PREFIX}/lib
 TEST_TARGET=		test
 
 .include "options.mk"
