@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:36:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.35 2024/01/11 06:23:44 wiz Exp $
 
 DISTNAME=		strace-4.5.15
 PKGREVISION=		16
@@ -12,9 +11,6 @@ HOMEPAGE=		https://sourceforge.net/projects/strace/
 COMMENT=		Trace system calls
 LICENSE=		modified-bsd
 
-#			NetBSD < 3.99.16
-NOT_FOR_PLATFORM=	NetBSD-[012]*-* NetBSD-3.[0-9][._]*-* \
-			NetBSD-3.99.[0-9]-* NetBSD-3.99.1[0-5]-*
 # "not supported" according to joerg@
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 
