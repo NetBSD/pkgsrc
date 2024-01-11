@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/07/04 10:25:48 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/11 10:09:16 adam Exp $
 
-DISTNAME=	eth-rlp-0.3.0
+DISTNAME=	eth-rlp-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-rlp/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/ethereum/eth-rlp
 COMMENT=	RLP definitions for common Ethereum objects in Python
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 DEPENDS+=	${PYPKGPREFIX}-hexbytes>=0.1.0:../../devel/py-hexbytes
 DEPENDS+=	${PYPKGPREFIX}-rlp>=0.6.0:../../devel/py-rlp
@@ -18,5 +20,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
