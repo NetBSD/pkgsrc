@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/09/27 09:02:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/11 13:06:36 adam Exp $
 
-DISTNAME=	Unidecode-1.3.7
+DISTNAME=	Unidecode-1.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/Unidecode/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/avian2/unidecode
 COMMENT=	ASCII transliterations of Unicode text
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	# none
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_PKG_RESOURCES=	yes
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -20,5 +21,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} unidecode unidecode-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

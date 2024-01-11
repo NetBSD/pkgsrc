@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/09/27 09:02:06 adam Exp $
+$NetBSD: distinfo,v 1.14 2024/01/11 13:06:36 adam Exp $
 
-BLAKE2s (Unidecode-1.3.7.tar.gz) = 4755ea8b78e0cc462fa30fa223c8925f567d3ac7711e674c6a121e390b07794f
-SHA512 (Unidecode-1.3.7.tar.gz) = b4f7c8b40e1c2d05aab4e53b54fd657a3db35ea5feba0f95551ba2ccfd7e5b0da034aec6de11c5e43f23c3a9609f5cbe8e458fe18539ffdf7ef79e039e1b390e
-Size (Unidecode-1.3.7.tar.gz) = 192647 bytes
+BLAKE2s (Unidecode-1.3.8.tar.gz) = cfc6078c0bb136d34c6497ade8588d964c6799634a6c2f5e437bdcead3fc1b8d
+SHA512 (Unidecode-1.3.8.tar.gz) = 0c93647b05b3ce041ba0091705630a4d75dfc249b3aa57b1d8bd26d26f1a067af1d0103a0f57ee2ea07224797ce204562e08df92d0fe60e250a16614bf146ece
+Size (Unidecode-1.3.8.tar.gz) = 192701 bytes

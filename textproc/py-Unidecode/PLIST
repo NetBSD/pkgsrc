@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/31 21:58:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/11 13:06:36 adam Exp $
 bin/unidecode-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/unidecode/__init__.py
 ${PYSITELIB}/unidecode/__init__.pyc
 ${PYSITELIB}/unidecode/__init__.pyo
