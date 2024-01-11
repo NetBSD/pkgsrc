@@ -801,6 +801,7 @@ sdl			Use SDL as the audio/display library.
 sdl2			Use SDL2 as the audio/display library.
 seamonkey		Use seamonkey as gecko rendering engine.
 secret			Enable libsecret support.
+sendmail-ffr-badrcptshutdown	Enable FFR_BAD_RCPTSHUTDOWN option.  FFR = For Future Release.
 sendmail-ffr-tls	Enable various FFR_TLS_* options.  FFR = For Future Release.
 sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
@@ -827,6 +828,7 @@ slurm			Support Slurm batch scheduler.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
+smtputf8		Enable use of SMTPUTF8 SMTP protocol extension.
 snappy			Enable Snappy (de)compression support.
 sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
