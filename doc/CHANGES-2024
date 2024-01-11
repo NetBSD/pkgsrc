@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.271 2024/01/11 10:15:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.272 2024/01/11 10:18:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -333,3 +333,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-eth-keys to 0.5.0 [adam 2024-01-11]
 	Updated finance/py-eth-keyfile to 0.7.0 [adam 2024-01-11]
 	Updated finance/py-eth-abi to 5.0.0 [adam 2024-01-11]
+	Updated textproc/py-referencing to 0.32.1 [adam 2024-01-11]
+	Updated devel/py-packageurl to 0.13.4 [adam 2024-01-11]
