@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/11/14 14:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/01/11 11:28:35 jperkin Exp $
 #
 
 .include "../../lang/sablevm-classpath/Makefile.common"
@@ -14,8 +14,6 @@ USE_TOOLS+=	pkg-config
 BUILD_DIRS=	native/jni/classpath
 BUILD_DIRS+=	native/jni/gtk-peer
 INSTALL_DIRS=	native/jni/gtk-peer
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
