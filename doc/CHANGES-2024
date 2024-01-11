@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.266 2024/01/11 08:57:43 pin Exp $
+$NetBSD: CHANGES-2024,v 1.267 2024/01/11 09:07:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -317,3 +317,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-jinja2 to 3.1.3 [adam 2024-01-11]
 	Updated security/py-google-auth to 2.26.2 [adam 2024-01-11]
 	Updated net/slumber to 0.12.0 [pin 2024-01-11]
+	Updated net/py-botocore to 1.34.16 [adam 2024-01-11]
+	Updated net/py-s3transfer to 0.10.0 [adam 2024-01-11]
+	Updated net/py-boto3 to 1.34.16 [adam 2024-01-11]
+	Updated net/py-awscli to 1.32.16 [adam 2024-01-11]
