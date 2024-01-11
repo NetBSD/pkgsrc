@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/11/12 13:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2024/01/11 11:25:58 jperkin Exp $
 
 DISTNAME=	sonnet-${KF5VER}
 PKGREVISION=	3
@@ -15,6 +15,5 @@ USE_TOOLS+=	pkg-config
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
