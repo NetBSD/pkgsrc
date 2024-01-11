@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/04/28 18:13:35 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/01/11 08:39:30 adam Exp $
 
-DISTNAME=	Jinja2-3.1.2
+DISTNAME=	Jinja2-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
@@ -10,15 +10,14 @@ HOMEPAGE=	https://jinja.palletsprojects.com/
 COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-babel>=0.8:../../devel/py-babel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-babel>=2.7:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.0:../../textproc/py-markupsafe
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYSETUPTESTTARGET=	pytest
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
