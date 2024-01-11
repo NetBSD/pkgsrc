@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2017/07/03 21:15:50 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/11 09:03:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/boto3/__init__.py
 ${PYSITELIB}/boto3/__init__.pyc
 ${PYSITELIB}/boto3/__init__.pyo
 ${PYSITELIB}/boto3/compat.py
 ${PYSITELIB}/boto3/compat.pyc
 ${PYSITELIB}/boto3/compat.pyo
+${PYSITELIB}/boto3/crt.py
+${PYSITELIB}/boto3/crt.pyc
+${PYSITELIB}/boto3/crt.pyo
 ${PYSITELIB}/boto3/data/cloudformation/2010-05-15/resources-1.json
 ${PYSITELIB}/boto3/data/cloudwatch/2010-08-01/resources-1.json
 ${PYSITELIB}/boto3/data/dynamodb/2012-08-10/resources-1.json
@@ -119,6 +123,9 @@ ${PYSITELIB}/boto3/resources/response.pyo
 ${PYSITELIB}/boto3/s3/__init__.py
 ${PYSITELIB}/boto3/s3/__init__.pyc
 ${PYSITELIB}/boto3/s3/__init__.pyo
+${PYSITELIB}/boto3/s3/constants.py
+${PYSITELIB}/boto3/s3/constants.pyc
+${PYSITELIB}/boto3/s3/constants.pyo
 ${PYSITELIB}/boto3/s3/inject.py
 ${PYSITELIB}/boto3/s3/inject.pyc
 ${PYSITELIB}/boto3/s3/inject.pyo
