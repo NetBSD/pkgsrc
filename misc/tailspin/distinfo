@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/01/08 14:33:58 pin Exp $
+$NetBSD: distinfo,v 1.6 2024/01/11 20:42:38 pin Exp $
 
 BLAKE2s (addr2line-0.20.0.crate) = 325dbd01710a578526165bf191bc3df1e1b7afa6492f90662ecb33b2c2643d2d
 SHA512 (addr2line-0.20.0.crate) = f9794772a31dd01096b168b4b4ffe311d4850c69fd77dd72c1e532a94ef7b23c31cccb9033848822521510f1fcc2ad0fdd824cf7efb9ed43828dc0165165b319
@@ -306,9 +306,9 @@ Size (strsim-0.10.0.crate) = 11355 bytes
 BLAKE2s (syn-2.0.48.crate) = f3b759189b8c977f52eb6a0f89a7cef5d54c95dfb7aad3bf6524257ac8b3d22d
 SHA512 (syn-2.0.48.crate) = 926c0ad55cc743df20f9166b6d71fd44421aeb1f073fd86b6ddb53e13cd508b539c0360ce64b07b65597bb14639c8f33acf7e60951e1e9128624517aa3aee325
 Size (syn-2.0.48.crate) = 250566 bytes
-BLAKE2s (tailspin-2.3.0.tar.gz) = 130917ed7c359895d4fd51919139c0a23ca558039aa052e6a7e8aa2403f85f85
-SHA512 (tailspin-2.3.0.tar.gz) = d86bd6d68010a9bcfa7ba49e904882420b881cda3631329f79717f4f0ca3ebfc9a99683728f920eca7ea81cb3114a4ee497946603b6c5ecf53fddc0952e4ccca
-Size (tailspin-2.3.0.tar.gz) = 3888659 bytes
+BLAKE2s (tailspin-2.4.0.tar.gz) = 9c7fd6ab796cde1a94921fd6284e381112db87cf7e51db74ca080a6f60d46b7b
+SHA512 (tailspin-2.4.0.tar.gz) = 65f44e64437c027c16085bfd2f2c61ebec4fc85b7374a9b79385fa546e68ce28fad07745d2c080b6badc9720d81eccad02ce8c9394f641e5528e11c39aae82c2
+Size (tailspin-2.4.0.tar.gz) = 3889783 bytes
 BLAKE2s (tempfile-3.9.0.crate) = e8b3d89e690470c7e5686803bba085302a33b9f05c58b9309c8a34f2eb75b987
 SHA512 (tempfile-3.9.0.crate) = 04e06c966bfa7a1567e7185ebd5c2876b96e46e36af14931bf0eba63795cd20d1c3427b6709a4cab2a68b8d289fdabd5537a50e5407a76e3a9fa0dcc7d3ce6d7
 Size (tempfile-3.9.0.crate) = 32182 bytes
