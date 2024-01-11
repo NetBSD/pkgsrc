@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/11/21 18:59:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/11 12:31:13 adam Exp $
 
-DISTNAME=	minidump-0.0.22
+DISTNAME=	minidump-0.0.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minidump/}
