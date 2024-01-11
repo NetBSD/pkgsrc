@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2023/10/21 17:10:32 gdt Exp $
+# $NetBSD: Makefile,v 1.133 2024/01/11 11:28:35 jperkin Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	24
@@ -47,8 +47,6 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.gif *.html \
 		${DESTDIR}${PREFIX}/share/doc/imlib
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
@@ -56,5 +54,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

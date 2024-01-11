@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/03/20 11:57:40 nia Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/11 11:28:35 jperkin Exp $
 
 DISTNAME=	cgoban-1.9.14
 CATEGORIES=	games x11
@@ -13,8 +13,6 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man6 share/misc
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/11/14 14:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2024/01/11 11:28:35 jperkin Exp $
 #
 
 DISTNAME=	bmp-0.9.7.1
@@ -66,8 +66,6 @@ post-patch:
 	    ${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
 .  endif
 .endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "options.mk"
 .include "../../audio/id3lib/buildlink3.mk"

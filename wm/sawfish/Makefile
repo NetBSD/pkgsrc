@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/11/14 14:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2024/01/11 11:28:36 jperkin Exp $
 
 DISTNAME=	sawfish_1.13.0
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -46,7 +46,6 @@ REP_ENV_PKGSRC=
 .include "../../lang/librep/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXt+=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/rep-gtk2/buildlink3.mk"
