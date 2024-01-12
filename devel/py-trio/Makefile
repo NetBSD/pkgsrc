@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/12/14 13:20:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/12 18:47:30 adam Exp $
 
-DISTNAME=	trio-0.23.2
+DISTNAME=	trio-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://github.com/python-trio/trio
 COMMENT=	Friendly Python library for async concurrency and I/O
 LICENSE=	mit OR apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-idna>=0:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-outcome>=0:../../devel/py-outcome
-DEPENDS+=	${PYPKGPREFIX}-sniffio>=0:../../misc/py-sniffio
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=0:../../devel/py-sortedcontainers
+DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-outcome-[0-9]*:../../devel/py-outcome
+DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.3.0:../../misc/py-sniffio
+DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
 TEST_DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
-TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator>=0:../../devel/py-async_generator
+TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-jedi-[0-9]*:../../editors/py-jedi
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
