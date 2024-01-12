@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/10/28 19:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/12 14:23:35 adam Exp $
 
-DISTNAME=	cmudict-1.0.15
+DISTNAME=	cmudict-1.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
 
@@ -17,14 +16,10 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# The upstream project lists higher minimums for these dependencies, but that
-# is incorrect. What's recorded below are correct minimums for the actual
-# functionality required. This has been tested with Python 3.8 and 3.9.
-
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=5.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
 .endif
 
