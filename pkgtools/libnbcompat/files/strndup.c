@@ -1,4 +1,4 @@
-/*	$NetBSD: strndup.c,v 1.1 2023/11/09 18:55:18 nia Exp $	*/
+/*	$NetBSD: strndup.c,v 1.2 2024/01/12 19:14:19 wiz Exp $	*/
 
 /*
  * Copyright (c) 1988, 1993
@@ -36,12 +36,11 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-#include <sys/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)strdup.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: strndup.c,v 1.1 2023/11/09 18:55:18 nia Exp $");
+__RCSID("$NetBSD: strndup.c,v 1.2 2024/01/12 19:14:19 wiz Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
