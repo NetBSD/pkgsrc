@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/08/02 19:21:53 nia Exp $
-#
+# $NetBSD: Makefile,v 1.15 2024/01/12 12:08:06 jperkin Exp $
 
 DISTNAME=		xsc-1.5
 PKGREVISION=		2
@@ -22,8 +21,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xsc
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xsc
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
