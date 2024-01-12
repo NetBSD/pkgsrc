@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2024/01/12 12:15:42 zafer Exp $
+# $NetBSD: Makefile,v 1.36 2024/01/12 16:12:10 tsutsui Exp $
 
 DISTNAME=	VLGothic-20230918
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	#
+MASTER_SITES=	https://vlgothic.dicey.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yamajun@ofug.net
