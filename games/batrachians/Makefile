@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/08 11:51:41 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/12 12:14:16 zafer Exp $
 
 DISTNAME=	batrachians-0.1.7
 CATEGORIES=	games
-MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/batrachians.html
