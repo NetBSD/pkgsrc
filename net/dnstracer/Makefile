@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/01/12 12:22:00 zafer Exp $
 
 DISTNAME=		dnstracer-1.10
 PKGREVISION=		7
 CATEGORIES=		net
-MASTER_SITES=		https://www.mavetju.org/download/
+MASTER_SITES=		http://www.mavetju.org/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.mavetju.org/unix/general.php
+HOMEPAGE=		http://www.mavetju.org/unix/general.php
 COMMENT=		Tool to trace dns queries
 LICENSE=		2-clause-bsd
 
