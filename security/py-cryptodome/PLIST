@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2023/12/29 11:33:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/01/12 13:15:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -233,6 +233,14 @@ ${PYSITELIB}/Crypto/Hash/TupleHash256.py
 ${PYSITELIB}/Crypto/Hash/TupleHash256.pyc
 ${PYSITELIB}/Crypto/Hash/TupleHash256.pyi
 ${PYSITELIB}/Crypto/Hash/TupleHash256.pyo
+${PYSITELIB}/Crypto/Hash/TurboSHAKE128.py
+${PYSITELIB}/Crypto/Hash/TurboSHAKE128.pyc
+${PYSITELIB}/Crypto/Hash/TurboSHAKE128.pyi
+${PYSITELIB}/Crypto/Hash/TurboSHAKE128.pyo
+${PYSITELIB}/Crypto/Hash/TurboSHAKE256.py
+${PYSITELIB}/Crypto/Hash/TurboSHAKE256.pyc
+${PYSITELIB}/Crypto/Hash/TurboSHAKE256.pyi
+${PYSITELIB}/Crypto/Hash/TurboSHAKE256.pyo
 ${PYSITELIB}/Crypto/Hash/_BLAKE2b.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_BLAKE2s.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_MD2.${SOEXT}
@@ -503,6 +511,9 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TurboSHAKE.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TurboSHAKE.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TurboSHAKE.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyo
