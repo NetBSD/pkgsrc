@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/12 18:50:34 adam Exp $
 
-DISTNAME=	manuel-1.10.1
+DISTNAME=	manuel-1.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/manuel/}
 
@@ -11,13 +10,14 @@ HOMEPAGE=	https://github.com/benji-york/manuel
 COMMENT=	Build tested documentation
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
