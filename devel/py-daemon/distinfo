@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/10/23 10:44:26 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/01/12 14:26:59 adam Exp $
 
-BLAKE2s (python-daemon-2.3.2.tar.gz) = 78be73ea8e04e7542ff18714ec1573badf63ced542f71720b078448d797c87e3
-SHA512 (python-daemon-2.3.2.tar.gz) = d9f6e6c376a496fae96bd9efed0a56d00a137617a3d1d5ef74802ef176bc813bb1d49bbb9164cdbec03213529f944b32b257bcc64283abfa4a3522ff00826bfd
-Size (python-daemon-2.3.2.tar.gz) = 83127 bytes
+BLAKE2s (python-daemon-3.0.1.tar.gz) = d08e0c78df38e095c3560de18d46aad436df9a647cf8933b09d551e2eb3d5687
+SHA512 (python-daemon-3.0.1.tar.gz) = ea35ec3e930e533ef08a492aa36492a958c9258857cdc75ab2ddb6688a7d8990282cfa0f63ee5cb6b7036b9cb71be03631d5d0d58788a08052425a441bce4e9a
+Size (python-daemon-3.0.1.tar.gz) = 81337 bytes
