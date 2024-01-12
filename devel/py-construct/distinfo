@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/02/22 08:39:25 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/12 13:24:05 adam Exp $
 
-BLAKE2s (construct-2.10.68.tar.gz) = cd1446a6957fc94561df13fdc25e102d43628ea61ac578631b98cb5d468ab806
-SHA512 (construct-2.10.68.tar.gz) = ac38d244425e08cad082cabb4e41383c181c286fc5b03fdc4745dad85cdc99bb45832ca95697cd8fe8d6290ea61cb59b0bf5614c93c3783d30fb1efae8fe7243
-Size (construct-2.10.68.tar.gz) = 57856 bytes
+BLAKE2s (construct-2.10.70.tar.gz) = ae8dced45fe9ae63b600d50e8ba28a8145b573c1d86f86ea6c43a1784fd4ec71
+SHA512 (construct-2.10.70.tar.gz) = 3dadd9361305829c42d099b8666e93873d9c1bd2cd403b844e4b22438e0f21887e45278bfb2b16cf5590eb12f8a40b63059aebad2a52a71bc068138da5543293
+Size (construct-2.10.70.tar.gz) = 86337 bytes
