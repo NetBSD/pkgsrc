@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/11/12 13:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/01/12 12:05:05 jperkin Exp $
 
 DISTNAME=	Eterm-0.9.6
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -30,13 +30,12 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/themes
 EXTRACT_DIR.${PIXMAP_FILES}=	${WRKSRC}
 
 .include "options.mk"
+
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libast/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
-BUILDLINK_DEPMETHOD.iconv?=	build
 .include "../../mk/bsd.pkg.mk"
