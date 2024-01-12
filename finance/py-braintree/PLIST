@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/01/05 20:23:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/01/12 13:20:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -313,6 +313,9 @@ ${PYSITELIB}/braintree/oauth_credentials.pyo
 ${PYSITELIB}/braintree/oauth_gateway.py
 ${PYSITELIB}/braintree/oauth_gateway.pyc
 ${PYSITELIB}/braintree/oauth_gateway.pyo
+${PYSITELIB}/braintree/package_details.py
+${PYSITELIB}/braintree/package_details.pyc
+${PYSITELIB}/braintree/package_details.pyo
 ${PYSITELIB}/braintree/paginated_collection.py
 ${PYSITELIB}/braintree/paginated_collection.pyc
 ${PYSITELIB}/braintree/paginated_collection.pyo
