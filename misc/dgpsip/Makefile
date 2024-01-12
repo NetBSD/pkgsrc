@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/08/01 16:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/12 12:23:34 zafer Exp $
 
 DISTNAME=	dgpsip-1.35
 CATEGORIES=	misc
-MASTER_SITES=	http://www.wsrcc.com/wolfgang/ftp/
+MASTER_SITES=	#
 
 MAINTAINER=	wsr+dgpsip@wsrcc.com
 #HOMEPAGE=	http://www.wsrcc.com/wolfgang/gps/dgps-ip.html
