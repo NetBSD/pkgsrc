@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/01/11 20:44:31 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/12 10:58:55 pin Exp $
 
-DISTNAME=	tetris-tui-0.2.1
+DISTNAME=	tetris-tui-0.2.2
 CATEGORIES=	games
 MASTER_SITES=	https://static.crates.io/crates/tetris-tui/
 EXTRACT_SUFX=	.crate
