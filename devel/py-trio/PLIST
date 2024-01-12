@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/14 13:20:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/12 18:47:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
@@ -21,6 +21,9 @@ ${PYSITELIB}/trio/_core/__init__.pyo
 ${PYSITELIB}/trio/_core/_asyncgens.py
 ${PYSITELIB}/trio/_core/_asyncgens.pyc
 ${PYSITELIB}/trio/_core/_asyncgens.pyo
+${PYSITELIB}/trio/_core/_concat_tb.py
+${PYSITELIB}/trio/_core/_concat_tb.pyc
+${PYSITELIB}/trio/_core/_concat_tb.pyo
 ${PYSITELIB}/trio/_core/_entry_queue.py
 ${PYSITELIB}/trio/_core/_entry_queue.pyc
 ${PYSITELIB}/trio/_core/_entry_queue.pyo
@@ -66,9 +69,6 @@ ${PYSITELIB}/trio/_core/_local.pyo
 ${PYSITELIB}/trio/_core/_mock_clock.py
 ${PYSITELIB}/trio/_core/_mock_clock.pyc
 ${PYSITELIB}/trio/_core/_mock_clock.pyo
-${PYSITELIB}/trio/_core/_multierror.py
-${PYSITELIB}/trio/_core/_multierror.pyc
-${PYSITELIB}/trio/_core/_multierror.pyo
 ${PYSITELIB}/trio/_core/_parking_lot.py
 ${PYSITELIB}/trio/_core/_parking_lot.pyc
 ${PYSITELIB}/trio/_core/_parking_lot.pyo
@@ -81,6 +81,9 @@ ${PYSITELIB}/trio/_core/_tests/__init__.pyo
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.py
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.pyc
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.pyo
+${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.py
+${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.pyc
+${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.pyo
 ${PYSITELIB}/trio/_core/_tests/test_guest_mode.py
 ${PYSITELIB}/trio/_core/_tests/test_guest_mode.pyc
 ${PYSITELIB}/trio/_core/_tests/test_guest_mode.pyo
@@ -99,21 +102,6 @@ ${PYSITELIB}/trio/_core/_tests/test_local.pyo
 ${PYSITELIB}/trio/_core/_tests/test_mock_clock.py
 ${PYSITELIB}/trio/_core/_tests/test_mock_clock.pyc
 ${PYSITELIB}/trio/_core/_tests/test_mock_clock.pyo
-${PYSITELIB}/trio/_core/_tests/test_multierror.py
-${PYSITELIB}/trio/_core/_tests/test_multierror.pyc
-${PYSITELIB}/trio/_core/_tests/test_multierror.pyo
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/__init__.py
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/__init__.pyc
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/__init__.pyo
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/_common.py
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/_common.pyc
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/_common.pyo
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/apport_excepthook.py
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/apport_excepthook.pyc
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/apport_excepthook.pyo
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/simple_excepthook.py
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/simple_excepthook.pyc
-${PYSITELIB}/trio/_core/_tests/test_multierror_scripts/simple_excepthook.pyo
 ${PYSITELIB}/trio/_core/_tests/test_parking_lot.py
 ${PYSITELIB}/trio/_core/_tests/test_parking_lot.pyc
 ${PYSITELIB}/trio/_core/_tests/test_parking_lot.pyo
@@ -291,6 +279,9 @@ ${PYSITELIB}/trio/_tests/test_sync.pyo
 ${PYSITELIB}/trio/_tests/test_testing.py
 ${PYSITELIB}/trio/_tests/test_testing.pyc
 ${PYSITELIB}/trio/_tests/test_testing.pyo
+${PYSITELIB}/trio/_tests/test_testing_raisesgroup.py
+${PYSITELIB}/trio/_tests/test_testing_raisesgroup.pyc
+${PYSITELIB}/trio/_tests/test_testing_raisesgroup.pyo
 ${PYSITELIB}/trio/_tests/test_threads.py
 ${PYSITELIB}/trio/_tests/test_threads.pyc
 ${PYSITELIB}/trio/_tests/test_threads.pyo
@@ -330,6 +321,9 @@ ${PYSITELIB}/trio/_tests/type_tests/open_memory_channel.pyo
 ${PYSITELIB}/trio/_tests/type_tests/path.py
 ${PYSITELIB}/trio/_tests/type_tests/path.pyc
 ${PYSITELIB}/trio/_tests/type_tests/path.pyo
+${PYSITELIB}/trio/_tests/type_tests/raisesgroup.py
+${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyc
+${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyo
 ${PYSITELIB}/trio/_threads.py
 ${PYSITELIB}/trio/_threads.pyc
 ${PYSITELIB}/trio/_threads.pyo
@@ -391,15 +385,15 @@ ${PYSITELIB}/trio/testing/_memory_streams.pyo
 ${PYSITELIB}/trio/testing/_network.py
 ${PYSITELIB}/trio/testing/_network.pyc
 ${PYSITELIB}/trio/testing/_network.pyo
+${PYSITELIB}/trio/testing/_raises_group.py
+${PYSITELIB}/trio/testing/_raises_group.pyc
+${PYSITELIB}/trio/testing/_raises_group.pyo
 ${PYSITELIB}/trio/testing/_sequencer.py
 ${PYSITELIB}/trio/testing/_sequencer.pyc
 ${PYSITELIB}/trio/testing/_sequencer.pyo
 ${PYSITELIB}/trio/testing/_trio_test.py
 ${PYSITELIB}/trio/testing/_trio_test.pyc
 ${PYSITELIB}/trio/testing/_trio_test.pyo
-${PYSITELIB}/trio/tests.py
-${PYSITELIB}/trio/tests.pyc
-${PYSITELIB}/trio/tests.pyo
 ${PYSITELIB}/trio/to_thread.py
 ${PYSITELIB}/trio/to_thread.pyc
 ${PYSITELIB}/trio/to_thread.pyo
