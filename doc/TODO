@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23899 2024/01/11 23:06:03 wiz Exp $
+$NetBSD: TODO,v 1.23900 2024/01/12 05:35:18 adam Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-ossl-2.3.2
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qt6-6.5.4
 	o qtcreator-12.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
