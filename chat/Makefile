@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2023/12/05 16:04:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.285 2024/01/12 10:07:17 pin Exp $
 #
 
 COMMENT=	Communication programs
@@ -77,6 +77,7 @@ SUBDIR+=	mcabber
 SUBDIR+=	meanwhile
 SUBDIR+=	miniircd
 SUBDIR+=	mumble
+SUBDIR+=	neonmodem
 SUBDIR+=	ninja
 SUBDIR+=	p5-IRC-Utils
 SUBDIR+=	p5-Net-Goofey
