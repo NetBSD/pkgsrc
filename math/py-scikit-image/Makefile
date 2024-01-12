@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/12 12:03:16 jperkin Exp $
 
 DISTNAME=	scikit-image-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 # no python 3.11 support as of 0.19.3
 # https://github.com/scikit-image/scikit-image/issues/6598
 PYTHON_VERSIONS_INCOMPATIBLE+=	311
+
+# Ensure python is fully buildlinked, py-pythran defaults to build only.
+PYTHON_FOR_BUILD_ONLY=	no
+.include "../../lang/python/pyversion.mk"
 
 USE_PKG_RESOURCES=	yes
 
