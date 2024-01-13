@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/13 13:53:23 gdt Exp $
+
+BLAKE2s (xmenu-4.6.1.tar.gz) = f9a9bb6560ed93a70674a6a74602853d4d11a8cd4136a963ac83421d3b968c51
+SHA512 (xmenu-4.6.1.tar.gz) = f4874451488306bc2c2bae4638df366c1e13280187cec47be0a6b79eb972ae51f2c67ad836248fb6b66fed92c0748c9bae8a79fd470f4418ff0726c460e92023
+Size (xmenu-4.6.1.tar.gz) = 31450 bytes
