@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/01/13 04:25:39 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/13 17:27:48 wiz Exp $
 
 DISTNAME=	nickle-2.96
 CATEGORIES=	math lang
@@ -11,6 +11,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	autoconf automake autoreconf
 TOOL_DEPENDS+=	autoconf-archive>=0:../../devel/autoconf-archive
+# for m4 file
+TOOL_DEPENDS+=	pkgconf>=0:../../devel/pkgconf
 
 pre-configure:
 	@${STEP_MSG} Autoreconf for Makefile.am patch
