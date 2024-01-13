@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2022/10/18 12:01:52 adam Exp $
+# $NetBSD: builtin.mk,v 1.4 2024/01/13 20:07:34 riastradh Exp $
 
 BUILTIN_PKG:=	net-snmp
 
@@ -32,7 +32,7 @@ BUILTIN_VERSION.net-snmp!=				\
 			gsub("\"", "", vers);		\
 			print vers;			\
 		}					\
-	' ${H_NETSNMP:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_NETSNMP:Q}
 BUILTIN_PKG.net-snmp=	net-snmp-${BUILTIN_VERSION.net-snmp}
 .endif
 MAKEVARS+=		BUILTIN_PKG.net-snmp

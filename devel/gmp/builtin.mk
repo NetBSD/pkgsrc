@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2023/08/05 07:08:26 adam Exp $
+# $NetBSD: builtin.mk,v 1.13 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -33,7 +33,8 @@ MAKEVARS+=	IS_BUILTIN.gmp
 .if !defined(BUILTIN_PKG.gmp) && \
     ${IS_BUILTIN.gmp:tl} == yes && \
     empty(H_GMP:M__nonexistent__)
-BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp} ${H_GMP}
+BUILTIN_VERSION.gmp!=	\
+	${BUILTIN_VERSION_SCRIPT.gmp} ${_CROSS_DESTDIR:U:Q}${H_GMP:Q}
 BUILTIN_PKG.gmp=	gmp-${BUILTIN_VERSION.gmp}
 .endif
 MAKEVARS+=		BUILTIN_PKG.gmp

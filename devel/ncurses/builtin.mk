@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.44 2023/01/19 12:09:20 wiz Exp $
+# $NetBSD: builtin.mk,v 1.45 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -47,7 +47,7 @@ BUILTIN_VERSION.ncurses!=						\
 			gsub("\"", "", vers);				\
 			print vers;					\
 		}							\
-	' ${H_NCURSES:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_NCURSES:Q}
 BUILTIN_PKG.ncurses=	ncurses-${BUILTIN_VERSION.ncurses}
 .endif
 MAKEVARS+=		BUILTIN_PKG.ncurses

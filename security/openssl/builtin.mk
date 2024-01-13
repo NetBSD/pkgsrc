@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.51 2023/02/07 16:34:42 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.52 2024/01/13 20:07:34 riastradh Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -58,7 +58,7 @@ BUILTIN_VERSION.openssl!=						\
 				major, minor, teeny, patchlevel;	\
 			exit 0;						\
 		}							\
-	' ${H_OPENSSLV}
+	' ${_CROSS_DESTDIR:U:Q}${H_OPENSSLV:Q}
 BUILTIN_PKG.openssl=	openssl-${BUILTIN_VERSION.openssl}
 .endif
 MAKEVARS+=		BUILTIN_PKG.openssl
@@ -72,7 +72,7 @@ BUILTIN_OPENSSL_HAS_THREADS!=						\
 		/\#[ 	]*define[ 	]*OPENSSL_THREADS/ { ans= "yes" } \
 		/\#[ 	]*define[ 	]*THREADS/ { ans = "yes" }	\
 		END { print ans; exit 0 }				\
-	' ${H_OPENSSLCONF:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_OPENSSLCONF:Q}
 .endif
 MAKEVARS+=	BUILTIN_OPENSSL_HAS_THREADS
 
@@ -143,7 +143,7 @@ SSLDIR=	${PKG_SYSCONFDIR.openssl}
 .    if ${OPSYS} == "NetBSD"
 SSLDIR=	/etc/openssl
 .    elif ${OPSYS} == "Linux"
-.      if exists(/etc/pki/tls)
+.      if exists(${_CROSS_DESTDIR:U}/etc/pki/tls)
 # Some distributions have moved to /etc/pki/tls, with incomplete
 # symlinks from /etc/ssl.  Prefer the new location if it exists
 SSLDIR=	/etc/pki/tls
@@ -151,7 +151,7 @@ SSLDIR=	/etc/pki/tls
 SSLDIR=	/etc/ssl 		# standard location
 .      endif
 .    elif ${OPSYS} == "Haiku"
-.      if exists(/boot/system/data/ssl)
+.      if exists(${_CROSS_DESTDIR:U}/boot/system/data/ssl)
 SSLDIR=	/boot/system/data/ssl
 .      else
 SSLDIR=	/boot/common/data/ssl
@@ -168,7 +168,7 @@ SSLCERTS=	${SSLDIR}/certs
 # Continue to define SSLCERTS because it's unclear if that's the
 # directory that has one file per cert, or the directory that contains
 # trust anchor config in some fortm.
-.  if exists(${SSLDIR}/certs/ca-bundle.crt)
+.  if exists(${_CROSS_DESTDIR:U}${SSLDIR}/certs/ca-bundle.crt)
 SSLCERTBUNDLE=	${SSLDIR}/certs/ca-bundle.crt
 .  endif
 SSLKEYS=	${SSLDIR}/private

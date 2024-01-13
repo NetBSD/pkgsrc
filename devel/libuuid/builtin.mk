@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2020/08/26 13:47:14 schmonz Exp $
+# $NetBSD: builtin.mk,v 1.13 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -31,7 +31,8 @@ MAKEVARS+=		IS_BUILTIN.libuuid
 .if !defined(BUILTIN_PKG.libuuid) && \
     !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
 .  if empty(UUID_PC:M__nonexistent__)
-BUILTIN_VERSION.libuuid!=	${SED} -n -e 's/Version: //p' ${UUID_PC}
+BUILTIN_VERSION.libuuid!=	\
+	${SED} -n -e 's/Version: //p' ${_CROSS_DESTDIR:U:Q}${UUID_PC:Q}
 BUILTIN_PKG.libuuid=		libuuid-${BUILTIN_VERSION.libuuid}
 .  else
 BUILTIN_PKG.libuuid=		libuuid-2.18	# whatever, as long as it is big enough
