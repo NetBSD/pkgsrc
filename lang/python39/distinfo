@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2023/11/10 09:48:39 nia Exp $
+$NetBSD: distinfo,v 1.38 2024/01/13 04:24:28 riastradh Exp $
 
 BLAKE2s (Python-3.9.18.tar.xz) = 429256eb52e94427ae86302633ce8b01ba42d37c44c59e89fa0ae09b721da63f
 SHA512 (Python-3.9.18.tar.xz) = aab155aca757d298394eddb91ff9a8f239665bd46feb495c6b6f735bbcb7489c05c858cc4cd08f1575c24f293b33492d763e9a140d92f0b2b0cc81a165a677c7
@@ -21,4 +21,4 @@ SHA1 (patch-Modules_socketmodule.h) = 8761c7238bc74e45adefb6e647dc3b39b7bdd81c
 SHA1 (patch-Python_thread__pthread.h) = 25609f722ac9c17a49023ddc6882545d9d7798ff
 SHA1 (patch-configure) = 944b8bb9601fd064333305778fb57997ce0ac531
 SHA1 (patch-pyconfig.h.in) = 2f06af7358690b46eaff404226b898962b049a0e
-SHA1 (patch-setup.py) = dab93079027f8ac6a259c9e683d35fe7b66c57e5
+SHA1 (patch-setup.py) = 185090e3497763ca271316b5ff4df7f1e72d1c14
