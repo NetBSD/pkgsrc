@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/11 10:34:50 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.3 2024/01/13 06:34:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/sphinxcontrib/websupport/__init__.py
 ${PYSITELIB}/sphinxcontrib/websupport/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/__init__.pyo
@@ -53,12 +49,10 @@ ${PYSITELIB}/sphinxcontrib/websupport/storage/sqlalchemy_db.pyo
 ${PYSITELIB}/sphinxcontrib/websupport/storage/sqlalchemystorage.py
 ${PYSITELIB}/sphinxcontrib/websupport/storage/sqlalchemystorage.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/storage/sqlalchemystorage.pyo
+${PYSITELIB}/sphinxcontrib/websupport/templates/searchresults.html
 ${PYSITELIB}/sphinxcontrib/websupport/utils.py
 ${PYSITELIB}/sphinxcontrib/websupport/utils.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/utils.pyo
-${PYSITELIB}/sphinxcontrib/websupport/version.py
-${PYSITELIB}/sphinxcontrib/websupport/version.pyc
-${PYSITELIB}/sphinxcontrib/websupport/version.pyo
 ${PYSITELIB}/sphinxcontrib/websupport/writer.py
 ${PYSITELIB}/sphinxcontrib/websupport/writer.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/writer.pyo
