@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.7 2023/10/23 06:36:00 wiz Exp $
+$NetBSD: patch-setup.py,v 1.8 2024/01/13 04:24:28 riastradh Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -7,8 +7,11 @@ which will get transformed to panel in buildlink.
 Don't search for modules in PREFIX. Fixes build failure when py-setuptools
   are installed.
 Enable cross-build by setting sys._home and sys.path to build directory
+Disable circuitous readline detection which tries to outsmart pkgsrc's
+static choice of libreadline and (fake-)ncurses and trips over its elven
+shoelaces when cross-compiling.
 
---- setup.py.orig	2022-03-23 20:12:04.000000000 +0000
+--- setup.py.orig	2023-08-24 12:46:25.000000000 +0000
 +++ setup.py
 @@ -1,5 +1,11 @@
  # Autodetecting setup.py script for building the Python extensions
@@ -64,7 +67,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -823,15 +841,15 @@ class PyBuildExt(build_ext):
+@@ -822,15 +840,15 @@ class PyBuildExt(build_ext):
                          add_dir_to_list(dir_list, directory)
  
      def configure_compiler(self):
@@ -89,7 +92,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
          self.add_multiarch_paths()
          self.add_ldflags_cppflags()
  
-@@ -879,6 +897,9 @@ class PyBuildExt(build_ext):
+@@ -878,6 +896,9 @@ class PyBuildExt(build_ext):
              self.lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if MACOS:
@@ -99,16 +102,82 @@ Enable cross-build by setting sys._home and sys.path to build directory
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1106,8 +1127,6 @@ class PyBuildExt(build_ext):
-         # use the same library for the readline and curses modules.
-         if 'curses' in readline_termcap_library:
-             curses_library = readline_termcap_library
+@@ -1067,71 +1088,10 @@ class PyBuildExt(build_ext):
+     def detect_readline_curses(self):
+         # readline
+         readline_termcap_library = ""
+-        curses_library = ""
+-        # Cannot use os.popen here in py3k.
+-        tmpfile = os.path.join(self.build_temp, 'readline_termcap_lib')
+-        if not os.path.exists(self.build_temp):
+-            os.makedirs(self.build_temp)
+-        # Determine if readline is already linked against curses or tinfo.
+-        if sysconfig.get_config_var('HAVE_LIBREADLINE'):
+-            if sysconfig.get_config_var('WITH_EDITLINE'):
+-                readline_lib = 'edit'
+-            else:
+-                readline_lib = 'readline'
+-            do_readline = self.compiler.find_library_file(self.lib_dirs,
+-                readline_lib)
+-            if CROSS_COMPILING:
+-                ret = run_command("%s -d %s | grep '(NEEDED)' > %s"
+-                                % (sysconfig.get_config_var('READELF'),
+-                                   do_readline, tmpfile))
+-            elif find_executable('ldd'):
+-                ret = run_command("ldd %s > %s" % (do_readline, tmpfile))
+-            else:
+-                ret = 1
+-            if ret == 0:
+-                with open(tmpfile) as fp:
+-                    for ln in fp:
+-                        if 'curses' in ln:
+-                            readline_termcap_library = re.sub(
+-                                r'.*lib(n?cursesw?)\.so.*', r'\1', ln
+-                            ).rstrip()
+-                            break
+-                        # termcap interface split out from ncurses
+-                        if 'tinfo' in ln:
+-                            readline_termcap_library = 'tinfo'
+-                            break
+-            if os.path.exists(tmpfile):
+-                os.unlink(tmpfile)
+-        else:
+-            do_readline = False
+-        # Issue 7384: If readline is already linked against curses,
+-        # use the same library for the readline and curses modules.
+-        if 'curses' in readline_termcap_library:
+-            curses_library = readline_termcap_library
 -        elif self.compiler.find_library_file(self.lib_dirs, 'ncursesw'):
 -            curses_library = 'ncursesw'
-         # Issue 36210: OSS provided ncurses does not link on AIX
-         # Use IBM supplied 'curses' for successful build of _curses
-         elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1211,8 +1230,7 @@ class PyBuildExt(build_ext):
+-        # Issue 36210: OSS provided ncurses does not link on AIX
+-        # Use IBM supplied 'curses' for successful build of _curses
+-        elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
+-            curses_library = 'curses'
+-        elif self.compiler.find_library_file(self.lib_dirs, 'ncurses'):
+-            curses_library = 'ncurses'
+-        elif self.compiler.find_library_file(self.lib_dirs, 'curses'):
+-            curses_library = 'curses'
++        curses_library = "ncurses"
++        do_readline = True
++        readline_lib = 'readline'
+ 
+-        if MACOS:
+-            os_release = int(os.uname()[2].split('.')[0])
+-            dep_target = sysconfig.get_config_var('MACOSX_DEPLOYMENT_TARGET')
+-            if (dep_target and
+-                    (tuple(int(n) for n in dep_target.split('.')[0:2])
+-                        < (10, 5) ) ):
+-                os_release = 8
+-            if os_release < 9:
+-                # MacOSX 10.4 has a broken readline. Don't try to build
+-                # the readline module unless the user has installed a fixed
+-                # readline package
+-                if find_file('readline/rlconf.h', self.inc_dirs, []) is None:
+-                    do_readline = False
+         if do_readline:
+             if MACOS and os_release < 9:
+                 # In every directory on the search path search for a dynamic
+@@ -1213,8 +1173,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -118,7 +187,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1457,6 +1475,31 @@ class PyBuildExt(build_ext):
+@@ -1459,6 +1418,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -150,7 +219,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1468,7 +1511,7 @@ class PyBuildExt(build_ext):
+@@ -1470,7 +1454,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -159,7 +228,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -2328,10 +2371,7 @@ class PyBuildExt(build_ext):
+@@ -2333,10 +2317,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -171,7 +240,7 @@ Enable cross-build by setting sys._home and sys.path to build directory
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2747,7 +2787,7 @@ def main():
+@@ -2752,7 +2733,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
