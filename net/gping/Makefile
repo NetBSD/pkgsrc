@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/20 21:22:56 pin Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/13 21:26:53 pin Exp $
 
-DISTNAME=	gping-1.14.0
-PKGREVISION=	1
+DISTNAME=	gping-1.16.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orf/}
 GITHUB_TAG=	refs/tags/gping-v${PKGVERSION_NOREV}
