@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/01 00:30:18 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/13 20:16:02 gdt Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
@@ -237,6 +237,10 @@ BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 .endif
 
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q} TARGET_CC=${TARGET_CC}
+
+# \todo Considering installing xen-command-line(7), perhaps by pandoc,
+# and perhaps by some mechanism that does not cause portability
+# issues.
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
