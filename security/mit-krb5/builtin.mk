@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2024/01/05 23:46:29 adam Exp $
+# $NetBSD: builtin.mk,v 1.20 2024/01/13 20:10:07 riastradh Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -43,8 +43,9 @@ MAKEVARS+=		IS_BUILTIN.mit-krb5
 .if !defined(BUILTIN_PKG.mit-krb5) && \
     ${IS_BUILTIN.mit-krb5:tl} == yes
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
-BUILTIN_VERSION.mit-krb5!=	${SH_KRB5_CONFIG} --version | \
-				${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
+BUILTIN_VERSION.mit-krb5!=					\
+	${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q} --version |	\
+	${SED} -e 's/.*release //' -e 's/-.*//' -e 's/).*//'
 .  endif
 BUILTIN_VERSION.mit-krb5?=	1.4.0
 BUILTIN_PKG.mit-krb5=		mit-krb5-${BUILTIN_VERSION.mit-krb5}
@@ -85,11 +86,11 @@ MAKEVARS+=		USE_BUILTIN.mit-krb5
 CHECK_BUILTIN.mit-krb5?=	no
 .if ${CHECK_BUILTIN.mit-krb5:tl} == no
 .  if ${USE_BUILTIN.mit-krb5:tl} == yes
-KRB5_CONFIG?=	${SH_KRB5_CONFIG}
+KRB5_CONFIG?=	${_CROSS_DESTDIR:U}${SH_KRB5_CONFIG}
 ALL_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 
-BUILDLINK_CPPFLAGS.mit-krb5!=	${SH_KRB5_CONFIG} --cflags
-BUILDLINK_LDFLAGS.mit-krb5!=	${SH_KRB5_CONFIG} --libs
+BUILDLINK_CPPFLAGS.mit-krb5!=	${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q} --cflags
+BUILDLINK_LDFLAGS.mit-krb5!=	${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q} --libs
 
 #
 # The SunOS builtin krb5-config does not support all of the arguments that the
@@ -109,14 +110,14 @@ fake-krb5-config:
 	if [ ! -f $${dst} ]; then					\
 		${ECHO_BUILDLINK_MSG} "Creating $${dst}";		\
 		${ECHO} "#!${SH}" > $${dst};				\
-		${SED} -e "s,@KRB5_CONFIG@,${SH_KRB5_CONFIG:Q},g"	\
+		${SED} -e s,@KRB5_CONFIG@,${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q},g	\
 		    $${src} >> $${dst};					\
 		${CHMOD} +x $${dst};					\
 	fi
 
 .    endif
 .  else
-KRB5_CONFIG?=	${BUILDLINK_PREFIX.mit-krb5}/bin/krb5-config
+KRB5_CONFIG?=	${_CROSS_DESTDIR:U}${BUILDLINK_PREFIX.mit-krb5}/bin/krb5-config
 CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
