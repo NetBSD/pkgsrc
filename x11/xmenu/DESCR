@@ -1,0 +1,4 @@
+XMenu is a menu utility for X. It receives a menu specification
+in STDIN, shows a menu for the user to select one of the options,
+and outputs the option selected to STDOUT. XMenu can be controlled
+both via mouse and via keyboard.
