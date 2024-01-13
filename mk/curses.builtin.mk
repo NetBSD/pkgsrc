@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.21 2022/06/06 01:24:11 gutteridge Exp $
+# $NetBSD: curses.builtin.mk,v 1.22 2024/01/13 20:26:47 riastradh Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -36,7 +36,8 @@ BUILTIN_FIND_GREP.H_CURSES_${defn}=		${defn}
 ###
 .if !defined(IS_BUILTIN.curses)
 IS_BUILTIN.curses=	no
-.  if empty(H_CURSES:M${LOCALBASE}/*) && exists(${H_CURSES})
+.  if empty(H_CURSES:M${LOCALBASE}/*) && \
+      exists(${TOOLS_CROSS_DESTDIR}${H_CURSES})
 IS_BUILTIN.curses=	yes
 .  endif
 .endif
@@ -125,7 +126,7 @@ CHECK_BUILTIN.curses?=	no
 .if !empty(CHECK_BUILTIN.curses:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.curses:M[yY][eE][sS])
-.    if exists(${H_CURSES})
+.    if exists(${TOOLS_CROSS_DESTDIR}${H_CURSES})
 BUILDLINK_INCDIRS.curses?=	${H_CURSES:H}
 .    endif
 BUILDLINK_LIBNAME.curses=	${BUILTIN_LIBNAME.curses}

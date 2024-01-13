@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.12 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: find-libs.mk,v 1.13 2024/01/13 20:26:47 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,7 +58,8 @@ BUILTIN_LIB_FOUND.${_lib_}=	no
 .    for _path_ in ${COMPILER_LIB_DIRS}
 .      if ${BUILTIN_LIB_FOUND.${_lib_}} == "no"
 BUILTIN_LIB_FOUND.${_lib_}!=    \
-	if ${TEST} "`${ECHO} ${_path_}/lib${_lib_}.*`" != "${_path_}/lib${_lib_}.*"; then \
+	if ${TEST} "`${ECHO} ${TOOLS_CROSS_DESTDIR}${_path_}/lib${_lib_}.*`" \
+	    != "${TOOLS_CROSS_DESTDIR}${_path_}/lib${_lib_}.*"; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
