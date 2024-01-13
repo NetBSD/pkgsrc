@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/13 06:29:07 adam Exp $
 
-DISTNAME=	sphinx_inline_tabs-2022.1.2b11
-PKGNAME=	${PYPKGPREFIX}-sphinx-inline-tabs-2022.1.2beta11
-PKGREVISION=	1
+DISTNAME=	sphinx_inline_tabs-2023.4.21
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-inline-tabs/}
 
@@ -11,8 +10,10 @@ HOMEPAGE=	https://github.com/pradyunsg/sphinx-inline-tabs
 COMMENT=	Sphinx module to add inline tabbed content
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=3:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
