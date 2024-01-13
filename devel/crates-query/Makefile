@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/12/19 09:48:20 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/13 19:28:27 pin Exp $
 
-DISTNAME=	crates-query-0.1.1
+DISTNAME=	crates-query-0.1.2
 CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/crates-query/
 EXTRACT_SUFX=	.crate
