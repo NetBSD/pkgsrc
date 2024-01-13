@@ -1,4 +1,4 @@
-# $NetBSD: solaris-pam.builtin.mk,v 1.5 2013/11/23 09:10:14 obache Exp $
+# $NetBSD: solaris-pam.builtin.mk,v 1.6 2024/01/13 20:26:47 riastradh Exp $
 
 BUILTIN_PKG:=	solaris-pam
 
@@ -14,7 +14,8 @@ BUILTIN_FIND_GREP.H_SOLARIS_PAM=	Copyright.*Sun Microsystems
 ###
 .if !defined(IS_BUILTIN.solaris-pam)
 IS_BUILTIN.solaris-pam=	no
-.  if empty(H_SOLARIS_PAM:M${LOCALBASE}/*) && exists(${H_SOLARIS_PAM})
+.  if empty(H_SOLARIS_PAM:M${LOCALBASE}/*) && \
+      exists(${TOOLS_CROSS_DESTDIR}${H_SOLARIS_PAM})
 IS_BUILTIN.solaris-pam=	yes
 .  endif
 .endif

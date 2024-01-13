@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.16 2019/06/30 21:28:28 rillig Exp $
+# $NetBSD: pthread.builtin.mk,v 1.17 2024/01/13 20:26:47 riastradh Exp $
 
 BUILTIN_PKG:=	pthread
 
@@ -14,7 +14,8 @@ BUILTIN_FIND_HEADERS.H_PTHREAD=	pthread.h
 ###
 .if !defined(IS_BUILTIN.pthread)
 IS_BUILTIN.pthread=	no
-.  if empty(H_PTHREAD:M${LOCALBASE}/*) && exists(${H_PTHREAD})
+.  if empty(H_PTHREAD:M${LOCALBASE}/*) && \
+     exists(${TOOLS_CROSS_DESTDIR}${H_PTHREAD})
 IS_BUILTIN.pthread=	yes
 .  endif
 .endif

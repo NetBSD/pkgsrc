@@ -1,4 +1,4 @@
-# $NetBSD: find-files.mk,v 1.9 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: find-files.mk,v 1.10 2024/01/13 20:26:47 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -76,12 +76,14 @@ USE_TOOLS+=	grep
 .  if !defined(${_var_})
 ${_var_}=	__nonexistent__
 .    for _file_ in ${BUILTIN_FIND_FILES.${_var_}}
-.      if !empty(${_var_}:M__nonexistent__) && exists(${_file_})
+.      if !empty(${_var_}:M__nonexistent__) && \
+          exists(${TOOLS_CROSS_DESTDIR}${_file_})
 .        if !defined(BUILTIN_FIND_GREP.${_var_})
 ${_var_}=	${_file_}
 .        else
 ${_var_}!=								\
-	if ${GREP} -q ${BUILTIN_FIND_GREP.${_var_}:Q} ${_file_:Q}; then	\
+	if ${GREP} -q ${BUILTIN_FIND_GREP.${_var_}:Q}			\
+	    ${TOOLS_CROSS_DESTDIR:Q}${_file_:Q}; then			\
 		${ECHO} ${_file_:Q};					\
 	else								\
 		${ECHO} __nonexistent__;				\

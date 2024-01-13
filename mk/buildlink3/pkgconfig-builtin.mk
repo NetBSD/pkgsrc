@@ -1,4 +1,4 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.7 2022/10/27 13:01:44 gdt Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.8 2024/01/13 20:26:47 riastradh Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files
 # that use pkgconfig files to check for a built-in implementation.
@@ -52,7 +52,7 @@ MAKEVARS:=	${MAKEVARS} IS_BUILTIN.${BUILTIN_PKG}
      defined(BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG})))
 BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}?=	${SED} -n -e 's/Version: //p'
 BUILTIN_VERSION.${BUILTIN_PKG}!= ${BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}} \
-					${FIND_FILES_${BUILTIN_PKG}}
+	${TOOLS_CROSS_DESTDIR}${FIND_FILES_${BUILTIN_PKG}}
 BUILTIN_PKG.${BUILTIN_PKG}:= ${BUILTIN_PKG}-${BUILTIN_VERSION.${BUILTIN_PKG}}
 .endif
 MAKEVARS:=      ${MAKEVARS} BUILTIN_PKG.${BUILTIN_PKG}
