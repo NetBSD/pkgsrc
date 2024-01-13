@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/13 23:04:52 mef Exp $
 
-BLAKE2s (R/spatstat.sparse_2.0-0.tar.gz) = 23e96e723000ad222cc611382cb8c0091e370517241db4e2800d3afbf5ee261f
-SHA512 (R/spatstat.sparse_2.0-0.tar.gz) = 4134118030202243909afa89c785394170d27ba84cbf43a5146434a0453ff3982033b10c66274607cd45ee8190282d5bcbe8564a313474144d738231a7732525
-Size (R/spatstat.sparse_2.0-0.tar.gz) = 38486 bytes
+BLAKE2s (R/spatstat.sparse_3.0-3.tar.gz) = 903b338621604fc91400d2981f62707c4c91fd3d3ac88ac8822db91fa2fadc8a
+SHA512 (R/spatstat.sparse_3.0-3.tar.gz) = 364464134d85c42282c59617925cbfcc90c997c6e7bf0484b9b5d0c1f1061297c196f84c4cbc3b80d8b50548d3e06722d983d4a91a43de6ed749efa98a288cdf
+Size (R/spatstat.sparse_3.0-3.tar.gz) = 41607 bytes
