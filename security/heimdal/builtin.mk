@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2022/11/22 12:51:00 adam Exp $
+# $NetBSD: builtin.mk,v 1.20 2024/01/13 20:10:07 riastradh Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -30,8 +30,9 @@ MAKEVARS+=		IS_BUILTIN.heimdal
 .if !defined(BUILTIN_PKG.heimdal) && \
     ${IS_BUILTIN.heimdal:tl} == yes
 .  if empty(SH_KRB5_CONFIG:M__nonexistent__)
-BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
-				${AWK} '{ print $$2; exit }'
+BUILTIN_VERSION.heimdal!=						\
+	${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q} --version |		\
+	${AWK} '{ print $$2; exit }'
 .  else
 #
 # heimdal<=0.6.x doesn't have a method of checking files to discover
@@ -108,7 +109,7 @@ CHECK_BUILTIN.heimdal?=	no
 .  if ${USE_BUILTIN.heimdal:tl} == no
 BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.6
 
-KRB5_CONFIG?=	${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
+KRB5_CONFIG?=	${_CROSS_DESTDIR:U}${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
 CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
@@ -128,7 +129,7 @@ fake-krb5-config:
 
 KRB5_CONFIG?=	${BUILDLINK_DIR}/bin/krb5-config
 .    else
-KRB5_CONFIG?=	${SH_KRB5_CONFIG}
+KRB5_CONFIG?=	${_CROSS_DESTDIR:U}${SH_KRB5_CONFIG}
 .    endif
 CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
