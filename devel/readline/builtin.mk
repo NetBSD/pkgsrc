@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2019/11/03 10:39:29 rillig Exp $
+# $NetBSD: builtin.mk,v 1.22 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	readline
 
@@ -35,7 +35,7 @@ BUILTIN_VERSION.readline!=						\
 	${AWK} '/\#define[ 	]*RL_VERSION_MAJOR/ { M = $$3 }		\
 		/\#define[ 	]*RL_VERSION_MINOR/ { m = "."$$3 }	\
 		END { printf "%s%s\n", M, m }				\
-	' ${H_READLINE:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_READLINE:Q}
 BUILTIN_PKG.readline=	readline-${BUILTIN_VERSION.readline}
 .endif
 MAKEVARS+=		BUILTIN_PKG.readline

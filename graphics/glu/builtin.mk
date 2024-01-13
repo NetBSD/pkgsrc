@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2023/08/24 11:35:49 wiz Exp $
+# $NetBSD: builtin.mk,v 1.19 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -30,7 +30,8 @@ MAKEVARS+=	IS_BUILTIN.glu
 .if !defined(BUILTIN_PKG.glu) && \
     ${IS_BUILTIN.glu:tl} == yes
 .  if empty(PC_GLU:M__nonexistent__)
-BUILTIN_VERSION.Mesa!= ${SED} -n -e 's/Version: //p' ${PC_GLU}
+BUILTIN_VERSION.Mesa!= \
+	${SED} -n -e 's/Version: //p' ${_CROSS_DESTDIR:U:Q}${PC_GLU:Q}
 .  elif empty(H_GLU:M__nonexistent__)
 .    include "../../graphics/MesaLib/version.mk"
 .  else # ?

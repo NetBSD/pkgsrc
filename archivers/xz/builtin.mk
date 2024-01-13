@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2022/12/02 09:17:59 adam Exp $
+# $NetBSD: builtin.mk,v 1.11 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	xz
 
@@ -37,7 +37,7 @@ BUILTIN_VERSION.xz!=							\
 			}						\
 		}							\
 		END { printf "%s%s%s%s\n", M, m, p, s}			\
-	' ${H_LZMA_VERSION:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_LZMA_VERSION:Q}
 
 BUILTIN_PKG.xz=	xz-${BUILTIN_VERSION.xz}
 .endif

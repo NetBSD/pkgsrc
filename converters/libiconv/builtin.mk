@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.27 2023/11/14 17:51:58 adam Exp $
+# $NetBSD: builtin.mk,v 1.28 2024/01/13 20:07:32 riastradh Exp $
 #
 # Package-settable variables:
 #
@@ -53,7 +53,7 @@ BUILTIN_VERSION.iconv!=							\
 			printf "%d.%d\n", M, m;				\
 			exit 0;						\
 		}							\
-	' ${H_ICONV}
+	' ${_CROSS_DESTDIR:U:Q}${H_ICONV:Q}
 #
 # If the native GNU iconv is ABI version 1.9, then treat it the same
 # as the latest version on the libiconv-1.9.x branch.

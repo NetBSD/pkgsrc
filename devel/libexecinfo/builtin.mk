@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2019/11/03 10:39:16 rillig Exp $
+# $NetBSD: builtin.mk,v 1.5 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	libexecinfo
 
@@ -56,7 +56,8 @@ CHECK_BUILTIN.libexecinfo?=	no
 .  if !empty(USE_BUILTIN.libexecinfo:M[nN][oO])
 _BLTN_LIBEXECINFO=		-lexecinfo
 .  else
-.    if exists(/usr/include/execinfo.h) && (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD")
+.    if exists(${_CROSS_DESTDIR:U}/usr/include/execinfo.h) && \
+        (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD")
 _BLTN_LIBEXECINFO=		-lexecinfo
 .    else
 _BLTN_LIBEXECINFO=		# empty

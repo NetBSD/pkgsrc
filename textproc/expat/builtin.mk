@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2022/10/26 10:38:21 wiz Exp $
+# $NetBSD: builtin.mk,v 1.22 2024/01/13 20:07:34 riastradh Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -32,7 +32,7 @@ BUILTIN_VERSION.expat!=							\
 		/\#define[ 	]*XML_MINOR_VERSION/ { m = "."$$3 }	\
 		/\#define[ 	]*XML_MICRO_VERSION/ { u = "."$$3 }	\
 		END { printf "%s%s%s\n", M, m, u }'			\
-		${H_EXPAT}
+		${_CROSS_DESTDIR:U:Q}${H_EXPAT:Q}
 BUILTIN_PKG.expat=	expat-${BUILTIN_VERSION.expat}
 .endif
 MAKEVARS+=		BUILTIN_PKG.expat

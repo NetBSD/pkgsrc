@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2023/01/09 13:25:11 wiz Exp $
+# $NetBSD: builtin.mk,v 1.9 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	mpfr
 
@@ -31,7 +31,8 @@ MAKEVARS+=		IS_BUILTIN.mpfr
 .if !defined(BUILTIN_PKG.mpfr) && \
     ${IS_BUILTIN.mpfr:tl} == yes && \
     empty(H_MPFR:M__nonexistent__)
-BUILTIN_VERSION.mpfr!=	${BUILTIN_VERSION_SCRIPT.mpfr} ${H_MPFR}
+BUILTIN_VERSION.mpfr!=	\
+	${BUILTIN_VERSION_SCRIPT.mpfr} ${_CROSS_DESTDIR:U:Q}${H_MPFR:Q}
 BUILTIN_PKG.mpfr=	mpfr-${BUILTIN_VERSION.mpfr}
 .endif
 MAKEVARS+=		BUILTIN_PKG.mpfr
