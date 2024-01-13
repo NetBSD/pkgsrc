@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/01/13 19:30:47 wiz Exp $
+
+https://git.savannah.nongnu.org/cgit/attr.git/diff/?h=7b3423dcbf6775539124c52a59e8bc76e33596f6
+
+--- configure.ac.orig	2021-03-16 06:47:55.000000000 +0000
++++ configure.ac
+@@ -23,6 +23,7 @@ AC_PREFIX_DEFAULT(/usr)
+ AM_INIT_AUTOMAKE([-Wall foreign 1.11 dist-xz subdir-objects])
+ AM_SILENT_RULES([yes])
+ 
++AC_CANONICAL_HOST
+ AC_PROG_CC
+ AM_PROG_CC_C_O
+ AC_USE_SYSTEM_EXTENSIONS
+@@ -53,6 +54,10 @@ fi
+ LT_REVISION=$(printf "%d%d%02d" "$1" "$2" "$3")
+ AC_SUBST(LT_REVISION)
+ 
++AS_CASE([$host_os],
++	[linux*], [os_linux=yes])
++AM_CONDITIONAL([OS_LINUX], [test "x$os_linux" = "xyes"])
++
+ AC_CONFIG_COMMANDS([include/attr],
+ 	[dnl
+ 	rm -rf include/attr
