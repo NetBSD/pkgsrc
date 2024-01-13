@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.24 2024/01/13 04:17:42 riastradh Exp $
+# $NetBSD: build.mk,v 1.25 2024/01/13 04:17:55 riastradh Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -90,34 +90,37 @@ MESON_CROSS_FILE=	${WRKDIR}/.meson_cross
 meson-configure: ${MESON_CROSS_FILE}
 ${MESON_CROSS_FILE}:
 	@${STEP_MSG} Creating meson cross file
-	${RUN}${ECHO} '[properties]' >$@.tmp
+	${RUN}${ECHO} '[properties]' >${.TARGET}.tmp
 .  for _v_ in ${MESON_CROSS_VARS}
 .    if defined(MESON_CROSS.${_v_})
-	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${_v_}:Q} >>$@.tmp
+	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${_v_}:Q} >>${.TARGET}.tmp
 .    endif
 .  endfor
 .  for _v_ in ${MESON_CROSS_OPSYS_VARS}
 .    if defined(MESON_CROSS.${OPSYS}.${_v_})
-	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${OPSYS}.${_v_}:Q} >>$@.tmp
+	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${OPSYS}.${_v_}:Q} \
+		>>${.TARGET}.tmp
 .    endif
 .  endfor
 .  for _v_ in ${MESON_CROSS_ARCH_VARS}
 .    if defined(MESON_CROSS.${MACHINE_ARCH}.${_v_})
-	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${MACHINE_ARCH}.${_v_}:Q} >>$@.tmp
+	${RUN}${ECHO} ${_v_} = ${MESON_CROSS.${MACHINE_ARCH}.${_v_}:Q} \
+		>>${.TARGET}.tmp
 .    endif
 .  endfor
-	${RUN}${ECHO} '[host_machine]' >>$@.tmp
-	${RUN}${ECHO} "system = '${LOWER_OPSYS}'" >>$@.tmp
-	${RUN}${ECHO} "cpu_family = '${MESON_CPU_FAMILY}'" >>$@.tmp
-	${RUN}${ECHO} "cpu = '${MESON_CPU}'" >>$@.tmp
-	${RUN}${ECHO} "endian = '${MESON_CPU_ENDIAN}'" >>$@.tmp
-	${RUN}${ECHO} '[binaries]' >>$@.tmp
+	${RUN}${ECHO} '[host_machine]' >>${.TARGET}.tmp
+	${RUN}${ECHO} "system = '${LOWER_OPSYS}'" >>${.TARGET}.tmp
+	${RUN}${ECHO} "cpu_family = '${MESON_CPU_FAMILY}'" >>${.TARGET}.tmp
+	${RUN}${ECHO} "cpu = '${MESON_CPU}'" >>${.TARGET}.tmp
+	${RUN}${ECHO} "endian = '${MESON_CPU_ENDIAN}'" >>${.TARGET}.tmp
+	${RUN}${ECHO} '[binaries]' >>${.TARGET}.tmp
 .  for _v_ in ${MESON_CROSS_BINARIES}
 .    if defined(MESON_CROSS_BINARY.${_v_})
-	${RUN}${ECHO} ${_v_} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' >>$@.tmp
+	${RUN}${ECHO} ${_v_} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' \
+		>>${.TARGET}.tmp
 .    endif
 .  endfor
-	${RUN}${MV} -f $@.tmp $@
+	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
 MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 
 .endif				# ${USE_CROSS_COMPILE:U:tl} == yes
