@@ -25,9 +25,9 @@
 .\" SUCH DAMAGE.
 .\"
 .\" $FreeBSD: fetch.3,v 1.64 2007/12/18 11:03:26 des Exp $
-.\" $NetBSD: fetch.3,v 1.17 2016/05/31 18:02:36 abhinav Exp $
+.\" $NetBSD: fetch.3,v 1.17.62.1 2024/01/13 12:49:09 bsiegert Exp $
 .\"
-.Dd January 22, 2010
+.Dd December 22, 2023
 .Dt FETCH 3
 .Os
 .Sh NAME
@@ -638,6 +638,10 @@ which proxies should not be used.
 Same as
 .Ev NO_PROXY ,
 for compatibility.
+.It Ev SSL_NO_VERIFY_PEER
+If defined,
+.Nm
+will skip validating certificates when fetching HTTPS URLs.
 .El
 .Sh EXAMPLES
 To access a proxy server on
