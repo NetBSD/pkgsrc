@@ -1,0 +1,20 @@
+Functionality for parametric statistical modelling and inference for
+spatial data, mainly spatial point patterns, in the 'spatstat' family
+of packages. (Excludes analysis of spatial data on a linear network,
+which is covered by the separate package 'spatstat.linnet'.) Supports
+parametric modelling, formal statistical inference, and model
+validation. Parametric models include Poisson point processes, Cox
+point processes, Neyman-Scott cluster processes, Gibbs point processes
+and determinantal point processes. Models can be fitted to data using
+maximum likelihood, maximum pseudolikelihood, maximum composite
+likelihood and the method of minimum contrast. Fitted models can be
+simulated and predicted. Formal inference includes hypothesis tests
+(quadrat counting tests, Cressie-Read tests, Clark-Evans test, Berman
+test, Diggle-Cressie-Loosmore-Ford test, scan test, studentised
+permutation test, segregation test, ANOVA tests of fitted models,
+adjusted composite likelihood ratio test, envelope tests, Dao-Genton
+test, balanced independent two-stage test), confidence intervals for
+parameters, and prediction intervals for point counts. Model
+validation techniques include leverage, influence, partial residuals,
+added variable plots, diagnostic plots, pseudoscore residual plots,
+model compensators and Q-Q plots.
