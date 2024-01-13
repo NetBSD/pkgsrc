@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.436 2023/07/30 19:04:02 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.437 2024/01/13 20:21:23 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -554,7 +554,11 @@ _MAKE_PACKAGE_AS_ROOT?=	yes
 # TOOLS_CROSS_DESTDIR is used for the libtool build to make a wrapper
 # that points at the cross-destdir as sysroot, without setting
 # _CROSS_DESTDIR because we're actually building a native package.
+.if ${TOOLS_USE_CROSS_COMPILE:tl} == "yes"
 TOOLS_CROSS_DESTDIR=		${CROSS_DESTDIR}
+.else
+TOOLS_CROSS_DESTDIR=		# empty
+.endif
 
 # Depends on MACHINE_ARCH override above
 .if ${OPSYS} == "NetBSD"
