@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2019/11/04 21:28:45 rillig Exp $
+# $NetBSD: builtin.mk,v 1.9 2024/01/13 20:08:25 riastradh Exp $
 
 BUILTIN_PKG:=	file
 
@@ -27,7 +27,12 @@ BUILTIN_CMD.file=	file
 .endif
 MAKEVARS+=		IS_BUILTIN.file
 
-.if !defined(BUILTIN_PKG.file) && !empty(IS_BUILTIN.file:M[yY][eE][sS])
+### XXX This doesn't work for cross-compilation because we can't
+### execute the target system's program.  Can the version be discovered
+### any other way?
+.if ${USE_CROSS_COMPILE:tl} != "yes" && \
+    !defined(BUILTIN_PKG.file) && \
+    !empty(IS_BUILTIN.file:M[yY][eE][sS])
 BUILTIN_VERSION.file!=	${BUILTIN_CMD.file} --version 2>&1 | ${GREP} 'file-' | ${SED} 's/file-//'
 BUILTIN_PKG.file=	file-${BUILTIN_VERSION.file}
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2024/01/13 20:08:24 riastradh Exp $
 
 BUILTIN_PKG:=	oracle-jdk8
 
@@ -44,7 +44,12 @@ MAKEVARS+=		IS_BUILTIN.oracle-jdk8
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 ### a package name to represent the built-in package.
 ###
-.if !defined(BUILTIN_PKG.oracle-jdk8) && \
+### XXX This doesn't work for cross-compilation because we can't
+### execute the target system's program.  Can the version be discovered
+### any other way?
+###
+.if ${USE_CROSS_COMPILE:tl} != "yes" && \
+    !defined(BUILTIN_PKG.oracle-jdk8) && \
     !empty(IS_BUILTIN.oracle-jdk8:M[yY][eE][sS]) && \
     empty(JDK8:M__nonexistent__)
 

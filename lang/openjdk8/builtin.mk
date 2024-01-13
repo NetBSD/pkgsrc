@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2023/02/27 11:09:40 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.7 2024/01/13 20:08:24 riastradh Exp $
 
 BUILTIN_PKG:=	openjdk8
 
@@ -26,7 +26,12 @@ MAKEVARS+=		IS_BUILTIN.openjdk8
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 ### a package name to represent the built-in package.
 ###
-.if !defined(BUILTIN_PKG.openjdk8) && \
+### XXX This doesn't work for cross-compilation because we can't
+### execute the target system's program.  Can the version be discovered
+### any other way?
+###
+.if ${USE_CROSS_COMPILE:tl} != "yes" && \
+    !defined(BUILTIN_PKG.openjdk8) && \
     ${IS_BUILTIN.openjdk8:tl} == yes
 BUILTIN_VERSION.openjdk8!=	${OJDK8} -version 2>&1 | ${SED} -Ee 's:^[^0-9]*([0-9._]+)$$:\1:' -e 's/_/./g' -e 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\4/'
 BUILTIN_PKG.openjdk8=		openjdk8-${BUILTIN_VERSION.openjdk8}
