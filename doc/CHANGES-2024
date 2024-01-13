@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.310 2024/01/13 19:31:03 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.311 2024/01/13 19:32:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/monolith to 2.8.0 [pin 2024-01-13]
 	Updated devel/crates-query to 0.1.2 [pin 2024-01-13]
 	Updated sysutils/attr to 2.5.1 [wiz 2024-01-13]
+	Added devel/ast-grep version 0.17.1 [pin 2024-01-13]
