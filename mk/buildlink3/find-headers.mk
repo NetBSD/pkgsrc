@@ -1,4 +1,4 @@
-# $NetBSD: find-headers.mk,v 1.5 2022/02/10 18:58:37 gutteridge Exp $
+# $NetBSD: find-headers.mk,v 1.6 2024/01/13 20:26:47 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,12 +80,14 @@ BUILTIN_INCLUDE_DIRS?=	${COMPILER_INCLUDE_DIRS} ${"${X11_TYPE:Mnative}":?${X11BA
 ${_var_}=	__nonexistent__
 .    for _file_ in ${BUILTIN_FIND_HEADERS.${_var_}}
 .      for _dir_ in ${BUILTIN_INCLUDE_DIRS}
-.        if !empty(${_var_}:M__nonexistent__) && exists(${_dir_}/${_file_})
+.        if !empty(${_var_}:M__nonexistent__) && \
+            exists(${TOOLS_CROSS_DESTDIR}${_dir_}/${_file_})
 .          if !defined(BUILTIN_FIND_GREP.${_var_})
 ${_var_}=	${_dir_}/${_file_}
 .          else
 ${_var_}!=								\
-  	if ${GREP} -q ${BUILTIN_FIND_GREP.${_var_}:Q} ${_dir_:Q}/${_file_:Q}; then	\
+	if ${GREP} -q ${BUILTIN_FIND_GREP.${_var_}:Q}			\
+	    ${TOOLS_CROSS_DESTDIR:Q}${_dir_:Q}/${_file_:Q}; then	\
 		${ECHO} ${_dir_:Q}/${_file_:Q};				\
 	else								\
 		${ECHO} __nonexistent__;				\
