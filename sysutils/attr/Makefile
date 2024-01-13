@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/01/13 19:30:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/13 19:31:30 wiz Exp $
 
 DISTNAME=	attr-2.5.1
 CATEGORIES=	sysutils
@@ -11,8 +11,14 @@ COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf automake autopoint autoreconf gmake msgfmt
+USE_TOOLS+=		autoconf automake autopoint autoreconf gmake msgfmt perl:test
 USE_LIBTOOL=		yes
+# first test part:
+# 119 commands (88 passed, 31 failed)
+# second test part (only run as root):
+# 30 commands (15 passed, 15 failed)
+TEST_TARGET=		check
+REPLACE_PERL+=		test/run
 
 PKGCONFIG_OVERRIDE+=	libattr.pc.in
 INSTALLATION_DIRS+=	share/examples/attr
