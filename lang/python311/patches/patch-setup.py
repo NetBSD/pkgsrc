@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2023/10/23 06:36:00 wiz Exp $
+$NetBSD: patch-setup.py,v 1.3 2024/01/13 04:24:28 riastradh Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -8,8 +8,11 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
   are installed.
 Enable cross-build by setting sys._home and sys.path to build directory
 Module _crypt might need -lcrypt (taken from Python 3.10).
+Disable circuitous readline detection which tries to outsmart pkgsrc's
+static choice of libreadline and (fake-)ncurses and trips over its elven
+shoelaces when cross-compiling.
 
---- setup.py.orig	2022-10-24 17:35:39.000000000 +0000
+--- setup.py.orig	2023-12-04 17:56:29.000000000 +0000
 +++ setup.py
 @@ -1,5 +1,11 @@
  # Autodetecting setup.py script for building the Python extensions
@@ -100,16 +103,82 @@ Module _crypt might need -lcrypt (taken from Python 3.10).
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1074,8 +1095,6 @@ class PyBuildExt(build_ext):
-         # use the same library for the readline and curses modules.
-         if 'curses' in readline_termcap_library:
-             curses_library = readline_termcap_library
+@@ -1036,71 +1057,10 @@ class PyBuildExt(build_ext):
+     def detect_readline_curses(self):
+         # readline
+         readline_termcap_library = ""
+-        curses_library = ""
+-        # Cannot use os.popen here in py3k.
+-        tmpfile = os.path.join(self.build_temp, 'readline_termcap_lib')
+-        if not os.path.exists(self.build_temp):
+-            os.makedirs(self.build_temp)
+-        # Determine if readline is already linked against curses or tinfo.
+-        if sysconfig.get_config_var('HAVE_LIBREADLINE'):
+-            if sysconfig.get_config_var('WITH_EDITLINE'):
+-                readline_lib = 'edit'
+-            else:
+-                readline_lib = 'readline'
+-            do_readline = self.compiler.find_library_file(self.lib_dirs,
+-                readline_lib)
+-            if CROSS_COMPILING:
+-                ret = run_command("%s -d %s | grep '(NEEDED)' > %s"
+-                                % (sysconfig.get_config_var('READELF'),
+-                                   do_readline, tmpfile))
+-            elif find_executable('ldd'):
+-                ret = run_command("ldd %s > %s" % (do_readline, tmpfile))
+-            else:
+-                ret = 1
+-            if ret == 0:
+-                with open(tmpfile) as fp:
+-                    for ln in fp:
+-                        if 'curses' in ln:
+-                            readline_termcap_library = re.sub(
+-                                r'.*lib(n?cursesw?)\.so.*', r'\1', ln
+-                            ).rstrip()
+-                            break
+-                        # termcap interface split out from ncurses
+-                        if 'tinfo' in ln:
+-                            readline_termcap_library = 'tinfo'
+-                            break
+-            if os.path.exists(tmpfile):
+-                os.unlink(tmpfile)
+-        else:
+-            do_readline = False
+-        # Issue 7384: If readline is already linked against curses,
+-        # use the same library for the readline and curses modules.
+-        if 'curses' in readline_termcap_library:
+-            curses_library = readline_termcap_library
 -        elif self.compiler.find_library_file(self.lib_dirs, 'ncursesw'):
 -            curses_library = 'ncursesw'
-         # Issue 36210: OSS provided ncurses does not link on AIX
-         # Use IBM supplied 'curses' for successful build of _curses
-         elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1166,8 +1185,7 @@ class PyBuildExt(build_ext):
+-        # Issue 36210: OSS provided ncurses does not link on AIX
+-        # Use IBM supplied 'curses' for successful build of _curses
+-        elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
+-            curses_library = 'curses'
+-        elif self.compiler.find_library_file(self.lib_dirs, 'ncurses'):
+-            curses_library = 'ncurses'
+-        elif self.compiler.find_library_file(self.lib_dirs, 'curses'):
+-            curses_library = 'curses'
++        curses_library = "ncurses"
++        do_readline = True
++        readline_lib = 'readline'
+ 
+-        if MACOS:
+-            os_release = int(os.uname()[2].split('.')[0])
+-            dep_target = sysconfig.get_config_var('MACOSX_DEPLOYMENT_TARGET')
+-            if (dep_target and
+-                    (tuple(int(n) for n in dep_target.split('.')[0:2])
+-                        < (10, 5) ) ):
+-                os_release = 8
+-            if os_release < 9:
+-                # MacOSX 10.4 has a broken readline. Don't try to build
+-                # the readline module unless the user has installed a fixed
+-                # readline package
+-                if find_file('readline/rlconf.h', self.inc_dirs, []) is None:
+-                    do_readline = False
+         if do_readline:
+             readline_libs = [readline_lib]
+             if readline_termcap_library:
+@@ -1169,8 +1129,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -119,7 +188,7 @@ Module _crypt might need -lcrypt (taken from Python 3.10).
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1176,7 +1194,11 @@ class PyBuildExt(build_ext):
+@@ -1179,7 +1138,11 @@ class PyBuildExt(build_ext):
              self.missing.append('_curses_panel')
  
      def detect_crypt(self):
@@ -132,7 +201,7 @@ Module _crypt might need -lcrypt (taken from Python 3.10).
  
      def detect_dbm_gdbm(self):
          # Modules that provide persistent dictionary-like semantics.  You will
-@@ -1199,6 +1221,31 @@ class PyBuildExt(build_ext):
+@@ -1202,6 +1165,31 @@ class PyBuildExt(build_ext):
  
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -164,7 +233,7 @@ Module _crypt might need -lcrypt (taken from Python 3.10).
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1616,7 +1663,7 @@ def main():
+@@ -1619,7 +1607,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
