@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/07 22:20:57 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/01/13 06:58:28 adam Exp $
 
-BLAKE2s (sphinxcontrib_serializinghtml-1.1.9.tar.gz) = ad3209c4c1681721b8a287bed3174239f356159674a2a04a89786eb4e5ed35b7
-SHA512 (sphinxcontrib_serializinghtml-1.1.9.tar.gz) = 9e14527794a71120c1db9dc534383f3e56ee18241009aab2a04133351fc4dd56ee9ba242ad64be13faf44162e90e88109eb36a5692fb343f4bb28f43cda78bba
-Size (sphinxcontrib_serializinghtml-1.1.9.tar.gz) = 15446 bytes
+BLAKE2s (sphinxcontrib_serializinghtml-1.1.10.tar.gz) = 1cafc694f4d6a5c3a4c6d51ba308669dd34dc915eb95a82c44d3bc2d135d9f5f
+SHA512 (sphinxcontrib_serializinghtml-1.1.10.tar.gz) = e104817e8145cf99b3ca6cb548a7977d7f42dd442dc54e6de787c12722ea804e4a38bfe78bdb3d8ff5f71afc14bf4fbc84b15208d0c77790d377cf9ac91e4aa8
+Size (sphinxcontrib_serializinghtml-1.1.10.tar.gz) = 15592 bytes
