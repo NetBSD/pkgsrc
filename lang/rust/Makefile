@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.300 2024/01/08 08:16:52 tnn Exp $
+# $NetBSD: Makefile,v 1.301 2024/01/13 23:21:58 rillig Exp $
 
 DISTNAME=	rustc-1.74.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
+PKGREVISION=	1
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -577,6 +578,11 @@ do-install:
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
 		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	post-install
+SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/lib/rustlib/manifest-*
+SUBST_SED.destdir=	-e 's|file:${DESTDIR}${PREFIX}|file:${PREFIX}|'
 
 GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			${SED} -e 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
