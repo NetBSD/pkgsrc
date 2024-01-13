@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/01/13 06:52:28 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/13 06:55:48 adam Exp $
 
 DISTNAME=	sphinxcontrib_devhelp-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-devhelp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sphinx-doc.org/
+HOMEPAGE=	https://www.sphinx-doc.org/
 COMMENT=	Sphinx API for Devhelp document
 LICENSE=	2-clause-bsd
 
