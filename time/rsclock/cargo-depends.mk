@@ -1,12 +1,14 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/10/10 12:11:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2024/01/13 19:26:12 pin Exp $
 
+CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	autocfg-0.1.6
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
+CARGO_CRATE_DEPENDS+=	bitflags-2.4.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.12.1
 CARGO_CRATE_DEPENDS+=	cc-1.0.79
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	chrono-0.4.24
+CARGO_CRATE_DEPENDS+=	chrono-0.4.31
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.4
 CARGO_CRATE_DEPENDS+=	cxx-1.0.94
@@ -17,26 +19,23 @@ CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.56
 CARGO_CRATE_DEPENDS+=	iana-time-zone-haiku-0.1.1
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.61
 CARGO_CRATE_DEPENDS+=	libc-0.2.142
+CARGO_CRATE_DEPENDS+=	libredox-0.0.2
 CARGO_CRATE_DEPENDS+=	link-cplusplus-1.0.8
 CARGO_CRATE_DEPENDS+=	log-0.4.17
-CARGO_CRATE_DEPENDS+=	num-integer-0.1.41
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.8
 CARGO_CRATE_DEPENDS+=	numtoa-0.1.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.17.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.56
 CARGO_CRATE_DEPENDS+=	quote-1.0.26
-CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.56
-CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.11
-CARGO_CRATE_DEPENDS+=	redox_termios-0.1.1
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
+CARGO_CRATE_DEPENDS+=	redox_termios-0.1.3
 CARGO_CRATE_DEPENDS+=	scratch-1.0.5
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.15
 CARGO_CRATE_DEPENDS+=	termcolor-1.2.0
-CARGO_CRATE_DEPENDS+=	termion-2.0.1
-CARGO_CRATE_DEPENDS+=	time-0.1.44
+CARGO_CRATE_DEPENDS+=	termion-3.0.0
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.8
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.10
-CARGO_CRATE_DEPENDS+=	wasi-0.10.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.84
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.84
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.84
