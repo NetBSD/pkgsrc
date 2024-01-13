@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.22 2023/11/14 12:45:23 wiz Exp $
+# $NetBSD: build.mk,v 1.23 2024/01/13 04:17:32 riastradh Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -110,6 +110,12 @@ ${MESON_CROSS_FILE}:
 	${RUN}${ECHO} "cpu_family = '${MESON_CPU_FAMILY}'" >>$@.tmp
 	${RUN}${ECHO} "cpu = '${MESON_CPU}'" >>$@.tmp
 	${RUN}${ECHO} "endian = '${MESON_CPU_ENDIAN}'" >>$@.tmp
+	${RUN}${ECHO} '[binaries]' >>$@.tmp
+.  for _v_ in ${MESON_CROSS_BINARIES}
+.    if defined(MESON_CROSS_BINARY.${_v_})
+	${RUN}${ECHO} ${_v_} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' >>$@.tmp
+.    endif
+.  endfor
 	${RUN}${MV} -f $@.tmp $@
 MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 
