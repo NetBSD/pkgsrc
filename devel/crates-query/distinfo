@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/12/19 09:48:20 pin Exp $
+$NetBSD: distinfo,v 1.2 2024/01/13 19:28:27 pin Exp $
 
 BLAKE2s (anstream-0.6.5.crate) = 0fd81122ead37dc56b0bcd5d019ed43bfe97d6194b5c6690fdcaa30120d8974f
 SHA512 (anstream-0.6.5.crate) = 98206c568d8f2204bddcbbd915ed22d214410aa26dc74ef56799c9237681877a7447effdb9ef97cfabef0afd7a1b73e27d82c7e976f1216ac502d625089c6fdc
@@ -45,9 +45,9 @@ Size (colorchoice-1.0.0.crate) = 6857 bytes
 BLAKE2s (crates-index-2.3.0.crate) = 90567e3daa7a657aa2cf8da04ffa5883c45e10d0237cdd6731d4159e3cab4f6d
 SHA512 (crates-index-2.3.0.crate) = 1abf800f1dd7781993fad5fca2dcf8abb4b5c72394a0dcd3a7ab24f536549d28ac0dc5a0a9fc19e4193bc382346252f81e8272c93723a28e48b2640be369181a
 Size (crates-index-2.3.0.crate) = 73474 bytes
-BLAKE2s (crates-query-0.1.1.crate) = 9df22f69e5653a245ac6de619eaa196f408827e7679e22a2802aecbea3e2e485
-SHA512 (crates-query-0.1.1.crate) = cc650f8f611abf1710966218dbe7f472975eab9bbbfcd929398165c0137d14ffe74ab8b3314a815108c0f0f498a5ef0dc06a483d4a1321dcadd014c995fcb854
-Size (crates-query-0.1.1.crate) = 7739 bytes
+BLAKE2s (crates-query-0.1.2.crate) = 9d36c321fe6517af0d9c8cf72bce0e46acb5c21d7c0594654201798094190c50
+SHA512 (crates-query-0.1.2.crate) = ad987ba74ac1b6f2f9bd07c94b17f1455814b077011dd45b2852785e4fa35c48d80063f21fc965086bbe73527a9b639f761f24a970947803dd81407d7676b044
+Size (crates-query-0.1.2.crate) = 8107 bytes
 BLAKE2s (equivalent-1.0.1.crate) = 915ff7ece3e11b5de2f2f26d2da9c4dfa1c7484416c53025c08507677cebebbd
 SHA512 (equivalent-1.0.1.crate) = b2bc60e804c1b02c461dcefcfd60fc37145af710d183ebe65f9a4d63f2b2072d23193f98dc550a9213c7fdc6a2a837af23b04a89294ebbb681a4aaf5d5031140
 Size (equivalent-1.0.1.crate) = 6615 bytes
