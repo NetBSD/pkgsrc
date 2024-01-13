@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.1 2019/08/30 19:06:34 nia Exp $
+# $NetBSD: version.mk,v 1.2 2024/01/13 20:07:33 riastradh Exp $
 #
 # This file computes the version number of the Mesa distributed with
 # XFree86 and stores it in ${BUILTIN_VERSION.Mesa}.
@@ -25,6 +25,6 @@ BUILTIN_VERSION.Mesa!=							\
 		/\#define[ 	]*GL_VERSION_1_4/ { v = "5.0" }		\
 		/\#define[ 	]*GL_VERSION_1_5/ { v = "6.0" }		\
 		END { printf "%s\n", v }'				\
-		${H_MESA}
+		${_CROSS_DESTDIR:U:Q}${H_MESA:Q}
 .endif
 MAKEVARS+=	BUILTIN_VERSION.Mesa

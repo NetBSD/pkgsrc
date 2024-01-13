@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2022/10/14 07:43:57 wiz Exp $
+# $NetBSD: builtin.mk,v 1.18 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -36,7 +36,7 @@ BUILTIN_VERSION.zlib!=							\
 			gsub("\"", "", vers);				\
 			print vers;					\
 		}							\
-	' ${H_ZLIB:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_ZLIB:Q}
 BUILTIN_PKG.zlib=	zlib-${BUILTIN_VERSION.zlib:C/-[A-Za-z]*//}
 
 .endif

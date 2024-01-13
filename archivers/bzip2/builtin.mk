@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2019/11/02 22:54:26 rillig Exp $
+# $NetBSD: builtin.mk,v 1.11 2024/01/13 20:07:31 riastradh Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -39,7 +39,7 @@ BUILTIN_VERSION.bzip2!=							\
 			};						\
 			print vers;					\
 		};							\
-	' ${H_BZIP2:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_BZIP2:Q}
 
 BUILTIN_PKG.bzip2=	bzip2-${BUILTIN_VERSION.bzip2}
 .endif
