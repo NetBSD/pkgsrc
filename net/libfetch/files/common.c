@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.31 2016/10/20 21:25:57 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.31.58.1 2024/01/13 12:49:09 bsiegert Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -35,6 +35,10 @@
 #endif
 #ifndef NETBSD
 #include <nbcompat.h>
+#endif
+
+#ifdef __NetBSD__
+#include <sys/param.h>		/* __NetBSD_Version__ */
 #endif
 
 #include <sys/types.h>
@@ -451,6 +455,12 @@ fetch_ssl(conn_t *conn, const struct url *URL, int verbose)
 	conn->ssl_meth = SSLv23_client_method();
 	conn->ssl_ctx = SSL_CTX_new(conn->ssl_meth);
 	SSL_CTX_set_mode(conn->ssl_ctx, SSL_MODE_AUTO_RETRY);
+#if defined(__NetBSD__) && __NetBSD_Version__ >= 1000000000
+	if (getenv("SSL_NO_VERIFY_PEER") == NULL) {
+		SSL_CTX_set_default_verify_paths(conn->ssl_ctx);
+		SSL_CTX_set_verify(conn->ssl_ctx, SSL_VERIFY_PEER, NULL);
+	}
+#endif
 
 	conn->ssl = SSL_new(conn->ssl_ctx);
 	if (conn->ssl == NULL){
