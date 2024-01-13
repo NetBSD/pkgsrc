@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.323 2024/01/13 23:23:50 mef Exp $
+$NetBSD: CHANGES-2024,v 1.324 2024/01/13 23:40:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cargo-modules to 0.13.4 [pin 2024-01-13]
 	Added geography/R-spatstat.random version 3.2.2 [mef 2024-01-13]
 	Added geography/R-spatstat.explore version 3.2.5 [mef 2024-01-13]
+	Added geography/R-spatstat.model version 3.2.8 [mef 2024-01-13]
