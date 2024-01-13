@@ -1,4 +1,4 @@
-# $NetBSD: find-pkgconfig-files.mk,v 1.4 2023/12/06 22:27:22 tnn Exp $
+# $NetBSD: find-pkgconfig-files.mk,v 1.5 2024/01/13 20:26:47 riastradh Exp $
 #
 # Copyright (c) 2020 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,7 +75,8 @@ BUILTIN_PKGCONFIG_DIRS?=	/usr/lib/pkgconfig				\
 ${_var_}= __nonexistent__
 .    for _file_ in ${BUILTIN_FIND_PKGCONFIG_FILES.${_var_}}
 .      for _dir_ in ${BUILTIN_PKGCONFIG_DIRS}
-.        if !empty(${_var_}:M__nonexistent__) && exists(${_dir_}/${_file_})
+.        if !empty(${_var_}:M__nonexistent__) && \
+            exists(${TOOLS_CROSS_DESTDIR}${_dir_}/${_file_})
 ${_var_}= ${_dir_}/${_file_}
 .        endif
 .      endfor
