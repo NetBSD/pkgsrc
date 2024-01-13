@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4155 2024/01/10 14:22:49 bacon Exp $
+# $NetBSD: Makefile,v 1.4156 2024/01/13 07:07:16 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2716,7 +2716,6 @@ SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
 SUBDIR+=	py-ordered-set
-SUBDIR+=	py-oset
 SUBDIR+=	py-outcome
 SUBDIR+=	py-overrides
 SUBDIR+=	py-packageurl
