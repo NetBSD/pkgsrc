@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.30 2023/11/07 13:19:47 nia Exp $
+# $NetBSD: gnu-configure.mk,v 1.31 2024/01/13 20:09:28 riastradh Exp $
 #
 # Package-settable variables:
 #
@@ -51,7 +51,8 @@ CONFIGURE_ENV+=	LIBS=${LIBS:M*:Q}
 CONFIGURE_ENV+=	ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}
 
 .if (defined(USE_LIBTOOL) || !empty(PKGPATH:Mdevel/libtool-base)) && \
-    defined(_OPSYS_MAX_CMDLEN_CMD)
+    defined(_OPSYS_MAX_CMDLEN_CMD) && \
+    ${USE_CROSS_COMPILE:tl} != "yes"
 CONFIGURE_ENV+=	lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .endif
 
