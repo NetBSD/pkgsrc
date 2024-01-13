@@ -1,45 +1,29 @@
-# $NetBSD: Makefile,v 1.8 2023/04/30 05:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/13 19:30:47 wiz Exp $
 
-ATTR_VERS=	2.4.47
-PKGNAME=	attr-${ATTR_VERS}
-DISTNAME=	attr-${ATTR_VERS}.src
-PKGREVISION=	1
+DISTNAME=	attr-2.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.savannah.gnu.org/releases/attr/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/attr
 COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake msgfmt perl:test
+USE_TOOLS+=		autoconf automake autopoint autoreconf gmake msgfmt
 USE_LIBTOOL=		yes
-BUILD_TARGET=		default
-INSTALL_SH_OVERRIDE=	no
 
-# 114 commands (34 passed, 80 failed)
-TEST_TARGET=		tests
-REPLACE_PERL+=		test/run
-REPLACE_PERL+=		test/sort-getfattr-output
+PKGCONFIG_OVERRIDE+=	libattr.pc.in
+INSTALLATION_DIRS+=	share/examples/attr
 
-LDFLAGS.Darwin+=	-lintl
-LDFLAGS.NetBSD+=	-lintl
+CONF_FILES+=	share/examples/attr/xattr.conf ${PKG_SYSCONFDIR}/xattr.conf
 
-SUBST_CLASSES.Darwin+=	rmldarg
-SUBST_CLASSES.SunOS+=	rmldarg
-SUBST_STAGE.rmldarg=	pre-configure
-SUBST_FILES.rmldarg=	libattr/Makefile
-SUBST_SED.rmldarg=	-e '/version-script/d'
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
-pre-install:
-	cd ${WRKSRC}/libattr && env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} install-lib install-dev
-	cd ${WRKSRC}/include && env ${MAKE_ENV} \
-            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} install-dev
+post-install:
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xattr.conf ${DESTDIR}${PREFIX}/share/examples/attr
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

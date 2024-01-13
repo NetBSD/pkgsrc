@@ -1,0 +1,40 @@
+$NetBSD: patch-libattr_Makemodule.am,v 1.1 2024/01/13 19:30:47 wiz Exp $
+
+https://git.savannah.nongnu.org/cgit/attr.git/diff/?h=7b3423dcbf6775539124c52a59e8bc76e33596f6
+
+--- libattr/Makemodule.am.orig	2017-09-15 13:10:38.000000000 +0000
++++ libattr/Makemodule.am
+@@ -8,19 +8,30 @@ LT_CURRENT = 2
+ LT_AGE = 1
+ LTVERSION = $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+-libattr_la_DEPENDENCIES = exports libattr/libattr.lds
++libattr_la_DEPENDENCIES = \
++	exports
++if OS_LINUX
++libattr_la_DEPENDENCIES += \
++	libattr/libattr.lds
++endif
+ libattr_la_SOURCES = \
+ 	libattr/attr_copy_action.c \
+ 	libattr/attr_copy_check.c \
+ 	libattr/attr_copy_fd.c \
+ 	libattr/attr_copy_file.c \
+ 	libattr/libattr.c \
+-	libattr/syscalls.c \
+ 	libattr/libattr.h
++if OS_LINUX
++libattr_la_SOURCES += \
++	libattr/syscalls.c
++endif
+ libattr_la_CFLAGS = -include libattr/libattr.h
+ libattr_la_LDFLAGS = \
+ 	-Wl,--version-script,$(top_srcdir)/exports \
+-	-Wl,$(top_srcdir)/libattr/libattr.lds \
+ 	-version-info $(LTVERSION)
++if OS_LINUX
++libattr_la_LDFLAGS += \
++	-Wl,$(top_srcdir)/libattr/libattr.lds
++endif
+ 
+ EXTRA_DIST += libattr/libattr.lds
