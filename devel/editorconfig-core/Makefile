@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/11/30 23:20:25 nros Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/13 14:32:36 nros Exp $
 
-DISTNAME=	editorconfig-core-c-0.12.4
+DISTNAME=	editorconfig-core-c-0.12.6
 PKGNAME=	${DISTNAME:S/c-//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=editorconfig/}
@@ -12,11 +12,11 @@ HOMEPAGE=	http://www.editorconfig.org/
 COMMENT=	Editorconfig C library
 LICENSE=	2-clause-bsd
 
-USE_CMAKE=	yes
-
 PKGCONFIG_OVERRIDE=	src/lib/editorconfig.pc.in
 
 .include "options.mk"
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
