@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2023/01/26 13:32:47 taca Exp $
+# $NetBSD: builtin.mk,v 1.3 2024/01/13 20:08:24 riastradh Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -12,7 +12,12 @@ BUILTIN_FIND_LIBS:=		bind
 ### Figure out the version of BIND if an ISC BIND named exists on the
 ### system.
 ###
-.if !defined(BUILTIN_VERSION.bind) && \
+### XXX This doesn't work for cross-compilation because we can't
+### execute the target system's program.  Can the version be discovered
+### any other way?
+###
+.if ${USE_CROSS_COMPILE:tl} != "yes" && \
+    !defined(BUILTIN_VERSION.bind) && \
     empty(EXE_NAMED:M__nonexistent__) && \
     empty(EXE_NAMED:M${LOCALBASE}/*)
 BUILTIN_VERSION.bind!=	\
