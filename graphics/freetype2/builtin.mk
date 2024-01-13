@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2023/06/27 08:52:57 adam Exp $
+# $NetBSD: builtin.mk,v 1.22 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -37,7 +37,7 @@ BUILTIN_VERSION.freetype2!=						\
 		/\#define[ 	]*FREETYPE_MINOR/ { m = "."$$3 }	\
 		/\#define[ 	]*FREETYPE_PATCH/ { p = "."$$3 }	\
 		END { printf "%s%s%s\n", M, m, p }'			\
-		${H_FREETYPE2}
+		${_CROSS_DESTDIR:U:Q}${H_FREETYPE2:Q}
 BUILTIN_PKG.freetype2=	freetype2-${BUILTIN_VERSION.freetype2}
 .endif
 MAKEVARS+=		BUILTIN_PKG.freetype2

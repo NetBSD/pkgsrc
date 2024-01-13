@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2023/12/30 10:21:52 wiz Exp $
+# $NetBSD: builtin.mk,v 1.16 2024/01/13 20:07:33 riastradh Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -33,7 +33,7 @@ BUILTIN_VERSION.fontconfig!=						\
 		/\#define[ 	]*FC_MINOR/ { m = "."$$3 }		\
 		/\#define[ 	]*FC_REVISION/ { r = "."$$3 }		\
 		END { printf "%s%s%s\n", M, m, r }'			\
-		${H_FONTCONFIG}
+		${_CROSS_DESTDIR:U:Q}${H_FONTCONFIG:Q}
 BUILTIN_PKG.fontconfig=	fontconfig-${BUILTIN_VERSION.fontconfig}
 .endif
 MAKEVARS+=		BUILTIN_PKG.fontconfig

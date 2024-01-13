@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2021/01/14 17:40:30 wiz Exp $
+# $NetBSD: builtin.mk,v 1.18 2024/01/13 20:07:34 riastradh Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -32,7 +32,7 @@ BUILTIN_VERSION.xcursor!=						\
 		/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { m = "."$$3 }	\
 		/\#define[ 	]*XCURSOR_(LIB_)?REVISION/ { r = "."$$3 } \
 		END { printf "%s%s%s\n", M, m, r }'			\
-		${H_XCURSOR}
+		${_CROSS_DESTDIR:U:Q}${H_XCURSOR:Q}
 BUILTIN_PKG.xcursor=	xcursor-${BUILTIN_VERSION.xcursor}
 .endif
 MAKEVARS+=		BUILTIN_PKG.xcursor

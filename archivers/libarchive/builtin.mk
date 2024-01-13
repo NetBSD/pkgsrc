@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2019/11/02 22:54:26 rillig Exp $
+# $NetBSD: builtin.mk,v 1.12 2024/01/13 20:07:32 riastradh Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -53,7 +53,7 @@ BUILTIN_VERSION.libarchive!=						\
 			else if (found == 2)				\
 				print vers_str;				\
 		}							\
-	' ${H_ARCHIVE:Q}
+	' ${_CROSS_DESTDIR:U:Q}${H_ARCHIVE:Q}
 .  if !empty(BUILTIN_VERSION.libarchive)
 BUILTIN_PKG.libarchive=	libarchive-${BUILTIN_VERSION.libarchive}
 .  else

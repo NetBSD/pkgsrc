@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2023/04/17 21:08:22 wiz Exp $
+# $NetBSD: builtin.mk,v 1.7 2024/01/13 20:07:34 riastradh Exp $
 
 BUILTIN_PKG:=	libXft
 
@@ -37,7 +37,7 @@ BUILTIN_VERSION.libXft!=						\
 		/\#define[ 	]*XFT_MINOR/ { m = "."$$3 }		\
 		/\#define[ 	]*XFT_REVISION/ { r = "."$$3 }		\
 		END { printf "%s%s%s\n", M, m, r }'			\
-		${H_XFT2}
+		${_CROSS_DESTDIR:U:Q}${H_XFT2:Q}
 BUILTIN_PKG.libXft=	libXft-${BUILTIN_VERSION.libXft}
 .endif
 MAKEVARS+=		BUILTIN_PKG.libXft
