@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/06/18 19:37:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/01/14 08:41:57 wiz Exp $
 bin/nickle
 include/nickle/builtin-namespaces.h
 include/nickle/builtin.h
@@ -15,6 +15,19 @@ man/man1/nickle.1
 share/nickle/COPYING
 share/nickle/abort.5c
 share/nickle/arc4.5c
+share/nickle/bench/choose.5c
+share/nickle/bench/choose.bc
+share/nickle/bench/choose.c
+share/nickle/bench/composite.5c
+share/nickle/bench/composite.bc
+share/nickle/bench/composite.c
+share/nickle/bench/ifact.5c
+share/nickle/bench/ifact.bc
+share/nickle/bench/ifact.c
+share/nickle/bench/rfact.5c
+share/nickle/bench/rfact.bc
+share/nickle/bench/rfact.c
+share/nickle/bench/runbench.sh
 share/nickle/builtin.5c
 share/nickle/cha-cha.5c
 share/nickle/command.5c
