@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.342 2024/01/14 10:11:36 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.343 2024/01/14 11:37:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-lxml to 5.1.0 [wiz 2024-01-14]
 	Updated devel/py-toolconfig to 1.3.1 [wiz 2024-01-14]
 	Updated devel/py-mercurial to 6.6.2 [wiz 2024-01-14]
+	Updated www/p5-Plack to 1.0051 [wen 2024-01-14]
