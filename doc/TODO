@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23912 2024/01/14 10:11:37 wiz Exp $
+$NetBSD: TODO,v 1.23913 2024/01/14 14:06:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -544,6 +544,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
 	o csvkit-1.0.5
+	o csvlens-0.6.0
 	o ctemplate-2.4
 	o cups-filters-1.28.17
 	o cutter-1.2.7
@@ -593,6 +594,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.6.5
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.26
@@ -881,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
+	o libpsl-0.21.5
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
@@ -1172,6 +1175,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.7.0
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
