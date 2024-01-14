@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/12/18 12:38:44 mef Exp $
+$NetBSD: distinfo,v 1.13 2024/01/14 05:17:27 mef Exp $
 
-BLAKE2s (R/geoR_1.9-2.tar.gz) = 54b4f808f493d2228a4fe2b9c2ec4fc1f334e76db89c2451378b27d1c3c6b290
-SHA512 (R/geoR_1.9-2.tar.gz) = a4d0101b495336b5ff2bbcab84f0b12f5b6b9965b80bc8cc41443327095c5bca2e0b90ef0c92ec8abfe1e35d8c33a57cd1ba940f92c68687a6f9887991489471
-Size (R/geoR_1.9-2.tar.gz) = 407129 bytes
+BLAKE2s (R/geoR_1.9-3.tar.gz) = 5a39f0c958a1884d98689569b02297fae1603d74524f0a0a50cfb729eec841fc
+SHA512 (R/geoR_1.9-3.tar.gz) = 7f677f863865fdd7e54aa441f32f915ce6742445393f117429c8a7c064b87618dfeed9d97669487c8054ce9de0bfd21e80a60873b8a3f6d84c54a552c9c28b1e
+Size (R/geoR_1.9-3.tar.gz) = 416455 bytes
