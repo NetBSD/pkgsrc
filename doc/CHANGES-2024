@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.350 2024/01/14 20:05:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.351 2024/01/14 20:07:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -441,3 +441,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated biology/py-pydicom to 2.4.4 [adam 2024-01-14]
 	Updated devel/py-gitpython to 3.1.41 [adam 2024-01-14]
 	Updated devel/diffsitter to 0.8.2 [wiz 2024-01-14]
+	Updated shells/oh-my-posh to 19.5.2 [pin 2024-01-14]
