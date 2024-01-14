@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/13 19:30:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/01/14 08:28:05 wiz Exp $
 bin/attr
 bin/getfattr
 bin/setfattr
@@ -10,7 +10,8 @@ lib/pkgconfig/libattr.pc
 man/man1/attr.1
 man/man1/getfattr.1
 man/man1/setfattr.1
-man/man3/attr_get.3
+man/man3/attr_attr_get.3
+man/man3/attr_attr_set.3
 man/man3/attr_getf.3
 man/man3/attr_list.3
 man/man3/attr_listf.3
@@ -18,7 +19,6 @@ man/man3/attr_multi.3
 man/man3/attr_multif.3
 man/man3/attr_remove.3
 man/man3/attr_removef.3
-man/man3/attr_set.3
 man/man3/attr_setf.3
 share/doc/attr/CHANGES
 share/doc/attr/COPYING
