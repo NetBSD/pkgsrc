@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/11 08:51:32 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/14 13:30:35 mef Exp $
 
 R_PKGNAME=	covr
-R_PKGVER=	3.6.2
+R_PKGVER=	3.6.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-withr>=1.0.2:../../devel/R-withr
-DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
+DEPENDS+=	R-digest>=0.6.33:../../security/R-digest
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
 DEPENDS+=	R-yaml>=2.2.0:../../textproc/R-yaml
 DEPENDS+=	R-httr>=1.4.1:../../www/R-httr
