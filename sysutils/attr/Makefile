@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/01/13 19:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/14 08:28:05 wiz Exp $
 
 DISTNAME=	attr-2.5.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.savannah.gnu.org/releases/attr/
 EXTRACT_SUFX=	.tar.xz
@@ -30,6 +31,10 @@ pre-configure:
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xattr.conf ${DESTDIR}${PREFIX}/share/examples/attr
+	# https://savannah.nongnu.org/bugs/index.php?65161
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && \
+		${MV} attr_get.3 attr_attr_get.3 && \
+		${MV} attr_set.3 attr_attr_set.3
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
