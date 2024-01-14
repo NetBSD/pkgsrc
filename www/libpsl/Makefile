@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/14 20:12:08 wiz Exp $
 
-DISTNAME=	libpsl-0.21.2
-PKGREVISION=	1
+DISTNAME=	libpsl-0.21.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rockdaboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,7 +23,10 @@ TEST_TARGET=		check
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+REPLACE_PYTHON+=	src/psl-make-dafsa
+
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
