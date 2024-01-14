@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/01/14 08:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/14 08:52:30 wiz Exp $
 
-DISTNAME=	attr-2.5.1
-PKGREVISION=	1
+DISTNAME=	attr-2.5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.savannah.gnu.org/releases/attr/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +11,7 @@ COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf automake autopoint autoreconf gmake msgfmt perl:test
+USE_TOOLS+=		gmake msgfmt perl:test
 USE_LIBTOOL=		yes
 # first test part:
 # 119 commands (88 passed, 31 failed)
@@ -25,9 +24,6 @@ PKGCONFIG_OVERRIDE+=	libattr.pc.in
 INSTALLATION_DIRS+=	share/examples/attr
 
 CONF_FILES+=	share/examples/attr/xattr.conf ${PKG_SYSCONFDIR}/xattr.conf
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xattr.conf ${DESTDIR}${PREFIX}/share/examples/attr
