@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2016/09/01 17:04:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/14 20:07:45 schmonz Exp $
+bin/tlsh
 bin/tlsh_unittest
+include/input_desc.h
+include/shared_file_functions.h
 include/tlsh.h
+include/tlsh/tlsh.h
+include/tlsh/tlsh_version.h
 include/tlsh_impl.h
 include/tlsh_util.h
-include/version.h
+include/tlsh_version.h
+include/tlsh_win_version.h
 lib/libtlsh.a
 lib/libtlsh.so
-lib/libtlsh.so.0
+lib/libtlsh.so.4
 lib/libtlsh.so.${PKGVERSION}

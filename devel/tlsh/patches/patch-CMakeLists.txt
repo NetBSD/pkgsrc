@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/01/14 20:07:45 schmonz Exp $
+
+Squelch configure warnings.
+
+--- CMakeLists.txt.orig	2021-09-09 05:56:28.000000000 +0000
++++ CMakeLists.txt
+@@ -52,6 +52,10 @@
+ # OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+ cmake_minimum_required(VERSION 2.6)
++# let CMAKE_MODULE_PATH override modules installed with cmake
++cmake_policy(SET CMP0017 OLD)	
++# set MACOSX_RPATH
++cmake_policy(SET CMP0042 NEW)
+ 
+ project(TLSH)
+ 
