@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2022/01/10 18:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/14 20:08:04 schmonz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME}/py_ext
+DISTNAME=	py-tlsh-4.7.2
+PKGNAME=	${DISTNAME:S/py-/${PYPKGPREFIX}-/}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-tlsh/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://pypi.org/project/py-tlsh/
+COMMENT=	TLSH C++ extension for Python
+LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-EGG_NAME=	tlsh-0.2.0
 
-.include "../../devel/tlsh/Makefile.common"
 .include "../../devel/tlsh/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
