@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.338 2024/01/14 09:05:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.339 2024/01/14 09:43:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -423,3 +423,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-alabaster to 0.7.16 [wiz 2024-01-14]
 	Updated www/py-google-api-python-client to 2.113.0 [wiz 2024-01-14]
 	Updated lang/py-lsprotocol to 2023.0.1 [wiz 2024-01-14]
+	Added textproc/py27-lxml version 5.0.1 [wiz 2024-01-14]
