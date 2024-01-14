@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/09/06 20:07:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/14 18:29:06 adam Exp $
 
-DISTNAME=	pydicom-2.4.3
+DISTNAME=	pydicom-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydicom/}
@@ -10,17 +10,15 @@ HOMEPAGE=	https://github.com/pydicom/pydicom
 COMMENT=	Pure python package for working with DICOM files
 LICENSE=	modified-bsd AND mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pydicom pydicom-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
