@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/09/06 20:07:45 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/01/14 18:29:06 adam Exp $
 
-BLAKE2s (pydicom-2.4.3.tar.gz) = bf4af040ba03d9bcc8685a91e7ff96b7f3eb85546c2371a75c8da93d67c6d208
-SHA512 (pydicom-2.4.3.tar.gz) = fbe907bb40af53457abbb43aeb4edef0105aba2ff90b6012e20896b2ffff847fa0c0301cd0cae24a7fc2989c8303d98ce1973d02e60dd1f6041f7c0d653b1e3a
-Size (pydicom-2.4.3.tar.gz) = 2016407 bytes
+BLAKE2s (pydicom-2.4.4.tar.gz) = d99d794a2629d73c7bddeb3bb6dae8823adb1e128ca9ae7eca458c8b79a0746e
+SHA512 (pydicom-2.4.4.tar.gz) = fd6d61dbf82782a687eb58b67cbd0c532f3b65741408a6d8cedb039c36537a4c9727c366bcfb9de79955e16bdbf598d97046c718f9639b55ee53893e6d1306b7
+Size (pydicom-2.4.4.tar.gz) = 2016625 bytes
