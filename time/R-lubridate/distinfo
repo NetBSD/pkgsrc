@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/05 12:25:59 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/01/14 13:34:00 mef Exp $
 
-BLAKE2s (R/lubridate_1.9.2.tar.gz) = 55113011f68293cf394dac8488d0f5dbc7febf12b26da9f4bf196c31f4808148
-SHA512 (R/lubridate_1.9.2.tar.gz) = bc983e5e5ff64f82b6d6af720de88ae80d72ec99ffbfb420672057b591dd8870d2676203dfe6784de6810ac6778bd64035c50ae3127fe356fcb2d89b61a9740b
-Size (R/lubridate_1.9.2.tar.gz) = 427200 bytes
+BLAKE2s (R/lubridate_1.9.3.tar.gz) = 0c684879f24c5af0ba3173ab66981c497e55e341ca0397aac6d52e69f6f76463
+SHA512 (R/lubridate_1.9.3.tar.gz) = 31c4008ce96487b609deb8f92269da9afad167821c691eea44a286ba407137a8707e4e1014f2373d431251f9120a3afcf404ac565a2e3749c2dd4331a50c7d5f
+Size (R/lubridate_1.9.3.tar.gz) = 428043 bytes
