@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.57 2024/01/07 16:23:11 wiz Exp $
+$NetBSD: distinfo,v 1.58 2024/01/14 09:04:28 wiz Exp $
 
-BLAKE2s (google-api-python-client-2.112.0.tar.gz) = e3031fecfc9f65247cb223a80e307ca460b92d7846492416e1b706662198ee34
-SHA512 (google-api-python-client-2.112.0.tar.gz) = e9bbec1c27105cb772c1f059b5cf2f83cf44f1aa003149a509cac15c46d68c80edd2705aad597f31d98e31cb61396f0516ddc69b5041237d96246898c31329b4
-Size (google-api-python-client-2.112.0.tar.gz) = 12465562 bytes
+BLAKE2s (google-api-python-client-2.113.0.tar.gz) = 54eb456875d9914c746d8f991b8f38716ed73fc66b042803f5b2feb20b984c75
+SHA512 (google-api-python-client-2.113.0.tar.gz) = 257d062de19849c4807cec249e1b7d13a60721ad58ff701affaecfd45253d2c83ddd79079478245c2df0c0f94b220070d342769f1dcfab1fb62f658970c0b317
+Size (google-api-python-client-2.113.0.tar.gz) = 12473297 bytes
 SHA1 (patch-setup.py) = f5f7c11769f086c2396cf5ad0e4233f93f8008ef
