@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2021/09/29 13:34:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2024/01/14 21:04:49 rillig Exp $
 # used by math/fftw/Makefile
 # used by math/fftw-long/Makefile
 # used by math/fftw-quad/Makefile
@@ -21,6 +21,7 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
+GNU_CONFIGURE_STRICT=	no
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
