@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/11/07 22:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/14 18:26:15 adam Exp $
 
-DISTNAME=	sphinx_rtd_theme-1.2.2
+DISTNAME=	sphinx_rtd_theme-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_rtd_theme/}
@@ -10,17 +10,15 @@ HOMEPAGE=	https://github.com/rtfd/sphinx_rtd_theme
 COMMENT=	Sphinx readthedocs.org theme
 LICENSE=	mit AND apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery>=4.0.0:../../textproc/py-sphinxcontrib-jquery
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=5:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery>=4:../../textproc/py-sphinxcontrib-jquery
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
