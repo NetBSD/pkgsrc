@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/30 18:12:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/14 20:35:47 wiz Exp $
 
-BLAKE2s (Devel-MAT-0.51.tar.gz) = ab3b92667f7c2da3c7534708868738e02a0d6bc25a2a2c18338f1303d438c31b
-SHA512 (Devel-MAT-0.51.tar.gz) = fe76adbdc353cf7f20265c1953a09f8f6cfd92e4165c172a06f2ae4f13367d55f6c9967ab1c2ac368d74eae48461ae4c2c3c4d5ba427c7383b559ed0bae5f4a4
-Size (Devel-MAT-0.51.tar.gz) = 144141 bytes
+BLAKE2s (Devel-MAT-0.52.tar.gz) = 697495d14e0f47a814a6a24a293c5a892d914faa28770d95d0218a9db320a96e
+SHA512 (Devel-MAT-0.52.tar.gz) = a676d679c0a17703786548235d7fcaf5f1aec1d281027edc2e0a1efdbf5e2d91da79fda55e5424261e8cb6fe8322123a43d7423994f8a7c1efee7e8d597a76ef
+Size (Devel-MAT-0.52.tar.gz) = 145075 bytes
