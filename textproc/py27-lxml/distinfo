@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/01/14 09:41:18 wiz Exp $
+
+BLAKE2s (lxml-5.0.1.tar.gz) = 33fb992c558d4f620f35d477505585ae92200a09ca631604afc2d81551e48ceb
+SHA512 (lxml-5.0.1.tar.gz) = 08efbab93cf5b39ca4aa976757edff184729ecdb77a3a062373a31e76828ac39b1d700d5e56caf39e562b10dc8d7507762001cfc66b77a6f25e59c61f826e6c2
+Size (lxml-5.0.1.tar.gz) = 3858871 bytes
+SHA1 (patch-setupinfo.py) = 264e934a4e5c095b0a65769798bf94db394d03e1
