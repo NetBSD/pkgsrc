@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:07 nia Exp $
-
-BLAKE2s (R/spatstat.core_2.3-0.tar.gz) = 04470934cb43218b636e2919e41e8e9a8e3628b5eaeb63bdaa9936a9753e1941
-SHA512 (R/spatstat.core_2.3-0.tar.gz) = c98ec6c63bb4a44a0f8f2d441418cf8f91a2a2d1b041b41b182a7ae5126307902d459444e0dec0ca2aed0c335091c42f6db88b281b9a3a2fecaacb2f1b602849
-Size (R/spatstat.core_2.3-0.tar.gz) = 1556158 bytes
