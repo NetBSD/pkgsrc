@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/10/26 13:37:55 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/01/14 18:34:56 adam Exp $
 
-DISTNAME=	GitPython-3.1.40
+DISTNAME=	GitPython-3.1.41
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitpython/}
@@ -10,14 +10,18 @@ HOMEPAGE=	https://github.com/gitpython-developers/GitPython
 COMMENT=	Python Git Library
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	${PYPKGPREFIX}-gitdb>=4.0.1:../../devel/py-gitdb
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0:../../devel/py-test-sugar
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=0:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 
 USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
