@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2023/08/13 19:05:53 pin Exp $
+# $NetBSD: Makefile,v 1.37 2024/01/14 15:56:01 rillig Exp $
 
 DISTNAME=	amiwm0.22pl2
 PKGNAME=	amiwm-0.22pl2
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 
@@ -23,6 +24,13 @@ MAKE_JOBS_SAFE=	no
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	post-install
+SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/lib/amiwm/Xinitrc \
+			${DESTDIR}${PREFIX}/lib/amiwm/Xsession \
+			${DESTDIR}${PREFIX}/lib/amiwm/Xsession2
+SUBST_SED.destdir=	-e 's|${DESTDIR}${PREFIX}|${PREFIX}|g'
 
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
