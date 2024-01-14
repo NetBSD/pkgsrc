@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.329 2024/01/14 05:26:11 mef Exp $
+$NetBSD: CHANGES-2024,v 1.330 2024/01/14 05:56:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/R-spatstat to 3.0.7 [mef 2024-01-14]
 	Updated math/R-geoR to 1.9.3 [mef 2024-01-14]
 	Updated devel/MoarVM to 2023.12 [mef 2024-01-14]
+	Updated lang/nqp to 2023.12 [mef 2024-01-14]
