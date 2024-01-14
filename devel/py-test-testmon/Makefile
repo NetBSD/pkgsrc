@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/14 20:51:46 adam Exp $
 
-DISTNAME=	pytest-testmon-1.2.2
+DISTNAME=	pytest-testmon-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-testmon/}
 
@@ -11,12 +10,14 @@ HOMEPAGE=	https://github.com/tarpas/pytest-testmon
 COMMENT=	Selects tests affected by changed files and methods
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0.0:../../devel/py-coverage
-DEPENDS+=	${PYPKGPREFIX}-test>=5.0.0:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-coverage>=6:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-test>=5:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
