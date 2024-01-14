@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/01/06 18:39:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/01/14 15:19:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -91,6 +91,9 @@ ${PYSITELIB}/stripe/_customer_balance_transaction.pyo
 ${PYSITELIB}/stripe/_customer_cash_balance_transaction.py
 ${PYSITELIB}/stripe/_customer_cash_balance_transaction.pyc
 ${PYSITELIB}/stripe/_customer_cash_balance_transaction.pyo
+${PYSITELIB}/stripe/_customer_session.py
+${PYSITELIB}/stripe/_customer_session.pyc
+${PYSITELIB}/stripe/_customer_session.pyo
 ${PYSITELIB}/stripe/_deletable_api_resource.py
 ${PYSITELIB}/stripe/_deletable_api_resource.pyc
 ${PYSITELIB}/stripe/_deletable_api_resource.pyo
@@ -457,6 +460,9 @@ ${PYSITELIB}/stripe/api_resources/customer_balance_transaction.pyo
 ${PYSITELIB}/stripe/api_resources/customer_cash_balance_transaction.py
 ${PYSITELIB}/stripe/api_resources/customer_cash_balance_transaction.pyc
 ${PYSITELIB}/stripe/api_resources/customer_cash_balance_transaction.pyo
+${PYSITELIB}/stripe/api_resources/customer_session.py
+${PYSITELIB}/stripe/api_resources/customer_session.pyc
+${PYSITELIB}/stripe/api_resources/customer_session.pyo
 ${PYSITELIB}/stripe/api_resources/discount.py
 ${PYSITELIB}/stripe/api_resources/discount.pyc
 ${PYSITELIB}/stripe/api_resources/discount.pyo
