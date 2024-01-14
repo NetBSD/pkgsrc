@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/01/14 08:34:07 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/01/14 08:52:30 wiz Exp $
 
-BLAKE2s (attr-2.5.1.tar.xz) = 52fb843466e2b96ad92b8f77fadb8da7cc65b838ca76380e8cb6a954769cb983
-SHA512 (attr-2.5.1.tar.xz) = 9e5555260189bb6ef2440c76700ebb813ff70582eb63d446823874977307d13dfa3a347dfae619f8866943dfa4b24ccf67dadd7e3ea2637239fdb219be5d2932
-Size (attr-2.5.1.tar.xz) = 318188 bytes
-SHA1 (patch-configure.ac) = 89c966ac640fb6ddaa4e5e4e1e936fe64a9c47ed
-SHA1 (patch-libattr_Makemodule.am) = 82be080f7cf58671c1d837686d9f08bf90817956
-SHA1 (patch-tools_Makemodule.am) = 220d3fa6f5702602926da2c05c2e808ff9356677
-SHA1 (patch-tools_attr.c) = 477e5f77394a4debb8ba5923fea29ea29c1cf4d4
+BLAKE2s (attr-2.5.2.tar.xz) = b5de9fb010ca9a567602f62a412efe652e68e85336c3f63ef15c52611470790c
+SHA512 (attr-2.5.2.tar.xz) = f587ea544effb7cfed63b3027bf14baba2c2dbe3a9b6c0c45fc559f7e8cb477b3e9a4a826eae30f929409468c50d11f3e7dc6d2500f41e1af8662a7e96a30ef3
+Size (attr-2.5.2.tar.xz) = 334180 bytes

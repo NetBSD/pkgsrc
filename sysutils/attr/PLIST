@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/14 08:28:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/14 08:52:30 wiz Exp $
 bin/attr
 bin/getfattr
 bin/setfattr
@@ -23,7 +23,6 @@ man/man3/attr_setf.3
 share/doc/attr/CHANGES
 share/doc/attr/COPYING
 share/doc/attr/COPYING.LGPL
-share/doc/attr/PORTING
 share/examples/attr/xattr.conf
 share/locale/cs/LC_MESSAGES/attr.mo
 share/locale/de/LC_MESSAGES/attr.mo
@@ -32,6 +31,7 @@ share/locale/en@quot/LC_MESSAGES/attr.mo
 share/locale/es/LC_MESSAGES/attr.mo
 share/locale/fr/LC_MESSAGES/attr.mo
 share/locale/gl/LC_MESSAGES/attr.mo
+share/locale/ka/LC_MESSAGES/attr.mo
 share/locale/nl/LC_MESSAGES/attr.mo
 share/locale/pl/LC_MESSAGES/attr.mo
 share/locale/sv/LC_MESSAGES/attr.mo
