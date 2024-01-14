@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/07 22:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/14 09:46:37 wiz Exp $
 
-DISTNAME=	pytoolconfig-1.2.6
+DISTNAME=	pytoolconfig-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytoolconfig/}
