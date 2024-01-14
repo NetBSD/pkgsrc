@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2023/12/13 11:18:59 mef Exp $
+$NetBSD: distinfo,v 1.28 2024/01/14 05:55:59 mef Exp $
 
-BLAKE2s (nqp-2023.11.tar.gz) = d1e39bde2f528d3f298492693c9c7d1b14f546893db90ad3be64cec925bf3502
-SHA512 (nqp-2023.11.tar.gz) = 4493170f8e6e0df8767ac03b97c1fe770fdcba203a2a3a566c65d13dbda214f131d9507df9e7f18b19ca59fc8972c54bb127dbce41f9ba412ed9dab892367664
-Size (nqp-2023.11.tar.gz) = 6023395 bytes
+BLAKE2s (nqp-2023.12.tar.gz) = 7f5184cf303c7cb975528daff0f180e2b46210b2b163d2e8f9b603c9d9d38f81
+SHA512 (nqp-2023.12.tar.gz) = 0f2f8d74e9b99288d3354c39c8faaaf674a570b36c1ce782f9b0944d348909dbdddb9eba2b04f01a8c8bdaba7190cafddc9459f07f16986bcf37ab4729e994a2
+Size (nqp-2023.12.tar.gz) = 6023121 bytes
