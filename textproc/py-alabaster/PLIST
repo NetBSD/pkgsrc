@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/13 07:13:49 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/01/14 09:02:59 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/alabaster/__init__.py
 ${PYSITELIB}/alabaster/__init__.pyc
 ${PYSITELIB}/alabaster/__init__.pyo
-${PYSITELIB}/alabaster/_version.py
-${PYSITELIB}/alabaster/_version.pyc
-${PYSITELIB}/alabaster/_version.pyo
 ${PYSITELIB}/alabaster/about.html
 ${PYSITELIB}/alabaster/donate.html
 ${PYSITELIB}/alabaster/layout.html
