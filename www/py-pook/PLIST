@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/24 12:48:05 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/14 15:34:05 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pook/__init__.py
 ${PYSITELIB}/pook/__init__.pyc
 ${PYSITELIB}/pook/__init__.pyo
@@ -38,6 +36,9 @@ ${PYSITELIB}/pook/helpers.pyo
 ${PYSITELIB}/pook/interceptors/__init__.py
 ${PYSITELIB}/pook/interceptors/__init__.pyc
 ${PYSITELIB}/pook/interceptors/__init__.pyo
+${PYSITELIB}/pook/interceptors/_httpx.py
+${PYSITELIB}/pook/interceptors/_httpx.pyc
+${PYSITELIB}/pook/interceptors/_httpx.pyo
 ${PYSITELIB}/pook/interceptors/aiohttp.py
 ${PYSITELIB}/pook/interceptors/aiohttp.pyc
 ${PYSITELIB}/pook/interceptors/aiohttp.pyo
@@ -47,9 +48,6 @@ ${PYSITELIB}/pook/interceptors/base.pyo
 ${PYSITELIB}/pook/interceptors/http.py
 ${PYSITELIB}/pook/interceptors/http.pyc
 ${PYSITELIB}/pook/interceptors/http.pyo
-${PYSITELIB}/pook/interceptors/pycurl.py
-${PYSITELIB}/pook/interceptors/pycurl.pyc
-${PYSITELIB}/pook/interceptors/pycurl.pyo
 ${PYSITELIB}/pook/interceptors/urllib3.py
 ${PYSITELIB}/pook/interceptors/urllib3.pyc
 ${PYSITELIB}/pook/interceptors/urllib3.pyo
