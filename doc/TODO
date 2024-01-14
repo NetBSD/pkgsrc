@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23915 2024/01/14 20:05:29 wiz Exp $
+$NetBSD: TODO,v 1.23916 2024/01/14 20:10:00 pin Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
 	o csvkit-1.0.5
-	o csvlens-0.6.0
 	o ctemplate-2.4
 	o cups-filters-1.28.17
 	o cutter-1.2.7
