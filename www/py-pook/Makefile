@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/08/24 12:50:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/14 15:34:05 adam Exp $
 
-DISTNAME=	pook-1.0.2
+DISTNAME=	pook-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pook/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,21 +10,24 @@ HOMEPAGE=	https://github.com/h2non/pook
 COMMENT=	HTTP traffic mocking and expectations made easy
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-furl>=0.5.6:../../www/py-furl
-DEPENDS+=	${PYPKGPREFIX}-xmltodict>=0.11.0:../../textproc/py-xmltodict
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.5.1:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.6.2:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.2:../../www/py-urllib3
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.3:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-xmltodict>=0.11.0:../../textproc/py-xmltodict
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-pook>=0.1.0b0:../../devel/py-test-pook
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 1.0.2
 # 2 failed, 31 passed, 14 warnings
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+post-extract:
+	${MKDIR} ${WRKSRC}/src
+	${MV} ${WRKSRC}/pook ${WRKSRC}/src/pook
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
