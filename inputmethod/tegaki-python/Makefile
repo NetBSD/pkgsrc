@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/10/23 06:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/14 09:44:59 wiz Exp $
 
 DISTNAME=	tegaki-python-0.3.1
 PKGREVISION=	7
@@ -11,7 +11,7 @@ COMMENT=	Base Python library for the Tegaki project
 LICENSE=	gnu-gpl-v2
 
 # optional for desktop applications, see tegaki/character.py
-#DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+#DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py27-lxml
 DEPENDS+=	${PYPKGPREFIX}-zinnia>=0.05:../../inputmethod/py-zinnia
 
 USE_LANGUAGES=	# none

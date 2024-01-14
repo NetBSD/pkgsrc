@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/11/08 13:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/01/14 09:44:59 wiz Exp $
 
 DISTNAME=	appdata_tools-0.1.7
 PKGREVISION=	34
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 WRKSRC=		${WRKDIR}/appdata-tools-${GITHUB_TAG}
 USE_TOOLS+=	autoconf automake autoreconf gmake intltool intltoolize
