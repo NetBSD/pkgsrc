@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/08 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/14 09:44:59 wiz Exp $
 
 DISTNAME=	yelp-tools-42.1
 PKGREVISION=	1
@@ -14,6 +14,8 @@ DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	tools/*.in
 

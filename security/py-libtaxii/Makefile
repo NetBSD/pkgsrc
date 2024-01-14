@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/14 09:44:59 wiz Exp $
 
 DISTNAME=	libtaxii-1.1.119
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,8 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

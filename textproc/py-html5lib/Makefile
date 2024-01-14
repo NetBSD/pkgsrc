@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/11/09 13:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/14 09:44:59 wiz Exp $
 
 DISTNAME=	html5lib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	HTML5 parser and tokenizer
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-genshi-[0-9]*:../../www/py-genshi
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-webencodings-[0-9]*:../../textproc/py-webencodings
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -20,5 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES+=	lxml
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

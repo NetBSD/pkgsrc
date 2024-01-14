@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2023/04/17 17:43:48 adam Exp $
+# $NetBSD: options.mk,v 1.5 2024/01/14 09:44:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lv2
 PKG_SUPPORTED_OPTIONS=	doc tests
@@ -6,6 +6,8 @@ PKG_SUPPORTED_OPTIONS=	doc tests
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 TOOL_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
