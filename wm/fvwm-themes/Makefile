@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/09/01 06:03:29 vins Exp $
+# $NetBSD: Makefile,v 1.27 2024/01/14 22:10:09 rillig Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fvwm-themes/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +27,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ARGS+=	--with-ft-datadir=${PREFIX}/share/fvwm2
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include --x-libraries=${X11BASE}/lib
+GNU_CONFIGURE_STRICT=	no	# autoconf 2.57 is too old
 
 REPLACE_PERL+=	themes/cde/modules/create-buttonbar-config
 REPLACE_PERL+=	themes/redmondxp/modules/FvwmThemesPanelManager
@@ -70,6 +71,11 @@ SUBST_FILES.root_prefix=	bin/fvwm-themes-config-destdir.in
 SUBST_SED.root_prefix=		-e 's|\/^$$ROOT_PREFIX\/\/|\|\^${DESTDIR}\|\||'
 SUBST_STAGE.root_prefix=	pre-configure
 SUBST_MESSAGE.root_prefix=	root_prefix tweak implementing
+
+SUBST_CLASSES+=			destdir
+SUBST_STAGE.destdir=		post-install
+SUBST_FILES.destdir=		${DESTDIR}${PREFIX}/share/fvwm2/themes/current/theme.cfg
+SUBST_SED.destdir=		-e 's,${DESTDIR}${PREFIX},${PREFIX},'
 
 # Copied from bin/ and add -destdir onto its name.
 # See following two targets.
