@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2024/01/14 20:08:33 schmonz Exp $
+
+BLAKE2s (py-tlsh-4.7.2.tar.gz) = a61252225f23ad5bfe57a6983468ee137b13e134dfbd6c080d772a35b36e55b5
+SHA512 (py-tlsh-4.7.2.tar.gz) = 110d81a0cac6b244255dfeec5cacc3060c8a354b7072d206860cdb577920150483950d6d17bd50db6b4eaf53aa445bfa047312c3c966cc83c107690c5dc5887a
+Size (py-tlsh-4.7.2.tar.gz) = 42097 bytes
