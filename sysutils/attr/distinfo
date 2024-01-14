@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2024/01/13 19:30:47 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/01/14 08:34:07 wiz Exp $
 
 BLAKE2s (attr-2.5.1.tar.xz) = 52fb843466e2b96ad92b8f77fadb8da7cc65b838ca76380e8cb6a954769cb983
 SHA512 (attr-2.5.1.tar.xz) = 9e5555260189bb6ef2440c76700ebb813ff70582eb63d446823874977307d13dfa3a347dfae619f8866943dfa4b24ccf67dadd7e3ea2637239fdb219be5d2932
 Size (attr-2.5.1.tar.xz) = 318188 bytes
 SHA1 (patch-configure.ac) = 89c966ac640fb6ddaa4e5e4e1e936fe64a9c47ed
-SHA1 (patch-libattr_Makemodule.am) = 052a7ef5e67ce3202742cf079bd0f54f452af810
-SHA1 (patch-tools_Makemodule.am) = 225f45f023acdbbf3980808f6524951ce1bfd2b0
+SHA1 (patch-libattr_Makemodule.am) = 82be080f7cf58671c1d837686d9f08bf90817956
+SHA1 (patch-tools_Makemodule.am) = 220d3fa6f5702602926da2c05c2e808ff9356677
 SHA1 (patch-tools_attr.c) = 477e5f77394a4debb8ba5923fea29ea29c1cf4d4
