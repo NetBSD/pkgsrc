@@ -1,22 +1,12 @@
-$NetBSD: patch-tools_Makemodule.am,v 1.1 2024/01/13 19:30:48 wiz Exp $
+$NetBSD: patch-tools_Makemodule.am,v 1.2 2024/01/14 08:34:07 wiz Exp $
 
-https://savannah.nongnu.org/bugs/index.php?65159
+https://git.savannah.nongnu.org/cgit/attr.git/commit/?h=2979615e71fb53b3f2f9085eea516d4e2b3174ea
 
---- tools/Makemodule.am.orig	2024-01-13 19:19:07.705687493 +0000
+--- tools/Makemodule.am.orig	2024-01-14 08:32:58.357146753 +0000
 +++ tools/Makemodule.am
-@@ -2,12 +2,12 @@ tools_ldadd = $(LDADD) libattr.la libmis
+@@ -1,4 +1,4 @@
+-tools_ldadd = $(LDADD) libattr.la libmisc.la
++tools_ldadd = $(LDADD) libattr.la libmisc.la $(LTLIBINTL)
  
  bin_PROGRAMS += attr
  attr_SOURCES = tools/attr.c
--attr_LDADD = $(tools_ldadd)
-+attr_LDADD = $(tools_ldadd) $(INTLLIBS)
- 
- bin_PROGRAMS += getfattr
- getfattr_SOURCES = tools/getfattr.c
--getfattr_LDADD = $(tools_ldadd)
-+getfattr_LDADD = $(tools_ldadd) $(INTLLIBS)
- 
- bin_PROGRAMS += setfattr
- setfattr_SOURCES = tools/setfattr.c
--setfattr_LDADD = $(tools_ldadd)
-+setfattr_LDADD = $(tools_ldadd) $(INTLLIBS)
