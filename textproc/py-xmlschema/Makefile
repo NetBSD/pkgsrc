@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2023/12/28 18:43:34 adam Exp $
+# $NetBSD: Makefile,v 1.52 2024/01/14 15:09:16 adam Exp $
 
-DISTNAME=	xmlschema-2.5.1
+DISTNAME=	xmlschema-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
@@ -23,9 +23,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
