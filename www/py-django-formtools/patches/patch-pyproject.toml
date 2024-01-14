@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/01/14 20:58:03 adam Exp $
+
+Do not install tests.
+
+--- pyproject.toml.orig	2024-01-14 20:56:10.434397211 +0000
++++ pyproject.toml
+@@ -53,7 +53,7 @@ license-files = ["LICENSE"]
+ zip-safe = false
+ 
+ [tool.setuptools.packages.find]
+-exclude = ["tests"] # tests.*
++exclude = ["tests", "tests.*"]
+ namespaces = false
+ 
+ [tool.setuptools_scm]
