@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23916 2024/01/14 20:10:00 pin Exp $
+$NetBSD: TODO,v 1.23917 2024/01/14 20:12:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -881,7 +881,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
-	o libpsl-0.21.5
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
