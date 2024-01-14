@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/01/08 07:31:50 mef Exp $
+$NetBSD: distinfo,v 1.13 2024/01/14 13:26:35 mef Exp $
 
-BLAKE2s (R/digest_0.6.33.tar.gz) = c282cade510ba494333bc8f836bc2a5b9c345e4def88fb2e96e458f21eda86a6
-SHA512 (R/digest_0.6.33.tar.gz) = a1a711908c626f82ec993067a4e750bf312beeccff14e81a67a9ca6b826ea1d4d213d431403233f010fe502d623a3a6f016cbc571ea68fe24f9d2117ebdea935
-Size (R/digest_0.6.33.tar.gz) = 177801 bytes
+BLAKE2s (R/digest_0.6.34.tar.gz) = bd6849776b5ec418a0c7367fc3d9b5f9dc467e13bd934f0b8ea20ef542c1aab9
+SHA512 (R/digest_0.6.34.tar.gz) = 200f7b8e5f9902f60ca34b3c11d89a8418d3c0dd84a8e8f1864254405c272b5b24f42d3df5a2791bfd7185a65ddecd731ea0f96333f67bd46f733f172cffea5b
+Size (R/digest_0.6.34.tar.gz) = 178159 bytes
