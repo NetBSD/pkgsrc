@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/14 02:44:42 mef Exp $
 
-BLAKE2s (R/spatstat.linnet_2.3-0.tar.gz) = dc7e0359618794651123bda1fc98bceabe16e0031bfafeede273265c6cffd354
-SHA512 (R/spatstat.linnet_2.3-0.tar.gz) = d5b3d1d393b10e06f2d5adfba264a15d72cc24a044a088fc3c109881964b85657e985fcbf707d8edbfc60cbdb1f93debf5ee17bc233a17dd9c8fc7f4e5303e0f
-Size (R/spatstat.linnet_2.3-0.tar.gz) = 245724 bytes
+BLAKE2s (R/spatstat.linnet_3.1-3.tar.gz) = 91edca5e753f81f3a45b0a0aa3e8f8242293b2c3b854fa0635d03b4aa02c42eb
+SHA512 (R/spatstat.linnet_3.1-3.tar.gz) = c3700d7d172366edfa136de1229c114f3175d74831b9b358598129afbdeccb6b4435a6c077aacf69ae8790452c7587ec29e84518112666ffc0c053a2b96bc477
+Size (R/spatstat.linnet_3.1-3.tar.gz) = 274881 bytes
