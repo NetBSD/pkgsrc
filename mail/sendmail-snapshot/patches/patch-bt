@@ -1,0 +1,13 @@
+$NetBSD: patch-bt,v 1.1 2024/01/15 04:50:57 jnemeth Exp $
+
+--- devtools/bin/configure.sh.orig	2024-01-08 07:00:05.372673095 +0000
++++ devtools/bin/configure.sh
+@@ -167,7 +167,7 @@ then
+ 	echo "define(\`confRANLIB', \`ranlib')dnl"
+ fi
+ 
+-roff_progs="groff nroff mandoc"
++roff_progs="mandoc groff nroff"
+ for roff_prog in $roff_progs
+ do
+ 	if [ ! -z "`$SHELL $find_prog $roff_prog`" ]
