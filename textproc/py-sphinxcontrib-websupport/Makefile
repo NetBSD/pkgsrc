@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/13 06:34:23 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/15 10:58:30 wiz Exp $
 
 DISTNAME=	sphinxcontrib_websupport-1.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml-[0-9]*:../../textproc/py-
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
