@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2024/01/14 09:44:22 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2024/01/15 10:57:19 wiz Exp $
 
 DISTNAME=	lxml-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7:../../textproc/py-cssselect
 
 USE_CC_FEATURES=	c99
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
