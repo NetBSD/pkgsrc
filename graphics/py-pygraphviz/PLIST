@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2022/02/08 11:00:19 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.9 2024/01/15 13:32:06 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pygraphviz/__init__.py
 ${PYSITELIB}/pygraphviz/__init__.pyc
 ${PYSITELIB}/pygraphviz/__init__.pyo
@@ -69,11 +70,3 @@ ${PYSITELIB}/pygraphviz/tests/test_subgraph.pyo
 ${PYSITELIB}/pygraphviz/tests/test_unicode.py
 ${PYSITELIB}/pygraphviz/tests/test_unicode.pyc
 ${PYSITELIB}/pygraphviz/tests/test_unicode.pyo
-share/doc/pygraphviz-${PKGVERSION}/INSTALL.txt
-share/doc/pygraphviz-${PKGVERSION}/examples/plot_attributes.py
-share/doc/pygraphviz-${PKGVERSION}/examples/plot_miles.py
-share/doc/pygraphviz-${PKGVERSION}/examples/plot_simple.py
-share/doc/pygraphviz-${PKGVERSION}/examples/plot_star.py
-share/doc/pygraphviz-${PKGVERSION}/examples/plot_subgraph.py
-share/doc/pygraphviz-${PKGVERSION}/examples/skip_django_simple.py
-share/doc/pygraphviz-${PKGVERSION}/examples/skip_utf8_encoding.py
