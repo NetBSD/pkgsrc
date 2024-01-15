@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/05 18:05:52 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/01/15 08:35:39 adam Exp $
 
-BLAKE2s (python-memcached-1.61.tar.gz) = 019df6521b7152093ba402cd6534bb113b7776fdce5d8f410ecf2614d9b6f4e6
-SHA512 (python-memcached-1.61.tar.gz) = 00cbc6179f880b9383043285a51d7369a7a9000a4c4771834400bb9a388b38651e35e084137ae99288f93d6052f48e957fa342dbcf2b41c57833927814613055
-Size (python-memcached-1.61.tar.gz) = 28551 bytes
+BLAKE2s (python-memcached-1.62.tar.gz) = a419e799d6b0555c15035e5c525d337bce1ebf680aa48da9714a7378e1475c2b
+SHA512 (python-memcached-1.62.tar.gz) = 22008c1ab3b537245c9a0ad6c776d2ad5e5a0cf5ce00ccd38ae782abe4c4aefad9815229fe868da101b1118da31001743a2b027a90725d78cc439138b0f133f1
+Size (python-memcached-1.62.tar.gz) = 28591 bytes
