@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.378 2024/01/15 17:59:22 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.379 2024/01/15 19:41:50 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -474,3 +474,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/qdirstat to 1.9 [wiz 2024-01-15]
 	Added devel/p5-Data-Entropy version 0.007 [gdt 2024-01-15]
 	Added devel/p5-Data-Float version 0.013 [gdt 2024-01-15]
+	Updated devel/got-portable to 0.95 [vins 2024-01-15]
