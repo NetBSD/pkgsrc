@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/02 12:01:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/15 13:22:13 adam Exp $
 bin/google-oauthlib-tool-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/docs/conf.py
+${PYSITELIB}/docs/conf.pyc
+${PYSITELIB}/docs/conf.pyo
 ${PYSITELIB}/google_auth_oauthlib/__init__.py
 ${PYSITELIB}/google_auth_oauthlib/__init__.pyc
 ${PYSITELIB}/google_auth_oauthlib/__init__.pyo
