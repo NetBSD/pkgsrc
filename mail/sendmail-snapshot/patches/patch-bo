@@ -1,0 +1,24 @@
+$NetBSD: patch-bo,v 1.1 2024/01/15 04:50:57 jnemeth Exp $
+
+--- sendmail/sendmail.h.orig	2023-04-27 10:39:42.000000000 +0000
++++ sendmail/sendmail.h
+@@ -73,6 +73,10 @@ SM_UNUSED(static char SmailId[]) = "@(#)
+ #endif
+ 
+ #include "bf.h"
++#ifdef USE_BLACKLIST
++#include <blacklist.h>
++#endif
++#include "blacklist_client.h"
+ #include "timers.h"
+ #include <sm/exc.h>
+ #include <sm/gen.h>
+@@ -2708,6 +2712,8 @@ EXTERN int Hacks;	/* bit field of run-ti
+ 
+ EXTERN int ConnectionRateWindowSize;
+ 
++EXTERN bool	UseBlacklist;
++
+ /*
+ **  Declarations of useful functions
+ */

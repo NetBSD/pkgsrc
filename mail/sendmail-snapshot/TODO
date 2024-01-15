@@ -1,0 +1,7 @@
+$NetBSD: TODO,v 1.1 2024/01/15 04:50:54 jnemeth Exp $
+
+- investigate why the combination of SASL, NAMED_RESN, and MILTER fails
+- get helpfile installed somewhere useful
+  - alternatively, adjust default "O HelpFile"
+- install sample aliases somewhere
+- look into using ${LOCALBASE}/etc/mail instead of /etc/mail
