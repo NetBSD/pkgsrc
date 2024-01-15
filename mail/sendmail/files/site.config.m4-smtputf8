@@ -1,0 +1,6 @@
+
+# $NetBSD: site.config.m4-smtputf8,v 1.1 2024/01/15 04:43:22 jnemeth Exp $
+
+# enable SMTPUTF8
+APPENDDEF(`confENVDEF',`-DUSE_EAI')
+APPENDDEF(`confLIBS', `-licuuc')
