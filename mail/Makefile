@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2024/01/10 16:48:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.636 2024/01/15 04:55:08 jnemeth Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -399,6 +399,7 @@ SUBDIR+=	safecat
 SUBDIR+=	sendmail
 SUBDIR+=	sendmail-cidrexpand
 SUBDIR+=	sendmail-qtool
+SUBDIR+=	sendmail-snapshot
 SUBDIR+=	sendymail
 SUBDIR+=	serialmail
 SUBDIR+=	sid-milter
