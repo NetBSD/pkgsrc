@@ -1,16 +1,18 @@
-# $NetBSD: options.mk,v 1.26 2019/07/15 05:30:33 jnemeth Exp $
+# $NetBSD: options.mk,v 1.27 2024/01/15 04:43:22 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
 PKG_SUPPORTED_OPTIONS+=	sendmail-ffr-tls sendmail-ffr-badrcptshutdown
+PKG_SUPPORTED_OPTIONS+=	smtputf8
 PKG_SUGGESTED_OPTIONS=	inet6 tcpwrappers tls
 
 .include "../../mk/bsd.prefs.mk"
 
 .for dir in ${COMPILER_INCLUDE_DIRS}
 .  if exists(${dir}/blacklist.h)
-PKG_SUPPORTED_OPTIONS+=	blacklistd
-PKG_SUGGESTED_OPTIONS+=	blacklistd
+PKG_SUPPORTED_OPTIONS+=		blacklist
+PKG_SUGGESTED_OPTIONS+=		blacklist
+PKG_OPTIONS_LEGACY_OPTS+=	blacklistd:blacklist
 .  endif
 .endfor
 
@@ -76,4 +78,11 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls ffr_tls_1:sendmail-ffr-tls
 ### NetBSD blacklistd(8) support.
 ###
 # Nothing to do here, activation is done in Makefile
+
+###
+### SMTPUTF8 support
+###
+.if !empty(PKG_OPTIONS:Msmtputf8)
+.  include "../../textproc/icu/buildlink3.mk"
+.endif
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
+$NetBSD: patch-as,v 1.3 2024/01/15 04:43:22 jnemeth Exp $
 
---- sendmail/deliver.c.orig	2020-06-03 05:48:46.000000000 +0000
+--- sendmail/deliver.c.orig	2023-02-22 16:41:28.000000000 +0000
 +++ sendmail/deliver.c
-@@ -29,6 +29,10 @@ SM_RCSID("@(#)$Id: deliver.c,v 8.1030 20
+@@ -31,6 +31,10 @@ SM_RCSID("@(#)$Id: deliver.c,v 8.1030 20
  # include "tls.h"
  #endif
  
@@ -10,10 +10,10 @@ $NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
 +extern struct __res_state sm_res;
 +#endif
 +
+ #if !_FFR_DMTRIGGER
  static int	deliver __P((ENVELOPE *, ADDRESS *));
- static void	dup_queue_file __P((ENVELOPE *, ENVELOPE *, int));
- static void	mailfiletimeout __P((int));
-@@ -1909,7 +1913,7 @@ deliver(e, firstto)
+ #endif
+@@ -2245,7 +2249,7 @@ deliver(e, firstto)
  
  #if NAMED_BIND
  	if (ConfigLevel < 2)
@@ -22,7 +22,7 @@ $NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
  #endif
  
  	if (tTd(11, 1))
-@@ -3621,7 +3625,7 @@ do_transfer:
+@@ -4100,7 +4104,7 @@ do_transfer:
  	}
  #if NAMED_BIND
  	if (ConfigLevel < 2)
@@ -31,16 +31,16 @@ $NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
  #endif
  
  	if (tTd(62, 1))
-@@ -6017,7 +6021,7 @@ hostsignature(m, host, ad)
- 	int hl;
+@@ -6618,7 +6622,7 @@ hostsignature(m, host, ad)
  	char *hp;
  	char *endp;
+ 	char *lstr;
 -	int oldoptions = _res.options;
 +	int oldoptions = sm_res.options;
  	char *mxhosts[MAXMXHOSTS + 1];
  	unsigned short mxprefs[MAXMXHOSTS + 1];
  #endif /* NAMED_BIND */
-@@ -6087,7 +6091,7 @@ hostsignature(m, host, ad)
+@@ -6688,7 +6692,7 @@ hostsignature(m, host, ad)
  
  #if NAMED_BIND
  	if (ConfigLevel < 2)
@@ -49,9 +49,9 @@ $NetBSD: patch-as,v 1.2 2021/07/04 07:57:13 jnemeth Exp $
  
  	for (hp = host; hp != NULL; hp = endp)
  	{
-@@ -6220,7 +6224,7 @@ hostsignature(m, host, ad)
- 	}
- 	makelower(s->s_hostsig.hs_sig);
+@@ -6821,7 +6825,7 @@ hostsignature(m, host, ad)
+ 	lstr = makelower_a(&s->s_hostsig.hs_sig, NULL);
+ 	ASSIGN_IFDIFF(s->s_hostsig.hs_sig, lstr);
  	if (ConfigLevel < 2)
 -		_res.options = oldoptions;
 +		sm_res.options = oldoptions;
