@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2023/10/24 22:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2024/01/15 04:43:22 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	3
+#PKGREVISION=	3
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -35,7 +35,8 @@ PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
-SUBST_CLASSES+=		paths cf-paths
+SUBST_CLASSES+=		paths
+SUBST_CLASSES+=		cf-paths
 
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	../mailer.conf smrsh/smrsh.8 cf/cf/Makefile
@@ -108,8 +109,11 @@ post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Msendmail-ffr-badrcptshutdown)
 	cat ${FILESDIR}/site.config.m4-ffr_badrcptshutdown >>${SITECONFIG}
 .endif
-.if !empty(PKG_OPTIONS:Mblacklistd)
+.if !empty(PKG_OPTIONS:Mblacklist)
 	cat ${FILESDIR}/site.config.m4-blacklistd >>${SITECONFIG}
+.endif
+.if !empty(PKG_OPTIONS:Msmtputf8)
+	cat ${FILESDIR}/site.config.m4-smtputf8 >>${SITECONFIG}
 .endif
 
 post-extract:

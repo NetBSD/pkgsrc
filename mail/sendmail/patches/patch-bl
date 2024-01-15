@@ -1,4 +1,4 @@
-# $NetBSD: patch-bl,v 1.1 2019/07/15 04:32:49 jnemeth Exp $
+$NetBSD: patch-bl,v 1.2 2024/01/15 04:43:22 jnemeth Exp $
 
 --- sendmail/blacklist.c.orig	2018-01-02 20:16:44 UTC
 +++ sendmail/blacklist.c
