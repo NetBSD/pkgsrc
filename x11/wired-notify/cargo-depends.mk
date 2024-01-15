@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/06/10 07:30:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2024/01/15 21:06:08 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -36,7 +36,7 @@ CARGO_CRATE_DEPENDS+=	crc32fast-1.2.1
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.11
 CARGO_CRATE_DEPENDS+=	cty-0.2.2
 CARGO_CRATE_DEPENDS+=	darling-0.13.0
 CARGO_CRATE_DEPENDS+=	darling_core-0.13.0
@@ -117,7 +117,7 @@ CARGO_CRATE_DEPENDS+=	ndk-glue-0.5.0
 CARGO_CRATE_DEPENDS+=	ndk-macro-0.3.0
 CARGO_CRATE_DEPENDS+=	ndk-sys-0.2.2
 CARGO_CRATE_DEPENDS+=	net2-0.2.37
-CARGO_CRATE_DEPENDS+=	nix-0.22.0
+CARGO_CRATE_DEPENDS+=	nix-0.22.3
 CARGO_CRATE_DEPENDS+=	nom-7.0.0
 CARGO_CRATE_DEPENDS+=	notify-4.0.17
 CARGO_CRATE_DEPENDS+=	ntapi-0.3.6
