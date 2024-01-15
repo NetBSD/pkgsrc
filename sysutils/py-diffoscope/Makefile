@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/10/23 06:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/15 20:03:39 schmonz Exp $
 
-DISTNAME=	diffoscope-233
+DISTNAME=	diffoscope-253
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
 
@@ -24,12 +23,10 @@ USE_TOOLS+=	bzip2:run gtar:run xz:run
 # Only Python 3 is supported.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} diffoscope diffoscope-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
