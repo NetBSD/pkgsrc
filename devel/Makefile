@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4157 2024/01/13 19:31:50 pin Exp $
+# $NetBSD: Makefile,v 1.4158 2024/01/15 17:59:06 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -1477,6 +1477,8 @@ SUBDIR+=	p5-Data-Dump-Streamer
 SUBDIR+=	p5-Data-Dumper
 SUBDIR+=	p5-Data-Dumper-Concise
 SUBDIR+=	p5-Data-Dumper-Names
+SUBDIR+=	p5-Data-Entropy
+SUBDIR+=	p5-Data-Float
 SUBDIR+=	p5-Data-GUID
 SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-IEEE754
