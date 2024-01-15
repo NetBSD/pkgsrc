@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2023/04/28 08:53:46 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/01/15 09:40:27 nros Exp $
 
 BLAKE2s (cppcodec-0.2.tar.gz) = 39a0e95862f73d8de67c6a163b0e96d09adf1b0e437da39b794d8e46a7b2ef18
 SHA512 (cppcodec-0.2.tar.gz) = 50c9c81cdb12560c87e513e1fd22c1ad24ea37b7d20a0e3044d43fb887f4c6494c69468e4d0811cd2fc1ae8fdb01b01cfb9f3cfdd8611d4bb0221cbd38cbead3
 Size (cppcodec-0.2.tar.gz) = 33984 bytes
+SHA1 (patch-test_CMakeLists.txt) = 5a932a5fc2027338328c38d349c0429974461475
+SHA1 (patch-test_test__cppcodec.cpp) = 27c5d41375644b1ad46dbc88bf3cf92de97d27d6
