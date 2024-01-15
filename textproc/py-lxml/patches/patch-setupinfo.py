@@ -1,4 +1,4 @@
-$NetBSD: patch-setupinfo.py,v 1.1 2019/03/07 18:01:21 jperkin Exp $
+$NetBSD: patch-setupinfo.py,v 1.2 2024/01/15 10:59:49 adam Exp $
 
 Do not use -isysroot on Darwin, causes wrapper issues.
 
@@ -9,7 +9,7 @@ Do not use -isysroot on Darwin, causes wrapper issues.
      _library_dirs = _prefer_reldirs(base_dir, library_dirs(static_library_dirs))
      _cflags = cflags(static_cflags)
 -    _ldflags = ['-isysroot', get_xcode_isysroot()] if sys.platform == 'darwin' else None
-+    _ldflags = ['-isysroot', get_xcode_isysroot()] if sys.platform == 'notdarwin' else None
++    _ldflags = None
      _define_macros = define_macros()
      _libraries = libraries()
  
