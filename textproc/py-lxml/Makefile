@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/01/15 10:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2024/01/15 10:59:49 adam Exp $
 
 DISTNAME=	lxml-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,14 +10,15 @@ HOMEPAGE=	https://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7:../../textproc/py-cssselect
 
 USE_CC_FEATURES=	c99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+BUILDLINK_DEPMETHOD.py-cython=	build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
