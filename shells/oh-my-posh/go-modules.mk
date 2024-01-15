@@ -1,5 +1,7 @@
-# $NetBSD: go-modules.mk,v 1.37 2024/01/07 19:46:12 pin Exp $
+# $NetBSD: go-modules.mk,v 1.38 2024/01/15 21:04:40 pin Exp $
 
+GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
+GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.mod
@@ -67,10 +69,10 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
-GO_MODULE_FILES+=	github.com/gookit/config/v2/@v/v2.2.4.mod
-GO_MODULE_FILES+=	github.com/gookit/config/v2/@v/v2.2.4.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.14.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.14.zip
+GO_MODULE_FILES+=	github.com/gookit/config/v2/@v/v2.2.5.mod
+GO_MODULE_FILES+=	github.com/gookit/config/v2/@v/v2.2.5.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.19.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.19.1.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.3.3.mod
@@ -194,8 +196,8 @@ GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20220722155237-a158d28d115b.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.2.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220722155255-886fb9371eb4.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.4.0.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.4.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.5.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.5.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190916202348-b4ddaad3f8a3.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201119102817-f84b799fce68.mod
