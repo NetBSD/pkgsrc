@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2024/01/04 22:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.119 2024/01/15 17:50:34 wiz Exp $
 
 DISTNAME=	numpy-1.26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -80,12 +80,14 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
+# Files don't exist with Python 3.12, so add '-f' to ${RM}
+# (Please check if this is still necessary after updates.)
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/command/config.py.orig
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/log.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/command/config.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/log.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
 # as of 1.26.1
