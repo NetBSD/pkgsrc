@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.365 2024/01/14 23:31:14 kre Exp $
+$NetBSD: CHANGES-2024,v 1.366 2024/01/15 04:43:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -459,3 +459,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-import-export to 3.3.6 [adam 2024-01-14]
 	Updated www/py-django-formtools to 2.5.1 [adam 2024-01-14]
 	Updated shells/bash to 5.2.26 [kre 2024-01-14]
+	Updated mail/sendmail to 8.17.2 [jnemeth 2024-01-15]
