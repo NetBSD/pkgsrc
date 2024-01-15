@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/07/20 21:47:47 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/15 09:33:46 nros Exp $
 
-DISTNAME=	Catch2-2.13.10
+DISTNAME=	Catch2-3.5.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=catchorg/}
@@ -8,19 +8,17 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://github.com/catchorg/Catch2
-COMMENT=	C++ header-only test framework for unit tests
+COMMENT=	C++ test framework for unit tests
 LICENSE=	boost-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
-USE_CXX_FEATURES+=	c++11
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DPKGCONFIG_INSTALL_DIR:PATH=${PREFIX}/lib/pkgconfig
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD=17
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
+USE_CXX_FEATURES+=	c++17
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
