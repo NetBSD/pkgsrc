@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/04/28 08:53:46 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/15 09:40:27 nros Exp $
 
 DISTNAME=	cppcodec-0.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tplgy/}
 GITHUB_PROJECT=	cppcodec
@@ -11,8 +12,14 @@ HOMEPAGE=	https://github.com/tplgy/cppcodec/
 COMMENT=	C++11 library to encode/decode various codes
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++11
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
+TEST_TARGET=	test
+
+USE_CXX_FEATURES+=	c++14
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD=14
 
 .include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
