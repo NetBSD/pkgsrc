@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2015/04/19 19:35:00 spz Exp $
+$NetBSD: patch-aa,v 1.6 2024/01/15 08:23:57 rillig Exp $
 
 pkgsrcification
 
@@ -24,12 +24,12 @@ pkgsrcification
  install-dist_lispDATA: $(dist_lisp_DATA)
  	@$(NORMAL_INSTALL)
 -	@list='$(dist_lisp_DATA)'; test -n "$(lispdir)" || list=; \
-+	@list='$(dist_lisp_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
++	@list='$(dist_lisp_DATA)'; test -n "%%DESTDIR_GNATS_DEFAULTS%%" || list=; \
  	if test -n "$$list"; then \
 -	  echo " $(MKDIR_P) '$(DESTDIR)$(lispdir)'"; \
 -	  $(MKDIR_P) "$(DESTDIR)$(lispdir)" || exit 1; \
-+	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
-+	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
++	  echo " $(MKDIR_P) '%%DESTDIR_GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%DESTDIR_GNATS_DEFAULTS%%" || exit 1; \
  	fi; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
@@ -38,8 +38,8 @@ pkgsrcification
  	while read files; do \
 -	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lispdir)'"; \
 -	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lispdir)" || exit $$?; \
-+	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%/..'"; \
-+	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%/.." || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%DESTDIR_GNATS_DEFAULTS%%/..'"; \
++	  $(INSTALL_DATA) $$files "%%DESTDIR_GNATS_DEFAULTS%%/.." || exit $$?; \
  	done
  
  uninstall-dist_lispDATA:
@@ -48,12 +48,12 @@ pkgsrcification
  install-dist_pkgdataDATA: $(dist_pkgdata_DATA)
  	@$(NORMAL_INSTALL)
 -	@list='$(dist_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
-+	@list='$(dist_pkgdata_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
++	@list='$(dist_pkgdata_DATA)'; test -n "%%DESTDIR_GNATS_DEFAULTS%%" || list=; \
  	if test -n "$$list"; then \
 -	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
 -	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
-+	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
-+	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
++	  echo " $(MKDIR_P) '%%DESTDIR_GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%DESTDIR_GNATS_DEFAULTS%%" || exit 1; \
  	fi; \
  	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
@@ -62,8 +62,8 @@ pkgsrcification
  	while read files; do \
 -	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
 -	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
-+	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%'"; \
-+	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%DESTDIR_GNATS_DEFAULTS%%'"; \
++	  $(INSTALL_DATA) $$files "%%DESTDIR_GNATS_DEFAULTS%%" || exit $$?; \
  	done
  
  uninstall-dist_pkgdataDATA:
