@@ -1,0 +1,23 @@
+$NetBSD: patch-test_CMakeLists.txt,v 1.1 2024/01/15 09:40:27 nros Exp $
+
+Adapt for catch2 version 3
+
+--- test/CMakeLists.txt.orig	2018-08-20 14:56:28.000000000 +0000
++++ test/CMakeLists.txt
+@@ -3,7 +3,7 @@ include_directories(BEFORE ${PROJECT_SOU
+ 
+ find_package(PkgConfig)
+ if (PKG_CONFIG_FOUND)
+-    pkg_check_modules(CATCH2 catch2)
++    pkg_check_modules(CATCH2 IMPORTED_TARGET catch2-with-main)
+ endif()
+ 
+ if (CATCH2_FOUND)
+@@ -15,6 +15,7 @@ else()
+ endif()
+ 
+ add_executable(test_cppcodec test_cppcodec.cpp)
++target_link_libraries(test_cppcodec PkgConfig::CATCH2)
+ add_test(cppcodec test_cppcodec)
+ 
+ add_executable(benchmark_cppcodec benchmark_cppcodec.cpp)
