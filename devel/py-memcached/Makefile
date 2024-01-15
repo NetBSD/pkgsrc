@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2024/01/05 18:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/15 08:35:39 adam Exp $
 
-DISTNAME=	python-memcached-1.61
+DISTNAME=	python-memcached-1.62
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-memcached/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.tummy.com/Community/software/python-memcached/
+HOMEPAGE=	https://github.com/linsomniac/python-memcached
 COMMENT=	Python memcached client
 LICENSE=	python-software-foundation
 
