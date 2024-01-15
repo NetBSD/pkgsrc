@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/10/17 12:10:39 adam Exp $
+$NetBSD: distinfo,v 1.14 2024/01/15 09:33:46 nros Exp $
 
-BLAKE2s (Catch2-2.13.10.tar.gz) = 6e3878812fdec2e6f19d0b847d82c95258a52e30a6b01f8d60b329edf4bb17cc
-SHA512 (Catch2-2.13.10.tar.gz) = 33c2292d5d315128a73f8cff27e92f86f3af30c45ce199297110b3cd2bf7d67a972fbcf7415aed1c467c384e0e3c63900c90faedff1d74c9d94b9e3e43df5ee2
-Size (Catch2-2.13.10.tar.gz) = 662225 bytes
+BLAKE2s (Catch2-3.5.1.tar.gz) = 255f6fb8ea96da8b172df000dfd8ae651667f25c23203adfa9f44a6adea142eb
+SHA512 (Catch2-3.5.1.tar.gz) = 90c5fcf2d4b9771f5b30e027099da0d15e294b85d28702020435606efda2a4edc96b3d2007b60e5a32178248ad129b4aba0fb96582156244d62e1edacda6ce7d
+Size (Catch2-3.5.1.tar.gz) = 1159629 bytes
