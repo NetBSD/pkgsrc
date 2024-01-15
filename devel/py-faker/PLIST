@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2023/12/18 10:23:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/01/15 20:44:33 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -379,6 +379,9 @@ ${PYSITELIB}/faker/providers/bank/az_AZ/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/bn_BD/__init__.py
 ${PYSITELIB}/faker/providers/bank/bn_BD/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/bn_BD/__init__.pyo
+${PYSITELIB}/faker/providers/bank/cs_CZ/__init__.py
+${PYSITELIB}/faker/providers/bank/cs_CZ/__init__.pyc
+${PYSITELIB}/faker/providers/bank/cs_CZ/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/da_DK/__init__.py
 ${PYSITELIB}/faker/providers/bank/da_DK/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/da_DK/__init__.pyo
