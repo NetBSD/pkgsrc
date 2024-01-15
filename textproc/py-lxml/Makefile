@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/01/15 10:59:49 adam Exp $
+# $NetBSD: Makefile,v 1.101 2024/01/15 11:44:00 wiz Exp $
 
 DISTNAME=	lxml-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ USE_CC_FEATURES=	c99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILDLINK_DEPMETHOD.py-cython=	build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
