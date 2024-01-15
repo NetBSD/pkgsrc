@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/15 17:44:14 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/15 17:46:51 gdt Exp $
 
 DISTNAME=	Data-Entropy-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://metacpan.org/pod/Data::Entropy
 COMMENT=	Perl module to manage entropy sources
 LICENSE=	${PERL5_LICENSE}
 
-TOOL_DEPENDS+=	p5-Module-Build>=0:../../devel/p5-Module-Build
 TOOL_DEPENDS+=	p5-Crypt-Rijndael>=0:../../security/p5-Crypt-Rijndael
 DEPENDS+=	p5-Carp>=0:../../devel/p5-Carp
 DEPENDS+=	p5-HTTP-Lite>=2.2:../../www/p5-HTTP-Lite
