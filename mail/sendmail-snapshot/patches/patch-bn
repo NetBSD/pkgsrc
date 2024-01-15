@@ -1,0 +1,16 @@
+$NetBSD: patch-bn,v 1.1 2024/01/15 04:50:57 jnemeth Exp $
+
+--- sendmail/sendmail.8.orig	2023-02-09 18:24:38.000000000 +0000
++++ sendmail/sendmail.8
+@@ -552,6 +552,11 @@ for this amount of time,
+ failed messages will be returned to the sender.
+ The default is five days.
+ .TP
++.RI UseBlacklist
++If set, send authentication failure and success notifications to the
++.BR blacklistd (8)
++daemon.
++.TP
+ .RI UserDatabaseSpec= userdatabase
+ If set, a user database is consulted to get forwarding information.
+ You can consider this an adjunct to the aliasing mechanism,
