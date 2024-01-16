@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.5 2024/01/16 10:00:16 prlw1 Exp $
+
+Build fix for gcc 12 on NetBSD.
+It is the equivalent of the default PKGSRC_USE_RELRO=partial
+c.f., PR lib/57792
+
+--- meson.build.orig	2023-11-17 20:29:11.000000000 +0000
++++ meson.build
+@@ -362,7 +362,6 @@ common_cflags = cc.get_supported_argumen
+ common_ldflags = cc.get_supported_link_arguments([
+   '-Wl,-Bsymbolic',
+   '-Wl,-z,relro',
+-  '-Wl,-z,now',
+ ])
+ 
+ confinc = include_directories('.')
