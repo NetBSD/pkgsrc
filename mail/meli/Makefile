@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2023/11/08 13:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/16 19:27:25 vins Exp $
 
-DISTNAME=	v0.8.2
+DISTNAME=	v0.8.4
 PKGNAME=	${DISTNAME:S|^v|meli-|}
-PKGREVISION=	3
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
-MASTER_SITES=	https://git.meli.delivery/meli/meli/archive/
+MASTER_SITES=	https://git.meli-email.org/meli/meli/archive/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://meli.delivery/
+HOMEPAGE=	https://meli-email.org/
 COMMENT=	Terminal mail client
 LICENSE=	gnu-gpl-v3
 
@@ -46,8 +45,6 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${DOCDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/managesieve-client \
-		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/meli	\
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.1		\

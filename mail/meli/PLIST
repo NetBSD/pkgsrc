@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/31 15:55:38 vins Exp $
-bin/managesieve-client
+@comment $NetBSD: PLIST,v 1.4 2024/01/16 19:27:25 vins Exp $
 bin/meli
 man/man1/meli.1
 man/man5/meli-themes.5
