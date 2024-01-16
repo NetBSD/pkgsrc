@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.396 2024/01/16 11:03:46 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.397 2024/01/16 11:08:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -500,3 +500,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jaraco.collections to 5.0.0 [adam 2024-01-16]
 	Updated x11/modular-xorg-server to 21.1.11 [wiz 2024-01-16]
 	Updated x11/modular-xorg-xephyr to 21.1.11 [wiz 2024-01-16]
+	Updated www/py-drf-nested-routers to 0.93.5 [adam 2024-01-16]
+	Updated net/py-geventhttpclient to 2.0.11 [adam 2024-01-16]
