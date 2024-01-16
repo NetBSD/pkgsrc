@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2023/04/04 12:20:29 he Exp $
+# $NetBSD: options.mk,v 1.3 2024/01/16 15:17:41 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ruby
 PKG_SUPPORTED_OPTIONS=	ruby-build-ri-db ruby-yjit
 PKG_SUGGESTED_OPTIONS=	ruby-build-ri-db
 
-.for a in "x86_64" "aarch64" "aarch64eb"
-.  if $a == ${MACHINE_ARCH}
+.for a in x86_64 aarch64 aarch64eb
+.  if ${a} == ${MACHINE_ARCH}
 PKG_SUGGESTED_OPTIONS+=	ruby-yjit
 .  endif
 .endfor
