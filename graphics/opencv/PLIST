@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/02/13 09:23:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/01/16 19:23:05 adam Exp $
 bin/opencv_annotation
 bin/opencv_createsamples
 bin/opencv_interactive-calibration
@@ -129,6 +129,7 @@ include/opencv2/core/utility.hpp
 include/opencv2/core/utils/allocator_stats.hpp
 include/opencv2/core/utils/allocator_stats.impl.hpp
 include/opencv2/core/utils/filesystem.hpp
+include/opencv2/core/utils/fp_control_utils.hpp
 include/opencv2/core/utils/instrumentation.hpp
 include/opencv2/core/utils/logger.defines.hpp
 include/opencv2/core/utils/logger.hpp

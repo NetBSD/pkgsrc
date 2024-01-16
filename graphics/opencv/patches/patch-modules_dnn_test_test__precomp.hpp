@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_dnn_test__precomp.hpp,v 1.1 2019/04/29 03:23:53 mef Exp $
+$NetBSD: patch-modules_dnn_test_test__precomp.hpp,v 1.1 2024/01/16 19:23:05 adam Exp $
 
 adhoc patch to build 3.4.6
 

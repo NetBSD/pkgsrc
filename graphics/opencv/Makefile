@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2023/12/22 07:35:07 thor Exp $
+# $NetBSD: Makefile,v 1.124 2024/01/16 19:23:05 adam Exp $
 
 .include "Makefile.common"
 
@@ -30,6 +30,7 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
