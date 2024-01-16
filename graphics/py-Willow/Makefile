@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/11/15 20:00:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/01/16 13:38:03 adam Exp $
 
-DISTNAME=	willow-1.6.2
+DISTNAME=	willow-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^w/W/}
-PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Willow/}
 
@@ -15,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.1.1:../../sysutils/py-filetype
 # heif
-DEPENDS+=	${PYPKGPREFIX}-pillow_heif>=0.10.0:../../graphics/py-pillow_heif
+DEPENDS+=	${PYPKGPREFIX}-pillow_heif>=0.13.0:../../graphics/py-pillow_heif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
