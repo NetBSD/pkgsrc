@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/24 09:51:28 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/16 14:16:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dbf/LICENSE
 ${PYSITELIB}/dbf/README.md
 ${PYSITELIB}/dbf/WHATSNEW
@@ -11,6 +10,30 @@ ${PYSITELIB}/dbf/__init__.py
 ${PYSITELIB}/dbf/__init__.pyc
 ${PYSITELIB}/dbf/__init__.pyo
 ${PYSITELIB}/dbf/_index.py
+${PYSITELIB}/dbf/bridge.py
+${PYSITELIB}/dbf/bridge.pyc
+${PYSITELIB}/dbf/bridge.pyo
+${PYSITELIB}/dbf/constants.py
+${PYSITELIB}/dbf/constants.pyc
+${PYSITELIB}/dbf/constants.pyo
+${PYSITELIB}/dbf/data_types.py
+${PYSITELIB}/dbf/data_types.pyc
+${PYSITELIB}/dbf/data_types.pyo
+${PYSITELIB}/dbf/exceptions.py
+${PYSITELIB}/dbf/exceptions.pyc
+${PYSITELIB}/dbf/exceptions.pyo
+${PYSITELIB}/dbf/index.py
+${PYSITELIB}/dbf/index.pyc
+${PYSITELIB}/dbf/index.pyo
+${PYSITELIB}/dbf/pql.py
+${PYSITELIB}/dbf/pql.pyc
+${PYSITELIB}/dbf/pql.pyo
+${PYSITELIB}/dbf/tables.py
+${PYSITELIB}/dbf/tables.pyc
+${PYSITELIB}/dbf/tables.pyo
 ${PYSITELIB}/dbf/test.py
 ${PYSITELIB}/dbf/test.pyc
 ${PYSITELIB}/dbf/test.pyo
+${PYSITELIB}/dbf/utils.py
+${PYSITELIB}/dbf/utils.pyc
+${PYSITELIB}/dbf/utils.pyo
