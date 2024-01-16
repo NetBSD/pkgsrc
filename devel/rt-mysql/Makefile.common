@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2019/11/03 10:39:29 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2024/01/16 22:56:41 rillig Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -110,6 +110,11 @@ INSTALL_MAKE_FLAGS+=	LIBS_OWNER=${LIBOWN}
 INSTALL_MAKE_FLAGS+=	LIBS_GROUP=${LIBGRP}
 INSTALL_MAKE_FLAGS+=	RTGROUP=${RT_GROUP}
 USERGROUP_PHASE=	pre-install
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	post-install
+SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/rt/lib/auto/RT/.packlist
+SUBST_SED.destdir=	-e 's|^${DESTDIR}${PREFIX}|${PREFIX}|'
 
 post-extract:
 	@${STEP_MSG} "Removing CVS directories from work directory"

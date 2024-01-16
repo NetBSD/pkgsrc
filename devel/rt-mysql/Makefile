@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:33:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/01/16 22:56:41 rillig Exp $
 
-PKGREVISION=	20
+PKGREVISION=	21
 RT_DB_TYPE=	mysql
 
 .include "../../devel/rt-mysql/Makefile.common"
