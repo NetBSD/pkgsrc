@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2022/11/14 19:29:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/16 14:13:55 adam Exp $
 bin/twill-${PYVERSSUFFIX}
 bin/twill-fork-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/twill/__init__.py
 ${PYSITELIB}/twill/__init__.pyc
 ${PYSITELIB}/twill/__init__.pyo
@@ -55,9 +55,9 @@ ${PYSITELIB}/twill/extensions/match_parse.pyo
 ${PYSITELIB}/twill/extensions/require.py
 ${PYSITELIB}/twill/extensions/require.pyc
 ${PYSITELIB}/twill/extensions/require.pyo
-${PYSITELIB}/twill/extensions/shell_test_extension.py
-${PYSITELIB}/twill/extensions/shell_test_extension.pyc
-${PYSITELIB}/twill/extensions/shell_test_extension.pyo
+${PYSITELIB}/twill/extensions/shell_test.py
+${PYSITELIB}/twill/extensions/shell_test.pyc
+${PYSITELIB}/twill/extensions/shell_test.pyo
 ${PYSITELIB}/twill/fork.py
 ${PYSITELIB}/twill/fork.pyc
 ${PYSITELIB}/twill/fork.pyo
@@ -67,6 +67,7 @@ ${PYSITELIB}/twill/namespaces.pyo
 ${PYSITELIB}/twill/parse.py
 ${PYSITELIB}/twill/parse.pyc
 ${PYSITELIB}/twill/parse.pyo
+${PYSITELIB}/twill/py.typed
 ${PYSITELIB}/twill/shell.py
 ${PYSITELIB}/twill/shell.pyc
 ${PYSITELIB}/twill/shell.pyo
