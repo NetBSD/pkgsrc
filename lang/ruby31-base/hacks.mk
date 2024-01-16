@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2022/01/16 13:57:10 taca Exp $
+# $NetBSD: hacks.mk,v 1.2 2024/01/16 15:14:53 taca Exp $
 
 .if !defined(RUBY31_BASE_HACKS_MK)
 RUBY31_BASE_HACKS_MK=	defined
@@ -11,15 +11,15 @@ RUBY31_BASE_HACKS_MK=	defined
 ### Also note that `-O' level optimisation produces a miniruby
 ### binary that loops while running the installation scripts.
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-.  if !empty(CC_VERSION:Mgcc-3.3.*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64}
+.  if ${CC_VERSION:Mgcc-3.3.*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .  endif
 ### ruby193 binary built on NetBSD/sparc64 with gcc 4.5.1 and the default -O2
 ### dumps core during generating RDocs.
 ### Using -O1 works around.
-.  if !empty(CC_VERSION:Mgcc-4.5.*)
+.  if ${CC_VERSION:Mgcc-4.5.*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 .  endif
@@ -29,14 +29,14 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 #  {standard input}: Assembler messages: {standard input}:1458: \
 #  Error: pcrel too far
 # and -O1 works around.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sh3*) && !empty(CC_VERSION:Mgcc-4.5.*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sh3*} && ${CC_VERSION:Mgcc-4.5.*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	opt:-Os:-O1 rm:-freorder-blocks
 .endif
 
 # On NetBSD/aarch64, GCC before GCC 10 optimisation produces segmentation
 # faulting miniruby binary.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*) && !empty(CC_VERSION:Mgcc-[2-9]*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*} && ${CC_VERSION:Mgcc-[2-9]*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 .endif
