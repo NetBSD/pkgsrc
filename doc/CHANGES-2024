@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.412 2024/01/16 21:28:23 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.413 2024/01/16 21:28:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/focuswriter to 1.8.6 [pin 2024-01-16]
 	Updated devel/garden to 1.1.0 [pin 2024-01-16]
 	Removed archivers/torrentzip successor archivers/trrntzip [wiz 2024-01-16]
+	Updated sysutils/ripdrag to 0.4.6 [pin 2024-01-16]
