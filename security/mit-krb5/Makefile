@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/01/05 23:46:29 adam Exp $
+# $NetBSD: Makefile,v 1.118 2024/01/16 22:16:34 rillig Exp $
 
 BRANCHNAME=	1.21
 DISTNAME=	krb5-${BRANCHNAME}.2
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-dns-for-realm
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--without-system-verto
-CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
