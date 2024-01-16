@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/01/15 21:09:42 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/16 21:30:31 pin Exp $
 
-DISTNAME=	yazi-0.2.0
+DISTNAME=	yazi-0.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,9 +16,6 @@ USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin share/examples/yazi
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
-RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yazi \
 		${DESTDIR}${PREFIX}/bin
@@ -30,5 +27,5 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/yazi
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/lua54/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
