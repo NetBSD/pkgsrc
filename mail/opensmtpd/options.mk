@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/08/24 15:26:40 vins Exp $
+# $NetBSD: options.mk,v 1.2 2024/01/16 13:24:00 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensmtpd
 
@@ -6,6 +6,8 @@ PKG_SUPPORTED_OPTIONS=	mailwrapper pam
 
 .if ${OPSYS} != "OpenBSD"
 PKG_SUGGESTED_OPTIONS+=	pam
+.else
+CONFIGURE_ARGS+=	--with-auth-bsdauth
 .endif
 
 .if exists(/etc/mailer.conf) || exists(/etc/mail/mailer.conf) || exists(${PKG_SYSCONFDIR}/mailer.conf)
