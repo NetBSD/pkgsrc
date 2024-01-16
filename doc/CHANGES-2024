@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.411 2024/01/16 21:27:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.412 2024/01/16 21:28:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/meli to 0.8.4 [vins 2024-01-16]
 	Updated editors/focuswriter to 1.8.6 [pin 2024-01-16]
 	Updated devel/garden to 1.1.0 [pin 2024-01-16]
+	Removed archivers/torrentzip successor archivers/trrntzip [wiz 2024-01-16]
