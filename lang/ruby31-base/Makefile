@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/24 22:09:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/16 15:14:53 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -29,12 +29,10 @@ USE_CC_FEATURES+=	c11
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
 
-.if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+=	--program-suffix=${RUBY_SUFFIX}
 CONFIGURE_ARGS+=	--with-soname=${RUBY_NAME}
 CONFIGURE_ARGS+=	--with-ruby-version=${RUBY_VER_DIR}
 CONFIGURE_ARGS+=	--with-ruby-pc="ruby-${RUBY_VERSION}.pc"
-.endif
 
 CONFIGURE_ENV+=		ac_cv_path_MJIT_CC=${CC:Q}
 CONFIGURE_ENV.Darwin+=	ac_cv_prog_dsymutil=
