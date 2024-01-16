@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/08/26 11:27:42 vins Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/16 14:18:59 vins Exp $
 
-DISTNAME=	outils-0.12
-PKGREVISION=	1
+DISTNAME=	outils-0.13
 PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
 MASTER_SITES=	https://git.vuxu.org/outils/snapshot/
@@ -50,16 +49,19 @@ SUBST_SED.ints=		-e 's|u_int|uint|g'
 post-patch:
 .if ${OPSYS} == "NetBSD"
 # The sys/* overrides are not needed on NetSD
-	${RM} ${WRKSRC}/src/liboutils/include/sys/*
+	${RUN}${RM} ${WRKSRC}/src/liboutils/include/sys/*
 
 .elif ${OPSYS} == "SunOS"
 # Solaris lacks MIN/MAX macros in sys/param.h
-	cd ${LIBSRCDIR} && ${CP} ${FILESDIR}/minmax.h . 					\
-	&& ${CAT} outils.h >> minmax.h && ${MV} minmax.h outils.h
+	cd ${LIBSRCDIR} &&			\
+	${RUN}${CAT} outils.h >> minmax.h &&	\
+	${RUN}${MV} minmax.h outils.h
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${OUTDIR}/signify ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${OUTDIR}/signify.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${OUTDIR}/signify	\
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${OUTDIR}/signify.1	\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
