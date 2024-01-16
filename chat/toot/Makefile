@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/01/16 13:46:25 vins Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/16 14:03:54 wiz Exp $
 
 DISTNAME=	toot-0.41.1
+PKGREVISION=	1
 CATEGORIES=	chat net
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toot/}
 
@@ -9,15 +10,19 @@ HOMEPAGE=	https://github.com/ihabunek/toot
 COMMENT=	Command line client for the Mastodon social network API
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.5:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.13:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.0:../../textproc/py-tomlkit
+DEPENDS+=	${PYPKGPREFIX}-urwid>=2:../../devel/py-urwid
+DEPENDS+=	${PYPKGPREFIX}-urwidgets>=0:../../devel/py-urwidgets
+DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../devel/py-wcwidth
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-tomlkit-[0-9]*:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
-DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
