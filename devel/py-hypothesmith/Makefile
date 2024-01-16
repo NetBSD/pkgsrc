@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/12/11 20:52:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/16 06:08:43 adam Exp $
 
-DISTNAME=	hypothesmith-0.3.1
+DISTNAME=	hypothesmith-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesmith/}
@@ -12,7 +12,7 @@ LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.84.1:../../devel/py-hypothesis
+DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.93.0:../../devel/py-hypothesis
 DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../lang/py-lark-parser
 DEPENDS+=	${PYPKGPREFIX}-libcst>=1.0.1:../../lang/py-libcst
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black

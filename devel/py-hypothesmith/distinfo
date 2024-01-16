@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/12/11 20:48:39 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/01/16 06:08:43 adam Exp $
 
-BLAKE2s (hypothesmith-0.3.1.tar.gz) = a1095a84ff2f045df0208f7e1309816d6aef42a48bc7b167782f8c18c4a40c13
-SHA512 (hypothesmith-0.3.1.tar.gz) = 4d78fde4d16be68476302a6bef6e51b741dcd4cca2807572ba10b05f5fcb11aee124bab5d30dbeaf0d9f5d344100100b89e978fcc34732d192a253dfc727fbc0
-Size (hypothesmith-0.3.1.tar.gz) = 25600 bytes
+BLAKE2s (hypothesmith-0.3.2.tar.gz) = e684b8425d4e554e98aff89fdf95d43460e2c06353f5b3d0ae3b85c68c1a443a
+SHA512 (hypothesmith-0.3.2.tar.gz) = 8e84eaa02fd86a9fe2b446c516b8dccb5f5f3ec84035f70c09fd88fcbbb3cfdc5bc36d95a22734d9d9d6a841d17d8f0198ec08daf3331f39c96c7b687fe2f22a
+Size (hypothesmith-0.3.2.tar.gz) = 25480 bytes
