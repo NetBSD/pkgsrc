@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/18 12:23:48 abs Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/16 03:57:05 ryoon Exp $
 
 DISTNAME=	jna-5.13.0
 PKGREVISION=	2
@@ -62,12 +62,12 @@ DEPENDS+=	openjdk8>=1.8.202:../../lang/openjdk8
 PLIST_SRC=	PLIST
 .if !empty(PKG_JVM:M*[a-z]7*) || !empty(PKG_JVM:M*[a-z]8*)
 PLIST_SRC+=	PLIST.java8-javadoc
-.else
-.  if !empty(PKG_JVM:M*11*)
+.elif !empty(PKG_JVM:M*11*)
 PLIST_SRC+=	PLIST.java11-javadoc
-.  else
+.elif !empty(PKG_JVM:M*17*)
 PLIST_SRC+=	PLIST.java17-javadoc
-.  endif
+.else
+PLIST_SRC+=	PLIST.java21-javadoc
 .endif
 
 TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
