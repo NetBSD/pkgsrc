@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/16 17:10:08 nikita Exp $
+bin/kaput
