@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/09/06 11:23:36 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/16 21:26:03 pin Exp $
 bin/focuswriter
 man/man1/focuswriter.1
 share/applications/focuswriter.desktop
@@ -270,7 +270,7 @@ share/focuswriter/icons/hicolor/64/window-new.png
 share/focuswriter/icons/hicolor/index.theme
 share/focuswriter/sounds/keyany.wav
 share/focuswriter/sounds/keyenter.wav
-share/focuswriter/symbols1500.dat
+share/focuswriter/symbols1510.dat
 share/focuswriter/themes/bitterskies.theme
 share/focuswriter/themes/enchantment.theme
 share/focuswriter/themes/gentleblues.theme
