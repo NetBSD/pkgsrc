@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/14 17:21:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/01/16 08:57:52 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/SoftLayer/API.py
 ${PYSITELIB}/SoftLayer/API.pyc
 ${PYSITELIB}/SoftLayer/API.pyo
@@ -584,6 +583,15 @@ ${PYSITELIB}/SoftLayer/CLI/hardware/update_firmware.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/upgrade.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_add.py
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_add.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_add.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_remove.py
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_remove.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_remove.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_trunkable.py
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_trunkable.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/vlan_trunkable.pyo
 ${PYSITELIB}/SoftLayer/CLI/helpers.py
 ${PYSITELIB}/SoftLayer/CLI/helpers.pyc
 ${PYSITELIB}/SoftLayer/CLI/helpers.pyo
@@ -1265,6 +1273,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Configuration_M
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Metrics.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Metrics.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Metrics.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component_Firewall.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component_Firewall.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Component_Firewall.pyo
@@ -1463,9 +1474,6 @@ ${PYSITELIB}/SoftLayer/managers/ipsec.pyo
 ${PYSITELIB}/SoftLayer/managers/license.py
 ${PYSITELIB}/SoftLayer/managers/license.pyc
 ${PYSITELIB}/SoftLayer/managers/license.pyo
-${PYSITELIB}/SoftLayer/managers/licenses.py
-${PYSITELIB}/SoftLayer/managers/licenses.pyc
-${PYSITELIB}/SoftLayer/managers/licenses.pyo
 ${PYSITELIB}/SoftLayer/managers/load_balancer.py
 ${PYSITELIB}/SoftLayer/managers/load_balancer.pyc
 ${PYSITELIB}/SoftLayer/managers/load_balancer.pyo
