@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.397 2024/01/16 11:08:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.398 2024/01/16 13:24:38 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/modular-xorg-xephyr to 21.1.11 [wiz 2024-01-16]
 	Updated www/py-drf-nested-routers to 0.93.5 [adam 2024-01-16]
 	Updated net/py-geventhttpclient to 2.0.11 [adam 2024-01-16]
+	Updated mail/opensmtpd to 7.4.0p1 [vins 2024-01-16]
