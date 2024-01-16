@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/29 06:18:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/16 10:09:11 adam Exp $
 
-DISTNAME=	pyspnego-0.9.2
+DISTNAME=	pyspnego-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspnego/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://github.com/jborean93/pyspnego
 COMMENT=	Windows Negotiate Authentication Client and Server
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # kerberos
 DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.6.0:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-krb5>=0.3.0:../../security/py-krb5
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -26,6 +26,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pyspnego-parse pyspnego-parse-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
