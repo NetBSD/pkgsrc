@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:06:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/01/16 10:51:00 adam Exp $
 
-BLAKE2s (twython-3.8.2.tar.gz) = 4567f3ac09a4db0f6cc4004733be109a90abcdd1ed839fe3fc02a49b901a46ef
-SHA512 (twython-3.8.2.tar.gz) = 928dfb88f179caf3416b245126f939f6c12d08f7bc04b37584e42cb943b3f3ba5abe9ad9350e7079139e847f1aec75e0199dc24992ae1839c01e8f48411355cf
-Size (twython-3.8.2.tar.gz) = 373927 bytes
+BLAKE2s (twython-3.9.1.tar.gz) = b55ae5a5f1b30785a6ece9860b94cb4c364c4b8252d248dfa03b97725225f89e
+SHA512 (twython-3.9.1.tar.gz) = 04c0d2f5d6698c4ace9474ec792d3be533516a8cc46029b8b7d1cf51faf2f5f9f1988958b60ba69d95eaa7a179ec173060de190135111ecb8040c2f9e58492e8
+Size (twython-3.9.1.tar.gz) = 376877 bytes
