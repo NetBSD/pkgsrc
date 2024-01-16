@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/01/16 13:24:00 vins Exp $
 
-VERSION=	7.3.0p2
+VERSION=	7.4.0p1
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -35,8 +34,8 @@ PKG_HOME._smtpq=	${SMTPD_HOME}
 
 GNU_CONFIGURE=		yes
 USE_DB185=		yes
+CONFIGURE_ENV+=		MANTYPE=man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/smtpd
-CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-path-CAfile=${SSLCERTS}/ca-certificates.crt
 CONFIGURE_ARGS+=	--with-path-empty=${VARBASE}/empty
