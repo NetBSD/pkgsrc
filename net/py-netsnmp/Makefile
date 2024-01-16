@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/24 22:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/16 13:37:11 wiz Exp $
 
 PKGREVISION= 1
 .include "../../net/net-snmp/Makefile.common"
@@ -8,8 +8,6 @@ CATEGORIES=	net python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python bindings to extensible SNMP implementation
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=		c
 EGG_NAME=		netsnmp_python-1.0a1
