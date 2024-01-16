@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.59 2023/12/13 07:45:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.60 2024/01/16 11:03:22 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	21.1.10
+XORG_VERSION=	21.1.11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,10 +10,11 @@ EXTRACT_SUFX=	.tar.xz
 HOMEPAGE=	https://xorg.freedesktop.org/
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES+=	c99
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c11
 
 CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/*
 
