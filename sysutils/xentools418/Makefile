@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/13 20:16:02 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/16 19:49:52 brook Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
@@ -40,7 +40,7 @@ CHECK_PORTABILITY_SKIP=	tools/examples/* \
 			tools/qemu-xen/scripts/qemu-binfmt-conf.sh
 CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
 CHECK_RELRO_SKIP+=	libexec/xen/boot/xen-shim
-CHECK_RELRO_SKIP+=	lib/debug/usr/pkg/libexec/xen/boot/xen-shim-syms
+CHECK_RELRO_SKIP+=	lib/debug${PREFIX}/libexec/xen/boot/xen-shim-syms
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
