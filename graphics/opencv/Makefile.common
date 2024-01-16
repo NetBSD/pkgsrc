@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.19 2023/12/22 14:30:55 thor Exp $
+# $NetBSD: Makefile.common,v 1.20 2024/01/16 19:23:05 adam Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
 # DO NOT FORGET to regen graphics/opencv-contrib-face/distinfo!
 
-OPENCV_VERSION=	3.4.17
+OPENCV_VERSION=	3.4.20
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
@@ -14,7 +14,8 @@ LICENSE=	modified-bsd
 
 PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
 
-USE_CMAKE=		yes
+USE_CXX_FEATURES=	c++14
+FORCE_CXX_STD=		c++14
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
@@ -62,9 +63,6 @@ CMAKE_ARGS+=		-DCPU_BASELINE=""
 .endif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# avoid Python 2.7
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
 
 .include "../../mk/atomic64.mk"
 .include "../../lang/python/pyversion.mk"
