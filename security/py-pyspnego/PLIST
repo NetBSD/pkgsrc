@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/03 08:15:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/16 10:09:11 adam Exp $
 bin/pyspnego-parse-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/spnego/__init__.py
 ${PYSITELIB}/spnego/__init__.pyc
 ${PYSITELIB}/spnego/__init__.pyo
@@ -63,11 +63,6 @@ ${PYSITELIB}/spnego/_spnego.pyo
 ${PYSITELIB}/spnego/_sspi.py
 ${PYSITELIB}/spnego/_sspi.pyc
 ${PYSITELIB}/spnego/_sspi.pyo
-${PYSITELIB}/spnego/_sspi_raw/__init__.py
-${PYSITELIB}/spnego/_sspi_raw/__init__.pyc
-${PYSITELIB}/spnego/_sspi_raw/__init__.pyo
-${PYSITELIB}/spnego/_sspi_raw/sspi.pyi
-${PYSITELIB}/spnego/_sspi_raw/text.pyi
 ${PYSITELIB}/spnego/_text.py
 ${PYSITELIB}/spnego/_text.pyc
 ${PYSITELIB}/spnego/_text.pyo
