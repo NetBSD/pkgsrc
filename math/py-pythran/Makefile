@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/09/18 14:41:01 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/16 06:13:02 adam Exp $
 
-DISTNAME=	pythran-0.14.0
+DISTNAME=	pythran-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythran/}
@@ -10,16 +10,16 @@ HOMEPAGE=	https://pythran.readthedocs.io/
 COMMENT=	Ahead of Time compiler for numeric kernels
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beniget>=0.4.0:../../devel/py-beniget
 DEPENDS+=	${PYPKGPREFIX}-gast>=0.5.0:../../devel/py-gast
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in pythran pythran-config
@@ -27,5 +27,5 @@ post-install:
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
