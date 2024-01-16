@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2023/09/27 16:49:37 vins Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2024/01/16 19:27:25 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	abnf-core-0.6.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
-CARGO_CRATE_DEPENDS+=	ahash-0.8.3
+CARGO_CRATE_DEPENDS+=	ahash-0.8.5
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.4
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.16
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -51,7 +51,7 @@ CARGO_CRATE_DEPENDS+=	csv-1.2.2
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	curl-0.4.44
 CARGO_CRATE_DEPENDS+=	curl-sys-0.4.65+curl-8.2.1
-SITES.curl-sys-0.4.65+curl-8.2.1.crate+=${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.65+curl-8.2.1/download}
+SITES.curl-sys-0.4.65+curl-8.2.1.crate+= ${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.65+curl-8.2.1/download}
 CARGO_CRATE_DEPENDS+=	data-encoding-2.4.0
 CARGO_CRATE_DEPENDS+=	dbus-0.9.7
 CARGO_CRATE_DEPENDS+=	deranged-0.3.8
@@ -147,7 +147,7 @@ CARGO_CRATE_DEPENDS+=	net2-0.2.39
 CARGO_CRATE_DEPENDS+=	nix-0.24.3
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	notify-4.0.17
-CARGO_CRATE_DEPENDS+=	notify-rust-4.9.0
+CARGO_CRATE_DEPENDS+=	notify-rust-4.10.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.16
 CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
 CARGO_CRATE_DEPENDS+=	numtoa-0.1.0
@@ -278,3 +278,5 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.39.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.5.2
+CARGO_CRATE_DEPENDS+=	zerocopy-0.7.3
+CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.3
