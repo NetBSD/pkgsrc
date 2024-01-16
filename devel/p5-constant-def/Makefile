@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2023/07/06 09:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/01/16 20:43:04 rillig Exp $
 #
 
 DISTNAME=	constant-def-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MO/MONS/}
 
@@ -16,6 +16,11 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-ex-lib>=0.03:../../devel/p5-ex-lib
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	post-install
+SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORARCH}/auto/constant/def/.packlist
+SUBST_SED.destdir=	-e 's|^${DESTDIR}${PREFIX}|${PREFIX}|'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
