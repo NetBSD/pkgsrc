@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.415 2024/01/16 21:47:18 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.416 2024/01/17 07:40:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -524,3 +524,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ripdrag to 0.4.6 [pin 2024-01-16]
 	Updated sysutils/yazi to 0.2.1 [pin 2024-01-16]
 	Updated archivers/trrntzip to 1.1 [wiz 2024-01-16]
+	Updated misc/tui-journal to 0.8.0 [pin 2024-01-17]
