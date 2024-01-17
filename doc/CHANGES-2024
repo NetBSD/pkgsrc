@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.417 2024/01/17 08:13:47 nros Exp $
+$NetBSD: CHANGES-2024,v 1.418 2024/01/17 08:24:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -526,3 +526,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated archivers/trrntzip to 1.1 [wiz 2024-01-16]
 	Updated misc/tui-journal to 0.8.0 [pin 2024-01-17]
 	Added x11/xfce4-docklike-plugin version 0.4.2 [nros 2024-01-17]
+	Updated databases/sqlite3 to 3.45.0 [adam 2024-01-17]
+	Updated databases/sqlite3-docs to 3.45.0 [adam 2024-01-17]
+	Updated databases/sqlite3-tcl to 3.45.0 [adam 2024-01-17]
+	Updated devel/lemon to 1.0.3.45.0 [adam 2024-01-17]
