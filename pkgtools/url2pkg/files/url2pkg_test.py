@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.48 2024/01/17 17:18:14 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.49 2024/01/17 18:33:43 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -1177,18 +1177,23 @@ def test_Adjuster_adjust_meson(tmp_path: Path):
 
 
 def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: Path):
-    g.perl5 = 'echo perl5'
+    g.perl5 = "cat dependencies #"
     g.libdir = '/libdir'
-    g.verbose = True
+    g.verbose = False
     adjuster = Adjuster(g, '', Lines())
     adjuster.abs_wrksrc = tmp_path
+    (tmp_path / 'dependencies').write_text(
+        'TOOL_DEPENDS\tdep>=0:../../devel/dep\n'
+        'TOOL_DEPENDS\tp5-Module-Build>=0:../../devel/p5-Module-Build\n'
+    )
 
     adjuster.adjust_perl_module_Build_PL()
 
     assert str_vars(adjuster.build_vars) == ['PERL5_MODULE_TYPE=Module::Build']
-    assert g.err.written() == [
-        f'url2pkg: reading dependencies: cd \'{tmp_path}\' && env {{}} \'echo perl5 -I/libdir -I. Build.PL\'',
-        'url2pkg: unknown dependency line: \'perl5 -I/libdir -I. Build.PL\''
+    assert g.err.written() == []
+    assert adjuster.tool_depends == [
+        '# TODO: dep>=0',
+        # p5-Build-Module is added implicitly.
     ]
 
 
