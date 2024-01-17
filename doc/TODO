@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23926 2024/01/17 10:33:56 wiz Exp $
+$NetBSD: TODO,v 1.23927 2024/01/17 19:59:08 markd Exp $
 
 Suggested new packages
 ======================
@@ -915,7 +915,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o maelstrom-x11-2.0.7
 	o magento-2.4.1
 	o magic-8.3.309
-	o mailman-3.3.5
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
