@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.53 2024/01/17 18:33:43 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.54 2024/01/17 21:01:07 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -836,6 +836,7 @@ class Adjuster:
 
         self.set_license(license_name, license_default)
         self.add_dependencies(dep_lines, python)
+        self.sort_dependencies()
 
     def add_dependencies(self, dep_lines: List[Tuple[str, str, str, str]],
                          python: bool):
@@ -857,6 +858,16 @@ class Adjuster:
                         break
 
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
+
+    def sort_dependencies(self):
+        def key(d):
+            a = d.removeprefix('# TODO: ')
+            return re.sub('[<>=].*', '', a)
+
+        self.depends.sort(key=key)
+        self.build_depends.sort(key=key)
+        self.tool_depends.sort(key=key)
+        self.test_depends.sort(key=key)
 
     def set_or_add(self, varname: str, value: str):
         if not self.makefile_lines.set(varname, value):

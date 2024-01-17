@@ -45,6 +45,8 @@ sub url2pkg_write_dependencies($$$) {
 
 	my $deps = $self->{$key};
 	foreach my $item (keys %$deps) {
+		next if $item =~ m"^[a-z]+>=0$";
+		next if $item =~ m"^perl>=5\.(\d+)$" && $2 < 38;
 		my $pkgbase = "p5-$item" =~ s/::/-/gr;
 		printf("%s\t%s>=%s\n", $varname, $pkgbase, $deps->{$item});
 	}
