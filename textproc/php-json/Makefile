@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/17 15:05:44 gdt Exp $
+
+# NB: Do not depend on this package directly.  Instead, use
+#   .include "../../lang/php/json.mk"
+# so that it is included only when needed.
 
 MODNAME=		json
 CATEGORIES+=		textproc
