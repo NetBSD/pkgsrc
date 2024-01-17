@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.129 2023/11/25 21:07:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.130 2024/01/17 08:24:19 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -485,6 +485,7 @@ share/doc/sqlite3/intern-v-extern-blob.html
 share/doc/sqlite3/invalidutf.html
 share/doc/sqlite3/isolation.html
 share/doc/sqlite3/json1.html
+share/doc/sqlite3/jsonb.html
 share/doc/sqlite3/keyword_index.html
 share/doc/sqlite3/lang.html
 share/doc/sqlite3/lang_aggfunc.html
@@ -689,6 +690,7 @@ share/doc/sqlite3/releaselog/3_43_2.html
 share/doc/sqlite3/releaselog/3_44_0.html
 share/doc/sqlite3/releaselog/3_44_1.html
 share/doc/sqlite3/releaselog/3_44_2.html
+share/doc/sqlite3/releaselog/3_45_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
