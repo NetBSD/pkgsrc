@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.52 2024/01/17 17:18:14 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.53 2024/01/17 18:33:43 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -970,6 +970,8 @@ class Adjuster:
 
         cmd = f'{self.g.perl5} -I{self.g.libdir} -I. Build.PL'
         self.read_dependencies(cmd, {}, self.abs_wrksrc)
+        self.tool_depends = [d for d in self.tool_depends
+                             if not d.startswith('p5-Module-Build')]
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
     def adjust_perl_module_Makefile_PL(self):
