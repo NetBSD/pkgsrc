@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/06/07 15:58:46 micha Exp $
+# $NetBSD: Makefile,v 1.47 2024/01/17 14:40:51 micha Exp $
 
-DISTNAME=	woof_11.1.4
+DISTNAME=	woof_12.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
@@ -44,6 +44,12 @@ pre-configure:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/woof/INSTALL.pkgsrc
+	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.woof-setup.desktop \
+		${DESTDIR}${PREFIX}/share/applications/woof-setup.desktop
+	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.woof.desktop \
+		${DESTDIR}${PREFIX}/share/applications/woof.desktop
+	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.woof.metainfo.xml \
+		${DESTDIR}${PREFIX}/share/metainfo/woof.metainfo.xml
 
 BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=2.2.0
 .include "../../audio/fluidsynth/buildlink3.mk"
