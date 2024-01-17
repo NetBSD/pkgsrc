@@ -86,7 +86,7 @@ sub create_build_script($) {
 	my $license = $self->{"license"} || "";
 	if ($license ne "") {
 		$self->url2pkg_write_cmd("license", $license);
-		$self->url2pkg_write_var("license_default", "# TODO: $license (from Build.PL)")
+		$self->url2pkg_write_cmd("license_default", "# TODO: $license (from Build.PL)")
 	}
 }
 
