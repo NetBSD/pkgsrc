@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.105 2023/11/08 13:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2024/01/17 16:07:19 micha Exp $
 
-DISTNAME=	tin-2.6.2
-PKGREVISION=	3
+DISTNAME=	tin-2.6.3
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
-MASTER_SITES+=	http://ftp.funet.fi/pub/unix/news/tin-unoff/
+MASTER_SITES+=	https://ftp.funet.fi/pub/unix/news/tin-unoff/
 MASTER_SITES+=	ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/
-MASTER_SITES+=	ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/
 MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
 EXTRACT_SUFX=	.tar.xz
 
@@ -43,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-mime-strict-charset
 CONFIGURE_ARGS+=	--with-defaults-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-mh-mail-handling
 CONFIGURE_ARGS+=	--with-coffee
+CONFIGURE_ARGS+=	--with-zlib
 
 SUBST_CLASSES+=		tin
 SUBST_STAGE.tin=	pre-configure
@@ -62,4 +61,6 @@ post-install:
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
