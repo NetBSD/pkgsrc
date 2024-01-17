@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.429 2024/01/17 20:11:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.430 2024/01/17 20:22:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -542,3 +542,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added fonts/tex-fontawesome5-doc version 5.15.4 [mark 2024-01-17]
 	Updated math/qcalc to 0.2.3 [pin 2024-01-17]
 	Updated sysutils/dua-cli to 2.27.0 [pin 2024-01-17]
+	Added print/tex-paracol version 1.35 [mark 2024-01-17]
+	Added print/tex-paracol-doc version 1.35 [mark 2024-01-17]
+	Added fonts/tex-stix2-type1 version 2.0.2 [mark 2024-01-17]
+	Added fonts/tex-stix2-type1-doc version 2.0.2 [mark 2024-01-17]
