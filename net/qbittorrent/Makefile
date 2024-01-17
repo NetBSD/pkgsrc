@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/12/29 18:24:56 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/01/17 20:14:28 adam Exp $
 
-DISTNAME=	qbittorrent-4.6.2
-PKGREVISION=	1
+DISTNAME=	qbittorrent-4.6.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qbittorrent/}
 GITHUB_PROJECT=	qBittorrent
@@ -12,7 +11,6 @@ HOMEPAGE=	https://www.qbittorrent.org/
 COMMENT=	BitTorrent client in Qt
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 # c++14 mode is required; also for libtorrent
 # https://github.com/qbittorrent/qBittorrent/issues/11425
 USE_LANGUAGES=	c gnu++14
@@ -21,22 +19,19 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 # error "Boost.Stacktrace requires `_Unwind_Backtrace` function
 CMAKE_ARGS+=	-DSTACKTRACE=OFF
 
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
 GCC_REQD+=	10 # c++14
 
 LDFLAGS.NetBSD+=	-ljemalloc
 
+.include "options.mk"
+
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.if ${OPSYS} == "Darwin"
-.  include "../../x11/qt5-qtmacextras/buildlink3.mk"
-.endif
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
