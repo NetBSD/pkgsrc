@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/01/03 23:32:11 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/17 23:43:02 gdt Exp $
 
-DISTNAME=		s-nail-14.9.22
-PKGREVISION=		2
+DISTNAME=		s-nail-14.9.24
 CATEGORIES=		mail
 MASTER_SITES=		https://www.sdaoden.eu/downloads/
 
@@ -13,9 +12,10 @@ LICENSE=		original-bsd AND osl AND mpl-1.1
 MAKE_FILE=		makefile
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MAKE_FLAGS+=		VAL_PREFIX=${PREFIX}
 MAKE_FLAGS+=		VAL_MANDIR=${PREFIX}/${PKGMANDIR}
-BUILD_MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
-INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
+MAKE_FLAGS+=		OPT_AUTOCC=no
+INSTALL_MAKE_FLAGS+=	PKGBASE=${PKGBASE}
 
 CONF_FILES=		${EGDIR}/s-nail.rc ${PKG_SYSCONFDIR}/s-nail.rc
 
