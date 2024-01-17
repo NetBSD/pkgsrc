@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/17 20:21:42 markd Exp $
+
+BLAKE2s (stix2-type1.doc.r57448.tar.xz) = 2d3668368902be6f52e5045aa04d0a5386de430db7c546d992f8b3c2d76f0e49
+SHA512 (stix2-type1.doc.r57448.tar.xz) = b4f1e6e8962fd77ecaf0df94b156783d9f77c07231e6cc258e04c26a8190dcd0a3175c71bd3a1187ad6cc083595ee80925712f12e0f838c474ac93701b47401e
+Size (stix2-type1.doc.r57448.tar.xz) = 1393108 bytes
