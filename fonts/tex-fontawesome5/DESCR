@@ -1,0 +1,5 @@
+This package provides LaTeX support for the included "Font
+Awesome 5 Free" icon set. These icons were designed by Fort
+Awesome and released under the SIL OFL 1.1 license. The
+commercial "Pro" version is also supported, if it is installed
+and XeLaTeX or LuaLaTeX is used.

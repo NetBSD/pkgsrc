@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/17 20:06:15 markd Exp $
+
+BLAKE2s (fontawesome5.doc.r63207.tar.xz) = 299be399c17b5c573765b8b4d6621f4c61128add1acd09955f2c055cb8dfe64a
+SHA512 (fontawesome5.doc.r63207.tar.xz) = 1727133ca0e1713c356a647e08a7e22af50ad6a67e66c54f3d9e9a0601bd4a693c365cda625b37be83cb4ece42aba8312488f4ba5e885cc44f68f7930dfd7add
+Size (fontawesome5.doc.r63207.tar.xz) = 746624 bytes
