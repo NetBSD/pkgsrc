@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/12/19 11:53:59 micha Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/17 12:22:59 micha Exp $
 
-VERS=			1.48.12
+VERS=			1.48.14
 PKGNAME=		doomlegacy-${VERS}
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
