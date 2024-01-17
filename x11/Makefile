@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1009 2024/01/13 13:53:23 gdt Exp $
+# $NetBSD: Makefile,v 1.1010 2024/01/17 08:12:35 nros Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -525,6 +525,7 @@ SUBDIR+=	xf86dga
 SUBDIR+=	xfce4-clipman-plugin
 SUBDIR+=	xfce4-dashboard
 SUBDIR+=	xfce4-desktop
+SUBDIR+=	xfce4-docklike-plugin
 SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-eyes-plugin
 SUBDIR+=	xfce4-garcon
