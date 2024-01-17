@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2022/03/28 14:34:13 tnn Exp $
+$NetBSD: distinfo,v 1.87 2024/01/17 06:02:52 nat Exp $
 
 BLAKE2s (SDL-1.2.15.tar.gz) = 4c189e4973635d37bbc9a4d87512bbbeb950d49c4862bc59f1bf2c37b9c54cc7
 SHA512 (SDL-1.2.15.tar.gz) = ac392d916e6953b0925a7cbb0f232affea33339ef69b47a0a7898492afb9784b93138986df53d6da6d3e2ad79af1e9482df565ecca30f89428be0ae6851b1adc
@@ -8,7 +8,6 @@ SHA1 (patch-ac) = 8b2dddff9ad449b19b35ef364e2d960e46284563
 SHA1 (patch-build-scripts_strip__fPIC.sh) = 51a6271cadac350a76b6e556727e27955067afb5
 SHA1 (patch-src_audio_SDL__wave.c) = ff42d973c9c5a7643ffa5acb248e15e821d2145f
 SHA1 (patch-src_audio_bsd_SDL__bsdaudio.c) = 7f5fbf4d839e52fce028810dc807b404fcd51442
-SHA1 (patch-src_audio_dma_SDL__dmaaudio.c) = cede64d04e8872b11851bfcacbc99059df973881
 SHA1 (patch-src_audio_sun_SDL__sunaudio.c) = 4b492b40d39e6444037dfda55766e4a149cc6c30
 SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = a20608d6a4cc8f2c8f5fb2d77a572f373178151b
 SHA1 (patch-src_video_SDL__bmp.c) = 89252aa0de90a80cb7fa1c0bf6a7e0e73973ff83
