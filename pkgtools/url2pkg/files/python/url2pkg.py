@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg.py,v 1.2 2022/08/25 19:56:07 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.3 2024/01/17 17:18:14 rillig Exp $
 #
 # Forwards the module metadata from distutils and setuptools to url2pkg.
 
@@ -29,8 +29,8 @@ def setup(**kwargs):
     print_depends('DEPENDS', kwargs.get('requires', []))  # only for distutils.core
     print_depends('DEPENDS', kwargs.get('install_requires', []))
     print_depends('TEST_DEPENDS', kwargs.get('tests_require', []))
-    print_depends('BUILD_DEPENDS', kwargs.get('extras_require', {}).get('dev', []))
-    print_depends('BUILD_DEPENDS', kwargs.get('setup_requires', []))
+    print_depends('TOOL_DEPENDS', kwargs.get('extras_require', {}).get('dev', []))
+    print_depends('TOOL_DEPENDS', kwargs.get('setup_requires', []))
     print_var('COMMENT', kwargs.get('description', '').rstrip('.'))
     print_var('HOMEPAGE', kwargs.get('url', ''))
     print_license(kwargs.get('license', ''))
