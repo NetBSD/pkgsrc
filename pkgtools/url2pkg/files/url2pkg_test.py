@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.49 2024/01/17 18:33:43 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.50 2024/01/17 19:46:47 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -1183,17 +1183,72 @@ def test_Adjuster_adjust_perl_module_Build_PL(tmp_path: Path):
     adjuster = Adjuster(g, '', Lines())
     adjuster.abs_wrksrc = tmp_path
     (tmp_path / 'dependencies').write_text(
-        'TOOL_DEPENDS\tdep>=0:../../devel/dep\n'
-        'TOOL_DEPENDS\tp5-Module-Build>=0:../../devel/p5-Module-Build\n'
+        'TOOL_DEPENDS\tp5-warnings>=0\n'
+        'TOOL_DEPENDS\tp5-perl>=5.006\n'
+        'TOOL_DEPENDS\tp5-strict>=0\n'
+        'TOOL_DEPENDS\tp5-Module-Build>=0\n'
+        'TOOL_DEPENDS\tp5-Data-Float>=0.008\n'
+        'TOOL_DEPENDS\tp5-perl>=5.006\n'
+        'TOOL_DEPENDS\tp5-Test-More>=0\n'
+        'TOOL_DEPENDS\tp5-IO-File>=1.03\n'
+        'TOOL_DEPENDS\tp5-Module-Build>=0\n'
+        'TOOL_DEPENDS\tp5-constant>=0\n'
+        'TOOL_DEPENDS\tp5-warnings>=0\n'
+        'TOOL_DEPENDS\tp5-strict>=0\n'
+        'TOOL_DEPENDS\tp5-Crypt-Rijndael>=0\n'
+        'DEPENDS\tp5-IO-File>=1.03\n'
+        'DEPENDS\tp5-Data-Float>=0.008\n'
+        'DEPENDS\tp5-Params-Classify>=0\n'
+        'DEPENDS\tp5-integer>=0\n'
+        'DEPENDS\tp5-strict>=0\n'
+        'DEPENDS\tp5-warnings>=0\n'
+        'DEPENDS\tp5-Carp>=0\n'
+        'DEPENDS\tp5-constant>=0\n'
+        'DEPENDS\tp5-perl>=5.006\n'
+        'DEPENDS\tp5-HTTP-Lite>=2.2\n'
+        'DEPENDS\tp5-Crypt-Rijndael>=0\n'
+        'DEPENDS\tp5-parent>=0\n'
+        'DEPENDS\tp5-Errno>=1.00\n'
+        'DEPENDS\tp5-Exporter>=0\n'
+        'cmd\tlicense\tperl\n'
+        'cmd\tlicense_default\t# TODO: perl (from Build.PL)\n'
     )
 
     adjuster.adjust_perl_module_Build_PL()
 
     assert str_vars(adjuster.build_vars) == ['PERL5_MODULE_TYPE=Module::Build']
     assert g.err.written() == []
+    # TODO: Don't treat single-word lowercase package names as real packages.
+    # TODO: Sort the dependencies alphabetically.
+    # TODO: Remove duplicates.
     assert adjuster.tool_depends == [
-        '# TODO: dep>=0',
-        # p5-Build-Module is added implicitly.
+          '# TODO: p5-warnings>=0',
+          '# TODO: p5-perl>=5.006',
+          '# TODO: p5-strict>=0',
+          'p5-Data-Float>=0.008:../../devel/p5-Data-Float',
+          '# TODO: p5-perl>=5.006',
+          '# TODO: p5-Test-More>=0',
+          '# TODO: p5-IO-File>=1.03',
+          '# TODO: p5-constant>=0',
+          '# TODO: p5-warnings>=0',
+          '# TODO: p5-strict>=0',
+          'p5-Crypt-Rijndael>=0:../../security/p5-Crypt-Rijndael',
+    ]
+    assert adjuster.depends == [
+          '# TODO: p5-IO-File>=1.03',
+          'p5-Data-Float>=0.008:../../devel/p5-Data-Float',
+          'p5-Params-Classify>=0:../../devel/p5-Params-Classify',
+          '# TODO: p5-integer>=0',
+          '# TODO: p5-strict>=0',
+          '# TODO: p5-warnings>=0',
+          'p5-Carp>=0:../../devel/p5-Carp',
+          '# TODO: p5-constant>=0',
+          '# TODO: p5-perl>=5.006',
+          'p5-HTTP-Lite>=2.2:../../www/p5-HTTP-Lite',
+          'p5-Crypt-Rijndael>=0:../../security/p5-Crypt-Rijndael',
+          '# TODO: p5-parent>=0',
+          '# TODO: p5-Errno>=1.00',
+          '# TODO: p5-Exporter>=0',
     ]
 
 
