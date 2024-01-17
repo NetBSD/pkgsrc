@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/17 20:17:48 markd Exp $
+share/texmf-dist/doc/latex/paracol/README
+share/texmf-dist/doc/latex/paracol/paracol-man.pdf
+share/texmf-dist/doc/latex/paracol/paracol-man.tex
+share/texmf-dist/doc/latex/paracol/paracol.pdf
