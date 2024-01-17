@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.418 2024/01/17 20:06:15 markd Exp $
+# $NetBSD: Makefile,v 1.419 2024/01/17 20:21:42 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -858,6 +858,8 @@ SUBDIR+=	tex-stix
 SUBDIR+=	tex-stix-doc
 SUBDIR+=	tex-stix2-otf
 SUBDIR+=	tex-stix2-otf-doc
+SUBDIR+=	tex-stix2-type1
+SUBDIR+=	tex-stix2-type1-doc
 SUBDIR+=	tex-stmaryrd
 SUBDIR+=	tex-stmaryrd-doc
 SUBDIR+=	tex-superiors
