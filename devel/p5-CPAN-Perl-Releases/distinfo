@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.72 2023/12/13 13:38:17 mef Exp $
+$NetBSD: distinfo,v 1.73 2024/01/17 22:57:37 mef Exp $
 
-BLAKE2s (CPAN-Perl-Releases-5.20231129.tar.gz) = ca5b90867f5cc21da5a5b3ada5ef51f4ed67c4f73ca71579fbc4718b7c9a0ed9
-SHA512 (CPAN-Perl-Releases-5.20231129.tar.gz) = 16d3c26a7971b7964d522bfa4ae8e2b27b1a7de63a66eef28de44cf5b7b973df72446067243dc329b9b4a453a439991a48069c744fa45b38531287333c7070f6
-Size (CPAN-Perl-Releases-5.20231129.tar.gz) = 22959 bytes
+BLAKE2s (CPAN-Perl-Releases-5.20231230.tar.gz) = ad2b5ab4f39e66b9806c1f4d3f3078f7f20a9834f16d8fb76318825e69c45c3c
+SHA512 (CPAN-Perl-Releases-5.20231230.tar.gz) = 0a7395640bd0e007f6cafbaccd6cb1ab698c78fc335870dfd25b079dfd97a1b9a5f7bf61a5f9004720d721345f6bfd7b2999032da3ace9c7f68eb469c737915b
+Size (CPAN-Perl-Releases-5.20231230.tar.gz) = 22910 bytes
