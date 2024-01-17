@@ -76,8 +76,8 @@ sub new(%) {
 sub create_build_script($) {
 	my ($self) = @_;
 
-	$self->url2pkg_write_dependencies("BUILD_DEPENDS", "configure_requires");
-	$self->url2pkg_write_dependencies("BUILD_DEPENDS", "build_requires");
+	$self->url2pkg_write_dependencies("TOOL_DEPENDS", "configure_requires");
+	$self->url2pkg_write_dependencies("TOOL_DEPENDS", "build_requires");
 	$self->url2pkg_write_dependencies("DEPENDS", "requires");
 	$self->url2pkg_write_dependencies("TEST_DEPENDS", "test_requires");
 	$self->url2pkg_write_dependencies("#RECOMMENDS", "recommends");
