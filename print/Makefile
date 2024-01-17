@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.919 2023/12/30 12:58:43 wiz Exp $
+# $NetBSD: Makefile,v 1.920 2024/01/17 20:17:47 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1300,6 +1300,8 @@ SUBDIR+=	tex-pagenote-doc
 SUBDIR+=	tex-pagesel
 SUBDIR+=	tex-pagesel-doc
 SUBDIR+=	tex-pageslts
+SUBDIR+=	tex-paracol
+SUBDIR+=	tex-paracol-doc
 SUBDIR+=	tex-paralist
 SUBDIR+=	tex-paralist-doc
 SUBDIR+=	tex-parskip

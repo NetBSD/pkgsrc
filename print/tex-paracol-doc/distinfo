@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/17 20:17:48 markd Exp $
+
+BLAKE2s (paracol.doc.r49560.tar.xz) = 0de2a6c2b2bf4d1cb678aea11331b0b43f106e6e14080a0d0c78567013ffc2ba
+SHA512 (paracol.doc.r49560.tar.xz) = a5711614d817193cf34cce405fc57f00dc17f3757b8c945dd174ba03453943c22e9c66b19a0f83444abd61f486e5df10246556e59d281f10f95452ad1931fb49
+Size (paracol.doc.r49560.tar.xz) = 2088752 bytes
