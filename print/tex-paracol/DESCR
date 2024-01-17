@@ -1,0 +1,4 @@
+The package provides yet another multi-column typesetting
+mechanism by which you produce multi-column (e.g., bilingual)
+document switching and sychronizing each corresponding part in
+"parallel".
