@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.47 2023/10/30 07:12:49 wiz Exp $
+# $NetBSD: url2pkg_test.py,v 1.48 2024/01/17 17:18:14 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -772,8 +772,10 @@ def test_Adjuster_read_dependencies():
     child_process_output = [
         'DEPENDS\tpackage>=112.0:../../pkgtools/pkglint',
         'DEPENDS\tpackage>=120.0:../../pkgtools/x11-links',
-        'BUILD_DEPENDS\turl2pkg>=1.0',
-        'BUILD_DEPENDS\tdoes-not-exist>=1.0',
+        'BUILD_DEPENDS\turl2pkg>=1.0b',
+        'BUILD_DEPENDS\tdoes-not-exist-build>=1.0',
+        'TOOL_DEPENDS\turl2pkg>=1.0t',
+        'TOOL_DEPENDS\tdoes-not-exist-tool>=1.0',
         'TEST_DEPENDS\tpkglint',
         'A line that is not a dependency at all',
         '',
@@ -797,13 +799,19 @@ def test_Adjuster_read_dependencies():
         ".include \"../../pkgtools/x11-links/buildlink3.mk\"",
     ]
     assert adjuster.build_depends == [
-        'url2pkg>=1.0:../../pkgtools/url2pkg',
-        '# TODO: does-not-exist>=1.0',
+        'url2pkg>=1.0b:../../pkgtools/url2pkg',
+        '# TODO: does-not-exist-build>=1.0',
+    ]
+    assert adjuster.tool_depends == [
+        'url2pkg>=1.0t:../../pkgtools/url2pkg',
+        '# TODO: does-not-exist-tool>=1.0',
     ]
     assert adjuster.test_depends == ['pkglint>=0:../../pkgtools/pkglint']
     assert detab(adjuster.generate_lines()) == [
-        'BUILD_DEPENDS+= url2pkg>=1.0:../../pkgtools/url2pkg',
-        'BUILD_DEPENDS+= # TODO: does-not-exist>=1.0',
+        'BUILD_DEPENDS+= url2pkg>=1.0b:../../pkgtools/url2pkg',
+        'BUILD_DEPENDS+= # TODO: does-not-exist-build>=1.0',
+        'TOOL_DEPENDS+=  url2pkg>=1.0t:../../pkgtools/url2pkg',
+        'TOOL_DEPENDS+=  # TODO: does-not-exist-tool>=1.0',
         'DEPENDS+=       package>=112.0:../../pkgtools/pkglint',
         'TEST_DEPENDS+=  pkglint>=0:../../pkgtools/pkglint',
         '',
@@ -890,6 +898,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
     # some dependencies whose directory is explicitly given
     adjuster.depends.append('depends>=11.0:../../devel/depends')
     adjuster.build_depends.append('build-depends>=12.0:../../devel/build-depends')
+    adjuster.tool_depends.append('tool-depends>=12.5:../../devel/tool-depends')
     adjuster.test_depends.append('test-depends>=13.0:../../devel/test-depends')
 
     lines = adjuster.generate_lines()
@@ -897,10 +906,10 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
     assert detab(lines) == [
         mkcvsid,
         '',
-        '# TODO: dependency TOOL_DEPENDS # TODO: tool-depends>=6.0',
-        '',
         'BUILD_DEPENDS+= # TODO: build-depends>=7.0',
         'BUILD_DEPENDS+= build-depends>=12.0:../../devel/build-depends',
+        'TOOL_DEPENDS+=  # TODO: tool-depends>=6.0',
+        'TOOL_DEPENDS+=  tool-depends>=12.5:../../devel/tool-depends',
         'DEPENDS+=       # TODO: depends>=5.0',
         'DEPENDS+=       depends>=11.0:../../devel/depends',
         'TEST_DEPENDS+=  # TODO: test-depends>=8.0',

@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.51 2023/10/30 07:12:49 wiz Exp $
+# $NetBSD: url2pkg.py,v 1.52 2024/01/17 17:18:14 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -683,6 +683,7 @@ class Adjuster:
     # "package>=version:../../category/package".
     depends: List[str]
     build_depends: List[str]
+    tool_depends: List[str]
     test_depends: List[str]
 
     # .include, interleaved with BUILDLINK3_API_DEPENDS.
@@ -731,6 +732,7 @@ class Adjuster:
         self.categories = []
         self.depends = []
         self.build_depends = []
+        self.tool_depends = []
         self.test_depends = []
         self.bl3_lines = []
         self.includes = []
@@ -783,6 +785,8 @@ class Adjuster:
             self.depends.append(value)
         elif kind == 'BUILD_DEPENDS':
             self.build_depends.append(value)
+        elif kind == 'TOOL_DEPENDS':
+            self.tool_depends.append(value)
         elif kind == 'TEST_DEPENDS':
             self.test_depends.append(value)
         else:
@@ -1198,6 +1202,8 @@ class Adjuster:
         depend_vars = []
         depend_vars.extend(
             Var('BUILD_DEPENDS', '+=', d) for d in self.build_depends)
+        depend_vars.extend(
+            Var('TOOL_DEPENDS', '+=', d) for d in self.tool_depends)
         depend_vars.extend(
             Var('DEPENDS', '+=', d) for d in self.depends)
         depend_vars.extend(
