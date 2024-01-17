@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.245 2023/11/16 12:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.246 2024/01/17 20:23:05 adam Exp $
 
-DISTNAME=	gnutls-3.8.2
+DISTNAME=	gnutls-3.8.3
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -14,20 +14,22 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PLIST_SRC=	PLIST
 
-USE_LANGUAGES=	c c++11
-GCC_REQD+=	6
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+GCC_REQD+=		6
 
-USE_LIBTOOL=			yes
-USE_TOOLS+=			gmake gsed perl pkg-config bash
-USE_TOOLS+=			msgfmt msgmerge xgettext
-GNU_CONFIGURE=			yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake gsed perl pkg-config bash
+USE_TOOLS+=		msgfmt msgmerge xgettext
+GNU_CONFIGURE=		yes
 # this library duplicates (and conflicts with) openssl
-CONFIGURE_ARGS+=		--disable-openssl-compatibility
-CONFIGURE_ARGS+=		--without-idn
-CONFIGURE_ARGS+=		--without-tpm
-CONFIGURE_ARGS+=		--disable-valgrind-tests
-CONFIGURE_ARGS+=		--with-default-trust-store-file=${PREFIX}/share/mozilla-rootcerts/cacert.pem
-CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+CONFIGURE_ARGS+=	--disable-openssl-compatibility
+CONFIGURE_ARGS+=	--without-idn
+CONFIGURE_ARGS+=	--without-tpm
+CONFIGURE_ARGS+=	--disable-valgrind-tests
+CONFIGURE_ARGS+=	--with-default-trust-store-file=${PREFIX}/share/mozilla-rootcerts/cacert.pem
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
+
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
 CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
