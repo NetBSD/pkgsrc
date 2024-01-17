@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/12/18 01:39:13 thor Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/17 15:53:51 thor Exp $
 
 DISTNAME=	libpll-src-0.3.2
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xflouris/}
@@ -16,5 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 USE_TOOLS+=	bison flex
+
+CONFIGURE_ARGS+=	--disable-pdfman
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/12/18 01:39:13 thor Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/17 15:53:51 thor Exp $
 include/libpll/pll.h
 lib/libpll.la
 man/man3/libpll.3
@@ -37,4 +37,3 @@ share/doc/libpll/examples/stepwise/stepwise.c
 share/doc/libpll/examples/unrooted/Makefile
 share/doc/libpll/examples/unrooted/README.md
 share/doc/libpll/examples/unrooted/unrooted.c
-share/doc/libpll/libpll_manual.pdf
