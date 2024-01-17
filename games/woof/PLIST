@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/06/07 15:58:46 micha Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/01/17 14:40:51 micha Exp $
 bin/woof
 bin/woof-setup
 man/man6/woof-setup.6
@@ -39,6 +39,7 @@ share/doc/woof/woofhud.lmp
 share/doc/woof/woofhud.md
 share/icons/hicolor/128x128/apps/woof-setup.png
 share/icons/hicolor/128x128/apps/woof.png
+share/metainfo/woof.metainfo.xml
 share/woof/autoload/betalevl.wad/umapdef.lmp
 share/woof/autoload/chex.wad/brghtmps.lmp
 share/woof/autoload/chex.wad/chex.deh
