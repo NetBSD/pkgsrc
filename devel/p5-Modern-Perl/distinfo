@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/08/31 23:28:25 wen Exp $
+$NetBSD: distinfo,v 1.19 2024/01/17 22:51:49 mef Exp $
 
-BLAKE2s (Modern-Perl-1.20230106.tar.gz) = ea8f1a65af9c306d24ea19997abeeee10871ddfa1e33b0e1ad38d978d997e30d
-SHA512 (Modern-Perl-1.20230106.tar.gz) = fb3724403787ce003f231ad846e08dc082ec51e34bc6ed1360beb5886a727aa1896f91ec9e0fe8983bdbfbc4e62a0badabe323d96b6f58c7a38bf2b0c1552cde
-Size (Modern-Perl-1.20230106.tar.gz) = 15490 bytes
+BLAKE2s (Modern-Perl-1.20240115.tar.gz) = ef6945f36ce71e19d1c333e2e2a6b90079fe985e05793be2ea2ff2c5964d3fa2
+SHA512 (Modern-Perl-1.20240115.tar.gz) = 0cd86b531bab15cb52b54fb883a58e3151e33163eb3eea9cd4f28bbd68c4b35e6332f2243174f6881d3940d22d0bbc550c93b1f5513dad832668776175a6c0f0
+Size (Modern-Perl-1.20240115.tar.gz) = 16682 bytes
