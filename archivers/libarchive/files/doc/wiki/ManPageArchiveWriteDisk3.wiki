@@ -137,14 +137,14 @@ caused by archives that (deliberately or otherwise) extract
 files outside of the current directory. 
 The default is not to perform this check. 
 If 
-</dd><dt>'''ARCHIVE_EXTRACT_SPARSE'''</dt><dd> 
-Scan data for blocks of NUL bytes and try to recreate them with holes. 
-This results in sparse files, independent of whether the archive format 
-supports or uses them. 
 '''ARCHIVE_EXTRACT_UNLINK''' 
 is specified together with this option, the library will 
 remove any intermediate symlinks it finds and return an 
 error only if such symlink could not be removed. 
+</dd><dt>'''ARCHIVE_EXTRACT_SPARSE'''</dt><dd> 
+Scan data for blocks of NUL bytes and try to recreate them with holes. 
+This results in sparse files, independent of whether the archive format 
+supports or uses them. 
 </dd><dt>'''ARCHIVE_EXTRACT_TIME'''</dt><dd> 
 The timestamps (mtime, ctime, and atime) should be restored. 
 By default, they are ignored. 
@@ -208,10 +208,10 @@ and
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 overview. 
 Many of these functions are also documented under 
-[[ManPagerchiverite3]]. 
+[[ManPageArchiveWrite3]]. 
 == RETURN VALUES == 
 Most functions return 
 '''ARCHIVE_OK''' 
@@ -245,9 +245,9 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPagerchiveead3]], 
-[[ManPagerchiverite3]], 
-[[ManPageibarchive3]] 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

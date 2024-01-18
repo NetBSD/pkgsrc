@@ -11,8 +11,8 @@ NAME
      archive_entry_ino_is_set, archive_entry_ino64, archive_entry_set_ino64,
      archive_entry_nlink, archive_entry_rdev, archive_entry_set_rdev,
      archive_entry_rdevmajor, archive_entry_set_rdevmajor,
-     archive_entry_rdevminor, archive_entry_set_rdevminor -- accessor func-
-     tions for manipulating archive entry descriptions
+     archive_entry_rdevminor, archive_entry_set_rdevminor — accessor functions
+     for manipulating archive entry descriptions
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -113,21 +113,20 @@ SYNOPSIS
 DESCRIPTION
    Copying to and from struct stat
      The function archive_entry_stat() converts the various fields stored in
-     the archive entry to the format used by stat(2).  The return value
-     remains valid until either archive_entry_clear() or archive_entry_free()
-     is called.  It is not affected by calls to the set accessor functions.
-     It currently sets the following values in struct stat: st_atime,
-     st_ctime, st_dev, st_gid, st_ino, st_mode, st_mtime, st_nlink, st_rdev,
-     st_size, st_uid.  In addition, st_birthtime and high-precision informa-
-     tion for time-related fields will be included on platforms that support
-     it.
+     the archive entry to the format used by stat(2).  The return value re‐
+     mains valid until either archive_entry_clear() or archive_entry_free() is
+     called.  It is not affected by calls to the set accessor functions.  It
+     currently sets the following values in struct stat: st_atime, st_ctime,
+     st_dev, st_gid, st_ino, st_mode, st_mtime, st_nlink, st_rdev, st_size,
+     st_uid.  In addition, st_birthtime and high-precision information for
+     time-related fields will be included on platforms that support it.
 
      The function archive_entry_copy_stat() copies fields from the platform's
      struct stat.  Fields not provided by struct stat are unchanged.
 
    General accessor functions
      The functions archive_entry_filetype() and archive_entry_set_filetype()
-     get respectively set the filetype.  The file type is one of the following
+     get respectively set the filetype.	 The file type is one of the following
      constants:
 	   AE_IFREG   Regular file
 	   AE_IFLNK   Symbolic link
@@ -136,8 +135,8 @@ DESCRIPTION
 	   AE_IFBLK   Block device
 	   AE_IFDIR   Directory
 	   AE_IFIFO   Named pipe (fifo)
-     Not all file types are supported by all platforms.  The constants used by
-     stat(2) may have different numeric values from the corresponding con-
+     Not all file types are supported by all platforms.	 The constants used by
+     stat(2) may have different numeric values from the corresponding con‐
      stants above.
 
      The functions archive_entry_mode() and archive_entry_set_mode() get/set a
@@ -167,14 +166,14 @@ DESCRIPTION
 
      The inode number can be obtained using archive_entry_ino().  This is a
      legacy interface that uses the platform ino_t, which may be very small.
-     To set the inode number, archive_entry_set_ino64() is the preferred
-     interface.
+     To set the inode number, archive_entry_set_ino64() is the preferred in‐
+     terface.
 
    Accessor functions for block and character devices
-     Block and character devices are characterised either using a device num-
+     Block and character devices are characterised either using a device num‐
      ber or a pair of major and minor number.  The combined device number can
      be obtained with archive_device_rdev() and set with
-     archive_device_set_rdev().  The major and minor numbers are accessed by
+     archive_device_set_rdev().	 The major and minor numbers are accessed by
      archive_device_rdevmajor(), archive_device_rdevminor()
      archive_device_set_rdevmajor() and archive_device_set_rdevminor().
 
@@ -187,4 +186,4 @@ SEE ALSO
      stat(2), archive_entry_acl(3), archive_entry_perms(3),
      archive_entry_time(3), libarchive(3)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

@@ -66,6 +66,15 @@ all operating modes.
 Read filenames separated by NUL characters instead of newlines.
 This is necessary if any of the filenames being read might contain newlines.
 .TP
+\fB\-6\fP, \fB\-Fl\fP pwb
+When reading a binary format archive, assume it's the earlier one,
+from the PWB variant of 6th Edition UNIX.
+When writing a cpio archive, use the PWB format.
+.TP
+\fB\-7\fP, \fB\-Fl\fP binary
+(o mode only)
+When writing a cpio archive, use the (newer, non-PWB) binary format.
+.TP
 \fB\-A\fP
 (o mode only)
 Append to the specified archive.

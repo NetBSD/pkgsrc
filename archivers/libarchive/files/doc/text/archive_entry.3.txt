@@ -2,7 +2,7 @@ ARCHIVE_ENTRY(3)	 BSD Library Functions Manual	      ARCHIVE_ENTRY(3)
 
 NAME
      archive_entry_clear, archive_entry_clone, archive_entry_free,
-     archive_entry_new -- functions for managing archive entry descriptions
+     archive_entry_new — functions for managing archive entry descriptions
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -24,7 +24,7 @@ SYNOPSIS
 
 DESCRIPTION
      These functions create and manipulate data objects that represent entries
-     within an archive.  You can think of a struct archive_entry as a heavy-
+     within an archive.	 You can think of a struct archive_entry as a heavy-
      duty version of struct stat: it includes everything from struct stat plus
      associated pathname, textual group and user names, etc.  These objects
      are used by libarchive(3) to represent the metadata associated with a
@@ -65,8 +65,8 @@ DESCRIPTION
 	     Stores the provided data in the object.  In particular, for
 	     strings, the pointer is stored, not the referenced string.
      archive_entry_copy_XXXX()
-	     As above, except that the referenced data is copied into the
-	     object.
+	     As above, except that the referenced data is copied into the ob‐
+	     ject.
      archive_entry_XXXX()
 	     Returns the specified data.  In the case of strings, a const-
 	     qualified pointer to the string is returned.
@@ -76,7 +76,7 @@ DESCRIPTION
      For example, if you store a narrow string and read the corresponding wide
      string, the object will transparently convert formats using the current
      locale.  Similarly, if you store a wide string and then store a narrow
-     string for the same data, the previously-set wide string will be dis-
+     string for the same data, the previously-set wide string will be dis‐
      carded in favor of the new data.
 
 SEE ALSO
@@ -89,4 +89,4 @@ HISTORY
 AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

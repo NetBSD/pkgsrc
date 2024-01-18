@@ -213,7 +213,7 @@ static int	check_symlinks(struct archive_write_disk *);
 static int	create_filesystem_object(struct archive_write_disk *);
 static struct fixup_entry *current_fixup(struct archive_write_disk *,
 		    const wchar_t *pathname);
-static int	cleanup_pathname(struct archive_write_disk *);
+static int	cleanup_pathname(struct archive_write_disk *, wchar_t *);
 static int	create_dir(struct archive_write_disk *, wchar_t *);
 static int	create_parent_dir(struct archive_write_disk *, wchar_t *);
 static int	la_chmod(const wchar_t *, mode_t);
@@ -238,8 +238,6 @@ static struct fixup_entry *sort_dir_list(struct fixup_entry *p);
 static ssize_t	write_data_block(struct archive_write_disk *,
 		    const char *, size_t);
 
-static struct archive_vtable *archive_write_disk_vtable(void);
-
 static int	_archive_write_disk_close(struct archive *);
 static int	_archive_write_disk_free(struct archive *);
 static int	_archive_write_disk_header(struct archive *,
@@ -256,9 +254,9 @@ static ssize_t	_archive_write_disk_data_block(struct archive *, const void *,
  * which is high-16-bits of nFileIndexHigh. */
 #define bhfi_ino(bhfi)	\
 	((((int64_t)((bhfi)->nFileIndexHigh & 0x0000FFFFUL)) << 32) \
-    + (bhfi)->nFileIndexLow)
+    | (bhfi)->nFileIndexLow)
 #define bhfi_size(bhfi)	\
-    ((((int64_t)(bhfi)->nFileSizeHigh) << 32) + (bhfi)->nFileSizeLow)
+    ((((int64_t)(bhfi)->nFileSizeHigh) << 32) | (bhfi)->nFileSizeLow)
 
 static int
 file_information(struct archive_write_disk *a, wchar_t *path,
@@ -268,6 +266,9 @@ file_information(struct archive_write_disk *a, wchar_t *path,
 	int r;
 	DWORD flag = FILE_FLAG_BACKUP_SEMANTICS;
 	WIN32_FIND_DATAW	findData;
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+	CREATEFILE2_EXTENDED_PARAMETERS createExParams;
+#endif
 
 	if (sim_lstat || mode != NULL) {
 		h = FindFirstFileW(path, &findData);
@@ -292,14 +293,27 @@ file_information(struct archive_write_disk *a, wchar_t *path,
 		(findData.dwReserved0 == IO_REPARSE_TAG_SYMLINK)))
 		flag |= FILE_FLAG_OPEN_REPARSE_POINT;
 
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+	ZeroMemory(&createExParams, sizeof(createExParams));
+	createExParams.dwSize = sizeof(createExParams);
+	createExParams.dwFileFlags = flag;
+	h = CreateFile2(a->name, 0, 0,
+		OPEN_EXISTING, &createExParams);
+#else
 	h = CreateFileW(a->name, 0, 0, NULL,
 	    OPEN_EXISTING, flag, NULL);
+#endif
 	if (h == INVALID_HANDLE_VALUE &&
 	    GetLastError() == ERROR_INVALID_NAME) {
 		wchar_t *full;
 		full = __la_win_permissive_name_w(path);
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+		h = CreateFile2(full, 0, 0,
+			OPEN_EXISTING, &createExParams);
+#else
 		h = CreateFileW(full, 0, 0, NULL,
 		    OPEN_EXISTING, flag, NULL);
+#endif
 		free(full);
 	}
 	if (h == INVALID_HANDLE_VALUE) {
@@ -561,6 +575,7 @@ la_mktemp(struct archive_write_disk *a)
 	return (fd);
 }
 
+#if _WIN32_WINNT < _WIN32_WINNT_VISTA
 static void *
 la_GetFunctionKernel32(const char *name)
 {
@@ -576,18 +591,24 @@ la_GetFunctionKernel32(const char *name)
 	}
 	return (void *)GetProcAddress(lib, name);
 }
+#endif
 
 static int
 la_CreateHardLinkW(wchar_t *linkname, wchar_t *target)
 {
-	static BOOLEAN (WINAPI *f)(LPWSTR, LPWSTR, LPSECURITY_ATTRIBUTES);
-	static int set;
+	static BOOL (WINAPI *f)(LPCWSTR, LPCWSTR, LPSECURITY_ATTRIBUTES);
 	BOOL ret;
 
+#if _WIN32_WINNT < _WIN32_WINNT_XP
+	static int set;
+/* CreateHardLinkW is available since XP and always loaded */
 	if (!set) {
 		set = 1;
 		f = la_GetFunctionKernel32("CreateHardLinkW");
 	}
+#else
+	f = CreateHardLinkW;
+#endif
 	if (!f) {
 		errno = ENOTSUP;
 		return (0);
@@ -626,18 +647,27 @@ static int
 la_CreateSymbolicLinkW(const wchar_t *linkname, const wchar_t *target,
     int linktype) {
 	static BOOLEAN (WINAPI *f)(LPCWSTR, LPCWSTR, DWORD);
-	static int set;
 	wchar_t *ttarget, *p;
-	int len;
+	size_t len;
 	DWORD attrs = 0;
 	DWORD flags = 0;
 	DWORD newflags = 0;
 	BOOL ret = 0;
 
+#if _WIN32_WINNT < _WIN32_WINNT_VISTA
+/* CreateSymbolicLinkW is available since Vista and always loaded */
+	static int set;
 	if (!set) {
 		set = 1;
 		f = la_GetFunctionKernel32("CreateSymbolicLinkW");
 	}
+#else
+# if !defined(WINAPI_FAMILY_PARTITION) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+	f = CreateSymbolicLinkW;
+# else
+	f = NULL;
+# endif
+#endif
 	if (!f)
 		return (0);
 
@@ -759,25 +789,16 @@ lazy_stat(struct archive_write_disk *a)
 	return (ARCHIVE_WARN);
 }
 
-static struct archive_vtable *
-archive_write_disk_vtable(void)
-{
-	static struct archive_vtable av;
-	static int inited = 0;
-
-	if (!inited) {
-		av.archive_close = _archive_write_disk_close;
-		av.archive_filter_bytes = _archive_write_disk_filter_bytes;
-		av.archive_free = _archive_write_disk_free;
-		av.archive_write_header = _archive_write_disk_header;
-		av.archive_write_finish_entry
-		    = _archive_write_disk_finish_entry;
-		av.archive_write_data = _archive_write_disk_data;
-		av.archive_write_data_block = _archive_write_disk_data_block;
-		inited = 1;
-	}
-	return (&av);
-}
+static const struct archive_vtable
+archive_write_disk_vtable = {
+	.archive_close = _archive_write_disk_close,
+	.archive_filter_bytes = _archive_write_disk_filter_bytes,
+	.archive_free = _archive_write_disk_free,
+	.archive_write_header = _archive_write_disk_header,
+	.archive_write_finish_entry = _archive_write_disk_finish_entry,
+	.archive_write_data = _archive_write_disk_data,
+	.archive_write_data_block = _archive_write_disk_data_block,
+};
 
 static int64_t
 _archive_write_disk_filter_bytes(struct archive *_a, int n)
@@ -854,7 +875,7 @@ _archive_write_disk_header(struct archive *_a, struct archive_entry *entry)
 	 * dir restores; the dir restore logic otherwise gets messed
 	 * up by nonsense like "dir/.".
 	 */
-	ret = cleanup_pathname(a);
+	ret = cleanup_pathname(a, a->name);
 	if (ret != ARCHIVE_OK)
 		return (ret);
 
@@ -1196,6 +1217,8 @@ _archive_write_disk_finish_entry(struct archive *_a)
 		if (la_ftruncate(a->fh, a->filesize) == -1) {
 			archive_set_error(&a->archive, errno,
 			    "File size could not be restored");
+			CloseHandle(a->fh);
+			a->fh = INVALID_HANDLE_VALUE;
 			return (ARCHIVE_FAILED);
 		}
 	}
@@ -1373,7 +1396,7 @@ archive_write_disk_new(void)
 	a->archive.magic = ARCHIVE_WRITE_DISK_MAGIC;
 	/* We're ready to write a header immediately. */
 	a->archive.state = ARCHIVE_STATE_HEADER;
-	a->archive.vtable = archive_write_disk_vtable();
+	a->archive.vtable = &archive_write_disk_vtable;
 	a->start_time = time(NULL);
 	/* Query and restore the umask. */
 	umask(a->user_umask = umask(0));
@@ -1381,6 +1404,7 @@ archive_write_disk_new(void)
 		free(a);
 		return (NULL);
 	}
+	a->path_safe.s[0] = 0;
 	return (&a->archive);
 }
 
@@ -1666,14 +1690,30 @@ create_filesystem_object(struct archive_write_disk *a)
 	mode_t final_mode, mode;
 	int r;
 	DWORD attrs = 0;
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+		CREATEFILE2_EXTENDED_PARAMETERS createExParams;
+#endif
 
 	/* We identify hard/symlinks according to the link names. */
 	/* Since link(2) and symlink(2) don't handle modes, we're done here. */
 	linkname = archive_entry_hardlink_w(a->entry);
 	if (linkname != NULL) {
-		wchar_t *linkfull, *namefull;
-
-		linkfull = __la_win_permissive_name_w(linkname);
+		wchar_t *linksanitized, *linkfull, *namefull;
+		size_t l = (wcslen(linkname) + 1) * sizeof(wchar_t);
+		linksanitized = malloc(l);
+		if (linksanitized == NULL) {
+			archive_set_error(&a->archive, ENOMEM,
+			    "Can't allocate memory for hardlink target");
+			return (-1);
+		}
+		memcpy(linksanitized, linkname, l);
+		r = cleanup_pathname(a, linksanitized);
+		if (r != ARCHIVE_OK) {
+			free(linksanitized);
+			return (r);
+		}
+		linkfull = __la_win_permissive_name_w(linksanitized);
+		free(linksanitized);
 		namefull = __la_win_permissive_name_w(a->name);
 		if (linkfull == NULL || namefull == NULL) {
 			errno = EINVAL;
@@ -1716,8 +1756,16 @@ create_filesystem_object(struct archive_write_disk *a)
 			a->todo = 0;
 			a->deferred = 0;
 		} else if (r == 0 && a->filesize > 0) {
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+			ZeroMemory(&createExParams, sizeof(createExParams));
+			createExParams.dwSize = sizeof(createExParams);
+			createExParams.dwFileAttributes = FILE_ATTRIBUTE_NORMAL;
+			a->fh = CreateFile2(namefull, GENERIC_WRITE, 0,
+			    TRUNCATE_EXISTING, &createExParams);
+#else
 			a->fh = CreateFileW(namefull, GENERIC_WRITE, 0, NULL,
 			    TRUNCATE_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+#endif
 			if (a->fh == INVALID_HANDLE_VALUE) {
 				la_dosmaperr(GetLastError());
 				r = errno;
@@ -1780,14 +1828,27 @@ create_filesystem_object(struct archive_write_disk *a)
 		a->tmpname = NULL;
 		fullname = a->name;
 		/* O_WRONLY | O_CREAT | O_EXCL */
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+		ZeroMemory(&createExParams, sizeof(createExParams));
+		createExParams.dwSize = sizeof(createExParams);
+		createExParams.dwFileAttributes = FILE_ATTRIBUTE_NORMAL;
+		a->fh = CreateFile2(fullname, GENERIC_WRITE, 0,
+		    CREATE_NEW, &createExParams);
+#else
 		a->fh = CreateFileW(fullname, GENERIC_WRITE, 0, NULL,
 		    CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+#endif
 		if (a->fh == INVALID_HANDLE_VALUE &&
 		    GetLastError() == ERROR_INVALID_NAME &&
 		    fullname == a->name) {
 			fullname = __la_win_permissive_name_w(a->name);
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+			a->fh = CreateFile2(fullname, GENERIC_WRITE, 0,
+			    CREATE_NEW, &createExParams);
+#else
 			a->fh = CreateFileW(fullname, GENERIC_WRITE, 0, NULL,
 			    CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+#endif
 		}
 		if (a->fh == INVALID_HANDLE_VALUE) {
 			if (GetLastError() == ERROR_ACCESS_DENIED) {
@@ -2152,6 +2213,8 @@ check_symlinks(struct archive_write_disk *a)
 				return (ARCHIVE_FAILED);
 			}
 		}
+		if (!c)
+			break;
 		pn[0] = c;
 		pn++;
 	}
@@ -2184,12 +2247,12 @@ guidword(wchar_t *p, int n)
  * set) any '..' in the path.
  */
 static int
-cleanup_pathname(struct archive_write_disk *a)
+cleanup_pathname(struct archive_write_disk *a, wchar_t *name)
 {
 	wchar_t *dest, *src, *p, *top;
 	wchar_t separator = L'\0';
 
-	p = a->name;
+	p = name;
 	if (*p == L'\0') {
 		archive_set_error(&a->archive, ARCHIVE_ERRNO_MISC,
 		    "Invalid empty pathname");
@@ -2201,7 +2264,7 @@ cleanup_pathname(struct archive_write_disk *a)
 		if (*p == L'/')
 			*p = L'\\';
 	}
-	p = a->name;
+	p = name;
 
 	/* Skip leading "\\.\" or "\\?\" or "\\?\UNC\" or
 	 * "\\?\Volume{GUID}\"
@@ -2256,6 +2319,9 @@ cleanup_pathname(struct archive_write_disk *a)
 			return (ARCHIVE_FAILED);
 		} else
 			p += 4;
+    /* Network drive path like "\\<server-name>\<share-name>\file" */
+    } else if (p[0] == L'\\' && p[1] == L'\\') {
+        p += 2;
 	}
 
 	/* Skip leading drive letter from archives created
@@ -2543,14 +2609,25 @@ set_times(struct archive_write_disk *a,
 		hw = NULL;
 	} else {
 		wchar_t *ws;
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+		CREATEFILE2_EXTENDED_PARAMETERS createExParams;
+#endif
 
 		if (S_ISLNK(mode))
 			return (ARCHIVE_OK);
 		ws = __la_win_permissive_name_w(name);
 		if (ws == NULL)
 			goto settimes_failed;
+# if _WIN32_WINNT >= 0x0602 /* _WIN32_WINNT_WIN8 */
+		ZeroMemory(&createExParams, sizeof(createExParams));
+		createExParams.dwSize = sizeof(createExParams);
+		createExParams.dwFileFlags = FILE_FLAG_BACKUP_SEMANTICS;
+		hw = CreateFile2(ws, FILE_WRITE_ATTRIBUTES, 0,
+		    OPEN_EXISTING, &createExParams);
+#else
 		hw = CreateFileW(ws, FILE_WRITE_ATTRIBUTES,
 		    0, NULL, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS, NULL);
+#endif
 		free(ws);
 		if (hw == INVALID_HANDLE_VALUE)
 			goto settimes_failed;
