@@ -1,12 +1,12 @@
-$NetBSD: patch-programs_dtlogin_Makefile.am,v 1.1 2023/02/12 16:34:15 vins Exp $
+$NetBSD: patch-programs_dtlogin_Makefile.am,v 1.2 2024/01/18 20:57:04 vins Exp $
 
 Avoid reference to build dir in dtlogin. 
 Fix X11 binary path.
 
---- programs/dtlogin/Makefile.am.orig	2022-10-01 17:18:27.000000000 +0000
+--- programs/dtlogin/Makefile.am.orig	2023-11-18 22:38:09.000000000 +0000
 +++ programs/dtlogin/Makefile.am
-@@ -11,10 +11,11 @@ DTPAMSVCLIB =
- endif
+@@ -3,10 +3,11 @@ SUBDIRS = config
+ bin_PROGRAMS = dtlogin dtgreet dtchooser
  
  XDMDIR = $(CDE_LOGFILES_TOP)
 +XBINDIR = @X11BASE@/bin
@@ -19,7 +19,7 @@ Fix X11 binary path.
  
  DEF_BM_PATH = $(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B
  DEF_PM_PATH = $(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/%L/%B:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_CONFIGURATION_TOP)/appconfig/icons/C/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/%L/%B:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.pm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B%M.bm:$(CDE_INSTALLATION_TOP)/appconfig/icons/C/%B
-@@ -66,28 +67,20 @@ dtchooser_LDADD = $(DTCLIENTLIBS) $(XDMC
+@@ -58,28 +59,20 @@ dtchooser_LDADD = $(DTCLIENTLIBS) $(XDMC
  
  if LINUX
  AM_CFLAGS += -DHASDES -DHASXDMAUTH
