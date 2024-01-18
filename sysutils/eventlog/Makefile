@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/18 13:53:20 zafer Exp $
 
 VERS=		0.2.12
 DISTNAME=	eventlog_${VERS}
 PKGNAME=	eventlog-${VERS}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/3.2.4/source/
+MASTER_SITES=	#
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
