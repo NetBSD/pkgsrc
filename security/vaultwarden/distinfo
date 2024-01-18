@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/01/18 14:09:27 hauke Exp $
+$NetBSD: distinfo,v 1.5 2024/01/18 20:12:55 hauke Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -1201,5 +1201,5 @@ BLAKE2s (zerocopy-derive-0.7.26.crate) = ac28599d9e6bc329bfbb51ffc5e9c98d6497c44
 SHA512 (zerocopy-derive-0.7.26.crate) = 1e28e957d1a9cb5164bc839750ecad26ccd280dc9f5ee58a02a09d2135dc097991be2755d7b87f360863f1ab030f772963677d61861f7d33699a631eb9026829
 Size (zerocopy-derive-0.7.26.crate) = 528381 bytes
 SHA1 (patch-.env.template) = ef51d6f7d2078fe170dcabf06c3d0ba3767c45e2
-SHA1 (patch-Cargo.lock) = 61d011d7952a0a4920ccd48afa8b6fe69f552256
-SHA1 (patch-Cargo.toml) = dc5bcc92a9e229f1acb6a1359bc779201781e72b
+SHA1 (patch-Cargo.lock) = ec9f949ec6b88a8c39b234b52f3842cd8dcd2e7e
+SHA1 (patch-Cargo.toml) = 8d305e0db628e778aca5152bd3c012a85ed3c34c
