@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/18 19:36:35 markd Exp $
+
+BLAKE2s (cjs-rcs-article.r69006.tar.xz) = 8ea7b4fe7454cafdc7e4da32c1427822be066ff54cb8301f852ed344d981d253
+SHA512 (cjs-rcs-article.r69006.tar.xz) = 6f49b9c02aa67036997403d65a9efc60c0cb7bcc29931d93fbb0359624fcbf4b3899e75c1721155b6484d7baafa79a823adf08fa5f1491352d4bd547dee22a58
+Size (cjs-rcs-article.r69006.tar.xz) = 14492 bytes
