@@ -28,13 +28,13 @@ DESCRIPTION
 	     Sets the block size used for writing the archive data.  Every
 	     call to the write callback function, except possibly the last
 	     one, will use this value for the length.  The default is to use a
-	     block size of 10240 bytes.  Note that a block size of zero will
+	     block size of 10240 bytes.	 Note that a block size of zero will
 	     suppress internal blocking and cause writes to be sent directly
 	     to the write callback as they occur.
 
      archive_write_get_bytes_per_block()
 	     Retrieve the block size to be used for writing.  A value of -1
-	     here indicates that the library should use default values.  A
+	     here indicates that the library should use default values.	 A
 	     value of zero indicates that internal blocking is suppressed.
 
      archive_write_set_bytes_in_last_block()
@@ -68,7 +68,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_write_set_options(3), cpio(5), mtree(5),
+     tar(1), archive_write_set_options(3), libarchive(3), cpio(5), mtree(5),
      tar(5)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

@@ -91,7 +91,6 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
 [[ManPageArchiveRead3]], 
 [[ManPageArchiveReadData3]], 
 [[ManPageArchiveReadFilter3]], 
@@ -99,4 +98,5 @@ functions.
 [[ManPageArchiveReadOpen3]], 
 [[ManPageArchiveReadSetOptions3]], 
 [[ManPageArchiveUtil3]], 
+[[ManPageLibarchive3]], 
 [[ManPageTar5]] 

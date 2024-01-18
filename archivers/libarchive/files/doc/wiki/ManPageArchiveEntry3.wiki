@@ -3,7 +3,7 @@ ARCHIVE_ENTRY(3) manual page
 '''archive_entry_clear''', 
 '''archive_entry_clone''', 
 '''archive_entry_free''', 
-'''archive_entry_new''', 
+'''archive_entry_new''' 
 - functions for managing archive entry descriptions 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -105,13 +105,12 @@ using the current locale.
 Similarly, if you store a wide string and then store a 
 narrow string for the same data, the previously-set wide string will 
 be discarded in favor of the new data. 
-
 == SEE ALSO == 
 [[ManPageArchiveEntryAcl3]], 
 [[ManPageArchiveEntryPaths3]], 
 [[ManPageArchiveEntryPerms3]], 
-[[ManPageArchiveEntryTime3]] 
-[[ManPageLibarchive3]], 
+[[ManPageArchiveEntryTime3]], 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

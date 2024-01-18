@@ -19,20 +19,20 @@ DESCRIPTION
      provided for compatibility with historical implementations.  See COMPATI‐
      BILITY below for details.
 
-     The other synopsis forms show the preferred usage.  The first option to
+     The other synopsis forms show the preferred usage.	 The first option to
      tar is a mode indicator from the following list:
-     -c      Create a new archive containing the specified items.  The long
+     -c	     Create a new archive containing the specified items.  The long
 	     option form is --create.
-     -r      Like -c, but new entries are appended to the archive.  Note that
+     -r	     Like -c, but new entries are appended to the archive.  Note that
 	     this only works on uncompressed archives stored in regular files.
-	     The -f option is required.  The long option form is --append.
-     -t      List archive contents to stdout.  The long option form is --list.
-     -u      Like -r, but new entries are added only if they have a modifica‐
+	     The -f option is required.	 The long option form is --append.
+     -t	     List archive contents to stdout.  The long option form is --list.
+     -u	     Like -r, but new entries are added only if they have a modifica‐
 	     tion date newer than the corresponding entry in the archive.
 	     Note that this only works on uncompressed archives stored in reg‐
 	     ular files.  The -f option is required.  The long form is
 	     --update.
-     -x      Extract to disk from the archive.	If a file with the same name
+     -x	     Extract to disk from the archive.	If a file with the same name
 	     appears more than once in the archive, each copy will be ex‐
 	     tracted, with later copies overwriting (replacing) earlier
 	     copies.  The long option form is --extract.
@@ -84,11 +84,11 @@ OPTIONS
 	     restricted pax format and bzip2 compression.
 
      --acls  (c, r, u, x modes only) Archive or extract POSIX.1e or NFSv4
-	     ACLs. This is the reverse of --no-acls and the default behavior
+	     ACLs.  This is the reverse of --no-acls and the default behavior
 	     in c, r, and u modes (except on Mac OS X) or if tar is run in x
-	     mode as root. On Mac OS X this option translates extended ACLs to
-	     NFSv4 ACLs. To store extended ACLs the --mac-metadata option is
-	     preferred.
+	     mode as root.  On Mac OS X this option translates extended ACLs
+	     to NFSv4 ACLs.  To store extended ACLs the --mac-metadata option
+	     is preferred.
 
      -B, --read-full-blocks
 	     Ignored for compatibility with other tar(1) implementations.
@@ -120,8 +120,8 @@ OPTIONS
 
      --exclude-vcs
 	     Do not process files or directories internally used by the ver‐
-	     sion control systems ‘CVS’, ‘RCS’, ‘SCCS’, ‘SVN’, ‘Arch’,
-	     ‘Bazaar’, ‘Mercurial’ and ‘Darcs’.
+	     sion control systems ‘Arch’, ‘Bazaar’, ‘CVS’, ‘Darcs’,
+	     ‘Mercurial’, ‘RCS’, ‘SCCS’, ‘SVN’ and ‘git’.
 
      --fflags
 	     (c, r, u, x modes only) Archive or extract platform-specific file
@@ -159,13 +159,13 @@ OPTIONS
 	     group name that will be stored in the archive; the name will not
 	     be verified against the system group database.
 
-     -H      (c and r modes only) Symbolic links named on the command line
+     -H	     (c and r modes only) Symbolic links named on the command line
 	     will be followed; the target of the link will be archived, not
 	     the link itself.
 
-     -h      (c and r modes only) Synonym for -L.
+     -h	     (c and r modes only) Synonym for -L.
 
-     -I      Synonym for -T.
+     -I	     Synonym for -T.
 
      --help  Show usage.
 
@@ -240,7 +240,7 @@ OPTIONS
 	     be created with --xz instead.  Note that this tar implementation
 	     recognizes LZMA compression automatically when reading archives.
 
-     --lzop  (c mode only) Compress the resulting archive with lzop(1).  In
+     --lzop  (c mode only) Compress the resulting archive with lzop(1).	 In
 	     extract or list modes, this option is ignored.  Note that this
 	     tar implementation recognizes LZO compression automatically when
 	     reading archives.
@@ -250,9 +250,9 @@ OPTIONS
 	     modification time is set to the time stored in the archive.
 
      --mac-metadata
-	     (c, r, u and x mode only) Mac OS X specific. Archive or extract
+	     (c, r, u and x mode only) Mac OS X specific.  Archive or extract
 	     extended ACLs and extended file attributes using copyfile(3) in
-	     AppleDouble format. This is the reverse of --no-mac-metadata.
+	     AppleDouble format.  This is the reverse of --no-mac-metadata.
 	     and the default behavior in c, r, and u modes or if tar is run in
 	     x mode as root.
 
@@ -291,20 +291,28 @@ OPTIONS
 
      --no-acls
 	     (c, r, u, x modes only) Do not archive or extract POSIX.1e or
-	     NFSv4 ACLs. This is the reverse of --acls and the default behav‐
+	     NFSv4 ACLs.  This is the reverse of --acls and the default behav‐
 	     ior if tar is run as non-root in x mode (on Mac OS X as any user
 	     in c, r, u and x modes).
 
      --no-fflags
 	     (c, r, u, x modes only) Do not archive or extract file attributes
-	     or file flags. This is the reverse of --fflags and the default
+	     or file flags.  This is the reverse of --fflags and the default
 	     behavior if tar is run as non-root in x mode.
 
      --no-mac-metadata
-	     (x mode only) Mac OS X specific. Do not archive or extract ACLs
+	     (x mode only) Mac OS X specific.  Do not archive or extract ACLs
 	     and extended file attributes using copyfile(3) in AppleDouble
-	     format. This is the reverse of --mac-metadata.  and the default
+	     format.  This is the reverse of --mac-metadata.  and the default
 	     behavior if tar is run as non-root in x mode.
+
+     --no-read-sparse
+	     (c, r, u modes only) Do not read sparse file information from
+	     disk.  This is the reverse of --read-sparse.
+
+     --no-safe-writes
+	     (x mode only) Do not create temporary files and use rename(2) to
+	     replace the original ones.	 This is the reverse of --safe-writes.
 
      --no-same-owner
 	     (x mode only) Do not extract owner and group IDs.	This is the
@@ -319,13 +327,13 @@ OPTIONS
 
      --no-xattrs
 	     (c, r, u, x modes only) Do not archive or extract extended file
-	     attributes. This is the reverse of --xattrs and the default be‐
+	     attributes.  This is the reverse of --xattrs and the default be‐
 	     havior if tar is run as non-root in x mode.
 
      --numeric-owner
 	     This is equivalent to --uname "" --gname "".  On extract, it
 	     causes user and group names in the archive to be ignored in favor
-	     of the numeric user and group ids.  On create, it causes user and
+	     of the numeric user and group ids.	 On create, it causes user and
 	     group names to not be stored in the archive.
 
      -O, --to-stdout
@@ -334,14 +342,14 @@ OPTIONS
 	     mode, the file listing will be written to stderr rather than the
 	     usual stdout.
 
-     -o      (x mode) Use the user and group of the user running the program
+     -o	     (x mode) Use the user and group of the user running the program
 	     rather than those specified in the archive.  Note that this has
 	     no significance unless -p is specified, and the program is being
 	     run by the root user.  In this case, the file modes and flags
 	     from the archive will be restored, but ACLs or owner information
 	     in the archive will be discarded.
 
-     -o      (c, r, u mode) A synonym for --format ustar
+     -o	     (c, r, u mode) A synonym for --format ustar
 
      --older date
 	     (c, r, u modes only) Only include files and directories older
@@ -379,9 +387,14 @@ OPTIONS
 	     module:key=value, module:key, module:!key
 		     As above, but the corresponding key and value will be
 		     provided only to modules whose name matches module.
-	     The currently supported modules and keys are:
+
+	     The complete list of supported modules and keys for create and
+	     append modes is in archive_write_set_options(3) and for extract
+	     and list modes in archive_read_set_options(3).
+
+	     Examples of supported options:
 	     iso9660:joliet
-		     Support Joliet extensions.  This is enabled by default,
+		     Support Joliet extensions.	 This is enabled by default,
 		     use !joliet or iso9660:!joliet to disable.
 	     iso9660:rockridge
 		     Support Rock Ridge extensions.  This is enabled by de‐
@@ -390,7 +403,7 @@ OPTIONS
 		     A decimal integer from 1 to 9 specifying the gzip com‐
 		     pression level.
 	     gzip:timestamp
-		     Store timestamp. This is enabled by default, use
+		     Store timestamp.  This is enabled by default, use
 		     !timestamp or gzip:!timestamp to disable.
 	     lrzip:compression=type
 		     Use type as compression method.  Supported values are
@@ -403,7 +416,7 @@ OPTIONS
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
 	     lz4:stream-checksum
-		     Enable stream checksum. This is by default, use
+		     Enable stream checksum.  This is by default, use
 		     lz4:!stream-checksum to disable.
 	     lz4:block-checksum
 		     Enable block checksum (Disabled by default).
@@ -414,14 +427,33 @@ OPTIONS
 		     Use the previous block of the block being compressed for
 		     a compression dictionary to improve compression ratio.
 	     zstd:compression-level
-		     A decimal integer from 1 to 22 specifying the zstd com‐
-		     pression level.
+		     A decimal integer specifying the zstd compression level.
+		     Supported values depend on the library version, common
+		     values are from 1 to 22.
+	     zstd:threads
+		     Specify the number of worker threads to use.  Setting
+		     threads to a special value 0 makes zstd(1) use as many
+		     threads as there are CPU cores on the system.
+	     zstd:frame-per-file
+		     Start a new compression frame at the beginning of each
+		     file in the archive.
+	     zstd:min-frame-size=N
+		     In combination with zstd:frame-per-file, do not start a
+		     new compression frame unless the current frame is at
+		     least N bytes.
+	     zstd:max-frame-size=N
+		     Start a new compression frame as soon as the current
+		     frame exceeds N bytes.
 	     lzop:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
 	     xz:compression-level
 		     A decimal integer from 0 to 9 specifying the xz compres‐
 		     sion level.
+	     xz:threads
+		     Specify the number of worker threads to use.  Setting
+		     threads to a special value 0 makes xz(1) use as many
+		     threads as there are CPU cores on the system.
 	     mtree:keyword
 		     The mtree writer module allows you to specify which mtree
 		     keywords will be included in the output.  Supported key‐
@@ -431,7 +463,7 @@ OPTIONS
 		     lent to: “device, flags, gid, gname, link, mode, nlink,
 		     size, time, type, uid, uname”.
 	     mtree:all
-		     Enables all of the above keywords.  You can also use
+		     Enables all of the above keywords.	 You can also use
 		     mtree:!all to disable all keywords.
 	     mtree:use-set
 		     Enable generation of /set lines in the output.
@@ -469,9 +501,9 @@ OPTIONS
 	     (x mode only) Preserve file permissions.  Attempt to restore the
 	     full permissions, including file modes, file attributes or file
 	     flags, extended file attributes and ACLs, if available, for each
-	     item extracted from the archive. This is the reverse of
+	     item extracted from the archive.  This is the reverse of
 	     --no-same-permissions and the default if tar is being run as
-	     root. It can be partially overridden by also specifying
+	     root.  It can be partially overridden by also specifying
 	     --no-acls, --no-fflags, --no-mac-metadata or --no-xattrs.
 
      --passphrase passphrase
@@ -492,9 +524,13 @@ OPTIONS
 	     tries overwrite earlier entries.  This option is provided as a
 	     performance optimization.
 
-     -S      (x mode only) Extract files as sparse files.  For every block on
+     --read-sparse
+	     (c, r, u modes only) Read sparse file information from disk.
+	     This is the reverse of --no-read-sparse and the default behavior.
+
+     -S	     (x mode only) Extract files as sparse files.  For every block on
 	     disk, check first if it contains only NULL bytes and seek over it
-	     otherwise.  This works similar to the conv=sparse option of dd.
+	     otherwise.	 This works similar to the conv=sparse option of dd.
 
      -s pattern
 	     Modify file or archive member names according to pattern.	The
@@ -517,8 +553,21 @@ OPTIONS
 	     The default is hrs which applies substitutions to all names.  In
 	     particular, it is never necessary to specify h, r, or s.
 
+     --safe-writes
+	     (x mode only) Extract files atomically.  By default tar unlinks
+	     the original file with the same name as the extracted file (if it
+	     exists), and then creates it immediately under the same name and
+	     writes to it.  For a short period of time, applications trying to
+	     access the file might not find it, or see incomplete results.  If
+	     --safe-writes is enabled, tar first creates a unique temporary
+	     file, then writes the new contents to the temporary file, and fi‐
+	     nally renames the temporary file to its final name atomically us‐
+	     ing rename(2).  This guarantees that an application accessing the
+	     file, will either see the old contents or the new contents at all
+	     times.
+
      --same-owner
-	     (x mode only) Extract owner and group IDs.  This is the reverse
+	     (x mode only) Extract owner and group IDs.	 This is the reverse
 	     of --no-same-owner and the default behavior if tar is run as
 	     root.
 
@@ -535,7 +584,7 @@ OPTIONS
 	     cause the current directory to be changed to the directory speci‐
 	     fied on the following line.  Names are terminated by newlines un‐
 	     less --null is specified.	Note that --null also disables the
-	     special handling of lines containing “-C”.  Note:	If you are
+	     special handling of lines containing “-C”.	 Note:	If you are
 	     generating lists of files using find(1), you probably want to use
 	     -n as well.
 
@@ -546,7 +595,7 @@ OPTIONS
      -U, --unlink, --unlink-first
 	     (x mode only) Unlink files before creating them.  This can be a
 	     minor performance optimization if most files already exist, but
-	     can make things slower if most files do not already exist.  This
+	     can make things slower if most files do not already exist.	 This
 	     flag also causes tar to remove intervening directory symlinks in‐
 	     stead of reporting an error.  See the SECURITY section below for
 	     more details.
@@ -582,15 +631,15 @@ OPTIONS
 	     Ask for confirmation for every action.
 
      -X filename, --exclude-from filename
-	     Read a list of exclusion patterns from the specified file.  See
+	     Read a list of exclusion patterns from the specified file.	 See
 	     --exclude for more information about the handling of exclusions.
 
      --xattrs
 	     (c, r, u, x modes only) Archive or extract extended file at‐
-	     tributes. This is the reverse of --no-xattrs and the default be‐
+	     tributes.	This is the reverse of --no-xattrs and the default be‐
 	     havior in c, r, and u modes or if tar is run in x mode as root.
 
-     -y      (c mode only) Compress the resulting archive with bzip2(1).  In
+     -y	     (c mode only) Compress the resulting archive with bzip2(1).  In
 	     extract or list modes, this option is ignored.  Note that this
 	     tar implementation recognizes bzip2 compression automatically
 	     when reading archives.
@@ -602,7 +651,7 @@ OPTIONS
 	     when reading archives.
 
      -z, --gunzip, --gzip
-	     (c mode only) Compress the resulting archive with gzip(1).  In
+	     (c mode only) Compress the resulting archive with gzip(1).	 In
 	     extract or list modes, this option is ignored.  Note that this
 	     tar implementation recognizes gzip compression automatically when
 	     reading archives.
@@ -611,20 +660,20 @@ ENVIRONMENT
      The following environment variables affect the execution of tar:
 
      TAR_READER_OPTIONS
-		The default options for format readers and compression read‐
-		ers.  The --options option overrides this.
+	     The default options for format readers and compression readers.
+	     The --options option overrides this.
 
      TAR_WRITER_OPTIONS
-		The default options for format writers and compression writ‐
-		ers.  The --options option overrides this.
+	     The default options for format writers and compression writers.
+	     The --options option overrides this.
 
-     LANG	The locale to use.  See environ(7) for more information.
+     LANG    The locale to use.	 See environ(7) for more information.
 
-     TAPE	The default device.  The -f option overrides this.  Please see
-		the description of the -f option above for more details.
+     TAPE    The default device.  The -f option overrides this.	 Please see
+	     the description of the -f option above for more details.
 
-     TZ 	The timezone to use when displaying dates.  See environ(7) for
-		more information.
+     TZ	     The timezone to use when displaying dates.	 See environ(7) for
+	     more information.
 
 EXIT STATUS
      The tar utility exits 0 on success, and >0 if an error occurs.
@@ -652,7 +701,7 @@ EXAMPLES
      include directory change instructions of the form -Cfoo/baz and archive
      inclusions of the form @archive-file.  For example, the command line
 	   tar -c -f new.tar foo1 @old.tgz -C/tmp foo2
-     will create a new archive new.tar.  tar will read the file foo1 from the
+     will create a new archive new.tar.	 tar will read the file foo1 from the
      current directory and add it to the output archive.  It will then read
      each entry from old.tgz and add those entries to the output archive.  Fi‐
      nally, it will switch to the /tmp directory and add foo2 to the output
@@ -689,7 +738,7 @@ COMPATIBILITY
      separate words.  The order of the arguments must match the order of the
      corresponding characters in the bundled command word.  For example,
 	   tar tbf 32 file.tar
-     specifies three flags t, b, and f.  The b and f flags both require argu‐
+     specifies three flags t, b, and f.	 The b and f flags both require argu‐
      ments, so there must be two additional items on the command line.	The 32
      is the argument to the b flag, and file.tar is the argument to the f
      flag.
@@ -723,18 +772,18 @@ SECURITY
 	     in their pathname.
 
      •	     Archive entries can exploit symbolic links to restore files to
-	     other directories.  An archive can restore a symbolic link to an‐
+	     other directories.	 An archive can restore a symbolic link to an‐
 	     other directory, then use that link to restore a file into that
-	     directory.  To guard against this, tar checks each extracted path
+	     directory.	 To guard against this, tar checks each extracted path
 	     for symlinks.  If the final path element is a symlink, it will be
 	     removed and replaced with the archive entry.  If -U is specified,
 	     any intermediate symlink will also be unconditionally removed.
 	     If neither -U nor -P is specified, tar will refuse to extract the
 	     entry.
      To protect yourself, you should be wary of any archives that come from
-     untrusted sources.  You should examine the contents of an archive with
+     untrusted sources.	 You should examine the contents of an archive with
 	   tar -tf filename
-     before extraction.  You should use the -k option to ensure that tar will
+     before extraction.	 You should use the -k option to ensure that tar will
      not overwrite any existing files or the -U option to remove any pre-ex‐
      isting files.  You should generally not extract archives while running
      with super-user privileges.  Note that the -P option to tar disables the
@@ -814,4 +863,4 @@ BUGS
      is a consequence of the incompatible ways that different archive formats
      store hardlink information.)
 
-BSD				 June 3, 2019				   BSD
+BSD			       December 1, 2022				   BSD

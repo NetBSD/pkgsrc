@@ -1,4 +1,4 @@
-ARCHIVE_UTIL(3) 	 BSD Library Functions Manual	       ARCHIVE_UTIL(3)
+ARCHIVE_UTIL(3)		 BSD Library Functions Manual	       ARCHIVE_UTIL(3)
 
 NAME
      archive_clear_error, archive_compression, archive_compression_name,
@@ -63,9 +63,9 @@ DESCRIPTION
 	     Clears any error information left over from a previous call.  Not
 	     generally used in client code.
      archive_compression()
-	     Synonym for archive_filter_code(a,(0)).
+	     Synonym for archive_filter_code(a, 0).
      archive_compression_name()
-	     Synonym for archive_filter_name(a,(0)).
+	     Synonym for archive_filter_name(a, 0).
      archive_copy_error()
 	     Copies error information from one archive to another.
      archive_errno()
@@ -100,12 +100,12 @@ DESCRIPTION
 	     are three filters: filter 0 is the gunzip filter, filter 1 is the
 	     uudecode filter, and filter 2 is the pseudo-filter that wraps the
 	     archive read functions.  In this case, requesting
-	     archive_position(a,(-1)) would be a synonym for
-	     archive_position(a,(2)) which would return the number of bytes
-	     currently read from the archive, while archive_position(a,(1))
+	     archive_position(a, -1) would be a synonym for
+	     archive_position(a, 2) which would return the number of bytes
+	     currently read from the archive, while archive_position(a, 1)
 	     would return the number of bytes after uudecoding, and
-	     archive_position(a,(0)) would return the number of bytes after
-	     decompression.
+	     archive_position(a, 0) would return the number of bytes after de‐
+	     compression.
      archive_filter_name()
 	     Returns a textual name identifying the indicated filter.  See
 	     archive_filter_count() for details of the numbering.
@@ -121,17 +121,17 @@ DESCRIPTION
 	     A textual description of the format of the current entry.
      archive_position()
 	     Returns the number of bytes read from or written to the indicated
-	     filter.  In particular, archive_position(a,(0)) returns the num‐
-	     ber of bytes read or written by the format handler, while
-	     archive_position(a,(-1)) returns the number of bytes read or
-	     written to the archive.  See archive_filter_count() for details
-	     of the numbering here.
+	     filter.  In particular, archive_position(a, 0) returns the number
+	     of bytes read or written by the format handler, while
+	     archive_position(a, -1) returns the number of bytes read or writ‐
+	     ten to the archive.  See archive_filter_count() for details of
+	     the numbering here.
      archive_set_error()
 	     Sets the numeric error code and error description that will be
 	     returned by archive_errno() and archive_error_string().  This
 	     function should be used within I/O callbacks to set system-spe‐
 	     cific error codes and error descriptions.	This function accepts
-	     a printf-like format string and arguments.  However, you should
+	     a printf-like format string and arguments.	 However, you should
 	     be careful to use only the following printf format specifiers:
 	     “%c”, “%d”, “%jd”, “%jo”, “%ju”, “%jx”, “%ld”, “%lo”, “%lu”,
 	     “%lx”, “%o”, “%u”, “%s”, “%x”, “%%”.  Field-width specifiers and
@@ -147,4 +147,4 @@ HISTORY
 AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

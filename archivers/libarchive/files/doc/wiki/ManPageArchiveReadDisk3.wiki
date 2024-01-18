@@ -1,6 +1,8 @@
 ARCHIVE_READ_DISK(3) manual page 
 == NAME == 
 '''archive_read_disk_new''', 
+'''archive_read_disk_open''', 
+'''archive_read_disk_open_w''', 
 '''archive_read_disk_set_behavior''', 
 '''archive_read_disk_set_symlink_logical''', 
 '''archive_read_disk_set_symlink_physical''', 
@@ -10,7 +12,14 @@ ARCHIVE_READ_DISK(3) manual page
 '''archive_read_disk_uname''', 
 '''archive_read_disk_set_uname_lookup''', 
 '''archive_read_disk_set_gname_lookup''', 
-'''archive_read_disk_set_standard_lookup''' 
+'''archive_read_disk_set_standard_lookup''', 
+'''archive_read_disk_descend''', 
+'''archive_read_disk_can_descend''', 
+'''archive_read_disk_current_filesystem''', 
+'''archive_read_disk_current_filesystem_is_synthetic''', 
+'''archive_read_disk_current_filesystem_is_remote''', 
+'''archive_read_disk_set_matching''', 
+'''archive_read_disk_set_metadata_filter_callback''', 
 - functions for reading objects from disk 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -20,6 +29,14 @@ Streaming Archive Library (libarchive, -larchive)
 ''struct archive *'' 
 <br> 
 '''archive_read_disk_new'''(''void''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_open'''(''struct archive *'', ''const char *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_open_w'''(''struct archive *'', ''const wchar_t *'', ''''); 
 <br> 
 ''int'' 
 <br> 
@@ -60,6 +77,34 @@ Streaming Archive Library (libarchive, -larchive)
 ''int'' 
 <br> 
 '''archive_read_disk_entry_from_file'''(''struct archive *'', ''struct archive_entry *'', ''int fd'', ''const struct stat *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_descend'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_can_descend'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_current_filesystem'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_current_filesystem_is_synthetic'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_current_filesystem_is_remote'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_set_matching'''(''struct archive *'', ''struct archive *'', ''void (*excluded_func)(struct archive *, void *, struct archive entry *)'', ''void *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_disk_set_metadata_filter_callback'''(''struct archive *'', ''int (*metadata_filter_func)(struct archive *, void*, struct archive_entry *)'', ''void *''); 
 == DESCRIPTION == 
 These functions provide an API for reading information about 
 objects on disk. 
@@ -71,6 +116,14 @@ objects.
 Allocates and initializes a 
 '''struct archive''' 
 object suitable for reading object information from disk. 
+</dd><dt>'''archive_read_disk_open'''()</dt><dd> 
+Opens the file or directory from the given path and prepares the 
+'''struct archive''' 
+to read it from disk. 
+</dd><dt>'''archive_read_disk_open_w'''()</dt><dd> 
+Opens the file or directory from the given path as a wide character string and prepares the 
+'''struct archive''' 
+to read it from disk. 
 </dd><dt>'''archive_read_disk_set_behavior'''()</dt><dd> 
 Configures various behavior options when reading entries from disk. 
 The flags field consists of a bitwise OR of one or more of the 
@@ -78,9 +131,10 @@ following values:
 <dl> 
 <dt>'''ARCHIVE_READDISK_HONOR_NODUMP'''</dt><dd> 
 Skip files and directories with the nodump file attribute (file flag) set. 
-By default, the nodump file atrribute is ignored. 
+By default, the nodump file attribute is ignored. 
 </dd><dt>'''ARCHIVE_READDISK_MAC_COPYFILE'''</dt><dd> 
-Mac OS X specific. Read metadata (ACLs and extended attributes) with 
+Mac OS X specific. 
+Read metadata (ACLs and extended attributes) with 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
 By default, metadata is read using 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
@@ -99,7 +153,7 @@ or
 for more information on file attributes. 
 </dd><dt>'''ARCHIVE_READDISK_NO_TRAVERSE_MOUNTS'''</dt><dd> 
 Do not traverse mount points. 
-By defaut, moint points are traversed. 
+By default, mount points are traversed. 
 </dd><dt>'''ARCHIVE_READDISK_NO_XATTR'''</dt><dd> 
 Do not read extended file attributes (xattrs). 
 By default, extended file attributes are read from disk. 
@@ -115,6 +169,9 @@ for more information on extended file attributes.
 </dd><dt>'''ARCHIVE_READDISK_RESTORE_ATIME'''</dt><dd> 
 Restore access time of traversed files. 
 By default, access time of traversed files is not restored. 
+</dd><dt>'''ARCHIVE_READDISK_NO_SPARSE'''</dt><dd> 
+Do not read sparse file information. 
+By default, sparse file information is read from disk. 
 </dd></dl> 
 </dd><dt> 
 '''archive_read_disk_set_symlink_logical'''(), 
@@ -195,17 +252,48 @@ of some other operation.
 (For example, directory traversal libraries often provide this information.) 
 
 Where necessary, user and group ids are converted to user and group names 
-using the currently registered lookup functions above. 
+using the currently-registered lookup functions above. 
 This affects the file ownership fields and ACL values in the 
 '''struct archive_entry''' 
 object. 
+</dd><dt>'''archive_read_disk_descend'''()</dt><dd> 
+If the current entry can be descended, this function will mark the directory as the next entry for  
+[[ManPageArchiveReadHeader3]] 
+to visit. 
+</dd><dt>'''archive_read_disk_can_descend'''()</dt><dd> 
+Returns 1 if the current entry is an unvisited directory and 0 otherwise. 
+</dd><dt>'''archive_read_disk_current_filesystem'''()</dt><dd> 
+Returns the index of the most recent filesystem entry that has been visited through archive_read_disk 
+</dd><dt>'''archive_read_disk_current_filesystem_is_synthetic'''()</dt><dd> 
+Returns 1 if the current filesystem is a virtual filesystem. Returns 0 if the current filesystem is not a virtual filesystem. Returns -1 if it is unknown. 
+</dd><dt>'''archive_read_disk_current_filesystem_is_remote'''()</dt><dd> 
+Returns 1 if the current filesystem is a remote filesystem. Returns 0 if the current filesystem is not a remote filesystem. Returns -1 if it is unknown. 
+</dd><dt>'''archive_read_disk_set_matching'''()</dt><dd> 
+Allows the caller to set 
+'''struct archive''' 
+*_ma to compare each entry during 
+[[ManPageArchiveReadHeader3]] 
+calls. If matched based on calls to 
+'''archive_match_path_excluded ,''' 
+'''archive_match_time_excluded ,''' 
+or 
+'''archive_match_owner_excluded ,''' 
+then the callback function specified by the _excluded_func parameter will execute. This function will recieve data provided to the fourth parameter, void *_client_data. 
+</dd><dt>'''archive_read_disk_set_metadata_filter_callback'''()</dt><dd> 
+Allows the caller to set a callback function during calls to 
+[[ManPageArchiveReadHeader3]] 
+to filter out metadata for each entry. The callback function recieves the 
+'''struct archive''' 
+object, void* custom filter data, and the  
+'''struct archive_entry .''' 
+If the callback function returns an error, ARCHIVE_RETRY will be returned and the entry will not be further processed. 
 </dd></dl> 
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
 [[ManPageLibarchive3]] 
 overview. 
-== EXAMPLE == 
+== EXAMPLES == 
 The following illustrates basic usage of the library by 
 showing how to use it to copy an item on disk into an archive. 
 ```text
@@ -267,11 +355,11 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
+[[ManPageBsdtar1]], 
 [[ManPageArchiveRead3]], 
 [[ManPageArchiveUtil3]], 
 [[ManPageArchiveWrite3]], 
 [[ManPageArchiveWriteDisk3]], 
-[[ManPageBsdtar1]], 
 [[ManPageLibarchive3]] 
 == HISTORY == 
 The 

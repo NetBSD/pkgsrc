@@ -107,7 +107,7 @@ DESCRIPTION
 		 wise, make the entry a hardlink and alter the destination for
 		 that.
      pathname	 Path in the archive
-     sourcepath  Path on the disk for use by archive_read_disk(3).
+     sourcepath	 Path on the disk for use by archive_read_disk(3).
      symlink	 Destination of the symbolic link.
 
      Path names can be provided in one of three different ways:
@@ -117,20 +117,20 @@ DESCRIPTION
      wchar_t *	Wide character strings in the current locale.  The accessor
 		functions are named XXX_w().
 
-     UTF-8	Unicode strings encoded as UTF-8.  This are convience func‐
+     UTF-8	Unicode strings encoded as UTF-8.  These are convenience func‐
 		tions to update both the multibyte and wide character strings
 		at the same time.
 
      The sourcepath is a pure filesystem concept and never stored in an ar‐
      chive directly.
 
-     For that reason, it is only available as multibyte string.  The link path
-     is a convience function for conditionally setting hardlink or symlink
+     For that reason, it is only available as multibyte string.	 The link path
+     is a convenience function for conditionally setting hardlink or symlink
      destination.  It doesn't have a corresponding get accessor function.
 
      archive_entry_set_XXX() is an alias for archive_entry_copy_XXX().
 
 SEE ALSO
-     archive_entry(3) libarchive(3),
+     archive_entry(3), libarchive(3)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

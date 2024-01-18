@@ -1,4 +1,4 @@
-ARCHIVE_READ(3) 	 BSD Library Functions Manual	       ARCHIVE_READ(3)
+ARCHIVE_READ(3)		 BSD Library Functions Manual	       ARCHIVE_READ(3)
 
 NAME
      archive_read — functions for reading streaming archives
@@ -63,7 +63,7 @@ DESCRIPTION
      file, then the header will be followed by the file data.  You can use
      archive_read_data() (which works much like the read(2) system call) to
      read this data from the archive, or archive_read_data_block() which pro‐
-     vides a slightly more efficient interface.  You may prefer to use the
+     vides a slightly more efficient interface.	 You may prefer to use the
      higher-level archive_read_data_skip(), which reads and discards the data
      for this entry, archive_read_data_into_fd(), which copies the data to the
      provided file descriptor, or archive_read_extract(), which recreates the
@@ -80,7 +80,7 @@ DESCRIPTION
      archive_read_close() to close the archive, then call archive_read_free()
      to release all resources, including all memory allocated by the library.
 
-EXAMPLE
+EXAMPLES
      The following illustrates basic usage of the library.  In this example,
      the callback functions are simply wrappers around the standard open(2),
      read(2), and close(2) system calls.
@@ -135,10 +135,10 @@ EXAMPLE
 	   }
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read_new(3), archive_read_data(3),
-     archive_read_extract(3), archive_read_filter(3), archive_read_format(3),
-     archive_read_header(3), archive_read_open(3),
-     archive_read_set_options(3), archive_util(3), tar(5)
+     tar(1), archive_read_data(3), archive_read_extract(3),
+     archive_read_filter(3), archive_read_format(3), archive_read_header(3),
+     archive_read_new(3), archive_read_open(3), archive_read_set_options(3),
+     archive_util(3), libarchive(3), tar(5)
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
@@ -153,4 +153,4 @@ BUGS
      format of an empty file by inspecting the contents, so this library
      treats empty files as having a special “empty” format.
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

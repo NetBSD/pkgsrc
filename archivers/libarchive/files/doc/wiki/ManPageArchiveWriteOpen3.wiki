@@ -1,6 +1,7 @@
 ARCHIVE_WRITE_OPEN(3) manual page 
 == NAME == 
 '''archive_write_open''', 
+'''archive_write_open2''', 
 '''archive_write_open_fd''', 
 '''archive_write_open_FILE''', 
 '''archive_write_open_filename''', 
@@ -14,6 +15,10 @@ Streaming Archive Library (libarchive, -larchive)
 ''int'' 
 <br> 
 '''archive_write_open'''(''struct archive *'', ''void *client_data'', ''archive_open_callback *'', ''archive_write_callback *'', ''archive_close_callback *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_write_open2'''(''struct archive *'', ''void *client_data'', ''archive_open_callback *'', ''archive_write_callback *'', ''archive_close_callback *'', ''archive_free_callback *''); 
 <br> 
 ''int'' 
 <br> 
@@ -38,6 +43,11 @@ This is the most generic form of this function, which accepts
 pointers to three callback functions which will be invoked by 
 the compression layer to write the constructed archive. 
 This does not alter the default archive padding. 
+</dd><dt>'''archive_write_open2'''()</dt><dd> 
+Same as 
+'''archive_write_open'''() 
+with an additional fourth free callback. This function should be preferred to 
+'''archive_write_open'''(). 
 </dd><dt>'''archive_write_open_fd'''()</dt><dd> 
 A convenience form of 
 '''archive_write_open'''() 
@@ -77,14 +87,14 @@ to a character or block device node, it will disable padding otherwise.
 You can override this by manually invoking 
 '''archive_write_set_bytes_in_last_block'''() 
 before calling 
-'''archive_write_open'''(). 
+'''archive_write_open2'''(). 
 The 
 '''archive_write_open_filename'''() 
 function is safe for use with tape drives or other 
 block-oriented devices. 
 </dd><dt>'''archive_write_open_memory'''()</dt><dd> 
 A convenience form of 
-'''archive_write_open'''() 
+'''archive_write_open2'''() 
 that accepts a pointer to a block of memory that will receive 
 the archive. 
 The final 
@@ -115,7 +125,7 @@ To use this library, you will need to define and register
 callback functions that will be invoked to write data to the 
 resulting archive. 
 These functions are registered by calling 
-'''archive_write_open'''(): 
+'''archive_write_open2'''(): 
 <ul> 
 <li> 
 ''typedef int'' 
@@ -132,6 +142,8 @@ If the open fails, it should call
 '''archive_set_error'''() 
 to register an error code and message and return 
 '''ARCHIVE_FATAL'''. 
+Please note that if open fails, close is not called and resources must be 
+freed inside the open callback or with the free callback. 
 <ul> 
 <li> 
 ''typedef la_ssize_t'' 
@@ -157,7 +169,8 @@ to register an error code and message and return -1.
 </li></ul> 
 
 The close callback is invoked by archive_close when 
-the archive processing is complete. 
+the archive processing is complete. If the open callback fails, the close 
+callback is not invoked. 
 The callback should return 
 '''ARCHIVE_OK''' 
 on success. 
@@ -165,7 +178,15 @@ On failure, the callback should invoke
 '''archive_set_error'''() 
 to register an error code and message and 
 return 
-'''ARCHIVE_FATAL.''' 
+'''ARCHIVE_FATAL'''. 
+<ul> 
+<li> 
+''typedef int'' 
+'''archive_free_callback'''(''struct archive *'', ''void *client_data'') 
+</li></ul> 
+
+The free callback is always invoked on archive_free. 
+The return code of this callback is not processed. 
 
 Note that if the client-provided write callback function 
 returns a non-zero value, that error will be propagated back to the caller 
@@ -196,13 +217,13 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
 [[ManPageArchiveWrite3]], 
 [[ManPageArchiveWriteBlocksize3]], 
 [[ManPageArchiveWriteFilter3]], 
 [[ManPageArchiveWriteFormat3]], 
 [[ManPageArchiveWriteNew3]], 
 [[ManPageArchiveWriteSetOptions3]], 
+[[ManPageLibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

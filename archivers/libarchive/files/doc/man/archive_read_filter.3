@@ -1,4 +1,4 @@
-.TH ARCHIVE_READ_FILTER 3 "August 14, 2014" ""
+.TH ARCHIVE_READ_FILTER 3 "June 9, 2020" ""
 .SH NAME
 .ad l
 \fB\%archive_read_support_filter_all\fP,
@@ -25,6 +25,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_read_support_filter_all\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_filter_by_code\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
 .br
 \fIint\fP
 .br
@@ -115,6 +119,15 @@ is always enabled by default.
 \fB\%archive_read_support_filter_all\fP()
 Enables all available decompression filters.
 .TP
+\fB\%archive_read_support_filter_by_code\fP()
+Enables a single filter specified by the filter code.
+This function does not work with
+\fBARCHIVE_FILTER_PROGRAM\fP.
+Note: In statically-linked executables, this will cause
+your program to include support for every filter.
+If executable size is a concern, you may wish to avoid
+using this function.
+.TP
 \fB\%archive_read_support_filter_program\fP()
 Data is fed through the specified external program before being dearchived.
 Note that this disables automatic detection of the compression format,
@@ -145,8 +158,8 @@ and
 functions.
 .SH SEE ALSO
 .ad l
-\fBlibarchive\fP(3),
 \fBarchive_read\fP(3),
 \fBarchive_read_data\fP(3),
 \fBarchive_read_format\fP(3),
-\fBarchive_read_format\fP(3)
+\fBarchive_read_format\fP(3),
+\fBlibarchive\fP(3)

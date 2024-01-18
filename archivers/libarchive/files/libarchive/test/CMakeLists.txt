@@ -63,6 +63,7 @@ IF(ENABLE_TEST)
     test_compat_solaris_pax_sparse.c
     test_compat_solaris_tar_acl.c
     test_compat_star_acl.c
+    test_compat_tar_directory.c
     test_compat_tar_hardlink.c
     test_compat_uudecode.c
     test_compat_uudecode_large.c
@@ -82,6 +83,7 @@ IF(ENABLE_TEST)
     test_open_file.c
     test_open_filename.c
     test_pax_filename_encoding.c
+    test_pax_xattr_header.c
     test_read_data_large.c
     test_read_disk.c
     test_read_disk_directory_traversals.c
@@ -96,11 +98,13 @@ IF(ENABLE_TEST)
     test_read_filter_program.c
     test_read_filter_program_signature.c
     test_read_filter_uudecode.c
+    test_read_filter_uudecode_raw.c
     test_read_format_7zip.c
     test_read_format_7zip_encryption_data.c
     test_read_format_7zip_encryption_header.c
     test_read_format_7zip_encryption_partially.c
     test_read_format_7zip_malformed.c
+    test_read_format_7zip_packinfo_digests.c
     test_read_format_ar.c
     test_read_format_cab.c
     test_read_format_cab_filename.c
@@ -141,6 +145,7 @@ IF(ENABLE_TEST)
     test_read_format_lha.c
     test_read_format_lha_bugfix_0.c
     test_read_format_lha_filename.c
+    test_read_format_lha_filename_utf16.c
     test_read_format_mtree.c
     test_read_format_mtree_crash747.c
     test_read_format_pax_bz2.c
@@ -149,6 +154,7 @@ IF(ENABLE_TEST)
     test_read_format_rar_encryption_header.c
     test_read_format_rar_encryption_partially.c
     test_read_format_rar_invalid1.c
+    test_read_format_rar_filter.c
     test_read_format_rar5.c
     test_read_format_raw.c
     test_read_format_tar.c
@@ -157,6 +163,7 @@ IF(ENABLE_TEST)
     test_read_format_tar_empty_with_gnulabel.c
     test_read_format_tar_empty_pax.c
     test_read_format_tar_filename.c
+    test_read_format_tar_invalid_pax_size.c
     test_read_format_tbz.c
     test_read_format_tgz.c
     test_read_format_tlz.c
@@ -188,13 +195,15 @@ IF(ENABLE_TEST)
     test_read_format_zip_zip64.c
     test_read_format_zip_with_invalid_traditional_eocd.c
     test_read_large.c
-    test_read_pax_schily_xattr.c
+    test_read_pax_xattr_rht_security_selinux.c
+    test_read_pax_xattr_schily.c
     test_read_pax_truncated.c
     test_read_position.c
     test_read_set_format.c
     test_read_too_many_filters.c
     test_read_truncated.c
     test_read_truncated_filter.c
+    test_short_writes.c
     test_sparse_basic.c
     test_tar_filenames.c
     test_tar_large.c
@@ -204,6 +213,7 @@ IF(ENABLE_TEST)
     test_write_disk.c
     test_write_disk_appledouble.c
     test_write_disk_failures.c
+    test_write_disk_fixup.c
     test_write_disk_hardlink.c
     test_write_disk_hfs_compression.c
     test_write_disk_lookup.c
@@ -270,6 +280,7 @@ IF(ENABLE_TEST)
     test_write_format_zip_compression_store.c
     test_write_format_zip_empty.c
     test_write_format_zip_empty_zip64.c
+    test_write_format_zip_entry_size_unset.c
     test_write_format_zip_file.c
     test_write_format_zip_file_zip64.c
     test_write_format_zip_large.c

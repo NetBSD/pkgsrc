@@ -138,7 +138,28 @@ only to modules whose name matches
 </dd></dl> 
 == OPTIONS == 
 <dl> 
-<dt>Format iso9660</dt><dd> 
+<dt>Format cab</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd></dl> 
+</dd><dt>Format cpio</dt><dd> 
+<dl> 
+<dt>'''compat-2x'''</dt><dd> 
+Libarchive 2.x incorrectly encoded Unicode filenames on 
+some platforms. 
+This option mimics the libarchive 2.x filename handling 
+so that such archives can be read correctly. 
+</dd><dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd><dt>'''pwb'''</dt><dd> 
+When reading a binary CPIO archive, assume that it is 
+in the original PWB cpio format, and handle file mode 
+bits accordingly.  The default is to assume v7 format. 
+</dd></dl> 
+</dd><dt>Format iso9660</dt><dd> 
 <dl> 
 <dt>'''joliet'''</dt><dd> 
 Support Joliet extensions. 
@@ -151,6 +172,24 @@ Defaults to enabled, use
 '''!rockridge''' 
 to disable. 
 </dd></dl> 
+</dd><dt>Format lha</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd></dl> 
+</dd><dt>Format mtree</dt><dd> 
+<dl> 
+<dt>'''checkfs'''</dt><dd> 
+Allow reading information missing from the mtree from the file system. 
+Disabled by default. 
+</dd></dl> 
+</dd><dt>Format rar</dt><dd> 
+<dl> 
+<dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd></dl> 
 </dd><dt>Format tar</dt><dd> 
 <dl> 
 <dt>'''compat-2x'''</dt><dd> 
@@ -160,7 +199,7 @@ This option mimics the libarchive 2.x filename handling
 so that such archives can be read correctly. 
 </dd><dt>'''hdrcharset'''</dt><dd> 
 The value is used as a character set name that will be 
-used when translating filenames. 
+used when translating file names. 
 </dd><dt>'''mac-ext'''</dt><dd> 
 Support Mac OS metadata extension that records data in special 
 files beginning with a period and underscore. 
@@ -170,8 +209,30 @@ Use
 to disable. 
 </dd><dt>'''read_concatenated_archives'''</dt><dd> 
 Ignore zeroed blocks in the archive, which occurs when multiple tar archives 
-have been concatenated together.  Without this option, only the contents of 
+have been concatenated together. 
+Without this option, only the contents of 
 the first concatenated archive would be read. 
+</dd></dl> 
+</dd><dt>Format zip</dt><dd> 
+<dl> 
+<dt>'''compat-2x'''</dt><dd> 
+Libarchive 2.x incorrectly encoded Unicode filenames on 
+some platforms. 
+This option mimics the libarchive 2.x filename handling 
+so that such archives can be read correctly. 
+</dd><dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating file names. 
+</dd><dt>'''ignorecrc32'''</dt><dd> 
+Skip the CRC32 check. 
+Mostly used for testing. 
+</dd><dt>'''mac-ext'''</dt><dd> 
+Support Mac OS metadata extension that records data in special 
+files beginning with a period and underscore. 
+Defaults to enabled on Mac OS, disabled on other platforms. 
+Use 
+'''!mac-ext''' 
+to disable. 
 </dd></dl> 
 </dd></dl> 
 == ERRORS == 
@@ -182,6 +243,6 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
+[[ManPageArchiveRead3]], 
 [[ManPageArchiveWriteSetOptions3]], 
-[[ManPageArchiveRead3]] 
+[[ManPageLibarchive3]] 

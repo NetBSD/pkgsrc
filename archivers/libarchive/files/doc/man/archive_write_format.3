@@ -8,7 +8,10 @@
 \fB\%archive_write_set_format_ar_svr4\fP,
 \fB\%archive_write_set_format_by_name\fP,
 \fB\%archive_write_set_format_cpio\fP,
+\fB\%archive_write_set_format_cpio_bin\fP,
 \fB\%archive_write_set_format_cpio_newc\fP,
+\fB\%archive_write_set_format_cpio_odc\fP,
+\fB\%archive_write_set_format_cpio_pwb\fP,
 \fB\%archive_write_set_format_filter_by_ext\fP,
 \fB\%archive_write_set_format_filter_by_ext_def\fP,
 \fB\%archive_write_set_format_gnutar\fP,
@@ -25,7 +28,7 @@
 \fB\%archive_write_set_format_v7tar\fP,
 \fB\%archive_write_set_format_warc\fP,
 \fB\%archive_write_set_format_xar\fP,
-\fB\%archive_write_set_format_zip\fP,
+\fB\%archive_write_set_format_zip\fP
 \- functions for creating archives
 .SH LIBRARY
 .ad l
@@ -64,7 +67,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_write_set_format_cpio_bin\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_write_set_format_cpio_newc\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_cpio_odc\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_set_format_cpio_pwb\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -143,16 +158,19 @@ to create a new archive with the same format as an existing archive.
 \fB\%archive_write_set_format_by_name\fP()
 Sets the corresponding format based on the common name.
 .TP
-\fB\%archive_write_set_format_filter_by_ext\fP(),
+\fB\%archive_write_set_format_filter_by_ext\fP()
 \fB\%archive_write_set_format_filter_by_ext_def\fP()
 Sets both filters and format based on the output filename.
 Supported extensions: .7z, .zip, .jar, .cpio, .iso, .a, .ar, .tar, .tgz, .tar.gz, .tar.bz2, .tar.xz
 .TP
 \fB\%archive_write_set_format_7zip\fP()
-\fB\%archive_write_set_format_ar_bsd\fP(),
-\fB\%archive_write_set_format_ar_svr4\fP(),
+\fB\%archive_write_set_format_ar_bsd\fP()
+\fB\%archive_write_set_format_ar_svr4\fP()
 \fB\%archive_write_set_format_cpio\fP()
+\fB\%archive_write_set_format_cpio_bin\fP()
 \fB\%archive_write_set_format_cpio_newc\fP()
+\fB\%archive_write_set_format_cpio_odc\fP()
+\fB\%archive_write_set_format_cpio_pwb\fP()
 \fB\%archive_write_set_format_gnutar\fP()
 \fB\%archive_write_set_format_iso9660\fP()
 \fB\%archive_write_set_format_mtree\fP()
@@ -188,9 +206,9 @@ functions.
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_write\fP(3),
 \fBarchive_write_set_options\fP(3),
+\fBlibarchive\fP(3),
 \fBcpio\fP(5),
 \fBlibarchive-formats\fP(5),
 \fBmtree\fP(5),

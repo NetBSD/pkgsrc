@@ -29,8 +29,9 @@ DESCRIPTION
      cific write modules.
 
      archive_write_set_filter_option(), archive_write_set_format_option()
-	     Specifies an option that will be passed to currently-registered
-	     filters (including decompression filters) or format readers.
+	     Specifies an option that will be passed to the currently-regis‐
+	     tered filters (including decompression filters) or format read‐
+	     ers.
 
 	     If option and value are both NULL, these functions will do noth‐
 	     ing and ARCHIVE_OK will be returned.  If option is NULL but value
@@ -45,16 +46,16 @@ DESCRIPTION
 	     be returned.
 
 	     If module is NULL, option and value will be provided to every
-	     registered module.  If any module returns ARCHIVE_FATAL, this
+	     registered module.	 If any module returns ARCHIVE_FATAL, this
 	     value will be returned immediately.  Otherwise, ARCHIVE_OK will
 	     be returned if any module accepts the option, and ARCHIVE_FAILED
 	     in all other cases.
 
      archive_write_set_option()
 	     Calls archive_write_set_format_option(), then
-	     archive_write_set_filter_option().  If either function returns
-	     ARCHIVE_FATAL, ARCHIVE_FATAL will be returned immediately.  Oth‐
-	     erwise, greater of the two values will be returned.
+	     archive_write_set_filter_option().	 If either function returns
+	     ARCHIVE_FATAL, ARCHIVE_FATAL will be returned immediately.	 Oth‐
+	     erwise, the greater of the two values will be returned.
 
      archive_write_set_options()
 	     options is a comma-separated list of options.  If options is NULL
@@ -75,28 +76,100 @@ DESCRIPTION
 		     provided only to modules whose name matches module.
 
 OPTIONS
+     Filter b64encode
+	     mode    The value is interpreted as octal digits specifying the
+		     file mode.
+	     name    The value specifies the file name.
+     Filter bzip2
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the bzip2 compression level. Supported values are from 1
+		     to 9.
      Filter gzip
 	     compression-level
 		     The value is interpreted as a decimal integer specifying
-		     the gzip compression level.
+		     the gzip compression level. Supported values are from 0
+		     to 9.
+	     timestamp
+		     Store timestamp. This is enabled by default.
+     Filter lrzip
+	     compression=type
+		     Use type as compression method.  Supported values are
+		     “bzip2”, “gzipi”, “lzo” (ultra fast), and “zpaq” (best,
+		     extremely slow).
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the lrzip compression level. Supported values are from 1
+		     to 9.
+     Filter lz4
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the lz4 compression level. Supported values are from 0 to
+		     9.
+	     stream-checksum
+		     Enable stream checksum. This is enabled by default.
+	     block-checksum
+		     Enable block checksum. This is disabled by default.
+	     block-size
+		     The value is interpreted as a decimal integer specifying
+		     the lz4 compression block size. Supported values are from
+		     4 to 7 (default).
+	     block-dependence
+		     Use the previous block of the block being compressed for
+		     a compression dictionary to improve compression ratio.
+		     This is disabled by default.
+     Filter lzop
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the lzop compression level. Supported values are from 1
+		     to 9.
+     Filter uuencode
+	     mode    The value is interpreted as octal digits specifying the
+		     file mode.
+	     name    The value specifies the file name.
      Filter xz
 	     compression-level
 		     The value is interpreted as a decimal integer specifying
-		     the compression level.
-     Format mtree
-	     cksum, device, flags, gid, gname, indent, link, md5, mode, nlink,
-		     rmd160, sha1, sha256, sha384, sha512, size, time, uid,
-		     uname
-		     Enable a particular keyword in the mtree output.  Prefix
-		     with an exclamation mark to disable the corresponding
-		     keyword.  The default is equivalent to “device, flags,
-		     gid, gname, link, mode, nlink, size, time, type, uid,
-		     uname”.
-	     all     Enables all of the above keywords.
-	     use-set
-		     Enables generation of /set lines that specify default
-		     values for the following files and/or directories.
-	     indent  XXX needs explanation XXX
+		     the compression level. Supported values are from 0 to 9.
+	     threads
+		     The value is interpreted as a decimal integer specifying
+		     the number of threads for multi-threaded lzma compres‐
+		     sion.  If supported, the default value is read from
+		     lzma_cputhreads().
+     Filter zstd
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the compression level. Supported values depend on the li‐
+		     brary version, common values are from 1 to 22.
+	     long    Enables long distance matching. The value is interpreted
+		     as a decimal integer specifying log2 window size in
+		     bytes. Values from 10 to 30 for 32 bit, or 31 for 64 bit,
+		     are supported.
+	     threads
+		     The value is interpreted as a decimal integer specifying
+		     the number of threads for multi-threaded zstd compres‐
+		     sion.  If set to 0, zstd will attempt to detect and use
+		     the number of physical CPU cores.
+     Format 7zip
+	     compression
+		     The value is one of “store”, “deflate”, “bzip2”, “lzma1”,
+		     “lzma2” or “ppmd” to indicate how the following entries
+		     should be compressed.  Note that this setting is ignored
+		     for directories, symbolic links, and other special en‐
+		     tries.
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the compression level.  Values between 0 and 9 are sup‐
+		     ported.  The interpretation of the compression level de‐
+		     pends on the chosen compression method.
+     Format bin
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format gnutar
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file, group and user names.
      Format iso9660 - volume metadata
 	     These options are used to set standard ISO9660 metadata.
 	     abstract-file=filename
@@ -164,7 +237,7 @@ OPTIONS
 		     period will have that period replaced by an underscore
 		     character in the standard ISO9660 namespace.  This does
 		     not impact names stored in the Rockridge or Joliet exten‐
-		     sion area.  Default: disabled.
+		     sion area.	 Default: disabled.
 	     allow-lowercase
 		     If enabled, allows filenames to contain lowercase charac‐
 		     ters.  If disabled, filenames will be forced to upper‐
@@ -175,12 +248,12 @@ OPTIONS
 		     characters, in violation of the ISO9660 specification.
 		     If disabled, additional periods will be converted to un‐
 		     derscore characters.  This does not impact names stored
-		     in the Rockridge or Joliet extension area.  Default: dis‐
+		     in the Rockridge or Joliet extension area.	 Default: dis‐
 		     abled.
 	     allow-period
 		     If enabled, allows filenames to contain trailing period
 		     characters, in violation of the ISO9660 specification.
-		     If disabled,trailing periods will be converted to under‐
+		     If disabled, trailing periods will be converted to under‐
 		     score characters.	This does not impact names stored in
 		     the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
@@ -226,7 +299,7 @@ OPTIONS
 	     joliet  Microsoft's Joliet extensions store a completely separate
 		     set of directory information about each file.  In partic‐
 		     ular, this information includes Unicode filenames of up
-		     to 255 characters.  Default: enabled.
+		     to 255 characters.	 Default: enabled.
 	     limit-depth
 		     If enabled, libarchive will use directory relocation
 		     records to ensure that no pathname exceeds the ISO9660
@@ -242,7 +315,7 @@ OPTIONS
 		     If enabled, all 7-bit ASCII characters are permitted in
 		     filenames (except lowercase characters unless
 		     allow-lowercase is also specified).  This violates
-		     ISO9660 standards.  This does not impact names stored in
+		     ISO9660 standards.	 This does not impact names stored in
 		     the Rockridge or Joliet extension area.  Default: dis‐
 		     abled.
 	     rockridge
@@ -264,7 +337,7 @@ OPTIONS
 		     fault: 6
 	     zisofs  Synonym for zisofs=direct.
 	     zisofs=direct
-		     Compress each file in the archive.  Unlike
+		     Compress each file in the archive.	 Unlike
 		     zisofs=indirect, this is handled entirely within
 		     libarchive and does not require a separate utility.  For
 		     best results, libarchive tests each file and will store
@@ -281,12 +354,88 @@ OPTIONS
 		     Specifies a filename that should not be compressed when
 		     using zisofs=direct.  This option can be provided multi‐
 		     ple times to suppress compression on many files.
+     Format mtree
+	     cksum, device, flags, gid, gname, indent, link, md5, mode, nlink,
+		     rmd160, sha1, sha256, sha384, sha512, size, time, uid,
+		     uname
+		     Enable a particular keyword in the mtree output.  Prefix
+		     with an exclamation mark to disable the corresponding
+		     keyword.  The default is equivalent to “device, flags,
+		     gid, gname, link, mode, nlink, size, time, type, uid,
+		     uname”.
+	     all     Enables all of the above keywords.
+	     use-set
+		     Enables generation of /set lines that specify default
+		     values for the following files and/or directories.
+	     indent  XXX needs explanation XXX
+     Format newc
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format odc
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format pwb
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file names.
+     Format pax
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file, group and user names.	The
+		     value is one of “BINARY” or “UTF-8”.  With “BINARY” there
+		     is no character conversion, with “UTF-8” names are con‐
+		     verted to UTF-8.
+	     xattrheader
+		     When storing extended attributes, this option configures
+		     which headers should be written. The value is one of
+		     “all”, “LIBARCHIVE”, or “SCHILY”.	By default, both
+		     “LIBARCHIVE.xattr” and “SCHILY.xattr” headers are writ‐
+		     ten.
+     Format ustar
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file, group and user names.
+     Format v7tar
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating file, group and user names.
+     Format warc
+	     omit-warcinfo
+		     Set to “true” to disable output of the warcinfo record.
+     Format xar
+	     checksum=type
+		     Use type as file checksum method.	Supported values are
+		     “none”, “md5”, and “sha1” (default).
+	     compression=type
+		     Use type as compression method.  Supported values are
+		     “none”, “bzip2”, “gzip” (default), “lzma” and “xz”.
+	     compression_level
+		     The value is a decimal integer from 1 to 9 specifying the
+		     compression level.
+	     toc-checksum=type
+		     Use type as table of contents checksum method.  Supported
+		     values are “none”, “md5” and “sha1” (default).
      Format zip
 	     compression
 		     The value is either “store” or “deflate” to indicate how
 		     the following entries should be compressed.  Note that
 		     this setting is ignored for directories, symbolic links,
 		     and other special entries.
+	     compression-level
+		     The value is interpreted as a decimal integer specifying
+		     the compression level.  Values between 0 and 9 are sup‐
+		     ported.  A compression level of 0 switches the compres‐
+		     sion method to “store”, other values will enable
+		     “deflate” compression with the given level.
+	     encryption
+		     Enable encryption using traditional zip encryption.
+	     encryption=type
+		     Use type as encryption type.  Supported values are
+		     “zipcrypt” (traditional zip encryption), “aes128” (WinZip
+		     AES-128 encryption) and “aes256” (WinZip AES-256
+		     encryption).
 	     experimental
 		     This boolean option enables or disables experimental Zip
 		     features that may not be compatible with other Zip imple‐
@@ -296,7 +445,8 @@ OPTIONS
 		     fields are set to zero.  It should not be used except for
 		     testing purposes.
 	     hdrcharset
-		     This sets the character set used for filenames.
+		     The value is used as a character set name that will be
+		     used when translating file names.
 	     zip64   Zip64 extensions provide additional file size information
 		     for entries larger than 4 GiB.  They also provide ex‐
 		     tended file offset and archive size information when ar‐
@@ -338,7 +488,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read_set_options(3), archive_write(3)
+     tar(1), archive_read_set_options(3), archive_write(3), libarchive(3)
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
@@ -348,4 +498,4 @@ AUTHORS
      Michihiro NAKAJIMA.
 
 BUGS
-BSD			       February 2, 2012 			   BSD
+BSD			       January 31, 2020				   BSD

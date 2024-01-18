@@ -53,7 +53,7 @@ DESCRIPTION
 	     other devices that require strict I/O blocking.
      archive_read_open_fd()
 	     Like archive_read_open(), except that it accepts a file descrip‐
-	     tor and block size rather than a set of function pointers.  Note
+	     tor and block size rather than a set of function pointers.	 Note
 	     that the file descriptor will not be automatically closed at end-
 	     of-archive.  This function is safe for use with tape drives or
 	     other blocked devices.
@@ -123,8 +123,8 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read(3), archive_read_data(3),
-     archive_read_filter(3), archive_read_format(3),
-     archive_read_set_options(3), archive_util(3), tar(5)
+     tar(1), archive_read(3), archive_read_data(3), archive_read_filter(3),
+     archive_read_format(3), archive_read_set_options(3), archive_util(3),
+     libarchive(3), tar(5)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

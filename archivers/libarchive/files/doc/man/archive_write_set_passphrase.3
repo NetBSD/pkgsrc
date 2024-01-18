@@ -23,7 +23,7 @@ Streaming Archive Library (libarchive, -larchive)
 .RS 5
 .TP
 \fB\%archive_write_set_passphrase\fP()
-Set a passphrase for writing an encryption archive.
+Set a passphrase for writing an encrypted archive.
 If
 \fIpassphrase\fP
 is
@@ -33,17 +33,17 @@ or empty, this function will do nothing and
 will be returned.
 Otherwise,
 \fBARCHIVE_OK\fP
-will be returned. 
+will be returned.
 .TP
 \fB\%archive_write_set_passphrase_callback\fP()
-Register callback function that will be invoked to get a passphrase
-for encrption if the passphrase was not set by the
+Register a callback function that will be invoked to get a passphrase
+for encryption if the passphrase was not set by the
 \fB\%archive_write_set_passphrase\fP()
 function.
 .RE
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_write\fP(3),
-\fBarchive_write_set_options\fP(3)
+\fBarchive_write_set_options\fP(3),
+\fBlibarchive\fP(3)

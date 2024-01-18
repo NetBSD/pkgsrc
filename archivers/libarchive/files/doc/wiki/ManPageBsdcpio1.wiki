@@ -50,7 +50,6 @@ Pass-through.
 Read a list of filenames from standard input and copy the files to the 
 specified directory. 
 </dd></dl> 
-
 == OPTIONS == 
 Unless specifically stated otherwise, options are applicable in 
 all operating modes. 
@@ -58,6 +57,13 @@ all operating modes.
 <dt>-0, --null</dt><dd> 
 Read filenames separated by NUL characters instead of newlines. 
 This is necessary if any of the filenames being read might contain newlines. 
+</dd><dt>-6, --pwb</dt><dd> 
+When reading a binary format archive, assume it's the earlier one, 
+from the PWB variant of 6th Edition UNIX. 
+When writing a cpio archive, use the PWB format. 
+</dd><dt>-7, --binary</dt><dd> 
+(o mode only) 
+When writing a cpio archive, use the (newer, non-PWB) binary format. 
 </dd><dt>-A</dt><dd> 
 (o mode only) 
 Append to the specified archive. 
@@ -366,10 +372,10 @@ For best compatibility, scripts should limit themselves to the
 standard syntax. 
 == SEE ALSO == 
 [[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
-[[ManPageBsdtar1]], 
 [[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
 [[mt(1)|http://www.freebsd.org/cgi/man.cgi?query=mt&sektion=1]], 
 [[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
+[[ManPageBsdtar1]], 
 [[ManPageLibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageLibarchiveFormats5]], 

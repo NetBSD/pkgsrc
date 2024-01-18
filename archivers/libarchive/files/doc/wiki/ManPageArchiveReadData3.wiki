@@ -1,6 +1,6 @@
 ARCHIVE_READ_DATA(3) manual page 
 == NAME == 
-'''archive_read_data''' 
+'''archive_read_data''', 
 '''archive_read_data_block''', 
 '''archive_read_data_skip''', 
 '''archive_read_data_into_fd''' 
@@ -89,7 +89,6 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
 [[ManPageArchiveRead3]], 
 [[ManPageArchiveReadExtract3]], 
 [[ManPageArchiveReadFilter3]], 
@@ -98,4 +97,5 @@ functions.
 [[ManPageArchiveReadOpen3]], 
 [[ManPageArchiveReadSetOptions3]], 
 [[ManPageArchiveUtil3]], 
+[[ManPageLibarchive3]], 
 [[ManPageTar5]] 

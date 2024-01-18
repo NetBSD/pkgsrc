@@ -62,9 +62,9 @@ DESCRIPTION
 	     User id and group id of owner, as octal numbers in ASCII.
 
      size    Size of file, as octal number in ASCII.  For regular files only,
-	     this indicates the amount of data that follows the header.  In
+	     this indicates the amount of data that follows the header.	 In
 	     particular, this field was ignored by early tar implementations
-	     when extracting hardlinks.  Modern writers should always store a
+	     when extracting hardlinks.	 Modern writers should always store a
 	     zero length for hardlink entries.
 
      mtime   Modification time of file, as an octal number in ASCII.  This in‐
@@ -77,7 +77,7 @@ DESCRIPTION
 	     the checksum, set the checksum field to all spaces, then sum all
 	     bytes in the header using unsigned arithmetic.  This field should
 	     be stored as six octal digits followed by a null and a space
-	     character.  Note that many early implementations of tar used
+	     character.	 Note that many early implementations of tar used
 	     signed arithmetic for the checksum field, which can cause inter‐
 	     operability problems when transferring archives between systems.
 	     Modern robust readers compute the checksum both ways and accept
@@ -119,7 +119,7 @@ DESCRIPTION
      IEEE Std 1003.1-1988 (“POSIX.1”) defined a standard tar file format to be
      read and written by compliant implementations of tar(1).  This format is
      often called the “ustar” format, after the magic value used in the
-     header.  (The name is an acronym for “Unix Standard TAR”.)  It extends
+     header.  (The name is an acronym for “Unix Standard TAR”.)	 It extends
      the historic format with new fields:
 
 	   struct header_posix_ustar {
@@ -189,7 +189,7 @@ DESCRIPTION
      name, prefix
 	     If the pathname is too long to fit in the 100 bytes provided by
 	     the standard format, it can be split at any / character with the
-	     first portion going into the prefix field.  If the prefix field
+	     first portion going into the prefix field.	 If the prefix field
 	     is not empty, the reader will prepend the prefix value and a /
 	     character to the regular name field to obtain the full pathname.
 	     The standard does not require a trailing / character on directory
@@ -222,7 +222,7 @@ DESCRIPTION
      allows file sizes up to 64 GB.
 
      Another extension, utilized by GNU tar, star, and other newer tar imple‐
-     mentations, permits binary numbers in the standard numeric fields.  This
+     mentations, permits binary numbers in the standard numeric fields.	 This
      is flagged by setting the high bit of the first byte.  The remainder of
      the field is treated as a signed twos-complement value.  This permits
      95-bit values for the length and time fields and 63-bit values for the
@@ -266,7 +266,7 @@ DESCRIPTION
      mal, not octal.  A description of some common keys follows:
 
      atime, ctime, mtime
-	     File access, inode change, and modification times.  These fields
+	     File access, inode change, and modification times.	 These fields
 	     can be negative or include a decimal point and a fractional
 	     value.
 
@@ -279,7 +279,7 @@ DESCRIPTION
 	     character ASCII string “BINARY”, then all textual values are as‐
 	     sumed to be in a platform-dependent multi-byte encoding.  Note
 	     that there are only two valid values for this key: “BINARY” or
-	     “ISO-IR 10646 2000 UTF-8”.  No other values are permitted by the
+	     “ISO-IR 10646 2000 UTF-8”.	 No other values are permitted by the
 	     standard, and the latter value should generally not be used as it
 	     is the default when this key is not specified.  In particular,
 	     this flag should not be used as a general mechanism to allow
@@ -326,7 +326,7 @@ DESCRIPTION
 	     The file flags.
 
      SCHILY.realsize
-	     The full size of the file on disk.  XXX explain? XXX
+	     The full size of the file on disk.	 XXX explain? XXX
 
      SCHILY.dev, SCHILY.ino, SCHILY.nlinks
 	     The device number, inode number, and link count for the entry.
@@ -526,8 +526,8 @@ DESCRIPTION
 				   char offset[12];
 				   char numbytes[12];
 			   } sparse[21];
-			   char    isextended[1];
-			   char    padding[7];
+			   char	   isextended[1];
+			   char	   padding[7];
 		   };
 
      realsize
@@ -540,9 +540,9 @@ DESCRIPTION
 
    GNU tar pax archives
      GNU tar 1.14 (XXX check this XXX) and later will write pax interchange
-     format archives when you specify the --posix flag.  This format follows
+     format archives when you specify the --posix flag.	 This format follows
      the pax interchange format closely, using some SCHILY tags and introduc‐
-     ing new keywords to store sparse file information.  There have been three
+     ing new keywords to store sparse file information.	 There have been three
      iterations of the sparse file support, referred to as “0.0”, “0.1”, and
      “1.0”.
 
@@ -552,7 +552,7 @@ DESCRIPTION
 	     to indicate the number of blocks in the file, a pair of
 	     GNU.sparse.offset and GNU.sparse.numbytes to indicate the offset
 	     and size of each block, and a single GNU.sparse.size to indicate
-	     the full size of the file.  This is not the same as the size in
+	     the full size of the file.	 This is not the same as the size in
 	     the tar header because the latter value does not include the size
 	     of any holes.  This format required that the order of attributes
 	     be preserved and relied on readers accepting multiple appearances
@@ -623,7 +623,7 @@ DESCRIPTION
 
    Summary of tar type codes
      The following list is a condensed summary of the type codes used in tar
-     header records generated by different tar implementations.  More details
+     header records generated by different tar implementations.	 More details
      about specific implementations can be found above:
      NUL  Early tar programs stored a zero byte for regular files.
      0	  POSIX standard type code for a regular file.
@@ -656,7 +656,7 @@ STANDARDS
      The tar utility is no longer a part of POSIX or the Single Unix Standard.
      It last appeared in Version 2 of the Single UNIX Specification (“SUSv2”).
      It has been supplanted in subsequent standards by pax(1).	The ustar for‐
-     mat is currently part of the specification for the pax(1) utility.  The
+     mat is currently part of the specification for the pax(1) utility.	 The
      pax interchange file format is new with IEEE Std 1003.1-2001 (“POSIX.1”).
 
 HISTORY

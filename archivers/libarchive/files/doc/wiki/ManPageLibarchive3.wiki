@@ -34,30 +34,40 @@ GNU-format tar archives,
 </li><li> 
 most common cpio archive formats, 
 </li><li> 
-ISO9660 CD images (including RockRidge and Joliet extensions), 
-</li><li> 
-Zip archives, 
+7-Zip archives, 
 </li><li> 
 ar archives (including GNU/SysV and BSD extensions), 
 </li><li> 
 Microsoft CAB archives, 
 </li><li> 
+ISO9660 CD images (including RockRidge and Joliet extensions), 
+</li><li> 
 LHA archives, 
 </li><li> 
 mtree file tree descriptions, 
 </li><li> 
-RAR archives, 
+RAR and most RAR5 archives, 
 </li><li> 
-XAR archives. 
+WARC archives, 
+</li><li> 
+XAR archives, 
+</li><li> 
+Zip archives. 
 </li></ul> 
 The library automatically detects archives compressed with 
-[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
+[[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]], 
 [[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
-[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]], 
+[[grzip(1)|http://www.freebsd.org/cgi/man.cgi?query=grzip&sektion=1]], 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
+[[lrzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lrzip&sektion=1]], 
+[[lz4(1)|http://www.freebsd.org/cgi/man.cgi?query=lz4&sektion=1]], 
 [[lzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lzip&sektion=1]], 
+[[lzop(1)|http://www.freebsd.org/cgi/man.cgi?query=lzop&sektion=1]], 
+[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]], 
 or 
-[[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]] 
-and decompresses them transparently. 
+[[zstd(1)|http://www.freebsd.org/cgi/man.cgi?query=zstd&sektion=1]] 
+and decompresses them transparently. Decompression of some formats 
+requires external decompressor utilities. 
 It can similarly detect and decode archives processed with 
 [[uuencode(1)|http://www.freebsd.org/cgi/man.cgi?query=uuencode&sektion=1]] 
 or which have an 
@@ -77,21 +87,21 @@ POSIX
 "pax interchange format" 
 archives, 
 </li><li> 
-POSIX octet-oriented cpio archives, 
-</li><li> 
-Zip archive, 
-</li><li> 
-two different variants of shar archives, 
-</li><li> 
-ISO9660 CD images, 
+cpio archives, 
 </li><li> 
 7-Zip archives, 
 </li><li> 
 ar archives, 
 </li><li> 
+two different variants of shar archives, 
+</li><li> 
+ISO9660 CD images, 
+</li><li> 
 mtree file tree descriptions, 
 </li><li> 
-XAR archives. 
+XAR archives, 
+</li><li> 
+Zip archive. 
 </li></ul> 
 Pax interchange format is an extension of the tar archive format that 
 eliminates essentially all of the limitations of historic tar formats 

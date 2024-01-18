@@ -37,7 +37,7 @@ SYNOPSIS
 
 DESCRIPTION
      These functions provide a complete API for creating objects on disk from
-     struct archive_entry descriptions.  They are most naturally used when ex‐
+     struct archive_entry descriptions.	 They are most naturally used when ex‐
      tracting objects from an archive using the archive_read() interface.  The
      general process is to read struct archive_entry objects from an archive,
      then write those objects to a struct archive object created using the
@@ -72,7 +72,7 @@ DESCRIPTION
 		     (Linux) or chflags(1) (FreeBSD, Mac OS X) for more infor‐
 		     mation on file attributes.
 	     ARCHIVE_EXTRACT_MAC_METADATA
-		     Mac OS X specific. Restore metadata using copyfile(3).
+		     Mac OS X specific.	 Restore metadata using copyfile(3).
 		     By default, copyfile(3) metadata is ignored.
 	     ARCHIVE_EXTRACT_NO_OVERWRITE
 		     Existing files on disk will not be overwritten.  By de‐
@@ -87,7 +87,7 @@ DESCRIPTION
 	     ARCHIVE_EXTRACT_PERM
 		     Full permissions (including SGID, SUID, and sticky bits)
 		     should be restored exactly as specified, without obeying
-		     the current umask.  Note that SUID and SGID bits can only
+		     the current umask.	 Note that SUID and SGID bits can only
 		     be restored if the user and group ID of the object on
 		     disk are correct.	If ARCHIVE_EXTRACT_OWNER is not speci‐
 		     fied, then SUID and SGID bits will only be restored if
@@ -95,6 +95,11 @@ DESCRIPTION
 		     on disk happen to match those specified in the archive
 		     entry.  By default, only basic permissions are restored,
 		     and umask is obeyed.
+	     ARCHIVE_EXTRACT_SAFE_WRITES
+		     Extract files atomically, by first creating a unique tem‐
+		     porary file and then renaming it to its required destina‐
+		     tion name.	 This avoids a race where an application might
+		     see a partial file (or no file) during extraction.
 	     ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS
 		     Refuse to extract an absolute path.  The default is to
 		     not refuse such paths.
@@ -109,15 +114,14 @@ DESCRIPTION
 		     help guard against a variety of mischief caused by ar‐
 		     chives that (deliberately or otherwise) extract files
 		     outside of the current directory.	The default is not to
-		     perform this check.  If
+		     perform this check.  If ARCHIVE_EXTRACT_UNLINK is speci‐
+		     fied together with this option, the library will remove
+		     any intermediate symlinks it finds and return an error
+		     only if such symlink could not be removed.
 	     ARCHIVE_EXTRACT_SPARSE
 		     Scan data for blocks of NUL bytes and try to recreate
 		     them with holes.  This results in sparse files, indepen‐
 		     dent of whether the archive format supports or uses them.
-		     ARCHIVE_EXTRACT_UNLINK is specified together with this
-		     option, the library will remove any intermediate symlinks
-		     it finds and return an error only if such symlink could
-		     not be removed.
 	     ARCHIVE_EXTRACT_TIME
 		     The timestamps (mtime, ctime, and atime) should be re‐
 		     stored.  By default, they are ignored.  Note that restor‐
@@ -152,11 +156,11 @@ DESCRIPTION
 	     This convenience function installs a standard set of user and
 	     group lookup functions.  These functions use getpwnam(3) and
 	     getgrnam(3) to convert names to ids, defaulting to the ids if the
-	     names cannot be looked up.  These functions also implement a sim‐
+	     names cannot be looked up.	 These functions also implement a sim‐
 	     ple memory cache to reduce the number of calls to getpwnam(3) and
 	     getgrnam(3).
      More information about the struct archive object and the overall design
-     of the library can be found in the libarchive(3) overview.  Many of these
+     of the library can be found in the libarchive(3) overview.	 Many of these
      functions are also documented under archive_write(3).
 
 RETURN VALUES
@@ -178,7 +182,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     archive_read(3), archive_write(3), tar(1), libarchive(3)
+     tar(1), archive_read(3), archive_write(3), libarchive(3)
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.  The
@@ -189,7 +193,7 @@ AUTHORS
      The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BUGS
-     Directories are actually extracted in two distinct phases.  Directories
+     Directories are actually extracted in two distinct phases.	 Directories
      are created during archive_write_header(), but final permissions are not
      set until archive_write_close().  This separation is necessary to cor‐
      rectly handle borderline cases such as a non-writable directory contain‐
@@ -202,7 +206,7 @@ BUGS
 
      The library attempts to create objects with filenames longer than
      PATH_MAX by creating prefixes of the full path and changing the current
-     directory.  Currently, this logic is limited in scope; the fixup pass
+     directory.	 Currently, this logic is limited in scope; the fixup pass
      does not work correctly for such objects and the symlink security check
      option disables the support for very long pathnames.
 
@@ -212,14 +216,14 @@ BUGS
      with a single request.  Of course, this does not work if the
      ARCHIVE_EXTRACT_NODOTDOT option is specified.
 
-     Implicit directories are always created obeying the current umask.  Ex‐
+     Implicit directories are always created obeying the current umask.	 Ex‐
      plicit objects are created obeying the current umask unless
      ARCHIVE_EXTRACT_PERM is specified, in which case they current umask is
      ignored.
 
      SGID and SUID bits are restored only if the correct user and group could
      be set.  If ARCHIVE_EXTRACT_OWNER is not specified, then no attempt is
-     made to set the ownership.  In this case, SGID and SUID bits are restored
+     made to set the ownership.	 In this case, SGID and SUID bits are restored
      only if the user and group of the final object happen to match those
      specified in the entry.
 
@@ -231,4 +235,4 @@ BUGS
      There should be a corresponding archive_read_disk interface that walks a
      directory hierarchy and returns archive entry objects.
 
-BSD				 April 3, 2017				   BSD
+BSD			       January 19, 2020				   BSD

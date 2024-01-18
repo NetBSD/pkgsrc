@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.1.1.4 2019/09/22 09:51:28 joerg Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.1.1.5 2024/01/18 17:37:42 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -37,7 +37,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: archive_pack_dev.c,v 1.1.1.4 2019/09/22 09:51:28 joerg Exp $");
+__RCSID("$NetBSD: archive_pack_dev.c,v 1.1.1.5 2024/01/18 17:37:42 adam Exp $");
 #endif /* not lint */
 
 #ifdef HAVE_LIMITS_H
@@ -57,11 +57,12 @@ __RCSID("$NetBSD: archive_pack_dev.c,v 1.1.1.4 2019/09/22 09:51:28 joerg Exp $")
 #ifdef HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
-#ifdef HAVE_SYS_SYSMACROS_H
-#include <sys/sysmacros.h>
-#endif
-#ifdef HAVE_SYS_MKDEV_H
+#if MAJOR_IN_MKDEV
 #include <sys/mkdev.h>
+#define HAVE_MAJOR
+#elif MAJOR_IN_SYSMACROS
+#include <sys/sysmacros.h>
+#define HAVE_MAJOR
 #endif
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
@@ -76,7 +77,7 @@ static	pack_t	pack_12_20;
 static	pack_t	pack_14_18;
 static	pack_t	pack_8_24;
 static	pack_t	pack_bsdos;
-static	int	compare_format(const void *, const void *);
+static	int	__LA_LIBC_CC compare_format(const void *, const void *);
 
 static const char iMajorError[] = "invalid major number";
 static const char iMinorError[] = "invalid minor number";
@@ -309,6 +310,7 @@ static const struct format {
 };
 
 static int
+__LA_LIBC_CC
 compare_format(const void *key, const void *element)
 {
 	const char		*name;

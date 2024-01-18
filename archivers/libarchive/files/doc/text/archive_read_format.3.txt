@@ -113,8 +113,8 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read_data(3), archive_read_filter(3),
-     archive_read_set_options(3), archive_util(3), tar(5)
+     tar(1), archive_read_data(3), archive_read_filter(3),
+     archive_read_set_options(3), archive_util(3), libarchive(3), tar(5)
 
 BUGS
      Many traditional archiver programs treat empty files as valid empty ar‐
@@ -126,4 +126,4 @@ BUGS
      Using the “raw” handler together with any other handler will often work
      but can produce surprising results.
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

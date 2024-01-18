@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:16 2019 -->
+<!-- CreationDate: Mon Sep 11 22:06:20 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -142,12 +142,12 @@ code.</p>
 <p><b>archive_compression</b>()</p>
 
 <p style="margin-left:17%;">Synonym for
-<b>archive_filter_code(a,</b>(<i>0)</i>).</p>
+<b>archive_filter_code</b>(<i>a</i>, <i>0</i>).</p>
 
 <p><b>archive_compression_name</b>()</p>
 
 <p style="margin-left:17%;">Synonym for
-<b>archive_filter_name(a,</b>(<i>0)</i>).</p>
+<b>archive_filter_name</b>(<i>a</i>, <i>0</i>).</p>
 
 <p><b>archive_copy_error</b>()</p>
 
@@ -202,13 +202,13 @@ when reading a uuencoded gzipped tar archive, there are
 three filters: filter 0 is the gunzip filter, filter 1 is
 the uudecode filter, and filter 2 is the pseudo-filter that
 wraps the archive read functions. In this case, requesting
-<b>archive_position(a,</b>(<i>-1)</i>) would be a synonym
-for <b>archive_position(a,</b>(<i>2)</i>) which would return
-the number of bytes currently read from the archive, while
-<b>archive_position(a,</b>(<i>1)</i>) would return the
-number of bytes after uudecoding, and
-<b>archive_position(a,</b>(<i>0)</i>) would return the
-number of bytes after decompression.</p>
+<b>archive_position</b>(<i>a</i>, <i>-1</i>) would be a
+synonym for <b>archive_position</b>(<i>a</i>, <i>2</i>)
+which would return the number of bytes currently read from
+the archive, while <b>archive_position</b>(<i>a</i>,
+<i>1</i>) would return the number of bytes after uudecoding,
+and <b>archive_position</b>(<i>a</i>, <i>0</i>) would return
+the number of bytes after decompression.</p>
 
 <p><b>archive_filter_name</b>()</p>
 
@@ -237,10 +237,10 @@ format of the current entry.</p>
 
 <p style="margin-left:17%;">Returns the number of bytes
 read from or written to the indicated filter. In particular,
-<b>archive_position(a,</b>(<i>0)</i>) returns the number of
-bytes read or written by the format handler, while
-<b>archive_position(a,</b>(<i>-1)</i>) returns the number of
-bytes read or written to the archive. See
+<b>archive_position</b>(<i>a</i>, <i>0</i>) returns the
+number of bytes read or written by the format handler, while
+<b>archive_position</b>(<i>a</i>, <i>-1</i>) returns the
+number of bytes read or written to the archive. See
 <b>archive_filter_count</b>() for details of the numbering
 here.</p>
 

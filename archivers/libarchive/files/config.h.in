@@ -30,6 +30,9 @@
 /* MD5 via ARCHIVE_CRYPTO_MD5_LIBSYSTEM supported. */
 #undef ARCHIVE_CRYPTO_MD5_LIBSYSTEM
 
+/* MD5 via ARCHIVE_CRYPTO_MD5_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_MD5_MBEDTLS
+
 /* MD5 via ARCHIVE_CRYPTO_MD5_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_MD5_NETTLE
 
@@ -45,6 +48,9 @@
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_LIBMD supported. */
 #undef ARCHIVE_CRYPTO_RMD160_LIBMD
 
+/* RMD160 via ARCHIVE_CRYPTO_RMD160_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_RMD160_MBEDTLS
+
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_RMD160_NETTLE
 
@@ -59,6 +65,9 @@
 
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_LIBSYSTEM supported. */
 #undef ARCHIVE_CRYPTO_SHA1_LIBSYSTEM
+
+/* SHA1 via ARCHIVE_CRYPTO_SHA1_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_SHA1_MBEDTLS
 
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_SHA1_NETTLE
@@ -84,6 +93,9 @@
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_LIBSYSTEM supported. */
 #undef ARCHIVE_CRYPTO_SHA256_LIBSYSTEM
 
+/* SHA256 via ARCHIVE_CRYPTO_SHA256_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_SHA256_MBEDTLS
+
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_SHA256_NETTLE
 
@@ -104,6 +116,9 @@
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_LIBSYSTEM supported. */
 #undef ARCHIVE_CRYPTO_SHA384_LIBSYSTEM
+
+/* SHA384 via ARCHIVE_CRYPTO_SHA384_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_SHA384_MBEDTLS
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_SHA384_NETTLE
@@ -128,6 +143,9 @@
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_LIBSYSTEM supported. */
 #undef ARCHIVE_CRYPTO_SHA512_LIBSYSTEM
+
+/* SHA512 via ARCHIVE_CRYPTO_SHA512_MBEDTLS supported. */
+#undef ARCHIVE_CRYPTO_SHA512_MBEDTLS
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_NETTLE supported. */
 #undef ARCHIVE_CRYPTO_SHA512_NETTLE
@@ -158,6 +176,9 @@
 
 /* Version number of bsdtar */
 #undef BSDTAR_VERSION_STRING
+
+/* Version number of bsdunzip */
+#undef BSDUNZIP_VERSION_STRING
 
 /* Define to 1 if the system has the type `ace_t'. */
 #undef HAVE_ACE_T
@@ -296,6 +317,9 @@
 
 /* Define to 1 if you have the `chroot' function. */
 #undef HAVE_CHROOT
+
+/* cmtime_s function */
+#undef HAVE_CMTIME_S
 
 /* Define to 1 if you have the <copyfile.h> header file. */
 #undef HAVE_COPYFILE_H
@@ -496,6 +520,12 @@
 /* Define to 1 if you have the `flistxattr' function. */
 #undef HAVE_FLISTXATTR
 
+/* Define to 1 if you have the `fnmatch' function. */
+#undef HAVE_FNMATCH
+
+/* Define to 1 if you have the <fnmatch.h> header file. */
+#undef HAVE_FNMATCH_H
+
 /* Define to 1 if you have the `fork' function. */
 #undef HAVE_FORK
 
@@ -544,6 +574,9 @@
 /* Define to 1 if you have the `getgrnam_r' function. */
 #undef HAVE_GETGRNAM_R
 
+/* Define to 1 if you have the `getline' function. */
+#undef HAVE_GETLINE
+
 /* Define to 1 if you have the `getpid' function. */
 #undef HAVE_GETPID
 
@@ -561,6 +594,9 @@
 
 /* Define to 1 if you have the `gmtime_r' function. */
 #undef HAVE_GMTIME_R
+
+/* gmtime_s function */
+#undef HAVE_GMTIME_S
 
 /* Define to 1 if you have the <grp.h> header file. */
 #undef HAVE_GRP_H
@@ -613,12 +649,6 @@
 /* Define to 1 if you have the `crypto' library (-lcrypto). */
 #undef HAVE_LIBCRYPTO
 
-/* Define to 1 if you have the `eay32' library (-leay32). */
-#undef HAVE_LIBEAY32
-
-/* Define to 1 if you have the `eay64' library (-leay64). */
-#undef HAVE_LIBEAY64
-
 /* Define to 1 if you have the `expat' library (-lexpat). */
 #undef HAVE_LIBEXPAT
 
@@ -630,6 +660,9 @@
 
 /* Define to 1 if you have the `lzo2' library (-llzo2). */
 #undef HAVE_LIBLZO2
+
+/* Define to 1 if you have the `mbedcrypto' library (-lmbedcrypto). */
+#undef HAVE_LIBMBEDCRYPTO
 
 /* Define to 1 if you have the `md' library (-lmd). */
 #undef HAVE_LIBMD
@@ -664,11 +697,18 @@
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #undef HAVE_LIBZSTD
 
+/* Define to 1 if you have the `zstd' library (-lzstd) with compression
+   support. */
+#undef HAVE_LIBZSTD_COMPRESSOR
+
 /* Define to 1 if you have the <limits.h> header file. */
 #undef HAVE_LIMITS_H
 
 /* Define to 1 if you have the `link' function. */
 #undef HAVE_LINK
+
+/* Define to 1 if you have the `linkat' function. */
+#undef HAVE_LINKAT
 
 /* Define to 1 if you have the <linux/fiemap.h> header file. */
 #undef HAVE_LINUX_FIEMAP_H
@@ -706,6 +746,9 @@
 /* Define to 1 if you have the `localtime_r' function. */
 #undef HAVE_LOCALTIME_R
 
+/* localtime_s function */
+#undef HAVE_LOCALTIME_S
+
 /* Define to 1 if the system has the type `long long int'. */
 #undef HAVE_LONG_LONG_INT
 
@@ -731,6 +774,9 @@
 /* Define to 1 if you have the <lz4.h> header file. */
 #undef HAVE_LZ4_H
 
+/* Define to 1 if you have the `LZMA_FILTER_ARM64' macro. */
+#undef HAVE_LZMA_FILTER_ARM64
+
 /* Define to 1 if you have the <lzma.h> header file. */
 #undef HAVE_LZMA_H
 
@@ -742,6 +788,15 @@
 
 /* Define to 1 if you have the <lzo/lzoconf.h> header file. */
 #undef HAVE_LZO_LZOCONF_H
+
+/* Define to 1 if you have the <mbedtls/aes.h> header file. */
+#undef HAVE_MBEDTLS_AES_H
+
+/* Define to 1 if you have the <mbedtls/md.h> header file. */
+#undef HAVE_MBEDTLS_MD_H
+
+/* Define to 1 if you have the <mbedtls/pkcs5.h> header file. */
+#undef HAVE_MBEDTLS_PKCS5_H
 
 /* Define to 1 if you have the `mbrtowc' function. */
 #undef HAVE_MBRTOWC
@@ -764,11 +819,11 @@
 /* Define to 1 if you have the `memmove' function. */
 #undef HAVE_MEMMOVE
 
-/* Define to 1 if you have the <memory.h> header file. */
-#undef HAVE_MEMORY_H
-
 /* Define to 1 if you have the `memset' function. */
 #undef HAVE_MEMSET
+
+/* Define to 1 if you have the <minix/config.h> header file. */
+#undef HAVE_MINIX_CONFIG_H
 
 /* Define to 1 if you have the `mkdir' function. */
 #undef HAVE_MKDIR
@@ -927,6 +982,9 @@
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
 
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
+
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H
 
@@ -939,7 +997,7 @@
 /* Define to 1 if you have the `strerror' function. */
 #undef HAVE_STRERROR
 
-/* Define to 1 if you have the `strerror_r' function. */
+/* Define if you have `strerror_r'. */
 #undef HAVE_STRERROR_R
 
 /* Define to 1 if you have the `strftime' function. */
@@ -954,6 +1012,9 @@
 /* Define to 1 if you have the `strncpy_s' function. */
 #undef HAVE_STRNCPY_S
 
+/* Define to 1 if you have the `strnlen' function. */
+#undef HAVE_STRNLEN
+
 /* Define to 1 if you have the `strrchr' function. */
 #undef HAVE_STRRCHR
 
@@ -962,6 +1023,12 @@
 
 /* Define to 1 if the system has the type `struct richacl'. */
 #undef HAVE_STRUCT_RICHACL
+
+/* Define to 1 if the system has the type `struct statfs'. */
+#undef HAVE_STRUCT_STATFS
+
+/* Define to 1 if `f_iosize' is a member of `struct statfs'. */
+#undef HAVE_STRUCT_STATFS_F_IOSIZE
 
 /* Define to 1 if `f_namemax' is a member of `struct statfs'. */
 #undef HAVE_STRUCT_STATFS_F_NAMEMAX
@@ -1045,6 +1112,9 @@
 
 /* Define to 1 if you have the <sys/poll.h> header file. */
 #undef HAVE_SYS_POLL_H
+
+/* Define to 1 if you have the <sys/queue.h> header file. */
+#undef HAVE_SYS_QUEUE_H
 
 /* Define to 1 if you have the <sys/richacl.h> header file. */
 #undef HAVE_SYS_RICHACL_H
@@ -1184,20 +1254,14 @@
 /* Define to 1 if you have the <zstd.h> header file. */
 #undef HAVE_ZSTD_H
 
-/* Define to 1 if you have the `_ctime64_s' function. */
-#undef HAVE__CTIME64_S
-
 /* Define to 1 if you have the `_fseeki64' function. */
 #undef HAVE__FSEEKI64
 
 /* Define to 1 if you have the `_get_timezone' function. */
 #undef HAVE__GET_TIMEZONE
 
-/* Define to 1 if you have the `_localtime64_s' function. */
-#undef HAVE__LOCALTIME64_S
-
-/* Define to 1 if you have the `_mkgmtime64' function. */
-#undef HAVE__MKGMTIME64
+/* _mkgmtime function */
+#undef HAVE__MKGMTIME
 
 /* Define as const if the declaration of iconv() needs const. */
 #undef ICONV_CONST
@@ -1250,37 +1314,108 @@
 /* Define to 1 if PCRE_STATIC needs to be defined. */
 #undef PCRE_STATIC
 
+/* The number of bytes in type int */
+#undef SIZEOF_INT
+
+/* The number of bytes in type long */
+#undef SIZEOF_LONG
+
 /* The size of `wchar_t', as computed by sizeof. */
 #undef SIZEOF_WCHAR_T
 
-/* Define to 1 if you have the ANSI C header files. */
+/* Define to 1 if all of the C90 standard headers exist (not just the ones
+   required in a freestanding environment). This macro is provided for
+   backward compatibility; new code need not use it. */
 #undef STDC_HEADERS
 
 /* Define to 1 if strerror_r returns char *. */
 #undef STRERROR_R_CHAR_P
 
-/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
-#undef TIME_WITH_SYS_TIME
-
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
 # undef _ALL_SOURCE
+#endif
+/* Enable general extensions on macOS.  */
+#ifndef _DARWIN_C_SOURCE
+# undef _DARWIN_C_SOURCE
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# undef __EXTENSIONS__
 #endif
 /* Enable GNU extensions on systems that have them.  */
 #ifndef _GNU_SOURCE
 # undef _GNU_SOURCE
 #endif
-/* Enable threading extensions on Solaris.  */
+/* Enable X/Open compliant socket functions that do not require linking
+   with -lxnet on HP-UX 11.11.  */
+#ifndef _HPUX_ALT_XOPEN_SOCKET_API
+# undef _HPUX_ALT_XOPEN_SOCKET_API
+#endif
+/* Identify the host operating system as Minix.
+   This macro does not affect the system headers' behavior.
+   A future release of Autoconf may stop defining this macro.  */
+#ifndef _MINIX
+# undef _MINIX
+#endif
+/* Enable general extensions on NetBSD.
+   Enable NetBSD compatibility extensions on Minix.  */
+#ifndef _NETBSD_SOURCE
+# undef _NETBSD_SOURCE
+#endif
+/* Enable OpenBSD compatibility extensions on NetBSD.
+   Oddly enough, this does nothing on OpenBSD.  */
+#ifndef _OPENBSD_SOURCE
+# undef _OPENBSD_SOURCE
+#endif
+/* Define to 1 if needed for POSIX-compatible behavior.  */
+#ifndef _POSIX_SOURCE
+# undef _POSIX_SOURCE
+#endif
+/* Define to 2 if needed for POSIX-compatible behavior.  */
+#ifndef _POSIX_1_SOURCE
+# undef _POSIX_1_SOURCE
+#endif
+/* Enable POSIX-compatible threading on Solaris.  */
 #ifndef _POSIX_PTHREAD_SEMANTICS
 # undef _POSIX_PTHREAD_SEMANTICS
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-5:2014.  */
+#ifndef __STDC_WANT_IEC_60559_ATTRIBS_EXT__
+# undef __STDC_WANT_IEC_60559_ATTRIBS_EXT__
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-1:2014.  */
+#ifndef __STDC_WANT_IEC_60559_BFP_EXT__
+# undef __STDC_WANT_IEC_60559_BFP_EXT__
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-2:2015.  */
+#ifndef __STDC_WANT_IEC_60559_DFP_EXT__
+# undef __STDC_WANT_IEC_60559_DFP_EXT__
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-4:2015.  */
+#ifndef __STDC_WANT_IEC_60559_FUNCS_EXT__
+# undef __STDC_WANT_IEC_60559_FUNCS_EXT__
+#endif
+/* Enable extensions specified by ISO/IEC TS 18661-3:2015.  */
+#ifndef __STDC_WANT_IEC_60559_TYPES_EXT__
+# undef __STDC_WANT_IEC_60559_TYPES_EXT__
+#endif
+/* Enable extensions specified by ISO/IEC TR 24731-2:2010.  */
+#ifndef __STDC_WANT_LIB_EXT2__
+# undef __STDC_WANT_LIB_EXT2__
+#endif
+/* Enable extensions specified by ISO/IEC 24747:2009.  */
+#ifndef __STDC_WANT_MATH_SPEC_FUNCS__
+# undef __STDC_WANT_MATH_SPEC_FUNCS__
 #endif
 /* Enable extensions on HP NonStop.  */
 #ifndef _TANDEM_SOURCE
 # undef _TANDEM_SOURCE
 #endif
-/* Enable general extensions on Solaris.  */
-#ifndef __EXTENSIONS__
-# undef __EXTENSIONS__
+/* Enable X/Open extensions.  Define to 500 only if necessary
+   to make mbstate_t available.  */
+#ifndef _XOPEN_SOURCE
+# undef _XOPEN_SOURCE
 #endif
 
 
@@ -1290,11 +1425,6 @@
 /* Define to '0x0502' for Windows Server 2003 APIs. */
 #undef WINVER
 
-/* Enable large inode numbers on Mac OS X 10.5.  */
-#ifndef _DARWIN_USE_64_BIT_INODE
-# define _DARWIN_USE_64_BIT_INODE 1
-#endif
-
 /* Number of bits in a file offset, on hosts where this is settable. */
 #undef _FILE_OFFSET_BITS
 
@@ -1303,16 +1433,6 @@
 
 /* Define for large files, on AIX-style hosts. */
 #undef _LARGE_FILES
-
-/* Define to 1 if on MINIX. */
-#undef _MINIX
-
-/* Define to 2 if the system does not provide POSIX.1 features except with
-   this defined. */
-#undef _POSIX_1_SOURCE
-
-/* Define to 1 if you need to in order for `stat' and other things to work. */
-#undef _POSIX_SOURCE
 
 /* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
    <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
@@ -1331,6 +1451,9 @@
 
 /* Define to '0x0502' for Windows Server 2003 APIs. */
 #undef _WIN32_WINNT
+
+/* Internal macro for sanity checks */
+#undef __LIBARCHIVE_CONFIG_H_INCLUDED
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const

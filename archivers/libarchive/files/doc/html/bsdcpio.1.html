@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:19 2019 -->
+<!-- CreationDate: Mon Sep 11 22:06:22 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -80,6 +80,18 @@ modes.</p>
 <p style="margin-left:17%;">Read filenames separated by NUL
 characters instead of newlines. This is necessary if any of
 the filenames being read might contain newlines.</p>
+
+<p style="margin-top: 1em"><b>-6</b>, <b>--pwb</b></p>
+
+<p style="margin-left:17%;">When reading a binary format
+archive, assume it&rsquo;s the earlier one, from the PWB
+variant of 6th Edition UNIX. When writing a cpio archive,
+use the PWB format.</p>
+
+<p style="margin-top: 1em"><b>-7</b>, <b>--binary</b></p>
+
+<p style="margin-left:17%;">(o mode only) When writing a
+cpio archive, use the (newer, non-PWB) binary format.</p>
 
 <p style="margin-top: 1em"><b>-A</b></p>
 
@@ -458,8 +470,8 @@ limit themselves to the standard syntax.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">bzip2(1), tar(1), gzip(1),
-mt(1), pax(1), libarchive(3), cpio(5),
+<p style="margin-left:6%;">bzip2(1), gzip(1), mt(1),
+pax(1), tar(1), libarchive(3), cpio(5),
 libarchive-formats(5), tar(5)</p>
 
 <p style="margin-top: 1em"><b>STANDARDS</b></p>

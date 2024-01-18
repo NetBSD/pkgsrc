@@ -322,8 +322,8 @@ as a dedicated ZIP program.
 [[ManPageArchiveEntry3]], 
 [[ManPageArchiveRead3]], 
 [[ManPageArchiveWrite3]], 
-[[ManPageArchiveWriteDisk3]] 
-[[ManPageLibarchive3]], 
+[[ManPageArchiveWriteDisk3]], 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

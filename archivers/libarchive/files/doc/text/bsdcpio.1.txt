@@ -1,4 +1,4 @@
-CPIO(1) 		  BSD General Commands Manual		       CPIO(1)
+CPIO(1)			  BSD General Commands Manual		       CPIO(1)
 
 NAME
      cpio — copy files to and from archives
@@ -14,15 +14,15 @@ DESCRIPTION
      and can create tar, pax, cpio, ar, and shar archives.
 
      The first option to cpio is a mode indicator from the following list:
-     -i      Input.  Read an archive from standard input (unless overridden)
+     -i	     Input.  Read an archive from standard input (unless overridden)
 	     and extract the contents to disk or (if the -t option is speci‐
 	     fied) list the contents to standard output.  If one or more file
 	     patterns are specified, only files matching one of the patterns
 	     will be extracted.
-     -o      Output.  Read a list of filenames from standard input and produce
+     -o	     Output.  Read a list of filenames from standard input and produce
 	     a new archive on standard output (unless overridden) containing
 	     the specified items.
-     -p      Pass-through.  Read a list of filenames from standard input and
+     -p	     Pass-through.  Read a list of filenames from standard input and
 	     copy the files to the specified directory.
 
 OPTIONS
@@ -34,17 +34,26 @@ OPTIONS
 	     This is necessary if any of the filenames being read might con‐
 	     tain newlines.
 
-     -A      (o mode only) Append to the specified archive.  (Not yet imple‐
+     -6, --pwb
+	     When reading a binary format archive, assume it's the earlier
+	     one, from the PWB variant of 6th Edition UNIX.  When writing a
+	     cpio archive, use the PWB format.
+
+     -7, --binary
+	     (o mode only) When writing a cpio archive, use the (newer, non-
+	     PWB) binary format.
+
+     -A	     (o mode only) Append to the specified archive.  (Not yet imple‐
 	     mented.)
 
-     -a      (o and p modes) Reset access times on files after they are read.
+     -a	     (o and p modes) Reset access times on files after they are read.
 
-     -B      (o mode only) Block output to records of 5120 bytes.
+     -B	     (o mode only) Block output to records of 5120 bytes.
 
      -C size
 	     (o mode only) Block output to records of size bytes.
 
-     -c      (o mode only) Use the old POSIX portable character format.
+     -c	     (o mode only) Use the old POSIX portable character format.
 	     Equivalent to --format odc.
 
      -d, --make-directories
@@ -71,7 +80,7 @@ OPTIONS
 		      mat.
 	     ustar    The POSIX.1 tar format.
 
-	     The default format is odc.  See libarchive-formats(5) for more
+	     The default format is odc.	 See libarchive-formats(5) for more
 	     complete information about the formats currently supported by the
 	     underlying libarchive(3) library.
 
@@ -91,12 +100,12 @@ OPTIONS
 
      -J, --xz
 	     (o mode only) Compress the file with xz-compatible compression
-	     before writing it.  In input mode, this option is ignored; xz
+	     before writing it.	 In input mode, this option is ignored; xz
 	     compression is recognized automatically on input.
 
-     -j      Synonym for -y.
+     -j	     Synonym for -y.
 
-     -L      (o and p modes) All symbolic links will be followed.  Normally,
+     -L	     (o and p modes) All symbolic links will be followed.  Normally,
 	     symbolic links are archived and copied as symbolic links.	With
 	     this option, the target of the link will be archived or copied
 	     instead.
@@ -118,10 +127,10 @@ OPTIONS
 	     zstd compression is recognized automatically on input.
 
      --lzma  (o mode only) Compress the file with lzma-compatible compression
-	     before writing it.  In input mode, this option is ignored; lzma
+	     before writing it.	 In input mode, this option is ignored; lzma
 	     compression is recognized automatically on input.
 
-     --lzop  (o mode only) Compress the resulting archive with lzop(1).  In
+     --lzop  (o mode only) Compress the resulting archive with lzop(1).	 In
 	     input mode, this option is ignored.
 
      --passphrase passphrase
@@ -151,7 +160,7 @@ OPTIONS
 	     Output mode.  See above for description.
 
      -p, --pass-through
-	     Pass-through mode.  See above for description.
+	     Pass-through mode.	 See above for description.
 
      --preserve-owner
 	     (i mode only) Restore file ownership.  This is the default when
@@ -161,17 +170,17 @@ OPTIONS
 	     Suppress unnecessary messages.
 
      -R [user][:][group], --owner [user][:][group]
-	     Set the owner and/or group on files in the output.  If group is
+	     Set the owner and/or group on files in the output.	 If group is
 	     specified with no user (for example, -R :wheel) then the group
 	     will be set but not the user.  If the user is specified with a
 	     trailing colon and no group (for example, -R root:) then the
 	     group will be set to the user's default group.  If the user is
 	     specified with no trailing colon, then the user will be set but
 	     not the group.  In -i and -p modes, this option can only be used
-	     by the super-user.  (For compatibility, a period can be used in
+	     by the super-user.	 (For compatibility, a period can be used in
 	     place of the colon.)
 
-     -r      (All modes.)  Rename files interactively.	For each file, a
+     -r	     (All modes.)  Rename files interactively.	For each file, a
 	     prompt is written to /dev/tty containing the name of the file and
 	     a line is read from /dev/tty.  If the line read is blank, the
 	     file is skipped.  If the line contains a single period, the file
@@ -197,15 +206,15 @@ OPTIONS
      --version
 	     Print the program version information and exit.
 
-     -y      (o mode only) Compress the archive with bzip2-compatible compres‐
+     -y	     (o mode only) Compress the archive with bzip2-compatible compres‐
 	     sion before writing it.  In input mode, this option is ignored;
 	     bzip2 compression is recognized automatically on input.
 
-     -Z      (o mode only) Compress the archive with compress-compatible com‐
+     -Z	     (o mode only) Compress the archive with compress-compatible com‐
 	     pression before writing it.  In input mode, this option is ig‐
 	     nored; compression is recognized automatically on input.
 
-     -z      (o mode only) Compress the archive with gzip-compatible compres‐
+     -z	     (o mode only) Compress the archive with gzip-compatible compres‐
 	     sion before writing it.  In input mode, this option is ignored;
 	     gzip compression is recognized automatically on input.
 
@@ -217,12 +226,12 @@ ENVIRONMENT
 
      LANG	The locale to use.  See environ(7) for more information.
 
-     TZ 	The timezone to use when displaying dates.  See environ(7) for
+     TZ		The timezone to use when displaying dates.  See environ(7) for
 		more information.
 
 EXAMPLES
      The cpio command is traditionally used to copy file hierarchies in con‐
-     junction with the find(1) command.  The first example here simply copies
+     junction with the find(1) command.	 The first example here simply copies
      all files from src to dest:
 	   find src | cpio -pmud dest
 
@@ -251,7 +260,7 @@ COMPATIBILITY
      standard syntax.
 
 SEE ALSO
-     bzip2(1), tar(1), gzip(1), mt(1), pax(1), libarchive(3), cpio(5),
+     bzip2(1), gzip(1), mt(1), pax(1), tar(1), libarchive(3), cpio(5),
      libarchive-formats(5), tar(5)
 
 STANDARDS
@@ -276,8 +285,8 @@ BUGS
      The cpio archive format has several basic limitations: It does not store
      user and group names, only numbers.  As a result, it cannot be reliably
      used to transfer files between systems with dissimilar user and group
-     numbering.  Older cpio formats limit the user and group numbers to 16 or
-     18 bits, which is insufficient for modern systems.  The cpio archive for‐
+     numbering.	 Older cpio formats limit the user and group numbers to 16 or
+     18 bits, which is insufficient for modern systems.	 The cpio archive for‐
      mats cannot support files over 4 gigabytes, except for the “odc” variant,
      which can support files up to 8 gigabytes.
 

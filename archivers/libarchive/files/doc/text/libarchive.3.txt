@@ -20,31 +20,35 @@ OVERVIEW
      •	 the POSIX “pax interchange” format,
      •	 GNU-format tar archives,
      •	 most common cpio archive formats,
-     •	 ISO9660 CD images (including RockRidge and Joliet extensions),
-     •	 Zip archives,
+     •	 7-Zip archives,
      •	 ar archives (including GNU/SysV and BSD extensions),
      •	 Microsoft CAB archives,
+     •	 ISO9660 CD images (including RockRidge and Joliet extensions),
      •	 LHA archives,
      •	 mtree file tree descriptions,
-     •	 RAR archives,
-     •	 XAR archives.
-     The library automatically detects archives compressed with gzip(1),
-     bzip2(1), xz(1), lzip(1), or compress(1) and decompresses them transpar‐
-     ently.  It can similarly detect and decode archives processed with
-     uuencode(1) or which have an rpm(1) header.
+     •	 RAR and most RAR5 archives,
+     •	 WARC archives,
+     •	 XAR archives,
+     •	 Zip archives.
+     The library automatically detects archives compressed with compress(1),
+     bzip2(1), grzip(1), gzip(1), lrzip(1), lz4(1), lzip(1), lzop(1), xz(1),
+     or zstd(1) and decompresses them transparently. Decompression of some
+     formats requires external decompressor utilities.	It can similarly de‐
+     tect and decode archives processed with uuencode(1) or which have an
+     rpm(1) header.
 
      When writing an archive, you can specify the compression to be used and
-     the format to use.  The library can write
+     the format to use.	 The library can write
      •	 POSIX-standard “ustar” archives,
      •	 POSIX “pax interchange format” archives,
-     •	 POSIX octet-oriented cpio archives,
-     •	 Zip archive,
-     •	 two different variants of shar archives,
-     •	 ISO9660 CD images,
+     •	 cpio archives,
      •	 7-Zip archives,
      •	 ar archives,
+     •	 two different variants of shar archives,
+     •	 ISO9660 CD images,
      •	 mtree file tree descriptions,
-     •	 XAR archives.
+     •	 XAR archives,
+     •	 Zip archive.
      Pax interchange format is an extension of the tar archive format that
      eliminates essentially all of the limitations of historic tar formats in
      a standard fashion that is supported by POSIX-compliant pax(1) implemen‐
@@ -69,7 +73,7 @@ WRITING AN ARCHIVE
 
 WRITING ENTRIES TO DISK
      The archive_write_disk(3) API allows you to write archive_entry(3) ob‐
-     jects to disk using the same API used by archive_write(3).  The
+     jects to disk using the same API used by archive_write(3).	 The
      archive_write_disk(3) API is used internally by archive_read_extract();
      using it directly can provide greater control over how entries get writ‐
      ten to disk.  This API also makes it possible to share code between ar‐
@@ -97,7 +101,7 @@ DESCRIPTION
      Users familiar with historic formats should be aware that the newer vari‐
      ants have eliminated most restrictions on the length of textual fields.
      Clients should not assume that filenames, link names, user names, or
-     group names are limited in length.  In particular, pax interchange format
+     group names are limited in length.	 In particular, pax interchange format
      can easily accommodate pathnames in arbitrary character sets that exceed
      PATH_MAX.
 
@@ -115,7 +119,7 @@ RETURN VALUES
      cated and initialized struct archive object.
 
      archive_read_data() and archive_write_data() return a count of the number
-     of bytes actually read or written.  A value of zero indicates the end of
+     of bytes actually read or written.	 A value of zero indicates the end of
      the data for this entry.  A negative value indicates an error, in which
      case the archive_errno() and archive_error_string() functions can be used
      to obtain more information.

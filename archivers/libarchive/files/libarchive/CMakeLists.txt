@@ -5,6 +5,10 @@
 #
 ############################################
 
+if (ANDROID)
+  include_directories(${PROJECT_SOURCE_DIR}/contrib/android/include)
+endif()
+
 # Public headers
 SET(include_HEADERS
   archive.h
@@ -78,6 +82,7 @@ SET(libarchive_SOURCES
   archive_read_set_format.c
   archive_read_set_options.c
   archive_read_support_filter_all.c
+  archive_read_support_filter_by_code.c
   archive_read_support_filter_bzip2.c
   archive_read_support_filter_compress.c
   archive_read_support_filter_gzip.c
@@ -144,12 +149,15 @@ SET(libarchive_SOURCES
   archive_write_set_format_ar.c
   archive_write_set_format_by_name.c
   archive_write_set_format_cpio.c
+  archive_write_set_format_cpio_binary.c
   archive_write_set_format_cpio_newc.c
+  archive_write_set_format_cpio_odc.c
   archive_write_set_format_filter_by_ext.c
   archive_write_set_format_gnutar.c
   archive_write_set_format_iso9660.c
   archive_write_set_format_mtree.c
   archive_write_set_format_pax.c
+  archive_write_set_format_private.h
   archive_write_set_format_raw.c
   archive_write_set_format_shar.c
   archive_write_set_format_ustar.c
@@ -235,10 +243,12 @@ ELSEIF(ARCHIVE_ACL_SUNOS)
 ENDIF()
 
 # Libarchive is a shared library
-ADD_LIBRARY(archive SHARED ${libarchive_SOURCES} ${include_HEADERS})
-TARGET_INCLUDE_DIRECTORIES(archive PUBLIC .)
-TARGET_LINK_LIBRARIES(archive ${ADDITIONAL_LIBS})
-SET_TARGET_PROPERTIES(archive PROPERTIES SOVERSION ${SOVERSION})
+IF(BUILD_SHARED_LIBS)
+  ADD_LIBRARY(archive SHARED ${libarchive_SOURCES} ${include_HEADERS})
+  TARGET_INCLUDE_DIRECTORIES(archive PUBLIC .)
+  TARGET_LINK_LIBRARIES(archive ${ADDITIONAL_LIBS})
+  SET_TARGET_PROPERTIES(archive PROPERTIES SOVERSION ${SOVERSION})
+ENDIF(BUILD_SHARED_LIBS)
 
 # archive_static is a static library
 ADD_LIBRARY(archive_static STATIC ${libarchive_SOURCES} ${include_HEADERS})
@@ -246,13 +256,19 @@ TARGET_LINK_LIBRARIES(archive_static ${ADDITIONAL_LIBS})
 SET_TARGET_PROPERTIES(archive_static PROPERTIES COMPILE_DEFINITIONS
   LIBARCHIVE_STATIC)
 # On Posix systems, libarchive.so and libarchive.a can co-exist.
-IF(NOT WIN32 OR CYGWIN)
+IF(NOT WIN32 OR CYGWIN OR NOT BUILD_SHARED_LIBS)
   SET_TARGET_PROPERTIES(archive_static PROPERTIES OUTPUT_NAME archive)
-ENDIF(NOT WIN32 OR CYGWIN)
+ENDIF(NOT WIN32 OR CYGWIN OR NOT BUILD_SHARED_LIBS)
 
 IF(ENABLE_INSTALL)
   # How to install the libraries
-  INSTALL(TARGETS archive archive_static
+  IF(BUILD_SHARED_LIBS)
+    INSTALL(TARGETS archive
+            RUNTIME DESTINATION bin
+            LIBRARY DESTINATION lib
+            ARCHIVE DESTINATION lib)
+  ENDIF(BUILD_SHARED_LIBS)
+  INSTALL(TARGETS archive_static
           RUNTIME DESTINATION bin
           LIBRARY DESTINATION lib
           ARCHIVE DESTINATION lib)

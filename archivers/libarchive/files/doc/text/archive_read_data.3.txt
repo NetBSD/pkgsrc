@@ -1,7 +1,7 @@
 ARCHIVE_READ_DATA(3)	 BSD Library Functions Manual	  ARCHIVE_READ_DATA(3)
 
 NAME
-     archive_read_data archive_read_data_block, archive_read_data_skip,
+     archive_read_data, archive_read_data_block, archive_read_data_skip,
      archive_read_data_into_fd — functions for reading streaming archives
 
 LIBRARY
@@ -66,9 +66,8 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     tar(1), libarchive(3), archive_read(3), archive_read_extract(3),
-     archive_read_filter(3), archive_read_format(3), archive_read_header(3),
-     archive_read_open(3), archive_read_set_options(3), archive_util(3),
-     tar(5)
+     tar(1), archive_read(3), archive_read_extract(3), archive_read_filter(3),
+     archive_read_format(3), archive_read_header(3), archive_read_open(3),
+     archive_read_set_options(3), archive_util(3), libarchive(3), tar(5)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

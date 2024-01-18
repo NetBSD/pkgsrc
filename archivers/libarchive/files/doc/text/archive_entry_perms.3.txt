@@ -105,7 +105,7 @@ DESCRIPTION
      permission from the given entry.  The corresponding functions
      archive_entry_set_uid(), archive_entry_set_gid(), and
      archive_entry_set_perm() store the given user id, group id and permission
-     in the entry.  The permission is also set as side effect of calling
+     in the entry.  The permission is also set as a side effect of calling
      archive_entry_set_mode().
 
      archive_entry_strmode() returns a string representation of the permission
@@ -119,7 +119,7 @@ DESCRIPTION
      wchar_t *	Wide character strings in the current locale.  The accessor
 		functions are named XXX_w().
 
-     UTF-8	Unicode strings encoded as UTF-8.  This are convience func‐
+     UTF-8	Unicode strings encoded as UTF-8.  These are convenience func‐
 		tions to update both the multibyte and wide character strings
 		at the same time.
 
@@ -146,9 +146,9 @@ DESCRIPTION
      Converting a bitmap to a textual string is a platform-specific operation;
      bits that are not meaningful on the current platform will be ignored.
 
-     The canonical text format is a comma-separated list of flag names.  The
+     The canonical text format is a comma-separated list of flag names.	 The
      archive_entry_copy_fflags_text() and archive_entry_copy_fflags_text_w()
-     functions parse the provided text and sets the internal bitmap values.
+     functions parse the provided text and set the internal bitmap values.
      This is a platform-specific operation; names that are not meaningful on
      the current platform will be ignored.  The function returns a pointer to
      the start of the first name that was not recognized, or NULL if every
@@ -159,11 +159,11 @@ DESCRIPTION
 
 SEE ALSO
      archive_entry(3), archive_entry_acl(3), archive_read_disk(3),
-     archive_write_disk(3) libarchive(3),
+     archive_write_disk(3), libarchive(3)
 
 BUGS
      The platform types uid_t and gid_t are often 16 or 32 bit wide.  In this
      case it is possible that the ids can not be correctly restored from ar‐
      chives and get truncated.
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

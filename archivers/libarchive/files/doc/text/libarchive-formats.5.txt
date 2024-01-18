@@ -45,13 +45,13 @@ DESCRIPTION
 	     interchange format archives.  Pax interchange format archives are
 	     an extension of the older ustar format that adds a separate entry
 	     with additional attributes stored as key/value pairs immediately
-	     before each regular entry.  The presence of these additional en‐
+	     before each regular entry.	 The presence of these additional en‐
 	     tries is the only difference between pax interchange format and
 	     the older ustar format.  The extended attributes are of unlimited
 	     length and are stored as UTF-8 Unicode strings.  Keywords defined
 	     in the standard are in all lowercase; vendors are allowed to de‐
 	     fine custom keys by preceding them with the vendor name in all
-	     uppercase.  When writing pax archives, libarchive uses many of
+	     uppercase.	 When writing pax archives, libarchive uses many of
 	     the SCHILY keys defined by Joerg Schilling's “star” archiver and
 	     a few LIBARCHIVE keys.  The libarchive library can read most of
 	     the SCHILY keys and most of the GNU keys introduced by GNU tar.
@@ -80,7 +80,7 @@ DESCRIPTION
 
      ustar   The libarchive library can both read and write this format.  This
 	     format has the following limitations:
-	     •	 Device major and minor numbers are limited to 21 bits.  Nodes
+	     •	 Device major and minor numbers are limited to 21 bits.	 Nodes
 		 with larger numbers will not be added to the archive.
 	     •	 Path names in the archive are limited to 255 bytes.  (Shorter
 		 if there is no / character in exactly the right place.)
@@ -94,7 +94,7 @@ DESCRIPTION
 	     tions.  The ustar format is old and widely supported.  It is rec‐
 	     ommended when compatibility is the primary concern.
 
-     v7      The libarchive library can read and write the legacy v7 tar for‐
+     v7	     The libarchive library can read and write the legacy v7 tar for‐
 	     mat.  This format has the following limitations:
 	     •	 Only regular files, directories, and symbolic links can be
 		 archived.  Block and character device nodes, FIFOs, and sock‐
@@ -135,28 +135,32 @@ DESCRIPTION
      ustar format to create the “pax interchange” format.
 
    Cpio Formats
-     The libarchive library can read a number of common cpio variants and can
-     write “odc” and “newc” format archives.  A cpio archive stores each entry
-     as a fixed-size header followed by a variable-length filename and vari‐
-     able-length data.	Unlike the tar format, the cpio format does only mini‐
-     mal padding of the header or file data.  There are several cpio variants,
-     which differ primarily in how they store the initial header: some store
-     the values as octal or hexadecimal numbers in ASCII, others as binary
-     values of varying byte order and length.
+     The libarchive library can read and write a number of common cpio vari‐
+     ants.  A cpio archive stores each entry as a fixed-size header followed
+     by a variable-length filename and variable-length data.  Unlike the tar
+     format, the cpio format does only minimal padding of the header or file
+     data.  There are several cpio variants, which differ primarily in how
+     they store the initial header: some store the values as octal or hexadec‐
+     imal numbers in ASCII, others as binary values of varying byte order and
+     length.
 
      binary  The libarchive library transparently reads both big-endian and
-	     little-endian variants of the original binary cpio format.  This
-	     format used 32-bit binary values for file size and mtime, and
-	     16-bit binary values for the other fields.
+	     little-endian variants of the the two binary cpio formats; the
+	     original one from PWB/UNIX, and the later, more widely used,
+	     variant.  This format used 32-bit binary values for file size and
+	     mtime, and 16-bit binary values for the other fields.  The for‐
+	     mats support only the file types present in UNIX at the time of
+	     their creation.  File sizes are limited to 24 bits in the PWB
+	     format, because of the limits of the file system, and to 31 bits
+	     in the newer binary format, where signed 32 bit longs were used.
 
-     odc     The libarchive library can both read and write this POSIX-stan‐
-	     dard format, which is officially known as the “cpio interchange
-	     format” or the “octet-oriented cpio archive format” and sometimes
-	     unofficially referred to as the “old character format”.  This
-	     format stores the header contents as octal values in ASCII.  It
-	     is standard, portable, and immune from byte-order confusion.
-	     File sizes and mtime are limited to 33 bits (8GB file size),
-	     other fields are limited to 18 bits.
+     odc     This is the POSIX standardized format, which is officially known
+	     as the “cpio interchange format” or the “octet-oriented cpio
+	     archive format” and sometimes unofficially referred to as the
+	     “old character format”.  This format stores the header contents
+	     as octal values in ASCII.	It is standard, portable, and immune
+	     from byte-order confusion.	 File sizes and mtime are limited to
+	     33 bits (8GB file size), other fields are limited to 18 bits.
 
      SVR4/newc
 	     The libarchive library can read both CRC and non-CRC variants of
@@ -171,7 +175,7 @@ DESCRIPTION
      of AT&T in 1981.  This makes cpio older than tar, although cpio was not
      included in Version 7 AT&T Unix.  As a result, the tar command became
      much better known in universities and research groups that used Version
-     7.  The combination of the find and cpio utilities provided very precise
+     7.	 The combination of the find and cpio utilities provided very precise
      control over file selection.  Unfortunately, the format has many limita‐
      tions that make it unsuitable for widespread use.	Only the POSIX format
      permits files over 4GB, and its 18-bit limit for most other fields makes
@@ -195,7 +199,7 @@ DESCRIPTION
      shardump
 	     This format is similar to shar but encodes files using
 	     uuencode(1) so that the result will be a plain text file regard‐
-	     less of the file contents.  It also includes additional shell
+	     less of the file contents.	 It also includes additional shell
 	     commands that attempt to reproduce as many file attributes as
 	     possible, including owner, mode, and flags.  The additional com‐
 	     mands used to restore file attributes make shardump archives less
@@ -216,7 +220,7 @@ DESCRIPTION
      Libarchive reads ISO9660 images using a streaming strategy.  This allows
      it to read compressed images directly (decompressing on the fly) and al‐
      lows it to read images directly from network sockets, pipes, and other
-     non-seekable data sources.  This strategy works well for optimized
+     non-seekable data sources.	 This strategy works well for optimized
      ISO9660 images created by many popular programs.  Such programs collect
      all directory information at the beginning of the ISO9660 image so it can
      be read from a physical disk with a minimum of seeking.  However, not all
@@ -243,9 +247,9 @@ DESCRIPTION
 
      The streaming reader processes Zip archives as they are read.  It can
      read archives of arbitrary size from tape or network sockets, and can de‐
-     code Zip archives that have been separately compressed or encoded.  How‐
+     code Zip archives that have been separately compressed or encoded.	 How‐
      ever, self-extracting Zip archives and archives with certain types of
-     modifications cannot be correctly handled.  Such archives require that
+     modifications cannot be correctly handled.	 Such archives require that
      the reader first process the Central Directory, which is ordinarily lo‐
      cated at the end of a Zip archive and is thus inaccessible to the stream‐
      ing reader.  If the program using libarchive has enabled seek support,
@@ -268,7 +272,7 @@ DESCRIPTION
      primarily in their handling of filenames longer than 15 characters: the
      GNU/SVR4 variant writes a filename table at the beginning of the archive;
      the BSD format stores each long filename in an extension area adjacent to
-     the entry.  Libarchive can read both extensions, including archives that
+     the entry.	 Libarchive can read both extensions, including archives that
      may include both types of long filenames.	Programs using libarchive can
      write GNU/SVR4 format if they provide an entry called // containing a
      filename table to be written into the archive before any of the entries.
@@ -285,7 +289,7 @@ DESCRIPTION
      many of the keywords cannot currently be stored in an archive_entry ob‐
      ject.  When writing, libarchive supports use of the
      archive_write_set_options(3) interface to specify which keywords should
-     be included in the output.  If libarchive was compiled with access to
+     be included in the output.	 If libarchive was compiled with access to
      suitable cryptographic libraries (such as the OpenSSL libraries), it can
      compute hash entries such as sha512 or md5 from file data being written
      to the mtree writer.

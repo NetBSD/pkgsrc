@@ -33,17 +33,17 @@ or empty, this function will do nothing and
 will be returned.
 Otherwise,
 \fBARCHIVE_OK\fP
-will be returned. 
+will be returned.
 .TP
 \fB\%archive_read_set_passphrase_callback\fP()
-Register callback function that will be invoked to get a passphrase 
-for decrption after trying all passphrases registered by the
+Register a callback function that will be invoked to get a passphrase 
+for decryption after trying all the passphrases registered by the
 \fB\%archive_read_add_passphrase\fP()
 function failed.
 .RE
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),
-\fBlibarchive\fP(3),
 \fBarchive_read\fP(3),
-\fBarchive_read_set_options\fP(3)
+\fBarchive_read_set_options\fP(3),
+\fBlibarchive\fP(3)

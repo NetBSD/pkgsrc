@@ -87,10 +87,10 @@ Clears any error information left over from a previous call.
 Not generally used in client code. 
 </dd><dt>'''archive_compression'''()</dt><dd> 
 Synonym for 
-'''archive_filter_code(a,'''(''0)''). 
+'''archive_filter_code'''(''a'', ''0''). 
 </dd><dt>'''archive_compression_name'''()</dt><dd> 
 Synonym for 
-'''archive_filter_name(a,'''(''0)''). 
+'''archive_filter_name'''(''a'', ''0''). 
 </dd><dt>'''archive_copy_error'''()</dt><dd> 
 Copies error information from one archive to another. 
 </dd><dt>'''archive_errno'''()</dt><dd> 
@@ -137,13 +137,13 @@ filter 0 is the gunzip filter,
 filter 1 is the uudecode filter, 
 and filter 2 is the pseudo-filter that wraps the archive read functions. 
 In this case, requesting 
-'''archive_position(a,'''(''-1)'') 
+'''archive_position'''(''a'', ''-1'') 
 would be a synonym for 
-'''archive_position(a,'''(''2)'') 
+'''archive_position'''(''a'', ''2'') 
 which would return the number of bytes currently read from the archive, while 
-'''archive_position(a,'''(''1)'') 
+'''archive_position'''(''a'', ''1'') 
 would return the number of bytes after uudecoding, and 
-'''archive_position(a,'''(''0)'') 
+'''archive_position'''(''a'', ''0'') 
 would return the number of bytes after decompression. 
 </dd><dt>'''archive_filter_name'''()</dt><dd> 
 Returns a textual name identifying the indicated filter. 
@@ -165,9 +165,9 @@ A textual description of the format of the current entry.
 </dd><dt>'''archive_position'''()</dt><dd> 
 Returns the number of bytes read from or written to the indicated filter. 
 In particular, 
-'''archive_position(a,'''(''0)'') 
+'''archive_position'''(''a'', ''0'') 
 returns the number of bytes read or written by the format handler, while 
-'''archive_position(a,'''(''-1)'') 
+'''archive_position'''(''a'', ''-1'') 
 returns the number of bytes read or written to the archive. 
 See 
 '''archive_filter_count'''() 

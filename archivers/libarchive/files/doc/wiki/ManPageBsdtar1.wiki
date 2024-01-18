@@ -158,12 +158,14 @@ if it is unknown suffix or no suffix, creates a new archive with
 restricted pax format and bzip2 compression. 
 </dd><dt>--acls</dt><dd> 
 (c, r, u, x modes only) 
-Archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of 
+Archive or extract POSIX.1e or NFSv4 ACLs. 
+This is the reverse of 
 --no-acls 
 and the default behavior in c, r, and u modes (except on Mac OS X) or if 
 '''tar''' 
-is run in x mode as root. On Mac OS X this option translates extended ACLs 
-to NFSv4 ACLs. To store extended ACLs the 
+is run in x mode as root. 
+On Mac OS X this option translates extended ACLs to NFSv4 ACLs. 
+To store extended ACLs the 
 --mac-metadata 
 option is preferred. 
 </dd><dt>-B, --read-full-blocks</dt><dd> 
@@ -198,15 +200,16 @@ specified on the command line.
 </dd><dt>--exclude-vcs</dt><dd> 
 Do not process files or directories internally used by the 
 version control systems 
-Sq CVS, 
-Sq RCS, 
-Sq SCCS, 
-Sq SVN, 
 Sq Arch, 
 Sq Bazaar, 
-Sq Mercurial 
+Sq CVS, 
+Sq Darcs, 
+Sq Mercurial, 
+Sq RCS, 
+Sq SCCS, 
+Sq SVN 
 and 
-Sq Darcs. 
+Sq git. 
 </dd><dt>--fflags</dt><dd> 
 (c, r, u, x modes only) 
 Archive or extract platform-specific file attributes or file flags. 
@@ -383,10 +386,12 @@ Do not extract modification time.
 By default, the modification time is set to the time stored in the archive. 
 </dd><dt>--mac-metadata</dt><dd> 
 (c, r, u and x mode only) 
-Mac OS X specific. Archive or extract extended ACLs and extended file 
+Mac OS X specific. 
+Archive or extract extended ACLs and extended file 
 attributes using 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]] 
-in AppleDouble format. This is the reverse of 
+in AppleDouble format. 
+This is the reverse of 
 --no-mac-metadata. 
 and the default behavior in c, r, and u modes or if 
 '''tar''' 
@@ -432,28 +437,44 @@ option to
 [[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]]. 
 </dd><dt>--no-acls</dt><dd> 
 (c, r, u, x modes only) 
-Do not archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of 
+Do not archive or extract POSIX.1e or NFSv4 ACLs. 
+This is the reverse of 
 --acls 
 and the default behavior if 
 '''tar''' 
 is run as non-root in x mode (on Mac OS X as any user in c, r, u and x modes). 
 </dd><dt>--no-fflags</dt><dd> 
 (c, r, u, x modes only) 
-Do not archive or extract file attributes or file flags. This is the reverse of 
+Do not archive or extract file attributes or file flags. 
+This is the reverse of 
 --fflags 
 and the default behavior if 
 '''tar''' 
 is run as non-root in x mode. 
 </dd><dt>--no-mac-metadata</dt><dd> 
 (x mode only) 
-Mac OS X specific. Do not archive or extract ACLs and extended file attributes 
+Mac OS X specific. 
+Do not archive or extract ACLs and extended file attributes 
 using 
 [[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]] 
-in AppleDouble format. This is the reverse of 
+in AppleDouble format. 
+This is the reverse of 
 --mac-metadata. 
 and the default behavior if 
 '''tar''' 
 is run as non-root in x mode. 
+</dd><dt>--no-read-sparse</dt><dd> 
+(c, r, u modes only) 
+Do not read sparse file information from disk. 
+This is the reverse of 
+--read-sparse. 
+</dd><dt>--no-safe-writes</dt><dd> 
+(x mode only) 
+Do not create temporary files and use 
+[[rename(2)|http://www.freebsd.org/cgi/man.cgi?query=rename&sektion=2]] 
+to replace the original ones. 
+This is the reverse of 
+--safe-writes. 
 </dd><dt>--no-same-owner</dt><dd> 
 (x mode only) 
 Do not extract owner and group IDs. 
@@ -473,7 +494,8 @@ and the default behavior if
 is run as non-root. 
 </dd><dt>--no-xattrs</dt><dd> 
 (c, r, u, x modes only) 
-Do not archive or extract extended file attributes. This is the reverse of 
+Do not archive or extract extended file attributes. 
+This is the reverse of 
 --xattrs 
 and the default behavior if 
 '''tar''' 
@@ -551,7 +573,14 @@ As above, but the corresponding key and value will be provided
 only to modules whose name matches 
 ''module''. 
 </dd></dl> 
-The currently supported modules and keys are: 
+
+The complete list of supported modules and keys 
+for create and append modes is in 
+[[ManPageArchiveWriteSetOptions3]] 
+and for extract and list modes in 
+[[ManPageArchiveReadSetOptions3]]. 
+
+Examples of supported options: 
 <dl> 
 <dt>'''iso9660:joliet'''</dt><dd> 
 Support Joliet extensions. 
@@ -570,7 +599,8 @@ to disable.
 </dd><dt>'''gzip:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the gzip compression level. 
 </dd><dt>'''gzip:timestamp'''</dt><dd> 
-Store timestamp. This is enabled by default, use 
+Store timestamp. 
+This is enabled by default, use 
 '''!timestamp''' 
 or 
 '''gzip:!timestamp''' 
@@ -586,7 +616,8 @@ A decimal integer from 1 to 9 specifying the lrzip compression level.
 </dd><dt>'''lz4:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lzop compression level. 
 </dd><dt>'''lz4:stream-checksum'''</dt><dd> 
-Enable stream checksum. This is by default, use 
+Enable stream checksum. 
+This is by default, use 
 '''lz4:!stream-checksum''' 
 to disable. 
 </dd><dt>'''lz4:block-checksum'''</dt><dd> 
@@ -598,11 +629,35 @@ A decimal integer from 4 to 7 specifying the lz4 compression block size
 Use the previous block of the block being compressed for 
 a compression dictionary to improve compression ratio. 
 </dd><dt>'''zstd:compression-level'''</dt><dd> 
-A decimal integer from 1 to 22 specifying the zstd compression level. 
+A decimal integer specifying the zstd compression level. Supported values depend 
+on the library version, common values are from 1 to 22. 
+</dd><dt>'''zstd:threads'''</dt><dd> 
+Specify the number of worker threads to use. 
+Setting threads to a special value 0 makes 
+[[zstd(1)|http://www.freebsd.org/cgi/man.cgi?query=zstd&sektion=1]] 
+use as many threads as there are CPU cores on the system. 
+</dd><dt>'''zstd:frame-per-file'''</dt><dd> 
+Start a new compression frame at the beginning of each file in the 
+archive. 
+</dd><dt>'''zstd:min-frame-size'''=''N''</dt><dd> 
+In combination with 
+'''zstd:frame-per-file''', 
+do not start a new compression frame unless the current frame is at least 
+''N'' 
+bytes. 
+</dd><dt>'''zstd:max-frame-size'''=''N''</dt><dd> 
+Start a new compression frame as soon as the current frame exceeds 
+''N'' 
+bytes. 
 </dd><dt>'''lzop:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lzop compression level. 
 </dd><dt>'''xz:compression-level'''</dt><dd> 
 A decimal integer from 0 to 9 specifying the xz compression level. 
+</dd><dt>'''xz:threads'''</dt><dd> 
+Specify the number of worker threads to use. 
+Setting threads to a special value 0 makes 
+[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]] 
+use as many threads as there are CPU cores on the system. 
 </dd><dt>'''mtree:'''''keyword''</dt><dd> 
 The mtree writer module allows you to specify which mtree keywords 
 will be included in the output. 
@@ -639,9 +694,10 @@ Supported values are zipcrypt (traditional zip encryption),
 aes128 (WinZip AES-128 encryption) and aes256 (WinZip AES-256 encryption). 
 </dd><dt>'''read_concatenated_archives'''</dt><dd> 
 Ignore zeroed blocks in the archive, which occurs when multiple tar archives 
-have been concatenated together.  Without this option, only the contents of 
-the first concatenated archive would be read.  This option is comparable to 
-the 
+have been concatenated together. 
+Without this option, only the contents of 
+the first concatenated archive would be read. 
+This option is comparable to the 
 -i, --ignore-zeros 
 option of GNU tar. 
 </dd></dl> 
@@ -663,11 +719,13 @@ This option suppresses these behaviors.
 Preserve file permissions. 
 Attempt to restore the full permissions, including file modes, file attributes 
 or file flags, extended file attributes and ACLs, if available, for each item 
-extracted from the archive. This is the reverse of 
+extracted from the archive. 
+This is the reverse of 
 --no-same-permissions 
 and the default if 
 '''tar''' 
-is being run as root. It can be partially overridden by also specifying 
+is being run as root. 
+It can be partially overridden by also specifying 
 --no-acls, 
 --no-fflags, 
 --no-mac-metadata 
@@ -693,6 +751,12 @@ By default, the archive is always read to the very end, since
 there can be multiple entries with the same name and, by convention, 
 later entries overwrite earlier entries. 
 This option is provided as a performance optimization. 
+</dd><dt>--read-sparse</dt><dd> 
+(c, r, u modes only) 
+Read sparse file information from disk. 
+This is the reverse of 
+--no-read-sparse 
+and the default behavior. 
 </dd><dt>-S</dt><dd> 
 (x mode only) 
 Extract files as sparse files. 
@@ -735,6 +799,26 @@ The default is
 ''hrs'' 
 which applies substitutions to all names. 
 In particular, it is never necessary to specify h, r, or s. 
+</dd><dt>--safe-writes</dt><dd> 
+(x mode only) 
+Extract files atomically. 
+By default 
+'''tar''' 
+unlinks the original file with the same name as the extracted file (if it 
+exists), and then creates it immediately under the same name and writes to 
+it. 
+For a short period of time, applications trying to access the file might 
+not find it, or see incomplete results. 
+If 
+--safe-writes 
+is enabled, 
+'''tar''' 
+first creates a unique temporary file, then writes the new contents to 
+the temporary file, and finally renames the temporary file to its final 
+name atomically using 
+[[rename(2)|http://www.freebsd.org/cgi/man.cgi?query=rename&sektion=2]]. 
+This guarantees that an application accessing the file, will either see 
+the old contents or the new contents at all times. 
 </dd><dt>--same-owner</dt><dd> 
 (x mode only) 
 Extract owner and group IDs. 
@@ -838,7 +922,8 @@ See
 for more information about the handling of exclusions. 
 </dd><dt>--xattrs</dt><dd> 
 (c, r, u, x modes only) 
-Archive or extract extended file attributes. This is the reverse of 
+Archive or extract extended file attributes. 
+This is the reverse of 
 --no-xattrs 
 and the default behavior in c, r, and u modes or if 
 '''tar''' 
@@ -939,11 +1024,11 @@ To move file hierarchies, invoke
 '''tar''' 
 as 
 ```text
-tar -cf - -C srcdir\. | tar -xpf - -C destdir 
+tar -cf - -C srcdir . | tar -xpf - -C destdir 
 ```
 or more traditionally 
 ```text
-cd srcdir ; tar -cf -\. | (cd destdir ; tar -xpf -) 
+cd srcdir ; tar -cf - . | (cd destdir ; tar -xpf -) 
 ```
 
 In create mode, the list of files and directories to be archived 
@@ -974,7 +1059,6 @@ An input file in
 [[ManPageMtree5]] 
 format can be used to create an output archive with arbitrary ownership, 
 permissions, or names that differ from existing data on disk: 
-
 ```text
 $ cat input.mtree
 #mtree

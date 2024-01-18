@@ -83,7 +83,7 @@ See
 After all entries have been written, use the 
 '''archive_write_free'''() 
 function to release all resources. 
-== EXAMPLE == 
+== EXAMPLES == 
 The following sketch illustrates basic usage of the library. 
 In this example, 
 the callback functions are simply wrappers around the standard 
@@ -148,7 +148,7 @@ write_archive(const char *outname, const char **filename)
   if (archive_write_set_format_filter_by_ext(a, outname) != ARCHIVE_OK)  {
     archive_write_add_filter_gzip(a);
     archive_write_set_format_ustar(a);
-  }  
+  }
   archive_write_open(a, mydata, myopen, mywrite, myclose);
   while (*filename) {
     stat(*filename, &st);
@@ -180,8 +180,8 @@ int main(int argc, const char **argv)
 ```
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageLibarchive3]], 
 [[ManPageArchiveWriteSetOptions3]], 
+[[ManPageLibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

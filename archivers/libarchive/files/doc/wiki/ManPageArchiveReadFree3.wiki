@@ -58,11 +58,11 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPageLibarchive3]], 
-[[ManPageArchiveReadNew3]], 
 [[ManPageArchiveReadData3]], 
 [[ManPageArchiveReadFilter3]], 
 [[ManPageArchiveReadFormat3]], 
+[[ManPageArchiveReadNew3]], 
 [[ManPageArchiveReadOpen3]], 
 [[ManPageArchiveReadSetOptions3]], 
-[[ManPageArchiveUtil3]] 
+[[ManPageArchiveUtil3]], 
+[[ManPageLibarchive3]] 

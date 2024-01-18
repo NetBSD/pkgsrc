@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Wed Jun 12 21:10:19 2019 -->
+<!-- CreationDate: Mon Sep 11 22:06:22 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -246,9 +246,10 @@ specified on the command line.</p>
 
 <p style="margin-left:17%;">Do not process files or
 directories internally used by the version control systems
-&rsquo;CVS&rsquo;, &rsquo;RCS&rsquo;, &rsquo;SCCS&rsquo;,
-&rsquo;SVN&rsquo;, &rsquo;Arch&rsquo;, &rsquo;Bazaar&rsquo;,
-&rsquo;Mercurial&rsquo; and &rsquo;Darcs&rsquo;.</p>
+&rsquo;Arch&rsquo;, &rsquo;Bazaar&rsquo;, &rsquo;CVS&rsquo;,
+&rsquo;Darcs&rsquo;, &rsquo;Mercurial&rsquo;,
+&rsquo;RCS&rsquo;, &rsquo;SCCS&rsquo;, &rsquo;SVN&rsquo; and
+&rsquo;git&rsquo;.</p>
 
 <p style="margin-top: 1em"><b>--fflags</b></p>
 
@@ -533,6 +534,18 @@ attributes using copyfile(3) in AppleDouble format. This is
 the reverse of <b>--mac-metadata</b>. and the default
 behavior if <b>tar</b> is run as non-root in x mode.</p>
 
+<p style="margin-top: 1em"><b>--no-read-sparse</b></p>
+
+<p style="margin-left:17%;">(c, r, u modes only) Do not
+read sparse file information from disk. This is the reverse
+of <b>--read-sparse</b>.</p>
+
+<p style="margin-top: 1em"><b>--no-safe-writes</b></p>
+
+<p style="margin-left:17%;">(x mode only) Do not create
+temporary files and use rename(2) to replace the original
+ones. This is the reverse of <b>--safe-writes</b>.</p>
+
 <p style="margin-top: 1em"><b>--no-same-owner</b></p>
 
 <p style="margin-left:17%;">(x mode only) Do not extract
@@ -654,8 +667,13 @@ disabled in every module that supports it.</p>
 key and value will be provided only to modules whose name
 matches <i>module</i>.</p>
 
-<p style="margin-left:17%;">The currently supported modules
-and keys are:</p>
+<p style="margin-left:17%; margin-top: 1em">The complete
+list of supported modules and keys for create and append
+modes is in archive_write_set_options(3) and for extract and
+list modes in archive_read_set_options(3).</p>
+
+<p style="margin-left:17%; margin-top: 1em">Examples of
+supported options:</p>
 
 <p><b>iso9660:joliet</b></p>
 
@@ -720,8 +738,33 @@ improve compression ratio.</p>
 
 <p><b>zstd:compression-level</b></p>
 
-<p style="margin-left:27%;">A decimal integer from 1 to 22
-specifying the zstd compression level.</p>
+<p style="margin-left:27%;">A decimal integer specifying
+the zstd compression level. Supported values depend on the
+library version, common values are from 1 to 22.</p>
+
+<p><b>zstd:threads</b></p>
+
+<p style="margin-left:27%;">Specify the number of worker
+threads to use. Setting threads to a special value 0 makes
+zstd(1) use as many threads as there are CPU cores on the
+system.</p>
+
+<p><b>zstd:frame-per-file</b></p>
+
+<p style="margin-left:27%;">Start a new compression frame
+at the beginning of each file in the archive.</p>
+
+<p><b>zstd:min-frame-size</b>=<i>N</i></p>
+
+<p style="margin-left:27%;">In combination with
+<b>zstd:frame-per-file</b>, do not start a new compression
+frame unless the current frame is at least <i>N</i>
+bytes.</p>
+
+<p><b>zstd:max-frame-size</b>=<i>N</i></p>
+
+<p style="margin-left:27%;">Start a new compression frame
+as soon as the current frame exceeds <i>N</i> bytes.</p>
 
 <p><b>lzop:compression-level</b></p>
 
@@ -732,6 +775,13 @@ specifying the lzop compression level.</p>
 
 <p style="margin-left:27%;">A decimal integer from 0 to 9
 specifying the xz compression level.</p>
+
+<p><b>xz:threads</b></p>
+
+<p style="margin-left:27%;">Specify the number of worker
+threads to use. Setting threads to a special value 0 makes
+xz(1) use as many threads as there are CPU cores on the
+system.</p>
 
 <p><b>mtree:</b><i>keyword</i></p>
 
@@ -843,6 +893,12 @@ entries with the same name and, by convention, later entries
 overwrite earlier entries. This option is provided as a
 performance optimization.</p>
 
+<p style="margin-top: 1em"><b>--read-sparse</b></p>
+
+<p style="margin-left:17%;">(c, r, u modes only) Read
+sparse file information from disk. This is the reverse of
+<b>--no-read-sparse</b> and the default behavior.</p>
+
 <p style="margin-top: 1em"><b>-S</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(x mode only)
@@ -876,6 +932,22 @@ regular filenames, or symlink targets, respectively. The
 default is <i>hrs</i> which applies substitutions to all
 names. In particular, it is never necessary to specify h, r,
 or s.</p>
+
+<p style="margin-top: 1em"><b>--safe-writes</b></p>
+
+<p style="margin-left:17%;">(x mode only) Extract files
+atomically. By default <b>tar</b> unlinks the original file
+with the same name as the extracted file (if it exists), and
+then creates it immediately under the same name and writes
+to it. For a short period of time, applications trying to
+access the file might not find it, or see incomplete
+results. If <b>--safe-writes</b> is enabled, <b>tar</b>
+first creates a unique temporary file, then writes the new
+contents to the temporary file, and finally renames the
+temporary file to its final name atomically using rename(2).
+This guarantees that an application accessing the file, will
+either see the old contents or the new contents at all
+times.</p>
 
 <p style="margin-top: 1em"><b>--same-owner</b></p>
 
@@ -1014,31 +1086,31 @@ variables affect the execution of <b>tar</b>:</p>
 
 <p style="margin-top: 1em">TAR_READER_OPTIONS</p>
 
-<p style="margin-left:21%;">The default options for format
+<p style="margin-left:17%;">The default options for format
 readers and compression readers. The <b>--options</b> option
 overrides this.</p>
 
 <p style="margin-top: 1em">TAR_WRITER_OPTIONS</p>
 
-<p style="margin-left:21%;">The default options for format
+<p style="margin-left:17%;">The default options for format
 writers and compression writers. The <b>--options</b> option
 overrides this.</p>
 
 <p style="margin-top: 1em">LANG</p>
 
-<p style="margin-left:21%; margin-top: 1em">The locale to
+<p style="margin-left:17%; margin-top: 1em">The locale to
 use. See environ(7) for more information.</p>
 
 <p style="margin-top: 1em">TAPE</p>
 
-<p style="margin-left:21%; margin-top: 1em">The default
+<p style="margin-left:17%; margin-top: 1em">The default
 device. The <b>-f</b> option overrides this. Please see the
 description of the <b>-f</b> option above for more
 details.</p>
 
 <p style="margin-top: 1em">TZ</p>
 
-<p style="margin-left:21%; margin-top: 1em">The timezone to
+<p style="margin-left:17%; margin-top: 1em">The timezone to
 use when displaying dates. See environ(7) for more
 information.</p>
 
@@ -1078,14 +1150,13 @@ contents of an ISO 9660 cdrom image:</p>
 hierarchies, invoke <b>tar</b> as</p>
 
 <p style="margin-left:14%;"><b>tar -cf</b> <i>-</i>
-<b>-C</b> <i>srcdir&nbsp;.</i> | <b>tar -xpf</b> <i>-</i>
+<b>-C</b> <i>srcdir .</i> | <b>tar -xpf</b> <i>-</i>
 <b>-C</b> <i>destdir</i></p>
 
 <p style="margin-left:6%;">or more traditionally</p>
 
-<p style="margin-left:14%;">cd srcdir ; <b>tar -cf</b>
-<i>-&nbsp;.</i> | (<i>cd destdir ;</i> <b>tar -xpf</b>
-<i>-</i>)</p>
+<p style="margin-left:14%;">cd srcdir ; <b>tar -cf</b> <i>-
+.</i> | (<i>cd destdir ;</i> <b>tar -xpf</b> <i>-</i>)</p>
 
 <p style="margin-left:6%; margin-top: 1em">In create mode,
 the list of files and directories to be archived can also
@@ -1349,8 +1420,8 @@ information to be lost. (This is a consequence of the
 incompatible ways that different archive formats store
 hardlink information.)</p>
 
-<p style="margin-left:6%; margin-top: 1em">BSD June&nbsp;3,
-2019 BSD</p>
+<p style="margin-left:6%; margin-top: 1em">BSD
+December&nbsp;1, 2022 BSD</p>
 <hr>
 </body>
 </html>

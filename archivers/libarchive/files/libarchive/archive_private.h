@@ -25,12 +25,12 @@
  * $FreeBSD: head/lib/libarchive/archive_private.h 201098 2009-12-28 02:58:14Z kientzle $
  */
 
+#ifndef ARCHIVE_PRIVATE_H_INCLUDED
+#define ARCHIVE_PRIVATE_H_INCLUDED
+
 #ifndef __LIBARCHIVE_BUILD
 #error This header is only to be used internally to libarchive.
 #endif
-
-#ifndef ARCHIVE_PRIVATE_H_INCLUDED
-#define	ARCHIVE_PRIVATE_H_INCLUDED
 
 #if HAVE_ICONV_H
 #include <iconv.h>
@@ -44,6 +44,13 @@
 #define	__LA_DEAD	__attribute__((__noreturn__))
 #else
 #define	__LA_DEAD
+#endif
+
+#if defined(__GNUC__) && (__GNUC__ > 2 || \
+			  (__GNUC__ == 2 && __GNUC_MINOR__ >= 7))
+#define	__LA_UNUSED	__attribute__((__unused__))
+#else
+#define	__LA_UNUSED
 #endif
 
 #define	ARCHIVE_WRITE_MAGIC	(0xb0c5c0deU)
@@ -100,13 +107,10 @@ struct archive {
 	 * Some public API functions depend on the "real" type of the
 	 * archive object.
 	 */
-	struct archive_vtable *vtable;
+	const struct archive_vtable *vtable;
 
 	int		  archive_format;
 	const char	 *archive_format_name;
-
-	int	  compression_code;	/* Currently active compression. */
-	const char *compression_name;
 
 	/* Number of file entries processed. */
 	int		  file_count;
@@ -153,6 +157,11 @@ void	__archive_errx(int retvalue, const char *msg) __LA_DEAD;
 
 void	__archive_ensure_cloexec_flag(int fd);
 int	__archive_mktemp(const char *tmpdir);
+#if defined(_WIN32) && !defined(__CYGWIN__)
+int	__archive_mkstemp(wchar_t *template);
+#else
+int	__archive_mkstemp(char *template);
+#endif
 
 int	__archive_clean(struct archive *);
 

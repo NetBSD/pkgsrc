@@ -155,7 +155,7 @@ The accessor functions are named
 '''XXX_w'''(). 
 </dd><dt>UTF-8</dt><dd> 
 Unicode strings encoded as UTF-8. 
-This are convience functions to update both the multibyte and wide 
+These are convenience functions to update both the multibyte and wide 
 character strings at the same time. 
 </dd></dl> 
 
@@ -163,13 +163,13 @@ The sourcepath is a pure filesystem concept and never stored in an
 archive directly. 
 
 For that reason, it is only available as multibyte string. 
-The link path is a convience function for conditionally setting 
+The link path is a convenience function for conditionally setting 
 hardlink or symlink destination. 
 It doesn't have a corresponding get accessor function. 
 
 '''archive_entry_set_XXX'''() 
-is an alias for  
+is an alias for 
 '''archive_entry_copy_XXX'''(). 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]] 
-[[ManPageLibarchive3]], 
+[[ManPageArchiveEntry3]], 
+[[ManPageLibarchive3]] 

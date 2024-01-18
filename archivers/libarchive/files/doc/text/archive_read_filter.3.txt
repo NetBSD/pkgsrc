@@ -20,6 +20,9 @@ SYNOPSIS
      archive_read_support_filter_all(struct archive *);
 
      int
+     archive_read_support_filter_by_code(struct archive *, int);
+
+     int
      archive_read_support_filter_bzip2(struct archive *);
 
      int
@@ -87,6 +90,12 @@ DESCRIPTION
 	     is always enabled by default.
      archive_read_support_filter_all()
 	     Enables all available decompression filters.
+     archive_read_support_filter_by_code()
+	     Enables a single filter specified by the filter code.  This func‐
+	     tion does not work with ARCHIVE_FILTER_PROGRAM.  Note: In stati‐
+	     cally-linked executables, this will cause your program to include
+	     support for every filter.	If executable size is a concern, you
+	     may wish to avoid using this function.
      archive_read_support_filter_program()
 	     Data is fed through the specified external program before being
 	     dearchived.  Note that this disables automatic detection of the
@@ -109,7 +118,7 @@ ERRORS
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO
-     libarchive(3), archive_read(3), archive_read_data(3),
-     archive_read_format(3), archive_read_format(3)
+     archive_read(3), archive_read_data(3), archive_read_format(3),
+     archive_read_format(3), libarchive(3)
 
-BSD				August 14, 2014 			   BSD
+BSD				 June 9, 2020				   BSD

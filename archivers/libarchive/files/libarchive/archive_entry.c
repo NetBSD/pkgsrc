@@ -208,6 +208,19 @@ archive_entry_clone(struct archive_entry *entry)
 
 	/* Copy encryption status */
 	entry2->encryption = entry->encryption;
+
+	/* Copy digests */
+#define copy_digest(_e2, _e, _t) \
+	memcpy(_e2->digest._t, _e->digest._t, sizeof(_e2->digest._t))
+
+	copy_digest(entry2, entry, md5);
+	copy_digest(entry2, entry, rmd160);
+	copy_digest(entry2, entry, sha1);
+	copy_digest(entry2, entry, sha256);
+	copy_digest(entry2, entry, sha384);
+	copy_digest(entry2, entry, sha512);
+
+#undef copy_digest
 	
 	/* Copy ACL data over. */
 	archive_acl_copy(&entry2->acl, &entry->acl);
@@ -353,7 +366,7 @@ archive_entry_devminor(struct archive_entry *entry)
 		return minor(entry->ae_stat.aest_dev);
 }
 
-mode_t
+__LA_MODE_T
 archive_entry_filetype(struct archive_entry *entry)
 {
 	return (AE_IFMT & entry->acl.mode);
@@ -450,7 +463,7 @@ int
 _archive_entry_gname_l(struct archive_entry *entry,
     const char **p, size_t *len, struct archive_string_conv *sc)
 {
-	return (archive_mstring_get_mbs_l(&entry->ae_gname, p, len, sc));
+	return (archive_mstring_get_mbs_l(entry->archive, &entry->ae_gname, p, len, sc));
 }
 
 const char *
@@ -504,7 +517,7 @@ _archive_entry_hardlink_l(struct archive_entry *entry,
 		*len = 0;
 		return (0);
 	}
-	return (archive_mstring_get_mbs_l(&entry->ae_hardlink, p, len, sc));
+	return (archive_mstring_get_mbs_l(entry->archive, &entry->ae_hardlink, p, len, sc));
 }
 
 la_int64_t
@@ -525,7 +538,7 @@ archive_entry_ino64(struct archive_entry *entry)
 	return (entry->ae_stat.aest_ino);
 }
 
-mode_t
+__LA_MODE_T
 archive_entry_mode(struct archive_entry *entry)
 {
 	return (entry->acl.mode);
@@ -555,6 +568,13 @@ archive_entry_nlink(struct archive_entry *entry)
 	return (entry->ae_stat.aest_nlink);
 }
 
+/* Instead, our caller could have chosen a specific encoding
+ * (archive_mstring_get_mbs, archive_mstring_get_utf8,
+ * archive_mstring_get_wcs).  So we should try multiple
+ * encodings.  Try mbs first because of history, even though
+ * utf8 might be better for pathname portability.
+ * Also omit wcs because of type mismatch (char * versus wchar *)
+ */
 const char *
 archive_entry_pathname(struct archive_entry *entry)
 {
@@ -562,6 +582,13 @@ archive_entry_pathname(struct archive_entry *entry)
 	if (archive_mstring_get_mbs(
 	    entry->archive, &entry->ae_pathname, &p) == 0)
 		return (p);
+#if HAVE_EILSEQ  /*{*/
+    if (errno == EILSEQ) {
+	    if (archive_mstring_get_utf8(
+	        entry->archive, &entry->ae_pathname, &p) == 0)
+		    return (p);
+    }
+#endif  /*}*/
 	if (errno == ENOMEM)
 		__archive_errx(1, "No memory");
 	return (NULL);
@@ -595,10 +622,10 @@ int
 _archive_entry_pathname_l(struct archive_entry *entry,
     const char **p, size_t *len, struct archive_string_conv *sc)
 {
-	return (archive_mstring_get_mbs_l(&entry->ae_pathname, p, len, sc));
+	return (archive_mstring_get_mbs_l(entry->archive, &entry->ae_pathname, p, len, sc));
 }
 
-mode_t
+__LA_MODE_T
 archive_entry_perm(struct archive_entry *entry)
 {
 	return (~AE_IFMT & entry->acl.mode);
@@ -723,7 +750,7 @@ _archive_entry_symlink_l(struct archive_entry *entry,
 		*len = 0;
 		return (0);
 	}
-	return (archive_mstring_get_mbs_l( &entry->ae_symlink, p, len, sc));
+	return (archive_mstring_get_mbs_l(entry->archive, &entry->ae_symlink, p, len, sc));
 }
 
 la_int64_t
@@ -769,7 +796,7 @@ int
 _archive_entry_uname_l(struct archive_entry *entry,
     const char **p, size_t *len, struct archive_string_conv *sc)
 {
-	return (archive_mstring_get_mbs_l(&entry->ae_uname, p, len, sc));
+	return (archive_mstring_get_mbs_l(entry->archive, &entry->ae_uname, p, len, sc));
 }
 
 int
@@ -1416,6 +1443,62 @@ archive_entry_copy_mac_metadata(struct archive_entry *entry,
   }
 }
 
+/* Digest handling */
+const unsigned char *
+archive_entry_digest(struct archive_entry *entry, int type)
+{
+	switch (type) {
+	case ARCHIVE_ENTRY_DIGEST_MD5:
+		return entry->digest.md5;
+	case ARCHIVE_ENTRY_DIGEST_RMD160:
+		return entry->digest.rmd160;
+	case ARCHIVE_ENTRY_DIGEST_SHA1:
+		return entry->digest.sha1;
+	case ARCHIVE_ENTRY_DIGEST_SHA256:
+		return entry->digest.sha256;
+	case ARCHIVE_ENTRY_DIGEST_SHA384:
+		return entry->digest.sha384;
+	case ARCHIVE_ENTRY_DIGEST_SHA512:
+		return entry->digest.sha512;
+	default:
+		return NULL;
+	}
+}
+
+int
+archive_entry_set_digest(struct archive_entry *entry, int type,
+    const unsigned char *digest)
+{
+#define copy_digest(_e, _t, _d)\
+	memcpy(_e->digest._t, _d, sizeof(_e->digest._t))
+
+	switch (type) {
+	case ARCHIVE_ENTRY_DIGEST_MD5:
+		copy_digest(entry, md5, digest);
+		break;
+	case ARCHIVE_ENTRY_DIGEST_RMD160:
+		copy_digest(entry, rmd160, digest);
+		break;
+	case ARCHIVE_ENTRY_DIGEST_SHA1:
+		copy_digest(entry, sha1, digest);
+		break;
+	case ARCHIVE_ENTRY_DIGEST_SHA256:
+		copy_digest(entry, sha256, digest);
+		break;
+	case ARCHIVE_ENTRY_DIGEST_SHA384:
+		copy_digest(entry, sha384, digest);
+		break;
+	case ARCHIVE_ENTRY_DIGEST_SHA512:
+		copy_digest(entry, sha512, digest);
+		break;
+	default:
+		return ARCHIVE_WARN;
+	}
+
+	return ARCHIVE_OK;
+#undef copy_digest
+}
+
 /*
  * ACL management.  The following would, of course, be a lot simpler
  * if: 1) the last draft of POSIX.1e were a really thorough and
@@ -1699,7 +1782,7 @@ static const struct flag {
 	const wchar_t	*wname;
 	unsigned long	 set;
 	unsigned long	 clear;
-} flags[] = {
+} fileflags[] = {
 	/* Preferred (shorter) names per flag first, all prefixed by "no" */
 #ifdef SF_APPEND
 	{ "nosappnd",	L"nosappnd",		SF_APPEND,	0},
@@ -1876,7 +1959,7 @@ ae_fflagstostr(unsigned long bitset, unsigned long bitclear)
 
 	bits = bitset | bitclear;
 	length = 0;
-	for (flag = flags; flag->name != NULL; flag++)
+	for (flag = fileflags; flag->name != NULL; flag++)
 		if (bits & (flag->set | flag->clear)) {
 			length += strlen(flag->name) + 1;
 			bits &= ~(flag->set | flag->clear);
@@ -1889,7 +1972,7 @@ ae_fflagstostr(unsigned long bitset, unsigned long bitclear)
 		return (NULL);
 
 	dp = string;
-	for (flag = flags; flag->name != NULL; flag++) {
+	for (flag = fileflags; flag->name != NULL; flag++) {
 		if (bitset & flag->set || bitclear & flag->clear) {
 			sp = flag->name + 2;
 		} else if (bitset & flag->clear  ||  bitclear & flag->set) {
@@ -1941,7 +2024,7 @@ ae_strtofflags(const char *s, unsigned long *setp, unsigned long *clrp)
 		    *end != ' '  &&  *end != ',')
 			end++;
 		length = end - start;
-		for (flag = flags; flag->name != NULL; flag++) {
+		for (flag = fileflags; flag->name != NULL; flag++) {
 			size_t flag_length = strlen(flag->name);
 			if (length == flag_length
 			    && memcmp(start, flag->name, length) == 0) {
@@ -2009,7 +2092,7 @@ ae_wcstofflags(const wchar_t *s, unsigned long *setp, unsigned long *clrp)
 		    *end != L' '  &&  *end != L',')
 			end++;
 		length = end - start;
-		for (flag = flags; flag->wname != NULL; flag++) {
+		for (flag = fileflags; flag->wname != NULL; flag++) {
 			size_t flag_length = wcslen(flag->wname);
 			if (length == flag_length
 			    && wmemcmp(start, flag->wname, length) == 0) {

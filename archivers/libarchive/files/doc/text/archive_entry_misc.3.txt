@@ -2,7 +2,7 @@ ARCHIVE_ENTRY_MISC(3)	 BSD Library Functions Manual	 ARCHIVE_ENTRY_MISC(3)
 
 NAME
      archive_entry_symlink_type, archive_entry_set_symlink_type — miscella‐
-     neous functions for manipulating properties of archive_entry.
+     neous functions for manipulating properties of archive_entry
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -19,8 +19,8 @@ SYNOPSIS
 DESCRIPTION
      The function archive_entry_symlink_type() returns and the function
      archive_entry_set_symlink_type() sets the type of the symbolic link
-     stored in an archive entry. These functions have special meaning on oper‐
-     ating systems that support multiple symbolic link types (e.g. Microsoft
+     stored in an archive entry.  These functions have special meaning on op‐
+     erating systems that support multiple symbolic link types (e.g. Microsoft
      Windows).
 
      Supported values are:

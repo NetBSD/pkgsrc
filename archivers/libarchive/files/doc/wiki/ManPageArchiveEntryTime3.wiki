@@ -19,7 +19,7 @@ ARCHIVE_ENTRY_TIME(3) manual page
 '''archive_entry_mtime_nsec''', 
 '''archive_entry_mtime_is_set''', 
 '''archive_entry_set_mtime''', 
-'''archive_entry_unset_mtime''', 
+'''archive_entry_unset_mtime''' 
 - functions for manipulating times in archive entry descriptions 
 == LIBRARY == 
 Streaming Archive Library (libarchive, -larchive) 
@@ -124,8 +124,8 @@ The current state can be queried using
 '''XXX_is_set'''(). 
 Unset time fields have a second and nanosecond field of 0. 
 == SEE ALSO == 
-[[ManPageArchiveEntry3]] 
-[[ManPageLibarchive3]], 
+[[ManPageArchiveEntry3]], 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
