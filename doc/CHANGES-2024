@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.442 2024/01/18 14:09:39 hauke Exp $
+$NetBSD: CHANGES-2024,v 1.443 2024/01/18 14:12:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-nbconvert to 7.14.2 [adam 2024-01-18]
 	Updated net/restclient-ui to 3.7.2 [abs 2024-01-18]
 	Updated security/vaultwarden to 1.30.1 [hauke 2024-01-18]
+	Updated time/R-timeDate to 4032.109 [mef 2024-01-18]
