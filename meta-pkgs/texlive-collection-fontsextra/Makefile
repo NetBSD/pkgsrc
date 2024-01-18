@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2023/11/08 09:16:34 markd Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/18 19:53:08 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2023pre2
+PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	66805
+TEXLIVE_REV=	69278
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -32,6 +32,7 @@ DEPENDS+=	tex-archaic-[0-9]*:../../fonts/tex-archaic
 # depend archivo
 DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
 DEPENDS+=	tex-arimo-[0-9]*:../../fonts/tex-arimo
+# depend arsenal
 # depend arvo
 DEPENDS+=	tex-asana-math-[0-9]*:../../fonts/tex-Asana-Math
 # depend asapsym
@@ -160,7 +161,7 @@ DEPENDS+=	tex-fira-[0-9]*:../../fonts/tex-fira
 DEPENDS+=	tex-foekfont-[0-9]*:../../fonts/tex-foekfont
 DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
-# depend fontawesome5
+DEPENDS+=	tex-fontawesome5-[0-9]*:../../fonts/tex-fontawesome5
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
 # depend forum
@@ -204,6 +205,7 @@ DEPENDS+=	tex-hfoldsty-[0-9]*:../../fonts/tex-hfoldsty
 DEPENDS+=	tex-ifsym-[0-9]*:../../fonts/tex-ifsym
 # depend imfellenglish
 DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+# depend inconsolata-nerd-font
 DEPENDS+=	tex-initials-[0-9]*:../../fonts/tex-initials
 # depend inriafonts
 # depend inter
@@ -213,6 +215,7 @@ DEPENDS+=	tex-jablantile-[0-9]*:../../fonts/tex-jablantile
 DEPENDS+=	tex-jamtimes-[0-9]*:../../fonts/tex-jamtimes
 # depend josefin
 DEPENDS+=	tex-junicode-[0-9]*:../../fonts/tex-junicode
+# depend junicodevf
 DEPENDS+=	tex-kixfont-[0-9]*:../../fonts/tex-kixfont
 DEPENDS+=	tex-kpfonts-[0-9]*:../../fonts/tex-kpfonts
 # depend kpfonts-otf
@@ -246,6 +249,7 @@ DEPENDS+=	tex-mathdesign-[0-9]*:../../fonts/tex-mathdesign
 DEPENDS+=	tex-mdputu-[0-9]*:../../fonts/tex-mdputu
 DEPENDS+=	tex-mdsymbol-[0-9]*:../../fonts/tex-mdsymbol
 DEPENDS+=	tex-merriweather-[0-9]*:../../fonts/tex-merriweather
+# depend metsymb
 # depend miama
 DEPENDS+=	tex-mintspirit-[0-9]*:../../fonts/tex-mintspirit
 # depend missaali
@@ -299,6 +303,7 @@ DEPENDS+=	tex-pxtxalfa-[0-9]*:../../fonts/tex-pxtxalfa
 DEPENDS+=	tex-quattrocento-[0-9]*:../../fonts/tex-quattrocento
 DEPENDS+=	tex-raleway-[0-9]*:../../fonts/tex-raleway
 DEPENDS+=	tex-recycle-[0-9]*:../../fonts/tex-recycle
+# depend rit-fonts
 DEPENDS+=	tex-roboto-[0-9]*:../../fonts/tex-roboto
 DEPENDS+=	tex-romande-[0-9]*:../../fonts/tex-romande
 # depend rosario
@@ -326,7 +331,7 @@ DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
 # depend stickstoo
 DEPENDS+=	tex-stix-[0-9]*:../../fonts/tex-stix
 DEPENDS+=	tex-stix2-otf-[0-9]*:../../fonts/tex-stix2-otf
-# depend stix2-type1
+DEPENDS+=	tex-stix2-type1-[0-9]*:../../fonts/tex-stix2-type1
 DEPENDS+=	tex-superiors-[0-9]*:../../fonts/tex-superiors
 # depend svrsymbols
 # depend symbats3
