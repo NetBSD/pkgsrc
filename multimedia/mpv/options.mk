@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2023/10/20 04:58:09 mrg Exp $
+# $NetBSD: options.mk,v 1.36 2024/01/18 07:40:03 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -24,7 +24,14 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 PKG_SUGGESTED_OPTIONS+=		opengl x11
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+# Requires libdrm-2.4.105
+.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS_VERSION} >= 099983 || ${X11_TYPE} != "native"
+PKG_SUGGESTED_OPTIONS+=		libdrm
+.  endif
+.endif
+
+.if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=		libdrm
 .endif
 
