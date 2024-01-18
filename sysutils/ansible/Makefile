@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2023/11/17 20:17:48 adam Exp $
+# $NetBSD: Makefile,v 1.69 2024/01/18 10:17:38 adam Exp $
 
-DISTNAME=	ansible-8.6.1
+DISTNAME=	ansible-9.1.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -13,7 +13,7 @@ PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	ansible-core>=2.15.6:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.16.1:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -65,6 +65,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/dev/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/test-fixtures/cloud-function-source/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/hetzner/hcloud/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/grafana/grafana/tools/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bin/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/lowlydba/sqlserver/plugins/modules/*.ps1
