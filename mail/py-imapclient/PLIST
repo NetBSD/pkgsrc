@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/01 20:54:11 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/18 15:59:37 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/imapclient/__init__.py
 ${PYSITELIB}/imapclient/__init__.pyc
 ${PYSITELIB}/imapclient/__init__.pyo
@@ -46,6 +47,9 @@ ${PYSITELIB}/imapclient/testable_imapclient.pyo
 ${PYSITELIB}/imapclient/tls.py
 ${PYSITELIB}/imapclient/tls.pyc
 ${PYSITELIB}/imapclient/tls.pyo
+${PYSITELIB}/imapclient/typing_imapclient.py
+${PYSITELIB}/imapclient/typing_imapclient.pyc
+${PYSITELIB}/imapclient/typing_imapclient.pyo
 ${PYSITELIB}/imapclient/util.py
 ${PYSITELIB}/imapclient/util.pyc
 ${PYSITELIB}/imapclient/util.pyo
