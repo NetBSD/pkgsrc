@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/10/28 19:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/01/18 10:20:45 adam Exp $
 
-DISTNAME=	beautifulsoup4-4.12.2
+DISTNAME=	beautifulsoup4-4.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=b/beautifulsoup4/}
 
@@ -14,16 +13,12 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-soupsieve>=1.2:../../www/py-soupsieve
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EXTRACT_USING=	bsdtar
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} bs4
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
