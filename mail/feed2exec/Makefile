@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/11/07 22:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/01/18 12:09:35 schmonz Exp $
 
-DISTNAME=		feed2exec-0.19.0
+DISTNAME=		feed2exec-0.20.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITLAB:=anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/}
 
@@ -35,9 +34,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
@@ -50,7 +47,10 @@ post-extract:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} -f feed2exec feed2exec-${PYVERSSUFFIX}
+
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
