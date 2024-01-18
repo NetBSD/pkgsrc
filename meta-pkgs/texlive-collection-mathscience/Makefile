@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2023/08/14 05:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/01/18 20:09:29 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2023pre1
 PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	67258
+TEXLIVE_REV=	69267
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -104,11 +104,13 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend extpfeil
 # depend faktor
 # depend fascicules
+# depend fitch
 # depend fixdif
 # depend fixmath
 # depend fnspe
 # depend formal-grammar
 # depend fouridx
+# depend freealign
 # depend functan
 # depend galois
 # depend gastex
@@ -120,6 +122,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend gu
 # depend helmholtz-ellis-ji-notation
 # depend hep
+# depend hep-graphic
 # depend hep-reference
 # depend hepnames
 # depend hepparticles
@@ -130,6 +133,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend interval
 # depend ionumbers
 # depend isomath
+# depend isphysicalmath
 # depend jkmath
 # depend jupynotex
 # depend karnaugh
@@ -143,6 +147,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend lpform
 # depend lplfitch
 # depend lstbayes
+# depend luanumint
 # depend mathcommand
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathfixs
@@ -188,6 +193,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend physunits
 # depend pinoutikz
 # depend pm-isomath
+# depend pmdraw
 # depend polexpr
 # depend prftree
 # depend principia
@@ -199,6 +205,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend pythonhighlight
 # depend qsharp
 # depend quickreaction
+# depend quiver
 # depend rank-2-roots
 # depend rbt-mathnotes
 # depend rec-thy
