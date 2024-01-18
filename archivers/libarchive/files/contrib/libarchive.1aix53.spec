@@ -127,53 +127,54 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.12  2020/05/26 09:16:40  nia
-libarchive: Update to 3.4.3
+Revision 1.13  2024/01/18 18:00:13  adam
+libarchive: updated to 3.7.2
 
-Libarchive 3.4.3 is a feature and bugfix release.
+Libarchive 3.7.2 is a security, bugfix and feature release.
+
+Security fixes:
+
+Multiple vulnerabilities have been fixed in the PAX writer (1b4e0d0)
+Important bugfixes:
+
+bsdunzip(1) now correctly handles arguments following an -x after the zipfile
+New features:
+
+bsdunzip(1) now supports the "--version" flag
+7-zip reader now translates Windows permissions into UNIX permissions
+uudecode filter in raw mode now supports file name and file mode
+zstd filter now supports the "long" write option
+
+
+Libarchive 3.7.1 is a security, feature and bugfix release.
+
+Security fixes:
+
+SEGV and stack buffer overflow in verbose mode of cpio
+Feature updates:
+
+bsdunzip updated to match latest upstream code
+Important bugfixes:
+
+miscellaneous functional bugfixes
+build fixes on multiple platforms
+
+
+Libarchive 3.7.0 is a feature and bugfix release.
 
 New features:
 
-    support for pzstd compressed files (#1357)
-    support for RHT.security.selinux tar extended attribute (#1348)
+bsdunzip: new tool ported from FreeBSD
+drop-in replacement for Info-ZIP unzip, not yet ported for Windows
+7zip reader: support for Zstandard compression
+7zip reader: support for ARM64 filter
+zstd filter: support for multi-frame zstd archives
+Other notable bugfixes and improvements:
 
-Important bugfixes:
-
-    various zstd fixes and improvements (#1342 #1352 #1359)
-    child process handling fixes (#1372)
-
-Libarchive 3.4.2 is a feature and security release.
-
-New features:
-
-    support for atomic file extraction (bsdtar -x --safe-writes) (#1289)
-    support for mbed TLS (PolarSSL) (#1301)
-
-Important bugfixes:
-
-    security fixes in RAR5 reader (#1280 #1326)
-    compression buffer fix in XAR writer (#1317)
-    fix uname and gname longer than 32 characters in PAX writer (#1319)
-    fix segfault when archiving hard links in ISO9660 and XAR writers (#1325)
-    fix support for extracting 7z archive entries with Delta filter (#987)
-
-Libarchive 3.4.1 is a feature and security release.
-
-New features:
-
-    Unicode filename support for reading lha/lzh archives
-    New pax write option "xattrhdr"
-
-Important bugfixes:
-
-    security fixes in wide string processing (#1276 #1298)
-    security fixes in RAR5 reader (#1212 #1217 #1296)
-    security fixes and optimizations to write filter logic (#351)
-    security fix related to use of readlink(2) (1dae5a5)
-    sparse file handling fixes (#1218 #1260)
-
-Thanks to all contributors and bug reporters.
-Special thanks to Christos Zoulas (@zoulasc) from NetBSD for the atomic file extraction feature.
+pax: fix year 2038 problem on platforms with 64-bit time_t
+Windows: Universal Windows Platform (UWP) fixes and improvements
+Windows: bcrypt usage fixes and improvements
+Windows: time function usage fixes and improvements
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3

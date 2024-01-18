@@ -36,30 +36,40 @@ GNU-format tar archives,
 .IP \(bu
 most common cpio archive formats,
 .IP \(bu
-ISO9660 CD images (including RockRidge and Joliet extensions),
-.IP \(bu
-Zip archives,
+7-Zip archives,
 .IP \(bu
 ar archives (including GNU/SysV and BSD extensions),
 .IP \(bu
 Microsoft CAB archives,
 .IP \(bu
+ISO9660 CD images (including RockRidge and Joliet extensions),
+.IP \(bu
 LHA archives,
 .IP \(bu
 mtree file tree descriptions,
 .IP \(bu
-RAR archives,
+RAR and most RAR5 archives,
 .IP \(bu
-XAR archives.
+WARC archives,
+.IP \(bu
+XAR archives,
+.IP \(bu
+Zip archives.
 .RE
 The library automatically detects archives compressed with
-\fBgzip\fP(1),
+\fBcompress\fP(1),
 \fBbzip2\fP(1),
-\fBxz\fP(1),
+\fBgrzip\fP(1),
+\fBgzip\fP(1),
+\fBlrzip\fP(1),
+\fBlz4\fP(1),
 \fBlzip\fP(1),
+\fBlzop\fP(1),
+\fBxz\fP(1),
 or
-\fBcompress\fP(1)
-and decompresses them transparently.
+\fBzstd\fP(1)
+and decompresses them transparently. Decompression of some formats
+requires external decompressor utilities.
 It can similarly detect and decode archives processed with
 \fBuuencode\fP(1)
 or which have an
@@ -79,21 +89,21 @@ POSIX
 ``pax interchange format''
 archives,
 .IP \(bu
-POSIX octet-oriented cpio archives,
-.IP \(bu
-Zip archive,
-.IP \(bu
-two different variants of shar archives,
-.IP \(bu
-ISO9660 CD images,
+cpio archives,
 .IP \(bu
 7-Zip archives,
 .IP \(bu
 ar archives,
 .IP \(bu
+two different variants of shar archives,
+.IP \(bu
+ISO9660 CD images,
+.IP \(bu
 mtree file tree descriptions,
 .IP \(bu
-XAR archives.
+XAR archives,
+.IP \(bu
+Zip archive.
 .RE
 Pax interchange format is an extension of the tar archive format that
 eliminates essentially all of the limitations of historic tar formats

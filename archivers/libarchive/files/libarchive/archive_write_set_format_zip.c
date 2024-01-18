@@ -584,6 +584,7 @@ archive_write_zip_header(struct archive_write *a, struct archive_entry *entry)
 			zip->entry_flags |= ZIP_ENTRY_FLAG_ENCRYPTED;
 			zip->entry_encryption = zip->encryption_type;
 			break;
+		case ENCRYPTION_NONE:
 		default:
 			break;
 		}
@@ -710,6 +711,7 @@ archive_write_zip_header(struct archive_write *a, struct archive_entry *entry)
 				    + AUTH_CODE_SIZE;
 				version_needed = 20;
 				break;
+			case ENCRYPTION_NONE:
 			default:
 				break;
 			}
@@ -738,12 +740,16 @@ archive_write_zip_header(struct archive_write *a, struct archive_entry *entry)
 		/* We may know the size, but never the CRC. */
 		zip->entry_flags |= ZIP_ENTRY_FLAG_LENGTH_AT_END;
 	} else {
-		/* We don't know the size.  In this case, we prefer
-		 * deflate (it has a clear end-of-data marker which
-		 * makes length-at-end more reliable) and will
-		 * enable Zip64 extensions unless we're told not to.
+		/* We don't know the size. Use the default
+		 * compression unless specified otherwise.
+		 * We enable Zip64 extensions unless we're told not to.
 		 */
-		zip->entry_compression = COMPRESSION_DEFAULT;
+
+		zip->entry_compression = zip->requested_compression;
+		if(zip->entry_compression == COMPRESSION_UNSPECIFIED){
+			zip->entry_compression = COMPRESSION_DEFAULT;
+		}
+
 		zip->entry_flags |= ZIP_ENTRY_FLAG_LENGTH_AT_END;
 		if ((zip->flags & ZIP_FLAG_AVOID_ZIP64) == 0) {
 			zip->entry_uses_zip64 = 1;
@@ -762,6 +768,7 @@ archive_write_zip_header(struct archive_write *a, struct archive_entry *entry)
 				if (version_needed < 20)
 					version_needed = 20;
 				break;
+			case ENCRYPTION_NONE:
 			default:
 				break;
 			}
@@ -1029,6 +1036,7 @@ archive_write_zip_data(struct archive_write *a, const void *buff, size_t s)
 				zip->cctx_valid = zip->hctx_valid = 1;
 			}
 			break;
+		case ENCRYPTION_NONE:
 		default:
 			break;
 		}
@@ -1117,6 +1125,7 @@ archive_write_zip_data(struct archive_write *a, const void *buff, size_t s)
 		break;
 #endif
 
+	case COMPRESSION_UNSPECIFIED:
 	default:
 		archive_set_error(&a->archive, ARCHIVE_ERRNO_MISC,
 		    "Invalid ZIP compression type");
@@ -1373,25 +1382,14 @@ dos_time(const time_t unix_time)
 {
 	struct tm *t;
 	unsigned int dt;
-#if defined(HAVE_LOCALTIME_R) || defined(HAVE__LOCALTIME64_S)
+#if defined(HAVE_LOCALTIME_R) || defined(HAVE_LOCALTIME_S)
 	struct tm tmbuf;
 #endif
-#if defined(HAVE__LOCALTIME64_S)
-	errno_t terr;
-	__time64_t tmptime;
-#endif
 
-	/* This will not preserve time when creating/extracting the archive
-	 * on two systems with different time zones. */
-#if defined(HAVE_LOCALTIME_R)
+#if defined(HAVE_LOCALTIME_S)
+	t = localtime_s(&tmbuf, &unix_time) ? NULL : &tmbuf;
+#elif defined(HAVE_LOCALTIME_R)
 	t = localtime_r(&unix_time, &tmbuf);
-#elif defined(HAVE__LOCALTIME64_S)
-	tmptime = unix_time;
-	terr = _localtime64_s(&tmbuf, &tmptime);
-	if (terr)
-		t = NULL;
-	else
-		t = &tmbuf;
 #else
 	t = localtime(&unix_time);
 #endif

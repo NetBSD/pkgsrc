@@ -24,6 +24,7 @@
  *
  * $FreeBSD$
  */
+#define __LIBARCHIVE_CONFIG_H_INCLUDED 1
 
 #include <osreldate.h>
 
@@ -110,6 +111,8 @@
 #define HAVE_FCNTL 1
 #define HAVE_FCNTL_H 1
 #define HAVE_FDOPENDIR 1
+#define HAVE_FNMATCH 1
+#define HAVE_FNMATCH_H 1
 #define HAVE_FORK 1
 #define HAVE_FSEEKO 1
 #define HAVE_FSTAT 1
@@ -122,6 +125,8 @@
 #define HAVE_GETEUID 1
 #define HAVE_GETGRGID_R 1
 #define HAVE_GETGRNAM_R 1
+#define HAVE_GETLINE 1
+#define HAVE_GETOPT_OPTRESET 1
 #define HAVE_GETPID 1
 #define HAVE_GETPWNAM_R 1
 #define HAVE_GETPWUID_R 1
@@ -137,6 +142,7 @@
 #define HAVE_LIBZ 1
 #define HAVE_LIMITS_H 1
 #define HAVE_LINK 1
+#define HAVE_LINKAT 1
 #define HAVE_LOCALE_H 1
 #define HAVE_LOCALTIME_R 1
 #define HAVE_LONG_LONG_INT 1
@@ -183,6 +189,7 @@
 #define HAVE_STRFTIME 1
 #define HAVE_STRINGS_H 1
 #define HAVE_STRING_H 1
+#define HAVE_STRNLEN 1
 #define HAVE_STRRCHR 1
 #define HAVE_STRUCT_STATFS_F_NAMEMAX 1
 #define HAVE_STRUCT_STAT_ST_BIRTHTIME 1
@@ -198,6 +205,7 @@
 #define HAVE_SYS_MOUNT_H 1
 #define HAVE_SYS_PARAM_H 1
 #define HAVE_SYS_POLL_H 1
+#define HAVE_SYS_QUEUE_H 1
 #define HAVE_SYS_SELECT_H 1
 #define HAVE_SYS_STATVFS_H 1
 #define HAVE_SYS_STAT_H 1
@@ -231,7 +239,15 @@
 #define HAVE_WMEMCPY 1
 #define HAVE_WMEMMOVE 1
 #define HAVE_ZLIB_H 1
-#define TIME_WITH_SYS_TIME 1
+#define HAVE_SYS_TIME_H 1
+
+#if __FreeBSD_version >= 800505
+#define HAVE_LIBLZMA 1
+#define HAVE_LZMA_H 1
+#if __FreeBSD_version >= 1002504
+#define HAVE_LZMA_STREAM_ENCODER_MT 1
+#endif
+#endif
 
 #if __FreeBSD_version >= 1100056
 #define HAVE_FUTIMENS 1

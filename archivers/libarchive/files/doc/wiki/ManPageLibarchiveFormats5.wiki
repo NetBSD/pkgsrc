@@ -4,7 +4,7 @@ LIBARCHIVE-FORMATS(5) manual page
 - archive formats supported by the libarchive library 
 == DESCRIPTION == 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library reads and writes a variety of streaming archive formats. 
 Generally speaking, all of these archive formats consist of a series of 
 "entries". 
@@ -21,7 +21,7 @@ to support, though many programs do use libarchive convenience
 functions to enable all supported formats. 
 === Tar Formats=== 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read most tar archives. 
 It can write POSIX-standard 
 "ustar" 
@@ -40,7 +40,7 @@ subsequent entries.
 <dl> 
 <dt>'''gnutar'''</dt><dd> 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read most GNU-format tar archives. 
 It currently supports the most popular GNU extensions, including 
 modern long filename and linkname support, as well as atime and ctime data. 
@@ -50,12 +50,12 @@ It can read GNU sparse file entries, including the new POSIX-based
 formats. 
 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can write GNU tar format, including long filename 
 and linkname support, as well as atime and ctime data. 
 </dd><dt>'''pax'''</dt><dd> 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read and write POSIX-compliant pax interchange format 
 archives. 
 Pax interchange format archives are an extension of the older ustar 
@@ -173,28 +173,27 @@ POSIX.1-2001 extended the ustar format to create the
 "pax interchange" 
 format. 
 === Cpio Formats=== 
-The libarchive library can read a number of common cpio variants and can write 
-"odc" 
-and 
-"newc" 
-format archives. 
-A cpio archive stores each entry as a fixed-size header followed 
-by a variable-length filename and variable-length data. 
-Unlike the tar format, the cpio format does only minimal padding 
-of the header or file data. 
-There are several cpio variants, which differ primarily in 
-how they store the initial header: some store the values as 
-octal or hexadecimal numbers in ASCII, others as binary values of 
-varying byte order and length. 
+The libarchive library can read and write a number of common cpio 
+variants.  A cpio archive stores each entry as a fixed-size header 
+followed by a variable-length filename and variable-length data. 
+Unlike the tar format, the cpio format does only minimal padding of 
+the header or file data.  There are several cpio variants, which 
+differ primarily in how they store the initial header: some store the 
+values as octal or hexadecimal numbers in ASCII, others as binary 
+values of varying byte order and length. 
 <dl> 
 <dt>'''binary'''</dt><dd> 
-The libarchive library transparently reads both big-endian and little-endian 
-variants of the original binary cpio format. 
-This format used 32-bit binary values for file size and mtime, 
-and 16-bit binary values for the other fields. 
+The libarchive library transparently reads both big-endian and 
+little-endian variants of the the two binary cpio formats; the 
+original one from PWB/UNIX, and the later, more widely used, variant. 
+This format used 32-bit binary values for file size and mtime, and 
+16-bit binary values for the other fields.  The formats support only 
+the file types present in UNIX at the time of their creation.  File 
+sizes are limited to 24 bits in the PWB format, because of the limits 
+of the file system, and to 31 bits in the newer binary format, where 
+signed 32 bit longs were used. 
 </dd><dt>'''odc'''</dt><dd> 
-The libarchive library can both read and write this 
-POSIX-standard format, which is officially known as the 
+This is the POSIX standardized format, which is officially known as the 
 "cpio interchange format" 
 or the 
 "octet-oriented cpio archive format" 
@@ -379,7 +378,7 @@ although many of the keywords cannot currently be stored in an
 '''archive_entry''' 
 object. 
 When writing, libarchive supports use of the 
-[[ManPagerchiveriteetptions3]] 
+[[ManPageArchiveWriteSetOptions3]] 
 interface to specify which keywords should be included in the 
 output. 
 If libarchive was compiled with access to suitable 

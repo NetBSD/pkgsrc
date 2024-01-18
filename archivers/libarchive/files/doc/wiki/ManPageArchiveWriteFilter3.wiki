@@ -125,10 +125,10 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPagerchiverite3]], 
-[[ManPagerchiveriteormat3]], 
-[[ManPagerchiveriteetptions3]], 
-[[ManPageibarchive3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageArchiveWriteFormat3]], 
+[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageLibarchive3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 
