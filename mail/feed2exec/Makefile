@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/01/18 12:09:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2024/01/18 12:14:15 wiz Exp $
 
 DISTNAME=		feed2exec-0.20.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
