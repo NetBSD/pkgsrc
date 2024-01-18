@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/10/18 13:34:23 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/18 23:30:12 bacon Exp $
 
-DISTNAME=	bowtie2-2.5.2
+DISTNAME=	bowtie2-2.5.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

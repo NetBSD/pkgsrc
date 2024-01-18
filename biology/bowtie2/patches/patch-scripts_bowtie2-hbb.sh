@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_bowtie2-hbb.sh,v 1.4 2023/10/18 13:34:23 bacon Exp $
+$NetBSD: patch-scripts_bowtie2-hbb.sh,v 1.5 2024/01/18 23:30:12 bacon Exp $
 
 # Eliminate bash dependency
 
