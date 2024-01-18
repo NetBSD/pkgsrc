@@ -25,6 +25,10 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
+'''archive_read_support_filter_by_code'''(''struct archive *'', ''int''); 
+<br> 
+''int'' 
+<br> 
 '''archive_read_support_filter_bzip2'''(''struct archive *''); 
 <br> 
 ''int'' 
@@ -110,6 +114,14 @@ Note that
 is always enabled by default. 
 </dd><dt>'''archive_read_support_filter_all'''()</dt><dd> 
 Enables all available decompression filters. 
+</dd><dt>'''archive_read_support_filter_by_code'''()</dt><dd> 
+Enables a single filter specified by the filter code. 
+This function does not work with 
+'''ARCHIVE_FILTER_PROGRAM'''. 
+Note: In statically-linked executables, this will cause 
+your program to include support for every filter. 
+If executable size is a concern, you may wish to avoid 
+using this function. 
 </dd><dt>'''archive_read_support_filter_program'''()</dt><dd> 
 Data is fed through the specified external program before being dearchived. 
 Note that this disables automatic detection of the compression format, 
@@ -136,8 +148,8 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPagerchiveead3]], 
-[[ManPagerchiveeadata3]], 
-[[ManPagerchiveeadormat3]], 
-[[ManPagerchiveeadormat3]], 
-[[ManPageibarchive3]] 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveReadData3]], 
+[[ManPageArchiveReadFormat3]], 
+[[ManPageArchiveReadFormat3]], 
+[[ManPageLibarchive3]] 

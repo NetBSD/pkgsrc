@@ -1,7 +1,7 @@
 ARCHIVE_WRITE_SET_PAS... BSD Library Functions Manual ARCHIVE_WRITE_SET_PAS...
 
 NAME
-     archive_write_set_passphrase, archive_write_set_passphrase_callback --
+     archive_write_set_passphrase, archive_write_set_passphrase_callback —
      functions for writing encrypted archives
 
 LIBRARY
@@ -19,7 +19,7 @@ SYNOPSIS
 
 DESCRIPTION
      archive_write_set_passphrase()
-	     Set a passphrase for writing an encrypted archive.  If passphrase
+	     Set a passphrase for writing an encrypted archive.	 If passphrase
 	     is NULL or empty, this function will do nothing and
 	     ARCHIVE_FAILED will be returned.  Otherwise, ARCHIVE_OK will be
 	     returned.

@@ -73,7 +73,10 @@ DEFINE_TEST(test_write_format_zip_file)
 	struct archive *a;
 	struct archive_entry *ae;
 	time_t t = 1234567890;
-	struct tm *tm = localtime(&t);
+	struct tm *tm;
+#if defined(HAVE_LOCALTIME_R) || defined(HAVE_LOCALTIME_S)
+	struct tm tmbuf;
+#endif
 	size_t used, buffsize = 1000000;
 	unsigned long crc;
 	int file_perm = 00644;
@@ -91,6 +94,13 @@ DEFINE_TEST(test_write_format_zip_file)
 	zip_compression = 0;
 #endif
 
+#if defined(HAVE_LOCALTIME_S)
+	tm = localtime_s(&tmbuf, &t) ? NULL : &tmbuf;
+#elif defined(HAVE_LOCALTIME_R)
+	tm = localtime_r(&t, &tmbuf);
+#else
+	tm = localtime(&t);
+#endif
 	buff = malloc(buffsize);
 
 	/* Create a new archive in memory. */

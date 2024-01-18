@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2024/01/13 20:07:32 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.13 2024/01/18 18:00:11 adam Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -24,7 +24,7 @@ MAKEVARS+=		IS_BUILTIN.libarchive
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.libarchive) && \
-    !empty(IS_BUILTIN.libarchive:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.libarchive:tl} == yes && \
     empty(H_ARCHIVE:M__nonexistent__)
 BUILTIN_VERSION.libarchive!=						\
 	${AWK} '/\#define[ 	]*ARCHIVE_LIBRARY_VERSION/ {		\
@@ -72,12 +72,12 @@ USE_BUILTIN.libarchive=	no
 .  else
 USE_BUILTIN.libarchive=	${IS_BUILTIN.libarchive}
 .    if defined(BUILTIN_PKG.libarchive) && \
-        !empty(IS_BUILTIN.libarchive:M[yY][eE][sS])
+        ${IS_BUILTIN.libarchive:tl} == yes
 USE_BUILTIN.libarchive=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libarchive}
-.        if !empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libarchive:tl} == yes
 USE_BUILTIN.libarchive!=	\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libarchive:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libarchive}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -94,8 +94,8 @@ MAKEVARS+=		USE_BUILTIN.libarchive
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.libarchive?=	no
-.if !empty(CHECK_BUILTIN.libarchive:M[nN][oO])
-.  if !empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+.if ${CHECK_BUILTIN.libarchive:tl} == no
+.  if ${USE_BUILTIN.libarchive:tl} == yes
 
 BUILDLINK_TARGETS+=	fake-libarchive-pc
 

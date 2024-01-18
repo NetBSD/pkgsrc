@@ -253,8 +253,10 @@ is_sparse_supported(const char *path)
 #if defined(HAVE_LINUX_FIEMAP_H)
 	if (r < 0)
 		return (is_sparse_supported_fiemap(path));
-#endif
+	return (1);
+#else
 	return (r >= 0);
+#endif
 }
 
 #elif !defined(HAVE_LINUX_FIEMAP_H)
@@ -364,9 +366,10 @@ verify_sparse_file(struct archive *a, const char *path,
 #if DEBUG
 			fprintf(stderr, "    overlapping hole expected_offset=%d, size=%d\n", (int)expected_offset, (int)sparse->size);
 #endif
-			/* Must be a hole, overlap must be filled with '\0' */
-			if (assert(sparse->type == HOLE)) {
+			if (sparse->type == HOLE) {
 				assertMemoryFilledWith(start, end - start, '\0');
+			} else if (assert(sparse->type == DATA)) {
+				assertMemoryFilledWith(start, end - start, ' ');
 			}
 			start = end;
 			expected_offset += sparse->size;
@@ -410,9 +413,10 @@ verify_sparse_file(struct archive *a, const char *path,
 #if DEBUG
 			fprintf(stderr, "    trailing overlap expected_offset=%d, size=%d\n", (int)expected_offset, (int)sparse->size);
 #endif
-			/* Must be a hole, overlap must be filled with '\0' */
-			if (assert(sparse->type == HOLE)) {
+			if (sparse->type == HOLE) {
 				assertMemoryFilledWith(start, end - start, '\0');
+			} else if (assert(sparse->type == DATA)) {
+				assertMemoryFilledWith(start, end - start, ' ');
 			}
 		}
 		last_offset = offset + bytes_read;
@@ -577,7 +581,7 @@ DEFINE_TEST(test_sparse_basic)
 
 	/* Check if the filesystem where CWD on can
 	 * report the number of the holes of a sparse file. */
-#ifdef PATH_MAX
+#if defined(PATH_MAX) && !defined(__GLIBC__)
 	cwd = getcwd(NULL, PATH_MAX);/* Solaris getcwd needs the size. */
 #else
 	cwd = getcwd(NULL, 0);
@@ -615,6 +619,33 @@ DEFINE_TEST(test_sparse_basic)
 	verify_sparse_file2(a, "file0", sparse_file0, 5, 1);
 
 	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+
+	/*
+	 * Test that setting ARCHIVE_READDISK_NO_SPARSE
+	 * creates no sparse entries.
+	 */
+	assert((a = archive_read_disk_new()) != NULL);
+
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_disk_set_behavior(a,
+		ARCHIVE_READDISK_NO_SPARSE));
+
+	verify_sparse_file(a, "file0", sparse_file0, 0);
+	verify_sparse_file(a, "file1", sparse_file1, 0);
+	verify_sparse_file(a, "file2", sparse_file2, 0);
+	verify_sparse_file(a, "file3", sparse_file3, 0);
+	verify_sparse_file(a, "file4", sparse_file4, 0);
+
+	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+
+	assert((a = archive_read_disk_new()) != NULL);
+
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_disk_set_behavior(a,
+		ARCHIVE_READDISK_NO_SPARSE));
+
+	verify_sparse_file2(a, "file0", sparse_file0, 0, 0);
+	verify_sparse_file2(a, "file0", sparse_file0, 0, 1);
+
+	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
 	free(cwd);
 }
 
@@ -637,7 +668,7 @@ DEFINE_TEST(test_fully_sparse_files)
 
 	/* Check if the filesystem where CWD on can
 	 * report the number of the holes of a sparse file. */
-#ifdef PATH_MAX
+#if defined(PATH_MAX) && !defined(__GLIBC__)
 	cwd = getcwd(NULL, PATH_MAX);/* Solaris getcwd needs the size. */
 #else
 	cwd = getcwd(NULL, 0);

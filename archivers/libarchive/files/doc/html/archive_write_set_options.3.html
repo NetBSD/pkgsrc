@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Wed May 20 01:10:08 2020 -->
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 11 22:06:21 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -138,7 +138,7 @@ option with this name will ignore it.</p>
 
 <p style="margin-left:27%; margin-top: 1em">The option will
 be provided to every module with a value of
-&rsquo;&rsquo;1&rsquo;&rsquo;.</p>
+&ldquo;1&rdquo;.</p>
 
 <p><i>!option</i></p>
 
@@ -187,11 +187,9 @@ enabled by default.</p>
 compression</b>=<i>type</i></p>
 
 <p style="margin-left:27%;">Use <i>type</i> as compression
-method. Supported values are
-&rsquo;&rsquo;bzip2&rsquo;&rsquo;,
-&rsquo;&rsquo;gzipi&rsquo;&rsquo;,
-&rsquo;&rsquo;lzo&rsquo;&rsquo; (ultra fast), and
-&rsquo;&rsquo;zpaq&rsquo;&rsquo; (best, extremely slow).</p>
+method. Supported values are &ldquo;bzip2&rdquo;,
+&ldquo;gzipi&rdquo;, &ldquo;lzo&rdquo; (ultra fast), and
+&ldquo;zpaq&rdquo; (best, extremely slow).</p>
 
 <p><b>compression-level</b></p>
 
@@ -268,17 +266,29 @@ decimal integer specifying the compression level. Supported
 values depend on the library version, common values are from
 1 to 22.</p>
 
+<p><b>long</b></p>
+
+<p style="margin-left:27%; margin-top: 1em">Enables long
+distance matching. The value is interpreted as a decimal
+integer specifying log2 window size in bytes. Values from 10
+to 30 for 32 bit, or 31 for 64 bit, are supported.</p>
+
+<p><b>threads</b></p>
+
+<p style="margin-left:27%;">The value is interpreted as a
+decimal integer specifying the number of threads for
+multi-threaded zstd compression. If set to 0, zstd will
+attempt to detect and use the number of physical CPU
+cores.</p>
+
 <p>Format 7zip <b><br>
 compression</b></p>
 
 <p style="margin-left:27%;">The value is one of
-&rsquo;&rsquo;store&rsquo;&rsquo;,
-&rsquo;&rsquo;deflate&rsquo;&rsquo;,
-&rsquo;&rsquo;bzip2&rsquo;&rsquo;,
-&rsquo;&rsquo;lzma1&rsquo;&rsquo;,
-&rsquo;&rsquo;lzma2&rsquo;&rsquo; or
-&rsquo;&rsquo;ppmd&rsquo;&rsquo; to indicate how the
-following entries should be compressed. Note that this
+&ldquo;store&rdquo;, &ldquo;deflate&rdquo;,
+&ldquo;bzip2&rdquo;, &ldquo;lzma1&rdquo;,
+&ldquo;lzma2&rdquo; or &ldquo;ppmd&rdquo; to indicate how
+the following entries should be compressed. Note that this
 setting is ignored for directories, symbolic links, and
 other special entries.</p>
 
@@ -290,7 +300,7 @@ between 0 and 9 are supported. The interpretation of the
 compression level depends on the chosen compression
 method.</p>
 
-<p>Format cpio <b><br>
+<p>Format bin <b><br>
 hdrcharset</b></p>
 
 <p style="margin-left:27%;">The value is used as a
@@ -599,8 +609,8 @@ cksum</b>, <b>device</b>, <b>flags</b>, <b>gid</b>,
 <p style="margin-left:27%;">Enable a particular keyword in
 the mtree output. Prefix with an exclamation mark to disable
 the corresponding keyword. The default is equivalent to
-&rsquo;&rsquo;device, flags, gid, gname, link, mode, nlink,
-size, time, type, uid, uname&rsquo;&rsquo;.</p>
+&ldquo;device, flags, gid, gname, link, mode, nlink, size,
+time, type, uid, uname&rdquo;.</p>
 
 <p><b>all</b></p>
 
@@ -625,29 +635,38 @@ hdrcharset</b></p>
 character set name that will be used when translating file
 names.</p>
 
+<p>Format odc <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
+<p>Format pwb <b><br>
+hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
 <p>Format pax <b><br>
 hdrcharset</b></p>
 
 <p style="margin-left:27%;">The value is used as a
 character set name that will be used when translating file,
 group and user names. The value is one of
-&rsquo;&rsquo;BINARY&rsquo;&rsquo; or
-&rsquo;&rsquo;UTF-8&rsquo;&rsquo;. With
-&rsquo;&rsquo;BINARY&rsquo;&rsquo; there is no character
-conversion, with &rsquo;&rsquo;UTF-8&rsquo;&rsquo; names are
-converted to UTF-8.</p>
+&ldquo;BINARY&rdquo; or &ldquo;UTF-8&rdquo;. With
+&ldquo;BINARY&rdquo; there is no character conversion, with
+&ldquo;UTF-8&rdquo; names are converted to UTF-8.</p>
 
 <p><b>xattrheader</b></p>
 
 <p style="margin-left:27%;">When storing extended
 attributes, this option configures which headers should be
-written. The value is one of
-&rsquo;&rsquo;all&rsquo;&rsquo;,
-&rsquo;&rsquo;LIBARCHIVE&rsquo;&rsquo;, or
-&rsquo;&rsquo;SCHILY&rsquo;&rsquo;. By default, both
-&rsquo;&rsquo;LIBARCHIVE.xattr&rsquo;&rsquo; and
-&rsquo;&rsquo;SCHILY.xattr&rsquo;&rsquo; headers are
-written.</p>
+written. The value is one of &ldquo;all&rdquo;,
+&ldquo;LIBARCHIVE&rdquo;, or &ldquo;SCHILY&rdquo;. By
+default, both &ldquo;LIBARCHIVE.xattr&rdquo; and
+&ldquo;SCHILY.xattr&rdquo; headers are written.</p>
 
 <p>Format ustar <b><br>
 hdrcharset</b></p>
@@ -666,28 +685,22 @@ group and user names.</p>
 <p>Format warc <b><br>
 omit-warcinfo</b></p>
 
-<p style="margin-left:27%;">Set to
-&rsquo;&rsquo;true&rsquo;&rsquo; to disable output of the
-warcinfo record.</p>
+<p style="margin-left:27%;">Set to &ldquo;true&rdquo; to
+disable output of the warcinfo record.</p>
 
 <p>Format xar <b><br>
 checksum</b>=<i>type</i></p>
 
 <p style="margin-left:27%;">Use <i>type</i> as file
-checksum method. Supported values are
-&rsquo;&rsquo;none&rsquo;&rsquo;,
-&rsquo;&rsquo;md5&rsquo;&rsquo;, and
-&rsquo;&rsquo;sha1&rsquo;&rsquo; (default).</p>
+checksum method. Supported values are &ldquo;none&rdquo;,
+&ldquo;md5&rdquo;, and &ldquo;sha1&rdquo; (default).</p>
 
 <p><b>compression</b>=<i>type</i></p>
 
 <p style="margin-left:27%;">Use <i>type</i> as compression
-method. Supported values are
-&rsquo;&rsquo;none&rsquo;&rsquo;,
-&rsquo;&rsquo;bzip2&rsquo;&rsquo;,
-&rsquo;&rsquo;gzip&rsquo;&rsquo; (default),
-&rsquo;&rsquo;lzma&rsquo;&rsquo; and
-&rsquo;&rsquo;xz&rsquo;&rsquo;.</p>
+method. Supported values are &ldquo;none&rdquo;,
+&ldquo;bzip2&rdquo;, &ldquo;gzip&rdquo; (default),
+&ldquo;lzma&rdquo; and &ldquo;xz&rdquo;.</p>
 
 <p><b>compression_level</b></p>
 
@@ -698,17 +711,15 @@ from 1 to 9 specifying the compression level.</p>
 
 <p style="margin-left:27%;">Use <i>type</i> as table of
 contents checksum method. Supported values are
-&rsquo;&rsquo;none&rsquo;&rsquo;,
-&rsquo;&rsquo;md5&rsquo;&rsquo; and
-&rsquo;&rsquo;sha1&rsquo;&rsquo; (default).</p>
+&ldquo;none&rdquo;, &ldquo;md5&rdquo; and &ldquo;sha1&rdquo;
+(default).</p>
 
 <p>Format zip <b><br>
 compression</b></p>
 
 <p style="margin-left:27%;">The value is either
-&rsquo;&rsquo;store&rsquo;&rsquo; or
-&rsquo;&rsquo;deflate&rsquo;&rsquo; to indicate how the
-following entries should be compressed. Note that this
+&ldquo;store&rdquo; or &ldquo;deflate&rdquo; to indicate how
+the following entries should be compressed. Note that this
 setting is ignored for directories, symbolic links, and
 other special entries.</p>
 
@@ -717,10 +728,9 @@ other special entries.</p>
 <p style="margin-left:27%;">The value is interpreted as a
 decimal integer specifying the compression level. Values
 between 0 and 9 are supported. A compression level of 0
-switches the compression method to
-&rsquo;&rsquo;store&rsquo;&rsquo;, other values will enable
-&rsquo;&rsquo;deflate&rsquo;&rsquo; compression with the
-given level.</p>
+switches the compression method to &ldquo;store&rdquo;,
+other values will enable &ldquo;deflate&rdquo; compression
+with the given level.</p>
 
 <p><b>encryption</b></p>
 
@@ -730,11 +740,10 @@ traditional zip encryption.</p>
 <p><b>encryption</b>=<i>type</i></p>
 
 <p style="margin-left:27%;">Use <i>type</i> as encryption
-type. Supported values are
-&rsquo;&rsquo;zipcrypt&rsquo;&rsquo; (traditional zip
-encryption), &rsquo;&rsquo;aes128&rsquo;&rsquo; (WinZip
-AES-128 encryption) and &rsquo;&rsquo;aes256&rsquo;&rsquo;
-(WinZip AES-256 encryption).</p>
+type. Supported values are &ldquo;zipcrypt&rdquo;
+(traditional zip encryption), &ldquo;aes128&rdquo; (WinZip
+AES-128 encryption) and &ldquo;aes256&rdquo; (WinZip AES-256
+encryption).</p>
 
 <p><b>experimental</b></p>
 

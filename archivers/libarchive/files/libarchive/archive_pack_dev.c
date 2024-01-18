@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.8 2020/05/26 09:16:42 nia Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.9 2024/01/18 18:00:17 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -37,7 +37,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: archive_pack_dev.c,v 1.8 2020/05/26 09:16:42 nia Exp $");
+__RCSID("$NetBSD: archive_pack_dev.c,v 1.9 2024/01/18 18:00:17 adam Exp $");
 #endif /* not lint */
 
 #ifdef HAVE_LIMITS_H
@@ -77,7 +77,7 @@ static	pack_t	pack_12_20;
 static	pack_t	pack_14_18;
 static	pack_t	pack_8_24;
 static	pack_t	pack_bsdos;
-static	int	compare_format(const void *, const void *);
+static	int	__LA_LIBC_CC compare_format(const void *, const void *);
 
 static const char iMajorError[] = "invalid major number";
 static const char iMinorError[] = "invalid minor number";
@@ -310,6 +310,7 @@ static const struct format {
 };
 
 static int
+__LA_LIBC_CC
 compare_format(const void *key, const void *element)
 {
 	const char		*name;

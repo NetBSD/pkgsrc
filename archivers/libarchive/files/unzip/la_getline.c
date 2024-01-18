@@ -1,4 +1,4 @@
-/*	$NetBSD: la_getline.c,v 1.1.1.1 2024/01/18 17:37:42 adam Exp $	*/
+/*	$NetBSD: la_getline.c,v 1.2 2024/01/18 18:00:21 adam Exp $	*/
 
 /*-
  * Copyright (c) 2011 The NetBSD Foundation, Inc.
