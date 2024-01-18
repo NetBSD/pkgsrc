@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/18 15:59:37 adam Exp $
 
-DISTNAME=	IMAPClient-2.2.0
+DISTNAME=	IMAPClient-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=I/IMAPClient/}
 EXTRACT_SUFX=	.zip
@@ -12,9 +11,9 @@ HOMEPAGE=	https://github.com/mjs/imapclient
 COMMENT=	Convience IMAP client for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
