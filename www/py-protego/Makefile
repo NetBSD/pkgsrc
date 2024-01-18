@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/10/25 19:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/18 16:12:32 adam Exp $
 
-DISTNAME=	Protego-0.2.1
+DISTNAME=	Protego-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Protego/}
@@ -10,15 +10,12 @@ HOMEPAGE=	https://github.com/scrapy/protego
 COMMENT=	Pure-Python robots.txt parser with support for modern conventions
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
