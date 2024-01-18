@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4159 2024/01/16 13:59:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4160 2024/01/18 19:28:26 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -116,6 +116,7 @@ SUBDIR+=	abseil
 SUBDIR+=	accerciser
 SUBDIR+=	acme
 SUBDIR+=	acr
+SUBDIR+=	action-validator
 SUBDIR+=	acunia-jam
 SUBDIR+=	adocman
 SUBDIR+=	aegis
