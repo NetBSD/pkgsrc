@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.23 2023/05/05 23:00:27 jperkin Exp $
+# $NetBSD: packlist.mk,v 1.24 2024/01/18 23:49:32 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -125,5 +125,23 @@ perl-packlist:
 			$$file > $$file.new;				\
 		${MV} -f $$file.new $$file;				\
 	done
+
+_VARGROUPS+=	perl5-packlist
+_PKG_VARS.perl5-packlist= \
+	PERL5_USE_PACKLIST PERL5_PACKLIST
+_DEF_VARS.perl5-packlist= \
+	PERL5_PACKLIST_DESTDIR PERL5_PACKLIST_DIR \
+	INSTALL_TEMPLATES DEINSTALL_TEMPLATES \
+	PERL5_GENERATE_PLIST GENERATE_PLIST \
+	_PERL5_REAL_PACKLIST _PERL5_PACKLIST
+_USE_VARS.perl5-packlist= \
+	PERL5_INSTALLVENDORARCH DESTDIR PREFIX \
+	_MANZ
+_IGN_VARS.perl5-packlist= \
+	.CURDIR FILES_SUBST \
+	_PERL5_PACKLIST_AWK_* \
+	_PERL5_PACKLIST_MANPAGE_RE
+_SORTED_VARS.perl5-packlist= \
+	FILES_SUBST
 
 .endif	# _PERL5_PACKLIST_MK
