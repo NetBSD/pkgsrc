@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/18 19:36:35 markd Exp $
+share/texmf-dist/doc/latex/cjs-rcs-article/README.md
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-article-fr.pdf
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-article-fr.tex
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-article.pdf
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-bst-en.dbj
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-bst-fr.dbj
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-class.dbj
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-english.mbs
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-french.mbs
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-merlin.mbs
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-rcs-merlin.pdf
+share/texmf-dist/doc/latex/cjs-rcs-article/cjs-template.tex
+share/texmf-dist/doc/latex/cjs-rcs-article/rcs-gabarit.tex
