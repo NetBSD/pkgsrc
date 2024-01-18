@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/18 14:09:27 hauke Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/18 20:12:55 hauke Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
 PKGVER=		1.30.1
@@ -15,8 +15,9 @@ COMMENT=	Bitwarden compatible backend server
 LICENSE=	gnu-agpl-v3
 
 # From
-# 'make CARGO_ARGS="build --release --features `make show-var VARNAME=CARGO_FEATURES`" build &&
-#  make print-cargo-depends > cargo-depends.mk'
+# 'make CARGO_ARGS="build --release --features 
+#    `make show-var VARNAME=CARGO_FEATURES`" build &&
+#    make print-cargo-depends > cargo-depends.mk'
 #
 # Or generate from FreeBSD security/vaultwarden/Makefile.crates like
 # awk '{ CA = ( NF > 2) ? $2 : $1 ; printf("CARGO_CRATE_DEPENDS+=\t%s\n", CA) }'
