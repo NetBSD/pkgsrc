@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.436 2024/01/17 23:49:55 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.437 2024/01/18 10:26:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -553,3 +553,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-CPAN-Perl-Releases to 5.20231230 [mef 2024-01-17]
 	Updated mail/s-nail to 14.9.24 [gdt 2024-01-17]
 	Updated www/gumbo-parser to 0.12.1 [gdt 2024-01-17]
+	Updated sysutils/ansible to 9.1.0 [adam 2024-01-18]
+	Updated www/py-beautifulsoup4 to 4.12.3 [adam 2024-01-18]
+	Updated devel/py-rope to 1.12.0 [adam 2024-01-18]
+	Updated devel/py-urwid to 2.4.4 [adam 2024-01-18]
