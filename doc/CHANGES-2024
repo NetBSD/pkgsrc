@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.456 2024/01/18 23:30:19 bacon Exp $
+$NetBSD: CHANGES-2024,v 1.457 2024/01/18 23:31:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -584,3 +584,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added print/tex-cjs-rcs-article-doc version 1.0 [mark 2024-01-18]
 	Updated wm/cde to 2.5.2 [vins 2024-01-18]
 	Updated biology/bowtie2 to 2.5.3 [bacon 2024-01-18]
+	Updated sysutils/R-ff to 4.0.12 [mef 2024-01-18]
