@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.437 2024/01/18 10:26:04 adam Exp $
+$NetBSD: CHANGES-2024,v 1.438 2024/01/18 10:38:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -557,3 +557,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-beautifulsoup4 to 4.12.3 [adam 2024-01-18]
 	Updated devel/py-rope to 1.12.0 [adam 2024-01-18]
 	Updated devel/py-urwid to 2.4.4 [adam 2024-01-18]
+	Updated www/py-uvicorn to 0.26.0 [adam 2024-01-18]
+	Updated databases/py-whisper to 1.1.10 [adam 2024-01-18]
