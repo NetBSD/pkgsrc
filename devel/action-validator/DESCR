@@ -1,0 +1,8 @@
+action-validator is a standalone tool designed to "lint" the YAML files
+used to define GitHub Actions and Workflows. It ensures that they are
+well-formed, by checking them against published JSON schemas, and it
+makes sure that any globs used in paths/paths-ignore match at least one
+file in the repo.
+
+The intended use case for action-validator is in Git pre-commit hooks
+and similar situations.
