@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/02/01 12:47:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/18 05:02:43 gutteridge Exp $
 
 DISTNAME=	got-0.48
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://gameoftrees.org/
 COMMENT=	Game of Trees version control system manipulating Git repo
 LICENSE=	isc
+
+CONFLICTS+=	got-portable-[0-9]*
 
 USE_TOOLS+=	awk find
 
