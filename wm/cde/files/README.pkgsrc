@@ -1,4 +1,14 @@
++----------------------------------------------------------------------
+| First steps with CDE on pkgsrc
++----------------------------------------------------------------------
+
+To add the required authenticaion policies to your PAM configuration,
+import the policy files provided with the package:
+	
+	$ cp @PREFIX@/share/examples/cde/pam.d/* /etc/pam.d
+
 -----------------------------------------------------------------------
+
 To provide support for CDE font aliases, the required font paths must
 appended to the standard X server configuration.
   
@@ -18,16 +28,16 @@ Place the file inside either:
 
 -----------------------------------------------------------------------
 
-To use CDE applications, adjust your environment as follows:
+To better access CDE applications, adjust your environment as follows:
 
-    $ export PATH=$PATH:${PREFIX}/dt/bin
-    $ export MANPATH=$MANPATH:${PREFIX}/dt/man
+	$ export PATH=$PATH:${PREFIX}/dt/bin
+	$ export MANPATH=$MANPATH:${PREFIX}/dt/man
 
 -----------------------------------------------------------------------
 
 To start the Common Desktop Environment,
 
-    $ env LANG=C startx ${PREFIX}/dt/bin/Xsession
+	$ env LANG=C startx ${PREFIX}/dt/bin/Xsession
 
 Or use the provided `@PREFIX@/bin/startcde' script.
 
