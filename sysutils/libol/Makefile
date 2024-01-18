@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/18 13:52:25 zafer Exp $
 
 DISTNAME=	libol-0.3.18
 CATEGORIES=	sysutils
 PKGREVISION=	2
-MASTER_SITES=	http://www.balabit.com/downloads/libol/0.3/
+MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
