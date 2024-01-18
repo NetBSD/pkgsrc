@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2023/03/15 05:51:21 markd Exp $
+# $NetBSD: Makefile,v 1.24 2024/01/18 20:16:42 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	65622
+TEXLIVE_REV=	68675
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -14,14 +14,17 @@ DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basi
 
 # depend abbr
 # depend abstyles
+# depend advice
 DEPENDS+=	tex-apnum>=1.1:../../math/tex-apnum
 # depend autoaligne
 # depend barr
 # depend bitelist
 # depend borceux
 # depend c-pascal
+# depend calcfrac
 # depend catcodes
 # depend chronosys
+# depend collargs
 # depend colorsep
 DEPENDS+=	tex-compare-[0-9]*:../../print/tex-compare
 # depend crossrefenum
@@ -35,6 +38,7 @@ DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 # depend epigram
 DEPENDS+=	tex-epsf>=2.7.4:../../print/tex-epsf
 DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
+# depend etoolbox-generic
 # depend expex-acro
 # depend expkv-bundle
 # depend fenixpar
@@ -68,6 +72,7 @@ DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
 # depend metatex
 # depend midnight
 DEPENDS+=	tex-mkpattern-[0-9]*:../../print/tex-mkpattern
+# depend mlawriter
 # depend modulus
 DEPENDS+=	tex-multido>=1.42:../../devel/tex-multido
 # depend namedef
