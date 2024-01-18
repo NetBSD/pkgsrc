@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2019/02/01 16:49:07 abs Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/18 13:53:05 abs Exp $
 
-DISTNAME=	restclient-ui-fat-3.7.1
-PKGNAME=	restclient-ui-3.7.1
+DISTNAME=	restclient-ui-fat-3.7.2
+PKGNAME=	restclient-ui-3.7.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wiztools/}rest-client/releases/download/3.7.1/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=abs0/}rest-client/releases/download/3.7.2/
 EXTRACT_SUFX=	.jar
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/wiztools/rest-client
+MAINTAINER=	abs@NetBSD.org
+HOMEPAGE=	https://github.com/abs0/rest-client
 COMMENT=	Java application to test RESTful webservices
 LICENSE=	apache-2.0
 
