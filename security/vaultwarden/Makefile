@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/18 14:09:27 hauke Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
-PKGVER=		1.28.1
-PKGREVISION=	1
+PKGVER=		1.30.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 EXTRACT_SUFX=	.tar.gz
@@ -20,7 +19,8 @@ LICENSE=	gnu-agpl-v3
 #  make print-cargo-depends > cargo-depends.mk'
 #
 # Or generate from FreeBSD security/vaultwarden/Makefile.crates like
-# awk '{ CA = ( NF > 2) ? $2 : $1 ; printf("CARGO_CRATE_DEPENDS+=\t%s\n", CA) }' < .../Makefile.crates > cargo-depends.mk
+# awk '{ CA = ( NF > 2) ? $2 : $1 ; printf("CARGO_CRATE_DEPENDS+=\t%s\n", CA) }'
+#      < .../Makefile.crates > cargo-depends.mk
 
 .include "cargo-depends.mk"
 
