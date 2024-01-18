@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.6 2023/12/29 21:23:40 adam Exp $
+# $NetBSD: revbump.py,v 1.7 2024/01/18 10:11:55 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -207,6 +207,9 @@ if not args.recursive:
 if args.package == 'lang/go':
     searchlist = ['lang/go/version.mk']
 else:
+    if not pathlib.Path(args.pkgsrcdir + '/' + args.package.rstrip('/')).exists():
+        print(f'directory {args.package} does not exist or is not a pkgsrc directory')
+        sys.exit(1)
     initial_bl3 = args.package.rstrip('/') + '/buildlink3.mk'
     if not pathlib.Path(args.pkgsrcdir + '/' + initial_bl3).exists():
         print(f'package {args.package} provides no buildlink3.mk file')
