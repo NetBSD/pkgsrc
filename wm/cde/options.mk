@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/02/23 19:10:06 vins Exp $
+# $NetBSD: options.mk,v 1.3 2024/01/18 20:57:03 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cde
 
@@ -46,10 +46,17 @@ INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
 
 PLIST.pam=		yes
 
-pre-install:
+.PHONY:	pam-install
+
+pam-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/pam/libpam/pam.conf       \
 		${DESTDIR}${EGDIR}/pam.d/cde
+.  for p in dtlogin dtsession
+	${INSTALL_DATA} ${WRKSRC}/programs/${p}/config/${p}	\
+		${DESTDIR}${EGDIR}/pam.d
+.  endfor
 .else
+
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 SPECIAL_PERMS+=		${PREFIX}/dt/bin/dtsession ${SETUID_ROOT_PERMS}
 .endif
