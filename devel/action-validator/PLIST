@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/18 19:28:23 schmonz Exp $
+bin/action-validator
