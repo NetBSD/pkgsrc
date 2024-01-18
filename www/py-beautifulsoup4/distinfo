@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/04/17 06:38:13 adam Exp $
+$NetBSD: distinfo,v 1.25 2024/01/18 10:20:45 adam Exp $
 
-BLAKE2s (beautifulsoup4-4.12.2.tar.gz) = 5130ca9c9ad31fb39dd315d23283ed89bd9912de94bbf555ebc5252301b8c713
-SHA512 (beautifulsoup4-4.12.2.tar.gz) = 1dbb620f675bb319ef050ece0f343e80359bdc59cd8b8de19b1851aa5bca1081a7e953e3221ad97142198c17f67384c05b0406af24a123d71398f209fb89db97
-Size (beautifulsoup4-4.12.2.tar.gz) = 505113 bytes
+BLAKE2s (beautifulsoup4-4.12.3.tar.gz) = 389b12484bd092d422231ea415b77ae5d7977a96634b12e4d302f40ed43b86e2
+SHA512 (beautifulsoup4-4.12.3.tar.gz) = b5b6cc9f64a97fa52b9a2ee1265aa215db476e705d3d79e49301de7e8d36c56c96924cb440eec0715f7ec75c5ddf4c1ade9d6cef7cdc9bf9e37125ac6eb50837
+Size (beautifulsoup4-4.12.3.tar.gz) = 581181 bytes
