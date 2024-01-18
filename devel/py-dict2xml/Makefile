@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/28 19:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/18 16:05:42 adam Exp $
 
-DISTNAME=	dict2xml-1.7.3
+DISTNAME=	dict2xml-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dict2xml/}
 
@@ -12,14 +11,10 @@ COMMENT=	Small utility to convert Python dict to XML string
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.3:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
