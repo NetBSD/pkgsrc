@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/10/11 20:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2024/01/18 18:04:12 adam Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -24,20 +24,20 @@ CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=	no
 
-.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+.if ${USE_BUILTIN.bzip2:tl} != yes
 CPPFLAGS+=		-I${WRKDIR}/bzip2
 LDFLAGS+=		-L${WRKDIR}/bzip2
 .endif
-.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${USE_BUILTIN.zlib:tl} != yes
 CPPFLAGS+=		-I${WRKDIR}/zlib
 LDFLAGS+=		-L${WRKDIR}/zlib
 .endif
-.if empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if ${USE_BUILTIN.openssl:tl} != yes
 CONFIGURE_ARGS+=	--without-openssl
 .else
 LDFLAGS+=		-lcrypto
 .endif
-.if empty(USE_BUILTIN.xz:M[yY][eE][sS])
+.if ${USE_BUILTIN.xz:tl} != yes
 CONFIGURE_ARGS+=	--without-lzma
 .endif
 
@@ -57,19 +57,19 @@ CONFIGURE_ENV+=		ac_cv_header_windows_h=no
 .endif
 
 do-extract:
-.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+.if ${USE_BUILTIN.bzip2:tl} != yes
 	${RUN}${CP} -R ${FILESDIR.bzip2} ${WRKDIR}/bzip2
 .endif
-.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${USE_BUILTIN.zlib:tl} != yes
 	${RUN}${CP} -R ${FILESDIR.zlib} ${WRKDIR}/zlib
 .endif
 	${RUN}${CP} -R ${FILESDIR.libarchive} ${WRKSRC}
 
 pre-configure:
-.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+.if ${USE_BUILTIN.bzip2:tl} != yes
 	cd ${WRKDIR}/bzip2 && ${BUILD_MAKE_CMD} libbz2.a
 .endif
-.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+.if ${USE_BUILTIN.zlib:tl} != yes
 	cd ${WRKDIR}/zlib && ${BUILD_MAKE_CMD} libz.a
 .endif
 
