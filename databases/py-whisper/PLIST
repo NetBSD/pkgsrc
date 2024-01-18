@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/12/06 11:21:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/18 10:38:13 adam Exp $
 bin/find-corrupt-whisper-files-${PYVERSSUFFIX}
 bin/rrd2whisper-${PYVERSSUFFIX}
 bin/update-storage-times-${PYVERSSUFFIX}
@@ -15,12 +15,11 @@ bin/whisper-resize-${PYVERSSUFFIX}
 bin/whisper-set-aggregation-method-${PYVERSSUFFIX}
 bin/whisper-set-xfilesfactor-${PYVERSSUFFIX}
 bin/whisper-update-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/whisper.py
 ${PYSITELIB}/whisper.pyc
 ${PYSITELIB}/whisper.pyo
