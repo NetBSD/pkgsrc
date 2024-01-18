@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/24 14:00:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/18 16:02:56 adam Exp $
 
-BLAKE2s (mailsuite-1.9.5.tar.gz) = 1f6412a5b09ba1582c9b4394c7e46126c58548e56ed2fa0ad83f536f12fddbf7
-SHA512 (mailsuite-1.9.5.tar.gz) = e2a3a6df7ecab24d5099b93467f1011ecf8519b26686bdae96354dcd9c8a4e8428d64f22f3f507772f13ee7567e0cb30441489e9e4c26ce40dc2d2662e9bc3dc
-Size (mailsuite-1.9.5.tar.gz) = 16259 bytes
+BLAKE2s (mailsuite-1.9.15.tar.gz) = bd77ccefc3c0f7fd2333c870e2ff42ff0b247a11f18da9989c2fc8c02a44d77d
+SHA512 (mailsuite-1.9.15.tar.gz) = c495b13f444e3bbaddd4a2f48c6383ac4cef631cafaaf3f9c63d067d25df2af1ca9b60697dd6ed9a1a4fec8758d1b0c8cc83620c3f2617da2e7e4db9b8934da4
+Size (mailsuite-1.9.15.tar.gz) = 16639 bytes
