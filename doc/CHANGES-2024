@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.441 2024/01/18 13:53:25 abs Exp $
+$NetBSD: CHANGES-2024,v 1.442 2024/01/18 14:09:39 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/nodejs to 21.6.0 [adam 2024-01-18]
 	Updated www/py-nbconvert to 7.14.2 [adam 2024-01-18]
 	Updated net/restclient-ui to 3.7.2 [abs 2024-01-18]
+	Updated security/vaultwarden to 1.30.1 [hauke 2024-01-18]
