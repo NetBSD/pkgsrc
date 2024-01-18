@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:09:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/01/18 10:38:13 adam Exp $
 
-BLAKE2s (whisper-1.1.7.tar.gz) = b9c0f089373421454b690f3089ceb2b0f0d02a873d53c665bfadf07f4877f7cd
-SHA512 (whisper-1.1.7.tar.gz) = 602c39345abb1d6e3e41ab0eaff9baa374ba513beba31878c9e65b863ee148dd7df55bfb66b0b86d7d94cdbf49672b46e6dfa3d48f7d8e770dee7f39fd52fdc6
-Size (whisper-1.1.7.tar.gz) = 37376 bytes
+BLAKE2s (whisper-1.1.10.tar.gz) = 9fbad75b5961e3e2f685923137c9ba8e0857ffc0a2e12d0c06cfd4f3b8abd1e6
+SHA512 (whisper-1.1.10.tar.gz) = a6f4158374482c5f6264711dc976ab4bf957fac14095592a433d2653f41b9598642e1c06e2aee9d0e725d482a0a4f48d15ead29c2f73813d3c71d280b944a7f9
+Size (whisper-1.1.10.tar.gz) = 42835 bytes
