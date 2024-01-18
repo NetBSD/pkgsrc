@@ -1,0 +1,1 @@
+bin/feed2exec @PREFIX@/bin/feed2exec-@PYVERSSUFFIX@

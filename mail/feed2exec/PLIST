@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2023/02/23 15:59:24 schmonz Exp $
-bin/feed2exec
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2024/01/18 12:09:35 schmonz Exp $
+bin/feed2exec-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/feed2exec/__init__.py
 ${PYSITELIB}/feed2exec/__init__.pyc
 ${PYSITELIB}/feed2exec/__init__.pyo
@@ -36,6 +36,9 @@ ${PYSITELIB}/feed2exec/plugins/archive.pyo
 ${PYSITELIB}/feed2exec/plugins/droptitle.py
 ${PYSITELIB}/feed2exec/plugins/droptitle.pyc
 ${PYSITELIB}/feed2exec/plugins/droptitle.pyo
+${PYSITELIB}/feed2exec/plugins/droptitleregex.py
+${PYSITELIB}/feed2exec/plugins/droptitleregex.pyc
+${PYSITELIB}/feed2exec/plugins/droptitleregex.pyo
 ${PYSITELIB}/feed2exec/plugins/echo.py
 ${PYSITELIB}/feed2exec/plugins/echo.pyc
 ${PYSITELIB}/feed2exec/plugins/echo.pyo
@@ -63,6 +66,9 @@ ${PYSITELIB}/feed2exec/plugins/json.pyo
 ${PYSITELIB}/feed2exec/plugins/maildir.py
 ${PYSITELIB}/feed2exec/plugins/maildir.pyc
 ${PYSITELIB}/feed2exec/plugins/maildir.pyo
+${PYSITELIB}/feed2exec/plugins/matchtitleregex.py
+${PYSITELIB}/feed2exec/plugins/matchtitleregex.pyc
+${PYSITELIB}/feed2exec/plugins/matchtitleregex.pyo
 ${PYSITELIB}/feed2exec/plugins/mbox.py
 ${PYSITELIB}/feed2exec/plugins/mbox.pyc
 ${PYSITELIB}/feed2exec/plugins/mbox.pyo
