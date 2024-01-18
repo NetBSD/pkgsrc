@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CDE
+DesktopNames=CDE
+Comment=Use this session to boot into the Common Desktop Environment
+Keywords=Common Desktop Environment
+Exec=@PREFIX@/dt/bin/Xsession
+Icon=Dtlogo.pm
+Type=Application

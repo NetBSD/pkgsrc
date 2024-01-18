@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/12 16:34:15 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/18 20:57:03 vins Exp $
 bin/startcde
 dt/app-defaults/C/Dt
 dt/app-defaults/C/Dtbuilder
@@ -2619,12 +2619,12 @@ dt/include/Dt/MenuButton.h
 dt/include/Dt/Mmdb.h
 dt/include/Dt/Mrm.h
 dt/include/Dt/MsgLog.h
-dt/include/Dt/PamSvc.h
 dt/include/Dt/Print.h
 dt/include/Dt/Saver.h
 dt/include/Dt/Search.h
 dt/include/Dt/Session.h
 dt/include/Dt/SpinBox.h
+dt/include/Dt/SvcPam.h
 dt/include/Dt/Term.h
 dt/include/Dt/TermPrim.h
 dt/include/Dt/Wsm.h
@@ -2659,7 +2659,6 @@ dt/lib/dtksh/DtFuncs.dtsh
 dt/lib/libDtHelp.la
 dt/lib/libDtMmdb.la
 dt/lib/libDtMrm.la
-${PLIST.pam}dt/lib/libDtPamSvc.la
 dt/lib/libDtPrint.la
 dt/lib/libDtSearch.la
 dt/lib/libDtSvc.la
@@ -2786,7 +2785,7 @@ dt/man/man1/dtudcexch.1
 dt/man/man1/dtudcfonted.1
 dt/man/man1/dtwm.1
 dt/man/man1/huffcode.1
-dt/man/man1/ksh.1
+dt/man/man1/ksh-cde.1
 dt/man/man1/tt_type_comp.1
 dt/man/man1/ttcp.1
 dt/man/man1/ttmv.1
@@ -3531,6 +3530,8 @@ share/doc/cde/README.md
 share/doc/cde/README.netbsd
 share/doc/cde/README.pkgsrc
 ${PLIST.pam}share/examples/cde/pam.d/cde
+${PLIST.pam}share/examples/cde/pam.d/dtlogin
+${PLIST.pam}share/examples/cde/pam.d/dtsession
 @pkgdir etc/dt/cde/fontaliases
 ${PLIST.nls}dt/app-defaults/de_DE.UTF-8/Dt
 ${PLIST.nls}dt/app-defaults/de_DE.UTF-8/Dtbuilder

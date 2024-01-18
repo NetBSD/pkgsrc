@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/11/12 13:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/18 20:57:03 vins Exp $
 
-DISTNAME=	cde-2.5.1
-PKGREVISION=	3
+DISTNAME=	cde-2.5.2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
@@ -30,6 +29,7 @@ DEPENDS+=	font-adobe-100dpi-[0-9]*:../../fonts/font-adobe-100dpi
 .if ${X11_TYPE} == "modular"
 DEPENDS+=	xrdb-[0-9]*:../../x11/xrdb
 DEPENDS+=	xset-[0-9]*:../../x11/xset
+DEPENDS+=	sessreg-[0-9]*:../../x11/sessreg
 .endif
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
@@ -41,6 +41,8 @@ CONFIGURE_ARGS+=	MAKE=${MAKE_PROGRAM:Q}
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/dt
+CONFIGURE_ARGS+=	--with-utmp-file=${VARBASE}/run/utmp
+CONFIGURE_ARGS+=	--with-wtmp-file=${VARBASE}/log/wtmp
 
 .include "options.mk"
 
@@ -69,9 +71,8 @@ SUBST_MESSAGE.iconv=	Fix for GNU iconv.
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	configure.ac
-SUBST_FILES.paths+=	pkgsrc/startcde
-SUBST_FILES.paths+=	pkgsrc/README.*
-SUBST_FILES.paths+=	programs/dtlogin/Makefile.am
+SUBST_FILES.paths+=	pkgsrc/cde.desktop pkgsrc/startcde
+SUBST_FILES.paths+=	pkgsrc/README.* programs/dtlogin/Makefile.am
 SUBST_VARS.paths=	PKG_SYSCONFDIR PREFIX REAL_ROOT_GROUP VARBASE X11BASE
 SUBST_MESSAGE.paths=	Replacing path placeholders.
 
@@ -102,12 +103,13 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config/Xsession.d
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config/xfonts/C
 
+MAKE_DIRS+=		share/xsessions
 INSTALLATION_DIRS+=	bin share/doc/${PKGBASE}
 
 post-extract:
 	${RUN}${MKDIR} ${WRKSRC}/pkgsrc
 	${RUN}${CP} ${FILESDIR}/startcde.sh ${WRKSRC}/pkgsrc/startcde
-.for f in README.*
+.for f in cde.desktop README.*
 	${RUN}${CP} ${FILESDIR}/${f} ${WRKSRC}/pkgsrc
 .endfor
 
@@ -127,18 +129,22 @@ pre-configure:
 	done
 	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
 
-post-install:
+post-install: pam-install
 	${RUN}${FIND} ${DESTDIR}${PREFIX}/dt -type f -perm -111 -exec	\
 		${SH} -c '${STRIP} --strip-unneeded {} > /dev/null 2>&1' \;
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgsrc/startcde ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc/cde.desktop	\
+		${DESTDIR}${PREFIX}/share/xsessions
 .for f in CONTRIBUTORS COPYING HISTORY README.md
-	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}				\
+	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}		\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 .for r in README.*
-	${INSTALL_DATA} ${WRKSRC}/pkgsrc/${r}				\
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc/${r}		\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc/cde.desktop	\
+		${DESTDIR}${PREFIX}/share/xsessions
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
@@ -147,17 +153,12 @@ post-install:
 .include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
