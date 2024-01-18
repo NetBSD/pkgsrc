@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2023/10/18 13:34:23 bacon Exp $
+$NetBSD: distinfo,v 1.7 2024/01/18 23:30:12 bacon Exp $
 
-BLAKE2s (bowtie2-2.5.2.tar.gz) = 419a51add22afdb8020a650e627275aeaf93d68c7b08af3354dd230fbefa0b18
-SHA512 (bowtie2-2.5.2.tar.gz) = e3887439fc5b2c553977451bb519b9d60756a743311690ecd4cd997251630f465f82a82bd47df7f8a76a4d6b4d62e08aa80512a6a7f08e62169dca433c45eeef
-Size (bowtie2-2.5.2.tar.gz) = 10632647 bytes
+BLAKE2s (bowtie2-2.5.3.tar.gz) = 7d1bc829a0b5c9596bbfb45504cee42688dd779bf733958ad188e9be2ddc6ee0
+SHA512 (bowtie2-2.5.3.tar.gz) = 5ef4cbbcb379e1c993e6cc11e2b851f9f80b5ceb274c8fee5b278aecaa76fc40732a0db4ef5e1dda34a35fbb0f0ce6bd86293f4d928e39eaf633e8be664066b6
+Size (bowtie2-2.5.3.tar.gz) = 10635819 bytes
 SHA1 (patch-Makefile) = 59b9823472a371fa9142a69b37df406c4ed47cd9
 SHA1 (patch-scripts_bowtie2-hbb.sh) = d360774cfef0675b4c1cdd1175b394d2cf7f761a
