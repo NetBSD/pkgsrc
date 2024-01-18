@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:23:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/18 18:14:09 adam Exp $
 
-BLAKE2s (inflection-0.3.1.tar.gz) = de646325400597a6bcf43902d6d26db3a17fe7cfa285a6f14d3bebaafa2e7764
-SHA512 (inflection-0.3.1.tar.gz) = d1499ccbba2537914a738de8b6b24d69bd459d9b22bad1e838a8f7adc9b94054631bdb0557ac283cbfccae83a33a969dd44612df22b78f92eb27ae4ea999f560
-Size (inflection-0.3.1.tar.gz) = 8715 bytes
+BLAKE2s (inflection-0.5.1.tar.gz) = e90d1cb2f7a392f3fe7d141fee03b506c3da6193d4534b7b085432154fc9ff1d
+SHA512 (inflection-0.5.1.tar.gz) = 82f70e2b81fb166260191a464383f6674e3b21504a35ee605ac6ce4bb163c8f3bbe6d06379575178d7196701459506dd541f32e48f24b32f42d5cfb717158d50
+Size (inflection-0.5.1.tar.gz) = 15091 bytes
