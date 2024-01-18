@@ -156,9 +156,20 @@ used when translating file names.
 Format cpio
 .RS 5
 .TP
+\fBcompat-2x\fP
+Libarchive 2.x incorrectly encoded Unicode filenames on
+some platforms.
+This option mimics the libarchive 2.x filename handling
+so that such archives can be read correctly.
+.TP
 \fBhdrcharset\fP
 The value is used as a character set name that will be
 used when translating file names.
+.TP
+\fBpwb\fP
+When reading a binary CPIO archive, assume that it is
+in the original PWB cpio format, and handle file mode
+bits accordingly.  The default is to assume v7 format.
 .RE
 .TP
 Format iso9660
@@ -227,6 +238,32 @@ Ignore zeroed blocks in the archive, which occurs when multiple tar archives
 have been concatenated together.
 Without this option, only the contents of
 the first concatenated archive would be read.
+.RE
+.TP
+Format zip
+.RS 5
+.TP
+\fBcompat-2x\fP
+Libarchive 2.x incorrectly encoded Unicode filenames on
+some platforms.
+This option mimics the libarchive 2.x filename handling
+so that such archives can be read correctly.
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating file names.
+.TP
+\fBignorecrc32\fP
+Skip the CRC32 check.
+Mostly used for testing.
+.TP
+\fBmac-ext\fP
+Support Mac OS metadata extension that records data in special
+files beginning with a period and underscore.
+Defaults to enabled on Mac OS, disabled on other platforms.
+Use
+\fB!mac-ext\fP
+to disable.
 .RE
 .RE
 .SH ERRORS

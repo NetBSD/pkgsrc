@@ -53,6 +53,7 @@ struct archive_write_filter {
 	    const char *key, const char *value);
 	int	(*open)(struct archive_write_filter *);
 	int	(*write)(struct archive_write_filter *, const void *, size_t);
+	int	(*flush)(struct archive_write_filter *);
 	int	(*close)(struct archive_write_filter *);
 	int	(*free)(struct archive_write_filter *);
 	void	 *data;
@@ -89,6 +90,7 @@ struct archive_write {
 	archive_open_callback	*client_opener;
 	archive_write_callback	*client_writer;
 	archive_close_callback	*client_closer;
+	archive_free_callback	*client_freer;
 	void			*client_data;
 
 	/*

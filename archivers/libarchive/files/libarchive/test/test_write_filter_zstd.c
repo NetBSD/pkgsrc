@@ -74,7 +74,7 @@ DEFINE_TEST(test_write_filter_zstd)
 	archive_entry_set_filetype(ae, AE_IFREG);
 	archive_entry_set_size(ae, datasize);
 	for (i = 0; i < 100; i++) {
-		sprintf(path, "file%03d", i);
+		snprintf(path, sizeof(path), "file%03d", i);
 		archive_entry_copy_pathname(ae, path);
 		assertEqualIntA(a, ARCHIVE_OK, archive_write_header(a, ae));
 		assertA(datasize
@@ -96,7 +96,7 @@ DEFINE_TEST(test_write_filter_zstd)
 		assertEqualIntA(a, ARCHIVE_OK,
 		    archive_read_open_memory(a, buff, used1));
 		for (i = 0; i < 100; i++) {
-			sprintf(path, "file%03d", i);
+			snprintf(path, sizeof(path), "file%03d", i);
 			if (!assertEqualInt(ARCHIVE_OK,
 				archive_read_next_header(a, &ae)))
 				break;
@@ -129,9 +129,46 @@ DEFINE_TEST(test_write_filter_zstd)
 	    archive_write_set_filter_option(a, NULL, "compression-level", "-1")); */
 	assertEqualIntA(a, ARCHIVE_OK,
 	    archive_write_set_filter_option(a, NULL, "compression-level", "7"));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "threads", "-1")); /* negative */
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "threads", "4"));
+#if HAVE_ZSTD_H && HAVE_LIBZSTD_COMPRESSOR
+	/* frame-per-file: boolean */
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "frame-per-file", ""));
+	/* min-frame-size: >= 0 */
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "min-frame-size", ""));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "min-frame-size", "-1"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "min-frame-size", "0"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "min-frame-size", "1048576"));
+	/* max-frame-size: >= 1024 */
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", ""));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", "-1"));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", "0"));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", "1023"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", "1024"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "max-frame-size", "1048576"));
+#endif
+#if ZSTD_VERSION_NUMBER >= MINVER_LONG
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_filter_option(a, NULL, "long", "27"));
+	assertEqualIntA(a, ARCHIVE_FAILED,
+	    archive_write_set_filter_option(a, NULL, "long", "-1")); /* negative */
+#endif
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_open_memory(a, buff, buffsize, &used2));
 	for (i = 0; i < 100; i++) {
-		sprintf(path, "file%03d", i);
+		snprintf(path, sizeof(path), "file%03d", i);
 		assert((ae = archive_entry_new()) != NULL);
 		archive_entry_copy_pathname(ae, path);
 		archive_entry_set_size(ae, datasize);
@@ -154,7 +191,7 @@ DEFINE_TEST(test_write_filter_zstd)
 		assertEqualIntA(a, ARCHIVE_OK,
 		    archive_read_open_memory(a, buff, used2));
 		for (i = 0; i < 100; i++) {
-			sprintf(path, "file%03d", i);
+			snprintf(path, sizeof(path), "file%03d", i);
 			failure("Trying to read %s", path);
 			if (!assertEqualIntA(a, ARCHIVE_OK,
 				archive_read_next_header(a, &ae)))
@@ -181,7 +218,7 @@ DEFINE_TEST(test_write_filter_zstd)
 	archive_entry_set_filetype(ae, AE_IFREG);
 	archive_entry_set_size(ae, datasize);
 	for (i = 0; i < 100; i++) {
-		sprintf(path, "file%03d", i);
+		snprintf(path, sizeof(path), "file%03d", i);
 		archive_entry_copy_pathname(ae, path);
 		assertEqualIntA(a, ARCHIVE_OK, archive_write_header(a, ae));
 		assertA(datasize == (size_t)archive_write_data(a, data, datasize));
@@ -201,7 +238,7 @@ DEFINE_TEST(test_write_filter_zstd)
 		assertEqualIntA(a, ARCHIVE_OK,
 		    archive_read_open_memory(a, buff, used3));
 		for (i = 0; i < 100; i++) {
-			sprintf(path, "file%03d", i);
+			snprintf(path, sizeof(path), "file%03d", i);
 			failure("Trying to read %s", path);
 			if (!assertEqualIntA(a, ARCHIVE_OK,
 				archive_read_next_header(a, &ae)))

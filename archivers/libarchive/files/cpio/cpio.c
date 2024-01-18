@@ -192,6 +192,12 @@ main(int argc, char *argv[])
 		case '0': /* GNU convention: --null, -0 */
 			cpio->option_null = 1;
 			break;
+		case '6': /* in/out: assume/create 6th edition (PWB) format */
+			cpio->option_pwb = 1;
+			break;
+		case '7': /* out: create archive using 7th Edition binary format */
+			cpio->format = "bin";
+			break;
 		case 'A': /* NetBSD/OpenBSD */
 			cpio->option_append = 1;
 			break;
@@ -400,11 +406,12 @@ main(int argc, char *argv[])
 
 	switch (cpio->mode) {
 	case 'o':
-		/* TODO: Implement old binary format in libarchive,
-		   use that here. */
-		if (cpio->format == NULL)
-			cpio->format = "odc"; /* Default format */
-
+		if (cpio->format == NULL) {
+			if (cpio->option_pwb)
+				cpio->format = "pwb";
+			else
+				cpio->format = "cpio";
+		}
 		mode_out(cpio);
 		break;
 	case 'i':
@@ -435,6 +442,8 @@ main(int argc, char *argv[])
 	archive_match_free(cpio->matching);
 	free_cache(cpio->gname_cache);
 	free_cache(cpio->uname_cache);
+	archive_read_close(cpio->archive_read_disk);
+	archive_read_free(cpio->archive_read_disk);
 	free(cpio->destdir);
 	passphrase_free(cpio->ppbuff);
 	return (cpio->return_value);
@@ -462,7 +471,7 @@ static const char *long_help_msg =
 	"  -v Verbose filenames     -V  one dot per file\n"
 	"Create: %p -o [options]  < [list of files] > [archive]\n"
 	"  -J,-y,-z,--lzma  Compress archive with xz/bzip2/gzip/lzma\n"
-	"  --format {odc|newc|ustar}  Select archive format\n"
+	"  --format {pwb|bin|odc|newc|ustar}  Select archive format\n"
 	"List: %p -it < [archive]\n"
 	"Extract: %p -i [options] < [archive]\n";
 
@@ -970,6 +979,8 @@ mode_in(struct cpio *cpio)
 		lafe_errc(1, 0, "Couldn't allocate archive object");
 	archive_read_support_filter_all(a);
 	archive_read_support_format_all(a);
+	if (cpio->option_pwb)
+		archive_read_set_options(a, "pwb");
 	if (cpio->passphrase != NULL)
 		r = archive_read_add_passphrase(a, cpio->passphrase);
 	else
@@ -1080,6 +1091,8 @@ mode_list(struct cpio *cpio)
 		lafe_errc(1, 0, "Couldn't allocate archive object");
 	archive_read_support_filter_all(a);
 	archive_read_support_format_all(a);
+	if (cpio->option_pwb)
+		archive_read_set_options(a, "pwb");
 	if (cpio->passphrase != NULL)
 		r = archive_read_add_passphrase(a, cpio->passphrase);
 	else
@@ -1133,19 +1146,15 @@ list_item_verbose(struct cpio *cpio, struct archive_entry *entry)
 {
 	char			 size[32];
 	char			 date[32];
-	char			 uids[16], gids[16];
+	char			 uids[22], gids[22];
 	const char 		*uname, *gname;
 	FILE			*out = stdout;
 	const char		*fmt;
 	time_t			 mtime;
 	static time_t		 now;
 	struct tm		*ltime;
-#if defined(HAVE_LOCALTIME_R) || defined(HAVE__LOCALTIME64_S)
+#if defined(HAVE_LOCALTIME_R) || defined(HAVE_LOCALTIME_S)
 	struct tm		tmbuf;
-#endif
-#if defined(HAVE__LOCALTIME64_S)
-	errno_t			terr;
-	__time64_t		tmptime;
 #endif
 
 	if (!now)
@@ -1194,19 +1203,17 @@ list_item_verbose(struct cpio *cpio, struct archive_entry *entry)
 	else
 		fmt = cpio->day_first ? "%e %b %H:%M" : "%b %e %H:%M";
 #endif
-#if defined(HAVE_LOCALTIME_R)
+#if defined(HAVE_LOCALTIME_S)
+	ltime = localtime_s(&tmbuf, &mtime) ? NULL : &tmbuf;
+#elif defined(HAVE_LOCALTIME_R)
 	ltime = localtime_r(&mtime, &tmbuf);
-#elif defined(HAVE__LOCALTIME64_S)
-	tmptime = mtime;
-	terr = _localtime64_s(&tmbuf, &tmptime);
-	if (terr)
-		ltime = NULL;
-	else
-		ltime = &tmbuf;
 #else
 	ltime = localtime(&mtime);
 #endif
-	strftime(date, sizeof(date), fmt, ltime);
+	if (ltime != NULL)
+		strftime(date, sizeof(date), fmt, ltime);
+	else
+		strcpy(date, "invalid mtime");
 
 	fprintf(out, "%s%3d %-8s %-8s %8s %12s %s",
 	    archive_entry_strmode(entry),

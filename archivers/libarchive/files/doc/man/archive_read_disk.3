@@ -2,6 +2,8 @@
 .SH NAME
 .ad l
 \fB\%archive_read_disk_new\fP,
+\fB\%archive_read_disk_open\fP,
+\fB\%archive_read_disk_open_w\fP,
 \fB\%archive_read_disk_set_behavior\fP,
 \fB\%archive_read_disk_set_symlink_logical\fP,
 \fB\%archive_read_disk_set_symlink_physical\fP,
@@ -11,7 +13,14 @@
 \fB\%archive_read_disk_uname\fP,
 \fB\%archive_read_disk_set_uname_lookup\fP,
 \fB\%archive_read_disk_set_gname_lookup\fP,
-\fB\%archive_read_disk_set_standard_lookup\fP
+\fB\%archive_read_disk_set_standard_lookup\fP,
+\fB\%archive_read_disk_descend\fP,
+\fB\%archive_read_disk_can_descend\fP,
+\fB\%archive_read_disk_current_filesystem\fP,
+\fB\%archive_read_disk_current_filesystem_is_synthetic\fP,
+\fB\%archive_read_disk_current_filesystem_is_remote\fP,
+\fB\%archive_read_disk_set_matching\fP,
+\fB\%archive_read_disk_set_metadata_filter_callback\fP,
 \- functions for reading objects from disk
 .SH LIBRARY
 .ad l
@@ -23,6 +32,14 @@ Streaming Archive Library (libarchive, -larchive)
 \fIstruct archive *\fP
 .br
 \fB\%archive_read_disk_new\fP(\fI\%void\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_open\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_open_w\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ wchar_t\ *\fP, \fI\%\fP);
 .br
 \fIint\fP
 .br
@@ -63,6 +80,34 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_read_disk_entry_from_file\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive_entry\ *\fP, \fI\%int\ fd\fP, \fI\%const\ struct\ stat\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_descend\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_can_descend\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_current_filesystem\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_current_filesystem_is_synthetic\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_current_filesystem_is_remote\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_set_matching\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive\ *\fP, \fI\%void\ (*excluded_func)(struct\ archive\ *,\ void\ *,\ struct\ archive\ entry\ *)\fP, \fI\%void\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_disk_set_metadata_filter_callback\fP(\fI\%struct\ archive\ *\fP, \fI\%int\ (*metadata_filter_func)(struct\ archive\ *,\ void*,\ struct\ archive_entry\ *)\fP, \fI\%void\ *\fP);
 .SH DESCRIPTION
 .ad l
 These functions provide an API for reading information about
@@ -76,6 +121,16 @@ objects.
 Allocates and initializes a
 Tn struct archive
 object suitable for reading object information from disk.
+.TP
+\fB\%archive_read_disk_open\fP()
+Opens the file or directory from the given path and prepares the
+Tn struct archive
+to read it from disk.
+.TP
+\fB\%archive_read_disk_open_w\fP()
+Opens the file or directory from the given path as a wide character string and prepares the
+Tn struct archive
+to read it from disk.
 .TP
 \fB\%archive_read_disk_set_behavior\fP()
 Configures various behavior options when reading entries from disk.
@@ -129,6 +184,10 @@ for more information on extended file attributes.
 \fBARCHIVE_READDISK_RESTORE_ATIME\fP
 Restore access time of traversed files.
 By default, access time of traversed files is not restored.
+.TP
+\fBARCHIVE_READDISK_NO_SPARSE\fP
+Do not read sparse file information.
+By default, sparse file information is read from disk.
 .RE
 .TP
 \fB\%archive_read_disk_set_symlink_logical\fP(),
@@ -212,6 +271,44 @@ using the currently-registered lookup functions above.
 This affects the file ownership fields and ACL values in the
 Tn struct archive_entry
 object.
+.TP
+\fB\%archive_read_disk_descend\fP()
+If the current entry can be descended, this function will mark the directory as the next entry for 
+\fBarchive_read_header\fP(3)
+to visit.
+.TP
+\fB\%archive_read_disk_can_descend\fP()
+Returns 1 if the current entry is an unvisited directory and 0 otherwise.
+.TP
+\fB\%archive_read_disk_current_filesystem\fP()
+Returns the index of the most recent filesystem entry that has been visited through archive_read_disk
+.TP
+\fB\%archive_read_disk_current_filesystem_is_synthetic\fP()
+Returns 1 if the current filesystem is a virtual filesystem. Returns 0 if the current filesystem is not a virtual filesystem. Returns -1 if it is unknown.
+.TP
+\fB\%archive_read_disk_current_filesystem_is_remote\fP()
+Returns 1 if the current filesystem is a remote filesystem. Returns 0 if the current filesystem is not a remote filesystem. Returns -1 if it is unknown.
+.TP
+\fB\%archive_read_disk_set_matching\fP()
+Allows the caller to set
+Tn struct archive
+*_ma to compare each entry during
+\fBarchive_read_header\fP(3)
+calls. If matched based on calls to
+Tn archive_match_path_excluded,
+Tn archive_match_time_excluded,
+or
+Tn archive_match_owner_excluded,
+then the callback function specified by the _excluded_func parameter will execute. This function will recieve data provided to the fourth parameter, void *_client_data.
+.TP
+\fB\%archive_read_disk_set_metadata_filter_callback\fP()
+Allows the caller to set a callback function during calls to
+\fBarchive_read_header\fP(3)
+to filter out metadata for each entry. The callback function recieves the
+Tn struct archive
+object, void* custom filter data, and the 
+Tn struct archive_entry.
+If the callback function returns an error, ARCHIVE_RETRY will be returned and the entry will not be further processed.
 .RE
 More information about the
 \fIstruct\fP archive

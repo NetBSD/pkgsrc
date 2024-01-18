@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.h,v 1.7 2020/05/26 09:16:42 nia Exp $	*/
+/*	$NetBSD: archive_pack_dev.h,v 1.8 2024/01/18 18:00:17 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.51 2023/10/24 22:08:08 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/01/18 18:00:11 adam Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Library to read/create different archive formats
@@ -9,6 +8,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--disable-bsdcat
 CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-bsdtar
+CONFIGURE_ARGS+=	--disable-bsdunzip
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}

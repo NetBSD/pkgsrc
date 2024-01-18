@@ -12,7 +12,7 @@ NAME
      archive_entry_sourcepath, archive_entry_copy_sourcepath,
      archive_entry_symlink, archive_entry_symlink_w,
      archive_entry_set_symlink, archive_entry_copy_symlink,
-     archive_entry_copy_symlink_w, archive_entry_update_symlink_utf8 -- func-
+     archive_entry_copy_symlink_w, archive_entry_update_symlink_utf8 — func‐
      tions for manipulating path names in archive entry descriptions
 
 LIBRARY
@@ -103,11 +103,11 @@ SYNOPSIS
 DESCRIPTION
      Path names supported by archive_entry(3):
      hardlink	 Destination of the hardlink.
-     link	 Update only.  For a symlink, update the destination.  Other-
+     link	 Update only.  For a symlink, update the destination.  Other‐
 		 wise, make the entry a hardlink and alter the destination for
 		 that.
      pathname	 Path in the archive
-     sourcepath  Path on the disk for use by archive_read_disk(3).
+     sourcepath	 Path on the disk for use by archive_read_disk(3).
      symlink	 Destination of the symbolic link.
 
      Path names can be provided in one of three different ways:
@@ -117,14 +117,14 @@ DESCRIPTION
      wchar_t *	Wide character strings in the current locale.  The accessor
 		functions are named XXX_w().
 
-     UTF-8	Unicode strings encoded as UTF-8.  These are convenience func-
+     UTF-8	Unicode strings encoded as UTF-8.  These are convenience func‐
 		tions to update both the multibyte and wide character strings
 		at the same time.
 
-     The sourcepath is a pure filesystem concept and never stored in an ar-
+     The sourcepath is a pure filesystem concept and never stored in an ar‐
      chive directly.
 
-     For that reason, it is only available as multibyte string.  The link path
+     For that reason, it is only available as multibyte string.	 The link path
      is a convenience function for conditionally setting hardlink or symlink
      destination.  It doesn't have a corresponding get accessor function.
 
@@ -133,4 +133,4 @@ DESCRIPTION
 SEE ALSO
      archive_entry(3), libarchive(3)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

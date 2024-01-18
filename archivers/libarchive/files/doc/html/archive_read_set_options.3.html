@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Wed May 20 01:10:06 2020 -->
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 11 22:06:20 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -142,7 +142,7 @@ option with this name will ignore it.</p>
 
 <p style="margin-left:27%; margin-top: 1em">The option will
 be provided to every module with a value of
-&rsquo;&rsquo;1&rsquo;&rsquo;.</p>
+&ldquo;1&rdquo;.</p>
 
 <p><i>!option</i></p>
 
@@ -165,11 +165,25 @@ character set name that will be used when translating file
 names.</p>
 
 <p>Format cpio <b><br>
-hdrcharset</b></p>
+compat-2x</b></p>
+
+<p style="margin-left:27%;">Libarchive 2.x incorrectly
+encoded Unicode filenames on some platforms. This option
+mimics the libarchive 2.x filename handling so that such
+archives can be read correctly.</p>
+
+<p><b>hdrcharset</b></p>
 
 <p style="margin-left:27%;">The value is used as a
 character set name that will be used when translating file
 names.</p>
+
+<p><b>pwb</b></p>
+
+<p style="margin-left:27%; margin-top: 1em">When reading a
+binary CPIO archive, assume that it is in the original PWB
+cpio format, and handle file mode bits accordingly. The
+default is to assume v7 format.</p>
 
 <p>Format iso9660 <b><br>
 joliet</b></p>
@@ -233,6 +247,33 @@ archive, which occurs when multiple tar archives have been
 concatenated together. Without this option, only the
 contents of the first concatenated archive would be
 read.</p>
+
+<p>Format zip <b><br>
+compat-2x</b></p>
+
+<p style="margin-left:27%;">Libarchive 2.x incorrectly
+encoded Unicode filenames on some platforms. This option
+mimics the libarchive 2.x filename handling so that such
+archives can be read correctly.</p>
+
+<p><b>hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating file
+names.</p>
+
+<p><b>ignorecrc32</b></p>
+
+<p style="margin-left:27%;">Skip the CRC32 check. Mostly
+used for testing.</p>
+
+<p><b>mac-ext</b></p>
+
+<p style="margin-left:27%;">Support Mac OS metadata
+extension that records data in special files beginning with
+a period and underscore. Defaults to enabled on Mac OS,
+disabled on other platforms. Use <b>!mac-ext</b> to
+disable.</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>
 

@@ -1,7 +1,7 @@
 ARCHIVE_READ_NEW(3)	 BSD Library Functions Manual	   ARCHIVE_READ_NEW(3)
 
 NAME
-     archive_read_new -- functions for reading streaming archives
+     archive_read_new — functions for reading streaming archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -24,4 +24,4 @@ SEE ALSO
      archive_read_format(3), archive_read_set_options(3), archive_util(3),
      libarchive(3), tar(5)
 
-BSD			       February 2, 2012 			   BSD
+BSD			       February 2, 2012				   BSD

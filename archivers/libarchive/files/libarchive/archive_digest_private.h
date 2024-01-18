@@ -30,6 +30,10 @@
 #ifndef __LIBARCHIVE_BUILD
 #error This header is only to be used internally to libarchive.
 #endif
+#ifndef __LIBARCHIVE_CONFIG_H_INCLUDED
+#error "Should have include config.h first!"
+#endif
+
 /*
  * Crypto support in various Operating Systems:
  *
@@ -160,6 +164,15 @@
   defined(ARCHIVE_CRYPTO_SHA256_WIN) ||\
   defined(ARCHIVE_CRYPTO_SHA384_WIN) ||\
   defined(ARCHIVE_CRYPTO_SHA512_WIN)
+#if defined(HAVE_BCRYPT_H) && _WIN32_WINNT >= _WIN32_WINNT_VISTA
+/* don't use bcrypt when XP needs to be supported */
+#include <bcrypt.h>
+typedef struct {
+  int   valid;
+  BCRYPT_ALG_HANDLE  hAlg;
+  BCRYPT_HASH_HANDLE hHash;
+} Digest_CTX;
+#else
 #include <windows.h>
 #include <wincrypt.h>
 typedef struct {
@@ -167,6 +180,7 @@ typedef struct {
   HCRYPTPROV  cryptProv;
   HCRYPTHASH  hash;
 } Digest_CTX;
+#endif
 #endif
 
 /* typedefs */

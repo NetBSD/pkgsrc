@@ -7,7 +7,10 @@ ARCHIVE_WRITE_FORMAT(3) manual page
 '''archive_write_set_format_ar_svr4''', 
 '''archive_write_set_format_by_name''', 
 '''archive_write_set_format_cpio''', 
+'''archive_write_set_format_cpio_bin''', 
 '''archive_write_set_format_cpio_newc''', 
+'''archive_write_set_format_cpio_odc''', 
+'''archive_write_set_format_cpio_pwb''', 
 '''archive_write_set_format_filter_by_ext''', 
 '''archive_write_set_format_filter_by_ext_def''', 
 '''archive_write_set_format_gnutar''', 
@@ -61,7 +64,19 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
+'''archive_write_set_format_cpio_bin'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
 '''archive_write_set_format_cpio_newc'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_write_set_format_cpio_odc'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_write_set_format_cpio_pwb'''(''struct archive *''); 
 <br> 
 ''int'' 
 <br> 
@@ -137,17 +152,20 @@ to create a new archive with the same format as an existing archive.
 </dd><dt>'''archive_write_set_format_by_name'''()</dt><dd> 
 Sets the corresponding format based on the common name. 
 </dd><dt> 
-'''archive_write_set_format_filter_by_ext'''(), 
+'''archive_write_set_format_filter_by_ext'''() 
 '''archive_write_set_format_filter_by_ext_def'''() 
 </dt> <dd> 
 Sets both filters and format based on the output filename. 
 Supported extensions: .7z, .zip, .jar, .cpio, .iso, .a, .ar, .tar, .tgz, .tar.gz, .tar.bz2, .tar.xz 
 </dd><dt> 
 '''archive_write_set_format_7zip'''() 
-'''archive_write_set_format_ar_bsd'''(), 
-'''archive_write_set_format_ar_svr4'''(), 
+'''archive_write_set_format_ar_bsd'''() 
+'''archive_write_set_format_ar_svr4'''() 
 '''archive_write_set_format_cpio'''() 
+'''archive_write_set_format_cpio_bin'''() 
 '''archive_write_set_format_cpio_newc'''() 
+'''archive_write_set_format_cpio_odc'''() 
+'''archive_write_set_format_cpio_pwb'''() 
 '''archive_write_set_format_gnutar'''() 
 '''archive_write_set_format_iso9660'''() 
 '''archive_write_set_format_mtree'''() 
@@ -165,7 +183,7 @@ Supported extensions: .7z, .zip, .jar, .cpio, .iso, .a, .ar, .tar, .tgz, .tar.gz
 </dt> <dd> 
 Set the format as specified. 
 More details on the formats supported by libarchive can be found in the 
-[[ManPageibarchiveormats5]] 
+[[ManPageLibarchiveFormats5]] 
 manual page. 
 </dd></dl> 
 == RETURN VALUES == 
@@ -181,10 +199,10 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPagerchiverite3]], 
-[[ManPagerchiveriteetptions3]], 
-[[ManPageibarchive3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageLibarchive3]], 
 [[ManPageCpio5]], 
-[[ManPageibarchiveormats5]], 
+[[ManPageLibarchiveFormats5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

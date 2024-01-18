@@ -196,6 +196,10 @@ set_reader_options(struct bsdtar *bsdtar, struct archive *a)
 		else
 			archive_clear_error(a);
 	}
+	if (bsdtar->flags & OPTFLAG_IGNORE_ZEROS)
+		if (archive_read_set_options(a,
+		    "read_concatenated_archives") != ARCHIVE_OK)
+			lafe_errc(1, 0, "%s", archive_error_string(a));
 }
 
 void
@@ -689,6 +693,8 @@ append_archive(struct bsdtar *bsdtar, struct archive *a, struct archive *ina)
 
 	while (ARCHIVE_OK == (e = archive_read_next_header(ina, &in_entry))) {
 		if (archive_match_excluded(bsdtar->matching, in_entry))
+			continue;
+		if(edit_pathname(bsdtar, in_entry))
 			continue;
 		if ((bsdtar->flags & OPTFLAG_INTERACTIVE) &&
 		    !yes("copy '%s'", archive_entry_pathname(in_entry)))

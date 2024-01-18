@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Wed May 20 01:10:07 2020 -->
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Mon Sep 11 22:06:20 2023 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,7 +33,10 @@ ARCHIVE_WRITE_FORMAT(3)</p>
 <b>archive_write_set_format_ar_svr4</b>,
 <b>archive_write_set_format_by_name</b>,
 <b>archive_write_set_format_cpio</b>,
+<b>archive_write_set_format_cpio_bin</b>,
 <b>archive_write_set_format_cpio_newc</b>,
+<b>archive_write_set_format_cpio_odc</b>,
+<b>archive_write_set_format_cpio_pwb</b>,
 <b>archive_write_set_format_filter_by_ext</b>,
 <b>archive_write_set_format_filter_by_ext_def</b>,
 <b>archive_write_set_format_gnutar</b>,
@@ -103,7 +106,22 @@ creating archives</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_write_set_format_cpio_bin</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_write_set_format_cpio_newc</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_set_format_cpio_odc</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_set_format_cpio_pwb</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
@@ -207,7 +225,7 @@ archive with the same format as an existing archive.</p>
 based on the common name.</p>
 
 
-<p style="margin-top: 1em"><b>archive_write_set_format_filter_by_ext</b>(),
+<p style="margin-top: 1em"><b>archive_write_set_format_filter_by_ext</b>()
 <b>archive_write_set_format_filter_by_ext_def</b>()</p>
 
 <p style="margin-left:17%;">Sets both filters and format
@@ -217,10 +235,13 @@ based on the output filename. Supported extensions: .7z,
 
 
 <p style="margin-top: 1em"><b>archive_write_set_format_7zip</b>()
-<b>archive_write_set_format_ar_bsd</b>(),
-<b>archive_write_set_format_ar_svr4</b>(),
+<b>archive_write_set_format_ar_bsd</b>()
+<b>archive_write_set_format_ar_svr4</b>()
 <b>archive_write_set_format_cpio</b>()
+<b>archive_write_set_format_cpio_bin</b>()
 <b>archive_write_set_format_cpio_newc</b>()
+<b>archive_write_set_format_cpio_odc</b>()
+<b>archive_write_set_format_cpio_pwb</b>()
 <b>archive_write_set_format_gnutar</b>()
 <b>archive_write_set_format_iso9660</b>()
 <b>archive_write_set_format_mtree</b>()

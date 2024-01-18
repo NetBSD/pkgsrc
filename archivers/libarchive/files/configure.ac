@@ -4,15 +4,16 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.4.3])
-m4_define([LIBARCHIVE_VERSION_N],[3004003])
+m4_define([LIBARCHIVE_VERSION_S],[3.7.2])
+m4_define([LIBARCHIVE_VERSION_N],[3007002])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
 m4_define([BSDCPIO_VERSION_S],LIBARCHIVE_VERSION_S())
 m4_define([BSDCAT_VERSION_S],LIBARCHIVE_VERSION_S())
+m4_define([BSDUNZIP_VERSION_S],LIBARCHIVE_VERSION_S())
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.71])
 
 #
 # Now starts the "real" configure script.
@@ -47,6 +48,8 @@ ARCHIVE_REVISION=$(( LIBARCHIVE_VERSION_N() % 1000 ))
 ARCHIVE_LIBTOOL_VERSION=$ARCHIVE_INTERFACE:$ARCHIVE_REVISION:$ARCHIVE_MINOR
 
 # Stick the version numbers into config.h
+AC_DEFINE([__LIBARCHIVE_CONFIG_H_INCLUDED], [1],
+	[Internal macro for sanity checks])
 AC_DEFINE([LIBARCHIVE_VERSION_STRING],"LIBARCHIVE_VERSION_S()",
 	[Version number of libarchive])
 AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION_NUMBER],"LIBARCHIVE_VERSION_N()",
@@ -57,6 +60,8 @@ AC_DEFINE([BSDTAR_VERSION_STRING],"BSDTAR_VERSION_S()",
 	[Version number of bsdtar])
 AC_DEFINE([BSDCAT_VERSION_STRING],"BSDTAR_VERSION_S()",
 	[Version number of bsdcat])
+AC_DEFINE([BSDUNZIP_VERSION_STRING],"BSDUNZIP_VERSION_S()",
+	[Version number of bsdunzip])
 
 # The shell variables here must be the same as the AC_SUBST() variables
 # below, but the shell variable names apparently cannot be the same as
@@ -64,6 +69,7 @@ AC_DEFINE([BSDCAT_VERSION_STRING],"BSDTAR_VERSION_S()",
 BSDCPIO_VERSION_STRING=BSDCPIO_VERSION_S()
 BSDTAR_VERSION_STRING=BSDTAR_VERSION_S()
 BSDCAT_VERSION_STRING=BSDCAT_VERSION_S()
+BSDUNZIP_VERSION_STRING=BSDUNZIP_VERSION_S()
 LIBARCHIVE_VERSION_STRING=LIBARCHIVE_VERSION_S()
 LIBARCHIVE_VERSION_NUMBER=LIBARCHIVE_VERSION_N()
 
@@ -74,6 +80,7 @@ AC_SUBST(ARCHIVE_LIBTOOL_VERSION)
 AC_SUBST(BSDCPIO_VERSION_STRING)
 AC_SUBST(BSDTAR_VERSION_STRING)
 AC_SUBST(BSDCAT_VERSION_STRING)
+AC_SUBST(BSDUNZIP_VERSION_STRING)
 AC_SUBST(LIBARCHIVE_VERSION_STRING)
 AC_SUBST(LIBARCHIVE_VERSION_NUMBER)
 
@@ -97,14 +104,14 @@ AM_CONDITIONAL([INC_CYGWIN_FILES], [test $inc_cygwin_files = yes])
 dnl Defines that are required for specific platforms (e.g. -D_POSIX_SOURCE, etc)
 PLATFORMCPPFLAGS=
 case "$host_os" in
-  *mingw* ) PLATFORMCPPFLAGS=-D__USE_MINGW_ANSI_STDIO ;;
+  *mingw* ) PLATFORMCPPFLAGS=-D__USE_MINGW_ANSI_STDIO -D__MINGW_USE_VC2005_COMPAT ;;
 esac
 AC_SUBST(PLATFORMCPPFLAGS)
 
 # Checks for programs.
 AC_PROG_CC
-AC_PROG_CC_C99
 AM_PROG_CC_C_O
+AC_PROG_CPP
 AC_USE_SYSTEM_EXTENSIONS
 AC_LIBTOOL_WIN32_DLL
 AC_PROG_LIBTOOL
@@ -245,18 +252,84 @@ AM_CONDITIONAL([STATIC_BSDCPIO], [ test "$static_bsdcpio" = yes ])
 # Set up defines needed before including any headers
 case $host in
   *mingw* | *cygwin* | *msys*  )
-  AC_DEFINE([_WIN32_WINNT], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
-  AC_DEFINE([WINVER], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
-  AC_DEFINE([NTDDI_VERSION], 0x05020000, [Define to '0x05020000' for Windows Server 2003 APIs.])
+  AC_PREPROC_IFELSE([AC_LANG_PROGRAM(
+    [[#ifdef _WIN32_WINNT
+     # error _WIN32_WINNT already defined
+     #endif
+    ]],[[;]])
+  ],[
+    AC_DEFINE([_WIN32_WINNT], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
+    AC_DEFINE([NTDDI_VERSION], 0x05020000, [Define to '0x05020000' for Windows Server 2003 APIs.])
+  ])
+  AC_PREPROC_IFELSE([AC_LANG_PROGRAM(
+    [[#ifdef WINVER
+     # error WINVER already defined
+     #endif
+    ]],[[;]])
+  ],[
+    AC_DEFINE([WINVER], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
+  ])
   ;;
 esac
+
+#
+# Options for building bsdunzip.
+#
+# Default is to build bsdunzip, but allow people to override that.
+# Bsdunzip has not yet been ported for Windows
+#
+case "$host_os" in
+  *mingw* | *msys*)
+	enable_bsdunzip=no
+	;;
+  *)
+	AC_ARG_ENABLE([bsdunzip],
+	  [AS_HELP_STRING([--enable-bsdunzip], [enable build of bsdunzip (default)])
+	  AS_HELP_STRING([--enable-bsdunzip=static], [force static build of bsdunzip])
+	  AS_HELP_STRING([--enable-bsdunzip=shared], [force dynamic build of bsdunzip])
+	  AS_HELP_STRING([--disable-bsdunzip], [disable build of bsdunzip])],
+	  [], [enable_bsdunzip=yes])
+	;;
+esac
+
+case "$enable_bsdunzip" in
+yes)
+	if test "$enable_static" = "no"; then
+		static_bsdunzip=no
+	else
+		static_bsdunzip=yes
+	fi
+	build_bsdunzip=yes
+	;;
+dynamic|shared)
+	if test "$enable_shared" = "no"; then
+		AC_MSG_FAILURE([Shared linking of bsdunzip requires shared libarchive])
+	fi
+	build_bsdunzip=yes
+	static_bsdunzip=no
+	;;
+static)
+	build_bsdunzip=yes
+	static_bsdunzip=yes
+	;;
+no)
+	build_bsdunzip=no
+	static_bsdunzip=no
+	;;
+*)
+	AC_MSG_FAILURE([Unsupported value for --enable-bsdunzip])
+	;;
+esac
+
+AM_CONDITIONAL([BUILD_BSDUNZIP], [ test "$build_bsdunzip" = yes ])
+AM_CONDITIONAL([STATIC_BSDUNZIP], [ test "$static_bsdunzip" = yes ])
 
 # Checks for header files.
 AC_HEADER_DIRENT
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([acl/libacl.h attr/xattr.h])
 AC_CHECK_HEADERS([copyfile.h ctype.h])
-AC_CHECK_HEADERS([errno.h ext2fs/ext2_fs.h fcntl.h grp.h])
+AC_CHECK_HEADERS([errno.h ext2fs/ext2_fs.h fcntl.h fnmatch.h grp.h])
 
 AC_CACHE_CHECK([whether EXT2_IOC_GETFLAGS is usable],
     [ac_cv_have_decl_EXT2_IOC_GETFLAGS],
@@ -289,7 +362,7 @@ AC_CHECK_HEADERS([locale.h membership.h paths.h poll.h pthread.h pwd.h])
 AC_CHECK_HEADERS([readpassphrase.h signal.h spawn.h])
 AC_CHECK_HEADERS([stdarg.h stdint.h stdlib.h string.h])
 AC_CHECK_HEADERS([sys/acl.h sys/cdefs.h sys/ea.h sys/extattr.h])
-AC_CHECK_HEADERS([sys/ioctl.h sys/mkdev.h sys/mount.h])
+AC_CHECK_HEADERS([sys/ioctl.h sys/mkdev.h sys/mount.h sys/queue.h])
 AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/richacl.h])
 AC_CHECK_HEADERS([sys/select.h sys/statfs.h sys/statvfs.h sys/sysmacros.h])
 AC_CHECK_HEADERS([sys/time.h sys/utime.h sys/utsname.h sys/vfs.h sys/xattr.h])
@@ -361,10 +434,13 @@ if test "x$with_iconv" != "xno"; then
     AC_CHECK_HEADERS([localcharset.h])
     am_save_LIBS="$LIBS"
     LIBS="${LIBS} ${LIBICONV}"
+    if test -n "$LIBICONV"; then
+      LIBSREQUIRED="$LIBSREQUIRED${LIBSREQUIRED:+ }iconv"
+    fi
     AC_CHECK_FUNCS([locale_charset])
     LIBS="${am_save_LIBS}"
     if test "x$ac_cv_func_locale_charset" != "xyes"; then
-      # If locale_charset() is not in libiconv, we have to find libcharset. 
+      # If locale_charset() is not in libiconv, we have to find libcharset.
       AC_CHECK_LIB(charset,locale_charset)
     fi
   fi
@@ -383,7 +459,9 @@ AC_ARG_WITH([zstd],
 
 if test "x$with_zstd" != "xno"; then
   AC_CHECK_HEADERS([zstd.h])
-  AC_CHECK_LIB(zstd,ZSTD_compressStream)
+  AC_CHECK_LIB(zstd,ZSTD_decompressStream)
+  AC_CHECK_LIB(zstd,ZSTD_compressStream,
+    AC_DEFINE([HAVE_LIBZSTD_COMPRESSOR], [1], [Define to 1 if you have the `zstd' library (-lzstd) with compression support.]))
 fi
 
 AC_ARG_WITH([lzma],
@@ -408,6 +486,19 @@ if test "x$with_lzma" != "xno"; then
       [ac_cv_lzma_has_mt=yes], [ac_cv_lzma_has_mt=no])])
   if test "x$ac_cv_lzma_has_mt" != xno; then
 	  AC_DEFINE([HAVE_LZMA_STREAM_ENCODER_MT], [1], [Define to 1 if you have the `lzma_stream_encoder_mt' function.])
+  fi
+
+  AC_CACHE_CHECK(
+    [whether we have ARM64 filter support in lzma],
+    ac_cv_lzma_has_arm64,
+    [AC_LINK_IFELSE([
+      AC_LANG_PROGRAM([[#include <lzma.h>]
+                       [#ifndef LZMA_FILTER_ARM64]
+                       [#error unsupported]
+                       [#endif]])],
+      [ac_cv_lzma_has_arm64=yes], [ac_cv_lzma_has_arm64=no])])
+  if test "x$ac_cv_lzma_has_arm64" != xno; then
+	  AC_DEFINE([HAVE_LZMA_FILTER_ARM64], [1], [Define to 1 if you have the `LZMA_FILTER_ARM64' macro.])
   fi
 fi
 
@@ -523,6 +614,22 @@ fi
 # Checks for supported compiler flags
 AX_APPEND_COMPILE_FLAGS([-Wall -Wformat -Wformat-security])
 
+# Place the functions and data into separate sections, allowing the linker
+# to garbage collect the unused ones.
+save_LDFLAGS=$LDFLAGS
+LDFLAGS="$LDFLAGS -Wl,--gc-sections"
+AC_MSG_CHECKING([whether ld supports --gc-sections])
+AC_LINK_IFELSE(
+    [AC_LANG_SOURCE([static char UnusedFunc() { return 5; } int main() { return 0;}])],
+    [AC_MSG_RESULT([yes])
+        GC_SECTIONS="-Wl,--gc-sections";
+        AX_APPEND_COMPILE_FLAGS([-ffunction-sections -fdata-sections])],
+    [AC_MSG_RESULT([no])
+        GC_SECTIONS="";])
+LDFLAGS=$save_LDFLAGS
+
+AC_SUBST(GC_SECTIONS)
+
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 # la_TYPE_UID_T defaults to "int", which is incorrect for MinGW
@@ -544,6 +651,13 @@ AC_CHECK_MEMBERS([struct tm.tm_gmtoff, struct tm.__tm_gmtoff],,,
 
 # Check for f_namemax in struct statfs
 AC_CHECK_MEMBERS([struct statfs.f_namemax],,,
+[
+#include <sys/param.h>
+#include <sys/mount.h>
+])
+
+# Check for f_iosize in struct statfs
+AC_CHECK_MEMBERS([struct statfs.f_iosize],,,
 [
 #include <sys/param.h>
 #include <sys/mount.h>
@@ -609,7 +723,10 @@ AC_CHECK_TYPE([wchar_t],
 		AC_CHECK_SIZEOF([wchar_t])],
 		[])
 
-AC_HEADER_TIME
+AX_COMPILE_CHECK_SIZEOF(int)
+AX_COMPILE_CHECK_SIZEOF(long)
+
+AC_CHECK_HEADERS_ONCE([sys/time.h])
 
 # Checks for library functions.
 AC_PROG_GCC_TRADITIONAL
@@ -627,22 +744,38 @@ AC_FUNC_VPRINTF
 # workarounds, we use 'void *' for 'struct SECURITY_ATTRIBUTES *'
 AC_CHECK_STDCALL_FUNC([CreateHardLinkA],[const char *, const char *, void *])
 AC_CHECK_FUNCS([arc4random_buf chflags chown chroot ctime_r])
-AC_CHECK_FUNCS([fchdir fchflags fchmod fchown fcntl fdopendir fork])
+AC_CHECK_FUNCS([fchdir fchflags fchmod fchown fcntl fdopendir fnmatch fork])
 AC_CHECK_FUNCS([fstat fstatat fstatfs fstatvfs ftruncate])
 AC_CHECK_FUNCS([futimens futimes futimesat])
-AC_CHECK_FUNCS([geteuid getpid getgrgid_r getgrnam_r])
+AC_CHECK_FUNCS([geteuid getline getpid getgrgid_r getgrnam_r])
 AC_CHECK_FUNCS([getpwnam_r getpwuid_r getvfsbyname gmtime_r])
-AC_CHECK_FUNCS([lchflags lchmod lchown link localtime_r lstat lutimes])
+AC_CHECK_FUNCS([lchflags lchmod lchown link linkat localtime_r lstat lutimes])
 AC_CHECK_FUNCS([mbrtowc memmove memset])
 AC_CHECK_FUNCS([mkdir mkfifo mknod mkstemp])
 AC_CHECK_FUNCS([nl_langinfo openat pipe poll posix_spawnp readlink readlinkat])
 AC_CHECK_FUNCS([readpassphrase])
 AC_CHECK_FUNCS([select setenv setlocale sigaction statfs statvfs])
-AC_CHECK_FUNCS([strchr strdup strerror strncpy_s strrchr symlink timegm])
-AC_CHECK_FUNCS([tzset unlinkat unsetenv utime utimensat utimes vfork])
+AC_CHECK_FUNCS([strchr strdup strerror strncpy_s strnlen strrchr symlink])
+AC_CHECK_FUNCS([timegm tzset unlinkat unsetenv utime utimensat utimes vfork])
 AC_CHECK_FUNCS([wcrtomb wcscmp wcscpy wcslen wctomb wmemcmp wmemcpy wmemmove])
-AC_CHECK_FUNCS([_ctime64_s _fseeki64])
-AC_CHECK_FUNCS([_get_timezone _gmtime64_s _localtime64_s _mkgmtime64])
+AC_CHECK_FUNCS([_fseeki64 _get_timezone])
+AC_CHECK_DECL([cmtime_s],
+		[AC_DEFINE(HAVE_CMTIME_S, 1, [cmtime_s function])],
+		[],
+		[#include <time.h>])
+AC_CHECK_DECL([gmtime_s],
+		[AC_DEFINE(HAVE_GMTIME_S, 1, [gmtime_s function])],
+		[],
+		[#include <time.h>])
+AC_CHECK_TYPE([localtime_s],
+		[AC_DEFINE(HAVE_LOCALTIME_S, 1, [localtime_s function])],
+		[],
+		[#include <time.h>])
+AC_CHECK_DECL([_mkgmtime],
+		[AC_DEFINE(HAVE__MKGMTIME, 1, [_mkgmtime function])],
+		[],
+		[#include <time.h>])
+
 # detects cygwin-1.7, as opposed to older versions
 AC_CHECK_FUNCS([cygwin_conv_path])
 
@@ -661,16 +794,23 @@ AC_CHECK_TYPES(struct xvfsconf,,,
 	#include <sys/mount.h>
 	])
 
+AC_CHECK_TYPES(struct statfs,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#include <sys/mount.h>
+	])
+
 # There are several variants of readdir_r around; we only
 # accept the POSIX-compliant version.
-AC_COMPILE_IFELSE(
+AC_LINK_IFELSE(
  [AC_LANG_PROGRAM([[#include <dirent.h>]],
                   [[DIR *dir; struct dirent e, *r;
 		    return(readdir_r(dir, &e, &r));]])],
  [AC_DEFINE(HAVE_READDIR_R,1,[Define to 1 if you have a POSIX compatible readdir_r])]
 )
 # dirfd can be either a function or a macro.
-AC_COMPILE_IFELSE(
+AC_LINK_IFELSE(
  [AC_LANG_PROGRAM([[#include <dirent.h>
                     DIR *dir;]],
                   [[return(dirfd(dir));]])],
@@ -1157,24 +1297,8 @@ fi
 if test "x$with_openssl" != "xno"; then
     AC_CHECK_HEADERS([openssl/evp.h])
     saved_LIBS=$LIBS
-    case "$host_os" in
-      *mingw* | *cygwin* | *msys*)
-        case "$host_cpu" in
-          x86_64)
-            AC_CHECK_LIB(eay64,OPENSSL_config)
-            if test "x$ac_cv_lib_eay64_main" != "xyes"; then
-              AC_CHECK_LIB(eay32,OPENSSL_config)
-            fi
-            ;;
-          *)
-            AC_CHECK_LIB(eay32,OPENSSL_config)
-            ;;
-        esac
-        ;;
-      *)
-        AC_CHECK_LIB(crypto,OPENSSL_config)
-        ;;
-    esac
+    LIBSREQUIRED="$LIBSREQUIRED${LIBSREQUIRED:+ }libcrypto"
+    AC_CHECK_LIB(crypto,OPENSSL_config)
     CRYPTO_CHECK(MD5, OPENSSL, md5)
     CRYPTO_CHECK(RMD160, OPENSSL, rmd160)
     CRYPTO_CHECK(SHA1, OPENSSL, sha1)
@@ -1183,6 +1307,8 @@ if test "x$with_openssl" != "xno"; then
     CRYPTO_CHECK(SHA512, OPENSSL, sha512)
     AC_CHECK_FUNCS([PKCS5_PBKDF2_HMAC_SHA1])
 fi
+
+AC_SUBST(LIBSREQUIRED)
 
 # Probe libmd AFTER OpenSSL/libcrypto.
 # The two are incompatible and OpenSSL is more complete.
@@ -1207,6 +1333,18 @@ case "$host_os" in
 	CRYPTO_CHECK_WIN(SHA512, CALG_SHA_512)
 	;;
 esac
+
+dnl Visibility annotations...
+saved_CFLAGS="$CFLAGS"
+CFLAGS="$CFLAGS -fvisibility=hidden -Werror"
+AC_MSG_CHECKING(whether compiler supports visibility annotations)
+AC_LINK_IFELSE([AC_LANG_PROGRAM([
+                 int foo( void ) __attribute__((visibility("default")));
+               ])],
+               [CFLAGS="$saved_CFLAGS -fvisibility=hidden -D__LIBARCHIVE_ENABLE_VISIBILITY";
+                AC_MSG_RESULT(yes)],
+               [CFLAGS="$saved_CFLAGS"
+                AC_MSG_RESULT(no)])
 
 # Ensure test directories are present if building out-of-tree
 AC_CONFIG_COMMANDS([mkdirs],

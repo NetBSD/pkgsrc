@@ -1,7 +1,8 @@
-.TH ARCHIVE_WRITE_OPEN 3 "February 2, 2012" ""
+.TH ARCHIVE_WRITE_OPEN 3 "November 12, 2020" ""
 .SH NAME
 .ad l
 \fB\%archive_write_open\fP,
+\fB\%archive_write_open2\fP,
 \fB\%archive_write_open_fd\fP,
 \fB\%archive_write_open_FILE\fP,
 \fB\%archive_write_open_filename\fP,
@@ -17,6 +18,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fIint\fP
 .br
 \fB\%archive_write_open\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP, \fI\%archive_open_callback\ *\fP, \fI\%archive_write_callback\ *\fP, \fI\%archive_close_callback\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_open2\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP, \fI\%archive_open_callback\ *\fP, \fI\%archive_write_callback\ *\fP, \fI\%archive_close_callback\ *\fP, \fI\%archive_free_callback\ *\fP);
 .br
 \fIint\fP
 .br
@@ -43,6 +48,12 @@ This is the most generic form of this function, which accepts
 pointers to three callback functions which will be invoked by
 the compression layer to write the constructed archive.
 This does not alter the default archive padding.
+.TP
+\fB\%archive_write_open2\fP()
+Same as
+\fB\%archive_write_open\fP()
+with an additional fourth free callback. This function should be preferred to
+\fB\%archive_write_open\fP().
 .TP
 \fB\%archive_write_open_fd\fP()
 A convenience form of
@@ -86,7 +97,7 @@ to a character or block device node, it will disable padding otherwise.
 You can override this by manually invoking
 \fB\%archive_write_set_bytes_in_last_block\fP()
 before calling
-\fB\%archive_write_open\fP().
+\fB\%archive_write_open2\fP().
 The
 \fB\%archive_write_open_filename\fP()
 function is safe for use with tape drives or other
@@ -94,7 +105,7 @@ block-oriented devices.
 .TP
 \fB\%archive_write_open_memory\fP()
 A convenience form of
-\fB\%archive_write_open\fP()
+\fB\%archive_write_open2\fP()
 that accepts a pointer to a block of memory that will receive
 the archive.
 The final
@@ -126,7 +137,7 @@ To use this library, you will need to define and register
 callback functions that will be invoked to write data to the
 resulting archive.
 These functions are registered by calling
-\fB\%archive_write_open\fP():
+\fB\%archive_write_open2\fP():
 .RS 5
 .IP
 \fItypedef int\fP
@@ -143,6 +154,8 @@ If the open fails, it should call
 \fB\%archive_set_error\fP()
 to register an error code and message and return
 \fBARCHIVE_FATAL\fP.
+Please note that if open fails, close is not called and resources must be
+freed inside the open callback or with the free callback.
 .RS 5
 .IP
 \fItypedef la_ssize_t\fP
@@ -168,7 +181,8 @@ to register an error code and message and return -1.
 .RE
 .PP
 The close callback is invoked by archive_close when
-the archive processing is complete.
+the archive processing is complete. If the open callback fails, the close
+callback is not invoked.
 The callback should return
 \fBARCHIVE_OK\fP
 on success.
@@ -177,6 +191,14 @@ On failure, the callback should invoke
 to register an error code and message and
 return
 \fBARCHIVE_FATAL\fP.
+.RS 5
+.IP
+\fItypedef int\fP
+\fB\%archive_free_callback\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP)
+.RE
+.PP
+The free callback is always invoked on archive_free.
+The return code of this callback is not processed.
 .PP
 Note that if the client-provided write callback function
 returns a non-zero value, that error will be propagated back to the caller
