@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/07/06 09:41:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/18 22:13:46 rillig Exp $
 
 DISTNAME=	Publican-v4.3.1
 PKGNAME=	p5-${DISTNAME:S/v//1}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	textproc
 #MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
 
@@ -51,6 +51,11 @@ DEPENDS+=	p5-Locale-Maketext-Lexicon-[0-9]*:../../misc/p5-Locale-Maketext-Lexico
 
 PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=		# none
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	post-install
+SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORARCH}/auto/Publican/.packlist
+SUBST_SED.destdir=	-e 's|^${DESTDIR}||'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
