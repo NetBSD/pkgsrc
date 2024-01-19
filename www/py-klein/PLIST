@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/04 22:46:24 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/01/19 13:13:44 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/klein/__init__.py
 ${PYSITELIB}/klein/__init__.pyc
 ${PYSITELIB}/klein/__init__.pyo
@@ -65,6 +65,9 @@ ${PYSITELIB}/klein/_session.pyo
 ${PYSITELIB}/klein/_tubes.py
 ${PYSITELIB}/klein/_tubes.pyc
 ${PYSITELIB}/klein/_tubes.pyo
+${PYSITELIB}/klein/_typing_compat.py
+${PYSITELIB}/klein/_typing_compat.pyc
+${PYSITELIB}/klein/_typing_compat.pyo
 ${PYSITELIB}/klein/_version.py
 ${PYSITELIB}/klein/_version.pyc
 ${PYSITELIB}/klein/_version.pyo
@@ -93,6 +96,9 @@ ${PYSITELIB}/klein/test/__init__.pyo
 ${PYSITELIB}/klein/test/_trial.py
 ${PYSITELIB}/klein/test/_trial.pyc
 ${PYSITELIB}/klein/test/_trial.pyo
+${PYSITELIB}/klein/test/not_hypothesis.py
+${PYSITELIB}/klein/test/not_hypothesis.pyc
+${PYSITELIB}/klein/test/not_hypothesis.pyo
 ${PYSITELIB}/klein/test/test_app.py
 ${PYSITELIB}/klein/test/test_app.pyc
 ${PYSITELIB}/klein/test/test_app.pyo
@@ -138,6 +144,9 @@ ${PYSITELIB}/klein/test/test_session.pyo
 ${PYSITELIB}/klein/test/test_trial.py
 ${PYSITELIB}/klein/test/test_trial.pyc
 ${PYSITELIB}/klein/test/test_trial.pyo
+${PYSITELIB}/klein/test/typing_app.py
+${PYSITELIB}/klein/test/typing_app.pyc
+${PYSITELIB}/klein/test/typing_app.pyo
 ${PYSITELIB}/klein/test/util.py
 ${PYSITELIB}/klein/test/util.pyc
 ${PYSITELIB}/klein/test/util.pyo
