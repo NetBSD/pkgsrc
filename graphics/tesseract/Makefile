@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2023/11/14 14:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/01/19 15:17:49 adam Exp $
 
-DISTNAME=	tesseract-5.3.3
-PKGREVISION=	4
+DISTNAME=	tesseract-5.3.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -15,15 +14,17 @@ LANGVER=	4.1.0
 DISTFILES+=	tessdata-${LANGVER}${EXTRACT_SUFX}
 SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata_best/archive/${LANGVER}.tar.gz
 
-TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TEST_DEPENDS+=	googletest-[0-9]*:../../devel/googletest
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	filesystem
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake bash gmake pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
 INSTALL_TARGET=		install training-install
+TEST_TARGET=		check
 REPLACE_BASH+=		src/training/*.sh
 
 #CMAKE_ARGS+=	-DUSE_SYSTEM_ICU=ON
