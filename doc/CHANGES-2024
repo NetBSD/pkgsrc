@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.468 2024/01/19 22:12:07 adam Exp $
+$NetBSD: CHANGES-2024,v 1.469 2024/01/19 22:15:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -606,3 +606,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-flask to 3.0.1 [adam 2024-01-19]
 	Updated www/py-flask-session to 0.6.0 [adam 2024-01-19]
 	Updated www/py-flask-caching to 2.1.0 [adam 2024-01-19]
+	Updated devel/py-fakefs to 5.3.4 [adam 2024-01-19]
+	Updated devel/py-faker to 22.4.0 [adam 2024-01-19]
