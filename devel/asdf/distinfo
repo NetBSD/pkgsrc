@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/09/13 15:42:36 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2024/01/19 17:09:51 schmonz Exp $
 
-BLAKE2s (asdf-0.13.1.tar.gz) = ca65b67c9355449bebb8eb897ed6c17833eb3828567db4aa2d606129e446a639
-SHA512 (asdf-0.13.1.tar.gz) = d8041119d5840db2b08be9235d26186a1eb0d9101e836dae9991f92ea56baf75bcc69ee46af74ef09ed0f98853f2c232a93e6720ced45907457b95266209c617
-Size (asdf-0.13.1.tar.gz) = 163098 bytes
+BLAKE2s (asdf-0.14.0.tar.gz) = 195e6ac720440a5ea9cc6347a3367f9e254dfec973f5a0c95f7df1e8a0ab2489
+SHA512 (asdf-0.14.0.tar.gz) = ca0055de6617c2cda3dee9272f07848fd4f5eaef27f84e63fc8c97cb45ab5acedff5e98d2178483ecc3b0bae3a6b036cd548d43417ff09e0cd4368bbe2124d49
+Size (asdf-0.14.0.tar.gz) = 194950 bytes
 SHA1 (patch-lib_commands_reshim.bash) = 016cde2d9c68c47d46b01b9482091cc5b6ec11d4
