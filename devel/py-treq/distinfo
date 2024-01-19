@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/14 10:15:33 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/01/19 21:46:48 adam Exp $
 
-BLAKE2s (treq-22.2.0.tar.gz) = 2fc65be008b253c91c5e192ee2bf82992c3441245e20f073bf4cbabbbf101040
-SHA512 (treq-22.2.0.tar.gz) = 465a02481a51ac246ac85f561f2e7a59d97aeeda9f0953dd83678ff836802a187a6aedcce830a9e3095a9c72227bd06113610c3be0967f1362a645a31278bde0
-Size (treq-22.2.0.tar.gz) = 72922 bytes
+BLAKE2s (treq-23.11.0.tar.gz) = 7d092a8e56abaae6091124dcece1dd6b2afcea94ab00a206c04e58905f232555
+SHA512 (treq-23.11.0.tar.gz) = bf62373f51a0552e040a628c86fe0f8d136ab5dfefaa2fa46d9ab173a58c20c0211f94370561e07fafb7da87140e88c10cf336ff7a61e5b3fc1a47fd1193cc27
+Size (treq-23.11.0.tar.gz) = 74450 bytes
