@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/01/19 15:17:11 adam Exp $
+
+Prefer lept.pc for pkg-config file.
+
+--- CMakeLists.txt.orig	2024-01-02 23:48:24.000000000 +0000
++++ CMakeLists.txt
+@@ -358,7 +358,7 @@ configure_file(lept.pc.cmake ${CMAKE_CUR
+ # to resolve generator expression in OUTPUT_NAME
+ file(
+   GENERATE
+-  OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/lept_$<CONFIG>.pc
++  OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/lept.pc
+   INPUT ${CMAKE_CURRENT_BINARY_DIR}/lept.pc.in)
+ 
+ configure_file(
+@@ -368,7 +368,7 @@ configure_file(
+   ${CMAKE_CURRENT_SOURCE_DIR}/cmake/templates/LeptonicaConfig.cmake.in
+   ${CMAKE_CURRENT_BINARY_DIR}/LeptonicaConfig.cmake @ONLY)
+ 
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lept_$<CONFIG>.pc
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lept.pc
+         DESTINATION lib/pkgconfig)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/LeptonicaConfig.cmake
+               ${CMAKE_CURRENT_BINARY_DIR}/LeptonicaConfig-version.cmake
