@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.106 2024/01/16 11:20:04 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.107 2024/01/19 13:01:40 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25850,3 +25850,4 @@ libheif<1.17.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49462
 libde265<1.0.15	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49468
 gst-plugins1-bad<1.22.8	buffer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0011.html
 modular-xorg-server<21.1.11	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6816
+coreutils<9.4		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
