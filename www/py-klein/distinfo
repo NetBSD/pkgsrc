@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/08/04 22:46:24 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/01/19 13:13:44 adam Exp $
 
-BLAKE2s (klein-23.5.0.tar.gz) = 1f18b4adc773a1acb6eae76e30b7b60851ee39435fa2fa5ddbf67a1eb9d1bc5c
-SHA512 (klein-23.5.0.tar.gz) = 10d7bb1a5aabc035aa69a0f9c25516ee9b6043f442b35b31f5687c249370e4674c4488a9531ff4bc06ea40574fd9a7974343899de3d5b3895f28a2feb70ae543
-Size (klein-23.5.0.tar.gz) = 100691 bytes
+BLAKE2s (klein-23.12.0.tar.gz) = 36403da40c937c87c3f3de3ee306d172229bbe25eb8f5ea96ec8b8d7c70e07ae
+SHA512 (klein-23.12.0.tar.gz) = 2833d3b4ea53ccb62eccf72051b66867ca73c43dee0eb84aac9bd4ec4ba04b1b00acc5391863f0960eda2e5c329fc5b9537603997b9fa703750a3906febbbf72
+Size (klein-23.12.0.tar.gz) = 103287 bytes
