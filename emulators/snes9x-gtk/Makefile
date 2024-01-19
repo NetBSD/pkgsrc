@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/11/20 10:19:00 nia Exp $
+# $NetBSD: Makefile,v 1.102 2024/01/19 09:04:10 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -21,7 +21,7 @@ TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 CONFIGURE_DIR=	gtk
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 
 .include "../../mk/oss.buildlink3.mk"
 
