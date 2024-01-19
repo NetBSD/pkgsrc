@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.39 2022/11/28 23:15:34 gutteridge Exp $
+# $NetBSD: check-files.mk,v 1.40 2024/01/19 00:42:01 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -27,7 +27,18 @@
 
 _VARGROUPS+=		check-files
 _USER_VARS.check-files=	CHECK_FILES CHECK_FILES_STRICT
-_PKG_VARS.check-files=	CHECK_FILES_SKIP
+_PKG_VARS.check-files=	CHECK_FILES_SUPPORTED CHECK_FILES_SKIP
+_USE_VARS.check-files=	\
+	DESTDIR PREFIX PKG_SYSCONFDIR VARBASE PKG_DBDIR DISTDIR PACKAGES \
+	MAKE_DIRS OWN_DIRS \
+	FONTS_DIRS.x11 FONTS_DIRS.ttf FONTS_DIRS.type1 \
+	PERL5_INSTALLARCHLIB \
+	WRKDIR ERROR_DIR \
+	PLIST INFO_FILES ICON_THEMES
+_IGN_VARS.check-files=	PKGNAME _CHECK_FILES_*
+_SORTED_VARS.check-files= \
+	CHECK_FILES_SKIP
+
 
 CHECK_FILES?=		yes
 CHECK_FILES_STRICT?=	no
@@ -50,7 +61,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/lib/R/doc/html/search/index.txt
 
 CHECK_FILES_SKIP+=	${PKG_DBDIR}/.*
 
-# We don't care about what's under linux/proc and linux32/proc in Linux 
+# We don't care about what's under linux/proc and linux32/proc in Linux
 # emulation, which just holds run-time generated data.
 #
 CHECK_FILES_SKIP+=	${PREFIX}/emul/linux/proc.*
@@ -64,7 +75,7 @@ CHECK_FILES_SKIP+=	${PACKAGES}/.*
 CHECK_FILES_SKIP+=	${DISTDIR}/.*
 
 # For unprivileged builds, VARBASE is below LOCALBASE.
-.if !empty(CHECK_FILES_STRICT:M[Nn][Oo])
+.if ${CHECK_FILES_STRICT:tl} == no
 CHECK_FILES_SKIP+=	${VARBASE}/.*
 .endif
 
@@ -98,7 +109,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.cache-1
 .endif
 
 # Mutable icon theme cache files
-.if !empty(ICON_THEMES:M[Yy][Ee][Ss])
+.if ${ICON_THEMES:tl} == yes
 CHECK_FILES_SKIP+=	${PREFIX}/share/icons/.*/icon-theme.cache
 .endif
 
@@ -140,7 +151,7 @@ _CHECK_FILES_POST.varbase=	${WRKDIR}/.varbase.post
 
 _CHECK_FILES_ERRMSGS=		# empty
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.prefix}
-.if empty(CHECK_FILES_STRICT:M[nN][oO])
+.if ${CHECK_FILES_STRICT:tl} != no
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.sysconfdir}
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.varbase}
 .endif
@@ -152,7 +163,7 @@ _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.varbase}
 #
 _CHECK_FILES_PRE=		#
 _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.prefix}
-.if empty(CHECK_FILES_STRICT:M[nN][oO])
+.if ${CHECK_FILES_STRICT:tl} != no
 _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.sysconfdir}
 _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.varbase}
 .endif
@@ -164,12 +175,12 @@ _CHECK_FILES_PRE+=		${_CHECK_FILES_PRE.varbase}
 #
 _CHECK_FILES_POST=		#
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.prefix}
-.if empty(CHECK_FILES_STRICT:M[nN][oO])
+.if ${CHECK_FILES_STRICT:tl} != no
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.sysconfdir}
 _CHECK_FILES_POST+=		${_CHECK_FILES_POST.varbase}
 .endif
 
-.if empty(CHECK_FILES:M[nN][oO])
+.if ${CHECK_FILES:tl} != no
 privileged-install-hook: check-files
 .endif
 
@@ -225,7 +236,7 @@ check-files-varbase: ${_CHECK_FILES_ERRMSG.varbase}
 # subtarget.
 #
 .PHONY: check-files
-.if !empty(CHECK_FILES_SUPPORTED:M[nN][oO])
+.if ${CHECK_FILES_SUPPORTED:U:tl} == no
 check-files:
 	@${DO_NADA}
 .else
@@ -332,7 +343,7 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 	fi >> ${.TARGET}
 
 # Check ${PKG_SYSCONFDIR} for files which are not in the PLIST and are
-# also not copied into place by the INSTALL scripts. 
+# also not copied into place by the INSTALL scripts.
 #
 ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 		${_CHECK_FILES_PRE.sysconfdir}				\
