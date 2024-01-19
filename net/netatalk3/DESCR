@@ -6,3 +6,5 @@ higher transmissions speeds compared with Macs accessing a server via
 SMB or NFS, while providing clients with the best user experience (full
 support for Macintosh metadata, flawlessly supporting mixed
 environments of classic MacOS and MacOS X clients).
+
+See also netatalk22, which has full support for pre-Darwin systems.
