@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2022/11/20 23:23:19 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2024/01/19 19:59:40 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/elasticsearch/__init__.py
 ${PYSITELIB}/elasticsearch/__init__.pyc
 ${PYSITELIB}/elasticsearch/__init__.pyo
@@ -41,6 +41,9 @@ ${PYSITELIB}/elasticsearch/_async/client/enrich.pyo
 ${PYSITELIB}/elasticsearch/_async/client/eql.py
 ${PYSITELIB}/elasticsearch/_async/client/eql.pyc
 ${PYSITELIB}/elasticsearch/_async/client/eql.pyo
+${PYSITELIB}/elasticsearch/_async/client/esql.py
+${PYSITELIB}/elasticsearch/_async/client/esql.pyc
+${PYSITELIB}/elasticsearch/_async/client/esql.pyo
 ${PYSITELIB}/elasticsearch/_async/client/features.py
 ${PYSITELIB}/elasticsearch/_async/client/features.pyc
 ${PYSITELIB}/elasticsearch/_async/client/features.pyo
@@ -56,6 +59,9 @@ ${PYSITELIB}/elasticsearch/_async/client/ilm.pyo
 ${PYSITELIB}/elasticsearch/_async/client/indices.py
 ${PYSITELIB}/elasticsearch/_async/client/indices.pyc
 ${PYSITELIB}/elasticsearch/_async/client/indices.pyo
+${PYSITELIB}/elasticsearch/_async/client/inference.py
+${PYSITELIB}/elasticsearch/_async/client/inference.pyc
+${PYSITELIB}/elasticsearch/_async/client/inference.pyo
 ${PYSITELIB}/elasticsearch/_async/client/ingest.py
 ${PYSITELIB}/elasticsearch/_async/client/ingest.pyc
 ${PYSITELIB}/elasticsearch/_async/client/ingest.pyo
@@ -77,9 +83,15 @@ ${PYSITELIB}/elasticsearch/_async/client/monitoring.pyo
 ${PYSITELIB}/elasticsearch/_async/client/nodes.py
 ${PYSITELIB}/elasticsearch/_async/client/nodes.pyc
 ${PYSITELIB}/elasticsearch/_async/client/nodes.pyo
+${PYSITELIB}/elasticsearch/_async/client/query_ruleset.py
+${PYSITELIB}/elasticsearch/_async/client/query_ruleset.pyc
+${PYSITELIB}/elasticsearch/_async/client/query_ruleset.pyo
 ${PYSITELIB}/elasticsearch/_async/client/rollup.py
 ${PYSITELIB}/elasticsearch/_async/client/rollup.pyc
 ${PYSITELIB}/elasticsearch/_async/client/rollup.pyo
+${PYSITELIB}/elasticsearch/_async/client/search_application.py
+${PYSITELIB}/elasticsearch/_async/client/search_application.pyc
+${PYSITELIB}/elasticsearch/_async/client/search_application.pyo
 ${PYSITELIB}/elasticsearch/_async/client/searchable_snapshots.py
 ${PYSITELIB}/elasticsearch/_async/client/searchable_snapshots.pyc
 ${PYSITELIB}/elasticsearch/_async/client/searchable_snapshots.pyo
@@ -101,6 +113,9 @@ ${PYSITELIB}/elasticsearch/_async/client/sql.pyo
 ${PYSITELIB}/elasticsearch/_async/client/ssl.py
 ${PYSITELIB}/elasticsearch/_async/client/ssl.pyc
 ${PYSITELIB}/elasticsearch/_async/client/ssl.pyo
+${PYSITELIB}/elasticsearch/_async/client/synonyms.py
+${PYSITELIB}/elasticsearch/_async/client/synonyms.pyc
+${PYSITELIB}/elasticsearch/_async/client/synonyms.pyo
 ${PYSITELIB}/elasticsearch/_async/client/tasks.py
 ${PYSITELIB}/elasticsearch/_async/client/tasks.pyc
 ${PYSITELIB}/elasticsearch/_async/client/tasks.pyo
@@ -155,6 +170,9 @@ ${PYSITELIB}/elasticsearch/_sync/client/enrich.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/eql.py
 ${PYSITELIB}/elasticsearch/_sync/client/eql.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/eql.pyo
+${PYSITELIB}/elasticsearch/_sync/client/esql.py
+${PYSITELIB}/elasticsearch/_sync/client/esql.pyc
+${PYSITELIB}/elasticsearch/_sync/client/esql.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/features.py
 ${PYSITELIB}/elasticsearch/_sync/client/features.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/features.pyo
@@ -170,6 +188,9 @@ ${PYSITELIB}/elasticsearch/_sync/client/ilm.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/indices.py
 ${PYSITELIB}/elasticsearch/_sync/client/indices.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/indices.pyo
+${PYSITELIB}/elasticsearch/_sync/client/inference.py
+${PYSITELIB}/elasticsearch/_sync/client/inference.pyc
+${PYSITELIB}/elasticsearch/_sync/client/inference.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/ingest.py
 ${PYSITELIB}/elasticsearch/_sync/client/ingest.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/ingest.pyo
@@ -191,9 +212,15 @@ ${PYSITELIB}/elasticsearch/_sync/client/monitoring.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/nodes.py
 ${PYSITELIB}/elasticsearch/_sync/client/nodes.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/nodes.pyo
+${PYSITELIB}/elasticsearch/_sync/client/query_ruleset.py
+${PYSITELIB}/elasticsearch/_sync/client/query_ruleset.pyc
+${PYSITELIB}/elasticsearch/_sync/client/query_ruleset.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/rollup.py
 ${PYSITELIB}/elasticsearch/_sync/client/rollup.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/rollup.pyo
+${PYSITELIB}/elasticsearch/_sync/client/search_application.py
+${PYSITELIB}/elasticsearch/_sync/client/search_application.pyc
+${PYSITELIB}/elasticsearch/_sync/client/search_application.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/searchable_snapshots.py
 ${PYSITELIB}/elasticsearch/_sync/client/searchable_snapshots.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/searchable_snapshots.pyo
@@ -215,6 +242,9 @@ ${PYSITELIB}/elasticsearch/_sync/client/sql.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/ssl.py
 ${PYSITELIB}/elasticsearch/_sync/client/ssl.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/ssl.pyo
+${PYSITELIB}/elasticsearch/_sync/client/synonyms.py
+${PYSITELIB}/elasticsearch/_sync/client/synonyms.pyc
+${PYSITELIB}/elasticsearch/_sync/client/synonyms.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/tasks.py
 ${PYSITELIB}/elasticsearch/_sync/client/tasks.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/tasks.pyo
