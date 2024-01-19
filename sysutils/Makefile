@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1107 2024/01/11 20:49:11 pin Exp $
+# $NetBSD: Makefile,v 1.1108 2024/01/19 15:58:03 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -466,6 +466,7 @@ SUBDIR+=	mklivecd
 SUBDIR+=	mkmemstick
 SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
+SUBDIR+=	mlog
 SUBDIR+=	monit
 SUBDIR+=	monitoring
 SUBDIR+=	mrsync
