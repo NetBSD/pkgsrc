@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.40 2024/01/19 00:42:01 rillig Exp $
+# $NetBSD: check-files.mk,v 1.41 2024/01/19 18:41:16 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -85,12 +85,8 @@ CHECK_FILES_SKIP+=	${VARBASE}/.*
 .for d in ${MAKE_DIRS} ${OWN_DIRS}
 CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
 .endfor
-.for _var_ in MAKE_DIRS_PERMS OWN_DIRS_PERMS
-.  if empty(${_var_}) || empty(${_var_}:C/.*/4/:M*:S/4 4 4 4//gW)
-.    for d o g m in ${${_var_}}
-CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
-.    endfor
-.  endif
+.for dir owner group mode in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
+CHECK_FILES_SKIP+=	${dir:C/^([^\/])/${PREFIX}\/\1/}.*
 .endfor
 
 # Mutable X11 font database files
