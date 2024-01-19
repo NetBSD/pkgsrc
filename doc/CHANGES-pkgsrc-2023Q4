@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.4 2024/01/13 12:50:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.5 2024/01/19 20:16:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -20,4 +20,7 @@ inputmethod/mozc-server: build fix
 Pullup ticket #6832 - requested by riastradh
 net/libfetch: enable HTTPS cert validation on NetBSD 10
 pkgtools/pkg_install, pkgtools/pkgin: revbump
+
+Pullup ticket #6834 - requested by wiz
+math/py-numpy: Python 3.12 build fix
 
