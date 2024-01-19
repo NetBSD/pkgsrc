@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.462 2024/01/19 14:39:00 adam Exp $
+$NetBSD: CHANGES-2024,v 1.463 2024/01/19 15:18:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -596,3 +596,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-klein to 23.12.0 [adam 2024-01-19]
 	Updated math/py-xgboost to 2.0.3 [adam 2024-01-19]
 	Updated devel/py-pbr to 6.0.0 [adam 2024-01-19]
+	Updated graphics/leptonica to 1.84.1nb1 [adam 2024-01-19]
+	Updated graphics/tesseract to 5.3.4 [adam 2024-01-19]
