@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.10 2021/12/19 13:33:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/01/19 14:38:43 adam Exp $
 bin/pbr-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pbr/__init__.py
 ${PYSITELIB}/pbr/__init__.pyc
 ${PYSITELIB}/pbr/__init__.pyo
 ${PYSITELIB}/pbr/build.py
 ${PYSITELIB}/pbr/build.pyc
 ${PYSITELIB}/pbr/build.pyo
-${PYSITELIB}/pbr/builddoc.py
-${PYSITELIB}/pbr/builddoc.pyc
-${PYSITELIB}/pbr/builddoc.pyo
 ${PYSITELIB}/pbr/cmd/__init__.py
 ${PYSITELIB}/pbr/cmd/__init__.pyc
 ${PYSITELIB}/pbr/cmd/__init__.pyo
