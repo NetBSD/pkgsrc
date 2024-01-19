@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2023/06/19 08:03:48 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/01/19 14:36:17 adam Exp $
 
-BLAKE2s (xgboost-1.7.6.tar.gz) = 0802b62e76a5bd63dd4bc33c47d6f2da473b973a7e90196a86116b4e3b35a937
-SHA512 (xgboost-1.7.6.tar.gz) = fe49bc72e1f28584c8cf739e3762da707f29c99f83123173619011d1d0f7600fb665d2e402e26873a7eb6b383a665fd2e96f5438dc15049227864e7583196831
-Size (xgboost-1.7.6.tar.gz) = 848864 bytes
-SHA1 (patch-xgboost_dmlc-core_CMakeLists.txt) = 39432a69b84b177ab3bb882b960d9141f92771bd
-SHA1 (patch-xgboost_include_xgboost_collective_socket.h) = 0afa5538ae7b415af2e6901c995a84fa5539f86b
-SHA1 (patch-xgboost_libpath.py) = f9e2dbad7cf1831354f1174a939878b758eba57d
+BLAKE2s (xgboost-2.0.3.tar.gz) = 3f4382c6559f9d9cbbcb5299c9422fc1b194d3e9c2e27c456a9f1ed33eaf0bfa
+SHA512 (xgboost-2.0.3.tar.gz) = 93614a9ad9d0a256cc31586b701c46eef4353df76c3eac26f39df23c8c02fa9ec95e72a0cea0b51bc3e416b81b3ac557ed361afeda246376a7b561bb6f7da579
+Size (xgboost-2.0.3.tar.gz) = 1048322 bytes
+SHA1 (patch-cpp__src_dmlc-core_CMakeLists.txt) = 2b09910ae40fd26fdaf7462ad4b37662dd106554
+SHA1 (patch-cpp__src_include_xgboost_collective_socket.h) = 71c2e47527fc39ca5cac4f47523f0f9ed8d22657
+SHA1 (patch-xgboost_libpath.py) = 39b2538729e5e4408de81534cd2b720ed112775a
