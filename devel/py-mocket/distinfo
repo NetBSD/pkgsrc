@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/01/14 15:22:54 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/01/19 22:20:45 adam Exp $
 
-BLAKE2s (mocket-3.12.2.tar.gz) = 8450783f5de2b6259807b1e0554f3eca5dd9e9ff1d631e37abf18facbeaf2e3f
-SHA512 (mocket-3.12.2.tar.gz) = 83462d8a4f6ba0cee105bcc75f0f8b1de8e91e1c70e83d306a7c1374846577b1b118fa67bcb5779b974d51c47a75dde4b12a6756b2727ab45f5522ff774cf387
-Size (mocket-3.12.2.tar.gz) = 70781 bytes
+BLAKE2s (mocket-3.12.3.tar.gz) = 0ce6d0fe64f9e4069b3c7fc04acf8235b38ca0571cc72d7eab0ee0c062612189
+SHA512 (mocket-3.12.3.tar.gz) = 037d356111eeddd0fa12e6417498b60d88f2fdac74aa323c841f12d6588614a7e1426c3afe3fed99ec89b03217e2299ecfc550c364476a1dc5fc9ae5391a3fa2
+Size (mocket-3.12.3.tar.gz) = 71386 bytes
