@@ -1,4 +1,4 @@
-# $NetBSD: bsd.check.mk,v 1.11 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: bsd.check.mk,v 1.12 2024/01/19 00:25:38 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to build and install checks.
@@ -10,14 +10,6 @@
 #
 # pre-build-checks-hook
 #	Is run before building the package.
-#
-# #notyet post-install-privileged-checks-hook
-#	Is run after the installation, as the user who installed
-#	the package.
-#
-# #notyet post-install-checks-hook
-#	Is run after the installation, as the user who built
-#	the package.
 #
 # The following are the "public" targets provided this module:
 #
