@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.24 2024/01/18 23:49:32 rillig Exp $
+# $NetBSD: packlist.mk,v 1.25 2024/01/19 00:01:35 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -20,7 +20,7 @@
 # PERL5_PACKLIST
 #	The list of packlist files relative to ${PERL5_PACKLIST_DIR}.
 #
-#	Example: .auto/Text/Trim/.packlist
+#	Example: auto/Text/Trim/.packlist
 
 .if !defined(_PERL5_PACKLIST_MK)
 _PERL5_PACKLIST_MK=	# defined
