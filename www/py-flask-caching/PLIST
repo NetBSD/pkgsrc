@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/02 19:02:25 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/01/19 22:11:47 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_caching/__init__.py
 ${PYSITELIB}/flask_caching/__init__.pyc
 ${PYSITELIB}/flask_caching/__init__.pyo
@@ -44,3 +43,7 @@ ${PYSITELIB}/flask_caching/contrib/uwsgicache.pyo
 ${PYSITELIB}/flask_caching/jinja2ext.py
 ${PYSITELIB}/flask_caching/jinja2ext.pyc
 ${PYSITELIB}/flask_caching/jinja2ext.pyo
+${PYSITELIB}/flask_caching/py.typed
+${PYSITELIB}/flask_caching/utils.py
+${PYSITELIB}/flask_caching/utils.pyc
+${PYSITELIB}/flask_caching/utils.pyo
