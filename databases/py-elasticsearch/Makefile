@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/11/20 23:23:19 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/19 19:59:40 adam Exp $
 
-DISTNAME=	elasticsearch-8.5.0
+DISTNAME=	elasticsearch-8.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elasticsearch/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/elastic/elasticsearch-py
 COMMENT=	Python client for Elasticsearch
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-elastic-transport>=8:../../databases/py-elastic-transport
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
