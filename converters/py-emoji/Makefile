@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/08/26 12:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/19 10:50:16 adam Exp $
 
-DISTNAME=	emoji-2.8.0
+DISTNAME=	emoji-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/emoji/}
@@ -10,14 +10,12 @@ HOMEPAGE=	https://github.com/carpedm20/emoji
 COMMENT=	ASCII<->Emoji conversion library for Python
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && nosetests-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
