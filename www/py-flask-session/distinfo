@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/05/15 21:22:34 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/01/19 22:00:31 adam Exp $
 
-BLAKE2s (Flask-Session-0.5.0.tar.gz) = 5bd4aaa80daacef98e13f703b1de3f79673a2b239d60f99b8d340a753e894db9
-SHA512 (Flask-Session-0.5.0.tar.gz) = fe77b5b14929c4a9db2daca0833e10a857db6137f00bc4e72258b938195896ad895f2f2c8f429110daf8921ad2ecb8c347c23896c64d815febafa940f0136f0d
-Size (Flask-Session-0.5.0.tar.gz) = 11319 bytes
+BLAKE2s (flask_session-0.6.0.tar.gz) = 01e88ba3bbb4802f4084df749a5b416da8c016f1c8cd17a483ab69018d697fce
+SHA512 (flask_session-0.6.0.tar.gz) = 1ad34d19470e148c99551558c5495dad4f07031b43b7a6c98c2062937f1d8cf36b93c48cad10ea1ed1900ceec1f518373aa647ceff2661529eda8c4b6dc14c89
+Size (flask_session-0.6.0.tar.gz) = 13090 bytes
