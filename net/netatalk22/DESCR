@@ -1,6 +1,13 @@
-Netatalk is a freely-available, kernel level implementation of the AppleTalk
-Protocol Suite, originally for BSD-derived systems. A *NIX/*BSD system
-running netatalk is capable of serving many macintosh clients simultaneously
-as an AppleTalk router, AppleShare file server (AFP), *NIX/*BSD print server,
-and for accessing AppleTalk printers via Printer Access Protocol (PAP).
-Included are a number of minor printing and debugging utilities.
+Netatalk is a freely-available, kernel level implementation of the
+AppleTalk Protocol Suite, originally for BSD-derived systems.
+
+A *NIX/*BSD system running Netatalk is capable of serving many
+Macintosh clients simultaneously as an AppleTalk router, AppleShare
+file server (AFP), *NIX/*BSD print server, and for accessing AppleTalk
+printers via Printer Access Protocol (PAP).  Included are a number of
+minor printing and debugging utilities.
+
+This package contains the 2.x branch of Netatalk, which has ddp-based
+AppleTalk protocol support for pre-Darwin Mac systems ("Traditional
+Mac OS" in Apple parlance).  It exists because that support was
+removed in Netatalk 3.
