@@ -1,6 +1,6 @@
-# $NetBSD: check-fakehome.mk,v 1.4 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-fakehome.mk,v 1.5 2024/01/19 00:42:01 rillig Exp $
 #
-# This file checks that the package does not install files to $HOME.
+# This file warns when the package installs files to $HOME.
 #
 # User-settable variables:
 #
@@ -15,9 +15,8 @@
 #
 
 _VARGROUPS+=			check-fakehome
-_USER_VARS.check-fakehome=	CHECK_FAKEHOME
-_PKG_VARS.check-fakehome=	# None for now. One might be added to override
-#				  the test if the fakehome test is made fatal.
+_USER_VARS.check-fakehome=	CHECK_FAKEHOME PKG_DEVELOPER
+_USE_VARS.check-fakehome=	FAKEHOMEDIR
 
 .if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_FAKEHOME?=		yes
@@ -25,7 +24,7 @@ CHECK_FAKEHOME?=		yes
 CHECK_FAKEHOME?=		no
 .endif
 
-.if ${CHECK_FAKEHOME:M[Yy][Ee][Ss]}
+.if ${CHECK_FAKEHOME:tl} == yes
 privileged-install-hook: _check-fakehome
 .endif
 
