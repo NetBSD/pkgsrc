@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/19 02:34:29 maya Exp $
 
 DISTNAME=	nottetris2-source
 PKGNAME=	not_tetris-2.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://stabyourself.net/dl.php?file=nottetris2/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -14,6 +15,13 @@ LICENSE=	public-domain # Specified in https://github.com/Stabyourself/nottetris2
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
+
+post-extract:
+	@${MKDIR} ${WRKDIR}/${LOVE_GAME}_archive
+	(cd ${WRKDIR}/${LOVE_GAME}_archive && ${UNZIP_CMD} -qo ${WRKDIR}/*.love)
+
+pre-install:
+	(cd ${WRKDIR} && ${UNZIP_CMD} ${LOVE_DATA} ${WRKDIR}/${LOVE_GAME}_archive)
 
 LOVE_GAME=	not_tetris
 LOVE_DATA=	"Not Tetris 2.love"
