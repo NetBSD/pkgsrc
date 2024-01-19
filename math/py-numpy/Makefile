@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2023/12/07 20:45:56 thor Exp $
+# $NetBSD: Makefile,v 1.116.2.1 2024/01/19 20:15:33 bsiegert Exp $
 
-DISTNAME=	numpy-1.26.2
-PKGREVISION=	1
+DISTNAME=	numpy-1.26.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -67,10 +66,12 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 # TODO: accelerate.framework has no pkg-config yet (see blas.buildlink3.mk).
 BLAS_ACCEPTED=		${_BLAS_TYPES}
 BLAS_C_INTERFACE=	yes
-# Yes, cblas and lapack API (not lapacke) is desired.
+# Cblas and lapack API (not lapacke) is desired.
 # Meson build uses pkg-config since 1.26.2 (or elaborate own logic not
-# suitable here).
-WHEEL_ARGS+=		-Csetup-args=-Dblas=${CBLAS_PC}
+# suitable here) and guesses for cblas if blas lib does not contain the
+# C interface. That covers netlib for us, and openblas builds serve
+# all APIs.
+WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 
 # Remove invalid __STDC_VERSION__ setting
@@ -79,7 +80,14 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
+# Files don't exist with Python 3.12, so add '-f' to ${RM}
+# (Please check if this is still necessary after updates.)
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/command/config.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/__init__.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/g95.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/fcompiler/gnu.py.orig
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/distutils/log.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
 # as of 1.26.1
