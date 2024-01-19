@@ -1,0 +1,5 @@
+mlog reads lines from multiple log files and prints them in
+chronological order. The files need to start with comparable timestamps.
+mlog prints the oldest line first, thus preserving relative order.
+
+mlog behaves like a combination of 'sort -m' and 'tail -f'.

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/01/19 15:58:00 schmonz Exp $
+
+BLAKE2s (mlog-0.1.tar.gz) = 071e55e72be3493449851e85bd1e64abce71282edcd918c2f3a3157c70f9d262
+SHA512 (mlog-0.1.tar.gz) = 5e68d0554c79af546738d360bdd7997e308b4377a887db758a8f04274f36f8b4010463409d9932c51b14f9cf6a2d3e2f4a72f61171a039379c6183ebb2c4dbae
+Size (mlog-0.1.tar.gz) = 3931 bytes
+SHA1 (patch-Makefile) = dc2678274e12482b7c6879d3a7c7ec5fc162b250

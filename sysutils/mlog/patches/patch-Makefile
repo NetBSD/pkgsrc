@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2024/01/19 15:58:00 schmonz Exp $
+
+Respect CFLAGS.
+
+--- Makefile.orig	2024-01-12 17:51:01.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ ALL=mlog
+ 
+-CFLAGS=-g -O2 -Wall -Wno-unused-parameter -Wextra -Wwrite-strings
++CFLAGS?=-g -O2 -Wall -Wno-unused-parameter -Wextra -Wwrite-strings
+ 
+ all: $(ALL)
+ 
