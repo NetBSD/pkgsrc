@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2024/01/17 14:40:51 micha Exp $
+$NetBSD: distinfo,v 1.42 2024/01/19 13:02:59 micha Exp $
 
 BLAKE2s (woof_12.0.2.tar.gz) = 328dd35ec27edf6a71af458ed9f26723f99379827a5fc0bdac0c3c89d8ff163c
 SHA512 (woof_12.0.2.tar.gz) = f7e2279028b2fb95e37f27e6ecbf988b525bdcc145bce33f201612279d5d5b2b20ff944b802e6d5a95b22281e5301963e4f4d95b50eef5eec39434fe9d71d38a
@@ -7,3 +7,4 @@ SHA1 (patch-data_CMakeLists.txt) = 33eaf12f559c868bb602b813832463ac08c25dd4
 SHA1 (patch-man_CMakeLists.txt) = d5b2b30eb8a7efeddad29699c47801bc1c865403
 SHA1 (patch-man_WoofInstall.cmake.in) = fbbb75d201d53af8d68eeb29956d793eda465ffb
 SHA1 (patch-src_d__iwad.c) = 88e02974ce6a32be07ca035856c85ebdf97b3ab0
+SHA1 (patch-src_hu__lib.c) = 00e566dcd879b6874a93f2482129e2cc85a29b83
