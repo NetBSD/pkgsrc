@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2023/11/07 22:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/01/19 14:38:43 adam Exp $
 
-DISTNAME=	pbr-5.11.1
+DISTNAME=	pbr-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbr/}
@@ -26,8 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
@@ -37,5 +35,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pbr pbr-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
