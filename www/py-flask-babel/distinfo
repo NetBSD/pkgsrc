@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/03 23:55:32 markd Exp $
+$NetBSD: distinfo,v 1.10 2024/01/19 22:18:28 adam Exp $
 
-BLAKE2s (flask_babel-3.1.0.tar.gz) = e820a039a52888d86cb68a8da67e097f19f4d93f8b230033f8412f8992c86df7
-SHA512 (flask_babel-3.1.0.tar.gz) = 693875addb793627068a372b98d3f206c164fc5dba7f23ad7b31f7e52767ef29df92c4c1073adf294e41554a2f60cf328e34e837818135117d3c880205471f59
-Size (flask_babel-3.1.0.tar.gz) = 10188 bytes
+BLAKE2s (flask_babel-4.0.0.tar.gz) = 4892a1a5249e9d407b464b72c456b8ff44d4da4a1335fefdcb9bf8d8ec725112
+SHA512 (flask_babel-4.0.0.tar.gz) = dcfe5246a128c096903536d47301636411f0ea8048f0d2845c55286f61e97b58023374a86dcc817c1ba5c1979313eb0da9d027b86ed54f5520c6382878b2e276
+Size (flask_babel-4.0.0.tar.gz) = 10178 bytes
