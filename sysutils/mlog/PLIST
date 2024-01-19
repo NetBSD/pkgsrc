@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/19 15:57:59 schmonz Exp $
+bin/mlog
+man/man1/mlog.1
