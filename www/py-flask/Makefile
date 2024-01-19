@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2023/11/07 08:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/01/19 21:50:50 adam Exp $
 
-DISTNAME=	flask-3.0.0
+DISTNAME=	flask-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask/}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=3.0.0:../../www/py-werkzeug
 
+USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
@@ -24,8 +26,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
 .endif
-
-USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
