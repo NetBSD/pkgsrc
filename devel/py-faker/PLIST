@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2024/01/15 20:44:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2024/01/19 22:15:19 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -469,6 +469,9 @@ ${PYSITELIB}/faker/providers/bank/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/bank/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/bank/uk_UA/__init__.py
+${PYSITELIB}/faker/providers/bank/uk_UA/__init__.pyc
+${PYSITELIB}/faker/providers/bank/uk_UA/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/bank/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/zh_CN/__init__.pyo
@@ -748,6 +751,9 @@ ${PYSITELIB}/faker/providers/currency/es_CL/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/currency/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/es_ES/__init__.pyo
+${PYSITELIB}/faker/providers/currency/fa_IR/__init__.py
+${PYSITELIB}/faker/providers/currency/fa_IR/__init__.pyc
+${PYSITELIB}/faker/providers/currency/fa_IR/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.py
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/fr_CA/__init__.pyo
