@@ -1,0 +1,5 @@
+A TUI client for Nostr.
+
+Current features
+ - Timeline
+ - Post, Reply, React, Repost
