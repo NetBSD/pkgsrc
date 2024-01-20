@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.473 2024/01/20 02:12:37 mef Exp $
+$NetBSD: CHANGES-2024,v 1.474 2024/01/20 02:20:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-BH to 1.84.0.0 [mef 2024-01-20]
 	Updated sysutils/R-later to 1.3.2 [mef 2024-01-20]
 	Added devel/R-debugme version 1.1.0 [mef 2024-01-20]
+	Updated sysutils/R-processx to 3.8.3 [mef 2024-01-20]
