@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/01/15 20:03:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2024/01/20 16:03:03 wiz Exp $
 
 DISTNAME=	diffoscope-253
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://diffoscope.org/
 COMMENT=	In-depth comparison of files, archives, and directories
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-libarchive-c-[0-9]*:../../archivers/py-libarchive-c
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-tlsh-[0-9]*:../../devel/py-tlsh
