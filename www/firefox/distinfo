@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.519 2024/01/10 15:31:41 ryoon Exp $
+$NetBSD: distinfo,v 1.520 2024/01/20 16:41:22 nros Exp $
 
 BLAKE2s (firefox-121.0.1.source.tar.xz) = 38f6aa02bf03975e13cbec0549efa2fadf810fcc2e24775c5eac70e62ab93d99
 SHA512 (firefox-121.0.1.source.tar.xz) = 7810850a922cb4a274ced6556e14256d3ff518a96f10a0f86d1f8e40daa0a8b1a5cfcc9cbf1391029d920944e94a9149951ee107a0e718a294954bb50b6ced2e
@@ -23,6 +23,7 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = acb31066cd407e9e08cb7a7b6c4d0e702f5a8107
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
+SHA1 (patch-js_src_zydis_Zycore_Defines.h) = 7f996505e8e2dcd3303d437f3c82b280f0de07e4
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
