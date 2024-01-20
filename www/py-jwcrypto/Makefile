@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/04 22:29:23 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/20 16:19:14 wiz Exp $
 
 DISTNAME=	jwcrypto-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/latchset/jwcrypto
 COMMENT=	Implementation of JOSE Web standards
 LICENSE=	gnu-lgpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-deprecated-[0-9]*:../../devel/py-deprecated
 
 USE_LANGUAGES=	# none
