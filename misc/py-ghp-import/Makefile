@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/02/05 09:39:19 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/20 09:57:58 adam Exp $
 
-DISTNAME=	ghp-import-2.0.2
+DISTNAME=	ghp-import-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/ghp-import/}
@@ -14,11 +14,11 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.1:../../time/py-dateutil
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ghp-import ghp-import-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
