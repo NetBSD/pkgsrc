@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/01/12 18:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/20 08:09:09 adam Exp $
 
-DISTNAME=	ruff-0.1.13
+DISTNAME=	ruff-0.1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
