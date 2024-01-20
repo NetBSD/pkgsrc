@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.491 2024/01/20 07:13:26 mef Exp $
+$NetBSD: CHANGES-2024,v 1.492 2024/01/20 07:42:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-fansi to 1.0.6 [mef 2024-01-20]
 	Added net/nostui version 0.1.0 [pin 2024-01-20]
 	Added devel/R-unitizer version 1.4.20 [mef 2024-01-20]
+	Updated devel/R-filelock to 1.0.3 [mef 2024-01-20]
