@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/06/18 13:55:09 mef Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/20 05:43:37 mef Exp $
 
 R_PKGNAME=	cli
-R_PKGVER=	3.6.1
+R_PKGVER=	3.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -30,6 +30,7 @@ TEST_DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
 USE_LANGUAGES=	c
 
 REPLACE_RSCRIPT+=	inst/examples/apps/*.R
+REPLACE_RSCRIPT+=	exec/*.R
 REPLACE_RSCRIPT+=	inst/scripts/*.R
 
 REPLACE_INTERPRETER+=	Rscript
