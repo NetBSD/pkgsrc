@@ -1,0 +1,5 @@
+Simplifies regression tests by comparing objects produced by test code
+with earlier versions of those same objects.  If objects are unchanged
+the tests pass, otherwise execution stops with error details.  If in
+interactive mode, tests can be reviewed through the provided
+interactive environment.
