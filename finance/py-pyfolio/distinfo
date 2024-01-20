@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:26:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/20 16:14:58 wiz Exp $
 
 BLAKE2s (pyfolio-0.9.2.tar.gz) = f81b6fa3fc8cb062c8cc98aa57981493535af39d15abf942eb110adb8a519fbd
 SHA512 (pyfolio-0.9.2.tar.gz) = fd0910a334864a41a0b5cdebc537a95c7f27119ecfe9622e6be7325bc3d8d09ba6401336b2587e39151c534b4a3f7c74b9e2050fcf646ffa9f341a86b573c53b
 Size (pyfolio-0.9.2.tar.gz) = 91135 bytes
+SHA1 (patch-versioneer.py) = 0226d16357b7e381033228d5299650ba0d46972d
