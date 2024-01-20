@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/06/18 14:04:46 mef Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/20 04:08:15 mef Exp $
 
 R_PKGNAME=	checkmate
-R_PKGVER=	2.2.0
+R_PKGVER=	2.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
