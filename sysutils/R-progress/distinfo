@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/20 02:28:54 mef Exp $
 
-BLAKE2s (R/progress_1.2.2.tar.gz) = 1a71398aee9934f822668577cd7d132248606f15ecabf043ccff3bfd8c2e7964
-SHA512 (R/progress_1.2.2.tar.gz) = c02dfd93f43ac82ea44b97e53dd9e570aa90e95c8e4a9088114bae77f573eaba536b167a27d6a6a48d6db1d0b21d59d22468b48c0ce9580862af35f7bb3ee0bb
-Size (R/progress_1.2.2.tar.gz) = 29506 bytes
+BLAKE2s (R/progress_1.2.3.tar.gz) = 3cf10f24d781d6ecba1ee0708220cba4d2c139e1eece3d9edfab46dce659c761
+SHA512 (R/progress_1.2.3.tar.gz) = 354e67212783e57fcf02832e819a93b24905d932fecfe9811bb3496a26d12e5d8bbbc25f0a2ae140a8ec07d6efeeef44f37c51f2ea0a03e75904f246cd3fa206
+Size (R/progress_1.2.3.tar.gz) = 30499 bytes
