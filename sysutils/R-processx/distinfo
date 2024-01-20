@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/08/15 01:19:39 mef Exp $
+$NetBSD: distinfo,v 1.10 2024/01/20 02:20:26 mef Exp $
 
-BLAKE2s (R/processx_3.8.2.tar.gz) = 7630020d6ad643a1d0806d31e40bb613eb4533a01f478c61fcec4d7f7d9fac17
-SHA512 (R/processx_3.8.2.tar.gz) = 71eefc961bede766a659e9ad4b8a37af22de03e47703343d6794f4fb0acb47ac89c6f56af5c289a268a385cae2fa5f176c2367e35aa0fd259c3126a2fc6782f6
-Size (R/processx_3.8.2.tar.gz) = 163558 bytes
+BLAKE2s (R/processx_3.8.3.tar.gz) = dfb003e4c12e933198bcef4bce600420d9f8acde7805158238f22ab5c449a868
+SHA512 (R/processx_3.8.3.tar.gz) = 0e2d39134e8820bab1cb7a4101441345770108157c8ebfb91fd1db1a90d12c48ccb5f2821421a59963289820f018b86696112739d36281c8f0a0fb56e5f626d5
+Size (R/processx_3.8.3.tar.gz) = 163682 bytes
 SHA1 (patch-src_Makevars) = a3e4f650d9d58db86f22e12dd65cd02608f3cdd4
