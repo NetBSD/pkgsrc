@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.486 2024/01/20 05:49:02 mef Exp $
+$NetBSD: CHANGES-2024,v 1.487 2024/01/20 06:05:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -625,3 +625,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added math/R-fastmatch version 1.1.4 [mef 2024-01-20]
 	Updated devel/R-cli to 3.6.2 [mef 2024-01-20]
 	Updated devel/R-cyclocomp to 1.1.1 [mef 2024-01-20]
+	Updated devel/R-desc to 1.4.3 [mef 2024-01-20]
