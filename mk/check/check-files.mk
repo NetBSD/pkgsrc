@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.41 2024/01/19 18:41:16 rillig Exp $
+# $NetBSD: check-files.mk,v 1.42 2024/01/20 23:22:33 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -30,12 +30,13 @@ _USER_VARS.check-files=	CHECK_FILES CHECK_FILES_STRICT
 _PKG_VARS.check-files=	CHECK_FILES_SUPPORTED CHECK_FILES_SKIP
 _USE_VARS.check-files=	\
 	DESTDIR PREFIX PKG_SYSCONFDIR VARBASE PKG_DBDIR DISTDIR PACKAGES \
-	MAKE_DIRS OWN_DIRS \
+	MAKE_DIRS MAKE_DIRS_PERMS OWN_DIRS OWN_DIRS_PERMS \
 	FONTS_DIRS.x11 FONTS_DIRS.ttf FONTS_DIRS.type1 \
 	PERL5_INSTALLARCHLIB \
 	WRKDIR ERROR_DIR \
 	PLIST INFO_FILES ICON_THEMES
 _IGN_VARS.check-files=	PKGNAME _CHECK_FILES_*
+_LISTED_VARS.check-files= MAKE_DIRS MAKE_DIRS_PERMS OWN_DIRS OWN_DIRS_PERMS
 _SORTED_VARS.check-files= \
 	CHECK_FILES_SKIP
 
@@ -83,10 +84,10 @@ CHECK_FILES_SKIP+=	${VARBASE}/.*
 # be using for mutable data.
 #
 .for d in ${MAKE_DIRS} ${OWN_DIRS}
-CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
+CHECK_FILES_SKIP+=	${d:C|^([^/])|${PREFIX}/\1|}.*
 .endfor
 .for dir owner group mode in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
-CHECK_FILES_SKIP+=	${dir:C/^([^\/])/${PREFIX}\/\1/}.*
+CHECK_FILES_SKIP+=	${dir:C|^([^/])|${PREFIX}/\1|}.*
 .endfor
 
 # Mutable X11 font database files
