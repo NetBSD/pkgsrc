@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2023/01/03 15:34:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2024/01/20 23:27:51 he Exp $
 
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.68
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.2
