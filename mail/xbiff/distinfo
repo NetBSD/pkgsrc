@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:54:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/01/20 20:41:40 wiz Exp $
 
-BLAKE2s (xbiff-1.0.4.tar.bz2) = fc1c05498774b82e2c335091d0842b066affef1adadc714d82242b3e7e9c61e9
-SHA512 (xbiff-1.0.4.tar.bz2) = 0fb920a08640ec59f23d8a8a47bd244565dfbaff7a21c38a8a2abe1edb5eacabc970b5dbdc409163fc444fde5b75a2dc4e0114312938efec5b77228f3bf785ac
-Size (xbiff-1.0.4.tar.bz2) = 133455 bytes
+BLAKE2s (xbiff-1.0.5.tar.xz) = ab7279f2c842efadbbef24f539dd2bd5ad64f422f61e46a8fceb164e5fefba1b
+SHA512 (xbiff-1.0.5.tar.xz) = 4dd8943daf670dffb6e108b192977f6ad313d6b0535da0c809699e05f0509aba45be81c72af341e1fef31f59d0a5f209d87441230b3fdcecb4a7a8fe7a9c0658
+Size (xbiff-1.0.5.tar.xz) = 128432 bytes
