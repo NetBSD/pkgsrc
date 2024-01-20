@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4160 2024/01/18 19:28:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.4161 2024/01/20 02:12:36 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -36,6 +36,7 @@ SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
 SUBDIR+=	R-cyclocomp
 SUBDIR+=	R-desc
+SUBDIR+=	R-debugme
 SUBDIR+=	R-devtools
 SUBDIR+=	R-diffobj
 SUBDIR+=	R-diffr
