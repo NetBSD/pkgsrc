@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/01/20 02:58:38 mef Exp $
 
-BLAKE2s (R/sys_3.4.tar.gz) = 0d53af6f7c0358f4e1832e282c9f08c78958220fe1722de95a872cd3336eeee7
-SHA512 (R/sys_3.4.tar.gz) = e1f3ddc0b553d23dc4888905946670b23b39f83d9282b50925c18bd1fc4ba7da9ab51274c55e128117a6c7a377976202c4cc55c9d68ba9f4a3c6db5a8f27df8b
-Size (R/sys_3.4.tar.gz) = 20138 bytes
+BLAKE2s (R/sys_3.4.2.tar.gz) = d5b3d971942bdedd75de3aa674e2115c3a5b59a4e8c7eb32bf379e5bed4c2399
+SHA512 (R/sys_3.4.2.tar.gz) = 88c7a7edb69e9c86cd6e731639daec66e05a53c1d8198b0a9ac725f82845c35f8672cd9f5a76a9d1867fcc10fa2aa754af4542c4155afe608a27cf409cbde6ef
+Size (R/sys_3.4.2.tar.gz) = 20169 bytes
