@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/01/09 05:40:03 adam Exp $
+# $NetBSD: Makefile,v 1.60 2024/01/20 09:02:50 adam Exp $
 
-DISTNAME=	ipykernel-6.28.0
+DISTNAME=	ipykernel-6.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=24:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.23.2:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
