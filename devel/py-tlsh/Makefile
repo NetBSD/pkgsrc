@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/14 20:08:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/20 16:04:03 wiz Exp $
 
 DISTNAME=	py-tlsh-4.7.2
 PKGNAME=	${DISTNAME:S/py-/${PYPKGPREFIX}-/}
@@ -11,6 +11,8 @@ COMMENT=	TLSH C++ extension for Python
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/tlsh/buildlink3.mk"
 .include "../../lang/python/egg.mk"
