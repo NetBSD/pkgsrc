@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/13 07:04:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/20 16:06:54 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -97,4 +97,4 @@ ${PYSITELIB}/sphinxcontrib/bibtex/style/template.pyo
 ${PYSITELIB}/sphinxcontrib/bibtex/transforms.py
 ${PYSITELIB}/sphinxcontrib/bibtex/transforms.pyc
 ${PYSITELIB}/sphinxcontrib/bibtex/transforms.pyo
-${PYSITELIB}/sphinxcontrib_bibtex-2.6.2-py3.12-nspkg.pth
+${PYSITELIB}/sphinxcontrib_bibtex-2.6.2-py${PYVERSSUFFIX}-nspkg.pth
