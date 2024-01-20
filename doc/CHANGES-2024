@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.502 2024/01/20 10:31:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.503 2024/01/20 12:25:04 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -655,3 +655,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-flask-frozen to 1.0.1 [adam 2024-01-20]
 	Updated www/py-flask-flatpages to 0.8.2 [adam 2024-01-20]
 	Updated www/py-flask-debugtoolbar to 0.14.1 [adam 2024-01-20]
+	Updated chat/element-web to 1.11.55 [js 2024-01-20]
