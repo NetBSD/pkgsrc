@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/20 08:51:16 adam Exp $
 
-DISTNAME=	txtorcon-23.5.0
+DISTNAME=	txtorcon-23.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txtorcon/}
@@ -10,12 +10,12 @@ HOMEPAGE=	https://txtorcon.readthedocs.io/
 COMMENT=	Twisted Python library for controlling tor daemon
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.1:../../devel/py-zope.interface
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-automat-[0-9]*:../../devel/py-automat
-DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-twisted>=15.5.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.1:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
@@ -23,11 +23,7 @@ CHECK_INTERPRETER_SKIP+=	share/txtorcon/examples/*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# 2 failed, 678 passed, 2 skipped, 129 warnings
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
