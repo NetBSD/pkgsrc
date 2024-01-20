@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/02/05 14:50:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/01/20 16:10:37 wiz Exp $
 
 BLAKE2s (alphalens-0.4.0.tar.gz) = f5a9843706a15824715d4311693c1ee0a275b4685a2c125bef55fc62330fbd6c
 SHA512 (alphalens-0.4.0.tar.gz) = ab749a200ee2c1585e1c6ac50598a9c7166af970d17edc714e750b79e03c75a40bca0ca8e812cefd35a07f09d88fdf0298a8f64e7ad2b21037f656361bd2a16c
 Size (alphalens-0.4.0.tar.gz) = 24037878 bytes
+SHA1 (patch-versioneer.py) = 1d76058af3871a26f0740e8392c60f7c8b6d36ae
