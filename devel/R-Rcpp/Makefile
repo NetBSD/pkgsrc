@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2023/07/22 01:46:25 mef Exp $
+# $NetBSD: Makefile,v 1.30 2024/01/20 03:42:08 mef Exp $
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.0.11
+R_PKGVER=	1.0.12
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Seamless R and C++ integration
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+# !pdfTeX error: pdflatex (file tcrm1000): Font tcrm1000 at 600 not found
 
 TEST_DEPENDS+=	R-RUnit-[0-9]*:../../devel/R-RUnit
 TEST_DEPENDS+=	R-inline-[0-9]*:../../devel/R-inline
