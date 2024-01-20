@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/01/20 10:05:03 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/20 10:07:54 adam Exp $
 
 DISTNAME=	mkdocs-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mkdocs/mkdocs
 COMMENT=	Fast and simple static site generator for documentation
 LICENSE=	2-clause-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-ghp-import>=1.0:../../misc/py-ghp-import
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.1:../../textproc/py-jinja2
