@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/07/22 01:46:25 mef Exp $
+$NetBSD: distinfo,v 1.25 2024/01/20 03:42:08 mef Exp $
 
-BLAKE2s (R/Rcpp_1.0.11.tar.gz) = f584de7d124203a911e7185c7442e0a45bcf36de31bd8fce4ec71558a779204b
-SHA512 (R/Rcpp_1.0.11.tar.gz) = 0489c137c500f76b3054a9ec114278103a65a4e42b88e9fc581fc4e33fb7e6ea0dda4660833e741fde7e89f61844c44e7c6e46ea464e9778c3d5cdc7a56b888d
-Size (R/Rcpp_1.0.11.tar.gz) = 2994004 bytes
+BLAKE2s (R/Rcpp_1.0.12.tar.gz) = 8f57dfea223ada2a891107d65a4d959f4016eb0e1cf9612329b14bfb5befff69
+SHA512 (R/Rcpp_1.0.12.tar.gz) = 5321ca5aacab8effde84fbfcaab790dc6b974fa9130071b7c52db1290a165ec15c353e83d15ef6d1392faa5e6b164d3f68cc0804eaad04b5a0fdeb52f67a1d9c
+Size (R/Rcpp_1.0.12.tar.gz) = 3430494 bytes
