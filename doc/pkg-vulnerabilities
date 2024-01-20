@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.108 2024/01/20 12:13:53 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.109 2024/01/20 20:44:00 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25852,3 +25852,4 @@ gst-plugins1-bad<1.22.8	buffer-overflow	https://gstreamer.freedesktop.org/securi
 modular-xorg-server<21.1.11	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6816
 coreutils<9.4		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
 gnutls<3.8.3	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-0553
+py{27,38,39,310,311,312}-Pillow<10.2.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-50447
