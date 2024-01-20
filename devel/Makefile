@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4161 2024/01/20 02:12:36 mef Exp $
+# $NetBSD: Makefile,v 1.4162 2024/01/20 07:13:26 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -94,6 +94,7 @@ SUBDIR+=	R-tidyselect
 SUBDIR+=	R-tidyverse
 SUBDIR+=	R-tinytest
 SUBDIR+=	R-usethis
+SUBDIR+=	R-unitizer
 SUBDIR+=	R-uuid
 SUBDIR+=	R-waldo
 SUBDIR+=	R-whisker
