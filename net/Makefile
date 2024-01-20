@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1556 2024/01/07 19:49:42 pin Exp $
+# $NetBSD: Makefile,v 1.1557 2024/01/20 06:58:47 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -470,6 +470,7 @@ SUBDIR+=	nload
 SUBDIR+=	nmap
 SUBDIR+=	nng
 SUBDIR+=	nocol
+SUBDIR+=	nostui
 SUBDIR+=	nprobe
 SUBDIR+=	ns
 SUBDIR+=	nsca-ng
