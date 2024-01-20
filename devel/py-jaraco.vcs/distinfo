@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/27 09:52:12 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/01/20 08:37:51 adam Exp $
 
-BLAKE2s (jaraco.vcs-1.1.0.tar.gz) = 7b0cf7adad2e992aa72ca61f382f66d1c94af8baf1e6a20b5f95fffa6932adc0
-SHA512 (jaraco.vcs-1.1.0.tar.gz) = 3b81787cd013e07de9c0b86d6160f0ff2bfae5d0583ffa4d24cda4f0a113de76497c3411f24e0756e3190543fc7813fea7d3aa1e161d0bccb96e83d281248f7e
-Size (jaraco.vcs-1.1.0.tar.gz) = 15705 bytes
+BLAKE2s (jaraco.vcs-2.0.0.tar.gz) = 4c28a7d9866cc36a332dfbaecd33f2b02ac87f1064326b822bc317726f7edb3e
+SHA512 (jaraco.vcs-2.0.0.tar.gz) = 8cf055b5c296c66dce75f3703d3fef243480ebc0f05c25a266715a14418456cbabb324e01434ef42a8fabe71778568fa01a01bc3feb7900cc41767e5f80440e9
+Size (jaraco.vcs-2.0.0.tar.gz) = 15939 bytes
