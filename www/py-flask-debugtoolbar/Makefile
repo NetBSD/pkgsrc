@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2022/04/29 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/20 10:29:17 adam Exp $
 
-DISTNAME=	Flask-DebugToolbar-0.10.1
+DISTNAME=	Flask-DebugToolbar-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-DebugToolbar/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://flask-debugtoolbar.rtfd.org/
+HOMEPAGE=	https://flask-debugtoolbar.readthedocs.io/
 COMMENT=	Port of the Django debug toolbar to Flask
 LICENSE=	apache-2.0 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-flask>0.8:../../www/py-flask
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
+DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous-[0-9]*:../../security/py-itsdangerous
+DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
@@ -26,5 +29,5 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_debugtoolbar/static/img/tick-red.png
 	${CHMOD} -x ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_debugtoolbar/static/img/tick.png
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
