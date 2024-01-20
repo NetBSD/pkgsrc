@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/20 04:08:15 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/20 05:20:07 mef Exp $
 
 R_PKGNAME=	checkmate
 R_PKGVER=	2.3.1
@@ -14,6 +14,7 @@ DEPENDS+=	R-backports>=1.1.0:../../math/R-backports
 
 TEST_DEPENDS+=	R-data.table-[0-9]*:../../textproc/R-data.table
 TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
+TEST_DEPENDS+=	R-fastmatch-[0-9]*:../../math/R-fastmatch
 TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest
 TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
