@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/05/21 18:54:42 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/01/20 08:51:16 adam Exp $
 
-BLAKE2s (txtorcon-23.5.0.tar.gz) = 2ef409b6d140a17d0f2fcfeebc50e8462f7e90c865ac3260b4a3c6b5534ddb4d
-SHA512 (txtorcon-23.5.0.tar.gz) = 68b4ddf22e4d00c8f5f964ccf192dec884434b96668c4f71de5e80170724e04e8ca96d0405fe773a5e86b357012120fe6a34a847cbd3db3e4e360b01e593db9c
-Size (txtorcon-23.5.0.tar.gz) = 311564 bytes
+BLAKE2s (txtorcon-23.11.0.tar.gz) = 2542ac63004a6aedd2e9ce1739537432cbee80d091631743f6801d32ea427853
+SHA512 (txtorcon-23.11.0.tar.gz) = abc9776ad6e071a09f13e54c7582b5adab17efc752d485ff7a94baa3e71eb9c093983ceebeebd2218c85ed193bfd0b39dcd11a73d54bd2a28f9d9b2b9149ecd6
+Size (txtorcon-23.11.0.tar.gz) = 313549 bytes
