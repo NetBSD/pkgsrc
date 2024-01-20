@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/20 04:33:58 mef Exp $
+
+BLAKE2s (R/fastmatch_1.1-4.tar.gz) = 62ddc7309ffd806f2283911cf6b33b56087d831ca301d7ff5664991e43af277b
+SHA512 (R/fastmatch_1.1-4.tar.gz) = 82e10634eae821ec686c72db76ce9259fd538ef40759ef119e56d2d7c2fcf302b880f76a289e74f89b5263163252ebf6d480b3e789e75a8d5e38cecca46670cc
+Size (R/fastmatch_1.1-4.tar.gz) = 15223 bytes
