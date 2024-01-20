@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/05 09:47:42 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/20 10:08:59 adam Exp $
 
-BLAKE2s (mkdocs-bootstrap-1.1.tar.gz) = 20ab6f3107146cfe637e73485adfb732334027dd66d2d5cee428d119cf702927
-SHA512 (mkdocs-bootstrap-1.1.tar.gz) = 1fd0461c11db0d696955bcd62153328a379b03661d2e36d28265e5c94aa536c6a277c935d51138ec3df5f3cb4b5b9479efe1b01ac13b8c6903e1509cab23077e
-Size (mkdocs-bootstrap-1.1.tar.gz) = 27615 bytes
+BLAKE2s (mkdocs-bootstrap-1.1.1.tar.gz) = 66ddaadc1df179cc4c21aa1cb45fc80bfa3727f76c93eb0a8bd3b114d344088f
+SHA512 (mkdocs-bootstrap-1.1.1.tar.gz) = 590b6ab2b449c65e26a90a76cae2b10d3a6681c99b33c0ff91c48ca3e2e90c2c4cf3cb0588d9c13775568b084bec56862dc212e9b30bd081e78e4ff3da2c8cbe
+Size (mkdocs-bootstrap-1.1.1.tar.gz) = 27956 bytes
