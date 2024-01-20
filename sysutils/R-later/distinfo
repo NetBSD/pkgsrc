@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/01/20 01:46:16 mef Exp $
 
-BLAKE2s (R/later_1.3.0.tar.gz) = 2a54e216c9ad00464ffbd24a59d0b11e3ecd1a32dc9eba3a590d0aeec2b8104d
-SHA512 (R/later_1.3.0.tar.gz) = b55649fd50bdeea33cfee4740325dfe61bb8a5534e1de7043267a7b4f26846082b787ef048a4af22bfd3b2ae96cc3824727fb98a6570044ad53ee0c6e1824eaf
-Size (R/later_1.3.0.tar.gz) = 63785 bytes
+BLAKE2s (R/later_1.3.2.tar.gz) = bd9cbee006a310a2b34b442cb3763ac8b63de2ed4fa6a8c6ec6d963bb6c7a72b
+SHA512 (R/later_1.3.2.tar.gz) = 76fa81a0bf3fb69ac590992a549110fb4c59238bd662b7419eac0c4b892d40d9df4313d38f09d69d6d5dfc118fc38187e13766430900afaa3289178413dc9d5c
+Size (R/later_1.3.2.tar.gz) = 63597 bytes
