@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/12/18 01:24:51 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/01/20 06:05:29 mef Exp $
 
-BLAKE2s (R/desc_1.4.2.tar.gz) = 25006e9a8b0f6038ac4522b513492b720fb54fd6490c9c0bcadb735ece2b0445
-SHA512 (R/desc_1.4.2.tar.gz) = 28b581f7608ac5f76e5d8ffd4106d50aa6affd94e01081656c3a0c85f23cca4aba8642d4389b486207d275a77eba386c21690165e7f44d61f6b1cff801eb3878
-Size (R/desc_1.4.2.tar.gz) = 79249 bytes
+BLAKE2s (R/desc_1.4.3.tar.gz) = f70c56934bcab0506a311aae7bcdb0adca91ffaac9cd7137828a1749147fce3e
+SHA512 (R/desc_1.4.3.tar.gz) = d430dc3fc39b5bc6fe1949f1f8a25a03b3739177bfefb02999591a9e3910b5a876ae4a861102306400608233b0a2406a7026afe9174d5390855e74a660988cc2
+Size (R/desc_1.4.3.tar.gz) = 80066 bytes
