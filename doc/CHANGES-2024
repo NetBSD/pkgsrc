@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.478 2024/01/20 02:58:48 mef Exp $
+$NetBSD: CHANGES-2024,v 1.479 2024/01/20 03:28:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -617,4 +617,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/R-progress to 1.2.3 [mef 2024-01-20]
 	Updated sysutils/R-unix to 1.5.6 [mef 2024-01-20]
 	Updated sysutils/R-sys to 3.4.2 [mef 2024-01-20]
-	Updated sysutils/R-sys to 3.4.2 [mef 2024-01-20]
+	Updated devel/R-R.utils to 2.12.3 [mef 2024-01-20]
