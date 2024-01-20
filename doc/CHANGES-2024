@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.496 2024/01/20 08:53:54 adam Exp $
+$NetBSD: CHANGES-2024,v 1.497 2024/01/20 09:03:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -643,3 +643,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jaraco.vcs to 2.0.0 [adam 2024-01-20]
 	Updated net/py-txtorcon to 23.11.0 [adam 2024-01-20]
 	Updated www/py-jupyter-lsp to 2.2.2 [adam 2024-01-20]
+	Updated www/py-jupyter_server to 2.12.5 [adam 2024-01-20]
+	Updated devel/py-ipykernel to 6.29.0 [adam 2024-01-20]
