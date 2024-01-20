@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/28 19:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/20 16:07:57 wiz Exp $
 
 DISTNAME=	pytest_randomly-3.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-randomly
 COMMENT=	Pytest plugin to randomly order tests and control random.seed
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
