@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2023/07/21 04:36:41 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/01/20 10:21:27 adam Exp $
 
-BLAKE2s (Frozen-Flask-0.18.tar.gz) = b33ca92a036415718055dfe621426f9469a41cdef7bb0ec4b65b445930d1ed31
-SHA512 (Frozen-Flask-0.18.tar.gz) = 6c2e4d900547cc5c0de4af23b96c5b9e1925101fb40f710bedc67ac52c303282aa223f6972f5b9cc813878bb15eb90cb0a007619dd5a9db2dec762f04dcc7ba0
-Size (Frozen-Flask-0.18.tar.gz) = 179245 bytes
+BLAKE2s (frozen_flask-1.0.1.tar.gz) = 2eea8e7764a3c18bbeb44174f0d1b2a56c140e9418cbcacb64ba6c96a86c13bd
+SHA512 (frozen_flask-1.0.1.tar.gz) = b4e1cfebbb374fa8e863436e0ed637e1a57432fb2a2e719536161fea359320384b51238dae1cf3fca0e10d41c9bc7cd84fba4c6978de45c5cfcdba1a494aaea2
+Size (frozen_flask-1.0.1.tar.gz) = 101449 bytes
+SHA1 (patch-pyproject.toml) = 43bbaaa391da880c1e012556148c69fe397c746d
