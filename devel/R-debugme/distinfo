@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/20 02:10:16 mef Exp $
+
+BLAKE2s (R/debugme_1.1.0.tar.gz) = 878bd1df2e6f65a33a3d3cc5d61318c32734ba205d04f147f35c95afd254af68
+SHA512 (R/debugme_1.1.0.tar.gz) = d11d8d54b22d051f617b17c08eb37d67c4c8995707025d612b7da28d67aa52893a68e75cd271a4706227cfc5473d70e05b36cda34d31ed3709b6f4bc3f64623f
+Size (R/debugme_1.1.0.tar.gz) = 997266 bytes
