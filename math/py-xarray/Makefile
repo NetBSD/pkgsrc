@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/08/01 23:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/20 08:24:55 adam Exp $
 
-DISTNAME=	xarray-0.21.1
+DISTNAME=	xarray-2024.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray/}
@@ -10,17 +10,16 @@ HOMEPAGE=	https://github.com/pydata/xarray
 COMMENT=	N-D labeled arrays and datasets in Python
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1:../../math/py-pandas
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.5:../../math/py-pandas
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
