@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/05 20:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/20 16:18:06 wiz Exp $
 
 DISTNAME=	Flask-Limiter-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://flask-limiter.readthedocs.org/
 COMMENT=	Rate limiting for flask applications
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-flask>=2:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4:../../devel/py-ordered-set
