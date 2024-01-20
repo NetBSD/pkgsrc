@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/12/17 16:02:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/01/20 08:05:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -75,6 +75,9 @@ ${PYSITELIB}/psutil/tests/test_posix.pyo
 ${PYSITELIB}/psutil/tests/test_process.py
 ${PYSITELIB}/psutil/tests/test_process.pyc
 ${PYSITELIB}/psutil/tests/test_process.pyo
+${PYSITELIB}/psutil/tests/test_process_all.py
+${PYSITELIB}/psutil/tests/test_process_all.pyc
+${PYSITELIB}/psutil/tests/test_process_all.pyo
 ${PYSITELIB}/psutil/tests/test_sunos.py
 ${PYSITELIB}/psutil/tests/test_sunos.pyc
 ${PYSITELIB}/psutil/tests/test_sunos.pyo
