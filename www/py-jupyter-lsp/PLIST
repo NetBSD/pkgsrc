@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/30 09:46:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/20 08:53:37 adam Exp $
 etc/jupyter/jupyter_notebook_config.d/jupyter-lsp-notebook.json
 etc/jupyter/jupyter_server_config.d/jupyter-lsp-jupyter-server.json
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -123,6 +123,9 @@ ${PYSITELIB}/jupyter_lsp/tests/conftest.pyo
 ${PYSITELIB}/jupyter_lsp/tests/listener.py
 ${PYSITELIB}/jupyter_lsp/tests/listener.pyc
 ${PYSITELIB}/jupyter_lsp/tests/listener.pyo
+${PYSITELIB}/jupyter_lsp/tests/test_auth.py
+${PYSITELIB}/jupyter_lsp/tests/test_auth.pyc
+${PYSITELIB}/jupyter_lsp/tests/test_auth.pyo
 ${PYSITELIB}/jupyter_lsp/tests/test_bad_spec.py
 ${PYSITELIB}/jupyter_lsp/tests/test_bad_spec.pyc
 ${PYSITELIB}/jupyter_lsp/tests/test_bad_spec.pyo
