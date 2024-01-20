@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/18 13:50:31 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/01/20 09:28:58 mef Exp $
 
-BLAKE2s (R/git2r_0.32.0.tar.gz) = 5b5231d72af5c851316e131446781ee0e49b32503db2a8f1e69a5a4a5b31d9cc
-SHA512 (R/git2r_0.32.0.tar.gz) = d6542b99162fe131ddc3f2b3e22ba15db3cf6a9ced47a421333a752c84887bd34e14a80dd9b6726006b4408ee2b00a09575bb97ebb5672c731de30023adf1494
-Size (R/git2r_0.32.0.tar.gz) = 1345719 bytes
+BLAKE2s (R/git2r_0.33.0.tar.gz) = 96dd6d93e0e03b7f621b8a5db163caf69b5edfbaf39bf9bb7722f97a90477bc7
+SHA512 (R/git2r_0.33.0.tar.gz) = 83d7d25b87255680ac51f3494893a32dac07fef45d32badf7e00cff7680ef077b0810ec35d6a162dbf3fb68d79bdedb8a1393ebf770806f8b3e353d9998e575d
+Size (R/git2r_0.33.0.tar.gz) = 1363704 bytes
