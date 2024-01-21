@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.45 2024/01/21 00:34:26 rillig Exp $
+# $NetBSD: check-files.mk,v 1.46 2024/01/21 02:12:20 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -16,6 +16,10 @@
 #	When set to "yes", VARBASE and PKG_SYSCONFDIR are checked in
 #	addition to LOCALBASE.
 #
+# CHECK_FILES_ONLY_PREFIX
+#	When set to "yes", the only directory below DESTDIR that may be
+#	modified during installation is PREFIX itself.
+#
 # Package-settable variables:
 #
 # CHECK_FILES_SKIP
@@ -26,7 +30,8 @@
 #
 
 _VARGROUPS+=			check-files
-_USER_VARS.check-files=		CHECK_FILES CHECK_FILES_STRICT
+_USER_VARS.check-files=		\
+	CHECK_FILES CHECK_FILES_STRICT CHECK_FILES_ONLY_PREFIX
 _PKG_VARS.check-files=		CHECK_FILES_SUPPORTED CHECK_FILES_SKIP
 _USE_VARS.check-files=		\
 	DESTDIR PREFIX PKG_SYSCONFDIR VARBASE PKG_DBDIR DISTDIR PACKAGES \
@@ -40,8 +45,9 @@ _LISTED_VARS.check-files=	MAKE_DIRS MAKE_DIRS_PERMS OWN_DIRS OWN_DIRS_PERMS
 _SORTED_VARS.check-files=	CHECK_FILES_SKIP
 
 
-CHECK_FILES?=		yes
-CHECK_FILES_STRICT?=	no
+CHECK_FILES?=			yes
+CHECK_FILES_STRICT?=		no
+CHECK_FILES_ONLY_PREFIX?=	no
 
 # Info index files updated when a new info file is added.
 .if defined(INFO_FILES)
@@ -145,11 +151,16 @@ _CHECK_FILES_ERRMSG.varbase=	${ERROR_DIR}/.check-files-varbase
 _CHECK_FILES_PRE.varbase=	${WRKDIR}/.check-files.varbase.pre
 _CHECK_FILES_POST.varbase=	${WRKDIR}/.check-files.varbase.post
 
+_CHECK_FILES_ERRMSG.only-prefix=	${ERROR_DIR}/check-files-only-prefix
+
 _CHECK_FILES_ERRMSGS=		# empty
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.prefix}
 .if ${CHECK_FILES_STRICT:tl} != no
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.sysconfdir}
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.varbase}
+.endif
+.if ${CHECK_FILES_ONLY_PREFIX:tl} == yes
+_CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.only-prefix}
 .endif
 
 ###########################################################################
@@ -376,6 +387,17 @@ ${_CHECK_FILES_ERRMSG.varbase}:						\
 		${DIFF} -u ${_CHECK_FILES_PRE.varbase}			\
 			   ${_CHECK_FILES_POST.varbase}	|		\
 		${GREP} '^+[^+]' | ${SED} "s|^+|	|";		\
+	fi > ${.TARGET}
+
+${_CHECK_FILES_ERRMSG.only-prefix}:
+	${RUN}								\
+	files=${WRKDIR}/.check-files-only-prefix;			\
+	${FIND} ${DESTDIR} \( -type f -o -type l \) -print		\
+	| ${GREP} -v '^${DESTDIR}${PREFIX}/' > "$$files" || :;		\
+	if [ -s "$$files" ]; then					\
+		${ECHO} "************************************************************"; \
+		${ECHO} "The package has installed files outside ${PREFIX}:"; \
+		${SED} -e 's,^,        ,' "$$files";			\
 	fi > ${.TARGET}
 
 ###########################################################################
