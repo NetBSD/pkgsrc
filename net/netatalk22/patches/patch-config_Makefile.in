@@ -1,22 +1,36 @@
-$NetBSD: patch-config_Makefile.in,v 1.3 2023/01/10 22:07:33 hauke Exp $
+$NetBSD: patch-config_Makefile.in,v 1.4 2024/01/21 20:00:42 hauke Exp $
 
 Install config files to examples/netatalk, and leave installation to
 the pkginstall framerwork.
 
 Renamed from patch-ah
 
---- config/Makefile.in.orig	2017-07-09 11:27:05.000000000 +0000
+--- config/Makefile.in.orig	2023-12-28 12:14:55.000000000 +0000
 +++ config/Makefile.in
-@@ -759,13 +759,14 @@ uninstall-local:
- 		rm -f $(DESTDIR)$(pkgconfdir)/$$f; \
+@@ -751,23 +751,25 @@ uninstall-local:
  	done
  @USE_DEBIAN_TRUE@	rm -f $(DESTDIR)/etc/default/netatalk
-+egconfdir = @prefix@/share/examples/netatalk
  
++egconfdir = @prefix@/share/examples/netatalk
++
  install-config-files: $(CONFFILES) $(GENFILES)
 -	$(mkinstalldirs) $(DESTDIR)$(pkgconfdir)
 +	$(mkinstalldirs) $(DESTDIR)$(egconfdir)
- 	for f in $(CONFFILES) $(GENFILES); do \
+ 	for f in $(CONFFILES); do \
+ 		if test -f $(srcdir)$$f; then \
+ 			echo "origin file not found $(srcdir)$$f"; \
+ 			exit 1; \
+-		elif test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(pkgconfdir)/$$f; then \
+-			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir)"; \
+-			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(pkgconfdir); \
++		elif test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(egconfdir)/$$f; then \
++			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(egconfdir)"; \
++			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(egconfdir); \
+ 		else \
+ 			echo "not overwriting $$f"; \
+ 		fi; \
+ 	done
+ 	for f in $(GENFILES); do \
 -		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(pkgconfdir)/$$f; then \
 -			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir)"; \
 -			$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir); \
