@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2022/06/07 20:28:43 wiz Exp $
+# $NetBSD: options.mk,v 1.24 2024/01/21 00:53:46 nikita Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -65,6 +65,7 @@ CMAKE_ARGS+=	-DENABLE_SPELLCHECK=OFF
 #
 .if !empty(PKG_OPTIONS:Mdebug)
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+.include "../../lang/ruby/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .endif
