@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/01/08 07:48:05 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/21 23:33:24 mef Exp $
 
 R_PKGNAME=	pkgload
-R_PKGVER=	1.3.3
+R_PKGVER=	1.3.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +15,8 @@ DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
 DEPENDS+=	R-rprojroot>=1.3.2:../../devel/R-rprojroot
 DEPENDS+=	R-rstudioapi>=0.10:../../math/R-rstudioapi
 DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
+
+# Package suggested but not available: 'remotes'
 
 TEST_DEPENDS+=	R-Rcpp-[0-9]*:../../devel/R-Rcpp
 TEST_DEPENDS+=	R-bitops-[0-9]*:../../math/R-bitops
