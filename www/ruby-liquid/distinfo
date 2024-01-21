@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:31:00 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/01/21 09:07:55 taca Exp $
 
 BLAKE2s (liquid-4.0.3.gem) = 5981688731bdf62ec880d44efc3da251cdecf3d0afcc21fac645251330210623
 SHA512 (liquid-4.0.3.gem) = 8f6cbc9872a92101df4994752f7692cc0f8dd5de1b81c396268f6360241d1edb2daa31c7c96ec0eee32e4cfc22909bdcd84275217cba4ce70741ff03e1482ca2
 Size (liquid-4.0.3.gem) = 76288 bytes
+SHA1 (patch-lib_liquid_errors.rb) = b28febbdc1528f837b3491a97be8a20298f2a5ef
+SHA1 (patch-lib_liquid_standardfilters.rb) = 783ba42f957bb52196f5844f4ff86f7a587de3a1
+SHA1 (patch-lib_liquid_template.rb) = 36c88f29cf5be32536c25ff825e639866c1c4405
+SHA1 (patch-lib_liquid_variable.rb) = 8fbeb8c39d3226a4fdc19beb774ae1d71cb574bc
+SHA1 (patch-test_integration_drop__test.rb) = c8ad57faced13378bfaf7de6ca39a1ca0e370d0e
+SHA1 (patch-test_test__helper.rb) = d24e9f83eeea31c583858a1a11527d7647045836
