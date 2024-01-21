@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.70 2023/11/14 14:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/01/21 01:59:45 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-notes-plugin-1.10.0
+DISTNAME=	xfce4-notes-plugin-1.11.0
 CATEGORIES=	sysutils
-MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.10/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.11/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin
 COMMENT=	Xfce notes plugin
