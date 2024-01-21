@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/12/18 02:47:04 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/21 02:37:52 mef Exp $
 
 R_PKGNAME=	lintr
-R_PKGVER=	3.0.2
+R_PKGVER=	3.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +20,8 @@ DEPENDS+=	R-stringdist-[0-9]*:../../math/R-stringdist
 DEPENDS+=	R-testthat>=2.2.1:../../devel/R-testthat
 DEPENDS+=	R-xml2>=1.0.0:../../textproc/R-xml2
 DEPENDS+=	R-xmlparsedata>=1.0.5:../../textproc/R-xmlparsedata
+
+# Packages suggested but not available: 'bookdown', 'tufte'
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
