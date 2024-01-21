@@ -1,12 +1,18 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: lighttpd.sh,v 1.3 2019/11/13 11:53:29 nros Exp $
+# $NetBSD: lighttpd.sh,v 1.4 2024/01/21 09:33:35 triaxx Exp $
 #
 # PROVIDE: lighttpd
 # KEYWORD: chrootdir
 # REQUIRE: DAEMON
+#
+# Consider installing pkgtools/rc.subr in unprivileged.
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start lighttpd:
+#
+# lighttpd=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="lighttpd"
 rcvar=$name
