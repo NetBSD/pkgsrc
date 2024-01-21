@@ -10,4 +10,5 @@ bin/rdbg @PREFIX@/bin/rdbg@RUBY_SUFFIX@
 bin/rdoc @PREFIX@/bin/rdoc@RUBY_SUFFIX@
 bin/ri @PREFIX@/bin/ri@RUBY_SUFFIX@
 bin/ruby @PREFIX@/bin/@RUBY_NAME@
+bin/syntax_suggest @PREFIX@/bin/syntax_suggest@RUBY_SUFFIX@
 bin/typeprof @PREFIX@/bin/typeprof@RUBY_SUFFIX@
