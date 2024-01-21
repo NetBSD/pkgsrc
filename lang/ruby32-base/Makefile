@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/01/16 15:17:41 taca Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/21 08:35:39 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	4
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -49,7 +48,7 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 
 REPLACE_RUBY=		\
 	libexec/bundle libexec/bundler libexec/erb libexec/irb \
-	libexec/racc libexec/rdoc libexec/ri \
+	libexec/racc libexec/rdoc libexec/ri libexec/syntax_suggest \
 	.bundle/gems/debug-${RUBY_DEBUG_VER}/exe/rdbg \
 	.bundle/gems/rake-${RUBY_RAKE_VER}/exe/rake \
 	.bundle/gems/rbs-${RUBY_RBS_VER}/exe/rbs \
