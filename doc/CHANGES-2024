@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.509 2024/01/21 02:04:54 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.510 2024/01/21 02:06:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -662,3 +662,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-DBI to 1.2.1 [mef 2024-01-21]
 	Updated x11/xfce4-notes-plugin to 1.11.0 [gutteridge 2024-01-21]
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.3 [gutteridge 2024-01-21]
+	Updated meta-pkgs/xfce4-extras to 4.18.1nb12 [gutteridge 2024-01-21]
