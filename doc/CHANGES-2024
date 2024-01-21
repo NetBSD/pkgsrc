@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.545 2024/01/21 20:19:09 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.546 2024/01/21 20:23:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/tree-sitter-go-mod to 1.0.2 [wiz 2024-01-21]
 	Updated textproc/md4c to 0.5.1 [wiz 2024-01-21]
 	Updated editors/emacs29 to 29.2 [wiz 2024-01-21]
+	Updated mail/rspamd to 3.8.0 [wiz 2024-01-21]
