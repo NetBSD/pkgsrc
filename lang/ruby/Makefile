@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/05/30 17:01:54 taca Exp $
+# $NetBSD: Makefile,v 1.76 2024/01/21 08:24:14 taca Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION}
@@ -19,10 +19,12 @@ NO_BUILD=	yes
 
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
-.if ${RUBY_VER} == 30
-RUBY_COMMANDS=	bundle bundler erb gem irb racc rake rbs rdoc ri ruby typeprof
-.elif ${RUBY_VER} >= 31
 RUBY_COMMANDS=	bundle bundler erb gem irb racc rake rbs rdbg rdoc ri ruby typeprof
+.if ${RUBY_VER} >= 33
+RUBY_COMMANDS+=	syntax_suggest
+.endif
+.if ${OPSYS} == "Cygwin"
+RUBY_COMMANDS+=	rubyw
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
