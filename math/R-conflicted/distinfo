@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/21 10:03:12 mef Exp $
+
+BLAKE2s (R/conflicted_1.2.0.tar.gz) = fa90cad11fce4b0fb75181dba2d84083ee3f5c731740afd46c5c8d31f051f67b
+SHA512 (R/conflicted_1.2.0.tar.gz) = c2e742a70b6cd7808ab0032894f68eeb642a69c646cb7dc912aa20cdcebbea3e946aed590e3f069cb982bbbbc8fb90ac92d414a34caba9071a17bc5096bf6bcc
+Size (R/conflicted_1.2.0.tar.gz) = 17071 bytes
