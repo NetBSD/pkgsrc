@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.46 2024/01/21 02:12:20 rillig Exp $
+# $NetBSD: check-files.mk,v 1.47 2024/01/21 03:12:56 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -143,11 +143,11 @@ _CHECK_FILES_ERRMSG.prefix=	${ERROR_DIR}/check-files-prefix
 _CHECK_FILES_PRE.prefix=	${WRKDIR}/.check-files.prefix.pre
 _CHECK_FILES_POST.prefix=	${WRKDIR}/.check-files.prefix.post
 
-_CHECK_FILES_ERRMSG.sysconfdir=	${ERROR_DIR}/.check-files-sysconfdir
+_CHECK_FILES_ERRMSG.sysconfdir=	${ERROR_DIR}/check-files-sysconfdir
 _CHECK_FILES_PRE.sysconfdir=	${WRKDIR}/.check-files.sysconfdir.pre
 _CHECK_FILES_POST.sysconfdir=	${WRKDIR}/.check-files.sysconfdir.post
 
-_CHECK_FILES_ERRMSG.varbase=	${ERROR_DIR}/.check-files-varbase
+_CHECK_FILES_ERRMSG.varbase=	${ERROR_DIR}/check-files-varbase
 _CHECK_FILES_PRE.varbase=	${WRKDIR}/.check-files.varbase.pre
 _CHECK_FILES_POST.varbase=	${WRKDIR}/.check-files.varbase.post
 
