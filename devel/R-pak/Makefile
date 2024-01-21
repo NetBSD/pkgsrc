@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/08/15 01:21:16 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/21 14:19:57 mef Exp $
 
 R_PKGNAME=	pak
-R_PKGVER=	0.5.1
+R_PKGVER=	0.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,7 +29,7 @@ DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-curl>=3.2:../../www/R-curl
 
 # Packages suggested but not available:
-#  'distro', 'pkgdepends', 'pkgsearch'
+#  'pkgdepends', 'pkgsearch'
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-gitcreds-[0-9]*:../../security/R-gitcreds
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
@@ -37,7 +37,11 @@ TEST_DEPENDS+=	R-pingr-[0-9]*:../../net/R-pingr
 TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
+
+REPLACE_R+=	src/library/cli/inst/examples/apps/*.R
+REPLACE_R+=	src/library/cli/exec/*.R
 
 .include "../../math/R/Makefile.extension"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
