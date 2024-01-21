@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.44 2024/01/21 00:21:42 rillig Exp $
+# $NetBSD: check-files.mk,v 1.45 2024/01/21 00:34:26 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -134,16 +134,16 @@ _CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${DESTDIR:Q}${f:Q
 # determine if the package is installing files where it shouldn't be.
 #
 _CHECK_FILES_ERRMSG.prefix=	${ERROR_DIR}/check-files-prefix
-_CHECK_FILES_PRE.prefix=	${WRKDIR}/.prefix.pre
-_CHECK_FILES_POST.prefix=	${WRKDIR}/.prefix.post
+_CHECK_FILES_PRE.prefix=	${WRKDIR}/.check-files.prefix.pre
+_CHECK_FILES_POST.prefix=	${WRKDIR}/.check-files.prefix.post
 
 _CHECK_FILES_ERRMSG.sysconfdir=	${ERROR_DIR}/.check-files-sysconfdir
-_CHECK_FILES_PRE.sysconfdir=	${WRKDIR}/.sysconfdir.pre
-_CHECK_FILES_POST.sysconfdir=	${WRKDIR}/.sysconfdir.post
+_CHECK_FILES_PRE.sysconfdir=	${WRKDIR}/.check-files.sysconfdir.pre
+_CHECK_FILES_POST.sysconfdir=	${WRKDIR}/.check-files.sysconfdir.post
 
 _CHECK_FILES_ERRMSG.varbase=	${ERROR_DIR}/.check-files-varbase
-_CHECK_FILES_PRE.varbase=	${WRKDIR}/.varbase.pre
-_CHECK_FILES_POST.varbase=	${WRKDIR}/.varbase.post
+_CHECK_FILES_PRE.varbase=	${WRKDIR}/.check-files.varbase.pre
+_CHECK_FILES_POST.varbase=	${WRKDIR}/.check-files.varbase.post
 
 _CHECK_FILES_ERRMSGS=		# empty
 _CHECK_FILES_ERRMSGS+=		${_CHECK_FILES_ERRMSG.prefix}
