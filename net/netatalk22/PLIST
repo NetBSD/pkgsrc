@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/27 15:08:44 hauke Exp $
-${PLIST.ea}bin/ad
+@comment $NetBSD: PLIST,v 1.6 2024/01/21 20:00:42 hauke Exp $
+bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
 bin/aecho
 bin/afpldaptest
 bin/afppasswd
 bin/apple_dump
-bin/asip-status.pl
+bin/asip-status
 bin/binheader
 bin/cnid2_create
 bin/dbd
@@ -54,7 +54,6 @@ include/atalk/queue.h
 include/atalk/rtmp.h
 include/atalk/server_child.h
 include/atalk/server_ipc.h
-include/atalk/tdb.h
 include/atalk/uam.h
 include/atalk/unicode.h
 include/atalk/unix.h
@@ -105,13 +104,9 @@ libexec/netatalk/timelord
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
 libexec/netatalk/uams/uams_dhx2.so
-${PLIST.pam}libexec/netatalk/uams/uams_dhx2_pam.la
 libexec/netatalk/uams/uams_dhx2_passwd.la
-${PLIST.pam}libexec/netatalk/uams/uams_dhx_pam.la
 libexec/netatalk/uams/uams_dhx_passwd.la
-${PLIST.gssapi}libexec/netatalk/uams/uams_gss.la
 libexec/netatalk/uams/uams_guest.la
-${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
 man/man1/ad.1
@@ -119,13 +114,16 @@ man/man1/aecho.1
 man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/apple_dump.1
-man/man1/asip-status.pl.1
+man/man1/asip-status.1
+man/man1/binheader.1
+man/man1/cnid2_create.1
 man/man1/dbd.1
 man/man1/getzones.1
 man/man1/hqx2bin.1
 man/man1/macbinary.1
 man/man1/macusers.1
 man/man1/megatron.1
+man/man1/nadheader.1
 man/man1/nbp.1
 man/man1/nbplkup.1
 man/man1/nbprgstr.1
@@ -134,13 +132,12 @@ man/man1/netatalk-config.1
 man/man1/pap.1
 man/man1/papstatus.1
 man/man1/psorder.1
+man/man1/showppd.1
 man/man1/single2bin.1
 man/man1/unbin.1
 man/man1/unhex.1
 man/man1/uniconv.1
 man/man1/unsingle.1
-man/man3/atalk_aton.3
-man/man3/nbp_name.3
 man/man4/atalk.4
 man/man5/AppleVolumes.5
 man/man5/AppleVolumes.default.5
@@ -164,11 +161,9 @@ man/man8/timelord.8
 share/aclocal/netatalk.m4
 share/examples/netatalk/AppleVolumes.default
 share/examples/netatalk/AppleVolumes.system
-${PLIST.ldap}share/examples/netatalk/afp_ldap.conf
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
-${PLIST.pam}share/examples/netatalk/netatalk.pam
 share/examples/netatalk/papd.conf
 share/netatalk/pagecount.ps
 @pkgdir libexec/psffilters
