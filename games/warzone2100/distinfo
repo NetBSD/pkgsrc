@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2023/05/17 03:50:54 triaxx Exp $
+$NetBSD: distinfo,v 1.21 2024/01/21 08:02:00 triaxx Exp $
 
-BLAKE2s (wz2100_4.3.5/warzone2100_src.tar.xz) = a66e59fe1934f87f9fa00b4a392346f6ca000c518e4dec75b244239f1c7a1e69
-SHA512 (wz2100_4.3.5/warzone2100_src.tar.xz) = ec65f22a0aad9fe482c4ea916cb321d171b10f0a9b181fea7db2eb17bf54e32b3828c8259082fff266713e2cab4e32dcc455d0d5b923a5ca221fc77b11137062
-Size (wz2100_4.3.5/warzone2100_src.tar.xz) = 320369492 bytes
+BLAKE2s (wz2100_4.4.2/warzone2100_src.tar.xz) = 94c8c725326e31f0497d199f42886c084f0700b5ee0c730b2ce23e979ae122be
+SHA512 (wz2100_4.4.2/warzone2100_src.tar.xz) = 8edfae77853826fda4bafafc513d9c6d999861fc4a7f0cf22318df7ebf9df3d7f98c3859eec8e8eeb02f4243b7e2e152c8d46881f4f8d414787ef0d0735ea4e6
+Size (wz2100_4.4.2/warzone2100_src.tar.xz) = 490182768 bytes

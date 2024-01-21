@@ -1,5 +1,24 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/17 03:50:54 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/01/21 08:02:00 triaxx Exp $
 bin/warzone2100
+include/fmt/args.h
+include/fmt/chrono.h
+include/fmt/color.h
+include/fmt/compile.h
+include/fmt/core.h
+include/fmt/format-inl.h
+include/fmt/format.h
+include/fmt/os.h
+include/fmt/ostream.h
+include/fmt/printf.h
+include/fmt/ranges.h
+include/fmt/std.h
+include/fmt/xchar.h
+lib/cmake/fmt/fmt-config-version.cmake
+lib/cmake/fmt/fmt-config.cmake
+lib/cmake/fmt/fmt-targets-noconfig.cmake
+lib/cmake/fmt/fmt-targets.cmake
+lib/libfmt.a
+lib/pkgconfig/fmt.pc
 man/man6/warzone2100.6
 share/applications/net.wz2100.warzone2100.desktop
 share/doc/warzone2100/AUTHORS
@@ -107,7 +126,7 @@ share/locale/tt_RU/LC_MESSAGES/warzone2100.mo
 share/locale/uk_UA/LC_MESSAGES/warzone2100.mo
 share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
 share/locale/zh_TW/LC_MESSAGES/warzone2100.mo
-share/metainfo/net.wz2100.warzone2100.appdata.xml
+share/metainfo/net.wz2100.warzone2100.metainfo.xml
 share/warzone2100/base.wz
 share/warzone2100/fonts/DejaVu.LICENSE.txt
 share/warzone2100/fonts/DejaVuSans-Bold.ttf
@@ -153,3 +172,5 @@ share/warzone2100/music/albums/original_soundtrack/track1.opus
 share/warzone2100/music/albums/original_soundtrack/track2.opus
 share/warzone2100/music/albums/original_soundtrack/track3.opus
 share/warzone2100/music/menu.opus
+share/warzone2100/terrain_overrides/classic.wz
+share/warzone2100/terrain_overrides/high.wz
