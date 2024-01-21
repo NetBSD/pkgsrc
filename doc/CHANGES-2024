@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.524 2024/01/21 08:51:13 mef Exp $
+$NetBSD: CHANGES-2024,v 1.525 2024/01/21 09:08:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/ruby32-base to 3.2.3 [taca 2024-01-21]
 	Updated graphics/R-ragg to 1.2.7 [mef 2024-01-21]
 	Added time/R-RcppDate version 0.0.3 [mef 2024-01-21]
+	Updated www/ruby-liquid to 4.0.3nb1 [taca 2024-01-21]
