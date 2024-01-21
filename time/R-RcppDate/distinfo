@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/21 08:49:38 mef Exp $
+
+BLAKE2s (R/RcppDate_0.0.3.tar.gz) = e3efafd2862a8dec342e8fa767fd79b89a8f56ffe09782fc27b4661f352569fb
+SHA512 (R/RcppDate_0.0.3.tar.gz) = f4e7f7996e6f6f92dc3c2b8e4cc18676d8d020c17239420cb06c713cc729f8d6a82c2a2947653b6e32079acd32cbc37d59fe3bef14188d397700df4acb6d828e
+Size (R/RcppDate_0.0.3.tar.gz) = 89092 bytes
