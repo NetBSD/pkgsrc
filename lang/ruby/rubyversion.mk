@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.269 2023/09/09 14:21:31 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.270 2024/01/21 08:18:43 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferred Ruby version to use.
 #
-#		Possible values: 31 32
+#		Possible values: 31 32 33
 #		Default: 31
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 31 32
+#		Possible values: 31 32 33
 #		Default: 31 32
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 31 32
+#		Possible values: 31 32 33
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 31 32
+#		Possible values: 31 32 33
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 31 32
+#		Possible values: 31 32 33
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -215,18 +215,20 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 # current supported Ruby's version
 RUBY31_VERSION=		3.1.4
 RUBY32_VERSION=		3.2.2
+RUBY33_VERSION=		3.3.0
 
 # current API compatible version; used for version of shared library
 RUBY31_API_VERSION=	3.1.0
 RUBY32_API_VERSION=	3.2.0
+RUBY33_API_VERSION=	3.3.0
 
 #
 RUBY_VERSION_DEFAULT?=	31
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	31 32
+RUBY_VERSIONS_SUPPORTED=	31 32 33
 
-RUBY_VERSIONS_ACCEPTED?=	31 32
+RUBY_VERSIONS_ACCEPTED?=	31 32 33
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -456,6 +458,102 @@ RUBY_RSS_VER=			0.2.9
 RUBY_TEST_UNIT_VER=		3.5.7
 RUBY_TYPEPROF_VER=		0.21.3
 
+.elif ${RUBY_VER} == 33
+RUBY_VERSION=		${RUBY33_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
+# default gems
+RUBY_RUBYGEMS_VER=		3.5.3
+RUBY_ABBREV_VER=		0.1.2
+RUBY_BASE64_VER=		0.2.0
+RUBY_BENCHMARK_VER=		0.3.0
+RUBY_BIGDECIMAL_VER=		3.1.5
+RUBY_BUNDLER_VER=		2.5.3
+RUBY_CGI_VER=			0.4.1
+RUBY_CSV_VER=			3.2.8
+RUBY_DATE_VER=			3.3.4
+RUBY_DELEGATE_VER=		0.3.1
+RUBY_DID_YOU_MEAN_VER=		1.6.3
+RUBY_DIGEST_VER=		3.1.1
+RUBY_DRB_VER=			2.2.0
+RUBY_ENGLISH_VER=		0.8.0
+RUBY_ERB_VER=			4.0.3
+RUBY_ERROR_HIGHLIGHT_VER=	0.6.0
+RUBY_ETC_VER=			1.4.3
+RUBY_FCNTL_VER=			1.1.0
+RUBY_FIDDLE_VER=		1.1.2
+RUBY_FILEUTILS_VER=		1.7.2
+RUBY_FIND_VER=			0.2.0
+RUBY_FORWARDABLE_VER=		1.3.3
+RUBY_GETOPTLONG_VER=		0.2.1
+RUBY_IO_CONSOLE_VER=		0.7.1
+RUBY_IO_NONBLOCK_VER=		0.3.0
+RUBY_IO_WAIT_VER=		0.3.1
+RUBY_IPADDR_VER=		1.2.6
+RUBY_IRB_VER=			1.11.0
+RUBY_JSON_VER=			2.7.1
+RUBY_LOGGER_VER=		1.6.0
+RUBY_MUTEX_M_VER=		0.2.0
+RUBY_NET_HTTP_VER=		0.4.0
+RUBY_NET_PROTOCOL_VER=		0.2.2
+RUBY_NKF_VER=			0.1.3
+RUBY_OBSERVER_VER=		0.1.2
+RUBY_OPEN3_VER=			0.2.1
+RUBY_OPENSSL_VER=		3.2.0
+RUBY_OPEN_URI_VER=		0.4.1
+RUBY_OPTPARSE_VER=		0.4.0
+RUBY_OSTRUCT_VER=		0.6.0
+RUBY_PATHNAME_VER=		0.3.0
+RUBY_PP_VER=			0.5.0
+RUBY_PRETTYPRINT_VER=		0.2.0
+RUBY_PRISM_VER=			0.19.0
+RUBY_PSTORE_VER=		0.1.3
+RUBY_PSYCH_VER=			5.1.2
+RUBY_RDOC_VER=			6.6.2
+RUBY_READLINE_VER=		0.0.4
+RUBY_RELINE_VER=		0.4.1
+RUBY_RESOLV_REPLACE_VER=	0.1.1
+RUBY_RESOLV_VER=		0.3.0
+RUBY_RINDA_VER=			0.2.0
+RUBY_RUBY2_KEYWORDS_VER=	0.0.5
+RUBY_SECURERANDOM_VER=		0.3.1
+RUBY_SET_VER=			1.1.0
+RUBY_SHELLWORDS_VER=		0.2.0
+RUBY_SINGLETON_VER=		0.2.0
+RUBY_STRINGIO_VER=		3.1.0
+RUBY_STRSCAN_VER=		3.0.7
+RUBY_SYSLOG_VER=		0.1.2
+RUBY_SYNTAX_SUGGEST_VER=	2.0.0
+RUBY_TEMPFILE_VER=		0.2.1
+RUBY_TIME_VER=			0.3.0
+RUBY_TIMEOUT_VER=		0.4.1
+RUBY_TMPDIR_VER=		0.2.0
+RUBY_TSORT_VER=			0.2.0
+RUBY_UN_VER=			0.3.0
+RUBY_URI_VER=			0.13.0
+RUBY_WEAKREF_VER=		0.1.3
+RUBY_YAML_VER=			0.3.0
+RUBY_ZLIB_VER=			3.1.0
+
+# bundled gems
+RUBY_DEBUG_VER=			1.9.1
+RUBY_MATRIX_VER=		0.4.2
+RUBY_MINITEST_VER=		5.20.0
+RUBY_NET_FTP_VER=		0.3.3
+RUBY_NET_IMAP_VER=		0.4.9
+RUBY_NET_POP_VER=		0.1.2
+RUBY_NET_SMTP_VER=		0.4.0
+RUBY_POWER_ASSERT_VER=		2.0.3
+RUBY_PRIME_VER=			0.1.2
+RUBY_RACC_VER=			1.7.3
+RUBY_RAKE_VER=			13.1.0
+RUBY_RBS_VER=			3.4.0
+RUBY_REXML_VER=			3.2.6
+RUBY_RSS_VER=			0.3.0
+RUBY_TEST_UNIT_VER=		3.6.1
+RUBY_TYPEPROF_VER=		0.21.9
+
 .else
 PKG_FAIL_REASON+=	"Unknown Ruby version specified: ${RUBY_VER}."
 .endif
@@ -489,7 +587,13 @@ RUBY_NAME=		ruby${RUBY_SUFFIX}
 RUBYGEM_NAME=		gem${RUBY_SUFFIX}
 RAKE_NAME=		rake${RUBY_SUFFIX}
 
+.if ${RUBY_VER} >= 33
+RUBY_BASE=		${RUBY_NAME}
+RUBY_SRCDIR?=		../../lang/ruby${RUBY_VER}
+.else
 RUBY_BASE=		${RUBY_NAME}-base
+RUBY_SRCDIR?=		../../lang/ruby${RUBY_VER}-base
+.endif
 
 RUBY_PKGPREFIX?=	${RUBY_NAME}
 
@@ -526,7 +630,7 @@ RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 #
 # Ruby shared and static library version handling.
 #
-RUBY_SHLIBVER?=		${RUBY_VERSION}
+RUBY_SHLIBVER?=		${RUBY_VERSION:C/-.*$//}
 
 _RUBY_SHLIB_MAJOR:=	${RUBY_SHLIBVER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1\2/}
 _RUBY_SHLIB_MINOR:=	${RUBY_SHLIBVER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
@@ -588,8 +692,6 @@ RUBY_USE_PTHREAD?=	yes
 
 RUBY_DYNAMIC_DIRS?=	# empty
 
-RUBY_SRCDIR?=	../../lang/ruby${RUBY_VER}-base
-
 #
 # common paths
 #
@@ -646,7 +748,7 @@ RUBY_BUNDLE_MODULES= \
 	matrix minitest mutex_m net-ftp net-http net-imap net-pop \
 	net-protocol net-smtp net-telnet nkf observer open-uri open3 \
 	openssl optparse ostruct pathname power_assert pp prettyprint \
-	prime pstore psych racc rake rbs rdoc readline reline resolv \
+	prime prism pstore psych racc rake rbs rdoc readline reline resolv \
 	resolv-replace rexml rinda rss ruby2_keywords scanf sdbm \
 	securerandom set shell shellwords singleton syntax_suggest \
 	stringio strscan sync syslog tempfile test-unit thwait time \
