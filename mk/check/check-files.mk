@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.43 2024/01/20 23:39:48 rillig Exp $
+# $NetBSD: check-files.mk,v 1.44 2024/01/21 00:21:42 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -195,7 +195,7 @@ check-files-post-message:
 	@${STEP_MSG} "Generating post-install file lists"
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
-	${RUN}					\
+	${RUN}								\
 	${FIND} ${DESTDIR}${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER}				\
@@ -203,7 +203,7 @@ ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
                 || ${TRUE}
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
-	${RUN}					\
+	${RUN}								\
 	${FIND} ${DESTDIR}${PKG_SYSCONFDIR}/. -print 2>/dev/null	\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
@@ -211,7 +211,7 @@ ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 		|| ${TRUE}
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
-	${RUN}					\
+	${RUN}								\
 	${FIND} ${DESTDIR}${VARBASE}/. -print 2>/dev/null		\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
@@ -256,28 +256,28 @@ _CHECK_FILES_MISSING_REAL=	${WRKDIR}/.check_files_missing_real
 _CHECK_FILES_EXTRA=		${WRKDIR}/.check_files_extra
 
 ${_CHECK_FILES_DIFF}: ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}
-	${RUN}					\
+	${RUN}								\
 	${DIFF} -u ${_CHECK_FILES_PRE.prefix}				\
 		  ${_CHECK_FILES_POST.prefix}				\
 		> ${.TARGET} || ${TRUE}
 
 ${_CHECK_FILES_ADDED}: ${_CHECK_FILES_DIFF}
-	${RUN}					\
+	${RUN}								\
 	${GREP} '^+/' ${_CHECK_FILES_DIFF} | ${SED} "s|^+||" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_DELETED}: ${_CHECK_FILES_DIFF}
-	${RUN}					\
+	${RUN}								\
 	${GREP} '^-/' ${_CHECK_FILES_DIFF} | ${SED} "s|^-||" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_EXPECTED}: plist
-	${RUN}					\
+	${RUN}								\
 	${GREP} '^[^@]' ${PLIST} | ${SED} "s|^|${DESTDIR}${PREFIX}/|" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
-	${RUN}					\
+	${RUN}								\
 	${DIFF} -u ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^-[^-]' | ${SED} "s|^-||" |				\
 	while read file; do						\
@@ -285,21 +285,21 @@ ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 	done > ${.TARGET}
 
 ${_CHECK_FILES_MISSING_REAL}: ${_CHECK_FILES_MISSING}
-	${RUN}					\
+	${RUN}								\
 	${_CHECK_FILES_SKIP_FILTER} < ${_CHECK_FILES_MISSING} 		\
 		> ${.TARGET} || ${TRUE}
 
 ${_CHECK_FILES_MISSING_SKIP}:						\
 		${_CHECK_FILES_MISSING}					\
 		${_CHECK_FILES_MISSING_REAL}
-	${RUN}					\
+	${RUN}								\
 	${DIFF} -u ${_CHECK_FILES_MISSING}				\
 		   ${_CHECK_FILES_MISSING_REAL} |			\
 	${GREP} '^-[^-]' | ${SED} "s|^-||"				\
 		> ${.TARGET}
 
 ${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
-	${RUN}					\
+	${RUN}								\
 	${DIFF} -u  ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^+[^+]' | ${SED} "s|^+||" |				\
 	while read file; do						\
@@ -344,7 +344,7 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 		${_CHECK_FILES_PRE.sysconfdir}				\
 		${_CHECK_FILES_POST.sysconfdir}
-	${RUN}					\
+	${RUN}								\
 	if ${CMP} -s ${_CHECK_FILES_PRE.sysconfdir}			\
 		     ${_CHECK_FILES_POST.sysconfdir}; then		\
 		${TRUE};						\
@@ -364,7 +364,7 @@ ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 ${_CHECK_FILES_ERRMSG.varbase}:						\
 		${_CHECK_FILES_PRE.varbase}				\
 		${_CHECK_FILES_POST.varbase}
-	${RUN}					\
+	${RUN}								\
 	if ${CMP} -s ${_CHECK_FILES_PRE.varbase}			\
 		       ${_CHECK_FILES_POST.varbase}; then		\
 		${TRUE};						\
@@ -385,7 +385,7 @@ ${_CHECK_FILES_ERRMSG.varbase}:						\
 .PHONY: check-files-clean
 check-clean: check-files-clean
 check-files-clean:
-	${RUN}					\
+	${RUN}								\
 	${RM} -f ${_CHECK_FILES_ERRMSGS}				\
 		${_CHECK_FILES_PRE} ${_CHECK_FILES_POST}		\
 		${_CHECK_FILES_DIFF} ${_CHECK_FILES_ADDED}		\
