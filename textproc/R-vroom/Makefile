@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/01/21 02:54:27 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/21 09:05:33 mef Exp $
 
 R_PKGNAME=	vroom
 R_PKGVER=	1.6.5
@@ -43,7 +43,7 @@ TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 TEST_DEPENDS+=	R-waldo-[0-9]*:../../devel/R-waldo
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 
-USE_LANGUAGES+=		c
+USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++11
 
 REPLACE_BASH+=	inst/bench/download-data.sh inst/bench/script.sh
