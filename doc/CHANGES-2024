@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.514 2024/01/21 04:11:45 mef Exp $
+$NetBSD: CHANGES-2024,v 1.515 2024/01/21 04:50:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -667,3 +667,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-lintr to 3.1.1 [mef 2024-01-21]
 	Updated textproc/R-vroom to 1.6.5 [mef 2024-01-21]
 	Updated math/R-dplyr to 1.1.4 [mef 2024-01-21]
+	Updated textproc/R-data.table to 1.14.10 [mef 2024-01-21]
