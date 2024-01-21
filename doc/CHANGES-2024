@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.520 2024/01/21 08:23:25 taca Exp $
+$NetBSD: CHANGES-2024,v 1.521 2024/01/21 08:36:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -673,3 +673,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/php82 to 8.2.15 [taca 2024-01-21]
 	Updated games/warzone2100 to 4.4.2 [triaxx 2024-01-21]
 	Added lang/ruby33 version 3.3.0 [taca 2024-01-21]
+	Updated lang/ruby32-base to 3.2.3 [taca 2024-01-21]
