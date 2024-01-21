@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/06/02 12:58:09 mef Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/21 04:11:36 mef Exp $
 
 R_PKGNAME=	dplyr
-R_PKGVER=	1.1.2
+R_PKGVER=	1.1.4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
