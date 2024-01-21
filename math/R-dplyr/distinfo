@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/06/02 12:58:09 mef Exp $
+$NetBSD: distinfo,v 1.11 2024/01/21 04:11:36 mef Exp $
 
-BLAKE2s (R/dplyr_1.1.2.tar.gz) = 92c3d8ebc06dfac8a8f1cfab0b6dab74701c172fb69c74204109bb7489a91c24
-SHA512 (R/dplyr_1.1.2.tar.gz) = 62ebede505506a410111189073bb35efb971aad9b09f4622f34b9dcbf8e739c07f1b85a68d95ac9d76a1df2d800358ff4b3b79e4cf3df9911683e2cf472c9aa5
-Size (R/dplyr_1.1.2.tar.gz) = 1083348 bytes
+BLAKE2s (R/dplyr_1.1.4.tar.gz) = ee65d80bdfd1809268a927a5ebda7c55e81ceeee0e4f631b20d9790d4c7cb969
+SHA512 (R/dplyr_1.1.4.tar.gz) = 526b9131d42d1e57ae32079341cf3c1ca06ed9930b4f73e8cb75df2d916d8c345e60cf9f26d4796a4516939589f42d93bd4dcb632de67805c78ac96714c4901e
+Size (R/dplyr_1.1.4.tar.gz) = 1207521 bytes
