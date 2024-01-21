@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/11/23 21:50:46 nros Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/21 20:11:06 wiz Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
-PKGNAME=	${DISTNAME:S/release-//}
+DISTNAME=	md4c-0.5.1
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mity/}
-GITHUB_PROJECT=	md4c
-GITHUB_TAG=	release-0.4.8 # version is updated here
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mity/md4c/
@@ -14,9 +11,9 @@ COMMENT=	Markdown for C library and parser
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/md4c-release-${PKGVERSION_NOREV}
-USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	src/md4c-html.pc.in
 PKGCONFIG_OVERRIDE+=	src/md4c.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
