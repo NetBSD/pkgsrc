@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/05 09:26:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/21 20:28:37 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -63,6 +63,24 @@ ${PYSITELIB}/pypdf/_reader.pyo
 ${PYSITELIB}/pypdf/_text_extraction/__init__.py
 ${PYSITELIB}/pypdf/_text_extraction/__init__.pyc
 ${PYSITELIB}/pypdf/_text_extraction/__init__.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/__init__.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/__init__.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/__init__.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_fixed_width_page.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_fixed_width_page.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_font_widths.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_manager.pyo
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_params.py
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_params.pyc
+${PYSITELIB}/pypdf/_text_extraction/_layout_mode/_text_state_params.pyo
 ${PYSITELIB}/pypdf/_utils.py
 ${PYSITELIB}/pypdf/_utils.pyc
 ${PYSITELIB}/pypdf/_utils.pyo
