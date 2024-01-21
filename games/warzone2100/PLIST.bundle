@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bundle,v 1.1 2023/05/17 03:51:38 triaxx Exp $
+@comment $NetBSD: PLIST.bundle,v 1.2 2024/01/21 08:02:00 triaxx Exp $
 Warzone 2100.app/Contents/Info.plist
 Warzone 2100.app/Contents/MacOS/Warzone 2100
 Warzone 2100.app/Contents/Resources/AUTHORS
@@ -53,6 +53,8 @@ Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track1
 Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track2.opus
 Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track3.opus
 Warzone 2100.app/Contents/Resources/data/music/menu.opus
+Warzone 2100.app/Contents/Resources/data/terrain_overrides/classic.wz
+Warzone 2100.app/Contents/Resources/data/terrain_overrides/high.wz
 Warzone 2100.app/Contents/Resources/docs/Scripting.md
 Warzone 2100.app/Contents/Resources/docs/ScriptingManual.htm
 Warzone 2100.app/Contents/Resources/docs/docbook-xsl.css
@@ -108,6 +110,25 @@ Warzone 2100.app/Contents/Resources/docs/js-globals.md
 Warzone 2100.app/Contents/Resources/docs/js-objects.md
 Warzone 2100.app/Contents/Resources/docs/quickstartguide.html
 Warzone 2100.app/Contents/Resources/docs/warzone2100.6.html
+include/fmt/args.h
+include/fmt/chrono.h
+include/fmt/color.h
+include/fmt/compile.h
+include/fmt/core.h
+include/fmt/format-inl.h
+include/fmt/format.h
+include/fmt/os.h
+include/fmt/ostream.h
+include/fmt/printf.h
+include/fmt/ranges.h
+include/fmt/std.h
+include/fmt/xchar.h
+lib/cmake/fmt/fmt-config-version.cmake
+lib/cmake/fmt/fmt-config.cmake
+lib/cmake/fmt/fmt-targets-noconfig.cmake
+lib/cmake/fmt/fmt-targets.cmake
+lib/libfmt.a
+lib/pkgconfig/fmt.pc
 man/man6/warzone2100.6
 share/doc/warzone2100/AUTHORS
 share/doc/warzone2100/COPYING
@@ -258,3 +279,5 @@ share/warzone2100/music/albums/original_soundtrack/track1.opus
 share/warzone2100/music/albums/original_soundtrack/track2.opus
 share/warzone2100/music/albums/original_soundtrack/track3.opus
 share/warzone2100/music/menu.opus
+share/warzone2100/terrain_overrides/classic.wz
+share/warzone2100/terrain_overrides/high.wz
