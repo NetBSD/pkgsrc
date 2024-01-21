@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/01/21 04:11:36 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/21 07:57:55 mef Exp $
 
 R_PKGNAME=	dplyr
 R_PKGVER=	1.1.4
@@ -22,7 +22,7 @@ DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-rlang>=1.1.0:../../devel/R-rlang
 DEPENDS+=	R-tibble>=3.2.0:../../math/R-tibble
 DEPENDS+=	R-tidyselect>=1.2.0:../../devel/R-tidyselect
-DEPENDS+=	R-vctrs>=0.6.0:../../math/R-vctrs
+DEPENDS+=	R-vctrs>=0.6.4:../../math/R-vctrs
 DEPENDS+=	R-generics>=0.0.2:../../math/R-generics
 DEPENDS+=	R-generics>=0.0.2:../../math/R-generics
 
