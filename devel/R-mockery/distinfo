@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/29 04:18:39 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/01/21 13:47:36 mef Exp $
 
-BLAKE2s (R/mockery_0.4.3.tar.gz) = 9fc8005bb6791a99e03bf37bebce1971bd2030d0d5505e47e3913156b37c878c
-SHA512 (R/mockery_0.4.3.tar.gz) = fdfcc60c2cc0f5db574de79ffa7264d68ba5679943b09158b490a57eae2e1aa8587b9863dfbaf3259ad8c0c62d6400a079aaa5fb6958ae4d8ea415948b3c188f
-Size (R/mockery_0.4.3.tar.gz) = 20854 bytes
+BLAKE2s (R/mockery_0.4.4.tar.gz) = 2d4ff2066940b1836137ee44da80551ba1cac9e8ea28b5b11d8f565b1fc51124
+SHA512 (R/mockery_0.4.4.tar.gz) = 7389750d03dd98aa493f08869216d3adf5acf25dd88239f55f1975fec5211085f3ab6d3711fa6a513a3c36103ae91255316680abe909c1302690b08b4587f5b7
+Size (R/mockery_0.4.4.tar.gz) = 20754 bytes
