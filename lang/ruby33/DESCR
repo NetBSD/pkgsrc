@@ -1,0 +1,23 @@
+Ruby is an interpreted object-oriented programming language often used for
+web development. It also offers many scripting features to process plain
+text and serialized files, or manage system tasks.  It is simple,
+straightforward, and extensible.
+
+Features of Ruby are shown below.
+  + Simple Syntax
+  + *Normal* Object-Oriented features (ex. class, method calls)
+  + *Advanced* Object-Oriented features (ex. Mix-in, Singleton-method)
+  + Operator Overloading
+  + Exception Handling
+  + Iterators and Closures
+  + Garbage Collection
+  + Dynamic Loading of Object files (on some architecture)
+  + Highly Portable (works on many UNIX machines, and on Windows, Mac, etc.)
+
+Ruby 3.3 introduces a number of new features and performance improvements,
+here are some of them:
+  * Prsim parser (as a default gem).
+  * Performance: YJIT: Verious improvements including performance.
+  * Performance: RJIT: Experital pure-Ruby JIT compiler replace MJIT.
+  * M:N thread scheduler.
+  * Retirement of ext/readline.
