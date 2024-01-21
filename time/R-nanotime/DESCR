@@ -1,0 +1,4 @@
+Full 64-bit resolution date and time functionality with nanosecond
+granularity is provided, with easy transition to and from the standard
+'POSIXct' type. Three additional classes offer interval, period and
+duration functionality for nanosecond-resolution timestamps.
