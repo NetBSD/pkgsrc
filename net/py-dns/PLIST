@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/10/28 19:57:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/01/21 20:25:30 wiz Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -423,7 +423,7 @@ ${PYSITELIB}/dns/zonefile.pyo
 ${PYSITELIB}/dns/zonetypes.py
 ${PYSITELIB}/dns/zonetypes.pyc
 ${PYSITELIB}/dns/zonetypes.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
