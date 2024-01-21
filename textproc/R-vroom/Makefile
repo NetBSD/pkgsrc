@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/06/17 14:00:31 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/21 02:54:27 mef Exp $
 
 R_PKGNAME=	vroom
-R_PKGVER=	1.6.3
+R_PKGVER=	1.6.5
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,6 +22,8 @@ DEPENDS+=	R-hms>=1.1.0:../../time/R-hms
 DEPENDS+=	R-progress-[0-9]*:../../sysutils/R-progress
 DEPENDS+=	R-tzdb-[0-9]*:../../time/R-tzdb
 
+# Packages suggested but not available: 'archive', 'patchwork'
+
 #EST_DEPENDS+=	R-archive-[0-9]*:
 TEST_DEPENDS+=	R-bench-[0-9]*:../../benchmarks/R-bench
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
@@ -41,7 +43,8 @@ TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 TEST_DEPENDS+=	R-waldo-[0-9]*:../../devel/R-waldo
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES+=		c
+USE_CXX_FEATURES+=	c++11
 
 REPLACE_BASH+=	inst/bench/download-data.sh inst/bench/script.sh
 REPLACE_R+=	inst/bench/session_info.R inst/bench/run-bench.R inst/bench/run-bench-fwf.R
