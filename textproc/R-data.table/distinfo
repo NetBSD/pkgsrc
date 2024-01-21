@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/21 04:49:57 mef Exp $
 
-BLAKE2s (R/data.table_1.14.0.tar.gz) = 2b3c234041e3c351c2d997ee24beeb1647f7ae231403915aaab62298cafe9970
-SHA512 (R/data.table_1.14.0.tar.gz) = db90998904270f42cc654faa0b333f8e720e4044c7f2c82f52efbb69e1ed30c5b2c1b034f7a5baff4543151eda7fb33aa454817889ac95a5d17d6aba364396df
-Size (R/data.table_1.14.0.tar.gz) = 5303849 bytes
+BLAKE2s (R/data.table_1.14.10.tar.gz) = e4a0e77811f755421e3efaf32d9c537ce552106b23c5616571a5526013a670a0
+SHA512 (R/data.table_1.14.10.tar.gz) = 2ba39dbab5240c6b0faf3472391dfb4d3eed97347cffdef6b6a21ba58333c4d051ab3ff6800940b5a3f8c3b965de26e8b2e752aa694f26eea638d4e55c51030b
+Size (R/data.table_1.14.10.tar.gz) = 5311651 bytes
