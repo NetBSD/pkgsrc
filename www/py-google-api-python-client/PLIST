@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/12/13 13:48:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/01/21 20:27:05 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -99,6 +99,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/beyondcorp.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/biglake.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquery.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatapolicy.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatatransfer.v1.json
