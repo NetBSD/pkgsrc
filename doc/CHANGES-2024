@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.531 2024/01/21 13:21:48 mef Exp $
+$NetBSD: CHANGES-2024,v 1.532 2024/01/21 13:47:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/objfw to 1.0.7 [js 2024-01-21]
 	Updated devel/objfw to 1.0.8 [js 2024-01-21]
 	Updated devel/R-lpSolve to 5.6.20 [mef 2024-01-21]
+	Updated devel/R-mockery to 0.4.4 [mef 2024-01-21]
