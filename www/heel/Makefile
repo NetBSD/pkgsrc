@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/09/09 13:52:57 taca Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/21 09:16:44 taca Exp $
 
 DISTNAME=	heel-4.0.0
 CATEGORIES=	www
@@ -16,8 +16,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.5<3:../../misc/ruby-launchy
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=4.0<5:../../www/ruby-rouge
 
 CONFLICTS+=	ruby[1-9][0-9][0-9]-heel-[0-9]* heel-[0-9]*
-
-RUBY_VERSIONS_ACCEPTED=	31 32
 
 RUBYGEM_OPTIONS+=	--format-executable
 
