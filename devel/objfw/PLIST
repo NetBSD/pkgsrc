@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/15 20:35:08 js Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/01/21 11:21:31 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
@@ -222,7 +222,7 @@ include/ObjFW/platform/macOS/OFAtomic.h
 include/ObjFW/platform/x86/OFAtomic.h
 lib/libobjfw.so
 lib/libobjfw.so.1
-lib/libobjfw.so.1.0.4
+lib/libobjfw.so.1.0.5
 share/ofarc/localization/de.json
 share/ofarc/localization/localizations.json
 share/ofdns/localization/de.json
