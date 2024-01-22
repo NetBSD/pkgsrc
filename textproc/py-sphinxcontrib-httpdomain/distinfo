@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/22 16:15:39 adam Exp $
+
+BLAKE2s (sphinxcontrib-httpdomain-1.8.1.tar.gz) = 17f8765c8d5de844064b0deee80ebfc75a34a48338ea1e58bdd45c089a455527
+SHA512 (sphinxcontrib-httpdomain-1.8.1.tar.gz) = 197c44fd9bdc146f49c6a0aa365a5bd49b76f712ae89082be3761aa21c99683279090fc274308ca199fb7efae5a2d713be4531b90747f504860f36a01ee4c52b
+Size (sphinxcontrib-httpdomain-1.8.1.tar.gz) = 19266 bytes
