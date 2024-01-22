@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/04/29 14:56:15 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/01/22 13:40:33 mef Exp $
 
-BLAKE2s (R/remotes_2.4.2.tar.gz) = 2d5094e608976f84d6818d7db0b2c2baed88a0ea24946415369e637255046aac
-SHA512 (R/remotes_2.4.2.tar.gz) = b90afc95e2d0f290956af523ad1ebb036a2171d70d286b3292557d292af425d0d05dea9053a2d22b9a7621ebb430b2fcc360d864ca8a6c5d427e5bce931ffee2
-Size (R/remotes_2.4.2.tar.gz) = 152540 bytes
+BLAKE2s (R/remotes_2.4.2.1.tar.gz) = c51938670f7ceb41c6a8b1ba83f5a9de927295510b474db1154dc9341c337192
+SHA512 (R/remotes_2.4.2.1.tar.gz) = 934db86a83fbe31cea2721bd4dec6325de9badc5f8525c612f3a7a4d0ec46083f7fcc75a8cf91a3c9052c68b2934dcb067b01f0579f51a159c13ee94d0f496a3
+Size (R/remotes_2.4.2.1.tar.gz) = 152560 bytes
