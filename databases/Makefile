@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.700 2024/01/10 16:32:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.701 2024/01/22 16:46:16 adam Exp $
 
 COMMENT=	Databases
 
@@ -311,14 +311,6 @@ SUBDIR+=	postgresql-postgis2
 SUBDIR+=	postgresql-redislog
 SUBDIR+=	postgresql-timescaledb
 SUBDIR+=	postgresql-wal2json
-SUBDIR+=	postgresql11
-SUBDIR+=	postgresql11-client
-SUBDIR+=	postgresql11-contrib
-SUBDIR+=	postgresql11-docs
-SUBDIR+=	postgresql11-plperl
-SUBDIR+=	postgresql11-plpython
-SUBDIR+=	postgresql11-pltcl
-SUBDIR+=	postgresql11-server
 SUBDIR+=	postgresql12
 SUBDIR+=	postgresql12-client
 SUBDIR+=	postgresql12-contrib
