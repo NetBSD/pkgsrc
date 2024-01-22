@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/30 05:26:10 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/01/22 23:35:47 mef Exp $
 
-BLAKE2s (R/rprojroot_2.0.3.tar.gz) = 051c214ce1086c3dfb09d667a16864d298690cfd8fef98691d345e39b09a3cae
-SHA512 (R/rprojroot_2.0.3.tar.gz) = ffe7e82e3647760f29a57ffa341026df76888ad4ff4cc29443c878b1f5b268f60b68d374f3579e4101601cdf84fbbbd8a9c996d3d84b23aa98ffe3710b82b73d
-Size (R/rprojroot_2.0.3.tar.gz) = 59939 bytes
+BLAKE2s (R/rprojroot_2.0.4.tar.gz) = 30264dc33d1308a0a330c5f8ac5e77681326f29b30bd3de3a00f8bdb849e8183
+SHA512 (R/rprojroot_2.0.4.tar.gz) = 27a07b4246aedc09495ab95bb08c2de33daca18d26389b333ecd92294a8b0cd7245990d9bf2e8592aa87dac91d10afb779dd948ced0342ccab0af0228c86827c
+Size (R/rprojroot_2.0.4.tar.gz) = 59946 bytes
