@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2024/01/17 20:10:25 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2024/01/22 07:25:44 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.6
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.16
@@ -9,12 +9,16 @@ CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	crossterm-0.27.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
+CARGO_CRATE_DEPENDS+=	dirs-next-2.0.0
+CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.2
 CARGO_CRATE_DEPENDS+=	either-1.9.0
+CARGO_CRATE_DEPENDS+=	getrandom-0.2.12
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	indoc-2.0.4
 CARGO_CRATE_DEPENDS+=	itertools-0.12.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.151
+CARGO_CRATE_DEPENDS+=	libredox-0.0.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.11
 CARGO_CRATE_DEPENDS+=	log-0.4.20
 CARGO_CRATE_DEPENDS+=	lru-0.12.1
@@ -27,6 +31,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.71
 CARGO_CRATE_DEPENDS+=	quote-1.0.33
 CARGO_CRATE_DEPENDS+=	ratatui-0.25.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
+CARGO_CRATE_DEPENDS+=	redox_users-0.4.4
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.14
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
@@ -38,6 +43,8 @@ CARGO_CRATE_DEPENDS+=	strum-0.25.0
 CARGO_CRATE_DEPENDS+=	strum_macros-0.25.3
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.43
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.55
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.55
 CARGO_CRATE_DEPENDS+=	tui-textarea-0.4.0
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.10.1
