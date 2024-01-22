@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/12 13:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/01/22 13:16:56 ryoon Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/alsa/}
