@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2022/10/31 17:32:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/01/22 16:35:25 adam Exp $
 # used by sysutils/salt/Makefile
 # used by sysutils/salt-docs/Makefile
 
-DISTNAME=	salt-3005.1
+DISTNAME=	salt-3006.5
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -13,4 +13,4 @@ LICENSE=	apache-2.0
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/salt/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/salt/patches
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
