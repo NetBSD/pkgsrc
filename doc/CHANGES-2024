@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.560 2024/01/22 07:29:09 pin Exp $
+$NetBSD: CHANGES-2024,v 1.561 2024/01/22 07:32:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -713,3 +713,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/qcalc to 0.4.1 [pin 2024-01-22]
 	Updated misc/tailspin to 3.0.0 [pin 2024-01-22]
 	Updated sysutils/treegrep to 0.1.3 [pin 2024-01-22]
+	Added audio/sptui version 0.1.1 [pin 2024-01-22]
