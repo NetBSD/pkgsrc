@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/22 07:31:08 pin Exp $
+bin/sptui

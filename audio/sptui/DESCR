@@ -1,0 +1,2 @@
+sptui is a Spotify TUI player, written in Go and leveraging the bubbletea
+library.
