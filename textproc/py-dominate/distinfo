@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/08/30 14:47:54 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/01/22 09:14:48 adam Exp $
 
-BLAKE2s (dominate-2.8.0.tar.gz) = 442dc8f6941b21700c8be5194173de1f695f3f681b1457e14474244a5189f58f
-SHA512 (dominate-2.8.0.tar.gz) = 91b392af8e081dcf0df9f09aabe2cb4d8147bb07a398c5f9f06443fc2664d881afa372c8d4d0583b21e9f9bf687d1d14601e96a33a8ae6e099e1e039821f97df
-Size (dominate-2.8.0.tar.gz) = 37089 bytes
+BLAKE2s (dominate-2.9.1.tar.gz) = 5a071094ec3f8434258876ba5f461bf262b217d0563bac2f5add82922caedebf
+SHA512 (dominate-2.9.1.tar.gz) = 690f7228957cfc3c673bb1863f4e7d15c5e717c4bde24eb8280efc1be07cd50fae514a10b3208ee1b37e4d19d513622c7768b9efb61f11c286430832e873e8e5
+Size (dominate-2.9.1.tar.gz) = 37715 bytes

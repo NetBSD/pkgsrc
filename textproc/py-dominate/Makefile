@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/11/05 22:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/22 09:14:48 adam Exp $
 
-DISTNAME=	dominate-2.8.0
+DISTNAME=	dominate-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dominate/}
@@ -10,14 +10,12 @@ HOMEPAGE=	https://github.com/Knio/dominate
 COMMENT=	Python library for creating and manipulating HTML documents
 LICENSE=	gnu-lgpl-v3
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-PYTHON_VERSIONS_INCOMPATIBLE=	312
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
