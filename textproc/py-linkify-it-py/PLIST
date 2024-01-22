@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/22 16:24:13 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/linkify_it/__init__.py
+${PYSITELIB}/linkify_it/__init__.pyc
+${PYSITELIB}/linkify_it/__init__.pyo
+${PYSITELIB}/linkify_it/main.py
+${PYSITELIB}/linkify_it/main.pyc
+${PYSITELIB}/linkify_it/main.pyo
+${PYSITELIB}/linkify_it/tlds.py
+${PYSITELIB}/linkify_it/tlds.pyc
+${PYSITELIB}/linkify_it/tlds.pyo
+${PYSITELIB}/linkify_it/ucre.py
+${PYSITELIB}/linkify_it/ucre.pyc
+${PYSITELIB}/linkify_it/ucre.pyo

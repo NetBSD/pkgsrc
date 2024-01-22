@@ -1,0 +1,2 @@
+This is Python port of linkify-it. Links recognition library with FULL unicode
+support. Focused on high quality link patterns detection in plain text.
