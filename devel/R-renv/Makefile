@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/06/18 14:10:23 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/22 13:50:34 mef Exp $
 
 R_PKGNAME=	renv
-R_PKGVER=	0.17.3
+R_PKGVER=	1.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ USE_LANGUAGES=	# none
 REPLACE_SH=	inst/bin/renv inst/resources/scripts-git-askpass.sh
 
 # Packages suggested but not available:
-#   'BiocManager', 'packrat', 'reticulate'
+#  'BiocManager', 'packrat', 'reticulate', 'webfakes'
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
