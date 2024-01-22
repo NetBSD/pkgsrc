@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/01/22 13:34:43 adam Exp $
+
+pdm-pep517 has been deprecated.
+
+--- pyproject.toml.orig	2024-01-22 13:31:13.931157578 +0000
++++ pyproject.toml
+@@ -37,6 +37,6 @@ profile = "black"
+ 
+ [build-system]
+ requires = [
+-    "pdm-pep517>=1.0.0",
++    "pdm-backend",
+ ]
+-build-backend = "pdm.pep517.api"
++build-backend = "pdm.backend"
