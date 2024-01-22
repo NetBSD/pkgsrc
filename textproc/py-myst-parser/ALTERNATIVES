@@ -1,0 +1,8 @@
+bin/myst-anchors @PREFIX@/bin/myst-anchors-@PYVERSSUFFIX@
+bin/myst-docutils-demo @PREFIX@/bin/myst-docutils-demo-@PYVERSSUFFIX@
+bin/myst-docutils-html @PREFIX@/bin/myst-docutils-html-@PYVERSSUFFIX@
+bin/myst-docutils-html5 @PREFIX@/bin/myst-docutils-html5-@PYVERSSUFFIX@
+bin/myst-docutils-latex @PREFIX@/bin/myst-docutils-latex-@PYVERSSUFFIX@
+bin/myst-docutils-pseudoxml @PREFIX@/bin/myst-docutils-pseudoxml-@PYVERSSUFFIX@
+bin/myst-docutils-xml @PREFIX@/bin/myst-docutils-xml-@PYVERSSUFFIX@
+bin/myst-inv @PREFIX@/bin/myst-inv-@PYVERSSUFFIX@
