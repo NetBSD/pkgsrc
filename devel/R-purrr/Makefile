@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/05 14:14:37 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/22 12:17:12 mef Exp $
 
 R_PKGNAME=	purrr
-R_PKGVER=	1.0.1
+R_PKGVER=	1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +20,13 @@ TEST_DEPENDS+=	R-lubridate-[0-9]*:../../time/R-lubridate
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyselect-[0-9]*:../../devel/R-tidyselect
+
+# !pdfTeX error: pdflatex (file tctt1000): Font tctt1000 at 600 not found
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c
 
