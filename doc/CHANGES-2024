@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.556 2024/01/22 07:23:50 pin Exp $
+$NetBSD: CHANGES-2024,v 1.557 2024/01/22 07:24:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-pkgcache to 2.2.1 [mef 2024-01-22]
 	Updated devel/cargo-modules to 0.13.5 [pin 2024-01-22]
 	Updated sysutils/dua-cli to 2.27.1 [pin 2024-01-22]
+	Updated shells/oh-my-posh to 19.8.0 [pin 2024-01-22]
