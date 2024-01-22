@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/10/28 19:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/01/22 19:32:39 adam Exp $
 
-DISTNAME=	django_mptt-0.15.0
+DISTNAME=	django_mptt-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-mptt/}
 
@@ -12,7 +11,6 @@ COMMENT=	Utilities for implementing Modified Preorder Tree Traversal
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-js-asset-[0-9]*:../../www/py-django-js-asset
 
 USE_LANGUAGES=	# none
