@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2023/12/11 09:43:08 wiz Exp $
+$NetBSD: distinfo,v 1.36 2024/01/22 19:50:30 adam Exp $
 
-BLAKE2s (bitarray-2.8.5.tar.gz) = e8daca7df1841f1d918027a2cbaa7435559d613b0c5b457750992e5fc236f67b
-SHA512 (bitarray-2.8.5.tar.gz) = fcae4223608cf308bd1ce07749de2a0c3f00c5d0ff471b25da8c0cc5c289b3776aea0ff24fc7be6b8b89fb86ce268a1989488559b0ed9b08a347d3bb476daaa6
-Size (bitarray-2.8.5.tar.gz) = 129895 bytes
+BLAKE2s (bitarray-2.9.2.tar.gz) = 28f1f3ad6de645e8d8a03e6007f27d12a7af8df8e1e76aab303e89b901a5ca8c
+SHA512 (bitarray-2.9.2.tar.gz) = fe7ea6fa35de53a0cbd1042cf7a596080690b94771d160b6659f085c969d29d8f816ffda14d3b3a16fb398573410cfdb53183704cf846e94af942b6dad9708fb
+Size (bitarray-2.9.2.tar.gz) = 132825 bytes
