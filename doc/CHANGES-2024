@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.566 2024/01/22 12:17:25 mef Exp $
+$NetBSD: CHANGES-2024,v 1.567 2024/01/22 12:38:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/postgresql-timescaledb to 2.13.1 [adam 2024-01-22]
 	Updated textproc/py-dominate to 2.9.1 [adam 2024-01-22]
 	Updated devel/R-purrr to 1.0.2 [mef 2024-01-22]
+	Updated devel/R-rematch to 2.0.0 [mef 2024-01-22]
