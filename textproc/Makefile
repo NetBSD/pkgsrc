@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1446 2024/01/18 19:21:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.1447 2024/01/22 16:20:18 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1100,6 +1100,7 @@ SUBDIR+=	py-markovify
 SUBDIR+=	py-markuppy
 SUBDIR+=	py-markups
 SUBDIR+=	py-markupsafe
+SUBDIR+=	py-mdit-py-plugins
 SUBDIR+=	py-mecab
 SUBDIR+=	py-merge3
 SUBDIR+=	py-mistune
@@ -1171,12 +1172,14 @@ SUBDIR+=	py-sphinxcontrib-applehelp
 SUBDIR+=	py-sphinxcontrib-bibtex
 SUBDIR+=	py-sphinxcontrib-devhelp
 SUBDIR+=	py-sphinxcontrib-htmlhelp
+SUBDIR+=	py-sphinxcontrib-httpdomain
 SUBDIR+=	py-sphinxcontrib-jquery
 SUBDIR+=	py-sphinxcontrib-jsmath
 SUBDIR+=	py-sphinxcontrib-log-cabinet
 SUBDIR+=	py-sphinxcontrib-newsfeed
 SUBDIR+=	py-sphinxcontrib-qthelp
 SUBDIR+=	py-sphinxcontrib-serializinghtml
+SUBDIR+=	py-sphinxcontrib-spelling
 SUBDIR+=	py-sphinxcontrib-websupport
 SUBDIR+=	py-sphobjinv
 SUBDIR+=	py-tablib
