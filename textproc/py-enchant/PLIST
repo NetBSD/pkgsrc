@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2014/07/22 10:22:39 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/eager_resources.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/01/22 13:28:38 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/enchant/__init__.py
 ${PYSITELIB}/enchant/__init__.pyc
 ${PYSITELIB}/enchant/__init__.pyo
@@ -19,9 +19,6 @@ ${PYSITELIB}/enchant/checker/GtkSpellCheckerDialog.pyo
 ${PYSITELIB}/enchant/checker/__init__.py
 ${PYSITELIB}/enchant/checker/__init__.pyc
 ${PYSITELIB}/enchant/checker/__init__.pyo
-${PYSITELIB}/enchant/checker/tests.py
-${PYSITELIB}/enchant/checker/tests.pyc
-${PYSITELIB}/enchant/checker/tests.pyo
 ${PYSITELIB}/enchant/checker/wxSpellCheckerDialog.py
 ${PYSITELIB}/enchant/checker/wxSpellCheckerDialog.pyc
 ${PYSITELIB}/enchant/checker/wxSpellCheckerDialog.pyo
@@ -31,18 +28,12 @@ ${PYSITELIB}/enchant/errors.pyo
 ${PYSITELIB}/enchant/pypwl.py
 ${PYSITELIB}/enchant/pypwl.pyc
 ${PYSITELIB}/enchant/pypwl.pyo
-${PYSITELIB}/enchant/tests.py
-${PYSITELIB}/enchant/tests.pyc
-${PYSITELIB}/enchant/tests.pyo
 ${PYSITELIB}/enchant/tokenize/__init__.py
 ${PYSITELIB}/enchant/tokenize/__init__.pyc
 ${PYSITELIB}/enchant/tokenize/__init__.pyo
 ${PYSITELIB}/enchant/tokenize/en.py
 ${PYSITELIB}/enchant/tokenize/en.pyc
 ${PYSITELIB}/enchant/tokenize/en.pyo
-${PYSITELIB}/enchant/tokenize/tests.py
-${PYSITELIB}/enchant/tokenize/tests.pyc
-${PYSITELIB}/enchant/tokenize/tests.pyo
 ${PYSITELIB}/enchant/utils.py
 ${PYSITELIB}/enchant/utils.pyc
 ${PYSITELIB}/enchant/utils.pyo
