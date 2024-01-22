@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2023/12/13 19:17:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/01/22 19:26:48 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jnpr/junos/__init__.py
 ${PYSITELIB}/jnpr/junos/__init__.pyc
 ${PYSITELIB}/jnpr/junos/__init__.pyo
@@ -321,8 +327,3 @@ ${PYSITELIB}/jnpr/junos/version.py
 ${PYSITELIB}/jnpr/junos/version.pyc
 ${PYSITELIB}/jnpr/junos/version.pyo
 ${PYSITELIB}/junos_eznc-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
