@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.165 2024/01/06 19:00:19 he Exp $
+$NetBSD: distinfo,v 1.166 2024/01/22 11:00:16 adam Exp $
 
 BLAKE2s (rust-1.73.0-aarch64-apple-darwin.tar.gz) = 6d789c5a388ba8db0d1eb906187fc57415cfe7c91fc20a75f051f944d9efc2c6
 SHA512 (rust-1.73.0-aarch64-apple-darwin.tar.gz) = 6c7093851069584312228c39f7f2ec67739278afd776ba4194684ec27dd523676acf4d97bc7ae662e50f3d0d955c31f356502bf6cd5aebe4f76b0b89a3b202c3
@@ -139,7 +139,7 @@ SHA1 (patch-src_llvm-project_llvm_lib_Support_BLAKE3_blake3__impl.h) = 67e93f198
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2587c2f4d11ad8f75bf8a16de625135b26bacc15
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = e1af7fde97416e0a269ee34efd37f4f47fcf7a95
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 60713699c968f3e389f486e796009d31a5048906
-SHA1 (patch-src_tools_rust-installer_install-template.sh) = 28fbfd37793c8438a603cb0e19483bd5b9138e4b
+SHA1 (patch-src_tools_rust-installer_install-template.sh) = 8ad07786eab74fa23890d16520123e3a36f67d7b
 SHA1 (patch-vendor_backtrace_src_symbolize_gimli.rs) = b93148ff72a60a17c6a444f2616386c40d872153
 SHA1 (patch-vendor_backtrace_src_symbolize_gimli_elf.rs) = 308538090d9ce11d206d6eef0e675581a1fc6e80
 SHA1 (patch-vendor_cc-1.0.73_src_lib.rs) = 98acea9fb98898f63bbb0f6555df5e4b15da2b85
