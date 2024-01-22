@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/22 13:34:19 adam Exp $
 
-BLAKE2s (jsonref-0.2.tar.gz) = 281f7c76c966d848f35019966aca1b48ea5a84d1b67ac04cf56c03176fe4c1d2
-SHA512 (jsonref-0.2.tar.gz) = 415eaefcaf2c7a02bf70749522fef0d96f1e0cc5772edd50ca016a564258df21dd3eb178b7a33ee61e606125fb802a29b0cb8855a81c6116baf6393208927b0f
-Size (jsonref-0.2.tar.gz) = 13032 bytes
+BLAKE2s (jsonref-1.1.0.tar.gz) = 03287f32104bf275381c268b60ee6a0bc87e25d7c59fa16e70a0b50fe0dd26f8
+SHA512 (jsonref-1.1.0.tar.gz) = 6992c5bdf89aa44a6379a16d0184d2c1578c8ceaf143c20e5f83242c6369c86749dcd5da21545ea9fee2322e8ad2bdec5d268b27918fcd1f7624c8fe1f87f12e
+Size (jsonref-1.1.0.tar.gz) = 8814 bytes
+SHA1 (patch-pyproject.toml) = 64f7b77782bac9cd34dd2f6c71ca04a874a20d99
