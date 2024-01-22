@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/06/05 14:14:37 mef Exp $
+$NetBSD: distinfo,v 1.9 2024/01/22 12:17:12 mef Exp $
 
-BLAKE2s (R/purrr_1.0.1.tar.gz) = b0bd60b5c2067fc2c287a282bbc119a41656c5d8da7a9f87a6ed2e09c56ab65f
-SHA512 (R/purrr_1.0.1.tar.gz) = 85c75ea99ea582c1d0babcfbfce736f34408a003f0440314e3f4ea005459e9f91a3ab80f072c4ac022c22a5411f76a6324b3261478d9c9a9b12e83120afa78bc
-Size (R/purrr_1.0.1.tar.gz) = 220628 bytes
+BLAKE2s (R/purrr_1.0.2.tar.gz) = 95e6f84201de912e92ce107ce12880d65dc2decadf8fd634b813c3ccbb2b2d4b
+SHA512 (R/purrr_1.0.2.tar.gz) = 7d3260c22a3f4969f83d3015643de686f9140a85e36c3ccf87717b58b1ea75c65f3e169a259acfa5c130afdf8996655c27deb355a19dec6b9bf7c351ab71a11f
+Size (R/purrr_1.0.2.tar.gz) = 220868 bytes
