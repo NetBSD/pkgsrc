@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.578 2024/01/22 19:50:53 adam Exp $
+$NetBSD: CHANGES-2024,v 1.579 2024/01/22 22:54:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-mptt to 0.16.0 [adam 2024-01-22]
 	Updated databases/py-apsw to 3.45.0.0 [adam 2024-01-22]
 	Updated devel/py-bitarray to 2.9.2 [adam 2024-01-22]
+	Updated devel/R-rlang to 1.1.3 [mef 2024-01-22]
