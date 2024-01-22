@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/15 01:21:16 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/22 03:29:00 mef Exp $
 
 R_PKGNAME=	pkgcache
-R_PKGVER=	2.1.1
+R_PKGVER=	2.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,9 +23,8 @@ DEPENDS+=	R-curl>=3.2:../../www/R-curl
 DEPENDS+=	R-filelock-[0-9]*:../../devel/R-filelock
 DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
 
-# Packages suggested but not available: 'debugme'
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
-#TEST_DEPENDS+=	R-debugme-[0-9]*:
+TEST_DEPENDS+=	R-debugme-[0-9]*:../../devel/R-debugme
 TEST_DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 TEST_DEPENDS+=	R-pingr-[0-9]*:../../net/R-pingr
@@ -34,6 +33,12 @@ TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
 TEST_DEPENDS+=	R-webfakes>=1.1.5:../../www/R-webfakes
 TEST_DEPENDS+=	R-zip-[0-9]*:../../archivers/R-zip
 
+# !pdfTeX error: pdflatex (file tctt1000): Font tctt1000 at 600 not found
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c
 
