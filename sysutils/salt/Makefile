@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.82 2023/08/14 05:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/01/22 16:35:25 adam Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Remote execution and configuration management system
@@ -9,14 +8,18 @@ DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.9.8:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
+DEPENDS+=	${PYPKGPREFIX}-looseversion-[0-9]*:../../devel/py-looseversion
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.6:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.0.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-zmq>=19.0.2:../../net/py-zmq
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 BUILD_DEFS+=	VARBASE
 
