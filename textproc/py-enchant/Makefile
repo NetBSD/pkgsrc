@@ -1,33 +1,28 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/01/22 13:28:38 adam Exp $
 
-DISTNAME=	pyenchant-2.0.0
+DISTNAME=	pyenchant-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyenchant/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pythonhosted.org/pyenchant/
+HOMEPAGE=	https://pyenchant.github.io/pyenchant/
 COMMENT=	Spellchecking library for Python
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../lang/python/pyversion.mk"
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	enchant2-[0-9]*:../../textproc/enchant2
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
-DLEXT.dylib=		dylib
-DLEXT=			${DLEXT.${SHLIB_TYPE}:Uso}
-PYENCHANT_LIBRARY_PATH=	${PREFIX}/lib/libenchant-2.${DLEXT}
+SOEXT.dylib=	dylib
+SOEXT=		${SOEXT.${SHLIB_TYPE}:Uso}
+MAKE_ENV+=	PYENCHANT_LIBRARY_PATH=${PREFIX}/lib/libenchant-2.${SOEXT}
 
-# fix the path of libenchant with patch-ab.
-SUBST_CLASSES+=		dlpath
-SUBST_STAGE.dlpath=	pre-configure
-SUBST_FILES.dlpath=	enchant/_enchant.py
-SUBST_VARS.dlpath=	PYENCHANT_LIBRARY_PATH
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
