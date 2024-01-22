@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.34 2023/11/07 22:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/22 16:35:25 adam Exp $
 
-PKGREVISION= 2
 .include "../../sysutils/salt/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-docs-/}
@@ -10,7 +9,11 @@ COMMENT=	Documentation for salt
 USE_TOOLS+=	gmake pax
 
 TOOL_DEPENDS+=	salt-[0-9]*:../../sysutils/salt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-linkify-it-py-[0-9]*:../../textproc/py-linkify-it-py
+TOOL_DEPENDS+=	${PYPKGPREFIX}-looseversion-[0-9]*:../../devel/py-looseversion
+TOOL_DEPENDS+=	${PYPKGPREFIX}-myst-parser-[0-9]*:../../textproc/py-myst-parser
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-httpdomain-[0-9]*:../../textproc/py-sphinxcontrib-httpdomain
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-spelling-[0-9]*:../../textproc/py-sphinxcontrib-spelling
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
@@ -23,7 +26,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 INSTALLATION_DIRS=	${HTMLDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
 
 # Contains hardcoded paths that may refer to paths used during the build, for
 # example /opt/tools on SmartOS.

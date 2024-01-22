@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2022/10/31 17:32:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/01/22 16:35:25 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -7,6 +7,7 @@ bin/salt-cp
 bin/salt-key
 bin/salt-master
 bin/salt-minion
+bin/salt-pip
 bin/salt-proxy
 bin/salt-run
 bin/salt-ssh
@@ -40,9 +41,7 @@ ${PYSITELIB}/salt/_logging/mixins.pyo
 ${PYSITELIB}/salt/_syspaths.py
 ${PYSITELIB}/salt/_syspaths.pyc
 ${PYSITELIB}/salt/_syspaths.pyo
-${PYSITELIB}/salt/_version.py
-${PYSITELIB}/salt/_version.pyc
-${PYSITELIB}/salt/_version.pyo
+${PYSITELIB}/salt/_version.txt
 ${PYSITELIB}/salt/acl/__init__.py
 ${PYSITELIB}/salt/acl/__init__.pyc
 ${PYSITELIB}/salt/acl/__init__.pyo
@@ -530,6 +529,9 @@ ${PYSITELIB}/salt/engines/script.pyo
 ${PYSITELIB}/salt/engines/slack.py
 ${PYSITELIB}/salt/engines/slack.pyc
 ${PYSITELIB}/salt/engines/slack.pyo
+${PYSITELIB}/salt/engines/slack_bolt_engine.py
+${PYSITELIB}/salt/engines/slack_bolt_engine.pyc
+${PYSITELIB}/salt/engines/slack_bolt_engine.pyo
 ${PYSITELIB}/salt/engines/sqs_events.py
 ${PYSITELIB}/salt/engines/sqs_events.pyc
 ${PYSITELIB}/salt/engines/sqs_events.pyo
@@ -652,6 +654,7 @@ ${PYSITELIB}/salt/ext/tornado/platform/asyncio.pyc
 ${PYSITELIB}/salt/ext/tornado/platform/asyncio.pyo
 ${PYSITELIB}/salt/ext/tornado/platform/auto.py
 ${PYSITELIB}/salt/ext/tornado/platform/auto.pyc
+${PYSITELIB}/salt/ext/tornado/platform/auto.pyi
 ${PYSITELIB}/salt/ext/tornado/platform/auto.pyo
 ${PYSITELIB}/salt/ext/tornado/platform/caresresolver.py
 ${PYSITELIB}/salt/ext/tornado/platform/caresresolver.pyc
@@ -692,6 +695,7 @@ ${PYSITELIB}/salt/ext/tornado/routing.pyo
 ${PYSITELIB}/salt/ext/tornado/simple_httpclient.py
 ${PYSITELIB}/salt/ext/tornado/simple_httpclient.pyc
 ${PYSITELIB}/salt/ext/tornado/simple_httpclient.pyo
+${PYSITELIB}/salt/ext/tornado/speedups.pyi
 ${PYSITELIB}/salt/ext/tornado/stack_context.py
 ${PYSITELIB}/salt/ext/tornado/stack_context.pyc
 ${PYSITELIB}/salt/ext/tornado/stack_context.pyo
@@ -926,6 +930,9 @@ ${PYSITELIB}/salt/grains/mdata.pyo
 ${PYSITELIB}/salt/grains/metadata.py
 ${PYSITELIB}/salt/grains/metadata.pyc
 ${PYSITELIB}/salt/grains/metadata.pyo
+${PYSITELIB}/salt/grains/metadata_azure.py
+${PYSITELIB}/salt/grains/metadata_azure.pyc
+${PYSITELIB}/salt/grains/metadata_azure.pyo
 ${PYSITELIB}/salt/grains/metadata_gce.py
 ${PYSITELIB}/salt/grains/metadata_gce.pyc
 ${PYSITELIB}/salt/grains/metadata_gce.pyo
@@ -974,6 +981,9 @@ ${PYSITELIB}/salt/loader/__init__.pyo
 ${PYSITELIB}/salt/loader/context.py
 ${PYSITELIB}/salt/loader/context.pyc
 ${PYSITELIB}/salt/loader/context.pyo
+${PYSITELIB}/salt/loader/dunder.py
+${PYSITELIB}/salt/loader/dunder.pyc
+${PYSITELIB}/salt/loader/dunder.pyo
 ${PYSITELIB}/salt/loader/lazy.py
 ${PYSITELIB}/salt/loader/lazy.pyc
 ${PYSITELIB}/salt/loader/lazy.pyo
@@ -2537,6 +2547,9 @@ ${PYSITELIB}/salt/modules/win_dns_client.pyo
 ${PYSITELIB}/salt/modules/win_dsc.py
 ${PYSITELIB}/salt/modules/win_dsc.pyc
 ${PYSITELIB}/salt/modules/win_dsc.pyo
+${PYSITELIB}/salt/modules/win_event.py
+${PYSITELIB}/salt/modules/win_event.pyc
+${PYSITELIB}/salt/modules/win_event.pyo
 ${PYSITELIB}/salt/modules/win_file.py
 ${PYSITELIB}/salt/modules/win_file.pyc
 ${PYSITELIB}/salt/modules/win_file.pyo
@@ -2555,6 +2568,9 @@ ${PYSITELIB}/salt/modules/win_ip.pyo
 ${PYSITELIB}/salt/modules/win_lgpo.py
 ${PYSITELIB}/salt/modules/win_lgpo.pyc
 ${PYSITELIB}/salt/modules/win_lgpo.pyo
+${PYSITELIB}/salt/modules/win_lgpo_reg.py
+${PYSITELIB}/salt/modules/win_lgpo_reg.pyc
+${PYSITELIB}/salt/modules/win_lgpo_reg.pyo
 ${PYSITELIB}/salt/modules/win_license.py
 ${PYSITELIB}/salt/modules/win_license.pyc
 ${PYSITELIB}/salt/modules/win_license.pyo
@@ -2627,6 +2643,9 @@ ${PYSITELIB}/salt/modules/wordpress.pyo
 ${PYSITELIB}/salt/modules/x509.py
 ${PYSITELIB}/salt/modules/x509.pyc
 ${PYSITELIB}/salt/modules/x509.pyo
+${PYSITELIB}/salt/modules/x509_v2.py
+${PYSITELIB}/salt/modules/x509_v2.pyc
+${PYSITELIB}/salt/modules/x509_v2.pyo
 ${PYSITELIB}/salt/modules/xapi_virt.py
 ${PYSITELIB}/salt/modules/xapi_virt.pyc
 ${PYSITELIB}/salt/modules/xapi_virt.pyo
@@ -3233,6 +3252,9 @@ ${PYSITELIB}/salt/roster/scan.pyo
 ${PYSITELIB}/salt/roster/sshconfig.py
 ${PYSITELIB}/salt/roster/sshconfig.pyc
 ${PYSITELIB}/salt/roster/sshconfig.pyo
+${PYSITELIB}/salt/roster/sshknownhosts.py
+${PYSITELIB}/salt/roster/sshknownhosts.pyc
+${PYSITELIB}/salt/roster/sshknownhosts.pyo
 ${PYSITELIB}/salt/roster/terraform.py
 ${PYSITELIB}/salt/roster/terraform.pyc
 ${PYSITELIB}/salt/roster/terraform.pyo
@@ -3434,6 +3456,9 @@ ${PYSITELIB}/salt/serializers/configparser.pyo
 ${PYSITELIB}/salt/serializers/json.py
 ${PYSITELIB}/salt/serializers/json.pyc
 ${PYSITELIB}/salt/serializers/json.pyo
+${PYSITELIB}/salt/serializers/keyvalue.py
+${PYSITELIB}/salt/serializers/keyvalue.pyc
+${PYSITELIB}/salt/serializers/keyvalue.pyo
 ${PYSITELIB}/salt/serializers/msgpack.py
 ${PYSITELIB}/salt/serializers/msgpack.pyc
 ${PYSITELIB}/salt/serializers/msgpack.pyo
@@ -3443,9 +3468,9 @@ ${PYSITELIB}/salt/serializers/plist.pyo
 ${PYSITELIB}/salt/serializers/python.py
 ${PYSITELIB}/salt/serializers/python.pyc
 ${PYSITELIB}/salt/serializers/python.pyo
-${PYSITELIB}/salt/serializers/toml.py
-${PYSITELIB}/salt/serializers/toml.pyc
-${PYSITELIB}/salt/serializers/toml.pyo
+${PYSITELIB}/salt/serializers/tomlmod.py
+${PYSITELIB}/salt/serializers/tomlmod.pyc
+${PYSITELIB}/salt/serializers/tomlmod.pyo
 ${PYSITELIB}/salt/serializers/yaml.py
 ${PYSITELIB}/salt/serializers/yaml.pyc
 ${PYSITELIB}/salt/serializers/yaml.pyo
@@ -4130,6 +4155,9 @@ ${PYSITELIB}/salt/states/openstack_config.pyo
 ${PYSITELIB}/salt/states/openvswitch_bridge.py
 ${PYSITELIB}/salt/states/openvswitch_bridge.pyc
 ${PYSITELIB}/salt/states/openvswitch_bridge.pyo
+${PYSITELIB}/salt/states/openvswitch_db.py
+${PYSITELIB}/salt/states/openvswitch_db.pyc
+${PYSITELIB}/salt/states/openvswitch_db.pyo
 ${PYSITELIB}/salt/states/openvswitch_port.py
 ${PYSITELIB}/salt/states/openvswitch_port.pyc
 ${PYSITELIB}/salt/states/openvswitch_port.pyo
@@ -4352,6 +4380,9 @@ ${PYSITELIB}/salt/states/svn.pyo
 ${PYSITELIB}/salt/states/sysctl.py
 ${PYSITELIB}/salt/states/sysctl.pyc
 ${PYSITELIB}/salt/states/sysctl.pyo
+${PYSITELIB}/salt/states/sysfs.py
+${PYSITELIB}/salt/states/sysfs.pyc
+${PYSITELIB}/salt/states/sysfs.pyo
 ${PYSITELIB}/salt/states/syslog_ng.py
 ${PYSITELIB}/salt/states/syslog_ng.pyc
 ${PYSITELIB}/salt/states/syslog_ng.pyo
@@ -4430,6 +4461,9 @@ ${PYSITELIB}/salt/states/win_iis.pyo
 ${PYSITELIB}/salt/states/win_lgpo.py
 ${PYSITELIB}/salt/states/win_lgpo.pyc
 ${PYSITELIB}/salt/states/win_lgpo.pyo
+${PYSITELIB}/salt/states/win_lgpo_reg.py
+${PYSITELIB}/salt/states/win_lgpo_reg.pyc
+${PYSITELIB}/salt/states/win_lgpo_reg.pyo
 ${PYSITELIB}/salt/states/win_license.py
 ${PYSITELIB}/salt/states/win_license.pyc
 ${PYSITELIB}/salt/states/win_license.pyo
@@ -4475,6 +4509,9 @@ ${PYSITELIB}/salt/states/wordpress.pyo
 ${PYSITELIB}/salt/states/x509.py
 ${PYSITELIB}/salt/states/x509.pyc
 ${PYSITELIB}/salt/states/x509.pyo
+${PYSITELIB}/salt/states/x509_v2.py
+${PYSITELIB}/salt/states/x509_v2.pyc
+${PYSITELIB}/salt/states/x509_v2.pyo
 ${PYSITELIB}/salt/states/xml.py
 ${PYSITELIB}/salt/states/xml.pyc
 ${PYSITELIB}/salt/states/xml.pyo
@@ -4683,9 +4720,6 @@ ${PYSITELIB}/salt/utils/azurearm.pyo
 ${PYSITELIB}/salt/utils/beacons.py
 ${PYSITELIB}/salt/utils/beacons.pyc
 ${PYSITELIB}/salt/utils/beacons.pyo
-${PYSITELIB}/salt/utils/boto3_elasticsearch.py
-${PYSITELIB}/salt/utils/boto3_elasticsearch.pyc
-${PYSITELIB}/salt/utils/boto3_elasticsearch.pyo
 ${PYSITELIB}/salt/utils/boto3mod.py
 ${PYSITELIB}/salt/utils/boto3mod.pyc
 ${PYSITELIB}/salt/utils/boto3mod.pyo
@@ -5007,24 +5041,6 @@ ${PYSITELIB}/salt/utils/pycrypto.pyo
 ${PYSITELIB}/salt/utils/pydsl.py
 ${PYSITELIB}/salt/utils/pydsl.pyc
 ${PYSITELIB}/salt/utils/pydsl.pyo
-${PYSITELIB}/salt/utils/pyinstaller/__init__.py
-${PYSITELIB}/salt/utils/pyinstaller/__init__.pyc
-${PYSITELIB}/salt/utils/pyinstaller/__init__.pyo
-${PYSITELIB}/salt/utils/pyinstaller/hook-salt.py
-${PYSITELIB}/salt/utils/pyinstaller/hook-salt.pyc
-${PYSITELIB}/salt/utils/pyinstaller/hook-salt.pyo
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/__init__.py
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/__init__.pyc
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/__init__.pyo
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/_overrides.py
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/_overrides.pyc
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/_overrides.pyo
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_salt.utils.vt.py
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_salt.utils.vt.pyc
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_salt.utils.vt.pyo
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_subprocess.py
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_subprocess.pyc
-${PYSITELIB}/salt/utils/pyinstaller/rthooks/pyi_rth_subprocess.pyo
 ${PYSITELIB}/salt/utils/pyobjects.py
 ${PYSITELIB}/salt/utils/pyobjects.pyc
 ${PYSITELIB}/salt/utils/pyobjects.pyo
@@ -5169,6 +5185,9 @@ ${PYSITELIB}/salt/utils/win_lgpo_auditpol.pyo
 ${PYSITELIB}/salt/utils/win_lgpo_netsh.py
 ${PYSITELIB}/salt/utils/win_lgpo_netsh.pyc
 ${PYSITELIB}/salt/utils/win_lgpo_netsh.pyo
+${PYSITELIB}/salt/utils/win_lgpo_reg.py
+${PYSITELIB}/salt/utils/win_lgpo_reg.pyc
+${PYSITELIB}/salt/utils/win_lgpo_reg.pyo
 ${PYSITELIB}/salt/utils/win_network.py
 ${PYSITELIB}/salt/utils/win_network.pyc
 ${PYSITELIB}/salt/utils/win_network.pyo
@@ -5196,6 +5215,9 @@ ${PYSITELIB}/salt/utils/win_update.pyo
 ${PYSITELIB}/salt/utils/winapi.py
 ${PYSITELIB}/salt/utils/winapi.pyc
 ${PYSITELIB}/salt/utils/winapi.pyo
+${PYSITELIB}/salt/utils/x509.py
+${PYSITELIB}/salt/utils/x509.pyc
+${PYSITELIB}/salt/utils/x509.pyo
 ${PYSITELIB}/salt/utils/xdg.py
 ${PYSITELIB}/salt/utils/xdg.pyc
 ${PYSITELIB}/salt/utils/xdg.pyo
