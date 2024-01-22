@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.49 2023/10/01 08:20:19 wiz Exp $
+$NetBSD: distinfo,v 1.50 2024/01/22 13:09:26 ryoon Exp $
 
-BLAKE2s (libvpx-1.13.1.tar.gz) = 43dd93abcb6ca410aab9393ae5dd408ac2736aeba0f54f681acdc8e416769e79
-SHA512 (libvpx-1.13.1.tar.gz) = 49706838563c92fab7334376848d0f374efcbc1729ef511e967c908fd2ecd40e8d197f1d85da6553b3a7026bdbc17e5a76595319858af26ce58cb9a4c3854897
-Size (libvpx-1.13.1.tar.gz) = 5515662 bytes
-SHA1 (patch-build_make_Makefile) = 908b1abc8c5eed56e920f442f8f1f80c49838a6f
-SHA1 (patch-build_make_configure.sh) = 018bb2333f1de509a81ae4c7b390076043f18118
+BLAKE2s (libvpx-1.14.0.tar.gz) = 3a33d153ec455c2cb72951ca89ef04fdb1caf9d72f2f5e61bf3652950f61d51b
+SHA512 (libvpx-1.14.0.tar.gz) = 724150c5cafa934e0a8dd9aebbab8afd25aa4f584734e0de37837ec2e8bdcbd9390acd7f883665be7ecdc27af93afda737a4dea7e3bd7531abffcc5bb7c2c7d2
+Size (libvpx-1.14.0.tar.gz) = 5606471 bytes
+SHA1 (patch-build_make_Makefile) = f36e7addd3e26536e80f806e1bf759a9a72b4ce8
+SHA1 (patch-build_make_configure.sh) = ef4247ed3712ed81654f465f813160685dc09e8b
 SHA1 (patch-configure) = aeb5bfd9d58b06b4f2fdbdb8c73b03339de313e7
 SHA1 (patch-examples.mk) = 17410f43ff9952d616be3211ca697f37c107610a
 SHA1 (patch-libs.mk) = 9ddc9cb6c09c9eefce59072c2a657bc5b7e1d295
