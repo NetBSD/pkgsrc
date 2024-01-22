@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.576 2024/01/22 17:06:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.577 2024/01/22 19:32:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -738,3 +738,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed lang/nodejs16 [adam 2024-01-22]
 	Updated devel/py-nest-asyncio to 1.6.0 [adam 2024-01-22]
 	Updated www/py-notebook to 7.0.7 [adam 2024-01-22]
+	Updated net/py-junos-eznc to 2.7.0 [adam 2024-01-22]
+	Updated www/py-django-mptt to 0.16.0 [adam 2024-01-22]
