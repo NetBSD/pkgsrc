@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1447 2024/01/22 16:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.1448 2024/01/22 16:28:16 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1086,6 +1086,7 @@ SUBDIR+=	py-jxmlease
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-link-grammar
+SUBDIR+=	py-linkify-it-py
 SUBDIR+=	py-loremipsum
 SUBDIR+=	py-lsp-jsonrpc
 SUBDIR+=	py-lunr
@@ -1107,6 +1108,7 @@ SUBDIR+=	py-mistune
 SUBDIR+=	py-mkdocs
 SUBDIR+=	py-mkdocs-bootstrap
 SUBDIR+=	py-mkdocs-bootswatch
+SUBDIR+=	py-myst-parser
 SUBDIR+=	py-natsort
 SUBDIR+=	py-nltk
 SUBDIR+=	py-ntc_templates
@@ -1194,6 +1196,7 @@ SUBDIR+=	py-tomli_w
 SUBDIR+=	py-tomlkit
 SUBDIR+=	py-types-yaml
 SUBDIR+=	py-typogrify
+SUBDIR+=	py-uc-micro-py
 SUBDIR+=	py-ujson
 SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validate-pyproject
