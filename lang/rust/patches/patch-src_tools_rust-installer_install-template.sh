@@ -1,14 +1,15 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.11 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.12 2024/01/22 11:00:16 adam Exp $
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
+Do not make file backups (filename.old), so these will not end up in the final package.
 
 Rewrite to not use a whole lot of subprocesses just for doing
 pattern matching and substitution in the install phase using "grep"
 and "sed" when shell builtin "case" and "omit shortest match" ops
 should do just fine.
 
---- src/tools/rust-installer/install-template.sh.orig	2021-05-09 02:52:58.000000000 +0000
+--- src/tools/rust-installer/install-template.sh.orig	2023-12-04 19:48:34.000000000 +0000
 +++ src/tools/rust-installer/install-template.sh
 @@ -6,20 +6,12 @@ set -u
  init_logging() {
@@ -134,10 +135,12 @@ should do just fine.
  
          # Make sure there's a directory for it
          make_dir_recursive "$(dirname "$_file_install_path")"
-@@ -617,14 +600,16 @@ install_components() {
+@@ -615,16 +598,16 @@ install_components() {
  
-             maybe_backup_path "$_file_install_path"
+             verbose_msg "copying file $_file_install_path"
  
+-            maybe_backup_path "$_file_install_path"
+-
 -            if echo "$_file" | grep "^bin/" > /dev/null || test -x "$_src_dir/$_component/$_file"
 -            then
 -            run cp "$_src_dir/$_component/$_file" "$_file_install_path"
@@ -158,7 +161,15 @@ should do just fine.
              critical_need_ok "file creation failed"
  
              # Update the manifest
-@@ -986,7 +971,6 @@ write_to_file "$TEMPLATE_RUST_INSTALLER_
+@@ -637,7 +620,6 @@ install_components() {
+ 
+             verbose_msg "copying directory $_file_install_path"
+ 
+-            maybe_backup_path "$_file_install_path"
+ 
+             run cp -R "$_src_dir/$_component/$_file" "$_file_install_path"
+             critical_need_ok "failed to copy directory"
+@@ -986,7 +968,6 @@ write_to_file "$TEMPLATE_RUST_INSTALLER_
  critical_need_ok "failed to write installer version"
  
  # Install the uninstaller
