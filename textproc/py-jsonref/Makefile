@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/22 13:34:19 adam Exp $
 
-DISTNAME=	jsonref-0.2
+DISTNAME=	jsonref-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonref/}
 
@@ -11,11 +10,11 @@ HOMEPAGE=	https://github.com/gazpachoking/jsonref
 COMMENT=	JSON References for Python
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests.py
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
