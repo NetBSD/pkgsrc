@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.110 2024/01/22 09:15:45 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.111 2024/01/22 16:53:00 adam Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25854,3 +25854,4 @@ coreutils<9.4		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
 gnutls<3.8.3	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-0553
 py{27,38,39,310,311,312}-Pillow<10.2.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-50447
 postgresql-server>=11<12	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+nodejs>=16<18	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
