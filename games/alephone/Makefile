@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/12/29 18:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/01/22 13:16:57 ryoon Exp $
 
 DISTNAME=	AlephOne-20230119
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=Aleph-One-Marathon/}
 EXTRACT_SUFX=	.tar.bz2

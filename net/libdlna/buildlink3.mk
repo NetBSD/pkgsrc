@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/11/12 13:23:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2024/01/22 13:17:06 ryoon Exp $
 #
 
 BUILDLINK_TREE+=	libdlna
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libdlna
 LIBDLNA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdlna+=	libdlna>=0.2.3
-BUILDLINK_ABI_DEPENDS.libdlna+=	libdlna>=0.2.4nb14
+BUILDLINK_ABI_DEPENDS.libdlna+=	libdlna>=0.2.4nb15
 BUILDLINK_PKGSRCDIR.libdlna?=	../../net/libdlna
 
 .include "../../multimedia/ffmpeg4/buildlink3.mk"

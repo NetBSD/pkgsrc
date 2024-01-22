@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/11/12 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/22 13:16:57 ryoon Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
