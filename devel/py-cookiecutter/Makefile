@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/11/14 17:58:37 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/23 13:27:18 adam Exp $
 
-DISTNAME=	cookiecutter-2.4.0
+DISTNAME=	cookiecutter-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
