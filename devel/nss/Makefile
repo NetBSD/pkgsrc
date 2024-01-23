@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.254 2023/12/18 19:20:13 wiz Exp $
+# $NetBSD: Makefile,v 1.255 2024/01/23 00:42:19 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.96.1
+NSS_RELEASE=		3.97.0
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -20,7 +20,8 @@ CHECK_PORTABILITY_SKIP+=	configure
 CTF_SUPPORTED=		no # https://smartos.org/bugview/OS-6510
 
 USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES+=	c99
 USE_TOOLS+=		gmake perl pax pkg-config
 # Fails to detect jobserver on systems where /bin/make and /bin/gmake both
 # exist. This is because nss uses "gmake" explicitly rather than $MAKE to
