@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2023/05/17 07:55:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/01/23 20:01:03 adam Exp $
 #
 # used by math/py-z3/Makefile
 # used by math/z3/Makefile
 
-DISTNAME=	z3-4.12.2
+DISTNAME=	z3-4.12.5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Z3Prover/}
 GITHUB_PROJECT=	z3
