@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/03/09 03:44:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/01/23 00:42:19 wiz Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
@@ -48,6 +48,7 @@ include/nss/key.h
 include/nss/keyhi.h
 include/nss/keyt.h
 include/nss/keythi.h
+include/nss/kyber.h
 include/nss/lowkeyi.h
 include/nss/lowkeyti.h
 include/nss/nss.h
