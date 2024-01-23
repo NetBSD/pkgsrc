@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/08 14:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/23 18:27:50 adam Exp $
 
-DISTNAME=	cbor2-5.5.1
+DISTNAME=	cbor2-5.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cbor2/}
@@ -17,6 +17,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} cbor2 cbor2-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
