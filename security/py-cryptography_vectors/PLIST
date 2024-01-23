@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.25 2023/10/28 19:57:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/01/23 06:33:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-3des.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-aes128.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-aes192.txt
@@ -85,6 +84,13 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigVer.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/compressed_points.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_private_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_wap_wsg_idm_ecid_wtls11_private_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/secp128r1_private_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect163k1-spki.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect163r2-spki.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect233k1-spki.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/EC/sect233r1-spki.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_init.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_KDFConcat_NOKC_resp.fax
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDH/KASValidityTest_ECCStaticUnified_NOKC_ZZOnly_init.fax
@@ -454,6 +460,8 @@ ${PYSITELIB}/cryptography_vectors/ciphers/AES/ECB/ECBVarKey256.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/ECB/ECBVarTxt128.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/ECB/ECBVarTxt192.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/ECB/ECBVarTxt256.rsp
+${PYSITELIB}/cryptography_vectors/ciphers/AES/GCM-SIV/aes-192-gcm-siv.txt
+${PYSITELIB}/cryptography_vectors/ciphers/AES/GCM-SIV/openssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/GCM/gcmDecrypt128.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/GCM/gcmDecrypt192.rsp
 ${PYSITELIB}/cryptography_vectors/ciphers/AES/GCM/gcmDecrypt256.rsp
@@ -508,6 +516,7 @@ ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-256-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/Camellia/camellia-ofb.txt
+${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20/counter-overflow.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20/rfc7539.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/boringssl.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/ChaCha20Poly1305/openssl.txt
@@ -524,6 +533,7 @@ ${PYSITELIB}/cryptography_vectors/ciphers/SM4/draft-ribose-cfrg-sm4-10-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SM4/draft-ribose-cfrg-sm4-10-ctr.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SM4/draft-ribose-cfrg-sm4-10-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SM4/draft-ribose-cfrg-sm4-10-ofb.txt
+${PYSITELIB}/cryptography_vectors/ciphers/SM4/rfc8998.txt
 ${PYSITELIB}/cryptography_vectors/fernet/generate.json
 ${PYSITELIB}/cryptography_vectors/fernet/invalid.json
 ${PYSITELIB}/cryptography_vectors/fernet/verify.json
@@ -612,6 +622,8 @@ ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AD.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AD_inv.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AE.txt
 ${PYSITELIB}/cryptography_vectors/keywrap/kwtestvectors/TKW_AE_inv.txt
+${PYSITELIB}/cryptography_vectors/pkcs12/ca/ca.pem
+${PYSITELIB}/cryptography_vectors/pkcs12/ca/ca_key.pem
 ${PYSITELIB}/cryptography_vectors/pkcs12/cert-aes256cbc-no-key.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/cert-key-aes256cbc.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/cert-none-key-none.p12
@@ -647,6 +659,7 @@ ${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.p7b
 ${PYSITELIB}/cryptography_vectors/pkcs7/enveloped.pem
 ${PYSITELIB}/cryptography_vectors/pkcs7/isrg.pem
 ${PYSITELIB}/cryptography_vectors/poly1305/rfc7539.txt
+${PYSITELIB}/cryptography_vectors/py.typed
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-4226.txt
 ${PYSITELIB}/cryptography_vectors/twofactor/rfc-6238.txt
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/ReadMe.txt
@@ -2272,6 +2285,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_md2_unknown_crit_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_no_next_update.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unrecognized_extension.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unsupported_reason.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/dsa_null_alg_params.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_selfsigned_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ec_no_named_curve.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ecdsa_null_alg.pem
