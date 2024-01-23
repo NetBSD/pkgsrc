@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/07/06 09:39:29 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/01/23 13:33:39 mef Exp $
 
-DISTNAME=	MetaCPAN-Client-2.029000
+DISTNAME=	MetaCPAN-Client-2.031000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MICKEY/}
 
@@ -31,6 +30,8 @@ TEST_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 TEST_DEPENDS+=	p5-HTTP-Tiny-Mech-[0-9]*:../../www/p5-HTTP-Tiny-Mech
 TEST_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 TEST_DEPENDS+=	p5-Ref-Util-[0-9]*:../../devel/p5-Ref-Util
+TEST_DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
+TEST_DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
 PERL5_PACKLIST=		auto/MetaCPAN/Client/.packlist
 USE_LANGUAGES=		# none
