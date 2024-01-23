@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.585 2024/01/23 10:18:08 adam Exp $
+$NetBSD: CHANGES-2024,v 1.586 2024/01/23 10:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-timezone-field to 6.1.0 [adam 2024-01-23]
 	Updated lang/py-lsp-server to 1.10.0 [adam 2024-01-23]
 	Updated devel/py-mako to 1.3.1 [adam 2024-01-23]
+	Updated graphics/digikam to 8.2.0 [wiz 2024-01-23]
