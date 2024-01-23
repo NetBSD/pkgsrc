@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/19 17:02:53 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/23 22:14:48 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreHaptics-10.0.tar.gz) = 91f137ae778f37fea8487a3676e77cd0fb8cc5fecf8ca000368a461f5c498056
-SHA512 (pyobjc-framework-CoreHaptics-10.0.tar.gz) = 958b1cf411b9a12c7c5ee3f38fd8a153ef012fcab692289a4781b9c964f60cbffd3e3c8150a841b22f9959705920fc3f59543da1bbc74970348fd2f94554e3a8
-Size (pyobjc-framework-CoreHaptics-10.0.tar.gz) = 41517 bytes
+BLAKE2s (pyobjc-framework-CoreHaptics-10.1.tar.gz) = 29c775fdebfa031408cd83f27d74fcc7a60f2588e777447c84f40ea5f883c961
+SHA512 (pyobjc-framework-CoreHaptics-10.1.tar.gz) = bb5e3b39475182a79a4d6118e9f21dd4cfbbae936ce5c39c74acf8c07b90a6acfb0a22054d241e7d205fb90605f24929da74d03d77327f78614d89d4823593a7
+Size (pyobjc-framework-CoreHaptics-10.1.tar.gz) = 41507 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:02:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/23 22:14:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -49,6 +49,9 @@ ${PYSITELIB}/Foundation/_nsindexset.pyo
 ${PYSITELIB}/Foundation/_nsobject.py
 ${PYSITELIB}/Foundation/_nsobject.pyc
 ${PYSITELIB}/Foundation/_nsobject.pyo
+${PYSITELIB}/Foundation/_nsurl.py
+${PYSITELIB}/Foundation/_nsurl.pyc
+${PYSITELIB}/Foundation/_nsurl.pyo
 ${PYSITELIB}/PyObjCTools/AppCategories.py
 ${PYSITELIB}/PyObjCTools/AppCategories.pyc
 ${PYSITELIB}/PyObjCTools/AppCategories.pyo
