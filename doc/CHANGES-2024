@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.581 2024/01/22 23:35:57 mef Exp $
+$NetBSD: CHANGES-2024,v 1.582 2024/01/23 00:42:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -745,3 +745,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-rlang to 1.1.3 [mef 2024-01-22]
 	Updated devel/R-roxygen2 to 7.3.0 [mef 2024-01-22]
 	Updated devel/R-rprojroot to 2.0.4 [mef 2024-01-22]
+	Updated devel/nss to 3.97 [wiz 2024-01-23]
