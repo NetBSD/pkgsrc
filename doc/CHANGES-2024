@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.593 2024/01/23 13:42:06 adam Exp $
+$NetBSD: CHANGES-2024,v 1.594 2024/01/23 14:51:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -768,3 +768,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-dotenv to 1.0.1 [adam 2024-01-23]
 	Updated devel/py-serializable to 1.0.0 [adam 2024-01-23]
 	Updated comms/py-jupyter_server_terminals to 0.5.2 [adam 2024-01-23]
+	Updated devel/R-withr to 3.0.0 [mef 2024-01-23]
