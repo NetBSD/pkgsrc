@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/23 18:30:35 adam Exp $
+
+BLAKE2s (backports_strenum-1.3.1.tar.gz) = 6a2acc4e98253ca3663b5fa19409aa08a4be1ecef6c116eb36390730c7bc36d9
+SHA512 (backports_strenum-1.3.1.tar.gz) = 4dad972b4e626b37e61c63ea7cd5461336ce853c89becfacb9aac0c007e682386568e407aec66250166938f4f0ebbcf345277c5714ea80e1913a408f277bd992
+Size (backports_strenum-1.3.1.tar.gz) = 7257 bytes
