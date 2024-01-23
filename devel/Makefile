@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4162 2024/01/20 07:13:26 mef Exp $
+# $NetBSD: Makefile,v 1.4163 2024/01/23 18:30:34 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2422,6 +2422,7 @@ SUBDIR+=	py-backports
 SUBDIR+=	py-backports.functools_lru_cache
 SUBDIR+=	py-backports.os
 SUBDIR+=	py-backports.shutil_get_terminal_size
+SUBDIR+=	py-backports.strenum
 SUBDIR+=	py-backports_abc
 SUBDIR+=	py-behave
 SUBDIR+=	py-beniget
