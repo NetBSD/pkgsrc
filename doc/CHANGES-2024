@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.598 2024/01/23 20:01:26 adam Exp $
+$NetBSD: CHANGES-2024,v 1.599 2024/01/23 22:13:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -776,3 +776,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/py-backports.strenum version 1.3.1 [adam 2024-01-23]
 	Updated math/z3 to 4.12.5 [adam 2024-01-23]
 	Updated math/py-z3 to 4.12.5 [adam 2024-01-23]
+	Updated math/R-FNN to 1.1.4 [mef 2024-01-23]
