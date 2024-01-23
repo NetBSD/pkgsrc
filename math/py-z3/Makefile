@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/16 19:23:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/23 20:01:03 adam Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -7,9 +7,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Efficient SMT solver library
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
+
 USE_TOOLS+=	cmake ninja
 PYSETUPSUBDIR=	src/api/python
-EGG_NAME=	${DISTNAME:S/z3/z3_solver/}.0
+WHEEL_NAME=	${DISTNAME:S/z3/z3_solver/}.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,6 +27,6 @@ post-install:
 	${DESTDIR}${PREFIX}/${PYSITELIB}/z3/lib/libz3.dylib
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/z3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
