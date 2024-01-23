@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/23 22:44:20 mef Exp $
 
-BLAKE2s (R/MatrixModels_0.5-0.tar.gz) = 6c6190cc25849d10f72f3c4e906cdbfd01ff932b667996c78472a258f9452377
-SHA512 (R/MatrixModels_0.5-0.tar.gz) = 4804ad8dfb596697ecfd37ab013d7c05e8e99716ed2ed7a87180ad45e2acad21bce9e5742e6d812582b399155c33d9e29e2610f9ec98c56d9229c51ca9a44339
-Size (R/MatrixModels_0.5-0.tar.gz) = 24045 bytes
+BLAKE2s (R/MatrixModels_0.5-3.tar.gz) = df66c964c59a3a0482283ed1c4a6f92e2a0a10c48e6036951c2144c20cbe7229
+SHA512 (R/MatrixModels_0.5-3.tar.gz) = 01b4f6e00a4153702fa39742fab805a28f5b42354cc8225e4d88ca39d07ec5d9692ed6528e175ce7e3de6190058fad38580efbb891f1b9f85f6ecfeadffff373
+Size (R/MatrixModels_0.5-3.tar.gz) = 24822 bytes
