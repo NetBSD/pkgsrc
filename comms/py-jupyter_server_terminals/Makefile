@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/01/10 06:40:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/23 13:41:50 adam Exp $
 
-DISTNAME=	jupyter_server_terminals-0.5.1
+DISTNAME=	jupyter_server_terminals-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server-terminals/}
