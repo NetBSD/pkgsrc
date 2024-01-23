@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/11/19 17:02:51 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/23 22:14:46 adam Exp $
 
-BLAKE2s (pyobjc-framework-Automator-10.0.tar.gz) = 1c543a8e7ef7e189a52a43d721cfbfd52bc8c48e6212610673f6b2ffea34e7d2
-SHA512 (pyobjc-framework-Automator-10.0.tar.gz) = 8284e7868d782bcd3ec2a5b34e562cdd380aed82bafac2fcc7282b69932056fd21bdb79e7b3c582aaf1bc96e29cc5a386fa4f1037f1ae189dd69ee515052a311
-Size (pyobjc-framework-Automator-10.0.tar.gz) = 193682 bytes
+BLAKE2s (pyobjc-framework-Automator-10.1.tar.gz) = e4fc7d43036a68b70fb786a9ed485152a0b2b027cdbec236126438d5a0a9de07
+SHA512 (pyobjc-framework-Automator-10.1.tar.gz) = ab8d51ceccb0c74f31f8918faf65c5ac0c80c0a89263d712a1933b5cc45cd3c89ec7756c6d588ca6d6e14aa96317098555dd431d957a8437f1df37a8263d557a
+Size (pyobjc-framework-Automator-10.1.tar.gz) = 199332 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/19 17:03:04 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/23 22:14:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-ScreenCaptureKit-10.0.tar.gz) = 9b4a3a9ec0526ac57c8a2134e8cbc46ff4df44c109b3f97bc014540ed1594556
-SHA512 (pyobjc-framework-ScreenCaptureKit-10.0.tar.gz) = 277b2f14bd6b98dcc6484fb3fe5b2fb65b442cacacd5e9386f7d621fc19200bdf215b912c107e123d1945b459345f90942131e53315cb198bf3fbf8a1e09c002
-Size (pyobjc-framework-ScreenCaptureKit-10.0.tar.gz) = 38450 bytes
+BLAKE2s (pyobjc-framework-ScreenCaptureKit-10.1.tar.gz) = 3851ae42270c29c8c1da2e3048023863f80548641777d87d2f56b70991a7ba0f
+SHA512 (pyobjc-framework-ScreenCaptureKit-10.1.tar.gz) = a3a8f789f66b4b37d47a8d02734f082ebe2fdee9dfdd0c24bdeb248abde89280424bbc58f4c509bf4ee325b1bbc2f2588bc85bf11ef43b1aa35794849644db26
+Size (pyobjc-framework-ScreenCaptureKit-10.1.tar.gz) = 45381 bytes

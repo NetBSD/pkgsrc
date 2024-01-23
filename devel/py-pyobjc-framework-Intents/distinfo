@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/11/19 17:02:58 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/01/23 22:14:53 adam Exp $
 
-BLAKE2s (pyobjc-framework-Intents-10.0.tar.gz) = 9d1d34344f3f2c0d42ed6649cd254c65dc3f3bf5d7ef9638b1c747c4da2f0baf
-SHA512 (pyobjc-framework-Intents-10.0.tar.gz) = 8f114ad023aa14f3800f66c7a222fa09d235413d4424e9190da9902379afaf6527489b361b22aebe15f4887311d96d4d42c22eda08937bba199da9daa4198375
-Size (pyobjc-framework-Intents-10.0.tar.gz) = 516487 bytes
+BLAKE2s (pyobjc-framework-Intents-10.1.tar.gz) = 871ff190a23b32eb440e7e36db18a28e6e098ecbd3bd93fab7edbe79da73227b
+SHA512 (pyobjc-framework-Intents-10.1.tar.gz) = c13d77b506c83569ca45df90e85906d81bca1d619db19ba504c681bbbdfb5facb6038b23f48bb079566ed0a700cb6c9496049f46a3861d1d544883dcf41e91d7
+Size (pyobjc-framework-Intents-10.1.tar.gz) = 516365 bytes

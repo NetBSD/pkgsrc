@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/11/19 17:03:05 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/23 22:14:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-SearchKit-10.0.tar.gz) = ce657523270173375aafe1859b8df1cfa0312b21517480a8b69936ae56e0795c
-SHA512 (pyobjc-framework-SearchKit-10.0.tar.gz) = 803267845ad3f955acf61c717c9d9c726e70191ba47df1d4e4f2eec2258c2d1a8c0fafc4fe20fddd5140bf39b06a5f6459e9fa89c0e2a977dbfaa48519324e91
-Size (pyobjc-framework-SearchKit-10.0.tar.gz) = 30431 bytes
+BLAKE2s (pyobjc-framework-SearchKit-10.1.tar.gz) = 77af7cc946b399cc4da55faaaef20f07bf398536b3efc58d64877854858ac177
+SHA512 (pyobjc-framework-SearchKit-10.1.tar.gz) = 818fc8999c553d60942be235977fbbc3a1e18c82505c762403ccf7ae61507b7d3c273168e92bde860d4795f00daeb6704ed8952d9773428ec56dc605206418e4
+Size (pyobjc-framework-SearchKit-10.1.tar.gz) = 30401 bytes
