@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2024/01/23 13:41:13 mef Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/23 18:09:24 wiz Exp $
 
-DISTNAME=	MetaCPAN-Client-2.029000
+DISTNAME=	MetaCPAN-Client-2.031000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MICKEY/}
 
