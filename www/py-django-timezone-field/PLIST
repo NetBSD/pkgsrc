@@ -1,12 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/08 06:07:05 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/01/23 07:56:20 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/timezone_field/__init__.py
 ${PYSITELIB}/timezone_field/__init__.pyc
 ${PYSITELIB}/timezone_field/__init__.pyo
+${PYSITELIB}/timezone_field/backends/__init__.py
+${PYSITELIB}/timezone_field/backends/__init__.pyc
+${PYSITELIB}/timezone_field/backends/__init__.pyo
+${PYSITELIB}/timezone_field/backends/base.py
+${PYSITELIB}/timezone_field/backends/base.pyc
+${PYSITELIB}/timezone_field/backends/base.pyo
+${PYSITELIB}/timezone_field/backends/pytz.py
+${PYSITELIB}/timezone_field/backends/pytz.pyc
+${PYSITELIB}/timezone_field/backends/pytz.pyo
+${PYSITELIB}/timezone_field/backends/zoneinfo.py
+${PYSITELIB}/timezone_field/backends/zoneinfo.pyc
+${PYSITELIB}/timezone_field/backends/zoneinfo.pyo
 ${PYSITELIB}/timezone_field/choices.py
 ${PYSITELIB}/timezone_field/choices.pyc
 ${PYSITELIB}/timezone_field/choices.pyo
@@ -22,6 +33,3 @@ ${PYSITELIB}/timezone_field/models.pyo
 ${PYSITELIB}/timezone_field/rest_framework.py
 ${PYSITELIB}/timezone_field/rest_framework.pyc
 ${PYSITELIB}/timezone_field/rest_framework.pyo
-${PYSITELIB}/timezone_field/utils.py
-${PYSITELIB}/timezone_field/utils.pyc
-${PYSITELIB}/timezone_field/utils.pyo
