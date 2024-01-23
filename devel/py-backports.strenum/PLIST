@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/23 18:30:35 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/backports/strenum/__init__.py
+${PYSITELIB}/backports/strenum/__init__.pyc
+${PYSITELIB}/backports/strenum/__init__.pyo
+${PYSITELIB}/backports/strenum/py.typed
+${PYSITELIB}/backports/strenum/strenum.py
+${PYSITELIB}/backports/strenum/strenum.pyc
+${PYSITELIB}/backports/strenum/strenum.pyi
+${PYSITELIB}/backports/strenum/strenum.pyo
