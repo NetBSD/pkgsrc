@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2023/12/13 17:39:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.108 2024/01/23 06:33:48 adam Exp $
 
-DISTNAME=	cryptography-41.0.7
+DISTNAME=	cryptography-42.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -11,15 +11,14 @@ COMMENT=	Cryptographic recipes and primitives for Python
 LICENSE=	apache-2.0 OR modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=0.11.4:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.7.0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-${PKGVERSION_NOREV}:../../security/py-cryptography_vectors
-TEST_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+TEST_DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests-[0-9]*:../../devel/py-test-subtests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 CARGO_WRKSRC=	${WRKSRC}/src/rust
