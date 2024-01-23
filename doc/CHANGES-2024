@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.597 2024/01/23 18:32:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.598 2024/01/23 20:01:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -774,3 +774,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-MetaCPAN-Client to 2.031000 [wiz 2024-01-23]
 	Updated devel/py-cbor2 to 5.6.0 [adam 2024-01-23]
 	Added devel/py-backports.strenum version 1.3.1 [adam 2024-01-23]
+	Updated math/z3 to 4.12.5 [adam 2024-01-23]
+	Updated math/py-z3 to 4.12.5 [adam 2024-01-23]
