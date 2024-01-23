@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.8 2024/01/13 04:24:28 riastradh Exp $
+$NetBSD: patch-setup.py,v 1.9 2024/01/23 06:51:45 adam Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -102,7 +102,7 @@ shoelaces when cross-compiling.
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1067,71 +1088,10 @@ class PyBuildExt(build_ext):
+@@ -1067,71 +1088,12 @@ class PyBuildExt(build_ext):
      def detect_readline_curses(self):
          # readline
          readline_termcap_library = ""
@@ -161,8 +161,8 @@ shoelaces when cross-compiling.
 +        do_readline = True
 +        readline_lib = 'readline'
  
--        if MACOS:
--            os_release = int(os.uname()[2].split('.')[0])
+         if MACOS:
+             os_release = int(os.uname()[2].split('.')[0])
 -            dep_target = sysconfig.get_config_var('MACOSX_DEPLOYMENT_TARGET')
 -            if (dep_target and
 -                    (tuple(int(n) for n in dep_target.split('.')[0:2])
@@ -177,7 +177,7 @@ shoelaces when cross-compiling.
          if do_readline:
              if MACOS and os_release < 9:
                  # In every directory on the search path search for a dynamic
-@@ -1213,8 +1173,7 @@ class PyBuildExt(build_ext):
+@@ -1213,8 +1175,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -187,7 +187,7 @@ shoelaces when cross-compiling.
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1459,6 +1418,31 @@ class PyBuildExt(build_ext):
+@@ -1459,6 +1420,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -219,7 +219,7 @@ shoelaces when cross-compiling.
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1470,7 +1454,7 @@ class PyBuildExt(build_ext):
+@@ -1470,7 +1456,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -228,7 +228,7 @@ shoelaces when cross-compiling.
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -2333,10 +2317,7 @@ class PyBuildExt(build_ext):
+@@ -2333,10 +2319,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -240,7 +240,7 @@ shoelaces when cross-compiling.
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2752,7 +2733,7 @@ def main():
+@@ -2752,7 +2735,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in

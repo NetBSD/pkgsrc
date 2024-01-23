@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/11/10 16:55:32 nia Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/23 06:51:44 adam Exp $
 
 .include "dist.mk"
 
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=false
 .  endif
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptmx=yes
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptc=no
-ALL_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC:Q}
+ALL_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC}
 ALL_ENV+=		\
 	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
 ALL_ENV+=		\
