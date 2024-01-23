@@ -1,0 +1,1 @@
+A backport of (copy and paste from) Python 3.11's StrEnum class for >=3.8.6.
