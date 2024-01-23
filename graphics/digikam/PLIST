@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/09/26 21:22:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/01/23 10:54:13 wiz Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -328,7 +328,6 @@ share/digikam/data/leaf-pattern.png
 share/digikam/data/logo-beta.png
 share/digikam/data/logo-cimg.png
 share/digikam/data/logo-digikam.png
-share/digikam/data/logo-exiv2.png
 share/digikam/data/logo-gphoto.png
 share/digikam/data/logo-lcms.png
 share/digikam/data/logo-piwigo.png
