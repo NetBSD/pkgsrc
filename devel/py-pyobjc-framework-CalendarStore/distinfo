@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/11/19 17:02:52 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/23 22:14:46 adam Exp $
 
-BLAKE2s (pyobjc-framework-CalendarStore-10.0.tar.gz) = a672317d9b6cd40d51f206ce9762f779a6404a018c90d302b3ce075e28e2a425
-SHA512 (pyobjc-framework-CalendarStore-10.0.tar.gz) = 5840d3eb62b6a3a05be5b494935a6530d2383818598c4d89cbf3e0a149e5c921d16020a25603895a68d6975da13c1b4c66465e3c85cf84d00dd215efe3c83db8
-Size (pyobjc-framework-CalendarStore-10.0.tar.gz) = 67694 bytes
+BLAKE2s (pyobjc-framework-CalendarStore-10.1.tar.gz) = adc0b71e71432f5b94e2eb800f887e2bdb82cb7eb523a99b4e9b6a6700e28304
+SHA512 (pyobjc-framework-CalendarStore-10.1.tar.gz) = 5afbc5073eb3bc5339572c72e04aeec178599eedc1936d862dab8cc702bea08bf6dbaaf88409b937224e9239468bf241ff6fd47939b25d1b890f947654103e30
+Size (pyobjc-framework-CalendarStore-10.1.tar.gz) = 67654 bytes

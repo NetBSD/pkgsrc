@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/11/19 17:02:56 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/23 22:14:50 adam Exp $
 
-BLAKE2s (pyobjc-framework-EventKit-10.0.tar.gz) = 4a94d879c6f6163963793dfe5817f3bdd1d2c1d7cdd59ab2ab5f6da90221ae8c
-SHA512 (pyobjc-framework-EventKit-10.0.tar.gz) = 81328e339e073b8fdea4f77a73bbf05aeea9fff4e1977acb3c71c9e32c6514a04b7646d9d1d29253daba74988803763126208d7142f5053b8f544d24c16844e8
-Size (pyobjc-framework-EventKit-10.0.tar.gz) = 73454 bytes
+BLAKE2s (pyobjc-framework-EventKit-10.1.tar.gz) = 4989e9e1c886d879662e15e97d36ab5ff6d4aea17cf2ac177d1b28ae49d75da6
+SHA512 (pyobjc-framework-EventKit-10.1.tar.gz) = 81ef388a0cdf70cb4ebff4826c4ea33eeb8bb38a13c9b3ce0f020b51ece30bec9493f271f466bea3ae7f7bb1fee45b8466ca07d77ca87db4fc2d7c700f1d84d1
+Size (pyobjc-framework-EventKit-10.1.tar.gz) = 73453 bytes

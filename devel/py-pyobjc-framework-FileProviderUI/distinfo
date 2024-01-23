@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/19 17:02:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/23 22:14:51 adam Exp $
 
-BLAKE2s (pyobjc-framework-FileProviderUI-10.0.tar.gz) = d2457cb20dc86e03a729fc49b430fa1d5ec0178002813f28c7608e725c0ae0a4
-SHA512 (pyobjc-framework-FileProviderUI-10.0.tar.gz) = 404293436e13944ff1f1344149f730d880bba576963b4c0f89032363400460905c03fe57452af799bb80c24575b0bd54d4154c61267004c360d34d96c21e6dba
-Size (pyobjc-framework-FileProviderUI-10.0.tar.gz) = 12627 bytes
+BLAKE2s (pyobjc-framework-FileProviderUI-10.1.tar.gz) = d9273b8312348a1fa5cf2a8665aecbc2cb590042743abc90429da169462ad1b0
+SHA512 (pyobjc-framework-FileProviderUI-10.1.tar.gz) = 68fb02862200dc521aec81b3bfb30cd7a874bb648a1c267445b9356bfb95ebb2219bde3a5b1aa38f0fb52a19750289b3898859277cf1851c8ae723381cb149ba
+Size (pyobjc-framework-FileProviderUI-10.1.tar.gz) = 12637 bytes
