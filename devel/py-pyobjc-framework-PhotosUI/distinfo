@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/11/19 17:03:03 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/01/23 22:14:57 adam Exp $
 
-BLAKE2s (pyobjc-framework-PhotosUI-10.0.tar.gz) = 4a2160fb88dc55224335572cc877ddb82964395915aceb24a66f4d7e6c7fb146
-SHA512 (pyobjc-framework-PhotosUI-10.0.tar.gz) = 0693c7096e62a6cadd23899fd73c5f585d254a1f12fd9c1daf3db64a632a99e758077c0e4e00979ec79737ab66ff881ce3df8bc9be35d662b69c26d394f6598e
-Size (pyobjc-framework-PhotosUI-10.0.tar.gz) = 50627 bytes
+BLAKE2s (pyobjc-framework-PhotosUI-10.1.tar.gz) = 681df76b5d4905d940cbbbf97933c220d30239113a348b90a9f160dec2a0b1a3
+SHA512 (pyobjc-framework-PhotosUI-10.1.tar.gz) = d0023260e60f2cbc9e113d193c5520473d1cc06a10de1179bc49fe072e4f316bd80f282c8f1761904a2de9e8c45e5a73be303b9837409f56777d04a1cacb84c0
+Size (pyobjc-framework-PhotosUI-10.1.tar.gz) = 50531 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/11/19 17:03:09 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/01/23 22:15:02 adam Exp $
 
-BLAKE2s (pyobjc-framework-iTunesLibrary-10.0.tar.gz) = 7949217e5357eeef4232c6a9481f3c839f3ef6a4b90b6f6ef9e1e75b3164cfa5
-SHA512 (pyobjc-framework-iTunesLibrary-10.0.tar.gz) = 74f19e2b32484c9daa0f9d8cabfd187137adb249920dc8fd81b85e37e1dba414dfffc6ce48f5ee78d3fd75c25b411f2bd05f54d6677706b86a101a0694ab1c04
-Size (pyobjc-framework-iTunesLibrary-10.0.tar.gz) = 46462 bytes
+BLAKE2s (pyobjc-framework-iTunesLibrary-10.1.tar.gz) = 50947becd61effc65ef01b78d594aba8587cf3365b3d356f458a9344847963d9
+SHA512 (pyobjc-framework-iTunesLibrary-10.1.tar.gz) = 138aa34ef621c4046b068d5f985a34f38cf0edf2cf283a8618d05c64d6459851bcbfdc3fc844fd0a48a7fddff0e69746ab643a782805a6c2da7ecc0acf78e26d
+Size (pyobjc-framework-iTunesLibrary-10.1.tar.gz) = 46451 bytes

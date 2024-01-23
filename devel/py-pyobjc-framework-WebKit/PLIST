@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:03:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/23 22:15:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/JavaScriptCore/_JavaScriptCore.abi3.so
 ${PYSITELIB}/JavaScriptCore/__init__.py
 ${PYSITELIB}/JavaScriptCore/__init__.pyc
 ${PYSITELIB}/JavaScriptCore/__init__.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/19 17:02:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/23 22:14:50 adam Exp $
 
-BLAKE2s (pyobjc-framework-DiscRecording-10.0.tar.gz) = 0e8890f8d78d5d94ca61e16f045311fd9d95be608d4827bf98ceac3dfe83160c
-SHA512 (pyobjc-framework-DiscRecording-10.0.tar.gz) = 839103dc5ac066fc435a4542146388d9278f63b8c3aba1ca025602c98f41db52a625b9369ec0c10972fb0dc72050335b3b9ddde3c3746e7ddbe55897cfcbb852
-Size (pyobjc-framework-DiscRecording-10.0.tar.gz) = 120903 bytes
+BLAKE2s (pyobjc-framework-DiscRecording-10.1.tar.gz) = 7bc391fa94d9d44583d307745f82b3854c2a9a32c8bae12cb25e2d02925aa89c
+SHA512 (pyobjc-framework-DiscRecording-10.1.tar.gz) = 7b822be6dbea1ced0aeb61ac4c14fbbf002ec3b88091cbdc7eb863d9dc527ab487b2ad21071d5f55af206b6ebf649d364356782b87915868b33a0171b4e3fe4b
+Size (pyobjc-framework-DiscRecording-10.1.tar.gz) = 120886 bytes
