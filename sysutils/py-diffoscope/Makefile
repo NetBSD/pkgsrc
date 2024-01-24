@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/01/20 16:03:03 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/01/24 23:53:04 adam Exp $
 
-DISTNAME=	diffoscope-253
+DISTNAME=	diffoscope-254
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
@@ -22,7 +22,6 @@ DEPENDS+=	vim-[0-9]*:../../editors/vim
 USE_LANGUAGES=	c  # for tests
 USE_TOOLS+=	bzip2:run gtar:run xz:run
 
-# Only Python 3 is supported.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
