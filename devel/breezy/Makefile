@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/01/07 16:13:43 rhialto Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/24 16:43:18 wiz Exp $
 
 DISTNAME=	breezy-3.3.4
 PKGREVISION=	1
@@ -10,6 +10,8 @@ HOMEPAGE=	https://breezy-vcs.org/
 COMMENT=	Friendly distributed version control system
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 # Seems to be used in all cases now:
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
