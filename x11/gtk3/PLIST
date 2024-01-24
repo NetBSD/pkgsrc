@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/06/06 10:40:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2024/01/24 23:19:13 adam Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -453,10 +453,10 @@ lib/libgailutil-3.so.0
 lib/libgailutil-3.so.0.0.0
 lib/libgdk-3.so
 lib/libgdk-3.so.0
-lib/libgdk-3.so.0.2406.32
+lib/libgdk-3.so.0.2409.32
 lib/libgtk-3.so
 lib/libgtk-3.so.0
-lib/libgtk-3.so.0.2406.32
+lib/libgtk-3.so.0.2409.32
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
@@ -493,9 +493,28 @@ share/glib-2.0/schemas/org.gtk.Settings.Debug.gschema.xml
 share/glib-2.0/schemas/org.gtk.Settings.EmojiChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.exampleapp.gschema.xml
+share/gtk-3.0/emoji/bn.gresource
+share/gtk-3.0/emoji/da.gresource
 share/gtk-3.0/emoji/de.gresource
 share/gtk-3.0/emoji/es.gresource
+share/gtk-3.0/emoji/et.gresource
+share/gtk-3.0/emoji/fi.gresource
 share/gtk-3.0/emoji/fr.gresource
+share/gtk-3.0/emoji/hi.gresource
+share/gtk-3.0/emoji/hu.gresource
+share/gtk-3.0/emoji/it.gresource
+share/gtk-3.0/emoji/ja.gresource
+share/gtk-3.0/emoji/ko.gresource
+share/gtk-3.0/emoji/lt.gresource
+share/gtk-3.0/emoji/ms.gresource
+share/gtk-3.0/emoji/nb.gresource
+share/gtk-3.0/emoji/nl.gresource
+share/gtk-3.0/emoji/pl.gresource
+share/gtk-3.0/emoji/pt.gresource
+share/gtk-3.0/emoji/ru.gresource
+share/gtk-3.0/emoji/sv.gresource
+share/gtk-3.0/emoji/th.gresource
+share/gtk-3.0/emoji/uk.gresource
 share/gtk-3.0/emoji/zh.gresource
 share/gtk-3.0/gtkbuilder.rng
 share/gtk-3.0/valgrind/gtk.supp
