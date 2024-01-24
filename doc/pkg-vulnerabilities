@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.111 2024/01/22 16:53:00 adam Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.112 2024/01/24 20:16:09 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25745,7 +25745,7 @@ varnish-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 apache<2.4.58	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-31122
 apache<2.4.58	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43622
 apache<2.4.58	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45802
-minizip-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-45853
+minizip<1.3.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-45853
 py{27,37,38,39,310,311,312}-configobj<5.0.8nb1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-26112
 modular-xorg-server<21.1.9	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-5367
 modular-xorg-server<21.1.9	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-5380
