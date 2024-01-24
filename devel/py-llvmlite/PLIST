@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/12 21:13:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/24 15:25:12 thor Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,6 +46,9 @@ ${PYSITELIB}/llvmlite/binding/object_file.pyo
 ${PYSITELIB}/llvmlite/binding/options.py
 ${PYSITELIB}/llvmlite/binding/options.pyc
 ${PYSITELIB}/llvmlite/binding/options.pyo
+${PYSITELIB}/llvmlite/binding/orcjit.py
+${PYSITELIB}/llvmlite/binding/orcjit.pyc
+${PYSITELIB}/llvmlite/binding/orcjit.pyo
 ${PYSITELIB}/llvmlite/binding/passmanagers.py
 ${PYSITELIB}/llvmlite/binding/passmanagers.pyc
 ${PYSITELIB}/llvmlite/binding/passmanagers.pyo
@@ -85,15 +88,6 @@ ${PYSITELIB}/llvmlite/ir/types.pyo
 ${PYSITELIB}/llvmlite/ir/values.py
 ${PYSITELIB}/llvmlite/ir/values.pyc
 ${PYSITELIB}/llvmlite/ir/values.pyo
-${PYSITELIB}/llvmlite/llvmpy/__init__.py
-${PYSITELIB}/llvmlite/llvmpy/__init__.pyc
-${PYSITELIB}/llvmlite/llvmpy/__init__.pyo
-${PYSITELIB}/llvmlite/llvmpy/core.py
-${PYSITELIB}/llvmlite/llvmpy/core.pyc
-${PYSITELIB}/llvmlite/llvmpy/core.pyo
-${PYSITELIB}/llvmlite/llvmpy/passes.py
-${PYSITELIB}/llvmlite/llvmpy/passes.pyc
-${PYSITELIB}/llvmlite/llvmpy/passes.pyo
 ${PYSITELIB}/llvmlite/tests/__init__.py
 ${PYSITELIB}/llvmlite/tests/__init__.pyc
 ${PYSITELIB}/llvmlite/tests/__init__.pyo
@@ -112,9 +106,6 @@ ${PYSITELIB}/llvmlite/tests/test_binding.pyo
 ${PYSITELIB}/llvmlite/tests/test_ir.py
 ${PYSITELIB}/llvmlite/tests/test_ir.pyc
 ${PYSITELIB}/llvmlite/tests/test_ir.pyo
-${PYSITELIB}/llvmlite/tests/test_llvmpy.py
-${PYSITELIB}/llvmlite/tests/test_llvmpy.pyc
-${PYSITELIB}/llvmlite/tests/test_llvmpy.pyo
 ${PYSITELIB}/llvmlite/tests/test_refprune.py
 ${PYSITELIB}/llvmlite/tests/test_refprune.pyc
 ${PYSITELIB}/llvmlite/tests/test_refprune.pyo
