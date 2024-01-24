@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/27 02:55:26 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/01/24 22:17:20 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pluggy/__init__.py
 ${PYSITELIB}/pluggy/__init__.pyc
 ${PYSITELIB}/pluggy/__init__.pyo
@@ -25,4 +25,7 @@ ${PYSITELIB}/pluggy/_tracing.pyo
 ${PYSITELIB}/pluggy/_version.py
 ${PYSITELIB}/pluggy/_version.pyc
 ${PYSITELIB}/pluggy/_version.pyo
+${PYSITELIB}/pluggy/_warnings.py
+${PYSITELIB}/pluggy/_warnings.pyc
+${PYSITELIB}/pluggy/_warnings.pyo
 ${PYSITELIB}/pluggy/py.typed
