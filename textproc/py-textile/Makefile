@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.27 2024/01/24 11:20:40 adam Exp $
 
-DISTNAME=	textile-3.0.4
+DISTNAME=	textile-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textile/}
 
@@ -11,21 +10,19 @@ HOMEPAGE=	https://github.com/textile/python-textile
 COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-# yes, TOOL_DEPENDS< as of 3.0.4
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-regex>=1.1:../../textproc/py-regex
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pytextile pytextile-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
