@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/24 09:32:30 adam Exp $
 bin/csv2rdf-${PYVERSSUFFIX}
 bin/rdf2dot-${PYVERSSUFFIX}
 bin/rdfgraphisomorphism-${PYVERSSUFFIX}
@@ -12,6 +12,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/rdflib/__init__.py
 ${PYSITELIB}/rdflib/__init__.pyc
 ${PYSITELIB}/rdflib/__init__.pyo
+${PYSITELIB}/rdflib/_networking.py
+${PYSITELIB}/rdflib/_networking.pyc
+${PYSITELIB}/rdflib/_networking.pyo
 ${PYSITELIB}/rdflib/_type_checking.py
 ${PYSITELIB}/rdflib/_type_checking.pyc
 ${PYSITELIB}/rdflib/_type_checking.pyo
