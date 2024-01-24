@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2023/12/18 01:39:13 thor Exp $
+$NetBSD: distinfo,v 1.2 2024/01/24 16:36:57 wiz Exp $
 
 BLAKE2s (libpll-src-0.3.2.tar.gz) = 9236f9f3f9d498c205747d4397b0cbd0cc5837e496d2c76a4a6fa78c14d9d90c
 SHA512 (libpll-src-0.3.2.tar.gz) = b264dee8b7796e071b529b6be981ca1cd9b2074fd6af2ecbe79371b5a9187a44dca3b7555502f00ffa135d9d48a236f63180f25d707d8c9d59b27cff40dd86aa
 Size (libpll-src-0.3.2.tar.gz) = 599948 bytes
 SHA1 (patch-configure) = 2238f05ee5d38c4bd2ea4e516cbf9458eb6487bd
 SHA1 (patch-configure.ac) = c14be9e70f5b8db487d22718582a94caa241e48e
+SHA1 (patch-man_Makefile.in) = 78b515c5e1e6eba7a5740cee3daaf106a57a7232
