@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2023/11/08 13:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/24 16:58:05 wiz Exp $
 
-GITHUB_PROJECT=	hfst-ospell
 DISTNAME=	hfstospell-0.5.3
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hfst/}
+GITHUB_PROJECT=	hfst-ospell
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bsiegert@NetBSD.org
@@ -15,7 +15,9 @@ LICENSE=	apache-2.0
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config autoreconf autoconf automake aclocal
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+
+FORCE_CXX_STD=	c++14
 
 PKGCONFIG_OVERRIDE+=	hfstospell.pc.in
 
