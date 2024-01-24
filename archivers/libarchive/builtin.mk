@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2024/01/24 23:01:26 adam Exp $
+# $NetBSD: builtin.mk,v 1.15 2024/01/24 23:18:03 adam Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -102,6 +102,7 @@ BUILDLINK_TARGETS+=	fake-libarchive-pc
 _FAKE_LIBARCHIVE_PC=	${BUILDLINK_DIR}/lib/pkgconfig/libarchive.pc
 _LIBARCHIVE_LIBS=	-llzma -lbz2 -lz
 
+.PHONY: fake-libarchive-pc
 fake-libarchive-pc:
 	${RUN}  \
 	sedsrc=../../archivers/libarchive/files/build/pkgconfig/libarchive.pc.in;	\
@@ -120,6 +121,7 @@ fake-libarchive-pc:
 					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,\
 					-e s,@VERSION@,${BUILTIN_VERSION.libarchive},	\
 					-e s,@LIBS@,${_LIBARCHIVE_LIBS:Q},		\
+					-e s,@LIBSREQUIRED@,,				\
 				$${sedsrc} > $${dst};					\
 		fi									\
 	fi
