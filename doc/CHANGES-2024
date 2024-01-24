@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.633 2024/01/24 23:17:23 mef Exp $
+$NetBSD: CHANGES-2024,v 1.634 2024/01/24 23:22:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-google-auth to 2.27.0 [adam 2024-01-24]
 	Updated math/R-circular to 0.5.0 [mef 2024-01-24]
 	Updated geography/R-spData to 2.3.0 [mef 2024-01-24]
+	Updated geography/qgis to 3.28.15 [gdt 2024-01-24]
