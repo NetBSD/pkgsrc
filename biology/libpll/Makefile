@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/24 16:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/24 17:35:53 thor Exp $
 
 DISTNAME=	libpll-src-0.3.2
 PKGNAME=	${DISTNAME:S/-src//}
@@ -19,5 +19,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex
 
 CONFIGURE_ARGS+=	--disable-pdfman
+
+# This assumes availability of sysinfo(), linux-specific
+# resource monitoring.
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 .include "../../mk/bsd.pkg.mk"
