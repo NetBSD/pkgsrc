@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/28 19:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/24 09:32:30 adam Exp $
 
-DISTNAME=	rdflib-6.3.2
+DISTNAME=	rdflib-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
@@ -16,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-isodate>=0.6.0:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.3:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
@@ -36,9 +34,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
