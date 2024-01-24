@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/15 12:13:14 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/24 14:05:07 mef Exp $
 
 R_PKGNAME=	Hmisc
-R_PKGVER=	5.1-0
+R_PKGVER=	5.1-1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +18,11 @@ DEPENDS+=	R-gtable>=0.3.0:../../math/R-gtable
 DEPENDS+=	R-data.table>=1.12.2:../../textproc/R-data.table
 DEPENDS+=	R-htmlTable>=1.11.0:../../textproc/R-htmlTable
 DEPENDS+=	R-htmltools>=0.3.6:../../textproc/R-htmltools
+
+# Packages suggested but not available:
+#   'qreport', 'rms', 'mice', 'tables', 'plotly', 'leaps', 'pcaPP',
+#   'polspline', 'abind', 'kableExtra', 'rio', 'gt', 'sparkline', 'qs',
+#   'getPass', 'keyring', 'safer'
 
 TEST_DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
 TEST_DEPENDS+=	R-chron-[0-9]*:../../math/R-chron
