@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/20 05:49:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/01/24 09:32:30 adam Exp $
 
-BLAKE2s (rdflib-6.3.2.tar.gz) = 0fb1b686aa1e0981cbc4251a289c02c291cfa22ef798d3b4bcdcca7e94711f73
-SHA512 (rdflib-6.3.2.tar.gz) = 682554114456269ecd5a20433e31030e2ae85ccf84400060420433cba317eb272649a38c2c75f0d4ada878c391683f8a422452d24b2f8a41c28e99b977e2b557
-Size (rdflib-6.3.2.tar.gz) = 4749592 bytes
+BLAKE2s (rdflib-7.0.0.tar.gz) = 722c1c5657cf90595cc020b2b64fc77ef3db3dcc71d9f903cfdd3d2d8966b6ef
+SHA512 (rdflib-7.0.0.tar.gz) = 56d110ab24c74c6ddb2e75320f60a82b4945e6ea1ce9d10ad4ae53d44c679b35826e3d7406e7d0e321ef9b042d32d2ba327a6dbd5c2c1780f552131d80c09445
+Size (rdflib-7.0.0.tar.gz) = 4765796 bytes
