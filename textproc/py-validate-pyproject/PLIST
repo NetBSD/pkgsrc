@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/24 06:54:39 adam Exp $
 bin/validate-pyproject-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -55,6 +55,9 @@ ${PYSITELIB}/validate_pyproject/pre_compile/main_file.template
 ${PYSITELIB}/validate_pyproject/project_metadata.schema.json
 ${PYSITELIB}/validate_pyproject/py.typed
 ${PYSITELIB}/validate_pyproject/pyproject_toml.schema.json
+${PYSITELIB}/validate_pyproject/remote.py
+${PYSITELIB}/validate_pyproject/remote.pyc
+${PYSITELIB}/validate_pyproject/remote.pyo
 ${PYSITELIB}/validate_pyproject/repo_review.py
 ${PYSITELIB}/validate_pyproject/repo_review.pyc
 ${PYSITELIB}/validate_pyproject/repo_review.pyo
