@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2023/12/29 18:24:48 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/01/24 16:45:34 wiz Exp $
 
 DISTNAME=	libgltf-0.1.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libgltf/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://gerrit.libreoffice.org/#/admin/projects/libgltf
+HOMEPAGE=	https://gerrit.libreoffice.org/admin/repos/libgltf,general
 COMMENT=	Rendering library for glTF
 LICENSE=	mpl-2.0
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 # Fails with C++14 default language.
-FORCE_CXX_STD=	c++03
+FORCE_CXX_STD=	c++11
 
 PKGCONFIG_OVERRIDE+=	libgltf.pc.in
 
