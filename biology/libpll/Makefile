@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2024/01/17 15:53:51 thor Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/24 16:37:10 wiz Exp $
 
 DISTNAME=	libpll-src-0.3.2
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xflouris/}
 GITHUB_PROJECT=	libpll
-GITHUB_RELEASE=	0.3.2
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://github.com/xflouris/libpll/
