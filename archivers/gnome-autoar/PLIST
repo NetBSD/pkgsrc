@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/13 09:18:47 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/01/24 23:22:34 adam Exp $
 include/gnome-autoar-0/gnome-autoar/autoar-compressor.h
 include/gnome-autoar-0/gnome-autoar/autoar-enum-types.h
 include/gnome-autoar-0/gnome-autoar/autoar-extractor.h
@@ -12,10 +12,10 @@ lib/girepository-1.0/GnomeAutoar-0.1.typelib
 lib/girepository-1.0/GnomeAutoarGtk-0.1.typelib
 lib/libgnome-autoar-0.so
 lib/libgnome-autoar-0.so.0
-lib/libgnome-autoar-0.so.0.1.1
+lib/libgnome-autoar-0.so.0.2.0
 lib/libgnome-autoar-gtk-0.so
 lib/libgnome-autoar-gtk-0.so.0
-lib/libgnome-autoar-gtk-0.so.0.1.1
+lib/libgnome-autoar-gtk-0.so.0.2.0
 lib/pkgconfig/gnome-autoar-0.pc
 lib/pkgconfig/gnome-autoar-gtk-0.pc
 share/gir-1.0/GnomeAutoar-0.1.gir
