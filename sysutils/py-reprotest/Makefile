@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/11/09 22:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/24 23:37:42 adam Exp $
 
-DISTNAME=	reprotest-0.7.22
+DISTNAME=	reprotest-0.7.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reprotest/}
@@ -10,9 +10,15 @@ HOMEPAGE=	https://salsa.debian.org/reproducible-builds/reprotest
 COMMENT=	Build packages and check them for reproducibility
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-diffoscope>=226:../../sysutils/py-diffoscope
-DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
-DEPENDS+=	${PYPKGPREFIX}-rstr>=0:../../devel/py-rstr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-rstr-[0-9]*:../../devel/py-rstr
+# compare
+DEPENDS+=	${PYPKGPREFIX}-diffoscope>=112:../../sysutils/py-diffoscope
+TEST_DEPENDS+=	dpkg-[0-9]*:../../misc/dpkg
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -26,8 +32,8 @@ REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot \
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} reprotest reprotest-${PYVERSSUFFIX} || ${TRUE}
+	${MV} reprotest reprotest-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
