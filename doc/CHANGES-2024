@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.630 2024/01/24 22:03:03 adam Exp $
+$NetBSD: CHANGES-2024,v 1.631 2024/01/24 22:19:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -816,3 +816,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/py-m3u8 to 4.0.0 [adam 2024-01-24]
 	Updated graphics/libjpeg-turbo to 3.0.2 [adam 2024-01-24]
 	Updated devel/blosc2 to 2.13.0 [adam 2024-01-24]
+	Updated devel/py-pluggy to 1.4.0 [adam 2024-01-24]
+	Updated security/py-google-auth to 2.27.0 [adam 2024-01-24]
