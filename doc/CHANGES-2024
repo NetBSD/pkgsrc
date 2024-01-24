@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.621 2024/01/24 14:12:06 mef Exp $
+$NetBSD: CHANGES-2024,v 1.622 2024/01/24 14:13:53 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -805,3 +805,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/R-Hmisc to 5.1.1 [mef 2024-01-24]
 	Removed mail/dkim-milter [gdt 2024-01-24]
 	Updated math/R-bbmle to 1.0.25.1 [mef 2024-01-24]
+	Updated net/routinator to 0.13.1 [he 2024-01-24]
