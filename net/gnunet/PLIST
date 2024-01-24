@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/05 10:16:34 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/24 15:58:21 nikita Exp $
 bin/gnunet-arm
 bin/gnunet-ats
 bin/gnunet-auto-share
@@ -273,8 +273,8 @@ lib/gnunet/libgnunet_plugin_utiltest.la
 lib/gnunet/libgnunet_test_transport_plugin_cmd_nat_upnp.la
 lib/gnunet/libgnunet_test_transport_plugin_cmd_simple_send.la
 lib/gnunet/libgnunet_test_transport_plugin_cmd_simple_send_broadcast.la
-lib/gnunet/libgnunet_test_transport_plugin_cmd_simple_send_performance.la
 lib/gnunet/libgnunet_test_transport_plugin_cmd_simple_send_dv.la
+lib/gnunet/libgnunet_test_transport_plugin_cmd_simple_send_performance.la
 lib/gnunet/libgnunet_test_transport_plugin_cmd_udp_backchannel.la
 lib/libgnunetarm.la
 lib/libgnunetats.la
