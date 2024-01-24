@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/05/21 14:31:03 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/24 14:11:56 mef Exp $
 
 R_PKGNAME=	bbmle
-R_PKGVER=	1.0.25
+R_PKGVER=	1.0.25.1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Tools for general maximum likelihood estimation
@@ -12,15 +12,15 @@ DEPENDS+=	R-bdsmatrix-[0-9]*:../../math/R-bdsmatrix
 DEPENDS+=	R-mvtnorm-[0-9]*:../../math/R-mvtnorm
 #
 # Packages suggested but not available:
-#  'emdbook', 'rms', 'ggplot2', 'RUnit', 'MuMIn', 'AICcmodavg', 'Hmisc',
-#  'optimx', 'knitr', 'testthat'
+#   'rms', 'MuMIn', 'AICcmodavg', 'optimx'
+
 
 TEST_DEPENDS+=	R-emdbook-[0-9]*:../../math/R-emdbook
 #EST_DEPENDS+=	R-rms-[0-9]*:
 TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-RUnit-[0-9]*:../../devel/R-RUnit
 #EST_DEPENDS+=	R-MuMIn-[0-9]*:
-TEST_DEPENDS+=	R-AICcmodavg-[0-9]*:
+#EST_DEPENDS+=	R-AICcmodavg-[0-9]*:
 TEST_DEPENDS+=	R-Hmisc-[0-9]*:../../misc/R-Hmisc
 #EST_DEPENDS+=	R-optimx-[0-9]*:
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr

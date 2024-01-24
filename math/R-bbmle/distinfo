@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/05/21 14:31:03 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/01/24 14:11:56 mef Exp $
 
-BLAKE2s (R/bbmle_1.0.25.tar.gz) = a3f0d7b8888f1739aec02299f11db4406d35ae229b8ed1af788b8d9c838fe5e4
-SHA512 (R/bbmle_1.0.25.tar.gz) = 187a4e186abcacf2ebc0db5296e1fb20a80e71eba8ac4db14c620044cacaf67def83534b16960e6d89ea5361011c4a864e74edc1d64132c620b9f1c4c9e104b6
-Size (R/bbmle_1.0.25.tar.gz) = 524848 bytes
+BLAKE2s (R/bbmle_1.0.25.1.tar.gz) = d7ee3c1b599a968d2d87683c13ea4f4644d63d976ccc2f9f8dec9ff5933e3847
+SHA512 (R/bbmle_1.0.25.1.tar.gz) = 80a5e8ed3bd9d35591a634cd9db71c4ba439ba69f7c84cbd0ee1135b6019ebf436dac4927a868667be15a38de2025d9686d97a2f8e9f1a7e4bb60b199d5b0068
+Size (R/bbmle_1.0.25.1.tar.gz) = 529028 bytes
