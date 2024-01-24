@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/01/15 20:03:39 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/01/24 23:53:04 adam Exp $
 bin/diffoscope-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -270,6 +270,9 @@ ${PYSITELIB}/diffoscope/comparators/vmlinuz.pyo
 ${PYSITELIB}/diffoscope/comparators/wasm.py
 ${PYSITELIB}/diffoscope/comparators/wasm.pyc
 ${PYSITELIB}/diffoscope/comparators/wasm.pyo
+${PYSITELIB}/diffoscope/comparators/xar.py
+${PYSITELIB}/diffoscope/comparators/xar.pyc
+${PYSITELIB}/diffoscope/comparators/xar.pyo
 ${PYSITELIB}/diffoscope/comparators/xml.py
 ${PYSITELIB}/diffoscope/comparators/xml.pyc
 ${PYSITELIB}/diffoscope/comparators/xml.pyo
