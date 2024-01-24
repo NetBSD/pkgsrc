@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.195 2024/01/01 13:41:44 gdt Exp $
+# $NetBSD: Makefile,v 1.196 2024/01/24 23:22:21 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
-# versions, or to only track the most recent branch.
-DISTNAME=	qgis-3.28.14
+# versions, or to only track one LTR branch.  3.34 LTR is pending
+# testing, on the theory that slightly old solid is better than
+# up-to-date with issues.
+DISTNAME=	qgis-3.28.15
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
