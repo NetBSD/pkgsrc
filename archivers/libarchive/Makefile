@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2024/01/18 18:00:11 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/01/24 23:01:26 adam Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,7 @@ CONFIGURE_ARGS+=	--disable-bsdcat
 CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-bsdtar
 CONFIGURE_ARGS+=	--disable-bsdunzip
+CONFIGURE_ARGS+=	--without-iconv
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}

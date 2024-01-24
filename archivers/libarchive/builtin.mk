@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2024/01/18 18:00:11 adam Exp $
+# $NetBSD: builtin.mk,v 1.14 2024/01/24 23:01:26 adam Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -105,7 +105,7 @@ _LIBARCHIVE_LIBS=	-llzma -lbz2 -lz
 fake-libarchive-pc:
 	${RUN}  \
 	sedsrc=../../archivers/libarchive/files/build/pkgconfig/libarchive.pc.in;	\
-	src=${BUILDLINK_PREFIX.libarchive:Q}/lib${LIBABISUFFIX}/pkgconfig/libarchive.pc;\
+	src=${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX}/pkgconfig/libarchive.pc;	\
 	dst=${_FAKE_LIBARCHIVE_PC};				  			\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;					\
 	if [ ! -f $${dst} ]; then       						\
@@ -114,10 +114,10 @@ fake-libarchive-pc:
 			${LN} -sf $${src} $${dst};					\
 		else									\
 			${ECHO_BUILDLINK_MSG} "Creating $${dst}";			\
-			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.libarchive:Q},		\
-					-e s,@exec_prefix@,${BUILDLINK_PREFIX.libarchive:Q},\
-					-e s,@libdir@,${BUILDLINK_PREFIX.libarchive:Q}/lib${LIBABISUFFIX},\
-					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive:Q}/include,\
+			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.libarchive},		\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.libarchive},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.libarchive}/lib${LIBABISUFFIX},\
+					-e s,@includedir@,${BUILDLINK_PREFIX.libarchive}/include,\
 					-e s,@VERSION@,${BUILTIN_VERSION.libarchive},	\
 					-e s,@LIBS@,${_LIBARCHIVE_LIBS:Q},		\
 				$${sedsrc} > $${dst};					\
