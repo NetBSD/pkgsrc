@@ -1,0 +1,15 @@
+$NetBSD: patch-man_Makefile.in,v 1.1 2024/01/24 16:36:57 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- man/Makefile.in.orig	2024-01-24 16:35:18.664780397 +0000
++++ man/Makefile.in
+@@ -533,7 +533,7 @@ uninstall-man: uninstall-man3
+ 
+ @HAVE_PS2PDF_TRUE@libpll_manual.pdf : libpll.3
+ @HAVE_PS2PDF_TRUE@	TEMP=$$(mktemp temp.XXXXXXXX) ; \
+-@HAVE_PS2PDF_TRUE@	if [ $$(uname) == "Darwin" ] ; then \
++@HAVE_PS2PDF_TRUE@	if [ $$(uname) = "Darwin" ] ; then \
+ @HAVE_PS2PDF_TRUE@		${SED} -e 's/\\-/-/g' $< | \
+ @HAVE_PS2PDF_TRUE@		iconv -f UTF-8 -t ISO-8859-1 > $$TEMP ; \
+ @HAVE_PS2PDF_TRUE@	else \
