@@ -1,10 +1,17 @@
-$NetBSD: patch-cpp__src_dmlc-core_CMakeLists.txt,v 1.1 2024/01/19 14:36:17 adam Exp $
+$NetBSD: patch-cpp__src_dmlc-core_CMakeLists.txt,v 1.2 2024/01/24 22:43:20 adam Exp $
 
 Fix build.
 
---- cpp_src/dmlc-core/CMakeLists.txt.orig	2023-02-27 12:24:23.000000000 +0000
+--- cpp_src/dmlc-core/CMakeLists.txt.orig	2020-02-02 00:00:00.000000000 +0000
 +++ cpp_src/dmlc-core/CMakeLists.txt
-@@ -185,8 +185,6 @@ target_include_directories(dmlc PUBLIC
+@@ -179,14 +179,12 @@ else()
+ endif()
+ 
+ message(STATUS "${CMAKE_LOCAL}/build_config.h.in -> include/dmlc/build_config.h")
+-configure_file("cmake/build_config.h.in" "include/dmlc/build_config.h")
++configure_file("cmake/build_config.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/include/dmlc/build_config.h")
+ 
+ target_include_directories(dmlc PUBLIC
    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
    $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/include>)
