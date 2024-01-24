@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:45:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/01/24 23:17:12 mef Exp $
 
-BLAKE2s (R/spData_0.3.10.tar.gz) = 5bca2d69c190dbeb5db10072130e5917e7fa564995592f313fbb313f0a19b3c8
-SHA512 (R/spData_0.3.10.tar.gz) = b724ffb035a4e7645d11390df6d0ffdd6608b56a4777b2ec1d7c200fb7eafaeb3f6fee9c685e9dabaed33c451c1ad6659fb976be9a1dd4bb1413ba09c8ed191c
-Size (R/spData_0.3.10.tar.gz) = 3817338 bytes
+BLAKE2s (R/spData_2.3.0.tar.gz) = a1e2c411ff4b56a3bf9b661c2fd989a98042e007142db5ca17223ec3217ea229
+SHA512 (R/spData_2.3.0.tar.gz) = a80b9c0e22a1dcc140c923c65b848f7d6e19bfe9efd1f2cf35aba3e9b39805ad3e679a92e1c83d91af97e17a4257130a7f5b8d2e5a249affc7463ca312557edb
+Size (R/spData_2.3.0.tar.gz) = 3874953 bytes
