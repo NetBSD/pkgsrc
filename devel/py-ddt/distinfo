@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/11/07 22:56:13 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/01/24 09:04:45 adam Exp $
 
-BLAKE2s (ddt-1.6.0.tar.gz) = 8343f78831f50a7596f8459f538ed14bc06d75742daccc9b9c081011d6e52559
-SHA512 (ddt-1.6.0.tar.gz) = 4e1038dccc3a6ebe11e5d4d4f9a2ce328e3fe261189731bdfcc4912ebc72a2fe93acf3ca97a6136a2cea52c3ced2fa0f218a816a60f16950293230d2e105ba10
-Size (ddt-1.6.0.tar.gz) = 13357 bytes
+BLAKE2s (ddt-1.7.1.tar.gz) = 7d7e8826eb1d02f19d1d573aabf7ca9c516aa9ece49e30fceaac04fe4cc5d7eb
+SHA512 (ddt-1.7.1.tar.gz) = 9981d63b27ab80e35b2dfce52b07ef32b5d8c988cf5bfbd8f37e79ea0e8de069314cbfb0a2a95f5e07fce9a33ac6ce0f6307ad3b7a46507a7599366cef63aad2
+Size (ddt-1.7.1.tar.gz) = 13332 bytes
