@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/15 10:57:41 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/24 11:49:19 mef Exp $
 
 R_PKGNAME=	VGAM
-R_PKGVER=	1.1-8
+R_PKGVER=	1.1-9
 
 MAINTAINER=	mishka@NetBSD.org
 COMMENT=	Vector generalized linear and additive models
