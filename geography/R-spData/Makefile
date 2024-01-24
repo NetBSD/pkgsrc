@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/20 11:11:00 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/24 23:17:12 mef Exp $
 
 R_PKGNAME=	spData
-R_PKGVER=	0.3.10
+R_PKGVER=	2.3.0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +11,8 @@ LICENSE=	cc0-1.0-universal
 DEPENDS+=	R-raster>=3.0.12:../../geography/R-raster
 
 # Packages suggested but not available:
-#  'maptools', 'rgdal', 'sf', 'spDataLarge', 'spdep', 'spatialreg'
-
+#   'sf', 'spDataLarge', 'spdep', 'spatialreg'
+TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 
 USE_LANGUAGES=	# none
 
