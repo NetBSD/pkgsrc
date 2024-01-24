@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/26 09:30:00 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/01/24 09:01:30 adam Exp $
 
-BLAKE2s (overrides-7.4.0.tar.gz) = 0040b4bc8c396f071f882a0c3045757006947b3bbfb6ad726e63ec0c99d1e32a
-SHA512 (overrides-7.4.0.tar.gz) = 6ffd3b38997fd207d8ef9876ba9c328ef244b39300d22ae8c8bf63862f160b485d82b99d36d24abd1676fdddd39e5324eb0f1cf8629a0e17ac96956d165b6afd
-Size (overrides-7.4.0.tar.gz) = 24804 bytes
+BLAKE2s (overrides-7.6.0.tar.gz) = a0c71b20a497ced4e3a13411e8855fc14f4add6b127ac30fbc460f09bfedf200
+SHA512 (overrides-7.6.0.tar.gz) = 1d72da8738b2faacd8fd5698f86cd878d23ade607f89dabbd47b6d808c06732ad6eedc4f2547ba5f0aee321ced490ff16566c47e732048743506ec4261dcc6d2
+Size (overrides-7.6.0.tar.gz) = 22773 bytes
