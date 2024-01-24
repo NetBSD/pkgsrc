@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/01/24 13:24:46 mef Exp $
 
-BLAKE2s (R/acepack_1.4.1.tar.gz) = 16a6d895f7c0ff4c790f3b5e7fdad78e86beeb53536d8c4f2c83067a63f1068a
-SHA512 (R/acepack_1.4.1.tar.gz) = e6787d653224043d0fac8b7e63a8b8060320fc1e4c6ab76b20ce3e7712cbd0f89af8731b383ceb90f9be4381a72eb965cad84e979cb8c935318fecf6d3f9ee88
-Size (R/acepack_1.4.1.tar.gz) = 34848 bytes
+BLAKE2s (R/acepack_1.4.2.tar.gz) = 0c9a6707b11ad2e32cb88e762191227b8e0b4ca652739fd60982a90e8065e250
+SHA512 (R/acepack_1.4.2.tar.gz) = bd3adeec97ed863f6f78c67780dfdfea072daf20b5233fef223fab927b5810a5b1e8c02cf9aa266010ad000b6bb8062bf965acbfe684f772ad1aa8ca488c1d31
+Size (R/acepack_1.4.2.tar.gz) = 37644 bytes
