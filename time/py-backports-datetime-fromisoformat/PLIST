@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/24 21:49:04 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo
+${PYSITELIB}/backports/_datetime_fromisoformat.so
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.py
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.pyc
+${PYSITELIB}/backports/datetime_fromisoformat/__init__.pyo
+${PYSITELIB}/backports/datetime_fromisoformat/_datetimemodule.c
+${PYSITELIB}/backports/datetime_fromisoformat/_datetimemodule.h
+${PYSITELIB}/backports/datetime_fromisoformat/module.c
+${PYSITELIB}/backports/datetime_fromisoformat/timezone.c
+${PYSITELIB}/backports/datetime_fromisoformat/timezone.h

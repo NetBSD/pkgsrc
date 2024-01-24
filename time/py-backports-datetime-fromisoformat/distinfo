@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/24 21:49:04 adam Exp $
+
+BLAKE2s (backports-datetime-fromisoformat-2.0.1.tar.gz) = c07e8babc7e7f55fac23383bad67a2c57f8273e2ce2ee5d11850b6921a052df0
+SHA512 (backports-datetime-fromisoformat-2.0.1.tar.gz) = 42ea7cc09bd91a47c26f0af308a2b522df5e1ec55b1f854a2114b535c211c39008e675a4fc5832756d1ae0c26950523bad7723857826e24d7155d826ae7216d2
+Size (backports-datetime-fromisoformat-2.0.1.tar.gz) = 23192 bytes
