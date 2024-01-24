@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/07 08:36:00 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/01/24 09:12:09 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/docx/__init__.py
 ${PYSITELIB}/docx/__init__.pyc
 ${PYSITELIB}/docx/__init__.pyo
@@ -14,9 +13,6 @@ ${PYSITELIB}/docx/api.pyo
 ${PYSITELIB}/docx/blkcntnr.py
 ${PYSITELIB}/docx/blkcntnr.pyc
 ${PYSITELIB}/docx/blkcntnr.pyo
-${PYSITELIB}/docx/compat.py
-${PYSITELIB}/docx/compat.pyc
-${PYSITELIB}/docx/compat.pyo
 ${PYSITELIB}/docx/dml/__init__.py
 ${PYSITELIB}/docx/dml/__init__.pyc
 ${PYSITELIB}/docx/dml/__init__.pyo
@@ -26,6 +22,9 @@ ${PYSITELIB}/docx/dml/color.pyo
 ${PYSITELIB}/docx/document.py
 ${PYSITELIB}/docx/document.pyc
 ${PYSITELIB}/docx/document.pyo
+${PYSITELIB}/docx/drawing/__init__.py
+${PYSITELIB}/docx/drawing/__init__.pyc
+${PYSITELIB}/docx/drawing/__init__.pyo
 ${PYSITELIB}/docx/enum/__init__.py
 ${PYSITELIB}/docx/enum/__init__.pyc
 ${PYSITELIB}/docx/enum/__init__.pyo
@@ -86,9 +85,6 @@ ${PYSITELIB}/docx/image/tiff.pyo
 ${PYSITELIB}/docx/opc/__init__.py
 ${PYSITELIB}/docx/opc/__init__.pyc
 ${PYSITELIB}/docx/opc/__init__.pyo
-${PYSITELIB}/docx/opc/compat.py
-${PYSITELIB}/docx/opc/compat.pyc
-${PYSITELIB}/docx/opc/compat.pyo
 ${PYSITELIB}/docx/opc/constants.py
 ${PYSITELIB}/docx/opc/constants.pyc
 ${PYSITELIB}/docx/opc/constants.pyo
@@ -143,6 +139,9 @@ ${PYSITELIB}/docx/oxml/coreprops.pyo
 ${PYSITELIB}/docx/oxml/document.py
 ${PYSITELIB}/docx/oxml/document.pyc
 ${PYSITELIB}/docx/oxml/document.pyo
+${PYSITELIB}/docx/oxml/drawing.py
+${PYSITELIB}/docx/oxml/drawing.pyc
+${PYSITELIB}/docx/oxml/drawing.pyo
 ${PYSITELIB}/docx/oxml/exceptions.py
 ${PYSITELIB}/docx/oxml/exceptions.pyc
 ${PYSITELIB}/docx/oxml/exceptions.pyo
@@ -152,6 +151,9 @@ ${PYSITELIB}/docx/oxml/ns.pyo
 ${PYSITELIB}/docx/oxml/numbering.py
 ${PYSITELIB}/docx/oxml/numbering.pyc
 ${PYSITELIB}/docx/oxml/numbering.pyo
+${PYSITELIB}/docx/oxml/parser.py
+${PYSITELIB}/docx/oxml/parser.pyc
+${PYSITELIB}/docx/oxml/parser.pyo
 ${PYSITELIB}/docx/oxml/section.py
 ${PYSITELIB}/docx/oxml/section.pyc
 ${PYSITELIB}/docx/oxml/section.pyo
@@ -179,6 +181,12 @@ ${PYSITELIB}/docx/oxml/text/__init__.pyo
 ${PYSITELIB}/docx/oxml/text/font.py
 ${PYSITELIB}/docx/oxml/text/font.pyc
 ${PYSITELIB}/docx/oxml/text/font.pyo
+${PYSITELIB}/docx/oxml/text/hyperlink.py
+${PYSITELIB}/docx/oxml/text/hyperlink.pyc
+${PYSITELIB}/docx/oxml/text/hyperlink.pyo
+${PYSITELIB}/docx/oxml/text/pagebreak.py
+${PYSITELIB}/docx/oxml/text/pagebreak.pyc
+${PYSITELIB}/docx/oxml/text/pagebreak.pyo
 ${PYSITELIB}/docx/oxml/text/paragraph.py
 ${PYSITELIB}/docx/oxml/text/paragraph.pyc
 ${PYSITELIB}/docx/oxml/text/paragraph.pyo
@@ -245,6 +253,23 @@ ${PYSITELIB}/docx/styles/styles.pyo
 ${PYSITELIB}/docx/table.py
 ${PYSITELIB}/docx/table.pyc
 ${PYSITELIB}/docx/table.pyo
+${PYSITELIB}/docx/templates/default-docx-template/[Content_Types].xml
+${PYSITELIB}/docx/templates/default-docx-template/_rels/.rels
+${PYSITELIB}/docx/templates/default-docx-template/customXml/_rels/item1.xml.rels
+${PYSITELIB}/docx/templates/default-docx-template/customXml/item1.xml
+${PYSITELIB}/docx/templates/default-docx-template/customXml/itemProps1.xml
+${PYSITELIB}/docx/templates/default-docx-template/docProps/app.xml
+${PYSITELIB}/docx/templates/default-docx-template/docProps/core.xml
+${PYSITELIB}/docx/templates/default-docx-template/docProps/thumbnail.jpeg
+${PYSITELIB}/docx/templates/default-docx-template/word/_rels/document.xml.rels
+${PYSITELIB}/docx/templates/default-docx-template/word/document.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/fontTable.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/numbering.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/settings.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/styles.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/stylesWithEffects.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/theme/theme1.xml
+${PYSITELIB}/docx/templates/default-docx-template/word/webSettings.xml
 ${PYSITELIB}/docx/templates/default-footer.xml
 ${PYSITELIB}/docx/templates/default-header.xml
 ${PYSITELIB}/docx/templates/default-settings.xml
@@ -256,6 +281,12 @@ ${PYSITELIB}/docx/text/__init__.pyo
 ${PYSITELIB}/docx/text/font.py
 ${PYSITELIB}/docx/text/font.pyc
 ${PYSITELIB}/docx/text/font.pyo
+${PYSITELIB}/docx/text/hyperlink.py
+${PYSITELIB}/docx/text/hyperlink.pyc
+${PYSITELIB}/docx/text/hyperlink.pyo
+${PYSITELIB}/docx/text/pagebreak.py
+${PYSITELIB}/docx/text/pagebreak.pyc
+${PYSITELIB}/docx/text/pagebreak.pyo
 ${PYSITELIB}/docx/text/paragraph.py
 ${PYSITELIB}/docx/text/paragraph.pyc
 ${PYSITELIB}/docx/text/paragraph.pyo
@@ -268,3 +299,6 @@ ${PYSITELIB}/docx/text/run.pyo
 ${PYSITELIB}/docx/text/tabstops.py
 ${PYSITELIB}/docx/text/tabstops.pyc
 ${PYSITELIB}/docx/text/tabstops.pyo
+${PYSITELIB}/docx/types.py
+${PYSITELIB}/docx/types.pyc
+${PYSITELIB}/docx/types.pyo
