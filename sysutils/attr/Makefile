@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/01/14 08:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/24 20:25:45 wiz Exp $
 
 DISTNAME=	attr-2.5.2
 CATEGORIES=	sysutils
@@ -22,6 +22,8 @@ REPLACE_PERL+=		test/run
 
 PKGCONFIG_OVERRIDE+=	libattr.pc.in
 INSTALLATION_DIRS+=	share/examples/attr
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES+=	share/examples/attr/xattr.conf ${PKG_SYSCONFDIR}/xattr.conf
 
