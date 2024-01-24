@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:53:58 nia Exp $
-
-BLAKE2s (dkim-milter-2.8.3.tar.gz) = cd0021ab76300638f21656f71347545968d5b6cf5ce0a3813278c87d43ca91dd
-SHA512 (dkim-milter-2.8.3.tar.gz) = 55cd2473c1f843f2a50d0dfe466d30a9c8146bd151aebd61f5c45b16a557c66e8155384bf8f99340b96b4a8c79d3d9b42865f3374e12ad48096fccccee09c9cc
-Size (dkim-milter-2.8.3.tar.gz) = 748415 bytes
-SHA1 (patch-aa) = 3d5a6acc971c5755057e22e335e55560b960bc4c
-SHA1 (patch-ab) = ab99d7cbc6cf3ad5aff905d32c50caac7d5c02e0
-SHA1 (patch-ac) = 863ff7ec1ac1ebf06732a78c8429fcc1b2799ac4
