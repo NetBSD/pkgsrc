@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/19 14:36:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/24 22:45:54 adam Exp $
 
 DISTNAME=	xgboost-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,10 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 USE_LANGUAGES+=	c gnu++17
 USE_TOOLS+=	cmake ninja
 
-REPLACE_PYTHON+=	xgboost/dmlc-core/tracker/dmlc-submit
-REPLACE_PYTHON+=	xgboost/dmlc-core/tracker/dmlc_tracker/launcher.py
-REPLACE_SH+=		xgboost/dmlc-core/tracker/yarn/build.sh
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
@@ -34,6 +30,5 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/xgboost/libpath.py.orig
 
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
