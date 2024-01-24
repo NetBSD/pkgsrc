@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/09/18 14:41:57 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/01/24 21:51:04 adam Exp $
 
-DISTNAME=	m3u8-3.6.0
+DISTNAME=	m3u8-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/m3u8/}
@@ -10,11 +10,14 @@ HOMEPAGE=	https://github.com/globocom/m3u8
 COMMENT=	Parser for M3U8 playlists
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
-
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-backports-datetime-fromisoformat-[0-9]*:../../time/py-backports-datetime-fromisoformat
+.endif
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
