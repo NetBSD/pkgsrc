@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/11/08 13:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/24 12:24:39 mef Exp $
 
 R_PKGNAME=	RCurl
-R_PKGVER=	1.98-1.5
-PKGREVISION=	6
+R_PKGVER=	1.98-1.14
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +9,12 @@ COMMENT=	General Network (HTTP/FTP/...) Client Interface for R
 LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	R-XML-[0-9]*:../../math/R-XML
+
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 
 USE_LANGUAGES=	c
 
