@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2024/01/19 14:36:17 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/01/24 22:43:20 adam Exp $
 
 BLAKE2s (xgboost-2.0.3.tar.gz) = 3f4382c6559f9d9cbbcb5299c9422fc1b194d3e9c2e27c456a9f1ed33eaf0bfa
 SHA512 (xgboost-2.0.3.tar.gz) = 93614a9ad9d0a256cc31586b701c46eef4353df76c3eac26f39df23c8c02fa9ec95e72a0cea0b51bc3e416b81b3ac557ed361afeda246376a7b561bb6f7da579
 Size (xgboost-2.0.3.tar.gz) = 1048322 bytes
-SHA1 (patch-cpp__src_dmlc-core_CMakeLists.txt) = 2b09910ae40fd26fdaf7462ad4b37662dd106554
+SHA1 (patch-cpp__src_dmlc-core_CMakeLists.txt) = d7365655159fd310c73fa1abbbeb86db88c6f671
 SHA1 (patch-cpp__src_include_xgboost_collective_socket.h) = 71c2e47527fc39ca5cac4f47523f0f9ed8d22657
 SHA1 (patch-xgboost_libpath.py) = 39b2538729e5e4408de81534cd2b720ed112775a
