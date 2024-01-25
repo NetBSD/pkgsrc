@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2024/01/16 19:23:05 adam Exp $
+$NetBSD: distinfo,v 1.30 2024/01/25 06:51:17 wiz Exp $
 
 BLAKE2s (opencv-3.4.20.tar.gz) = 2b69e87e4accd4da4d1a599e05fc206cd5644ddeb7f61c9800ddb625648e4ffe
 SHA512 (opencv-3.4.20.tar.gz) = 45b4447a5312acefffb9b11a6d4e8d8e98c62dcec902e4589d91bb32e7b5bc6e5c6407881a9edcca7d97df598e3f70925e458b2772d991d64ed2cc82701441f8
@@ -24,7 +24,7 @@ SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127
 SHA1 (patch-modules_dnn_src_layers_accum__layer.cpp) = 20a12489f7e7fcbc90d47871f12ac500ab8ae6ed
 SHA1 (patch-modules_dnn_src_tensorflow_tf__importer.cpp) = 9b3628d91c2217c4b1ed77413efd4c0bf85758c4
 SHA1 (patch-modules_dnn_src_torch_torch__importer.cpp) = 814a3cc929569b691d01e34252dbd185f31161c2
-SHA1 (patch-modules_dnn_test__precomp.hpp) = 9bf15d32394f36b92e5fc5d57fd576b3860233ae
+SHA1 (patch-modules_dnn_test_test__precomp.hpp) = 9bf15d32394f36b92e5fc5d57fd576b3860233ae
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_imgcodecs_src_grfmt__exr.cpp) = 1a33d1b14e837b973b3ac2465d0b20fd6501e9bf
 SHA1 (patch-modules_imgproc_src_resize.cpp) = e842d5960c4c00162a34f46cb45cf69d0e9f21ce
