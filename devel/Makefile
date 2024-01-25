@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4163 2024/01/23 18:30:34 adam Exp $
+# $NetBSD: Makefile,v 1.4164 2024/01/25 06:56:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -35,8 +35,8 @@ SUBDIR+=	R-clipr
 SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
 SUBDIR+=	R-cyclocomp
-SUBDIR+=	R-desc
 SUBDIR+=	R-debugme
+SUBDIR+=	R-desc
 SUBDIR+=	R-devtools
 SUBDIR+=	R-diffobj
 SUBDIR+=	R-diffr
@@ -93,8 +93,8 @@ SUBDIR+=	R-testthat
 SUBDIR+=	R-tidyselect
 SUBDIR+=	R-tidyverse
 SUBDIR+=	R-tinytest
-SUBDIR+=	R-usethis
 SUBDIR+=	R-unitizer
+SUBDIR+=	R-usethis
 SUBDIR+=	R-uuid
 SUBDIR+=	R-waldo
 SUBDIR+=	R-whisker
