@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.648 2024/01/25 16:02:37 adam Exp $
+$NetBSD: CHANGES-2024,v 1.649 2024/01/25 16:18:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -843,3 +843,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-classInt to 0.4.10 [mef 2024-01-25]
 	Updated x11/py-sip6 to 6.8.2 [adam 2024-01-25]
 	Updated devel/blosc2 to 2.13.1 [adam 2024-01-25]
+	Updated time/dateutils to 0.4.11 [adam 2024-01-25]
+	Updated graphics/py-imageio to 2.33.1 [adam 2024-01-25]
