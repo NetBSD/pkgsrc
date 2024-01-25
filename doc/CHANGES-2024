@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.651 2024/01/25 17:14:01 adam Exp $
+$NetBSD: CHANGES-2024,v 1.652 2024/01/25 22:10:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-guessit to 3.8.0 [adam 2024-01-25]
 	Updated lang/nodejs to 21.6.1 [adam 2024-01-25]
 	Updated net/py-pamqp to 3.3.0 [adam 2024-01-25]
+	Updated math/R-compositions to 2.0.7 [mef 2024-01-25]
