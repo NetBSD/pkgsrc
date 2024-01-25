@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2022/11/09 13:14:10 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2024/01/25 16:41:20 thor Exp $
 
 DISTNAME=	zlib-1.2.13
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/}
 MASTER_SITES+=	http://zlib.net/
 DISTFILES=	# empty
@@ -25,6 +26,8 @@ LDFLAGS.Cygwin=		-no-undefined
 CPPFLAGS.SunOS+=	-DNO_DIVIDE
 .endif
 LDFLAGS.SunOS+=	-Wl,-zignore	# avoid unused reference to libgcc_s.so
+
+LDFLAGS.Linux+=	-Wl,--version-script,zlib.map
 
 SUBST_CLASSES+=		pc
 SUBST_MESSAGE.pc=	pkg-config file substitutions
