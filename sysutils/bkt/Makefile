@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2023/08/29 06:31:50 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/25 10:02:10 pin Exp $
 
-DISTNAME=	bkt-0.7.1
+DISTNAME=	bkt-0.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dimo414/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/dimo414/bkt/
+HOMEPAGE=	https://www.bkt.rs/
 COMMENT=	Subprocess caching utility
 LICENSE=	mit
 
