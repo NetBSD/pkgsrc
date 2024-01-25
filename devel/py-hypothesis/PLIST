@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2023/12/11 20:46:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2024/01/25 10:58:23 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -9,6 +9,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_hypothesis_ftz_detector.py
 ${PYSITELIB}/_hypothesis_ftz_detector.pyc
 ${PYSITELIB}/_hypothesis_ftz_detector.pyo
+${PYSITELIB}/_hypothesis_globals.py
+${PYSITELIB}/_hypothesis_globals.pyc
+${PYSITELIB}/_hypothesis_globals.pyo
 ${PYSITELIB}/_hypothesis_pytestplugin.py
 ${PYSITELIB}/_hypothesis_pytestplugin.pyc
 ${PYSITELIB}/_hypothesis_pytestplugin.pyo
