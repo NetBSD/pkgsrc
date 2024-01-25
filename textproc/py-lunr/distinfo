@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/11 17:46:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/01/25 16:30:22 adam Exp $
 
-BLAKE2s (lunr-0.6.2.tar.gz) = ea708c703c882fe84bef15c047bce3f61a7aa608445e953165c7a2419596bb53
-SHA512 (lunr-0.6.2.tar.gz) = 6b7c29d30a8a64b71246ff884e473cceeef5e00e382ad54474e7855dcafcf3817dcc14c29c1bb2eb3371f1cb5ab1485a7840dbe41d345a4503294052aa9cd644
-Size (lunr-0.6.2.tar.gz) = 45968 bytes
+BLAKE2s (lunr-0.7.0.post1.tar.gz) = 13d4f0fb1c5ddc0c764e313beacbc17dca4c3fc9afb9595e86eb2d4d9635973a
+SHA512 (lunr-0.7.0.post1.tar.gz) = cd53f1a5eb2c7ed95be78f390e1324bae850da8178be42519e03a6fd04be3a66452dda6b8c4e174cdb7d7999d819370bf27760f0cae3be2e72f15188db79d7d5
+Size (lunr-0.7.0.post1.tar.gz) = 1146070 bytes
