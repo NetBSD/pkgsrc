@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2024/01/25 09:22:29 nros Exp $
 
-DISTNAME=	lzlib-1.13
+DISTNAME=	lzlib-1.14
 CATEGORIES=	archivers devel
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lzlib/
 
