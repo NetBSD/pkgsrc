@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/10/24 07:46:20 fcambus Exp $
+$NetBSD: distinfo,v 1.2 2024/01/25 09:22:29 nros Exp $
 
-BLAKE2s (lzlib-1.13.tar.gz) = f9c370d1ff20d113299ddeb68cbfb31c817918185ab2622b97257af820051a71
-SHA512 (lzlib-1.13.tar.gz) = b9c4e5a9aca982984b497d1da2e1f0439b37b19acaf88a02f5af114b0a65a828c5ae235b3bd4f419ce001963de38a4d03445a6a1bd93f37e783e799abd75578d
-Size (lzlib-1.13.tar.gz) = 130005 bytes
+BLAKE2s (lzlib-1.14.tar.gz) = 51f71662cd998d2fdde190b1bbb7964ca233ffa0cabcb88588c5cbef0946a010
+SHA512 (lzlib-1.14.tar.gz) = 1582b99149af18ea119f015a9dbf224aa2ebc78240432415b2da20bd5a4e4dc3fdea2489789bc581bdccdba6f4eab13c69c5801e8a43ab9a829c2eb9b801797f
+Size (lzlib-1.14.tar.gz) = 131624 bytes
