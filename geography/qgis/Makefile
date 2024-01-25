@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2024/01/24 23:22:21 gdt Exp $
+# $NetBSD: Makefile,v 1.197 2024/01/25 06:33:07 adam Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -114,6 +114,7 @@ pre-configure:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/libspatialite/buildlink3.mk"
 .include "../../geography/spatialindex/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
