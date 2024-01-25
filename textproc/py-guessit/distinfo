@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/17 17:33:21 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/01/25 16:34:03 adam Exp $
 
-BLAKE2s (guessit-3.7.1.tar.gz) = 1c61b89e2e8d1604a525713754aa0d0f4b6213b135787887a7d167b737517f17
-SHA512 (guessit-3.7.1.tar.gz) = 4932407ca3a283a756291a69ef4cd4dcd96ea9c37b6d30331f134b2285960afb1f6adecdb299474ef7dfdea4b6e2e029ddab0789998efe7aea13d0e5bb8c54d6
-Size (guessit-3.7.1.tar.gz) = 161488 bytes
+BLAKE2s (guessit-3.8.0.tar.gz) = 9273d7e044045d55792dcbcb060a3820d4202e3af0fb0135394e06fe2f7515eb
+SHA512 (guessit-3.8.0.tar.gz) = 968e8f27dd41dcaece27444cd5117990726ef73467cedbc008dcf0fe2d1f2010209253e2fa6d645e30d9eaffe613080f1c2d77bda772227c1e6e04910d58f7ad
+Size (guessit-3.8.0.tar.gz) = 271285 bytes
