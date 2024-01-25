@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.203 2023/06/26 13:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2024/01/25 07:10:29 wiz Exp $
 
-DISTNAME=	libpng-1.6.40
+DISTNAME=	libpng-1.6.41
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
-MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
-MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/graphics/png/src/libpng16/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libpng.org/pub/png/libpng.html
+HOMEPAGE=	https://github.com/pnggroup/libpng
 COMMENT=	Library for manipulating PNG images
 LICENSE=	zlib
 
