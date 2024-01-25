@@ -1,16 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/11 17:46:07 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/01/25 16:30:22 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/lunr/__init__.py
 ${PYSITELIB}/lunr/__init__.pyc
 ${PYSITELIB}/lunr/__init__.pyo
-${PYSITELIB}/lunr/__main__.py
-${PYSITELIB}/lunr/__main__.pyc
-${PYSITELIB}/lunr/__main__.pyo
 ${PYSITELIB}/lunr/builder.py
 ${PYSITELIB}/lunr/builder.pyc
 ${PYSITELIB}/lunr/builder.pyo
@@ -35,6 +30,9 @@ ${PYSITELIB}/lunr/languages/stemmer.pyo
 ${PYSITELIB}/lunr/languages/trimmer.py
 ${PYSITELIB}/lunr/languages/trimmer.pyc
 ${PYSITELIB}/lunr/languages/trimmer.pyo
+${PYSITELIB}/lunr/lunr.py
+${PYSITELIB}/lunr/lunr.pyc
+${PYSITELIB}/lunr/lunr.pyo
 ${PYSITELIB}/lunr/match_data.py
 ${PYSITELIB}/lunr/match_data.pyc
 ${PYSITELIB}/lunr/match_data.pyo
