@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/25 17:13:45 adam Exp $
 
-BLAKE2s (pamqp-3.0.1.tar.gz) = 4c6204c3e51f5978203426ade534d772b5507a63242a3a40d1d1a2a73d31f282
-SHA512 (pamqp-3.0.1.tar.gz) = 078b69df40b53cd18ebf8c768c6001c83bfa268d8d651752e8405cb8c5f58c809d9dfb8e1c9b72e75bace62679cd02e0a965b7b6301fd764f6786213ec04a7e2
-Size (pamqp-3.0.1.tar.gz) = 30941 bytes
+BLAKE2s (pamqp-3.3.0.tar.gz) = 6bf066b82d9e05ce6607c04a1e052dd0dbfdc8059a8d9770c426b824ffa658ae
+SHA512 (pamqp-3.3.0.tar.gz) = b07d58d8e199878692989dc53c80eaeb5918af0fff45bf280c7771410cd7d289bb57e60a1603037ebc9af92f7bfbbd443905665b2ea12e38b6180e9ecc9209e0
+Size (pamqp-3.3.0.tar.gz) = 30993 bytes
