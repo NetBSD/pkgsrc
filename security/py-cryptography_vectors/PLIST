@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/01/23 06:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/01/25 05:56:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
@@ -170,9 +170,11 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsaparam.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/ec_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/ec_private_key_encrypted.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/ec_public_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/ec_public_key_rsa_delimiter.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/rsa-bad-1025-q-is-2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/rsa_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/rsa_public_key.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/rsa_wrong_delimiter_public_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/bad-encryption-oid.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/bad-oid-dsa-key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ec_oid_not_in_reg_private_2.pkcs8.pem
