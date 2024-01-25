@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/11/13 16:13:53 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/25 09:27:03 nros Exp $
 
-DISTNAME=	plzip-1.10
+DISTNAME=	plzip-1.11
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/plzip/
 
