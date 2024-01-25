@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2021/04/24 00:16:04 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/25 14:41:59 gdt Exp $
 
 DISTNAME=	gap4r3
 PKGNAME=	gap-4.3.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 #MASTER_SITES+=	ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
@@ -11,7 +11,14 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gap-system.org/
 COMMENT=	Computational group theory and discrete algebra language
-LICENSE=	no-commercial-use
+# Does not clearly grant permission to redistribute.  Unclear derived
+# work both no-commercial and GPL on Windows, not directly relevant to
+# pkgsrc.
+LICENSE=	generic-nonlicense
+
+RESTRICTED=		No commercial use
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
