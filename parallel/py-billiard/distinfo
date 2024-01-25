@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:10:38 nia Exp $
+$NetBSD: distinfo,v 1.17 2024/01/25 11:16:11 adam Exp $
 
-BLAKE2s (billiard-3.6.4.0.tar.gz) = 68ede642c8056d38b0c4ef8c46a49ecaeb318293d16a711b61c3bc27de2fb0ef
-SHA512 (billiard-3.6.4.0.tar.gz) = 9f2a44024e45c4e7667472a0a3ade7caae755ec7c163929433f818e4b87165218b9cc9545bdee2254e7159c206e525306e383d38906b00fd5428bd1616c39b8f
-Size (billiard-3.6.4.0.tar.gz) = 155303 bytes
+BLAKE2s (billiard-4.2.0.tar.gz) = 4d0e80bf5860132f622d26db3204f6bcc7a51eb2487fa27f54d132184e38928e
+SHA512 (billiard-4.2.0.tar.gz) = 8f25cd44416cb5b89a4e511189d8381f7bd0b0bc15597d2adb4b4e3fe3542a651acd7803dea43dcf0a94e2be6347d509393dac7dcabf2902a5f81b3cad8b0685
+Size (billiard-4.2.0.tar.gz) = 154665 bytes
 SHA1 (patch-Modules___billiard_multiprocessing.h) = 6453debfd2ada7e1c0c3c207d941bffa3cb35334

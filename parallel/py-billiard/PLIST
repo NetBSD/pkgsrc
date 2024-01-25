@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/01 09:17:48 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/01/25 11:16:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/billiard/__init__.py
 ${PYSITELIB}/billiard/__init__.pyc
 ${PYSITELIB}/billiard/__init__.pyo
@@ -37,9 +37,6 @@ ${PYSITELIB}/billiard/einfo.pyo
 ${PYSITELIB}/billiard/exceptions.py
 ${PYSITELIB}/billiard/exceptions.pyc
 ${PYSITELIB}/billiard/exceptions.pyo
-${PYSITELIB}/billiard/five.py
-${PYSITELIB}/billiard/five.pyc
-${PYSITELIB}/billiard/five.pyo
 ${PYSITELIB}/billiard/forkserver.py
 ${PYSITELIB}/billiard/forkserver.pyc
 ${PYSITELIB}/billiard/forkserver.pyo
