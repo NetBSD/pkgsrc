@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/09/27 09:45:27 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/01/25 10:56:02 adam Exp $
 
-BLAKE2s (python-utils-3.8.1.tar.gz) = 86e877b549d103c73094a48950f40e3876bbab52e894ba86e3fe721a7847d0f8
-SHA512 (python-utils-3.8.1.tar.gz) = ccba9651cc99a8f4e3f13e7ff66a43a40d2e85bc735b6246524269495ff321225a0dcad9abd03ca9cb61b4b1b35a27009fac3fe87e3f748ffc5c87a956acd335
-Size (python-utils-3.8.1.tar.gz) = 30545 bytes
+BLAKE2s (python-utils-3.8.2.tar.gz) = 4ee6164b20a0b65562576a028a25da2c243469f7c10daa2bee1aa736a791ec78
+SHA512 (python-utils-3.8.2.tar.gz) = e0de794abe95f3e205fcbde0fd52615f44128ffb702a406ff0d3f7ce2640ff60ac3cc508829245bce750ed191c9d3ae563b8f0619af4c2c43cacde6a1aa0fde4
+Size (python-utils-3.8.2.tar.gz) = 30431 bytes
