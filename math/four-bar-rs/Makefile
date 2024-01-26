@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/29 13:39:25 pin Exp $
+# $NetBSD: Makefile,v 1.11 2024/01/26 10:37:37 pin Exp $
 
 DISTNAME=	four-bar-rs-6.1.0
 CATEGORIES=	math
@@ -8,8 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
-#LICENSE=	gnu-agpl-v3
-LICENSE=	mit
+LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
 
