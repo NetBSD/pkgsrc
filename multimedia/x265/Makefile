@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/01/24 18:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/01/26 03:16:46 riastradh Exp $
 
 DISTNAME=	x265_3.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -29,6 +29,13 @@ CMAKE_ARGS+=	-DENABLE_ASSEMBLY=OFF
 .  else
 TOOL_DEPENDS+=	nasm>=2.13.0:../../devel/nasm
 .  endif
+.endif
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CMAKE_ARGS+=		-DCMAKE_SYSTEM:STRING=${OPSYS:Q}-${OS_VERSION:Q}
+CMAKE_ARGS+=		-DCMAKE_SYSTEM_NAME:STRING=${OPSYS:Q}
+CMAKE_ARGS+=		-DCMAKE_SYSTEM_VERSION:STRING=${OS_VERSION:Q}
+CMAKE_ARGS+=		-DCMAKE_SYSTEM_PROCESSOR:STRING=${MACHINE_ARCH:Q}
 .endif
 
 .include "../../devel/cmake/build.mk"
