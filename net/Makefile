@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1557 2024/01/20 06:58:47 pin Exp $
+# $NetBSD: Makefile,v 1.1558 2024/01/26 10:20:20 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -911,6 +911,7 @@ SUBDIR+=	sniffnet
 SUBDIR+=	sniproxy
 SUBDIR+=	snmptt
 SUBDIR+=	snort
+SUBDIR+=	snowflake
 SUBDIR+=	socat
 SUBDIR+=	socket++
 SUBDIR+=	socks4
