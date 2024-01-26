@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/26 13:13:35 wiz Exp $
+include/tclExtend.h
+lib/tclx8.6/arrayprocs.tcl
+lib/tclx8.6/autoload.tcl
+lib/tclx8.6/buildhelp.tcl
+lib/tclx8.6/compat.tcl
+lib/tclx8.6/convlib.tcl
+lib/tclx8.6/edprocs.tcl
+lib/tclx8.6/events.tcl
+lib/tclx8.6/fmath.tcl
+lib/tclx8.6/forfile.tcl
+lib/tclx8.6/globrecur.tcl
+lib/tclx8.6/help.tcl
+lib/tclx8.6/libtclx8.6.so
+lib/tclx8.6/pkgIndex.tcl
+lib/tclx8.6/profrep.tcl
+lib/tclx8.6/pushd.tcl
+lib/tclx8.6/setfuncs.tcl
+lib/tclx8.6/showproc.tcl
+lib/tclx8.6/stringfile.tcl
+lib/tclx8.6/tcllib.tcl
+lib/tclx8.6/tclx.tcl
+man/mann/TclX.n
