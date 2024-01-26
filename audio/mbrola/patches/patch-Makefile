@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2024/01/26 12:58:05 wiz Exp $
+
+Let pkgsrc define CC and don't force endianess.
+
+--- Makefile.orig	2019-12-17 16:05:14.000000000 +0000
++++ Makefile
+@@ -4,7 +4,7 @@
+ VERSION=3.3
+ 
+ # To test strict C ANSI compliance
+-CC = gcc -ansi -pedantic
++CC ?= gcc -ansi -pedantic
+ LIB= -lm
+ 
+ # This allow you to write commands like "make PURE=purify demo1"
+@@ -26,7 +26,7 @@ CCPURE = $(PURE) $(CC)
+ 
+ # If endianess of your machine is not automatically detected in Misc/common.h
+ # you should manually specify here
+-CFLAGS += -DLITTLE_ENDIAN
++#CFLAGS += -DLITTLE_ENDIAN
+ #CFLAGS += -DBIG_ENDIAN
+ 
+ #######################

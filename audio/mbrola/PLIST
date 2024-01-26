@@ -1,3 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/26 12:58:05 wiz Exp $
 bin/mbrola
-share/doc/mbrola/readme.txt
+share/doc/mbrola/HISTORY.txt
+share/doc/mbrola/Image1.gif
+share/doc/mbrola/LATEX/doc2.lyx
+share/doc/mbrola/LATEX/doc2.tex
+share/doc/mbrola/LATEX/doc2.toc
+share/doc/mbrola/LATEX/fpms.gif
+share/doc/mbrola/LATEX/fpms.ps.bb
+share/doc/mbrola/LATEX/fpms.ps.gz
+share/doc/mbrola/LATEX/heritage.gif
+share/doc/mbrola/LATEX/heritage.ps.bb
+share/doc/mbrola/LATEX/heritage.ps.gz
+share/doc/mbrola/documentation301.html
+share/doc/mbrola/documentation301g.odt
+share/doc/mbrola/heritage.gif
+share/doc/mbrola/rom_documentation.txt
