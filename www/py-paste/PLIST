@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2018/11/04 09:08:35 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.9 2024/01/26 13:59:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/Paste-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/paste/auth/__init__.py
 ${PYSITELIB}/paste/auth/__init__.pyc
 ${PYSITELIB}/paste/auth/__init__.pyo
@@ -53,8 +51,6 @@ ${PYSITELIB}/paste/config.pyo
 ${PYSITELIB}/paste/cowbell/__init__.py
 ${PYSITELIB}/paste/cowbell/__init__.pyc
 ${PYSITELIB}/paste/cowbell/__init__.pyo
-${PYSITELIB}/paste/cowbell/bell-ascending.png
-${PYSITELIB}/paste/cowbell/bell-descending.png
 ${PYSITELIB}/paste/debug/__init__.py
 ${PYSITELIB}/paste/debug/__init__.pyc
 ${PYSITELIB}/paste/debug/__init__.pyo
@@ -91,10 +87,6 @@ ${PYSITELIB}/paste/evalexception/__init__.pyo
 ${PYSITELIB}/paste/evalexception/evalcontext.py
 ${PYSITELIB}/paste/evalexception/evalcontext.pyc
 ${PYSITELIB}/paste/evalexception/evalcontext.pyo
-${PYSITELIB}/paste/evalexception/media/MochiKit.packed.js
-${PYSITELIB}/paste/evalexception/media/debug.js
-${PYSITELIB}/paste/evalexception/media/minus.jpg
-${PYSITELIB}/paste/evalexception/media/plus.jpg
 ${PYSITELIB}/paste/evalexception/middleware.py
 ${PYSITELIB}/paste/evalexception/middleware.pyc
 ${PYSITELIB}/paste/evalexception/middleware.pyo
