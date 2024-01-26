@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/06/17 12:03:36 mef Exp $
+# $NetBSD: Makefile,v 1.20 2024/01/26 11:38:25 mef Exp $
 
 R_PKGNAME=	gdata
-R_PKGVER=	2.19.0
+R_PKGVER=	3.0.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Various R programming tools for data manipulation
