@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2022/12/25 17:49:16 nia Exp $
+# $NetBSD: options.mk,v 1.21 2024/01/26 03:15:30 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
@@ -85,6 +85,8 @@ SUBST_SED.vc+=		-e "s;/opt/vc;${PREFIX};g"
 
 .if !empty(PKG_OPTIONS:Mwayland)
 CONFIGURE_ARGS+=	--enable-video-wayland
+MAKE_FLAGS+=		WAYLAND_SCANNER=${TOOLBASE:Q}/bin/wayland-scanner
+TOOL_DEPENDS+=		${BUILDLINK_API_DEPENDS.wayland:=:../../devel/wayland}
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
