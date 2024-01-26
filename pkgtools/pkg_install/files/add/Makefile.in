@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.34 2020/10/28 16:52:43 maya Exp $
+# $NetBSD: Makefile.in,v 1.35 2024/01/26 03:24:49 riastradh Exp $
 
 srcdir=		@srcdir@
 
@@ -37,7 +37,7 @@ INSTALL=	@INSTALL@
 
 PROG=		pkg_add
 
-OBJS=	main.o perform.o
+OBJS=	main.o parse_cross.o perform.o
 
 all: $(PROG)
 
