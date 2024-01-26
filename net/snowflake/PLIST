@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/26 10:20:10 wiz Exp $
+bin/snowflake-broker
+bin/snowflake-client
+bin/snowflake-probetest
+bin/snowflake-proxy
+bin/snowflake-server
+share/doc/snowflake/README.md
