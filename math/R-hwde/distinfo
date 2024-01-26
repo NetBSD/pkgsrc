@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:55:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/01/26 21:23:05 mef Exp $
 
-BLAKE2s (R/hwde_0.67.tar.gz) = 20bda024d3870213c48093e88b5de37679db51ea346bdca7182d2a5913a8be61
-SHA512 (R/hwde_0.67.tar.gz) = 8ea813e78d36f0fd843803a10d050cee92b8de120fd05ff14045ccf0e180c8c1fc63ba66033a72826936eb65a52c2f14517549af0fef02c37d75a9c91afddcf9
-Size (R/hwde_0.67.tar.gz) = 130727 bytes
+BLAKE2s (R/hwde_0.67-3.tar.gz) = 55c729e5d00006b97d6220c12875c6a6cb45168259429c13977bda515202f143
+SHA512 (R/hwde_0.67-3.tar.gz) = 7401bc51b5dc5f14f69727af706ae859e3dbb5ad4c26b4967e541888ab21cf4f8b05bb3a2ca5418e47fa82ad669058b434604305a1b4b0198497303f4becda0d
+Size (R/hwde_0.67-3.tar.gz) = 304359 bytes
