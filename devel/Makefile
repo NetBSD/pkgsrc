@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4165 2024/01/26 08:09:13 pin Exp $
+# $NetBSD: Makefile,v 1.4166 2024/01/26 10:41:11 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -172,6 +172,7 @@ SUBDIR+=	automoc4
 SUBDIR+=	autosetup
 SUBDIR+=	avl
 SUBDIR+=	avltree
+SUBDIR+=	bacon
 SUBDIR+=	bam
 SUBDIR+=	bats
 SUBDIR+=	bazel
