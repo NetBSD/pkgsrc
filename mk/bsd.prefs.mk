@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.437 2024/01/13 20:21:23 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.438 2024/01/26 03:25:36 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -341,6 +341,11 @@ MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
 MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
+# Set this before <bsd.own.mk> does, since it doesn't know about Darwin
+.if ${OPSYS} == "Darwin"
+OBJECT_FMT?=		Mach-O
+.endif
+
 #
 # cross-libtool is special -- it is built as a native package, but it
 # needs tools set up as if for a cross-compiled package because it
@@ -375,11 +380,6 @@ NEED_OWN_INSTALL_TARGET=no
 # in the odd possible case of someone extracting "pkgsrc" underneath "src".
 USETOOLS=		no
 MAKE_ENV+=		USETOOLS=no
-
-# Set this before <bsd.own.mk> does, since it doesn't know about Darwin
-.if ${OPSYS} == "Darwin"
-OBJECT_FMT?=		Mach-O
-.endif
 
 ACCEPTABLE_LICENSES?=	${DEFAULT_ACCEPTABLE_LICENSES}
 
