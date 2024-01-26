@@ -9,9 +9,9 @@ not accept raw text as input.  In order to obtain a full TTS system,
 you need to use this synthesizer in combination with a text processing
 system that produces phonetic and prosodic commands.
 
-This software is the heart of the MBROLA project, the aim of which is
-to obtain a set a speech synthesizers for as many languages as
-possible, free of use for non-commercial applications.
+This software is the heart of the MBROLA project, the aim of which
+is to obtain a set of speech synthesizers for as many languages as
+possible, free of use.
 
 As such, it requires an MBROLA language/voice database to run
 properly.  American English, Brazilian Portuguese, Breton, British

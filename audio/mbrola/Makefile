@@ -1,32 +1,25 @@
-# $NetBSD: Makefile,v 1.21 2023/12/19 11:10:32 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2024/01/26 12:58:05 wiz Exp $
 
-DISTNAME=		mbr301h
-PKGNAME=		mbrola-301h
-PKGREVISION=		3
-CATEGORIES=		audio
-MASTER_SITES=		#
-EXTRACT_SUFX=		.zip
+DISTNAME=	mbrola-3.3
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_GITHUB:=numediart/}
+GITHUB_PROJECT=	MBROLA
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://github.com/numediart/MBROLA
-COMMENT=		MBROLA diphone synthesizer executable
-LICENSE=		no-commercial-use
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/numediart/MBROLA/
+COMMENT=	Speech synthesizer
+LICENSE=	gnu-agpl-v3
 
-WRKSRC=			${WRKDIR}
-DIST_SUBDIR=		mbrola-20010717
-BUILD_DIRS=		# empty
+WRKSRC=		${WRKDIR}/MBROLA-3.3
 
-EMUL_PLATFORMS=		netbsd-i386
-EMUL_REQD=		netbsd>=1.4
-EMUL_MODULES.netbsd=	base
+USE_TOOLS+=	gmake pax
+BUILD_TARGET=
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/mbrola
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/mbrola-netbsd-i386 \
-		${DESTDIR}${PREFIX}/bin/mbrola
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mbrola
-	${INSTALL_DATA} ${WRKSRC}/readme.txt \
-		${DESTDIR}${PREFIX}/share/doc/mbrola
+	${INSTALL_PROGRAM} ${WRKSRC}/Bin/mbrola ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/Documentation && pax -pp -rw * ${DESTDIR}${PREFIX}/share/doc/mbrola
 
 .include "../../mk/bsd.pkg.mk"

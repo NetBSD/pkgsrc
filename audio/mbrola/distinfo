@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/01/26 12:58:05 wiz Exp $
 
-BLAKE2s (mbrola-20010717/mbr301h.zip) = 1ec58f663fb38404a5b37c1f17ed1d7a453097d02e1cec213b49f81769c7260e
-SHA512 (mbrola-20010717/mbr301h.zip) = 907358fba513fdcbf5fc428d51e662738488fa17ea96f4d33b6e8954f1abe0fdd6df704bdca4519fdeb58ea6a9bc9313b38dfb0d26be1aad2e83411bb6756062
-Size (mbrola-20010717/mbr301h.zip) = 72067 bytes
+BLAKE2s (mbrola-3.3.tar.gz) = 0b5fe781e2480a7ab03e84d79e9dc84cd38aeda35ba45335c580aeee59e514a6
+SHA512 (mbrola-3.3.tar.gz) = 4c15481d2afc7f459c511d2f2791ae1f0f89893ea86fcde113c73f9b5509b893bc7beac8ec5fa76ca0f4e0aca35982ff1db15e8611514d91991608aee004c3f2
+Size (mbrola-3.3.tar.gz) = 345444 bytes
+SHA1 (patch-Makefile) = dafcf1e949e4e7fd623958a828b98763c37cad72
+SHA1 (patch-Misc_common.h) = 82aabe5bfdb4e95128039bfc1547ddbdb0efda95
