@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/15 12:37:20 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/01/26 12:31:53 mef Exp $
 
-BLAKE2s (R/RcmdrMisc_2.7-2.tar.gz) = 95fb5e7d4ecd42cfb3719f0d0c89583d15af0246e15e2320594a25e22ba44c09
-SHA512 (R/RcmdrMisc_2.7-2.tar.gz) = 420a1d0648d8536b2f12a4bce1cb88ccc658ddccba23686d0a14a4016b7e567bc239663f0bee88817b6cc3d7cfb0c46fa4fbb09b1c0ab7949cbec652c33680bf
-Size (R/RcmdrMisc_2.7-2.tar.gz) = 38928 bytes
+BLAKE2s (R/RcmdrMisc_2.9-1.tar.gz) = 2f3b4ed368d5387ba3ff495673792d4e4682044a325a8379c30538575b7c170a
+SHA512 (R/RcmdrMisc_2.9-1.tar.gz) = 9ca65c612a123507aedbeeaa2837fa3aacd877e2b4b4acb73f4643da077c3f37e877b3c9f8100ea6f1416bd2430db0d3ca7ac7aed2fde2cbd4f6c196d8f143fc
+Size (R/RcmdrMisc_2.9-1.tar.gz) = 38932 bytes
