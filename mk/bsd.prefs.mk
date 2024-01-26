@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.438 2024/01/26 03:25:36 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.439 2024/01/26 03:25:47 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -389,6 +389,28 @@ PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 # Load the settings from MAKECONF, which is /etc/mk.conf by default.
 .include <bsd.own.mk>
 
+# When cross-compilation support is requested, the following options
+# must be specified as well or guessable:
+# - MACHINE_ARCH is set to TARGET_ARCH if set.
+# - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
+# - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
+# - DESTDIR support is required
+#
+# _CROSS_DESTDIR is set for internal use to avoid conditionalising
+# the use.
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if defined(TARGET_ARCH)
+MACHINE_ARCH=	${TARGET_ARCH}
+.  endif
+CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
+.  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
+PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
+.  else
+_CROSS_DESTDIR=	${CROSS_DESTDIR}
+.  endif
+.endif
+
 .if ${OPSYS} == "OpenBSD"
 .  if defined(ELF_TOOLCHAIN) && ${ELF_TOOLCHAIN} == "yes"
 OBJECT_FMT?=	ELF
@@ -448,28 +470,6 @@ SHAREMODE?=		${DOCMODE}
 	@${ECHO_MSG} "You CANNOT set PREFIX manually or in mk.conf. Set LOCALBASE or X11BASE"
 	@${ECHO_MSG} "depending on your needs. See the pkg system documentation for more info."
 	@${FALSE}
-.endif
-
-# When cross-compilation support is requested, the following options
-# must be specified as well or guessable:
-# - MACHINE_ARCH is set to TARGET_ARCH if set.
-# - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
-# - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
-# - DESTDIR support is required
-#
-# _CROSS_DESTDIR is set for internal use to avoid conditionalising
-# the use.
-
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.  if defined(TARGET_ARCH)
-MACHINE_ARCH=	${TARGET_ARCH}
-.  endif
-CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
-.  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
-PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
-.  else
-_CROSS_DESTDIR=	${CROSS_DESTDIR}
-.  endif
 .endif
 
 # Load the OS-specific definitions for program variables.  Default to loading
