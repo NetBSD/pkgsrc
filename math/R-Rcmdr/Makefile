@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/06/15 12:59:45 mef Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/26 12:51:45 mef Exp $
 
 R_PKGNAME=	Rcmdr
-R_PKGVER=	2.8-0
+R_PKGVER=	2.9-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Platform-independent basic-statistics GUI for R
@@ -15,7 +15,7 @@ DEPENDS+=	R-car>=3.0.8:../../math/R-car
 DEPENDS+=	R-relimp>=1.0.5:../../math/R-relimp
 
 # Packages suggested but not available:
-#   'leaps', 'multcomp', 'rgl', 'sem'
+#   'leaps', 'multcomp', 'sem'
 TEST_DEPENDS+=	R-aplpack-[0-9]*:../../math/R-aplpack
 TEST_DEPENDS+=	R-lmtest-[0-9]*:../../math/R-lmtest
 TEST_DEPENDS+=	R-rgl-[0-9]*:../../graphics/R-rgl
