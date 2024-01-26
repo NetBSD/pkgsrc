@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/01/13 22:03:28 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/26 11:48:38 pin Exp $
 
-DISTNAME=	eza-0.17.1
+DISTNAME=	eza-0.17.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eza-community/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
