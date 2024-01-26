@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2023/06/11 05:59:30 mef Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/26 14:07:11 mef Exp $
 
 R_PKGNAME=	gtools
-R_PKGVER=	3.9.4
+R_PKGVER=	3.9.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Various R programming tools
 LICENSE=	gnu-gpl-v2
 
-# Packages suggested but not available:
-#  'gplots', 'rstudioapi', 'SGP', 'taxize'
+
+# Packages suggested but not available: 'gplots', 'SGP', 'taxize'
 
 TEST_DEPENDS+=	R-car-[0-9]*:../../math/R-car
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
