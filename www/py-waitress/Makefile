@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/08/24 09:25:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/26 13:48:21 adam Exp $
 
-DISTNAME=	waitress-1.4.3
+DISTNAME=	waitress-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/waitress/}
 
@@ -11,18 +10,15 @@ HOMEPAGE=	https://github.com/Pylons/waitress
 COMMENT=	Production-quality pure-Python WSGI server
 LICENSE=	zpl-2.1
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=41:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} waitress-serve waitress-serve-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

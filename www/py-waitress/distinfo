@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:30:50 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/01/26 13:48:21 adam Exp $
 
-BLAKE2s (waitress-1.4.3.tar.gz) = 854f342e6b64f10c8fbdffa2e0a8fc00142500fa41a55a735e82ccbf4e1016d2
-SHA512 (waitress-1.4.3.tar.gz) = b4fd6d174fe63d83686708ffb83f61421e94cc6c6e9ebc7deeae93ea50a0c11ee523d4448e602ba03ade942912accb33d482c13a367d7dcba61ba6b4871bc3b4
-Size (waitress-1.4.3.tar.gz) = 173767 bytes
+BLAKE2s (waitress-2.1.2.tar.gz) = e6a20380dd33e3505502c7e5e7bfffea98e363f1d5cd5a3dde5c0cc809ab0016
+SHA512 (waitress-2.1.2.tar.gz) = 4ef487e116b34eede0f04a02ca7a78116a91664814067a8562d1cd15a4ab702e5faf4be7c122478324d017b6bb1f5315633b74405d00e900b34cc8f1a068da59
+Size (waitress-2.1.2.tar.gz) = 179823 bytes
