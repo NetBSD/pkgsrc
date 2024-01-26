@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/01/26 13:51:23 adam Exp $
 
-BLAKE2s (PasteDeploy-2.0.1.tar.gz) = 930d80a0ed3d92ceca63cd67fd8479e337253a35a7ca2580d62d4d92aff554ba
-SHA512 (PasteDeploy-2.0.1.tar.gz) = 24d619f9cec689d26322ea2643082ff02de74092bead103ab3052b330d267fea604cd351f09554ed8e7c0b91b913d1a11f4f4220cda8fbab2419926a4ccf92d0
-Size (PasteDeploy-2.0.1.tar.gz) = 13756 bytes
+BLAKE2s (PasteDeploy-3.1.0.tar.gz) = 4d5d863be8c62f9ca731102494eca5e567dfea3921ae0f688eba4eb12f379424
+SHA512 (PasteDeploy-3.1.0.tar.gz) = 1af1b8f51f6b8985604b253fceec59f5c1987b51e2b0b655561cf15b802bd05696cecc5a6d1b01d0c6ee4b0dcbfbb2c0dc0b5c83d51034a55984c7aeba924e95
+Size (PasteDeploy-3.1.0.tar.gz) = 37841 bytes
