@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/06/11 05:59:30 mef Exp $
+$NetBSD: distinfo,v 1.12 2024/01/26 14:07:11 mef Exp $
 
-BLAKE2s (R/gtools_3.9.4.tar.gz) = 8893ffb2b4e3c2866df4d094dcb0975c5125b77f5980e5db0d3ec2dff75ee47e
-SHA512 (R/gtools_3.9.4.tar.gz) = 3bebb121e91888ae4ff841ef7f0a215ffde2ca229531faf68b5311e438350627e5476e8367370f33c08883f5c3915a5724773c7028ffe23eab0728a37fd44b9f
-Size (R/gtools_3.9.4.tar.gz) = 240661 bytes
+BLAKE2s (R/gtools_3.9.5.tar.gz) = ceeb6b18af94c4bda38a10e630b2b3669f00fd9f04b7e5aed3385fd7e45bf747
+SHA512 (R/gtools_3.9.5.tar.gz) = dd98024782c047f93538732bca868ccc8babb1a457e12708f39d721c9c5a29a38d4087e8d984d00e03f894f0aa5861dda1f4e74427addd8cf288413fb179aa01
+Size (R/gtools_3.9.5.tar.gz) = 242029 bytes
