@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.677 2024/01/26 15:00:44 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.678 2024/01/26 18:54:41 abs Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-gtools to 3.9.5 [mef 2024-01-26]
 	Updated graphics/geeqie to 2.2 [wiz 2024-01-26]
 	Updated graphics/dcraw to 9.28.0 [gdt 2024-01-26]
+	Updated misc/ocaml-opam to 2.1.3 [abs 2024-01-26]
