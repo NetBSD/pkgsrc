@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2023/11/13 15:40:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/01/26 03:17:31 riastradh Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
@@ -33,6 +33,17 @@ CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg5
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg5
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg5
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg5
+
+.if ${USE_CROSS_COMPILE:U:tl} == yes
+CONFIGURE_ARGS+=	--enable-cross-compile
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
+.  include "../../mk/endian.mk"
+.  if ${MACHINE_ENDIAN} == "big"
+CONFIGURE_ENV+=		bigendian=yes
+.  endif
+.endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
 CONFIGURE_ARGS+=	--enable-opencl
