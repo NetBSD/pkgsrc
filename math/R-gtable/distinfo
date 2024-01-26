@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/11 06:27:29 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/01/26 14:00:12 mef Exp $
 
-BLAKE2s (R/gtable_0.3.3.tar.gz) = 34d83ba8df1290efa1cd3c1dc5e4ce1d7778908b12165091af45a4896f9e1dee
-SHA512 (R/gtable_0.3.3.tar.gz) = e2dadf64b0b8f9879891c875e5b73b618ca18e927bf3d7521b7dcebd8d5bbac94ccb2e70e26f660d411c9a379e43939e45d89faa702df8f89230dfcdf82cba51
-Size (R/gtable_0.3.3.tar.gz) = 130057 bytes
+BLAKE2s (R/gtable_0.3.4.tar.gz) = 5fd79679ce45dabec58a661df01cfc356c2b5c26328c7c7a6f59d1202b0a1487
+SHA512 (R/gtable_0.3.4.tar.gz) = dfc1eff78a6bc693b0f9d87808857f14b8bb5ad27d2fd106b7df532b537f0d41b924faa5d5b9a21549f2afbaf73dc4bc578c2cfa70e82d87744152f7901c5e15
+Size (R/gtable_0.3.4.tar.gz) = 130100 bytes
