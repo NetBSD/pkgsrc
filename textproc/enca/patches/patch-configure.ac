@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.4 2024/01/26 03:15:50 riastradh Exp $
+
+Fix cross-build.
+
+--- configure.ac.orig	2013-09-30 07:48:22.000000000 +0000
++++ configure.ac
+@@ -36,6 +36,7 @@ RELEASE=1
+ dnl Checks for programs.
+ AC_PROG_AWK
+ AC_PROG_CC
++AX_PROG_CC_FOR_BUILD
+ AC_GNU_SOURCE
+ AC_AIX
+ AC_ISC_POSIX
