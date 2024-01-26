@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/26 13:13:35 wiz Exp $
+
+BLAKE2s (tclx-8.6.3.tar.gz) = 4c4df35a4326e6d2540da4ca997256d6bbb7d383e349dddb280c17042fc4e1c4
+SHA512 (tclx-8.6.3.tar.gz) = 680b8916ccb5725ed173b45549c94e7b1e17c4e5cf700c3991d2791b9f299660e94c880401dccfbff7ca630036c0781c41a9692c2d8ead2e7ad880e2e05a69e7
+Size (tclx-8.6.3.tar.gz) = 457293 bytes
