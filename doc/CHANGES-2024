@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.672 2024/01/26 13:54:28 adam Exp $
+$NetBSD: CHANGES-2024,v 1.673 2024/01/26 14:00:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -874,3 +874,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-PasteDeploy to 3.1.0 [adam 2024-01-26]
 	Updated www/py-WebTest to 3.0.0 [adam 2024-01-26]
 	Updated www/py-Routes to 2.5.1 [adam 2024-01-26]
+	Updated math/R-gtable to 0.3.4 [mef 2024-01-26]
