@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/15 12:37:20 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/26 12:31:53 mef Exp $
 
 R_PKGNAME=	RcmdrMisc
-R_PKGVER=	2.7-2
+R_PKGVER=	2.9-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R Commander miscellaneous functions
@@ -19,6 +19,12 @@ DEPENDS+=	R-Hmisc>=4.1.0:../../misc/R-Hmisc
 DEPENDS+=	R-haven>=2.1.1:../../textproc/R-haven
 DEPENDS+=	R-readstata13>=0.9.2:../../textproc/R-readstata13
 DEPENDS+=	R-readxl>=1.3.1:../../textproc/R-readxl
+
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
