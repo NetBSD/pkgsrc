@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/01/26 03:17:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.30 2024/01/26 03:17:31 riastradh Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg5/}
 PKGREVISION=	1
@@ -16,17 +16,6 @@ INSTALLATION_DIRS=	lib/ffmpeg5 share/doc/ffmpeg5
 
 .if ${_USE_RPATH:tl} != "no"
 CONFIGURE_ARGS+=	--enable-rpath
-.endif
-
-.if ${USE_CROSS_COMPILE:U:tl} == yes
-CONFIGURE_ARGS+=	--enable-cross-compile
-CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
-CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
-CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
-.  include "../../mk/endian.mk"
-.  if ${MACHINE_ENDIAN} == "big"
-CONFIGURE_ENV+=		bigendian=yes
-.  endif
 .endif
 
 PRINT_PLIST_AWK+=	/html/ { $$0 = "$${PLIST.doc}" $$0 }
