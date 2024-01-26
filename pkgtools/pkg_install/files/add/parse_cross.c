@@ -1,4 +1,4 @@
-/*	$NetBSD: parse_cross.c,v 1.1 2024/01/26 03:24:49 riastradh Exp $	*/
+/*	$NetBSD: parse_cross.c,v 1.2 2024/01/26 12:40:04 riastradh Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse_cross.c,v 1.1 2024/01/26 03:24:49 riastradh Exp $");
+__RCSID("$NetBSD: parse_cross.c,v 1.2 2024/01/26 12:40:04 riastradh Exp $");
 
 #include "lib.h"
 #include "add.h"
@@ -34,7 +34,7 @@ parse_cross(const char *text, char **machine_arch, char **opsys,
 	/*
 	 * If there's no /, treat it as a single MACHINE_ARCH.
 	 */
-	if (*(q = strchr(p, '/')) == '\0') {
+	if ((q = strchr(p, '/')) == NULL) {
 		*machine_arch = copy;
 		*opsys = NULL;
 		*os_version = NULL;
