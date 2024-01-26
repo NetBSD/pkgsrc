@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.661 2024/01/26 11:38:36 mef Exp $
+$NetBSD: CHANGES-2024,v 1.662 2024/01/26 11:49:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-e1071 to 1.7.14 [mef 2024-01-26]
 	Updated math/R-forecast to 8.21.1 [mef 2024-01-26]
 	Updated math/R-gdata to 3.0.0 [mef 2024-01-26]
+	Updated sysutils/eza to 0.17.3 [pin 2024-01-26]
