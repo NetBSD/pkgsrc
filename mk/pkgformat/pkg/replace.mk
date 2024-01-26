@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.8 2021/01/17 20:18:42 rhialto Exp $
+# $NetBSD: replace.mk,v 1.9 2024/01/26 12:42:01 riastradh Exp $
 #
 
 # _pkgformat-destdir-replace:
@@ -197,7 +197,7 @@ replace-destdir: .PHONY
 	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
-	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD} -U -D -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${STAGE_PKGFILE}
+	${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD} -U -D -m ${OPSYS:Q}/${MACHINE_ARCH:Q}\ ${OS_VERSION:Q} -I -p ${_CROSS_DESTDIR}${PREFIX} ${STAGE_PKGFILE}
 	@${ECHO} "Fixing recorded cwd..."
 	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
 	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
