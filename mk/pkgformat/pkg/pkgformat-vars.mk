@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.14 2023/06/27 14:36:29 riastradh Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.15 2024/01/26 03:24:58 riastradh Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -40,7 +40,9 @@ NATIVE_PKG_INFO_CMD?=		${NATIVE_PKG_TOOLS_BIN}/pkg_info
 NATIVE_LINKFARM_CMD?=		${NATIVE_PKG_TOOLS_BIN}/linkfarm
 
 # Latest versions of tools required for correct pkgsrc operation.
-.if !empty(USE_PKG_ADMIN_DIGEST:M[Yy][Ee][Ss])
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+PKGTOOLS_REQD=		20240125
+.elif !empty(USE_PKG_ADMIN_DIGEST:M[Yy][Ee][Ss])
 PKGTOOLS_REQD=		20191008
 .else
 PKGTOOLS_REQD=		20100914
