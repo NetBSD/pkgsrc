@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:21:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/01/26 03:15:50 riastradh Exp $
 
 BLAKE2s (enca-1.15.tar.bz2) = 4487af00052b8f07536685f3c4bd0010f55ce8e67ad0d07a6f2f1b19296f8e46
 SHA512 (enca-1.15.tar.bz2) = f0b843b0b38fcb250991ad072fe2f1bcaa6aaad8348983446046f40b44a2523a7c3b46569f9693e5b2848356288f718595ea4cc9bc0b4685aac02291fe7393ba
 Size (enca-1.15.tar.bz2) = 536627 bytes
+SHA1 (patch-configure.ac) = fdfe12a86d37ba8182919061d6976b06a6ddd892
+SHA1 (patch-tools_Makefile.am) = 01f8af341f2fb8c6d7816edf5b38690b5a9c53f8
