@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/04/30 18:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/26 14:04:37 adam Exp $
 
-DISTNAME=	PasteScript-2.0.2
+DISTNAME=	PasteScript-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PasteScript/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,15 +10,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Pluggable command-line frontend for setting up package file layouts
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
-DEPENDS+=	${PYPKGPREFIX}-paste-[0-9]*:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-paste>=3.0:../../www/py-paste
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} paster paster-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
