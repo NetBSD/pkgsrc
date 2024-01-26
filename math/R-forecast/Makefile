@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/06/12 12:54:14 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/26 11:20:48 mef Exp $
 
 R_PKGNAME=	forecast
-R_PKGVER=	8.21
+R_PKGVER=	8.21.1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Forecasting functions for time series and linear models
@@ -17,6 +17,12 @@ DEPENDS+=	R-urca>=1.3.0:../../math/R-urca
 DEPENDS+=	R-zoo>=1.8.6:../../math/R-zoo
 DEPENDS+=	R-timeDate>=3043.102:../../time/R-timeDate
 DEPENDS+=	R-generics>=0.1.2:../../math/R-generics
+
+# Packages suggested but not available:
+#   'forecTheta', 'rticles', 'seasonal', 'uroot'
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c c++ fortran
 
