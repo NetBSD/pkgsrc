@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.670 2024/01/26 13:20:26 mef Exp $
+$NetBSD: CHANGES-2024,v 1.671 2024/01/26 13:40:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -868,3 +868,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/mbrolavox-us3 to 0.0.0.16 [wiz 2024-01-26]
 	Added lang/tclx version 8.6.3 [wiz 2024-01-26]
 	Updated math/R-gss to 2.2.7 [mef 2024-01-26]
+	Updated security/gnupg2 to 2.4.4 [adam 2024-01-26]
+	Updated databases/pg_repack to 1.5.0 [adam 2024-01-26]
