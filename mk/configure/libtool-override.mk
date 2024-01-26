@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.13 2017/03/06 16:14:08 jperkin Exp $
+# $NetBSD: libtool-override.mk,v 1.14 2024/01/26 03:16:24 riastradh Exp $
 
 ######################################################################
 ### {libtool,shlibtool,depcomp}-override (PRIVATE)
@@ -18,10 +18,10 @@ OVERRIDE_DIRDEPTH.depcomp?=	${OVERRIDE_DIRDEPTH}
 
 _OVERRIDE_PATH.libtool=		${LIBTOOL}
 _OVERRIDE_PATH.shlibtool=	${SHLIBTOOL}
-.if exists(${LOCALBASE}/share/libtool/config/depcomp)
-_OVERRIDE_PATH.depcomp=		${LOCALBASE}/share/libtool/config/depcomp
+.if exists(${TOOLBASE}/share/libtool/config/depcomp)
+_OVERRIDE_PATH.depcomp=		${TOOLBASE}/share/libtool/config/depcomp
 .else
-_OVERRIDE_PATH.depcomp=		${LOCALBASE}/share/libtool/build-aux/depcomp
+_OVERRIDE_PATH.depcomp=		${TOOLBASE}/share/libtool/build-aux/depcomp
 .endif
 
 .for _script_ in libtool shlibtool depcomp
