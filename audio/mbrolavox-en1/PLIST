@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:17 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/01/26 12:59:39 wiz Exp $
+share/mbrola/voices/en1/README.txt
 share/mbrola/voices/en1/TEST/euler.pho
 share/mbrola/voices/en1/TEST/eulerfr.pho
 share/mbrola/voices/en1/TEST/mbrola.pho
@@ -6,5 +7,4 @@ share/mbrola/voices/en1/TEST/mbrolamr.pho
 share/mbrola/voices/en1/TEST/mbroli.ini
 share/mbrola/voices/en1/TEST/tobe.pho
 share/mbrola/voices/en1/en1
-share/mbrola/voices/en1/en1.txt
 share/mbrola/voices/en1/en1mrpa
