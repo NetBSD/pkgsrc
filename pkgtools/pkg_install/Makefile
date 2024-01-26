@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2024/01/03 12:32:59 gdt Exp $
+# $NetBSD: Makefile,v 1.239 2024/01/26 12:40:04 riastradh Exp $
 
 # Notes to package maintainers:
 #
@@ -7,7 +7,6 @@
 # change in the pkg_* tools that pkgsrc relies on for proper operation.
 
 PKGNAME=		pkg_install-${VERSION}
-PKGREVISION=		2
 CATEGORIES=		pkgtools
 
 MAINTAINER=		agc@NetBSD.org
