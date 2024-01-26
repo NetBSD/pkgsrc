@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.30 2022/07/06 18:53:58 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.31 2024/01/26 12:42:01 riastradh Exp $
 #
 
 # This file provides the following targets:
@@ -94,7 +94,7 @@ locked-su-do-bin-install:
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	${RUN} ${_BIN_INSTALL_PREPARE_CMD}				\
 	${STEP_MSG} "Installing ${PKGNAME} from $$pkg_path";		\
-	if ${PKGSRC_SETENV} PKG_PATH="$$pkg_path" ${PKGTOOLS_ENV} ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:Q}${PKG_SUFX}; then \
+	if ${PKGSRC_SETENV} PKG_PATH="$$pkg_path" ${PKGTOOLS_ENV} ${PKG_ADD} -m ${OPSYS:Q}/${MACHINE_ARCH:Q}\ ${OS_VERSION:Q} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:Q}${PKG_SUFX}; then \
 		${ECHO} "Fixing recorded cwd...";			\
 		${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp; \
 		${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS; \
