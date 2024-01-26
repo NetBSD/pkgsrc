@@ -1,0 +1,11 @@
+bacon is a background rust code checker.
+
+It's designed for minimal interaction so that you can just let it run,
+alongside your editor, and be notified of warnings, errors, or test failures
+in your Rust code.
+
+It conveys the information you need even in a small terminal so that you can
+keep more screen estate for your other tasks.
+
+It shows you errors before warnings, and the first errors before the last ones,
+so you don't have to scroll up to find what's relevant.
