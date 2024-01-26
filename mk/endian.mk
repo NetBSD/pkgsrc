@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.10 2014/05/21 01:43:50 obache Exp $
+# $NetBSD: endian.mk,v 1.11 2024/01/26 03:16:58 riastradh Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -27,6 +27,11 @@ BUILTIN_FIND_HEADERS._ENDIAN_H=	endian.h sys/endian.h machine/endian.h \
 _ENDIAN_H=	/dev/null
 .  endif
 
+_MACHINE_ENDIAN_CPP=	${CCPATH:U${CC}} -E -
+.if ${TOOLS_USE_CROSS_COMPILE:tl} == "yes"
+_MACHINE_ENDIAN_CPP+=	--sysroot=${TOOLS_CROSS_DESTDIR:Q}
+.endif
+
 MACHINE_ENDIAN!=							\
 	{ ${ECHO} "\#if defined(__sgi)";				\
 	  ${ECHO} "\#  include <standards.h>";				\
@@ -39,7 +44,7 @@ MACHINE_ENDIAN!=							\
 	  ${ECHO} "\#define BYTE_ORDER 1234";				\
 	  ${ECHO} "\#endif";						\
 	  ${ECHO} "\#endif";						\
-	  ${ECHO} "BYTE_ORDER"; } | ${CCPATH:U${CC}} -E - |		\
+	  ${ECHO} "BYTE_ORDER"; } | ${_MACHINE_ENDIAN_CPP} |		\
 	{ while read line; do						\
 		case $$line in						\
 		1234)	${ECHO} "little"; exit 0 ;;			\
