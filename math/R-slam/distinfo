@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/26 01:41:53 mef Exp $
+
+BLAKE2s (R/slam_0.1-50.tar.gz) = ee6b628443ea08d692d169082d24797f51d33b9c0394e4aed54dd96d6e96b3d9
+SHA512 (R/slam_0.1-50.tar.gz) = 159d9de537c7392abbcbff4c0b6187e77de98c20a1d4a91d6afe6985f911814f94ddfddcecae2b7b6f0546fcf0a543a6e15652bb6a15c836803b1ce3d8cc3e9e
+Size (R/slam_0.1-50.tar.gz) = 53641 bytes
