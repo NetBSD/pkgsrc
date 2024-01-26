@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/11/27 09:38:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2024/01/26 03:15:16 riastradh Exp $
 
 DISTNAME=	p11-kit-0.25.3
 CATEGORIES=	security
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://p11-glue.freedesktop.org/p11-kit.html
 COMMENT=	PKCS\#11 module manager
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	${BUILDLINK_API_DEPENDS.libtasn1:=:../../security/libtasn1}
 
 DEPENDS+=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
