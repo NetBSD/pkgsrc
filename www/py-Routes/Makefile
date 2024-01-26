@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/08/24 09:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/01/26 13:54:06 adam Exp $
 
-DISTNAME=	Routes-2.4.1
+DISTNAME=	Routes-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Routes/}
 
@@ -11,16 +10,19 @@ HOMEPAGE=	https://pypi.python.org/pypi/Routes
 COMMENT=	Python re-implementation of the Rails routes system for mapping URLs
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-repoze.lru>=0.3:../../devel/py-repoze.lru
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+# middleware
 DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
