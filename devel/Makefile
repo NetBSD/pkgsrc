@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4164 2024/01/25 06:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4165 2024/01/26 08:09:13 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -209,6 +209,7 @@ SUBDIR+=	calltree-perl
 SUBDIR+=	camlp-streams
 SUBDIR+=	capnproto
 SUBDIR+=	capstone
+SUBDIR+=	cargo-about
 SUBDIR+=	cargo-binutils
 SUBDIR+=	cargo-bloat
 SUBDIR+=	cargo-c
