@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/01/22 13:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2024/01/26 03:17:07 riastradh Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg5/}
 PKGREVISION=	1
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--enable-cross-compile
 CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
+.  include "../../mk/endian.mk"
+.  if ${MACHINE_ENDIAN} == "big"
+CONFIGURE_ENV+=		bigendian=yes
+.  endif
 .endif
 
 PRINT_PLIST_AWK+=	/html/ { $$0 = "$${PLIST.doc}" $$0 }
