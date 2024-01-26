@@ -498,6 +498,7 @@ ldap			Enable LDAP support.
 lensfun			Enable lensfun (camera lens distortion rectifyer) support.
 libao			Enable the platform-independent 'ao' audio library.
 libappindicator		Enable libappindicator support.
+libarchive		Enable libarchive support.
 libchamplain		Enable libchamplain support (map widget).
 libdbi			Enable libdbi support (similar p5-DBI but for C).
 libdrm			Enable libdrm support.
@@ -518,6 +519,7 @@ libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
 libotf			Enable libotf support.
 libpcap			Enable libpcap support.
+libraw			Enable libraw support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
 libsoxr			Enable libsoxr (resample) support.
