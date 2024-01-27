@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2023/06/06 12:41:59 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.33 2024/01/27 02:52:49 riastradh Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -34,6 +34,21 @@ CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg4
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg4
 # Misuse LDFLAGS because the package doesn't (at least right now) honor LIBS.
 LDFLAGS.SunOS+=		-lrt
+
+.if ${USE_CROSS_COMPILE:tl} == yes
+CONFIGURE_ARGS+=	--enable-cross-compile
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
+.  include "../../mk/endian.mk"
+.  if ${MACHINE_ENDIAN} == "big"
+CONFIGURE_ENV+=		bigendian=yes
+.  endif
+.  if !empty(MACHINE_ARCH:Mpowerpc*)
+BUILDLINK_TRANSFORM+=	rm:-maltivec
+BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
+.  endif
+.endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
 CONFIGURE_ARGS+=	--enable-opencl
