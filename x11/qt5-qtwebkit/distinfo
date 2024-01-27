@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2023/07/19 20:16:19 adam Exp $
+$NetBSD: distinfo,v 1.32 2024/01/27 18:06:36 wiz Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -31,6 +31,8 @@ SHA1 (patch-Source_WebCore_platform_text_TextCodecICU.cpp) = 4b3418cedac05d7f4b2
 SHA1 (patch-Source_WebCore_platform_text_icu_UTextProvider.h) = fb0885eb9db3001ddd8df90059cdb47dbfd79fe3
 SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderLatin1.cpp) = 29b414e1ae18a0786f31d80143f665d6d68bcbe3
 SHA1 (patch-Source_WebCore_platform_text_icu_UTextProviderUTF16.cpp) = b175e1973a2019d746fda174dfc5708a3ca57d9b
+SHA1 (patch-Source_WebCore_xml_XSLTProcessor.h) = 57f9d38a3ccab03c6dbc1c20d2cef4b598af36dc
+SHA1 (patch-Source_WebCore_xml_XSLTProcessorLibxslt.cpp) = ce3e86db666bdcca94c1bea3ffff0bb7d1f9c75e
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
 SHA1 (patch-Source_WebKit_qt_declarative_CMakeLists.txt) = bda5cb2751027aab161ae54f46b8f9103532fb13
 SHA1 (patch-Source_WebKit_qt_declarative_experimental_CMakeLists.txt) = b95ac623f36018e3f2cc55a2988e97ef3f713159
