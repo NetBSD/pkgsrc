@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.95 2023/11/19 19:54:30 wiz Exp $
+$NetBSD: distinfo,v 1.96 2024/01/27 15:47:06 wiz Exp $
 
 BLAKE2s (inkscape-1.3.1.tar.xz) = a92f5577e7be254fcbbebcd5c2fbfd0f8e6b8dfadd2f1e3b71f0209f57418abb
 SHA512 (inkscape-1.3.1.tar.xz) = cb0f8984c2dd33708021400384eeb2cfe32af4ba34a2f371a767b100a000cfe35b8c4fe88eb294a8f6fc0795d9991d53552df5b152288130da91228066f68a26
@@ -6,3 +6,4 @@ Size (inkscape-1.3.1.tar.xz) = 44727728 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 6638a97615ca37bcdc20463b37cd859d723f66d6
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
 SHA1 (patch-src_helper_mathfns.h) = 37977a9c767dd409088e552135c512ff76f675a4
+SHA1 (patch-src_object_uri.cpp) = 1121e62db87c0900389def8d84d0beb9cdfe6956
