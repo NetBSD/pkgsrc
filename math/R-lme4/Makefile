@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/07/08 06:06:17 mef Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/27 10:22:20 mef Exp $
 
 R_PKGNAME=	lme4
-R_PKGVER=	1.1-34
+R_PKGVER=	1.1-35.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linear mixed-effects models using Eigen and S4
@@ -11,8 +11,9 @@ DEPENDS+=	R-minqa>=1.1.15:../../math/R-minqa
 DEPENDS+=	R-nloptr>=1.0.4:../../math/R-nloptr
 
 # Packages suggested but not available:
-#  'PKPDmodels', 'MEMSS', 'mlmRev', 'optimx', 'gamm4', 'HSAUR3',
-#  'dfoptim', 'rr2', 'semEff'
+#  'MEMSS', 'mlmRev', 'optimx', 'gamm4', 'HSAUR3', 'dfoptim', 'rr2',
+#  'semEff', 'merDeriv'
+
 TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
