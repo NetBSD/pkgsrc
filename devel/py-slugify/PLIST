@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2023/07/25 13:20:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/01/27 18:53:18 adam Exp $
 bin/slugify-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/slugify/__init__.py
 ${PYSITELIB}/slugify/__init__.pyc
 ${PYSITELIB}/slugify/__init__.pyo
@@ -16,6 +15,7 @@ ${PYSITELIB}/slugify/__main__.pyo
 ${PYSITELIB}/slugify/__version__.py
 ${PYSITELIB}/slugify/__version__.pyc
 ${PYSITELIB}/slugify/__version__.pyo
+${PYSITELIB}/slugify/py.typed
 ${PYSITELIB}/slugify/slugify.py
 ${PYSITELIB}/slugify/slugify.pyc
 ${PYSITELIB}/slugify/slugify.pyo
