@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.110 2024/01/03 12:20:21 gdt Exp $
+# $NetBSD: compiler.mk,v 1.111 2024/01/27 00:03:49 wiz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -67,7 +67,7 @@
 #
 #       Deprecated values are: c99, gnu99, c11, gnu11, c17, gnu17,
 #	c++03, gnu++03, c++0x, gnu++0x, c++11, gnu++11, c++14,
-#	gnu++14, c++17, gnu++17, c++20, gnu++20.
+#	gnu++14, c++17, gnu++17, c++20, gnu++20, c++23, gnu++23.
 #
 #	The default is "c".
 #
@@ -87,7 +87,7 @@
 #	This is used to (optionally) install a newer compiler
 #	than provided by the system, to or skip building the package.
 #
-#	Valid values are: c++11, c++14, c++17, c++20, has_include,
+#	Valid values are: c++11, c++14, c++17, c++20, c++23, has_include,
 #	regex, filesystem, unique_ptr, charconv, parallelism_ts,
 #	put_time, is_trivially_copy_constructible.
 #
@@ -111,8 +111,8 @@
 #	versions is not consistent.  It is also useful if a package
 #	uses GNU language extensions without setting -std=gnu++XX.
 #
-#	Valid values are: c++03, c++11, c++14, c++17, c++20, gnu++03,
-#	gnu++11, gnu++17, gnu++20
+#	Valid values are: c++03, c++11, c++14, c++17, c++20, c++23,
+#	gnu++03, gnu++11, gnu++17, gnu++20, gnu++23
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
@@ -148,7 +148,7 @@ USE_LANGUAGES+=		c
 .  endif
 .endfor
 
-_CXX_STD_VERSIONS=	gnu++20 c++20 gnu++17 c++17 gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
+_CXX_STD_VERSIONS=	gnu++23 c++23 gnu++20 c++20 gnu++17 c++17 gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x gnu++03 c++03
 .for _version_ in ${_CXX_STD_VERSIONS}
 .  if !empty(USE_LANGUAGES:M${_version_})
 USE_LANGUAGES+=		c++

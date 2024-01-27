@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.271 2024/01/03 14:06:30 gdt Exp $
+# $NetBSD: gcc.mk,v 1.272 2024/01/27 00:03:50 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -176,6 +176,12 @@ GCC_REQD+=	2.8.0
 # https://gcc.gnu.org/wiki/C11Status
 # https://gcc.gnu.org/c99status.html
 #
+
+.if !empty(USE_CXX_FEATURES:Mc++23)
+# GCC 11 is the first version to support -std=c++23,
+# but it was never packaged for pkgsrc, so use GCC 12 instead.
+GCC_REQD+=	12
+.endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
 # GCC 10 is chosen because it is planned to be shipped with NetBSD 10,
