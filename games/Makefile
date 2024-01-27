@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2024/01/05 17:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.542 2024/01/27 13:39:36 nia Exp $
 #
 
 COMMENT=	Games
@@ -278,7 +278,6 @@ SUBDIR+=	lskat
 SUBDIR+=	ltris
 SUBDIR+=	lugaru
 SUBDIR+=	maelstrom-sdl
-SUBDIR+=	maelstrom-x11
 SUBDIR+=	majesty-demo
 SUBDIR+=	manaplus
 SUBDIR+=	marathon-evil
