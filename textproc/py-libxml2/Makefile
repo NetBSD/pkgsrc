@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2024/01/27 10:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2024/01/27 10:07:46 wiz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -24,7 +24,7 @@ USE_TOOLS+=	pkg-config
 # The following attempts to patch around this, but it is not good
 # enough with pkgsrc xml2 and native iconv because the iconv include
 # path is first.  This can happen on old macOS.
-# 
+#
 # \todo Patch setup.py.in to have @LIBXML2_PREFIX@ and @ICONV_PREFIX@
 # (in order) and then substite those, or at least ensure that the
 # iconv prefix is afterwwards.
