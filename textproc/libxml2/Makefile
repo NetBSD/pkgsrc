@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2024/01/27 10:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2024/01/27 21:07:16 sjmulder Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -21,6 +21,9 @@ PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
 USE_LANGUAGES+=		c
 FORCE_C_STD=		c99
+
+# for struct addrinfo on glibc
+CPPFLAGS+=	-D_POSIX_C_SOURCE=200112L  
 
 TEST_TARGET=	check
 
