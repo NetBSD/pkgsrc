@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2023/02/11 12:39:17 adam Exp $
+# $NetBSD: options.mk,v 1.12 2024/01/27 03:11:49 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 PKG_OPTIONS_OPTIONAL_GROUPS=	fpu
@@ -13,7 +13,7 @@ PKG_OPTIONS_GROUP.fpu+=		mpg123-neon64 mpg123-aarch64
 PKG_SUGGESTED_OPTIONS+=		mpg123-aarch64
 .elif ${MACHINE_ARCH} == "powerpc"
 PKG_OPTIONS_GROUP.fpu+=		mpg123-altivec
-PKG_SUGGESTED_OPTIONS+=		mpg123-altivec
+PKG_SUGGESTED_OPTIONS+=		mpg123-with-fpu
 .else
 # Avoid using floating point on softfloat ARM.
 .  if !(${MACHINE_ARCH:M*arm*} && !${MACHINE_ARCH:M*hf*})
