@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.14 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: application.mk,v 1.15 2024/01/27 02:08:28 riastradh Exp $
 #
 # Replace the #! interpreter for Python scripts.
 #
@@ -13,15 +13,25 @@
 #	A list of filename patterns for Python scripts to be installed,
 #	relative to ${WRKSRC}.
 #
+# REPLACE_TOOL_PYTHON
+#	A list of filename patterns for Python scripts to be run at
+#	build time, relative to ${WRKSRC}.
+#
 # Keywords: python
 #
 
 .include "../../lang/python/pyversion.mk"
 
-# XXX Handle TOOL_PYTHONBIN replacement too.
 .if defined(REPLACE_PYTHON)
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	.*python3\{0,1\}[^ ]*
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	${REPLACE_PYTHON}
+.endif
+
+.if defined(REPLACE_TOOL_PYTHON)
+REPLACE_INTERPRETER+=		tool-python
+REPLACE.tool-python.old=	.*python3\{0,1\}[^ ]*
+REPLACE.tool-python.new=	${TOOL_PYTHONBIN}
+REPLACE_FILES.tool-python=	${REPLACE_TOOL_PYTHON}
 .endif
