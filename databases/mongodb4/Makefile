@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/12/29 18:24:40 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/27 08:32:31 adam Exp $
 
-DISTNAME=	mongodb-src-r4.4.24
+DISTNAME=	mongodb-src-r4.4.28
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -26,8 +25,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
-USE_LANGUAGES=		c99 c++17
-USE_CXX_FEATURES+=	c++17 filesystem
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++17 filesystem
+GCC_REQD+=		11
 
 USE_TOOLS+=	pkg-config
 
@@ -160,7 +161,8 @@ do-configure:
 	${DO_NADA}
 
 post-install:
-.for junk in LICENSE-Community.txt MPL-2 README THIRD-PARTY-NOTICES bin/resmoke.py macos_mongodb.plist
+.for junk in LICENSE-Community.txt LICENSE-Enterprise.txt MPL-2 README THIRD-PARTY-NOTICES \
+	bin/resmoke.py macos_mongodb.plist
 	${RM} -f ${DESTDIR}${PREFIX}/${junk}
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/debian/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
