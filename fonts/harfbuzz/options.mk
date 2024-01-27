@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2022/06/07 16:47:33 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2024/01/27 02:08:36 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
 PKG_SUPPORTED_OPTIONS+=	doc
@@ -10,8 +10,7 @@ PLIST_VARS+=		doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
 MESON_ARGS+=	-Ddocs=enabled
-BUILDLINK_API_DEPENDS.gtk-doc=	gtk-doc>=1.32nb9
-.include "../../textproc/gtk-doc/buildlink3.mk"
+TOOL_DEPENDS+=	gtk-doc>=1.32nb9:../../textproc/gtk-doc
 PLIST.doc=	yes
 .else
 MESON_ARGS+=	-Ddocs=disabled
