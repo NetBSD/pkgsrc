@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2023/12/24 07:17:14 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/01/27 18:50:16 adam Exp $
 
-DISTNAME=	xz-5.4.5
+DISTNAME=	xz-5.4.6
 CATEGORIES=	archivers
-MASTER_SITES=	https://tukaani.org/xz/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tukaani-project/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
