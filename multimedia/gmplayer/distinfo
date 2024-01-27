@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2023/11/22 16:31:22 tsutsui Exp $
+$NetBSD: distinfo,v 1.114 2024/01/27 02:11:03 riastradh Exp $
 
 BLAKE2s (mplayer/Abyss-1.7.tar.bz2) = 8f2e3b2454234f396d8eec5916617133627621aa1690e68a876beb4716bdb2da
 SHA512 (mplayer/Abyss-1.7.tar.bz2) = e60aae7a6a264023ebb49421696bc78ec46b463ce6d7f869cc5561e183a6d5abd3846b71a45656c8ad2a6f35bafd76d15235216dcba3b4936ff7b364b7a66407
@@ -225,7 +225,6 @@ Size (mplayer/xine-lcd-1.2.tar.bz2) = 172270 bytes
 BLAKE2s (mplayer/xmmplayer-1.5.tar.bz2) = a6d48421913fca708930c097da2abcbaadee159f2a9404827a9431c279ce61b0
 SHA512 (mplayer/xmmplayer-1.5.tar.bz2) = 170a7aec3b0cd284d8f7fb79e72f2463efc84b05710aa70f3360b145e86e424138f2c11abaa2db6a2e937822ed91396d4833ea59685d7067bfc916578187e30f
 Size (mplayer/xmmplayer-1.5.tar.bz2) = 74184 bytes
-SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
 SHA1 (patch-av__helpers.c) = c7821a3c4fb4cddc581ed1ee364c735c9680eb05
