@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.689 2024/01/27 10:22:31 mef Exp $
+$NetBSD: CHANGES-2024,v 1.690 2024/01/27 13:43:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -895,3 +895,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/libxml2 to 2.12.4 [wiz 2024-01-27]
 	Updated textproc/py-libxml2 to 2.12.4 [wiz 2024-01-27]
 	Updated math/R-lme4 to 1.1.35.1 [mef 2024-01-27]
+	Removed games/maelstrom-x11 successor games/maelstrom-sdl [nia 2024-01-27]
