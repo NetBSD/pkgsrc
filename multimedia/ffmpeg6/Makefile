@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/01/22 13:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/27 02:53:01 riastradh Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg6/}
 PKGREVISION=	1
@@ -16,13 +16,6 @@ INSTALLATION_DIRS=	lib/ffmpeg6 share/doc/ffmpeg6
 
 .if ${_USE_RPATH:tl} != "no"
 CONFIGURE_ARGS+=	--enable-rpath
-.endif
-
-.if ${USE_CROSS_COMPILE:U:tl} == yes
-CONFIGURE_ARGS+=	--enable-cross-compile
-CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
-CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
-CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
 .endif
 
 PRINT_PLIST_AWK+=	/html/ { $$0 = "$${PLIST.doc}" $$0 }
