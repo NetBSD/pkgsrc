@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/08/14 05:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/01/27 13:56:37 mef Exp $
 
 DISTNAME=	gdb-10.1
 PKGREVISION=	6
@@ -25,6 +25,9 @@ INSTALL_TARGET=			install-gdb install-gdbsupport
 TEST_TARGET=			check
 INFO_FILES=			yes
 CONFIGURE_ENV+=			CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+
+# wants ncurses.h
+FAKE_NCURSES=			yes
 
 # In gdb/configure, depcomp is parsed with sed.
 SUBST_CLASSES+=			fix-depcomp
