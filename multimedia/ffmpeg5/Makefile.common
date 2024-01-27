@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2024/01/27 02:10:34 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.11 2024/01/27 02:22:03 riastradh Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg5
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg5
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg5
 
-.if ${USE_CROSS_COMPILE:U:tl} == yes
+.if ${USE_CROSS_COMPILE:tl} == yes
 CONFIGURE_ARGS+=	--enable-cross-compile
 CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
