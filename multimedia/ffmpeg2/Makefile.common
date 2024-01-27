@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2023/11/09 16:31:18 nia Exp $
+# $NetBSD: Makefile.common,v 1.68 2024/01/27 02:51:31 riastradh Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -32,6 +32,22 @@ CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg2
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg2
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg2
+
+.if ${USE_CROSS_COMPILE:tl} == yes
+CONFIGURE_ARGS+=	--enable-cross-compile
+CONFIGURE_ARGS+=	--arch=${MACHINE_ARCH:Q}
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
+.  include "../../mk/endian.mk"
+.  if ${MACHINE_ENDIAN} == "big"
+CONFIGURE_ENV+=		bigendian=yes
+.  endif
+.  if !empty(MACHINE_ARCH:Mpowerpc*)
+BUILDLINK_TRANSFORM+=	rm:-maltivec
+BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
+.  endif
+.endif
 
 PLIST_VARS+=		opencl
 
