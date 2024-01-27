@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.694 2024/01/27 18:53:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.695 2024/01/27 19:06:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -902,3 +902,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pip-run to 12.5.0 [adam 2024-01-27]
 	Updated archivers/xz to 5.4.6 [adam 2024-01-27]
 	Updated devel/py-slugify to 8.0.2 [adam 2024-01-27]
+	Updated devel/py-pygit2 to 1.14.0 [adam 2024-01-27]
+	Updated devel/py-colorlog to 6.8.2 [adam 2024-01-27]
+	Updated net/py-moto to 4.1.14 [adam 2024-01-27]
