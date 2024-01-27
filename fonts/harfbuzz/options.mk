@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2024/01/27 02:09:19 riastradh Exp $
+# $NetBSD: options.mk,v 1.15 2024/01/27 09:58:18 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
 PKG_SUPPORTED_OPTIONS+=	doc introspection
@@ -22,6 +22,7 @@ MESON_ARGS+=	-Dintrospection=enabled
 # XXX This should be TOOL_DEPENDS, no?
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+PLIST.introspection=	yes
 .else
 MESON_ARGS+=	-Dintrospection=disabled
 .endif
