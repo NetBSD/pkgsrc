@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2024/01/22 13:16:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2024/01/27 21:34:18 pin Exp $
 
-DISTNAME=	gifski-1.13.0
-PKGREVISION=	2
+DISTNAME=	gifski-1.14.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ImageOptim/gifski/
 COMMENT=	GIF encoder based on libimagequant (pngquant)
-LICENSE=	gnu-agpl-v3
+#LICENSE=	gnu-agpl-v3
+LICENSE=	mit
 
 .include "cargo-depends.mk"
 
