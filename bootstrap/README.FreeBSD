@@ -1,4 +1,4 @@
-$NetBSD: README.FreeBSD,v 1.10 2021/10/31 09:26:49 nia Exp $
+$NetBSD: README.FreeBSD,v 1.11 2024/01/27 03:15:27 gutteridge Exp $
 
 Please read the general README file as well.
 
@@ -24,5 +24,5 @@ a version of GCC installed from ports, clang from ports is untested.
 
 bootstrap-pkgsrc has been tested on FreeBSD 12-13.
 
-For unprivileged bootstraps, note that /home on FreeBSD is a symlink to /usr/home.
-Use --unprivileged --prefix /usr/home/youruser.
+For unprivileged bootstraps, note that on FreeBSD prior to 14 /home is a symlink
+to /usr/home. Use --unprivileged --prefix /usr/home/youruser.
