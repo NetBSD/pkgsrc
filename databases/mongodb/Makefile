@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2023/12/29 18:24:40 adam Exp $
+# $NetBSD: Makefile,v 1.87 2024/01/27 08:33:28 adam Exp $
 
-DISTNAME=	mongodb-src-r6.0.9
+DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -27,8 +26,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-types-yaml>=6.0.5:../../textproc/py-types-yaml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
-USE_LANGUAGES=		c99 c++17
-USE_CXX_FEATURES+=	c++17 filesystem
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++17 filesystem
+GCC_REQD+=		11
 
 USE_TOOLS+=	pkg-config
 
@@ -50,7 +51,7 @@ SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 .include "../../mk/bsd.prefs.mk"
 
