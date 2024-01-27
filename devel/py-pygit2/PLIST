@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2023/11/26 15:54:43 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+@comment $NetBSD: PLIST,v 1.12 2024/01/27 19:01:13 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,6 +23,9 @@ ${PYSITELIB}/pygit2/blame.pyo
 ${PYSITELIB}/pygit2/blob.py
 ${PYSITELIB}/pygit2/blob.pyc
 ${PYSITELIB}/pygit2/blob.pyo
+${PYSITELIB}/pygit2/branches.py
+${PYSITELIB}/pygit2/branches.pyc
+${PYSITELIB}/pygit2/branches.pyo
 ${PYSITELIB}/pygit2/callbacks.py
 ${PYSITELIB}/pygit2/callbacks.pyc
 ${PYSITELIB}/pygit2/callbacks.pyo
@@ -76,24 +79,30 @@ ${PYSITELIB}/pygit2/filter.pyo
 ${PYSITELIB}/pygit2/index.py
 ${PYSITELIB}/pygit2/index.pyc
 ${PYSITELIB}/pygit2/index.pyo
+${PYSITELIB}/pygit2/legacyenums.py
+${PYSITELIB}/pygit2/legacyenums.pyc
+${PYSITELIB}/pygit2/legacyenums.pyo
 ${PYSITELIB}/pygit2/packbuilder.py
 ${PYSITELIB}/pygit2/packbuilder.pyc
 ${PYSITELIB}/pygit2/packbuilder.pyo
+${PYSITELIB}/pygit2/references.py
+${PYSITELIB}/pygit2/references.pyc
+${PYSITELIB}/pygit2/references.pyo
 ${PYSITELIB}/pygit2/refspec.py
 ${PYSITELIB}/pygit2/refspec.pyc
 ${PYSITELIB}/pygit2/refspec.pyo
-${PYSITELIB}/pygit2/remote.py
-${PYSITELIB}/pygit2/remote.pyc
-${PYSITELIB}/pygit2/remote.pyo
+${PYSITELIB}/pygit2/remotes.py
+${PYSITELIB}/pygit2/remotes.pyc
+${PYSITELIB}/pygit2/remotes.pyo
 ${PYSITELIB}/pygit2/repository.py
 ${PYSITELIB}/pygit2/repository.pyc
 ${PYSITELIB}/pygit2/repository.pyo
 ${PYSITELIB}/pygit2/settings.py
 ${PYSITELIB}/pygit2/settings.pyc
 ${PYSITELIB}/pygit2/settings.pyo
-${PYSITELIB}/pygit2/submodule.py
-${PYSITELIB}/pygit2/submodule.pyc
-${PYSITELIB}/pygit2/submodule.pyo
+${PYSITELIB}/pygit2/submodules.py
+${PYSITELIB}/pygit2/submodules.pyc
+${PYSITELIB}/pygit2/submodules.pyo
 ${PYSITELIB}/pygit2/utils.py
 ${PYSITELIB}/pygit2/utils.pyc
 ${PYSITELIB}/pygit2/utils.pyo
