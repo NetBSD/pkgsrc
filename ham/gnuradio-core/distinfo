@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.57 2024/01/07 12:24:20 mef Exp $
+$NetBSD: distinfo,v 1.58 2024/01/27 09:27:36 mef Exp $
 
-BLAKE2s (gnuradio-3.10.9.1.tar.gz) = b895565e74e1f324c38331b25ea998f30ab3a668560da2f3c23367856706357f
-SHA512 (gnuradio-3.10.9.1.tar.gz) = 842fd12654be3dd2840c2a03f30de41ecb0a336c4b2c7eaca4cc7e2cd9c03ef68dc84decac31500cd017da09a0c341ef088598d3a603cbf4c51dc618daaeb795
-Size (gnuradio-3.10.9.1.tar.gz) = 4413976 bytes
+BLAKE2s (gnuradio-3.10.9.2.tar.gz) = 1ff9c9ee91f1feddc1c76fed6fa644c7b687e6e5a2ac97f86c69e0c28d76178d
+SHA512 (gnuradio-3.10.9.2.tar.gz) = 5eca8dd21def7354ab8bd3b98a5780f80bc71b0dd8f556a50def157964e121c7ba6a8a8dc96584f6b15a6b2d7e0391fe77f5c72ba31c1c5b49a76306dd6f78cd
+Size (gnuradio-3.10.9.2.tar.gz) = 4413832 bytes
 SHA1 (patch-cmake_Modules_GrPybind.cmake) = b585fc9bddad66f98d9e70db3d9335c937698df9
 SHA1 (patch-gnuradio-runtime_CMakeLists.txt) = 3e4ae78cd722aa54a9626ca458cfe90ab11619a5
 SHA1 (patch-gnuradio-runtime_lib_CMakeLists.txt) = 8f29121bcff204fd4533c113cd05440a7d39477d
