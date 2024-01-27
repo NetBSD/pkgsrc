@@ -1,15 +1,15 @@
-$NetBSD: patch-Cargo.toml,v 1.4 2023/09/25 09:42:34 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.5 2024/01/27 21:34:18 pin Exp $
 
 Don't patch crate, only needed for cross-compilling.
 Only needed for Windows.
 
---- Cargo.toml.orig	2023-09-24 17:32:58.000000000 +0000
+--- Cargo.toml.orig	2024-01-26 21:50:29.023741654 +0000
 +++ Cargo.toml
-@@ -93,7 +93,3 @@ generation = false
+@@ -95,7 +95,3 @@ generation = false
  
  [package.metadata.capi.install.include]
  asset = [{from = "gifski.h"}]
 -
 -[patch.crates-io]
 -# ffmpeg-sys-next does not support cross-compilation, which I use to produce binaries https://github.com/zmwangx/rust-ffmpeg-sys/pull/30
--ffmpeg-sys-next = { rev = "94d5496d88900bdc0cad66733138134d0ea3cf31", git = "https://github.com/kornelski/rust-ffmpeg-sys-1"}
+-ffmpeg-sys-next = { rev = "fd5784d645df2ebe022a204ac36582074da1edf7", git = "https://github.com/kornelski/rust-ffmpeg-sys-1"}
