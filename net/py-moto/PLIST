@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/27 19:05:56 adam Exp $
 bin/moto_server-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -334,6 +334,9 @@ ${PYSITELIB}/moto/cloudwatch/__init__.pyo
 ${PYSITELIB}/moto/cloudwatch/exceptions.py
 ${PYSITELIB}/moto/cloudwatch/exceptions.pyc
 ${PYSITELIB}/moto/cloudwatch/exceptions.pyo
+${PYSITELIB}/moto/cloudwatch/metric_data_expression_parser.py
+${PYSITELIB}/moto/cloudwatch/metric_data_expression_parser.pyc
+${PYSITELIB}/moto/cloudwatch/metric_data_expression_parser.pyo
 ${PYSITELIB}/moto/cloudwatch/models.py
 ${PYSITELIB}/moto/cloudwatch/models.pyc
 ${PYSITELIB}/moto/cloudwatch/models.pyo
