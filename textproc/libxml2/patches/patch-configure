@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.6 2023/11/15 15:53:41 nia Exp $
+$NetBSD: patch-configure,v 1.7 2024/01/27 10:06:41 wiz Exp $
 
  * Add run-path to XML_LIBDIR
 
---- configure.orig	2022-10-14 12:41:28.000000000 +0000
+--- configure.orig	2024-01-15 15:53:40.000000000 +0000
 +++ configure
-@@ -15171,7 +15171,7 @@ printf "%s\n" "#define HAVE_GETADDRINFO 
+@@ -14249,7 +14249,7 @@ rm -f core conftest.err conftest.$ac_obj
+     fi
  fi
- 
  
 -XML_LIBDIR='-L${libdir}'
 +XML_LIBDIR='@COMPILER_RPATH_FLAG@${libdir} -L${libdir}'
  XML_INCLUDEDIR='-I${includedir}/libxml2'
- 
  XML_CFLAGS=""
+ 

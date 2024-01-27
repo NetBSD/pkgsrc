@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.145 2023/11/15 15:53:41 nia Exp $
+$NetBSD: distinfo,v 1.146 2024/01/27 10:06:41 wiz Exp $
 
-BLAKE2s (libxml2-2.10.4.tar.xz) = f54b22ffa245226395133ab4d172192d06ee88b1a4a9f700804bb26d7af757d0
-SHA512 (libxml2-2.10.4.tar.xz) = 792c1dceb098cd353a7eca4c46d31cce6310b2553d97fd3918cf0b94d93b2480759202036511bde36c24166236bd4616f57e79959eea9afe3f60614bdfe13094
-Size (libxml2-2.10.4.tar.xz) = 2643600 bytes
-SHA1 (patch-configure) = ff3dee578548e852cb6ff3281d18f5fcce1c2649
-SHA1 (patch-encoding.c) = 7fe0f67db061a2f46abe1c4b6b4d8a0402f82830
-SHA1 (patch-error.c) = 77561e820e0da96acb572378c2f2a0b9b84112e1
+BLAKE2s (libxml2-2.12.4.tar.xz) = 6989be26d16784b1eaefd85516e8e1c436905532b4089ab467efc30a1440fcd5
+SHA512 (libxml2-2.12.4.tar.xz) = 859f95eb659279c73d9fbaf3d84d593bcac075da91adcaf829a5feec034a1d3d03b75941879d972f3f448b5fca2caa043a10130d660b75e18573914ced7c56aa
+Size (libxml2-2.12.4.tar.xz) = 2643516 bytes
+SHA1 (patch-configure) = 5aef0e4ab33d2fe7e5ea85c1ac8b7e0ce11fe80d
