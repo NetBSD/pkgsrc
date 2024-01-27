@@ -1,6 +1,7 @@
-$NetBSD: patch-src_object_uri.cpp,v 1.1 2024/01/27 15:47:06 wiz Exp $
+$NetBSD: patch-src_object_uri.cpp,v 1.2 2024/01/27 15:50:19 wiz Exp $
 
 Fix build with libxml2 2.12.
+https://gitlab.com/inkscape/inkscape/-/issues/4753
 
 --- src/object/uri.cpp.orig	2024-01-27 15:42:32.772579666 +0000
 +++ src/object/uri.cpp
