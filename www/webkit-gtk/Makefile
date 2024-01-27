@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2023/11/14 14:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2024/01/27 17:22:41 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -45,7 +45,7 @@ CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
 CMAKE_ARGS+=		-DUSE_SOUP2=ON
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*}
 CMAKE_ARGS+=		-DAVOID_INT128=ON
 .endif
 
