@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2024/01/27 02:52:49 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.34 2024/01/27 02:54:36 riastradh Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -44,10 +44,19 @@ CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
 .  if ${MACHINE_ENDIAN} == "big"
 CONFIGURE_ENV+=		bigendian=yes
 .  endif
-.  if !empty(MACHINE_ARCH:Mpowerpc*)
+.endif
+
+# altivec support is detected at runtime, and only code that is gated
+# on the runtime detection can use it.  The code in ffmpeg that is
+# gated on the runtime detection doesn't need -maltivec -mabi=altivec.
+# But passing -maltivec -mabi=altivec tells the compiler that _any_
+# code, whether or not gated on runtime detection, can be done with
+# altivec -- and the compiler will quietly take advantage of this,
+# e.g. to zero-initialize objects on the stack.  This doesn't work too
+# well on powerpc CPUs without altivec, so nix the arguments.
+.if !empty(MACHINE_ARCH:Mpowerpc*)
 BUILDLINK_TRANSFORM+=	rm:-maltivec
 BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
-.  endif
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
