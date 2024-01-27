@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.692 2024/01/27 18:35:36 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.693 2024/01/27 18:36:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -898,3 +898,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed games/maelstrom-x11 successor games/maelstrom-sdl [nia 2024-01-27]
 	Updated math/R-lmm to 1.4 [mef 2024-01-27]
 	Updated graphics/inkscape to 1.3.2 [wiz 2024-01-27]
+	Added devel/py-jaraco.env version 1.0.0 [adam 2024-01-27]
+	Updated devel/py-pip-run to 12.5.0 [adam 2024-01-27]
