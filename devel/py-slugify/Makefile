@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/07/25 13:20:33 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/27 18:53:18 adam Exp $
 
-DISTNAME=	python-slugify-8.0.1
+DISTNAME=	python-slugify-8.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-slugify/}
@@ -12,17 +12,17 @@ LICENSE=	mit
 
 PREV_PKGPATH=	devel/py-python-slugify
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-text-unidecode>=1.3:../../textproc/py-text-unidecode
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} slugify slugify-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
