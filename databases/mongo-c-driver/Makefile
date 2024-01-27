@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2023/11/08 13:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2024/01/27 08:28:52 adam Exp $
 
-DISTNAME=	mongo-c-driver-1.24.4
-PKGREVISION=	2
+DISTNAME=	mongo-c-driver-1.25.4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mongodb/mongo-c-driver
@@ -21,6 +20,8 @@ TEST_TARGET=	check
 # u_int for sys/sysctl.h
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
+# Set version here, so Python and Git are not needed.
+CMAKE_ARGS+=	-DBUILD_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DENABLE_ICU=ON
 CMAKE_ARGS+=	-DENABLE_SNAPPY=ON
 CMAKE_ARGS+=	-DENABLE_UNINSTALL=OFF
@@ -40,12 +41,6 @@ LDFLAGS.SunOS+=			-lsocket
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/libmongoc/../../build/cmake/libmongoc-hidden-symbols.map
 
 .include "options.mk"
-
-post-install:
-.for lib in libbson libmongoc
-	${INSTALL_MAN} ${WRKSRC}/src/${lib}/doc/man/*.3 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-.endfor
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
