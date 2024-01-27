@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2024/01/26 03:17:31 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.10 2024/01/27 02:10:34 riastradh Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
@@ -42,6 +42,10 @@ CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
 .  include "../../mk/endian.mk"
 .  if ${MACHINE_ENDIAN} == "big"
 CONFIGURE_ENV+=		bigendian=yes
+.  endif
+.  if !empty(MACHINE_ARCH:Mpowerpc*)
+BUILDLINK_TRANSFORM+=	rm:-maltivec
+BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
 .  endif
 .endif
 
