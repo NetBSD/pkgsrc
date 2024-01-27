@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2024/01/27 02:09:19 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.45 2024/01/27 02:09:27 riastradh Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-8.3.0
@@ -73,7 +73,7 @@ PLIST.coretext=		yes
 .endif
 
 PYTHON_FOR_BUILD_ONLY=		tool
-REPLACE_PYTHON+=		src/*.py
+REPLACE_TOOL_PYTHON+=		src/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
