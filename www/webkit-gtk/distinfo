@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.173 2022/10/23 07:33:51 mcf Exp $
+$NetBSD: distinfo,v 1.174 2024/01/27 17:28:11 wiz Exp $
 
 BLAKE2s (webkitgtk-2.36.8.tar.xz) = 277ba5935bda3e3867083b4c736499d974b9c733dbd05bf574510857dde481a1
 SHA512 (webkitgtk-2.36.8.tar.xz) = 50576f13ea84c0634d174ccf0b70d0eb28752589b2b9ce7a82ffeee1b4b6c849a802f7ae83a3c5a74d0da2b7e3321876ead33e819d8006b8153376074cb57036
@@ -31,6 +31,8 @@ SHA1 (patch-Source_WebCore_platform_network_DNS.h) = dd9fb67aae0029c6a452e7d8f09
 SHA1 (patch-Source_WebCore_rendering_RenderLayerBacking.h) = ecf722df1d1cca13573786b34fe1e3d85edf1e1e
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
 SHA1 (patch-Source_WebCore_rendering_shapes_ShapeOutsideInfo.cpp) = 3a4d9415e7d3ac78a948b9e7eb5e0377575835c3
+SHA1 (patch-Source_WebCore_xml_XSLTProcessor.h) = cce0bdced0626b2301b3aa2646ad1d2d444d647f
+SHA1 (patch-Source_WebCore_xml_XSLTProcessorLibxslt.cpp) = c8b96312a5cd107065d505909d67ad5a7dd1f980
 SHA1 (patch-Source_WebKit_CMakeLists.txt) = 86d11b8a1142a1ab267e412873cca4f8924aaae8
 SHA1 (patch-Source_WebKit_NetworkProcess_cache_NetworkCacheFileSystem.cpp) = 14dfbee895aa7c70bf3b61b4dbb5bccd96d9583a
 SHA1 (patch-Source_WebKit_PlatformGTK.cmake) = 61d2b4942b83d3f3c1b642d122f109ba90bbff9d
