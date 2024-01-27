@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/26 15:54:43 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/01/27 19:01:13 adam Exp $
 
-DISTNAME=	pygit2-1.13.3
+DISTNAME=	pygit2-1.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://github.com/libgit2/pygit2
 COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.9.1:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
