@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2023/12/18 11:09:02 pin Exp $
+# $NetBSD: Makefile,v 1.67 2024/01/28 06:44:39 pin Exp $
 
-DISTNAME=	oculante-0.8.6
+DISTNAME=	oculante-0.8.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -8,6 +8,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/woelper/oculante/
 COMMENT=	Minimalistic crossplatform image viewer written in rust
 LICENSE=	mit
+
+SITES.spirv-0.3.0+sdk-1.3.268.0.crate=	https://static.crates.io/crates/spirv/
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
