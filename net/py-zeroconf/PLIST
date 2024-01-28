@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/23 08:52:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/01/28 20:44:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -116,6 +116,11 @@ ${PYSITELIB}/zeroconf/_utils/__init__.pyo
 ${PYSITELIB}/zeroconf/_utils/asyncio.py
 ${PYSITELIB}/zeroconf/_utils/asyncio.pyc
 ${PYSITELIB}/zeroconf/_utils/asyncio.pyo
+${PYSITELIB}/zeroconf/_utils/ipaddress.pxd
+${PYSITELIB}/zeroconf/_utils/ipaddress.py
+${PYSITELIB}/zeroconf/_utils/ipaddress.pyc
+${PYSITELIB}/zeroconf/_utils/ipaddress.pyo
+${PYSITELIB}/zeroconf/_utils/ipaddress.so
 ${PYSITELIB}/zeroconf/_utils/name.py
 ${PYSITELIB}/zeroconf/_utils/name.pyc
 ${PYSITELIB}/zeroconf/_utils/name.pyo
