@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2023/10/23 06:03:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.76 2024/01/28 22:37:16 wiz Exp $
 bin/cvlc
 ${PLIST.qt5}bin/qvlc
 bin/rvlc
@@ -184,10 +184,10 @@ lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_rist_plugin.la
 ${PLIST.qt5}lib/vlc/plugins/access_output/libaccess_output_shout_plugin.la
 lib/vlc/plugins/access_output/libaccess_output_udp_plugin.la
-lib/vlc/plugins/audio_filter/libaudio_format_plugin.la
 ${PLIST.neon}lib/vlc/plugins/arm_neon/libchroma_yuv_neon_plugin.la
 ${PLIST.neon}lib/vlc/plugins/arm_neon/libvolume_neon_plugin.la
 ${PLIST.neon}lib/vlc/plugins/arm_neon/libyuv_rgb_neon_plugin.la
+lib/vlc/plugins/audio_filter/libaudio_format_plugin.la
 lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.la
 lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.la
 lib/vlc/plugins/audio_filter/libcompressor_plugin.la
