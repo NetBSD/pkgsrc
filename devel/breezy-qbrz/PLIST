@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/01 14:12:05 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/28 12:56:12 rhialto Exp $
 ${PYSITELIB}/breezy/plugins/qbrz/AUTHORS.txt
 ${PYSITELIB}/breezy/plugins/qbrz/COPYING.txt
 ${PYSITELIB}/breezy/plugins/qbrz/NEWS.txt
@@ -25,6 +25,8 @@ ${PYSITELIB}/breezy/plugins/qbrz/lib/branch.py
 ${PYSITELIB}/breezy/plugins/qbrz/lib/branch.pyc
 ${PYSITELIB}/breezy/plugins/qbrz/lib/branch.pyo
 ${PYSITELIB}/breezy/plugins/qbrz/lib/browse.py
+${PYSITELIB}/breezy/plugins/qbrz/lib/browse.pyc
+${PYSITELIB}/breezy/plugins/qbrz/lib/browse.pyo
 ${PYSITELIB}/breezy/plugins/qbrz/lib/bugs.py
 ${PYSITELIB}/breezy/plugins/qbrz/lib/bugs.pyc
 ${PYSITELIB}/breezy/plugins/qbrz/lib/bugs.pyo
@@ -390,8 +392,9 @@ ${PYSITELIB}/breezy/plugins/qbrz/locale/th/LC_MESSAGES/qbrz.mo
 ${PYSITELIB}/breezy/plugins/qbrz/locale/tr/LC_MESSAGES/qbrz.mo
 ${PYSITELIB}/breezy/plugins/qbrz/locale/uk/LC_MESSAGES/qbrz.mo
 ${PYSITELIB}/breezy/plugins/qbrz/version.txt
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
