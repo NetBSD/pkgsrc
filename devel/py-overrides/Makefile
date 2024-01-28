@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/01/24 09:01:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/28 17:30:04 adam Exp $
 
-DISTNAME=	overrides-7.6.0
+DISTNAME=	overrides-7.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/overrides/}
