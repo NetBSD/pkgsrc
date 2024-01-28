@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/patched-runtime.sh
+share/lwjgl/lwjgl.jar
+share/lwjgl/lwjgl_util.jar
+share/lwjgl/lwjgl_test.jar
+share/lwjgl/lwjgl_util_applet.jar
+share/lwjgl/jinput.jar
+share/lwjgl/liblwjgl64.so
+share/lwjgl/AppleJavaExtensions.jar
+share/lwjgl/asm-debug-all.jar
+share/lwjgl/lzma.jar
