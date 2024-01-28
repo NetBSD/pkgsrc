@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/01/24 23:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/28 12:57:22 wiz Exp $
 
-DISTNAME=	glm-0.9.9.8
+DISTNAME=	glm-1.0.0
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=g-truc/}
 
