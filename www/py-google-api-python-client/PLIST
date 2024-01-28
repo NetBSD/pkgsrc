@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/01/21 20:27:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/01/28 13:21:13 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -226,6 +226,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1beta.js
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dlp.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dns.v1beta2.json
