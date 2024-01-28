@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/01/28 13:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/01/28 17:25:22 adam Exp $
 
-DISTNAME=	black-24.1.0
+DISTNAME=	black-24.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -20,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
 # only needed for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.7.4:../../www/py-aiohttp
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
@@ -39,8 +38,6 @@ post-install:
 .endfor
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
