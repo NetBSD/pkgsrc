@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/20 17:21:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/28 13:28:34 wiz Exp $
 include/tree_sitter/api.h
-include/tree_sitter/parser.h
 lib/libtree-sitter.a
 lib/libtree-sitter.so
 lib/libtree-sitter.so.0
