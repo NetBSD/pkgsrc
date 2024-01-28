@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/07/30 08:15:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/28 13:07:37 wiz Exp $
 
-DISTNAME=	dill-0.3.7
+DISTNAME=	dill-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dill/}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/uqfoundation/dill
 COMMENT=	Serialize all of Python
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
@@ -20,5 +23,5 @@ post-install:
 	${MV} ${file} ${file}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
