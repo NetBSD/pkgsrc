@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2023/08/13 00:34:47 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2024/01/28 13:12:42 wiz Exp $
 
-BLAKE2s (webp-pixbuf-loader-0.2.4.tar.gz) = a0ebdbe37b5ba2a163801b780fd2a900bdc47e590eecd119dedd8eef6402db9a
-SHA512 (webp-pixbuf-loader-0.2.4.tar.gz) = a367987a7c7ca4df594233a7b6fb281a1484026cdf8cb653d8513103e5d59e69d6ffaef1da8c6875be6d978b8a29251e5d89b6e2959e67057aae0f6cd7464b5e
-Size (webp-pixbuf-loader-0.2.4.tar.gz) = 9136758 bytes
+BLAKE2s (webp-pixbuf-loader-0.2.6.tar.gz) = f73afd60c01299caa8b7b02814a9173f20e26c67234a0283ea00a1fe00c7776b
+SHA512 (webp-pixbuf-loader-0.2.6.tar.gz) = b8e01f4c2ebf00ccacfb07b672593dc1036e69641a717b0855ee581bd88ce5a4aa206beff4363a44b5861411b5fe7186486fd04c4f3fc6fb30483e6298bde663
+Size (webp-pixbuf-loader-0.2.6.tar.gz) = 9136752 bytes
 SHA1 (patch-io-webp.c) = c1f9121dfff42cfd445a627bf0f361dec6ce0a52
