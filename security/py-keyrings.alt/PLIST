@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/20 16:51:25 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/01/28 21:27:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/keyrings/__init__.py
 ${PYSITELIB}/keyrings/__init__.pyc
 ${PYSITELIB}/keyrings/__init__.pyo
@@ -38,6 +38,3 @@ ${PYSITELIB}/keyrings/alt/keyczar.pyo
 ${PYSITELIB}/keyrings/alt/multi.py
 ${PYSITELIB}/keyrings/alt/multi.pyc
 ${PYSITELIB}/keyrings/alt/multi.pyo
-${PYSITELIB}/keyrings/alt/pyfs.py
-${PYSITELIB}/keyrings/alt/pyfs.pyc
-${PYSITELIB}/keyrings/alt/pyfs.pyo

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/13 19:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/28 21:27:54 adam Exp $
 
-DISTNAME=	keyrings.alt-3.1.1
+DISTNAME=	keyrings.alt-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyrings.alt/}
 
@@ -11,12 +10,15 @@ HOMEPAGE=	https://github.com/jaraco/keyrings.alt
 COMMENT=	Alternate keyring implementations
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
+TEST_DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
+TEST_DEPENDS+=	${PYPKGPREFIX}-keyring>=20:../../security/py-keyring
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

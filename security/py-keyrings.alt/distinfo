@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/28 21:27:54 adam Exp $
 
-BLAKE2s (keyrings.alt-3.1.1.tar.gz) = 695dfe0f97d387d040e440e1fb466f333db07dd0e6a34b1d2cda4d665dc40759
-SHA512 (keyrings.alt-3.1.1.tar.gz) = 5d8a64788888261863c5001d0fdad4e817fad765ea8c2c4967db63e62fde3364476f333ece66cf2e44634149d23062d076b97b18a3c8703bddaff8ac7d7933cd
-Size (keyrings.alt-3.1.1.tar.gz) = 28193 bytes
+BLAKE2s (keyrings.alt-5.0.0.tar.gz) = f033416fe1af15e751daf2de80a1aa396ef1c5488c55d07ab3535353f8adcbcc
+SHA512 (keyrings.alt-5.0.0.tar.gz) = ba6171ffd9f5c549694f2d7bd27595efa0cbd4deae9561a5ff61114f15337f67923f6f3b003a611aa3342c49dd9c511946d28bbad492469bb393407dec81aa1d
+Size (keyrings.alt-5.0.0.tar.gz) = 28346 bytes
