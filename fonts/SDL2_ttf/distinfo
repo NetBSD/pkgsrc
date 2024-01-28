@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/02/14 16:04:12 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/01/28 12:51:53 wiz Exp $
 
-BLAKE2s (SDL2_ttf-2.20.2.tar.gz) = 08e96fb1f57262c4d24b47f17cc59265189c6286bef91b3596f748d445335dce
-SHA512 (SDL2_ttf-2.20.2.tar.gz) = b54e93b100712e3764cd80d4e4b16cd4c2a6853620f675941a4214320b0ee29a583d57ad56cd5fdb5c7a32d7615cbf43bc3fa55337b01623cee7219ebb43667c
-Size (SDL2_ttf-2.20.2.tar.gz) = 13161592 bytes
+BLAKE2s (SDL2_ttf-2.22.0.tar.gz) = f9cb37a3ae205190828b5056ccb9dabf6af728da9be0cb2e7ccfa18c3c19aeaf
+SHA512 (SDL2_ttf-2.22.0.tar.gz) = 34a1d210d8f1b1e802139d65ba47e36033bb7881e75a8862c1b1c515565bef85e3d81ee42e952aa664de043debef387ba60088a9cf3ba3297413db39a13af912
+Size (SDL2_ttf-2.22.0.tar.gz) = 14314901 bytes
