@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23953 2024/01/27 13:43:04 nia Exp $
+$NetBSD: TODO,v 1.23954 2024/01/28 08:28:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,9 +388,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.27
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-23.3.3
+	o MesaLib-23.3.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o QuantLib-1.22
@@ -400,6 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-labeling-0.4.2
 	o R-mapproj-3
 	o R-ncdf-1.6.9
+	o SDL2_ttf-2.22.0
 	o SOGo5-5.8.4 [wip]
 	o SOPE5-5.8.4 [wip]
 	o SQLiteCpp-2.5.0
@@ -692,6 +694,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
 	o gliv-1.9.7
+	o glm-1.0.0
 	o global-6.6.5
 	o glom-1.14.2
 	o gnet1-1.1.9
@@ -735,7 +738,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0
-	o grafana-10.2.3
+	o grafana-10.3.1
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -786,11 +789,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.1.10
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
+	o inih-58
 	o input-pad-1.4.2
 	o ipe-7.2.24
 	o ipopt-3.12.12
@@ -856,6 +861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcares-1.26.0
 	o libcec-6.0.2
 	o libcups-2.4.7
 	o libdevq-0.0.4
@@ -865,6 +871,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libimagequant-4.3.0
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -878,6 +885,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
+	o libpaper-2.1.3
 	o libpgm-5.2.122
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
@@ -1144,10 +1152,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Theano-1.0.5
 	o py-barman-3.0.1
+	o py-black-24.1.0
 	o py-borgbackup-1.2.7
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-6.4.0
+	o py-dill-0.3.8
 	o py-django-5.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
@@ -1155,6 +1166,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.115.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
@@ -1223,6 +1235,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.8.1
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1309,6 +1322,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
+	o taglib-2.0
 	o taplo-lsp-0.7.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl-tDOM-0.9.2
@@ -1354,6 +1368,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-0.20.9
+	o tree-sitter-c-0.20.7
+	o tree-sitter-cli-0.20.9
+	o tree-sitter-json-0.20.2
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
@@ -1402,6 +1420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o webkit-gtk-2.38.5 [wip]
 	o webkit-gtk-2.42.4
 	o webmin-2.0
+	o webp-pixbuf-loader-0.2.6
 	o websvn-2.6.0
 	o wgetpaste-2.30
 	o whowatch-1.8.5
