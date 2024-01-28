@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.702 2024/01/28 06:47:27 pin Exp $
+$NetBSD: CHANGES-2024,v 1.703 2024/01/28 07:17:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -915,3 +915,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/oculante to 0.8.7 [pin 2024-01-28]
 	Updated sysutils/felix to 2.12.0 [pin 2024-01-28]
 	Updated devel/garden to 1.2.0 [pin 2024-01-28]
+	Updated devel/orc to 0.4.36 [adam 2024-01-28]
+	Updated net/iperf3 to 3.16 [adam 2024-01-28]
