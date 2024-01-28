@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2024/01/28 20:34:42 adam Exp $
 
-DISTNAME=	Flask-User-1.0.1.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	Flask-User-1.0.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-User/}
 
@@ -11,21 +10,21 @@ HOMEPAGE=	https://github.com/lingthio/Flask-User
 COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=2.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.9:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-flask-mail>=0.9:../../www/py-flask-mail
 DEPENDS+=	${PYPKGPREFIX}-flask-sqlalchemy>=1.0:../../www/py-flask-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=0.9:../../www/py-flask-wtf
-DEPENDS+=	${PYPKGPREFIX}-passlib>=0.6:../../security/py-passlib
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7:../../security/py-passlib
 
 USE_LANGUAGES=		# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
