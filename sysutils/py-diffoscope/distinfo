@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/01/24 23:53:04 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/01/28 21:04:45 adam Exp $
 
-BLAKE2s (diffoscope-254.tar.gz) = b91600c58d621a9fe431dd5a1a6829f93374ea345b87520cbe82763c00f973aa
-SHA512 (diffoscope-254.tar.gz) = 400310d9d51b7d4953f58d5cdd29c5beb163f876d31c54d75c33fca60cabc699d2e19f32165a8be81eb1f05b46d4207173e8c380695624a694a9cff01b2f70c5
-Size (diffoscope-254.tar.gz) = 3170431 bytes
+BLAKE2s (diffoscope-255.tar.gz) = 040064a0e7f0f6829a75d2d4b62e9733686986aa6a7ce4a5f75365838bfd929b
+SHA512 (diffoscope-255.tar.gz) = ec1e04734fea3dd8504f857b68704c4f0aa4007507c404f0c557c56bd1902da703907b7bfda2c465bc2ccb36a3d496404058adf7ec123bc22c210b7bdef68d64
+Size (diffoscope-255.tar.gz) = 3170546 bytes
