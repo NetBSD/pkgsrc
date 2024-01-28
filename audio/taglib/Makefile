@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/07/20 21:20:31 nia Exp $
+# $NetBSD: Makefile,v 1.51 2024/01/28 13:23:46 wiz Exp $
 
-DISTNAME=	taglib-1.13.1
-PKGREVISION=	1
+DISTNAME=	taglib-2.0
 CATEGORIES=	audio
 MASTER_SITES=	https://taglib.github.io/releases/
 
@@ -11,6 +10,8 @@ COMMENT=	Library for accessing id tags in various media files
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++17
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DWITH_ASF=ON
@@ -46,4 +47,5 @@ CFLAGS+=	-march=i486
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/utf8-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
