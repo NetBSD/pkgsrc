@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/07 15:13:12 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/28 12:43:55 rhialto Exp $
 bin/brz
 bin/bzr-receive-pack
 bin/bzr-upload-pack
@@ -1171,6 +1171,9 @@ ${PYSITELIB}/breezy/plugins/launchpad/test_lp_directory.pyo
 ${PYSITELIB}/breezy/plugins/launchpad/test_lp_login.py
 ${PYSITELIB}/breezy/plugins/launchpad/test_lp_login.pyc
 ${PYSITELIB}/breezy/plugins/launchpad/test_lp_login.pyo
+${PYSITELIB}/breezy/plugins/launchpad/test_uris.py
+${PYSITELIB}/breezy/plugins/launchpad/test_uris.pyc
+${PYSITELIB}/breezy/plugins/launchpad/test_uris.pyo
 ${PYSITELIB}/breezy/plugins/launchpad/uris.py
 ${PYSITELIB}/breezy/plugins/launchpad/uris.pyc
 ${PYSITELIB}/breezy/plugins/launchpad/uris.pyo
