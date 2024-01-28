@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:46:32 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/01/28 08:19:18 wiz Exp $
 
 BLAKE2s (mypaint-2.0.0.tar.xz) = b12a8e163e3f362b079a4e672502e0b2f2e0ca0ccd360942cb9a36f8fee3892d
 SHA512 (mypaint-2.0.0.tar.xz) = 118d905f4d7ce6adb9779b59d6b3f51b94a9937778b8fe3ed1b31c9b5b77d63110134bdc74849a91d8095e905664227ff43ffe183ad9c7c7ba18fa954ade8a84
 Size (mypaint-2.0.0.tar.xz) = 7316680 bytes
+SHA1 (patch-lib_gettext__setup.py) = 08a93e37a410f7a7392e575fa06c10bdd13e6ef6
 SHA1 (patch-lib_meta.py) = 1c8832ff06154255d7ea14037dc728d1fa0ba50e
-SHA1 (patch-setup.py) = 55b5c2ef1ef8612999c1630b2259f7f54a5cf264
+SHA1 (patch-setup.py) = 399bed73657bb7abf1a949e83f39ca0e0e9821fb

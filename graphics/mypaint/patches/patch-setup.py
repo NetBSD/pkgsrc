@@ -1,11 +1,24 @@
-$NetBSD: patch-setup.py,v 1.1 2020/05/30 20:46:09 joerg Exp $
+$NetBSD: patch-setup.py,v 1.2 2024/01/28 08:19:19 wiz Exp $
 
+First chunk:
+https://github.com/mypaint/mypaint/commit/032a155b72f2b021f66a994050d83f07342d04af
+
+Chunks two & three:
 Don't force pure standard mode as it depends on various extensions
 anyway. Explicitly set _NETBSD_SOURCE since Python's config.h pollutes
 the namespace with it.
 
---- setup.py.orig	2020-02-15 15:05:23.000000000 +0000
+--- setup.py.orig	2024-01-28 08:16:11.582259663 +0000
 +++ setup.py
+@@ -570,7 +570,7 @@ class InstallScripts (install_scripts):
+         self.announce("installing %s as %s" % (src, targ_basename), level=2)
+         if self.dry_run:
+             return []
+-        with open(src, "rU") as in_fp:
++        with open(src, "r") as in_fp:
+             with open(targ, "w") as out_fp:
+                 line = in_fp.readline().rstrip()
+                 if line.startswith("#!"):
 @@ -801,7 +801,7 @@ def get_ext_modules():
      import numpy
  
