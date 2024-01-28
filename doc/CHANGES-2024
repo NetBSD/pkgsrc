@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.705 2024/01/28 08:19:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.706 2024/01/28 11:45:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/iperf3 to 3.16 [adam 2024-01-28]
 	Updated sysutils/fzf to 0.46.0 [iquiw 2024-01-28]
 	Updated graphics/mypaint to 2.0.0nb18 [wiz 2024-01-28]
+	Updated mail/p5-Email-Sender to 2.601 [wiz 2024-01-28]
