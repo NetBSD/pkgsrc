@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/10 09:29:14 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.3 2024/01/28 17:27:38 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/matplotlib_venn/__init__.py
 ${PYSITELIB}/matplotlib_venn/__init__.pyc
 ${PYSITELIB}/matplotlib_venn/__init__.pyo
