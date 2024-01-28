@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.744 2024/01/28 19:38:16 pin Exp $
+$NetBSD: CHANGES-2024,v 1.745 2024/01/28 20:35:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -963,3 +963,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/kid3 to 3.9.5pre1 [wiz 2024-01-28]
 	Updated graphics/libimagequant to 4.3.0 [pin 2024-01-28]
 	Updated graphics/simp to 3.5.0 [pin 2024-01-28]
+	Updated finance/py-eth-rlp to 1.0.1 [adam 2024-01-28]
+	Updated textproc/py-referencing to 0.33.0 [adam 2024-01-28]
+	Updated www/py-flask-wtf to 1.2.1 [adam 2024-01-28]
+	Updated www/py-flask-user to 1.0.2.2 [adam 2024-01-28]
