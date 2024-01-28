@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2023/11/23 08:52:12 wiz Exp $
+$NetBSD: distinfo,v 1.40 2024/01/28 20:44:28 adam Exp $
 
-BLAKE2s (zeroconf-0.127.0.tar.gz) = ec373e0642190d4ed8d9a49777e286007e63bd6c2990ca8cd41fb85181014ed4
-SHA512 (zeroconf-0.127.0.tar.gz) = 7c8aef766dcc0f3411c4230decd5a0af18ae795e0e4253be2dc69af6ba314271a336807ace1458bb0a081455afa8cc9d8769413bbc97f024e3d3e877cd1e6f2f
-Size (zeroconf-0.127.0.tar.gz) = 161143 bytes
+BLAKE2s (zeroconf-0.131.0.tar.gz) = b34d83310d44008fcbe92d2cf7e7bf381040768ca6a2a876ba3cd1a6ce837e1e
+SHA512 (zeroconf-0.131.0.tar.gz) = 7b7f5494a589306c458dc4fedd940aab86918e9979d5b9f0a466d28b74795c83351f82fdf501a983e9df3e32a8be9a88af3486e79ade23ab73d889610331d89a
+Size (zeroconf-0.131.0.tar.gz) = 169253 bytes
