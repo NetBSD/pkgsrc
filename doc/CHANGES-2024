@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.746 2024/01/28 20:52:46 adam Exp $
+$NetBSD: CHANGES-2024,v 1.747 2024/01/28 21:05:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -969,3 +969,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-flask-user to 1.0.2.2 [adam 2024-01-28]
 	Updated net/py-zeroconf to 0.131.0 [adam 2024-01-28]
 	Updated graphics/py-seaborn to 0.13.2 [adam 2024-01-28]
+	Updated textproc/py-deepdiff to 6.7.1 [adam 2024-01-28]
+	Updated sysutils/py-diffoscope to 255 [adam 2024-01-28]
