@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.722 2024/01/28 12:57:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.723 2024/01/28 12:58:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/imath to 3.1.10 [wiz 2024-01-28]
 	Updated devel/breezy-qbrz to 0.4.2.0.1663 [rhialto 2024-01-28]
 	Updated graphics/glm to 1.0.0 [wiz 2024-01-28]
+	Updated print/libpaper to 2.1.3 [wiz 2024-01-28]
