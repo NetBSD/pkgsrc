@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/19 13:01:06 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/01/28 13:35:49 wiz Exp $
 
-BLAKE2s (tree-sitter-json-0.20.1.tar.gz) = 270becf560f8e123a3344ad8e88aea14a8148dc1115d78f21ed9d0654c5ea24a
-SHA512 (tree-sitter-json-0.20.1.tar.gz) = 30ae91cec4c9e63acfd2bd0c62b313d48a50ec722ff5c793b8b51910a02a9c6f8697a866ec7bbde3c7f14b2bdcfc12be3650d7a8e6f23fde80527cc235a3768e
-Size (tree-sitter-json-0.20.1.tar.gz) = 15576 bytes
+BLAKE2s (tree-sitter-json-0.20.2.tar.gz) = 20d838debe3af39b08e9328604745196bc885ed459899cb28ff0858c1bbce964
+SHA512 (tree-sitter-json-0.20.2.tar.gz) = 511376b7be02c624bc48b0a46dd937f1a5d6def3d2a15a7b61cf71b846ecf98ef8af93f05f861152270ea0dcacc18940f8c25bfbad69e9d5c520485d25dab7f5
+Size (tree-sitter-json-0.20.2.tar.gz) = 15647 bytes
