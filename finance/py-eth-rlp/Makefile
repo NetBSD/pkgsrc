@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/11 10:09:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/28 20:20:43 adam Exp $
 
-DISTNAME=	eth-rlp-1.0.0
+DISTNAME=	eth-rlp-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-rlp/}
@@ -19,6 +19,11 @@ DEPENDS+=	${PYPKGPREFIX}-rlp>=0.6.0:../../devel/py-rlp
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
