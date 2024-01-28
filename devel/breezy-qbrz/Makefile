@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/28 12:56:12 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/28 13:50:15 rhialto Exp $
 
 WHEEL_NAME=	qbrz-0.4.2
+PKGREVISION=	1
 DISTNAME=	breezy-qbrz-0.4.2.0.${VER}
 CATEGORIES=	devel
 VER=		1663	# 0.4.2+
