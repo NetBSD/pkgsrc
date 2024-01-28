@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/01/16 14:13:55 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/28 17:35:39 adam Exp $
 
-DISTNAME=	twill-3.2.1
+DISTNAME=	twill-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.25.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.26.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.9:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.0:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.1:../../devel/py-pyparsing
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pytidylib>=0.3
 #TEST_DEPENDS+=	${PYPKGPREFIX}-quixote>=3.6:../../devel/py-quixote
 #TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=4:../../devel/py-tox
