@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/01/10 22:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/01/28 13:24:34 wiz Exp $
 
 DISTNAME=	libmtag-python-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://libmtag.googlecode.com/files/
 

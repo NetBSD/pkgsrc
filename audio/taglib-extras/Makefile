@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/24 18:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/01/28 13:24:35 wiz Exp $
 
 DISTNAME=	taglib-extras-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.kollide.net/~jefferai/
 
