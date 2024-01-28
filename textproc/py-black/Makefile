@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/12/30 10:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/01/28 13:04:00 wiz Exp $
 
-DISTNAME=	black-23.12.1
+DISTNAME=	black-24.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
