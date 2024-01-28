@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/10/22 12:50:38 wen Exp $
+$NetBSD: distinfo,v 1.16 2024/01/28 11:55:54 wiz Exp $
 
-BLAKE2s (Test-Warnings-0.032.tar.gz) = f0fc6a6fe3b971bccfcc7638c52e5f3b8284bc36e84f44b0e91f259ce1a47d36
-SHA512 (Test-Warnings-0.032.tar.gz) = c4d936fc0670bdabed3454a95185b9f59d847cb84ee6a40e809ad04105ee08802abdb63300e89d8d07fe43c1ab0bda37756c6c070d20ef463776f15dc4ea8d53
-Size (Test-Warnings-0.032.tar.gz) = 42877 bytes
+BLAKE2s (Test-Warnings-0.033.tar.gz) = e15842b8cebb9a874d3e713b071f89c41c5195850791be37bcc7a6ace636ffa6
+SHA512 (Test-Warnings-0.033.tar.gz) = dc49e345b2b5d2dd42d83b4351025f2c0db0216ef8388b02db77d5078e5eda0b5aab1491b07a0009923acc73b30c4ef6d77d406e85b0f958f575007c6ca1e6e8
+Size (Test-Warnings-0.033.tar.gz) = 44091 bytes
