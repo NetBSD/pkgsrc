@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/07/30 08:15:38 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/01/28 13:07:37 wiz Exp $
 
-BLAKE2s (dill-0.3.7.tar.gz) = d02f610aeeea3362dcf43a82934db445e8c6463a1457183e70b571e5a93566f6
-SHA512 (dill-0.3.7.tar.gz) = 4b9cf70ca084102940fefbb9d3982a841b87fc3a21884af6b3574e3e4fa0ef62d6845a20ee326dfc479a4d2c545d3740f361d29e9115dd09d657489f43a3e2dd
-Size (dill-0.3.7.tar.gz) = 183355 bytes
+BLAKE2s (dill-0.3.8.tar.gz) = c2159cad7158876407ffa7748b214e0dcf1de719b30800daedafad58d2c501f7
+SHA512 (dill-0.3.8.tar.gz) = 478d83af69dc0639a08e011e46127d9485dc998df54622e7fbb9ce4b004640d1b23aad57717d791cc609cd9d7071ea7300bce4be982488e4d21c5986e67ce586
+Size (dill-0.3.8.tar.gz) = 184847 bytes
