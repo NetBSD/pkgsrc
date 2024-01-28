@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/01/07 15:13:12 rhialto Exp $
+$NetBSD: distinfo,v 1.8 2024/01/28 12:43:55 rhialto Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -9,9 +9,9 @@ Size (autocfg-1.1.0.crate) = 13272 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (breezy-3.3.4.tar.gz) = 84b0abb4da579834260918d3036c4b70217b5e24784e8b9515a4c38e01ce9288
-SHA512 (breezy-3.3.4.tar.gz) = 7619c31acbfdf8cd8193db4a87851ac41376bff3e4a9eb130d7d940fb458a6d064a0fb089888368ddd654e4b965772dd657553cdda20a91e32ab43760b0897b4
-Size (breezy-3.3.4.tar.gz) = 9446061 bytes
+BLAKE2s (breezy-3.3.5.tar.gz) = 26b1c6dbe756ab90ba3c12a07adb17b45156b414c5692a789bc7e3e171ba063a
+SHA512 (breezy-3.3.5.tar.gz) = daff16f4df9b2f89fd6bef335af0b30d2567c8f1e4fa9b02ba2a528f0c56daedc58c83af92297148001fb9eb177115875d02a2969b9847387058edcae0db104b
+Size (breezy-3.3.5.tar.gz) = 10393262 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
@@ -121,5 +121,4 @@ BLAKE2s (windows_x86_64_msvc-0.48.5.crate) = 5ba69908b0a28c92202626d76822599bf1b
 SHA512 (windows_x86_64_msvc-0.48.5.crate) = fa1c5cd14ca2ff0082e2504cf59d317dc4dc6f7138d35c12f95d4476a9c13d8b7f5537d0ee251eee7c99411ad31b22263171b7fbd391daa5d3ea3488ceaa61a0
 Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
 SHA1 (patch-breezy_tests_test__server.py) = 768c43eb412fc688c49ac5037c4dc18b046b1be0
-SHA1 (patch-pyproject.toml) = 3304da30e5423f39aa259a5da6fdd7508b93ca06
 SHA1 (patch-setup.py) = 39ad48740c6ef325b9fda41718ddc75ffaf3a661

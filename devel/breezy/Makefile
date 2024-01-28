@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/01/24 16:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/28 12:43:55 rhialto Exp $
 
-DISTNAME=	breezy-3.3.4
-PKGREVISION=	1
+DISTNAME=	breezy-3.3.5
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -29,7 +28,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Prevent setup.py from building breezy/main.rs; use console_script instead.
 MAKE_ENV+=		CIBUILDWHEEL=1
