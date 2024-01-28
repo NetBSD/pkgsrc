@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2024/01/28 13:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.290 2024/01/28 22:40:44 wiz Exp $
 
 DISTNAME=		vlc-3.0.20
 PKGREVISION=		2
@@ -22,7 +22,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
 PLIST_VARS+=		altivec cdrom egl oss v4l2 x86simd
 
 .include "../../mk/bsd.prefs.mk"
