@@ -1,17 +1,17 @@
-$NetBSD: patch-Makefile,v 1.1 2022/04/20 17:21:28 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/01/28 13:28:34 wiz Exp $
 
 - Avoid to possibly pass extra optimization CFLAGS
 - Do not override PCLIBDIR for FreeBSD, NetBSD and DragonFly
 
---- Makefile.orig	2021-06-30 00:18:39.000000000 +0000
+--- Makefile.orig	2024-01-25 20:05:17.000000000 +0000
 +++ Makefile
 @@ -18,7 +18,7 @@ endif
  OBJ := $(SRC:.c=.o)
  
  # define default flags, and override to append mandatory flags
--CFLAGS ?= -O3 -Wall -Wextra -Werror
-+CFLAGS += -Wall -Wextra
- override CFLAGS += -std=gnu99 -fPIC -Ilib/src -Ilib/include
+-override CFLAGS := -O3 -std=gnu99 -fPIC -fvisibility=hidden -Wall -Wextra -Wshadow $(CFLAGS)
++override CFLAGS := -std=gnu99 -fPIC -fvisibility=hidden -Wall -Wextra -Wshadow $(CFLAGS)
+ override CFLAGS += -Ilib/src -Ilib/src/wasm -Ilib/include
  
  # ABI versioning
 @@ -37,9 +37,6 @@ else
