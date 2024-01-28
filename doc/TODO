@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23967 2024/01/28 13:21:22 wiz Exp $
+$NetBSD: TODO,v 1.23968 2024/01/28 13:23:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
-	o taglib-2.0
 	o taplo-lsp-0.7.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl-tDOM-0.9.2
