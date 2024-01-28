@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2023/08/03 07:08:27 wen Exp $
+# $NetBSD: Makefile,v 1.130 2024/01/28 11:54:32 wiz Exp $
 
-DISTNAME=	Moose-2.2206
+DISTNAME=	Moose-2.2207
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -52,22 +52,21 @@ TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 TOOL_DEPENDS+=	p5-Test-Warnings>=0.016:../../devel/p5-Test-Warnings
 
 # other documented develop dependencies
-TOOL_DEPENDS+=		p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
-TOOL_DEPENDS+=		p5-Test-CleanNamespaces>=0.13:../../devel/p5-Test-CleanNamespaces
+TOOL_DEPENDS+=	p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
 # devel/p5-Data-Visitor depends on devel/p5-Moose
 # TOOL_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
-TOOL_DEPENDS+=		p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
-TOOL_DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
-TOOL_DEPENDS+=		p5-SUPER-[0-9]*:../../devel/p5-SUPER
+TOOL_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+TOOL_DEPENDS+=	p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
+TOOL_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
 # missing Test::DependentModules>=0.13
-TOOL_DEPENDS+=		p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
-TOOL_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
-TOOL_DEPENDS+=		p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
-TOOL_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
-TOOL_DEPENDS+=		p5-Test-CheckDeps>=0.006:../../devel/p5-Test-CheckDeps
-TOOL_DEPENDS+=		p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
+TOOL_DEPENDS+=	p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
+TOOL_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
+TOOL_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TOOL_DEPENDS+=	p5-Test-CheckDeps>=0.006:../../devel/p5-Test-CheckDeps
+TOOL_DEPENDS+=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 # missing Test::Spelling
-TOOL_DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
+TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage # xt/author/pod_coverage.t
 #TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod # xt/author/pod.t
 #TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
