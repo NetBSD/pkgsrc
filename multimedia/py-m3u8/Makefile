@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/01/24 21:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/01/28 08:23:06 wiz Exp $
 
 DISTNAME=	m3u8-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/globocom/m3u8
 COMMENT=	Parser for M3U8 playlists
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
