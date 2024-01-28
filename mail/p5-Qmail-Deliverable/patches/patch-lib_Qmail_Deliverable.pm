@@ -1,37 +1,19 @@
-$NetBSD: patch-lib_Qmail_Deliverable.pm,v 1.1 2024/01/10 11:51:46 schmonz Exp $
+$NetBSD: patch-lib_Qmail_Deliverable.pm,v 1.2 2024/01/28 21:10:35 schmonz Exp $
 
 Honor pkgsrc-specified QMAILDIR.
 
---- lib/Qmail/Deliverable.pm.orig	2024-01-10 11:42:48.671762270 +0000
+--- lib/Qmail/Deliverable.pm.orig	2024-01-27 19:55:05.000000000 +0000
 +++ lib/Qmail/Deliverable.pm
-@@ -66,21 +66,21 @@ sub reread_config {
-     %virtualdomains = ();
-     %users_exact    = ();
-     %users_wild     = ();
--    my $locals_fn = -e "/var/qmail/control/locals"
--        ? "/var/qmail/control/locals"
--        : "/var/qmail/control/me";
-+    my $locals_fn = -e "@QMAILDIR@/control/locals"
-+        ? "@QMAILDIR@/control/locals"
-+        : "@QMAILDIR@/control/me";
-     for (_slurp $locals_fn) {
-         chomp;
-         ($_) = lc =~ /$ascii/ or do { warn "Invalid character"; next; };
-         $locals{$_} = 1;
-     }
--    for (_slurp "/var/qmail/control/virtualdomains") {
-+    for (_slurp "@QMAILDIR@/control/virtualdomains") {
-         chomp;
-         ($_) = lc =~ /$ascii/ or do { warn "Invalid character"; next; };
-         my ($domain, $prepend) = split /:/, $_, 2;
-         $virtualdomains{$domain} = $prepend;
-     }
--    for (_slurp "/var/qmail/users/assign") {
-+    for (_slurp "@QMAILDIR@/users/assign") {
-         chomp;
-         ($_) = /$ascii/ or do { warn "Invalid character"; next; };
-         if (s/^=([^:]+)://) {
-@@ -98,7 +98,7 @@ sub reread_config {
+@@ -9,7 +9,7 @@ our $VERSION = '1.09';
+ our @EXPORT_OK = qw/reread_config qmail_local dot_qmail deliverable qmail_user/;
+ our %EXPORT_TAGS = (all => \@EXPORT_OK);
+ our $VPOPMAIL_EXT = 0;
+-our $qmail_dir = '/var/qmail';
++our $qmail_dir = '@QMAILDIR@';
+ 
+ # rfc2822's "atext"
+ my $atext = "[A-Za-z0-9!#\$%&\'*+\/=?^_\`{|}~-]";
+@@ -101,7 +101,7 @@ sub reread_config {
  sub _qmail_getpw {
      my ($local) = @_;
      local $/ = "\0";
@@ -40,7 +22,7 @@ Honor pkgsrc-specified QMAILDIR.
      chomp @a;
      for (@a) {
          ($_) = /$ascii/ or do { warn "Invalid character"; return ""; }
-@@ -361,16 +361,16 @@ returned. A single dot at the end is all
+@@ -368,16 +368,16 @@ returned. A single dot at the end is all
  Returns the local qmail user for $address, or undef if the address is not local.
  
  Returns $address if it does not contain an @. Returns the left side of the @ if
@@ -60,7 +42,7 @@ Honor pkgsrc-specified QMAILDIR.
  
  =item dot_qmail $address
  
-@@ -434,8 +434,8 @@ returned.
+@@ -442,8 +442,8 @@ returned.
  
  =item reread_config
  
@@ -71,7 +53,7 @@ Honor pkgsrc-specified QMAILDIR.
  
  =back
  
-@@ -473,7 +473,7 @@ checks per second for assigned/virtual u
+@@ -481,7 +481,7 @@ checks per second for assigned/virtual u
  slower. For my needs, this is still plenty fast enough.
  
  To support local users automatically, C<qmail-getpw> is executed for local
