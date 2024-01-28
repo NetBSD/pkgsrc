@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2024/01/26 19:54:52 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2024/01/28 21:10:34 schmonz Exp $
 
-BLAKE2s (Qmail-Deliverable-1.08.tar.gz) = 05501dfa86010dc74f1e18a4e3b6503b43214df5952bc1938ace410b8dc6d806
-SHA512 (Qmail-Deliverable-1.08.tar.gz) = f1f9100869ec9b994e5f9d5344842093a63ca33510e2e99dde33522087b41a3a97bd119d51aee21a8e5d4d09cd59130904af4fbe7fcb2ad75a20a97d0fecd3b5
-Size (Qmail-Deliverable-1.08.tar.gz) = 18916 bytes
-SHA1 (patch-lib_Qmail_Deliverable.pm) = e2172dc43a2a4e769ceb28628395469026eff8b8
+BLAKE2s (Qmail-Deliverable-1.09.tar.gz) = 309fdba502d1b9c3ee50454e61fc1d41ab881005fb0b8ec046846b09c1b01985
+SHA512 (Qmail-Deliverable-1.09.tar.gz) = 90b34d57f315b614efa581973f8a5d3675216cc74d9c29c5089ee103c3060c0fd8453ad75a079bcb265d2073af6795d38e37f07ff544601331e0a3864d1d8b3f
+Size (Qmail-Deliverable-1.09.tar.gz) = 19794 bytes
+SHA1 (patch-lib_Qmail_Deliverable.pm) = fa5f4a4c8107e713d62134425084d62fcf807279
 SHA1 (patch-lib_Qmail_Deliverable_Comparison.pod) = 0fdd7a6dd3275d7f03068a178ed6ad7c35f804b5
 SHA1 (patch-qpsmtpd-plugin_qmail__deliverable) = 2339f73db04380b2c8bc23fe34790fcea4e60ff9
