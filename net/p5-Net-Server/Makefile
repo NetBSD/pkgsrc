@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.46 2023/07/06 09:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/01/29 15:38:20 schmonz Exp $
 
-DISTNAME=	Net-Server-2.010
+DISTNAME=	Net-Server-2.014
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://seamons.com/net_server.html
+HOMEPAGE=	https://seamons.com/projects/
 COMMENT=	Perl5 modules for network services engine
 LICENSE=	${PERL5_LICENSE}
 
