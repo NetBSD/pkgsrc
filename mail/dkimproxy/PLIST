@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/29 15:54:02 schmonz Exp $
+bin/dkim_responder.pl
+bin/dkimproxy.in
+bin/dkimproxy.out
+lib/LookupMap.pm
+lib/MSDW/SMTP/Client.pm
+lib/MSDW/SMTP/Server.pm
+lib/MySmtpProxyServer.pm
+lib/MySmtpServer.pm
+man/man8/dkimproxy_in.8
+man/man8/dkimproxy_out.8
+share/examples/dkimproxy/dkimproxy_in.conf.example
+share/examples/dkimproxy/dkimproxy_out.conf.example
