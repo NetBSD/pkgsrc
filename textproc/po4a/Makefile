@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2023/11/08 13:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/01/29 16:08:20 adam Exp $
 
-DISTNAME=	po4a-0.69
-PKGREVISION=	5
+DISTNAME=	po4a-0.70
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://po4a.org/
