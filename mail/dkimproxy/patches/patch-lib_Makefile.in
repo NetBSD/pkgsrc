@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2024/01/29 15:54:03 schmonz Exp $
+
+Perl modules don't need the x bit.
+
+--- lib/Makefile.in.orig	2011-01-10 15:57:41.000000000 +0000
++++ lib/Makefile.in
+@@ -243,8 +243,8 @@ install-perllibSCRIPTS: $(perllib_SCRIPT
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(perllibdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(perllibdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(perllibdir)$$dir'"; \
++	       $(INSTALL_DATA) $$files "$(DESTDIR)$(perllibdir)$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 

@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_MSDW_SMTP_Makefile.in,v 1.1 2024/01/29 15:54:03 schmonz Exp $
+
+Perl modules don't need the x bit.
+
+--- lib/MSDW/SMTP/Makefile.in.orig	2024-01-29 15:50:16.310877007 +0000
++++ lib/MSDW/SMTP/Makefile.in
+@@ -202,8 +202,8 @@ install-smtpSCRIPTS: $(smtp_SCRIPTS)
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(smtpdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(smtpdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(smtpdir)$$dir'"; \
++	       $(INSTALL_DATA) $$files "$(DESTDIR)$(smtpdir)$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
