@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/01/05 18:01:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/01/29 16:12:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -188,6 +188,9 @@ ${PYSITELIB}/urwid/widget/popup.pyo
 ${PYSITELIB}/urwid/widget/progress_bar.py
 ${PYSITELIB}/urwid/widget/progress_bar.pyc
 ${PYSITELIB}/urwid/widget/progress_bar.pyo
+${PYSITELIB}/urwid/widget/scrollable.py
+${PYSITELIB}/urwid/widget/scrollable.pyc
+${PYSITELIB}/urwid/widget/scrollable.pyo
 ${PYSITELIB}/urwid/widget/solid_fill.py
 ${PYSITELIB}/urwid/widget/solid_fill.pyc
 ${PYSITELIB}/urwid/widget/solid_fill.pyo
