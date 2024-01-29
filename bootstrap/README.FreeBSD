@@ -1,6 +1,14 @@
-$NetBSD: README.FreeBSD,v 1.11 2024/01/27 03:15:27 gutteridge Exp $
+$NetBSD: README.FreeBSD,v 1.12 2024/01/29 23:54:33 gutteridge Exp $
 
 Please read the general README file as well.
+
+Currently bootstrap is only supported using the compiler shipped in base and not
+a version of GCC installed from ports, and clang from ports is untested.
+
+bootstrap-pkgsrc has been tested on FreeBSD 12-14.
+
+For unprivileged bootstraps, note that on FreeBSD prior to 14 /home is a symlink
+to /usr/home. Use --unprivileged --prefix /usr/home/youruser.
 
 On legacy releases (9.3 and prior), care should be taken so that the tools
 installed by this kit do not conflict with the tools already provided as part of
@@ -18,11 +26,3 @@ Alternatively, take care to get pkgsrc tools first in PATH.
 
 This is not an issue with releases of FreeBSD which solely support pkgng such as
 10.0-RELEASE and newer.
-
-Currently bootstrap is only supported using the compiler shipped in base and not
-a version of GCC installed from ports, clang from ports is untested.
-
-bootstrap-pkgsrc has been tested on FreeBSD 12-13.
-
-For unprivileged bootstraps, note that on FreeBSD prior to 14 /home is a symlink
-to /usr/home. Use --unprivileged --prefix /usr/home/youruser.
