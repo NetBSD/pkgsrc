@@ -1,20 +1,20 @@
-$NetBSD: patch-lib_Locale_Po4a_Po.pm,v 1.2 2023/06/21 19:08:06 schmonz Exp $
+$NetBSD: patch-lib_Locale_Po4a_Po.pm,v 1.3 2024/01/29 16:08:20 adam Exp $
 
 Use a sufficiently capable diff.
 Write to the full physical null device.
 
---- lib/Locale/Po4a/Po.pm.orig	2023-01-01 00:30:43.000000000 +0000
+--- lib/Locale/Po4a/Po.pm.orig	2024-01-28 23:39:44.000000000 +0000
 +++ lib/Locale/Po4a/Po.pm
-@@ -325,7 +325,7 @@ sub read {
-     $lang =~ s/\.po$//;
+@@ -329,7 +329,7 @@ sub read {
      $self->{lang} = $lang;
  
--    my $cmd = "msgfmt" . $Config{_exe} . " --check-format --check-domain -o /dev/null " . $filename;
-+    my $cmd = "@PREFIX@/bin/msgfmt" . $Config{_exe} . " --check-format --check-domain -o @PO4A_DEVNULL@ " . $filename;
+     if ($checkvalidity) {   # We sometimes need to read a file even if it may be invalid (eg to test whether it's empty)
+-        my $cmd = "msgfmt" . $Config{_exe} . " --check-format --check-domain -o /dev/null \"" . $filename . '"';
++        my $cmd = "@PREFIX@/bin/msgfmt" . $Config{_exe} . " --check-format --check-domain -o /dev/null \"" . $filename . '"';
  
-     my $locale = $ENV{'LC_ALL'};
-     $ENV{'LC_ALL'} = "C";
-@@ -621,7 +621,7 @@ sub move_po_if_needed {
+         my $locale = $ENV{'LC_ALL'};
+         $ENV{'LC_ALL'} = "C";
+@@ -634,7 +634,7 @@ sub move_po_if_needed {
      my $diff;
  
      if ( -e $old_po ) {
