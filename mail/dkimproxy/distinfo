@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2024/01/29 15:54:02 schmonz Exp $
+
+BLAKE2s (dkimproxy-1.4.1.tar.gz) = 818a374747a02d9ce87d11db834bd3673f743782640189175319db0cab417572
+SHA512 (dkimproxy-1.4.1.tar.gz) = ad5ac961ea25cdd7ccc763521d1fa5e143ef93056ca4bdace1d0d8f564ab85cb128b4c97ace310bcbf9e4d49430dd5baf1e9f836f5a44a4b3f1e7498ebc352b6
+Size (dkimproxy-1.4.1.tar.gz) = 109040 bytes
+SHA1 (patch-lib_MSDW_SMTP_Makefile.in) = 975be7abc072e6d4a2567a2b865279b617192fd5
+SHA1 (patch-lib_Makefile.in) = 8eec2ac4795d605e8a56a3a3af33d29218973633
