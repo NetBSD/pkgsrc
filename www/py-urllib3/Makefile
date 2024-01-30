@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2023/11/19 19:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/01/30 20:04:53 adam Exp $
 
-DISTNAME=	urllib3-2.1.0
+DISTNAME=	urllib3-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
 
@@ -17,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
 # "brotli"
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.9:../../archivers/py-brotli
-DEPENDS+=	${PYPKGPREFIX}-brotlicffi>=0:../../archivers/py-brotlicffi
+DEPENDS+=	${PYPKGPREFIX}-brotlicffi>=0.8.0:../../archivers/py-brotlicffi
 # "zstd"
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 # "secure"
@@ -36,7 +35,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
-#pytest-memray=	=1.4.0;python_version>="3.8" and python_version<"3.12" and sys_platform!="win32" and implementation_name=="cpython"
+#hypercorn @ git+https://github.com/urllib3/hypercorn@urllib3-changes
+#pytest-memray==1.5.0; sys_platform!="win32" and implementation_name=="cpython"
 
 USE_LANGUAGES=	# none
 
