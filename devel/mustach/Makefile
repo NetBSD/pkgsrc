@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/04/19 13:10:31 sjmulder Exp $
+# $NetBSD: Makefile,v 1.12 2024/01/30 13:39:40 sjmulder Exp $
 
-DISTNAME=	mustach-1.2.5
+DISTNAME=	mustach-1.2.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=jobol/}
 GITLAB_PROJECT=	mustach
@@ -25,7 +25,7 @@ CFLAGS+=	-DNO_OPEN_MEMSTREAM
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	libs=single
 
-# mustach supports cjson too, add it here once in pkgsrc
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/cJSON/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
