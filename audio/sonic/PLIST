@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/30 09:00:40 wiz Exp $
+bin/sonic
+include/sonic.h
+lib/libsonic.a
+lib/libsonic.so
+lib/libsonic.so.0
+lib/libsonic.so.0.3.0
