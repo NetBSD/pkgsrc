@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/12 13:20:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/30 14:21:39 ryoon Exp $
 
 DISTNAME=	iaito-5.8.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 
