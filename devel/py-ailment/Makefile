@@ -1,10 +1,9 @@
-#	$NetBSD: Makefile,v 1.5 2023/10/28 19:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/30 19:24:36 adam Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	ailment-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ailment/}
 
@@ -19,9 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../devel/py-pyvex
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests/*.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
