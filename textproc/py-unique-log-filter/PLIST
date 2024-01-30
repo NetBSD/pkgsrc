@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/30 19:21:27 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/unique_log_filter.py
+${PYSITELIB}/unique_log_filter.pyc
+${PYSITELIB}/unique_log_filter.pyo
