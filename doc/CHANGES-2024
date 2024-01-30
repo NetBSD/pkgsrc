@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.763 2024/01/30 13:54:50 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.764 2024/01/30 15:46:36 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-reversion to 5.0.11 [adam 2024-01-30]
 	Updated devel/mustach to 1.2.6 [sjmulder 2024-01-30]
 	Updated audio/pulseaudio to 17.0 [ryoon 2024-01-30]
+	Updated editors/micro to 2.0.13 [sjmulder 2024-01-30]
