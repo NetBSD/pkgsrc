@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.771 2024/01/30 20:53:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.772 2024/01/30 23:11:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1016,3 +1016,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hypothesis to 6.97.3 [adam 2024-01-30]
 	Updated www/py-test-httpx to 0.29.0 [adam 2024-01-30]
 	Updated graphics/png to 1.6.42 [wiz 2024-01-30]
+	Added lang/py-annotated-types version 0.6.0 [adam 2024-01-30]
+	Added devel/py-dirty-equals version 0.7.1.post0 [adam 2024-01-30]
+	Added devel/py-pydantic-core version 2.16.1 [adam 2024-01-30]
