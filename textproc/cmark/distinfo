@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/01/24 08:27:49 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/01/30 20:00:13 adam Exp $
 
-BLAKE2s (cmark-0.30.3.tar.gz) = 305d9c9d472c13eb442fb149f3a50fa3e1f1c69829213376a04f24b1456d3fd6
-SHA512 (cmark-0.30.3.tar.gz) = 27383bfef95ae1390c26aff0dd2cbca33704e7d20116bf29da4695d2c9a4146b86daba0da1e91bdb9eab95671702f885e832b3d31d51601731f1dc630df5237b
-Size (cmark-0.30.3.tar.gz) = 246916 bytes
-SHA1 (patch-src_CMakeLists.txt) = 6403931bb8c07738d4e8c0f1fc96db67c04addb4
+BLAKE2s (cmark-0.31.0.tar.gz) = bd62fe42325b2f8580cc05c95d7b50e70b1677f41fb4ab77bb3e391febb18f43
+SHA512 (cmark-0.31.0.tar.gz) = 768d456147cb8f5cf36e8122213ad053098201e118109a316518a6a5e721ac94f62af29abe1e69120c84bdc227a5c320803ea2cf320c6d9a719d62909b6533bd
+Size (cmark-0.31.0.tar.gz) = 251922 bytes
