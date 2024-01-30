@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2024/01/27 21:07:16 sjmulder Exp $
+# $NetBSD: Makefile,v 1.179 2024/01/30 00:12:48 gutteridge Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -23,7 +23,7 @@ USE_LANGUAGES+=		c
 FORCE_C_STD=		c99
 
 # for struct addrinfo on glibc
-CPPFLAGS+=	-D_POSIX_C_SOURCE=200112L  
+CPPFLAGS.Linux+=	-D_POSIX_C_SOURCE=200112L  
 
 TEST_TARGET=	check
 
