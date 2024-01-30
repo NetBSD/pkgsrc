@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/04/17 09:24:50 nia Exp $
-#
+# $NetBSD: Makefile,v 1.13 2024/01/30 09:04:41 wiz Exp $
 
 DISTNAME=	flite-2.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=festvox/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
