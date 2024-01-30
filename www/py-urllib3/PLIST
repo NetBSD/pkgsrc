@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/11/19 17:38:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/01/30 20:04:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -27,6 +27,22 @@ ${PYSITELIB}/urllib3/connectionpool.pyo
 ${PYSITELIB}/urllib3/contrib/__init__.py
 ${PYSITELIB}/urllib3/contrib/__init__.pyc
 ${PYSITELIB}/urllib3/contrib/__init__.pyo
+${PYSITELIB}/urllib3/contrib/emscripten/__init__.py
+${PYSITELIB}/urllib3/contrib/emscripten/__init__.pyc
+${PYSITELIB}/urllib3/contrib/emscripten/__init__.pyo
+${PYSITELIB}/urllib3/contrib/emscripten/connection.py
+${PYSITELIB}/urllib3/contrib/emscripten/connection.pyc
+${PYSITELIB}/urllib3/contrib/emscripten/connection.pyo
+${PYSITELIB}/urllib3/contrib/emscripten/emscripten_fetch_worker.js
+${PYSITELIB}/urllib3/contrib/emscripten/fetch.py
+${PYSITELIB}/urllib3/contrib/emscripten/fetch.pyc
+${PYSITELIB}/urllib3/contrib/emscripten/fetch.pyo
+${PYSITELIB}/urllib3/contrib/emscripten/request.py
+${PYSITELIB}/urllib3/contrib/emscripten/request.pyc
+${PYSITELIB}/urllib3/contrib/emscripten/request.pyo
+${PYSITELIB}/urllib3/contrib/emscripten/response.py
+${PYSITELIB}/urllib3/contrib/emscripten/response.pyc
+${PYSITELIB}/urllib3/contrib/emscripten/response.pyo
 ${PYSITELIB}/urllib3/contrib/pyopenssl.py
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyc
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyo
@@ -42,6 +58,9 @@ ${PYSITELIB}/urllib3/fields.pyo
 ${PYSITELIB}/urllib3/filepost.py
 ${PYSITELIB}/urllib3/filepost.pyc
 ${PYSITELIB}/urllib3/filepost.pyo
+${PYSITELIB}/urllib3/http2.py
+${PYSITELIB}/urllib3/http2.pyc
+${PYSITELIB}/urllib3/http2.pyo
 ${PYSITELIB}/urllib3/poolmanager.py
 ${PYSITELIB}/urllib3/poolmanager.pyc
 ${PYSITELIB}/urllib3/poolmanager.pyo
