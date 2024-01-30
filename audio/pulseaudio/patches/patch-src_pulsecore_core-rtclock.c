@@ -1,14 +1,14 @@
-$NetBSD: patch-src_pulsecore_core-rtclock.c,v 1.1 2021/09/17 06:47:30 schmonz Exp $
+$NetBSD: patch-src_pulsecore_core-rtclock.c,v 1.2 2024/01/30 13:54:33 ryoon Exp $
 
 macOS build fix: AbsoluteToNanoseconds is long deprecated, and
 apparently mach_absolute_time() already returns nanoseconds.
 
---- src/pulsecore/core-rtclock.c.orig	2021-07-27 20:02:27.000000000 +0000
+--- src/pulsecore/core-rtclock.c.orig	2024-01-12 17:22:09.000000000 +0000
 +++ src/pulsecore/core-rtclock.c
-@@ -66,11 +66,7 @@ pa_usec_t pa_rtclock_age(const struct ti
- struct timeval *pa_rtclock_get(struct timeval *tv) {
+@@ -87,11 +87,7 @@ struct timeval *pa_rtclock_get(struct ti
  
- #if defined(OS_IS_DARWIN)
+     return tv;
+ #elif defined(OS_IS_DARWIN)
 -    uint64_t val, abs_time = mach_absolute_time();
 -    Nanoseconds nanos;
 -
