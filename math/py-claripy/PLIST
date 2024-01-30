@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/30 19:24:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,6 +24,7 @@ ${PYSITELIB}/claripy/ast/bool.pyc
 ${PYSITELIB}/claripy/ast/bool.pyo
 ${PYSITELIB}/claripy/ast/bv.py
 ${PYSITELIB}/claripy/ast/bv.pyc
+${PYSITELIB}/claripy/ast/bv.pyi
 ${PYSITELIB}/claripy/ast/bv.pyo
 ${PYSITELIB}/claripy/ast/fp.py
 ${PYSITELIB}/claripy/ast/fp.pyc

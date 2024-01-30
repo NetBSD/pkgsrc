@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2023/05/11 07:21:34 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/30 19:24:35 adam Exp $
 
 .include "version.mk"
 
 DISTNAME=	angr-${ANGR_VERSION}
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/angr/}
 
@@ -29,6 +29,8 @@ LICENSE=	2-clause-bsd
 MAKE_FLAGS+=	LIBDIR=${LIBDIR:Q}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB:Q}/pyvex/lib
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=59:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-CppHeaderParser-[0-9]*:../../devel/py-CppHeaderParser
 DEPENDS+=	${PYPKGPREFIX}-ailment>=${ANGR_VERSION}:../../devel/py-ailment
 DEPENDS+=	${PYPKGPREFIX}-archinfo>=${ANGR_VERSION}:../../devel/py-archinfo
@@ -52,6 +54,7 @@ DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-sympy-[0-9]*:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-unicorn>=2.0.1:../../emulators/py-unicorn
+DEPENDS+=	${PYPKGPREFIX}-unique-log-filter-[0-9]*:../../textproc/py-unique-log-filter
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
@@ -64,16 +67,16 @@ SOEXT.*=	so
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
+
 post-install:
+.if ${OPSYS} == "Darwin"
 	install_name_tool -id ${PREFIX}/${PYSITELIB}/angr/lib/angr_native.dylib \
 	${DESTDIR}${PREFIX}/${PYSITELIB}/angr/lib/angr_native.dylib
 .endif
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests/*.py
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} angr angr-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../devel/py-pyvex/buildlink3.mk"
 .include "../../emulators/unicorn/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

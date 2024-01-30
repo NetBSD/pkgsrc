@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/11 07:16:04 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/01/30 19:24:35 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyvex/__init__.py
 ${PYSITELIB}/pyvex/__init__.pyc
 ${PYSITELIB}/pyvex/__init__.pyo
+${PYSITELIB}/pyvex/_register_info.py
+${PYSITELIB}/pyvex/_register_info.pyc
+${PYSITELIB}/pyvex/_register_info.pyo
+${PYSITELIB}/pyvex/arches.py
+${PYSITELIB}/pyvex/arches.pyc
+${PYSITELIB}/pyvex/arches.pyo
 ${PYSITELIB}/pyvex/block.py
 ${PYSITELIB}/pyvex/block.pyc
 ${PYSITELIB}/pyvex/block.pyo
@@ -79,9 +85,6 @@ ${PYSITELIB}/pyvex/lifting/util/__init__.pyo
 ${PYSITELIB}/pyvex/lifting/util/instr_helper.py
 ${PYSITELIB}/pyvex/lifting/util/instr_helper.pyc
 ${PYSITELIB}/pyvex/lifting/util/instr_helper.pyo
-${PYSITELIB}/pyvex/lifting/util/irsb_postprocess.py
-${PYSITELIB}/pyvex/lifting/util/irsb_postprocess.pyc
-${PYSITELIB}/pyvex/lifting/util/irsb_postprocess.pyo
 ${PYSITELIB}/pyvex/lifting/util/lifter_helper.py
 ${PYSITELIB}/pyvex/lifting/util/lifter_helper.pyc
 ${PYSITELIB}/pyvex/lifting/util/lifter_helper.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/pyvex/py.typed
 ${PYSITELIB}/pyvex/stmt.py
 ${PYSITELIB}/pyvex/stmt.pyc
 ${PYSITELIB}/pyvex/stmt.pyo
+${PYSITELIB}/pyvex/types.py
+${PYSITELIB}/pyvex/types.pyc
+${PYSITELIB}/pyvex/types.pyo
 ${PYSITELIB}/pyvex/utils.py
 ${PYSITELIB}/pyvex/utils.pyc
 ${PYSITELIB}/pyvex/utils.pyo
