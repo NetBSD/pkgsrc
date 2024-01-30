@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2023/12/28 22:31:34 zafer Exp $
+# $NetBSD: Makefile,v 1.84 2024/01/30 18:29:17 adam Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	compizconfig-backend-gconf-${PKGVER}
-PKGREVISION=	58
+PKGREVISION=	59
 CATEGORIES=	devel gnome
 MASTER_SITES=	#
 

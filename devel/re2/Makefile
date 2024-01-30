@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/11/06 19:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/30 18:29:18 adam Exp $
 
 DISTNAME=	re2-${GITHUB_TAG:S/-//g}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	2023-11-01

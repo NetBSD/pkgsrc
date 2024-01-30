@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/20 18:26:25 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/30 18:29:16 adam Exp $
 
 DISTNAME=	libilbc-3.0.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TimothyGu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
