@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.770 2024/01/30 20:47:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.771 2024/01/30 20:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1015,3 +1015,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/lemon to 1.0.3.45.1 [adam 2024-01-30]
 	Updated devel/py-hypothesis to 6.97.3 [adam 2024-01-30]
 	Updated www/py-test-httpx to 0.29.0 [adam 2024-01-30]
+	Updated graphics/png to 1.6.42 [wiz 2024-01-30]
