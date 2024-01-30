@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2023/04/19 14:40:35 sjmulder Exp $
+$NetBSD: distinfo,v 1.30 2024/01/30 15:57:18 sjmulder Exp $
 
-BLAKE2s (nnn-4.8.tar.gz) = 31b69fae1ed3999b36d75d875de3d528701afcb8ee838a05a7ea143607d855d3
-SHA512 (nnn-4.8.tar.gz) = 932e27ec1d7cd3db6ccba33edb3d1ad2620109cde3c4114b734eef3e04d6c6c22ddaa1c4727908dba2a107dd4cfe1f5193aec450f680a390671f48e63d0133bd
-Size (nnn-4.8.tar.gz) = 253547 bytes
+BLAKE2s (nnn-4.9.tar.gz) = 55ebf293e0ed886798eb9ce90969b45c3cfadc88714d74e16c01fa05872b7150
+SHA512 (nnn-4.9.tar.gz) = 3c16ed1cbc5466b05306e38c6f5d8eb7ade9cf5ad766f9ff3bf7d20d5bfb9bdf1564527e27191e2cd85542c25245f338e1236630de3d1c8e5fbd10d54d628a14
+Size (nnn-4.9.tar.gz) = 255144 bytes
 SHA1 (patch-src_nnn.c) = cbd382a0fe4c5cce1f384987d006675cbf280bdc
