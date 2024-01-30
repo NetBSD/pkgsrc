@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/01/22 13:16:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2024/01/30 14:21:53 ryoon Exp $
 
 DISTNAME=	corsix-th-0.67
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CorsixTH/}
 GITHUB_PROJECT=	CorsixTH

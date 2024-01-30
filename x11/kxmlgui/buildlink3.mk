@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2023/11/12 13:24:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2024/01/30 14:22:41 ryoon Exp $
 
 BUILDLINK_TREE+=	kxmlgui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kxmlgui
 KXMLGUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kxmlgui+=	kxmlgui>=5.19.0
-BUILDLINK_ABI_DEPENDS.kxmlgui?=	kxmlgui>=5.108.0nb4
+BUILDLINK_ABI_DEPENDS.kxmlgui?=	kxmlgui>=5.108.0nb5
 BUILDLINK_PKGSRCDIR.kxmlgui?=	../../x11/kxmlgui
 
 .include "../../misc/attica-qt5/buildlink3.mk"
