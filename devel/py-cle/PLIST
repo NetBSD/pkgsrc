@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:56:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/30 19:24:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -31,6 +31,9 @@ ${PYSITELIB}/cle/backends/cgc/backedcgc.pyo
 ${PYSITELIB}/cle/backends/cgc/cgc.py
 ${PYSITELIB}/cle/backends/cgc/cgc.pyc
 ${PYSITELIB}/cle/backends/cgc/cgc.pyo
+${PYSITELIB}/cle/backends/coff.py
+${PYSITELIB}/cle/backends/coff.pyc
+${PYSITELIB}/cle/backends/coff.pyo
 ${PYSITELIB}/cle/backends/elf/__init__.py
 ${PYSITELIB}/cle/backends/elf/__init__.pyc
 ${PYSITELIB}/cle/backends/elf/__init__.pyo
