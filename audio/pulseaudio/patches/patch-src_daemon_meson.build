@@ -1,6 +1,6 @@
-$NetBSD: patch-src_daemon_meson.build,v 1.1 2021/07/30 12:21:06 ryoon Exp $
+$NetBSD: patch-src_daemon_meson.build,v 1.2 2024/01/30 13:54:32 ryoon Exp $
 
---- src/daemon/meson.build.orig	2021-07-27 20:02:27.738868200 +0000
+--- src/daemon/meson.build.orig	2024-01-12 17:22:09.000000000 +0000
 +++ src/daemon/meson.build
 @@ -52,7 +52,7 @@ if x11_dep.found()
      output : '00-pulseaudio-x11',
@@ -48,7 +48,7 @@ $NetBSD: patch-src_daemon_meson.build,v 1.1 2021/07/30 12:21:06 ryoon Exp $
  
  if dbus_dep.found()
    install_data('pulseaudio-system.conf',
--    install_dir : join_paths(sysconfdir, 'dbus-1', 'system.d')
+-    install_dir : join_paths(datadir, 'dbus-1', 'system.d')
 +    install_dir : join_paths('@EGDIR@', 'dbus-1', 'system.d')
    )
  endif
