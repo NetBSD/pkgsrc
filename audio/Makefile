@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2024/01/22 07:31:47 pin Exp $
+# $NetBSD: Makefile,v 1.685 2024/01/30 09:01:29 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -421,6 +421,7 @@ SUBDIR+=	snd
 SUBDIR+=	sndfile-tools
 SUBDIR+=	solfege
 SUBDIR+=	sonata
+SUBDIR+=	sonic
 SUBDIR+=	sound-juicer
 SUBDIR+=	sound-theme-freedesktop
 SUBDIR+=	soundtouch
