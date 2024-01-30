@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/12/23 09:42:37 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/30 14:22:34 ryoon Exp $
 
 DISTNAME=	recoll-1.35.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.lesbonscomptes.com/recoll/
 

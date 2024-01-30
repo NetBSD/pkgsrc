@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2023/11/12 13:21:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2024/01/30 14:22:00 ryoon Exp $
 
 BUILDLINK_TREE+=	libkdegames
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkdegames
 LIBKDEGAMES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdegames+=	libkdegames>=19.08.3
-BUILDLINK_ABI_DEPENDS.libkdegames?=	libkdegames>=23.04.3nb3
+BUILDLINK_ABI_DEPENDS.libkdegames?=	libkdegames>=23.04.3nb4
 BUILDLINK_PKGSRCDIR.libkdegames?=	../../games/libkdegames
 
 .include "../../devel/kdeclarative/buildlink3.mk"

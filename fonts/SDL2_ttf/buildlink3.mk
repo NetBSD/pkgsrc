@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2023/11/12 13:21:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2024/01/30 14:21:51 ryoon Exp $
 
 BUILDLINK_TREE+=	SDL2_ttf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	SDL2_ttf
 SDL2_TTF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SDL2_ttf+=	SDL2_ttf>=2.0.12
-BUILDLINK_ABI_DEPENDS.SDL2_ttf+=	SDL2_ttf>=2.20.2nb2
+BUILDLINK_ABI_DEPENDS.SDL2_ttf+=	SDL2_ttf>=2.22.0nb1
 BUILDLINK_PKGSRCDIR.SDL2_ttf?=		../../fonts/SDL2_ttf
 
 .include "../../devel/SDL2/buildlink3.mk"
