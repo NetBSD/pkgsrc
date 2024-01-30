@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2022/11/24 12:56:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/01/30 13:54:32 ryoon Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -54,7 +54,7 @@ lib/libpulse-simple.so.0
 lib/libpulse-simple.so.0.1.1
 lib/libpulse.so
 lib/libpulse.so.0
-lib/libpulse.so.0.24.2
+lib/libpulse.so.0.24.3
 lib/pkgconfig/libpulse-mainloop-glib.pc
 lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc
@@ -190,6 +190,7 @@ share/locale/de_CH/LC_MESSAGES/pulseaudio.mo
 share/locale/el/LC_MESSAGES/pulseaudio.mo
 share/locale/eo/LC_MESSAGES/pulseaudio.mo
 share/locale/es/LC_MESSAGES/pulseaudio.mo
+share/locale/eu/LC_MESSAGES/pulseaudio.mo
 share/locale/fi/LC_MESSAGES/pulseaudio.mo
 share/locale/fr/LC_MESSAGES/pulseaudio.mo
 share/locale/gl/LC_MESSAGES/pulseaudio.mo

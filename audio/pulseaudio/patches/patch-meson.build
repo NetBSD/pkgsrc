@@ -1,8 +1,7 @@
-$NetBSD: patch-meson.build,v 1.3 2022/07/02 16:44:39 ryoon Exp $
+$NetBSD: patch-meson.build,v 1.4 2024/01/30 13:54:32 ryoon Exp $
 
 * Non-MS Windows case uses libintl for dgettext.
   Fix build under NetBSD.
-* Omit unsupported linker arguments on macOS.
 
 --- meson.build.orig	2022-05-28 15:18:37.000000000 +0000
 +++ meson.build
@@ -15,12 +14,3 @@ $NetBSD: patch-meson.build,v 1.3 2022/07/02 16:44:39 ryoon Exp $
      libintl_dep = []
    else
      libintl_dep = cc.find_library('intl')
-@@ -424,7 +424,7 @@ cdata.set('MESON_BUILD', 1)
- # so we request the nodelete flag to be enabled.
- # On other systems, we don't really know how to do that, but it's welcome if somebody can tell.
- # Windows doesn't support this flag.
--if host_machine.system() != 'windows'
-+if host_machine.system() != 'windows' and host_machine.system() != 'darwin'
-   nodelete_link_args = ['-Wl,-z,nodelete']
- else
-   nodelete_link_args = []
