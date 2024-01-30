@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2023/12/29 18:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/01/30 14:21:46 ryoon Exp $
 
 DISTNAME=	emulationstation-2.9.4
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RetroPie/}
 GITHUB_PROJECT=	EmulationStation

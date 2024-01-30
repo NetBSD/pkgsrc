@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/12 13:21:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/01/30 14:21:42 ryoon Exp $
 
 BUILDLINK_TREE+=	libkgapi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkgapi
 LIBKGAPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkgapi+=	libkgapi>=20.04.1
-BUILDLINK_ABI_DEPENDS.libkgapi?=		libkgapi>=23.04.3nb3
+BUILDLINK_ABI_DEPENDS.libkgapi?=		libkgapi>=23.04.3nb4
 BUILDLINK_PKGSRCDIR.libkgapi?=		../../devel/libkgapi
 
 .include "../../devel/kio/buildlink3.mk"

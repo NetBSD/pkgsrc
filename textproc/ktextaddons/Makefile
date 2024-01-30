@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/12 13:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/01/30 14:22:35 ryoon Exp $
 
 DISTNAME=	ktextaddons-1.3.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_KDE:=ktextaddons/}
 
