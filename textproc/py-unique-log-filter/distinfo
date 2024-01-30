@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/30 19:21:27 adam Exp $
+
+BLAKE2s (unique_log_filter-0.1.0.tar.gz) = 3360bc590fb7252f53c16856ac99c895209b91aa818a94bd673f730f421b6c84
+SHA512 (unique_log_filter-0.1.0.tar.gz) = 506632e9d6e411cb51e5a1b644107499bc07cac29fa320e832fd8dd69ea0230f68d337b9830aa3ed682ff91257b7e10ab4e40045a7bfc5abaf0537d60eea27a1
+Size (unique_log_filter-0.1.0.tar.gz) = 996 bytes
