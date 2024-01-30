@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.767 2024/01/30 19:43:34 adam Exp $
+$NetBSD: CHANGES-2024,v 1.768 2024/01/30 20:05:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1007,3 +1007,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ansible to 9.2.0 [adam 2024-01-30]
 	Updated security/py-cryptography to 42.0.2 [adam 2024-01-30]
 	Updated security/py-cryptography_vectors to 42.0.2 [adam 2024-01-30]
+	Updated textproc/cmark to 0.31.0 [adam 2024-01-30]
+	Updated www/py-urllib3 to 2.2.0 [adam 2024-01-30]
