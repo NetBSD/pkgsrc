@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.761 2024/01/30 11:24:17 adam Exp $
+$NetBSD: CHANGES-2024,v 1.762 2024/01/30 13:39:57 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/flite to 2.2nb1 [wiz 2024-01-30]
 	Updated www/py-aiohttp to 3.9.3 [adam 2024-01-30]
 	Updated www/py-django-reversion to 5.0.11 [adam 2024-01-30]
+	Updated devel/mustach to 1.2.6 [sjmulder 2024-01-30]
