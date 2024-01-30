@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4168 2024/01/27 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4169 2024/01/30 21:08:50 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2522,6 +2522,7 @@ SUBDIR+=	py-dialog
 SUBDIR+=	py-dict2xml
 SUBDIR+=	py-dictdiffer
 SUBDIR+=	py-dictpath
+SUBDIR+=	py-dirty-equals
 SUBDIR+=	py-distlib
 SUBDIR+=	py-distorm3
 SUBDIR+=	py-distro
@@ -2783,6 +2784,7 @@ SUBDIR+=	py-py2app
 SUBDIR+=	py-pybind11
 SUBDIR+=	py-pycotap
 SUBDIR+=	py-pydantic
+SUBDIR+=	py-pydantic-core
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
