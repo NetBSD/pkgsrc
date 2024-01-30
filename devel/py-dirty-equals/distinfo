@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/30 21:07:56 adam Exp $
+
+BLAKE2s (dirty_equals-0.7.1.post0.tar.gz) = 68deb1115d6278a141403753e6549525b4f0dd71145d755e527081f191b221fe
+SHA512 (dirty_equals-0.7.1.post0.tar.gz) = 3407e559a6eecc1006e7ef44d477d0671d44b7475bd2848b76c3e65e8f92b9fc0387e1eb133db78705b98d65b8b44cd130e346e73d2adf4bbed09da1e2faadea
+Size (dirty_equals-0.7.1.post0.tar.gz) = 48858 bytes
