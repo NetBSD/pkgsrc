@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/01/30 21:08:50 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/pydantic_core/__init__.py
+${PYSITELIB}/pydantic_core/__init__.pyc
+${PYSITELIB}/pydantic_core/__init__.pyo
+${PYSITELIB}/pydantic_core/_pydantic_core.pyi
+${PYSITELIB}/pydantic_core/_pydantic_core.so
+${PYSITELIB}/pydantic_core/core_schema.py
+${PYSITELIB}/pydantic_core/core_schema.pyc
+${PYSITELIB}/pydantic_core/core_schema.pyo
+${PYSITELIB}/pydantic_core/py.typed
