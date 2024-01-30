@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/23 22:16:00 nia Exp $
+# $NetBSD: Makefile,v 1.25 2024/01/30 18:01:40 jperkin Exp $
 
 DISTNAME=	festvox_us2
 PKGNAME=	festvox-us2-1.96
@@ -14,8 +14,8 @@ LICENSE=	no-commercial-use
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 DEPENDS+=	festlex-cmu>=1.4.0:../../audio/festlex-cmu
-DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
-DEPENDS+=	mbrolavox-us2-980812{,nb[0-9]*}:../../audio/mbrolavox-us2
+DEPENDS+=	mbrola-[0-9]*:../../audio/mbrola
+DEPENDS+=	mbrolavox-us2-[0-9]*:../../audio/mbrolavox-us2
 
 USE_TOOLS+=	pax
 
