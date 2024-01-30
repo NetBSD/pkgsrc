@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/01/30 21:04:34 adam Exp $
+
+BLAKE2s (annotated_types-0.6.0.tar.gz) = 43bcd5b5e66102afb7063039f880c1ba439c813375ffd81318a1437a03b54a76
+SHA512 (annotated_types-0.6.0.tar.gz) = 6b7f6fa23f47758d955822564227173951d6ddd854397b0c996bb6adeadd9caebfab6d193595be17003c1ef0e81a6bd8e20ec8221a70ffa35f9a4414300e788d
+Size (annotated_types-0.6.0.tar.gz) = 14670 bytes
