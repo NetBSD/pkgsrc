@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/01/20 08:09:09 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/31 11:58:28 adam Exp $
 
-DISTNAME=	ruff-0.1.14
+DISTNAME=	ruff-0.1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/astral-sh/ruff
 COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.10:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
@@ -20,7 +20,8 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} ruff ruff-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ruff ruff-${PYVERSSUFFIX} || ${TRUE}
 
 .include "cargo-depends.mk"
 
