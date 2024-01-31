@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/09 02:37:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/31 21:10:33 ryoon Exp $
 cross/x86_64-w64-mingw32/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32/mingw/include/cdoex_i.c
@@ -119,6 +119,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libconsole.a
 cross/x86_64-w64-mingw32/mingw/lib/libcorpol.a
 cross/x86_64-w64-mingw32/mingw/lib/libcredui.a
 cross/x86_64-w64-mingw32/mingw/lib/libcrypt32.a
+cross/x86_64-w64-mingw32/mingw/lib/libcryptbase.a
 cross/x86_64-w64-mingw32/mingw/lib/libcryptdlg.a
 cross/x86_64-w64-mingw32/mingw/lib/libcryptdll.a
 cross/x86_64-w64-mingw32/mingw/lib/libcryptext.a
@@ -213,6 +214,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libdinput.a
 cross/x86_64-w64-mingw32/mingw/lib/libdinput8.a
 cross/x86_64-w64-mingw32/mingw/lib/libdiskcopy.a
 cross/x86_64-w64-mingw32/mingw/lib/libdismapi.a
+cross/x86_64-w64-mingw32/mingw/lib/libdloadhelper.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmconfig.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmdskmgr.a
 cross/x86_64-w64-mingw32/mingw/lib/libdmivcitf.a
@@ -427,6 +429,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libmfreadwrite.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfsensorgroup.a
 cross/x86_64-w64-mingw32/mingw/lib/libmfuuid.a
 cross/x86_64-w64-mingw32/mingw/lib/libmgmtapi.a
+cross/x86_64-w64-mingw32/mingw/lib/libmi.a
 cross/x86_64-w64-mingw32/mingw/lib/libmidimap.a
 cross/x86_64-w64-mingw32/mingw/lib/libmigism.a
 cross/x86_64-w64-mingw32/mingw/lib/libmiglibnt.a
@@ -525,6 +528,8 @@ cross/x86_64-w64-mingw32/mingw/lib/libmsvfw32.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsvidc32.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsw3prt.a
 cross/x86_64-w64-mingw32/mingw/lib/libmswsock.a
+cross/x86_64-w64-mingw32/mingw/lib/libmsxml2.a
+cross/x86_64-w64-mingw32/mingw/lib/libmsxml6.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsyuv.a
 cross/x86_64-w64-mingw32/mingw/lib/libmtxclu.a
 cross/x86_64-w64-mingw32/mingw/lib/libmtxdm.a
@@ -906,5 +911,6 @@ cross/x86_64-w64-mingw32/mingw/lib/libxinput1_2.a
 cross/x86_64-w64-mingw32/mingw/lib/libxinput1_3.a
 cross/x86_64-w64-mingw32/mingw/lib/libxinput1_4.a
 cross/x86_64-w64-mingw32/mingw/lib/libxinput9_1_0.a
+cross/x86_64-w64-mingw32/mingw/lib/libxmllite.a
 cross/x86_64-w64-mingw32/mingw/lib/libzoneoc.a
 cross/x86_64-w64-mingw32/mingw/lib/txtmode.o

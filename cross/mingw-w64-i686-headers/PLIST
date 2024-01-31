@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/09 02:37:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/31 21:10:33 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/GL/gl.h
 cross/i686-w64-mingw32/mingw/include/GL/glaux.h
 cross/i686-w64-mingw32/mingw/include/GL/glcorearb.h
@@ -69,6 +69,7 @@ cross/i686-w64-mingw32/mingw/include/apdevpkey.h
 cross/i686-w64-mingw32/mingw/include/apiset.h
 cross/i686-w64-mingw32/mingw/include/apisetcconv.h
 cross/i686-w64-mingw32/mingw/include/appmgmt.h
+cross/i686-w64-mingw32/mingw/include/appmodel.h
 cross/i686-w64-mingw32/mingw/include/aqadmtyp.h
 cross/i686-w64-mingw32/mingw/include/asptlb.h
 cross/i686-w64-mingw32/mingw/include/assert.h
@@ -200,6 +201,7 @@ cross/i686-w64-mingw32/mingw/include/corhdr.h
 cross/i686-w64-mingw32/mingw/include/correg.h
 cross/i686-w64-mingw32/mingw/include/cpl.h
 cross/i686-w64-mingw32/mingw/include/cplext.h
+cross/i686-w64-mingw32/mingw/include/credentialprovider.h
 cross/i686-w64-mingw32/mingw/include/credssp.h
 cross/i686-w64-mingw32/mingw/include/crtdbg.h
 cross/i686-w64-mingw32/mingw/include/crtdefs.h
@@ -372,6 +374,7 @@ cross/i686-w64-mingw32/mingw/include/ddrawi.h
 cross/i686-w64-mingw32/mingw/include/ddstream.h
 cross/i686-w64-mingw32/mingw/include/debugapi.h
 cross/i686-w64-mingw32/mingw/include/delayimp.h
+cross/i686-w64-mingw32/mingw/include/delayloadhandler.h
 cross/i686-w64-mingw32/mingw/include/devguid.h
 cross/i686-w64-mingw32/mingw/include/devicetopology.h
 cross/i686-w64-mingw32/mingw/include/devioctl.h
@@ -678,8 +681,10 @@ cross/i686-w64-mingw32/mingw/include/issper16.h
 cross/i686-w64-mingw32/mingw/include/issperr.h
 cross/i686-w64-mingw32/mingw/include/isysmon.h
 cross/i686-w64-mingw32/mingw/include/ivec.h
+cross/i686-w64-mingw32/mingw/include/ivectorchangedeventargs.h
 cross/i686-w64-mingw32/mingw/include/iwamreg.h
 cross/i686-w64-mingw32/mingw/include/jobapi.h
+cross/i686-w64-mingw32/mingw/include/joystickapi.h
 cross/i686-w64-mingw32/mingw/include/kcom.h
 cross/i686-w64-mingw32/mingw/include/knownfolders.h
 cross/i686-w64-mingw32/mingw/include/ks.h
@@ -723,6 +728,7 @@ cross/i686-w64-mingw32/mingw/include/lmwksta.h
 cross/i686-w64-mingw32/mingw/include/loadperf.h
 cross/i686-w64-mingw32/mingw/include/locale.h
 cross/i686-w64-mingw32/mingw/include/locationapi.h
+cross/i686-w64-mingw32/mingw/include/lowlevelmonitorconfigurationapi.h
 cross/i686-w64-mingw32/mingw/include/lpmapi.h
 cross/i686-w64-mingw32/mingw/include/lzexpand.h
 cross/i686-w64-mingw32/mingw/include/madcapcl.h
@@ -731,6 +737,7 @@ cross/i686-w64-mingw32/mingw/include/mailmsgprops.h
 cross/i686-w64-mingw32/mingw/include/malloc.h
 cross/i686-w64-mingw32/mingw/include/manipulations.h
 cross/i686-w64-mingw32/mingw/include/mapi.h
+cross/i686-w64-mingw32/mingw/include/mapiaux.h
 cross/i686-w64-mingw32/mingw/include/mapicode.h
 cross/i686-w64-mingw32/mingw/include/mapidbg.h
 cross/i686-w64-mingw32/mingw/include/mapidefs.h
@@ -749,6 +756,7 @@ cross/i686-w64-mingw32/mingw/include/mapix.h
 cross/i686-w64-mingw32/mingw/include/math.h
 cross/i686-w64-mingw32/mingw/include/mbctype.h
 cross/i686-w64-mingw32/mingw/include/mbstring.h
+cross/i686-w64-mingw32/mingw/include/mciapi.h
 cross/i686-w64-mingw32/mingw/include/mciavi.h
 cross/i686-w64-mingw32/mingw/include/mcx.h
 cross/i686-w64-mingw32/mingw/include/mdbrole.hxx
@@ -776,9 +784,11 @@ cross/i686-w64-mingw32/mingw/include/mfreadwrite.h
 cross/i686-w64-mingw32/mingw/include/mftransform.h
 cross/i686-w64-mingw32/mingw/include/mgm.h
 cross/i686-w64-mingw32/mingw/include/mgmtapi.h
+cross/i686-w64-mingw32/mingw/include/mi.h
 cross/i686-w64-mingw32/mingw/include/midles.h
 cross/i686-w64-mingw32/mingw/include/mimedisp.h
 cross/i686-w64-mingw32/mingw/include/mimeinfo.h
+cross/i686-w64-mingw32/mingw/include/minappmodel.h
 cross/i686-w64-mingw32/mingw/include/minmax.h
 cross/i686-w64-mingw32/mingw/include/minwinbase.h
 cross/i686-w64-mingw32/mingw/include/minwindef.h
@@ -787,8 +797,12 @@ cross/i686-w64-mingw32/mingw/include/mmc.h
 cross/i686-w64-mingw32/mingw/include/mmcobj.h
 cross/i686-w64-mingw32/mingw/include/mmddk.h
 cross/i686-w64-mingw32/mingw/include/mmdeviceapi.h
+cross/i686-w64-mingw32/mingw/include/mmeapi.h
+cross/i686-w64-mingw32/mingw/include/mmiscapi.h
+cross/i686-w64-mingw32/mingw/include/mmiscapi2.h
 cross/i686-w64-mingw32/mingw/include/mmreg.h
 cross/i686-w64-mingw32/mingw/include/mmstream.h
+cross/i686-w64-mingw32/mingw/include/mmsyscom.h
 cross/i686-w64-mingw32/mingw/include/mmsystem.h
 cross/i686-w64-mingw32/mingw/include/mobsync.h
 cross/i686-w64-mingw32/mingw/include/moniker.h
@@ -868,6 +882,8 @@ cross/i686-w64-mingw32/mingw/include/mswsock.h
 cross/i686-w64-mingw32/mingw/include/msxml.h
 cross/i686-w64-mingw32/mingw/include/msxml2.h
 cross/i686-w64-mingw32/mingw/include/msxml2did.h
+cross/i686-w64-mingw32/mingw/include/msxml6.h
+cross/i686-w64-mingw32/mingw/include/msxml6did.h
 cross/i686-w64-mingw32/mingw/include/msxmldid.h
 cross/i686-w64-mingw32/mingw/include/mtsadmin.h
 cross/i686-w64-mingw32/mingw/include/mtsevents.h
@@ -1009,6 +1025,7 @@ cross/i686-w64-mingw32/mingw/include/persist.h
 cross/i686-w64-mingw32/mingw/include/pgobootrun.h
 cross/i686-w64-mingw32/mingw/include/physicalmonitorenumerationapi.h
 cross/i686-w64-mingw32/mingw/include/pla.h
+cross/i686-w64-mingw32/mingw/include/playsoundapi.h
 cross/i686-w64-mingw32/mingw/include/pnrpdef.h
 cross/i686-w64-mingw32/mingw/include/pnrpns.h
 cross/i686-w64-mingw32/mingw/include/poclass.h
@@ -1016,6 +1033,8 @@ cross/i686-w64-mingw32/mingw/include/polarity.h
 cross/i686-w64-mingw32/mingw/include/poppack.h
 cross/i686-w64-mingw32/mingw/include/portabledeviceconnectapi.h
 cross/i686-w64-mingw32/mingw/include/portabledevicetypes.h
+cross/i686-w64-mingw32/mingw/include/powerbase.h
+cross/i686-w64-mingw32/mingw/include/powersetting.h
 cross/i686-w64-mingw32/mingw/include/powrprof.h
 cross/i686-w64-mingw32/mingw/include/prnasnot.h
 cross/i686-w64-mingw32/mingw/include/prnsetup.dlg
@@ -1090,6 +1109,7 @@ cross/i686-w64-mingw32/mingw/include/richole.h
 cross/i686-w64-mingw32/mingw/include/rkeysvcc.h
 cross/i686-w64-mingw32/mingw/include/rnderr.h
 cross/i686-w64-mingw32/mingw/include/roapi.h
+cross/i686-w64-mingw32/mingw/include/robuffer.h
 cross/i686-w64-mingw32/mingw/include/routprot.h
 cross/i686-w64-mingw32/mingw/include/rpc.h
 cross/i686-w64-mingw32/mingw/include/rpcasync.h
@@ -1166,6 +1186,7 @@ cross/i686-w64-mingw32/mingw/include/setupapi.h
 cross/i686-w64-mingw32/mingw/include/sfc.h
 cross/i686-w64-mingw32/mingw/include/shappmgr.h
 cross/i686-w64-mingw32/mingw/include/share.h
+cross/i686-w64-mingw32/mingw/include/shcore.h
 cross/i686-w64-mingw32/mingw/include/shdeprecated.h
 cross/i686-w64-mingw32/mingw/include/shdispid.h
 cross/i686-w64-mingw32/mingw/include/shellapi.h
@@ -1251,6 +1272,7 @@ cross/i686-w64-mingw32/mingw/include/sys/unistd.h
 cross/i686-w64-mingw32/mingw/include/sys/utime.h
 cross/i686-w64-mingw32/mingw/include/sysinfoapi.h
 cross/i686-w64-mingw32/mingw/include/syslimits.h
+cross/i686-w64-mingw32/mingw/include/systemmediatransportcontrolsinterop.h
 cross/i686-w64-mingw32/mingw/include/systemtopologyapi.h
 cross/i686-w64-mingw32/mingw/include/t2embapi.h
 cross/i686-w64-mingw32/mingw/include/tabflicks.h
@@ -1348,6 +1370,7 @@ cross/i686-w64-mingw32/mingw/include/verinfo.ver
 cross/i686-w64-mingw32/mingw/include/versionhelpers.h
 cross/i686-w64-mingw32/mingw/include/vfw.h
 cross/i686-w64-mingw32/mingw/include/vfwmsgs.h
+cross/i686-w64-mingw32/mingw/include/vidcap.h
 cross/i686-w64-mingw32/mingw/include/virtdisk.h
 cross/i686-w64-mingw32/mingw/include/vmr9.h
 cross/i686-w64-mingw32/mingw/include/vsadmin.h
@@ -1408,17 +1431,48 @@ cross/i686-w64-mingw32/mingw/include/winddiui.h
 cross/i686-w64-mingw32/mingw/include/windef.h
 cross/i686-w64-mingw32/mingw/include/windns.h
 cross/i686-w64-mingw32/mingw/include/windot11.h
+cross/i686-w64-mingw32/mingw/include/windows.devices.enumeration.h
+cross/i686-w64-mingw32/mingw/include/windows.devices.haptics.h
+cross/i686-w64-mingw32/mingw/include/windows.devices.power.h
 cross/i686-w64-mingw32/mingw/include/windows.foundation.collections.h
 cross/i686-w64-mingw32/mingw/include/windows.foundation.h
+cross/i686-w64-mingw32/mingw/include/windows.foundation.metadata.h
+cross/i686-w64-mingw32/mingw/include/windows.foundation.numerics.h
+cross/i686-w64-mingw32/mingw/include/windows.gaming.input.custom.h
+cross/i686-w64-mingw32/mingw/include/windows.gaming.input.forcefeedback.h
+cross/i686-w64-mingw32/mingw/include/windows.gaming.input.h
+cross/i686-w64-mingw32/mingw/include/windows.gaming.ui.h
+cross/i686-w64-mingw32/mingw/include/windows.globalization.h
+cross/i686-w64-mingw32/mingw/include/windows.graphics.capture.h
+cross/i686-w64-mingw32/mingw/include/windows.graphics.directx.direct3d11.h
+cross/i686-w64-mingw32/mingw/include/windows.graphics.directx.h
+cross/i686-w64-mingw32/mingw/include/windows.graphics.effects.h
+cross/i686-w64-mingw32/mingw/include/windows.graphics.holographic.h
 cross/i686-w64-mingw32/mingw/include/windows.h
+cross/i686-w64-mingw32/mingw/include/windows.media.closedcaptioning.h
+cross/i686-w64-mingw32/mingw/include/windows.media.devices.h
 cross/i686-w64-mingw32/mingw/include/windows.media.h
+cross/i686-w64-mingw32/mingw/include/windows.media.speechrecognition.h
 cross/i686-w64-mingw32/mingw/include/windows.media.speechsynthesis.h
+cross/i686-w64-mingw32/mingw/include/windows.perception.spatial.h
+cross/i686-w64-mingw32/mingw/include/windows.perception.spatial.surfaces.h
+cross/i686-w64-mingw32/mingw/include/windows.security.credentials.h
 cross/i686-w64-mingw32/mingw/include/windows.security.cryptography.h
 cross/i686-w64-mingw32/mingw/include/windows.storage.h
 cross/i686-w64-mingw32/mingw/include/windows.storage.streams.h
 cross/i686-w64-mingw32/mingw/include/windows.system.h
+cross/i686-w64-mingw32/mingw/include/windows.system.power.h
+cross/i686-w64-mingw32/mingw/include/windows.system.profile.systemmanufacturers.h
 cross/i686-w64-mingw32/mingw/include/windows.system.threading.h
+cross/i686-w64-mingw32/mingw/include/windows.system.userprofile.h
+cross/i686-w64-mingw32/mingw/include/windows.ui.composition.h
+cross/i686-w64-mingw32/mingw/include/windows.ui.composition.interop.h
+cross/i686-w64-mingw32/mingw/include/windows.ui.core.h
+cross/i686-w64-mingw32/mingw/include/windows.ui.h
+cross/i686-w64-mingw32/mingw/include/windows.ui.viewmanagement.h
 cross/i686-w64-mingw32/mingw/include/windowscontracts.h
+cross/i686-w64-mingw32/mingw/include/windowsnumerics.h
+cross/i686-w64-mingw32/mingw/include/windowsnumerics.impl.h
 cross/i686-w64-mingw32/mingw/include/windowsx.h
 cross/i686-w64-mingw32/mingw/include/windowsx.h16
 cross/i686-w64-mingw32/mingw/include/winefs.h
