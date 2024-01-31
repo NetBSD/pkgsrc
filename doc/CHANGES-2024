@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.785 2024/01/31 16:43:02 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.786 2024/01/31 16:45:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox115-l10n to 115.7.0 [ryoon 2024-01-31]
 	Updated cross/mipsel-none-elf-binutils to 2.42 [ryoon 2024-01-31]
 	Updated cross/mipsel-none-elf-gcc to 13.2.0 [ryoon 2024-01-31]
+	Updated cross/mingw-w64-i686-binutils to 2.42 [ryoon 2024-01-31]
