@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/01/26 13:48:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/01/31 10:46:04 jperkin Exp $
 
 DISTNAME=	waitress-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
