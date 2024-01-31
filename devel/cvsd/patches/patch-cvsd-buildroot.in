@@ -1,0 +1,31 @@
+$NetBSD: patch-cvsd-buildroot.in,v 1.1 2024/01/31 12:02:23 hauke Exp $
+
+Add PREFIX/{,s}bin to PATH
+
+Not having an /etc/ld.so.conf is not an error (on some platforms)
+
+--- cvsd-buildroot.in.orig	2024-01-31 11:46:17.170421429 +0000
++++ cvsd-buildroot.in
+@@ -35,7 +35,7 @@ set -e
+ set -u
+ 
+ # use hardcoded path to avoid trojans
+-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
++PATH=/bin:/sbin:/usr/bin:/usr/sbin:@prefix@/bin:@prefix@/sbin
+ export PATH
+ 
+ # which binaries to install (use spaces as separator)
+@@ -47,8 +47,11 @@ CONFIGFILE="@CONFIGFILE@"
+ # path to use when looking for extra libraries
+ LIBPATH="/lib /usr/lib /usr/local/lib /usr/X11R6/lib /usr/lib/libc5-compat /lib/libc5-compat /usr/libexec"
+ 
+-# add paths from /etc/ld.so.conf to LIBPATH
+-LIBPATH="$LIBPATH `find /etc/ld.so.conf* -type f | xargs cat | grep '^/'`"
++if [ -f "/etc/ld.so.conf" ]
++then
++    # add paths from /etc/ld.so.conf to LIBPATH
++    LIBPATH="$LIBPATH `find /etc/ld.so.conf* -type f | xargs cat | grep '^/'`"
++fi
+ 
+ # which libraries to install (aside from the libraries needed by
+ # the specified libraries)
