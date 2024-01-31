@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.780 2024/01/31 15:55:54 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.781 2024/01/31 16:13:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/multiskkserv to 20100128nb1 [ryoon 2024-01-31]
 	Updated www/firefox to 122.0 [ryoon 2024-01-31]
 	Updated www/firefox-l10n to 122.0 [ryoon 2024-01-31]
+	Updated lang/openjdk21 to 1.21.0.1.12 [ryoon 2024-01-31]
