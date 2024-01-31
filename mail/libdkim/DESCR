@@ -1,0 +1,7 @@
+libdkim is a portable library that signs and verifies emails using the
+OpenSSL library.
+
+DomainKeys Identified Mail (DKIM) defines a domain-level authentication
+framework for email using public-key cryptography and key server
+technology to permit verification of the source and contents of messages
+by either Mail Transport Agents (MTAs) or Mail User Agents (MUAs).
