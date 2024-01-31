@@ -1,0 +1,67 @@
+$NetBSD: patch-src_Makefile,v 1.1 2024/01/31 19:19:58 schmonz Exp $
+
+Libtoolize.
+
+--- src/Makefile.orig	2008-03-25 18:17:14.000000000 +0000
++++ src/Makefile
+@@ -1,41 +1,35 @@
+ # libdkim makefile for UNIX
+ #
+ 
+-#ifdef LINUX
+-CFLAGS  = -c
+-LFLAGS  = 
+-LIBS    = -lcrypto -lresolv
+-#else
+-CFLAGS  = -c
+-LFLAGS  = 
+-LIBS    = -lcrypto 
+-#endif
+-
+-INCL	=  -I /usr/include/openssl/
++LIBTOOL = libtool --tag=CXX
+ 
+ SRCS = dkim.cpp dns.cpp dkimbase.cpp dkimsign.cpp dkimverify.cpp
+ 
+-OBJS = $(SRCS:.cpp=.o)
++OBJS = $(SRCS:.cpp=.lo)
+ 
+ HDRS = dkim.h dns.h dkimbase.h dkimsign.h dkimverify.h
+ 
+-all: libdkim.a libdkimtest
++all: libdkim.la libdkimtest
++
++libdkim.la: libtool-version-info $(OBJS)
++	$(LIBTOOL) --mode=link g++ $(LDFLAGS) $(OBJS) -version-info `cat libtool-version-info` -rpath $(PREFIX)/lib -o $@
+ 
+-libdkim.a: $(OBJS)
+-	rm -f libdkim.a
+-	ar cr libdkim.a $(OBJS)
+-	ranlib libdkim.a
+-
+-libdkimtest : libdkim.a libdkimtest.o
+-	g++ -olibdkimtest $(LFLAGS) \
+-	       -L . libdkimtest.o $(LIBS) -ldkim
++libdkimtest : libdkim.la libdkimtest.o
++	$(LIBTOOL) --mode=link g++ $(LDFLAGS) -ldkim $(LIBS) -o libdkimtest libdkimtest.o
+ 	
+-libdkimtest.o: libdkimtest.cpp $(HDRS)
++libdkimtest.lo: libdkimtest.cpp $(HDRS)
++	$(LIBTOOL) --mode=compile g++ $(CFLAGS) -c $<
+ 
+-.cpp.o:
+-	g++ $(CFLAGS) -c $<
++libtool-version-info:
++	echo $(VERSION) | awk -F. '{ printf "%d:%d:0", $$1, $$2 }' > $@
++
++.SUFFIXES: .lo
++.cpp.lo:
++	$(LIBTOOL) --mode=compile g++ $(CFLAGS) -c $<
+ 
+ clean:
+ 	rm  *.o libdkim.lib libdkimtest
+ 
+-
++install:
++	$(BSD_INSTALL_DATA) dkim.h $(DESTDIR)$(PREFIX)/include
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) libdkim.la $(DESTDIR)$(PREFIX)/lib
