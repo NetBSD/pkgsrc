@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/01/31 15:17:51 ryoon Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
 PKGNAME=	${DISTNAME:S/-ac//}
+PKGREVISION=	1
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/sina-ht/multiskkserv/
 COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
+DEPENDS=	skk-jisyo-cdb>=20240117:../../inputmethod/skk-jisyo-cdb
 
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOCSDIR}
