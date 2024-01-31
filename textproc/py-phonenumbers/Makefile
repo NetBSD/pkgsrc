@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/01/28 17:39:34 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/01/31 10:48:09 jperkin Exp $
 
 DISTNAME=	phonenumbers-8.13.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	phonenumbers/util.py
 
