@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.71 2023/11/08 09:10:30 nros Exp $
+$NetBSD: distinfo,v 1.72 2024/01/31 21:19:37 ryoon Exp $
 
-BLAKE2s (blender-3.6.4.tar.xz) = ded83757e4ca9dff559dd36b4a59ae0a3d9e95c2f3948b83300f890a91f7dfdb
-SHA512 (blender-3.6.4.tar.xz) = 9121a31147f9f269cb7f64e4297c6a6ec517d37fa449876d1a55b3975562c8a0307730f64725a8e35e96d1e75e06f6f0d95da3d1c7a657c403708e6a8f31115e
-Size (blender-3.6.4.tar.xz) = 70443936 bytes
+BLAKE2s (blender-4.0.2.tar.xz) = ac0e750c18cb548b93aa634eabe5dfe28ff3a1d34fff2574612dd26de0e4f148
+SHA512 (blender-4.0.2.tar.xz) = c37b85d06f5cf8b48cb8c657a9fb6b0ab1325271706fa34039f2993420f7606cd1e2c052173cdea94e9bec2924e7aa4df373e3a0fc1f9c4be336e62211b6bc4b
+Size (blender-4.0.2.tar.xz) = 73281252 bytes
 SHA1 (patch-CMakeLists.txt) = edce950efc7e1c3760e19e9bbe671f4194f6675d
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
-SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
 SHA1 (patch-extern_glog_src_config__netbsd.h) = f379cbcf86bf330d54fbd55cdcb3dbf4b1e7456e
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
 SHA1 (patch-intern_locale_boost__locale__wrapper.cpp) = e743a3f050daa175e8398da12b1de133e3814928
 SHA1 (patch-intern_mikktspace_mikk__float3.hh) = 715fa20ba39d7ad41f32e580189ac4fc2e8b0274
 SHA1 (patch-source_blender_blenkernel_intern_customdata.cc) = 0cb4f03d101f1d200d95c2469c17bb987b4c7570
-SHA1 (patch-source_blender_blenkernel_intern_gpencil__geom.cc) = 1c54b6446744e52e5e9a6ebe48d221086b905f2c
+SHA1 (patch-source_blender_blenkernel_intern_gpencil__geom.cc) = 11bb954bbc0992b92d5913fba4226a10503fed72
 SHA1 (patch-source_blender_blenkernel_intern_mesh__validate.cc) = a21046b4d6fbf6fcec96d9410c725481d9f77a20
 SHA1 (patch-source_blender_blenkernel_intern_multires.cc) = 9edd6713c12b203e6b856d0b2f6d24ae5113d285
 SHA1 (patch-source_blender_blenkernel_intern_object.cc) = fd8cf2ea4f27e08f2e08b53f6d27228d9d770a2f
