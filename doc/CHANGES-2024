@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.787 2024/01/31 17:35:42 adam Exp $
+$NetBSD: CHANGES-2024,v 1.788 2024/01/31 17:58:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1044,3 +1044,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/py-emoji to 2.10.1 [adam 2024-01-31]
 	Updated www/py-django-treebeard to 4.7.1 [adam 2024-01-31]
 	Updated devel/py-py2app to 0.28.7 [adam 2024-01-31]
+	Updated devel/talloc to 2.4.2 [adam 2024-01-31]
+	Updated devel/tevent to 0.16.1 [adam 2024-01-31]
+	Updated databases/tdb to 1.4.10 [adam 2024-01-31]
