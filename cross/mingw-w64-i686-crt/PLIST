@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/09 02:37:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/01/31 21:10:33 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/agtctl_i.c
 cross/i686-w64-mingw32/mingw/include/agtsvr_i.c
 cross/i686-w64-mingw32/mingw/include/cdoex_i.c
@@ -57,6 +57,7 @@ cross/i686-w64-mingw32/mingw/lib/libconnect.a
 cross/i686-w64-mingw32/mingw/lib/libcredui.a
 cross/i686-w64-mingw32/mingw/lib/libcrtdll.a
 cross/i686-w64-mingw32/mingw/lib/libcrypt32.a
+cross/i686-w64-mingw32/mingw/lib/libcryptbase.a
 cross/i686-w64-mingw32/mingw/lib/libcryptnet.a
 cross/i686-w64-mingw32/mingw/lib/libcryptsp.a
 cross/i686-w64-mingw32/mingw/lib/libcryptxml.a
@@ -144,6 +145,7 @@ cross/i686-w64-mingw32/mingw/lib/libdinput.a
 cross/i686-w64-mingw32/mingw/lib/libdinput8.a
 cross/i686-w64-mingw32/mingw/lib/libdismapi.a
 cross/i686-w64-mingw32/mingw/lib/libdlcapi.a
+cross/i686-w64-mingw32/mingw/lib/libdloadhelper.a
 cross/i686-w64-mingw32/mingw/lib/libdmoguids.a
 cross/i686-w64-mingw32/mingw/lib/libdnsapi.a
 cross/i686-w64-mingw32/mingw/lib/libdpapi.a
@@ -222,6 +224,7 @@ cross/i686-w64-mingw32/mingw/lib/libmfreadwrite.a
 cross/i686-w64-mingw32/mingw/lib/libmfsensorgroup.a
 cross/i686-w64-mingw32/mingw/lib/libmfuuid.a
 cross/i686-w64-mingw32/mingw/lib/libmgmtapi.a
+cross/i686-w64-mingw32/mingw/lib/libmi.a
 cross/i686-w64-mingw32/mingw/lib/libmincore.a
 cross/i686-w64-mingw32/mingw/lib/libmingw32.a
 cross/i686-w64-mingw32/mingw/lib/libmingwex.a
@@ -262,6 +265,8 @@ cross/i686-w64-mingw32/mingw/lib/libmsvcrt20.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcrt40.a
 cross/i686-w64-mingw32/mingw/lib/libmsvfw32.a
 cross/i686-w64-mingw32/mingw/lib/libmswsock.a
+cross/i686-w64-mingw32/mingw/lib/libmsxml2.a
+cross/i686-w64-mingw32/mingw/lib/libmsxml6.a
 cross/i686-w64-mingw32/mingw/lib/libncrypt.a
 cross/i686-w64-mingw32/mingw/lib/libnddeapi.a
 cross/i686-w64-mingw32/mingw/lib/libndfapi.a
@@ -330,6 +335,8 @@ cross/i686-w64-mingw32/mingw/lib/libscrnsavw.a
 cross/i686-w64-mingw32/mingw/lib/libscsiport.a
 cross/i686-w64-mingw32/mingw/lib/libsecur32.a
 cross/i686-w64-mingw32/mingw/lib/libsecurity.a
+cross/i686-w64-mingw32/mingw/lib/libsens.a
+cross/i686-w64-mingw32/mingw/lib/libsensapi.a
 cross/i686-w64-mingw32/mingw/lib/libsensorsapi.a
 cross/i686-w64-mingw32/mingw/lib/libsetupapi.a
 cross/i686-w64-mingw32/mingw/lib/libshcore.a
@@ -443,4 +450,5 @@ cross/i686-w64-mingw32/mingw/lib/libxinput1_2.a
 cross/i686-w64-mingw32/mingw/lib/libxinput1_3.a
 cross/i686-w64-mingw32/mingw/lib/libxinput1_4.a
 cross/i686-w64-mingw32/mingw/lib/libxinput9_1_0.a
+cross/i686-w64-mingw32/mingw/lib/libxmllite.a
 cross/i686-w64-mingw32/mingw/lib/txtmode.o
