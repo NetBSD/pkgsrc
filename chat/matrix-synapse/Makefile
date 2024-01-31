@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/12/14 16:59:28 gdt Exp $
+# $NetBSD: Makefile,v 1.91 2024/01/31 00:05:14 adam Exp $
 
 DISTNAME=	matrix-synapse-1.98.0
 CATEGORIES=	chat
@@ -14,46 +14,43 @@ LICENSE=	apache-2.0
 
 # Build tools:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
 
 # Dependencies as defined by synapse's build system (in theory):
-# \todo Go over poetry.lock
-DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1<2:../../devel/py-pydantic
-DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
+DEPENDS+=	${PYPKGPREFIX}-attrs>=21.1.1:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.7:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.7:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-ijson>=3.1.4:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
-DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-ijson>=3.0:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
-DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.2.0:../../chat/py-matrix-common
+DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.3.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-nacl>=1.2.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.2.0:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.4.0:../../net/py-prometheus_client
-DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.7.4<3:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
-# NB: synapse needs features missing in NetBSD base system sqlite, and probably
-# missing in other builds.
+DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.2:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
+# NB: synapse needs features missing in NetBSD base system sqlite, and probably
+# missing in other builds.
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_CC_FEATURES=	c99
 
@@ -112,12 +109,12 @@ post-install:
 # \todo Grok upstream's new test scheme and port to it.
 # As of 1.98.0 all tests fail, most of them failing to import
 # synapse.synapse_rust.
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
+# Quick fix before running tests: rm -r ${WRKSRC}/synapse
 
 # New upstream releases typically add/change cargo depends.
+.PHONY: update-cargo
 update-cargo:
-	make; make print-cargo-depends > cargo-depends.mk && make distinfo
+	make extract && make print-cargo-depends > cargo-depends.mk && make distinfo
 
 # guide says "Prepend .include "cargo-depends.mk" to any other .includes."
 # To start:
@@ -129,6 +126,4 @@ update-cargo:
 .include "../../lang/python/wheel.mk"
 RUST_REQ=	1.51.0
 .include "../../lang/rust/cargo.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
