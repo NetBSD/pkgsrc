@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/01/31 18:17:21 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-autogroup-/}
-PKGREVISION=	1
 COMMENT=	Hide specific attributes unless explicitely requested for OpenLDAP
 
 CONFLICTS+=	openldap<2.3.23nb1
