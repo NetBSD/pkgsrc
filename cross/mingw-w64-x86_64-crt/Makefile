@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.15 2024/01/31 21:10:33 ryoon Exp $
 
 .include "../../cross/mingw-w64-x86_64-crt/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/mingw-w64-v/mingw-w64-x86_64-crt-/}
-PKGREVISION=		1
 COMMENT=		Mingw-w64 C runtime for win64 cross-development
 
 TOOL_DEPENDS+=		mingw-w64-x86_64-gcc-bootstrap-[0-9]*:../../cross/mingw-w64-x86_64-gcc-bootstrap

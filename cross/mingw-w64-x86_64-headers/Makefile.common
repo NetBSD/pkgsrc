@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.10 2022/10/09 02:37:04 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2024/01/31 21:10:33 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-headers/Makefile
 # used by cross/mingw-w64-i686-headers/Makefile
 # used by cross/mingw-w64-i686-headers/Makefile.common
 # used by cross/mingw-w64-x86_64-headers/Makefile.common
 
-DISTNAME=		mingw-w64-v10.0.0
+DISTNAME=		mingw-w64-v11.0.1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2
