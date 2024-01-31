@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.793 2024/01/31 21:04:42 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.794 2024/01/31 21:05:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/sptui to 0.1.2 [pin 2024-01-31]
 	Updated emulators/mame to 0.262 [wiz 2024-01-31]
 	Updated cross/mingw-w64-i686-gcc-bootstrap to 13.2.0 [ryoon 2024-01-31]
+	Updated cross/mingw-w64-i686-gcc to 13.2.0 [ryoon 2024-01-31]
