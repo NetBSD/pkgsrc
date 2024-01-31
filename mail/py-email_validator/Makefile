@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/05/05 10:07:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/01/31 00:02:03 adam Exp $
 
-DISTNAME=	email_validator-1.1.3
+DISTNAME=	email_validator-2.1.0.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/email-validator/}
 
@@ -11,18 +10,18 @@ HOMEPAGE=	https://github.com/JoshData/python-email-validator
 COMMENT=	Robust email syntax and deliverability validation library
 LICENSE=	cc0-1.0-universal
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} email_validator email_validator-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
