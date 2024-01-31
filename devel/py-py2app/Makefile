@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/01/17 18:56:43 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/01/31 17:35:13 adam Exp $
 
-DISTNAME=	py2app-0.28.6
+DISTNAME=	py2app-0.28.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py2app/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.19.5:../../devel/py-modulegraph
 DEPENDS+=	${PYPKGPREFIX}-macholib>=1.16.2:../../devel/py-macholib
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyobjc-core-[0-9]*:../../devel/py-pyobjc-core
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
