@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2024/01/30 14:41:29 taca Exp $
+$NetBSD: distinfo,v 1.61 2024/01/31 09:38:13 taca Exp $
 
 BLAKE2s (httpd-2.4.58.tar.bz2) = 4f2e5e35244b2fe55ddda508b3c2c8bde95de56c60a7c2e53a0972c3362f1b30
 SHA512 (httpd-2.4.58.tar.bz2) = d6e73bf413a507ec16b621ff635e178206207a9e9810ce3944b3dc98d39cde8f225307110167fc9da5822175796c8cb66f98be5b9f0d8b76dcd83a401d39b2c1
@@ -14,5 +14,5 @@ SHA1 (patch-am) = acdf7198ae8b4353cfc70c8015a0f09de036b777
 SHA1 (patch-aw) = 43cd64df886853ef7b75b91ed20183f329fcc9df
 SHA1 (patch-configure) = 6a54f65b4ea0ca92ed707d53921ca1d3cd454031
 SHA1 (patch-include_ap__config.h) = 1d056e2d4db80ec97aaf755b6dd6aff69ed2cd96
-SHA1 (patch-modules_filters_mod__xml2enc.c) = 32771c317350c6f4090f45ba9857730112997de1
+SHA1 (patch-modules_filters_mod__xml2enc.c) = a191e1e6515d5cccd17606f94e15dbfacd92bb7a
 SHA1 (patch-modules_filters_mod_substitute.c) = d47ee06e70942ab522acf119eb2c4b313aed9bbd
