@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cvsd.sh,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
+# $NetBSD: cvsd.sh,v 1.2 2024/01/31 13:38:46 hauke Exp $
 #
 # PROVIDE: cvsd
 # REQUIRE: DAEMON
@@ -13,7 +13,7 @@ fi
 name="cvsd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-required_files="@PREFIX@/etc/${name}.conf"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
 pidfile=$(awk '/^#/ {next}; /PidFile/ {print $2}' ${required_files})
 # pidfile=/var/run/cvsd.pid
 command_args=""              
