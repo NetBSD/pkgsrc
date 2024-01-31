@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/20 14:32:33 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/01/31 16:42:01 ryoon Exp $
 cross-mipsel-none-elf/bin/mipsel-none-elf-addr2line
 cross-mipsel-none-elf/bin/mipsel-none-elf-ar
 cross-mipsel-none-elf/bin/mipsel-none-elf-as
@@ -17,7 +17,11 @@ cross-mipsel-none-elf/bin/mipsel-none-elf-strip
 cross-mipsel-none-elf/info/as.info
 cross-mipsel-none-elf/info/bfd.info
 cross-mipsel-none-elf/info/binutils.info
+cross-mipsel-none-elf/info/ctf-spec.info
 cross-mipsel-none-elf/info/ld.info
+cross-mipsel-none-elf/info/ldint.info
+cross-mipsel-none-elf/info/sframe-spec.info
+cross-mipsel-none-elf/lib/bfd-plugins/libdep.so
 cross-mipsel-none-elf/man/man1/mipsel-none-elf-addr2line.1
 cross-mipsel-none-elf/man/man1/mipsel-none-elf-ar.1
 cross-mipsel-none-elf/man/man1/mipsel-none-elf-as.1
@@ -67,3 +71,4 @@ cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xswe
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xu
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xw
 cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/elf32elmip.xwe
+cross-mipsel-none-elf/mipsel-none-elf/lib/ldscripts/stamp
