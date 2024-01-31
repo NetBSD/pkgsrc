@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2024/01/31 19:19:58 schmonz Exp $
+
+BLAKE2s (libdkim-1.0.21.zip) = 4e8dbbac0b6347259ea9c0067abfbd6dda308e3896ef812b0741a0d5ce76e5ad
+SHA512 (libdkim-1.0.21.zip) = 3996c64398151dc9c07d357e8f3ac9b94e3c8d06ce5d83ebbe546416f361349d869b0b73216f28d0b732319731f31e61afd9eab0f540471760b944a90130a094
+Size (libdkim-1.0.21.zip) = 55049 bytes
+SHA1 (patch-src_Makefile) = 732f55924ef2d7cbd3a371493fe20fdee238de26
+SHA1 (patch-src_dkimsign.cpp) = cd2c52055bad9b2057186418af3a2446bb55eb51
+SHA1 (patch-src_dkimsign.h) = bd2754bf193a3b2118a8d473eb703aa908bab872
+SHA1 (patch-src_dkimverify.cpp) = 8c69a657ff1cfd5d65743fee9dd1cd619bbf6e16
+SHA1 (patch-src_dkimverify.h) = 583cca18d7cdeac52e8c9b99e6913d57b6cdde47
