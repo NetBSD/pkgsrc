@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.62 2023/12/14 16:50:15 gdt Exp $
+$NetBSD: distinfo,v 1.63 2024/01/31 00:05:14 adam Exp $
 
 BLAKE2s (aho-corasick-1.0.2.crate) = 938a0013ce0c7579d22e13d6fc33e444b32bcf476171745dff52d75a117d608b
 SHA512 (aho-corasick-1.0.2.crate) = 5c75451f96fbbd670e6af0e1f54df2bdb57259dfe6898495ac46a5b2fc04f316a4698fd5cfd4ec31a94c298661937a8de08ce97cab3890fb3c015e4a2a67bb7b
@@ -171,5 +171,4 @@ Size (windows_x86_64_gnu-0.36.1.crate) = 790934 bytes
 BLAKE2s (windows_x86_64_msvc-0.36.1.crate) = e48ba38c24d831da6c6db4bb434ee7df10185932b0ef6136ae605062f25b6d0d
 SHA512 (windows_x86_64_msvc-0.36.1.crate) = 89c22ed51a74f531662d80ae0fa5e0215728db1e6caf3c13eaeba95a93548b43c00b8474f52553ac866ac83c203b6c22dc44fbc870e882a4c9c97ba54b87c631
 Size (windows_x86_64_msvc-0.36.1.crate) = 661999 bytes
-SHA1 (patch-pyproject.toml) = 3144408c089de7fee47a7babccca382d1baf9bf2
 SHA1 (patch-synapse_handlers_room.py) = 1bb7740b5a8385f5d0ca9c1e8c38d41a8e594473
