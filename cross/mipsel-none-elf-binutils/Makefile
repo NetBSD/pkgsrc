@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/06/20 14:32:33 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/01/31 16:42:01 ryoon Exp $
 
-DISTNAME=	binutils-2.32
+DISTNAME=	binutils-2.42
 PKGNAME=	cross-mipsel-none-elf-${DISTNAME}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
@@ -11,10 +11,14 @@ HOMEPAGE=	# empty
 COMMENT=	Cross binutils for bare metal 32-bit little-endian ELF
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
+USE_LANGUAGES+=		c99 c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		bison gmake makeinfo
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
+
+TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
+_TOOLS_USE_PKGSRC.makeinfo=	yes
 
 MIPSELELF_PREFIX=	${PREFIX}/cross-mipsel-none-elf
 
@@ -25,6 +29,7 @@ GNU_CONFIGURE_PREFIX=	${MIPSELELF_PREFIX}
 
 CONFIGURE_ARGS+=	--disable-werror --target=mipsel-none-elf
 CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-deterministic-archives
 INFO_FILES=		yes
 
 pre-configure:
