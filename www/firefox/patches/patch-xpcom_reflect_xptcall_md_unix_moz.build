@@ -1,17 +1,17 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.14 2023/01/24 17:57:09 nia Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.15 2024/01/31 15:54:52 ryoon Exp $
 
 Make NetBSD/sparc64 use the same xptcall bindings as all other sparc64 ports
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=1505360
 
---- xpcom/reflect/xptcall/md/unix/moz.build.orig	2020-12-03 23:14:25.000000000 +0000
+--- xpcom/reflect/xptcall/md/unix/moz.build.orig	2024-01-12 13:20:20.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/moz.build
-@@ -225,7 +225,7 @@ if CONFIG["OS_ARCH"] == "OpenBSD" and CO
+@@ -221,7 +221,7 @@ if CONFIG["OS_ARCH"] == "OpenBSD" and CO
      ]
  
  if (
 -    CONFIG["OS_ARCH"] in ("OpenBSD", "FreeBSD", "Linux", "SunOS")
-+    CONFIG["OS_ARCH"] in ("OpenBSD", "FreeBSD", "NetBSD", "Linux", "SunOS")
-     and CONFIG["CPU_ARCH"] == "sparc64"
++    CONFIG["OS_ARCH"] in ("OpenBSD", "FreeBSD", "Linux", "SunOS", "NetBSD")
+     and CONFIG["TARGET_CPU"] == "sparc64"
  ):
      SOURCES += [
