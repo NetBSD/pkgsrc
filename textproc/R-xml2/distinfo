@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/01/31 21:16:04 mef Exp $
 
-BLAKE2s (R/xml2_1.3.2.tar.gz) = 047368b73b2ba414af5f97c44dc231e11ad411617b23502667084eb7ad8c8b2f
-SHA512 (R/xml2_1.3.2.tar.gz) = f74ceed824c71870bdf9c9a77818a4abf508d084fca49f570c1028fc74b90a23e59e4cab37649138536341e94b06d01d1e3be6341d8de017e10951e58aea174b
-Size (R/xml2_1.3.2.tar.gz) = 271876 bytes
+BLAKE2s (R/xml2_1.3.6.tar.gz) = 43251c0661c9222bde6c66f1ea1b62eb31ebf9cecdcd3a9fb5d16c86ff75c7ec
+SHA512 (R/xml2_1.3.6.tar.gz) = 07da83a92c18a3dd61fc14bc9219b7f0352cc2960ee4f20418683d9248442d1f77ceb1cea51f366ca83ba501caf8741faac7ca29b132cf4cf0153b166cc815aa
+Size (R/xml2_1.3.6.tar.gz) = 294715 bytes
