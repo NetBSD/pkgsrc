@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/09 02:37:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/01/31 21:04:14 ryoon Exp $
 cross/i686-w64-mingw32-winpthreads/bin/i686-w64-mingw32-c++
 cross/i686-w64-mingw32-winpthreads/bin/i686-w64-mingw32-cpp
 cross/i686-w64-mingw32-winpthreads/bin/i686-w64-mingw32-g++
@@ -42,6 +42,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bi
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/char_traits.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/charconv.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/chrono.h
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/chrono_io.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/codecvt.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/concept_check.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/cow_string.h
@@ -84,6 +85,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bi
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/localefwd.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/mask_array.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/max_size_type.h
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/memory_resource.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/memoryfwd.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/mofunc_impl.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/move.h
@@ -120,6 +122,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bi
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_executor.tcc
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_scanner.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_scanner.tcc
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/requires_hosted.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/semaphore_base.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/shared_ptr.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/bits/shared_ptr_atomic.h
@@ -275,6 +278,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/ex
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/bits/string_view.tcc
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/buffer
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/chrono
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/contract
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/deque
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/executor
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/filesystem
@@ -295,12 +299,14 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/ex
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/random
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/ratio
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/regex
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/scope
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/set
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/simd
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/socket
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/source_location
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/string
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/string_view
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/synchronized_value
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/system_error
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/timer
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/experimental/tuple
@@ -597,6 +603,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/ex
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/ext/vstring_util.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/fenv.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/filesystem
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/format
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/forward_list
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/fstream
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/functional
@@ -727,6 +734,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/st
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stacktrace
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stdatomic.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stdexcept
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stdfloat
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stdlib.h
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/stop_token
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/include/c++/${PKGVERSION}/streambuf
@@ -832,6 +840,7 @@ cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libssp_nonshared.la
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libstdc++-6.dll
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libstdc++.dll.a-gdb.py
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libstdc++.la
+cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libstdc++exp.la
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libstdc++fs.la
 cross/i686-w64-mingw32-winpthreads/i686-w64-mingw32/lib/libsupc++.la
 cross/i686-w64-mingw32-winpthreads/info/libquadmath.info
@@ -842,12 +851,12 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/finclu
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/finclude/ieee_exceptions.mod
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/finclude/ieee_features.mod
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/README
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/limits.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include-fixed/syslimits.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/ISO_Fortran_binding.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/adxintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/ammintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxbf16intrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxcomplexintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxfp16intrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxint8intrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/amxtileintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx2intrin.h
@@ -879,7 +888,10 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/includ
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512vp2intersectvlintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqvlintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxifmaintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxneconvertintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxvnniint8intrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/avxvnniintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/bmi2intrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/bmiintrin.h
@@ -890,6 +902,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/includ
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/clflushoptintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/clwbintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/clzerointrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/cmpccxaddintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/cpuid.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/cross-stdarg.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/emmintrin.h
@@ -906,6 +919,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/includ
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/immintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/iso646.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/keylockerintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/limits.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/lwpintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/lzcntintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/mm3dnow.h
@@ -929,9 +943,11 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/includ
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/pkuintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/pmmintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/popcntintrin.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/prfchiintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/prfchwintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/quadmath.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/quadmath_weak.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/raointintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/rdseedintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/rtmintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/serializeintrin.h
@@ -951,6 +967,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/includ
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/stdint-gcc.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/stdint.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/stdnoreturn.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/syslimits.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tbmintrin.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tgmath.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/include/tmmintrin.h
@@ -1032,7 +1049,6 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/common/config/i386/i386-cpuinfo.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/conditions.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/dbxcoff.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/bsd.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/cygming.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/gas.h
@@ -1056,6 +1072,8 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/coretypes.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/coroutine-builtins.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/coverage.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cp/contracts.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-trait.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-tree.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-tree.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
@@ -1071,13 +1089,13 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/data-streamer.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dbgcnt.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dbgcnt.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dbxout.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dce.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ddg.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/debug.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/defaults.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/df.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/dfp.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-client-data-hooks.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-color.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-core.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-event-id.h
@@ -1145,10 +1163,11 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-edge.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-fold.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-gori.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-infer.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-op.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-path.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-trace.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-access.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa.h
@@ -1165,7 +1184,6 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/graphite.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/graphviz.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gsstruct.def
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gstab.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gsyms.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gsyslimits.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/gtm-builtins.def
@@ -1226,6 +1244,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/limitx.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/limity.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/line-map.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/logical-location.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/loop-unroll.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/lower-subreg.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/lra-int.h
@@ -1233,8 +1252,10 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/lto-compress.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/lto-section-names.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/lto-streamer.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/m2/m2-tree.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/machmode.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/machmode.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/make-unique.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/md5.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/mem-stats-traits.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/mem-stats.h
@@ -1262,6 +1283,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/optinfo.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/options.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/opts-diagnostic.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/opts-jobserver.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/opts.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ordered-hash-map.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/output.h
@@ -1329,7 +1351,6 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/sreal.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ssa-iterators.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/ssa.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/stab.def
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/statistics.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/stmt.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/stor-layout.h
@@ -1374,6 +1395,7 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-inline.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-into-ssa.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-iterator.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-logical-location.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-nested.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-object-size.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/tree-outof-ssa.h
@@ -1427,7 +1449,8 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-pointer-equiv.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-prof.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-query.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range-equiv.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range-pretty-print.h
+cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range-storage.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-range.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/value-relation.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/varasm.h
@@ -1442,7 +1465,6 @@ cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/wide-int-print.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/wide-int.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/xcoff.h
-cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/include/xcoffout.h
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/libcc1plugin.la
 cross/i686-w64-mingw32-winpthreads/lib/gcc/i686-w64-mingw32/${PKGVERSION}/plugin/libcp1plugin.la
 cross/i686-w64-mingw32-winpthreads/lib/libcc1.la
@@ -1476,3 +1498,4 @@ cross/i686-w64-mingw32-winpthreads/share/gcc-${PKGVERSION}/python/libstdcxx/__in
 cross/i686-w64-mingw32-winpthreads/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 cross/i686-w64-mingw32-winpthreads/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 cross/i686-w64-mingw32-winpthreads/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
+@pkgdir cross/i686-w64-mingw32-winpthreads/include
