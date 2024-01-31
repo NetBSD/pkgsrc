@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2023/10/11 07:16:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.97 2024/01/31 07:21:08 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -17,6 +17,7 @@ lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
 man/man1/curl.1
+man/man1/mk-ca-bundle.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
 man/man3/CURLINFO_APPCONNECT_TIME_T.3
@@ -58,6 +59,7 @@ man/man3/CURLINFO_PROTOCOL.3
 man/man3/CURLINFO_PROXYAUTH_AVAIL.3
 man/man3/CURLINFO_PROXY_ERROR.3
 man/man3/CURLINFO_PROXY_SSL_VERIFYRESULT.3
+man/man3/CURLINFO_QUEUE_TIME_T.3
 man/man3/CURLINFO_REDIRECT_COUNT.3
 man/man3/CURLINFO_REDIRECT_TIME.3
 man/man3/CURLINFO_REDIRECT_TIME_T.3
@@ -325,6 +327,7 @@ man/man3/CURLOPT_SASL_IR.3
 man/man3/CURLOPT_SEEKDATA.3
 man/man3/CURLOPT_SEEKFUNCTION.3
 man/man3/CURLOPT_SERVER_RESPONSE_TIMEOUT.3
+man/man3/CURLOPT_SERVER_RESPONSE_TIMEOUT_MS.3
 man/man3/CURLOPT_SERVICE_NAME.3
 man/man3/CURLOPT_SHARE.3
 man/man3/CURLOPT_SOCKOPTDATA.3
