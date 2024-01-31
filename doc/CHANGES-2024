@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.774 2024/01/31 00:05:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.775 2024/01/31 07:21:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-tifffile to 2024.1.30 [adam 2024-01-30]
 	Updated mail/py-email_validator to 2.1.0.post1 [adam 2024-01-31]
 	Updated devel/py-pydantic to 2.6.0 [adam 2024-01-31]
+	Updated www/curl to 8.6.0 [wiz 2024-01-31]
