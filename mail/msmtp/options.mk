@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2018/09/19 09:26:45 leot Exp $
+# $NetBSD: options.mk,v 1.17 2024/01/31 15:31:27 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 
@@ -57,15 +57,15 @@ CONFIGURE_ARGS+=	--without-libsecret
 ### Install additional scripts
 ###
 .if !empty(PKG_OPTIONS:Mscripts)
-CHECK_INTERPRETER_SKIP+=	share/msmtp/find_alias/find_alias_for_msmtp.sh \
-				share/msmtp/msmtpq/msmtp-queue \
-				share/msmtp/msmtpq/msmtpq \
-				share/msmtp/msmtpqueue/msmtp-enqueue.sh \
-				share/msmtp/msmtpqueue/msmtp-listqueue.sh \
-				share/msmtp/msmtpqueue/msmtp-runqueue.sh \
-				share/msmtp/set_sendmail/set_sendmail.sh
+REPLACE_BASH+=	scripts/find_alias/find_alias_for_msmtp.sh
+REPLACE_BASH+=	scripts/msmtpq/msmtp-queue
+REPLACE_SH+=	scripts/msmtpq/msmtpq
+REPLACE_SH+=	scripts/msmtpqueue/msmtp-enqueue.sh
+REPLACE_SH+=	scripts/msmtpqueue/msmtp-listqueue.sh
+REPLACE_SH+=	scripts/msmtpqueue/msmtp-runqueue.sh
+REPLACE_BASH+=	scripts/set_sendmail/set_sendmail.sh
 PLIST.scripts=		yes
-USE_TOOLS+=		pax
+USE_TOOLS+=		bash:run pax
 INSTALLATION_DIRS+=	share/msmtp
 install-msmtp-scripts:
 	cd ${WRKSRC}/scripts && \
