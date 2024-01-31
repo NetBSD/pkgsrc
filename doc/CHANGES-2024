@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.802 2024/01/31 21:11:59 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.803 2024/01/31 21:12:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1064,3 +1064,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cross/mingw-w64-i686-winpthreads to 11.0.1 [ryoon 2024-01-31]
 	Updated cross/mingw-w64-x86_64-crt to 11.0.1 [ryoon 2024-01-31]
 	Updated cross/mingw-w64-x86_64-headers to 11.0.1 [ryoon 2024-01-31]
+	Updated cross/mingw-w64-x86_64-winpthreads to 11.0.1 [ryoon 2024-01-31]
