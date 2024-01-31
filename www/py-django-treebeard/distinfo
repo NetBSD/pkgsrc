@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/08/30 14:39:23 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/01/31 17:32:06 adam Exp $
 
-BLAKE2s (django-treebeard-4.7.tar.gz) = 8444476642d02e526072321d222c3ed23f7392d58384d3af8d35475a61baf7cf
-SHA512 (django-treebeard-4.7.tar.gz) = e4f51cbe212ab26682ee8c34058aebaf8e1ea3c657a28d905b96523e336d76bfb6344d37aba66c8270a86b2ea97c5385afaa3aa9ca18954d787b4682c655810c
-Size (django-treebeard-4.7.tar.gz) = 294303 bytes
+BLAKE2s (django-treebeard-4.7.1.tar.gz) = 73bb019ac97ba01abdcd0ecf599098255bda15efa4b5ac25a9012e2be64889d5
+SHA512 (django-treebeard-4.7.1.tar.gz) = 8618ceb46da7a71fba5e73314d9b7237e9ef57854e3db9725898e5bf215fee420ceb863486872385119e585025b4380bf145536163d7dbabc2ec21bc5004de0b
+Size (django-treebeard-4.7.1.tar.gz) = 294139 bytes
