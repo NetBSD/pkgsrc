@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/12/26 09:11:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/31 16:26:16 ryoon Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
@@ -10,7 +10,7 @@ COMMENT=	Python binding of syntactic parsing library
 
 DEPENDS+=	link-grammar-[0-9]*:../../textproc/link-grammar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_DEPMETHOD.python=	full
 
