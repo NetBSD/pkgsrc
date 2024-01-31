@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2023/12/09 13:02:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.81 2024/01/31 21:00:04 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -168,6 +168,7 @@ share/mame/hash/bingobear.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bkrankp_cart.xml
 share/mame/hash/bml3_flop.xml
+share/mame/hash/brother_pn.xml
 share/mame/hash/bungo_flop.xml
 share/mame/hash/buzztime_cart.xml
 share/mame/hash/bw12.xml
@@ -215,6 +216,7 @@ share/mame/hash/copera.xml
 share/mame/hash/cpc_cass.xml
 share/mame/hash/cpc_flop.xml
 share/mame/hash/crvision.xml
+share/mame/hash/ctvboy.xml
 share/mame/hash/cx3000tc.xml
 share/mame/hash/cz1_cart.xml
 share/mame/hash/dai_cass.xml
@@ -309,6 +311,7 @@ share/mame/hash/gtfore.xml
 share/mame/hash/guab.xml
 share/mame/hash/gx4000.xml
 share/mame/hash/h21.xml
+share/mame/hash/hikara.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp85_rom.xml
 share/mame/hash/hp86_rom.xml
@@ -616,6 +619,7 @@ share/mame/hash/sc3000_cass.xml
 share/mame/hash/scv.xml
 share/mame/hash/sdk85.xml
 share/mame/hash/sega_beena_cart.xml
+share/mame/hash/segaai.xml
 share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
@@ -664,6 +668,7 @@ share/mame/hash/stv.xml
 share/mame/hash/super6.xml
 share/mame/hash/super80_cass.xml
 share/mame/hash/super80_flop.xml
+share/mame/hash/super_tv_pc_cart.xml
 share/mame/hash/superpet_flop.xml
 share/mame/hash/supracan.xml
 share/mame/hash/sv8000.xml
@@ -710,6 +715,7 @@ share/mame/hash/tvc_cart.xml
 share/mame/hash/tvc_cass.xml
 share/mame/hash/tvc_flop.xml
 share/mame/hash/tvgogo.xml
+share/mame/hash/tvochken.xml
 share/mame/hash/tx0_ptp.xml
 share/mame/hash/u110_card.xml
 share/mame/hash/unichamp.xml
