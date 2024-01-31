@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/28 21:27:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/01/31 10:49:53 jperkin Exp $
 
 DISTNAME=	keyrings.alt-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-keyring>=20:../../security/py-keyring
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
