@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/09 02:37:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/01/31 21:04:14 ryoon Exp $
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-c++
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-cpp
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-g++
@@ -17,12 +17,12 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/finclude/ieee_
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/finclude/ieee_exceptions.mod
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/finclude/ieee_features.mod
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include-fixed/README
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include-fixed/limits.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include-fixed/syslimits.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/ISO_Fortran_binding.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/adxintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/ammintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/amxbf16intrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/amxcomplexintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/amxfp16intrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/amxint8intrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/amxtileintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avx2intrin.h
@@ -54,7 +54,10 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avx512
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avx512vp2intersectvlintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avx512vpopcntdqvlintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avxifmaintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avxintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avxneconvertintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avxvnniint8intrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/avxvnniintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/bmi2intrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/bmiintrin.h
@@ -65,6 +68,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/cldemo
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/clflushoptintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/clwbintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/clzerointrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/cmpccxaddintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/cpuid.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/cross-stdarg.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/emmintrin.h
@@ -81,6 +85,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/ia32in
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/immintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/iso646.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/keylockerintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/limits.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/lwpintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/lzcntintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/mm3dnow.h
@@ -104,9 +109,11 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/pconfi
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/pkuintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/pmmintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/popcntintrin.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/prfchiintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/prfchwintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/quadmath.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/quadmath_weak.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/raointintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/rdseedintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/rtmintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/serializeintrin.h
@@ -126,6 +133,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/stdfix
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/stdint-gcc.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/stdint.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/stdnoreturn.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/syslimits.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/tbmintrin.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/tgmath.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/include/tmmintrin.h
@@ -207,7 +215,6 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/common/config/i386/i386-cpuinfo.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/conditions.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/dbxcoff.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/biarch64.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/bsd.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/config/i386/cygming.h
@@ -231,6 +238,8 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/coretypes.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/coroutine-builtins.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/coverage.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/cp/contracts.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-trait.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-tree.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/cp/cp-tree.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
@@ -246,13 +255,13 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/data-streamer.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/dbgcnt.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/dbgcnt.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/dbxout.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/dce.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/ddg.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/debug.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/defaults.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/df.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/dfp.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-client-data-hooks.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-color.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-core.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/diagnostic-event-id.h
@@ -320,10 +329,11 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-edge.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-fold.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-gori.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-infer.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-op.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-path.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range-trace.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-range.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-access.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gimple-ssa.h
@@ -340,7 +350,6 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphite.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/graphviz.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gsstruct.def
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gstab.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gsyms.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gsyslimits.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/gtm-builtins.def
@@ -401,6 +410,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/limitx.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/limity.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/line-map.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/logical-location.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/loop-unroll.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/lower-subreg.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/lra-int.h
@@ -408,8 +418,10 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/lto-compress.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/lto-section-names.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/lto-streamer.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/m2/m2-tree.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/machmode.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/machmode.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/make-unique.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/md5.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/mem-stats-traits.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/mem-stats.h
@@ -437,6 +449,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/optinfo.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/options.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/opts-diagnostic.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/opts-jobserver.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/opts.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/ordered-hash-map.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/output.h
@@ -504,7 +517,6 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/sreal.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/ssa-iterators.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/ssa.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/stab.def
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/statistics.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/stmt.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/stor-layout.h
@@ -549,6 +561,7 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-inline.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-into-ssa.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-iterator.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-logical-location.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-nested.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-object-size.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/tree-outof-ssa.h
@@ -602,7 +615,8 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-pointer-equiv.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-prof.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-query.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-range-equiv.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-range-pretty-print.h
+cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-range-storage.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-range.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/value-relation.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/varasm.h
@@ -617,7 +631,6 @@ cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/wide-int-print.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/wide-int.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/xcoff.h
-cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/include/xcoffout.h
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/libcc1plugin.la
 cross/x86_64-w64-mingw32/lib/gcc/x86_64-w64-mingw32/${PKGVERSION}/plugin/libcp1plugin.la
 cross/x86_64-w64-mingw32/lib/libcc1.la
@@ -684,6 +697,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/c++0x
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/char_traits.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/charconv.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/chrono.h
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/chrono_io.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/codecvt.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/concept_check.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/cow_string.h
@@ -726,6 +740,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/local
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/localefwd.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/mask_array.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/max_size_type.h
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/memory_resource.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/memoryfwd.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/mofunc_impl.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/move.h
@@ -762,6 +777,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/regex
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_executor.tcc
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_scanner.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/regex_scanner.tcc
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/requires_hosted.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/semaphore_base.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/shared_ptr.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/bits/shared_ptr_atomic.h
@@ -917,6 +933,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experiment
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/bits/string_view.tcc
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/buffer
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/chrono
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/contract
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/deque
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/executor
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/filesystem
@@ -937,12 +954,14 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experiment
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/random
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/ratio
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/regex
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/scope
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/set
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/simd
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/socket
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/source_location
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/string
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/string_view
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/synchronized_value
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/system_error
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/timer
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/experimental/tuple
@@ -1239,6 +1258,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/ext/vstrin
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/ext/vstring_util.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/fenv.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/filesystem
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/format
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/forward_list
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/fstream
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/functional
@@ -1346,6 +1366,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stack
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stacktrace
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stdatomic.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stdexcept
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stdfloat
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stdlib.h
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/stop_token
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/include/c++/${PKGVERSION}/streambuf
@@ -1474,5 +1495,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libssp_nonshared.la
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++-6.dll
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a-gdb.py
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.la
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++exp.la
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++fs.la
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libsupc++.la
+@pkgdir cross/x86_64-w64-mingw32/include
