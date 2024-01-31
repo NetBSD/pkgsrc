@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.791 2024/01/31 20:16:33 pin Exp $
+$NetBSD: CHANGES-2024,v 1.792 2024/01/31 21:00:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1052,3 +1052,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/lmdb to 0.9.32 [adam 2024-01-31]
 	Added mail/libdkim version 1.0.21 [schmonz 2024-01-31]
 	Updated audio/sptui to 0.1.2 [pin 2024-01-31]
+	Updated emulators/mame to 0.262 [wiz 2024-01-31]
