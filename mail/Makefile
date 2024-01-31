@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2024/01/29 15:54:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.639 2024/01/31 19:20:01 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -137,6 +137,7 @@ SUBDIR+=	kmbox
 SUBDIR+=	kmime
 SUBDIR+=	ksmtp
 SUBDIR+=	ktnef
+SUBDIR+=	libdkim
 SUBDIR+=	libesmtp
 SUBDIR+=	libetpan
 SUBDIR+=	libksieve
