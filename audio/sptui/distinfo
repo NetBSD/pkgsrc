@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/01/22 07:31:08 pin Exp $
+$NetBSD: distinfo,v 1.2 2024/01/31 20:16:06 pin Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1329,6 +1329,6 @@ Size (rsc.io_quote_v3_@v_v3.1.0.mod) = 55 bytes
 BLAKE2s (rsc.io_sampler_@v_v1.3.0.mod) = 6d4d3ba7c381b9a923679a73562a7cf3d6b7d49f94f585f274c8955bb1b932b4
 SHA512 (rsc.io_sampler_@v_v1.3.0.mod) = 2137507eb25fbae419605e0cd6bca4cfa584110eebc276cd759a4dcb6f97e52928e5b2d9b276e76bcabcec3bbfc2c42f97fa29f54695d27fb00f9423e1638863
 Size (rsc.io_sampler_@v_v1.3.0.mod) = 88 bytes
-BLAKE2s (sptui-0.1.1.tar.gz) = 681c086ff501f8a4de8790a759190394bbc07b459d213d96a144f04f5e78dc94
-SHA512 (sptui-0.1.1.tar.gz) = 3a48482075fba99544f130dae6f83117f66ec5d9f25e0d2424ea12d133638f20811ce3bb910e9b5fbe5a4a8f2e6b70ea48b89988df0c42bc97776715bc8d6116
-Size (sptui-0.1.1.tar.gz) = 797892 bytes
+BLAKE2s (sptui-0.1.2.tar.gz) = 2eb7aa32fad727260b7b4eb22be11cc0064e72b4f92ecbae08ff056c00b735fb
+SHA512 (sptui-0.1.2.tar.gz) = f90af06cbf0d7428222ac98ac976be452dafbaec370152e284d35c332fbb1712ba64d078a90dc9a3fcff8fa58f125cbe90e8075643e1afe6b6ea275d0e1eee55
+Size (sptui-0.1.2.tar.gz) = 798441 bytes
