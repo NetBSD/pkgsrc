@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2024/02/01 09:08:36 wiz Exp $
+# $NetBSD: Makefile,v 1.689 2024/02/01 09:40:30 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -43,7 +43,6 @@ SUBDIR+=	bmp-mac
 SUBDIR+=	bmp-pulse
 SUBDIR+=	buzztrax
 SUBDIR+=	cam
-SUBDIR+=	cantata
 SUBDIR+=	cd-discid
 SUBDIR+=	cddb-bundle
 SUBDIR+=	cddbd
