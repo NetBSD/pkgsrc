@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/01 08:57:16 wiz Exp $
 
 BLAKE2s (manaplus-2.1.3.17.tar.xz) = 2dc3f54eeae14df0a11b34dc1dfbe9f7df3266ff4df523771bf35eb923fdebd0
 SHA512 (manaplus-2.1.3.17.tar.xz) = 8473158f55357e199094bb6c88b6645f0044aadd950ae95f213d4276512bff29c0df58765f7127272961ea2bccb5bdca431cbe125d2a22e9510dc691e509aab7
 Size (manaplus-2.1.3.17.tar.xz) = 14132800 bytes
+SHA1 (patch-src_utils_dumplibs.cpp) = bd2a54cc306ed6eea9e36d24c0f054769ad1cbd1
+SHA1 (patch-src_utils_xml_libxml.inc) = b6bb7a2a4db11cae0034f49312bf4086c5b3d599
