@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:46:26 nia Exp $
-
-BLAKE2s (libgltf-0.1.0.tar.gz) = c13e0a852a191c11e2aa7c0dd9392955b09b09198ae0b742df67a63b0119b8c1
-SHA512 (libgltf-0.1.0.tar.gz) = c4ef222d638a3f691bcce493776ef451830168ef0569c417f0acdd305e5f261500767943f92a3e65d6b00aecf6c02bdae56f52e0943b8d36490ef66474d9252a
-Size (libgltf-0.1.0.tar.gz) = 736163 bytes
