@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:58:49 nia Exp $
-
-BLAKE2s (bmp-musepack-1.2.tar.bz2) = 009aeaaccb88b2316df6aa3bf22ad8d6b3d966fdfd9390d5f437a8ed12bcca85
-SHA512 (bmp-musepack-1.2.tar.bz2) = 098d8e7649d6606f5305c9fa0eead625eb8447f3c39e67dfa36d637aeabe9b28a715cc70ce41abe9e8b1c9babea58a7ae4df79a8e6a9ba6b6fc94cc64152e57f
-Size (bmp-musepack-1.2.tar.bz2) = 217862 bytes
