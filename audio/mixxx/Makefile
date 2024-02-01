@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2024/01/30 14:21:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2024/02/01 08:33:30 wiz Exp $
 
 DISTNAME=	mixxx-2.3.1
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mixxxdj/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -18,8 +18,6 @@ USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DUSE_SYMLINKS=OFF
 CMAKE_ARGS+=	-DPORTMIDI=OFF
-
-PLIST_SRCS+=	PLIST
 
 USE_CXX_FEATURES+=	c++11
 
@@ -59,6 +57,7 @@ CHECK_INTERPRETER_SKIP+=	share/mixxx/controllers/novation-launchpad/scripts/*
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/mp4v2/buildlink3.mk"

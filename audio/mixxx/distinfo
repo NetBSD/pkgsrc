@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/11/20 19:07:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/02/01 08:33:30 wiz Exp $
 
 BLAKE2s (mixxx-2.3.1.tar.gz) = 70ee035e6399d096caec4fe8aa69d4a3ce361763c4a5fbfd7f2c985f4c7cbc71
 SHA512 (mixxx-2.3.1.tar.gz) = 17cf8dee2aaca2ed85067474d40b0955abd22268767a9c68dbc8126554e6b216ddab9a42b6c888606aca61fdcccccda3062f5b4f1f550722c5033c516e046816
@@ -6,5 +6,6 @@ Size (mixxx-2.3.1.tar.gz) = 39977210 bytes
 SHA1 (patch-CMakeLists.txt) = f7c45756d9952391859b643daf12c7c74dce5b1c
 SHA1 (patch-lib_kaitai_kaitaistream.cpp) = 1d77832b7f33d4605eda857a9998a0c66654c452
 SHA1 (patch-src_controllers_controllermanager.cpp) = eb368c3ed4c0fe3bd553641fe07a385e7e78a064
+SHA1 (patch-src_track_taglib_trackmetadata__ape.cpp) = e0f7c4eadfb246a73660dc9d6444ba81cac40277
 SHA1 (patch-src_util_screensaver.cpp) = da16ba829646298af7a57567894c732ef1ecd53e
 SHA1 (patch-src_util_screensaver.h) = 8bea9c3365219fd52db60f38af4fdcab4be40b81
