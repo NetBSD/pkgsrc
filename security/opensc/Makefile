@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2023/11/08 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/02/01 14:19:15 adam Exp $
 
-DISTNAME=	opensc-0.23.0
-PKGREVISION=	4
+DISTNAME=	opensc-0.24.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 
@@ -23,6 +22,7 @@ CONFIGURE_ARGS+=	--disable-strict  # avoid -Werror
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # The stylesheets are not found without this.
 CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${PREFIX}/share/xsl/docbook
+TEST_TARGET=		check
 
 .include "options.mk"
 
