@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2023/04/27 05:43:12 wiz Exp $
+$NetBSD: distinfo,v 1.26 2024/02/01 14:11:04 dogcow Exp $
 
-BLAKE2s (transmission-4.0.3.tar.xz) = 23e0ad20854a036a5cfe75d2047d38964fe7c6364517497627ed61d59df6cbce
-SHA512 (transmission-4.0.3.tar.xz) = 246d4af2f9b399cb5a6e43ca0852d2ab5ff48d2a5c89d0f450c968fcad042ef2e45fef3c9be8ffbf37e7c61dc509929869b6bf59914333818ddf6950582d669c
-Size (transmission-4.0.3.tar.xz) = 10062044 bytes
+BLAKE2s (transmission-4.0.5.tar.xz) = f61a806ebcea0fb79a539b76cb54cf0b549368d1c5b5c355604b8fb513acb568
+SHA512 (transmission-4.0.5.tar.xz) = 9d3df965929ba18aa8186f89060aeacc8ead3df4a5acdc74a005dc62deadc5fa239af99c49ca2477cc5c1adfcd834481105f1dbc94e0efe210e9e6680bfec124
+Size (transmission-4.0.5.tar.xz) = 9745756 bytes
