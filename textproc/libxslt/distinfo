@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.71 2023/05/17 23:35:45 gutteridge Exp $
+$NetBSD: distinfo,v 1.72 2024/02/01 10:22:49 adam Exp $
 
-BLAKE2s (libxslt-1.1.38.tar.xz) = 23c109c76b13f3dda0bc3a64346979ab54ea5d979f4506a802b705c5fe305f6f
-SHA512 (libxslt-1.1.38.tar.xz) = 2836bd2990b95680db0960ac4c465d0c6c28a293ad095a224c05021a1c8d2576a45e41da8947a31f4ef3e6ef368cbda65243661e311c9886c19694be5a7c9a8e
-Size (libxslt-1.1.38.tar.xz) = 1576676 bytes
+BLAKE2s (libxslt-1.1.39.tar.xz) = 601471b8733ed29ec244c8c4c78d6b4592a426fb48f14da0ae9ff9753988b969
+SHA512 (libxslt-1.1.39.tar.xz) = c0c99dc63f8b2acb6cc3ad7ad684ffa2a427ee8d1740495cbf8a7c9b9c8679f96351b4b676c73ccc191014db4cb4ab42b9a0070f6295565f39dbc665c5c16f89
+Size (libxslt-1.1.39.tar.xz) = 1578216 bytes
