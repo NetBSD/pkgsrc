@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23977 2024/02/01 09:36:32 wiz Exp $
+$NetBSD: TODO,v 1.23978 2024/02/01 10:11:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -951,6 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mozc-server-2.29.5268.102
+	o mozilla-rootcerts-1.0.20240131
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
