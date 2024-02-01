@@ -1,7 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/02 06:05:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/01 09:29:17 wiz Exp $
 bin/recoll
 bin/recollindex
 bin/recollq
+include/recoll/Filter.h
+include/recoll/docseq.h
+include/recoll/docseqdb.h
+include/recoll/hldata.h
+include/recoll/idxstatus.h
+include/recoll/internfile.h
+include/recoll/log.h
+include/recoll/mimehandler.h
+include/recoll/pathut.h
+include/recoll/plaintorich.h
+include/recoll/qresultstore.h
+include/recoll/rclconfig.h
+include/recoll/rcldb.h
+include/recoll/rcldoc.h
+include/recoll/rclinit.h
+include/recoll/rclquery.h
+include/recoll/rclutil.h
+include/recoll/readfile.h
+include/recoll/reslistpager.h
+include/recoll/searchdata.h
+include/recoll/smallut.h
+include/recoll/wasatorcl.h
+lib/librecoll.la
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
@@ -34,7 +57,6 @@ ${PYSITELIB}/recollchm/chm.pyc
 ${PYSITELIB}/recollchm/chmlib.py
 ${PYSITELIB}/recollchm/chmlib.pyc
 ${PYSITELIB}/recollchm/extra.so
-lib/recoll/librecoll.la
 man/man1/recoll.1
 man/man1/recollindex.1
 man/man1/recollq.1
@@ -45,6 +67,7 @@ share/metainfo/recoll.appdata.xml
 share/pixmaps/recoll.png
 share/recoll/doc/docbook-xsl.css
 share/recoll/doc/usermanual.html
+share/recoll/examples/backends
 share/recoll/examples/fields
 share/recoll/examples/fragment-buttons.xml
 share/recoll/examples/mimeconf
@@ -61,7 +84,9 @@ share/recoll/examples/recollindex.desktop
 share/recoll/examples/recollindex.service
 share/recoll/examples/recollindex@.service
 share/recoll/filters/abiword.xsl
+share/recoll/filters/archivextract.py
 share/recoll/filters/cmdtalk.py
+share/recoll/filters/cnsplitter.py
 share/recoll/filters/conftree.py
 share/recoll/filters/fb2.xsl
 share/recoll/filters/gnumeric.xsl
@@ -102,6 +127,7 @@ share/recoll/filters/rclimg
 share/recoll/filters/rclimg.py
 share/recoll/filters/rclinfo.py
 share/recoll/filters/rclipynb.py
+share/recoll/filters/rcljoplin.py
 share/recoll/filters/rclkar.py
 share/recoll/filters/rclkwd
 share/recoll/filters/rcllatinclass.py
@@ -109,6 +135,7 @@ share/recoll/filters/rcllatinstops.zip
 share/recoll/filters/rcllyx
 share/recoll/filters/rclman
 share/recoll/filters/rclmidi.py
+share/recoll/filters/rclnamefilter.py
 share/recoll/filters/rclocr.py
 share/recoll/filters/rclocrabbyy.py
 share/recoll/filters/rclocrcache.py
@@ -124,6 +151,7 @@ share/recoll/filters/rclpython.py
 share/recoll/filters/rclrar.py
 share/recoll/filters/rclrtf.py
 share/recoll/filters/rclscribus
+share/recoll/filters/rclsfz.py
 share/recoll/filters/rclshowinfo
 share/recoll/filters/rcltar.py
 share/recoll/filters/rcltex
