@@ -1,7 +1,8 @@
-$NetBSD: patch-pngcrush.c,v 1.1 2024/02/01 09:14:54 wiz Exp $
+$NetBSD: patch-pngcrush.c,v 1.2 2024/02/01 09:18:19 wiz Exp $
 
 PNG_IGNORE_ADLER32 was deprecated in png-1.6.42
 https://github.com/pnggroup/libpng/pull/514
+https://sourceforge.net/p/pmt/bugs/82/
 
 --- pngcrush.c.orig	2024-02-01 09:09:19.207140753 +0000
 +++ pngcrush.c
