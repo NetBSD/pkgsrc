@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/11/12 13:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/02/01 07:01:29 wiz Exp $
 
 DISTNAME=	gupnp-av-0.14.1
 PKGREVISION=	2
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-av-1.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=deprecated-declarations
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
