@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:51:50 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}
-${PYSITELIB}/libmtag.so

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:07 nia Exp $
-
-BLAKE2s (libmtag-0.3.2.tar.gz) = 0c1d2187b04bbdd59aa25dc683a6a89c6d2fca02f6825c1bbf445e4102283af5
-SHA512 (libmtag-0.3.2.tar.gz) = 91da1addc5cf4e960b2b645fd2fcbc1f884f7f2bf6fc820a5d4c71db0974c1f322f792516b6f523990593eeddd8d1466f2d7712790484a4d07912feca1034f51
-Size (libmtag-0.3.2.tar.gz) = 304704 bytes

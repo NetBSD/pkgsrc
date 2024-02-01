@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:25 nia Exp $
-
-BLAKE2s (libmtag-python-0.3.1.tar.gz) = 4b2147d7fc724e4f2c2f22661e7f829adb2af7089fd68bd467700d7b475e9616
-SHA512 (libmtag-python-0.3.1.tar.gz) = 5773fd8873c2adb93b5e1fb298e0227db4fc96bd488518ba30e0f1c36a3674f14ec2ca26d723473474e360dfb54d2d22d6297f7737563261ca4b98d81591fe00
-Size (libmtag-python-0.3.1.tar.gz) = 2637 bytes
-SHA1 (patch-aa) = d5446fd173f34df78e3475cff7f31124b3860470
