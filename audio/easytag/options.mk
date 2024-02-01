@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.11 2023/06/06 12:40:16 riastradh Exp $
+# $NetBSD: options.mk,v 1.12 2024/02/01 09:45:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
 PKG_SUPPORTED_OPTIONS=	doc flac manual ogg opus speex wavpack
 PKG_SUGGESTED_OPTIONS=	doc flac manual ogg opus speex wavpack
+
+PLIST_VARS+=		man
 
 .include "../../mk/bsd.options.mk"
 
