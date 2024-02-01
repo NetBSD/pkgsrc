@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.130 2023/11/08 13:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2024/02/01 10:22:49 adam Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
@@ -16,15 +15,14 @@ PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 TEST_TARGET=		check
 
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == SunOS
-. if ${OS_VARIANT} == Solaris
+.  if ${OS_VARIANT} == Solaris
 BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./libxslt.syms
-. else
+.  else
 BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
-. endif
+.  endif
 .endif
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
