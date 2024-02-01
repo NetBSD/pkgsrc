@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/12/10 11:50:43 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/02/01 10:29:00 wiz Exp $
 
-BLAKE2s (zutty-0.14.tar.gz) = 8c9dbd8c8e5aa46adfddfc7dae98e62e98179782b908461444397f1e771570ad
-SHA512 (zutty-0.14.tar.gz) = d73894feefa1fb58c76aa5f9d68a47b9871ab8d02eb5dd2575769c4f082a65cb9df2bdb2478e5aa54d121eb19a16269f169e79d72f0df779760520f2d501c086
-Size (zutty-0.14.tar.gz) = 351015 bytes
-SHA1 (patch-src_options.h) = 8cc5c4d7916506eff006a672d8b1acc34827daf4
-SHA1 (patch-wscript) = 2b43dc2f946ac61542840cc4fb8ea3a572c1c85b
+BLAKE2s (zutty/7e481c04507e9b5cacfe67fe2b96bdb449b08726.tar.gz) = a5295d0b29a8f29a2c9e56e4638857173a158dc7a383b3a8d5d2fb4792702c49
+SHA512 (zutty/7e481c04507e9b5cacfe67fe2b96bdb449b08726.tar.gz) = b821ce0e947854df101d156784384b0ed5be0dc15c1279b8d83a2dc267520d6766ea47f78f2ec3f16fc2fefc2ee8f8f8113f15ab800fc275b9641cde959ee96e
+Size (zutty/7e481c04507e9b5cacfe67fe2b96bdb449b08726.tar.gz) = 351730 bytes
