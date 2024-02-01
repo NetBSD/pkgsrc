@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.71 2021/10/26 11:29:37 nia Exp $
+$NetBSD: distinfo,v 1.72 2024/02/01 09:20:02 wiz Exp $
 
 BLAKE2s (liferea-1.12.8.tar.bz2) = bd4ec9fca2cb2020c3e43b064d3e8e009c87568ee6f52f9a0f52c38e16f9b7da
 SHA512 (liferea-1.12.8.tar.bz2) = 46f70bed9b9ae1a6d578dbda3d3e7751b839bee91443c245cc83a17d89f3a1c59fe6346f0ee4e72103511404620fcd65733121527cb841ba0c2be2f4d182b51b
 Size (liferea-1.12.8.tar.bz2) = 1496590 bytes
+SHA1 (patch-src_node__type.h) = 4c382b627beb3613feac4cdbf06e317e6feabf09
