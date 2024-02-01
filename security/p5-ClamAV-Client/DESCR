@@ -1,0 +1,4 @@
+ClamAV::Client is a class acting as a client for a ClamAV `clamd` virus
+scanner daemon. The daemon may run locally or on a remote system as
+ClamAV::Client can use both Unix domain sockets and TCP/IP sockets. The
+full functionality of the `clamd` client/server protocol is supported.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/01 04:19:28 schmonz Exp $
+
+BLAKE2s (ClamAV-Client-0.11.tar.gz) = c4baa395cc01b17e75e573c758ffe7b28919959fb54557152da0674c389995f6
+SHA512 (ClamAV-Client-0.11.tar.gz) = 66338725db9f78f9551d63af7c85926b546e9015e164c124ac7c4962c0c6adb74dafe477c319705abe8bf49240a3ffddf3147e07ce0707e58307b2dd1b1221b3
+Size (ClamAV-Client-0.11.tar.gz) = 8420 bytes
