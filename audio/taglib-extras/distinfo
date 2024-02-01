@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:59:32 nia Exp $
-
-BLAKE2s (taglib-extras-1.0.1.tar.gz) = cf9fbd469bc852a9690a5e2ab179f677006a31fdbf0464e4221521c346b07eb1
-SHA512 (taglib-extras-1.0.1.tar.gz) = 282f9c9cde81a250d8d6f4416658167665044d53cd10d8ecfa490df60a1fb95e1309feb17f69963f8dbfccc83ebb76af7275c25339931117435f34a56c4f1a65
-Size (taglib-extras-1.0.1.tar.gz) = 31363 bytes
-SHA1 (patch-aa) = 588fa139d9ab01f332a36c8a7e6e9c03b09f49c7
-SHA1 (patch-cmake_modules_FindTagLib.cmake) = 2b53d7b2527ebb9bbd66d1d94c9f704ec4a2ca1b
