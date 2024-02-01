@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/03/12 11:55:59 js Exp $
+# $NetBSD: Makefile,v 1.58 2024/02/01 09:34:33 wiz Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -27,7 +27,6 @@ SUBDIR+=	fuse-mp3fs
 SUBDIR+=	fuse-ntfs-3g
 SUBDIR+=	fuse-obexfs
 SUBDIR+=	fuse-pcachefs
-SUBDIR+=	fuse-pod
 SUBDIR+=	fuse-sparsebundlefs
 SUBDIR+=	fuse-sshfs
 SUBDIR+=	fuse-svnfs
