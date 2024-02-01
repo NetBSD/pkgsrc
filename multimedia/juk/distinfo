@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 04:36:13 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/01 09:49:59 wiz Exp $
 
 BLAKE2s (juk-23.04.3.tar.xz) = 46ef3ae3a4e161e6f689ec74bbbd97044465e1c4d5d084a4aaffb87bd13a3db2
 SHA512 (juk-23.04.3.tar.xz) = 39e864c6a42c251d141c38266d5e320ef8885bdee872609e11d65b080125293b442cb60145b14c63a2a33b16609b0ac8f59458e8ffa7a6da4f0e013dfdb1f146
 Size (juk-23.04.3.tar.xz) = 2080376 bytes
+SHA1 (patch-mediafiles.cpp) = 12cf7ff0348b0a507094db4e51750a22e64503d4
+SHA1 (patch-mediafiles.h) = 346b7374e06d0aacdc78dc52af683b775afa1a14
