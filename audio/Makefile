@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.687 2024/02/01 09:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.688 2024/02/01 09:08:36 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -238,7 +238,6 @@ SUBDIR+=	libmp3splt
 SUBDIR+=	libmpcdec
 SUBDIR+=	libmpd
 SUBDIR+=	libmpdclient
-SUBDIR+=	libmtag
 SUBDIR+=	libmusepack
 SUBDIR+=	libmusicbrainz5
 SUBDIR+=	libmysofa
@@ -383,7 +382,6 @@ SUBDIR+=	py-hsaudiotag3k
 SUBDIR+=	py-id3
 SUBDIR+=	py-id3lib
 SUBDIR+=	py-last
-SUBDIR+=	py-libmtag
 SUBDIR+=	py-mad
 SUBDIR+=	py-mediafile
 SUBDIR+=	py-mpd
