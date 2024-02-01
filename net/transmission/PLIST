@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/27 05:43:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/01 14:11:04 dogcow Exp $
 bin/transmission-create
 bin/transmission-daemon
 bin/transmission-edit
@@ -43,6 +43,8 @@ share/doc/transmission/news/news-4.0.0-beta-3.md
 share/doc/transmission/news/news-4.0.0.md
 share/doc/transmission/news/news-4.0.1.md
 share/doc/transmission/news/news-4.0.2.md
+share/doc/transmission/news/news-4.0.3.md
+share/doc/transmission/news/news-4.0.4.md
 share/doc/transmission/news/news-${PKGVERSION}.md
 share/doc/transmission/rpc-spec.md
 share/doc/transmission/send-email-when-torrent-done.sh

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.821 2024/02/01 11:25:19 pin Exp $
+$NetBSD: CHANGES-2024,v 1.822 2024/02/01 14:11:03 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1088,3 +1088,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/matugen to 2.0.0 [pin 2024-02-01]
 	Updated math/qcalc to 0.5.0 [pin 2024-02-01]
 	Added security/rbw version 1.9.0 [pin 2024-02-01]
+	Updated net/transmission to 4.0.5 [dogcow 2024-02-01]
+	Updated net/transmission-common to 4.0.5 [dogcow 2024-02-01]
+
