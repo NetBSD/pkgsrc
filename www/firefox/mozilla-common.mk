@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.273 2023/12/31 09:03:55 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.274 2024/02/01 17:13:18 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -231,7 +231,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.94
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.95
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -242,9 +242,8 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.66.0
+RUST_REQ=	1.70.0
 .include "../../lang/rust/rust.mk"
-BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.13.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 # TODO: check again, pkgsrc has hunspell 1.7
