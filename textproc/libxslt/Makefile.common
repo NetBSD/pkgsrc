@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2023/05/17 23:35:45 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/02/01 10:22:49 adam Exp $
 #
 # used by textproc/libxslt/Makefile
 # used by textproc/py-libxslt/Makefile
 
-DISTNAME=	libxslt-1.1.38
+DISTNAME=	libxslt-1.1.39
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,4 +17,4 @@ PATCHDIR=	${.CURDIR}/../../textproc/libxslt/patches
 DISTINFO_FILE=	${.CURDIR}/../../textproc/libxslt/distinfo
 
 post-extract:
-	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
+	${CP} ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
