@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:19:48 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/02/01 09:01:06 wiz Exp $
 
 BLAKE2s (libvirt-1.2.9.tar.gz) = 4203e998c79d9c44bd12f54f72c4c70f20ffa8228c90f82012ece2a209339c8b
 SHA512 (libvirt-1.2.9.tar.gz) = e91367037622da17b5081ccf471e17d36f474596f19034b30e86f42940939340dc4cf455697e54bf9023005fc45cd9982a0f39d244373dd4d585fd7b9aee918c
@@ -10,4 +10,5 @@ SHA1 (patch-gnulib-lib-fseeko.c) = 1dc0c761d3285da5a418690bfc2e37de90f0e870
 SHA1 (patch-src-network-bridge_driver.c) = db637cc003edc054833473a1da74f695f9f7e227
 SHA1 (patch-src-rpc-virnetmessage.c) = 5a09402a71c1f7082d775503ce3ef17e7c41424c
 SHA1 (patch-src-util-virutil.c) = 64710144c4e1c7e1d9f5ca84c47be6f8b01a70f8
+SHA1 (patch-src_conf_nwfilter__params.h) = 024cb405d60c38e332644b42b4f2256f8c5df5ab
 SHA1 (patch-tools--virsh-secret.c) = 424f53edabf535be73e08addea3b4310de08cf8e
