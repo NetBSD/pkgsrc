@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2023/12/10 11:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/01 10:29:00 wiz Exp $
 
-DISTNAME=	zutty-0.14
+DISTNAME=	7e481c04507e9b5cacfe67fe2b96bdb449b08726
+PKGNAME=	zutty-0.15
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tomscii/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	https://git.hq.sig7.se/zutty.git/snapshot/
+DIST_SUBDIR=	zutty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tomscii.sig7.se/zutty/
@@ -15,6 +16,8 @@ USE_TOOLS+=	pkg-config
 WAF_HAS_MANDIR=	no
 
 INSTALLATION_DIRS+=	share/doc/zutty
+
+WRKSRC=		${WRKDIR}/zutty-${DISTNAME:C/(.......).*/\1/}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.org ${DESTDIR}${PREFIX}/share/doc/zutty
