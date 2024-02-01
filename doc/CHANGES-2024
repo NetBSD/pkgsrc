@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.814 2024/02/01 09:40:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.815 2024/02/01 10:25:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1077,3 +1077,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/recoll to 1.37.2 [wiz 2024-02-01]
 	Removed filesystems/fuse-pod [wiz 2024-02-01]
 	Removed audio/cantata [wiz 2024-02-01]
+	Updated textproc/libxslt to 1.1.39 [adam 2024-02-01]
+	Updated textproc/py-libxslt to 1.1.39 [adam 2024-02-01]
+	Updated devel/cmake to 3.28.2 [adam 2024-02-01]
+	Updated devel/cmake-gui to 3.28.2 [adam 2024-02-01]
