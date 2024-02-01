@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23978 2024/02/01 10:11:14 wiz Exp $
+$NetBSD: TODO,v 1.23979 2024/02/01 14:21:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -1016,7 +1016,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o opensc-0.24.0
 	o openslp-2.0.0
 	o openssl-3.2.0
 	o openxenmanager-0.83
