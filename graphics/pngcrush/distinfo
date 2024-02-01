@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.71 2021/10/26 10:46:42 nia Exp $
+$NetBSD: distinfo,v 1.72 2024/02/01 09:14:53 wiz Exp $
 
 BLAKE2s (pngcrush-1.8.13-nolib.tar.xz) = 98e545ff71d87100175ace35f33782bc450999791ec327cd77a1b27525e9fc0c
 SHA512 (pngcrush-1.8.13-nolib.tar.xz) = c073d573e9b13b72fa39b178271ce65d1a19fef35943ef0a9e6121a5c66d9db212aaad38ab777c5b44e20a107eb677003acbdb4a354bcb2dc40f535a97d9df0e
 Size (pngcrush-1.8.13-nolib.tar.xz) = 66104 bytes
+SHA1 (patch-pngcrush.c) = fcaa71b2fe1bc17b491cadf47ea24507588a95d7
