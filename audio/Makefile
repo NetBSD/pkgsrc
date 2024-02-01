@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2024/02/01 07:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.687 2024/02/01 09:04:19 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -447,7 +447,6 @@ SUBDIR+=	streamtuner
 SUBDIR+=	suil
 SUBDIR+=	sweep
 SUBDIR+=	taglib
-SUBDIR+=	taglib-extras
 SUBDIR+=	tap-plugins
 SUBDIR+=	tcd
 SUBDIR+=	tcl-snack
