@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.823 2024/02/01 14:21:58 adam Exp $
+$NetBSD: CHANGES-2024,v 1.824 2024/02/01 20:36:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1092,3 +1092,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/transmission-common to 4.0.5 [dogcow 2024-02-01]
 	Updated security/opensc to 0.24.0 [adam 2024-02-01]
 	Updated devel/py-faker to 22.6.0 [adam 2024-02-01]
+	Updated misc/tui-journal to 0.8.2 [pin 2024-02-01]
