@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1036 2024/01/06 19:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.1037 2024/02/01 08:41:28 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -338,7 +338,6 @@ SUBDIR+=	libggimisc
 SUBDIR+=	libggiwmh
 SUBDIR+=	libgii
 SUBDIR+=	libgiigic
-SUBDIR+=	libgltf
 SUBDIR+=	libheif
 SUBDIR+=	libhighway
 SUBDIR+=	libimagequant
