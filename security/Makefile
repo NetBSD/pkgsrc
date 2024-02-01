@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.935 2024/02/01 04:19:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.936 2024/02/01 11:24:54 pin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -545,6 +545,7 @@ SUBDIR+=	qt4-qtkeychain
 SUBDIR+=	qt5-qtkeychain
 SUBDIR+=	qt6-qtnetworkauth
 SUBDIR+=	racoon2
+SUBDIR+=	rbw
 SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
