@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/25 08:30:14 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/02/02 13:13:09 adam Exp $
 
-BLAKE2s (FormEncode-2.0.1.tar.gz) = 13225ffbde085fb4d0920c6d91e678c11546594c335f14dc87e9333303ba30ae
-SHA512 (FormEncode-2.0.1.tar.gz) = 165d2b5abfd37a361144aaf33b053537660bef5ba6a266b869beb2e1d5467719fd7a9dc6d2cec75a04f0ee0d07d46cc76d90ad6ead5b4adef570e22d566fa87b
-Size (FormEncode-2.0.1.tar.gz) = 256130 bytes
-SHA1 (patch-setup.py) = 819b29ba5977b0d69fca8fcb381f60f4d8541890
+BLAKE2s (FormEncode-2.1.0.tar.gz) = 7e92c7099ae479c2f8deedd7ed143d1f60ba5976e3e8565e0aecd4bba8bf5cea
+SHA512 (FormEncode-2.1.0.tar.gz) = 136253faaa299a6c5c92f70e11d53f410e1d7607b1c6530bd25042e8506e644409fcb0ff8ccd5fe7ed04707d4034fec224389681c8e4ff81af445b4dc67897a6
+Size (FormEncode-2.1.0.tar.gz) = 277757 bytes
