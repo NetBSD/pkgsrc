@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.833 2024/02/02 12:41:23 pin Exp $
+$NetBSD: CHANGES-2024,v 1.834 2024/02/02 13:13:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1106,3 +1106,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/prose to 0.4.2 [pin 2024-02-02]
 	Updated sysutils/refi to 3.1.2 [pin 2024-02-02]
 	Updated finance/rex to 0.1.14 [pin 2024-02-02]
+	Updated multimedia/openh264 to 2.4.1 [adam 2024-02-02]
+	Updated www/py-FormEncode to 2.1.0 [adam 2024-02-02]
