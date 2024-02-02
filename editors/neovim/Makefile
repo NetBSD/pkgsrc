@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/28 09:05:36 tm Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/02 16:24:45 tm Exp $
 
-DISTNAME=	neovim-0.9.0
+DISTNAME=	neovim-0.9.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,10 +16,13 @@ USE_TOOLS+=	pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	notdarwin
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib
 .else
 SHLIB_EXT=	so
+PLIST.notdarwin=	yes
 .endif
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
