@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/11/07 09:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/02 16:23:11 adam Exp $
 
-DISTNAME=	poetry_core-1.8.1
+DISTNAME=	poetry_core-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry-core/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://python-poetry.org/
 COMMENT=	Poetry PEP 517 build backend
 LICENSE=	mit
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.10.0:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.10:../../devel/py-test-mock
