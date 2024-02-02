@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/01/26 08:06:07 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/02/02 09:21:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	anstream-0.6.11
@@ -60,7 +60,8 @@ CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	rand_distr-0.4.3
 CARGO_CRATE_DEPENDS+=	rand_xorshift-0.3.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
-CARGO_CRATE_DEPENDS+=	regex-automata-0.4.3
+CARGO_CRATE_DEPENDS+=	regex-1.10.3
+CARGO_CRATE_DEPENDS+=	regex-automata-0.4.5
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.2
 CARGO_CRATE_DEPENDS+=	rustix-0.38.30
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6

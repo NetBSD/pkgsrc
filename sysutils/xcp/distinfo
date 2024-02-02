@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/01/26 08:06:07 pin Exp $
+$NetBSD: distinfo,v 1.13 2024/02/02 09:21:02 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -180,9 +180,12 @@ Size (rand_xorshift-0.3.0.crate) = 9121 bytes
 BLAKE2s (redox_syscall-0.4.1.crate) = 85e65efdd39dea91e9283d485b8853037b6f98f2f4c3fd6116679951206f7e97
 SHA512 (redox_syscall-0.4.1.crate) = 073ed9d96090cf46eab9877742277a013c62d8da86d9caf2310b4fa868af306511936553579e01309f27067d344226cc8dc5e3aef01d9b900da2febd33848f8d
 Size (redox_syscall-0.4.1.crate) = 24858 bytes
-BLAKE2s (regex-automata-0.4.3.crate) = d788d9abcbb1c8fab5c65b1fd5a228df5056f00f3baaa971f6758c8125e8911f
-SHA512 (regex-automata-0.4.3.crate) = 4fc82fe3556f829956c3172447589555ef286fd66ee9a445cbdcdbe57970655e35b6eb0895ba02c344d826609257e0c95d3f7f51858aa260103bed7b08d8c1a8
-Size (regex-automata-0.4.3.crate) = 617011 bytes
+BLAKE2s (regex-1.10.3.crate) = a164e3feb98134de3bbe9560657772d554b7f18920fef1ac00d67e395aa23084
+SHA512 (regex-1.10.3.crate) = d090898465013b0975a6de87fbdcdf76b4896578056f4da83424bd5e7832547a3d8ace643c379c4f14700a0a88dc95950a38645508d1675306c377879a90cf5d
+Size (regex-1.10.3.crate) = 253101 bytes
+BLAKE2s (regex-automata-0.4.5.crate) = 50933b860c240ce2394a7fc0af0b61a814062c2debb8d1083d069a0833e3ffe3
+SHA512 (regex-automata-0.4.5.crate) = 0e9681d5c4529d49ff2555b7b73cf234b1f321a7fc634beccdf76c2bce5094e8501403e8caee2b3a16ac299cbe4701d891f1efa380b54f9dc2d92bbacd4de611
+Size (regex-automata-0.4.5.crate) = 617406 bytes
 BLAKE2s (regex-syntax-0.8.2.crate) = 1d0622805a79f44450950cd96e4eb8f213180b3de639601cebf9c8ca9ba771bb
 SHA512 (regex-syntax-0.8.2.crate) = 301dde555f300298f2594490ccd8b92033e4917fe9b8671b8a97db6c827793c73969be85a92999964dcaf3177edda51abeb576811ad6cab9772964dc0a77e728
 Size (regex-syntax-0.8.2.crate) = 347228 bytes
@@ -300,6 +303,6 @@ Size (windows_x86_64_msvc-0.52.0.crate) = 821600 bytes
 BLAKE2s (xattr-1.3.1.crate) = 6d8603c16f0dd361c8b8227ce5c5d2c6a45f93127b8541ef4e9b34f798e6a170
 SHA512 (xattr-1.3.1.crate) = 4047abda42b949cf58f820e15ee99850de483857bbaaef737eeee48e1a2132972470f15bb2ddda56438f6a934918be96607a8de518a5a3dcec7c8ee6c00ad280
 Size (xattr-1.3.1.crate) = 12580 bytes
-BLAKE2s (xcp-0.18.1.tar.gz) = 2fedc2de37326bec1c231fa15b9170b6b523d65930e3fcc38f7f27b38c6ccbf3
-SHA512 (xcp-0.18.1.tar.gz) = c24a27f1c3b7217bd25f1e21fe1fc8d7bd8478f7e295f2cfc106c4623ad2502df60f58ec39f247e56e3fcc9e730261cfdcb1ac47da4179ad8f4a2866bf6d13f3
-Size (xcp-0.18.1.tar.gz) = 54659 bytes
+BLAKE2s (xcp-0.19.0.tar.gz) = 3952163f8956469b427e0e15297d60cd42694393a826ca6f78f196757a0840af
+SHA512 (xcp-0.19.0.tar.gz) = ea07157f437b2d08f6067e3272f7a6fa77aafa47622c2724c43e2f90a1d0979395e09b9abd5668a0333c2ce78f5e674aea729dc185efa4caf57ac548e39a02ee
+Size (xcp-0.19.0.tar.gz) = 57574 bytes
