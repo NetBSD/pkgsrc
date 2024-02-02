@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/12/31 19:11:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/02/02 16:19:52 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -25,6 +25,9 @@ ${PYSITELIB}/_pytest/_code/source.pyo
 ${PYSITELIB}/_pytest/_io/__init__.py
 ${PYSITELIB}/_pytest/_io/__init__.pyc
 ${PYSITELIB}/_pytest/_io/__init__.pyo
+${PYSITELIB}/_pytest/_io/pprint.py
+${PYSITELIB}/_pytest/_io/pprint.pyc
+${PYSITELIB}/_pytest/_io/pprint.pyo
 ${PYSITELIB}/_pytest/_io/saferepr.py
 ${PYSITELIB}/_pytest/_io/saferepr.pyc
 ${PYSITELIB}/_pytest/_io/saferepr.pyo
