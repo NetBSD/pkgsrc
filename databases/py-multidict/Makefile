@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/01/02 08:41:26 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/02/02 08:08:49 adam Exp $
 
-DISTNAME=	multidict-6.0.4
+DISTNAME=	multidict-6.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
@@ -10,14 +10,12 @@ HOMEPAGE=	https://github.com/aio-libs/multidict
 COMMENT=	Multidict implementation
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
