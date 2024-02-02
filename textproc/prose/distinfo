@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2023/01/23 21:19:43 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/02/02 12:38:29 pin Exp $
 
 BLAKE2s (anes-0.1.6.crate) = 51a3a431b53fc59bdeaf54f4dd87332d79d9c9cb47042879fb821b5a7afdfd9a
 SHA512 (anes-0.1.6.crate) = f9dfaaca9ca327881ec30efaf24e208daae668b1e9d6963c8b0ca9f9fd13be777c793076a87980429f0dfa4db28ef5331ce6652a76da4d5a87485b23fc2fde29
@@ -165,9 +165,9 @@ Size (plotters-svg-0.3.3.crate) = 6916 bytes
 BLAKE2s (proc-macro2-1.0.47.crate) = ef333dc55763f2a4f83c0f2c5abc653e565fc682dcbdacf61b4d892b1bd56a91
 SHA512 (proc-macro2-1.0.47.crate) = 60c5d0dcbdee7ddab40664882d3cf5a868f7ea5b49ebab3b4419c3f325582b816625e73e0d1737bbd46bd7d765ece6c81c2ff4be894555d4b255f5cb9255e931
 Size (proc-macro2-1.0.47.crate) = 41955 bytes
-BLAKE2s (prose-0.4.0.tar.gz) = 60930f38f20101c9ee9ecf2dc82ea39ea6eba6ed77299c9a166923851b04c9b2
-SHA512 (prose-0.4.0.tar.gz) = 94bcbbcc89109680020dd79e01a707fa2133fc636700302ac690baca42124f9421292b1c6668f670bdf6420f5f80eb4d01ba67ed5074bc4a35d6efa67daf4256
-Size (prose-0.4.0.tar.gz) = 31699 bytes
+BLAKE2s (prose-0.4.2.tar.gz) = 17a995d1eed6d873862ba6497094d1e3a8ca10a6ac7fe81dc06d4c1e5b723124
+SHA512 (prose-0.4.2.tar.gz) = f75b28ffd7f2ecd0478f94101d28f6f49da4b1e3dbe2c4e206edc016053ca2e9c9db498bc5111ac4f9e55e89e6f08f51fdb792a944be4c86f9477ccd9e700f53
+Size (prose-0.4.2.tar.gz) = 33032 bytes
 BLAKE2s (pulldown-cmark-0.9.2.crate) = 554c6c01f3911fcdc3c1af58293429e6c41275d478b92c78db657563ca21f73d
 SHA512 (pulldown-cmark-0.9.2.crate) = 2268a3284da5def75b906373a3c70927bc68ecde7b641231d96ff9437785732134568abaf0b6f81c582dc56498da4e677a7b2e2f1914cd42b345db0a06d75c60
 Size (pulldown-cmark-0.9.2.crate) = 115824 bytes
