@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/01/13 04:24:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/02 15:50:55 tsutsui Exp $
 
 .include "dist.mk"
 
@@ -70,6 +70,11 @@ CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=false
 .  endif
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptmx=yes
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptc=no
+.endif
+
+.if ${MACHINE_ARCH} == "vax"
+# XXX "checking whether float word ordering is bigendian... unknown"
+CONFIGURE_ARGS+=	ax_cv_c_float_words_bigendian=no
 .endif
 
 # http://bugs.python.org/issue13241
