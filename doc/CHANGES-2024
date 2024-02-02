@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.830 2024/02/02 12:37:28 pin Exp $
+$NetBSD: CHANGES-2024,v 1.831 2024/02/02 12:38:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xcp to 0.19.0 [pin 2024-02-02]
 	Updated graphics/gradient to 0.3.4 [pin 2024-02-02]
 	Updated net/piratebay to 0.1.8 [pin 2024-02-02]
+	Updated textproc/prose to 0.4.2 [pin 2024-02-02]
