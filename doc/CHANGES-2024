@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.826 2024/02/02 08:11:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.827 2024/02/02 08:15:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1098,3 +1098,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-multidict to 6.0.5 [adam 2024-02-02]
 	Updated time/py-pytz to 2024.1 [adam 2024-02-02]
 	Updated devel/py-cbor2 to 5.6.1 [adam 2024-02-02]
+	Updated devel/py-mako to 1.3.2 [adam 2024-02-02]
+	Updated devel/py-cachecontrol to 0.14.0 [adam 2024-02-02]
