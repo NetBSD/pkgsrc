@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/13 15:05:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/03 16:00:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/lib/parallel.rb
-${GEM_LIBDIR}/lib/parallel/processor_count.rb
 ${GEM_LIBDIR}/lib/parallel/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
