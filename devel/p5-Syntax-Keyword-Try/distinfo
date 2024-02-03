@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/03 18:49:53 schmonz Exp $
+
+BLAKE2s (Syntax-Keyword-Try-0.29.tar.gz) = bd400a67730124cfc2547530a7816c2449f993e8ba0b3a30f48543842f504b18
+SHA512 (Syntax-Keyword-Try-0.29.tar.gz) = 269ea66916c39852262bc60b1661e90adf55489f1369a745a3c3ba24dd4335203a46d8bf8ddd39dcdefc4ae3314ce06b1fa7956d0a4bd23bba6fb809adaa1814
+Size (Syntax-Keyword-Try-0.29.tar.gz) = 45060 bytes
