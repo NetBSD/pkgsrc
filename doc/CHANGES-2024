@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.893 2024/02/03 17:16:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.894 2024/02/03 17:17:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/qcalc to 0.9.0 [pin 2024-02-03]
 	Updated textproc/py-jsonpickle to 3.0.2 [adam 2024-02-03]
 	Updated textproc/py-jellyfish to 1.0.3 [adam 2024-02-03]
+	Updated sysutils/broot to 1.33.0 [pin 2024-02-03]
