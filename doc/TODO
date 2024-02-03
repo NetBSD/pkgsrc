@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23982 2024/02/03 11:55:07 bsiegert Exp $
+$NetBSD: TODO,v 1.23983 2024/02/03 14:55:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -400,8 +400,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-labeling-0.4.2
 	o R-mapproj-3
 	o R-ncdf-1.6.9
-	o SOGo5-5.8.4 [wip]
-	o SOPE5-5.8.4 [wip]
+	o SOGo5-5.9.1 [wip]
+	o SOPE5-5.9.1 [wip]
 	o SQLiteCpp-2.5.0
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
@@ -1078,24 +1078,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgpdump-0.33
 	o phoronix-9.2.1
 	o phoronix-test-suite-10.8
-	o php-basercms-4.5.4
-	o php-concrete5-8.5.7 [php-concretecms-9.0.1 is successor]
+	o php-basercms-5.0.8
+	o php-concretecms-9.2.4 [successor of php-concrete5]
 	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
-	o php-jpgraph-4.3.5
-	o php-memcached-3.1.5
+	o php-jpgraph-4.4.2
+	o php-memcached-3.2.0
 	o php-mongo-1.6.16
-	o php-mongodb-1.12.0
-	o php-mrbs-1.10.0
-	o php-phrasea2-4.1.3
-	o php-piwigo-12.1.0
+	o php-mongodb-1.17.2
+	o php-mrbs-1.11.4
+	o php-phrasea2-4.1.7
+	o php-piwigo-14.2.0
 	o php-psr-1.2.0
-	o php-pthreads-3.2.0
+	o php-pthreads-3.2.0 [repository archived]
 	o php-rrd-2.0.3
 	o php-soycms-3.0.2
-	o php-tiki-23.1 [replacing php-tiki6]
+	o php-tiki-24.6 [replacing php-tiki6]
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
-	o phraseanet-4.1.2
+	o phraseanet-4.1.7
 	o phraseanet-indexer-3.8.6
 	o pick-4.0.0
 	o picocom-3.0
@@ -1226,8 +1226,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o ruby-3.3
-	o ruby-redmine-5.1.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1481,7 +1479,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zile-2.6.1
 	o zlib-1.3.1
 	o zlib-ng-2.1.4
-	o zoneminder-1.34.21
+	o zoneminder-1.36.33
 	o zookeeper-3.8.0
 	o zopeedit-0.8
 
