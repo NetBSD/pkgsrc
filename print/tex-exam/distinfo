@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:13:17 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/02/03 04:50:36 markd Exp $
 
-BLAKE2s (exam.r58023.tar.xz) = 5b695662413d0a33673fbf00db2358496ada2eadea83409da326596ed1cabe95
-SHA512 (exam.r58023.tar.xz) = 0a18063d56042bbd93d43e7e0dd7da59e352c6ee31eb9d925124f5057e6ec62a87277271bdb7f1bfd81e22537af6b648efafaef22e25956ef2e48868b381e9ea
-Size (exam.r58023.tar.xz) = 49904 bytes
+BLAKE2s (exam.r67600.tar.xz) = 9f188eecb6d49c25fa97349852187e8f085155e782dbb17476829e9ba3d71836
+SHA512 (exam.r67600.tar.xz) = 99621f442f2a36e661f98e2722776e2e9dc394abc39cd20d45bb6bcff3ed362a942dc79d386ebf45efe053fc6abe2524d95fc85c4c766d241385970fa00e5f65
+Size (exam.r67600.tar.xz) = 50760 bytes
