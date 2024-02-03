@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/02/23 15:36:05 taca Exp $
+$NetBSD: distinfo,v 1.12 2024/02/03 16:46:02 taca Exp $
 
-BLAKE2s (plist-3.7.0.gem) = ee1bbe51733f2978f74384664ef031e22a69eef824decaf30a88a0ecaefc96ad
-SHA512 (plist-3.7.0.gem) = f7db692ee636719f4aa540146f8fae764832741e4cc2be6642e6c4528e029c57e58509360321a0ec4f2f870742be4eb229f35b081f63d74ff4a934aade489a36
-Size (plist-3.7.0.gem) = 9216 bytes
+BLAKE2s (plist-3.7.1.gem) = 36a45dcc6f4f5ea4d5ce901fac13cba65774863297d9664450d44bee83f7249b
+SHA512 (plist-3.7.1.gem) = 3d118b9c9cd0c364b6b7d07a1444919f929b6cc8749b29ad0ac538a5ab63413debc3872aa9c42e31c97e39f916d71c06e16dd75c3979cab55086c191ecb2876a
+Size (plist-3.7.1.gem) = 9216 bytes
