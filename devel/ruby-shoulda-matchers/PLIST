@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/12/18 14:23:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/02/03 15:46:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -31,12 +31,12 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/allow_value_matcher/attribute_se
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setters_and_validators.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/allow_value_matcher/successful_check.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/allow_value_matcher/successful_setting.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_model/comparison_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/disallow_value_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/errors.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/have_secure_password_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/helpers.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers.rb
-${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/comparison_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/even_number_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/numericality_matchers/odd_number_matcher.rb
@@ -50,6 +50,7 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/ignore_interference_b
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/qualifiers/ignoring_interference_by_writer.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_absence_of_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_acceptance_of_matcher.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_comparison_of_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_confirmation_of_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_exclusion_of_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_model/validate_inclusion_of_matcher.rb
@@ -77,6 +78,7 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/required_m
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/source_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/association_matchers/through_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/define_enum_for_matcher.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_record/encrypt_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_attached_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_db_column_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_db_index_matcher.rb
@@ -84,6 +86,7 @@ ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_implicit_order_column.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_readonly_attribute_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_rich_text_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/have_secure_token_matcher.rb
+${GEM_LIBDIR}/lib/shoulda/matchers/active_record/normalize_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/serialize_matcher.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/uniqueness.rb
 ${GEM_LIBDIR}/lib/shoulda/matchers/active_record/uniqueness/model.rb
