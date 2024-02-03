@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/03 03:03:13 markd Exp $
 
-BLAKE2s (bxcjkjatype.r54080.tar.xz) = 09dfbf485da87e70fb9a05f365cf1cfcc2026ba1cb2e93617d04cdf577a3d87d
-SHA512 (bxcjkjatype.r54080.tar.xz) = f720106c08ffc3b8f9a2c9279325364d5ae91948d3c61b83423d41a55249cdb205bf330c8f08ce6877a7713e82a67a29f1a71e9ff07f9c1225926a61a858fb5a
-Size (bxcjkjatype.r54080.tar.xz) = 8212 bytes
+BLAKE2s (bxcjkjatype.r67705.tar.xz) = 0584c018dffe522be402e1063bf3d6c484d05dad2cc28b1baaa5d90d9adc6cb4
+SHA512 (bxcjkjatype.r67705.tar.xz) = 72d3a88c117ea971faf8bc836bfe32ddc52e96c1fe1546ceeb8a9b298b7a28fdfc8aa4b0f43bdb3fd27126383b289ad293b2ca6c4ad95873948be0651de4ea18
+Size (bxcjkjatype.r67705.tar.xz) = 8556 bytes

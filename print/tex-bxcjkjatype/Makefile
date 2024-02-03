@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:00:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/03 03:03:13 markd Exp $
 
 DISTNAME=	bxcjkjatype
-PKGNAME=	tex-${DISTNAME}-0.3
-TEXLIVE_REV=	54080
+PKGNAME=	tex-${DISTNAME}-0.5
+TEXLIVE_REV=	67705
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxcjkjatype
