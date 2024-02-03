@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/17 10:03:57 markd Exp $
+$NetBSD: distinfo,v 1.7 2024/02/03 03:07:43 markd Exp $
 
-BLAKE2s (bxjscls.r67364.tar.xz) = 314b0729330a3e4f0efc3340ae17363b363d4bd372e02862b44b8c68aeb1c454
-SHA512 (bxjscls.r67364.tar.xz) = 6be41ac3e31836e7513e93a7fbed734a2e5ac55786c003564306c4c34649017145d9cf48ae9ed141dff73c55bc041342af49726e93d166bd1ac85154fc080fdf
-Size (bxjscls.r67364.tar.xz) = 34352 bytes
+BLAKE2s (bxjscls.r69637.tar.xz) = fcddac009dc63ab9789ebf93f8c6f9a04bd10c36441bcfe166dc191da5917a78
+SHA512 (bxjscls.r69637.tar.xz) = bdcc01806c8379d02ebcb49c25bd497d11dcd3f0954dee7c1e1639c4cb3986a1bc54266e2f635c263058e1cdb34d540d52291cbe73502f02eb54d4b98ea3676b
+Size (bxjscls.r69637.tar.xz) = 35104 bytes
