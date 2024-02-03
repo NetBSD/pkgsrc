@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.852 2024/02/03 15:01:00 taca Exp $
+$NetBSD: CHANGES-2024,v 1.853 2024/02/03 15:02:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1185,3 +1185,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/ruby-tzinfo-data to 1.2024.1 [taca 2024-02-03]
 	Updated archivers/ruby-ffi-libarchive to 1.1.14 [taca 2024-02-03]
 	Updated databases/ruby-sequel to 5.77.0 [taca 2024-02-03]
+	Updated databases/ruby-sqlite3 to 1.7.2 [taca 2024-02-03]
