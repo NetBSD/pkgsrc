@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/03 23:59:18 markd Exp $
 
-BLAKE2s (tex-gfsdidot-46310/gfsdidot.tar.xz) = 03ade414aff3160572ed804ae98b972623cab1eaa3ad705fb3bddbdf3f45b223
-SHA512 (tex-gfsdidot-46310/gfsdidot.tar.xz) = 6ba55f79fa7724aa3c30d1b6d74ecb0bb656b197ad36967caebf32b09ccc093287fe4b06cfb9c40347dc790d6f1e7046a6a165b6de9e5b805ea97d6120512158
-Size (tex-gfsdidot-46310/gfsdidot.tar.xz) = 1305400 bytes
+BLAKE2s (gfsdidot.r69112.tar.xz) = 578feddf5a498b7c65bad048d33fe1e4ed0a26b7c369730673492ba30566cfac
+SHA512 (gfsdidot.r69112.tar.xz) = 436a8cb4ea88663ff3358d6991fce9364f197027797903eb1b5c74ec0a857059579f0a58597ca6427c1651bf89440d7b7c8965e79fc668ecf444dbcc9f7ed4a3
+Size (gfsdidot.r69112.tar.xz) = 1343464 bytes

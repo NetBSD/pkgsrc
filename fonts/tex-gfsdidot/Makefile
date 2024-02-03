@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:46 markd Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/03 23:59:18 markd Exp $
 
 DISTNAME=	gfsdidot
-PKGNAME=	tex-${DISTNAME}-2018
-PKGREVISION=	1
-TEXLIVE_REV=	46310
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	69112
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/gfsdidot
@@ -12,6 +11,5 @@ COMMENT=	Greek font based on Didot's work
 
 TEX_MAP_FILES+=	gfsdidot.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
