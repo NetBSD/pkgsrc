@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2024/01/31 00:05:14 adam Exp $
+# $NetBSD: Makefile,v 1.92 2024/02/03 18:26:05 adam Exp $
 
 DISTNAME=	matrix-synapse-1.98.0
 CATEGORIES=	chat
@@ -46,8 +46,15 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.1:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
+# jwt/oidc
+DEPENDS+=	${PYPKGPREFIX}-authlib>=0.15.1:../../security/py-authlib
+# postgres
+DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.8:../../databases/py-psycopg2
+# url-preview
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.2.0:../../textproc/py-lxml
 # NB: synapse needs features missing in NetBSD base system sqlite, and probably
 # missing in other builds.
+TEST_DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
