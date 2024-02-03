@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.838 2024/02/02 20:20:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.839 2024/02/03 01:50:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1115,3 +1115,13 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/neovim to 0.9.5 [tm 2024-02-02]
 	Updated sysutils/salt to 3006.6 [adam 2024-02-02]
 	Updated sysutils/py-xattr to 1.1.0 [adam 2024-02-02]
+	Updated print/tex-babel to 24.1 [mark 2024-02-03]
+	Updated print/tex-babel-doc to 24.1 [mark 2024-02-03]
+	Updated print/tex-babel-french to 3.5r [mark 2024-02-03]
+	Updated print/tex-babel-german to 2.14 [mark 2024-02-03]
+	Updated print/tex-babel-greek to 1.15 [mark 2024-02-03]
+	Updated print/tex-babel-hebrew to 2.4a [mark 2024-02-03]
+	Updated print/tex-babel-italian to 1.5.00 [mark 2024-02-03]
+	Updated print/tex-babel-norsk to 2.0j [mark 2024-02-03]
+	Updated print/tex-babel-samin to 1.0d [mark 2024-02-03]
+	Updated print/tex-babel-scottish to 1.0h [mark 2024-02-03]
