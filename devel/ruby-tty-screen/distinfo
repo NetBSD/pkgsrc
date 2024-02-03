@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:19:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/02/03 15:49:16 taca Exp $
 
-BLAKE2s (tty-screen-0.8.1.gem) = ada8513a9a27a4e7b2141adcb49fa2c05b5e95b77006d8a768420e321f51de8d
-SHA512 (tty-screen-0.8.1.gem) = 47abedf2212475c81c7f84272889b8041bcd8ee1b646d94c609fe4936b43d2be2e14194e87990ecf722a8a9be7b651dbaf5d0f2d615271b12df0c6c887c8467c
-Size (tty-screen-0.8.1.gem) = 10240 bytes
+BLAKE2s (tty-screen-0.8.2.gem) = 8dfd1a816658b65af21dca5c749752731c2aa3521d5d708f642f0338b4fd9408
+SHA512 (tty-screen-0.8.2.gem) = 92485f619755cb83422ab102d76d34f039de391d0059d3c076c2b8bb8f363f41eb973f305e0e650add906c1e909eeebb000491329c78b323c24e80e4a447e74a
+Size (tty-screen-0.8.2.gem) = 11264 bytes
