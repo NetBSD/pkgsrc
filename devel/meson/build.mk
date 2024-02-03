@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.25 2024/01/13 04:17:55 riastradh Exp $
+# $NetBSD: build.mk,v 1.26 2024/02/03 22:49:14 nros Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -137,6 +137,7 @@ meson-configure:
 		--libexecdir libexec \
 		--mandir ${PKGMANDIR} \
 		--sysconfdir ${PKG_SYSCONFDIR} \
+		--wrap-mode=nodownload \
 		${MESON_CROSS_ARGS} \
 		--buildtype=plain ${MESON_ARGS} . output
 .endfor
