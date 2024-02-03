@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/03 02:45:15 markd Exp $
 
 DISTNAME=	attachfile2
-PKGNAME=	tex-${DISTNAME}-2.11
-PKGREVISION=	3
-TEXLIVE_REV=	52929
+PKGNAME=	tex-${DISTNAME}-2.12
+TEXLIVE_REV=	69505
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/attachfile2
