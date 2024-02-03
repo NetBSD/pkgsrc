@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/06/11 05:17:49 markd Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/03 01:44:05 markd Exp $
 
 DISTNAME=	babel-greek
-PKGNAME=	tex-${DISTNAME}-1.13.2
-TEXLIVE_REV=	67268
+PKGNAME=	tex-${DISTNAME}-1.15
+TEXLIVE_REV=	68532
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-greek

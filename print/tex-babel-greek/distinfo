@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/06/11 05:17:49 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/02/03 01:44:05 markd Exp $
 
-BLAKE2s (babel-greek.r67268.tar.xz) = 1e147e86b587fcc6a253c772be237b7a7a2ee5a4665745f23a3d024fc56d8ddc
-SHA512 (babel-greek.r67268.tar.xz) = 1184ea2de3eeb3dec5df62b2d401e343863a13cdee98a37a207d24043db3d5a3a507343c7104067ca3e02dde010727af6c49e177a6faee5e7ccc3bd4ae7ecf90
-Size (babel-greek.r67268.tar.xz) = 6912 bytes
+BLAKE2s (babel-greek.r68532.tar.xz) = 45439db2109c34459c815949a70a8af1203cc017e0b19ae26686873dd33bb3dc
+SHA512 (babel-greek.r68532.tar.xz) = f81c220447f77f207dee02a5611edb3dfe68fb775abe932efc560de9a268570e688b3abe4eb3dcc094ac0c967360d52be02bc85c82daedcf173bcda269065938
+Size (babel-greek.r68532.tar.xz) = 6976 bytes
