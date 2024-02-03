@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.153 2023/11/14 14:03:24 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2024/02/03 21:29:43 abs Exp $
 
-DISTNAME=		xscreensaver-6.05.1
-PKGREVISION=		8
+DISTNAME=		xscreensaver-6.08
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
@@ -11,7 +10,7 @@ HOMEPAGE=		https://www.jwz.org/xscreensaver/
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c99
+USE_CC_FEATURES=	c99
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
@@ -27,9 +26,6 @@ CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
 CONFIGURE_ARGS+=	--without-motif
 
 CONFIGURE_ARGS.NetBSD+=	--without-kerberos
-
-# remove on next update
-WRKSRC=			${WRKDIR}/${DISTNAME:R}
 
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 
@@ -49,6 +45,11 @@ INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
 REPLACE_PERL+=	hacks/*.pl hacks/*/*.pl
+
+REPLACE_INTERPRETER+=	xdg-open
+REPLACE.xdg-open.old=	.*/bin/env xdg-open
+REPLACE.xdg-open.new=	${PREFIX}/bin/xdg-open
+REPLACE_FILES.xdg-open=	driver/xscreensaver.desktop.in driver/xscreensaver-settings.desktop.in
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
