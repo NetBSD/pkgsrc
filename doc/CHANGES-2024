@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.901 2024/02/03 22:22:18 pin Exp $
+$NetBSD: CHANGES-2024,v 1.902 2024/02/03 22:31:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1238,3 +1238,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xscreensaver to 6.08 [abs 2024-02-03]
 	Updated sysutils/broot to 1.33.1 [pin 2024-02-03]
 	Updated sysutils/felix to 2.12.1 [pin 2024-02-03]
+	Updated graphics/matugen to 2.1.0 [pin 2024-02-03]
