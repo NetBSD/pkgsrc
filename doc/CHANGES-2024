@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.860 2024/02/03 15:23:12 taca Exp $
+$NetBSD: CHANGES-2024,v 1.861 2024/02/03 15:30:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-git to 1.19.1 [taca 2024-02-03]
 	Updated devel/ruby-highline to 3.0.1 [taca 2024-02-03]
 	Updated devel/ruby-io-event to 1.4.2 [taca 2024-02-03]
+	Updated devel/ruby-native-package-installer to 1.1.9 [taca 2024-02-03]
