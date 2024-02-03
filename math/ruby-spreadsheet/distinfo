@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2021/11/23 14:42:13 taca Exp $
+$NetBSD: distinfo,v 1.57 2024/02/03 15:57:05 taca Exp $
 
-BLAKE2s (spreadsheet-1.3.0.gem) = 53748200c34058ee2d69c3260501190487922a8dc4b3b415f46747a8f410cf1f
-SHA512 (spreadsheet-1.3.0.gem) = a608bccb56f22867996d5ae6e787884992b784d29bfea1f3bd4a19b092ff35f28a085c69423e3db34d78482183fac796fa5f98ec990ec87e685b5fc3b00598d3
-Size (spreadsheet-1.3.0.gem) = 366080 bytes
+BLAKE2s (spreadsheet-1.3.1.gem) = 9daa58ab7de68a64deaf20bcc405807eca737efc30809669683f1cfdccbe3c4f
+SHA512 (spreadsheet-1.3.1.gem) = ec34642d2a98846288b475f99e95751220faad975f670aa2216e7664f2a4941256cf89c5a6ae293fd5b3d192aa36a62080170f9e98fab654748cbb45af0dc8c9
+Size (spreadsheet-1.3.1.gem) = 366080 bytes
