@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.850 2024/02/03 14:51:56 taca Exp $
+$NetBSD: CHANGES-2024,v 1.851 2024/02/03 14:59:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/stow to 2.3.1 [bsiegert 2024-02-03]
 	Updated math/R-plyr to 1.8.9 [mef 2024-02-03]
 	Updated time/ruby-tzinfo-data to 1.2024.1 [taca 2024-02-03]
+	Updated archivers/ruby-ffi-libarchive to 1.1.14 [taca 2024-02-03]
