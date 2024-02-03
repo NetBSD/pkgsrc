@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:41:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/03 01:48:45 markd Exp $
 share/texmf-dist/tex/generic/babel-scottish/scottish.ldf
+share/texmf-dist/tex/generic/babel-scottish/scottishgaelic.ldf
