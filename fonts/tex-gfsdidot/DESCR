@@ -5,4 +5,4 @@ Didot's son, and was very widely used. The present version is
 provided by the Greek Font Society. The font supports the Greek
 alphabet, and is accompanied by a matching Latin alphabet based
 on Zapf's Palatino. LaTeX support is provided, using the OT1,
-T1 and LGR encodings.
+T1, TS1, and LGR encodings.
