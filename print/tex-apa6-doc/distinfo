@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/02/03 02:42:23 markd Exp $
 
-BLAKE2s (apa6.doc.r53406.tar.xz) = faf94784e1ddb2a0f9457d64172b1d623e1dda24d3cf5d0e17f6fe80d6973f96
-SHA512 (apa6.doc.r53406.tar.xz) = 841821dbf4f8efa07a96dc37d26e21348ef5e1c486ffabbedfe973833d2328b8c5fb32196ae2e0323683d1d20b635242c371262df92ccc0c4bbe126c89263dfe
-Size (apa6.doc.r53406.tar.xz) = 565092 bytes
+BLAKE2s (apa6.doc.r67848.tar.xz) = 9b6d136a1a24cafb425762ef72bcd92ce64ac0b2e3296747a6a29aa7e7c2de15
+SHA512 (apa6.doc.r67848.tar.xz) = 244f143bdb9209482eba9c644a21b65af3a6990b5896ef079aaaac2aa57bfd4c0ae26878cf1f87d3f1744b3dece2aaebfccae4e0ebaa846944b614b76a12a673
+Size (apa6.doc.r67848.tar.xz) = 556524 bytes

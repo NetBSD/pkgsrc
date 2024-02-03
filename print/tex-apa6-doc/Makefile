@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/04/27 22:35:36 markd Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/03 02:42:23 markd Exp $
 
 DISTNAME=	apa6.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.34
-TEXLIVE_REV=	53406
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.35
+TEXLIVE_REV=	67848
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/apa6
