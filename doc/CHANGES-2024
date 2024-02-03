@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.868 2024/02/03 15:51:43 taca Exp $
+$NetBSD: CHANGES-2024,v 1.869 2024/02/03 15:53:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1200,3 +1200,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-shoulda-matchers to 6.1.0 [taca 2024-02-03]
 	Updated devel/ruby-tty-screen to 0.8.2 [taca 2024-02-03]
 	Updated finance/ruby-braintree to 4.18.0 [taca 2024-02-03]
+	Updated graphics/ruby-image_size to 3.4.0 [taca 2024-02-03]
