@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/02/03 15:10:19 taca Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/03 15:12:24 taca Exp $
 
-DISTNAME=	git-1.19.0
+DISTNAME=	git-1.19.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
