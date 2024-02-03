@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/01/20 03:42:08 mef Exp $
+# $NetBSD: Makefile,v 1.31 2024/02/03 21:46:08 mef Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.0.12
@@ -25,7 +25,8 @@ TEST_DEPENDS+=	tex-ae-[0-9]*:../../fonts/tex-ae
 TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=		c++
+USE_CXX_FEATURES+=	c++11
 
 REPLACE_R+=		inst/examples/*/*.r
 REPLACE_R+=		inst/examples/SugarPerformance/sugarBenchmarks.R
