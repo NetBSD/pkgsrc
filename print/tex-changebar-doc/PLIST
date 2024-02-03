@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/15 04:16:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/03 04:04:52 markd Exp $
 share/texmf-dist/doc/latex/changebar/CATALOG
 share/texmf-dist/doc/latex/changebar/MANIFEST
 share/texmf-dist/doc/latex/changebar/README
+share/texmf-dist/doc/latex/changebar/cbtest1-ltx.pdf
+share/texmf-dist/doc/latex/changebar/cbtest1-pdf.pdf
+share/texmf-dist/doc/latex/changebar/cbtest1.tex
+share/texmf-dist/doc/latex/changebar/cbtest2-ltx.pdf
+share/texmf-dist/doc/latex/changebar/cbtest2-pdf.pdf
+share/texmf-dist/doc/latex/changebar/cbtest2.tex
 share/texmf-dist/doc/latex/changebar/changebar.bug
 share/texmf-dist/doc/latex/changebar/changebar.pdf

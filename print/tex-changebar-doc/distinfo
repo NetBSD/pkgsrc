@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/05/15 04:16:47 markd Exp $
+$NetBSD: distinfo,v 1.7 2024/02/03 04:04:52 markd Exp $
 
-BLAKE2s (changebar.doc.r63259.tar.xz) = b4cb2f44b546bab33fc40da0ac11c91ef54131fa5d44d560e8564a87ef455213
-SHA512 (changebar.doc.r63259.tar.xz) = f3ece8b350ee00ecb596f0f66ef2ded81b7c507c618d226084d4a4e403441b9183a3686c2c26430654c45f15471092e83864a28cddad3d08e60c656d3af8ebe1
-Size (changebar.doc.r63259.tar.xz) = 376148 bytes
+BLAKE2s (changebar.doc.r69367.tar.xz) = 762d6d70939d3b14062e0a70ea92ee37c380b9f436f4eea9fb8814c4b545f30f
+SHA512 (changebar.doc.r69367.tar.xz) = 5e0e2766b5078d1ffe87c36d14961aca842ff7d0ee73aefc6277b730dfcf98ea573c822addb2d6b95cc3981e6f56458a3a209c03848eea48170f7452a6261b96
+Size (changebar.doc.r69367.tar.xz) = 636916 bytes
