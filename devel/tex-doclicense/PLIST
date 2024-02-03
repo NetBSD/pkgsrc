@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2022/05/22 21:08:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/03 04:42:51 markd Exp $
 share/texmf-dist/tex/latex/doclicense/doclicense-UKenglish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-USenglish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-acadian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-american.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-australian.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-austrian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-brazilian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-british.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-bulgarian.ldf
@@ -19,16 +20,20 @@ share/texmf-dist/tex/latex/doclicense/doclicense-esperanto.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-french.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-galician.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-german.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-greek.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-italian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-japanese.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-marathi.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-naustrian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-newzealand.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-ngerman.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-nswissgerman.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-polish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-portuguese.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-russian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-spanish.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-swedish.ldf
+share/texmf-dist/tex/latex/doclicense/doclicense-swissgerman.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense-ukrainian.ldf
 share/texmf-dist/tex/latex/doclicense/doclicense.sty
 share/texmf-dist/tex/latex/doclicense/images/doclicense-CC-by-80x15.eps
