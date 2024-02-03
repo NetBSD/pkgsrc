@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.886 2024/02/03 16:35:13 taca Exp $
+$NetBSD: CHANGES-2024,v 1.887 2024/02/03 16:36:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1218,3 +1218,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-sshkit to 1.22.0 [taca 2024-02-03]
 	Updated sysutils/ruby-childprocess to 5.0.0 [taca 2024-02-03]
 	Updated sysutils/ruby-facter to 4.5.2 [taca 2024-02-03]
+	Updated sysutils/ruby-specinfra to 2.87.2 [taca 2024-02-03]
