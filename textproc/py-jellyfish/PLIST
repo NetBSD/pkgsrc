@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/03 08:37:56 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/02/03 17:16:02 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
 ${PYSITELIB}/jellyfish/__init__.py
 ${PYSITELIB}/jellyfish/__init__.pyc
+${PYSITELIB}/jellyfish/__init__.pyi
 ${PYSITELIB}/jellyfish/__init__.pyo
 ${PYSITELIB}/jellyfish/_jellyfish.py
 ${PYSITELIB}/jellyfish/_jellyfish.pyc
 ${PYSITELIB}/jellyfish/_jellyfish.pyo
-${PYSITELIB}/jellyfish/cjellyfish.so
-${PYSITELIB}/jellyfish/porter.py
-${PYSITELIB}/jellyfish/porter.pyc
-${PYSITELIB}/jellyfish/porter.pyo
-${PYSITELIB}/jellyfish/test.py
-${PYSITELIB}/jellyfish/test.pyc
-${PYSITELIB}/jellyfish/test.pyo
+${PYSITELIB}/jellyfish/_rustyfish.so
+${PYSITELIB}/jellyfish/py.typed
