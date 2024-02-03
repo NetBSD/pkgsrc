@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/07/30 04:06:37 taca Exp $
+$NetBSD: distinfo,v 1.11 2024/02/03 15:30:08 taca Exp $
 
-BLAKE2s (native-package-installer-1.1.8.gem) = 3cfaa89263b3b43e2d4de01654a333a5f349cbd8d72f62c8fae1545723c73186
-SHA512 (native-package-installer-1.1.8.gem) = 78a2e602724a7394927711bc0ad3abdf0863ac1d6da9cb26299d0562d9c5385324574af1fc50ec79f778690f2447a959cb9cb51917b2cbac344737028e27e244
-Size (native-package-installer-1.1.8.gem) = 24064 bytes
+BLAKE2s (native-package-installer-1.1.9.gem) = e906d71a7e4f12f78ac422c22005398c864a2e72922f58847009e01eb3ef065a
+SHA512 (native-package-installer-1.1.9.gem) = a5944e2fcfe34cb1e4034c7692edf3cdeb63bf599d6f0c4ce93e0a2a01565b6c3183037f1e0a3606118bc71cd3dda250db3e7658e290dda1b35973411b1f10fc
+Size (native-package-installer-1.1.9.gem) = 24064 bytes
