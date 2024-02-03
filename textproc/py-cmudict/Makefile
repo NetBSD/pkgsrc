@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/01/12 14:23:35 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/02/03 18:24:05 adam Exp $
 
-DISTNAME=	cmudict-1.0.16
+DISTNAME=	cmudict-1.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
@@ -17,7 +17,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=5.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
