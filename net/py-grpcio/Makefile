@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2024/01/30 18:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.66 2024/02/03 20:02:04 adam Exp $
 
-DISTNAME=	grpcio-1.60.0
+DISTNAME=	grpcio-1.60.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
@@ -14,10 +13,12 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
 
-USE_LANGUAGES=	c99 c++11
-USE_TOOLS+=	gmake pkg-config
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
