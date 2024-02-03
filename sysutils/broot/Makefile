@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2024/02/03 17:16:56 pin Exp $
+# $NetBSD: Makefile,v 1.93 2024/02/03 22:20:54 pin Exp $
 
-DISTNAME=	broot-1.33.0
+DISTNAME=	broot-1.33.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
