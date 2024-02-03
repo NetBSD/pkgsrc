@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4169 2024/01/30 21:08:50 adam Exp $
+# $NetBSD: Makefile,v 1.4170 2024/02/03 18:49:55 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2076,6 +2076,7 @@ SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Symbol-Global-Name
 SUBDIR+=	p5-Syntax-Keyword-Junction
 SUBDIR+=	p5-Syntax-Keyword-Match
+SUBDIR+=	p5-Syntax-Keyword-Try
 SUBDIR+=	p5-Sys-Mmap
 SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
