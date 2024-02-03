@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/08/05 08:59:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/02/03 16:21:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -119,7 +119,6 @@ ${GEM_LIBDIR}/lib/net/ssh/verifiers/accept_new_or_local_tunnel.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/always.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/never.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
-${GEM_LIBDIR}/lib/net/ssh/version.rb.old
 ${GEM_LIBDIR}/net-ssh-public_cert.pem
 ${GEM_LIBDIR}/net-ssh.gemspec
 ${GEM_LIBDIR}/support/ssh_tunnel_bug.rb
