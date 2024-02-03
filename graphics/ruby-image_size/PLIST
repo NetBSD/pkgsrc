@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/06/06 13:54:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/03 15:53:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/check.yml
 ${GEM_LIBDIR}/.github/workflows/rubocop.yml
@@ -15,10 +15,12 @@ ${GEM_LIBDIR}/lib/image_size.rb
 ${GEM_LIBDIR}/lib/image_size/chunky_reader.rb
 ${GEM_LIBDIR}/lib/image_size/format_error.rb
 ${GEM_LIBDIR}/lib/image_size/isobmff.rb
+${GEM_LIBDIR}/lib/image_size/media_types.rb
 ${GEM_LIBDIR}/lib/image_size/reader.rb
 ${GEM_LIBDIR}/lib/image_size/seekable_io_reader.rb
 ${GEM_LIBDIR}/lib/image_size/stream_io_reader.rb
 ${GEM_LIBDIR}/lib/image_size/string_reader.rb
+${GEM_LIBDIR}/lib/image_size/uri.rb
 ${GEM_LIBDIR}/lib/image_size/uri_reader.rb
 ${GEM_LIBDIR}/spec/image_size/chunky_reader_spec.rb
 ${GEM_LIBDIR}/spec/image_size/isobmff_spec.rb
