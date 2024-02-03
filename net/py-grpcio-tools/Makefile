@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2024/01/30 18:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.60 2024/02/03 20:02:04 adam Exp $
 
-DISTNAME=	grpcio-tools-1.60.0
+DISTNAME=	grpcio-tools-1.60.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-tools/}
 
@@ -18,7 +17,9 @@ DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 
 CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
