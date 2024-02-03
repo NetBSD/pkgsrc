@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/11/11 09:30:54 taca Exp $
+$NetBSD: distinfo,v 1.10 2024/02/03 14:58:45 taca Exp $
 
-BLAKE2s (ffi-libarchive-1.1.13.gem) = 216d8c62979774c4b7ccbb7bb71500e1100381e60a16f9fb30531431ce6331d1
-SHA512 (ffi-libarchive-1.1.13.gem) = 7a7a9ec78a19b06892512271cccf627174cd2c57f36c3edde68b15b6164d82de00207f4aa712f8c45f14a4dc1f47554eb1493fb18787758aff2d645b449bcf26
-Size (ffi-libarchive-1.1.13.gem) = 16384 bytes
+BLAKE2s (ffi-libarchive-1.1.14.gem) = ad2a0ba5feb12bd092ae689cb2f38d11a0db070b796e7471a5dbc2ef423bab84
+SHA512 (ffi-libarchive-1.1.14.gem) = 410efe981e5bb9fde5bc413d2f9ecd67a6bc64bc4cd7eef1425e077fe1ab339c8cb7ad8c4765ad334e638afe911602acb567c4fe2c6c9930abe42e8f9e3e6752
+Size (ffi-libarchive-1.1.14.gem) = 16384 bytes
