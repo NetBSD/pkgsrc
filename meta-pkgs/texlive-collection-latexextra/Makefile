@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2024/02/03 06:09:10 markd Exp $
+# $NetBSD: Makefile,v 1.89 2024/02/03 07:34:48 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2023pre9
@@ -1036,7 +1036,6 @@ DEPENDS+=	tex-pageslts-[0-9]*:../../print/tex-pageslts
 # depend papercdcase
 # depend papermas
 # depend papertex
-# depend paracol
 DEPENDS+=	tex-paracol-[0-9]*:../../print/tex-paracol
 # depend parades
 DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
