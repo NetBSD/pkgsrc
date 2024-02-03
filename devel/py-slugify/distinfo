@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/27 18:53:18 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/02/03 08:10:55 adam Exp $
 
-BLAKE2s (python-slugify-8.0.2.tar.gz) = 40fa3a6251dc6b365e125c94b8f0436896f74651e989b849b6d65fc580b6de4b
-SHA512 (python-slugify-8.0.2.tar.gz) = 55ea7f81e2608284e4c640c3df91341def326d257f5dd22c3044e78f02022bbcf26cebfc841e1e7644ae1b51e1a305bf363e9a56231c12d0cec883f751bfa0c6
-Size (python-slugify-8.0.2.tar.gz) = 10892 bytes
+BLAKE2s (python-slugify-8.0.3.tar.gz) = dd9358f69260523507a32b090c779eed6b00a43719bf822ff2e2c37fa511e66d
+SHA512 (python-slugify-8.0.3.tar.gz) = 7171262d42fd5d04c001e15a4265a7a430ac2d53d8b014dd1284051382fa1b8eb770291d24c706bbabbf0b84b844e483546d1718057dfdbaf34b3d4c87f29336
+Size (python-slugify-8.0.3.tar.gz) = 10874 bytes
