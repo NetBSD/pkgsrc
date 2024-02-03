@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/03 01:47:51 markd Exp $
 
-BLAKE2s (tex-babel-samin-30288/babel-samin.tar.xz) = 99cf7cf34fed7676d5c548858bf1075441570770e5a9a336e355f679639aa6de
-SHA512 (tex-babel-samin-30288/babel-samin.tar.xz) = 1fde5eb51d8521ca6f115f973b6fdd23cadcc80b338f08f1d46529465bfe79f57ecc95aa6bba10dac55e8c79fbbbeb65c93a877cdb405615b83307445ac3157c
-Size (tex-babel-samin-30288/babel-samin.tar.xz) = 2320 bytes
+BLAKE2s (babel-samin.r69604.tar.xz) = 9e81deef952220883370b4fa438f008bf9c2d66192e1db9ff0b6424fad89e0af
+SHA512 (babel-samin.r69604.tar.xz) = bee2cb83522430ff8bc8e65513d2268a529a041b85b10315c4902749d840ee1716db45df56f259a7db726a94147fdebfa573e99b9e654c7ed4df87f5d574877e
+Size (babel-samin.r69604.tar.xz) = 1900 bytes
