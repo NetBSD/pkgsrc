@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/03 03:11:14 markd Exp $
 
-BLAKE2s (bxwareki.doc.r51286.tar.xz) = baa22835fbec3c402f1773eda9a2553bb3b04c5ee9121e4cb45bd009c2b87d0e
-SHA512 (bxwareki.doc.r51286.tar.xz) = d861ef91292b76b4f248b51d99d062116f49be1f942629d049fff00e20a6e383bed050799a576e14f7daef52dd4f7f1fdd2ce898374191b9c719421ea755d7f0
-Size (bxwareki.doc.r51286.tar.xz) = 182888 bytes
+BLAKE2s (bxwareki.doc.r67594.tar.xz) = 32a9926b7b058aac10e71e466fbfca566ce6009912f80822355aaf9b2c2a8cba
+SHA512 (bxwareki.doc.r67594.tar.xz) = 60c6416a036372f3fbe636dc46106114d2a43ba292f961fe299f765afd9e23c975a7f68f4c48a9c1ef9ea5b9b97224f1d0f1bd1585fb90b5f183a14528351539
+Size (bxwareki.doc.r67594.tar.xz) = 229380 bytes
