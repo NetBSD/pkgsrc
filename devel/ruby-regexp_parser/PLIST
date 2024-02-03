@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/11/11 12:20:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/02/03 15:36:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -27,6 +27,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/construct.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/human_name.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/negative.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/options.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/parts.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/printing.rb
