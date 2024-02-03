@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/06/11 06:35:35 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/03 23:49:46 markd Exp $
 
-BLAKE2s (footmisc.r67232.tar.xz) = b7b49efb344ef97f131f99a1d1fe8752bc55c61f3887d6af1a6df6bfe48aa06a
-SHA512 (footmisc.r67232.tar.xz) = 7d276a76e395634de9f0133831823bbc127820d191497383b89ce08a8e87fa3e5cf37cde5e583728db91e18310588196707bb6be0948d890e9b5d8d5fe814d94
-Size (footmisc.r67232.tar.xz) = 7676 bytes
+BLAKE2s (footmisc.r67556.tar.xz) = cacfd79f8e3570c8b6001bdd374d4436c96ae2d9d6f00c82834b19bead20e3de
+SHA512 (footmisc.r67556.tar.xz) = 814aa0a1add20812ca241280a408c1bba21920c2751f171a67532aaf6e4dafd786578701a7f431a0295a139052c8c7c37f46c7e4df35e6fd14f468a5c7181b75
+Size (footmisc.r67556.tar.xz) = 7684 bytes
