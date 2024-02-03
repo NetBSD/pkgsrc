@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/03 11:54:31 mef Exp $
+
+BLAKE2s (R/itertools_0.1-3.tar.gz) = 70e82c0b5b1b018c729ea2b36c76d16c366c54f085edd73513d0a45c2f072575
+SHA512 (R/itertools_0.1-3.tar.gz) = 2c551654224183cb8e85e05e8a4461e8008f851128e430e5a4a0c30ffae328eb9aa7bfdf717129bee5eec173327e4d951cdb93fea4fad7c37c02f7ddb72cab31
+Size (R/itertools_0.1-3.tar.gz) = 21415 bytes
