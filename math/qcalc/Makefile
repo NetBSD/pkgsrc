@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/02/01 11:20:48 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/03 17:15:46 pin Exp $
 
-DISTNAME=	qcalc-0.5.0
+DISTNAME=	qcalc-0.9.0
 CATEGORIES=	math
 MASTER_SITES=	https://static.crates.io/crates/qcalc/
 EXTRACT_SUFX=	.crate
