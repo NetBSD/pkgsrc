@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/19 10:37:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/03 11:54:55 bsiegert Exp $
 bin/chkstow
 bin/stow
 info/stow.info
@@ -7,7 +7,8 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Stow/Util.pm
 man/man8/stow.8
 share/doc/stow/ChangeLog
 share/doc/stow/ChangeLog.OLD
-share/doc/stow/README
+share/doc/stow/INSTALL.md
+share/doc/stow/README.md
 share/doc/stow/manual-single.html
 share/doc/stow/manual-split/Bootstrapping.html
 share/doc/stow/manual-split/Compile_002dtime-vs-Install_002dtime.html
