@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.889 2024/02/03 16:40:39 taca Exp $
+$NetBSD: CHANGES-2024,v 1.890 2024/02/03 16:44:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ruby-specinfra to 2.87.2 [taca 2024-02-03]
 	Updated textproc/ruby-diff-lcs to 1.5.1 [taca 2024-02-03]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.5 [taca 2024-02-03]
+	Updated textproc/ruby-libxml to 5.0.2 [taca 2024-02-03]
