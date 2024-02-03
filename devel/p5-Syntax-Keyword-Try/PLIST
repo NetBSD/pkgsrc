@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/03 18:49:53 schmonz Exp $
+@comment TODO: to fill this file with the file listing:
+@comment TODO: 1. run "/opt/pkg/bin/bmake package"
+@comment TODO: 2. run "/opt/pkg/bin/bmake print-PLIST"
