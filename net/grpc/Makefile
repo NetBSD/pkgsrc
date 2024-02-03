@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2024/01/30 18:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.83 2024/02/03 20:02:03 adam Exp $
 
-DISTNAME=	grpc-1.60.0
-PKGREVISION=	1
+DISTNAME=	grpc-1.60.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,9 +10,9 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	High performance, open-source universal RPC framework
 LICENSE=	apache-2.0
 
-USE_LANGUAGES+=	c c++
-
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++14
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 # use cmake's find_package() to locate a pre-installed dependency
