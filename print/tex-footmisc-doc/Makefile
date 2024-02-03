@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/06/11 06:35:35 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/03 23:49:47 markd Exp $
 
 DISTNAME=	footmisc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-6.0e
-TEXLIVE_REV=	67232
+PKGNAME=	tex-${DISTNAME:S/./-/}-6.0f
+TEXLIVE_REV=	67556
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/footmisc
