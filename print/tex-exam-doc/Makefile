@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/06/03 07:00:11 markd Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/03 04:50:36 markd Exp $
 
 DISTNAME=	exam.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.7
-TEXLIVE_REV=	58023
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.704
+TEXLIVE_REV=	67600
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/exam
