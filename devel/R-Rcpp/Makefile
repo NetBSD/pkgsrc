@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2024/02/03 21:46:08 mef Exp $
+# $NetBSD: Makefile,v 1.32 2024/02/03 21:53:13 mef Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.0.12
 CATEGORIES=	devel
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Seamless R and C++ integration
