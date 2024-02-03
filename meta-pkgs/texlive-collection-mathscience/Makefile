@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2024/01/18 20:09:29 markd Exp $
+# $NetBSD: Makefile,v 1.26 2024/02/03 05:48:50 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2023pre1
 PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69267
+TEXLIVE_REV=	69485
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -159,6 +159,7 @@ DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend matrix-skeleton
 # depend mattens
 # depend mecaso
+# depend medmath
 # depend membranecomputing
 # depend memorygraphs
 # depend messagepassing
@@ -180,6 +181,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend numerica-plus
 # depend numerica-tables
 # depend objectz
+# depend odesandpdes
 # depend oplotsymbl
 # depend ot-tableau
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
