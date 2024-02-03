@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/11/11 12:38:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/03 15:51:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -136,6 +136,7 @@ ${GEM_LIBDIR}/lib/braintree/transaction/installment/adjustment.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/local_payment_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/meta_checkout_card_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/meta_checkout_token_details.rb
+${GEM_LIBDIR}/lib/braintree/transaction/package_details.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt/card_present_data.rb
 ${GEM_LIBDIR}/lib/braintree/transaction/payment_receipt/merchant_address.rb
@@ -205,6 +206,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/merchant_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/merchant_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/oauth_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/package_tracking_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/payment_method_us_bank_account_spec.rb
@@ -266,6 +268,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/modification_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/package_tracking_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_customer_data_updated_metadata_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_payer_info_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_spec.rb
