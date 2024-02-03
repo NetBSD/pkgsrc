@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/03 03:00:57 markd Exp $
 
-BLAKE2s (bookmark.r56885.tar.xz) = 0f8d20269a9e0f15781ceadad4a7982a1cc55327c8c4d0536f4e4b7323867efb
-SHA512 (bookmark.r56885.tar.xz) = 56d73af9961348a8436beb957b65cd9cb0bf62c9031fa71e5f247a367ecfbbb15763214710c66e057d2806a0dc0ce09b05a163d74a7687c8f0dc340ebdbd2849
-Size (bookmark.r56885.tar.xz) = 8272 bytes
+BLAKE2s (bookmark.r69084.tar.xz) = e078df309aefb92f9ac60c6ba8381dbc75509291daaad2725878b873a5d8aedc
+SHA512 (bookmark.r69084.tar.xz) = 0a95a2839415393f430eac43a0cac3ac1c4397d68b037167d0e66595e82cda6ef11078bee63855ed1de66191f2f241418705ff819dbe02ac4e3c68ba88eec52d
+Size (bookmark.r69084.tar.xz) = 8024 bytes
