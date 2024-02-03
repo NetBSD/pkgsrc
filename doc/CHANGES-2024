@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.842 2024/02/03 08:12:20 adam Exp $
+$NetBSD: CHANGES-2024,v 1.843 2024/02/03 08:24:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1174,3 +1174,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/po4a to 0.70nb1 [schmonz 2024-02-03]
 	Updated devel/py-slugify to 8.0.3 [adam 2024-02-03]
 	Updated misc/py-trove-classifiers to 2024.1.31 [adam 2024-02-03]
+	Updated devel/py-pydantic-core to 2.16.2 [adam 2024-02-03]
+	Updated security/py-certifi to 2024.2.2 [adam 2024-02-03]
