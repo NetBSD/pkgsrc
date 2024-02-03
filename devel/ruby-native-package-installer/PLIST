@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/07/30 04:06:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/03 15:30:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/lib/native-package-installer.rb
 ${GEM_LIBDIR}/lib/native-package-installer/executable-finder.rb
 ${GEM_LIBDIR}/lib/native-package-installer/os-release.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/alpine-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/alt-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/amazon-linux-2.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/amazon-linux-2023.rb
