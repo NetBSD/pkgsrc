@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2020/07/21 10:57:12 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/02/03 17:11:34 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jsonpickle/__init__.py
 ${PYSITELIB}/jsonpickle/__init__.pyc
 ${PYSITELIB}/jsonpickle/__init__.pyo
@@ -13,9 +13,15 @@ ${PYSITELIB}/jsonpickle/backend.pyo
 ${PYSITELIB}/jsonpickle/compat.py
 ${PYSITELIB}/jsonpickle/compat.pyc
 ${PYSITELIB}/jsonpickle/compat.pyo
+${PYSITELIB}/jsonpickle/errors.py
+${PYSITELIB}/jsonpickle/errors.pyc
+${PYSITELIB}/jsonpickle/errors.pyo
 ${PYSITELIB}/jsonpickle/ext/__init__.py
 ${PYSITELIB}/jsonpickle/ext/__init__.pyc
 ${PYSITELIB}/jsonpickle/ext/__init__.pyo
+${PYSITELIB}/jsonpickle/ext/gmpy.py
+${PYSITELIB}/jsonpickle/ext/gmpy.pyc
+${PYSITELIB}/jsonpickle/ext/gmpy.pyo
 ${PYSITELIB}/jsonpickle/ext/numpy.py
 ${PYSITELIB}/jsonpickle/ext/numpy.pyc
 ${PYSITELIB}/jsonpickle/ext/numpy.pyo
