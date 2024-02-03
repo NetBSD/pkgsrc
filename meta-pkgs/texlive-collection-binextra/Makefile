@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2024/01/18 19:46:35 markd Exp $
+# $NetBSD: Makefile,v 1.28 2024/02/03 05:50:23 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69128
+TEXLIVE_REV=	69527
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -85,6 +85,7 @@ DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
 # depend pfarrei
 DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
 # depend pkfix-helper
+# depend ppmcheckpdf
 # depend purifyeps
 # depend pythontex
 # depend runtexshebang
