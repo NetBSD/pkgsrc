@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/03 01:48:45 markd Exp $
 
-BLAKE2s (tex-babel-scottish-30289/babel-scottish.tar.xz) = 5367074378c45f0d78372c665fc8da15ede5f50896bcecf48288731155abdfdb
-SHA512 (tex-babel-scottish-30289/babel-scottish.tar.xz) = 9f191717aefbf5ce89c54ad0daa8db668ef35c8204a8ae7206fe8baeb1fbca07cbdb4c91172a6266b33a91b402b34dac9964f63621a8f73c05d59b714a6504fb
-Size (tex-babel-scottish-30289/babel-scottish.tar.xz) = 2240 bytes
+BLAKE2s (babel-scottish.r69610.tar.xz) = a8f0b00d8598cbfc210786589fb886cbea401182e92d4a9905824ba79a72d4e1
+SHA512 (babel-scottish.r69610.tar.xz) = 16632367173512a1ff0d678334071893efc91d9ca16279075a63b84acabaeaa8cd35263f56e6e3251cd57a77bdc9f0613c34e60f0acc8de14f4e0fafde751d81
+Size (babel-scottish.r69610.tar.xz) = 1828 bytes
