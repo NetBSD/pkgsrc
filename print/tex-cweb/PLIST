@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2023/06/17 10:13:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/03 04:39:45 markd Exp $
 share/texmf-dist/tex/plain/cweb/ctproofmac.tex
 share/texmf-dist/tex/plain/cweb/cttwinxmac.tex
 share/texmf-dist/tex/plain/cweb/ctwimac.tex
+share/texmf-dist/tex/plain/cweb/cwebacromac.tex
 share/texmf-dist/tex/plain/cweb/cwebbin/Xcwebmac.tex
 share/texmf-dist/tex/plain/cweb/cwebbin/cweb_ecma94.sty
 share/texmf-dist/tex/plain/cweb/cwebbin/cweb_hp8.sty
@@ -16,5 +17,6 @@ share/texmf-dist/tex/plain/cweb/cwebbin/icwebmac.tex
 share/texmf-dist/tex/plain/cweb/cwebbin/pdfctproofmac.tex
 share/texmf-dist/tex/plain/cweb/cwebbin/pdfctwimac.tex
 share/texmf-dist/tex/plain/cweb/cwebbin/pdfwebtocfront.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/twimac-web.tex
 share/texmf-dist/tex/plain/cweb/cwebmac.tex
 share/texmf-dist/tex/plain/cweb/twinx-startup.tex
