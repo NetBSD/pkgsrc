@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2024/02/01 11:19:40 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2024/02/03 22:30:52 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -95,7 +95,7 @@ CARGO_CRATE_DEPENDS+=	libredox-0.0.1
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.12
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.11
 CARGO_CRATE_DEPENDS+=	log-0.4.20
-CARGO_CRATE_DEPENDS+=	material-colors-0.1.4
+CARGO_CRATE_DEPENDS+=	material-colors-0.1.6
 CARGO_CRATE_DEPENDS+=	memchr-2.6.4
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
@@ -115,15 +115,11 @@ CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	pin-project-lite-0.2.13
 CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0
 CARGO_CRATE_DEPENDS+=	png-0.17.10
-CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.17
 CARGO_CRATE_DEPENDS+=	pretty_env_logger-0.5.0
 CARGO_CRATE_DEPENDS+=	prettytable-rs-0.10.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.71
 CARGO_CRATE_DEPENDS+=	qoi-0.4.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.33
-CARGO_CRATE_DEPENDS+=	rand-0.8.5
-CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
-CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	rayon-1.8.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
