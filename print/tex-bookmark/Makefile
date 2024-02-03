@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/13 04:31:18 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/03 03:00:57 markd Exp $
 
 DISTNAME=	bookmark
-PKGNAME=	tex-${DISTNAME}-1.29
-TEXLIVE_REV=	56885
+PKGNAME=	tex-${DISTNAME}-1.31
+TEXLIVE_REV=	69084
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bookmark
