@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/08/20 21:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/04 10:19:31 markd Exp $
 
 DISTNAME=	luabidi.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.5
-TEXLIVE_REV=	54512
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
+TEXLIVE_REV=	68432
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luabidi
