@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:16 markd Exp $
-share/texmf-dist/doc/fonts/junicode/COPYING
-share/texmf-dist/doc/fonts/junicode/ChangeLog
+@comment $NetBSD: PLIST,v 1.3 2024/02/04 00:36:27 markd Exp $
+share/texmf-dist/doc/fonts/junicode/About.tex
+share/texmf-dist/doc/fonts/junicode/EnlargeAxis.tex
+share/texmf-dist/doc/fonts/junicode/Feature_Reference.tex
+share/texmf-dist/doc/fonts/junicode/GettingStarted.tex
+share/texmf-dist/doc/fonts/junicode/JunicodeManual.pdf
+share/texmf-dist/doc/fonts/junicode/JunicodeManual.sty
+share/texmf-dist/doc/fonts/junicode/JunicodeManual.tex
+share/texmf-dist/doc/fonts/junicode/OFL.txt
+share/texmf-dist/doc/fonts/junicode/OnTheWeb.tex
 share/texmf-dist/doc/fonts/junicode/README
-share/texmf-dist/doc/fonts/junicode/README.TEXLIVE
-share/texmf-dist/doc/fonts/junicode/fleurons
-share/texmf-dist/doc/fonts/junicode/replacements
+share/texmf-dist/doc/fonts/junicode/Record_Interpreter_notes.tex
+share/texmf-dist/doc/fonts/junicode/Specimens.tex
+share/texmf-dist/doc/fonts/junicode/dns.png
+share/texmf-dist/doc/fonts/junicode/encoded-glyphs.tex
+share/texmf-dist/doc/fonts/junicode/in_tex.tex
+share/texmf-dist/doc/fonts/junicode/junicode-samples.pdf
+share/texmf-dist/doc/fonts/junicode/junicode-samples.tex
+share/texmf-dist/doc/fonts/junicode/tag_key_ins.tex

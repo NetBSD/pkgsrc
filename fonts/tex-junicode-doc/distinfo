@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/04 00:36:27 markd Exp $
 
-BLAKE2s (junicode.doc.r53954.tar.xz) = 4bcbcac5c3cfee7ede6b533fb11d3d46c357c7e8b1dbb4aaa59e09cd02ba02f5
-SHA512 (junicode.doc.r53954.tar.xz) = f692c94008d88ed2b0b0d91678072cee6cd379e5a3fe58831a69393cb2de3058c0e7320409385a2112b41c9369255ddbc6919520a222adccb38223b5b2576790
-Size (junicode.doc.r53954.tar.xz) = 5756 bytes
+BLAKE2s (junicode.doc.r69355.tar.xz) = dbad3434b08a5f193d1e9e22080b9a612a27dc9ef2ce11cc5b29719a18fb56d9
+SHA512 (junicode.doc.r69355.tar.xz) = 937127e4089bf632b62dc1a218645b1c2903a700183e9d9e7456b16a47b089846509d5d3f89424417a19dd540badabdc6a8a6024826e5cfbad97c19ae9f4bdd4
+Size (junicode.doc.r69355.tar.xz) = 1996068 bytes

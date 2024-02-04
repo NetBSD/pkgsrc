@@ -1,4 +1,5 @@
-Junicode is a TrueType font with many OpenType features for
-antiquarians (especially medievalists) based on typefaces used
-by the Oxford Press in the late 17th and early 18th centuries.
-It works well with Xe(La)TeX.
+Junicode is a TrueType/OpenType font family with many features
+for antiquarians (especially medievalists) based on typefaces
+used by the Oxford Press in the late 17th and early 18th
+centuries. It works well with Lua(La)TeX or Xe(La)TeX, but the
+basic textual features are also available with (pdf)LaTeX.
