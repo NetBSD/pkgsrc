@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/06/11 06:48:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/04 09:48:06 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -135,14 +135,24 @@ share/texmf-dist/doc/latex-dev/base/ltnews36.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews36.tex
 share/texmf-dist/doc/latex-dev/base/ltnews37.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews37.tex
+share/texmf-dist/doc/latex-dev/base/ltnews38.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews38.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltpara-code.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-doc.pdf
 share/texmf-dist/doc/latex-dev/base/ltpara-doc.tex
+share/texmf-dist/doc/latex-dev/base/ltproperties-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltproperties-code.tex
+share/texmf-dist/doc/latex-dev/base/ltproperties-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltproperties-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltshipout-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltshipout-code.tex
 share/texmf-dist/doc/latex-dev/base/ltshipout-doc.pdf
 share/texmf-dist/doc/latex-dev/base/ltshipout-doc.tex
+share/texmf-dist/doc/latex-dev/base/ltsockets-code.pdf
+share/texmf-dist/doc/latex-dev/base/ltsockets-code.tex
+share/texmf-dist/doc/latex-dev/base/ltsockets-doc.pdf
+share/texmf-dist/doc/latex-dev/base/ltsockets-doc.tex
 share/texmf-dist/doc/latex-dev/base/ltx3info.pdf
 share/texmf-dist/doc/latex-dev/base/ltx3info.tex
 share/texmf-dist/doc/latex-dev/base/ltxdoc.pdf
