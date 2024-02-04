@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/02/04 19:12:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/04 19:13:16 schmonz Exp $
 
 DISTNAME=	libcbor-0.11.0
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PJK/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
