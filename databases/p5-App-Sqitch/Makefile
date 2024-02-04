@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/08/02 12:06:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2024/02/04 18:58:59 schmonz Exp $
 
-DISTNAME=		App-Sqitch-v1.4.0
+DISTNAME=		App-Sqitch-v1.4.1
 PKGNAME=		p5-${DISTNAME:S/-v/-/}
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
@@ -56,6 +56,7 @@ TOOL_DEPENDS+=		p5-Test-File-Contents>=0.20:../../devel/p5-Test-File-Contents
 TOOL_DEPENDS+=		p5-Test-MockModule>=0.17:../../devel/p5-Test-MockModule
 TOOL_DEPENDS+=		p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 TOOL_DEPENDS+=		p5-Test-NoWarnings>=0.083:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Test-Warn>=0.31:../../devel/p5-Test-Warn
 TOOL_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=		# empty
