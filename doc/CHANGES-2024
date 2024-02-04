@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.919 2024/02/04 06:59:30 taca Exp $
+$NetBSD: CHANGES-2024,v 1.920 2024/02/04 07:01:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-faraday-net_http to 3.1.0 [taca 2024-02-04]
 	Updated www/ruby-mechanize to 2.10.0 [taca 2024-02-04]
 	Updated www/ruby-puma to 6.4.2 [taca 2024-02-04]
+	Updated www/ruby-rack to 3.0.9 [taca 2024-02-04]
