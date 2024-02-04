@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/01 11:20:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/04 00:03:31 markd Exp $
 bin/makeglossaries
 share/texmf-dist/scripts/glossaries/glossaries.l2h
 share/texmf-dist/tex/latex/glossaries/base/glossaries-babel.sty
@@ -10,6 +10,7 @@ share/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 share/texmf-dist/tex/latex/glossaries/expl/glossaries-accsupp.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2021-11-01.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2022-11-03.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-accsupp-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-accsupp-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-babel-2020-03-19.sty
@@ -24,6 +25,7 @@ share/texmf-dist/tex/latex/glossaries/rollback/glossaries-prefix-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-prefix-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-hypernav-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-hypernav-2021-11-01.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossary-hypernav-2022-11-03.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-inline-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-inline-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-list-2020-03-19.sty
@@ -68,3 +70,4 @@ share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-symbolname
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-symbols.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-url.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-user.tex
+share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-utf8.tex
