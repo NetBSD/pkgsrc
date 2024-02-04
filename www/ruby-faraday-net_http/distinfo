@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/01/09 08:45:09 taca Exp $
+$NetBSD: distinfo,v 1.5 2024/02/04 06:53:37 taca Exp $
 
-BLAKE2s (faraday-net_http-3.0.2.gem) = 50e9e6dad82a646226f9e102eb824bdedb6b4dc6889ebc9b21ef9c148a847d42
-SHA512 (faraday-net_http-3.0.2.gem) = 3a11d606f05a6fbce1b5dd3014ca3b73e410be2a08f57b3abce3ed0f20c150ed05386206885819ffdba7fe141d13a349808a4e15d386926c2b91b825e6d6c31d
-Size (faraday-net_http-3.0.2.gem) = 8192 bytes
+BLAKE2s (faraday-net_http-3.1.0.gem) = b0db3258c013e6c38a1df4146e5b2f3ca1aa39089aa5be685a4f2d39914e9115
+SHA512 (faraday-net_http-3.1.0.gem) = 6fed004ecab731615fbfb0775be9bffba2565897b0008cf7b18b81ee288dc5a286fe59878eaf194a916ab878b516c777093493fca2a9187f08f3075e06512204
+Size (faraday-net_http-3.1.0.gem) = 8192 bytes
