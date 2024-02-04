@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2023/10/24 22:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2024/02/04 05:52:08 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
-PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ircii.warped.com/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +13,7 @@ LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
 
-VERS=		20210314
+VERS=		20240111
 PLIST_SUBST+=	VERS=${VERS:Q}
 
 .include "../../mk/bsd.prefs.mk"
