@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/04 10:21:39 markd Exp $
 
-BLAKE2s (luacolor.doc.r57829.tar.xz) = fc24cb226f8ce66f7d2a28a07275277d4f13a7169d9f530b8af6929573d5f16d
-SHA512 (luacolor.doc.r57829.tar.xz) = 4aeb524631531e6d18decde7b01acae4aaaee8f80392da87a2e7fadec9d353749b2d1dc65573ce2f184c24494ba340589fb83203ffcd49271e05dcbb79a1fd19
-Size (luacolor.doc.r57829.tar.xz) = 328240 bytes
+BLAKE2s (luacolor.doc.r67987.tar.xz) = b68c49db01c0bb6c7a0e480e09b505b44cb2907a3393a7f34eed46e08856d6d5
+SHA512 (luacolor.doc.r67987.tar.xz) = d6654c3ac1ca1c18cc60cea463cc3b4b4ed902ba6c29521883079123b9906f089ed25e2268e7a1f92800d9b1158225b50c0b019ea28c68b846e73bcb350dee6a
+Size (luacolor.doc.r67987.tar.xz) = 344248 bytes
