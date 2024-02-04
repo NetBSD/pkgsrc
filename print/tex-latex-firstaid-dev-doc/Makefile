@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/06/11 06:51:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/04 09:51:36 markd Exp $
 
 DISTNAME=	latex-firstaid-dev.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0z
-TEXLIVE_REV=	67225
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1b
+TEXLIVE_REV=	68730
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex-firstaid-dev
