@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.927 2024/02/04 08:50:28 taca Exp $
+$NetBSD: CHANGES-2024,v 1.928 2024/02/04 09:26:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added www/php-contao-manager version 1.8.0 [taca 2024-02-04]
 	Removed www/contao35 [taca 2024-02-04]
 	Updated www/ruby-jekyll to 4.3.3 [taca 2024-02-04]
+	Updated security/qgpgme to 1.23.2 [mark 2024-02-04]
