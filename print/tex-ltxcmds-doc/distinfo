@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/04 10:11:32 markd Exp $
 
-BLAKE2s (ltxcmds.doc.r56421.tar.xz) = f98a610cbbb75f121162ca28a9ebefc40b1942446c5441d5efaaf695ed31e02d
-SHA512 (ltxcmds.doc.r56421.tar.xz) = d82f046eee3892b5a241f78b44910c801b14583cf7f9a693f861ab04d9b05e0cd7639d8f85eaf46f95d2d325688fd1ba3c76421c6ceec5969046db497b0d698f
-Size (ltxcmds.doc.r56421.tar.xz) = 391720 bytes
+BLAKE2s (ltxcmds.doc.r69032.tar.xz) = 8305ac00a962dca7a7b094d1717bee4569589dda0c3b4900baf0afc122cc1433
+SHA512 (ltxcmds.doc.r69032.tar.xz) = 21be07f4f98531621f90b7ed23c06fa4b39fafa12a83c45784b83b5f9728817657b5c2ac2c09e4988ce0c6df0918a7c93d29d7ab89159cca5ce5fc9e0eb017dd
+Size (ltxcmds.doc.r69032.tar.xz) = 405944 bytes
