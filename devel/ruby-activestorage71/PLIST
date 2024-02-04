@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/30 15:26:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/04 15:15:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -37,6 +37,7 @@ ${GEM_LIBDIR}/app/models/active_storage/blob.rb
 ${GEM_LIBDIR}/app/models/active_storage/blob/analyzable.rb
 ${GEM_LIBDIR}/app/models/active_storage/blob/identifiable.rb
 ${GEM_LIBDIR}/app/models/active_storage/blob/representable.rb
+${GEM_LIBDIR}/app/models/active_storage/blob/servable.rb
 ${GEM_LIBDIR}/app/models/active_storage/current.rb
 ${GEM_LIBDIR}/app/models/active_storage/filename.rb
 ${GEM_LIBDIR}/app/models/active_storage/named_variant.rb
