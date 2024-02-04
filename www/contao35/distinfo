@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 11:29:23 nia Exp $
-
-BLAKE2s (contao-3.5.40.tar.gz) = 9c52ad507f58ef02e7e73a61a2e5eb1b50cd6f7606a7350fd9eb5dd43ce49b9d
-SHA512 (contao-3.5.40.tar.gz) = 54a2e00fdca1bd3a11464d5c74113cbb74b7d39fc368dc6de7608a4a8dd7fe5464d9840b0ecd37ca2ee7df6cf0ac004a0e2903c79e06c7509787a6700814d598
-Size (contao-3.5.40.tar.gz) = 11204594 bytes
-SHA1 (patch-system_modules_core_library_Contao_Input.php) = 07cb28f17ea7b028070bc039ea47c05ca790beb0
-SHA1 (patch-system_modules_news_dca_tl__news.php) = 13cee5a492f8ae63fe478b5e8bd9b5af477aa9ac
