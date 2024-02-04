@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/17 10:20:11 markd Exp $
+$NetBSD: distinfo,v 1.8 2024/02/04 00:12:26 markd Exp $
 
-BLAKE2s (haranoaji-extra.r67329.tar.xz) = 00b36ab1551edcec2ca095171d830e0db61a2ea8d98021ab598c737915e6839c
-SHA512 (haranoaji-extra.r67329.tar.xz) = 35c69cec199c07a3defb222997defc86b79ab7cf58261fbd5cdb38748e103431318adc4a665965b3344eaaa6245da1a70c39cf480522908cbecb386d7fbe09f6
-Size (haranoaji-extra.r67329.tar.xz) = 26016156 bytes
+BLAKE2s (haranoaji-extra.r68500.tar.xz) = c3406644643c91455faa2340724f198312763b3fd6d7f550e64ceb1204687892
+SHA512 (haranoaji-extra.r68500.tar.xz) = 79b1d71d80bc73681f1d1d48679c2f4586834d7dcaebceadfcc17ba49fd6c41849cae77a88ae4e45f7b2f535352a27aeb91089cdfd5a75b0af88024988617422
+Size (haranoaji-extra.r68500.tar.xz) = 26018152 bytes
