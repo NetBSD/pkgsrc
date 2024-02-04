@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.929 2024/02/04 10:50:55 markd Exp $
+$NetBSD: CHANGES-2024,v 1.930 2024/02/04 13:50:07 tm Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1327,3 +1327,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/tex-luaotfload-doc to 3.26 [mark 2024-02-04]
 	Updated print/tex-luatexja to 20231230.0 [mark 2024-02-04]
 	Updated print/tex-luatexja-doc to 20231230.0 [mark 2024-02-04]
+	Updated chat/prosody to 0.12.4 [tm 2024-02-04]
