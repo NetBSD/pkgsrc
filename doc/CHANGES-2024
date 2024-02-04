@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.943 2024/02/04 15:22:25 taca Exp $
+$NetBSD: CHANGES-2024,v 1.944 2024/02/04 15:36:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-railties71 to 7.1.3 [taca 2024-02-04]
 	Updated textproc/ruby-actiontext71 to 7.1.3 [taca 2024-02-04]
 	Updated www/ruby-rails71 to 7.1.3 [taca 2024-02-04]
+	Updated devel/ruby-rspec-support to 3.13.0 [taca 2024-02-04]
