@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/04/30 14:08:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/02/04 06:43:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -111,14 +111,12 @@ ${GEM_LIBDIR}/lib/capybara/selenium/extensions/find.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/extensions/html5_drag.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/extensions/modifier_keys_stack.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/extensions/scroll.rb
-${GEM_LIBDIR}/lib/capybara/selenium/logger_suppressor.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/chrome_node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/edge_node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/firefox_node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/ie_node.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/nodes/safari_node.rb
-${GEM_LIBDIR}/lib/capybara/selenium/patches/action_pauser.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/patches/atoms.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/patches/is_displayed.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/patches/logs.rb
@@ -188,6 +186,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/has_any_selectors_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_button_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_css_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_current_path_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/has_element_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_field_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_link_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/has_none_selectors_spec.rb
