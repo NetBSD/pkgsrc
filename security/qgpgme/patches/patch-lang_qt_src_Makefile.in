@@ -1,25 +1,31 @@
-$NetBSD: patch-lang_qt_src_Makefile.in,v 1.3 2022/09/29 00:11:59 markd Exp $
+$NetBSD: patch-lang_qt_src_Makefile.in,v 1.4 2024/02/04 09:23:44 markd Exp $
 
 Use installed libraries
+remove "-no-undefined" flag as it stops shared library being built.
 
---- lang/qt/src/Makefile.in.orig	2022-08-10 13:12:50.000000000 +0000
+--- lang/qt/src/Makefile.in.orig	2023-11-28 15:45:03.000000000 +0000
 +++ lang/qt/src/Makefile.in
-@@ -144,8 +144,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+@@ -169,9 +169,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  	"$(DESTDIR)$(qgpgmeincludedir)" \
  	"$(DESTDIR)$(qgpgmeincludedir)"
  LTLIBRARIES = $(lib_LTLIBRARIES)
--libqgpgme_la_DEPENDENCIES = ../../cpp/src/libgpgmepp.la \
--	../../../src/libgpgme.la
-+libqgpgme_la_DEPENDENCIES =
- am__objects_1 = dataprovider.lo debug.lo job.lo multideletejob.lo \
- 	qgpgmeadduseridjob.lo qgpgmeaddexistingsubkeyjob.lo \
- 	qgpgmebackend.lo qgpgmechangeexpiryjob.lo \
-@@ -774,7 +773,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/lang/cpp/s
-               -DBUILDING_QGPGME -Wsuggest-override \
-               -Wzero-as-null-pointer-constant
+-@WANT_QT5_TRUE@libqgpgme_la_DEPENDENCIES =  \
+-@WANT_QT5_TRUE@	../../cpp/src/libgpgmepp.la \
+-@WANT_QT5_TRUE@	../../../src/libgpgme.la
++@WANT_QT5_TRUE@libqgpgme_la_DEPENDENCIES = 
+ am__libqgpgme_la_SOURCES_DIST = cleaner.cpp dataprovider.cpp debug.cpp \
+ 	decryptverifyarchivejob.cpp encryptarchivejob.cpp \
+ 	filelistdataprovider.cpp job.cpp multideletejob.cpp \
+@@ -1006,10 +1004,10 @@ nodist_qgpgmeinclude_HEADERS = qgpgme_ve
+ @WANT_QT6_TRUE@              -Wzero-as-null-pointer-constant
  
--libqgpgme_la_LIBADD = ../../cpp/src/libgpgmepp.la ../../../src/libgpgme.la \
-+libqgpgme_la_LIBADD = -lgpgmepp -lgpgme \
-                        @LIBASSUAN_LIBS@ @GPG_ERROR_LIBS@ @GPGME_QT_LIBS@
+ @WANT_QT5_TRUE@libqgpgme_la_SOURCES = $(qgpgme_sources) $(qgpgme_headers) $(private_qgpgme_headers)
+-@WANT_QT5_TRUE@libqgpgme_la_LIBADD = ../../cpp/src/libgpgmepp.la ../../../src/libgpgme.la \
++@WANT_QT5_TRUE@libqgpgme_la_LIBADD = -lgpgmepp -lgpgme \
+ @WANT_QT5_TRUE@                      @LIBASSUAN_LIBS@ @GPG_ERROR_LIBS@ @GPGME_QT5_LIBS@
  
- libqgpgme_la_LDFLAGS = -no-undefined -version-info \
+-@WANT_QT5_TRUE@libqgpgme_la_LDFLAGS = -no-undefined -version-info \
++@WANT_QT5_TRUE@libqgpgme_la_LDFLAGS = -version-info \
+ @WANT_QT5_TRUE@                       @LIBQGPGME_LT_CURRENT@:@LIBQGPGME_LT_REVISION@:@LIBQGPGME_LT_AGE@
+ 
+ @WANT_QT6_TRUE@libqgpgmeqt6_la_SOURCES = $(qgpgme_sources) $(qgpgme_headers) $(private_qgpgme_headers)
