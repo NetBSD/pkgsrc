@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.941 2024/02/04 15:19:48 taca Exp $
+$NetBSD: CHANGES-2024,v 1.942 2024/02/04 15:21:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/ruby-actionmailbox71 to 7.1.3 [taca 2024-02-04]
 	Updated www/ruby-actioncable71 to 7.1.3 [taca 2024-02-04]
 	Updated devel/ruby-railties71 to 7.1.3 [taca 2024-02-04]
+	Updated textproc/ruby-actiontext71 to 7.1.3 [taca 2024-02-04]
