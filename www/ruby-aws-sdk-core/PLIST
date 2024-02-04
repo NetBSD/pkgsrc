@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/09 03:10:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/04 06:39:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -248,4 +248,13 @@ ${GEM_LIBDIR}/lib/seahorse/model/operation.rb
 ${GEM_LIBDIR}/lib/seahorse/model/shapes.rb
 ${GEM_LIBDIR}/lib/seahorse/util.rb
 ${GEM_LIBDIR}/lib/seahorse/version.rb
+${GEM_LIBDIR}/sig/aws-sdk-core.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/client_stubs.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/errors.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/resources/collection.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/structure.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/waiters/errors.rbs
+${GEM_LIBDIR}/sig/seahorse/client/base.rbs
+${GEM_LIBDIR}/sig/seahorse/client/handler_builder.rbs
+${GEM_LIBDIR}/sig/seahorse/client/response.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
