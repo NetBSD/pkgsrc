@@ -196,8 +196,8 @@ EENNVVIIRROONNMMEENNTT
      environment.
 
 FFIILLEESS
-     _/_v_a_r_/_d_b_/_p_k_g_/_p_k_g_d_b_._b_y_f_i_l_e_._d_b
-     _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_>_/_+_C_O_N_T_E_N_T_S
+     _@_P_R_E_F_I_X_@_/_p_k_g_d_b_/_p_k_g_d_b_._b_y_f_i_l_e_._d_b
+     _@_P_R_E_F_I_X_@_/_p_k_g_d_b_/_<_p_k_g_>_/_+_C_O_N_T_E_N_T_S
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1),
@@ -209,4 +209,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-pkgsrc                         October 8, 2019                          pkgsrc
+pkgsrc                          August 22, 2020                         pkgsrc
