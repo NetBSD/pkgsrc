@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/05/08 20:32:14 khorben Exp $
+$NetBSD: distinfo,v 1.2 2024/02/04 12:26:14 tm Exp $
 
 BLAKE2s (luaunbound-1.0.0.tar.gz) = 08251412c865dfcff3ed42d53cdf926970fa34a1eded889b2c2ffc4bc979729b
 SHA512 (luaunbound-1.0.0.tar.gz) = 9fab77481e7c84409d9ceb79156d06cb9ac2b2d7df53349e0f1b6c118022c9b1c22481e9413efedda41cc9acb1640d3d30cc4e0f9b7ed7fd6ed2511192a69d3c
 Size (luaunbound-1.0.0.tar.gz) = 6366 bytes
+SHA1 (patch-GNUmakefile) = c860f05b9779b5e30eb1b7dd2359bccafe9b4b1b

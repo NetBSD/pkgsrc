@@ -1,0 +1,14 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2024/02/04 12:26:15 tm Exp $
+
+Remove CC variable to support different compilers and correct naming.
+
+--- GNUmakefile.orig    2021-07-10 20:22:54.000000000 +0000
++++ GNUmakefile
+@@ -6,7 +6,6 @@ LUA_VERSION = 5.2
+ LUA_PC      = lua-$(LUA_VERSION)
+ LUA_LIBDIR  = $(shell pkg-config --variable=INSTALL_CMOD $(LUA_PC))
+
+-CC          = c99
+ CFLAGS     += -fPIC $(shell pkg-config --cflags $(LUA_PC)) -Wall -Wextra -pedantic -ggdb
+ LDLIBS     += -lunbound
+ LDFLAGS    += -shared
