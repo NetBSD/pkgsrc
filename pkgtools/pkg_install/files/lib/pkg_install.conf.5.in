@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5.in,v 1.24 2024/02/04 14:29:21 riastradh Exp $
+.\"	$NetBSD: pkg_install.conf.5.in,v 1.25 2024/02/04 14:43:12 riastradh Exp $
 .\"
 .\" Copyright (c) 2008, 2009, 2012 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -359,7 +359,7 @@ Default:
 .Pp
 Verification requirement for installing a package.
 Supported values are:
-.Bl -tag -width interactive
+.Bl -tag -width ".Dv interactive"
 .It Dv never
 Install package unconditionally.
 .It Dv always
