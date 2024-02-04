@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2023/11/08 13:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/02/04 13:49:12 tm Exp $
 
-DISTNAME=		prosody-0.12.2
-PKGREVISION=		3
+DISTNAME=		prosody-0.12.4
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 
@@ -58,14 +57,15 @@ SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--datadir=${PROSODY_DATA}
-CONFIGURE_ARGS+=	--ldflags="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
+CONFIGURE_ARGS+=	--ldflags=${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--no-example-certs
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
 
 CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
-MAKE_ENV.SunOS+=	SOCKET_LIB=-lsocket
+LDFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared
+LDFLAGS.SunOS+=		-lsocket -lnsl
 MAKE_FILE=		makefile
 
 RCD_SCRIPTS=		prosody
