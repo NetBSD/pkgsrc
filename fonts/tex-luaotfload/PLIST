@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2023/04/01 11:56:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/02/04 10:42:26 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-10-03.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2023-08-19.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
