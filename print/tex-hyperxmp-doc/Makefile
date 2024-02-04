@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/04/09 05:34:12 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/04 00:24:28 markd Exp $
 
 DISTNAME=	hyperxmp.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.11
-TEXLIVE_REV=	65980
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.12
+TEXLIVE_REV=	68251
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperxmp

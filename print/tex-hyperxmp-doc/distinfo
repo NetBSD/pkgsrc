@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/04/09 05:34:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2024/02/04 00:24:28 markd Exp $
 
-BLAKE2s (hyperxmp.doc.r65980.tar.xz) = 017a1ae39f6c183435cc9f04280201d5439a8f43ce0bcc9c87df8f424f2b5f62
-SHA512 (hyperxmp.doc.r65980.tar.xz) = 350822e58fc27cf949615ab5fcc4e0b3a31c51921c64d59a039b235f786560f5f30debb676ea1a0cc2b21e1fd4fc0a390caf37846440350067417de7a7718069
-Size (hyperxmp.doc.r65980.tar.xz) = 1171384 bytes
+BLAKE2s (hyperxmp.doc.r68251.tar.xz) = cbc4dcd66c2c4e0eed3ac24d06419d9d82d839d1f3dd483d70322f78acaf3a1c
+SHA512 (hyperxmp.doc.r68251.tar.xz) = b56e9ef7beb7502ba2e952267fddeb3a26597e9e5193ed66369dc3c78f5a08d34b5fca0685cab8f6ec67e12167a1aca309a18b85073b8e9c497641cf062be6b1
+Size (hyperxmp.doc.r68251.tar.xz) = 1165076 bytes
