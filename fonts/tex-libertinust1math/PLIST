@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/04 10:08:44 markd Exp $
 share/texmf-dist/fonts/afm/public/libertinust1math/BDXsfmi-bol.afm
 share/texmf-dist/fonts/afm/public/libertinust1math/BDXsfmi-reg.afm
 share/texmf-dist/fonts/afm/public/libertinust1math/BDXsfmr-bol.afm
 share/texmf-dist/fonts/afm/public/libertinust1math/BDXsfmr-reg.afm
 share/texmf-dist/fonts/afm/public/libertinust1math/LibertinusT1math.afm
+share/texmf-dist/fonts/enc/dvips/libertinust1math/lbtsth.enc
 share/texmf-dist/fonts/enc/dvips/libertinust1math/libusBB.enc
 share/texmf-dist/fonts/enc/dvips/libertinust1math/libusBMI.enc
 share/texmf-dist/fonts/enc/dvips/libertinust1math/libusBMR.enc
@@ -22,6 +23,9 @@ share/texmf-dist/fonts/tfm/public/libertinust1math/BDXsfmi-bol.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/BDXsfmi-reg.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/BDXsfmr-bol.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/BDXsfmr-reg.tfm
+share/texmf-dist/fonts/tfm/public/libertinust1math/LibertinusSerif-Italic-tlf-t1-tmp.tfm
+share/texmf-dist/fonts/tfm/public/libertinust1math/LibertinusSerifTH-Italic-tlf-ot1.tfm
+share/texmf-dist/fonts/tfm/public/libertinust1math/LibertinusSerifTH-Italic-tlf-t1.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/libertinust1-mathbb.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/libertinust1-mathex.tfm
 share/texmf-dist/fonts/tfm/public/libertinust1math/libertinust1-mathit-bold.tfm
@@ -41,6 +45,8 @@ share/texmf-dist/fonts/type1/public/libertinust1math/BDXsfmi-reg.pfb
 share/texmf-dist/fonts/type1/public/libertinust1math/BDXsfmr-bol.pfb
 share/texmf-dist/fonts/type1/public/libertinust1math/BDXsfmr-reg.pfb
 share/texmf-dist/fonts/type1/public/libertinust1math/LibertinusT1Math.pfb
+share/texmf-dist/fonts/vf/public/libertinust1math/LibertinusSerifTH-Italic-tlf-ot1.vf
+share/texmf-dist/fonts/vf/public/libertinust1math/LibertinusSerifTH-Italic-tlf-t1.vf
 share/texmf-dist/fonts/vf/public/libertinust1math/libertinust1-mathsfit-bold.vf
 share/texmf-dist/fonts/vf/public/libertinust1math/libertinust1-mathsfit.vf
 share/texmf-dist/fonts/vf/public/libertinust1math/libertinust1-mathsfrm-bold.vf
