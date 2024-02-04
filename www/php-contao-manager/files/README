@@ -1,0 +1,28 @@
+$NetBSD: README,v 1.1 2024/02/04 08:41:26 taca Exp $
+
+1. First, create a database for Contao Open Source CMS.
+
+	# mysqladmin -p -u <administrator> create <dbname>.
+
+2. Next, create a user for accessing that database.
+
+	# mysql -p -u <administrator> <dbname>
+	mysql> grant select, insert, update, delete, create, drop,
+	       index, alter, create temporary tables, lock tables on
+	       <dbname>.* to '<dbuser>'@'localhost'
+	       identified by '<dbpass>' ;
+
+3. Edit @PKG_SYSCONFDIR@/contao.conf and include from httpd.conf.
+
+	Include @PKG_SYSCONFDIR@/contao.conf
+
+   Configure propery VirualHost and related SSL configuration and then
+   reload or restart apache.
+
+5. Start setup from Contao Manager with URL:
+
+	https://www.example.org/contao-manager.phar.php
+
+For more information, please refer Installation guide for Contao:
+
+	https://to.contao.org/quickstart
