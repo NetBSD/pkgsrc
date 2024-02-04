@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/06/17 10:56:34 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/04 09:55:58 markd Exp $
 
 DISTNAME=	latex-lab.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2023
-TEXLIVE_REV=	67314
+PKGNAME=	tex-${DISTNAME:S/./-/}-2023.68720
+TEXLIVE_REV=	68720
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex-lab
