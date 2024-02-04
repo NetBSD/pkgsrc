@@ -7,7 +7,8 @@ NNAAMMEE
 SSYYNNOOPPSSIISS
      ppkkgg__aadddd [--AAffhhIInnRRUUuuVVvv] [--CC _c_o_n_f_i_g] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e]
              [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
-             _f_i_l_e _._._. [[ftp|http]://[_u_s_e_r][:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t][/_p_a_t_h_/]_p_k_g_-_n_a_m_e _._._.
+             _f_i_l_e _._._.
+             [[ftp|http]://[_u_s_e_r][:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t][/_p_a_t_h_/]_p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__aadddd command is used to extract and upgrade packages that have
@@ -113,7 +114,7 @@ OOPPTTIIOONNSS
      URL pointing at a file available on an ftp or web site.  Thus you may
      extract files directly from their anonymous ftp or WWW locations (e.g.,
      ppkkgg__aadddd
-     ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/shells/bash-3.2.9.tgz
+     http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/x86_64/9.0/All/bash-5.0.18.tgz
      or ppkkgg__aadddd http://www.example.org/packages/screen-4.0.tbz).  Note:  For
      ftp transfers, if you wish to use _p_a_s_s_i_v_e _m_o_d_e ftp in such transfers, set
      the variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E to some value in your environment.
@@ -225,23 +226,25 @@ EEXXAAMMPPLLEESS
      In all cases, ppkkgg__aadddd will try to install binary packages listed in
      dependencies list.
 
-     You can specify a compiled binary package explicitly on the command line.
+     You can grab a compiled binary package from remote location by specifying
+     a URL:
+
+     # pkg_add http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/x86_64/9.0/All/firefox-84.0.tgz
+
+     The base URL can also be provided by the configuration variable,
+     PKG_PATH:
+
+     # export PKG_PATH=http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/x86_64/9.0/All
+     # pkg_add firefox
+
+     You can also specify a compiled binary package by filesystem path:
 
      # pkg_add /usr/pkgsrc/packages/All/tcsh-6.14.00.tgz
 
      If you omit the version number, ppkkgg__aadddd will install the latest version
-     available.  With --vv, ppkkgg__aadddd emits more messages to terminal.
+     available.  With --vv, ppkkgg__aadddd emits more messages to terminal:
 
      # pkg_add -v /usr/pkgsrc/packages/All/unzip
-
-     You can grab a compiled binary package from remote location by specifying
-     a URL.  The base URL can also be provided by the configuration variable,
-     PKG_PATH.
-
-     # pkg_add -v ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/All/firefox-2.0.0.4.tgz
-
-     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/All
-     # pkg_add -v firefox
 
 SSEEEE AALLSSOO
      pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1),
@@ -264,4 +267,4 @@ BBUUGGSS
 
      Sure to be others.
 
-pkgsrc                          March 21, 2018                          pkgsrc
+pkgsrc                           March 8, 2021                          pkgsrc
