@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/08 10:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/04 00:28:00 markd Exp $
 share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
 share/texmf-dist/doc/fonts/japanese-otf/ChangeLog.md
 share/texmf-dist/doc/fonts/japanese-otf/README
@@ -14,6 +14,14 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/otftest.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/pkanatest.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/pkanatest2.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/Makefile
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_cns_h.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_cns_v.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_gb_h.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_gb_v.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_jp_h.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_jp_v.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_ks_h.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cid_ks_v.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-mltwght-h.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-mltwght-v.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-pxbabel-h.tex
@@ -31,6 +39,8 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_gb_utf.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_jp_text.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_jp_utf.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_kr_utf.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-cid-h.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-cid-v.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-sp-utf8.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotftest-utf8.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotftest.tex
@@ -40,4 +50,5 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/upkanatest1.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/upkanatest2.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-cjk.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-haranoaji.map
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-ibmplex.map
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-kozuka.map
