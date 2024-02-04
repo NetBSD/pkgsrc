@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/04/01 11:56:25 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/02/04 10:42:26 markd Exp $
 
-BLAKE2s (luaotfload.r64616.tar.xz) = dd50f0f388a3b92497581ea1d2900b0083227ee7311794a58954ed50b31a46f1
-SHA512 (luaotfload.r64616.tar.xz) = 70f27796fdfe61e0337239a2962052eb2896478358fca0f271287db06a1d2de2f83cd7394d0ec6c281e9a5779ec396e2993f53b8b045ed7a09cb17f100a4a477
-Size (luaotfload.r64616.tar.xz) = 617256 bytes
+BLAKE2s (luaotfload.r68143.tar.xz) = e95ad2bd9671518790e6c12e9506dc7bdff95df38cb9a00c589b3f93e8c6c8b0
+SHA512 (luaotfload.r68143.tar.xz) = 7781db14c45e5e2d5cba50e91e9eb356260e4cf1e55f45b6f584164f1be0a4b31818be7fe3e08cb51e8ed43fde49c0a3ddcecb860848f8bf02096a60e45a58f6
+Size (luaotfload.r68143.tar.xz) = 620612 bytes
