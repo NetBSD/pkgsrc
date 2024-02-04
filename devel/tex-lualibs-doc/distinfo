@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/04/01 11:53:53 markd Exp $
+$NetBSD: distinfo,v 1.16 2024/02/04 10:39:11 markd Exp $
 
-BLAKE2s (lualibs.doc.r64615.tar.xz) = f6914ec482582e5221ff65f0f4647622de023e22318fcff3cf29906d9b5fa933
-SHA512 (lualibs.doc.r64615.tar.xz) = 274eae19e558c1c6b0516154a4848353746b7329bd18599c6d801ad60f8849c1275418744942baf7e25a8d6360d21fce37a931c777aa2df9bd34a8887cedd15b
-Size (lualibs.doc.r64615.tar.xz) = 87452 bytes
+BLAKE2s (lualibs.doc.r67994.tar.xz) = 9fb3ec022aa3072927d3e5e1ff5936a914bf9596ecbf10ea7cdf194773e2eb03
+SHA512 (lualibs.doc.r67994.tar.xz) = a4c878209934b2b044688dc77b4b467ae4e106adfb5f728f398d7adaa279ba612883ae22f30e667a79a22d633a507b689525356ff24daf12c50bc84dfa798ca5
+Size (lualibs.doc.r67994.tar.xz) = 88736 bytes
