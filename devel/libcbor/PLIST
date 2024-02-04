@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/04 08:16:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/04 19:12:41 schmonz Exp $
 include/cbor.h
 include/cbor/arrays.h
 include/cbor/bytestrings.h
@@ -24,6 +24,6 @@ include/cbor/tags.h
 lib/cmake/libcbor/libcborConfig.cmake
 lib/cmake/libcbor/libcborConfigVersion.cmake
 lib/libcbor.so
+lib/libcbor.so.${PKGVERSION_SANS_TEENY}
 lib/libcbor.so.${PKGVERSION}
-lib/libcbor.so.0.10
 lib/pkgconfig/libcbor.pc
