@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/17 16:17:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/04 06:42:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -103,4 +103,27 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/presigner.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/resource.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/types.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/waiters.rb
+${GEM_LIBDIR}/sig/bucket.rbs
+${GEM_LIBDIR}/sig/bucket_acl.rbs
+${GEM_LIBDIR}/sig/bucket_cors.rbs
+${GEM_LIBDIR}/sig/bucket_lifecycle.rbs
+${GEM_LIBDIR}/sig/bucket_lifecycle_configuration.rbs
+${GEM_LIBDIR}/sig/bucket_logging.rbs
+${GEM_LIBDIR}/sig/bucket_notification.rbs
+${GEM_LIBDIR}/sig/bucket_policy.rbs
+${GEM_LIBDIR}/sig/bucket_request_payment.rbs
+${GEM_LIBDIR}/sig/bucket_tagging.rbs
+${GEM_LIBDIR}/sig/bucket_versioning.rbs
+${GEM_LIBDIR}/sig/bucket_website.rbs
+${GEM_LIBDIR}/sig/client.rbs
+${GEM_LIBDIR}/sig/errors.rbs
+${GEM_LIBDIR}/sig/multipart_upload.rbs
+${GEM_LIBDIR}/sig/multipart_upload_part.rbs
+${GEM_LIBDIR}/sig/object.rbs
+${GEM_LIBDIR}/sig/object_acl.rbs
+${GEM_LIBDIR}/sig/object_summary.rbs
+${GEM_LIBDIR}/sig/object_version.rbs
+${GEM_LIBDIR}/sig/resource.rbs
+${GEM_LIBDIR}/sig/types.rbs
+${GEM_LIBDIR}/sig/waiters.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
