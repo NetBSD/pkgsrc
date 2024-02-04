@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/02/04 07:12:13 schmonz Exp $
+
+BLAKE2s (qmail-dkim-wrappers-0.0.20211012/dkverifier.sh.txt) = 57101f94970fde23c4ded99435cc29d608c8cbd4463899318417f613dc4155fa
+SHA512 (qmail-dkim-wrappers-0.0.20211012/dkverifier.sh.txt) = 2b33592e436e04886e558c334d13069f341c7b04026d54e173507f19155c14fa9a5f1e3eeffbc24206308cdf8dcce1bf41e9e4f5a1152671b4c86285b3416eef
+Size (qmail-dkim-wrappers-0.0.20211012/dkverifier.sh.txt) = 528 bytes
+BLAKE2s (qmail-dkim-wrappers-0.0.20211012/qmail-remote.sh.txt) = 6bd4c3189047b3672c37acfcaf7ba01a9b11784263cfbd7416a723f13fb2e134
+SHA512 (qmail-dkim-wrappers-0.0.20211012/qmail-remote.sh.txt) = bd86c96bf2421c98bedd36cb056ff8b50206725c5b72b6ececc253655de62a77068b4f73cf86343f7834a867fdecd82b76e9c4291c17eb52d290e26066538cae
+Size (qmail-dkim-wrappers-0.0.20211012/qmail-remote.sh.txt) = 2571 bytes
