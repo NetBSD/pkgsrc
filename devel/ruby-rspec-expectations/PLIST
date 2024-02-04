@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/01/11 13:06:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/02/04 15:38:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -49,9 +49,9 @@ ${GEM_LIBDIR}/lib/rspec/matchers/built_in/yield.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/composable.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/dsl.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/english_phrasing.rb
-${GEM_LIBDIR}/lib/rspec/matchers/expecteds_for_multiple_diffs.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/fail_matchers.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/generated_descriptions.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_delegator.rb
 ${GEM_LIBDIR}/lib/rspec/matchers/matcher_protocol.rb
+${GEM_LIBDIR}/lib/rspec/matchers/multi_matcher_diff.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
