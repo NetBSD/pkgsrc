@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/15 16:09:04 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/04 06:47:30 taca Exp $
 
-DISTNAME=	cookiejar-0.3.3
+DISTNAME=	cookiejar-0.3.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
