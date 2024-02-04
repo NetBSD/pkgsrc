@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.19 2024/02/04 05:44:24 schmonz Exp $
+
+BLAKE2s (Getopt-Long-2.57.tar.gz) = 2f99358e96421eac62c9d3f547c3dc0cf9681d4c0b170f2683d71c46fff82f2d
+SHA512 (Getopt-Long-2.57.tar.gz) = 6b07f683b6f1371bc7f9b018ec659c049d58de25194965c6e2ba3a288e6802ba07257aa5d447bc082f0481d0956798d9f17521faf6a31d896bb3be0d17953b49
+Size (Getopt-Long-2.57.tar.gz) = 45259 bytes
+SHA1 (patch-Makefile.PL) = 2feae055cb7c3ae733b1a6682156420433400fd5
