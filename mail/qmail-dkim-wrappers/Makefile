@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/02/04 07:12:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/04 17:37:13 schmonz Exp $
 
 PKGNAME=		qmail-dkim-wrappers-0.0.20211012
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		https://www.memoryhole.net/qmail/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		qmail-remote.sh.txt dkverifier.sh.txt
 
