@@ -247,19 +247,19 @@ DDEESSCCRRIIPPTTIIOONN
              Verification requirement for installing a package.  Supported
              values are:
 
-             never        Install package unconditionally.
+             never            Install package unconditionally.
 
-             always       Install package only if it has a valid X.509 or
-                          OpenPGP signature.
+             always           Install package only if it has a valid X.509 or
+                              OpenPGP signature.
 
-             trusted      Install package without user interaction if it has a
-                          valid X.509 or OpenPGP signature.  Otherwise, prompt
-                          user to confirm installation.
+             trusted          Install package without user interaction if it
+                              has a valid X.509 or OpenPGP signature.
+                              Otherwise, prompt user to confirm installation.
 
-             interactive  Always prompt the user to confirm installation when
-                          installing a package.  WWAARRNNIINNGG: This does not tell
-                          the user whether the package had a valid signature
-                          or not.
+             interactive      Always prompt the user to confirm installation
+                              when installing a package.  WWAARRNNIINNGG: This does
+                              not tell the user whether the package had a
+                              valid signature or not.
 
 FFIILLEESS
      _@_S_Y_S_C_O_N_F_D_I_R_@_/_p_k_g___i_n_s_t_a_l_l_._c_o_n_f      Default location for the file
