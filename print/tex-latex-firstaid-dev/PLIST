@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/06 22:43:18 markd Exp $
-share/texmf-dist/tex/latex-dev/firstaid/everysel-ltx.sty
+@comment $NetBSD: PLIST,v 1.2 2024/02/04 09:51:36 markd Exp $
 share/texmf-dist/tex/latex-dev/firstaid/filehook-ltx.sty
 share/texmf-dist/tex/latex-dev/firstaid/latex2e-first-aid-for-external-files.ltx
+share/texmf-dist/tex/latex-dev/firstaid/underscore-ltx.sty
