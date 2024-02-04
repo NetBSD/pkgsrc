@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/04/02 11:14:57 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/04 00:15:23 markd Exp $
 
 DISTNAME=	hypdoc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.18
-TEXLIVE_REV=	65678
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.19
+TEXLIVE_REV=	68661
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hypdoc
