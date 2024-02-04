@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:55 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/02/04 06:47:30 taca Exp $
 
-BLAKE2s (cookiejar-0.3.3.gem) = b8cbefd0eb5d5b58e1deba36fd585054e63817c4be4ec88c1474a8b99e119b0f
-SHA512 (cookiejar-0.3.3.gem) = 52ef655ef7f5219812216328ae24bbae0f5f6edea493bb96dffb1f9d665efa22cd3d1567e84c5cc3bec53ab3ceb8243afb4d710631cd274801e5b2de63a6edbe
-Size (cookiejar-0.3.3.gem) = 20992 bytes
+BLAKE2s (cookiejar-0.3.4.gem) = 965e26535152694a2a6408bc049b45ee0063cddf459f2ad65c675fc49d4d188a
+SHA512 (cookiejar-0.3.4.gem) = 3622f2591bcd39e8fe19ab9ec610011ea82ec6fe949eac5705ada77c58ede5422770c2718f0ecb9e7ce566cce27e55fbb6aaf9b72ae3471ea533036487d58e2b
+Size (cookiejar-0.3.4.gem) = 20992 bytes
