@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2023/01/21 14:36:08 taca Exp $
+$NetBSD: distinfo,v 1.31 2024/02/04 08:50:04 taca Exp $
 
-BLAKE2s (jekyll-4.3.2.gem) = d8b95d57af4775b9049d7971c8cae70f008b2f7fd4a29e0bb4a668b4a4d86815
-SHA512 (jekyll-4.3.2.gem) = ca631fcb06a4a7d981b431936e3f85f044ae80dfed706784dd60e5b554a28277959a3b12d2627ecc5268ba0ea68c0097e8900a3806568a80248d89a7ca195bb0
-Size (jekyll-4.3.2.gem) = 127488 bytes
+BLAKE2s (jekyll-4.3.3.gem) = 375bc164dbedfd4786c9c4945b6f8e855f8980d568bb583877ff5346b8258015
+SHA512 (jekyll-4.3.3.gem) = a0d7e09bdd2f823a42946bfb9083d75cd2975019d901802c8d5e7a88a67de9b777de0413f86149b353d32f384f616360abfa6c5c3fb31d97802610735050a248
+Size (jekyll-4.3.3.gem) = 127488 bytes
 SHA1 (patch-lib_jekyll_commands_new.rb) = 5a58a44fe851fb95d03a86a9df4f5671f2b73502
 SHA1 (patch-lib_jekyll_commands_serve.rb) = ac115a7a8f85487105b62a44d0746912892dd8b5
