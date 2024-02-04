@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/04 15:42:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/04 06:41:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -14,4 +14,9 @@ ${GEM_LIBDIR}/lib/aws-sdk-kms/errors.rb
 ${GEM_LIBDIR}/lib/aws-sdk-kms/plugins/endpoints.rb
 ${GEM_LIBDIR}/lib/aws-sdk-kms/resource.rb
 ${GEM_LIBDIR}/lib/aws-sdk-kms/types.rb
+${GEM_LIBDIR}/sig/client.rbs
+${GEM_LIBDIR}/sig/errors.rbs
+${GEM_LIBDIR}/sig/resource.rbs
+${GEM_LIBDIR}/sig/types.rbs
+${GEM_LIBDIR}/sig/waiters.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
