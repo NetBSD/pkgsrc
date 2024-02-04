@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2023/10/24 22:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2024/02/04 06:13:49 mrg Exp $
 #
 
-DISTNAME=	bozohttpd-20220517
-PKGREVISION=	1
+DISTNAME=	bozohttpd-20240126
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
