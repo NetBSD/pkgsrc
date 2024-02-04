@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4170 2024/02/03 18:49:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.4171 2024/02/04 05:44:49 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1663,6 +1663,7 @@ SUBDIR+=	p5-Future
 SUBDIR+=	p5-Future-IO
 SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Euclid
+SUBDIR+=	p5-Getopt-Long
 SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
