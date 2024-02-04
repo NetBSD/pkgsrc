@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/01/22 13:16:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2024/02/04 01:33:38 ryoon Exp $
 
 DISTNAME=	aubio-0.4.9
 PKGREVISION=	17
@@ -20,6 +20,8 @@ TOOLS_PATH.doxygen=	${FALSE}
 
 PKGCONFIG_OVERRIDE+=	aubio.pc.in
 
+WAF_ENV+=	DOXYGEN=none
+WAF_ENV+=	SPHINX=none
 WAF_ARGS+=	--disable-tests
 
 TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
