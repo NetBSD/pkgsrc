@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/12/17 17:27:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/04 16:39:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/cucumber/tag_expressions.rb
@@ -7,4 +7,5 @@ ${GEM_LIBDIR}/lib/cucumber/tag_expressions/parser.rb
 ${GEM_LIBDIR}/spec/errors_spec.rb
 ${GEM_LIBDIR}/spec/evaluations_spec.rb
 ${GEM_LIBDIR}/spec/parsing_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
