@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/04 07:12:13 schmonz Exp $
+bin/qmail-dkimsign-remote
+bin/qmail-dkimverify-queue
