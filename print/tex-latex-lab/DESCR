@@ -1,3 +1,10 @@
-The LaTeX laboratory provides a route for additions to the
-LaTeX kernel to be stablised, whilst still allowing some
-stability for adventorous users.
+This bundle holds optional files that are loaded in certain
+situations by kernel code (if available). While this code is
+still in development and the use is experimental, it is stored
+outside the format so that there can be intermediate releases
+not affecting the production use of LaTeX. Once the code is
+finalized and properly tested it will eventually move to the
+kernel and the corresponding file in this bundle will vanish.
+Note that none of these files are directly user accessible in
+documents (i.e., they aren't packages), so the process is
+transparent to documents already using the new functionality.

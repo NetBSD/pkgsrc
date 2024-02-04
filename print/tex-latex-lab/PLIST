@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/17 10:56:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/04 09:55:58 markd Exp $
 share/texmf-dist/tex/latex/latex-lab/bib-latex-lab-testphase.ltx
-share/texmf-dist/tex/latex/latex-lab/block-tagging-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/block-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/documentmetadata-support.ltx
 share/texmf-dist/tex/latex/latex-lab/firstaid-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/float-latex-lab-testphase.ltx
@@ -10,11 +10,11 @@ share/texmf-dist/tex/latex/latex-lab/latex-lab-amsmath.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-footmisc.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-footnotes.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-kernel-changes.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-math.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-mathpkg.ltx
-share/texmf-dist/tex/latex/latex-lab/latex-lab-mathtagging.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-mathtools.ltx
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-bib.sty
-share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-block-tagging.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-block.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-firstaid.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-float.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-graphic.sty
@@ -23,6 +23,7 @@ share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-minipage.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or-1.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or-2.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-sec.sty
+share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-table.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-text.sty
 share/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-toc.sty
 share/texmf-dist/tex/latex/latex-lab/math-latex-lab-testphase.ltx
@@ -32,7 +33,9 @@ share/texmf-dist/tex/latex/latex-lab/new-or-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/phase-I-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/phase-II-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/phase-III-latex-lab-testphase.ltx
-share/texmf-dist/tex/latex/latex-lab/sec-tagging-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/sec-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/table-latex-lab-testphase.ltx
 share/texmf-dist/tex/latex/latex-lab/tagpdf-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/tagpdf-ns-latex-lab.def
 share/texmf-dist/tex/latex/latex-lab/text-latex-lab-testphase.ltx
-share/texmf-dist/tex/latex/latex-lab/toc-tagging-latex-lab-testphase.ltx
+share/texmf-dist/tex/latex/latex-lab/toc-latex-lab-testphase.ltx
