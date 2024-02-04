@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.924 2024/02/04 08:19:20 adam Exp $
+$NetBSD: CHANGES-2024,v 1.925 2024/02/04 08:42:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-selenium-webdriver to 4.17.0 [taca 2024-02-04]
 	Updated devel/libcbor to 0.11.0 [adam 2024-02-04]
 	Updated www/py-flask to 3.0.2 [adam 2024-02-04]
+	Added www/php-contao-manager version 1.8.0 [taca 2024-02-04]
