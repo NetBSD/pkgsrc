@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/20 21:32:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/02/04 10:19:31 markd Exp $
 
-BLAKE2s (luabidi.doc.r54512.tar.xz) = e3308230d17638dfd0f911ac4da4d473cb24677638e67b7d8fe48fb489cea365
-SHA512 (luabidi.doc.r54512.tar.xz) = 92345c9f8e50eefccba39f294841a7eaff7d0328ef445106dd436ff10a994a8a9ec027c9400f8b4b1f873ba1fbd92565e21b1cf2c73d40d3468ce27ca7ae128d
-Size (luabidi.doc.r54512.tar.xz) = 93868 bytes
+BLAKE2s (luabidi.doc.r68432.tar.xz) = f7b4816db2b9647435779d7fc140dbc569437e0e6204d85fddfa3d9b08ebaeab
+SHA512 (luabidi.doc.r68432.tar.xz) = 8276f91aa767b9c066bf6271f57a929aa21c7ff19a49db5db2e4eb68bae7613a13473cc23b7f5e60232148b46ff33bb86366320d730ba67918e2b009e5f22463
+Size (luabidi.doc.r68432.tar.xz) = 94532 bytes
