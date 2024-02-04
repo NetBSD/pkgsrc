@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/07 22:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/04 19:35:31 adam Exp $
 
-DISTNAME=	sphinx-gallery-0.10.1
+DISTNAME=	sphinx-gallery-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-gallery/}
@@ -10,12 +10,17 @@ HOMEPAGE=	https://sphinx-gallery.github.io/
 COMMENT=	Sphinx extension that builds an HTML version of any Python script
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=4:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
+PYTHON_SELF_CONFLICT=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
