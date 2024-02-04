@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/13 05:26:11 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/04 10:11:32 markd Exp $
 
 DISTNAME=	ltxcmds.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.25
-TEXLIVE_REV=	56421
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.26
+TEXLIVE_REV=	69032
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ltxcmds
