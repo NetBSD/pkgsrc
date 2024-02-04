@@ -28,7 +28,9 @@ DDEESSCCRRIIPPTTIIOONN
      ACTIVE_FTP (empty or non-empty)
              Default: empty
 
-             If non-empty, force the use of active FTP.
+             If non-empty, force the use of active FTP.  Otherwise, try
+             passive FTP first, and fall back to active FTP if the server
+             reports a syntax error.
 
      CACHE_INDEX (`yes' or `no')
              Default: yes
@@ -62,7 +64,7 @@ DDEESSCCRRIIPPTTIIOONN
              that can be used for completing certificate chains when
              validating binary packages or pkg-vulnerabilities files.
 
-     CHECK_LICENSE (`yes', `no', `always')
+     CHECK_LICENSE (`yes', `no', or `always')
              Default: no
 
              When installing a package, check whether its license, as
@@ -110,7 +112,7 @@ DDEESSCCRRIIPPTTIIOONN
              CHECK_OS_VERSION is `no', such packages will refuse to install
              unless CHECK_OSABI is also `no'.
 
-     CHECK_VULNERABILITIES (`never', `always', `interactive')
+     CHECK_VULNERABILITIES (`never', `always', or `interactive')
              Default: `never'
 
              Check for vulnerabilities when installing a package.  Supported
@@ -163,7 +165,7 @@ DDEESSCCRRIIPPTTIIOONN
      GPG_KEYRING_PKGVULN (empty or path)
              Default: empty
 
-             If non-empty, keyring to use for verifying GPG signatures on
+             If non-empty, keyring to use for verifying OpenPGP signatures on
              _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s, overriding the default keyring.
 
      GPG_KEYRING_SIGN (empty or path)
@@ -179,9 +181,11 @@ DDEESSCCRRIIPPTTIIOONN
              installation, overriding the default keyring.
 
      GPG_SIGN_AS (empty or OpenPGP user-id)
-             OpenpGP user-id to use for signing packages with ppkkgg__aaddmmiinn
-             ggppgg--ssiiggnn--ppaacckkaaggee, passed as the argument of `--local-user' (--uu)
-             to gpg(1).
+             Default: empty
+
+             If non-empty, OpenPGP user-id to use for signing packages with
+             ppkkgg__aaddmmiinn ggppgg--ssiiggnn--ppaacckkaaggee, passed as the argument of
+             `--local-user' (--uu) to gpg(1).
 
      IGNORE_PROXY (empty or non-empty)
              Default: empty
@@ -189,42 +193,55 @@ DDEESSCCRRIIPPTTIIOONN
              If non-empty, use direct connections and ignore FTP_PROXY and
              HTTP_PROXY.
 
-     IGNORE_URL (URL, maybe specified multiple times)
-             One URL per advisory which should be ignored when running
-                   ppkkgg__aaddmmiinn aauuddiitt
-             The URL from the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file should be used as
-             value.
+     IGNORE_URL (URL, may be specified multiple times)
+             Default: none
 
-     PKG_DBDIR (*; path)
+             URL of a security advisory from the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s that
+             should be ignored when running:
+                   ppkkgg__aaddmmiinn aauuddiitt
+             May be specified multiple times to ignore multiple advisories.
+
+     PKG_DBDIR (*) (path)
+             Default: _@_P_K_G___D_B_D_I_R_@
+
              Location of the packages database.  This option is overriden by
              the argument of the --KK option.
 
-     PKG_PATH (*; colon-separated list of paths or URLs)
+     PKG_PATH (*) (semicolon-separated list of paths or URLs)
+             Default: empty
+
              Search path for packages.  The entries are separated by
              semicolon.  Each entry specifies a directory or URL to search for
              packages.
 
-     PKG_REFCOUNT_DBDIR (*; path)
-             Location of the package reference counts database directory.  The
-             default value is _$_{_P_K_G___D_B_D_I_R_}_._r_e_f_c_o_u_n_t.
+     PKG_REFCOUNT_DBDIR (*) (path)
+             Default: ${PKG_DBDIR}_._r_e_f_c_o_u_n_t
+
+             Location of the package reference counts database directory.
 
      PKGVULNDIR (path)
+             Default: ${PKG_DBDIR}
+
              Directory name in which the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file resides.
-             Default is _$_{_P_K_G___D_B_D_I_R_}.
 
      PKGVULNURL (URL)
+             Default:
+             hhttttpp::////ccddnn..NNeettBBSSDD..oorrgg//ppuubb//NNeettBBSSDD//ppaacckkaaggeess//vvuullnnss//ppkkgg--vvuullnneerraabblliittiieess..ggzz
+
              URL which is used for updating the local _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file
-             when running
+             when running:
                    ppkkgg__aaddmmiinn ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess
-             The default location is ftp.NetBSD.org using HTTP.  _N_o_t_e:
-             Usually, only the compression type should be changed.  Currently
-             supported are uncompressed files and files compressed by bzip2(1)
-             (_._b_z_2) or gzip(1) (_._g_z).
+
+             _N_o_t_e: Usually, only the compression type should be changed.
+             Currently supported are uncompressed files and files compressed
+             by bzip2(1) (_._b_z_2) or gzip(1) (_._g_z).
 
      VERBOSE_NETIO (empty or non-empty)
+             Default: empty
+
              If non-empty, log details of network IO to stderr.
 
-     VERIFIED_INSTALLATION (`never', `always', `trusted', `interactive')
+     VERIFIED_INSTALLATION (`never', `always', `trusted', or `interactive')
              Default: `never'
 
              Verification requirement for installing a package.  Supported
