@@ -1,0 +1,2 @@
+This package contains Kyle Wheeler's wrapper scripts for qmail-remote
+and qmail-queue, respectively, to DKIM-sign and DKIM-verify messages.
