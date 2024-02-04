@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5.in,v 1.23 2024/02/03 17:35:26 riastradh Exp $
+.\"	$NetBSD: pkg_install.conf.5.in,v 1.24 2024/02/04 14:29:21 riastradh Exp $
 .\"
 .\" Copyright (c) 2008, 2009, 2012 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -67,6 +67,8 @@ License names are case-sensitive.
 Default: empty
 .Pp
 If non-empty, force the use of active FTP.
+Otherwise, try passive FTP first, and fall back to active FTP if the
+server reports a syntax error.
 .It Dv CACHE_INDEX No ( So Li yes Sc or So Li no Sc )
 Default:
 .Li yes
@@ -105,7 +107,7 @@ Default: empty
 If non-empty, path to a file containing additional certificates that
 can be used for completing certificate chains when validating binary
 packages or pkg-vulnerabilities files.
-.It Dv CHECK_LICENSE No ( So Li yes Sc , So Li no Sc , So Li always Sc )
+.It Dv CHECK_LICENSE No ( So Li yes Sc , So Li no Sc , or So Li always Sc )
 Default:
 .Li no
 .Pp
@@ -185,7 +187,7 @@ such packages will refuse to install unless
 .Dv CHECK_OSABI
 is also
 .Ql no .
-.It Dv CHECK_VULNERABILITIES No ( So Li never Sc , So Li always Sc , So Li interactive Sc )
+.It Dv CHECK_VULNERABILITIES No ( So Li never Sc , So Li always Sc , or So Li interactive Sc )
 Default:
 .Ql never
 .Pp
@@ -265,7 +267,7 @@ required for
 .It Dv GPG_KEYRING_PKGVULN No (empty or path)
 Default: empty
 .Pp
-If non-empty, keyring to use for verifying GPG signatures on
+If non-empty, keyring to use for verifying OpenPGP signatures on
 .Pa pkg-vulnerabilities ,
 overriding the default keyring.
 .It Dv GPG_KEYRING_SIGN No (empty or path)
@@ -280,7 +282,9 @@ Default: empty
 If non-empty, keyring to use for verifying package signatures on
 installation, overriding the default keyring.
 .It Dv GPG_SIGN_AS No (empty or OpenPGP user-id)
-OpenpGP user-id to use for signing packages with
+Default: empty
+.Pp
+If non-empty, OpenPGP user-id to use for signing packages with
 .Ic pkg_admin gpg-sign-package ,
 passed as the argument of
 .Ql --local-user
@@ -294,37 +298,49 @@ If non-empty, use direct connections and ignore
 .Ev FTP_PROXY
 and
 .Ev HTTP_PROXY .
-.It Dv IGNORE_URL No (URL, maybe specified multiple times)
-One URL per advisory which should be ignored when running
-.Dl Ic pkg_admin audit
-The URL from the
+.It Dv IGNORE_URL No (URL, may be specified multiple times)
+Default: none
+.Pp
+URL of a security advisory from the
 .Pa pkg-vulnerabilities
-file should be used as value.
-.It Dv PKG_DBDIR No (*; path)
+that should be ignored when running:
+.Dl Ic pkg_admin audit
+May be specified multiple times to ignore multiple advisories.
+.It Dv PKG_DBDIR No (*) (path)
+Default:
+.Pa @PKG_DBDIR@
+.Pp
 Location of the packages database.
 This option is overriden by the argument of the
 .Fl K
 option.
-.It Dv PKG_PATH No (*; colon-separated list of paths or URLs)
+.It Dv PKG_PATH No (*) (semicolon-separated list of paths or URLs)
+Default: empty
+.Pp
 Search path for packages.
 The entries are separated by semicolon.
 Each entry specifies a directory or URL to search for packages.
-.It Dv PKG_REFCOUNT_DBDIR No (*; path)
+.It Dv PKG_REFCOUNT_DBDIR No (*) (path)
+Default:
+.No "${" Ns Dv PKG_DBDIR Ns "}" Ns Pa .refcount
+.Pp
 Location of the package reference counts database directory.
-The default value is
-.Pa ${PKG_DBDIR}.refcount .
 .It Dv PKGVULNDIR No (path)
+Default:
+.No "${" Ns Dv PKG_DBDIR Ns "}"
+.Pp
 Directory name in which the
 .Pa pkg-vulnerabilities
 file resides.
-Default is
-.Pa ${PKG_DBDIR} .
 .It Dv PKGVULNURL No (URL)
+Default:
+.Lk http://cdn.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerablities.gz
+.Pp
 URL which is used for updating the local
 .Pa pkg-vulnerabilities
-file when running
+file when running:
 .Dl Ic pkg_admin fetch-pkg-vulnerabilities
-The default location is ftp.NetBSD.org using HTTP.
+.Pp
 .Em Note :
 Usually, only the compression type should be changed.
 Currently supported are uncompressed files and files compressed by
@@ -334,8 +350,10 @@ or
 .Xr gzip 1
 .Pq Pa .gz .
 .It Dv VERBOSE_NETIO No (empty or non-empty)
+Default: empty
+.Pp
 If non-empty, log details of network IO to stderr.
-.It Dv VERIFIED_INSTALLATION No ( So Li never Sc , So Li always Sc , So Li trusted Sc , So Li interactive Sc )
+.It Dv VERIFIED_INSTALLATION No ( So Li never Sc , So Li always Sc , So Li trusted Sc , or So Li interactive Sc )
 Default:
 .Ql never
 .Pp
