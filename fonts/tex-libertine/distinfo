@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/10/12 22:28:58 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/02/04 10:05:29 markd Exp $
 
-BLAKE2s (libertine.r64359.tar.xz) = 77972cdae685899747eacc349ef36a4dc90ac9e142498cb35dde20103068465a
-SHA512 (libertine.r64359.tar.xz) = 7b95b6612f5b46298cddf459184f11752a4b050110bd1d0271e43e364aa5da58c9e27d3b72119b76e863a19ab0987ea408d749ecf18ff40da1ab8a585e31c7cf
-Size (libertine.r64359.tar.xz) = 13903304 bytes
+BLAKE2s (libertine.r68981.tar.xz) = 0e8595ad6cad77b8529074403b4095b1835854a457bb26a5ee7b10dc26a0161a
+SHA512 (libertine.r68981.tar.xz) = 5c1dfc8bac01acd0e6e0d3412c08ee8672f01ebe1c7e22f36f313541139bea13d8967e53f5959a04b31d08c0ba88334b30c3e909eef310567b07ead39edafd3f
+Size (libertine.r68981.tar.xz) = 13898324 bytes
