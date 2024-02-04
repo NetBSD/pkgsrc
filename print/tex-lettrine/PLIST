@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2023/06/11 07:12:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/04 10:02:06 markd Exp $
+share/texmf-dist/tex/latex/lettrine/contrib/lettrine-optfile.cfl
+share/texmf-dist/tex/latex/lettrine/contrib/lettrine-pacl.cfl
+share/texmf-dist/tex/latex/lettrine/contrib/lettrine-padl.cfl
+share/texmf-dist/tex/latex/lettrine/contrib/lettrine-pzc2.cfl
+share/texmf-dist/tex/latex/lettrine/contrib/lettrine-pzc3.cfl
 share/texmf-dist/tex/latex/lettrine/lettrine-2006-03-17.sty
 share/texmf-dist/tex/latex/lettrine/lettrine-2015-08-31.sty
 share/texmf-dist/tex/latex/lettrine/lettrine-2018-08-18.sty
 share/texmf-dist/tex/latex/lettrine/lettrine-2022-09-25.sty
+share/texmf-dist/tex/latex/lettrine/lettrine-2023-04-18.sty
 share/texmf-dist/tex/latex/lettrine/lettrine.cfg
 share/texmf-dist/tex/latex/lettrine/lettrine.sty
