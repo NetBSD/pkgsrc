@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.115 2024/02/05 20:00:56 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.116 2024/02/05 20:08:49 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25497,7 +25497,7 @@ avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38470
 avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38471
 avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38472
 avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38473
-libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-45322
+libxml2<2.12.2	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-45322
 libcue<2.2.1nb1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-43641
 mutt<2.2.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-4874
 mutt<2.2.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-4875
