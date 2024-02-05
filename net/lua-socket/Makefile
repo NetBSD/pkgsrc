@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/07/11 15:14:30 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/02/05 13:23:16 tm Exp $
 
 DISTNAME=		luasocket-3.0-rc1
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//:S/-rc/rc/}
@@ -13,7 +13,7 @@ LICENSE=		mit
 
 MAKE_FILE=		makefile
 
-LDFLAGS.SunOS=		-lrt -lresolv
+LDFLAGS.SunOS=		-lrt -lresolv -lsocket -lnsl
 
 MAKE_FLAGS+=		LUAV=${_LUA_DOT_VERSION}
 MAKE_FLAGS+=		LUAINC_linux_base=${PREFIX}/include

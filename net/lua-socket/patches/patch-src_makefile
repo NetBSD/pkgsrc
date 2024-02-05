@@ -1,6 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.2 2016/06/04 23:08:13 alnsn Exp $
+$NetBSD: patch-src_makefile,v 1.3 2024/02/05 13:23:16 tm Exp $
 
-Fix luaL_checkint problem in 5.3. Pass our LDFLAGS.
+Pass our LDFLAGS.
+Build unix.so, serial.so and install them always.
+
 --- src/makefile.orig	2013-06-14 11:27:32.000000000 +0000
 +++ src/makefile
 @@ -145,13 +145,13 @@ SOCKET_macosx=usocket.o
@@ -19,3 +21,21 @@ Fix luaL_checkint problem in 5.3. Pass our LDFLAGS.
  LD_linux=gcc
  SOCKET_linux=usocket.o
  
+@@ -307,7 +307,7 @@ none:
+ 	@echo "where PLATFORM is one of these:"
+ 	@echo "   $(PLATS)"
+ 
+-all: $(SOCKET_SO) $(MIME_SO)
++all: $(SOCKET_SO) $(MIME_SO) $(UNIX_SO) $(SERIAL_SO)
+ 
+ $(SOCKET_SO): $(SOCKET_OBJS)
+ 	$(LD) $(SOCKET_OBJS) $(LDFLAGS)$@
+@@ -332,6 +332,8 @@ install:
+ 	$(INSTALL_EXEC) $(SOCKET_SO) $(INSTALL_SOCKET_CDIR)/core.$(SO)
+ 	$(INSTALL_DIR) $(INSTALL_MIME_CDIR)
+ 	$(INSTALL_EXEC) $(MIME_SO) $(INSTALL_MIME_CDIR)/core.$(SO)
++	$(INSTALL_EXEC) $(UNIX_SO) $(INSTALL_SOCKET_CDIR)/$(UNIX_SO)
++	$(INSTALL_EXEC) $(SERIAL_SO) $(INSTALL_SOCKET_CDIR)/$(SERIAL_SO)
+ 
+ install-unix: install
+ 	$(INSTALL_EXEC) $(UNIX_SO) $(INSTALL_SOCKET_CDIR)/$(UNIX_SO)
