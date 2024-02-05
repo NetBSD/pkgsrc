@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/08/31 14:56:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/05 15:53:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/http/accept.rb
 ${GEM_LIBDIR}/lib/http/accept/charsets.rb
@@ -11,4 +11,6 @@ ${GEM_LIBDIR}/lib/http/accept/parse_error.rb
 ${GEM_LIBDIR}/lib/http/accept/quoted_string.rb
 ${GEM_LIBDIR}/lib/http/accept/sort.rb
 ${GEM_LIBDIR}/lib/http/accept/version.rb
+${GEM_LIBDIR}/license.md
+${GEM_LIBDIR}/readme.md
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
