@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/11/14 14:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/02/05 14:32:25 nros Exp $
 
 DISTNAME=	codelite-17.0.0
 PKGREVISION=	3
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config bash
+USE_TOOLS+=		pkg-config bash gmake:run
 USE_CXX_FEATURES=	c++11
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD=11

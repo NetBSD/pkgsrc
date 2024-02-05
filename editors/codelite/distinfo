@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2024/01/03 13:30:49 nros Exp $
+$NetBSD: distinfo,v 1.16 2024/02/05 14:32:25 nros Exp $
 
 BLAKE2s (codelite-17.0.0.tar.gz) = f87eff56ee8f9af203a6212cc19e9031f70a396982a9f6fe276dc879f960f4dc
 SHA512 (codelite-17.0.0.tar.gz) = e36b6dcc37cd036a301a78714e8d5f2a61714b58fe006398fe0e959be59992dd7cc7d2a59661d364e371c750ca15cc21d4085d207738a7e3ede09ec0de125cff
@@ -17,6 +17,8 @@ SHA1 (patch-LiteEditor_CMakeLists.txt) = 34a788336a9a90b1b2960385c28cc5ace4abbfa
 SHA1 (patch-LiteEditor_clConfigurationSelectionCtrl.h) = 3432007081056ca29f71324f47d994e00a592d86
 SHA1 (patch-LiteEditor_editorsettingsdockingwidows.cpp) = 01e9e230ff5c4596dec590e3515fca63166738d9
 SHA1 (patch-LiteEditor_tabgroupmanager.h) = b537238557f99ad83eb39937ce16f65caab45783
+SHA1 (patch-Plugin_CompilerLocatorCLANG.cpp) = eb47a76bf7ed60d93766f3e3b9585c36a61bcd33
+SHA1 (patch-Plugin_CompilerLocatorGCC.cpp) = 92579de2c4dce08a96bdc222abb59aa914829d73
 SHA1 (patch-Plugin_DiffUI.h) = 66780d7ddc659df446f5f6361c8c69d966dfeb5d
 SHA1 (patch-Plugin_clEditorEditEventsHandler.cpp) = dc354802d62160a101983931526479e566680e89
 SHA1 (patch-Plugin_clFileSystemWorkspaceView.hpp) = 3d45e377e1721daf612742d6d3bc032aea1441bf
