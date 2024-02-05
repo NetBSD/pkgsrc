@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/05 13:23:16 tm Exp $
 
 BLAKE2s (luasocket-3.0-rc1.tar.gz) = e63616d8206b9d242fd7a16ce6a439def91698968cb3920943039549172ff882
 SHA512 (luasocket-3.0-rc1.tar.gz) = f6efce259aaacaa11472911471f8a13b118fe009b8953a82c6aa18b9ec829cd1293180904e56935cb130d36d267e3f27c91db2d78e03f7488f3e100571ed0540
 Size (luasocket-3.0-rc1.tar.gz) = 328598 bytes
-SHA1 (patch-makefile) = 2a6380adfa8f7ef63e70e0de9ef4eb4e76eff334
-SHA1 (patch-src_makefile) = eacf2d6152c68e8954bbe45f270c9cf13e731500
+SHA1 (patch-makefile) = 9040afc943b773569d5fc260e31ed38eb2a87b28
+SHA1 (patch-src_makefile) = 6d385804dc9f36ccff1d335388472dccb742bb91

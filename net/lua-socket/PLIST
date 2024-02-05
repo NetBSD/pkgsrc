@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/22 16:20:51 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/05 13:23:16 tm Exp $
 ${LUA_CDIR}/mime/core.so
 ${LUA_CDIR}/socket/core.so
+${LUA_CDIR}/socket/serial.so
+${LUA_CDIR}/socket/unix.so
 ${LUA_LDIR}/ltn12.lua
 ${LUA_LDIR}/mime.lua
 ${LUA_LDIR}/socket.lua
