@@ -1,0 +1,5 @@
+Observer
+
+The Observer pattern (also known as publish/subscribe) provides a simple
+mechanism for one object to inform a set of interested third-party objects
+when its state changes.
