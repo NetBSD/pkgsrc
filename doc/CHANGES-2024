@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.966 2024/02/05 15:50:35 taca Exp $
+$NetBSD: CHANGES-2024,v 1.967 2024/02/05 15:53:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1369,3 +1369,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-io-event to 1.4.3 [taca 2024-02-05]
 	Added devel/ruby-observer version 0.1.2 [taca 2024-02-05]
 	Updated graphics/ruby-RMagick to 5.4.0 [taca 2024-02-05]
+	Updated www/ruby-http-accept to 2.2.1 [taca 2024-02-05]
