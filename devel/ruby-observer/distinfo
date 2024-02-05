@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/05 15:47:12 taca Exp $
+
+BLAKE2s (observer-0.1.2.gem) = 0e05a4bb39f27cbda76aab0c147f1fec6d39f1016502b7642900f7a82afe54d7
+SHA512 (observer-0.1.2.gem) = 98457341cefee186229a24745687f5cc0afbbf7397747e7d33e4009564f302d66c269c88ea7fe773a90bfac992bb6c3b5f764ccc737fc6022f446df0c2a8aa55
+Size (observer-0.1.2.gem) = 9728 bytes
