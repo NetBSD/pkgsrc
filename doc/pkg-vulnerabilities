@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.113 2024/02/03 16:39:14 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.114 2024/02/05 19:58:14 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25664,8 +25664,8 @@ tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-40090
 consul>=1.15.0<1.15.3	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-2816
 consul>=1.13.0<1.15.3	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-1297
 consul<1.16.1	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-3518
-faad2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38858
-faad2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38857
+faad2<2.11.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38858
+faad2<2.11.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38857
 bitcoin<24.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-33297
 bitcoin-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-37192
 gnuplot-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-25969
