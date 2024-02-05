@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.59 2023/11/08 13:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/02/05 15:02:15 hauke Exp $
 
-DISTNAME=	netatalk-3.1.15
+DISTNAME=	netatalk-3.1.18
 PKGNAME=	${DISTNAME:C/-/3-/}
-PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/${DISTNAME:S/./-/g}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://netatalk.sourceforge.net/
+HOMEPAGE=	http://netatalk.io/
 COMMENT=	Netatalk AFP file services
 LICENSE=	gnu-gpl-v2
 

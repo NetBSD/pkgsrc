@@ -1,13 +1,14 @@
-$NetBSD: patch-configure,v 1.1 2023/04/04 18:16:06 bouyer Exp $
+$NetBSD: patch-configure,v 1.2 2024/02/05 15:02:16 hauke Exp $
+
 apply changes from patch-macros_quota-check.m4 for NetBSD's quota
 
---- configure.orig	2023-03-29 15:04:35.180307136 +0200
-+++ configure	2023-03-29 15:04:40.662623659 +0200
-@@ -16762,65 +16762,63 @@
+--- configure.orig	2024-02-05 14:15:24.671242466 +0000
++++ configure
+@@ -17464,65 +17464,63 @@ then :
    QUOTA_LIBS="-lrpcsvc"
  fi
  
--	       for ac_header in rpc/rpc.h rpc/pmap_prot.h rpcsvc/rquota.h
+-			       for ac_header in rpc/rpc.h rpc/pmap_prot.h rpcsvc/rquota.h
 -do :
 -  as_ac_Header=`printf "%s\n" "ac_cv_header_$ac_header" | $as_tr_sh`
 -ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
@@ -20,11 +21,11 @@ apply changes from patch-macros_quota-check.m4 for NetBSD's quota
 -_ACEOF
 -
 -else $as_nop
+-
+-				QUOTA_LIBS=""
+-				netatalk_cv_quotasupport="no"
 +  printf "%s\n" "#define HAVE_RPC_RPC_H 1" >>confdefs.h
  
--		QUOTA_LIBS=""
--		netatalk_cv_quotasupport="no"
--
 -printf "%s\n" "#define NO_QUOTA_SUPPORT 1" >>confdefs.h
 +fi
 +ac_fn_c_check_header_compile "$LINENO" "rpc/pmap_prot.h" "ac_cv_header_rpc_pmap_prot_h" "$ac_includes_default"
@@ -41,7 +42,7 @@ apply changes from patch-macros_quota-check.m4 for NetBSD's quota
  fi
  
 -done
--	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
+-			{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
 -printf %s "checking for getfsquota in -lquota... " >&6; }
 -if test ${ac_cv_lib_quota_getfsquota+y}
 +	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for quota_open in -lquota" >&5
