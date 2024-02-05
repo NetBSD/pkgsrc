@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/01/28 13:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/05 10:53:31 adam Exp $
 
-DISTNAME=	cyclonedx_python_lib-6.4.0
+DISTNAME=	cyclonedx_python_lib-6.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://github.com/CycloneDX/cyclonedx-python-lib
 COMMENT=	Python library for generating CycloneDX SBOMs
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.9:../../devel/py-packageurl
-DEPENDS+=	${PYPKGPREFIX}-serializable>=0.11.1:../../devel/py-serializable
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-license-expression>=30:../../devel/py-license-expression
+DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.11:../../devel/py-packageurl
+DEPENDS+=	${PYPKGPREFIX}-serializable>=0.16:../../devel/py-serializable
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.4.0:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-license-expression>=0:../../devel/py-license-expression
-TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.6.0:../../devel/py-ddt
-TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
-TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff-[0-9]*:../../textproc/py-xmldiff
+TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.7.1:../../devel/py-ddt
+TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18:../../textproc/py-jsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-lxml>=4:../../textproc/py-lxml
+TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff>=2.6.3:../../textproc/py-xmldiff
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
