@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/10/24 22:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/02/05 14:46:18 tm Exp $
 
 DISTNAME=	isync-1.4.4
 PKGREVISION=	3
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 LDFLAGS+=		-lcrypto
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 post-patch:
 	${TOUCH} ${WRKSRC}/configure ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in
