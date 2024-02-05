@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2024/02/05 06:30:24 adam Exp $
+lib/pulseaudio/modules/module-bonjour-publish.${SOEXT}
+lib/pulseaudio/modules/module-coreaudio-detect.${SOEXT}
+lib/pulseaudio/modules/module-coreaudio-device.${SOEXT}
