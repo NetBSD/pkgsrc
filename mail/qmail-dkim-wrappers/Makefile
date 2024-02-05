@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/04 17:37:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/05 07:52:48 schmonz Exp $
 
 PKGNAME=		qmail-dkim-wrappers-0.0.20211012
 CATEGORIES=		mail
@@ -25,7 +25,7 @@ SUBST_FILES.paths=	qmail-dkim*
 SUBST_SED.paths=	-e 's|^PATH=|PATH=${PREFIX}/bin:|g'
 SUBST_SED.paths+=	-e 's|/var/qmail|${QMAILDIR}|g'
 SUBST_SED.paths+=	-e 's|qmail-remote\.orig|qmail-remote|g'
-SUBST_SED.paths+=	-e 's|/etc|${PKG_SYSCONFDIR}|g'
+SUBST_SED.paths+=	-e 's|/etc/domainkeys|${QMAILDIR}/control/domainkeys|g'
 
 INSTALLATION_DIRS=	bin
 
