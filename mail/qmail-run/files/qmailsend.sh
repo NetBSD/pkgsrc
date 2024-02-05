@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.18 2020/05/19 19:45:58 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.19 2024/02/05 08:14:07 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -12,7 +12,7 @@
 name="qmailsend"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailsend_postenv:="QMAILREMOTE=@PREFIX@/bin/qmail-remote"}
+: ${qmailsend_postenv:="QMAILREMOTE=@PREFIX@/bin/qmail-dkimsign-remote"}
 : ${qmailsend_datalimit:="540000000"}
 : ${qmailsend_defaultdelivery:="`@HEAD@ -1 @PKG_SYSCONFDIR@/control/defaultdelivery`"}
 : ${qmailsend_log:="YES"}
