@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.114 2024/02/05 19:58:14 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.115 2024/02/05 20:00:56 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22339,7 +22339,7 @@ bind>=9.16<9.16.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-2
 htmldoc<1.9.12		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-40985
 grafana>=8.0.0<8.2.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-41174
 libxls-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-27836
-libheif-[0-9]*		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-23109
+libheif<1.7.0		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-23109
 cryptopp-[0-9]*		side-channel		https://nvd.nist.gov/vuln/detail/CVE-2021-43398
 vim<8.2.3581		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3928
 vim<8.2.3582		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3927
