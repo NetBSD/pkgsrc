@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/21 20:00:42 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/05 14:03:00 hauke Exp $
 bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -138,6 +138,8 @@ man/man1/unbin.1
 man/man1/unhex.1
 man/man1/uniconv.1
 man/man1/unsingle.1
+man/man3/atalk_aton.3
+man/man3/nbp_name.3
 man/man4/atalk.4
 man/man5/AppleVolumes.5
 man/man5/AppleVolumes.default.5
