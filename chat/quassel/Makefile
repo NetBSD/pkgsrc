@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/01/30 14:21:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2024/02/05 13:41:38 tm Exp $
 
 DISTNAME=	quassel-0.14.0
 PKGREVISION=	15
@@ -22,6 +22,8 @@ REPLACE_BASH+=	scripts/tx-sync.sh
 
 REPLACE_PERL+=	data/scripts/inxi
 REPLACE_PERL+=	data/scripts/mpris
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
