@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.969 2024/02/05 21:19:53 mef Exp $
+$NetBSD: CHANGES-2024,v 1.970 2024/02/05 21:28:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1372,3 +1372,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-http-accept to 2.2.1 [taca 2024-02-05]
 	Updated math/R-poweRlaw to 0.80.0 [mef 2024-02-05]
 	Updated devel/R-xfun to 0.41 [mef 2024-02-05]
+	Updated math/liblinear to 2.47 [adam 2024-02-05]
+	Updated databases/py-peewee to 3.17.1 [adam 2024-02-05]
+	Updated devel/py-pydantic to 2.6.1 [adam 2024-02-05]
+	Updated graphics/jasper to 4.2.0 [adam 2024-02-05]
