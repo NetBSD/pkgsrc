@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/21 20:03:03 hauke Exp $
-${PLIST.ea}bin/ad
+@comment $NetBSD: PLIST,v 1.3 2024/02/05 15:02:15 hauke Exp $
+bin/ad
 bin/afpldaptest
 bin/afppasswd
 bin/afpstats
 bin/apple_dump
-bin/asip-status.pl
-bin/cnid2_create
+bin/asip-status
 bin/dbd
 bin/macusers
 bin/netatalk-config
@@ -39,13 +38,9 @@ libexec/netatalk/netatalk
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
 libexec/netatalk/uams/uams_dhx2.so
-${PLIST.pam}libexec/netatalk/uams/uams_dhx2_pam.la
 libexec/netatalk/uams/uams_dhx2_passwd.la
-${PLIST.pam}libexec/netatalk/uams/uams_dhx_pam.la
 libexec/netatalk/uams/uams_dhx_passwd.la
-${PLIST.gssapi}libexec/netatalk/uams/uams_gss.la
 libexec/netatalk/uams/uams_guest.la
-${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
 man/man1/ad.1
@@ -53,11 +48,10 @@ man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/afpstats.1
 man/man1/apple_dump.1
-man/man1/asip-status.pl.1
+man/man1/asip-status.1
 man/man1/dbd.1
 man/man1/macusers.1
 man/man1/netatalk-config.1
-man/man1/uniconv.1
 man/man5/afp.conf.5
 man/man5/afp_signature.conf.5
 man/man5/afp_voluuid.conf.5
@@ -70,6 +64,5 @@ share/aclocal/netatalk.m4
 share/examples/netatalk/afp.conf
 share/examples/netatalk/dbus-session.conf
 share/examples/netatalk/extmap.conf
-${PLIST.pam}share/examples/netatalk/netatalk.pam
 @pkgdir libexec/psffilters
 @pkgdir etc/netatalk

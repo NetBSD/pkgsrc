@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.15 2023/05/04 16:53:07 hauke Exp $
+$NetBSD: distinfo,v 1.16 2024/02/05 15:02:15 hauke Exp $
 
-BLAKE2s (netatalk-3.1.15.tar.gz) = 07fe90222f1bac3db17574358f40a5b1ee40fe3ea860905bd042c58c49b7bb6e
-SHA512 (netatalk-3.1.15.tar.gz) = ccba1bb3d7136194d5897e2c560fb81f8182ec1ac19446954c910e303cb43dab5a1cf1c842d75e5040dd43ab1b55c646857b7866ddb362e35afbb4110b296015
-Size (netatalk-3.1.15.tar.gz) = 1837072 bytes
+BLAKE2s (netatalk-3.1.18.tar.xz) = 3a73d677d58e14efb67d5b3a064b678ec547239cfcb0cb22844d2afb31658039
+SHA512 (netatalk-3.1.18.tar.xz) = 06c56754afacbf9c71dc2ab7b80c231f5c25f522967e1d825b4e9e129233528bd1e7101144239b52636b9efe7f1f86a37749da8a8af611169155bca9711798d0
+Size (netatalk-3.1.18.tar.xz) = 974852 bytes
 SHA1 (patch-bin_ad_ad__cp.c) = 8f32b7b0d66bcd16a7e31af27df54dd4ff53d86f
 SHA1 (patch-config.h.in) = bd9e735c6d1c8bb8a1534f6674fa6358b29922c1
 SHA1 (patch-config_Makefile.in) = 81fff584e5cb98537a4fa671fb551ad0258ba092
 SHA1 (patch-config_pam_Makefile.in) = 8f69225c333b327b4c57ef12994666cc521e5c70
-SHA1 (patch-configure) = 7d2ce8e0d06b8de5b2a1ac45f926ee08b6fd5c3b
+SHA1 (patch-configure) = 97d3b32d02eb902fc1891e936d7aab459e6446df
 SHA1 (patch-distrib_initscripts_Makefile.in) = fbeffa06a051fb61819d09e0396695cbe564780e
 SHA1 (patch-distrib_initscripts_netatalk.xml.tmpl) = dd7591e12eca3c1e7d7bc768cd1e060979dc383e
 SHA1 (patch-etc_afpd_afp__dsi.c) = 024cc7a0935ece2ed43d1ab3142c8d6bb1b376be
@@ -18,4 +18,4 @@ SHA1 (patch-etc_netatalk_netatalk.c) = 2bdbfc035e4bea9859cf970cd6b9a6503244185e
 SHA1 (patch-include_atalk_util.h) = a7a0763c5866288ad89a8b6b90c71767ee4d9d64
 SHA1 (patch-libatalk_dsi_dsi__tcp.c) = eacb939dba2749925e36ca05fa0480b3391d0f80
 SHA1 (patch-libatalk_util_getiface.c) = 1a46bd695c96e0666b6f45493eb44501c0f4e0b5
-SHA1 (patch-macros_quota-check.m4) = a6502693ae8c7218b7c4426b134e0aa590412e1f
+SHA1 (patch-macros_quota-check.m4) = bd90329a15e5fc84ac58f856cfa0f7016457e5ce
