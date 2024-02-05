@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/07/23 12:18:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/02/05 15:50:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -25,21 +25,21 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/before_install_linux.sh
 ${GEM_LIBDIR}/before_install_osx.sh
 ${GEM_LIBDIR}/ext/RMagick/extconf.rb
-${GEM_LIBDIR}/ext/RMagick/rmagick.c
+${GEM_LIBDIR}/ext/RMagick/rmagick.cpp
 ${GEM_LIBDIR}/ext/RMagick/rmagick.h
 ${GEM_LIBDIR}/ext/RMagick/rmagick_gvl.h
-${GEM_LIBDIR}/ext/RMagick/rmdraw.c
-${GEM_LIBDIR}/ext/RMagick/rmenum.c
-${GEM_LIBDIR}/ext/RMagick/rmfill.c
-${GEM_LIBDIR}/ext/RMagick/rmilist.c
-${GEM_LIBDIR}/ext/RMagick/rmimage.c
-${GEM_LIBDIR}/ext/RMagick/rminfo.c
-${GEM_LIBDIR}/ext/RMagick/rmkinfo.c
-${GEM_LIBDIR}/ext/RMagick/rmmain.c
-${GEM_LIBDIR}/ext/RMagick/rmmontage.c
-${GEM_LIBDIR}/ext/RMagick/rmpixel.c
-${GEM_LIBDIR}/ext/RMagick/rmstruct.c
-${GEM_LIBDIR}/ext/RMagick/rmutil.c
+${GEM_LIBDIR}/ext/RMagick/rmdraw.cpp
+${GEM_LIBDIR}/ext/RMagick/rmenum.cpp
+${GEM_LIBDIR}/ext/RMagick/rmfill.cpp
+${GEM_LIBDIR}/ext/RMagick/rmilist.cpp
+${GEM_LIBDIR}/ext/RMagick/rmimage.cpp
+${GEM_LIBDIR}/ext/RMagick/rminfo.cpp
+${GEM_LIBDIR}/ext/RMagick/rmkinfo.cpp
+${GEM_LIBDIR}/ext/RMagick/rmmain.cpp
+${GEM_LIBDIR}/ext/RMagick/rmmontage.cpp
+${GEM_LIBDIR}/ext/RMagick/rmpixel.cpp
+${GEM_LIBDIR}/ext/RMagick/rmstruct.cpp
+${GEM_LIBDIR}/ext/RMagick/rmutil.cpp
 ${GEM_LIBDIR}/lib/RMagick2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/rmagick.rb
 ${GEM_LIBDIR}/lib/rmagick/version.rb
