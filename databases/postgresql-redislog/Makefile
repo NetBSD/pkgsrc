@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/09 06:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/05 09:21:33 jperkin Exp $
 
 DISTNAME=	redislog-0.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -16,7 +16,7 @@ LICENSE=	mit
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 # redislog.c:185:20: error: static declaration of 'error_severity' follows non-static declaration
-PGSQL_VERSIONS_ACCEPTED=	14 13 12 11
+PGSQL_VERSIONS_ACCEPTED=	14 13 12
 
 USE_TOOLS+=	gmake
 
