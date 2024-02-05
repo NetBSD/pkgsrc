@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2023/12/29 18:24:36 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/02/05 08:07:00 schmonz Exp $
 
 DISTNAME=	znc-1.8.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	chat
 MASTER_SITES=	https://znc.in/releases/archive/
+DISTFILES=	${DEFAULT_DISTFILES} znc-palaver-1.2.2.tar.gz
+SITES.znc-palaver-1.2.2.tar.gz= -${MASTER_SITE_GITHUB:=cocodelabs/znc-palaver/archive/}1.2.2.tar.gz
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://znc.in/
@@ -49,7 +51,10 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing absolute paths in znc.1 manpage.
 SUBST_FILES.man=	man/znc.1
-SUBST_SED.man=		-e 's,\/usr\/local,${PREFIX},g'
+SUBST_SED.man=		-e 's|/usr/local|${PREFIX}|g'
+
+post-extract:
+	${CP} ${WRKDIR}/znc-palaver-1.2.2/palaver.cpp ${WRKSRC}/modules/
 
 .include "options.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
