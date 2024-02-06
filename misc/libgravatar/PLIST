@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:01:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:37 markd Exp $
 include/KPim5/Gravatar/Gravatar/GravatarCache
-include/KPim5/Gravatar/Gravatar/GravatarConfigWidget
 include/KPim5/Gravatar/Gravatar/GravatarConfigureSettingsDialog
 include/KPim5/Gravatar/Gravatar/GravatarConfigureSettingsWidget
 include/KPim5/Gravatar/Gravatar/GravatarDownloadPixmapWidget
@@ -9,22 +8,17 @@ include/KPim5/Gravatar/gravatar/gravatar_export.h
 include/KPim5/Gravatar/gravatar/gravatarcache.h
 include/KPim5/Gravatar/gravatar/gravatarconfiguresettingsdialog.h
 include/KPim5/Gravatar/gravatar/gravatarconfiguresettingswidget.h
-include/KPim5/Gravatar/gravatar/gravatarconfigwidget.h
 include/KPim5/Gravatar/gravatar/gravatardownloadpixmapwidget.h
 include/KPim5/Gravatar/gravatar/gravatarresolvurljob.h
 include/KPim5/Gravatar/gravatar/gravatarsettings.h
 include/KPim5/Gravatar/gravatar_version.h
-lib/cmake/KF5Gravatar/KF5GravatarConfig.cmake
-lib/cmake/KF5Gravatar/KF5GravatarConfigVersion.cmake
-lib/cmake/KF5Gravatar/KPim5GravatarTargets-noconfig.cmake
-lib/cmake/KF5Gravatar/KPim5GravatarTargets.cmake
 lib/cmake/KPim5Gravatar/KPim5GravatarConfig.cmake
 lib/cmake/KPim5Gravatar/KPim5GravatarConfigVersion.cmake
 lib/cmake/KPim5Gravatar/KPim5GravatarTargets-noconfig.cmake
 lib/cmake/KPim5Gravatar/KPim5GravatarTargets.cmake
 lib/libKPim5Gravatar.so
 lib/libKPim5Gravatar.so.5
-lib/libKPim5Gravatar.so.5.23.3
+lib/libKPim5Gravatar.so.5.24.4
 qt5/mkspecs/modules/qt_Gravatar.pri
 share/locale/ar/LC_MESSAGES/libgravatar.mo
 share/locale/ca/LC_MESSAGES/libgravatar.mo

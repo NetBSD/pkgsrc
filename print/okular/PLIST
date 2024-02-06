@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/03 04:45:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/06 11:17:41 markd Exp $
 bin/okular
 include/okular/core/action.h
 include/okular/core/annotations.h
@@ -35,8 +35,8 @@ lib/cmake/Okular5/Okular5ConfigVersion.cmake
 lib/cmake/Okular5/Okular5Targets-noconfig.cmake
 lib/cmake/Okular5/Okular5Targets.cmake
 lib/libOkular5Core.so
-lib/libOkular5Core.so.10
-lib/libOkular5Core.so.10.0.0
+lib/libOkular5Core.so.11
+lib/libOkular5Core.so.11.0.0
 man/ca/man1/okular.1
 man/de/man1/okular.1
 man/es/man1/okular.1

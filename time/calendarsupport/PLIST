@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 04:53:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:43 markd Exp $
 include/KPim5/CalendarSupport/CalendarSupport/ArchiveDialog
 include/KPim5/CalendarSupport/CalendarSupport/CalPrintDefaultPlugins
 include/KPim5/CalendarSupport/CalendarSupport/CalPrintPluginBase
@@ -59,7 +59,7 @@ lib/cmake/KPim5CalendarSupport/KPim5CalendarSupportTargets-noconfig.cmake
 lib/cmake/KPim5CalendarSupport/KPim5CalendarSupportTargets.cmake
 lib/libKPim5CalendarSupport.so
 lib/libKPim5CalendarSupport.so.5
-lib/libKPim5CalendarSupport.so.5.23.3
+lib/libKPim5CalendarSupport.so.5.24.4
 qt5/mkspecs/modules/qt_CalendarSupport.pri
 share/locale/af/LC_MESSAGES/calendarsupport.mo
 share/locale/ar/LC_MESSAGES/calendarsupport.mo

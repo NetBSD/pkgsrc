@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:11:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:40 markd Exp $
 include/KPim5/MessageComposer/MessageComposer/AbstractEncryptJob
 include/KPim5/MessageComposer/MessageComposer/AkonadiSender
 include/KPim5/MessageComposer/MessageComposer/AliasesExpandJob
@@ -20,6 +20,7 @@ include/KPim5/MessageComposer/MessageComposer/ConvertSnippetVariableMenu
 include/KPim5/MessageComposer/MessageComposer/ConvertSnippetVariablesJob
 include/KPim5/MessageComposer/MessageComposer/ConvertSnippetVariablesUtil
 include/KPim5/MessageComposer/MessageComposer/DraftStatus
+include/KPim5/MessageComposer/MessageComposer/EditorWatcher
 include/KPim5/MessageComposer/MessageComposer/EncryptJob
 include/KPim5/MessageComposer/MessageComposer/FollowUpReminderSelectDateDialog
 include/KPim5/MessageComposer/MessageComposer/FollowupReminder
@@ -28,7 +29,10 @@ include/KPim5/MessageComposer/MessageComposer/GlobalPart
 include/KPim5/MessageComposer/MessageComposer/ImageScalingWidget
 include/KPim5/MessageComposer/MessageComposer/InfoPart
 include/KPim5/MessageComposer/MessageComposer/InsertTextFileJob
+include/KPim5/MessageComposer/MessageComposer/ItipJob
+include/KPim5/MessageComposer/MessageComposer/ItipPart
 include/KPim5/MessageComposer/MessageComposer/JobBase
+include/KPim5/MessageComposer/MessageComposer/KeyResolver
 include/KPim5/MessageComposer/MessageComposer/Kleo_Util
 include/KPim5/MessageComposer/MessageComposer/MDNAdviceDialog
 include/KPim5/MessageComposer/MessageComposer/MDNAdviceHelper
@@ -40,7 +44,6 @@ include/KPim5/MessageComposer/MessageComposer/MessageHelper
 include/KPim5/MessageComposer/MessageComposer/MessagePart
 include/KPim5/MessageComposer/MessageComposer/MessageSender
 include/KPim5/MessageComposer/MessageComposer/MultipartJob
-include/KPim5/MessageComposer/MessageComposer/NearExpiryChecker
 include/KPim5/MessageComposer/MessageComposer/PluginActionType
 include/KPim5/MessageComposer/MessageComposer/PluginComposerInterface
 include/KPim5/MessageComposer/MessageComposer/PluginEditor
@@ -106,6 +109,7 @@ include/KPim5/MessageComposer/messagecomposer/convertsnippetvariablemenu.h
 include/KPim5/MessageComposer/messagecomposer/convertsnippetvariablesjob.h
 include/KPim5/MessageComposer/messagecomposer/convertsnippetvariablesutil.h
 include/KPim5/MessageComposer/messagecomposer/draftstatus.h
+include/KPim5/MessageComposer/messagecomposer/editorwatcher.h
 include/KPim5/MessageComposer/messagecomposer/encryptjob.h
 include/KPim5/MessageComposer/messagecomposer/followupreminder.h
 include/KPim5/MessageComposer/messagecomposer/followupremindercreatejob.h
@@ -114,7 +118,10 @@ include/KPim5/MessageComposer/messagecomposer/globalpart.h
 include/KPim5/MessageComposer/messagecomposer/imagescalingwidget.h
 include/KPim5/MessageComposer/messagecomposer/infopart.h
 include/KPim5/MessageComposer/messagecomposer/inserttextfilejob.h
+include/KPim5/MessageComposer/messagecomposer/itipjob.h
+include/KPim5/MessageComposer/messagecomposer/itippart.h
 include/KPim5/MessageComposer/messagecomposer/jobbase.h
+include/KPim5/MessageComposer/messagecomposer/keyresolver.h
 include/KPim5/MessageComposer/messagecomposer/kleo_util.h
 include/KPim5/MessageComposer/messagecomposer/maintextjob.h
 include/KPim5/MessageComposer/messagecomposer/mdnadvicedialog.h
@@ -129,7 +136,6 @@ include/KPim5/MessageComposer/messagecomposer/messagehelper.h
 include/KPim5/MessageComposer/messagecomposer/messagepart.h
 include/KPim5/MessageComposer/messagecomposer/messagesender.h
 include/KPim5/MessageComposer/messagecomposer/multipartjob.h
-include/KPim5/MessageComposer/messagecomposer/nearexpirychecker.h
 include/KPim5/MessageComposer/messagecomposer/pluginactiontype.h
 include/KPim5/MessageComposer/messagecomposer/plugincomposerinterface.h
 include/KPim5/MessageComposer/messagecomposer/plugineditor.h
@@ -260,7 +266,6 @@ include/KPim5/MessageViewer/MessageViewer/DKIMManagerRules
 include/KPim5/MessageViewer/MessageViewer/DKIMRule
 include/KPim5/MessageViewer/MessageViewer/DKIMViewerMenu
 include/KPim5/MessageViewer/MessageViewer/DKIMWidgetInfo
-include/KPim5/MessageViewer/MessageViewer/EditorWatcher
 include/KPim5/MessageViewer/MessageViewer/FileHtmlWriter
 include/KPim5/MessageViewer/MessageViewer/GrantleeHeaderStyle
 include/KPim5/MessageViewer/MessageViewer/GrantleeHeaderTestStyle
@@ -318,7 +323,6 @@ include/KPim5/MessageViewer/MessageViewer/ViewerPluginToolManager
 include/KPim5/MessageViewer/messageviewer/attachmentstrategy.h
 include/KPim5/MessageViewer/messageviewer/bodyparturlhandler.h
 include/KPim5/MessageViewer/messageviewer/bufferedhtmlwriter.h
-include/KPim5/MessageViewer/messageviewer/config-messageviewer.h
 include/KPim5/MessageViewer/messageviewer/configurewidget.h
 include/KPim5/MessageViewer/messageviewer/csshelper.h
 include/KPim5/MessageViewer/messageviewer/csshelperbase.h
@@ -338,7 +342,6 @@ include/KPim5/MessageViewer/messageviewer/dkimmanageruleswidget.h
 include/KPim5/MessageViewer/messageviewer/dkimrule.h
 include/KPim5/MessageViewer/messageviewer/dkimviewermenu.h
 include/KPim5/MessageViewer/messageviewer/dkimwidgetinfo.h
-include/KPim5/MessageViewer/messageviewer/editorwatcher.h
 include/KPim5/MessageViewer/messageviewer/filehtmlwriter.h
 include/KPim5/MessageViewer/messageviewer/globalsettings_messageviewer.h
 include/KPim5/MessageViewer/messageviewer/grantleeheaderstyle.h
@@ -553,25 +556,25 @@ lib/cmake/KPim5WebEngineViewer/KPim5WebEngineViewerTargets-noconfig.cmake
 lib/cmake/KPim5WebEngineViewer/KPim5WebEngineViewerTargets.cmake
 lib/libKPim5MessageComposer.so
 lib/libKPim5MessageComposer.so.5
-lib/libKPim5MessageComposer.so.5.23.3
+lib/libKPim5MessageComposer.so.5.24.4
 lib/libKPim5MessageCore.so
 lib/libKPim5MessageCore.so.5
-lib/libKPim5MessageCore.so.5.23.3
+lib/libKPim5MessageCore.so.5.24.4
 lib/libKPim5MessageList.so
 lib/libKPim5MessageList.so.5
-lib/libKPim5MessageList.so.5.23.3
+lib/libKPim5MessageList.so.5.24.4
 lib/libKPim5MessageViewer.so
 lib/libKPim5MessageViewer.so.5
-lib/libKPim5MessageViewer.so.5.23.3
+lib/libKPim5MessageViewer.so.5.24.4
 lib/libKPim5MimeTreeParser.so
 lib/libKPim5MimeTreeParser.so.5
-lib/libKPim5MimeTreeParser.so.5.23.3
+lib/libKPim5MimeTreeParser.so.5.24.4
 lib/libKPim5TemplateParser.so
 lib/libKPim5TemplateParser.so.5
-lib/libKPim5TemplateParser.so.5.23.3
+lib/libKPim5TemplateParser.so.5.24.4
 lib/libKPim5WebEngineViewer.so
 lib/libKPim5WebEngineViewer.so.5
-lib/libKPim5WebEngineViewer.so.5.23.3
+lib/libKPim5WebEngineViewer.so.5.24.4
 qt5/mkspecs/modules/qt_MessageComposer.pri
 qt5/mkspecs/modules/qt_MessageCore.pri
 qt5/mkspecs/modules/qt_MessageList.pri
@@ -708,9 +711,12 @@ share/locale/et/LC_MESSAGES/libmimetreeparser.mo
 share/locale/et/LC_MESSAGES/libtemplateparser.mo
 share/locale/et/LC_MESSAGES/libwebengineviewer.mo
 share/locale/eu/LC_MESSAGES/libmessagecomposer.mo
+share/locale/eu/LC_MESSAGES/libmessagecore.mo
 share/locale/eu/LC_MESSAGES/libmessagelist.mo
 share/locale/eu/LC_MESSAGES/libmessageviewer.mo
 share/locale/eu/LC_MESSAGES/libmimetreeparser.mo
+share/locale/eu/LC_MESSAGES/libtemplateparser.mo
+share/locale/eu/LC_MESSAGES/libwebengineviewer.mo
 share/locale/fa/LC_MESSAGES/libmessagelist.mo
 share/locale/fa/LC_MESSAGES/libmessageviewer.mo
 share/locale/fa/LC_MESSAGES/libmimetreeparser.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 05:01:24 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:17:37 markd Exp $
 
-BLAKE2s (libgravatar-23.04.3.tar.xz) = 8541f25da4a1f93cea979c033757b9acdd0af1f4eba20ce9e7320b8e79b2c3b3
-SHA512 (libgravatar-23.04.3.tar.xz) = d49fd2ce0928baf5d1ea5247dcbb3ae83530b24f028a0e78fdb1575969e3a83941becccceef8ace33f28e0fd341e5eb0eb1d9da6b86d43d4441b0c02a9715746
-Size (libgravatar-23.04.3.tar.xz) = 37328 bytes
+BLAKE2s (libgravatar-23.08.4.tar.xz) = 649e2e16d5d8b90f4316d9ae77c230399e64286c279c6bd53256a011060c4722
+SHA512 (libgravatar-23.08.4.tar.xz) = 5a34203bde09a456131a55c6df222650be354f66209d422f1a9680fdd5a8b381915882837dfe3bf71b23962d045acfdd68296241c5ad0b7d89bbed73e6b771b1
+Size (libgravatar-23.08.4.tar.xz) = 36180 bytes

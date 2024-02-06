@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2024/01/30 14:22:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2024/02/06 11:17:38 markd Exp $
 
 DISTNAME=	step-${KAPPSVER}
-PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/step/

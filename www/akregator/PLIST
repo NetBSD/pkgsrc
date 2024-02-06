@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:58:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:44 markd Exp $
 bin/akregator
 bin/akregatorstorageexporter
 lib/libakregatorinterfaces.so.5
-lib/libakregatorinterfaces.so.5.23.3
+lib/libakregatorinterfaces.so.5.24.4
 lib/libakregatorprivate.so.5
-lib/libakregatorprivate.so.5.23.3
+lib/libakregatorprivate.so.5.24.4
 qt5/plugins/akregatorpart.so
 qt5/plugins/pim5/kcms/akregator/akregator_config_advanced.so
 qt5/plugins/pim5/kcms/akregator/akregator_config_appearance.so
@@ -13,6 +13,7 @@ qt5/plugins/pim5/kcms/akregator/akregator_config_browser.so
 qt5/plugins/pim5/kcms/akregator/akregator_config_general.so
 qt5/plugins/pim5/kcms/akregator/akregator_config_plugins.so
 qt5/plugins/pim5/kcms/akregator/akregator_config_security.so
+qt5/plugins/pim5/kcms/akregator/akregator_config_userfeedback.so
 qt5/plugins/pim5/kontact/kontact_akregatorplugin.so
 share/akregator/grantleetheme/5.2/combinedview.html
 share/akregator/grantleetheme/5.2/defaultnormalvisitfeed.html

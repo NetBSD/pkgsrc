@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.155 2024/01/30 14:22:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2024/02/06 11:17:42 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b
@@ -60,5 +59,5 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
