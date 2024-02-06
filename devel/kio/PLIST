@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/07/29 01:59:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/02/06 10:46:25 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -240,6 +240,7 @@ include/KF5/KIOWidgets/KIO/WidgetsAskUserActionHandler
 include/KF5/KIOWidgets/KOpenWithDialog
 include/KF5/KIOWidgets/KOverlayIconPlugin
 include/KF5/KIOWidgets/KPropertiesDialog
+include/KF5/KIOWidgets/KPropertiesDialogPlugin
 include/KF5/KIOWidgets/KRun
 include/KF5/KIOWidgets/KShellCompletion
 include/KF5/KIOWidgets/KSslCertificateBox
@@ -283,6 +284,7 @@ include/KF5/KIOWidgets/kiowidgets_export.h
 include/KF5/KIOWidgets/kopenwithdialog.h
 include/KF5/KIOWidgets/koverlayiconplugin.h
 include/KF5/KIOWidgets/kpropertiesdialog.h
+include/KF5/KIOWidgets/kpropertiesdialogplugin.h
 include/KF5/KIOWidgets/krun.h
 include/KF5/KIOWidgets/kshellcompletion.h
 include/KF5/KIOWidgets/ksslcertificatebox.h

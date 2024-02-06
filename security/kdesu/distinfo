@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/07/29 02:23:12 markd Exp $
+$NetBSD: distinfo,v 1.17 2024/02/06 10:46:30 markd Exp $
 
-BLAKE2s (kdesu-5.108.0.tar.xz) = 595e8a24c799ca350eb61c9544ae7c549b9600f54631601a578a6d6d80e6202e
-SHA512 (kdesu-5.108.0.tar.xz) = 329a34b281f67cf0b0ac69ed833cb30b7b3405458be5fccc892b1b023a7f80e0976d2b68cbdb6a9a7cb428414d575b9a1f48c8388eab226607c6130a32556aae
-Size (kdesu-5.108.0.tar.xz) = 56548 bytes
+BLAKE2s (kdesu-5.114.0.tar.xz) = cfc166eb1bf518e6a241774224b176937345aab89eb67ef0e0b19d153b2d1b37
+SHA512 (kdesu-5.114.0.tar.xz) = bc5cdb67f2de29706575bda901c8fbe32fee5db221f3b4d6a92e50dc448e3eb62f0075d345b7d46c640de9dbff072e418ebf95e36948bfef274b05c27de404bf
+Size (kdesu-5.114.0.tar.xz) = 56788 bytes

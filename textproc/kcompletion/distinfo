@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/07/29 02:30:35 markd Exp $
+$NetBSD: distinfo,v 1.17 2024/02/06 10:46:31 markd Exp $
 
-BLAKE2s (kcompletion-5.108.0.tar.xz) = 4d6a424d95ee94b086760c5c2d4b54b1d99ad27b089fc4da9062c5acf0cc4c6e
-SHA512 (kcompletion-5.108.0.tar.xz) = bc96e4a686ca775db2f8676e270c9727abc70278ce604d8bf9df63e92001747cf97995dff0585859e2d632d717f701f0f7e51e970d71e36bdd68e4fcdc88e53b
-Size (kcompletion-5.108.0.tar.xz) = 2337756 bytes
+BLAKE2s (kcompletion-5.114.0.tar.xz) = 5b237d17ec5673c567dffd3a73c654223a475075d8c0b48ad6510910c848553e
+SHA512 (kcompletion-5.114.0.tar.xz) = 359f88d0544ea4421f15c5a30282b7293f272d970f2e271dd8e06988b875cad741ce51cddcfc3055bd5962cc304665ba150ab9df9741ac6c6fd35824f58531d4
+Size (kcompletion-5.114.0.tar.xz) = 2337944 bytes
