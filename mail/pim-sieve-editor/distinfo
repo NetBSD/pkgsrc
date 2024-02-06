@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 05:52:47 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:05:26 markd Exp $
 
-BLAKE2s (pim-sieve-editor-23.04.3.tar.xz) = c6ddfd3f6016fbf42fd498ccf6c64357bfd478b82155805738953467a5dd7cf5
-SHA512 (pim-sieve-editor-23.04.3.tar.xz) = 54cd19619854785cd353804f413dc27762b04198942dd3bfcb801bf28b2f0295ee8d35ae344631108e4b5f59596b67298de1150b09e967d87baf1280c0e8c647
-Size (pim-sieve-editor-23.04.3.tar.xz) = 464516 bytes
+BLAKE2s (pim-sieve-editor-23.08.4.tar.xz) = 7320a727d6726f8532a7b317416345d2081f5d6d07d4b6f6191344370167cece
+SHA512 (pim-sieve-editor-23.08.4.tar.xz) = dff7b2fd05566905abbc13c89c1715ed22af5a0a0381cac435ea1d53bd667bfc9f670ddb9dfec3fcee94841edb529e8c0493d2b79fb848973626f87244040b1c
+Size (pim-sieve-editor-23.08.4.tar.xz) = 466140 bytes

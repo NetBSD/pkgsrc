@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/08/03 02:37:42 markd Exp $
+$NetBSD: distinfo,v 1.13 2024/02/06 11:05:16 markd Exp $
 
-BLAKE2s (lokalize-23.04.3.tar.xz) = 73d519eaa9114d2bc313a6be02928d631e8d3115f9b6f1b5373bf587707a26d4
-SHA512 (lokalize-23.04.3.tar.xz) = 89af001666dc903b057a03aeae4a01106aaa9c59060eb522d1d36909c6fb7f2e293ed8e222a24a1bb5087f551960c061b9852a9f47ab7fc36da30ba9152354c3
-Size (lokalize-23.04.3.tar.xz) = 2117060 bytes
+BLAKE2s (lokalize-23.08.4.tar.xz) = 36c54eca32d4832ca67e94cf9abad7f93a7451d5941926ecd92aa4e375caee1a
+SHA512 (lokalize-23.08.4.tar.xz) = 03e64933d09512e1210178045978f4e870205ab2c82befbca1446f11009bb24c5296ba17ee63f4b84a9c1baebf25b7d853c44ce264918f230ab7984c3c4ce0f3
+Size (lokalize-23.08.4.tar.xz) = 2142760 bytes

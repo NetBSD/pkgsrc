@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 04:06:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:05:25 markd Exp $
 
-BLAKE2s (kmailtransport-23.04.3.tar.xz) = a80eaff92ddf0356760925c826b8760857935a3fcff3b0aa462a155075db02ab
-SHA512 (kmailtransport-23.04.3.tar.xz) = f3c5e8422cea7e2620a1fbb9df951640d4b1a94e0b2dab0a3972d14291538b8ec3a06cf5e828994710b06683b8616e32fa4936ecfd54094e35d785b262e4989c
-Size (kmailtransport-23.04.3.tar.xz) = 191560 bytes
+BLAKE2s (kmailtransport-23.08.4.tar.xz) = e2eaacc5b96a1fa82e7e3fe80bf6047709ff94b5f81d70119f0528c8180fb30d
+SHA512 (kmailtransport-23.08.4.tar.xz) = caf66701021aad2cc7c83dc4b171d5868bc6f28f51c6756bc1c5658d8ee5db040a7514d33b79e491ad328b43a75b291c15252072d194b54c363f68371749c2d3
+Size (kmailtransport-23.08.4.tar.xz) = 174704 bytes

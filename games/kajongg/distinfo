@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 02:49:55 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:17 markd Exp $
 
-BLAKE2s (kajongg-23.04.3.tar.xz) = 7a6c675f60a13b45709c4f02eed1856098a9b5b935e547a60a3cdc3c3de181ed
-SHA512 (kajongg-23.04.3.tar.xz) = 4c39f746b0af9f7ad913a1b269c021a16b9f06c6777476c47874e43ca4d3041ef3be63a566028952cc6075a318b8adf34af5aa7316f004d9b529590589f99235
-Size (kajongg-23.04.3.tar.xz) = 4578064 bytes
+BLAKE2s (kajongg-23.08.4.tar.xz) = 578c15ac8e4a48d80204e8511254053437e0e7fc9bd2deb93314040b98b269be
+SHA512 (kajongg-23.08.4.tar.xz) = 20aa141c8a10395d75e0095cf494abb9c0e5636e3739f31b0f7ac467ba6b1695dcf1ade442797419b017d9d3926572bd8dab7f8c7611fbbcf46ce28a64aadcf6
+Size (kajongg-23.08.4.tar.xz) = 4592152 bytes

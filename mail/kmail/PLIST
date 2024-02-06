@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 06:24:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:25 markd Exp $
 bin/akonadi_archivemail_agent
 bin/akonadi_followupreminder_agent
 bin/akonadi_mailfilter_agent
@@ -9,7 +9,7 @@ bin/kmail
 bin/kmail-refresh-settings
 bin/ktnef
 lib/libkmailprivate.so.5
-lib/libkmailprivate.so.5.23.3
+lib/libkmailprivate.so.5.24.4
 qt5/plugins/kmailpart.so
 qt5/plugins/pim5/akonadi/config/archivemailagentconfig.so
 qt5/plugins/pim5/akonadi/config/followupreminderagentconfig.so

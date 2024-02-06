@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:26:39 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:21 markd Exp $
 
-BLAKE2s (ktuberling-23.04.3.tar.xz) = 4d899dc34b150ede0aa08e41f7e6291f1164d1c3fe1e867e11a0384cbf241c56
-SHA512 (ktuberling-23.04.3.tar.xz) = 6e72eebf1506c5b33dec5ec053f5dc553f3204588b43a31b14018fe7030ba6e168231d06772aaefbe32c2360386a70044d8b4000c51edd2e6864d45aacb7e0a9
-Size (ktuberling-23.04.3.tar.xz) = 71401292 bytes
+BLAKE2s (ktuberling-23.08.4.tar.xz) = 5e73efd418b6c41332ff123fad971d5b0d8c6cf0181ef3008d63958326bf8be3
+SHA512 (ktuberling-23.08.4.tar.xz) = ab02f9eb395f5f7e1a15dd19dd008402855fea07d206a4967cf5fbaaf3c347ecfca4e49007c8066cb1c771e924ecc5cb36fbf63e7fb97d2bf004b82f1b0005d2
+Size (ktuberling-23.08.4.tar.xz) = 71417048 bytes

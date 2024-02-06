@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/16 03:14:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/02/06 11:05:24 markd Exp $
 bin/akonadi2xml
 bin/akonadi_agent_launcher
 bin/akonadi_agent_server
@@ -56,6 +56,7 @@ include/KPim5/AkonadiCore/Akonadi/CachePolicy
 include/KPim5/AkonadiCore/Akonadi/ChangeNotification
 include/KPim5/AkonadiCore/Akonadi/ChangeRecorder
 include/KPim5/AkonadiCore/Akonadi/Collection
+include/KPim5/AkonadiCore/Akonadi/CollectionAnnotationsAttribute
 include/KPim5/AkonadiCore/Akonadi/CollectionAttributesSynchronizationJob
 include/KPim5/AkonadiCore/Akonadi/CollectionColorAttribute
 include/KPim5/AkonadiCore/Akonadi/CollectionCopyJob
@@ -159,6 +160,7 @@ include/KPim5/AkonadiCore/akonadi/cachepolicy.h
 include/KPim5/AkonadiCore/akonadi/changenotification.h
 include/KPim5/AkonadiCore/akonadi/changerecorder.h
 include/KPim5/AkonadiCore/akonadi/collection.h
+include/KPim5/AkonadiCore/akonadi/collectionannotationsattribute.h
 include/KPim5/AkonadiCore/akonadi/collectionattributessynchronizationjob.h
 include/KPim5/AkonadiCore/akonadi/collectioncolorattribute.h
 include/KPim5/AkonadiCore/akonadi/collectioncopyjob.h
@@ -254,7 +256,7 @@ include/KPim5/AkonadiWidgets/Akonadi/AgentConfigurationWidget
 include/KPim5/AkonadiWidgets/Akonadi/AgentInstanceWidget
 include/KPim5/AkonadiWidgets/Akonadi/AgentTypeDialog
 include/KPim5/AkonadiWidgets/Akonadi/AgentTypeWidget
-include/KPim5/AkonadiWidgets/Akonadi/ClearCacheJob
+include/KPim5/AkonadiWidgets/Akonadi/ClearCacheFoldersJob
 include/KPim5/AkonadiWidgets/Akonadi/CollectionComboBox
 include/KPim5/AkonadiWidgets/Akonadi/CollectionDialog
 include/KPim5/AkonadiWidgets/Akonadi/CollectionMaintenancePage
@@ -283,7 +285,7 @@ include/KPim5/AkonadiWidgets/akonadi/agentinstancewidget.h
 include/KPim5/AkonadiWidgets/akonadi/agenttypedialog.h
 include/KPim5/AkonadiWidgets/akonadi/agenttypewidget.h
 include/KPim5/AkonadiWidgets/akonadi/akonadiwidgets_export.h
-include/KPim5/AkonadiWidgets/akonadi/clearcachejob.h
+include/KPim5/AkonadiWidgets/akonadi/clearcachefoldersjob.h
 include/KPim5/AkonadiWidgets/akonadi/collectioncombobox.h
 include/KPim5/AkonadiWidgets/akonadi/collectiondialog.h
 include/KPim5/AkonadiWidgets/akonadi/collectionmaintenancepage.h
@@ -326,26 +328,25 @@ lib/cmake/KPim5Akonadi/KPim5AkonadiTargets.cmake
 lib/cmake/KPim5Akonadi/KPimAkonadiMacros.cmake
 lib/libKPim5AkonadiAgentBase.so
 lib/libKPim5AkonadiAgentBase.so.5
-lib/libKPim5AkonadiAgentBase.so.5.23.3
+lib/libKPim5AkonadiAgentBase.so.5.24.4
 lib/libKPim5AkonadiCore.so
 lib/libKPim5AkonadiCore.so.5
-lib/libKPim5AkonadiCore.so.5.23.3
+lib/libKPim5AkonadiCore.so.5.24.4
 lib/libKPim5AkonadiPrivate.so
 lib/libKPim5AkonadiPrivate.so.5
-lib/libKPim5AkonadiPrivate.so.5.23.3
+lib/libKPim5AkonadiPrivate.so.5.24.4
 lib/libKPim5AkonadiWidgets.so
 lib/libKPim5AkonadiWidgets.so.5
-lib/libKPim5AkonadiWidgets.so.5.23.3
+lib/libKPim5AkonadiWidgets.so.5.24.4
 lib/libKPim5AkonadiXml.so
 lib/libKPim5AkonadiXml.so.5
-lib/libKPim5AkonadiXml.so.5.23.3
+lib/libKPim5AkonadiXml.so.5.24.4
 qt5/mkspecs/modules/qt_AkonadiAgentBase.pri
 qt5/mkspecs/modules/qt_AkonadiCore.pri
 qt5/mkspecs/modules/qt_AkonadiWidgets.pri
 qt5/mkspecs/modules/qt_AkonadiXml.pri
 qt5/plugins/designer/akonadi5widgets.so
 qt5/plugins/pim5/akonadi/akonadi_test_searchplugin.so
-qt5/plugins/sqldrivers/libqsqlite3.so
 share/akonadi/agents/knutresource.desktop
 share/config.kcfg/resourcebase.kcfg
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Control.xml

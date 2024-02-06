@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:31:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:26 markd Exp $
 include/KPim5/MailImporter/MailImporter/FilterBalsa
 include/KPim5/MailImporter/MailImporter/FilterClawsMail
 include/KPim5/MailImporter/MailImporter/FilterEvolution
@@ -61,12 +61,6 @@ include/KPim5/MailImporterAkonadi/MailImporterAkonadi/FilterImporterAkonadi
 include/KPim5/MailImporterAkonadi/mailimporterakonadi/filterimporterakonadi.h
 include/KPim5/MailImporterAkonadi/mailimporterakonadi/mailimporterakonadi_export.h
 include/KPim5/MailImporterAkonadi/mailimporterakonadi_version.h
-lib/cmake/KF5MailImporter/KF5MailImporterConfig.cmake
-lib/cmake/KF5MailImporter/KF5MailImporterConfigVersion.cmake
-lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiConfig.cmake
-lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiConfigVersion.cmake
-lib/cmake/KF5MailImporterAkonadi/KPim5MailImporterAkonadiTargets-noconfig.cmake
-lib/cmake/KF5MailImporterAkonadi/KPim5MailImporterAkonadiTargets.cmake
 lib/cmake/KPim5MailImporter/KPim5MailImporterConfig.cmake
 lib/cmake/KPim5MailImporter/KPim5MailImporterConfigVersion.cmake
 lib/cmake/KPim5MailImporter/KPim5MailImporterTargets-noconfig.cmake
@@ -77,10 +71,10 @@ lib/cmake/KPim5MailImporterAkonadi/KPim5MailImporterAkonadiTargets-noconfig.cmak
 lib/cmake/KPim5MailImporterAkonadi/KPim5MailImporterAkonadiTargets.cmake
 lib/libKPim5MailImporter.so
 lib/libKPim5MailImporter.so.5
-lib/libKPim5MailImporter.so.5.23.3
+lib/libKPim5MailImporter.so.5.24.4
 lib/libKPim5MailImporterAkonadi.so
 lib/libKPim5MailImporterAkonadi.so.5
-lib/libKPim5MailImporterAkonadi.so.5.23.3
+lib/libKPim5MailImporterAkonadi.so.5.24.4
 qt5/mkspecs/modules/qt_MailImporter.pri
 qt5/mkspecs/modules/qt_MailImporterAkonadi.pri
 share/locale/af/LC_MESSAGES/libmailimporter.mo

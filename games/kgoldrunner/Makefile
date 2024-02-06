@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2024/01/30 14:21:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2024/02/06 11:05:18 markd Exp $
 
 DISTNAME=	kgoldrunner-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kgoldrunner/

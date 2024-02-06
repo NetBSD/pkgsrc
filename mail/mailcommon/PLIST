@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:36:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:26 markd Exp $
 include/KPim5/MailCommon/MailCommon/AccountConfigOrderDialog
 include/KPim5/MailCommon/MailCommon/AddTagDialog
 include/KPim5/MailCommon/MailCommon/BackupJob
@@ -104,7 +104,6 @@ include/KPim5/MailCommon/mailcommon/snippettreeview.h
 include/KPim5/MailCommon/mailcommon/snippetwidget.h
 include/KPim5/MailCommon/mailcommon/tag.h
 include/KPim5/MailCommon/mailcommon/tagwidget.h
-include/KPim5/MailCommon/mailcommon_export.h
 include/KPim5/MailCommon/mailcommon_version.h
 lib/cmake/KF5MailCommon/KF5MailCommonConfig.cmake
 lib/cmake/KF5MailCommon/KF5MailCommonConfigVersion.cmake
@@ -116,7 +115,7 @@ lib/cmake/KPim5MailCommon/KPim5MailCommonTargets-noconfig.cmake
 lib/cmake/KPim5MailCommon/KPim5MailCommonTargets.cmake
 lib/libKPim5MailCommon.so
 lib/libKPim5MailCommon.so.5
-lib/libKPim5MailCommon.so.5.23.3
+lib/libKPim5MailCommon.so.5.24.4
 qt5/mkspecs/modules/qt_MailCommon.pri
 qt5/plugins/designer/mailcommon5widgets.so
 share/locale/ar/LC_MESSAGES/libmailcommon.mo

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/01/30 14:22:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/06 11:05:26 markd Exp $
 
 DISTNAME=	pim-sieve-editor-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/
@@ -16,6 +15,7 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mail/libksieve/buildlink3.mk"
+.include "../../misc/kuserfeedback/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
