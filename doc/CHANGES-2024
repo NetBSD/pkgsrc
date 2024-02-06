@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.977 2024/02/06 12:10:30 mef Exp $
+$NetBSD: CHANGES-2024,v 1.978 2024/02/06 12:26:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1644,3 +1644,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/milou to 5.27.10 [markd 2024-02-06]
 	Updated x11/libkscreen to 5.27.10 [markd 2024-02-06]
 	Updated devel/R-R.oo to 1.26.0 [mef 2024-02-06]
+	Added textproc/R-writexl version 1.4.2 [mef 2024-02-06]
