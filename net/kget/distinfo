@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/16 09:37:35 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/06 11:17:40 markd Exp $
 
-BLAKE2s (kget-23.04.3.tar.xz) = 34edfb31b5fc4e9269d296fe9472d888807dd3fdc45abbe80f05233319f29094
-SHA512 (kget-23.04.3.tar.xz) = de9eec4a93567baf58dad01e4aa12dd4618f86b1ca887128b179574dde4ce46b189baa60310bd21f226a84ee34e7974eacfc2b7f6cbf2f8fad65c45d0aa62fa6
-Size (kget-23.04.3.tar.xz) = 5561060 bytes
+BLAKE2s (kget-23.08.4.tar.xz) = 18887e9fa46dbe3bd200c50b18f81582aa9146e2f941c887740a7e40badb1744
+SHA512 (kget-23.08.4.tar.xz) = aba5a03a5c35564754b4583db30bbdb07daa1ffc8e689a7db1469e8aeacd907ecdb515adcf7b839448bdb31881779e38f579dbfc9282d008c225ccd2bb6f47a8
+Size (kget-23.08.4.tar.xz) = 5566060 bytes

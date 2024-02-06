@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 07:36:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:33 markd Exp $
 include/KPim5/EventViews/EventViews/AgendaView
 include/KPim5/EventViews/EventViews/CalendarDecoration
 include/KPim5/EventViews/EventViews/ConfigDialogInterface
@@ -10,7 +10,6 @@ include/KPim5/EventViews/EventViews/MonthView
 include/KPim5/EventViews/EventViews/MultiAgendaView
 include/KPim5/EventViews/EventViews/Prefs
 include/KPim5/EventViews/EventViews/TimeLineView
-include/KPim5/EventViews/EventViews/TodoModel
 include/KPim5/EventViews/EventViews/TodoView
 include/KPim5/EventViews/EventViews/ViewCalendar
 include/KPim5/EventViews/EventViews/WhatsNextView
@@ -32,22 +31,17 @@ include/KPim5/EventViews/eventviews/monthview.h
 include/KPim5/EventViews/eventviews/multiagendaview.h
 include/KPim5/EventViews/eventviews/prefs.h
 include/KPim5/EventViews/eventviews/timelineview.h
-include/KPim5/EventViews/eventviews/todomodel.h
 include/KPim5/EventViews/eventviews/todoview.h
 include/KPim5/EventViews/eventviews/viewcalendar.h
 include/KPim5/EventViews/eventviews/whatsnextview.h
 include/KPim5/EventViews/eventviews_version.h
-lib/cmake/KF5EventViews/KF5EventViewsConfig.cmake
-lib/cmake/KF5EventViews/KF5EventViewsConfigVersion.cmake
-lib/cmake/KF5EventViews/KPim5EventViewsTargets-noconfig.cmake
-lib/cmake/KF5EventViews/KPim5EventViewsTargets.cmake
 lib/cmake/KPim5EventViews/KPim5EventViewsConfig.cmake
 lib/cmake/KPim5EventViews/KPim5EventViewsConfigVersion.cmake
 lib/cmake/KPim5EventViews/KPim5EventViewsTargets-noconfig.cmake
 lib/cmake/KPim5EventViews/KPim5EventViewsTargets.cmake
 lib/libKPim5EventViews.so
 lib/libKPim5EventViews.so.5
-lib/libKPim5EventViews.so.5.23.3
+lib/libKPim5EventViews.so.5.24.4
 qt5/mkspecs/modules/qt_EventViews.pri
 share/locale/ar/LC_MESSAGES/libeventviews.mo
 share/locale/bg/LC_MESSAGES/libeventviews.mo

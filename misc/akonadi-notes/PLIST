@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 03:35:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:32 markd Exp $
 include/KPim5/AkonadiNotes/Akonadi/NoteUtils
 include/KPim5/AkonadiNotes/akonadi-notes_version.h
 include/KPim5/AkonadiNotes/akonadi/NoteUtils
@@ -14,7 +14,7 @@ lib/cmake/KPim5AkonadiNotes/KPim5AkonadiNotesTargets-noconfig.cmake
 lib/cmake/KPim5AkonadiNotes/KPim5AkonadiNotesTargets.cmake
 lib/libKPim5AkonadiNotes.so
 lib/libKPim5AkonadiNotes.so.5
-lib/libKPim5AkonadiNotes.so.5.23.3
+lib/libKPim5AkonadiNotes.so.5.24.4
 qt5/mkspecs/modules/qt_AkonadiNotes.pri
 share/locale/ar/LC_MESSAGES/akonadinotes5.mo
 share/locale/ast/LC_MESSAGES/akonadinotes5.mo
@@ -28,6 +28,7 @@ share/locale/da/LC_MESSAGES/akonadinotes5.mo
 share/locale/de/LC_MESSAGES/akonadinotes5.mo
 share/locale/el/LC_MESSAGES/akonadinotes5.mo
 share/locale/en_GB/LC_MESSAGES/akonadinotes5.mo
+share/locale/eo/LC_MESSAGES/akonadinotes5.mo
 share/locale/es/LC_MESSAGES/akonadinotes5.mo
 share/locale/et/LC_MESSAGES/akonadinotes5.mo
 share/locale/eu/LC_MESSAGES/akonadinotes5.mo

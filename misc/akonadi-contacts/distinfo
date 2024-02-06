@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 03:40:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:17:32 markd Exp $
 
-BLAKE2s (akonadi-contacts-23.04.3.tar.xz) = ef1ea2a80c093af43738950fdbea98f0aed77c3ce74f6f23c9647552c6c8b89f
-SHA512 (akonadi-contacts-23.04.3.tar.xz) = a0447eabcacb76b3cc8982760e5d9ef027537e48279353c47a6f361d4e4ab4421ddb2bc0f2aeda9121cd56721a4d98f551311d0d3254e6d069054abdb3bd2ebc
-Size (akonadi-contacts-23.04.3.tar.xz) = 442516 bytes
+BLAKE2s (akonadi-contacts-23.08.4.tar.xz) = 70c6f7e548d057b54676c4681dd2c95ab1c925fbb4a5ffac7f541d795cb51a0e
+SHA512 (akonadi-contacts-23.08.4.tar.xz) = 710540203bca22f42e8c3622ea2897df3a07aadf62315e22a16e04b7ac78048c89f0c50ba1451e9ab4c287a988c236d38993aaa945656babb402ba3a4ef55878
+Size (akonadi-contacts-23.08.4.tar.xz) = 420864 bytes

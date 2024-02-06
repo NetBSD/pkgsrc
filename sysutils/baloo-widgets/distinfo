@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/03 04:48:25 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/06 11:17:42 markd Exp $
 
-BLAKE2s (baloo-widgets-23.04.3.tar.xz) = af8420f31ba982484e5d49d3202564fbbaaafd02dbb8edd5337342f95024594b
-SHA512 (baloo-widgets-23.04.3.tar.xz) = ddf93ef46adb37f61f8ef1bab462fdd4695e526350a0259fcf6448b42ef84ff1335a49b08026f0cf72dde07823a08cf4bd51e40e5fbdc699b4aed9b2800c847b
-Size (baloo-widgets-23.04.3.tar.xz) = 275596 bytes
+BLAKE2s (baloo-widgets-23.08.4.tar.xz) = fb434c34235d26fdbce4ebcf48c47b3fe4fb257d87de043661ad2cdc3d0f4610
+SHA512 (baloo-widgets-23.08.4.tar.xz) = c076776cd4c212182d59f2f1b1b6fc7b0909f914451331eb8078186008ee0dd60fe218bf81a1c49f3949b10b258e0dad89f9c731dff770a396f3f978fcb233be
+Size (baloo-widgets-23.08.4.tar.xz) = 276812 bytes

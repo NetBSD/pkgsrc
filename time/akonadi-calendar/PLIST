@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/30 20:37:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/06 11:17:43 markd Exp $
 bin/kalendarac
 include/KPim5/AkonadiCalendar/Akonadi/BlockAlarmsAttribute
 include/KPim5/AkonadiCalendar/Akonadi/CalendarBase
@@ -14,7 +14,9 @@ include/KPim5/AkonadiCalendar/Akonadi/ITIPHandler
 include/KPim5/AkonadiCalendar/Akonadi/IncidenceChanger
 include/KPim5/AkonadiCalendar/Akonadi/IncidenceTreeModel
 include/KPim5/AkonadiCalendar/Akonadi/PublishDialog
+include/KPim5/AkonadiCalendar/Akonadi/SearchCollectionHelper
 include/KPim5/AkonadiCalendar/Akonadi/StandardCalendarActionManager
+include/KPim5/AkonadiCalendar/Akonadi/TodoModel
 include/KPim5/AkonadiCalendar/Akonadi/TodoPurger
 include/KPim5/AkonadiCalendar/akonadi-calendar_version.h
 include/KPim5/AkonadiCalendar/akonadi/akonadi-calendar_export.h
@@ -33,7 +35,9 @@ include/KPim5/AkonadiCalendar/akonadi/incidencechanger.h
 include/KPim5/AkonadiCalendar/akonadi/incidencetreemodel.h
 include/KPim5/AkonadiCalendar/akonadi/itiphandler.h
 include/KPim5/AkonadiCalendar/akonadi/publishdialog.h
+include/KPim5/AkonadiCalendar/akonadi/searchcollectionhelper.h
 include/KPim5/AkonadiCalendar/akonadi/standardcalendaractionmanager.h
+include/KPim5/AkonadiCalendar/akonadi/todomodel.h
 include/KPim5/AkonadiCalendar/akonadi/todopurger.h
 lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarConfig.cmake
 lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarConfigVersion.cmake
@@ -45,7 +49,7 @@ lib/cmake/KPim5AkonadiCalendar/KPim5AkonadiCalendarTargets-noconfig.cmake
 lib/cmake/KPim5AkonadiCalendar/KPim5AkonadiCalendarTargets.cmake
 lib/libKPim5AkonadiCalendar.so
 lib/libKPim5AkonadiCalendar.so.5
-lib/libKPim5AkonadiCalendar.so.5.23.3
+lib/libKPim5AkonadiCalendar.so.5.24.4
 qt5/mkspecs/modules/qt_AkonadiCalendar.pri
 qt5/plugins/akonadi_serializer_kcalcore.so
 qt5/plugins/kf5/org.kde.kcalendarcore.calendars/libakonadicalendarplugin.so

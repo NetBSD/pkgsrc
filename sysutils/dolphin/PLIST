@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/03 04:49:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/06 11:17:42 markd Exp $
 bin/dolphin
 bin/servicemenuinstaller
 include/Dolphin/KVersionControlPlugin
@@ -22,6 +22,7 @@ qt5/plugins/dolphin/kcms/kcm_dolphinviewmodes.${RUBY_DLEXT}
 qt5/plugins/kf5/parts/dolphinpart.${RUBY_DLEXT}
 share/applications/org.kde.dolphin.desktop
 share/config.kcfg/dolphin_compactmodesettings.kcfg
+share/config.kcfg/dolphin_contentdisplaysettings.kcfg
 share/config.kcfg/dolphin_contextmenusettings.kcfg
 share/config.kcfg/dolphin_detailsmodesettings.kcfg
 share/config.kcfg/dolphin_directoryviewpropertysettings.kcfg

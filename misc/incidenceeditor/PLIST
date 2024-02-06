@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 07:40:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:33 markd Exp $
 bin/kincidenceeditor
 include/KPim5/IncidenceEditor/IncidenceEditor/EditorItemManager
 include/KPim5/IncidenceEditor/IncidenceEditor/GroupwareUiDelegate
@@ -19,17 +19,13 @@ include/KPim5/IncidenceEditor/incidenceeditor/incidenceeditor_export.h
 include/KPim5/IncidenceEditor/incidenceeditor/incidenceeditorsettings.h
 include/KPim5/IncidenceEditor/incidenceeditor/individualmailcomponentfactory.h
 include/KPim5/IncidenceEditor/incidenceeditor_version.h
-lib/cmake/KF5IncidenceEditor/KF5IncidenceEditorConfig.cmake
-lib/cmake/KF5IncidenceEditor/KF5IncidenceEditorConfigVersion.cmake
-lib/cmake/KF5IncidenceEditor/KPim5IncidenceEditorTargets-noconfig.cmake
-lib/cmake/KF5IncidenceEditor/KPim5IncidenceEditorTargets.cmake
 lib/cmake/KPim5IncidenceEditor/KPim5IncidenceEditorConfig.cmake
 lib/cmake/KPim5IncidenceEditor/KPim5IncidenceEditorConfigVersion.cmake
 lib/cmake/KPim5IncidenceEditor/KPim5IncidenceEditorTargets-noconfig.cmake
 lib/cmake/KPim5IncidenceEditor/KPim5IncidenceEditorTargets.cmake
 lib/libKPim5IncidenceEditor.so
 lib/libKPim5IncidenceEditor.so.5
-lib/libKPim5IncidenceEditor.so.5.23.3
+lib/libKPim5IncidenceEditor.so.5.24.4
 qt5/mkspecs/modules/qt_IncidenceEditor.pri
 share/locale/ar/LC_MESSAGES/libincidenceeditors.mo
 share/locale/bg/LC_MESSAGES/libincidenceeditors.mo

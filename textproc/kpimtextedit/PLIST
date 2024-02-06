@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 04:57:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:17:42 markd Exp $
 include/KPim5/KPIMTextEdit/KPIMTextEdit/AbstractMarkupBuilder
 include/KPim5/KPIMTextEdit/KPIMTextEdit/EditorUtil
-include/KPim5/KPIMTextEdit/KPIMTextEdit/EmoticonUnicodeTab
 include/KPim5/KPIMTextEdit/KPIMTextEdit/MarkupDirector
 include/KPim5/KPIMTextEdit/KPIMTextEdit/PlainTextEditFindBar
 include/KPim5/KPIMTextEdit/KPIMTextEdit/PlainTextEditor
@@ -27,7 +26,6 @@ include/KPim5/KPIMTextEdit/KPIMTextEdit/TextHTMLBuilder
 include/KPim5/KPIMTextEdit/KPIMTextEdit/TextUtils
 include/KPim5/KPIMTextEdit/kpimtextedit/abstractmarkupbuilder.h
 include/KPim5/KPIMTextEdit/kpimtextedit/editorutil.h
-include/KPim5/KPIMTextEdit/kpimtextedit/emoticonunicodetab.h
 include/KPim5/KPIMTextEdit/kpimtextedit/kpimtextedit_export.h
 include/KPim5/KPIMTextEdit/kpimtextedit/markupdirector.h
 include/KPim5/KPIMTextEdit/kpimtextedit/plaintexteditfindbar.h
@@ -63,7 +61,7 @@ lib/cmake/KPim5TextEdit/KPim5TextEditTargets-noconfig.cmake
 lib/cmake/KPim5TextEdit/KPim5TextEditTargets.cmake
 lib/libKPim5TextEdit.so
 lib/libKPim5TextEdit.so.5
-lib/libKPim5TextEdit.so.5.23.3
+lib/libKPim5TextEdit.so.5.24.4
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtextedit5widgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo

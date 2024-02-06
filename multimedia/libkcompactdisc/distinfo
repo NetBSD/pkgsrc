@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/08/03 04:42:13 markd Exp $
+$NetBSD: distinfo,v 1.13 2024/02/06 11:17:40 markd Exp $
 
-BLAKE2s (libkcompactdisc-23.04.3.tar.xz) = 0022dec604e06867e3bb302a5a5940a69062805fa55e10d88bb738728de50d26
-SHA512 (libkcompactdisc-23.04.3.tar.xz) = 5739746ed4c10139b0c8c4d03f090a38e042b28219afbc4ca1e99c7d56f46beff31b256f3379ce6eb486e0eb28c37713ff919b2cdb8e24d7ac0a5783ea113b07
-Size (libkcompactdisc-23.04.3.tar.xz) = 99164 bytes
+BLAKE2s (libkcompactdisc-23.08.4.tar.xz) = 8aa82e9dc4a31369ce949765e2c9da6cfb76437eb12a64f5bcae440b137df2b4
+SHA512 (libkcompactdisc-23.08.4.tar.xz) = 7be95f9adaf472e1a4560de1f80ee2f35f4f1db2788d94503959a2c5848a18f5b6437f2f70929fbed4a5e5ca47bdf52add349ca5973da390baa88cbbb9e99b2c
+Size (libkcompactdisc-23.08.4.tar.xz) = 99392 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 07:46:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:17:36 markd Exp $
 
-BLAKE2s (knotes-23.04.3.tar.xz) = 2b639e0f89cf74e45faeeacd861ad4b01736027f6d6a8543f9bc305eb2cea96b
-SHA512 (knotes-23.04.3.tar.xz) = 94868d19a535b79049a53503acc26b26ec0d94a4c527f95c439ac30874d71657c13fd0c7206f38b9dd669b25f42a231150d3aead15e3557767ef70dbd2637cfd
-Size (knotes-23.04.3.tar.xz) = 375524 bytes
+BLAKE2s (knotes-23.08.4.tar.xz) = 6624004bbc36e78b538e56a719fe0ed286d163947336b20b39a62d02957abb4a
+SHA512 (knotes-23.08.4.tar.xz) = 944f317403968e8195679233378bfd88ffcf8c364539e1b29d5d04aa5a84654e5e1efb75f81c53766848f5a5c802ddafb25a8f583ae9e7aad3989d682f83c632
+Size (knotes-23.08.4.tar.xz) = 377664 bytes

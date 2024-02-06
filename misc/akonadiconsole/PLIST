@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:19:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:33 markd Exp $
 bin/akonadiconsole
 lib/libakonadiconsole.so.5
-lib/libakonadiconsole.so.5.23.3
+lib/libakonadiconsole.so.5.24.4
 share/applications/org.kde.akonadiconsole.desktop
 share/icons/hicolor/128x128/apps/akonadiconsole.png
 share/icons/hicolor/16x16/apps/akonadiconsole.png
@@ -21,6 +21,7 @@ share/locale/fi/LC_MESSAGES/akonadiconsole.mo
 share/locale/fr/LC_MESSAGES/akonadiconsole.mo
 share/locale/ia/LC_MESSAGES/akonadiconsole.mo
 share/locale/it/LC_MESSAGES/akonadiconsole.mo
+share/locale/ja/LC_MESSAGES/akonadiconsole.mo
 share/locale/ka/LC_MESSAGES/akonadiconsole.mo
 share/locale/ko/LC_MESSAGES/akonadiconsole.mo
 share/locale/lt/LC_MESSAGES/akonadiconsole.mo
@@ -30,6 +31,7 @@ share/locale/pt/LC_MESSAGES/akonadiconsole.mo
 share/locale/ru/LC_MESSAGES/akonadiconsole.mo
 share/locale/sk/LC_MESSAGES/akonadiconsole.mo
 share/locale/sl/LC_MESSAGES/akonadiconsole.mo
+share/locale/sv/LC_MESSAGES/akonadiconsole.mo
 share/locale/tr/LC_MESSAGES/akonadiconsole.mo
 share/locale/uk/LC_MESSAGES/akonadiconsole.mo
 share/locale/zh_CN/LC_MESSAGES/akonadiconsole.mo

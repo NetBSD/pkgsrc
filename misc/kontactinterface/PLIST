@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 06:05:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:36 markd Exp $
 include/KPim5/KontactInterface/KontactInterface/Core
 include/KPim5/KontactInterface/KontactInterface/PimUniqueApplication
 include/KPim5/KontactInterface/KontactInterface/Plugin
@@ -13,17 +13,13 @@ include/KPim5/KontactInterface/kontactinterface/processes.h
 include/KPim5/KontactInterface/kontactinterface/summary.h
 include/KPim5/KontactInterface/kontactinterface/uniqueapphandler.h
 include/KPim5/KontactInterface/kontactinterface_version.h
-lib/cmake/KF5KontactInterface/KF5KontactInterfaceConfig.cmake
-lib/cmake/KF5KontactInterface/KF5KontactInterfaceConfigVersion.cmake
-lib/cmake/KF5KontactInterface/KPim5KontactInterfaceTargets-noconfig.cmake
-lib/cmake/KF5KontactInterface/KPim5KontactInterfaceTargets.cmake
 lib/cmake/KPim5KontactInterface/KPim5KontactInterfaceConfig.cmake
 lib/cmake/KPim5KontactInterface/KPim5KontactInterfaceConfigVersion.cmake
 lib/cmake/KPim5KontactInterface/KPim5KontactInterfaceTargets-noconfig.cmake
 lib/cmake/KPim5KontactInterface/KPim5KontactInterfaceTargets.cmake
 lib/libKPim5KontactInterface.so
 lib/libKPim5KontactInterface.so.5
-lib/libKPim5KontactInterface.so.5.23.3
+lib/libKPim5KontactInterface.so.5.24.4
 qt5/mkspecs/modules/qt_KontactInterface.pri
 share/locale/ar/LC_MESSAGES/kontactinterfaces5.mo
 share/locale/az/LC_MESSAGES/kontactinterfaces5.mo

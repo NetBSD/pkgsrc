@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/08/03 04:01:56 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/02/06 11:17:32 markd Exp $
 
-BLAKE2s (kalgebra-23.04.3.tar.xz) = ea04c75ab4bf5d999b34178d94d162f5311471d73cce62d142f8bc1a1a0c098d
-SHA512 (kalgebra-23.04.3.tar.xz) = ed1c8823e6d6f783ee8df5a5d15e02fe95e6167545e9d270093ac812ee3d99310555f0e9190b1cdeb2c37b097494de8a782e5df57e1c5264fb5da24f937af005
-Size (kalgebra-23.04.3.tar.xz) = 1036404 bytes
+BLAKE2s (kalgebra-23.08.4.tar.xz) = a743b5e55b6d55ee257d7eb7872cba3afafecddd98f7a5ae22cb8e9d3467ee67
+SHA512 (kalgebra-23.08.4.tar.xz) = 9f0aa0b34916d2d31871ffe572f73f64ac18fadfc45354eb54140fd5380332f060fccdd782c0de7dcda89d9b3057ea72243fb4b880125e36617c99d987649456
+Size (kalgebra-23.08.4.tar.xz) = 1039864 bytes

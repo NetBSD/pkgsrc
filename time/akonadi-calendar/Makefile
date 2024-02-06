@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/30 14:22:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/06 11:17:43 markd Exp $
 
 DISTNAME=	akonadi-calendar-${KAPPSVER}
-PKGREVISION=	5
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -25,6 +24,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.kalendarac.deskt
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
 .include "../../misc/akonadi-contacts/buildlink3.mk"
+.include "../../net/messagelib/buildlink3.mk"
 .include "../../time/kcalutils/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

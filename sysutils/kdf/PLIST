@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2023/08/03 04:53:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/06 11:17:42 markd Exp $
 bin/kdf
 bin/kwikdisk
 lib/libkdfprivate.so.23
 lib/libkdfprivate.so.${PKGVERSION}
-qt5/plugins/libkcm_kdf.so
+qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
+share/applications/kcm_kdf.desktop
 share/applications/org.kde.kdf.desktop
 share/applications/org.kde.kwikdisk.desktop
 share/doc/HTML/ca/kcontrol/blockdevices/index.cache.bz2
@@ -78,6 +79,8 @@ share/doc/HTML/sv/kdf/kdf.png
 share/doc/HTML/sv/kdf/kdf_config.png
 share/doc/HTML/tr/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/tr/kcontrol/blockdevices/index.docbook
+share/doc/HTML/tr/kdf/index.cache.bz2
+share/doc/HTML/tr/kdf/index.docbook
 share/doc/HTML/uk/kcontrol/blockdevices/index.cache.bz2
 share/doc/HTML/uk/kcontrol/blockdevices/index.docbook
 share/doc/HTML/uk/kdf/index.cache.bz2

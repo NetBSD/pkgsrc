@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/03 04:00:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/02/06 11:17:32 markd Exp $
 bin/cantor
 bin/cantor_pythonserver
 bin/cantor_scripteditor
@@ -71,7 +71,6 @@ share/cantor/octavebackend/cantor_eigenvectors.m
 share/cantor/octavebackend/cantor_plot2d.m
 share/cantor/octavebackend/cantor_plot3d.m
 share/cantor/python/graphic_packages.xml
-share/cantor/sagebackend/cantor-execsage
 share/cantor/xslt/latex.xsl
 share/config.kcfg/cantor.kcfg
 share/config.kcfg/cantor_libs.kcfg

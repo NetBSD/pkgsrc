@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 04:39:49 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:17:39 markd Exp $
 
-BLAKE2s (kmix-23.04.3.tar.xz) = 51c880c6c1e8f8a607d8d1f5f74f5c3b919f9cd2de98777bd994f2c1343968df
-SHA512 (kmix-23.04.3.tar.xz) = f583eedc86c1f705316c4aacaa16255e2052a5d4eaea4e742e5febff17f6f3702e87d4bfe47507c89808ec14481b205921786dafb736cf9535e849a87c487f37
-Size (kmix-23.04.3.tar.xz) = 1196996 bytes
+BLAKE2s (kmix-23.08.4.tar.xz) = 55f8bddf8264bd9c653ae87b4a76485a60e670e015f60cc291ad410466ffd644
+SHA512 (kmix-23.08.4.tar.xz) = a981c93080748b854b35fa0048b7fc0878237e114f2c59d86ba479b456b6d537af381cfe4c8c1698776eb25f1eecb7eb3075ec3c3df86c24c4f3f5a1a3bd374b
+Size (kmix-23.08.4.tar.xz) = 1208572 bytes
 SHA1 (patch-CMakeLists.txt) = 02be65691ecf924eee10cc1182ab930f000df470

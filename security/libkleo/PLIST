@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 00:29:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:41 markd Exp $
 include/KPim5/Libkleo/Libkleo/Algorithm
 include/KPim5/Libkleo/Libkleo/Assuan
 include/KPim5/Libkleo/Libkleo/AuditLogEntry
 include/KPim5/Libkleo/Libkleo/AuditLogViewer
 include/KPim5/Libkleo/Libkleo/ChecksumDefinition
+include/KPim5/Libkleo/Libkleo/Chrono
 include/KPim5/Libkleo/Libkleo/Classify
 include/KPim5/Libkleo/Libkleo/Compat
 include/KPim5/Libkleo/Libkleo/Compliance
@@ -18,6 +19,9 @@ include/KPim5/Libkleo/Libkleo/Dn
 include/KPim5/Libkleo/Libkleo/DocAction
 include/KPim5/Libkleo/Libkleo/EditDirectoryServiceDialog
 include/KPim5/Libkleo/Libkleo/Enum
+include/KPim5/Libkleo/Libkleo/ExpiryChecker
+include/KPim5/Libkleo/Libkleo/ExpiryCheckerConfig
+include/KPim5/Libkleo/Libkleo/ExpiryCheckerSettings
 include/KPim5/Libkleo/Libkleo/FileNameRequester
 include/KPim5/Libkleo/Libkleo/FileSystemWatcher
 include/KPim5/Libkleo/Libkleo/Formatting
@@ -67,6 +71,7 @@ include/KPim5/Libkleo/libkleo/assuan.h
 include/KPim5/Libkleo/libkleo/auditlogentry.h
 include/KPim5/Libkleo/libkleo/auditlogviewer.h
 include/KPim5/Libkleo/libkleo/checksumdefinition.h
+include/KPim5/Libkleo/libkleo/chrono.h
 include/KPim5/Libkleo/libkleo/classify.h
 include/KPim5/Libkleo/libkleo/compat.h
 include/KPim5/Libkleo/libkleo/compliance.h
@@ -81,6 +86,10 @@ include/KPim5/Libkleo/libkleo/dnattributeorderconfigwidget.h
 include/KPim5/Libkleo/libkleo/docaction.h
 include/KPim5/Libkleo/libkleo/editdirectoryservicedialog.h
 include/KPim5/Libkleo/libkleo/enum.h
+include/KPim5/Libkleo/libkleo/expirychecker.h
+include/KPim5/Libkleo/libkleo/expirycheckerconfig.h
+include/KPim5/Libkleo/libkleo/expirycheckerconfigbase.h
+include/KPim5/Libkleo/libkleo/expirycheckersettings.h
 include/KPim5/Libkleo/libkleo/filenamerequester.h
 include/KPim5/Libkleo/libkleo/filesystemwatcher.h
 include/KPim5/Libkleo/libkleo/formatting.h
@@ -137,7 +146,7 @@ lib/cmake/KPim5Libkleo/KPim5LibkleoTargets-noconfig.cmake
 lib/cmake/KPim5Libkleo/KPim5LibkleoTargets.cmake
 lib/libKPim5Libkleo.so
 lib/libKPim5Libkleo.so.5
-lib/libKPim5Libkleo.so.5.23.3
+lib/libKPim5Libkleo.so.5.24.4
 qt5/mkspecs/modules/qt_Libkleo.pri
 share/examples/kde-xdg/libkleopatrarc
 share/libkleopatra/pics/chiasmus_chi.png

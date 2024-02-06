@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 04:31:06 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:17:33 markd Exp $
 
-BLAKE2s (akonadi-search-23.04.3.tar.xz) = bca1f86b9c42f52550b0013eaeb614efa0c1ea2f4eb075519fca235de58ba66a
-SHA512 (akonadi-search-23.04.3.tar.xz) = 8089a9297ccffaeba2eba626eeec096090b039d58ace6b8e7c84b1ea5cabfe497de8d9e27fda581f5dcdcb9529b7145cc031bc110bc4adc50199c02a39ad255a
-Size (akonadi-search-23.04.3.tar.xz) = 102480 bytes
+BLAKE2s (akonadi-search-23.08.4.tar.xz) = b784c18aab441fea689233e82148021b3d7e1dd66dc99fdd055cd9ad4e901cda
+SHA512 (akonadi-search-23.08.4.tar.xz) = a6945a19b9a3d570a573260c48d81f3dd5344b3fe64947f8b3cbf50c46303de7fc5d97afa2c6016f75cddb6f1f1fead270a4a6979e576de6778e4fe7fa2716a8
+Size (akonadi-search-23.08.4.tar.xz) = 109972 bytes
