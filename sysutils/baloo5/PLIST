@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/07/29 02:24:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/06 10:46:30 markd Exp $
 bin/baloo_file
 bin/baloo_file_extractor
 bin/balooctl
@@ -153,6 +153,11 @@ share/locale/en_GB/LC_MESSAGES/kio5_tags.mo
 share/locale/en_GB/LC_MESSAGES/kio5_timeline.mo
 share/locale/eo/LC_MESSAGES/baloo_file5.mo
 share/locale/eo/LC_MESSAGES/baloo_file_extractor5.mo
+share/locale/eo/LC_MESSAGES/balooctl5.mo
+share/locale/eo/LC_MESSAGES/baloodb5.mo
+share/locale/eo/LC_MESSAGES/balooengine5.mo
+share/locale/eo/LC_MESSAGES/baloosearch5.mo
+share/locale/eo/LC_MESSAGES/balooshow5.mo
 share/locale/eo/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/eo/LC_MESSAGES/kio5_tags.mo
 share/locale/eo/LC_MESSAGES/kio5_timeline.mo
@@ -258,6 +263,8 @@ share/locale/it/LC_MESSAGES/balooshow5.mo
 share/locale/it/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/it/LC_MESSAGES/kio5_tags.mo
 share/locale/it/LC_MESSAGES/kio5_timeline.mo
+share/locale/ja/LC_MESSAGES/baloo_file5.mo
+share/locale/ja/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/ja/LC_MESSAGES/balooctl5.mo
 share/locale/ja/LC_MESSAGES/baloodb5.mo
 share/locale/ja/LC_MESSAGES/balooengine5.mo
@@ -434,6 +441,8 @@ share/locale/sr@latin/LC_MESSAGES/balooshow5.mo
 share/locale/sr@latin/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/sr@latin/LC_MESSAGES/kio5_tags.mo
 share/locale/sr@latin/LC_MESSAGES/kio5_timeline.mo
+share/locale/sv/LC_MESSAGES/baloo_file5.mo
+share/locale/sv/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/sv/LC_MESSAGES/balooctl5.mo
 share/locale/sv/LC_MESSAGES/baloodb5.mo
 share/locale/sv/LC_MESSAGES/balooengine5.mo
@@ -488,6 +497,7 @@ share/locale/zh_CN/LC_MESSAGES/balooshow5.mo
 share/locale/zh_CN/LC_MESSAGES/kio5_baloosearch.mo
 share/locale/zh_CN/LC_MESSAGES/kio5_tags.mo
 share/locale/zh_CN/LC_MESSAGES/kio5_timeline.mo
+share/locale/zh_TW/LC_MESSAGES/baloo_file_extractor5.mo
 share/locale/zh_TW/LC_MESSAGES/balooctl5.mo
 share/locale/zh_TW/LC_MESSAGES/baloodb5.mo
 share/locale/zh_TW/LC_MESSAGES/balooengine5.mo

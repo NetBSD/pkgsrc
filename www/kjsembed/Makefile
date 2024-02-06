@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2024/01/30 14:22:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2024/02/06 10:46:32 markd Exp $
 
 DISTNAME=	kjsembed-${KF5VER}
-PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks

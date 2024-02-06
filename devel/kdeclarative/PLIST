@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/25 03:56:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/06 10:46:25 markd Exp $
 bin/kpackagelauncherqml
 include/KF5/KDeclarative/CalendarEvents/CalendarEventsPlugin
 include/KF5/KDeclarative/KDeclarative/ConfigPropertyMap
@@ -65,6 +65,7 @@ qt5/qml/org/kde/kcm/SettingHighlighter.qml
 qt5/qml/org/kde/kcm/SettingStateBinding.qml
 qt5/qml/org/kde/kcm/SimpleKCM.qml
 qt5/qml/org/kde/kcm/libkcmcontrolsplugin.so
+qt5/qml/org/kde/kcm/private/GridDelegateMenu.qml
 qt5/qml/org/kde/kcm/private/GridViewInternal.qml
 qt5/qml/org/kde/kcm/qmldir
 qt5/qml/org/kde/kconfig/libkconfigplugin.so

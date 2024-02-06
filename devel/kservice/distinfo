@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/07/29 02:07:14 markd Exp $
+$NetBSD: distinfo,v 1.20 2024/02/06 10:46:27 markd Exp $
 
-BLAKE2s (kservice-5.108.0.tar.xz) = 8d8e187c5b63e176e2bbeaa37897cb9b9f2e36c38f7b2b4247122fe4c2ed8c22
-SHA512 (kservice-5.108.0.tar.xz) = ed6a5b7d3f298c1d21cfb0e8599c006ad6dce58e203e667ce897354cb2aa1e1ea082012d8d6aca24838a94357454ad05580c63a945e0b372d616ec00ffd1599d
-Size (kservice-5.108.0.tar.xz) = 2539152 bytes
+BLAKE2s (kservice-5.114.0.tar.xz) = dcad3366d75a461d815b916d63f7020d1ae5a1c7e89630ab3962aac113b5c58e
+SHA512 (kservice-5.114.0.tar.xz) = 2588138c75d1d39871dc34501c2a86d7d47658de9df7055296becb3b7ddcebdbc40e017b2ae72e708caab221aeca0a19a55f9414181d23c927b7047a37330341
+Size (kservice-5.114.0.tar.xz) = 2538888 bytes
