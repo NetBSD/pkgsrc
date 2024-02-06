@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/08/03 04:52:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/02/06 11:17:42 markd Exp $
 bin/k3b
 include/k3b_export.h
 include/k3bactivepipe.h
@@ -380,6 +380,7 @@ share/kservicetypes5/k3bplugin.desktop
 share/kxmlgui5/k3b/k3bdeviceui.rc
 share/kxmlgui5/k3b/k3bui.rc
 share/locale/ar/LC_MESSAGES/k3b.mo
+share/locale/ar/LC_MESSAGES/kio_videodvd.mo
 share/locale/ar/LC_MESSAGES/libk3bdevice.mo
 share/locale/be/LC_MESSAGES/k3b.mo
 share/locale/be/LC_MESSAGES/kio_videodvd.mo

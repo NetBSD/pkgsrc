@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2024/01/30 14:22:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2024/02/06 11:17:42 markd Exp $
 
 DISTNAME=	kdf-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://apps.kde.org/kdf/
