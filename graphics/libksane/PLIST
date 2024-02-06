@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:52:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/06 11:05:24 markd Exp $
 include/KF5/KSane/KSaneWidget
 include/KF5/KSane/ksane_export.h
+include/KF5/KSane/ksane_version.h
 include/KF5/KSane/ksanewidget.h
-include/KF5/ksane_version.h
 lib/cmake/KF5Sane/KF5SaneConfig.cmake
 lib/cmake/KF5Sane/KF5SaneConfigVersion.cmake
 lib/cmake/KF5Sane/KF5SaneTargets-noconfig.cmake

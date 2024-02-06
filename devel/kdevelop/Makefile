@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2024/01/30 14:21:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2024/02/06 11:05:15 markd Exp $
 #
 
 DISTNAME=	kdevelop-${KAPPSVER}
-PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://www.kdevelop.org/
@@ -18,6 +17,8 @@ USE_TOOLS+=	gmake gtar pkg-config #perl msgfmt
 REPLACE_BASH+=	kdevplatform/util/kdevplatform_shell_environment.sh
 
 CHECK_INTERPRETER_SKIP=	share/kdevplatform/shellutils/.zshrc
+
+CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 pre-configure:
 	ln -s ${TOOLS_DIR}/bin/gtar ${TOOLS_DIR}/bin/tar

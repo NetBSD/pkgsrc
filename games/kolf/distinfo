@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:14:47 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:20 markd Exp $
 
-BLAKE2s (kolf-23.04.3.tar.xz) = 444dd6196659bcff297dba42171b6c5c5bdf2a5b3d732b258b5eef6c94487c65
-SHA512 (kolf-23.04.3.tar.xz) = faf2beaf979ee5a86aafeb268b2c45eedafb68061f507c593f8e180d1b2cd8ac5bdd3d6d2bf5bab1fc833a9d715c36e922c27a22dadfbc9e3f64595b761bac08
-Size (kolf-23.04.3.tar.xz) = 1070452 bytes
+BLAKE2s (kolf-23.08.4.tar.xz) = 0b6aca8d740a578a676a5a4a1c31bb7029cd575943fa459c5ec25a50e3cdfa45
+SHA512 (kolf-23.08.4.tar.xz) = 8a4d20aa876ec47e9d63f8a8750800ccbeb8b3fb64019ab75f1391a7cba4c8359a9923866e1d552d967653d6bc3aa0e05bff35303e6741ee57b5d22fecf65ae2
+Size (kolf-23.08.4.tar.xz) = 1075268 bytes

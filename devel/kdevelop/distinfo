@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/10/14 03:47:13 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:05:15 markd Exp $
 
-BLAKE2s (kdevelop-23.04.3.tar.xz) = 01ca3753561ed688ee3c7a53dac9eeeac3c6af5a482ba780c3f2d4ccbbe2f77b
-SHA512 (kdevelop-23.04.3.tar.xz) = f6734aada66757f03cf50793b3ba601748e5494c6cc4dbfba928927d7cf5c07a9522c4f506ef908ebe9b2a6f212e2f360b313c32398c1284adb43c43609f581c
-Size (kdevelop-23.04.3.tar.xz) = 8659696 bytes
+BLAKE2s (kdevelop-23.08.4.tar.xz) = 637f743fafc6fe9c5c2c87c105f877ec79a2ac1d6ab50e074baf7539e7b6d48c
+SHA512 (kdevelop-23.08.4.tar.xz) = e5a1bf3b6c46006165a6169fdfe244d02bff945c8dd01d0b5897a0752b4759c03f58ce136e636366b14b3b27e91aa14b29b0f432589a2114f45fbdf2a3cf3135
+Size (kdevelop-23.08.4.tar.xz) = 8707260 bytes
 SHA1 (patch-languages_cpp_codegen_adaptsignatureassistant.cpp) = b184ac8deb737be859a8e6644ad3f1eb9ac6a594

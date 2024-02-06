@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 05:40:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:15 markd Exp $
 bin/kdebugsettings
 lib/libkdebugsettings.so.${PKGVERSION}
 lib/libkdebugsettings.so.5
+lib/libkdebugsettingscore.so.${PKGVERSION}
+lib/libkdebugsettingscore.so.5
 share/applications/org.kde.kdebugsettings.desktop
 share/kdebugsettings/groups/Full Debug Ruqola
 share/locale/ar/LC_MESSAGES/kdebugsettings.mo

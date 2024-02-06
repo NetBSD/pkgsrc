@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:43:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:24 markd Exp $
 bin/akonadiimportwizard
-include/KPim5/ImportWizard/AbstractAddressBook
-include/KPim5/ImportWizard/AbstractBase
-include/KPim5/ImportWizard/AbstractCalendar
-include/KPim5/ImportWizard/AbstractDisplayInfo
-include/KPim5/ImportWizard/AbstractImporter
-include/KPim5/ImportWizard/AbstractSettings
-include/KPim5/ImportWizard/ImportWizardUtil
-include/KPim5/importwizard/abstractaddressbook.h
-include/KPim5/importwizard/abstractbase.h
-include/KPim5/importwizard/abstractcalendar.h
-include/KPim5/importwizard/abstractdisplayinfo.h
-include/KPim5/importwizard/abstractimporter.h
-include/KPim5/importwizard/abstractsettings.h
-include/KPim5/importwizard/importwizardutil.h
-include/KPim5/importwizard/libimportwizard_export.h
-include/KPim5/importwizard_version.h
+include/KPim5/ImportWizard/ImportWizard/AbstractAddressBook
+include/KPim5/ImportWizard/ImportWizard/AbstractBase
+include/KPim5/ImportWizard/ImportWizard/AbstractCalendar
+include/KPim5/ImportWizard/ImportWizard/AbstractDisplayInfo
+include/KPim5/ImportWizard/ImportWizard/AbstractImporter
+include/KPim5/ImportWizard/ImportWizard/AbstractSettings
+include/KPim5/ImportWizard/ImportWizard/ImportWizardUtil
+include/KPim5/ImportWizard/importwizard/abstractaddressbook.h
+include/KPim5/ImportWizard/importwizard/abstractbase.h
+include/KPim5/ImportWizard/importwizard/abstractcalendar.h
+include/KPim5/ImportWizard/importwizard/abstractdisplayinfo.h
+include/KPim5/ImportWizard/importwizard/abstractimporter.h
+include/KPim5/ImportWizard/importwizard/abstractsettings.h
+include/KPim5/ImportWizard/importwizard/importwizardutil.h
+include/KPim5/ImportWizard/importwizard/libimportwizard_export.h
+include/KPim5/ImportWizard/importwizard_version.h
 lib/cmake/KPim5ImportWizard/KPim5ImportWizardConfig.cmake
 lib/cmake/KPim5ImportWizard/KPim5ImportWizardConfigVersion.cmake
 lib/cmake/KPim5ImportWizard/KPim5ImportWizardTargets-noconfig.cmake
@@ -26,7 +26,7 @@ lib/cmake/KPimImportWizard/KPimImportWizardConfig.cmake
 lib/cmake/KPimImportWizard/KPimImportWizardConfigVersion.cmake
 lib/libKPim5ImportWizard.so
 lib/libKPim5ImportWizard.so.5
-lib/libKPim5ImportWizard.so.5.23.3
+lib/libKPim5ImportWizard.so.5.24.4
 qt5/plugins/pim5/importwizard/balsaimporterplugin.so
 qt5/plugins/pim5/importwizard/clawsmailimporterplugin.so
 qt5/plugins/pim5/importwizard/evolutionv3importerplugin.so

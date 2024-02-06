@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/08/03 02:26:14 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/02/06 11:05:14 markd Exp $
 
-BLAKE2s (dolphin-plugins-23.04.3.tar.xz) = c20118cd95396f1615d4bf9e538d1346a1b39a4e19eee37c8bf4f24242af1ab6
-SHA512 (dolphin-plugins-23.04.3.tar.xz) = 8f487ba0bcbe561915064247ddb2327c3b7c8fa6ffc5c511d9c9ef37bd4f28a624533ce7a2da2a86b10b65f37915ca10840517872b40c2fd014cead6da5972c8
-Size (dolphin-plugins-23.04.3.tar.xz) = 272912 bytes
+BLAKE2s (dolphin-plugins-23.08.4.tar.xz) = 0f138aa97364234d24a7286edb6595836897a2007545df47c8360ca1262bb346
+SHA512 (dolphin-plugins-23.08.4.tar.xz) = 7cb3365221aabe411e1339230633a37d674c6e2a77e675f8a1d9c61928bd0d2b75e5d289ba8d7765bcbea47afea56e2b629726fbdcf6e0e4248c4380ce33f40e
+Size (dolphin-plugins-23.08.4.tar.xz) = 274180 bytes
