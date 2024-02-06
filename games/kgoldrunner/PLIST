@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 03:01:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/06 11:05:18 markd Exp $
 bin/kgoldrunner
 share/applications/org.kde.kgoldrunner.desktop
 share/doc/HTML/ca/kgoldrunner/index.cache.bz2
@@ -148,6 +148,7 @@ share/locale/id/LC_MESSAGES/kgoldrunner.mo
 share/locale/is/LC_MESSAGES/kgoldrunner.mo
 share/locale/it/LC_MESSAGES/kgoldrunner.mo
 share/locale/ja/LC_MESSAGES/kgoldrunner.mo
+share/locale/ka/LC_MESSAGES/kgoldrunner.mo
 share/locale/kk/LC_MESSAGES/kgoldrunner.mo
 share/locale/km/LC_MESSAGES/kgoldrunner.mo
 share/locale/ko/LC_MESSAGES/kgoldrunner.mo

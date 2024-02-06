@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/08/03 03:52:00 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/02/06 11:05:24 markd Exp $
 
-BLAKE2s (libksane-23.04.3.tar.xz) = 3495f76c1f7fcd5bcd838169d29aa4df80315fbe6d9b159e283d364dc60a287c
-SHA512 (libksane-23.04.3.tar.xz) = 7682e5cbfc5afea90ea58d81b6b9fc36728c962b0537df1ff4a72a25da1923d36e1eb7b6a66233eb65607d3515559231832e645668c6f9b2ba2ba5eeb9b90723
-Size (libksane-23.04.3.tar.xz) = 154696 bytes
+BLAKE2s (libksane-23.08.4.tar.xz) = 1ca7a877a71cd0ca906108962c56665ea5327428a5c5539352e1d68cd7e31618
+SHA512 (libksane-23.08.4.tar.xz) = af3f0d0e66a9ca7b259264a8b94496786ddd563ee87382123b07be4ca8eaea77d58ea44a7a2312d9d43a7643283e36c4ab7dca8c435c85ece7aa55a7575e4deb
+Size (libksane-23.08.4.tar.xz) = 155488 bytes

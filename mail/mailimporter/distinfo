@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 05:31:35 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:05:26 markd Exp $
 
-BLAKE2s (mailimporter-23.04.3.tar.xz) = 6a6bc4528d6155b5749eaf41653776885e3647fa2f639688b3e1feb948949fac
-SHA512 (mailimporter-23.04.3.tar.xz) = 45e63cf7d497ecfb651b26fac326b33a4f8228f5a856884c8a0084e57a0faf0427e89420950328d1e1af60aed88dfef5ffdf564863b329aff30edb2eedd0ac24
-Size (mailimporter-23.04.3.tar.xz) = 591536 bytes
+BLAKE2s (mailimporter-23.08.4.tar.xz) = 05b5156f2be018eebf88b1970feb8645b75801c9301dd21700e3004de40ce67b
+SHA512 (mailimporter-23.08.4.tar.xz) = 504920ca89ae9b91dfba97c76ed1f3af868c479b9622a6812484856cf5e5381b6f211d1d5eafdae8830e4ce14fe2490e88d4cb4d209baba291242456554f9243
+Size (mailimporter-23.08.4.tar.xz) = 593416 bytes

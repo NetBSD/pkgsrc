@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/08/03 03:37:23 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/02/06 11:05:22 markd Exp $
 
-BLAKE2s (kamera-23.04.3.tar.xz) = d5eca5e08f6cdbd71484b2d2b8eaca457de1c2ac6a52098eac28d47b3779fa53
-SHA512 (kamera-23.04.3.tar.xz) = c5626a50e0cc7313ab2aaf8d85a7c2f8dc045d4097af0c924de89f2da55ec8a79d1b302eb87328a82dc2a61ed8f4522d43221e813852a155dd3740d93853378e
-Size (kamera-23.04.3.tar.xz) = 130888 bytes
+BLAKE2s (kamera-23.08.4.tar.xz) = 61cab2aeb8c99b6db565bc34433c8bd47988a1cfd3d86a739ac6c39d9691b135
+SHA512 (kamera-23.08.4.tar.xz) = 99a9d0b85642f2e8d571e0c58e06e4c5647b724939f31a248aa5adc7763c9f517d106e54e8b6d9de516e5911c50c7e39b7cc88cf0dc490ddcabef36a33695d18
+Size (kamera-23.08.4.tar.xz) = 131624 bytes
