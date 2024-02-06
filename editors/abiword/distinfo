@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2023/10/16 14:12:14 ryoon Exp $
+$NetBSD: distinfo,v 1.86 2024/02/06 03:48:34 gutteridge Exp $
 
 BLAKE2s (abiword-3.0.5.tar.gz) = 3d6ee3bfcdf533ae92f068921473c9c99c4d35a10f73591ecd49c0505145bb6b
 SHA512 (abiword-3.0.5.tar.gz) = a2484268901ff47307c9d1f1928622e364f1006f22ce38257c585144df9411dfe3c2dea28c1f1f50a6e545e8cc579cce34117a89dfa771e20312e3ea1a9989d6
@@ -26,6 +26,7 @@ SHA1 (patch-src_af_util_xp_ut__iconv.cpp) = 18529454262fe6cb3ae15fd485c7bcc8adb0
 SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
 SHA1 (patch-src_af_util_xp_ut__mbtowc.cpp) = cf7078a6bfdf9ac9b30478d11d9d3a81a95b8ed1
 SHA1 (patch-src_af_util_xp_ut__misc.cpp) = f552ecbb87490355d8e74218dd59fd3961f1af5d
+SHA1 (patch-src_af_util_xp_ut__stringbuf.cpp) = 0814851b7ea92b474f129096be9c67a78d54f9c6
 SHA1 (patch-src_af_xap_xp_enchant__checker.cpp) = 5ad3b8bb4e186e998d7e8930247534c9f058c534
 SHA1 (patch-src_text_fmt_xp_fv__FrameEdit.h) = 684310bf9aece4ce72d004dfae9a4b4b6ca69570
 SHA1 (patch-src_wp_ap_gtk_ap__UnixApp.cpp) = 0269d41c71db3501afc0f06ba1d21cd68f3f9304
