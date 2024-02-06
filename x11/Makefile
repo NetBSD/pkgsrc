@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1010 2024/01/17 08:12:35 nros Exp $
+# $NetBSD: Makefile,v 1.1011 2024/02/06 03:28:25 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -134,6 +134,7 @@ SUBDIR+=	keylaunch
 SUBDIR+=	kglobalaccel
 SUBDIR+=	kguiaddons
 SUBDIR+=	kinit
+SUBDIR+=	kirigami-addons
 SUBDIR+=	kirigami2
 SUBDIR+=	kitemviews
 SUBDIR+=	kitty
