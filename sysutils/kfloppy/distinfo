@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.17 2023/08/03 04:55:16 markd Exp $
-
-BLAKE2s (kfloppy-23.04.3.tar.xz) = 894ca2e89a988a3e12064fed4993ce08a30cd7f667c9e816f66a19e064352bac
-SHA512 (kfloppy-23.04.3.tar.xz) = 550784b7c08ff71e6154f8d14b4d16d2987b7a32d0c27b185c8ede7d077b3125bc9c6f9a969af074f1f16b0f41e7bc4cfc667a7be93861d78e3e759dec1f8424
-Size (kfloppy-23.04.3.tar.xz) = 245236 bytes
