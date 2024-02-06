@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/07/20 22:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/02/06 21:40:08 adam Exp $
 
-DISTNAME=	pydot-1.4.2
+DISTNAME=	pydot-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydot/}
 
@@ -11,12 +10,18 @@ HOMEPAGE=	https://github.com/erocarrera/pydot
 COMMENT=	Python interface to Graphviz's Dot language
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
-DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3:../../devel/py-pyparsing
+TEST_DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/pydot_unittest.py
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

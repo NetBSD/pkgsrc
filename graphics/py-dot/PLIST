@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2017/07/14 15:33:19 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/dot_parser.py
-${PYSITELIB}/dot_parser.pyc
-${PYSITELIB}/dot_parser.pyo
-${PYSITELIB}/pydot.py
-${PYSITELIB}/pydot.pyc
-${PYSITELIB}/pydot.pyo
+@comment $NetBSD: PLIST,v 1.4 2024/02/06 21:40:08 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pydot/__init__.py
+${PYSITELIB}/pydot/__init__.pyc
+${PYSITELIB}/pydot/__init__.pyo
+${PYSITELIB}/pydot/core.py
+${PYSITELIB}/pydot/core.pyc
+${PYSITELIB}/pydot/core.pyo
+${PYSITELIB}/pydot/dot_parser.py
+${PYSITELIB}/pydot/dot_parser.pyc
+${PYSITELIB}/pydot/dot_parser.pyo
+${PYSITELIB}/pydot/exceptions.py
+${PYSITELIB}/pydot/exceptions.pyc
+${PYSITELIB}/pydot/exceptions.pyo
