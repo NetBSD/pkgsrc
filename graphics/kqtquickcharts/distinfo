@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/03 03:44:36 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/06 11:05:23 markd Exp $
 
-BLAKE2s (kqtquickcharts-23.04.3.tar.xz) = 2cc4095dbbda4dfdc446ff5cfe050fe81e10c784d676aab985620146208683b4
-SHA512 (kqtquickcharts-23.04.3.tar.xz) = e973517271537fb21268beddedd1b0e41d43696ac10b49695d846e961b0152997c173911bc21e95cddfa06edb71da787db8a282db7525335c690e35547045028
-Size (kqtquickcharts-23.04.3.tar.xz) = 30856 bytes
+BLAKE2s (kqtquickcharts-23.08.4.tar.xz) = bbedbcd643e72718abfb1526af94c53c725efcf891ab2af9b7697ed4af2188be
+SHA512 (kqtquickcharts-23.08.4.tar.xz) = 4661bd3d76f6ce3036b2e63f1311c68979316981f03052cbab56c372daf09f52caf31baf4bead65918207083300dfc5930269591a51fd8578ec0861bb5710483
+Size (kqtquickcharts-23.08.4.tar.xz) = 30868 bytes

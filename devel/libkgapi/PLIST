@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/16 03:58:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/06 11:05:15 markd Exp $
 include/KPim5/KGAPI/KGAPI/Account
 include/KPim5/KGAPI/KGAPI/AccountInfo
 include/KPim5/KGAPI/KGAPI/AccountInfoFetchJob
@@ -359,7 +359,7 @@ include/KPim5/KGAPI/kgapi/tasks/taskmodifyjob.h
 include/KPim5/KGAPI/kgapi/tasks/taskmovejob.h
 include/KPim5/KGAPI/kgapi/types.h
 include/KPim5/KGAPI/kgapi/utils.h
-include/KPim5/kgapi_version.h
+include/KPim5/KGAPI/kgapi_version.h
 lib/cmake/KPim5GAPI/KPim5GAPIConfig.cmake
 lib/cmake/KPim5GAPI/KPim5GAPIConfigVersion.cmake
 lib/cmake/KPim5GAPI/KPim5GAPITargets-noconfig.cmake
@@ -370,28 +370,28 @@ lib/cmake/KPimGAPI/KPimGAPIConfig.cmake
 lib/cmake/KPimGAPI/KPimGAPIConfigVersion.cmake
 lib/libKPim5GAPIBlogger.so
 lib/libKPim5GAPIBlogger.so.5
-lib/libKPim5GAPIBlogger.so.5.23.3
+lib/libKPim5GAPIBlogger.so.5.24.4
 lib/libKPim5GAPICalendar.so
 lib/libKPim5GAPICalendar.so.5
-lib/libKPim5GAPICalendar.so.5.23.3
+lib/libKPim5GAPICalendar.so.5.24.4
 lib/libKPim5GAPICore.so
 lib/libKPim5GAPICore.so.5
-lib/libKPim5GAPICore.so.5.23.3
+lib/libKPim5GAPICore.so.5.24.4
 lib/libKPim5GAPIDrive.so
 lib/libKPim5GAPIDrive.so.5
-lib/libKPim5GAPIDrive.so.5.23.3
+lib/libKPim5GAPIDrive.so.5.24.4
 lib/libKPim5GAPILatitude.so
 lib/libKPim5GAPILatitude.so.5
-lib/libKPim5GAPILatitude.so.5.23.3
+lib/libKPim5GAPILatitude.so.5.24.4
 lib/libKPim5GAPIMaps.so
 lib/libKPim5GAPIMaps.so.5
-lib/libKPim5GAPIMaps.so.5.23.3
+lib/libKPim5GAPIMaps.so.5.24.4
 lib/libKPim5GAPIPeople.so
 lib/libKPim5GAPIPeople.so.5
-lib/libKPim5GAPIPeople.so.5.23.3
+lib/libKPim5GAPIPeople.so.5.24.4
 lib/libKPim5GAPITasks.so
 lib/libKPim5GAPITasks.so.5
-lib/libKPim5GAPITasks.so.5.23.3
+lib/libKPim5GAPITasks.so.5.24.4
 lib/sasl2/libkdexoauth2.so
 lib/sasl2/libkdexoauth2.so.3
 lib/sasl2/libkdexoauth2.so.3.0.0

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 03:27:05 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/06 11:05:25 markd Exp $
 
-BLAKE2s (akonadi-mime-23.04.3.tar.xz) = eb7c89993501d69581c7e7ab014488aa5c18135af1bde7bfa57a3cc5e24cfeb4
-SHA512 (akonadi-mime-23.04.3.tar.xz) = 9dcfd14c9e89a59015704fdad27e75616e6677bf81d2096038bf51cfe62f72aa586c810fb125fdfec814c2ba5a00c7d1a7a8b0db1dff33cdfb076ed4d8813fda
-Size (akonadi-mime-23.04.3.tar.xz) = 155660 bytes
+BLAKE2s (akonadi-mime-23.08.4.tar.xz) = 8e0167dcce885875c27a00b4500d7d845697e755a601b74b47e1c07ac0f8f4b7
+SHA512 (akonadi-mime-23.08.4.tar.xz) = de28a447f9d1b78b2e5c5d42ca53e8479c9160551545d46cd6d8e79d6a4421cae70a5a8b5e4567eaafa49da1c2c938240b44af6e695a197dd69d178a710fa00a
+Size (akonadi-mime-23.08.4.tar.xz) = 166932 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:24:14 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:21 markd Exp $
 
-BLAKE2s (ksquares-23.04.3.tar.xz) = 8c02f2ddf5ef4a7ad298889f5b9b1fbba11bd78ddc0f2ec22ecca3c76324d8f0
-SHA512 (ksquares-23.04.3.tar.xz) = 22b343b1fe0de874f7f09f7eb1e8d6b16c3cb4e7ec391e99c6f2a1ceb3807badab959c32491166878ca4fa2fb8cfc00a5d96848637d6a0d88bd33965435d43cc
-Size (ksquares-23.04.3.tar.xz) = 312616 bytes
+BLAKE2s (ksquares-23.08.4.tar.xz) = a23a88ebbff034c3af3f00fbbe9c419c3287f6f8a3bad0e6be5839e7eb4e40cc
+SHA512 (ksquares-23.08.4.tar.xz) = 0696f8954f1357468d96a0d7356d7fdcd46c2e1ee874abfb773aa7cc9ae06d93505536165729f09cc3dcc0af49dd08f25fcafad86340d9a7dcddef32e40a91ef
+Size (ksquares-23.08.4.tar.xz) = 314512 bytes

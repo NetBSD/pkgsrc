@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 02:51:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:17 markd Exp $
 bin/kanagram
 share/applications/org.kde.kanagram.desktop
 share/config.kcfg/kanagram.kcfg
@@ -35,6 +35,19 @@ share/doc/HTML/es/kanagram/index.cache.bz2
 share/doc/HTML/es/kanagram/index.docbook
 share/doc/HTML/et/kanagram/index.cache.bz2
 share/doc/HTML/et/kanagram/index.docbook
+share/doc/HTML/fr/kanagram/answer-highlight.png
+share/doc/HTML/fr/kanagram/general-settings.png
+share/doc/HTML/fr/kanagram/helpstates.png
+share/doc/HTML/fr/kanagram/index.cache.bz2
+share/doc/HTML/fr/kanagram/index.docbook
+share/doc/HTML/fr/kanagram/kanagram-hint.png
+share/doc/HTML/fr/kanagram/kanagram.png
+share/doc/HTML/fr/kanagram/newstuff-dialog.png
+share/doc/HTML/fr/kanagram/newstuff-settings.png
+share/doc/HTML/fr/kanagram/shortcuts-settings.png
+share/doc/HTML/fr/kanagram/standard-fonts.png
+share/doc/HTML/fr/kanagram/vocab-editor.png
+share/doc/HTML/fr/kanagram/vocab-settings.png
 share/doc/HTML/it/kanagram/index.cache.bz2
 share/doc/HTML/it/kanagram/index.docbook
 share/doc/HTML/nl/kanagram/answer-highlight.png

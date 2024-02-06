@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:17:59 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:20 markd Exp $
 
-BLAKE2s (kpat-23.04.3.tar.xz) = 64f4b7af6f09e073ab2a3165a45575adf7a904229177ee0cd225ab7dd066e884
-SHA512 (kpat-23.04.3.tar.xz) = 3802c83ac07658fb189c45b4865900bd19a800d9e1ce90e921083a2879b230ed57e71e313daf126eff5da8fd1c28c3dcc154dba3ffa86ff87c8d6cc9370fd4d8
-Size (kpat-23.04.3.tar.xz) = 3752032 bytes
+BLAKE2s (kpat-23.08.4.tar.xz) = d9b9afea42ba53bee3cbdf25a237291446b1dddc57a66116b3b7751213f440f7
+SHA512 (kpat-23.08.4.tar.xz) = ee31864c926be8245f32b4000c8ba3552adece07f05281a44edd4ccf304fef0546502a386ac54ab6d6bd710d8305f41cd15193b5922fa6fe42814714f9616f74
+Size (kpat-23.08.4.tar.xz) = 3755892 bytes

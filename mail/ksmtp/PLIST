@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:58:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:26 markd Exp $
 include/KPim5/KSMTP/KSMTP/Job
 include/KPim5/KSMTP/KSMTP/LoginJob
 include/KPim5/KSMTP/KSMTP/SendJob
@@ -10,18 +10,14 @@ include/KPim5/KSMTP/ksmtp/loginjob.h
 include/KPim5/KSMTP/ksmtp/sendjob.h
 include/KPim5/KSMTP/ksmtp/session.h
 include/KPim5/KSMTP/ksmtp/sessionuiproxy.h
-include/KPim5/ksmtp_version.h
+include/KPim5/KSMTP/ksmtp_version.h
 lib/cmake/KPim5SMTP/KPim5SMTPConfig.cmake
 lib/cmake/KPim5SMTP/KPim5SMTPConfigVersion.cmake
 lib/cmake/KPim5SMTP/KPim5SMTPTargets-noconfig.cmake
 lib/cmake/KPim5SMTP/KPim5SMTPTargets.cmake
-lib/cmake/KPimSMTP/KPim5SMTPTargets-noconfig.cmake
-lib/cmake/KPimSMTP/KPim5SMTPTargets.cmake
-lib/cmake/KPimSMTP/KPimSMTPConfig.cmake
-lib/cmake/KPimSMTP/KPimSMTPConfigVersion.cmake
 lib/libKPim5SMTP.so
 lib/libKPim5SMTP.so.5
-lib/libKPim5SMTP.so.5.23.3
+lib/libKPim5SMTP.so.5.24.4
 qt5/mkspecs/modules/qt_KSMTP.pri
 share/locale/ar/LC_MESSAGES/libksmtp5.mo
 share/locale/bs/LC_MESSAGES/libksmtp5.mo
