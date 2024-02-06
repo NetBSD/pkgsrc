@@ -17,14 +17,6 @@ Incoming SMTP on port 25:
 - Add any qmail-spp programs (such as greylisting) to control/smtpplugins.
 - Run "@RCD_SCRIPTS_DIR@/qmailsmtpd start".
 
-Greylisting:
-- Add any exempt recipient addresses to control/greylist/exemptrcpts.
-- Add any exempt recipient domains to control/greylist/exemptrcpthosts.
-- Tuples are (IP,sender,recipient). To effectively omit IP, add
-  GL_WRAPPER_TCPREMOTEIP="127.127.127.127" to control/tcprules/smtp,
-  then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
-- Uncomment "greylisting-spp-wrapper" in control/smtpplugins.
-
 Authenticated message submission on port 587:
 - Set qmailofmipd=YES in /etc/rc.conf.
 - Add any qmail-qfilter programs to control/ofmipfilters.
@@ -38,19 +30,55 @@ TLS encryption for SMTP, submission, POP3, and remote delivery:
 - Create cert and DH params (see @PREFIX@/share/doc/qmail/README.tls).
 - Run "@RCD_SCRIPTS_DIR@/qmail restart".
 
-Sender Policy Framework:
-- Configure Sender Rewriting Scheme (see @PREFIX@/share/doc/qmail/README.srs)
-  so your auto-forwarded messages will reach servers that choose to
-  enforce the forwarded domains' SPF policies.
-- Publish a DNS TXT record with your desired policy.
-- Incoming messages that explicit-fail published policy are nonetheless
-  accepted. To reject -- including rejecting auto-forwarded messages
-  from servers that haven't configured SRS -- add
-  SPP_SPF_RESULT_FAIL="E550 spf_smtp_msg" to control/tcprules/smtp,
+Greylisting:
+- Add any exempt recipient addresses to control/greylist/exemptrcpts.
+- Add any exempt recipient domains to control/greylist/exemptrcpthosts.
+- Tuples are (IP,sender,recipient). To effectively omit IP, add
+  GL_WRAPPER_TCPREMOTEIP="127.127.127.127" to control/tcprules/smtp,
   then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
-- Messages that explicit-pass are not greylisted. To remove the
-  exemption, remove SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1" from
+- Uncomment "greylisting-spp-wrapper" in control/smtpplugins.
+
+SPF (Sender Policy Framework) outbound:
+- If you auto-forward any messages originating from other domains,
+  configure SRS (Sender Rewriting Scheme, see
+  @PREFIX@/share/doc/qmail/README.srs)
+  so that servers which enforce the forwarded domains' SPF policies will
+  accept these messages from you.
+- Publish a DNS TXT record with your domain's SPF policy.
+
+SPF incoming:
+- To greylist SPF-passing incoming messages (assuming greylisting is
+  enabled), remove SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1" from
   control/tcprules/smtp, then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
+  By default, such messages are accepted.
+- To reject SPF-failing incoming messages (including auto-forwards from
+  servers that forgot to configure SRS) when the domain's policy is
+  explicit-fail, add SPP_SPF_RESULT_FAIL="E550 spf_smtp_msg" to
+  control/tcprules/smtp, then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
+  By default, such messages are accepted.
+
+DKIM (DomainKeys Identified Mail) outbound:
+- Run "mkdir control/domainkeys && chown qmailr control/domainkeys".
+- Run "cd control/domainkeys && mkdir yourdomain.com && cd yourdomain.com"
+- Generate a DKIM keypair for yourdomain.com:
+    openssl genrsa -out default 1024 && chmod 640 default
+    openssl rsa -in default -pubout -out default.pub
+- Publish a DNS TXT record for the "default" selector containing your
+  domain's DKIM policy and public key.
+- To turn off signing entirely, set
+  qmailsend_postenv="QMAILREMOTE=@PREFIX@/bin/qmail-remote"
+  in /etc/rc.conf.
+  By default, messages from domains that have DKIM keys will be signed.
+
+DKIM incoming:
+- To verify DKIM signatures on incoming messages, read through
+  @PREFIX@/bin/qmail-dkimverify-queue, set QMAILQUEUE to invoke it, set
+  DKVERIFY in the environment to enable verification, be prepared to
+  figure out what's not working, and report your findings to this
+  package's maintainer. (It might just work; I haven't tried it yet.)
+  By default, messages are accepted without verifying.
+- To get useful headers prepended, it's likely you'll need this custom
+  dkimverify.pl: <URL:https://www.memoryhole.net/qmail/dkimverify.pl>
 
 
  Getting help
