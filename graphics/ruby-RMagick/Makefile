@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.162 2024/02/05 15:50:19 taca Exp $
+# $NetBSD: Makefile,v 1.163 2024/02/06 14:57:20 taca Exp $
 
-DISTNAME=	rmagick-5.4.0
+DISTNAME=	rmagick-5.4.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
 CATEGORIES=	graphics
 
