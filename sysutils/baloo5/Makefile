@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2024/01/30 14:22:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2024/02/06 10:46:30 markd Exp $
 
 DISTNAME=	baloo-${KF5VER}
 PKGNAME=	baloo5-${KF5VER}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
