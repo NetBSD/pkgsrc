@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.12 2014/05/17 09:25:01 adam Exp $
+# $NetBSD: options.mk,v 1.13 2024/02/06 14:24:44 tsutsui Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imlib2
-PKG_SUPPORTED_OPTIONS=	x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	webp x11
+PKG_SUGGESTED_OPTIONS=	webp x11
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=	mmx
 .elif ${MACHINE_ARCH} == "x86_64" && empty(PKGSRC_COMPILER:Mclang)
@@ -24,6 +24,16 @@ CONFIGURE_ARGS+=	--disable-mmx
 CONFIGURE_ARGS+=	--enable-amd64
 .else
 CONFIGURE_ARGS+=	--disable-amd64
+.endif
+
+PLIST_VARS+=		webp
+
+.if !empty(PKG_OPTIONS:Mwebp)
+.include "../../graphics/libwebp/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-webp
+PLIST.webp=		yes
+.else
+CONFIGURE_ARGS+=	--without-webp
 .endif
 
 PLIST_VARS+=		x11
