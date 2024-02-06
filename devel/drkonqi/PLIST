@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 10:27:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 10:49:54 markd Exp $
 libexec/drkonqi
 share/applications/org.kde.drkonqi.desktop
 share/drkonqi/debuggers/external.mac/lldbrc
@@ -53,6 +53,7 @@ share/locale/id/LC_MESSAGES/drkonqi5.mo
 share/locale/is/LC_MESSAGES/drkonqi5.mo
 share/locale/it/LC_MESSAGES/drkonqi5.mo
 share/locale/ja/LC_MESSAGES/drkonqi5.mo
+share/locale/ka/LC_MESSAGES/drkonqi5.mo
 share/locale/kk/LC_MESSAGES/drkonqi5.mo
 share/locale/km/LC_MESSAGES/drkonqi5.mo
 share/locale/kn/LC_MESSAGES/drkonqi5.mo
@@ -71,6 +72,7 @@ share/locale/ne/LC_MESSAGES/drkonqi5.mo
 share/locale/nl/LC_MESSAGES/drkonqi5.mo
 share/locale/nn/LC_MESSAGES/drkonqi5.mo
 share/locale/oc/LC_MESSAGES/drkonqi5.mo
+share/locale/or/LC_MESSAGES/drkonqi5.mo
 share/locale/pa/LC_MESSAGES/drkonqi5.mo
 share/locale/pl/LC_MESSAGES/drkonqi5.mo
 share/locale/pt/LC_MESSAGES/drkonqi5.mo
