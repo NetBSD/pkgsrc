@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:30:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/02/06 16:58:59 adam Exp $
 
-BLAKE2s (Flask-Testing-0.7.1.tar.gz) = 550d63d40a9143f94f44e9916d205e5490e2f3a52812e324e6593d1d135eef66
-SHA512 (Flask-Testing-0.7.1.tar.gz) = 63a84120983c7596fe8f860ae186e6b1a9c28eb36081ffcec74cba58472dec7960540e81db09371d8851fc39549abf812b6e8c96e88c246859a83f0d0628f27a
-Size (Flask-Testing-0.7.1.tar.gz) = 43794 bytes
+BLAKE2s (Flask-Testing-0.8.1.tar.gz) = 3d418a7e42e807557275e6311691c0162ac345a290e0a767a4825ef80829622c
+SHA512 (Flask-Testing-0.8.1.tar.gz) = 1b9ff127228026c75a61c52d6c292167340107d6b8ce47b332b6c11c39996bc4eabd1f77b452e89b9bc37838c16ab1c5339e00102ef379f651d92c08bd3ea2b9
+Size (Flask-Testing-0.8.1.tar.gz) = 45214 bytes
 SHA1 (patch-setup.py) = fe943d9be269ff42100b0185ad7ed476b0326c0a
