@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.975 2024/02/06 11:37:49 markd Exp $
+$NetBSD: CHANGES-2024,v 1.976 2024/02/06 11:48:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1642,3 +1642,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/drkonqi to 5.27.10 [markd 2024-02-06]
 	Updated sysutils/libksysguard to 5.27.10 [markd 2024-02-06]
 	Updated sysutils/milou to 5.27.10 [markd 2024-02-06]
+	Updated x11/libkscreen to 5.27.10 [markd 2024-02-06]
