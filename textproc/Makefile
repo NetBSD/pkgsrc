@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1450 2024/02/01 02:51:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1451 2024/02/06 12:26:00 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -44,6 +44,7 @@ SUBDIR+=	R-stringi
 SUBDIR+=	R-stringr
 SUBDIR+=	R-utf8
 SUBDIR+=	R-vroom
+SUBDIR+=	R-writexl
 SUBDIR+=	R-xml2
 SUBDIR+=	R-xmlparsedata
 SUBDIR+=	R-yaml
