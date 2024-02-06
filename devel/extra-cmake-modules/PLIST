@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2022/04/25 03:04:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/02/06 11:23:05 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
+share/ECM/find-modules/Find7Zip.cmake
 share/ECM/find-modules/Find7z.cmake
 share/ECM/find-modules/FindCanberra.cmake
 share/ECM/find-modules/FindEGL.cmake
@@ -57,11 +58,11 @@ share/ECM/kde-modules/KDEMetaInfoPlatformCheck.cmake
 share/ECM/kde-modules/KDEPackageAppTemplates.cmake
 share/ECM/kde-modules/KDESetupPrefixScript.cmake
 share/ECM/kde-modules/appstreamtest.cmake
-share/ECM/kde-modules/clang-format.cmake
+share/ECM/kde-modules/clang-format.in
 share/ECM/kde-modules/kde-git-commit-hooks/clang-format.sh
 share/ECM/kde-modules/kde-git-commit-hooks/pre-commit.in
-share/ECM/kde-modules/prefix.sh.cmake
-share/ECM/kde-modules/prefix.sh.fish.cmake
+share/ECM/kde-modules/prefix.sh.fish.in
+share/ECM/kde-modules/prefix.sh.in
 share/ECM/modules/CheckAtomic.cmake
 share/ECM/modules/ECMAddAppIcon.cmake
 share/ECM/modules/ECMAddQch.cmake
