@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 05:23:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:33 markd Exp $
 bin/contactprintthemeeditor
 bin/contactthemeeditor
 bin/headerthemeeditor
 lib/libgrantleethemeeditor.so.5
-lib/libgrantleethemeeditor.so.5.23.3
+lib/libgrantleethemeeditor.so.5.24.4
 share/applications/org.kde.contactprintthemeeditor.desktop
 share/applications/org.kde.contactthemeeditor.desktop
 share/applications/org.kde.headerthemeeditor.desktop

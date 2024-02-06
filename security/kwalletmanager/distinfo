@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/08/03 04:47:19 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/02/06 11:17:41 markd Exp $
 
-BLAKE2s (kwalletmanager-23.04.3.tar.xz) = 6da4f326780a9c9fcc568a0f8fac751db8fbe18297acacc913c53fee9aa131ca
-SHA512 (kwalletmanager-23.04.3.tar.xz) = 1a127da59023663e183ab9b38f8a22a9a1ec8f75de70a81809a12c4036b05ea4ae6da72f8bcd3ad140f4b6100f2db84052593d31677a07dd90aea1a13cf937e2
-Size (kwalletmanager-23.04.3.tar.xz) = 850608 bytes
+BLAKE2s (kwalletmanager-23.08.4.tar.xz) = fd62477d840c3e0ff5ff55f71aee88b6a38352ae120b826afd8849834afc21c9
+SHA512 (kwalletmanager-23.08.4.tar.xz) = 7f25ed4ce17ccab4eb0af1758b8221f419f06aa185e55800ec7735bb283e991127420896a23d6439c1facf83e4e932abf0258ba8446f3d2c2e468d20dabb05be
+Size (kwalletmanager-23.08.4.tar.xz) = 852868 bytes

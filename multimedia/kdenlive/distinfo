@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/08/03 04:38:30 markd Exp $
+$NetBSD: distinfo,v 1.14 2024/02/06 11:17:39 markd Exp $
 
-BLAKE2s (kdenlive-23.04.3.tar.xz) = 7f56f0a56e1a71e58486e0c1f1c06a6069d1bfb9352b099683897c606c7041c4
-SHA512 (kdenlive-23.04.3.tar.xz) = 7e7ed85871cfaeea7292de379d13a9de68e3a4f2408f5ca4b8f8d866c56c35ab434e65809ef3cae26415e7778afb822282bc9d9543720513e23d99acdedc30f2
-Size (kdenlive-23.04.3.tar.xz) = 12591504 bytes
+BLAKE2s (kdenlive-23.08.4.tar.xz) = 2dac98ca3fdb83d9589f0c6d2e443ca6b010562802084076aaf0fa39b8e0a8cf
+SHA512 (kdenlive-23.08.4.tar.xz) = 1b6e7c1317c299352a40a3f170e95f46d24936d30a8102f165bfe6ac94bb3c4fa0956122c09f0da6f43b08e0b12d00c9dd9b8b57936b3f2059a7caa7bb0d4d09
+Size (kdenlive-23.08.4.tar.xz) = 12710892 bytes

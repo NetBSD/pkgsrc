@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/08/03 04:30:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/02/06 11:17:37 markd Exp $
 bin/marble
 bin/marble-qt
 include/astro/astr2lib.h
@@ -178,10 +178,10 @@ lib/cmake/Marble/MarbleTargets-noconfig.cmake
 lib/cmake/Marble/MarbleTargets.cmake
 lib/libastro.so
 lib/libastro.so.1
-lib/libastro.so.23.4.3
+lib/libastro.so.23.8.4
 lib/libmarbledeclarative.so
 lib/libmarblewidget-qt5.so
-lib/libmarblewidget-qt5.so.23.4.3
+lib/libmarblewidget-qt5.so.23.8.4
 lib/libmarblewidget-qt5.so.28
 lib/marble/plugins/AnnotatePlugin.so
 lib/marble/plugins/AprsPlugin.so
@@ -1485,10 +1485,6 @@ share/marble/data/maps/earth/schagen1689/legend/town.png
 share/marble/data/maps/earth/schagen1689/schagen1689-preview.png
 share/marble/data/maps/earth/schagen1689/schagen1689.dgml
 share/marble/data/maps/earth/schagen1689/schagen1689.jpg
-share/marble/data/maps/earth/sentinel2/0/0/0.jpg
-share/marble/data/maps/earth/sentinel2/legend.html
-share/marble/data/maps/earth/sentinel2/sentinel2-preview.png
-share/marble/data/maps/earth/sentinel2/sentinel2.dgml
 share/marble/data/maps/earth/srtm/0/000000/000000_000000.jpg
 share/marble/data/maps/earth/srtm/0/000000/000000_000001.jpg
 share/marble/data/maps/earth/srtm/1/000000/000000_000000.jpg
