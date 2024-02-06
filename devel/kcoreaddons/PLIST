@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/07/29 01:53:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/02/06 10:46:24 markd Exp $
 bin/desktoptojson
 include/KF5/KCoreAddons/KAboutData
 include/KF5/KCoreAddons/KAutoSaveFile
@@ -194,6 +194,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/sr@latin/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/sv/LC_MESSAGES/kcoreaddons5_qt.qm
+share/locale/sw/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/ta/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/te/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/tg/LC_MESSAGES/kcoreaddons5_qt.qm

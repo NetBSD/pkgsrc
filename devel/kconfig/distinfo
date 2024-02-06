@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/07/29 01:52:00 markd Exp $
+$NetBSD: distinfo,v 1.17 2024/02/06 10:46:24 markd Exp $
 
-BLAKE2s (kconfig-5.108.0.tar.xz) = 36fef676e94321d9591661ab686c56b673b8092567042c631cf5b742c7d3a900
-SHA512 (kconfig-5.108.0.tar.xz) = ba05a2ae4811ebcf8ad0178142ffe5b07854209846ee42f05058ecf0a5cd24d51f7ccd312c97bdd9054cfbbea444723719d533f2be031fb49d35eb78a457d853
-Size (kconfig-5.108.0.tar.xz) = 293780 bytes
+BLAKE2s (kconfig-5.114.0.tar.xz) = b8d4f3ba88a0c90a59a5a2d0ab479a318c22dbb4104d63011f43a4fa2b5e9201
+SHA512 (kconfig-5.114.0.tar.xz) = 61b5de98342fb13d0ec22503650631a3f17db4cf93bbdd4a93adf264bdd723ee1491a1e72ae298bdd6887d51c15c92610f34e3d17a252b05a82e3f3141bbda39
+Size (kconfig-5.114.0.tar.xz) = 295680 bytes

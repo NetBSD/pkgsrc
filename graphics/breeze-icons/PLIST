@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/07/29 02:11:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/06 10:46:27 markd Exp $
 lib/cmake/KF5BreezeIcons/KF5BreezeIconsConfig.cmake
 lib/cmake/KF5BreezeIcons/KF5BreezeIconsConfigVersion.cmake
 share/icons/breeze-dark/actions/12/object-fill.svg
@@ -107,6 +107,8 @@ share/icons/breeze-dark/actions/16/bookmark-new-list.svg
 share/icons/breeze-dark/actions/16/bookmark-new.svg
 share/icons/breeze-dark/actions/16/bookmark-remove.svg
 share/icons/breeze-dark/actions/16/bookmark-toolbar.svg
+share/icons/breeze-dark/actions/16/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze-dark/actions/16/bookmarks-bookmarked.svg
 share/icons/breeze-dark/actions/16/bookmarks-organize.svg
 share/icons/breeze-dark/actions/16/bookmarks.svg
 share/icons/breeze-dark/actions/16/borderpainter.svg
@@ -1879,6 +1881,8 @@ share/icons/breeze-dark/actions/22/bookmark-new-list.svg
 share/icons/breeze-dark/actions/22/bookmark-new.svg
 share/icons/breeze-dark/actions/22/bookmark-remove.svg
 share/icons/breeze-dark/actions/22/bookmark-toolbar.svg
+share/icons/breeze-dark/actions/22/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze-dark/actions/22/bookmarks-bookmarked.svg
 share/icons/breeze-dark/actions/22/bookmarks-organize.svg
 share/icons/breeze-dark/actions/22/bookmarks.svg
 share/icons/breeze-dark/actions/22/borderpainter.svg
@@ -5643,6 +5647,8 @@ share/icons/breeze-dark/actions/32/autocorrection.svg
 share/icons/breeze-dark/actions/32/blurimage.svg
 share/icons/breeze-dark/actions/32/bookmark-new.svg
 share/icons/breeze-dark/actions/32/bookmark-remove.svg
+share/icons/breeze-dark/actions/32/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze-dark/actions/32/bookmarks-bookmarked.svg
 share/icons/breeze-dark/actions/32/bookmarks.svg
 share/icons/breeze-dark/actions/32/bordertool.svg
 share/icons/breeze-dark/actions/32/call-start.svg
@@ -11126,6 +11132,8 @@ share/icons/breeze/actions/16/bookmark-new-list.svg
 share/icons/breeze/actions/16/bookmark-new.svg
 share/icons/breeze/actions/16/bookmark-remove.svg
 share/icons/breeze/actions/16/bookmark-toolbar.svg
+share/icons/breeze/actions/16/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze/actions/16/bookmarks-bookmarked.svg
 share/icons/breeze/actions/16/bookmarks-organize.svg
 share/icons/breeze/actions/16/bookmarks.svg
 share/icons/breeze/actions/16/borderpainter.svg
@@ -12891,6 +12899,8 @@ share/icons/breeze/actions/22/bookmark-new-list.svg
 share/icons/breeze/actions/22/bookmark-new.svg
 share/icons/breeze/actions/22/bookmark-remove.svg
 share/icons/breeze/actions/22/bookmark-toolbar.svg
+share/icons/breeze/actions/22/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze/actions/22/bookmarks-bookmarked.svg
 share/icons/breeze/actions/22/bookmarks-organize.svg
 share/icons/breeze/actions/22/bookmarks.svg
 share/icons/breeze/actions/22/borderpainter.svg
@@ -14836,6 +14846,8 @@ share/icons/breeze/actions/24/bookmark-new-list.svg
 share/icons/breeze/actions/24/bookmark-new.svg
 share/icons/breeze/actions/24/bookmark-remove.svg
 share/icons/breeze/actions/24/bookmark-toolbar.svg
+share/icons/breeze/actions/24/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze/actions/24/bookmarks-bookmarked.svg
 share/icons/breeze/actions/24/bookmarks-organize.svg
 share/icons/breeze/actions/24/bookmarks.svg
 share/icons/breeze/actions/24/borderpainter.svg
@@ -16709,6 +16721,8 @@ share/icons/breeze/actions/32/autocorrection.svg
 share/icons/breeze/actions/32/blurimage.svg
 share/icons/breeze/actions/32/bookmark-new.svg
 share/icons/breeze/actions/32/bookmark-remove.svg
+share/icons/breeze/actions/32/bookmarks-bookmarked-symbolic.svg
+share/icons/breeze/actions/32/bookmarks-bookmarked.svg
 share/icons/breeze/actions/32/bookmarks.svg
 share/icons/breeze/actions/32/bordertool.svg
 share/icons/breeze/actions/32/call-start.svg

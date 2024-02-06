@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/07/29 02:19:31 markd Exp $
+$NetBSD: distinfo,v 1.7 2024/02/06 10:46:29 markd Exp $
 
-BLAKE2s (kmediaplayer-5.108.0.tar.xz) = b00cc234caaeeac96abc43c656b0bc6db04f2879ec1c69f6743aea2a0aa5eea7
-SHA512 (kmediaplayer-5.108.0.tar.xz) = f100ea99b902de31f24dff145a3a5d608aec8a30c5fdd3cb1c8929aa5569989ce8509bf5bb1358bd5edde70304ef10a7990260ec5eee774e49374949ad908fea
-Size (kmediaplayer-5.108.0.tar.xz) = 9948 bytes
+BLAKE2s (kmediaplayer-5.114.0.tar.xz) = 1489a7b4aec2ae57c0927b05b7433a1874e0f9e8ec8b19e452bbd18e0c75740b
+SHA512 (kmediaplayer-5.114.0.tar.xz) = 8c17213c6eb5d37a83419fb4218018b3d200b077e4f3681fc3e0be2fdd3904fd0013016a56464ace7b9d2d56fce2e0ddc3ad16ce5cc8dc6edda617425d718013
+Size (kmediaplayer-5.114.0.tar.xz) = 9952 bytes
