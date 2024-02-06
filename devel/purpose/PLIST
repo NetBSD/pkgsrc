@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/29 02:09:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/06 10:46:27 markd Exp $
 include/KF5/purpose/Purpose/AlternativesModel
 include/KF5/purpose/Purpose/Configuration
 include/KF5/purpose/Purpose/Job
@@ -204,6 +204,19 @@ share/locale/en_GB/LC_MESSAGES/purpose_phabricator.mo
 share/locale/en_GB/LC_MESSAGES/purpose_reviewboard.mo
 share/locale/en_GB/LC_MESSAGES/purpose_saveas.mo
 share/locale/en_GB/LC_MESSAGES/purpose_youtube.mo
+share/locale/eo/LC_MESSAGES/libpurpose_quick.mo
+share/locale/eo/LC_MESSAGES/libpurpose_widgets.mo
+share/locale/eo/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/eo/LC_MESSAGES/purpose_barcode.mo
+share/locale/eo/LC_MESSAGES/purpose_bluetooth.mo
+share/locale/eo/LC_MESSAGES/purpose_imgur.mo
+share/locale/eo/LC_MESSAGES/purpose_kdeconnect.mo
+share/locale/eo/LC_MESSAGES/purpose_kdeconnectsms.mo
+share/locale/eo/LC_MESSAGES/purpose_ktp-sendfile.mo
+share/locale/eo/LC_MESSAGES/purpose_nextcloud.mo
+share/locale/eo/LC_MESSAGES/purpose_pastebin.mo
+share/locale/eo/LC_MESSAGES/purpose_saveas.mo
+share/locale/eo/LC_MESSAGES/purpose_youtube.mo
 share/locale/es/LC_MESSAGES/libpurpose_quick.mo
 share/locale/es/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/es/LC_MESSAGES/purpose-fileitemaction.mo
