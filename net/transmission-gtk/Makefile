@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2023/11/14 14:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/02/06 15:53:55 dogcow Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
-PKGREVISION=	5
 COMMENT=	Free, lightweight BitTorrent client (GTK version)
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
@@ -31,6 +30,7 @@ BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.19.7
 .include "../../devel/gettext-lib/buildlink3.mk"
 # XXX: so force new gettext-tools, giving us new gettext-lib
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-.include "../../x11/gtkmm4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtkmm4+= gtkmm4>=4.11.1
+.include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
