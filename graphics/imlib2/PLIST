@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/07/29 05:56:08 rin Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/02/06 14:24:44 tsutsui Exp $
 ${PLIST.x11}bin/imlib2_bumpmap
 ${PLIST.x11}bin/imlib2_colorspace
 bin/imlib2_conv
@@ -25,6 +25,7 @@ lib/imlib2/loaders/png.la
 lib/imlib2/loaders/pnm.la
 lib/imlib2/loaders/tga.la
 lib/imlib2/loaders/tiff.la
+${PLIST.webp}lib/imlib2/loaders/webp.la
 lib/imlib2/loaders/xbm.la
 lib/imlib2/loaders/xpm.la
 lib/imlib2/loaders/zlib.la
