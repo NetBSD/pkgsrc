@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.23 2023/11/15 22:06:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2024/02/06 11:47:53 markd Exp $
 
-PLASMAVER=	5.27.9
 DISTNAME=	libkscreen-${PLASMAVER}
 CATEGORIES=	x11
 
