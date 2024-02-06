@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/01/10 16:50:10 nikita Exp $
+$NetBSD: distinfo,v 1.12 2024/02/06 16:06:35 nikita Exp $
 
-BLAKE2s (gotosocial-0.13.1-source-code.tar.gz) = 41ae352d6712effc315e29cf7451efe0e529d19556accac5e5375b47f128d720
-SHA512 (gotosocial-0.13.1-source-code.tar.gz) = 813eaa1f7cbc7987f081807952226db3a469ae0447dc9f83b628e2008b2a4de18378a0d46997a705ca42a5ed8a8b000509b7c8aca11b0f08ddf7c5866e60b897
-Size (gotosocial-0.13.1-source-code.tar.gz) = 63387633 bytes
+BLAKE2s (gotosocial-0.13.2-source-code.tar.gz) = 80ed3fb9accb5c2af5d075ed2a8e563f7b28dc8cbc2d64881f64963f54fa378b
+SHA512 (gotosocial-0.13.2-source-code.tar.gz) = b49fc06247398d325d4e192a54b9177ddb87cee79fcdac71b3cb5ef5466311ef0ef2295445cdf8014388b1a829684ed10be16af8d7b978969c148c7426627614
+Size (gotosocial-0.13.2-source-code.tar.gz) = 63388184 bytes
