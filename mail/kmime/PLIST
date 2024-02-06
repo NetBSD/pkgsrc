@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:57:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:25 markd Exp $
 include/KPim5/KMime/KMime/Content
 include/KPim5/KMime/KMime/ContentIndex
 include/KPim5/KMime/KMime/DateFormatter
@@ -32,7 +32,7 @@ lib/cmake/KPim5Mime/KPim5MimeTargets-noconfig.cmake
 lib/cmake/KPim5Mime/KPim5MimeTargets.cmake
 lib/libKPim5Mime.so
 lib/libKPim5Mime.so.5
-lib/libKPim5Mime.so.5.23.3
+lib/libKPim5Mime.so.5.24.4
 qt5/mkspecs/modules/qt_KMime.pri
 share/locale/ar/LC_MESSAGES/libkmime5.mo
 share/locale/be/LC_MESSAGES/libkmime5.mo

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2024/01/30 14:21:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2024/02/06 11:05:16 markd Exp $
 
 DISTNAME=	bovo-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/bovo/

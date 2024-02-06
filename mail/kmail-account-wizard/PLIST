@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 06:18:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:05:25 markd Exp $
 bin/accountwizard
 bin/ispdb
 qt5/plugins/accountwizard_plugin.so
@@ -30,6 +30,7 @@ share/locale/el/LC_MESSAGES/accountwizard_tine20.mo
 share/locale/en_GB/LC_MESSAGES/accountwizard.mo
 share/locale/en_GB/LC_MESSAGES/accountwizard_tine20.mo
 share/locale/eo/LC_MESSAGES/accountwizard.mo
+share/locale/eo/LC_MESSAGES/accountwizard_tine20.mo
 share/locale/es/LC_MESSAGES/accountwizard.mo
 share/locale/es/LC_MESSAGES/accountwizard_tine20.mo
 share/locale/et/LC_MESSAGES/accountwizard.mo

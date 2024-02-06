@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 02:52:05 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:17 markd Exp $
 
-BLAKE2s (kapman-23.04.3.tar.xz) = 55534561861f0a9121d5f09a926a71675ccd92bef9b588af10fb73c0c7e82f75
-SHA512 (kapman-23.04.3.tar.xz) = e5ab132904acd28ce586dd0feb786ba94afc8726bcea4575fee83664d9c76db8bcb9708189322aafb5d95c9fd4dbc4e71e83ad459265d593dc1dd8ea3cf27454
-Size (kapman-23.04.3.tar.xz) = 2480836 bytes
+BLAKE2s (kapman-23.08.4.tar.xz) = b1b8fb82425307b174e9c066f2050863bea4f28176f8f71091ddd574716f16ba
+SHA512 (kapman-23.08.4.tar.xz) = 03b47a4b82748f5628977f61a4e8018e9ab1586909449adb8c6a3a821a99510329d4bcd60716dbb8acef803e9baf34eecffc3c6beffa99b5c170048b6c01d28d
+Size (kapman-23.08.4.tar.xz) = 2483464 bytes

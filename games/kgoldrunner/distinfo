@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:01:08 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:18 markd Exp $
 
-BLAKE2s (kgoldrunner-23.04.3.tar.xz) = cea151a19d34c84351ff4ba503d8f6fb04253a73a3b1c00263211d82cf0b27d5
-SHA512 (kgoldrunner-23.04.3.tar.xz) = e881ee3443ffffeafddb2e064944248fd24693801955b987761856256992ee28a926f6a958da1b24bd1523299ebc701f18c82d7b75be82d42f21040f049c5fb3
-Size (kgoldrunner-23.04.3.tar.xz) = 4905020 bytes
+BLAKE2s (kgoldrunner-23.08.4.tar.xz) = 03b09ccb6194b5ee157973bba50f2dac44ded6245f104bb3aa772d305a6b8d29
+SHA512 (kgoldrunner-23.08.4.tar.xz) = 6b03b024c5c01e0d5b2baa11f4ab11b2305c71cbc5deae882c1088156a0032709d1983c6416db2d0f99aa443af1030064dd7281ea73b47c56c5559587b339dbd
+Size (kgoldrunner-23.08.4.tar.xz) = 4968252 bytes

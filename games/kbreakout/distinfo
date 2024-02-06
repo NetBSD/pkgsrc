@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 02:57:34 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:18 markd Exp $
 
-BLAKE2s (kbreakout-23.04.3.tar.xz) = cd97adbf6b4bb45aa93794a28a429c0632e8d7f8916b73400bf56e1eabcce332
-SHA512 (kbreakout-23.04.3.tar.xz) = 86271f7adcb5c0adeaf41f26e414c9ac90e5dd1c8c92c422d678a2ceacddcc73f34e2431e50d2ea2e3ed1afb86462453b8d5e8be9abf62c4542787d0f290dabb
-Size (kbreakout-23.04.3.tar.xz) = 2559632 bytes
+BLAKE2s (kbreakout-23.08.4.tar.xz) = b949d2ee3f26f9dfdc956cbf33843bb2377a2cc70ecf7fb694edc42e01ea8a67
+SHA512 (kbreakout-23.08.4.tar.xz) = dde3816883a17d64a01ab91abf1db1f04d60a87438986dfb7a652cd7267034b1e2dbe943eb4a10342ecb7d2acf36338f11544bbb8e5cd3a659b81770af8bba54
+Size (kbreakout-23.08.4.tar.xz) = 2561932 bytes

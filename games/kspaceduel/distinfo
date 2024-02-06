@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 03:22:46 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:21 markd Exp $
 
-BLAKE2s (kspaceduel-23.04.3.tar.xz) = f1fa991f42517ac2f139ed362930649c51d4ca17a21dc51ecafe5ecd6837b13f
-SHA512 (kspaceduel-23.04.3.tar.xz) = 0ecf29a76c7df44d7535ec9c7616666d3f781f4ead41f28fe8c93b490dfe6a7c37ca9362c2392444838f66b14a9cd4c86d484a25acddaf6c583058d416f81410
-Size (kspaceduel-23.04.3.tar.xz) = 660236 bytes
+BLAKE2s (kspaceduel-23.08.4.tar.xz) = 97b764f02c9f5bda61dbf9e4b399586f1305bad2f98047624cd05631657762a7
+SHA512 (kspaceduel-23.08.4.tar.xz) = 64e6c4aa1dbeba9cbd4fae0a439aeaa7bad800ca24cc4868cc53b5c1a3b4d51a6b18dd43ffd3e4faa2ee3d8e7073c961c9c7ffda0508fe9d8dcd4710f3e534be
+Size (kspaceduel-23.08.4.tar.xz) = 662096 bytes

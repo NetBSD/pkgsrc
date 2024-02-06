@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2023/08/03 02:22:38 markd Exp $
+$NetBSD: distinfo,v 1.10 2024/02/06 11:05:13 markd Exp $
 
-BLAKE2s (kldap-23.04.3.tar.xz) = df6a73e7fb5a87466fc1951dbdfc71219bc36eecaae136fc000e711c469c508e
-SHA512 (kldap-23.04.3.tar.xz) = 89e8c62990e950243f9f5b69f9f49ff34a3b7e2958b675818924181e58a1ec11b10e73fe8d4c92095931981a0062573a5cafd4d65f0d92a8d5cc7f6e408a509f
-Size (kldap-23.04.3.tar.xz) = 182924 bytes
+BLAKE2s (kldap-23.08.4.tar.xz) = ebaed0a9a2564dc9b52a3646a310eb32fef261ccc70788338d35d0d50905e7fb
+SHA512 (kldap-23.08.4.tar.xz) = 340ba36cb36aa7081746cfc6d54c85c70bf9df8859c9cb7ecf30d2a059f6c6b2072d87fc49afa7e937e399d480decba795ffe9a0df38c40c5dd665ca436119d0
+Size (kldap-23.08.4.tar.xz) = 183416 bytes
 SHA1 (patch-autotests_testkldap.cpp) = 47d427e93c6606a8eaa294a31bb8b6024878ac56
 SHA1 (patch-src_ber.cpp) = 19a9bb9f037c89692f1bf0d5aef653f7ec67437b
 SHA1 (patch-src_ber.h) = 022a1c3ca4f77c4cc2ecfcc09d6153179a0d7977

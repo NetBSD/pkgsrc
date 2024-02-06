@@ -1,21 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/06 11:05:25 markd Exp $
 include/KPim5/KMbox/KMbox/MBox
 include/KPim5/KMbox/KMbox/MBoxEntry
 include/KPim5/KMbox/kmbox/kmbox_export.h
 include/KPim5/KMbox/kmbox/mbox.h
 include/KPim5/KMbox/kmbox/mboxentry.h
 include/KPim5/KMbox/kmbox_version.h
-lib/cmake/KF5Mbox/KF5MboxConfig.cmake
-lib/cmake/KF5Mbox/KF5MboxConfigVersion.cmake
-lib/cmake/KF5Mbox/KPim5MboxTargets-noconfig.cmake
-lib/cmake/KF5Mbox/KPim5MboxTargets.cmake
 lib/cmake/KPim5Mbox/KPim5MboxConfig.cmake
 lib/cmake/KPim5Mbox/KPim5MboxConfigVersion.cmake
 lib/cmake/KPim5Mbox/KPim5MboxTargets-noconfig.cmake
 lib/cmake/KPim5Mbox/KPim5MboxTargets.cmake
 lib/libKPim5Mbox.so
 lib/libKPim5Mbox.so.5
-lib/libKPim5Mbox.so.5.23.3
+lib/libKPim5Mbox.so.5.24.4
 qt5/mkspecs/modules/qt_KMbox.pri
 share/qlogging-categories5/kmbox.categories
 share/qlogging-categories5/kmbox.renamecategories

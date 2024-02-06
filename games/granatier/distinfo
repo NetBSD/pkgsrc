@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 02:48:22 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:17 markd Exp $
 
-BLAKE2s (granatier-23.04.3.tar.xz) = 318909e0f3e9086c1c1f2d2fa5fdbf10fa642821f72cb4ea9c328a3ac6c2784b
-SHA512 (granatier-23.04.3.tar.xz) = 664a668426f5e248fe4b3c82459ced58882ba25e453f1c3d27999170de8b317b48987ec387135a782380a4b05defa47156da91f9a610f6218c94be154d1fe591
-Size (granatier-23.04.3.tar.xz) = 2112412 bytes
+BLAKE2s (granatier-23.08.4.tar.xz) = d07d410677f5954970fe3817a8353220a728bba1dc632651be93c35acabac8c8
+SHA512 (granatier-23.08.4.tar.xz) = c8a281a5cde0238105f1a770284d1502e051f65469bc63562acef7eefbdec9302e34b378da97f31ce4f618688d6e12bbaf06b0ccadc33945164c01b23e6b0dd8
+Size (granatier-23.08.4.tar.xz) = 2114916 bytes

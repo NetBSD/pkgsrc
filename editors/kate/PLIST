@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/08/03 02:43:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/02/06 11:05:16 markd Exp $
 bin/kate
 bin/kwrite
 lib/libkateprivate.so.${PKGVERSION}
@@ -12,6 +12,7 @@ man/pt/man1/kate.1
 man/pt_BR/man1/kate.1
 man/ru/man1/kate.1
 man/sv/man1/kate.1
+man/tr/man1/kate.1
 man/uk/man1/kate.1
 qt5/plugins/ktexteditor/cmaketoolsplugin.so
 qt5/plugins/ktexteditor/compilerexplorer.so
@@ -40,6 +41,7 @@ qt5/plugins/ktexteditor/keyboardmacrosplugin.so
 qt5/plugins/ktexteditor/ktexteditorpreviewplugin.so
 qt5/plugins/ktexteditor/latexcompletionplugin.so
 qt5/plugins/ktexteditor/lspclientplugin.so
+qt5/plugins/ktexteditor/openlinkplugin.so
 qt5/plugins/ktexteditor/rainbowparens.so
 qt5/plugins/ktexteditor/tabswitcherplugin.so
 qt5/plugins/ktexteditor/textfilterplugin.so
@@ -440,6 +442,7 @@ share/locale/az/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/az/LC_MESSAGES/katefiletree.mo
 share/locale/az/LC_MESSAGES/kategdbplugin.mo
 share/locale/az/LC_MESSAGES/kategitblameplugin.mo
+share/locale/az/LC_MESSAGES/katekeyboardmacros.mo
 share/locale/az/LC_MESSAGES/katekonsoleplugin.mo
 share/locale/az/LC_MESSAGES/kateproject.mo
 share/locale/az/LC_MESSAGES/katesearch.mo
@@ -1112,6 +1115,7 @@ share/locale/ko/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/ko/LC_MESSAGES/katefiletree.mo
 share/locale/ko/LC_MESSAGES/kategdbplugin.mo
 share/locale/ko/LC_MESSAGES/kategitblameplugin.mo
+share/locale/ko/LC_MESSAGES/katekeyboardmacros.mo
 share/locale/ko/LC_MESSAGES/katekonsoleplugin.mo
 share/locale/ko/LC_MESSAGES/kateproject.mo
 share/locale/ko/LC_MESSAGES/katesearch.mo

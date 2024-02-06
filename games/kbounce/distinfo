@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/03 02:56:27 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/06 11:05:18 markd Exp $
 
-BLAKE2s (kbounce-23.04.3.tar.xz) = 1d6f693dfccabc53568b4d497ea1151b12b119eaf90fafc6bbf06ca4bcab2e7f
-SHA512 (kbounce-23.04.3.tar.xz) = b908bd84b030380ac1a259054c652cba5fd9c2c2ba2e06702ea1d3e8e6789ccd0c19ae04bfae5b160133991c6eaca01971284255d00fbb49ff477ce2ad0c1e8e
-Size (kbounce-23.04.3.tar.xz) = 3544124 bytes
+BLAKE2s (kbounce-23.08.4.tar.xz) = f5f7936291bd61944f39babac3b0d7f0ce3c17f4f6be70253d3dfeb53bb5dbac
+SHA512 (kbounce-23.08.4.tar.xz) = 478dfa367910e9ad9e84fa061959a993d07d9791afe597780555b8a3b3e31456e567b0a9084d055c597c612567b2883c4444c522048a67963b5a32377c1bafb0
+Size (kbounce-23.08.4.tar.xz) = 3546804 bytes

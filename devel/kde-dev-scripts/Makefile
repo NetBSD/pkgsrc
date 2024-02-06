@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2023/11/12 13:21:00 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/02/06 11:05:14 markd Exp $
 
 DISTNAME=	kde-dev-scripts-${KAPPSVER}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/
