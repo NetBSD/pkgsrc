@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/06 12:24:08 mef Exp $
+
+BLAKE2s (R/writexl_1.4.2.tar.gz) = fa9fade030aff5b12171570adfb9a7050c92324e22308602a04a2c3c5757a68d
+SHA512 (R/writexl_1.4.2.tar.gz) = 36f2fca87f27e5e965b7458e0caebdd7bacf32b56c0a48f957fe479fcb68dc51702d184ef8229c24168c747bc8418aa2757633be80779f024d9bb3c7f1911b2a
+Size (R/writexl_1.4.2.tar.gz) = 258454 bytes
+SHA1 (patch-src_minizip_ioapi.h) = 5ceed88a90ddb4d1fb0bf5c6b424ed31a050d74a
