@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2024/01/10 10:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.636 2024/02/06 02:58:48 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -176,6 +176,7 @@ SUBDIR+=	ktouch
 SUBDIR+=	kturtle
 SUBDIR+=	ktux
 SUBDIR+=	kunitconversion
+SUBDIR+=	kuserfeedback
 SUBDIR+=	kwordquiz
 SUBDIR+=	kz_h8write
 SUBDIR+=	labelnation
