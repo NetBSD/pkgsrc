@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/03 04:01:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/06 11:17:32 markd Exp $
 bin/calgebra
 bin/kalgebramobile
 share/applications/org.kde.kalgebramobile.desktop
@@ -97,6 +97,8 @@ share/locale/hi/LC_MESSAGES/kalgebra.mo
 share/locale/hne/LC_MESSAGES/kalgebra.mo
 share/locale/hr/LC_MESSAGES/kalgebra.mo
 share/locale/hu/LC_MESSAGES/kalgebra.mo
+share/locale/ia/LC_MESSAGES/kalgebra.mo
+share/locale/ia/LC_MESSAGES/kalgebramobile.mo
 share/locale/it/LC_MESSAGES/kalgebra.mo
 share/locale/it/LC_MESSAGES/kalgebramobile.mo
 share/locale/ja/LC_MESSAGES/kalgebra.mo

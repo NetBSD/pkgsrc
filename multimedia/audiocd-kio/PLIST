@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/03 04:33:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/06 11:17:39 markd Exp $
 include/audiocdplugins/audiocdencoder.h
 include/audiocdplugins/audiocdplugins_export.h
 include/audiocdplugins/audiocdplugins_version.h
@@ -160,6 +160,7 @@ share/locale/en_GB/LC_MESSAGES/audiocd_encoder_opus.mo
 share/locale/en_GB/LC_MESSAGES/audiocd_encoder_vorbis.mo
 share/locale/en_GB/LC_MESSAGES/kcmaudiocd.mo
 share/locale/en_GB/LC_MESSAGES/kio_audiocd.mo
+share/locale/eo/LC_MESSAGES/audiocd_encoder_flac.mo
 share/locale/eo/LC_MESSAGES/audiocd_encoder_lame.mo
 share/locale/eo/LC_MESSAGES/audiocd_encoder_vorbis.mo
 share/locale/eo/LC_MESSAGES/kcmaudiocd.mo

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/16 04:31:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/06 11:17:33 markd Exp $
+bin/akonadi_html_to_text
 bin/akonadi_indexing_agent
 include/KPim5/AkonadiSearch/Core/Query
 include/KPim5/AkonadiSearch/Core/ResultIterator
@@ -28,26 +29,22 @@ include/KPim5/AkonadiSearch/core/resultiterator.h
 include/KPim5/AkonadiSearch/core/searchstore.h
 include/KPim5/AkonadiSearch/core/term.h
 include/KPim5/AkonadiSearch/search_core_export.h
-lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfig.cmake
-lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfigVersion.cmake
-lib/cmake/KF5AkonadiSearch/KPim5AkonadiSearchTargets-noconfig.cmake
-lib/cmake/KF5AkonadiSearch/KPim5AkonadiSearchTargets.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchConfig.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchConfigVersion.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchTargets-noconfig.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchTargets.cmake
 lib/libKPim5AkonadiSearchCore.so
 lib/libKPim5AkonadiSearchCore.so.5
-lib/libKPim5AkonadiSearchCore.so.5.23.3
+lib/libKPim5AkonadiSearchCore.so.5.24.4
 lib/libKPim5AkonadiSearchDebug.so
 lib/libKPim5AkonadiSearchDebug.so.5
-lib/libKPim5AkonadiSearchDebug.so.5.23.3
+lib/libKPim5AkonadiSearchDebug.so.5.24.4
 lib/libKPim5AkonadiSearchPIM.so
 lib/libKPim5AkonadiSearchPIM.so.5
-lib/libKPim5AkonadiSearchPIM.so.5.23.3
+lib/libKPim5AkonadiSearchPIM.so.5.24.4
 lib/libKPim5AkonadiSearchXapian.so
 lib/libKPim5AkonadiSearchXapian.so.5
-lib/libKPim5AkonadiSearchXapian.so.5.23.3
+lib/libKPim5AkonadiSearchXapian.so.5.24.4
 qt5/plugins/kf5/krunner/kcms/kcm_krunner_pimcontacts.so
 qt5/plugins/kf5/krunner/krunner_pimcontacts.so
 qt5/plugins/pim5/akonadi/akonadi_search_plugin.so

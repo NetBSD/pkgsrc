@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/08/03 04:41:13 markd Exp $
+$NetBSD: distinfo,v 1.17 2024/02/06 11:17:39 markd Exp $
 
-BLAKE2s (libkcddb-23.04.3.tar.xz) = 0d65f2fe4989462858d863bac8c9b6f107fb27c6322b23cd225523f1f3c8a6b8
-SHA512 (libkcddb-23.04.3.tar.xz) = a3537448286e313f2a0be3be50c28a0789117496c1bbb60a0ab2db81a5886d4097fb48c121755e38c36b0c337cc01aebe90ff413c31ae1fc353f93264ae3f6f8
-Size (libkcddb-23.04.3.tar.xz) = 458584 bytes
+BLAKE2s (libkcddb-23.08.4.tar.xz) = 977e0cbd982cbaeea480be12e77eb191afc8727375f3c0614aaf477ce3a9cea4
+SHA512 (libkcddb-23.08.4.tar.xz) = 934e1b1ea1ff709cfd088f07a7f443fd33126d382c38aaeed4a37c0f339aceb9fa3b2585e00f3dd96ab731a3e2f43cec8b657605c383daec7cb0a54d86e7d021
+Size (libkcddb-23.08.4.tar.xz) = 451368 bytes

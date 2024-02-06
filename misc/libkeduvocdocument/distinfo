@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/03 04:28:57 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/06 11:17:37 markd Exp $
 
-BLAKE2s (libkeduvocdocument-23.04.3.tar.xz) = aba483853b2e531ed3da38381f2cdc7f1d55969dbe7a691717f16f52c52a22e4
-SHA512 (libkeduvocdocument-23.04.3.tar.xz) = 196de4e8fd10da0d974d71e9ef8775e3658d034d933a0fec2f2efdee4a29c1e4f5bc622e0626afd58c2b9f0215d120372aa657d66fc5224123a3424a6ac8abfc
-Size (libkeduvocdocument-23.04.3.tar.xz) = 230376 bytes
+BLAKE2s (libkeduvocdocument-23.08.4.tar.xz) = ad064d81f3f103a4c8a9f9846ab0a71f86e10113269174701196671cfcfc7c3d
+SHA512 (libkeduvocdocument-23.08.4.tar.xz) = e156496384514267e0ef153bdae672ae63e04a4a03941ebf57fea77528d880a69d622cd86e0d0fea601a67757bf52320f1e9b610bb96a5457957e57eb9ed3e81
+Size (libkeduvocdocument-23.08.4.tar.xz) = 229624 bytes
