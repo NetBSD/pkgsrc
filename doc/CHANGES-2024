@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.979 2024/02/06 12:47:16 mef Exp $
+$NetBSD: CHANGES-2024,v 1.980 2024/02/06 13:05:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-R.oo to 1.26.0 [mef 2024-02-06]
 	Added textproc/R-writexl version 1.4.2 [mef 2024-02-06]
 	Updated devel/R-rio to 1.0.1 [mef 2024-02-06]
+	Updated devel/R-roxygen2 to 7.3.1 [mef 2024-02-06]
