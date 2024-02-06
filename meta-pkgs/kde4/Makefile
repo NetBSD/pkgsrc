@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/12/29 18:24:52 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/02/06 17:28:00 jperkin Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	35
@@ -140,7 +140,6 @@ DEPENDS+=	filelight>=4.14.3:../../sysutils/filelight
 DEPENDS+=	kcalc>=4.14.3:../../math/kcalc
 DEPENDS+=	kcharselect>=4.14.3:../../misc/kcharselect
 DEPENDS+=	kdf>=16.04.0:../../sysutils/kdf
-DEPENDS+=	kfloppy>=4.14.3:../../sysutils/kfloppy
 #DEPENDS+=	kremotecontrol-16.12.0{,nb[0-9]*}:../../misc/kremotecontrol
 DEPENDS+=	ktimer>=4.14.3:../../time/ktimer
 DEPENDS+=	kwalletmanager>=4.14.3:../../security/kwalletmanager
