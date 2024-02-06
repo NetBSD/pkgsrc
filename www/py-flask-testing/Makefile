@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/04/29 11:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/02/06 16:58:59 adam Exp $
 
-DISTNAME=	Flask-Testing-0.7.1
+DISTNAME=	Flask-Testing-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Testing/}
 
@@ -11,6 +10,8 @@ HOMEPAGE=	https://github.com/jarus/flask-testing
 COMMENT=	Unit testing for Flask
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 
@@ -18,5 +19,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
