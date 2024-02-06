@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/22 23:16:31 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/02/06 13:05:35 mef Exp $
 
-BLAKE2s (R/roxygen2_7.3.0.tar.gz) = c5048a5c4fe5f39b0cf90a181ef431b39d1a132a2ac0702c6c8c493893145875
-SHA512 (R/roxygen2_7.3.0.tar.gz) = 82b55df02c7f23fd8405b88e40d2fa58d31f7387e2608fac19b0c216906fcec09984c1c66470dd8098f9efcf7c5f57e5b346e56530c1fb58729c28f378d05753
-Size (R/roxygen2_7.3.0.tar.gz) = 293925 bytes
+BLAKE2s (R/roxygen2_7.3.1.tar.gz) = 8fb0cee8cbe7f6c57a3be5a3c3439321790026ae1667f18c0d1d58506e2fa26a
+SHA512 (R/roxygen2_7.3.1.tar.gz) = abd22b3bfd838f65137e458e54cca9d1dc756986aa615e10082e1ecbe250ff63feff17bba2d49f964bf9239452c80fc8a7472fcd9883384d25aef3c4e91c7e63
+Size (R/roxygen2_7.3.1.tar.gz) = 295558 bytes
