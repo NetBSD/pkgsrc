@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1009 2024/02/07 18:42:53 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1010 2024/02/07 20:12:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1696,3 +1696,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/transmission-gtk to 4.0.5nb1 [wiz 2024-02-07]
 	Updated devel/glibmm2.68 to 2.78.1 [wiz 2024-02-07]
 	Updated devel/atkmm2.36 to 2.36.3 [wiz 2024-02-07]
+	Updated www/py-jwcrypto to 1.5.2 [adam 2024-02-07]
+	Updated textproc/py-html-sanitizer to 2.3.0 [adam 2024-02-07]
