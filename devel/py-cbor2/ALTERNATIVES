@@ -1,0 +1,1 @@
+bin/cbor2 @PREFIX@/bin/cbor2-@PYVERSSUFFIX@
