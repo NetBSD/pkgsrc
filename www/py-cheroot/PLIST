@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2022/11/06 18:21:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/02/07 06:25:43 adam Exp $
 bin/cheroot-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cheroot/__init__.py
 ${PYSITELIB}/cheroot/__init__.pyc
 ${PYSITELIB}/cheroot/__init__.pyi
@@ -15,6 +15,7 @@ ${PYSITELIB}/cheroot/__main__.pyc
 ${PYSITELIB}/cheroot/__main__.pyo
 ${PYSITELIB}/cheroot/_compat.py
 ${PYSITELIB}/cheroot/_compat.pyc
+${PYSITELIB}/cheroot/_compat.pyi
 ${PYSITELIB}/cheroot/_compat.pyo
 ${PYSITELIB}/cheroot/cli.py
 ${PYSITELIB}/cheroot/cli.pyc
