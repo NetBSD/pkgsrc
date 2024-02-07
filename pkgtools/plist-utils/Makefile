@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/02/23 06:31:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/07 17:05:24 wiz Exp $
 
-PKGNAME=	plist-utils-20180222
+PKGNAME=	plist-utils-20240207
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
