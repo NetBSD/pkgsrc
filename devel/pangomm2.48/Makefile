@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/14 14:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/07 18:19:37 wiz Exp $
 
-DISTNAME=	pangomm-2.48.2
+DISTNAME=	pangomm-2.50.2
 PKGNAME=	${DISTNAME:S/pangomm/pangomm2.48/}
-PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +23,7 @@ USE_CXX_FEATURES+=	c++11
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=      mm-common>=0.9.10
 .include "../../devel/mm-common/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.48.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.49.4
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairomm1.16/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
