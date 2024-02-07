@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.22 2024/01/13 20:07:34 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.23 2024/02/07 13:19:26 adam Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -25,7 +25,7 @@ MAKEVARS+=		IS_BUILTIN.expat
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.expat) && \
-    ${IS_BUILTIN.expat:M[yY][eE][sS]} && \
+    ${IS_BUILTIN.expat:tl} == yes && \
     empty(H_EXPAT:M__nonexistent__)
 BUILTIN_VERSION.expat!=							\
 	${AWK} '/\#define[ 	]*XML_MAJOR_VERSION/ { M = $$3 }	\
@@ -47,12 +47,12 @@ USE_BUILTIN.expat=	no
 .  else
 USE_BUILTIN.expat=	${IS_BUILTIN.expat}
 .    if defined(BUILTIN_PKG.expat) && \
-        ${IS_BUILTIN.expat:M[yY][eE][sS]}
+        ${IS_BUILTIN.expat:tl} == yes
 USE_BUILTIN.expat=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.expat}
-.        if ${USE_BUILTIN.expat:M[yY][eE][sS]}
+.        if ${USE_BUILTIN.expat:tl} == yes
 USE_BUILTIN.expat!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.expat:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.expat}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -69,9 +69,9 @@ MAKEVARS+=		USE_BUILTIN.expat
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.expat?=	no
-.if ${CHECK_BUILTIN.expat:M[nN][oO]}
+.if ${CHECK_BUILTIN.expat:tl} == no
 
-.  if ${USE_BUILTIN.expat:M[nN][oO]}
+.  if ${USE_BUILTIN.expat:tl} == no
 BUILDLINK_API_DEPENDS.expat+=	expat>=1.95.4
 .  else
 .    if !empty(H_EXPAT:M${X11BASE}/*)
@@ -87,7 +87,7 @@ BUILDLINK_PREFIX.expat=	/boot/common
 
 # Fake pkg-config for builtin expat on NetBSD
 
-.if ${USE_BUILTIN.expat:M[yY][eE][sS]}
+.if ${USE_BUILTIN.expat:tl} == yes
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: override-expat-pkgconfig
 
