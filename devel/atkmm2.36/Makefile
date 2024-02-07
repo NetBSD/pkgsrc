@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/02/07 18:42:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/07 18:45:18 wiz Exp $
 
 DISTNAME=	atkmm-2.36.3
 PKGNAME=	${DISTNAME:S/atkmm/atkmm2.36/}
@@ -13,10 +13,10 @@ COMMENT=	C++ bindings for atk (2.36 API)
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=		c c++17
-USE_TOOLS+=		perl pkg-config
+USE_TOOLS+=		pkg-config
 
-PKGCONFIG_OVERRIDE+=    	output/atk/atkmm-2.36.pc
-PKGCONFIG_OVERRIDE_STAGE=       post-configure
+PKGCONFIG_OVERRIDE+=		output/atk/atkmm-2.36.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.33.3
 .include "../../devel/atk/buildlink3.mk"
