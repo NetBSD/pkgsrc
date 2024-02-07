@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/10 16:49:30 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/07 14:44:16 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -2149,6 +2149,7 @@ go121/src/cmd/go/testdata/script/generate_bad_imports.txt
 go121/src/cmd/go/testdata/script/generate_env.txt
 go121/src/cmd/go/testdata/script/generate_goroot_PATH.txt
 go121/src/cmd/go/testdata/script/generate_invalid.txt
+go121/src/cmd/go/testdata/script/generate_workspace.txt
 go121/src/cmd/go/testdata/script/get_404_meta.txt
 go121/src/cmd/go/testdata/script/get_brace.txt
 go121/src/cmd/go/testdata/script/get_custom_domain_wildcard.txt
@@ -2213,6 +2214,7 @@ go121/src/cmd/go/testdata/script/install_cmd_gobin.txt
 go121/src/cmd/go/testdata/script/install_cross_gobin.txt
 go121/src/cmd/go/testdata/script/install_dep_version.txt
 go121/src/cmd/go/testdata/script/install_goroot_targets.txt
+go121/src/cmd/go/testdata/script/install_modcacherw_issue64282.txt
 go121/src/cmd/go/testdata/script/install_move_not_stale.txt
 go121/src/cmd/go/testdata/script/install_msan_and_race_and_asan_require_cgo.txt
 go121/src/cmd/go/testdata/script/install_rebuild_removed.txt
@@ -8468,6 +8470,8 @@ go121/src/runtime/testdata/testprogcgo/sigpanic.go
 go121/src/runtime/testdata/testprogcgo/sigstack.go
 go121/src/runtime/testdata/testprogcgo/sigthrow.go
 go121/src/runtime/testdata/testprogcgo/stack_windows.go
+go121/src/runtime/testdata/testprogcgo/stackswitch.c
+go121/src/runtime/testdata/testprogcgo/stackswitch.go
 go121/src/runtime/testdata/testprogcgo/threadpanic.go
 go121/src/runtime/testdata/testprogcgo/threadpanic_unix.c
 go121/src/runtime/testdata/testprogcgo/threadpanic_windows.c
