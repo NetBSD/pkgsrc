@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2022/10/26 10:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/02/07 13:19:26 adam Exp $
 
-DISTNAME=	expat-2.5.0
+DISTNAME=	expat-2.6.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexpat/}
 GITHUB_PROJECT=	libexpat
@@ -11,18 +11,17 @@ HOMEPAGE=	https://libexpat.github.io/
 COMMENT=	XML parser library written in C
 LICENSE=	mit
 
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-
+USE_TOOLS+=		bash:test
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-examples
 CONFIGURE_ARGS+=	--without-tests
 # workaround suggested by upstream; xmlwf.1 is in tarball, so docbook not needed
 CONFIGURE_ENV+=		DOCBOOK_TO_MAN=false
 CONFIGURE_ARGS+=	--without-docbook
 
-USE_LANGUAGES=	c c++
-TEST_TARGET=	test
-USE_TOOLS+=	bash:test
+TEST_TARGET=	check
 REPLACE_BASH=	test-driver-wrapper.sh
 # we can't use cmake due to a cyclic dependency
 #USE_CMAKE=	yes
