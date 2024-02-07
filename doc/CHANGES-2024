@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.995 2024/02/07 09:00:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.996 2024/02/07 09:47:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1674,3 +1674,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/py312-html-docs to 3.12.2 [adam 2024-02-07]
 	Added lang/py-pyformlang version 1.0.6 [adam 2024-02-07]
 	Updated devel/py-ruamel-yaml to 0.18.6 [adam 2024-02-07]
+	Updated devel/capstone to 5.0.1 [adam 2024-02-07]
+	Updated devel/py-capstone to 5.0.1 [adam 2024-02-07]
