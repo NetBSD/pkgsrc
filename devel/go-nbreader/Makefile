@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2024/01/10 19:14:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.68 2024/02/07 14:50:47 bsiegert Exp $
 
 DISTNAME=	go-nbreader-0.0.20150201
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=svent/}
 GITHUB_PROJECT=	go-nbreader
