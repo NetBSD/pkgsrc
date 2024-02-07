@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2023/11/07 22:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/02/07 06:25:43 adam Exp $
 
-DISTNAME=	cheroot-8.6.0
+DISTNAME=	cheroot-10.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheroot/}
@@ -10,27 +10,27 @@ HOMEPAGE=	https://cherrypy.dev/
 COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=34.4:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.6:../../devel/py-more-itertools
-DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5.3:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.context-[0-9]*:../../devel/py-jaraco.context
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.text>=3.1:../../textproc/py-jaraco.text
 TEST_DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-unixsocket-[0-9]*:../../devel/py-requests-unixsocket
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt-[0-9]*:../../devel/py-requests-toolbelt
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.12.0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.4:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-forked>=1.2.0:../../devel/py-test-forked
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.11.0:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.3:../../devel/py-test-sugar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-watch>=4.2.0:../../devel/py-test-watch
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.28.0:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.4.0:../../security/py-trustme
-TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.4.0:../../security/py-trustme
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
@@ -39,9 +39,9 @@ post-install:
 	${MV} cheroot cheroot-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC}/cheroot && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL:test
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
