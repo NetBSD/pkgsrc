@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:33:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/07 18:23:52 wiz Exp $
 
-BLAKE2s (gtkmm-4.2.0.tar.xz) = 3edbe22630c92ff9757a7e78844727df5de14fb8caaec20f0f9b48cadf9525e4
-SHA512 (gtkmm-4.2.0.tar.xz) = c4532c427da0a37e4f8ba6f0e6d3975c3f84db461bc08263a4a81e6ee9e750112a2b4b0c5000ba22f8fd4fc5f833ef320f2c1f56580157f7ae41667ff15ccc72
-Size (gtkmm-4.2.0.tar.xz) = 13850496 bytes
-SHA1 (patch-meson.build) = 3705d3848e3adcbac7567719679627a129a88e28
+BLAKE2s (gtkmm-4.12.0.tar.xz) = 2575db91fcfb1febf3396968eba8617cbf8608f3ace396be297b32508801fcb6
+SHA512 (gtkmm-4.12.0.tar.xz) = 0bde82ac1331c86810bb513362c81a30b0abaf906af4cf4b0607b85362125d8a15307fb5c51c6497fa9292acce437af027c4e336231dd18d72251f43e3d23688
+Size (gtkmm-4.12.0.tar.xz) = 16359928 bytes
