@@ -11,15 +11,15 @@ Local and outbound delivery:
 - Run "@RCD_SCRIPTS_DIR@/qmail start".
 
 Incoming SMTP on port 25:
-- Set qmailsmtpd=YES in /etc/rc.conf.
 - Add any qmail-rcptcheck programs to control/rcptchecks.
 - Add any qmail-qfilter programs to control/smtpfilters.
 - Add any qmail-spp programs (such as greylisting) to control/smtpplugins.
+- Set qmailsmtpd=YES in /etc/rc.conf.
 - Run "@RCD_SCRIPTS_DIR@/qmailsmtpd start".
 
 Authenticated message submission on port 587:
-- Set qmailofmipd=YES in /etc/rc.conf.
 - Add any qmail-qfilter programs to control/ofmipfilters.
+- Set qmailofmipd=YES in /etc/rc.conf.
 - Run "@RCD_SCRIPTS_DIR@/qmailofmipd start".
 
 POP3 (for Maildirs only) on port 110:
@@ -44,39 +44,40 @@ SPF (Sender Policy Framework) outbound:
   @PREFIX@/share/doc/qmail/README.srs)
   so that servers which enforce the forwarded domains' SPF policies will
   accept these messages from you.
-- Publish a DNS TXT record with your domain's SPF policy.
+- Publish your domain's SPF policy as a DNS TXT record.
 
 SPF incoming:
 - To greylist SPF-passing incoming messages (assuming greylisting is
   enabled), remove SPP_SPF_RESULT_PASS="SGL_WHITELISTED=1" from
   control/tcprules/smtp, then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
-  By default, such messages are accepted.
-- To reject SPF-failing incoming messages (including auto-forwards from
-  servers that forgot to configure SRS) when the domain's policy is
+  (By default, such messages are accepted.)
+- To reject SPF-failing incoming messages -- including auto-forwards from
+  servers that forgot to configure SRS -- when the domain's policy is
   explicit-fail, add SPP_SPF_RESULT_FAIL="E550 spf_smtp_msg" to
   control/tcprules/smtp, then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
-  By default, such messages are accepted.
+  (By default, such messages are accepted.)
 
 DKIM (DomainKeys Identified Mail) outbound:
-- Run "mkdir control/domainkeys && chown qmailr control/domainkeys".
-- Run "cd control/domainkeys && mkdir yourdomain.com && cd yourdomain.com"
-- Generate a DKIM keypair for yourdomain.com:
+- Generate a DKIM keypair for yourdom.ain:
+    mkdir control/domainkeys && chown @QMAIL_REMOTE_USER@ control/domainkeys
+    cd control/domainkeys && mkdir yourdom.ain && cd yourdom.ain
     openssl genrsa -out default 1024 && chmod 640 default
     openssl rsa -in default -pubout -out default.pub
-- Publish a DNS TXT record for the "default" selector containing your
-  domain's DKIM policy and public key.
-- To turn off signing entirely, set
-  qmailsend_postenv="QMAILREMOTE=@PREFIX@/bin/qmail-remote"
-  in /etc/rc.conf.
-  By default, messages from domains that have DKIM keys will be signed.
+- Publish your domain's "default" DKIM policy and public key as a DNS
+  TXT record.
+- To stop signing outbound messages from domains with DKIM keys present,
+  set qmailsend_postenv="QMAILREMOTE=@PREFIX@/bin/qmail-remote"
+  in /etc/rc.conf, then run "@RCD_SCRIPTS_DIR@/qmailsend restart".
+  (By default, such messages are signed.)
 
 DKIM incoming:
-- To verify DKIM signatures on incoming messages, read through
-  @PREFIX@/bin/qmail-dkimverify-queue, set QMAILQUEUE to invoke it, set
-  DKVERIFY in the environment to enable verification, be prepared to
-  figure out what's not working, and report your findings to this
-  package's maintainer. (It might just work; I haven't tried it yet.)
-  By default, messages are accepted without verifying.
+- The package maintainer has not tested this yet. Be prepared to figure
+  out what's not working, and please report your findings.
+- To verify DKIM signatures on incoming messages, add
+  QMAILQUEUE="@PREFIX@/bin/qmail-dkimverify-queue" to control/tcprules/smtp.
+  Set DKVERIFY in that script's environment, perhaps in the same tcprules.
+  Then run "@RCD_SCRIPTS_DIR@/qmailsmtpd cdb".
+  (By default, no verification is performed.)
 - To get useful headers prepended, it's likely you'll need this custom
   dkimverify.pl: <URL:https://www.memoryhole.net/qmail/dkimverify.pl>
 
