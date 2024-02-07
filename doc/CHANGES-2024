@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.990 2024/02/06 22:48:12 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.991 2024/02/07 03:55:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1664,3 +1664,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-markupsafe to 2.1.5 [adam 2024-02-06]
 	Updated devel/py-astroid to 3.0.3 [adam 2024-02-06]
 	Updated textproc/jose to 12 [nikita 2024-02-06]
+	Updated converters/dos2unix to 7.5.2 [ryoon 2024-02-07]
