@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/01/30 19:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/07 09:56:52 adam Exp $
 
 .include "version.mk"
 
@@ -35,7 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-CppHeaderParser-[0-9]*:../../devel/py-CppHeaderParser
 DEPENDS+=	${PYPKGPREFIX}-ailment>=${ANGR_VERSION}:../../devel/py-ailment
 DEPENDS+=	${PYPKGPREFIX}-archinfo>=${ANGR_VERSION}:../../devel/py-archinfo
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
-DEPENDS+=	${PYPKGPREFIX}-capstone>=4.0.2:../../devel/py-capstone
+DEPENDS+=	${PYPKGPREFIX}-capstone>=5.0.0:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.14.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-claripy>=${ANGR_VERSION}:../../math/py-claripy
 DEPENDS+=	${PYPKGPREFIX}-cle>=${ANGR_VERSION}:../../devel/py-cle
@@ -48,6 +48,7 @@ DEPENDS+=	${PYPKGPREFIX}-nampa-[0-9]*:../../devel/py-nampa
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.8.2:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.19.0:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-pyformlang-[0-9]*:../../lang/py-pyformlang
 DEPENDS+=	${PYPKGPREFIX}-pyvex>=${ANGR_VERSION}:../../devel/py-pyvex
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.1.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-rpyc-[0-9]*:../../net/py-rpyc
@@ -56,7 +57,7 @@ DEPENDS+=	${PYPKGPREFIX}-sympy-[0-9]*:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-unicorn>=2.0.1:../../emulators/py-unicorn
 DEPENDS+=	${PYPKGPREFIX}-unique-log-filter-[0-9]*:../../textproc/py-unique-log-filter
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

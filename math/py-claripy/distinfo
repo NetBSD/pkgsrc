@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2024/01/30 19:24:35 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/02/07 09:56:52 adam Exp $
 
-BLAKE2s (claripy-9.2.87.tar.gz) = d2b762cfa5c88b68c883cfbc759439bdca332c2785202e69938515a718cde6f4
-SHA512 (claripy-9.2.87.tar.gz) = 6f7649738ec8ebf5983cd8444f499fefcd144f5c0d6b6bcaab3fef0cb87e599ec42d72fceb1857deadaace454c1617cb9e10545972e796fbf58de303825eaba8
-Size (claripy-9.2.87.tar.gz) = 160305 bytes
+BLAKE2s (claripy-9.2.89.tar.gz) = b456b2f16c24dd1589ff81b98038aab1fbae5e504204c443574d89c661d9ac55
+SHA512 (claripy-9.2.89.tar.gz) = 3812da44f7edddda4230d00f03fce5804eb030fc056ab0e567247d8c1653fc4f39e0e7bb7eb0d8945a5aa9fa03fde7a104249a969a40622aae121603543be9f1
+Size (claripy-9.2.89.tar.gz) = 160310 bytes
 SHA1 (patch-setup.cfg) = 5b32ae5f7284b4f871471326c7d08b35e38d9805
