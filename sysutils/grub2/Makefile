@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2023/11/12 13:23:32 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/07 17:50:45 wiz Exp $
 
-DISTNAME=		grub-2.04
+DISTNAME=		grub-2.12
 PKGNAME=		${DISTNAME:S/grub/grub2/}
-PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
+EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,17 +12,19 @@ HOMEPAGE=		https://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2
 LICENSE=		gnu-gpl-v3
 
+TOOL_DEPENDS+=		help2man>=1.36:../../converters/help2man
+
 CONFLICTS=		grub-[0-9]*
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-SSP_SUPPORTED=		no
 FORTIFY_SUPPORTED=	no
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
+SSP_SUPPORTED=		no
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		gmake flex bison gettext:run awk pkg-config
+USE_TOOLS+=		gmake flex bison gettext:run gawk pkg-config
 
 .include "../../lang/python/tool.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -51,25 +53,10 @@ MAKE_FLAGS+=		BUILD_LDFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 # Additionnaly, help2man is required to generate the manual pages.
 #
 GCC_REQD+=		4.4
-FLEX_REQD=		2.5.35
-TOOL_DEPENDS+=		help2man>=1.36:../../converters/help2man
+FLEX_REQD+=		2.5.35
 
-#
-# The configure script sets the variables `target_cpu' and `platform', which
-# are used for the location of the library directory.  The following mimics
-# the configure script's behavior for i386 and x86_64.
-#
-GRUB_TARGET_CPU=	${MACHINE_ARCH}
-.if ${LOWER_VENDOR} == "apple"
-GRUB_PLATFORM=		efi
-.else
-GRUB_PLATFORM=		pc
-.endif
-.if ${GRUB_TARGET_CPU} == "x86_64" && ${GRUB_PLATFORM} == "pc"
-GRUB_TARGET_CPU=	i386
-.endif
-PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
-PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+CONFIGURE_ARGS+=	--target=${GRUB_TARGET_CPU}
+CONFIGURE_ARGS+=	--with-platform=${GRUB_PLATFORM}
 
 #
 # Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
@@ -100,6 +87,10 @@ CONF_FILES_PERMS+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file} ${REAL_ROOT_USER} 
 .endfor
 CONF_FILES+=		${EGDIR}/README ${PKG_SYSCONFDIR}/README
 CONF_FILES+=		${EGDIR}/default.conf.sample ${PKG_SYSCONFDIR}/default.conf
+
+post-extract:
+	[ -f  ${WRKSRC}/grub-core/extra_deps.lst ] || \
+	touch ${WRKSRC}/grub-core/extra_deps.lst
 
 post-install: do-install-custom-config
 
@@ -134,7 +125,7 @@ SUBST_CLASSES+=			fix-fonts
 SUBST_STAGE.fix-fonts=		pre-configure
 SUBST_MESSAGE.fix-fonts=	Fixing fonts search paths in configure.
 SUBST_FILES.fix-fonts=		configure
-SUBST_VARS.fix-fonts=		PREFIX
+SUBST_SED.fix-fonts=		-e 's,/usr/share/fonts,${PREFIX}/share/fonts,'
 
 #
 # Do not use `\t' with sed, as it's not portable.
@@ -149,6 +140,9 @@ SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
 # Includes.
 #
 .include "options.mk"
+
+# build needs 'strip' for build, and this setting removes it
+INSTALL_UNSTRIPPED=	no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
