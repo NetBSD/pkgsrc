@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/11/27 20:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/07 20:12:24 adam Exp $
 
-DISTNAME=	html_sanitizer-2.2.0
+DISTNAME=	html_sanitizer-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html-sanitizer/}
