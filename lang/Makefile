@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.718 2024/01/30 21:04:34 adam Exp $
+# $NetBSD: Makefile,v 1.719 2024/02/07 08:58:05 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -256,6 +256,7 @@ SUBDIR+=	py-parso
 SUBDIR+=	py-paver
 SUBDIR+=	py-pure-eval
 SUBDIR+=	py-py3c
+SUBDIR+=	py-pyformlang
 SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
 SUBDIR+=	py-python-lua
