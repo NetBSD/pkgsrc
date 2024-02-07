@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_util_grub-shell.in,v 1.1 2024/02/07 17:50:45 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- tests/util/grub-shell.in.orig	2024-01-27 16:08:06.031712989 +0000
++++ tests/util/grub-shell.in
+@@ -426,7 +426,7 @@ if test -z "$debug"; then
+   # doesn't seem to be a better option.
+   #
+   # SeaBIOS is used for i386, except on EFI.
+-  if [ ${grub_modinfo_target_cpu} == 'i386' ] && [ ${grub_modinfo_platform} != 'efi' ]; then
++  if [ ${grub_modinfo_target_cpu} = 'i386' ] && [ ${grub_modinfo_platform} != 'efi' ]; then
+     qemuopts="${qemuopts} -fw_cfg name=etc/sercon-port,string=0"
+   fi
+ fi
