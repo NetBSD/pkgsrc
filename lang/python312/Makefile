@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/12/28 13:12:59 thor Exp $
+# $NetBSD: Makefile,v 1.14 2024/02/07 08:06:57 adam Exp $
 
 .include "dist.mk"
 
@@ -162,7 +162,7 @@ REPLACE_FILES.python+=	Lib/test/crashers/recursive_call.py
 REPLACE_FILES.python+=	Lib/test/curses_tests.py
 REPLACE_FILES.python+=	Lib/test/re_tests.py
 REPLACE_FILES.python+=	Lib/test/regrtest.py
-REPLACE_FILES.python+=	Lib/test/smtpd.py
+REPLACE_FILES.python+=	Lib/test/support/smtpd.py
 REPLACE_FILES.python+=	Lib/test/test_lib2to3/data/different_encoding.py
 REPLACE_FILES.python+=	Lib/test/test_lib2to3/data/false_encoding.py
 REPLACE_FILES.python+=	Lib/test/test_lib2to3/pytree_idempotency.py
