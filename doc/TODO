@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23995 2024/02/07 17:50:54 wiz Exp $
+$NetBSD: TODO,v 1.23996 2024/02/07 18:01:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1416,7 +1416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.38.5 [wip]
-	o webkit-gtk-2.42.4
+	o webkit-gtk-2.42.5
 	o webmin-2.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
