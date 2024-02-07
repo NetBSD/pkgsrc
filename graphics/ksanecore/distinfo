@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/08/03 05:10:04 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/02/07 18:36:08 markd Exp $
 
-BLAKE2s (ksanecore-23.04.3.tar.xz) = 4652b9b18346dd0d6e2f145dfe71023f4f8ed8e04bcc2d47da7a87a833ffabab
-SHA512 (ksanecore-23.04.3.tar.xz) = 6a063e2038e3f34e8b0739678c1d24cea4f39115c51546cd79f27f13e5829157b46bdd6889bf713a6bf89b8ff918b79bcfaa9ae4b782cdb30a6b865443280b27
-Size (ksanecore-23.04.3.tar.xz) = 50408 bytes
+BLAKE2s (ksanecore-23.08.4.tar.xz) = 75d37302a9e1de1bc947781e8cf62a1114b01f1058f217ab9a9aca5d7d69f498
+SHA512 (ksanecore-23.08.4.tar.xz) = 12efe127dc79e660b755f18fceda94c08e689e55125b6454f5eaaf36370afbe508a5c3d61b3635c2df94e0b3b76446ffacd8aaad9e6819b6be87927a8364b276
+Size (ksanecore-23.08.4.tar.xz) = 49608 bytes
