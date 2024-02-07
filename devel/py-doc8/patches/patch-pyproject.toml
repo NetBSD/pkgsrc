@@ -1,0 +1,16 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/02/07 10:29:53 adam Exp $
+
+setuptools_scm_git_archive is part of setuptools_scm as of 7.0.0.
+
+--- pyproject.toml.orig	2024-02-07 10:27:14.473007604 +0000
++++ pyproject.toml
+@@ -1,8 +1,7 @@
+ [build-system]
+ requires = [
+   "setuptools>=61.2",
+-  "setuptools_scm[toml] >= 3.5.0",
+-  "setuptools_scm_git_archive >= 1.1",
++  "setuptools_scm[toml] >= 7.0.0",
+   "wheel >= 0.33.6",
+ ]
+ build-backend = "setuptools.build_meta"
