@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1008 2024/02/07 18:39:54 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1009 2024/02/07 18:42:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/gtkmm4 to 4.12.0 [wiz 2024-02-07]
 	Updated net/transmission-gtk to 4.0.5nb1 [wiz 2024-02-07]
 	Updated devel/glibmm2.68 to 2.78.1 [wiz 2024-02-07]
+	Updated devel/atkmm2.36 to 2.36.3 [wiz 2024-02-07]
