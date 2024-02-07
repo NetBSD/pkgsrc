@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2022/11/06 18:21:11 adam Exp $
+$NetBSD: distinfo,v 1.28 2024/02/07 06:25:43 adam Exp $
 
-BLAKE2s (cheroot-8.6.0.tar.gz) = 89cc1e9a447b750d07b206c26e3d6e45fba4672bbdb9f6332d6f382abfa61ad6
-SHA512 (cheroot-8.6.0.tar.gz) = 26e48c935fe32d4ce3cf6ae20b5b272416ca53bd8496527c2958ec2ebe87529c831f283ae900e13271b610e39531b682df0376935ecc3bcfcca11c299cd2a893
-Size (cheroot-8.6.0.tar.gz) = 134779 bytes
-SHA1 (patch-setup.cfg) = bb33ee596210affecd65cf665bd2335aee2ff2f0
+BLAKE2s (cheroot-10.0.0.tar.gz) = 5db51660e39c7a8871974be9e096a0e6db94d5d86342fafdb6b2f0998c61e930
+SHA512 (cheroot-10.0.0.tar.gz) = 02e32e52a596463cbb9874a800dbcdc5680dd7d9dfa95ca6e73c81f9248a488087c514ae70cdba94fe9df1f5d3ab1c68efcb720561cbeb7b667109fe5962f85b
+Size (cheroot-10.0.0.tar.gz) = 148461 bytes
+SHA1 (patch-setup.cfg) = 81504dc60b08f1cb5fc84b2e0341848b411179bc
