@@ -1,4 +1,4 @@
-/* $NetBSD: plist_tree.c,v 1.5 2021/05/11 09:24:17 wiz Exp $ */
+/* $NetBSD: plist_tree.c,v 1.6 2024/02/07 17:05:24 wiz Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -110,7 +110,7 @@ plist_tree_init(void)
 	rb_tree_init(&plist_tree_singleton.plist_vars_tree, &plist_tree_ops);
 
 #define MAX_ERROR_MSG 0x1000
-#define REGEX_STRING_PLIST "\\${PLIST.[^}]*}"
+#define REGEX_STRING_PLIST "\\$\\{PLIST.[^}]*\\}"
 
 	if ((ret = regcomp(&plist_tree_singleton.plist_regex_options,
 	                   REGEX_STRING_PLIST, REG_EXTENDED)) != 0) {
