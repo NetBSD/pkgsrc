@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.17 2022/03/26 19:25:51 tnn Exp $
+$NetBSD: distinfo,v 1.18 2024/02/07 09:46:36 adam Exp $
 
-BLAKE2s (capstone-4.0.2.tar.gz) = d3767b622f0a91b3f38a24817097975ecbf4126b3118b6059dfa4a8b12d01f61
-SHA512 (capstone-4.0.2.tar.gz) = 7f93534517307b737422a8825b66b2a1f3e1cca2049465d60ab12595940154aaf843ba40ed348fce58de58b990c19a0caef289060eb72898cb008a88c470970e
-Size (capstone-4.0.2.tar.gz) = 3439542 bytes
+BLAKE2s (capstone-5.0.1.tar.gz) = a66f1354f655e31dd8cd4bbb4db933aea7f9c5914700568da6d76952c89bfe52
+SHA512 (capstone-5.0.1.tar.gz) = 350aba77ce2d96b5c25764913591ba80e4497177ae0a8b2c820c6755ee8310848fbfc54e7ccac27fafc2dbc6778118ad92c53d1b5cb601d4fa146dec7d7e11e5
+Size (capstone-5.0.1.tar.gz) = 7654195 bytes
 SHA1 (patch-Makefile) = a96441309efa54cb8ec1beacb44891f981b0db3e
 SHA1 (patch-bindings_python_capstone_____init____.py) = ea410a99d4cd4ee0a109a7225b739971472c387d
-SHA1 (patch-bindings_python_setup.py) = aebe4104ece594a7432961dd07c5d739da70f963
+SHA1 (patch-bindings_python_setup.py) = f65d5a7a3d7e34867dd9981bc8db1ba1f5dc1ad6
 SHA1 (patch-cstool_Makefile) = 68dd0a175d0e2270e2813f784cae5ca9f89a3a05
-SHA1 (patch-cstool_getopt.h) = 662a70f1718654935ae0bfa32e79fc7fe3ef7fcb
-SHA1 (patch-suite_fuzz_driverbin.c) = c7ddd8ea65d8aea357ba086d6a57e0412fa2c193
+SHA1 (patch-suite_fuzz_driverbin.c) = 17a0876c475ad7782d0ccb362aadbd7633dfe778
