@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/11/14 15:14:27 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/02/07 10:29:53 adam Exp $
 
-BLAKE2s (doc8-0.10.1.tar.gz) = 4d4a4698d3915a774c8b52ad03c0cd032c0338e23d820e23bceadf39b0b202f5
-SHA512 (doc8-0.10.1.tar.gz) = 0d12edbdd39e747c7ad19e52dc826e074ef1ff71cdcf4984d62a5e1c1154e3d78571ff3a522eff13e543ace060d65c6dc43f25d9590ee6a2cdb98eab28e4f91f
-Size (doc8-0.10.1.tar.gz) = 25514 bytes
+BLAKE2s (doc8-1.1.1.tar.gz) = 42361a3b9773231a0b949dac026b36f0c000a3c78ad6a96a1f30d077a540617b
+SHA512 (doc8-1.1.1.tar.gz) = 7ec21c2483f7ebf2a7e1fef6677c6051ac253da6014354a968b8a107d8097f986b6b162850561fd6a103e93d157b2c849554aabe2484a49c4a3726c8e2083a89
+Size (doc8-1.1.1.tar.gz) = 26514 bytes
+SHA1 (patch-pyproject.toml) = 8efee529e21c9fad1121c5da81bee3c9a7289585
