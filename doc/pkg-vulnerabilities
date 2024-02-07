@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.116 2024/02/05 20:08:49 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.117 2024/02/07 16:35:29 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24577,7 +24577,7 @@ ruby{26,27,30,31}-activerecord70<7.0.4.1	sql-injection	https://nvd.nist.gov/vuln
 ruby{26,27,30,31}-activerecord61<6.1.7.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44566
 ruby{26,27,30,31}-activerecord70<7.0.4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44566
 exctags-[0-9]*	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-4515
-libexpat<2.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-43680
+expat<2.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-43680
 openexr<3.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-20304
 openexr<3.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-20298
 php{56,73,74,80,81}-nextcloud<22.2.11	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-36074
@@ -25867,3 +25867,5 @@ py{27,37,38,39,310,311,312}-octoprint-[0-9]*	sensitive-information-disclosure	ht
 glpi<10.0.12	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-51446
 glpi<10.0.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-23645
 graphviz<10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-46045
+expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52425
+expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52426
