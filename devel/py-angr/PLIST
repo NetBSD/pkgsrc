@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/30 19:24:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/07 09:56:52 adam Exp $
 bin/angr-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -219,6 +219,9 @@ ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/base_ptr_save_simplifi
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/const_derefs.py
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/const_derefs.pyc
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/const_derefs.pyo
+${PYSITELIB}/angr/analyses/decompiler/optimization_passes/cross_jump_reverter.py
+${PYSITELIB}/angr/analyses/decompiler/optimization_passes/cross_jump_reverter.pyc
+${PYSITELIB}/angr/analyses/decompiler/optimization_passes/cross_jump_reverter.pyo
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/div_simplifier.py
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/div_simplifier.pyc
 ${PYSITELIB}/angr/analyses/decompiler/optimization_passes/div_simplifier.pyo
@@ -711,6 +714,9 @@ ${PYSITELIB}/angr/analyses/static_hooker.pyo
 ${PYSITELIB}/angr/analyses/typehoon/__init__.py
 ${PYSITELIB}/angr/analyses/typehoon/__init__.pyc
 ${PYSITELIB}/angr/analyses/typehoon/__init__.pyo
+${PYSITELIB}/angr/analyses/typehoon/dfa.py
+${PYSITELIB}/angr/analyses/typehoon/dfa.pyc
+${PYSITELIB}/angr/analyses/typehoon/dfa.pyo
 ${PYSITELIB}/angr/analyses/typehoon/lifter.py
 ${PYSITELIB}/angr/analyses/typehoon/lifter.pyc
 ${PYSITELIB}/angr/analyses/typehoon/lifter.pyo
@@ -729,6 +735,9 @@ ${PYSITELIB}/angr/analyses/typehoon/typehoon.pyo
 ${PYSITELIB}/angr/analyses/typehoon/typevars.py
 ${PYSITELIB}/angr/analyses/typehoon/typevars.pyc
 ${PYSITELIB}/angr/analyses/typehoon/typevars.pyo
+${PYSITELIB}/angr/analyses/typehoon/variance.py
+${PYSITELIB}/angr/analyses/typehoon/variance.pyc
+${PYSITELIB}/angr/analyses/typehoon/variance.pyo
 ${PYSITELIB}/angr/analyses/variable_recovery/__init__.py
 ${PYSITELIB}/angr/analyses/variable_recovery/__init__.pyc
 ${PYSITELIB}/angr/analyses/variable_recovery/__init__.pyo
@@ -1480,9 +1489,6 @@ ${PYSITELIB}/angr/procedures/definitions/linux_loader.pyo
 ${PYSITELIB}/angr/procedures/definitions/msvcr.py
 ${PYSITELIB}/angr/procedures/definitions/msvcr.pyc
 ${PYSITELIB}/angr/procedures/definitions/msvcr.pyo
-${PYSITELIB}/angr/procedures/definitions/ntdll.py
-${PYSITELIB}/angr/procedures/definitions/ntdll.pyc
-${PYSITELIB}/angr/procedures/definitions/ntdll.pyo
 ${PYSITELIB}/angr/procedures/definitions/ntoskrnl.py
 ${PYSITELIB}/angr/procedures/definitions/ntoskrnl.pyc
 ${PYSITELIB}/angr/procedures/definitions/ntoskrnl.pyo
