@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/11/13 16:34:03 taca Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/08 11:47:15 hauke Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-PKGREVISION=	1
-GLPI_VERSION=	10.0.2
+GLPI_VERSION=	10.0.12
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glpi-project/}glpi/releases/download/${GLPI_VERSION}/
@@ -48,19 +47,19 @@ MESSAGE_SUBST+=	APACHE_USER="${APACHE_USER}"
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=		${WRKDIR}/glpi
+WRKSRC=			${WRKDIR}/glpi
 
 # Config dir managed through web interface (move under {VARBASE}/glpi?)
 PKG_SYSCONFSUBDIR=	glpi
 PKG_SYSCONFDIR_PERMS=	${APACHE_USER} ${APACHE_GROUP} 0700
 
-EGDIR=		share/examples/glpi
-GLPI_DIR=	share/glpi
+EGDIR=			share/examples/glpi
+GLPI_DIR=		share/glpi
 
 .for ddd in local_define.php
-CONF_FILES+=	${EGDIR}/${ddd} ${PKG_SYSCONFDIR}/${ddd}
+CONF_FILES+=		${EGDIR}/${ddd} ${PKG_SYSCONFDIR}/${ddd}
 .endfor
-CONF_FILES+=	${EGDIR}/var_glpi.htaccess ${VARBASE}/glpi/.htaccess
+CONF_FILES+=		${EGDIR}/var_glpi.htaccess ${VARBASE}/glpi/.htaccess
 
 MAKE_DIRS_PERMS+=	${VARBASE}/glpi ${APACHE_USER} ${APACHE_GROUP} 0700
 .for ddd in _cache _cron _dumps _graphs _lock _log _pictures _plugins \
@@ -83,12 +82,7 @@ SUBST_FILES.path+=	config/httpd-glpi.conf
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
-REPLACE_FILES.php+=	bin/console
-.for ddd in  bench.php fetch_windows_zones.php generate_vcards \
-	     generateicalendardata.php vobject
-REPLACE_FILES.php+=	vendor/sabre/vobject/bin/${ddd}
-.endfor
+REPLACE_FILES.php=	bin/console
 
 OWN_DIRS_PERMS+=	${GLPI_DIR}/marketplace ${APACHE_USER} \
 				${APACHE_GROUP} 0750
@@ -100,12 +94,13 @@ post-extract:
 		${CP} ${FILESDIR}/$${ddd} ${WRKSRC}/config ; \
 	done
 	${CP} ${FILESDIR}/downstream.php ${WRKSRC}/inc
-	for ddd in ajax css front inc lib locales pics vendor ; do \
+	for ddd in ajax css front inc lib locales src pics vendor ; do \
 		find ${WRKSRC}/$${ddd} -type f -exec ${CHMOD} ugo-x \{\} \; ; \
 	done
 	cd ${WRKSRC}/install && ${MV} install.php install.php.disabled
 
 do-install:
+	find ${WRKSRC} -name \*.orig -exec rm {} \;
 	cd ${WRKSRC}/config && ${PAX} -rw * ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/files/.htaccess \
 		${DESTDIR}${PREFIX}/${EGDIR}/var_glpi.htaccess
