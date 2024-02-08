@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.636 2024/02/06 02:58:48 markd Exp $
+# $NetBSD: Makefile,v 1.637 2024/02/08 22:36:14 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -281,6 +281,7 @@ SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-autocommand
 SUBDIR+=	py-crashtest
+SUBDIR+=	py-dep-logic
 SUBDIR+=	py-expandvars
 SUBDIR+=	py-ghp-import
 SUBDIR+=	py-icecream
