@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/25 16:02:18 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/08 10:10:46 adam Exp $
 
-DISTNAME=	blosc2-2.13.1
+DISTNAME=	blosc2-2.13.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc2
