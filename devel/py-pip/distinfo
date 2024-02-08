@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.60 2023/12/17 19:09:12 adam Exp $
+$NetBSD: distinfo,v 1.61 2024/02/08 22:25:25 adam Exp $
 
-BLAKE2s (pip-23.3.2.tar.gz) = 42e749c507620f558ba35cbd2cf3a5fee7231bb0c6f8145941d40c940222c2dc
-SHA512 (pip-23.3.2.tar.gz) = b2d8bcff02fe196163e88e02702861bfccba202e5c71d8c6843eeebc84066efa6987574e26a89ff25f096645e99c824dde585fbae415b66d5eb88657bb4d9cb4
-Size (pip-23.3.2.tar.gz) = 2132244 bytes
+BLAKE2s (pip-24.0.tar.gz) = 684d3679c4058ac0f477f24c68485c2d99adb1c899347aead163fd8bbdc5f639
+SHA512 (pip-24.0.tar.gz) = b687d9e7e2b0348a1c3355610bcf4e194dd157dc6e79638f8a0a383cf1ba7c4253be4b145e9a5029e089807d1feec9e444976f34f77a732f3ef527d9bc6bcebf
+Size (pip-24.0.tar.gz) = 2132709 bytes
 SHA1 (patch-src_pip___internal_build__env.py) = 19c6feb4b56cbdb70f9150c452dac73ca3949911
 SHA1 (patch-src_pip___internal_commands_install.py) = 2f78c5af7c677d052a2275488dcda2f7b86c6e51
 SHA1 (patch-src_pip___internal_operations_install_wheel.py) = 0f590d2a11a2373f50abbc9377044f728625b13d
