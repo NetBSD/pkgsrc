@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2023/11/01 20:14:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/02/08 22:43:53 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -183,6 +183,12 @@ ${PYSITELIB}/django/conf/locale/en_GB/__init__.pyo
 ${PYSITELIB}/django/conf/locale/en_GB/formats.py
 ${PYSITELIB}/django/conf/locale/en_GB/formats.pyc
 ${PYSITELIB}/django/conf/locale/en_GB/formats.pyo
+${PYSITELIB}/django/conf/locale/en_IE/__init__.py
+${PYSITELIB}/django/conf/locale/en_IE/__init__.pyc
+${PYSITELIB}/django/conf/locale/en_IE/__init__.pyo
+${PYSITELIB}/django/conf/locale/en_IE/formats.py
+${PYSITELIB}/django/conf/locale/en_IE/formats.pyc
+${PYSITELIB}/django/conf/locale/en_IE/formats.pyo
 ${PYSITELIB}/django/conf/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/eo/__init__.py
@@ -277,6 +283,24 @@ ${PYSITELIB}/django/conf/locale/fr/__init__.pyo
 ${PYSITELIB}/django/conf/locale/fr/formats.py
 ${PYSITELIB}/django/conf/locale/fr/formats.pyc
 ${PYSITELIB}/django/conf/locale/fr/formats.pyo
+${PYSITELIB}/django/conf/locale/fr_BE/__init__.py
+${PYSITELIB}/django/conf/locale/fr_BE/__init__.pyc
+${PYSITELIB}/django/conf/locale/fr_BE/__init__.pyo
+${PYSITELIB}/django/conf/locale/fr_BE/formats.py
+${PYSITELIB}/django/conf/locale/fr_BE/formats.pyc
+${PYSITELIB}/django/conf/locale/fr_BE/formats.pyo
+${PYSITELIB}/django/conf/locale/fr_CA/__init__.py
+${PYSITELIB}/django/conf/locale/fr_CA/__init__.pyc
+${PYSITELIB}/django/conf/locale/fr_CA/__init__.pyo
+${PYSITELIB}/django/conf/locale/fr_CA/formats.py
+${PYSITELIB}/django/conf/locale/fr_CA/formats.pyc
+${PYSITELIB}/django/conf/locale/fr_CA/formats.pyo
+${PYSITELIB}/django/conf/locale/fr_CH/__init__.py
+${PYSITELIB}/django/conf/locale/fr_CH/__init__.pyc
+${PYSITELIB}/django/conf/locale/fr_CH/__init__.pyo
+${PYSITELIB}/django/conf/locale/fr_CH/formats.py
+${PYSITELIB}/django/conf/locale/fr_CH/formats.pyc
+${PYSITELIB}/django/conf/locale/fr_CH/formats.pyo
 ${PYSITELIB}/django/conf/locale/fy/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/fy/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/fy/__init__.py
@@ -659,6 +683,14 @@ ${PYSITELIB}/django/conf/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/conf/locale/ug/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/ug/__init__.py
+${PYSITELIB}/django/conf/locale/ug/__init__.pyc
+${PYSITELIB}/django/conf/locale/ug/__init__.pyo
+${PYSITELIB}/django/conf/locale/ug/formats.py
+${PYSITELIB}/django/conf/locale/ug/formats.pyc
+${PYSITELIB}/django/conf/locale/ug/formats.pyo
 ${PYSITELIB}/django/conf/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/uk/__init__.py
@@ -1106,6 +1138,10 @@ ${PYSITELIB}/django/contrib/admin/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/admin/locale/udm/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/admin/locale/udm/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/django/contrib/admin/locale/udm/LC_MESSAGES/djangojs.po
+${PYSITELIB}/django/contrib/admin/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/admin/locale/ug/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/admin/locale/ug/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/django/contrib/admin/locale/ug/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/django/contrib/admin/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/admin/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/admin/locale/uk/LC_MESSAGES/djangojs.mo
@@ -1177,6 +1213,7 @@ ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-calendar.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-changelink.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-clock.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-deletelink.svg
+${PYSITELIB}/django/contrib/admin/static/admin/img/icon-hidelink.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-no.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-unknown-alt.svg
 ${PYSITELIB}/django/contrib/admin/static/admin/img/icon-unknown.svg
@@ -1547,6 +1584,8 @@ ${PYSITELIB}/django/contrib/admindocs/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/admindocs/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/admindocs/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/admindocs/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/admindocs/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/admindocs/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/admindocs/locale/ur/LC_MESSAGES/django.mo
@@ -1796,6 +1835,8 @@ ${PYSITELIB}/django/contrib/auth/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/auth/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/auth/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/auth/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/auth/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/auth/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/auth/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/auth/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/auth/locale/ur/LC_MESSAGES/django.mo
@@ -2084,6 +2125,8 @@ ${PYSITELIB}/django/contrib/contenttypes/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/contenttypes/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/contenttypes/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/contenttypes/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/contenttypes/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/contenttypes/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/contenttypes/locale/ur/LC_MESSAGES/django.mo
@@ -2115,6 +2158,9 @@ ${PYSITELIB}/django/contrib/contenttypes/migrations/__init__.pyo
 ${PYSITELIB}/django/contrib/contenttypes/models.py
 ${PYSITELIB}/django/contrib/contenttypes/models.pyc
 ${PYSITELIB}/django/contrib/contenttypes/models.pyo
+${PYSITELIB}/django/contrib/contenttypes/prefetch.py
+${PYSITELIB}/django/contrib/contenttypes/prefetch.pyc
+${PYSITELIB}/django/contrib/contenttypes/prefetch.pyo
 ${PYSITELIB}/django/contrib/contenttypes/views.py
 ${PYSITELIB}/django/contrib/contenttypes/views.pyc
 ${PYSITELIB}/django/contrib/contenttypes/views.pyo
@@ -2308,6 +2354,8 @@ ${PYSITELIB}/django/contrib/flatpages/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/flatpages/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/flatpages/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/flatpages/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/flatpages/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/flatpages/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/flatpages/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/flatpages/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/flatpages/locale/ur/LC_MESSAGES/django.mo
@@ -2354,9 +2402,6 @@ ${PYSITELIB}/django/contrib/gis/admin/__init__.pyo
 ${PYSITELIB}/django/contrib/gis/admin/options.py
 ${PYSITELIB}/django/contrib/gis/admin/options.pyc
 ${PYSITELIB}/django/contrib/gis/admin/options.pyo
-${PYSITELIB}/django/contrib/gis/admin/widgets.py
-${PYSITELIB}/django/contrib/gis/admin/widgets.pyc
-${PYSITELIB}/django/contrib/gis/admin/widgets.pyo
 ${PYSITELIB}/django/contrib/gis/apps.py
 ${PYSITELIB}/django/contrib/gis/apps.pyc
 ${PYSITELIB}/django/contrib/gis/apps.pyo
@@ -2856,6 +2901,8 @@ ${PYSITELIB}/django/contrib/gis/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/gis/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/gis/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/gis/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/gis/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/gis/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/gis/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/gis/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/gis/locale/ur/LC_MESSAGES/django.mo
@@ -2910,10 +2957,6 @@ ${PYSITELIB}/django/contrib/gis/static/gis/img/draw_point_on.svg
 ${PYSITELIB}/django/contrib/gis/static/gis/img/draw_polygon_off.svg
 ${PYSITELIB}/django/contrib/gis/static/gis/img/draw_polygon_on.svg
 ${PYSITELIB}/django/contrib/gis/static/gis/js/OLMapWidget.js
-${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.html
-${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.js
-${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.html
-${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.js
 ${PYSITELIB}/django/contrib/gis/templates/gis/kml/base.kml
 ${PYSITELIB}/django/contrib/gis/templates/gis/kml/placemarks.kml
 ${PYSITELIB}/django/contrib/gis/templates/gis/openlayers-osm.html
@@ -3120,6 +3163,8 @@ ${PYSITELIB}/django/contrib/humanize/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/humanize/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/humanize/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/humanize/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/humanize/locale/ur/LC_MESSAGES/django.mo
@@ -3171,6 +3216,9 @@ ${PYSITELIB}/django/contrib/messages/storage/fallback.pyo
 ${PYSITELIB}/django/contrib/messages/storage/session.py
 ${PYSITELIB}/django/contrib/messages/storage/session.pyc
 ${PYSITELIB}/django/contrib/messages/storage/session.pyo
+${PYSITELIB}/django/contrib/messages/test.py
+${PYSITELIB}/django/contrib/messages/test.pyc
+${PYSITELIB}/django/contrib/messages/test.pyo
 ${PYSITELIB}/django/contrib/messages/utils.py
 ${PYSITELIB}/django/contrib/messages/utils.pyc
 ${PYSITELIB}/django/contrib/messages/utils.pyo
@@ -3333,6 +3381,8 @@ ${PYSITELIB}/django/contrib/postgres/locale/ml/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/ml/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/mn/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/mn/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/postgres/locale/mr/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/postgres/locale/mr/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/ms/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/ms/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/nb/LC_MESSAGES/django.mo
@@ -3371,6 +3421,8 @@ ${PYSITELIB}/django/contrib/postgres/locale/tk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/tk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/tr/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/postgres/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/postgres/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/uz/LC_MESSAGES/django.mo
@@ -3590,6 +3642,8 @@ ${PYSITELIB}/django/contrib/redirects/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/redirects/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/redirects/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/redirects/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/redirects/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/redirects/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/redirects/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/redirects/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/redirects/locale/ur/LC_MESSAGES/django.mo
@@ -3830,6 +3884,8 @@ ${PYSITELIB}/django/contrib/sessions/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sessions/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sessions/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sessions/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/sessions/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/sessions/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sessions/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sessions/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sessions/locale/ur/LC_MESSAGES/django.mo
@@ -3872,15 +3928,6 @@ ${PYSITELIB}/django/contrib/sitemaps/__init__.pyo
 ${PYSITELIB}/django/contrib/sitemaps/apps.py
 ${PYSITELIB}/django/contrib/sitemaps/apps.pyc
 ${PYSITELIB}/django/contrib/sitemaps/apps.pyo
-${PYSITELIB}/django/contrib/sitemaps/management/__init__.py
-${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyc
-${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyo
-${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.py
-${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyc
-${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyo
-${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.py
-${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyc
-${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyo
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap.xml
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap_index.xml
 ${PYSITELIB}/django/contrib/sitemaps/views.py
@@ -4078,6 +4125,8 @@ ${PYSITELIB}/django/contrib/sites/locale/tt/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sites/locale/tt/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sites/locale/udm/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sites/locale/udm/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/sites/locale/ug/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/sites/locale/ug/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sites/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/sites/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/sites/locale/ur/LC_MESSAGES/django.mo
@@ -4588,6 +4637,9 @@ ${PYSITELIB}/django/db/backends/oracle/introspection.pyo
 ${PYSITELIB}/django/db/backends/oracle/operations.py
 ${PYSITELIB}/django/db/backends/oracle/operations.pyc
 ${PYSITELIB}/django/db/backends/oracle/operations.pyo
+${PYSITELIB}/django/db/backends/oracle/oracledb_any.py
+${PYSITELIB}/django/db/backends/oracle/oracledb_any.pyc
+${PYSITELIB}/django/db/backends/oracle/oracledb_any.pyo
 ${PYSITELIB}/django/db/backends/oracle/schema.py
 ${PYSITELIB}/django/db/backends/oracle/schema.pyc
 ${PYSITELIB}/django/db/backends/oracle/schema.pyo
@@ -4744,6 +4796,9 @@ ${PYSITELIB}/django/db/models/fields/__init__.pyo
 ${PYSITELIB}/django/db/models/fields/files.py
 ${PYSITELIB}/django/db/models/fields/files.pyc
 ${PYSITELIB}/django/db/models/fields/files.pyo
+${PYSITELIB}/django/db/models/fields/generated.py
+${PYSITELIB}/django/db/models/fields/generated.pyc
+${PYSITELIB}/django/db/models/fields/generated.pyo
 ${PYSITELIB}/django/db/models/fields/json.py
 ${PYSITELIB}/django/db/models/fields/json.pyc
 ${PYSITELIB}/django/db/models/fields/json.pyo
@@ -4860,7 +4915,6 @@ ${PYSITELIB}/django/forms/formsets.py
 ${PYSITELIB}/django/forms/formsets.pyc
 ${PYSITELIB}/django/forms/formsets.pyo
 ${PYSITELIB}/django/forms/jinja2/django/forms/attrs.html
-${PYSITELIB}/django/forms/jinja2/django/forms/default.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/div.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/errors/dict/default.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/errors/dict/text.txt
@@ -4868,7 +4922,7 @@ ${PYSITELIB}/django/forms/jinja2/django/forms/errors/dict/ul.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/errors/list/default.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/errors/list/text.txt
 ${PYSITELIB}/django/forms/jinja2/django/forms/errors/list/ul.html
-${PYSITELIB}/django/forms/jinja2/django/forms/formsets/default.html
+${PYSITELIB}/django/forms/jinja2/django/forms/field.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/formsets/div.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/formsets/p.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/formsets/table.html
@@ -4912,7 +4966,6 @@ ${PYSITELIB}/django/forms/renderers.py
 ${PYSITELIB}/django/forms/renderers.pyc
 ${PYSITELIB}/django/forms/renderers.pyo
 ${PYSITELIB}/django/forms/templates/django/forms/attrs.html
-${PYSITELIB}/django/forms/templates/django/forms/default.html
 ${PYSITELIB}/django/forms/templates/django/forms/div.html
 ${PYSITELIB}/django/forms/templates/django/forms/errors/dict/default.html
 ${PYSITELIB}/django/forms/templates/django/forms/errors/dict/text.txt
@@ -4920,7 +4973,7 @@ ${PYSITELIB}/django/forms/templates/django/forms/errors/dict/ul.html
 ${PYSITELIB}/django/forms/templates/django/forms/errors/list/default.html
 ${PYSITELIB}/django/forms/templates/django/forms/errors/list/text.txt
 ${PYSITELIB}/django/forms/templates/django/forms/errors/list/ul.html
-${PYSITELIB}/django/forms/templates/django/forms/formsets/default.html
+${PYSITELIB}/django/forms/templates/django/forms/field.html
 ${PYSITELIB}/django/forms/templates/django/forms/formsets/div.html
 ${PYSITELIB}/django/forms/templates/django/forms/formsets/p.html
 ${PYSITELIB}/django/forms/templates/django/forms/formsets/table.html
@@ -5167,12 +5220,12 @@ ${PYSITELIB}/django/utils/asyncio.pyo
 ${PYSITELIB}/django/utils/autoreload.py
 ${PYSITELIB}/django/utils/autoreload.pyc
 ${PYSITELIB}/django/utils/autoreload.pyo
-${PYSITELIB}/django/utils/baseconv.py
-${PYSITELIB}/django/utils/baseconv.pyc
-${PYSITELIB}/django/utils/baseconv.pyo
 ${PYSITELIB}/django/utils/cache.py
 ${PYSITELIB}/django/utils/cache.pyc
 ${PYSITELIB}/django/utils/cache.pyo
+${PYSITELIB}/django/utils/choices.py
+${PYSITELIB}/django/utils/choices.pyc
+${PYSITELIB}/django/utils/choices.pyo
 ${PYSITELIB}/django/utils/connection.py
 ${PYSITELIB}/django/utils/connection.pyc
 ${PYSITELIB}/django/utils/connection.pyo
@@ -5191,9 +5244,6 @@ ${PYSITELIB}/django/utils/dateparse.pyo
 ${PYSITELIB}/django/utils/dates.py
 ${PYSITELIB}/django/utils/dates.pyc
 ${PYSITELIB}/django/utils/dates.pyo
-${PYSITELIB}/django/utils/datetime_safe.py
-${PYSITELIB}/django/utils/datetime_safe.pyc
-${PYSITELIB}/django/utils/datetime_safe.pyo
 ${PYSITELIB}/django/utils/deconstruct.py
 ${PYSITELIB}/django/utils/deconstruct.pyc
 ${PYSITELIB}/django/utils/deconstruct.pyo
@@ -5269,9 +5319,6 @@ ${PYSITELIB}/django/utils/timesince.pyo
 ${PYSITELIB}/django/utils/timezone.py
 ${PYSITELIB}/django/utils/timezone.pyc
 ${PYSITELIB}/django/utils/timezone.pyo
-${PYSITELIB}/django/utils/topological_sort.py
-${PYSITELIB}/django/utils/topological_sort.pyc
-${PYSITELIB}/django/utils/topological_sort.pyo
 ${PYSITELIB}/django/utils/translation/__init__.py
 ${PYSITELIB}/django/utils/translation/__init__.pyc
 ${PYSITELIB}/django/utils/translation/__init__.pyo
@@ -5359,7 +5406,10 @@ ${PYSITELIB}/django/views/i18n.pyo
 ${PYSITELIB}/django/views/static.py
 ${PYSITELIB}/django/views/static.pyc
 ${PYSITELIB}/django/views/static.pyo
+${PYSITELIB}/django/views/templates/csrf_403.html
 ${PYSITELIB}/django/views/templates/default_urlconf.html
+${PYSITELIB}/django/views/templates/directory_index.html
+${PYSITELIB}/django/views/templates/i18n_catalog.js
 ${PYSITELIB}/django/views/templates/technical_404.html
 ${PYSITELIB}/django/views/templates/technical_500.html
 ${PYSITELIB}/django/views/templates/technical_500.txt
