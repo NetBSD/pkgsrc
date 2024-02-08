@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/29 16:51:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/08 22:40:37 adam Exp $
 bin/pdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -171,6 +171,10 @@ ${PYSITELIB}/pdm/cli/templates/default/src/example_package/__init__.pyo
 ${PYSITELIB}/pdm/cli/templates/default/tests/__init__.py
 ${PYSITELIB}/pdm/cli/templates/default/tests/__init__.pyc
 ${PYSITELIB}/pdm/cli/templates/default/tests/__init__.pyo
+${PYSITELIB}/pdm/cli/templates/minimal/__init__.py
+${PYSITELIB}/pdm/cli/templates/minimal/__init__.pyc
+${PYSITELIB}/pdm/cli/templates/minimal/__init__.pyo
+${PYSITELIB}/pdm/cli/templates/minimal/pyproject.toml
 ${PYSITELIB}/pdm/cli/utils.py
 ${PYSITELIB}/pdm/cli/utils.pyc
 ${PYSITELIB}/pdm/cli/utils.pyo
@@ -262,9 +266,9 @@ ${PYSITELIB}/pdm/models/finder.pyo
 ${PYSITELIB}/pdm/models/in_process/__init__.py
 ${PYSITELIB}/pdm/models/in_process/__init__.pyc
 ${PYSITELIB}/pdm/models/in_process/__init__.pyo
-${PYSITELIB}/pdm/models/in_process/get_abi_tag.py
-${PYSITELIB}/pdm/models/in_process/get_abi_tag.pyc
-${PYSITELIB}/pdm/models/in_process/get_abi_tag.pyo
+${PYSITELIB}/pdm/models/in_process/get_abis.py
+${PYSITELIB}/pdm/models/in_process/get_abis.pyc
+${PYSITELIB}/pdm/models/in_process/get_abis.pyo
 ${PYSITELIB}/pdm/models/in_process/parse_setup.py
 ${PYSITELIB}/pdm/models/in_process/parse_setup.pyc
 ${PYSITELIB}/pdm/models/in_process/parse_setup.pyo
@@ -348,6 +352,9 @@ ${PYSITELIB}/pdm/resolver/__init__.pyo
 ${PYSITELIB}/pdm/resolver/core.py
 ${PYSITELIB}/pdm/resolver/core.pyc
 ${PYSITELIB}/pdm/resolver/core.pyo
+${PYSITELIB}/pdm/resolver/graph.py
+${PYSITELIB}/pdm/resolver/graph.pyc
+${PYSITELIB}/pdm/resolver/graph.pyo
 ${PYSITELIB}/pdm/resolver/providers.py
 ${PYSITELIB}/pdm/resolver/providers.pyc
 ${PYSITELIB}/pdm/resolver/providers.pyo
