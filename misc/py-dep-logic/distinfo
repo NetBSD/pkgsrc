@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/08 22:36:14 adam Exp $
+
+BLAKE2s (dep_logic-0.0.4.tar.gz) = b543be93164c748167844cd25f0926bfba33e06628103d36a31b0c10df682b46
+SHA512 (dep_logic-0.0.4.tar.gz) = fc2d300f1a71a751cb2d983cd25251b4cfe4cf2f61397625cadaf8d528d4ca4a393714cce3fc970665c278f6711aedba936c07050d458f4111280a4031ad9edb
+Size (dep_logic-0.0.4.tar.gz) = 27197 bytes
