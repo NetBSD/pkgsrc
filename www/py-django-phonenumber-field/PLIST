@@ -1,18 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/04 00:31:23 joerg Exp $
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/django_phonenumber_field-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/08 14:41:41 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/phonenumber_field/__init__.py
 ${PYSITELIB}/phonenumber_field/__init__.pyc
 ${PYSITELIB}/phonenumber_field/__init__.pyo
 ${PYSITELIB}/phonenumber_field/formfields.py
 ${PYSITELIB}/phonenumber_field/formfields.pyc
 ${PYSITELIB}/phonenumber_field/formfields.pyo
+${PYSITELIB}/phonenumber_field/locale/ar/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/az/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/az/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/bg/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/bg/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/bn/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/bn/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/cs/LC_MESSAGES/django.mo
@@ -25,6 +29,10 @@ ${PYSITELIB}/phonenumber_field/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/es_AR/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/es_AR/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/fa/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/fa/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/fi/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/fi/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/fr/LC_MESSAGES/django.mo
@@ -33,10 +41,14 @@ ${PYSITELIB}/phonenumber_field/locale/he/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/he/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/hy/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/hy/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/id/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/id/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/ko/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/ko/LC_MESSAGES/django.po
+${PYSITELIB}/phonenumber_field/locale/lt/LC_MESSAGES/django.mo
+${PYSITELIB}/phonenumber_field/locale/lt/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/nb/LC_MESSAGES/django.mo
 ${PYSITELIB}/phonenumber_field/locale/nb/LC_MESSAGES/django.po
 ${PYSITELIB}/phonenumber_field/locale/nl/LC_MESSAGES/django.mo
@@ -75,6 +87,9 @@ ${PYSITELIB}/phonenumber_field/serializerfields.pyo
 ${PYSITELIB}/phonenumber_field/validators.py
 ${PYSITELIB}/phonenumber_field/validators.pyc
 ${PYSITELIB}/phonenumber_field/validators.pyo
+${PYSITELIB}/phonenumber_field/version.py
+${PYSITELIB}/phonenumber_field/version.pyc
+${PYSITELIB}/phonenumber_field/version.pyo
 ${PYSITELIB}/phonenumber_field/widgets.py
 ${PYSITELIB}/phonenumber_field/widgets.pyc
 ${PYSITELIB}/phonenumber_field/widgets.pyo
