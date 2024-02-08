@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1022 2024/02/08 22:57:49 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1023 2024/02/08 23:05:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1731,3 +1731,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-compressor to 4.4 [adam 2024-02-08]
 	Updated www/py-django-sql-explorer to 4.0.2 [adam 2024-02-08]
 	Updated www/py-django-mailman3 to 1.3.11 [adam 2024-02-08]
+	Updated graphics/ristretto to 0.13.2 [gutteridge 2024-02-08]
