@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1777 2024/02/04 08:42:06 taca Exp $
+# $NetBSD: Makefile,v 1.1778 2024/02/08 13:59:34 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -711,6 +711,7 @@ SUBDIR+=	py-django-admin-sortable2
 SUBDIR+=	py-django-allauth
 SUBDIR+=	py-django-appconf
 SUBDIR+=	py-django-binary-database-files
+SUBDIR+=	py-django-bootstrap5
 SUBDIR+=	py-django-celery-beat
 SUBDIR+=	py-django-classy-tags
 SUBDIR+=	py-django-cms
