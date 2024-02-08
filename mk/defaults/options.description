@@ -319,6 +319,7 @@ graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
 groonga-httpd		Enable nginx used for groonga-httpd.
 groonga-suggest-learner	Enable Groonga suggest learner.
+grub-efi		Build grub2 for EFI platforms.
 gsasl			Enable SASL support with gsasl.
 gsl			Use GNU Scientific Library.
 gspell			Enable gspell support.
