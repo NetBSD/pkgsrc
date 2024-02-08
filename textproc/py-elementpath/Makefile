@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/10/23 06:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/02/08 06:20:04 adam Exp $
 
-DISTNAME=	elementpath-4.1.5
+DISTNAME=	elementpath-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elementpath/}
 
@@ -11,10 +10,13 @@ HOMEPAGE=	https://github.com/sissaschool/elementpath
 COMMENT=	XPath 1.0/2.0 parsers and selectors for ElementTree and lxml
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
