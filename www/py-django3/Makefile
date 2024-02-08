@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2023/11/01 20:17:00 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/02/08 22:46:48 adam Exp $
 
-DISTNAME=	Django-3.2.23
+DISTNAME=	Django-3.2.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -11,6 +11,8 @@ HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.3.2:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.2.2:../../databases/py-sqlparse
@@ -18,8 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.2.2:../../databases/py-sqlparse
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	django/bin/django-admin.py
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
@@ -30,5 +30,5 @@ post-install:
 	${MV} django-admin.py django-admin-${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
