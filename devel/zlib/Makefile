@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2024/01/25 16:41:20 thor Exp $
+# $NetBSD: Makefile,v 1.63 2024/02/08 21:33:34 adam Exp $
 
-DISTNAME=	zlib-1.2.13
+DISTNAME=	zlib-1.3.1
 CATEGORIES=	devel
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/}
 MASTER_SITES+=	http://zlib.net/
 DISTFILES=	# empty
@@ -12,7 +11,7 @@ HOMEPAGE=	https://www.zlib.net/
 COMMENT=	General purpose data compression library
 LICENSE=	zlib
 
-USE_LIBTOOL=		yes
+USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	zlib.pc.in
 
