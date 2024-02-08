@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.37 2024/01/06 22:42:42 gutteridge Exp $
+$NetBSD: README,v 1.38 2024/02/08 23:52:34 gutteridge Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -126,7 +126,7 @@ Platforms with at least a small number of users
 -----------------------------------------------
 
   HPUX
-  Minix3 (platform/Minux.mk)
+  Minix3 (platform/Minix.mk)
   OpenServer5 (SCO OpenServer, platform/SCO_SV.mk)
   SCO UnixWare
 
