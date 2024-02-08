@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/08 06:03:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -16,3 +16,4 @@ ${PYSITELIB}/jaraco/classes/meta.pyo
 ${PYSITELIB}/jaraco/classes/properties.py
 ${PYSITELIB}/jaraco/classes/properties.pyc
 ${PYSITELIB}/jaraco/classes/properties.pyo
+${PYSITELIB}/jaraco/classes/py.typed
