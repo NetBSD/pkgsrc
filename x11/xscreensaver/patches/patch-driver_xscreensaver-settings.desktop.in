@@ -1,0 +1,11 @@
+$NetBSD: patch-driver_xscreensaver-settings.desktop.in,v 1.1 2024/02/08 00:50:15 gutteridge Exp $
+
+Drop unnecessary shebang line.
+
+--- driver/xscreensaver-settings.desktop.in.orig	2023-08-02 19:16:05.536755617 +0000
++++ driver/xscreensaver-settings.desktop.in
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env xdg-open
+ [Desktop Entry]
+ Exec=xscreensaver-settings
+ Icon=xscreensaver
