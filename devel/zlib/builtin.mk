@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2024/01/13 20:07:33 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.19 2024/02/08 21:33:34 adam Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -7,7 +7,7 @@ BUILTIN_FIND_HEADERS.H_ZLIB=	zlib.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
-.if ! empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-*}
 USE_BUILTIN.zlib=	no
 .endif
 
@@ -28,7 +28,7 @@ MAKEVARS+=		IS_BUILTIN.zlib
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.zlib) && \
-    ${IS_BUILTIN.zlib:M[yY][eE][sS]} && \
+    ${IS_BUILTIN.zlib:tl} == yes && \
     empty(H_ZLIB:M__nonexistent__)
 BUILTIN_VERSION.zlib!=							\
 	${AWK} '/\#define[ 	]*ZLIB_VERSION/ {			\
@@ -52,12 +52,12 @@ USE_BUILTIN.zlib=	no
 .  else
 USE_BUILTIN.zlib=	${IS_BUILTIN.zlib}
 .    if defined(BUILTIN_PKG.zlib) && \
-        ${IS_BUILTIN.zlib:M[yY][eE][sS]}
+        ${IS_BUILTIN.zlib:tl} == yes
 USE_BUILTIN.zlib=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.zlib}
-.        if ${USE_BUILTIN.zlib:M[yY][eE][sS]}
+.        if ${USE_BUILTIN.zlib:tl} == yes
 USE_BUILTIN.zlib!=	\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.zlib:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.zlib}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -73,7 +73,7 @@ MAKEVARS+=		USE_BUILTIN.zlib
 # implementation.
 #
 .if defined(USE_ZLIB)
-.  if ${IS_BUILTIN.zlib:M[nN][oO]}
+.  if ${IS_BUILTIN.zlib:tl} == no
 USE_BUILTIN.zlib=	no
 .  endif
 .endif
@@ -83,8 +83,8 @@ USE_BUILTIN.zlib=	no
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.zlib?=	no
-.if ${CHECK_BUILTIN.zlib:M[nN][oO]}
-.  if ${USE_BUILTIN.zlib:M[yY][eE][sS]}
+.if ${CHECK_BUILTIN.zlib:tl} == no
+.  if ${USE_BUILTIN.zlib:tl} == yes
 
 BUILDLINK_TARGETS+=	fake-zlib-pc
 
