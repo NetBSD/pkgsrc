@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/03 15:23:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/08 06:02:52 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,7 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/zope.testrunner-6.2.1-py${PYVERSSUFFIX}-nspkg.pth
+${PYSITELIB}/zope.testrunner-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/zope/testrunner/__init__.py
 ${PYSITELIB}/zope/testrunner/__init__.pyc
 ${PYSITELIB}/zope/testrunner/__init__.pyo
@@ -114,6 +114,9 @@ ${PYSITELIB}/zope/testrunner/tests/test_subunit.pyo
 ${PYSITELIB}/zope/testrunner/tests/test_threadsupport.py
 ${PYSITELIB}/zope/testrunner/tests/test_threadsupport.pyc
 ${PYSITELIB}/zope/testrunner/tests/test_threadsupport.pyo
+${PYSITELIB}/zope/testrunner/tests/test_xml_output.py
+${PYSITELIB}/zope/testrunner/tests/test_xml_output.pyc
+${PYSITELIB}/zope/testrunner/tests/test_xml_output.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-arguments.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-colors.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-coverage-win32.rst
