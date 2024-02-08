@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:20:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/02/08 10:15:24 adam Exp $
 
-BLAKE2s (kazoo-2.6.1.tar.gz) = 40eb34a4db229e54440e13f0fa097aaabb446bfbc6e473bf8b02311bbbb868ad
-SHA512 (kazoo-2.6.1.tar.gz) = 613e8271bfd6c8f5ee976b6ee460478c7faad46b32995125a64312208b38755888690cd46b913ff44ba52aeb36de3ec3dd8e222985af77e99f43963a3eb48d48
-Size (kazoo-2.6.1.tar.gz) = 157425 bytes
+BLAKE2s (kazoo-2.10.0.tar.gz) = 6fd783647c0590c2202a5ff167081e96ec848574aae5b23a0cd702ff4cfeecc3
+SHA512 (kazoo-2.10.0.tar.gz) = 39c3ebb3120047420d7a6ec806994028bc39920ab62a9a06103fd6a05650aa0b26c1120895ad85673408349fa50791fb20ce7702f14bc74a246ff118806d3b03
+Size (kazoo-2.10.0.tar.gz) = 183304 bytes

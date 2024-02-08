@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/27 15:20:45 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/02/08 10:15:24 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/kazoo/__init__.py
 ${PYSITELIB}/kazoo/__init__.pyc
 ${PYSITELIB}/kazoo/__init__.pyo
@@ -53,9 +52,6 @@ ${PYSITELIB}/kazoo/protocol/serialization.pyo
 ${PYSITELIB}/kazoo/protocol/states.py
 ${PYSITELIB}/kazoo/protocol/states.pyc
 ${PYSITELIB}/kazoo/protocol/states.pyo
-${PYSITELIB}/kazoo/python2atexit.py
-${PYSITELIB}/kazoo/python2atexit.pyc
-${PYSITELIB}/kazoo/python2atexit.pyo
 ${PYSITELIB}/kazoo/recipe/__init__.py
 ${PYSITELIB}/kazoo/recipe/__init__.pyc
 ${PYSITELIB}/kazoo/recipe/__init__.pyo
@@ -107,6 +103,9 @@ ${PYSITELIB}/kazoo/testing/harness.pyo
 ${PYSITELIB}/kazoo/tests/__init__.py
 ${PYSITELIB}/kazoo/tests/__init__.pyc
 ${PYSITELIB}/kazoo/tests/__init__.pyo
+${PYSITELIB}/kazoo/tests/conftest.py
+${PYSITELIB}/kazoo/tests/conftest.pyc
+${PYSITELIB}/kazoo/tests/conftest.pyo
 ${PYSITELIB}/kazoo/tests/test_barrier.py
 ${PYSITELIB}/kazoo/tests/test_barrier.pyc
 ${PYSITELIB}/kazoo/tests/test_barrier.pyo
@@ -164,9 +163,15 @@ ${PYSITELIB}/kazoo/tests/test_queue.pyo
 ${PYSITELIB}/kazoo/tests/test_retry.py
 ${PYSITELIB}/kazoo/tests/test_retry.pyc
 ${PYSITELIB}/kazoo/tests/test_retry.pyo
+${PYSITELIB}/kazoo/tests/test_sasl.py
+${PYSITELIB}/kazoo/tests/test_sasl.pyc
+${PYSITELIB}/kazoo/tests/test_sasl.pyo
 ${PYSITELIB}/kazoo/tests/test_security.py
 ${PYSITELIB}/kazoo/tests/test_security.pyc
 ${PYSITELIB}/kazoo/tests/test_security.pyo
+${PYSITELIB}/kazoo/tests/test_selectors_select.py
+${PYSITELIB}/kazoo/tests/test_selectors_select.pyc
+${PYSITELIB}/kazoo/tests/test_selectors_select.pyo
 ${PYSITELIB}/kazoo/tests/test_threading_handler.py
 ${PYSITELIB}/kazoo/tests/test_threading_handler.pyc
 ${PYSITELIB}/kazoo/tests/test_threading_handler.pyo
