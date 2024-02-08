@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/08/16 13:52:48 hauke Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/08 11:47:15 hauke Exp $
 share/examples/glpi/crontab.sample
 share/examples/glpi/httpd-glpi.conf
 share/examples/glpi/local_define.php
@@ -21,6 +21,7 @@ share/glpi/ajax/common.tabs.php
 share/glpi/ajax/compareKbRevisions.php
 share/glpi/ajax/dashboard.php
 share/glpi/ajax/dcroom_size.php
+share/glpi/ajax/debug.php
 share/glpi/ajax/displayMessageAfterRedirect.php
 share/glpi/ajax/domainrecord_data_form.php
 share/glpi/ajax/dropdownAllItems.php
@@ -68,6 +69,7 @@ share/glpi/ajax/getKnowbaseItemAnswer.php
 share/glpi/ajax/getMapPoint.php
 share/glpi/ajax/getShareDashboardDropdownValue.php
 share/glpi/ajax/getUserPicture.php
+share/glpi/ajax/get_item_content.php
 share/glpi/ajax/helpdesk_observer.php
 share/glpi/ajax/impact.php
 share/glpi/ajax/index.php
@@ -124,13 +126,13 @@ share/glpi/ajax/uemailUpdate.php
 share/glpi/ajax/unlockobject.php
 share/glpi/ajax/updateTrackingDeviceType.php
 share/glpi/ajax/updateTranslationFields.php
+share/glpi/ajax/updateTranslationValue.php
 share/glpi/ajax/updatecurrenttab.php
 share/glpi/ajax/viewsubitem.php
 share/glpi/ajax/visibility.php
 share/glpi/apirest.md
 share/glpi/apirest.php
 share/glpi/apixmlrpc.php
-share/glpi/babel.config.js
 share/glpi/bin/console
 share/glpi/caldav.php
 share/glpi/config/.htaccess
@@ -148,7 +150,7 @@ share/glpi/css/includes/_palette_light.scss
 share/glpi/css/includes/components/_asset-form.scss
 share/glpi/css/includes/components/_browser_tree.scss
 share/glpi/css/includes/components/_buttons-group.scss
-share/glpi/css/includes/components/_debug-panel.scss
+share/glpi/css/includes/components/_debug-toolbar.scss
 share/glpi/css/includes/components/_documentation.scss
 share/glpi/css/includes/components/_fileupload.scss
 share/glpi/css/includes/components/_flatpickr.scss
@@ -168,6 +170,7 @@ share/glpi/css/includes/components/_scrollbars.scss
 share/glpi/css/includes/components/_search_input.scss
 share/glpi/css/includes/components/_select2.scss
 share/glpi/css/includes/components/_tabs.scss
+share/glpi/css/includes/components/chartist/_chartist.scss
 share/glpi/css/includes/components/chartist/_generate.scss
 share/glpi/css/includes/components/chartist/_palette_cb_seq_blue_9.scss
 share/glpi/css/includes/components/chartist/_palette_cb_seq_red_9.scss
@@ -274,6 +277,15 @@ share/glpi/css/lib/bootstrap/scss/mixins/_utilities.scss
 share/glpi/css/lib/bootstrap/scss/mixins/_visually-hidden.scss
 share/glpi/css/lib/bootstrap/scss/utilities/_api.scss
 share/glpi/css/lib/bootstrap/scss/vendor/_rfs.scss
+share/glpi/css/lib/fontsource/inter/files/inter-all-100-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-200-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-300-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-400-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-500-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-600-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-700-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-800-normal.woff
+share/glpi/css/lib/fontsource/inter/files/inter-all-900-normal.woff
 share/glpi/css/lib/fontsource/inter/files/inter-cyrillic-100-normal.woff2
 share/glpi/css/lib/fontsource/inter/files/inter-cyrillic-200-normal.woff2
 share/glpi/css/lib/fontsource/inter/files/inter-cyrillic-300-normal.woff2
@@ -433,12 +445,11 @@ share/glpi/css/lib/tabler/core/src/scss/vendor/_jsvectormap.scss
 share/glpi/css/lib/tabler/core/src/scss/vendor/_litepicker.scss
 share/glpi/css/lib/tabler/core/src/scss/vendor/_nouislider.scss
 share/glpi/css/lib/tabler/core/src/scss/vendor/_tom-select.scss
-share/glpi/css/lib/tabler/icons/iconfont/fonts/tabler-icons.eot
-share/glpi/css/lib/tabler/icons/iconfont/fonts/tabler-icons.svg
-share/glpi/css/lib/tabler/icons/iconfont/fonts/tabler-icons.ttf
-share/glpi/css/lib/tabler/icons/iconfont/fonts/tabler-icons.woff
-share/glpi/css/lib/tabler/icons/iconfont/fonts/tabler-icons.woff2
-share/glpi/css/lib/tabler/icons/iconfont/tabler-icons.scss
+share/glpi/css/lib/tabler/icons-webfont/fonts/tabler-icons.eot
+share/glpi/css/lib/tabler/icons-webfont/fonts/tabler-icons.ttf
+share/glpi/css/lib/tabler/icons-webfont/fonts/tabler-icons.woff
+share/glpi/css/lib/tabler/icons-webfont/fonts/tabler-icons.woff2
+share/glpi/css/lib/tabler/icons-webfont/tabler-icons.scss
 share/glpi/css/palettes/_defaults.scss
 share/glpi/css/palettes/aerialgreen.scss
 share/glpi/css/palettes/auror.scss
@@ -672,7 +683,6 @@ share/glpi/front/fieldunicity.form.php
 share/glpi/front/fieldunicity.php
 share/glpi/front/filesystem.form.php
 share/glpi/front/filesystem.php
-share/glpi/front/find_num.php
 share/glpi/front/fqdn.form.php
 share/glpi/front/fqdn.php
 share/glpi/front/graph.send.php
@@ -992,6 +1002,8 @@ share/glpi/front/ruledictionnaryoperatingsystem.form.php
 share/glpi/front/ruledictionnaryoperatingsystem.php
 share/glpi/front/ruledictionnaryoperatingsystemarchitecture.form.php
 share/glpi/front/ruledictionnaryoperatingsystemarchitecture.php
+share/glpi/front/ruledictionnaryoperatingsystemedition.form.php
+share/glpi/front/ruledictionnaryoperatingsystemedition.php
 share/glpi/front/ruledictionnaryoperatingsystemservicepack.form.php
 share/glpi/front/ruledictionnaryoperatingsystemservicepack.php
 share/glpi/front/ruledictionnaryoperatingsystemversion.form.php
@@ -1046,6 +1058,7 @@ share/glpi/front/slalevelaction.form.php
 share/glpi/front/slalevelcriteria.form.php
 share/glpi/front/slm.form.php
 share/glpi/front/slm.php
+share/glpi/front/smtp_oauth2_callback.php
 share/glpi/front/snmpcredential.form.php
 share/glpi/front/snmpcredential.php
 share/glpi/front/socket.form.php
@@ -1164,11 +1177,75 @@ share/glpi/install/migrations/update_10.0.0_to_10.0.1/pdf.php
 share/glpi/install/migrations/update_10.0.0_to_10.0.1/rename_itemtypes.php
 share/glpi/install/migrations/update_10.0.0_to_10.0.1/rulelocation.php
 share/glpi/install/migrations/update_10.0.0_to_10.0.1/schema_fixes.php
-share/glpi/install/migrations/update_10.0.1_to_${PKGVERSION}.php
-share/glpi/install/migrations/update_10.0.1_to_${PKGVERSION}/agent.php
-share/glpi/install/migrations/update_10.0.1_to_${PKGVERSION}/configs.php
-share/glpi/install/migrations/update_10.0.1_to_${PKGVERSION}/dates.php
-share/glpi/install/migrations/update_10.0.1_to_${PKGVERSION}/native_inventory.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/duplicate_searchopt_fixes.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/fix_document_item_index.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/item_operatingsystem.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/lockedfield.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/pendingreason.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/refusedequipment.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/states.php
+share/glpi/install/migrations/update_10.0.10_to_10.0.11/transfer.php
+share/glpi/install/migrations/update_10.0.11_to_${PKGVERSION}.php
+share/glpi/install/migrations/update_10.0.11_to_${PKGVERSION}/duplicate_searchopt_fixes.php
+share/glpi/install/migrations/update_10.0.11_to_${PKGVERSION}/log_rights.php
+share/glpi/install/migrations/update_10.0.11_to_${PKGVERSION}/user.php
+share/glpi/install/migrations/update_10.0.1_to_10.0.2.php
+share/glpi/install/migrations/update_10.0.1_to_10.0.2/agent.php
+share/glpi/install/migrations/update_10.0.1_to_10.0.2/configs.php
+share/glpi/install/migrations/update_10.0.1_to_10.0.2/dates.php
+share/glpi/install/migrations/update_10.0.1_to_10.0.2/native_inventory.php
+share/glpi/install/migrations/update_10.0.2_to_10.0.3.php
+share/glpi/install/migrations/update_10.0.2_to_10.0.3/inventory.php
+share/glpi/install/migrations/update_10.0.2_to_10.0.3/notifications.php
+share/glpi/install/migrations/update_10.0.2_to_10.0.3/schema_fixes.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4/computer.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4/config.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4/dashboard.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4/inventory.php
+share/glpi/install/migrations/update_10.0.3_to_10.0.4/ticket.php
+share/glpi/install/migrations/update_10.0.4_to_10.0.5.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/appliance.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/blacklist.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/cable.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/configs.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/inventory.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/networkport.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/queuednotification.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/rule.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/simcard.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/transfer.php
+share/glpi/install/migrations/update_10.0.5_to_10.0.6/unmanaged.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/contract.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/domains_items.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/indexes.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/oauth_smtp.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/profils.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/ruleticket.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/softwarelicense.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/ticket_fix_internal_tto_escalation.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/unmanageds.php
+share/glpi/install/migrations/update_10.0.6_to_10.0.7/wrong_fkey.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/changes.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/configs.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/dates.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/networkport.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/problems.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/queuednotification.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/ram_field.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/rule.php
+share/glpi/install/migrations/update_10.0.7_to_10.0.8/rule_tickets.php
+share/glpi/install/migrations/update_10.0.8_to_10.0.9.php
+share/glpi/install/migrations/update_10.0.8_to_10.0.9/queuednotification.php
+share/glpi/install/migrations/update_10.0.9_to_10.0.10.php
+share/glpi/install/migrations/update_10.0.9_to_10.0.10/configs.php
+share/glpi/install/migrations/update_10.0.9_to_10.0.10/ldap_fields.php
+share/glpi/install/migrations/update_10.0.9_to_10.0.10/mailcollector.php
+share/glpi/install/migrations/update_10.0.9_to_10.0.10/templates.php
 share/glpi/install/migrations/update_9.1.0_to_9.1.1.php
 share/glpi/install/migrations/update_9.1.1_to_9.1.3.php
 share/glpi/install/migrations/update_9.1.x_to_9.2.0.php
@@ -1241,9 +1318,70 @@ share/glpi/install/migrations/update_9.5.x_to_10.0.0/tickettask.php
 share/glpi/install/migrations/update_9.5.x_to_10.0.0/transfer.php
 share/glpi/install/migrations/update_9.5.x_to_10.0.0/uuids.php
 share/glpi/install/mysql/.htaccess
+share/glpi/install/mysql/glpi-0.80.0-empty.sql
+share/glpi/install/mysql/glpi-0.80.1-empty.sql
+share/glpi/install/mysql/glpi-0.80.2-empty.sql
+share/glpi/install/mysql/glpi-0.80.3-empty.sql
+share/glpi/install/mysql/glpi-0.80.4-empty.sql
+share/glpi/install/mysql/glpi-0.80.5-empty.sql
+share/glpi/install/mysql/glpi-0.80.6-empty.sql
+share/glpi/install/mysql/glpi-0.80.7-empty.sql
+share/glpi/install/mysql/glpi-0.83.0-empty.sql
+share/glpi/install/mysql/glpi-0.83.1-empty.sql
+share/glpi/install/mysql/glpi-0.83.2-empty.sql
+share/glpi/install/mysql/glpi-0.83.3-empty.sql
+share/glpi/install/mysql/glpi-0.83.4-empty.sql
+share/glpi/install/mysql/glpi-0.83.5-empty.sql
+share/glpi/install/mysql/glpi-0.83.6-empty.sql
+share/glpi/install/mysql/glpi-0.83.7-empty.sql
+share/glpi/install/mysql/glpi-0.83.8-empty.sql
+share/glpi/install/mysql/glpi-0.83.9-empty.sql
+share/glpi/install/mysql/glpi-0.84.0-empty.sql
+share/glpi/install/mysql/glpi-0.84.1-empty.sql
+share/glpi/install/mysql/glpi-0.84.2-empty.sql
+share/glpi/install/mysql/glpi-0.84.3-empty.sql
+share/glpi/install/mysql/glpi-0.84.4-empty.sql
+share/glpi/install/mysql/glpi-0.84.5-empty.sql
+share/glpi/install/mysql/glpi-0.84.6-empty.sql
+share/glpi/install/mysql/glpi-0.84.7-empty.sql
+share/glpi/install/mysql/glpi-0.84.8-empty.sql
+share/glpi/install/mysql/glpi-0.85.0-empty.sql
+share/glpi/install/mysql/glpi-0.85.1-empty.sql
+share/glpi/install/mysql/glpi-0.85.2-empty.sql
+share/glpi/install/mysql/glpi-0.85.3-empty.sql
+share/glpi/install/mysql/glpi-0.85.4-empty.sql
+share/glpi/install/mysql/glpi-0.85.5-empty.sql
+share/glpi/install/mysql/glpi-0.90.0-empty.sql
+share/glpi/install/mysql/glpi-0.90.1-empty.sql
+share/glpi/install/mysql/glpi-0.90.2-empty.sql
+share/glpi/install/mysql/glpi-0.90.3-empty.sql
+share/glpi/install/mysql/glpi-0.90.4-empty.sql
+share/glpi/install/mysql/glpi-0.90.5-empty.sql
 share/glpi/install/mysql/glpi-10.0.0-empty.sql
 share/glpi/install/mysql/glpi-10.0.1-empty.sql
-share/glpi/install/mysql/${PKGNAME}-empty.sql
+share/glpi/install/mysql/glpi-10.0.10-empty.sql
+share/glpi/install/mysql/glpi-10.0.11-empty.sql
+share/glpi/install/mysql/glpi-10.0.2-empty.sql
+share/glpi/install/mysql/glpi-10.0.3-empty.sql
+share/glpi/install/mysql/glpi-10.0.4-empty.sql
+share/glpi/install/mysql/glpi-10.0.5-empty.sql
+share/glpi/install/mysql/glpi-10.0.6-empty.sql
+share/glpi/install/mysql/glpi-10.0.7-empty.sql
+share/glpi/install/mysql/glpi-10.0.8-empty.sql
+share/glpi/install/mysql/glpi-10.0.9-empty.sql
+share/glpi/install/mysql/glpi-9.1.0-empty.sql
+share/glpi/install/mysql/glpi-9.1.1-empty.sql
+share/glpi/install/mysql/glpi-9.1.2-empty.sql
+share/glpi/install/mysql/glpi-9.1.3-empty.sql
+share/glpi/install/mysql/glpi-9.1.4-empty.sql
+share/glpi/install/mysql/glpi-9.1.5-empty.sql
+share/glpi/install/mysql/glpi-9.1.6-empty.sql
+share/glpi/install/mysql/glpi-9.1.7-empty.sql
+share/glpi/install/mysql/glpi-9.2.0-empty.sql
+share/glpi/install/mysql/glpi-9.2.1-empty.sql
+share/glpi/install/mysql/glpi-9.2.2-empty.sql
+share/glpi/install/mysql/glpi-9.2.3-empty.sql
+share/glpi/install/mysql/glpi-9.2.4-empty.sql
 share/glpi/install/mysql/glpi-9.3.0-empty.sql
 share/glpi/install/mysql/glpi-9.3.1-empty.sql
 share/glpi/install/mysql/glpi-9.3.2-empty.sql
@@ -1258,6 +1396,10 @@ share/glpi/install/mysql/glpi-9.4.5-empty.sql
 share/glpi/install/mysql/glpi-9.4.6-empty.sql
 share/glpi/install/mysql/glpi-9.5.0-empty.sql
 share/glpi/install/mysql/glpi-9.5.1-empty.sql
+share/glpi/install/mysql/glpi-9.5.10-empty.sql
+share/glpi/install/mysql/glpi-9.5.11-empty.sql
+share/glpi/install/mysql/glpi-9.5.12-empty.sql
+share/glpi/install/mysql/glpi-9.5.13-empty.sql
 share/glpi/install/mysql/glpi-9.5.2-empty.sql
 share/glpi/install/mysql/glpi-9.5.3-empty.sql
 share/glpi/install/mysql/glpi-9.5.4-empty.sql
@@ -1265,6 +1407,8 @@ share/glpi/install/mysql/glpi-9.5.5-empty.sql
 share/glpi/install/mysql/glpi-9.5.6-empty.sql
 share/glpi/install/mysql/glpi-9.5.7-empty.sql
 share/glpi/install/mysql/glpi-9.5.8-empty.sql
+share/glpi/install/mysql/glpi-9.5.9-empty.sql
+share/glpi/install/mysql/glpi-empty.sql
 share/glpi/install/update.php
 share/glpi/js/Forms/FaIconSelector.js
 share/glpi/js/Forms/FaIconSelector.min.js
@@ -1296,6 +1440,8 @@ share/glpi/js/marketplace.js
 share/glpi/js/marketplace.min.js
 share/glpi/js/misc.js
 share/glpi/js/misc.min.js
+share/glpi/js/modules/Debug/Debug.js
+share/glpi/js/modules/Debug/Debug.min.js
 share/glpi/js/modules/Kanban/Kanban.js
 share/glpi/js/modules/Kanban/Kanban.min.js
 share/glpi/js/modules/Search/GenericView.js
@@ -1312,6 +1458,7 @@ share/glpi/js/modules/SearchTokenizer/SearchTokenizer.js
 share/glpi/js/modules/SearchTokenizer/SearchTokenizer.min.js
 share/glpi/js/modules/SearchTokenizer/SearchTokenizerResult.js
 share/glpi/js/modules/SearchTokenizer/SearchTokenizerResult.min.js
+share/glpi/js/modules/package.json
 share/glpi/js/notifications_ajax.js
 share/glpi/js/notifications_ajax.min.js
 share/glpi/js/planning.js
@@ -1320,6 +1467,17 @@ share/glpi/js/rack.js
 share/glpi/js/rack.min.js
 share/glpi/js/reservations.js
 share/glpi/js/reservations.min.js
+share/glpi/js/webkit_fix.js
+share/glpi/js/webkit_fix.min.js
+share/glpi/lib/blueimp/jquery-file-upload/LICENSE.txt
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload-process.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload-process.min.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload-validate.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload-validate.min.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.fileupload.min.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.iframe-transport.js
+share/glpi/lib/blueimp/jquery-file-upload/jquery.iframe-transport.min.js
 share/glpi/lib/bundles/base.js
 share/glpi/lib/bundles/base.min.js
 share/glpi/lib/bundles/chartist.js
@@ -1478,7 +1636,6 @@ share/glpi/locales/zh_HK.mo
 share/glpi/locales/zh_HK.po
 share/glpi/locales/zh_TW.mo
 share/glpi/locales/zh_TW.po
-share/glpi/marketplace/remove.txt
 share/glpi/pics/PICS-AUTHORS.txt
 share/glpi/pics/accepted.png
 share/glpi/pics/actualiser.png
@@ -1746,7 +1903,7 @@ share/glpi/pics/waiting.png
 share/glpi/pics/warning.png
 share/glpi/pics/warning_min.png
 share/glpi/pics/web.png
-share/glpi/plugins/remove.txt
+share/glpi/public/index.php
 share/glpi/public/lib/base.css
 share/glpi/public/lib/base.css.map
 share/glpi/public/lib/base.js
@@ -2260,6 +2417,8 @@ share/glpi/public/lib/tinymce-i18n/langs6/ar.js
 share/glpi/public/lib/tinymce-i18n/langs6/ar.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/az.js
 share/glpi/public/lib/tinymce-i18n/langs6/az.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/be.js
+share/glpi/public/lib/tinymce-i18n/langs6/be.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/bg_BG.js
 share/glpi/public/lib/tinymce-i18n/langs6/bg_BG.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/bn_BD.js
@@ -2368,10 +2527,20 @@ share/glpi/public/lib/tinymce-i18n/langs6/ug.js
 share/glpi/public/lib/tinymce-i18n/langs6/ug.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/uk.js
 share/glpi/public/lib/tinymce-i18n/langs6/uk.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/uz.js
+share/glpi/public/lib/tinymce-i18n/langs6/uz.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/vi.js
 share/glpi/public/lib/tinymce-i18n/langs6/vi.min.js
 share/glpi/public/lib/tinymce-i18n/langs6/zh-Hans.js
 share/glpi/public/lib/tinymce-i18n/langs6/zh-Hans.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh-Hant.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh-Hant.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_HK.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_HK.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_MO.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_MO.min.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_SG.js
+share/glpi/public/lib/tinymce-i18n/langs6/zh_SG.min.js
 share/glpi/public/lib/tinymce.js
 share/glpi/public/lib/tinymce.js.map
 share/glpi/public/lib/tinymce.min.js
@@ -2419,6 +2588,16 @@ share/glpi/public/lib/tinymce/skins/ui/tinymce-5/skin.css
 share/glpi/public/lib/tinymce/skins/ui/tinymce-5/skin.min.css
 share/glpi/public/lib/tinymce/skins/ui/tinymce-5/skin.shadowdom.css
 share/glpi/public/lib/tinymce/skins/ui/tinymce-5/skin.shadowdom.min.css
+share/glpi/resources/.htaccess
+share/glpi/resources/Rules/RuleAsset.xml
+share/glpi/resources/Rules/RuleDictionnaryOperatingSystem.xml
+share/glpi/resources/Rules/RuleDictionnaryOperatingSystemEdition.xml
+share/glpi/resources/Rules/RuleDictionnaryOperatingSystemVersion.xml
+share/glpi/resources/Rules/RuleImportAsset.xml
+share/glpi/resources/Rules/RuleMailCollector.xml
+share/glpi/resources/Rules/RuleRight.xml
+share/glpi/resources/Rules/RuleSoftwareCategory.xml
+share/glpi/resources/Rules/RuleTicket.xml
 share/glpi/sound/sound_a.mp3
 share/glpi/sound/sound_a.ogg
 share/glpi/sound/sound_b.mp3
@@ -2563,6 +2742,7 @@ share/glpi/src/Console/Cache/ClearCommand.php
 share/glpi/src/Console/Cache/ConfigureCommand.php
 share/glpi/src/Console/Cache/DebugCommand.php
 share/glpi/src/Console/Cache/SetNamespacePrefixCommand.php
+share/glpi/src/Console/Command/ConfigurationCommandInterface.php
 share/glpi/src/Console/Command/ForceNoPluginsOptionCommandInterface.php
 share/glpi/src/Console/Command/GlpiCommandInterface.php
 share/glpi/src/Console/CommandLoader.php
@@ -2573,6 +2753,8 @@ share/glpi/src/Console/Database/ConfigureCommand.php
 share/glpi/src/Console/Database/EnableTimezonesCommand.php
 share/glpi/src/Console/Database/InstallCommand.php
 share/glpi/src/Console/Database/UpdateCommand.php
+share/glpi/src/Console/Diagnostic/CheckDocumentsIntegrityCommand.php
+share/glpi/src/Console/Diagnostic/CheckHtmlEncodingCommand.php
 share/glpi/src/Console/Exception/EarlyExitException.php
 share/glpi/src/Console/Ldap/SynchronizeUsersCommand.php
 share/glpi/src/Console/Maintenance/DisableMaintenanceModeCommand.php
@@ -2597,6 +2779,7 @@ share/glpi/src/Console/Plugin/AbstractPluginCommand.php
 share/glpi/src/Console/Plugin/ActivateCommand.php
 share/glpi/src/Console/Plugin/DeactivateCommand.php
 share/glpi/src/Console/Plugin/InstallCommand.php
+share/glpi/src/Console/Plugin/UninstallCommand.php
 share/glpi/src/Console/Rules/ProcessSoftwareCategoryRulesCommand.php
 share/glpi/src/Console/Rules/ReplayDictionnaryRulesCommand.php
 share/glpi/src/Console/Security/ChangekeyCommand.php
@@ -2660,6 +2843,17 @@ share/glpi/src/DBmysqlIterator.php
 share/glpi/src/DCRoom.php
 share/glpi/src/Dashboard/Dashboard.php
 share/glpi/src/Dashboard/Filter.php
+share/glpi/src/Dashboard/Filters/AbstractFilter.php
+share/glpi/src/Dashboard/Filters/DatesFilter.php
+share/glpi/src/Dashboard/Filters/DatesModFilter.php
+share/glpi/src/Dashboard/Filters/GroupTechFilter.php
+share/glpi/src/Dashboard/Filters/ItilCategoryFilter.php
+share/glpi/src/Dashboard/Filters/LocationFilter.php
+share/glpi/src/Dashboard/Filters/ManufacturerFilter.php
+share/glpi/src/Dashboard/Filters/RequestTypeFilter.php
+share/glpi/src/Dashboard/Filters/StateFilter.php
+share/glpi/src/Dashboard/Filters/TicketTypeFilter.php
+share/glpi/src/Dashboard/Filters/UserTechFilter.php
 share/glpi/src/Dashboard/Grid.php
 share/glpi/src/Dashboard/Item.php
 share/glpi/src/Dashboard/Provider.php
@@ -2671,6 +2865,10 @@ share/glpi/src/DatabaseInstanceCategory.php
 share/glpi/src/DatabaseInstanceType.php
 share/glpi/src/Datacenter.php
 share/glpi/src/DbUtils.php
+share/glpi/src/Debug/Profile.php
+share/glpi/src/Debug/Profiler.php
+share/glpi/src/Debug/ProfilerSection.php
+share/glpi/src/Debug/Toolbar.php
 share/glpi/src/DeviceBattery.php
 share/glpi/src/DeviceBatteryModel.php
 share/glpi/src/DeviceBatteryType.php
@@ -2744,6 +2942,7 @@ share/glpi/src/Features/Clonable.php
 share/glpi/src/Features/DCBreadcrumb.php
 share/glpi/src/Features/Inventoriable.php
 share/glpi/src/Features/Kanban.php
+share/glpi/src/Features/ParentStatus.php
 share/glpi/src/Features/PlanningEvent.php
 share/glpi/src/Features/Teamwork.php
 share/glpi/src/Features/Timeline.php
@@ -2781,6 +2980,8 @@ share/glpi/src/HTMLTableUnknownHeaders.php
 share/glpi/src/HTMLTableUnknownHeadersOrder.php
 share/glpi/src/Holiday.php
 share/glpi/src/Html.php
+share/glpi/src/Http/Firewall.php
+share/glpi/src/Http/ProxyRouter.php
 share/glpi/src/Http/Response.php
 share/glpi/src/IPAddress.php
 share/glpi/src/IPAddress_IPNetwork.php
@@ -2837,6 +3038,7 @@ share/glpi/src/Inventory/Asset/Sensor.php
 share/glpi/src/Inventory/Asset/Simcard.php
 share/glpi/src/Inventory/Asset/Software.php
 share/glpi/src/Inventory/Asset/SoundCard.php
+share/glpi/src/Inventory/Asset/Unmanaged.php
 share/glpi/src/Inventory/Asset/VirtualMachine.php
 share/glpi/src/Inventory/Asset/Volume.php
 share/glpi/src/Inventory/Conf.php
@@ -2898,6 +3100,10 @@ share/glpi/src/Lock.php
 share/glpi/src/Lockedfield.php
 share/glpi/src/Log.php
 share/glpi/src/Mail/Protocol/ProtocolInterface.php
+share/glpi/src/Mail/SMTP/OauthConfig.php
+share/glpi/src/Mail/SMTP/OauthProvider/Azure.php
+share/glpi/src/Mail/SMTP/OauthProvider/Google.php
+share/glpi/src/Mail/SMTP/OauthProvider/ProviderInterface.php
 share/glpi/src/MailCollector.php
 share/glpi/src/ManualLink.php
 share/glpi/src/Manufacturer.php
@@ -2958,7 +3164,7 @@ share/glpi/src/NotificationTargetChange.php
 share/glpi/src/NotificationTargetCommonITILObject.php
 share/glpi/src/NotificationTargetConsumableItem.php
 share/glpi/src/NotificationTargetContract.php
-share/glpi/src/NotificationTargetCrontask.php
+share/glpi/src/NotificationTargetCronTask.php
 share/glpi/src/NotificationTargetDBConnection.php
 share/glpi/src/NotificationTargetDomain.php
 share/glpi/src/NotificationTargetFieldUnicity.php
@@ -3099,6 +3305,8 @@ share/glpi/src/RuleDictionnaryOperatingSystem.php
 share/glpi/src/RuleDictionnaryOperatingSystemArchitecture.php
 share/glpi/src/RuleDictionnaryOperatingSystemArchitectureCollection.php
 share/glpi/src/RuleDictionnaryOperatingSystemCollection.php
+share/glpi/src/RuleDictionnaryOperatingSystemEdition.php
+share/glpi/src/RuleDictionnaryOperatingSystemEditionCollection.php
 share/glpi/src/RuleDictionnaryOperatingSystemServicePack.php
 share/glpi/src/RuleDictionnaryOperatingSystemServicePackCollection.php
 share/glpi/src/RuleDictionnaryOperatingSystemVersion.php
@@ -3137,6 +3345,7 @@ share/glpi/src/RuleSoftwareCategory.php
 share/glpi/src/RuleSoftwareCategoryCollection.php
 share/glpi/src/RuleTicket.php
 share/glpi/src/RuleTicketCollection.php
+share/glpi/src/Rules/RulesManager.php
 share/glpi/src/SLA.php
 share/glpi/src/SLM.php
 share/glpi/src/SNMPCredential.php
@@ -3187,6 +3396,7 @@ share/glpi/src/System/Diagnostic/DatabaseKeysChecker.php
 share/glpi/src/System/Diagnostic/DatabaseSchemaConsistencyChecker.php
 share/glpi/src/System/Diagnostic/DatabaseSchemaIntegrityChecker.php
 share/glpi/src/System/Requirement/AbstractRequirement.php
+share/glpi/src/System/Requirement/DataDirectoriesProtectedPath.php
 share/glpi/src/System/Requirement/DbConfiguration.php
 share/glpi/src/System/Requirement/DbEngine.php
 share/glpi/src/System/Requirement/DbTimezones.php
@@ -3197,14 +3407,19 @@ share/glpi/src/System/Requirement/ExtensionClass.php
 share/glpi/src/System/Requirement/ExtensionConstant.php
 share/glpi/src/System/Requirement/ExtensionFunction.php
 share/glpi/src/System/Requirement/ExtensionGroup.php
+share/glpi/src/System/Requirement/InstallationNotOverriden.php
+share/glpi/src/System/Requirement/IntegerSize.php
 share/glpi/src/System/Requirement/LogsWriteAccess.php
 share/glpi/src/System/Requirement/MemoryLimit.php
 share/glpi/src/System/Requirement/MysqliMysqlnd.php
+share/glpi/src/System/Requirement/PhpSupportedVersion.php
 share/glpi/src/System/Requirement/PhpVersion.php
 share/glpi/src/System/Requirement/ProtectedWebAccess.php
 share/glpi/src/System/Requirement/RequirementInterface.php
+share/glpi/src/System/Requirement/SafeDocumentRoot.php
 share/glpi/src/System/Requirement/SeLinux.php
 share/glpi/src/System/Requirement/SessionsConfiguration.php
+share/glpi/src/System/Requirement/SessionsSecurityConfiguration.php
 share/glpi/src/System/RequirementsList.php
 share/glpi/src/System/RequirementsManager.php
 share/glpi/src/System/Status/StatusChecker.php
@@ -3229,14 +3444,18 @@ share/glpi/src/Ticket_User.php
 share/glpi/src/Timer.php
 share/glpi/src/Toolbox.php
 share/glpi/src/Toolbox/DataExport.php
+share/glpi/src/Toolbox/DatabaseSchema.php
+share/glpi/src/Toolbox/Filesystem.php
 share/glpi/src/Toolbox/FrontEnd.php
 share/glpi/src/Toolbox/MarkdownBuilder.php
 share/glpi/src/Toolbox/Sanitizer.php
+share/glpi/src/Toolbox/URL.php
 share/glpi/src/Toolbox/VersionParser.php
 share/glpi/src/Transfer.php
 share/glpi/src/USBVendor.php
 share/glpi/src/Unmanaged.php
 share/glpi/src/Update.php
+share/glpi/src/UploadHandler.php
 share/glpi/src/User.php
 share/glpi/src/UserCategory.php
 share/glpi/src/UserEmail.php
@@ -3250,7 +3469,6 @@ share/glpi/src/WifiNetwork.php
 share/glpi/src/XHProf.php
 share/glpi/src/XML.php
 share/glpi/status.php
-share/glpi/stylelint.config.js
 share/glpi/templates/anonymous_helpdesk.html.twig
 share/glpi/templates/central/lists/itemtype_count.html.twig
 share/glpi/templates/central/messages.html.twig
@@ -3259,14 +3477,22 @@ share/glpi/templates/components/alerts_macros.html.twig
 share/glpi/templates/components/checkbox_matrix.html.twig
 share/glpi/templates/components/dashboard/widget_form.html.twig
 share/glpi/templates/components/dates_timeline.html.twig
+share/glpi/templates/components/debug/debug_toolbar.html.twig
 share/glpi/templates/components/dropdown/limit.html.twig
 share/glpi/templates/components/form/buttons.html.twig
+share/glpi/templates/components/form/computerantivirus.html.twig
+share/glpi/templates/components/form/computervirtualmachine.html.twig
 share/glpi/templates/components/form/dates.html.twig
 share/glpi/templates/components/form/fields_macros.html.twig
 share/glpi/templates/components/form/flags.html.twig
 share/glpi/templates/components/form/header.html.twig
+share/glpi/templates/components/form/header_content.html.twig
 share/glpi/templates/components/form/inventory_info.html.twig
+share/glpi/templates/components/form/item_device.html.twig
+share/glpi/templates/components/form/item_disk.html.twig
+share/glpi/templates/components/form/link_existing_or_new.html.twig
 share/glpi/templates/components/form/modals_macros.html.twig
+share/glpi/templates/components/form/networkname.html.twig
 share/glpi/templates/components/form/pictures.html.twig
 share/glpi/templates/components/form/single-action.html.twig
 share/glpi/templates/components/form/snmpcredential.html.twig
@@ -3315,6 +3541,7 @@ share/glpi/templates/components/messages_after_redirect_toasts.html.twig
 share/glpi/templates/components/modal.html.twig
 share/glpi/templates/components/pager.html.twig
 share/glpi/templates/components/photoswipe.html.twig
+share/glpi/templates/components/plugin_uninstall_modal.html.twig
 share/glpi/templates/components/rss_feed.html.twig
 share/glpi/templates/components/search/controls.html.twig
 share/glpi/templates/components/search/display_data.html.twig
@@ -3360,6 +3587,7 @@ share/glpi/templates/pages/admin/events_list.html.twig
 share/glpi/templates/pages/admin/inventory/agent.html.twig
 share/glpi/templates/pages/admin/inventory/lockedfield.html.twig
 share/glpi/templates/pages/admin/inventory/upload_form.html.twig
+share/glpi/templates/pages/admin/inventory/upload_result.html.twig
 share/glpi/templates/pages/admin/ldap.choose_directory.html.twig
 share/glpi/templates/pages/admin/ldap.groups.html.twig
 share/glpi/templates/pages/admin/ldap.users.html.twig
@@ -3377,69 +3605,23 @@ share/glpi/templates/pages/assets/socket.html.twig
 share/glpi/templates/pages/assets/software.html.twig
 share/glpi/templates/pages/assets/unmanaged.html.twig
 share/glpi/templates/pages/login.html.twig
+share/glpi/templates/pages/login_error.html.twig
 share/glpi/templates/pages/management/appliance.html.twig
 share/glpi/templates/pages/management/certificate.html.twig
 share/glpi/templates/pages/management/contract.html.twig
 share/glpi/templates/pages/management/line.html.twig
 share/glpi/templates/pages/management/softwarelicense.html.twig
 share/glpi/templates/pages/self-service/home.html.twig
+share/glpi/templates/pages/setup/apiclient.html.twig
 share/glpi/templates/pages/setup/authentication.html.twig
 share/glpi/templates/pages/setup/dropdowns_list.html.twig
+share/glpi/templates/pages/setup/general/base_form.html.twig
+share/glpi/templates/pages/setup/general/general_setup.html.twig
 share/glpi/templates/pages/setup/setup_notifications.html.twig
+share/glpi/templates/pages/tools/project_task.html.twig
 share/glpi/templates/password_form.html.twig
+share/glpi/vendor/.htaccess
 share/glpi/vendor/autoload.php
-share/glpi/vendor/blueimp/jquery-file-upload/LICENSE.txt
-share/glpi/vendor/blueimp/jquery-file-upload/README.md
-share/glpi/vendor/blueimp/jquery-file-upload/SECURITY.md
-share/glpi/vendor/blueimp/jquery-file-upload/VULNERABILITIES.md
-share/glpi/vendor/blueimp/jquery-file-upload/composer.json
-share/glpi/vendor/blueimp/jquery-file-upload/cors/postmessage.html
-share/glpi/vendor/blueimp/jquery-file-upload/cors/result.html
-share/glpi/vendor/blueimp/jquery-file-upload/css/jquery.fileupload-noscript.css
-share/glpi/vendor/blueimp/jquery-file-upload/css/jquery.fileupload-ui-noscript.css
-share/glpi/vendor/blueimp/jquery-file-upload/css/jquery.fileupload-ui.css
-share/glpi/vendor/blueimp/jquery-file-upload/css/jquery.fileupload.css
-share/glpi/vendor/blueimp/jquery-file-upload/docker-compose.yml
-share/glpi/vendor/blueimp/jquery-file-upload/img/loading.gif
-share/glpi/vendor/blueimp/jquery-file-upload/img/progressbar.gif
-share/glpi/vendor/blueimp/jquery-file-upload/index.html
-share/glpi/vendor/blueimp/jquery-file-upload/js/cors/jquery.postmessage-transport.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/cors/jquery.xdr-transport.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/demo.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-audio.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-image.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-process.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-ui.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-validate.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload-video.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.fileupload.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/jquery.iframe-transport.js
-share/glpi/vendor/blueimp/jquery-file-upload/js/vendor/jquery.ui.widget.js
-share/glpi/vendor/blueimp/jquery-file-upload/package-lock.json
-share/glpi/vendor/blueimp/jquery-file-upload/package.json
-share/glpi/vendor/blueimp/jquery-file-upload/server/gae-python/app.yaml
-share/glpi/vendor/blueimp/jquery-file-upload/server/gae-python/main.py
-share/glpi/vendor/blueimp/jquery-file-upload/server/gae-python/static/favicon.ico
-share/glpi/vendor/blueimp/jquery-file-upload/server/gae-python/static/robots.txt
-share/glpi/vendor/blueimp/jquery-file-upload/server/php/Dockerfile
-share/glpi/vendor/blueimp/jquery-file-upload/server/php/UploadHandler.php
-share/glpi/vendor/blueimp/jquery-file-upload/server/php/files/.htaccess
-share/glpi/vendor/blueimp/jquery-file-upload/server/php/index.php
-share/glpi/vendor/blueimp/jquery-file-upload/server/php/php.ini
-share/glpi/vendor/blueimp/jquery-file-upload/test/index.html
-share/glpi/vendor/blueimp/jquery-file-upload/test/unit.js
-share/glpi/vendor/blueimp/jquery-file-upload/test/vendor/chai.js
-share/glpi/vendor/blueimp/jquery-file-upload/test/vendor/mocha.css
-share/glpi/vendor/blueimp/jquery-file-upload/test/vendor/mocha.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/LICENSE.txt
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/assets/black+white-3x2.jpg
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/assets/black+white-60x40.gif
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/conf/chrome.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/conf/firefox.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/hooks/index.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/test/pages/file-upload.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/test/specs/01-file-upload.js
-share/glpi/vendor/blueimp/jquery-file-upload/wdio/wdio.conf.js
 share/glpi/vendor/brick/math/CHANGELOG.md
 share/glpi/vendor/brick/math/LICENSE
 share/glpi/vendor/brick/math/SECURITY.md
@@ -3487,10 +3669,6 @@ share/glpi/vendor/donatj/phpuseragentparser/CONTRIBUTING.md
 share/glpi/vendor/donatj/phpuseragentparser/LICENSE.md
 share/glpi/vendor/donatj/phpuseragentparser/Makefile
 share/glpi/vendor/donatj/phpuseragentparser/README.md
-share/glpi/vendor/donatj/phpuseragentparser/bin/benchmark.php
-share/glpi/vendor/donatj/phpuseragentparser/bin/constant_generator.php
-share/glpi/vendor/donatj/phpuseragentparser/bin/init_user_agent.php
-share/glpi/vendor/donatj/phpuseragentparser/bin/user_agent_sorter.php
 share/glpi/vendor/donatj/phpuseragentparser/composer.json
 share/glpi/vendor/donatj/phpuseragentparser/phpunit.xml.dist
 share/glpi/vendor/donatj/phpuseragentparser/src/UserAgent/Browsers.php
@@ -3499,14 +3677,22 @@ share/glpi/vendor/donatj/phpuseragentparser/src/UserAgent/UserAgent.php
 share/glpi/vendor/donatj/phpuseragentparser/src/UserAgent/UserAgentInterface.php
 share/glpi/vendor/donatj/phpuseragentparser/src/UserAgent/UserAgentParser.php
 share/glpi/vendor/donatj/phpuseragentparser/src/UserAgentParser.php
-share/glpi/vendor/donatj/phpuseragentparser/tests/UserAgentParserFunctionTest.php
-share/glpi/vendor/donatj/phpuseragentparser/tests/UserAgentParserObjectTest.php
-share/glpi/vendor/donatj/phpuseragentparser/tests/user_agents.dist.json
 share/glpi/vendor/elvanto/litemoji/LICENSE
 share/glpi/vendor/elvanto/litemoji/README.md
 share/glpi/vendor/elvanto/litemoji/composer.json
 share/glpi/vendor/elvanto/litemoji/src/LitEmoji.php
 share/glpi/vendor/elvanto/litemoji/src/shortcodes-array.php
+share/glpi/vendor/firebase/php-jwt/CHANGELOG.md
+share/glpi/vendor/firebase/php-jwt/LICENSE
+share/glpi/vendor/firebase/php-jwt/README.md
+share/glpi/vendor/firebase/php-jwt/composer.json
+share/glpi/vendor/firebase/php-jwt/src/BeforeValidException.php
+share/glpi/vendor/firebase/php-jwt/src/CachedKeySet.php
+share/glpi/vendor/firebase/php-jwt/src/ExpiredException.php
+share/glpi/vendor/firebase/php-jwt/src/JWK.php
+share/glpi/vendor/firebase/php-jwt/src/JWT.php
+share/glpi/vendor/firebase/php-jwt/src/Key.php
+share/glpi/vendor/firebase/php-jwt/src/SignatureInvalidException.php
 share/glpi/vendor/glpi-project/inventory_format/CHANGELOG.md
 share/glpi/vendor/glpi-project/inventory_format/LICENSE
 share/glpi/vendor/glpi-project/inventory_format/README.md
@@ -3516,56 +3702,17 @@ share/glpi/vendor/glpi-project/inventory_format/bin/refresh_hw_sources
 share/glpi/vendor/glpi-project/inventory_format/bin/validate
 share/glpi/vendor/glpi-project/inventory_format/composer.json
 share/glpi/vendor/glpi-project/inventory_format/data/README.md
-share/glpi/vendor/glpi-project/inventory_format/data/iftype.csv
 share/glpi/vendor/glpi-project/inventory_format/data/iftype.json
-share/glpi/vendor/glpi-project/inventory_format/data/oui.txt
 share/glpi/vendor/glpi-project/inventory_format/data/ouis.json
-share/glpi/vendor/glpi-project/inventory_format/data/pci.ids
 share/glpi/vendor/glpi-project/inventory_format/data/pciid.json
-share/glpi/vendor/glpi-project/inventory_format/data/usb.ids
 share/glpi/vendor/glpi-project/inventory_format/data/usbid.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1_partial_batteries.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1_partial_cpu.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1_partial_memory.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1_partial_softs.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_1_partial_volumes.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_2.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_2_partial_dbs.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_2_partial_vms.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_3.json
-share/glpi/vendor/glpi-project/inventory_format/examples/computer_3_updated.json
-share/glpi/vendor/glpi-project/inventory_format/examples/networkequipment_1.json
-share/glpi/vendor/glpi-project/inventory_format/examples/networkequipment_2.json
-share/glpi/vendor/glpi-project/inventory_format/examples/networkequipment_3.json
-share/glpi/vendor/glpi-project/inventory_format/examples/networkequipment_4.json
-share/glpi/vendor/glpi-project/inventory_format/examples/networkequipment_5.json
-share/glpi/vendor/glpi-project/inventory_format/examples/phone_1.json
-share/glpi/vendor/glpi-project/inventory_format/examples/printer_1.json
 share/glpi/vendor/glpi-project/inventory_format/inventory.schema.json
 share/glpi/vendor/glpi-project/inventory_format/lib/php/Converter.php
 share/glpi/vendor/glpi-project/inventory_format/lib/php/FilesToJSON.php
+share/glpi/vendor/glpi-project/inventory_format/original-netdiscovery.md
+share/glpi/vendor/glpi-project/inventory_format/original-netinventory.md
 share/glpi/vendor/glpi-project/inventory_format/original.md
-share/glpi/vendor/glpi-project/inventory_format/source_files/oui.txt
-share/glpi/vendor/glpi-project/inventory_format/source_files/pci.ids
-share/glpi/vendor/glpi-project/inventory_format/source_files/smi-numbers-5.csv
-share/glpi/vendor/glpi-project/inventory_format/source_files/usb.ids
-share/glpi/vendor/glpi-project/inventory_format/tests/Glpi/Inventory/tests/units/Converter.php
-share/glpi/vendor/glpi-project/inventory_format/tests/Glpi/Inventory/tests/units/FilesToJSON.php
-share/glpi/vendor/glpi-project/inventory_format/tests/bootstrap.php
-share/glpi/vendor/glpi-project/inventory_format/tests/data/1.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/10.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/11.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/12.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/2.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/3.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/4.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/5-good.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/5.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/6.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/7.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/8.xml
-share/glpi/vendor/glpi-project/inventory_format/tests/data/9.xml
+share/glpi/vendor/glpi-project/inventory_format/phpstan.neon
 share/glpi/vendor/guzzlehttp/guzzle/CHANGELOG.md
 share/glpi/vendor/guzzlehttp/guzzle/LICENSE
 share/glpi/vendor/guzzlehttp/guzzle/README.md
@@ -3614,7 +3761,6 @@ share/glpi/vendor/guzzlehttp/guzzle/src/functions.php
 share/glpi/vendor/guzzlehttp/guzzle/src/functions_include.php
 share/glpi/vendor/guzzlehttp/promises/CHANGELOG.md
 share/glpi/vendor/guzzlehttp/promises/LICENSE
-share/glpi/vendor/guzzlehttp/promises/Makefile
 share/glpi/vendor/guzzlehttp/promises/README.md
 share/glpi/vendor/guzzlehttp/promises/composer.json
 share/glpi/vendor/guzzlehttp/promises/src/AggregateException.php
@@ -3674,27 +3820,8 @@ share/glpi/vendor/html2text/html2text/README.md
 share/glpi/vendor/html2text/html2text/composer.json
 share/glpi/vendor/html2text/html2text/phpunit.xml.dist
 share/glpi/vendor/html2text/html2text/src/Html2Text.php
-share/glpi/vendor/html2text/html2text/test/BasicTest.php
-share/glpi/vendor/html2text/html2text/test/BlockquoteTest.php
-share/glpi/vendor/html2text/html2text/test/ConstructorTest.php
-share/glpi/vendor/html2text/html2text/test/DefinitionListTest.php
-share/glpi/vendor/html2text/html2text/test/DelTest.php
-share/glpi/vendor/html2text/html2text/test/HtmlCharsTest.php
-share/glpi/vendor/html2text/html2text/test/ImageTest.php
-share/glpi/vendor/html2text/html2text/test/InsTest.php
-share/glpi/vendor/html2text/html2text/test/LinkTest.php
-share/glpi/vendor/html2text/html2text/test/ListTest.php
-share/glpi/vendor/html2text/html2text/test/PreTest.php
-share/glpi/vendor/html2text/html2text/test/PrintTest.php
-share/glpi/vendor/html2text/html2text/test/SearchReplaceTest.php
-share/glpi/vendor/html2text/html2text/test/SpanTest.php
-share/glpi/vendor/html2text/html2text/test/StrToUpperTest.php
-share/glpi/vendor/html2text/html2text/test/TableTest.php
-share/glpi/vendor/html2text/html2text/test/bootstrap.php
-share/glpi/vendor/htmlawed/htmlawed/LICENSE-GPL2
-share/glpi/vendor/htmlawed/htmlawed/LICENSE-LGPL3
+share/glpi/vendor/htmlawed/htmlawed/composer.json
 share/glpi/vendor/htmlawed/htmlawed/htmLawed.php
-share/glpi/vendor/htmlawed/htmlawed/htmLawedTest.php
 share/glpi/vendor/htmlawed/htmlawed/htmLawed_README.htm
 share/glpi/vendor/htmlawed/htmlawed/htmLawed_README.txt
 share/glpi/vendor/htmlawed/htmlawed/htmLawed_TESTCASE.txt
@@ -4393,21 +4520,48 @@ share/glpi/vendor/league/csv/src/Writer.php
 share/glpi/vendor/league/csv/src/XMLConverter.php
 share/glpi/vendor/league/csv/src/functions.php
 share/glpi/vendor/league/csv/src/functions_include.php
+share/glpi/vendor/league/oauth2-client/LICENSE
+share/glpi/vendor/league/oauth2-client/README.md
+share/glpi/vendor/league/oauth2-client/composer.json
+share/glpi/vendor/league/oauth2-client/src/Grant/AbstractGrant.php
+share/glpi/vendor/league/oauth2-client/src/Grant/AuthorizationCode.php
+share/glpi/vendor/league/oauth2-client/src/Grant/ClientCredentials.php
+share/glpi/vendor/league/oauth2-client/src/Grant/Exception/InvalidGrantException.php
+share/glpi/vendor/league/oauth2-client/src/Grant/GrantFactory.php
+share/glpi/vendor/league/oauth2-client/src/Grant/Password.php
+share/glpi/vendor/league/oauth2-client/src/Grant/RefreshToken.php
+share/glpi/vendor/league/oauth2-client/src/OptionProvider/HttpBasicAuthOptionProvider.php
+share/glpi/vendor/league/oauth2-client/src/OptionProvider/OptionProviderInterface.php
+share/glpi/vendor/league/oauth2-client/src/OptionProvider/PostAuthOptionProvider.php
+share/glpi/vendor/league/oauth2-client/src/Provider/AbstractProvider.php
+share/glpi/vendor/league/oauth2-client/src/Provider/Exception/IdentityProviderException.php
+share/glpi/vendor/league/oauth2-client/src/Provider/GenericProvider.php
+share/glpi/vendor/league/oauth2-client/src/Provider/GenericResourceOwner.php
+share/glpi/vendor/league/oauth2-client/src/Provider/ResourceOwnerInterface.php
+share/glpi/vendor/league/oauth2-client/src/Token/AccessToken.php
+share/glpi/vendor/league/oauth2-client/src/Token/AccessTokenInterface.php
+share/glpi/vendor/league/oauth2-client/src/Token/ResourceOwnerAccessTokenInterface.php
+share/glpi/vendor/league/oauth2-client/src/Tool/ArrayAccessorTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/BearerAuthorizationTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/GuardedPropertyTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/MacAuthorizationTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/ProviderRedirectTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/QueryBuilderTrait.php
+share/glpi/vendor/league/oauth2-client/src/Tool/RequestFactory.php
+share/glpi/vendor/league/oauth2-client/src/Tool/RequiredParameterTrait.php
+share/glpi/vendor/league/oauth2-google/CHANGELOG.md
+share/glpi/vendor/league/oauth2-google/CONTRIBUTING.md
+share/glpi/vendor/league/oauth2-google/LICENSE
+share/glpi/vendor/league/oauth2-google/README.md
+share/glpi/vendor/league/oauth2-google/composer.json
+share/glpi/vendor/league/oauth2-google/phpunit.xml.dist
+share/glpi/vendor/league/oauth2-google/src/Exception/HostedDomainException.php
+share/glpi/vendor/league/oauth2-google/src/Provider/Google.php
+share/glpi/vendor/league/oauth2-google/src/Provider/GoogleUser.php
 share/glpi/vendor/mexitek/phpcolors/LICENSE
 share/glpi/vendor/mexitek/phpcolors/README.md
 share/glpi/vendor/mexitek/phpcolors/composer.json
-share/glpi/vendor/mexitek/phpcolors/demo/demo.php
-share/glpi/vendor/mexitek/phpcolors/demo/phpColor-demo.png
 share/glpi/vendor/mexitek/phpcolors/src/Mexitek/PHPColors/Color.php
-share/glpi/vendor/mexitek/phpcolors/tests/bootstrap.php
-share/glpi/vendor/mexitek/phpcolors/tests/colorAnalyze.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorChange.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorComplementary.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorConvertHslToHex.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorConvertNameToHex.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorConvertRgbToHex.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorInput.phpt
-share/glpi/vendor/mexitek/phpcolors/tests/colorMix.phpt
 share/glpi/vendor/michelf/php-markdown/License.md
 share/glpi/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
 share/glpi/vendor/michelf/php-markdown/Michelf/Markdown.php
@@ -4419,130 +4573,6 @@ share/glpi/vendor/michelf/php-markdown/Readme.md
 share/glpi/vendor/michelf/php-markdown/Readme.php
 share/glpi/vendor/michelf/php-markdown/composer.json
 share/glpi/vendor/michelf/php-markdown/phpunit.xml.dist
-share/glpi/vendor/michelf/php-markdown/test/bootstrap.php
-share/glpi/vendor/michelf/php-markdown/test/helpers/MarkdownTestHelper.php
-share/glpi/vendor/michelf/php-markdown/test/integration/PhpMarkdownTest.php
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Amps and angle encoding.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Amps and angle encoding.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Auto links.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Auto links.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Backslash escapes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Backslash escapes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Blockquotes with code blocks.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Blockquotes with code blocks.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Code Blocks.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Code Blocks.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Code Spans.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Code Spans.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Hard-wrapped paragraphs with list-like lines.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Hard-wrapped paragraphs with list-like lines.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Horizontal rules.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Horizontal rules.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Images.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Images.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML (Advanced).text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML (Advanced).xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML (Simple).html
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML (Simple).text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML comments.html
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Inline HTML comments.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, inline style.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, inline style.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, reference style.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, reference style.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, shortcut references.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Links, shortcut references.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Literal quotes in titles.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Literal quotes in titles.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Markdown Documentation - Basics.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Markdown Documentation - Basics.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Markdown Documentation - Syntax.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Markdown Documentation - Syntax.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Nested blockquotes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Nested blockquotes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Ordered and unordered lists.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Ordered and unordered lists.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Strong and em together.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Strong and em together.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Tabs.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Tabs.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Tidyness.text
-share/glpi/vendor/michelf/php-markdown/test/resources/markdown.mdtest/Tidyness.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Abbr.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Abbr.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Backtick Fenced Code Blocks Special Cases.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Backtick Fenced Code Blocks Special Cases.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Backtick Fenced Code Blocks.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Backtick Fenced Code Blocks.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Definition Lists.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Definition Lists.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Emphasis.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Emphasis.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Footnotes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Footnotes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Headers with attributes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Headers with attributes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Inline HTML with Markdown content.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Inline HTML with Markdown content.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Link & Image Attributes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Link & Image Attributes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tables.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tables.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tilde Fenced Code Blocks Special Cases.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tilde Fenced Code Blocks Special Cases.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tilde Fenced Code Blocks.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown-extra.mdtest/Tilde Fenced Code Blocks.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Adjacent Lists.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Adjacent Lists.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Auto Links.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Auto Links.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Backslash escapes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Backslash escapes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code Spans.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code Spans.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block in a list item.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block in a list item.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block on second line.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block on second line.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block regressions.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Code block regressions.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Email auto links.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Email auto links.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Emphasis.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Emphasis.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Empty List Item.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Empty List Item.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Headers.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Headers.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Horizontal Rules.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Horizontal Rules.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML (Simple).html
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML (Simple).text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML (Span).text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML (Span).xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML comments.html
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Inline HTML comments.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Ins & del.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Ins & del.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Links, inline style.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Links, inline style.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/MD5 Hashes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/MD5 Hashes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Mixed OLs and ULs.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Mixed OLs and ULs.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Nesting.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Nesting.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/PHP-Specific Bugs.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/PHP-Specific Bugs.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Parens in URL.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Parens in URL.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Quotes in attributes.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Quotes in attributes.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Tight blocks.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/Tight blocks.xhtml
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/XML empty tag.text
-share/glpi/vendor/michelf/php-markdown/test/resources/php-markdown.mdtest/XML empty tag.xhtml
-share/glpi/vendor/michelf/php-markdown/test/unit/MarkdownExtraTest.php
 share/glpi/vendor/monolog/monolog/CHANGELOG.md
 share/glpi/vendor/monolog/monolog/LICENSE
 share/glpi/vendor/monolog/monolog/README.md
@@ -4558,6 +4588,7 @@ share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/FlowdockFormatter.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/FluentdFormatter.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/GelfMessageFormatter.php
+share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/GoogleCloudLoggingFormatter.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/HtmlFormatter.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/JsonFormatter.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php
@@ -4633,6 +4664,7 @@ share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SocketHandler.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SqsHandler.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SwiftMailerHandler.php
+share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SymfonyMailerHandler.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SyslogHandler.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php
 share/glpi/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php
@@ -4775,7 +4807,6 @@ share/glpi/vendor/paragonie/sodium_compat/src/SodiumException.php
 share/glpi/vendor/phplang/scope-exit/README.md
 share/glpi/vendor/phplang/scope-exit/composer.json
 share/glpi/vendor/phplang/scope-exit/src/ScopeExit.php
-share/glpi/vendor/phplang/scope-exit/tests/BasicTest.php
 share/glpi/vendor/phpmailer/phpmailer/COMMITMENT
 share/glpi/vendor/phpmailer/phpmailer/LICENSE
 share/glpi/vendor/phpmailer/phpmailer/README.md
@@ -4790,7 +4821,6 @@ share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-ba.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-be.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-bg.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-ca.php
-share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-ch.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-cs.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-da.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-de.php
@@ -4816,6 +4846,7 @@ share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-ko.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-lt.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-lv.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-mg.php
+share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-mn.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-ms.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-nb.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-nl.php
@@ -4835,6 +4866,7 @@ share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-uk.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-vi.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh.php
 share/glpi/vendor/phpmailer/phpmailer/language/phpmailer.lang-zh_cn.php
+share/glpi/vendor/phpmailer/phpmailer/src/DSNConfigurator.php
 share/glpi/vendor/phpmailer/phpmailer/src/Exception.php
 share/glpi/vendor/phpmailer/phpmailer/src/OAuth.php
 share/glpi/vendor/phpmailer/phpmailer/src/OAuthTokenProvider.php
@@ -4876,6 +4908,8 @@ share/glpi/vendor/psr/http-message/CHANGELOG.md
 share/glpi/vendor/psr/http-message/LICENSE
 share/glpi/vendor/psr/http-message/README.md
 share/glpi/vendor/psr/http-message/composer.json
+share/glpi/vendor/psr/http-message/docs/PSR7-Interfaces.md
+share/glpi/vendor/psr/http-message/docs/PSR7-Usage.md
 share/glpi/vendor/psr/http-message/src/MessageInterface.php
 share/glpi/vendor/psr/http-message/src/RequestInterface.php
 share/glpi/vendor/psr/http-message/src/ResponseInterface.php
@@ -5051,8 +5085,6 @@ share/glpi/vendor/ramsey/uuid/src/functions.php
 share/glpi/vendor/rlanvin/php-rrule/CHANGELOG.md
 share/glpi/vendor/rlanvin/php-rrule/LICENSE
 share/glpi/vendor/rlanvin/php-rrule/README.md
-share/glpi/vendor/rlanvin/php-rrule/bin/import_windows_timezones.php
-share/glpi/vendor/rlanvin/php-rrule/bin/review_translations.php
 share/glpi/vendor/rlanvin/php-rrule/composer.json
 share/glpi/vendor/rlanvin/php-rrule/phpunit.xml.dist
 share/glpi/vendor/rlanvin/php-rrule/src/RRule.php
@@ -5071,23 +5103,8 @@ share/glpi/vendor/rlanvin/php-rrule/src/i18n/it.php
 share/glpi/vendor/rlanvin/php-rrule/src/i18n/nl.php
 share/glpi/vendor/rlanvin/php-rrule/src/i18n/sv.php
 share/glpi/vendor/rlanvin/php-rrule/src/tzdata/windows.php
-share/glpi/vendor/rlanvin/php-rrule/tests/RRuleTest.php
-share/glpi/vendor/rlanvin/php-rrule/tests/RSetTest.php
-share/glpi/vendor/rlanvin/php-rrule/tests/RfcParserTest.php
-share/glpi/vendor/rlanvin/php-rrule/tests/bootstrap.php
-share/glpi/vendor/rlanvin/php-rrule/tests/i18n/fr_BE.php
-share/glpi/vendor/rlanvin/php-rrule/tests/i18n/xx.php
 share/glpi/vendor/sabre/dav/LICENSE
 share/glpi/vendor/sabre/dav/README.md
-share/glpi/vendor/sabre/dav/bin/build.php
-share/glpi/vendor/sabre/dav/bin/googlecode_upload.py
-share/glpi/vendor/sabre/dav/bin/migrateto20.php
-share/glpi/vendor/sabre/dav/bin/migrateto21.php
-share/glpi/vendor/sabre/dav/bin/migrateto30.php
-share/glpi/vendor/sabre/dav/bin/migrateto32.php
-share/glpi/vendor/sabre/dav/bin/naturalselection
-share/glpi/vendor/sabre/dav/bin/sabredav
-share/glpi/vendor/sabre/dav/bin/sabredav.php
 share/glpi/vendor/sabre/dav/composer.json
 share/glpi/vendor/sabre/dav/lib/CalDAV/Backend/AbstractBackend.php
 share/glpi/vendor/sabre/dav/lib/CalDAV/Backend/BackendInterface.php
@@ -5343,12 +5360,6 @@ share/glpi/vendor/sabre/http/CHANGELOG.md
 share/glpi/vendor/sabre/http/LICENSE
 share/glpi/vendor/sabre/http/README.md
 share/glpi/vendor/sabre/http/composer.json
-share/glpi/vendor/sabre/http/examples/asyncclient.php
-share/glpi/vendor/sabre/http/examples/basicauth.php
-share/glpi/vendor/sabre/http/examples/client.php
-share/glpi/vendor/sabre/http/examples/digestauth.php
-share/glpi/vendor/sabre/http/examples/reverseproxy.php
-share/glpi/vendor/sabre/http/examples/stringify.php
 share/glpi/vendor/sabre/http/lib/Auth/AWS.php
 share/glpi/vendor/sabre/http/lib/Auth/AbstractAuth.php
 share/glpi/vendor/sabre/http/lib/Auth/Basic.php
@@ -5371,26 +5382,6 @@ share/glpi/vendor/sabre/http/lib/Sapi.php
 share/glpi/vendor/sabre/http/lib/Version.php
 share/glpi/vendor/sabre/http/lib/functions.php
 share/glpi/vendor/sabre/http/phpstan.neon
-share/glpi/vendor/sabre/http/tests/HTTP/Auth/AWSTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/Auth/BasicTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/Auth/BearerTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/Auth/DigestTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/ClientTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/FunctionsTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/MessageDecoratorTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/MessageTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/NegotiateTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/RequestDecoratorTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/RequestTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/ResponseDecoratorTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/ResponseTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/SapiTest.php
-share/glpi/vendor/sabre/http/tests/HTTP/URLUtilTest.php
-share/glpi/vendor/sabre/http/tests/bootstrap.php
-share/glpi/vendor/sabre/http/tests/phpunit.xml
-share/glpi/vendor/sabre/http/tests/www/bar.php
-share/glpi/vendor/sabre/http/tests/www/foo
-share/glpi/vendor/sabre/http/tests/www/large.php
 share/glpi/vendor/sabre/uri/LICENSE
 share/glpi/vendor/sabre/uri/composer.json
 share/glpi/vendor/sabre/uri/lib/InvalidUriException.php
@@ -5399,15 +5390,6 @@ share/glpi/vendor/sabre/uri/lib/functions.php
 share/glpi/vendor/sabre/uri/phpstan.neon
 share/glpi/vendor/sabre/vobject/LICENSE
 share/glpi/vendor/sabre/vobject/README.md
-share/glpi/vendor/sabre/vobject/bin/bench.php
-share/glpi/vendor/sabre/vobject/bin/bench_freebusygenerator.php
-share/glpi/vendor/sabre/vobject/bin/bench_manipulatevcard.php
-share/glpi/vendor/sabre/vobject/bin/fetch_windows_zones.php
-share/glpi/vendor/sabre/vobject/bin/generate_vcards
-share/glpi/vendor/sabre/vobject/bin/generateicalendardata.php
-share/glpi/vendor/sabre/vobject/bin/mergeduplicates.php
-share/glpi/vendor/sabre/vobject/bin/rrulebench.php
-share/glpi/vendor/sabre/vobject/bin/vobject
 share/glpi/vendor/sabre/vobject/composer.json
 share/glpi/vendor/sabre/vobject/lib/BirthdayCalendarGenerator.php
 share/glpi/vendor/sabre/vobject/lib/Cli.php
@@ -5518,9 +5500,7 @@ share/glpi/vendor/sabre/xml/lib/XmlDeserializable.php
 share/glpi/vendor/sabre/xml/lib/XmlSerializable.php
 share/glpi/vendor/scssphp/scssphp/LICENSE.md
 share/glpi/vendor/scssphp/scssphp/README.md
-share/glpi/vendor/scssphp/scssphp/bin/pscss
 share/glpi/vendor/scssphp/scssphp/composer.json
-share/glpi/vendor/scssphp/scssphp/phpcs.xml.dist
 share/glpi/vendor/scssphp/scssphp/scss.inc.php
 share/glpi/vendor/scssphp/scssphp/src/Base/Range.php
 share/glpi/vendor/scssphp/scssphp/src/Block.php
@@ -5595,9 +5575,7 @@ share/glpi/vendor/sebastian/diff/src/TimeEfficientLongestCommonSubsequenceCalcul
 share/glpi/vendor/seld/jsonlint/CHANGELOG.md
 share/glpi/vendor/seld/jsonlint/LICENSE
 share/glpi/vendor/seld/jsonlint/README.md
-share/glpi/vendor/seld/jsonlint/bin/jsonlint
 share/glpi/vendor/seld/jsonlint/composer.json
-share/glpi/vendor/seld/jsonlint/phpstan.neon.dist
 share/glpi/vendor/seld/jsonlint/src/Seld/JsonLint/DuplicateKeyException.php
 share/glpi/vendor/seld/jsonlint/src/Seld/JsonLint/JsonParser.php
 share/glpi/vendor/seld/jsonlint/src/Seld/JsonLint/Lexer.php
@@ -5653,6 +5631,7 @@ share/glpi/vendor/swaggest/json-diff/LICENSE
 share/glpi/vendor/swaggest/json-diff/README.md
 share/glpi/vendor/swaggest/json-diff/composer.json
 share/glpi/vendor/swaggest/json-diff/src/Exception.php
+share/glpi/vendor/swaggest/json-diff/src/InvalidFieldTypeException.php
 share/glpi/vendor/swaggest/json-diff/src/JsonDiff.php
 share/glpi/vendor/swaggest/json-diff/src/JsonHash.php
 share/glpi/vendor/swaggest/json-diff/src/JsonMergePatch.php
@@ -5667,11 +5646,15 @@ share/glpi/vendor/swaggest/json-diff/src/JsonPatch/Remove.php
 share/glpi/vendor/swaggest/json-diff/src/JsonPatch/Replace.php
 share/glpi/vendor/swaggest/json-diff/src/JsonPatch/Test.php
 share/glpi/vendor/swaggest/json-diff/src/JsonPointer.php
+share/glpi/vendor/swaggest/json-diff/src/JsonPointerException.php
 share/glpi/vendor/swaggest/json-diff/src/JsonValueReplace.php
+share/glpi/vendor/swaggest/json-diff/src/MissingFieldException.php
 share/glpi/vendor/swaggest/json-diff/src/ModifiedPathDiff.php
+share/glpi/vendor/swaggest/json-diff/src/PatchTestOperationFailedException.php
+share/glpi/vendor/swaggest/json-diff/src/PathException.php
+share/glpi/vendor/swaggest/json-diff/src/UnknownOperationException.php
 share/glpi/vendor/swaggest/json-schema/CHANGELOG.md
 share/glpi/vendor/swaggest/json-schema/LICENSE
-share/glpi/vendor/swaggest/json-schema/Makefile
 share/glpi/vendor/swaggest/json-schema/README.md
 share/glpi/vendor/swaggest/json-schema/benchmarks/AjvSchemasBench.php
 share/glpi/vendor/swaggest/json-schema/benchmarks/Draft7Bench.php
@@ -6063,6 +6046,7 @@ share/glpi/vendor/symfony/polyfill-iconv/composer.json
 share/glpi/vendor/symfony/polyfill-mbstring/LICENSE
 share/glpi/vendor/symfony/polyfill-mbstring/Mbstring.php
 share/glpi/vendor/symfony/polyfill-mbstring/README.md
+share/glpi/vendor/symfony/polyfill-mbstring/Resources/unidata/caseFolding.php
 share/glpi/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php
 share/glpi/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php
 share/glpi/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php
@@ -6083,9 +6067,18 @@ share/glpi/vendor/symfony/polyfill-php80/composer.json
 share/glpi/vendor/symfony/polyfill-php81/LICENSE
 share/glpi/vendor/symfony/polyfill-php81/Php81.php
 share/glpi/vendor/symfony/polyfill-php81/README.md
+share/glpi/vendor/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php
 share/glpi/vendor/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php
 share/glpi/vendor/symfony/polyfill-php81/bootstrap.php
 share/glpi/vendor/symfony/polyfill-php81/composer.json
+share/glpi/vendor/symfony/polyfill-php82/LICENSE
+share/glpi/vendor/symfony/polyfill-php82/README.md
+share/glpi/vendor/symfony/polyfill-php82/Resources/stubs/AllowDynamicProperties.php
+share/glpi/vendor/symfony/polyfill-php82/Resources/stubs/SensitiveParameter.php
+share/glpi/vendor/symfony/polyfill-php82/Resources/stubs/SensitiveParameterValue.php
+share/glpi/vendor/symfony/polyfill-php82/SensitiveParameterValue.php
+share/glpi/vendor/symfony/polyfill-php82/bootstrap.php
+share/glpi/vendor/symfony/polyfill-php82/composer.json
 share/glpi/vendor/symfony/service-contracts/Attribute/Required.php
 share/glpi/vendor/symfony/service-contracts/Attribute/SubscribedService.php
 share/glpi/vendor/symfony/service-contracts/CHANGELOG.md
@@ -6148,164 +6141,6 @@ share/glpi/vendor/tecnickcom/tcpdf/README.md
 share/glpi/vendor/tecnickcom/tcpdf/VERSION
 share/glpi/vendor/tecnickcom/tcpdf/composer.json
 share/glpi/vendor/tecnickcom/tcpdf/config/tcpdf_config.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_1d_html.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_1d_png.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_1d_svg.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_1d_svgi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_datamatrix_html.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_datamatrix_png.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_datamatrix_svg.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_datamatrix_svgi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_pdf417_html.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_pdf417_png.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_pdf417_svg.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_pdf417_svgi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_qrcode_html.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_qrcode_png.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_qrcode_svg.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/example_2d_qrcode_svgi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/tcpdf_barcodes_1d_include.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/barcodes/tcpdf_barcodes_2d_include.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/config/tcpdf_config_alt.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/cert/tcpdf.crt
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/cert/tcpdf.fdf
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/cert/tcpdf.p12
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/chapter_demo_1.txt
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/chapter_demo_2.txt
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/table_data_demo.txt
-share/glpi/vendor/tecnickcom/tcpdf/examples/data/utf8test.txt
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_001.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_002.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_003.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_004.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_005.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_006.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_007.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_008.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_009.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_010.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_011.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_012.pdf
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_012.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_013.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_014.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_015.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_016.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_017.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_018.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_019.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_020.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_021.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_022.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_023.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_024.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_025.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_026.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_027.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_028.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_029.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_030.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_031.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_032.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_033.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_034.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_035.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_036.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_037.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_038.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_039.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_040.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_041.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_042.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_043.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_044.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_045.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_046.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_047.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_048.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_049.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_050.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_051.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_052.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_053.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_054.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_055.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_056.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_057.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_058.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_059.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_060.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_061.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_062.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_063.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_064.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_065.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/example_066.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/_blank.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/alpha.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/image_demo.jpg
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/image_with_alpha.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/img.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/logo_example.gif
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/logo_example.jpg
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/logo_example.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tcpdf_box.ai
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tcpdf_box.svg
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tcpdf_cell.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tcpdf_logo.jpg
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tcpdf_signature.png
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/testsvg.svg
-share/glpi/vendor/tecnickcom/tcpdf/examples/images/tux.svg
-share/glpi/vendor/tecnickcom/tcpdf/examples/index.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/afr.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ara.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/aze.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/bel.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/bra.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/bul.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/cat.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ces.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/chi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/cym.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/dan.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/eng.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/est.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/eus.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/far.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/fra.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ger.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/gle.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/glg.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/hat.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/heb.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/hrv.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/hun.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/hye.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ind.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ita.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/jpn.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/kat.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/kor.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/mkd.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/mlt.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/msa.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/nld.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/nob.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/pol.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/por.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ron.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/rus.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/slv.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/spa.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/sqi.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/srp.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/swa.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/swe.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/ukr.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/urd.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/yid.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/lang/zho.php
-share/glpi/vendor/tecnickcom/tcpdf/examples/tcpdf_include.php
 share/glpi/vendor/tecnickcom/tcpdf/fonts/ae_fonts_2.0/COPYING
 share/glpi/vendor/tecnickcom/tcpdf/fonts/ae_fonts_2.0/ChangeLog
 share/glpi/vendor/tecnickcom/tcpdf/fonts/ae_fonts_2.0/README
@@ -6513,9 +6348,14 @@ share/glpi/vendor/tecnickcom/tcpdf/tcpdf_barcodes_1d.php
 share/glpi/vendor/tecnickcom/tcpdf/tcpdf_barcodes_2d.php
 share/glpi/vendor/tecnickcom/tcpdf/tcpdf_import.php
 share/glpi/vendor/tecnickcom/tcpdf/tcpdf_parser.php
-share/glpi/vendor/tecnickcom/tcpdf/tools/.htaccess
-share/glpi/vendor/tecnickcom/tcpdf/tools/convert_fonts_examples.txt
-share/glpi/vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
+share/glpi/vendor/thenetworg/oauth2-azure/CHANGELOG.md
+share/glpi/vendor/thenetworg/oauth2-azure/LICENSE.md
+share/glpi/vendor/thenetworg/oauth2-azure/README.md
+share/glpi/vendor/thenetworg/oauth2-azure/composer.json
+share/glpi/vendor/thenetworg/oauth2-azure/src/Grant/JwtBearer.php
+share/glpi/vendor/thenetworg/oauth2-azure/src/Provider/Azure.php
+share/glpi/vendor/thenetworg/oauth2-azure/src/Provider/AzureResourceOwner.php
+share/glpi/vendor/thenetworg/oauth2-azure/src/Token/AccessToken.php
 share/glpi/vendor/true/punycode/CHANGELOG.md
 share/glpi/vendor/true/punycode/LICENSE
 share/glpi/vendor/true/punycode/README.md
@@ -6589,6 +6429,8 @@ share/glpi/vendor/twig/twig/src/Node/Expression/Binary/EqualBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/FloorDivBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/GreaterBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/GreaterEqualBinary.php
+share/glpi/vendor/twig/twig/src/Node/Expression/Binary/HasEveryBinary.php
+share/glpi/vendor/twig/twig/src/Node/Expression/Binary/HasSomeBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/InBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/LessBinary.php
 share/glpi/vendor/twig/twig/src/Node/Expression/Binary/LessEqualBinary.php
@@ -6709,27 +6551,49 @@ share/glpi/vendor/twig/twig/src/Util/TemplateDirIterator.php
 share/glpi/vendor/wapmorgan/unified-archive/CHANGELOG.md
 share/glpi/vendor/wapmorgan/unified-archive/LICENSE
 share/glpi/vendor/wapmorgan/unified-archive/README.md
-share/glpi/vendor/wapmorgan/unified-archive/_config.yml
-share/glpi/vendor/wapmorgan/unified-archive/bin/cam
 share/glpi/vendor/wapmorgan/unified-archive/composer.json
 share/glpi/vendor/wapmorgan/unified-archive/docs/API.md
 share/glpi/vendor/wapmorgan/unified-archive/docs/Drivers.md
 share/glpi/vendor/wapmorgan/unified-archive/docs/Usage.md
-share/glpi/vendor/wapmorgan/unified-archive/phpunit.xml.dist
 share/glpi/vendor/wapmorgan/unified-archive/src/Archive7z.php
 share/glpi/vendor/wapmorgan/unified-archive/src/ArchiveEntry.php
 share/glpi/vendor/wapmorgan/unified-archive/src/ArchiveInformation.php
-share/glpi/vendor/wapmorgan/unified-archive/src/CamApplication.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/AddFileCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/BaseArchiveCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/BaseCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/BaseFileCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/CommentCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/CreateCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/DeleteFileCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/DetailsCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/DriversCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/ExtractArchiveCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/ExtractFileCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/ExtractFilesCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/FoldersCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/FormatCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/FormatsCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/InfoCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/ListCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/PrintCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/TableCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/TestCommand.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Commands/TypesCommand.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/AlchemyZippy.php
-share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/BasicDriver.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Basic/BasicDriver.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Basic/BasicExtensionDriver.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Basic/BasicPureDriver.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Basic/BasicUtilityDriver.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Cab.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Iso.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/NelexaZip.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/OneFile/Bzip.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/OneFile/Gzip.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/OneFile/Lzma.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/OneFile/OneFileDriver.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Rar.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/SevenZip.php
+share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/SplitbrainPhpArchive.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/TarByPear.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/TarByPhar.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Drivers/Zip.php
@@ -6743,14 +6607,8 @@ share/glpi/vendor/wapmorgan/unified-archive/src/Exceptions/UnsupportedArchiveExc
 share/glpi/vendor/wapmorgan/unified-archive/src/Exceptions/UnsupportedOperationException.php
 share/glpi/vendor/wapmorgan/unified-archive/src/Formats.php
 share/glpi/vendor/wapmorgan/unified-archive/src/LzwStreamWrapper.php
-share/glpi/vendor/wapmorgan/unified-archive/src/PclzipZipInterface.php
+share/glpi/vendor/wapmorgan/unified-archive/src/PclZipInterface.php
 share/glpi/vendor/wapmorgan/unified-archive/src/UnifiedArchive.php
-share/glpi/vendor/wapmorgan/unified-archive/tests/ArchivingTest.php
-share/glpi/vendor/wapmorgan/unified-archive/tests/ReadingTest.php
-share/glpi/vendor/wapmorgan/unified-archive/tests/bootstrap.php
-share/glpi/vendor/wapmorgan/unified-archive/tests/fixtures/doc
-share/glpi/vendor/wapmorgan/unified-archive/tests/fixtures/folder/subdoc
-share/glpi/vendor/wapmorgan/unified-archive/tests/fixtures/folder/subfolder/subfile
 share/glpi/vendor/webmozart/assert/CHANGELOG.md
 share/glpi/vendor/webmozart/assert/LICENSE
 share/glpi/vendor/webmozart/assert/README.md
@@ -6759,12 +6617,11 @@ share/glpi/vendor/webmozart/assert/psalm.xml
 share/glpi/vendor/webmozart/assert/src/Assert.php
 share/glpi/vendor/webmozart/assert/src/InvalidArgumentException.php
 share/glpi/vendor/webmozart/assert/src/Mixin.php
-@pkgdir share/glpi/vendor/twig/twig/doc
+share/glpi/version/${PKGVERSION}
 @pkgdir share/glpi/vendor/symfony/string/Resources/bin
 @pkgdir share/glpi/vendor/swaggest/json-schema/spec/ajv
 @pkgdir share/glpi/vendor/swaggest/json-schema/spec/JSON-Schema-Test-Suite
-@pkgdir share/glpi/vendor/sabre/xml/bin
-@pkgdir share/glpi/vendor/sabre/http/bin
-@pkgdir share/glpi/vendor/sabre/event/bin
 @pkgdir share/glpi/vendor/ramsey/collection/bin
-@pkgdir share/glpi/vendor/blueimp/jquery-file-upload/wdio/reports
+@pkgdir share/glpi/plugins
+@pkgdir share/glpi/marketplace
+@pkgdir share/glpi/install/migrations/update_10.0.4_to_10.0.5
