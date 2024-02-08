@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/05/17 03:22:29 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/02/08 23:28:32 gutteridge Exp $
 bin/mousepad
 lib/libmousepad.la
 ${PLIST.gspell}lib/mousepad/plugins/libmousepad-plugin-gspell.la
@@ -8,7 +8,11 @@ share/glib-2.0/schemas/org.xfce.mousepad.gschema.xml
 ${PLIST.gspell}share/glib-2.0/schemas/org.xfce.mousepad.plugins.gspell.gschema.xml
 share/icons/hicolor/128x128/apps/org.xfce.mousepad.png
 share/icons/hicolor/16x16/apps/org.xfce.mousepad.png
+share/icons/hicolor/24x24/apps/org.xfce.mousepad.png
+share/icons/hicolor/32x32/apps/org.xfce.mousepad.png
 share/icons/hicolor/48x48/apps/org.xfce.mousepad.png
+share/icons/hicolor/64x64/apps/org.xfce.mousepad.png
+share/icons/hicolor/96x96/apps/org.xfce.mousepad.png
 share/icons/hicolor/scalable/apps/org.xfce.mousepad.svg
 share/locale/ar/LC_MESSAGES/mousepad.mo
 share/locale/ast/LC_MESSAGES/mousepad.mo
