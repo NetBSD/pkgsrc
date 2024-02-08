@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/11/24 05:29:39 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/08 22:40:37 adam Exp $
 
-DISTNAME=	pdm-2.10.4
+DISTNAME=	pdm-2.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.13.0:../../devel/py-cachecontrol
+DEPENDS+=	${PYPKGPREFIX}-dep-logic>=0.0.2:../../misc/py-dep-logic
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.15:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-findpython>=0.4.0:../../lang/py-findpython
@@ -29,6 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-unearth>=0.12.1:../../net/py-unearth
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=1.0.6:../../devel/py-test-httpserver
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=10.2:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.31.0:../../devel/py-test-xdist
 
@@ -53,9 +55,6 @@ DEPENDS+=	${PYPKGPREFIX}-truststore-[0-9]*:../../security/py-truststore
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pdm pdm-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
