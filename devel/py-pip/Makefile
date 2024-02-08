@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2023/12/17 19:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/02/08 22:25:25 adam Exp $
 
-DISTNAME=	pip-23.3.2
+DISTNAME=	pip-24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pip.pypa.io/
 COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.6.1:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
@@ -27,10 +27,6 @@ FILES_SUBST+=  PYMAJORVERSION=${PYTHON_VERSION:C/^([0-9]).*/\1/}
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip pip[2-3]
 	${CHMOD} -R go-w ${DESTDIR}${PREFIX}/${PYSITELIB}
-
-# no tests included
-do-test:
-	${DO_NADA}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
