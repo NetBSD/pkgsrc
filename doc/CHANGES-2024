@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1020 2024/02/08 21:45:42 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1021 2024/02/08 22:44:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1722,3 +1722,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox-l10n to 122.0.1 [ryoon 2024-02-08]
 	Updated devel/zlib to 1.3.1 [adam 2024-02-08]
 	Updated archivers/zlib-ng to 2.1.6 [adam 2024-02-08]
+	Updated devel/py-pip to 24.0 [adam 2024-02-08]
+	Added misc/py-dep-logic version 0.0.4 [adam 2024-02-08]
+	Updated devel/py-pdm to 2.12.3 [adam 2024-02-08]
+	Added www/py-django4 version 4.2.10 [adam 2024-02-08]
+	Updated www/py-django to 5.0.2 [adam 2024-02-08]
