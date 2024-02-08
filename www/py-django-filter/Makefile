@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/07/13 10:03:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/08 14:04:43 adam Exp $
 
-DISTNAME=	django-filter-2.4.0
+DISTNAME=	django-filter-23.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filter/}
 
@@ -11,12 +10,12 @@ HOMEPAGE=	https://github.com/carltongibson/django-filter
 COMMENT=	Generic dynamic filtering support for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-djangorestframework-[0-9]*:../../www/py-djangorestframework
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
