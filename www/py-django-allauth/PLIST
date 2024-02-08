@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/01 10:31:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/08 14:01:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -176,6 +176,12 @@ ${PYSITELIB}/allauth/core/internal/http.pyo
 ${PYSITELIB}/allauth/core/ratelimit.py
 ${PYSITELIB}/allauth/core/ratelimit.pyc
 ${PYSITELIB}/allauth/core/ratelimit.pyo
+${PYSITELIB}/allauth/core/tests/__init__.py
+${PYSITELIB}/allauth/core/tests/__init__.pyc
+${PYSITELIB}/allauth/core/tests/__init__.pyo
+${PYSITELIB}/allauth/core/tests/test_ratelimit.py
+${PYSITELIB}/allauth/core/tests/test_ratelimit.pyc
+${PYSITELIB}/allauth/core/tests/test_ratelimit.pyo
 ${PYSITELIB}/allauth/decorators.py
 ${PYSITELIB}/allauth/decorators.pyc
 ${PYSITELIB}/allauth/decorators.pyo
@@ -264,14 +270,10 @@ ${PYSITELIB}/allauth/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/allauth/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/allauth/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/allauth/locale/uk/LC_MESSAGES/django.po
-${PYSITELIB}/allauth/locale/zh_CN/LC_MESSAGES/django.mo
-${PYSITELIB}/allauth/locale/zh_CN/LC_MESSAGES/django.po
 ${PYSITELIB}/allauth/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/allauth/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/allauth/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/allauth/locale/zh_Hant/LC_MESSAGES/django.po
-${PYSITELIB}/allauth/locale/zh_TW/LC_MESSAGES/django.mo
-${PYSITELIB}/allauth/locale/zh_TW/LC_MESSAGES/django.po
 ${PYSITELIB}/allauth/mfa/__init__.py
 ${PYSITELIB}/allauth/mfa/__init__.pyc
 ${PYSITELIB}/allauth/mfa/__init__.pyo
@@ -2366,12 +2368,25 @@ ${PYSITELIB}/allauth/templates/account/email.html
 ${PYSITELIB}/allauth/templates/account/email/account_already_exists_message.txt
 ${PYSITELIB}/allauth/templates/account/email/account_already_exists_subject.txt
 ${PYSITELIB}/allauth/templates/account/email/base_message.txt
+${PYSITELIB}/allauth/templates/account/email/base_notification.txt
+${PYSITELIB}/allauth/templates/account/email/email_changed_message.txt
+${PYSITELIB}/allauth/templates/account/email/email_changed_subject.txt
+${PYSITELIB}/allauth/templates/account/email/email_confirm_message.txt
+${PYSITELIB}/allauth/templates/account/email/email_confirm_subject.txt
 ${PYSITELIB}/allauth/templates/account/email/email_confirmation_message.txt
 ${PYSITELIB}/allauth/templates/account/email/email_confirmation_signup_message.txt
 ${PYSITELIB}/allauth/templates/account/email/email_confirmation_signup_subject.txt
 ${PYSITELIB}/allauth/templates/account/email/email_confirmation_subject.txt
+${PYSITELIB}/allauth/templates/account/email/email_deleted_message.txt
+${PYSITELIB}/allauth/templates/account/email/email_deleted_subject.txt
+${PYSITELIB}/allauth/templates/account/email/password_changed_message.txt
+${PYSITELIB}/allauth/templates/account/email/password_changed_subject.txt
 ${PYSITELIB}/allauth/templates/account/email/password_reset_key_message.txt
 ${PYSITELIB}/allauth/templates/account/email/password_reset_key_subject.txt
+${PYSITELIB}/allauth/templates/account/email/password_reset_message.txt
+${PYSITELIB}/allauth/templates/account/email/password_reset_subject.txt
+${PYSITELIB}/allauth/templates/account/email/password_set_message.txt
+${PYSITELIB}/allauth/templates/account/email/password_set_subject.txt
 ${PYSITELIB}/allauth/templates/account/email/unknown_account_message.txt
 ${PYSITELIB}/allauth/templates/account/email/unknown_account_subject.txt
 ${PYSITELIB}/allauth/templates/account/email_change.html
@@ -2422,6 +2437,12 @@ ${PYSITELIB}/allauth/templates/allauth/layouts/manage.html
 ${PYSITELIB}/allauth/templates/mfa/authenticate.html
 ${PYSITELIB}/allauth/templates/mfa/base_entrance.html
 ${PYSITELIB}/allauth/templates/mfa/base_manage.html
+${PYSITELIB}/allauth/templates/mfa/email/recovery_codes_generated_message.txt
+${PYSITELIB}/allauth/templates/mfa/email/recovery_codes_generated_subject.txt
+${PYSITELIB}/allauth/templates/mfa/email/totp_activated_message.txt
+${PYSITELIB}/allauth/templates/mfa/email/totp_activated_subject.txt
+${PYSITELIB}/allauth/templates/mfa/email/totp_deactivated_message.txt
+${PYSITELIB}/allauth/templates/mfa/email/totp_deactivated_subject.txt
 ${PYSITELIB}/allauth/templates/mfa/index.html
 ${PYSITELIB}/allauth/templates/mfa/messages/recovery_codes_generated.txt
 ${PYSITELIB}/allauth/templates/mfa/messages/totp_activated.txt
@@ -2440,6 +2461,10 @@ ${PYSITELIB}/allauth/templates/socialaccount/authentication_error.html
 ${PYSITELIB}/allauth/templates/socialaccount/base_entrance.html
 ${PYSITELIB}/allauth/templates/socialaccount/base_manage.html
 ${PYSITELIB}/allauth/templates/socialaccount/connections.html
+${PYSITELIB}/allauth/templates/socialaccount/email/account_connected_message.txt
+${PYSITELIB}/allauth/templates/socialaccount/email/account_connected_subject.txt
+${PYSITELIB}/allauth/templates/socialaccount/email/account_disconnected_message.txt
+${PYSITELIB}/allauth/templates/socialaccount/email/account_disconnected_subject.txt
 ${PYSITELIB}/allauth/templates/socialaccount/login.html
 ${PYSITELIB}/allauth/templates/socialaccount/login_cancelled.html
 ${PYSITELIB}/allauth/templates/socialaccount/messages/account_connected.txt
@@ -2502,6 +2527,9 @@ ${PYSITELIB}/allauth/usersessions/signals.pyo
 ${PYSITELIB}/allauth/usersessions/tests/__init__.py
 ${PYSITELIB}/allauth/usersessions/tests/__init__.pyc
 ${PYSITELIB}/allauth/usersessions/tests/__init__.pyo
+${PYSITELIB}/allauth/usersessions/tests/test_middleware.py
+${PYSITELIB}/allauth/usersessions/tests/test_middleware.pyc
+${PYSITELIB}/allauth/usersessions/tests/test_middleware.pyo
 ${PYSITELIB}/allauth/usersessions/tests/test_views.py
 ${PYSITELIB}/allauth/usersessions/tests/test_views.pyc
 ${PYSITELIB}/allauth/usersessions/tests/test_views.pyo
