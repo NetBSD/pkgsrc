@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2023/11/14 14:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/02/08 23:05:43 gutteridge Exp $
 
-VERSION=	0.13.1
+VERSION=	0.13.2
 DISTNAME=	ristretto-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://archive.xfce.org/src/apps/ristretto/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,9 +32,7 @@ LDFLAGS.SunOS=		-lX11
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.56.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxfce4util+=	libxfce4util>=4.16.0
 .include "../../x11/libxfce4util/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxfce4ui+=	libxfce4ui>=4.16.0
 .include "../../x11/libxfce4ui/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
