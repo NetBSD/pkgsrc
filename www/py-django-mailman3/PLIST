@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/04 02:36:27 markd Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/08 22:57:24 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django_mailman3/__init__.py
 ${PYSITELIB}/django_mailman3/__init__.pyc
 ${PYSITELIB}/django_mailman3/__init__.pyo
@@ -50,6 +50,7 @@ ${PYSITELIB}/django_mailman3/lib/user.py
 ${PYSITELIB}/django_mailman3/lib/user.pyc
 ${PYSITELIB}/django_mailman3/lib/user.pyo
 ${PYSITELIB}/django_mailman3/locale/af/LC_MESSAGES/django.po
+${PYSITELIB}/django_mailman3/locale/ak/LC_MESSAGES/django.po
 ${PYSITELIB}/django_mailman3/locale/am/LC_MESSAGES/django.po
 ${PYSITELIB}/django_mailman3/locale/an/LC_MESSAGES/django.po
 ${PYSITELIB}/django_mailman3/locale/ar/LC_MESSAGES/django.po
@@ -175,6 +176,9 @@ ${PYSITELIB}/django_mailman3/migrations/0001_initial.pyo
 ${PYSITELIB}/django_mailman3/migrations/0002_maildomain.py
 ${PYSITELIB}/django_mailman3/migrations/0002_maildomain.pyc
 ${PYSITELIB}/django_mailman3/migrations/0002_maildomain.pyo
+${PYSITELIB}/django_mailman3/migrations/0003_sessions.py
+${PYSITELIB}/django_mailman3/migrations/0003_sessions.pyc
+${PYSITELIB}/django_mailman3/migrations/0003_sessions.pyo
 ${PYSITELIB}/django_mailman3/migrations/__init__.py
 ${PYSITELIB}/django_mailman3/migrations/__init__.pyc
 ${PYSITELIB}/django_mailman3/migrations/__init__.pyo
