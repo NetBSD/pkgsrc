@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1028 2024/02/08 23:30:54 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1029 2024/02/08 23:31:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/xfce4-mousepad to 0.6.2 [gutteridge 2024-02-08]
 	Updated x11/xfce4-terminal to 1.1.2 [gutteridge 2024-02-08]
 	Updated meta-pkgs/xfce4 to 4.18.1nb9 [gutteridge 2024-02-08]
+	Updated meta-pkgs/xfce4-extras to 4.18.1nb13 [gutteridge 2024-02-08]
