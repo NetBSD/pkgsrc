@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2024/02/08 00:50:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.156 2024/02/08 01:54:36 gutteridge Exp $
 
 DISTNAME=		xscreensaver-6.08
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
@@ -48,6 +48,7 @@ INSTALLATION_DIRS=	share/doc/${PKGBASE}
 REPLACE_PERL+=	hacks/*.pl hacks/*/*.pl
 
 post-install:
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/applications/*.desktop
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "options.mk"
