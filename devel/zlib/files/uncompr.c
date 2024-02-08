@@ -3,7 +3,7 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
-/* @(#) $Id: uncompr.c,v 1.7 2022/10/14 07:43:57 wiz Exp $ */
+/* @(#) $Id: uncompr.c,v 1.8 2024/02/08 21:33:34 adam Exp $ */
 
 #define ZLIB_INTERNAL
 #include "zlib.h"
@@ -24,12 +24,8 @@
    Z_DATA_ERROR if the input data was corrupted, including if the input data is
    an incomplete zlib stream.
 */
-int ZEXPORT uncompress2(dest, destLen, source, sourceLen)
-    Bytef *dest;
-    uLongf *destLen;
-    const Bytef *source;
-    uLong *sourceLen;
-{
+int ZEXPORT uncompress2(Bytef *dest, uLongf *destLen, const Bytef *source,
+                        uLong *sourceLen) {
     z_stream stream;
     int err;
     const uInt max = (uInt)-1;
@@ -83,11 +79,7 @@ int ZEXPORT uncompress2(dest, destLen, source, sourceLen)
            err;
 }
 
-int ZEXPORT uncompress(dest, destLen, source, sourceLen)
-    Bytef *dest;
-    uLongf *destLen;
-    const Bytef *source;
-    uLong sourceLen;
-{
+int ZEXPORT uncompress(Bytef *dest, uLongf *destLen, const Bytef *source,
+                       uLong sourceLen) {
     return uncompress2(dest, destLen, source, &sourceLen);
 }
