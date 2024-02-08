@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2021/05/07 18:00:35 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2024/02/08 23:12:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/kombu/__init__.py
 ${PYSITELIB}/kombu/__init__.pyc
 ${PYSITELIB}/kombu/__init__.pyo
@@ -128,6 +127,9 @@ ${PYSITELIB}/kombu/transport/azurestoragequeues.pyo
 ${PYSITELIB}/kombu/transport/base.py
 ${PYSITELIB}/kombu/transport/base.pyc
 ${PYSITELIB}/kombu/transport/base.pyo
+${PYSITELIB}/kombu/transport/confluentkafka.py
+${PYSITELIB}/kombu/transport/confluentkafka.pyc
+${PYSITELIB}/kombu/transport/confluentkafka.pyo
 ${PYSITELIB}/kombu/transport/consul.py
 ${PYSITELIB}/kombu/transport/consul.pyc
 ${PYSITELIB}/kombu/transport/consul.pyo
