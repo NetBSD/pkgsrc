@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.115 2024/01/21 02:06:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.116 2024/02/08 23:24:43 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
 # Applications
-DEPENDS+=	ristretto>=0.13.0:../../graphics/ristretto
+DEPENDS+=	ristretto>=0.13.2:../../graphics/ristretto
 DEPENDS+=	xfce4-taskmanager>=1.5.6:../../sysutils/xfce4-taskmanager
 
 # Panel Plugins
@@ -33,7 +33,7 @@ DEPENDS+=	xfce4-netload-plugin>=1.4.1:../../sysutils/xfce4-netload-plugin
 DEPENDS+=	xfce4-notes-plugin>=1.11.0:../../x11/xfce4-notes-plugin
 DEPENDS+=	xfce4-notifyd>=0.9.3:../../x11/xfce4-notifyd
 DEPENDS+=	xfce4-places-plugin>=1.8.3:../../x11/xfce4-places-plugin
-DEPENDS+=	xfce4-screenshooter>=1.10.3:../../x11/xfce4-screenshooter
+DEPENDS+=	xfce4-screenshooter>=1.10.5:../../x11/xfce4-screenshooter
 DEPENDS+=	xfce4-smartbookmark-plugin>=0.5.2:../../misc/xfce4-smartbookmark-plugin
 DEPENDS+=	xfce4-time-out-plugin>=1.1.3:../../misc/xfce4-time-out-plugin
 DEPENDS+=	xfce4-timer-plugin>=1.7.2:../../time/xfce4-timer-plugin
