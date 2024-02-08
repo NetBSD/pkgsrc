@@ -1,33 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2023/09/28 22:31:07 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/08 14:41:41 adam Exp $
 
-DISTNAME=	django-phonenumber-field-4.0.0
+DISTNAME=	django-phonenumber-field-7.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=stefanfoulis/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-phonenumber-field/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/stefanfoulis/django-phonenumber-field
 COMMENT=	Django library for managing phone numbers
 LICENSE=	mit
 
-GITHUB_PROJECT=	django-phonenumber-field
-GITHUB_TAG=	${PKGVERSION_NOREV}
-
-DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+# phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=7.0.2:../../textproc/py-phonenumbers
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=		# none
 
-post-extract:
-	chmod -R g-w ${WRKSRC}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} run -m django test --settings=tests.settings
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
