@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/07 01:02:03 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/08 23:19:15 gutteridge Exp $
 bin/xfce4-screenshooter
 lib/xfce4/panel/plugins/libscreenshooterplugin.la
+libexec/xfce4/screenshooter/scripts/imgur-upload.sh
 man/man1/xfce4-screenshooter.1
 share/applications/xfce4-screenshooter.desktop
 share/icons/hicolor/128x128/apps/org.xfce.screenshooter.png
