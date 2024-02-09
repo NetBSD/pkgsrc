@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1109 2024/02/06 11:19:46 markd Exp $
+# $NetBSD: Makefile,v 1.1110 2024/02/09 09:48:29 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -579,6 +579,7 @@ SUBDIR+=	py-borgbackup
 SUBDIR+=	py-borgmatic
 SUBDIR+=	py-collectd
 SUBDIR+=	py-cpuinfo
+SUBDIR+=	py-cron-descriptor
 SUBDIR+=	py-crontab
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
