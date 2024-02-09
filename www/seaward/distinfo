@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/07/13 20:42:35 pin Exp $
+$NetBSD: distinfo,v 1.2 2024/02/09 13:58:23 pin Exp $
 
 BLAKE2s (addr2line-0.20.0.crate) = 325dbd01710a578526165bf191bc3df1e1b7afa6492f90662ecb33b2c2643d2d
 SHA512 (addr2line-0.20.0.crate) = f9794772a31dd01096b168b4b4ffe311d4850c69fd77dd72c1e532a94ef7b23c31cccb9033848822521510f1fcc2ad0fdd824cf7efb9ed43828dc0165165b319
@@ -369,9 +369,9 @@ Size (scopeguard-1.1.0.crate) = 11470 bytes
 BLAKE2s (scraper-0.17.1.crate) = c3c429220e09c4a49e16832a7e01b8c4692b037d2f2bbaeba7730aa2c846e3dd
 SHA512 (scraper-0.17.1.crate) = affdc6a0aae073f30282a20016a3796c051564dc248e0b11457ce945e4c1a9b9aeba5354e2d89a8218f76eb6f3ef6fabcba0d15f52538e25fb050844e1780ac4
 Size (scraper-0.17.1.crate) = 23271 bytes
-BLAKE2s (seaward-1.0.1.tar.gz) = 6b989d5a52c41799d5e95d4c844be05929509a95cdd6d18b8065f1c680ccbf48
-SHA512 (seaward-1.0.1.tar.gz) = efc3ea8af2ffb86df416cd30229dcc774180e8f01767ef0538effd163aab4325a506c02af55fc463c5edf1903d159a9fd4253d79b4bc789add7bae822609fecc
-Size (seaward-1.0.1.tar.gz) = 427934 bytes
+BLAKE2s (seaward-1.0.2.tar.gz) = 80160d02eca9076870980637302ec02b7655065b855f1298350d11bfc310e0bf
+SHA512 (seaward-1.0.2.tar.gz) = 85129b54b223acfd798793d7cd90f5a65a72e162c822b7549e95e44f5b0d3b3e6e0eaabca8672f45929534df71a54139fb69f1e06e767d502b2b5ba049f56687
+Size (seaward-1.0.2.tar.gz) = 439524 bytes
 BLAKE2s (security-framework-2.9.1.crate) = 6512aec4dbf20321bbe5b4fdca1cc7c60f6dc84b46dbbcb9e82644421399c373
 SHA512 (security-framework-2.9.1.crate) = fa309080138ef4aa7c5a2278456647743ed40ffa7827a0f081e3f11ba61d0184501be20e1bde25c0c3d5568de3d7ad9bc8ac7a939bc8dac95bcd4714ade6c966
 Size (security-framework-2.9.1.crate) = 78844 bytes
