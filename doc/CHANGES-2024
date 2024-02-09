@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1033 2024/02/09 09:49:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1034 2024/02/09 10:26:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1753,3 +1753,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/gdbus-codegen to 2.78.4 [adam 2024-02-09]
 	Added sysutils/py-cron-descriptor version 1.4.3 [adam 2024-02-09]
 	Updated www/py-django-celery-beat to 2.5.0 [adam 2024-02-09]
+	Updated databases/py-mysqlclient to 2.2.4 [adam 2024-02-09]
+	Removed databases/py-mysqldb successor databases/py-mysqlclient [adam 2024-02-09]
