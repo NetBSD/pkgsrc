@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/17 16:19:19 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/02/09 10:24:18 adam Exp $
 
-BLAKE2s (mysqlclient-2.1.1.tar.gz) = b151d4ce597d262afe1deec4e8aae3d59f8bd3ce711b990f620c06d3bfe6a9ab
-SHA512 (mysqlclient-2.1.1.tar.gz) = d8aed044b651aabb8d28d2df085f84e4d824ef0f147216d111425a9c8024f55634236ec131debf46660084c5a8fd67c944db60ffbf89e1d712cdca80c0726a06
-Size (mysqlclient-2.1.1.tar.gz) = 88138 bytes
+BLAKE2s (mysqlclient-2.2.4.tar.gz) = ad4327fc67719a34cd6b83f2f56380f15bc800a56d3bf9c94424d519abeaafcc
+SHA512 (mysqlclient-2.2.4.tar.gz) = d1f7ba693368309a14a0982c2f1e0731617b482044afab765c8d81ea26dc6950a110c6cab48792ea1397add7b7151c756d5d22827fcce836404456f8956538a6
+Size (mysqlclient-2.2.4.tar.gz) = 90400 bytes
