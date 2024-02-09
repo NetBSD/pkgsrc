@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/09 21:03:31 wiz Exp $
 
-DISTNAME=		xmore-1.0.3
+DISTNAME=		xmore-1.0.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
