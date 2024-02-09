@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/12/12 19:47:20 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/02/09 21:18:21 wiz Exp $
 
-BLAKE2s (makedepend-1.0.8.tar.xz) = 293ab507b3b484db84be54199fd4973468ccc27bdf23e4ec914ced078dffe5cc
-SHA512 (makedepend-1.0.8.tar.xz) = 6707b1107c07d4ffbcf008181e877d18a0bcc4aea03860ee1158f5630c7fdce4cf9ad7bee3b38ee420c3a44819ed4b56a6f2428a5b695c0dbd17fb3e60825a6d
-Size (makedepend-1.0.8.tar.xz) = 141304 bytes
+BLAKE2s (makedepend-1.0.9.tar.xz) = 1cb969d55c3847335260b1e2569f16ba58f25e5832409b14ae448706b9e0d086
+SHA512 (makedepend-1.0.9.tar.xz) = 68d289656314dc9f12c792d0e394cfbc95404a0d01155dbcb38313d451b506da48a3d44183f568a2cbb2b1d1da9e26703a0d92f2bb658f72fc968eeb03bf2fe8
+Size (makedepend-1.0.9.tar.xz) = 145080 bytes
