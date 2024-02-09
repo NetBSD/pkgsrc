@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/02/03 18:58:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.65 2024/02/09 12:18:08 jperkin Exp $
 
 DISTNAME=	po4a-0.70
 PKGREVISION=	2
@@ -32,6 +32,7 @@ DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 	${OPSYS} == "Darwin" && empty(OSX_VERSION:M[0-9].*) && empty(OSX_VERSION:M1[0-2].*)
 DEPENDS+=		diffutils-[0-9]*:../../devel/diffutils
 DIFF?=			${PREFIX}/bin/gdiff
+TOOLS_PATH.diff=	${DIFF}
 .else
 DIFF?=			diff
 .endif
