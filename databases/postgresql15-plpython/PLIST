@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/19 13:16:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/09 08:33:15 adam Exp $
 include/postgresql/server/plpy_cursorobject.h
 include/postgresql/server/plpy_elog.h
 include/postgresql/server/plpy_exec.h
@@ -12,6 +12,7 @@ include/postgresql/server/plpy_subxactobject.h
 include/postgresql/server/plpy_typeio.h
 include/postgresql/server/plpy_util.h
 include/postgresql/server/plpython.h
+include/postgresql/server/plpython_system.h
 ${PLIST.llvm}lib/postgresql/bitcode/hstore_plpython3.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/hstore_plpython3/hstore_plpython.bc
 ${PLIST.py2x}lib/postgresql/hstore_plpython2.so
