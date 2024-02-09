@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1037 2024/02/09 12:50:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1038 2024/02/09 13:17:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1763,3 +1763,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-taggit to 5.0.1 [adam 2024-02-09]
 	Updated www/py-django-modelcluster to 6.2.1 [adam 2024-02-09]
 	Updated devel/py-hypothesis to 6.98.3 [adam 2024-02-09]
+	Updated devel/py-ruff to 0.2.1 [adam 2024-02-09]
+	Updated devel/py-faker to 23.1.0 [adam 2024-02-09]
