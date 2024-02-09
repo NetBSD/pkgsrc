@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.119 2024/02/09 03:02:21 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.120 2024/02/09 06:59:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25870,7 +25870,7 @@ graphviz<10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-46045
 expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52425
 expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52426
 webkit-gtk<2.42.5	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-23222
-py{27,37,38,39,310,311}-django>=3.2<3.2.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
-py{27,37,38,39,310,311}-django>=4.1<4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
-py{27,37,38,39,310,311}-django>=4.2<4.2.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{27,37,38,39,310,311,312}-django>=3.2<3.2.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{27,37,38,39,310,311,312}-django>=4.1<4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{27,37,38,39,310,311,312}-django>=4.2<4.2.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
 libuv>=1.45<1.48	address-check-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-24806
