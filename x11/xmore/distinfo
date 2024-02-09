@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:53 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/09 21:03:31 wiz Exp $
 
-BLAKE2s (xmore-1.0.3.tar.bz2) = fc16822e5d7dd37869bf6eb65571c818c3a6e873136a33c962fa36a56985cec4
-SHA512 (xmore-1.0.3.tar.bz2) = e3e44831cd87a54bb585f80ef0d87f69dc35f6c834a73241aad9f6e2b0999b53c51a0a3f915a94ae4d6dc9bdfb9f60b6576f0bdcec441443abd98efa6c51b1d3
-Size (xmore-1.0.3.tar.bz2) = 127587 bytes
+BLAKE2s (xmore-1.0.4.tar.xz) = 9c3058c6ba810ac1c5cf2de2ed7bbce72b4fbcd8d67cc77c2f39099f128ec0ca
+SHA512 (xmore-1.0.4.tar.xz) = 52ac9bca78431f5f830b4607ff2cc375ab90e11380e0d4d3e591689359806cc7c7ec92c713d4d65742f40407e4f407c372759e5d03e30a30dfd866e6d5c6f6f7
+Size (xmore-1.0.4.tar.xz) = 122624 bytes
