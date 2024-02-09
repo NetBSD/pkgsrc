@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/12/04 15:36:13 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/02/09 21:04:17 wiz Exp $
 
-BLAKE2s (xprop-1.2.6.tar.xz) = 66ce20edfa24151bf7eeac30d10cf3bec5dc8d3b17a04798c98a0780c4c67dac
-SHA512 (xprop-1.2.6.tar.xz) = ab25d4b8bf9de8fb37149060ad4870ffed4d6846ac3b31903a42c36301fcb0d50d3ba15949fdd9079507db97d3f05d4bbd11711d825e5470482cc30772cc3f25
-Size (xprop-1.2.6.tar.xz) = 143616 bytes
+BLAKE2s (xprop-1.2.7.tar.xz) = a3b0fec083a4498f7a516c549d65804f7ca84cec1cf08587fc8ac57dcd59fbfc
+SHA512 (xprop-1.2.7.tar.xz) = 84ada23660e2aef7024352e1a774f920e86c55fbfda486c087b9f41f8da30a84734fe753b62432f3df16913e86da4a18ce04ca018091d444cef727de97bf94f1
+Size (xprop-1.2.7.tar.xz) = 144216 bytes
