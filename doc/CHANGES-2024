@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1029 2024/02/08 23:31:49 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1030 2024/02/09 06:32:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1739,3 +1739,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xfce4-terminal to 1.1.2 [gutteridge 2024-02-08]
 	Updated meta-pkgs/xfce4 to 4.18.1nb9 [gutteridge 2024-02-08]
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb13 [gutteridge 2024-02-08]
+	Updated net/py-celery to 5.3.6 [adam 2024-02-09]
+	Updated finance/py-eth-account to 0.11.0 [adam 2024-02-09]
+	Updated devel/py-debugpy to 1.8.1 [adam 2024-02-09]
+	Updated devel/py-slugify to 8.0.4 [adam 2024-02-09]
