@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/09 11:57:58 adam Exp $
 
-BLAKE2s (draftjs_exporter-4.1.2.tar.gz) = 1b89fad3f6d6712522e89bfbd9d91acbd12023be9c84d224aab3baf6eb50ea68
-SHA512 (draftjs_exporter-4.1.2.tar.gz) = 76cf6bbb7e56a64c90d04bf9879924327a7cd39e4a4c1bb6a27e74348f74cb7ea918d9d90bf1826661efbe112c41ef85aa338f1eead524e36ff2416eea70dfbb
-Size (draftjs_exporter-4.1.2.tar.gz) = 33550 bytes
+BLAKE2s (draftjs_exporter-5.0.0.tar.gz) = ecd3aecb26c20991128db72a00b8a5145bbc6fd46c660350ed84930410c454ed
+SHA512 (draftjs_exporter-5.0.0.tar.gz) = 84b2c0102663e1a1b4731ff93f104d18b4efa1819fb73bb20dcb66274046d878495340e1556b65fb312e4c49f66839e4b73f9fece57b92a73fc761224068f4d4
+Size (draftjs_exporter-5.0.0.tar.gz) = 33271 bytes
