@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/12/12 19:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/09 21:18:21 wiz Exp $
 
-DISTNAME=		makedepend-1.0.8
+DISTNAME=		makedepend-1.0.9
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
