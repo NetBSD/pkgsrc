@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.38 2024/01/15 21:04:40 pin Exp $
+# $NetBSD: go-modules.mk,v 1.39 2024/02/09 13:55:56 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -31,8 +31,8 @@ GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.mod
 GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.zip
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.17.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.17.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.25.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.25.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.9.1.mod
@@ -132,8 +132,8 @@ GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20221212215047-6237
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20221212215047-62379fc7944b.zip
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.2.0.mod
-GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.4.mod
-GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.4.zip
+GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.6.mod
+GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.6.zip
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1-0.20230530133925-c48e322e2a8f.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1-0.20230530133925-c48e322e2a8f.zip
