@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2024/01/30 18:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.127 2024/02/09 11:50:30 adam Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -23,7 +23,9 @@ CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
 
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 TEST_TARGET=	test
 
 post-install:
