@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/03 23:57:49 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/09 11:57:58 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/draftjs_exporter/__init__.py
 ${PYSITELIB}/draftjs_exporter/__init__.pyc
 ${PYSITELIB}/draftjs_exporter/__init__.pyo
@@ -38,6 +37,9 @@ ${PYSITELIB}/draftjs_exporter/engines/lxml.pyo
 ${PYSITELIB}/draftjs_exporter/engines/string.py
 ${PYSITELIB}/draftjs_exporter/engines/string.pyc
 ${PYSITELIB}/draftjs_exporter/engines/string.pyo
+${PYSITELIB}/draftjs_exporter/engines/string_compat.py
+${PYSITELIB}/draftjs_exporter/engines/string_compat.pyc
+${PYSITELIB}/draftjs_exporter/engines/string_compat.pyo
 ${PYSITELIB}/draftjs_exporter/entity_state.py
 ${PYSITELIB}/draftjs_exporter/entity_state.pyc
 ${PYSITELIB}/draftjs_exporter/entity_state.pyo
