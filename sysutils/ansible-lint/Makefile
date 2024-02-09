@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/01/19 12:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/02/09 14:47:34 adam Exp $
 
-DISTNAME=	ansible-lint-6.22.2
+DISTNAME=	ansible-lint-24.2.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -26,10 +26,16 @@ DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.1.2:../../textproc/py-wcmatch
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-yamllint>=1.30.0:../../textproc/py-yamllint
+TEST_DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.1.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
