@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/09 09:48:29 adam Exp $
+
+BLAKE2s (cron_descriptor-1.4.3.tar.gz) = 0502c39047524cd16a0b6a0397d637dff68218365bcc05c120c3f5b138eb2668
+SHA512 (cron_descriptor-1.4.3.tar.gz) = 08f53a8275f0668cca87c8ce63cbd685cfffd1367ad1543934b847402860315fed498ce386bb2cb1e18a7b5cf0cf7b1bcbc3b45d272837181d0ab3cb14a68bd9
+Size (cron_descriptor-1.4.3.tar.gz) = 30289 bytes
