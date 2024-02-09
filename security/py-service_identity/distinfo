@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/07/01 11:29:20 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/02/09 14:24:19 adam Exp $
 
-BLAKE2s (service_identity-23.1.0.tar.gz) = b484afc1fcc1f6c280d43231d3c3c3aa40dfb286b39f17cd70a11957ddd18939
-SHA512 (service_identity-23.1.0.tar.gz) = bc53f563050811a2b40dbfcf1e0a1b1b5677e2b48ed4e94e37d29735baea49ed7a7099d656444c0054fa2c23ae96026e67919cf24b01a3ae6b3549fd25dfe4d1
-Size (service_identity-23.1.0.tar.gz) = 39840 bytes
+BLAKE2s (service_identity-24.1.0.tar.gz) = cd76006f7da40f861bacb392e9c2a8aaa0fb2276bfcc52ee8f294d75069cb1ce
+SHA512 (service_identity-24.1.0.tar.gz) = 86cf2754bf8564d828d8cae4dec25dae04537ae59f5e2ee8450594f473cbd27f4c96313f743bad6842f9344a53a76a9d22064d8143e9d2d41a83376627d309fd
+Size (service_identity-24.1.0.tar.gz) = 40183 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/10/28 19:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/09 14:24:19 adam Exp $
 
-DISTNAME=	service_identity-23.1.0
+DISTNAME=	service_identity-24.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/service_identity/}
 
@@ -17,16 +16,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatc
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # optional, but let's depend on it
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# needs 'make install'
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
