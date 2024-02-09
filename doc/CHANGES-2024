@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1057 2024/02/09 21:09:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1058 2024/02/09 21:11:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xmore to 1.0.4 [wiz 2024-02-09]
 	Updated x11/xprop to 1.2.7 [wiz 2024-02-09]
 	Updated sysutils/libpciaccess to 0.18 [wiz 2024-02-09]
+	Updated x11/libXext to 1.3.6 [wiz 2024-02-09]
