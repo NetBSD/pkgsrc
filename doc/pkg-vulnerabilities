@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.120 2024/02/09 06:59:03 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.121 2024/02/09 20:31:43 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25874,3 +25874,8 @@ py{27,37,38,39,310,311,312}-django>=3.2<3.2.24	denial-of-service	https://nvd.nis
 py{27,37,38,39,310,311,312}-django>=4.1<4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
 py{27,37,38,39,310,311,312}-django>=4.2<4.2.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
 libuv>=1.45<1.48	address-check-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-24806
+postgresql-server>=12<12.18	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
+postgresql-server>=13<13.14	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
+postgresql-server>=14<14.11	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
+postgresql-server>=15<15.6	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
+postgresql-server>=16<16.2	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
