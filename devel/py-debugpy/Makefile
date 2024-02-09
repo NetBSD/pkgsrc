@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/10/26 06:28:56 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/09 06:31:11 adam Exp $
 
-DISTNAME=	debugpy-1.8.0
+DISTNAME=	debugpy-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/microsoft/debugpy
 COMMENT=	Implementation of the Debug Adapter Protocol for Python
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -29,5 +32,5 @@ post-extract:
 	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} +
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} 644 {} +
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
