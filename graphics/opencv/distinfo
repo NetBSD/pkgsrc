@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2024/01/16 19:23:05 adam Exp $
+$NetBSD: distinfo,v 1.61 2024/02/09 11:50:30 adam Exp $
 
 BLAKE2s (opencv-3.4.20.tar.gz) = 2b69e87e4accd4da4d1a599e05fc206cd5644ddeb7f61c9800ddb625648e4ffe
 SHA512 (opencv-3.4.20.tar.gz) = 45b4447a5312acefffb9b11a6d4e8d8e98c62dcec902e4589d91bb32e7b5bc6e5c6407881a9edcca7d97df598e3f70925e458b2772d991d64ed2cc82701441f8
@@ -8,7 +8,7 @@ SHA1 (patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc) = f1b77384ea
 SHA1 (patch-CMakeLists.txt) = 86a524683091aad65dfaf719d56c5f76056596b6
 SHA1 (patch-apps_visualisation_opencv__visualisation.cpp) = b62c32172049c6369fd62a5c72325eef995fd1d0
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = ac7deccedcc5071d3785c7827a06419713ba0529
-SHA1 (patch-cmake_OpenCVDetectPython.cmake) = 4f3bfe574edf083ebc7e78d347355c58461b2c6b
+SHA1 (patch-cmake_OpenCVDetectPython.cmake) = 87a304f12f4069103670052dfbedadff2c6e9c05
 SHA1 (patch-cmake_OpenCVFindLAPACK.cmake) = c7e8db9351f103c7e2a248f047e448e7bf0ac5ad
 SHA1 (patch-cmake_OpenCVFindProtobuf.cmake) = 2c8cde9efeb3f8a633c5712682ea16adec2e5c38
 SHA1 (patch-modules_core_include_opencv2_core_bindings__utils.hpp) = 44a8602670141b2a3bc90c5e1c23a8e7f96a1d40
