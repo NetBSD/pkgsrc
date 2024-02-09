@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2022/07/11 08:50:27 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/09 06:06:40 adam Exp $
 
-DISTNAME=	celery-5.2.7
+DISTNAME=	celery-5.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
@@ -10,22 +10,24 @@ HOMEPAGE=	https://docs.celeryproject.org/
 COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-billiard>=3.6.4.0:../../parallel/py-billiard
-DEPENDS+=	${PYPKGPREFIX}-click>=8.0.3:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.0.3:../../devel/py-click-didyoumean
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-billiard>=4.2.0:../../parallel/py-billiard
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.2:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.3.0:../../devel/py-click-didyoumean
 DEPENDS+=	${PYPKGPREFIX}-click-plugins>=1.1.1:../../devel/py-click-plugins
 DEPENDS+=	${PYPKGPREFIX}-click-repl>=0.2.0:../../devel/py-click-repl
-DEPENDS+=	${PYPKGPREFIX}-kombu>=5.2.3:../../net/py-kombu
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2021.3:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-vine>=5.0.0:../../devel/py-vine
-TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.178:../../net/py-boto3
-TEST_DEPENDS+=	${PYPKGPREFIX}-moto>=2.2.6:../../net/py-moto
-TEST_DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-#TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-kombu>=5.3.4:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.7:../../time/py-tzdata
+DEPENDS+=	${PYPKGPREFIX}-vine>=5.1.0:../../devel/py-vine
+TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.26.143:../../net/py-boto3
+TEST_DEPENDS+=	${PYPKGPREFIX}-moto>=4.1.11:../../net/py-moto
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-celery-[0-9]*:../../devel/py-test-celery
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests-[0-9]*:../../devel/py-test-subtests
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-click-[0-9]*:../../
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-order-[0-9]*:../../
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests>=0.11.0:../../devel/py-test-subtests
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
 # unlisted but needed
 TEST_DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 TEST_DEPENDS+=	${PYPKGPREFIX}-mongo-[0-9]*:../../databases/py-mongo
@@ -34,14 +36,9 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} celery celery-${PYVERSSUFFIX} || ${TRUE}
 
-# test status as of 5.2.3 with py-pre-commit
-# 1 failed, 2444 passed, 49 skipped, 3 xfailed, 30 warnings
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
