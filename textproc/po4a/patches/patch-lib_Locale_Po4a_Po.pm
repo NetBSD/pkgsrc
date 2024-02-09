@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Locale_Po4a_Po.pm,v 1.3 2024/01/29 16:08:20 adam Exp $
+$NetBSD: patch-lib_Locale_Po4a_Po.pm,v 1.4 2024/02/09 12:18:08 jperkin Exp $
 
 Use a sufficiently capable diff.
 Write to the full physical null device.
@@ -10,7 +10,7 @@ Write to the full physical null device.
  
      if ($checkvalidity) {   # We sometimes need to read a file even if it may be invalid (eg to test whether it's empty)
 -        my $cmd = "msgfmt" . $Config{_exe} . " --check-format --check-domain -o /dev/null \"" . $filename . '"';
-+        my $cmd = "@PREFIX@/bin/msgfmt" . $Config{_exe} . " --check-format --check-domain -o /dev/null \"" . $filename . '"';
++        my $cmd = "@PREFIX@/bin/msgfmt" . $Config{_exe} . " --check-format --check-domain -o @PO4A_DEVNULL@ \"" . $filename . '"';
  
          my $locale = $ENV{'LC_ALL'};
          $ENV{'LC_ALL'} = "C";
