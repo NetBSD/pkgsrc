@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/09 12:39:07 adam Exp $
+
+BLAKE2s (laces-0.1.0.tar.gz) = 0e53c178dc8b293bfe2f38e2b373d07fc32dd2335ed041a22764156a11fbedb6
+SHA512 (laces-0.1.0.tar.gz) = 16eb367836b6ce615d08c6cd088b87ee27ba47cec8e49bc0adff5514aa004012484c3d8501867f94bb3c28555298e7c73c3c0736be7c206780b5934199b5c3d5
+Size (laces-0.1.0.tar.gz) = 11710 bytes
