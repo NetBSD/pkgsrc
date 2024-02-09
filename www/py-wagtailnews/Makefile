@@ -1,27 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/09 13:45:51 adam Exp $
 
-DISTNAME=	wagtailnews-2.7.1
+DISTNAME=	wagtailnews-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=neon-jungle/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtailnews/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neon-jungle/wagtailnews
 COMMENT=	News system for the Wagtail CMS
 LICENSE=	2-clause-bsd
 
-GITHUB_PROJECT=	wagtailnews
-GITHUB_TAG=	${PKGVERSION_NOREV}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wagtail>=5.2.0:../../www/py-wagtail
 
-DEPENDS+=	${PYPKGPREFIX}-wagtail>=2.9:../../www/py-wagtail
-
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} runtests.py
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
