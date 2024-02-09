@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2024/01/28 13:00:08 wiz Exp $
+$NetBSD: distinfo,v 1.55 2024/02/09 12:34:08 jperkin Exp $
 
 BLAKE2s (rspamd-3.8.1.tar.gz) = e35c4ac1134a74f0ea8ce464674a147c300de3b7e9cd6ea8d70d2ac5089618f2
 SHA512 (rspamd-3.8.1.tar.gz) = b87c1cba11faca278db85426ed527832c34d1beff56e0993543a05fcc2d5d72675cf31bbc4241f52da9122787d24f8b955218988a198a3c29dee5db3be2c7e99
@@ -9,4 +9,5 @@ SHA1 (patch-contrib_doctest_doctest_doctest.h) = 5238cb9f837e1d8f402023ddc2f7d02
 SHA1 (patch-contrib_fpconv_fpconv.c) = b1ec2b07570674458e69020ccbf25f0374d894f6
 SHA1 (patch-src_libserver_cfg__utils.cxx) = 7122f06adeaaa9a362606ef38147b7e39f66393c
 SHA1 (patch-src_libserver_symcache_symcache__impl.cxx) = 8a5c69ab343409427619a9cbc0dc080d548b9c53
+SHA1 (patch-src_libstat_backends_redis__backend.cxx) = 4c60287a574066a841c76081cd88512a57f0b27f
 SHA1 (patch-src_rspamd.c) = 1903994d5970af57de9c5d522df3dd12576c8418
