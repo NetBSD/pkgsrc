@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/13 13:44:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/09 22:09:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -120,9 +125,24 @@ ${PYSITELIB}/google/api_core/rest_helpers.pyo
 ${PYSITELIB}/google/api_core/rest_streaming.py
 ${PYSITELIB}/google/api_core/rest_streaming.pyc
 ${PYSITELIB}/google/api_core/rest_streaming.pyo
-${PYSITELIB}/google/api_core/retry.py
-${PYSITELIB}/google/api_core/retry.pyc
-${PYSITELIB}/google/api_core/retry.pyo
+${PYSITELIB}/google/api_core/retry/__init__.py
+${PYSITELIB}/google/api_core/retry/__init__.pyc
+${PYSITELIB}/google/api_core/retry/__init__.pyo
+${PYSITELIB}/google/api_core/retry/retry_base.py
+${PYSITELIB}/google/api_core/retry/retry_base.pyc
+${PYSITELIB}/google/api_core/retry/retry_base.pyo
+${PYSITELIB}/google/api_core/retry/retry_streaming.py
+${PYSITELIB}/google/api_core/retry/retry_streaming.pyc
+${PYSITELIB}/google/api_core/retry/retry_streaming.pyo
+${PYSITELIB}/google/api_core/retry/retry_streaming_async.py
+${PYSITELIB}/google/api_core/retry/retry_streaming_async.pyc
+${PYSITELIB}/google/api_core/retry/retry_streaming_async.pyo
+${PYSITELIB}/google/api_core/retry/retry_unary.py
+${PYSITELIB}/google/api_core/retry/retry_unary.pyc
+${PYSITELIB}/google/api_core/retry/retry_unary.pyo
+${PYSITELIB}/google/api_core/retry/retry_unary_async.py
+${PYSITELIB}/google/api_core/retry/retry_unary_async.pyc
+${PYSITELIB}/google/api_core/retry/retry_unary_async.pyo
 ${PYSITELIB}/google/api_core/retry_async.py
 ${PYSITELIB}/google/api_core/retry_async.pyc
 ${PYSITELIB}/google/api_core/retry_async.pyo
@@ -132,8 +152,3 @@ ${PYSITELIB}/google/api_core/timeout.pyo
 ${PYSITELIB}/google/api_core/version.py
 ${PYSITELIB}/google/api_core/version.pyc
 ${PYSITELIB}/google/api_core/version.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
