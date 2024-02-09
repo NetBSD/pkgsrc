@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/07/13 20:48:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/09 20:51:33 wiz Exp $
 
-DISTNAME=		xkbutils-1.0.5
+DISTNAME=		xkbutils-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
