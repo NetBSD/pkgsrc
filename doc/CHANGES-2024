@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1061 2024/02/09 21:18:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1062 2024/02/09 22:12:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1792,3 +1792,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libxkbfile to 1.1.3 [wiz 2024-02-09]
 	Updated x11/libXvMC to 1.0.14 [wiz 2024-02-09]
 	Updated devel/makedepend to 1.0.9 [wiz 2024-02-09]
+	Updated devel/py-google-api-core to 2.17.0 [adam 2024-02-09]
+	Updated www/py-google-api-python-client to 2.116.0 [adam 2024-02-09]
