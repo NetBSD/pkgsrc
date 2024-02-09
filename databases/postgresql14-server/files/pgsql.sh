@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2022/10/02 14:24:50 martin Exp $
+# $NetBSD: pgsql.sh,v 1.3 2024/02/09 08:33:14 adam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -18,8 +18,8 @@
 #	pgsql_home="/path/to/home"	# path to pgsql database directory
 # See postmaster(1) for possible options.
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+  . @SYSCONFBASE@/rc.subr
 fi
 
 name="pgsql"
@@ -40,10 +40,12 @@ restart_cmd="pgsql_restart"
 stop_cmd="pgsql_stop"
 reload_cmd="pgsql_reload"
 
-if [ -f /etc/rc.subr ] && [ -d /etc/rc.d ] && [ -f /etc/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/rc.subr ] && \
+   [ -d @SYSCONFBASE@/rc.d ] && \
+   [ -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	load_rc_config $name
-elif [ -f /etc/rc.conf ]; then
-	. /etc/rc.conf
+elif [ -f @SYSCONFBASE@/rc.conf ]; then
+	. @SYSCONFBASE@/rc.conf
 fi
 
 cd /
@@ -101,7 +103,9 @@ pgsql_reload()
 	@SU@ -m ${pgsql_user} -c "${command} reload ${command_args_daemon}"
 }
 
-if [ -f /etc/rc.subr ] && [ -d /etc/rc.d ] && [ -f /etc/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/rc.subr ] && \
+   [ -d @SYSCONFBASE@/rc.d ] && \
+   [ -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	run_rc_command "$1"
 else
 	pidfile="${pgsql_home}/data/postmaster.pid"
