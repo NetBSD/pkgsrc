@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2023/10/23 06:37:56 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2024/02/09 10:34:28 adam Exp $
 
 Django also requires a database backend.
 
 For PostgreSQL, install databases/py-psycopg2 package.
-For MySQL/MariaDB, install databases/py-mysqldb or databases/py-mysql-connector
-package.
+For MySQL/MariaDB, install databases/py-mysqlclient or
+databases/py-mysql-connector package.
 For Oracle, install databases/py-cx_Oracle package.
 ===========================================================================
