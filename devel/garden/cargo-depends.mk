@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2024/01/28 06:47:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2024/02/09 13:53:45 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.7
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.16
@@ -32,6 +32,13 @@ CARGO_CRATE_DEPENDS+=	dirs-5.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.4.1
 CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	either-1.9.0
+CARGO_CRATE_DEPENDS+=	encoding-0.2.33
+CARGO_CRATE_DEPENDS+=	encoding-index-japanese-1.20141219.5
+CARGO_CRATE_DEPENDS+=	encoding-index-korean-1.20141219.5
+CARGO_CRATE_DEPENDS+=	encoding-index-simpchinese-1.20141219.5
+CARGO_CRATE_DEPENDS+=	encoding-index-singlebyte-1.20141219.5
+CARGO_CRATE_DEPENDS+=	encoding-index-tradchinese-1.20141219.5
+CARGO_CRATE_DEPENDS+=	encoding_index_tests-0.1.4
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.1
 CARGO_CRATE_DEPENDS+=	errno-0.3.8
 CARGO_CRATE_DEPENDS+=	function_name-0.3.0
@@ -43,7 +50,7 @@ CARGO_CRATE_DEPENDS+=	hashlink-0.8.4
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.4
 CARGO_CRATE_DEPENDS+=	home-0.5.9
-CARGO_CRATE_DEPENDS+=	indexmap-2.1.0
+CARGO_CRATE_DEPENDS+=	indexmap-2.2.1
 CARGO_CRATE_DEPENDS+=	indextree-4.6.0
 CARGO_CRATE_DEPENDS+=	is-terminal-0.4.10
 CARGO_CRATE_DEPENDS+=	libc-0.2.152
@@ -111,7 +118,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.0
 CARGO_CRATE_DEPENDS+=	xdg-2.5.2
-CARGO_CRATE_DEPENDS+=	yaml-rust-davvid-0.5.2
+CARGO_CRATE_DEPENDS+=	yaml-rust-davvid-0.6.0
 CARGO_CRATE_DEPENDS+=	yansi-0.5.1
 CARGO_CRATE_DEPENDS+=	zerocopy-0.7.32
 CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.32
