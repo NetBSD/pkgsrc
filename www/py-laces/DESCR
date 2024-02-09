@@ -1,0 +1,8 @@
+Working with objects that know how to render themselves as HTML elements is a
+common pattern found in complex Django applications (e.g. the Wagtail admin
+interface). This package provides tools enable and support working with such
+objects, also known as "components".
+
+The APIs provided in the package have previously been discovered, developed and
+solidified in the Wagtail project. The purpose of this package is to make these
+tools available to other Django projects outside the Wagtail ecosystem.
