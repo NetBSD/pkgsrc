@@ -1,0 +1,1 @@
+bin/djangocms @PREFIX@/bin/djangocms-@PYVERSSUFFIX@
