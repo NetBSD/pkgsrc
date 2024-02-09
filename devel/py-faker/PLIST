@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2024/01/19 22:15:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2024/02/09 13:16:39 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -361,6 +361,9 @@ ${PYSITELIB}/faker/providers/automotive/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/automotive/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/uk_UA/__init__.py
+${PYSITELIB}/faker/providers/automotive/uk_UA/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/uk_UA/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/vi_VN/__init__.py
 ${PYSITELIB}/faker/providers/automotive/vi_VN/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/vi_VN/__init__.pyo
@@ -1276,6 +1279,9 @@ ${PYSITELIB}/faker/providers/lorem/th_TH/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/tl_PH/__init__.py
 ${PYSITELIB}/faker/providers/lorem/tl_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/tl_PH/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.py
+${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.pyo

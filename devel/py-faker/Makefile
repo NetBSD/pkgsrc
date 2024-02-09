@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/02/01 14:21:16 adam Exp $
+# $NetBSD: Makefile,v 1.80 2024/02/09 13:16:39 adam Exp $
 
-DISTNAME=	Faker-22.6.0
+DISTNAME=	Faker-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
