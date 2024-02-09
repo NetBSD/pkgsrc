@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/04 01:09:08 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/09 13:44:49 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/wagtailmenus/__init__.py
 ${PYSITELIB}/wagtailmenus/__init__.pyc
 ${PYSITELIB}/wagtailmenus/__init__.pyo
@@ -32,9 +31,6 @@ ${PYSITELIB}/wagtailmenus/conf/tests/test_modeladmin_disable_settings.pyo
 ${PYSITELIB}/wagtailmenus/context_processors.py
 ${PYSITELIB}/wagtailmenus/context_processors.pyc
 ${PYSITELIB}/wagtailmenus/context_processors.pyo
-${PYSITELIB}/wagtailmenus/development/__init__.py
-${PYSITELIB}/wagtailmenus/development/__init__.pyc
-${PYSITELIB}/wagtailmenus/development/__init__.pyo
 ${PYSITELIB}/wagtailmenus/errors.py
 ${PYSITELIB}/wagtailmenus/errors.pyc
 ${PYSITELIB}/wagtailmenus/errors.pyo
@@ -51,6 +47,8 @@ ${PYSITELIB}/wagtailmenus/locale/es_419/LC_MESSAGES/django.mo
 ${PYSITELIB}/wagtailmenus/locale/es_419/LC_MESSAGES/django.po
 ${PYSITELIB}/wagtailmenus/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/wagtailmenus/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/wagtailmenus/locale/id/LC_MESSAGES/django.mo
+${PYSITELIB}/wagtailmenus/locale/id/LC_MESSAGES/django.po
 ${PYSITELIB}/wagtailmenus/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/wagtailmenus/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/wagtailmenus/locale/lt/LC_MESSAGES/django.mo
@@ -175,7 +173,6 @@ ${PYSITELIB}/wagtailmenus/settings/base.pyo
 ${PYSITELIB}/wagtailmenus/settings/testing.py
 ${PYSITELIB}/wagtailmenus/settings/testing.pyc
 ${PYSITELIB}/wagtailmenus/settings/testing.pyo
-${PYSITELIB}/wagtailmenus/static/wagtailmenus/css/menu-edit.css
 ${PYSITELIB}/wagtailmenus/static/wagtailmenus/js/site-switcher.js
 ${PYSITELIB}/wagtailmenus/templates/menus/bootstrap3/main_menu_dropdown.html
 ${PYSITELIB}/wagtailmenus/templates/menus/bootstrap3/main_menu_dropdown_hover.html
@@ -291,6 +288,9 @@ ${PYSITELIB}/wagtailmenus/tests/templates/typical-page.html
 ${PYSITELIB}/wagtailmenus/tests/test_backend.py
 ${PYSITELIB}/wagtailmenus/tests/test_backend.pyc
 ${PYSITELIB}/wagtailmenus/tests/test_backend.pyo
+${PYSITELIB}/wagtailmenus/tests/test_base_menu_classes.py
+${PYSITELIB}/wagtailmenus/tests/test_base_menu_classes.pyc
+${PYSITELIB}/wagtailmenus/tests/test_base_menu_classes.pyo
 ${PYSITELIB}/wagtailmenus/tests/test_childrenmenu_class.py
 ${PYSITELIB}/wagtailmenus/tests/test_childrenmenu_class.pyc
 ${PYSITELIB}/wagtailmenus/tests/test_childrenmenu_class.pyo
