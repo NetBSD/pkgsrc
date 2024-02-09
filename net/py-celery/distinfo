@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/07/11 08:50:27 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/02/09 06:06:40 adam Exp $
 
-BLAKE2s (celery-5.2.7.tar.gz) = ccb3c16c97dc91373eaf1e32620d333f49ef0bd086e4fde5d6fbe25879987102
-SHA512 (celery-5.2.7.tar.gz) = 68e3bb082f97ebe20391293cc8fa96c41c8f5ac5e8c24b2b7bd66eb104ec459bdfa49741e47486676e5daa88d7a71e3eb0d9432851aeafc74b0d4352e567e853
-Size (celery-5.2.7.tar.gz) = 1474243 bytes
-SHA1 (patch-requirements_test.txt) = 7ef7e9a6a72fc19b547d073f9d9bf327959412a7
+BLAKE2s (celery-5.3.6.tar.gz) = 363d46cd79f90b3c3b2fb92f1475c9a967bfd91686d6d56a06529dbb599d963f
+SHA512 (celery-5.3.6.tar.gz) = 169fa01c72f4d4932a255f4e7a547d1cc24f6899540414950c37e487163127bd3681b9ad741e9b1375c8a0b2b566b7467448e4523c77b34d29b3873007fb6885
+Size (celery-5.3.6.tar.gz) = 1544498 bytes
