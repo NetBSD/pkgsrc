@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/20 11:19:18 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/09 13:45:51 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/wagtailnews/__init__.py
 ${PYSITELIB}/wagtailnews/__init__.pyc
 ${PYSITELIB}/wagtailnews/__init__.pyo
@@ -20,9 +19,6 @@ ${PYSITELIB}/wagtailnews/decorators.pyo
 ${PYSITELIB}/wagtailnews/deprecation.py
 ${PYSITELIB}/wagtailnews/deprecation.pyc
 ${PYSITELIB}/wagtailnews/deprecation.pyo
-${PYSITELIB}/wagtailnews/edit_handlers.py
-${PYSITELIB}/wagtailnews/edit_handlers.pyc
-${PYSITELIB}/wagtailnews/edit_handlers.pyo
 ${PYSITELIB}/wagtailnews/feeds.py
 ${PYSITELIB}/wagtailnews/feeds.pyc
 ${PYSITELIB}/wagtailnews/feeds.pyo
@@ -43,20 +39,14 @@ ${PYSITELIB}/wagtailnews/signals.pyc
 ${PYSITELIB}/wagtailnews/signals.pyo
 ${PYSITELIB}/wagtailnews/static/js/news_chooser.js
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/choose.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/chooser/choose.js
-${PYSITELIB}/wagtailnews/templates/wagtailnews/chooser/chooser.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/chooser/chosen.js
-${PYSITELIB}/wagtailnews/templates/wagtailnews/chooser/list.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/chooser/search_results.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/create.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/delete.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/edit.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/index.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/newsitem_list.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/search.html
+${PYSITELIB}/wagtailnews/templates/wagtailnews/search_form.html
 ${PYSITELIB}/wagtailnews/templates/wagtailnews/search_results.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/unpublish.html
-${PYSITELIB}/wagtailnews/templates/wagtailnews/widgets/news_chooser.html
+${PYSITELIB}/wagtailnews/templates/wagtailnews/slim_header.html
 ${PYSITELIB}/wagtailnews/templatetags/__init__.py
 ${PYSITELIB}/wagtailnews/templatetags/__init__.pyc
 ${PYSITELIB}/wagtailnews/templatetags/__init__.pyo
@@ -81,6 +71,3 @@ ${PYSITELIB}/wagtailnews/views/editor.pyo
 ${PYSITELIB}/wagtailnews/wagtail_hooks.py
 ${PYSITELIB}/wagtailnews/wagtail_hooks.pyc
 ${PYSITELIB}/wagtailnews/wagtail_hooks.pyo
-${PYSITELIB}/wagtailnews/widgets.py
-${PYSITELIB}/wagtailnews/widgets.pyc
-${PYSITELIB}/wagtailnews/widgets.pyo
