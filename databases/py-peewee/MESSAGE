@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2023/10/23 06:37:37 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2024/02/09 10:34:28 adam Exp $
 
 The ${PKGNAME} package doesn't have any fixed dependencies. In order to use
 it, install a supported backend package as needed.
 
   MySQL
     - ${PYPKGPREFIX}-pymysql (databases/py-pymysql)
-    - ${PYPKGPREFIX}-mysqldb (databases/py-mysqldb)
+    - ${PYPKGPREFIX}-mysqlclient (databases/py-mysqlclient)
 
   PostgreSQL:
     - ${PYPKGPREFIX}-psycopg2 (databases/py-psycopg2)
