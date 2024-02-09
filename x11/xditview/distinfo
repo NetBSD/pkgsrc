@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/15 23:11:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/02/09 20:58:55 wiz Exp $
 
-BLAKE2s (xditview-1.0.6.tar.xz) = 47c59e0996598bb05ab2fba630aec652dcbf8f8d7064f0c4302b8c523f34853a
-SHA512 (xditview-1.0.6.tar.xz) = 249769d27980e9a69ac8f056f329dfa514f3ab6267d6ed69814c5695f315d2a7021c560a0e26fdd2568290a071793d7f2eafdd92f9981ed556047deb244ebf5a
-Size (xditview-1.0.6.tar.xz) = 143848 bytes
+BLAKE2s (xditview-1.0.7.tar.xz) = 155a664ee897aa4485ee678c1fe8be0d94df5118fc6e3f9ffdaa8317ca73957e
+SHA512 (xditview-1.0.7.tar.xz) = da7e80cd9fbb5da0ec4949c6fed0bad135a2490767f030e60f1c51a9f5a62379572bf8b4dd6dec2fe824152d090470e62fce12c9144aaa1be1b48ddbc3b2910b
+Size (xditview-1.0.7.tar.xz) = 146392 bytes
