@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1040 2024/02/09 13:53:01 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1041 2024/02/09 13:54:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1769,3 +1769,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-wagtailmenus to 3.1.9 [adam 2024-02-09]
 	Updated www/py-wagtailnews to 5.2.0 [adam 2024-02-09]
 	Updated devel/cargo-modules to 0.13.6 [pin 2024-02-09]
+	Updated devel/garden to 1.2.1 [pin 2024-02-09]
