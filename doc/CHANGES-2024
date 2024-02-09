@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1052 2024/02/09 20:51:41 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1053 2024/02/09 20:59:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added lang/go122 version 1.22.0 [bsiegert 2024-02-09]
 	Updated x11/bitmap to 1.1.1 [wiz 2024-02-09]
 	Updated x11/xkbutils to 1.0.6 [wiz 2024-02-09]
+	Updated x11/xditview to 1.0.7 [wiz 2024-02-09]
