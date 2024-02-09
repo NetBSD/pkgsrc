@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.701 2024/01/22 16:46:16 adam Exp $
+# $NetBSD: Makefile,v 1.702 2024/02/09 10:26:04 adam Exp $
 
 COMMENT=	Databases
 
@@ -383,7 +383,6 @@ SUBDIR+=	py-mssql
 SUBDIR+=	py-multidict
 SUBDIR+=	py-mysql-connector
 SUBDIR+=	py-mysqlclient
-SUBDIR+=	py-mysqldb
 SUBDIR+=	py-orderedmultidict
 SUBDIR+=	py-peewee
 SUBDIR+=	py-pgnotify
