@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/19 13:16:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/09 08:33:15 adam Exp $
 include/postgresql/server/plperl.h
 include/postgresql/server/plperl_helpers.h
+include/postgresql/server/plperl_system.h
 include/postgresql/server/ppport.h
 lib/postgresql/plperl.so
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/plperl-15.mo
