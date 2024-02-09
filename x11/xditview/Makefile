@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/10/15 23:11:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/09 20:58:55 wiz Exp $
 
-DISTNAME=	xditview-1.0.6
+DISTNAME=	xditview-1.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
