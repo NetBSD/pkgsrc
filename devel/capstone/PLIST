@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/07 09:46:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/09 05:54:01 adam Exp $
 bin/cstool
 include/capstone/arm.h
 include/capstone/arm64.h
@@ -22,6 +22,5 @@ include/capstone/x86.h
 include/capstone/xcore.h
 lib/libcapstone.a
 lib/libcapstone.so
-lib/libcapstone.so.4
 lib/libcapstone.so.5
 lib/pkgconfig/capstone.pc
