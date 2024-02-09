@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2023/04/12 11:14:05 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/09 12:41:07 adam Exp $
 
-DISTNAME=	django-modelcluster-6.0
+DISTNAME=	django-modelcluster-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wagtail/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-modelcluster/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wagtail/django-modelcluster
 COMMENT=	Django extension for offline model instances
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	django-modelcluster
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django4
+DEPENDS+=	${PYPKGPREFIX}-pytz>=2022.4:../../time/py-pytz
+# taggit
+DEPENDS+=	${PYPKGPREFIX}-django-taggit>=3.1:../../www/py-django-taggit
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
+USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2015.2:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-django-taggit>=0.20:../../www/py-django-taggit
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_LANGUAGES=		# none
-
-do-test:
-	cd ${WRKSRC} && ${PREFIX}/bin/coverage-${PYVERSSUFFIX} run -m django test --settings=tests.settings
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
