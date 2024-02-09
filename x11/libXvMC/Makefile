@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/11/09 13:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2024/02/09 21:17:01 wiz Exp $
 
-DISTNAME=		libXvMC-1.0.13
+DISTNAME=		libXvMC-1.0.14
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
@@ -10,18 +10,16 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		XVideo Motion Compensation Library
 LICENSE=		mit
 
-USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	xvmc.pc.in
-PKGCONFIG_OVERRIDE+=	xvmc-wrapper.pc.in
-
-CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
+PKGCONFIG_OVERRIDE+=		output/meson-private/xvmc.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/xvmc-wrapper.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 X11_LIB_NAME?=		libXvMC
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
