@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1046 2024/02/09 13:59:46 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1047 2024/02/09 14:00:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/yazi to 0.2.3 [pin 2024-02-09]
 	Updated www/seaward to 1.0.2 [pin 2024-02-09]
 	Updated sysutils/xcp to 0.20.2 [pin 2024-02-09]
+	Updated textproc/xt-rs to 0.19.0 [pin 2024-02-09]
