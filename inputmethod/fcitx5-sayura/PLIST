@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:43:08 ryoon Exp $
-lib/fcitx5/sayura.so
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:15:36 ryoon Exp $
+lib/fcitx5/libsayura.so
 share/fcitx5/addon/sayura.conf
 share/fcitx5/inputmethod/sayura.conf
 share/icons/hicolor/128x128/apps/fcitx-sayura.png
@@ -19,6 +19,7 @@ share/icons/hicolor/scalable/apps/org.fcitx.Fcitx5.fcitx-sayura.svg
 share/locale/ca/LC_MESSAGES/fcitx5-sayura.mo
 share/locale/da/LC_MESSAGES/fcitx5-sayura.mo
 share/locale/de/LC_MESSAGES/fcitx5-sayura.mo
+share/locale/fr/LC_MESSAGES/fcitx5-sayura.mo
 share/locale/he/LC_MESSAGES/fcitx5-sayura.mo
 share/locale/ja/LC_MESSAGES/fcitx5-sayura.mo
 share/locale/ko/LC_MESSAGES/fcitx5-sayura.mo
