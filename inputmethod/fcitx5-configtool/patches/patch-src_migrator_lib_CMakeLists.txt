@@ -1,0 +1,15 @@
+$NetBSD: patch-src_migrator_lib_CMakeLists.txt,v 1.1 2024/02/10 10:08:26 ryoon Exp $
+
+* Do not fail to link libFcitx5Migrator.so
+  and set RPATH for libFcitx5Migrator.so.
+
+--- src/migrator/lib/CMakeLists.txt.orig	2023-09-27 17:35:40.252324600 +0000
++++ src/migrator/lib/CMakeLists.txt
+@@ -3,6 +3,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFI
+                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/Fcitx5MigratorVersion.cmake"
+                         SOVERSION 1)
+ 
++set(CMAKE_SHARED_LINKER_FLAGS "-fno-lto @COMPILER_RPATH_FLAG@@QTDIR@/lib:@PREFIX@/lib")
+ add_library(Fcitx5Migrator SHARED
+     migratorfactoryplugin.cpp
+     migrator.cpp
