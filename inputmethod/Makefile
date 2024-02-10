@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2024/02/10 01:23:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.129 2024/02/10 01:24:34 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -82,6 +82,7 @@ SUBDIR+=	mozc-renderer226
 SUBDIR+=	mozc-server
 SUBDIR+=	mozc-server226
 SUBDIR+=	mozc-tool
+SUBDIR+=	mozc-tool226
 SUBDIR+=	multiskkserv
 SUBDIR+=	nabi
 SUBDIR+=	novel-pinyin
