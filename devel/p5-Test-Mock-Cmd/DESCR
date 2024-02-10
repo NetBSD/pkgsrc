@@ -1,0 +1,14 @@
+Mock system(), exec(), qx() (AKA `` and readpipe()) with your own
+functions in order to test code that may call them.
+
+Some uses might be:
+
+- avoid actually running the system command, just pretend we did
+  (simulate [un]expected output, return values, etc)
+- test various return value handling (e.g. the system command core dumps
+  how does the object handle that)
+- test that the arguments that will be passed to a system command
+  are correct
+- simulate that really hard to reproduce low level edge case to make
+  sure your code works correctly on affected systems
+- etc etc
