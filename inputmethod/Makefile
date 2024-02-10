@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2024/02/10 01:25:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2024/02/10 01:29:24 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -50,6 +50,7 @@ SUBDIR+=	ibus-libpinyin
 SUBDIR+=	ibus-libthai
 SUBDIR+=	ibus-m17n
 SUBDIR+=	ibus-mozc
+SUBDIR+=	ibus-mozc226
 SUBDIR+=	ibus-pinyin
 SUBDIR+=	ibus-qt
 SUBDIR+=	ibus-rime
