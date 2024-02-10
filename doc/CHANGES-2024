@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1147 2024/02/10 16:42:41 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1148 2024/02/10 17:28:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libidn2 to 2.3.7 [wiz 2024-02-10]
 	Updated devel/libusb1 to 1.0.27 [wiz 2024-02-10]
 	Updated textproc/tree-sitter-typescript to 0.20.4 [wiz 2024-02-10]
+	Updated shells/nushell to 0.90.1 [pin 2024-02-10]
