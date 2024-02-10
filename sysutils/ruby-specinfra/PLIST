@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/08/26 14:43:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/02/10 14:15:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/lib/specinfra/backend/dockerfile.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/exec.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/jexec.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/lxc.rb
+${GEM_LIBDIR}/lib/specinfra/backend/lxd.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/command.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/script_helper.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/powershell/support/check_file_access_rules.ps1
@@ -405,6 +406,7 @@ ${GEM_LIBDIR}/spec/backend/exec/consume_exited_process_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/env_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/read_noblock_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/stdxxx_handler_spec.rb
+${GEM_LIBDIR}/spec/backend/lxd/build_command_spec.rb
 ${GEM_LIBDIR}/spec/backend/ssh/build_command_spec.rb
 ${GEM_LIBDIR}/spec/command/alpine/service_spec.rb
 ${GEM_LIBDIR}/spec/command/amazon/interface_spec.rb
