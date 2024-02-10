@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/01/22 09:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/10 11:04:53 adam Exp $
 
-DISTNAME=	timescaledb-2.13.1
+DISTNAME=	timescaledb-2.14.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
