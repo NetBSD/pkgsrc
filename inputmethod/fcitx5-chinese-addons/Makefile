@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/01/30 14:22:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2024/02/10 10:05:47 ryoon Exp $
 
-DISTNAME=	fcitx5-chinese-addons-5.0.4
-PKGREVISION=	21
+DISTNAME=	fcitx5-chinese-addons-5.1.3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +23,6 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
@@ -35,7 +33,7 @@ post-extract:
 		${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${f} ${f}
 .endfor
 
-
+.include "../../devel/cmake/build.mk"
 .include "../../converters/opencc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -44,5 +42,8 @@ post-extract:
 .include "../../inputmethod/libime/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtlocation/buildlink3.mk"
+.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
