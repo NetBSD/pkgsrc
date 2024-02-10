@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/12/22 19:09:39 zafer Exp $
+# $NetBSD: Makefile,v 1.35 2024/02/10 14:42:39 taca Exp $
 #
 
 DISTNAME=	dtcp-20130602
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://www.mahoroba.org/~ume/ipv6/
 

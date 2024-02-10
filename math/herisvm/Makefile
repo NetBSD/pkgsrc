@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/10/11 14:38:47 taca Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/10 14:42:39 taca Exp $
 
 DISTNAME=		herisvm-0.8.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cheusov/}
 
