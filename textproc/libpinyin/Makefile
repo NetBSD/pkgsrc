@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/04/25 09:13:52 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/10 12:34:16 ryoon Exp $
 
-DISTNAME=	libpinyin-2.6.0
-PKGREVISION=	1
+DISTNAME=	libpinyin-2.8.1
 CATEGORIES=	textproc chinese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libpinyin/}
+GITHUB_PROJECT=	libpinyin
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libpinyin/libpinyin/
