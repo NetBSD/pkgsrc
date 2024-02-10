@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:05:03 ryoon Exp $
 
-BLAKE2s (fcitx5-kkc-5.0.4.tar.xz) = 7dc859f1718356b8ff6a54bb546191660c22134b8d0ba964b927d2123e4dec7b
-SHA512 (fcitx5-kkc-5.0.4.tar.xz) = 0b8c5183e3bb621d95c1ff04526b9ba3f1efd47a59b919e285f6ce040f67449ddc8b6dc215651cbe1108104ce396e91767923e7a79644c58cc3d367d00116e27
-Size (fcitx5-kkc-5.0.4.tar.xz) = 39688 bytes
+BLAKE2s (fcitx5-kkc-5.1.1.tar.xz) = f30e392fb2a4effc6425303c1571e96a3783aade455ca94a64495d2348be6cf7
+SHA512 (fcitx5-kkc-5.1.1.tar.xz) = 70a47d7ab34faf6f852dc9307f81119e4d7c266a444f1e4bbeff9cb5b86b87daafda85e5c3ef6aa08263ffebb93f2c8721e45a7f53ea65f18b73c3b429013bd3
+Size (fcitx5-kkc-5.1.1.tar.xz) = 44844 bytes

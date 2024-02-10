@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/11/12 13:22:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/10 12:05:03 ryoon Exp $
 
-DISTNAME=	fcitx5-kkc-5.0.4
-PKGREVISION=	11
+DISTNAME=	fcitx5-kkc-5.1.1
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-kkc/
 EXTRACT_SUFX=	.tar.xz
@@ -20,11 +19,11 @@ GCC_REQD+=	8
 DEPENDS+=	skk-jisyo-[0-9]*:../../inputmethod/skk-jisyo
 DEPENDS+=	libkkc-data-[0-9]*:../../misc/libkkc-data
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pkg-config
 
+.include "../../devel/cmake/build.mk"
 .include "../../converters/libkkc/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/fcitx5-qt/buildlink3.mk"
