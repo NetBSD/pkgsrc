@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/12/29 18:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/02/10 09:54:15 ryoon Exp $
 
-DISTNAME=	librime-1.8.3
-PKGREVISION=	2
+DISTNAME=	librime-1.9.0
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 
@@ -10,7 +9,6 @@ HOMEPAGE=	https://rime.im/
 COMMENT=	Rime input method engine
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -20,6 +18,7 @@ PKGCONFIG_OVERRIDE+=	rime.pc.in
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../converters/opencc/buildlink3.mk"
 .include "../../databases/leveldb/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
