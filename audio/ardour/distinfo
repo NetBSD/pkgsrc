@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:58:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/02/10 10:41:43 wiz Exp $
 
 BLAKE2s (Ardour-6.9.0.tar.bz2) = 9be75d0e92ce43cd27acfbbcbb4fb3a66b6eb02981c1ad9d0850620138389d2c
 SHA512 (Ardour-6.9.0.tar.bz2) = ace45f5bfe6d0c9e4bb1712ae53ebaee2f15f883045650cae3ddcae251d4fd2f645ba745effb739b47c73a0568ae9e8ae443b711dd610584e04575fd9046b234
 Size (Ardour-6.9.0.tar.bz2) = 12297369 bytes
+SHA1 (patch-gtk2__ardour_ardour__ui.cc) = dc69522a66a715a164d0d9d360221dbc2e65d85f
 SHA1 (patch-gtk2__ardour_wscript) = 5dd0d0e86319d7d461587a37c555d9b505b97bed
 SHA1 (patch-libs_ardour_ardour_audio__backend.h) = 7d919909f768f386b6619772318ad818d797c25d
 SHA1 (patch-libs_ardour_plugin__manager.cc) = 92564dc05e7f8febe6146f591f0a9c26d1ae0b60
 SHA1 (patch-libs_backends_jack_jack__utils.cc) = 5bf08ead83b3a2c4355a0424262878a1b89e1648
+SHA1 (patch-libs_pbd_xml++.cc) = 67ae9474e696e88f0e55685d93396de320c89d07
 SHA1 (patch-libs_qm-dsp_wscript) = 0589fe5d811b55ec474e1c48ef73656744e824fc
 SHA1 (patch-wscript) = f3b9b5dfcdf71ec66744ffa71413cc422a2dcbf2
