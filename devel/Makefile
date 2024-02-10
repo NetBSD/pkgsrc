@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4175 2024/02/10 01:15:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.4176 2024/02/10 01:16:01 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2123,6 +2123,7 @@ SUBDIR+=	p5-Test-Bits
 SUBDIR+=	p5-Test-CPAN-Meta
 SUBDIR+=	p5-Test-CPAN-Meta-JSON
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
+SUBDIR+=	p5-Test-Carp
 SUBDIR+=	p5-Test-CheckDeps
 SUBDIR+=	p5-Test-CheckManifest
 SUBDIR+=	p5-Test-Class
