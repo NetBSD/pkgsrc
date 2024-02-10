@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 07:02:34 adam Exp $
+
+BLAKE2s (jsonlines-4.0.0.tar.gz) = e10a6237c9ca8e42c33b1fc531e68d9ff2c5ce9421b27048cae9217ca2716100
+SHA512 (jsonlines-4.0.0.tar.gz) = 6523845f51ae5e5dcc4d78d15ab1050a590b37c600d7b425e3d30b48c9bc3023aac0c704e4d0251aa0ae2a40abd81aaa1059bd668570cf3b4cc5a626841be86c
+Size (jsonlines-4.0.0.tar.gz) = 11359 bytes
