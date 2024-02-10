@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4172 2024/02/05 15:47:47 taca Exp $
+# $NetBSD: Makefile,v 1.4173 2024/02/10 01:14:53 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1917,6 +1917,7 @@ SUBDIR+=	p5-Object-Pluggable
 SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Object-Signature
 SUBDIR+=	p5-Ouch
+SUBDIR+=	p5-Overload-FileCheck
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
 SUBDIR+=	p5-PAR-Packer
