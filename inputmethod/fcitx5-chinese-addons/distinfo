@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/10 10:05:47 ryoon Exp $
 
-BLAKE2s (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = 9c23fcb0160a48f67103627e9548a5836795fd21a06737e2dcea533a07ea3d39
-SHA512 (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = 0e7906bd2b1f502c0b6094e0b8cd3f811985608957a97c6bfb07838c711c6d0ea1dd9bb018f421ac623e81826686b20597967392cb34a9219b648061bcecfb41
-Size (fcitx5-chinese-addons-5.0.4/fcitx5-chinese-addons-5.0.4.tar.xz) = 199476 bytes
-BLAKE2s (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = 63884e014437272e0079123a6fa8bc90810b43c4d6d2bf763edd9e23ce87534d
-SHA512 (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = d80ff9a3549e07c7a6935e686785f9a076c58f1a782a832ae28ee65e2a213d67f089f450ce09bed87ec2a141c32b9c1fcb83c221ddcab436858fa9009f161fb3
-Size (fcitx5-chinese-addons-5.0.4/py_stroke-20121124.tar.gz) = 445601 bytes
-BLAKE2s (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 76e90426e63315bbfd804913d7efa4088e8917f68b8b690261997c981ea5246f
-SHA512 (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 0fa72ce6820a316e9729bc0d7a08af5ca3468134de9ff1bf0c559a398846a7bcf7313a3609d943e6bab637d930cf45ad9acfe25a8d3df078a774b071a7296486
-Size (fcitx5-chinese-addons-5.0.4/py_table-20121124.tar.gz) = 186822 bytes
+BLAKE2s (fcitx5-chinese-addons-5.1.3/fcitx5-chinese-addons-5.1.3.tar.xz) = ab4d5d29cdc9780ec3ddf13d17c37c571f0a03453b862c72983ff3e809c26158
+SHA512 (fcitx5-chinese-addons-5.1.3/fcitx5-chinese-addons-5.1.3.tar.xz) = 6dfae25269dd1ffa74857930f175baa1aa43c7e43febcd5443869943ffdfc2e34a73cf0aa86c188458b5d824c0fe6a4dcf98047d53f8c895b3df81d7e810209f
+Size (fcitx5-chinese-addons-5.1.3/fcitx5-chinese-addons-5.1.3.tar.xz) = 252016 bytes
+BLAKE2s (fcitx5-chinese-addons-5.1.3/py_stroke-20121124.tar.gz) = 63884e014437272e0079123a6fa8bc90810b43c4d6d2bf763edd9e23ce87534d
+SHA512 (fcitx5-chinese-addons-5.1.3/py_stroke-20121124.tar.gz) = d80ff9a3549e07c7a6935e686785f9a076c58f1a782a832ae28ee65e2a213d67f089f450ce09bed87ec2a141c32b9c1fcb83c221ddcab436858fa9009f161fb3
+Size (fcitx5-chinese-addons-5.1.3/py_stroke-20121124.tar.gz) = 445601 bytes
+BLAKE2s (fcitx5-chinese-addons-5.1.3/py_table-20121124.tar.gz) = 76e90426e63315bbfd804913d7efa4088e8917f68b8b690261997c981ea5246f
+SHA512 (fcitx5-chinese-addons-5.1.3/py_table-20121124.tar.gz) = 0fa72ce6820a316e9729bc0d7a08af5ca3468134de9ff1bf0c559a398846a7bcf7313a3609d943e6bab637d930cf45ad9acfe25a8d3df078a774b071a7296486
+Size (fcitx5-chinese-addons-5.1.3/py_table-20121124.tar.gz) = 186822 bytes
