@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:22:31 ryoon Exp $
 
-BLAKE2s (fcitx5-unikey-5.0.3.tar.xz) = 0f4f42e728bf9b053f693f6b4dc2007c3924163ad2612a055cdb85c7494d97cb
-SHA512 (fcitx5-unikey-5.0.3.tar.xz) = a91cb98df9997df7f2e3e12d3b011dd107d88d3727a01e27e16bb339fb584cfc0ceb7216705dc609e7ecd3cdbf24818339f8a0e374e8b9d6ea2ec685a5bcdea5
-Size (fcitx5-unikey-5.0.3.tar.xz) = 66556 bytes
+BLAKE2s (fcitx5-unikey-5.1.2.tar.xz) = aa193de169d287fe3f4c61b0c4fdad8be99872f02cfcf36267dc3c4859af4ad5
+SHA512 (fcitx5-unikey-5.1.2.tar.xz) = b7a7a3f9ce9a835662a1a973fc4094ca01c5030c63ea776b31188be0216af77e1f3197a644c84c1ea3a67fc8736a8f2f0f74657b82c2dfcc78a386f46c17cc10
+Size (fcitx5-unikey-5.1.2.tar.xz) = 86512 bytes

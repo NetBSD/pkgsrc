@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/11/12 13:22:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/10 12:22:31 ryoon Exp $
 
-DISTNAME=	fcitx5-unikey-5.0.3
-PKGREVISION=	11
+DISTNAME=	fcitx5-unikey-5.1.2
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-unikey/
 EXTRACT_SUFX=	.tar.xz
@@ -13,11 +12,11 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/fcitx5-qt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
