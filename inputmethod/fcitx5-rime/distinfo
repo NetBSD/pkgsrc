@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:14:03 ryoon Exp $
 
-BLAKE2s (fcitx5-rime-5.0.4.tar.xz) = 76f2540c2b2e6119ad47371cf3c21e8dd7caef163959b2d34c373a6c5c579cc7
-SHA512 (fcitx5-rime-5.0.4.tar.xz) = 6b52c5f0954642098e6ed6276084a7e889e243ff391b99a4639ac0235d113747cedcab334ef1c2466c3a09d044b5a48145d5f5ec93fdf5d23538c74839bbb7ff
-Size (fcitx5-rime-5.0.4.tar.xz) = 41004 bytes
+BLAKE2s (fcitx5-rime-5.1.4.tar.xz) = 990ab07a65829fec2fff221e452e37805095bfcd580edaa0ee73b5daaf64f6f9
+SHA512 (fcitx5-rime-5.1.4.tar.xz) = 1dc20c801e1ce4fa5e63f06554340af4616b044964d4235995e51dc6074223e30e66da74f354b2b05f77d2e0041af1e720bf2f2b214492ae4516d30761b2e092
+Size (fcitx5-rime-5.1.4.tar.xz) = 49508 bytes
