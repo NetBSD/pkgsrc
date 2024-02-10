@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 09:50:37 ryoon Exp $
 
-BLAKE2s (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = 15e36fc1218df04ed21c315ba2a1aa74d7969adf92bb33bbdd607833cf862243
-SHA512 (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = eeef75c87f75b002b3bce01cf7a9fd8b38d7bf6fbf4c190f4ac7637e02303cd8aba151b84263c47668e939573d1e8fe5f41947e80f4db5271a760a7c1b493758
-Size (rime-terra-pinyin-0.0.0.20210201-ce7b9249612f575d2f43d51fcacd31d1b4e0ef1b.tar.gz) = 730469 bytes
+BLAKE2s (rime-terra-pinyin-0.0.0.20230207-9427853de91d645d9aca9ceace8fe9e9d8bc5b50.tar.gz) = 2eaa20296860d84f41bb6316a1e9ce5224ed8ffa68528b68430e4ba877fefa33
+SHA512 (rime-terra-pinyin-0.0.0.20230207-9427853de91d645d9aca9ceace8fe9e9d8bc5b50.tar.gz) = 8c3a8ddc71eecc5a70bddf67f94caf0b1a3ca97ec28fa689575388ea68bedb7a8312c2f0f2bade738a13ef2f9489b8cdd6687d819d64752485109fa99ead663c
+Size (rime-terra-pinyin-0.0.0.20230207-9427853de91d645d9aca9ceace8fe9e9d8bc5b50.tar.gz) = 731124 bytes
