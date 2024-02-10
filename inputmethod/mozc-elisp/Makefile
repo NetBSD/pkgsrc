@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2024/01/01 16:05:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2024/02/10 01:17:29 ryoon Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
-PKGREVISION=	26
 CATEGORIES=	inputmethod editors
 
 EMACS_MODULES=	base leim
@@ -10,19 +9,26 @@ EMACS_MODULES=	base leim
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX} bin
 
-pre-configure:
-	${RM} ${WRKSRC}/unix/uim/uim.gyp
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c Release \
-			unix/emacs/emacs.gyp:mozc_emacs_helper
-	cd ${WRKSRC}/unix/emacs && \
-		${EMACS_BIN} -q -batch -no-site-file -no-init-file \
-			-f batch-byte-compile mozc.el
+		${PREFIX}/bin/bazel \
+			--output_user_root=${WRKDIR}/bazel \
+			--client_debug \
+			build \
+			unix/emacs:mozc_emacs_helper \
+			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--host_action_env=PATH=${PATH} \
+			--action_env=PATH=${PATH} \
+			--sandbox_debug \
+			--verbose_failures \
+			--subcommands \
+			--config oss_linux --compilation_mode opt && \
+		${EMACS_BIN} --no-init-file --no-site-file -batch \
+			-f batch-byte-compile ${WRKSRC}/unix/emacs/mozc.el
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/Release/mozc_emacs_helper \
+	${INSTALL_PROGRAM} ${WRKSRC}/bazel-out/${OSDEST}/bin/unix/emacs/mozc_emacs_helper \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/unix/emacs/mozc.el \
 		${DESTDIR}${EMACS_LISPPREFIX}

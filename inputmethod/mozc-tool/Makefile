@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.86 2024/01/01 16:05:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2024/02/10 01:17:29 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-tool-/}
-PKGREVISION=	25
 
 INSTALLATION_DIRS+=	libexec
 
-ALL_ENV+=	qt_dir=${QTDIR}
-
-pre-configure:
-	${RM} ${WRKSRC}/unix/uim/uim.gyp
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
-			gui/gui.gyp:mozc_tool
+		${PREFIX}/bin/bazel \
+			--output_user_root=${WRKDIR}/bazel \
+			--client_debug \
+			build \
+			gui/tool:mozc_tool \
+			--subcommands \
+			--host_action_env=PATH=${PATH} \
+			--action_env=PATH=${PATH} \
+			--sandbox_debug \
+			--verbose_failures \
+			--config oss_linux --compilation_mode opt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/mozc_tool \
+	${INSTALL_PROGRAM} ${WRKSRC}/bazel-out/${OSDEST}//bin/gui/tool/mozc_tool \
 		${DESTDIR}${PREFIX}/libexec
 
 .include "../../inputmethod/mozc-server/Makefile.common"
