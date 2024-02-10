@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 04:50:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/10 09:44:32 ryoon Exp $
 
 .include "../../meta-pkgs/rime-data/Makefile.common"
 
 GITHUB_PROJECT=	rime-emoji
-GITHUB_TAG=	35c9632c34ea29e6d9ed80ff350c05f3d706fdc6
-DISTNAME=	${GITHUB_PROJECT}-0.0.0.20201113
+GITHUB_TAG=	a18b09997e7c457066e4c92adf249a4b3e235f9c
+DISTNAME=	${GITHUB_PROJECT}-0.0.0.20230826
 
 COMMENT=	Rime input method engine data, emoji
 LICENSE=	gnu-lgpl-v3
