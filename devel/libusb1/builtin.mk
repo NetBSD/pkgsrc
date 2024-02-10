@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2020/10/10 14:17:02 triaxx Exp $
+# $NetBSD: builtin.mk,v 1.6 2024/02/10 16:40:56 wiz Exp $
 
 BUILTIN_PKG:=	libusb1
 
@@ -19,8 +19,9 @@ MAKEVARS+=		IS_BUILTIN.libusb1
 USE_BUILTIN.libusb1=	${IS_BUILTIN.libusb1}
 .endif
 
-.if !empty(USE_BUILTIN.libusb1:M[yY][eE][sS])
+.if ${USE_BUILTIN.libusb1:tl} == yes
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
+.PHONY: do-configure-pre-hook
 do-configure-pre-hook: link-libusb-pkgconfig
 
 BLKDIR_PKGCFG=		${BUILDLINK_DIR}/lib/pkgconfig
