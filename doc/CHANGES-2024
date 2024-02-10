@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1102 2024/02/10 09:54:26 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1103 2024/02/10 09:55:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1852,3 +1852,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/rime-prelude to 0.0.0.20220410 [ryoon 2024-02-10]
 	Updated inputmethod/rime-terra-pinyin to 0.0.0.20230207 [ryoon 2024-02-10]
 	Updated inputmethod/librime to 1.9.0 [ryoon 2024-02-10]
+	Updated inputmethod/rime-wubi to 0.0.0.20231025 [ryoon 2024-02-10]
