@@ -1,0 +1,13 @@
+$NetBSD: patch-WORKSPACE.bazel,v 1.1 2024/02/10 12:26:01 ryoon Exp $
+
+--- WORKSPACE.bazel.orig	2023-12-13 11:39:06.509117439 +0000
++++ WORKSPACE.bazel
+@@ -118,7 +118,7 @@ new_local_repository(
+ # Qt for Linux
+ pkg_config_repository(
+   name = "qt_linux",
+-  packages = ["Qt6Core", "Qt6Gui", "Qt6Widgets"],
++  packages = ["Qt6Core", "Qt6Gui", "Qt6Widgets", "Qt6OpenGL", "gl"],
+ )
+ 
+ # Qt for macOS

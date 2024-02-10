@@ -1,25 +1,17 @@
-$NetBSD: patch-base_logging.cc,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+$NetBSD: patch-base_logging.cc,v 1.2 2024/02/10 12:26:01 ryoon Exp $
 
---- base/logging.cc.orig	2021-02-17 12:18:42.000000000 +0000
+--- base/logging.cc.orig	2023-10-26 12:00:50.000000000 +0000
 +++ base/logging.cc
-@@ -53,6 +53,10 @@
- #include <sstream>
- #include <string>
- 
-+#if defined(OS_NETBSD)
-+#include <lwp.h>
-+#endif
-+
- #ifdef OS_ANDROID
- #include "base/const.h"
- #endif  // OS_ANDROID
-@@ -112,6 +116,9 @@ string Logging::GetLogMessageHeader() {
+@@ -114,10 +114,10 @@ std::string Logging::GetLogMessageHeader
+ #if defined(__wasm__)
+   return absl::StrCat(timestamp, ::getpid(), " ",
+                       static_cast<unsigned int>(pthread_self()));
+-#elif defined(__linux__)
++#elif defined(__linux__) || defined(__NetBSD__)
    return absl::StrCat(timestamp, ::getpid(), " ",
                        // It returns unsigned long.
-                       pthread_self());
-+# elif defined(OS_NETBSD)
-+  return absl::StrCat(timestamp, ::getpid(), " ",
-+                      (unsigned long)_lwp_self());
- # elif defined(__APPLE__)
- #  ifdef __LP64__
+-                      pthread_self());
++                      (unsigned long)pthread_self());
+ #elif defined(__APPLE__)
+ #ifdef __LP64__
    return absl::StrCat(timestamp, ::getpid(), " ",

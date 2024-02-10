@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:26:00 ryoon Exp $
 lib/fcitx5/fcitx5-mozc.so
 share/fcitx5/addon/mozc.conf
 share/fcitx5/inputmethod/mozc.conf
@@ -31,6 +31,7 @@ share/locale/he/LC_MESSAGES/fcitx5-mozc.mo
 share/locale/ja/LC_MESSAGES/fcitx5-mozc.mo
 share/locale/ko/LC_MESSAGES/fcitx5-mozc.mo
 share/locale/ru/LC_MESSAGES/fcitx5-mozc.mo
+share/locale/tr/LC_MESSAGES/fcitx5-mozc.mo
 share/locale/zh_CN/LC_MESSAGES/fcitx5-mozc.mo
 share/locale/zh_TW/LC_MESSAGES/fcitx5-mozc.mo
 share/metainfo/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml
