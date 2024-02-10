@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1085 2024/02/10 07:11:33 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1086 2024/02/10 07:16:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1817,3 +1817,20 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/fzf to 0.46.1 [iquiw 2024-02-10]
 	Added textproc/py-jsonlines version 4.0.0 [adam 2024-02-10]
 	Added net/py-cloudflare version 2.18.1 [adam 2024-02-10]
+	Updated security/py-acme to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-apache to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-digitalocean to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-dnsimple to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-gehirn to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-google to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-linode to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-luadns to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-nsone to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-ovh to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-rfc2136 to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-route53 to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-dns-sakuracloud to 2.9.0 [adam 2024-02-10]
+	Updated security/py-certbot-nginx to 2.9.0 [adam 2024-02-10]
+	Added security/py-certbot-dns-cloudflare version 2.9.0 [adam 2024-02-10]
