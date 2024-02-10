@@ -1,9 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/07/18 14:11:16 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/02/10 16:40:56 wiz Exp $
 
 BUILDLINK_TREE+=	libusb1
 
 .if !defined(LIBUSB1_BUILDLINK3_MK)
-
 LIBUSB1_BUILDLINK3_MK:=
 
 USE_CC_FEATURES+=	c11
