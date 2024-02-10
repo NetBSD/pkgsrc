@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 22:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/10 11:01:38 adam Exp $
 
-DISTNAME=	libwebsockets-4.3.0
-PKGREVISION=	1
+DISTNAME=	libwebsockets-4.3.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=warmcat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
