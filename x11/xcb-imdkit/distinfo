@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 08:55:26 ryoon Exp $
 
-BLAKE2s (xcb-imdkit-1.0.2.tar.xz) = 0080caedcba30404ff8829dd923b447c3cbc1340585f481e81404290c800d547
-SHA512 (xcb-imdkit-1.0.2.tar.xz) = fc34c4d021fe1e3afb0fd140849c102c2c3d3040429dfef2ffe6032c3e87b7212abcc87224a0a638bff7e5ce17c2a1e770e2e501bca7c336af16aa4f31c530b3
-Size (xcb-imdkit-1.0.2.tar.xz) = 345972 bytes
+BLAKE2s (xcb-imdkit-1.0.6.tar.xz) = 39345e29d979850ea68d9926e72f8b90b3e4af0d530538391299fd7212e0a578
+SHA512 (xcb-imdkit-1.0.6.tar.xz) = 9e27843543e2d7ec4ed6d59e272640fd64809827baa01aaacc9f0a38fc347b4966ef48cb9a8d915a9f52243e97c16a112036d5f1504e660adef0c3b82a4dca1c
+Size (xcb-imdkit-1.0.6.tar.xz) = 347508 bytes
