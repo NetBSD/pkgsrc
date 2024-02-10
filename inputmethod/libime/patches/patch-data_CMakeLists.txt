@@ -1,29 +1,37 @@
-$NetBSD: patch-data_CMakeLists.txt,v 1.1 2021/02/20 21:27:37 ryoon Exp $
+$NetBSD: patch-data_CMakeLists.txt,v 1.2 2024/02/10 09:30:43 ryoon Exp $
 
 * Fix runtime errors during build for pkgsrc.
   pkgsrc removes $ORIGIN from RPATH.
 
---- data/CMakeLists.txt.orig	2020-08-29 01:46:26.014709200 +0000
+--- data/CMakeLists.txt.orig	2023-07-13 07:06:39.663232800 +0000
 +++ data/CMakeLists.txt
-@@ -24,7 +24,7 @@ add_custom_target(opengram-lm ALL DEPEND
+@@ -19,7 +19,7 @@ add_custom_target(lm ALL DEPENDS "${LM_O
  add_custom_command(
-   OUTPUT "${OPENGRAM_LM_PREDICT_OUTPUT}"
-   DEPENDS "${OPENGRAM_LM_SRC}" opengram-lm LibIME::prediction
--  COMMAND LibIME::prediction "${OPENGRAM_LM_OUTPUT}" "${OPENGRAM_LM_SRC}" "${OPENGRAM_LM_PREDICT_OUTPUT}")
-+  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_prediction "${OPENGRAM_LM_OUTPUT}" "${OPENGRAM_LM_SRC}" "${OPENGRAM_LM_PREDICT_OUTPUT}")
- add_custom_target(opengram-lm-predict ALL DEPENDS "${OPENGRAM_LM_PREDICT_OUTPUT}")
+   OUTPUT "${LM_PREDICT_OUTPUT}"
+   DEPENDS "${LM_SRC}" lm LibIME::prediction
+-  COMMAND LibIME::prediction "${LM_OUTPUT}" "${LM_SRC}" "${LM_PREDICT_OUTPUT}")
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_prediction "${LM_OUTPUT}" "${LM_SRC}" "${LM_PREDICT_OUTPUT}")
+ add_custom_target(lm-predict ALL DEPENDS "${LM_PREDICT_OUTPUT}")
  
- install(FILES "${OPENGRAM_LM_OUTPUT}" RENAME zh_CN.lm DESTINATION "${LIBIME_INSTALL_LIBDATADIR}")
-@@ -46,7 +46,7 @@ add_custom_command(
+ install(FILES "${LM_OUTPUT}" RENAME zh_CN.lm DESTINATION "${LIBIME_INSTALL_LIBDATADIR}")
+@@ -38,14 +38,14 @@ set(DICT_OUTPUT "${CMAKE_CURRENT_BINARY_
  add_custom_command(
-   OUTPUT "${OPENGRAM_DICT_OUTPUT}"
-   DEPENDS "${OPENGRAM_DICT_SRC}" LibIME::pinyindict
--  COMMAND LibIME::pinyindict "${OPENGRAM_DICT_SRC}" "${OPENGRAM_DICT_OUTPUT}")
-+  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/pinyin:${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_pinyindict "${OPENGRAM_DICT_SRC}" "${OPENGRAM_DICT_OUTPUT}")
- add_custom_target(opengram-dict ALL DEPENDS "${OPENGRAM_DICT_OUTPUT}")
- install(FILES "${OPENGRAM_DICT_OUTPUT}" DESTINATION "${LIBIME_INSTALL_PKGDATADIR}")
+   OUTPUT "${DICT_OUTPUT}"
+   DEPENDS "${DICT_SRC}" LibIME::pinyindict
+-  COMMAND LibIME::pinyindict "${DICT_SRC}" "${DICT_OUTPUT}")
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/pinyin:${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_pinyindict "${DICT_SRC}" "${DICT_OUTPUT}")
  
-@@ -64,7 +64,7 @@ foreach(TABLE_TXT_FILE ${TABLE_TXT_FILES
+ set(DICT_EXTB_SRC "${CMAKE_CURRENT_BINARY_DIR}/dict_extb.txt")
+ set(DICT_EXTB_OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/extb.dict")
+ add_custom_command(
+   OUTPUT "${DICT_EXTB_OUTPUT}"
+   DEPENDS "${DICT_EXTB_SRC}" LibIME::pinyindict
+-  COMMAND LibIME::pinyindict "${DICT_EXTB_SRC}" "${DICT_EXTB_OUTPUT}")
++  COMMAND "${CMAKE_COMMAND}" -E env "LD_LIBRARY_PATH=${PROJECT_BINARY_DIR}/src/libime/pinyin:${PROJECT_BINARY_DIR}/src/libime/core" ${PROJECT_BINARY_DIR}/tools/libime_pinyindict "${DICT_EXTB_SRC}" "${DICT_EXTB_OUTPUT}")
+ add_custom_target(dict ALL DEPENDS "${DICT_OUTPUT}" "${DICT_EXTB_OUTPUT}")
+ install(FILES "${DICT_OUTPUT}" "${DICT_EXTB_OUTPUT}" DESTINATION "${LIBIME_INSTALL_PKGDATADIR}")
+ 
+@@ -63,7 +63,7 @@ foreach(TABLE_TXT_FILE ${TABLE_TXT_FILES
    string(REPLACE .txt .main.dict TABLE_DICT_FILE ${TABLE_TXT_FILE})
    add_custom_command(OUTPUT ${TABLE_DICT_FILE}
                       DEPENDS ${TABLE_TXT_FILE} LibIME::tabledict
