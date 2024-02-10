@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/10/24 22:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/10 14:09:37 taca Exp $
 
-DISTNAME=	rugged-1.7.1
-PKGREVISION=	1
+DISTNAME=	rugged-1.7.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

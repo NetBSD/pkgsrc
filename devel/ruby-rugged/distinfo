@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/10/23 15:16:40 taca Exp $
+$NetBSD: distinfo,v 1.27 2024/02/10 14:09:37 taca Exp $
 
-BLAKE2s (rugged-1.7.1.gem) = dfee2efc268861831b95d4441ce6fd6433fdd2558e3ebb4cd0fe1b82f71fd9c3
-SHA512 (rugged-1.7.1.gem) = 7f65a21db4589ab90644b941ec656f670d4429aa5d657a2efd7464a0b33317a4ca67c469d75c8a624a73de9a222cb5b8b68398c20e454a7a26de8212f88836c8
-Size (rugged-1.7.1.gem) = 1834496 bytes
+BLAKE2s (rugged-1.7.2.gem) = ac085f3522f17a9b862e598d472084fa778144245650770928dfdc721e2cb74b
+SHA512 (rugged-1.7.2.gem) = 0853deed123cb6241854141770cdeeafe56c8264f2d04cb122a799f9cdc118830a6a1a2421843c8254765a5dc0de4991e431c27ea7abda27cec78d7002c06ffa
+Size (rugged-1.7.2.gem) = 1835008 bytes
