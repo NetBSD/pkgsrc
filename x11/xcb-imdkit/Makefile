@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/06/06 12:42:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/10 08:55:26 ryoon Exp $
 
-DISTNAME=	xcb-imdkit-1.0.2
+DISTNAME=	xcb-imdkit-1.0.6
 CATEGORIES=	x11
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/xcb-imdkit/
 EXTRACT_SUFX=	.tar.xz
