@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1079 2024/02/10 01:22:50 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1080 2024/02/10 01:24:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/mozc-elisp to 2.29.5268.102 [ryoon 2024-02-10]
 	Added inputmethod/mozc-server226 version 2.26.4282.100nb25 [ryoon 2024-02-10]
 	Added inputmethod/mozc-renderer226 version 2.26.4282.100nb24 [ryoon 2024-02-10]
+	Added inputmethod/mozc-tool226 version 2.26.4282.100nb24 [ryoon 2024-02-10]
