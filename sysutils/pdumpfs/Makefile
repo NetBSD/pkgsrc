@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/07/21 14:40:31 taca Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/10 14:42:40 taca Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
 PKGNAME=	pdumpfs-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
