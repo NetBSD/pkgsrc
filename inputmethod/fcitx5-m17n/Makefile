@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/11/12 13:22:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/10 12:10:15 ryoon Exp $
 
-DISTNAME=	fcitx5-m17n-5.0.3
-PKGREVISION=	12
+DISTNAME=	fcitx5-m17n-5.1.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-m17n/
 EXTRACT_SUFX=	.tar.xz
@@ -13,11 +12,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/m17n-lib/buildlink3.mk"
 .include "../../inputmethod/fcitx5/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"

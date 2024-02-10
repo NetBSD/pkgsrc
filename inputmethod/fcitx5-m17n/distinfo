@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:10:15 ryoon Exp $
 
-BLAKE2s (fcitx5-m17n-5.0.3.tar.xz) = 768a9f798e3bb81749a8f879810ce7c4231f4e56db1823715e18957f21def4e9
-SHA512 (fcitx5-m17n-5.0.3.tar.xz) = 405de270efbe3144d4ae4eb3c0c3090c183eb6dc15c231d45693038f91750617b1ca43946306262ea49a7554708f7415f2efe40e627396aba7c2a5aefabb7922
-Size (fcitx5-m17n-5.0.3.tar.xz) = 20932 bytes
+BLAKE2s (fcitx5-m17n-5.1.0.tar.xz) = 48e0d2c141ce0a71e65cb6fe4d0f3332871db2c4657e6bc3acee4c527e65a295
+SHA512 (fcitx5-m17n-5.1.0.tar.xz) = a28a170ba62edc9b6e225f5ff6d76c8d7333006429a6d496abd2b7b49a9f82e01a2ebfdd670609c96529bbee36a01fb1937abfab745f1d3f3a4f196f3b9fc3df
+Size (fcitx5-m17n-5.1.0.tar.xz) = 23996 bytes
