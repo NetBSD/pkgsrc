@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24007 2024/02/10 11:03:22 wiz Exp $
+$NetBSD: TODO,v 1.24008 2024/02/10 16:34:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mcollective-2.3.2
 	o mcsim-6.2.0
 	o md-whois-5.5.9
-	o md4c-0.5.2
 	o mecab-ipadic-2.7.0.20070801
 	o memached-1.5.6
 	o memtestplus-7.0
