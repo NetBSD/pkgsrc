@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/10 10:01:21 ryoon Exp $
 
-BLAKE2s (fcitx5-anthy-5.0.3.tar.xz) = 2e295fb610800cdae254b9e9ad66bb81d9b658f90faf78bca989f3515dfbed30
-SHA512 (fcitx5-anthy-5.0.3.tar.xz) = c2cd49367952871ba3b5793c7bc0191472ade1438e133b4e86f49f62d04efd0237796bbd7fc12964492e9b94238291b3417b5eb3ca1ce23fe01f56507ba484df
-Size (fcitx5-anthy-5.0.3.tar.xz) = 77384 bytes
+BLAKE2s (fcitx5-anthy-5.1.3.tar.xz) = 20924ddf6cce338cbc56d27b86bbe8cfd5d7a2f005bb8fe46ec7a32c2658b9a1
+SHA512 (fcitx5-anthy-5.1.3.tar.xz) = 389570108c120e3f1691f94907aecf74cef418510a1eb602ec7c7f79ae02ebd0df757a68632f4d355723961eb1f24bd66c36f52ec0c42b2c678e0f9d9f01f2a1
+Size (fcitx5-anthy-5.1.3.tar.xz) = 84388 bytes
