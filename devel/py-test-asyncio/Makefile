@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/01/29 09:35:22 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/02/10 07:28:09 adam Exp $
 
-DISTNAME=	pytest-asyncio-0.23.4
+DISTNAME=	pytest-asyncio-0.23.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-asyncio/}
