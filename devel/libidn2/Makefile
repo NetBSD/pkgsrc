@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/11/07 13:19:47 nia Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/10 16:39:00 wiz Exp $
 
-DISTNAME=	libidn2-2.3.4
+DISTNAME=	libidn2-2.3.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libidn/}
 
