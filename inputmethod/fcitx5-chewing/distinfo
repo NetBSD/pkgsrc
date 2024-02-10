@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/10 10:03:28 ryoon Exp $
 
-BLAKE2s (fcitx5-chewing-5.0.4.tar.xz) = ef55bc585d74873606c69a9e499a24cb4d827b2f42465e1c321577ab9b30978f
-SHA512 (fcitx5-chewing-5.0.4.tar.xz) = 8ca9649ec06555f40617c01b185ef73f3749ff2b79215e11cbdad5d0e0bbc7697af3310c1d91aa4cfe6c50e25a2586f3f7b707f0c7f4f619ad6faa1acad57cf1
-Size (fcitx5-chewing-5.0.4.tar.xz) = 18520 bytes
+BLAKE2s (fcitx5-chewing-5.1.1.tar.xz) = ece11b1fdfdfecb1bf1a8469115d31084b25ccc5263329ce6a59d7e1aef0f507
+SHA512 (fcitx5-chewing-5.1.1.tar.xz) = 48aeb1755c917fe931165f3f41cc175a22a76cf8a6d4be05e7eb6bbb0908225b2f6a99529943f773e7d0ed674dcdbf138e56e7b5962566a0f1219c3919039553
+Size (fcitx5-chewing-5.1.1.tar.xz) = 23948 bytes
