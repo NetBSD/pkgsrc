@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:05:26 nia Exp $
-
-BLAKE2s (telepathy-gabble-0.18.3.tar.gz) = 05f1bd9fe549294e599d02f3fdbd6242cb2e9db254e86ed85fe5701d7429f23b
-SHA512 (telepathy-gabble-0.18.3.tar.gz) = 51c7b754779d131c54facf8e373338bd471e6bb589d69cd8f9c0f4450b15d9676c2bbf762b64e9c3bf7067bca0e9accb6c766f2fda0051a26a36eb009d7bd5eb
-Size (telepathy-gabble-0.18.3.tar.gz) = 2793195 bytes
-SHA1 (patch-lib_ext_wocky_wocky_wocky-heartbeat-source_c) = d8f0192f7f34e6fb98150283f5ff05de6313ee4a
-SHA1 (patch-lib_ext_wocky_wocky_wocky-muc.c) = 2c4a5840787f061e8d477cac74d4f5d655ba1513
