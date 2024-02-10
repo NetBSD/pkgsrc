@@ -1,0 +1,10 @@
+Test::MockFile - Allows tests to validate code that can interact with
+files without touching the file system.
+
+Intercepts file system calls for specific files so unit testing can take
+place without any files being altered on disk.
+
+This is useful for small tests where file interaction is discouraged.
+
+A strict mode is even provided (and turned on by default) which can
+throw a die when files are accessed during your tests!
