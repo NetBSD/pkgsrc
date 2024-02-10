@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/01/31 11:53:35 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/02/10 13:04:22 bacon Exp $
 
 DISTNAME=	xopen-1.9.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
@@ -16,6 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	pbzip2-[0-9]*:../../archivers/pbzip2
 DEPENDS+=	pigz-[0-9]*:../../archivers/pigz
 DEPENDS+=	xz-[0-9]*:../../archivers/xz
+DEPENDS+=	${PYPKGPREFIX}-zstandard-[0-9]*:../../archivers/py-zstandard
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
