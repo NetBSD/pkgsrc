@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/11/21 20:51:21 adam Exp $
+# $NetBSD: Makefile,v 1.114 2024/02/10 07:25:57 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -8,7 +8,8 @@ COMMENT=	GIT Tree History Storage Tool (base package)
 CONFLICTS+=	scmgit-base-[0-9]*
 SUPERSEDES+=	scmgit-base-[0-9]*
 
-USE_LANGUAGES=		c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 USE_TOOLS+=		sh:run msgfmt bash:test
 
 CFLAGS+=		-DHAVE_DEV_TTY
