@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1070 2024/02/10 01:15:22 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.1071 2024/02/10 01:15:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1801,3 +1801,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/orcus to 0.19.2 [ryoon 2024-02-10]
 	Added devel/p5-Overload-FileCheck version 0.013 [schmonz 2024-02-10]
 	Added devel/p5-Test-MockFile version 0.036 [schmonz 2024-02-10]
+	Added devel/p5-Test-Mock-Cmd version 0.7 [schmonz 2024-02-10]
