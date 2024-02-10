@@ -1,30 +1,36 @@
-# $NetBSD: Makefile,v 1.91 2024/01/01 16:05:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2024/02/10 12:27:34 ryoon Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	25
 
 INSTALLATION_DIRS+=	libexec share/ibus share/ibus/component \
 			share/ibus-mozc
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
-DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
-DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
-
-pre-configure:
-	${RM} ${WRKSRC}/unix/uim/uim.gyp
+DEPENDS+=	mozc-renderer>=2.29:../../inputmethod/mozc-renderer
+DEPENDS+=	mozc-server>=2.29:../../inputmethod/mozc-server
+DEPENDS+=	mozc-tool>=2.29:../../inputmethod/mozc-tool
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
-			unix/ibus/ibus.gyp:ibus_mozc_lib \
-			unix/ibus/ibus.gyp:ibus_mozc
+		${PREFIX}/bin/bazel \
+			--output_user_root=${WRKDIR}/bazel \
+			--client_debug \
+			build \
+			unix/ibus:ibus_mozc unix/icons \
+			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--host_action_env=PATH=${PATH} \
+			--action_env=PATH=${PATH} \
+			--sandbox_debug \
+			--verbose_failures \
+			--subcommands \
+			--config oss_linux --compilation_mode opt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/ibus_mozc \
+	${INSTALL_PROGRAM} ${WRKSRC}/bazel-out/${OSDEST}/bin/unix/ibus/ibus_mozc \
 		${DESTDIR}${PREFIX}/libexec/ibus-engine-mozc
-	${INSTALL_DATA} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/gen/unix/ibus/mozc.xml \
-		${DESTDIR}${PREFIX}/share/ibus/component
+	${INSTALL_DATA} ${WRKSRC}/bazel-out/${OSDEST}/bin/unix/ibus/mozc.xml \
+		${DESTDIR}${PREFIX}/share/ibus/component/mozc.xml
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ime_product_icon_opensource-32.png \
 		${DESTDIR}${PREFIX}/share/ibus-mozc/product_icon.png
 
