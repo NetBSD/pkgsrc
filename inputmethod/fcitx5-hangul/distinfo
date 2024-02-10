@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:03:20 ryoon Exp $
 
-BLAKE2s (fcitx5-hangul-5.0.2.tar.xz) = 5b965b988d9e6375a9ef1224f45d1632f2bcd98e70b2b8ce0703beb9e03d9e7c
-SHA512 (fcitx5-hangul-5.0.2.tar.xz) = dfee0283a92b7d44e284950f344b7e8e5f1f5eb2afa27dedeaaa5e8c73241e891b20439eb48d56269d8fb2eeaef9f0c0da019e0a074f42e14d408aefa70e2a06
-Size (fcitx5-hangul-5.0.2.tar.xz) = 25920 bytes
+BLAKE2s (fcitx5-hangul-5.1.1.tar.xz) = 9911a79dc4ce21a8416cca003cb5a13c55de40b07a846577b64087d43637d48c
+SHA512 (fcitx5-hangul-5.1.1.tar.xz) = 7b16a81cee1448de2428a96f89ce0a4e41f51e8c3f9beb930b068147ef7d93e227081f65ede0d799d1e15692e4742da3ab864fb652fa1812bd5de24da7e3a2f7
+Size (fcitx5-hangul-5.1.1.tar.xz) = 39296 bytes
