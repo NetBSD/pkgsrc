@@ -1,48 +1,31 @@
-$NetBSD: patch-base_cpu__stats.cc,v 1.4 2021/02/15 14:50:23 ryoon Exp $
+$NetBSD: patch-base_cpu__stats.cc,v 1.5 2024/02/10 01:17:27 ryoon Exp $
 
-* NetBSD support
-
---- base/cpu_stats.cc.orig	2021-02-15 03:48:53.000000000 +0000
+--- base/cpu_stats.cc.orig	2023-10-26 12:00:50.000000000 +0000
 +++ base/cpu_stats.cc
-@@ -122,13 +122,13 @@ float CPUStats::GetSystemCPULoad() {
+@@ -116,7 +116,7 @@ float CPUStats::GetSystemCPULoad() {
  
  #endif  // __APPLE__
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+-#if defined(__linux__) || defined(__wasm__)
++#if defined(__linux__) || defined(__wasm__) || defined(__NetBSD__)
    // NOT IMPLEMENTED
    // TODO(taku): implement Linux version
    // can take the info from /proc/stats
-   const uint64 total_times = 0;
-   const uint64 cpu_times = 0;
--#endif  // OS_LINUX || OS_ANDROID || OS_WASM
-+#endif  // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
- 
-   return UpdateCPULoad(total_times, cpu_times, &prev_system_total_times_,
-                        &prev_system_cpu_times_);
-@@ -175,11 +175,11 @@ float CPUStats::GetCurrentProcessCPULoad
-                            TimeValueTToInt64(task_times_info.system_time);
+@@ -169,7 +169,7 @@ float CPUStats::GetCurrentProcessCPULoad
+                              TimeValueTToInt64(task_times_info.system_time);
  #endif  // __APPLE__
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+-#if defined(__linux__) || defined(__wasm__)
++#if defined(__linux__) || defined(__wasm__) || defined(__NetBSD__)
    // not implemented
-   const uint64 total_times = 0;
-   const uint64 cpu_times = 0;
--#endif  // OS_LINUX || OS_ANDROID || OS_WASM
-+#endif  // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
- 
-   return UpdateCPULoad(total_times, cpu_times,
-                        &prev_current_process_total_times_,
-@@ -206,9 +206,9 @@ size_t CPUStats::GetNumberOfProcessors()
+   const uint64_t total_times = 0;
+   const uint64_t cpu_times = 0;
+@@ -200,7 +200,7 @@ size_t CPUStats::GetNumberOfProcessors()
    return static_cast<size_t>(basic_info.avail_cpus);
  #endif  // __APPLE__
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WASM) || defined(OS_NETBSD)
+-#if defined(__linux__) || defined(__wasm__)
++#if defined(__linux__) || defined(__wasm__) || defined(__NetBSD__)
    // Not implemented
    return 1;
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
- }
- }  // namespace mozc
+ #endif  // __linux__ || __wasm__
