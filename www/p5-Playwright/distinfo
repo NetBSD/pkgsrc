@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/04/20 18:13:06 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 01:16:41 schmonz Exp $
 
-BLAKE2s (Playwright-1.324.tar.gz) = 8ceada8fdb2f0855edffc94b43ce6884b21b2975faec47b2b8cf4eeb4ea50054
-SHA512 (Playwright-1.324.tar.gz) = b2513a2197312d80bafbc14290422cf4daafaa32c0196726b427241528ad63f5f4790b4d76cd9612b299439d8d5a4cede91ff3ba21080317e1b98b7a4144112a
-Size (Playwright-1.324.tar.gz) = 322669 bytes
+BLAKE2s (Playwright-1.401.tar.gz) = 8220cd834d5a04e9364dc433fab4717681ea3ad52f95beb0b08ba0bac60a0a4e
+SHA512 (Playwright-1.401.tar.gz) = e0ff70f903d709d5c9cec459808d4d4d53b709a1cdbbf7719800f28bf7aecf91c59f6637bc31581925211cea8a28b22be7c9af52386c2bbb4e32fcf9b4d4ee12
+Size (Playwright-1.401.tar.gz) = 339124 bytes
