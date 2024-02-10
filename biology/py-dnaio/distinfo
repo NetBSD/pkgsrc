@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/11/14 10:39:40 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/02/10 13:07:54 bacon Exp $
 
-BLAKE2s (dnaio-0.9.1.tar.gz) = 7c5ec560b4efba83d73bbcfdbfcd582b38e118f84e58dcd1701b0e63af314a2b
-SHA512 (dnaio-0.9.1.tar.gz) = c5975451fd458030a2626e4e85607232c7d169a4b6dabe88830006eea326a810c77955e7d104d30ddd4af5fe552fc10c292ef475a74f84d7e9f03bd9164b1993
-Size (dnaio-0.9.1.tar.gz) = 41594 bytes
+BLAKE2s (dnaio-1.2.0.tar.gz) = 798b8c22234423de1c9f088cb5bc2b8b6a5fd2999b1021dfa07d1bab2d1fe48e
+SHA512 (dnaio-1.2.0.tar.gz) = 049d97e73c327b2370fa5500a4fbe3a560eed24d37e1203553a8427dc7c17efc1c6efcbd46e7dd1291fc0ebe2e2d830d6184d3d7bd150c873472505093d3752d
+Size (dnaio-1.2.0.tar.gz) = 58225 bytes
