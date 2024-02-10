@@ -1,10 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:31:16 ryoon Exp $
-lib/fcitx5/hangul.so
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:03:20 ryoon Exp $
+lib/fcitx5/libhangul.so
 share/fcitx5/addon/hangul.conf
 share/fcitx5/hangul/symbol.txt
 share/fcitx5/inputmethod/hangul.conf
+share/icons/hicolor/16x16/apps/fcitx-hangul.png
+share/icons/hicolor/16x16/apps/fcitx-hanja-active.png
+share/icons/hicolor/16x16/apps/fcitx-hanja-inactive.png
+share/icons/hicolor/16x16/apps/org.fcitx.Fcitx5.fcitx-hangul.png
+share/icons/hicolor/16x16/apps/org.fcitx.Fcitx5.fcitx-hanja-active.png
+share/icons/hicolor/16x16/apps/org.fcitx.Fcitx5.fcitx-hanja-inactive.png
+share/icons/hicolor/22x22/apps/fcitx-hangul.png
+share/icons/hicolor/22x22/apps/fcitx-hanja-active.png
+share/icons/hicolor/22x22/apps/fcitx-hanja-inactive.png
+share/icons/hicolor/22x22/apps/org.fcitx.Fcitx5.fcitx-hangul.png
+share/icons/hicolor/22x22/apps/org.fcitx.Fcitx5.fcitx-hanja-active.png
+share/icons/hicolor/22x22/apps/org.fcitx.Fcitx5.fcitx-hanja-inactive.png
+share/icons/hicolor/24x24/apps/fcitx-hangul.png
+share/icons/hicolor/24x24/apps/fcitx-hanja-active.png
+share/icons/hicolor/24x24/apps/fcitx-hanja-inactive.png
+share/icons/hicolor/24x24/apps/org.fcitx.Fcitx5.fcitx-hangul.png
+share/icons/hicolor/24x24/apps/org.fcitx.Fcitx5.fcitx-hanja-active.png
+share/icons/hicolor/24x24/apps/org.fcitx.Fcitx5.fcitx-hanja-inactive.png
+share/icons/hicolor/48x48/apps/fcitx-hangul.png
 share/icons/hicolor/48x48/apps/fcitx-hanja-active.png
 share/icons/hicolor/48x48/apps/fcitx-hanja-inactive.png
+share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-hangul.png
 share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-hanja-active.png
 share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-hanja-inactive.png
 share/icons/hicolor/64x64/apps/fcitx-hangul.png
