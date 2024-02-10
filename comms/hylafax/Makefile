@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2023/10/21 17:09:53 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2024/02/10 14:13:00 gdt Exp $
 
 DISTNAME=	hylafax-6.0.7
 PKGREVISION=	3
@@ -12,6 +12,9 @@ LICENSE=	sgi-free-software-b-v2.0
 
 CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
+
+# http://bugs.hylafax.org/show_bug.cgi?id=1004
+#BROKEN=	requires tiff2ps which is no longer part of tiff
 
 BUILD_DEFS+=	FAXUSER FAXGROUP VARBASE
 
