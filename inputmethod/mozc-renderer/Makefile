@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2024/01/01 16:05:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2024/02/10 01:17:29 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-renderer-/}
-PKGREVISION=	25
 
 CONFLICTS+=	ibus-mozc<=1.13.1651.102
 
@@ -10,16 +9,24 @@ INSTALLATION_DIRS+=	libexec share/icons
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 
-pre-configure:
-	${RM} ${WRKSRC}/unix/uim/uim.gyp
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
-			renderer/renderer.gyp:mozc_renderer
+		${PREFIX}/bin/bazel \
+			--output_user_root=${WRKDIR}/bazel \
+			--client_debug \
+			build \
+			renderer/qt:mozc_renderer \
+			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--host_action_env=PATH=${PATH} \
+			--action_env=PATH=${PATH} \
+			--sandbox_debug \
+			--verbose_failures \
+			--subcommands \
+			--config oss_linux --compilation_mode opt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/mozc_renderer \
+	${INSTALL_PROGRAM} ${WRKSRC}/bazel-out/${OSDEST}/bin/renderer/qt/mozc_renderer \
 		${DESTDIR}${PREFIX}/libexec
 .for f in ui-alpha_full ui-alpha_half ui-dictionary ui-direct \
 	ui-hiragana ui-katakana_full ui-katakana_half ui-properties ui-tool
