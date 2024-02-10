@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/06 04:46:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 09:41:55 ryoon Exp $
 share/rime-data/combo_pinyin.schema.yaml
-share/rime-data/combo_pinyin_kbcon.options.yaml
-share/rime-data/combo_pinyin_kbcon.schema.yaml
-share/rime-data/combo_pinyin_left.schema.yaml
+share/rime-data/combo_pinyin_10.schema.yaml
+share/rime-data/combo_pinyin_10_emacsen.schema.yaml
+share/rime-data/combo_pinyin_8.schema.yaml
+share/rime-data/combo_pinyin_8_emacsen.schema.yaml
+share/rime-data/combo_pinyin_9.schema.yaml
+share/rime-data/combo_pinyin_layouts.yaml
