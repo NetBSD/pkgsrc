@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1084 2024/02/10 06:05:22 iquiw Exp $
+$NetBSD: CHANGES-2024,v 1.1085 2024/02/10 07:11:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1815,3 +1815,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added inputmethod/ibus-mozc226 version 2.26.4282.100nb24 [ryoon 2024-02-10]
 	Updated inputmethod/uim-mozc to 2.29.5268.102 [ryoon 2024-02-10]
 	Updated sysutils/fzf to 0.46.1 [iquiw 2024-02-10]
+	Added textproc/py-jsonlines version 4.0.0 [adam 2024-02-10]
+	Added net/py-cloudflare version 2.18.1 [adam 2024-02-10]
