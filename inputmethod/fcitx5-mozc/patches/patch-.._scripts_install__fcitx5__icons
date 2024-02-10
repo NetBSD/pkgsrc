@@ -1,10 +1,12 @@
-$NetBSD: patch-.._scripts_install__fcitx5__icons,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+$NetBSD: patch-.._scripts_install__fcitx5__icons,v 1.2 2024/02/10 12:26:01 ryoon Exp $
 
---- ../scripts/install_fcitx5_icons.orig	2021-02-17 12:18:42.000000000 +0000
+--- ../scripts/install_fcitx5_icons.orig	2023-12-14 10:22:57.168144959 +0000
 +++ ../scripts/install_fcitx5_icons
-@@ -2,17 +2,17 @@
+@@ -1,18 +1,18 @@
+ #!/bin/sh
  
- PREFIX="${PREFIX:-/usr}"
+-PREFIX="${PREFIX:-/usr}"
++PREFIX="${DESTDIR}${PREFIX:-/usr}"
  
 -install -D -m 644 data/images/product_icon_32bpp-128.png "${PREFIX}/share/icons/hicolor/128x128/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
 -install -D -m 644 data/images/unix/ime_product_icon_opensource-32.png "${PREFIX}/share/icons/hicolor/32x32/apps/org.fcitx.Fcitx5.fcitx-mozc.png"
