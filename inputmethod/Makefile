@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2023/11/16 11:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2024/02/10 01:21:51 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -79,6 +79,7 @@ SUBDIR+=	m17n-im-config
 SUBDIR+=	mozc-elisp
 SUBDIR+=	mozc-renderer
 SUBDIR+=	mozc-server
+SUBDIR+=	mozc-server226
 SUBDIR+=	mozc-tool
 SUBDIR+=	multiskkserv
 SUBDIR+=	nabi
