@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24003 2024/02/10 09:30:54 ryoon Exp $
+$NetBSD: TODO,v 1.24004 2024/02/10 09:58:48 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -625,7 +625,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
-	o fcitx5-5.0.23
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
