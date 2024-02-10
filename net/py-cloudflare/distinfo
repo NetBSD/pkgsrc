@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 07:10:42 adam Exp $
+
+BLAKE2s (cloudflare-2.18.1.tar.gz) = eaef4f5a9f23476f16412f1e158b62c4ff184d4200df9613d27c8329299ed6a4
+SHA512 (cloudflare-2.18.1.tar.gz) = e78ac458208b79345e771bed5d19947e282130191fed6792029080b4f4e84fc23af5b4a5efc6730c5c1334d429bc2f8ceb4db6678b7a5b21f7845b0f42ab112c
+Size (cloudflare-2.18.1.tar.gz) = 110082 bytes
+SHA1 (patch-setup.py) = d7cf7b1463a7a8c1033a6af14efe624f0705ab7e
