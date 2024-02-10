@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/12/29 18:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/10 12:17:23 ryoon Exp $
 
-DISTNAME=	fcitx5-table-extra-5.0.2
-PKGREVISION=	6
+DISTNAME=	fcitx5-table-extra-5.1.3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-table-extra/
 EXTRACT_SUFX=	.tar.xz
@@ -15,10 +14,10 @@ TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 DEPENDS+=	fcitx5-[0-9]*:../../inputmethod/fcitx5
 DEPENDS+=	libime-[0-9]*:../../inputmethod/libime
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		# none
+USE_LANGUAGES=		c c++
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
