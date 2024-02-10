@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/12/30 01:52:19 zafer Exp $
+# $NetBSD: Makefile,v 1.26 2024/02/10 10:22:15 wiz Exp $
 
 DISTNAME=	ftnchek-3.3.1
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ GNU_CONFIGURE_LIBDIR=	${PREFIX}/libexec
 CONFIGURE_ARGS+=	--disable-submodel
 
 USE_TOOLS+=	soelim
+
+CFLAGS+=	-fPIE
 
 .if (${MACHINE_ARCH} == "arm")
 CFLAGS+=	-O1
