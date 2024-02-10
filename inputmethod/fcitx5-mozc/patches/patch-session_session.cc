@@ -1,36 +1,22 @@
-$NetBSD: patch-session_session.cc,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+$NetBSD: patch-session_session.cc,v 1.2 2024/02/10 12:26:02 ryoon Exp $
 
-* NetBSD support
-
---- session/session.cc.orig	2021-02-15 03:48:53.000000000 +0000
+--- session/session.cc.orig	2023-12-13 09:32:05.846503615 +0000
 +++ session/session.cc
-@@ -230,9 +230,9 @@ void Session::InitContext(ImeContext *co
-   context->SetConfig(&context->GetConfig());
- 
- #if defined(OS_ANDROID) || defined(OS_IOS) || defined(OS_LINUX) || \
--    defined(OS_WASM)
-+    defined(OS_WASM) || defined(OS_NETBSD)
+@@ -241,7 +241,7 @@ void Session::InitContext(ImeContext *co
+   // Tests for session layer (session_handler_scenario_test, etc) can be
+   // unstable.
+ #if (defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE) || defined(__linux__) || \
+-    defined(__wasm__)
++    defined(__wasm__) || defined(__NetBSD__)
    context->mutable_converter()->set_use_cascading_window(false);
--#endif  // OS_ANDROID || OS_IOS || OS_LINUX || OS_WASM
-+#endif  // OS_ANDROID || OS_IOS || OS_LINUX || OS_WASM || OS_NETBSD
+ #endif  // TARGET_OS_IPHONE || __linux__ || __wasm__
  }
- 
- void Session::PushUndoContext() {
-@@ -964,14 +964,14 @@ void Session::UpdatePreferences(commands
+@@ -973,7 +973,7 @@ void Session::UpdatePreferences(commands
    }
  
- #if defined(OS_ANDROID) || defined(OS_IOS) || defined(OS_LINUX) || \
--    defined(OS_WASM)
-+    defined(OS_WASM) || defined(OS_NETBSD)
+ #if (defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE) || defined(__linux__) || \
+-    defined(__wasm__)
++    defined(__wasm__) || defined(__NetBSD__)
    context_->mutable_converter()->set_use_cascading_window(false);
--#else   // OS_LINUX || OS_ANDROID || OS_WASM
-+#else   // OS_LINUX || OS_ANDROID || OS_WASM || OS_NETBSD
+ #else   // TARGET_OS_IPHONE || __linux__ || __wasm__
    if (config.has_use_cascading_window()) {
-     context_->mutable_converter()->set_use_cascading_window(
-         config.use_cascading_window());
-   }
--#endif  // OS_ANDROID || OS_IOS || OS_LINUX || OS_WASM
-+#endif  // OS_ANDROID || OS_IOS || OS_LINUX || OS_WASM || OS_NETBSD
- }
- 
- bool Session::IMEOn(commands::Command *command) {

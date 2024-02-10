@@ -1,0 +1,16 @@
+$NetBSD: patch-.._scripts_install__fcitx5__bazel,v 1.1 2024/02/10 12:26:01 ryoon Exp $
+
+--- ../scripts/install_fcitx5_bazel.orig	2023-10-26 15:09:25.000000000 +0000
++++ ../scripts/install_fcitx5_bazel
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+-PREFIX="${PREFIX:-/usr}"
++PREFIX="${DESTDIR}${PREFIX:-/usr}"
+ 
+-install -D -m 755 "bazel-bin/unix/fcitx5/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
++install -m 755 "bazel-bin/unix/fcitx5/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
+ 
+-PREFIX="${PREFIX}" ../scripts/install_fcitx5_data
+-PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
++#PREFIX="${PREFIX}" ../scripts/install_fcitx5_data
++#PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
