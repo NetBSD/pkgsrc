@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2024/02/10 01:24:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.130 2024/02/10 01:25:28 ryoon Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -77,6 +77,7 @@ SUBDIR+=	libskk
 SUBDIR+=	libtabe
 SUBDIR+=	m17n-im-config
 SUBDIR+=	mozc-elisp
+SUBDIR+=	mozc-elisp226
 SUBDIR+=	mozc-renderer
 SUBDIR+=	mozc-renderer226
 SUBDIR+=	mozc-server
