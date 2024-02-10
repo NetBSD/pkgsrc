@@ -1,0 +1,100 @@
+# $NetBSD: Makefile.common,v 1.1 2024/02/10 02:20:18 ryoon Exp $
+
+# used by inputmethod/uim-mozc/Makefile
+
+DISTNAME=	mozc-2.29.5268.102
+CATEGORIES=	inputmethod
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	mozc
+GITHUB_TAG=	${PKGVERSION_NOREV}
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	https://github.com/google/mozc/
+COMMENT=	Japanese inputmethod Mozc engine
+LICENSE=	modified-bsd
+
+GITHUB_SUBMODULES+=	google breakpad 216cea7bca53fa441a3ee0d0f5fd339a3a894224 third_party/breakpad
+GITHUB_SUBMODULES+=	google googletest 58d77fa8070e8cec2dc1ed015d66b454c8d78850 third_party/gtest
+GITHUB_SUBMODULES+=	chromium gyp 9ecf45e37677743503342ee4c6a76eaee80e4a7f third_party/gyp
+GITHUB_SUBMODULES+=	hiroyuki-komatsu japanese-usage-dictionary e5b3425575734c323e1d947009dd74709437b684 third_party/japanese_usage_dictionary
+GITHUB_SUBMODULES+=	protocolbuffers protobuf 54a2e5caa9d1a0a714fb2aa99753a1444414292a third_party/protobuf
+GITHUB_SUBMODULES+=	abseil abseil-cpp c2435f8342c2d0ed8101cb43adfd605fdc52dca2 third_party/abseil-cpp
+GITHUB_SUBMODULES+=	microsoft wil fc5dbf55989fe20351c71d038a8d12de4b397a6d third_party/wil
+GITHUB_SUBMODULES+=	e-kato macuim 7beac7ba000e0459a4dc933f3873b521664d2665 uim
+
+DISTFILES+=	${DEFAULT_DISTFILES}
+
+EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${_GITHUB_DEFAULT_DISTFILES}
+
+MOZC_DISTS+=		uim-mozc_BUILD.bazel-2.29.5268.102
+SITES.uim-mozc_BUILD.bazel-2.29.5268.102+=	-https://aur.archlinux.org/cgit/aur.git/plain/BUILD.bazel?h=uim-mozc&id=4e4d6df2a67f754d8ba68c21d32bc303f76db20a
+
+MOZC_DISTS+=	uim-mozc_mozc.patch-2.29.5268.102
+SITES.uim-mozc_mozc.patch-2.29.5268.102+=	-https://aur.archlinux.org/cgit/aur.git/plain/mozc.patch?h=uim-mozc&id=4e4d6df2a67f754d8ba68c21d32bc303f76db20a
+
+MOZC_DISTS+=	uim-mozc_bazel.patch-2.29.5268.102
+SITES.uim-mozc_bazel.patch-2.29.5268.102+=	-https://aur.archlinux.org/cgit/aur.git/plain/bazel.patch?h=uim-mozc&id=4e4d6df2a67f754d8ba68c21d32bc303f76db20a
+
+.for d in ${MOZC_DISTS}
+DISTFILES+=	${d}
+.endfor
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+
+USE_CXX_FEATURES+=	c++14
+
+TOOL_DEPENDS+=		bazel-[0-9]*:../../devel/bazel
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Setting PREFIX
+SUBST_FILES.prefix+=	base/process.cc
+SUBST_FILES.prefix+=	base/system_util.cc
+SUBST_FILES.prefix+=	third_party/protobuf/toolchain/cc_toolchain_config.bzl
+SUBST_FILES.prefix+=	config.bzl
+SUBST_VARS.prefix+=	PREFIX
+SUBST_VARS.prefix+=	X11BASE
+
+.include "../../mk/bsd.prefs.mk"
+
+OPSYSVARS+=	OSDEST
+OSDEST.Linux=	linux-opt
+OSDEST.NetBSD=	netbsd-opt
+
+CHECK_PIE_SUPPORTED=	no
+post-patch:
+	${CP} -rf ${WRKSRC}/uim/Mozc/uim ${WRKSRC}/unix/uim
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/dist
+.for d in ${MOZC_DISTS}
+	${LN} -sf ${DISTDIR}/${d} ${WRKSRC}/dist/${d}
+.endfor
+	${RM} -rf ${WRKDIR}/.cwrapper
+.for f in ${MOZC_DISTS}
+	cd ${WRKSRC} && \
+	${LN} -sf ${DISTDIR}/${f} ${f}
+.endfor
+	${LN} -sf ${DISTDIR}/uim-mozc_BUILD.bazel-2.29.5268.102 \
+		${WRKSRC}/unix/uim/BUILD.bazel
+	cd ${WRKSRC}/.. && \
+		${PATCH} < ${WRKSRC}/uim-mozc_mozc.patch-2.29.5268.102 && \
+		${PATCH} -p1 < ${WRKSRC}/uim-mozc_bazel.patch-2.29.5268.102
+
+
+.if empty(PKGPATH:Minputmethod/mozc-server)
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
+.endif
+
+# devel/bazel can use clang only for C/C++ projects.
+BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/clang/buildlink3.mk"
+
+.include "../../lang/python/tool.mk"
+.include "../../mk/atomic64.mk"
