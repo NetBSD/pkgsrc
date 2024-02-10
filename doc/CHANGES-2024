@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1151 2024/02/10 21:47:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1152 2024/02/10 21:48:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/bacon to 2.14.2 [pin 2024-02-10]
 	Updated devel/cargo-c to 0.9.30 [pin 2024-02-10]
 	Updated graphics/gifski to 1.14.4 [pin 2024-02-10]
+	Updated sysutils/parallel-disk-usage to 0.9.1 [pin 2024-02-10]
