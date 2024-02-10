@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.23 2022/07/26 02:25:15 rin Exp $
+# $NetBSD: options.mk,v 1.24 2024/02/10 12:41:35 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 gtk ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
+PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 gtk ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
 PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 gtk m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 .endif
+PKG_OPTIONS_OPTIONAL_GROUPS=	fcitx
+PKG_OPTIONS_GROUP.fcitx=	fcitx fcitx5
 
 .include "../../mk/bsd.options.mk"
 
@@ -69,6 +71,15 @@ CONFIGURE_ARGS+=	--with-gtk=no
 
 .if !empty(PKG_OPTIONS:Mfcitx)
 .include "../../inputmethod/fcitx/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-fcitx
+PLIST.fcitx=		yes
+.else
+CONFIGURE_ARGS+=	--disable-fcitx
+.endif
+
+.if !empty(PKG_OPTIONS:Mfcitx5)
+.include "../../inputmethod/fcitx5/buildlink3.mk"
+.include "../../inputmethod/fcitx5-gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-fcitx
 PLIST.fcitx=		yes
 .else
