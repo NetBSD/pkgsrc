@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/10 12:12:11 ryoon Exp $
 
-BLAKE2s (fcitx5-qt-5.0.3.tar.xz) = 754e7628b08395a510b3c760056b00435eb9a71ce3b74b69984b917ddcbfbed6
-SHA512 (fcitx5-qt-5.0.3.tar.xz) = 993d5ad7cd698c2f8f966f933c50fdbc8517389273afc4fd656f71755a05534b859a7b13682f966581170d8c51f4574538f8277f3507aa8f83c4091e7e95687b
-Size (fcitx5-qt-5.0.3.tar.xz) = 81240 bytes
+BLAKE2s (fcitx5-qt-5.1.4.tar.xz) = 30f5667c8f53910bede9c753392c1981fda596b0775f628275a75f0239ed008c
+SHA512 (fcitx5-qt-5.1.4.tar.xz) = 942999327415e3d4195c18c2fb02e12a313e3a2cf1dd1e32d0e6a7a98b625bcc1b3a7278934bb583a029dee43a271dba9bac75face42729249557f60e1146adf
+Size (fcitx5-qt-5.1.4.tar.xz) = 92880 bytes
