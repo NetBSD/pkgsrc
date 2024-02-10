@@ -1,14 +1,14 @@
-$NetBSD: patch-gtk3_utils.h,v 1.1 2021/04/25 18:24:43 nia Exp $
+$NetBSD: patch-gtk3_utils.h,v 1.2 2024/02/10 12:01:44 ryoon Exp $
 
 Include missing header for std::free. Fixes building with gcc10.
 
---- gtk3/utils.h.orig	2021-01-25 21:23:36.273540700 +0000
+--- gtk3/utils.h.orig	2023-11-25 14:07:34.909973541 +0000
 +++ gtk3/utils.h
-@@ -9,6 +9,7 @@
- 
- #include <cairo.h>
+@@ -12,6 +12,7 @@
  #include <glib-object.h>
-+#include <cstdlib>
  #include <memory>
  #include <utility>
++#include <cstdlib>
+ 
+ namespace fcitx::gtk {
  
