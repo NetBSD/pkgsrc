@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.22 2023/12/29 17:24:13 he Exp $
+# $NetBSD: mozilla-common.mk,v 1.23 2024/02/10 12:44:05 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -65,7 +65,6 @@ USE_TOOLS+=		bsdtar
 .endif
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
-CXXFLAGS+=		-mstackrealign
 CFLAGS+=		-mstackrealign
 .endif
 # As of 2.53.16, packed_simd_2 is for Rust nightly only.
