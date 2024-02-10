@@ -1,14 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:26:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:20:16 ryoon Exp $
 lib/fcitx5/qt5/libfcitx5-skk-config.so
 lib/fcitx5/skk.so
 share/fcitx5/addon/skk.conf
 share/fcitx5/inputmethod/skk.conf
 share/fcitx5/skk/dictionary_list
+share/icons/hicolor/16x16/apps/fcitx-skk.png
+share/icons/hicolor/16x16/apps/org.fcitx.Fcitx5.fcitx-skk.png
+share/icons/hicolor/22x22/apps/fcitx-skk.png
+share/icons/hicolor/22x22/apps/org.fcitx.Fcitx5.fcitx-skk.png
+share/icons/hicolor/24x24/apps/fcitx-skk.png
+share/icons/hicolor/24x24/apps/org.fcitx.Fcitx5.fcitx-skk.png
+share/icons/hicolor/48x48/apps/fcitx-skk.png
+share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-skk.png
 share/icons/hicolor/64x64/apps/fcitx-skk.png
 share/icons/hicolor/64x64/apps/org.fcitx.Fcitx5.fcitx-skk.png
 share/locale/ca/LC_MESSAGES/fcitx5-skk.mo
 share/locale/da/LC_MESSAGES/fcitx5-skk.mo
 share/locale/de/LC_MESSAGES/fcitx5-skk.mo
+share/locale/he/LC_MESSAGES/fcitx5-skk.mo
 share/locale/ja/LC_MESSAGES/fcitx5-skk.mo
 share/locale/ko/LC_MESSAGES/fcitx5-skk.mo
 share/locale/ru/LC_MESSAGES/fcitx5-skk.mo
