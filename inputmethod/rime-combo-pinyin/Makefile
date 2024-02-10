@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 04:46:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/10 09:41:55 ryoon Exp $
 
 .include "../../meta-pkgs/rime-data/Makefile.common"
 
 GITHUB_PROJECT=	rime-combo-pinyin
-GITHUB_TAG=	a84065a86b272c76215215bd6f03c506b6e7097c
-DISTNAME=	${GITHUB_PROJECT}-0.0.0.20210131
+GITHUB_TAG=	17b66079a23a00d3214639fee2b8ae97d3e620dc
+DISTNAME=	${GITHUB_PROJECT}-0.0.0.20221220
 
 COMMENT=	Rime input method engine data, combo-pinyin
 LICENSE=	gnu-lgpl-v3
