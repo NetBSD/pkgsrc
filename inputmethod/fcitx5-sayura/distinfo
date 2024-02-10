@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:15:36 ryoon Exp $
 
-BLAKE2s (fcitx5-sayura-5.0.2.tar.xz) = 2461fdd402c077935b1fbd8194b361961ce58b1e5353c40baf625f089e159f11
-SHA512 (fcitx5-sayura-5.0.2.tar.xz) = ec67c5da287773760e5f5000ad3bb6fb6bad300860ec9a4ffc9587b5e0dd01b5f5e0db0d9d012f4474b3cb44f41884886fc2956c41b3a2f45bc82f202a2cb1a1
-Size (fcitx5-sayura-5.0.2.tar.xz) = 20972 bytes
+BLAKE2s (fcitx5-sayura-5.1.1.tar.xz) = 05d81cc43e49474da11e5b65c25f82efc6db1300b50ac6606025d02b36362ddd
+SHA512 (fcitx5-sayura-5.1.1.tar.xz) = 81223686bc167df91f2a8dd805ebc6daabb8fe160d083ca6bf42749030cb3a519fb549c30c5f03dfcf72d48879f142faaf703113071b9c4c0fec0031fcee80f4
+Size (fcitx5-sayura-5.1.1.tar.xz) = 21532 bytes
