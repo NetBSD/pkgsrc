@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:24:05 ryoon Exp $
 
-BLAKE2s (fcitx5-zhuyin-5.0.3.tar.xz) = 391cafd91371ef5d41b6b4a279f6b75dca9490c24fabb8ce318783a6b9ef014e
-SHA512 (fcitx5-zhuyin-5.0.3.tar.xz) = 992be8e77f0dc2f93973c43899a3d2bbddaf5743f10939d42bcb51d756dc98ae8e4917ebc0b7e6419bb0cf39a1b2a3317765d3599c86df8fa1f96fcbfd89523d
-Size (fcitx5-zhuyin-5.0.3.tar.xz) = 28328 bytes
+BLAKE2s (fcitx5-zhuyin-5.1.0.tar.xz) = 348b8ea8d1d0b44ab27c3a152c86cbb8819da420eef8031fff2369db71db8f66
+SHA512 (fcitx5-zhuyin-5.1.0.tar.xz) = 5f83173360a995c59ba96b953fb029a27959677210af985ace21dcf419d2f22d5cc9310a739fbe007781fd7702cf9ae8b7ede195b834dcfafd1cd93a40ed55bc
+Size (fcitx5-zhuyin-5.1.0.tar.xz) = 32508 bytes
 BLAKE2s (model.text.20161206.tar.gz) = 39a181f25fc4f0c480eab65b36166245ea498c2f36e7f5a20985c0404aa4a2bd
 SHA512 (model.text.20161206.tar.gz) = 26450e347b7a211e5abd94acbb9befc8cee7d8fc20e5161ef11b8b9b1ad47cde4f1add5c41484d9af04e4dde2aa748090e297e799ee7f6d2f9fcec3873eee429
 Size (model.text.20161206.tar.gz) = 15099931 bytes
