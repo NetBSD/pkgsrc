@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/12/02 18:06:53 nros Exp $
+$NetBSD: distinfo,v 1.7 2024/02/10 12:01:44 ryoon Exp $
 
-BLAKE2s (fcitx5-gtk-5.0.4.tar.xz) = 9f6c6bb56f5d9b4039f478091a9e1fe743f231d09120e3cf6b47c4626dbf8e0a
-SHA512 (fcitx5-gtk-5.0.4.tar.xz) = 9009369e19f2165bcf514f2a229db456ee8aa0d81611a133aa03f69ecd06a27689506edaf3c2d61e0f1928fc47070bb11280308ca5a4dca6ae35bb39a087a407
-Size (fcitx5-gtk-5.0.4.tar.xz) = 49044 bytes
-SHA1 (patch-gtk3_fcitxtheme.cpp) = ce6975f2ee3253d026da810b0f70abf07a82ec46
-SHA1 (patch-gtk3_utils.h) = b2b2a5ad72d2ca9767d3352f6d499ecf8b94871a
+BLAKE2s (fcitx5-gtk-5.1.1.tar.xz) = 71a01271604015c2bd4d06f99b7b8f3ee6c3c0f320da30d5eb95f173622b059f
+SHA512 (fcitx5-gtk-5.1.1.tar.xz) = 14dc84661e33435df5157127b2a4a81adc399cdc833e1c32795783d60bf10fd301fb658fc48673cad87abccfe3bccbb7b4ee0d0da74460b7ef1d6529a554a3eb
+Size (fcitx5-gtk-5.1.1.tar.xz) = 53716 bytes
+SHA1 (patch-gtk3_utils.h) = d4de3bcb2f9d3d3351b3d84c9cb94b6ad1ebcd4d
