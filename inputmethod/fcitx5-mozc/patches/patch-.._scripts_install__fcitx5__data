@@ -1,17 +1,16 @@
-$NetBSD: patch-.._scripts_install__fcitx5,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+$NetBSD: patch-.._scripts_install__fcitx5__data,v 1.1 2024/02/10 12:26:01 ryoon Exp $
 
---- ../scripts/install_fcitx5.orig	2021-02-17 12:18:42.000000000 +0000
-+++ ../scripts/install_fcitx5
-@@ -1,7 +1,7 @@
- #!/bin/sh
+--- ../scripts/install_fcitx5_data.orig	2023-10-26 15:09:25.000000000 +0000
++++ ../scripts/install_fcitx5_data
+@@ -1,6 +1,6 @@
+ #!/bin/bash
  
- _bldtype="${_bldtype:-Debug}"
 -PREFIX="${PREFIX:-/usr}"
 +PREFIX="${DESTDIR}${PREFIX:-/usr}"
  
  for pofile in unix/fcitx5/po/*.po
  do
-@@ -9,13 +9,13 @@ do
+@@ -8,14 +8,14 @@ do
      lang=${filename/.po/}
      mofile=${pofile/.po/.mo}
      msgfmt $pofile -o $mofile
@@ -20,12 +19,13 @@ $NetBSD: patch-.._scripts_install__fcitx5,v 1.1 2021/02/17 15:29:51 ryoon Exp $
      rm -f $mofile
  done
  
--install -D -m 755 "out_linux/${_bldtype}/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
 -install -D -m 644 unix/fcitx5/mozc-addon.conf "${PREFIX}/share/fcitx5/addon/mozc.conf"
 -install -D -m 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
-+install -m 755 "out_${OSDEST}/${_bldtype}/fcitx5-mozc.so" "${PREFIX}/lib/fcitx5/fcitx5-mozc.so"
 +install -m 644 unix/fcitx5/mozc-addon.conf "${PREFIX}/share/fcitx5/addon/mozc.conf"
 +install -m 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
  
- PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
+-PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
++#PREFIX="${PREFIX}" ../scripts/install_fcitx5_icons
  
+ msgfmt --xml -d unix/fcitx5/po/ --template unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml.in -o unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml
+ install -Dm644 unix/fcitx5/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml "${PREFIX}/share/metainfo/org.fcitx.Fcitx5.Addon.Mozc.metainfo.xml"

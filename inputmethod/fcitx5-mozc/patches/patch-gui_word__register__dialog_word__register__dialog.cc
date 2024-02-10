@@ -1,19 +1,13 @@
-$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.1 2021/02/17 15:29:51 ryoon Exp $
+$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.2 2024/02/10 12:26:02 ryoon Exp $
 
-* NetBSD support
-* Fix from https://github.com/google/mozc/issues/460
-
---- gui/word_register_dialog/word_register_dialog.cc.orig	2021-02-15 03:48:53.000000000 +0000
+--- gui/word_register_dialog/word_register_dialog.cc.orig	2023-12-13 09:33:09.127301725 +0000
 +++ gui/word_register_dialog/word_register_dialog.cc
-@@ -97,9 +97,9 @@ QString GetEnv(const char *envname) {
+@@ -100,7 +100,7 @@ QString GetEnv(const char *envname) {
    }
    return QLatin1String("");
- #endif  // OS_WIN
--#if defined(__APPLE__) || defined(OS_LINUX)
-+#if defined(__APPLE__) || defined(OS_LINUX) || defined(OS_NETBSD)
+ #endif  // _WIN32
+-#if defined(__APPLE__) || defined(__linux__)
++#if defined(__APPLE__) || defined(__linux__) || defined(__NetBSD__)
    return QString::fromUtf8(::getenv(envname));
--#endif  // __APPLE__ or OS_LINUX
-+#endif  // __APPLE__ or OS_LINUX or OS_NETBSD
+ #endif  // __APPLE__ or __linux__
    // TODO(team): Support other platforms.
-   return QLatin1String("");
- }
