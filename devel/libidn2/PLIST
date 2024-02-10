@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/10/30 11:17:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/10 16:39:00 wiz Exp $
 bin/idn2
 include/idn2.h
 info/libidn2.info
@@ -27,6 +27,7 @@ man/man3/idn2_to_unicode_lzlz.3
 share/gtk-doc/html/libidn2/api-index-0.1.html
 share/gtk-doc/html/libidn2/api-index-2.0.0.html
 share/gtk-doc/html/libidn2/api-index-2.1.1.html
+share/gtk-doc/html/libidn2/api-index-2.3.5.html
 share/gtk-doc/html/libidn2/api-index-deprecated.html
 share/gtk-doc/html/libidn2/api-index-full.html
 share/gtk-doc/html/libidn2/home.png
