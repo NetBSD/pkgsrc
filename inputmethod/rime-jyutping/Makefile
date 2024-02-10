@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 04:53:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/10 09:43:16 ryoon Exp $
 
 .include "../../meta-pkgs/rime-data/Makefile.common"
 
 GITHUB_PROJECT=	rime-jyutping
-GITHUB_TAG=	1e24baa6998815c716c581effe8ec65ee87c4e8c
-DISTNAME=	${GITHUB_PROJECT}-0.0.0.20200809
+GITHUB_TAG=	50100769f645bf92afef5170e3bf42be5147b41b
+DISTNAME=	${GITHUB_PROJECT}-0.0.0.20220518
 
 COMMENT=	Rime input method engine data, jyutping
 LICENSE=	gnu-lgpl-v3
