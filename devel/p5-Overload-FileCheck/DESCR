@@ -1,0 +1,6 @@
+Overload::FileCheck provides a way to mock one or more file checks. It
+is also possible to mock stat/lstat functions using "mock_all_from_stat"
+and let Overload::FileCheck mock for you for any other -X checks.
+
+By using mock_all_file_checks you can set a hook function to reply
+any -X check.
