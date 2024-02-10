@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1089 2024/02/10 09:28:51 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1090 2024/02/10 09:30:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1839,3 +1839,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/git to 2.43.1 [adam 2024-02-10]
 	Updated devel/py-test-asyncio to 0.23.5 [adam 2024-02-10]
 	Updated x11/xcb-imdkit to 1.0.6 [ryoon 2024-02-10]
+	Updated inputmethod/libime to 1.1.5 [ryoon 2024-02-10]
