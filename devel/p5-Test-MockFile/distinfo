@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 01:15:15 schmonz Exp $
+
+BLAKE2s (Test-MockFile-0.036.tar.gz) = 254f3adce71b129603ed5e555d645e18a525faa522f161b0890ff630b54cf277
+SHA512 (Test-MockFile-0.036.tar.gz) = c648c6c984b143ed8273d63e78a657b37a2e7bcdd916e776b87dad20d081d10c0e5279672133b45ad30ea8d36c84e7e7f8c17342bf96fcf9b61c62868b3141ff
+Size (Test-MockFile-0.036.tar.gz) = 59444 bytes
