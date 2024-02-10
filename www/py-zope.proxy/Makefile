@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/10/06 10:48:30 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/10 07:19:52 adam Exp $
 
-DISTNAME=	zope.proxy-5.1
+DISTNAME=	zope.proxy-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.proxy/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.proxy
 COMMENT=	Generic Transparent Proxies
 LICENSE=	zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
