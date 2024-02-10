@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/14 10:39:40 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/02/10 13:07:54 bacon Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dnaio/__init__.py
 ${PYSITELIB}/dnaio/__init__.pyc
 ${PYSITELIB}/dnaio/__init__.pyo
@@ -18,7 +18,7 @@ ${PYSITELIB}/dnaio/_version.pyc
 ${PYSITELIB}/dnaio/_version.pyi
 ${PYSITELIB}/dnaio/_version.pyo
 ${PYSITELIB}/dnaio/ascii_check.h
-${PYSITELIB}/dnaio/ascii_check_sse2.h
+${PYSITELIB}/dnaio/bam.h
 ${PYSITELIB}/dnaio/chunks.py
 ${PYSITELIB}/dnaio/chunks.pyc
 ${PYSITELIB}/dnaio/chunks.pyo
@@ -28,6 +28,9 @@ ${PYSITELIB}/dnaio/exceptions.pyo
 ${PYSITELIB}/dnaio/interfaces.py
 ${PYSITELIB}/dnaio/interfaces.pyc
 ${PYSITELIB}/dnaio/interfaces.pyo
+${PYSITELIB}/dnaio/multipleend.py
+${PYSITELIB}/dnaio/multipleend.pyc
+${PYSITELIB}/dnaio/multipleend.pyo
 ${PYSITELIB}/dnaio/pairedend.py
 ${PYSITELIB}/dnaio/pairedend.pyc
 ${PYSITELIB}/dnaio/pairedend.pyo
