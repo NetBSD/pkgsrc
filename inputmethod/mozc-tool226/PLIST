@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/10 01:23:51 ryoon Exp $
+libexec/mozc_tool
