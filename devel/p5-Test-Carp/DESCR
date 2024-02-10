@@ -1,0 +1,3 @@
+Call given code (with given arguments) and tests whether the given
+Carp function (or their imported versions) are called (with a given
+value) or not.

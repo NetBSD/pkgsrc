@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 01:15:59 schmonz Exp $
+
+BLAKE2s (Test-Carp-0.2.tar.gz) = e29cf3e44f23d0c46c519355435ce519282fca00b9e830b5f19f4793306487a2
+SHA512 (Test-Carp-0.2.tar.gz) = 48fe5fbf7e0c7a623785ca1c6f100a0f71ad926c650f0b4d1682fe130812119aaae9cefac802c8baa67a3f8e8995d3d47b97611c18e6579212d4225e87b60ff3
+Size (Test-Carp-0.2.tar.gz) = 6173 bytes
