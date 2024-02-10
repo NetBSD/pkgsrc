@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/10 07:15:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/certbot_dns_cloudflare/__init__.py
+${PYSITELIB}/certbot_dns_cloudflare/__init__.pyc
+${PYSITELIB}/certbot_dns_cloudflare/__init__.pyo
+${PYSITELIB}/certbot_dns_cloudflare/_internal/__init__.py
+${PYSITELIB}/certbot_dns_cloudflare/_internal/__init__.pyc
+${PYSITELIB}/certbot_dns_cloudflare/_internal/__init__.pyo
+${PYSITELIB}/certbot_dns_cloudflare/_internal/dns_cloudflare.py
+${PYSITELIB}/certbot_dns_cloudflare/_internal/dns_cloudflare.pyc
+${PYSITELIB}/certbot_dns_cloudflare/_internal/dns_cloudflare.pyo
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/__init__.py
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/__init__.pyc
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/__init__.pyo
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/dns_cloudflare_test.py
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/dns_cloudflare_test.pyc
+${PYSITELIB}/certbot_dns_cloudflare/_internal/tests/dns_cloudflare_test.pyo
+${PYSITELIB}/certbot_dns_cloudflare/py.typed
