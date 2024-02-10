@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/10/11 14:38:47 taca Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/10 14:42:39 taca Exp $
 
 DISTNAME=	howm-1.4.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://howm.osdn.jp/a/
 

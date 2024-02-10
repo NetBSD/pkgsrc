@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/07/28 22:16:16 fcambus Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/10 14:42:40 taca Exp $
 
 DISTNAME=	motyl-1.0.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 GITHUB_PROJECT=	motyl
