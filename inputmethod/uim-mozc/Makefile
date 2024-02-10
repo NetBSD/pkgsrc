@@ -1,34 +1,31 @@
-# $NetBSD: Makefile,v 1.72 2024/01/01 16:05:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2024/02/10 02:20:18 ryoon Exp $
 
-PKGNAME=	uim-${DISTNAME}
-PKGREVISION=	24
+PKGNAME=	${DISTNAME:S/mozc-/uim-mozc-/}
 
-CONFLICTS+=	ibus-mozc<=1.13.1651.102
+TOOL_DEPENDS+=	bazel-[0-9]*:../../devel/bazel
 
 INSTALLATION_DIRS+=	lib/uim/plugin share/uim/pixmaps
 
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
-DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
-DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
-
-SUBST_CLASSES+=			mozc_tool
-SUBST_STAGE.mozc_tool=		pre-configure
-SUBST_MESSAGE.mozc_tool=	Fixing mozc_tool path
-SUBST_FILES.mozc_tool=		scm/mozc-custom.scm
-SUBST_SED.mozc_tool=		-e 's,/usr/lib/mozc/mozc_tool,${PREFIX}/libexec/mozc_tool,g'
-
-post-patch:
-	mv ${WRKSRC}/unix/uim/scm ${WRKSRC}/scm
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c ${MOZC_BUILD_MODE} \
-			unix/uim/uim.gyp:uim-mozc
+		${PREFIX}/bin/bazel \
+			--output_user_root=${WRKDIR}/bazel \
+			--client_debug \
+			build \
+			unix/uim:uim-mozc \
+			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
+			--host_action_env=PATH=${PATH} \
+			--action_env=PATH=${PATH} \
+			--sandbox_debug \
+			--verbose_failures \
+			--subcommands \
+			--config oss_linux --compilation_mode opt \
+			--experimental_cc_shared_library
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_${OSDEST}/${MOZC_BUILD_MODE}/libuim-mozc.so \
-		${DESTDIR}${PREFIX}/lib/uim/plugin
+	${INSTALL_PROGRAM} ${WRKSRC}/bazel-out/${OSDEST}/bin/unix/uim/libuim-mozc.so \
+		${DESTDIR}${PREFIX}/lib/uim/plugin/libuim-mozc.so
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ime_product_icon_opensource-32.png \
 		${DESTDIR}${PREFIX}/share/uim/pixmaps/mozc.png
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ui-tool.png \
@@ -37,16 +34,16 @@ do-install:
 		${DESTDIR}${PREFIX}/share/uim/pixmaps/mozc_tool_config_dialog.png
 	${INSTALL_DATA} ${WRKSRC}/data/images/unix/ui-dictionary.png \
 		${DESTDIR}${PREFIX}/share/uim/pixmaps/mozc_tool_dictionary_tool.png
-	${INSTALL_DATA} ${WRKSRC}/scm/mozc-custom.scm \
+	${INSTALL_DATA} ${WRKSRC}/uim/Mozc/scm/mozc-custom.scm \
 		${DESTDIR}${PREFIX}/share/uim
-	${INSTALL_DATA} ${WRKSRC}/scm/mozc-key-custom.scm \
+	${INSTALL_DATA} ${WRKSRC}/uim/Mozc/scm/mozc-key-custom.scm \
 		${DESTDIR}${PREFIX}/share/uim
-	${INSTALL_DATA} ${WRKSRC}/scm/mozc.scm \
+	${INSTALL_DATA} ${WRKSRC}/uim/Mozc/scm/mozc.scm \
 		${DESTDIR}${PREFIX}/share/uim
 
 UIM_MODULES=	mozc
 .include "../../inputmethod/uim/modules.mk"
 
 .include "../../inputmethod/uim/buildlink3.mk"
-.include "../../inputmethod/mozc-server/Makefile.common"
+.include "../../inputmethod/uim-mozc/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
