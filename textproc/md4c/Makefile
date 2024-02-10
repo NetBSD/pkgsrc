@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/01/21 20:11:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/10 16:34:13 wiz Exp $
 
-DISTNAME=	md4c-0.5.1
+DISTNAME=	md4c-0.5.2
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mity/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
