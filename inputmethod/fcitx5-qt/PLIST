@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:23:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:12:11 ryoon Exp $
+bin/fcitx5-qt5-immodule-probing
 include/Fcitx5Qt5/Fcitx5Qt5DBusAddons/fcitx5qt5dbusaddons_export.h
 include/Fcitx5Qt5/Fcitx5Qt5DBusAddons/fcitxqtcontrollerproxy.h
 include/Fcitx5Qt5/Fcitx5Qt5DBusAddons/fcitxqtdbustypes.h
@@ -21,7 +22,6 @@ lib/cmake/Fcitx5Qt5WidgetsAddons/Fcitx5Qt5WidgetsAddonsConfig.cmake
 lib/cmake/Fcitx5Qt5WidgetsAddons/Fcitx5Qt5WidgetsAddonsConfigVersion.cmake
 lib/cmake/Fcitx5Qt5WidgetsAddons/Fcitx5Qt5WidgetsAddonsTargets-noconfig.cmake
 lib/cmake/Fcitx5Qt5WidgetsAddons/Fcitx5Qt5WidgetsAddonsTargets.cmake
-lib/fcitx5/qt5/libfcitx-quickphrase-editor5.so
 lib/libFcitx5Qt5DBusAddons.so
 lib/libFcitx5Qt5DBusAddons.so.1
 lib/libFcitx5Qt5DBusAddons.so.${PKGVERSION}
@@ -30,6 +30,7 @@ lib/libFcitx5Qt5WidgetsAddons.so.2
 lib/libFcitx5Qt5WidgetsAddons.so.${PKGVERSION}
 libexec/fcitx5-qt5-gui-wrapper
 qt5/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so
+share/applications/org.fcitx.fcitx5-qt5-gui-wrapper.desktop
 share/locale/ca/LC_MESSAGES/fcitx5-qt.mo
 share/locale/da/LC_MESSAGES/fcitx5-qt.mo
 share/locale/de/LC_MESSAGES/fcitx5-qt.mo
