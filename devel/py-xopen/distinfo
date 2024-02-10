@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2024/01/31 11:53:35 adam Exp $
+$NetBSD: distinfo,v 1.28 2024/02/10 13:04:22 bacon Exp $
 
 BLAKE2s (xopen-1.9.0.tar.gz) = 1617c1f27e8af4d2622c11c7d52be2b2e493e6580b4a36cfb7f8be98565605c7
 SHA512 (xopen-1.9.0.tar.gz) = 81e257ee84e4a0470760d80a6a0433dbea331b9bc079b7cb8ab744cc965325157fe961d6b8a76357f970cc72c366ac0233f5b6aff81eb43f7727f3695c83cdd8
