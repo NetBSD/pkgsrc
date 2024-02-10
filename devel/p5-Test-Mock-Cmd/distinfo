@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 01:15:39 schmonz Exp $
+
+BLAKE2s (Test-Mock-Cmd-0.7.tar.gz) = 59aeb53c826f8e99773630179c86214234a031abad722b37d03b6259eb929899
+SHA512 (Test-Mock-Cmd-0.7.tar.gz) = 5791b27e425fc7d28f7027935ab92f6f0c45fff2647dfdbc3e1b94b578e977659dc9896e56b06052139ad5ff6d063ec5f8bea4700ab3a7de9fbcaf49a765423b
+Size (Test-Mock-Cmd-0.7.tar.gz) = 9178 bytes
