@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6481 2023/06/16 20:22:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6482 2024/02/10 10:31:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7254,6 +7254,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/p5-Statistics-Descriptive to 3.0800 [wen 2021-09-11]
 	Updated misc/p5-Business-ISBN-Data to 20210112.006 [wen 2021-09-11]
 	Updated misc/p5-Business-ISBN to 3.006 [wen 2021-09-11]
+	Updated audio/ardour to 6.9.0 [nia 2021-09-11]
 	Updated misc/p5-Business-ISMN to 1.202 [wen 2021-09-12]
 	Updated misc/p5-Business-UPS to 2.02 [wen 2021-09-12]
 	Updated misc/p5-Locale-Codes to 3.68 [wen 2021-09-12]
