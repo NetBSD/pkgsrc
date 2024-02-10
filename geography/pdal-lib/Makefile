@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/12/29 18:24:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/10 10:06:13 wiz Exp $
 
 DISTNAME=	PDAL-2.5.6-src
 PKGNAME=	${DISTNAME:S/PDAL/pdal-lib/:S/-src//}
@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++17 filesystem
 
 TEST_TARGET=	test
 
