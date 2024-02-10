@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 04:44:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/10 09:40:33 ryoon Exp $
 
 .include "../../meta-pkgs/rime-data/Makefile.common"
 
 GITHUB_PROJECT=	rime-cantonese
-GITHUB_TAG=	cbe80d3fd80c2679212cea68417f536eeba30395
-DISTNAME=	${GITHUB_PROJECT}-0.0.0.20210218
+GITHUB_TAG=	e3c6b17e638ac8a9aeab4d5852e5909b049c5ab3
+DISTNAME=	${GITHUB_PROJECT}-0.0.0.20230912
 
 COMMENT=	Rime input method engine data, cantonese
 LICENSE=	odbl-v1 AND cc-by-v4.0
