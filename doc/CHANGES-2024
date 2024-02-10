@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1126 2024/02/10 12:22:45 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1127 2024/02/10 12:24:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/fcitx5-table-other to 5.1.0 [ryoon 2024-02-10]
 	Updated inputmethod/fcitx5-skk to 5.1.1 [ryoon 2024-02-10]
 	Updated inputmethod/fcitx5-unikey to 5.1.2 [ryoon 2024-02-10]
+	Updated inputmethod/fcitx5-zhuyin to 5.1.0 [ryoon 2024-02-10]
