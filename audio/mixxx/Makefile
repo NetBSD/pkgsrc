@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2024/02/01 08:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/02/10 10:15:39 wiz Exp $
 
 DISTNAME=	mixxx-2.3.1
 PKGREVISION=	27
@@ -19,7 +19,7 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DUSE_SYMLINKS=OFF
 CMAKE_ARGS+=	-DPORTMIDI=OFF
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++11 filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
