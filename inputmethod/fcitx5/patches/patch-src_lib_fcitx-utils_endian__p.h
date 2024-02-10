@@ -1,13 +1,13 @@
-$NetBSD: patch-src_lib_fcitx-utils_endian__p.h,v 1.1 2022/03/27 12:45:04 tnn Exp $
+$NetBSD: patch-src_lib_fcitx-utils_endian__p.h,v 1.2 2024/02/10 09:58:33 ryoon Exp $
 
 Fix build on SunOS
 
---- src/lib/fcitx-utils/endian_p.h.orig	2020-12-19 01:28:15.422710700 +0000
+--- src/lib/fcitx-utils/endian_p.h.orig	2024-01-13 02:04:45.526720000 +0000
 +++ src/lib/fcitx-utils/endian_p.h
-@@ -7,7 +7,7 @@
- #ifndef _FCITX_UTILS_ENDIAN_P_H_
+@@ -8,7 +8,7 @@
  #define _FCITX_UTILS_ENDIAN_P_H_
  
+ #include <cstdint>
 -#if defined(__linux__) || defined(__GLIBC__)
 +#if defined(__linux__) || defined(__GLIBC__) || defined(__sun)
  #include <endian.h>
