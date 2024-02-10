@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/11/14 14:02:39 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2024/02/10 10:05:14 wiz Exp $
 
 DISTNAME=	gupnp-tools-0.12.1
 PKGREVISION=	4
@@ -12,6 +12,8 @@ COMMENT=	Framework for UPnP devices
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	intltool msgfmt pkg-config
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=deprecated-declarations
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/meson/build.mk"
