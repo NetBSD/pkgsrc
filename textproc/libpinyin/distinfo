@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:22:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/10 12:34:16 ryoon Exp $
 
-BLAKE2s (libpinyin-2.6.0.tar.gz) = 712da75bbc1fc6cdc04a929a05174237276299afe40a269fd8c2f94d0bc131b1
-SHA512 (libpinyin-2.6.0.tar.gz) = da6245ca31ea1ecfe42cab6cb9251f924c2ecb54ca0e8d48768c5f4157e44a4eaa891401142f2100636f548e5731530c607beeacd9a81a1ac8bb54ad54e42bf3
-Size (libpinyin-2.6.0.tar.gz) = 20564001 bytes
+BLAKE2s (libpinyin-2.8.1.tar.gz) = 603a8179773077d35b473168b4afb0d80a85a59ea3cd7b38cba938333c2f1f83
+SHA512 (libpinyin-2.8.1.tar.gz) = cf344d12ba31b72fd63e39345a294f8507533db7b2cea3df69214fee7f62068823832587907e78df44aeb035990e9dbc5fd4eb5ee95a757158fc165abb986b91
+Size (libpinyin-2.8.1.tar.gz) = 20594925 bytes
