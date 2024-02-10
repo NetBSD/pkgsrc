@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/12/12 16:39:34 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/02/10 07:15:22 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -19,7 +19,14 @@ DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 # https://github.com/certbot/certbot/issues/2956
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 309
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3.1:../../devel/py-importlib-resources
+.endif
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
+.endif
 
 BUILD_DEFS+=		VARBASE
 
@@ -37,8 +44,6 @@ SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
 MAKE_DIRS+=		${VARBASE}/letsencrypt/log
 
 INSTALLATION_DIRS+=	share/examples/certbot-${PYVERSSUFFIX}
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
