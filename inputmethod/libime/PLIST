@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:27:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 09:30:43 ryoon Exp $
 bin/libime_history
 bin/libime_migrate_fcitx4_pinyin
 bin/libime_migrate_fcitx4_table
@@ -29,6 +29,7 @@ include/LibIME/libime/pinyin/pinyinencoder.h
 include/LibIME/libime/pinyin/pinyinime.h
 include/LibIME/libime/pinyin/pinyinmatchstate.h
 include/LibIME/libime/pinyin/pinyinmatchstate_p.h
+include/LibIME/libime/pinyin/pinyinprediction.h
 include/LibIME/libime/pinyin/shuangpindata.h
 include/LibIME/libime/pinyin/shuangpinprofile.h
 include/LibIME/libime/table/autophrasedict.h
@@ -64,6 +65,7 @@ lib/libime/zh_CN.lm.predict
 share/libime/cj.main.dict
 share/libime/db.main.dict
 share/libime/erbi.main.dict
+share/libime/extb.dict
 share/libime/qxm.main.dict
 share/libime/sc.dict
 share/libime/wanfeng.main.dict
