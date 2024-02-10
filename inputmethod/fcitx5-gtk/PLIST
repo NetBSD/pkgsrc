@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/27 19:34:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/10 12:01:44 ryoon Exp $
+bin/fcitx5-gtk2-immodule-probing
+bin/fcitx5-gtk3-immodule-probing
+bin/fcitx5-gtk4-immodule-probing
 include/Fcitx5/GClient/fcitx-gclient/fcitxgclient.h
 include/Fcitx5/GClient/fcitx-gclient/fcitxgwatcher.h
 lib/cmake/Fcitx5GClient/Fcitx5GClientConfig.cmake
