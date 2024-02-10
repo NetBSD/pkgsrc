@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/10 12:24:05 ryoon Exp $
 
-DISTNAME=	fcitx5-zhuyin-5.0.3
-PKGREVISION=	2
+DISTNAME=	fcitx5-zhuyin-5.1.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-zhuyin/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,6 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -32,6 +30,7 @@ post-extract:
 		${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${f} ${f}
 .endfor
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/fcitx5/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
