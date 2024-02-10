@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/02/10 10:01:21 wiz Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	14
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 #MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.xs4all.nl/~jantien/yodl/
+HOMEPAGE=	https://fbb-git.gitlab.io/yodl/
 COMMENT=	High-level document preparation system
 
 GNU_CONFIGURE=	YES
