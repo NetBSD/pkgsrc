@@ -1,0 +1,97 @@
+# $NetBSD: Makefile.common,v 1.1 2024/02/10 01:20:46 ryoon Exp $
+
+# used by inputmethod/ibus-mozc226/Makefile
+# used by inputmethod/mozc-elisp226/Makefile
+# used by inputmethod/mozc-server226/Makefile
+# used by inputmethod/mozc-tool226/Makefile
+# used by inputmethod/mozc-renderer226/Makefile
+# used by inputmethod/uim-mozc226/Makefile
+
+MOZC_VER=	2.26.4282.100
+
+DISTNAME=	mozc-${MOZC_VER}
+CATEGORIES=	inputmethod
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	https://github.com/google/mozc/
+COMMENT=	Japanese inputmethod Mozc engine
+LICENSE=	modified-bsd
+
+UIM_MOZC=	uim-mozc-321.3ea28b1
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} \
+		${UIM_MOZC}.tar.xz
+SITES.${UIM_MOZC}.tar.xz=	${MASTER_SITE_SOURCEFORGE:=pnsft-aur/}
+
+EXTRACT_USING=	bsdtar
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/mozc-server226/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server226/patches
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gyp>=0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6:../../devel/gyp
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake pkg-config
+
+USE_CXX_FEATURES+=	c++11
+
+CHECK_PORTABILITY_SKIP+=	third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
+
+OPENSSL_CFLAGS=		-I${BUILDLINK_PREFIX.openssl}/include
+OPENSSL_INC=		-I${BUILDLINK_PREFIX.openssl}/include
+OPENSSL_LDFLAGS=	-L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
+OPENSSL_LIBS=		-lssl -lcrypto
+
+SUBST_CLASSES+=		gyp
+SUBST_STAGE.gyp=	pre-configure
+SUBST_MESSAGE.gyp=	Fix gyp defaults
+SUBST_FILES.gyp+=	config.bzl
+SUBST_FILES.gyp+=	base/process.cc
+SUBST_FILES.gyp+=	gyp/directories.gypi
+SUBST_FILES.gyp+=	unix/ibus/ibus.gyp
+SUBST_FILES.gyp+=	unix/ibus/path_util.cc
+SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
+SUBST_VARS.gyp+=	PREFIX
+
+# To disable flock(1) in link stage.
+ALL_ENV+=	LINK=${CXX}
+
+.include "../../mk/bsd.prefs.mk"
+
+OPSYSVARS+=	OSDEST
+OSDEST.Linux=	linux
+OSDEST.NetBSD=	bsd
+
+MOZC_BUILD_MODE=	Release # or Debug
+
+# In file included from src/dictionary/system/system_dictionary.h:43:0,
+#                  from ../../dictionary/system/system_dictionary.cc:47:
+# src/dictionary/system/key_expansion_table.h: In member function 'const mozc::dictionary::ExpandedKey mozc::dictionary::KeyExpansionTable::ExpandKey(char) const':
+# src/dictionary/system/key_expansion_table.h:83:34: error: array subscript has type 'char' [-Werror=char-subscripts]
+#      return ExpandedKey(table_[key]);
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
+
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} build_mozc.py \
+		gyp \
+		--gypdir=${LOCALBASE}/bin
+
+.include "../../devel/glib2/buildlink3.mk"
+#.include "../../devel/protobuf/buildlink3.mk"
+# gmock is not used yet...
+#.include "../../devel/gmock/buildlink3.mk"
+.include "../../inputmethod/zinnia/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+
+.include "../../lang/python/tool.mk"
+.include "../../mk/atomic64.mk"
