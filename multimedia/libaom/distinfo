@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2023/12/31 09:09:06 ryoon Exp $
+$NetBSD: distinfo,v 1.21 2024/02/10 00:30:56 ryoon Exp $
 
-BLAKE2s (libaom-3.8.0.tar.gz) = 6d07510718e5d6ed294cfeae896c98fa2b7e239f69523b35d082edd88968d343
-SHA512 (libaom-3.8.0.tar.gz) = 201a3ef00c0de3f90ed2486b306b836ec3e5c891c0ea05cb4607523f084f957849d38cd1e2684c05af2a93180a1b151ccc7a99ba8d5d52a84d8cb17cb25b0e8a
-Size (libaom-3.8.0.tar.gz) = 5448720 bytes
+BLAKE2s (libaom-3.8.1.tar.gz) = 7d58f8453c73969f4fb80e6c22e7000b0f6411d2548511eeddd4e218ba3dd675
+SHA512 (libaom-3.8.1.tar.gz) = f9ee918a37699cfaf2bcb5aa16a4d8b077feb1fc577d8c5437ed3fa1a1c0a5d734c9564e3c8c0f0b1baf43dc5abb7ff0196a77607b10d926c0be7858778ac1e3
+Size (libaom-3.8.1.tar.gz) = 5450909 bytes
 SHA1 (patch-aom__ports_ppc__cpudetect.c) = 5b34032e3530a3ba65755e7faefb2f1f97855d98
 SHA1 (patch-build_cmake_aom__configure.cmake) = 912cf6dca48897ff95a0697cc5c76304284070be
 SHA1 (patch-build_cmake_exports.cmake) = 1de2b3a5de0e27401726b232799aba21cd670535
