@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/10 12:17:23 ryoon Exp $
 
-BLAKE2s (fcitx5-table-extra-5.0.2.tar.xz) = d27f77e2e58a122272bd6a63202da04b0add8005b95d04ed27430c2ab3cf44f2
-SHA512 (fcitx5-table-extra-5.0.2.tar.xz) = 74103b99470887c66b064986069c6b3299e461e42e469e86d2ea9ba043789396616debaad037ad6bad66e16cfd520ba96a18ef150728ce50be2727cfe8e40b2e
-Size (fcitx5-table-extra-5.0.2.tar.xz) = 5211284 bytes
+BLAKE2s (fcitx5-table-extra-5.1.3.tar.xz) = 21b0f1a5802734a13ed9db4bd9db039f6558cf54110c2c42b23a395d8f3c02dc
+SHA512 (fcitx5-table-extra-5.1.3.tar.xz) = 14dc416c5d5936484fd0a940ee8e1e3ddd34064b48213e69d3e93ce63d60c95ceac727cf3925e2aa0457d001ef72276f647246b739b98a6480f27b47e356cc3b
+Size (fcitx5-table-extra-5.1.3.tar.xz) = 7557460 bytes
