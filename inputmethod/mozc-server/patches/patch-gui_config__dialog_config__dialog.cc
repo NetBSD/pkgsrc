@@ -1,50 +1,31 @@
-$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.7 2021/02/15 14:50:23 ryoon Exp $
+$NetBSD: patch-gui_config__dialog_config__dialog.cc,v 1.8 2024/02/10 01:17:27 ryoon Exp $
 
-* NetBSD support
-
---- gui/config_dialog/config_dialog.cc.orig	2021-02-15 03:48:53.000000000 +0000
+--- gui/config_dialog/config_dialog.cc.orig	2023-12-13 09:33:40.403986822 +0000
 +++ gui/config_dialog/config_dialog.cc
-@@ -104,21 +104,21 @@ ConfigDialog::ConfigDialog()
+@@ -105,7 +105,7 @@ ConfigDialog::ConfigDialog()
    setWindowTitle(tr("%1 Preferences").arg(GuiUtil::ProductName()));
  #endif  // __APPLE__
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__NetBSD__)
    miscDefaultIMEWidget->setVisible(false);
    miscAdministrationWidget->setVisible(false);
    miscStartupWidget->setVisible(false);
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
- 
- #ifdef MOZC_NO_LOGGING
+@@ -115,7 +115,7 @@ ConfigDialog::ConfigDialog()
    // disable logging options
    miscLoggingWidget->setVisible(false);
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__NetBSD__)
    // The last "misc" tab has no valid configs on Linux
-   const int kMiscTabIndex = 6;
+   constexpr int kMiscTabIndex = 6;
    configDialogTabWidget->removeTab(kMiscTabIndex);
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
- #endif  // MOZC_NO_LOGGING
- 
-   suggestionsSizeSpinBox->setRange(1, 9);
-@@ -280,7 +280,7 @@ ConfigDialog::ConfigDialog()
+@@ -281,7 +281,7 @@ ConfigDialog::ConfigDialog()
    dictionaryPreloadingAndUACLabel->setVisible(false);
- #endif  // OS_WIN
+ #endif  // _WIN32
  
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#ifdef __linux__
++#if defined(__linux__) || defined(__NetBSD__)
    // On Linux, disable all fields for UsageStats
    usageStatsLabel->setEnabled(false);
    usageStatsLabel->setVisible(false);
-@@ -290,7 +290,7 @@ ConfigDialog::ConfigDialog()
-   usageStatsMessage->setVisible(false);
-   usageStatsCheckBox->setEnabled(false);
-   usageStatsCheckBox->setVisible(false);
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
- 
-   GuiUtil::ReplaceWidgetLabels(this);
- 
