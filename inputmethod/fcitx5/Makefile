@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/11/14 14:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/10 09:58:33 ryoon Exp $
 
-DISTNAME=	fcitx5-5.0.5
-PKGREVISION=	10
+DISTNAME=	fcitx5-5.1.7
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5/
 EXTRACT_SUFX=	.tar.xz
@@ -28,7 +27,6 @@ SUBST_SED.fix-machine-id+=	-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/ma
 
 CONFLICTS+=	fcitx-[0-9]*
 
-USE_CMAKE=		yes
 USE_TOOLS+=		bash:run pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
@@ -64,14 +62,17 @@ CONF_FILES+=	${PREFIX}/share/examples/fcitx5/org.fcitx.Fcitx5.desktop \
 
 pre-configure:
 	${LN} -s ${DISTDIR}/en_dict-20121020.tar.gz \
-		${WRKSRC}/src/modules/spell/dict
+		${WRKSRC}/src/modules/spell/
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+USE_BUILTIN.libevent=	no
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
