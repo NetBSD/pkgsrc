@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/20 20:53:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/10 09:54:15 ryoon Exp $
 bin/rime_deployer
 bin/rime_dict_manager
 bin/rime_patch
+bin/rime_table_decompiler
 include/rime_api.h
 include/rime_levers_api.h
 lib/librime.so
