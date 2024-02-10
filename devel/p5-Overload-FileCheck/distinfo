@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/10 01:14:51 schmonz Exp $
+
+BLAKE2s (Overload-FileCheck-0.013.tar.gz) = 467e6bd7970e79699ff1c72956e03cc9e3d065564be25a743f03932483b4d7ca
+SHA512 (Overload-FileCheck-0.013.tar.gz) = 496751019cb4354801f146e1d95e87095625d29bc2ec350cad4ea83b3bc771e214dbbe46a6d5e9d0b18dc6237e08cfb850747df5f57074919f262a9433845611
+Size (Overload-FileCheck-0.013.tar.gz) = 165752 bytes
