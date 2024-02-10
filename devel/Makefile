@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4174 2024/02/10 01:15:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.4175 2024/02/10 01:15:41 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2167,6 +2167,7 @@ SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
 SUBDIR+=	p5-Test-Metrics-Any
 SUBDIR+=	p5-Test-MinimumVersion
+SUBDIR+=	p5-Test-Mock-Cmd
 SUBDIR+=	p5-Test-Mock-Guard
 SUBDIR+=	p5-Test-Mock-LWP
 SUBDIR+=	p5-Test-MockFile
