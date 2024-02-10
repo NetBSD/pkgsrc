@@ -1,13 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:49:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/10 12:22:31 ryoon Exp $
+lib/fcitx5/libunikey.so
+lib/fcitx5/qt5/libfcitx5-unikey-keymap-editor.so
 lib/fcitx5/qt5/libfcitx5-unikey-macro-editor.so
-lib/fcitx5/unikey.so
 share/fcitx5/addon/unikey.conf
 share/fcitx5/inputmethod/unikey.conf
 share/icons/hicolor/128x128/apps/fcitx-unikey.png
 share/icons/hicolor/128x128/apps/org.fcitx.Fcitx5.fcitx-unikey.png
+share/icons/hicolor/16x16/apps/fcitx-unikey.png
+share/icons/hicolor/16x16/apps/org.fcitx.Fcitx5.fcitx-unikey.png
+share/icons/hicolor/22x22/apps/fcitx-unikey.png
+share/icons/hicolor/22x22/apps/org.fcitx.Fcitx5.fcitx-unikey.png
+share/icons/hicolor/24x24/apps/fcitx-unikey.png
+share/icons/hicolor/24x24/apps/org.fcitx.Fcitx5.fcitx-unikey.png
+share/icons/hicolor/48x48/apps/fcitx-unikey.png
+share/icons/hicolor/48x48/apps/org.fcitx.Fcitx5.fcitx-unikey.png
 share/locale/ca/LC_MESSAGES/fcitx5-unikey.mo
 share/locale/da/LC_MESSAGES/fcitx5-unikey.mo
 share/locale/de/LC_MESSAGES/fcitx5-unikey.mo
+share/locale/fr/LC_MESSAGES/fcitx5-unikey.mo
 share/locale/he/LC_MESSAGES/fcitx5-unikey.mo
 share/locale/ja/LC_MESSAGES/fcitx5-unikey.mo
 share/locale/ko/LC_MESSAGES/fcitx5-unikey.mo
