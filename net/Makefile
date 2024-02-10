@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1558 2024/01/26 10:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1559 2024/02/10 07:10:41 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -711,6 +711,7 @@ SUBDIR+=	py-boto3
 SUBDIR+=	py-botocore
 SUBDIR+=	py-cares
 SUBDIR+=	py-celery
+SUBDIR+=	py-cloudflare
 SUBDIR+=	py-comm
 SUBDIR+=	py-cymruwhois
 SUBDIR+=	py-digitalocean
