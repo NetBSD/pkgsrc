@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2024/01/30 18:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/10 16:36:20 wiz Exp $
 
 DISTNAME=	re2-${GITHUB_TAG:S/-//g}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	2023-11-01
+GITHUB_TAG=	2024-02-01
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/re2
