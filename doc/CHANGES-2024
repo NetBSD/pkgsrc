@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1120 2024/02/10 12:12:22 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1121 2024/02/10 12:14:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1871,3 +1871,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/fcitx5-lua to 5.0.12 [ryoon 2024-02-10]
 	Updated inputmethod/fcitx5-m17n to 5.1.0 [ryoon 2024-02-10]
 	Updated inputmethod/fcitx5-qt to 5.1.4 [ryoon 2024-02-10]
+	Updated inputmethod/fcitx5-rime to 5.1.4 [ryoon 2024-02-10]
