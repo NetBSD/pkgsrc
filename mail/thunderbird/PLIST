@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2023/11/21 21:32:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.93 2024/02/11 15:12:45 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.sys.mjs
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.sys.mjs
@@ -4090,6 +4090,7 @@ lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/list-box-selec
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/mail-go-button.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/mail-tab-button.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/quick-filter-bar-toggle.mjs
+lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/reply-list-button.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/search-bar.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/space-button.mjs
 lib/thunderbird/chrome/messenger/content/messenger/unifiedtoolbar/unified-toolbar-button.mjs
@@ -4558,7 +4559,6 @@ lib/thunderbird/chrome/openpgp/content/openpgp/modules/OpenPGPAlias.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/RNP.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/RNPLib.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/armor.jsm
-lib/thunderbird/chrome/openpgp/content/openpgp/modules/autocrypt.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/constants.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/core.jsm
 lib/thunderbird/chrome/openpgp/content/openpgp/modules/cryptoAPI.jsm
@@ -5670,6 +5670,7 @@ lib/thunderbird/defaults/pref/e2e-prefs.js
 lib/thunderbird/defaults/pref/mailnews.js
 lib/thunderbird/defaults/pref/mdn.js
 lib/thunderbird/defaults/pref/thunderbird-branding.js
+lib/thunderbird/defaults/settings/last_modified.json
 lib/thunderbird/defaults/settings/blocklists/addons-bloomfilters.json
 lib/thunderbird/defaults/settings/blocklists/addons-bloomfilters/addons-mlbf.bin
 lib/thunderbird/defaults/settings/blocklists/addons-bloomfilters/addons-mlbf.bin.meta.json
