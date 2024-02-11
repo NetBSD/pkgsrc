@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.18 2023/10/19 15:51:20 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.19 2024/02/11 15:31:58 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -11,6 +11,7 @@ ${PKGNAME}/lib/libreoffice/program/classes/flow-engine.jar
 ${PKGNAME}/lib/libreoffice/program/classes/flute-1.1.6.jar
 ${PKGNAME}/lib/libreoffice/program/classes/form.jar
 ${PKGNAME}/lib/libreoffice/program/classes/java_uno.jar
+${PKGNAME}/lib/libreoffice/program/classes/java_websocket.jar
 ${PKGNAME}/lib/libreoffice/program/classes/js.jar
 ${PKGNAME}/lib/libreoffice/program/classes/juh.jar
 ${PKGNAME}/lib/libreoffice/program/classes/jurt.jar
@@ -144,6 +145,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-hi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-hr.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-hsb.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-hu.txt
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-hy.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-id.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-is.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-it.txt
@@ -678,6 +680,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hu/help.idxl/segments
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hu/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hu/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hu/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy.done
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/hy/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/id-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/id.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/id/help.db_
@@ -1455,6 +1467,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_hi.
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_hr.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_hsb.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_hu.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_hy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_id.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_is.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_it.properties
@@ -1575,6 +1588,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDial
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_hr.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_hsb.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_hu.properties
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_hy.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_id.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_is.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_it.properties
@@ -1712,6 +1726,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-hi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-hr.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-hsb.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-hu.txt
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-hy.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-id.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-is.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/description-it.txt
@@ -2254,6 +2269,16 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hu/help.idxl/seg
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hu/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hu/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hu/help.tree
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy-xhp.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy.done
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.db_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.ht_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.idxl/_0.cfs
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.idxl/segments.gen
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.idxl/segments_3
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.jar
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.key_
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/hy/help.tree
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/id-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/id.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/id/help.db_

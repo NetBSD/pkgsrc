@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.324 2024/01/30 18:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.325 2024/02/11 15:31:58 ryoon Exp $
 
-VERREL=		7.6.4
-VERRC=		1
+VERREL=		24.2.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -16,12 +15,19 @@ LICENSE=	gnu-lgpl-v3
 
 UNLIMIT_RESOURCES+=	cputime
 
-USE_LANGUAGES=	c gnu++17
+# configure script checks the version of GCC.
+GCC_REQD+=	12
+
+# Mixture of C++11, C++20 and so on. Do not override standards in Makefiles.
+# Do not define gnu++20. It breaks the build.
+# Do not define gnu++17. It generates non-functional gengal.bin binary.
+USE_LANGUAGES=	c c++
 
 # Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
 BUILDLINK_TRANSFORM+=	opt:-std=c++2a:-std=gnu++2a
+BUILDLINK_TRANSFORM+=	opt:-std=c++20:-std=gnu++20
 CONFIG_SHELL=		${BASH}
 
 SUBST_CLASSES+=			use-bash
@@ -37,6 +43,7 @@ SUBST_FILES.configure-paths+=	configure.ac
 SUBST_SED.configure-paths+=	-e 's,-I/usr/include/dragonbox-1.1.3,-I${BUILDLINK_PREFIX.dragonbox}/include/dragonbox-1.1.3,'
 SUBST_SED.configure-paths+=	-e 's,-I/usr/include/gpgme++,-I${BUILDLINK_PREFIX.gpgme}/include/gpgme++,'
 #SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
+SUBST_VARS.configure-paths+=	PREFIX COMPILER_RPATH_FLAG
 
 SUBST_CLASSES+=			font-path
 SUBST_STAGE.font-path=		pre-configure
@@ -69,7 +76,7 @@ NOT_PAX_MPROTECT_SAFE+=	${PKGNAME_NOREV}/lib/libreoffice/program/soffice.bin
 DIST_SUBDIR=	libreoffice
 
 LO_BOOTSTRAP=	${DISTNAME}
-LO_COMPONENTS=	dictionaries help translations
+LO_COMPONENTS=	dictionaries translations # help 
 
 DISTFILES+=	${LO_BOOTSTRAP}${EXTRACT_SUFX}
 EXTRACT_ONLY=	${LO_BOOTSTRAP}${EXTRACT_SUFX}
@@ -87,7 +94,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.37.tar.gz \
+	xmlsec1-1.3.2.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -123,10 +130,24 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-1.000.zip \
 	ReemKufi-1.2.zip \
-	pdfium-5778.tar.bz2 \
+	pdfium-6179.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m111-a31e897fb3dcbc96b2b40999751611d029bf5404.tar.xz \
-	libcmis-0.6.1.tar.xz
+	skia-m116-2ddcf183eb260f63698aa74d1bb380f247ad7ccd.tar.xz \
+	libcmis-0.6.1.tar.xz \
+	Java-WebSocket-1.5.4.tar.gz \
+	NotoSans-v2.012.zip \
+	NotoSerif-v2.012.zip \
+	NotoSerifHebrew-v2.003.zip \
+	NotoSansArabic-v2.010.zip \
+	NotoNaskhArabic-v2.016.zip \
+	NotoSansHebrew-v2.003.zip \
+	NotoSansArmenian-v2.008.zip \
+	NotoSerifArmenian-v2.008.zip \
+	NotoSansGeorgian-v2.003.zip \
+	NotoSerifGeorgian-v2.003.zip \
+	NotoSansLao-v2.003.zip \
+	NotoSerifLao-v2.003.zip \
+	NotoSansLisu-v2.102.zip
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -245,7 +266,7 @@ CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccod
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
 CONFIGURE_ARGS+=	--with-system-libtommath
 CONFIGURE_ARGS+=	--with-system-openjpeg
-CONFIGURE_ARGS+=	--with-help
+#CONFIGURE_ARGS+=	--with-help
 
 # more REPLACE_PERL are needed.
 REPLACE_PERL=	sd/res/webview/editpic.pl
@@ -396,8 +417,10 @@ BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 #.include "../../print/poppler-cpp/buildlink3.mk"
 #.include "../../print/poppler-includes/buildlink3.mk"
+.include "../../security/argon2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/zxcvbn-c/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
