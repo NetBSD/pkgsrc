@@ -1,11 +1,11 @@
-$NetBSD: patch-bin_9c,v 1.1 2022/12/06 14:29:25 vins Exp $
+$NetBSD: patch-bin_9c,v 1.2 2024/02/11 10:01:46 vins Exp $
 
 Let pkgsrc define its own compiler.
 
 --- bin/9c.orig	2022-09-12 14:35:36.000000000 +0000
 +++ bin/9c
 @@ -3,7 +3,7 @@
- test -f $PLAN9/config && . $PLAN9/config
+ test -f "$PLAN9/config" && . "$PLAN9/config"
  usegcc()
  {
 -	cc=${CC9:-gcc}
