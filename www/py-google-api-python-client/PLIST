@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/02/09 22:11:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/02/11 20:06:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -201,6 +201,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datapipelines.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataplex.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dataportability.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataproc.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataproc.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datastore.v1.json
