@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.262 2023/12/04 03:46:03 ryoon Exp $
+$NetBSD: distinfo,v 1.263 2024/02/11 15:12:45 ryoon Exp $
 
-BLAKE2s (thunderbird-115.5.1.source.tar.xz) = 7de1290e66b8bda97e5510c18ac9e0d784730077b61a1b943b1d06520eed67e5
-SHA512 (thunderbird-115.5.1.source.tar.xz) = 5ddc39b3591427d283c5497f68a1d722409aba54d53342a36a259daa219d8135ecf88868b12235eb9536f46f825722cf6da2781b71a2e10b816281231394b4f9
-Size (thunderbird-115.5.1.source.tar.xz) = 532760764 bytes
+BLAKE2s (thunderbird-115.7.0.source.tar.xz) = c12e9ad84157466e74a003980d2ccf517d2f84ea1653f145628ac2dad4c90055
+SHA512 (thunderbird-115.7.0.source.tar.xz) = de9edb81cf5da494101bf927a5b963ccdec0cc9bff87ebd72d896c6e25102c1113b326f67302a81abd237048aa1e6150c4a97fe4b1892bc80030cbab9099e2d8
+Size (thunderbird-115.7.0.source.tar.xz) = 532459912 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
 SHA1 (patch-build_moz.configure_rust.configure) = 72c5fa2e9d1022325d038832cca2e35f7213116d
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
