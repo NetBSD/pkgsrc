@@ -1,5 +1,3 @@
-= afm
-
 A very simple library to read Adobe Font Metrics files (afm).
 
 Currently simply parses the file and saves it in a few attributes.
