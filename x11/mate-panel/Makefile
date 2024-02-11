@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.57 2023/12/04 13:54:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.58 2024/02/11 18:16:51 triaxx Exp $
 
+PKGREVISION=	1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-panel-${VERSION:R}.4
 CATEGORIES=	x11
 
 COMMENT=	MATE panel application
-
-TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	libmate-panel-applet/libmatepanelapplet-4.0.pc.in
 
@@ -32,4 +31,5 @@ BUILDLINK_API_DEPENDS.libwnck3+= libwnck3>=3.32.0
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
