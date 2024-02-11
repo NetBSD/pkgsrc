@@ -1,8 +1,8 @@
-$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.2 2023/10/15 19:55:00 ryoon Exp $
+$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.3 2024/02/11 15:29:59 ryoon Exp $
 
 Support NetBSD.
 
---- extern/glog/src/config_netbsd.h.orig	2023-06-15 13:23:28.000000000 +0000
+--- extern/glog/src/config_netbsd.h.orig	2023-06-13 18:04:40.000000000 +0000
 +++ extern/glog/src/config_netbsd.h
 @@ -1,3 +1,180 @@
 +/* src/config.h.  Generated from config.h.in by configure.  */

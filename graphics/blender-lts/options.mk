@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2023/10/15 19:55:00 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2024/02/11 15:29:58 ryoon Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.blender-lts
+PKG_OPTIONS_VAR=		PKG_OPTIONS.blender
 PKG_SUPPORTED_OPTIONS=		jack pulseaudio
 
 .include "../../mk/bsd.options.mk"
