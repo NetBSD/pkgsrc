@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24018 2024/02/11 20:06:57 adam Exp $
+$NetBSD: TODO,v 1.24019 2024/02/11 20:29:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -1148,7 +1148,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
-	o py-Theano-1.0.5
 	o py-barman-3.0.1
 	o py-borgbackup-1.2.7
 	o py-cairocffi-1.6.1
