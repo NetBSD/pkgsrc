@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1158 2024/02/11 11:19:04 vins Exp $
+$NetBSD: CHANGES-2024,v 1.1159 2024/02/11 11:24:59 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-elementpath to 4.2.1 [adam 2024-02-11]
 	Updated www/py-httpx-socks to 0.8.1 [adam 2024-02-11]
 	Updated wm/emwm to 1.2 [vins 2024-02-11]
+	Updated wm/emwm-utils to 1.2 [vins 2024-02-11]
