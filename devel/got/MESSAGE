@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/02/11 14:47:06 vins Exp $
+
+A sample configuration file for the GoT daemon has been installed inside
+${PKG_SYSCONFDIR}.
+
+Check the README.pkgsrc available at ${DOCDIR}.
+
+===========================================================================
