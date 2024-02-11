@@ -1,4 +1,4 @@
-$NetBSD: patch-intern_guardedalloc_intern_mallocn__intern.h,v 1.1 2020/09/05 11:46:40 ryoon Exp $
+$NetBSD: patch-intern_guardedalloc_intern_mallocn__intern.h,v 1.2 2024/02/11 15:29:59 ryoon Exp $
 
 Support NetBSD.
 
