@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2023/11/12 13:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/02/11 15:35:50 adam Exp $
 
-DISTNAME=	libproxy-0.5.3
-PKGREVISION=	3
+DISTNAME=	libproxy-0.5.4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libproxy/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -11,8 +10,10 @@ HOMEPAGE=	https://libproxy.github.io/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c99 c++11
-USE_TOOLS+=	bash:build pkg-config
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:build pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libproxy-1.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
