@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/22 16:22:54 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/02/11 16:36:25 adam Exp $
 
-BLAKE2s (uc-micro-py-1.0.2.tar.gz) = 9acad561fd5ff558fbc667f98a4a39d452a15665a3002423a35c2859634a52fe
-SHA512 (uc-micro-py-1.0.2.tar.gz) = c9b4a69190099caad8a687d33a11b512505a90004eeccc3583e25b01762a4d9c6d3d72015f82d835d811bf439ae74d5433b56741a2e9c2b6134bd1a718712d23
-Size (uc-micro-py-1.0.2.tar.gz) = 4730 bytes
+BLAKE2s (uc-micro-py-1.0.3.tar.gz) = 32acaed51009c6ec59f0829560667cf8fedf0d0fc5f40f056edaeea07fa6c8a1
+SHA512 (uc-micro-py-1.0.3.tar.gz) = 6f69c84718e16f5bdac08787f728801bcb95591d984f58044e3914b08a5a9c41885d1106ad8f53afd82940b18e638ed285ccf57d1725582a0c160d7b1e0f265f
+Size (uc-micro-py-1.0.3.tar.gz) = 6043 bytes
