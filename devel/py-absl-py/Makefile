@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/03/29 09:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/11 16:40:23 adam Exp $
 
-DISTNAME=	absl-py-0.14.1
+DISTNAME=	absl-py-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/absl-py/}
 
@@ -11,15 +10,12 @@ HOMEPAGE=	https://github.com/abseil/abseil-py
 COMMENT=	Abseil Python Common Libraries
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.endif
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
