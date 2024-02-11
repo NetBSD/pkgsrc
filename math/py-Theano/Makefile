@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/11/05 23:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/02/11 20:25:46 adam Exp $
 
-DISTNAME=	Theano-1.0.4
+DISTNAME=	Theano-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
 
@@ -13,14 +12,13 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*/bin/bash
