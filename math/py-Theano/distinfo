@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/11/05 23:37:50 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/02/11 20:25:46 adam Exp $
 
-BLAKE2s (Theano-1.0.4.tar.gz) = 968e9e782252836a2ba943454cd5bcc42b66290b08a06c305fafac8035597816
-SHA512 (Theano-1.0.4.tar.gz) = 3cc7f9dbb606c3c997c8651c34dd861721d5a8b99d06ed0887306d5a5ad0d7e402fbe29dcb5ad2f513b3bf75966e41a2854ebdf9a4fb212607345f84f367de8c
-Size (Theano-1.0.4.tar.gz) = 2840691 bytes
+BLAKE2s (Theano-1.0.5.tar.gz) = bad77cb42a39d99f5ec9b10050479bda71a065b904fbabbe4e739d5cb4b3bf42
+SHA512 (Theano-1.0.5.tar.gz) = 6bb27753957d32392ea793e39ea56eff94baafbb55e27488f9c0bbdb387172a6829e64f461f83dae192486d9764b72d815e3b8dc059b2af116b024fc7228a118
+Size (Theano-1.0.5.tar.gz) = 2842778 bytes
 SHA1 (patch-versioneer.py) = fd751f29290df33524fe96546c8f03ed97fbf937
