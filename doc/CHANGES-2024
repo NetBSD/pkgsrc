@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1166 2024/02/11 15:32:25 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1167 2024/02/11 15:43:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1922,3 +1922,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-tqdm to 4.66.2 [adam 2024-02-11]
 	Updated graphics/blender-lts to 3.6.8 [ryoon 2024-02-11]
 	Updated misc/libreoffice to 24.2.0.3 [ryoon 2024-02-11]
+	Updated www/py-uvicorn to 0.27.1 [adam 2024-02-11]
+	Updated www/py-daphne to 4.1.0 [adam 2024-02-11]
+	Updated www/libproxy to 0.5.4 [adam 2024-02-11]
+	Updated devel/cmake to 3.28.3 [adam 2024-02-11]
