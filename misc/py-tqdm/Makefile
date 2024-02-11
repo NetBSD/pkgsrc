@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/02/11 15:23:52 adam Exp $
+# $NetBSD: Makefile,v 1.46 2024/02/11 15:24:49 adam Exp $
 
 DISTNAME=	tqdm-4.66.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,12 +16,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
-
-#PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
