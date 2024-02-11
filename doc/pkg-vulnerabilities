@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.121 2024/02/09 20:31:43 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.122 2024/02/11 10:07:10 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24801,7 +24801,7 @@ qemu<7.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3165
 qemu<7.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3872
 qemu<7.2.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-4172
 qemu<7.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-4144
-png-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4214
+#png-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4214 # test program only, not installed
 pngcheck<3.0.3	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-35511
 py{27,36,37,38,39,310,311}-matrix-nio<0.20	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-39254
 py{27,36,37,38,39,310,311}-octoprint<1.9.0	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-2822
@@ -25524,7 +25524,7 @@ vim<9.0.1499	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-
 vim<9.0.1531	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-2609
 vim<9.0.1532	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2610
 optipng-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43907
-png-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3857
+#png-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3857 # false positive
 jpegoptim<1.5.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-27781
 phppgadmin<7.14.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-40619
 phppgadmin<7.7	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-5002
