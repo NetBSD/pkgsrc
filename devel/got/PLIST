@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/29 20:35:11 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/11 14:47:06 vins Exp $
+bin/gitwrapper
 bin/got
+bin/gotadmin
+bin/gotctl
+bin/gotsh
 bin/tog
 libexec/got-fetch-pack
 libexec/got-index-pack
@@ -9,10 +13,30 @@ libexec/got-read-gitconfig
 libexec/got-read-gotconfig
 libexec/got-read-object
 libexec/got-read-pack
+libexec/got-read-patch
 libexec/got-read-tag
 libexec/got-read-tree
+libexec/got-send-pack
+man/man1/cvg.1
+man/man1/gitwrapper.1
 man/man1/got.1
+man/man1/gotadmin.1
+man/man1/gotsh.1
 man/man1/tog.1
 man/man5/git-repository.5
 man/man5/got-worktree.5
 man/man5/got.conf.5
+man/man5/gotd.conf.5
+man/man5/gotwebd.conf.5
+man/man8/gotctl.8
+man/man8/gotd.8
+man/man8/gotwebd.8
+sbin/cvg
+sbin/gotd
+sbin/gotwebd
+share/doc/got/CHANGELOG
+share/doc/got/README
+share/doc/got/README.pkgsrc
+share/doc/got/README.portable
+share/doc/got/TODO
+share/examples/got/gotd.conf
