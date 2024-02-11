@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/02/11 18:16:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.59 2024/02/11 19:20:28 gutteridge Exp $
 
 PKGREVISION=	1
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -7,6 +7,9 @@ DISTNAME=	mate-panel-${VERSION:R}.4
 CATEGORIES=	x11
 
 COMMENT=	MATE panel application
+
+USE_TOOLS+=	perl
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	libmate-panel-applet/libmatepanelapplet-4.0.pc.in
 
