@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.17 2023/05/31 20:30:44 rillig Exp $
+# $NetBSD: github.mk,v 1.18 2024/02/11 15:26:38 adam Exp $
 #
 # github.com master site handling
 #
@@ -70,7 +70,7 @@ SITES.${_GITHUB_DEFAULT_DISTFILES}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/d
 .  endif
 
 .  if !empty(GITHUB_TYPE:Mtag)
-SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/${GITHUB_TAG}${EXTRACT_SUFX}}
+SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/refs/tags/${GITHUB_TAG}${EXTRACT_SUFX}}
 .  endif
 
 .endif
