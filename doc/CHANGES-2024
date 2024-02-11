@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1169 2024/02/11 16:40:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1170 2024/02/11 17:31:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -410,7 +410,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added geography/R-spatstat.explore version 3.2.5 [mef 2024-01-13]
 	Added geography/R-spatstat.model version 3.2.8 [mef 2024-01-13]
 	Updated geography/R-spatstat.linnet to 3.1.3 [mef 2024-01-14]
-	Removed geography/R-statstat.core (split into .explore and .model [mef 2024-01-14]
+	Removed geography/R-statstat.core [mef 2024-01-14]
 	Updated geography/R-spatstat to 3.0.7 [mef 2024-01-14]
 	Updated math/R-geoR to 1.9.3 [mef 2024-01-14]
 	Updated devel/MoarVM to 2023.12 [mef 2024-01-14]
@@ -1914,7 +1914,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated wm/emwm to 1.2 [vins 2024-02-11]
 	Updated wm/emwm-utils to 1.2 [vins 2024-02-11]
 	Updated devel/got to 0.95 [vins 2024-02-11]
-	Removed devel/got-portable (superseded by devel/got) [vins 2024-02-11]	Updated mail/thunderbird to 115.7.0 [ryoon 2024-02-11]
+	Removed devel/got-portable successor devel/got [vins 2024-02-11]
+	Updated mail/thunderbird to 115.7.0 [ryoon 2024-02-11]
 	Updated mail/thunderbird-l10n to 115.7.0 [ryoon 2024-02-11]
 	Updated net/py-minio to 7.2.4 [adam 2024-02-11]
 	Updated devel/py-pygit2 to 1.14.1 [adam 2024-02-11]
