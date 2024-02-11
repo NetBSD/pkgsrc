@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1175 2024/02/11 20:06:57 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1176 2024/02/11 20:29:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1938,3 +1938,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-allauth to 0.61.1 [adam 2024-02-11]
 	Updated net/py-gevent to 23.9.1 [adam 2024-02-11]
 	Updated www/py-google-api-python-client to 2.117.0 [adam 2024-02-11]
+	Updated textproc/py-linkify-it-py to 2.0.3 [adam 2024-02-11]
+	Updated math/py-jplephem to 2.21 [adam 2024-02-11]
+	Updated math/py-Theano to 1.0.5 [adam 2024-02-11]
+	Updated net/py-flower to 2.0.1 [adam 2024-02-11]
