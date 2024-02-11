@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2023/11/12 13:22:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/11 10:01:46 vins Exp $
 
-DISTNAME=	plan9port-20230123
-PKGREVISION=	1
+DISTNAME=	plan9port-20240110
 CATEGORIES=	misc plan9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
-GITHUB_TAG=	e2a141ae0952c2d28a9f500bb9da6dc72e57be3c
+GITHUB_TAG=	be7c68f6954f7dcaa53403e0f600716f65a13d32
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://9fans.github.io/plan9port/
@@ -18,6 +17,9 @@ USE_TOOLS+=	bash:run perl pax
 
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
+
+PTHREAD_AUTO_VARS=		yes
+BUILDLINK_TRANSFORM+=		rm:-lpthread
 
 REPLACE_BASH+=	bin/macedit
 REPLACE_BASH+=	mac/9term.app/Contents/MacOS/9term
@@ -116,9 +118,11 @@ do-build:
 	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} ./INSTALL -b
 
 post-build:
+# Clean versioning and backup files
 .for h in *.orig .gitignore .gitkeep .travis.yml
 	${RUN}${FIND} ${WRKSRC} -type f -name "${h}" -delete
 .endfor
+	${RUN}${RM} -r ${WRKSRC}/.github
 
 do-install:
 # Move everything to the PLAN9 target.
@@ -168,6 +172,5 @@ post-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
