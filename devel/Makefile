@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4176 2024/02/10 01:16:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.4177 2024/02/11 14:59:37 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -475,7 +475,6 @@ SUBDIR+=	googletest
 SUBDIR+=	gopls
 SUBDIR+=	goredo
 SUBDIR+=	got
-SUBDIR+=	got-portable
 SUBDIR+=	gotags
 SUBDIR+=	gotelemetry
 SUBDIR+=	gotests
