@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.5 2024/01/19 20:16:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.6 2024/02/11 14:54:15 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -23,4 +23,7 @@ pkgtools/pkg_install, pkgtools/pkgin: revbump
 
 Pullup ticket #6834 - requested by wiz
 math/py-numpy: Python 3.12 build fix
+
+Pullup ticket #6833 - requested by bsiegert
+sysutils/strace: build fix for NetBSD 10
 
