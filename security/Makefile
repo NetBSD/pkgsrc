@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.936 2024/02/01 11:24:54 pin Exp $
+# $NetBSD: Makefile,v 1.937 2024/02/11 21:46:47 ryoon Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -679,5 +679,6 @@ SUBDIR+=	yubikey-manager-qt
 SUBDIR+=	zebedee
 SUBDIR+=	zkt
 SUBDIR+=	zoneminder
+SUBDIR+=	zxcvbn-c
 
 .include "../mk/misc/category.mk"
