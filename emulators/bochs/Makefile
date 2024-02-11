@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2023/11/14 14:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2024/02/11 23:30:39 ryoon Exp $
 
-DISTNAME=		bochs-2.6.9
-PKGREVISION=		10
+DISTNAME=		bochs-2.7
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -15,10 +14,13 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gunzip gzip
 USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++11
 USE_LIBTOOL=		yes
 
 CXXFLAGS+=		-DPARANOID
+LIBS+=			-lX11
 
+CONFIGURE_ARGS+=	--disable-docbook
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
 
@@ -26,7 +28,7 @@ MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
 MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
 MAKE_ENV+=		WGET=${FETCH_CMD:Q}
 
-PLIST_VARS+=		debug notiny nox11 plugins x11
+PLIST_VARS+=		notiny nox11 plugins x11
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
 PKG_SUPPORTED_OPTIONS+=	debug tiny x11
@@ -40,7 +42,6 @@ PKG_SUGGESTED_OPTIONS+=	x11
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--disable-plugins
 CONFIGURE_ARGS+=	--enable-debugger
-CONFIGURE_ARGS+=	--enable-disasm
 CONFIGURE_ARGS+=	--enable-iodebug
 CONFIGURE_ARGS+=	--enable-x86-debugger
 .endif
@@ -57,18 +58,25 @@ CONFIGURE_ARGS+=	--enable-cpu-level=6
 CONFIGURE_ARGS+=	--enable-pci
 CONFIGURE_ARGS+=	--enable-usb
 CONFIGURE_ARGS+=	--enable-usb-ohci
+CONFIGURE_ARGS+=	--enable-usb-ehci
+CONFIGURE_ARGS+=	--enable-usb-xhci
 CONFIGURE_ARGS+=	--enable-pnic
 CONFIGURE_ARGS+=	--enable-repeat-speedups
 CONFIGURE_ARGS+=	--enable-configurable-msrs
 CONFIGURE_ARGS+=	--enable-all-optimizations
 #CONFIGURE_ARGS+=	--enable-instrumentation
 CONFIGURE_ARGS+=	--enable-clgd54xx
+CONFIGURE_ARGS+=	--enable-voodoo
 CONFIGURE_ARGS+=	--enable-fpu
 CONFIGURE_ARGS+=	--enable-vmx=2
-#CONFIGURE_ARGS+=	--enable-3dnow
+CONFIGURE_ARGS+=	--enable-svm
+CONFIGURE_ARGS+=	--enable-3dnow
+CONFIGURE_ARGS+=	--enable-avx
+CONFIGURE_ARGS+=	--enable-evex
 CONFIGURE_ARGS+=	--enable-alignment-check
 #CONFIGURE_ARGS+=	--enable-gdb-stub
 CONFIGURE_ARGS+=	--enable-gameport
+CONFIGURE_ARGS+=	--enable-busmouse
 
 .  if empty(PKG_OPTIONS:Mdebug)
 PLIST.plugins=		yes
@@ -79,11 +87,9 @@ CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-fast-function-calls
 .  endif
 
-CONFIGURE_ARGS.Darwin+=		--enable-sb16=osx
-CONFIGURE_ARGS.FreeBSD+=	--enable-sb16=freebsd
-CONFIGURE_ARGS.Linux+=		--enable-sb16=linux
 CONFIGURE_ARGS.Linux+=		--enable-pcidev
-CONFIGURE_ARGS.*+=		--enable-sb16=dummy
+CONFIGURE_ARGS+=		--enable-sb16
+CONFIGURE_ARGS+=		--enable-es1370
 .endif
 
 .if empty(PKG_OPTIONS:Mx11)
@@ -91,6 +97,7 @@ PLIST.nox11=		yes
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-x11
 CONFIGURE_ARGS+=	--with-term
+CONFIGURE_ARGS+=	--with-sdl
 .else
 PLIST.x11=		yes
 .endif
@@ -111,6 +118,9 @@ BOCHSRC_SUBST.Darwin+=	-e 's,@FLOPPY_LINUX@,\#,'
 BOCHSRC_SUBST.*+=	-e 's,@FLOPPY_BSD@,,'
 BOCHSRC_SUBST.*+=	-e 's,@FLOPPY_LINUX@,\#,'
 
+PRINT_PLIST_AWK+=	/\/plugins\// { $$0 = "$${PLIST.plugins}" $$0 }
+PRINT_PLIST_AWK+=	/libbx_/ { $$0 = "$${PLIST.notiny}" $$0 }
+
 .if ${OPSYS} == "Darwin"
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Darwin
 PLIST_SRC=		${.CURDIR}/PLIST.Darwin
@@ -129,10 +139,15 @@ post-install:
 .else
 
 .  if !empty(PKG_OPTIONS:Mdebug) && !empty(PKG_OPTIONS:Mx11)
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .  endif
 .  if empty(PKG_OPTIONS:Mx11)
 .    include "../../mk/curses.buildlink3.mk"
+.    if ${OPSYS} == "NetBSD"
+.      if ${CURSES_TYPE} == "curses"
+GUI_LINK_OPTS_TERM=	-lcurses
+.      endif
+.    endif
 .  else
 BUILDLINK_DEPMETHOD.libXt?=	build
 

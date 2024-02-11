@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.36 2021/10/26 10:23:47 nia Exp $
+$NetBSD: distinfo,v 1.37 2024/02/11 23:30:39 ryoon Exp $
 
-BLAKE2s (bochs-2.6.9.tar.gz) = 6e781732cd23e7ae27d155a6be4aaf91c998226640468356b6f48e94123da4ef
-SHA512 (bochs-2.6.9.tar.gz) = dfecf3a1bad07f06c2f7bb989d146e4a8eaeca493b598d415f5a4aec2a85eb5524ba417422157608c8b0828832611df487c6923c8f4ad98a147ac089fc514c46
-Size (bochs-2.6.9.tar.gz) = 5169187 bytes
+BLAKE2s (bochs-2.7.tar.gz) = f1681035d10c7f8f2d2b40c43c27b6af00ba6a3f0db3c29c38af7a6092673814
+SHA512 (bochs-2.7.tar.gz) = d43bd557316dc370ba1c317f5c3292f724460515db01316614b2d585b2760120cadd1d27a286083ac3e6f57466ed889959abd7fe960c219c149dab9a053c6967
+Size (bochs-2.7.tar.gz) = 5298413 bytes
 SHA1 (patch-.bochsrc) = df5b8879ec005fe44bca8bee42c549095012013d
 SHA1 (patch-Makefile.in) = ca8d485a9f4901df15eb3e521105de2ae833cfcb
-SHA1 (patch-configure) = 47774947feb4ddbdeb9f3df68f345cd42ab76a7b
-SHA1 (patch-iodev_network_eth__socket.cc) = 37c4ab50da3f646ffc541001e8a8b7c93a7995c4
+SHA1 (patch-configure) = bdbdc3c0a5bdc8e63d81aa1ecb9018c5ba687f3a
+SHA1 (patch-gui_Makefile.in) = fb5e2ba02533c39169ea95101b9acaa6e33f6392
+SHA1 (patch-gui_textconfig.cc) = 8bbb1d4019d985bea8216175ad0d3dee6ff4e7e0
+SHA1 (patch-iodev_network_eth__socket.cc) = a90c4cacd38daa403379568f0a5bc8aae6d5f4a5
 SHA1 (patch-iodev_network_slirp_compat_cc) = a48d112daac6049c0ee8076eb012ab2f44740889
-SHA1 (patch-iodev_network_slirp_slirp.h) = c0920978ca5f004be603950240e4a988bee6d4f9
-SHA1 (patch-iodev_sound_soundosx.cc) = 7dacc7df74e64d3df72a241a291f434f72722cec
+SHA1 (patch-iodev_sound_soundosx.cc) = 285cdfc87803082847e6492031df7e33a389c2fa
 SHA1 (patch-main.cc) = 77296af5e8101c7c9ded37ec77571dbc61f98e4b
