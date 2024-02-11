@@ -1,0 +1,7 @@
+zxcvbn-c is a C/C++ implementation of the zxcvbn password strength
+estimation.
+
+The code is intended to be included as part of the source of a
+C/C++ program. Like the original this code is for character sets
+which use single byte characters primarily in the code range 0x20
+to 0x7E.
