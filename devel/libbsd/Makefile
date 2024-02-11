@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/08/29 16:25:59 vins Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/11 18:58:02 vins Exp $
 
-DISTNAME=	libbsd-0.11.7
-PKGREVISION=	1
+DISTNAME=	libbsd-0.11.8
 CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -9,18 +8,15 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
-LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd
-LICENSE+=	AND isc AND mit AND beer-ware
+LICENSE=	modified-bsd AND 2-clause-bsd AND isc AND mit AND beer-ware
 
+BROKEN_ON_PLATFORM=	Darwin-*-* SunOS-*-*
 NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
 NOT_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*
-BROKEN_ON_PLATFORM=	Darwin-*-* SunOS-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config autoconf automake autoreconf
-
-CFLAGS+=	-ffat-lto-objects
 
 TEST_TARGET=	check
 
