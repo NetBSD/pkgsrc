@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/07/21 10:00:47 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/02/11 20:04:25 adam Exp $
 
-DISTNAME=	gevent-23.7.0
+DISTNAME=	gevent-23.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
@@ -10,14 +10,15 @@ HOMEPAGE=	http://www.gevent.org/
 COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12.2:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=2.0.0:../../devel/py-greenlet
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12.3:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.0.0:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
-MAKE_ENV+=	GEVENTSETUP_EMBED_CARES=0
-MAKE_ENV+=	GEVENTSETUP_EMBED_LIBEV=0
-MAKE_ENV+=	GEVENTSETUP_EMBED_LIBUV=0
+# See docs/development/installing_from_source.rst
+MAKE_ENV+=	GEVENTSETUP_EMBED=0
 
 CHECK_PORTABILITY_SKIP=	deps/libuv/autogen.sh
 
@@ -34,12 +35,9 @@ MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 BUILDLINK_TRANSFORM.SunOS+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 .endif
 
-do-test:
-	cd ${WRKSRC}/src && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
-
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
