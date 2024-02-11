@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1179 2024/02/11 21:46:00 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1180 2024/02/11 22:04:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/parallel-disk-usage to 0.9.2 [pin 2024-02-11]
 	Updated shells/elvish to 0.20.0 [pin 2024-02-11]
 	Added security/zxcvbn-c version 2.5 [ryoon 2024-02-11]
+	Updated cross/lwtools to 4.22 [ryoon 2024-02-11]
