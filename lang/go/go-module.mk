@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.10 2023/06/06 12:41:44 riastradh Exp $
+# $NetBSD: go-module.mk,v 1.11 2024/02/11 19:28:18 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -43,6 +43,7 @@ PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 
 MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
 MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
+MAKE_ENV+=	GOTOOLCHAIN=local
 
 .if !target(do-build)
 do-build:
