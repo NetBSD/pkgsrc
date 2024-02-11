@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/01/22 16:24:13 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/11 20:15:52 adam Exp $
 
-DISTNAME=	linkify-it-py-2.0.2
+DISTNAME=	linkify-it-py-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/linkify-it-py/}
