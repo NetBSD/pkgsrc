@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24013 2024/02/11 09:07:21 wiz Exp $
+$NetBSD: TODO,v 1.24014 2024/02/11 11:08:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -1198,7 +1198,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
-	o py-uwsgi-2.0.24
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o py-yubikey-manager-5.3.0
