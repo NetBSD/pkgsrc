@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.26 2023/03/10 20:57:38 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.26 2023/03/10 20:57:38 ryoon Exp $
 * Find devel/apache-ant.
 * Fix broken xinerama detection.
 
---- configure.ac.orig	2023-01-25 14:26:33.000000000 +0000
+--- configure.ac.orig	2024-01-26 11:15:05.000000000 +0000
 +++ configure.ac
-@@ -5320,6 +5320,11 @@ linux-android*)
+@@ -5428,6 +5428,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,7 +21,7 @@ $NetBSD: patch-configure.ac,v 1.26 2023/03/10 20:57:38 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -9641,9 +9646,9 @@ dnl When the minimal version is at least
+@@ -9723,9 +9728,9 @@ dnl When the minimal version is at least
  dnl ===================================================================
  FREETYPE_CFLAGS_internal="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
  if test "x$ac_config_site_64bit_host" = xYES; then
@@ -33,7 +33,7 @@ $NetBSD: patch-configure.ac,v 1.26 2023/03/10 20:57:38 ryoon Exp $
  fi
  libo_CHECK_SYSTEM_MODULE([freetype],[FREETYPE],[freetype2 >= 9.9.3],,system,TRUE)
  
-@@ -13467,8 +13472,8 @@ if test "$_os" = "Linux" -o "$_os" = "Fr
+@@ -13826,8 +13831,8 @@ if test "$USING_X11" = TRUE; then
          AC_CHECK_HEADER(X11/extensions/Xinerama.h, [],
              [AC_MSG_ERROR(Xinerama header not found.)], [])
          XEXTLIBS=`$PKG_CONFIG --variable=libs xext`
@@ -44,7 +44,7 @@ $NetBSD: patch-configure.ac,v 1.26 2023/03/10 20:57:38 ryoon Exp $
          fi
          XINERAMA_EXTRA_LIBS="$XEXTLIBS"
          if test "$_os" = "FreeBSD"; then
-@@ -13734,8 +13739,8 @@ EOF
+@@ -14109,8 +14114,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else
