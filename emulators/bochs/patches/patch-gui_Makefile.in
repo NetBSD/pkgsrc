@@ -1,0 +1,15 @@
+$NetBSD: patch-gui_Makefile.in,v 1.1 2024/02/11 23:30:39 ryoon Exp $
+
+* Generate dynamic library.
+
+--- gui/Makefile.in.orig	2024-02-11 23:20:05.511825621 +0000
++++ gui/Makefile.in
+@@ -126,7 +126,7 @@ libbx_%_gui.la: %.lo
+ 	$(LIBTOOL) --mode=link --tag CXX $(CXX) -module $< -o $@ -rpath $(PLUGIN_PATH)
+ 
+ libbx_x_gui.la: x.lo
+-	$(LIBTOOL) --mode=link --tag CXX $(CXX) -module $< -o $@ -rpath $(PLUGIN_PATH) $(GUI_LINK_OPTS_X)
++	$(LIBTOOL) --mode=link --tag CXX $(CXX) -module $< -o $@ -rpath $(PLUGIN_PATH) -L$(PLUGIN_PATH) $(GUI_LINK_OPTS_X)
+ 
+ libbx_sdl_gui.la: sdl.lo
+ 	$(LIBTOOL) --mode=link --tag CXX $(CXX) -module $< -o $@ -rpath $(PLUGIN_PATH) $(GUI_LINK_OPTS_SDL)

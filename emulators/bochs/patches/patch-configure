@@ -1,15 +1,13 @@
-$NetBSD: patch-configure,v 1.7 2019/12/22 22:09:53 markd Exp $
+$NetBSD: patch-configure,v 1.8 2024/02/11 23:30:39 ryoon Exp $
 
-Deal with Linux 4.x and 5.x
-
---- configure.orig	2015-05-03 06:37:18.754341000 +0000
+--- configure.orig	2024-01-30 08:02:56.289870360 +0000
 +++ configure
-@@ -23311,7 +23311,7 @@ $as_echo "$as_me: Linux detected as host
-               PCIDEV_MODULE_MAKE_ALL="all-kernel24"
-               KERNEL_MODULE_SUFFIX="o"
-               ;;
--            2.6*|3.*)
-+            2.6*|3.*|4.*|5.*)
-               PCIDEV_MODULE_MAKE_ALL="all-kernel26"
-               KERNEL_MODULE_SUFFIX="ko"
-               ;;
+@@ -25354,7 +25354,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_curses_mvaddch" >&5
+ $as_echo "$ac_cv_lib_curses_mvaddch" >&6; }
+ if test "x$ac_cv_lib_curses_mvaddch" = xyes; then :
+-  GUI_LINK_OPTS_TERM="`pkg-config --libs curses`"
++  GUI_LINK_OPTS_TERM="-lcurses"
+ fi
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for mvaddch in -lncurses" >&5
