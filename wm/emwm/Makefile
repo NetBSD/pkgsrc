@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/07/05 14:30:18 vins Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/11 11:12:24 vins Exp $
 
-DISTNAME=	emwm-src-1.1
+DISTNAME=	emwm-src-1.2
 PKGNAME=	${DISTNAME:S,-src,,}
-PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
@@ -36,10 +35,8 @@ do-install:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/Emwm.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Emwm
 
-.include "../../mk/motif.buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
