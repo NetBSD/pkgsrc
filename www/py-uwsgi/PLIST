@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/10 03:32:42 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/11 11:02:48 adam Exp $
 bin/uwsgi-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/uwsgidecorators.py
 ${PYSITELIB}/uwsgidecorators.pyc
 ${PYSITELIB}/uwsgidecorators.pyo
