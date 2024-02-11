@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2022/12/19 15:08:04 vins Exp $
+# $NetBSD: builtin.mk,v 1.2 2024/02/11 17:46:17 vins Exp $
 
 BUILTIN_PKG:=	libmd
 
@@ -29,10 +29,10 @@ USE_BUILTIN.libmd=	no
 .  else
 USE_BUILTIN.libmd=	${IS_BUILTIN.libmd}
 .    if defined(BUILTIN_PKG.libmd) && \
-        ${IS_BUILTIN.libmd:M[yY][eE][sS]}
+        ${IS_BUILTIN.libmd:tl} == yes
 USE_BUILTIN.libmd=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libmd}
-.        if ${USE_BUILTIN.libmd:M[yY][eE][sS]}
+.        if ${USE_BUILTIN.libmd:tl} == yes
 USE_BUILTIN.libmd!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libmd:Q}; then	\
 		${ECHO} yes;						\
