@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2023/03/02 12:55:00 vins Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/11 10:32:52 vins Exp $
 
 DISTNAME=	snap
-PKGVER=		20230224
+PKGVER=		20231223
+SNAPSHOT=	f9ae0c837bf8351037689f1985c1a52c1570ba30
 PKGNAME=	drawterm-${PKGVER}
 CATEGORIES=	x11 plan9
 DIST_SUBDIR=	${PKGNAME_NOREV}
-MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/ed9cff5a4c39322744c4708699c9ae6651b7c9ab/
+MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/${SNAPSHOT}/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://drawterm.9front.org/
@@ -23,6 +24,7 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	LDADD="-lX11 -lXt -lm ${EXTRA_LIBS}"
 MAKE_FLAGS+=	RANLIB=${RANLIB:Q}
 
+.include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${PKGSRC_COMPILER:Mgcc}

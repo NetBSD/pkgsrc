@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/03/02 12:55:00 vins Exp $
+$NetBSD: distinfo,v 1.4 2024/02/11 10:32:52 vins Exp $
 
-BLAKE2s (drawterm-20230224/snap.tar.gz) = 12f8a08abe09b8ce7107153654d424c29534fc8744fe49e3600b65ad3646eda3
-SHA512 (drawterm-20230224/snap.tar.gz) = 2a2689c72c518d5855ab22f51787d6b253d02ed3e343d660c1679236bfe9c7a546ab107eb5850f9258b9702480d16392b96d287c2be0398b638c2fc260cd2ed4
-Size (drawterm-20230224/snap.tar.gz) = 615374 bytes
+BLAKE2s (drawterm-20231223/snap.tar.gz) = 5911c024f992c0ee55a04be71142dd9c367c55fe20de041e7d8a4f2fef7f6c10
+SHA512 (drawterm-20231223/snap.tar.gz) = 4a9c69fa2d1c04a6863ec4d174689deef5629cc9c5cc0a4e0896f70e4effc9fe492405c13ca0c6f96cd2e9638f6e5bbe798d7ed5ab39fcc3491139935d94691b
+Size (drawterm-20231223/snap.tar.gz) = 611974 bytes
