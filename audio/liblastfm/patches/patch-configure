@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2024/02/11 01:15:18 taca Exp $
+
+* Don't use obsolete method.
+
+--- configure.orig	2010-09-25 17:30:01.000000000 +0000
++++ configure
+@@ -32,7 +32,7 @@ begin
+       ENV['LFM_PREFIX'] = ARGV[n+1]
+     end
+     ENV['LFM_PREFIX'] = '/usr/local' if ENV['LFM_PREFIX'].nil?
+-    if File.exists? ENV['LFM_PREFIX'] and !File.directory? ENV['LFM_PREFIX']
++    if File.exist? ENV['LFM_PREFIX'] and !File.directory? ENV['LFM_PREFIX']
+       abort "Installation prefix exists but isn't a directory: "+ENV['LFM_PREFIX']
+     end
+     puts "Will install to: "+ENV['LFM_PREFIX']
