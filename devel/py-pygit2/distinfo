@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2024/01/27 19:01:13 adam Exp $
+$NetBSD: distinfo,v 1.28 2024/02/11 15:20:41 adam Exp $
 
-BLAKE2s (pygit2-1.14.0.tar.gz) = 0d8e12c5e9e26502f6193b2db5b9c1681ee2dda70e98c0b5016abc45ba954493
-SHA512 (pygit2-1.14.0.tar.gz) = 117858589c7cda9fe3c7d085c3577b5dfe1792335d58420349060ba45722adc59a479091e0c00e95298cdf705af9905236b3f54ccd75f82ca4704d4580e723be
-Size (pygit2-1.14.0.tar.gz) = 765357 bytes
+BLAKE2s (pygit2-1.14.1.tar.gz) = 4b06aff1a22d2a3c08144190a1c9b9e025ef1cfcc4e838c92ad1752a1a10e4b2
+SHA512 (pygit2-1.14.1.tar.gz) = 0718d7f480d40a5c435c725fbfec728ebdbb70d700607662308458dd125796fce9ddcf40afa6841ddc9cb7b19a5966fb3b5c8e4a52281a7eb354381ce62b5534
+Size (pygit2-1.14.1.tar.gz) = 765621 bytes
 SHA1 (patch-build.sh) = 93046157c4d93b4cadf0ffaad77b4f393e07f03e
