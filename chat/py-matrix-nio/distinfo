@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/25 18:30:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/02/11 19:46:01 adam Exp $
 
-BLAKE2s (matrix-nio-0.18.7.tar.gz) = 868013319eb6f3698815a118b6ab0213810db0fd2c582fa2d9aa85117459cfd1
-SHA512 (matrix-nio-0.18.7.tar.gz) = 9fa8935cab499ba15659ccb9f63c86a9485816d9f3b1eed9379155c1cb2115d2f0a81878097fc9e55f172842939d449f8f8a495b566e3a607a81da24666a956a
-Size (matrix-nio-0.18.7.tar.gz) = 155811 bytes
-SHA1 (patch-setup.py) = 120393a9cc55906892b9f6cf3a4e7a8a10d60e0d
+BLAKE2s (matrix_nio-0.24.0.tar.gz) = 1e4b40218be27f62d08718a55b25e91d54e9c6ab11ba823d6cc80f7d9e7f1a11
+SHA512 (matrix_nio-0.24.0.tar.gz) = 08838bfa104865197f652f4424a91b28c731e7d408598261aadd83ab2e2a246d8f2d51e0fe6c0082ea7a2531600ba37ea25c710973278f97192d2d4dc4b7ecb3
+Size (matrix_nio-0.24.0.tar.gz) = 150552 bytes

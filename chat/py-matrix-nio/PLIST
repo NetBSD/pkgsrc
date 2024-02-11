@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/25 13:07:32 ryoon Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/11 19:46:01 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/nio/__init__.py
 ${PYSITELIB}/nio/__init__.pyc
 ${PYSITELIB}/nio/__init__.pyo
@@ -103,9 +102,6 @@ ${PYSITELIB}/nio/exceptions.pyo
 ${PYSITELIB}/nio/http.py
 ${PYSITELIB}/nio/http.pyc
 ${PYSITELIB}/nio/http.pyo
-${PYSITELIB}/nio/log.py
-${PYSITELIB}/nio/log.pyc
-${PYSITELIB}/nio/log.pyo
 ${PYSITELIB}/nio/monitors.py
 ${PYSITELIB}/nio/monitors.pyc
 ${PYSITELIB}/nio/monitors.pyo
