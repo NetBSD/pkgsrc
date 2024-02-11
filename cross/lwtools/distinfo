@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2023/07/21 00:00:30 thorpej Exp $
+$NetBSD: distinfo,v 1.4 2024/02/11 22:04:11 ryoon Exp $
 
-BLAKE2s (lwtools-4.19.tar.gz) = 3b474babce2a1895c9bf5535aa9ce55fcaed0b0c52ccfaf4d24657c6fa0c0270
-SHA512 (lwtools-4.19.tar.gz) = 9bb09a018969ddf70eee8fe7f3572798718bc9eee4cdd74c252ffadb741282e5822fab0a7595f2e568566086293c4ca70c84855c2d3796f4458bacdfcd187b68
-Size (lwtools-4.19.tar.gz) = 657929 bytes
+BLAKE2s (lwtools-4.22.tar.gz) = e0e742b02869c51ad1c1180d7f47876d19e54f001cc264149a67242700b2fb68
+SHA512 (lwtools-4.22.tar.gz) = 1f727ce84df197d06c45379ef88c4ecbea0f0bff6ed79187d1277821c20048a3f66a0daea80c7b68cf55299dd82157d66d170dc8b762727111496d42f0e8dbe5
+Size (lwtools-4.22.tar.gz) = 662796 bytes
 SHA1 (patch-Makefile) = 479b576ee1a5c302d70ea0244138360cdcae149e

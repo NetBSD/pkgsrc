@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/07/20 22:02:46 thorpej Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/11 22:04:11 ryoon Exp $
 
-DISTNAME=	lwtools-4.19
+DISTNAME=	lwtools-4.22
 CATEGORIES=	cross
 MASTER_SITES=	http://www.lwtools.ca/releases/lwtools/
-
-PKGREVISION=	1
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	http://www.lwtools.ca/
