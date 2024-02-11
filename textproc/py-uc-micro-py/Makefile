@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/01/22 16:22:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/11 16:36:25 adam Exp $
 
-DISTNAME=	uc-micro-py-1.0.2
+DISTNAME=	uc-micro-py-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uc-micro-py/}
