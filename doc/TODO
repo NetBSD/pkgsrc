@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24014 2024/02/11 11:08:14 adam Exp $
+$NetBSD: TODO,v 1.24015 2024/02/11 15:32:25 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -889,7 +889,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
-	o libreoffice-24.2
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
