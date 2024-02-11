@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/04 22:34:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/11 15:32:30 adam Exp $
 bin/daphne-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -45,12 +45,12 @@ ${PYSITELIB}/daphne/server.pyo
 ${PYSITELIB}/daphne/testing.py
 ${PYSITELIB}/daphne/testing.pyc
 ${PYSITELIB}/daphne/testing.pyo
+${PYSITELIB}/daphne/twisted/plugins/fd_endpoint.py
+${PYSITELIB}/daphne/twisted/plugins/fd_endpoint.pyc
+${PYSITELIB}/daphne/twisted/plugins/fd_endpoint.pyo
 ${PYSITELIB}/daphne/utils.py
 ${PYSITELIB}/daphne/utils.pyc
 ${PYSITELIB}/daphne/utils.pyo
 ${PYSITELIB}/daphne/ws_protocol.py
 ${PYSITELIB}/daphne/ws_protocol.pyc
 ${PYSITELIB}/daphne/ws_protocol.pyo
-${PYSITELIB}/twisted/plugins/fd_endpoint.py
-${PYSITELIB}/twisted/plugins/fd_endpoint.pyc
-${PYSITELIB}/twisted/plugins/fd_endpoint.pyo
