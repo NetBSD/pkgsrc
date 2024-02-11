@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/11 21:45:44 ryoon Exp $
+
+BLAKE2s (zxcvbn-c-2.5.tar.gz) = 6e2e43801bd63da217ccbb03c48edcdf05a712a22e6c4a1b0561e295d8ec8d01
+SHA512 (zxcvbn-c-2.5.tar.gz) = d7199b3cc36cd0e401bd8f857132425908307aefcdb1bb635ee81c34cf71ccbcdf0fe36a336a55da1281692b508881b54773afa41379a448863095f4abd5c0e8
+Size (zxcvbn-c-2.5.tar.gz) = 1404434 bytes
+SHA1 (patch-makefile) = c5b863a4a64f83ad361353e000068ead98142065

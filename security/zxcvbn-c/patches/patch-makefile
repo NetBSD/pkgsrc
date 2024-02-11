@@ -1,0 +1,21 @@
+$NetBSD: patch-makefile,v 1.1 2024/02/11 21:45:44 ryoon Exp $
+
+* Add install target.
+
+--- makefile.orig	2024-02-11 21:40:14.792287908 +0000
++++ makefile
+@@ -17,6 +17,14 @@ WORDS = words-eng_wiki.txt words-female.
+ 
+ all: test-file test-inline test-c++inline test-c++file test-shlib test-statlib test-internals
+ 
++install: ${TARGET_LIB}
++	mkdir ${DESTDIR}${PREFIX}/lib
++	mkdir ${DESTDIR}${PREFIX}/include
++	install ${TARGET_LIB} ${DESTDIR}${PREFIX}/lib
++	cd $${DESTDIR}${PREFIX}/lib && ln -sf ${TARGET_LIB} ${SONAME}
++	cd $${DESTDIR}${PREFIX}/lib && ln -sf ${TARGET_LIB} libzxcvbn.so
++	install zxcvbn.h ${DESTDIR}${PREFIX}/include
++
+ test-shlib: test.c $(TARGET_LIB)
+ 	if [ ! -e libzxcvbn.so ]; then ln -s $(TARGET_LIB) libzxcvbn.so; fi
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $< -L. $(LDFLAGS) -lzxcvbn -lm
