@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/04 03:42:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/12 11:58:57 markd Exp $
 bin/mailman-web
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,9 +18,21 @@ ${PYSITELIB}/mailman_web/settings/__init__.pyo
 ${PYSITELIB}/mailman_web/settings/base.py
 ${PYSITELIB}/mailman_web/settings/base.pyc
 ${PYSITELIB}/mailman_web/settings/base.pyo
+${PYSITELIB}/mailman_web/settings/dev.py
+${PYSITELIB}/mailman_web/settings/dev.pyc
+${PYSITELIB}/mailman_web/settings/dev.pyo
 ${PYSITELIB}/mailman_web/settings/mailman.py
 ${PYSITELIB}/mailman_web/settings/mailman.pyc
 ${PYSITELIB}/mailman_web/settings/mailman.pyo
+${PYSITELIB}/mailman_web/tests/__init__.py
+${PYSITELIB}/mailman_web/tests/__init__.pyc
+${PYSITELIB}/mailman_web/tests/__init__.pyo
+${PYSITELIB}/mailman_web/tests/settings.py
+${PYSITELIB}/mailman_web/tests/settings.pyc
+${PYSITELIB}/mailman_web/tests/settings.pyo
+${PYSITELIB}/mailman_web/tests/test_basic.py
+${PYSITELIB}/mailman_web/tests/test_basic.pyc
+${PYSITELIB}/mailman_web/tests/test_basic.pyo
 ${PYSITELIB}/mailman_web/urls.py
 ${PYSITELIB}/mailman_web/urls.pyc
 ${PYSITELIB}/mailman_web/urls.pyo
