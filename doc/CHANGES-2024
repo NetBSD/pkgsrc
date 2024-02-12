@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1194 2024/02/12 14:31:33 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1195 2024/02/12 14:42:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1969,3 +1969,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/tp-note to 1.23.5 [pin 2024-02-12]
 	Added devel/py-jaraco.test version 5.3.0 [adam 2024-02-12]
 	Updated textproc/py-cssutils to 2.9.0 [adam 2024-02-12]
+	Updated math/py-numexpr to 2.9.0 [adam 2024-02-12]
+	Updated devel/py-line_profiler to 4.1.2 [adam 2024-02-12]
