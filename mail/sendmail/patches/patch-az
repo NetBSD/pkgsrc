@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
+$NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
 
---- sendmail/srvrsmtp.c.orig	2020-06-08 08:35:03.000000000 +0000
+--- sendmail/srvrsmtp.c.orig	2024-01-31 06:38:32.000000000 +0000
 +++ sendmail/srvrsmtp.c
-@@ -48,6 +48,10 @@ static bool	tls_ok_srv = false;
+@@ -51,6 +51,10 @@ static bool	tls_ok_srv = false;
  static bool	NotFirstDelivery = false;
  #endif
  
@@ -11,17 +11,17 @@ $NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
 +#endif
 +
  /* server features */
- #define SRV_NONE	0x0000	/* none... */
- #define SRV_OFFER_TLS	0x0001	/* offer STARTTLS */
-@@ -1408,6 +1412,7 @@ smtp(nullserver, d_flags, e)
- 					  (int) tp.tv_sec +
- 						(tp.tv_usec >= 500000 ? 1 : 0)
+ #define SRV_NONE	0x00000000	/* none... */
+ #define SRV_OFFER_TLS	0x00000001	/* offer STARTTLS */
+@@ -1537,6 +1541,7 @@ smtp(nullserver, d_flags, e)
+ 					  (int) tp->tv_sec +
+ 						(tp->tv_usec >= 500000 ? 1 : 0)
  					 );
 +				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "pre-greeting traffic");
  			}
  		}
  	}
-@@ -1680,7 +1685,12 @@ smtp(nullserver, d_flags, e)
+@@ -1822,7 +1827,12 @@ smtp(nullserver, d_flags, e)
  			/* get an OK if we're done */
  			if (result == SASL_OK)
  			{
@@ -34,7 +34,7 @@ $NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
  				message("235 2.0.0 OK Authenticated");
  				authenticating = SASL_IS_AUTH;
  				macdefine(&BlankEnvelope.e_macro, A_TEMP,
-@@ -1825,6 +1835,7 @@ smtp(nullserver, d_flags, e)
+@@ -1967,6 +1977,7 @@ smtp(nullserver, d_flags, e)
  	{	\
  		SET_AUTH_USER_CONDITIONALLY	\
  		message("535 5.7.0 authentication failed");	\
@@ -42,7 +42,7 @@ $NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
  		if (LogLevel >= 9)	\
  			sm_syslog(LOG_WARNING, e->e_id,	\
  				  "AUTH failure (%s): %s (%d) %s%s%.*s, relay=%.100s",	\
-@@ -1940,6 +1951,10 @@ smtp(nullserver, d_flags, e)
+@@ -2082,6 +2093,10 @@ smtp(nullserver, d_flags, e)
  				if (nullserver != NULL &&
  				    ++n_badcmds > MAXBADCOMMANDS)
  				{
@@ -53,7 +53,7 @@ $NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
  					message("421 4.7.0 %s Too many bad commands; closing connection",
  						MyHostName);
  
-@@ -3663,7 +3678,11 @@ doquit:
+@@ -3926,7 +3941,11 @@ smtp(nullserver, d_flags, e)
  #if MAXBADCOMMANDS > 0
  			if (++n_badcmds > MAXBADCOMMANDS)
  			{
@@ -65,7 +65,7 @@ $NetBSD: patch-az,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
  				message("421 4.7.0 %s Too many bad commands; closing connection",
  					MyHostName);
  
-@@ -4136,8 +4155,8 @@ smtp_data(smtp, e)
+@@ -4422,8 +4441,8 @@ smtp_data(smtp, e, check_stuffing)
  	id = e->e_id;
  
  #if NAMED_BIND
