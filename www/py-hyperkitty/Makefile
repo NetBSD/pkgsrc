@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/07 22:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/12 12:02:50 markd Exp $
 
-DISTNAME=	HyperKitty-1.3.7
+DISTNAME=	HyperKitty-1.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/HyperKitty/}
 
@@ -13,14 +12,14 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-isort>=0:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.8:../../www/py-django-mailman3
+DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.10:../../www/py-django-mailman3
 DEPENDS+=	${PYPKGPREFIX}-django-gravatar2>=1.0.6:../../www/py-django-gravatar2
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.0.0:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-robot-detection>=0.3:../../www/py-robot-detection
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2012:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-django-compressor>=1.3:../../www/py-django-compressor
 DEPENDS+=	${PYPKGPREFIX}-mailmanclient>=3.3.3:../../mail/py-mailmanclient
-DEPENDS+=	${PYPKGPREFIX}-mistune>=2.0.0:../../textproc/py-mistune
+DEPENDS+=	${PYPKGPREFIX}-mistune>=2.0.0<3.0:../../textproc/py-mistune2
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.0:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-django-haystack>=2.8.0:../../www/py-django-haystack
