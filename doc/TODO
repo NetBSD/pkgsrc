@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24024 2024/02/12 21:36:33 hans Exp $
+$NetBSD: TODO,v 1.24025 2024/02/12 21:47:53 hans Exp $
 
 Suggested new packages
 ======================
@@ -1292,7 +1292,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squidclamav-7.2
-	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
 	o stalin-0.11
 	o stan-math-2.26.1
