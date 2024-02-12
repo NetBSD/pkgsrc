@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1205 2024/02/12 21:36:33 hans Exp $
+$NetBSD: CHANGES-2024,v 1.1206 2024/02/12 21:47:53 hans Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/couriertcpd to 1.3.5 [woodstoc 2024-02-12]
 	Updated mail/maildrop to 3.1.6 [woodstoc 2024-02-12]
 	Updated mail/courier-imap to 5.2.6 [woodstoc 2024-02-12]
+	Updated mail/sqwebmail to 6.2.5 [woodstoc 2024-02-12]
