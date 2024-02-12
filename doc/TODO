@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24025 2024/02/12 21:47:53 hans Exp $
+$NetBSD: TODO,v 1.24026 2024/02/12 21:53:12 hans Exp $
 
 Suggested new packages
 ======================
@@ -538,7 +538,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
-	o courier-0.77.0
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
