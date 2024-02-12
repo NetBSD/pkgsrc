@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2023/10/24 22:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/02/12 21:06:43 hans Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	20
+PKGREVISION=	
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
-EXTRACT_SUFX=	.tar.bz2
 
 CONFLICTS+=	esmtp>=1.2 postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
 
@@ -60,7 +58,6 @@ SUBST_FILES.courier=	\
 			courier/filters/courierfilter.html.in		\
 			courier/module.esmtp/esmtpd-msa.dist.in		\
 			courier/module.esmtp/esmtpd-ssl.dist.in		\
-			courier/module.esmtp/esmtpd.cnf.openssl.in	\
 			courier/module.esmtp/esmtpd.dist.in		\
 			courier/module.esmtp/mkesmtpdcert.in
 SUBST_SED.courier=	-e "s|^ESMTPDSTART=.*|ESMTPDSTART=YES|g"
@@ -70,13 +67,6 @@ SUBST_SED.courier+=	-e "s|@datadir@/esmtpd.pem|@sysconfdir@/esmtpd.pem|g"
 SUBST_SED.courier+=	-e "s|@datadir@/esmtpd.rand|@sysconfdir@/esmtpd.rand|g"
 SUBST_SED.courier+=	-e "s|@libexecdir@/filters|@libexecdir@/courier/filters|g"
 SUBST_STAGE.courier=	pre-configure
-
-SUBST_CLASSES+=		perms
-SUBST_FILES.perms=	courier/perms.sh.in
-SUBST_SED.perms=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER}",g"	\
-			-e "s,@ROOT_USER@,"${ROOT_USER}",g"		\
-			-e "s,@ROOT_GROUP@,"${ROOT_GROUP}",g"
-SUBST_STAGE.perms=	pre-configure
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
@@ -89,14 +79,13 @@ SPECIAL_PERMS+=	${DATADIR}/filterctl ${COURIER_USER} ${COURIER_GROUP} 0500
 SPECIAL_PERMS+=	${PREFIX}/sbin/courierfilter  ${COURIER_USER} \
 		${COURIER_GROUP} 0500
 
+LIBS.SunOS+=	-lsocket -lnsl
+
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/courier-authlib/buildlink3.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
-
-pre-build:
-	${RM} -f ${WRKSRC}/version
 
 post-build:
 	${TOUCH} ${WRKDIR}/locallowercase
