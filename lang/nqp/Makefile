@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/02/12 03:05:43 mef Exp $
+# $NetBSD: Makefile,v 1.48 2024/02/12 14:38:27 mef Exp $
 
 DISTNAME=	nqp-2024.01
 CATEGORIES=	lang perl6
@@ -24,6 +24,19 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--backends=moar
+
+# lang/rakudo wants these two *.pm on @INC path as well as 3rdparty/nqp..
+EXTRA_MODULES+=		Config.pm Macros.pm
+
+# please (or let me ) correct later for hard coding
+post-install:
+	${INSTALL_DIR}                                   ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.38.0/NQP
+	(cd ${WRKSRC} ; \
+	for i in ${EXTRA_MODULES} ; \
+	do \
+	${INSTALL}  3rdparty/nqp-configure/lib/NQP/$${i} ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.38.0/NQP ; \
+	done ; \
+	)
 
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
