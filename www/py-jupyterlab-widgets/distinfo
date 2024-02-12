@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/12 19:03:54 adam Exp $
+
+BLAKE2s (jupyterlab_widgets-3.0.10.tar.gz) = 964703ec5640f9383f680fe93ac738986565a1bb35ff8139c13cba2346713fb5
+SHA512 (jupyterlab_widgets-3.0.10.tar.gz) = a68de696b9d8c332c796242dd72d1a0cc33944373e97c826b8a971eb558565e55f4a0a59ba437e9bb9466695755193aa95ec74d69e54628931858f524c939da5
+Size (jupyterlab_widgets-3.0.10.tar.gz) = 205549 bytes
