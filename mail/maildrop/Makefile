@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/10/24 22:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/02/12 21:15:49 hans Exp $
 
-DISTNAME=	maildrop-3.1.0
-PKGREVISION=	1
+DISTNAME=	maildrop-3.1.6
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Courier mail delivery agent with filtering abilities
@@ -29,7 +26,6 @@ BUILD_DEFS+=		QMAIL_DAEMON_USER
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR}/makedatprog
 CONFIGURE_ARGS+=	--enable-maildirquota
 CONFIGURE_ARGS+=	--enable-maildrop-uid=${REAL_ROOT_USER}
 CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP}
