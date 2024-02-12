@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/07 22:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/12 12:04:51 markd Exp $
 
-DISTNAME=	postorius-1.3.8
+DISTNAME=	postorius-1.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/postorius/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-cmarkgfm>=0.8.0:../../textproc/py-cmarkgfm
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.8:../../www/py-django-mailman3
+DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.10:../../www/py-django-mailman3
 DEPENDS+=	${PYPKGPREFIX}-mailmanclient>=3.3.3:../../mail/py-mailmanclient
 DEPENDS+=	${PYPKGPREFIX}-readme_renderer-[0-9]*:../../textproc/py-readme_renderer
 
