@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2023/01/25 19:34:04 bsiegert Exp $
+$NetBSD: distinfo,v 1.26 2024/02/12 21:15:49 hans Exp $
 
-BLAKE2s (maildrop-3.1.0.tar.bz2) = b768a660b19ac811b135185a28a941854619b4f716333fa9247d666992828d83
-SHA512 (maildrop-3.1.0.tar.bz2) = 4d4ab1acd9f81beb54af9af86d0f8c3145f962f1ff2fd5e9209e31b63054cc41b3e4a1300965a8855a39dbcfa1cdbdef2ad194af1f12e079c1361b12b293ed56
-Size (maildrop-3.1.0.tar.bz2) = 2154698 bytes
-SHA1 (patch-Makefile.in) = 0a23852205a86918530a9b79b5c0451d04a6d672
+BLAKE2s (maildrop-3.1.6.tar.bz2) = 0417825359ab75397fdf14854a252e2b0d22708ad65020328c50f49f669a36b9
+SHA512 (maildrop-3.1.6.tar.bz2) = 93364747c603d1d566f756e7ba8b10fd38d10749b269f1bf64596a56fe2b06f529f4b59b6256a5be0c44169f2c8cc9dcd7de91b3cc03288719ffee5db330b1d5
+Size (maildrop-3.1.6.tar.bz2) = 2156136 bytes
+SHA1 (patch-Makefile.in) = 304e380f0a78a5de2a8a271fc4dac44e9e7c4c62
 SHA1 (patch-libs_maildrop_configure) = 76b12b194463095a65cde90d992ac6b023b694e2
 SHA1 (patch-libs_maildrop_filelock.C) = d278b66bf77fe46f5ad51f860b6e5efdd7d7f29b
 SHA1 (patch-libs_maildrop_main.C) = f476c38a0079c71b854772a6de5058436646cb62
