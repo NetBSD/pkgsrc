@@ -1,28 +1,28 @@
-$NetBSD: patch-ag,v 1.4 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-ag,v 1.5 2024/02/12 21:06:43 hans Exp $
 
---- courier/module.esmtp/mkesmtpdcert.in.orig	2007-11-04 16:17:03.000000000 -0500
+--- courier/module.esmtp/mkesmtpdcert.in.orig	2021-05-23 13:32:53.000000000 +0000
 +++ courier/module.esmtp/mkesmtpdcert.in
-@@ -8,7 +8,13 @@
- # ESMTP STARTTLS.  Normally this script would get called by an automatic
- # package installation routine.
+@@ -14,7 +14,13 @@ if [ -z "$PEMFILE" ]; then
+ 	PEMFILE=@certsdir@/esmtpd
+ fi
  
 -if test "@ssllib@" = "openssl"
 +case "$1" in
 +gnutls)		ssllib=gnutls ;;
 +openssl)	ssllib=openssl ;;
 +*)		ssllib="@ssllib@" ;;
-+esac
++esac   
 +
 +if test "$ssllib" = "openssl"
  then
  	test -x @OPENSSL@ || exit 0
  else
-@@ -31,7 +37,7 @@ cleanup() {
- 
- cd @mydatadir@
+@@ -40,7 +46,7 @@ umask 077
+ BITS="$BITS"
+ set -e
  
 -if test "@ssllib@" = "openssl"
 +if test "$ssllib" = "openssl"
  then
- 	cp /dev/null @mydatadir@/esmtpd.pem
- 	chmod 600 @mydatadir@/esmtpd.pem
+ 	cp /dev/null "$PEMFILE".pem
+ 	chmod 600 "$PEMFILE".pem

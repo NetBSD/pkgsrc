@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.7 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-ab,v 1.8 2024/02/12 21:06:43 hans Exp $
 
---- courier/configure.orig	2007-11-24 03:26:42.000000000 +0000
+--- courier/configure.orig	2023-08-04 00:12:02.000000000 +0000
 +++ courier/configure
-@@ -16102,9 +16102,9 @@ done
+@@ -19294,9 +19294,9 @@ done
  
- if test "$testmode" = "0"
- then
--	INSTALL_PROGRAM='${INSTALL} -m 700'
--	INSTALL_SCRIPT='${INSTALL} -m 700'
--	INSTALL_DATA='${INSTALL} -m 600'
-+	INSTALL_PROGRAM='${BSD_INSTALL_PROGRAM}'
-+	INSTALL_SCRIPT='${BSD_INSTALL_SCRIPT}'
-+	INSTALL_DATA='${BSD_INSTALL_DATA}'
- fi
+ # Automake stupidity
+ 
+-INSTALL_PROGRAM='${INSTALL} -m 700'
+-INSTALL_SCRIPT='${INSTALL} -m 700'
+-INSTALL_DATA='${INSTALL} -m 600'
++INSTALL_PROGRAM='${BSD_INSTALL_PROGRAM}'
++INSTALL_SCRIPT='${BSD_INSTALL_SCRIPT}'
++INSTALL_DATA='${BSD_INSTALL_DATA}'
  
  ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
