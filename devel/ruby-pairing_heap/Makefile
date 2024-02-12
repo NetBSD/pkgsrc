@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/04/27 14:05:26 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/12 14:59:23 taca Exp $
 
-DISTNAME=	pairing_heap-3.0.1
+DISTNAME=	pairing_heap-3.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
