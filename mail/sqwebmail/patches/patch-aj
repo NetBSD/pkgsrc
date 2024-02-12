@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.8 2010/06/15 23:18:13 pettai Exp $
+$NetBSD: patch-aj,v 1.9 2024/02/12 21:47:02 hans Exp $
 
---- INSTALL.html.orig	Mon Sep  3 16:05:20 2007
+--- INSTALL.html.orig	2023-08-16 12:28:42.000000000 +0000
 +++ INSTALL.html
-@@ -820,7 +820,7 @@ BrowserMatch "MSIE" nokeepalive downgrad
-   configuration files are installed in
-   <code>/usr/lib/sqwebmail</code> (the default).</p>
- 
--  <p><code>/usr/lib/sqwebmail/etc/hostname</code> - when SqWebMail
-+  <p><code>/usr/lib/sqwebmail/etc/defaultdomain</code> - when SqWebMail
-   is installed with a basic configuration for a single domain,
-   SqWebMail sets the domain in the return address for outgoing
-   messages to the defined system hostname. If this file exists it
+@@ -738,7 +738,7 @@ BrowserMatch "MSIE" nokeepalive downgrad
+   <p>In addition, there's some global configuration that can be done after
+   installation. The following presumes that SqWebMail's configuration files are
+   installed in <code>/usr/lib/sqwebmail</code> (the default).</p>
+-  <p><code>/usr/lib/sqwebmail/etc/hostname</code> - when SqWebMail is installed
++  <p><code>/usr/lib/sqwebmail/etc/defaultdomain</code> - when SqWebMail is installed
+   with a basic configuration for a single domain, SqWebMail sets the domain in
+   the return address for outgoing messages to the defined system hostname. If
+   this file exists it will be used instead of the defined system hostname.</p>

@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.11 2010/11/10 10:52:47 adam Exp $
+$NetBSD: patch-aa,v 1.12 2024/02/12 21:47:02 hans Exp $
 
---- Makefile.in.orig	2010-11-07 18:41:57.000000000 +0000
+--- Makefile.in.orig	2023-08-28 12:32:30.000000000 +0000
 +++ Makefile.in
-@@ -283,18 +283,19 @@ EXTRA_DIST = INSTALL.html README NEWS RE
- 
+@@ -242,7 +242,7 @@ distuninstallcheck_listfiles = find . -t
+ am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
+   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
+ distcleancheck_listfiles = find . -type f -print
+-pkglibexecdir = $(libexecdir)/sqwebmail
++pkglibexecdir = $(libexecdir)/courier
+ ACLOCAL = @ACLOCAL@
+ AMTAR = @AMTAR@
+ AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
+@@ -404,11 +404,11 @@ EXTRA_DIST = INSTALL.html README NEWS RE
+ 	packaging/debian/sqwebmail-apache2.lintian-overrides
  scriptbindir = $(sbindir)
  scriptbin_SCRIPTS = \
 -	sharedindexinstall sharedindexsplit
@@ -11,38 +20,28 @@ $NetBSD: patch-aa,v 1.11 2010/11/10 10:52:47 adam Exp $
  
 -pkglibPROGRAMS = maildirmake deliverquota reformime makemime pcpd
 +pkglibPROGRAMS = pcpd
-+pkglibexecdir = $(libexecdir)/courier
  pkglibexec_PROGRAMS = @pkglibPROGRAMS_exec@
 -libexec_SCRIPTS = sqwebmaild.rc
 +libexec_SCRIPTS = 
  CLEANFILES = $(pkgman1_DATA) $(pkgman8_DATA) $(sysconf_DATA) \
  	sharedindexinstall sharedindexsplit
  
- pkgman8dir = @mandir@/man8
--pkgman8_DATA = deliverquota.8
-+pkgman8_DATA = 
- pkgman1dir = @mandir@/man1
--pkgman1_DATA = maildirmake.1
-+pkgman1_DATA = 
- @HAVE_HTMLPAGES_TRUE@NEWS_SOURCE = html/index2.html
- all: config.h
- 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
-@@ -976,6 +977,9 @@ uninstall-am: uninstall-libexecSCRIPTS u
- sqwebmaild.dist: sqwebmail/sqwebmaild.dist
- 	cp sqwebmail/sqwebmaild.dist .
+@@ -1053,6 +1053,9 @@ uninstall-am: uninstall-libexecSCRIPTS u
+ sqwebmaild.dist: libs/sqwebmail/sqwebmaild.dist
+ 	cp libs/sqwebmail/sqwebmaild.dist .
  
 +webmaild.rc: sqwebmaild.rc
 +	cp sqwebmaild.rc webmaild.rc
 +
- pcpd: pcp/pcpd
- 	cp pcp/pcpd .
+ pcpd: libs/pcp/pcpd
+ 	cp libs/pcp/pcpd .
  
-@@ -1011,7 +1015,7 @@ install-exec-local:
+@@ -1082,7 +1085,7 @@ install-exec-local:
  	$(mkinstalldirs) $(DESTDIR)$(cgibindir)
  	test -w $(DESTDIR)$(cgibindir) || exit 0; \
- 		$(INSTALL_PROGRAM) sqwebmail/sqwebmail \
+ 		$(INSTALL_PROGRAM) libs/sqwebmail/sqwebmail \
 -			$(DESTDIR)$(cgibindir)/sqwebmail
 +			$(DESTDIR)$(cgibindir)/webmail
  	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
- 	$(INSTALL_PROGRAM) sqwebmail/sqwebmaild $(DESTDIR)$(pkglibexecdir)/sqwebmaild
+ 	$(INSTALL_PROGRAM) libs/sqwebmail/sqwebmaild $(DESTDIR)$(pkglibexecdir)/sqwebmaild
  
