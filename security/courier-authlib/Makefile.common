@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/05/25 19:28:39 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.19 2024/02/12 17:24:07 hans Exp $
 #
 # used by mail/courier-mta/Makefile.common
 
@@ -24,4 +24,5 @@ CONFIGURE_ARGS+=	--with-mailuser=${COURIER_USER}
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
 .endif
 
-CONFIGURE_ARGS.SunOS+=	--with-waitfunc=wait3
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--enable-new-dtags
