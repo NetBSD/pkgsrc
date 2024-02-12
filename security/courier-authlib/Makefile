@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2023/10/24 22:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2024/02/12 17:24:07 hans Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
-DISTNAME=	courier-authlib-0.72.0
+DISTNAME=	courier-authlib-0.72.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +23,7 @@ PKG_SYSCONFSUBDIR=	authlib
 REPLACE_PERL=		samplepipe.pl sysconftool
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		cat:run gmake perl:run
+USE_TOOLS+=		cat:run gmake perl:run pkg-config
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT}		# makedat
 
 BUILD_DEFS+=		VARBASE
@@ -96,6 +95,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/authdaemonrc ${DESTDIR}/${EGDIR}/authdaemonrc.dist
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mail/courier-unicode/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
