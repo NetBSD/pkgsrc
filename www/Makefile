@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1780 2024/02/09 12:39:06 adam Exp $
+# $NetBSD: Makefile,v 1.1781 2024/02/12 19:03:54 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -840,6 +840,7 @@ SUBDIR+=	py-jupyter-lsp
 SUBDIR+=	py-jupyter_server
 SUBDIR+=	py-jupyterlab
 SUBDIR+=	py-jupyterlab-server
+SUBDIR+=	py-jupyterlab-widgets
 SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-klein
 SUBDIR+=	py-laces
