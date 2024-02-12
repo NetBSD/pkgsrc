@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.70 2024/01/15 04:43:22 jnemeth Exp $
+$NetBSD: distinfo,v 1.71 2024/02/12 03:23:05 jnemeth Exp $
 
-BLAKE2s (sendmail.8.17.2.tar.gz) = 0af32d01e11ef8c414f66903b3f59b5b4dc2bacb9f3ee5a7782a35527dfab2fc
-SHA512 (sendmail.8.17.2.tar.gz) = a25d964136a3efeb7737c34aed34804dd61292bd70eaaba724274a862604a6cd5ca3bcac635e445864c23699b1704c3662d262a5694bd26e298fc1c0e8ba817d
-Size (sendmail.8.17.2.tar.gz) = 2313458 bytes
+BLAKE2s (sendmail.8.18.1.tar.gz) = 959e83d47978867cf89f817e51ce16a834998ef94a417ead59ddfdfdf0debff0
+SHA512 (sendmail.8.18.1.tar.gz) = 9ce713b44439d4de6faa9e3cdfa2226b44b4fbeb352a5f81584c062570e9472da244158287e489aabe258d28fe54ca4964565c7b0adc7e1763d212be42f98061
+Size (sendmail.8.18.1.tar.gz) = 2401566 bytes
 SHA1 (patch-aa) = bd1ab754f7146d002eaf8c0347e114b4049a7776
 SHA1 (patch-af) = 8c80610916000dfb4e4e28a64eeb0b283535fc93
 SHA1 (patch-ag) = 6dcca8944aa854f1767c7ee12fe14872a4e14d2e
@@ -14,13 +14,13 @@ SHA1 (patch-ao) = 88dd76b71ad57a8d0efdb6e8518ff01689ecf634
 SHA1 (patch-aq) = 5c083d9f9f71bcc42811a3d085e936eaaa404c96
 SHA1 (patch-ar) = 4e9162c96329716f844c0c64efb9d0a2915ad1cb
 SHA1 (patch-as) = e5e266d3c488494a12c303b068c15edde24e0504
-SHA1 (patch-at) = 7bd83d1171f665ed4fb62181dac7c31098a5e2ee
+SHA1 (patch-at) = abb43369d751cf5969db2729da3454c67934b0af
 SHA1 (patch-au) = 08a96e145a9c37ba1ba836457157f1ab781380dc
 SHA1 (patch-av) = bb6ecd69f6b0db22056b492890d2c6369cd08977
 SHA1 (patch-aw) = e340bd366ce04c4d5ddd15f964bc4040e715a6c9
 SHA1 (patch-ax) = 771c9c8a951a09c80eb85233986af1fc7fedbe77
 SHA1 (patch-ay) = 0a043f2ff0028d475ee852b302844626f4ff4609
-SHA1 (patch-az) = 53738dc9d3618838a6e6fd2f0ec9c4fd1f19ae2e
+SHA1 (patch-az) = c951d7f00b92b1783fc5e633897d33238f1970d9
 SHA1 (patch-ba) = c190b11b9874f00a18b9c75b6e734f4a9dd3f68f
 SHA1 (patch-bb) = 6c86a60af25b02fc0389f1d40f59c5031d9679f1
 SHA1 (patch-bc) = 9e7346342dfe1ca5d84053b913df4be41a979683

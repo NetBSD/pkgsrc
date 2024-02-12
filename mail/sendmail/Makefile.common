@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2024/01/15 04:43:22 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.70 2024/02/12 03:23:05 jnemeth Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -22,7 +22,7 @@ PATCHDIR=	${.CURDIR}/../../mail/sendmail/patches
 
 USE_CC_FEATURES=	c99
 
-DIST_VERS=	8.17.2
+DIST_VERS=	8.18.1
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN} BSD_BINGRP=${BINGRP} \
 		BSD_MANOWN=${MANOWN} BSD_MANGRP=${MANGRP} \
