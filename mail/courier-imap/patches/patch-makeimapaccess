@@ -1,0 +1,27 @@
+$NetBSD: patch-makeimapaccess,v 1.1 2024/02/12 21:36:09 hans Exp $
+
+--- makeimapaccess.in.orig	2015-02-24 04:17:12.000000000 +0000
++++ makeimapaccess.in
+@@ -7,7 +7,7 @@ prefix="@prefix@"
+ exec_prefix="@exec_prefix@"
+ sysconfdir="@sysconfdir@"
+ localstatedir="@localstatedir@"
+-bindir="@bindir@"
++datadir="@datadir@"
+ sbindir="@sbindir@"
+ libexecdir="@libexecdir@"
+ 
+@@ -15,10 +15,10 @@ libexecdir="@libexecdir@"
+ . ${sysconfdir}/imapd-ssl
+ 
+ umask 022
+-${bindir}/makedat \
++${datadir}/makedat \
+ 	-src=${IMAPACCESSFILE} \
+ 	-file=${IMAPACCESSFILE}.dat \
+ 	-tmp=${IMAPACCESSFILE}.tmp -cidr || exit 1
+ 
+-${libexecdir}/couriertcpd -pid=$PIDFILE -restart
+-${libexecdir}/couriertcpd -pid=$SSLPIDFILE -restart
++${sbindir}/couriertcpd -pid=$PIDFILE -restart
++${sbindir}/couriertcpd -pid=$SSLPIDFILE -restart

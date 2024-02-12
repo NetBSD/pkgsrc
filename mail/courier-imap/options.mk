@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/01/10 00:19:48 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2024/02/12 21:36:08 hans Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.courier-imap
 PKG_SUPPORTED_OPTIONS=		courier-gnutls fam
@@ -19,7 +19,7 @@ COURIER_OPENSSL=	${TOOLS_OPENSSL}
 .endif
 
 SUBST_CLASSES+=		tls
-SUBST_FILES.tls=	imap/mkimapdcert.in imap/mkpop3dcert.in
+SUBST_FILES.tls=	libs/imap/mkimapdcert.in libs/imap/mkpop3dcert.in
 SUBST_STAGE.tls=	pre-configure
 .if !empty(PKG_OPTIONS:Mcourier-gnutls)
 SUBST_SED.tls=		-e "s|@ssllib@|gnutls|g"

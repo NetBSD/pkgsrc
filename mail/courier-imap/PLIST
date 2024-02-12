@@ -1,29 +1,35 @@
-@comment $NetBSD: PLIST,v 1.19 2014/03/11 14:05:02 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/02/12 21:36:08 hans Exp $
 bin/imapd
 libexec/courier/courierpop3d
 libexec/courier/courierpop3login
 libexec/courier/imaplogin
+libexec/courier/makedatprog
 man/man8/courierimapd.8
 man/man8/courierpop3d.8
 man/man8/mkimapdcert.8
 man/man8/mkpop3dcert.8
 sbin/imapd
 sbin/imapd-ssl
+sbin/mkdhparams
 sbin/mkimapdcert
 sbin/mkpop3dcert
 sbin/pop3d
 sbin/pop3d-ssl
 share/courier/imapd-ssl.rc
 share/courier/imapd.rc
+share/courier/makeimapaccess
+share/courier/makedat
+share/courier/mkdhparams
 share/courier/mkimapdcert
 share/courier/mkpop3dcert
 share/courier/pop3d-ssl.rc
 share/courier/pop3d.rc
 share/doc/courier/courierpop3d.html
 share/doc/courier/imap/BUGS.html
-share/doc/courier/imap/README.html
 share/doc/courier/imap/README.proxy.html
 share/doc/courier/imapd.html
+share/doc/courier/makeimapaccess.html
+share/doc/courier/mkdhparams.html
 share/doc/courier/mkimapdcert.html
 share/doc/courier/mkpop3dcert.html
 share/examples/courier/imap.authpam
