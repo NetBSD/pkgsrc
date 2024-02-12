@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-ac,v 1.8 2024/02/12 21:06:43 hans Exp $
 
---- courier/doc/Makefile.in.orig	2007-11-17 19:48:53.000000000 -0500
+--- courier/doc/Makefile.in.orig	2023-04-23 22:08:03.000000000 +0000
 +++ courier/doc/Makefile.in
-@@ -169,7 +169,7 @@ top_srcdir = @top_srcdir@
+@@ -261,7 +261,7 @@ top_srcdir = @top_srcdir@
  version = @version@
  htmldocdir = @datadir@/htmldoc
  CLEANFILES = permissions.dat
--miscfiles = japanese_flag.png chinese_flag.png bg.gif icon.gif manpage.css \
-+miscfiles = japanese_flag.png chinese_flag.png bg.gif icon.gif \
+-miscfiles = japanese_flag.png icon.gif bg.png manpage.css \
++miscfiles = japanese_flag.png icon.gif bg.png \
  		draft-varshavchik-exdata-smtpext.txt \
  		draft-varshavchik-verp-smtpext.txt \
- 		draft-varshavchik-security-smtpext.txt \
-@@ -207,67 +189,38 @@ htmlin = \
+ 		draft-varshavchik-security-smtpext.txt
+@@ -293,71 +293,39 @@ htmlin = \
  		courier.html \
  		courierldapaliasd.html \
  		couriermlm.html \
@@ -31,6 +31,7 @@ $NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
 -		maildirkw.html \
 -		maildirmake.html \
 -		maildirquota.html \
+-		maildirwatch.html \
 -		maildropex.html \
 -		maildropfilter.html \
 -		maildropgdbm.html \
@@ -42,10 +43,12 @@ $NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
  		makealiases.html \
 -		makedat.html \
  		makehosteddomains.html \
+-		makeimapaccess.html \
 -		makemime.html \
  		makepercentrelay.html \
  		makesmtpaccess.html \
 -		mimegpg.html \
+-		mkdhparams.html \
  		mkesmtpdcert.html \
 -		mkimapdcert.html \
 -		mkpop3dcert.html \
@@ -64,24 +67,24 @@ $NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
 -	mailq.1 mailbot.1 makemime.1 mimegpg.1 maildiracl.1 \
 -	makedat.1 reformail.1 reformime.1 couriermlm.1 testmxlookup.1 \
 -	dot-forward.1 couriertls.1 couriertcpd.1 maildirkw.1 \
--	webmlmd.1
--
--man5 = dot-courier.5 maildir.5
--man7 = localmailfilter.7 maildirquota.7 maildropgdbm.7 maildropfilter.7 \
--	maildropex.7
+-	maildirwatch.1 \
 +man1 = sendmail.1 preline.1 cancelmsg.1 \
 +	mailq.1 \
 +	couriermlm.1 testmxlookup.1 \
-+	dot-forward.1 webmlmd.1
++	dot-forward.1 \
+ 	webmlmd.1
  
--man8 = aliaslookup.8 courier.8 courierldapaliasd.8 courierpop3d.8 \
--	deliverquota.8 \
+-man5 = dot-courier.5 maildir.5
+-man7 = localmailfilter.7 maildirquota.7 maildropgdbm.7 maildropfilter.7 \
+-	maildropex.7
 +man5 = dot-courier.5
 +man7 = localmailfilter.7
-+
+ 
+-man8 = aliaslookup.8 courier.8 courierldapaliasd.8 courierpop3d.8 \
+-	deliverquota.8 makeimapaccess.8 \
 +man8 = aliaslookup.8 courier.8 courierldapaliasd.8 \
  	esmtpd.8 makeacceptmailfor.8 makehosteddomains.8\
--	mkesmtpdcert.8 mkimapdcert.8 mkpop3dcert.8 \
+-	mkesmtpdcert.8 mkdhparams.8 mkimapdcert.8 mkpop3dcert.8 \
 +	mkesmtpdcert.8 \
  	makealiases.8 makepercentrelay.8 makesmtpaccess.8 \
 -	pop3d.8 pop3d-ssl.8 submit.8 imapd.8
@@ -89,7 +92,7 @@ $NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
  
  BUILT_SOURCES = \
  	aliaslookup.html aliaslookup.8 \
-@@ -294,7 +265,7 @@ BUILT_SOURCES = \
+@@ -385,7 +353,7 @@ BUILT_SOURCES = \
  	webmlmd.html.in webmlmd.1.in
  
  EXTRA_DIST = $(nohtmlin) $(BUILT_SOURCES) dotforward.1 pop3d-ssl.8
@@ -98,7 +101,7 @@ $NetBSD: patch-ac,v 1.7 2012/06/09 11:45:38 adam Exp $
  	$(man1dir)/rmail.1 $(man1dir)/dotforward.1 \
  	$(man8dir)/makesmtpaccess-msa.8 \
  	$(man8dir)/esmtpd-msa.8
-@@ -1216,8 +1187,7 @@ preline.1: preline.1.in
+@@ -1385,8 +1353,7 @@ testmxlookup.1: testmxlookup.1.in
  
  install-man-extra:
  	cd $(DESTDIR)$(man8dir) ; \

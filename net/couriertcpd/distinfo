@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:05:29 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/02/12 21:06:44 hans Exp $
 
-BLAKE2s (courier-0.68.1.tar.bz2) = ae4454b029a09f6c74e87df5f02140c71a3a8f1c05855dc72d2cfee4c8427d89
-SHA512 (courier-0.68.1.tar.bz2) = 89b9f27379a1433a4caf20e619516317b019898de2f16640f1e18022513415b5e52e1abcde5f390d34238afab4da20835e3669070c4d450ce581dc5639bf8be2
-Size (courier-0.68.1.tar.bz2) = 7024234 bytes
+BLAKE2s (courier-1.3.5.tar.bz2) = c642c73d91d1e49661461f2436bde29b3c67e34ccfc495c92ae065f508894aea
+SHA512 (courier-1.3.5.tar.bz2) = 5f51383356f4a36f9c114be6aa69d694c82bb95b1a336d2948d486d582bd6559da69be93b7c20aee2ff57826ab7eeb265aa20794074456d036b22da7f280f95d
+Size (courier-1.3.5.tar.bz2) = 7901040 bytes

@@ -1,24 +1,20 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:53:56 nia Exp $
+$NetBSD: distinfo,v 1.24 2024/02/12 21:06:43 hans Exp $
 
-BLAKE2s (courier-0.68.1.tar.bz2) = ae4454b029a09f6c74e87df5f02140c71a3a8f1c05855dc72d2cfee4c8427d89
-SHA512 (courier-0.68.1.tar.bz2) = 89b9f27379a1433a4caf20e619516317b019898de2f16640f1e18022513415b5e52e1abcde5f390d34238afab4da20835e3669070c4d450ce581dc5639bf8be2
-Size (courier-0.68.1.tar.bz2) = 7024234 bytes
-SHA1 (patch-aa) = 26af5d3ffd188fb7ab6ce18ef3241305e3c2363a
-SHA1 (patch-ab) = b65ceddc722962592af713c20fcf99da76b6af50
-SHA1 (patch-ac) = 225b0c418758e38e4f144100b1b2a34362008c33
-SHA1 (patch-ad) = 4a086c2d72106913989aa248d4d70b932a67eb90
+BLAKE2s (courier-1.3.5.tar.bz2) = c642c73d91d1e49661461f2436bde29b3c67e34ccfc495c92ae065f508894aea
+SHA512 (courier-1.3.5.tar.bz2) = 5f51383356f4a36f9c114be6aa69d694c82bb95b1a336d2948d486d582bd6559da69be93b7c20aee2ff57826ab7eeb265aa20794074456d036b22da7f280f95d
+Size (courier-1.3.5.tar.bz2) = 7901040 bytes
+SHA1 (patch-aa) = 1be0b3b0a6ff226533310d94c51abadd4005ee40
+SHA1 (patch-ab) = 253ceb334093a965753d6a796fcec1940acfc5f0
+SHA1 (patch-ac) = b7147b6c85530161fb1620409119d2d00d4a30dc
+SHA1 (patch-ad) = abff3e30b384af39dabd3c0d721ad9ae10b16481
 SHA1 (patch-ae) = 25cf54b4764da79d7c2a4ee40189b93542a2d1ff
-SHA1 (patch-af) = d5222c55039eb1060d1486d1d776e9f7afe9a991
-SHA1 (patch-ag) = fc9bfb34ce7a93647076c2305d206fd36ce54d9a
+SHA1 (patch-af) = bd07ca8fa0ce711fb4849bc218ed3b4478b05617
+SHA1 (patch-ag) = 913ea4897d96bf3ad885dd6221edb54f79e34af3
 SHA1 (patch-ah) = ef516d4da2acaffe72dd32a859ef03c2593a7b1e
 SHA1 (patch-ai) = ee3ae11ec6342afcd2284f4607b6f15412c1ac15
-SHA1 (patch-aj) = 9c4e9525f05ca73cb7358e4e0b341ef3e9aa08a5
+SHA1 (patch-aj) = ddffd683d418d10880db4d407657b9995327567a
 SHA1 (patch-al) = 1c7935b46b7affafa86e4a858ba6a79b7fbebbc5
 SHA1 (patch-an) = 2b78be9a0e8a9daf528da83007ba865f9b8cc402
-SHA1 (patch-ax) = 8978eacb3aa13559905849e9a7038441c0dfef22
-SHA1 (patch-ay) = d4b391e76167cd27012f928587d5feb57ea1b4ff
-SHA1 (patch-courier_cdfilters.C) = 1f9169de45355cd9a4ecb7e8ddac30df05d368d0
-SHA1 (patch-courier_cdmsgq.C) = 467479ded922cfff97c4e5876a5234eef3f82b50
-SHA1 (patch-courier_cmlmfetch.C) = 7426b5642271a8bcd4ed442eb6571d191a454d1f
-SHA1 (patch-courier_module.esmtp_esmtpclient.c) = 54f66d60e1d5e444725630ae31c47554ab421609
-SHA1 (patch-courier_webmlmd.H) = 3a66894c376bf84ae5a43f4c6f3dfbb687f9436e
+SHA1 (patch-ax) = c7eb48d5aef5a51ae143385d688b092870b56e21
+SHA1 (patch-ay) = 58da42d53f34394034ddcf2fcf6cd4a82e7c43cd
+SHA1 (patch-configure) = efad44aa1bf7ec5546ce97a01b48933a63b2489e

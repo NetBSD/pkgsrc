@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2024/02/12 21:06:43 hans Exp $
+
+--- configure.orig	2023-08-04 00:10:03.000000000 +0000
++++ configure
+@@ -17325,7 +17325,7 @@ fi
+ 
+ 
+ 
+-if test `$COURIERAUTHCONFIG --version=0.70.0.20200518` = "no"
++if test "`$COURIERAUTHCONFIG --version=0.70.0.20200518`" = "no"
+ then
+ 	as_fn_error $? "Courier authentication library version 0.71 is required." "$LINENO" 5
+ fi
