@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2024/02/12 08:24:03 ryoon Exp $
+
+* Build with SDL.
+
+--- Makefile.orig	2024-02-04 00:01:47.094384141 +0000
++++ Makefile
+@@ -16,8 +16,8 @@
+ #	GTK版の場合は、「GTK_VERSION」以外の行をコメントアウトしてください。
+ #	( GTK版は実験中です。GTK版でサウンドを鳴らすには、SDL が必要です )
+ 
+-X11_VERSION	= 1
+-# SDL_VERSION	= 1
++# X11_VERSION	= 1
++SDL_VERSION	= 1
+ # GTK_VERSION	= 1
+ 
+ 
