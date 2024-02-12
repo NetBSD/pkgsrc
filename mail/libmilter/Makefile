@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2016/05/20 12:12:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2024/02/12 03:25:09 jnemeth Exp $
 
 PKGNAME=	libmilter-${DIST_VERS}
-PKGREVISION=	1
 COMMENT=	Mail filter support library for sendmail
 
 .include "options.mk"
