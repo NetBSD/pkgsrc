@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.52 2023/12/07 08:30:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2024/02/12 13:58:57 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -71,6 +77,9 @@ ${PYSITELIB}/fontTools/cu2qu/ufo.pyo
 ${PYSITELIB}/fontTools/designspaceLib/__init__.py
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyc
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyo
+${PYSITELIB}/fontTools/designspaceLib/__main__.py
+${PYSITELIB}/fontTools/designspaceLib/__main__.pyc
+${PYSITELIB}/fontTools/designspaceLib/__main__.pyo
 ${PYSITELIB}/fontTools/designspaceLib/split.py
 ${PYSITELIB}/fontTools/designspaceLib/split.pyc
 ${PYSITELIB}/fontTools/designspaceLib/split.pyo
@@ -914,10 +923,4 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
