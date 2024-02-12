@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.92 2022/06/28 11:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/02/12 21:36:08 hans Exp $
 
-DISTNAME=	courier-imap-4.10.0
-PKGREVISION=	12
+DISTNAME=	courier-imap-5.2.6
+PKGREVISION=	
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	https://www.courier-mta.org/imap/
 
-DEPENDS+=	courier-maildir>=0.65.0:../../mail/courier-maildir
-DEPENDS+=	couriertcpd>=0.65.0:../../net/couriertcpd
+DEPENDS+=	courier-maildir>=1.3.5:../../mail/courier-maildir
+DEPENDS+=	couriertcpd>=1.3.5:../../net/couriertcpd
 
 USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+
+LIBS.SunOS+=		-lnsl
 
 .include "options.mk"
 
@@ -55,12 +55,12 @@ RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 SMF_METHODS=		courier-imap
 
 SUBST_CLASSES+=		courier
-SUBST_FILES.courier=	imap/imapd-ssl.dist.in
-SUBST_FILES.courier+=	imap/imapd.8.in
-SUBST_FILES.courier+=	imap/imapd.dist.in
-SUBST_FILES.courier+=	imap/mkpop3dcert.html.in
-SUBST_FILES.courier+=	imap/pop3d-ssl.dist.in
-SUBST_FILES.courier+=	imap/pop3d.dist.in
+SUBST_FILES.courier=	libs/imap/imapd-ssl.dist.in
+SUBST_FILES.courier+=	libs/imap/imapd.8.in
+SUBST_FILES.courier+=	libs/imap/imapd.dist.in
+SUBST_FILES.courier+=	libs/imap/mkpop3dcert.html.in
+SUBST_FILES.courier+=	libs/imap/pop3d-ssl.dist.in
+SUBST_FILES.courier+=	libs/imap/pop3d.dist.in
 SUBST_FILES.courier+=	imapd-ssl.rc.in
 SUBST_FILES.courier+=	imapd.rc.in
 SUBST_FILES.courier+=	pop3d-ssl.rc.in
@@ -88,14 +88,15 @@ NOT_FOR_UNPRIVILEGED=	yes
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/imap
-	${INSTALL_DATA} ${WRKSRC}/imap/BUGS.html ${DESTDIR}${DOCDIR}/imap
-	${INSTALL_DATA} ${WRKSRC}/imap/README.html ${DESTDIR}${DOCDIR}/imap
-	${INSTALL_DATA} ${WRKSRC}/imap/README.proxy.html ${DESTDIR}${DOCDIR}/imap
-	${INSTALL_DATA} ${WRKSRC}/imap/courierpop3d.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/imap/imapd.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/imap/mkimapdcert.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/imap/mkpop3dcert.html ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/imap/imapd.pam ${DESTDIR}${EGDIR}/imap.authpam
-	${INSTALL_DATA} ${WRKSRC}/imap/pop3d.pam ${DESTDIR}${EGDIR}/pop3.authpam
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/BUGS.html ${DESTDIR}${DOCDIR}/imap
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/README.proxy.html ${DESTDIR}${DOCDIR}/imap
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/courierpop3d.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/imapd.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/makeimapaccess.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/mkdhparams.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/mkimapdcert.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/mkpop3dcert.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/imapd.pam ${DESTDIR}${EGDIR}/imap.authpam
+	${INSTALL_DATA} ${WRKSRC}/libs/imap/pop3d.pam ${DESTDIR}${EGDIR}/pop3.authpam
 
 .include "../../mk/bsd.pkg.mk"

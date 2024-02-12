@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2010/11/10 10:00:06 adam Exp $
+$NetBSD: patch-ak,v 1.5 2024/02/12 21:36:09 hans Exp $
 
---- imap/mkimapdcert.in.orig	2010-06-29 01:39:59.000000000 +0000
-+++ imap/mkimapdcert.in
-@@ -9,7 +9,13 @@
+--- libs/imap/mkimapdcert.in.orig	2013-11-11 02:56:33.000000000 +0000
++++ libs/imap/mkimapdcert.in
+@@ -8,7 +8,13 @@
  # IMAP over SSL.  Normally this script would get called by an automatic
  # package installation routine.
  
@@ -12,12 +12,12 @@ $NetBSD: patch-ak,v 1.4 2010/11/10 10:00:06 adam Exp $
 +openssl)	ssllib=openssl ;;
 +*)		ssllib="@ssllib@" ;;
 +esac
-+
++       
 +if test "$ssllib" = "openssl"
  then
  	test -x @OPENSSL@ || exit 0
  else
-@@ -36,7 +42,7 @@ cleanup() {
+@@ -38,7 +44,7 @@ cleanup() {
  
  cd @certsdir@
  
