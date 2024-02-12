@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/12/31 08:59:01 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/12 13:06:57 adam Exp $
 
-DISTNAME=	tzdata-2023.4
+DISTNAME=	tzdata-2024.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzdata/}
