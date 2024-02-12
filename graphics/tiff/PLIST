@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.33 2023/10/16 15:38:19 gdt Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/02/12 13:13:07 gdt Exp $
+${PLIST.unsupported}bin/tiff2pdf
+${PLIST.unsupported}bin/tiff2ps
 bin/tiffcp
 bin/tiffdump
 bin/tiffinfo
