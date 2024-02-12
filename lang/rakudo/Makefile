@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2023/12/13 11:29:37 mef Exp $
+# $NetBSD: Makefile,v 1.32 2024/02/12 14:46:56 mef Exp $
 
-DISTNAME=	rakudo-2023.11
+DISTNAME=	rakudo-2024.01
 CATEGORIES=	lang perl6
-MASTER_SITES=	https://rakudo.org/dl/rakudo/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rakudo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rakudo.org/
@@ -35,6 +35,20 @@ PLIST_SUBST+=	EXT=so
 .endif
 
 INSTALLATION_DIRS=	share/perl6/bin
+
+#do-configure:
+#	(cd ${WRKSRC} ; \
+#	perl Configure.pl                      --backends=moar --prefix=$HOME/raku ; \
+#	)
+#	perl Configure.pl --gen-moar --gen-nqp --backends=moar --prefix=$HOME/raku ;
+
+# gmake: *** No rule to make target '3rdparty/nqp-configure/lib/NQP/Config.pm', needed by 'gen/moar/main-version.nqp'.  Stop.
+# hard coding should be corrected ..
+pre-build:
+	${MKDIR} -p  ${WRKSRC}/3rdparty/nqp-configure/lib/NQP
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.38.0/NQP/Config.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.38.0/NQP/Macros.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+
 
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/core/precomp/*
