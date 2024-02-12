@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:33 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/12 17:10:22 hans Exp $
 
-DISTNAME=	courier-unicode-2.1
+DISTNAME=	courier-unicode-2.3.0
 CATEGORIES=	mail
 MASTER_SITES=	https://sourceforge.net/projects/courier/files/courier-unicode/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
