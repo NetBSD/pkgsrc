@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.5 2024/01/22 16:49:37 adam Exp $
+# $NetBSD: eol-packages,v 1.6 2024/02/12 04:35:57 jnemeth Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1121,4 +1121,9 @@ Description: Update to newer version.
 Package: nodejs16
 eol date: September 11, 2023
 URL: https://github.com/nodejs/release
+Description: Update to newer version.
+
+Package: asterisk 13.X
+eol date: October 24, 2021
+URL: https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
 Description: Update to newer version.
