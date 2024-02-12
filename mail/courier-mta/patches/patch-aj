@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-aj,v 1.7 2024/02/12 21:06:43 hans Exp $
 
---- courier/perms.sh.in.orig	2011-04-04 13:01:21.000000000 +0000
+--- courier/perms.sh.in.orig	2022-04-04 01:11:04.000000000 +0000
 +++ courier/perms.sh.in
-@@ -10,115 +10,41 @@ exec_prefix="@exec_prefix@"
+@@ -10,121 +10,43 @@ exec_prefix="@exec_prefix@"
  datarootdir="@datarootdir@"
  
  PERMS="
@@ -12,6 +12,7 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
 -@localstatedir@/tmp	770
 -@localstatedir@/msgs	750
 -@localstatedir@/msgq	750
+-@localstatedir@/sts	755
 -@localstatedir@/track	755
 -
 -@sysconfdir@		755	x
@@ -19,6 +20,7 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
 -@sysconfdir@/aliases	750
 -@sysconfdir@/enablefiltering	644	config
 -@sysconfdir@/maildrop	644	config
+-@sysconfdir@/imapaccess	755
 -@sysconfdir@/smtpaccess	755
 -@sysconfdir@/shared	755
 -@sysconfdir@/shared.tmp	755
@@ -56,8 +58,8 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
 -@libexecdir@/courier/webmail/webmail	555	x	root	bin
  @libexecdir@/courier/webmail/webmlm	555	x	root	bin
 -@libexecdir@/courier/sqwebmaild		555
--@libexecdir@/courier/sqwebpasswd	2755
- @libexecdir@/courier/webmail/webadmin	4555	x	root	bin
+-@libexecdir@/courier/sqwebpasswd	2555
+ @libexecdir@/courier/webmail/webadmin	511	x	root	root
  
 -@sbindir@			755	x	bin	bin
  @sbindir@/courier		555
@@ -102,15 +104,19 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
  @sbindir@/makealiases		550
  @datadir@/makehosteddomains	555
  @sbindir@/makehosteddomains	555
--@datadir@/pop3d			755
--@sbindir@/pop3d			755
--@datadir@/pop3d-ssl		755
--@sbindir@/pop3d-ssl		755
+ @datadir@/makeimapaccess	555
+ @sbindir@/makeimapaccess	555
+-@datadir@/pop3d			555
+-@sbindir@/pop3d			555
+-@datadir@/pop3d-ssl		555
+-@sbindir@/pop3d-ssl		555
 -@sbindir@/webgpg		555
  
  @datadir@			755	x	bin	bin
  @datadir@/courierctl.start	555
  
+-@datadir@/mkdhparams		755
+-@sbindir@/mkdhparams		755
 -@datadir@/mkimapdcert		755
 -@sbindir@/mkimapdcert		755
 -@datadir@/mkpop3dcert		755
@@ -118,32 +124,11 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
  @datadir@/couriermlm		755
  
  @datadir@/couriermlm/adminrequest.tmpl	644
-@@ -186,11 +112,20 @@ do
- 	if test "$USER" = ""
- 	then
- 		USER="@mailuser@"
-+	elif test "$USER" = "root"
-+	then
-+		USER="@REAL_ROOT_USER@"
-+	elif test "$USER" = "bin"
-+	then
-+		USER="@ROOT_USER@"
- 	fi
- 
- 	if test "$GROUP" = ""
- 	then
- 		GROUP="@mailgroup@"
-+	elif test "$GROUP" = "bin"
-+	then
-+		GROUP="@ROOT_GROUP@"
- 	fi
- 
- 	case $FILE in
-@@ -211,26 +146,7 @@ do
+@@ -221,26 +143,8 @@ do
  	echo $FILE $MODE $USER $GROUP $SPECIAL
  done
  
--. ../tcpd/couriertls.config
+-. ../libs/tcpd/couriertls.config
 -
 -if test "$couriertls" != ""
 -then
@@ -152,17 +137,17 @@ $NetBSD: patch-aj,v 1.6 2012/06/09 11:45:38 adam Exp $
 -
  if test "@HAVE_LDAP@" != 0
  then
--	echo @sysconfdir@/ldapaliasrc.dist 640 @mailuser@ @mailgroup@ config
- 	echo @sbindir@/courierldapaliasd 700 @mailuser@ @mailgroup@
+ 	echo @sysconfdir@/ldapaliasrc.dist 640 @mailuser@ @mailgroup@ config
+ 	echo @sbindir@/courierldapaliasd 500 @mailuser@ @mailgroup@
  fi
 -
 -echo @datadir@/sqwebmail/images 755 @mailuser@ @mailgroup@
 -
--for f in `cat ../webmail/images/filelist 2>/dev/null`
+-for f in `cat ../libs/sqwebmail/images/filelist 2>/dev/null`
 -do
 -	echo @datadir@/sqwebmail/images/$f 444 @mailuser@ @mailgroup@
 -done
 -
--. ../maildrop/uidgid
+-. ../libs/maildrop/uidgid
 -
 -echo @bindir@/maildrop 4511 $uid @mailgroup@

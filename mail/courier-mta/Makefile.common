@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/05/25 05:33:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2024/02/12 21:06:43 hans Exp $
 #
 # used by mail/courier-imap/Makefile
 # used by mail/courier-maildir/Makefile
@@ -6,10 +6,14 @@
 # used by mail/sqwebmail/Makefile
 # used by net/couriertcpd/Makefile
 
-COURIER_VERSION=	0.68.1
+COURIER_VERSION=	1.3.5
 LICENSE=		gnu-gpl-v3
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=courier/}
+EXTRACT_SUFX=		.tar.bz2
 
 .include "../../mk/bsd.prefs.mk"
+
+USE_TOOLS+=		pkg-config
 
 DATADIR=		${PREFIX}/share/courier
 DOCDIR=			${PREFIX}/share/doc/courier
@@ -34,15 +38,12 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${COURIER_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-root-check
+CONFIGURE_ARGS+=	--with-notice=unicode
 .if ${PKGPATH} != mail/courier-maildir && ${PKGPATH} != net/couriertcpd
 CONFIGURE_ARGS+=	--enable-unicode
 .endif
 .if ${PKGPATH} != mail/courier-imap
 CONFIGURE_ARGS+=	--enable-utf7-folder-encoding
-.endif
-.if ${PKGPATH} != net/couriertcpd
-CONFIGURE_ARGS+=	--with-trashquota
 .endif
 
 USE_DB185=		yes
@@ -52,4 +53,6 @@ CONFIGURE_ARGS+=	--with-db=db
 CONFIGURE_ENV+=		SYSCONFTOOL_PERL=${PERL5:Q}
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
+.include "../../mail/courier-unicode/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-aa,v 1.8 2024/02/12 21:06:43 hans Exp $
 
---- courier/Makefile.in.orig	2011-04-04 13:07:49.000000000 +0000
+--- courier/Makefile.in.orig	2023-08-04 00:12:02.000000000 +0000
 +++ courier/Makefile.in
-@@ -46,16 +46,16 @@ build_triplet = @build@
- host_triplet = @host@
+@@ -101,16 +101,16 @@ host_triplet = @host@
  target_triplet = @target@
+ @HAVE_SGML_TRUE@am__append_1 = $(GITFILES)
  pkglibexec_PROGRAMS = aliasexp$(EXEEXT) aliascombine$(EXEEXT) \
 -	aliascreate$(EXEEXT) sqwebmaild$(EXEEXT) submit$(EXEEXT) \
 +	aliascreate$(EXEEXT) submit$(EXEEXT) \
@@ -23,11 +23,11 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
 +	courier-showmodules$(EXEEXT) aliaslookup$(EXEEXT) @COURIERLDAPALIASD@ \
  	@EXTRASBIN@ $(am__empty)
  cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@
- subdir = .
-@@ -473,29 +473,26 @@ DISTCLEANFILES = uidgid
- BUILT_SOURCES = prefix.h exec_prefix.h sysconfdir.h localstatedir.h \
- 	libexecdir.h bindir.h sbindir.h datadir.h filtersocketdir.h \
- 	uidgid.h configargs.h sort.h webmlmdhandlerslist.H
+ noinst_PROGRAMS = testtrack$(EXEEXT)
+@@ -657,30 +657,27 @@ BUILT_SOURCES = prefix.h exec_prefix.h s
+ 	filtersocketdir.h configargs.h sort.h $(am__append_1) \
+ 	courierd.dist webmlmrc.dist webmlmdhandlerslist.H
+ @HAVE_SGML_TRUE@GITFILES = courierd.dist.in ldapaliasrc.dist webmlmrc.dist.in
 -extrapkglib = makedatprog courierpop3login pcpd
 +extrapkglib = 
  webmaildir = $(libexecdir)/courier/webmail
@@ -56,12 +56,14 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
  
  databindir = $(datadir)
 -databin_SCRIPTS = courierctl.start makedat makealiases makehosteddomains \
--	pop3d pop3d-ssl	mkimapdcert mkpop3dcert
+-	makeimapaccess \
+-	pop3d pop3d-ssl	mkimapdcert mkpop3dcert mkdhparams
 +databin_SCRIPTS = courierctl.start makealiases makehosteddomains
++
  
  mlmdatadir = $(datadir)/couriermlm
  mlmdata_DATA = \
-@@ -551,7 +548,7 @@ mlmdata_DATA = \
+@@ -741,7 +738,7 @@ mlmdata_DATA = \
  	webmlmsublist.tmpl.html \
  	webmlm.tmpl.html
  
@@ -70,9 +72,9 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
  cmdlibdir = @libexecdir@/courier
  
  # Subdirectories
-@@ -1890,6 +1887,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
- courierpop3login$(EXEEXT): ../imap/pop3login$(EXEEXT)
- 	cp -f ../imap/pop3login$(EXEEXT) courierpop3login$(EXEEXT)
+@@ -2314,6 +2311,12 @@ couriertls$(EXEEXT): ../libs/tcpd/courie
+ courierpop3login$(EXEEXT): ../libs/imap/pop3login$(EXEEXT)
+ 	cp -f ../libs/imap/pop3login$(EXEEXT) courierpop3login$(EXEEXT)
  
 +courier-showconfig$(EXEEXT): showconfig$(EXEEXT)
 +	cp -f showconfig$(EXEEXT) courier-showconfig$(EXEEXT)
@@ -83,7 +85,7 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
  sort.h:
  	echo '#define SORT "$(SORT)"' >sort.h
  
-@@ -2045,39 +2048,21 @@ dist-hook:
+@@ -2469,43 +2472,23 @@ dist-hook:
  
  install-exec-hook:
  	for d in $(bindir) $(sbindir) $(libexecdir) $(libexecdir)/courier \
@@ -91,25 +93,28 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
  		$(localstatedir) $(localstatedir)/tmp\
  		$(webmaildir)\
  		$(localstatedir)/track\
+ 		$(localstatedir)/sts\
  		$(localstatedir)/msgs $(localstatedir)/msgq ; do \
  			$(mkinstalldirs) $(DESTDIR)$$d || :; done
 -	$(INSTALL_SCRIPT) imapd.rc $(DESTDIR)$(datadir)/imapd
 -	$(INSTALL_SCRIPT) imapd-ssl.rc $(DESTDIR)$(datadir)/imapd-ssl
 -	rm -f $(DESTDIR)$(sbindir)/imapd
--	$(LN_S) $(datadir)/imapd $(DESTDIR)$(sbindir)/imapd
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/imapd` $(DESTDIR)$(sbindir)/imapd
 -	rm -f $(DESTDIR)$(sbindir)/imapd-ssl
--	$(LN_S) $(datadir)/imapd-ssl $(DESTDIR)$(sbindir)/imapd-ssl
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/imapd-ssl` $(DESTDIR)$(sbindir)/imapd-ssl
+-	rm -f $(DESTDIR)$(sbindir)/mkdhparams
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/mkdhparams` $(DESTDIR)$(sbindir)/mkdhparams
 -	rm -f $(DESTDIR)$(sbindir)/mkimapdcert
--	$(LN_S) $(datadir)/mkimapdcert $(DESTDIR)$(sbindir)/mkimapdcert
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/mkimapdcert` $(DESTDIR)$(sbindir)/mkimapdcert
 -	rm -f $(DESTDIR)$(sbindir)/mkpop3dcert
--	$(LN_S) $(datadir)/mkpop3dcert $(DESTDIR)$(sbindir)/mkpop3dcert
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/mkpop3dcert` $(DESTDIR)$(sbindir)/mkpop3dcert
 -	rm -f $(DESTDIR)$(bindir)/makedat
--	$(LN_S) $(datadir)/makedat $(DESTDIR)$(bindir)/makedat
--	for f in makealiases makehosteddomains pop3d pop3d-ssl \
+-	$(LN_S) `realpath -m --relative-to $(bindir) $(datadir)/makedat` $(DESTDIR)$(bindir)/makedat
+-	for f in makealiases makehosteddomains makeimapaccess pop3d pop3d-ssl \
 +	for f in makealiases makehosteddomains \
  		; do rm -f $(DESTDIR)$(sbindir)/$$f ; \
- 		$(LN_S) $(datadir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
--	rm -f $(DESTDIR)$(sbindir)/webgpg ; $(LN_S) $(datadir)/sqwebmail/webgpg $(DESTDIR)$(sbindir)/webgpg
+ 		$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
+-	rm -f $(DESTDIR)$(sbindir)/webgpg ; $(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/sqwebmail/webgpg` $(DESTDIR)$(sbindir)/webgpg
  	$(INSTALL_PROGRAM) ../webadmin/webadmin $(DESTDIR)$(webmaildir)/webadmin
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared
@@ -119,19 +124,20 @@ $NetBSD: patch-aa,v 1.7 2012/06/09 11:45:38 adam Exp $
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/aliases
  	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/smtpaccess
+ 	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/imapaccess
 -	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/aliasdir
  	echo @MAILDROP@ >$(DESTDIR)$(sysconfdir)/maildrop
 +	echo @MAILDROP@ >$(DESTDIR)$(sysconfdir)/maildropfilter
  	test -f $(DESTDIR)$(sysconfdir)/enablefiltering && exit 0; \
  		echo esmtp >$(DESTDIR)$(sysconfdir)/enablefiltering
  	test -f $(DESTDIR)$(sysconfdir)/aliases/system && exit 0; \
-@@ -2089,10 +2074,6 @@ install-data-hook:
+@@ -2517,10 +2500,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8
 -	-$(mkinstalldirs) $(DESTDIR)$(webmailimagedir)
--	for f in `cat ../webmail/images/filelist` ; do \
--		$(INSTALL_DATA) $(srcdir)/../webmail/images/$$f \
+-	for f in `cat ../libs/sqwebmail/images/filelist` ; do \
+-		$(INSTALL_DATA) $(srcdir)/../libs/sqwebmail/images/$$f \
 -			$(DESTDIR)$(webmailimagedir) ; done
  
  install-permissions: perms.sh
