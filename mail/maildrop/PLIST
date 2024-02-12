@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/05/24 13:17:57 hauke Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/02/12 21:15:49 hans Exp $
 bin/lockmail
 bin/mailbot
 bin/maildrop
@@ -7,8 +7,6 @@ bin/makedatprog
 bin/makemime
 bin/reformail
 bin/reformime
-libexec/courier/makedat
-libexec/courier/makedatprog
 man/man1/lockmail.1
 man/man1/mailbot.1
 man/man1/maildrop.1

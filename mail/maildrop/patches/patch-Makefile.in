@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.3 2023/01/25 19:34:04 bsiegert Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2024/02/12 21:15:50 hans Exp $
 
 Do not install maildir related tools & doc - they presumably get
 installed by some other courier-* package if you want them. (The
@@ -6,7 +6,7 @@ FreeBSD mail/maildrop port just 'maildrop-' prefixes those binaries?)
 
 Install system binaries in {libexecdir} where applicable.
 
---- Makefile.in.orig	2022-12-02 14:42:36.000000000 +0000
+--- Makefile.in.orig	2023-08-03 23:46:53.000000000 +0000
 +++ Makefile.in
 @@ -443,16 +443,15 @@ EXTRA_DIST = README.html INSTALL.html UP
  	packaging/debian/maildrop-dev.soname.lintian-overrides \
@@ -45,7 +45,7 @@ Install system binaries in {libexecdir} where applicable.
  
  install-data-local: install-man install-deliverquota install-maildrop
  
-@@ -1341,25 +1336,24 @@ install-maildrop:
+@@ -1341,9 +1336,6 @@ install-maildrop:
  		$(INSTALL_PROGRAM) libs/maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	$(INSTALL_PROGRAM) libs/liblock/lockmail $(DESTDIR)$(bindir)/lockmail
@@ -55,14 +55,7 @@ Install system binaries in {libexecdir} where applicable.
  	$(INSTALL_PROGRAM) libs/rfc2045/reformime $(DESTDIR)$(bindir)/reformime
  	$(INSTALL_PROGRAM) libs/rfc2045/makemime $(DESTDIR)$(bindir)/makemime
  	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
--		$(INSTALL_PROGRAM) libs/makedat/makedatprog $(DESTDIR)$(bindir)/makedatprog
-+		$(INSTALL_PROGRAM) libs/makedat/makedatprog $(DESTDIR)$(libexecdir)/makedatprog
-+		$(LN_S) $(libexecdir)/makedatprog $(DESTDIR)$(bindir)/makedatprog
- 	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
--		$(INSTALL_SCRIPT)  libs/makedat/makedat     $(DESTDIR)$(bindir)/makedat
-+		$(INSTALL_SCRIPT)  libs/makedat/makedat     $(DESTDIR)$(libexecdir)/makedat
-+		$(LN_S) $(libexecdir)/makedat $(DESTDIR)$(bindir)/makedat
- 	. libs/maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop lockmail
+@@ -1354,7 +1346,7 @@ install-maildrop:
  	. libs/maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop lockmail && chmod 755 maildrop lockmail
  
  uninstall-maildrop:
@@ -71,10 +64,3 @@ Install system binaries in {libexecdir} where applicable.
  		rm -f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	test "@USE_DB@@USE_GDBM@" = "00" && exit 0; \
--		rm -f $(DESTDIR)$(bindir)/makedat ; \
--		rm -f $(DESTDIR)$(bindir)/makedatprog
-+		rm -f $(DESTDIR)$(libexecdir)/makedat ; \
-+		rm -f $(DESTDIR)$(libexecdir)/makedatprog
- 
- all-recursive: all-make-check
- 
