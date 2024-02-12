@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.84 2023/12/30 16:20:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.85 2024/02/12 13:05:29 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -142,12 +148,6 @@ ${PYSITELIB}/pkg_resources/_vendor/zipp.pyo
 ${PYSITELIB}/pkg_resources/extern/__init__.py
 ${PYSITELIB}/pkg_resources/extern/__init__.pyc
 ${PYSITELIB}/pkg_resources/extern/__init__.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -587,6 +587,15 @@ ${PYSITELIB}/setuptools/command/upload.pyo
 ${PYSITELIB}/setuptools/command/upload_docs.py
 ${PYSITELIB}/setuptools/command/upload_docs.pyc
 ${PYSITELIB}/setuptools/command/upload_docs.pyo
+${PYSITELIB}/setuptools/compat/__init__.py
+${PYSITELIB}/setuptools/compat/__init__.pyc
+${PYSITELIB}/setuptools/compat/__init__.pyo
+${PYSITELIB}/setuptools/compat/py310.py
+${PYSITELIB}/setuptools/compat/py310.pyc
+${PYSITELIB}/setuptools/compat/py310.pyo
+${PYSITELIB}/setuptools/compat/py311.py
+${PYSITELIB}/setuptools/compat/py311.pyc
+${PYSITELIB}/setuptools/compat/py311.pyo
 ${PYSITELIB}/setuptools/config/__init__.py
 ${PYSITELIB}/setuptools/config/__init__.pyc
 ${PYSITELIB}/setuptools/config/__init__.pyo
@@ -672,9 +681,6 @@ ${PYSITELIB}/setuptools/namespaces.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/py312compat.py
-${PYSITELIB}/setuptools/py312compat.pyc
-${PYSITELIB}/setuptools/py312compat.pyo
 ${PYSITELIB}/setuptools/sandbox.py
 ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
