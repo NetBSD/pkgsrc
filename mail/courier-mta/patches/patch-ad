@@ -1,31 +1,35 @@
-$NetBSD: patch-ad,v 1.6 2012/06/09 11:45:38 adam Exp $
+$NetBSD: patch-ad,v 1.7 2024/02/12 21:06:43 hans Exp $
 
---- courier/filters/Makefile.in.orig	2007-11-17 19:49:01.000000000 -0500
+--- courier/filters/Makefile.in.orig	2023-04-23 22:07:56.000000000 +0000
 +++ courier/filters/Makefile.in
-@@ -282,11 +282,12 @@ SUBDIRS = libfilter perlfilter
+@@ -461,6 +461,7 @@ SUBDIRS = libfilter perlfilter
  CLEANFILES = $(htmldoc_DATA) $(man_MANS) filtersocketdir.h filteractivedir.h \
  	pidfile.h permissions.dat
  
 +pkglibexecdir = $(libexecdir)/courier
  htmldocdir = @datadir@/htmldoc
- htmldoc_DATA = courierfilter.html courierperlfilter.html dupfilter.html
+ htmldoc_DATA = courierfilter.html courierperlfilter.html dupfilter.html ratefilter.html verifyfilter.html
  databindir = $(datadir)
- databin_SCRIPTS = filterctl
+@@ -468,7 +469,7 @@ databin_SCRIPTS = filterctl
+ data_DATA = verifysender verifysenderfull
+ courierfilterexecdir = $(libexecdir)/courier
+ noinst_SCRIPTS = courierfilter.start
 -filterbindir = $(libexecdir)/filters
 +filterbindir = $(pkglibexecdir)/filters
+ bin_SCRIPTS = verifysmtp
  filtersocketdir = $(localstatedir)/filters
  allfiltersocketdir = $(localstatedir)/allfilters
- filterconfdir = $(sysconfdir)/filters
-@@ -1080,16 +1081,12 @@ install-exec-hook:
+@@ -1435,8 +1436,6 @@ install-exec-hook:
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(filtersocketdir)
  	-$(mkinstalldirs) $(DESTDIR)$(allfiltersocketdir)
 -	-$(mkinstalldirs) $(DESTDIR)$(filterconfdir)
 -	-$(mkinstalldirs) $(DESTDIR)$(filteractivedir)
  	-$(mkinstalldirs) $(DESTDIR)$(sbindir)
+ 	-$(mkinstalldirs) $(DESTDIR)$(bindir)
  	chmod 500 $(DESTDIR)$(datadir)/filterctl
- 	rm -f $(DESTDIR)$(sbindir)/filterctl
- 	$(LN_S) $(datadir)/filterctl $(DESTDIR)$(sbindir)/filterctl
+@@ -1445,8 +1444,6 @@ install-data-hook:
+ 	chmod 755 $(DESTDIR)$(filterbindir)
  	chmod 750 $(DESTDIR)$(filtersocketdir)
  	chmod 750 $(DESTDIR)$(allfiltersocketdir)
 -	chmod 750 $(DESTDIR)$(filterconfdir)

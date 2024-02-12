@@ -1,0 +1,13 @@
+================================================================================
+$NetBSD: MESSAGE.UTF8,v 1.1 2024/02/12 21:06:43 hans Exp $
+
+The unicode format used by Courier Maildirs has been changed in SqWebmail 6.0,
+Courier-IMAP 5.0 and Courier 1.0. If you are updating SqWebmail, Courier-IMAP
+or Courier-MTA from earlier versions, and any of your users use any characters
+outside of US-ASCII in Maildir folder names, these Maildirs need to be converted
+manually.
+
+Please see http://www.courier-mta.org/maildirmake.html for details and
+instructions.
+
+================================================================================
