@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24019 2024/02/11 20:29:56 adam Exp $
+$NetBSD: TODO,v 1.24020 2024/02/12 08:53:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-1.1.12
+	o arti-1.1.13
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
