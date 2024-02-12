@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:53:56 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/12 16:58:49 hans Exp $
 
-BLAKE2s (courier-analog-0.16.tar.bz2) = 9db784cf812613503d9c836e414611ef21d678029f4e557808f8df228a9bc5f3
-SHA512 (courier-analog-0.16.tar.bz2) = 3bbf0e45ca0dd42395bd204a137afec2c2d543258855ffea08390f3f25221ae9c4296a92dfb73d18387a38078202ba2c03c337076193348843a63fc23594f022
-Size (courier-analog-0.16.tar.bz2) = 74042 bytes
+BLAKE2s (courier-analog-0.22.tar.bz2) = 51ffa6e6552b2120f55d297026482bff714ef9dec9d2d1631e96c0c5f14bb922
+SHA512 (courier-analog-0.22.tar.bz2) = e729213845a44733dc7e0878806ad65ed02381ff6163cf68f9d5d273f83827f7136cc891d3eba23183e223627ada19a4311df8fd15e18f7c72c5fdf706d3d481
+Size (courier-analog-0.22.tar.bz2) = 77587 bytes
