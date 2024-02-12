@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/01/22 17:06:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/02/12 19:16:18 adam Exp $
 bin/jupyter-notebook-${PYVERSSUFFIX}
 etc/jupyter/jupyter_server_config.d/notebook.json
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -392,10 +392,10 @@ share/jupyter/labextensions/@jupyter-notebook/lab-extension/package.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/interface-switcher.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/launch-tree.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/package.json.orig
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/34.19d4610ec716fa511ef4.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/568.1160e2de23274a7c0e28.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/928.de56d0eb47577cb652f3.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/52.b2c4b450ddfdb9a2da29.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/568.013352bd01375b7346b5.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/928.311d81a68bd10b5b2ae0.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/93.eddcbb0f5a946c74796b.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.f2d2e79c8a92fd2ec840.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.0dca0b46350f0c25c608.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/style.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/third-party-licenses.json
