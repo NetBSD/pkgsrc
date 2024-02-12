@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/12 08:24:03 ryoon Exp $
+
+BLAKE2s (quasi88-0.6.4.tgz) = a55958dad2c18321592c059dc19fe903dd586330f5b1e84babbc2a0fd00e5d89
+SHA512 (quasi88-0.6.4.tgz) = e9b505cef934a8ac608fd57a469b93f571912872c05ef970b4ca9efc3556ea10a63f21609da7db6d08c247cd65f6f62be23a960f396170456902aefb5007a4c4
+Size (quasi88-0.6.4.tgz) = 1107470 bytes
+SHA1 (patch-Makefile) = 24a65c09703aff20e93b1edd79354c36e77105ad
