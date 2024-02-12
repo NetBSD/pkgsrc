@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/11 11:04:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/12 12:35:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -19,6 +19,9 @@ ${PYSITELIB}/cachelib/file.pyo
 ${PYSITELIB}/cachelib/memcached.py
 ${PYSITELIB}/cachelib/memcached.pyc
 ${PYSITELIB}/cachelib/memcached.pyo
+${PYSITELIB}/cachelib/mongodb.py
+${PYSITELIB}/cachelib/mongodb.pyc
+${PYSITELIB}/cachelib/mongodb.pyo
 ${PYSITELIB}/cachelib/py.typed
 ${PYSITELIB}/cachelib/redis.py
 ${PYSITELIB}/cachelib/redis.pyc
