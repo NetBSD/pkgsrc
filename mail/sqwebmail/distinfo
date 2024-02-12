@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 10:54:31 nia Exp $
+$NetBSD: distinfo,v 1.28 2024/02/12 21:47:02 hans Exp $
 
-BLAKE2s (sqwebmail-5.5.3.tar.bz2) = 25088f289a4aecf5adfaf07bac73e9c4f333af6afb2e4dfb7b37748ba3281a88
-SHA512 (sqwebmail-5.5.3.tar.bz2) = 392c0a442b0813543cb349886df4656c7933d790941e212dd0ee3709059ade990d25765b6fe24ca4fb65efe6b992b193a3806362d0a83156c6b49936155d71a2
-Size (sqwebmail-5.5.3.tar.bz2) = 3725216 bytes
-SHA1 (patch-aa) = 2e2320737a693843a94d5da89273e67823152093
-SHA1 (patch-ad) = 30dfbc3e0e05748ad60a75bf2c46a0fa658781e9
-SHA1 (patch-ah) = 7dc2fcb609fcfe2b69c79c8a34413022571ef5e2
+BLAKE2s (sqwebmail-6.2.5.tar.bz2) = 9bd3f7b13d7ab2f33c0beae1ba895adccdc7066192464647a42de9f433b6768a
+SHA512 (sqwebmail-6.2.5.tar.bz2) = 9722dc4a572530ed83534cb504a219cd0de33442f6c1798a909de6bf1fbe078dbf88f86ab68b6f5f836f0a48740f87b94de4ab22e023dfeaf80b0902c5cc522f
+Size (sqwebmail-6.2.5.tar.bz2) = 3745295 bytes
+SHA1 (patch-aa) = ed1c1444001ce32368e0c6167d12f79a8c3a5156
+SHA1 (patch-ad) = 920eb52387a7dc854fcc6024ac156b435b3ef81d
+SHA1 (patch-ah) = 30c223c00740aaef6906d4aa5ff164370eb7d605
 SHA1 (patch-ai) = def2f4d30bf5f15ea78f401f3c4ca2f2ec8c0ad2
-SHA1 (patch-aj) = 195ff33119c1991bac32282f2d9a5d15dc00b0d8
-SHA1 (patch-am) = 84fc1f8c3ca047a6f4795cb9d88544cb31a49ea2
+SHA1 (patch-aj) = 75123859dd44a9c069635ed4901976d05b919625
+SHA1 (patch-am) = 9c84927ada7bf53e2c3c63eeb175979da7341d71

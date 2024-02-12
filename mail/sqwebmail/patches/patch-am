@@ -1,22 +1,16 @@
-$NetBSD: patch-am,v 1.4 2010/11/10 10:52:47 adam Exp $
+$NetBSD: patch-am,v 1.5 2024/02/12 21:47:02 hans Exp $
 
---- pcp/configure.orig	2010-11-07 14:50:39.000000000 +0000
-+++ pcp/configure
-@@ -17258,14 +17258,15 @@ LIBS="$saveLIBS"
+--- libs/pcp/configure.orig	2023-04-24 15:19:05.000000000 +0000
++++ libs/pcp/configure
+@@ -16978,8 +16978,9 @@ LIBS="$saveLIBS"
  echo $NETLIBS >pcp.libs
  
  
--if test -d ${srcdir}/../courier
-+if true || test -d ${srcdir}/../courier
- then
-         scriptdir="$datadir/sqwebmail"
- else
-         scriptdir="$prefix"
- fi
- 
+-scriptdir="$datadir/sqwebmail"
 -SENDIT="$scriptdir/sendit.sh"
++scriptdir="$prefix"
 +# sendit.sh can be customized, so we call it from $(sysconfdir).
 +SENDIT="$sysconfdir/sendit.sh"
  
  
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ANSI C header files" >&5
+ 
