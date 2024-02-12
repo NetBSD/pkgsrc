@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1182 2024/02/11 23:30:53 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1183 2024/02/12 02:57:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1948,3 +1948,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cross/lwtools to 4.22 [ryoon 2024-02-11]
 	Updated devel/pkgconf to 2.1.1 [ryoon 2024-02-11]
 	Updated emulators/bochs to 2.7 [ryoon 2024-02-11]
+	Updated devel/MoarVM to 2024.01 [mef 2024-02-12]
