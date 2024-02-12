@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1187 2024/02/12 08:24:22 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1188 2024/02/12 12:08:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1953,3 +1953,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/sendmail to 8.18.1 [jnemeth 2024-02-12]
 	Updated www/py-flask-security-too to 5.3.3 [markd 2024-02-12]
 	Added emulators/quasi88 version 0.6.4 [ryoon 2024-02-12]
+	Updated mail/mailman3 to 3.3.9 [markd 2024-02-12]
+	Updated www/mailman3-web to 0.0.8 [markd 2024-02-12]
+	Updated www/py-hyperkitty to 1.3.8 [markd 2024-02-12]
+	Updated www/py-postorius to 1.3.10 [markd 2024-02-12]
