@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.240 2023/12/30 16:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.241 2024/02/12 13:05:29 adam Exp $
 
-DISTNAME=	setuptools-69.0.3
+DISTNAME=	setuptools-69.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
 
@@ -19,7 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.develop>=7.21:../../devel/py-jaraco.develop
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.envs>=2.2:../../devel/py-jaraco.envs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.path>=3.2.0:../../devel/py-jaraco.path
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=19.1:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs>=2.4:../../devel/py-test-checkdocs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
@@ -32,8 +30,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # Pick setuptools.tests which are not built nor installed.
 # 3 failed, 1155 passed, 28 skipped, 6 xfailed, 4 xpassed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
