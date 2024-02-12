@@ -1,88 +1,107 @@
-$NetBSD: patch-aa,v 1.15 2010/06/15 23:07:07 pettai Exp $
+$NetBSD: patch-aa,v 1.16 2024/02/12 21:36:09 hans Exp $
 
---- Makefile.in.orig	2010-05-30 23:20:04.000000000 +0200
-+++ Makefile.in	2010-06-14 00:25:33.000000000 +0200
-@@ -289,9 +289,10 @@
+--- Makefile.in.orig	2023-04-25 02:26:35.000000000 +0000
++++ Makefile.in
+@@ -416,19 +416,18 @@ SUBDIRS = libs/numlib libs/bdbobj libs/g
+ 	libs/maildir libs/makedat libs/libhmac \
+ 	libs/waitlib libs/tcpd libs/rootcerts libs/imap
  
 -sbin_SCRIPTS = sharedindexinstall sharedindexsplit
 +sbin_SCRIPTS = 
  CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA) $(sbin_SCRIPTS)
  databindir = $(datadir)
--databin_SCRIPTS = mkimapdcert mkpop3dcert
--binPROGRAMS = imapd pop3d maildirmake maildiracl deliverquota maildirkw
+-databin_SCRIPTS = mkimapdcert mkpop3dcert mkdhparams
+-binPROGRAMS = imapd pop3d maildirmake maildiracl deliverquota maildirkw \
+-	makeimapaccess makedat
+-
 -sbinPROGRAMS = imaplogin pop3login
 -libexecPROGRAMS = makedatprog couriertcpd
-+databin_SCRIPTS = mkimapdcert mkpop3dcert \
++databin_SCRIPTS = makedat makeimapaccess mkimapdcert mkpop3dcert mkdhparams \
 +	imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 +binPROGRAMS = imapd
 +sbinPROGRAMS = 
-+libexecPROGRAMS = imaplogin courierpop3login courierpop3d
++libexecPROGRAMS = imaplogin courierpop3login courierpop3d makedatprog
  bin_PROGRAMS = @binPROGRAMS_exec@
-@@ -299,3 +300,3 @@
+ sbin_PROGRAMS = @sbinPROGRAMS_exec@
  libexec_PROGRAMS = @libexecPROGRAMS_exec@
--man_MANS = couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
+-man_MANS = couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkdhparams.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1 makeimapaccess.8
 +man_MANS = courierimapd.8 courierpop3d.8 mkimapdcert.8 mkpop3dcert.8
  
-@@ -310,5 +311,5 @@
+ # Copyright 2000 Double Precision, Inc.  See COPYING for
+ # distribution information.
+@@ -443,9 +442,9 @@ EXTRA_DIST = README README.cygwin COPYIN
+ 	packaging/debian/rules packaging/debian/source/format \
+ 	sysconftool
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
 -	imapd.cnf pop3d.cnf quotawarnmsg.example
 +	imapd.cnf pop3d.cnf
  
 -libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 +libexec_SCRIPTS = 
- HTML2TXT = links -dump -no-numbering -no-references
-@@ -1227,7 +1228,7 @@
+ HTML2TXT = elinks -dump -no-numbering -no-references
  
--pop3login$(EXEEXT): imap/pop3login$(EXEEXT)
--	cp imap/pop3login$(EXEEXT) .
-+courierpop3login$(EXEEXT): imap/pop3login$(EXEEXT)
-+	cp imap/pop3login$(EXEEXT) ./$@
+ #
+@@ -1384,11 +1383,11 @@ sharedindexinstall: libs/maildir/sharedi
+ sharedindexsplit: libs/maildir/sharedindexsplit
+ 	cp libs/maildir/sharedindexsplit .
  
--pop3d$(EXEEXT): imap/pop3d$(EXEEXT)
--	cp imap/pop3d$(EXEEXT) .
-+courierpop3d$(EXEEXT): imap/pop3d$(EXEEXT)
-+	cp imap/pop3d$(EXEEXT) ./$@
+-pop3login: libs/imap/pop3login
+-	cp libs/imap/pop3login .
++courierpop3login: libs/imap/pop3login
++	cp libs/imap/pop3login ./$@
  
-@@ -1275,4 +1276,7 @@
+-pop3d: libs/imap/pop3d
+-	cp libs/imap/pop3d .
++courierpop3d: libs/imap/pop3d
++	cp libs/imap/pop3d ./$@
  
--imapd.8: imap/imapd.8
--	cp imap/imapd.8 .
-+courierimapd.8: imap/imapd.8
-+	cp imap/imapd.8 ./$@
+ makedat: libs/makedat/makedat
+ 	cp libs/makedat/makedat .
+@@ -1435,8 +1434,11 @@ maildiracl.1: libs/maildir/maildiracl.1
+ maildirkw.1: libs/maildir/maildirkw.1
+ 	cp $(srcdir)/libs/maildir/maildirkw.1 .
+ 
+-imapd.8: libs/imap/imapd.8
+-	cp libs/imap/imapd.8 .
++courierimapd.8: libs/imap/imapd.8
++	cp libs/imap/imapd.8 ./$@
 +
-+courierpop3d.8: imap/courierpop3d.8
-+	cp imap/courierpop3d.8 .
++courierpop3d.8: libs/imap/courierpop3d.8
++	cp libs/imap/courierpop3d.8 .
  
-@@ -1302,4 +1306,2 @@
+ mkdhparams: libs/imap/mkdhparams
+ 	cp libs/imap/mkdhparams .
+@@ -1471,22 +1473,16 @@ quotawarnmsg.example: libs/maildir/quota
+ install-exec-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(databindir)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
--	test ! -x tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
--		tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
+-	test ! -x libs/tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
+-		libs/tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
-@@ -1308,2 +1310,5 @@
- 		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
-+	for f in imapd-ssl imapd pop3d pop3d-ssl ; \
+ 	for f in mkimapdcert mkpop3dcert mkdhparams; \
+ 		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
+ 		$(LN_S) `realpath --relative-to $(sbindir) -m $(databindir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
++	for f in imapd-ssl imapd pop3d pop3d-ssl; \
 +		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-+		$(LN_S) $(databindir)/$$f.rc $(DESTDIR)$(sbindir)/$$f ; done
++		$(LN_S) `realpath --relative-to $(sbindir) -m $(databindir)/$$f.rc` $(DESTDIR)$(sbindir)/$$f ; done
  	$(mkinstalldirs) $(DESTDIR)$(localstatedir)
-@@ -1311,17 +1316,4 @@
+ 
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared.tmp
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared.tmp
+-	mkdir -p $(DESTDIR)$(sysconfdir)/imapaccess
+-	chmod 755 $(DESTDIR)$(sysconfdir)/imapaccess
  
  install-data-local: install-man
--	test -d $(DESTDIR)/etc/pam.d || exit 0 ; \
--	test -w $(DESTDIR)/etc/pam.d || exit 0 ; \
--	test -f $(DESTDIR)/etc/pam.d/imap || \
--		$(INSTALL_DATA) $(srcdir)/imap/imapd.pam \
--		$(DESTDIR)/etc/pam.d/imap || exit 1 ;\
--	test -f $(DESTDIR)/etc/pam.d/pop3 || \
--		$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
--		$(DESTDIR)/etc/pam.d/pop3 || exit 1
  	for f in $(man_MANS); do chmod a+r $(DESTDIR)$(mandir)/*/$$f; done
-@@ -1332,3 +1324,2 @@
+@@ -1495,7 +1491,6 @@ install-data-local: install-man
+ uninstall-local:
+ 	for f in mkimapdcert mkpop3dcert mkdhparams; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; done
 -	rm -f $(DESTDIR)$(bindir)/couriertls
  
+ dist-hook: courier-imap.spec
+ 	test -f $(srcdir)/rpm.release && cp $(srcdir)/rpm.release $(distdir) \
