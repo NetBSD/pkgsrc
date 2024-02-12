@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/14 01:20:18 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/12 11:54:05 markd Exp $
 
-DISTNAME=	mailman-3.3.8
+DISTNAME=	mailman-3.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
 
@@ -16,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.2:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
-DEPENDS+=	${PYPKGPREFIX}-authheaders>=0.14.0:../../mail/py-authheaders
+DEPENDS+=	${PYPKGPREFIX}-authheaders>=0.15.2:../../mail/py-authheaders
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.0.1:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.14.0:../../net/py-dns
