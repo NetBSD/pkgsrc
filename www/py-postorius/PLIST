@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/04 03:08:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/12 12:04:51 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -273,7 +273,10 @@ ${PYSITELIB}/postorius/static/postorius/libs/bootstrap/fonts/glyphicons-halfling
 ${PYSITELIB}/postorius/static/postorius/libs/bootstrap/fonts/glyphicons-halflings-regular.ttf
 ${PYSITELIB}/postorius/static/postorius/libs/bootstrap/fonts/glyphicons-halflings-regular.woff
 ${PYSITELIB}/postorius/static/postorius/libs/bootstrap/fonts/glyphicons-halflings-regular.woff2
-${PYSITELIB}/postorius/static/postorius/libs/bootstrap/js/bootstrap.min.js
+${PYSITELIB}/postorius/static/postorius/libs/bootstrap/js/bootstrap.bundle.js
+${PYSITELIB}/postorius/static/postorius/libs/bootstrap/js/bootstrap.bundle.js.map
+${PYSITELIB}/postorius/static/postorius/libs/bootstrap/js/bootstrap.bundle.min.js
+${PYSITELIB}/postorius/static/postorius/libs/bootstrap/js/bootstrap.bundle.min.js.map
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/VERSION.txt
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/css/font-awesome.css
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/css/font-awesome.min.css
@@ -283,14 +286,9 @@ ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/fonts/fontawesom
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/fonts/fontawesome-webfont.ttf
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff
 ${PYSITELIB}/postorius/static/postorius/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff2
-${PYSITELIB}/postorius/static/postorius/libs/html5shiv/html5shiv.js
-${PYSITELIB}/postorius/static/postorius/libs/html5shiv/html5shiv.min.js
 ${PYSITELIB}/postorius/static/postorius/libs/jquery/jquery-3.6.0.js
 ${PYSITELIB}/postorius/static/postorius/libs/jquery/jquery-3.6.0.min.js
 ${PYSITELIB}/postorius/static/postorius/libs/jquery/jquery-3.6.0.min.map
-${PYSITELIB}/postorius/static/postorius/libs/popperjs/popper-v1.11.0.min.js
-${PYSITELIB}/postorius/static/postorius/libs/respond/respond.min.js
-${PYSITELIB}/postorius/static/postorius/libs/respond/respond.src.js
 ${PYSITELIB}/postorius/template_list.py
 ${PYSITELIB}/postorius/template_list.pyc
 ${PYSITELIB}/postorius/template_list.pyo
@@ -337,6 +335,7 @@ ${PYSITELIB}/postorius/templates/postorius/menu/user_nav.html
 ${PYSITELIB}/postorius/templates/postorius/system_information.html
 ${PYSITELIB}/postorius/templates/postorius/user/address_preferences.html
 ${PYSITELIB}/postorius/templates/postorius/user/all.html
+${PYSITELIB}/postorius/templates/postorius/user/confirm_delete.html
 ${PYSITELIB}/postorius/templates/postorius/user/list_options.html
 ${PYSITELIB}/postorius/templates/postorius/user/mailman_settings.html
 ${PYSITELIB}/postorius/templates/postorius/user/manage.html
