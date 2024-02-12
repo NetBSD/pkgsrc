@@ -1,41 +1,36 @@
-# $NetBSD: Makefile,v 1.16 2023/06/06 12:42:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/12 14:31:15 adam Exp $
 
-DISTNAME=	cssutils-2.3.0
+DISTNAME=	cssutils-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssutils/}
 
 MAINTAINER=	rhialto@falu.nl
-HOMEPAGE=	http://cthedot.de/cssutils/
+HOMEPAGE=	https://cthedot.de/cssutils/
 COMMENT=	Cascading Style Sheets parser and library for Python
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.1:../../devel/py-jaraco.test
+TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-REPLACE_PYTHON+=	src/cssutils/*.py src/cssutils/scripts/*.py
-
-USE_PKG_RESOURCES=	yes
+REPLACE_PYTHON+=	src/cssutils/*.py
+REPLACE_PYTHON+=	src/cssutils/scripts/*.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# all files are group/others writable.
-post-extract:
-	chmod -R go-w ${WRKSRC}
-
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/csscapture ${DESTDIR}${PREFIX}/bin/csscapture-${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/csscombine ${DESTDIR}${PREFIX}/bin/csscombine-${PYVERSSUFFIX} || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/bin/cssparse ${DESTDIR}${PREFIX}/bin/cssparse-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+.for bin in csscapture csscombine cssparse
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

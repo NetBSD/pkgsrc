@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/05 21:26:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/12 14:31:15 adam Exp $
 bin/csscapture-${PYVERSSUFFIX}
 bin/csscombine-${PYVERSSUFFIX}
 bin/cssparse-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.LESSER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cssutils/__init__.py
 ${PYSITELIB}/cssutils/__init__.pyc
 ${PYSITELIB}/cssutils/__init__.pyo
@@ -279,9 +280,9 @@ ${PYSITELIB}/cssutils/tests/test_cssvariablesrule.pyo
 ${PYSITELIB}/cssutils/tests/test_domimplementation.py
 ${PYSITELIB}/cssutils/tests/test_domimplementation.pyc
 ${PYSITELIB}/cssutils/tests/test_domimplementation.pyo
-${PYSITELIB}/cssutils/tests/test_encutils/__init__.py
-${PYSITELIB}/cssutils/tests/test_encutils/__init__.pyc
-${PYSITELIB}/cssutils/tests/test_encutils/__init__.pyo
+${PYSITELIB}/cssutils/tests/test_encutils.py
+${PYSITELIB}/cssutils/tests/test_encutils.pyc
+${PYSITELIB}/cssutils/tests/test_encutils.pyo
 ${PYSITELIB}/cssutils/tests/test_errorhandler.py
 ${PYSITELIB}/cssutils/tests/test_errorhandler.pyc
 ${PYSITELIB}/cssutils/tests/test_errorhandler.pyo
