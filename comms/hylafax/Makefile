@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/02/11 23:56:28 gdt Exp $
+# $NetBSD: Makefile,v 1.82 2024/02/12 07:38:48 wiz Exp $
 
 # This package has a complicated upstream situation.  One upstream is
 # "hylafax.org"; the last release was 6.0.7 on 2018-09-18.  Another
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.hylafax.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.hylafax.org/
-# nnnnnnnnhttps://sourceforge.net/projects/hylafax/
+# https://sourceforge.net/projects/hylafax/
 COMMENT=	Telecommunication and fax server system
 LICENSE=	sgi-free-software-b-v2.0
 
