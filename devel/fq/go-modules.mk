@@ -1,9 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.7 2023/11/25 19:03:16 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.8 2024/02/13 18:19:06 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.zip
 GO_MODULE_FILES+=	github.com/creasty/defaults/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/creasty/defaults/@v/v1.7.0.zip
+GO_MODULE_FILES+=	github.com/ergochat/readline/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/ergochat/readline/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/golang/snappy/@v/v0.0.4.mod
 GO_MODULE_FILES+=	github.com/golang/snappy/@v/v0.0.4.zip
 GO_MODULE_FILES+=	github.com/gomarkdown/markdown/@v/v0.0.0-20231115200524-a660076da3fd.mod
@@ -24,23 +26,20 @@ GO_MODULE_FILES+=	github.com/niemeyer/pretty/@v/v0.0.0-20200227124842-a10e7caefd
 GO_MODULE_FILES+=	github.com/niemeyer/pretty/@v/v0.0.0-20200227124842-a10e7caefd8e.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
-GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20231105164134-2b6d9e2f4985.mod
-GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20231105164134-2b6d9e2f4985.zip
-GO_MODULE_FILES+=	github.com/wader/readline/@v/v0.0.0-20230307172220-bcb7158e7448.mod
-GO_MODULE_FILES+=	github.com/wader/readline/@v/v0.0.0-20230307172220-bcb7158e7448.zip
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.15.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.15.0.zip
+GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20240118170525-e920352821d6.mod
+GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20240118170525-e920352821d6.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.19.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.19.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20231110203233-9a3e6036ecaa.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20231110203233-9a3e6036ecaa.zip
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.18.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.18.0.zip
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220627191245-f75cf1eec38b.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.14.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.14.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.21.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.21.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.17.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.17.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.17.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.17.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.zip
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20200227125254-8fa46927fb4f.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20200227125254-8fa46927fb4f.zip
