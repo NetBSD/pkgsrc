@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/01/21 20:03:21 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/02/13 18:04:19 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.110.9.mod) = 0a94c8a27942cf651ed713697e1b5783774c8db13655ca3fef4abf3016534ea9
 SHA512 (cloud.google.com_go_@v_v0.110.9.mod) = d97008a57c3c68679589fe14efb16ed047248d4cb47988a73fe48a97bfd43ed2f724ce2c68dc826f3387bd7962cd96b3981cccaf374deda774a71233e4c999d5
@@ -318,12 +318,12 @@ Size (github.com_json-iterator_go_@v_v1.1.12.mod) = 267 bytes
 BLAKE2s (github.com_json-iterator_go_@v_v1.1.12.zip) = 62f74f8be613bccc2bd2a1512897ecce2325766e49c75543198e422d51ec88ae
 SHA512 (github.com_json-iterator_go_@v_v1.1.12.zip) = 67170ea11d63fd3c4aa5ecb290a42e156bfa245bc1cdb4c272823c37634f529477511ec2faceb608a15bfc24eaa3284d81f6bb5fa8d6a68d079b9ab2c9af3ce8
 Size (github.com_json-iterator_go_@v_v1.1.12.zip) = 139706 bytes
-BLAKE2s (github.com_klauspost_compress_@v_v1.17.4.mod) = 1835c6fcb7d8a731093f518b566c0878e0c02572bebc55db31e9aa608ad9c27f
-SHA512 (github.com_klauspost_compress_@v_v1.17.4.mod) = 4b641dc52ac50c4da86f5784ead1bff031325a35976f1b3eec2ef5e03cce9271d04d7c18e77f4f07f72ff81fa732df54c6fc4ddfe22488565f839abea41c5aea
-Size (github.com_klauspost_compress_@v_v1.17.4.mod) = 137 bytes
-BLAKE2s (github.com_klauspost_compress_@v_v1.17.4.zip) = fd730a27cb4c93fc0ddf1381cd3b96598fa6850ea6d5b814d40b138d37dc42af
-SHA512 (github.com_klauspost_compress_@v_v1.17.4.zip) = 0997faf4b7549bf8ae6430538f178427dbfd9f9bf243c001c214e460ce93eb82483ad329f28780a61649773932103656ef5a382303628157ab9df94e12c608b2
-Size (github.com_klauspost_compress_@v_v1.17.4.zip) = 38841301 bytes
+BLAKE2s (github.com_klauspost_compress_@v_v1.17.2.mod) = 4d54f1ed92e6af789345d31f14a7cce879093962b9b60dddf25f33c4fe4d3ef0
+SHA512 (github.com_klauspost_compress_@v_v1.17.2.mod) = ad60c670e6dc419694e0b022bfd0a40345a4eb18410c2eacaa07f6ab8ccac763bd025b1ddf9fb74555c56471000be4b8ea866b9fc53e4d7fe2c0917ea6e07b30
+Size (github.com_klauspost_compress_@v_v1.17.2.mod) = 137 bytes
+BLAKE2s (github.com_klauspost_compress_@v_v1.17.2.zip) = 8533ba2631fe526d5749e8b9d915d5ad2285afb5a7227638db58026eff191926
+SHA512 (github.com_klauspost_compress_@v_v1.17.2.zip) = 3c04fef8b533b4f25d7bcde6910f05a22d40214c009d0a88996c7e3e2f7047d71064fbf0d83041286574fcd223452f19dfbc4836a76b559254c2c6441e0cee7e
+Size (github.com_klauspost_compress_@v_v1.17.2.zip) = 39030530 bytes
 BLAKE2s (github.com_klauspost_cpuid_v2_@v_v2.0.1.mod) = 8822f81474fde3838ca4b526dce6aa0a0f51f782a977dcbfa45efbe3f317e99a
 SHA512 (github.com_klauspost_cpuid_v2_@v_v2.0.1.mod) = 16bc59642bcbc705e57b1862066193a922b9c98b271cb1b2c3b98886b06d7d5f6e73b272e61432c809b569fd9715ec00725266f5a4954e0812855e093cd87093
 Size (github.com_klauspost_cpuid_v2_@v_v2.0.1.mod) = 46 bytes
@@ -882,6 +882,6 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
-BLAKE2s (restic-0.16.3.tar.gz) = 47b1a2c4fe43bbd17b52f846777c7f34bbe1ff7d4d821b5835b5e5dba039d9d6
-SHA512 (restic-0.16.3.tar.gz) = c1f5081125a6a3c63b7f7f7c2f59c83b5b92208fba8e00b8bbb33a9d987de8a60dd5bc01888d21561c716f9af452e744e320b7969d98d496318d2663f2fc9802
-Size (restic-0.16.3.tar.gz) = 23985676 bytes
+BLAKE2s (restic-0.16.4.tar.gz) = b3febcb321726ac22bbc16e8042b6dd499b06f81650218310723970b0f149acc
+SHA512 (restic-0.16.4.tar.gz) = 9f28f90466a30a3c1f32cd1951dddaa22d30ece8b1c18da1a907cc1dd0f98065c25529e855b56fc3d62801b052371d9fe117cd26f17e15276f6a9a309416e914
+Size (restic-0.16.4.tar.gz) = 23990246 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2024/02/07 14:51:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.46 2024/02/13 18:04:19 wiz Exp $
 
-DISTNAME=	restic-0.16.3
-PKGREVISION=	1
+DISTNAME=	restic-0.16.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
