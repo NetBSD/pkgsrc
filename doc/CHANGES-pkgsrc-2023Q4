@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.6 2024/02/11 14:54:15 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.7 2024/02/13 16:58:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -26,4 +26,10 @@ math/py-numpy: Python 3.12 build fix
 
 Pullup ticket #6833 - requested by bsiegert
 sysutils/strace: build fix for NetBSD 10
+
+Pullup ticket #6835 - requested by taca
+net/bind918: security fix
+
+Pullup ticket #6836 - requested by taca
+net/bind916: security fix
 
