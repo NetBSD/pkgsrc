@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1212 2024/02/13 10:09:36 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1213 2024/02/13 10:36:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1994,3 +1994,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/zoxide to 0.9.3 [pin 2024-02-13]
 	Updated devel/difftastic to 0.55.0 [pin 2024-02-13]
 	Updated sysutils/eza to 0.18.2 [pin 2024-02-13]
+	Updated net/py-twine to 5.0.0 [adam 2024-02-13]
+	Updated sysutils/py-puremagic to 1.20 [adam 2024-02-13]
