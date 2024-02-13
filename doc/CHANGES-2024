@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1231 2024/02/13 18:19:14 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1232 2024/02/13 19:33:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/tree-sitter-cpp to 0.20.4 [wiz 2024-02-13]
 	Updated textproc/tree-sitter-ruby to 0.20.1 [wiz 2024-02-13]
 	Updated devel/fq to 0.10.0 [wiz 2024-02-13]
+	Updated net/openvpn to 2.6.9 [gdt 2024-02-13]
