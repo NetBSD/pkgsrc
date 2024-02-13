@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/01 15:39:38 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/13 17:50:33 wiz Exp $
 bin/glad${PYVERSSUFFIX}
 ${PYSITELIB}/glad/__init__.py
 ${PYSITELIB}/glad/__init__.pyc
@@ -19,12 +19,15 @@ ${PYSITELIB}/glad/files/glx.xml
 ${PYSITELIB}/glad/files/khrplatform.h
 ${PYSITELIB}/glad/files/vk.xml
 ${PYSITELIB}/glad/files/vk_platform.h
+${PYSITELIB}/glad/files/vulkan_video_codec_av1std.h
+${PYSITELIB}/glad/files/vulkan_video_codec_av1std_decode.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h264std.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h264std_decode.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h264std_encode.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h265std.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h265std_decode.h
 ${PYSITELIB}/glad/files/vulkan_video_codec_h265std_encode.h
+${PYSITELIB}/glad/files/vulkan_video_codecs_common.h
 ${PYSITELIB}/glad/files/wgl.xml
 ${PYSITELIB}/glad/generator/__init__.py
 ${PYSITELIB}/glad/generator/__init__.pyc

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/01 15:39:38 leot Exp $
+$NetBSD: distinfo,v 1.2 2024/02/13 17:50:33 wiz Exp $
 
-BLAKE2s (glad2-2.0.4.tar.gz) = c7a20d6a5489e49d1b3c571c46d030459daa53528b880c0fb5aff955296bc8c9
-SHA512 (glad2-2.0.4.tar.gz) = 4fb05fad3c8f67dd75cad9d435f054363e32529fa1bbac7289db13bcb17fe9f76eb6002797028b580769032465d0b88fbe3ec21cef76daa4c1c266593b5fa811
-Size (glad2-2.0.4.tar.gz) = 539569 bytes
+BLAKE2s (glad2-2.0.5.tar.gz) = dcace0e3a55f14556d40b48e4fc132de42decbbf86eccd62a49668a8d10a811b
+SHA512 (glad2-2.0.5.tar.gz) = f404826f295817fc3ddd75f319d20b66311ad444dabe4e30adda72735c9f952c46b317f5376321cbfe626395ff159df51395594015ff78b451cc7703b44a7b27
+Size (glad2-2.0.5.tar.gz) = 571974 bytes
