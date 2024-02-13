@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/01/20 11:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/13 18:17:22 wiz Exp $
 
-DISTNAME=	tree-sitter-ruby-0.19.0
-PKGREVISION=	1
+DISTNAME=	tree-sitter-ruby-0.20.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
