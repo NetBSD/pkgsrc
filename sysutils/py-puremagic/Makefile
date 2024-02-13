@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/06/01 16:02:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/13 10:36:22 adam Exp $
 
-DISTNAME=	puremagic-1.15
+DISTNAME=	puremagic-1.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/puremagic/}
@@ -10,15 +10,12 @@ HOMEPAGE=	https://github.com/cdgriffith/puremagic
 COMMENT=	Pure python implementation of magic file detection
 LICENSE=	gnu-lgpl-v3
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
