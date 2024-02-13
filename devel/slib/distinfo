@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2022/10/24 14:12:56 wiz Exp $
+$NetBSD: distinfo,v 1.23 2024/02/13 18:11:39 wiz Exp $
 
-BLAKE2s (slib-3b7.tar.gz) = dddcae90f7580a892c6cfe1cf42cf5c779e676ff39b598e24c87599062c085f5
-SHA512 (slib-3b7.tar.gz) = 95fcefc4a453a2a2e9c59b66c6093c9eddc1ae70c61dc7a04332f0de4fe90561fb9045b35f2c099aad8095e972a2a548a7d6b9f75e1e229c90c8e14c8a673967
-Size (slib-3b7.tar.gz) = 984970 bytes
+BLAKE2s (slib-3c1.tar.gz) = 521f5eec3cd4c707e2922db3d13c8417581d1bbf0df9f15d7690566e2d0ec3c7
+SHA512 (slib-3c1.tar.gz) = 3d724b8384f43b271f9b750dbde7f9e6b9dfd815036ede4881ef43e191e62d25b77db487d6961f309310cb6332e43d24959ce2f127d922cd906440a78e93536c
+Size (slib-3c1.tar.gz) = 982253 bytes
 SHA1 (patch-aa) = 15d2eecb09101b0605f21455e7ba318e76308aa8

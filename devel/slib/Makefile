@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2022/10/24 14:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/02/13 18:11:39 wiz Exp $
 
-DISTNAME=	slib-3b7
+DISTNAME=	slib-3c1
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -8,7 +8,7 @@ DISTNAME=	slib-3b7
 #
 # Also update guile-slib and guile22-slib.
 #
-PKGNAME=	slib-3.2.7
+PKGNAME=	slib-3.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://groups.csail.mit.edu/mac/ftpdir/scm/
 
