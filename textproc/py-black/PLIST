@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/08 09:43:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/13 05:06:48 adam Exp $
 bin/black-${PYVERSSUFFIX}
 bin/blackd-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -71,9 +71,16 @@ ${PYSITELIB}/black/ranges.pyo
 ${PYSITELIB}/black/report.py
 ${PYSITELIB}/black/report.pyc
 ${PYSITELIB}/black/report.pyo
+${PYSITELIB}/black/resources/__init__.py
+${PYSITELIB}/black/resources/__init__.pyc
+${PYSITELIB}/black/resources/__init__.pyo
+${PYSITELIB}/black/resources/black.schema.json
 ${PYSITELIB}/black/rusty.py
 ${PYSITELIB}/black/rusty.pyc
 ${PYSITELIB}/black/rusty.pyo
+${PYSITELIB}/black/schema.py
+${PYSITELIB}/black/schema.pyc
+${PYSITELIB}/black/schema.pyo
 ${PYSITELIB}/black/strings.py
 ${PYSITELIB}/black/strings.pyc
 ${PYSITELIB}/black/strings.pyo
