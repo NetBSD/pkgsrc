@@ -1,0 +1,18 @@
+snac (Social Networks Are Crap) runs as a daemon, proxied by a
+TLS-enabled real httpd server, and provides the basic services for a
+Fediverse / ActivityPub instance: sharing messages and stuff from/to
+other systems like Mastodon, Pleroma, Friendica, etc. Features:
+
+- Lightweight, minimal dependencies
+- Extensive support of ActivityPub operations, e.g. write public notes,
+  follow users, be followed, reply to the notes of others, admire
+  wonderful content (like or boost), write private messages...
+- Multiuser
+- Mastodon API support, so Mastodon-compatible apps can be used
+- Simple but effective web interface
+- Easily-accessed MUTE button to silence morons
+- Tested interoperability with related software
+- No database needed
+- Totally JavaScript-free
+- No cookies either
+- Not much bullshit
