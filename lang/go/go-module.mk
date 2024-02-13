@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.11 2024/02/11 19:28:18 bsiegert Exp $
+# $NetBSD: go-module.mk,v 1.12 2024/02/13 17:59:42 wiz Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -60,8 +60,8 @@ do-install:
 	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
 .endif
 
-.PHONY: show-go-modules
-show-go-modules: ${WRKDIR}/.extract_done
+.PHONY: print-go-modules show-go-modules
+print-go-modules show-go-modules: ${WRKDIR}/.extract_done
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} GOPROXY= ${GO} mod download -x
 .for dir in ${GO_EXTRA_MOD_DIRS}
 	${RUN} cd ${dir} && ${PKGSRC_SETENV} ${MAKE_ENV} GOPROXY= ${GO} mod download -x
