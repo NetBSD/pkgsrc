@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2023/11/18 04:07:28 taca Exp $
+$NetBSD: distinfo,v 1.13.2.1 2024/02/13 16:45:51 bsiegert Exp $
 
-BLAKE2s (bind-9.18.20.tar.xz) = da6374b0d437c6e816791ad972dfa0042898a356720fe0d54fdb0d2b967a0c36
-SHA512 (bind-9.18.20.tar.xz) = 1ad89e5aa3d83a3c6536c2931e2ecdf6aca0d9d2678cf45dca8b0fb37968f7ef7aedff5d351083e6b09aeee1329b8885fd06263b21f5ebcde959ef0d84a86ffb
-Size (bind-9.18.20.tar.xz) = 5506368 bytes
+BLAKE2s (bind-9.18.24.tar.xz) = be5193356fcdd06256343776425012970124d0940ff950ff31367be17b40ae9f
+SHA512 (bind-9.18.24.tar.xz) = 465f5b01570fdde5c95adfb780f54e0585814bd25baf914bb95bf5972f15a672e3e7b743a55f1804e69e17609d5a0cd66cc2bbab9174238b3c89e5ad732dc085
+Size (bind-9.18.24.tar.xz) = 5515528 bytes
 SHA1 (patch-bin_named_main.c) = 4e4a763c478f1fcecb7e65968cf6ca20dacf01f1
 SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 6e59d3f637ebb829eec2f76ba7c350fb5cf9be6d
@@ -12,7 +12,7 @@ SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
 SHA1 (patch-lib_dns_gssapi__link.c) = 72296598b0bdd2a57d0f38ecf1775e2898a041c6
 SHA1 (patch-lib_dns_include_dns_zone.h) = e6dfcd43430538ac2a39b217fcae0d81e4c4d163
 SHA1 (patch-lib_dns_lookup.c) = 6c7463aca16abf6bd578aba1733a3217608a39d3
-SHA1 (patch-lib_dns_rbtdb.c) = e8d61e1ba613b2a2fdcd3ff077e2e5b6ce2e45b2
+SHA1 (patch-lib_dns_rbtdb.c) = f216c1f629add101daf1cec45e1f693204beeefe
 SHA1 (patch-lib_dns_request.c) = 4a9d0409afcf9f989aa9297efb97c578b4863d9c
 SHA1 (patch-lib_dns_sdb.c) = ed447ec7a134e620765b25ee36124a19dfd9fab0
 SHA1 (patch-lib_dns_sdlz.c) = 4fc15a577c64501c10c144eab147e54686e80309
@@ -22,7 +22,7 @@ SHA1 (patch-lib_dns_zone.c) = cd7bc1e76caf1d664393efa318786c2b33c000de
 SHA1 (patch-lib_isc_include_isc_netmgr.h) = 48ac44c6a9b81e6b442deba6c075653d3691464b
 SHA1 (patch-lib_isc_net.c) = 743de2701fa96ef25e5689f40e381628cff641d5
 SHA1 (patch-lib_isc_netmgr_netmgr-int.h) = d84993edf254605f85421fbdd2fc523255c7316d
-SHA1 (patch-lib_isc_netmgr_netmgr.c) = 3df1d37061f6ceb37e309a0dc4f782fc35863146
+SHA1 (patch-lib_isc_netmgr_netmgr.c) = 0e94f78e0f6ac43197883adac7828a3f0d04291c
 SHA1 (patch-lib_isc_rwlock.c) = 1d114248ddee20db7a7429afab446f8b2f0dca82
 SHA1 (patch-lib_isc_siphash.c) = 2dd80dde7bd8e869a3cf03c1699665b56eaaf866
 SHA1 (patch-lib_isc_time.c) = 22780fd25d89a0ece46ec1624b3977ca4c46281a
