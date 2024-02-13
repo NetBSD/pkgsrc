@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.124 2024/02/12 08:54:31 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.125 2024/02/13 13:59:36 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25880,3 +25880,5 @@ postgresql-server>=14<14.11	arbitrary-command-execution	https://nvd.nist.gov/vul
 postgresql-server>=15<15.6	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
 postgresql-server>=16<16.2	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
 asterisk-13.*		eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+unbound<1.19.1	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387
+unbound<1.19.1	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50868
