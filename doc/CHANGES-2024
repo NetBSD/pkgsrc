@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1215 2024/02/13 13:54:08 he Exp $
+$NetBSD: CHANGES-2024,v 1.1216 2024/02/13 15:25:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1998,3 +1998,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-puremagic to 1.20 [adam 2024-02-13]
 	Updated net/bind918 to 9.18.24 [taca 2024-02-13]
 	Updated net/unbound to 1.19.1 [he 2024-02-13]
+	Updated net/bind916 to 9.16.48 [taca 2024-02-13]
