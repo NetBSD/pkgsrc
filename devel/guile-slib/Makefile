@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2022/10/24 14:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/02/13 18:11:39 wiz Exp $
 
-SLIBVERSION=	3.2.7
+SLIBVERSION=	3.3.1
 DISTNAME=	guile-slib-${SLIBVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	# empty
