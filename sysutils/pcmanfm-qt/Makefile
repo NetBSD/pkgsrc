@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2023/11/14 01:01:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.36 2024/02/13 17:26:41 gutteridge Exp $
 
-DISTNAME=	pcmanfm-qt-1.4.0
+DISTNAME=	pcmanfm-qt-1.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
