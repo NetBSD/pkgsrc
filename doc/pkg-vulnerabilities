@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.127 2024/02/13 15:24:30 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.128 2024/02/13 22:25:11 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25892,3 +25892,5 @@ bind>=9.16<9.16.48	denial-of-service	https://kb.isc.org/docs/cve-2023-5517
 bind>=9.16<9.16.48	denial-of-service	https://kb.isc.org/docs/cve-2023-5679
 bind>=9.16<9.16.48	denial-of-service	https://kb.isc.org/docs/cve-2023-50387
 bind>=9.16<9.16.48	denial-of-service	https://kb.isc.org/docs/cve-2023-50868
+dnsmasq<2.90	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50387
+dnsmasq<2.90	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50868
