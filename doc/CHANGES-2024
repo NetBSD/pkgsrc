@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1218 2024/02/13 17:29:50 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1219 2024/02/13 17:48:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2001,3 +2001,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/bind916 to 9.16.48 [taca 2024-02-13]
 	Updated sysutils/pcmanfm-qt to 1.4.1 [gutteridge 2024-02-13]
 	Updated meta-pkgs/lxqt to 1.4.0nb2 [gutteridge 2024-02-13]
+	Updated devel/jj to 0.14.0 [wiz 2024-02-13]
