@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2024/01/21 20:03:21 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.7 2024/02/13 18:04:19 wiz Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.110.9.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.110.9.zip
@@ -106,8 +106,8 @@ GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/json-iterator/go/@v/v1.1.12.mod
 GO_MODULE_FILES+=	github.com/json-iterator/go/@v/v1.1.12.zip
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.17.4.mod
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.17.4.zip
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.17.2.mod
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.17.2.zip
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.6.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.6.zip
