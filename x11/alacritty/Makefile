@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2024/01/10 21:39:54 pin Exp $
+# $NetBSD: Makefile,v 1.33 2024/02/13 11:10:39 pin Exp $
 
 DISTNAME=	alacritty-0.13.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://alacritty.org/
