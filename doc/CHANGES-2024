@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1209 2024/02/13 08:07:38 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1210 2024/02/13 08:08:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1991,3 +1991,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-black to 24.2.0 [adam 2024-02-13]
 	Updated graphics/py-tifffile to 2024.2.12 [adam 2024-02-13]
 	Updated shells/oh-my-posh to 19.10.0 [pin 2024-02-13]
+	Updated sysutils/zoxide to 0.9.3 [pin 2024-02-13]
