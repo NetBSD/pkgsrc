@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/18 16:26:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/02/13 18:17:22 wiz Exp $
 
-BLAKE2s (tree-sitter-ruby-0.19.0.tar.gz) = f45e80f8c408a0b74e1ae37a43bc8f100bb999f072c72ba92f2e93bbf9bd5483
-SHA512 (tree-sitter-ruby-0.19.0.tar.gz) = dc092b55a73a7ffaf698c784e0a6e8fd115478ce8eb2de00301bb8c2455044a4b7f4cd04ab36eb19401386b55088ad3fba6cb9cce9856b6f607bd76caaf0900b
-Size (tree-sitter-ruby-0.19.0.tar.gz) = 325077 bytes
+BLAKE2s (tree-sitter-ruby-0.20.1.tar.gz) = f0e1c3f173543ed762bc7727ed1f9bbaff20a04cd2c48fda02c79517af878fa1
+SHA512 (tree-sitter-ruby-0.20.1.tar.gz) = 96d68cb7c557d341def9cbb9a51ecf12b7572bb46b9588bd3dab6f2598b6ce73df2fbbae8f0aa08737b34bda55e98eff8499921ea68f7389a7237fa32f62793b
+Size (tree-sitter-ruby-0.20.1.tar.gz) = 601038 bytes
