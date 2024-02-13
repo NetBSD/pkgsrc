@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1781 2024/02/12 19:03:54 adam Exp $
+# $NetBSD: Makefile,v 1.1782 2024/02/13 21:50:02 schmonz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1104,6 +1104,7 @@ SUBDIR+=	shibboleth-sp
 SUBDIR+=	shoutrrr
 SUBDIR+=	siege
 SUBDIR+=	sitecopy
+SUBDIR+=	snac
 SUBDIR+=	snarf
 SUBDIR+=	snownews
 SUBDIR+=	so
