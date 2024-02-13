@@ -1,4 +1,4 @@
-.# $NetBSD: Makefile,v 1.11 2024/02/13 19:34:38 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2024/02/13 19:35:46 gdt Exp $
 
 DISTNAME=	paho-mqtt-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
