@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.12 2024/02/13 17:59:42 wiz Exp $
+# $NetBSD: go-module.mk,v 1.13 2024/02/13 18:06:05 wiz Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -13,7 +13,8 @@
 #
 # GO_MODULE_FILES (optional)
 #	List of dependency files to be downloaded from the Go module proxy.
-#	Can be filled out from the output of "make show-go-modules".
+#	Can be filled out from the output of "make show-go-modules" or
+#	"make print-go-modules".
 #
 # GO_EXTRA_MOD_DIRS (optional)
 #
