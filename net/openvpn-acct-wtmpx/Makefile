@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2023/11/18 12:51:19 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/13 19:34:38 gdt Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
 DISTNAME=	openvpn-acct-wtmpx-20130210
-PKGREVISION=	5
+PKGREVISION=	6
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${OPENVPN_DISTFILE}
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/openvpn-acct-wtmpx/
