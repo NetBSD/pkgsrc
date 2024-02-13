@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/11/14 01:01:49 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/13 17:26:41 gutteridge Exp $
 bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
@@ -19,6 +19,7 @@ share/pcmanfm-qt/translations/pcmanfm-qt_el.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_en_GB.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_es.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_et.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_eu.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_fi.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_fil.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_fr.qm
@@ -33,6 +34,7 @@ share/pcmanfm-qt/translations/pcmanfm-qt_it.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ja.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_kk.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ko.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_lg.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_lt.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_lv.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_nb_NO.qm
