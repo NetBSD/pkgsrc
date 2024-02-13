@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/02/13 19:35:46 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/13 19:38:38 gdt Exp $
 
+# Update to 2.0.0 is on hold, until after 2024Q1.  It has an API break
+# requiring modification of all users, and those users are just now
+# coping with making those changes (e.g. weewx extensions).
 DISTNAME=	paho-mqtt-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
