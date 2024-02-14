@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/10/12 22:42:59 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/14 19:58:02 markd Exp $
 
 DISTNAME=	oldstandard.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.6.64464
-TEXLIVE_REV=	64464
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.7a
+TEXLIVE_REV=	69185
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/oldstandard
