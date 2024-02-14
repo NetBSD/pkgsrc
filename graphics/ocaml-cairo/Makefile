@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/02/14 15:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/02/14 15:45:09 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.6.4
 PKGREVISION=	9
@@ -21,10 +21,10 @@ USE_TOOLS+=	pkg-config
 # https://github.com/Chris00/ocaml-cairo/issues/35
 # seems related but has not solution
 # override detection:
-CAIRO_CFLAGS!=	pkg-config --cflags cairo
-CAIRO_LIBS!=	pkg-config --libs cairo
-MAKE_ENV+=	CAIRO_CFLAGS=${CAIRO_CFLAGS:Q}
-MAKE_ENV+=	CAIRO_LIBS=${CAIRO_LIBS:Q}
+CAIRO_CFLAGS=	pkg-config --cflags cairo
+CAIRO_LIBS=	pkg-config --libs cairo
+MAKE_ENV+=	CAIRO_CFLAGS=${CAIRO_CFLAGS:sh:Q}
+MAKE_ENV+=	CAIRO_LIBS=${CAIRO_LIBS:sh:Q}
 # but this isn't enough, because it leads to:
 # Error: Rule failed to generate the following targets:
 # - src/cairo_ocaml.h
