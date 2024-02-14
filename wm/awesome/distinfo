@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2023/05/08 00:12:41 nikita Exp $
+$NetBSD: distinfo,v 1.28 2024/02/14 03:31:15 gutteridge Exp $
 
 BLAKE2s (awesome-4.3.tar.xz) = 996ff487c8d2f850bf78d26f151ea5269c96cff94ccae95626ec2e0cb59e55d4
 SHA512 (awesome-4.3.tar.xz) = c5ef1e8dc593e7783b895d22143154aea8f211beeda24672a7ee4ed5112b4f4284043f848a151f3d3c4f569e91308670367a4353f705b20511b36495b22fa3f5
 Size (awesome-4.3.tar.xz) = 1037816 bytes
 SHA1 (patch-CMakeLists.txt) = b4477b425846533dfe2700a9195146b25db0bd9b
-SHA1 (patch-awesomeConfig.cmake) = 5748d5495e9a0e21f7d80b78d2e73423657f1866
+SHA1 (patch-awesomeConfig.cmake) = ec4247f9123d717b2340693be215a58be2dc21f7
