@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/14 11:17:48 markd Exp $
+
+BLAKE2s (krb5-strength-3.3.tar.gz) = f4242675f2198005339230d18c5be636562979bc3bc58dc339014a97a0f41202
+SHA512 (krb5-strength-3.3.tar.gz) = 4bb2b06e9101b103d33275bbe77c05a7bac6116993efb0e4540e76dd16d48a7262be9f367998d6789b4bf3eb655d6898e8617828386717a07c9132e97f0258ec
+Size (krb5-strength-3.3.tar.gz) = 584871 bytes
