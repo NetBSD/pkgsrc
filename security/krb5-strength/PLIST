@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/14 11:17:48 markd Exp $
+bin/heimdal-history
+bin/heimdal-strength
+bin/krb5-strength-wordlist
+lib/krb5/plugins/pwqual/strength.la
+man/man1/heimdal-history.1
+man/man1/heimdal-strength.1
+man/man1/krb5-strength-wordlist.1
+man/man5/krb5-strength.5
