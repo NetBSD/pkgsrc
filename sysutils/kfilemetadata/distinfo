@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:44 nia Exp $
-
-BLAKE2s (kfilemetadata-4.14.3.tar.xz) = 7fbf34ab729cbf417a39094ee44802559bfea6becee16dcff7ba16ac2296828b
-SHA512 (kfilemetadata-4.14.3.tar.xz) = d7321b7e1ad755c0dc267b236a33a011377ba309d94c1497c081edad82171452595ce113428048e455b8b71f3ea480e4e76e797e31a74edd24bcf42617c59acb
-Size (kfilemetadata-4.14.3.tar.xz) = 35908 bytes
-SHA1 (patch-CMakeLists.txt) = 5315fab780edfbcfa43808b2adf38dbcef94935d
-SHA1 (patch-src_extractors_ffmpegextractor.cpp) = 9578c637c2babb1e6c640aea12431b9621b0174c
