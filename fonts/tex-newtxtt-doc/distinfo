@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/14 19:55:41 markd Exp $
 
-BLAKE2s (newtxtt.doc.r54512.tar.xz) = 64abd419df9f3268ea4495b565117687049ce5120307bd182a52d6fff337ef94
-SHA512 (newtxtt.doc.r54512.tar.xz) = 0a29f11edadeec4284ac9c9c04230a925517b198eb3653a456ab68bf495a9dd0b846cea4c3e1a425539f0b834d37f8f9a7f20e5945e8c8efea7ab4bb9342f6fd
-Size (newtxtt.doc.r54512.tar.xz) = 171356 bytes
+BLAKE2s (newtxtt.doc.r69451.tar.xz) = f1008d1d1aac1956d8ba4e5404e3ab9ae5daa30de68d9b110274d3019b564507
+SHA512 (newtxtt.doc.r69451.tar.xz) = 533360ee2cb99b4c71bd9a1b77e51e4aa341c8ea58ad587252a896c8ecf4dc2b92c92f9ed2af4db042ab68a5710022186c3cdc8787d47459037ec8171be73e40
+Size (newtxtt.doc.r69451.tar.xz) = 194632 bytes
