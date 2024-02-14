@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/11 07:21:20 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/02/14 19:45:29 markd Exp $
 
-BLAKE2s (mpchess.doc.r66943.tar.xz) = fa483d0f0ef223992ae8b386843e6b84857e1d0141c96b18a03d10738ca180c6
-SHA512 (mpchess.doc.r66943.tar.xz) = a7c634ecb4d109fcc3267e2aa523fb847cb370faccbbc2e946c5418de5288e1e2faf68693474747f42c0bf2fd6626274d520cfc1aff147170e410e899af5ae5c
-Size (mpchess.doc.r66943.tar.xz) = 1207832 bytes
+BLAKE2s (mpchess.doc.r67704.tar.xz) = 4895d54fe25ebe61643e6f10bbd786a54ace1a07299857acbc15ad88b4218f14
+SHA512 (mpchess.doc.r67704.tar.xz) = c859e9f5df0d24bd1eb59dfd39dc97cd1ba6e713b33e37d17128388928071e2da8f41180da333fea34ee6215585208de193a381205fd866142f341e1856485d2
+Size (mpchess.doc.r67704.tar.xz) = 1472768 bytes
