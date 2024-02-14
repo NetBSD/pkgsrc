@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/10/06 10:57:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/14 20:00:00 markd Exp $
 
-BLAKE2s (orcidlink.doc.r59560.tar.xz) = 5844b7a672a057a1743b1bee5c265364103308fd1aa0d2110dbeb68dc84251af
-SHA512 (orcidlink.doc.r59560.tar.xz) = c20f8e77d3c5866f414f0dcc47d84fa3328492a003a81be1ac3aa69f9ebc2bfff7198be5656192ba7bc4330ca7b773c6d319ec389bd0ad9821ebd6159b7d0b97
-Size (orcidlink.doc.r59560.tar.xz) = 174664 bytes
+BLAKE2s (orcidlink.doc.r69253.tar.xz) = fdd365fff132897f4de4240a3d5bbbdd72818d796f7258e468814098240f8ef4
+SHA512 (orcidlink.doc.r69253.tar.xz) = ddbea7f5c36f26e329c8e58c4d8ab3ba6aa2371a564505bf1a1a80a2f89dacfaeba706ac99940da6a742df262a25acce0f7b812817cc4db99793ad11e06cf6cc
+Size (orcidlink.doc.r69253.tar.xz) = 178512 bytes

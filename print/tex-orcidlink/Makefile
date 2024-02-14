@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/10/03 19:24:55 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/14 20:00:00 markd Exp $
 
 DISTNAME=	orcidlink
-PKGNAME=	tex-${DISTNAME}-1.0.4
-TEXLIVE_REV=	59560
+PKGNAME=	tex-${DISTNAME}-1.0.5
+TEXLIVE_REV=	69253
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/orcidlink
