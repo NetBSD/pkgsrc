@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/02 04:45:57 charlotte Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:04:05 charlotte Exp $
 bin/cromagrally
 libexec/CroMagRally
 share/cromagrally/Data/Audio/Announcer/1st.aiff
@@ -48,7 +48,7 @@ share/cromagrally/Data/Audio/EgyptSong.aiff
 share/cromagrally/Data/Audio/EuroSong.aiff
 share/cromagrally/Data/Audio/IceSong.aiff
 share/cromagrally/Data/Audio/JungleSong.aiff
-share/cromagrally/Data/Audio/LevelSpecific/Blowdart.aiff
+share/cromagrally/Data/Audio/LevelSpecific/BlowDart.aiff
 share/cromagrally/Data/Audio/LevelSpecific/Bubbles.aiff
 share/cromagrally/Data/Audio/LevelSpecific/Catapult.aiff
 share/cromagrally/Data/Audio/LevelSpecific/Chant.aiff
@@ -101,7 +101,6 @@ share/cromagrally/Data/Images/TitleScreen.jpg
 share/cromagrally/Data/Images/TrackSelectScreen.png
 share/cromagrally/Data/Images/VehicleSelectScreen.jpg
 share/cromagrally/Data/Images/Vignette.png
-share/cromagrally/Data/Models/Winners.bg3d
 share/cromagrally/Data/Models/atlantis.bg3d
 share/cromagrally/Data/Models/aztec.bg3d
 share/cromagrally/Data/Models/carparts.bg3d
@@ -120,6 +119,7 @@ share/cromagrally/Data/Models/scandinavia.bg3d
 share/cromagrally/Data/Models/stonehenge.bg3d
 share/cromagrally/Data/Models/tarpits.bg3d
 share/cromagrally/Data/Models/weapons.bg3d
+share/cromagrally/Data/Models/winners.bg3d
 share/cromagrally/Data/Skeletons/Beetle.bg3d
 share/cromagrally/Data/Skeletons/Beetle.skeleton.rsrc
 share/cromagrally/Data/Skeletons/BirdBomb.bg3d
@@ -150,8 +150,8 @@ share/cromagrally/Data/Skeletons/Mummy.bg3d
 share/cromagrally/Data/Skeletons/Mummy.skeleton.rsrc
 share/cromagrally/Data/Skeletons/PolarBear.bg3d
 share/cromagrally/Data/Skeletons/PolarBear.skeleton.rsrc
-share/cromagrally/Data/Skeletons/Pteradactyl.skeleton.rsrc
 share/cromagrally/Data/Skeletons/Pterodactyl.bg3d
+share/cromagrally/Data/Skeletons/Pterodactyl.skeleton.rsrc
 share/cromagrally/Data/Skeletons/Shark.bg3d
 share/cromagrally/Data/Skeletons/Shark.skeleton.rsrc
 share/cromagrally/Data/Skeletons/Troll.bg3d
@@ -234,7 +234,6 @@ share/cromagrally/Data/Sprites/trackselectsp.png
 share/cromagrally/Data/Sprites/trackselectsp.txt
 share/cromagrally/Data/Sprites/wallfont.png
 share/cromagrally/Data/Sprites/wallfont.txt
-share/cromagrally/Data/System/Application.rsrc
 share/cromagrally/Data/System/gamecontrollerdb.txt
 share/cromagrally/Data/System/kerning.txt
 share/cromagrally/Data/System/strings.csv
