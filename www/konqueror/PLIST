@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/02/06 11:17:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/14 10:12:48 markd Exp $
 bin/fsview
 bin/kcreatewebarchive
 bin/kfmclient
@@ -667,6 +667,7 @@ share/doc/HTML/zh_CN/kcontrol5/history/index.docbook
 share/examples/kde-xdg/autostart/konqy_preload.desktop
 share/examples/kde-xdg/konqsidebartngrc
 share/examples/kde-xdg/translaterc
+share/examples/kde-xdg/useragenttemplatesrc
 share/icons/hicolor/128x128/apps/konqueror.png
 share/icons/hicolor/128x128/apps/webengine.png
 share/icons/hicolor/16x16/actions/babelfish.png
@@ -747,7 +748,6 @@ share/konqueror/pics/indicator_connect.png
 share/konqueror/pics/indicator_empty.png
 share/konqueror/pics/indicator_noconnect.png
 share/konqueror/pics/indicator_viewactive.png
-share/konqueror/webengine_dictionaries/en_US.bdic
 share/kservices5/fsview_part.desktop
 share/kservices5/konq_sidebartng.desktop
 share/kservices5/org.kde.konqueror.desktop
