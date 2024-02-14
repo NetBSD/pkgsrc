@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/14 02:43:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/14 19:38:56 markd Exp $
 share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-bg.inc.sty
 share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-cs.inc.sty
 share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-da.inc.sty
@@ -24,6 +24,5 @@ share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-sk.inc.sty
 share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-sl.inc.sty
 share/texmf-dist/tex/latex/mhchem/hpstatement.inc/hpstatement-sv.inc.sty
 share/texmf-dist/tex/latex/mhchem/hpstatement.sty
-share/texmf-dist/tex/latex/mhchem/mhchem.4ht
 share/texmf-dist/tex/latex/mhchem/mhchem.sty
 share/texmf-dist/tex/latex/mhchem/rsphrase.sty

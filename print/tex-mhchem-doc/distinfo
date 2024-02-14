@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/04/14 02:43:43 markd Exp $
+$NetBSD: distinfo,v 1.14 2024/02/14 19:38:56 markd Exp $
 
-BLAKE2s (mhchem.doc.r61456.tar.xz) = 419d9cb873b0c77770cbb9774660cc91a09960a4407e9563996aa32ef918ae59
-SHA512 (mhchem.doc.r61456.tar.xz) = cd4c41a329489149b3f2bc79dd50e0517707681f452888394870459d10888095a0cbb7b7c18500f04264c6c85f791d9af9d799b1b4e221e991af32690e7405ba
-Size (mhchem.doc.r61456.tar.xz) = 426852 bytes
+BLAKE2s (mhchem.doc.r69639.tar.xz) = f29d74e8db9f35003f090c0f30f69d3d3906d812eb3ba2cba35e9fedf85c15d3
+SHA512 (mhchem.doc.r69639.tar.xz) = 487a5d90782d1c0814c7110388e5277e70dff9adc82048f8b5c33ffbf8c82e9df73293b4ab78bc83c2ef23674e341a2fb15f6b3268d1fdff1aa57d4d3813ea1e
+Size (mhchem.doc.r69639.tar.xz) = 427988 bytes
