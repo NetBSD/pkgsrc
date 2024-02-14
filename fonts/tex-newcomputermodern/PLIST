@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:48:10 markd Exp $
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08-Book.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08-BookItalic.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08-Italic.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08-Regular.otf
+share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08Devanagari-Book.otf
+share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM08Devanagari-Regular.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-Bold.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-BoldItalic.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-Book.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-BookItalic.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-Italic.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10-Regular.otf
+share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10Devanagari-Bold.otf
+share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10Devanagari-Book.otf
+share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCM10Devanagari-Regular.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCMMath-Book.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCMMath-Regular.otf
 share/texmf-dist/fonts/opentype/public/newcomputermodern/NewCMMono10-Bold.otf
