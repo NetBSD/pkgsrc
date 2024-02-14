@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/14 00:45:26 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/14 19:43:32 markd Exp $
 
 DISTNAME=	modes
-PKGNAME=	tex-${DISTNAME}-4.2
-TEXLIVE_REV=	56303
+PKGNAME=	tex-${DISTNAME}-4.3
+TEXLIVE_REV=	69113
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/modes
