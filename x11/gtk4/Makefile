@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2024/01/16 10:00:16 prlw1 Exp $
+# $NetBSD: Makefile,v 1.41 2024/02/14 08:40:36 adam Exp $
 
-DISTNAME=	gtk-4.12.4
+DISTNAME=	gtk-4.12.5
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,17 +38,6 @@ PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-unix-print.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
-
-PLIST_VARS+=		dylib no-dylib
-.if ${SHLIB_TYPE} == "dylib"
-PLIST.dylib=		yes
-SOEXT=			dylib
-.else
-PLIST.no-dylib=		yes
-SOEXT=			so
-.endif
-PLIST_SUBST+=		SOEXT=${SOEXT}
-PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
