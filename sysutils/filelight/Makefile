@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2024/02/06 11:17:42 markd Exp $
+# $NetBSD: Makefile,v 1.106 2024/02/14 07:32:06 markd Exp $
 
 DISTNAME=	filelight-${KAPPSVER}
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
+
+USE_CXX_FEATURES+=	c++20
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
