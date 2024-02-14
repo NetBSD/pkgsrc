@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:55:41 markd Exp $
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttAec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttAqec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttBec.enc
@@ -134,6 +134,7 @@ share/texmf-dist/fonts/tfm/public/newtxtt/tcxbttz.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/tcxbttzsl.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/tcxttz.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/tcxttzsl.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/txttz.tfm
 share/texmf-dist/fonts/type1/public/newtxtt/newtxbtt.pfb
 share/texmf-dist/fonts/type1/public/newtxtt/newtxbttsc.pfb
 share/texmf-dist/fonts/type1/public/newtxtt/newtxtt.pfb
