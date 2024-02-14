@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/14 21:29:25 adam Exp $
 
-DISTNAME=	EditorConfig-0.12.3
+DISTNAME=	EditorConfig-0.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/EditorConfig/editorconfig-core/}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/EditorConfig/}
 
@@ -11,13 +10,16 @@ HOMEPAGE=	https://editorconfig.org/
 COMMENT=	Editorconfig python library
 LICENSE=	python-software-foundation AND modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} editorconfig editorconfig-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
