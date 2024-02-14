@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2024/02/06 02:54:34 markd Exp $
+# $NetBSD: Makefile,v 1.73 2024/02/14 07:14:25 markd Exp $
 
 DISTNAME=	libqalculate-4.9.0
 PKGNAME=	qalculate-4.9.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Qalculate/}
 GITHUB_PROJECT=	libqalculate
@@ -20,6 +21,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf automake
 USE_TOOLS+=		gmake intltool msgfmt msgmerge xgettext pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN=
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libqalculate.pc.in
 
 UNLIMIT_RESOURCES=	datasize
