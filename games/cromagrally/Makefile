@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/01/30 14:21:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/14 19:04:05 charlotte Exp $
 
-DISTNAME=	cromagrally-3.0.0
-PKGREVISION=	3
+DISTNAME=	cromagrally-3.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 
@@ -11,7 +10,7 @@ COMMENT=	Source port of Cro-Mag Rally from Pangea Software
 LICENSE=	cc-by-nc-sa-v4.0-license
 
 GITHUB_SUBMODULES=	\
-	jorio Pomme 88a3e4625b00f63cde90aae5ce383d85c83cc5a8 extern/Pomme
+	jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 extern/Pomme
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
