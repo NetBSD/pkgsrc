@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/24 06:50:34 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/14 03:37:57 gutteridge Exp $
 
 DISTNAME=	bandit-1.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Security oriented static analyser for Python code
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-gitpython>=3.1.30:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
