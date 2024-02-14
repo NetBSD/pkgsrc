@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/14 19:41:04 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-2.7
-PKGREVISION=	1
-TEXLIVE_REV=	65252
+PKGNAME=	tex-${DISTNAME}-2.9
+TEXLIVE_REV=	69163
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/minted
 COMMENT=	Highlighted source code for LaTeX
-LICENSE=	lppl-1.3c
+LICENSE=	lppl-1.3c AND modified-bsd
 
 DEPENDS+=	tex-catchfile-[0-9]*:../../print/tex-catchfile
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
@@ -20,6 +19,7 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 DEPENDS+=	tex-kvoptions-[0-9]*:../../print/tex-kvoptions
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
+DEPENDS+=	tex-newfloat-[0-9]*:../../print/tex-newfloat
 DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-upquote-[0-9]*:../../print/tex-upquote
