@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/01 12:07:38 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/02/14 19:41:04 markd Exp $
 
-BLAKE2s (minted.doc.r65252.tar.xz) = 5177e530e99e6d8e3e58b05370b3807c2bbec68d2aca29ccf7499c936ca5cdc8
-SHA512 (minted.doc.r65252.tar.xz) = 41640837e53d5b9cdce55a8f29707fe4f654da19813efbc1770df39b8f00aabdf600032dd504a8cebe23b4ef91e226014a94e031c52d0458f0684c5a53bd276a
-Size (minted.doc.r65252.tar.xz) = 837736 bytes
+BLAKE2s (minted.doc.r69163.tar.xz) = dd810ed5f3f24453c85fcc78b69ecb75be14f7726480a67f68b222a60ce37cb0
+SHA512 (minted.doc.r69163.tar.xz) = 6ddf64e40d3d28ca2bedd8a8a9789f1839c63a96f5aee3f71155722876f8ddf0634c2022ae4c02e1e9336a76dc8477994654d20e9d5949f2054017fcd09a9146
+Size (minted.doc.r69163.tar.xz) = 850300 bytes

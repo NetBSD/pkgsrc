@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/14 02:48:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/14 19:41:04 markd Exp $
+share/texmf-dist/doc/latex/minted/DEPENDS.txt
 share/texmf-dist/doc/latex/minted/README
 share/texmf-dist/doc/latex/minted/minted.pdf
