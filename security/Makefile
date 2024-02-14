@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.937 2024/02/11 21:46:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.938 2024/02/14 11:17:47 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -166,6 +166,7 @@ SUBDIR+=	kgpg
 SUBDIR+=	kleopatra
 SUBDIR+=	knc
 SUBDIR+=	kpcli
+SUBDIR+=	krb5-strength
 SUBDIR+=	kstart
 SUBDIR+=	kwallet
 SUBDIR+=	kwalletmanager
