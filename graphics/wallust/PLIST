@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/14 08:16:40 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/14 10:31:58 pin Exp $
 bin/wallust
+man/man1/wallust-cs.1
+man/man1/wallust-run.1
+man/man1/wallust-theme.1
+man/man1/wallust.1
+man/man5/wallust.5
 share/examples/wallust/wallust.toml
