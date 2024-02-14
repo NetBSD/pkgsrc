@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/02/08 06:06:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/14 21:50:29 adam Exp $
 
-DISTNAME=	jwcrypto-1.5.3
+DISTNAME=	jwcrypto-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jwcrypto/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
