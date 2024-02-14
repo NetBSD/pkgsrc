@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2023/10/19 13:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/02/14 08:13:23 wiz Exp $
 
-DISTNAME=		xkeyboard-config-2.40
+DISTNAME=		xkeyboard-config-2.41
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.xz
@@ -26,8 +26,6 @@ BUILD_DEFS+=		XKBCOMPDIR
 
 MESON_ARGS+=		-Dxorg-rules-symlinks=true
 
-###
-REPLACE_SH=		rules/merge.sh
 ###
 ### Keymaps, rules, etc. are installed here.
 ###
