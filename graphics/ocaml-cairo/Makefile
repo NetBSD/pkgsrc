@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/02/14 15:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/02/14 15:59:56 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.6.4
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 GITHUB_PROJECT=	ocaml-cairo
@@ -31,9 +31,9 @@ MAKE_ENV+=	CAIRO_LIBS=${CAIRO_LIBS:sh:Q}
 # so create this file manually and remove the existing logic
 # to avoid an error during configure (see patch-src_dune)
 #
-# TODO: enable freetype2
 pre-configure:
-	cp ${WRKSRC}/src/cairo_ocaml.h.p ${WRKSRC}/src/cairo_ocaml.h
+	${SED} -e "s,.*#define *OCAML_CAIRO_HAS_FT .*,#define OCAML_CAIRO_HAS_FT," \
+		${WRKSRC}/src/cairo_ocaml.h.p > ${WRKSRC}/src/cairo_ocaml.h
 
 # (See options.mk.)  Upstream says that lablgtk is required, but it is
 # not.

@@ -1,4 +1,8 @@
-$NetBSD: patch-src_dune,v 1.1 2024/02/14 15:44:19 wiz Exp $
+$NetBSD: patch-src_dune,v 1.2 2024/02/14 15:59:56 wiz Exp $
+
+Avoid double rule for cairo_ocaml.h
+(other "rule" introduced by creating cairo_ocaml.h manually
+in pkgsrc Makefile).
 
 --- src/dune.orig	2024-02-14 15:40:40.921184880 +0000
 +++ src/dune
