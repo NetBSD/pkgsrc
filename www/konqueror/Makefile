@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/02/06 11:17:44 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/14 10:12:48 markd Exp $
 
 DISTNAME=	konqueror-${KAPPSVER}
 CATEGORIES=	www
@@ -25,6 +25,7 @@ SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_FILES.xdg+=	settings/konqhtml/CMakeLists.txt
 SUBST_FILES.xdg+=	sidebar/CMakeLists.txt
 SUBST_FILES.xdg+=	plugins/babelfish/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
@@ -37,8 +38,11 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/konqsidebartngrc \
 		${PKG_SYSCONFDIR}/xdg/konqsidebartngrc
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/translaterc \
 		${PKG_SYSCONFDIR}/xdg/translaterc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/useragenttemplatesrc \
+		${PKG_SYSCONFDIR}/xdg/useragenttemplatesrc
 
 .include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/kdoctools/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/kdesu/buildlink3.mk"
