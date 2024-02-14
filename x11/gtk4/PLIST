@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/11/30 06:22:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/14 08:40:36 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -388,13 +388,12 @@ lib/girepository-1.0/Gdk-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
-lib/gtk-4.0/4.0.0/media/libmedia-ffmpeg.${SOEXT}
-${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.${SOEXT}
-lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.${SOEXT}
-lib/libgtk-4.${SOEXT}
-${PLIST.dylib}lib/libgtk-4.1.dylib
-${PLIST.no-dylib}lib/libgtk-4.so.1
-${PLIST.no-dylib}lib/libgtk-4.so.1.1200.4
+lib/gtk-4.0/4.0.0/media/libmedia-ffmpeg.so
+${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
+lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
+lib/libgtk-4.so
+lib/libgtk-4.so.1
+lib/libgtk-4.so.1.1200.5
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
 ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
@@ -415,20 +414,27 @@ share/glib-2.0/schemas/org.gtk.gtk4.Settings.ColorChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.gtk4.Settings.Debug.gschema.xml
 share/glib-2.0/schemas/org.gtk.gtk4.Settings.EmojiChooser.gschema.xml
 share/glib-2.0/schemas/org.gtk.gtk4.Settings.FileChooser.gschema.xml
+share/gtk-4.0/emoji/bn.gresource
 share/gtk-4.0/emoji/da.gresource
 share/gtk-4.0/emoji/de.gresource
 share/gtk-4.0/emoji/es.gresource
+share/gtk-4.0/emoji/et.gresource
+share/gtk-4.0/emoji/fi.gresource
 share/gtk-4.0/emoji/fr.gresource
+share/gtk-4.0/emoji/hi.gresource
 share/gtk-4.0/emoji/hu.gresource
 share/gtk-4.0/emoji/it.gresource
+share/gtk-4.0/emoji/ja.gresource
 share/gtk-4.0/emoji/ko.gresource
 share/gtk-4.0/emoji/lt.gresource
 share/gtk-4.0/emoji/ms.gresource
+share/gtk-4.0/emoji/nb.gresource
 share/gtk-4.0/emoji/nl.gresource
 share/gtk-4.0/emoji/pl.gresource
 share/gtk-4.0/emoji/pt.gresource
 share/gtk-4.0/emoji/ru.gresource
 share/gtk-4.0/emoji/sv.gresource
+share/gtk-4.0/emoji/th.gresource
 share/gtk-4.0/emoji/uk.gresource
 share/gtk-4.0/emoji/zh.gresource
 share/gtk-4.0/gtk4builder.rng
