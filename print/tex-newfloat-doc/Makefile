@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/10 03:56:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/14 19:51:27 markd Exp $
 
 DISTNAME=	newfloat.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.1l
-TEXLIVE_REV=	52906
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
+TEXLIVE_REV=	68434
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/newfloat
