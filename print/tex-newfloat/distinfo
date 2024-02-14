@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/14 19:51:27 markd Exp $
 
-BLAKE2s (newfloat.r52906.tar.xz) = 86969f8b5877b51ebbc84762aa1dc9929914107d2a5e1421f460844f0d4178d3
-SHA512 (newfloat.r52906.tar.xz) = 2cd4d1e5097bd6b9abd25621fe64590e67f8933a5292f83277dd546cb949c6193af04e16a72e61c3023293f6471ed41e9b46c23dd4c6c19428c7875cf0279aa8
-Size (newfloat.r52906.tar.xz) = 5592 bytes
+BLAKE2s (newfloat.r68434.tar.xz) = b74e81c2ae7e1b9c522b52e3f73462994e956ebe48972928215b84fc1e5bf11d
+SHA512 (newfloat.r68434.tar.xz) = 6b7ec618044ee10c16722460fccf4e3b71092ed5fc902b0aff431c7407d50e97bc27a2e9bf4c561df50da7d605a3a1ea95c20f47727111e7077e338f0c0e483e
+Size (newfloat.r68434.tar.xz) = 6816 bytes

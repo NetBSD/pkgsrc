@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:51:27 markd Exp $
 share/texmf-dist/tex/latex/newfloat/newfloat.sty
+share/texmf-dist/tex/latex/newfloat/newfloat_v1.0.sty
+share/texmf-dist/tex/latex/newfloat/newfloat_v1.1.sty
