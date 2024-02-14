@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/06 10:49:54 markd Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/14 07:45:11 markd Exp $
 
 DISTNAME=	libksysguard-${PLASMAVER}
 CATEGORIES=	sysutils
@@ -32,6 +32,7 @@ CONF_FILES+=	${PREFIX}/share/examples/libksysguard/org.kde.ksysguard.processlist
 
 INSTALLATION_DIRS+=	share/examples/libksysguard
 
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
