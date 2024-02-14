@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/06/11 07:25:53 markd Exp $
+$NetBSD: distinfo,v 1.13 2024/02/14 19:53:46 markd Exp $
 
-BLAKE2s (newtxsf.doc.r67051.tar.xz) = 6b2ade15cd0bdad37c2ce727e07b32afa733d59a7b6bad2f99585174722cae65
-SHA512 (newtxsf.doc.r67051.tar.xz) = d09946c13c3ae08339933fd965a1740eaa660413067878e44ed5bb8a249dd23c76acdfa01101a8ffa11eeae3f277a40394023c0d40142908498a1be0d95abbc6
-Size (newtxsf.doc.r67051.tar.xz) = 263224 bytes
+BLAKE2s (newtxsf.doc.r69597.tar.xz) = 476a8fbaa7615399c590081ca89c3b45ac5b0ac4493c5ecb7ed57c3f91f5520e
+SHA512 (newtxsf.doc.r69597.tar.xz) = 992123b7b5f30b827b4cb49b933cdaa323a007c1d41632993a2a8d52588b5f5d97612808dcb48423dba309f025d851cf15aeb892c8bfe10d0929cb5744515b7c
+Size (newtxsf.doc.r69597.tar.xz) = 263284 bytes
