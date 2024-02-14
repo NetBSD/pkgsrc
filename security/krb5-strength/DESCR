@@ -1,0 +1,8 @@
+krb5-strength provides a password quality plugin for the MIT Kerberos KDC
+(specifically the kadmind server) and Heimdal KDC, an external password
+quality program for use with Heimdal, and a per-principal password history
+implementation for Heimdal. Passwords can be tested with CrackLib, checked
+against a CDB or SQLite database of known weak passwords with some
+transformations, checked for length, checked for non-printable or non-ASCII
+characters that may be difficult to enter reproducibly, required to contain
+particular character classes, or any combination of these tests.
