@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1245 2024/02/14 10:33:04 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1246 2024/02/14 11:20:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed sysutils/kfilemetadata [markd 2024-02-14]
 	Updated sysutils/xcp to 0.20.3 [pin 2024-02-14]
 	Updated graphics/wallust to 3.0.0 [pin 2024-02-14]
+	Added security/krb5-strength version 3.3 [markd 2024-02-14]
