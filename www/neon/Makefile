@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2023/11/08 13:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/02/14 08:22:39 wiz Exp $
 
-DISTNAME=	neon-0.32.5
-PKGREVISION=	3
+DISTNAME=	neon-0.33.0
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
