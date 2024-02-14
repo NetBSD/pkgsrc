@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/14 19:48:10 markd Exp $
 
 DISTNAME=	newcomputermodern
-PKGNAME=	tex-${DISTNAME}-4.7
-TEXLIVE_REV=	68563
+PKGNAME=	tex-${DISTNAME}-5.1
+TEXLIVE_REV=	69379
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/newcomputermodern
 COMMENT=	Computer Modern fonts including matching non-latin alphabets
 LICENSE=	gfsl
-
-# catalogue-alias newcm
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
