@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/01/22 18:26:52 fcambus Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/14 21:42:38 adam Exp $
 
-DISTNAME=	lziprecover-1.23
+DISTNAME=	lziprecover-1.24
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lziprecover/
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 # or later
 
 USE_LANGUAGES=		c++
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS=		--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
