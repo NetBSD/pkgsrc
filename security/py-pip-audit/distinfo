@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/01/14 20:33:38 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/02/14 21:36:32 adam Exp $
 
-BLAKE2s (pip_audit-2.7.0.tar.gz) = 2038f3da91c44a0b6ec4fe726b08e75ca4ed0f1463a2f1e761780aed560e609a
-SHA512 (pip_audit-2.7.0.tar.gz) = 6895cc4c774fceca6c32678f9abf940f630a3afbab8e07bbd2a09607674ac5424a201f6917c01dcdfcb931c4fb77d45aca5e2d2dd287c7986c2a587e99ac3acf
-Size (pip_audit-2.7.0.tar.gz) = 69599 bytes
+BLAKE2s (pip_audit-2.7.1.tar.gz) = 6a62fa9f573f578e67e4a0146bd322be5fbcde58a3930780ee8eb077167f4a4c
+SHA512 (pip_audit-2.7.1.tar.gz) = fc718ade22376a6b3c43e6dc4f6a9074a7f87fd7d7051e3e3a66ff6a6acbc8f9fea817cd92a7a5830fb58dee982fdc46836ae1dd18f4b0a4f0a077b1a3f8382d
+Size (pip_audit-2.7.1.tar.gz) = 49289 bytes
