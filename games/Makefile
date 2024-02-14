@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2024/01/27 13:39:36 nia Exp $
+# $NetBSD: Makefile,v 1.543 2024/02/14 19:47:36 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -58,6 +58,7 @@ SUBDIR+=	bos
 SUBDIR+=	bovo
 SUBDIR+=	bridge-hands
 SUBDIR+=	bugdom
+SUBDIR+=	bugdom2
 SUBDIR+=	burgerspace
 SUBDIR+=	bzflag
 SUBDIR+=	cataclysm-dda
