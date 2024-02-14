@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1258 2024/02/14 21:31:34 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1259 2024/02/14 21:37:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2068,3 +2068,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/nodejs to 21.6.2 [adam 2024-02-14]
 	Updated lang/nodejs20 to 20.11.1 [adam 2024-02-14]
 	Updated lang/rust-bin to 1.74.1 [pin 2024-02-14]
+	Updated lang/nodejs18 to 18.19.1 [adam 2024-02-14]
+	Updated devel/py-editorconfig-core to 0.12.4 [adam 2024-02-14]
+	Updated parallel/py-threadpoolctl to 3.3.0 [adam 2024-02-14]
+	Updated security/py-pip-audit to 2.7.1 [adam 2024-02-14]
