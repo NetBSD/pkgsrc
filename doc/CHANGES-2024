@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1254 2024/02/14 19:04:59 charlotte Exp $
+$NetBSD: CHANGES-2024,v 1.1255 2024/02/14 19:48:40 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-netaddr to 1.0.0 [adam 2024-02-14]
 	Updated lang/janet to 1.33.0 [charlotte 2024-02-14]
 	Updated games/cromagrally to 3.0.1 [charlotte 2024-02-14]
+	Added games/bugdom2 version 4.0.0 [charlotte 2024-02-14]
