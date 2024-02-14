@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/14 21:29:25 adam Exp $
 
-BLAKE2s (EditorConfig-0.12.3.tar.gz) = c4b50544696ae72b324ad9220a6c4a16f45650e508a88b0ef9ea8bc5b272bd18
-SHA512 (EditorConfig-0.12.3.tar.gz) = 2cb909559dbcf0debab1ee41104dcfdede22aa5e74fcba6ad7b6d5317249ccf7f78b14b4bca4c75d8c4d4c226f5ea18349504fb07eff90ee8e157d67482a99f8
-Size (EditorConfig-0.12.3.tar.gz) = 13329 bytes
+BLAKE2s (EditorConfig-0.12.4.tar.gz) = 4667fbba8a8520de2319cb4c8f3e65965b617637908c3191f780441d9c75d9db
+SHA512 (EditorConfig-0.12.4.tar.gz) = 5e3bbc13a9388a68e003c9282e694cbed6b03f91d382c8b30f10f7af81c3c86185f546de48423dea4101cffe74e1483a7d75c1b1399c8edaeb09a339da07e4dd
+Size (EditorConfig-0.12.4.tar.gz) = 13278 bytes
