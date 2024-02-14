@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/11/21 13:53:14 gdt Exp $
+$NetBSD: distinfo,v 1.7 2024/02/14 15:44:19 wiz Exp $
 
 BLAKE2s (ocaml-cairo-0.6.4.tar.gz) = 9c0a28c7456d859c111a530fbade625ec4883bb76201bd79d758c515c70c1c7d
 SHA512 (ocaml-cairo-0.6.4.tar.gz) = 1bf8ad724b843c8f75541b842a6c14b7e65a5901c71b77ef53df1e222777f53ec077dffeffe2ef59aa84d81616c7efead81ada8b90f8f9c0473e52999eff91c3
 Size (ocaml-cairo-0.6.4.tar.gz) = 110090 bytes
+SHA1 (patch-src_dune) = 93e936799aea148cdd127cd8b75bc7c5fdcf8301

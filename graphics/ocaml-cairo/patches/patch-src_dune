@@ -1,0 +1,12 @@
+$NetBSD: patch-src_dune,v 1.1 2024/02/14 15:44:19 wiz Exp $
+
+--- src/dune.orig	2024-02-14 15:40:40.921184880 +0000
++++ src/dune
+@@ -10,6 +10,6 @@
+  (synopsis "Binding to Cairo, a 2D Vector Graphics Library"))
+ 
+ (rule
+- (targets c_flags.sexp c_library_flags.sexp cairo_ocaml.h)
++ (targets c_flags.sexp c_library_flags.sexp)
+  (deps    cairo_ocaml.h.p)
+  (action  (run ../config/discover.exe)))
