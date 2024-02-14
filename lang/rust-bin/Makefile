@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2023/12/02 21:32:39 he Exp $
+# $NetBSD: Makefile,v 1.61 2024/02/14 21:31:14 pin Exp $
 
-DISTNAME=	rust-1.73.0
+DISTNAME=	rust-1.74.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
-DIST_SUBDIR=	${PKGNAME_NOREV}
-PKGREVISION=	1
+DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -44,6 +43,7 @@ CHECK_SHLIBS_SKIP+=	bin/rustfmt
 # Bootstraps built for 9.0.
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv6hf
+BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
 
 # Binary distributions aren't built as PIE.
 MKPIE_SUPPORTED=	no
@@ -149,7 +149,8 @@ DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	powerpc-unknown-netbsd-nb1
+# Now only supports OS_VERSION >= 9.0
+RUST_ARCH:=	powerpc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
 DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
@@ -265,7 +266,7 @@ fix-relative-rpath:
 .  if ${OPSYS} == "Linux"
 .    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
-	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
+	   rust-lld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 	   ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .    endfor
