@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2024/01/25 15:59:56 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/14 00:18:12 gdt Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build ok.  The 6.8.0 release of
 # sip was very broken, and .0 releases of sip should be viewed with
 # extreme caution and probably skipped.
-DISTNAME=	sip-6.8.2
+DISTNAME=	sip-6.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
