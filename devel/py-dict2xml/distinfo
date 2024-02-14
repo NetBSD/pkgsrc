@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/18 16:05:42 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/02/14 16:30:27 adam Exp $
 
-BLAKE2s (dict2xml-1.7.4.tar.gz) = 638ec3a5d3e432fb048a519ed2cd7be7b6cea721453cc4935df3de58fe31935d
-SHA512 (dict2xml-1.7.4.tar.gz) = 13a2b34783e5f6414c173059ba16a2061ecaef41355b7b0099546d704c9c28b1e0f9ea3186d4b0db99083e66a2f22e69e57a4a415b72c00fd1e17bcb435e7462
-Size (dict2xml-1.7.4.tar.gz) = 14333 bytes
+BLAKE2s (dict2xml-1.7.5.tar.gz) = 428c63399af07ebf24856bdf80897207a1f6f9ec45d5e6d694019ad59f5d41a2
+SHA512 (dict2xml-1.7.5.tar.gz) = 88a77fcdc2ec320ba1668b27da4aacfcfc817090aebabc01fce76bff51b316166a0cc1f053884e8012a28e7118449f901465703869245dc662f29cee9665157e
+Size (dict2xml-1.7.5.tar.gz) = 14958 bytes
