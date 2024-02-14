@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1256 2024/02/14 20:03:33 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1257 2024/02/14 21:19:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2065,3 +2065,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/tex-orcidlink to 1.0.5 [mark 2024-02-14]
 	Updated print/tex-orcidlink-doc to 1.0.5 [mark 2024-02-14]
 	Updated print/tex-overpic to 2.1 [mark 2024-02-14]
+	Updated lang/nodejs to 21.6.2 [adam 2024-02-14]
+	Updated lang/nodejs20 to 20.11.1 [adam 2024-02-14]
