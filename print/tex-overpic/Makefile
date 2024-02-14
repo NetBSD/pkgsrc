@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/05/03 11:57:33 markd Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/14 20:01:16 markd Exp $
 
 DISTNAME=	overpic
-PKGNAME=	tex-${DISTNAME}-1.3
-TEXLIVE_REV=	53889
+PKGNAME=	tex-${DISTNAME}-2.1
+TEXLIVE_REV=	69343
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/overpic
