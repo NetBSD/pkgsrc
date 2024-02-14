@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/01/22 13:17:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/02/14 08:22:39 wiz Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -86,6 +86,7 @@ man/man3/ne_set_proxy_auth.3
 man/man3/ne_set_read_timeout.3
 man/man3/ne_set_request_body_buffer.3
 man/man3/ne_set_request_body_fd.3
+man/man3/ne_set_request_body_provider.3
 man/man3/ne_set_request_flag.3
 man/man3/ne_set_server_auth.3
 man/man3/ne_set_session_flag.3
