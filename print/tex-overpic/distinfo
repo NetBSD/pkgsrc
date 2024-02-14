@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:14:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/02/14 20:01:16 markd Exp $
 
-BLAKE2s (overpic.r53889.tar.xz) = 7cda72732eb1507e00427a4b4362c51d94a15723516e08250433bee88e20c69e
-SHA512 (overpic.r53889.tar.xz) = f6946c04fb1bd17f8708698671c17037688198996cbfac9b358169d1cfbaed9835b1b05b7779f3b4545c3b7de1d0ccd5148757b3cf125983ab0cdb8d895c5e69
-Size (overpic.r53889.tar.xz) = 1728 bytes
+BLAKE2s (overpic.r69343.tar.xz) = 6129cd9f1b6d72a7d9f13f119bc8b632a973bb1a14df94d6faa4e0f8e20c6e31
+SHA512 (overpic.r69343.tar.xz) = 6663af049c657a947c3894157eb21c38f8f240250894ee1c8e34e3ae7cfaec294670dcb053d36fbb7749c383b8e9645d25f583670401c7cacc232eb64996dcd1
+Size (overpic.r69343.tar.xz) = 1816 bytes
