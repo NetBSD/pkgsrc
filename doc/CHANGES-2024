@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1242 2024/02/14 08:40:53 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1243 2024/02/14 09:51:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated archivers/lzip to 1.24 [wiz 2024-02-14]
 	Updated devel/meson to 1.3.2 [adam 2024-02-14]
 	Updated x11/gtk4 to 4.12.5 [adam 2024-02-14]
+	Removed sysutils/kfilemetadata [markd 2024-02-14]
