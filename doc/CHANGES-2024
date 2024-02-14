@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1255 2024/02/14 19:48:40 charlotte Exp $
+$NetBSD: CHANGES-2024,v 1.1256 2024/02/14 20:03:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2042,3 +2042,26 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/janet to 1.33.0 [charlotte 2024-02-14]
 	Updated games/cromagrally to 3.0.1 [charlotte 2024-02-14]
 	Added games/bugdom2 version 4.0.0 [charlotte 2024-02-14]
+	Updated print/tex-memoir to 3.8.2 [mark 2024-02-14]
+	Updated print/tex-memoir-doc to 3.8.2 [mark 2024-02-14]
+	Updated print/tex-mhchem to 4.10 [mark 2024-02-14]
+	Updated print/tex-mhchem-doc to 4.10 [mark 2024-02-14]
+	Updated print/tex-minted to 2.9 [mark 2024-02-14]
+	Updated print/tex-minted-doc to 2.9 [mark 2024-02-14]
+	Updated fonts/tex-modes to 4.3 [mark 2024-02-14]
+	Updated fonts/tex-modes-doc to 4.3 [mark 2024-02-14]
+	Updated graphics/tex-mpchess to 0.7 [mark 2024-02-14]
+	Updated graphics/tex-mpchess-doc to 0.7 [mark 2024-02-14]
+	Updated fonts/tex-newcomputermodern to 5.1 [mark 2024-02-14]
+	Updated fonts/tex-newcomputermodern-doc to 5.1 [mark 2024-02-14]
+	Updated print/tex-newfloat to 1.2 [mark 2024-02-14]
+	Updated print/tex-newfloat-doc to 1.2 [mark 2024-02-14]
+	Updated fonts/tex-newtxsf to 1.056 [mark 2024-02-14]
+	Updated fonts/tex-newtxsf-doc to 1.056 [mark 2024-02-14]
+	Updated fonts/tex-newtxtt to 1.057 [mark 2024-02-14]
+	Updated fonts/tex-newtxtt-doc to 1.057 [mark 2024-02-14]
+	Updated fonts/tex-oldstandard to 2.7a [mark 2024-02-14]
+	Updated fonts/tex-oldstandard-doc to 2.7a [mark 2024-02-14]
+	Updated print/tex-orcidlink to 1.0.5 [mark 2024-02-14]
+	Updated print/tex-orcidlink-doc to 1.0.5 [mark 2024-02-14]
+	Updated print/tex-overpic to 2.1 [mark 2024-02-14]
