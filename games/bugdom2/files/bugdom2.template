@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $NetBSD: bugdom2.template,v 1.1 2024/02/14 19:47:14 charlotte Exp $
+# Launcher script for bugdom2.
+#
+set -e
+cd @@PREFIX@@/share/bugdom2 && @@PREFIX@@/libexec/Bugdom2
