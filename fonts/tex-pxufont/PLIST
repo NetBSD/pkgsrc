@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:58:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/15 19:45:04 markd Exp $
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlgothb-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlgothb-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlgothbn-h.tfm
@@ -27,6 +27,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlminr-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlminr-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlminrn-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-brsgnmlminrn-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb1-h.tfm
@@ -39,6 +41,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgb5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge1-h.tfm
@@ -51,6 +55,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjge5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr1-h.tfm
@@ -63,6 +69,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjgr5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb1-h.tfm
@@ -75,6 +83,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmb5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr1-h.tfm
@@ -87,6 +97,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmgr5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml1-h.tfm
@@ -99,6 +111,8 @@ share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml4-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml4-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml5-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjml5-v.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmr--h.tfm
+share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmr--v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmr0-h.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmr0-v.tfm
 share/texmf-dist/fonts/tfm/public/pxufont/zu-cidjmr1-h.tfm
@@ -287,6 +301,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-brsgnmlminr-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-brsgnmlminr-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-brsgnmlminrn-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-brsgnmlminrn-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb1-h.vf
@@ -299,6 +315,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgb5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge1-h.vf
@@ -311,6 +329,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjge5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr1-h.vf
@@ -323,6 +343,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjgr5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb1-h.vf
@@ -335,6 +357,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmb5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr1-h.vf
@@ -347,6 +371,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmgr5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml1-h.vf
@@ -359,6 +385,8 @@ share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml4-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml4-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml5-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjml5-v.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmr--h.vf
+share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmr--v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmr0-h.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmr0-v.vf
 share/texmf-dist/fonts/vf/public/pxufont/zu-cidjmr1-h.vf
