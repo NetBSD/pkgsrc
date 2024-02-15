@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/02/10 13:07:54 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/15 21:45:02 wiz Exp $
 
 DISTNAME=	dnaio-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.20:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.4.0:../../devel/py-xopen
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
