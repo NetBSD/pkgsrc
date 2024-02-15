@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 08:53:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/15 19:43:16 markd Exp $
 share/texmf-dist/fonts/sfd/pxchfon/PXcjk0.sfd
 share/texmf-dist/fonts/tfm/public/pxchfon/cfjam-r-l0j.tfm
 share/texmf-dist/fonts/tfm/public/pxchfon/cfjam-r-l5j.tfm
@@ -86,4 +86,3 @@ share/texmf-dist/fonts/vf/public/pxchfon/cfjas-x-t1.vf
 share/texmf-dist/fonts/vf/public/pxchfon/cfjas-x-ts1.vf
 share/texmf-dist/tex/platex/pxchfon/pxchfon.sty
 share/texmf-dist/tex/platex/pxchfon/pxchfon0.def
-share/texmf-dist/tex/platex/pxchfon/pxjafont.sty

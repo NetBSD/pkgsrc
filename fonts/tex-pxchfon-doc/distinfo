@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/09 06:13:12 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/02/15 19:43:16 markd Exp $
 
-BLAKE2s (pxchfon.doc.r66064.tar.xz) = 861e365f7243ba761233cac7501eafae9dd7dd8ed821ff6e1201a015c9548d2b
-SHA512 (pxchfon.doc.r66064.tar.xz) = 01304d0abc8922b13aa1c236e1266d002e144bd5fa48f4d473d53dc1610a83e69d0f91139322399588df6e71cfece4225a2792ab23db8e04c135ff409de3ea5a
-Size (pxchfon.doc.r66064.tar.xz) = 323720 bytes
+BLAKE2s (pxchfon.doc.r68103.tar.xz) = 0cfcbe984fb635c10c0a8692ca17746b4d7477b8d6119440923a6cbd1c0e1cce
+SHA512 (pxchfon.doc.r68103.tar.xz) = 1f50dcd95cf37669330d426238d398d5bfb2503e4db06287f7a361ef87136547d1020bf1d35fcd9504ea5017dc9ec0a0cb8f9298e4d178ec4c7cd426d91f1d6f
+Size (pxchfon.doc.r68103.tar.xz) = 336476 bytes
