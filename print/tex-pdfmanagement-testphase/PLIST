@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/08 10:58:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/15 18:45:58 markd Exp $
 share/texmf-dist/tex/latex/pdfmanagement-testphase/color-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/colorspace-patches-tmp-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hgeneric-testphase.def
@@ -11,8 +11,6 @@ share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-pdftex.de
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase-xetex.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-testphase.lua
 share/texmf-dist/tex/latex/pdfmanagement-testphase/l3pdffield-testphase.sty
-share/texmf-dist/tex/latex/pdfmanagement-testphase/l3ref-tmp.sty
-share/texmf-dist/tex/latex/pdfmanagement-testphase/output-patches-tmp-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-firstaid.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-testphase.ltx
 share/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-testphase.sty

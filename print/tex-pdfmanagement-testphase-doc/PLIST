@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/14 03:05:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/15 18:45:58 markd Exp $
 share/texmf-dist/doc/latex/pdfmanagement-testphase/CHANGELOG.md
 share/texmf-dist/doc/latex/pdfmanagement-testphase/README.md
 share/texmf-dist/doc/latex/pdfmanagement-testphase/hyperref-generic.pdf
@@ -18,6 +18,6 @@ share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfmeta.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdftools.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfxform.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/ltdocinit.pdf
-share/texmf-dist/doc/latex/pdfmanagement-testphase/output-patches-tmp-ltx.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/pdfmanagement-firstaid.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/pdfmanagement-testphase.pdf
+share/texmf-dist/doc/latex/pdfmanagement-testphase/update-metadata.txt
