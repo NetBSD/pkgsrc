@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/10 06:01:12 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/15 19:36:02 markd Exp $
 
-BLAKE2s (pst-3dplot.r61615.tar.xz) = 47984201ee624e60106b2ed210bcf0eed8ac17c343ab8c004f3915b7e3805fa3
-SHA512 (pst-3dplot.r61615.tar.xz) = bd23d297253501185e817e0b5f8f13705434568d73be8f4e1c8adfcd3b6c55438a72997601b6696af91cb6733d2330ff810a0678e19f79203bc979c49c5cf722
-Size (pst-3dplot.r61615.tar.xz) = 21856 bytes
+BLAKE2s (pst-3dplot.r68727.tar.xz) = b00aa97cc346810300054a80774889056c9ec867f89ecfbd25dc2a2fc0b0fb03
+SHA512 (pst-3dplot.r68727.tar.xz) = 1fefbd8b34e49b7cf6bc35bb761ed9aa49d062d81f280936b86b58f123cf6023e038308f066a2f9e62c2fbd4181d3dad781525f289a9f5e58acefcdd344fd69e
+Size (pst-3dplot.r68727.tar.xz) = 21936 bytes
