@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:47:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/15 19:40:37 markd Exp $
 
-BLAKE2s (tex-pst-osci-15878/pst-osci.tar.xz) = 0cb77b11c9545ecfed11bcb57a2feeb1d53c0b13436609068ad12781ab46fc4c
-SHA512 (tex-pst-osci-15878/pst-osci.tar.xz) = 7726056d9d3cf05064ef8272d5057d84fd84478c830e8ac1e86b7c96c04ea8390bab7a728d4e6c256268be78ddefa6a11b9a329df674bafae739bc8411a252d5
-Size (tex-pst-osci-15878/pst-osci.tar.xz) = 3416 bytes
+BLAKE2s (pst-osci.r68781.tar.xz) = ed1b609c88e7d240cd60c36c99d6a1ad0893af534b9143911b390ae28d80bc26
+SHA512 (pst-osci.r68781.tar.xz) = c888d41f7e14cf311b359fd37aa0557fc9fc639b76dd5db782099f6d307c4e5e3214df2a670fcdd3625818e461c34ccc0e50ba617714e58aced1c71b484b63d8
+Size (pst-osci.r68781.tar.xz) = 3420 bytes
