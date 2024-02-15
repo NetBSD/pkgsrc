@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/01 22:09:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/15 19:30:48 markd Exp $
 share/texmf-dist/doc/latex/polyglossia/README.md
 share/texmf-dist/doc/latex/polyglossia/example-arabic.pdf
 share/texmf-dist/doc/latex/polyglossia/example-arabic.tex
@@ -8,6 +8,8 @@ share/texmf-dist/doc/latex/polyglossia/example-japanese.pdf
 share/texmf-dist/doc/latex/polyglossia/example-japanese.tex
 share/texmf-dist/doc/latex/polyglossia/example-korean.pdf
 share/texmf-dist/doc/latex/polyglossia/example-korean.tex
+share/texmf-dist/doc/latex/polyglossia/example-odia.pdf
+share/texmf-dist/doc/latex/polyglossia/example-odia.tex
 share/texmf-dist/doc/latex/polyglossia/example-thai.pdf
 share/texmf-dist/doc/latex/polyglossia/example-thai.tex
 share/texmf-dist/doc/latex/polyglossia/examples.pdf
