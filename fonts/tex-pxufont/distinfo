@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:28:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/15 19:45:04 markd Exp $
 
-BLAKE2s (pxufont.r53733.tar.xz) = 38d83ee1cc57a45d33add31be2da96c9584f7f77cabb5498ce8ea40cc627d6d1
-SHA512 (pxufont.r53733.tar.xz) = bbbd7c0724e4b9a77ef731a4be2d014086aca61c78a439912ea20a630785fd8695ab9f287e07d0899ead8fe90614a806b0928a8cccfbd1cfb71c94b9b3c1266b
-Size (pxufont.r53733.tar.xz) = 126608 bytes
+BLAKE2s (pxufont.r67573.tar.xz) = 8fccddd5b8ee58da2a2f223f9adcdf604f1cca0f3e0750707745327133bda5a7
+SHA512 (pxufont.r67573.tar.xz) = 370d82da425014bc4464415b4f0fe6fa1cb3375979734731ea829942ead4289e1ac6fc47c1b5c42185c97b9013da2e779c90c10454ea2e4b6e5d65540ce4179a
+Size (pxufont.r67573.tar.xz) = 148984 bytes
