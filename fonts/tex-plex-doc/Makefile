@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/10/12 22:48:45 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/15 19:26:42 markd Exp $
 
 DISTNAME=	plex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-TEXLIVE_REV=	64496
+PKGNAME=	tex-${DISTNAME:S/./-/}-2023
+TEXLIVE_REV=	69154
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/plex

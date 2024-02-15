@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/10/12 22:48:45 markd Exp $
+$NetBSD: distinfo,v 1.5 2024/02/15 19:26:42 markd Exp $
 
-BLAKE2s (plex.doc.r64496.tar.xz) = c3d9627be245ac324cb39b192715eaf065d128fd9f010c4e860f0c164b354e59
-SHA512 (plex.doc.r64496.tar.xz) = eade0bcaf39a3043aa11c20a86ceb90eb88abf22eb8005c81b9bb688d4f8a93f6ee6f37bd073e69ad6f7989def618a016cd583199d75db0776bc19e81d23099e
-Size (plex.doc.r64496.tar.xz) = 336512 bytes
+BLAKE2s (plex.doc.r69154.tar.xz) = 6b394786e85083724a3df3e3bbbdca12e78f1d577940aad42a0ef4c77cfe6188
+SHA512 (plex.doc.r69154.tar.xz) = 175abcc07f213d5837070171b7fc483aec2c26b80f530ca7ad7a6f571de028c833e32d71a4c465fbfbb803afcba934e68df560944b8b54b20827d31cd21fa9f0
+Size (plex.doc.r69154.tar.xz) = 568444 bytes
