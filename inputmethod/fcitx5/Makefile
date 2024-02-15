@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/02/10 09:58:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/15 18:21:34 nia Exp $
 
 DISTNAME=	fcitx5-5.1.7
 CATEGORIES=	inputmethod
@@ -31,6 +31,8 @@ USE_TOOLS+=		bash:run pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 BUILD_DEFS+=		VARBASE
+
+USE_CXX_FEATURES+=	charconv
 
 REPLACE_BASH+=		data/fcitx5-diagnose.sh
 
