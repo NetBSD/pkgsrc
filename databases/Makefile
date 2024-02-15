@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2024/02/09 10:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.703 2024/02/15 21:48:56 wiz Exp $
 
 COMMENT=	Databases
 
@@ -306,7 +306,6 @@ SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgres_exporter
 SUBDIR+=	postgresql-pgroonga
-SUBDIR+=	postgresql-pljava
 SUBDIR+=	postgresql-postgis2
 SUBDIR+=	postgresql-redislog
 SUBDIR+=	postgresql-timescaledb
