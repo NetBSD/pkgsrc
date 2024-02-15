@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/12/30 17:32:35 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/15 01:35:33 gutteridge Exp $
 include/garcon-1/garcon/garcon-config.h
 include/garcon-1/garcon/garcon-environment.h
 include/garcon-1/garcon/garcon-marshal.h
@@ -74,6 +74,7 @@ share/gtk-doc/html/garcon/style.css
 share/gtk-doc/html/garcon/up-insensitive.png
 share/gtk-doc/html/garcon/up.png
 share/icons/hicolor/32x32/apps/org.xfce.garcon.png
+share/icons/hicolor/64x64/apps/org.xfce.garcon.png
 share/locale/am/LC_MESSAGES/garcon.mo
 share/locale/ar/LC_MESSAGES/garcon.mo
 share/locale/ast/LC_MESSAGES/garcon.mo
