@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/02/09 13:43:34 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/02/15 22:20:21 wiz Exp $
 
 DISTNAME=	wagtail-6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://wagtail.io/
 COMMENT=	Django-based Content Management System
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Willow>=1.6.2:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-anyascii>=0.1.5:../../textproc/py-anyascii
