@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/02/15 18:19:45 nia Exp $
+# $NetBSD: Makefile,v 1.43 2024/02/15 18:20:15 nia Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
@@ -32,8 +32,6 @@ USE_LANGUAGES+=		c c++
 
 USE_TOOLS+=		bash:run gmake pkg-config
 USE_CMAKE=		yes
-
-USE_CXX_FEATURES+=	charconv
 
 REPLACE_BASH+=		data/script/*sh
 REPLACE_BASH+=		cmake/*sh
