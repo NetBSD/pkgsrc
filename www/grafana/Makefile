@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2024/02/07 14:51:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.116 2024/02/15 13:24:06 wiz Exp $
 
-DISTNAME=	grafana-10.1.0
-PKGREVISION=	9
+DISTNAME=	grafana-10.3.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,7 +34,7 @@ LOGDIR=		${VARBASE}/log/grafana
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding pkgsrc paths in sample config
-SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/commands/cli.go
+SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/commands/flags.go
 SUBST_SED.fix-cfg=	-e 's,^;\(data = \).*,\1${DATADIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(logs = \).*,\1${LOGDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(plugins = \).*,\1${PLUGINDIR},g'
@@ -87,7 +86,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-server ${DESTDIR}${PREFIX}/bin/
-	cd ${WRKDIR}/linux/${DISTNAME}/public && \
+	cd ${WRKDIR}/linux/grafana-${GITHUB_TAG}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
