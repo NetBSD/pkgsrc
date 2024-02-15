@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2024/02/07 14:50:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2024/02/15 08:36:59 wiz Exp $
 
-DISTNAME=	go-wire-0.5.0.20210831
-PKGREVISION=	28
+DISTNAME=	go-wire-0.6.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	wire
-GITHUB_TAG=	2f70a008e2446b941cdeadb751ed6979ec49a29c
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/wire
