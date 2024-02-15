@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4178 2024/02/12 14:29:28 adam Exp $
+# $NetBSD: Makefile,v 1.4179 2024/02/15 07:36:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2993,6 +2993,7 @@ SUBDIR+=	py-sarge
 SUBDIR+=	py-scandir
 SUBDIR+=	py-scard
 SUBDIR+=	py-scikit-build
+SUBDIR+=	py-scikit-build-core
 SUBDIR+=	py-selectors2
 SUBDIR+=	py-semantic_version
 SUBDIR+=	py-sentry-sdk
