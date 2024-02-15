@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2024/02/11 21:08:28 pin Exp $
+$NetBSD: distinfo,v 1.10 2024/02/15 21:27:48 pin Exp $
 
-BLAKE2s (elvish-0.20.0.tar.gz) = d51e5ec3b4b88b3aaa96506be5781128aaffbde5fbf9bd6c034f9dbce5e2aeb0
-SHA512 (elvish-0.20.0.tar.gz) = 79a1ff444774807e644d7dd04bbaff1ce0372ddaf72a46bd90d626325c482e5239973ee9ec1e3bfc81dbdd0effba5451676b4848582a90d77728392f08c509ad
-Size (elvish-0.20.0.tar.gz) = 862782 bytes
+BLAKE2s (elvish-0.20.1.tar.gz) = 8d65747a6dd9bb697b3fdffd9b4ea59660e64b2c73fc4f3496925ba34889898b
+SHA512 (elvish-0.20.1.tar.gz) = d6fd7ab0d494de7d70f7f34117c5e5dc5eb92a076e9782f11b543009872f0a1193d47814d8b67a8fcf3da14fd17a510de1f0ebb8c27f13388a8ca68a94836a61
+Size (elvish-0.20.1.tar.gz) = 862793 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.21.mod) = 19b33a84ea62506eb4da7226657fea56d1c17f128a045f166d91db907c32c93e
 SHA512 (github.com_creack_pty_@v_v1.1.21.mod) = b825d82c81fd02f7dc8be5be8d4f0e3b9bf39a75e453857ab3f4d8d17129d2214f6b4dddd18cd613cb4d29dbd5adc59f43c1f65d218e7f3b67f0a8e33e62f5a6
 Size (github.com_creack_pty_@v_v1.1.21.mod) = 38 bytes
