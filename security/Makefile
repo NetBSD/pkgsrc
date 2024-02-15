@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2024/02/14 11:17:47 markd Exp $
+# $NetBSD: Makefile,v 1.939 2024/02/15 06:57:25 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -444,6 +444,7 @@ SUBDIR+=	py-bcrypt
 SUBDIR+=	py-botan3
 SUBDIR+=	py-certbot
 SUBDIR+=	py-certbot-apache
+SUBDIR+=	py-certbot-dns-cloudflare
 SUBDIR+=	py-certbot-dns-digitalocean
 SUBDIR+=	py-certbot-dns-dnsimple
 SUBDIR+=	py-certbot-dns-dnsmadeeasy
