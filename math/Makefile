@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2024/01/26 01:43:42 mef Exp $
+# $NetBSD: Makefile,v 1.588 2024/02/15 06:56:57 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -76,6 +76,7 @@ SUBDIR+=	R-ids
 SUBDIR+=	R-igraph
 SUBDIR+=	R-insight
 SUBDIR+=	R-intervals
+SUBDIR+=	R-itertools
 SUBDIR+=	R-lme4
 SUBDIR+=	R-lmm
 SUBDIR+=	R-lmtest
