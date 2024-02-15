@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/02/15 04:34:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.31 2024/02/15 19:43:42 joerg Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -11,6 +11,7 @@ COMMENT=	Fast multi-format tape archiver
 #USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-bsdtar=static
 CONFIGURE_ARGS+=	--disable-bsdcpio
+CONFIGURE_ARGS+=	--disable-bsdunzip
 CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	--without-iconv
 .if "${OS_VARIANT}" == "chromeos"
