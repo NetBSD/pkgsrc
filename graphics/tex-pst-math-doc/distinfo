@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/01 22:12:20 markd Exp $
+$NetBSD: distinfo,v 1.8 2024/02/15 19:38:14 markd Exp $
 
-BLAKE2s (pst-math.doc.r64732.tar.xz) = 8ff63e1c294b63e3f0d4b3ca992b59a0e5647bf93add05829fe59a10952c3efa
-SHA512 (pst-math.doc.r64732.tar.xz) = c5b26a73075910edc8232df349ee76a8264ab533e4259146224cebda4d6709867f7edcafab115ac3fae977c9d11b38821b4b085a2ab5529ae585c1daf8b738d6
-Size (pst-math.doc.r64732.tar.xz) = 172288 bytes
+BLAKE2s (pst-math.doc.r67535.tar.xz) = 206cce5f136467b7abad804586c95674b3c40fe863674bef6ac32c66689479fe
+SHA512 (pst-math.doc.r67535.tar.xz) = 1b07b3086fa3e1d12f255632ceddf5b30c219472763cc43c0649b669a6014bb76e3a0fe7c182d0ea24c54fee8d2efe8399867321992e20f7f418d28198661bd2
+Size (pst-math.doc.r67535.tar.xz) = 226768 bytes
