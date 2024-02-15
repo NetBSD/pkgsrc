@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1275 2024/02/15 20:54:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1276 2024/02/15 21:10:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/tex-pxufont-doc to 0.7 [markd 2024-02-15]
 	Updated devel/ast-grep to 0.19.0 [pin 2024-02-15]
 	Updated sysutils/eza to 0.18.3 [pin 2024-02-15]
+	Updated graphics/stitchy to 0.1.6 [pin 2024-02-15]
