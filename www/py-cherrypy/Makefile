@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/02/07 06:26:24 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/02/15 22:23:43 wiz Exp $
 
 DISTNAME=	CherryPy-18.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,6 +11,7 @@ COMMENT=	Pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=8.2.1:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-jaraco.collections-[0-9]*:../../devel/py-jaraco.collections
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
