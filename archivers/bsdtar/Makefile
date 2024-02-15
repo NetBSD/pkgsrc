@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/01/18 18:04:12 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/02/15 04:34:21 gutteridge Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -50,7 +50,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 CHECK_PERMS=		no # avoid circular dependency
 CHECK_PORTABILITY=	no # avoid circular dependency
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OS_VARIANT} == "SCOOSR5"
 # SCO OpenServer 5.0.7/3.2 has windows.h, and configure expects it for MS Windows.
 CONFIGURE_ENV+=		ac_cv_header_windows_h=no
