@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/06/17 10:39:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/02/15 19:30:48 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -9,6 +9,8 @@ share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/farsidigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/farsidigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/gurmukhidigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/gurmukhidigits.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/odiadigits.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/odiadigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/thaidigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/thaidigits.tec
 share/texmf-dist/tex/latex/polyglossia/arabicnumbers.sty
@@ -216,6 +218,8 @@ share/texmf-dist/tex/latex/polyglossia/gloss-norwegian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-nswissgerman.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-nynorsk.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-occitan.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-odia.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-or.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-pa.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-persian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-piedmontese.ldf
@@ -262,6 +266,7 @@ share/texmf-dist/tex/latex/polyglossia/gurmukhidigits.sty
 share/texmf-dist/tex/latex/polyglossia/hebrewcal.sty
 share/texmf-dist/tex/latex/polyglossia/hijrical.sty
 share/texmf-dist/tex/latex/polyglossia/nkonumbers.sty
+share/texmf-dist/tex/latex/polyglossia/odiadigits.sty
 share/texmf-dist/tex/latex/polyglossia/polyglossia-french.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-korean.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-latin.lua
