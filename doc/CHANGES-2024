@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1273 2024/02/15 19:50:46 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1274 2024/02/15 20:53:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/tex-pxchfon-doc to 2.0 [markd 2024-02-15]
 	Updated fonts/tex-pxufont to 0.7 [markd 2024-02-15]
 	Updated fonts/tex-pxufont-doc to 0.7 [markd 2024-02-15]
+	Updated devel/ast-grep to 0.19.0 [pin 2024-02-15]
