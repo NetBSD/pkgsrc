@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/01/01 15:43:26 leot Exp $
+$NetBSD: distinfo,v 1.2 2024/02/16 08:24:33 nia Exp $
 
 BLAKE2s (libplacebo-6.338.1/fast_float.h) = dc9754b685f47fc6d6e0cba321b804829b6dda01f30f47c676374172bff12baf
 SHA512 (libplacebo-6.338.1/fast_float.h) = 85d4b85e03bdf42fe2f6d6ba40dfc2e85552c3367272e57469a274e7b9a283fc5953e1554dfe668be45bb08334e60ae91623faa4375fdea63d86a8c3b393e00f
@@ -6,3 +6,4 @@ Size (libplacebo-6.338.1/fast_float.h) = 128947 bytes
 BLAKE2s (libplacebo-6.338.1/libplacebo-v6.338.1.tar.gz) = 8f0736a5de08a9b7c592c1d7fb589c5eefc2a6bef83d2c38de10cccabbf813ab
 SHA512 (libplacebo-6.338.1/libplacebo-v6.338.1.tar.gz) = a538a26552bda77af98264abde0e721c967f0c5eba73c0ffdff3cc7f52a4505ee5b618b99884becf502546261ff6e48881900ce7c782c5495ee3a6728dca9eb1
 Size (libplacebo-6.338.1/libplacebo-v6.338.1.tar.gz) = 840798 bytes
+SHA1 (patch-src_dither.c) = dd1b7bf8c7797a25e2c3fe4aef39e6490a4b1428
