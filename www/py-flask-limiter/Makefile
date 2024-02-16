@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/01/20 16:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/16 22:02:59 adam Exp $
 
-DISTNAME=	Flask-Limiter-3.5.0
+DISTNAME=	Flask-Limiter-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Limiter/}
