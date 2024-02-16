@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/30 20:11:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/16 17:39:05 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -13,6 +13,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcapturablewindow_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qerrorinfo_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qimagevideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
@@ -43,6 +44,7 @@ ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/q
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsamplecache_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideo_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversionhelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
