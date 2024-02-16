@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/01/30 14:21:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2024/02/16 07:51:10 nia Exp $
 
 DISTNAME=	easyrpg-player-0.7.0
 PKGREVISION=	14
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES+=	c c++
+
+BROKEN+=	"Incompatible with latest fmtlib"
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
