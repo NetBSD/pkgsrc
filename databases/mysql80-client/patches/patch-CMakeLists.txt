@@ -1,11 +1,27 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/23 21:01:12 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2024/02/16 22:01:10 adam Exp $
 
+HOMEBREW_HOME is provided by pkgsrc.
 Split configuration between mysql-client and mysql-server.
 Do not install documentation.
 
---- CMakeLists.txt.orig	2023-03-16 17:22:37.000000000 +0000
+--- CMakeLists.txt.orig	2023-12-12 18:09:36.000000000 +0000
 +++ CMakeLists.txt
-@@ -2185,11 +2185,12 @@ ENDIF()
+@@ -1697,14 +1697,6 @@ SET(SYSTEM_LIBRARIES
+   FIDO      # Homebrew  libfido2
+   )
+ 
+-IF(APPLE)
+-  # Homebrew default location is
+-  IF(APPLE_ARM)
+-    SET(HOMEBREW_HOME "/opt/homebrew/opt")
+-  ELSE()
+-    SET(HOMEBREW_HOME "/usr/local/opt")
+-  ENDIF()
+-ENDIF()
+ 
+ SET(WITH_SYSTEM_LIBS_DEFAULT OFF)
+ OPTION(WITH_SYSTEM_LIBS
+@@ -2207,11 +2199,12 @@ ENDIF()
  
  ADD_SUBDIRECTORY(client)
  ADD_SUBDIRECTORY(utilities)
@@ -20,7 +36,7 @@ Do not install documentation.
    ADD_SUBDIRECTORY(sql)
  ENDIF()
  
-@@ -2280,7 +2281,7 @@ IF(ENABLE_GCOV)
+@@ -2308,7 +2301,7 @@ IF(ENABLE_GCOV)
    INCLUDE(fastcov)
  ENDIF()
  
@@ -29,7 +45,7 @@ Do not install documentation.
    ADD_SUBDIRECTORY(man)
  ENDIF()
  
-@@ -2314,6 +2315,7 @@ SET_PROPERTY(DIRECTORY APPEND PROPERTY A
+@@ -2342,6 +2335,7 @@ SET_PROPERTY(DIRECTORY APPEND PROPERTY A
    "${CMAKE_BINARY_DIR}/library_output_directory"
    )
  
@@ -37,7 +53,7 @@ Do not install documentation.
  # Handle the "INFO_*" files.
  INCLUDE(${CMAKE_BINARY_DIR}/info_macros.cmake)
  # Source: This can be done during the cmake phase, all information is
-@@ -2327,7 +2329,6 @@ MY_ADD_CUSTOM_TARGET(INFO_SRC ALL
+@@ -2355,7 +2349,6 @@ MY_ADD_CUSTOM_TARGET(INFO_SRC ALL
    COMMENT "Generating Docs/INFO_SRC"
  )
  
@@ -45,7 +61,7 @@ Do not install documentation.
    # Show it by default in pushuild, but not for developers.
    IF(DEFINED ENV{PB2WORKDIR})
      OPTION(SHOW_BUILD_ID "Show mysqld build id as final target" ON)
-@@ -2438,7 +2439,7 @@ ENDIF()
+@@ -2466,7 +2459,7 @@ ENDIF()
  #
  # RPM installs documentation directly from the source tree
  #
