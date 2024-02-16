@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/02/10 21:46:03 pin Exp $
+# $NetBSD: Makefile,v 1.15 2024/02/16 03:50:08 gutteridge Exp $
 
 DISTNAME=	cargo-c-0.9.30
 CATEGORIES=	devel
@@ -14,6 +14,7 @@ SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys
 
 USE_TOOLS+=	pkg-config
 
+RUST_REQ=	1.74.0
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 .include "cargo-depends.mk"
