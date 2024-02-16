@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/07 08:37:55 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/16 06:49:14 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -218,9 +218,6 @@ ${PYSITELIB}/fileobj/netbsd.pyo
 ${PYSITELIB}/fileobj/nodep.py
 ${PYSITELIB}/fileobj/nodep.pyc
 ${PYSITELIB}/fileobj/nodep.pyo
-${PYSITELIB}/fileobj/objdump.py
-${PYSITELIB}/fileobj/objdump.pyc
-${PYSITELIB}/fileobj/objdump.pyo
 ${PYSITELIB}/fileobj/openbsd.py
 ${PYSITELIB}/fileobj/openbsd.pyc
 ${PYSITELIB}/fileobj/openbsd.pyo
@@ -305,9 +302,6 @@ ${PYSITELIB}/fileobj/undo.pyo
 ${PYSITELIB}/fileobj/unix.py
 ${PYSITELIB}/fileobj/unix.pyc
 ${PYSITELIB}/fileobj/unix.pyo
-${PYSITELIB}/fileobj/url.py
-${PYSITELIB}/fileobj/url.pyc
-${PYSITELIB}/fileobj/url.pyo
 ${PYSITELIB}/fileobj/usage.py
 ${PYSITELIB}/fileobj/usage.pyc
 ${PYSITELIB}/fileobj/usage.pyo
