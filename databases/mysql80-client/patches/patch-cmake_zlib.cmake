@@ -1,19 +1,19 @@
-$NetBSD: patch-cmake_zlib.cmake,v 1.1 2023/05/23 21:01:12 adam Exp $
+$NetBSD: patch-cmake_zlib.cmake,v 1.2 2024/02/16 22:01:10 adam Exp $
 
 Fix zlib detection.
 
---- cmake/zlib.cmake.orig	2023-05-23 08:13:52.000000000 +0000
+--- cmake/zlib.cmake.orig	2023-12-12 18:09:36.000000000 +0000
 +++ cmake/zlib.cmake
-@@ -60,6 +60,8 @@ FUNCTION(FIND_SYSTEM_ZLIB)
-       TARGET_INCLUDE_DIRECTORIES(zlib_interface SYSTEM INTERFACE
-         ${ZLIB_INCLUDE_DIR})
-     ENDIF()
+@@ -67,6 +67,8 @@ FUNCTION(FIND_SYSTEM_ZLIB)
+     SET(ZLIB_VERSION ${ZLIB_VERSION} PARENT_SCOPE)
+     # For EXTRACT_LINK_LIBRARIES
+     SET(zlib_SYSTEM_LINK_FLAGS "-lz" CACHE STRING "Link flag for zlib")
 +  ELSE()
 +    MESSAGE(FATAL_ERROR "Cannot find system zlib libraries.")
    ENDIF()
  ENDFUNCTION(FIND_SYSTEM_ZLIB)
  
-@@ -114,9 +116,7 @@ MACRO (MYSQL_CHECK_ZLIB)
+@@ -121,9 +123,7 @@ MACRO (MYSQL_CHECK_ZLIB)
      MYSQL_USE_BUNDLED_ZLIB()
    ELSEIF(WITH_ZLIB STREQUAL "system")
      FIND_SYSTEM_ZLIB()
