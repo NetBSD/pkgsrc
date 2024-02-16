@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.19 2022/09/11 17:08:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/02/16 20:30:15 adam Exp $
 
-DISTNAME=	barman-2.19
+DISTNAME=	barman-3.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.pgbarman.org/
+HOMEPAGE=	https://pgbarman.org/
 COMMENT=	Backup and Recovery Manager for PostgreSQL
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
-DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.4.2:../../databases/py-psycopg2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
@@ -21,8 +22,6 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 CONF_FILES+=		share/examples/barman/barman.conf \
 			${PKG_SYSCONFDIR}/barman.conf
@@ -58,5 +57,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/barman.conf \
 		${DESTDIR}${PREFIX}/share/examples/barman/barman.conf
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
