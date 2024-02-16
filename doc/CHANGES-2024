@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1287 2024/02/16 14:32:48 tsutsui Exp $
+$NetBSD: CHANGES-2024,v 1.1288 2024/02/16 15:48:20 osa Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/protobuf to 25.3 [adam 2024-02-16]
 	Updated devel/py-protobuf to 4.25.3 [adam 2024-02-16]
 	Updated textproc/ruby-nokogiri to 1.16.2 [tsutsui 2024-02-16]
+	Updated www/nginx-devel to 1.25.4 [osa 2024-02-16]
