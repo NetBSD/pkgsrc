@@ -1,21 +1,23 @@
-@comment $NetBSD: PLIST,v 1.6 2022/05/11 10:23:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/16 20:30:15 adam Exp $
 bin/barman
 bin/barman-cloud-backup
 bin/barman-cloud-backup-delete
 bin/barman-cloud-backup-keep
 bin/barman-cloud-backup-list
+bin/barman-cloud-backup-show
 bin/barman-cloud-check-wal-archive
 bin/barman-cloud-restore
 bin/barman-cloud-wal-archive
 bin/barman-cloud-wal-restore
 bin/barman-wal-archive
 bin/barman-wal-restore
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/barman/__init__.py
 ${PYSITELIB}/barman/__init__.pyc
 ${PYSITELIB}/barman/__init__.pyo
@@ -49,6 +51,9 @@ ${PYSITELIB}/barman/clients/cloud_backup_keep.pyo
 ${PYSITELIB}/barman/clients/cloud_backup_list.py
 ${PYSITELIB}/barman/clients/cloud_backup_list.pyc
 ${PYSITELIB}/barman/clients/cloud_backup_list.pyo
+${PYSITELIB}/barman/clients/cloud_backup_show.py
+${PYSITELIB}/barman/clients/cloud_backup_show.pyc
+${PYSITELIB}/barman/clients/cloud_backup_show.pyo
 ${PYSITELIB}/barman/clients/cloud_check_wal_archive.py
 ${PYSITELIB}/barman/clients/cloud_check_wal_archive.pyc
 ${PYSITELIB}/barman/clients/cloud_check_wal_archive.pyo
@@ -169,6 +174,7 @@ ${PYSITELIB}/barman/xlog.pyo
 man/man1/barman-cloud-backup-delete.1
 man/man1/barman-cloud-backup-keep.1
 man/man1/barman-cloud-backup-list.1
+man/man1/barman-cloud-backup-show.1
 man/man1/barman-cloud-backup.1
 man/man1/barman-cloud-check-wal-archive.1
 man/man1/barman-cloud-restore.1
