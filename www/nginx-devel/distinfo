@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2024/02/16 15:46:36 osa Exp $
+$NetBSD: distinfo,v 1.104 2024/02/16 18:07:30 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -12,12 +12,12 @@ Size (encrypted-session-nginx-module-0.09.tar.gz) = 11847 bytes
 BLAKE2s (form-input-nginx-module-0.12.tar.gz) = b08fc95c3e15bfdc0846e2d1e8157171954f353bd301f4ac4aca56113620e91d
 SHA512 (form-input-nginx-module-0.12.tar.gz) = 1c5c5ab74156cac09da44a2dcdd84f7c03c9919a23a847e63613e00e3781ecd73d5ad12446174b4fdef9d064257a31570a8dbcccc00d8266f7048e3dcde0362e
 Size (form-input-nginx-module-0.12.tar.gz) = 11090 bytes
-BLAKE2s (headers-more-nginx-module-0.34.tar.gz) = 3456270e8df3c2a16fefbc3f57aa085415b5e0614e8ffff418adc5dc12d3cc99
-SHA512 (headers-more-nginx-module-0.34.tar.gz) = 2c0c140feeb29f0154a223dc3020ff956f894d63e0232a7bc0ca33fcb26f8b807bda868159ae30b6cac7456ec25b831c3d299ea18e234202ae5d14c1ff471a4b
-Size (headers-more-nginx-module-0.34.tar.gz) = 28827 bytes
-BLAKE2s (lua-nginx-module-0.10.25.tar.gz) = f450538ce1bfdfd7316f1a82840a258d57a834d88d9e1115314dbc96abdba762
-SHA512 (lua-nginx-module-0.10.25.tar.gz) = 01943f2b789b4e385592707f2769a5f4da668415ef9bd0c5263face2fb4146a28137fb8ab8b55056240dad034780601b7966913951cc0c77f4b3aa9eab50ae40
-Size (lua-nginx-module-0.10.25.tar.gz) = 725616 bytes
+BLAKE2s (headers-more-nginx-module-0.37.tar.gz) = 0c41b4b1f8b3a12c9c55d4e18892592e4fa7499f98525a432ac54cc38951a725
+SHA512 (headers-more-nginx-module-0.37.tar.gz) = 0cc2fffe506194d439e3669644d41b7943e2c3cffa3483eb70b92067930b358d506a14646eff8362b191a11c624db29f6b53d830876929dcb4ce1c9d7b2bc40d
+Size (headers-more-nginx-module-0.37.tar.gz) = 29433 bytes
+BLAKE2s (lua-nginx-module-0.10.26.tar.gz) = a8b1a1209f11e15165db96a8459d5639debaf79e83231cf3d2640b8dcbaae20b
+SHA512 (lua-nginx-module-0.10.26.tar.gz) = 9abf00844ef00ce1dc5ff08d6fe4ddccf843f2ad2de6fd450854b38a66b45add71e814205dba9b19225b9165e67eb93578e83e5fe37af4e0c891e61e6a6bfb3d
+Size (lua-nginx-module-0.10.26.tar.gz) = 745785 bytes
 BLAKE2s (nbs-system-naxsi-d714f16_GH.tar.gz) = ca56821b8bfac03429fc8adaf30302ac70c31b48b865918139ecdacb24eb4156
 SHA512 (nbs-system-naxsi-d714f16_GH.tar.gz) = 84abd90f3971450b9413546809332e263c4332b625a0b51f8b342adb407e1e5bc81a2b0b75e2d50e87d63d20d0c3f271391c9d4821f0d01069a133b066bfb05b
 Size (nbs-system-naxsi-d714f16_GH.tar.gz) = 236940 bytes
@@ -39,9 +39,9 @@ Size (nginx-upload-module-2.3.0.tar.gz) = 40139 bytes
 BLAKE2s (ngx_cache_purge-2.5.1.tar.gz) = f89badfa0dbc3c338129291d7c56f978d6db0348d5aaa0d723000881ae9b7b8d
 SHA512 (ngx_cache_purge-2.5.1.tar.gz) = 3ad37b4a251fb85a9a384f87fea5ca640166e3d7173c6ed9a857b191ae5f2e93819483b5d423fcafe8a10239b571677b342cc2d2d5d62315816f1316d7d5bb76
 Size (ngx_cache_purge-2.5.1.tar.gz) = 16614 bytes
-BLAKE2s (ngx_devel_kit-0.3.2.tar.gz) = 1e6f88bf441f68d1bf969f8cac1600aebba79b25213940ff344f3f4381adb92a
-SHA512 (ngx_devel_kit-0.3.2.tar.gz) = 6deedeb3a95d7a6039ee474ee29cfc287f904a109f1c2908512d19521de89f3006fa3b650a368c637b23771cd5323558e30ad5d94b2c77242cbba691d349d232
-Size (ngx_devel_kit-0.3.2.tar.gz) = 66551 bytes
+BLAKE2s (ngx_devel_kit-0.3.3.tar.gz) = 6d64ff7ddf46f95911b21c78322705bec4e6c6eec069ecc70bb0ae31c0fde54f
+SHA512 (ngx_devel_kit-0.3.3.tar.gz) = a255e3a4a9b902b3e15140dc88bbbb152b0a9cdc64604152de41e1b254e81aa2a1e2c95c06cb4905c1520886acf9070031d63913b53fe98b034f8adad2bccf61
+Size (ngx_devel_kit-0.3.3.tar.gz) = 66561 bytes
 BLAKE2s (ngx_http_geoip2_module-3.4.tar.gz) = eb14ed670788d4cc46037719ebab29e1c0da53cadbb0da10198e76255d924273
 SHA512 (ngx_http_geoip2_module-3.4.tar.gz) = 18dea21e5ae2647bea1fc448058a1b773c936917245edef8d861d5e23ed92e9a3b1ec4ef43ffb2ece7b5899d787910adcf4fbd39f84d7e8d7c54759e2fee5b72
 Size (ngx_http_geoip2_module-3.4.tar.gz) = 8877 bytes

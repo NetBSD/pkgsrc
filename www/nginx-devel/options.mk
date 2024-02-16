@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2023/10/25 16:04:47 osa Exp $
+# $NetBSD: options.mk,v 1.28 2024/02/16 18:07:30 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -143,7 +143,7 @@ PLIST.ndk=		yes
 .  endif
 .endfor
 .if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean)
-NDK_VERSION=		0.3.2
+NDK_VERSION=		0.3.3
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
 SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=vision5/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
@@ -151,7 +151,7 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.25
+LUA_VERSION=		0.10.26
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
@@ -228,7 +228,7 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.34
+HEADMORE_VERSION=		0.37
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
