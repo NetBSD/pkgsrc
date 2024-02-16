@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/02/16 08:37:58 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/02/16 18:54:58 adam Exp $
 
-BLAKE2s (yamllint-1.35.0.tar.gz) = 6cdfd34e9477000a1d02b164c12d834063416f0a4ff03330cca5d1c636467b96
-SHA512 (yamllint-1.35.0.tar.gz) = 2f17f6501079488e0824b92a7bb1ffac70c6008edf1d850586fae643fe84edcaeacf54bb8c377e1ff499ab9f632accf901d43775379e60fd5095a95733150756
-Size (yamllint-1.35.0.tar.gz) = 131251 bytes
+BLAKE2s (yamllint-1.35.1.tar.gz) = c8fa91a80ebdab09089c8a26752d11839dde18701b071e2139084a9e7bea8eb4
+SHA512 (yamllint-1.35.1.tar.gz) = c174b217da5b1efa56651a29fc92f91699c15d6c3c27f6cd4bd71ea8d55f59748b3006ed73678fa1b635b6d092230d8d5cd56b4bb63894931e7357a2c4f84a98
+Size (yamllint-1.35.1.tar.gz) = 134583 bytes
