@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/02/10 16:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/02/16 08:13:13 nia Exp $
 
 DISTNAME=	libusb-1.0.27
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -21,6 +21,7 @@ USE_CC_FEATURES+=	c11
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake autoreconf
 USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=	no
 
@@ -42,6 +43,9 @@ CONFIGURE_ARGS+=	--enable-tests-build
 LDFLAGS.SunOS+=		-lcmdutils # list_create(9F)
 
 CONFLICTS=	libusbx-[0-9]*
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 do-test:
 	cd ${WRKSRC}/tests && ./stress
