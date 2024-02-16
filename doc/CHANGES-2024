@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1285 2024/02/16 13:17:22 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1286 2024/02/16 13:41:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2121,3 +2121,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/webp-pixbuf-loader to 0.2.7 [tsutsui 2024-02-16]
 	Updated lang/php83 to 8.3.3 [taca 2024-02-16]
 	Updated lang/php82 to 8.2.16 [taca 2024-02-16]
+	Updated devel/protobuf to 25.3 [adam 2024-02-16]
+	Updated devel/py-protobuf to 4.25.3 [adam 2024-02-16]
