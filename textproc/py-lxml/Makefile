@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2024/01/15 11:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2024/02/16 08:15:33 nia Exp $
 
 DISTNAME=	lxml-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7:../../textproc/py-cssselect
 
 USE_CC_FEATURES=	c99
+
+# pycore_frame.h:134:5: error:
+# 'for' loop initial declarations are only allowed in C99 mode
+FORCE_CXX_STD=		gnu99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
