@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2024/01/30 09:04:41 wiz Exp $
+$NetBSD: distinfo,v 1.15 2024/02/16 08:21:36 nia Exp $
 
 BLAKE2s (flite-2.2.tar.gz) = f7b2e3bb17750d8a7c384b70abc3f61a35bfa689937b80969c442a14d26a1ff2
 SHA512 (flite-2.2.tar.gz) = 1ca2f4145651490ef8405fdb830a3b42e885020a7603d965f6a5581b01bed41047d396b38c2ceab138fc0b28d28078db17acd2b5a84c6444cb99d65c581afa72
 Size (flite-2.2.tar.gz) = 20233792 bytes
 SHA1 (patch-ad) = e75da7826581a1d93d4f5efe75f257cc749358a7
-SHA1 (patch-ae) = e3eb4bc93c32eef8cc8c7d5e8014a473bc3f6752
+SHA1 (patch-ae) = d577c657f0db256fd7c7c40c8b280fcffa1aff25
 SHA1 (patch-config_common__make__rules) = 949ec45c35872fd39c44864b484423ab28467898
