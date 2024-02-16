@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/05/04 17:29:33 nikita Exp $
+# $NetBSD: Makefile.common,v 1.3 2024/02/16 07:49:55 nia Exp $
 # used by wip/0ad-data/Makefile
 # used by games/0ad-data/Makefile
 
@@ -8,3 +8,5 @@ MASTER_SITES=	http://releases.wildfiregames.com/
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://play0ad.com/
+
+BROKEN+=	"Incompatible with latest fmtlib"
