@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/02/15 22:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/16 22:17:07 adam Exp $
 
-DISTNAME=	wagtail-6.0
+DISTNAME=	wagtail-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wagtail/}

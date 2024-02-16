@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/02/09 13:43:34 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/02/16 22:17:07 adam Exp $
 
-BLAKE2s (wagtail-6.0.tar.gz) = 31b5d87b403036b8e0c9168445e9706af7a7b5a68790e5ef8487bfd6a67ca05a
-SHA512 (wagtail-6.0.tar.gz) = a18bde8e5a73f763c7a8685c3307776d5177d9ab792b1e8ac4ba425fc87546754b94f8e254aac1dde6dad2453c4d8cb8234b46aa9df01b68b1b70fedbf1a1ac9
-Size (wagtail-6.0.tar.gz) = 6244471 bytes
+BLAKE2s (wagtail-6.0.1.tar.gz) = 22d7bc11daa19100732c7c3c1659b211c7e6eaaecd1075e5c570d1ed0815b302
+SHA512 (wagtail-6.0.1.tar.gz) = c366833c5eb0b827eefdbddfd3144a8fe7d31001b6fde79b212997174a361c6ef084a429da1dc4a1b8ef7ea9dc5359eaa05f325b6839469a283a39e522792112
+Size (wagtail-6.0.1.tar.gz) = 6245847 bytes
