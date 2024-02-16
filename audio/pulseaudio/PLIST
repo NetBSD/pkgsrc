@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2024/01/30 13:54:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.47 2024/02/16 07:56:17 nia Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -274,6 +274,7 @@ ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-input.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-mono.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/usb-gaming-headset-output-stereo.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/virtual-surround-7.1.conf
+${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/asus-xonar-se.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/audigy.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/cmedia-high-speed-true-hdaudio.conf
 ${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
