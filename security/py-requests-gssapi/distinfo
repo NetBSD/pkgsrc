@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/02/16 19:13:22 adam Exp $
 
-BLAKE2s (requests-gssapi-1.2.3.tar.gz) = 0446123e6a11fa482bf45ff499010587478c6abb94503c92358da5c0d72a5b72
-SHA512 (requests-gssapi-1.2.3.tar.gz) = 5645785e4d96e935fde73395386f3622b1463e91cafddc07e9b55a990c977b136ccd440cbc190801b966e9c0ec083d2a270f06cb6e4f754093cc7343b0935994
-Size (requests-gssapi-1.2.3.tar.gz) = 19007 bytes
+BLAKE2s (requests-gssapi-1.3.0.tar.gz) = 26ec055a885b83212f412ba6b70e500dac6296ead8206810656b9b212f0366a8
+SHA512 (requests-gssapi-1.3.0.tar.gz) = a9d7acf213b3ecbbc45f6342964268247fc42d6bf341e9121a4e1d72cf43ef586df51df1a0efdbffb975aa5200e6e650b11e013c5df90a0d15b3cc6508da690c
+Size (requests-gssapi-1.3.0.tar.gz) = 18681 bytes
