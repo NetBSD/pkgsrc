@@ -1,0 +1,65 @@
+$NetBSD: patch-configure.ac,v 1.9 2024/02/16 08:13:13 nia Exp $
+
+illumos support; via OmniOS.
+
+From 57b0bd0b3624eea8f7a56cb477649f2f35b0bab7 Mon Sep 17 00:00:00 2001
+From: "Joshua M. Clulow" <josh@sysmgr.org>
+Date: Mon, 27 Dec 2021 16:08:38 -0800
+Subject: [PATCH] illumos: split off from Solaris backend
+
+--- configure.ac.orig	2024-01-31 22:07:28.000000000 +0000
++++ configure.ac
+@@ -119,9 +119,15 @@ Please use an explicit --host=$host_cpu-
+ 	platform=posix
+ 	;;
+ *-solaris*)
+-	AC_MSG_RESULT([SunOS])
+-	backend=sunos
+-	platform=posix
++	if test "x`uname -o`" = xillumos; then
++		AC_MSG_RESULT([illumos])
++		backend=illumos
++		platform=posix
++	else
++		AC_MSG_RESULT([SunOS])
++		backend=sunos
++		platform=posix
++	fi
+ 	;;
+ *-cygwin*)
+ 	AC_MSG_RESULT([Windows (using Cygwin)])
+@@ -224,7 +230,7 @@ linux)
+ 		AC_CHECK_HEADER([sys/socket.h], [], [AC_MSG_ERROR([Linux socket header not found])])
+ 	fi
+ 	;;
+-sunos)
++sunos|illumos)
+ 	LIBS="${LIBS} -ldevinfo"
+ 	;;
+ windows)
+@@ -262,7 +268,7 @@ if test "x$platform" = xposix && test "x
+ fi
+ 
+ dnl eventfd support
+-if test "x$backend" = xlinux || test "x$backend" = xsunos; then
++if test "x$backend" = xlinux || test "x$backend" = xsunos || test "x$backend" = xillumos; then
+ 	AC_ARG_ENABLE([eventfd],
+ 		[AS_HELP_STRING([--enable-eventfd], [use eventfd for signalling [default=auto]])],
+ 		[use_eventfd=$enableval],
+@@ -300,7 +306,7 @@ if test "x$backend" = xlinux || test "x$
+ fi
+ 
+ dnl timerfd support
+-if test "x$backend" = xlinux || test "x$backend" = xsunos; then
++if test "x$backend" = xlinux || test "x$backend" = xsunos || test "x$backend" = xillumos; then
+ 	AC_ARG_ENABLE([timerfd],
+ 		[AS_HELP_STRING([--enable-timerfd], [use timerfd for timing [default=auto]])],
+ 		[use_timerfd=$enableval],
+@@ -392,6 +398,7 @@ AM_CONDITIONAL([OS_NETBSD], [test "x$bac
+ AM_CONDITIONAL([OS_NULL], [test "x$backend" = xnull])
+ AM_CONDITIONAL([OS_OPENBSD], [test "x$backend" = xopenbsd])
+ AM_CONDITIONAL([OS_SUNOS], [test "x$backend" = xsunos])
++AM_CONDITIONAL([OS_ILLUMOS], [test "x$backend" = xillumos])
+ AM_CONDITIONAL([OS_WINDOWS], [test "x$backend" = xwindows])
+ AM_CONDITIONAL([OS_EMSCRIPTEN], [test "x$backend" = xemscripten])
+ AM_CONDITIONAL([PLATFORM_POSIX], [test "x$platform" = xposix])
