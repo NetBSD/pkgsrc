@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2024/02/14 07:14:25 markd Exp $
+# $NetBSD: Makefile,v 1.74 2024/02/16 20:25:36 adam Exp $
 
 DISTNAME=	libqalculate-4.9.0
 PKGNAME=	qalculate-4.9.0
@@ -13,23 +13,22 @@ HOMEPAGE=	https://qalculate.github.io/
 COMMENT=	Modern multi-purpose desktop calculator (console version)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/libqalculate-${PKGVERSION_NOREV}
-
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf automake
 USE_TOOLS+=		gmake intltool msgfmt msgmerge xgettext pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN=
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libqalculate.pc.in
+PKGCONFIG_OVERRIDE=	libqalculate.pc.in
 
 UNLIMIT_RESOURCES=	datasize
 
 CFLAGS.SunOS+=		-D_LCONV_C99
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && autoreconf
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
@@ -37,5 +36,4 @@ pre-configure:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
