@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.11 2023/05/28 16:44:25 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/02/16 22:01:10 adam Exp $
 
-BLAKE2s (mysql-boost-8.0.33.tar.gz) = 6b64fb998afe1854c6a9168b82a11e4254d30d439d4730914863e86ea4ff9071
-SHA512 (mysql-boost-8.0.33.tar.gz) = 47f76819004c7c545d1b0b6b6646d8816899976f92d35c5564b1255b144b597ff7d3e674c721a45bcbb13cc0da3f4474fb29221c0e21d2ff91a1892cd42c636c
-Size (mysql-boost-8.0.33.tar.gz) = 438065679 bytes
-SHA1 (patch-CMakeLists.txt) = a1c3f95fab72031f4338a6b44b63551a6a388817
+BLAKE2s (mysql-boost-8.0.36.tar.gz) = c8833f108c824ea601c2b5984126a9dc9f52fc1838dc7f29056931bf6459209f
+SHA512 (mysql-boost-8.0.36.tar.gz) = a6c1c009a322b7e7aa2aa607573060414c847c77d48f44a24058ffb89673621f2ebbcc1a4448fa841a87ff721159cc8eaf44a57721c7dc233c130691c16a9d4a
+Size (mysql-boost-8.0.36.tar.gz) = 438154682 bytes
+SHA1 (patch-CMakeLists.txt) = b6867d0527e19f44734428ef54a51f178e045fd8
 SHA1 (patch-client_CMakeLists.txt) = 4fbaf94d43b6c58aa14712213c08b897bd6227cf
 SHA1 (patch-cmake_ldap.cmake) = 46f0df1109ca0886e0d0903a39e25278139f1849
 SHA1 (patch-cmake_os_SunOS.cmake) = 66a7d4386f07c68ae85a94d467465e6d1bec6b57
 SHA1 (patch-cmake_pkg-config.cmake) = 82498a310f8f428e26b722a40031bc1d6d272242
 SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
-SHA1 (patch-cmake_zlib.cmake) = 963c2d5af00ed9df37ae261ae91a1ddae3415be9
+SHA1 (patch-cmake_zlib.cmake) = 375b61ecb5d533f9944f97e5e085792f997637b3
 SHA1 (patch-config.h.cmake) = e6debea316c5bb8338afb693d704007d45b3941f
 SHA1 (patch-configure.cmake) = b03de49ecb8d6ce58ef24f5dcd8f0a8c95eab592
 SHA1 (patch-include_CMakeLists.txt) = 289c1454d1b7e7fe8566187b3cefc722260993b6
