@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/24 22:11:08 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/02/16 10:00:07 jperkin Exp $
 #
 
 DISTNAME=		IPMITOOL_1_8_19
@@ -30,7 +30,7 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 DEPENDS+=		iana-enterprise-numbers-[0-9]*:../../net/iana-enterprise-numbers
 
 pre-configure:
-	cd ${WRKSRC} && ./bootstrap
+	cd ${WRKSRC} && autoreconf -fiv
 
 # ipmitool uses rl_event_hook
 .include "../../devel/readline/buildlink3.mk"
