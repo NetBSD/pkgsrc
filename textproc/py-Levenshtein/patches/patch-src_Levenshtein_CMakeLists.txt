@@ -1,15 +1,15 @@
-$NetBSD: patch-src_Levenshtein_CMakeLists.txt,v 1.1 2023/05/05 19:32:18 adam Exp $
+$NetBSD: patch-src_Levenshtein_CMakeLists.txt,v 1.2 2024/02/16 19:16:32 adam Exp $
 
 Avoid SOABI in module name, so PLIST is constant across platforms.
 
---- src/Levenshtein/CMakeLists.txt.orig	2023-05-05 18:49:51.000000000 +0000
+--- src/Levenshtein/CMakeLists.txt.orig	2024-02-11 16:43:48.000000000 +0000
 +++ src/Levenshtein/CMakeLists.txt
-@@ -18,7 +18,7 @@ function(rf_add_library name)
-         endif()
-         set_property (TARGET ${name} PROPERTY SUFFIX ".${Python_SOABI}${suffix}")
-     else()
--        Python_add_library(${name} MODULE WITH_SOABI ${ARGV})
-+        Python_add_library(${name} MODULE ${ARGV})
+@@ -24,7 +24,7 @@ function(rf_add_library name)
      endif()
+     set_property(TARGET ${name} PROPERTY SUFFIX ".${Python_SOABI}${suffix}")
+   else()
+-    python_add_library(${name} MODULE WITH_SOABI ${ARGV})
++    python_add_library(${name} MODULE ${ARGV})
+   endif()
  endfunction(rf_add_library)
  
