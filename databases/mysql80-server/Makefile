@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.18 2023/11/15 18:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/16 22:01:10 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	4
 COMMENT=	MySQL 8, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
 
 .include "../../databases/mysql80-client/Makefile.common"
 
-CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
-CMAKE_ARGS+=		-DWITH_PROTOBUF="system"
+CMAKE_ARGS+=	-DINSTALL_INFODIR=${PKGINFODIR}
+CMAKE_ARGS+=	-DWITH_PROTOBUF="system"
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/library_output_directory
+# This is a hack for ${WRKSRC}/cmake/protobuf.cmake
+CMAKE_ARGS+=	-DHOMEBREW_HOME=${PREFIX}
 
 PLIST_VARS+=		auth_socket
 
