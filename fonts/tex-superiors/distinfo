@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/17 01:18:01 markd Exp $
 
-BLAKE2s (superiors.r51909.tar.xz) = b2f17ebf094e249124c384271b9b17e583feff74f3e58d94069584238e6b0bee
-SHA512 (superiors.r51909.tar.xz) = 783d14d75daa63d108fcf870004a46680c643699ccc7256906a06fc7ca4482ebcee14f120209bd488d5c2890a3c8c33d132a0eb23d4b93d04deb05eca6bd0970
-Size (superiors.r51909.tar.xz) = 10164 bytes
+BLAKE2s (superiors.r69387.tar.xz) = 2d8cdf1441bd99958d93490396be189a5b667acb3441d4b22af9c33b3308ffa1
+SHA512 (superiors.r69387.tar.xz) = 50c352d7ee3b267ff3c25f93d5ad9d32a80f0f09cb8e802f6426e9d415ebfd8a54d3d07425c2908c75f328309e4d21173feb768c63e931658d151274ef6f953e
+Size (superiors.r69387.tar.xz) = 2328 bytes

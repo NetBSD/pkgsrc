@@ -1,8 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:56 wiz Exp $
-share/texmf-dist/doc/fonts/superiors/README
-share/texmf-dist/doc/fonts/superiors/libfoot0-crop.pdf
-share/texmf-dist/doc/fonts/superiors/libfoot1-crop.pdf
-share/texmf-dist/doc/fonts/superiors/stempelfoot0-crop.pdf
-share/texmf-dist/doc/fonts/superiors/stempelfoot1-crop.pdf
-share/texmf-dist/doc/fonts/superiors/superiors-doc.pdf
-share/texmf-dist/doc/fonts/superiors/superiors-doc.tex
+@comment $NetBSD: PLIST,v 1.2 2024/02/17 01:18:01 markd Exp $
+share/texmf-dist/doc/latex/superiors/README
+share/texmf-dist/doc/latex/superiors/footsnippet1-crop.pdf
+share/texmf-dist/doc/latex/superiors/footsnippet1.tex
+share/texmf-dist/doc/latex/superiors/footsnippet2-crop.pdf
+share/texmf-dist/doc/latex/superiors/footsnippet2.tex
+share/texmf-dist/doc/latex/superiors/footsnippet3-crop.pdf
+share/texmf-dist/doc/latex/superiors/footsnippet3.tex
+share/texmf-dist/doc/latex/superiors/footsnippet4-crop.pdf
+share/texmf-dist/doc/latex/superiors/footsnippet4.tex
+share/texmf-dist/doc/latex/superiors/libfoot0-crop.pdf
+share/texmf-dist/doc/latex/superiors/libfoot1-crop.pdf
+share/texmf-dist/doc/latex/superiors/stempelfoot0-crop.pdf
+share/texmf-dist/doc/latex/superiors/stempelfoot1-crop.pdf
+share/texmf-dist/doc/latex/superiors/superiors-doc.pdf
+share/texmf-dist/doc/latex/superiors/superiors-doc.tex
