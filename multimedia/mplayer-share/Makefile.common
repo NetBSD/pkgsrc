@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2023/11/23 17:24:36 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.69 2024/02/17 22:49:22 wiz Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -48,6 +48,18 @@ CONFIGURE_ARGS+=	--yasm=""
 CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	--target=${MACHINE_ARCH:Q}-${OPSYS:Q}
+# Reaching into the destdir with a -I flag to NATIVE_CC is kinda
+# sleazy, but this will probably work and it saves the trouble of
+# pulling in a gigantic tool dependency.
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/include/ffmpeg5
+#TOOL_DEPENDS+=		ffmpeg5>=0:../../multimedia/ffmpeg5
+#CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${TOOLBASE:Q}/include/ffmpeg5
+.else
+CONFIGURE_ARGS+=	--host-cc=${CC:Q}\ ${BUILDLINK_CPPFLAGS:Q}
+.endif
 
 # avoid text relocations caused by asm ops in #if HAVE_SSE4_INTERNAL block
 # in libmpcodecs/vf_ass.c
