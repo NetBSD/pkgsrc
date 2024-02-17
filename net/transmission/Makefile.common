@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2024/02/01 14:11:04 dogcow Exp $
+# $NetBSD: Makefile.common,v 1.21 2024/02/17 21:13:31 nia Exp $
 #
 # used by net/transmission-common/Makefile
 # used by net/transmission-gtk/Makefile
@@ -39,4 +39,5 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libpsl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
