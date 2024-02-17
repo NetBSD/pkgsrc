@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/09/01 05:25:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/17 01:27:32 markd Exp $
 
 DISTNAME=	textcase
-PKGNAME=	tex-${DISTNAME}-1.03
-TEXLIVE_REV=	63868
+PKGNAME=	tex-${DISTNAME}-1.04
+TEXLIVE_REV=	67755
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://ctan.org/pkg/textcase
