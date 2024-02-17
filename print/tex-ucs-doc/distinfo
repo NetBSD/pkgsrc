@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/09/01 05:47:16 markd Exp $
+$NetBSD: distinfo,v 1.7 2024/02/17 01:40:11 markd Exp $
 
-BLAKE2s (ucs.doc.r64114.tar.xz) = 5507e8ef87b01b1262e95d850bde2feb549e647774d3bf1918a3347ffc73a11a
-SHA512 (ucs.doc.r64114.tar.xz) = 23eb57ebc1bf27d6406d883caf8ab060d4d4c7e8caeb982781f7cdd719d50aed316a2c72f01934a8f0e16a6ccf6df62598038743a026ac1f46f4be731b020c2f
-Size (ucs.doc.r64114.tar.xz) = 1215552 bytes
+BLAKE2s (ucs.doc.r68759.tar.xz) = 82a39baeb2bbd2e0442829a890381b2ab242c04e7c5504ef345aafe4041bfc54
+SHA512 (ucs.doc.r68759.tar.xz) = 95dede76d97d0dce6cdaeb0acd128e89c2e98383e633925b40433c0d4e0e342fc3df94603f17370fb56b88c40effb99eacc4310e4de4231232a2be6892adbe87
+Size (ucs.doc.r68759.tar.xz) = 1251668 bytes

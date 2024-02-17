@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/01 05:47:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/17 01:40:11 markd Exp $
 share/texmf-dist/fonts/enc/dvips/ucs/cp1252.enc
 share/texmf-dist/fonts/enc/dvips/ucs/tengwarDS.enc
 share/texmf-dist/tex/latex/ucs/autofe.sty
@@ -154,6 +154,7 @@ share/texmf-dist/tex/latex/ucs/data/uni-47.def
 share/texmf-dist/tex/latex/ucs/data/uni-470.def
 share/texmf-dist/tex/latex/ucs/data/uni-471.def
 share/texmf-dist/tex/latex/ucs/data/uni-48.def
+share/texmf-dist/tex/latex/ucs/data/uni-480.def
 share/texmf-dist/tex/latex/ucs/data/uni-49.def
 share/texmf-dist/tex/latex/ucs/data/uni-497.def
 share/texmf-dist/tex/latex/ucs/data/uni-498.def
