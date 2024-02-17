@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/09/01 05:49:54 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/17 02:00:28 markd Exp $
 
-BLAKE2s (xcolor.doc.r63563.tar.xz) = e5a6ef3ee98a50fbf0c646a7d807cc0a8b349bef0e806279526afcbd6dd5b435
-SHA512 (xcolor.doc.r63563.tar.xz) = 9129fa37573a55ebd878e6c5b52ee3a449375e55dd0a87bc85620b12ae9fbbdfadb92e65e5cf3f8e3e7fbd5512107b55d017f8df8db317c50c0f0248dab4399a
-Size (xcolor.doc.r63563.tar.xz) = 929652 bytes
+BLAKE2s (xcolor.doc.r68864.tar.xz) = 958df408fd282ccd0963937e30a20659bb76714dfe9f5cd9b4511fa82cee534e
+SHA512 (xcolor.doc.r68864.tar.xz) = 1dc8355913a62657a2b50d45a6fdfbabc8a0dbb835ec5912fced934350b21619e8081b9e9a4774ba48ec3c51572c7f95f52efe92c85344dd81da0bcc81e73809
+Size (xcolor.doc.r68864.tar.xz) = 930412 bytes
