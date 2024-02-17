@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/05/30 11:55:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/17 01:55:29 markd Exp $
 
 DISTNAME=	worldflags
-PKGNAME=	tex-${DISTNAME}-2022
-TEXLIVE_REV=	59171
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	68827
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/worldflags
