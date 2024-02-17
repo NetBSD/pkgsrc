@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/01/30 14:22:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2024/02/17 00:52:27 khorben Exp $
 
 DISTNAME=	quake2-8.20
 PKGNAME=	y${DISTNAME}
@@ -18,6 +18,15 @@ USE_LANGUAGES=	c99
 MAKE_FLAGS+=	WITH_SYSTEMWIDE=yes
 MAKE_FLAGS+=	WITH_SYSTEMDIR=${PREFIX}/share/yquake2
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${SHLIB_TYPE} == "dylib"
+SOEXT=			dylib
+.else
+SOEXT=			so
+.endif
+PLIST_SUBST+=		SOEXT=${SOEXT}
+
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec/yquake2
 INSTALLATION_DIRS+=	share/applications
@@ -36,9 +45,9 @@ do-install:
 	    ${DESTDIR}${PREFIX}/libexec/yquake2/quake2
 	${INSTALL_PROGRAM} ${WRKSRC}/release/q2ded \
 	    ${DESTDIR}${PREFIX}/libexec/yquake2/q2ded
-	${INSTALL_LIB} ${WRKSRC}/release/baseq2/game.so \
+	${INSTALL_LIB} ${WRKSRC}/release/baseq2/game.${SOEXT} \
 	    ${DESTDIR}${PREFIX}/share/yquake2/baseq2
-	${INSTALL_LIB} ${WRKSRC}/release/*.so \
+	${INSTALL_LIB} ${WRKSRC}/release/*.${SOEXT} \
 	    ${DESTDIR}${PREFIX}/libexec/yquake2
 	${INSTALL_DATA} ${FILESDIR}/yquake2.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
