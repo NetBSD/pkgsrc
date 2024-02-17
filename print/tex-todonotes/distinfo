@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/02 11:40:10 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/02/17 01:34:33 markd Exp $
 
-BLAKE2s (todonotes.r65699.tar.xz) = 1f970e66c0106449ad93c05b20e8f91d49febfcc03a0f2036ca95316e5d449c0
-SHA512 (todonotes.r65699.tar.xz) = c3430bf32562d19a9a9fcfacf5f61d10bdaa7cc00d6fc271338b9a962bb16ad372290c401da9b8428dc0528ba185f38d94e1a07cf096f34b3d835b4474729252
-Size (todonotes.r65699.tar.xz) = 4852 bytes
+BLAKE2s (todonotes.r69319.tar.xz) = 0cb0293aa202255a49fad83cfdcb311cae3617996744b0abe2d46ece4eca701c
+SHA512 (todonotes.r69319.tar.xz) = 6dbe5b58d44d900b7beceaf265fc0ab227e3f4a56a1f8c1ff4f186df0657a3fe0f674bd60411516e54d90627ec41ffa38d4bcda7f5dcc69632892ac2f0caf96b
+Size (todonotes.r69319.tar.xz) = 4896 bytes
