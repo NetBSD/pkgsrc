@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1301 2024/02/17 04:27:34 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1302 2024/02/17 10:14:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2228,3 +2228,9 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/tex-xepersian-doc to 25.0 [markd 2024-02-17]
 	Updated print/tex-xstring to 1.86 [markd 2024-02-17]
 	Updated print/tex-xstring-doc to 1.86 [markd 2024-02-17]
+	Updated math/openblas to 0.3.26 [adam 2024-02-17]
+	Updated math/openblas_openmp to 0.3.26 [adam 2024-02-17]
+	Updated math/openblas_pthread to 0.3.26 [adam 2024-02-17]
+	Updated math/openblas64 to 0.3.26 [adam 2024-02-17]
+	Updated math/openblas64_openmp to 0.3.26 [adam 2024-02-17]
+	Updated math/openblas64_pthread to 0.3.26 [adam 2024-02-17]
