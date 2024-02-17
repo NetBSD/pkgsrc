@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:21 markd Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/17 01:18:01 markd Exp $
 
 DISTNAME=	superiors.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.06
-TEXLIVE_REV=	51909
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
+TEXLIVE_REV=	69387
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/superiors
