@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2024/01/31 21:00:04 wiz Exp $
+# $NetBSD: Makefile,v 1.189 2024/02/17 21:43:03 nia Exp $
 
 DISTNAME=	mame-0.262
 CATEGORIES=	emulators
@@ -49,6 +49,12 @@ MAKE_FLAGS+=		NOASM=1
 MAKE_FLAGS+=		FORCE_DRC_C_BACKEND=1
 BUILDLINK_TRANSFORM+=	rm:-m32
 BUILDLINK_TRANSFORM+=	rm:-m64
+.endif
+
+# "error: inlining failed in call to always_inline
+# '__m128i _mm_shuffle_epi8(__m128i, __m128i)': target specific option mismatch"
+.if ${MACHINE_ARCH} == "x86_64"
+CFLAGS+=	-mssse3
 .endif
 
 # -Werror is problematic
