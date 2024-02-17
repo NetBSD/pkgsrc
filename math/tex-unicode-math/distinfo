@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:56:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/02/17 01:46:49 markd Exp $
 
-BLAKE2s (unicode-math.r53609.tar.xz) = 6c32a4b5723c9fe213aa9e4facd73f4fef79ceafa530616448748144e7d3ca25
-SHA512 (unicode-math.r53609.tar.xz) = 7ed199c32680ae776c6367cc5d4d1c34826d6652ee50aa16f7952151b339d07809186c93a939f945d7166002ada059b3f02f54fdf5770b0b1cc50c6144d840ca
-Size (unicode-math.r53609.tar.xz) = 42816 bytes
+BLAKE2s (unicode-math.r67919.tar.xz) = 6ccd1120aee833d77629bcfd566a555d92d2a047f4ac9d5d59794073673aa885
+SHA512 (unicode-math.r67919.tar.xz) = 181168b0560a67c98fc9df214f0bd37bd1314b2400622d2aa3eac6659db42aabd24ab724845190cba46fd9d53b7b1440c016a0c6fab49561c3d795fefc41550f
+Size (unicode-math.r67919.tar.xz) = 42240 bytes
