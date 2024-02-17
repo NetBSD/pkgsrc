@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24049 2024/02/17 10:14:03 adam Exp $
+$NetBSD: TODO,v 1.24050 2024/02/17 13:27:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o HElib-2.1.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-24.0
+	o MesaLib-24.0.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o QuantLib-1.22
