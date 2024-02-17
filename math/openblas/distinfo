@@ -1,15 +1,9 @@
-$NetBSD: distinfo,v 1.10 2023/10/15 22:08:50 thor Exp $
+$NetBSD: distinfo,v 1.11 2024/02/17 10:13:19 adam Exp $
 
-BLAKE2s (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = 38e4cee9b05aaa4d2f90682c609f3d93a802a594920240fefa808bf3323f593c
-SHA512 (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = fe66e3a258ca1720764ed243f6d61017d6ef14bd33b76f20b19b34754096ec2be9fbeb1a78743f38ee71381746d6af9a1c16a8f3982e423afec422fcb50852d0
-Size (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = 24263037 bytes
-BLAKE2s (openblas-0.3.24/large.tgz) = 68489cf503f8671e9228831d96cc514172b93f5c2e0f2c72038651a5a219cb2f
-SHA512 (openblas-0.3.24/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
-Size (openblas-0.3.24/large.tgz) = 2595 bytes
-BLAKE2s (openblas-0.3.24/timing.tgz) = dc47df7bd85a88f9f7f31741ed2a4630511f9105075290c3d5df4aeeaf6f45b8
-SHA512 (openblas-0.3.24/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
-Size (openblas-0.3.24/timing.tgz) = 1059485 bytes
-SHA1 (patch-Makefile) = 6b1db300b5487fca53e7c41c27b64017658e6375
+BLAKE2s (OpenBLAS-0.3.26.tar.gz) = 0fbd69665e88cffb118b86af77fd981ad5f5eb167f0ddf7deb5616efdf4b732e
+SHA512 (OpenBLAS-0.3.26.tar.gz) = 01d3a536fbfa62f276fd6b1ad0e218fb3d91f41545fc83ddc74979fa26372d8389f0baa20334badfe0adacd77bd944c50a47ac920577373fcc1d495553084373
+Size (OpenBLAS-0.3.26.tar.gz) = 24404912 bytes
+SHA1 (patch-Makefile) = 1b375bddd95af23cfe5e3ccd9476d3bf0fa78043
 SHA1 (patch-Makefile.install) = 3e15dc3674285b5b6b014e8ab17f77f60cf7ac61
 SHA1 (patch-Makefile.rule) = 45b6b4576fb521fa093252c63b899d4178a516b6
 SHA1 (patch-Makefile.system) = 6dc9fd85731ca88cb1fdb9063ba3baa31edbcfb8
