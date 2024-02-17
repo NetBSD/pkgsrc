@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/09/01 05:49:54 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/17 02:00:28 markd Exp $
 
 DISTNAME=	xcolor.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.14
-TEXLIVE_REV=	63563
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.01
+TEXLIVE_REV=	68864
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xcolor

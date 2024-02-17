@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:37:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/17 02:00:27 markd Exp $
 share/texmf-dist/dvips/xcolor/xcolor.pro
 share/texmf-dist/tex/latex/xcolor/svgnam.def
 share/texmf-dist/tex/latex/xcolor/x11nam.def
+share/texmf-dist/tex/latex/xcolor/xcolor-2022-06-12.sty
 share/texmf-dist/tex/latex/xcolor/xcolor.sty
