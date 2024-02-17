@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/19 02:57:16 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/17 00:45:23 markd Exp $
 
 DISTNAME=	quran
-PKGNAME=	tex-${DISTNAME}-1.81
-TEXLIVE_REV=	57601
+PKGNAME=	tex-${DISTNAME}-2.2
+TEXLIVE_REV=	67791
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/quran
