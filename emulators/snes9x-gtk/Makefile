@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2024/01/30 14:21:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2024/02/17 21:19:30 nia Exp $
 
 PKGREVISION= 1
 .include "../../emulators/snes9x/Makefile.common"
@@ -55,4 +55,5 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .include "../../lang/python/application.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
