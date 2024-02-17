@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/02/16 08:13:13 nia Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/17 21:57:50 nia Exp $
 
 DISTNAME=	libusb-1.0.27
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -30,6 +30,11 @@ MAKE_JOBS_SAFE=	no
 # Uses undefined behaviour
 BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 CFLAGS+=		-fno-strict-aliasing
+.endif
+
+# XXX should be only illumos
+.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} >= 051100
+LDFLAGS+=	-lnvpair
 .endif
 
 PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
