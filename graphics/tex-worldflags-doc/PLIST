@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/30 11:55:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/17 01:55:30 markd Exp $
 share/texmf-dist/doc/latex/worldflags/README
+share/texmf-dist/doc/latex/worldflags/worldflag_AT_1.pdf
+share/texmf-dist/doc/latex/worldflags/worldflag_IT-TO_1.pdf
 share/texmf-dist/doc/latex/worldflags/worldflags.pdf
 share/texmf-dist/doc/latex/worldflags/worldflags.tex
