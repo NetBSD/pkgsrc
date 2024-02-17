@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/08/02 19:21:50 nia Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/17 21:23:57 nia Exp $
 #
 
 DISTNAME=	dgen-sdl-1.33
@@ -13,7 +13,9 @@ COMMENT=	Genesis/Megadrive emulator for Unix platforms
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+# Seems broken, at least with latest NASM version:
+# -DNASM_STACK_NOEXEC: fatal: more than one input file specified: -f
+CONFIGURE_ARGS+=	--disable-asm
 .endif
 
 .if !empty(MACHINE_ARCH:Mearm*)
