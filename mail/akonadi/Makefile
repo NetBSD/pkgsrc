@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2024/02/06 11:05:24 markd Exp $
+# $NetBSD: Makefile,v 1.124 2024/02/17 21:09:32 nia Exp $
 
 DISTNAME=	akonadi-${KAPPSVER}
 CATEGORIES=	mail
@@ -38,4 +38,5 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/akonadi/mysql-global-mobile.conf \
 .include "../../devel/kitemmodels/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
