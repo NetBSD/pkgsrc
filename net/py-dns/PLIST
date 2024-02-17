@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.19 2024/01/21 20:25:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/02/17 10:20:45 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -11,6 +15,9 @@ ${PYSITELIB}/dns/_asyncio_backend.pyo
 ${PYSITELIB}/dns/_ddr.py
 ${PYSITELIB}/dns/_ddr.pyc
 ${PYSITELIB}/dns/_ddr.pyo
+${PYSITELIB}/dns/_features.py
+${PYSITELIB}/dns/_features.pyc
+${PYSITELIB}/dns/_features.pyo
 ${PYSITELIB}/dns/_immutable_ctx.py
 ${PYSITELIB}/dns/_immutable_ctx.pyc
 ${PYSITELIB}/dns/_immutable_ctx.pyo
@@ -423,7 +430,3 @@ ${PYSITELIB}/dns/zonefile.pyo
 ${PYSITELIB}/dns/zonetypes.py
 ${PYSITELIB}/dns/zonetypes.pyc
 ${PYSITELIB}/dns/zonetypes.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
