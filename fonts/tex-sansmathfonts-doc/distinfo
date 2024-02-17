@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/01 22:25:36 markd Exp $
+$NetBSD: distinfo,v 1.10 2024/02/17 01:03:16 markd Exp $
 
-BLAKE2s (sansmathfonts.doc.r64661.tar.xz) = 1ed9d0db0f48a90dc009f3039c3d3c081ead172cb3fad3294e0a03d03f7d1737
-SHA512 (sansmathfonts.doc.r64661.tar.xz) = de240522929a1b2942e3108c03a5523e42b0bdfd4365afabad98a22dcd73784070ba26d3a4ceb821749bd557b19b220f2785687f52ad47a502f8f67f05409839
-Size (sansmathfonts.doc.r64661.tar.xz) = 365128 bytes
+BLAKE2s (sansmathfonts.doc.r68777.tar.xz) = d9af5e82d2e84e0b40f9f606d5ca7f47460c979462cefcd09cffdf4d339b6502
+SHA512 (sansmathfonts.doc.r68777.tar.xz) = 5972253d34cb39cb0151050b4e9dab45dea50901a84f736ee8a25beb5ad647a112462ed5b3d46c61ff20a3a20852000c64736c88df9ed59defa2da5bf54b5638
+Size (sansmathfonts.doc.r68777.tar.xz) = 365464 bytes
