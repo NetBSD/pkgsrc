@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2023/09/17 08:56:18 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/02/17 10:13:19 adam Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -13,32 +13,25 @@
 
 DISTNAME=	OpenBLAS-${OPENBLAS_VERSION}
 PKGNAME=	${OPENBLAS_VARIANT}-${OPENBLAS_VERSION}
-DIST_SUBDIR=	openblas-${OPENBLAS_VERSION}
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
-		http://www.netlib.org/lapack/timing/
-DISTFILES=	${DISTNAME}.tar.gz ${LARGE_FILE} ${TIMING_FILE}
-LARGE_FILE=	large.tgz
-TIMING_FILE=	timing.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMathLib/}
 GITHUB_PROJECT=	OpenBLAS
-GITHUB_TAG=	v${OPENBLAS_VERSION}
+GITHUB_RELEASE=	v${OPENBLAS_VERSION}
 
 DISTINFO_FILE=	${.CURDIR}/../../math/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../math/openblas/patches
 
-HOMEPAGE=	https://github.com/xianyi/OpenBLAS
+MAINTAINER=	thomas.orgis@uni-hamburg.de
+HOMEPAGE=	https://github.com/OpenMathLib/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2 (variant ${OPENBLAS_VARIANT})
 LICENSE=	modified-bsd
 
-# Darwin has a .so/.dylib PLIST issue
 # Untested on other platforms
 ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
-
 NO_CONFIGURE=	yes
-
 TEST_TARGET=	tests
 
 # Also set compilers explicitly, overriding Makefile.rule
@@ -105,10 +98,6 @@ SUBST_FILES.threads+=	ctest/Makefile
 
 PLIST_SRC=	${.CURDIR}/../../math/openblas/PLIST
 PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
-
-post-extract:
-	(cd ${DISTDIR}/${DIST_SUBDIR} && \
-		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
 
 # This builds some benchmark programs you can call from ${WRKSRC} afterwards.
 .PHONY: benchmark
