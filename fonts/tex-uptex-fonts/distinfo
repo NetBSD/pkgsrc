@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/02 11:45:27 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/02/17 01:49:23 markd Exp $
 
-BLAKE2s (uptex-fonts.r65657.tar.xz) = b46bc2a2348743e6748c198b6e85e5266e976d7cdb927823238f67542d3bebd1
-SHA512 (uptex-fonts.r65657.tar.xz) = c5afc2563064da4f84ce962ab09966a4907bef73d776fa8c2851b7fff7de2bdcf0616c88dc75310e41c163ec9ce03fa737d87ae65cce41116f63a89be07c9033
-Size (uptex-fonts.r65657.tar.xz) = 188432 bytes
+BLAKE2s (uptex-fonts.r68297.tar.xz) = 411c8ecc07ca964ccf4a2b0eaf316d193e046a0fd73f4d545c1859cf196bc39d
+SHA512 (uptex-fonts.r68297.tar.xz) = 1802a5ff347ee4b9eabb93e4da5881a19b9861e3144009839d7779f61bf362dfa5be2a37b42b64041af7083ac756aaf788ad9a69cb4ba97887b21e78f6a794bf
+Size (uptex-fonts.r68297.tar.xz) = 198384 bytes
