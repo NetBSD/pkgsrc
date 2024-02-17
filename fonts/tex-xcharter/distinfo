@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/04/19 04:26:45 markd Exp $
+$NetBSD: distinfo,v 1.17 2024/02/17 01:57:26 markd Exp $
 
-BLAKE2s (xcharter.r63057.tar.xz) = 30d043322891ecbc65d42d4b9e77774e08b5478f9318949c95b0f307d65f7ac3
-SHA512 (xcharter.r63057.tar.xz) = e3b6de6f9ab168b90b2351a43066e144c87efcd648c8e39975870040662bed9f5a2d033d23c28eed2b446af24abfb893ac550a52870ce5dbcc41d9b26aca4d52
-Size (xcharter.r63057.tar.xz) = 2200760 bytes
+BLAKE2s (xcharter.r67742.tar.xz) = 12b996b08032f24558fe9936d2dde9b2b50d075d4f95610ce000b5bf72211306
+SHA512 (xcharter.r67742.tar.xz) = 9e71217c7df0e41de44aa8cfe09b36955910ccca4337d878b0f18f4352f52d14b9dc1cafae01e9b06ed1a094282bb73b25e5328ccbf60e6070b57262e106018f
+Size (xcharter.r67742.tar.xz) = 2200928 bytes

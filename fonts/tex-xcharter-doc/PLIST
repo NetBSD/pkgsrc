@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/17 01:57:26 markd Exp $
 share/texmf-dist/doc/fonts/xcharter/README
+share/texmf-dist/doc/fonts/xcharter/altSRB.py
 share/texmf-dist/doc/fonts/xcharter/altone.py
 share/texmf-dist/doc/fonts/xcharter/newgermanfxch-crop.pdf
 share/texmf-dist/doc/fonts/xcharter/newgermanfxch.pdf
