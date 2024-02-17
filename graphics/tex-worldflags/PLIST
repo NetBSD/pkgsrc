@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/30 11:55:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/17 01:55:29 markd Exp $
 share/texmf-dist/tex/latex/worldflags/worldflag_0.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_1.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_2.tex
@@ -73,6 +73,7 @@ share/texmf-dist/tex/latex/worldflags/worldflag_CY.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_CZ.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_Christian.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_D.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_DE-BY.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_DE.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_DJ.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_DK.tex
@@ -97,6 +98,11 @@ share/texmf-dist/tex/latex/worldflags/worldflag_FO.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_FR.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_G.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_GA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_GB-ENG.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_GB-RAF.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_GB-RED.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_GB-RN.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_GB-SCT.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_GB.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_GD.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_GE.tex
@@ -126,6 +132,28 @@ share/texmf-dist/tex/latex/worldflags/worldflag_IN.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_IQ.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_IR.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_IS.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-AA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-AB.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-AO.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-BA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-CL.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-CM.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-EM.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-FR.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-LA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-LI.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-LO.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-MA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-MO.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-PI.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-PU.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-SA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-SI.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-TA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-TN.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-TO.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-UM.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_IT-VE.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_IT.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_J.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_JE.tex
@@ -159,6 +187,7 @@ share/texmf-dist/tex/latex/worldflags/worldflag_LV.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_LY.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_M.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_MA.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_MC.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_MD.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_ME.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_MG.tex
@@ -230,6 +259,7 @@ share/texmf-dist/tex/latex/worldflags/worldflag_SO.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_SR.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_SS.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_ST.tex
+share/texmf-dist/tex/latex/worldflags/worldflag_SU.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_SV.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_SY.tex
 share/texmf-dist/tex/latex/worldflags/worldflag_SZ.tex
