@@ -1,13 +1,7 @@
-$NetBSD: distinfo,v 1.48 2023/02/25 03:30:47 riastradh Exp $
+$NetBSD: distinfo,v 1.49 2024/02/17 02:20:26 adam Exp $
 
-BLAKE2s (dnsmasq-2.89.tar.xz) = 1b14c7403ee3e3de7d88acf0f34ff946ca03b870e9b196745285ea53aa72f90b
-SHA512 (dnsmasq-2.89.tar.xz) = 4384ed5b673e10eaf6532e6eaeb5c0a6b817581433cc28c632bdcbadbfc050a0ab73bc5b73c98d708cd39515bb3f72168714b0aa5f16436cebdd18020648d428
-Size (dnsmasq-2.89.tar.xz) = 562700 bytes
+BLAKE2s (dnsmasq-2.90.tar.xz) = 3fded3fc5310c3dd68af5ed02abdadc556aa7ec467dd09e6736279c21ff7d317
+SHA512 (dnsmasq-2.90.tar.xz) = e169de1892f935e219b0f49d90107f95cba42b40bca20bd3c973313c2cd4df58b929af6628cd988419051d81c3b4ccf8e9f816274df7d0840e79f5bf49602442
+Size (dnsmasq-2.90.tar.xz) = 570672 bytes
 SHA1 (patch-src_bpf.c) = 4115a5391f57564663bbfc448fbb865c370318a6
-SHA1 (patch-src_dhcp-common.c) = e7b8ac99e756bc5964e1070cfe8d07f4e3a5a7b1
-SHA1 (patch-src_dhcp.c) = 10cf20de250479172e97a627ff4c8fbb8e414fe7
 SHA1 (patch-src_dump.c) = e5788d9e3112b1e5b2ef7ce500b0262b95c375c6
-SHA1 (patch-src_loop.c) = 6c8009326658c8e603a5e651a93e0fa7a8650604
-SHA1 (patch-src_option.c) = a2267ddbcfe40ef197ff0138d3177ba184e6a69a
-SHA1 (patch-src_rfc2131.c) = 200ed9e1752d2295de7d27830654e07e669881bd
-SHA1 (patch-src_tftp.c) = a72180e297b9da4858b77b7d8bc7a7e69f7f3468
