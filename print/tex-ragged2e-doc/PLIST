@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/09 12:49:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/17 00:50:43 markd Exp $
+share/texmf-dist/doc/latex/ragged2e/1.pdf
+share/texmf-dist/doc/latex/ragged2e/2.pdf
+share/texmf-dist/doc/latex/ragged2e/3.pdf
+share/texmf-dist/doc/latex/ragged2e/4.pdf
+share/texmf-dist/doc/latex/ragged2e/6.pdf
 share/texmf-dist/doc/latex/ragged2e/LICENSE.md
 share/texmf-dist/doc/latex/ragged2e/README.md
 share/texmf-dist/doc/latex/ragged2e/ragged2e.pdf
+share/texmf-dist/doc/latex/ragged2e/test.pdf
