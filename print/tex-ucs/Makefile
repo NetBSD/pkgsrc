@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/09/01 05:47:16 markd Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/17 01:40:11 markd Exp $
 
 DISTNAME=	ucs
-PKGNAME=	tex-${DISTNAME}-2.3
-TEXLIVE_REV=	64114
+PKGNAME=	tex-${DISTNAME}-2.4
+TEXLIVE_REV=	68759
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ucs
