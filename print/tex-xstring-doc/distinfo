@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/04/01 22:52:02 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/02/17 04:25:52 markd Exp $
 
-BLAKE2s (xstring.doc.r65551.tar.xz) = 670fd4fcfb89d628f2e79ed4682d648e94397e1ee8737ccf48bafb9bbd2f4689
-SHA512 (xstring.doc.r65551.tar.xz) = a3ad8bc25db266e50fff99ef28def0ad2b68b7c31d382f256b49f90d5fc300800166cd10e255679535bafc2b6196df4ec94df1ab7d82ac42473b51d2226f11ac
-Size (xstring.doc.r65551.tar.xz) = 834512 bytes
+BLAKE2s (xstring.doc.r68015.tar.xz) = e17d615bf6cf1bd00038a8c4e4bd71f847c405110735d9b286890e477bc25a1b
+SHA512 (xstring.doc.r68015.tar.xz) = c9ee24a7661c7dcf4f7cd1b657269951baced39e6d40f5a6656d491120c9fd90034d9a4a226d0f714909e7a03fbc474f6f7a355d4138ba87906d950e1156c884
+Size (xstring.doc.r68015.tar.xz) = 567192 bytes
