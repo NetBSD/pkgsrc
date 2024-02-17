@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2024/01/22 13:17:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.164 2024/02/17 19:45:15 wiz Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -107,6 +107,18 @@ USE_TOOLS+=		pax pkg-config
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-xvmc
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	--target=${MACHINE_ARCH:Q}-${OPSYS:Q}
+# Reaching into the destdir with a -I flag to NATIVE_CC is kinda
+# sleazy, but this will probably work and it saves the trouble of
+# pulling in a gigantic tool dependency.
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${_CROSS_DESTDIR:Q}${PREFIX:Q}/include/ffmpeg5
+#TOOL_DEPENDS+=		ffmpeg5>=0:../../multimedia/ffmpeg5
+#CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}\ -I${TOOLBASE:Q}/include/ffmpeg5
+.else
+CONFIGURE_ARGS+=	--host-cc=${CC:Q}\ ${BUILDLINK_CPPFLAGS:Q}
+.endif
 
 INSTALLATION_DIRS=	bin share/mplayer/skins
 
