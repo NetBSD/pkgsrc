@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/02/04 09:48:06 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/02/18 10:13:44 markd Exp $
 
-BLAKE2s (latex-base-dev.doc.r68730.tar.xz) = 798d83a99ecf08d8b3775fbc1d3c099fb3a7116cf8675eb7c3af4063283c1083
-SHA512 (latex-base-dev.doc.r68730.tar.xz) = 10214331abeb528bc4e594f9141c99c21cde74729652a7d4a3bce71e401493904377bbf49c1778e35461689f0b2eba9e59c9b52ea484c8ac1bf79413963124a1
-Size (latex-base-dev.doc.r68730.tar.xz) = 34912744 bytes
+BLAKE2s (latex-base-dev.doc.r69872.tar.xz) = cd9bb5ead04ca17f053afddaf058eed345dd93858ebc4bbfcf23bf3df026a631
+SHA512 (latex-base-dev.doc.r69872.tar.xz) = 4ec2405d8d3e3c92666bbab01cdb065b174f82bb9c3b91f0bd7af23dd2fe3e8cda98060cf1e08df349ea32386da911ee4c7a28dc29bc52ec6ac02a46cab98b66
+Size (latex-base-dev.doc.r69872.tar.xz) = 35243768 bytes
