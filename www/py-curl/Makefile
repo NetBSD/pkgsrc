@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2023/11/08 13:21:22 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2024/02/18 08:28:12 adam Exp $
 
-DISTNAME=	pycurl-7.45.2
+DISTNAME=	pycurl-7.45.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycurl/}
 
@@ -11,18 +10,17 @@ HOMEPAGE=	http://pycurl.io/
 COMMENT=	Python module interface to the cURL library
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYSETUPARGS=	--with-openssl
+MAKE_ENV+=	PYCURL_SSL_LIBRARY=openssl
+INSTALL_ENV+=	PYCURL_SSL_LIBRARY=openssl
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
 .include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
