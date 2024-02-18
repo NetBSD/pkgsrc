@@ -1,8 +1,8 @@
-$NetBSD: patch-src_mips_ffi.c,v 1.2 2022/09/26 18:43:48 adam Exp $
+$NetBSD: patch-src_mips_ffi.c,v 1.3 2024/02/18 20:55:51 adam Exp $
 
 Fixes to support the various NetBSD mips ports.
 
---- src/mips/ffi.c.orig	2022-09-19 09:57:23.000000000 +0000
+--- src/mips/ffi.c.orig	2024-02-15 12:54:35.000000000 +0000
 +++ src/mips/ffi.c
 @@ -532,6 +532,7 @@ static ffi_status ffi_prep_cif_machdep_i
                cif->flags += t->type << (arg_reg * FFI_FLAG_BITS);
@@ -28,11 +28,11 @@ Fixes to support the various NetBSD mips ports.
        case FFI_TYPE_LONGDOUBLE:
  	/* Long double is returned as if it were a struct containing
  	   two doubles.  */
-@@ -715,6 +718,7 @@ static ffi_status ffi_prep_cif_machdep_i
- 	    }
- 	  break;
- 	}
+@@ -723,6 +726,7 @@ static ffi_status ffi_prep_cif_machdep_i
+       case FFI_TYPE_SINT64:
+ 	cif->flags += FFI_TYPE_UINT64 << (FFI_FLAG_BITS * 8);
+ 	break;
 +#endif
        default:
- 	cif->flags += FFI_TYPE_INT << (FFI_FLAG_BITS * 8);
+ 	cif->flags += cif->rtype->type << (FFI_FLAG_BITS * 8);
  	break;
