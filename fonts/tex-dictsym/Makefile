@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:42 markd Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/18 09:58:31 markd Exp $
 
 DISTNAME=	dictsym
-PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
-TEXLIVE_REV=	20031
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	69720
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dictsym
@@ -12,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	dictsym.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
