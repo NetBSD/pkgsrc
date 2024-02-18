@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2021/02/07 14:02:44 leot Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/18 10:57:57 markd Exp $
 
 DISTNAME=	verse
-PKGNAME=	tex-${DISTNAME}-2.4b
-PKGREVISION=	1
-TEXLIVE_REV=	34017
+PKGNAME=	tex-${DISTNAME}-2.4c
+TEXLIVE_REV=	69882
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/verse
-COMMENT=	Aids for typesetting simple verse (poems)
+COMMENT=	Aids for typesetting simple verse
 LICENSE=	lppl-1.3c
 
 .include "../../print/texlive/package.mk"
