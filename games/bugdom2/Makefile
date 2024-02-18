@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/14 19:47:13 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/18 11:12:29 wiz Exp $
 
 DISTNAME=	bugdom2-4.0.0
 CATEGORIES=	games
@@ -15,6 +15,7 @@ GITHUB_SUBMODULES=	\
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++20
 USE_TOOLS+=	pax pkg-config
 
 WRKSRC=		${WRKDIR}/Bugdom2-${PKGVERSION_NOREV}
