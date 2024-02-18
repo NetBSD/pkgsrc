@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/04/09 21:09:00 markd Exp $
+$NetBSD: distinfo,v 1.23 2024/02/18 10:04:29 markd Exp $
 
-BLAKE2s (fontspec.r61617.tar.xz) = 35329f7a41de51bf025727755749a77ad5c8ce8df64a5b3f1edf65e0bf159a4e
-SHA512 (fontspec.r61617.tar.xz) = 910b6dbf1ec00882086b1abf93e4a736b4a9b07b89d920fa84094aaf8fde11c6d25fa8cbc4448987bf249c71925ded5e82056ca44e4bf8f10030ab6bcbc3fc46
-Size (fontspec.r61617.tar.xz) = 26664 bytes
+BLAKE2s (fontspec.r69880.tar.xz) = 9e941441523c6ea8bbb6d135036e3a1737c487f4ac2bb331deab0ccbcac35f99
+SHA512 (fontspec.r69880.tar.xz) = 3d49ce69d6830cb4bcc16b0df3fe86335761d71fc8b930470ecb4e38f4131c40c534d8c613a252d552b1d298d61968e5bc2aa574b0299a9f7b9e79b63711d442
+Size (fontspec.r69880.tar.xz) = 27076 bytes
