@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24051 2024/02/17 22:53:59 wiz Exp $
+$NetBSD: TODO,v 1.24052 2024/02/18 08:30:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,6 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.28
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-24.0.1
@@ -466,6 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asunder-2.9.7
 	o audacity-3.4
 	o authelia-4.28.0
+	o autoconf-archive-2023.02.20
 	o autoconvert-0.3.16
 	o autosetup-0.7.0
 	o avidemux-2.8
@@ -592,6 +594,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.6.7
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.26
@@ -620,6 +623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
+	o exiv2-0.28.2
 	o exmh-2.8.0
 	o faces-1.7.7
 	o facter-2.4.5
@@ -682,6 +686,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-ru-2.10.0
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
+	o git-2.43.2
 	o gjs-1.70.1
 	o gkrellm-2.3.11
 	o gkrellm-multiping-2.0.13
@@ -738,7 +743,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.61.0
+	o grpc-1.61.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.22.9
@@ -835,6 +840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
+	o khal-0.11.3
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
 	o kitty-0.30.1 [wip]
@@ -860,6 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcups-2.4.7
 	o libdevq-0.0.4
 	o libdsk-1.5.19
+	o libffi-3.4.5
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -1138,20 +1145,27 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-cairo-1.26.0
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.49.0
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-core-2.17.1
+	o py-google-api-python-client-2.118.0
+	o py-google-auth-2.28.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-matplotlib-3.8.3
+	o py-mercurial-6.6.3
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1161,6 +1175,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pip-api-0.0.33
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
@@ -1174,7 +1189,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-tortoisehg-6.6.3
 	o py-uliweb-0.6
+	o py-urwid-2.6.1
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
