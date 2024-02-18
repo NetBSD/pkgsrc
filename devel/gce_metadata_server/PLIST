@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/18 09:30:27 bsiegert Exp $
+bin/gce_metadata_server
