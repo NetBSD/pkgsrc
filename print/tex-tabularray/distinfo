@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/05/04 20:49:14 joerg Exp $
+$NetBSD: distinfo,v 1.3 2024/02/18 10:46:53 markd Exp $
 
-BLAKE2s (tabularray.r66276.tar.xz) = f0c0602c8dac2711387d5088e2b2ee97ff9c86d9c80ba5850fe335832262df8d
-SHA512 (tabularray.r66276.tar.xz) = 49171a748b9fa046d874bfb2aa44d2696120fae78c55314853090163228d6484507c281f65c7ddb1ba952b22c14d91e3904e779116adea69166322b91188b980
-Size (tabularray.r66276.tar.xz) = 36208 bytes
+BLAKE2s (tabularray.r69926.tar.xz) = d6876bde0128e1a47ed4cccafc769d51a2035102d43a3241d65434dea3ebe968
+SHA512 (tabularray.r69926.tar.xz) = bfbce523764d979d0ab24992be6b0c79dcc20dabbdab195496f11e21f01c349fcf0dff8f400b6833dc046a74e27468b496b99fb65d1aeb820d7c4077b21525ee
+Size (tabularray.r69926.tar.xz) = 37364 bytes
