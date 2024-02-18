@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2022/10/24 09:46:57 adam Exp $
+$NetBSD: distinfo,v 1.64 2024/02/18 20:55:51 adam Exp $
 
-BLAKE2s (libffi-3.4.4.tar.gz) = 59b18534be8708e52e1d47f0874192178f370635168bb8101415a296e73d6e2f
-SHA512 (libffi-3.4.4.tar.gz) = 88680aeb0fa0dc0319e5cd2ba45b4b5a340bc9b4bcf20b1e0613b39cd898f177a3863aa94034d8e23a7f6f44d858a53dcd36d1bb8dee13b751ef814224061889
-Size (libffi-3.4.4.tar.gz) = 1362394 bytes
+BLAKE2s (libffi-3.4.6.tar.gz) = d92dc00d30ca8ef61996cc3c28b5932a6b6769461081460d632403541e17c623
+SHA512 (libffi-3.4.6.tar.gz) = 033d2600e879b83c6bce0eb80f69c5f32aa775bf2e962c9d39fbd21226fa19d1e79173d8eaa0d0157014d54509ea73315ad86842356fc3a303c0831c94c6ab39
+Size (libffi-3.4.6.tar.gz) = 1391684 bytes
 SHA1 (patch-configure) = f5ca2947f3aadf51d59198a5339f81f19dc51cd2
 SHA1 (patch-configure_host) = a4c99cd0fbbbe0f2c806d662b85a6e2c56b31168
 SHA1 (patch-src_aarch64_ffi.c) = e46083e6e6892524868b88dfbcd292f11db036d9
@@ -10,7 +10,7 @@ SHA1 (patch-src_arm_sysv.S) = 9aaa8e12e627d68126fbc4ff02e06ed45c94da1a
 SHA1 (patch-src_closures.c) = 13c426ad678439d2781477aa2b10497a22223427
 SHA1 (patch-src_m68k_ffi.c) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
 SHA1 (patch-src_m88k_elfbsd.S) = 6572c7fa39c00096cb4a80bb88993ff1b4aaa8cc
-SHA1 (patch-src_mips_ffi.c) = cbdfdab5d23cbb7c403b00166959f792ebfabb4a
+SHA1 (patch-src_mips_ffi.c) = 1fa75056b37f3de4526e81bb8df4d2973067f4d4
 SHA1 (patch-src_mips_ffitarget.h) = 86f144b1dd62d912f1b03016772e2715f336bf6d
 SHA1 (patch-src_powerpc_ffi.c) = b68a93d0f8552efaa8c50256da3af3bde5de7059
 SHA1 (patch-src_powerpc_ffi__powerpc.h) = fafb125b28069d5108726ac7b2d4efdc4fdadf92
