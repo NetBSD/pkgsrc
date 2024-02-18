@@ -1,3 +1,6 @@
-TeXdoc is a script for easy access to the package documentation of
-TeX distributions (i.e., .dvi, .pdf or .ps files on the $TEXDOCS
-tree).
+texdoc is a Lua script providing easy access to the
+documentation in TeX Live: PDF, DVI, plain text files, and
+more. Viewing and other configuration can be extensively
+customized. It is distributed with TeX Live; MiKTeX provides a
+program by the same name to do the same job, but its
+implementation is unrelated.
