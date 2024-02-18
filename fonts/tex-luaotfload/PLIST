@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2024/02/04 10:42:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/02/18 10:19:17 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2023-08-19.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2023-12-28.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -56,6 +56,7 @@ share/texmf-dist/tex/luatex/luaotfload/fontloader-l-unicode.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-reference.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-util-fil.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-util-str.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-arabic.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-auxiliary.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-bcp47.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-blacklist.cnf
@@ -84,6 +85,7 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-main.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-multiscript.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-notdef.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-parsers.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-realpath.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-resolvers.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
