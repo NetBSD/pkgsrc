@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1313 2024/02/18 11:01:27 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1314 2024/02/18 14:23:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/tex-verse-doc to 2.4c [markd 2024-02-18]
 	Updated print/tex-zref to 2.35 [markd 2024-02-18]
 	Updated print/tex-zref-doc to 2.35 [markd 2024-02-18]
+	Updated devel/R-xfun to 0.42 [mef 2024-02-18]
