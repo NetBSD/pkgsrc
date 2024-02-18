@@ -1,0 +1,4 @@
+This script acts as a Google Compute Engine internal metadata server.
+
+It returns a live access_token that can be used directly by Application Default
+Credentials transparently.
