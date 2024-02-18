@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1307 2024/02/18 01:01:01 fox Exp $
+$NetBSD: CHANGES-2024,v 1.1308 2024/02/18 01:51:28 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-admin-rangefilter to 0.12.1 [adam 2024-02-17]
 	Updated devel/py-hypothesis to 6.98.6 [adam 2024-02-17]
 	Updated audio/din to 58.1 [fox 2024-02-18]
+	Updated sysutils/htop to 3.3.0 [fox 2024-02-18]
