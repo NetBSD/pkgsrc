@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/18 10:36:46 markd Exp $
 
-BLAKE2s (tex-pigpen-15878/pigpen.tar.xz) = 9d8a9ab046f490d3d6a715a33d7e7f0ef5bf88bc092b79b65ebd3d17aaa7ff19
-SHA512 (tex-pigpen-15878/pigpen.tar.xz) = c64238e62674a648b8985c68aaa479946a1c055ad4d5cfdf3dd2d7261457d856f02c525c11b71c7b87dfc00ebe9dec773200f230240f6082093f6867761b171c
-Size (tex-pigpen-15878/pigpen.tar.xz) = 6808 bytes
+BLAKE2s (pigpen.r69687.tar.xz) = 09997cf38fe94bc89937b2ae96a3b7ee6540e9e85d48f6cccdee4fcd91e5530a
+SHA512 (pigpen.r69687.tar.xz) = 54e472281b1ad2f98b8f49df945fc89ea2e28bbec4088c15b4b73a411ad42936f408926a006e46656eb70b90172f39dec376b2eace6fd22923dd4881e1659618
+Size (pigpen.r69687.tar.xz) = 6892 bytes
