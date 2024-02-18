@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/18 03:26:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/18 10:26:02 markd Exp $
 
 DISTNAME=	morewrites
-PKGNAME=	tex-${DISTNAME}-20181229
-TEXLIVE_REV=	49531
+PKGNAME=	tex-${DISTNAME}-20240202
+TEXLIVE_REV=	69679
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/morewrites
