@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/06/17 10:45:25 markd Exp $
+$NetBSD: distinfo,v 1.22 2024/02/18 10:56:00 markd Exp $
 
-BLAKE2s (texinfo.r67325.tar.xz) = 5e4e11ffa66bec55dd6c9bf2fd5003aa9976fb2dfa94a0ceee784f8c426f79fd
-SHA512 (texinfo.r67325.tar.xz) = 1707f059c148955c877173848a656f30d3b16138662196c3ff244db5cf90c1f50bbcbc5c3b4cb020f8e580b95fd6337ee97c6186b9070ed512a4f8ca2abb83f9
-Size (texinfo.r67325.tar.xz) = 97452 bytes
+BLAKE2s (texinfo.r69818.tar.xz) = b10a6401a86cfa06d0ce800082fd14266a390f605d29e6bfc39b9bbb20a7c03f
+SHA512 (texinfo.r69818.tar.xz) = 5a87395dfb732e8cd213d50c3bc3079c4c6dd6a070e1be580dbe45c02b2c9f0f3d5590dc36222d0833c262c6412024e55f0881e92358715a585dda064b964e2c
+Size (texinfo.r69818.tar.xz) = 97684 bytes
