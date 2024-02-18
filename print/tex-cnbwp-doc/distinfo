@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/18 09:55:29 markd Exp $
 
-BLAKE2s (tex-cnbwp-32550/cnbwp.doc.tar.xz) = 796d24fbc53796682d18257205cbf7748d607254375bf0f442676ffdffe73896
-SHA512 (tex-cnbwp-32550/cnbwp.doc.tar.xz) = 428bf40e82c1df84b5f5d04238dddaaaf80d79e5b0a5161cffb553c2908ea3e9d505a0c0ce7b2f70cbb207719b0d707e30e8f9810ad0b34d15ce31affe3664e4
-Size (tex-cnbwp-32550/cnbwp.doc.tar.xz) = 684304 bytes
+BLAKE2s (cnbwp.doc.r69931.tar.xz) = f694934022228c1c77dd045a5e0b5223a975e69a9aeaa8ca27c87b5c7c4450e5
+SHA512 (cnbwp.doc.r69931.tar.xz) = 685c09924feb372af74ff578a74c4a4ed24a7b9ddbac65d8f8e2c17ba4b80e7f34d49d71ef9251b619b363a83dbbe12114aed547bff6e29d7053261cae169d22
+Size (cnbwp.doc.r69931.tar.xz) = 686436 bytes
