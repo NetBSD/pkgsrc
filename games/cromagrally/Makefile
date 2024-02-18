@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/02/14 19:04:05 charlotte Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/18 11:12:00 wiz Exp $
 
 DISTNAME=	cromagrally-3.0.1
 CATEGORIES=	games
@@ -14,6 +14,7 @@ GITHUB_SUBMODULES=	\
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++20
 USE_TOOLS+=	pax pkg-config
 
 WRKSRC=		${WRKDIR}/CroMagRally-${GITHUB_TAG}
