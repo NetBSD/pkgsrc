@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/18 09:49:03 markd Exp $
 
-BLAKE2s (babel-slovenian.r57666.tar.xz) = a00aef91d032d56d104b3338ee3c5900b316c3d1d8adce549e58679c9bf97b1b
-SHA512 (babel-slovenian.r57666.tar.xz) = 159e3fd820c39f64897dd26ab589cfb77a9d254cc75a0b1988d164cb9c989bc55ff2320d5d21b698928292a92ea6bd85b9a6cc489270ff13c2c13842d84b4c6a
-Size (babel-slovenian.r57666.tar.xz) = 2412 bytes
+BLAKE2s (babel-slovenian.r69742.tar.xz) = 65b4d63628cd84075eb42afded6d0e63d24c62c2311f0f837327c0975b2135d4
+SHA512 (babel-slovenian.r69742.tar.xz) = b17956aa2afda17c6ece09f372ed1777bfdecf358fee13260da6f73f971eecd5d315770d01e83def27edd2b06828065ba1f488bc3ee879539691424256c39ad1
+Size (babel-slovenian.r69742.tar.xz) = 2412 bytes
