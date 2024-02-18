@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/18 10:08:58 markd Exp $
 
-BLAKE2s (tex-heuristica-51362/heuristica.doc.tar.xz) = 11c07d53b7a69b0137c5101a1839b8bc1f075eb2c792dcf4794a0f80ce4c0aaf
-SHA512 (tex-heuristica-51362/heuristica.doc.tar.xz) = f445e4588ba85a71af43640e6625fe1fbcb1f8a2208d2c5cfc7fadd1df325be3fdda85b9da4dd824f3c0445033b2bd9e2120e71abf61c6f55b9e828a3e61a87e
-Size (tex-heuristica-51362/heuristica.doc.tar.xz) = 224788 bytes
+BLAKE2s (heuristica.doc.r69649.tar.xz) = 67dca9b3a6564be28d9ecbedbd9a75bb5f46ce9989dde9a866c41a35cecede0b
+SHA512 (heuristica.doc.r69649.tar.xz) = 406d07cc807454c429e644b7572456b2d9f49d2f48093007c43cbd3087d108beec1806f810508a849bfced690c97141ab34a2daec7ec641c8bdc71cbb55a43cc
+Size (heuristica.doc.r69649.tar.xz) = 224820 bytes
