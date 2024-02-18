@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/02/03 04:47:33 markd Exp $
+$NetBSD: distinfo,v 1.4 2024/02/18 10:02:33 markd Exp $
 
-BLAKE2s (evangelion-jfm.doc.r68059.tar.xz) = 184fa357c84910e22021ef1a7b49b2c08fe78079a8fb8dfc28a23e0a74722319
-SHA512 (evangelion-jfm.doc.r68059.tar.xz) = 65447d983cd4a2b112966f8bc9de7f9a7eb2c8f38a9266db5a416219ae8b817f82f62fdc79bddcb2bfe3a67c84c6097975f178bce664e7ac23e2f29363c3df7c
-Size (evangelion-jfm.doc.r68059.tar.xz) = 582032 bytes
+BLAKE2s (evangelion-jfm.doc.r69751.tar.xz) = 74a6726a6978889d178c2bb459f6107df7fe0862cdf9fefbb11a54953d96fb81
+SHA512 (evangelion-jfm.doc.r69751.tar.xz) = ef98234e6c6609dc9ea6f60027c3dad1f417d677d5177525945330122b9b513a90bd296ba86a1d96eadb52792b5d162264578118872d5a7b1794b4a1a7fe06a4
+Size (evangelion-jfm.doc.r69751.tar.xz) = 582400 bytes
