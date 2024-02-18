@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/09/01 03:50:58 markd Exp $
+$NetBSD: distinfo,v 1.13 2024/02/18 10:00:37 markd Exp $
 
-BLAKE2s (europecv.doc.r64037.tar.xz) = 077f2bbf5e73c072cb43c41be7ac5514527db691efa94560f880173ba9f55299
-SHA512 (europecv.doc.r64037.tar.xz) = 1c494d5e568514e84a5b9ffcc70ce02c3263f0837a2f97676be92cefadc8b8fdcafcd9b1d225ab753a66bc0878d63d2fc0f4b3a345f76c08da258e577b8f4224
-Size (europecv.doc.r64037.tar.xz) = 995452 bytes
+BLAKE2s (europecv.doc.r69661.tar.xz) = d2d6eabb390a38c4a9ad69ab1a8b21594fd459b1ac1ea2b7803dac6587c9fbde
+SHA512 (europecv.doc.r69661.tar.xz) = ce96aa71bf8886c67c65d0ec4e24e97d45ea4b4a948d9b1b6dd51f79781f0667798fbee8fc2577c13b13860c5a886be2b4eb6bf743500a01e1982e5c8e29ac9b
+Size (europecv.doc.r69661.tar.xz) = 1020072 bytes
