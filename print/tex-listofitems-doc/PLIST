@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/22 11:46:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/18 10:16:08 markd Exp $
 share/texmf-dist/doc/generic/listofitems/README
 share/texmf-dist/doc/generic/listofitems/listofitems-en.pdf
 share/texmf-dist/doc/generic/listofitems/listofitems-en.tex
 share/texmf-dist/doc/generic/listofitems/listofitems-fr.pdf
 share/texmf-dist/doc/generic/listofitems/listofitems-fr.tex
+share/texmf-dist/doc/generic/listofitems/test/listofitems-test-latex.pdf
+share/texmf-dist/doc/generic/listofitems/test/listofitems-test-latex.tex
+share/texmf-dist/doc/generic/listofitems/test/listofitems-test-tex.pdf
+share/texmf-dist/doc/generic/listofitems/test/listofitems-test-tex.tex
