@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/15 03:48:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/18 10:13:43 markd Exp $
 share/texmf-dist/tex/latex-dev/base/alltt.sty
 share/texmf-dist/tex/latex-dev/base/ansinew.def
 share/texmf-dist/tex/latex-dev/base/applemac.def
@@ -13,6 +13,7 @@ share/texmf-dist/tex/latex-dev/base/bk11.clo
 share/texmf-dist/tex/latex-dev/base/bk12.clo
 share/texmf-dist/tex/latex-dev/base/book.cls
 share/texmf-dist/tex/latex-dev/base/book.sty
+share/texmf-dist/tex/latex-dev/base/checkencodingsubset.tex
 share/texmf-dist/tex/latex-dev/base/cp1250.def
 share/texmf-dist/tex/latex-dev/base/cp1252.def
 share/texmf-dist/tex/latex-dev/base/cp1257.def
