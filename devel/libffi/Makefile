@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2022/10/24 09:46:57 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/02/18 20:55:51 adam Exp $
 
-DISTNAME=	libffi-3.4.4
+DISTNAME=	libffi-3.4.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libffi/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -32,18 +32,18 @@ pre-build:
 .include "../../mk/bsd.prefs.mk"
 
 # patch-src_m68k_ffi.c uses m68k_sync_icache(2)
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
+.if ${MACHINE_PLATFORM:MNetBSD-*-m68k}
 LIBS+=		-lm68k
 .endif
 
 # fix http://gnats.netbsd.org/42865
-.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
+.if ${MACHINE_PLATFORM:MSunOS-*-i386} && ${CC_VERSION:Mgcc-[23]*}
 CPPFLAGS+=	-D__PIC__
 .endif
 
 # On platforms where ld(1) is LLVM ld, relocations against read-only
 # segments has to be explicitly allowed.
-.if !empty(MACHINE_PLATFORM:MFreeBSD-1[2-9].*-*)
+.if ${MACHINE_PLATFORM:MFreeBSD-1[2-9].*-*}
 CFLAGS+=	-Wl,-z,notext
 .endif
 
