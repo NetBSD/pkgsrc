@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/14 07:01:36 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/02/18 10:59:54 markd Exp $
 
-BLAKE2s (zref.doc.r62977.tar.xz) = 3836544f790ccf43702b351f0b594bdba2a874cbd96807685b3b8548ba03d6ec
-SHA512 (zref.doc.r62977.tar.xz) = f65ebb760d1cac9dbc1c6ed4e48a9015c2cd2c5cbeb28e4776802ea84ac6b08c5302eb2126619e93f5bdf7ca76b4b8cdfad3ee9369aea364f680c1deda7bf396
-Size (zref.doc.r62977.tar.xz) = 668676 bytes
+BLAKE2s (zref.doc.r68278.tar.xz) = 232ae2e787d760fc95985ca2457fde8bface7628f0ab3f72133bf76097879796
+SHA512 (zref.doc.r68278.tar.xz) = 24cf22b54cb13e1458266f4962ba589fa9385f3b8d58493747824d815c372cfa6fa8a8a24d0310264b299ce43148ca001b5c6b73961d1504e1ab6e8a4ac246c0
+Size (zref.doc.r68278.tar.xz) = 668780 bytes
