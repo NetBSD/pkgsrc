@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/02/03 04:47:33 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/18 10:02:32 markd Exp $
 
 DISTNAME=	evangelion-jfm
-PKGNAME=	tex-${DISTNAME}-1.0.5b
-TEXLIVE_REV=	68059
+PKGNAME=	tex-${DISTNAME}-1.0.5c
+TEXLIVE_REV=	69751
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/evangelion-jfm
