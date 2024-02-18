@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/18 03:26:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/18 10:26:02 markd Exp $
 
-BLAKE2s (morewrites.r49531.tar.xz) = 2dedb8b514598ba62d01f711bca95433736a205dd4fa149fdfef188d12fdbff9
-SHA512 (morewrites.r49531.tar.xz) = fb1f515fa834c422f628464467411a51c8c9a99f353ab297ca0ac0b63d65a7f2e05ec3e6a649fa35260a6bedb91dedda594654e83e94a28baa62764a38d9ca8c
-Size (morewrites.r49531.tar.xz) = 5460 bytes
+BLAKE2s (morewrites.r69679.tar.xz) = b4b9e92d2bf28fea3d4bc6eb0e8c65c1911019e487918283fe1a3f134db59047
+SHA512 (morewrites.r69679.tar.xz) = 738ea602368142999aa6f5d99226767fe9d6613b3e5d58687d787e8e470bfbff3ec2fcabeb5931454754ad80661a5925f337ba600fa62f021ae99363451c4c75
+Size (morewrites.r69679.tar.xz) = 5852 bytes
