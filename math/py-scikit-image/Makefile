@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/02/15 22:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/02/18 11:15:04 wiz Exp $
 
 DISTNAME=	scikit_image-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -26,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0.3:../../graphics/py-matplotlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
+GCC_REQD+=	8
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
