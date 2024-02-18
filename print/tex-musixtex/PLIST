@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/04/01 12:10:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/02/18 10:28:49 markd Exp $
 bin/musixflx
 bin/musixtex
 share/texmf-dist/dvips/musixtex/psslurs.pro
@@ -32,6 +32,7 @@ share/texmf-dist/tex/generic/musixtex/musixlit.tex
 share/texmf-dist/tex/generic/musixtex/musixlyr.tex
 share/texmf-dist/tex/generic/musixtex/musixmad.tex
 share/texmf-dist/tex/generic/musixtex/musixmkm.tex
+share/texmf-dist/tex/generic/musixtex/musixmtab.tex
 share/texmf-dist/tex/generic/musixtex/musixper.tex
 share/texmf-dist/tex/generic/musixtex/musixplt.tex
 share/texmf-dist/tex/generic/musixtex/musixpoi.tex
