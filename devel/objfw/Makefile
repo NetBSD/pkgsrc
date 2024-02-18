@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/01/21 12:22:46 js Exp $
+# $NetBSD: Makefile,v 1.20 2024/02/18 15:04:26 js Exp $
 
-DISTNAME=	objfw-1.0.8
+DISTNAME=	objfw-1.0.9
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -36,6 +36,9 @@ PLIST_SRC+=	PLIST.ddp
 PLIST_SRC+=	PLIST.ddp
 PLIST_SRC+=	PLIST.ipx
 .endif
+
+do-test:
+	${RUN} cd ${WRKSRC} && ${MAKE} check
 
 .include "options.mk"
 
