@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/17 10:53:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/02/18 10:51:56 markd Exp $
 
-BLAKE2s (tagpdf.r67368.tar.xz) = 8b70ace59760793dce9e2f35900f2788beda95b2716e5fcf87639e754a2a208c
-SHA512 (tagpdf.r67368.tar.xz) = de07849d663502f96f3cb8acf789c80f6f47483fc37fd6c4757b33fe15541dbec2aced80b052fb44b92ca242121edcec8d5226a7b74f175ef1084e9a6940ae63
-Size (tagpdf.r67368.tar.xz) = 34420 bytes
+BLAKE2s (tagpdf.r69703.tar.xz) = cdb1a271aa88eb8be33af8f9feb7f46fdc8eae8de884e3e48fcd5a352c467a6e
+SHA512 (tagpdf.r69703.tar.xz) = 4caf8cb5a5e2c03f4ac073abfa273dd23fe5a839a04d982e2f3c462af5aabfaf6646f16f0d3534c6ac82909e3f2fcf958558b27b6ff7c7e569d80602cd0f9528
+Size (tagpdf.r69703.tar.xz) = 36836 bytes

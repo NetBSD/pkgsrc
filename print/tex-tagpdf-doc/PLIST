@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/17 10:53:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/18 10:51:56 markd Exp $
 share/texmf-dist/doc/latex/tagpdf/README.md
 share/texmf-dist/doc/latex/tagpdf/acrobat.png
 share/texmf-dist/doc/latex/tagpdf/ex-AF-file.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-AF-file.tex
 share/texmf-dist/doc/latex/tagpdf/ex-alt-actualtext-luatex.pdf
+share/texmf-dist/doc/latex/tagpdf/ex-alt-actualtext.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-alt-actualtext.tex
 share/texmf-dist/doc/latex/tagpdf/ex-attribute-luatex.pdf
+share/texmf-dist/doc/latex/tagpdf/ex-attribute.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-attribute.tex
 share/texmf-dist/doc/latex/tagpdf/ex-formula-problem-luatex.pdf
+share/texmf-dist/doc/latex/tagpdf/ex-formula-problem.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-formula-problem.tex
+share/texmf-dist/doc/latex/tagpdf/ex-list.pdf
+share/texmf-dist/doc/latex/tagpdf/ex-list.tex
 share/texmf-dist/doc/latex/tagpdf/ex-mc-manual-para-split-obsolete.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-mc-manual-para-split-obsolete.tex
-share/texmf-dist/doc/latex/tagpdf/ex-patch-list-luatex.pdf
-share/texmf-dist/doc/latex/tagpdf/ex-patch-list-obsolete.tex
-share/texmf-dist/doc/latex/tagpdf/ex-patch-list.tex
 share/texmf-dist/doc/latex/tagpdf/ex-patch-sectioning-koma-luatex.pdf
-share/texmf-dist/doc/latex/tagpdf/ex-patch-sectioning-koma.tex
-share/texmf-dist/doc/latex/tagpdf/ex-patch-sectioning-memoir.pdf
-share/texmf-dist/doc/latex/tagpdf/ex-patch-sectioning-memoir.tex
 share/texmf-dist/doc/latex/tagpdf/ex-softhyphen.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-softhyphen.tex
 share/texmf-dist/doc/latex/tagpdf/ex-spaceglyph-listings.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-spaceglyph-listings.tex
+share/texmf-dist/doc/latex/tagpdf/ex-structure-obsolete.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-structure-obsolete.tex
 share/texmf-dist/doc/latex/tagpdf/ex-tagpdf-template.pdf
 share/texmf-dist/doc/latex/tagpdf/ex-tagpdf-template.tex
