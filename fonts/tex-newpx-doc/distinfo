@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/09 21:48:28 markd Exp $
+$NetBSD: distinfo,v 1.15 2024/02/18 10:30:59 markd Exp $
 
-BLAKE2s (newpx.doc.r61806.tar.xz) = 407db09850be6ddd9cb6d1150031adf3a770146316d46ac334c39f458a8b6592
-SHA512 (newpx.doc.r61806.tar.xz) = ed38d727e5d8af16730df66860fbf2dc0701d9ef850fd2d77dbeaaebb38e826fd435f9a78e3771f7498c2fdce25efaf59909340e330da84ae831b880ee7393b3
-Size (newpx.doc.r61806.tar.xz) = 256092 bytes
+BLAKE2s (newpx.doc.r69777.tar.xz) = 6a54b39e74f56612dbe8b797a7f4fae28fc0b7bd9d45be9a1ae8292b2adef9f6
+SHA512 (newpx.doc.r69777.tar.xz) = fcea214e98b92d697699976c245f841f87bb5a314ec738fb551e6f546e32e79fcfc0b1e78d9cf1ad5299bf691a833b2ba69aa9c917a6cb1abe891c39556123dc
+Size (newpx.doc.r69777.tar.xz) = 476556 bytes
