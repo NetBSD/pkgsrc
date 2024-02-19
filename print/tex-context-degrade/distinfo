@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:56 nia Exp $
-
-BLAKE2s (tex-context-degrade-23167/context-degrade.tar.xz) = ceade8908eddbc7399c1eb76c6ab7d1e07434bfdc96906f7748c77b5809e81c3
-SHA512 (tex-context-degrade-23167/context-degrade.tar.xz) = 05f5d5e9615788c09f58be85262fd855b90284849cac15acc4d1ed419033030c4e38d9767471e5555b3931c792b32069a69f05ad44e42794f23e8670ad8f5a22
-Size (tex-context-degrade-23167/context-degrade.tar.xz) = 2340 bytes

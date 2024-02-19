@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/04/18 04:21:05 markd Exp $
-
-BLAKE2s (context-cmscbf.doc.r47085.tar.xz) = 5b218f2d0b92c0fc99ddb54ea06dc4e8097faab5977d4c6e55fc5103e1756e5d
-SHA512 (context-cmscbf.doc.r47085.tar.xz) = 8f45989c08f09381ccbf2942a08c0b13792917a18d5b2e92fb45c7ac2f4b4538f5ffd633da0348e12835c03a6f79b0ea7044f1ebea5770365a83d2d097a56df4
-Size (context-cmscbf.doc.r47085.tar.xz) = 162748 bytes

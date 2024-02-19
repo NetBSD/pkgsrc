@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:58 nia Exp $
-
-BLAKE2s (tex-context-lettrine-23167/context-lettrine.doc.tar.xz) = c8aad0ce21a73be4b89b5b726fa83c40540c5a175fa1957f8235520bf8791e74
-SHA512 (tex-context-lettrine-23167/context-lettrine.doc.tar.xz) = a4a7593b337549932c2f84332f0873314219eef1910f571bd01cc288cfe93a1bedfacd4c14c607567147bdf00d0b56951182b72ad39843126df5dfa2785bae21
-Size (tex-context-lettrine-23167/context-lettrine.doc.tar.xz) = 89720 bytes

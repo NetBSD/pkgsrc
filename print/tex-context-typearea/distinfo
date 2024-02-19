@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:00 nia Exp $
-
-BLAKE2s (tex-context-typearea-23167/context-typearea.tar.xz) = 29eae8a3fb4d1b0624b9f5fbafea0646dc11d46bf1896028fa8188a780bc16f3
-SHA512 (tex-context-typearea-23167/context-typearea.tar.xz) = 812855cfe008a790e5088adf8d4642ed3af2817e08b987761b37ddba5d8407dad43766900e4b00fefd4e010842dd8f3351542fe6ce37f5d20354e519a49ff29c
-Size (tex-context-typearea-23167/context-typearea.tar.xz) = 1796 bytes

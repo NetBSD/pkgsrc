@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/04/18 04:33:21 markd Exp $
-
-BLAKE2s (context-layout.doc.r47085.tar.xz) = bdb18940c2f9608492f5495ead27fea3dc630222993aa5f4b06a820d5d6b967e
-SHA512 (context-layout.doc.r47085.tar.xz) = 4ecf7bfe5fbc78453cc116cf7a657f4b6ac7fc21ca7dd6da5beb0ea1af0c1fd48d6a74ab516213f49d1e29cb8bd47fbcc94145157472e3ea22b291f494fc3d1f
-Size (context-layout.doc.r47085.tar.xz) = 211432 bytes
