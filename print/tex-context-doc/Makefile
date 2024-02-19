@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2023/06/17 10:06:28 markd Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/19 10:39:19 markd Exp $
 
 DISTNAME=	context.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2023.67039
-TEXLIVE_REV=	67039
+PKGNAME=	tex-${DISTNAME:S/./-/}-2023.69665
+TEXLIVE_REV=	69665
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context
