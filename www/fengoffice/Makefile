@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2021/03/07 15:01:35 taca Exp $
+# $NetBSD: Makefile,v 1.42 2024/02/19 15:43:36 taca Exp $
 #
 
 DISTNAME=	fengoffice-${FO_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fengoffice/}
 GITHUB_TYPE=	tag
