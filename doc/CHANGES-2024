@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1326 2024/02/19 09:27:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1327 2024/02/19 09:53:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2326,3 +2326,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-pdf to 4.0.2 [adam 2024-02-19]
 	Updated devel/py-urwid to 2.6.1 [adam 2024-02-19]
 	Updated www/py-notebook_shim to 0.2.4 [adam 2024-02-19]
+	Added print/luajittex version 1.17.0 [markd 2024-02-19]
