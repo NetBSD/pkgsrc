@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2023/11/01 09:26:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/02/19 12:52:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_AMSFONTS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_BAKOMA
@@ -784,6 +784,9 @@ ${PYSITELIB}/matplotlib/tests/test_basic.pyo
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.py
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.pyc
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.pyo
+${PYSITELIB}/matplotlib/tests/test_bezier.py
+${PYSITELIB}/matplotlib/tests/test_bezier.pyc
+${PYSITELIB}/matplotlib/tests/test_bezier.pyo
 ${PYSITELIB}/matplotlib/tests/test_category.py
 ${PYSITELIB}/matplotlib/tests/test_category.pyc
 ${PYSITELIB}/matplotlib/tests/test_category.pyo
