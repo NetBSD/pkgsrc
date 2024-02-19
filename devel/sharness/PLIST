@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/19 20:50:43 schmonz Exp $
+share/doc/sharness/API.md
+share/doc/sharness/CHANGELOG.md
+share/doc/sharness/COPYING
+share/doc/sharness/README.git
+share/doc/sharness/README.md
+share/doc/sharness/example/Makefile
+share/doc/sharness/example/simple.t
+share/sharness/lib-sharness/functions.sh
+share/sharness/sharness.sh
+share/sharness/tools/aggregate-results.sh
