@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.71 2024/02/12 03:23:05 jnemeth Exp $
+$NetBSD: distinfo,v 1.72 2024/02/19 04:12:36 jnemeth Exp $
 
 BLAKE2s (sendmail.8.18.1.tar.gz) = 959e83d47978867cf89f817e51ce16a834998ef94a417ead59ddfdfdf0debff0
 SHA512 (sendmail.8.18.1.tar.gz) = 9ce713b44439d4de6faa9e3cdfa2226b44b4fbeb352a5f81584c062570e9472da244158287e489aabe258d28fe54ca4964565c7b0adc7e1763d212be42f98061
@@ -20,7 +20,7 @@ SHA1 (patch-av) = bb6ecd69f6b0db22056b492890d2c6369cd08977
 SHA1 (patch-aw) = e340bd366ce04c4d5ddd15f964bc4040e715a6c9
 SHA1 (patch-ax) = 771c9c8a951a09c80eb85233986af1fc7fedbe77
 SHA1 (patch-ay) = 0a043f2ff0028d475ee852b302844626f4ff4609
-SHA1 (patch-az) = c951d7f00b92b1783fc5e633897d33238f1970d9
+SHA1 (patch-az) = f2683b7bf5f52cd9baedbe8a84ea691734f74b41
 SHA1 (patch-ba) = c190b11b9874f00a18b9c75b6e734f4a9dd3f68f
 SHA1 (patch-bb) = 6c86a60af25b02fc0389f1d40f59c5031d9679f1
 SHA1 (patch-bc) = 9e7346342dfe1ca5d84053b913df4be41a979683
