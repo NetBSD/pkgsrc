@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.921 2024/01/18 19:36:35 markd Exp $
+# $NetBSD: Makefile,v 1.922 2024/02/19 09:52:14 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -87,6 +87,7 @@ SUBDIR+=	libharu
 SUBDIR+=	libpaper
 SUBDIR+=	libspectre
 SUBDIR+=	lilypond
+SUBDIR+=	luajittex
 SUBDIR+=	luatex
 SUBDIR+=	lumina-pdf
 SUBDIR+=	magicfilter
