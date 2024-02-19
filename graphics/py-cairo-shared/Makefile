@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/21 19:56:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/19 12:40:56 wiz Exp $
 
 PKGNAME=	py-cairo-shared-${PYCAIRO_VER}
 
@@ -13,7 +13,7 @@ do-build:
 		 ${FILESDIR}/py3cairo.pc > ${WRKSRC}/py3cairo.pc
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/cairo/pycairo.h ${DESTDIR}${PREFIX}/include/pycairo/py3cairo.h
-	${INSTALL_DATA} ${WRKSRC}/py3cairo.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
+	${INSTALL_DATA} ${WRKSRC}/cairo/py3cairo.h ${DESTDIR}${PREFIX}/include/pycairo
+	${INSTALL_DATA} ${WRKSRC}/py3cairo.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
