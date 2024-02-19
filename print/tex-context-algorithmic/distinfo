@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
-
-BLAKE2s (tex-context-algorithmic-31026/context-algorithmic.tar.xz) = effbfa5b05d7e0a848ebaaff9dd55db9f60f03ee64588d3106a9dc632c221af4
-SHA512 (tex-context-algorithmic-31026/context-algorithmic.tar.xz) = 8f98c06685ff45e8bf66c447b18f03a2629194f173551b2d21de9f7912f3f8b85c755bef7bf21deb236376af8acbffc919d5be551a96b7aa096c2375a7d61d22
-Size (tex-context-algorithmic-31026/context-algorithmic.tar.xz) = 3384 bytes

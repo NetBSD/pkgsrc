@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
-
-BLAKE2s (tex-context-annotation-36188/context-annotation.tar.xz) = 55741749361744f08e5e132a0eaa06f26f5ceb73bb154c1be2d21bd937ddc7bc
-SHA512 (tex-context-annotation-36188/context-annotation.tar.xz) = 88396fb106ce28a57cb48a50db45fbb6d2fc89472c2f77ac00c6947a76ff657c78ef2850c4453f8584e3c50f50ae4631c1b5b8d1a625b6ef60ebb78d4f5fd22d
-Size (tex-context-annotation-36188/context-annotation.tar.xz) = 8368 bytes

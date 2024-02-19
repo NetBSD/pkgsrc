@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:00 nia Exp $
-
-BLAKE2s (tex-context-title-47085/context-title.tar.xz) = c8ee9247c0ebaa0a75683ce6fb46ecce8cf35f2b196dab5f936ff6d7003d7264
-SHA512 (tex-context-title-47085/context-title.tar.xz) = 6ddaed20bccab2cb06d27c485c3974a43ce9d5f18848a23c9405892b5f8ba7628896fb10dd15faaeae78ef36a90d7c4202c5fdb83eec53953d2b3aaa1f9fbf20
-Size (tex-context-title-47085/context-title.tar.xz) = 2216 bytes

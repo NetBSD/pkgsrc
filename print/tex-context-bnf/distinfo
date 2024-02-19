@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
-
-BLAKE2s (tex-context-bnf-23167/context-bnf.tar.xz) = 5a0d9af65de8e0d34f84fc700bd190ac2fe2112922efe49ba55a651e31feaf7c
-SHA512 (tex-context-bnf-23167/context-bnf.tar.xz) = a916612c601d5989217a77de5628e5e9dcfd957020f27fdc9e1057b2dd8e49c973c34f0f09571eae379f46b9498ccbc512eb9a588c02eaf1bf1e88fea1dfd92b
-Size (tex-context-bnf-23167/context-bnf.tar.xz) = 3060 bytes
