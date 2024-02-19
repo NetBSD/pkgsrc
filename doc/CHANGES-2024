@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1343 2024/02/19 14:55:42 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1344 2024/02/19 15:00:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2394,3 +2394,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-matplotlib to 3.8.3 [wiz 2024-02-19]
 	Updated graphics/ImageMagick to 7.1.1.28 [wiz 2024-02-19]
 	Updated databases/ruby-pg to 1.5.5 [taca 2024-02-19]
+	Updated devel/ruby-bindata to 2.5.0 [taca 2024-02-19]
