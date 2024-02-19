@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/19 01:38:56 gdt Exp $
+bin/newsraft
+man/man1/newsraft.1
+share/examples/newsraft/config
+share/examples/newsraft/feeds
