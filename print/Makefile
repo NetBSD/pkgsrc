@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2024/02/19 10:18:02 markd Exp $
+# $NetBSD: Makefile,v 1.924 2024/02/19 10:26:20 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -570,6 +570,8 @@ SUBDIR+=	tex-context-simplefonts
 SUBDIR+=	tex-context-simplefonts-doc
 SUBDIR+=	tex-context-simpleslides
 SUBDIR+=	tex-context-simpleslides-doc
+SUBDIR+=	tex-context-squares
+SUBDIR+=	tex-context-squares-doc
 SUBDIR+=	tex-context-sudoku
 SUBDIR+=	tex-context-sudoku-doc
 SUBDIR+=	tex-context-texlive

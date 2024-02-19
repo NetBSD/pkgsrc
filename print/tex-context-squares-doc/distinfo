@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/19 10:26:21 markd Exp $
+
+BLAKE2s (context-squares.doc.r68545.tar.xz) = 3234c5d9c6718600b85f86d0a3df70e3930b1bd60c060d266e4aeb40413fdd1c
+SHA512 (context-squares.doc.r68545.tar.xz) = e55bcb462d1aa0aed9563d01dd53f9062f8463d7cd06a42720f3930656edd0fd818f891e43c622b753200ac2ed32f45d21900208f69999b35474f6e7789a7b5e
+Size (context-squares.doc.r68545.tar.xz) = 1696 bytes
