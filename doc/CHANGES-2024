@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1327 2024/02/19 09:53:50 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1328 2024/02/19 11:25:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2327,3 +2327,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-urwid to 2.6.1 [adam 2024-02-19]
 	Updated www/py-notebook_shim to 0.2.4 [adam 2024-02-19]
 	Added print/luajittex version 1.17.0 [markd 2024-02-19]
+	Updated time/py-tempora to 5.5.1 [adam 2024-02-19]
+	Updated devel/py-anyio to 4.3.0 [adam 2024-02-19]
