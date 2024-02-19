@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/22 13:55:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/19 15:07:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -23,6 +23,7 @@ ${GEM_LIBDIR}/data/colormaps/turbo.json
 ${GEM_LIBDIR}/data/colormaps/twilight.json
 ${GEM_LIBDIR}/data/colormaps/viridis.json
 ${GEM_LIBDIR}/data/colormaps/vlag.json
+${GEM_LIBDIR}/doc/text/news.md
 ${GEM_LIBDIR}/lib/colors.rb
 ${GEM_LIBDIR}/lib/colors/abstract_color.rb
 ${GEM_LIBDIR}/lib/colors/alpha_component.rb
@@ -33,6 +34,7 @@ ${GEM_LIBDIR}/lib/colors/colormap_data/matplotlib_builtin.rb
 ${GEM_LIBDIR}/lib/colors/colormap_data/seaborn_builtin.rb
 ${GEM_LIBDIR}/lib/colors/colormap_registry.rb
 ${GEM_LIBDIR}/lib/colors/convert.rb
+${GEM_LIBDIR}/lib/colors/css.rb
 ${GEM_LIBDIR}/lib/colors/helper.rb
 ${GEM_LIBDIR}/lib/colors/hsl.rb
 ${GEM_LIBDIR}/lib/colors/hsla.rb
@@ -50,6 +52,7 @@ ${GEM_LIBDIR}/lib/colors/xyz.rb
 ${GEM_LIBDIR}/red-colors.gemspec
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/run.rb
+${GEM_LIBDIR}/test/test-css.rb
 ${GEM_LIBDIR}/test/test-hsl.rb
 ${GEM_LIBDIR}/test/test-hsla.rb
 ${GEM_LIBDIR}/test/test-husl.rb
