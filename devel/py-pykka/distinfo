@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/11/05 00:49:50 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/02/19 06:08:43 adam Exp $
 
-BLAKE2s (pykka-4.0.1.tar.gz) = 6031de147c0c95a8a26b0ac6bc23b61306e3795d5b50a0e0e418c8789c04f4ff
-SHA512 (pykka-4.0.1.tar.gz) = c7ad3f2e84f212cb94d7ec8170c493c71865f54068dc755eac68df1071dc510f010d35033499aac243b06eb3ca289dd25005af7b949b30334e2b8ebe46206316
-Size (pykka-4.0.1.tar.gz) = 48967 bytes
+BLAKE2s (pykka-4.0.2.tar.gz) = 2e8c6a214a4a230cecf40f4dff8890585fcd562b50717a11177a89440299f3f6
+SHA512 (pykka-4.0.2.tar.gz) = 7c2acb8ccf2039269dd8d41f9aa74981c353618ee6c7eab1e8e6af9efc9897d8b8b6ec4d7de2b98447b051cdc5bdd59d79a3f76685b7a45826e8e01d90548108
+Size (pykka-4.0.2.tar.gz) = 48962 bytes
