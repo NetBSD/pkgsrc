@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/16 16:03:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/19 12:43:58 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -43,6 +43,7 @@ ${PYSITELIB}/pip_api/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/pip_api/_vendor/packaging/markers.py
 ${PYSITELIB}/pip_api/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pip_api/_vendor/packaging/markers.pyo
+${PYSITELIB}/pip_api/_vendor/packaging/py.typed
 ${PYSITELIB}/pip_api/_vendor/packaging/requirements.py
 ${PYSITELIB}/pip_api/_vendor/packaging/requirements.pyc
 ${PYSITELIB}/pip_api/_vendor/packaging/requirements.pyo
@@ -61,6 +62,19 @@ ${PYSITELIB}/pip_api/_vendor/packaging/version.pyo
 ${PYSITELIB}/pip_api/_vendor/pyparsing.py
 ${PYSITELIB}/pip_api/_vendor/pyparsing.pyc
 ${PYSITELIB}/pip_api/_vendor/pyparsing.pyo
+${PYSITELIB}/pip_api/_vendor/tomli/__init__.py
+${PYSITELIB}/pip_api/_vendor/tomli/__init__.pyc
+${PYSITELIB}/pip_api/_vendor/tomli/__init__.pyo
+${PYSITELIB}/pip_api/_vendor/tomli/_parser.py
+${PYSITELIB}/pip_api/_vendor/tomli/_parser.pyc
+${PYSITELIB}/pip_api/_vendor/tomli/_parser.pyo
+${PYSITELIB}/pip_api/_vendor/tomli/_re.py
+${PYSITELIB}/pip_api/_vendor/tomli/_re.pyc
+${PYSITELIB}/pip_api/_vendor/tomli/_re.pyo
+${PYSITELIB}/pip_api/_vendor/tomli/_types.py
+${PYSITELIB}/pip_api/_vendor/tomli/_types.pyc
+${PYSITELIB}/pip_api/_vendor/tomli/_types.pyo
+${PYSITELIB}/pip_api/_vendor/tomli/py.typed
 ${PYSITELIB}/pip_api/_version.py
 ${PYSITELIB}/pip_api/_version.pyc
 ${PYSITELIB}/pip_api/_version.pyo
