@@ -1,4 +1,4 @@
-FeatherNotes is a lightweight Qt5/Qt6 hierarchical notes-manager.
+FeatherNotes is a lightweight Qt6 hierarchical notes-manager.
 It is independent of any desktop environment and has:
 
   * Support for rich text formatting, image embedding and inserting
