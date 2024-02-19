@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/01/29 16:12:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/02/19 09:23:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -103,16 +103,15 @@ ${PYSITELIB}/urwid/monitored_list.pyo
 ${PYSITELIB}/urwid/numedit.py
 ${PYSITELIB}/urwid/numedit.pyc
 ${PYSITELIB}/urwid/numedit.pyo
-${PYSITELIB}/urwid/old_str_util.py
-${PYSITELIB}/urwid/old_str_util.pyc
-${PYSITELIB}/urwid/old_str_util.pyo
 ${PYSITELIB}/urwid/signals.py
 ${PYSITELIB}/urwid/signals.pyc
 ${PYSITELIB}/urwid/signals.pyo
 ${PYSITELIB}/urwid/split_repr.py
 ${PYSITELIB}/urwid/split_repr.pyc
 ${PYSITELIB}/urwid/split_repr.pyo
-${PYSITELIB}/urwid/str_util.abi3.so
+${PYSITELIB}/urwid/str_util.py
+${PYSITELIB}/urwid/str_util.pyc
+${PYSITELIB}/urwid/str_util.pyo
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
