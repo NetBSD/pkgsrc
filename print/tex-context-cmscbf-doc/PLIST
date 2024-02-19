@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/18 04:21:05 markd Exp $
-share/texmf-dist/doc/context/third/cmscbf/VERSION
-share/texmf-dist/doc/context/third/cmscbf/cmscbf-demo.pdf
-share/texmf-dist/doc/context/third/cmscbf/cmscbf-doc.pdf

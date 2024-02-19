@@ -1,4 +1,0 @@
-The package provides a converter and module for typesetting
-reStructuredText with ConTeXt. The module uses several lua
-scripts in doing its work. Documentation is supplied in rst,
-which seems to be readable as text, but...

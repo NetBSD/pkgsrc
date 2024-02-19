@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
-
-BLAKE2s (tex-context-account-23167/context-account.doc.tar.xz) = 9d5ed13c5d498d2db08dec91b1a19cc8265312ade89f8e6324e6ee67be72e5a4
-SHA512 (tex-context-account-23167/context-account.doc.tar.xz) = 74e1e31efb7cf050ff8032dec7173c409a4a5cd45e3dea6361cf8fa080095de945e667f537f4663a09ff10a2812b2a1e9be2ddb71a114457d14238663ef99f5a
-Size (tex-context-account-23167/context-account.doc.tar.xz) = 113796 bytes

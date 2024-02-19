@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:59 nia Exp $
-
-BLAKE2s (tex-context-rst-33092/context-rst.tar.xz) = bff218fff568d4337786a5919901be9ef383630e2c83bdda9b084e54dabdb08a
-SHA512 (tex-context-rst-33092/context-rst.tar.xz) = c2a5a90b8ce5ee40534f84da9e5d55201cd7d1cb7bd22be749aa2d38705cb844d4c5e76ce02b8eab850b9252a549ba84fd5da36c5bc409263dc49417b2490a81
-Size (tex-context-rst-33092/context-rst.tar.xz) = 31068 bytes

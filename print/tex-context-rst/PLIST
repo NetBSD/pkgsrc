@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:32 wiz Exp $
-share/texmf-dist/scripts/context/lua/third/rst/mtx-t-rst.lua
-share/texmf-dist/tex/context/interface/third/t-rst.xml
-share/texmf-dist/tex/context/third/rst/rst_context.lua
-share/texmf-dist/tex/context/third/rst/rst_directives.lua
-share/texmf-dist/tex/context/third/rst/rst_helpers.lua
-share/texmf-dist/tex/context/third/rst/rst_parser.lua
-share/texmf-dist/tex/context/third/rst/rst_setups.lua
-share/texmf-dist/tex/context/third/rst/t-rst.mkiv

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:58 nia Exp $
-
-BLAKE2s (tex-context-gantt-27472/context-gantt.tar.xz) = 431455ed7934c739571b1838b60014558bfd7a359e4d4bb41a2c688ec7621076
-SHA512 (tex-context-gantt-27472/context-gantt.tar.xz) = 7ae5c921ac26014b9a17305edfb512a7f527a36ac0c906055d46fdd690e2a0f81571bb66f07dbd7e0b4f1788c2e161e4b5871c4bcb40e0501d567be0543240c7
-Size (tex-context-gantt-27472/context-gantt.tar.xz) = 4180 bytes

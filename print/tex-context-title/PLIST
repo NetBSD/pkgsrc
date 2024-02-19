@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:33 wiz Exp $
-share/texmf-dist/tex/context/interface/third/t-title.xml
-share/texmf-dist/tex/context/third/title/t-title.mkvi

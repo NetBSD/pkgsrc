@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:59 nia Exp $
-
-BLAKE2s (tex-context-simplefonts-29229/context-simplefonts.tar.xz) = 080f97ef181b1dd457696b7a21b6ee991f6be9150eb8d8d3259270eb7ed4ee31
-SHA512 (tex-context-simplefonts-29229/context-simplefonts.tar.xz) = 588294d032cb9f56b11e6b8102cbc89ef5486a4bb69569a4e402507dcf14ee443832b1c619ab03eb923d51593aa2081b4c39e3a2864baa219043c46cd67c1260
-Size (tex-context-simplefonts-29229/context-simplefonts.tar.xz) = 7688 bytes

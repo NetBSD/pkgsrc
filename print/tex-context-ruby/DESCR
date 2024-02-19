@@ -1,5 +1,0 @@
-Ruby markup (aka furigana in Japan) are inline annotations
-above or below a word to indicate the reading of ideographic
-characters. The module implements the W3C specification for
-simple ruby in ConTeXt. The position and layout of the base
-text and the ruby text can becontrolled by parameters.
