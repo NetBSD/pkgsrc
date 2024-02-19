@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.45 2023/05/24 12:03:35 markd Exp $
+$NetBSD: distinfo,v 1.46 2024/02/19 09:49:20 markd Exp $
 
 BLAKE2s (texlive-20230313-source.tar.xz) = cd85d09bb3b6bf613a40b3c2308da75596cb6a1b5e4c7b3fcd8e3e43f206c379
 SHA512 (texlive-20230313-source.tar.xz) = 5874e7c9937ef63fdb03780f8137e0a63ad23a1b2a9d232a71bd2ab999669152981911fadc9c8ff3cf5e3a2cf828d575982b7fce1a15c101a62328d89d851a88
 Size (texlive-20230313-source.tar.xz) = 68630148 bytes
 SHA1 (patch-libs_lua53_lua53-src_src_luaconf.h) = 824ee4ba2c324e1e01967b82a54621b6b6f3edd3
+SHA1 (patch-texk_web2c_configure) = 474ea4f57d535e22355916d6d52d4490d1138cfe
 SHA1 (patch-texk_web2c_luatexdir_ChangeLog) = d6520c468a21f61d5e0ba1b736825c09bf24edc6
 SHA1 (patch-texk_web2c_luatexdir_NEWS) = a3aa2dabf8924ea7147ab049127370ba9ab654f2
 SHA1 (patch-texk_web2c_luatexdir_font_writettf.c) = 08306db325464aea3af229f3516b4d0a8b7a1a2d
