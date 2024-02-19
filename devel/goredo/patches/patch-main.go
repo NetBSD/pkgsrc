@@ -1,8 +1,8 @@
-$NetBSD: patch-main.go,v 1.4 2023/10/10 00:21:47 schmonz Exp $
+$NetBSD: patch-main.go,v 1.5 2024/02/19 21:04:39 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
 
---- main.go.orig	2023-10-09 20:09:32.000000000 +0000
+--- main.go.orig	2024-02-19 17:57:37.000000000 +0000
 +++ main.go
 @@ -39,23 +39,22 @@ import (
  )
@@ -53,7 +53,12 @@ Avoid CONFLICTS with other redo implementations.
  }
  
  func main() {
-@@ -97,7 +96,7 @@ func main() {
+@@ -93,11 +92,11 @@ func main() {
+ 
+ 	var symlinks *bool
+ 	cmdName := CmdName()
+-	if cmdName == CmdNameGoredo {
++	if cmdName == CmdNameRedo {
  		symlinks = flag.Bool("symlinks", false, "create necessary symlinks in current directory")
  	}
  
