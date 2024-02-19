@@ -1,0 +1,15 @@
+$NetBSD: patch-texk_web2c_configure,v 1.1 2024/02/19 09:49:20 markd Exp $
+
+Check harfbuzz also for luajittex
+
+--- texk/web2c/configure.orig	2023-03-08 17:05:16.000000000 +0000
++++ texk/web2c/configure
+@@ -27687,7 +27687,7 @@ fi
+ 
+ # LuaTeX and XeTeX need harfbuzz.
+ if test "x$enable_xetex" = xyes \
+-   || test "x$enable_luatex" = xyes || test "x$enable_luatex53" = xyes; then
++   || test "x$enable_luatex" = xyes || test "x$enable_luatex53" = xyes || test "x$enable_luajittex" = xyes; then
+   ##tldbg _KPSE_LIB_FLAGS: Setup graphite2 (-lgraphite2) flags.
+ echo 'tldbg:_KPSE_LIB_FLAGS called: libdir=graphite2, libname=graphite2, options=, tlincl=-IBLD/libs/graphite2/include -DGRAPHITE2_STATIC, tllib=BLD/libs/graphite2/libgraphite2.a, tlextra=, rebuildsrcdeps=, rebuildblddeps=${top_builddir}/../../libs/graphite2/include/graphite2/Font.h.' >&5
+ ##tldbg _KPSE_LIB_FLAGS_TL: graphite2 (graphite2) .
