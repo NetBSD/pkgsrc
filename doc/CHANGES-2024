@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1357 2024/02/19 18:39:59 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1358 2024/02/19 19:34:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2412,3 +2412,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/py-types-python-dateutil to 2.8.19.20240106 [adam 2024-02-19]
 	Updated devel/py-tox to 4.13.0 [adam 2024-02-19]
 	Updated devel/py-limits to 3.9.0 [adam 2024-02-19]
+	Added net/qrcp version 0.11.1 [gdt 2024-02-19]
