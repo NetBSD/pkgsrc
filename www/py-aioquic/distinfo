@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/06 23:17:18 leot Exp $
+$NetBSD: distinfo,v 1.2 2024/02/19 18:29:12 adam Exp $
 
-BLAKE2s (aioquic-0.9.24.tar.gz) = 1e20d3e06873649e8f3f01f437bd09fff9edcd94a8c8be885dca40e6e75d0b55
-SHA512 (aioquic-0.9.24.tar.gz) = 2919aeebc958d7aaf91fb7182d6e461bac4c7472d2a698c5995a4fe50eb29fb5ee7c3ef28e073321a76348f1817efd18b8f80cf26134a230d9330ce16a064d8a
-Size (aioquic-0.9.24.tar.gz) = 159737 bytes
+BLAKE2s (aioquic-0.9.25.tar.gz) = 49f7a8ab7016f68e99fda35aeb40e31633aa161e5bf258e8ee2a448c8f2df50e
+SHA512 (aioquic-0.9.25.tar.gz) = 182a2293caf0e1ca9581cf91f0aedc2560a8c80afb4d676eb57caebafb8096f27527a1cab52f1209e13bf387e9775248d4f2682052c88cb95b295e60b28565c7
+Size (aioquic-0.9.25.tar.gz) = 165877 bytes
