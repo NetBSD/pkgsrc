@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/01/01 17:01:57 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/02/19 11:25:23 adam Exp $
 
-DISTNAME=	anyio-4.2.0
+DISTNAME=	anyio-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
