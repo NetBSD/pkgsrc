@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2023/12/03 20:45:15 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/19 08:21:35 pin Exp $
 
 DISTNAME=	inlyne-0.3.3
+# 0.4.0 has been release but, do not update to it, see:
+# https://github.com/trimental/inlyne/issues/248
+# Waiting for 0.4.1 to include the fix.
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trimental/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
