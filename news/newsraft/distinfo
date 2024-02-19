@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/19 01:38:56 gdt Exp $
+
+BLAKE2s (newsraft-0.22.tar.gz) = 1ec64e86e1d59d0a35bbda7d22a524e54e22a9dc0d5471487d92360da2d76e3c
+SHA512 (newsraft-0.22.tar.gz) = 9afad028e5d06b8b0461f80f88820b682e28ed1d4c32834b6f5c60752b11d49753bc40930ec7850e121bd148208c1bf6b6594334d60ae7f052c49b2ff4e8c42a
+Size (newsraft-0.22.tar.gz) = 190409 bytes
