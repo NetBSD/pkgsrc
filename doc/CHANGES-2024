@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1352 2024/02/19 15:22:15 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1353 2024/02/19 15:23:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-rex-socket to 0.1.56 [taca 2024-02-19]
 	Updated textproc/ruby-nori to 2.7.0 [taca 2024-02-19]
 	Updated www/ruby-aws-partitions to 1.893.0 [taca 2024-02-19]
+	Updated www/ruby-aws-sdk-core to 3.191.2 [taca 2024-02-19]
