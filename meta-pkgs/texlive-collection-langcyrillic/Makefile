@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2021/02/14 20:39:18 markd Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/19 19:36:29 markd Exp $
 
 DISTNAME=	collection-langcyrillic
-PKGNAME=	texlive-${DISTNAME}-2020pre2
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	69727
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -42,6 +42,7 @@ DEPENDS+=	tex-lh-[0-9]*:../../fonts/tex-lh
 # lshort-mongol is documentation only
 # lshort-russian is documentation only
 # lshort-ukr is documentation only
+# depend mnhyphn
 # depend mongolian-babel
 # depend montex
 # mpman-ru is documentation only
