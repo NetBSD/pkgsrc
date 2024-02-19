@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/01/14 15:09:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/02/19 06:05:40 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -188,9 +188,24 @@ ${PYSITELIB}/xmlschema/validators/wildcards.pyo
 ${PYSITELIB}/xmlschema/validators/xsdbase.py
 ${PYSITELIB}/xmlschema/validators/xsdbase.pyc
 ${PYSITELIB}/xmlschema/validators/xsdbase.pyo
-${PYSITELIB}/xmlschema/xpath.py
-${PYSITELIB}/xmlschema/xpath.pyc
-${PYSITELIB}/xmlschema/xpath.pyo
+${PYSITELIB}/xmlschema/xpath/__init__.py
+${PYSITELIB}/xmlschema/xpath/__init__.pyc
+${PYSITELIB}/xmlschema/xpath/__init__.pyo
+${PYSITELIB}/xmlschema/xpath/assertion_parser.py
+${PYSITELIB}/xmlschema/xpath/assertion_parser.pyc
+${PYSITELIB}/xmlschema/xpath/assertion_parser.pyo
+${PYSITELIB}/xmlschema/xpath/identity_parser.py
+${PYSITELIB}/xmlschema/xpath/identity_parser.pyc
+${PYSITELIB}/xmlschema/xpath/identity_parser.pyo
+${PYSITELIB}/xmlschema/xpath/mixin.py
+${PYSITELIB}/xmlschema/xpath/mixin.pyc
+${PYSITELIB}/xmlschema/xpath/mixin.pyo
+${PYSITELIB}/xmlschema/xpath/protocols.py
+${PYSITELIB}/xmlschema/xpath/protocols.pyc
+${PYSITELIB}/xmlschema/xpath/protocols.pyo
+${PYSITELIB}/xmlschema/xpath/proxy.py
+${PYSITELIB}/xmlschema/xpath/proxy.pyc
+${PYSITELIB}/xmlschema/xpath/proxy.pyo
 ${PYSITELIB}/xmlschema/xpath3.py
 ${PYSITELIB}/xmlschema/xpath3.pyc
 ${PYSITELIB}/xmlschema/xpath3.pyo
