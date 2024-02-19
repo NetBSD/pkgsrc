@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.155 2023/11/14 18:45:28 nia Exp $
+# $NetBSD: Makefile,v 1.156 2024/02/19 05:59:51 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-18.9.0
+DISTNAME=	asterisk-18.21.0
 #PKGREVISION=	24
-PKGREVISION=	14
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -161,7 +160,7 @@ CONFIGURE_ARGS+=	--without-unbound
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.10
+PJPROJ_VERSION=	2.13.1
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -180,7 +179,7 @@ SUBST_FILES.configs+=	configs/samples/musiconhold.conf.sample
 SUBST_FILES.configs+=	configs/samples/osp.conf.sample
 SUBST_FILES.configs+=	configs/samples/phoneprov.conf.sample
 SUBST_FILES.configs+=	configs/samples/res_config_sqlite.conf.sample
-SUBST_FILES.configs+=	configs/samples/sla.conf.sample
+#SUBST_FILES.configs+=	configs/samples/sla.conf.sample
 SUBST_SED.configs+=	-e 's|doc/|${PREFIX}/share/doc/${PKGBASE}/|'
 SUBST_SED.configs+=	-e 's|/etc/asterisk|${ASTETCDIR}|'
 SUBST_SED.configs+=	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'
@@ -201,12 +200,12 @@ SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
 
-# XXX gross hack, gethostbyname_r on NETBSD is for internal use only
-SUBST_CLASSES.NetBSD+=		gethostbyname_r
-SUBST_STAGE.gethostbyname_r=	post-configure
-SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
-SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
-SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
+## XXX gross hack, gethostbyname_r on NETBSD is for internal use only
+#SUBST_CLASSES.NetBSD+=		gethostbyname_r
+#SUBST_STAGE.gethostbyname_r=	post-configure
+#SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
+#SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
+#SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
 
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
@@ -237,8 +236,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 
 .if !empty(PKG_OPTIONS:Masterisk-config)
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
-.  for f in acl.conf adsi.conf agents.conf alarmreceiver.conf alsa.conf	\
-	amd.conf app_mysql.conf app_skel.conf ari.conf			\
+.  for f in acl.conf adsi.conf aeap.conf agents.conf alarmreceiver.conf	\
+	alsa.conf amd.conf app_mysql.conf app_skel.conf ari.conf	\
 	ast_debug_tools.conf asterisk.adsi calendar.conf ccss.conf	\
 	cdr.conf cdr_adaptive_odbc.conf cdr_custom.conf			\
 	cdr_manager.conf cdr_mysql.conf cdr_odbc.conf cdr_pgsql.conf	\
@@ -250,18 +249,20 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	dsp.conf dundi.conf enum.conf extconfig.conf extensions.ael	\
 	extensions.conf extensions.lua	extensions_minivm.conf		\
 	features.conf festival.conf followme.conf func_odbc.conf	\
-	hep.conf http.conf iax.conf iaxprov.conf indications.conf	\
-	logger.conf manager.conf meetme.conf mgcp.conf minivm.conf	\
-	misdn.conf modules.conf	motif.conf musiconhold.conf muted.conf	\
-	ooh323.conf osp.conf oss.conf phone.conf phoneprov.conf		\
-	pjproject.conf pjsip.conf pjsip_notify.conf pjsip_wizard.conf	\
-	queuerules.conf queues.conf res_config_mysql.conf		\
+	geolocation.conf hep.conf http.conf iax.conf iaxprov.conf	\
+	indications.conf logger.conf manager.conf meetme.conf mgcp.conf	\
+	minivm.conf misdn.conf modules.conf motif.conf musiconhold.conf	\
+	muted.conf ooh323.conf osp.conf oss.conf phone.conf		\
+	phoneprov.conf pjproject.conf pjsip.conf pjsip_notify.conf	\
+	pjsip_wizard.conf queuerules.conf queues.conf			\
+	res_config_mysql.conf res_config_odbc.conf			\
 	res_config_sqlite.conf res_config_sqlite3.conf			\
-	res_corosync.conf res_curl.conf	 res_fax.conf res_ldap.conf	\
-	res_odbc.conf res_parking.conf res_pgsql.conf res_pktccops.conf	\
-	res_snmp.conf res_stun_monitor.conf resolver_unbound.conf	\
-	rtp.conf say.conf sip.conf sip_notify.conf skinny.conf sla.conf	\
-	smdi.conf sorcery.conf ss7.timers stasis.conf statsd.conf	\
+	res_corosync.conf res_curl.conf res_fax.conf			\
+	res_http_media_cache.conf res_ldap.conf res_odbc.conf		\
+	res_parking.conf res_pgsql.conf res_pktccops.conf res_snmp.conf	\
+	res_stun_monitor.conf resolver_unbound.conf rtp.conf say.conf	\
+	sip.conf sip_notify.conf skinny.conf sla.conf smdi.conf		\
+	sorcery.conf ss7.timers stasis.conf statsd.conf			\
 	stir_shaken.conf telcordia-1.adsi udptl.conf unistim.conf	\
 	users.conf voicemail.conf vpb.conf xmpp.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
@@ -281,15 +282,22 @@ post-install:
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
 	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/SECURITY.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/Zaptel-to-DAHDI.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.18.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.18.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.19.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.20.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.20.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.20.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.21.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -300,6 +308,7 @@ LDFLAGS+= -L${PREFIX}/lib
 .endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

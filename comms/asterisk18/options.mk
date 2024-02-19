@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2021/06/13 07:57:52 jnemeth Exp $
+# $NetBSD: options.mk,v 1.16 2024/02/19 05:59:51 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
-PKG_SUPPORTED_OPTIONS=		x11 unixodbc ilbc webvmail ldap spandsp
+PKG_SUPPORTED_OPTIONS=		unixodbc ilbc webvmail ldap spandsp
 PKG_SUPPORTED_OPTIONS+=		jabber speex snmp pgsql asterisk-config
-PKG_OPTIONS_LEGACY_OPTS+=	gtk:x11
 PKG_SUGGESTED_OPTIONS=		ldap jabber speex asterisk-config
 
 .include "../../mk/bsd.options.mk"
@@ -19,18 +18,6 @@ PLIST_VARS+=		speex snmp pgsql srtp
 #.else
 #MAKE_FLAGS+=		WITHOUT_ZAPTEL=1
 #.endif
-
-# gtkconsole depends on GTK 2.x
-.if !empty(PKG_OPTIONS:Mx11)
-.  include "../../x11/gtk2/buildlink3.mk"
-.  include "../../devel/SDL/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sdl
-CONFIGURE_ARGS+=	--with-gtk2
-PLIST.x11=		yes
-.else
-CONFIGURE_ARGS+=	--without-sdl
-CONFIGURE_ARGS+=	--without-gtk2
-.endif
 
 .if !empty(PKG_OPTIONS:Munixodbc)
 .  include "../../databases/unixodbc/buildlink3.mk"
@@ -59,18 +46,16 @@ CONFIGURE_ARGS+=	--without-iksemel
 
 MAKE_FLAGS+=	GLOBAL_MAKEOPTS=${WRKSRC}/pkgsrc.makeopts
 post-configure:
-.if !empty(PKG_OPTIONS:Mx11)
-	${ECHO} "MENUSELECT_PBX=-pbx_gtkconsole" >> ${WRKSRC}/pkgsrc.makeopts
-.endif
 .if !empty(PKG_OPTIONS:Munixodbc)
 	${ECHO} "MENUSELECT_OPTS_app_voicemail=ODBC_STORAGE" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
-.if defined(PLIST.mgcp)
-	${ECHO} "MENUSELECT_RES=-res_pktccops" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
-.endif
+#.if defined(PLIST.mgcp)
+#	${ECHO} "MENUSELECT_RES=-res_pktccops" >> ${WRKSRC}/pkgsrc.makeopts
+#	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
+#.endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
 	${ECHO} "MENUSELECT_CFLAGS=-BUILD_NATIVE" >> ${WRKSRC}/pkgsrc.makeopts
+	${ECHO} "MENUSELECT_RES=-res_mwi_external_ami -res_ari_mailboxes -res_pjsip_geolocation -res_stasis_mailbox" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 
