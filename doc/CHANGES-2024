@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1336 2024/02/19 12:41:07 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1337 2024/02/19 12:41:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hg-evolve to 11.1.1 [wiz 2024-02-19]
 	Updated graphics/exiv2 to 0.28.2 [wiz 2024-02-19]
 	Updated graphics/py-cairo-shared to 1.26.0 [wiz 2024-02-19]
+	Updated graphics/py-cairo to 1.26.0 [wiz 2024-02-19]
