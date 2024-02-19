@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile,v 1.1 2024/02/19 20:50:43 schmonz Exp $
+
+Use pkgsrc paths.
+
+--- Makefile.orig	2024-02-19 20:42:16.814963277 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+-prefix = $(HOME)
++prefix = $(PREFIX)
+ 
+-INSTALL_DIR = $(prefix)/share/sharness
++SHARNESS_DIR = $(prefix)/share/sharness
+ DOC_DIR = $(prefix)/share/doc/sharness
+ EXAMPLE_DIR = $(DOC_DIR)/example
+ VIM_DIR = $(prefix)/.vim/pack/filetypes/start/sharness
+@@ -19,13 +19,13 @@ scripts = sharness.sh lib-sharness/funct
+ all:
+ 
+ install: all
+-	$(INSTALL) -d -m 755 $(D)$(INSTALL_DIR) $(D)$(INSTALL_DIR)/lib-sharness $(D)$(INSTALL_DIR)/tools $(D)$(DOC_DIR) $(D)$(EXAMPLE_DIR)
+-	$(INSTALL) -m 644 sharness.sh $(D)$(INSTALL_DIR)
+-	$(INSTALL) -m 644 lib-sharness/functions.sh $(D)$(INSTALL_DIR)/lib-sharness
+-	$(INSTALL) -m 644 tools/aggregate-results.sh $(D)$(INSTALL_DIR)/tools
++	$(INSTALL) -d -m 755 $(D)$(SHARNESS_DIR) $(D)$(SHARNESS_DIR)/lib-sharness $(D)$(SHARNESS_DIR)/tools $(D)$(DOC_DIR) $(D)$(EXAMPLE_DIR)
++	$(INSTALL) -m 644 sharness.sh $(D)$(SHARNESS_DIR)
++	$(INSTALL) -m 644 lib-sharness/functions.sh $(D)$(SHARNESS_DIR)/lib-sharness
++	$(INSTALL) -m 644 tools/aggregate-results.sh $(D)$(SHARNESS_DIR)/tools
+ 	$(INSTALL) -m 644 $(DOC_FILES) $(D)$(DOC_DIR)
+ 	$(INSTALL) -m 644 example/Makefile $(D)$(EXAMPLE_DIR)
+-	$(SED) -e "s!\. \./sharness.sh!\. $(INSTALL_DIR)/sharness.sh!" example/simple.t > $(D)$(EXAMPLE_DIR)/simple.t
++	$(SED) -e "s!\. \./sharness.sh!\. $(SHARNESS_DIR)/sharness.sh!" example/simple.t > $(D)$(EXAMPLE_DIR)/simple.t
+ 	chmod 755 $(D)$(EXAMPLE_DIR)/simple.t
+ 
+ install-test:
+@@ -36,7 +36,7 @@ install-vim:
+ 	$(CP) -r vim/* $(D)$(VIM_DIR)
+ 
+ uninstall:
+-	$(RM) -r $(INSTALL_DIR) $(DOC_DIR) $(EXAMPLE_DIR)
++	$(RM) -r $(SHARNESS_DIR) $(DOC_DIR) $(EXAMPLE_DIR)
+ 
+ doc: all
+ 	{ printf "# Sharness API\n\n"; \
