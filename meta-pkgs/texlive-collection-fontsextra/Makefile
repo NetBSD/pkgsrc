@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2024/01/18 19:53:08 markd Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/19 19:23:26 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69278
+TEXLIVE_REV=	69663
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -364,6 +364,7 @@ DEPENDS+=	tex-yfonts-[0-9]*:../../print/tex-yfonts
 # yfonts-otf
 DEPENDS+=	tex-yfonts-t1-[0-9]*:../../fonts/tex-yfonts-t1
 # depend yinit-otf
+# depend ysabeau
 DEPENDS+=	tex-zlmtt-[0-9]*:../../fonts/tex-zlmtt
 
 META_PACKAGE=	yes
