@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/11/29 08:54:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/02/19 18:30:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -62,6 +62,9 @@ ${PYSITELIB}/setuptools-stubs/command/setopt.pyi
 ${PYSITELIB}/setuptools-stubs/command/test.pyi
 ${PYSITELIB}/setuptools-stubs/command/upload.pyi
 ${PYSITELIB}/setuptools-stubs/command/upload_docs.pyi
+${PYSITELIB}/setuptools-stubs/compat/__init__.pyi
+${PYSITELIB}/setuptools-stubs/compat/py310.pyi
+${PYSITELIB}/setuptools-stubs/compat/py311.pyi
 ${PYSITELIB}/setuptools-stubs/config/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/config/expand.pyi
 ${PYSITELIB}/setuptools-stubs/config/pyprojecttoml.pyi
@@ -82,7 +85,6 @@ ${PYSITELIB}/setuptools-stubs/monkey.pyi
 ${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
 ${PYSITELIB}/setuptools-stubs/package_index.pyi
-${PYSITELIB}/setuptools-stubs/py312compat.pyi
 ${PYSITELIB}/setuptools-stubs/sandbox.pyi
 ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
 ${PYSITELIB}/setuptools-stubs/version.pyi
