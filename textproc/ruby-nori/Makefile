@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 09:24:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/19 15:19:58 taca Exp $
 
-DISTNAME=	nori-2.6.0
+DISTNAME=	nori-2.7.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
