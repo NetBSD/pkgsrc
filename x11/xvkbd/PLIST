@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/08 11:57:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/19 01:47:42 gdt Exp $
 bin/xvkbd
 lib/X11/app-defaults/XVkbd
 lib/X11/app-defaults/XVkbd-belgian
@@ -26,5 +26,7 @@ lib/X11/app-defaults/XVkbd-strip
 lib/X11/app-defaults/XVkbd-swedish
 lib/X11/app-defaults/XVkbd-swissgerman
 lib/X11/app-defaults/XVkbd-turkish
+lib/X11/app-defaults/XVkbd-turkishF
 lib/X11/app-defaults/XVkbd-uk
-${IMAKE_MAN_DIR}/xvkbd.${IMAKE_MAN_SUFFIX}
+man/man1/xvkbd.1
+share/xvkbd/words.english

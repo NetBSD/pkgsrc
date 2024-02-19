@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.9 2015/10/14 20:17:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/19 01:47:42 gdt Exp $
 #
 
-DISTNAME=	xvkbd-3.5
-PKGREVISION=	1
+DISTNAME=	xvkbd-4.1
 CATEGORIES=	x11
-MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
+MASTER_SITES=	http://t-sato.in.coocan.jp/xvkbd/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://homepage3.nifty.com/tsato/xvkbd/
-COMMENT=	The xvkbd is a virtual (graphical) keyboard program for X
+HOMEPAGE=	http://t-sato.in.coocan.jp/xvkbd/
+COMMENT=	Virtual (graphical) keyboard program for X
 LICENSE=	gnu-gpl-v2
 
 USE_IMAKE=	yes
 
+MAKE_FLAGS+=		SHAREDIR=${PREFIX}/share/xvkbd
+INSTALL_MAKE_FLAGS+=	SHAREDIR=${PREFIX}/share/xvkbd
+
+INSTALLATION_DIRS+=	share/xvkbd
+
 .include "../../mk/xaw.buildlink3.mk"
+BUILD_DEFS+=		XAW_TYPE
 .if ${XAW_TYPE} == "standard"
 SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	pre-configure
