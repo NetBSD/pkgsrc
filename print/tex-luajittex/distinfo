@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/19 10:18:03 markd Exp $
+
+BLAKE2s (luajittex.r66186.tar.xz) = 7e278f70358b42d1d96f3f3dcd8c679c869ca0c5b1f575ba5055b450dab92d89
+SHA512 (luajittex.r66186.tar.xz) = 21313a5786f2bea08ce55db3a7beedabaf66f3331bd0eac1f8f3d7b926f68e103b14b1a5beaa271c37b60fc56735cc180e424f91db62f6e740530a65495d8e82
+Size (luajittex.r66186.tar.xz) = 484 bytes
