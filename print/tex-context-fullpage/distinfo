@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:57 nia Exp $
-
-BLAKE2s (tex-context-fullpage-47085/context-fullpage.tar.xz) = cbc3c202f0813059d24b4e21299dc50ba0c37b6b2cb9035681899cc65c507ec1
-SHA512 (tex-context-fullpage-47085/context-fullpage.tar.xz) = 119c01690b881165b8c7c3e4928210e6c3dcf071b9c7d2e452656e232ca64df84d90b95c5649953045728fd65cea40545cb1877a1d04000ff111275eb6364d85
-Size (tex-context-fullpage-47085/context-fullpage.tar.xz) = 2996 bytes

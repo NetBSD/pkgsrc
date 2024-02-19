@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
-
-BLAKE2s (tex-context-animation-36188/context-animation.doc.tar.xz) = ddf460c174cf427cbbb4c0d0955dc65477b6d3e422f1008aa3f30b0857aaffa4
-SHA512 (tex-context-animation-36188/context-animation.doc.tar.xz) = 7da9d388a8a0c0d7c5b1f12e3cf6dc6f77317c11591ee466eb735730cce6ec134b8e854921e4753f89c8dcca96a160bf290d725e99c8f1986c746802017570c3
-Size (tex-context-animation-36188/context-animation.doc.tar.xz) = 592 bytes

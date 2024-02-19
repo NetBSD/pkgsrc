@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:57 nia Exp $
-
-BLAKE2s (tex-context-french-24582/context-french.doc.tar.xz) = 479de97eefcb4528f4634df909b0a1107779b14405f9e6c579ee488e47561d1a
-SHA512 (tex-context-french-24582/context-french.doc.tar.xz) = 55ad684b254d9dd98663c5e9d945768dcecec5cbb54c252ab0e26fb8529a55c423e2d180d870d9ee8622b50b8772bbc011cd237b3995e6056af98b5d0f0e4ee9
-Size (tex-context-french-24582/context-french.doc.tar.xz) = 86296 bytes
