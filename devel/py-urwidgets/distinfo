@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/16 13:59:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/02/19 06:01:18 adam Exp $
 
-BLAKE2s (urwidgets-0.1.1.tar.gz) = 0e5463ffbf08744d2ed196a3bb9327ccda36bff2bd8437df7086bff47b250cea
-SHA512 (urwidgets-0.1.1.tar.gz) = 2a8697e6e7f32e2daa653ea535a7fdaba63c1447dee70b7eedd2fd370f1d0bb05fcd38865f689dd1cbcfdd3d7825700ddc80f0ecc21332c92ce4c3732b4105ad
-Size (urwidgets-0.1.1.tar.gz) = 13388 bytes
+BLAKE2s (urwidgets-0.2.0.tar.gz) = b6f8b13fc4414fc4e61f7fa6842d7b1046ea2b5614c74f17e2e3e18bc29259df
+SHA512 (urwidgets-0.2.0.tar.gz) = 245f295ea47be909a58ab43c3d9bbe8fedc82d2c4529d813502e7e04869c7b7a1773a35c9e3cdebdc1f64e576763c43cbb2973beaeea5b93082e67170c0a4c8b
+Size (urwidgets-0.2.0.tar.gz) = 14424 bytes
