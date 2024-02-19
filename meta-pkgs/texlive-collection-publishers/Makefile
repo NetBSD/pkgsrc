@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2024/02/03 05:41:31 markd Exp $
+# $NetBSD: Makefile,v 1.35 2024/02/19 19:19:54 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2023pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69489
+TEXLIVE_REV=	69759
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -67,6 +67,7 @@ DEPENDS+=	tex-classicthesis-[0-9]*:../../print/tex-classicthesis
 # depend cleanthesis
 # depend cmpj
 # depend confproc
+# depend contract
 # depend cquthesis
 # depend dccpaper
 # depend dithesis
@@ -255,6 +256,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend ucph-revy
 # depend ucsmonograph
 # depend ucthesis
+# depend udepcolor
 # depend udes-genie-these
 # depend uestcthesis
 # depend ufrgscca
