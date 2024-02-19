@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/13 16:34:02 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/19 15:43:35 taca Exp $
 
 DISTNAME=	icingaweb2-2.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 CATEGORIES=	net sysutils www

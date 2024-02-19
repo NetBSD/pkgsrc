@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.21 2024/02/19 15:43:36 taca Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 

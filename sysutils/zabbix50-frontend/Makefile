@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/12/09 13:26:49 otis Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/19 15:43:35 taca Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-${ZABBIX_DB_TYPE}-/}
