@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:56 nia Exp $
-
-BLAKE2s (tex-context-construction-plan-23167/context-construction-plan.tar.xz) = 3947b238334553fc2d9eb946e846470a26de8100eb6476253787edcdf3ce137c
-SHA512 (tex-context-construction-plan-23167/context-construction-plan.tar.xz) = c7f64c8716b9beb6ccbd977f8b4d095f2d0d269b0d9bff690dc41962dd61cdac70656971b7ea76ca3b4f485b217910ca6b607a549a23457eaf389be8294e9aad
-Size (tex-context-construction-plan-23167/context-construction-plan.tar.xz) = 2292 bytes

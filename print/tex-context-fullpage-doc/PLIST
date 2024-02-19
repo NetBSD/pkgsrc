@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/06 02:02:47 markd Exp $
-share/texmf-dist/doc/context/third/fullpage/README
-share/texmf-dist/doc/context/third/fullpage/VERSION
-share/texmf-dist/doc/context/third/fullpage/fullpage-doc.pdf

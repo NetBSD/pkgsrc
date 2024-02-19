@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:29 wiz Exp $
-share/texmf-dist/tex/context/interface/third/t-annotation.xml
-share/texmf-dist/tex/context/third/annotation/t-annotation.lua
-share/texmf-dist/tex/context/third/annotation/t-annotation.mkvi

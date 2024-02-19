@@ -1,7 +1,0 @@
-The module provides a simple way to write good-looking BNF-
-style grammars in ConTeXt. Grammars are written using the BNF
-syntax right in your ConTeXt documents, so there is a clear
-separation between content and layout. This allows the user to
-decide exactly how the grammar is to be displayed, while also
-allowing the gist of the grammar to be understood from simply
-looking at the source ConTeXt document.

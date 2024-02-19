@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:59 nia Exp $
-
-BLAKE2s (tex-context-ruby-28434/context-ruby.doc.tar.xz) = b815bc54d9199cf4d6665e0f72b16efc3ea9f44ad00be957b602ffec7dfdf961
-SHA512 (tex-context-ruby-28434/context-ruby.doc.tar.xz) = a2e07c4447eb91c145c453cdd491c3998dd3f2160f12e0a06e97f55915575247a3a6894aa567dd10b7a2134a39f2e32dd2305ca505ce2ade019debd359edf7e9
-Size (tex-context-ruby-28434/context-ruby.doc.tar.xz) = 768 bytes
