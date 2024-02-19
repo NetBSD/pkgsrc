@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/20 08:24:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/19 18:25:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -125,9 +125,6 @@ ${PYSITELIB}/xarray/core/coordinates.pyo
 ${PYSITELIB}/xarray/core/dask_array_ops.py
 ${PYSITELIB}/xarray/core/dask_array_ops.pyc
 ${PYSITELIB}/xarray/core/dask_array_ops.pyo
-${PYSITELIB}/xarray/core/daskmanager.py
-${PYSITELIB}/xarray/core/daskmanager.pyc
-${PYSITELIB}/xarray/core/daskmanager.pyo
 ${PYSITELIB}/xarray/core/dataarray.py
 ${PYSITELIB}/xarray/core/dataarray.pyc
 ${PYSITELIB}/xarray/core/dataarray.pyo
@@ -182,15 +179,9 @@ ${PYSITELIB}/xarray/core/options.pyo
 ${PYSITELIB}/xarray/core/parallel.py
 ${PYSITELIB}/xarray/core/parallel.pyc
 ${PYSITELIB}/xarray/core/parallel.pyo
-${PYSITELIB}/xarray/core/parallelcompat.py
-${PYSITELIB}/xarray/core/parallelcompat.pyc
-${PYSITELIB}/xarray/core/parallelcompat.pyo
 ${PYSITELIB}/xarray/core/pdcompat.py
 ${PYSITELIB}/xarray/core/pdcompat.pyc
 ${PYSITELIB}/xarray/core/pdcompat.pyo
-${PYSITELIB}/xarray/core/pycompat.py
-${PYSITELIB}/xarray/core/pycompat.pyc
-${PYSITELIB}/xarray/core/pycompat.pyo
 ${PYSITELIB}/xarray/core/resample.py
 ${PYSITELIB}/xarray/core/resample.pyc
 ${PYSITELIB}/xarray/core/resample.pyo
@@ -233,9 +224,18 @@ ${PYSITELIB}/xarray/namedarray/_typing.pyo
 ${PYSITELIB}/xarray/namedarray/core.py
 ${PYSITELIB}/xarray/namedarray/core.pyc
 ${PYSITELIB}/xarray/namedarray/core.pyo
+${PYSITELIB}/xarray/namedarray/daskmanager.py
+${PYSITELIB}/xarray/namedarray/daskmanager.pyc
+${PYSITELIB}/xarray/namedarray/daskmanager.pyo
 ${PYSITELIB}/xarray/namedarray/dtypes.py
 ${PYSITELIB}/xarray/namedarray/dtypes.pyc
 ${PYSITELIB}/xarray/namedarray/dtypes.pyo
+${PYSITELIB}/xarray/namedarray/parallelcompat.py
+${PYSITELIB}/xarray/namedarray/parallelcompat.pyc
+${PYSITELIB}/xarray/namedarray/parallelcompat.pyo
+${PYSITELIB}/xarray/namedarray/pycompat.py
+${PYSITELIB}/xarray/namedarray/pycompat.pyc
+${PYSITELIB}/xarray/namedarray/pycompat.pyo
 ${PYSITELIB}/xarray/namedarray/utils.py
 ${PYSITELIB}/xarray/namedarray/utils.pyc
 ${PYSITELIB}/xarray/namedarray/utils.pyo
@@ -290,6 +290,12 @@ ${PYSITELIB}/xarray/tests/data/example.ict
 ${PYSITELIB}/xarray/tests/data/example.uamiv
 ${PYSITELIB}/xarray/tests/data/example_1.nc
 ${PYSITELIB}/xarray/tests/data/example_1.nc.gz
+${PYSITELIB}/xarray/tests/datatree/conftest.py
+${PYSITELIB}/xarray/tests/datatree/conftest.pyc
+${PYSITELIB}/xarray/tests/datatree/conftest.pyo
+${PYSITELIB}/xarray/tests/datatree/test_io.py
+${PYSITELIB}/xarray/tests/datatree/test_io.pyc
+${PYSITELIB}/xarray/tests/datatree/test_io.pyo
 ${PYSITELIB}/xarray/tests/test_accessor_dt.py
 ${PYSITELIB}/xarray/tests/test_accessor_dt.pyc
 ${PYSITELIB}/xarray/tests/test_accessor_dt.pyo
