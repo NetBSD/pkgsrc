@@ -1,4 +1,4 @@
-$NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
+$NetBSD: patch-az,v 1.6 2024/02/19 04:12:36 jnemeth Exp $
 
 --- sendmail/srvrsmtp.c.orig	2024-01-31 06:38:32.000000000 +0000
 +++ sendmail/srvrsmtp.c
@@ -17,7 +17,7 @@ $NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
  					  (int) tp->tv_sec +
  						(tp->tv_usec >= 500000 ? 1 : 0)
  					 );
-+				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "pre-greeting traffic");
++				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL), "pre-greeting traffic");
  			}
  		}
  	}
@@ -29,7 +29,7 @@ $NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
 +
    authenticated:
 +				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+				BLACKLIST_NOTIFY(BLACKLIST_AUTH_OK, fd, "AUTH OK");
++				BLACKLIST_NOTIFY(BLACKLIST_AUTH_OK, sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL), "AUTH OK");
 +
  				message("235 2.0.0 OK Authenticated");
  				authenticating = SASL_IS_AUTH;
@@ -49,7 +49,7 @@ $NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
 +					int fd;
 +
 +					fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+					BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, fd, "too many bad commands");
++					BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL), "too many bad commands");
  					message("421 4.7.0 %s Too many bad commands; closing connection",
  						MyHostName);
  
@@ -61,7 +61,7 @@ $NetBSD: patch-az,v 1.5 2024/02/12 03:23:06 jnemeth Exp $
 +
    stopattack:
 +				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+				BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, fd, "too many bad commands");
++				BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL), "too many bad commands");
  				message("421 4.7.0 %s Too many bad commands; closing connection",
  					MyHostName);
  
