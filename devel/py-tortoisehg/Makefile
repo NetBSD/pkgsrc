@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2023/11/07 22:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2024/02/19 12:47:39 wiz Exp $
 
-DISTNAME=		tortoisehg-6.5.1
+DISTNAME=		tortoisehg-6.6.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		https://www.mercurial-scm.org/release/tortoisehg/targz/
