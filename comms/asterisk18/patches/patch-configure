@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
+$NetBSD: patch-configure,v 1.4 2024/02/19 05:59:52 jnemeth Exp $
 
---- configure.orig	2021-12-09 16:44:54.000000000 +0000
+--- configure.orig	2023-07-20 13:04:41.000000000 +0000
 +++ configure
-@@ -9116,12 +9116,12 @@ else
+@@ -9303,12 +9303,12 @@ else
  
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for clang -fblocks" >&5
  $as_echo_n "checking for clang -fblocks... " >&6; }
@@ -17,7 +17,7 @@ $NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -15264,7 +15264,7 @@ fi
+@@ -15580,7 +15580,7 @@ fi
  done
  
  
@@ -26,7 +26,7 @@ $NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
  
  else
-@@ -17279,7 +17279,7 @@ fi
+@@ -17562,7 +17562,7 @@ fi
  done
  
  
@@ -35,7 +35,7 @@ $NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -17514,7 +17514,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17797,7 +17797,7 @@ rm -f core conftest.err conftest.$ac_obj
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
@@ -44,7 +44,7 @@ $NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
    HAS_POLL=1
  
-@@ -19803,6 +19803,148 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -20126,6 +20126,148 @@ rm -f core conftest.err conftest.$ac_obj
  
  
  
@@ -193,12 +193,3 @@ $NetBSD: patch-configure,v 1.3 2021/12/17 08:07:06 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -20907,6 +21049,8 @@ $as_echo_n "checking for getifaddrs() su
- 
- 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
-+ #include <sys/types.h>
-+ #include <sys/socket.h>
-  #include <ifaddrs.h>
- int
- main ()
