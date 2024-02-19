@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/02/11 13:42:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/19 14:59:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog.rdoc
 ${GEM_LIBDIR}/Gemfile
@@ -30,18 +30,25 @@ ${GEM_LIBDIR}/lib/bindata/int.rb
 ${GEM_LIBDIR}/lib/bindata/io.rb
 ${GEM_LIBDIR}/lib/bindata/lazy.rb
 ${GEM_LIBDIR}/lib/bindata/name.rb
-${GEM_LIBDIR}/lib/bindata/offset.rb
 ${GEM_LIBDIR}/lib/bindata/params.rb
 ${GEM_LIBDIR}/lib/bindata/primitive.rb
 ${GEM_LIBDIR}/lib/bindata/record.rb
 ${GEM_LIBDIR}/lib/bindata/registry.rb
 ${GEM_LIBDIR}/lib/bindata/rest.rb
 ${GEM_LIBDIR}/lib/bindata/sanitize.rb
+${GEM_LIBDIR}/lib/bindata/section.rb
 ${GEM_LIBDIR}/lib/bindata/skip.rb
 ${GEM_LIBDIR}/lib/bindata/string.rb
 ${GEM_LIBDIR}/lib/bindata/stringz.rb
 ${GEM_LIBDIR}/lib/bindata/struct.rb
 ${GEM_LIBDIR}/lib/bindata/trace.rb
+${GEM_LIBDIR}/lib/bindata/transform/brotli.rb
+${GEM_LIBDIR}/lib/bindata/transform/lz4.rb
+${GEM_LIBDIR}/lib/bindata/transform/lzma.rb
+${GEM_LIBDIR}/lib/bindata/transform/xor.rb
+${GEM_LIBDIR}/lib/bindata/transform/xz.rb
+${GEM_LIBDIR}/lib/bindata/transform/zlib.rb
+${GEM_LIBDIR}/lib/bindata/transform/zstd.rb
 ${GEM_LIBDIR}/lib/bindata/uint8_array.rb
 ${GEM_LIBDIR}/lib/bindata/version.rb
 ${GEM_LIBDIR}/lib/bindata/virtual.rb
@@ -59,12 +66,12 @@ ${GEM_LIBDIR}/test/float_test.rb
 ${GEM_LIBDIR}/test/int_test.rb
 ${GEM_LIBDIR}/test/io_test.rb
 ${GEM_LIBDIR}/test/lazy_test.rb
-${GEM_LIBDIR}/test/offset_test.rb
 ${GEM_LIBDIR}/test/params_test.rb
 ${GEM_LIBDIR}/test/primitive_test.rb
 ${GEM_LIBDIR}/test/record_test.rb
 ${GEM_LIBDIR}/test/registry_test.rb
 ${GEM_LIBDIR}/test/rest_test.rb
+${GEM_LIBDIR}/test/section_test.rb
 ${GEM_LIBDIR}/test/skip_test.rb
 ${GEM_LIBDIR}/test/string_test.rb
 ${GEM_LIBDIR}/test/stringz_test.rb
