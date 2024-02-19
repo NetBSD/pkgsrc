@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/08/22 13:55:46 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/19 15:07:09 taca Exp $
 
-DISTNAME=	red-colors-0.3.0
+DISTNAME=	red-colors-0.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
