@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.89 2024/02/03 07:34:48 markd Exp $
+# $NetBSD: Makefile,v 1.90 2024/02/19 19:31:38 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2023pre9
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69580
+TEXLIVE_REV=	69928
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -436,6 +436,7 @@ DEPENDS+=	tex-elocalloc-[0-9]*:../../devel/tex-elocalloc
 DEPENDS+=	tex-embedfile-[0-9]*:../../print/tex-embedfile
 # depend embrac
 # depend emo
+# depend emotion
 # depend emptypage
 # depend emulateapj
 DEPENDS+=	tex-endfloat-[0-9]*:../../print/tex-endfloat
@@ -1133,6 +1134,7 @@ DEPENDS+=	tex-prosper-[0-9]*:../../print/tex-prosper
 # depend pstring
 # depend pxgreeks
 # depend pygmentex
+# depend pynotebook
 # depend python
 # depend pythonimmediate
 # depend q-and-a
@@ -1348,6 +1350,7 @@ DEPENDS+=	tex-tagpdf-[0-9]*:../../print/tex-tagpdf
 # depend tamefloats
 # depend tangocolors
 # depend tasks
+# depend tblr-extras
 # depend tcldoc
 DEPENDS+=	tex-tcolorbox-[0-9]*:../../print/tex-tcolorbox
 # depend tdclock
