@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/04/27 13:46:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/02/19 14:54:59 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Rakefile.cross
 ${GEM_LIBDIR}/certs/ged.pem
+${GEM_LIBDIR}/certs/kanis@comcard.de.pem
 ${GEM_LIBDIR}/certs/larskanis-2022.pem
 ${GEM_LIBDIR}/certs/larskanis-2023.pem
 ${GEM_LIBDIR}/ext/errorcodes.def
@@ -122,8 +123,4 @@ ${GEM_LIBDIR}/sample/replication_monitor.rb
 ${GEM_LIBDIR}/sample/test_binary_values.rb
 ${GEM_LIBDIR}/sample/wal_shipper.rb
 ${GEM_LIBDIR}/sample/warehouse_partitions.rb
-${GEM_LIBDIR}/translation/.po4a-version
-${GEM_LIBDIR}/translation/po/all.pot
-${GEM_LIBDIR}/translation/po/ja.po
-${GEM_LIBDIR}/translation/po4a.cfg
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
