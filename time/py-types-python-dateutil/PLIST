@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/09 12:24:17 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/19 18:33:25 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dateutil-stubs/METADATA.toml
 ${PYSITELIB}/dateutil-stubs/__init__.pyi
 ${PYSITELIB}/dateutil-stubs/_common.pyi
 ${PYSITELIB}/dateutil-stubs/easter.pyi
 ${PYSITELIB}/dateutil-stubs/parser/__init__.pyi
 ${PYSITELIB}/dateutil-stubs/parser/isoparser.pyi
+${PYSITELIB}/dateutil-stubs/py.typed
 ${PYSITELIB}/dateutil-stubs/relativedelta.pyi
 ${PYSITELIB}/dateutil-stubs/rrule.pyi
 ${PYSITELIB}/dateutil-stubs/tz/__init__.pyi
