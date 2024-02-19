@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/06 23:17:18 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/19 18:29:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -53,6 +53,18 @@ ${PYSITELIB}/aioquic/quic/__init__.pyo
 ${PYSITELIB}/aioquic/quic/configuration.py
 ${PYSITELIB}/aioquic/quic/configuration.pyc
 ${PYSITELIB}/aioquic/quic/configuration.pyo
+${PYSITELIB}/aioquic/quic/congestion/__init__.py
+${PYSITELIB}/aioquic/quic/congestion/__init__.pyc
+${PYSITELIB}/aioquic/quic/congestion/__init__.pyo
+${PYSITELIB}/aioquic/quic/congestion/base.py
+${PYSITELIB}/aioquic/quic/congestion/base.pyc
+${PYSITELIB}/aioquic/quic/congestion/base.pyo
+${PYSITELIB}/aioquic/quic/congestion/cubic.py
+${PYSITELIB}/aioquic/quic/congestion/cubic.pyc
+${PYSITELIB}/aioquic/quic/congestion/cubic.pyo
+${PYSITELIB}/aioquic/quic/congestion/reno.py
+${PYSITELIB}/aioquic/quic/congestion/reno.pyc
+${PYSITELIB}/aioquic/quic/congestion/reno.pyo
 ${PYSITELIB}/aioquic/quic/connection.py
 ${PYSITELIB}/aioquic/quic/connection.pyc
 ${PYSITELIB}/aioquic/quic/connection.pyo
