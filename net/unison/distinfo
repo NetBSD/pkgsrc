@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2023/04/28 11:39:41 gdt Exp $
+$NetBSD: distinfo,v 1.39 2024/02/19 19:39:00 gdt Exp $
 
-BLAKE2s (unison-2.53.3.tar.gz) = 5f85a04432d77294fcd8f9f873d6647891d0865aed0caf4a666260a599420afe
-SHA512 (unison-2.53.3.tar.gz) = f3fafd5e1a2950a00ed8bcc682036180ea40eff1ccfa1fc671cca49954890a535ee48faf1e8e62002563143e5479b9df1eca1db1caf03dffc50449fb467b8e2b
-Size (unison-2.53.3.tar.gz) = 1415490 bytes
+BLAKE2s (unison-2.53.4.tar.gz) = 1868083e523f71792646a0b4dfee72d764306deab6abcd6444d976948794b549
+SHA512 (unison-2.53.4.tar.gz) = 91077955aabbd919e6d6df04a704878238d745ac3693e0e41b8a37a922db4ebfceb204378ab1283303ef5ad9d80445bc8caeafad36f67b8df8c30d8b4e0c6947
+Size (unison-2.53.4.tar.gz) = 1407429 bytes
