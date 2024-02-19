@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2022/11/25 13:34:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/02/19 06:04:04 adam Exp $
 bin/vba_extract.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xlsxwriter/__init__.py
 ${PYSITELIB}/xlsxwriter/__init__.pyc
 ${PYSITELIB}/xlsxwriter/__init__.pyo
@@ -73,6 +74,18 @@ ${PYSITELIB}/xlsxwriter/packager.pyo
 ${PYSITELIB}/xlsxwriter/relationships.py
 ${PYSITELIB}/xlsxwriter/relationships.pyc
 ${PYSITELIB}/xlsxwriter/relationships.pyo
+${PYSITELIB}/xlsxwriter/rich_value.py
+${PYSITELIB}/xlsxwriter/rich_value.pyc
+${PYSITELIB}/xlsxwriter/rich_value.pyo
+${PYSITELIB}/xlsxwriter/rich_value_rel.py
+${PYSITELIB}/xlsxwriter/rich_value_rel.pyc
+${PYSITELIB}/xlsxwriter/rich_value_rel.pyo
+${PYSITELIB}/xlsxwriter/rich_value_structure.py
+${PYSITELIB}/xlsxwriter/rich_value_structure.pyc
+${PYSITELIB}/xlsxwriter/rich_value_structure.pyo
+${PYSITELIB}/xlsxwriter/rich_value_types.py
+${PYSITELIB}/xlsxwriter/rich_value_types.pyc
+${PYSITELIB}/xlsxwriter/rich_value_types.pyo
 ${PYSITELIB}/xlsxwriter/shape.py
 ${PYSITELIB}/xlsxwriter/shape.pyc
 ${PYSITELIB}/xlsxwriter/shape.pyo
