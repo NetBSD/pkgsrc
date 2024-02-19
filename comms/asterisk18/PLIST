@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/10/09 07:52:15 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/02/19 05:59:51 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -11,6 +11,7 @@ lib/asterisk/modules/app_authenticate.so
 lib/asterisk/modules/app_blind_transfer.so
 lib/asterisk/modules/app_bridgeaddchan.so
 lib/asterisk/modules/app_bridgewait.so
+lib/asterisk/modules/app_broadcast.so
 lib/asterisk/modules/app_cdr.so
 lib/asterisk/modules/app_celgenuserevent.so
 lib/asterisk/modules/app_chanisavail.so
@@ -34,6 +35,7 @@ lib/asterisk/modules/app_followme.so
 lib/asterisk/modules/app_forkcdr.so
 lib/asterisk/modules/app_getcpeid.so
 lib/asterisk/modules/app_ices.so
+lib/asterisk/modules/app_if.so
 lib/asterisk/modules/app_image.so
 lib/asterisk/modules/app_mf.so
 lib/asterisk/modules/app_milliwatt.so
@@ -55,6 +57,8 @@ lib/asterisk/modules/app_reload.so
 lib/asterisk/modules/app_sayunixtime.so
 lib/asterisk/modules/app_senddtmf.so
 lib/asterisk/modules/app_sendtext.so
+lib/asterisk/modules/app_sf.so
+lib/asterisk/modules/app_signal.so
 lib/asterisk/modules/app_sms.so
 lib/asterisk/modules/app_softhangup.so
 lib/asterisk/modules/app_speech_utils.so
@@ -147,6 +151,8 @@ lib/asterisk/modules/func_dialgroup.so
 lib/asterisk/modules/func_dialplan.so
 lib/asterisk/modules/func_enum.so
 lib/asterisk/modules/func_env.so
+lib/asterisk/modules/func_evalexten.so
+lib/asterisk/modules/func_export.so
 lib/asterisk/modules/func_extstate.so
 lib/asterisk/modules/func_frame_drop.so
 lib/asterisk/modules/func_frame_trace.so
@@ -156,6 +162,7 @@ lib/asterisk/modules/func_hangupcause.so
 lib/asterisk/modules/func_holdintercept.so
 lib/asterisk/modules/func_iconv.so
 lib/asterisk/modules/func_jitterbuffer.so
+lib/asterisk/modules/func_json.so
 lib/asterisk/modules/func_lock.so
 lib/asterisk/modules/func_logic.so
 lib/asterisk/modules/func_math.so
@@ -193,6 +200,7 @@ lib/asterisk/modules/pbx_loopback.so
 lib/asterisk/modules/pbx_realtime.so
 lib/asterisk/modules/pbx_spool.so
 lib/asterisk/modules/res_adsi.so
+lib/asterisk/modules/res_aeap.so
 lib/asterisk/modules/res_ael_share.so
 lib/asterisk/modules/res_agi.so
 lib/asterisk/modules/res_ari.so
@@ -250,6 +258,7 @@ lib/asterisk/modules/res_phoneprov.so
 lib/asterisk/modules/res_pjproject.so
 lib/asterisk/modules/res_pjsip.so
 lib/asterisk/modules/res_pjsip_acl.so
+lib/asterisk/modules/res_pjsip_aoc.so
 lib/asterisk/modules/res_pjsip_authenticator_digest.so
 lib/asterisk/modules/res_pjsip_caller_id.so
 lib/asterisk/modules/res_pjsip_config_wizard.so
@@ -284,6 +293,7 @@ lib/asterisk/modules/res_pjsip_pubsub.so
 lib/asterisk/modules/res_pjsip_refer.so
 lib/asterisk/modules/res_pjsip_registrar.so
 lib/asterisk/modules/res_pjsip_rfc3326.so
+lib/asterisk/modules/res_pjsip_rfc3329.so
 lib/asterisk/modules/res_pjsip_sdp_rtp.so
 lib/asterisk/modules/res_pjsip_send_to_voicemail.so
 lib/asterisk/modules/res_pjsip_session.so
@@ -292,7 +302,6 @@ lib/asterisk/modules/res_pjsip_stir_shaken.so
 lib/asterisk/modules/res_pjsip_t38.so
 lib/asterisk/modules/res_pjsip_transport_websocket.so
 lib/asterisk/modules/res_pjsip_xpidf_body_generator.so
-${PLIST.mgcp}lib/asterisk/modules/res_pktccops.so
 lib/asterisk/modules/res_prometheus.so
 lib/asterisk/modules/res_realtime.so
 ${PLIST.unbound}lib/asterisk/modules/res_resolver_unbound.so
@@ -307,6 +316,7 @@ lib/asterisk/modules/res_sorcery_memory.so
 lib/asterisk/modules/res_sorcery_memory_cache.so
 lib/asterisk/modules/res_sorcery_realtime.so
 lib/asterisk/modules/res_speech.so
+lib/asterisk/modules/res_speech_aeap.so
 ${PLIST.srtp}lib/asterisk/modules/res_srtp.so
 lib/asterisk/modules/res_stasis.so
 lib/asterisk/modules/res_stasis_answer.so
@@ -2316,16 +2326,24 @@ share/doc/asterisk/CHANGES
 share/doc/asterisk/COPYING
 share/doc/asterisk/CREDITS
 share/doc/asterisk/ChangeLog
+share/doc/asterisk/ChangeLog-18.18.0.md
+share/doc/asterisk/ChangeLog-18.18.1.md
+share/doc/asterisk/ChangeLog-18.19.0.md
+share/doc/asterisk/ChangeLog-18.20.0.md
+share/doc/asterisk/ChangeLog-18.20.1.md
+share/doc/asterisk/ChangeLog-18.20.2.md
+share/doc/asterisk/ChangeLog-18.21.0.md
 share/doc/asterisk/IAX2-security.pdf
 share/doc/asterisk/IAX2-security.txt
 share/doc/asterisk/LICENSE
 share/doc/asterisk/README-SERIOUSLY.bestpractices.md
 share/doc/asterisk/README.md
 share/doc/asterisk/README.txt
-share/doc/asterisk/UPGRADE.txt
+share/doc/asterisk/SECURITY.md
 share/doc/asterisk/Zaptel-to-DAHDI.txt
 share/examples/asterisk/acl.conf
 share/examples/asterisk/adsi.conf
+share/examples/asterisk/aeap.conf
 share/examples/asterisk/agents.conf
 share/examples/asterisk/alarmreceiver.conf
 share/examples/asterisk/alsa.conf
@@ -2379,6 +2397,7 @@ share/examples/asterisk/features.conf
 share/examples/asterisk/festival.conf
 share/examples/asterisk/followme.conf
 share/examples/asterisk/func_odbc.conf
+share/examples/asterisk/geolocation.conf
 share/examples/asterisk/hep.conf
 share/examples/asterisk/http.conf
 share/examples/asterisk/iax.conf
@@ -2407,11 +2426,13 @@ share/examples/asterisk/prometheus.conf
 share/examples/asterisk/queuerules.conf
 share/examples/asterisk/queues.conf
 share/examples/asterisk/res_config_mysql.conf
+share/examples/asterisk/res_config_odbc.conf
 share/examples/asterisk/res_config_sqlite.conf
 share/examples/asterisk/res_config_sqlite3.conf
 share/examples/asterisk/res_corosync.conf
 share/examples/asterisk/res_curl.conf
 share/examples/asterisk/res_fax.conf
+share/examples/asterisk/res_http_media_cache.conf
 share/examples/asterisk/res_ldap.conf
 share/examples/asterisk/res_odbc.conf
 share/examples/asterisk/res_parking.conf
