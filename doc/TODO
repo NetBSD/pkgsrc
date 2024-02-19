@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24053 2024/02/18 20:58:48 adam Exp $
+$NetBSD: TODO,v 1.24054 2024/02/19 01:47:51 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1456,7 +1456,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xtux-20030306
 	o xu4-1.4
 	o xview-3.2.1.4.25.5
-	o xvkbd-3.7
 	o xwrits-2.26
 	o xye-0.12.2
 	o yacas-1.6.1
