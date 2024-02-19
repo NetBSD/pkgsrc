@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/08 15:02:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/02/19 19:39:00 gdt Exp $
 bin/unison
+${PLIST.gtk3}bin/unison-gui
 man/man1/unison.1
-share/doc/unison/CONTRIB
+share/doc/unison/CONTRIBUTING.md
 share/doc/unison/COPYING
+share/doc/unison/INSTALL.md
 share/doc/unison/NEWS.md
-share/doc/unison/README
-share/doc/unison/ROADMAP.txt
-share/doc/unison/TODO.txt
