@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/07 20:37:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/19 15:11:42 schmonz Exp $
 
-DISTNAME=	dkimpy-1.1.3
+DISTNAME=	dkimpy-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dkimpy/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://launchpad.net/dkimpy/
 COMMENT=	DKIM, ARC, and TLSRPT email signing and verification
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
@@ -27,5 +28,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

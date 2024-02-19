@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/07 20:37:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/19 15:11:42 schmonz Exp $
 bin/arcsign
 bin/arcverify
 bin/dkimsign
@@ -43,13 +43,12 @@ ${PYSITELIB}/dkim/dnsplug.pyo
 ${PYSITELIB}/dkim/util.py
 ${PYSITELIB}/dkim/util.pyc
 ${PYSITELIB}/dkim/util.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/arcsign.1
 man/man1/arcverify.1
 man/man1/dkimsign.1
