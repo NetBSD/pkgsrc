@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/19 20:50:43 schmonz Exp $
+
+BLAKE2s (sharness-v1.2.0.tar.gz) = d0cbec657c160e279125b3f189f3801a5c93e407bd83ac3c2e14edee34a3422d
+SHA512 (sharness-v1.2.0.tar.gz) = b6b346b14bdbd387bc111b8caa83b03b77195f43e0f9c774f489de431d41a0cf258edf2bec136d78ddd49236ce1e71e4cddb33d163148d05600501c414e48fca
+Size (sharness-v1.2.0.tar.gz) = 42532 bytes
+SHA1 (patch-Makefile) = a17c1e8d71f5c8084a7cd62e4a352360c4848a55
