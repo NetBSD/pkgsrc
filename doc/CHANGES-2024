@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1355 2024/02/19 18:29:28 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1356 2024/02/19 18:33:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2408,3 +2408,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-jsbeautifier to 1.15.1 [adam 2024-02-19]
 	Updated math/py-xarray to 2024.2.0 [adam 2024-02-19]
 	Updated www/py-aioquic to 0.9.25 [adam 2024-02-19]
+	Updated devel/py-types-setuptools to 69.1.0.20240217 [adam 2024-02-19]
+	Updated time/py-types-python-dateutil to 2.8.19.20240106 [adam 2024-02-19]
