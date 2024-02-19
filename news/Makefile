@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/09/03 07:11:28 pin Exp $
+# $NetBSD: Makefile,v 1.53 2024/02/19 01:39:29 gdt Exp $
 #
 
 COMMENT=	Network news
@@ -17,6 +17,7 @@ SUBDIR+=	multimail
 SUBDIR+=	neix
 SUBDIR+=	newsbeuter
 SUBDIR+=	newsfetch
+SUBDIR+=	newsraft
 SUBDIR+=	newsx
 SUBDIR+=	nn
 SUBDIR+=	nntpcache
