@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2023/11/07 22:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/02/19 11:51:43 wiz Exp $
 
-DISTNAME=	khal-0.11.2
-PKGREVISION=	2
+DISTNAME=	khal-0.11.3
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -11,6 +10,7 @@ COMMENT=	CLI calendar application built around CalDAV
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=3.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.2.0:../../devel/py-click-log
@@ -34,8 +34,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-USE_PKG_RESOURCES=	yes
-
 INSTALLATION_DIRS=	share/doc/khal ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	khal/*/*.py
 REPLACE_PYTHON+=	khal/*.py
@@ -48,12 +46,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
 	${INSTALL_MAN} ${WRKSRC}/doc/build/man/khal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-# as of 0.11.1
-# 27 failed, 282 passed, 1 xfailed, 2 xpassed, 6 warnings
+# as of 0.11.3
+# 5 failed, 307 passed, 1 xfailed, 2 xpassed, 15 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
