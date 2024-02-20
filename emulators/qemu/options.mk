@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.21 2023/08/23 15:19:02 adam Exp $
+# $NetBSD: options.mk,v 1.22 2024/02/20 14:16:57 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl spice
+PKG_SUPPORTED_OPTIONS=	debug debug-info gtk3 iscsi jack sdl spice
 PKG_SUGGESTED_OPTIONS+=	iscsi sdl spice
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -35,6 +35,12 @@ CONFIGURE_ARGS+=	--disable-jack
 CONFIGURE_ARGS+=	--enable-debug-info
 .else
 CONFIGURE_ARGS+=	--disable-debug-info
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+.else
+CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
