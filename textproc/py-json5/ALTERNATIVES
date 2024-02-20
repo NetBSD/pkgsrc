@@ -1,0 +1,1 @@
+bin/pyjson5 @PREFIX@/bin/pyjson5-@PYVERSSUFFIX@
