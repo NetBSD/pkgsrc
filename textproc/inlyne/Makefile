@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2024/02/19 08:21:35 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/20 21:29:28 pin Exp $
 
-DISTNAME=	inlyne-0.3.3
-# 0.4.0 has been release but, do not update to it, see:
-# https://github.com/trimental/inlyne/issues/248
-# Waiting for 0.4.1 to include the fix.
+DISTNAME=	inlyne-0.4.1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=trimental/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/trimental/inlyne/
+HOMEPAGE=	https://github.com/Inlyne-Project/inlyne
 COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
 
@@ -32,8 +29,11 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/inlyne \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/inlyne.toml.sample \
+	${INSTALL_DATA} ${WRKSRC}/inlyne.default.toml \
 		${DESTDIR}${PREFIX}/share/examples/inlyne
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		x11
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
