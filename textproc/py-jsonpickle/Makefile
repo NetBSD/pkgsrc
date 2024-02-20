@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/02/03 17:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/02/20 04:45:00 adam Exp $
 
-DISTNAME=	jsonpickle-3.0.2
+DISTNAME=	jsonpickle-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpickle/}
@@ -17,7 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-gmpy2-[0-9]*:../../math/py-gmpy2
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=1.1.1:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
