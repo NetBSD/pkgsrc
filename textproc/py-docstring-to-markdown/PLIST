@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/05 09:49:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/20 04:41:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,9 +7,18 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/docstring_to_markdown/__init__.py
 ${PYSITELIB}/docstring_to_markdown/__init__.pyc
 ${PYSITELIB}/docstring_to_markdown/__init__.pyo
+${PYSITELIB}/docstring_to_markdown/_utils.py
+${PYSITELIB}/docstring_to_markdown/_utils.pyc
+${PYSITELIB}/docstring_to_markdown/_utils.pyo
+${PYSITELIB}/docstring_to_markdown/cpython.py
+${PYSITELIB}/docstring_to_markdown/cpython.pyc
+${PYSITELIB}/docstring_to_markdown/cpython.pyo
 ${PYSITELIB}/docstring_to_markdown/google.py
 ${PYSITELIB}/docstring_to_markdown/google.pyc
 ${PYSITELIB}/docstring_to_markdown/google.pyo
+${PYSITELIB}/docstring_to_markdown/plain.py
+${PYSITELIB}/docstring_to_markdown/plain.pyc
+${PYSITELIB}/docstring_to_markdown/plain.pyo
 ${PYSITELIB}/docstring_to_markdown/py.typed
 ${PYSITELIB}/docstring_to_markdown/rst.py
 ${PYSITELIB}/docstring_to_markdown/rst.pyc
