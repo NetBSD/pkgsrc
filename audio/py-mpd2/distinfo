@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/11/27 10:15:19 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/02/20 04:49:04 adam Exp $
 
-BLAKE2s (python-mpd2-3.0.5.tar.gz) = f7411ff75c0a5529d45d3cbcc5789743a487182cfa576b1429e9fadbf5f57a64
-SHA512 (python-mpd2-3.0.5.tar.gz) = f5715fbca5d607f89ba34ca4d34628f3d22d8df107ee5384c824f734c7da5429e87cfaef5a0eed56d6b47bc13b051cf0bade0de8fc2b1db7793b52ab35fbe1f3
-Size (python-mpd2-3.0.5.tar.gz) = 57963 bytes
+BLAKE2s (python-mpd2-3.1.1.tar.gz) = b5e9a05ff374b6dd572171abcd9cd2f180fac6159063fa385a23ac6c42f403e2
+SHA512 (python-mpd2-3.1.1.tar.gz) = 3d0b64a7713d054c25eb7b022ee29d46f3ed8453ebbebcbf82c79aa9188a1ca4aa05944d05c2f7081958c3adfe13cbf36848920d2891124fa159398a83474299
+Size (python-mpd2-3.1.1.tar.gz) = 58713 bytes
