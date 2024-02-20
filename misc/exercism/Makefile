@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/02/15 19:08:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/20 01:11:14 schmonz Exp $
 
 DISTNAME=		exercism-cli-3.3.0
+PKGNAME=		${DISTNAME:S/-cli-/-/}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=exercism/}
 GITHUB_PROJECT=		cli
@@ -10,6 +11,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://exercism.org/
 COMMENT=		Command line tool for exercism.org
 LICENSE=		mit
+
+SUPERSEDES+=		exercism-cli-[0-9]*
 
 AUTO_MKDIRS=		yes
 
