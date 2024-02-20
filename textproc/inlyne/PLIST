@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/09 06:57:11 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/20 21:29:28 pin Exp $
 bin/inlyne
-share/examples/inlyne/inlyne.toml.sample
+share/examples/inlyne/inlyne.default.toml
