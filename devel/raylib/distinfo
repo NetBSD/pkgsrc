@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/20 19:56:09 charlotte Exp $
+$NetBSD: distinfo,v 1.3 2024/02/20 22:00:36 charlotte Exp $
 
 BLAKE2s (raylib-5.0.tar.gz) = 2a47ab2f54ece683520d4dd348b87c3904681fc4d3069b8789eb519fb678772e
 SHA512 (raylib-5.0.tar.gz) = 5956bc1646b99baac6eb1652c4d72e96af874337158672155ba144f131de8a4fd19291a58335a92fcaaa2fc818682f93ff4230af0f815efb8b49f7d2a162e9b0
 Size (raylib-5.0.tar.gz) = 32701105 bytes
-SHA1 (patch-cmake_CompilerFlags.cmake) = 032bac016e3d9ce44644a9d5f9b0c9652b3405b8
