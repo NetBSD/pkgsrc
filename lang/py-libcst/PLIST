@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/07 20:14:31 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2024/02/20 04:55:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/libcst/__init__.py
 ${PYSITELIB}/libcst/__init__.pyc
 ${PYSITELIB}/libcst/__init__.pyo
@@ -827,6 +826,9 @@ ${PYSITELIB}/libcst/tests/test_fuzz.pyo
 ${PYSITELIB}/libcst/tests/test_pyre_integration.py
 ${PYSITELIB}/libcst/tests/test_pyre_integration.pyc
 ${PYSITELIB}/libcst/tests/test_pyre_integration.pyo
+${PYSITELIB}/libcst/tests/test_roundtrip.py
+${PYSITELIB}/libcst/tests/test_roundtrip.pyc
+${PYSITELIB}/libcst/tests/test_roundtrip.pyo
 ${PYSITELIB}/libcst/tests/test_tabs.py
 ${PYSITELIB}/libcst/tests/test_tabs.pyc
 ${PYSITELIB}/libcst/tests/test_tabs.pyo
