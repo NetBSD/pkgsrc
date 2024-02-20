@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/11/16 09:22:51 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/02/20 20:40:07 wiz Exp $
 
 .include "version.mk"
 
@@ -18,11 +18,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 LDFLAGS.SunOS+=		-lsocket -lnsl -lrt
 
-PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-controller.pc.in
-PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-check.pc.in
-PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-net.pc.in
-PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
-PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-base.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 CHECK_PORTABILITY_SKIP+=	hooks/pre-commit.hook
 

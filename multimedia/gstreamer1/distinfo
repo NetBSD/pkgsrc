@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.55 2023/12/31 22:03:01 wiz Exp $
+$NetBSD: distinfo,v 1.56 2024/02/20 20:40:07 wiz Exp $
 
-BLAKE2s (gstreamer-1.22.8.tar.xz) = 0fb6f748ccf6a298eb9605faaad0a85b9ef649b0b19448240635b7c805d6fcf8
-SHA512 (gstreamer-1.22.8.tar.xz) = eb1da4c37409eaf46d22c6c16fd9ed5f81f3dfcf2b2d00cf197127d3e4297d2cee121952cff7b05db63487b909ba61cd6bf68045424fb1aa5c50d9e9a3181970
-Size (gstreamer-1.22.8.tar.xz) = 1796576 bytes
+BLAKE2s (gstreamer-1.22.10.tar.xz) = 9616a5e47c5719bf0813f6f08bd497e8590e5301d1142951e662dfc1a1050148
+SHA512 (gstreamer-1.22.10.tar.xz) = b75d34ad2aad1402b6953270d824e3d540009bebaea348d3664f400226f664884c98661ec65c2e42847934a8afb7d5e10111f3e9c8088c4e6ce2e521d399d25f
+Size (gstreamer-1.22.10.tar.xz) = 1799780 bytes
 SHA1 (patch-plugins_tracers_gstrusage.c) = 36ab41bc208cd9146bed3208f56eb332f2535591
