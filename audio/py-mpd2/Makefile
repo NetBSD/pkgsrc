@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/11/27 10:15:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/20 04:49:04 adam Exp $
 
-DISTNAME=	python-mpd2-3.0.5
+DISTNAME=	python-mpd2-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-mpd2/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://musicpd.org/libs/python-mpd2/
 COMMENT=	Python mpd client library
 LICENSE=	gnu-lgpl-v3
 
-#TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
@@ -18,8 +19,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest mpd.tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
