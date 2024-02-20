@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2023/12/30 12:56:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2024/02/20 21:10:22 wiz Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -19,8 +19,8 @@ lib/libpoppler-glib.so
 lib/libpoppler-glib.so.8
 lib/libpoppler-glib.so.8.26.0
 lib/libpoppler.so
-lib/libpoppler.so.133
-lib/libpoppler.so.133.0.0
+lib/libpoppler.so.134
+lib/libpoppler.so.134.0.0
 lib/pkgconfig/poppler-glib.pc
 lib/pkgconfig/poppler.pc
 share/doc/poppler/README-XPDF
