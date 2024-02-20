@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1384 2024/02/20 21:32:18 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1385 2024/02/20 21:33:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/inlyne to 0.4.1 [pin 2024-02-20]
 	Updated graphics/oculante to 0.8.8 [pin 2024-02-20]
 	Updated shells/oh-my-posh to 19.11.3 [pin 2024-02-20]
+	Updated sysutils/refi to 3.1.3 [pin 2024-02-20]
