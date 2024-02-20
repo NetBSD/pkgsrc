@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/10 08:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/20 05:00:15 adam Exp $
 
-DISTNAME=	Pympler-0.8
+DISTNAME=	Pympler-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pympler/}
 
@@ -11,7 +10,12 @@ HOMEPAGE=	https://github.com/pympler/pympler
 COMMENT=	Python memory analysis tool
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
