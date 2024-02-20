@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2023/11/08 13:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/02/20 07:15:02 wiz Exp $
 
-DISTNAME=	elinks-0.16.0
-PKGREVISION=	3
+DISTNAME=	elinks-0.17.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -19,8 +18,11 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		bash gmake pkg-config
 USE_TOOLS+=		msgfmt xgettext
+
+# uses '<<<'
+CONFIG_SHELL=		bash
 
 # ld: no input files
 MAKE_JOBS_SAFE=	no
