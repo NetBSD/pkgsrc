@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2024/02/20 14:16:57 imil Exp $
+# $NetBSD: options.mk,v 1.23 2024/02/20 19:08:39 imil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug debug-info gtk3 iscsi jack sdl spice
@@ -39,8 +39,6 @@ CONFIGURE_ARGS+=	--disable-debug-info
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-.else
-CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
