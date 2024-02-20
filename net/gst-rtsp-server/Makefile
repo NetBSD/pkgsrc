@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/23 08:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/20 20:40:07 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -15,7 +15,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 USE_TOOLS+=		pkg-config
-PKGCONFIG_OVERRIDE=	gstreamer-rtsp-server.pc.in
+
+PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+PKGCONFIG_OVERRIDE_STAGE=       pre-install
 
 MESON_ARGS+=		-Dtests=disabled
 
