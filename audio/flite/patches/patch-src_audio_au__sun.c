@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2024/02/16 08:21:36 nia Exp $
+$NetBSD: patch-src_audio_au__sun.c,v 1.1 2024/02/20 18:24:55 wiz Exp $
 
 - Include missing header
 - Use AUDIO_INITINFO for parameter initialization
@@ -33,9 +33,12 @@ $NetBSD: patch-ae,v 1.4 2024/02/16 08:21:36 nia Exp $
  
      switch (fmt)
      {
-@@ -163,7 +169,11 @@ int audio_write_sun(cst_audiodev *ad, vo
+@@ -166,9 +172,11 @@ int audio_flush_sun(cst_audiodev *ad)
+     return ioctl((int)ad->platform_data, AUDIO_DRAIN, 0);
+ }
  
- int audio_flush_sun(cst_audiodev *ad)
+-/* FIXME... */
+ int audio_drain_sun(cst_audiodev *ad)
  {
 -    return ioctl((int)ad->platform_data, AUDIO_DRAIN, 0);
 +#ifdef __sun
@@ -44,5 +47,4 @@ $NetBSD: patch-ae,v 1.4 2024/02/16 08:21:36 nia Exp $
 +    return ioctl((int)ad->platform_data, AUDIO_FLUSH, 0);
 +#endif
  }
- 
- /* FIXME... */
+-
