@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/02/09 13:53:45 pin Exp $
+$NetBSD: distinfo,v 1.9 2024/02/20 21:27:06 pin Exp $
 
 BLAKE2s (ahash-0.8.7.crate) = 619b44001b4846e3aa43ef6b61b35c6b080b2933e5c84cca985303fca4267852
 SHA512 (ahash-0.8.7.crate) = 2c9eaa22f7bda47a781994c769d4a2ef15ba0f511fdd4ec4680c13d4c1809f1ce01adecc3b3776793158062d28ad9e5f0b1d1c0a9429e43dd07cd99540eae7a6
@@ -129,9 +129,9 @@ Size (function_name-0.3.0.crate) = 4017 bytes
 BLAKE2s (function_name-proc-macro-0.3.0.crate) = 332c12a25e3b58f43e02373637d2bfe78f820a9ddd27db2e1dd3359fa8a47441
 SHA512 (function_name-proc-macro-0.3.0.crate) = 180fb4cdd32c32c81464aab5722fc5d12877d82600f09d74c8fef88cdd2f18c692ebc1c693d0324a3be36247a4a65db4c5b156c62b1c428fd055ce98e9da014f
 Size (function_name-proc-macro-0.3.0.crate) = 2020 bytes
-BLAKE2s (garden-1.2.1.tar.gz) = d4f5f66aeb2eb805f5d684fa0ffe4d485630dafd906dd209de5bfcf5c17cc5be
-SHA512 (garden-1.2.1.tar.gz) = 1864ea42652a4573c3682f64f86bcee93b76a8a3fdc3bacedb0d9d7968f015512ddb9f7835fbe415aafd78429190de5669f7f117555d739f296e152c819191aa
-Size (garden-1.2.1.tar.gz) = 118154 bytes
+BLAKE2s (garden-1.3.0.tar.gz) = 024b56c092d953ab7be75c9f8c0ee094adbcf22dd066c86730679d7f02790d48
+SHA512 (garden-1.3.0.tar.gz) = 5ac76d9a83146ab67a5adbfee0f018545613310249985c47e76bd105f661bd96a58ee377444f3be2c9601a03f3abefa63faa30a99ccff37a3cbb14328ec95584
+Size (garden-1.3.0.tar.gz) = 126704 bytes
 BLAKE2s (getrandom-0.2.12.crate) = 2e5d4819530f75a385114bf6454f1a4b90a807739b83be17fff889cc70da25c9
 SHA512 (getrandom-0.2.12.crate) = dd97d7dae1a7ba653abdaf2db719e1a9c8eb721b08b4af0f1c45b1ed5079069d1b57e4f6d9d879e7fae3a890763f4b6aea9bc2d945392b98e811e7b348589bee
 Size (getrandom-0.2.12.crate) = 36163 bytes
