@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24070 2024/02/20 19:47:10 adam Exp $
+$NetBSD: TODO,v 1.24071 2024/02/20 20:40:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -741,7 +741,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grpc-1.61.1 [wait for py-grpcio]
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gstreamer1-1.22.9
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -1335,7 +1334,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0.9
+	o tor-browser-13.0.10
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
