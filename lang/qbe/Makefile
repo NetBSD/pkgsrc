@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/03/02 05:50:05 charlotte Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/20 22:20:50 charlotte Exp $
 
-DISTNAME=	qbe-1.1
+DISTNAME=	qbe-1.2
 CATEGORIES=	lang
 MASTER_SITES=	https://c9x.me/compile/release/
 EXTRACT_SUFX=	.tar.xz

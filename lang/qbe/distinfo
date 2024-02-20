@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/03/02 05:50:05 charlotte Exp $
+$NetBSD: distinfo,v 1.3 2024/02/20 22:20:50 charlotte Exp $
 
-BLAKE2s (qbe-1.1.tar.xz) = 18c5cefe18a79a8f0ece4f98490324d6b81ad45f6d6a4f18abef2672a4317895
-SHA512 (qbe-1.1.tar.xz) = 1e5d7d1df3d73849dbf19dd1d84c9bba63a5041622823a5a239496032f9d82bd1640dd2bbd03e28c8a180b8e66a1fe10deb940b5d8fde996bf593f7e8d943e8b
-Size (qbe-1.1.tar.xz) = 244740 bytes
+BLAKE2s (qbe-1.2.tar.xz) = 3f69a37e35274bc5849aa73e7b5c7a784f1a00be3a5c6cbad5efc7c0480f6929
+SHA512 (qbe-1.2.tar.xz) = b3ffd172e95346b3bfae1d2aff4c22a32af8bd4443d073f6fbb711f41db01f072ca7a8108901508cd4a8366567dab46510e0438716d35548591fdf37cee49971
+Size (qbe-1.2.tar.xz) = 246364 bytes
