@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1377 2024/02/20 20:43:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1378 2024/02/20 20:44:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2440,3 +2440,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/raylib to 5.0 [charlotte 2024-02-20]
 	Updated multimedia/gstreamer1 to 1.22.10 [wiz 2024-02-20]
 	Updated devel/py-google-api-core to 2.17.1 [wiz 2024-02-20]
+	Updated www/py-google-api-python-client to 2.118.0 [wiz 2024-02-20]
