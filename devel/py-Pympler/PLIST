@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/22 15:34:40 wiz Exp $
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/02/20 05:00:15 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pympler/__init__.py
 ${PYSITELIB}/pympler/__init__.pyc
 ${PYSITELIB}/pympler/__init__.pyo
@@ -22,9 +23,6 @@ ${PYSITELIB}/pympler/classtracker_stats.pyo
 ${PYSITELIB}/pympler/garbagegraph.py
 ${PYSITELIB}/pympler/garbagegraph.pyc
 ${PYSITELIB}/pympler/garbagegraph.pyo
-${PYSITELIB}/pympler/metadata.py
-${PYSITELIB}/pympler/metadata.pyc
-${PYSITELIB}/pympler/metadata.pyo
 ${PYSITELIB}/pympler/mprofile.py
 ${PYSITELIB}/pympler/mprofile.pyc
 ${PYSITELIB}/pympler/mprofile.pyo
