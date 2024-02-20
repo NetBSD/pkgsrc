@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1381 2024/02/20 21:28:38 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1382 2024/02/20 21:29:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/poppler to 24.02.0 [wiz 2024-02-20]
 	Updated devel/garden to 1.3.0 [pin 2024-02-20]
 	Updated devel/git-cliff to 2.0.2 [pin 2024-02-20]
+	Updated textproc/inlyne to 0.4.1 [pin 2024-02-20]
