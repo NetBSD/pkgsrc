@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/19 10:18:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/20 19:28:31 markd Exp $
 
 DISTNAME=	luajittex
 PKGNAME=	tex-${DISTNAME}-1.17.0
@@ -20,7 +20,7 @@ DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
 
-TEX_FORMATS+=   "luajithbtex luajithbtex language.def,language.dat.lua luatex.ini\\luajittex luajittex language.def,language.dat.lua luatex.ini\\n"
+TEX_FORMATS+=   "luajithbtex luajithbtex language.def,language.dat.lua luatex.ini\\nluajittex luajittex language.def,language.dat.lua luatex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
