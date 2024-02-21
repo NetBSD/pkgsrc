@@ -1,10 +1,10 @@
-$NetBSD: patch-agent_snmp__perl.c,v 1.1 2016/06/06 14:11:35 he Exp $
+$NetBSD: patch-agent_snmp__perl.c,v 1.2 2024/02/21 10:21:01 wiz Exp $
 
---- agent/snmp_perl.c.orig	2014-12-08 20:23:22.000000000 +0000
+--- agent/snmp_perl.c.orig	2023-08-15 20:32:01.000000000 +0000
 +++ agent/snmp_perl.c
-@@ -5,6 +5,10 @@
- #include <EXTERN.h>
+@@ -4,6 +4,10 @@
  #include "perl.h"
+ #pragma GCC diagnostic pop
  
 +#ifdef U64TYPE
 +#define U64 U64pairU32

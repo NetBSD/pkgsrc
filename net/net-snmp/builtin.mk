@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2024/01/13 20:07:34 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.5 2024/02/21 10:21:00 wiz Exp $
 
 BUILTIN_PKG:=	net-snmp
 
@@ -24,7 +24,7 @@ MAKEVARS+=		IS_BUILTIN.net-snmp
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.net-snmp) && \
-    !empty(IS_BUILTIN.net-snmp:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.net-snmp:tl} == yes && \
     empty(H_NETSNMP:M__nonexistent__)
 BUILTIN_VERSION.net-snmp!=				\
 	${AWK} '/\#define[	 ]*PACKAGE_VERSION/ {	\
@@ -47,10 +47,10 @@ USE_BUILTIN.net-snmp=	no
 .  else
 USE_BUILTIN.net-snmp=	${IS_BUILTIN.net-snmp}
 .    if defined(BUILTIN_PKG.net-snmp) && \
-        !empty(IS_BUILTIN.net-snmp:M[yY][eE][sS])
+        ${IS_BUILTIN.net-snmp:tl} == yes
 USE_BUILTIN.net-snmp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.net-snmp}
-.        if !empty(USE_BUILTIN.net-snmp:M[yY][eE][sS])
+.        if ${USE_BUILTIN.net-snmp:tl} == yes
 USE_BUILTIN.net-snmp!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.net-snmp}; then \
 		${ECHO} yes;						\

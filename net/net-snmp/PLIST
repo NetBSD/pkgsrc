@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/10/18 12:01:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/02/21 10:21:00 wiz Exp $
 bin/agentxtrap
 ${PLIST.perl}bin/checkbandwidth
 bin/encode_keychange
@@ -122,7 +122,6 @@ include/net-snmp/library/snmp-tc.h
 include/net-snmp/library/snmp.h
 include/net-snmp/library/snmpAliasDomain.h
 include/net-snmp/library/snmpCallbackDomain.h
-include/net-snmp/library/snmpIPBaseDomain.h
 include/net-snmp/library/snmpIPv4BaseDomain.h
 ${PLIST.inet6}include/net-snmp/library/snmpIPv6BaseDomain.h
 include/net-snmp/library/snmpSocketBaseDomain.h
