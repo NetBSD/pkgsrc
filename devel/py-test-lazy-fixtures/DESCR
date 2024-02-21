@@ -1,0 +1,6 @@
+Use your fixtures in @pytest.mark.parametrize.
+
+Improvements that have been made in this project:
+* You can use fixtures in any data structures
+* You can access the attributes of fixtures
+* You can use functions in fixtures
