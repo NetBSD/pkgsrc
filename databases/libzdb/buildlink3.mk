@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.23 2023/11/08 13:18:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2024/02/21 11:17:25 nia Exp $
 
 BUILDLINK_TREE+=	libzdb
 
 .if !defined(LIBZDB_BUILDLINK3_MK)
 LIBZDB_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_API_DEPENDS.libzdb+=	libzdb>=2.6
 BUILDLINK_ABI_DEPENDS.libzdb?=	libzdb>=3.2.3nb4
