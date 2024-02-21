@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/11/09 18:59:14 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/21 19:53:03 adam Exp $
 
-DISTNAME=	openapi_core-0.18.2
+DISTNAME=	openapi_core-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-core/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-spec>=0.2.3:../../textproc/py-jsonschema-spec
+DEPENDS+=	${PYPKGPREFIX}-jsonschema-path>=0.3.1:../../textproc/py-jsonschema-path
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.6.0:../../textproc/py-openapi-schema-validator
 DEPENDS+=	${PYPKGPREFIX}-openapi-spec-validator>=0.7.1:../../textproc/py-openapi-spec-validator
