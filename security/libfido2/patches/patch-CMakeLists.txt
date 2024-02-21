@@ -1,9 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2024/02/10 03:10:53 riastradh Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2024/02/21 10:47:10 nia Exp $
 
 Remove overzealous compiler options and let pkgsrc define the
 stack protection to use.
 
---- CMakeLists.txt.orig	2023-02-20 08:21:28.000000000 +0000
+--- CMakeLists.txt.orig	2023-11-13 07:19:20.000000000 +0000
 +++ CMakeLists.txt
 @@ -90,7 +90,6 @@ if(NOT MSVC)
  endif()
@@ -13,22 +13,52 @@ stack protection to use.
  
  check_include_files(cbor.h HAVE_CBOR_H)
  check_include_files(endian.h HAVE_ENDIAN_H)
-@@ -295,7 +294,6 @@ else()
+@@ -295,47 +294,13 @@ else()
  
  	add_compile_options(-Wall)
  	add_compile_options(-Wextra)
 -	add_compile_options(-Werror)
- 	add_compile_options(-Wshadow)
- 	add_compile_options(-Wcast-qual)
- 	add_compile_options(-Wwrite-strings)
-@@ -316,10 +314,6 @@ else()
- 		add_compile_options(-Wshorten-64-to-32)
- 	endif()
+-	add_compile_options(-Wshadow)
+-	add_compile_options(-Wcast-qual)
+-	add_compile_options(-Wwrite-strings)
+-	add_compile_options(-Wmissing-prototypes)
+-	add_compile_options(-Wbad-function-cast)
+-	add_compile_options(-Wimplicit-fallthrough)
+-	add_compile_options(-pedantic)
+-	add_compile_options(-pedantic-errors)
  
+-	set(EXTRA_CFLAGS "-Wconversion -Wsign-conversion")
+-
+-	if(WIN32)
+-		add_compile_options(-Wno-type-limits)
+-		add_compile_options(-Wno-cast-function-type)
+-	endif()
+-
+-	if(HAVE_SHORTEN_64_TO_32)
+-		add_compile_options(-Wshorten-64-to-32)
+-	endif()
+-
 -	if(HAVE_STACK_PROTECTOR_ALL)
 -		add_compile_options(-fstack-protector-all)
 -	endif()
 -
- 	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g2")
+-	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g2")
++	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g")
  	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -fno-omit-frame-pointer")
- 	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -D_FORTIFY_SOURCE=2")
+-	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -D_FORTIFY_SOURCE=2")
+ 
+ 	if(CRYPTO_VERSION VERSION_GREATER_EQUAL 3.0)
+ 		add_definitions(-DOPENSSL_API_COMPAT=0x10100000L)
+ 	endif()
+-
+-	if(NOT FUZZ)
+-		set(EXTRA_CFLAGS "${EXTRA_CFLAGS} -Wframe-larger-than=2047")
+-	endif()
+-endif()
+-
+-# Avoid https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66425
+-if(CMAKE_COMPILER_IS_GNUCC)
+-	add_compile_options(-Wno-unused-result)
+ endif()
+ 
+ # Decide which keyword to use for thread-local storage.
