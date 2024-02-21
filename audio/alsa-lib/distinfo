@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.40 2023/12/11 15:41:35 jperkin Exp $
+$NetBSD: distinfo,v 1.41 2024/02/21 08:58:00 wiz Exp $
 
-BLAKE2s (alsa-lib-1.2.10.tar.bz2) = 25ee95e555f6dd9f790eefc6da792b0744f123a281327dc70d20cc3cffe5d80b
-SHA512 (alsa-lib-1.2.10.tar.bz2) = 4ccbd1dc5a612044571c26290923009e4c3f7959b30a5d0bed47daa68bbefaff9059c4f0fa3bc16f22c1eed2d36f079139369f40243da5921ae4de02a4541939
-Size (alsa-lib-1.2.10.tar.bz2) = 1107007 bytes
-SHA1 (patch-ad) = 626bee697949f26cdaff2b0bea43d809f4a3c530
-SHA1 (patch-ae) = e652f7c0230d6a22042fedd0f7c0189f68dc0984
+BLAKE2s (alsa-lib-1.2.11.tar.bz2) = 5069838ba655f6d5b3afd58135aaad70467292df5d6f0f91e90f932efb8a22e3
+SHA512 (alsa-lib-1.2.11.tar.bz2) = 7bf2c541dff5262c0302a1c716ca10cdb5105f4e0ad48f3341c3c7e975b0c3ea835a298a05974c3e216a85912c368d8025ba3cdda3ff04a7683133ce5b2a286d
+Size (alsa-lib-1.2.11.tar.bz2) = 1107150 bytes
+SHA1 (patch-ad) = 0e9bc7848a61b3a6654a9fe25943970404d71052
+SHA1 (patch-ae) = f7a0b5b287c93f3dfcd2b47d4880872ae6f0e9a6
 SHA1 (patch-af) = 257b06f10616c04c2724e30777b027e5e7e443f9
 SHA1 (patch-ah) = 37079a0b99fba9bd16b2318c9a17359d9c4edb54
 SHA1 (patch-aq) = 29fc896b2acad44e5fa9619aca1df5dddd76fa5e
 SHA1 (patch-bg) = b726769272dd214e67f2407ed5a0199189540557
 SHA1 (patch-bi) = 4c60911fe949b858abca9ebecdefc794b008b1c6
 SHA1 (patch-bj) = 59f94d9b54386aa7d1a7edd7ec329211184a8c94
-SHA1 (patch-configure.ac) = cc034d07eab13caa5ff8748e8eea37ae9dd367f5
+SHA1 (patch-configure.ac) = bdeaecdd1f0f603b9ace14d8fff5d57cb0339887
 SHA1 (patch-include_error.h) = 9e92d4a51badda1d46305d1e5e36b8197788aa89
 SHA1 (patch-include_output.h) = 0a073b53c40293aa7cfa250586c087084002eefe
 SHA1 (patch-include_sound_uapi_asound.h) = 06170ff7b39112bae60ef7d39b858ed8068347a4
@@ -19,7 +19,7 @@ SHA1 (patch-src_conf.c) = 6f8887c2831de6fb2d58b098e6894278ee145560
 SHA1 (patch-src_conf_alsa.conf) = 1a3d2a0ce15b2f903095bc7103c7765fcd6270c0
 SHA1 (patch-src_control_control__hw.c) = 07cfe3abe586b32f6b989403cd162599da07e865
 SHA1 (patch-src_pcm_pcm__mmap.c) = bf5b59af96110bf8f51269b86bcf60ec0e23a06e
-SHA1 (patch-src_seq_seq__midi__event.c) = 0201b01b44d6c91716ad1ce5958badadf0cdb264
+SHA1 (patch-src_seq_seq__midi__event.c) = c5a673a14c23aeefc512f04ac550b906fa4f7d30
 SHA1 (patch-src_shmarea.c) = 1a3b508fafe3ef7fda76620ed1c06035f32e9096
 SHA1 (patch-src_ucm_main.c) = 1e12f2d8734a98aecd7bbea2d9d80d27d45c1173
 SHA1 (patch-src_ucm_parser.c) = cf53012d24ff7df16800be4b0e6287ae0c3b0799
