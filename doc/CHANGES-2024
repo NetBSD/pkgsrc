@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1391 2024/02/21 08:55:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1392 2024/02/21 08:58:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cryptography_vectors to 42.0.4 [adam 2024-02-21]
 	Updated www/py-httpbin to 0.10.2 [adam 2024-02-21]
 	Updated textproc/py-wcmatch to 8.5.1 [adam 2024-02-21]
+	Updated audio/alsa-lib to 1.2.11 [wiz 2024-02-21]
