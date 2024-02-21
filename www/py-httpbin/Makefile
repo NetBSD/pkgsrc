@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/10/28 19:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/21 08:52:51 adam Exp $
 
-DISTNAME=	httpbin-0.10.1
+DISTNAME=	httpbin-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpbin/}
 
@@ -17,16 +16,13 @@ DEPENDS+=	${PYPKGPREFIX}-brotlicffi-[0-9]*:../../archivers/py-brotlicffi
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-flasgger-[0-9]*:../../www/py-flasgger
-DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-flask>=2.2.4:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.14.1:../../www/py-werkzeug
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.2:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests/test_httpbin.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
