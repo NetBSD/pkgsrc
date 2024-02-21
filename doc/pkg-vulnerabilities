@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.134 2024/02/19 10:23:37 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.135 2024/02/21 08:02:28 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25898,3 +25898,4 @@ powerdns-recursor<4.8.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2
 powerdns-recursor<4.8.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50868
 nss<3.98.0	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-5388
 py{27,37,38,39,310,311,312}-dns<2.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29483
+py{27,37,38,39,310,311,312}-cryptography<42.0.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-26130
