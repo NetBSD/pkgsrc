@@ -1,13 +1,13 @@
-$NetBSD: patch-src_seq_seq__midi__event.c,v 1.3 2023/11/23 16:15:04 ryoon Exp $
+$NetBSD: patch-src_seq_seq__midi__event.c,v 1.4 2024/02/21 08:58:01 wiz Exp $
 
---- src/seq/seq_midi_event.c.orig	2023-05-04 07:16:16.000000000 +0000
+--- src/seq/seq_midi_event.c.orig	2024-01-29 16:16:07.000000000 +0000
 +++ src/seq/seq_midi_event.c
-@@ -30,6 +30,8 @@
- 
+@@ -31,6 +31,8 @@
+ #include "local.h"
  #if HAVE_MALLOC_H
  #include <malloc.h>
 +#else
 +#include <stdlib.h>
  #endif
- #include "local.h"
  
+ #ifndef DOC_HIDDEN

@@ -1,9 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2023/12/11 15:41:35 jperkin Exp $
+$NetBSD: patch-ad,v 1.9 2024/02/21 08:58:00 wiz Exp $
 
 SunOS needs alloca.h.
-__STRING() is used in more places than just !PIC.
 
---- include/global.h.orig	2023-09-01 15:35:48.000000000 +0000
+--- include/global.h.orig	2024-01-29 16:16:07.000000000 +0000
 +++ include/global.h
 @@ -30,6 +30,13 @@
  
@@ -19,27 +18,3 @@ __STRING() is used in more places than just !PIC.
  
  #ifdef __cplusplus
  extern "C" {
-@@ -51,6 +58,11 @@ const char *snd_asoundlib_version(void);
- #define ATTRIBUTE_UNUSED __attribute__ ((__unused__))
- #endif
- 
-+#ifndef __STRING
-+/** \brief Return 'x' argument as string */
-+#define __STRING(x)     #x
-+#endif
-+
- #ifdef PIC /* dynamic build */
- 
- /** \hideinitializer \brief Helper macro for #SND_DLSYM_BUILD_VERSION. */
-@@ -71,11 +83,6 @@ struct snd_dlsym_link {
- 
- extern struct snd_dlsym_link *snd_dlsym_start;
- 
--#ifndef __STRING
--/** \brief Return 'x' argument as string */
--#define __STRING(x)     #x
--#endif
--
- /** \hideinitializer \brief Helper macro for #SND_DLSYM_BUILD_VERSION. */
- #define __SND_DLSYM_VERSION(prefix, name, version) _ ## prefix ## name ## version
- /**
