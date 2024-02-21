@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/02/21 19:31:34 adam Exp $
 
-BLAKE2s (filebrowser_safe-0.5.0.tar.gz) = df2f58b36db9b059f1e6748fb1d2e104c83cee5da7a80418db35af9d74fc9722
-SHA512 (filebrowser_safe-0.5.0.tar.gz) = 53e458b311e758e95b3d7dbe9612e58b3a285a6b3c0fab3d89865a891f78fabddd4d7dca7825c176d150149d05bb8080e4e13d616ad44914b5790f2ea463cb54
-Size (filebrowser_safe-0.5.0.tar.gz) = 76694 bytes
+BLAKE2s (filebrowser_safe-1.1.1.tar.gz) = 8ac1b9c82e4f23782e9ed8b64c050134d8f02a8637dc619af0f08c10e7266abc
+SHA512 (filebrowser_safe-1.1.1.tar.gz) = 258fa6848b94624027b9800f0f0f23b7761d0ae41d4eb7847de073c860b2d7207257705ab80cf423a8898dbc5de49e8fcafe2e3fc116ed73a28dcff9f98225a0
+Size (filebrowser_safe-1.1.1.tar.gz) = 79818 bytes
