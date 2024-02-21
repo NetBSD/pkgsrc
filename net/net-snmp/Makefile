@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.142 2023/10/24 22:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2024/02/21 10:21:00 wiz Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 CATEGORIES=	net
 
@@ -14,7 +13,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 MAKE_ENV+=	OPSYS=${OPSYS}
-MAKE_JOBS_SAFE=	no
+
+CHECK_WRKREF_SKIP+=	bin/net-snmp-config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,10 +74,10 @@ CONFIGURE_ARGS+=	--with-mib-modules="smux host ucd-snmp/diskio"
 .else
 CONFIGURE_ARGS+=	--with-mib-modules="smux host"
 .endif
-.if !empty(MACHINE_PLATFORM:MDarwin-[567].*)
+.if ${MACHINE_PLATFORM:MDarwin-[567].*}
 CONFIGURE_ARGS+=	--with-out-mib-modules="ucd-snmp/diskio mibII"
 .endif
-.if !empty(MACHINE_PLATFORM:MDarwin-9.*)
+.if ${MACHINE_PLATFORM:MDarwin-9.*}
 CONFIGURE_ARGS+=	--with-mib-modules="host ucd-snmp/diskio"
 CONFIGURE_ARGS+=	--with-out-mib-modules="mibII/icmp host/hr_swrun"
 CONFIGURE_ARGS+=	--enable-as-needed
@@ -108,15 +108,11 @@ USE_TOOLS+=		sh:run
 
 INSTALLATION_DIRS+=	share/examples/net-snmp
 
+BUILD_DEFS+=	VARBASE
+
 post-extract:
 .if ${OPSYS} == "DragonFly"
 	${CP} ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
-.endif
-
-post-wrapper:
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.5.[123]*-i386)
-	mkdir ${BUILDLINK_DIR}/include/sys
-	cp ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
 .endif
 
 post-install:

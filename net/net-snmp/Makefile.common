@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2022/10/18 12:01:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/02/21 10:21:00 wiz Exp $
 # used by net/net-snmp/Makefile
 # used by net/py-netsnmp/Makefile
 
-DISTNAME=	net-snmp-5.9.3
+DISTNAME=	net-snmp-5.9.4
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
 HOMEPAGE=	http://www.net-snmp.org/

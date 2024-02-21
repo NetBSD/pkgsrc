@@ -1,31 +1,24 @@
-$NetBSD: distinfo,v 1.102 2023/01/14 21:11:35 mrg Exp $
+$NetBSD: distinfo,v 1.103 2024/02/21 10:21:00 wiz Exp $
 
-BLAKE2s (net-snmp-5.9.3.tar.gz) = c5f3e30c73294c0f8b7db2a776a0a28e6f63ed1d55f32acb4328fbbb277cbe4a
-SHA512 (net-snmp-5.9.3.tar.gz) = a476df4967029a2eb03d27b0e250170785d0a8c143d49b900ee958c3cbdfaccd415b70af40f6fbed9cb8819d522c35a6073a431091d908ccc7c018fa0aaa2abc
-Size (net-snmp-5.9.3.tar.gz) = 6646950 bytes
+BLAKE2s (net-snmp-5.9.4.tar.gz) = 44b2e38afb93da994d7d90f342a9971c266f710e232c84206e204bb9a1266fe6
+SHA512 (net-snmp-5.9.4.tar.gz) = a510fa91a21e9ddc86a12fd1d0bc6b356e63f3ea53f184d2e31439004d41d902390664134dc40b3b828eabb4282eaf3da628a07c4d480fa00eff7e700950c423
+Size (net-snmp-5.9.4.tar.gz) = 6681606 bytes
 SHA1 (patch-agent_auto__nlist.c) = a8fe703d8902c2847ca6692af4400ddbf9cbe74b
 SHA1 (patch-agent_mibgroup_hardware_cpu_cpu__sysctl.c) = 22fd0b95e06117fd8f59bd0112b2c91e40d61e70
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__freebsd.c) = 51d2c7e11b3d422e57ea2f5761aff624f7333842
 SHA1 (patch-agent_mibgroup_hardware_memory_memory__netbsd.c) = 928a5aa99e7893ee91dea3110db8098212e328fa
 SHA1 (patch-agent_mibgroup_host_data__access_swrun__kinfo.c) = f983ae0d99d85ab1ac6dc7cf2d2c0415b6935258
-SHA1 (patch-agent_mibgroup_host_hr__storage.c) = d9595eceeb5ee986ab4365f62e3c3ab339e605aa
 SHA1 (patch-agent_mibgroup_host_hr__swrun.c) = d01e8a93f6e766cedfdc324efd69168f71aac76f
-SHA1 (patch-agent_mibgroup_if-mib_data__access_interface.h) = f888d65ec32020dc75d60d5d67ec54614d934489
+SHA1 (patch-agent_mibgroup_if-mib_data__access_interface.h) = 839003d31a74db7ea71774da0f8c80748c3fc7d3
 SHA1 (patch-agent_mibgroup_kernel__sunos5.c) = e1cfb194ec2ef784ae8bdf1ff3537edc9b30b66c
 SHA1 (patch-agent_mibgroup_kernel__sunos5.h) = eb80eb5e55020014b1e5524fd572839aefdce5a5
 SHA1 (patch-agent_mibgroup_mibII_icmp.c) = 50ac67db8a9ffc16d983b4192e74db25ef439321
-SHA1 (patch-agent_mibgroup_mibII_interfaces.c) = 44a4ce6302457094ba2b200e4c47ff6c2a425746
 SHA1 (patch-agent_mibgroup_mibII_ip.c) = 04c2a487bad8705c9725ef4a62016051d3898970
 SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a55b1e
-SHA1 (patch-agent_mibgroup_mibII_ipv6.c) = f1e99ab8b5d5f31660112b85d863cc9ff90e0fdb
-SHA1 (patch-agent_mibgroup_mibII_tcp.c) = 92563fd6be6f27be5b348cdc8bc02061374026b0
-SHA1 (patch-agent_mibgroup_mibII_tcpTable.c) = 7996885e155e8283c41c842f1e5d92d27ea8d8ae
-SHA1 (patch-agent_mibgroup_mibII_udp.c) = d110e996d0538d17251d39a5eed46df6944ba0fa
-SHA1 (patch-agent_mibgroup_mibII_udpTable.c) = 21505245b5c5f159e3eff616ffb639ae180d8362
-SHA1 (patch-agent_mibgroup_mibII_var__route.c) = 919348e62849367793e4abf7d608d9824eb8ff2d
-SHA1 (patch-agent_mibgroup_ucd-snmp_memory__netbsd1.c) = 7336d905bac315f344f93664e4118332f88fb6ee
-SHA1 (patch-agent_snmp__perl.c) = 893cf46624d4f26941b3911a64c752c110ba6ef8
-SHA1 (patch-configure) = 26012c2d7e22b01db3ab3a6d7d959645185065bb
+SHA1 (patch-agent_mibgroup_mibII_tcp.c) = fb065ad10b375b47608a12cf81f29fd473e6fba1
+SHA1 (patch-agent_mibgroup_mibII_var__route.c) = 6050099b8c060f857ec7d05409bc077db21bd650
+SHA1 (patch-agent_snmp__perl.c) = 52b7b26ce8cae6d892b017c50831565fc138a337
+SHA1 (patch-configure) = a6447c8291638d7a3575f53b2f25442ce4d7e487
 SHA1 (patch-ov_UCD-fields) = 40e8d78bad93ca12f4c08c43b86e7f13edafc299
 SHA1 (patch-ov_oid__to__type.in) = 281be9a88860987880c71770f4050fd965dd8ed9
 SHA1 (patch-perl_OID_OID.xs) = b23d7ae82d367d457181d231a56c80e648b0ee6e
