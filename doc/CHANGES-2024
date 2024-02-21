@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1388 2024/02/21 04:20:12 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1389 2024/02/21 04:21:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/rust-kanban to 0.9.3 [pin 2024-02-20]
 	Updated lang/qbe to 1.2 [charlotte 2024-02-20]
 	Updated shells/oh-my-posh to 19.11.4 [pin 2024-02-21]
+	Updated sysutils/zoxide to 0.9.4 [pin 2024-02-21]
