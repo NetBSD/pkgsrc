@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1394 2024/02/21 10:26:34 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1395 2024/02/21 10:29:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/alsa-lib to 1.2.11 [wiz 2024-02-21]
 	Updated net/net-snmp to 5.9.4 [wiz 2024-02-21]
 	Updated lang/erlang to 26.2.2 [wiz 2024-02-21]
+	Updated lang/elixir to 1.16.1 [wiz 2024-02-21]
