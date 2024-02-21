@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/02/14 18:39:36 charlotte Exp $
+# $NetBSD: Makefile,v 1.30 2024/02/21 10:57:08 nia Exp $
 
 DISTNAME=	janet-1.33.0
 CATEGORIES=	lang
@@ -11,7 +11,9 @@ COMMENT=	Functional and imperative programming language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c99
+
+# Requires C11 atomics support
+USE_CC_FEATURES+=	c11
 
 BUILD_TARGET=	all build/janet.pc
 TEST_TARGET=	test
