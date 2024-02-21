@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/21 12:20:55 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/pytest_lazy_fixtures/__init__.py
+${PYSITELIB}/pytest_lazy_fixtures/__init__.pyc
+${PYSITELIB}/pytest_lazy_fixtures/__init__.pyo
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.py
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.pyc
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.pyo
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture_callable.py
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture_callable.pyc
+${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture_callable.pyo
+${PYSITELIB}/pytest_lazy_fixtures/loader.py
+${PYSITELIB}/pytest_lazy_fixtures/loader.pyc
+${PYSITELIB}/pytest_lazy_fixtures/loader.pyo
+${PYSITELIB}/pytest_lazy_fixtures/normalizer.py
+${PYSITELIB}/pytest_lazy_fixtures/normalizer.pyc
+${PYSITELIB}/pytest_lazy_fixtures/normalizer.pyo
+${PYSITELIB}/pytest_lazy_fixtures/plugin.py
+${PYSITELIB}/pytest_lazy_fixtures/plugin.pyc
+${PYSITELIB}/pytest_lazy_fixtures/plugin.pyo
+${PYSITELIB}/pytest_lazy_fixtures/py.typed
