@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2024/02/17 21:19:30 nia Exp $
+# $NetBSD: Makefile,v 1.105 2024/02/21 11:31:21 nia Exp $
 
 PKGREVISION= 1
 .include "../../emulators/snes9x/Makefile.common"
@@ -11,6 +11,9 @@ COMMENT=	Super Nintendo Entertainment System (SNES) emulator (GUI version)
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt xgettext
 USE_TOOLS+=	gawk
+
+USE_CXX_FEATURES+=	c++17
+FORCE_CXX_STD=		c++17
 
 USE_PKGLOCALEDIR=	yes
 
