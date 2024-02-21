@@ -1,6 +1,7 @@
-$NetBSD: patch-src_input.c,v 1.1 2023/01/09 18:44:17 vins Exp $
+$NetBSD: patch-src_input.c,v 1.2 2024/02/21 12:55:17 wiz Exp $
 
 Allow building on systems without evdev.
+https://github.com/dunst-project/dunst/pull/1288
 
 --- src/input.c.orig	2022-06-27 12:43:39.000000000 +0000
 +++ src/input.c

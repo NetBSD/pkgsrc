@@ -1,7 +1,9 @@
-$NetBSD: patch-Makefile,v 1.8 2023/04/24 08:29:26 wiz Exp $
+$NetBSD: patch-Makefile,v 1.9 2024/02/21 12:55:17 wiz Exp $
 
 Use BSD_INSTALL.
+
 Fix find(1) usage on non-GNU systems.
+https://github.com/dunst-project/dunst/pull/1288
 
 --- Makefile.orig	2023-04-20 16:55:58.000000000 +0000
 +++ Makefile
