@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.75 2020/08/04 21:54:46 rillig Exp $
+# $NetBSD: fetch.mk,v 1.76 2024/02/21 10:53:28 jperkin Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -268,7 +268,7 @@ _FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv} \
 				${FETCH_TIMEOUT:D--speed-time ${FETCH_TIMEOUT}} \
 				${FETCH_PROXY:D--proxy ${FETCH_PROXY:Q}} \
 				${FETCH_USE_IPV4_ONLY:D--ipv4}
-_FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
+_FETCH_AFTER_ARGS.curl=		# empty
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
 _FETCH_CMD.curl=		${PKGSRC_SETENV} \
