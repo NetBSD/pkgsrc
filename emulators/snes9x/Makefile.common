@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2023/11/20 10:19:00 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/02/21 11:31:21 nia Exp $
 
 # used by emulators/libretro-snes9x/Makefile
 # used by emulators/snes9x/Makefile
@@ -19,6 +19,8 @@ HOMEPAGE=		http://www.snes9x.com/
 LICENSE=		snes9x-license
 
 USE_LANGUAGES=		c c++
+
+USE_CXX_FEATURES+=	c++11
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/snes9x/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/snes9x/patches
