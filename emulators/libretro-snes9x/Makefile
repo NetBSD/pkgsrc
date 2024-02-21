@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/30 15:20:12 nia Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/21 11:31:21 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -11,6 +11,8 @@ COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 BUILD_DIRS=	libretro
 
 LIBRETRO_CORE=	snes9x
+
+FORCE_CXX_STD=	c++11
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
