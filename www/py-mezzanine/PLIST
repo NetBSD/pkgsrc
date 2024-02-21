@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2018/10/26 09:27:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/21 19:44:26 adam Exp $
 bin/mezzanine-project-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mezzanine/__init__.py
 ${PYSITELIB}/mezzanine/__init__.pyc
 ${PYSITELIB}/mezzanine/__init__.pyo
@@ -128,9 +127,6 @@ ${PYSITELIB}/mezzanine/accounts/templatetags/__init__.pyo
 ${PYSITELIB}/mezzanine/accounts/templatetags/accounts_tags.py
 ${PYSITELIB}/mezzanine/accounts/templatetags/accounts_tags.pyc
 ${PYSITELIB}/mezzanine/accounts/templatetags/accounts_tags.pyo
-${PYSITELIB}/mezzanine/accounts/tests.py
-${PYSITELIB}/mezzanine/accounts/tests.pyc
-${PYSITELIB}/mezzanine/accounts/tests.pyo
 ${PYSITELIB}/mezzanine/accounts/urls.py
 ${PYSITELIB}/mezzanine/accounts/urls.pyc
 ${PYSITELIB}/mezzanine/accounts/urls.pyo
@@ -152,9 +148,6 @@ ${PYSITELIB}/mezzanine/bin/management/commands/mezzanine_project.pyo
 ${PYSITELIB}/mezzanine/bin/mezzanine_project.py
 ${PYSITELIB}/mezzanine/bin/mezzanine_project.pyc
 ${PYSITELIB}/mezzanine/bin/mezzanine_project.pyo
-${PYSITELIB}/mezzanine/bin/runtests.py
-${PYSITELIB}/mezzanine/bin/runtests.pyc
-${PYSITELIB}/mezzanine/bin/runtests.pyo
 ${PYSITELIB}/mezzanine/blog/__init__.py
 ${PYSITELIB}/mezzanine/blog/__init__.pyc
 ${PYSITELIB}/mezzanine/blog/__init__.pyo
@@ -298,9 +291,6 @@ ${PYSITELIB}/mezzanine/blog/templatetags/__init__.pyo
 ${PYSITELIB}/mezzanine/blog/templatetags/blog_tags.py
 ${PYSITELIB}/mezzanine/blog/templatetags/blog_tags.pyc
 ${PYSITELIB}/mezzanine/blog/templatetags/blog_tags.pyo
-${PYSITELIB}/mezzanine/blog/tests.py
-${PYSITELIB}/mezzanine/blog/tests.pyc
-${PYSITELIB}/mezzanine/blog/tests.pyo
 ${PYSITELIB}/mezzanine/blog/translation.py
 ${PYSITELIB}/mezzanine/blog/translation.pyc
 ${PYSITELIB}/mezzanine/blog/translation.pyo
@@ -419,9 +409,6 @@ ${PYSITELIB}/mezzanine/conf/models.pyo
 ${PYSITELIB}/mezzanine/conf/static/mezzanine/css/admin/settings.css
 ${PYSITELIB}/mezzanine/conf/static/mezzanine/js/admin/tabbed_translatable_settings.js
 ${PYSITELIB}/mezzanine/conf/templates/admin/conf/setting/change_list.html
-${PYSITELIB}/mezzanine/conf/tests.py
-${PYSITELIB}/mezzanine/conf/tests.pyc
-${PYSITELIB}/mezzanine/conf/tests.pyo
 ${PYSITELIB}/mezzanine/conf/translation.py
 ${PYSITELIB}/mezzanine/conf/translation.pyc
 ${PYSITELIB}/mezzanine/conf/translation.pyo
@@ -571,6 +558,7 @@ ${PYSITELIB}/mezzanine/core/static/admin/img/admin/README
 ${PYSITELIB}/mezzanine/core/static/admin/img/admin/arrow-down.gif
 ${PYSITELIB}/mezzanine/core/static/admin/img/admin/arrow-up.gif
 ${PYSITELIB}/mezzanine/core/static/admin/img/admin/icon_deletelink.gif
+${PYSITELIB}/mezzanine/core/static/admin/js/collapse.js
 ${PYSITELIB}/mezzanine/core/static/css/bootstrap-rtl.css
 ${PYSITELIB}/mezzanine/core/static/css/bootstrap-theme.css
 ${PYSITELIB}/mezzanine/core/static/css/bootstrap.css
@@ -611,15 +599,14 @@ ${PYSITELIB}/mezzanine/core/static/mezzanine/css/smoothness/jquery-ui.min.css
 ${PYSITELIB}/mezzanine/core/static/mezzanine/css/tinymce.css
 ${PYSITELIB}/mezzanine/core/static/mezzanine/img/loadingAnimation.gif
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/ajax_csrf.js
-${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/collapse_backport.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/dynamic_inline.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/keywords_field.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/login.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/navigation.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/admin/tabbed_translation_fields.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/editable.js
-${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery-1.8.3.min.js
-${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery-ui-1.8.24.min.js
+${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery-3.4.1.js
+${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery-ui-1.12.1.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery.form.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery.tools.overlay.js
 ${PYSITELIB}/mezzanine/core/static/mezzanine/js/jquery.tools.toolbox.expose.js
@@ -773,9 +760,6 @@ ${PYSITELIB}/mezzanine/core/templatetags/__init__.pyo
 ${PYSITELIB}/mezzanine/core/templatetags/mezzanine_tags.py
 ${PYSITELIB}/mezzanine/core/templatetags/mezzanine_tags.pyc
 ${PYSITELIB}/mezzanine/core/templatetags/mezzanine_tags.pyo
-${PYSITELIB}/mezzanine/core/tests.py
-${PYSITELIB}/mezzanine/core/tests.pyc
-${PYSITELIB}/mezzanine/core/tests.pyo
 ${PYSITELIB}/mezzanine/core/translation.py
 ${PYSITELIB}/mezzanine/core/translation.pyc
 ${PYSITELIB}/mezzanine/core/translation.pyo
@@ -917,9 +901,6 @@ ${PYSITELIB}/mezzanine/forms/templates/email/form_response.txt
 ${PYSITELIB}/mezzanine/forms/templates/email/form_response_copies.html
 ${PYSITELIB}/mezzanine/forms/templates/email/form_response_copies.txt
 ${PYSITELIB}/mezzanine/forms/templates/pages/form.html
-${PYSITELIB}/mezzanine/forms/tests.py
-${PYSITELIB}/mezzanine/forms/tests.pyc
-${PYSITELIB}/mezzanine/forms/tests.pyo
 ${PYSITELIB}/mezzanine/forms/translation.py
 ${PYSITELIB}/mezzanine/forms/translation.pyc
 ${PYSITELIB}/mezzanine/forms/translation.pyo
@@ -1022,9 +1003,6 @@ ${PYSITELIB}/mezzanine/galleries/static/mezzanine/css/admin/gallery.css
 ${PYSITELIB}/mezzanine/galleries/static/mezzanine/css/magnific-popup.css
 ${PYSITELIB}/mezzanine/galleries/static/mezzanine/js/magnific-popup.js
 ${PYSITELIB}/mezzanine/galleries/templates/pages/gallery.html
-${PYSITELIB}/mezzanine/galleries/tests.py
-${PYSITELIB}/mezzanine/galleries/tests.pyc
-${PYSITELIB}/mezzanine/galleries/tests.pyo
 ${PYSITELIB}/mezzanine/galleries/translation.py
 ${PYSITELIB}/mezzanine/galleries/translation.pyc
 ${PYSITELIB}/mezzanine/galleries/translation.pyo
@@ -1162,9 +1140,6 @@ ${PYSITELIB}/mezzanine/generic/templatetags/keyword_tags.pyo
 ${PYSITELIB}/mezzanine/generic/templatetags/rating_tags.py
 ${PYSITELIB}/mezzanine/generic/templatetags/rating_tags.pyc
 ${PYSITELIB}/mezzanine/generic/templatetags/rating_tags.pyo
-${PYSITELIB}/mezzanine/generic/tests.py
-${PYSITELIB}/mezzanine/generic/tests.pyc
-${PYSITELIB}/mezzanine/generic/tests.pyo
 ${PYSITELIB}/mezzanine/generic/urls.py
 ${PYSITELIB}/mezzanine/generic/urls.pyc
 ${PYSITELIB}/mezzanine/generic/urls.pyo
@@ -1326,9 +1301,6 @@ ${PYSITELIB}/mezzanine/pages/templatetags/__init__.pyo
 ${PYSITELIB}/mezzanine/pages/templatetags/pages_tags.py
 ${PYSITELIB}/mezzanine/pages/templatetags/pages_tags.pyc
 ${PYSITELIB}/mezzanine/pages/templatetags/pages_tags.pyo
-${PYSITELIB}/mezzanine/pages/tests.py
-${PYSITELIB}/mezzanine/pages/tests.pyc
-${PYSITELIB}/mezzanine/pages/tests.pyo
 ${PYSITELIB}/mezzanine/pages/translation.py
 ${PYSITELIB}/mezzanine/pages/translation.pyc
 ${PYSITELIB}/mezzanine/pages/translation.pyo
@@ -1343,14 +1315,6 @@ ${PYSITELIB}/mezzanine/project_template/.hgignore
 ${PYSITELIB}/mezzanine/project_template/__init__.py
 ${PYSITELIB}/mezzanine/project_template/__init__.pyc
 ${PYSITELIB}/mezzanine/project_template/__init__.pyo
-${PYSITELIB}/mezzanine/project_template/deploy/crontab.template
-${PYSITELIB}/mezzanine/project_template/deploy/gunicorn.conf.py.template
-${PYSITELIB}/mezzanine/project_template/deploy/local_settings.py.template
-${PYSITELIB}/mezzanine/project_template/deploy/nginx.conf.template
-${PYSITELIB}/mezzanine/project_template/deploy/supervisor.conf.template
-${PYSITELIB}/mezzanine/project_template/fabfile.py
-${PYSITELIB}/mezzanine/project_template/fabfile.pyc
-${PYSITELIB}/mezzanine/project_template/fabfile.pyo
 ${PYSITELIB}/mezzanine/project_template/manage.py
 ${PYSITELIB}/mezzanine/project_template/manage.pyc
 ${PYSITELIB}/mezzanine/project_template/manage.pyo
@@ -1367,7 +1331,6 @@ ${PYSITELIB}/mezzanine/project_template/project_name/urls.pyo
 ${PYSITELIB}/mezzanine/project_template/project_name/wsgi.py
 ${PYSITELIB}/mezzanine/project_template/project_name/wsgi.pyc
 ${PYSITELIB}/mezzanine/project_template/project_name/wsgi.pyo
-${PYSITELIB}/mezzanine/project_template/requirements.txt
 ${PYSITELIB}/mezzanine/template/__init__.py
 ${PYSITELIB}/mezzanine/template/__init__.pyc
 ${PYSITELIB}/mezzanine/template/__init__.pyo
@@ -1386,6 +1349,12 @@ ${PYSITELIB}/mezzanine/twitter/__init__.pyo
 ${PYSITELIB}/mezzanine/twitter/admin.py
 ${PYSITELIB}/mezzanine/twitter/admin.pyc
 ${PYSITELIB}/mezzanine/twitter/admin.pyo
+${PYSITELIB}/mezzanine/twitter/apps.py
+${PYSITELIB}/mezzanine/twitter/apps.pyc
+${PYSITELIB}/mezzanine/twitter/apps.pyo
+${PYSITELIB}/mezzanine/twitter/checks.py
+${PYSITELIB}/mezzanine/twitter/checks.pyc
+${PYSITELIB}/mezzanine/twitter/checks.pyo
 ${PYSITELIB}/mezzanine/twitter/defaults.py
 ${PYSITELIB}/mezzanine/twitter/defaults.pyc
 ${PYSITELIB}/mezzanine/twitter/defaults.pyo
