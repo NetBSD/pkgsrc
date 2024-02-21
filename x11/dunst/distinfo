@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2023/04/24 08:29:25 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/02/21 12:55:17 wiz Exp $
 
 BLAKE2s (dunst-1.9.2.tar.gz) = bd64bbe477f2f40170133ec3658e8b8b43cbc509bf3e2b0ad8fceaac41cb0097
 SHA512 (dunst-1.9.2.tar.gz) = fab14212dc41e8deed97320c18b88e0be576f0404406691dcedb9620a1382dfdfc501e4ff2005b1ce8b4a61b52f1a9cf161f20a1eae15aa2382f3fedc99a2dbc
 Size (dunst-1.9.2.tar.gz) = 4614703 bytes
-SHA1 (patch-Makefile) = 7a4f1733279a0804a9a168f29b3a93da2c74a2d6
-SHA1 (patch-src_input.c) = 5f5da708c7419c1fa94da9c3cc82b90c8abe8e3f
-SHA1 (patch-src_x11_x.c) = e3f7ce8e0522c258154f9be8e19221536e039c8b
+SHA1 (patch-Makefile) = 5f18a554e72da0f741a39eb188a53169e845bcd9
+SHA1 (patch-src_input.c) = dbc9294cccb37048972ac7c0d01bbe65362a9111
+SHA1 (patch-src_x11_x.c) = 94a4b65bde1a0e4325a0fe76939b4ce4112f2a58
