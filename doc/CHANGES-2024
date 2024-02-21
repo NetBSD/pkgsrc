@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1396 2024/02/21 11:04:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1397 2024/02/21 12:24:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2462,3 +2462,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/elixir to 1.16.1 [wiz 2024-02-21]
 	Updated www/py-nbconvert to 7.16.1 [adam 2024-02-21]
 	Updated databases/py-aiosqlite to 0.20.0 [adam 2024-02-21]
+	Added devel/py-test-lazy-fixtures version 1.0.5 [adam 2024-02-21]
+	Updated textproc/py-prettytable to 3.10.0 [adam 2024-02-21]
