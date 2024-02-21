@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/12/10 18:33:55 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/02/21 19:24:37 adam Exp $
 
-DISTNAME=	pytest_jupyter-0.8.0
+DISTNAME=	pytest_jupyter-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-jupyter/}
@@ -11,7 +11,7 @@ COMMENT=	Pytest plugin for testing Jupyter libraries and extensions
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.7:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
