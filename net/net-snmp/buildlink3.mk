@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2023/10/24 22:10:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2024/02/21 10:21:00 wiz Exp $
 
 BUILDLINK_TREE+=	net-snmp
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.net-snmp?=		../../net/net-snmp
 pkgbase := net-snmp
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.net-snmp:Mssl)
+.if ${PKG_BUILD_OPTIONS.net-snmp:Mssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
