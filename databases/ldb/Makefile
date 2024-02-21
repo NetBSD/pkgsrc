@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/02/21 15:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/02/21 15:10:15 wiz Exp $
 #
-# when updating this, make sure still builds and packages
+# when updating this, make sure net/samba4 still builds and packages
 
 DISTNAME=	ldb-2.8.0
 CATEGORIES=	databases
