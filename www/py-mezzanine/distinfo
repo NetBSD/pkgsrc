@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:44 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/02/21 19:44:26 adam Exp $
 
-BLAKE2s (Mezzanine-4.3.1.tar.gz) = 1a0b75d5ad68289d368bf2213a43675acd5528b696e0fdebe198213e5f513b67
-SHA512 (Mezzanine-4.3.1.tar.gz) = 9f16e5403faa069b95fcc1b8d5eea0e6bfc70861708a11074aa002ecf1a424354f3aa3cd5af68a7d01c4b6ed2b381a4cdcee1ceac75d06d659a9e4c59a94f74b
-Size (Mezzanine-4.3.1.tar.gz) = 6208692 bytes
+BLAKE2s (Mezzanine-6.0.0.tar.gz) = 1917a030403642672ec634f2806c2e1d20e4bfc1b72be6d55be82f3460bdb31d
+SHA512 (Mezzanine-6.0.0.tar.gz) = 82ac0a692a1b6ec0dcf1bddf38dd843cf3f5a0131e704e8920bb5b35959c444ccd2b9bc95fe36c29ae8409fc47d1c87d06e986b68eb384ec81a197ab3b06789d
+Size (Mezzanine-6.0.0.tar.gz) = 6261896 bytes
