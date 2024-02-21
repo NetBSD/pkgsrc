@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/02/12 17:24:07 hans Exp $
+# $NetBSD: Makefile,v 1.68 2024/02/21 03:46:06 schmonz Exp $
 
 .include "Makefile.common"
 
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-stdheaderdir
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--enable-new-dtags
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--enable-new-dtags
 
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
