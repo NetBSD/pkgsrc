@@ -1,33 +1,24 @@
-# $NetBSD: Makefile,v 1.11 2023/08/01 23:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/02/21 22:41:47 wiz Exp $
 
-DISTNAME=	quadprog-0.1.11
+DISTNAME=	quadprog-0.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
-# pypi distfile does not contain cython input files
-#MASTER_SITES=	${MASTER_SITE_PYPI:=q/quadprog/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=quadprog/}
-# switched during 0.1.11, remove during next update
-DIST_SUBDIR=	${DISTNAME}
-GITHUB_PROJECT=	quadprog
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=q/quadprog/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/rmcgibbo/quadprog
 COMMENT=	Solver for a strictly convex quadratic program
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-# 0.1.11 distfile does not support python 3.11
-# https://github.com/quadprog/quadprog/issues/41
-post-extract:
-	cd ${WRKSRC} && cythonize-${PYVERSSUFFIX} quadprog
-
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
