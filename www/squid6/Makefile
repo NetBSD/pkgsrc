@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/12/18 16:13:23 sborrill Exp $
+# $NetBSD: Makefile,v 1.8 2024/02/21 12:58:50 sborrill Exp $
 
 DISTNAME=	squid-6.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v6/
 EXTRACT_SUFX=	.tar.xz
