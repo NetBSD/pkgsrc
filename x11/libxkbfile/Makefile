@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/02/09 21:13:53 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/02/21 10:32:01 nia Exp $
 
 DISTNAME=		libxkbfile-1.1.3
 CATEGORIES=		x11
@@ -10,6 +10,9 @@ HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		The xkbfile Library from modular X.org
 
 USE_TOOLS+=		pkg-config
+
+USE_CC_FEATURES+=	c99
+FORCE_C_STD=		gnu99
 
 PKGCONFIG_OVERRIDE+=		output/xkbfile.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
