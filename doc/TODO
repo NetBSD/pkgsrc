@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24076 2024/02/21 10:21:15 wiz Exp $
+$NetBSD: TODO,v 1.24077 2024/02/21 10:26:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -599,7 +599,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epubcheck-4.0.2
 	o epstool-3.0.9
 	o eric5-5.4.6
-	o erlang-26.2.2
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
