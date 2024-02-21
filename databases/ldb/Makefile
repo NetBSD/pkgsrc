@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/11/15 18:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/02/21 15:08:59 wiz Exp $
+#
+# when updating this, make sure still builds and packages
 
 DISTNAME=	ldb-2.8.0
 CATEGORIES=	databases
