@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/27 17:20:29 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/21 12:42:04 adam Exp $
 
-DISTNAME=	pooch-1.8.0
+DISTNAME=	pooch-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pooch/}
