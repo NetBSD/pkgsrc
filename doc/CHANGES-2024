@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1395 2024/02/21 10:29:53 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1396 2024/02/21 11:04:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2460,3 +2460,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/net-snmp to 5.9.4 [wiz 2024-02-21]
 	Updated lang/erlang to 26.2.2 [wiz 2024-02-21]
 	Updated lang/elixir to 1.16.1 [wiz 2024-02-21]
+	Updated www/py-nbconvert to 7.16.1 [adam 2024-02-21]
+	Updated databases/py-aiosqlite to 0.20.0 [adam 2024-02-21]
