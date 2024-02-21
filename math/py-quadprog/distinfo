@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/11/14 15:03:47 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/02/21 22:41:47 wiz Exp $
 
-BLAKE2s (quadprog-0.1.11/quadprog-0.1.11.tar.gz) = a41ca406a8c33d6a82742468900f55c5c828429c096062fbfad6037ac6bfd110
-SHA512 (quadprog-0.1.11/quadprog-0.1.11.tar.gz) = b2f2e6dad30770230bb0ebed9ec7d89046f1d522a76564f8c4c290e27e55a9efbbfec3c991846a0496273ae530b19aa430ee573d668fa260ea67b59519836730
-Size (quadprog-0.1.11/quadprog-0.1.11.tar.gz) = 16454 bytes
+BLAKE2s (quadprog-0.1.12.tar.gz) = 55eab1bee0754967853fd8cba967e06a3bc6136f076dd6b1ed8000f4f166ad3a
+SHA512 (quadprog-0.1.12.tar.gz) = 571273c9bd50b67ff81d0fc7971fcebd57ec4a8aa894a8e94c44be1aa617c5c62107b76b6047802be8c36e2ee8cdce6a22375516bcb6fc6e587d5b2b095454b4
+Size (quadprog-0.1.12.tar.gz) = 16884 bytes
