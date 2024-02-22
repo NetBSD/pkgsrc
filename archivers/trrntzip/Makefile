@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/01/16 21:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/22 12:46:06 wiz Exp $
 
-DISTNAME=	trrntzip-1.1
+DISTNAME=	trrntzip-1.2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=0-wiz-0/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
