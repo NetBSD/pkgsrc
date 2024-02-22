@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1420 2024/02/22 15:13:36 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1421 2024/02/22 17:35:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2503,3 +2503,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-coverage to 7.4.2 [adam 2024-02-22]
 	Updated www/firefox to 123.0 [ryoon 2024-02-22]
 	Updated www/firefox-l10n to 123.0 [ryoon 2024-02-22]
+	Updated databases/mongo-c-driver to 1.26.0 [adam 2024-02-22]
+	Updated devel/py-dogpile-cache to 1.3.2 [adam 2024-02-22]
