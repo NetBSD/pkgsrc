@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/07/14 07:34:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/02/22 09:01:21 wiz Exp $
 bin/babl
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
@@ -26,6 +26,7 @@ lib/babl-0.1/cairo.${SOEXT}
 lib/babl-0.1/double.${SOEXT}
 lib/babl-0.1/fast-float.${SOEXT}
 lib/babl-0.1/float.${SOEXT}
+lib/babl-0.1/formats.${SOEXT}
 lib/babl-0.1/gegl-fixups.${SOEXT}
 lib/babl-0.1/gggl-lies.${SOEXT}
 lib/babl-0.1/gggl-table-lies.${SOEXT}
@@ -73,7 +74,7 @@ lib/babl-0.1/ycbcr.${SOEXT}
 lib/girepository-1.0/Babl-0.1.typelib
 lib/libbabl-0.1.${SOEXT}
 ${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0
-${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.205.1
+${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.207.1
 ${PLIST.Darwin}lib/libbabl-0.1.0.${SOEXT}
 lib/pkgconfig/babl-0.1.pc
 share/gir-1.0/Babl-0.1.gir
