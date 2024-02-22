@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/16 21:47:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/02/22 12:46:06 wiz Exp $
 
-BLAKE2s (trrntzip-1.1.tar.gz) = 0d1b61523dd6c51a87927e812af5e1fcaaf2c1850093f27d5a0fbb44a1f7c85a
-SHA512 (trrntzip-1.1.tar.gz) = 18f2ed14b66a67aa31da6dd2b32ff601c4189d8646143a5c72850ad711cccf2f67c920687ea4e876ddeba1e316889ba2ca9aa81350c43bb8deb4989222946091
-Size (trrntzip-1.1.tar.gz) = 60073 bytes
+BLAKE2s (trrntzip-1.2.tar.gz) = 9437855f9a0f07a8486c919159ccd3b06c53ac8412d476da652d6bccce0de1af
+SHA512 (trrntzip-1.2.tar.gz) = 90c853efde1d077c741206362bc14fe779627f1b20571246e99ed29980840e78c0377110431c59c35596a0d209e612f6fe77b385707eb4bdb1ea47bb797c9272
+Size (trrntzip-1.2.tar.gz) = 62707 bytes
