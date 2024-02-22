@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/20 04:41:15 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/22 13:20:01 adam Exp $
 
-DISTNAME=	docstring-to-markdown-0.14
+DISTNAME=	docstring-to-markdown-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docstring-to-markdown/}
