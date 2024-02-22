@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/07 20:52:58 markd Exp $
-bin/dmarc-policy-find
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/22 13:18:09 adam Exp $
+bin/dmarc-policy-find-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/authheaders/__init__.py
 ${PYSITELIB}/authheaders/__init__.pyc
 ${PYSITELIB}/authheaders/__init__.pyo
