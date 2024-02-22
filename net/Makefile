@@ -1,4 +1,4 @@
-	# $NetBSD: Makefile,v 1.1560 2024/02/19 19:35:21 gdt Exp $
+# $NetBSD: Makefile,v 1.1561 2024/02/22 02:50:21 gutteridge Exp $
 #
 
 COMMENT=	Networking tools
