@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/22 13:07:44 adam Exp $
+bin/publicsuffixlist-download-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/publicsuffixlist/__init__.py
+${PYSITELIB}/publicsuffixlist/__init__.pyc
+${PYSITELIB}/publicsuffixlist/__init__.pyo
+${PYSITELIB}/publicsuffixlist/compat.py
+${PYSITELIB}/publicsuffixlist/compat.pyc
+${PYSITELIB}/publicsuffixlist/compat.pyo
+${PYSITELIB}/publicsuffixlist/public_suffix_list.dat
+${PYSITELIB}/publicsuffixlist/test.py
+${PYSITELIB}/publicsuffixlist/test.pyc
+${PYSITELIB}/publicsuffixlist/test.pyo
+${PYSITELIB}/publicsuffixlist/test_psl.txt
+${PYSITELIB}/publicsuffixlist/update.py
+${PYSITELIB}/publicsuffixlist/update.pyc
+${PYSITELIB}/publicsuffixlist/update.pyo
