@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2024/01/27 08:28:52 adam Exp $
+# $NetBSD: Makefile,v 1.65 2024/02/22 17:33:04 adam Exp $
 
-DISTNAME=	mongo-c-driver-1.25.4
+DISTNAME=	mongo-c-driver-1.26.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -28,6 +28,7 @@ CMAKE_ARGS+=	-DENABLE_UNINSTALL=OFF
 CMAKE_ARGS+=	-DENABLE_ZLIB=SYSTEM
 CMAKE_ARGS+=	-DENABLE_ZSTD=ON
 CMAKE_ARGS+=	-DENABLE_SHM_COUNTERS=OFF # ON is only supported on Linux or ARM Darwin
+CMAKE_ARGS+=	-DMONGO_USE_CCACHE=OFF
 
 PKGCONFIG_OVERRIDE+=	src/libbson/src/libbson-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbson/src/libbson-static-1.0.pc.in
