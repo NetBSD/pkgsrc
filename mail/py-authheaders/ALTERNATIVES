@@ -1,0 +1,1 @@
+bin/dmarc-policy-find @PREFIX@/bin/dmarc-policy-find-@PYVERSSUFFIX@
