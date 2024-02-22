@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2024/02/22 09:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2024/02/22 13:15:41 ryoon Exp $
 
 DISTNAME=	gegl-0.4.48
 CATEGORIES=	graphics
@@ -15,6 +15,7 @@ MESON_ARGS+=	-Dlibv4l2=disabled
 # Some binaries that are required to generate docs
 # are built with RPATH $ORIGIN. Disable docs explicitly.
 MESON_ARGS+=	-Ddocs=false
+MESON_ARGS+=	-Dgi-docgen=disabled
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pkg-config xgettext
