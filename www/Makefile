@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1782 2024/02/13 21:50:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.1783 2024/02/22 13:07:44 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -871,6 +871,7 @@ SUBDIR+=	py-postorius
 SUBDIR+=	py-priority
 SUBDIR+=	py-protego
 SUBDIR+=	py-publicsuffix2
+SUBDIR+=	py-publicsuffixlist
 SUBDIR+=	py-purl
 SUBDIR+=	py-pylint-django
 SUBDIR+=	py-pylsqpack
