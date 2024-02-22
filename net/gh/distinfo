@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2024/01/12 19:27:42 bsiegert Exp $
+$NetBSD: distinfo,v 1.37 2024/02/22 20:38:29 bsiegert Exp $
 
-BLAKE2s (gh-2.42.0.tar.gz) = 4b2cd542ba263b08f6bd41ee6512655280bd2019c6e5ad62e4122c50a00f1d29
-SHA512 (gh-2.42.0.tar.gz) = b8e76ea0bda9f9e78d9b8d5ff57326c1fa77f280688948facd83549d88f3d2259516ad9bb0f0455cecfa34168ef317f01683383cbe1b41e150b5ea9ab8c2fa2b
-Size (gh-2.42.0.tar.gz) = 825997 bytes
+BLAKE2s (gh-2.44.1.tar.gz) = e953595a7b5ceedfa8ffcd897de0b7641ce312e491fd17f79ab060689c3c6da2
+SHA512 (gh-2.44.1.tar.gz) = a40ae60007b816eabb4c8aad6522dd7bb230d88fbbd067fc2a23a777d4cf9e510bccbaa35425e747a0730f7dddf46e285e13ee4c683929cb78cade722563a724
+Size (gh-2.44.1.tar.gz) = 830769 bytes
 BLAKE2s (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 7ff4e62d167148a47ea2954be89d7301397c4c75ef6e7d27016b47e039c4637f
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = f8186f43b04970d779e9fdb09128e24e6cbe66a49ed8a3e5525f0a9370f897b9f914c6755e5b33da1439b0d12d345219c4ed1c2c19913db318d8c07664bd3e0d
 Size (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 595 bytes
@@ -75,12 +75,12 @@ Size (github.com_cli_browser_@v_v1.3.0.mod) = 73 bytes
 BLAKE2s (github.com_cli_browser_@v_v1.3.0.zip) = be7b5554bda5320eec3ea811102d690d04060ca1a2ca821ee46fe45b03da70b3
 SHA512 (github.com_cli_browser_@v_v1.3.0.zip) = 1982a58f446ad9a1843fcd760d4b07c1e6a5dcb37b34601fe87ded593b8da8d0691f664ca112ca521093051f1153852f171e66da3416b33e2f0d322ad4886f3f
 Size (github.com_cli_browser_@v_v1.3.0.zip) = 6971 bytes
-BLAKE2s (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.mod) = f22f738413c90ccb302ea23281221fcc1add47185ec3aca952141bc62497e48a
-SHA512 (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.mod) = 8e5e92b276e2853e2a2da27fe8e29ff6b08e6e7bae002bc0dde54eac7f5e7f2345ba2210a18bb641017653c4be7999fa9b869d92766fb4528f87147aebadb0b1
-Size (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.mod) = 1929 bytes
-BLAKE2s (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.zip) = 160c7b6dc29fced1fe5807c938de73091400e7af96ea78ab70d75ac08153b3f0
-SHA512 (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.zip) = f8d96276124ebb07cf7529cacbdb899c239d0682b030913f04c4876824c359f8a05f39b88947986c65df92f3930ef36a0c38186f9b4520112081d62ab10783d8
-Size (github.com_cli_go-gh_v2_@v_v2.4.1-0.20231120145612-d32c104a9a25.zip) = 99335 bytes
+BLAKE2s (github.com_cli_go-gh_v2_@v_v2.5.0.mod) = f22f738413c90ccb302ea23281221fcc1add47185ec3aca952141bc62497e48a
+SHA512 (github.com_cli_go-gh_v2_@v_v2.5.0.mod) = 8e5e92b276e2853e2a2da27fe8e29ff6b08e6e7bae002bc0dde54eac7f5e7f2345ba2210a18bb641017653c4be7999fa9b869d92766fb4528f87147aebadb0b1
+Size (github.com_cli_go-gh_v2_@v_v2.5.0.mod) = 1929 bytes
+BLAKE2s (github.com_cli_go-gh_v2_@v_v2.5.0.zip) = 1b52a730b7df11a165d977a7db7831317206ee7e599c15dd46973486e3207528
+SHA512 (github.com_cli_go-gh_v2_@v_v2.5.0.zip) = c03048c943d6b6e0ba721eee4eed887275e577eedefc69a7d9faa9e4cdac2920477c82c747a94234e3b85e359bf9116ff6e4c9e3814bfd2fe6cd5b151a8eb92e
+Size (github.com_cli_go-gh_v2_@v_v2.5.0.zip) = 95451 bytes
 BLAKE2s (github.com_cli_oauth_@v_v1.0.1.mod) = 7e9ffd85747e04d4fdd6489f10358d3d9694ca6b9900bc0cbc9cf008120cf43b
 SHA512 (github.com_cli_oauth_@v_v1.0.1.mod) = 43470604fd7bc424682721688b15a1fd343febee02228d4826b98f2975364cbd62cee6306826d3ed2cc76c56ea586e1d2334781c0ef3564ac7fe974db9dec914
 Size (github.com_cli_oauth_@v_v1.0.1.mod) = 76 bytes
