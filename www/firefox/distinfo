@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.522 2024/02/08 15:54:21 ryoon Exp $
+$NetBSD: distinfo,v 1.523 2024/02/22 15:12:49 ryoon Exp $
 
-BLAKE2s (firefox-122.0.1.source.tar.xz) = a84e1990e1b1147fbd9a0f22bd0e22a7701ca20892ba85d351ead26cd1a99744
-SHA512 (firefox-122.0.1.source.tar.xz) = 1d4fe1ed351edd748ede2ef6448798a32de9ed7a075a54a7ed5f7baa7b0c4c7f932c2e29f443c9066829e39f22a1dc94be5d00cc994193e949b72aa4a1c8ba41
-Size (firefox-122.0.1.source.tar.xz) = 533052916 bytes
+BLAKE2s (firefox-123.0.source.tar.xz) = 2aba66124c60f72ae179e3bfc1968877ba2ea89e87a6c712db180d3f2164e109
+SHA512 (firefox-123.0.source.tar.xz) = a19567a13e1b663e538c4af17491146adad1f0ab977995e8da9ce9ed428008ad20902dee4efb82d54e1319a0e31768609696bc822563d75732b622760129d8bb
+Size (firefox-123.0.source.tar.xz) = 537279276 bytes
 BLAKE2s (nodejs-output-122.0.1.tgz) = 87906492d5f5fcd8e8dac2e5295df84add754fd400db17bb6555957147f09b41
 SHA512 (nodejs-output-122.0.1.tgz) = 93c3540f83007afd8f1e8c422776c31265a6f66532a81b988452db500c2ada1059ebf70b5c071d99ec4dad3f34f0ccc47f7ab8eab8e7e77c0972b3d7d8ec970a
 Size (nodejs-output-122.0.1.tgz) = 223805 bytes
@@ -20,7 +20,7 @@ SHA1 (patch-intl_lwbrk_LineBreaker.cpp) = e2eaf7d66f1255ba5baf7f7edadbb1fa8cb39b
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 753bb4e90758f5b42a51bbc073b328de673988cf
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218b848344ce1
-SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = acb31066cd407e9e08cb7a7b6c4d0e702f5a8107
+SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_zydis_Zycore_Defines.h) = 7f996505e8e2dcd3303d437f3c82b280f0de07e4
