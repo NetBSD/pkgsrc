@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1410 2024/02/22 09:04:02 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1411 2024/02/22 09:13:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-cookiecutter to 2.6.0 [adam 2024-02-22]
 	Updated graphics/babl to 0.1.108 [wiz 2024-02-22]
 	Updated graphics/gegl to 0.4.48 [wiz 2024-02-22]
+	Updated graphics/gimp-devel to 2.99.18 [wiz 2024-02-22]
