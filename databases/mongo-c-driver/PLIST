@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/01/27 08:28:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/02/22 17:33:04 adam Exp $
 include/libbson-1.0/bson.h
 include/libbson-1.0/bson/bcon.h
 include/libbson-1.0/bson/bson-atomic.h
@@ -63,6 +63,7 @@ include/libmongoc-1.0/mongoc/mongoc-read-concern.h
 include/libmongoc-1.0/mongoc/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc/mongoc-server-api.h
 include/libmongoc-1.0/mongoc/mongoc-server-description.h
+include/libmongoc-1.0/mongoc/mongoc-sleep.h
 include/libmongoc-1.0/mongoc/mongoc-socket.h
 include/libmongoc-1.0/mongoc/mongoc-ssl.h
 include/libmongoc-1.0/mongoc/mongoc-stream-buffered.h
