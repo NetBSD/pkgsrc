@@ -1,0 +1,5 @@
+Public Suffix List parser implementation for Python.
+* Compliant with TEST DATA
+* Support IDN (unicode or punycoded).
+* Shipped with built-in PSL and the updater script.
+* Written in Pure Python. No library dependencies.
