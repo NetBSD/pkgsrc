@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/02/08 06:05:26 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/22 17:35:14 adam Exp $
 
-DISTNAME=	dogpile.cache-1.3.1
+DISTNAME=	dogpile.cache-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dogpile.cache/}
