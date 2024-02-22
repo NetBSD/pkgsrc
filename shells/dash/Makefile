@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2021/06/12 08:48:03 nia Exp $
+# $NetBSD: Makefile,v 1.15 2024/02/22 08:39:26 adam Exp $
 
-DISTNAME=	dash-0.5.11.4
+DISTNAME=	dash-0.5.12
 CATEGORIES=	shells
 MASTER_SITES=	http://gondor.apana.org.au/~herbert/dash/files/
 
