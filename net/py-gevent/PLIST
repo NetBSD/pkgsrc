@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/02/11 20:04:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/02/22 13:55:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -580,9 +580,6 @@ ${PYSITELIB}/gevent/tests/test__monkey.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.py
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_builtins_future.pyo
-${PYSITELIB}/gevent/tests/test__monkey_futures_thread.py
-${PYSITELIB}/gevent/tests/test__monkey_futures_thread.pyc
-${PYSITELIB}/gevent/tests/test__monkey_futures_thread.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.py
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_hub_in_thread.pyo
@@ -730,6 +727,9 @@ ${PYSITELIB}/gevent/tests/test__threading_2.pyo
 ${PYSITELIB}/gevent/tests/test__threading_before_monkey.py
 ${PYSITELIB}/gevent/tests/test__threading_before_monkey.pyc
 ${PYSITELIB}/gevent/tests/test__threading_before_monkey.pyo
+${PYSITELIB}/gevent/tests/test__threading_fork_from_dummy.py
+${PYSITELIB}/gevent/tests/test__threading_fork_from_dummy.pyc
+${PYSITELIB}/gevent/tests/test__threading_fork_from_dummy.pyo
 ${PYSITELIB}/gevent/tests/test__threading_holding_lock_while_monkey.py
 ${PYSITELIB}/gevent/tests/test__threading_holding_lock_while_monkey.pyc
 ${PYSITELIB}/gevent/tests/test__threading_holding_lock_while_monkey.pyo
