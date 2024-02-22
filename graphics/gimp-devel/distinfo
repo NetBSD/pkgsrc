@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/07/18 22:16:32 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/02/22 09:13:14 wiz Exp $
 
-BLAKE2s (gimp-2.99.16.tar.xz) = c2378268cbea497fe30c2d46d8583ebfcd550827f8e310007aead84d747fecf5
-SHA512 (gimp-2.99.16.tar.xz) = b0da0529b000a7309c9d601977518cd19a7bf50ab41952fa36b83c027042d6901c39d0a6870c16e8a8ad3318207c93d34ee3d50d0e5f35bcabeaa17d91e060ee
-Size (gimp-2.99.16.tar.xz) = 24969172 bytes
+BLAKE2s (gimp-2.99.18.tar.xz) = 488c415c91b854600cf0fcfbfbce3a793acf309f8dab02cbf7302e41a563e601
+SHA512 (gimp-2.99.18.tar.xz) = 151ccd0322601e76ed0198b40832ab0b6c138428f2e75806dd558e29c9b3437d9226a243142bf4a86113fa5ea4f5965b99cf7cd0ab0ecb7bdfc48036de35a9c6
+Size (gimp-2.99.18.tar.xz) = 25418968 bytes

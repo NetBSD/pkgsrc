@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/12/30 12:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/02/22 09:13:14 wiz Exp $
 
-DISTNAME=	gimp-2.99.16
+DISTNAME=	gimp-2.99.18
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
-PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -29,7 +28,9 @@ USE_TOOLS+=		pkg-config perl
 USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_TOOLS+=		gdbus-codegen
 
-PKGCONFIG_OVERRIDE=	gimp.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
 UNLIMIT_RESOURCES+=	datasize
 
 # Disable documentation for developers explicitly.
@@ -67,12 +68,6 @@ TOOLS_PLATFORM.msgfmt=
 
 INSTALLATION_DIRS=	share/examples
 
-SUBST_CLASSES+=		python
-SUBST_FILES.python+=	output/plug-ins/python/pygimp.interp
-SUBST_STAGE.python=	post-build
-SUBST_MESSAGE.python=	Fixing interpreter paths.
-SUBST_SED.python+=	-e "s,${BUILDLINK_DIR}/bin/python3,${PYTHONBIN},"
-
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gimp/2.99 ${DESTDIR}${PREFIX}/share/examples/gimp
 
@@ -89,7 +84,7 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.98
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.46
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.48
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
