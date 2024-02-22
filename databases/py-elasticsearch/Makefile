@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/01/19 19:59:40 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/02/22 12:07:12 adam Exp $
 
-DISTNAME=	elasticsearch-8.12.0
+DISTNAME=	elasticsearch-8.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elasticsearch/}
