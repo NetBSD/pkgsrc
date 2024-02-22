@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4182 2024/02/21 12:20:55 adam Exp $
+# $NetBSD: Makefile,v 1.4183 2024/02/22 02:52:38 gutteridge Exp $
 #
 
 COMMENT=	Development utilities
@@ -397,8 +397,8 @@ SUBDIR+=	galasm
 SUBDIR+=	galette
 SUBDIR+=	garden
 SUBDIR+=	gccmakedep
-SUBDIR+=	gconfmm
 SUBDIR+=	gce_metadata_server
+SUBDIR+=	gconfmm
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gdb7
