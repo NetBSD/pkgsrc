@@ -1,0 +1,1 @@
+bin/publicsuffixlist-download @PREFIX@/bin/publicsuffixlist-download-@PYVERSSUFFIX@
