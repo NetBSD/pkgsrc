@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/24 18:39:30 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/23 16:06:51 hauke Exp $
 bin/x2goclient
 man/man1/x2goclient.1
 share/applications/x2goclient.desktop
@@ -7,6 +7,7 @@ share/icons/hicolor/128x128/apps/x2goclient.png
 share/icons/hicolor/16x16/apps/x2goclient.png
 share/icons/hicolor/32x32/apps/x2goclient.png
 share/icons/hicolor/64x64/apps/x2goclient.png
+share/mime/packages/x-x2go.xml
 share/x2goclient/icons/x2goclient.png
 share/x2goclient/icons/x2goclient.xpm
 share/x2goclient/icons/x2gosession.png

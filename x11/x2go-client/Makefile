@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/01/30 14:22:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2024/02/23 16:06:51 hauke Exp $
 
 DISTNAME=	x2goclient-${PKGVER}
-PKGVER=		4.1.2.2
-PKGREVISION=	18
+PKGVER=		4.1.2.3
 CATEGORIES=	x11 net
 MASTER_SITES=	http://code.x2go.org/releases/source/x2goclient/
 
@@ -19,9 +18,18 @@ USE_LIBTOOL=		yes
 
 USE_LANGUAGES=		c c++
 
+# Supported are qt4, qt5
+QT_VERSION=		5
+
+BUILD_TARGET=		build_client
+
 ICON_THEMES=		yes
 
 LIBS+=			-lXpm -lcups
+
+.if ${QT_VERSION} == "5"
+LIBS+=			-lQt5X11Extras
+.endif
 
 DOCDIR=			share/doc/x2go
 
@@ -33,7 +41,7 @@ SUBST_MESSAGE.paths=	Fixing absolute paths
 SUBST_FILES.paths=	Makefile
 SUBST_VARS.paths+=	PREFIX DESTDIR PKG_SYSCONFDIR SH
 SUBST_VARS.paths+=	INSTALL_DATA INSTALL_DATA_DIR INSTALL_PROGRAM
-SUBST_VARS.paths+=	QMAKE_OPTS LDFLAGS LIBS
+SUBST_VARS.paths+=	QT_VERSION QMAKE_OPTS LDFLAGS LIBS
 
 SUBST_CLASSES+=		os-def
 SUBST_STAGE.os-def=	pre-configure
@@ -60,14 +68,21 @@ INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
 INSTALLATION_DIRS+=	share/x2goclient/icons
 
 pre-configure:
-	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/qmake-qt4
-	${LN} -sf ${QTDIR}/bin/lrelease ${BUILDLINK_DIR}/bin/lrelease-qt4
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/qmake-qt${QT_VERSION}
+	${LN} -sf ${QTDIR}/bin/lrelease ${BUILDLINK_DIR}/bin/lrelease-qt${QT_VERSION}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/HOWTO.GPGCARD ${DESTDIR}${PREFIX}/${DOCDIR}
 
+.if ${QT_VERSION} == "4"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.elif ${QT_VERSION} == "5"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
