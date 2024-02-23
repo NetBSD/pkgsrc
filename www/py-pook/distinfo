@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/14 15:34:05 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/02/23 07:54:16 adam Exp $
 
-BLAKE2s (pook-1.4.0.tar.gz) = 4cb1bd4e9177489dc83337514cc4cfcef2cb373c4089205a8f7847f07a0c563a
-SHA512 (pook-1.4.0.tar.gz) = b8c9b6b239333be3d81728199febe882f61cccd94b1af22195ff7d6f5cee93ddbd41661ea0263e12726f2fe73da5840c4846376042c58536dae6ca245972cc23
-Size (pook-1.4.0.tar.gz) = 30736 bytes
+BLAKE2s (pook-1.4.3.tar.gz) = 080551b7a51e54f4ff335ca4313f59ee02c7fff24a21fe4854bb667d11176c71
+SHA512 (pook-1.4.3.tar.gz) = 37229d2284f445ae90c2642292ea465dd568f8ff802807f9dd5f10195464c333634339e87861bdeebdaab91ff1a25d7deee28c91222f76238f0ca4a83c5b210a
+Size (pook-1.4.3.tar.gz) = 31963 bytes
