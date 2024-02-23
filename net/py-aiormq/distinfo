@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/02/10 14:42:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/02/23 19:47:42 adam Exp $
 
-BLAKE2s (aiormq-3.2.3.tar.gz) = fb1c37967b3baa111a927b6e62c915734bbb58890897394da22c66505409683c
-SHA512 (aiormq-3.2.3.tar.gz) = 46321fe2992ae44c7b7fea7e2ca5b58752d8bece2e8402b054424c1c7eb0edf6df4b9c4973c5cb7a2bebba15b192b1d157d380028835417d43ee2a586d52ca46
-Size (aiormq-3.2.3.tar.gz) = 21758 bytes
-SHA1 (patch-setup.py) = 9bf8395698edfe081c35e1303269245dd1ba5aa2
+BLAKE2s (aiormq-6.8.0.tar.gz) = e91032510b488c9e03fdc6b2e7dae37278c1fe681e25052de12b8fe8cf439762
+SHA512 (aiormq-6.8.0.tar.gz) = 8028af7d77e1e52cc442cbf56360fae229490997a8fc612208e28af168a06e0c5c1ab29e0308532c8600ec8b9661970a561c7ae87a03f2c99425fc0cd6fcf5d8
+Size (aiormq-6.8.0.tar.gz) = 26582 bytes
