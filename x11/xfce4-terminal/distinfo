@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.25 2024/02/08 23:29:47 gutteridge Exp $
+$NetBSD: distinfo,v 1.26 2024/02/23 20:38:49 gutteridge Exp $
 
 BLAKE2s (xfce4-terminal-1.1.2.tar.bz2) = b5da4916e955d68da41ee310f9427e776b0092e1098675f3b844f6140c69876b
 SHA512 (xfce4-terminal-1.1.2.tar.bz2) = ffd0975dc839e256ee18c8a5cb01025bfc2703af7d379d565ea861482269698c718c4cca408440cdc76ef7c6ccacaa6816da7f6734b1aef004cfb223f657243a
 Size (xfce4-terminal-1.1.2.tar.bz2) = 1042199 bytes
+SHA1 (patch-terminal_terminal-preferences-dialog.c) = 0f4966811d58e930c42c902642b7bcbb8c59545b
