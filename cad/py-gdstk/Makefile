@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/08/01 23:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/02/23 09:39:17 mef Exp $
 
-VERSION=	0.9.42
+VERSION=	0.9.50
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	gdstk-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,5 +21,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../math/qhull/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
