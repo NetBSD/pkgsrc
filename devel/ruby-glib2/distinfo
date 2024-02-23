@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2023/09/03 10:22:12 tsutsui Exp $
+$NetBSD: distinfo,v 1.21 2024/02/23 11:25:28 tsutsui Exp $
 
-BLAKE2s (glib2-4.2.0.gem) = e22017273ea097afd31483aacaf60370090db153b6861b266bb67e6de963fd8f
-SHA512 (glib2-4.2.0.gem) = a7c473470d79bbfe115188c21cdab72299ed57edea721f000113c28d5aa578038273fc4561ffe0e10187b3d2da175b8a97be0dbe5733d12a68e3ddbecc3853b7
-Size (glib2-4.2.0.gem) = 140800 bytes
+BLAKE2s (glib2-4.2.1.gem) = 0a87aac1f0d2537af3418f0c86cfc222a341dc48b3215095a1162c0453309b70
+SHA512 (glib2-4.2.1.gem) = 3838a62f842e982d13b45603d8b97bde28eef0c5f7b2636be52c1d30d1b688fa0afd2afb541aef580cf364fb80afafa71fc99152e7d1f387416be89587b25e37
+Size (glib2-4.2.1.gem) = 141312 bytes
