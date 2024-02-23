@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/12/09 12:34:11 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/23 11:25:28 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/glib-enum-types.h
@@ -103,6 +103,7 @@ ${GEM_LIBDIR}/lib/glib2/date-time.rb
 ${GEM_LIBDIR}/lib/glib2/deprecatable.rb
 ${GEM_LIBDIR}/lib/glib2/deprecated.rb
 ${GEM_LIBDIR}/lib/glib2/regex.rb
+${GEM_LIBDIR}/lib/glib2/time-zone.rb
 ${GEM_LIBDIR}/lib/glib2/variant.rb
 ${GEM_LIBDIR}/lib/glib2/version.rb
 ${GEM_LIBDIR}/lib/gnome/rake/external-package.rb
