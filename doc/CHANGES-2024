@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1446 2024/02/23 13:32:26 nros Exp $
+$NetBSD: CHANGES-2024,v 1.1447 2024/02/23 16:07:19 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-stripe to 8.4.0 [adam 2024-02-23]
 	Updated net/libcares to 1.27.0 [wiz 2024-02-23]
 	Updated textproc/iso-codes to 4.16.0 [nros 2024-02-23]
+	Updated x11/x2go-client to 4.1.2.3 [hauke 2024-02-23]
