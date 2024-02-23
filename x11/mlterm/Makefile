@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.189 2023/11/23 16:20:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.190 2024/02/23 12:44:28 tsutsui Exp $
 
 DISTNAME=	mlterm-3.9.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arakiken/}
 GITHUB_PROJECT=	${PKGBASE}
