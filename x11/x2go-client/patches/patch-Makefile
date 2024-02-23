@@ -1,50 +1,98 @@
-$NetBSD: patch-Makefile,v 1.1 2021/02/24 18:39:30 hauke Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/02/23 16:06:51 hauke Exp $
 
 Let pkgsrc framework set build variables
+Do not bother with html man pages
 
---- Makefile.orig	2020-02-13 10:36:07.000000000 +0000
+Following the lead of Arch Linux x2goclient package:
+
+Allow for building with qt4 and qt5
+Clear the misguided MAKEOVERRIDES= setting
+
+--- Makefile.orig	2023-06-28 20:09:47.000000000 +0000
 +++ Makefile
-@@ -4,28 +4,28 @@ TOP_DIR=$(CURDIR)
+@@ -4,41 +4,41 @@ TOP_DIR=$(CURDIR)
  CLIENT_DIR=$(TOP_DIR)/client_build
  CLIENT_BINARY=$(CLIENT_DIR)/x2goclient
  
 -SHELL=/bin/bash
 +SHELL=@SH@
  
--INSTALL_DIR=install -d -o root -g root -m 755
--INSTALL_FILE=install -o root -g root -m 644
-+INSTALL_DIR=@INSTALL_DATA_DIR@
-+INSTALL_FILE=@INSTALL_DATA@
- INSTALL_SYMLINK=ln -s -f
--INSTALL_PROGRAM=install -o root -g root -m 755
-+INSTALL_PROGRAM=@INSTALL_PROGRAM@
+ # Default to Qt 4.
+ # We'll change this to Qt 5 as soon as Qt-4-based platforms go EOL.
+-QT_VERSION ?= 4
++QT_VERSION ?= @QT_VERSION@
  
- RM_FILE=rm -f
- RM_DIR=rmdir -p --ignore-fail-on-non-empty
+-INSTALL_DIR ?= install -d -o root -g root -m 755
+-INSTALL_FILE ?= install -o root -g root -m 644
++INSTALL_DIR ?= @INSTALL_DATA_DIR@
++INSTALL_FILE ?= @INSTALL_DATA@
+ INSTALL_SYMLINK ?= ln -s -f
+-INSTALL_PROGRAM ?= install -o root -g root -m 755
++INSTALL_PROGRAM ?= @INSTALL_PROGRAM@
  
--DESTDIR=
--PREFIX=/usr/local
--ETCDIR=/etc/x2go
-+DESTDIR=@DESTDIR@
-+PREFIX=@PREFIX@
-+ETCDIR=@PKG_SYSCONFDIR@
- BINDIR=$(PREFIX)/bin
- SHAREDIR=$(PREFIX)/share
--MANDIR=$(SHAREDIR)/man
-+MANDIR=$(PREFIX)/man
- QMAKE_BINARY=qmake-qt4
- LRELEASE_BINARY=lrelease-qt4
--QMAKE_OPTS=
-+QMAKE_OPTS=@QMAKE_OPTS@
+ RM_FILE ?= rm -f
+ RM_DIR ?= rmdir -p --ignore-fail-on-non-empty
  
--LDFLAGS=
--LIBS=
-+LDFLAGS=@LDFLAGS@
-+LIBS=@LIBS@
+-DESTDIR ?=
+-PREFIX ?= /usr/local
+-ETCDIR ?= /etc/x2go
++DESTDIR ?= @DESTDIR@
++PREFIX ?= @PREFIX@
++ETCDIR ?= @PKG_SYSCONFDIR@
+ BINDIR ?= $(PREFIX)/bin
+ SHAREDIR ?= $(PREFIX)/share
+-MANDIR ?= $(SHAREDIR)/man
++MANDIR ?= $(PREFIX)/man
+ ifeq ($(QT_VERSION),4)
+   QMAKE_BINARY ?= qmake-qt4
+   LRELEASE_BINARY ?= lrelease-qt4
+ else
+   ifeq ($(QT_VERSION),5)
+-    QMAKE_BINARY ?= qmake
+-    LRELEASE_BINARY ?= lrelease
++    QMAKE_BINARY ?= qmake-qt5
++    LRELEASE_BINARY ?= lrelease-qt5
+   else
+     $(error Unsupported Qt version "$(QT_VERSION)" passed.)
+   endif
+ endif
+-QMAKE_OPTS ?=
++QMAKE_OPTS ?= @QMAKE_OPTS@
+ 
+-LDFLAGS ?=
+-LIBS ?=
++LDFLAGS ?= @LDFLAGS@
++LIBS ?= @LIBS@
  
  
  #####################################################################
-@@ -115,7 +115,6 @@ install_man:
+@@ -65,13 +65,13 @@ LIBS ?=
+ # implementation to make implementation.
+ 
+ # GNU make way.
+-MAKEOVERRIDES = SHELL QT_VERSION INSTALL_DIR INSTALL_FILE INSTALL_SYMLINK INSTALL_PROGRAM RM_FILE RM_DIR DESTDIR PREFIX ETCDIR BINDIR SHAREDIR MANDIR QMAKE_BINARY LRELEASE_BINARY QMAKE_OPTS LDFLAGS LIBS
++MAKEOVERRIDES = 
+ 
+ # FreeBSD and NetBSD way.
+-.MAKEOVERRIDES = SHELL QT_VERSION INSTALL_DIR INSTALL_FILE INSTALL_SYMLINK INSTALL_PROGRAM RM_FILE RM_DIR DESTDIR PREFIX ETCDIR BINDIR SHAREDIR MANDIR QMAKE_BINARY LRELEASE_BINARY QMAKE_OPTS LDFLAGS LIBS
++.MAKEOVERRIDES = 
+ 
+ # OpenBSD way.
+-.MAKEFLAGS = SHELL QT_VERSION INSTALL_DIR INSTALL_FILE INSTALL_SYMLINK INSTALL_PROGRAM RM_FILE RM_DIR DESTDIR PREFIX ETCDIR BINDIR SHAREDIR MANDIR QMAKE_BINARY LRELEASE_BINARY QMAKE_OPTS LDFLAGS LIBS
++.MAKEFLAGS = 
+ 
+ 
+ all: build
+@@ -87,7 +87,7 @@ build_client:
+ build_man:
+ 	${MAKE} -f Makefile.man2html build
+ 
+-clean: clean_client clean_man
++clean: clean_client
+ 	find . -maxdepth 3 -name '*.o' -exec rm -vf {} + -type f
+ 	find . -maxdepth 3 -name 'moc_*.cpp' -exec rm -vf {} + -type f
+ 	find . -maxdepth 3 -name 'ui_*.h' -exec rm -vf {} + -type f
+@@ -130,7 +130,6 @@ install_man:
  	$(INSTALL_DIR) $(DESTDIR)$(MANDIR)/
  	$(INSTALL_DIR) $(DESTDIR)$(MANDIR)/man1
  	$(INSTALL_FILE) man/man1/x2goclient.1    $(DESTDIR)$(MANDIR)/man1/x2goclient.1
