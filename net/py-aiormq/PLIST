@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/13 18:38:42 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/23 19:47:42 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/aiormq/__init__.py
 ${PYSITELIB}/aiormq/__init__.pyc
 ${PYSITELIB}/aiormq/__init__.pyo
+${PYSITELIB}/aiormq/abc.py
+${PYSITELIB}/aiormq/abc.pyc
+${PYSITELIB}/aiormq/abc.pyo
 ${PYSITELIB}/aiormq/auth.py
 ${PYSITELIB}/aiormq/auth.pyc
 ${PYSITELIB}/aiormq/auth.pyo
@@ -29,6 +30,3 @@ ${PYSITELIB}/aiormq/tools.pyo
 ${PYSITELIB}/aiormq/types.py
 ${PYSITELIB}/aiormq/types.pyc
 ${PYSITELIB}/aiormq/types.pyo
-${PYSITELIB}/aiormq/version.py
-${PYSITELIB}/aiormq/version.pyc
-${PYSITELIB}/aiormq/version.pyo
