@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/08/24 09:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/02/23 11:43:10 adam Exp $
 
-DISTNAME=	WSGIProxy2-0.4.6
+DISTNAME=	WSGIProxy2-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WSGIProxy2/}
 
@@ -11,15 +10,16 @@ HOMEPAGE=	https://github.com/gawel/WSGIProxy2
 COMMENT=	WSGI Proxy with various http client backends
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

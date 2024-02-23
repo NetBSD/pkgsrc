@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/02/23 11:43:10 adam Exp $
 
-BLAKE2s (WSGIProxy2-0.4.6.tar.gz) = b4a689148076da73dacf938ab502de887da54aa7d4be0e06840d778263b08d99
-SHA512 (WSGIProxy2-0.4.6.tar.gz) = c60d794c0c8b383bf1857ec325d6d0b4fce9c4aec4a06cbf9d7549b609633e491e137342b7bbaf4eec12462eabba63096328c8517b0685e241d1baecd5827cad
-Size (WSGIProxy2-0.4.6.tar.gz) = 16481 bytes
+BLAKE2s (WSGIProxy2-0.5.1.tar.gz) = b2d1e4f72f9ef76925fa6e462268a1942e0055d6c24b2d369086cc1740d9b2d4
+SHA512 (WSGIProxy2-0.5.1.tar.gz) = 6be9d4893515cc70ee1c5d7b7a29895a8c8b5afd316e2ad05f92fc1fa93e26da22b93440994ec9782f0663ff7073e476f75351fb7955bde93a2b6fbf9f4bf78a
+Size (WSGIProxy2-0.5.1.tar.gz) = 16565 bytes
