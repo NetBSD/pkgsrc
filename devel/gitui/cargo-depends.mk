@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2024/02/21 20:48:31 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2024/02/23 17:38:23 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -22,7 +22,7 @@ CARGO_CRATE_DEPENDS+=	bit-vec-0.6.3
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.4.2
 CARGO_CRATE_DEPENDS+=	bugreport-0.5.0
-CARGO_CRATE_DEPENDS+=	bumpalo-3.15.0
+CARGO_CRATE_DEPENDS+=	bumpalo-3.15.1
 CARGO_CRATE_DEPENDS+=	bwrap-1.3.0
 CARGO_CRATE_DEPENDS+=	bytesize-1.3.0
 CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
@@ -115,7 +115,7 @@ CARGO_CRATE_DEPENDS+=	onig-6.4.0
 CARGO_CRATE_DEPENDS+=	onig_sys-69.8.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
 CARGO_CRATE_DEPENDS+=	openssl-src-300.2.3+3.2.1
-CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.100
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.101
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.9

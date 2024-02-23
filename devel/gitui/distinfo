@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/02/21 20:48:31 pin Exp $
+$NetBSD: distinfo,v 1.12 2024/02/23 17:38:23 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -66,9 +66,9 @@ Size (bitflags-2.4.2.crate) = 42602 bytes
 BLAKE2s (bugreport-0.5.0.crate) = 8eeb5d4ef0288945d5d80704a2c5acf791cbb0f2be52c2649dc8fea9432221d3
 SHA512 (bugreport-0.5.0.crate) = d1418b6c8df333b4b245f428f3442968f7b75961a00523fb432ff2f904eca07cd208d417e63b2fb0a86b85a6853e4c474d30c19b80a85d8724db66ecd762da7c
 Size (bugreport-0.5.0.crate) = 16149 bytes
-BLAKE2s (bumpalo-3.15.0.crate) = 47dd7cef0ef0d261b2da4464ed5deb77722714fa2bde559b31b663de63df3834
-SHA512 (bumpalo-3.15.0.crate) = 18fa4284e955805618308898d633489401051d2f8f2113d3735137741d8bd0711306163f93abd77c80a1ddbc0f3458204afcc98cbf478121fe52730599e41e97
-Size (bumpalo-3.15.0.crate) = 83538 bytes
+BLAKE2s (bumpalo-3.15.1.crate) = 4bf6fc5db2de83915aa1874bc2cb20e9ffcfc3c2fc2df4c5b1141884addce1c9
+SHA512 (bumpalo-3.15.1.crate) = b5a09f8cd58005a6ad5e8a310b08636d2edd1a48601fc5aac812e29178c4dc17b9d8cbd9a577c67313a8164f93aa82ccdbebc5fa5d543bbcdb0cf56910f06a51
+Size (bumpalo-3.15.1.crate) = 83576 bytes
 BLAKE2s (bwrap-1.3.0.crate) = 0fb447d5514ca7ac98869d0a2e3e33f2bc1804795780a1d02027392732fc9cfa
 SHA512 (bwrap-1.3.0.crate) = 72e7f6dff5565b097044c6dfdac9297d1cd7d27c752546ccbad0d946dbb9cb563c08ea7a67451888d579b58874371916487647ef1219a62e258e8c9cb0572322
 Size (bwrap-1.3.0.crate) = 112849 bytes
@@ -222,9 +222,9 @@ Size (git-version-macro-0.3.9.crate) = 5622 bytes
 BLAKE2s (git2-0.18.2.crate) = f7c1326de128b7060fa9bafe0edb65e0bddb91d447db87877a9234b92f935f07
 SHA512 (git2-0.18.2.crate) = d7b7f61ee2c074da28b85bce8475d1b0b953e047ddea70d834fbcffc58a910f0fee3cb91b6e3a0e6fd14b76d142ea02909330db0266299b73c743463a8443a99
 Size (git2-0.18.2.crate) = 212536 bytes
-BLAKE2s (gitui-0.25.0.tar.gz) = 8737193364b727eaab7a4deb4c61e37529c0d0a14af2ae69773c29e4887bfa0f
-SHA512 (gitui-0.25.0.tar.gz) = 051a163087a309d63fb51f82f8a82d98bef16881319c3ea78cb64ed074d367d21f6806262f9ce91111fc70dd906dfc7f43af42d3b777f336943a2590acdf7e6b
-Size (gitui-0.25.0.tar.gz) = 34916643 bytes
+BLAKE2s (gitui-0.25.1.tar.gz) = c8fd3c7ca2f18bdd3847ab6c065538e7982d2e41d46c52f1ff2f6ce476ebb7e2
+SHA512 (gitui-0.25.1.tar.gz) = 4f23d47906168a0956c596d7a3912c0f95d6d252eb5b563f3035c3bd82962e048d0083299e8963211fde258e34f9b0abea221921005276893499dbb79f31b8cd
+Size (gitui-0.25.1.tar.gz) = 34916908 bytes
 BLAKE2s (hashbrown-0.14.3.crate) = 50132f5430b5ee58537a4409ffb586c08b3f202cbbdaf99b8df17c5d7abdcdfe
 SHA512 (hashbrown-0.14.3.crate) = 4d344e5c89ce58e04668b80ef10e4e110a3a5daf4d610c52d980577795d0e2050c7d0b151d8ba97128117665e27b92ab0300f85b88bd6e1de943c62d49249356
 Size (hashbrown-0.14.3.crate) = 141425 bytes
@@ -348,9 +348,9 @@ Size (openssl-probe-0.1.5.crate) = 7227 bytes
 BLAKE2s (openssl-src-300.2.3+3.2.1.crate) = a64ef4709023f71705dfdd847abcbd8356aa9bb1d2c356dd0d9d9bc1663d3fc2
 SHA512 (openssl-src-300.2.3+3.2.1.crate) = e853c20aa2fec0f60d7c1e948377b322441e709961178501f535351db7f581dca7c8c3dac8343b9ccbe44b3f4247371ca2e3e691c8ac7bdc67034f86055b79e5
 Size (openssl-src-300.2.3+3.2.1.crate) = 9584245 bytes
-BLAKE2s (openssl-sys-0.9.100.crate) = 1af19d5b37c2a7aa3fc3cda8518faee9283c8a6ba9a830bd8b7e258695f42979
-SHA512 (openssl-sys-0.9.100.crate) = faba6f845ff7fd620de86fb942a7eba112ca4390feb88621b2aac37aeaac184dcf689f3c49a074c6586a4a9290247e33e95b3d1517bea5913256a06b8d23d5be
-Size (openssl-sys-0.9.100.crate) = 68423 bytes
+BLAKE2s (openssl-sys-0.9.101.crate) = e0adca5ef0ccc42a3149c57f2099242eb08d19f53607cbac2407486f57fdba00
+SHA512 (openssl-sys-0.9.101.crate) = 33400053919f7fb2298b84bead88d82231640da6db4efe3dd21a837d0ddb50b2bb21be5befe1734bda15107a9e23cc9f8392647413ceb77451bc36034831b684
+Size (openssl-sys-0.9.101.crate) = 68568 bytes
 BLAKE2s (option-ext-0.2.0.crate) = a179d39823f42e954c5fe82b67b6689a7078b0e88bc659f06354f02ee868b465
 SHA512 (option-ext-0.2.0.crate) = f8539f97b01af97e0b80fc96556002251befa60f8ddd19613311e62f9dc9834d71c22f5d8e7c53c4925046e38cdcf834c3c28042a4da862d6f6a21ddff8d8e56
 Size (option-ext-0.2.0.crate) = 7345 bytes
