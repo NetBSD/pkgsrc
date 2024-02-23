@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1439 2024/02/23 10:10:01 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1440 2024/02/23 10:42:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2526,3 +2526,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/slumber to 0.13.0 [pin 2024-02-23]
 	Updated sysutils/xcp to 0.20.4 [pin 2024-02-23]
 	Updated graphics/simp to 3.5.1 [pin 2024-02-23]
+	Added devel/py-pypi-cli version 0.4.1 [mef 2024-02-23]
