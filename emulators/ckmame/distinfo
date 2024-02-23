@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2023/07/07 07:45:51 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/02/23 09:41:03 wiz Exp $
 
-BLAKE2s (ckmame-2.0.tar.xz) = 2730da0ae5954f821de94675a80c4518f44cf3f2dec0ccad9439733c980ee1f6
-SHA512 (ckmame-2.0.tar.xz) = a343761969da58f37fb2840303fa9ca4b61e55df6ed77224d1e6e581345b3c1de1de299d679bf594a61f4879c4c81393d2b541a8acba8fe35753c0425c7507b3
-Size (ckmame-2.0.tar.xz) = 250276 bytes
-SHA1 (patch-docs_CMakeLists.txt) = 02b1af8a597803efbb7c56a81cda29da8c49cb55
+BLAKE2s (ckmame-2.1.tar.xz) = 7fa1e4a248374ddadd4b2d1141f524bd8fe15bfc9920bcac3878bdbdb32ff667
+SHA512 (ckmame-2.1.tar.xz) = 2f5d04972e0430151cf916eb88a0b8c84e140517a48fa2593b2f3769b091d4833b3ccc8004ae001f2aab502aa2f6940d0c3adbccaeef05905475432581ecbfed
+Size (ckmame-2.1.tar.xz) = 252684 bytes
+SHA1 (patch-regress_CMakeLists.txt) = 9a699e48ef9a238fff48dd8f8f131817971b215b

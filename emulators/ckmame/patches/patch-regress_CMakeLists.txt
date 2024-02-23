@@ -1,0 +1,15 @@
+$NetBSD: patch-regress_CMakeLists.txt,v 1.1 2024/02/23 09:41:03 wiz Exp $
+
+Do not override path for tests.
+https://github.com/nih-at/ckmame/commit/cb876689cffd8f3267665eafa07f90be66334c6c
+
+--- regress/CMakeLists.txt.orig	2024-02-23 08:07:39.000000000 +0000
++++ regress/CMakeLists.txt
+@@ -151,7 +151,6 @@ if(RUN_REGRESS)
+     add_test(NAME ${CASE} COMMAND ${NIHTEST} -v ${CASE})
+     # TODO: add --bin-sub-directory $<CONFIG>
+     set_tests_properties(${CASE} PROPERTIES SKIP_RETURN_CODE 77)
+-    set_tests_properties(${CASE} PROPERTIES ENVIRONMENT "PATH=${path}")
+   endforeach()
+ 
+   foreach(CASE ${XFAIL_TESTS})
