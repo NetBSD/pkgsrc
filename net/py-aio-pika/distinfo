@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/02/20 08:42:13 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/02/23 19:51:08 adam Exp $
 
-BLAKE2s (aio-pika-6.7.1.tar.gz) = e2556ff68962b2f87c9487485ab8071cd2e9f30718a66ff63110053e5baeb731
-SHA512 (aio-pika-6.7.1.tar.gz) = 060319dee14995523dd32eb6e2689b0c37a83aae15e40b2f9f23a53f4ae5599757a5fa99e13170a4a9c399e1972d040242c879e76cef83dd926b0e9782b945ad
-Size (aio-pika-6.7.1.tar.gz) = 31071 bytes
-SHA1 (patch-setup.py) = f82de6e16f699739df751c3a42470ae16a17752d
+BLAKE2s (aio_pika-9.4.0.tar.gz) = 3a61e2162bcddee37cc97f01818c221e5eb0b136ba54fd9891d294fcaf071168
+SHA512 (aio_pika-9.4.0.tar.gz) = 5503f0114f220f17ff2abec2c43d13ba0a3af342911dabe16df5f2b0a252f90462c68b525c6f9fc5f446766fbf80af0661355acb6ee21f261b29f88eb9b933cb
+Size (aio_pika-9.4.0.tar.gz) = 43829 bytes
