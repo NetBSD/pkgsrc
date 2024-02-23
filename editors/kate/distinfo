@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2024/02/23 04:00:03 gutteridge Exp $
+$NetBSD: distinfo,v 1.22 2024/02/23 04:59:00 gutteridge Exp $
 
 BLAKE2s (kate-23.08.4.tar.xz) = c11f689c33a82ed6d921c9875afca3ed1f168d9e09b1b6d3e683109a5d00fa69
 SHA512 (kate-23.08.4.tar.xz) = 99b147940809149c93a9a79bcf5263db650f3afa1fbef5158d20ed88608e3794dc8d1357d7c0119369b690dbfcd63e369a009171c3b4a99559246f876bafe28a
 Size (kate-23.08.4.tar.xz) = 8043840 bytes
-SHA1 (patch-addons_project_git_gitstatus.h) = db6349af3dea17a2e42c4b80c6a758054abd366f
-SHA1 (patch-addons_project_kateproject.h) = de6be75d21c4052e4527be3e6112922a8c356108
-SHA1 (patch-addons_project_kateprojectitem.h) = 1ee1624a5156fcd5f3d73d653294688115a126d7
-SHA1 (patch-apps_lib_ktexteditor__utils.h) = 8bea66e80a68235d6646be807008236ec0840f4d
+SHA1 (patch-addons_project_git_gitstatus.h) = e5776cb0b91ae6d79bfecc191ce75f1ff08bca63
+SHA1 (patch-addons_project_kateproject.h) = fa9bcac92135577f58e1468f47c6eae301792e19
+SHA1 (patch-addons_project_kateprojectitem.h) = 90a60cf129446bee98510197c0ce57723b500c6c
+SHA1 (patch-apps_lib_ktexteditor__utils.h) = 64d64d357e88bdfb3ab284c30c04ee007ae85334
