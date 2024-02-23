@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/13 18:40:04 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/02/23 19:51:08 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/aio_pika/__init__.py
 ${PYSITELIB}/aio_pika/__init__.pyc
 ${PYSITELIB}/aio_pika/__init__.pyo
+${PYSITELIB}/aio_pika/abc.py
+${PYSITELIB}/aio_pika/abc.pyc
+${PYSITELIB}/aio_pika/abc.pyo
 ${PYSITELIB}/aio_pika/channel.py
 ${PYSITELIB}/aio_pika/channel.pyc
 ${PYSITELIB}/aio_pika/channel.pyo
@@ -19,6 +20,9 @@ ${PYSITELIB}/aio_pika/exceptions.pyo
 ${PYSITELIB}/aio_pika/exchange.py
 ${PYSITELIB}/aio_pika/exchange.pyc
 ${PYSITELIB}/aio_pika/exchange.pyo
+${PYSITELIB}/aio_pika/log.py
+${PYSITELIB}/aio_pika/log.pyc
+${PYSITELIB}/aio_pika/log.pyo
 ${PYSITELIB}/aio_pika/message.py
 ${PYSITELIB}/aio_pika/message.pyc
 ${PYSITELIB}/aio_pika/message.pyo
@@ -59,9 +63,3 @@ ${PYSITELIB}/aio_pika/tools.pyo
 ${PYSITELIB}/aio_pika/transaction.py
 ${PYSITELIB}/aio_pika/transaction.pyc
 ${PYSITELIB}/aio_pika/transaction.pyo
-${PYSITELIB}/aio_pika/types.py
-${PYSITELIB}/aio_pika/types.pyc
-${PYSITELIB}/aio_pika/types.pyo
-${PYSITELIB}/aio_pika/version.py
-${PYSITELIB}/aio_pika/version.pyc
-${PYSITELIB}/aio_pika/version.pyo
