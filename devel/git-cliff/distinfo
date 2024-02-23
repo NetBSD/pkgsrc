@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2024/02/21 20:47:19 pin Exp $
+$NetBSD: distinfo,v 1.32 2024/02/23 10:01:57 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -234,9 +234,9 @@ Size (getrandom-0.2.12.crate) = 36163 bytes
 BLAKE2s (gimli-0.28.1.crate) = fe294fe0616ddcce9e0f60682c7a70ad6e21130f9db99bf3b456cad992419bc1
 SHA512 (gimli-0.28.1.crate) = 695e46471fc07813dc4a47744458729b097f6efbfceeb57eb3db4165654e99bebb98dde2d73230b90bb5dd7c0ca0c6e77c7c3dc6f2abf70058b830a2fb386d25
 Size (gimli-0.28.1.crate) = 270497 bytes
-BLAKE2s (git-cliff-2.0.3.tar.gz) = 883aae647cfe77cc2e330222d13793d1ab703d27a6794228a59ec416cc46f4c2
-SHA512 (git-cliff-2.0.3.tar.gz) = 076166ba20664567f1f211a7110d21f850b0a36f30999ece6483a69c9ddf14ab989706011ab6509e6381f6034bd9ccdab9c0626357afae25ebc877cfaac1aac6
-Size (git-cliff-2.0.3.tar.gz) = 9607268 bytes
+BLAKE2s (git-cliff-2.0.4.tar.gz) = 9d9dd707e610f59855a9d56c68b0972a4ccee1c87229cac704a14f2a45aaac44
+SHA512 (git-cliff-2.0.4.tar.gz) = 60ab79faab4968412d7aba1dddfc156fb1365254e06d8a4f6c9b90ed1ad3ba5161588675c4864b9577695ca42ae8044725300da35f90b5c9024ced2c326ddf50
+Size (git-cliff-2.0.4.tar.gz) = 9607655 bytes
 BLAKE2s (git-conventional-0.12.6.crate) = a4887b7fd50f5b83ecad57c54a1954ddc45d6f21dfeb2ba8a40ea658e3b3e813
 SHA512 (git-conventional-0.12.6.crate) = 564e4fbe0ce92ee6f930901209587ea024ff9a39c202c7586d2610477b7e168d4e2f6add374a7f4a78b77464dfd0775fa26010889664fffbaaa36c6a1e76cb24
 Size (git-conventional-0.12.6.crate) = 15057 bytes
@@ -585,12 +585,12 @@ Size (secrecy-0.8.0.crate) = 11916 bytes
 BLAKE2s (semver-1.0.22.crate) = 0ac83cfc94d2575578f66e07edd564ebd18d660d666d147ea1f20153db22fe41
 SHA512 (semver-1.0.22.crate) = 7dcf9b6a02650d71d6c9ab3c29e44fdef95af296208f26aa7be6fd6e16773e5e5e66418c303a0589d1165df6dbfd46ad6ebf9eb5b3adab25a51f340947b2d949
 Size (semver-1.0.22.crate) = 30446 bytes
-BLAKE2s (serde-1.0.196.crate) = c0c81d92a73695d154992d22cd2b21d3b0549a060f2fb1019aa50f0848598733
-SHA512 (serde-1.0.196.crate) = 0917aa36d855ca77726d538fb7fcfcf629722c784d747b3869c0d69444c447d7b1fab556a9eb9594ddf6cc508df636fdde051a1c3909f9c691e4921946ebda19
-Size (serde-1.0.196.crate) = 77097 bytes
-BLAKE2s (serde_derive-1.0.196.crate) = bd870113a6ad714625280345e3230c0cfb60c812e4a8f80e52e58d352e3a12e1
-SHA512 (serde_derive-1.0.196.crate) = f4df7f835e8416e4662c62a46d5f6e6d45ffd103812d681b220f8080310720e27f738a34a8e622df722fed55a1d8c654dd4abfbd78d1fdc871306bf3985baf22
-Size (serde_derive-1.0.196.crate) = 55775 bytes
+BLAKE2s (serde-1.0.197.crate) = fddf85243d9b4e014c309e43355e8c1457216d93f1e7bf7219f99f0784f73a03
+SHA512 (serde-1.0.197.crate) = 69e42825fce6a0a5d109979785daceacfd6afc5641e202fe83da32e2b1f968416557cce97fa014839e873e65f85c27494c8f8e20e6e9e4fbedf20d0291880410
+Size (serde-1.0.197.crate) = 77087 bytes
+BLAKE2s (serde_derive-1.0.197.crate) = 1efc5535e0c5ea8aff046bf2a32d0181f75bccb555c6558f56239d60a412fea5
+SHA512 (serde_derive-1.0.197.crate) = 669376e248b76a5ee8b9c93fd9fe6d35372e7267fbabc14730539ef28a94e405ee5e9c2cc2846897d59d6153742cdc6799f9e2c87f20b9dad119bd3a86c28994
+Size (serde_derive-1.0.197.crate) = 55771 bytes
 BLAKE2s (serde_json-1.0.114.crate) = 2f473c149e90750591880f06b1db997ae68dca454f688014e1a67910ddb512f1
 SHA512 (serde_json-1.0.114.crate) = 2c35cd0e29ee2af6046ce849b5854b82b90f402b51c04ea86b32ce7d67869736f17a4d028dd8245c31201036bcca7a1d3df11d842a92a45b0eaebd809687d436
 Size (serde_json-1.0.114.crate) = 146986 bytes
