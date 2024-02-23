@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/23 10:39:02 mef Exp $
+
+BLAKE2s (pypi-cli-0.4.1.tar.gz) = 177685d9b0e1fbface43e9de1f8c6396997a3c3629576ac0b785827f7d2b33b6
+SHA512 (pypi-cli-0.4.1.tar.gz) = bc7eb5ff238d40d10677d39d7957b500c60f3850e9a0fa56a728caabc07231e0d20b5d139412b42c9812c5ec9c92e46fd58255128e0e6247f3e36c0d38bd8f97
+Size (pypi-cli-0.4.1.tar.gz) = 10018 bytes
