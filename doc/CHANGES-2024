@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1448 2024/02/23 17:14:19 hauke Exp $
+$NetBSD: CHANGES-2024,v 1.1449 2024/02/23 17:25:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2554,3 +2554,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/iso-codes to 4.16.0 [nros 2024-02-23]
 	Updated x11/x2go-client to 4.1.2.3 [hauke 2024-02-23]
 	Updated x11/nx-libs to 3.5.99.26.0x2go1 [hauke 2024-02-23]
+	Updated www/seaward to 1.0.3 [pin 2024-02-23]
