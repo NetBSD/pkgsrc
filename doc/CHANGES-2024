@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1429 2024/02/23 09:39:25 mef Exp $
+$NetBSD: CHANGES-2024,v 1.1430 2024/02/23 09:41:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-trove-classifiers to 2024.2.22 [adam 2024-02-23]
 	Updated devel/py-types-setuptools to 69.1.0.20240223 [adam 2024-02-23]
 	Updated cad/py-gdstk to 0.9.50 [mef 2024-02-23]
+	Updated emulators/ckmame to 2.1 [wiz 2024-02-23]
