@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/12/29 18:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/02/23 14:30:58 bacon Exp $
 
 DISTNAME=	canu-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +11,6 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://canu.readthedocs.io/
 COMMENT=	Single molecule sequence assembler for genomes large and small
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	gnuplot>0:../../graphics/gnuplot
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
