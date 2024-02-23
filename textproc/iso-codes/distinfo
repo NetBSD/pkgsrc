@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.52 2022/09/30 10:25:37 nros Exp $
+$NetBSD: distinfo,v 1.53 2024/02/23 13:31:47 nros Exp $
 
-BLAKE2s (iso-codes-v4.11.0.tar.bz2) = 3767fcfc2d0152a27c5752c398e1a5073397bc7deaeb0a27b1a4922a7e79c744
-SHA512 (iso-codes-v4.11.0.tar.bz2) = e2ce4086ed8128c41c5ba76a958ae4ad509bcd233ab24fa85edc660c8c2c5033be94e273d626260002b028a30263e07479f920b9c305775e92a4a2ff5af1a2d0
-Size (iso-codes-v4.11.0.tar.bz2) = 9040691 bytes
+BLAKE2s (iso-codes-v4.16.0.tar.bz2) = 61b5d057f22c3d75d48bbccf1fb52c6e995210e52f311bc40762a4b1c22d84c0
+SHA512 (iso-codes-v4.16.0.tar.bz2) = 9d8b9243f13886809f0bbbde47a568f00e14c82ce8f0c79fdf656cdfbd45afa67aca23d501fa79a982d535b97bb32c6ad3d3e44343c13aae61c4917144690cb5
+Size (iso-codes-v4.16.0.tar.bz2) = 9262670 bytes
 SHA1 (patch-bin_xml__from__json.py) = 39fc944725377362faa3b39d03e164c7d57f1497
