@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/11/09 16:23:44 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/23 19:41:25 adam Exp $
 
 # Download https://code.videolan.org/videolan/x264/-/archive/stable/x264-stable.tar.bz2
 # Rename to x264-<last-commit-date>.tar.bz2 and upload to MASTER_SITE_LOCAL.
 
-DISTNAME=	x264-20220601
+DISTNAME=	x264-20231001
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +51,7 @@ MAKE_ENV+=		SH=${SH:Q}
 # PR pkg/56512
 MAKE_FLAGS.SunOS+=	INSTALL=${INSTALL:Q}
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if ${USE_CROSS_COMPILE:U:tl} == yes || ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 # XXX Consider passing this whether cross-compiling or not.
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 .endif
@@ -67,7 +67,7 @@ CHECK_BUILTIN.pthread:=	yes
 .include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:=	no
 
-.if ${USE_BUILTIN.pthread:M[Yy][Ee][Ss]}
+.if ${USE_BUILTIN.pthread:tl} == yes
 X264_BUILD_THREADS_SUPPORT=	yes
 .else
 X264_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
