@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/02/21 13:11:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/02/23 12:20:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -526,6 +526,9 @@ ${PYSITELIB}/stripe/_tax_deducted_at_source.pyo
 ${PYSITELIB}/stripe/_tax_id.py
 ${PYSITELIB}/stripe/_tax_id.pyc
 ${PYSITELIB}/stripe/_tax_id.pyo
+${PYSITELIB}/stripe/_tax_id_service.py
+${PYSITELIB}/stripe/_tax_id_service.pyc
+${PYSITELIB}/stripe/_tax_id_service.pyo
 ${PYSITELIB}/stripe/_tax_rate.py
 ${PYSITELIB}/stripe/_tax_rate.pyc
 ${PYSITELIB}/stripe/_tax_rate.pyo
