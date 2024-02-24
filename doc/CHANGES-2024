@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1460 2024/02/24 07:10:54 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1461 2024/02/24 07:12:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed inputmethod/libchewing02 [rxg 2024-02-24]
 	Updated databases/ruby-activeldap to 7.0.0 [taca 2024-02-24]
 	Updated security/ruby-rex-text to 0.2.56 [taca 2024-02-24]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.7.6 [taca 2024-02-24]
