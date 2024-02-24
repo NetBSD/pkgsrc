@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/15 01:21:16 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/24 23:43:28 mef Exp $
 
 R_PKGNAME=	callr
-R_PKGVER=	3.7.3
+R_PKGVER=	3.7.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	R-processx>=3.8.2:../../sysutils/R-processx
 
-# Packages suggested but not available:
-#  'pingr', 'spelling'
+# Package suggested but not available: 'asciicast'
+
 TEST_DEPENDS+=	R-cliapp-[0-9]*:../../devel/R-cliapp
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-crayon-[0-9]*:../../devel/R-crayon
