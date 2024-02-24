@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/02/03 15:07:58 taca Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/24 14:10:46 taca Exp $
 
-DISTNAME=	async-2.8.1
+DISTNAME=	async-2.8.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
