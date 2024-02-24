@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2024/02/23 10:09:12 pin Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/24 13:34:34 pin Exp $
 
-# As of version 3.5.0, we need to set the environment variable
-# WGPU_BACKEND to 'gl', else simp will segfault when launching.
 DISTNAME=	simp-3.5.1
+PKGREVISION=    1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+# Pull source from commit hash in order to include optional WGPU_BACKEND
+GITHUB_TAG=	73500bc954dd8f740df701751a33d7d866f30970
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Kl4rry/simp/
