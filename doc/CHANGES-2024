@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1466 2024/02/24 14:13:59 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1467 2024/02/24 14:17:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2574,3 +2574,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/simp to 3.5.1nb1 [pin 2024-02-24]
 	Updated devel/ruby-async to 2.8.2 [taca 2024-02-24]
 	Updated devel/ruby-rspec-support to 3.13.1 [taca 2024-02-24]
+	Updated www/ruby-aws-partitions to 1.894.0 [taca 2024-02-24]
