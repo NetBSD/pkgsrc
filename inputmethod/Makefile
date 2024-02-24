@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2024/02/10 01:29:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.132 2024/02/24 02:43:38 rxg Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -70,7 +70,6 @@ SUBDIR+=	kasumi
 SUBDIR+=	kimera
 SUBDIR+=	kinput2
 SUBDIR+=	libchewing
-SUBDIR+=	libchewing02
 SUBDIR+=	libhangul
 SUBDIR+=	libime
 SUBDIR+=	librime
