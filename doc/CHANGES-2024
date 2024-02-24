@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1457 2024/02/23 22:41:25 leot Exp $
+$NetBSD: CHANGES-2024,v 1.1458 2024/02/24 02:46:41 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2565,3 +2565,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/opa to 0.61.0 [leot 2024-02-23]
 	Updated devel/conftest to 0.49.1 [leot 2024-02-23]
 	Updated devel/regal to 0.17.0 [leot 2024-02-23]
+	Removed inputmethod/libchewing02 [rxg 2024-02-24]
