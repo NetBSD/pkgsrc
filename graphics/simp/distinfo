@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/02/23 10:09:12 pin Exp $
+$NetBSD: distinfo,v 1.9 2024/02/24 13:34:34 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.23.crate) = dcb87d5c70395693fe96390c3c9b9fa0ba1f246fe3bc1e4a49afa09c166a4732
 SHA512 (ab_glyph-0.2.23.crate) = 169aaea8daf54cae7b3123b088f95217dda53f5e11b42a962d4607f546b8ecbdbab769d292cd2f50206f58d015785361479b4dfc42915b28bc5bdfff4340c151
@@ -45,6 +45,9 @@ Size (anstyle-query-1.0.2.crate) = 8739 bytes
 BLAKE2s (anstyle-wincon-3.0.2.crate) = bbfa778748f03ce8a31c92745c6164af76628e7734d05021961db40d240aae5a
 SHA512 (anstyle-wincon-3.0.2.crate) = 4cc194faacffa01c6989354c1cadbf1134f0945250f67b7020ab5b475e30db34c799176bd335a6265386cb9c5e8b5bcbdf35894ec0c809b140ffe1c406751931
 Size (anstyle-wincon-3.0.2.crate) = 11272 bytes
+BLAKE2s (any_ascii-0.1.7.crate) = 950c876efe11629ff32d22e54e68d11a74d244c1afa3d31d31187857f25b22c7
+SHA512 (any_ascii-0.1.7.crate) = 3fe4e0c10c32983c3c725a5930f0bf7c752942c6dd0818b93bae9808e72d5a87725733a85b11cabb8fea630f524fd4b7a13160112f8bb7cc24515bcc384d6dbc
+Size (any_ascii-0.1.7.crate) = 220683 bytes
 BLAKE2s (approx-0.4.0.crate) = c80665f3913c69e02f6841d4b21c8b2c75fb22f9265526365eefa9bd9fcc0711
 SHA512 (approx-0.4.0.crate) = eb63504a72065362067cd213543f74206fd6ee93d94d12ed5da9d430341b20cb51c860890465a4118ea0ea30baf84013ab81468b73677742af8a6dbb16121568
 Size (approx-0.4.0.crate) = 14280 bytes
@@ -600,6 +603,9 @@ Size (lazy_static-1.4.0.crate) = 10443 bytes
 BLAKE2s (lebe-0.5.2.crate) = 01e8bce825913aa4c842bf5c4027c23c057e7ac73942ab45ef52df6fd5fce5fa
 SHA512 (lebe-0.5.2.crate) = ae8fce41c9a934999dad672ad74acabac9d7998aac4f1d03b54910d4b941375b9e9721cb1bfc8cd7cfcc4206fc0b18d725b0ea256a3a10a125a8d5848ed761ae
 Size (lebe-0.5.2.crate) = 8422 bytes
+BLAKE2s (lexical-sort-0.3.1.crate) = c152c4dd88f1255ada1ce8c0989cb8564974827f58658bda11e1d441112d4b54
+SHA512 (lexical-sort-0.3.1.crate) = ca7885bc22b4b67053aa7c83299459d5b1f5e627eddbde4827b6a5bf09827ef81d506a445a5a742bc6736cb9e02d7f9b458f16b87ad1af038ea4559ca0184c69
+Size (lexical-sort-0.3.1.crate) = 63689 bytes
 BLAKE2s (libc-0.2.153.crate) = cb963b9c21c5df7aa0739de05120fabd8b0e1205fed4e764ee5af289fc2afc5a
 SHA512 (libc-0.2.153.crate) = 3f99e3a192974fffdc053ef21e9ad5fb54b7cdbd4755df176704a95dba38047138ccab76763e89c6b565f37f98fd549fe368749f84f6d1638b3209cb07eae9b4
 Size (libc-0.2.153.crate) = 740614 bytes
@@ -957,9 +963,9 @@ Size (signal-hook-registry-1.4.1.crate) = 17987 bytes
 BLAKE2s (simd-adler32-0.3.7.crate) = 4e97d965efa10d40728db8210a078be56385eaa8c9226af960f1685713576ea7
 SHA512 (simd-adler32-0.3.7.crate) = 2976bb7fa153854ecd0d68ccdc108bf81d5da374839d53ce9dfb27e80d8db258bb817ea3dac73921e408541d75e2797b6d20fa63c42c1e8a935b6d75dee14bac
 Size (simd-adler32-0.3.7.crate) = 12086 bytes
-BLAKE2s (simp-3.5.1.tar.gz) = 2bea8ffa36ba6bcc350df0b2a05d8670b75d395cf8c9b22f24e910f0763e7fe3
-SHA512 (simp-3.5.1.tar.gz) = 3c6fe578a99dafdb621b53a4169bffd538464fc958c05005126d58d395f83018387d53f24df917535349231210f415ceed59d835c3a256f81d40952a97ad424d
-Size (simp-3.5.1.tar.gz) = 144783 bytes
+BLAKE2s (simp-3.5.1-73500bc954dd8f740df701751a33d7d866f30970.tar.gz) = 6a6edec995aa91b762beedb59458c8f6d72bcc3fb3490b724d1b3359f8372c65
+SHA512 (simp-3.5.1-73500bc954dd8f740df701751a33d7d866f30970.tar.gz) = 38c59295972d0ccf8edc8ec6b8844a8cf1999e7ef617d5ebcd9e69eb40dfc8f3acd04f19f4db6f9e74117152ab5da16fd0b750c11bb302243eaba4646368c810
+Size (simp-3.5.1-73500bc954dd8f740df701751a33d7d866f30970.tar.gz) = 145067 bytes
 BLAKE2s (simplecss-0.2.1.crate) = 484a747a3c6989ca30a472e1485a333a7064f3dc45deefc97dd2d2a4ded4bba6
 SHA512 (simplecss-0.2.1.crate) = 4a7de5e332d88447b418b5eeb9fd87a2ab7ba819c2af4b84988330631a02ec42ec868cf5c6f5f43f8e5d5e78fb9b5d3b6ecbae254fe65ccd9345bb5da01ee6fd
 Size (simplecss-0.2.1.crate) = 19418 bytes
