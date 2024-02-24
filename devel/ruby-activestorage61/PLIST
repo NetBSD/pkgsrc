@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/04 08:02:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/02/24 14:42:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/app/controllers/active_storage/disk_controller.rb
 ${GEM_LIBDIR}/app/controllers/active_storage/representations/base_controller.rb
 ${GEM_LIBDIR}/app/controllers/active_storage/representations/proxy_controller.rb
 ${GEM_LIBDIR}/app/controllers/active_storage/representations/redirect_controller.rb
+${GEM_LIBDIR}/app/controllers/concerns/active_storage/disable_session.rb
 ${GEM_LIBDIR}/app/controllers/concerns/active_storage/file_server.rb
 ${GEM_LIBDIR}/app/controllers/concerns/active_storage/set_blob.rb
 ${GEM_LIBDIR}/app/controllers/concerns/active_storage/set_current.rb
