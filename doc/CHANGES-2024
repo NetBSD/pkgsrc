@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1463 2024/02/24 12:25:27 rhialto Exp $
+$NetBSD: CHANGES-2024,v 1.1464 2024/02/24 13:35:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.6 [taca 2024-02-24]
 	Updated graphics/png to 1.6.43 [wiz 2024-02-24]
 	Updated devel/breezy-qbrz to 0.5.0.0.1667 [rhialto 2024-02-24]
+	Updated graphics/simp to 3.5.1nb1 [pin 2024-02-24]
