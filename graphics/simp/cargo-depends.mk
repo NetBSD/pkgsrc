@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2024/02/23 10:09:12 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2024/02/24 13:34:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -15,6 +15,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.3
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.2
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.2
+CARGO_CRATE_DEPENDS+=	any_ascii-0.1.7
 CARGO_CRATE_DEPENDS+=	approx-0.4.0
 CARGO_CRATE_DEPENDS+=	arboard-3.3.1
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.7
@@ -200,6 +201,7 @@ CARGO_CRATE_DEPENDS+=	kurbo-0.9.5
 CARGO_CRATE_DEPENDS+=	kurbo-0.10.4
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lebe-0.5.2
+CARGO_CRATE_DEPENDS+=	lexical-sort-0.3.1
 CARGO_CRATE_DEPENDS+=	libc-0.2.153
 CARGO_CRATE_DEPENDS+=	libloading-0.7.4
 CARGO_CRATE_DEPENDS+=	libloading-0.8.1
