@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2024/01/28 13:50:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.7 2024/02/24 12:25:15 rhialto Exp $
 
-WHEEL_NAME=	qbrz-0.4.2
-PKGREVISION=	1
-DISTNAME=	breezy-qbrz-0.4.2.0.${VER}
+WHEEL_NAME=	qbrz-0.5.0
+DISTNAME=	breezy-qbrz-0.5.0.0.${VER}
 CATEGORIES=	devel
-VER=		1663	# 0.4.2+
+VER=		1667	# 0.5.0+
 SITES.${DISTNAME}.tar.gz= \
 	-https://bazaar.launchpad.net/~qbrz/qbrz/trunk/tarball/${VER}
 
@@ -19,6 +18,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-fastbencode>0:../../converters/py-fastbencode
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.15:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../x11/py-sip6
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 # The following two are optional (and large).
 #DEPENDS+=	${PYPKGPREFIX}-enchant>=0:../../textproc/py-enchant
 #DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments

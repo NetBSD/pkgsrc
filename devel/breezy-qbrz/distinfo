@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/28 13:50:15 rhialto Exp $
+$NetBSD: distinfo,v 1.5 2024/02/24 12:25:15 rhialto Exp $
 
-BLAKE2s (breezy-qbrz-0.4.2.0.1663.tar.gz) = 8cbf1ee28ffb9e968583c395b820b07bd32d697c8df99c14d775d35abeb8a16b
-SHA512 (breezy-qbrz-0.4.2.0.1663.tar.gz) = c24da0194151012c07a71cd95b56aacb3b37e70aa1cb10656678fad2a67eba4ad25ff39d374a264e6f12052eaecbc7f0d25fa709dd57db286389e3016fd2190c
-Size (breezy-qbrz-0.4.2.0.1663.tar.gz) = 973912 bytes
-SHA1 (patch-lib_diffview.py) = 3bcbfb370a1a2961886c595fa2be5a625c046ff8
+BLAKE2s (breezy-qbrz-0.5.0.0.1667.tar.gz) = 3898b9f45867f2689364b9b5fb6251a22571eaa2f7cbf5b7f11cd28f784fc28a
+SHA512 (breezy-qbrz-0.5.0.0.1667.tar.gz) = 19598d5a96e37fd680e0ba0e6be7120775d1d2b80623169ff622bace645d9b2cf26467e72c3925fa1eedd7d53a2a9e7ac9bdf574ead78de21e0f5cc9583189df
+Size (breezy-qbrz-0.5.0.0.1667.tar.gz) = 973974 bytes
