@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.138 2024/02/24 15:01:53 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.139 2024/02/24 15:02:49 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25904,3 +25904,4 @@ ruby{27,30,31,32,33}-rack2>=2.0<2.2.8.1	denial-of-service	https://discuss.rubyon
 ruby{27,30,31,32,33}-rack>=3.0<3.0.9.1	denial-of-service	https://discuss.rubyonrails.org/t/denial-of-service-vulnerability-in-rack-content-type-parsing/84941
 ruby{27,30,31,32,33}-rack2>=2.0<2.2.8.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-dos-vulnerability-with-range-header-in-rack/84944
 ruby{27,30,31,32,33}-rack>=3.0<3.0.9.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-dos-vulnerability-with-range-header-in-rack/84944
+ruby{27,30,31}-actionpack71>=7.1<7.1.3.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-redos-vulnerability-in-accept-header-parsing-in-action-dispatch/84946
