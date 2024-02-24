@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.140 2024/02/24 15:03:48 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.141 2024/02/24 15:05:22 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25907,3 +25907,5 @@ ruby{27,30,31,32,33}-rack>=3.0<3.0.9.1	denial-of-service	https://discuss.rubyonr
 ruby{27,30,31}-actionpack71>=7.1<7.1.3.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-redos-vulnerability-in-accept-header-parsing-in-action-dispatch/84946
 ruby{27,30,31,32,33}-actionpack70>=7.0<7.0.8.1	cross-site-scripting	https://discuss.rubyonrails.org/t/possible-xss-vulnerability-in-action-controller/84947
 ruby{27,30,31,32,33}-actionpack71>=7.1<7.1.3.2	cross-site-scripting	https://discuss.rubyonrails.org/t/possible-xss-vulnerability-in-action-controller/84947
+ruby{27,30,31,32,33}-activestorage61>=6.1<6.1.7.7	information-leak	https://discuss.rubyonrails.org/t/possible-sensitive-session-information-leak-in-active-storage/84945
+ruby{27,30,31,32,33}-activestorage70>=7.0<7.0.8.1	information-leak	https://discuss.rubyonrails.org/t/possible-sensitive-session-information-leak-in-active-storage/84945
