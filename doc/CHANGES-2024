@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1474 2024/02/24 16:11:39 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1475 2024/02/24 16:15:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-actiontext71 to 7.1.3.2 [taca 2024-02-24]
 	Updated www/ruby-rails71 to 7.1.3.2 [taca 2024-02-24]
 	Updated databases/pear-DB to 1.12.1 [taca 2024-02-24]
+	Updated databases/php-mongo to 1.6.16 [taca 2024-02-24]
