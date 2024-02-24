@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2023/12/17 15:18:27 taca Exp $
+$NetBSD: distinfo,v 1.21 2024/02/24 07:10:37 taca Exp $
 
-BLAKE2s (rex-text-0.2.55.gem) = 14465205fcb1d54c8de985d63f49c64eb39cd7bb7a936969b232316600b06aaa
-SHA512 (rex-text-0.2.55.gem) = 237732a8138c639b89bba06dffb00284f6930465445faf9dbd0acd8b397e41f6049b879a8aafbce9e072a5f6776764e78831bce4fc99d8160587e8d57d416fc3
-Size (rex-text-0.2.55.gem) = 48640 bytes
+BLAKE2s (rex-text-0.2.56.gem) = 07dc75ebb24dba6cd4529b043d6772f65674847fc1d898705794f42c05ddd82e
+SHA512 (rex-text-0.2.56.gem) = 0875f4ca1ea154d59caf2f26a20a8f79305fa6275a7b9499e6f395bfc3fe0907cec477a94b13cd0f50a29fafcbff581e98396ef59b4597b813b14005dcf46187
+Size (rex-text-0.2.56.gem) = 48640 bytes
