@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/06/17 10:23:11 markd Exp $
+# $NetBSD: Makefile,v 1.11 2024/02/25 19:15:30 markd Exp $
 
 DISTNAME=	l3backend
-PKGNAME=	tex-${DISTNAME}-2023.66896
-TEXLIVE_REV=	66896
+PKGNAME=	tex-${DISTNAME}-2023.70027
+TEXLIVE_REV=	70027
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/l3backend
