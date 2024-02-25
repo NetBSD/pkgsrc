@@ -1,11 +1,11 @@
-$NetBSD: patch-config.h.in,v 1.1 2023/06/11 00:59:27 schmonz Exp $
+$NetBSD: patch-config.h.in,v 1.2 2024/02/25 15:13:59 wiz Exp $
 
 Borrow upstream gnulib commit 0814a293:
 Make static_assert work on Solaris 11.4.
 
---- config.h.in.orig	2022-10-16 20:23:50.000000000 +0000
+--- config.h.in.orig	2024-02-24 13:05:34.000000000 +0000
 +++ config.h.in
-@@ -2298,4 +2298,10 @@
+@@ -2665,6 +2665,12 @@
               && __GNUG__ < 6 && __clang_major__ < 6)))
   #include <assert.h>
   #undef/**/assert
@@ -15,4 +15,6 @@ Make static_assert work on Solaris 11.4.
 +  #undef static_assert
 +  #define static_assert _Static_assert
 + #endif
- #endif
+  #ifdef __sgi
+   #undef/**/__ASSERT_H__
+  #endif
