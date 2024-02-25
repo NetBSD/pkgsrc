@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/04 10:47:21 markd Exp $
+$NetBSD: distinfo,v 1.10 2024/02/25 19:42:42 markd Exp $
 
-BLAKE2s (luatexja.r69245.tar.xz) = 7af10fa4235ba1ea84e7983ee37d449f7cd31052b7b6df62ffe775ebf479dd56
-SHA512 (luatexja.r69245.tar.xz) = 359e6852a954aaf5a0aa99881dab189e6d878e5ee4083487d93315652cfb5cbbd010d6dcc74c946ea231073122604f35966744f9e7870dcd1321277fe93074b9
-Size (luatexja.r69245.tar.xz) = 193280 bytes
+BLAKE2s (luatexja.r69988.tar.xz) = 3eb7543ed2aa2b6ffd028603c7bfe316b2e0d7de8884ce517b7d873e30802def
+SHA512 (luatexja.r69988.tar.xz) = 07d0f7ff77fd6f59561c176e6fc25d4b1d4860696aa728c0f9586921f1f32c5a3e01a2f463d5ad3830648fb19ebf6899857259cfa042263f3f17a66b1ec6e0de
+Size (luatexja.r69988.tar.xz) = 193268 bytes
