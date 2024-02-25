@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/01/23 06:33:48 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/02/25 15:54:57 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	asn1-0.15.5
 CARGO_CRATE_DEPENDS+=	asn1_derive-0.15.5
@@ -23,12 +23,13 @@ CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.9
 CARGO_CRATE_DEPENDS+=	pem-3.0.3
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.29
+CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.78
-CARGO_CRATE_DEPENDS+=	pyo3-0.20.2
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.20.2
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.20.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.20.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.20.2
+CARGO_CRATE_DEPENDS+=	pyo3-0.20.3
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.20.3
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.20.3
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.20.3
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.20.3
 CARGO_CRATE_DEPENDS+=	quote-1.0.35
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
