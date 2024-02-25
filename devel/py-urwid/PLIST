@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/02/19 09:23:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/02/25 15:25:03 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -93,7 +93,6 @@ ${PYSITELIB}/urwid/font.pyo
 ${PYSITELIB}/urwid/graphics.py
 ${PYSITELIB}/urwid/graphics.pyc
 ${PYSITELIB}/urwid/graphics.pyo
-${PYSITELIB}/urwid/highlight.css
 ${PYSITELIB}/urwid/listbox.py
 ${PYSITELIB}/urwid/listbox.pyc
 ${PYSITELIB}/urwid/listbox.pyo
