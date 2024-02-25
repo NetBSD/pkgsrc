@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/01/28 18:58:17 wiz Exp $
+$NetBSD: distinfo,v 1.21 2024/02/25 15:49:56 wiz Exp $
 
-BLAKE2s (kid3-3.9.5pre1-7047e1a4f9b0cf2ac8c8291d4b6df19e14f0fad0.tar.gz) = e89d8817aa4a613e017f57e312aff87a1e0c664b435428e348d7dd3267f390ce
-SHA512 (kid3-3.9.5pre1-7047e1a4f9b0cf2ac8c8291d4b6df19e14f0fad0.tar.gz) = 9f5d50b9f9c42def1c3f1352fb82ca2eb0d32bc6cbb3ea0bd0f999e089b261da100e98c4dfe124a24a6588672f02b838188f27c3b915af3d9cccbb63ab8ead22
-Size (kid3-3.9.5pre1-7047e1a4f9b0cf2ac8c8291d4b6df19e14f0fad0.tar.gz) = 3025748 bytes
+BLAKE2s (kid3-3.9.5.tar.gz) = 8d207c4bbcfb6b63324d0e5c111a2ff1f58a1afc612fd370478e950b47c8ef45
+SHA512 (kid3-3.9.5.tar.gz) = 81e9fc4bb533d8a322467be8c9ec0d248ba4fca833ca5052c061812e118ed2978d8deb073db16508ae1782c1b38fa50cc1822989de7d67ffe42aad1fbe66db9f
+Size (kid3-3.9.5.tar.gz) = 3026323 bytes
