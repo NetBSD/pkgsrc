@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2023/06/11 00:59:27 schmonz Exp $
+$NetBSD: distinfo,v 1.16 2024/02/25 15:13:59 wiz Exp $
 
-BLAKE2s (libunistring-1.1.tar.gz) = f12c729f0f4b7ffd2e47e409b27ad9b7738c1245ad7139f2aa84ae9a4cb5066c
-SHA512 (libunistring-1.1.tar.gz) = 9cb1acc8b39096f30e77ad2f4c6127c3ff01588dbf41389ff294e9b89616d54d6a76cad5748f8dcb70b78ec28100fc1272d4eb9e6527b52e89a1ecac25b43647
-Size (libunistring-1.1.tar.gz) = 4272875 bytes
-SHA1 (patch-config.h.in) = bffe6cab9cbf11beb112b2af3d4c860e24d02782
-SHA1 (patch-gnulib-m4_assert__h.m4) = 51f0658dc7e6124ac8fa235b3b21703f9a77713f
+BLAKE2s (libunistring-1.2.tar.gz) = b97d32f3927bb713b91636c347f006c4a2929a57acd0c49cd03e81b6f9dd0575
+SHA512 (libunistring-1.2.tar.gz) = aaf3421fe19bc25bd0f84ba19412fac1ffe2f5f64911de4ddfbccd24ac83afcc6303ea2925c297ef3b387a741e572bea9de1cee8adc0adf850681b09e013c22d
+Size (libunistring-1.2.tar.gz) = 4469574 bytes
+SHA1 (patch-config.h.in) = 0ee6fdbc33866a0ef9524dcbb32804c5c0578a36
+SHA1 (patch-gnulib-m4_assert__h.m4) = b5667ee9c51a676bdd9bd1e91f176fc2cd1c40cb
 SHA1 (patch-lib_Makefile.in) = f2335fa6a8b088e701a4d8bd433b45359be5c243
 SHA1 (patch-lib_stdbool.mini.h) = 0b4a3b3e461b517f28e9a58da0f50045467d2d2a
