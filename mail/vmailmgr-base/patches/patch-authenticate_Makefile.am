@@ -1,0 +1,41 @@
+$NetBSD: patch-authenticate_Makefile.am,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+
+Build Courier IMAP authenticator as a separate package.
+
+Avoid "warning: ignoring prerequisites on suffix rule definition"
+
+--- authenticate/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
++++ authenticate/Makefile.am
+@@ -1,6 +1,8 @@
+ bin_PROGRAMS = checkvpw vauthenticate
++if WANTCOURIER
+ authlib_PROGRAMS = authvmailmgr
+-authlibdir = ${prefix}/lib/courier-imap/libexec/authlib/
++authlibdir = ${prefix}/libexec/courier-authlib/
++endif
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+@@ -17,9 +19,9 @@ docs: $(noinst_HTMLS) $(man_MANS)
+ dist-hook:
+ 	touch $(distdir)/*.html $(distdir)/*.[123456789]
+ 
+-.pod.1: ../configure.ac
++.pod.1:
+ 	$(POD2MAN) --section=1 $< >$@
+-.pod.html: ../configure.ac
++.pod.html:
+ 	$(POD2HTML) $< >$@
+ 
+ AM_CPPFLAGS = -I../lib
+@@ -27,8 +29,10 @@ AM_CPPFLAGS = -I../lib
+ checkvpw_SOURCES = checkvpw.cc authvlib.cc authvlib.h
+ checkvpw_LDADD = ../lib/libvmailmgr.a
+ 
++if WANTCOURIER
+ authvmailmgr_SOURCES = authvmailmgr.cc authvlib.cc authvlib.h
+ authvmailmgr_LDADD = ../lib/libvmailmgr.a -L../lib/courier-authlib -lauthmod
++endif
+ 
+ vauthenticate_SOURCES = vauthenticate.cc authvlib.cc authvlib.h
+ vauthenticate_LDADD = ../lib/libvmailmgr.a
