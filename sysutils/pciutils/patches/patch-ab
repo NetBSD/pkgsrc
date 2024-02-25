@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.7 2022/12/31 22:21:04 msaitoh Exp $
+$NetBSD: patch-ab,v 1.8 2024/02/25 15:08:50 wiz Exp $
 
 lspci on Linux is unprivileged and wants to go in bin, not sbin.
 But that breaks our PLIST so let's not bother with that.
 
---- lib/configure.orig	2022-11-18 22:15:08.000000000 +0900
-+++ lib/configure	2022-11-24 18:48:25.439715651 +0900
-@@ -82,7 +82,6 @@ case $sys in
+--- lib/configure.orig	2024-02-23 13:56:07.000000000 +0000
++++ lib/configure
+@@ -85,7 +85,6 @@ case $sys in
  						;;
  		esac
  		echo >>$c '#define PCI_HAVE_64BIT_ADDRESS'
 -		LSPCIDIR=BINDIR
  		;;
  	sunos)
- 		case $cpu in
-@@ -321,7 +320,7 @@ else
+ 		echo_n " mem-ports ecam"
+@@ -352,7 +351,7 @@ else
  		echo >>$m 'PCILIB_LDFLAGS+=-Wl,--exclude-all-symbols'
  	fi
  fi
