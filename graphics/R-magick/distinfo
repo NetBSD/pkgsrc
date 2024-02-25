@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/25 02:12:43 mef Exp $
+
+BLAKE2s (R/magick_2.8.3.tar.gz) = b606e315f3c3b1c1e2fc655b3a3796d4783232bd55df3e107d783f8e8bb00a46
+SHA512 (R/magick_2.8.3.tar.gz) = a9c4e40e3c4b81a5a2b1af630b9a1544509b7bffee2f5f5657a0671a7a6b4ab2636532526dfbfe481591148bffd04141465b70df8b9476ea66c7c31caea977ab
+Size (R/magick_2.8.3.tar.gz) = 4600396 bytes
