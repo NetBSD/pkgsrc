@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2024/01/13 04:16:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.88 2024/02/25 15:05:34 wiz Exp $
 
-DISTNAME=	libgpg-error-1.47
-PKGREVISION=	1
+DISTNAME=	libgpg-error-1.48
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
