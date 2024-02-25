@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2024/02/19 19:31:38 markd Exp $
+# $NetBSD: Makefile,v 1.91 2024/02/25 19:51:00 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre9
+PKGNAME=	texlive-${DISTNAME}-2023pre10
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	69928
@@ -1067,7 +1067,7 @@ DEPENDS+=	tex-pdfcomment-[0-9]*:../../print/tex-pdfcomment
 # depend pdfpc
 # depend pdfpc-movie
 # depend pdfprivacy
-# depend pdfrender
+DEPENDS+=	tex-pdfrender-[0-9]*:../../print/tex-pdfrender
 # depend pdfreview
 # depend pdfscreen
 # depend pdfslide
