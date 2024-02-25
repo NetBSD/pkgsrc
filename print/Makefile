@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.926 2024/02/19 11:17:38 markd Exp $
+# $NetBSD: Makefile,v 1.927 2024/02/25 19:34:52 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1771,6 +1771,8 @@ SUBDIR+=	tex-xetexconfig
 SUBDIR+=	tex-xetexref-doc
 SUBDIR+=	tex-xfor
 SUBDIR+=	tex-xfor-doc
+SUBDIR+=	tex-xfrac
+SUBDIR+=	tex-xfrac-doc
 SUBDIR+=	tex-xii-doc
 SUBDIR+=	tex-xkeyval
 SUBDIR+=	tex-xkeyval-doc
