@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2023/06/09 12:05:15 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/02/25 22:24:13 adam Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-contrib/Makefile
@@ -33,3 +33,5 @@ CONFIGURE_ARGS+=	--with-shell=${SH:Q}
 CONFIGURE_ARGS+=	TAR=${TAR:Q}
 CONFIGURE_ARGS+=	--mandir=${${PREFIX}/${PKGMANDIR}:L:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CHECK_PORTABILITY_SKIP+=	ci/run-test-slice.sh
