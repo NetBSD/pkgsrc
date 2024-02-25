@@ -1,0 +1,4 @@
+The package provides interfaces for the user to control PDF
+parameters, such as line width or text rendering mode. The
+control operations work in a manner very similar to that of the
+color package.
