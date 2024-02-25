@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.67 2024/01/28 11:55:27 wiz Exp $
+$NetBSD: distinfo,v 1.68 2024/02/25 08:33:37 wiz Exp $
 
-BLAKE2s (Net-DNS-1.43.tar.gz) = 2d34d143e1e00d466dce9cfa24f588138919e64a4aa580fdda216ffc2ad4e24c
-SHA512 (Net-DNS-1.43.tar.gz) = a3d60799e08752e2fb90a856a3e56b13ad655a6dbcf13022f544fd292cd3198b2977d01168052b1954c872f1f9e02f529262dd5127ae58a4aca27f740bc284fd
-Size (Net-DNS-1.43.tar.gz) = 260851 bytes
+BLAKE2s (Net-DNS-1.44.tar.gz) = b6496da96b52cc3aad0082db143a2ca5efe0517e13b6db88222e9d536d3e113d
+SHA512 (Net-DNS-1.44.tar.gz) = 9de622a58d658799f8b3b636408d4e64ce8e4db7623f6e28809e12fb86802c8995e39ee3e0753e13ce8fdc8119fc6a449abc8fd768e72adca205d51fdb774bbe
+Size (Net-DNS-1.44.tar.gz) = 261966 bytes
