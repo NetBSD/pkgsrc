@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.927 2024/02/25 19:34:52 markd Exp $
+# $NetBSD: Makefile,v 1.928 2024/02/25 19:49:02 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1297,6 +1297,8 @@ SUBDIR+=	tex-pdfmanagement-testphase
 SUBDIR+=	tex-pdfmanagement-testphase-doc
 SUBDIR+=	tex-pdfpages
 SUBDIR+=	tex-pdfpages-doc
+SUBDIR+=	tex-pdfrender
+SUBDIR+=	tex-pdfrender-doc
 SUBDIR+=	tex-pdftex
 SUBDIR+=	tex-pdftex-doc
 SUBDIR+=	tex-pdftexcmds

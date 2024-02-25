@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/25 19:49:02 markd Exp $
+share/texmf-dist/tex/latex/pdfrender/pdfrender.sty
