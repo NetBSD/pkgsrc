@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1519 2024/02/25 20:39:52 jun Exp $
+$NetBSD: CHANGES-2024,v 1.1520 2024/02/25 22:00:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2690,3 +2690,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/tex-polyglossia to 2.0 [markd 2024-02-25]
 	Updated print/tex-polyglossia-doc to 2.0 [markd 2024-02-25]
 	Updated emulators/nono to 0.7.0 [jun 2024-02-26]
+	Added audio/eflite version 0.0.0.86 [wiz 2024-02-25]
