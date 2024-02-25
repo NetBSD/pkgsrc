@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2023/12/29 18:24:57 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/25 14:58:00 wiz Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/Botan/botan3/}
@@ -12,6 +11,7 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 GCC_REQD+=		11
+USE_CXX_FEATURES+=	c++20
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
