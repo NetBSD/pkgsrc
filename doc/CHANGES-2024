@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1489 2024/02/25 09:45:27 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1490 2024/02/25 11:13:08 gson Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-IO-AIO to 4.81 [wiz 2024-02-25]
 	Updated time/p5-DateTime-TimeZone to 2.62 [wiz 2024-02-25]
 	Updated archivers/xz to 5.6.0 [wiz 2024-02-25]
+	Updated misc/py-anita to 2.11 [gson 2024-02-25]
