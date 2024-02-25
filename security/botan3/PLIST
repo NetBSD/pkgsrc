@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/19 15:17:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/25 14:58:00 wiz Exp $
 bin/botan3
 include/botan-3/botan/aead.h
+include/botan-3/botan/allocator.h
 include/botan-3/botan/argon2.h
 include/botan-3/botan/argon2fmt.h
 include/botan-3/botan/asio_async_ops.h
+include/botan-3/botan/asio_compat.h
 include/botan-3/botan/asio_context.h
 include/botan-3/botan/asio_error.h
 include/botan-3/botan/asio_stream.h
@@ -62,6 +64,8 @@ include/botan-3/botan/ffi.h
 include/botan-3/botan/filter.h
 include/botan-3/botan/filters.h
 include/botan-3/botan/fpe_fe1.h
+include/botan-3/botan/frodo_mode.h
+include/botan-3/botan/frodokem.h
 include/botan-3/botan/gost_3410.h
 include/botan-3/botan/hash.h
 include/botan-3/botan/hex.h
@@ -95,6 +99,7 @@ include/botan-3/botan/pgp_s2k.h
 include/botan-3/botan/pipe.h
 include/botan-3/botan/pk_algs.h
 include/botan-3/botan/pk_keys.h
+include/botan-3/botan/pk_ops.h
 include/botan-3/botan/pk_ops_fwd.h
 include/botan-3/botan/pkcs10.h
 include/botan-3/botan/pkcs11.h
@@ -171,10 +176,12 @@ include/botan-3/botan/xmss_parameters.h
 include/botan-3/botan/xof.h
 include/botan-3/botan/zfec.h
 include/botan-3/botan/zlib.h
+lib/cmake/Botan-${PKGVERSION}/botan-config-version.cmake
+lib/cmake/Botan-${PKGVERSION}/botan-config.cmake
 lib/libbotan-3.a
 lib/libbotan-3.so
-lib/libbotan-3.so.2
-lib/libbotan-3.so.2.2.0
+lib/libbotan-3.so.3
+lib/libbotan-3.so.3.3.0
 lib/pkgconfig/botan-3.pc
 share/doc/${PKGNAME}/authors.txt
 share/doc/${PKGNAME}/handbook/abi.rst
@@ -199,6 +206,7 @@ share/doc/${PKGNAME}/handbook/api_ref/otp.rst
 share/doc/${PKGNAME}/handbook/api_ref/passhash.rst
 share/doc/${PKGNAME}/handbook/api_ref/pbkdf.rst
 share/doc/${PKGNAME}/handbook/api_ref/pkcs11.rst
+share/doc/${PKGNAME}/handbook/api_ref/providers.rst
 share/doc/${PKGNAME}/handbook/api_ref/psk_db.rst
 share/doc/${PKGNAME}/handbook/api_ref/pubkey.rst
 share/doc/${PKGNAME}/handbook/api_ref/python.rst
@@ -232,9 +240,11 @@ share/doc/${PKGNAME}/handbook/dev_ref/release_process.rst
 share/doc/${PKGNAME}/handbook/dev_ref/test_framework.rst
 share/doc/${PKGNAME}/handbook/dev_ref/todo.rst
 share/doc/${PKGNAME}/handbook/goals.rst
+share/doc/${PKGNAME}/handbook/hardware_acceleration.rst
 share/doc/${PKGNAME}/handbook/index.rst
 share/doc/${PKGNAME}/handbook/migration_guide.rst
 share/doc/${PKGNAME}/handbook/old_news.rst
+share/doc/${PKGNAME}/handbook/openssl_migration_guide.rst
 share/doc/${PKGNAME}/handbook/packaging.rst
 share/doc/${PKGNAME}/handbook/pgpkey.txt
 share/doc/${PKGNAME}/handbook/roadmap.rst
