@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1517 2024/02/25 16:04:51 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1518 2024/02/25 19:58:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2667,3 +2667,25 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cryptography_vectors to 42.0.5 [wiz 2024-02-25]
 	Updated graphics/openexr to 3.2.2 [wiz 2024-02-25]
 	Updated databases/prometheus to 2.50.0 [wiz 2024-02-25]
+	Updated print/tex-colortbl to 1.0g [markd 2024-02-25]
+	Updated print/tex-colortbl-doc to 1.0g [markd 2024-02-25]
+	Updated fonts/tex-jlreq-deluxe to 0.5.0 [markd 2024-02-25]
+	Updated fonts/tex-jlreq-deluxe-doc to 0.5.0 [markd 2024-02-25]
+	Updated devel/tex-l3backend to 2023.70027 [markd 2024-02-25]
+	Updated devel/tex-l3backend-doc to 2023.70027 [markd 2024-02-25]
+	Updated devel/tex-l3experimental to 2023.70027 [markd 2024-02-25]
+	Updated devel/tex-l3kernel-doc to 2023.70027 [markd 2024-02-25]
+	Updated devel/tex-l3packages to 2023.69992 [markd 2024-02-25]
+	Updated devel/tex-l3packages-doc to 2023.69992 [markd 2024-02-25]
+	Added print/tex-xfrac version 2023 [markd 2024-02-25]
+	Added print/tex-xfrac-doc version 2023 [markd 2024-02-25]
+	Updated print/tex-listings to 1.10 [markd 2024-02-25]
+	Updated print/tex-listings-doc to 1.10 [markd 2024-02-25]
+	Updated print/tex-luatexja to 20240219.0 [markd 2024-02-25]
+	Updated print/tex-luatexja-doc to 20240219.0 [markd 2024-02-25]
+	Updated print/tex-oberdiek to 2023 [markd 2024-02-25]
+	Updated print/tex-oberdiek-doc to 2023 [markd 2024-02-25]
+	Added print/tex-pdfrender version 1.8 [markd 2024-02-25]
+	Added print/tex-pdfrender-doc version 1.8 [markd 2024-02-25]
+	Updated print/tex-polyglossia to 2.0 [markd 2024-02-25]
+	Updated print/tex-polyglossia-doc to 2.0 [markd 2024-02-25]
