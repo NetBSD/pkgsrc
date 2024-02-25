@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1502 2024/02/25 15:20:08 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1503 2024/02/25 15:21:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/npth to 1.7 [wiz 2024-02-25]
 	Updated devel/py-astroid to 3.1.0 [wiz 2024-02-25]
 	Updated sysutils/py-puremagic to 1.21 [wiz 2024-02-25]
+	Updated devel/py-pylint to 3.0.4 [wiz 2024-02-25]
