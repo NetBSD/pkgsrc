@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/08/16 12:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/25 15:17:29 wiz Exp $
 
-DISTNAME=	npth-1.6
+DISTNAME=	npth-1.7
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/npth/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,5 +14,7 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
+
+PKGCONFIG_OVERRIDE+=	npth.pc.in
 
 .include "../../mk/bsd.pkg.mk"
