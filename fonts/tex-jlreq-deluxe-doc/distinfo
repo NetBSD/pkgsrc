@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/08 10:33:49 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/02/25 18:42:37 markd Exp $
 
-BLAKE2s (jlreq-deluxe.doc.r66115.tar.xz) = 76e12b2b0bf680b6790ab4bbf368b1bed85ae3c53ed48e9945886608ccaaf430
-SHA512 (jlreq-deluxe.doc.r66115.tar.xz) = ce096d4d8461d1fef3e4c9d24efd8f7a402085ed03852ac2b293467400e2c000633cc852d4a0ccc2b0903c9e3a682770a4edf632183758b9753e6a1c553ecab7
-Size (jlreq-deluxe.doc.r66115.tar.xz) = 66136 bytes
+BLAKE2s (jlreq-deluxe.doc.r69971.tar.xz) = 628cb8be677862e046ffc07568f936fc6889feee02098051eaa0f84a0d3699be
+SHA512 (jlreq-deluxe.doc.r69971.tar.xz) = 8a8dc59a0db9128c3d4db9a207beae6fca412ff9da59b7dfa32741f3cb770ecfe2d5ac1dd02521a938d82c5c15735f8e42ac56906ad59a097a5a150bdde1bc57
+Size (jlreq-deluxe.doc.r69971.tar.xz) = 66496 bytes
