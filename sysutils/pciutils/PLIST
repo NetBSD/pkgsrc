@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/05/13 11:41:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/25 15:08:50 wiz Exp $
 include/pci/config.h
 include/pci/header.h
 include/pci/pci.h
@@ -10,9 +10,11 @@ lib/pkgconfig/libpci.pc
 man/man5/pci.ids.5
 man/man7/pcilib.7
 man/man8/lspci.8
+man/man8/pcilmr.8
 man/man8/setpci.8
 man/man8/update-pciids.8
 sbin/lspci
+sbin/pcilmr
 sbin/setpci
 sbin/update-pciids
 share/pciutils/pci.ids
