@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/02/13 18:16:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/02/25 15:28:08 wiz Exp $
 
-BLAKE2s (tree-sitter-cpp-0.20.4.tar.gz) = e1fc11d7fc22e426f77dc4261d745c2d7d72ef63473c30f4796b2b2fe191aa5f
-SHA512 (tree-sitter-cpp-0.20.4.tar.gz) = 2b3c839891f51987dbe4bda8fc8adf10b3eaf8783ead95a1752259f9798921717f304d90ec6cedf7473845d13824e6ec4deff13816e41633f601a0796c0a332d
-Size (tree-sitter-cpp-0.20.4.tar.gz) = 1404332 bytes
+BLAKE2s (tree-sitter-cpp-0.20.5.tar.gz) = 305a32773bca59911bfd86d500bb09ee6704efea60905571e69904e673746c3c
+SHA512 (tree-sitter-cpp-0.20.5.tar.gz) = 0afe19dc868bce8fef7114c0553ed3af2c479fc84257959a617dd6acf695fb13a91468a3daddafd39cac11f7d5a72ba988bd29d7d7f1987d7486ae4d1dc7f746
+Size (tree-sitter-cpp-0.20.5.tar.gz) = 1442677 bytes
