@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/11/10 18:36:05 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/02/25 22:27:08 adam Exp $
 
-DISTNAME=	importlib_resources-6.1.1
+DISTNAME=	importlib_resources-6.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
@@ -10,8 +10,10 @@ HOMEPAGE=	https://importlib-resources.readthedocs.io/
 COMMENT=	Read resources from Python packages
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-zipp>=3.17:../../archivers/py-zipp
 
 USE_LANGUAGES=	# none
 
