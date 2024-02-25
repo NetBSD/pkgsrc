@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1479 2024/02/25 01:58:50 mef Exp $
+$NetBSD: CHANGES-2024,v 1.1480 2024/02/25 02:14:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-callr to 3.7.5 [mef 2024-02-24]
 	Updated devel/R-usethis to 2.2.3 [mef 2024-02-25]
 	Updated math/R-estimability to 1.5 [mef 2024-02-25]
+	Added graphics/R-magick version 2.8.3 [mef 2024-02-25]
