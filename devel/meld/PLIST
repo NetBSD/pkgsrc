@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2023/07/21 06:54:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2024/02/25 15:16:04 wiz Exp $
 bin/meld
 ${PYSITELIB}/meld/__init__.py
 ${PYSITELIB}/meld/__init__.pyc
@@ -337,6 +337,7 @@ share/locale/hu/LC_MESSAGES/meld.mo
 share/locale/id/LC_MESSAGES/meld.mo
 share/locale/it/LC_MESSAGES/meld.mo
 share/locale/ja/LC_MESSAGES/meld.mo
+share/locale/ka/LC_MESSAGES/meld.mo
 share/locale/ko/LC_MESSAGES/meld.mo
 share/locale/nb/LC_MESSAGES/meld.mo
 share/locale/ne/LC_MESSAGES/meld.mo
