@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/30 05:35:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/25 19:30:00 markd Exp $
 share/texmf-dist/doc/latex/l3packages/CHANGELOG.md
 share/texmf-dist/doc/latex/l3packages/README.md
 share/texmf-dist/doc/latex/l3packages/l3keys2e/l3keys2e-demo.tex
 share/texmf-dist/doc/latex/l3packages/l3keys2e/l3keys2e.pdf
 share/texmf-dist/doc/latex/l3packages/xfp/xfp.pdf
-share/texmf-dist/doc/latex/l3packages/xfrac/xfrac.pdf
 share/texmf-dist/doc/latex/l3packages/xparse/xparse.pdf
 share/texmf-dist/doc/latex/l3packages/xtemplate/xtemplate.pdf
