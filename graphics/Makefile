@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1037 2024/02/01 08:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.1038 2024/02/25 02:14:27 mef Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -34,6 +34,7 @@ SUBDIR+=	R-jpeg
 SUBDIR+=	R-labeling
 SUBDIR+=	R-latex2exp
 SUBDIR+=	R-latticeExtra
+SUBDIR+=	R-magick
 SUBDIR+=	R-manipulateWidget
 SUBDIR+=	R-munsell
 SUBDIR+=	R-png
