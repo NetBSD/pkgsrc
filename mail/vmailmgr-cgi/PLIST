@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+libexec/cgi-bin/listvdomain
+libexec/cgi-bin/vaddalias
+libexec/cgi-bin/vadduser
+libexec/cgi-bin/vchattr
+libexec/cgi-bin/vchforwards
+libexec/cgi-bin/vdeluser
+libexec/cgi-bin/vpasswd

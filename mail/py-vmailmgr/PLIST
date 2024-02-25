@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+${PYSITELIB}/vmailmgr/__init__.py
+${PYSITELIB}/vmailmgr/__init__.pyc
+${PYSITELIB}/vmailmgr/__init__.pyo
+${PYSITELIB}/vmailmgr/commands.py
+${PYSITELIB}/vmailmgr/commands.pyc
+${PYSITELIB}/vmailmgr/commands.pyo
+${PYSITELIB}/vmailmgr/config.py
+${PYSITELIB}/vmailmgr/config.pyc
+${PYSITELIB}/vmailmgr/config.pyo
+${PYSITELIB}/vmailmgr/constants.py
+${PYSITELIB}/vmailmgr/constants.pyc
+${PYSITELIB}/vmailmgr/constants.pyo
+${PYSITELIB}/vmailmgr/daemon.py
+${PYSITELIB}/vmailmgr/daemon.pyc
+${PYSITELIB}/vmailmgr/daemon.pyo
+${PYSITELIB}/vmailmgr/local.py
+${PYSITELIB}/vmailmgr/local.pyc
+${PYSITELIB}/vmailmgr/local.pyo
+${PYSITELIB}/vmailmgr/types.py
+${PYSITELIB}/vmailmgr/types.pyc
+${PYSITELIB}/vmailmgr/types.pyo

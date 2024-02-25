@@ -1,0 +1,80 @@
+# $NetBSD: Makefile.common,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+#
+# used by mail/php-vmailmgr/Makefile
+# used by mail/py-vmailmgr/Makefile
+# used by mail/vmailmgr-base/Makefile
+# used by mail/vmailmgr-cgi/Makefile
+# used by mail/vmailmgr-courier-imap/Makefile
+# used by mail/vmailmgr-docs/Makefile
+
+.include "../../mail/vmailmgr/version.mk"
+
+DISTNAME=		vmailmgr-${GITHUB_TAG}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
+GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+USE_TOOLS+=		autoconf automake gmake perl sh
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+PKG_SYSCONFSUBDIR=	vmailmgr
+
+PATCHDIR=		${.CURDIR}/../../mail/vmailmgr-base/patches
+DISTINFO_FILE=		${.CURDIR}/../../mail/vmailmgr-base/distinfo
+
+REPLACE_PERL=		lib/cli++/*.pl doc/*.pl
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_FILES.version=	configure.ac
+SUBST_VARS.version=	PKGVERSION
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	authenticate/checkvpw.pod doc/HOWTO.texi
+SUBST_SED.prefix=	-e 's|/usr/bin|${PREFIX}/bin|g'
+
+SUBST_CLASSES+=		unused
+SUBST_STAGE.unused=	pre-configure
+SUBST_FILES.unused=	lib/courier-authlib/*.c lib/courier-authlib/*.h
+SUBST_SED.unused=	-e 's|\(.*rcsid\[]=.*;\)$$|// \1|g'
+
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	pre-configure
+SUBST_FILES.sysconf=	php/vmail.inc scripts/vmailmgrd.run
+SUBST_FILES.sysconf+=	lib/config/configrc.h.in lib/config/configrc.h
+SUBST_FILES.sysconf+=	doc/FAQ.texi doc/HOWTO.texi doc/configuration.texi
+SUBST_SED.sysconf=	-e 's|/etc/vmailmgr|${PKG_SYSCONFDIR}|g'
+
+BUILD_DEFS+=		PKG_SYSCONFBASE
+SUBST_CLASSES+=		courier
+SUBST_STAGE.courier=	pre-configure
+SUBST_FILES.courier=	doc/FAQ.texi doc/HOWTO.texi
+SUBST_SED.courier=	-e 's|/usr/lib/courier-imap/etc/imapd\.config|${PKG_SYSCONFBASE}/courier/imapd.cnf|g'
+SUBST_SED.courier+=	-e 's|/usr/lib/courier-imap/libexec/authlib|${PREFIX}/libexec/courier-authlib|g'
+
+BUILD_DEFS+=		QMAILDIR
+SUBST_CLASSES+=		qmaildir
+SUBST_STAGE.qmaildir=	pre-configure
+SUBST_FILES.qmaildir=	lib/config/configrc.in lib/config/_qmail_root.cc
+SUBST_FILES.qmaildir+=	doc/FAQ.texi doc/HOWTO.texi doc/configuration.texi
+SUBST_FILES.qmaildir+=	authenticate/checkvpw.pod
+SUBST_SED.qmaildir=	-e 's|/var/qmail|${QMAILDIR}|g'
+SUBST_SED.qmaildir+=	-e 's|/etc/qmail|${QMAILDIR}|g'
+
+BUILD_DEFS+=		VARBASE
+SUBST_CLASSES+=		varbase
+SUBST_STAGE.varbase=	pre-configure
+SUBST_FILES.varbase=	lib/config/_error_maildir.cc lib/config/_global_bulletin_dir.cc
+SUBST_FILES.varbase+=	lib/config/configrc.in doc/configuration.texi
+SUBST_SED.varbase=	-e 's|/var/lib/vmailmgr|${VARBASE}/vmailmgr|g'
+SUBST_SED.varbase+=	-e 's|/var/spool|${VARBASE}/spool|g'
+
+post-extract:
+	cd ${WRKSRC}/lib/config && ${SH} build-config.sh
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
