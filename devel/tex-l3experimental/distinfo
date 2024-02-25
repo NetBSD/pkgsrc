@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/06/17 10:25:09 markd Exp $
+$NetBSD: distinfo,v 1.22 2024/02/25 19:20:53 markd Exp $
 
-BLAKE2s (l3experimental.r67074.tar.xz) = 3ca3e857eca6d7791609898e29e29d49fb213468f7eb65726bd3329858cd42e8
-SHA512 (l3experimental.r67074.tar.xz) = 209706deb1fe9beae82e2ae93bdbd5caf92f816035be2cb9e8386fee190eb63b70cdc934b1c6f2364fd6573e1de3ae19384c5d1e874b43eddb5286127dabd1f9
-Size (l3experimental.r67074.tar.xz) = 23660 bytes
+BLAKE2s (l3experimental.r70027.tar.xz) = 4fcc0aa8d64593b8950447e26458bfa6333de10c97348c7212b9f0e7ce80cc72
+SHA512 (l3experimental.r70027.tar.xz) = c25e7d14f3208e59bca4da786df9f63bf64455e9adf3517438e4065e99dc0e89fdfdc0325f7aa26aec7e9622b99029a370a5d0fed6bcc780a62094cf26b1a03b
+Size (l3experimental.r70027.tar.xz) = 22784 bytes
