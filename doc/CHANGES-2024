@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1494 2024/02/25 15:04:36 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1495 2024/02/25 15:05:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/botan3 to 3.3.0 [wiz 2024-02-25]
 	Updated security/py-botan3 to 3.3.0 [wiz 2024-02-25]
 	Updated mail/rspamd to 3.8.2 [wiz 2024-02-25]
+	Updated security/libgpg-error to 1.48 [wiz 2024-02-25]
