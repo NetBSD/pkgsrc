@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/14 01:10:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/02/25 15:44:03 wiz Exp $
 include/unicase.h
 include/uniconv.h
 include/unictype.h
 include/unigbrk.h
 include/unilbrk.h
+include/unimetadata.h
 include/uniname.h
 include/uninorm.h
 include/unistdio.h
@@ -36,6 +37,7 @@ share/doc/libunistring/libunistring_2.html
 share/doc/libunistring/libunistring_20.html
 share/doc/libunistring/libunistring_21.html
 share/doc/libunistring/libunistring_22.html
+share/doc/libunistring/libunistring_23.html
 share/doc/libunistring/libunistring_3.html
 share/doc/libunistring/libunistring_4.html
 share/doc/libunistring/libunistring_5.html
@@ -44,4 +46,5 @@ share/doc/libunistring/libunistring_7.html
 share/doc/libunistring/libunistring_8.html
 share/doc/libunistring/libunistring_9.html
 share/doc/libunistring/libunistring_abt.html
+share/doc/libunistring/libunistring_fot.html
 share/doc/libunistring/libunistring_toc.html
