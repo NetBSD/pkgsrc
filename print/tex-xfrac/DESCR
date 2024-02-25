@@ -1,0 +1,5 @@
+This package uses the interface defined by LaTeX templates to
+provide flexible split-level fractions via the \sfrac macro.
+This is both a demonstration of the power of the template
+concept and also a useful addition to the available
+functionality in LaTeX2e.
