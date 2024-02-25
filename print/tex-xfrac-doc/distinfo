@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/25 19:34:52 markd Exp $
+
+BLAKE2s (xfrac.doc.r69888.tar.xz) = bac77a1b1f7fafb02aef6a21b4848113c13c6c8cd313d256edeec1876cd3e885
+SHA512 (xfrac.doc.r69888.tar.xz) = 292b12956c4236510024bb3c85b4b1aa791de4eeba14dd88affe264c6384080c2340eacbeb19592424f2231e8347ae6d1b4fc32eda12320dd694557a982aa80a
+Size (xfrac.doc.r69888.tar.xz) = 639904 bytes
