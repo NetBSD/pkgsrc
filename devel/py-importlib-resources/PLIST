@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/28 19:57:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/02/25 22:27:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,15 +13,27 @@ ${PYSITELIB}/importlib_resources/_adapters.pyo
 ${PYSITELIB}/importlib_resources/_common.py
 ${PYSITELIB}/importlib_resources/_common.pyc
 ${PYSITELIB}/importlib_resources/_common.pyo
-${PYSITELIB}/importlib_resources/_compat.py
-${PYSITELIB}/importlib_resources/_compat.pyc
-${PYSITELIB}/importlib_resources/_compat.pyo
 ${PYSITELIB}/importlib_resources/_itertools.py
 ${PYSITELIB}/importlib_resources/_itertools.pyc
 ${PYSITELIB}/importlib_resources/_itertools.pyo
 ${PYSITELIB}/importlib_resources/abc.py
 ${PYSITELIB}/importlib_resources/abc.pyc
 ${PYSITELIB}/importlib_resources/abc.pyo
+${PYSITELIB}/importlib_resources/compat/__init__.py
+${PYSITELIB}/importlib_resources/compat/__init__.pyc
+${PYSITELIB}/importlib_resources/compat/__init__.pyo
+${PYSITELIB}/importlib_resources/compat/py38.py
+${PYSITELIB}/importlib_resources/compat/py38.pyc
+${PYSITELIB}/importlib_resources/compat/py38.pyo
+${PYSITELIB}/importlib_resources/compat/py39.py
+${PYSITELIB}/importlib_resources/compat/py39.pyc
+${PYSITELIB}/importlib_resources/compat/py39.pyo
+${PYSITELIB}/importlib_resources/future/__init__.py
+${PYSITELIB}/importlib_resources/future/__init__.pyc
+${PYSITELIB}/importlib_resources/future/__init__.pyo
+${PYSITELIB}/importlib_resources/future/adapters.py
+${PYSITELIB}/importlib_resources/future/adapters.pyc
+${PYSITELIB}/importlib_resources/future/adapters.pyo
 ${PYSITELIB}/importlib_resources/py.typed
 ${PYSITELIB}/importlib_resources/readers.py
 ${PYSITELIB}/importlib_resources/readers.pyc
@@ -61,6 +73,7 @@ ${PYSITELIB}/importlib_resources/tests/data02/two/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data02/two/__init__.pyo
 ${PYSITELIB}/importlib_resources/tests/data02/two/resource2.txt
 ${PYSITELIB}/importlib_resources/tests/namespacedata01/binary.file
+${PYSITELIB}/importlib_resources/tests/namespacedata01/subdirectory/binary.file
 ${PYSITELIB}/importlib_resources/tests/namespacedata01/utf-16.file
 ${PYSITELIB}/importlib_resources/tests/namespacedata01/utf-8.file
 ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.py
