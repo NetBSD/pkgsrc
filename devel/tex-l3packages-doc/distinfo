@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2023/04/09 12:40:54 markd Exp $
+$NetBSD: distinfo,v 1.21 2024/02/25 19:30:00 markd Exp $
 
-BLAKE2s (l3packages.doc.r65722.tar.xz) = 86101f52c10d1015267881a886b0882d1d5343f4a760a001b04210b8635730d8
-SHA512 (l3packages.doc.r65722.tar.xz) = 3ece8153e345f4678cf5e4c05200033a64fc7e0d9e80d42ad8f32604f8b78a888ab86a98a8c68144855773d96650698af82af3be77fc7523d7cb9ec36a9c5d9a
-Size (l3packages.doc.r65722.tar.xz) = 1831688 bytes
+BLAKE2s (l3packages.doc.r69992.tar.xz) = 7dfae216b2dd55deacebf2e83e17795a0bf55fed8ba253d079b3991ad7dcdfaf
+SHA512 (l3packages.doc.r69992.tar.xz) = 49e8d52bf64ccd22827ca9faf65dfbe3a4af727feb089509fb512aa5ca8263be2c10294485e6da5bdd6a3426215ec5c83a434322ead9604aa029414b1047cf33
+Size (l3packages.doc.r69992.tar.xz) = 1454172 bytes
