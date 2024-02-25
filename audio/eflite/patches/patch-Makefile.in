@@ -1,0 +1,36 @@
+$NetBSD: patch-Makefile.in,v 1.1 2024/02/25 22:00:09 wiz Exp $
+
+Add DEFS to CFLAGS (for string.h)
+Use DESTDIR in install target
+
+--- Makefile.in.orig	2024-01-14 23:55:06.000000000 +0000
++++ Makefile.in
+@@ -4,7 +4,7 @@
+ # Do not hand edit.
+ 
+ CC       = @CC@
+-CFLAGS   = @CFLAGS@
++CFLAGS   = @CFLAGS@ @DEFS@
+ CPPFLAGS = @CPPFLAGS@
+ DEFS     = @DEFS@
+ LDFLAGS   = @LDFLAGS@
+@@ -18,8 +18,8 @@ FL_LEX   = @FL_LEX@
+ exec_prefix   = @exec_prefix@
+ prefix        = @prefix@
+ EXEEXT	      = @EXEEXT@
+-INSTALLBINDIR = @bindir@
+-INSTALLLIBDIR = @libdir@
++INSTALLBINDIR = $(DESTDIR)/@bindir@
++INSTALLLIBDIR = $(DESTDIR)@libdir@
+ 
+ #CFLAGS+= -DDEBUG=2
+ #CFLAGS+= -DDO_WAVE_CANCEL
+@@ -52,7 +52,7 @@ ifneq (,$(wildcard *.o))
+ endif
+ 
+ install: eflite
+-	mkdir -p $(exec_prefix)/bin && install -c -m 0755 $< $(exec_prefix)/bin
++	mkdir -p $(INSTALLBINDIR) && install -c -m 0755 $< $(INSTALLBINDIR)
+ 
+ test: eflite
+ 	./eflite -f eflite_test.txt
