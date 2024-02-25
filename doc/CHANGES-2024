@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1496 2024/02/25 15:08:59 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1497 2024/02/25 15:12:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/rspamd to 3.8.2 [wiz 2024-02-25]
 	Updated security/libgpg-error to 1.48 [wiz 2024-02-25]
 	Updated sysutils/pciutils to 3.11.1 [wiz 2024-02-25]
+	Updated www/libmicrohttpd to 1.0.1 [wiz 2024-02-25]

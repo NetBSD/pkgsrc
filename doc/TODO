@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24089 2024/02/25 15:08:59 wiz Exp $
+$NetBSD: TODO,v 1.24090 2024/02/25 15:12:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -872,7 +872,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libkactivities4-5.81.0
 	o liblzo-2.10
 	o libmcs-0.7.2
-	o libmicrohttpd-1.0.1
 	o libmilter-8.16.1
 	o libmtag-0.3.6
 	o libobjc2-2.1
