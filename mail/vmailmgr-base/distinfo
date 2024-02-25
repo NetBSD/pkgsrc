@@ -1,0 +1,30 @@
+$NetBSD: distinfo,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+
+BLAKE2s (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 6e83ecea2a0defebd20323fbe9833dc1d4e63e8e2d4c6d904c9558ba32cc9a59
+SHA512 (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 9d717b4b9ae763509d8192c40167606acdc56622d8f9351c763140f5b2573d6c2c1364c33003e1649d2b0d628aadab03690ade20f9e3210c5b44a89237bdd62b
+Size (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 191933 bytes
+SHA1 (patch-Makefile.am) = e78f4db1430c54b6a7a7db4020a4d5169b1b9d22
+SHA1 (patch-acinclude.m4) = 950092d07a7021fb92e4fd4716107a7988a21d22
+SHA1 (patch-authenticate_Makefile.am) = 3529853104846d64882d64be39597cacb0bc6e98
+SHA1 (patch-commands_Makefile.am) = 0fc9881f76fefad7648ecde4bb230278237e33b5
+SHA1 (patch-commands_vadduser.cc) = 425ff956c716b443af4749412dd87e72e9be8af6
+SHA1 (patch-commands_vdeliver.cc) = ddf90a5adefd646872d59591e03f0feeb7f72167
+SHA1 (patch-configure.ac) = d1a9fad59f076debcdeb6fd352a9b691aad9eec6
+SHA1 (patch-daemon_Makefile.am) = 4a0a2bbcc25371ae412c5b64b577a2194a84f2e4
+SHA1 (patch-daemon_main.cc) = e93f2b06b26920ec9dd8aaf8e4029792b9042284
+SHA1 (patch-doc_HOWTO.texi) = 29a8e8413d653e6901c520ecf38d4febfe7a9845
+SHA1 (patch-doc_Makefile.am) = cd16ee93a4209411fdd478d66401dd00fa765013
+SHA1 (patch-lib_cli++_main.cc) = cfa961d73e61fa5bd6ef20efefe77d773f8ef951
+SHA1 (patch-lib_fdbuf_fdbuf.h) = 2607bb82c4d9123df0a94b30fc5930db6429010d
+SHA1 (patch-lib_mergelib.sh) = 59cdc1e5896331195f1d693a7cad4f7f6f7ec8e4
+SHA1 (patch-lib_misc_crc32.cc) = 06c57d2fb85d8e216b9e961aa949d2c7a12d1d3a
+SHA1 (patch-lib_misc_md5-crypt.c) = 34b45a7b10b07bea9a1b64958d8b31b807d75083
+SHA1 (patch-lib_misc_md5.c) = 44a8bdfb8db3861f4e3ca5631f40ab47e4092901
+SHA1 (patch-lib_misc_response.h) = 36b3366b718118139d86121b2473e7f2f6d04c92
+SHA1 (patch-lib_vpwtable_cdb__write.cc) = 68e159457a1c6dd152c9d33abeb4457078a4e666
+SHA1 (patch-lib_vpwtable_gdbm__del.cc) = 9eb35e3d6daaf55aaefdaf7fec33a500e51d7856
+SHA1 (patch-lib_vpwtable_gdbm__exists.cc) = c819d6fb8d410b83faf113d639620dcb44d7ba2d
+SHA1 (patch-lib_vpwtable_gdbm__getbyname.cc) = 6a74f8a8398b6344116d1ded1553a0e795dc809c
+SHA1 (patch-lib_vpwtable_gdbm__put.cc) = 26e9c45bba56cb22fcf17d4a61daef3803ddc752
+SHA1 (patch-lib_vpwtable_gdbm__write.cc) = 5d5bbdc6369292aab87225ba525e81a194aa0d70
+SHA1 (patch-python_Makefile.am) = b1991252f66714b31709a50029fb8c85cd277d79

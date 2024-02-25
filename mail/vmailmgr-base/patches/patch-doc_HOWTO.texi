@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_HOWTO.texi,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+
+Avoid encoding error for umlaut-laden character.
+
+--- doc/HOWTO.texi.orig	2024-02-21 20:15:30.534197736 +0000
++++ doc/HOWTO.texi
+@@ -1,5 +1,6 @@
+ \input texinfo @c -*-texinfo-*-
+ @c %**start of header
++@documentencoding ISO-8859-1
+ @setfilename HOWTO.info
+ @settitle VMailMgr HOWTO
+ @setchapternewpage off

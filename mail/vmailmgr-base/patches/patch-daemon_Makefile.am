@@ -1,0 +1,22 @@
+$NetBSD: patch-daemon_Makefile.am,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+
+Avoid "warning: ignoring prerequisites on suffix rule definition"
+
+--- daemon/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
++++ daemon/Makefile.am
+@@ -15,11 +15,11 @@ docs: $(noinst_HTMLS) $(noinst_TXTS)
+ dist-hook:
+ 	touch $(distdir)/*.html $(distdir)/*.[123456789]
+ 
+-vmailmgrd.pod: main.cc ../configure.ac ../lib/cli++/cli++topod.pl
+-	perl ../lib/cli++/cli++topod.pl $< >$@
+-.pod.8: ../configure.ac
++vmailmgrd.pod:
++	perl ../lib/cli++/cli++topod.pl main.cc >$@
++.pod.8:
+ 	$(POD2MAN) --section=8 $< >$@
+-.pod.html: ../configure.ac
++.pod.html:
+ 	$(POD2HTML) $< >$@
+ 
+ AM_CPPFLAGS = -I../lib

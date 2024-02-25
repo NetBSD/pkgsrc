@@ -1,0 +1,33 @@
+$NetBSD: patch-commands_Makefile.am,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+
+Fix typo in list of .pod files, spotted on Ubuntu via "install: will not
+overwrite just-created vadduser.1"
+
+Avoid "warning: ignoring prerequisites on suffix rule definition"
+
+--- commands/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
++++ commands/Makefile.am
+@@ -4,7 +4,7 @@ bin_SCRIPTS = vaddalias vconf2dir
+ noinst_HEADERS = vcommand.h
+ 
+ noinst_PODS = \
+-	dumpvuser.pod listvdomain.pod vadduser.pod vadduser.pod vchattr.pod \
++	dumpvuser.pod listvdomain.pod vadduser.pod vaddusers.pod vchattr.pod \
+ 	vchforwards.pod vdeliver.pod vdeluser.pod \
+ 	vpasswd.pod vpasswds.pod vrehash.pod vsetup.pod vupgrade.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
+@@ -23,11 +23,11 @@ docs: $(noinst_HTMLS) $(man_MANS)
+ dist-hook:
+ 	touch $(distdir)/*.html $(distdir)/*.[123456789]
+ 
+-.cc.pod: ../configure.ac ../lib/cli++/cli++topod.pl
++.cc.pod:
+ 	perl ../lib/cli++/cli++topod.pl $< >$@
+-.pod.1: ../configure.ac
++.pod.1:
+ 	$(POD2MAN) --section=1 $< >$@
+-.pod.html: ../configure.ac
++.pod.html:
+ 	$(POD2HTML) $< >$@
+ 
+ AM_CPPFLAGS = -I../lib -DBINDIR=\"@bindir@\"
