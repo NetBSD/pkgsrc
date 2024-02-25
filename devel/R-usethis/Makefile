@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/07/22 01:50:27 mef Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/25 01:33:00 mef Exp $
 
 R_PKGNAME=	usethis
-R_PKGVER=	2.2.2
+R_PKGVER=	2.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,7 +28,7 @@ DEPENDS+=	R-gh>=1.0.1:../../www/R-gh
 DEPENDS+=	R-rappdirs-[0-9]*:../../devel/R-rappdirs
 DEPENDS+=	R-whisker-[0-9]*:../../devel/R-whisker
 
-# Packages suggested but not available: 'magick', 'pkgdown', 'styler'
+# Packages suggested but not available: 'magick', 'styler'
 #
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
