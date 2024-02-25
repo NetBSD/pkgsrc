@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1504 2024/02/25 15:22:37 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1505 2024/02/25 15:23:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2654,3 +2654,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-puremagic to 1.21 [wiz 2024-02-25]
 	Updated devel/py-pylint to 3.0.4 [wiz 2024-02-25]
 	Updated devel/py-setuptools-rust to 1.9.0 [wiz 2024-02-25]
+	Updated misc/py-trove-classifiers to 2024.2.23 [wiz 2024-02-25]
