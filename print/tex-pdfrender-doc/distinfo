@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/02/25 19:49:02 markd Exp $
+
+BLAKE2s (pdfrender.doc.r69058.tar.xz) = b455853ca0c05c9861b06b3fb92b47ec0c0b173d091dffdab128957e36ffe169
+SHA512 (pdfrender.doc.r69058.tar.xz) = 447336df8ed6b0f026e9b99a5a45481fb04da0dfe009e091727d99ef536c5e073ca90bb9e4268104146908f5bd6588dbb8d294cceb0acb3f46763e0f835b6803
+Size (pdfrender.doc.r69058.tar.xz) = 394992 bytes
