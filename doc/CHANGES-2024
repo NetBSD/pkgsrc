@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1484 2024/02/25 08:35:04 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1485 2024/02/25 08:36:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2628,3 +2628,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/p5-Net-DNS to 1.44 [wiz 2024-02-25]
 	Updated mail/p5-MIME-Types to 2.26 [wiz 2024-02-25]
 	Updated www/p5-LWP-Protocol-https to 6.13 [wiz 2024-02-25]
+	Updated graphics/p5-Image-ExifTool to 12.76 [wiz 2024-02-25]
