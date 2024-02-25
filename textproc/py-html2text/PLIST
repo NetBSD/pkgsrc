@@ -1,17 +1,21 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/17 18:14:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/02/25 22:31:24 schmonz Exp $
 bin/html2text-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/html2text/__init__.py
 ${PYSITELIB}/html2text/__init__.pyc
 ${PYSITELIB}/html2text/__init__.pyo
 ${PYSITELIB}/html2text/__main__.py
 ${PYSITELIB}/html2text/__main__.pyc
 ${PYSITELIB}/html2text/__main__.pyo
+${PYSITELIB}/html2text/_typing.py
+${PYSITELIB}/html2text/_typing.pyc
+${PYSITELIB}/html2text/_typing.pyo
 ${PYSITELIB}/html2text/cli.py
 ${PYSITELIB}/html2text/cli.pyc
 ${PYSITELIB}/html2text/cli.pyo
@@ -22,9 +26,6 @@ ${PYSITELIB}/html2text/elements.py
 ${PYSITELIB}/html2text/elements.pyc
 ${PYSITELIB}/html2text/elements.pyo
 ${PYSITELIB}/html2text/py.typed
-${PYSITELIB}/html2text/typing.py
-${PYSITELIB}/html2text/typing.pyc
-${PYSITELIB}/html2text/typing.pyo
 ${PYSITELIB}/html2text/utils.py
 ${PYSITELIB}/html2text/utils.pyc
 ${PYSITELIB}/html2text/utils.pyo
