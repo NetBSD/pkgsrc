@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2024/01/18 20:05:14 markd Exp $
+# $NetBSD: Makefile,v 1.22 2024/02/25 19:37:14 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2023.69131
+PKGNAME=	texlive-${DISTNAME}-2023.69888
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69131
+TEXLIVE_REV=	69888
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -86,6 +86,7 @@ DEPENDS+=	tex-ucharcat-[0-9]*:../../print/tex-ucharcat
 DEPENDS+=	tex-underscore-[0-9]*:../../print/tex-underscore
 DEPENDS+=	tex-unicode-math-[0-9]*:../../math/tex-unicode-math
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
+DEPENDS+=	tex-xfrac-[0-9]*:../../print/tex-xfrac
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-xltxtra-[0-9]*:../../print/tex-xltxtra
 DEPENDS+=	tex-xunicode-[0-9]*:../../print/tex-xunicode
