@@ -1,0 +1,54 @@
+$NetBSD: patch-doc_Makefile.am,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+
+Avoid "warning: ignoring prerequisites on suffix rule definition"
+
+--- doc/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
++++ doc/Makefile.am
+@@ -7,10 +7,10 @@ noinst_TXTS = HOWTO.txt FAQ.txt \
+ 	record-format.txt
+ noinst_PODS = vmailmgr.pod
+ noinst_MISC = FAQ.info FAQ.pdf HOWTO.info HOWTO.pdf \
+-	configuration.info translation.pdf translation.ps
++	configuration.info
+ EXTRA_DIST = ChangeLog-pre-vmailmgr ChangeLog-pre-0.70 \
+ 	changelog2html.pl news2html.pl \
+-	YEAR2000 translation.fig \
++	YEAR2000 \
+ 	$(man_MANS) \
+ 	$(noinst_PODS) \
+ 	$(noinst_TEXINFOS) \
+@@ -31,6 +31,7 @@ TEXI2INFO = texi2any --info --no-split -
+ TEXI2TXT = texi2any --plaintext
+ 
+ all: $(noinst_HTMLS) $(noinst_PDFS) $(noinst_TXTS) $(noinst_MISC)
++man: $(man_MANS)
+ 
+ dist-hook:
+ 	touch $(distdir)/*.html
+@@ -43,15 +44,15 @@ ChangeLog.html: ../ChangeLog
+ NEWS.html: ../NEWS
+ 	$(NEWS2HTML) $< >$@
+ 
+-.pod.1: ../configure.ac; $(POD2MAN) --section=1 $< >$@
+-.pod.5: ../configure.ac; $(POD2MAN) --section=5 $< >$@
+-.pod.7: ../configure.ac; $(POD2MAN) --section=7 $< >$@
+-.pod.8: ../configure.ac; $(POD2MAN) --section=8 $< >$@
+-.pod.html: ../configure.ac; $(POD2HTML) $< >$@
+-.texi.html: ../configure.ac; $(TEXI2HTML) $< >$@
+-.texi.txt: ../configure.ac; $(TEXI2TXT) $< >$@
+-.texi.pdf: ../configure.ac; $(TEXI2PDF) $<
+-.texi.info: ../configure.ac; $(TEXI2INFO) $<
++.pod.1: ; $(POD2MAN) --section=1 $< >$@
++.pod.5: ; $(POD2MAN) --section=5 $< >$@
++.pod.7: ; $(POD2MAN) --section=7 $< >$@
++.pod.8: ; $(POD2MAN) --section=8 $< >$@
++.pod.html: ; $(POD2HTML) $< >$@
++.texi.html: ; $(TEXI2HTML) $< >$@
++.texi.txt: ; $(TEXI2TXT) $< >$@
++.texi.pdf: ; $(TEXI2PDF) $<
++.texi.info: ; $(TEXI2INFO) $<
+ 
+-.fig.pdf: ../configure.ac; $(FIG2PDF) $< $@
+-.fig.ps: ../configure.ac; $(FIG2PS) $< $@
++.fig.pdf: ; $(FIG2PDF) $< $@
++.fig.ps: ; $(FIG2PS) $< $@
