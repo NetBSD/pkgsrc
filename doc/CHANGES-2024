@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1516 2024/02/25 15:57:00 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1517 2024/02/25 16:04:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cryptography to 42.0.5 [wiz 2024-02-25]
 	Updated security/py-cryptography_vectors to 42.0.5 [wiz 2024-02-25]
 	Updated graphics/openexr to 3.2.2 [wiz 2024-02-25]
+	Updated databases/prometheus to 2.50.0 [wiz 2024-02-25]
