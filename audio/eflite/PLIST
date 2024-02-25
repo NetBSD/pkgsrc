@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/25 22:00:09 wiz Exp $
+bin/eflite
