@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2024/02/04 07:12:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.641 2024/02/25 12:11:11 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -303,6 +303,7 @@ SUBDIR+=	perdition-postgresql
 SUBDIR+=	pfqueue
 SUBDIR+=	php-imap
 SUBDIR+=	php-mailparse
+SUBDIR+=	php-vmailmgr
 SUBDIR+=	pim-sieve-editor
 SUBDIR+=	pine
 SUBDIR+=	pine-pgp-filters
@@ -345,6 +346,7 @@ SUBDIR+=	py-sendmail-admin
 SUBDIR+=	py-spf
 SUBDIR+=	py-ukpostcodeparser
 SUBDIR+=	py-validate-email-address
+SUBDIR+=	py-vmailmgr
 SUBDIR+=	pymsgauth
 SUBDIR+=	qcheck
 SUBDIR+=	qconfirm
@@ -447,6 +449,11 @@ SUBDIR+=	trojita
 SUBDIR+=	turba
 SUBDIR+=	up-imappproxy
 SUBDIR+=	vm
+SUBDIR+=	vmailmgr
+SUBDIR+=	vmailmgr-base
+SUBDIR+=	vmailmgr-cgi
+SUBDIR+=	vmailmgr-courier-imap
+SUBDIR+=	vmailmgr-docs
 SUBDIR+=	wl-snapshot
 SUBDIR+=	wmbiff
 SUBDIR+=	wmmail
