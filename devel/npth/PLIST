@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/04 05:17:56 ryoon Exp $
-bin/npth-config
+@comment $NetBSD: PLIST,v 1.2 2024/02/25 15:17:29 wiz Exp $
 include/npth.h
 lib/libnpth.la
+lib/pkgconfig/npth.pc
 share/aclocal/npth.m4
