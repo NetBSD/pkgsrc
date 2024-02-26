@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/09/20 20:56:06 he Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/02/26 20:11:44 he Exp $
 bin/ldns-chaos
 bin/ldns-compare-zones
 bin/ldns-config
@@ -27,7 +27,6 @@ bin/ldns-zsplit
 bin/ldnsd
 include/ldns/buffer.h
 include/ldns/common.h
-include/ldns/edns.h
 include/ldns/dane.h
 include/ldns/dname.h
 include/ldns/dnssec.h
@@ -35,6 +34,7 @@ include/ldns/dnssec_sign.h
 include/ldns/dnssec_verify.h
 include/ldns/dnssec_zone.h
 include/ldns/duration.h
+include/ldns/edns.h
 include/ldns/error.h
 include/ldns/higher.h
 include/ldns/host2str.h
