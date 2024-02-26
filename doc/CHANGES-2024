@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1534 2024/02/26 20:13:43 he Exp $
+$NetBSD: CHANGES-2024,v 1.1535 2024/02/26 21:01:27 nros Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2713,3 +2713,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated biology/molsketch to 0.8.1 [pin 2024-02-26]
 	Updated devel/cargo-modules to 0.14.0 [pin 2024-02-26]
 	Updated net/drill to 1.8.3 [he 2024-02-26]
+	Updated security/botan2 to 2.19.4 [nros 2024-02-26]
