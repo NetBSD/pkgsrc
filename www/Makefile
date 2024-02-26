@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1783 2024/02/22 13:07:44 adam Exp $
+# $NetBSD: Makefile,v 1.1784 2024/02/26 15:07:03 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -643,6 +643,7 @@ SUBDIR+=	php-apcu
 SUBDIR+=	php-apcu4
 SUBDIR+=	php-apcu_bc
 SUBDIR+=	php-basercms
+SUBDIR+=	php-concrete-cms
 SUBDIR+=	php-concrete5
 SUBDIR+=	php-contao-manager
 SUBDIR+=	php-curl
