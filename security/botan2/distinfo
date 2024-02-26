@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2022/12/19 17:39:40 nros Exp $
+$NetBSD: distinfo,v 1.5 2024/02/26 21:01:13 nros Exp $
 
-BLAKE2s (Botan-2.19.3.tar.xz) = 124eb756725b0b7fe63a89617940271a6e99cee91ca1f6ca986ce432b7f8fc22
-SHA512 (Botan-2.19.3.tar.xz) = 80012397e2aa7cc88a9536340ac9b770d1195fddda53b9d4cfde82318dd05f9d4f925bbdff773aba99883a701f4d30581e9d5c97e915fa80c3ca2acfa5a92110
-Size (Botan-2.19.3.tar.xz) = 6105896 bytes
+BLAKE2s (Botan-2.19.4.tar.xz) = 7a865e592c497bfff1035d52415cc044c070e4c77a57797f129d08974bd4970a
+SHA512 (Botan-2.19.4.tar.xz) = 2fab4347367703dce8302b7710698ed228c6cc6dd609c39829ba17ad580407ed40d822862d467aa7aea4bfd633c1f1d1c0d437e86376f453845cc609596335d8
+Size (Botan-2.19.4.tar.xz) = 6099528 bytes
 SHA1 (patch-configure.py) = 2688fe59474bf3de425b49d2e0c9c1f4ecccfd16
 SHA1 (patch-src_build-data_os_openbsd.txt) = 7858a819d457e0cb18a5b9d608c386bee36813ee
 SHA1 (patch-src_lib_utils_os__utils.cpp) = cf914c9566e7c0f376b045c85bb39fb6a573b225
