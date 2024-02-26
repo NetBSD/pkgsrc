@@ -1,4 +1,0 @@
-A command line application written in Rust that integrates with cron to execute
-tasks relative to sunset, sunrise and other such solar events.
-Heliocron is capable of delaying execution of other programs for time periods
-relative to sunrise and sunset.
