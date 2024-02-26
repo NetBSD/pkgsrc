@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/01/01 12:34:49 he Exp $
+# $NetBSD: Makefile,v 1.17.20.1 2024/02/26 20:13:05 he Exp $
 
-VERSION=	1.7.1
+.include "../../net/ldns/version.mk"
+
+VERSION=	${LDNS_VERSION}
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
 CATEGORIES=	net
@@ -12,8 +14,8 @@ COMMENT=	DNSSEC debugging tool a'la dig
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
-
-GNU_CONFIGURE=		yes
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
