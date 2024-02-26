@@ -1,8 +1,0 @@
-Small utility that checks if two folders are the same.
-Simple CLI binary written in Rust that computes the hash of every file inside
-two different folders and look for files inside the first folder but not inside
-the second folder, and viceversa, or files with matching path but different
-content (hash).
-
-Check if two folders are the same or not e.g. while copying very important
-files over the network.
