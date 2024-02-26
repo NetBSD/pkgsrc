@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.24 2024/02/18 01:51:01 fox Exp $
+$NetBSD: distinfo,v 1.25 2024/02/26 09:31:51 nia Exp $
 
 BLAKE2s (htop-3.3.0.tar.gz) = 49b573cab35804cb6e0c437af78e9311e00d719e66724222252980cf4b869f99
 SHA512 (htop-3.3.0.tar.gz) = 4c03bd183d97ec84010472ea52ff6e210e6d211c813d0ab52bacef16d7e4eef9483e65279fb0a846dcdb532ad19eb1c1c39bad9dd8b103d36aeb51cb5d28e23a
 Size (htop-3.3.0.tar.gz) = 406012 bytes
-SHA1 (patch-solaris_Platform.h) = c23c6cf20607dd69e626be716337471fffd70d86
+SHA1 (patch-solaris_Platform.c) = 0388d962692ce071e587a9a6a9f809051e817ef8
+SHA1 (patch-solaris_SolarisMachine.c) = 8a25f831b674a2bb2342d70052c78edf3602c81f
+SHA1 (patch-solaris_SolarisMachine.h) = 76d744d0189a7849b2d655e2343569e33609f367
+SHA1 (patch-solaris_SolarisProcess.c) = 5d9725eccbd3a5cf857575f309ec86519adb433e
+SHA1 (patch-solaris_SolarisProcess.h) = a1cc8f29f008e9a21cc79a524f78d9cd91bcd36c
+SHA1 (patch-solaris_SolarisProcessTable.c) = 951b595cce2e6c460a16e46e8a26a6c2329607e0
