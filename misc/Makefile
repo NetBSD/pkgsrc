@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.637 2024/02/08 22:36:14 adam Exp $
+# $NetBSD: Makefile,v 1.638 2024/02/26 19:11:38 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -55,7 +55,6 @@ SUBDIR+=	cstream
 SUBDIR+=	cuecat
 SUBDIR+=	cuetools
 SUBDIR+=	cw
-SUBDIR+=	deckster
 SUBDIR+=	dgpsip
 SUBDIR+=	dialog
 SUBDIR+=	dirdiff
