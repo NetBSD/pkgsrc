@@ -1,0 +1,107 @@
+$NetBSD: README,v 1.1 2024/02/26 15:06:27 taca Exp $
+
+To use Concrete CMS with nginx, you will need to perform the following steps.
+
+1. Install www/nginx and www/php-fpm with following in your mk.conf.
+
+	APACHE_USER=nginx
+	APACHE_GROUP=nginx
+
+2. Setup PHP. At least, ${PREFIX}/etc/php.ini should have date.timezone line.
+   If your machine are located in Tokyo, Japan, you should get the following.
+
+	# cat ${PREFIX}/etc/php.ini | grep date.timezone
+	date.timezone ="Asia/Tokyo"
+
+3. Install MariaDB/MySQL database server.
+
+	# cd databases/mariadb1011-server
+	# make install
+
+4. Start MariaDB/MySQL server, and setup MariaDB/MySQL server
+
+	# ${RCD_SCRIPTS_DIR}/mariadb start
+	And see messages.
+
+5. Add MariaDB/MySQL user, Concrete CMS
+
+	$ mariadb -u root -p
+	Enter password: YOUR_MARIADB_ROOT_PASSWORD
+	> create user concretecms identified by 'concretecms_user_password';
+	> quit
+
+6. Create database for Concrete CMS
+
+	$ mariadb -u root -p
+	Enter password: YOUR_MARIADB_ROOT_PASSWORD
+	> create database concretecms_db;
+	> grant SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER
+	on concretecms_db.* to concretecms@localhost identified by 'concretecms_password';
+	> quit
+
+7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
+
+	default_charaset = UTF8
+	mbstring.language = neutral
+	mbstring.internal_encoding = UTF-8
+	mbstring.http_input = auto
+	mbstring.http_output =  UTF-8
+	iconv.input_encoding = UTF-8
+	iconv.internal_encoding = UTF-8
+
+8. Make sure to your php enabled these modules
+
+	gd		(graphics/php-gd)
+	pdo_mysql	(databases/php-pdo_mysql)
+	iconv		(converters/php-iconv)
+	mbstring	(converters/php-mbstring)
+	curl		(www/php-curl)
+	mcrypt		(security/pecl-mcrypt)
+	zip		(archivers/php-zip)
+
+9. Be sure to have the following lines in ${PREFIX}/etc/nginx/nginx.conf
+
+	http {
+		include /usr/pkg/etc/nginx/mime.types;
+
+		upstream php-handler {
+			server 127.0.0.1:9000;
+	}
+
+	server {
+		listen 80;
+		server_name YOUR_SERVER_NAME;
+		client_max_body_size 20m;
+
+	location / {
+		root   ${PREFIX}/share/concretecms;
+		index  index.php index.html index.htm;
+		try_files $uri $uri/ @rewrite;
+	}
+
+	location @rewrite {
+		rewrite ^/(.*)$ /index.php/$1 last;
+	}
+
+	location ~ \.php($|/) {
+		root    ${PREFIX}/share/concretecms;
+	        fastcgi_pass   127.0.0.1:9000;
+		fastcgi_index  index.php;
+		fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+		include        fastcgi_params;
+	}
+
+	}
+	}
+
+10. Start php-fpm and nginx.
+
+	# ${RCD_SCRIPTS_DIR}/php_fpm start
+	# ${RCD_SCRIPTS_DIR}/nginx start
+
+11. Access http://localhost/
+   And setup with the following information.
+
+	database name:	concretecms_db
+	user name:	concretecms
+	password:	concretecms_password
