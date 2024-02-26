@@ -1,5 +1,0 @@
-Paperoni is a web article downloader written in Rust.
-It takes a url, downloads the article content from it and saves it to an epub.
-
-The project is in alpha release so it might crash when you use it.
-Please open an issue if it does.
