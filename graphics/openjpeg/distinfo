@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2022/05/15 19:24:10 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/02/26 18:15:43 adam Exp $
 
-BLAKE2s (openjpeg-2.5.0.tar.gz) = 8a0fa90f83fd3bfcb890a44ceaab0b3d13a9985abc09efd42783c43d3f6a0ff6
-SHA512 (openjpeg-2.5.0.tar.gz) = 08975a2dd79f1e29fd1824249a5fbe66026640ed787b3a3aa8807c2c69f994240ff33e2132f8bf15bbc2202bef7001f98e42d487231d4eebc8e503538658049a
-Size (openjpeg-2.5.0.tar.gz) = 1867111 bytes
-SHA1 (patch-CMakeLists.txt) = 3738946db63df4d623c6ce486bd22fa4d57336e2
-SHA1 (patch-src_bin_jp2_CMakeLists.txt) = c9f709c23d6bab7a3c705640d66a00ec90ddabc7
-SHA1 (patch-src_lib_openjp2_CMakeLists.txt) = 49e66815ddbca5d01f3ff1c1b8208448e19e2a0c
-SHA1 (patch-src_lib_openjp2_opj__config__private.h.cmake.in) = fc0c170789dbe0a2ebc9dce0ef0d21aa6b2edd49
+BLAKE2s (openjpeg-2.5.1.tar.gz) = 9a824f53a475635d457a2aa782b2af799d880dd166e42c95bdca0e63bbd77bef
+SHA512 (openjpeg-2.5.1.tar.gz) = 7cb0b67e67b3e2799577a6b6f5d60c67c6ce12d16c307e01129b763a48e272eeaf029504dc52b5cc380e562c2db5220f335449b52eacc3784763f95524e4a8d9
+Size (openjpeg-2.5.1.tar.gz) = 1871681 bytes
+SHA1 (patch-CMakeLists.txt) = f9cbfae0f2ff780c6f5250d1a1930d8e8961380d
+SHA1 (patch-src_bin_jp2_CMakeLists.txt) = 2ad64fbd7ce8c084b3d5882d353ae5f6110da183
+SHA1 (patch-src_lib_openjp2_CMakeLists.txt) = 55dccb61e492a7b6b2eca5d91081b2d33ab03ea1
+SHA1 (patch-src_lib_openjp2_opj__config__private.h.cmake.in) = 6d7a88300b29c9bab7fe8c89276d907593961e59
