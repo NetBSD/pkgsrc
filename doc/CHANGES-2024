@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1530 2024/02/26 18:59:33 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1531 2024/02/26 19:01:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2709,3 +2709,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-bottleneck to 1.3.8 [adam 2024-02-26]
 	Updated devel/ast-grep to 0.19.3 [pin 2024-02-26]
 	Updated sysutils/broot to 1.34.0 [pin 2024-02-26]
+	Updated graphics/oculante to 0.8.11 [pin 2024-02-26]
