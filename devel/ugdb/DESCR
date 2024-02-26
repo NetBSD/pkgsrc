@@ -1,7 +1,0 @@
-ugdb is an unsegen based alternative TUI for gdb.
-The interface consists of 4 containers between which the user can switch with
-vim-like controls: To enter selection mode, press ESC (indicated by orange
-separators). You can then navigate between containers using arrow keys or hjkl.
-Press Enter to enter insert-mode and interact with the selected container.
-Alternatively press the shortcut key for the specific container to directly
-enter it from selection mode.
