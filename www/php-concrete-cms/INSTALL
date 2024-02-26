@@ -1,0 +1,16 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2024/02/26 15:06:27 taca Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+CC_WEBDIR="@PREFIX@/@CC_WEBDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${CC_WEBDIR} &&
+		${CHOWN} -R ${WWWOWN} ${CC_WEBDIR} &&
+		${CHGRP} -R ${WWWGRP} ${CC_WEBDIR} &&
+		${CHMOD} 0770 ${CC_WEBDIR}/application/files
+	;;
+esac
