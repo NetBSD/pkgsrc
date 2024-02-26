@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1113 2024/02/26 19:24:19 pin Exp $
+# $NetBSD: Makefile,v 1.1114 2024/02/26 19:24:59 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -692,7 +692,6 @@ SUBDIR+=	scriptisto
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
 SUBDIR+=	setquota
-SUBDIR+=	sfm
 SUBDIR+=	sformat
 SUBDIR+=	shc
 SUBDIR+=	shelldap
