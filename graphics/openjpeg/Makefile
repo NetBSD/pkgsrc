@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/10/21 17:10:37 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2024/02/26 18:15:43 adam Exp $
 
-DISTNAME=	openjpeg-2.5.0
-PKGREVISION=	2
+DISTNAME=	openjpeg-2.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uclouvain/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,8 +10,8 @@ HOMEPAGE=	https://www.openjpeg.org/
 COMMENT=	JPEG 2000 library
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	c99 c++
-CMAKE_ARGS+=	-DOPENJPEG_INSTALL_MAN_DIR=${PKGMANDIR}
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
