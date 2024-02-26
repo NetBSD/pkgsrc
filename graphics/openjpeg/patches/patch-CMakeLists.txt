@@ -1,7 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/01/23 17:15:09 pho Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/02/26 18:15:43 adam Exp $
 
 Move checks for aligned malloc function from opj_malloc.h to cmake.
-See also patch-aa
+See also patch-src_lib_openjp2_opj__config__private.h.cmake.in.
 
 --- CMakeLists.txt.orig	2015-01-23 16:40:21.000000000 +0000
 +++ CMakeLists.txt

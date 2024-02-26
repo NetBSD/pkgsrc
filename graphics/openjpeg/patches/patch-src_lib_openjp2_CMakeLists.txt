@@ -1,18 +1,18 @@
-$NetBSD: patch-src_lib_openjp2_CMakeLists.txt,v 1.3 2022/05/15 19:24:11 adam Exp $
+$NetBSD: patch-src_lib_openjp2_CMakeLists.txt,v 1.4 2024/02/26 18:15:43 adam Exp $
 
 Install man pages without building other docs.
 
---- src/lib/openjp2/CMakeLists.txt.orig	2022-05-13 16:54:29.000000000 +0000
+--- src/lib/openjp2/CMakeLists.txt.orig	2024-02-26 14:17:28.000000000 +0000
 +++ src/lib/openjp2/CMakeLists.txt
-@@ -127,12 +127,10 @@ install(FILES openjpeg.h opj_stdint.h
-   DESTINATION ${OPENJPEG_INSTALL_INCLUDE_DIR} COMPONENT Headers
+@@ -124,12 +124,10 @@ install(FILES openjpeg.h
+   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${OPENJPEG_INSTALL_SUBDIR} COMPONENT Headers
  )
  
 -if(BUILD_DOC)
  # install man page of the library
  install(
    FILES       ${OPENJPEG_SOURCE_DIR}/doc/man/man3/libopenjp2.3
-   DESTINATION ${OPENJPEG_INSTALL_MAN_DIR}/man3)
+   DESTINATION ${CMAKE_INSTALL_MANDIR}/man3)
 -endif()
  
  if(BUILD_LUTS_GENERATOR)
