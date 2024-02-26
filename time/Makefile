@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2024/01/24 21:49:04 adam Exp $
+# $NetBSD: Makefile,v 1.268 2024/02/26 19:26:56 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -43,7 +43,6 @@ SUBDIR+=	gnyaclock
 SUBDIR+=	grdc
 SUBDIR+=	hebcal
 SUBDIR+=	heirloom-date
-SUBDIR+=	heliocron
 SUBDIR+=	hs-clock
 SUBDIR+=	hs-hourglass
 SUBDIR+=	hs-old-time
