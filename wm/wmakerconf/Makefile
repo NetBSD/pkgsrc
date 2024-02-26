@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2023/11/14 14:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/02/26 22:19:36 wiz Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	65
-CATEGORIES=	x11 wm windowmaker
+CATEGORIES=	wm x11 windowmaker
 MASTER_SITES=	http://starplot.org/wmakerconf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,6 +28,7 @@ REPLACE_PERL+=		scripts/*.pl.in
 USE_TOOLS+=		perl:run
 
 LDFLAGS.SunOS+=		-lX11
+LDFLAGS.Linux+=		-lX11
 
 post-extract:
 	${MV} ${WRKSRC}/data/WMWmakerconf ${WRKSRC}/data/WMWmakerconf.in
