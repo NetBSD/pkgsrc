@@ -1,4 +1,0 @@
-ApeCrunch aims to be a fast, user-friendly Rust/TUI calculator port of the
-popular SpeedCrunch project.
-While not a copy-paste port, there are plans to implement every function
-SpeedCrunch supports plus the addition of much more.
