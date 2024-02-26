@@ -1,9 +1,0 @@
-Longboard: The easy way to surf*.
-
-Features:
--provide a request body on the command line
--options: h1, curl and hyper for the surf* http backend
--provide a file system path to a file to use as the request body
-
-*surf is a fast and friendly HTTP client framework for async Rust, it's
-completely modular, and built directly for async/await.
