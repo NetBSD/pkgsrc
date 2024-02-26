@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2024/02/26 19:15:30 pin Exp $
+# $NetBSD: Makefile,v 1.246 2024/02/26 19:16:27 pin Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -12,7 +12,6 @@ SUBDIR+=	abiword-plugins
 SUBDIR+=	beav
 SUBDIR+=	beaver
 SUBDIR+=	biew
-SUBDIR+=	bred
 SUBDIR+=	bvi
 SUBDIR+=	ce
 SUBDIR+=	ced
