@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/11/14 14:01:27 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/02/26 19:01:45 pin Exp $
 
-DISTNAME=	Molsketch-0.8.0-src
+DISTNAME=	Molsketch-0.8.1-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
-PKGREVISION=	6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=molsketch/}
 
@@ -13,14 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	pkg-config
 
-USE_CMAKE=	yes
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+WRKSRC=	${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++
 
 # std::transform_reduce
 USE_CXX_FEATURES+=	parallelism_ts
 
+CMAKE_ARGS+=	-DMSK_QT6=true
 CMAKE_ARGS+=	-DMSK_PREFIX=${PREFIX:Q}
 CMAKE_ARGS+=	-DMSK_INSTALL_PREFIX=${PREFIX:Q}
 CMAKE_ARGS+=	-DMSK_INSTALL_DOCS=/share/doc/molsketch
@@ -32,10 +30,11 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/molsketch_LIB_autogen
 	${RM} -rf ${DESTDIR}${PREFIX}/include/libmolsketch/CMakeFiles
 
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../biology/openbabel/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
