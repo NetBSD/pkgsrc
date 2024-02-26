@@ -1,6 +1,0 @@
-TUI to study flashcards in the terminal.
-
-Spaced repetition in the terminal. Inspired by Anki and uses a modified SM2
-algorithm.
-
-Cards should be saved in TOML format.
