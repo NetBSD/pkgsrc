@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24110 2024/02/26 22:13:00 wiz Exp $
+$NetBSD: TODO,v 1.24111 2024/02/26 22:16:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,10 @@ Suggested new packages
 	nextpnr
 	https://github.com/YosysHQ/nextpnr
 	place and route for FPGA architectures
+
+	icestorm
+	https://github.com/YosysHQ/icestorm
+	Lattice iCE40 FPGAs Bitstream Documentation and tools
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
