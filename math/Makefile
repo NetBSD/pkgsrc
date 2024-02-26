@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2024/02/26 19:20:33 pin Exp $
+# $NetBSD: Makefile,v 1.590 2024/02/26 19:21:30 pin Exp $
 
 COMMENT=	Mathematics
 
@@ -143,7 +143,6 @@ SUBDIR+=	algae
 SUBDIR+=	amath
 SUBDIR+=	analitza
 SUBDIR+=	antixls
-SUBDIR+=	apecrunch
 SUBDIR+=	aribas
 SUBDIR+=	armadillo
 SUBDIR+=	arpack-ng
