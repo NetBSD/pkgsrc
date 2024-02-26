@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/24 11:59:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/02/26 21:01:13 nros Exp $
 bin/botan
 include/botan-2/botan/adler32.h
 include/botan-2/botan/aead.h
@@ -317,7 +317,7 @@ include/botan-2/botan/zlib.h
 lib/libbotan-2.a
 lib/libbotan-2.so
 lib/libbotan-2.so.19
-lib/libbotan-2.so.19.19.3
+lib/libbotan-2.so.19.19.4
 lib/pkgconfig/botan-2.pc
 ${PYSITELIB}/botan2.py
 share/doc/${PKGNAME}/authors.txt
