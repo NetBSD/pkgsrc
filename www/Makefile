@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1784 2024/02/26 15:07:03 taca Exp $
+# $NetBSD: Makefile,v 1.1785 2024/02/26 19:10:11 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1179,7 +1179,6 @@ SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
 SUBDIR+=	xh
-SUBDIR+=	xurl
 SUBDIR+=	yahttp
 SUBDIR+=	yaws
 SUBDIR+=	z-push
