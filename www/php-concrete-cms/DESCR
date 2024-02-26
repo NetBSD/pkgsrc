@@ -1,0 +1,24 @@
+Concrete CMS
+
+Concrete CMS is a web content management system designed for creating and
+managing websites.  Its interface is user-friendly, catering to both novices
+and experts.
+
+Concrete is written in PHP and JavaScript and it pulls data from a MySQL
+database.
+
+In Concrete CMS, your website is structured as a hierarchy of pages
+organized within a sitemap.  Each page adheres to a specific Page Type and
+utilizes one of its associated Templates.  These Templates are PHP files
+that combine standard HTML/CSS with dynamic Block Areas.  Within Block
+Areas, you can insert Blocks, which range from basic HTML Text to advanced
+interactive features like forms.  Block Areas can be further refined using
+Layouts or Containers.  While Layouts simply split a block area into
+columns, Containers are code-defined and can encompass additional markup and
+styling.
+
+* Files
+* Users, Groups & Authentication
+* Permissions & Workflow
+* Attributes
+* Packages
