@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1526 2024/02/26 14:12:14 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1527 2024/02/26 15:07:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-markdown2 to 2.4.13 [adam 2024-02-26]
 	Updated textproc/py-phonenumbers to 8.13.31 [adam 2024-02-26]
 	Updated www/php-contao-manager to 1.8.4 [taca 2024-02-26]
+	Added www/php-concrete-cms version 9.2.6 [taca 2024-02-26]
