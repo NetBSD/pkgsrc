@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/07/02 19:50:03 pin Exp $
+# $NetBSD: Makefile,v 1.90 2024/02/26 19:19:38 pin Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -113,7 +113,6 @@ SUBDIR+=	py-trytond-stock-supply
 SUBDIR+=	py-trytond-stock-supply-day
 SUBDIR+=	py-trytond-stock-supply-forecast
 SUBDIR+=	py-trytond-stock-supply-production
-SUBDIR+=	rates
 SUBDIR+=	rex
 SUBDIR+=	ruby-activemerchant
 SUBDIR+=	ruby-braintree
