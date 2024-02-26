@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2024/02/26 19:26:56 pin Exp $
+# $NetBSD: Makefile,v 1.269 2024/02/26 19:27:51 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -193,7 +193,6 @@ SUBDIR+=	py-types-python-dateutil
 SUBDIR+=	py-tzdata
 SUBDIR+=	py-tzlocal
 SUBDIR+=	py-vdirsyncer
-SUBDIR+=	quest-tui
 SUBDIR+=	rclock
 SUBDIR+=	rem2ics
 SUBDIR+=	remind
