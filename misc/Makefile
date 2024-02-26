@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.639 2024/02/26 19:22:26 pin Exp $
+# $NetBSD: Makefile,v 1.640 2024/02/26 19:23:23 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -371,7 +371,6 @@ SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
 SUBDIR+=	ruby-windows_error
 SUBDIR+=	rust-kanban
-SUBDIR+=	rustentia
 SUBDIR+=	s6-portable-utils
 SUBDIR+=	sch
 SUBDIR+=	sci

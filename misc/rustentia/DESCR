@@ -1,2 +1,0 @@
-Rustentia is a flashcards application written in Rust with egui using rusqlite
-for making and managing the database.
