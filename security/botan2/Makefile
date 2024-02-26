@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/12/29 18:24:57 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/02/26 21:01:13 nros Exp $
 
-DISTNAME=	Botan-2.19.3
+DISTNAME=	Botan-2.19.4
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -48,6 +47,9 @@ CONFIGURE_ARGS+=	--cpu=arm64
 .elif ${MACHINE_ARCH:Mearm*}
 CONFIGURE_ARGS+=	--cpu=arm32
 .endif
+
+PKGCONFIG_OVERRIDE=		build/botan-2.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
