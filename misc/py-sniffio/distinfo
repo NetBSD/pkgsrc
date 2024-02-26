@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/10/13 16:41:03 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/02/26 09:34:47 adam Exp $
 
-BLAKE2s (sniffio-1.3.0.tar.gz) = ce225d353c1d7e363aef15051e8202359cb4eee2e56915e1c0d38df38b692cc6
-SHA512 (sniffio-1.3.0.tar.gz) = 88228ec336f331ac32d3bbc1caf57cce417333cb697b44c7028da25380a36e118851d35214b4cddc9e8ab3c737d8c02e15de1374152c0850b344f64493616941
-Size (sniffio-1.3.0.tar.gz) = 17103 bytes
+BLAKE2s (sniffio-1.3.1.tar.gz) = 784426d40a2442f4f5d6624dd828be1e30ca6f80505b64d63e2caf9bd522b931
+SHA512 (sniffio-1.3.1.tar.gz) = 210b60224b54b20153059c3419951156fff41dc32876ed0b0640dd5dfb600ce324e0fc0b0c20a3467baa3e5383bf3157b99f22fd5bfe7ec3321aca6b166ce1af
+Size (sniffio-1.3.1.tar.gz) = 20372 bytes
