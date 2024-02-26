@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2023/10/24 22:10:21 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/02/26 20:11:44 he Exp $
 
-DISTNAME=	ldns-1.8.3
+.include "../../net/ldns/version.mk"
+
+DISTNAME=	ldns-${LDNS_VERSION}
 PKGNAME=	${DISTNAME:S/-rc./rc/}
 PKGREVISION=	1
 CATEGORIES=	net
