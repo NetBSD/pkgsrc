@@ -1,4 +1,0 @@
-This is the extension library to access a MySQL database from Ruby,
-which provides the same function as C API.
-
-This is mysql-ruby 2.8.x.
