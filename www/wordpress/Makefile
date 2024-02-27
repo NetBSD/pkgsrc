@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2022/11/28 09:26:18 morr Exp $
+# $NetBSD: Makefile,v 1.107 2024/02/27 23:09:39 morr Exp $
 
 DISTNAME=		wordpress-${VERSION}
-VERSION=		6.1
+PKGNAME=               ${PHP_PKG_PREFIX}-${DISTNAME}
+VERSION=		6.4.3
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
 
@@ -11,6 +12,8 @@ COMMENT=		Blogging tool written in php
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		pax
+
+PHP_VERSIONS_ACCEPTED=	74 81 82 83
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
