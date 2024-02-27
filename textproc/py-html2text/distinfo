@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2024/02/25 22:31:24 schmonz Exp $
+$NetBSD: distinfo,v 1.42 2024/02/27 19:34:05 schmonz Exp $
 
-BLAKE2s (html2text-2024.2.25.tar.gz) = bc6758796c7fcd0499221de4dcc6a01509fb4ec9e9b4947d9947e59d0b7cf803
-SHA512 (html2text-2024.2.25.tar.gz) = 9adf1367b644a7dccef35ddd0041ade8a206943927585a4c1766ff76e2ffc9ab58479d285fe8eb2e18b80270f9eb50ec82855fb8b0df8525e905278abd8ddc22
-Size (html2text-2024.2.25.tar.gz) = 56175 bytes
+BLAKE2s (html2text-2024.2.26.tar.gz) = 8d393e7c89dfe43df683c203a8ca00c8a688aa2a6edbda96e7e920896ac596f8
+SHA512 (html2text-2024.2.26.tar.gz) = 8304dbc0a8d06ea1bbed4edccbbcb817423bab7acbaa9db84c6c9c3e74a8d1daec148cb591b76b7d5865224ea424b388316c867bda4b07b19ed91272b7beff88
+Size (html2text-2024.2.26.tar.gz) = 56527 bytes
