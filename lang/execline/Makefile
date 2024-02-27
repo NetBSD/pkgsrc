@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2023/11/11 11:52:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2024/02/27 04:40:22 charlotte Exp $
 
 DISTNAME=	execline-2.9.4.0
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 
-MAINTAINER=	charlotte@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://skarnet.org/software/execline/
 COMMENT=	The execline scripting language
 LICENSE=	isc
