@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.2 2024/02/25 12:44:44 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2024/02/27 19:13:43 schmonz Exp $
 
 BLAKE2s (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 6e83ecea2a0defebd20323fbe9833dc1d4e63e8e2d4c6d904c9558ba32cc9a59
 SHA512 (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 9d717b4b9ae763509d8192c40167606acdc56622d8f9351c763140f5b2573d6c2c1364c33003e1649d2b0d628aadab03690ade20f9e3210c5b44a89237bdd62b
 Size (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 191933 bytes
-SHA1 (patch-Makefile.am) = e78f4db1430c54b6a7a7db4020a4d5169b1b9d22
+SHA1 (patch-Makefile.am) = 707c7a590153618eb7d94d57f314c706577e6300
 SHA1 (patch-acinclude.m4) = 950092d07a7021fb92e4fd4716107a7988a21d22
 SHA1 (patch-authenticate_Makefile.am) = 3529853104846d64882d64be39597cacb0bc6e98
 SHA1 (patch-commands_Makefile.am) = 0fc9881f76fefad7648ecde4bb230278237e33b5
 SHA1 (patch-commands_vadduser.cc) = 425ff956c716b443af4749412dd87e72e9be8af6
 SHA1 (patch-commands_vdeliver.cc) = 0b0217839a0edab2dd070bd4377b8b273f44e836
-SHA1 (patch-configure.ac) = d1a9fad59f076debcdeb6fd352a9b691aad9eec6
+SHA1 (patch-configure.ac) = a3bd54716955c6351b4b045d698932465cbfc6de
 SHA1 (patch-daemon_Makefile.am) = 4a0a2bbcc25371ae412c5b64b577a2194a84f2e4
 SHA1 (patch-daemon_main.cc) = e93f2b06b26920ec9dd8aaf8e4029792b9042284
 SHA1 (patch-doc_HOWTO.texi) = 29a8e8413d653e6901c520ecf38d4febfe7a9845
@@ -27,4 +27,9 @@ SHA1 (patch-lib_vpwtable_gdbm__exists.cc) = c819d6fb8d410b83faf113d639620dcb44d7
 SHA1 (patch-lib_vpwtable_gdbm__getbyname.cc) = 6a74f8a8398b6344116d1ded1553a0e795dc809c
 SHA1 (patch-lib_vpwtable_gdbm__put.cc) = 26e9c45bba56cb22fcf17d4a61daef3803ddc752
 SHA1 (patch-lib_vpwtable_gdbm__write.cc) = 5d5bbdc6369292aab87225ba525e81a194aa0d70
-SHA1 (patch-python_Makefile.am) = b1991252f66714b31709a50029fb8c85cd277d79
+SHA1 (patch-python_vmailmgr_Makefile.am) = cbefbe6c445f564e5cc746ddfd027780abc79000
+SHA1 (patch-python_vmailmgr_____init____.py) = 60a51b6b2e97fd9670efc8bfe30dbc72f9fdb682
+SHA1 (patch-python_vmailmgr_commands.py) = fc2204441d320c47ab1e92d8b0b22d8ca94cdf02
+SHA1 (patch-python_vmailmgr_config.py) = 4b7c1aa0a6c5019b8585bf5a2b98fe26acc7e6da
+SHA1 (patch-python_vmailmgr_daemon.py) = 019bd45669340204aa732fc4a1b9e0b9d006ae0c
+SHA1 (patch-python_vmailmgr_types.py) = 386da866b46f8a886f9951db1c2a4c6433ef0741
