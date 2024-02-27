@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1549 2024/02/27 23:10:22 morr Exp $
+$NetBSD: CHANGES-2024,v 1.1550 2024/02/27 23:51:47 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-html2text to 2024.2.26 [schmonz 2024-02-27]
 	Updated devel/cargo-modules to 0.14.1 [pin 2024-02-27]
 	Updated www/wordpress to 6.4.3 [morr 2024-02-28]
+	Updated wm/cwm to 7.4 [charlotte 2024-02-28]
