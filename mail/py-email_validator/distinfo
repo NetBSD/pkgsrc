@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/31 00:02:03 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/02/27 08:39:39 adam Exp $
 
-BLAKE2s (email_validator-2.1.0.post1.tar.gz) = 9a82ac5e0af5595daaf6936214b2e7a592fb6f782f01d509c0da6c007da949d8
-SHA512 (email_validator-2.1.0.post1.tar.gz) = a9ed642bf3c8f80b3a5e832f31e4ea114dcb012afe162439803a499a7ad016b10f6a25092cc61e445f91a1fe1ab6cfb7eb0aca054fd5458c0b935baf92735739
-Size (email_validator-2.1.0.post1.tar.gz) = 46288 bytes
+BLAKE2s (email_validator-2.1.1.tar.gz) = 636d311c4151f01007e27b642b781000cae045e4dd4e6a2281e33cafe2f15600
+SHA512 (email_validator-2.1.1.tar.gz) = 659bc5ec1583ff0fdeb256f57ac2506089758772fb471a49865cdee62af3f96a43ff21a94099bb13b69f1efff20952f33ad6bf0cb1bea0793285820948c9fdb4
+Size (email_validator-2.1.1.tar.gz) = 44709 bytes
