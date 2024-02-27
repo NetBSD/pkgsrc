@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1538 2024/02/27 10:26:38 triaxx Exp $
+$NetBSD: CHANGES-2024,v 1.1539 2024/02/27 10:35:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/py-test-mypy-testing to 0.1.2 [adam 2024-02-27]
 	Updated sysutils/ansible-core to 2.16.4 [adam 2024-02-27]
 	Updated audio/asunder to 3.0.1 [triaxx 2024-02-27]
+	Updated meta-pkgs/bulk-test-php to 20240227 [wiz 2024-02-27]
