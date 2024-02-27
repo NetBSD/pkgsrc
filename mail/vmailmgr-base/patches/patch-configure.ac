@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/02/27 19:13:43 schmonz Exp $
 
 Don't build courier-imap, cgi, php, or python by default.
 Remove unused text-browser checks.
@@ -24,7 +24,7 @@ Remove unused text-browser checks.
  AC_CACHE_CHECK(Python library path, local_cv_python_lib_dir,
  [[if test -x "$PYTHON"; then
 -  local_cv_python_lib_dir=`$PYTHON -c "import sys;print sys.path[1]"`
-+  local_cv_python_lib_dir=`$PYTHON -c "import sys;print(sys.path[2])"`/site-packages
++  local_cv_python_lib_dir=`$PYTHON -c "import site;print(site.getsitepackages()[0])"`
  else
    local_cv_python_lib_dir=NONE
  fi]])
@@ -90,3 +90,10 @@ Remove unused text-browser checks.
  AC_CONFIG_HEADERS([config.h])
  AC_CONFIG_FILES(Makefile
  	cgi/Makefile
+@@ -141,5 +148,5 @@ AC_CONFIG_FILES(Makefile
+ 	lib/vpwtable/Makefile
+ 	scripts/Makefile
+ 	php/Makefile
+-	python/Makefile)
++	python/vmailmgr/Makefile)
+ AC_OUTPUT

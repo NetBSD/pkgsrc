@@ -1,0 +1,15 @@
+$NetBSD: patch-python_vmailmgr_Makefile.am,v 1.1 2024/02/27 19:13:43 schmonz Exp $
+
+Use pkgsrc-selected python.
+
+--- python/vmailmgr/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
++++ python/vmailmgr/Makefile.am
+@@ -26,6 +26,6 @@ types.pyc: types.py local.py
+ types.pyo: types.py local.py
+ 
+ .py.pyc:
+-	python -c 'import $*' && touch $@
++	env PYTHONPATH=.. @PYTHONBIN@ -c 'import vmailmgr.$*' && touch $@
+ .py.pyo:
+-	python -O -c 'import $*' && touch $@
++	env PYTHONPATH=.. @PYTHONBIN@ -O -c 'import vmailmgr.$*' && touch $@

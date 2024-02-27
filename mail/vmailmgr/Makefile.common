@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/02/27 19:13:43 schmonz Exp $
 #
 # used by mail/php-vmailmgr/Makefile
 # used by mail/py-vmailmgr/Makefile
@@ -74,6 +74,10 @@ SUBST_SED.varbase=	-e 's|/var/lib/vmailmgr|${VARBASE}/vmailmgr|g'
 SUBST_SED.varbase+=	-e 's|/var/spool|${VARBASE}/spool|g'
 
 post-extract:
+	cd ${WRKSRC}; \
+		${MKDIR} python-tempname; \
+		${MV} python python-tempname/vmailmgr; \
+		${MV} python-tempname python
 	cd ${WRKSRC}/lib/config && ${SH} build-config.sh
 
 pre-configure:
