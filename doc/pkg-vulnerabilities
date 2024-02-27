@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.142 2024/02/24 15:06:38 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.143 2024/02/27 13:37:50 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25911,3 +25911,14 @@ ruby{27,30,31,32,33}-activestorage61>=6.1<6.1.7.7	information-leak	https://discu
 ruby{27,30,31,32,33}-activestorage70>=7.0<7.0.8.1	information-leak	https://discuss.rubyonrails.org/t/possible-sensitive-session-information-leak-in-active-storage/84945
 ruby{27,30,31}-rack2>=2.0<2.2.8.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-denial-of-service-vulnerability-in-rack-header-parsing/84942
 ruby{27,30,31}-rack>=3.0<3.0.9.1	denial-of-service	https://discuss.rubyonrails.org/t/possible-denial-of-service-vulnerability-in-rack-header-parsing/84942
+py{27,37,38,39,310,311,312}-cbor2<5.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-26134
+wolfssl<5.6.6	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-6936
+mantis<2.26.1	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-23830
+wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24478
+wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24476
+wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24479
+routinator<0.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1622
+yasm-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-25760
+fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25081
+fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25082
+opendmarc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-25768
