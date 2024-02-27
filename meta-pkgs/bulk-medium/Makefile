@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2023/11/17 08:22:58 nia Exp $
+# $NetBSD: Makefile,v 1.110 2024/02/27 14:25:07 taca Exp $
 
-DISTNAME=	bulk-medium-20231117
+DISTNAME=	bulk-medium-20240227
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -87,6 +87,7 @@ DEPENDS+=	php>=8.1<8.2:../../lang/php81
 DEPENDS+=	php>=8.2<8.3:../../lang/php82
 DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
+DEPENDS+=	ruby33-[0-9]*:../../lang/ruby33
 DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
@@ -115,7 +116,7 @@ DEPENDS+=	mupdf-[0-9]*:../../print/mupdf
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
 DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
 DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
