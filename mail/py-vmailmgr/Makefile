@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/27 19:13:44 schmonz Exp $
 
 .include "../../mail/vmailmgr/Makefile.common"
 
@@ -13,17 +13,15 @@ LICENSE=		gnu-gpl-v2
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 
-BUILD_DIRS=		python
-INSTALL_DIRS=		python
+BUILD_DIRS=		python/vmailmgr
+INSTALL_DIRS=		python/vmailmgr
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 
 SUBST_CLASSES+=		pyversion
 SUBST_STAGE.pyversion=	pre-configure
-SUBST_FILES.pyversion=	configure.ac python/Makefile.am
+SUBST_FILES.pyversion=	configure.ac python/vmailmgr/Makefile.am
 SUBST_VARS.pyversion=	PYTHONBIN
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

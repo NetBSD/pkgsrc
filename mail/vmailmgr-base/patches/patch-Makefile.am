@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.am,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2024/02/27 19:13:43 schmonz Exp $
 
 Build cgi, php, and python as their own packages.
 
@@ -16,7 +16,7 @@ Build cgi, php, and python as their own packages.
 -SUBDIRS = python php lib authenticate commands daemon cgi doc scripts
 -else
 -SUBDIRS = php lib authenticate commands daemon cgi doc scripts
-+SUBDIRS += python
++SUBDIRS += python/vmailmgr
  endif
  
  dist-hook:
