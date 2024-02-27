@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.169 2024/02/26 15:05:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.170 2024/02/27 14:50:50 tsutsui Exp $
 
 BLAKE2s (gtk+-2.24.33.tar.xz) = 358ff13c5e021a4634bc5944474c0818181d56cff55473d911a4afb42d5d81fb
 SHA512 (gtk+-2.24.33.tar.xz) = 71b588797c81f727dfac8dcb1be193f7436f717d30ecf18eae2d3aeb0f445b3be4743400acac16435490db8f564f01032065d3f42d27871317f80c98aef929d5
@@ -7,7 +7,7 @@ SHA1 (patch-ab) = 9c82cc60f3825d377a197c876fcc6faa379cbde3
 SHA1 (patch-af) = d59414e24a7da7f8694dbefbd2f0c2c2b60ec5ad
 SHA1 (patch-aj) = 9887573ac7ade9e8f8ee2ead68e279f67836a1a3
 SHA1 (patch-gtk_gtkfilechooserdefault.c) = f690f3a8c3066e49e8184fb096f5dd74e5a93f33
-SHA1 (patch-gtk_gtkfilesystemmodel.c) = 656c86055976aec356a50b4e1b7d12ac2b1c877e
+SHA1 (patch-gtk_gtkfilesystemmodel.c) = 5a70efa956be67b8d9b4a5b79147003988c4befd
 SHA1 (patch-gtk_gtkpathbar.c) = 7e5c4186bd9533cb096f5331e3eb7193222b47b3
 SHA1 (patch-gtk_gtksearchenginesimple.c) = 3c44b84f2e0d3f7cdfb594bf56370f588d165b14
 SHA1 (patch-gtk_gtktooltips.c) = 94f384b4becd74a9effcdbb72bbe3ee9a58d2bb8
