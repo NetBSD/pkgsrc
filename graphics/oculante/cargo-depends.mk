@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.45 2024/02/26 19:00:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.46 2024/02/27 18:31:03 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -288,17 +288,17 @@ CARGO_CRATE_DEPENDS+=	jni-sys-0.3.0
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.28
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.3.1
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.68
-CARGO_CRATE_DEPENDS+=	jxl-bitstream-0.3.1
-CARGO_CRATE_DEPENDS+=	jxl-coding-0.3.0
-CARGO_CRATE_DEPENDS+=	jxl-color-0.5.0
-CARGO_CRATE_DEPENDS+=	jxl-frame-0.7.0
-CARGO_CRATE_DEPENDS+=	jxl-grid-0.3.0
-CARGO_CRATE_DEPENDS+=	jxl-image-0.7.0
-CARGO_CRATE_DEPENDS+=	jxl-modular-0.5.0
-CARGO_CRATE_DEPENDS+=	jxl-oxide-0.6.0
-CARGO_CRATE_DEPENDS+=	jxl-render-0.6.0
-CARGO_CRATE_DEPENDS+=	jxl-threadpool-0.1.0
-CARGO_CRATE_DEPENDS+=	jxl-vardct-0.5.0
+CARGO_CRATE_DEPENDS+=	jxl-bitstream-0.3.2
+CARGO_CRATE_DEPENDS+=	jxl-coding-0.3.1
+CARGO_CRATE_DEPENDS+=	jxl-color-0.6.0
+CARGO_CRATE_DEPENDS+=	jxl-frame-0.8.0
+CARGO_CRATE_DEPENDS+=	jxl-grid-0.4.0
+CARGO_CRATE_DEPENDS+=	jxl-image-0.8.0
+CARGO_CRATE_DEPENDS+=	jxl-modular-0.6.0
+CARGO_CRATE_DEPENDS+=	jxl-oxide-0.7.0
+CARGO_CRATE_DEPENDS+=	jxl-render-0.7.0
+CARGO_CRATE_DEPENDS+=	jxl-threadpool-0.1.1
+CARGO_CRATE_DEPENDS+=	jxl-vardct-0.6.0
 CARGO_CRATE_DEPENDS+=	kamadak-exif-0.5.5
 CARGO_CRATE_DEPENDS+=	khronos-egl-6.0.0
 CARGO_CRATE_DEPENDS+=	khronos_api-3.1.0
