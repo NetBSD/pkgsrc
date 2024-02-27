@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1543 2024/02/27 14:40:59 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1544 2024/02/27 18:30:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2712,6 +2712,26 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/oculante to 0.8.11 [pin 2024-02-26]
 	Updated biology/molsketch to 0.8.1 [pin 2024-02-26]
 	Updated devel/cargo-modules to 0.14.0 [pin 2024-02-26]
+	Removed devel/ugdb [pin 2024-02-26]
+	Removed editors/cesium [pin 2024-02-26]
+	Removed editors/ced [pin 2024-02-26]
+	Removed editors/bred [pin 2024-02-26]
+	Removed finance/rates [pin 2024-02-26]
+	Removed math/funst [pin 2024-02-26]
+	Removed math/apecrunch [pin 2024-02-26]
+	Removed misc/deckster [pin 2024-02-26]
+	Removed misc/nora [pin 2024-02-26]
+	Removed misc/rustentia [pin 2024-02-26]
+	Removed sysutils/ctv [pin 2024-02-26]
+	Removed sysutils/ddiff [pin 2024-02-26]
+	Removed sysutils/sfm [pin 2024-02-26]
+	Removed textproc/paperoni [pin 2024-02-26]
+	Removed time/heliocron [pin 2024-02-26]
+	Removed time/quest-tui [pin 2024-02-26]
+	Removed www/cratuity [pin 2024-02-26]
+	Removed www/longboard [pin 2024-02-26]
+	Removed www/xurl [pin 2024-02-26]
+	Removed x11/unibar [pin 2024-02-26]
 	Updated net/drill to 1.8.3 [he 2024-02-26]
 	Updated security/botan2 to 2.19.4 [nros 2024-02-26]
 	Updated textproc/py-tomlkit to 0.12.4 [adam 2024-02-27]
