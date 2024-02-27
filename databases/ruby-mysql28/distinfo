@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:10:03 nia Exp $
-
-BLAKE2s (mysql-ruby-2.8.2.tar.gz) = 460971f1e601cddfed25b1525d8bd68b2e7abb4afd1dbe16f9db54b4244c85c9
-SHA512 (mysql-ruby-2.8.2.tar.gz) = f39bba5679031bab2d78bc5cb44bb00e7818c1f94e20af374e7b843ced85981e82f185f7442962728165abf9afa9f4d384e3ff6ca22c32320cf4bfa3af84c0e6
-Size (mysql-ruby-2.8.2.tar.gz) = 32710 bytes
-SHA1 (patch-extconf.rb) = 339b618a3057a3868448f971932b9231fd059404
-SHA1 (patch-mysql.c) = 33283b67e5beae587577a45a5cc4466962ded6c2

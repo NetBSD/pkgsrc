@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/18 02:36:01 taca Exp $
-${RUBY_VENDORARCHLIB}/mysql.${RUBY_DLEXT}
-${RUBY_DOC}/mysql/README.html
-${RUBY_DOC}/mysql/README_ja.html
-${RUBY_DOC}/mysql/tommy.css
-${RUBY_EG}/mysql/test.rb
