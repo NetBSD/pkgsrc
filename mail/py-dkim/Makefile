@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/19 15:11:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/27 10:28:36 wiz Exp $
 
 DISTNAME=	dkimpy-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://launchpad.net/dkimpy/
 COMMENT=	DKIM, ARC, and TLSRPT email signing and verification
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
