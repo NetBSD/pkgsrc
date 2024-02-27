@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2023/11/13 23:17:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.74 2024/02/27 14:26:42 taca Exp $
 
-DISTNAME=	bulk-large-20231030
+DISTNAME=	bulk-large-20240227
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -97,6 +97,7 @@ DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 DEPENDS+=	mediawiki-[0-9]*:../../www/mediawiki
 DEPENDS+=	${RUBY_PKGPREFIX}-rails61>=6.1.3:../../www/ruby-rails61
 DEPENDS+=	${RUBY_PKGPREFIX}-rails70>=7.0.7:../../www/ruby-rails70
+DEPENDS+=	${RUBY_PKGPREFIX}-rails71>=7.1.3:../../www/ruby-rails71
 
 #
 # 3. Libraries
