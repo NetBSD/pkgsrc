@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.703 2024/02/15 21:48:56 wiz Exp $
+# $NetBSD: Makefile,v 1.704 2024/02/27 14:40:20 taca Exp $
 
 COMMENT=	Databases
 
@@ -482,7 +482,6 @@ SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-moneta
 SUBDIR+=	ruby-mysql
 SUBDIR+=	ruby-mysql2
-SUBDIR+=	ruby-mysql28
 SUBDIR+=	ruby-odbc
 SUBDIR+=	ruby-pg
 SUBDIR+=	ruby-pg_array_parser
