@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.22 2024/02/15 21:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/02/28 16:22:25 taca Exp $
 
 MODNAME=	mongodb
-PECL_VERSION=	1.9.1
+PECL_VERSION=	1.17.2
 CATEGORIES+=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://docs.mongodb.org/ecosystem/drivers/php/
 COMMENT=	MongoDB database driver
-PKGREVISION=	6
 LICENSE=	apache-2.0
 
-# newer versions support 8.1+
-PHP_VERSIONS_INCOMPATIBLE=	56 81 82 83
+PHP_VERSIONS_SUPPORTED=	74 80 81 82
 
 USE_TOOLS+=		pkg-config gmake
-CONFIGURE_ARGS+=	--with-libbson
-CONFIGURE_ARGS+=	--with-libmongoc
+# To use system mongodb library, we require libmongocrypt package.
+# So, currently bundled libraries.
+CONFIGURE_ARGS+=	--with-mongodb-system-libs=no
 CONFIGURE_ARGS+=	--with-openssl-dir=${BUILDLINK_PREFIX.openssl}
+CPPFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=200809L -D_NETBSD_SOURCE
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../databases/mongo-c-driver/buildlink3.mk"
+#.include "../../databases/mongo-c-driver/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../lang/php/json.mk"
 .include "../../lang/php/ext.mk"

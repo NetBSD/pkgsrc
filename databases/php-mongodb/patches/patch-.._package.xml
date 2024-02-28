@@ -1,0 +1,15 @@
+$NetBSD: patch-.._package.xml,v 1.1 2024/02/28 16:22:25 taca Exp $
+
+Refelect changed source file.
+
+--- ../package.xml.orig	2024-02-25 06:41:06.729643259 +0000
++++ ../package.xml
+@@ -768,7 +768,7 @@ necessary to build a fully-functional Mo
+    <file md5sum="e4fda5158a681c96467131a2ad1e659c" name="src/libmongocrypt/src/mlib/thread.h" role="src" />
+    <file md5sum="9dbd0440750ffc0ef2bb8135f0d75900" name="src/libmongocrypt/src/mlib/user-check.h" role="src" />
+    <file md5sum="9c0cd74b3c026396ed50fd40839c1a26" name="src/libmongocrypt/src/mlib/windows-lean.h" role="src" />
+-   <file md5sum="47262bf9af244d06df735d27a04fc5a1" name="src/libmongocrypt/src/os_posix/os_dll.c" role="src" />
++   <file md5sum="b688ad7a909ffd26bc1bbd63210e286d" name="src/libmongocrypt/src/os_posix/os_dll.c" role="src" />
+    <file md5sum="f7dec90cf8f0979d483f519bff304e57" name="src/libmongocrypt/src/os_posix/os_mutex.c" role="src" />
+    <file md5sum="757d1de50f1295e3c8110817fb6c2d05" name="src/libmongocrypt/src/os_win/os_dll.c" role="src" />
+    <file md5sum="16e57d2c27c267fdadfb2659e309ed7b" name="src/libmongocrypt/src/os_win/os_mutex.c" role="src" />
