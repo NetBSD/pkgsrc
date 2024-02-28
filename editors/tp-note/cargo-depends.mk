@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.58 2024/02/28 05:03:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.59 2024/02/28 19:17:25 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
-CARGO_CRATE_DEPENDS+=	ahash-0.8.9
+CARGO_CRATE_DEPENDS+=	ahash-0.8.10
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	alloc-no-stdlib-2.0.4
 CARGO_CRATE_DEPENDS+=	alloc-stdlib-0.2.2
@@ -71,7 +71,7 @@ CARGO_CRATE_DEPENDS+=	core-graphics-0.22.3
 CARGO_CRATE_DEPENDS+=	core-graphics-types-0.1.3
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.12
 CARGO_CRATE_DEPENDS+=	crc32fast-1.4.0
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.11
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.12
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.19
@@ -335,7 +335,7 @@ CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
 CARGO_CRATE_DEPENDS+=	raw-window-handle-0.5.2
-CARGO_CRATE_DEPENDS+=	rayon-1.8.1
+CARGO_CRATE_DEPENDS+=	rayon-1.9.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.4
@@ -358,7 +358,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	self_cell-1.0.3
 CARGO_CRATE_DEPENDS+=	semver-1.0.22
 CARGO_CRATE_DEPENDS+=	serde-1.0.197
-CARGO_CRATE_DEPENDS+=	serde-wasm-bindgen-0.6.4
+CARGO_CRATE_DEPENDS+=	serde-wasm-bindgen-0.6.5
 CARGO_CRATE_DEPENDS+=	serde-xml-rs-0.3.1
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.197
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.114
@@ -483,7 +483,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.3
 CARGO_CRATE_DEPENDS+=	winnow-0.5.40
-CARGO_CRATE_DEPENDS+=	winnow-0.6.2
+CARGO_CRATE_DEPENDS+=	winnow-0.6.3
 CARGO_CRATE_DEPENDS+=	winresource-0.1.17
 CARGO_CRATE_DEPENDS+=	wl-clipboard-rs-0.8.0
 CARGO_CRATE_DEPENDS+=	x11rb-0.13.0
