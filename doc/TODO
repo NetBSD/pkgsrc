@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24115 2024/02/28 15:19:17 taca Exp $
+$NetBSD: TODO,v 1.24116 2024/02/28 16:00:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -1074,7 +1074,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o phoronix-9.2.1
 	o phoronix-test-suite-10.8
 	o php-basercms-5.0.8
-	o php-concretecms-9.2.4 [successor of php-concrete5]
+	o php-dotclear-2.29
 	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
 	o php-jpgraph-4.4.2
 	o php-memcached-3.2.0
