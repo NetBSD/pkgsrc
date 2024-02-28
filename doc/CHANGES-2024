@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1558 2024/02/28 07:41:35 wen Exp $
+$NetBSD: CHANGES-2024,v 1.1559 2024/02/28 07:43:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xf86-input-elographics to 1.4.4 [wiz 2024-02-28]
 	Updated www/p5-WWW-Mechanize to 2.18 [wen 2024-02-28]
 	Updated security/p5-Crypt-ECB to 2.23 [wen 2024-02-28]
+	Updated security/p5-Crypt-URandom to 0.40 [wen 2024-02-28]
