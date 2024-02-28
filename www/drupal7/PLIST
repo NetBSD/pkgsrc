@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2023/03/19 13:21:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/02/28 15:34:32 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -109,6 +109,7 @@ share/drupal/misc/farbtastic/mask.png
 share/drupal/misc/farbtastic/wheel.png
 share/drupal/misc/favicon.ico
 share/drupal/misc/feed.png
+share/drupal/misc/form-single-submit.js
 share/drupal/misc/form.js
 share/drupal/misc/forum-icons.png
 share/drupal/misc/grippie.png
@@ -272,6 +273,7 @@ share/drupal/modules/aggregator/tests/aggregator_test.module
 share/drupal/modules/aggregator/tests/aggregator_test_atom.xml
 share/drupal/modules/aggregator/tests/aggregator_test_rss091.xml
 share/drupal/modules/aggregator/tests/aggregator_test_title_entities.xml
+share/drupal/modules/aggregator/tests/aggregator_test_title_from_desc.xml
 share/drupal/modules/block/block-admin-display-form.tpl.php
 share/drupal/modules/block/block.admin.inc
 share/drupal/modules/block/block.api.php
@@ -401,6 +403,9 @@ share/drupal/modules/field/tests/field_test.info
 share/drupal/modules/field/tests/field_test.install
 share/drupal/modules/field/tests/field_test.module
 share/drupal/modules/field/tests/field_test.storage.inc
+share/drupal/modules/field/tests/field_test_schema_alter.info
+share/drupal/modules/field/tests/field_test_schema_alter.install
+share/drupal/modules/field/tests/field_test_schema_alter.module
 share/drupal/modules/field/theme/field-rtl.css
 share/drupal/modules/field/theme/field.css
 share/drupal/modules/field/theme/field.tpl.php
@@ -656,6 +661,8 @@ share/drupal/modules/simpletest/files/image-test-transparent-out-of-range.gif
 share/drupal/modules/simpletest/files/image-test.gif
 share/drupal/modules/simpletest/files/image-test.jpg
 share/drupal/modules/simpletest/files/image-test.png
+share/drupal/modules/simpletest/files/invalid-img-test.png
+share/drupal/modules/simpletest/files/invalid-img-zero-size.png
 share/drupal/modules/simpletest/files/javascript-1.txt
 share/drupal/modules/simpletest/files/javascript-2.script
 share/drupal/modules/simpletest/files/phar-1.phar
@@ -905,7 +912,6 @@ share/drupal/modules/system/system.api.php
 share/drupal/modules/system/system.archiver.inc
 share/drupal/modules/system/system.base-rtl.css
 share/drupal/modules/system/system.base.css
-share/drupal/modules/system/system.cron.js
 share/drupal/modules/system/system.info
 share/drupal/modules/system/system.install
 share/drupal/modules/system/system.js
