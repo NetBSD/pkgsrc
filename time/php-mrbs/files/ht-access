@@ -1,0 +1,11 @@
+# $NetBSD: ht-access,v 1.1 2024/02/28 16:42:30 taca Exp $
+#
+<Files ~ "\.inc$">
+  <IfModule !mod_authz_core>
+    Order allow,deny
+     Deny from all
+  </IfModule>
+<IfModule mod_authz_core>
+   Require all denied
+</IfModule>
+</Files>
