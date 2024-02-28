@@ -1,3 +1,3 @@
 Binc IMAP is an IMAP4rev1 server for Maildir. It strives to be stable,
-fast, flexible, and RFC compliant. Like qmail-pop3d, it authenticates
-via a checkpassword program.
+fast, flexible, and RFC compliant. Like qmail-pop3d, it relies on UCSPI
+for networking and checkpassword for authentication.

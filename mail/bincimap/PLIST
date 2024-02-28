@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/15 19:50:25 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/28 04:14:16 schmonz Exp $
 bin/bincimap-up
+bin/bincimap-updatecache
 bin/bincimapd
 man/man1/bincimap-up.1
+man/man1/bincimap.1
 man/man1/bincimapd.1
-man/man5/bincimap.conf.5
-share/doc/bincimap/README
-share/doc/bincimap/bincimap-faq.html
-share/doc/bincimap/bincimap-goals.html
-share/doc/bincimap/bincimap-imapdir.html
-share/doc/bincimap/bincimap-manual.ps
-share/doc/bincimap/bincimap-tech.html
-share/doc/bincimap/bincimap.css
-share/examples/bincimap/bincimap.conf
-share/examples/bincimap/checkpassword.pl
+man/man7/bincimap-updatecache.7
+share/examples/bincimap/IMAPdir2Maildir++
+share/examples/bincimap/Maildir++2IMAPdir
+share/examples/bincimap/checkpassword
 share/examples/bincimap/toimapdir
 share/examples/bincimap/tomaildir++
+@pkgdir man/man5
