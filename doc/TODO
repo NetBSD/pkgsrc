@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24113 2024/02/27 10:35:57 wiz Exp $
+$NetBSD: TODO,v 1.24114 2024/02/28 07:09:15 thorpej Exp $
 
 Suggested new packages
 ======================
@@ -347,14 +347,6 @@ Suggested new packages
 	Yosys
 	https://github.com/YosysHQ/yosys
 	Framework for RTL synthesis tools
-
-	nextpnr
-	https://github.com/YosysHQ/nextpnr
-	place and route for FPGA architectures
-
-	icestorm
-	https://github.com/YosysHQ/icestorm
-	Lattice iCE40 FPGAs Bitstream Documentation and tools
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
