@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1574 2024/02/28 15:49:25 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1575 2024/02/28 15:50:15 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2786,3 +2786,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/sudo to 1.9.15p5 [taca 2024-02-28]
 	Updated www/drupal7 to 7.99 [taca 2024-02-28]
 	Updated www/php-ja-wordpress to 6.4.3 [taca 2024-02-28]
+	Updated multimedia/vlc to 3.0.20nb4 [triaxx 2024-02-28]
