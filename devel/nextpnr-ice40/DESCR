@@ -1,0 +1,4 @@
+nextpnr is a portable FPGA place and route tool.  nextpnr aims to be a vendor
+neutral, timing driven, FOSS FPGA place and route tool.
+
+This is the package for the Lattice iCE40 family of FPGAs.
