@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24114 2024/02/28 07:09:15 thorpej Exp $
+$NetBSD: TODO,v 1.24115 2024/02/28 15:19:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -1112,7 +1112,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o poppass-4.0.14
 	o posh-0.14.1
 	o postal-0.72
-	o postfix-3.8.5
 	o pound-3.0d
 	o povray-3.7.0.0
 	o powerdns-recursor-5.0.2
