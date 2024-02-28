@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1560 2024/02/28 08:16:07 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1561 2024/02/28 08:20:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2764,3 +2764,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/p5-Crypt-URandom to 0.40 [wen 2024-02-28]
 	Updated sysutils/ansible to 9.3.0 [adam 2024-02-28]
 	Updated devel/py-pydantic to 2.6.3 [adam 2024-02-28]
+	Updated net/p5-SNMP-Info to 3.97 [wen 2024-02-28]
