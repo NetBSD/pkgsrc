@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/25 12:09:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/28 15:42:06 schmonz Exp $
 
 .include "../../mail/vmailmgr/Makefile.common"
 
@@ -27,5 +27,4 @@ do-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/doc/vmailmgr/`basename $$f`; \
 	done
 
-.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
