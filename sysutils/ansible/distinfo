@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.52 2024/01/30 19:38:38 adam Exp $
+$NetBSD: distinfo,v 1.53 2024/02/28 08:13:05 adam Exp $
 
-BLAKE2s (ansible-9.2.0.tar.gz) = 17cff3259e1fda3a044956293e1e089407ad61ad3b398033d72fe57b2f6406ad
-SHA512 (ansible-9.2.0.tar.gz) = 6d867774b987863287c8d321d82bfc8688be2950eed2d6a429d26701809ce1a9e66e09fc78dbfdd1e5786828a517ab7b08cda1a131ac8eb9f73bd39c246fa4fe
-Size (ansible-9.2.0.tar.gz) = 41217761 bytes
+BLAKE2s (ansible-9.3.0.tar.gz) = a979eb86f8767f1afad22b807185c6d20b3c9cb77afce37933c6dfc0a7c6905d
+SHA512 (ansible-9.3.0.tar.gz) = 71eff05455aee0a013b69790145a73325ac7037fc509545a7cdca358aa54c1731f7dc6fb0169f602d668e9da9e41a0879ff48ba1243d372e02dae9382ac46c5c
+Size (ansible-9.3.0.tar.gz) = 38240168 bytes
