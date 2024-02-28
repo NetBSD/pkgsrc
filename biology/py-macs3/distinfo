@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/01/10 15:17:33 bacon Exp $
+$NetBSD: distinfo,v 1.2 2024/02/28 13:38:48 bacon Exp $
 
-BLAKE2s (macs-3.0.0.tar.gz) = 6a28a732c0cef04e57c27f1679f372b40a48dc1aba23d8daa0555c63e02aa1bd
-SHA512 (macs-3.0.0.tar.gz) = 44daa10901cea110ae6d0a5749e9696fa64883151b11af6b13c8d4ae589bc3207048d0de4420308a922a96b5dd542b694897ceabaac32becc07aef0061ee2257
-Size (macs-3.0.0.tar.gz) = 197389439 bytes
+BLAKE2s (macs-3.0.1.tar.gz) = 58e3a406621a6f71bb180672b17d008b8ca26bb14476d9bdacf42a47fa93b295
+SHA512 (macs-3.0.1.tar.gz) = fdbc91722266b0f6f03021c82385672bec1e07fd9510f25270c02bd3ba839352d2ffcb72496e61e334573272999a96978a91c250c5b2da168eb7f43993721125
+Size (macs-3.0.1.tar.gz) = 197400439 bytes
 SHA1 (patch-MACS3_fermi-lite_ksw.c) = 7df96d1d970a3e70c4611bd618d1aa539297dbcc
