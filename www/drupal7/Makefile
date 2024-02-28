@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2023/05/01 14:34:00 taca Exp $
+# $NetBSD: Makefile,v 1.80 2024/02/28 15:34:32 taca Exp $
 
-DISTNAME=	drupal-7.97
+DISTNAME=	drupal-7.99
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.drupal.org/files/projects/
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
+
+PHP_VERSIONS_ACCEPTED=	56 74 81 82
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
