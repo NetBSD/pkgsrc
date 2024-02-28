@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/03/05 19:21:23 triaxx Exp $
+# $NetBSD: Makefile,v 1.9 2024/02/28 15:57:44 taca Exp $
 
 DISTNAME=	dotclear-2.25.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://dotclear.org/
 COMMENT=	Open-source web publising software
 LICENSE=	gnu-gpl-v2
+
+PHP_VERSIONS_ACCEPTED=	82 81 80 74
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
@@ -25,8 +27,6 @@ WRKSRC=		${WRKDIR}/dotclear
 BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 .include "options.mk"
-
-PHP_VERSIONS_ACCEPTED=	82 81 80 74
 
 PKG_SYSCONFSUBDIR=	dotclear
 
