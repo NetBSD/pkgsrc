@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/01/12 09:51:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2024/02/28 13:38:48 bacon Exp $
 
 DISTNAME=	macs-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-macs3-3.0.0
+PKGNAME=	${PYPKGPREFIX}-macs3-3.0.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=macs3-project/}
 GITHUB_PROJECT=	MACS

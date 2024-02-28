@@ -1,4 +1,4 @@
-$NetBSD: patch-MACS3_fermi-lite_ksw.c,v 1.1 2024/01/10 15:17:33 bacon Exp $
+$NetBSD: patch-MACS3_fermi-lite_ksw.c,v 1.2 2024/02/28 13:38:48 bacon Exp $
 
 # Use SIMDE sse2.h
 
