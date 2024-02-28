@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/09/05 11:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/28 05:34:28 pin Exp $
 
-DISTNAME=	cobalt-0.19.0
+DISTNAME=	cobalt-0.19.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cobalt-org/}
 GITHUB_PROJECT=	cobalt.rs
