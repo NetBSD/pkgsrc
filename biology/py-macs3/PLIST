@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/10 15:17:33 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/02/28 13:38:48 bacon Exp $
 bin/macs3
 ${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/LICENSE
 ${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/METADATA
