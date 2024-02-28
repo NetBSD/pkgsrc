@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1570 2024/02/28 14:46:00 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1571 2024/02/28 15:18:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2775,3 +2775,11 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/openjpeg to 2.5.2 [wiz 2024-02-28]
 	Updated graphics/pear-Image_Color to 1.0.6 [taca 2024-02-28]
 	Updated mail/pear-Mail to 2.0.0 [taca 2024-02-28]
+	Updated mail/postfix to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-cdb to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-ldap to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-lmdb to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-mysql to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-pcre to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-pgsql to 3.8.5 [taca 2024-02-28]
+	Updated mail/postfix-sqlite to 3.8.5 [taca 2024-02-28]
