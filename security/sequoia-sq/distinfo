@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/02/28 16:33:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/02/28 16:39:07 wiz Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -1362,4 +1362,4 @@ Size (zeroize-1.7.0.crate) = 19039 bytes
 BLAKE2s (zeroize_derive-1.4.2.crate) = c5aded3e16d18c2128d74254a509eabb77f2c7d657922e38cf5edca492d4a523
 SHA512 (zeroize_derive-1.4.2.crate) = d6966b024ce5e265c93e7056659ccbb97bbf6baa30f759fd96dc4391a6487426637f61f0a2713b6160019d778cf7d8ff1f25bb33d6c4f4585b990baae418b226
 Size (zeroize_derive-1.4.2.crate) = 11141 bytes
-SHA1 (patch-.._vendor_openpgp-cert-d-0.3.1_src_unixdir.rs) = 193063e9fa44b72f5bbc1567b81e48d41cf1d0fb
+SHA1 (patch-.._vendor_openpgp-cert-d-0.3.1_src_unixdir.rs) = 799105202e9ca6f512287ef6bc18cb81d3153200
