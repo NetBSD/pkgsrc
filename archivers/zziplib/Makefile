@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/01/01 22:18:12 nros Exp $
+# $NetBSD: Makefile,v 1.36 2024/02/28 17:58:00 adam Exp $
 
-DISTNAME=	zziplib-0.13.72
-PKGREVISION=	3
+DISTNAME=	zziplib-0.13.73
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gdraheim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,9 +24,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	dylib
 .if ${SHLIB_TYPE} == "dylib"
-PLIST.dylib=	yes
 PLIST_SUBST+=	SOEXT=dylib
 .else
 PLIST_SUBST+=	SOEXT=so
