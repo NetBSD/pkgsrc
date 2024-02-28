@@ -1,6 +1,8 @@
-$NetBSD: patch-doc_Makefile.am,v 1.1 2024/02/25 12:09:22 schmonz Exp $
+$NetBSD: patch-doc_Makefile.am,v 1.2 2024/02/28 15:42:05 schmonz Exp $
 
 Avoid "warning: ignoring prerequisites on suffix rule definition"
+
+Avoid building PDFs that aren't installed anyway.
 
 --- doc/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ doc/Makefile.am
@@ -17,10 +19,12 @@ Avoid "warning: ignoring prerequisites on suffix rule definition"
  	$(man_MANS) \
  	$(noinst_PODS) \
  	$(noinst_TEXINFOS) \
-@@ -31,6 +31,7 @@ TEXI2INFO = texi2any --info --no-split -
+@@ -30,7 +30,8 @@ TEXI2PDF = texi2pdf --clean --quiet
+ TEXI2INFO = texi2any --info --no-split --number-sections
  TEXI2TXT = texi2any --plaintext
  
- all: $(noinst_HTMLS) $(noinst_PDFS) $(noinst_TXTS) $(noinst_MISC)
+-all: $(noinst_HTMLS) $(noinst_PDFS) $(noinst_TXTS) $(noinst_MISC)
++all: $(noinst_HTMLS) $(noinst_TXTS)
 +man: $(man_MANS)
  
  dist-hook:
