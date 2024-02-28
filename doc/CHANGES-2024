@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1580 2024/02/28 18:05:04 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1581 2024/02/28 19:18:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-redis to 5.0.2 [adam 2024-02-28]
 	Updated textproc/py-rapidjson to 1.15 [adam 2024-02-28]
 	Updated comms/py-rich to 13.7.1 [adam 2024-02-28]
+	Updated editors/tp-note to 1.23.9 [pin 2024-02-28]
