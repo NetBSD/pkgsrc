@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.62 2024/02/27 10:00:09 adam Exp $
+$NetBSD: distinfo,v 1.63 2024/02/28 00:04:36 wiz Exp $
 
 BLAKE2s (pillow-10.2.0.tar.gz) = 14a9e9655b2623c4d0928df7446eea99a0b5617414802e4f7531d520bc79318c
 SHA512 (pillow-10.2.0.tar.gz) = 9fac2cdc9539f947629cee428d55cf60a8d44c91cee8d8205907a79a9d0334062a46e3eb316069069d2f1298a8c0bbcc8f55b24122695d19e72728e093df63e5
 Size (pillow-10.2.0.tar.gz) = 46212712 bytes
 SHA1 (patch-setup.py) = 80ee74a110e21e7c4071ab9ba0a7c1f3ede64355
-SHA1 (patch-src_libImaging_Jpeg2KDecode.c) = c761bc8e9ae0740802fa9b4c645f19c1e71fd33c
-SHA1 (patch-src_libImaging_Jpeg2KEncode.c) = 154a9d4e68f5ae0c12c8e0792d52fd77900c3d5c
