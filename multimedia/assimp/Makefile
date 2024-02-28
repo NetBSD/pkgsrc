@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2023/10/06 16:52:21 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/02/28 21:35:40 charlotte Exp $
 
 DISTNAME=	assimp-5.3.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=assimp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	charlotte@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.assimp.org/
 COMMENT=	Library to import various 3D model formats
 LICENSE=	modified-bsd
