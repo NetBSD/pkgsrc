@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1565 2024/02/28 10:32:19 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1566 2024/02/28 12:03:03 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/p5-Mail-DMARC to 1.20240214 [wen 2024-02-28]
 	Updated devel/py-test-httpserver to 1.0.10 [adam 2024-02-28]
 	Updated devel/py-test-testmon to 2.1.1 [adam 2024-02-28]
+	Updated textproc/unicode-emoji to 15.1 [tsutsui 2024-02-28]
