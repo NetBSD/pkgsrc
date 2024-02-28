@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17.20.1 2024/02/26 20:13:05 he Exp $
+# $NetBSD: Makefile,v 1.17.20.2 2024/02/28 08:25:12 he Exp $
 
-.include "../../net/ldns/version.mk"
-
-VERSION=	${LDNS_VERSION}
+VERSION=	1.7.1
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -14,8 +13,8 @@ COMMENT=	DNSSEC debugging tool a'la dig
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
