@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2024/02/23 10:00:44 pin Exp $
+# $NetBSD: Makefile,v 1.21 2024/02/29 10:41:11 pin Exp $
 
-DISTNAME=	eza-0.18.4
+DISTNAME=	eza-0.18.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eza-community/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 SUPERSEDES=	exa-[0-9]*
 
 MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://github.com/eza-community/eza/
+HOMEPAGE=	https://eza.rocks/
 COMMENT=	Modern, maintained replacement for ls
 LICENSE=	mit
 
