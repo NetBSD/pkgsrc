@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2024/01/11 08:56:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2024/02/29 07:00:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
@@ -152,6 +152,9 @@ ${PYSITELIB}/botocore/data/appsync/2017-07-25/service-2.json
 ${PYSITELIB}/botocore/data/arc-zonal-shift/2022-10-30/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/arc-zonal-shift/2022-10-30/paginators-1.json
 ${PYSITELIB}/botocore/data/arc-zonal-shift/2022-10-30/service-2.json
+${PYSITELIB}/botocore/data/artifact/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/artifact/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/artifact/2018-05-10/service-2.json
 ${PYSITELIB}/botocore/data/athena/2017-05-18/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/athena/2017-05-18/examples-1.json
 ${PYSITELIB}/botocore/data/athena/2017-05-18/paginators-1.json
@@ -221,6 +224,9 @@ ${PYSITELIB}/botocore/data/ce/2017-10-25/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/ce/2017-10-25/examples-1.json
 ${PYSITELIB}/botocore/data/ce/2017-10-25/paginators-1.json
 ${PYSITELIB}/botocore/data/ce/2017-10-25/service-2.json
+${PYSITELIB}/botocore/data/chatbot/2017-10-11/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/chatbot/2017-10-11/paginators-1.json
+${PYSITELIB}/botocore/data/chatbot/2017-10-11/service-2.json
 ${PYSITELIB}/botocore/data/chime-sdk-identity/2021-04-20/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/chime-sdk-identity/2021-04-20/examples-1.json
 ${PYSITELIB}/botocore/data/chime-sdk-identity/2021-04-20/paginators-1.json
@@ -1584,6 +1590,9 @@ ${PYSITELIB}/botocore/data/sts/2011-06-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/sts/2011-06-15/examples-1.json
 ${PYSITELIB}/botocore/data/sts/2011-06-15/paginators-1.json
 ${PYSITELIB}/botocore/data/sts/2011-06-15/service-2.json
+${PYSITELIB}/botocore/data/supplychain/2024-01-01/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/supplychain/2024-01-01/paginators-1.json
+${PYSITELIB}/botocore/data/supplychain/2024-01-01/service-2.json
 ${PYSITELIB}/botocore/data/support-app/2021-08-20/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/support-app/2021-08-20/paginators-1.json
 ${PYSITELIB}/botocore/data/support-app/2021-08-20/service-2.json
