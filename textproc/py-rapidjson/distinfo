@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/28 18:03:38 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/02/29 07:03:50 adam Exp $
 
-BLAKE2s (python-rapidjson-1.15.tar.gz) = 34473627a9863e8b4a9101745d36dda25cfae6b06f1d5e3ef2f222a1996fc0d2
-SHA512 (python-rapidjson-1.15.tar.gz) = a600c6131b334bcb8030309432ef5497590d180c179d41c5fd3bad656580e950be9e3a925bb21604ed830e52df5205a65c447410f937729d2f7ece24c86f898a
-Size (python-rapidjson-1.15.tar.gz) = 229919 bytes
+BLAKE2s (python-rapidjson-1.16.tar.gz) = e60e062749278d7dc7bf7bde89454af6d473a792ce071a476ec3af5fa4ed176e
+SHA512 (python-rapidjson-1.16.tar.gz) = 234ef5ea574213e5725db2f196fee30ee8de1b23c956b036f8ab109112ac815fd1bc60fffb0addad32be15d405116ce813e97f595ff5a660c505ea05bc1e1ca3
+Size (python-rapidjson-1.16.tar.gz) = 230072 bytes
