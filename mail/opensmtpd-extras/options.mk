@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/02/29 20:57:37 vins Exp $
+# $NetBSD: options.mk,v 1.2 2024/02/29 21:34:33 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensmtpd-extras
 
@@ -71,14 +71,12 @@ CONFIGURE_ARGS+=	--with-perl=${BUILDLINK_PREFIX.perl:Q}
 .if !empty(PKG_OPTIONS:Mpython)
 # current implementation is incompatible and does not build with python3
 PYTHON_VERSIONS_ACCEPTED=	27
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .  include "../../converters/libiconv/buildlink3.mk"
 .  include "../../devel/gettext-lib/buildlink3.mk"
 .  include "../../lang/python/application.mk"
 CONFIGURE_ARGS+=	--with-python=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-python-type=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-queue-python
-CONFIGURE_ARGS+=	--with-table-python
 CONFIGURE_ARGS+=	--with-scheduler-python
 PLIST.python=		yes
 .endif
