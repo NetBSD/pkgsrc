@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1594 2024/02/29 21:01:27 vins Exp $
+$NetBSD: CHANGES-2024,v 1.1595 2024/02/29 21:11:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2815,3 +2815,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added databases/py-dsinternals version 1.2.4 [adam 2024-02-29]
 	Updated net/py-impacket to 0.11.0 [adam 2024-02-29]
 	Added mail/opensmtpd-extras version 6.7.1 [vins 2024-02-29]
+	Updated devel/py-build to 1.1.1 [adam 2024-02-29]
+	Updated security/py-pip-audit to 2.7.2 [adam 2024-02-29]
