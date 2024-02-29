@@ -1,0 +1,42 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/02/29 14:15:41 bsiegert Exp $
+
+Add NetBSD native audio support
+
+--- configure.ac.orig	2021-07-30 12:08:56.000000000 +0000
++++ configure.ac
+@@ -152,6 +152,29 @@ else
+ fi
+ 
+ dnl ================================================================
++dnl NetBSD checks.
++dnl ================================================================
++
++AC_ARG_WITH([netbsd],
++    [AS_HELP_STRING([--with-netbsd], [support for NetBSD audio output @<:@default=no@:>@])],
++    [])
++
++if test "$with_netbsd" = "no"; then
++    echo "Disabling NetBSD audio output support"
++    have_netbsd=no
++else
++    case $host_os in
++        *netbsd*)
++            have_netbsd=yes
++	    ;;
++        *)
++            have_netbsd=no
++            ;;
++    esac
++fi
++AM_CONDITIONAL([HAVE_NETBSD], [test "x${have_netbsd}" = "xyes"])
++
++dnl ================================================================
+ dnl Generate output.
+ dnl ================================================================
+ 
+@@ -172,4 +195,5 @@ AC_MSG_NOTICE([
+ 	QSA support:                   ${have_qsa}
+ 	Coreaudio support:             ${have_coreaudio} 
+ 	OSS support:                   ${have_oss}
++	NetBSD support:                ${have_netbsd}
+ ])
