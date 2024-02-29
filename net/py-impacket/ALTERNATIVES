@@ -2,8 +2,6 @@ bin/Get-GPPPassword.py @PREFIX@/bin/Get-GPPPassword-@PYVERSSUFFIX@.py
 bin/GetADUsers.py @PREFIX@/bin/GetADUsers-@PYVERSSUFFIX@.py
 bin/GetNPUsers.py @PREFIX@/bin/GetNPUsers-@PYVERSSUFFIX@.py
 bin/GetUserSPNs.py @PREFIX@/bin/GetUserSPNs-@PYVERSSUFFIX@.py
-bin/PoC.py @PREFIX@/bin/PoC-@PYVERSSUFFIX@.py
-bin/PoC2.py @PREFIX@/bin/PoC2-@PYVERSSUFFIX@.py
 bin/addcomputer.py @PREFIX@/bin/addcomputer-@PYVERSSUFFIX@.py
 bin/atexec.py @PREFIX@/bin/atexec-@PYVERSSUFFIX@.py
 bin/dcomexec.py @PREFIX@/bin/dcomexec-@PYVERSSUFFIX@.py
@@ -17,7 +15,6 @@ bin/getST.py @PREFIX@/bin/getST-@PYVERSSUFFIX@.py
 bin/getTGT.py @PREFIX@/bin/getTGT-@PYVERSSUFFIX@.py
 bin/goldenPac.py @PREFIX@/bin/goldenPac-@PYVERSSUFFIX@.py
 bin/karmaSMB.py @PREFIX@/bin/karmaSMB-@PYVERSSUFFIX@.py
-bin/keylistattack2.py @PREFIX@/bin/keylistattack2-@PYVERSSUFFIX@.py
 bin/kintercept.py @PREFIX@/bin/kintercept-@PYVERSSUFFIX@.py
 bin/lookupsid.py @PREFIX@/bin/lookupsid-@PYVERSSUFFIX@.py
 bin/mimikatz.py @PREFIX@/bin/mimikatz-@PYVERSSUFFIX@.py
@@ -50,8 +47,6 @@ bin/smbserver.py @PREFIX@/bin/smbserver-@PYVERSSUFFIX@.py
 bin/sniff.py @PREFIX@/bin/sniff-@PYVERSSUFFIX@.py
 bin/sniffer.py @PREFIX@/bin/sniffer-@PYVERSSUFFIX@.py
 bin/split.py @PREFIX@/bin/split-@PYVERSSUFFIX@.py
-bin/testTGT.py @PREFIX@/bin/testTGT-@PYVERSSUFFIX@.py
-bin/testTGT2.py @PREFIX@/bin/testTGT2-@PYVERSSUFFIX@.py
 bin/ticketConverter.py @PREFIX@/bin/ticketConverter-@PYVERSSUFFIX@.py
 bin/ticketer.py @PREFIX@/bin/ticketer-@PYVERSSUFFIX@.py
 bin/wmiexec.py @PREFIX@/bin/wmiexec-@PYVERSSUFFIX@.py
