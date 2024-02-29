@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/25 22:33:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/29 21:09:17 adam Exp $
 bin/pyproject-build-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,12 +11,21 @@ ${PYSITELIB}/build/__init__.pyo
 ${PYSITELIB}/build/__main__.py
 ${PYSITELIB}/build/__main__.pyc
 ${PYSITELIB}/build/__main__.pyo
+${PYSITELIB}/build/_compat/__init__.py
+${PYSITELIB}/build/_compat/__init__.pyc
+${PYSITELIB}/build/_compat/__init__.pyo
+${PYSITELIB}/build/_compat/importlib.py
+${PYSITELIB}/build/_compat/importlib.pyc
+${PYSITELIB}/build/_compat/importlib.pyo
+${PYSITELIB}/build/_compat/tarfile.py
+${PYSITELIB}/build/_compat/tarfile.pyc
+${PYSITELIB}/build/_compat/tarfile.pyo
+${PYSITELIB}/build/_compat/tomllib.py
+${PYSITELIB}/build/_compat/tomllib.pyc
+${PYSITELIB}/build/_compat/tomllib.pyo
 ${PYSITELIB}/build/_exceptions.py
 ${PYSITELIB}/build/_exceptions.pyc
 ${PYSITELIB}/build/_exceptions.pyo
-${PYSITELIB}/build/_importlib.py
-${PYSITELIB}/build/_importlib.pyc
-${PYSITELIB}/build/_importlib.pyo
 ${PYSITELIB}/build/_util.py
 ${PYSITELIB}/build/_util.pyc
 ${PYSITELIB}/build/_util.pyo
