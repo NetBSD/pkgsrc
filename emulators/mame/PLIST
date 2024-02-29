@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.81 2024/01/31 21:00:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.82 2024/02/29 07:24:25 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -241,14 +241,15 @@ share/mame/hash/einstein.xml
 share/mame/hash/einstein_rom.xml
 share/mame/hash/ekara_japan.xml
 share/mame/hash/ekara_japan_a.xml
-share/mame/hash/ekara_japan_ac.xml
 share/mame/hash/ekara_japan_bh.xml
 share/mame/hash/ekara_japan_d.xml
 share/mame/hash/ekara_japan_en.xml
 share/mame/hash/ekara_japan_g.xml
 share/mame/hash/ekara_japan_gk.xml
+share/mame/hash/ekara_japan_kd.xml
 share/mame/hash/ekara_japan_m.xml
 share/mame/hash/ekara_japan_p.xml
+share/mame/hash/ekara_japan_packin.xml
 share/mame/hash/ekara_japan_s.xml
 share/mame/hash/ekara_japan_sp.xml
 share/mame/hash/ekara_japan_web.xml
@@ -311,6 +312,7 @@ share/mame/hash/gtfore.xml
 share/mame/hash/guab.xml
 share/mame/hash/gx4000.xml
 share/mame/hash/h21.xml
+share/mame/hash/h88_cass.xml
 share/mame/hash/hikara.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp85_rom.xml
@@ -557,6 +559,7 @@ share/mame/hash/picno.xml
 share/mame/hash/pico.xml
 share/mame/hash/pippin.xml
 share/mame/hash/pippin_flop.xml
+share/mame/hash/pixter_cart.xml
 share/mame/hash/playmaker.xml
 share/mame/hash/plus4_cart.xml
 share/mame/hash/plus4_cass.xml
