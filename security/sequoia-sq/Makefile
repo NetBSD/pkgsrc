@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/02/28 19:19:15 pin Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/29 22:13:39 pin Exp $
 
-DISTNAME=	sequoia-sq-0.33.0
+DISTNAME=	sequoia-sq-0.34.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-sq
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/sequoia-sq-v0.33.0-195ef2bf9b218ff4d6f25b1854f9f4558f449672
+WRKSRC=		${WRKDIR}/sequoia-sq-v0.34.0-696bf3a677fe8a34ed02c6e44afa1cc3c1e273df
 
 USE_TOOLS+=	pkg-config
 
@@ -26,4 +26,5 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 .include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
+.include "../../devel/capnproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
