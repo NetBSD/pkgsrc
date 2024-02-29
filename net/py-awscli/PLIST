@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2024/01/11 09:06:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2024/02/29 07:02:53 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -2106,6 +2106,8 @@ ${PYSITELIB}/awscli/examples/ec2/create-capacity-reservation.rst
 ${PYSITELIB}/awscli/examples/ec2/create-carrier-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/create-client-vpn-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/create-client-vpn-route.rst
+${PYSITELIB}/awscli/examples/ec2/create-coip-cidr.rst
+${PYSITELIB}/awscli/examples/ec2/create-coip-pool.rst
 ${PYSITELIB}/awscli/examples/ec2/create-customer-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/create-default-subnet.rst
 ${PYSITELIB}/awscli/examples/ec2/create-default-vpc.rst
@@ -2125,7 +2127,9 @@ ${PYSITELIB}/awscli/examples/ec2/create-ipam.rst
 ${PYSITELIB}/awscli/examples/ec2/create-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/create-launch-template-version.rst
 ${PYSITELIB}/awscli/examples/ec2/create-launch-template.rst
+${PYSITELIB}/awscli/examples/ec2/create-local-gateway-route-table-virtual-interface-group-association.rst
 ${PYSITELIB}/awscli/examples/ec2/create-local-gateway-route-table-vpc-association.rst
+${PYSITELIB}/awscli/examples/ec2/create-local-gateway-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/create-local-gateway-route.rst
 ${PYSITELIB}/awscli/examples/ec2/create-managed-prefix-list.rst
 ${PYSITELIB}/awscli/examples/ec2/create-nat-gateway.rst
@@ -2179,6 +2183,8 @@ ${PYSITELIB}/awscli/examples/ec2/create-vpn-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-carrier-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-client-vpn-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-client-vpn-route.rst
+${PYSITELIB}/awscli/examples/ec2/delete-coip-cidr.rst
+${PYSITELIB}/awscli/examples/ec2/delete-coip-pool.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-customer-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-egress-only-internet-gateway.rst
@@ -2193,6 +2199,9 @@ ${PYSITELIB}/awscli/examples/ec2/delete-ipam.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-key-pair.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-launch-template-versions.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-launch-template.rst
+${PYSITELIB}/awscli/examples/ec2/delete-local-gateway-route-table-virtual-interface-group-association.rst
+${PYSITELIB}/awscli/examples/ec2/delete-local-gateway-route-table-vpc-association.rst
+${PYSITELIB}/awscli/examples/ec2/delete-local-gateway-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-local-gateway-route.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-managed-prefix-list.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-nat-gateway.rst
@@ -4021,14 +4030,17 @@ ${PYSITELIB}/awscli/examples/ivs/batch-get-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/batch-get-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/batch-start-viewer-session-revocation.rst
 ${PYSITELIB}/awscli/examples/ivs/create-channel.rst
+${PYSITELIB}/awscli/examples/ivs/create-playback-restriction-policy.rst
 ${PYSITELIB}/awscli/examples/ivs/create-recording-configuration.rst
 ${PYSITELIB}/awscli/examples/ivs/create-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/delete-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/delete-playback-key-pair.rst
+${PYSITELIB}/awscli/examples/ivs/delete-playback-restriction-policy.rst
 ${PYSITELIB}/awscli/examples/ivs/delete-recording-configuration.rst
 ${PYSITELIB}/awscli/examples/ivs/delete-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/get-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/get-playback-key-pair.rst
+${PYSITELIB}/awscli/examples/ivs/get-playback-restriction-policy.rst
 ${PYSITELIB}/awscli/examples/ivs/get-recording-configuration.rst
 ${PYSITELIB}/awscli/examples/ivs/get-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/get-stream-session.rst
@@ -4036,6 +4048,7 @@ ${PYSITELIB}/awscli/examples/ivs/get-stream.rst
 ${PYSITELIB}/awscli/examples/ivs/import-playback-key-pair.rst
 ${PYSITELIB}/awscli/examples/ivs/list-channels.rst
 ${PYSITELIB}/awscli/examples/ivs/list-playback-key-pairs.rst
+${PYSITELIB}/awscli/examples/ivs/list-playback-restriction-policies.rst
 ${PYSITELIB}/awscli/examples/ivs/list-recording-configurations.rst
 ${PYSITELIB}/awscli/examples/ivs/list-stream-keys.rst
 ${PYSITELIB}/awscli/examples/ivs/list-stream-sessions.rst
@@ -4047,6 +4060,7 @@ ${PYSITELIB}/awscli/examples/ivs/stop-stream.rst
 ${PYSITELIB}/awscli/examples/ivs/tag-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/untag-resource.rst
 ${PYSITELIB}/awscli/examples/ivs/update-channel.rst
+${PYSITELIB}/awscli/examples/ivs/update-playback-restriction-policy.rst
 ${PYSITELIB}/awscli/examples/ivschat/create-chat-token.rst
 ${PYSITELIB}/awscli/examples/ivschat/create-logging-configuration.rst
 ${PYSITELIB}/awscli/examples/ivschat/create-room.rst
@@ -5444,6 +5458,7 @@ ${PYSITELIB}/awscli/examples/securityhub/batch-delete-automation-rules.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-disable-standards.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-enable-standards.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-get-automation-rules.rst
+${PYSITELIB}/awscli/examples/securityhub/batch-get-configuration-policy-associations.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-get-security-controls.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-get-standards-control-associations.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-import-findings.rst
@@ -5452,11 +5467,13 @@ ${PYSITELIB}/awscli/examples/securityhub/batch-update-findings.rst
 ${PYSITELIB}/awscli/examples/securityhub/batch-update-standards-control-associations.rst
 ${PYSITELIB}/awscli/examples/securityhub/create-action-target.rst
 ${PYSITELIB}/awscli/examples/securityhub/create-automation-rule.rst
+${PYSITELIB}/awscli/examples/securityhub/create-configuration-policy.rst
 ${PYSITELIB}/awscli/examples/securityhub/create-finding-aggregator.rst
 ${PYSITELIB}/awscli/examples/securityhub/create-insight.rst
 ${PYSITELIB}/awscli/examples/securityhub/create-members.rst
 ${PYSITELIB}/awscli/examples/securityhub/decline-invitations.rst
 ${PYSITELIB}/awscli/examples/securityhub/delete-action-target.rst
+${PYSITELIB}/awscli/examples/securityhub/delete-configuration-policy.rst
 ${PYSITELIB}/awscli/examples/securityhub/delete-finding-aggregator.rst
 ${PYSITELIB}/awscli/examples/securityhub/delete-insight.rst
 ${PYSITELIB}/awscli/examples/securityhub/delete-invitations.rst
@@ -5477,6 +5494,8 @@ ${PYSITELIB}/awscli/examples/securityhub/enable-import-findings-for-product.rst
 ${PYSITELIB}/awscli/examples/securityhub/enable-organization-admin-account.rst
 ${PYSITELIB}/awscli/examples/securityhub/enable-security-hub.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-administrator-account.rst
+${PYSITELIB}/awscli/examples/securityhub/get-configuration-policy-association.rst
+${PYSITELIB}/awscli/examples/securityhub/get-configuration-policy.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-enabled-standards.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-finding-aggregator.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-finding-history.rst
@@ -5486,8 +5505,11 @@ ${PYSITELIB}/awscli/examples/securityhub/get-insights.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-invitations-count.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-master-account.rst
 ${PYSITELIB}/awscli/examples/securityhub/get-members.rst
+${PYSITELIB}/awscli/examples/securityhub/get-security-control-definition.rst
 ${PYSITELIB}/awscli/examples/securityhub/invite-members.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-automation-rules.rst
+${PYSITELIB}/awscli/examples/securityhub/list-configuration-policies.rst
+${PYSITELIB}/awscli/examples/securityhub/list-configuration-policy-associations.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-enabled-products-for-import.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-finding-aggregators.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-invitations.rst
@@ -5496,12 +5518,16 @@ ${PYSITELIB}/awscli/examples/securityhub/list-organization-admin-accounts.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-security-control-definitions.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-standards-control-associations.rst
 ${PYSITELIB}/awscli/examples/securityhub/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/securityhub/start-configuration-policy-association.rst
+${PYSITELIB}/awscli/examples/securityhub/start-configuration-policy-disassociation.rst
 ${PYSITELIB}/awscli/examples/securityhub/tag-resource.rst
 ${PYSITELIB}/awscli/examples/securityhub/untag-resource.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-action-target.rst
+${PYSITELIB}/awscli/examples/securityhub/update-configuration-policy.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-finding-aggregator.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-insight.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-organization-configuration.rst
+${PYSITELIB}/awscli/examples/securityhub/update-security-control.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-security-hub-configuration.rst
 ${PYSITELIB}/awscli/examples/securityhub/update-standards-control.rst
 ${PYSITELIB}/awscli/examples/serverlessrepo/put-application-policy.rst
@@ -5873,7 +5899,9 @@ ${PYSITELIB}/awscli/examples/storagegateway/refresh-cache.rst
 ${PYSITELIB}/awscli/examples/sts/assume-role-with-saml.rst
 ${PYSITELIB}/awscli/examples/sts/assume-role-with-web-identity.rst
 ${PYSITELIB}/awscli/examples/sts/assume-role.rst
+${PYSITELIB}/awscli/examples/sts/decode-authorization-message.rst
 ${PYSITELIB}/awscli/examples/sts/get-caller-identity.rst
+${PYSITELIB}/awscli/examples/sts/get-federation-token.rst
 ${PYSITELIB}/awscli/examples/sts/get-session-token.rst
 ${PYSITELIB}/awscli/examples/support/add-attachments-to-set.rst
 ${PYSITELIB}/awscli/examples/support/add-communication-to-case.rst
@@ -5932,6 +5960,16 @@ ${PYSITELIB}/awscli/examples/transcribe/update-medical-vocabulary.rst
 ${PYSITELIB}/awscli/examples/transcribe/update-vocabulary-filter.rst
 ${PYSITELIB}/awscli/examples/transcribe/update-vocabulary.rst
 ${PYSITELIB}/awscli/examples/translate/import-terminology.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/get-organization-recommendation.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/get-recommendation.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-checks.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-organization-recommendation-accounts.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-organization-recommendation-resources.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-organization-recommendations.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-recommendation-resources.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/list-recommendations.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/update-organization-recommendation-lifecycle.rst
+${PYSITELIB}/awscli/examples/trustedadvisor/update-recommendation-lifecycle.rst
 ${PYSITELIB}/awscli/examples/verifiedpermissions/create-identity-source.rst
 ${PYSITELIB}/awscli/examples/verifiedpermissions/create-policy-store.rst
 ${PYSITELIB}/awscli/examples/verifiedpermissions/create-policy-template.rst
