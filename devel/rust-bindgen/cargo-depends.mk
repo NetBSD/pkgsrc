@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/11/12 17:02:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2024/02/29 14:23:09 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
 CARGO_CRATE_DEPENDS+=	annotate-snippets-0.9.1
@@ -27,6 +27,7 @@ CARGO_CRATE_DEPENDS+=	humantime-2.1.0
 CARGO_CRATE_DEPENDS+=	instant-0.1.12
 CARGO_CRATE_DEPENDS+=	io-lifetimes-1.0.4
 CARGO_CRATE_DEPENDS+=	is-terminal-0.4.7
+CARGO_CRATE_DEPENDS+=	itertools-0.12.1
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.139
@@ -42,7 +43,6 @@ CARGO_CRATE_DEPENDS+=	objc-0.2.7
 CARGO_CRATE_DEPENDS+=	once_cell-1.17.0
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.4.1
 CARGO_CRATE_DEPENDS+=	owo-colors-3.5.0
-CARGO_CRATE_DEPENDS+=	peeking_take_while-0.1.2
 CARGO_CRATE_DEPENDS+=	prettyplease-0.2.7
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
@@ -57,7 +57,7 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.28
 CARGO_CRATE_DEPENDS+=	rustc-hash-1.1.0
 CARGO_CRATE_DEPENDS+=	rustix-0.36.16
 CARGO_CRATE_DEPENDS+=	rustix-0.37.3
-CARGO_CRATE_DEPENDS+=	shlex-1.1.0
+CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	similar-2.2.1
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.107
