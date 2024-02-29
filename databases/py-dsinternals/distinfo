@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/02/29 20:55:23 adam Exp $
+
+BLAKE2s (dsinternals-1.2.4.tar.gz) = 792fcbcd9d79478ebf6443728e1143c5a63d0771bbf2b2994c78e5feae152269
+SHA512 (dsinternals-1.2.4.tar.gz) = 384bf1f9cbb524e02ae34c266b2ef6f2952e673674b75ee031e811cd6b098b25ef017ff5d8968bd63e37f9b11d7ca4660ce1cf9c5f23aafa6025254c4b0970a6
+Size (dsinternals-1.2.4.tar.gz) = 174207 bytes
+SHA1 (patch-setup.py) = fe104404bbeef3c22597ffbdb09575887c2f67ba
