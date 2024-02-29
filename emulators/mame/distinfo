@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.139 2024/01/31 21:00:04 wiz Exp $
+$NetBSD: distinfo,v 1.140 2024/02/29 07:24:25 wiz Exp $
 
-BLAKE2s (mame-0.262.tar.gz) = 3ce7dd90b1f903a87bed7ca6c80a48973b345931480ab04841f2c5ddbebba7c8
-SHA512 (mame-0.262.tar.gz) = 2fc338c6d397edd2174256be0e237d4b71c1d69ed9fab150afb679e7f5a0d3a8337d83451fb813ce7610a6b9d1afd2223c89c98dc30840825044182829d8a5cf
-Size (mame-0.262.tar.gz) = 207108653 bytes
+BLAKE2s (mame-0.263.tar.gz) = 555278ec39b454b7c73cffb3411771c6eb651989d6549f7ddc1a6f9ee56c3bc0
+SHA512 (mame-0.263.tar.gz) = 08513cc6f65b3be2159f4afef18545043bb1455e6a7247901bcb2af38cae1e1750709b51eda3a1a35e0e7e4267532947fcbec5942fd0bc8683d85e5d17ee4510
+Size (mame-0.263.tar.gz) = 207334064 bytes
 SHA1 (patch-3rdparty_bx_src_thread.cpp) = 91d7aa74dbe5e8e73594580ce0c16846f4a0d7b1
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = 343fac4d165438a26e2e8077216db1c6c46a5d1e
