@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/02/15 12:23:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/02/29 12:37:01 adam Exp $
 include/srtp2/auth.h
 include/srtp2/cipher.h
 include/srtp2/crypto_types.h
 include/srtp2/srtp.h
 lib/cmake/libSRTP/libSRTPConfig.cmake
 lib/cmake/libSRTP/libSRTPConfigVersion.cmake
-lib/cmake/libSRTP/libSRTPTargets-noconfig.cmake
+lib/cmake/libSRTP/libSRTPTargets-debug.cmake
 lib/cmake/libSRTP/libSRTPTargets.cmake
 lib/libsrtp2.so
 lib/libsrtp2.so.${PKGVERSION}
