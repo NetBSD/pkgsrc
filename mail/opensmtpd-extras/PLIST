@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/02/29 20:57:37 vins Exp $
+libexec/opensmtpd/queue-null
+${PLIST.python}libexec/opensmtpd/queue-python
+libexec/opensmtpd/queue-ram
+libexec/opensmtpd/queue-stub
+${PLIST.python}libexec/opensmtpd/scheduler-python
+libexec/opensmtpd/scheduler-ram
+libexec/opensmtpd/scheduler-stub
+${PLIST.ldap}libexec/opensmtpd/table-ldap
+${PLIST.mysql}libexec/opensmtpd/table-mysql
+libexec/opensmtpd/table-passwd
+${PLIST.pgsql}libexec/opensmtpd/table-postgres
+${PLIST.python}libexec/opensmtpd/table-python
+${PLIST.redis}libexec/opensmtpd/table-redis
+libexec/opensmtpd/table-socketmap
+${PLIST.sqlite}libexec/opensmtpd/table-sqlite
+libexec/opensmtpd/table-stub
+man/man5/table-passwd.5
+${PLIST.redis}man/man5/table-redis.5
+man/man5/table-socketmap.5
+${PLIST.sqlite}man/man5/table-sqlite.5
