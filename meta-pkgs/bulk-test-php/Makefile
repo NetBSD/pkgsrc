@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/27 10:35:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/02/29 10:28:24 jperkin Exp $
 
 DISTNAME=	bulk-test-php-20240227
 CATEGORIES=	meta-pkgs
@@ -17,7 +17,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 # Large programs and applications
 DEPENDS+=	${PHP_PKG_PREFIX}-dotclear-[0-9]*:../../www/php-dotclear
-DEPENDS+=	wordpress-[0-9]*:../../www/wordpress
+DEPENDS+=	${PHP_PKG_PREFIX}-wordpress-[0-9]*:../../www/wordpress
 DEPENDS+=	${PHP_PKG_PREFIX}-nextcloud-[0-9]*:../../www/php-nextcloud
 DEPENDS+=	${PHP_PKG_PREFIX}-owncloud-[0-9]*:../../www/php-owncloud
 DEPENDS+=	${PHP_PKG_PREFIX}-davical-[0-9]*:../../www/davical
