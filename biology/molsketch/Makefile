@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/02/26 19:01:45 pin Exp $
+# $NetBSD: Makefile,v 1.23 2024/02/29 07:48:18 wiz Exp $
 
 DISTNAME=	Molsketch-0.8.1-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	pkg-config
 
-WRKSRC=	${WRKDIR}/${DISTNAME:S/-src//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++
 
 # std::transform_reduce
