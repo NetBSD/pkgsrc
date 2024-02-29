@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2024/02/29 14:15:41 bsiegert Exp $
+
+BLAKE2s (pcaudiolib-1.2.tar.gz) = 11dc27e944fb2edba51c0b4f1da100e7279e44e24821941e3fdd222c85b2da94
+SHA512 (pcaudiolib-1.2.tar.gz) = 803e8c36646f780b9e9a98600092af366ad47ecf9cb447b9b6c82b75eb316ee65674832fc0cbfa56ee4d508ae1d0f69890f5885817e6df3e2ecef54571b936d6
+Size (pcaudiolib-1.2.tar.gz) = 377066 bytes
+SHA1 (patch-Makefile.am) = 98b94b9187db8c10980081fb2db54f4305734a71
+SHA1 (patch-configure.ac) = f5cfa55793b644572ccb3d26ae82d2699204e894
+SHA1 (patch-src_audio.c) = c249bf6b0efe3f6b9a6166b3ab7857314d73e297
+SHA1 (patch-src_audio__priv.h) = d38ff94692362e8e801c9a7f671b8ac46bdf8b21
+SHA1 (patch-src_netbsd.c) = 96ff1f35bbcee8107b33166a4daad902c9a1e1b9

@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.am,v 1.1 2024/02/29 14:15:41 bsiegert Exp $
+
+Add netbsd.c to the source list when NetBSD native audio is enabled
+
+--- Makefile.am.orig	2018-03-14 09:47:45.000000000 +0000
++++ Makefile.am
+@@ -90,3 +90,9 @@ EXTRA_DIST += \
+ 	src/TPCircularBuffer/README.markdown \
+ 	src/TPCircularBuffer/TPCircularBuffer.podspec
+ endif
++
++# NetBSD audio support
++if HAVE_NETBSD
++src_libpcaudio_la_SOURCES += \
++	src/netbsd.c
++endif
