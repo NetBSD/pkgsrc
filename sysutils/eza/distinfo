@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2024/02/23 10:00:44 pin Exp $
+$NetBSD: distinfo,v 1.19 2024/02/29 10:41:11 pin Exp $
 
 BLAKE2s (aho-corasick-1.0.5.crate) = 2199caecbc50c93a65ce7d60055f1bcb6885adb15f1153c994432df75aa27240
 SHA512 (aho-corasick-1.0.5.crate) = 6b0a64dbfe0c166341a34cd169bc46d28e40f72db4d599a1aff5327a6e891408f39e8e92e983cf9396a8e8135f93e41550237ff3e5c8c05a5325688746fd814b
@@ -129,9 +129,9 @@ Size (errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza-0.18.4.tar.gz) = f1264b68756d5ddd8dc376940ef37392ec656302fe79ff15c8ba5745c0f994ca
-SHA512 (eza-0.18.4.tar.gz) = 1efbdffcf8750481ad733b0770180f7d13b035c80622fc25ac36884d64734eddb65778c971569d54841dd954230ba6ef2aaa0b1796746c4b3108db09c680abd5
-Size (eza-0.18.4.tar.gz) = 1524546 bytes
+BLAKE2s (eza-0.18.5.tar.gz) = a9a0f66cd6239647b4cc7ea0cb4bd9f591d47946c7c8797b9bfa5466578e2587
+SHA512 (eza-0.18.5.tar.gz) = 06355e187df76fb0daff02e180da60938ffad621885e7b40b2b60a2caf0deb5a51cfa6f079c5f8a73ad3e0bafa1bbcff827ab7988906d48d9f362887aefa8ac6
+Size (eza-0.18.5.tar.gz) = 1524679 bytes
 BLAKE2s (fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -249,12 +249,12 @@ Size (openssl-sys-0.9.61.crate) = 52010 bytes
 BLAKE2s (os_pipe-1.1.4.crate) = 895762733b0ca62d5435d0366cbfb5ea77d0d42870310ed98f8f7bd3efc5cd1e
 SHA512 (os_pipe-1.1.4.crate) = 8568008e30fdc47c1c89f7368654d26407fb6594cd89e2b85786c875d9dd99e77ed2bb84d281351072670e2dfe7a952d6251c6fb4d111ebe6a63cb34942b6aa3
 Size (os_pipe-1.1.4.crate) = 11436 bytes
-BLAKE2s (palette-0.7.4.crate) = 87c0a40adf69f87ca40e3cf754b3dfd688e8f52c60334a222efebbd3cac99fb3
-SHA512 (palette-0.7.4.crate) = 6991d7320396c50623f5538d3a116eb91a5d98454f91ea4e90b074767f5f058b32c8c14f8dc35f98bfbea1e591068f2b460a0f1c680e57ff103b894236853e19
-Size (palette-0.7.4.crate) = 203804 bytes
-BLAKE2s (palette_derive-0.7.4.crate) = d1bfa0e9d5fbb3928d500e12659750d75e6795081002ff4b4caaf2145603b9a1
-SHA512 (palette_derive-0.7.4.crate) = b3f7cc5169a2f2c220c10c251c6ff71a2404796771c3329dc19c3aaecae46223e62a4e426b1afc59e9265237145db4d3d6ce42823e97d231e51a7d43589649e4
-Size (palette_derive-0.7.4.crate) = 14371 bytes
+BLAKE2s (palette-0.7.5.crate) = f783656aca78e2434f5a834b6006fb59411c5aad1d16af23c7953e04e9304d9f
+SHA512 (palette-0.7.5.crate) = b6cc7e9c1ff1302a6827de905450e38a1cc66d97c803add57deeca9f40c565db61b0ac59b6d627e1491b6f221878c2323af5cc6ca05cfeb9554918e9d9c89efe
+Size (palette-0.7.5.crate) = 204746 bytes
+BLAKE2s (palette_derive-0.7.5.crate) = 54d7c1a88f5b67348767ff06f45c6f572477e156d0a18c070a4e7c61e3223662
+SHA512 (palette_derive-0.7.5.crate) = 13fa53ae40aea409c94675c119228e39a4602ad50015d8a44b2a394c919dbbb4d719e0aa60fc3fe804d2abe54f405ed0097ff66230e73022227811b7520e49a6
+Size (palette_derive-0.7.5.crate) = 14285 bytes
 BLAKE2s (partition-identity-0.3.0.crate) = 054e762c7c0d7e1ef37b0f79be8448640b45335438b8286ebe68a1de17e8752f
 SHA512 (partition-identity-0.3.0.crate) = 153843ea6c6a76fed350a24fad206304aa88f66755737c50b9f17bea3be434b7fe8940fdb8e31d43415accd4435c6b0c16f5ffcb5d5a1da72cdb8056c7b66bdb
 Size (partition-identity-0.3.0.crate) = 6711 bytes
