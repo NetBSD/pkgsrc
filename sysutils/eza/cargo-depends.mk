@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2024/02/23 10:00:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2024/02/29 10:41:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -82,8 +82,8 @@ CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
 CARGO_CRATE_DEPENDS+=	openssl-src-111.26.0+1.1.1u
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.61
 CARGO_CRATE_DEPENDS+=	os_pipe-1.1.4
-CARGO_CRATE_DEPENDS+=	palette-0.7.4
-CARGO_CRATE_DEPENDS+=	palette_derive-0.7.4
+CARGO_CRATE_DEPENDS+=	palette-0.7.5
+CARGO_CRATE_DEPENDS+=	palette_derive-0.7.5
 CARGO_CRATE_DEPENDS+=	partition-identity-0.3.0
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	phf-0.11.2
