@@ -1,18 +1,18 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/02/15 12:23:31 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2024/02/29 12:37:01 adam Exp $
 
 Prepare and install pkgconfig file.
 
---- CMakeLists.txt.orig	2023-02-01 07:25:02.000000000 +0000
+--- CMakeLists.txt.orig	2024-02-24 08:29:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12)
- 
- project(libsrtp2 VERSION 2.5.0 LANGUAGES C)
+@@ -7,6 +7,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
+ set(CMAKE_C_EXTENSIONS ON)
+ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
  
 +set(PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
- set(PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
- set(PACKAGE_STRING "${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_VERSION}")
+ set(PACKAGE_VERSION ${PROJECT_VERSION})
+ set(PACKAGE_STRING "${PROJECT_NAME} ${PROJECT_VERSION}")
  
-@@ -278,6 +279,12 @@ install(TARGETS srtp2 DESTINATION lib
+@@ -302,6 +303,12 @@ install(TARGETS srtp2 DESTINATION lib
    EXPORT libSRTPTargets
  )
  
