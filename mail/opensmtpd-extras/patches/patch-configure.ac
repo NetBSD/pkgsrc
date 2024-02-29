@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/02/29 20:57:37 vins Exp $
+
+Avoid conflicting types for snprintf()
+
+--- configure.ac.orig	2024-02-29 18:09:13.292053324 +0000
++++ configure.ac
+@@ -501,9 +501,9 @@ fi
+ AC_MSG_CHECKING([whether snprintf can declare const char *fmt])
+ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+ #include <stdio.h>
+-int snprintf(char *a, size_t b, const char *c, ...) { return 0; }
++int x_snprintf(char *a, size_t b, const char *c, ...) { return 0; }
+ 		]], [[
+-	snprintf(0, 0, 0);
++	x_snprintf(0, 0, 0);
+ 		]])],
+    [AC_MSG_RESULT([yes])
+     AC_DEFINE([SNPRINTF_CONST], [const],
