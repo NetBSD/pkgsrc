@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2024/02/27 04:37:41 charlotte Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/29 01:17:46 schmonz Exp $
 
 DISTNAME=	s6-portable-utils-2.3.0.3
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://www.skarnet.org/software/s6-portable-utils/
 COMMENT=	Tiny portable generic utilties
 LICENSE=	isc
