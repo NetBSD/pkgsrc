@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/01 16:29:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/02/29 20:56:48 adam Exp $
+bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
-bin/PoC-${PYVERSSUFFIX}.py
-bin/PoC2-${PYVERSSUFFIX}.py
 bin/addcomputer-${PYVERSSUFFIX}.py
 bin/atexec-${PYVERSSUFFIX}.py
+bin/changepasswd-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
 bin/dpapi-${PYVERSSUFFIX}.py
 bin/esentutl-${PYVERSSUFFIX}.py
@@ -18,13 +18,15 @@ bin/getST-${PYVERSSUFFIX}.py
 bin/getTGT-${PYVERSSUFFIX}.py
 bin/goldenPac-${PYVERSSUFFIX}.py
 bin/karmaSMB-${PYVERSSUFFIX}.py
-bin/keylistattack2-${PYVERSSUFFIX}.py
+bin/keylistattack-${PYVERSSUFFIX}.py
 bin/kintercept-${PYVERSSUFFIX}.py
 bin/lookupsid-${PYVERSSUFFIX}.py
+bin/machine_role-${PYVERSSUFFIX}.py
 bin/mimikatz-${PYVERSSUFFIX}.py
 bin/mqtt_check-${PYVERSSUFFIX}.py
 bin/mssqlclient-${PYVERSSUFFIX}.py
 bin/mssqlinstance-${PYVERSSUFFIX}.py
+bin/net-${PYVERSSUFFIX}.py
 bin/netview-${PYVERSSUFFIX}.py
 bin/nmapAnswerMachine-${PYVERSSUFFIX}.py
 bin/ntfs-read-${PYVERSSUFFIX}.py
@@ -51,18 +53,17 @@ bin/smbserver-${PYVERSSUFFIX}.py
 bin/sniff-${PYVERSSUFFIX}.py
 bin/sniffer-${PYVERSSUFFIX}.py
 bin/split-${PYVERSSUFFIX}.py
-bin/testTGT-${PYVERSSUFFIX}.py
-bin/testTGT2-${PYVERSSUFFIX}.py
 bin/ticketConverter-${PYVERSSUFFIX}.py
 bin/ticketer-${PYVERSSUFFIX}.py
+bin/tstool-${PYVERSSUFFIX}.py
 bin/wmiexec-${PYVERSSUFFIX}.py
 bin/wmipersist-${PYVERSSUFFIX}.py
 bin/wmiquery-${PYVERSSUFFIX}.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/impacket/Dot11Crypto.py
 ${PYSITELIB}/impacket/Dot11Crypto.pyc
 ${PYSITELIB}/impacket/Dot11Crypto.pyo
@@ -138,6 +139,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/dhcpm.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/drsuapi.py
 ${PYSITELIB}/impacket/dcerpc/v5/drsuapi.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/drsuapi.pyo
+${PYSITELIB}/impacket/dcerpc/v5/dssp.py
+${PYSITELIB}/impacket/dcerpc/v5/dssp.pyc
+${PYSITELIB}/impacket/dcerpc/v5/dssp.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/dtypes.py
 ${PYSITELIB}/impacket/dcerpc/v5/dtypes.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/dtypes.pyo
@@ -213,6 +217,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/transport.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/tsch.py
 ${PYSITELIB}/impacket/dcerpc/v5/tsch.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/tsch.pyo
+${PYSITELIB}/impacket/dcerpc/v5/tsts.py
+${PYSITELIB}/impacket/dcerpc/v5/tsts.pyc
+${PYSITELIB}/impacket/dcerpc/v5/tsts.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/wkst.py
 ${PYSITELIB}/impacket/dcerpc/v5/wkst.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/wkst.pyo
@@ -243,6 +250,9 @@ ${PYSITELIB}/impacket/examples/ldap_shell.pyo
 ${PYSITELIB}/impacket/examples/logger.py
 ${PYSITELIB}/impacket/examples/logger.pyc
 ${PYSITELIB}/impacket/examples/logger.pyo
+${PYSITELIB}/impacket/examples/mssqlshell.py
+${PYSITELIB}/impacket/examples/mssqlshell.pyc
+${PYSITELIB}/impacket/examples/mssqlshell.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/__init__.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/__init__.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/__init__.pyo
@@ -309,6 +319,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/__init__.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/httprelayserver.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/servers/rawrelayserver.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/servers/smbrelayserver.pyo
@@ -414,6 +427,9 @@ ${PYSITELIB}/impacket/krb5/kerberosv5.pyo
 ${PYSITELIB}/impacket/krb5/keytab.py
 ${PYSITELIB}/impacket/krb5/keytab.pyc
 ${PYSITELIB}/impacket/krb5/keytab.pyo
+${PYSITELIB}/impacket/krb5/kpasswd.py
+${PYSITELIB}/impacket/krb5/kpasswd.pyc
+${PYSITELIB}/impacket/krb5/kpasswd.pyo
 ${PYSITELIB}/impacket/krb5/pac.py
 ${PYSITELIB}/impacket/krb5/pac.pyc
 ${PYSITELIB}/impacket/krb5/pac.pyo
