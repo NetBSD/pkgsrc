@@ -1,0 +1,3 @@
+The Portable C Audio Library (pcaudiolib) provides a C API to
+different audio devices. It supports: ALSA, CoreAudio (Mac OS),
+OSS and PulseAudio.
