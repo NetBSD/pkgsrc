@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/09/08 11:47:22 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/02/29 21:09:17 adam Exp $
 
-BLAKE2s (build-1.0.3.tar.gz) = c23531fe44e38f5df21d19ca2bc7b0471a3677ec7d69d3afa324d7db56f39fb6
-SHA512 (build-1.0.3.tar.gz) = 92179348078647c3162ca6fe2cc1ab374469ab1336feccc5486b50274014f4773006eb50d8d3300390f1442da474424c45002a71ce155b35d7f2b3c5b754a1bd
-Size (build-1.0.3.tar.gz) = 40797 bytes
-SHA1 (patch-pyproject.toml) = 738af4911106b9c7701bf50dd01105edb7ba9fdb
+BLAKE2s (build-1.1.1.tar.gz) = 262094d6c72d7ab98726198c845f306638e457fe452874de2bdc25e9944f8253
+SHA512 (build-1.1.1.tar.gz) = 8e36cf50ffd5b57596128f20c929d210f1ee189bdc89e30570a2448db4d3d4f379389dc052e4c8f8e01ef2d485b1fb6035781e0b7833d71c14658a69438dd528
+Size (build-1.1.1.tar.gz) = 44711 bytes
+SHA1 (patch-pyproject.toml) = 62ecc6de7166fd68814854d92996c00ebaff5f4e

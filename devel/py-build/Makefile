@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/10/25 22:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/02/29 21:09:17 adam Exp $
 
-DISTNAME=	build-1.0.3
+DISTNAME=	build-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
 
@@ -13,19 +12,21 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks-[0-9]*:../../devel/py-pyproject_hooks
-TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3:../../devel/py-filelock
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.0:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.4:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.12:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=2:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=9.1:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
 post-install:
