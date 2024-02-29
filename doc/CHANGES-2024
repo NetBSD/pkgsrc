@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1596 2024/02/29 22:12:36 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1597 2024/02/29 22:14:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2818,3 +2818,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-build to 1.1.1 [adam 2024-02-29]
 	Updated security/py-pip-audit to 2.7.2 [adam 2024-02-29]
 	Updated shells/oh-my-posh to 19.11.7 [pin 2024-02-29]
+	Updated security/sequoia-sq to 0.34.0 [pin 2024-02-29]
