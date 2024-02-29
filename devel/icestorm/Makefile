@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/28 06:02:38 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/02/29 02:03:20 thorpej Exp $
 
 # There are no release tags for icestorm
 ICESTORM_VERSION=0.0.20240227
@@ -13,8 +13,16 @@ HOMEPAGE=	https://github.com/YosysHQ/icestorm
 COMMENT=	Lattice iCE40 FPGAs Bitstream Documentation and tools
 LICENSE=	isc
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+.if ${OPSYS} == "Darwin"
+# The -i option on Darwin sed(1) behaves differently, and textproc/nbsed
+# (which gets substituted for the system sed(1) for other reasons) doesn't
+# support the -i option.  See also patches/patch-icebox_Makefile.
+USE_TOOLS+=	gsed
+.endif
 
 REPLACE_PYTHON+= icebox/*.py
 
