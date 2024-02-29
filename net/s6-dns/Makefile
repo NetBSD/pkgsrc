@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2024/02/27 04:36:50 charlotte Exp $
+# $NetBSD: Makefile,v 1.13 2024/02/29 01:17:46 schmonz Exp $
 
 DISTNAME=	s6-dns-2.3.7.1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://www.skarnet.org/software/s6-dns/
 COMMENT=	Suite of DNS client programs and libraries
 LICENSE=	isc
