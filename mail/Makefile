@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2024/02/25 12:11:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.642 2024/02/29 21:00:42 vins Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -207,6 +207,7 @@ SUBDIR+=	openarc
 SUBDIR+=	opendkim
 SUBDIR+=	opendmarc
 SUBDIR+=	opensmtpd
+SUBDIR+=	opensmtpd-extras
 SUBDIR+=	opensmtpd-filter-dkimsign
 SUBDIR+=	opensmtpd-filter-dnsbl
 SUBDIR+=	opensmtpd-filter-rspamd
