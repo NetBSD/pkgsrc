@@ -1,0 +1,22 @@
+$NetBSD: patch-icebox_Makefile,v 1.1 2024/02/29 02:03:20 thorpej Exp $
+
+Disable special case for Darwin sed(1); the package Makefile forces
+the use of GNU sed(1) on Darwin.
+
+--- icebox/Makefile.orig	2024-02-28 20:06:15
++++ icebox/Makefile	2024-02-28 18:31:57
+@@ -1,10 +1,10 @@
+ include ../config.mk
+ 
+-ifneq ($(shell uname -s),Darwin)
++#ifneq ($(shell uname -s),Darwin)
+   SED_I = sed -i
+-else
+-  SED_I = sed -i ''
+-endif
++#else
++#  SED_I = sed -i ''
++#endif
+ 
+ all: chipdb-384.txt chipdb-1k.txt chipdb-8k.txt chipdb-5k.txt chipdb-lm4k.txt chipdb-u4k.txt
+ 
