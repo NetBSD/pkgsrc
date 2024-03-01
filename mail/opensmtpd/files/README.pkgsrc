@@ -1,14 +1,29 @@
-Getting started
-===============
++-----------------------------------------------------------------------
+| Getting started with OpenSMTPD on NetBSD 
++-----------------------------------------------------------------------
 
 Assuming NetBSD-style mailwrapper(8) and rc(8), few steps are required
 to set up OpenSMTPD for local and outbound delivery on your system: 
 
-* Run `$ @RCD_SCRIPTS_DIR@/postfix stop' and set postfix=NO in /etc/rc.conf.
+* Explictely disable Postfix to prevent it from listening on smtp/smtps
+  ports. To do this, run`$ @RCD_SCRIPTS_DIR@/postfix stop' and set
+  postfix=NO in /etc/rc.conf.
+
 * Replace /etc/mailer.conf with @PREFIX@/share/examples/opensmtpd/mailer.conf.
+  This will instruct mailwrapper(8) to invoke OpenSMTPD in place of
+  Postfix when executing sendmail-compatible commands.
+
+* Copy the sample rc.d service script provided as
+  @PREFIX@/share/examples/rc.d/opensmtpd to @RCD_SCRIPTS_DIR@
+
+* Import the pam policy for the smtp protocol by copying
+  @PREFIX@/share/examples/pam.d/smtp to /etc/pam.d 
+
 * Prepend @PREFIX@/man to the MANPATH environment to avoid conflicting
-  names for man pages with sendmail-compatible mail servers.
-* Check the smtpd.conf and aliases files in @PKG_SYSCONFDIR@/smtpd. See 
-  the relevant man pages.
-* Set opensmtpd=YES in /etc/rc.conf.  
-* Run `@RCD_SCRIPTS_DIR@/opensmtpd start' to start OpenSMTPD.
+  names in man pages with Postfix.
+
+* Check the smtpd.conf and aliases files in @PKG_SYSCONFDIR@. See 
+  the relevant man pages, including smtpd.conf(5).
+
+* Set opensmtpd=YES in /etc/rc.conf to enable the service upon startup,
+  and run `$ @RCD_SCRIPTS_DIR@/opensmtpd start' to start OpenSMTPD.
