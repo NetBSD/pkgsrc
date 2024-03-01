@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1599 2024/03/01 06:56:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1600 2024/03/01 12:16:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2822,3 +2822,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added net/opentofu version 1.6.2 [riastradh 2024-03-01]
 	Updated textproc/expat to 2.6.1 [adam 2024-03-01]
 	Updated devel/py-scikit-build-core to 0.8.2 [adam 2024-03-01]
+	Updated www/nghttp2 to 1.60.0 [adam 2024-03-01]
+	Updated www/nghttp2-tools to 1.60.0 [adam 2024-03-01]
+	Updated www/py-httpx-socks to 0.9.0 [adam 2024-03-01]
+	Updated devel/py-serializable to 1.0.2 [adam 2024-03-01]
