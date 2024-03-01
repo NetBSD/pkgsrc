@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.7 2024/02/13 16:58:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.8 2024/03/01 18:25:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -32,4 +32,7 @@ net/bind918: security fix
 
 Pullup ticket #6836 - requested by taca
 net/bind916: security fix
+
+Pullup ticket #6838 - requested by riastradh
+security/libfido2: NetBSD build fix
 
