@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1561 2024/02/22 02:50:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1562 2024/03/01 03:29:56 riastradh Exp $
 #
 
 COMMENT=	Networking tools
@@ -501,6 +501,7 @@ SUBDIR+=	openresolv
 SUBDIR+=	openrrcp
 SUBDIR+=	openrsync
 SUBDIR+=	openslp
+SUBDIR+=	opentofu
 SUBDIR+=	opentracker
 SUBDIR+=	openvmps
 SUBDIR+=	openvpn
