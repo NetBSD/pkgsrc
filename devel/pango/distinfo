@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.141 2023/06/26 19:49:32 adam Exp $
+$NetBSD: distinfo,v 1.142 2024/03/01 19:35:17 wiz Exp $
 
-BLAKE2s (pango-1.50.14.tar.xz) = bcc345f34156a5cf6db9cbacce2ca182078adacecdbbc1e53b4a2e4717640c88
-SHA512 (pango-1.50.14.tar.xz) = 2c9330b65920fdd0ab6d645aed785a364158d78068bdcd7ba15b6a7368835677f06f2f8fd158cd23b05f98a37fb903e29526ade8f4d62913dbc5809f737d5166
-Size (pango-1.50.14.tar.xz) = 4273776 bytes
+BLAKE2s (pango-1.52.0.tar.xz) = d07bcdcffa41819f62fe1b38f154cb438685f84afa94f22d18cf113b40bbce63
+SHA512 (pango-1.52.0.tar.xz) = 553092854e6743dede4e4585f6aad70da95dc5e594d399503ce19e60a62c3af9815d48a62e1b5dd2fbf27f41400dcd9f8be64d771d0e8b50b2a0dc9f8dbd6e20
+Size (pango-1.52.0.tar.xz) = 1956612 bytes
 SHA1 (patch-pango_pangocairo-coretextfont.c) = cfef0e1372d5770d5988af411d435ee87fdfd0bd
 SHA1 (patch-pango_pangocairo-coretextfontmap.c) = 395cb1f8472a319c4b1c58ea137e36452bc44cc6
 SHA1 (patch-pango_pangocoretext-private.h) = 0d7d61cd7e7b9da34bf8a0d5d1c6e7734341cadf
