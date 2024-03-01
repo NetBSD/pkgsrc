@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1605 2024/03/01 19:35:27 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1606 2024/03/01 22:29:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added security/xhash version 3.3.2 [bsiegert 2024-03-01]
 	Updated games/chess-tui to 1.2.0 [pin 2024-03-01]
 	Updated devel/pango to 1.52.0 [wiz 2024-03-01]
+	Updated sysutils/broot to 1.35.0 [pin 2024-03-01]
