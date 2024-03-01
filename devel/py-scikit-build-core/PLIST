@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/15 07:36:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/01 06:56:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -71,6 +71,9 @@ ${PYSITELIB}/scikit_build_core/build/wheel.pyo
 ${PYSITELIB}/scikit_build_core/builder/__init__.py
 ${PYSITELIB}/scikit_build_core/builder/__init__.pyc
 ${PYSITELIB}/scikit_build_core/builder/__init__.pyo
+${PYSITELIB}/scikit_build_core/builder/__main__.py
+${PYSITELIB}/scikit_build_core/builder/__main__.pyc
+${PYSITELIB}/scikit_build_core/builder/__main__.pyo
 ${PYSITELIB}/scikit_build_core/builder/builder.py
 ${PYSITELIB}/scikit_build_core/builder/builder.pyc
 ${PYSITELIB}/scikit_build_core/builder/builder.pyo
