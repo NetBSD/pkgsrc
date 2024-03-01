@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/09/01 09:56:56 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.1.4.1 2024/03/01 17:29:55 bsiegert Exp $
 
 Remove overzealous compiler options and let pkgsrc define the
 stack protection to use.
@@ -13,15 +13,6 @@ stack protection to use.
  
  check_include_files(cbor.h HAVE_CBOR_H)
  check_include_files(endian.h HAVE_ENDIAN_H)
-@@ -123,7 +122,7 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC
- try_compile(HAVE_POSIX_IOCTL
-     "${CMAKE_CURRENT_BINARY_DIR}/posix_ioctl_check.o"
-     "${CMAKE_CURRENT_SOURCE_DIR}/openbsd-compat/posix_ioctl_check.c"
--    COMPILE_DEFINITIONS "-Werror -Woverflow -Wsign-conversion")
-+    COMPILE_DEFINITIONS "-Woverflow -Wsign-conversion")
- 
- list(APPEND CHECK_VARIABLES
- 	HAVE_ARC4RANDOM_BUF
 @@ -295,7 +294,6 @@ else()
  
  	add_compile_options(-Wall)
