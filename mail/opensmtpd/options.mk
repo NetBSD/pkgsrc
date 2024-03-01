@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/01/16 13:24:00 vins Exp $
+# $NetBSD: options.mk,v 1.3 2024/03/01 20:50:05 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensmtpd
 
@@ -26,12 +26,14 @@ PLIST_VARS+=		mailwrapper pam
 
 CONFIGURE_ARGS+=	--with-auth-pam=smtp
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=		${EGDIR}/pam.d/smtp \
+PAMDIR=		share/examples/pam.d
+MAKE_DIRS+=	${PAMDIR}
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/pam.d
+
+CONF_FILES+=		${PREFIX}/${PAMDIR}/smtp \
 			${PKG_SYSCONFDIR}/pam.d/smtp
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
-INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
+INSTALLATION_DIRS+=	${PAMDIR}
 
 PLIST.pam=		yes
 
@@ -39,7 +41,7 @@ PLIST.pam=		yes
 
 pam-install:
 	${INSTALL_DATA} ${FILESDIR}/smtp.conf	\
-		${DESTDIR}${EGDIR}/pam.d/smtp
+		${DESTDIR}${PREFIX}/${PAMDIR}/smtp
 .endif
 
 #
