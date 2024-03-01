@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/01/16 13:24:00 vins Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/01 20:50:05 vins Exp $
 
 VERSION=	7.4.0p1
 DISTNAME=	opensmtpd-${VERSION}
@@ -50,13 +50,13 @@ CONFIGURE_ARGS+=	--with-pie
 
 .include "options.mk"
 
-EGDIR=		${PREFIX}/share/examples/opensmtpd
-DOCDIR=		${PREFIX}/share/doc/opensmtpd
-CONF_FILES+=	${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd/smtpd.conf
-CONF_FILES+=	${EGDIR}/aliases ${PKG_SYSCONFDIR}/smtpd/aliases
+PKG_SYSCONFSUBDIR=	smtpd
+EGDIR=			${PREFIX}/share/examples/opensmtpd
+DOCDIR=			${PREFIX}/share/doc/opensmtpd
+CONF_FILES+=		${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
+CONF_FILES+=		${EGDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 
 OWN_DIRS+=	${SMTPD_HOME}
-OWN_DIRS+=	${PKG_SYSCONFDIR}/smtpd
 MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
