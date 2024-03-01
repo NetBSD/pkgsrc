@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:24:44 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/03/01 12:23:07 he Exp $
 
 BLAKE2s (titrax-1.98.tar.gz) = fe6c301ccbffd3ed980c927896fe05bf5ad92fa8b3633b258066c923837c6350
 SHA512 (titrax-1.98.tar.gz) = 5d7f0833efe3dc4b2ef638836b171fcc83efc0cb66b119b17bd3937773555ab6171d0558439bf3265a95e66c3dbe44eae57df3198c3131265b75cf44ec11848c
 Size (titrax-1.98.tar.gz) = 41154 bytes
 SHA1 (patch-Imakefile) = b6e2ab54377d0720c60f53224257b5dcf123ec2c
-SHA1 (patch-sumtitra) = 2fbad9d6cdbc5239cf2a25ab057f640452c5a33e
+SHA1 (patch-sumtitra) = 67d60097edef2db6c494569e107ea76c5cc05374
 SHA1 (patch-titrat) = a6979392d0d0f755ff94147c490c466c3f60ff55
-SHA1 (patch-weekno.perl) = c5b431054d600fd2ee6ebe345257fd0febe9e0b0
+SHA1 (patch-weekno.perl) = d9eb0e3b178f54022f860646f3236c7d6f9dbc52
