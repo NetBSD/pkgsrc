@@ -1,6 +1,7 @@
-$NetBSD: patch-weekno.perl,v 1.1 2014/11/05 22:41:38 he Exp $
+$NetBSD: patch-weekno.perl,v 1.2 2024/03/01 12:23:07 he Exp $
 
 Fix this so that it uses week numbering according to ISO 8601.
+Also replace ' with :: for newer perl.
 
 --- weekno.perl.orig	1995-10-17 13:44:49.000000000 +0000
 +++ weekno.perl
@@ -14,7 +15,7 @@ Fix this so that it uses week numbering according to ISO 8601.
  
  package DATE;
  #               J   F   M   A   M   J   J   A   S   O   N   D
-@@ -51,7 +51,21 @@ sub weekno {
+@@ -51,21 +51,36 @@ sub weekno {
  
  
  sub firstdayfirstweek {
@@ -37,8 +38,9 @@ Fix this so that it uses week numbering according to ISO 8601.
     local($y) = @_;
     local($ret);
     # Get time of January 1, 0.0.0.0
-@@ -59,13 +73,14 @@ sub firstdayfirstweek {
-    local($firsttime) = &main'timelocal(0, 0, 0, 1, 0, $y, 0, 0, 0);
+    # Note that DST is never in effect on Jan 1...
+-   local($firsttime) = &main'timelocal(0, 0, 0, 1, 0, $y, 0, 0, 0);
++   local($firsttime) = &main::timelocal(0, 0, 0, 1, 0, $y, 0, 0, 0);
     local(@firstday) = localtime($firsttime);
     local($wday) = $firstday[6];
 -   # Rule works for some years.....89 to 92 tested, they all hit branch 2...
@@ -57,3 +59,12 @@ Fix this so that it uses week numbering according to ISO 8601.
  }
   
  sub firstinweek {
+@@ -73,7 +88,7 @@ sub firstinweek {
+ # (to avoid DST troubles)
+    local($weekno, $year) = @_;
+    # 2 hours into this year
+-   local($time) = &main'timelocal(0, 0, 2, 1, 0, $year, 0, 0, 0);
++   local($time) = &main::timelocal(0, 0, 2, 1, 0, $year, 0, 0, 0);
+    # Add number of days since start of year
+    $time += (($weekno - 1) * 7 + &firstdayfirstweek($year)) * 60 * 60 * 24;
+    $time;
