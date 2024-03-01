@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.940 2024/02/28 16:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.941 2024/03/01 15:51:24 bsiegert Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -671,6 +671,7 @@ SUBDIR+=	volatility3
 SUBDIR+=	wfuzz
 SUBDIR+=	wolfssl
 SUBDIR+=	xca
+SUBDIR+=	xhash
 SUBDIR+=	xml-security-c
 SUBDIR+=	xmlsec1
 SUBDIR+=	yafic
