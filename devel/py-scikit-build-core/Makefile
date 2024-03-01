@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/02/15 07:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/01 06:56:19 adam Exp $
 
-DISTNAME=	scikit_build_core-0.8.1
+DISTNAME=	scikit_build_core-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -45,6 +45,5 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1:../../textproc/py-tomli
 
 .include "../../lang/python/wheel.mk"
 # only needed for testing, but this is not supported by buildlink3, so make it build dependency
-BUILDLINK_DEPMETHOD.py-pybind11=   build
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
