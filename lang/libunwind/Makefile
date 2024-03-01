@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/10/06 19:15:21 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/03/01 22:14:58 bacon Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -22,7 +22,15 @@ USE_CXX_FEATURES+=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
+
+.include "../../mk/bsd.prefs.mk"
+
+# Configure fails on Alma8 with "/usr/bin/ld: cannot find -lgcc_s".
+# The pkg works fine with base GCC.
+# The libcxx pkg currently has GCC_REQD=12, while this one is 10.
+.if ${OPSYS} != Linux || !exists(/etc/redhat-release)
 GCC_REQD+=		10	# must be in sync with libcxx
+.endif
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
