@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2023/08/24 15:26:40 vins Exp $
+$NetBSD: MESSAGE,v 1.2 2024/03/01 20:50:05 vins Exp $
 
-Sample configuration files have been installed at ${PKG_SYSCONFDIR}/smtpd.
+Sample configuration files have been installed at ${PKG_SYSCONFDIR}.
 
 Check the README available at ${DOCDIR}.
 
