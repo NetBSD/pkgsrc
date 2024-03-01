@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/03/01 06:34:45 kim Exp $
 
 DISTNAME=	teseq-1.1.1
 PKGREVISION=	6
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.gnu.org/gnu/teseq/
+MASTER_SITES=	${MASTER_SITE_GNU:=teseq/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

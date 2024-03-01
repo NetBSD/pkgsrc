@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.18 2023/06/06 12:41:41 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.19 2024/03/01 06:34:44 kim Exp $
 #
 # used by lang/classpath/Makefile
 # used by lang/classpath-gui/Makefile
 
 DISTNAME=		classpath-0.93
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
+MASTER_SITES=		${MASTER_SITE_GNU:=classpath/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnu.org/software/classpath/
