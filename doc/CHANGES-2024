@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1602 2024/03/01 15:42:36 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1603 2024/03/01 15:51:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-serializable to 1.0.2 [adam 2024-03-01]
 	Updated time/titrax to 1.98nb18 [he 2024-03-01]
 	Updated x11/pixman to 0.43.4 [wiz 2024-03-01]
+	Added security/xhash version 3.3.2 [bsiegert 2024-03-01]
