@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/05 11:09:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/02 12:58:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,12 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/msgpack/__init__.py
 ${PYSITELIB}/msgpack/__init__.pyc
 ${PYSITELIB}/msgpack/__init__.pyo
-${PYSITELIB}/msgpack/_cmsgpack.cpp
-${PYSITELIB}/msgpack/_cmsgpack.pyx
 ${PYSITELIB}/msgpack/_cmsgpack.so
-${PYSITELIB}/msgpack/_packer.pyx
-${PYSITELIB}/msgpack/_unpacker.pyx
-${PYSITELIB}/msgpack/buff_converter.h
 ${PYSITELIB}/msgpack/exceptions.py
 ${PYSITELIB}/msgpack/exceptions.pyc
 ${PYSITELIB}/msgpack/exceptions.pyo
@@ -22,9 +17,3 @@ ${PYSITELIB}/msgpack/ext.pyo
 ${PYSITELIB}/msgpack/fallback.py
 ${PYSITELIB}/msgpack/fallback.pyc
 ${PYSITELIB}/msgpack/fallback.pyo
-${PYSITELIB}/msgpack/pack.h
-${PYSITELIB}/msgpack/pack_template.h
-${PYSITELIB}/msgpack/sysdep.h
-${PYSITELIB}/msgpack/unpack.h
-${PYSITELIB}/msgpack/unpack_define.h
-${PYSITELIB}/msgpack/unpack_template.h
