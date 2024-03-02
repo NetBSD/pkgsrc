@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: opensmtpd.sh,v 1.3 2023/08/24 15:26:40 vins Exp $
+# $NetBSD: opensmtpd.sh,v 1.4 2024/03/02 17:01:12 vins Exp $
 #
 
 # PROVIDE: smtpd mail
