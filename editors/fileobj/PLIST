@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/16 06:49:14 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/03/02 05:00:59 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -17,6 +17,12 @@ ${PYSITELIB}/fileobj/ascii.pyo
 ${PYSITELIB}/fileobj/blk.py
 ${PYSITELIB}/fileobj/blk.pyc
 ${PYSITELIB}/fileobj/blk.pyo
+${PYSITELIB}/fileobj/blkcmp.py
+${PYSITELIB}/fileobj/blkcmp.pyc
+${PYSITELIB}/fileobj/blkcmp.pyo
+${PYSITELIB}/fileobj/blkdump.py
+${PYSITELIB}/fileobj/blkdump.pyc
+${PYSITELIB}/fileobj/blkdump.pyo
 ${PYSITELIB}/fileobj/blkscan.py
 ${PYSITELIB}/fileobj/blkscan.pyc
 ${PYSITELIB}/fileobj/blkscan.pyo
@@ -26,9 +32,6 @@ ${PYSITELIB}/fileobj/candidate.pyo
 ${PYSITELIB}/fileobj/chunk.py
 ${PYSITELIB}/fileobj/chunk.pyc
 ${PYSITELIB}/fileobj/chunk.pyo
-${PYSITELIB}/fileobj/cmp.py
-${PYSITELIB}/fileobj/cmp.pyc
-${PYSITELIB}/fileobj/cmp.pyo
 ${PYSITELIB}/fileobj/console.py
 ${PYSITELIB}/fileobj/console.pyc
 ${PYSITELIB}/fileobj/console.pyo
