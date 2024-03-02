@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2024/02/29 20:57:37 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/02 17:53:23 vins Exp $
 
-DISTNAME=	opensmtpd-extras-6.7.1
-CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSMTPD/}
-GITHUB_PROJECT=	OpenSMTPD-extras
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DISTNAME=		opensmtpd-extras-6.7.1_20240228
+CATEGORIES=		mail
+MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenSMTPD/}
+GITHUB_PROJECT=		OpenSMTPD-extras
+#GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_TAG=		86f2f1927743257674d29d4fed250bdce5d1c0b5
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/OpenSMTPD/OpenSMTPD-extras/
@@ -18,33 +19,37 @@ CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE   # strtonum()
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	awk mandoc pkg-config sh
+USE_TOOLS+=	awk mandoc pkg-config
 USE_TOOLS+=	automake aclocal autoheader autoconf
 
 DEPENDS+=	opensmtpd-[0-9]*:../../mail/opensmtpd
 
+PKG_SYSCONFSUBDIR=	smtpd
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
-SUBST_FILES.paths=	configure.ac
+SUBST_FILES.paths=	configure.ac extras/tables/table-mysql/table-mysql.5 \
+			extras/tables/table-postgres/table-postgres.5 \
+			extras/tables/table-sqlite/table-sqlite.5
 SUBST_SED.paths+=	-e "s:/usr/local/bin:${PREFIX}/bin:g"
 SUBST_SED.paths+=	-e "s:/usr/local/lib:${PREFIX}/lib:g"
 SUBST_SED.paths+=	-e "s:/usr/local/include:${PREFIX}/include:g"
-SUBST_SED.paths+=	-e "s:/usr/local/ssl:${SSLDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/ssl:${SSLBASE}:g"
+SUBST_SED.paths+=	-e "s:/etc/openssl:${SSLDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local:${PREFIX}:g"
+SUBST_SED.paths+=	-e "s:/etc/mail:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/var/vmail:${VARBASE}/vmail:g"
 
 CONFIGURE_ENV+=		TEST_MINUS_S_SH=${SH:Q}
 CONFIGURE_ARGS+=	--with-pie
 CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/smtpd
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-user-smtpd=_smtpd
 CONFIGURE_ARGS+=	--with-path-empty=${VARBASE}/empty
 CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
-
-CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:Q}	\
-			--with-cppflags=${CPPFLAGS:Q}	\
-			--with-ldflags=${LDFLAGS:Q}
 
 CONFIGURE_ARGS+=	--with-filter-stub	\
 			--with-filter-trace	\
@@ -71,7 +76,7 @@ pre-configure:
 	cd ${WRKSRC} && ${TOOLS_CMD.autoheader}
 	cd ${WRKSRC} && ${TOOLS_CMD.automake} --foreign --add-missing --copy
 
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/libretls/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
