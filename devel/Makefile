@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4189 2024/03/02 02:03:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.4190 2024/03/02 19:24:03 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1131,6 +1131,7 @@ SUBDIR+=	metslib
 SUBDIR+=	mgdiff
 SUBDIR+=	mimalloc
 SUBDIR+=	mirmake
+SUBDIR+=	mise
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
