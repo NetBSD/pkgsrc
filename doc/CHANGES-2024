@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1609 2024/03/02 12:16:31 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1610 2024/03/02 12:49:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2835,3 +2835,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/yosys version 0.38 [thorpej 2024-03-01]
 	Updated x11/xlsfonts to 1.0.8 [wiz 2024-03-02]
 	Updated security/sequoia-sq to 0.34.0nb1 [wiz 2024-03-02]
+	Updated devel/catch2 to 3.5.3 [adam 2024-03-02]
+	Updated textproc/ugrep to 5.0.0 [adam 2024-03-02]
