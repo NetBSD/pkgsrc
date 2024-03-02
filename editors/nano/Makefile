@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2023/02/02 16:54:20 schwarz Exp $
+# $NetBSD: Makefile,v 1.107 2024/03/02 10:33:07 nia Exp $
 
 DISTNAME=	nano-7.2
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${PKGVERSION_NOREV:C/\..*$//}/
 EXTRACT_SUFX=	.tar.xz
@@ -44,5 +45,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
