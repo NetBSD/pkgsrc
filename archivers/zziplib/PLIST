@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/28 17:58:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/03/02 12:55:00 adam Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzip-big
@@ -13,7 +13,6 @@ include/zzip-io.h
 include/zzip.h
 include/zzip/_config.h
 include/zzip/_msvc.h
-include/zzip/autoconf.h
 include/zzip/conf.h
 include/zzip/fetch.h
 include/zzip/file.h
@@ -79,26 +78,6 @@ man/man3/zzip_dir_real.3
 man/man3/zzip_dir_stat.3
 man/man3/zzip_dirfd.3
 man/man3/zzip_dirhandle.3
-man/man3/zzip_disk_buffer.3
-man/man3/zzip_disk_close.3
-man/man3/zzip_disk_entry_fopen.3
-man/man3/zzip_disk_entry_strdup_comment.3
-man/man3/zzip_disk_entry_strdup_name.3
-man/man3/zzip_disk_entry_to_data.3
-man/man3/zzip_disk_entry_to_file_header.3
-man/man3/zzip_disk_fclose.3
-man/man3/zzip_disk_feof.3
-man/man3/zzip_disk_findfile.3
-man/man3/zzip_disk_findfirst.3
-man/man3/zzip_disk_findmatch.3
-man/man3/zzip_disk_findnext.3
-man/man3/zzip_disk_fopen.3
-man/man3/zzip_disk_fread.3
-man/man3/zzip_disk_init.3
-man/man3/zzip_disk_mmap.3
-man/man3/zzip_disk_munmap.3
-man/man3/zzip_disk_new.3
-man/man3/zzip_disk_open.3
 man/man3/zzip_entry_data_offset.3
 man/man3/zzip_entry_fclose.3
 man/man3/zzip_entry_feof.3
