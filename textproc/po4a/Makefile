@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2024/02/09 12:18:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2024/03/02 20:59:03 adam Exp $
 
-DISTNAME=	po4a-0.70
-PKGREVISION=	2
+DISTNAME=	po4a-0.71
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -26,8 +25,7 @@ DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 .include "../../mk/bsd.prefs.mk"
 
 # sync with pkgtools/pkgdiff/Makefile
-.if	\
-	${OPSYS} == "SunOS" ||	\
+.if	${OPSYS} == "SunOS" ||	\
 	${OPSYS} == "OSF1" ||	\
 	${OPSYS} == "Darwin" && empty(OSX_VERSION:M[0-9].*) && empty(OSX_VERSION:M1[0-2].*)
 DEPENDS+=		diffutils-[0-9]*:../../devel/diffutils
