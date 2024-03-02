@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24119 2024/03/01 19:35:27 wiz Exp $
+$NetBSD: TODO,v 1.24120 2024/03/02 02:09:16 thorpej Exp $
 
 Suggested new packages
 ======================
@@ -343,10 +343,6 @@ Suggested new packages
 	FerretDB
 	https://blog.ferretdb.io/ferretdb-1-0-ga-opensource-mongodb-alternative/
         MongoDB compatibility layer for PostgreSQL
-
-	Yosys
-	https://github.com/YosysHQ/yosys
-	Framework for RTL synthesis tools
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
