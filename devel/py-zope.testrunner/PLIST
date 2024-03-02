@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/08 06:02:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/02 12:50:08 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -278,9 +278,6 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/badsyntax.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/do-not-enter/sampletests.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/do-not-enter/sampletests.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/do-not-enter/sampletests.pyo
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/donotenter/sampletests.py
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/donotenter/sampletests.pyc
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/donotenter/sampletests.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/e.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/sample21/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sample2/sample21/__init__.pyc
