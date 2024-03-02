@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/03/01 20:50:05 vins Exp $
+# $NetBSD: options.mk,v 1.4 2024/03/02 17:01:12 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensmtpd
 
@@ -28,10 +28,6 @@ CONFIGURE_ARGS+=	--with-auth-pam=smtp
 
 PAMDIR=		share/examples/pam.d
 MAKE_DIRS+=	${PAMDIR}
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/pam.d
-
-CONF_FILES+=		${PREFIX}/${PAMDIR}/smtp \
-			${PKG_SYSCONFDIR}/pam.d/smtp
 
 INSTALLATION_DIRS+=	${PAMDIR}
 
