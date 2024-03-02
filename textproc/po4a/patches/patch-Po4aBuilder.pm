@@ -1,4 +1,4 @@
-$NetBSD: patch-Po4aBuilder.pm,v 1.11 2024/01/29 16:08:20 adam Exp $
+$NetBSD: patch-Po4aBuilder.pm,v 1.12 2024/03/02 20:59:03 adam Exp $
 
 (1) ryoon: remove gzip at initial import.
 (2) mef: Add PerlIO::F_UTF8 () macro.
@@ -6,7 +6,7 @@ $NetBSD: patch-Po4aBuilder.pm,v 1.11 2024/01/29 16:08:20 adam Exp $
 (4) schmonz: Invoke pkgsrc's gettext-tools.
 (5) schmonz: Write to the full physical null device.
 
---- Po4aBuilder.pm.orig	2024-01-28 23:39:44.000000000 +0000
+--- Po4aBuilder.pm.orig	2024-02-29 20:26:15.000000000 +0000
 +++ Po4aBuilder.pm
 @@ -16,6 +16,8 @@ use File::stat;
  
@@ -27,7 +27,7 @@ $NetBSD: patch-Po4aBuilder.pm,v 1.11 2024/01/29 16:08:20 adam Exp $
                  unlink "po/bin/po4a.pot.new" || die;
                  # touch it
 @@ -89,11 +91,11 @@ sub ACTION_binpo {
-       if (0) {
+       if ($lang eq 'de') {
          unless ($self->up_to_date("po/bin/po4a.pot", $_)) {
              print "XX Sync $_: ";
 -            system("msgmerge --previous $_ po/bin/po4a.pot -o $_.new") && die;
