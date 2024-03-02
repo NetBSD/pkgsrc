@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/02 02:03:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/02 23:08:00 thorpej Exp $
 
 YOSYS_VERSION=	0.38
 YOSYS_TAG=	yosys-${YOSYS_VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 GITHUB_TAG=	${YOSYS_TAG}
 WRKSRC=		${WRKDIR}/yosys-${YOSYS_TAG}
 EXTRACT_SUFX=	.tar.gz		# needed early
+
+PKGREVISION=	1
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/YosysHQ/yosys
