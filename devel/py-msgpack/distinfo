@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/09/28 15:47:39 adam Exp $
+$NetBSD: distinfo,v 1.24 2024/03/02 12:58:33 adam Exp $
 
-BLAKE2s (msgpack-1.0.7.tar.gz) = 26204b50736bc8a09e57ab8dc511be8f12a7cb12719afd4eeba4ad007ffad191
-SHA512 (msgpack-1.0.7.tar.gz) = 0ebd36f45b73106a4272588b55d55e72b6b8441be652b16f63f5547ae7ff1bc517a6b4549ef999ee63deb2856354a71ef37fd8d8829e516232518b046cf589c5
-Size (msgpack-1.0.7.tar.gz) = 166311 bytes
+BLAKE2s (msgpack-1.0.8.tar.gz) = b0dde1ddb00b8ac51973a17f6479f9c00fce3584f11c4dc711844036462ddad6
+SHA512 (msgpack-1.0.8.tar.gz) = b739667d4384ba0e18a4e55de6033933822180eb5d28bd7f5ecd7e7da112a214f400740feb45de6f0873d12c8b062b1a8b9b9e5939c2961a8c9585f282645c5b
+Size (msgpack-1.0.8.tar.gz) = 167014 bytes
