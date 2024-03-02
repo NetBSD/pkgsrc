@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2023/02/17 22:07:18 khorben Exp $
+$NetBSD: distinfo,v 1.40 2024/03/02 13:52:42 wiz Exp $
 
 BLAKE2s (open-vm-tools-12.1.5-20735119.tar.gz) = 409c366cc3dfb610fd00bf2b5d1037919ed37203862c8a810c64144b2dc660af
 SHA512 (open-vm-tools-12.1.5-20735119.tar.gz) = d85fec73a58cb1c9b2956aff886825b9d47d00dc6d0d8a3d2ecdfac3fa982c27463b9cc2f42bf3dd18fe542b30f751850e8051e270c547e897f06a4e1c12d639
@@ -39,6 +39,7 @@ SHA1 (patch-lib_lock_ulSema.c) = 6908d4b453cbdb74100c9419da95a07db532c624
 SHA1 (patch-lib_misc_hostinfoPosix.c) = 4daea6167cee2be57cc3acc0caa710ca940d1eb7
 SHA1 (patch-lib_misc_vthreadBase.c) = 8d2a2749d7ed343d2648f74546d69baab949e5cf
 SHA1 (patch-lib_nicInfo_nicInfoInt.h) = 81d5e8625496218a679c0a87f30a08cc2e3af7a7
+SHA1 (patch-lib_nicInfo_nicInfoPosix.c) = 2fe2da8d6fbf8f8c44c110b2ed37d2decd91b6a7
 SHA1 (patch-lib_rpcChannel_rpcChannel.c) = 4133707d70844eb12c25c48d6bb0b26a370987b3
 SHA1 (patch-lib_user_utilBacktrace.c) = 741cc72d64f962fa0aa48e90b1f912f422c5dd8b
 SHA1 (patch-libguestlib_Makefile.am) = fff8e8df30c91ffb4fd2c14017633be1b3cb47ec
