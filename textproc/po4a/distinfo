@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2024/02/09 12:18:08 jperkin Exp $
+$NetBSD: distinfo,v 1.34 2024/03/02 20:59:03 adam Exp $
 
-BLAKE2s (po4a-0.70.tar.gz) = 2314f3fdc095f26a3c1b6a5cd96713f9e7b3e3c68af7e2bdc0c98738068691cf
-SHA512 (po4a-0.70.tar.gz) = 8ff546776e9f9bc5d9612c734dbb029d232755950177cbb57c1afc5d3384c663d7fd9939ac63a2044fd55ac11ee4fd0552d90cc1e5ea662539f509b27e038a94
-Size (po4a-0.70.tar.gz) = 3946179 bytes
-SHA1 (patch-Po4aBuilder.pm) = ae2ff848ff6ed4812e0cfcbc867a976973919b52
+BLAKE2s (po4a-0.71.tar.gz) = d52fb306b126532985a6496e408efb2d3dc9d639b70ec05b5c84c8afe09810c9
+SHA512 (po4a-0.71.tar.gz) = 5dd19e61d13ade34a4fb3da7eebb26970efb5cc6977147929f5c394c43f1155e52c705b6757e9a3b4d9dd6f2b0499378c10f42315843486cab7d5371402df025
+Size (po4a-0.71.tar.gz) = 3968218 bytes
+SHA1 (patch-Po4aBuilder.pm) = 825d5e508d527644edfaca4ceb8b634cdcc89bec
 SHA1 (patch-lib_Locale_Po4a_Po.pm) = 649b19ed250c663019dfb98723c61e13b47e6512
 SHA1 (patch-msguntypot) = 0f53ba5a0a76021c52becec9f0d31e67c998ae0a
 SHA1 (patch-po4a) = b589f42086f3a6471bba30b13face9e6983797bd
