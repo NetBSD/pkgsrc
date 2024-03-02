@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/03/01 20:50:05 vins Exp $
+# $NetBSD: Makefile,v 1.25 2024/03/02 17:01:12 vins Exp $
 
 VERSION=	7.4.0p1
 DISTNAME=	opensmtpd-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -13,6 +14,8 @@ LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 BUILD_DEFS+=	VARBASE
 SMTPD_HOME=	${VARBASE}/chroot/smtpd
 
+GNU_CONFIGURE=	yes
+USE_DB185=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	awk pkg-config yacc
 USE_TOOLS+=	automake aclocal autoheader autoconf
@@ -32,10 +35,10 @@ PKG_HOME._smtpq=	${SMTPD_HOME}
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		yes
-USE_DB185=		yes
+PKG_SYSCONFSUBDIR=	smtpd
+
 CONFIGURE_ENV+=		MANTYPE=man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/smtpd
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-path-CAfile=${SSLCERTS}/ca-certificates.crt
 CONFIGURE_ARGS+=	--with-path-empty=${VARBASE}/empty
@@ -50,7 +53,6 @@ CONFIGURE_ARGS+=	--with-pie
 
 .include "options.mk"
 
-PKG_SYSCONFSUBDIR=	smtpd
 EGDIR=			${PREFIX}/share/examples/opensmtpd
 DOCDIR=			${PREFIX}/share/doc/opensmtpd
 CONF_FILES+=		${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
@@ -76,12 +78,14 @@ SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders.
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing hard-coded paths.
-SUBST_FILES.paths+=	mk/smtpd/Makefile.am usr.sbin/smtpd/smtpd.conf	\
-			usr.sbin/smtpd/smtpd.8 usr.sbin/smtpd/smtpd.conf.5 \
-			usr.sbin/smtpd/aliases.5 usr.sbin/smtpd/makemap.8 \
-			usr.sbin/smtpd/newaliases.8
-SUBST_SED.paths+=	-e "s:/etc/mail:${PKG_SYSCONFDIR}/smtpd:g"
-SUBST_SED.paths+=	-e "s:/usr/local/etc:${PKG_SYSCONFDIR}/smtpd:g"
+SUBST_FILES.paths+=	configure mk/smtpd/Makefile.am usr.sbin/smtpd/smtpd.conf \
+			usr.sbin/smtpd/smtpd.h usr.sbin/smtpd/smtpd.8 \
+			usr.sbin/smtpd/smtpd.conf.5 usr.sbin/smtpd/aliases.5 \
+			usr.sbin/smtpd/makemap.8 usr.sbin/smtpd/newaliases.8
+SUBST_SED.paths+=	-e "s:/etc/mail:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/etc:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/lib:${PREFIX}/lib:g"
+SUBST_SED.paths+=	-e "s:/usr/local/libexec:${PREFIX}/libexec:g"
 SUBST_SED.paths+=	-e "s:@EXAMPLE_DIR@:${EGDIR}:g"
 SUBST_SED.paths+=	-e "s:/etc/ssl:${SSLDIR}:g"
 
