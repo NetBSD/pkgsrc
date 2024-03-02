@@ -1,4 +1,4 @@
-# $NetBSD: nextpnr.mk,v 1.2 2024/02/29 01:59:34 thorpej Exp $
+# $NetBSD: nextpnr.mk,v 1.3 2024/03/02 23:07:59 thorpej Exp $
 
 NEXTPNR_VERSION=0.7
 DISTNAME=	nextpnr-${NEXTPNR_VERSION}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 GITHUB_PROJECT=	nextpnr
 GITHUB_TAG=	${DISTNAME}
 WRKSRC=		${WRKDIR}/nextpnr-${DISTNAME}
+
+PKGREVISION?=	1
 
 MAINTAINER?=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/YosysHQ/nextpnr
