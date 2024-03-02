@@ -1,10 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/02/29 20:57:37 vins Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/03/02 17:53:23 vins Exp $
 
-Avoid conflicting types for snprintf()
+* Avoid conflicting types for snprintf()
+* Fix testing of OpenSSL linking
 
---- configure.ac.orig	2024-02-29 18:09:13.292053324 +0000
+--- configure.ac.orig	2024-02-28 09:25:16.000000000 +0000
 +++ configure.ac
-@@ -501,9 +501,9 @@ fi
+@@ -503,9 +503,9 @@ fi
  AC_MSG_CHECKING([whether snprintf can declare const char *fmt])
  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
  #include <stdio.h>
@@ -16,3 +17,12 @@ Avoid conflicting types for snprintf()
  		]])],
     [AC_MSG_RESULT([yes])
      AC_DEFINE([SNPRINTF_CONST], [const],
+@@ -607,7 +607,7 @@ AC_DEFINE_UNQUOTED([WITH_OPENSSL], [1], 
+ AC_MSG_CHECKING([if programs using OpenSSL functions will link])
+ AC_LINK_IFELSE(
+ 	[AC_LANG_PROGRAM([[ #include <openssl/evp.h> ]],
+-	[[ SSLeay_add_all_algorithms(); ]])],
++	[[ OpenSSL_add_all_algorithms(); ]])],
+ 	[
+ 		AC_MSG_RESULT([yes])
+ 	],

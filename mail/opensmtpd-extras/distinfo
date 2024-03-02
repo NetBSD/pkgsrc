@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1 2024/02/29 20:57:37 vins Exp $
+$NetBSD: distinfo,v 1.2 2024/03/02 17:53:23 vins Exp $
 
-BLAKE2s (opensmtpd-extras-6.7.1.tar.gz) = 8f083e788e92af2374701f283e46b010f62d21d16cce0399fd5382a008425c1a
-SHA512 (opensmtpd-extras-6.7.1.tar.gz) = 0969c53a5d13816862f13b3572c0d84d34e2d36d85f83a528d70ee3f4ad5e6b2cdda256529e95a43a177e64368e4e93540d5bb2f81039808d79049234b249d91
-Size (opensmtpd-extras-6.7.1.tar.gz) = 548792 bytes
+BLAKE2s (opensmtpd-extras-6.7.1_20240228-86f2f1927743257674d29d4fed250bdce5d1c0b5.tar.gz) = 8ab39a010dd16e74912a15aba9cef5d9dd6aac347f7aea574cbc55ff364cbcd4
+SHA512 (opensmtpd-extras-6.7.1_20240228-86f2f1927743257674d29d4fed250bdce5d1c0b5.tar.gz) = 3a51bc561769d55e0e528fb4d9a02f355e66bfe9b14a94d5a88bbc446da4567e34e6438def040b5af1d749d7e601a953e84252ff52ede49cf991d288a4d7bfe7
+Size (opensmtpd-extras-6.7.1_20240228-86f2f1927743257674d29d4fed250bdce5d1c0b5.tar.gz) = 129403 bytes
 SHA1 (patch-api_filter__api.c) = 10386e0910025a5fb7e39e516ba89d37a9f4f2df
 SHA1 (patch-api_queue__api.c) = 95cb46aaaec8f61767abd66a6ae7122aa524d20e
 SHA1 (patch-api_scheduler__api.c) = 926efe385a7cfe5844af80041e01b1886a27fea6
 SHA1 (patch-api_table__api.c) = a0a96fb0e8f26d4595dc92ad8c3844270530c4d1
-SHA1 (patch-configure.ac) = f772a1659f12fc421203d911d6b710020c29f5b2
+SHA1 (patch-configure.ac) = b0057b9f04c128c0c91a0185defafa0717f506a9
