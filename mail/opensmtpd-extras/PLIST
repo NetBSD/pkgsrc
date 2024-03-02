@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/29 21:34:33 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/02 19:25:29 vins Exp $
 libexec/opensmtpd/queue-null
 ${PLIST.python}libexec/opensmtpd/queue-python
 libexec/opensmtpd/queue-ram
@@ -18,3 +18,4 @@ man/man5/table-passwd.5
 ${PLIST.redis}man/man5/table-redis.5
 man/man5/table-socketmap.5
 ${PLIST.sqlite}man/man5/table-sqlite.5
+${PLIST.ldap}share/examples/opensmtpd/table-ldap.conf
