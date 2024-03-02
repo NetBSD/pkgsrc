@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/03/02 02:03:37 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2024/03/02 23:08:00 thorpej Exp $
 
 BLAKE2s (abc-yosys-0.38.tar.gz) = 4bfbb01053192c417143c922de5a4f1d823aba17a6f818a20cacddb56772f486
 SHA512 (abc-yosys-0.38.tar.gz) = 4f13454658a538085b5aebec0c92aa32f45fd0fa2777fa2180471120af336dd17b4007fab4597bdff787d29581635b698be373e81a504b9998576b0e55c8a191
@@ -7,4 +7,4 @@ BLAKE2s (yosys-0.38.tar.gz) = bf794aef85cd8133d2ef4a47b802c6fb0a9c0744df2aa3c63f
 SHA512 (yosys-0.38.tar.gz) = d41b81593a717bfd71c3120bb823a8bfb739f485e1a1ca3055e743e3f9f7406aa3c883a5a001183613f9ac05aaee222dafe39a594ead68c1c2fd74c3b2a84038
 Size (yosys-0.38.tar.gz) = 2709217 bytes
 SHA1 (patch-abc_Makefile) = b4cbe6b905f26e8bf7980e230edc87e12efced99
-SHA1 (patch-kernel_yosys.cc) = 2b55d9e10350506ece747309ad22c2a003f714f8
+SHA1 (patch-kernel_yosys.cc) = 35784013f6232990ff8c320ea43a0394baf03c90
