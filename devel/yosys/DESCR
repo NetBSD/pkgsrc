@@ -1,0 +1,3 @@
+The Yosys Open SYnthesis Suite is a framework for RTL synthesis tools. It
+currently has extensive Verilog-2005 support and provides a basic set of
+synthesis algorithms for various application domains.

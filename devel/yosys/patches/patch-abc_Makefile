@@ -1,0 +1,20 @@
+$NetBSD: patch-abc_Makefile,v 1.1 2024/03/02 02:03:37 thorpej Exp $
+
+Also skip -ldl and -lrt on NetBSD.
+
+--- abc/Makefile.orig	2024-03-01 23:09:30.203342910 +0000
++++ abc/Makefile	2024-03-01 23:10:15.700143598 +0000
+@@ -137,11 +137,11 @@ endif
+ 
+ # LIBS := -ldl -lrt
+ LIBS += -lm
+-ifneq ($(OS), $(filter $(OS), FreeBSD OpenBSD))
++ifneq ($(OS), $(filter $(OS), FreeBSD OpenBSD NetBSD))
+   LIBS += -ldl
+ endif
+ 
+-ifneq ($(OS), $(filter $(OS), FreeBSD OpenBSD Darwin))
++ifneq ($(OS), $(filter $(OS), FreeBSD OpenBSD NetBSD Darwin))
+    LIBS += -lrt
+ endif
+ 
