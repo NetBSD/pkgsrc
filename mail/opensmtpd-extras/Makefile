@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/02 17:53:23 vins Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/02 19:25:29 vins Exp $
 
 DISTNAME=		opensmtpd-extras-6.7.1_20240228
 CATEGORIES=		mail
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-filter-stub	\
 .include "options.mk"
 
 INSTALL_TARGET=		install-strip
-INSTALLATION_DIRS+=	libexec/opensmtpd
+INSTALLATION_DIRS+=	libexec/opensmtpd share/examples/opensmtpd
 
 pre-configure:
 	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize --copy --force
@@ -75,6 +75,12 @@ pre-configure:
 	cd ${WRKSRC} && ${TOOLS_CMD.autoconf}
 	cd ${WRKSRC} && ${TOOLS_CMD.autoheader}
 	cd ${WRKSRC} && ${TOOLS_CMD.automake} --foreign --add-missing --copy
+
+post-install:
+.for f in table-ldap.conf.example
+	${INSTALL_DATA} ${WRKSRC}/extras/tables/table-ldap/${f}	\
+		${DESTDIR}${PREFIX}/share/examples/opensmtpd/${f:S/.example//}
+.endfor
 
 .include "../../security/libretls/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
