@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/11/09 13:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/03 23:12:22 wiz Exp $
 
-DISTNAME=		xmessage-1.0.6
+DISTNAME=		xmessage-1.0.7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
