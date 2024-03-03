@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24135 2024/03/03 11:39:31 wiz Exp $
+$NetBSD: TODO,v 1.24136 2024/03/03 11:41:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cyclonedx-python-lib-6.4.2
 	o py-dateutil-2.9.0.post0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
