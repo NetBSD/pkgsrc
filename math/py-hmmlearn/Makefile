@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/01/10 18:22:48 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/03 14:03:28 bacon Exp $
 
-DISTNAME=	hmmlearn-0.3.0
+DISTNAME=	hmmlearn-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hmmlearn/}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-# 2023-12-29: Tests currently fail due to known upstream issues
+# hmmlearn-0.3.2: Some tests still fail
 do-test:
 	# setup.py builds directly to prefix by default, so we need to build
 	# again within the project for pytest to work
