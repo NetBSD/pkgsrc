@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/28 12:57:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/03/03 11:28:17 wiz Exp $
 include/glm/common.hpp
 include/glm/detail/_features.hpp
 include/glm/detail/_fixes.hpp
@@ -7,6 +7,7 @@ include/glm/detail/_swizzle.hpp
 include/glm/detail/_swizzle_func.hpp
 include/glm/detail/_vectorize.hpp
 include/glm/detail/compute_common.hpp
+include/glm/detail/compute_vector_decl.hpp
 include/glm/detail/compute_vector_relational.hpp
 include/glm/detail/func_common.inl
 include/glm/detail/func_common_simd.inl
