@@ -1,7 +1,8 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.21 2024/01/06 19:00:19 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.22 2024/03/03 14:53:32 he Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv[67]hf for NetBSD.
+Also use @PREFIX@ and not $ORIGIN in rpath.
 
 --- src/bootstrap/bootstrap.py.orig	2023-07-12 03:32:40.000000000 +0000
 +++ src/bootstrap/bootstrap.py
@@ -35,3 +36,12 @@ Handle earmv[67]hf for NetBSD.
          else:
              kernel += 'eabihf'
      elif cputype == 'mips':
+@@ -735,7 +746,7 @@ class RustBuild(object):
+         rpath_entries = [
+             # Relative default, all binary and dynamic libraries we ship
+             # appear to have this (even when `../lib` is redundant).
+-            "$ORIGIN/../lib",
++            "@PREFIX@/lib",
+             os.path.join(os.path.realpath(nix_deps_dir), "lib")
+         ]
+         patchelf_args = ["--set-rpath", ":".join(rpath_entries)]

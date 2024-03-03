@@ -1,13 +1,10 @@
-$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.5 2024/01/06 19:00:19 he Exp $
+$NetBSD: patch-vendor_libc-0.2.148_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2024/03/03 14:53:33 he Exp $
 
-Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips
-and NetBSD/riscv64.
+Add entries for execinfo, and support
+for NetBSD/mips and NetBSD/riscv64.
 
-Add fix to cpuid_t definition by applying
-  https://github.com/rust-lang/libc/pull/3386
-
---- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
-+++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs
+--- vendor/libc-0.2.148/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2024-01-06 22:33:33.911876204 +0000
++++ vendor/libc-0.2.148/src/unix/bsd/netbsdlike/netbsd/mod.rs
 @@ -10,7 +10,7 @@ type __pthread_spin_t = __cpu_simple_loc
  pub type vm_size_t = ::uintptr_t; // FIXME: deprecated since long time
  pub type lwpid_t = ::c_uint;
@@ -17,7 +14,7 @@ Add fix to cpuid_t definition by applying
  pub type cpuset_t = _cpuset;
  pub type pthread_spin_t = ::c_uchar;
  pub type timer_t = ::c_int;
-@@ -3049,6 +3049,22 @@ extern "C" {
+@@ -3153,6 +3153,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
@@ -40,20 +37,16 @@ Add fix to cpuid_t definition by applying
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
-@@ -3068,7 +3084,15 @@ cfg_if! {
+@@ -3172,6 +3188,12 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;
 +    } else if #[cfg(target_arch = "mips")] {
-+	mod mips;
-+	pub use self::mips::*;
++        mod mips;
++        pub use self::mips::*;
 +    } else if #[cfg(target_arch = "riscv64")] {
 +        mod riscv64;
-+        pub use self::riscv64:*;
++        pub use self::riscv64::*;
      } else {
--        // Unknown target_arch
-+        // Unknown target_arch, this should error out
-+	mod unknown;
-+	pub use self::unknown::*;
+         // Unknown target_arch
      }
- }
