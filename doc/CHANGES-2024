@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1663 2024/03/03 14:03:35 bacon Exp $
+$NetBSD: CHANGES-2024,v 1.1664 2024/03/03 14:54:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2897,3 +2897,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/prometheus to 2.50.1 [wiz 2024-03-03]
 	Updated net/sayaka to 3.7.4 [tsutsui 2024-03-03]
 	Updated math/py-hmmlearn to 0.3.2 [bacon 2024-03-03]
+	Updated lang/rust to 1.75.0 [he 2024-03-03]
