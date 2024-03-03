@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/02/25 15:25:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/03/03 11:56:33 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -93,12 +93,6 @@ ${PYSITELIB}/urwid/font.pyo
 ${PYSITELIB}/urwid/graphics.py
 ${PYSITELIB}/urwid/graphics.pyc
 ${PYSITELIB}/urwid/graphics.pyo
-${PYSITELIB}/urwid/listbox.py
-${PYSITELIB}/urwid/listbox.pyc
-${PYSITELIB}/urwid/listbox.pyo
-${PYSITELIB}/urwid/monitored_list.py
-${PYSITELIB}/urwid/monitored_list.pyc
-${PYSITELIB}/urwid/monitored_list.pyo
 ${PYSITELIB}/urwid/numedit.py
 ${PYSITELIB}/urwid/numedit.pyc
 ${PYSITELIB}/urwid/numedit.pyo
@@ -114,9 +108,6 @@ ${PYSITELIB}/urwid/str_util.pyo
 ${PYSITELIB}/urwid/text_layout.py
 ${PYSITELIB}/urwid/text_layout.pyc
 ${PYSITELIB}/urwid/text_layout.pyo
-${PYSITELIB}/urwid/treetools.py
-${PYSITELIB}/urwid/treetools.pyc
-${PYSITELIB}/urwid/treetools.pyo
 ${PYSITELIB}/urwid/util.py
 ${PYSITELIB}/urwid/util.pyc
 ${PYSITELIB}/urwid/util.pyo
@@ -171,6 +162,12 @@ ${PYSITELIB}/urwid/widget/grid_flow.pyo
 ${PYSITELIB}/urwid/widget/line_box.py
 ${PYSITELIB}/urwid/widget/line_box.pyc
 ${PYSITELIB}/urwid/widget/line_box.pyo
+${PYSITELIB}/urwid/widget/listbox.py
+${PYSITELIB}/urwid/widget/listbox.pyc
+${PYSITELIB}/urwid/widget/listbox.pyo
+${PYSITELIB}/urwid/widget/monitored_list.py
+${PYSITELIB}/urwid/widget/monitored_list.pyc
+${PYSITELIB}/urwid/widget/monitored_list.pyo
 ${PYSITELIB}/urwid/widget/overlay.py
 ${PYSITELIB}/urwid/widget/overlay.pyc
 ${PYSITELIB}/urwid/widget/overlay.pyo
@@ -195,6 +192,9 @@ ${PYSITELIB}/urwid/widget/solid_fill.pyo
 ${PYSITELIB}/urwid/widget/text.py
 ${PYSITELIB}/urwid/widget/text.pyc
 ${PYSITELIB}/urwid/widget/text.pyo
+${PYSITELIB}/urwid/widget/treetools.py
+${PYSITELIB}/urwid/widget/treetools.pyc
+${PYSITELIB}/urwid/widget/treetools.pyo
 ${PYSITELIB}/urwid/widget/widget.py
 ${PYSITELIB}/urwid/widget/widget.pyc
 ${PYSITELIB}/urwid/widget/widget.pyo
