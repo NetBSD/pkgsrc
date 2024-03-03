@@ -1,0 +1,8 @@
+The package is to draw dash-lines in array/tabular environments.
+Horizontal lines are drawn by \hdashline and \cdashline while vertical
+ones can be specified as a part of the preamble using ':'. The shape of
+dash-lines may be controlled through style parameters or optional
+arguments.
+
+The package is compatible with array, colortab, longtable, and
+colortbl.

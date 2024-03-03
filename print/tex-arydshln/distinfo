@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/03 18:08:56 leot Exp $
+
+BLAKE2s (arydshln.r50084.tar.xz) = bbd8baffa84b494206428aa90c78fbf638b3069e4aac039bef31aaa3a0308adb
+SHA512 (arydshln.r50084.tar.xz) = fd676917ccedc39b90b48b531ea4ec5098b70ca854583a3266d4080dc78f59e37a743e63b738be370cb0ca650594d0878ab1f807eb6f55daec17ecead73aa4dd
+Size (arydshln.r50084.tar.xz) = 9340 bytes
