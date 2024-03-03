@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/10 19:06:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/03 07:51:29 adam Exp $
 
-DISTNAME=	hexbytes-1.0.0
+DISTNAME=	hexbytes-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hexbytes/}
