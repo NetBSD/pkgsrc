@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/09 14:08:33 taca Exp $
+$NetBSD: distinfo,v 1.6 2024/03/03 08:22:51 taca Exp $
 
-BLAKE2s (marcel-1.0.2.gem) = a72124471f7b3010e82090f8afd7c0142cb6aa79a88cb9ea96015de07786e5f9
-SHA512 (marcel-1.0.2.gem) = 67a1ce47fcf686f3280d7b9e46dad24ab9065de13a97f7fd4df8e744b600995e66d2817ea8561e1d4fcbb6a84c1ee04afd79737431779b62d8ee58f6f4a3985f
-Size (marcel-1.0.2.gem) = 45056 bytes
+BLAKE2s (marcel-1.0.4.gem) = 663bc33facba689631fe8daf406d5406b519591f96623d1bb75096ed94576481
+SHA512 (marcel-1.0.4.gem) = b56dd02d829c3363aae113744f30a2d55332eadd25943fb717ebb39bd4088578fe70322bb59ca2940ce6daa18fc0ee544a39e6d306ea3e766ade262a6e98ac38
+Size (marcel-1.0.4.gem) = 46080 bytes
