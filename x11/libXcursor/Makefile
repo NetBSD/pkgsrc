@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/11/09 13:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2024/03/03 10:06:14 wiz Exp $
 
-DISTNAME=		libXcursor-1.2.1
+DISTNAME=		libXcursor-1.2.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
