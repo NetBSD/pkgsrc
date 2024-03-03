@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/05/21 03:18:24 taca Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/03 08:44:47 taca Exp $
 
-DISTNAME=	asciidoctor-2.0.20
+DISTNAME=	asciidoctor-2.0.21
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
