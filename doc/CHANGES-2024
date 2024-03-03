@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1674 2024/03/03 18:16:04 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1675 2024/03/03 18:17:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb15 [gutteridge 2024-03-03]
 	Added print/tex-arydshln version 1.76 [leot 2024-03-03]
 	Updated graphics/elementary-xfce-icon-theme to 0.18 [gutteridge 2024-03-03]
+	Updated lang/rust-bin to 1.75.0 [he 2024-03-03]
