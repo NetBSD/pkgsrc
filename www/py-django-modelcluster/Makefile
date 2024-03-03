@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/02/09 12:41:07 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/03/03 15:27:09 adam Exp $
 
-DISTNAME=	django-modelcluster-6.2.1
+DISTNAME=	django-modelcluster-6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-modelcluster/}
