@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24130 2024/03/03 11:29:17 wiz Exp $
+$NetBSD: TODO,v 1.24131 2024/03/03 11:32:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1431,7 +1431,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xorp-1.8.5
-	o xournalpp-1.2.3
 	o xpad-5.4.0
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
