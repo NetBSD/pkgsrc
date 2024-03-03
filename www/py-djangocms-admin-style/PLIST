@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/01/09 12:58:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/03/03 08:13:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -192,6 +192,7 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icon
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icons.png
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/base-admin.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/dist/bundle.adminstyle.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/dist/bundle.adminstyle.min.js.LICENSE.txt
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/jquery.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/js.cookie-2.1.2.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/dark-mode.js
