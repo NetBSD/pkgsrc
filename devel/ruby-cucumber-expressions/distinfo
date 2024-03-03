@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/12/17 17:21:43 taca Exp $
+$NetBSD: distinfo,v 1.13 2024/03/03 08:20:35 taca Exp $
 
-BLAKE2s (cucumber-cucumber-expressions-17.0.1.gem) = 56649fa523d084ba9f843495e98b799bee581f8415f2644e302eb4d810bbf673
-SHA512 (cucumber-cucumber-expressions-17.0.1.gem) = 6b89a4aad515cd4894859a549037ac9ea25c470c26106680bd825595e497883177944da7ec35f4f2e8e2c0cd872808ba0ef93133c91e8e889589db96251f74f6
-Size (cucumber-cucumber-expressions-17.0.1.gem) = 25088 bytes
+BLAKE2s (cucumber-cucumber-expressions-17.0.2.gem) = 9d0fa01f773b68b1121007f7fcf7d5950bd87842c721e72757d1556c1a1ed769
+SHA512 (cucumber-cucumber-expressions-17.0.2.gem) = 24cce30d5b6fbf8ac0991c7e04a8fb26a15bc6676a0b9601813053ebd3388641a9dedc55bf45cd09bb7da730f2eba7264cab58d0035afda463c0620861ba07e5
+Size (cucumber-cucumber-expressions-17.0.2.gem) = 25600 bytes
