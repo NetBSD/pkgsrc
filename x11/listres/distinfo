@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/03 19:15:55 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/03/03 20:58:18 wiz Exp $
 
-BLAKE2s (listres-1.0.5.tar.xz) = db5c44ed473a532ff2030064cc54470338868c4c06b0a5c60e7b674e7f73663a
-SHA512 (listres-1.0.5.tar.xz) = caa3626773031fbf6d8bcc1f697afe6add64fe4a8d1d766c42d5c2346050869dd23a26a1718411134ab05c75835facf0786cab5595721a16df423cdc54dd813d
-Size (listres-1.0.5.tar.xz) = 119596 bytes
+BLAKE2s (listres-1.0.6.tar.xz) = df8fcfc9abd42d3a8997d82e94c9d4a30f2c7941588ddf8cdea681efcba33f58
+SHA512 (listres-1.0.6.tar.xz) = 182919c8ba5569af3dbf59421de2dfd3e755b3bd2d6d548c6d2664c20b73f937e64dc73811821c19af93fffbc2d5c8d2db8d9cdd9bf1b93b0f29cb683e13ebe7
+Size (listres-1.0.6.tar.xz) = 120540 bytes
