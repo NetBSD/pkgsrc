@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/31 19:25:59 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/03/03 23:13:13 wiz Exp $
 
-BLAKE2s (xmh-1.0.4.tar.xz) = 7dcfa089fb0787a25107aad659bca668b1ae7bb717c0e2a80036a9ef52fb625b
-SHA512 (xmh-1.0.4.tar.xz) = 03bba7d3e7c2070b03378335aed0188dd0fd0a488f19dc5ad3f26674a9b38e6599377d082328041dd3ab72123ed60acae32cff19d7149517545b80e1339db26a
-Size (xmh-1.0.4.tar.xz) = 197124 bytes
+BLAKE2s (xmh-1.0.5.tar.xz) = 98d6b94bfb64ce73791a0aa6634e76e582bfd7ae4e81910d300bb6583c2217b8
+SHA512 (xmh-1.0.5.tar.xz) = fbf5c7e7994832b1df0db9464aacddba6a445c6fe6b8d2e09c311dc27edb96f6e198816ee21b5ee361fb9637302ce54da2691c784e03ab5c1af8590f00b48bab
+Size (xmh-1.0.5.tar.xz) = 200428 bytes
