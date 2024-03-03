@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.93 2024/02/03 18:56:00 adam Exp $
+# $NetBSD: Makefile,v 1.94 2024/03/03 20:29:33 js Exp $
 
-DISTNAME=	matrix-synapse-1.98.0
-PKGREVISION=	1
+DISTNAME=	matrix-synapse-1.101.0
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	js@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
-HOMEPAGE=	https://github.com/matrix-org/synapse/
+HOMEPAGE=	https://github.com/element-hq/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
-LICENSE=	apache-2.0
+LICENSE=	gnu-agpl-v3
 
 # Build tools:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
