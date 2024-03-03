@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/11/09 13:14:23 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/03 20:58:18 wiz Exp $
 
-DISTNAME=		listres-1.0.5
+DISTNAME=		listres-1.0.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
