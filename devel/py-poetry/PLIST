@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/07 09:25:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/03 11:50:02 wiz Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -230,6 +230,9 @@ ${PYSITELIB}/poetry/inspection/__init__.pyo
 ${PYSITELIB}/poetry/inspection/info.py
 ${PYSITELIB}/poetry/inspection/info.pyc
 ${PYSITELIB}/poetry/inspection/info.pyo
+${PYSITELIB}/poetry/inspection/lazy_wheel.py
+${PYSITELIB}/poetry/inspection/lazy_wheel.pyc
+${PYSITELIB}/poetry/inspection/lazy_wheel.pyo
 ${PYSITELIB}/poetry/installation/__init__.py
 ${PYSITELIB}/poetry/installation/__init__.pyc
 ${PYSITELIB}/poetry/installation/__init__.pyo
