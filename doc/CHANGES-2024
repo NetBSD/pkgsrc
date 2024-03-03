@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1626 2024/03/03 08:35:07 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1627 2024/03/03 08:39:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-marcel to 1.0.4 [taca 2024-03-03]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.28 [wiz 2024-03-03]
 	Updated security/ruby-metasploit-payloads to 2.0.166 [taca 2024-03-03]
+	Updated sysutils/ruby-facter to 4.6.1 [taca 2024-03-03]
