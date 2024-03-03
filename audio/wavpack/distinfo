@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/11/28 19:57:57 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/03/03 08:11:20 adam Exp $
 
-BLAKE2s (wavpack-5.6.0.tar.xz) = e2abc0300e8bd5d372a1ed1201f0f8450e38dfda33a0e01c95fe5e8915c0cc79
-SHA512 (wavpack-5.6.0.tar.xz) = 7421eff1f6e18f2e698b367ca48f6773456d0fcb53241be70149a87eff2cdf14dd8a82845a016f59ed32c7df494d018e6e23495709d3a56500b0660f177d5c0f
-Size (wavpack-5.6.0.tar.xz) = 787148 bytes
+BLAKE2s (wavpack-5.7.0.tar.xz) = 83deb462b202544dd182ec70aa8f7ba3b0019e53879fdca485d5794c4c15d9cf
+SHA512 (wavpack-5.7.0.tar.xz) = 63ef6eb5ff71bf6417175691e8377624ade02619c761d80e265c8e0e7305bfe22eeaa1402e36d20c13d20847279f95150ac014019688389da1b87b86558446bd
+Size (wavpack-5.7.0.tar.xz) = 814324 bytes
