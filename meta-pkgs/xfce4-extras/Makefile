@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.117 2024/02/11 03:00:33 gutteridge Exp $
+# $NetBSD: Makefile,v 1.118 2024/03/03 18:04:55 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
 # Applications
 DEPENDS+=	ristretto>=0.13.2:../../graphics/ristretto
-DEPENDS+=	xfce4-taskmanager>=1.5.6:../../sysutils/xfce4-taskmanager
+DEPENDS+=	xfce4-taskmanager>=1.5.7:../../sysutils/xfce4-taskmanager
 
 # Panel Plugins
 DEPENDS+=	xfce4-diskperf-plugin>=2.7.0:../../sysutils/xfce4-diskperf-plugin
@@ -20,7 +20,7 @@ DEPENDS+=	xfce4-cpugraph-plugin>=1.2.10:../../sysutils/xfce4-cpugraph-plugin
 DEPENDS+=	xfce4-wavelan-plugin>=0.6.3:../../net/xfce4-wavelan-plugin
 DEPENDS+=	xfce4-battery-plugin>=1.1.5:../../sysutils/xfce4-battery-plugin
 DEPENDS+=	xfce4-calculator-plugin>=0.7.0:../../misc/xfce4-calculator-plugin
-DEPENDS+=	xfce4-clipman-plugin>=1.6.5:../../x11/xfce4-clipman-plugin
+DEPENDS+=	xfce4-clipman-plugin>=1.6.6:../../x11/xfce4-clipman-plugin
 DEPENDS+=	xfce4-dict>=0.8.6:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.6.0:../../x11/xfce4-eyes-plugin
 DEPENDS+=	xfce4-fsguard-plugin>=1.1.3:../../sysutils/xfce4-fsguard-plugin
