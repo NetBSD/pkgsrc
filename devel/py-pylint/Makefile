@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2024/02/25 15:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/03/03 11:54:21 wiz Exp $
 
-DISTNAME=	pylint-3.0.4
+DISTNAME=	pylint-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.2.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.1:../../textproc/py-tomlkit
+TEST_DEPENDS+=	${PYPKGPREFIX}-gitpython>=0:../../devel/py-gitpython
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
 
