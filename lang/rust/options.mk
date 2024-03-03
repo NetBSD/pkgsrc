@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2024/01/15 12:24:21 adam Exp $
+# $NetBSD: options.mk,v 1.35 2024/03/03 14:53:32 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -19,10 +19,15 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
-# (NetBSD)/sparc64 systems fail to build libunwind,
-# a dependency of pkgsrc llvm, so use the internal one instead
-.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64}
-PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
+# NetBSD/sparc64 when using the internal LLVM needs
+# to not use gcc 10.4 or 10.5 (as found in 10.0_BETA or 10.0), ref.
+# https://github.com/rust-lang/rust/issues/117231
+# (however, gcc from 9.x produces a working LLVM).
+.if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
+.  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
+# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
+GCC_REQD=	12
+.  endif
 .endif
 
 # Bundle OpenSSL and curl into the cargo binary when producing
@@ -39,6 +44,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
+# External LLVM must be >= 15, ref. RELEASES.md
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=15
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.12 2024/01/22 11:00:16 adam Exp $
+$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.13 2024/03/03 14:53:33 he Exp $
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
@@ -9,7 +9,7 @@ pattern matching and substitution in the install phase using "grep"
 and "sed" when shell builtin "case" and "omit shortest match" ops
 should do just fine.
 
---- src/tools/rust-installer/install-template.sh.orig	2023-12-04 19:48:34.000000000 +0000
+--- src/tools/rust-installer/install-template.sh.orig	2023-12-21 16:55:28.000000000 +0000
 +++ src/tools/rust-installer/install-template.sh
 @@ -6,20 +6,12 @@ set -u
  init_logging() {
