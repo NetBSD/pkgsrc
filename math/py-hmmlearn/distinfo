@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/12/29 16:43:41 bacon Exp $
+$NetBSD: distinfo,v 1.2 2024/03/03 14:03:28 bacon Exp $
 
-BLAKE2s (hmmlearn-0.3.0.tar.gz) = 4cafc68ee2731c6e8a2646afda5dcc49a80c4b3eaa6f5d310d7c5c15b849032f
-SHA512 (hmmlearn-0.3.0.tar.gz) = 2229fad0e1c0c18aae157884b05e4744f661f716d4181eebb15487fa766f21cb6da5553eacce121a5c81b276388b5603ee0781e6503e41c55f9b77829ec4e0ae
-Size (hmmlearn-0.3.0.tar.gz) = 77889 bytes
+BLAKE2s (hmmlearn-0.3.2.tar.gz) = 410edc7c55d3c4bd37711366ccd5fd0f84ec87acabddbc7befdc7509283bee2b
+SHA512 (hmmlearn-0.3.2.tar.gz) = 71462551519af024cf30623c3c46723da4ebc6eb2609727deb3e36abe7d4afa75fcb552262e84a5937bc10e06d3969c505959a3e2192b400fad1eff19e972e17
+Size (hmmlearn-0.3.2.tar.gz) = 78457 bytes
