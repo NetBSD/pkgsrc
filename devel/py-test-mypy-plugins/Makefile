@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/04 09:49:45 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/03 07:49:26 adam Exp $
 
-DISTNAME=	pytest-mypy-plugins-3.0.0
+DISTNAME=	pytest-mypy-plugins-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mypy-plugins/}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://github.com/TypedDjango/pytest-mypy-plugins
 COMMENT=	Pytest plugin for writing cmd for mypy plugins
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-mypy>=1.3:../../lang/py-mypy
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
@@ -29,5 +32,5 @@ SUBST_MESSAGE.cmd=	Fixing command name.
 SUBST_FILES.cmd=	pytest_mypy_plugins/item.py
 SUBST_SED.cmd=		-e 's,"mypy","mypy-${PYVERSSUFFIX}",g'
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
