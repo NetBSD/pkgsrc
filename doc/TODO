@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24146 2024/03/03 12:51:39 wiz Exp $
+$NetBSD: TODO,v 1.24147 2024/03/03 21:14:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -659,7 +659,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcc-mips-current-7.1.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
-	o gdb-14.1
+	o gdb-14.2
 	o gdb7-7.12
 	o geneweb-7.0.0
 	o gens-2.15.5
