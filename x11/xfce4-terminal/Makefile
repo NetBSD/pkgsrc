@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2024/02/23 20:38:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.81 2024/03/03 16:43:42 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-terminal-1.1.2
-PKGREVISION=	1
+DISTNAME=	xfce4-terminal-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-terminal/1.1/
 
