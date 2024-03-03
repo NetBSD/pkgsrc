@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/03/03 10:08:57 wiz Exp $
 
-BLAKE2s (gccmakedep-1.0.3.tar.bz2) = 5b085d27639c8d23d5c8f060653dff99df0deb1a11a85c0b260173858264f384
-SHA512 (gccmakedep-1.0.3.tar.bz2) = 563b2897770a4df2792ea3eae8183a1f9e78192b7efc9c8296ee68d1cba6e72fa962a88e3251bb780df776e2aa7e80d74d5096675c61526c232aefa4f9e6a5fc
-Size (gccmakedep-1.0.3.tar.bz2) = 104766 bytes
+BLAKE2s (gccmakedep-1.0.4.tar.xz) = 6a1a733a9b19108331fc215414765700c4cff7dab660dc1fa31aa06516869ba0
+SHA512 (gccmakedep-1.0.4.tar.xz) = 7665923de51256720e7ae73c09f3c8c908c5cda2e204afac60e3c1ef45c7211cee303629ab9e53171df2a37765944a8a85a654bb1b2e90df9f497dff7d9d29a8
+Size (gccmakedep-1.0.4.tar.xz) = 102704 bytes
