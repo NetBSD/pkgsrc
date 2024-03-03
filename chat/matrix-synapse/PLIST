@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2024/02/03 18:56:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2024/03/03 20:29:33 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -916,6 +916,9 @@ ${PYSITELIB}/synapse/rest/client/appservice_ping.pyo
 ${PYSITELIB}/synapse/rest/client/auth.py
 ${PYSITELIB}/synapse/rest/client/auth.pyc
 ${PYSITELIB}/synapse/rest/client/auth.pyo
+${PYSITELIB}/synapse/rest/client/auth_issuer.py
+${PYSITELIB}/synapse/rest/client/auth_issuer.pyc
+${PYSITELIB}/synapse/rest/client/auth_issuer.pyo
 ${PYSITELIB}/synapse/rest/client/capabilities.py
 ${PYSITELIB}/synapse/rest/client/capabilities.pyc
 ${PYSITELIB}/synapse/rest/client/capabilities.pyo
@@ -1842,6 +1845,9 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/83/01_drop_old_tables.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/83/03_instance_name_receipts.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/83/05_cross_signing_key_update_grant.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/83/06_event_push_summary_room.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/84/01_auth_links_stats.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/84/02_auth_links_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/84/03_auth_links_analyze.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1882,6 +1888,10 @@ ${PYSITELIB}/synapse/streams/events.py
 ${PYSITELIB}/synapse/streams/events.pyc
 ${PYSITELIB}/synapse/streams/events.pyo
 ${PYSITELIB}/synapse/synapse_rust.abi3.so
+${PYSITELIB}/synapse/synapse_rust/__init__.pyi
+${PYSITELIB}/synapse/synapse_rust/acl.pyi
+${PYSITELIB}/synapse/synapse_rust/events.pyi
+${PYSITELIB}/synapse/synapse_rust/push.pyi
 ${PYSITELIB}/synapse/types/__init__.py
 ${PYSITELIB}/synapse/types/__init__.pyc
 ${PYSITELIB}/synapse/types/__init__.pyo
