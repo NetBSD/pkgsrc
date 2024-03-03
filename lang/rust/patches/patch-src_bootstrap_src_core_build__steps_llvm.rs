@@ -1,11 +1,10 @@
-$NetBSD: patch-src_bootstrap_llvm.rs,v 1.3 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-src_bootstrap_src_core_build__steps_llvm.rs,v 1.1 2024/03/03 14:53:32 he Exp $
 
-Add NetBSD to the list of riscv's which don't need -latomic.
-Try to force use of -latomic on mips* on NetBSD.
+Force use of -latomic on mips* on NetBSD.
 
---- src/bootstrap/llvm.rs.orig	2023-08-03 12:13:07.000000000 +0000
-+++ src/bootstrap/llvm.rs
-@@ -396,6 +396,13 @@ impl Step for Llvm {
+--- src/bootstrap/src/core/build_steps/llvm.rs.orig	2024-01-06 20:59:17.436053488 +0000
++++ src/bootstrap/src/core/build_steps/llvm.rs
+@@ -402,6 +402,13 @@ impl Step for Llvm {
              ldflags.shared.push(" -latomic");
          }
  
