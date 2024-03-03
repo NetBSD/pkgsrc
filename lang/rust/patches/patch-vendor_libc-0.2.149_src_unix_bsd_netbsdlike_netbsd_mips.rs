@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.4 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.149_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2024/03/03 14:53:33 he Exp $
 
-Add mips support.
+Add support for NetBSD/mipsel.
 
---- vendor/libc/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2022-11-06 22:14:03.866753983 +0000
-+++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/mips.rs	2022-11-06 22:07:15.448812020 +0000
+--- vendor/libc-0.2.149/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2024-01-08 07:29:24.841727520 +0000
++++ vendor/libc-0.2.149/src/unix/bsd/netbsdlike/netbsd/mips.rs	2024-01-08 07:30:35.869045004 +0000
 @@ -0,0 +1,22 @@
 +use PT_FIRSTMACH;
 +
