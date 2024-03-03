@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/09 12:41:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/03 15:27:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,6 +13,9 @@ ${PYSITELIB}/modelcluster/contrib/__init__.pyo
 ${PYSITELIB}/modelcluster/contrib/taggit.py
 ${PYSITELIB}/modelcluster/contrib/taggit.pyc
 ${PYSITELIB}/modelcluster/contrib/taggit.pyo
+${PYSITELIB}/modelcluster/datetime_utils.py
+${PYSITELIB}/modelcluster/datetime_utils.pyc
+${PYSITELIB}/modelcluster/datetime_utils.pyo
 ${PYSITELIB}/modelcluster/fields.py
 ${PYSITELIB}/modelcluster/fields.pyc
 ${PYSITELIB}/modelcluster/fields.pyo
