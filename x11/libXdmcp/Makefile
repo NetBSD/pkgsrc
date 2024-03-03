@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/11/19 08:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/03/03 10:08:00 wiz Exp $
 
-DISTNAME=		libXdmcp-1.1.4
+DISTNAME=		libXdmcp-1.1.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
