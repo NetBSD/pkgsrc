@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2024/02/27 10:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/03 17:09:22 gutteridge Exp $
 
 DISTNAME=	gdstk-0.9.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	cad
+CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heitzmann/}
 GITHUB_PROJECT=	gdstk
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/heitzmann/gdstk/
-COMMENT=	C++ library for GDSII and OASIS files
+COMMENT=	C++/Python library for GDSII and OASIS files
 LICENSE=	boost-license
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
