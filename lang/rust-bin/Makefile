@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2024/02/16 04:06:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.63 2024/03/03 18:16:43 he Exp $
 
-DISTNAME=	rust-1.74.1
+DISTNAME=	rust-1.75.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -18,10 +17,10 @@ CONFLICTS+=	rust-[0-9]*
 ONLY_FOR_PLATFORM+=	Darwin-*-aarch64
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-aarch64
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 # he@NetBSD.org provided binaries
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
@@ -41,10 +40,8 @@ CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 CHECK_SHLIBS_SKIP+=	bin/cargo-clippy
 CHECK_SHLIBS_SKIP+=	bin/rustfmt
 
-# Bootstraps built for 9.0.
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv6hf
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
+# All kits are now built for 9.0.
+BROKEN_ON_PLATFORM+=	NetBSD-8.*
 
 # Binary distributions aren't built as PIE.
 MKPIE_SUPPORTED=	no
@@ -229,27 +226,19 @@ fix-darwin-install-name:
 		done;							\
 	done
 .  endfor
+
 .else
+# Not Darwin:
+
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
-# The llvm utilities may need a specific libstdc++ version from compat80
-.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
-.    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
-        ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf" && \
-        ${MACHINE_ARCH} != "riscv64"
-DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
-RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
-FORCE_RPATH=
-.    else
-RUST_LLVM_RPATH=	${PREFIX}/lib
-.    endif
-.  else
-# ld.elf_so in NetBSD 8.x only obeys RPATH, not RUNPATH, so force RPATH there.
 RUST_LLVM_RPATH=	${PREFIX}/lib
 FORCE_RPATH=		--force-rpath
-.  endif
 
+# 32-bit NetBSD ports need libatomic
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 .    include "../../devel/libatomic/buildlink3.mk"
 .  endif
