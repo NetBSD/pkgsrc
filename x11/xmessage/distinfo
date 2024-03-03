@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2022/07/13 20:49:24 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/03/03 23:12:22 wiz Exp $
 
-BLAKE2s (xmessage-1.0.6.tar.xz) = 0a19faefe55b6d7e912eb1ec9ac778aee35fec98204ac45df3ac04e1427d3f7f
-SHA512 (xmessage-1.0.6.tar.xz) = 89deb7a81bd047027f99cb92cd16a47f94479c61a6f9fbac4638e6d642037b3e9bbac2313db59ac8c5544175947c693f6a210537c6df2b88dc3de1c67498cba8
-Size (xmessage-1.0.6.tar.xz) = 126324 bytes
+BLAKE2s (xmessage-1.0.7.tar.xz) = 81dc56702c16e8f165b1ce448f07bd16f035d42648406d16b9538550582539d8
+SHA512 (xmessage-1.0.7.tar.xz) = 0c44f7973f7ed8d7993aaeb457a8921301cb0de905e45d92bd99d49463223b54c704a28bef376fe6038b4aec7156be873a34294741c8537bb7a5a57e1f152cce
+Size (xmessage-1.0.7.tar.xz) = 128968 bytes
 SHA1 (patch-aa) = 8c4ddffa627634ecab7e149816e643e9d233729c
