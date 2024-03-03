@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1687 2024/03/03 23:14:05 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1688 2024/03/03 23:59:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2922,3 +2922,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xmessage to 1.0.7 [wiz 2024-03-03]
 	Updated x11/xmh to 1.0.5 [wiz 2024-03-03]
 	Updated x11/xpr to 1.2.0 [wiz 2024-03-03]
+	Updated x11/xrefresh to 1.1.0 [wiz 2024-03-03]
