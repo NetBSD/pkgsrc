@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1632 2024/03/03 08:51:16 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1633 2024/03/03 08:53:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.7 [taca 2024-03-03]
 	Updated textproc/ruby-yard to 0.9.36 [taca 2024-03-03]
 	Updated www/ruby-aws-partitions to 1.895.0 [taca 2024-03-03]
+	Updated www/ruby-rack-cache to 1.16.0 [taca 2024-03-03]
