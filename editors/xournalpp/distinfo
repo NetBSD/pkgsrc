@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2023/10/19 13:12:52 wiz Exp $
+$NetBSD: distinfo,v 1.15 2024/03/03 11:32:40 wiz Exp $
 
-BLAKE2s (xournalpp-1.2.2.tar.gz) = 31ff5aad3644a12b89268e5da710c9c070e799396df7031ae5229ee5457cc363
-SHA512 (xournalpp-1.2.2.tar.gz) = fee29d29036a2ef59bbc98812571ce06a234380e9122e46bf89285f4e92e871c7e2ae4a086a080649775f4d6f7d497bd00fc91fb30f80e790f5a3106fa72725a
-Size (xournalpp-1.2.2.tar.gz) = 16705580 bytes
+BLAKE2s (xournalpp-1.2.3.tar.gz) = d50e04aaf4c1f7cbed031c50a3c546a76b72584e0084f4513e1746596ab8ee42
+SHA512 (xournalpp-1.2.3.tar.gz) = 17303314d49001f492469d855155a019659cdafc67509d4e176f60a93322f4ee1d4b999e8a25a9a23bde27b878012c06aa11f15bc2a54a730098964053834d1f
+Size (xournalpp-1.2.3.tar.gz) = 16708613 bytes
 SHA1 (patch-CMakeLists.txt) = 87ba10a924e3eb092dd9816ff38dea8c0b112b10
 SHA1 (patch-po_CMakeLists.txt) = 897b4f9507b48be394409deda8170fe7d39f008c
 SHA1 (patch-src_core_control_DeviceListHelper.cpp) = 069fae3eb58798406e4fa8dbff0d02aa8e0a27ef
