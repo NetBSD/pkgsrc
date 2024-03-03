@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1638 2024/03/03 10:06:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1639 2024/03/03 10:07:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2872,3 +2872,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libXaw3d to 1.6.6 [wiz 2024-03-03]
 	Updated x11/libxcb to 1.16.1 [wiz 2024-03-03]
 	Updated x11/libXcursor to 1.2.2 [wiz 2024-03-03]
+	Updated fonts/encodings to 1.1.0 [wiz 2024-03-03]
