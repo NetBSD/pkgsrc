@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/02/09 10:46:17 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/03 08:13:09 adam Exp $
 
-DISTNAME=	djangocms-admin-style-3.3.0
+DISTNAME=	djangocms-admin-style-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-admin-style/}
