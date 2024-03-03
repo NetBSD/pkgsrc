@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/02/28 07:07:16 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/03/03 10:07:11 wiz Exp $
 
-BLAKE2s (encodings-1.0.7.tar.xz) = 4ce833408b70a62650ed4c709b53215212f78c9ac4d0d81dd95e0aa6939c73f8
-SHA512 (encodings-1.0.7.tar.xz) = dc72982b14e5d89fe1eff1ab11f308796c89255a06337d8cd6bf65757f11dd0a5478b41d844793213db8fe9638389734f148abe9df9fb05027ea563dacde6ba8
-Size (encodings-1.0.7.tar.xz) = 299588 bytes
+BLAKE2s (encodings-1.1.0.tar.xz) = b6ffbaaa4aaaff44cf146e4be71d9b3642295600c55b5e3c06e30e044bc5e41d
+SHA512 (encodings-1.1.0.tar.xz) = ae912e120847954f5756193cc8860f50ada6c79bb3ba44f7f0cd1913b13aeed7885e140282cb47989a93fae0a0e8cedebe9a2420f65b1936b40192dc7d208427
+Size (encodings-1.1.0.tar.xz) = 298328 bytes
