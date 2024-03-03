@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1672 2024/03/03 18:05:07 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1673 2024/03/03 18:10:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2907,3 +2907,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/qrcp to 0.11.2 [bacon 2024-03-03]
 	Updated x11/xfce4-clipman-plugin to 1.6.6 [gutteridge 2024-03-03]
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb15 [gutteridge 2024-03-03]
+	Added print/tex-arydshln version 1.76 [leot 2024-03-03]
