@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2021/11/28 23:56:22 wiz Exp $
+# $NetBSD: builtin.mk,v 1.5 2024/03/03 21:00:07 wiz Exp $
 
 BUILTIN_PKG:=	xauth
 
@@ -25,7 +25,7 @@ MAKEVARS+=		IS_BUILTIN.xauth
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.xauth) && \
-    !empty(IS_BUILTIN.xauth:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.xauth:tl} == yes && \
     empty(XAUTH:M__nonexistent__)
 
 # we're more worried about existence, rather than actual version
@@ -45,10 +45,10 @@ USE_BUILTIN.xauth=	no
 .  else
 USE_BUILTIN.xauth=	${IS_BUILTIN.xauth}
 .    if defined(BUILTIN_PKG.xauth) && \
-        !empty(IS_BUILTIN.xauth:M[yY][eE][sS])
+        ${IS_BUILTIN.xauth:tl} == yes
 USE_BUILTIN.xauth=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.xauth}
-.        if !empty(USE_BUILTIN.xauth:M[yY][eE][sS])
+.        if ${USE_BUILTIN.xauth:tl} == yes
 USE_BUILTIN.xauth!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xauth:Q}; then \
 		${ECHO} yes;						\
@@ -62,7 +62,7 @@ USE_BUILTIN.xauth!=							\
 .endif
 
 # Now set up the appropriate prefix for xauth
-.if !empty(USE_BUILTIN.xauth:M[yY][eE][sS])
+.if ${USE_BUILTIN.xauth:tl} == yes
 XAUTHBASE=		${X11BASE}
 .else
 XAUTHBASE=		${PREFIX}
