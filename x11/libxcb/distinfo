@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.25 2023/08/20 18:20:48 wiz Exp $
+$NetBSD: distinfo,v 1.26 2024/03/03 10:05:22 wiz Exp $
 
-BLAKE2s (libxcb-1.16.tar.xz) = 0e091e0c61071928d96b2b1dc4a92ac5b7d58b944deb2c755b42ba806e7bd430
-SHA512 (libxcb-1.16.tar.xz) = 002fbc126c6f09eb7db5e4197cd0572d495f64b6de714a76d9a024fe3e13122c1cfc7c55207c0dee76cc63fcccf87b37db513223eadaf760af2bd2a926443bf8
-Size (libxcb-1.16.tar.xz) = 452964 bytes
+BLAKE2s (libxcb-1.16.1.tar.xz) = 81e80b40ecb2b7a8a5454d7f8ce7be7c515df7821a93737354c10d2f8de0e046
+SHA512 (libxcb-1.16.1.tar.xz) = e3afdae1c0e2a5ae2add7b2c4fdd3283cb86023ef6448f5b8b29a4bb72c274e34eaf0fc7523762bcd3f5116910fe7374490e8f26c25744301563ced80acc3e7f
+Size (libxcb-1.16.1.tar.xz) = 455368 bytes
 SHA1 (patch-ai) = 637affb3aa2f7d40e0aada4dadab8c695ea74b6f
-SHA1 (patch-configure) = ce055d4ee667e1db59c67e057f083a372d5764b4
