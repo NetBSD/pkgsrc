@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/07/13 20:46:15 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/03/03 23:10:45 wiz Exp $
 
-BLAKE2s (xev-1.2.5.tar.xz) = 8e34887bcb2309bee308c0a18f975eda1ae315c9dfdea56d8d83e059efdca466
-SHA512 (xev-1.2.5.tar.xz) = 9fbfb78c9547974c2256a678948bf4a694a40b1c2bd5c5dec5f365a713e6d938c6039f055a9629f49de27f02f3d7cb912f07c035df129798a4b2ddc20febe66a
-Size (xev-1.2.5.tar.xz) = 128848 bytes
+BLAKE2s (xev-1.2.6.tar.xz) = efb96c2577b1cec4ad0bf5825455caad736d35c3df40065ff4e68cee5108aa62
+SHA512 (xev-1.2.6.tar.xz) = aaabb635622abfbf0b7ef2a1978070a918ea94480f375dd0798375274cf378ddb25007cc42426bb2292ed65c8af922f88e6a04c5a2f6cff3fadb0194b53eb7e7
+Size (xev-1.2.6.tar.xz) = 129724 bytes
