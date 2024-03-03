@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2023/10/28 19:57:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/03/03 11:54:21 wiz Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -166,6 +166,9 @@ ${PYSITELIB}/pylint/checkers/variables.pyo
 ${PYSITELIB}/pylint/config/__init__.py
 ${PYSITELIB}/pylint/config/__init__.pyc
 ${PYSITELIB}/pylint/config/__init__.pyo
+${PYSITELIB}/pylint/config/_breaking_changes.py
+${PYSITELIB}/pylint/config/_breaking_changes.pyc
+${PYSITELIB}/pylint/config/_breaking_changes.pyo
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.py
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.pyc
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.pyo
