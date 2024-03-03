@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2024/03/03 16:12:50 riastradh Exp $
+
+BLAKE2s (ledger-3.2.1.tar.gz) = c07ef3f13ef6fa24c3a0d4e1ef91e02c39673f143aa910810d64f00751ab76ff
+SHA512 (ledger-3.2.1.tar.gz) = 526c60cee354c9d2ead38cef3b89b349467e41fa3ec0927b51e7246a3352f19f0f81574211f20ba9bac5915590b870b9f9478a103ab661d3d9a10f41c52f4512
+Size (ledger-3.2.1.tar.gz) = 790959 bytes
+SHA1 (patch-src_CMakeLists.txt) = 8d6a16523554c98c8559702db681af6fb4f413aa
+SHA1 (patch-src_main.cc) = d887e39e2a68fe594c93819e95eed9a4f469844d

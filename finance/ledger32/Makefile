@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2024/03/03 16:12:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.1 2024/03/03 16:12:50 riastradh Exp $
 
-DISTNAME=	ledger-3.3.2
-PKGREVISION=	3
+DISTNAME=	ledger-3.2.1
+PKGNAME=	${DISTNAME:C/^ledger-/ledger32-/}
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ledger/}
+GITHUB_PROJECT=	ledger
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
@@ -11,7 +12,7 @@ HOMEPAGE=	https://ledger-cli.org/
 COMMENT=	Double-entry accounting system for command-line
 LICENSE=	modified-bsd
 
-CONFLICTS+=	ledger32>=0
+CONFLICTS+=	ledger>=0
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++ c
