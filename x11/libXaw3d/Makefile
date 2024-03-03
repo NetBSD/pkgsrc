@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/05/16 16:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/03 10:04:01 wiz Exp $
 
-DISTNAME=	libXaw3d-1.6.5
+DISTNAME=	libXaw3d-1.6.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.xz
