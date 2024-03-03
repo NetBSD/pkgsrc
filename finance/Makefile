@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2024/02/26 19:19:38 pin Exp $
+# $NetBSD: Makefile,v 1.91 2024/03/03 16:12:50 riastradh Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -24,6 +24,7 @@ SUBDIR+=	homebank
 SUBDIR+=	hs-Decimal
 SUBDIR+=	ledger
 SUBDIR+=	ledger2beancount
+SUBDIR+=	ledger32
 SUBDIR+=	libofx
 SUBDIR+=	magento
 SUBDIR+=	p5-Algorithm-LUHN
