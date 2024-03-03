@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2023/11/12 13:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/03/03 20:59:18 wiz Exp $
 
-DISTNAME=		mkfontscale-1.2.2
-PKGREVISION=		2
+DISTNAME=		mkfontscale-1.2.3
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
