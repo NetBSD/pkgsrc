@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2023/12/29 01:08:16 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2024/03/03 08:11:20 adam Exp $
 
-DISTNAME=	wavpack-5.6.0
+DISTNAME=	wavpack-5.7.0
 CATEGORIES=	audio
 MASTER_SITES=	https://www.wavpack.com/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wavpack.com/
+HOMEPAGE=	https://www.wavpack.com/
 COMMENT=	Audio codec for lossless, lossy and hybrid compression
 LICENSE=	modified-bsd
 
