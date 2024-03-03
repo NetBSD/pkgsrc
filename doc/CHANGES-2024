@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1661 2024/03/03 12:51:39 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1662 2024/03/03 13:44:11 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2895,3 +2895,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ruff to 0.3.0 [wiz 2024-03-03]
 	Updated graphics/ImageMagick to 7.1.1.29 [wiz 2024-03-03]
 	Updated databases/prometheus to 2.50.1 [wiz 2024-03-03]
+	Updated net/sayaka to 3.7.4 [tsutsui 2024-03-03]
