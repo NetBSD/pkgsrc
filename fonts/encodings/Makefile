@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/02/28 07:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/03 10:07:11 wiz Exp $
 
-DISTNAME=		encodings-1.0.7
+DISTNAME=		encodings-1.1.0
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.xz

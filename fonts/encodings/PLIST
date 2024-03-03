@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/08 01:20:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/03 10:07:11 wiz Exp $
 share/fonts/X11/encodings/adobe-dingbats.enc.gz
 share/fonts/X11/encodings/adobe-standard.enc.gz
 share/fonts/X11/encodings/adobe-symbol.enc.gz
@@ -12,6 +12,7 @@ share/fonts/X11/encodings/ibm-cp852.enc.gz
 share/fonts/X11/encodings/ibm-cp866.enc.gz
 share/fonts/X11/encodings/iso8859-11.enc.gz
 share/fonts/X11/encodings/iso8859-13.enc.gz
+share/fonts/X11/encodings/iso8859-14.enc.gz
 share/fonts/X11/encodings/iso8859-16.enc.gz
 share/fonts/X11/encodings/iso8859-6.16.enc.gz
 share/fonts/X11/encodings/iso8859-6.8x.enc.gz
