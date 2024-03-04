@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/01/21 09:16:44 taca Exp $
+# $NetBSD: Makefile,v 1.20 2024/03/04 15:23:34 taca Exp $
 
-DISTNAME=	heel-4.0.0
+DISTNAME=	heel-4.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
