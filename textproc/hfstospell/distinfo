@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/24 16:58:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/03/04 18:20:11 bsiegert Exp $
 
-BLAKE2s (hfstospell-0.5.3.tar.gz) = b9f17c9d2c995cc87466ad314ac6e53e7b0c6c930a536275544b7f93d8f0a038
-SHA512 (hfstospell-0.5.3.tar.gz) = f25bae6c083894139ba1e3dbd24f010e1c4695bdfe4c2499d31f2f0bd2f5688b662ea15666b46f174fc75f0aa6f5cd114456f735b1d49bcf33322221b6f57ff5
-Size (hfstospell-0.5.3.tar.gz) = 152654 bytes
+BLAKE2s (hfstospell-0.5.4.tar.gz) = a217f48c8b6f9ff2142dada67ac47eb66476a3ad42d7e01aa285100c9ed34f44
+SHA512 (hfstospell-0.5.4.tar.gz) = 989d218718010a3f1ad7c3284287f62cb5aeef9d0dcd14f5898d919d088b212977a3e98fc7faf4040a65c3a7791b6fd4a54e10c6ca4e9a68595dfbd0227555a3
+Size (hfstospell-0.5.4.tar.gz) = 158435 bytes
