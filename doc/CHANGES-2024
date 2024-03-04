@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1690 2024/03/04 00:42:26 wen Exp $
+$NetBSD: CHANGES-2024,v 1.1691 2024/03/04 00:51:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2925,3 +2925,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xrefresh to 1.1.0 [wiz 2024-03-03]
 	Updated x11/xsm to 1.0.6 [wiz 2024-03-04]
 	Updated www/moodle to 4.3.3 [wen 2024-03-04]
+	Updated databases/p5-DBIx-Connector to 0.59 [wen 2024-03-04]
