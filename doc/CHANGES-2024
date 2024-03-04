@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1710 2024/03/04 22:06:45 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1711 2024/03/04 22:32:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2951,3 +2951,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/csview to 1.2.4 [pin 2024-03-04]
 	Updated devel/tokei to alpha.1 [pin 2024-03-04]
 	Updated misc/kdeartwork4 to 15.08.3nb44 [wiz 2024-03-04]
+	Updated misc/kdeplasma-addons4 to 4.14.3nb51 [wiz 2024-03-04]
