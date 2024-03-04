@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2023/09/10 13:56:30 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/04 15:18:46 taca Exp $
 
-DISTNAME=	deckar01-task_list-2.3.3
+DISTNAME=	deckar01-task_list-2.3.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/deckar01/task_list
 COMMENT=	Markdown TaskList components
 LICENSE=	mit
+
+DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.0<3:../../textproc/ruby-html-pipeline
 
 USE_LANGUAGES=	# none
 
