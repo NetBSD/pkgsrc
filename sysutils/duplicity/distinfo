@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2024/01/10 16:46:20 triaxx Exp $
+$NetBSD: distinfo,v 1.33 2024/03/04 14:45:17 triaxx Exp $
 
-BLAKE2s (duplicity-2.1.5.tar.gz) = 2f1db27c4aeb6afc7662e1d1b174384d2d7424066399069e2c8fed3488389ece
-SHA512 (duplicity-2.1.5.tar.gz) = 98776028153a70fefb2f2cc591c28315d0485fc3beb9b29e1afe69a36c1319b86b90c9cc589dfec4d89ba133f72c8040d8eddad5157cc9df4327d989f13d70fe
-Size (duplicity-2.1.5.tar.gz) = 1559641 bytes
+BLAKE2s (duplicity-2.2.2.tar.gz) = 71347be4a88f60ee506291c3302927251c6a3bf2e151053515671c550f5c45a4
+SHA512 (duplicity-2.2.2.tar.gz) = 7e85b75bbef3c12532f4d229ea1e915f6556de3f02fd7934320dbb8215defb257c23390614e2817859854e09944a2e307d24378f2cfd5f152202bc40ca5cc0eb
+Size (duplicity-2.2.2.tar.gz) = 1978264 bytes
 SHA1 (patch-duplicity_gpginterface.py) = 2fdf1cec8d069380be4802dd14ed7baaeb0c5929
