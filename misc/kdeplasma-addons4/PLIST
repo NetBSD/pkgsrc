@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/08/16 10:08:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/03/04 22:32:29 wiz Exp $
 bin/lancelot
 include/KDE/Lancelot/ActionListModel
 include/KDE/Lancelot/ActionListView
@@ -147,7 +147,6 @@ lib/kde4/plasma_applet_paste.so
 lib/kde4/plasma_applet_pastebin.so
 lib/kde4/plasma_applet_plasmaboard.so
 lib/kde4/plasma_applet_previewer.so
-lib/kde4/plasma_applet_qalculate.so
 lib/kde4/plasma_applet_rssnow.so
 lib/kde4/plasma_applet_rtm.so
 lib/kde4/plasma_applet_showdashboard.so
@@ -214,7 +213,6 @@ share/icons/hicolor/128x128/apps/lifegame.png
 share/icons/hicolor/128x128/apps/luna.png
 share/icons/hicolor/128x128/apps/plasmaapplet-shelf.png
 share/icons/hicolor/128x128/apps/previewer.png
-share/icons/hicolor/128x128/apps/qalculate-applet.png
 share/icons/hicolor/16x16/actions/krunner_youtube.png
 share/icons/hicolor/16x16/apps/bball.png
 share/icons/hicolor/16x16/apps/eyes.png
@@ -250,7 +248,6 @@ share/icons/hicolor/48x48/apps/lifegame.png
 share/icons/hicolor/48x48/apps/luna.png
 share/icons/hicolor/48x48/apps/plasmaapplet-shelf.png
 share/icons/hicolor/48x48/apps/previewer.png
-share/icons/hicolor/48x48/apps/qalculate-applet.png
 share/icons/hicolor/64x64/actions/krunner_youtube.png
 share/icons/hicolor/64x64/apps/bball.png
 share/icons/hicolor/64x64/apps/eyes.png
@@ -541,7 +538,6 @@ share/kde4/services/plasma-applet-opendesktop.desktop
 share/kde4/services/plasma-applet-paste.desktop
 share/kde4/services/plasma-applet-pastebin.desktop
 share/kde4/services/plasma-applet-previewer.desktop
-share/kde4/services/plasma-applet-qalculate.desktop
 share/kde4/services/plasma-applet-rememberthemilk.desktop
 share/kde4/services/plasma-applet-rssnow.desktop
 share/kde4/services/plasma-applet-showdashboard.desktop
