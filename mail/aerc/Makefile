@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2024/02/07 14:50:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/04 13:05:28 wiz Exp $
 
-DISTNAME=	0.16.0
+DISTNAME=	0.17.0
 PKGNAME=	aerc-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
 
-MAINTAINER=	kevin.bloom@posteo.net
-HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/archive/
+MAINTAINER=	ktnb@posteo.net
+HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/
 COMMENT=	Terminal email client written in Go
 LICENSE=	mit
 
-TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
-WRKSRC=		${WRKDIR}/aerc-0.16.0
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	gmake
-#MAKE_FILE=	GNUmakefile
 USE_LANGUAGES=	c
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
@@ -28,13 +25,8 @@ RELRO_SUPPORTED=	no
 
 REPLACE_PYTHON+=	contrib/carddav-query
 REPLACE_PYTHON+=	filters/show-ics-details.py
-.include "../../lang/python/application.mk"
 
 GO_BUILD_PATTERN=	.
-
-#pre-build:
-#	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
-#	    GOPATH=${WRKDIR}/.gopath ${GO} generate ./...
 
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
@@ -45,5 +37,6 @@ do-install:
 
 .include "go-modules.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/12/29 20:58:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/04 13:05:28 wiz Exp $
 bin/aerc
 bin/carddav-query
 libexec/aerc/filters/calendar
@@ -21,6 +21,7 @@ man/man5/aerc-maildir.5
 man/man5/aerc-notmuch.5
 man/man5/aerc-sendmail.5
 man/man5/aerc-smtp.5
+man/man7/aerc-patch.7
 man/man7/aerc-stylesets.7
 man/man7/aerc-templates.7
 man/man7/aerc-tutorial.7
