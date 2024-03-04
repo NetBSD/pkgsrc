@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2024/02/21 11:01:37 adam Exp $
+$NetBSD: distinfo,v 1.26 2024/03/04 18:58:51 adam Exp $
 
-BLAKE2s (nbconvert-7.16.1.tar.gz) = 91844cbd14fd2672220ac82cc31ef25a38fd91f3b58c5e9cc931dcced29733b3
-SHA512 (nbconvert-7.16.1.tar.gz) = 6a2991eab0b1e981920d7c040535a1bffea037e854b6aeca26a2c185a31305855096f83092348e7dbd102094d5bda860bc893594126e969cfe170d09f7a808d5
-Size (nbconvert-7.16.1.tar.gz) = 854006 bytes
+BLAKE2s (nbconvert-7.16.2.tar.gz) = 72e904698145d2f310dc05d3889ef818873f6349a1a801d5af909afa9cfe7164
+SHA512 (nbconvert-7.16.2.tar.gz) = 8782507013f7eb8fc83bd51d94649834c9b376fb932d8a86766210c021af3646a623ee1dc0bb73592dc0d38e3c9b5b864dbd97834dcaf736230f6524575759ef
+Size (nbconvert-7.16.2.tar.gz) = 854119 bytes
 SHA1 (patch-hatch_build.py) = b1658fecefc2fb61a363be4f0eed2d542b37e0d7
