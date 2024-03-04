@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/02/25 14:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/04 15:12:15 wiz Exp $
 
 .include "Makefile.common"
 
@@ -66,6 +66,7 @@ TEST_TARGET=	check
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.37.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
