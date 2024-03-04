@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/02/23 09:59:29 pin Exp $
+$NetBSD: distinfo,v 1.12 2024/03/04 20:17:07 pin Exp $
 
 BLAKE2s (anstream-0.6.12.crate) = c6c51e9427dd8d50fe3b528fcf07194318fac6c0d671a5d0884309531dbb9186
 SHA512 (anstream-0.6.12.crate) = 47396e1617464188e7b4d7c931c5a6fafa918ca7aa39044a5b3dad1b8685ea96829ee87e7b70820bbe2efb35571fb331539f0fb8938d229034a9b9bb60700a70
@@ -45,9 +45,9 @@ Size (csv-1.3.0.crate) = 888212 bytes
 BLAKE2s (csv-core-0.1.11.crate) = 9b8e40644a0b48c0992b5a86bfd3edfb71761fef9051585097c799ba5646f3c3
 SHA512 (csv-core-0.1.11.crate) = 0445c8a4d4d0f90f03e5d6507c26454aaeac0b355fb39d19e1676a7cb27b4372db3541367ce838d38151862b7bfbf19750cb550e24e74ab5e07ae9bb4edeedee
 Size (csv-core-0.1.11.crate) = 25852 bytes
-BLAKE2s (csview-1.2.3.tar.gz) = f647e043da7a758b6d8c81184cc2d8fb8680347fa80e4627556a99e9eb748629
-SHA512 (csview-1.2.3.tar.gz) = 10619345e212d3a7f6ea6ff39f4efd71dd1dc41f7856fca4219600420d7b31f1c420262e3be929b39137d645295509db4f9a04172959b412c42b833e6a1e5f8f
-Size (csview-1.2.3.tar.gz) = 25498 bytes
+BLAKE2s (csview-1.2.4.tar.gz) = 3c53090c0dd259c70063bd78ba723e8f819dca6e0fbc3f41d6ff8d81d2e1470b
+SHA512 (csview-1.2.4.tar.gz) = 58cd598ca4591906016cb32d812ec1e822617561a80170bf6066ffcb9509d1cf6f0e766573c7cee28ebc070018e32b6d047d301a3878bbca5dfaaa4e0d3effb6
+Size (csview-1.2.4.tar.gz) = 25315 bytes
 BLAKE2s (either-1.10.0.crate) = a103fc6cf37ea063cdb3b39aaa542dfd1caddd139b187a5abaae56f5c92ab118
 SHA512 (either-1.10.0.crate) = 2de38a37b7f3e61effa89648acadbf220eacfda1ca7c82fb77484e45577769b724f7dbaa297e73e3d355d6b1bd5109373c3e96e4c1a13a918176162b33ea2432
 Size (either-1.10.0.crate) = 18334 bytes
