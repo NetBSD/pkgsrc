@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/26 20:43:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/04 18:20:11 bsiegert Exp $
 bin/hfst-ospell
 bin/hfst-ospell-office
+bin/hfst-ospell-predict
 include/ZHfstOspeller.h
 include/ZHfstOspellerXmlMetadata.h
 include/hfst-ol.h
