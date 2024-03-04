@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:09:35 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/03/04 00:51:05 wen Exp $
 
-BLAKE2s (DBIx-Connector-0.57.tar.gz) = ddb0e59853b23c2bd98fa65bf02ec61e616c384190e8a36a3478aed471d24bac
-SHA512 (DBIx-Connector-0.57.tar.gz) = 5aa85831cf9244bb55b3ad4be000dcc2b881b06b11ba570537024c6ae861a3e7106773542155428b884b70f021eadcd9508fab48639af8011ead4da1ebe68bcd
-Size (DBIx-Connector-0.57.tar.gz) = 29653 bytes
+BLAKE2s (DBIx-Connector-0.59.tar.gz) = 77677e716d2545dbd2aeba2b07432e35fdd0c20837c9b687d33da9945c2788d3
+SHA512 (DBIx-Connector-0.59.tar.gz) = 7fcaa15ac8d5d070fb8b0c0e8d2ddba553075d9b89839df07aa6d2568317a8127c73b0ae46eab9189bf5d33dfb382bf85e1641c37384891d608ea8c11033df5b
+Size (DBIx-Connector-0.59.tar.gz) = 38205 bytes
