@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/04/30 14:48:10 taca Exp $
+$NetBSD: distinfo,v 1.15 2024/03/04 15:23:34 taca Exp $
 
-BLAKE2s (heel-4.0.0.gem) = ec5b6ca40ca29381f30b81260a3378a41845723165a42dcc211b70156d184eae
-SHA512 (heel-4.0.0.gem) = d72daaa2d92d3d89c4b299e638bd155612a103744e5c6604c4827930afc30e8bab6ca339a93500c1b3c646db2705009815e73c9c4a93ff30792a5533ce353231
-Size (heel-4.0.0.gem) = 39424 bytes
+BLAKE2s (heel-4.0.1.gem) = 8c7d71f3b12f6af8cae311c54c1093676d45658a20d3cead0d4121f999191efe
+SHA512 (heel-4.0.1.gem) = c6464d2ad9fdd7bda971e411dd9cfe2aceecc09595db3c248bfa9f2679ca4325e4f57cd2dfbfcd03fb01cf7e706cd4896682b5dd12bbb4a0cbcf859b6d646a5b
+Size (heel-4.0.1.gem) = 39424 bytes
