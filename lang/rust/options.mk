@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2024/03/03 14:53:32 he Exp $
+# $NetBSD: options.mk,v 1.36 2024/03/04 16:01:07 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
 .  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
 # Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
-GCC_REQD=	12
+GCC_REQD+=	12
 .  endif
 .endif
 
