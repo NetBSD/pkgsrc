@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/11 09:57:14 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/03/04 15:52:12 adam Exp $
 
-BLAKE2s (jaraco.develop-8.6.0.tar.gz) = b0d567982176cbe4db51e2ec41f50096692296a8a6232cd05f57450b651675ae
-SHA512 (jaraco.develop-8.6.0.tar.gz) = 93e9681921de7c02bdc3f907f2682a1537c7ebe9dea987467f5f46ddd597519c0c504ed1adaab19f06e49b83e446faa096ee8c2f3fc9d5096b4b7de3afe4ba5e
-Size (jaraco.develop-8.6.0.tar.gz) = 21982 bytes
+BLAKE2s (jaraco.develop-8.7.0.tar.gz) = 1a44771c6e681fefaa86310fb967e7270ac09af77bb44d60e162c2221556c83b
+SHA512 (jaraco.develop-8.7.0.tar.gz) = 9c5910ee101ad82619c49da75658c0733f149ed284aeaf93c1a3e14c2d7f27c08a86b51278dbc629a3030be0feaf2c934e1cee47a43e4aa9d66338e1f22fc5d6
+Size (jaraco.develop-8.7.0.tar.gz) = 22341 bytes
