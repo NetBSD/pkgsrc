@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.29 2024/02/23 10:01:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.30 2024/03/04 10:07:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -107,7 +107,7 @@ CARGO_CRATE_DEPENDS+=	ignore-0.4.22
 CARGO_CRATE_DEPENDS+=	include-flate-0.2.0
 CARGO_CRATE_DEPENDS+=	include-flate-codegen-0.1.4
 CARGO_CRATE_DEPENDS+=	include-flate-codegen-exports-0.1.4
-CARGO_CRATE_DEPENDS+=	indexmap-2.2.3
+CARGO_CRATE_DEPENDS+=	indexmap-2.2.5
 CARGO_CRATE_DEPENDS+=	indicatif-0.17.8
 CARGO_CRATE_DEPENDS+=	instant-0.1.12
 CARGO_CRATE_DEPENDS+=	ipnet-2.9.0
@@ -128,7 +128,7 @@ CARGO_CRATE_DEPENDS+=	libz-sys-1.1.14
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.12
 CARGO_CRATE_DEPENDS+=	litrs-0.4.1
-CARGO_CRATE_DEPENDS+=	log-0.4.20
+CARGO_CRATE_DEPENDS+=	log-0.4.21
 CARGO_CRATE_DEPENDS+=	memchr-2.7.1
 CARGO_CRATE_DEPENDS+=	memmap2-0.5.10
 CARGO_CRATE_DEPENDS+=	miette-5.10.0
@@ -138,7 +138,7 @@ CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
 CARGO_CRATE_DEPENDS+=	mio-0.8.10
-CARGO_CRATE_DEPENDS+=	next_version-0.2.13
+CARGO_CRATE_DEPENDS+=	next_version-0.2.14
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.17
 CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
@@ -181,9 +181,9 @@ CARGO_CRATE_DEPENDS+=	reqwest-middleware-0.2.4
 CARGO_CRATE_DEPENDS+=	ring-0.17.7
 CARGO_CRATE_DEPENDS+=	rle-decode-fast-1.0.3
 CARGO_CRATE_DEPENDS+=	roff-0.2.1
-CARGO_CRATE_DEPENDS+=	rust-embed-8.2.0
-CARGO_CRATE_DEPENDS+=	rust-embed-impl-8.2.0
-CARGO_CRATE_DEPENDS+=	rust-embed-utils-8.2.0
+CARGO_CRATE_DEPENDS+=	rust-embed-8.3.0
+CARGO_CRATE_DEPENDS+=	rust-embed-impl-8.3.0
+CARGO_CRATE_DEPENDS+=	rust-embed-utils-8.3.0
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.23
 CARGO_CRATE_DEPENDS+=	rustix-0.38.30
 CARGO_CRATE_DEPENDS+=	rustls-0.21.10
