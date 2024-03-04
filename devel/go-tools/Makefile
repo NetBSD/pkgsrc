@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2024/02/07 14:50:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.90 2024/03/04 18:14:09 bsiegert Exp $
 
-DISTNAME=		tools-0.14.0
+DISTNAME=		tools-0.18.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools
@@ -48,6 +47,7 @@ CHECK_RELRO_SKIP+=	bin/callgraph
 CHECK_RELRO_SKIP+=	bin/compilebench
 CHECK_RELRO_SKIP+=	bin/cookieauth
 CHECK_RELRO_SKIP+=	bin/cover
+CHECK_RELRO_SKIP+=	bin/deadcode
 CHECK_RELRO_SKIP+=	bin/digraph
 CHECK_RELRO_SKIP+=	bin/eg
 CHECK_RELRO_SKIP+=	bin/fiximports
