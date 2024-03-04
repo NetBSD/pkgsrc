@@ -1,13 +1,18 @@
-@comment $NetBSD: PLIST,v 1.20 2024/01/10 16:46:20 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/03/04 14:45:17 triaxx Exp $
 bin/duplicity
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
+${PYSITELIB}/duplicity/__main__.py
+${PYSITELIB}/duplicity/__main__.pyc
+${PYSITELIB}/duplicity/__main__.pyo
 ${PYSITELIB}/duplicity/_librsync.so
 ${PYSITELIB}/duplicity/_librsyncmodule.c
 ${PYSITELIB}/duplicity/argparse311.py
@@ -173,6 +178,9 @@ ${PYSITELIB}/duplicity/dup_collections.pyo
 ${PYSITELIB}/duplicity/dup_main.py
 ${PYSITELIB}/duplicity/dup_main.pyc
 ${PYSITELIB}/duplicity/dup_main.pyo
+${PYSITELIB}/duplicity/dup_tarfile.py
+${PYSITELIB}/duplicity/dup_tarfile.pyc
+${PYSITELIB}/duplicity/dup_tarfile.pyo
 ${PYSITELIB}/duplicity/dup_temp.py
 ${PYSITELIB}/duplicity/dup_temp.pyc
 ${PYSITELIB}/duplicity/dup_temp.pyo
@@ -230,9 +238,6 @@ ${PYSITELIB}/duplicity/selection.pyo
 ${PYSITELIB}/duplicity/statistics.py
 ${PYSITELIB}/duplicity/statistics.pyc
 ${PYSITELIB}/duplicity/statistics.pyo
-${PYSITELIB}/duplicity/tarfile.py
-${PYSITELIB}/duplicity/tarfile.pyc
-${PYSITELIB}/duplicity/tarfile.pyo
 ${PYSITELIB}/duplicity/tempdir.py
 ${PYSITELIB}/duplicity/tempdir.pyc
 ${PYSITELIB}/duplicity/tempdir.pyo
@@ -240,8 +245,8 @@ ${PYSITELIB}/duplicity/util.py
 ${PYSITELIB}/duplicity/util.pyc
 ${PYSITELIB}/duplicity/util.pyo
 man/man1/duplicity.1
+share/doc/${PKGNAME}/AUTHORS.md
 share/doc/${PKGNAME}/CHANGELOG.md
-share/doc/${PKGNAME}/CONTRIBUTING.md
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/README-LOG.md
 share/doc/${PKGNAME}/README-REPO.md
