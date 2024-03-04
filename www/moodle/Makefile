@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2023/11/13 16:34:03 taca Exp $
+# $NetBSD: Makefile,v 1.100 2024/03/04 00:38:28 wen Exp $
 
-DISTNAME=	moodle-4.1
-PKGREVISION=	2
+DISTNAME=	moodle-4.3.3
 CATEGORIES=	www
-MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable401/
+MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable403/ \
+		https://jaist.dl.sourceforge.net/project/moodle/Moodle/stable403/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
@@ -11,15 +11,15 @@ HOMEPAGE=	http://www.moodle.org/
 COMMENT=	Course management system based on social constructionism
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.3.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.3.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.3.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=7.3.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-soap>=7.3.0:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.3.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=7.3.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=7.3.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=7.3.0:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=8.0:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.0:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=8.0:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.0:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=8.0:../../devel/php-opcache
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
@@ -31,7 +31,7 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=		74 80 81
+PHP_VERSIONS_ACCEPTED=		80 81
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
