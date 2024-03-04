@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2024/01/05 14:55:38 riastradh Exp $
+# $NetBSD: Makefile,v 1.104 2024/03/04 15:38:33 riastradh Exp $
 
 DISTNAME=		racket-8.11.1-src
 PKGNAME=		${DISTNAME:S/-src$//}
@@ -28,6 +28,17 @@ CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-iconv
+
+# On macOS, Racket insists that we choose between Unix-style or
+# Mac-style installation:
+#
+# ERROR: --prefix not allowed for a Mac OS build, unless either
+#          --enable-xonx is supplied (to create a Unix-style
+#            build), or 
+#          --enable-macprefix is supplied (to allow a Mac-style
+#            installation, even though --prefix is normally used
+#            for Unix-style installations)
+CONFIGURE_ARGS.Darwin+=	--enable-xonx
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
