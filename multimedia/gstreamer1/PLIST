@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/06/02 16:09:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/03/05 14:45:49 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -49,6 +49,7 @@ include/gstreamer-1.0/gst/gstbuffer.h
 include/gstreamer-1.0/gst/gstbufferlist.h
 include/gstreamer-1.0/gst/gstbufferpool.h
 include/gstreamer-1.0/gst/gstbus.h
+include/gstreamer-1.0/gst/gstbytearrayinterface.h
 include/gstreamer-1.0/gst/gstcaps.h
 include/gstreamer-1.0/gst/gstcapsfeatures.h
 include/gstreamer-1.0/gst/gstchildproxy.h
@@ -153,10 +154,10 @@ lib/pkgconfig/gstreamer-base-1.0.pc
 lib/pkgconfig/gstreamer-check-1.0.pc
 lib/pkgconfig/gstreamer-controller-1.0.pc
 lib/pkgconfig/gstreamer-net-1.0.pc
+libexec/gstreamer-1.0/gst-completion-helper
 libexec/gstreamer-1.0/gst-hotdoc-plugins-scanner
 libexec/gstreamer-1.0/gst-plugin-scanner
 libexec/gstreamer-1.0/gst-plugins-doc-cache-generator
-libexec/gstreamer-1.0/gst-ptp-helper
 man/man1/gst-inspect-1.0.1
 man/man1/gst-launch-1.0.1
 man/man1/gst-stats-1.0.1
@@ -196,6 +197,7 @@ share/locale/ja/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/ka/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/ko/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/lt/LC_MESSAGES/gstreamer-1.0.mo
+share/locale/lv/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/nb/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/nl/LC_MESSAGES/gstreamer-1.0.mo
 share/locale/pl/LC_MESSAGES/gstreamer-1.0.mo

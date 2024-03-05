@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.22 2023/06/02 16:09:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/03/05 14:45:47 wiz Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
 include/gstreamer-1.0/gst/allocators/allocators-prelude.h
 include/gstreamer-1.0/gst/allocators/allocators.h
 include/gstreamer-1.0/gst/allocators/gstdmabuf.h
+include/gstreamer-1.0/gst/allocators/gstdrmdumb.h
 include/gstreamer-1.0/gst/allocators/gstfdmemory.h
 include/gstreamer-1.0/gst/allocators/gstphysmemory.h
+include/gstreamer-1.0/gst/allocators/gstshmallocator.h
 include/gstreamer-1.0/gst/app/app-enumtypes.h
 include/gstreamer-1.0/gst/app/app-prelude.h
 include/gstreamer-1.0/gst/app/app.h
@@ -37,6 +39,8 @@ include/gstreamer-1.0/gst/audio/gstaudioringbuffer.h
 include/gstreamer-1.0/gst/audio/gstaudiosink.h
 include/gstreamer-1.0/gst/audio/gstaudiosrc.h
 include/gstreamer-1.0/gst/audio/gstaudiostreamalign.h
+include/gstreamer-1.0/gst/audio/gstdsd.h
+include/gstreamer-1.0/gst/audio/gstdsdformat.h
 include/gstreamer-1.0/gst/audio/streamvolume.h
 include/gstreamer-1.0/gst/fft/fft-prelude.h
 include/gstreamer-1.0/gst/fft/fft.h
@@ -121,6 +125,7 @@ include/gstreamer-1.0/gst/video/video-event.h
 include/gstreamer-1.0/gst/video/video-format.h
 include/gstreamer-1.0/gst/video/video-frame.h
 include/gstreamer-1.0/gst/video/video-hdr.h
+include/gstreamer-1.0/gst/video/video-info-dma.h
 include/gstreamer-1.0/gst/video/video-info.h
 include/gstreamer-1.0/gst/video/video-multiview.h
 include/gstreamer-1.0/gst/video/video-overlay-composition.h
@@ -149,7 +154,9 @@ lib/gstreamer-1.0/libgstaudiomixer.so
 lib/gstreamer-1.0/libgstaudiorate.so
 lib/gstreamer-1.0/libgstaudioresample.so
 lib/gstreamer-1.0/libgstaudiotestsrc.so
+lib/gstreamer-1.0/libgstbasedebug.so
 lib/gstreamer-1.0/libgstcompositor.so
+lib/gstreamer-1.0/libgstdsd.so
 lib/gstreamer-1.0/libgstencoding.so
 lib/gstreamer-1.0/libgstgio.so
 lib/gstreamer-1.0/libgstoverlaycomposition.so

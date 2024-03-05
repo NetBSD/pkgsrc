@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.25 2023/06/02 16:09:46 wiz Exp $
-bin/gst-transcoder-1.0
+@comment $NetBSD: PLIST,v 1.26 2024/03/05 14:45:47 wiz Exp $
+include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
+include/gstreamer-1.0/gst/analytics/analytics.h
+include/gstreamer-1.0/gst/analytics/gstanalyticsclassificationmtd.h
+include/gstreamer-1.0/gst/analytics/gstanalyticsmeta.h
+include/gstreamer-1.0/gst/analytics/gstanalyticsobjectdetectionmtd.h
+include/gstreamer-1.0/gst/analytics/gstanalyticsobjecttrackingmtd.h
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
 include/gstreamer-1.0/gst/audio/gstplanaraudioadapter.h
@@ -31,12 +36,21 @@ include/gstreamer-1.0/gst/mpegts/gst-dvb-descriptor.h
 include/gstreamer-1.0/gst/mpegts/gst-dvb-section.h
 include/gstreamer-1.0/gst/mpegts/gst-hdmv-section.h
 include/gstreamer-1.0/gst/mpegts/gst-isdb-descriptor.h
+include/gstreamer-1.0/gst/mpegts/gst-metadata-descriptor.h
+include/gstreamer-1.0/gst/mpegts/gst-mpegtspesmetadatameta.h
 include/gstreamer-1.0/gst/mpegts/gst-scte-section.h
 include/gstreamer-1.0/gst/mpegts/gstmpegts-enumtypes.h
 include/gstreamer-1.0/gst/mpegts/gstmpegtsdescriptor.h
 include/gstreamer-1.0/gst/mpegts/gstmpegtssection.h
 include/gstreamer-1.0/gst/mpegts/mpegts-prelude.h
 include/gstreamer-1.0/gst/mpegts/mpegts.h
+include/gstreamer-1.0/gst/mse/gstmediasource.h
+include/gstreamer-1.0/gst/mse/gstmsesrc.h
+include/gstreamer-1.0/gst/mse/gstsourcebuffer.h
+include/gstreamer-1.0/gst/mse/gstsourcebufferlist.h
+include/gstreamer-1.0/gst/mse/mse-enumtypes.h
+include/gstreamer-1.0/gst/mse/mse-prelude.h
+include/gstreamer-1.0/gst/mse/mse.h
 include/gstreamer-1.0/gst/play/gstplay-media-info.h
 include/gstreamer-1.0/gst/play/gstplay-signal-adapter.h
 include/gstreamer-1.0/gst/play/gstplay-types.h
@@ -80,10 +94,13 @@ include/gstreamer-1.0/gst/webrtc/sctptransport.h
 include/gstreamer-1.0/gst/webrtc/webrtc-enumtypes.h
 include/gstreamer-1.0/gst/webrtc/webrtc.h
 include/gstreamer-1.0/gst/webrtc/webrtc_fwd.h
+lib/girepository-1.0/GstAnalytics-1.0.typelib
 lib/girepository-1.0/GstBadAudio-1.0.typelib
 lib/girepository-1.0/GstCodecs-1.0.typelib
+lib/girepository-1.0/GstDxva-1.0.typelib
 lib/girepository-1.0/GstInsertBin-1.0.typelib
 lib/girepository-1.0/GstMpegts-1.0.typelib
+lib/girepository-1.0/GstMse-1.0.typelib
 lib/girepository-1.0/GstPlay-1.0.typelib
 lib/girepository-1.0/GstPlayer-1.0.typelib
 lib/girepository-1.0/GstTranscoder-1.0.typelib
@@ -101,7 +118,6 @@ lib/gstreamer-1.0/libgstaudiovisualizers.so
 lib/gstreamer-1.0/libgstautoconvert.so
 lib/gstreamer-1.0/libgstbayer.so
 lib/gstreamer-1.0/libgstcamerabin.so
-lib/gstreamer-1.0/libgstcodectimestamper.so
 lib/gstreamer-1.0/libgstcoloreffects.so
 lib/gstreamer-1.0/libgstdebugutilsbad.so
 lib/gstreamer-1.0/libgstdvbsubenc.so
@@ -157,6 +173,9 @@ lib/gstreamer-1.0/libgsty4mdec.so
 lib/libgstadaptivedemux-1.0.so
 lib/libgstadaptivedemux-1.0.so.0
 lib/libgstadaptivedemux-1.0.so.0.${SHLIBVER}.0
+lib/libgstanalytics-1.0.so
+lib/libgstanalytics-1.0.so.0
+lib/libgstanalytics-1.0.so.0.2400.0
 lib/libgstbadaudio-1.0.so
 lib/libgstbadaudio-1.0.so.0
 lib/libgstbadaudio-1.0.so.0.${SHLIBVER}.0
@@ -169,6 +188,9 @@ lib/libgstcodecparsers-1.0.so.0.${SHLIBVER}.0
 lib/libgstcodecs-1.0.so
 lib/libgstcodecs-1.0.so.0
 lib/libgstcodecs-1.0.so.0.${SHLIBVER}.0
+lib/libgstdxva-1.0.so
+lib/libgstdxva-1.0.so.0
+lib/libgstdxva-1.0.so.0.2400.0
 lib/libgstinsertbin-1.0.so
 lib/libgstinsertbin-1.0.so.0
 lib/libgstinsertbin-1.0.so.0.${SHLIBVER}.0
@@ -178,6 +200,9 @@ lib/libgstisoff-1.0.so.0.${SHLIBVER}.0
 lib/libgstmpegts-1.0.so
 lib/libgstmpegts-1.0.so.0
 lib/libgstmpegts-1.0.so.0.${SHLIBVER}.0
+lib/libgstmse-1.0.so
+lib/libgstmse-1.0.so.0
+lib/libgstmse-1.0.so.0.2400.0
 lib/libgstphotography-1.0.so
 lib/libgstphotography-1.0.so.0
 lib/libgstphotography-1.0.so.0.${SHLIBVER}.0
@@ -198,10 +223,12 @@ lib/libgsturidownloader-1.0.so.0.${SHLIBVER}.0
 lib/libgstwebrtc-1.0.so
 lib/libgstwebrtc-1.0.so.0
 lib/libgstwebrtc-1.0.so.0.${SHLIBVER}.0
+lib/pkgconfig/gstreamer-analytics-1.0.pc
 lib/pkgconfig/gstreamer-bad-audio-1.0.pc
 lib/pkgconfig/gstreamer-codecparsers-1.0.pc
 lib/pkgconfig/gstreamer-insertbin-1.0.pc
 lib/pkgconfig/gstreamer-mpegts-1.0.pc
+lib/pkgconfig/gstreamer-mse-1.0.pc
 lib/pkgconfig/gstreamer-photography-1.0.pc
 lib/pkgconfig/gstreamer-play-1.0.pc
 lib/pkgconfig/gstreamer-player-1.0.pc
@@ -209,10 +236,13 @@ lib/pkgconfig/gstreamer-plugins-bad-1.0.pc
 lib/pkgconfig/gstreamer-sctp-1.0.pc
 lib/pkgconfig/gstreamer-transcoder-1.0.pc
 lib/pkgconfig/gstreamer-webrtc-1.0.pc
+share/gir-1.0/GstAnalytics-1.0.gir
 share/gir-1.0/GstBadAudio-1.0.gir
 share/gir-1.0/GstCodecs-1.0.gir
+share/gir-1.0/GstDxva-1.0.gir
 share/gir-1.0/GstInsertBin-1.0.gir
 share/gir-1.0/GstMpegts-1.0.gir
+share/gir-1.0/GstMse-1.0.gir
 share/gir-1.0/GstPlay-1.0.gir
 share/gir-1.0/GstPlayer-1.0.gir
 share/gir-1.0/GstTranscoder-1.0.gir
