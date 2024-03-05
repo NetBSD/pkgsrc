@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/10/28 19:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/03/05 16:55:53 adam Exp $
 
-DISTNAME=	ipyparallel-8.6.1
+DISTNAME=	ipyparallel-8.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipyparallel/}
 
@@ -12,7 +11,7 @@ COMMENT=	Interactive Parallel Computing with IPython
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=3.0.0:../../www/py-jupyterlab
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=4:../../www/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
@@ -24,7 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-tornado>=5.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=18.0.0:../../net/py-zmq
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-tornado-[0-9]*:../../devel/py-test-tornado
@@ -47,9 +45,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
