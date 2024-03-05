@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.8 2024/03/01 18:25:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.9 2024/03/05 14:24:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -35,4 +35,7 @@ net/bind916: security fix
 
 Pullup ticket #6838 - requested by riastradh
 security/libfido2: NetBSD build fix
+
+Pullup ticket #6839 - requested by nia
+editors/nano: build fix
 
