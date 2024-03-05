@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2023/08/04 17:36:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.49 2024/03/05 15:54:24 wiz Exp $
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
 # used by audio/gst-plugins1-libvisual/Makefile
@@ -33,56 +33,61 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-# grep '^option' meson_options.txt | grep feature | \
-# sed -e "s/',.*//g" -e "s/option('//g" | \
-# xargs printf 'GST_PLUGINS_SET+=\t%s\n'
-GST_PLUGINS_SET+=	iso-codes
-GST_PLUGINS_SET+=	gl
-GST_PLUGINS_SET+=	gl-graphene
-GST_PLUGINS_SET+=	gl-jpeg
-GST_PLUGINS_SET+=	gl-png
+# grep '^option' meson_options.txt | grep feature | sed -e "s/',.*//g" -e "s/option('//g" | sort | xargs printf 'GST_PLUGINS_SET+=\t%s\n'
 GST_PLUGINS_SET+=	adder
+GST_PLUGINS_SET+=	alsa
 GST_PLUGINS_SET+=	app
 GST_PLUGINS_SET+=	audioconvert
 GST_PLUGINS_SET+=	audiomixer
 GST_PLUGINS_SET+=	audiorate
 GST_PLUGINS_SET+=	audioresample
 GST_PLUGINS_SET+=	audiotestsrc
+GST_PLUGINS_SET+=	cdparanoia
 GST_PLUGINS_SET+=	compositor
+GST_PLUGINS_SET+=	debugutils
+GST_PLUGINS_SET+=	doc
+GST_PLUGINS_SET+=	drm
+GST_PLUGINS_SET+=	dsd
 GST_PLUGINS_SET+=	encoding
+GST_PLUGINS_SET+=	examples
 GST_PLUGINS_SET+=	gio
 GST_PLUGINS_SET+=	gio-typefinder
+GST_PLUGINS_SET+=	gl
+GST_PLUGINS_SET+=	gl-graphene
+GST_PLUGINS_SET+=	gl-jpeg
+GST_PLUGINS_SET+=	gl-png
+GST_PLUGINS_SET+=	glib-asserts
+GST_PLUGINS_SET+=	glib-checks
+GST_PLUGINS_SET+=	gobject-cast-checks
+GST_PLUGINS_SET+=	introspection
+GST_PLUGINS_SET+=	iso-codes
+GST_PLUGINS_SET+=	libvisual
+GST_PLUGINS_SET+=	nls
+GST_PLUGINS_SET+=	ogg
+GST_PLUGINS_SET+=	opus
+GST_PLUGINS_SET+=	orc
 GST_PLUGINS_SET+=	overlaycomposition
+GST_PLUGINS_SET+=	pango
 GST_PLUGINS_SET+=	pbtypes
 GST_PLUGINS_SET+=	playback
+GST_PLUGINS_SET+=	qt5
 GST_PLUGINS_SET+=	rawparse
 GST_PLUGINS_SET+=	subparse
 GST_PLUGINS_SET+=	tcp
+GST_PLUGINS_SET+=	tests
+GST_PLUGINS_SET+=	theora
+GST_PLUGINS_SET+=	tools
+GST_PLUGINS_SET+=	tremor
 GST_PLUGINS_SET+=	typefind
 GST_PLUGINS_SET+=	videoconvertscale
 GST_PLUGINS_SET+=	videorate
 GST_PLUGINS_SET+=	videotestsrc
 GST_PLUGINS_SET+=	volume
-GST_PLUGINS_SET+=	alsa
-GST_PLUGINS_SET+=	cdparanoia
-GST_PLUGINS_SET+=	libvisual
-GST_PLUGINS_SET+=	ogg
-GST_PLUGINS_SET+=	opus
-GST_PLUGINS_SET+=	pango
-GST_PLUGINS_SET+=	theora
-GST_PLUGINS_SET+=	tremor
 GST_PLUGINS_SET+=	vorbis
 GST_PLUGINS_SET+=	x11
+GST_PLUGINS_SET+=	xi
 GST_PLUGINS_SET+=	xshm
 GST_PLUGINS_SET+=	xvideo
-GST_PLUGINS_SET+=	examples
-GST_PLUGINS_SET+=	tests
-GST_PLUGINS_SET+=	tools
-GST_PLUGINS_SET+=	introspection
-GST_PLUGINS_SET+=	nls
-GST_PLUGINS_SET+=	orc
-GST_PLUGINS_SET+=	qt5
-GST_PLUGINS_SET+=	doc
 
 .for i in ${GST_PLUGINS_SET}
 .  if !empty(GST_PLUGINS:M${i})
