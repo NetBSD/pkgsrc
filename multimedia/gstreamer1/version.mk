@@ -1,10 +1,10 @@
-# $NetBSD: version.mk,v 1.10 2024/02/20 20:40:07 wiz Exp $
+# $NetBSD: version.mk,v 1.11 2024/03/05 14:45:49 wiz Exp $
 
-GST_VERSION=	1.22.10
+GST_VERSION=	1.24.0
 # if ${PATCH} is < 10
-#SHLIBVER=	${GST_VERSION:S/1.//:S/./0/}
+SHLIBVER=	${GST_VERSION:S/1.//:S/./0/}
 #else
-SHLIBVER=	${GST_VERSION:S/1.//:S/.//}
+#SHLIBVER=	${GST_VERSION:S/1.//:S/.//}
 PLIST_SUBST+=	SHLIBVER=${SHLIBVER}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org

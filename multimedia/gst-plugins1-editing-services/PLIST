@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/07/24 19:45:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/03/05 14:45:48 wiz Exp $
 bin/ges-launch-1.0
 include/gstreamer-1.0/ges/ges-asset.h
 include/gstreamer-1.0/ges/ges-audio-source.h
@@ -14,12 +14,14 @@ include/gstreamer-1.0/ges/ges-clip-asset.h
 include/gstreamer-1.0/ges/ges-clip.h
 include/gstreamer-1.0/ges/ges-command-line-formatter.h
 include/gstreamer-1.0/ges/ges-container.h
+include/gstreamer-1.0/ges/ges-discoverer-manager.h
 include/gstreamer-1.0/ges/ges-effect-asset.h
 include/gstreamer-1.0/ges/ges-effect-clip.h
 include/gstreamer-1.0/ges/ges-effect.h
 include/gstreamer-1.0/ges/ges-enums.h
 include/gstreamer-1.0/ges/ges-extractable.h
 include/gstreamer-1.0/ges/ges-formatter.h
+include/gstreamer-1.0/ges/ges-frame-composition-meta.h
 include/gstreamer-1.0/ges/ges-gerror.h
 include/gstreamer-1.0/ges/ges-group.h
 include/gstreamer-1.0/ges/ges-image-source.h
