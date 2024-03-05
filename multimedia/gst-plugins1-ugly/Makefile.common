@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2023/03/09 08:25:41 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.41 2024/03/05 14:45:48 wiz Exp $
 # used by audio/gst-plugins1-a52/Makefile
 # used by audio/gst-plugins1-sid/Makefile
 # used by multimedia/gst-plugins1-dvdread/Makefile
@@ -23,25 +23,25 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-# grep '^option' meson_options.txt | grep feature | \
-# sed -e "s/',.*//g" -e "s/option('//g" | \
-# xargs printf 'GST_PLUGINS_SET+=\t%s\n'
-GST_PLUGINS_SET+=	x264_libraries
-GST_PLUGINS_SET+=	asfdemux
-GST_PLUGINS_SET+=	dvdlpcmdec
-GST_PLUGINS_SET+=	dvdsub
-GST_PLUGINS_SET+=	realmedia
-GST_PLUGINS_SET+=	a52dec
-GST_PLUGINS_SET+=	amrnb
-GST_PLUGINS_SET+=	amrwbdec
-GST_PLUGINS_SET+=	cdio
-GST_PLUGINS_SET+=	dvdread
-GST_PLUGINS_SET+=	mpeg2dec
-GST_PLUGINS_SET+=	sidplay
-GST_PLUGINS_SET+=	x264
-GST_PLUGINS_SET+=	nls
-GST_PLUGINS_SET+=	orc
-GST_PLUGINS_SET+=	tests
+# grep '^option' meson_options.txt | grep feature | sed -e "s/',.*//g" -e "s/option('//g" | sort | xargs printf 'GST_PLUGINS_SET+=\t%s\n'
+GST_PLUGINS_SET+=       a52dec
+GST_PLUGINS_SET+=       asfdemux
+GST_PLUGINS_SET+=       cdio
+GST_PLUGINS_SET+=       doc
+GST_PLUGINS_SET+=       dvdlpcmdec
+GST_PLUGINS_SET+=       dvdread
+GST_PLUGINS_SET+=       dvdsub
+GST_PLUGINS_SET+=       glib-asserts
+GST_PLUGINS_SET+=       glib-checks
+GST_PLUGINS_SET+=       gobject-cast-checks
+GST_PLUGINS_SET+=       gpl
+GST_PLUGINS_SET+=       mpeg2dec
+GST_PLUGINS_SET+=       nls
+GST_PLUGINS_SET+=       orc
+GST_PLUGINS_SET+=       realmedia
+GST_PLUGINS_SET+=       sidplay
+GST_PLUGINS_SET+=       tests
+GST_PLUGINS_SET+=       x264
 
 .for i in ${GST_PLUGINS_SET}
 .  if !empty(GST_PLUGINS:M${i})
