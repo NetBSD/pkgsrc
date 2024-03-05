@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1726 2024/03/05 19:44:27 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1727 2024/03/05 19:45:22 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/go121 to 1.21.8 [bsiegert 2024-03-05]
 	Updated lang/go122 to 1.22.1 [bsiegert 2024-03-05]
 	Updated devel/bacon to 2.15.0 [pin 2024-03-05]
+	Updated devel/libbsd to 0.12.1 [vins 2024-03-05]
