@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/09/27 09:37:32 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/03/05 17:07:59 adam Exp $
 
-BLAKE2s (time_machine-2.13.0.tar.gz) = a2e4555d9f5d78be39a3f86aaa8f9ee1c9117e029befa00ca34d71d603cdb3f8
-SHA512 (time_machine-2.13.0.tar.gz) = 803e941962f95e757f369d445c6c413bd86a1fda5504f76da799bd5ed08378a4736a15737bc4cdc5a5835e1639a80c9c8ed0d47888b7257e52c17917a5a10e72
-Size (time_machine-2.13.0.tar.gz) = 24606 bytes
+BLAKE2s (time-machine-2.14.0.tar.gz) = 1188fb6f711e93efde15c7c3d95d4979eb2c45ef77fd8a993bb8ffa53f94c80b
+SHA512 (time-machine-2.14.0.tar.gz) = 1e7bbd02fcfd384861f00a7c394d051d2417779974d5c53f35a050d8d3e4436cba2f70d6590712db838bb1770a689712d1d5d487ee0208522ff479c67302660e
+Size (time-machine-2.14.0.tar.gz) = 24869 bytes
