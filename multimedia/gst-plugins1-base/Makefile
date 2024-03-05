@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/11/16 09:22:50 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/03/05 15:54:24 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
@@ -15,6 +15,8 @@ GST_PLUGINS+=	audiorate
 GST_PLUGINS+=	audioresample
 GST_PLUGINS+=	audiotestsrc
 GST_PLUGINS+=	compositor
+GST_PLUGINS+=	debugutils
+GST_PLUGINS+=	dsd
 GST_PLUGINS+=	encoding
 GST_PLUGINS+=	gio
 GST_PLUGINS+=	gio-typefinder
