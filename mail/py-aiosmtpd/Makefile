@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/07/30 15:32:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/05 17:03:45 adam Exp $
 
-DISTNAME=	aiosmtpd-1.4.4.post2
+DISTNAME=	aiosmtpd-1.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosmtpd/}
@@ -10,14 +10,14 @@ HOMEPAGE=	https://github.com/aio-libs/aiosmtpd
 COMMENT=	Asyncio based SMTP server
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 pre-configure:
 	${CHMOD} -R go-w ${WRKSRC}
@@ -26,5 +26,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} aiosmtpd aiosmtpd-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
