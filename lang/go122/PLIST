@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/09 20:34:10 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/05 19:37:52 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -2070,6 +2070,7 @@ go122/src/cmd/go/testdata/script/build_issue48319.txt
 go122/src/cmd/go/testdata/script/build_issue59571.txt
 go122/src/cmd/go/testdata/script/build_issue62156.txt
 go122/src/cmd/go/testdata/script/build_issue6480.txt
+go122/src/cmd/go/testdata/script/build_issue_65528.txt
 go122/src/cmd/go/testdata/script/build_link_x_import_path_escape.txt
 go122/src/cmd/go/testdata/script/build_multi_main.txt
 go122/src/cmd/go/testdata/script/build_n_cgo.txt
@@ -2600,6 +2601,7 @@ go122/src/cmd/go/testdata/script/mod_vendor_trimpath.txt
 go122/src/cmd/go/testdata/script/mod_vendor_unused.txt
 go122/src/cmd/go/testdata/script/mod_vendor_unused_only.txt
 go122/src/cmd/go/testdata/script/mod_verify.txt
+go122/src/cmd/go/testdata/script/mod_verify_work.txt
 go122/src/cmd/go/testdata/script/mod_versions.txt
 go122/src/cmd/go/testdata/script/mod_why.txt
 go122/src/cmd/go/testdata/script/modfile_flag.txt
