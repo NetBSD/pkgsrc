@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/07 14:44:16 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/05 19:27:58 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -2604,6 +2604,7 @@ go121/src/cmd/go/testdata/script/mod_vendor_trimpath.txt
 go121/src/cmd/go/testdata/script/mod_vendor_unused.txt
 go121/src/cmd/go/testdata/script/mod_vendor_unused_only.txt
 go121/src/cmd/go/testdata/script/mod_verify.txt
+go121/src/cmd/go/testdata/script/mod_verify_work.txt
 go121/src/cmd/go/testdata/script/mod_versions.txt
 go121/src/cmd/go/testdata/script/mod_why.txt
 go121/src/cmd/go/testdata/script/modfile_flag.txt
