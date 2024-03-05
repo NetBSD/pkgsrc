@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/10/24 22:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/03/05 16:25:00 nikita Exp $
 
-DISTNAME=	zola-0.17.2
-PKGREVISION=	2
+DISTNAME=	zola-0.18.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getzola/}
 GITHUB_PROJECT=	zola
