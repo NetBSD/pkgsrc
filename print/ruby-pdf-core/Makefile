@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/01/13 14:57:32 taca Exp $
+# $NetBSD: Makefile,v 1.11 2024/03/05 13:28:43 taca Exp $
 
-DISTNAME=	pdf-core-0.9.0
+DISTNAME=	pdf-core-0.10.0
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
