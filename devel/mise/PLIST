@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/02 19:22:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/05 06:04:18 schmonz Exp $
 bin/mise
+man/man1/mise.1
