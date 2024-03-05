@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/07 21:08:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/03/05 17:03:45 adam Exp $
 bin/aiosmtpd-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/aiosmtpd/__init__.py
 ${PYSITELIB}/aiosmtpd/__init__.pyc
 ${PYSITELIB}/aiosmtpd/__init__.pyo
@@ -19,7 +19,6 @@ ${PYSITELIB}/aiosmtpd/controller.pyo
 ${PYSITELIB}/aiosmtpd/docs/.gitignore
 ${PYSITELIB}/aiosmtpd/docs/Makefile
 ${PYSITELIB}/aiosmtpd/docs/NEWS.rst
-${PYSITELIB}/aiosmtpd/docs/RTD-requirements.txt
 ${PYSITELIB}/aiosmtpd/docs/__init__.py
 ${PYSITELIB}/aiosmtpd/docs/__init__.pyc
 ${PYSITELIB}/aiosmtpd/docs/__init__.pyo
@@ -41,6 +40,7 @@ ${PYSITELIB}/aiosmtpd/docs/lmtp.rst
 ${PYSITELIB}/aiosmtpd/docs/manpage.rst
 ${PYSITELIB}/aiosmtpd/docs/migrating.rst
 ${PYSITELIB}/aiosmtpd/docs/proxyprotocol.rst
+${PYSITELIB}/aiosmtpd/docs/requirements.txt
 ${PYSITELIB}/aiosmtpd/docs/smtp.rst
 ${PYSITELIB}/aiosmtpd/docs/testing.rst
 ${PYSITELIB}/aiosmtpd/handlers.py
@@ -114,6 +114,9 @@ ${PYSITELIB}/aiosmtpd/tests/test_smtp.pyo
 ${PYSITELIB}/aiosmtpd/tests/test_smtps.py
 ${PYSITELIB}/aiosmtpd/tests/test_smtps.pyc
 ${PYSITELIB}/aiosmtpd/tests/test_smtps.pyo
+${PYSITELIB}/aiosmtpd/tests/test_smtpsmuggling.py
+${PYSITELIB}/aiosmtpd/tests/test_smtpsmuggling.pyc
+${PYSITELIB}/aiosmtpd/tests/test_smtpsmuggling.pyo
 ${PYSITELIB}/aiosmtpd/tests/test_starttls.py
 ${PYSITELIB}/aiosmtpd/tests/test_starttls.pyc
 ${PYSITELIB}/aiosmtpd/tests/test_starttls.pyo
