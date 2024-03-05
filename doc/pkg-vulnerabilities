@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.145 2024/03/04 13:56:42 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.146 2024/03/05 01:02:00 joerg Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14581,7 +14581,7 @@ py{27,34,35,36}-django>=1.11<1.11.11	denial-of-service	https://nvd.nist.gov/vuln
 py{27,34,35,36}-django>=2.0<2.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-7536
 py{27,34,35,36}-django>=1.8<1.8.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-7537
 py{27,34,35,36}-django>=1.11<1.11.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-7537
-py{27,34,35,36}-django>=2.0<2.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-7537
+py{34,35,36}-django>=2.0<2.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-7537
 graphite2<1.3.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-7999
 podofo<0.9.6	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-8000
 podofo<0.9.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-8001
@@ -15638,7 +15638,7 @@ php>=7.2<7.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14884
 mantis>=2.1.0<2.15.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-13055
 mantis>=2.0<2.15.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-14504
 py{27,34,35,36,37}-django>=1.11.0<1.11.15	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2018-14574
-py{27,34,35,36,37}-django>=2.0<2.0.8		open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2018-14574
+py{34,35,36,37}-django>=2.0<2.0.8		open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2018-14574
 libreoffice-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14939
 php{56,70,71,72}-drupal>=7<7.56		multiple-vulnerabilities	https://www.drupal.org/SA-CORE-2017-003
 php{56,70,71,72}-drupal>=8<8.3.4	multiple-vulnerabilities	https://www.drupal.org/SA-CORE-2017-003
@@ -15977,7 +15977,7 @@ tcpreplay<4.3.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-175
 exiv2<0.27		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-17581
 libiberty-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-17794
 zziplib-[0-9]*		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2018-17828
-py{27,34,35,36,37,38}-django>=2.1<2.1.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-16984
+py{34,35,36,37,38}-django>=2.1<2.1.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-16984
 ImageMagick<7.0.7.28	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-17965
 ImageMagick<7.0.7.28	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-17966
 ImageMagick<7.0.7.28	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-17967
@@ -16558,8 +16558,8 @@ ansible<2.6.11		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-201
 pspp-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-20230
 poppler<0.73.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-20662
 py{27,34,35,36,37,38}-django<1.11.18		frame-content-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2019-3498
-py{27,34,35,36,37,38}-django>=2.0<2.0.10	frame-content-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2019-3498
-py{27,34,35,36,37,38}-django>=2.1<2.1.5		frame-content-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2019-3498
+py{34,35,36,37,38}-django>=2.0<2.0.10	frame-content-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2019-3498
+py{34,35,36,37,38}-django>=2.1<2.1.5		frame-content-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2019-3498
 py27-django-1.4.[0-9]*			eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 py{27,34,35,36}-django-1.8.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 uriparser<0.9.1		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-20721
@@ -16788,8 +16788,8 @@ tiff<4.0.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-7663
 gsoap>=2.7<2.8.75	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-7659
 webkit-gtk<2.22.6	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2019-0001.html
 py{27,34,35,36,37,38}-django<1.11.19		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6975
-py{27,34,35,36,37,38}-django>=2.0<2.0.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6975
-py{27,34,35,36,37,38}-django>=2.1<2.1.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6975
+py{34,35,36,37,38}-django>=2.0<2.0.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6975
+py{34,35,36,37,38}-django>=2.1<2.1.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6975
 thunderbird-enigmail<2.0.6	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2018-15586
 seamonkey-enigmail<2.0.6	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2018-15586
 evolution<3.31.2		spoofing	https://nvd.nist.gov/vuln/detail/CVE-2018-15587
@@ -17442,8 +17442,8 @@ php73-exif<7.3.6	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-11040
 R-RSQLite-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-8457
 xpdf<4.2		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-12515
 py{27,34,35,36,37,38}-django<1.11.21	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12308
-py{27,34,35,36,37,38}-django>=2.0<2.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12308
-py{27,34,35,36,37,38}-django>=2.0<2.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-11358
+py{34,35,36,37,38}-django>=2.0<2.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12308
+py{34,35,36,37,38}-django>=2.0<2.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-11358
 ffmpeg2<2.8.16	uninitialized-variables		https://nvd.nist.gov/vuln/detail/CVE-2019-12730
 ffmpeg3<3.4.7	uninitialized-variables		https://nvd.nist.gov/vuln/detail/CVE-2019-12730
 ffmpeg4<4.1.4	uninitialized-variables		https://nvd.nist.gov/vuln/detail/CVE-2019-12730
@@ -17581,8 +17581,8 @@ exiv2<0.27.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-13108
 dosbox<0.74.3	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-7165
 dosbox<0.74.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-12594
 py{27,34,35,36,37,38}-django>=1.11<1.11.22	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-12781
-py{27,34,35,36,37,38}-django>=2.1<2.1.10	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-12781
-py{27,34,35,36,37,38}-django>=2.2<2.2.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-12781
+py{34,35,36,37,38}-django>=2.1<2.1.10	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-12781
+py{34,35,36,37,38}-django>=2.2<2.2.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-12781
 squirrelmail<1.4.23pre14832	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12970
 libaudiofile-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-13147
 ImageMagick<7.0.8.50	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-13134
@@ -17815,8 +17815,8 @@ milkytracker<1.03.00	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-1
 milkytracker<1.03.00	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-14497
 dnsmasq<2.76	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-14513
 py{27,34,35,36,37,38}-django>=1.11<1.11.23	multiple-vulnerabilities	https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
-py{27,34,35,36,37,38}-django>=2.1<2.1.11	multiple-vulnerabilities	https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
-py{27,34,35,36,37,38}-django>=2.2<2.2.4	multiple-vulnerabilities	https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
+py{34,35,36,37,38}-django>=2.1<2.1.11	multiple-vulnerabilities	https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
+py{34,35,36,37,38}-django>=2.2<2.2.4	multiple-vulnerabilities	https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
 gnucobol-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-14528
 sleuthkit-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-14531
 sleuthkit-[0-9]*	off-by-one	https://nvd.nist.gov/vuln/detail/CVE-2019-14532
@@ -18497,8 +18497,8 @@ libvpx<1.8.0		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-9325
 libvpx<1.8.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9371
 libvpx<1.8.0		information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2019-9433
 libpurple-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2012-1257
-py{27,34,35,36,37,38}-django>=2.1<2.1.15	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2019-19118
-py{27,34,35,36,37,38}-django>=2.2<2.2.8		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2019-19118
+py{34,35,36,37,38}-django>=2.1<2.1.15	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2019-19118
+py{34,35,36,37,38}-django>=2.2<2.2.8		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2019-19118
 clamav<0.102.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15961
 firefox<71.0		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2019-36/
 cliqz<1.32.0		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2019-36/
@@ -18610,8 +18610,8 @@ libspiro-[0-9]*		stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-1984
 mediawiki-[0-9]*	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2019-19709
 nethack-lib<3.6.4	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2019-19905
 py{27,34,35,36,37,38}-django>=1.11<1.11.27	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2019-19844
-py{27,34,35,36,37,38}-django>=2.1<2.1.15	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2019-19844
-py{27,34,35,36,37,38}-django>=2.2<2.2.9	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2019-19844
+py{34,35,36,37,38}-django>=2.1<2.1.15	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2019-19844
+py{34,35,36,37,38}-django>=2.2<2.2.9	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2019-19844
 ruby{22,24,25,26}-rack16<1.6.12		session-hijack		https://nvd.nist.gov/vuln/detail/CVE-2019-16782
 ruby{22,24,25,26}-rack<2.0.8		session-hijack		https://nvd.nist.gov/vuln/detail/CVE-2019-16782
 sqlite3<3.31.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-19880
@@ -18905,7 +18905,7 @@ librsvg<2.40.21		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2019-2
 librsvg>=2.41<2.46.2	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2019-20446
 qemu<5.0.0	heap-overflow				https://nvd.nist.gov/vuln/detail/CVE-2020-1711
 py{27,34,35,36,37,38}-django>=1.11<1.11.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-7471
-py{27,34,35,36,37,38}-django>=2.2<2.2.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-7471
+py{34,35,36,37,38}-django>=2.2<2.2.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-7471
 py{27,36,37,38}-waitress>=1.4.2<1.4.3	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-5236
 pppd>=2.4.2				buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-8597
 qt5-qtbase<5.14.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-0569
@@ -19071,8 +19071,8 @@ ruby{22,24,25,26}-puma<4.3.3	http-response-splitting		https://nvd.nist.gov/vuln/
 webkit-gtk<2.28.0		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-10018
 ansible-[0-9]*			arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-1734
 py{27,34,35,36,37,38}-django>=1.11<1.11.29	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-9402
-py{27,34,35,36,37,38}-django>=2.2<2.2.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-9402
-py{27,34,35,36,37,38}-django>=3.0<3.0.4		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-9402
+py{34,35,36,37,38}-django>=2.2<2.2.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-9402
+py{34,35,36,37,38}-django>=3.0<3.0.4		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-9402
 qemu<4.2.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2019-20382
 py{27,34,35,36,37,38}-urllib3>=1.25.2<1.25.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-7212
 sleuthkit-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-10232
@@ -19470,10 +19470,10 @@ qemu<4.2.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-13
 qemu<5.1.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-13754
 znc>=1.8.0<1.8.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-13775
 ruby{22,24,25,26,27}-websocket-extensions<0.1.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-7663
-py{27,34,35,36,37,38}-django>=2.2<2.2.13	data-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13254
-py{27,34,35,36,37,38}-django>=3.0<3.0.7	data-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13254
-py{27,34,35,36,37,38}-django>=2.2<2.2.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-13596
-py{27,34,35,36,37,38}-django>=3.0<3.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-13596
+py{34,35,36,37,38}-django>=2.2<2.2.13	data-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13254
+py{34,35,36,37,38}-django>=3.0<3.0.7	data-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13254
+py{34,35,36,37,38}-django>=2.2<2.2.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-13596
+py{34,35,36,37,38}-django>=3.0<3.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-13596
 nghttp2<1.41.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-11080
 grafana>=3.0.1<7.0.2	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2020-13379
 libjpeg-turbo<2.0.5	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-13790
@@ -20617,8 +20617,8 @@ openjpeg<2.4.0		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-27814
 php{56,72,73,74}-nextcloud<20.0.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-8293
 php{56,72,73,74}-nextcloud<20.0.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-8294
 php{56,72,73,74}-nextcloud<20.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-8295
-py{27,36,37,38,39}-django>=2.2<2.2.18	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2021-3281
-py{27,36,37,38,39}-django>=3.1<3.1.6	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2021-3281
+py{36,37,38,39}-django>=2.2<2.2.18	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2021-3281
+py{36,37,38,39}-django>=3.1<3.1.6	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2021-3281
 py{27,36,37,38,39}-jinja2<2.11.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-28493
 qemu<5.0.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-17380
 qemu<5.1.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-29443
@@ -22466,9 +22466,9 @@ vim<8.2.3741	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-4069
 grafana<7.5.12	arbitrary-file-reading	https://nvd.nist.gov/vuln/detail/CVE-2021-43815
 grafana>=8.3<8.3.2	arbitrary-file-reading	https://nvd.nist.gov/vuln/detail/CVE-2021-43815
 nss<3.73	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2021-43527
-py{27,36,37,38,39,310}-django>=2.2<2.2.25	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
-py{27,36,37,38,39,310}-django>=3.1<3.1.14	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
-py{27,36,37,38,39,310}-django>=3.2<3.2.10	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
+py{36,37,38,39,310}-django>=2.2<2.2.25	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
+py{36,37,38,39,310}-django>=3.1<3.1.14	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
+py{36,37,38,39,310}-django>=3.2<3.2.10	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-44420
 py{27,36,37,38,39,310}-lxml<4.6.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43818
 webkit-gtk<2.32.4	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2021-0005.html
 webkit-gtk<2.34.1	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2021-0006.html
@@ -22609,15 +22609,15 @@ gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46041
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46040
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46039
 kubectl<1.26.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-25743
-py{27,36,37,38,39,310}-django>=2.2<2.2.26	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
-py{27,36,37,38,39,310}-django>=3.2<3.2.11	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
-py{27,36,37,38,39,310}-django>=4<4.0.1	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
-py{27,36,37,38,39,310}-django>=2.2<2.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
-py{27,36,37,38,39,310}-django>=3.2<3.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
-py{27,36,37,38,39,310}-django>=4<2.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
-py{27,36,37,38,39,310}-django>=2.2<2.2.26	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
-py{27,36,37,38,39,310}-django>=3.2<3.2.11	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
-py{27,36,37,38,39,310}-django>=4<4.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
+py{36,37,38,39,310}-django>=2.2<2.2.26	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
+py{36,37,38,39,310}-django>=3.2<3.2.11	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
+py{36,37,38,39,310}-django>=4<4.0.1	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
+py{36,37,38,39,310}-django>=2.2<2.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
+py{36,37,38,39,310}-django>=3.2<3.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
+py{36,37,38,39,310}-django>=4<2.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
+py{36,37,38,39,310}-django>=2.2<2.2.26	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
+py{36,37,38,39,310}-django>=3.2<3.2.11	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
+py{36,37,38,39,310}-django>=4<4.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
 tiff<4.3.0nb1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-22844
 expat<2.4.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-22827
 expat<2.4.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-22826
@@ -22790,12 +22790,12 @@ minetest<5.4.0	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-24301
 minetest<5.4.0	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-24300
 jhead-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-26208
 vim<8.2.4281	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-0443
-py{27,36,37,38,39,310}-django>=2.2<2.2.27	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
-py{27,36,37,38,39,310}-django>=3.2<3.2.12	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
-py{27,36,37,38,39,310}-django>=4.0<4.0.2	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
-py{27,36,37,38,39,310}-django>=2.2<2.2.27	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
-py{27,36,37,38,39,310}-django>=3.2<3.2.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
-py{27,36,37,38,39,310}-django>=4.0<4.0.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
+py{36,37,38,39,310}-django>=2.2<2.2.27	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
+py{36,37,38,39,310}-django>=3.2<3.2.12	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
+py{36,37,38,39,310}-django>=4.0<4.0.2	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-23833
+py{36,37,38,39,310}-django>=2.2<2.2.27	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
+py{36,37,38,39,310}-django>=3.2<3.2.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
+py{36,37,38,39,310}-django>=4.0<4.0.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-22818
 py{27,36,37,38,39,310}-ipython>=6.0.0<7.16.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
 py{27,36,37,38,39,310}-ipython>=7.17.0<7.31.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
 py{27,36,37,38,39,310}-ipython>=8.0.0<8.0.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
@@ -23320,12 +23320,12 @@ php{56,73,74,80,81}-memcached<2.1.0	cross-site-scripting	https://nvd.nist.gov/vu
 grafana<8.4.6	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-24812
 grafana<7.3.5	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-26148
 libarchive<3.6.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-26280
-py{27,36,37,38,39,310}-django>=2.2<2.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
-py{27,36,37,38,39,310}-django>=3.2<3.2.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
-py{27,36,37,38,39,310}-django>=4.0<4.0.4	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
-py{27,36,37,38,39,310}-django>=2.2<2.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
-py{27,36,37,38,39,310}-django>=3.2<3.2.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
-py{27,36,37,38,39,310}-django>=4.0<4.0.4	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
+py{36,37,38,39,310}-django>=2.2<2.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
+py{36,37,38,39,310}-django>=3.2<3.2.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
+py{36,37,38,39,310}-django>=4.0<4.0.4	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28347
+py{36,37,38,39,310}-django>=2.2<2.2.28	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
+py{36,37,38,39,310}-django>=3.2<3.2.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
+py{36,37,38,39,310}-django>=4.0<4.0.4	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-28346
 ruby{25,26,27,30,31}-yajl<1.4.2	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-24795
 bind>=9.11<9.11.37	dns-cache-poisoning	https://nvd.nist.gov/vuln/detail/CVE-2021-25220
 bind>=9.16<9.16.27	dns-cache-poisoning	https://nvd.nist.gov/vuln/detail/CVE-2021-25220
@@ -23855,8 +23855,8 @@ grafana>=9.0.0<9.0.3	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-
 grafana<8.5.9	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-31107
 gnutls<3.7.7	double-free	https://nvd.nist.gov/vuln/detail/CVE-2022-2509
 gsasl<2.0.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-2469
-py{27,36,37,38,39,310}-django>=3.2<3.2.14	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-34265
-py{27,36,37,38,39,310}-django>=4.0<4.0.6	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-34265
+py{36,37,38,39,310}-django>=3.2<3.2.14	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-34265
+py{36,37,38,39,310}-django>=4.0<4.0.6	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-34265
 php{56,74,80,81}-nextcloud<23.0.5	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-31014
 rt4-[0-9]*	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2022-25803
 rt4<4.4.6	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-25802
@@ -23901,8 +23901,8 @@ frr-[0-9]*	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-37035
 milkytracker-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-34927
 sqlite3<3.39.2	array-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35737
 moodle<3.8.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-1754
-py{27,36,37,38,39,310}-django>=3.2<3.2.15	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-36359
-py{27,36,37,38,39,310}-django>=4.0<4.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-36359
+py{36,37,38,39,310}-django>=3.2<3.2.15	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-36359
+py{36,37,38,39,310}-django>=4.0<4.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-36359
 py{27,36,37,38,39,310}-djangocms-text-ckeditor-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-31175
 php{56,74,80,81}-nextcloud<22.2.7	excessive-logging	https://nvd.nist.gov/vuln/detail/CVE-2022-31120
 php{56,74,80,81}-nextcloud>=23.0<23.0.4	excessive-logging	https://nvd.nist.gov/vuln/detail/CVE-2022-31120
@@ -24558,9 +24558,9 @@ go118<1.18.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41717
 go119<1.19.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41717
 go119<1.19.1	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-32190
 php{56,73,74,80,81}-piwigo-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-37183
-py{27,36,37,38,39,310,311}-django>=3.2<3.2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
-py{27,36,37,38,39,310,311}-django>=4.0<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
-py{27,36,37,38,39,310,311}-django>=4.1<4.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
+py{36,37,38,39,310,311}-django>=3.2<3.2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
+py{36,37,38,39,310,311}-django>=4.0<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
+py{36,37,38,39,310,311}-django>=4.1<4.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41323
 py{27,36,37,38,39,310,311}-django-photologue<3.16	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-4526
 gpac-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-0866
 thunderbird<91.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-43529
@@ -25139,9 +25139,9 @@ perl-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 p5-GitLab-API-v4-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31485
 # HTTP::Tiny up to and including 0.082, part of perl
 perl-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31486
-py{27,36,37,38,39,310,311}-django>=3.2<3.2.19	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
-py{27,36,37,38,39,310,311}-django>=4.1<4.1.9	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
-py{27,36,37,38,39,310,311}-django>=4.2<4.2.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
+py{36,37,38,39,310,311}-django>=3.2<3.2.19	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
+py{36,37,38,39,310,311}-django>=4.1<4.1.9	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
+py{36,37,38,39,310,311}-django>=4.2<4.2.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 libssh<0.105	debial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1667
 libssh<0.105	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2023-2283
 curl>=7.81.0<8.1.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-28319
@@ -25177,9 +25177,9 @@ ruby31-base<3.1.4nb1	denial-of-service	https://cve.report/CVE-2023-36617
 ruby32-base<3.2.2nb2	denial-of-service	https://cve.report/CVE-2023-36617
 python36-[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 python37-[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-py{27,37,38,39,310,311}-django>=3.2<3.2.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
-py{27,37,38,39,310,311}-django>=4.1<4.1.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
-py{27,37,38,39,310,311}-django>=4.2<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
+py{37,38,39,310,311}-django>=3.2<3.2.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
+py{37,38,39,310,311}-django>=4.1<4.1.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
+py{37,38,39,310,311}-django>=4.2<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-36053
 py{27,34,35,36,37,38,39,310,311}-django<3.2	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 ruby{26,27,30,31}-sanitize<6.0.2	cross-site-scripting	https://cve.report/CVE-2023-36823
 acmesh<3.0.6	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-38198
@@ -25206,9 +25206,9 @@ webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-202
 rust<1.71.1	permission-problem	https://nvd.nist.gov/vuln/detail/CVE-2023-38497
 py{27,37,38,39,310,311}-borgbackup<1.2.5	archive-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2023-36811
 ruby{30,31,32}-rails<6.1	eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-py{27,37,38,39,310,311}-django>=3.2<3.2.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
-py{27,37,38,39,310,311}-django>=4.1<4.1.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
-py{27,37,38,39,310,311}-django>=4.2<4.2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
+py{37,38,39,310,311}-django>=3.2<3.2.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
+py{37,38,39,310,311}-django>=4.1<4.1.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
+py{37,38,39,310,311}-django>=4.2<4.2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
 curl>=7.84.0<8.3.0	allocation-of-resources-without-limits-or-throttling	https://nvd.nist.gov/vuln/detail/CVE-2023-38039
 webkit-gtk<2.40.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-28198
 webkit-gtk<2.40.1	content-security-policiy-escape	https://nvd.nist.gov/vuln/detail/CVE-2023-32370
@@ -25380,9 +25380,9 @@ libX11<1.8.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43786
 libX11<1.8.7	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43787
 libXpm<3.5.17		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-43788
 libXpm<3.5.17		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-43789
-py{27,37,38,39,310,311}-django>=3.2<3.2.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
-py{27,37,38,39,310,311}-django>=4.1<4.1.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
-py{27,37,38,39,310,311}-django>=4.2<4.2.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
+py{37,38,39,310,311}-django>=3.2<3.2.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
+py{37,38,39,310,311}-django>=4.1<4.1.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
+py{37,38,39,310,311}-django>=4.2<4.2.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43665
 grub2-[0-9]*	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2023-4692
 grub2-[0-9]*	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2023-4693
 croc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-43621
@@ -25870,9 +25870,9 @@ graphviz<10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-46045
 expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52425
 expat<2.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52426
 webkit-gtk<2.42.5	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-23222
-py{27,37,38,39,310,311,312}-django>=3.2<3.2.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
-py{27,37,38,39,310,311,312}-django>=4.1<4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
-py{27,37,38,39,310,311,312}-django>=4.2<4.2.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{37,38,39,310,311,312}-django>=3.2<3.2.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{37,38,39,310,311,312}-django>=4.1<4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
+py{37,38,39,310,311,312}-django>=4.2<4.2.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24680
 libuv>=1.24.0<1.48	address-check-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-24806
 postgresql-server>=12<12.18	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
 postgresql-server>=13<13.14	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-0985
@@ -25922,6 +25922,6 @@ yasm-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-25760
 fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25081
 fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25082
 opendmarc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-25768
-py{27,37,38,39,310,311,312}-django>=3<3.2.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
-py{27,37,38,39,310,311,312}-django>=4<4.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
-py{27,37,38,39,310,311,312}-django>=5<5.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
+py{37,38,39,310,311,312}-django>=3<3.2.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
+py{37,38,39,310,311,312}-django>=4<4.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
+py{37,38,39,310,311,312}-django>=5<5.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
