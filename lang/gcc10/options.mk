@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2023/04/06 11:40:15 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2024/03/05 15:26:41 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -65,7 +65,7 @@ DELETE_INSTALLED_LIBGCC=	yes
 .    endif
 .  endfor
 
-.  if ${DELETE_INSTALLED_LIBGCC:Uno}
+.  if ${DELETE_INSTALLED_LIBGCC:Uno} == "yes"
 post-install:	delete-installed-libgcc
 
 .PHONY: delete-installed-libgcc
