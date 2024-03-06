@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2017/11/25 13:27:10 wen Exp $
+# $NetBSD: options.mk,v 1.7 2024/03/06 23:09:32 jym Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moodle
 
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS=		mysql
 ### Use mysql or postgresql backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.0.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=8.0:../../databases/php-mysqli
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=7.0.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=8.0:../../databases/php-pgsql
 .endif
