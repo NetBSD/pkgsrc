@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1733 2024/03/06 18:59:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1734 2024/03/06 19:12:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2985,3 +2985,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-pandas to 2.2.1 [adam 2024-03-06]
 	Updated misc/py-trove-classifiers to 2024.3.3 [adam 2024-03-06]
 	Updated lang/py-test-mypy-testing to 0.1.3 [adam 2024-03-06]
+	Updated sysutils/salt to 3006.7 [adam 2024-03-06]
+	Updated sysutils/salt-docs to 3006.7 [adam 2024-03-06]
