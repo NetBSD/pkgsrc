@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/25 15:38:10 kleink Exp $
+$NetBSD: distinfo,v 1.2 2024/03/06 21:29:13 wiz Exp $
 
-BLAKE2s (WTForms-SQLAlchemy-0.3.tar.gz) = d889e563975970dedd4d7800fcd837fa25ffea5c024dc3382d45efd4041216c1
-SHA512 (WTForms-SQLAlchemy-0.3.tar.gz) = 43fd109b0faf9c3d4098564f3cbaa3cbd20e7ad3c8183a60499258120bf810a31ab4e6f8e51305ded1bb60f24babb14374ecdc5a15e1b64e6cdcbce6261b9e1c
-Size (WTForms-SQLAlchemy-0.3.tar.gz) = 17246 bytes
+BLAKE2s (WTForms-SQLAlchemy-0.4.1.tar.gz) = 0974e55ebf5bd25682ef63eb3c99358c64f76dd5ee8744076bef6faa33281880
+SHA512 (WTForms-SQLAlchemy-0.4.1.tar.gz) = f0e7055ce0f5e6fc228e1979706eb8355055023b6000df49c201ef6138d1f4e779cad02a02d61137f34b2ce350ad5b8001398a8eb19108499aec337821496196
+Size (WTForms-SQLAlchemy-0.4.1.tar.gz) = 18115 bytes
