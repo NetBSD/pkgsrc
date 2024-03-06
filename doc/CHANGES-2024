@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1728 2024/03/05 19:45:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1729 2024/03/06 09:31:42 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/bacon to 2.15.0 [pin 2024-03-05]
 	Updated devel/libbsd to 0.12.1 [vins 2024-03-05]
 	Updated audio/ncspot to 1.1.0 [pin 2024-03-05]
+	Updated www/squid6 to 6.8 [sborrill 2024-03-06]
