@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2023/11/19 19:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2024/03/06 18:35:10 adam Exp $
 
-DISTNAME=	vala-0.56.14
+DISTNAME=	vala-0.56.15
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +23,7 @@ TEST_TARGET=		check
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
