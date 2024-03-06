@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1731 2024/03/06 18:14:03 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.1732 2024/03/06 18:51:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2977,3 +2977,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pyparsing to 3.1.2 [adam 2024-03-06]
 	Updated www/py-twill to 3.2.3 [adam 2024-03-06]
 	Updated www/gotosocial to 0.14.0 [nikita 2024-03-06]
+	Updated lang/vala to 0.56.15 [adam 2024-03-06]
+	Updated net/libnice to 0.1.22 [adam 2024-03-06]
+	Updated net/gst-plugins1-libnice to 0.1.22 [adam 2024-03-06]
+	Updated devel/SDL2 to 2.30.1 [adam 2024-03-06]
