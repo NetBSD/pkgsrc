@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2024/02/29 20:55:22 adam Exp $
+# $NetBSD: Makefile,v 1.706 2024/03/06 20:48:44 wiz Exp $
 
 COMMENT=	Databases
 
@@ -402,7 +402,6 @@ SUBDIR+=	py-sqlalchemy-utils
 SUBDIR+=	py-sqlite2
 SUBDIR+=	py-sqlparse
 SUBDIR+=	py-sqlrelay
-SUBDIR+=	py-sqlsoup
 SUBDIR+=	py-sybase
 SUBDIR+=	py-table
 SUBDIR+=	py-tinydb
