@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/01/10 16:50:10 nikita Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/03/06 18:13:53 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -41,12 +41,17 @@ share/examples/gotosocial/web/source/.eslintrc.js
 share/examples/gotosocial/web/source/.gitignore
 share/examples/gotosocial/web/source/.license-header.js
 share/examples/gotosocial/web/source/css/_colors.css
+share/examples/gotosocial/web/source/css/about.css
 share/examples/gotosocial/web/source/css/base.css
 share/examples/gotosocial/web/source/css/index.css
+share/examples/gotosocial/web/source/css/page.css
+share/examples/gotosocial/web/source/css/prism.css
 share/examples/gotosocial/web/source/css/profile.css
 share/examples/gotosocial/web/source/css/status.css
 share/examples/gotosocial/web/source/css/tag.css
+share/examples/gotosocial/web/source/css/thread.css
 share/examples/gotosocial/web/source/frontend/index.js
+share/examples/gotosocial/web/source/frontend/prism.js
 share/examples/gotosocial/web/source/index.js
 share/examples/gotosocial/web/source/package.json
 share/examples/gotosocial/web/source/settings/admin/accounts/detail.jsx
@@ -73,7 +78,7 @@ share/examples/gotosocial/web/source/settings/admin/emoji/remote/parse-from-toot
 share/examples/gotosocial/web/source/settings/admin/reports/detail.jsx
 share/examples/gotosocial/web/source/settings/admin/reports/index.jsx
 share/examples/gotosocial/web/source/settings/admin/reports/username.jsx
-share/examples/gotosocial/web/source/settings/admin/settings/index.jsx
+share/examples/gotosocial/web/source/settings/admin/settings/index.tsx
 share/examples/gotosocial/web/source/settings/admin/settings/rules.jsx
 share/examples/gotosocial/web/source/settings/components/authorization/index.tsx
 share/examples/gotosocial/web/source/settings/components/authorization/login.tsx
@@ -89,6 +94,7 @@ share/examples/gotosocial/web/source/settings/components/languages.jsx
 share/examples/gotosocial/web/source/settings/components/loading.jsx
 share/examples/gotosocial/web/source/settings/components/user-logout-card.jsx
 share/examples/gotosocial/web/source/settings/index.js
+share/examples/gotosocial/web/source/settings/lib/form/array.ts
 share/examples/gotosocial/web/source/settings/lib/form/bool.tsx
 share/examples/gotosocial/web/source/settings/lib/form/check-list.tsx
 share/examples/gotosocial/web/source/settings/lib/form/combo-box.tsx
@@ -122,6 +128,7 @@ share/examples/gotosocial/web/source/settings/lib/query/user/index.ts
 share/examples/gotosocial/web/source/settings/lib/types/custom-emoji.ts
 share/examples/gotosocial/web/source/settings/lib/types/domain-permission.ts
 share/examples/gotosocial/web/source/settings/lib/types/instance.ts
+share/examples/gotosocial/web/source/settings/lib/types/migration.ts
 share/examples/gotosocial/web/source/settings/lib/types/query.ts
 share/examples/gotosocial/web/source/settings/lib/types/report.ts
 share/examples/gotosocial/web/source/settings/lib/util/domain-permission.ts
@@ -129,8 +136,9 @@ share/examples/gotosocial/web/source/settings/redux/checklist.ts
 share/examples/gotosocial/web/source/settings/redux/oauth.ts
 share/examples/gotosocial/web/source/settings/redux/store.ts
 share/examples/gotosocial/web/source/settings/style.css
-share/examples/gotosocial/web/source/settings/user/profile.js
-share/examples/gotosocial/web/source/settings/user/settings.js
+share/examples/gotosocial/web/source/settings/user/migration.tsx
+share/examples/gotosocial/web/source/settings/user/profile.tsx
+share/examples/gotosocial/web/source/settings/user/settings.tsx
 share/examples/gotosocial/web/source/tsconfig.json
 share/examples/gotosocial/web/source/yarn.lock
 share/examples/gotosocial/web/template/404.tmpl
@@ -145,15 +153,24 @@ share/examples/gotosocial/web/template/email_reset.tmpl
 share/examples/gotosocial/web/template/email_test.tmpl
 share/examples/gotosocial/web/template/error.tmpl
 share/examples/gotosocial/web/template/finalize.tmpl
-share/examples/gotosocial/web/template/footer.tmpl
-share/examples/gotosocial/web/template/frontend.tmpl
-share/examples/gotosocial/web/template/header.tmpl
 share/examples/gotosocial/web/template/index.tmpl
+share/examples/gotosocial/web/template/index_apps.tmpl
+share/examples/gotosocial/web/template/index_what_is_this.tmpl
 share/examples/gotosocial/web/template/oob.tmpl
+share/examples/gotosocial/web/template/page.tmpl
+share/examples/gotosocial/web/template/page_footer.tmpl
+share/examples/gotosocial/web/template/page_header.tmpl
+share/examples/gotosocial/web/template/page_ogmeta.tmpl
+share/examples/gotosocial/web/template/page_stylesheets.tmpl
 share/examples/gotosocial/web/template/profile.tmpl
+share/examples/gotosocial/web/template/profile_fields.tmpl
+share/examples/gotosocial/web/template/settings.tmpl
 share/examples/gotosocial/web/template/sign-in.tmpl
 share/examples/gotosocial/web/template/status.tmpl
 share/examples/gotosocial/web/template/status_attachments.tmpl
+share/examples/gotosocial/web/template/status_attributes.tmpl
+share/examples/gotosocial/web/template/status_header.tmpl
+share/examples/gotosocial/web/template/status_info.tmpl
 share/examples/gotosocial/web/template/status_poll.tmpl
 share/examples/gotosocial/web/template/tag.tmpl
 share/examples/gotosocial/web/template/thread.tmpl
