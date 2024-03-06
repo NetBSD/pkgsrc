@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/14 18:42:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/03/06 20:27:46 wiz Exp $
 bin/alembic-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/alembic/__init__.py
 ${PYSITELIB}/alembic/__init__.pyc
 ${PYSITELIB}/alembic/__init__.pyo
@@ -41,6 +40,9 @@ ${PYSITELIB}/alembic/context.pyo
 ${PYSITELIB}/alembic/ddl/__init__.py
 ${PYSITELIB}/alembic/ddl/__init__.pyc
 ${PYSITELIB}/alembic/ddl/__init__.pyo
+${PYSITELIB}/alembic/ddl/_autogen.py
+${PYSITELIB}/alembic/ddl/_autogen.pyc
+${PYSITELIB}/alembic/ddl/_autogen.pyo
 ${PYSITELIB}/alembic/ddl/base.py
 ${PYSITELIB}/alembic/ddl/base.pyc
 ${PYSITELIB}/alembic/ddl/base.pyo
@@ -130,12 +132,6 @@ ${PYSITELIB}/alembic/templates/multidb/env.py
 ${PYSITELIB}/alembic/templates/multidb/env.pyc
 ${PYSITELIB}/alembic/templates/multidb/env.pyo
 ${PYSITELIB}/alembic/templates/multidb/script.py.mako
-${PYSITELIB}/alembic/templates/pylons/README
-${PYSITELIB}/alembic/templates/pylons/alembic.ini.mako
-${PYSITELIB}/alembic/templates/pylons/env.py
-${PYSITELIB}/alembic/templates/pylons/env.pyc
-${PYSITELIB}/alembic/templates/pylons/env.pyo
-${PYSITELIB}/alembic/templates/pylons/script.py.mako
 ${PYSITELIB}/alembic/testing/__init__.py
 ${PYSITELIB}/alembic/testing/__init__.pyc
 ${PYSITELIB}/alembic/testing/__init__.pyo
