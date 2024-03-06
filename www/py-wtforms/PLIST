@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2022/05/25 15:19:54 kleink Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2024/03/06 21:25:50 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/wtforms/__init__.py
 ${PYSITELIB}/wtforms/__init__.pyc
 ${PYSITELIB}/wtforms/__init__.pyo
@@ -93,6 +92,8 @@ ${PYSITELIB}/wtforms/locale/pl/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/pl/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/pt/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/pt/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/ro/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/ro/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ru/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/sk/LC_MESSAGES/wtforms.mo
