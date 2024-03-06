@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/01/18 18:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/03/06 18:53:34 adam Exp $
 
-DISTNAME=	libarchive-c-5.0
+DISTNAME=	libarchive-c-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/01/18 18:11:39 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/03/06 18:53:34 adam Exp $
 
-BLAKE2s (libarchive-c-5.0.tar.gz) = 46791e83b63f5a034a49bba9001c3dbc21c40e0b98b3668dec1df71a297247d0
-SHA512 (libarchive-c-5.0.tar.gz) = a2e9db98cd6e36d2ea696968ab45c915607f3e0ef076da411f722a2300001afaad61ab3723dfe1da1292bbe39acdab90f54786846f37268a17e9f7ce2c58901d
-Size (libarchive-c-5.0.tar.gz) = 52186 bytes
+BLAKE2s (libarchive-c-5.1.tar.gz) = f02b35880ccb69a2aad51bdf61eac3e0839b9bb88f4d2f8f28d3b247641e3b2b
+SHA512 (libarchive-c-5.1.tar.gz) = be2c5f06f82dc5ab740d5c3d1fb040276cfd0e431ef221aac000a026d6b5457c4ab3cfef3c80dfdafa5001632eb386e593edd73702ce6367e87e8c752038f12b
+Size (libarchive-c-5.1.tar.gz) = 52279 bytes
