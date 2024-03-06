@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1742 2024/03/06 21:07:49 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1743 2024/03/06 21:17:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2995,3 +2995,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-sqlalchemy-utils to 0.41.1nb1 [wiz 2024-03-06]
 	Removed databases/py-sqlsoup [wiz 2024-03-06]
 	Updated geography/py-obspy to 1.4.0 [wiz 2024-03-06]
+	Updated www/py-flask-sqlalchemy to 3.1.1 [wiz 2024-03-06]
