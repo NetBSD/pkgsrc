@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1735 2024/03/06 19:55:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1736 2024/03/06 19:57:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2988,3 +2988,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/salt to 3006.7 [adam 2024-03-06]
 	Updated sysutils/salt-docs to 3006.7 [adam 2024-03-06]
 	Updated shells/nushell to 0.91.0 [pin 2024-03-06]
+	Updated devel/cargo-modules to 0.15.0 [pin 2024-03-06]
