@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1749 2024/03/06 23:56:40 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1750 2024/03/06 23:57:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3002,3 +3002,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-sqlalchemy to 2.0.28 [wiz 2024-03-06]
 	Updated archivers/trrntzip to 1.3 [wiz 2024-03-06]
 	Updated archivers/lxqt-archiver to 0.9.1 [gutteridge 2024-03-06]
+	Updated meta-pkgs/lxqt to 1.4.0nb3 [gutteridge 2024-03-06]
