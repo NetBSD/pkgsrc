@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2023/08/29 20:54:07 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/03/06 18:46:27 adam Exp $
 
-BLAKE2s (libnice-0.1.21.tar.gz) = cafe95100bb721e6452049d0792f99944b2f28b297ff18d912db2ed92c988ad8
-SHA512 (libnice-0.1.21.tar.gz) = acbd1e0e8aacb0a65cad5b70b470a74a7c4a4f1306bc4e17cd4fd899f2fae2bb538bd099e6c0f9cba6bb9a38e95bc14087aa4f77f6aa5b70d6398179783c6e26
-Size (libnice-0.1.21.tar.gz) = 460086 bytes
+BLAKE2s (libnice-0.1.22.tar.gz) = 8b337f1d68cece9041cb50295604a48e1ee01d7be2689d3446621699514a82e7
+SHA512 (libnice-0.1.22.tar.gz) = c3aae2d36d2cec8654b87ecc464296711a4a64335052dfc1477f43f59e90341f7a6a01ebd4edf91a72d9ec425440e6dd0bd8f817c77e03578854e70193b3306b
+Size (libnice-0.1.22.tar.gz) = 460696 bytes
 SHA1 (patch-meson.build) = 0f92d75a885b7670171fb04a38b939a0bcbb66cc
