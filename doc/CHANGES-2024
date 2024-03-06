@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1737 2024/03/06 19:58:47 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1738 2024/03/06 20:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/nushell to 0.91.0 [pin 2024-03-06]
 	Updated devel/cargo-modules to 0.15.0 [pin 2024-03-06]
 	Updated devel/difftastic to 0.56.1 [pin 2024-03-06]
+	Updated databases/py-alembic to 1.13.1 [wiz 2024-03-06]
