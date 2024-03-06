@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/06/04 09:20:00 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2024/03/06 23:09:32 jym Exp $
 
 Add the following line to httpd.conf to make Moodle accessible
 through your HTTP server:
@@ -15,6 +15,22 @@ its tables in (or choose an existing database).
 
 For more information, see the INSTALL DOCUMENTATION:
 
-   http://docs.moodle.org/en/Installing_Moodle
+	https://docs.moodle.org/en/Installing_Moodle
+
+# NOTE: `max_input_vars' requirement
+
+Starting with PHP 8.0, Moodle requires a minimal value of 5000 for the
+`max_input_vars' environment variable. This can be directly set within
+the php.ini file, usually found under:
+
+	${PKG_SYSCONFBASE}/php.ini
+
+Or overriden through the Apache configuration file; see example in:
+
+	${PKG_SYSCONFDIR}/moodle.conf
+
+More details are available via the Moodle documentation:
+
+	https://docs.moodle.org/403/en/Environment_-_max_input_vars
 
 ===========================================================================
