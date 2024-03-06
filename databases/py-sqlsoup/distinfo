@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:53 nia Exp $
-
-BLAKE2s (sqlsoup-0.9.1.tar.gz) = 23867bc44827838421878204e198c1e4ccb99a310973a29c90a2ffa9c4fe318a
-SHA512 (sqlsoup-0.9.1.tar.gz) = a6fee93bf7be24545c785ab995e345374ae947714c5233ede6aaf7a263e75f88987c8a875903891f35088eebdba789467ada3bcfc030cc77a65afc63aae069d7
-Size (sqlsoup-0.9.1.tar.gz) = 20622 bytes
