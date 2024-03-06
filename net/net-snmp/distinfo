@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2024/02/21 10:21:00 wiz Exp $
+$NetBSD: distinfo,v 1.104 2024/03/06 09:37:00 jperkin Exp $
 
 BLAKE2s (net-snmp-5.9.4.tar.gz) = 44b2e38afb93da994d7d90f342a9971c266f710e232c84206e204bb9a1266fe6
 SHA512 (net-snmp-5.9.4.tar.gz) = a510fa91a21e9ddc86a12fd1d0bc6b356e63f3ea53f184d2e31439004d41d902390664134dc40b3b828eabb4282eaf3da628a07c4d480fa00eff7e700950c423
@@ -18,7 +18,7 @@ SHA1 (patch-agent_mibgroup_mibII_ipAddr.c) = cd3345a4b30fe2280d0555ee38feb5f957a
 SHA1 (patch-agent_mibgroup_mibII_tcp.c) = fb065ad10b375b47608a12cf81f29fd473e6fba1
 SHA1 (patch-agent_mibgroup_mibII_var__route.c) = 6050099b8c060f857ec7d05409bc077db21bd650
 SHA1 (patch-agent_snmp__perl.c) = 52b7b26ce8cae6d892b017c50831565fc138a337
-SHA1 (patch-configure) = a6447c8291638d7a3575f53b2f25442ce4d7e487
+SHA1 (patch-configure) = ab40b8c62e3f9dfe7b85ee4a3620a572f44493aa
 SHA1 (patch-ov_UCD-fields) = 40e8d78bad93ca12f4c08c43b86e7f13edafc299
 SHA1 (patch-ov_oid__to__type.in) = 281be9a88860987880c71770f4050fd965dd8ed9
 SHA1 (patch-perl_OID_OID.xs) = b23d7ae82d367d457181d231a56c80e648b0ee6e
