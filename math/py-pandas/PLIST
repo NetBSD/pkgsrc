@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/01/20 08:18:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/03/06 18:56:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2224,6 +2224,9 @@ ${PYSITELIB}/pandas/tests/indexes/categorical/test_map.pyo
 ${PYSITELIB}/pandas/tests/indexes/categorical/test_reindex.py
 ${PYSITELIB}/pandas/tests/indexes/categorical/test_reindex.pyc
 ${PYSITELIB}/pandas/tests/indexes/categorical/test_reindex.pyo
+${PYSITELIB}/pandas/tests/indexes/categorical/test_setops.py
+${PYSITELIB}/pandas/tests/indexes/categorical/test_setops.pyc
+${PYSITELIB}/pandas/tests/indexes/categorical/test_setops.pyo
 ${PYSITELIB}/pandas/tests/indexes/conftest.py
 ${PYSITELIB}/pandas/tests/indexes/conftest.pyc
 ${PYSITELIB}/pandas/tests/indexes/conftest.pyo
