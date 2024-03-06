@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/03/04 00:38:28 wen Exp $
+# $NetBSD: Makefile,v 1.101 2024/03/06 23:09:32 jym Exp $
 
 DISTNAME=	moodle-4.3.3
 CATEGORIES=	www
@@ -7,7 +7,7 @@ MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable403/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	http://www.moodle.org/
+HOMEPAGE=	https://moodle.org/
 COMMENT=	Course management system based on social constructionism
 LICENSE=	gnu-gpl-v3
 
@@ -31,21 +31,21 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=		80 81
+PHP_VERSIONS_INCOMPATIBLE=	56 74
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
-BUILD_DEFS+=		APACHE_USER APACHE_GROUP
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP PKG_SYSCONFBASE
 
 PKG_SYSCONFSUBDIR=	httpd
-MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 CONF_FILES=		${PREFIX}/${EGDIR}/moodle.conf \
 			${PKG_SYSCONFDIR}/moodle.conf
 OWN_DIRS_PERMS+=	${MOODLEDATADIR} ${APACHE_USER} ${APACHE_GROUP} 0750
 
 USE_TOOLS+=		pax
-#NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 PLIST_SRC+=		${PKGDIR}/PLIST ${WRKDIR}/PLIST.AUTO
