@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/14 01:03:11 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/06 23:56:28 gutteridge Exp $
 bin/lxqt-archiver
 share/applications/lxqt-archiver.desktop
 share/icons/hicolor/scalable/apps/lxqt-archiver.svg
@@ -24,10 +24,12 @@ share/lxqt-archiver/translations/lxqt-archiver_id.qm
 share/lxqt-archiver/translations/lxqt-archiver_it.qm
 share/lxqt-archiver/translations/lxqt-archiver_ja.qm
 share/lxqt-archiver/translations/lxqt-archiver_ko.qm
+share/lxqt-archiver/translations/lxqt-archiver_lg.qm
 share/lxqt-archiver/translations/lxqt-archiver_lt.qm
 share/lxqt-archiver/translations/lxqt-archiver_nb_NO.qm
 share/lxqt-archiver/translations/lxqt-archiver_nl.qm
 share/lxqt-archiver/translations/lxqt-archiver_oc.qm
+share/lxqt-archiver/translations/lxqt-archiver_pa.qm
 share/lxqt-archiver/translations/lxqt-archiver_pl.qm
 share/lxqt-archiver/translations/lxqt-archiver_pt.qm
 share/lxqt-archiver/translations/lxqt-archiver_pt_BR.qm
