@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1739 2024/03/06 20:35:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1740 2024/03/06 20:47:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2992,3 +2992,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/difftastic to 0.56.1 [pin 2024-03-06]
 	Updated databases/py-alembic to 1.13.1 [wiz 2024-03-06]
 	Updated databases/py-sqlalchemy-i18n to 1.1.0 [wiz 2024-03-06]
+	Updated databases/py-sqlalchemy-utils to 0.41.1nb1 [wiz 2024-03-06]
