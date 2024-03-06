@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24150 2024/03/05 14:46:14 wiz Exp $
+$NetBSD: TODO,v 1.24151 2024/03/06 20:27:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -890,6 +890,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-17.0.6 [wip]
+	o llvm-18.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1285,6 +1286,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
+	o taisei-1.4
 	o taplo-lsp-0.7.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl-tDOM-0.9.2
@@ -1324,7 +1326,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0.10
+	o tor-browser-13.0.11
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
