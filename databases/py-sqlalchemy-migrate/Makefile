@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/11/14 00:28:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/06 20:37:02 wiz Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlalchemy-migrate/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/stackforge/sqlalchemy-migrate
+HOMEPAGE=	https://opendev.org/x/sqlalchemy-migrate
 COMMENT=	Schema migration tool for SQLAlchemy
 LICENSE=	mit
 
