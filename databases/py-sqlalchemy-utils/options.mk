@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2023/07/03 21:19:05 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2024/03/06 20:46:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel furl intervals ipaddress json password
-PKG_SUPPORTED_OPTIONS+=	phone tests timezone
+PKG_SUPPORTED_OPTIONS+=	phone timezone
 PKG_SUGGESTED_OPTIONS+=	# blank
 
 .include "../../mk/bsd.options.mk"
@@ -37,26 +37,6 @@ DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 
 .if !empty(PKG_OPTIONS:Mphone)
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
-.endif
-
-.if !empty(PKG_OPTIONS:Mtests)
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-flexmock>=0.9.7:../../devel/py-flexmock
-DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.5.1:../../databases/py-psycopg2
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2014.2:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-pymysql-[0-9]*:../../databases/py-pymysql
-DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
-DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-furl>=0.3.5:../../www/py-furl
-DEPENDS+=	${PYPKGPREFIX}-intervals>=0.2.4:../../math/py-intervals
-DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
-DEPENDS+=	${PYPKGPREFIX}-anyjson>=0.3.3:../../textproc/py-anyjson
-DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
-DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 .endif
 
 .if !empty(PKG_OPTIONS:Mtimezone)
