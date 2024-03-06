@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/03/06 20:35:15 wiz Exp $
 
-BLAKE2s (SQLAlchemy-i18n-1.0.3.tar.gz) = 06a674b47215db0b356ce6e8c7368c9ac51593b38331c72f067bc24f2d424447
-SHA512 (SQLAlchemy-i18n-1.0.3.tar.gz) = 8a0561d13bafc578856008ac9505d0dae45379ef93e731ec96fd6d402b550197ce8401869c6781122baa197a7d704a6bd20572801eccc9459c6ed12b725d9f6f
-Size (SQLAlchemy-i18n-1.0.3.tar.gz) = 26272 bytes
+BLAKE2s (SQLAlchemy-i18n-1.1.0.tar.gz) = 6728d11face3e5ca7badd3f49d3f3afb7499dfdf8f9409611247524a5e8297a4
+SHA512 (SQLAlchemy-i18n-1.1.0.tar.gz) = dbf04ed4b5935b99a80637bd68e07a68d31f6cea597c38678dfb08df227290dd6aac3bd50017d49fe72a7c726b4b3c44bf72de473de06104d04d1cf5397275fc
+Size (SQLAlchemy-i18n-1.1.0.tar.gz) = 28197 bytes
