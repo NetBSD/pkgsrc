@@ -1,20 +1,20 @@
-$NetBSD: patch-Cargo.toml,v 1.7 2023/08/17 02:43:21 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.8 2024/03/06 19:58:27 pin Exp $
 
 Don't pull from a specific pull-request.
 Patch tree_magic_mini crate within pkgsrc.
 
---- Cargo.toml.orig	2023-08-16 06:01:09.000000000 +0000
+--- Cargo.toml.orig	2024-03-06 19:20:07.093586195 +0000
 +++ Cargo.toml
-@@ -54,7 +54,7 @@ const_format = "0.2.22"
+@@ -64,7 +64,7 @@ const_format = "0.2.22"
  owo-colors = "3.5.0"
  wu-diff = "0.1.2"
  rayon = "1.7.0"
 -tree_magic_mini = "3.0.2"
 +tree_magic_mini = "3.0.3"
- # bumpalo 3.12 requires rust 1.60
- bumpalo = "3.11.1"
+ # bumpalo 3.15 requires rust 1.65
+ bumpalo = ">= 3.11, < 3.15"
  unicode-width = "0.1.9"
-@@ -84,9 +84,3 @@ lto = "thin"
+@@ -98,9 +98,3 @@ lto = "thin"
  [[bin]]
  name = "difft"
  path = "src/main.rs"
