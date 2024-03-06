@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2023/07/30 15:32:48 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/03/06 21:40:57 wiz Exp $
 
-DISTNAME=	SQLAlchemy-1.4.48
+DISTNAME=	SQLAlchemy-2.0.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
 
@@ -11,12 +10,15 @@ HOMEPAGE=	https://www.sqlalchemy.org/
 COMMENT=	Python SQL toolkit and Object Relational Mapper
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.18:../../devel/py-greenlet
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+# test status as of 2.0.28
+# 2 failed, 20790 passed, 10754 skipped, 107 errors
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
