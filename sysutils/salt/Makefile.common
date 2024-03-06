@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2024/02/02 20:17:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2024/03/06 19:11:53 adam Exp $
 # used by sysutils/salt/Makefile
 # used by sysutils/salt-docs/Makefile
 
-DISTNAME=	salt-3006.6
+DISTNAME=	salt-3006.7
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
