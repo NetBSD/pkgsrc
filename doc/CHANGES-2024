@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1734 2024/03/06 19:12:22 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1735 2024/03/06 19:55:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/py-test-mypy-testing to 0.1.3 [adam 2024-03-06]
 	Updated sysutils/salt to 3006.7 [adam 2024-03-06]
 	Updated sysutils/salt-docs to 3006.7 [adam 2024-03-06]
+	Updated shells/nushell to 0.91.0 [pin 2024-03-06]
