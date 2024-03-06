@@ -1,8 +1,9 @@
-$NetBSD: patch-configure,v 1.4 2024/02/21 10:21:01 wiz Exp $
+$NetBSD: patch-configure,v 1.5 2024/03/06 09:37:00 jperkin Exp $
 
 - Do not store configure options as these might be polluted with workdir.
+- Support long fds_bits.
 
---- configure.orig	2024-02-21 09:11:27.578146251 +0000
+--- configure.orig	2023-08-15 20:32:24.000000000 +0000
 +++ configure
 @@ -3752,7 +3752,7 @@ ac_config_headers="$ac_config_headers in
  # save the configure arguments
@@ -12,4 +13,13 @@ $NetBSD: patch-configure,v 1.4 2024/02/21 10:21:01 wiz Exp $
 +printf "%s\n" "#define NETSNMP_CONFIGURE_OPTIONS \"\"" >>confdefs.h
  
  CONFIGURE_OPTIONS="\"$ac_configure_args\""
+ 
+@@ -31638,7 +31638,7 @@ CFLAGS="$CFLAGS -Werror"
+ 
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for the type of fd_set::fds_bits" >&5
+ printf %s "checking for the type of fd_set::fds_bits... " >&6; }
+-for type in __fd_mask __int32_t unknown; do
++for type in __fd_mask __int32_t long unknown; do
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
  
