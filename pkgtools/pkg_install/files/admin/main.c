@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.69 2020/12/02 10:45:47 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.70 2024/03/07 12:22:47 jperkin Exp $	*/
 
 #ifdef HAVE_NBTOOL_CONFIG_H
 #include "nbtool_config.h"
@@ -11,7 +11,7 @@
 #include <sys/cdefs.h>
 #endif
 #endif
-__RCSID("$NetBSD: main.c,v 1.69 2020/12/02 10:45:47 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.70 2024/03/07 12:22:47 jperkin Exp $");
 
 /*-
  * Copyright (c) 1999-2019 The NetBSD Foundation, Inc.
@@ -93,6 +93,17 @@ struct pkgdb_count {
 	size_t directories;
 	size_t packages;
 };
+
+/*
+ * A simple list of pkgname/pkgbase entries in the pkgdb to verify there are
+ * no duplicate entries.
+ */
+struct pkgbase_entry {
+	char *pkgbase;
+	char *pkgname;
+	SLIST_ENTRY(pkgbase_entry) entries;
+};
+SLIST_HEAD(pkgbase_entry_head, pkgbase_entry);
 
 /*
  * A hashed list of +REQUIRED_BY entries.
@@ -398,6 +409,49 @@ add_depends_of(const char *pkgname, void *cookie)
 	return 0;
 }
 
+/*
+ * It is a fatal error if the pkgdb contains multiple entries with the same
+ * PKGBASE, usually caused by inserting directories manually into the pkgdb.
+ */
+static int
+check_duplicate_pkgbase(const char *pkgname, void *cookie)
+{
+	struct pkgbase_entry_head *head = cookie;
+	struct pkgbase_entry *pkg, *pkgiter;
+	char *p;
+
+	if ((p = strrchr(pkgname, '-')) == NULL) {
+		errx(EXIT_FAILURE, "entry '%s' in pkgdb is not a valid package name.",
+		    pkgname);
+	}
+
+	pkg = xmalloc(sizeof(*pkg));
+	pkg->pkgname = xstrdup(pkgname);
+	*p = '\0';
+	pkg->pkgbase = xstrdup(pkgname);
+
+	SLIST_FOREACH(pkgiter, head, entries) {
+		if (strcmp(pkg->pkgbase, pkgiter->pkgbase) == 0) {
+			errx(EXIT_FAILURE, "corrupt pkgdb, duplicate PKGBASE entries:\n"
+			    "\t%s\n\t%s", pkg->pkgname, pkgiter->pkgname);
+		}
+	}
+
+	SLIST_INSERT_HEAD(head, pkg, entries);
+
+	return 0;
+}
+
+static void
+check_pkgdb(void)
+{
+	struct pkgbase_entry_head pbhead;
+
+	SLIST_INIT(&pbhead);
+	if (iterate_pkg_db(check_duplicate_pkgbase, &pbhead) == -1)
+		errx(EXIT_FAILURE, "cannot iterate pkgdb");
+}
+
 static void
 rebuild_tree(void)
 {
@@ -549,18 +603,20 @@ main(int argc, char *argv[])
 	  
 	} else if (strcasecmp(argv[0], "rebuild") == 0) {
 
+		check_pkgdb();
 		rebuild();
 		printf("Done.\n");
 
-	  
 	} else if (strcasecmp(argv[0], "rebuild-tree") == 0) {
 
+		check_pkgdb();
 		rebuild_tree();
 		printf("Done.\n");
 
 	} else if (strcasecmp(argv[0], "check") == 0) {
 		argv++;		/* "check" */
 
+		check_pkgdb();
 		check(argv);
 
 		if (!quiet) {
