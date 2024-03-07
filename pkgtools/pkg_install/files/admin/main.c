@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.70 2024/03/07 12:22:47 jperkin Exp $	*/
+/*	$NetBSD: main.c,v 1.71 2024/03/07 12:25:43 jperkin Exp $	*/
 
 #ifdef HAVE_NBTOOL_CONFIG_H
 #include "nbtool_config.h"
@@ -11,7 +11,7 @@
 #include <sys/cdefs.h>
 #endif
 #endif
-__RCSID("$NetBSD: main.c,v 1.70 2024/03/07 12:22:47 jperkin Exp $");
+__RCSID("$NetBSD: main.c,v 1.71 2024/03/07 12:25:43 jperkin Exp $");
 
 /*-
  * Copyright (c) 1999-2019 The NetBSD Foundation, Inc.
@@ -132,7 +132,7 @@ static void set_unset_variable(char **, Boolean);
 static void digest_input(char **);
 
 /* print usage message and exit */
-void 
+void
 usage(void)
 {
 	(void) fprintf(stderr, "usage: %s [-bqSVv] [-C config] [-d lsdir] [-K pkg_dbdir] [-s sfx] command [args ...]\n"
@@ -256,7 +256,7 @@ add_pkg(const char *pkgdir, void *vp)
 	return 0;
 }
 
-static void 
+static void
 rebuild(void)
 {
 	char *cachename;
@@ -404,7 +404,7 @@ add_depends_of(const char *pkgname, void *cookie)
 			add_required_by(p->name, pkgname, h);
 	}
 
-	free_plist(&plist);	
+	free_plist(&plist);
 
 	return 0;
 }
@@ -504,7 +504,7 @@ rebuild_tree(void)
 	}
 }
 
-int 
+int
 main(int argc, char *argv[])
 {
 	Boolean		 use_default_sfx = TRUE;
@@ -585,7 +585,7 @@ main(int argc, char *argv[])
 	if (strcasecmp(argv[0], "pmatch") == 0) {
 
 		char *pattern, *pkg;
-		
+
 		argv++;		/* "pmatch" */
 
 		if (argv[0] == NULL || argv[1] == NULL) {
@@ -600,18 +600,22 @@ main(int argc, char *argv[])
 		} else {
 			return 1;
 		}
-	  
+
 	} else if (strcasecmp(argv[0], "rebuild") == 0) {
 
 		check_pkgdb();
 		rebuild();
-		printf("Done.\n");
+		if (!quiet) {
+			printf("Done.\n");
+		}
 
 	} else if (strcasecmp(argv[0], "rebuild-tree") == 0) {
 
 		check_pkgdb();
 		rebuild_tree();
-		printf("Done.\n");
+		if (!quiet) {
+			printf("Done.\n");
+		}
 
 	} else if (strcasecmp(argv[0], "check") == 0) {
 		argv++;		/* "check" */
@@ -665,7 +669,7 @@ main(int argc, char *argv[])
 					printf("%s/%s\n", dir, p);
 				free(p);
 			}
-			
+
 			argv++;
 		}
 	} else if (strcasecmp(argv[0], "list") == 0 ||
@@ -747,7 +751,7 @@ main(int argc, char *argv[])
 			puts(output);
 			fetchFreeURL(url);
 			free(output);
-		}		
+		}
 
 		return rc;
 	} else if (strcasecmp(argv[0], "fetch-pkg-vulnerabilities") == 0) {
@@ -840,23 +844,23 @@ set_unset_variable(char **argv, Boolean unset)
 
 	if (argv[0] == NULL || argv[1] == NULL)
 		usage();
-	
+
 	variable = NULL;
 
 	if (unset) {
 		arg.variable = argv[0];
 		arg.value = NULL;
-	} else {	
+	} else {
 		eq = NULL;
 		if ((eq=strchr(argv[0], '=')) == NULL)
 			usage();
-		
+
 		variable = xmalloc(eq-argv[0]+1);
 		strlcpy(variable, argv[0], eq-argv[0]+1);
-		
+
 		arg.variable = variable;
 		arg.value = eq+1;
-		
+
 		if (strcmp(variable, AUTOMATIC_VARNAME) == 0 &&
 		    strcasecmp(arg.value, "yes") != 0 &&
 		    strcasecmp(arg.value, "no") != 0) {
