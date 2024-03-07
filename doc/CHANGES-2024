@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1752 2024/03/07 09:49:30 he Exp $
+$NetBSD: CHANGES-2024,v 1.1753 2024/03/07 10:02:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3005,3 +3005,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/lxqt to 1.4.0nb3 [gutteridge 2024-03-06]
 	Updated audio/ncspot to 1.1.0nb1 [pin 2024-03-07]
 	Updated net/unbound to 1.19.2 [he 2024-03-07]
+	Updated security/opensc to 0.25.0 [adam 2024-03-07]
+	Updated www/py-jwcrypto to 1.5.6 [adam 2024-03-07]
