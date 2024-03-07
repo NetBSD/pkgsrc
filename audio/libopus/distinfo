@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2023/05/06 18:51:15 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2024/03/07 17:26:28 adam Exp $
 
-BLAKE2s (opus-1.4.tar.gz) = b009f1c112a369912eb3929e569ad1134697e612e4082a656ab4d4f68f868d68
-SHA512 (opus-1.4.tar.gz) = 1ecd39e0add24de12823bf7c936bb67441228721e2cdae0edbfcf3cee0894bcc6edf2a1d0ca5cdfdad1565803bf39cc4c985ad32710c2a9582f850adeb5ca631
-Size (opus-1.4.tar.gz) = 1063408 bytes
-SHA1 (patch-celt_arm_armcpu.c) = a7cd820bf4d68fb6c146d953b15614e9211b5677
+BLAKE2s (opus-1.5.1.tar.gz) = 113a7b6b24a5fc89a601e8d81423b9412ae22cf24ced78ce50319da5f8cb0409
+SHA512 (opus-1.5.1.tar.gz) = fa66c5d753f5deb5d61d068ff8f633d8cb5f454c94aeee9c404023ebc483f9b350586cdd98b7013faf4df3193e170a1708aaa598914275f7bc8be07587cc4dc6
+Size (opus-1.5.1.tar.gz) = 7834540 bytes
+SHA1 (patch-celt_arm_armcpu.c) = eaf2e5be8ac1293d1bdd76137c8c3d44bd8bddf6
