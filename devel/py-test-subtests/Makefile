@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/03/07 10:05:54 adam Exp $
 
-DISTNAME=	pytest-subtests-0.11.0
+DISTNAME=	pytest-subtests-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-subtests/}
 
@@ -18,10 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# needs to be installed for testing
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
