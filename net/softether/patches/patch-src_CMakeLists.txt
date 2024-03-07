@@ -1,0 +1,19 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2024/03/07 11:48:35 hauke Exp $
+
+Add NetBSD section
+
+--- src/CMakeLists.txt.orig	2024-03-05 12:37:51.985800248 +0000
++++ src/CMakeLists.txt
+@@ -91,6 +91,12 @@ if(UNIX)
+     endif()
+   endif()
+ 
++  if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++    add_definitions(-DUNIX_BSD -DUNIX_NETBSD -DBRIDGE_BPF -DBRIDGE_BCAP)
++    include_directories(SYSTEM)
++    link_directories(SYSTEM)
++  endif()
++
+   if(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
+     add_definitions(-DUNIX_BSD -DBRIDGE_BPF)
+     include_directories(SYSTEM /usr/local/include)
