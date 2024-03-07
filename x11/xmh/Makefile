@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/03/03 23:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/03/07 17:40:22 wiz Exp $
 
 DISTNAME=	xmh-1.0.5
 CATEGORIES=	x11 mail
@@ -17,6 +17,7 @@ MAKE_FLAGS+=	appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 BUILDLINK_API_DEPENDS.xbitmaps+=	xbitmaps>=1.1.0
 .include "../../x11/xbitmaps/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXt+=	libXt>=1.3
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
