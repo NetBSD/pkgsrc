@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/07 11:48:35 hauke Exp $
+bin/vpnbridge
+bin/vpnclient
+bin/vpncmd
+bin/vpnserver
+lib/libcedar.so
+lib/libmayaqua.so
+libexec/softether/vpnbridge/hamcore.se2
+libexec/softether/vpnbridge/vpnbridge
+libexec/softether/vpnclient/hamcore.se2
+libexec/softether/vpnclient/vpnclient
+libexec/softether/vpncmd/hamcore.se2
+libexec/softether/vpncmd/vpncmd
+libexec/softether/vpnserver/hamcore.se2
+libexec/softether/vpnserver/vpnserver
+share/doc/softether/AUTHORS.TXT
+share/doc/softether/DISCLAIMER.md
+share/doc/softether/LICENSE
+share/doc/softether/README.md
+share/doc/softether/SECURITY.md

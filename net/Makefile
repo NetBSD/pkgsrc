@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1562 2024/03/01 03:29:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.1563 2024/03/07 11:48:34 hauke Exp $
 #
 
 COMMENT=	Networking tools
@@ -918,6 +918,7 @@ SUBDIR+=	snowflake
 SUBDIR+=	socat
 SUBDIR+=	socket++
 SUBDIR+=	socks4
+SUBDIR+=	softether
 SUBDIR+=	solaris-tap
 SUBDIR+=	speedtest-cli
 SUBDIR+=	speedtouch
