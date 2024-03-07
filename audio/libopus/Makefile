@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/05/06 18:51:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2024/03/07 17:26:28 adam Exp $
 
-DISTNAME=	opus-1.4
+DISTNAME=	opus-1.5.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/
@@ -12,9 +12,10 @@ LICENSE=	modified-bsd
 
 SUPERSEDES=	opus<=1.0.2
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	opus.pc.in
 
