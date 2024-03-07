@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1760 2024/03/07 17:26:49 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1761 2024/03/07 17:38:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3019,3 +3019,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-braintree to 4.27.0 [adam 2024-03-07]
 	Updated lang/nodejs to 21.7.0 [adam 2024-03-07]
 	Updated audio/libopus to 1.5.1 [adam 2024-03-07]
+	Updated www/py-jupyter-lsp to 2.2.4 [adam 2024-03-07]
+	Updated www/py-jupyter_server to 2.13.0 [adam 2024-03-07]
