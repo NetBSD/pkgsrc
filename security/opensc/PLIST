@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2024/02/01 14:19:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/03/07 10:00:27 adam Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
+bin/dtrust-tool
 bin/egk-tool
 bin/eidenv
 bin/gids-tool
@@ -33,6 +34,7 @@ lib/pkgconfig/opensc-pkcs11.pc
 man/man1/cardos-tool.1
 man/man1/cryptoflex-tool.1
 man/man1/dnie-tool.1
+man/man1/dtrust-tool.1
 man/man1/egk-tool.1
 man/man1/eidenv.1
 man/man1/gids-tool.1
@@ -66,7 +68,6 @@ share/opensc/entersafe.profile
 share/opensc/epass2003.profile
 share/opensc/flex.profile
 share/opensc/gids.profile
-share/opensc/gpk.profile
 share/opensc/ias_adele_admin1.profile
 share/opensc/ias_adele_admin2.profile
 share/opensc/ias_adele_common.profile
@@ -74,7 +75,6 @@ share/opensc/iasecc.profile
 share/opensc/iasecc_admin_eid.profile
 share/opensc/iasecc_generic_oberthur.profile
 share/opensc/iasecc_generic_pki.profile
-share/opensc/incrypto34.profile
 share/opensc/isoApplet.profile
 share/opensc/muscle.profile
 share/opensc/myeid.profile
@@ -87,4 +87,3 @@ share/opensc/rutoken_lite.profile
 share/opensc/sc-hsm.profile
 share/opensc/setcos.profile
 share/opensc/starcos.profile
-share/opensc/westcos.profile
