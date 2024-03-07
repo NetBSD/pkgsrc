@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2024/03/05 19:45:11 pin Exp $
+$NetBSD: distinfo,v 1.47 2024/03/07 09:13:58 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -669,9 +669,9 @@ Size (mio-0.8.11.crate) = 102983 bytes
 BLAKE2s (native-tls-0.2.11.crate) = cca097b3bae5e64ab165e707fdcbe1b04ecd326523f06f813ec735221a89907f
 SHA512 (native-tls-0.2.11.crate) = 7e77959932f2859757f1aeb37b78fdd459b7b6fd02424f4b7399525b94c21d1f499a718775503b8f3dfe3b4b740e1cfbee77052a2ebd0994468addb3fa665e6c
 Size (native-tls-0.2.11.crate) = 29008 bytes
-BLAKE2s (ncspot-1.1.0.tar.gz) = 700c7c8a91971ff55ca8bdeec756b560003c927c84c41d3aa10bbe901a10a412
-SHA512 (ncspot-1.1.0.tar.gz) = 67a896fa0a790cd8f77fa31e9c5f88ca9588329f40821efba0ec9def34fe0a5968e72e26b95a44472e6ce370a1365e3a488a7d6173c40b9536be1f72afbd24f5
-Size (ncspot-1.1.0.tar.gz) = 255205 bytes
+BLAKE2s (ncspot-1.1.0.tar.gz) = 2ae6020e70ef96d9df71d3e54641fe9b2e26ade1444b0587d2133bff2360dfbb
+SHA512 (ncspot-1.1.0.tar.gz) = e07e119e682649428aeabebd2ae882b0111a83e0f1bc3c47843f38351a9d833c7cbace48f777bca3edbebe58b9dd55e8135becbdc4693560a307667fd0f2b2e9
+Size (ncspot-1.1.0.tar.gz) = 255190 bytes
 BLAKE2s (ncurses-5.101.0.crate) = 5ae51da22c5687781145ae11d3c30effaad95ffb5116639d6c6c333252c52fcc
 SHA512 (ncurses-5.101.0.crate) = e73513a28706dce70296af28170e8c124b9ab105dcc6509f2d65114f0f8f948b775cb4b459293a399bbf748f06bb60e5906818d928b4f0078c96531d8ab050e7
 Size (ncurses-5.101.0.crate) = 26027 bytes
