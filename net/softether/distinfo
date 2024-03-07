@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/03/07 11:48:35 hauke Exp $
+
+BLAKE2s (SoftEtherVPN/SoftEtherVPN-5.02.5181.tar.xz) = 8cd9969ae71a9ff19b974aa2477d1233c620520d9ec3034be77554e8cf56a48d
+SHA512 (SoftEtherVPN/SoftEtherVPN-5.02.5181.tar.xz) = bd263c24e3be886da1426553d91c93ff7b378167366e6cd5bdcf20d2e0687ecabbf986056e3a723a54a79da6e53de991b79f3edd3f4b8427b20be28a02e946c8
+Size (SoftEtherVPN/SoftEtherVPN-5.02.5181.tar.xz) = 8472688 bytes
+SHA1 (patch-src_CMakeLists.txt) = 4d05be1d08775d5ace7bf8b79cd07dc068b1150f
+SHA1 (patch-src_Cedar_BridgeUnix.c) = b4a0aeefc96f0cd375e98509bf72cd986099809f
+SHA1 (patch-src_Cedar_VLanUnix.c) = 5fad45434861af0837551b39106c273a7cdea672
+SHA1 (patch-src_Mayaqua_Unix.c) = 7232c56f333d29b6b6a2f55577cc67760019d932
