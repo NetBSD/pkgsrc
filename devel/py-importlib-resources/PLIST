@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/02/25 22:27:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/03/07 16:35:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -44,12 +44,18 @@ ${PYSITELIB}/importlib_resources/simple.pyo
 ${PYSITELIB}/importlib_resources/tests/__init__.py
 ${PYSITELIB}/importlib_resources/tests/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/_compat.py
-${PYSITELIB}/importlib_resources/tests/_compat.pyc
-${PYSITELIB}/importlib_resources/tests/_compat.pyo
 ${PYSITELIB}/importlib_resources/tests/_path.py
 ${PYSITELIB}/importlib_resources/tests/_path.pyc
 ${PYSITELIB}/importlib_resources/tests/_path.pyo
+${PYSITELIB}/importlib_resources/tests/compat/__init__.py
+${PYSITELIB}/importlib_resources/tests/compat/__init__.pyc
+${PYSITELIB}/importlib_resources/tests/compat/__init__.pyo
+${PYSITELIB}/importlib_resources/tests/compat/py312.py
+${PYSITELIB}/importlib_resources/tests/compat/py312.pyc
+${PYSITELIB}/importlib_resources/tests/compat/py312.pyo
+${PYSITELIB}/importlib_resources/tests/compat/py39.py
+${PYSITELIB}/importlib_resources/tests/compat/py39.pyc
+${PYSITELIB}/importlib_resources/tests/compat/py39.pyo
 ${PYSITELIB}/importlib_resources/tests/data01/__init__.py
 ${PYSITELIB}/importlib_resources/tests/data01/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data01/__init__.pyo
