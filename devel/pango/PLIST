@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2024/03/01 19:35:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.90 2024/03/07 12:31:46 pin Exp $
 bin/pango-list
 bin/pango-segmentation
 bin/pango-view
@@ -48,16 +48,16 @@ lib/girepository-1.0/PangoOT-1.0.typelib
 ${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
-lib/libpango-1.0.so.0.5200.0
+lib/libpango-1.0.so.0.5200.1
 lib/libpangocairo-1.0.so
 lib/libpangocairo-1.0.so.0
-lib/libpangocairo-1.0.so.0.5200.0
+lib/libpangocairo-1.0.so.0.5200.1
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.0
-lib/libpangoft2-1.0.so.0.5200.0
+lib/libpangoft2-1.0.so.0.5200.1
 ${PLIST.x11}lib/libpangoxft-1.0.so
 ${PLIST.x11}lib/libpangoxft-1.0.so.0
-${PLIST.x11}lib/libpangoxft-1.0.so.0.5200.0
+${PLIST.x11}lib/libpangoxft-1.0.so.0.5200.1
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangofc.pc
