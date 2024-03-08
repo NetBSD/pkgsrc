@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/08 12:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/08 13:25:12 wiz Exp $
 
 GCC_PKGNAME=gcc13
 .include "../../lang/${GCC_PKGNAME}/version.mk"
@@ -34,7 +34,6 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 USE_LANGUAGES=		c c++ ada
 GCC_REQD+=	10
-.include "../../mk/compiler/gcc.mk"
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
