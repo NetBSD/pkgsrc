@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.273 2024/03/08 12:03:23 wiz Exp $
+# $NetBSD: gcc.mk,v 1.274 2024/03/08 12:45:50 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -885,13 +885,13 @@ _USE_GCC_SHLIB?=	no
 # We require Ada-capable compiler in the lang/gcc13-gnat directory.
 #
 _GCC_PKGBASE=		gcc13-gnat
-.  if ${PKGPATH} == wip/gcc13-gnat
+.  if ${PKGPATH} == lang/gcc13-gnat
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../wip/gcc13-gnat
-_GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../wip/gcc13-gnat
+_GCC_PKGSRCDIR=		../../lang/gcc13-gnat
+_GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
 _USE_GCC_SHLIB?=	no
 .  endif
 .endif
