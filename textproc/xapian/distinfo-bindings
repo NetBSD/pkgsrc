@@ -1,8 +1,8 @@
-$NetBSD: distinfo-bindings,v 1.28 2023/11/07 22:32:52 schmonz Exp $
+$NetBSD: distinfo-bindings,v 1.29 2024/03/08 19:00:54 schmonz Exp $
 
-BLAKE2s (xapian-bindings-1.4.24.tar.xz) = 4365ab3a2127d9105a05304e37f95cd495bafb69663a47ca4ddf75f116e66724
-SHA512 (xapian-bindings-1.4.24.tar.xz) = e3d178679aaaf99efa1a19f764014f835783e72b057cb8c8a83eb4cb610e93bd4e6756410321770f6d7fa14986c71be19aaa140fb8267a848d4c8c96cc26d540
-Size (xapian-bindings-1.4.24.tar.xz) = 1112744 bytes
+BLAKE2s (xapian-bindings-1.4.25.tar.xz) = a87c0b38f9dd3530602b30017451383b7a286a4d19306a7a0a7769f08e68b397
+SHA512 (xapian-bindings-1.4.25.tar.xz) = 119f62b53d487319e33aaf0c473e479a52b3831a46b23724188dada13f341e08facc7b79641c00ba7b0507c22b55c7b700182e65b5a195cd322be2098bcca183
+Size (xapian-bindings-1.4.25.tar.xz) = 1076644 bytes
 SHA1 (patch-configure) = 6e0525fb4747759e22b64a3852df71e76cc6773e
 SHA1 (patch-lua_Makefile.in) = 7f1c5077f0d46dfdf33c2b65f144bb08d5031330
 SHA1 (patch-ruby_Makefile.in) = ddbf3ca92b11ff6955d80f6a5609e3ce36798b0b
