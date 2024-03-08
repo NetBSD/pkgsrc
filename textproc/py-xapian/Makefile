@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/11/07 22:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/08 18:55:08 schmonz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=	Python bindings for Xapian search engine
@@ -15,9 +15,10 @@ PYTHON_SELF_CONFLICT=	yes
 
 REPLACE_PYTHON=		python/docs/examples/*.py
 
+INSTALLATION_DIRS+=	${PYSITELIB}/xapian/__pycache__
+
 post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/doc/xapian-bindings/python3/examples/*.py
-	${MKDIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/__pycache__
 	${MV} ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/*.cpython* ${DESTDIR}${PREFIX}/${PYSITELIB}/xapian/__pycache__/
 
 .include "../../lang/python/application.mk"
