@@ -1,9 +1,10 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2024/02/29 10:41:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2024/03/08 15:36:38 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
+CARGO_CRATE_DEPENDS+=	ansi-width-0.1.0
 CARGO_CRATE_DEPENDS+=	ansi_colours-1.2.2
 CARGO_CRATE_DEPENDS+=	ansiterm-0.12.2
 CARGO_CRATE_DEPENDS+=	anstream-0.6.11
@@ -69,7 +70,7 @@ CARGO_CRATE_DEPENDS+=	libz-sys-1.1.2
 CARGO_CRATE_DEPENDS+=	line-wrap-0.1.1
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.11
 CARGO_CRATE_DEPENDS+=	locale-0.2.2
-CARGO_CRATE_DEPENDS+=	log-0.4.20
+CARGO_CRATE_DEPENDS+=	log-0.4.21
 CARGO_CRATE_DEPENDS+=	matches-0.1.8
 CARGO_CRATE_DEPENDS+=	memchr-2.6.3
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.0
@@ -85,6 +86,7 @@ CARGO_CRATE_DEPENDS+=	os_pipe-1.1.4
 CARGO_CRATE_DEPENDS+=	palette-0.7.5
 CARGO_CRATE_DEPENDS+=	palette_derive-0.7.5
 CARGO_CRATE_DEPENDS+=	partition-identity-0.3.0
+CARGO_CRATE_DEPENDS+=	path-clean-1.0.1
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	phf-0.11.2
 CARGO_CRATE_DEPENDS+=	phf_generator-0.11.2
@@ -102,7 +104,7 @@ CARGO_CRATE_DEPENDS+=	quick-xml-0.31.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.33
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.4
-CARGO_CRATE_DEPENDS+=	rayon-1.8.1
+CARGO_CRATE_DEPENDS+=	rayon-1.9.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.57
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
@@ -144,7 +146,7 @@ CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.17
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
 CARGO_CRATE_DEPENDS+=	url-2.2.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
-CARGO_CRATE_DEPENDS+=	uutils_term_grid-0.3.0
+CARGO_CRATE_DEPENDS+=	uutils_term_grid-0.6.0
 CARGO_CRATE_DEPENDS+=	uzers-0.11.3
 CARGO_CRATE_DEPENDS+=	vcpkg-0.2.12
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
