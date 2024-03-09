@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2024/03/02 17:53:23 vins Exp $
+$NetBSD: distinfo,v 1.3 2024/03/09 23:55:45 vins Exp $
 
 BLAKE2s (opensmtpd-extras-6.7.1_20240228-86f2f1927743257674d29d4fed250bdce5d1c0b5.tar.gz) = 8ab39a010dd16e74912a15aba9cef5d9dd6aac347f7aea574cbc55ff364cbcd4
 SHA512 (opensmtpd-extras-6.7.1_20240228-86f2f1927743257674d29d4fed250bdce5d1c0b5.tar.gz) = 3a51bc561769d55e0e528fb4d9a02f355e66bfe9b14a94d5a88bbc446da4567e34e6438def040b5af1d749d7e601a953e84252ff52ede49cf991d288a4d7bfe7
@@ -8,3 +8,7 @@ SHA1 (patch-api_queue__api.c) = 95cb46aaaec8f61767abd66a6ae7122aa524d20e
 SHA1 (patch-api_scheduler__api.c) = 926efe385a7cfe5844af80041e01b1886a27fea6
 SHA1 (patch-api_table__api.c) = a0a96fb0e8f26d4595dc92ad8c3844270530c4d1
 SHA1 (patch-configure.ac) = b0057b9f04c128c0c91a0185defafa0717f506a9
+SHA1 (patch-extras_tables_table-ldap_ber.h) = bbc02f3c7c3f8ac755b52470705805487ad2d20e
+SHA1 (patch-extras_tables_table-socketmap_table__socketmap.c) = 2e10cf645899c53e67381dcc967ff7b22f4638b6
+SHA1 (patch-openbsd-compat_imsg-buffer.c) = 1b7e13feb37f641e48c5b074572ef6e280d53dbb
+SHA1 (patch-openbsd-compat_imsg.c) = 0082bad5bbbc006968c8a2463ac601c7549bc7d4
