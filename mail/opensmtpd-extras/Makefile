@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/03/02 19:25:29 vins Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/09 23:55:45 vins Exp $
 
 DISTNAME=		opensmtpd-extras-6.7.1_20240228
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenSMTPD/}
 GITHUB_PROJECT=		OpenSMTPD-extras
@@ -26,6 +27,8 @@ DEPENDS+=	opensmtpd-[0-9]*:../../mail/opensmtpd
 
 PKG_SYSCONFSUBDIR=	smtpd
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
@@ -40,6 +43,15 @@ SUBST_SED.paths+=	-e "s:/etc/openssl:${SSLDIR}:g"
 SUBST_SED.paths+=	-e "s:/usr/local:${PREFIX}:g"
 SUBST_SED.paths+=	-e "s:/etc/mail:${PKG_SYSCONFDIR}:g"
 SUBST_SED.paths+=	-e "s:/var/vmail:${VARBASE}/vmail:g"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		ints
+SUBST_MESSAGE.ints=	SunOS stdint(3) doesn't provide `u_int*' typedefs
+SUBST_STAGE.ints=	pre-configure
+SUBST_FILES.ints+=	extras/tables/table-ldap/*.c
+SUBST_FILES.ints+=	extras/tables/table-ldap/*.h
+SUBST_SED.ints=		-e 's|u_int|uint|g'
+.endif
 
 CONFIGURE_ENV+=		TEST_MINUS_S_SH=${SH:Q}
 CONFIGURE_ARGS+=	--with-pie
