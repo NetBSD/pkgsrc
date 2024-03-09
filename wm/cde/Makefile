@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/18 20:57:03 vins Exp $
+# $NetBSD: Makefile,v 1.6 2024/03/09 23:59:38 vins Exp $
 
 DISTNAME=	cde-2.5.2
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
