@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/09 21:18:06 vins Exp $
+
+BLAKE2s (midish-1.3.3.tar.gz) = 65d03a8ac6e9cccddfefee2358abdd1fbd504540486706b9d722998ed4a55114
+SHA512 (midish-1.3.3.tar.gz) = 2d605c0a884ba4c372786c4c122f23854fc14a239b9fca3fbcc82e59af1a274dc17ca14991531611714d7192c6b4fdf3cec4fa6a5dff954734a8abea51892687
+Size (midish-1.3.3.tar.gz) = 188958 bytes
