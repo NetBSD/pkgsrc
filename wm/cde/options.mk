@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/01/18 20:57:03 vins Exp $
+# $NetBSD: options.mk,v 1.4 2024/03/09 23:59:38 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cde
 
@@ -37,23 +37,22 @@ DEPENDS+=		pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=yes
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=		${EGDIR}/pam.d/cde \
-			${PKG_SYSCONFDIR}/pam.d/cde
+PAMDIR=			share/examples/pam.d
+MAKE_DIRS+=		${PAMDIR}
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
-INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
+INSTALLATION_DIRS+=	${PAMDIR}
 
 PLIST.pam=		yes
+PLIST_SUBST+=		PAMDIR=${PAMDIR:Q}
 
 .PHONY:	pam-install
 
 pam-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/pam/libpam/pam.conf       \
-		${DESTDIR}${EGDIR}/pam.d/cde
-.  for p in dtlogin dtsession
-	${INSTALL_DATA} ${WRKSRC}/programs/${p}/config/${p}	\
-		${DESTDIR}${EGDIR}/pam.d
+		${DESTDIR}${PREFIX}/${PAMDIR}/cde
+.  for i in dtlogin dtsession
+	${INSTALL_DATA} ${WRKSRC}/programs/${i}/config/${i}	\
+		${DESTDIR}${PREFIX}/${PAMDIR}
 .  endfor
 .else
 
