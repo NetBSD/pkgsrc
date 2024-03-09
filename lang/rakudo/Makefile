@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/02/12 14:46:56 mef Exp $
+# $NetBSD: Makefile,v 1.33 2024/03/09 07:04:37 mef Exp $
 
-DISTNAME=	rakudo-2024.01
+DISTNAME=	rakudo-2024.02
 CATEGORIES=	lang perl6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakudo/}
 
