@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/02/17 10:57:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/03/09 07:56:51 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -250,7 +250,6 @@ man/es/man5/deb-old.5
 man/es/man5/dpkg.cfg.5
 man/es/man5/dselect.cfg.5
 man/fr/man1/dpkg-architecture.1
-man/fr/man1/dpkg-buildpackage.1
 man/fr/man1/dpkg-checkbuilddeps.1
 man/fr/man1/dpkg-deb.1
 man/fr/man1/dpkg-distaddfile.1
@@ -528,7 +527,6 @@ man/pl/man5/dpkg.cfg.5
 man/pl/man5/dselect.cfg.5
 man/pt/man1/dpkg-architecture.1
 man/pt/man1/dpkg-buildapi.1
-man/pt/man1/dpkg-buildflags.1
 man/pt/man1/dpkg-buildpackage.1
 man/pt/man1/dpkg-checkbuilddeps.1
 man/pt/man1/dpkg-deb.1

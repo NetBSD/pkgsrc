@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2023/06/13 15:44:29 adam Exp $
+$NetBSD: patch-configure,v 1.2 2024/03/09 07:56:51 adam Exp $
 
 Allow libdpkg being a shared library.
 Use md5 from OpenSSL.
 
---- configure.orig	2023-05-11 02:04:01.000000000 +0000
+--- configure.orig	2024-02-27 03:28:03.000000000 +0000
 +++ configure
-@@ -17030,12 +17030,6 @@ CC=$lt_save_CC
+@@ -17074,12 +17074,6 @@ CC=$lt_save_CC
  
  
  
@@ -15,10 +15,10 @@ Use md5 from OpenSSL.
 -    as_fn_error $? "building libdpkg as a shared library is not supported" "$LINENO" 5
 -
 -fi
-    if test "$enable_shared" = "yes"; then
-   BUILD_SHARED_TRUE=
-   BUILD_SHARED_FALSE='#'
-@@ -23416,16 +23410,16 @@ fi
+ 
+ 
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for --as-needed linker flag" >&5
+@@ -23971,16 +23965,16 @@ fi
  
  
    have_libmd="no"
@@ -39,7 +39,7 @@ Use md5 from OpenSSL.
  if test ${ac_cv_search_MD5Init+y}
  then :
    printf %s "(cached) " >&6
-@@ -23437,16 +23431,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -23992,16 +23986,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
