@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1773 2024/03/09 07:04:46 mef Exp $
+$NetBSD: CHANGES-2024,v 1.1774 2024/03/09 07:59:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3038,3 +3038,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-argcomplete to 3.2.3 [adam 2024-03-09]
 	Updated finance/py-stripe to 8.6.0 [adam 2024-03-09]
 	Updated lang/rakudo to 2024.02 [mef 2024-03-09]
+	Updated misc/dpkg to 1.22.5 [adam 2024-03-09]
+	Updated security/gnupg2 to 2.4.5 [adam 2024-03-09]
