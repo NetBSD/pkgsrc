@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/02/08 14:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/03/09 06:40:34 adam Exp $
 
-DISTNAME=	django-filter-23.5
+DISTNAME=	django-filter-24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filter/}
@@ -11,7 +11,7 @@ COMMENT=	Generic dynamic filtering support for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
