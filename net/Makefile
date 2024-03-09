@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1563 2024/03/07 11:48:34 hauke Exp $
+# $NetBSD: Makefile,v 1.1564 2024/03/09 06:49:49 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -59,7 +59,6 @@ SUBDIR+=	bwm-ng
 SUBDIR+=	bwping
 SUBDIR+=	cacti
 SUBDIR+=	cacti-spine
-SUBDIR+=	calypso
 SUBDIR+=	castor
 SUBDIR+=	cclive
 SUBDIR+=	ccrtp
