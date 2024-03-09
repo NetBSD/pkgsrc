@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/11 17:18:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/03/09 06:56:18 adam Exp $
 bin/bandit-${PYVERSSUFFIX}
 bin/bandit-baseline-${PYVERSSUFFIX}
 bin/bandit-config-generator-${PYVERSSUFFIX}
@@ -103,6 +103,9 @@ ${PYSITELIB}/bandit/formatters/html.pyo
 ${PYSITELIB}/bandit/formatters/json.py
 ${PYSITELIB}/bandit/formatters/json.pyc
 ${PYSITELIB}/bandit/formatters/json.pyo
+${PYSITELIB}/bandit/formatters/sarif.py
+${PYSITELIB}/bandit/formatters/sarif.pyc
+${PYSITELIB}/bandit/formatters/sarif.pyo
 ${PYSITELIB}/bandit/formatters/screen.py
 ${PYSITELIB}/bandit/formatters/screen.pyc
 ${PYSITELIB}/bandit/formatters/screen.pyo
