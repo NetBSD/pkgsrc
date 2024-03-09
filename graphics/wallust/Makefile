@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2024/02/14 10:31:58 pin Exp $
+# $NetBSD: Makefile,v 1.19 2024/03/09 21:52:57 pin Exp $
 
-DISTNAME=	3.0.0-alpha
-PKGNAME=	wallust-${DISTNAME:S/-alpha//}
+DISTNAME=	3.0.0-beta
+# This is actually an update from 3.0.0-alpha to 3.0.0-beta.
+# Unfortunately, I made a mistake on the previous update and pushed it as 3.0.0
+# instead of 3.0.0-alpha as it should have been.
+PKGREVISION=	1
+PKGNAME=	wallust-${DISTNAME:S/-beta//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://codeberg.org/explosion-mental/wallust/archive/
 
