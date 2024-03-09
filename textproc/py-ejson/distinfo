@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:02 nia Exp $
-
-BLAKE2s (py-ejson/ejson-0.1.6.tar.gz) = 57b5feb6154ce050aa42076b91af2ecd918d9c94197483790ec04356aa726727
-SHA512 (py-ejson/ejson-0.1.6.tar.gz) = 6c1abedb2c9e05363c81e2c99526a319ec15a6e04c40bb6b837cf945712ad1d8e6fc426927127dca1c671fa2337a93a3b955f8ea25d301f06b9c5a891db407d8
-Size (py-ejson/ejson-0.1.6.tar.gz) = 10244 bytes
