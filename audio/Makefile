@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2024/02/29 14:15:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.692 2024/03/09 21:21:10 vins Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -282,6 +282,7 @@ SUBDIR+=	mbrolavox-en1
 SUBDIR+=	mbrolavox-us1
 SUBDIR+=	mbrolavox-us2
 SUBDIR+=	mbrolavox-us3
+SUBDIR+=	midish
 SUBDIR+=	mikmod
 SUBDIR+=	milkytracker
 SUBDIR+=	minimp3
