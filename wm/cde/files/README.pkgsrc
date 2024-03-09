@@ -4,8 +4,10 @@
 
 To add the required authenticaion policies to your PAM configuration,
 import the policy files provided with the package:
-	
-	$ cp @PREFIX@/share/examples/cde/pam.d/* /etc/pam.d
+
+	$ for i in cde dtlogin dtsession; do
+	> cp @PREFIX@/share/examples/pam.d/$i /etc/pam.d
+	> done
 
 -----------------------------------------------------------------------
 
