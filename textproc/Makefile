@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1454 2024/02/26 19:26:01 pin Exp $
+# $NetBSD: Makefile,v 1.1455 2024/03/09 06:51:34 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1036,7 +1036,6 @@ SUBDIR+=	py-docstring-to-markdown
 SUBDIR+=	py-docutils
 SUBDIR+=	py-docx
 SUBDIR+=	py-dominate
-SUBDIR+=	py-ejson
 SUBDIR+=	py-elementpath
 SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
