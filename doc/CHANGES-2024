@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1770 2024/03/09 06:43:24 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1771 2024/03/09 06:52:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3031,3 +3031,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/nqp to 2024.02 [mef 2024-03-09]
 	Updated www/py-django-mailman3 to 1.3.12 [adam 2024-03-09]
 	Updated www/py-django-filter to 24.1 [adam 2024-03-09]
+	Removed net/calypso [adam 2024-03-09]
+	Removed textproc/py-ejson [adam 2024-03-09]
