@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/08 22:57:24 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
+@comment $NetBSD: PLIST,v 1.3 2024/03/09 06:24:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/django_mailman3/__init__.py
 ${PYSITELIB}/django_mailman3/__init__.pyc
 ${PYSITELIB}/django_mailman3/__init__.pyo
@@ -49,6 +48,7 @@ ${PYSITELIB}/django_mailman3/lib/scrub.pyo
 ${PYSITELIB}/django_mailman3/lib/user.py
 ${PYSITELIB}/django_mailman3/lib/user.pyc
 ${PYSITELIB}/django_mailman3/lib/user.pyo
+${PYSITELIB}/django_mailman3/locale/LINGUAS
 ${PYSITELIB}/django_mailman3/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/django_mailman3/locale/ak/LC_MESSAGES/django.po
 ${PYSITELIB}/django_mailman3/locale/am/LC_MESSAGES/django.po
@@ -220,6 +220,7 @@ ${PYSITELIB}/django_mailman3/templates/django_mailman3/profile/delete_profile.ht
 ${PYSITELIB}/django_mailman3/templates/django_mailman3/profile/profile.html
 ${PYSITELIB}/django_mailman3/templates/openid/login.html
 ${PYSITELIB}/django_mailman3/templates/socialaccount/connections.html
+${PYSITELIB}/django_mailman3/templates/socialaccount/login.html
 ${PYSITELIB}/django_mailman3/templates/socialaccount/signup.html
 ${PYSITELIB}/django_mailman3/templates/socialaccount/snippets/provider_list.html
 ${PYSITELIB}/django_mailman3/templatetags/__init__.py
