@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/09 21:18:06 vins Exp $
+bin/midish
+bin/smfplay
+bin/smfrec
+man/man1/midish.1
+man/man1/smfplay.1
+man/man1/smfrec.1
+share/doc/midish/README
+share/doc/midish/manual.html
+share/examples/midish/midishrc
+share/examples/midish/sample.sng
