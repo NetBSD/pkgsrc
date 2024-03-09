@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2024/03/03 20:29:33 js Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2024/03/09 00:08:04 js Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.2
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.79
