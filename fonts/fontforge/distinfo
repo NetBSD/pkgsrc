@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.78 2023/06/30 06:48:06 wiz Exp $
+$NetBSD: distinfo,v 1.79 2024/03/09 20:31:48 wiz Exp $
 
 BLAKE2s (fontforge-20230101.tar.xz) = aca0cb8014deafb2620ca3a19c494817a6c67ab24deb8da9c4bcbb099ee64d6c
 SHA512 (fontforge-20230101.tar.xz) = 7684a2824d5199e230d2e0a654c2119cef422a57b64e6dd75afde6ba623abed6581f596fd5b7509e03f3b3ad3cf69629aafd4c85aeda64fa91a9e1ab88c9b418
 Size (fontforge-20230101.tar.xz) = 13761728 bytes
+SHA1 (patch-fontforge_splinefont.c) = c8f7095f45a4f990ae37631b46583dec35a8eb5d
 SHA1 (patch-fontforge_splinefont.h) = be7739b6145b3c622913efa9f2d679860c35cccb
 SHA1 (patch-po_fr.po) = 4ab7a4636eac4580153c2594dea59a9a928cedbb
 SHA1 (patch-po_it.po) = 90a860516cf84790af8f08088f7b0d88f32cd895
