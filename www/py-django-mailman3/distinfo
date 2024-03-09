@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/08 22:57:24 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/03/09 06:24:30 adam Exp $
 
-BLAKE2s (django-mailman3-1.3.11.tar.gz) = 3b6824ba06d1d5a71311687e3074adea8c479660622ed3baff42a0c526a04f2e
-SHA512 (django-mailman3-1.3.11.tar.gz) = 9514b7cc3d8a12874a695863e0be485ecd44b93f4007a2177b10a9fa18e83a41bbfa620cb22d35a2f8f4a04ed20c350ac15b7d71c3c1ddcc895c7774e85bcd7d
-Size (django-mailman3-1.3.11.tar.gz) = 417809 bytes
+BLAKE2s (django_mailman3-1.3.12.tar.gz) = 21385f22e387bfb6c1cdff1ca3d95fb2dc0f0615612972d1424bba55b419c39a
+SHA512 (django_mailman3-1.3.12.tar.gz) = 2ac989f71abc675b533110063c2001ba3bc60a5403221609a571f5b45698a33fe269c294e6d0611125aff5f372ab5a833b08076105550dfd701a21e59725e6bc
+Size (django_mailman3-1.3.12.tar.gz) = 411630 bytes
