@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1779 2024/03/09 21:24:06 vins Exp $
+$NetBSD: CHANGES-2024,v 1.1780 2024/03/09 21:49:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3048,3 +3048,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/fontforge to 20230101nb6 [wiz 2024-03-09]
 	Updated devel/objfw to 1.0.11 [js 2024-03-09]
 	Added audio/midish version 1.3.3 [vins 2024-03-09]
+	Updated sysutils/broot to 1.36.0 [pin 2024-03-09]
