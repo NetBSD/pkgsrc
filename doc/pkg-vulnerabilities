@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.146 2024/03/05 01:02:00 joerg Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.147 2024/03/09 20:19:47 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25919,9 +25919,14 @@ wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-2447
 wireshark<4.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24479
 routinator<0.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1622
 yasm-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-25760
-fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25081
-fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25082
+fontforge<20230101nb6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25081
+fontforge<20230101nb6	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-25082
 opendmarc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-25768
 py{37,38,39,310,311,312}-django>=3<3.2.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
 py{37,38,39,310,311,312}-django>=4<4.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
 py{37,38,39,310,311,312}-django>=5<5.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27351
+go121<1.21.8	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-45289
+go121<1.21.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24783
+go122<1.22.1	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-45289
+go122<1.22.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24783
+py{37,38,39,310,311,312}-fonttools>4.28.2<4.43.0	xml-external-entity-vulnerability	https://nvd.nist.gov/vuln/detail/CVE-2023-45139
