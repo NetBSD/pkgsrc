@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:30:23 nia Exp $
-
-BLAKE2s (concrete5.7.5.13.zip) = 6a057a7bcef49128e24a825259d1556ae8e3419e08d486d66296531def241f6b
-SHA512 (concrete5.7.5.13.zip) = 92ce07fd4212ade55d652ed42c0abf144fd81c37e8c42c09e34cbcbb6f734cc1ed60052287dc7744a140c84a14bb304940a5cf72116bbc787bc70235f0f62b45
-Size (concrete5.7.5.13.zip) = 43734188 bytes
