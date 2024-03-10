@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1795 2024/03/10 15:02:02 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1796 2024/03/10 15:03:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/php-concrete-cms to 9.2.7 [taca 2024-03-10]
 	Removed www/php-concrete5 [taca 2024-03-10]
 	Updated devel/ruby-backports to 3.25.0 [taca 2024-03-10]
+	Updated devel/ruby-console to 1.23.5 [taca 2024-03-10]
