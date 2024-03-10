@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1797 2024/03/10 15:06:42 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1798 2024/03/10 15:08:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-backports to 3.25.0 [taca 2024-03-10]
 	Updated devel/ruby-console to 1.23.5 [taca 2024-03-10]
 	Updated devel/ruby-i18n to 1.14.4 [taca 2024-03-10]
+	Updated finance/ruby-braintree to 4.19.0 [taca 2024-03-10]
