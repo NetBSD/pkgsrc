@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2023/11/08 13:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2024/03/10 12:03:33 pgoyette Exp $
 
 DISTNAME=	dspam-3.10.2
 PKGREVISION=	40
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dspam/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dspam.sourceforge.net/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
+
+MAKE_JOBS_SAFE=	no
 
 LICENSE=	gnu-gpl-v2
 
