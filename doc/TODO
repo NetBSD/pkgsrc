@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24156 2024/03/10 08:23:41 wiz Exp $
+$NetBSD: TODO,v 1.24157 2024/03/10 08:25:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o drivel-3.0.5
 	o drupal-10.0.5
 	o drupal-9.5.5
-	o dunst-1.10.0
 	o dwdiff-2.1.4
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
