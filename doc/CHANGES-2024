@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1787 2024/03/10 02:02:55 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1788 2024/03/10 08:25:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3056,3 +3056,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/slumber to 0.13.1 [pin 2024-03-09]
 	Updated x11/xfce4-panel to 4.18.6 [gutteridge 2024-03-10]
 	Updated meta-pkgs/xfce4 to 4.18.1nb12 [gutteridge 2024-03-10]
+	Updated x11/dunst to 1.10.0 [wiz 2024-03-10]
