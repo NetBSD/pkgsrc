@@ -1,15 +1,15 @@
-$NetBSD: patch-Gemfile,v 1.8 2023/10/23 14:51:49 taca Exp $
+$NetBSD: patch-Gemfile,v 1.9 2024/03/10 15:20:02 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2023-09-30 06:40:03.000000000 +0000
+--- Gemfile.orig	2024-03-04 19:55:01.000000000 +0000
 +++ Gemfile
 @@ -3,9 +3,9 @@ source 'https://rubygems.org'
  ruby '>= 2.5.0', '< 3.2.0'
  gem 'bundler', '>= 1.12.0'
  
--gem 'rails', '6.1.7.6'
+-gem 'rails', '6.1.7.7'
 +gem 'rails', '~> 6.1.7'
  gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 -gem 'rouge', '~> 3.28.0'
