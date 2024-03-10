@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/03/06 19:54:07 pin Exp $
+# $NetBSD: Makefile,v 1.50 2024/03/10 10:19:34 he Exp $
 
 DISTNAME=	nushell-0.91.0
 CATEGORIES=	shells
@@ -23,4 +23,5 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
