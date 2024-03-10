@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/11/12 13:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/03/10 21:02:21 vins Exp $
 
 DISTNAME=	sdorfehs-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,15 +11,18 @@ HOMEPAGE=	https://github.com/jcs/sdorfehs/
 COMMENT=	Tiling window manager descended from ratpoison
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
+LIBS.SunOS+=	-lsocket
+
+MAKE_ENV+=	CC=${CC:Q}
+MAKE_ENV+=	CFLAGS=${CFLAGS:Q}
+MAKE_ENV+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	Makefile
-SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'
-SUBST_SED.prefix+=	-e 's,/etc,${PKG_SYSCONFDIR}/,g'
+SUBST_VARS.prefix=	PKGMANDIR PREFIX
 
 INSTALLATION_DIRS=	bin/ ${PKGMANDIR}/man1/
 
