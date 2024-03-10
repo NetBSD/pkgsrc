@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2024/03/10 07:07:48 vins Exp $
+include/bsd/md5.h
+include/bsd/nlist.h
+lib/libbsd-ctor.a
+lib/pkgconfig/libbsd-ctor.pc
+man/man3/arc4random.3bsd
+man/man3/arc4random_addrandom.3bsd
+man/man3/arc4random_buf.3bsd
+man/man3/arc4random_stir.3bsd
+man/man3/arc4random_uniform.3bsd
+man/man3/closefrom.3bsd
+man/man3/fmtcheck.3bsd
+man/man3/funopen.3bsd
+man/man3/getprogname.3bsd
+man/man3/md5.3bsd
+man/man3/nlist.3bsd
+man/man3/reallocf.3bsd
+man/man3/setprogname.3bsd
+man/man3/strlcat.3bsd
+man/man3/strlcpy.3bsd
+man/man3/strnstr.3bsd
+man/man3/strtonum.3bsd
