@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/03/17 14:27:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/03/10 15:01:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -559,6 +559,13 @@ ${GEM_LIBDIR}/lib/backports/3.2.0/integer/ceildiv.rb
 ${GEM_LIBDIR}/lib/backports/3.2.0/match_data.rb
 ${GEM_LIBDIR}/lib/backports/3.2.0/match_data/byteoffset.rb
 ${GEM_LIBDIR}/lib/backports/3.2.rb
+${GEM_LIBDIR}/lib/backports/3.3.0.rb
+${GEM_LIBDIR}/lib/backports/3.3.0/match_data.rb
+${GEM_LIBDIR}/lib/backports/3.3.0/match_data/named_captures.rb
+${GEM_LIBDIR}/lib/backports/3.3.0/range.rb
+${GEM_LIBDIR}/lib/backports/3.3.0/range/overlap.rb
+${GEM_LIBDIR}/lib/backports/3.3.0/range/reverse_each.rb
+${GEM_LIBDIR}/lib/backports/3.3.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
 ${GEM_LIBDIR}/lib/backports/force/enumerable_map.rb
