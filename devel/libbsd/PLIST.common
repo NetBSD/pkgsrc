@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/19 16:05:43 vins Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2024/03/10 07:07:48 vins Exp $
 include/bsd/bitstring.h
 include/bsd/bsd.h
 include/bsd/err.h
@@ -6,9 +6,7 @@ include/bsd/getopt.h
 include/bsd/grp.h
 include/bsd/inttypes.h
 include/bsd/libutil.h
-include/bsd/md5.h
 include/bsd/netinet/ip_icmp.h
-include/bsd/nlist.h
 include/bsd/pwd.h
 include/bsd/readpassphrase.h
 include/bsd/stdio.h
@@ -27,9 +25,7 @@ include/bsd/timeconv.h
 include/bsd/unistd.h
 include/bsd/vis.h
 include/bsd/wchar.h
-lib/libbsd-ctor.a
 lib/libbsd.la
-lib/pkgconfig/libbsd-ctor.pc
 lib/pkgconfig/libbsd-overlay.pc
 lib/pkgconfig/libbsd.pc
 man/man3/LIST_CLASS_ENTRY.3bsd
@@ -161,11 +157,6 @@ man/man3/TAILQ_REMOVE.3bsd
 man/man3/TAILQ_SWAP.3bsd
 man/man3/TIMESPEC_TO_TIMEVAL.3bsd
 man/man3/TIMEVAL_TO_TIMESPEC.3bsd
-man/man3/arc4random.3bsd
-man/man3/arc4random_addrandom.3bsd
-man/man3/arc4random_buf.3bsd
-man/man3/arc4random_stir.3bsd
-man/man3/arc4random_uniform.3bsd
 man/man3/be16dec.3bsd
 man/man3/be16enc.3bsd
 man/man3/be32dec.3bsd
@@ -184,7 +175,6 @@ man/man3/bit_test.3bsd
 man/man3/bitstr_size.3bsd
 man/man3/bitstring.3bsd
 man/man3/byteorder.3bsd
-man/man3/closefrom.3bsd
 man/man3/dehumanize_number.3bsd
 man/man3/errc.3bsd
 man/man3/expand_number.3bsd
@@ -192,15 +182,12 @@ man/man3/explicit_bzero.3bsd
 man/man3/fgetln.3bsd
 man/man3/fgetwln.3bsd
 man/man3/flopen.3bsd
-man/man3/fmtcheck.3bsd
 man/man3/fparseln.3bsd
 man/man3/fpurge.3bsd
 man/man3/freezero.3bsd
-man/man3/funopen.3bsd
 man/man3/getbsize.3bsd
 man/man3/getmode.3bsd
 man/man3/getpeereid.3bsd
-man/man3/getprogname.3bsd
 man/man3/gid_from_group.3bsd
 man/man3/group_from_gid.3bsd
 man/man3/heapsort.3bsd
@@ -211,9 +198,7 @@ man/man3/le32dec.3bsd
 man/man3/le32enc.3bsd
 man/man3/le64dec.3bsd
 man/man3/le64enc.3bsd
-man/man3/md5.3bsd
 man/man3/mergesort.3bsd
-man/man3/nlist.3bsd
 man/man3/pidfile.3bsd
 man/man3/pidfile_close.3bsd
 man/man3/pidfile_open.3bsd
@@ -224,12 +209,10 @@ man/man3/queue.3bsd
 man/man3/radixsort.3bsd
 man/man3/readpassphrase.3bsd
 man/man3/reallocarray.3bsd
-man/man3/reallocf.3bsd
 man/man3/recallocarray.3bsd
 man/man3/setmode.3bsd
 man/man3/setproctitle.3bsd
 man/man3/setproctitle_init.3bsd
-man/man3/setprogname.3bsd
 man/man3/sl_add.3bsd
 man/man3/sl_delete.3bsd
 man/man3/sl_find.3bsd
@@ -237,14 +220,10 @@ man/man3/sl_free.3bsd
 man/man3/sl_init.3bsd
 man/man3/sradixsort.3bsd
 man/man3/stringlist.3bsd
-man/man3/strlcat.3bsd
-man/man3/strlcpy.3bsd
 man/man3/strmode.3bsd
-man/man3/strnstr.3bsd
 man/man3/strnunvis.3bsd
 man/man3/strnvis.3bsd
 man/man3/strtoi.3bsd
-man/man3/strtonum.3bsd
 man/man3/strtou.3bsd
 man/man3/strunvis.3bsd
 man/man3/strvis.3bsd
