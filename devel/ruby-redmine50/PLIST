@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/10/09 15:32:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/10 15:20:02 taca Exp $
 bin/redmine50_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine50_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine50_migrate_db${RUBY_SUFFIX}.sh
@@ -1628,7 +1628,7 @@ share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-uk.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-vi.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-zh-CN.js
 share/${RUBY_NAME}-redmine50/public/javascripts/i18n/datepicker-zh-TW.js
-share/${RUBY_NAME}-redmine50/public/javascripts/jquery-3.6.1-ui-1.13.2-ujs-6.1.7.js
+share/${RUBY_NAME}-redmine50/public/javascripts/jquery-3.6.1-ui-1.13.2-ujs-6.1.7.6.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/common_mark.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/jstoolbar.js
 share/${RUBY_NAME}-redmine50/public/javascripts/jstoolbar/lang/jstoolbar-ar.js
