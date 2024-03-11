@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.10 2022/09/12 12:32:30 jperkin Exp $
+$NetBSD: README.macOS,v 1.11 2024/03/11 14:03:57 schmonz Exp $
 
 Please read the general README file as well.
 
@@ -36,10 +36,9 @@ see "No suitable Xcode SDK or Command Line Tools installed." This
 usually means a pkgsrc developer needs to add another `OSX_SDK_MAP`
 entry to `mk/platform/Darwin.mk`.
 
-If you wish to build for a specific SDK, first ensure is is available in the
-correct location, and then you can set the regular MACOSX_DEPLOYMENT_TARGET
-variable during bootstrap and pkgsrc will ensure that SDK is used for both
-the bootstrap build as well as all packages built by those tools.
+To target a specific SDK, assuming it's available on your build host,
+set MACOSX_DEPLOYMENT_TARGET during bootstrap. The bootstrap tools and
+all subsequent packages built with those tools will use the specified SDK.
 
 -----
 
