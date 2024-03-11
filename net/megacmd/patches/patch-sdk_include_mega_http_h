@@ -1,0 +1,16 @@
+$NetBSD: patch-sdk_include_mega_http_h,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+* Add NetBSD support
+
+Index: sdk/include/mega/http.h
+--- sdk/include/mega/http.h.orig	2023-05-02 16:07:05.000000000 +0000
++++ sdk/include/mega/http.h
+@@ -42,7 +42,7 @@
+ #pragma warning(pop)
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <netinet/in.h>
+ #endif
+ 

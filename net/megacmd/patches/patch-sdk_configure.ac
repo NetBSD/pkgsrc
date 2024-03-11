@@ -1,0 +1,26 @@
+$NetBSD: patch-sdk_configure.ac,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+* mega-cmd-server not syncing with aio_write function,
+* workaround disable librt. #TODO
+
+--- sdk/configure.ac.orig	2024-02-27 08:17:47.102044837 +0000
++++ sdk/configure.ac
+@@ -1382,12 +1382,12 @@ if test "x$WIN32" = "xno" ; then
+     fi
+ 
+     # librt #TODO: allow --with-rt=...
+-    AC_CHECK_LIB([rt], [aio_write], [
+-    SAVE_LDFLAGS="-lrt $SAVE_LDFLAGS"
+-    LDFLAGS="-lrt $LDFLAGS"
+-    AC_DEFINE(HAVE_AIO_RT, [1], [Define to indicate AIO presence in librt])
+-    ],
+-    )
++    #AC_CHECK_LIB([rt], [aio_write], [
++    #SAVE_LDFLAGS="-lrt $SAVE_LDFLAGS"
++    #LDFLAGS="-lrt $LDFLAGS"
++    #AC_DEFINE(HAVE_AIO_RT, [1], [Define to indicate AIO presence in librt])
++    #],
++    #)
+ 
+     # OpenSSL
+     AC_MSG_CHECKING(for OpenSSL)
