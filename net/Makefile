@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1564 2024/03/09 06:49:49 adam Exp $
+# $NetBSD: Makefile,v 1.1565 2024/03/11 07:49:21 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -375,6 +375,7 @@ SUBDIR+=	mate-user-share
 SUBDIR+=	mbrowse
 SUBDIR+=	mcast-tools
 SUBDIR+=	md-whois
+SUBDIR+=	megacmd
 SUBDIR+=	megatools
 SUBDIR+=	messagelib
 SUBDIR+=	mikutter
