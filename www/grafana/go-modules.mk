@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.30 2024/02/20 12:43:19 jperkin Exp $
+# $NetBSD: go-modules.mk,v 1.31 2024/03/11 13:47:28 wiz Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	buf.build/gen/go/grpc-ecosystem/grpc-gateway/protocolbuffers/go/@v/v1.28.1-20221127060915-a1ecdc58eccd.4.mod
@@ -2213,8 +2213,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.10.0.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.11.0.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.14.mod
-GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.16.mod
-GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.16.zip
+GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.19.mod
+GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.19.zip
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.14.6.mod
 GO_MODULE_FILES+=	github.com/mattn/go-sqlite3/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/mattn/goveralls/@v/v0.0.2.mod
