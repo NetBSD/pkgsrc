@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.28 2024/01/28 13:23:46 wiz Exp $
+$NetBSD: distinfo,v 1.29 2024/03/11 09:11:01 jperkin Exp $
 
 BLAKE2s (taglib-2.0.tar.gz) = 6c3e1c191d88271214dd6fa24decf954a5e9e9308e8ac9cfa5175ab87b3ef1ea
 SHA512 (taglib-2.0.tar.gz) = 099d02b2eab033f5702a8cb03e70752d7523c6f8c2f3eebdd0bcd939eafbdca3f2a6c82452983904b5822cfa45f2707ed866c3419508df9d43bf5c0b3a476f6c
 Size (taglib-2.0.tar.gz) = 1429934 bytes
+SHA1 (patch-taglib_toolkit_taglib.h) = 1d59e929c53492e42f63b213f32d5f9b1cdff16e
