@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2024/02/04 09:23:44 markd Exp $
+$NetBSD: distinfo,v 1.7 2024/03/11 11:04:48 jperkin Exp $
 
 BLAKE2s (gpgme-1.23.2.tar.bz2) = 0a78553b4c97fcdb976fbd2e09023cf9ed4454369157823716866a5eb41ee451
 SHA512 (gpgme-1.23.2.tar.bz2) = 6cfcd07e81a93de240582de5a46545420cee93d1f27fe20ea2c983780fdd3036b69fdba073cf549d68a20791e189bf4b3cdde14a43f912d2ab9ef3414c83ac75
 Size (gpgme-1.23.2.tar.bz2) = 1836904 bytes
 SHA1 (patch-lang_qt_src_Makefile.in) = abf91c449143ab8bb4003aabf4d888614ab83241
+SHA1 (patch-lang_qt_src_threadedjobmixin.cpp) = 2256e8c58890e4c6001729424db07c8abb2b43f3
