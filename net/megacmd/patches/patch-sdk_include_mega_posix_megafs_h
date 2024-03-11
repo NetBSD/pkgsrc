@@ -1,0 +1,16 @@
+$NetBSD: patch-sdk_include_mega_posix_megafs_h,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+* Add NetBSD support
+
+Index: sdk/include/mega/posix/megafs.h
+--- sdk/include/mega/posix/megafs.h.orig
++++ sdk/include/mega/posix/megafs.h
+@@ -28,7 +28,7 @@
+ #define O_DIRECT 0
+ #include <sys/param.h>
+ #include <sys/mount.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/mount.h>
+ #else
+ #include <sys/vfs.h>
