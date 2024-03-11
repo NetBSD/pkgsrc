@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.63 2023/05/17 19:32:57 wiz Exp $
+# $NetBSD: tools.Darwin.mk,v 1.64 2024/03/11 14:11:24 schmonz Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -14,7 +14,17 @@ TOOLS_PLATFORM.bash?=		/bin/bash
 .if exists(/usr/bin/bsdtar)
 TOOLS_PLATFORM.bsdtar?=		/usr/bin/bsdtar
 .endif
-TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
+# CLT 15.3.0.0.1.1708646388 does not provide yacc. Check whether the
+# /usr/bin/yacc xcode-select stub's target exists before defaulting to it.
+.if !defined(OSX_PATH_TO_YACC)
+OSX_PATH_TO_YACC_cmd=		/usr/bin/xcrun --find yacc 2>/dev/null | \
+				sed -e 's|^/Library/Developer/CommandLineTools||'
+OSX_PATH_TO_YACC=		${OSX_PATH_TO_YACC_cmd:sh}
+.endif
+MAKEFLAGS+=			OSX_PATH_TO_YACC=${OSX_PATH_TO_YACC:Q}
+.if ${OSX_PATH_TO_YACC} != ""
+TOOLS_PLATFORM.byacc?=		${OSX_PATH_TO_YACC}
+.endif
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 .endif
@@ -88,7 +98,17 @@ TOOLS_PLATFORM.ksh?=		/bin/ksh
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
 TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
-TOOLS_PLATFORM.m4?=		/usr/bin/m4
+# CLT 15.3.0.0.1.1708646388 does not provide m4. Check whether the
+# /usr/bin/m4 xcode-select stub's target exists before defaulting to it.
+.if !defined(OSX_PATH_TO_M4)
+OSX_PATH_TO_M4_cmd=		/usr/bin/xcrun --find m4 2>/dev/null | \
+				sed -e 's|^/Library/Developer/CommandLineTools||'
+OSX_PATH_TO_M4=			${OSX_PATH_TO_M4_cmd:sh}
+.endif
+MAKEFLAGS+=			OSX_PATH_TO_M4=${OSX_PATH_TO_M4:Q}
+.if ${OSX_PATH_TO_M4} != ""
+TOOLS_PLATFORM.m4?=		${OSX_PATH_TO_M4}
+.endif
 TOOLS_PLATFORM.mail?=		/usr/bin/mail
 .if exists(/usr/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
@@ -142,4 +162,6 @@ TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.wish?=		/usr/bin/wish
 .endif
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
-TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
+.if ${OSX_PATH_TO_YACC} != ""
+TOOLS_PLATFORM.yacc?=		${OSX_PATH_TO_YACC}
+.endif
