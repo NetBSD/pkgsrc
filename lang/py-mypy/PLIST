@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2024/01/04 22:27:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/03/11 08:40:09 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -644,6 +644,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/copyreg.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/crypt.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/csv.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ctypes/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/ctypes/_endian.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ctypes/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ctypes/wintypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/curses/__init__.pyi
@@ -713,6 +714,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/doctest.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/_header_value_parser.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/email/_policybase.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/base64mime.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/charset.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/contentmanager.pyi
@@ -776,6 +778,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/imaplib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/imghdr.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/imp.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/_abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/machinery.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/__init__.pyi
@@ -870,7 +873,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/logging/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/logging/config.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/logging/handlers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/lzma.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/macpath.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mailbox.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/mailcap.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/marshal.pyi
@@ -1076,6 +1078,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/xml/parsers/expat/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/parsers/expat/errors.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/parsers/expat/model.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/_exceptions.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/handler.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/saxutils.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xml/sax/xmlreader.pyi
@@ -1084,7 +1087,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/xmlrpc/client.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xmlrpc/server.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/xxlimited.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zipapp.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/zipfile.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/zipfile/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/zipfile/_path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zipimport.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/__init__.pyi
