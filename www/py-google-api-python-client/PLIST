@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.24 2024/02/11 20:06:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/03/11 13:17:08 wiz Exp $
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -336,6 +336,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/manufacturers.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/marketingplatformadmin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
