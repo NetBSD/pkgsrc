@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/01/05 22:05:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/03/11 15:11:59 ryoon Exp $
 bin/fix-qdf
 bin/qpdf
 bin/zlib-flate
@@ -66,6 +66,7 @@ include/qpdf/auto_job_c_copy_att.hh
 include/qpdf/auto_job_c_enc.hh
 include/qpdf/auto_job_c_main.hh
 include/qpdf/auto_job_c_pages.hh
+include/qpdf/auto_job_c_set_page_labels.hh
 include/qpdf/auto_job_c_uo.hh
 include/qpdf/qpdf-c.h
 include/qpdf/qpdfjob-c.h
@@ -77,7 +78,7 @@ lib/cmake/qpdf/qpdfConfigVersion.cmake
 lib/libqpdf.a
 lib/libqpdf.so
 lib/libqpdf.so.29
-lib/libqpdf.so.29.7.0
+lib/libqpdf.so.29.9.0
 lib/pkgconfig/libqpdf.pc
 man/man1/fix-qdf.1
 man/man1/qpdf.1
