@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/11 07:52:38 wiz Exp $
+bin/yasr
+man/man1/yasr.1
+share/locale/es/LC_MESSAGES/yasr.mo
+share/locale/fr/LC_MESSAGES/yasr.mo
+share/yasr/yasr.conf
