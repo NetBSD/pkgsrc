@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.325 2024/02/11 15:31:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.326 2024/03/11 15:05:04 ryoon Exp $
 
-VERREL=		24.2.0
-VERRC=		3
+VERREL=		24.2.1
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -267,13 +267,6 @@ CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
 CONFIGURE_ARGS+=	--with-system-libtommath
 CONFIGURE_ARGS+=	--with-system-openjpeg
 #CONFIGURE_ARGS+=	--with-help
-
-# more REPLACE_PERL are needed.
-REPLACE_PERL=	sd/res/webview/editpic.pl
-REPLACE_PERL+=	sd/res/webview/poll.pl
-REPLACE_PERL+=	sd/res/webview/savepic.pl
-REPLACE_PERL+=	sd/res/webview/show.pl
-REPLACE_PERL+=	sd/res/webview/webcast.pl
 
 LO_PROGRAMS=		libreoffice lobase localc lodraw loffice
 LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.149 2024/02/11 15:31:58 ryoon Exp $
+$NetBSD: distinfo,v 1.150 2024/03/11 15:05:04 ryoon Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -165,15 +165,15 @@ Size (libreoffice/liberation-narrow-fonts-ttf-1.07.6.tar.gz) = 300832 bytes
 BLAKE2s (libreoffice/libre-hebrew-1.0.tar.gz) = 0cf1aade1aa45f923b05b4c0c2378ad8fe954b6b56913ef8b263403696853679
 SHA512 (libreoffice/libre-hebrew-1.0.tar.gz) = 609c8ef29a1eab9b027ea04abf14949e9a204cf826fb0a792dadd8a83fc49ac9610a0b3a2bd4b8988e615688c63d0ec08a89436134980b2a9667e8966a75a795
 Size (libreoffice/libre-hebrew-1.0.tar.gz) = 531276 bytes
-BLAKE2s (libreoffice/libreoffice-24.2.0.3.tar.xz) = eff151567055dbca81397ac0dfa69abb154dd76abca0fa90e2d625faa53bbce8
-SHA512 (libreoffice/libreoffice-24.2.0.3.tar.xz) = a89617761051d30829cedaaf865974979b1a444f72a208fdeafdd5806741abccc7d239c291f71fdaf46a039ed3060b51592cffb9db6fbc6a795e8eaaa3d2e61e
-Size (libreoffice/libreoffice-24.2.0.3.tar.xz) = 280356652 bytes
-BLAKE2s (libreoffice/libreoffice-dictionaries-24.2.0.3.tar.xz) = 4f0e1a5ffbdce67af23f3477fb00893e008edce8a5d01985ae4eed6474357264
-SHA512 (libreoffice/libreoffice-dictionaries-24.2.0.3.tar.xz) = c748cfafbfd7c17c81096ed445c4c2ef0937b24ef089ebadcaaf2f4f6a9801ab809ff98ed7dba8a7a176724b093c4fcb28908154eab25b1c8979d7252143b56d
-Size (libreoffice/libreoffice-dictionaries-24.2.0.3.tar.xz) = 53881924 bytes
-BLAKE2s (libreoffice/libreoffice-translations-24.2.0.3.tar.xz) = 38528f60b150ec1323422a5c82801da2fe67150531fc317fc7641607339d7be4
-SHA512 (libreoffice/libreoffice-translations-24.2.0.3.tar.xz) = f9f88750486070def0033a0eee827405d7b6f54e876267e1640d2b30fae8cb89daee24cac5863cbe386c79ce96da12e13f71af712d8d412e1d7774e50be1621e
-Size (libreoffice/libreoffice-translations-24.2.0.3.tar.xz) = 220379748 bytes
+BLAKE2s (libreoffice/libreoffice-24.2.1.2.tar.xz) = cf0074e9fe0d1fd50aade98ba1e4f67b1de582a028584131eed53fc10750144d
+SHA512 (libreoffice/libreoffice-24.2.1.2.tar.xz) = 650a61a56759109a17e65bcd31b9876b19ac7c71996854566ea8f6e8039276bd29173c80b3a2d4466cd2c6fcb63d4b95f3d4c78bd7ad22bdd190b801b5665a56
+Size (libreoffice/libreoffice-24.2.1.2.tar.xz) = 280349652 bytes
+BLAKE2s (libreoffice/libreoffice-dictionaries-24.2.1.2.tar.xz) = 19762a8fc90bdd9917641d962ba88982e25e6d985cba0c381ba80d8f8f1ce7ac
+SHA512 (libreoffice/libreoffice-dictionaries-24.2.1.2.tar.xz) = ba8cd1ef205f5ce1d0f48255fa069fea5adf0ecc04c0cbb5df53e0c4fe01dad878b1b067f9d7110ba8c607efe6cd167c7d58082f1bf805d508b155642475c2b9
+Size (libreoffice/libreoffice-dictionaries-24.2.1.2.tar.xz) = 53882616 bytes
+BLAKE2s (libreoffice/libreoffice-translations-24.2.1.2.tar.xz) = c09916459698e013570d454e15732239b3df97fda23a43ed05a2751c9f9d1f2f
+SHA512 (libreoffice/libreoffice-translations-24.2.1.2.tar.xz) = 70593e2ae7376d19a7a4bfe270755562afe03d96489453739d030805cd4b76a5906853132a89b47b93f2c509fab42162b066b3189f5e791e76eee0c574d0adcd
+Size (libreoffice/libreoffice-translations-24.2.1.2.tar.xz) = 220528884 bytes
 BLAKE2s (libreoffice/lxml-4.1.1.tgz) = 8ab1ddfc30f21c433da04723d9092cd4e938cd5a5380310e8089e959a690d294
 SHA512 (libreoffice/lxml-4.1.1.tgz) = 9542e5206f9b2f9e072c52ef8e6cf44d1aaae8ae3e7ca7e820c1fac12e716503308ccb3cebc52155b4c93799f3ebca247781fc491524d004378bd26f5cddb9d1
 Size (libreoffice/lxml-4.1.1.tgz) = 2380804 bytes
