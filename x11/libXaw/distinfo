@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/03/16 07:19:22 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/03/11 08:59:16 wiz Exp $
 
-BLAKE2s (libXaw-1.0.15.tar.xz) = 0f0e8295205a6a315084461f9226b8a1453af925400f407c3186e5423bcd9990
-SHA512 (libXaw-1.0.15.tar.xz) = 8edbf280b7b24b9040c291545053c1251d6af7e7f56da43a6065a1848245863eb52bdfc28c2f18dbb6597a4064394a44f4df5d8596a1a467549ccc9ce50a7821
-Size (libXaw-1.0.15.tar.xz) = 589832 bytes
+BLAKE2s (libXaw-1.0.16.tar.xz) = 409632464b2c0090aa6e7bf6bdde3b77c128ca065a479e7a89cba8a45a72196d
+SHA512 (libXaw-1.0.16.tar.xz) = 1cabad1a9b06dec7de601b977e844536823ee1a0045244acc42ca6b6107da9b4953736d94898a96cab40845eab77dae21e20e1fa66a3dfc4dedf575dfbca04aa
+Size (libXaw-1.0.16.tar.xz) = 602848 bytes
