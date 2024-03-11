@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/11/15 18:14:10 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/03/11 09:33:10 adam Exp $
 
-DISTNAME=	yarn-v1.22.21
+DISTNAME=	yarn-v1.22.22
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yarnpkg/}
