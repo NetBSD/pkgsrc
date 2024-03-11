@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/12/30 12:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/03/11 14:39:48 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -34,6 +34,7 @@ INSTALL_DIRS=		utils
 
 MAKE_ENV+=		PTHREAD_STUBLIB=
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
