@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1818 2024/03/11 13:16:13 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1819 2024/03/11 13:17:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/ghostscript-cidfonts-ryumin to 10.03.0 [wiz 2024-03-11]
 	Updated security/keepassxc to 2.7.7 [wiz 2024-03-11]
 	Updated graphics/openexr to 3.2.3 [wiz 2024-03-11]
+	Updated www/py-google-api-python-client to 2.121.0 [wiz 2024-03-11]
