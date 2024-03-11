@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1805 2024/03/10 15:22:48 taca Exp $
+$NetBSD: CHANGES-2024,v 1.1806 2024/03/11 06:56:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3074,3 +3074,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-aws-partitions to 1.896.0 [taca 2024-03-10]
 	Updated devel/ruby-redmine50 to 5.0.8 [taca 2024-03-10]
 	Updated devel/ruby-redmine51 to 5.1.2 [taca 2024-03-10]
+	Updated databases/py-redis to 5.0.3 [adam 2024-03-11]
+	Updated devel/py-flaky to 3.8.0 [adam 2024-03-11]
+	Updated security/py-OpenSSL to 24.1.0 [adam 2024-03-11]
+	Updated textproc/py-html-sanitizer to 2.3.1 [adam 2024-03-11]
