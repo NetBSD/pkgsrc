@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.75 2024/03/09 21:49:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.76 2024/03/11 17:01:07 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.8
@@ -33,6 +33,7 @@ CARGO_CRATE_DEPENDS+=	bytemuck-1.14.3
 CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.90
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
+CARGO_CRATE_DEPENDS+=	cfg_aliases-0.1.1
 CARGO_CRATE_DEPENDS+=	char_reader-0.1.1
 CARGO_CRATE_DEPENDS+=	chrono-0.4.35
 CARGO_CRATE_DEPENDS+=	clap-4.5.2
@@ -144,6 +145,7 @@ CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.2
 CARGO_CRATE_DEPENDS+=	mio-0.8.11
 CARGO_CRATE_DEPENDS+=	nix-0.22.3
 CARGO_CRATE_DEPENDS+=	nix-0.26.4
+CARGO_CRATE_DEPENDS+=	nix-0.28.0
 CARGO_CRATE_DEPENDS+=	normpath-1.2.0
 CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.18
@@ -226,7 +228,7 @@ CARGO_CRATE_DEPENDS+=	syntect-no-panic-4.6.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.10.1
 CARGO_CRATE_DEPENDS+=	termimad-0.29.1
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.4.1
-CARGO_CRATE_DEPENDS+=	terminal-light-1.3.0
+CARGO_CRATE_DEPENDS+=	terminal-light-1.4.0
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.57
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.57
@@ -311,6 +313,7 @@ CARGO_CRATE_DEPENDS+=	x11rb-protocol-0.12.0
 CARGO_CRATE_DEPENDS+=	xmlparser-0.13.6
 CARGO_CRATE_DEPENDS+=	xmlwriter-0.1.0
 CARGO_CRATE_DEPENDS+=	xterm-query-0.3.0
+CARGO_CRATE_DEPENDS+=	xterm-query-0.4.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
 CARGO_CRATE_DEPENDS+=	zerocopy-0.7.32
 CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.32
