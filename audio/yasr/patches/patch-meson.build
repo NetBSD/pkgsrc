@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2024/03/11 07:52:38 wiz Exp $
+
+Add test for necessary headers
+
+--- meson.build.orig	2023-04-08 21:22:57.000000000 +0000
++++ meson.build
+@@ -26,7 +26,7 @@ localedir = join_paths(prefix, get_optio
+ conf.set_quoted('LOCALEDIR', localedir)
+ 
+ foreach h : [ 'fcntl.h', 'sys/ioctl.h', 'sys/time.h', 'unistd.h',  'utmpx.h',
+-  'pty.h', 'locale.h']
++  'util.h', 'libutil.h', 'pty.h', 'locale.h']
+   if cc.check_header(h)
+     conf.set('HAVE_@0@'.format(h.underscorify().to_upper()), 1)
+   endif
