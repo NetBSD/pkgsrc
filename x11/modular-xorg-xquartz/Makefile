@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/03/11 21:49:58 schmonz Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 PKGREVISION=	2
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
+USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf m4
 USE_LANGUAGES=	c c++ objc
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
