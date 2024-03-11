@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2024/03/09 21:21:10 vins Exp $
+# $NetBSD: Makefile,v 1.693 2024/03/11 07:52:52 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -499,6 +499,7 @@ SUBDIR+=	xmms-wma
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
 SUBDIR+=	xwave
+SUBDIR+=	yasr
 SUBDIR+=	ykchorus
 SUBDIR+=	ympd
 SUBDIR+=	ymuse
