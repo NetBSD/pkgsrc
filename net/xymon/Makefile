@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/11/14 14:02:42 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/03/11 10:47:29 jperkin Exp $
 #
 
 DISTNAME=		xymon-4.3.30
@@ -127,6 +127,11 @@ SUBST_CLASSES+=		bashpath
 SUBST_FILES.bashpath=	xymond/xymonreports.sh.DIST
 SUBST_SED.bashpath=	-e 's,/bin/bash,'${BASH:Q}','
 SUBST_STAGE.bashpath=	pre-configure
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	build/c-ares.sh
+SUBST_VARS.vars=	COMPILER_RPATH_FLAG
 
 USE_TOOLS+=	awk:run		cat:run		cp:run
 USE_TOOLS+=	cut:run		date:run	egrep:run

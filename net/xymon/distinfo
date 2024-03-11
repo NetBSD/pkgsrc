@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2022/12/07 08:15:59 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2024/03/11 10:47:29 jperkin Exp $
 
 BLAKE2s (xymon-4.3.30.tar.gz) = 03a385a0e32188d4ca6fdbaa55bbb92d053ec706ee70ca0bcf483c3f5611a85f
 SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
@@ -21,6 +21,7 @@ SHA1 (patch-build_Makefile.OSX) = a72b748600b043f458452ab37175c38087375559
 SHA1 (patch-build_Makefile.OpenBSD) = cf40c7839ba6290d349328e2e01a20bdaf274fc6
 SHA1 (patch-build_Makefile.SunOS) = 71d134a30825a2d36fbb17731e722c89c79da807
 SHA1 (patch-build_Makefile.generic) = e96d5ee29630c9133caebfa752880be90726607c
+SHA1 (patch-build_c-ares.sh) = c958992639b45431056d91939a345e703131ca2d
 SHA1 (patch-build_rrd.sh) = cfafece75defb13b413917bfddedb41cb9bb3c8b
 SHA1 (patch-build_snmp.sh) = 4141c6e2bebea078ac662b7585e579f2af8ee64f
 SHA1 (patch-common_Makefile) = 32b7da06cd9d22f98ee0f83bb36ed6441c066707
