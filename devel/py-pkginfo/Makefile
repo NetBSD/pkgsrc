@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/03/11 13:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/03/11 13:20:11 wiz Exp $
 
 DISTNAME=	pkginfo-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
