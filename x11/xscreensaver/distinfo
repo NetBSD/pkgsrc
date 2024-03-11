@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2024/02/08 00:51:39 gutteridge Exp $
+$NetBSD: distinfo,v 1.94 2024/03/11 10:58:45 jperkin Exp $
 
 BLAKE2s (xscreensaver-6.08.tar.gz) = f506866c4be3430d5c252f6b6a9f4d99f1e58e59c332770202903dee7f558c37
 SHA512 (xscreensaver-6.08.tar.gz) = a333d4921ed3a8219f3b672dd68543aea31fcd64ea6766143f1c7f6e5ed3bc7122355635d5afba1632457ad71a11cabdc7b2756431e4f1dc7e0426ae0896e6db
@@ -6,3 +6,4 @@ Size (xscreensaver-6.08.tar.gz) = 19990058 bytes
 SHA1 (patch-configure) = 4821b6f4400976990b6042677960a53e25f03a24
 SHA1 (patch-driver_xscreensaver-settings.desktop.in) = 524d54cbc0e6baf491a176955fce75076240a395
 SHA1 (patch-driver_xscreensaver.desktop.in) = 2cd34016e705da23e54e32d7b282f1388f0e0419
+SHA1 (patch-hacks_glx_papercube.c) = cd26c73e5997635c8aba83db5c56217e5259d505
