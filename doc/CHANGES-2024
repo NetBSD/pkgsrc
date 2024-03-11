@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1830 2024/03/11 17:01:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1831 2024/03/11 17:02:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/qpdf to 11.9.0 [ryoon 2024-03-11]
 	Updated devel/ast-grep to 0.19.4 [pin 2024-03-11]
 	Updated sysutils/broot to 1.36.1 [pin 2024-03-11]
+	Updated sysutils/dua-cli to 2.29.0 [pin 2024-03-11]
