@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1809 2024/03/11 07:53:01 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1810 2024/03/11 08:04:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/joker to 1.3.5 [wiz 2024-03-11]
 	Added net/megacmd version 1.6.3 [wiz 2024-03-11]
 	Added audio/yasr version 0.0.0.144 [wiz 2024-03-11]
+	Added audio/espeak-ng version 1.51 [wiz 2024-03-11]
