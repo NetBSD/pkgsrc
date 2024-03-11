@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2024/02/15 13:24:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/03/11 13:47:28 wiz Exp $
 bin/grafana
 bin/grafana-cli
 bin/grafana-server
@@ -2522,6 +2522,7 @@ share/grafana/public/app/features/plugins/loader/sharedDependencies.ts
 share/grafana/public/app/features/plugins/loader/systemjsHooks.test.ts
 share/grafana/public/app/features/plugins/loader/systemjsHooks.ts
 share/grafana/public/app/features/plugins/loader/types.ts
+share/grafana/public/app/features/plugins/loader/utils.test.ts
 share/grafana/public/app/features/plugins/loader/utils.ts
 share/grafana/public/app/features/plugins/pluginPreloader.ts
 share/grafana/public/app/features/plugins/pluginSettings.test.ts
@@ -5008,8 +5009,8 @@ share/grafana/public/app/types/user.ts
 share/grafana/public/app/types/window.d.ts
 share/grafana/public/build/1145.67777936342359a6e12f.js
 share/grafana/public/build/1145.67777936342359a6e12f.js.map
-share/grafana/public/build/1185.b1d1337cc9eb34d55407.js
-share/grafana/public/build/1185.b1d1337cc9eb34d55407.js.map
+share/grafana/public/build/1185.f04952bc88313f6b38c6.js
+share/grafana/public/build/1185.f04952bc88313f6b38c6.js.map
 share/grafana/public/build/1188.7ad5a07c2e1203031574.js
 share/grafana/public/build/1188.7ad5a07c2e1203031574.js.map
 share/grafana/public/build/1284.e64ad6552d23a39e9099.js
@@ -5161,8 +5162,8 @@ share/grafana/public/build/4782.236645f6d771deeee7c8.js
 share/grafana/public/build/4782.236645f6d771deeee7c8.js.map
 share/grafana/public/build/4803.5e25bfefe13bb5c2695b.js
 share/grafana/public/build/4803.5e25bfefe13bb5c2695b.js.map
-share/grafana/public/build/4867.2722a98f978b185a38cc.js
-share/grafana/public/build/4867.2722a98f978b185a38cc.js.map
+share/grafana/public/build/4867.b6e57938b6806a5af8e2.js
+share/grafana/public/build/4867.b6e57938b6806a5af8e2.js.map
 share/grafana/public/build/49.6e1ee3366a4498e00b52.js
 share/grafana/public/build/49.6e1ee3366a4498e00b52.js.map
 share/grafana/public/build/5001.885ffb427c1306081934.js
@@ -5225,8 +5226,8 @@ share/grafana/public/build/6408.31cf16f75c769076ddac.js
 share/grafana/public/build/6408.31cf16f75c769076ddac.js.map
 share/grafana/public/build/6419.f5f256706957a4c2c84e.js
 share/grafana/public/build/6419.f5f256706957a4c2c84e.js.map
-share/grafana/public/build/6533.c94b73447af14e13f844.js
-share/grafana/public/build/6533.c94b73447af14e13f844.js.map
+share/grafana/public/build/6533.edabc9f89ac52daa97a6.js
+share/grafana/public/build/6533.edabc9f89ac52daa97a6.js.map
 share/grafana/public/build/6597.5111e0ce9b5a88d64f93.js
 share/grafana/public/build/6597.5111e0ce9b5a88d64f93.js.map
 share/grafana/public/build/6631.f31ad8e9fca3b75acc8d.js
@@ -5301,8 +5302,8 @@ share/grafana/public/build/834.4ad8f80835e7570ece7c.js
 share/grafana/public/build/834.4ad8f80835e7570ece7c.js.map
 share/grafana/public/build/836.4786abecb5610df7d075.js
 share/grafana/public/build/836.4786abecb5610df7d075.js.map
-share/grafana/public/build/8378.36d9cd16557e09d3c339.js
-share/grafana/public/build/8378.36d9cd16557e09d3c339.js.map
+share/grafana/public/build/8378.e2236a61f80bb061f98d.js
+share/grafana/public/build/8378.e2236a61f80bb061f98d.js.map
 share/grafana/public/build/8389.3c256bde80a4f7fa78a1.js
 share/grafana/public/build/8389.3c256bde80a4f7fa78a1.js.map
 share/grafana/public/build/8390.c60cb1217b0570eadaaa.js
@@ -5509,8 +5510,8 @@ share/grafana/public/build/elasticsearchPlugin.33a3fa3a36d580167bc3.js
 share/grafana/public/build/elasticsearchPlugin.33a3fa3a36d580167bc3.js.map
 share/grafana/public/build/explore-feature-toggle-page.7562bfffa5b412433e65.js
 share/grafana/public/build/explore-feature-toggle-page.7562bfffa5b412433e65.js.map
-share/grafana/public/build/explore.912acd25b8df4488f4c7.js
-share/grafana/public/build/explore.912acd25b8df4488f4c7.js.map
+share/grafana/public/build/explore.9ffb15435d3959a74672.js
+share/grafana/public/build/explore.9ffb15435d3959a74672.js.map
 share/grafana/public/build/geomapPanel.84d28dfd14d8d955f158.js
 share/grafana/public/build/geomapPanel.84d28dfd14d8d955f158.js.map
 share/grafana/public/build/grafana.dark.c0d1447bd4b364f17590.css
@@ -5550,8 +5551,8 @@ share/grafana/public/build/pyroscopePlugin.d692a6290d384a4e8f4c.js
 share/grafana/public/build/pyroscopePlugin.d692a6290d384a4e8f4c.js.map
 share/grafana/public/build/react-monaco-editor.d64112168b89babd51d2.js
 share/grafana/public/build/react-monaco-editor.d64112168b89babd51d2.js.map
-share/grafana/public/build/runtime.51f74f90e35b6fa2a523.js
-share/grafana/public/build/runtime.51f74f90e35b6fa2a523.js.map
+share/grafana/public/build/runtime.0b3bc80a305231c4129c.js
+share/grafana/public/build/runtime.0b3bc80a305231c4129c.js.map
 share/grafana/public/build/scenes.ba84e2d490fe5901ac47.js
 share/grafana/public/build/scenes.ba84e2d490fe5901ac47.js.map
 share/grafana/public/build/static/img/AI_Logo_color.1dc03fee.svg
@@ -7290,6 +7291,7 @@ share/grafana/public/img/plugins/jira_logo.png
 share/grafana/public/img/plugins/mongodb.svg
 share/grafana/public/img/plugins/newrelic.svg
 share/grafana/public/img/plugins/oracle.png
+share/grafana/public/img/plugins/pagerduty.svg
 share/grafana/public/img/plugins/salesforce.svg
 share/grafana/public/img/plugins/sap_hana.png
 share/grafana/public/img/plugins/servicenow.svg

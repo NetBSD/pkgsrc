@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2024/02/20 12:43:19 jperkin Exp $
+$NetBSD: distinfo,v 1.47 2024/03/11 13:47:28 wiz Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -6639,12 +6639,12 @@ Size (github.com_mattn_go-sqlite3_@v_v1.11.0.mod) = 35 bytes
 BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.14.mod) = ba1da6cd75fe3ae7f79271852930389896bb6c63e60f1b809f483b49b36c8acb
 SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.14.mod) = e7572c4b152f83a58c81e374c109eb5b80514c63d9f02f7adc2bc23e8bc81dfaefe6f1ed079b65ecbebbe118a3423c2124f0b619378b8b237ff0a6cc687e1952
 Size (github.com_mattn_go-sqlite3_@v_v1.14.14.mod) = 44 bytes
-BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.16.mod) = 4f03acb8990eef3a58b024a26151d68a68dc8fb067f4a4c7ce213c5e4627a169
-SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.16.mod) = 3b5a127bcc011fd8a0aaca22cf3aae8082a5971044b3c72312ffee38f5ee61c3740ab6a12285684307d3ce679eb7e64faef45b3393da8f934e7310bd1bb70a77
-Size (github.com_mattn_go-sqlite3_@v_v1.14.16.mod) = 146 bytes
-BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.16.zip) = 1cf13a332222dabf5e0c380b44397a436198b498dff7eac5d6d7be41c6e17132
-SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.16.zip) = e209ddb242cc0217a364f821eeb90222fe6f5e8ef41593b95706c2150a2527bc7a6de93948f175f5a25807850cbd9bdef343be3228a370f4fb8d24b4ef9dcbee
-Size (github.com_mattn_go-sqlite3_@v_v1.14.16.zip) = 2544153 bytes
+BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.19.mod) = 4f03acb8990eef3a58b024a26151d68a68dc8fb067f4a4c7ce213c5e4627a169
+SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.19.mod) = 3b5a127bcc011fd8a0aaca22cf3aae8082a5971044b3c72312ffee38f5ee61c3740ab6a12285684307d3ce679eb7e64faef45b3393da8f934e7310bd1bb70a77
+Size (github.com_mattn_go-sqlite3_@v_v1.14.19.mod) = 146 bytes
+BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.19.zip) = 848b8c59dc114354aff026133f5e97f64d2d416be051f88c060bf5a07403ef59
+SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.19.zip) = e002b3697569ca752d259fb028208bac659415ec7e504360ce6d73c24e05f88e32e63b78f77d88f126e33eb1d5e8935bdedd8ff75527c9c9d5db6fad6954f558
+Size (github.com_mattn_go-sqlite3_@v_v1.14.19.zip) = 2644967 bytes
 BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.6.mod) = ba1da6cd75fe3ae7f79271852930389896bb6c63e60f1b809f483b49b36c8acb
 SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.6.mod) = e7572c4b152f83a58c81e374c109eb5b80514c63d9f02f7adc2bc23e8bc81dfaefe6f1ed079b65ecbebbe118a3423c2124f0b619378b8b237ff0a6cc687e1952
 Size (github.com_mattn_go-sqlite3_@v_v1.14.6.mod) = 44 bytes
@@ -12060,12 +12060,12 @@ Size (gotest.tools_v3_@v_v3.0.2.mod) = 194 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.0.3.mod) = 139458d80f28acbdd716ff629a2b16f184569b6ee0988096a9272bc81764ac7e
 SHA512 (gotest.tools_v3_@v_v3.0.3.mod) = 027bab5202a25d01ab9b9a87feaf66333ef376daa9c5c12d5bfeaf1624537a895e770c8e927a474589b23af2456d2a7f5a03708f80464cdb3351a64981a4a9dd
 Size (gotest.tools_v3_@v_v3.0.3.mod) = 194 bytes
-BLAKE2s (grafana-10.3.3.linux-amd64.tar.gz) = 415ebc70127afd963ec20c703599a426790d1aded564ce8bb618ab8624747ce9
-SHA512 (grafana-10.3.3.linux-amd64.tar.gz) = 2645fe259e602395c7f37e06f95c9c893e65fa57e6b6be00d7f947858e8a3ed8ae6cb0e2ff2631cb51028e872338682eba06b688c1019e4d03697450032d9ba0
-Size (grafana-10.3.3.linux-amd64.tar.gz) = 111176835 bytes
-BLAKE2s (grafana-10.3.3.tar.gz) = cc1d7b29c4974db7c022d55d75bcc6c5b336ea3226a1bee54a2df206da2847ee
-SHA512 (grafana-10.3.3.tar.gz) = 96c3900cf2199b14ab27e4134dfb81e65dbec3bab6115ce66276243a54c8e3e06aeb0cc48fe92a01bb12fca3a06c6219a5918b96a2108bfd77167d325dd7f43d
-Size (grafana-10.3.3.tar.gz) = 28275319 bytes
+BLAKE2s (grafana-10.3.4.linux-amd64.tar.gz) = b89e3b418fcb39304d70d6828e2611cf0407fc410036ccc54286504c38c5ab49
+SHA512 (grafana-10.3.4.linux-amd64.tar.gz) = dd2814ba289c71cfb06beff107cf24cb223da929e0ed68b56fd2d4889615a09f04a03b42f4b598a70c3171e1c54e4523ee95114f2609f10bb897445db96d451b
+Size (grafana-10.3.4.linux-amd64.tar.gz) = 111307695 bytes
+BLAKE2s (grafana-10.3.4.tar.gz) = 754b0f85239bb2267dc5d41652b54e63a9652f75816e2ffd8a4456906a7c0827
+SHA512 (grafana-10.3.4.tar.gz) = 2e929e670e670b329c4ffc7802fa910413cd30027baa962e3ae4039495c383fe56e7b76968da8466cc1db7ff5935e8d110e40a9ca00764e4f145409b341b1e71
+Size (grafana-10.3.4.tar.gz) = 28290907 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20180728063816-88497007e858.mod) = 26 bytes
