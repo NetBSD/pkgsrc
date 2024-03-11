@@ -1,0 +1,16 @@
+$NetBSD: patch-sdk_Makefile.am,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+* Add NetBSD support
+
+--- sdk/Makefile.am.orig	2023-05-02 16:07:05.000000000 +0000
++++ sdk/Makefile.am
+@@ -42,9 +42,7 @@ if ANDROID
+ AM_LIBTOOLFLAGS="--tag=CXX"
+ endif
+ 
+-if LINUX
+ AM_LIBTOOLFLAGS="--tag=CXX"
+-endif
+ 
+ VERSION_INFO=$(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 

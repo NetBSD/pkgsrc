@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+BLAKE2s (megacmd-1.6.3.tar.gz) = c3df7a71184d4bc373e41273361e1a9818881d1b4b00ca4703fa1c199cd7093c
+SHA512 (megacmd-1.6.3.tar.gz) = 425584a1350e5965aea8a09076bb447b4d6a00fc0305e9a19ad91ed8292eae5b758e4c1a41ea7c0887c2f8e0644cf1d1154e3b33503ddcf4713e4a13dd80a6f6
+Size (megacmd-1.6.3.tar.gz) = 2085751 bytes
+BLAKE2s (meganz-sdk-v4.17.1d.tar.gz) = e3490a45338f2d1b62cbc607e80aa806906cc693ca8428b77973340bfba9ac39
+SHA512 (meganz-sdk-v4.17.1d.tar.gz) = bc67910b0a5fbbe9bb5d9d6ef9a746f1762dbb9968d9c825fd0ede256ab674670d804c2d99c9c472f72b2f06fd2bac4765bd7fa7dbebb3746cd1e1cfd780d71c
+Size (meganz-sdk-v4.17.1d.tar.gz) = 3695020 bytes
+SHA1 (patch-Makefile.am) = e6e092d8da00df3d2d73e542de61bea37336e9df
+SHA1 (patch-sdk_Makefile.am) = 8fedc590e7423e8a32d3cbe47b9503e8b197cf04
+SHA1 (patch-sdk_configure.ac) = 264edd914b05e24221a2fdd1c9890920f3f00521
+SHA1 (patch-sdk_include_mega_http_h) = 6d2acb2bdfe444d94c27ee523c9499f73f2fb5fe
+SHA1 (patch-sdk_include_mega_posix_megafs_h) = 69b099d0e8b5ac54c70808ec825d834d9edac2a9
+SHA1 (patch-sdk_src_http.cpp) = 23ebb74d092c27ed26c34c41c5a812a1ba835933
+SHA1 (patch-sdk_src_posix_fs.cpp) = a6e2b45e8e4740ae4eb362a11e165b7740daf7c2
+SHA1 (patch-src_include.am) = bd7f0899704b10e5c043ecd075adb750683f2272
+SHA1 (patch-src_megacmdshell_megacmdshellcommunications_cpp) = 99610633144ae5bcfcfbc52da43797c70ab9dd53
