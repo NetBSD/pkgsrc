@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1821 2024/03/11 13:21:10 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1822 2024/03/11 13:30:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3095,3 +3095,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-google-api-python-client to 2.121.0 [wiz 2024-03-11]
 	Updated textproc/py-pdf to 4.1.0 [wiz 2024-03-11]
 	Updated devel/py-pkginfo to 1.10.0 [wiz 2024-03-11]
+	Updated devel/py-ruff to 0.3.2 [wiz 2024-03-11]
