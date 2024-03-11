@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/03/10 21:02:21 vins Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/11 14:01:13 vins Exp $
 
 DISTNAME=	sdorfehs-1.5
 PKGREVISION=	3
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	Makefile
-SUBST_VARS.prefix=	PKGMANDIR PREFIX
+SUBST_VARS.prefix=	CC PKGMANDIR PREFIX
 
 INSTALLATION_DIRS=	bin/ ${PKGMANDIR}/man1/
 
