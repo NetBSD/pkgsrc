@@ -145,7 +145,7 @@ dca			Enable DTS Coherent Acoustics support using libdca.
 debug			Enable debugging facilities in the package.
 debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
 deliver-suid		Install deliver executable setuid root.
-disable-compile-inits	Disable compile time implicit initialization.
+disable-compile-inits	Ghostscript: do not include some data into the compiled binary, read it from the file system instead.
 disable-filter-url	Disable php://filter URL feature.
 disable-ld		Disable building GNU ld in binutils.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
