@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/02/07 14:50:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/11 07:44:15 wiz Exp $
 
-DISTNAME=	joker-1.3.4
-PKGREVISION=	2
+DISTNAME=	joker-1.3.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=candid82/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kevin.bloom@posteo.net
+MAINTAINER=	ktnb@posteo.net
 HOMEPAGE=	https://joker-lang.org/
 COMMENT=	Clojure dialect and linter
 LICENSE=	epl-v1.0
