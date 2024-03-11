@@ -843,7 +843,8 @@ socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 softhsm			Enable SoftHSM for key management.
 softhsm2		Enable SoftHSM version 2 for key management.
-spacetime		Enable memory profiling with Spacetime
+sonic			Enable Sonic audio algorithm support.
+spacetime		Enable memory profiling with Spacetime.
 spamassassin		Enable SpamAssassin support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
 spamassassin-taint-checks	Enable Perl taint checks to improve security.
