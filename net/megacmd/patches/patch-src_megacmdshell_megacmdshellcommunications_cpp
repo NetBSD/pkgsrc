@@ -1,0 +1,16 @@
+$NetBSD: patch-src_megacmdshell_megacmdshellcommunications_cpp,v 1.1 2024/03/11 07:49:12 wiz Exp $
+
+* Add NetBSD support
+
+Index: src/megacmdshell/megacmdshellcommunications.cpp
+--- src/megacmdshell/megacmdshellcommunications.cpp.orig
++++ src/megacmdshell/megacmdshellcommunications.cpp
+@@ -54,7 +54,7 @@
+ #include <limits.h>
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <netinet/in.h>
+ #endif
+ 
