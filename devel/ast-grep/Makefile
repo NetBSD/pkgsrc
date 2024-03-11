@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/02/26 18:58:01 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/03/11 16:59:57 pin Exp $
 
-DISTNAME=	ast-grep-0.19.3
+DISTNAME=	ast-grep-0.19.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ast-grep/}
 
