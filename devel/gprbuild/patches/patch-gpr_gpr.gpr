@@ -1,0 +1,16 @@
+$NetBSD: patch-gpr_gpr.gpr,v 1.1 2024/03/12 17:50:13 wiz Exp $
+
+Fix link time warning on NetBSD
+
+--- gpr/gpr.gpr.orig	2023-10-09 21:31:11.000000000 +0300
++++ gpr/gpr.gpr	2024-03-12 10:52:35.183409588 +0200
+@@ -87,7 +87,8 @@
+              for Body ("GPR.Jobserver") use "gpr-jobserver__win.adb";
+          when "UNIX" =>
+              for Body ("GPR.Util.Put_Resource_Usage")
+-               use "gpr-util-put_resource_usage__unix.adb";
++--               use "gpr-util-put_resource_usage__unix.adb";
++               use "gpr-util-put_resource_usage__netbsd.adb";
+       end case;
+    end Naming;
+

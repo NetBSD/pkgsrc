@@ -1,0 +1,16 @@
+$NetBSD: patch-deps_xmlada_Makefile.in,v 1.1 2024/03/12 17:50:13 wiz Exp $
+
+Make possible install params
+
+--- deps/xmlada/Makefile.in.orig	2023-09-07 14:33:41.000000000 +0300
++++ deps/xmlada/Makefile.in	2023-12-26 11:37:39.332465731 +0200
+@@ -34,7 +34,8 @@
+ MODULES=unicode input_sources sax dom schema
+ MODULE_INSTALL=${MODULES:%=%_inst}
+ 
+-GPROPTS=-XXMLADA_BUILD_MODE=${MODE} -XPROCESSORS=${PROCESSORS}
++GPROPTS=
++GPROPTS+=-XXMLADA_BUILD_MODE=${MODE} -XPROCESSORS=${PROCESSORS}
+ 
+ ifeq (${HOST},${TARGET})
+ IPREFIX=${DESTDIR}${prefix}
