@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/12 17:53:15 wiz Exp $
+bin/alr

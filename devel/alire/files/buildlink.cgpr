@@ -1,0 +1,143 @@
+configuration project default is
+   for Target use "x86_64-netbsd";
+   for Canonical_Target use "x86_64-netbsd";
+   for Inherit_Source_Path ("C++") use ("C");
+   for Inherit_Source_Path ("Asm_Cpp") use ("Asm");
+   for Default_Language use "Ada";
+   
+   for Archive_Builder  use ("ar", "cr");
+   for Archive_Builder_Append_Option use ("q");
+   for Archive_Indexer  use ("ranlib");
+   for Archive_Suffix   use ".a";
+   
+   for Symbolic_Link_Supported use "true";
+   for Library_Major_Minor_Id_Supported use "true";
+   for Library_Builder  use "@WRKDIR@/.buildlink/libexec/gprbuild/gprlib";
+   for Library_Support  use "full";
+   for Shared_Library_Prefix use "lib";
+   for Shared_Library_Minimum_Switches use ("-shared");
+   for Library_Version_Switches use ("-Wl,-soname,");
+
+   for Shared_Library_Suffix use ".so";
+   for Library_Auto_Init_Supported use "true";
+   for Run_Path_Option  use ("-Wl,-z,origin,-rpath,");
+   for Run_Path_Origin use "$ORIGIN";
+   for Library_Encapsulated_Supported use "true";
+   for Library_Encapsulated_Options use ("-shared", "-static-libgcc");
+   
+   for Toolchain_Version ("Ada") use "GNAT 13.2.0";
+   for Runtime_Dir       ("Ada") use "@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
+
+   package Builder is
+      for Executable_Suffix use "";
+   end Builder;
+
+   package Compiler is
+      for Driver                   ("Ada") use "@WRKDIR@/.gcc/bin/gcc";
+      for Driver              ("C") use "@WRKDIR@/.gcc/bin/gcc";
+      for Driver              ("C++") use "@WRKDIR@/.gcc/bin/g++";
+      for Language_Kind            ("Ada") use "unit_based";
+      for Dependency_Kind          ("Ada") use "ALI_File";
+      for Leading_Required_Switches        ("Ada") use
+      ("-c", "-x", "ada", "-gnatA")
+             & Compiler'Leading_Required_Switches ("Ada");
+
+      for Mapping_File_Switches    ("Ada") use ("-gnatem=");
+      for Mapping_Spec_Suffix      ("Ada") use "%s";
+      for Mapping_Body_Suffix      ("Ada") use "%b";
+      for Config_File_Switches     ("Ada") use ("-gnatec=");
+      for Include_Path_File     ("Ada") use "ADA_PRJ_INCLUDE_FILE";
+      
+      for Multi_Unit_Switches ("Ada") use ("-gnateI");
+      for Multi_Unit_Object_Separator ("Ada") use "~";
+      for Config_Body_File_Name ("Ada") use
+           "pragma Source_File_Name_Project (%u, Body_File_Name => ""%f"");";
+      for Config_Spec_File_Name ("Ada") use
+           "pragma Source_File_Name_Project (%u, Spec_File_Name => ""%f"");";
+      for Config_Body_File_Name_Index ("Ada") use
+           "pragma Source_File_Name_Project (%u, Body_File_Name => ""%f"", Index => %i);";
+      for Config_Spec_File_Name_Index ("Ada") use
+           "pragma Source_File_Name_Project (%u, Spec_File_Name => ""%f"", Index => %i);";
+      for Config_Body_File_Name_Pattern ("Ada") use
+           "pragma Source_File_Name_Project " &
+           "  (Body_File_Name  => ""*%b""," &
+           "   Casing          => %c," &
+           "   Dot_Replacement => ""%d"");";
+      for Config_Spec_File_Name_Pattern ("Ada") use
+           "pragma Source_File_Name_Project " &
+           "  (Spec_File_Name  => ""*%s""," &
+           "   Casing          => %c," &
+           "   Dot_Replacement => ""%d"");";
+      for Config_File_Unique    ("Ada") use "False";
+      for Leading_Required_Switches ("Ada") use
+        Compiler'Leading_Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+        
+      for Leading_Required_Switches   ("C") use
+         ("-c", "-x", "c") & Compiler'Leading_Required_Switches ("C");
+      for Include_Switches_Via_Spec   ("C") use ("cc1", "-I");
+      for Max_Command_Line_Length use "8192";
+      for Response_File_Format    ("C") use "GCC_GNU";
+      for Dependency_Switches ("C") use ("-MMD", "-MF", "");
+      for PIC_Option ("C") use ("-fPIC");
+      
+      for Leading_Required_Switches   ("C++") use
+        ("-c", "-x", "c++") &
+        Compiler'Leading_Required_Switches ("C++");
+      for Dependency_Switches ("C++") use ("-MMD", "-MF", "");
+      for Include_Switches_Via_Spec ("C++") use ("cc1plus", "-I");
+      for Max_Command_Line_Length use "8192";
+      for Response_File_Format    ("C++") use "GCC_GNU";
+      for PIC_Option      ("C++") use ("-fPIC");
+   end Compiler;
+
+   package Naming is
+      for Spec_Suffix ("Ada") use ".ads";
+      for Body_Suffix ("Ada") use ".adb";
+
+      for Body_Suffix ("Asm") use ".s";
+      for Body_Suffix ("Asm2") use ".asm";
+      for Body_Suffix ("Asm_Cpp") use ".S";
+
+      for Body_Suffix ("C") use ".c";
+      for Spec_Suffix ("C") use ".h";
+
+      for Spec_Suffix ("C++") use ".hh";
+      for Body_Suffix ("C++") use ".cpp";
+
+      for Body_Suffix ("Fortran") use ".f";
+
+      for Casing use "lowercase";
+      for Dot_Replacement use "-";
+   end Naming;
+
+   package Binder is
+      for Objects_Path_File     ("Ada") use "ADA_PRJ_OBJECTS_FILE";
+      for Driver         ("Ada") use
+          "@WRKDIR@/.buildlink/libexec/gprbuild/gprbind";
+      for Required_Switches ("Ada") use
+        Binder'Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+   end Binder;
+   
+   package Linker is
+      for Map_File_Option         use "-Wl,-Map,";
+      for Driver use Compiler'Driver ("Ada");
+      for Driver use Compiler'Driver ("C++");
+      for Response_File_Format use "GNU";
+      for Max_Command_Line_Length use "8192";
+   end Linker;
+
+   package Clean is
+      for Source_Artifact_Extensions ("Ada") use (".dg", ".rep");
+      for Object_Artifact_Extensions ("Ada") use (".s", ".ci", ".gcno", ".su");
+
+      for Source_Artifact_Extensions ("C")   use (".gli");
+      for Object_Artifact_Extensions ("C")   use (".s", "ci", ".gcno", ".su");
+
+      for Source_Artifact_Extensions ("C++") use (".gli");
+      for Object_Artifact_Extensions ("C++") use (".s", "ci", ".gcno", ".su");
+      --  Remove the files generated by gnatinspect (in the context of GPS)
+      for Artifacts_In_Object_Dir use Clean'Artifacts_In_Object_Dir
+         & ("gnatinspect.*");
+   end Clean;
+   
+end default;
