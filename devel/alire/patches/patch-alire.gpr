@@ -1,0 +1,24 @@
+$NetBSD: patch-alire.gpr,v 1.1 2024/03/12 17:53:16 wiz Exp $
+
+Add NetBSD support
+
+--- alire.gpr.orig	2023-10-19 15:04:21.000000000 +0000
++++ alire.gpr
+@@ -28,6 +28,7 @@ library project Alire is
+ 
+    case Alire_Common.Host_Os is
+       when "freebsd" => Src_Dirs := Src_Dirs & ("src/alire/os_freebsd");
++      when "netbsd" => Src_Dirs := Src_Dirs & ("src/alire/os_netbsd");
+       when "linux"   => Src_Dirs := Src_Dirs & ("src/alire/os_linux");
+       when "macos"   => Src_Dirs := Src_Dirs & ("src/alire/os_macos");
+       when "windows" => Src_Dirs := Src_Dirs & ("src/alire/os_windows");
+@@ -38,6 +39,9 @@ library project Alire is
+          when "freebsd" =>
+             for body ("Alire.Platforms.Current") use "alire-platforms-current__freebsd.adb";
+             for body ("Alire.Platforms.Folders") use "alire-platforms-folders__freebsd.adb";
++         when "netbsd" =>
++            for body ("Alire.Platforms.Current") use "alire-platforms-current__netbsd.adb";
++            for body ("Alire.Platforms.Folders") use "alire-platforms-folders__netbsd.adb";
+          when "linux" =>
+             for body ("Alire.Platforms.Current") use "alire-platforms-current__linux.adb";
+             for body ("Alire.Platforms.Folders") use "alire-platforms-folders__linux.adb";
