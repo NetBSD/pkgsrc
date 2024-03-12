@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4190 2024/03/02 19:24:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.4191 2024/03/12 17:50:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -482,6 +482,7 @@ SUBDIR+=	gotests
 SUBDIR+=	govulncheck
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
+SUBDIR+=	gprbuild
 SUBDIR+=	gputils
 SUBDIR+=	gradle
 SUBDIR+=	grantlee
@@ -1156,7 +1157,6 @@ SUBDIR+=	netcdf
 SUBDIR+=	netcdf-cxx
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
-#SUBDIR+=	nextpnr # shared files for other packages
 SUBDIR+=	nextpnr-ice40
 SUBDIR+=	ninja-build
 SUBDIR+=	ninka
