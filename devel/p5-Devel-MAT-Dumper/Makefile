@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/02 16:17:16 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/03/12 07:55:43 wiz Exp $
 
-DISTNAME=	Devel-MAT-Dumper-0.47
+DISTNAME=	Devel-MAT-Dumper-0.48
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
