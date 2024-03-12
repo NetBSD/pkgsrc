@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2023/12/31 21:33:52 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/03/12 08:09:33 wiz Exp $
 
-BLAKE2s (rapidfuzz-3.6.1.tar.gz) = 90ec1a82d3336c58963c9460b9b5e95e18fe3016461d6d92746925a06d4c204a
-SHA512 (rapidfuzz-3.6.1.tar.gz) = 17b40c9c3f94277340568f32ef121b277882e9191ad445df930cb394adb47bc4207008932550e74990af0d284c7af00e8ea3003114113a109a629117ebd9859c
-Size (rapidfuzz-3.6.1.tar.gz) = 1559239 bytes
+BLAKE2s (rapidfuzz-3.6.2.tar.gz) = 5ae620cb3113a659fc52a0c975924c04249f3e2c67e13235c7bd7b92d2a65015
+SHA512 (rapidfuzz-3.6.2.tar.gz) = 83ba27ec1c68d10c568ee629519709113aac3136e73da55d46dcfd3b0f1eac2ebe8631376ca10d2b5fde892d690d79f5a8ce5fd0114502d1f3576756b0960db7
+Size (rapidfuzz-3.6.2.tar.gz) = 1556623 bytes
 SHA1 (patch-src_rapidfuzz_CMakeLists.txt) = c8295aeb7bcd3e2d0a1cc87ee608187606c88959
 SHA1 (patch-src_rapidfuzz_distance_CMakeLists.txt) = 09a0d18a1bfa53164d163225c6bf6b51b8f81ba0
