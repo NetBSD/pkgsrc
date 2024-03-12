@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1838 2024/03/12 01:40:41 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.1839 2024/03/12 01:43:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/objfw to 1.0.12 [js 2024-03-11]
 	Updated graphics/inkscape to 1.3.2nb1 [wiz 2024-03-11]
 	Updated misc/xfce4-weather-plugin to 0.11.2 [gutteridge 2024-03-12]
+	Updated meta-pkgs/xfce4-extras to 4.18.1nb16 [gutteridge 2024-03-12]
