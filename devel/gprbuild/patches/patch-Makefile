@@ -1,0 +1,48 @@
+$NetBSD: patch-Makefile,v 1.1 2024/03/12 17:50:13 wiz Exp $
+
+Make it possible to set install parameters, fix install parameters
+
+--- Makefile.orig	2023-10-09 21:31:11.000000000 +0300
++++ Makefile	2023-12-26 15:07:17.160442141 +0200
+@@ -45,6 +45,7 @@
+ GTARGET=--target=$(TARGET)
+ endif
+ 
++GPRINSTALL_OPTIONS=
+ INSTALLER=$(LIB_INSTALLER)
+ EXEC_INSTALLER=$(INSTALLER) -XBUILD=${BUILD}
+ 
+@@ -72,13 +73,13 @@
+ 
+ # Make sure Windows's "OS" environment variable does not cause
+ # confusion for cross-Linux builds.
+-LIBGPR_OS = $(if $(findstring linux,$(TARGET)),-XOS=UNIX)
++LIBGPR_OS = $(if $(or $(findstring linux,$(TARGET)),$(findstring bsd,$(TARGET))),-XOS=UNIX)
+ 
+ # Used to pass extra options to GPRBUILD, like -d for instance
+ GPRBUILD_OPTIONS=
+ 
+ BUILDER=gprbuild -p -m $(GTARGET) $(RBD) -j${PROCESSORS} -XBUILD=${BUILD} ${GPRBUILD_OPTIONS}
+-LIB_INSTALLER=gprinstall -p -f --target=$(TARGET) $(RBD) "--prefix=${prefix}"
++LIB_INSTALLER=gprinstall -p -f $(GTARGET) $(RBD) "--prefix=${prefix}" ${GPRINSTALL_OPTIONS}
+ CLEANER=gprclean -q $(RBD)
+ 
+ GPRBUILD_BUILDER=$(BUILDER) $(GPRBUILD_GPR) \
+@@ -86,7 +87,7 @@
+ LIBGPR_BUILDER=$(BUILDER) $(GPR_GPR) $(LIBGPR_OS)
+ LIBGPR_INSTALLER=$(LIB_INSTALLER) $(GPR_GPR) $(LIBGPR_OS) -XBUILD=${BUILD} \
+ 	--install-name=gpr \
+-	--build-var=LIBRARY_TYPE --build-var=GPR_BUILD $(GTARGET)
++	--build-var=LIBRARY_TYPE --build-var=GPR_BUILD
+ LIBGPR_UNINSTALLER=$(LIB_INSTALLER) $(GPR_GPR) $(LIBGPR_OS) --install-name=gpr --uninstall
+ 
+ #########
+@@ -127,7 +128,7 @@
+ install:
+ 	$(EXEC_INSTALLER) --mode=usage --install-name=gprbuild \
+ 		-XINSTALL_MODE=nointernal $(GPRBUILD_GPR)
+-	$(EXEC_INSTALLER) --target=$(TARGET) --mode=usage  --install-name=gprbuild \
++	$(EXEC_INSTALLER) --mode=usage  --install-name=gprbuild \
+ 		-XINSTALL_MODE=internal $(GPRBUILD_GPR)
+ 
+ complete: all install libgpr.install.static
