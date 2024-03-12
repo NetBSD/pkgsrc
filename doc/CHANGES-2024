@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1842 2024/03/12 07:58:42 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1843 2024/03/12 08:00:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3115,3 +3115,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Devel-MAT-Dumper to 0.48 [wiz 2024-03-12]
 	Updated devel/p5-Devel-MAT to 0.53 [wiz 2024-03-12]
 	Updated devel/p5-ExtUtils-CChecker to 0.12 [wiz 2024-03-12]
+	Updated www/p5-HTML-Tagset to 3.22 [wiz 2024-03-12]
