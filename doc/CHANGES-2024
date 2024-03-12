@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1850 2024/03/12 16:36:04 tsutsui Exp $
+$NetBSD: CHANGES-2024,v 1.1851 2024/03/12 17:47:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3122,4 +3122,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/erlang-doc to 26.2.3 [wiz 2024-03-12]
 	Updated lang/erlang-man to 26.2.3 [wiz 2024-03-12]
 	Updated audio/speech-dispatcher to 0.11.5 [wiz 2024-03-12]
+	Updated textproc/nbsed to 20240312 [christos 2024-03-12]
 	Updated net/sayaka to 3.7.5 [tsutsui 2024-03-12]
