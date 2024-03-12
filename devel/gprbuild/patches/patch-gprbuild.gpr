@@ -1,0 +1,16 @@
+$NetBSD: patch-gprbuild.gpr,v 1.1 2024/03/12 17:50:13 wiz Exp $
+
+Remove redundant file from install list
+
+--- gprbuild.gpr.orig	2023-10-09 21:31:11.000000000 +0300
++++ gprbuild.gpr	2023-12-26 17:54:25.847810172 +0200
+@@ -165,7 +165,8 @@
+                when "Windows_NT" =>
+                   for Artifacts ("bin") use ("src/gprinstall.exe.manifest");
+                when "UNIX" =>
+-                  for Artifacts (".") use ("doinstall");
++--                  for Artifacts (".") use ("doinstall");
++                  null;
+             end case;
+ 
+          when "internal" =>
