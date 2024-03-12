@@ -1,0 +1,14 @@
+$NetBSD: patch-alr__env.gpr,v 1.1 2024/03/12 17:53:16 wiz Exp $
+
+Add NetBSD support
+
+--- alr_env.gpr.orig	2023-10-19 15:04:21.000000000 +0000
++++ alr_env.gpr
+@@ -36,6 +36,7 @@ aggregate project Alr_Env is
+ 
+    case Alire_Common.Host_Os is
+       when "freebsd" => for External ("GNATCOLL_OS") use "unix";
++      when "netbsd" => for External ("GNATCOLL_OS") use "unix";
+       when "linux"   => for External ("GNATCOLL_OS") use "unix";
+       when "macos"   => for External ("GNATCOLL_OS") use "osx";
+       when "windows" => for External ("GNATCOLL_OS") use "windows";
