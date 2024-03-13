@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.27 2023/06/26 16:16:15 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/03/13 15:07:30 wiz Exp $
 
 BLAKE2s (a2ps-4.15.5.tar.gz) = 0b243a13caadb9247abcefaa4466c518785275384bd54fefead786422f165a06
 SHA512 (a2ps-4.15.5.tar.gz) = e9953659139a46aed46e190d5485382a9e396ae8bbbe59edb78ab3110e7839a764e3cb6ff94f5f36e6e91fcaf85f6352376e0b4a0e0141f24e098fa334b5015e
 Size (a2ps-4.15.5.tar.gz) = 3571724 bytes
-SHA1 (patch-config.h.in) = 3212c121b656f5f77ed713fc1eff93609ea12aaf
-SHA1 (patch-lib_free.c) = 1859b76b268d956e406ad076e821d9335f903685
 SHA1 (patch-src_a2ps-lpr-wrapper) = 948dd03c1fa15f127ec07cb0395e633ea4afb0b3
