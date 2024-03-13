@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.6 2024/03/12 16:45:07 christos Exp $	*/
+/*	$NetBSD: main.c,v 1.7 2024/03/13 11:07:48 jperkin Exp $	*/
 
 /*-
  * Copyright (c) 2013 Johann 'Myrkraverk' Oskarsson.
@@ -45,7 +45,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.6 2024/03/12 16:45:07 christos Exp $");
+__RCSID("$NetBSD: main.c,v 1.7 2024/03/13 11:07:48 jperkin Exp $");
 #ifdef __FBSDID
 __FBSDID("$FreeBSD: head/usr.bin/sed/main.c 252231 2013-06-26 04:14:19Z pfg $");
 #endif
@@ -179,14 +179,11 @@ main(int argc, char *argv[])
 	fflag = 0;
 	inplace = NULL;
 
-	while ((c = getopt(argc, argv, "EGI::ae:f:gi::lnru")) != -1)
+	while ((c = getopt(argc, argv, "EI::ae:f:i::lnru")) != -1)
 		switch (c) {
 		case 'r':		/* Gnu sed compat */
 		case 'E':
 			rflags |= REG_EXTENDED;
-			break;
-		case 'G':
-			rflags &= ~REG_GNU;
 			break;
 		case 'I':
 			inplace = optarg ? optarg : __UNCONST("");
@@ -205,9 +202,6 @@ main(int argc, char *argv[])
 		case 'f':
 			fflag = 1;
 			add_compunit(CU_FILE, optarg);
-			break;
-		case 'g':
-			rflags |= REG_GNU;
 			break;
 		case 'i':
 			inplace = optarg ? optarg : __UNCONST("");
