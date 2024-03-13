@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.198 2024/03/13 13:47:43 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.199 2024/03/13 13:55:53 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -2218,6 +2218,36 @@ PERL5_PACKLIST= auto/Pg/.packlist
     These variables are also substituted for in the
     <filename>PLIST</filename> as uppercase prefixed with
     <varname>PERL5_SUB_</varname>.</para>
+  </sect2>
+
+
+  <sect2 id="faq.pkg-config-files">
+    <title>Packages installing pkg-config files</title>
+
+    <para>Some packages, usually those providing libraries, install
+    pkg-config files so that their headers and libraries can easily be
+    found.  The file names end with <filename>.pc</filename>.</para>
+
+    <para>Most of the time, these files only provide the linker flags
+    for the library, but do not include the flags for setting the
+    rpath so the libraries can also be found at runtime. Since this is
+    so common, pkgsrc provides <varname>PKGCONFIG_OVERRIDE</varname>
+    for this. Many packages generate the <filename>.pc</filename> from
+    <filename>.pc.in</filename>, in that case add those files to the
+    <varname>PKGCONFIG_OVERRIDE</varname> variable:</para>
+
+    <programlisting>
+PKGCONFIG_OVERRIDE+=   foo.pc.in
+    </programlisting>
+
+    <para>For packages using meson, the files are generated during
+    build and you also need to change the phase in which the
+    replacement is done. For example:</para>
+
+    <programlisting>
+PKGCONFIG_OVERRIDE+=            output/meson-private/foo.pc
+PKGCONFIG_OVERRIDE_STAGE=       post-build
+    </programlisting>
   </sect2>
 
 
