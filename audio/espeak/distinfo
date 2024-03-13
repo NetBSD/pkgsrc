@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:58:53 nia Exp $
-
-BLAKE2s (espeak-1.48.04-source.zip) = bd5090acbe7eb98deb6da5f7d72a98dd933069f1553f124faae1622f89594d3e
-SHA512 (espeak-1.48.04-source.zip) = f0759e6ace2604c8cbb19e8c3fd4b106edf4dcece247a6677f6b734af7746c35a367126edfbe585396c98f6c54f07e25d64bfab35e258e64f09bd2c0833247fa
-Size (espeak-1.48.04-source.zip) = 3019245 bytes
-SHA1 (patch-src_Makefile) = ad90e699c15c266c6e6b2db73340fdf5506389d8
