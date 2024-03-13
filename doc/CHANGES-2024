@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1860 2024/03/13 14:45:18 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1861 2024/03/13 15:07:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3133,3 +3133,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/aeneas to 1.7.3nb19 [wiz 2024-03-13]
 	Removed audio/espeak successor audio/espeak-ng [wiz 2024-03-13]
 	Updated print/libpaper to 2.2.5 [wiz 2024-03-13]
+	Updated print/a2ps to 4.15.5nb2 [wiz 2024-03-13]
