@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.10 2020/05/01 14:22:12 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.11 2024/03/13 13:47:43 wiz Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -63,7 +63,7 @@
 <programlisting>
 do_test() {
         echo "Example output"
-} 1>$TEST_OUTFILE 2>&1
+} 1>$TEST_OUTFILE 2>&amp;1
 </programlisting>
 
 	</listitem>

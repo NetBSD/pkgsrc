@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.17 2020/08/12 14:40:33 bacon Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.18 2024/03/13 13:47:43 wiz Exp $ -->
 
 <appendix id="editing">
 <title>Editing guidelines for the pkgsrc guide</title>
@@ -66,7 +66,7 @@
 	<step><para><command>(cd files &amp;&amp; cvs
 	commit)</command></para></step>
 
-	<step><para>Run <command>bmake clean && bmake</command> to
+	<step><para>Run <command>bmake clean &amp;&amp; bmake</command> to
 	regenerate the output files with the proper RCS
 	Ids.</para></step>
 
