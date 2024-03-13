@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.7 2024/03/13 11:07:48 jperkin Exp $	*/
+/*	$NetBSD: main.c,v 1.8 2024/03/13 11:09:28 jperkin Exp $	*/
 
 /*-
  * Copyright (c) 2013 Johann 'Myrkraverk' Oskarsson.
@@ -45,7 +45,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.7 2024/03/13 11:07:48 jperkin Exp $");
+__RCSID("$NetBSD: main.c,v 1.8 2024/03/13 11:09:28 jperkin Exp $");
 #ifdef __FBSDID
 __FBSDID("$FreeBSD: head/usr.bin/sed/main.c 252231 2013-06-26 04:14:19Z pfg $");
 #endif
@@ -112,6 +112,10 @@ static const char sccsid[] = "@(#)main.c	8.2 (Berkeley) 1/3/94";
 
 #include "defs.h"
 #include "extern.h"
+
+#ifndef __UNCONST
+#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
+#endif
 
 /*
  * Linked list of units (strings and files) to be compiled
