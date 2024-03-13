@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/29 17:35:18 brook Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/13 13:54:04 bacon Exp $
 bin/minimap2
 man/man1/minimap2.1
