@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/07/12 17:17:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/13 19:32:52 rhialto Exp $
 
-PKGNAME=	hercules4sdl-4.6
+PKGNAME=	hercules4sdl-4.7
 DISTNAME=	hyperion-Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
