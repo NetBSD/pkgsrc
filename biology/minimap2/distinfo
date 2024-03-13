@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2023/07/09 08:37:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/03/13 13:54:04 bacon Exp $
 
-BLAKE2s (minimap2-2.24.tar.gz) = fad5bbbfd6563f32ffe046528758eca23b071386847b1a93d3388f5be205de5b
-SHA512 (minimap2-2.24.tar.gz) = f53a28ce5cd8624fbc5e964dc58edfa27ecea5f253cd49cb7b57396a40810b673392ebf323f0fb5d3b6ef82d4a9a96b025581aee10246e3c8d59e954819876e7
-Size (minimap2-2.24.tar.gz) = 253050 bytes
-SHA1 (patch-Makefile) = ae4be7748e5ec1e8ed1ff235be5ac6eeeeb0d3b3
+BLAKE2s (minimap2-2.27.tar.gz) = 92e09196bf9de2c121ce8a3305200760ff9e8ba83d634b106b33297508b5e01d
+SHA512 (minimap2-2.27.tar.gz) = fca5983cbd650b81c6a2caff8ad4d47286467df81ab76646e4fa4b113f0a76d16e4cc8cc5e2f4adaf5c06246ffa099c2728cd0dcba87d808980ed78ee3a029d1
+Size (minimap2-2.27.tar.gz) = 259736 bytes
+SHA1 (patch-Makefile.simde) = 850a66c8843119f99bcd4a2b261cfd4bffa38551
+SHA1 (patch-example.c) = ccf0c4addfece2e11b90f5a558a6de324f255d7c
