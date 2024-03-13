@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2023/04/17 08:35:54 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/13 14:45:09 wiz Exp $
 bin/paper
 bin/paperconf
 include/paper.h
 lib/libpaper.la
 man/man1/paper.1
 man/man5/paperspecs.5
-share/doc/libpaper/README
+share/doc/libpaper/README.md
 share/examples/libpaper/papersize
 share/examples/libpaper/paperspecs
