@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2023/07/12 17:17:15 rhialto Exp $
+$NetBSD: distinfo,v 1.9 2024/03/13 19:32:52 rhialto Exp $
 
-BLAKE2s (hyperion-Release_4.6.tar.gz) = 85888dc8124649f5753674f06553847505a9915625601fef719cec7c51d2d7b4
-SHA512 (hyperion-Release_4.6.tar.gz) = 82472cffb87fc9f29559f599b2600b43d55be4c522e7e48d948aa1e98000b221bbe612ab4e259617920df29c0122a02d2dbd5ad8e0a1e64ed02bac1ac31d19e9
-Size (hyperion-Release_4.6.tar.gz) = 24697723 bytes
+BLAKE2s (hyperion-Release_4.7.tar.gz) = 1c854c6cfc2c8c63f0471e8b3b90bad4e5f93c49e44a2736dd6bcbfe6ebfb4b4
+SHA512 (hyperion-Release_4.7.tar.gz) = 9d7060c4e2687358b9547b59b47362d642cbf2bf009085fdd41e485170d0f81029ee3d04d12b905a3a266cd26a9087e92c231c3f4600c32a8535a6140656b7b0
+Size (hyperion-Release_4.7.tar.gz) = 25439384 bytes
 SHA1 (patch-Makefile.am) = 6ae600095ffb29aab2a5e1e467f79a40e814f26d
 SHA1 (patch-configure.ac) = 734f64da8f4ce0f790d4eac0f352649d1b6d08f2
