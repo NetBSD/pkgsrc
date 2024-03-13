@@ -1,0 +1,15 @@
+$NetBSD: patch-aeneas_cew_Makefile,v 1.1 2024/03/13 14:38:12 wiz Exp $
+
+* Substitute espeak for espeak-ng.
+
+--- aeneas/cew/Makefile.orig	2017-03-16 12:48:53.000000000 +0000
++++ aeneas/cew/Makefile
+@@ -25,7 +25,7 @@ DRIVER=$(PREFIX)_driver
+ SETUP_PY=$(PREFIX)_setup.py
+ 
+ SRCS=$(DRIVER).c $(FUNC).c ../cint/cint.c
+-CLIBS=-lespeak
++CLIBS=-lespeak-ng
+ 
+ CC=gcc
+ CFLAGS=-Wall -pedantic -std=c99
