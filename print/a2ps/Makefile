@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2023/08/14 05:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2024/03/13 15:07:30 wiz Exp $
 
 DISTNAME=		a2ps-4.15.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 
@@ -49,5 +49,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libpaper+=	libpaper>=2.2.5
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
