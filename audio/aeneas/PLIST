@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/28 22:10:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/13 14:38:12 wiz Exp $
 bin/aeneas_check_setup
 bin/aeneas_convert_syncmap
 bin/aeneas_download
@@ -7,11 +7,11 @@ bin/aeneas_execute_task
 bin/aeneas_plot_waveform
 bin/aeneas_synthesize_text
 bin/aeneas_validate
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/aeneas/README.md
 ${PYSITELIB}/aeneas/__init__.py
 ${PYSITELIB}/aeneas/__init__.pyc
