@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/03/13 05:48:35 wiz Exp $
+Add (load-library "emacspeak-setup.el") at the beginning of your
+.emacs to activate Emacspeak in every Emacs execution, or use the -l
+option when executing Emacs.
+
+If you can't hear the auditory icons and other sound effects, set the
+Emacs variable emacspeak-play-program and the environment variable
+EMACSPEAK_PLAY to the path of your audio player of choice.
+===========================================================================
