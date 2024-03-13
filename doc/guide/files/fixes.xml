@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.197 2023/12/08 19:27:08 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.198 2024/03/13 13:47:43 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1366,7 +1366,7 @@ GNU_CONFIGURE=	yes
 ...
 
 pre-configure:
-        set -e; cd ${WRKSRC} && autoreconf -fi
+        set -e; cd ${WRKSRC} &amp;&amp; autoreconf -fi
 ...
 </programlisting>
 
@@ -1527,7 +1527,7 @@ gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
 
     <orderedlist>
       <listitem><para>Generate a list of those dependencies with
-      <command>make clean && make patch && make show-go-modules >
+      <command>make clean &amp;&amp; make patch &amp;&amp; make show-go-modules >
       go-modules.mk</command>.</para></listitem>
 
       <listitem><para>Prepend
@@ -1549,7 +1549,7 @@ gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
 
     <orderedlist>
       <listitem><para>Generate a list of those dependencies with
-      <command>make CARGO_ARGS="build --release" build &&
+      <command>make CARGO_ARGS="build --release" build &amp;&amp;
       make print-cargo-depends > cargo-depends.mk</command>.</para></listitem>
 
       <listitem><para>Prepend
@@ -1889,7 +1889,7 @@ package is built and then pkgsrc is updated. This situation can provoke
 various hard to diagnose build errors. To clean up the situation:</para>
 
 <programlisting>
-&uprompt; (cd ../../ && cat mk/bsd.pkg.mk >/dev/null && rm -rf */*/work)
+&uprompt; (cd ../../ &amp;&amp; cat mk/bsd.pkg.mk >/dev/null &amp;&amp; rm -rf */*/work)
 </programlisting>
 
 <para>(The only purpose of the <filename>bsd.pkg.mk</filename> is to
