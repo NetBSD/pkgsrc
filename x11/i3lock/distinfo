@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/03/13 06:04:13 wiz Exp $
 
-BLAKE2s (i3lock-2.8.tar.bz2) = ab4d280cd640462a9c5eb610e03efde1098261c1d35b6d9389bb164734caaed4
-SHA512 (i3lock-2.8.tar.bz2) = b0f2f2837e275ffb2874aec75cd5d7c69864f8861de5e3e6090a2bf9254a14f8bc141256b0faac3e30111f9612e97cc087efde0da939854fac975a87deb06e3f
-Size (i3lock-2.8.tar.bz2) = 19884 bytes
-SHA1 (patch-Makefile) = 20653b964ce099c0b9daba433a07d2b5b0f1bac3
+BLAKE2s (i3lock-2.14.1.tar.xz) = 5d274c03288fb5a5394eab0132163b18766e28691d1f1895baebc6b92c97b297
+SHA512 (i3lock-2.14.1.tar.xz) = 63b6bd73f66654fe52639434f7d3da64006144ec2ed685ba8683186730d4cc2c10d5aa66174f965030030243f59afaf6def3ff732f710ae441410218f84d6deb
+Size (i3lock-2.14.1.tar.xz) = 28756 bytes
