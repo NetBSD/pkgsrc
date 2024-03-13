@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.694 2024/03/11 08:03:55 wiz Exp $
+# $NetBSD: Makefile,v 1.695 2024/03/13 14:41:14 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -74,7 +74,6 @@ SUBDIR+=	easytag
 SUBDIR+=	eawpatches
 SUBDIR+=	eflite
 SUBDIR+=	emixer
-SUBDIR+=	espeak
 SUBDIR+=	espeak-ng
 SUBDIR+=	exaile
 SUBDIR+=	eyeD3
