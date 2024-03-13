@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.53 2022/06/30 14:04:32 gdt Exp $ -->
+<!-- $NetBSD: using.xml,v 1.54 2024/03/13 13:47:43 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -184,10 +184,10 @@ nginx-1.18.0nb8      Lightweight HTTP server and mail proxy server
       to the root users &man.crontab.5; entry.  For example the entry
       <screen>
 # Download vulnerabilities file
-0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&amp;1
 # Audit the installed packages and email results to root
 9 3 * * * /usr/pkg/sbin/pkg_admin audit |mail -s "Installed package audit result" \
-	    root >/dev/null 2>&1
+	    root >/dev/null 2>&amp;1
       </screen>
       will update the vulnerability list every day at 3AM, followed by an audit
       at 3:09AM. The result of the audit are then emailed to root.

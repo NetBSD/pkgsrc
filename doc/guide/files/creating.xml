@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.40 2024/01/13 01:07:38 gutteridge Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.41 2024/03/13 13:47:43 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -454,7 +454,7 @@ file, adding the dependency is very easy. I just inserted an
 .include "../../mk/bsd.pkg.mk
 </programlisting>
 
-<para>After another <command>bmake clean && bmake</command>, the answer
+<para>After another <command>bmake clean &amp;&amp; bmake</command>, the answer
 was:</para>
 
 <programlisting>
