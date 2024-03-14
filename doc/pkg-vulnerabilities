@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.147 2024/03/09 20:19:47 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.148 2024/03/14 09:16:29 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25930,3 +25930,4 @@ go121<1.21.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24783
 go122<1.22.1	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-45289
 go122<1.22.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24783
 py{37,38,39,310,311,312}-fonttools>4.28.2<4.43.0	xml-external-entity-vulnerability	https://nvd.nist.gov/vuln/detail/CVE-2023-45139
+expat<2.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28757
