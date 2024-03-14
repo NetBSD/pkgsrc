@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2023/12/30 16:18:32 adam Exp $
+$NetBSD: distinfo,v 1.33 2024/03/14 07:59:54 adam Exp $
 
-BLAKE2s (qtgraphicaleffects-everywhere-opensource-src-5.15.12.tar.xz) = 1d20baed0167adb43ebd1c11b6a94f1cbc2c17d4969d833647eac6d0f0c199ca
-SHA512 (qtgraphicaleffects-everywhere-opensource-src-5.15.12.tar.xz) = c0993082e96c5d8e26cc4e2e45320542d21fb7c716dfb6b087b385a985fff358cdff7e3d5d4ca3fc8fc9813e7c110165aa034d5e8d32e8082ad007b7bf929531
-Size (qtgraphicaleffects-everywhere-opensource-src-5.15.12.tar.xz) = 14045416 bytes
+BLAKE2s (qtgraphicaleffects-everywhere-opensource-src-5.15.13.tar.xz) = 08a36d6e79e21b1c5d3aec0f87933e8250e4983376b526aa60023c8bba3aa6bd
+SHA512 (qtgraphicaleffects-everywhere-opensource-src-5.15.13.tar.xz) = ee2f4e24ced70c1531ceb310c90d6c0bb5300f527a247f07599467f355fb89a426cce6bacb25b77b6ec62f4e358d2345093343ad442acd182dcaca77e031a0bf
+Size (qtgraphicaleffects-everywhere-opensource-src-5.15.13.tar.xz) = 14045368 bytes
