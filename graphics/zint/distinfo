@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/03/14 12:24:54 wiz Exp $
+
+BLAKE2s (zint-2.13.0-src.tar.gz) = da36bfc5423c9fc6a97a4d8b8b3ab3d34006b5b91ad542267a295f6cf70f2354
+SHA512 (zint-2.13.0-src.tar.gz) = 8dacd8088ab9c99ea64bf1aa49b618251d1e2d49382817d536a824ef25d9e8f0e2d8dbd0baa5dc1b4945dbede83d1af08e9f317107b1356a3ceb382acb6dd8c2
+Size (zint-2.13.0-src.tar.gz) = 6186118 bytes
+SHA1 (patch-frontend_main.c) = 406fe2c97e45f3f34f5f6b2aee8d27f0764592be

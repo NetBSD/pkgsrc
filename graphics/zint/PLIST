@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/14 12:24:54 wiz Exp $
+bin/zint
+${PLIST.qt5}bin/zint-qt
+${PLIST.qt5}include/qzint.h
+include/zint.h
+${PLIST.qt5}lib/libQZint.a
+lib/libzint.so
+lib/libzint.so.2.13
+lib/libzint.so.${PKGVERSION}.0
+man/man1/zint.1
+share/apps/cmake/modules/FindZint.cmake
+share/zint/zint-config.cmake
+share/zint/zint-targets-relwithdebinfo.cmake
+share/zint/zint-targets.cmake
