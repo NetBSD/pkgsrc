@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4194 2024/03/14 19:24:15 markd Exp $
+# $NetBSD: Makefile,v 1.4195 2024/03/14 19:27:06 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3616,6 +3616,7 @@ SUBDIR+=	zeal
 SUBDIR+=	zig-mode
 SUBDIR+=	zlib
 SUBDIR+=	zookeeper
+SUBDIR+=	zug
 SUBDIR+=	zzuf
 
 .include "../mk/misc/category.mk"
