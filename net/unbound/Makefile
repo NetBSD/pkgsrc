@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2024/03/07 09:48:53 he Exp $
+# $NetBSD: Makefile,v 1.107 2024/03/14 09:38:19 he Exp $
 
-DISTNAME=	unbound-1.19.2
+DISTNAME=	unbound-1.19.3
 CATEGORIES=	net
 MASTER_SITES=	https://nlnetlabs.nl/downloads/unbound/
 
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
+
+USE_TOOLS+=	pkg-config
 
 .include "options.mk"
 
@@ -97,4 +99,5 @@ PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 .include "../../textproc/expat/buildlink3.mk"
 BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.4
 .include "../../devel/flex/buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
