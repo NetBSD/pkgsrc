@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/05/16 10:14:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/03/14 19:33:04 markd Exp $
 bin/fftw-wisdom
 bin/fftw-wisdom-to-conf
 bin/fftwf-wisdom
@@ -15,6 +15,7 @@ lib/cmake/fftw3/FFTW3Config.cmake
 lib/cmake/fftw3/FFTW3ConfigVersion.cmake
 lib/cmake/fftw3/FFTW3fConfig.cmake
 lib/cmake/fftw3/FFTW3fConfigVersion.cmake
+lib/cmake/fftw3/FFTW3LibraryDepends.cmake
 lib/libfftw3.la
 ${PLIST.mpi}lib/libfftw3_mpi.la
 ${PLIST.omp}lib/libfftw3_omp.la
