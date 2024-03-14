@@ -1,22 +1,8 @@
-$NetBSD: distinfo,v 1.16 2023/07/06 23:27:01 mrg Exp $
+$NetBSD: distinfo,v 1.17 2024/03/14 20:02:57 markd Exp $
 
-BLAKE2s (krita-4.4.8.tar.gz) = f99a2cbeb347c8ebccec4723e8ccf174ab7627a5b84f2de8c669a5cf33efecbf
-SHA512 (krita-4.4.8.tar.gz) = 53b9814fcf61fbaee06e81f456aa9de7ab09df99e04932251984c8ae190248e48fa20762bdb7be503ea267e1fb835095b105ce4bf2078fd510ab5a8ef6d82f81
-Size (krita-4.4.8.tar.gz) = 254887779 bytes
-SHA1 (patch-CMakeLists.txt) = 6cc4be72fbfe76dd66b34c14a10a6ed20695ab65
+BLAKE2s (krita-5.2.2.tar.xz) = c7ea3a51fb0be7753881318692f5c53090125495eb793d72f4b7632715e7bc1e
+SHA512 (krita-5.2.2.tar.xz) = d2e55d9a6c7be79f5b6661a1bd605cdf1ce20ec78cdaab1ba19a4acca5397afa0c0e8bc1cbf60120993b156aef65ed35fde2de756841342d18221c82ea81a1eb
+Size (krita-5.2.2.tar.xz) = 189146788 bytes
+SHA1 (patch-cmake_modules_FindLibMyPaint.cmake) = 4d2273db42e4427f1ec2f4f2e1c86d976c0e24f3
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
-SHA1 (patch-libs_image_CMakeLists.txt) = 42d0c1777f54aadeab4462b0f576a14e9c627146
-SHA1 (patch-libs_pigment_CMakeLists.txt) = c5c95326b6090f152ee54e8e7e629bf1df043fae
-SHA1 (patch-libs_ui_kisexiv2_kis_exif_io.cpp) = 5c87db34a21b95ebf7f952af13064dab356da06f
-SHA1 (patch-libs_ui_kisexiv2_kis_exiv2.cpp) = 2dc34158c5449fb26fdb09857320e8a76bd1a304
-SHA1 (patch-libs_ui_kisexiv2_kis_exiv2.h) = 57ac062510c75ab95e4a10318e1213588bacfbaf
-SHA1 (patch-libs_ui_kisexiv2_kis_iptc_io.cpp) = 79b70971601289d5a6f0d537a185b086f38ee36b
-SHA1 (patch-libs_ui_kisexiv2_kis_xmp_io.cpp) = 319ae2e4d0aa3af0c215de396e5978eedf7b59fd
-SHA1 (patch-plugins_color_lcms2engine_CMakeLists.txt) = 5b9a84c2db4f7c5f5876b60061a0950be484ac84
-SHA1 (patch-plugins_color_lcms2engine_tests_CMakeLists.txt) = aec29d538aef1247c9ac69c60d965677c1c16a96
-SHA1 (patch-plugins_impex_CMakeLists.txt) = 95e6fe736e2c2151a6ad4b5ef490c0777ca098fa
-SHA1 (patch-plugins_impex_exr_exr__converter.cc) = 1bfcbdea7f748900f48c5e070d7f5d5984a9b3bf
-SHA1 (patch-plugins_impex_jpeg_kis_jpeg_converter.cc) = 3cf8f107b1bb45beade836ef04f98cda7b7a5ac1
-SHA1 (patch-plugins_impex_raw_3rdparty_libkdcraw_src_kdcraw.cpp) = 10acf4968269c84c517b561ba73dad516cd65f86
-SHA1 (patch-plugins_impex_raw_CMakeLists.txt) = 3a94be6cb488fb8b8b2667dfb7a9b0dfa4496ef5
-SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
+SHA1 (patch-plugins_dockers_CMakeLists.txt) = b341645cde8bdfc3499c5766adb5cee01fb74af6

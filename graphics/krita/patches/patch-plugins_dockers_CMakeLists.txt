@@ -1,0 +1,19 @@
+$NetBSD: patch-plugins_dockers_CMakeLists.txt,v 1.1 2024/03/14 20:02:58 markd Exp $
+
+lut plugin needs uselocale() to build which NetBSD doesn't have.
+
+--- plugins/dockers/CMakeLists.txt.orig	2023-12-06 11:38:26.000000000 +0000
++++ plugins/dockers/CMakeLists.txt
+@@ -14,9 +14,9 @@ add_subdirectory(compositiondocker)
+ add_subdirectory(patterndocker)
+ add_subdirectory(griddocker)
+ add_subdirectory(arrangedocker)
+-if(HAVE_OCIO)
+-    add_subdirectory(lut)
+-endif()
++#if(HAVE_OCIO)
++#    add_subdirectory(lut)
++#endif()
+ add_subdirectory(overview)
+ add_subdirectory(palettedocker)
+ add_subdirectory(animation)
