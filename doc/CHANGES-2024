@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1878 2024/03/14 14:43:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1879 2024/03/14 20:06:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3155,3 +3155,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Added graphics/zint version 2.13.0 [wiz 2024-03-14]
 	Updated devel/cocogitto to 6.1.0 [pin 2024-03-14]
 	Updated shells/oh-my-posh to 19.17.1 [pin 2024-03-14]
+	Added textproc/libunibreak version 6.1 [markd 2024-03-14]
+	Added devel/lager version 0.1.1 [markd 2024-03-14]
+	Added devel/immer version 0.8.1 [markd 2024-03-14]
+	Added devel/zug version 0.1.1 [markd 2024-03-14]
+	Updated graphics/krita to 5.2.2 [markd 2024-03-14]
