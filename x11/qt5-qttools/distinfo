@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2023/12/30 16:18:34 adam Exp $
+$NetBSD: distinfo,v 1.34 2024/03/14 07:59:56 adam Exp $
 
-BLAKE2s (qttools-everywhere-opensource-src-5.15.12.tar.xz) = 7b345d3ce2bf2f348796ac85fc6cdfe68cc03cffed579c9c1689fdd8662c28dc
-SHA512 (qttools-everywhere-opensource-src-5.15.12.tar.xz) = d830129777c481e1a66e32911af82a09e2858b678fdd2b802433fc1009856d9f0b8ea39b6ed1d7e93b6e9db1dda848c3a4077f6d804400f1427f33a3c7ccb40e
-Size (qttools-everywhere-opensource-src-5.15.12.tar.xz) = 8900672 bytes
+BLAKE2s (qttools-everywhere-opensource-src-5.15.13.tar.xz) = dc623a37b923e2f647ea291701926d8667879fba7f62381de0867c83b8507c06
+SHA512 (qttools-everywhere-opensource-src-5.15.13.tar.xz) = a73abba58c76a69e2208c4228bf115f2ef6173db8fa00df9302eb4c8f04ff04b64690367c31a680dba3b0b8865ef27343e8d7343f7f81954c39458c443fd3500
+Size (qttools-everywhere-opensource-src-5.15.13.tar.xz) = 8897928 bytes
 SHA1 (patch-src_assistant_assistant_assistant.pro) = 8d7cb7759d3b20780bc05097d5bd0d8be7d145cc
 SHA1 (patch-src_designer_src_plugins_plugins.pro) = c82d154785e19ebfb3e191f08c8e7f9b07458d4a
 SHA1 (patch-src_qdoc_configure.json) = 634ae441cc6eb57396261d5d7553afab2c8dad1a
