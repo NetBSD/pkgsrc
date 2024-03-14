@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1865 2024/03/14 00:14:28 kim Exp $
+$NetBSD: CHANGES-2024,v 1.1866 2024/03/14 04:06:31 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3138,3 +3138,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/open-simh to 4.1.0.20240303 [rhialto 2024-03-13]
 	Updated emulators/hercules4sdl to 4.7 [rhialto 2024-03-13]
 	Updated shells/tcsh to 6.24.11 [kim 2024-03-14]
+	Updated games/love11 to 11.5 [charlotte 2024-03-14]
