@@ -1,11 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.43 2024/03/11 17:03:24 pin Exp $
+# $NetBSD: go-modules.mk,v 1.44 2024/03/14 14:42:49 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.mod
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.zip
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.mod
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.zip
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.mod
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.zip
 GO_MODULE_FILES+=	github.com/!masterminds/goutils/@v/v1.1.1.mod
@@ -53,8 +51,6 @@ GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.2.mod
 GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.2.zip
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.11.3.mod
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.11.3.zip
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.mod
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.6.mod
@@ -80,6 +76,8 @@ GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/jandedobbeleer/clipboard/@v/v0.1.4-1.mod
 GO_MODULE_FILES+=	github.com/jandedobbeleer/clipboard/@v/v0.1.4-1.zip
+GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-2.mod
+GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-2.zip
 GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
