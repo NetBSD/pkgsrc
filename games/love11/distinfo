@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/03/29 16:47:53 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2024/03/14 04:05:37 charlotte Exp $
 
-BLAKE2s (love-11.4-linux-src.tar.gz) = 0cd92e882146f6a2df87f05d35e038cda09959c8e352d3b955766a588608e728
-SHA512 (love-11.4-linux-src.tar.gz) = a1669e353c216b0f8de862eef877a178618499c38b5ad91143ee64e543affea8fccb13af4ea4957d8698c65dd703e45095ae1069601c4d0ff98d34d71d70ffd3
-Size (love-11.4-linux-src.tar.gz) = 2925931 bytes
+BLAKE2s (love-11.5-linux-src.tar.gz) = e3085a8ea69b7b5c428919497d0bd61694f270513e7f0ed6caf7e35e89731105
+SHA512 (love-11.5-linux-src.tar.gz) = 86fe29939e0d48317e742c99c80b1805821f91539c37d1701207585593b10e3a12f335dac9c25069e0de61a7c6af7c6d5e30bc36826c29f963df8f64084a9a5b
+Size (love-11.5-linux-src.tar.gz) = 2937716 bytes
 SHA1 (patch-src_libraries_physfs_physfs_platform_unix.c) = 2a22ef68fa86e2c96d084eb8dce493ab1f4b1009
