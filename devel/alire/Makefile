@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/03/12 17:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/14 07:48:01 wiz Exp $
 
 .include "version.mk"
-PKGNAME=alire-${ALIRE_VERSION}rc1
+PKGNAME=alire-${ALIRE_VERSION}
 
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c ada
 DISTNAME=	${PKGNAME}
 GITHUB_PROJECT=	alire
 GITHUB_TYPE=	tag
-GITHUB_TAG=	v${ALIRE_VERSION}-rc1
+GITHUB_TAG=	v${ALIRE_VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alire-project/}
 
 GITHUB_SUBMODULES+=	mosteo	aaa	dff61d2615cc6332fa6205267bae19b4d044b9da	deps/aaa
