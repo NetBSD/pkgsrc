@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/12/01 11:27:38 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/14 14:40:00 pin Exp $
 
-DISTNAME=	cocogitto-6.0.1
+DISTNAME=	cocogitto-6.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cocogitto/}
 
