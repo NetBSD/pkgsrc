@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2024/02/12 00:52:49 markd Exp $
+$NetBSD: distinfo,v 1.23 2024/03/14 07:59:57 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = f3f13f6b52697c09e2ff2683667108da280348d9d853249ae5097920a02aa333
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = 84ebdab10ea3138671c0612cc558dd3257264410d2776719c34d41b8f846424183742abc7185fa61c7bb3d35d471ab2341d064eec57b92c34e30325dbc3eff63
-Size (qtwebengine-everywhere-opensource-src-5.15.12.tar.xz) = 316611168 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.13.tar.xz) = 5233fe78d5d63fd48623699acdbf6e2ad38837076115469b7b9d2db1e8e749b7
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.13.tar.xz) = 0c9aa844148e908c2eb5af93b51d2809f183f775d5760b4654f8f34ac825fd8b9d81a9b70cb9d79d16502bdce7bd6d77484c5b04797d99726f6ff5e9e40af03f
+Size (qtwebengine-everywhere-opensource-src-5.15.13.tar.xz) = 316593796 bytes
 SHA1 (patch-configure.pri) = e9d971f18d0a7a8a58d635eb6688193fb92020f3
 SHA1 (patch-mkspecs_features_functions.prf) = 6bf237521df3d60649b603b7cb7d21f793df1386
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 228416b6472c48727df1a6c86ac97814fd5cb3b5
@@ -789,7 +789,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn) = cf10aa3e5
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_webrtc.gni) = 501ac49f4dd406057089ac65196a7c0eff2560c4
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = d48d4b8ab33d9c650b3d7ab1fd4d5c034029443e
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_cpu__features.c) = 2ae5c09b935a94fc50c052f199a945875d3d9127
-SHA1 (patch-src_3rdparty_chromium_third_party_skia_src_utils_SkParseColor.cpp) = 09e2a2144d6819e4ff4649dac3b4b198c3033f46
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_BUILD.gn) = 1952774426515651e3f2797a296be102e9ef55b2
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_libsupersize_caspian_BUILD.gn) = d5db9eae64c975ce7770b9e1f2b5578c7c4883b6
 SHA1 (patch-src_3rdparty_chromium_tools_grit_BUILD.gn) = 85172e974e874b8e2ab9f47619faa2578f84bdc4
