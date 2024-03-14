@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/14 19:15:29 markd Exp $
+include/eastasianwidthdef.h
+include/graphemebreak.h
+include/linebreak.h
+include/linebreakdef.h
+include/unibreakbase.h
+include/unibreakdef.h
+include/wordbreak.h
+lib/liblinebreak.a
+lib/libunibreak.la
+lib/pkgconfig/libunibreak.pc
