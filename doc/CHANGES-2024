@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1874 2024/03/14 09:17:59 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1875 2024/03/14 09:39:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-apsw to 3.45.2.0 [adam 2024-03-14]
 	Updated textproc/expat to 2.6.2 [wiz 2024-03-14]
 	Updated news/newsraft to 0.23 [wiz 2024-03-14]
+	Updated net/unbound to 1.19.3 [he 2024-03-14]
