@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4192 2024/03/12 17:53:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4193 2024/03/14 19:20:29 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -868,6 +868,7 @@ SUBDIR+=	kservice
 SUBDIR+=	ktexteditor
 SUBDIR+=	kwayland
 SUBDIR+=	kyua
+SUBDIR+=	lager
 SUBDIR+=	lazygit
 SUBDIR+=	lcc
 SUBDIR+=	lcdis
