@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/14 19:20:29 markd Exp $
+
+BLAKE2s (lager-0.1.1.tar.gz) = 26d44bc0e72f2cdbf005a2c2d47cd1eb8efcf4efc3b5e29fb4fbb25faf21a919
+SHA512 (lager-0.1.1.tar.gz) = f88f22dbe1d0e099b1c1f0d8b165c155c44db61a51297ca445d82db8ed4efb918016678a5d6977147214540c69b72f7364d0d14ddc7f300625c19553c88a4e39
+Size (lager-0.1.1.tar.gz) = 874540 bytes
