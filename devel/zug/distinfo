@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/14 19:27:07 markd Exp $
+
+BLAKE2s (zug-0.1.1.tar.gz) = 441c0394c94d0ea72f8e31c4e3ba6c52faf0f8e75e375004358a86286c60ce6a
+SHA512 (zug-0.1.1.tar.gz) = 1348a0bdd7aed1a590287ff3a1c45c0cb1aef2aca12dc37e77705c2b2015704f766fac82833fa28beb79efe00f6ff63ee1dcb220cdc43517f625ba5edecc090c
+Size (zug-0.1.1.tar.gz) = 102857 bytes
