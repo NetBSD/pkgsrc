@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2022/06/28 11:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2024/03/14 19:33:04 markd Exp $
 
 COMMENT=	Fast C routines to compute DFTs (single and double precision)
-PKGREVISION=	1
+PKGREVISION=	2
 
 SUPERSEDES=	fftwf-[0-9]*
 CONFLICTS+=	fftwf-[0-9]*
@@ -11,5 +11,9 @@ CONFLICTS+=	fftwf-[0-9]*
 FFTW_PRECISION=	double float
 
 .include "Makefile.common"
+
+# referenced by FFTW3*Config.cmake
+post-install:
+	touch ${DESTDIR}${PREFIX}/lib/cmake/fftw3/FFTW3LibraryDepends.cmake
 
 .include "../../mk/bsd.pkg.mk"
