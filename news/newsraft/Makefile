@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2024/02/19 01:38:56 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/14 09:17:49 wiz Exp $
 
-DISTNAME=	newsraft-0.22
+DISTNAME=	newsraft-0.23
 CATEGORIES=	news
 MASTER_SITES=	https://codeberg.org/newsraft/newsraft/archive/
 
-MAINTAINER=	kevin.bloom@posteo.net
+MAINTAINER=	ktnb@posteo.net
 HOMEPAGE=	https://codeberg.org/newsraft
 COMMENT=	Terminal based feed reader
 LICENSE=	isc
