@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4193 2024/03/14 19:20:29 markd Exp $
+# $NetBSD: Makefile,v 1.4194 2024/03/14 19:24:15 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -805,6 +805,7 @@ SUBDIR+=	icestorm
 SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake
+SUBDIR+=	immer
 SUBDIR+=	include-what-you-use
 SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
