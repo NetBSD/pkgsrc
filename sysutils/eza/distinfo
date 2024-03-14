@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2024/03/08 15:36:38 fox Exp $
+$NetBSD: distinfo,v 1.21 2024/03/14 20:30:23 pin Exp $
 
 BLAKE2s (aho-corasick-1.0.5.crate) = 2199caecbc50c93a65ce7d60055f1bcb6885adb15f1153c994432df75aa27240
 SHA512 (aho-corasick-1.0.5.crate) = 6b0a64dbfe0c166341a34cd169bc46d28e40f72db4d599a1aff5327a6e891408f39e8e92e983cf9396a8e8135f93e41550237ff3e5c8c05a5325688746fd814b
@@ -132,9 +132,9 @@ Size (errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza-0.18.6.tar.gz) = b0fdddfa3ce8ce05d4b75d0a8c2b8c68929ec868ca336127f593288c7304ca0a
-SHA512 (eza-0.18.6.tar.gz) = f7e492e19a74e66b63658734b2f01c3908ce5364c3ba50982c9dadb3f8c52137d86b341af71c4362388163a19cff0b21a04452d071100bac9b471498f8b2b266
-Size (eza-0.18.6.tar.gz) = 1385830 bytes
+BLAKE2s (eza-0.18.7.tar.gz) = 6ac62bb39e4810d55675fc1bbae16d7323b152fbcbbbba80b2dd6ebe7de4011c
+SHA512 (eza-0.18.7.tar.gz) = d593acef09674b36e8981d76b84a43f2ec1eb08fde25c4aad533358ad970ea97008426f66e50a5ed4839aff421dfbb74b3349edad02e30f50999e461112c1466
+Size (eza-0.18.7.tar.gz) = 1385835 bytes
 BLAKE2s (fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (fast-srgb8-1.0.0.crate) = 17214 bytes
