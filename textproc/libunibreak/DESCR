@@ -1,0 +1,10 @@
+This is libunibreak, an implementation of the line breaking and
+word/grapheme breaking algorithms as described in [Unicode Standard
+Annex 14][1] (UAX #14) and [Unicode Standard Annex 29][2] (UAX #29).
+
+As of February 2024, Unicode 15.0 support for line breaking, as well as
+full Unicode 15.1 support for word/grapheme breaking, is provided.
+There is currently no plan to implement full Unicode 15.1 support for
+line breaking, mostly because tailoring for Brahmic scripts, as
+described in LB28a of UAX #14-51, is problematic within the current
+framework.

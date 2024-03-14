@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/14 19:15:30 markd Exp $
+
+BLAKE2s (libunibreak-6.1.tar.gz) = 64d5851078e73846a42bcbb6cb28e8b2e2d20913517cadee599832447d7f001f
+SHA512 (libunibreak-6.1.tar.gz) = 8ffde29a9b90ddcbfabb61d7302ffe3b17473cd6d30fe1a4403d857e6191291d7e7a6f23bde58654155ed95f4a0f31e082cdf424a82da46722a811291ef38c2f
+Size (libunibreak-6.1.tar.gz) = 855733 bytes
