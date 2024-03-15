@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1885 2024/03/15 18:51:39 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1886 2024/03/15 19:11:58 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/asdf to 0.14.0nb1 [schmonz 2024-03-15]
 	Updated devel/mise to 2024.3.2 [schmonz 2024-03-15]
 	Updated devel/nss to 3.99 [wiz 2024-03-15]
+	Updated www/gotosocial to 0.14.2 [nikita 2024-03-15]
