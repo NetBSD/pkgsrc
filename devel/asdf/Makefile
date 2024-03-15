@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/01/19 17:09:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/15 18:03:23 schmonz Exp $
 
 DISTNAME=		asdf-0.14.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -55,7 +56,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/completions/asdf.bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/asdf
 	${INSTALL_DATA} ${WRKSRC}/completions/asdf.fish \
-		${DESTDIR}${PREFIX}/share/fish/completions/
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/
 	${INSTALL_DATA} ${WRKSRC}/completions/_asdf \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/
 
