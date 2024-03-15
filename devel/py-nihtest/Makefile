@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/02/23 09:06:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/03/15 10:20:51 wiz Exp $
 
-DISTNAME=	nihtest-1.5.0
+DISTNAME=	nihtest-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
 
@@ -30,6 +29,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/manpages/${man}.mdoc ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/${man}-${PYVERSSUFFIX}.5
 .endfor
 
+# as of 1.5.1
+# 91% tests passed, 5 tests failed out of 54
 do-test:
 	${MKDIR} ${WRKSRC}/build
 	cd ${WRKSRC}/build && cmake .. && ${MAKE} && ctest
