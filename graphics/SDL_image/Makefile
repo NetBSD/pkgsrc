@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/10/21 17:10:21 gdt Exp $
+# $NetBSD: Makefile,v 1.56 2024/03/15 17:13:43 nia Exp $
 
 DISTNAME=	SDL_image-1.2.12
 PKGREVISION=	11
@@ -15,10 +15,17 @@ CONFLICTS=		SDL-image-[0-9]*
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-tif
+CONFIGURE_ARGS+=	--disable-sdltest
 CONFIGURE_ENV+=		OBJC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
 PKGCONFIG_OVERRIDE=	SDL_image.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+CONFIGURE_ARGS+=	--disable-imageio
+.endif
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
