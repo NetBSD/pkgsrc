@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/02/05 14:03:00 hauke Exp $
+# $NetBSD: Makefile,v 1.63 2024/03/15 22:14:26 hauke Exp $
 
 DISTNAME=	netatalk-2.3.1
 PKGNAME=	${DISTNAME:C/-/22-/}
@@ -73,6 +73,19 @@ PLIST_VARS+=		ea
 	${OPSYS} == "FreeBSD"
 PLIST.ea=		yes
 .endif
+
+# ea
+PRINT_PLIST_AWK+=	{ gsub(/^bin\/ad$$/, "$${PLIST.ea}&"); }
+
+# pam
+PRINT_PLIST_AWK+=	{ gsub(/^libexec\/netatalk\/uams\/.+_pam\.la$$/, "$${PLIST.pam}&"); }
+PRINT_PLIST_AWK+=	{ gsub(/^share\/examples\/netatalk\/netatalk\.pam$$/, "$${PLIST.pam}&"); }
+
+# ldap
+PRINT_PLIST_AWK+=	{ gsub(/^share\/examples\/netatalk\/afp_ldap\.conf$$/, "$${PLIST.ldap}&"); }
+
+# gssapi
+PRINT_PLIST_AWK+=	{ gsub(/^libexec\/netatalk\/uams\/.+_gss\.la$$/, "$${PLIST.gssapi}&"); }
 
 CHECK_SSP_SKIP+=	libexec/netatalk/uams/*.a
 
