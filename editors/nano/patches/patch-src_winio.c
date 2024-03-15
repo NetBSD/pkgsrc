@@ -1,8 +1,9 @@
-$NetBSD: patch-src_winio.c,v 1.1 2024/03/15 17:35:50 nia Exp $
+$NetBSD: patch-src_winio.c,v 1.2 2024/03/15 17:44:36 nia Exp $
 
 NetBSD curses fix.
 
 https://gnats.netbsd.org/57749
+https://savannah.gnu.org/patch/index.php?10438
 
 --- src/winio.c.orig	2024-03-15 17:30:32.969607523 +0000
 +++ src/winio.c
