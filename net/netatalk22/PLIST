@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2024/03/15 15:20:26 wiz Exp $
-bin/ad
+@comment $NetBSD: PLIST,v 1.9 2024/03/15 22:14:26 hauke Exp $
+${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
 bin/aecho
@@ -108,6 +108,7 @@ ${PLIST.pam}libexec/netatalk/uams/uams_dhx2_pam.la
 libexec/netatalk/uams/uams_dhx2_passwd.la
 ${PLIST.pam}libexec/netatalk/uams/uams_dhx_pam.la
 libexec/netatalk/uams/uams_dhx_passwd.la
+${PLIST.gssapi}libexec/netatalk/uams/uams_gss.la
 libexec/netatalk/uams/uams_guest.la
 ${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
@@ -166,6 +167,7 @@ man/man8/timelord.8
 share/aclocal/netatalk.m4
 share/examples/netatalk/AppleVolumes.default
 share/examples/netatalk/AppleVolumes.system
+${PLIST.ldap}share/examples/netatalk/afp_ldap.conf
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
