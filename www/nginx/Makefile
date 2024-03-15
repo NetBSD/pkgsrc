@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2024/02/16 18:12:28 osa Exp $
+# $NetBSD: Makefile,v 1.151 2024/03/15 18:35:22 nia Exp $
 
 DISTNAME=	nginx-1.24.0
 PKGREVISION=	17
@@ -36,7 +36,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--user=${NGINX_USER}
 CONFIGURE_ARGS+=	--group=${NGINX_GROUP}
-CONFIGURE_ARGS+=	--with-ld-opt=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-ld-opt=-L${PREFIX}/lib\ ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
