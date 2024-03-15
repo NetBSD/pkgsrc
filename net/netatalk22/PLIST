@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/05 14:03:00 hauke Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/15 15:20:26 wiz Exp $
 bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -104,9 +104,12 @@ libexec/netatalk/timelord
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
 libexec/netatalk/uams/uams_dhx2.so
+${PLIST.pam}libexec/netatalk/uams/uams_dhx2_pam.la
 libexec/netatalk/uams/uams_dhx2_passwd.la
+${PLIST.pam}libexec/netatalk/uams/uams_dhx_pam.la
 libexec/netatalk/uams/uams_dhx_passwd.la
 libexec/netatalk/uams/uams_guest.la
+${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
 man/man1/ad.1
@@ -166,6 +169,7 @@ share/examples/netatalk/AppleVolumes.system
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
+${PLIST.pam}share/examples/netatalk/netatalk.pam
 share/examples/netatalk/papd.conf
 share/netatalk/pagecount.ps
 @pkgdir libexec/psffilters
