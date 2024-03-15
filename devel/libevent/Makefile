@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/10/24 22:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2024/03/15 18:07:32 nia Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/libevent/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-stable//}
@@ -26,6 +26,12 @@ CPPFLAGS.QNX+=		-D__EXT_POSIX2
 # Explicitly disable epoll on illumos & NetBSD, provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
 CONFIGURE_ENV.NetBSD+=	ac_cv_func_epoll_ctl=no
+
+# www/links fails to run on old versions of Darwin without this change.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+CONFIGURE_ENV+=		ac_cv_func_kqueue=no
+CONFIGURE_ENV+=		ac_cv_func_poll=no
+.endif
 
 .if !empty(MACHINE_PLATFORM:MHPUX-11.11-*)
 CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
