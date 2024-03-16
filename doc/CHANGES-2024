@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1895 2024/03/16 17:48:11 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1896 2024/03/16 17:53:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-setuptools to 69.2.0 [adam 2024-03-16]
 	Updated textproc/py-black to 24.3.0 [adam 2024-03-16]
 	Updated devel/py-test-mypy-plugins to 3.1.1 [adam 2024-03-16]
+	Added audio/cmus-legacy version 2.7.1 [nia 2024-03-16]
