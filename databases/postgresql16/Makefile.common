@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/02/09 08:33:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2024/03/16 23:42:39 nia Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -130,7 +130,6 @@ CONFIGURE_ARGS+=	--with-uuid=ossp
 BUILDLINK_TRANSFORM+=	rm:-ffast-math
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../mk/readline.buildlink3.mk"
