@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/03/16 10:12:43 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/16 10:34:29 nia Exp $
 
 LIBTOOL?=		libtool
 MANDIR?=		man
 
 MAJOR!=			printf '%s\n' "$(PKGVERSION_NOREV)" | cut -d. -f1
-MINOR!=			printf '%s\n' "$(PKGVERSION_NOREV)" | cut -d. -f2
-PATCH!=			printf '%s\n' "$(PKGVERSION_NOREV)" | cut -d. -f3
 
 XXHSUM_SRC_DIR=		cli
 
@@ -34,7 +32,7 @@ xxh32sum.1 xxh64sum.1 xxh128sum.1: $(XXHSUM_SRC_DIR)/xxhsum.1
 
 libxxhash.la: xxhash.lo
 	$(LIBTOOL) --quiet --tag=CC --mode=link \
-		$(CC) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info 0:0 -o $@ xxhash.lo
+		$(CC) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info $(MAJOR):0 -o $@ xxhash.lo
 
 xxhsum: xxhash.lo $(XXHSUM_SPLIT_OBJS)
 	$(LIBTOOL) --quiet --tag=CC --mode=link \
