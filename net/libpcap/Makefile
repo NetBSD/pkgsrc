@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/04/18 07:59:11 adam Exp $
+# $NetBSD: Makefile,v 1.70 2024/03/16 19:41:01 nia Exp $
 
 DISTNAME=	libpcap-1.10.4
 CATEGORIES=	net
@@ -21,6 +21,13 @@ PKGCONFIG_OVERRIDE=	libpcap.pc.in
 # and result in dlpi stubs not being enabled.
 CONFIGURE_ARGS.SunOS+=	--with-pcap=dlpi
 CONFIGURE_ENV.SunOS+=	ac_cv_func_getifaddrs=no
+
+.include "../../mk/bsd.prefs.mk"
+
+# Requires Availability.h, which debuted with 10.5.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pcap-int.h ${DESTDIR}${PREFIX}/include
