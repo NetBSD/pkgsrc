@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/07/25 11:12:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/03/16 16:23:22 nia Exp $
 
 DISTNAME=	libmad-0.15.1b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
@@ -27,8 +27,9 @@ CONFIGURE_ARGS+=	--disable-aso
 .endif
 
 post-build:
-	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\
-		-e 's,@VERSION@,${PKGVERSION},g'		\
+	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
+		-e 's,@VERSION@,${PKGVERSION},g'			\
+		-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG:Q}|g'	\
 		< ${FILESDIR}/mad.pc.in > ${WRKDIR}/mad.pc
 
 post-install:
