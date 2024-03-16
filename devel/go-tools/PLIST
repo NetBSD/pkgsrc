@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/03/04 18:14:09 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/03/16 17:17:58 bsiegert Exp $
 bin/authtest
 bin/benchcmp
 bin/bisect
@@ -13,7 +13,6 @@ bin/file2fuzz
 bin/fiximports
 bin/fuzz-driver
 bin/fuzz-runner
-bin/getgo
 bin/gitauth
 bin/go-contrib-init
 bin/godex
