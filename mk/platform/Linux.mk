@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.94 2023/11/29 17:13:47 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.95 2024/03/16 22:55:42 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -212,6 +212,7 @@ GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 MAKE_ENV+=	NOGCCERROR=true
 .endif
 
+OPSYS_HAS_SENDFILE=	# defined
 OPSYS_HAS_EVENTFD=	# defined
 OPSYS_HAS_TIMERFD=	# defined
 OPSYS_HAS_POSIX_SPAWN=	# defined
