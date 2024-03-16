@@ -1,0 +1,5 @@
+cmus is a small, fast and powerful console music player for Unix-like
+operating systems.
+
+This version of cmus is for old operating systems that only have a C99
+capable compiler, and lack support for C11 atomics.

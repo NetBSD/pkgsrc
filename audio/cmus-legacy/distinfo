@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/03/16 17:53:11 nia Exp $
+
+BLAKE2s (cmus-2.7.1.tar.gz) = 037f4ea95b8c2f183b16ed8cec61d8f65465b96fa94ddd92a49e12aa3a04b32e
+SHA512 (cmus-2.7.1.tar.gz) = b29ce10bbb61eb41c33c4912be320718fcf005a5797320145b124f048f6be5f5b0cebb67471ef7b062bd6f854849b6aae0e82e9adbf289a44237787932ea1576
+Size (cmus-2.7.1.tar.gz) = 296818 bytes
+SHA1 (patch-alsa.c) = 90147f01e2dcb614b326f9e4cd06002e01b76555
+SHA1 (patch-mixer__sun.c) = 974c12e06f6071a3bbd51231b2923044c1dca335
+SHA1 (patch-sun.c) = cb260b81339076247386825bc4c374c361b4d8e1
