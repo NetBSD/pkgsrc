@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2024/02/12 21:06:43 hans Exp $
+$NetBSD: patch-ad,v 1.8 2024/03/16 14:23:28 tm Exp $
 
---- courier/filters/Makefile.in.orig	2023-04-23 22:07:56.000000000 +0000
+--- courier/filters/Makefile.in.orig	2023-11-18 22:20:03.000000000 +0000
 +++ courier/filters/Makefile.in
 @@ -461,6 +461,7 @@ SUBDIRS = libfilter perlfilter
  CLEANFILES = $(htmldoc_DATA) $(man_MANS) filtersocketdir.h filteractivedir.h \
@@ -19,7 +19,7 @@ $NetBSD: patch-ad,v 1.7 2024/02/12 21:06:43 hans Exp $
  bin_SCRIPTS = verifysmtp
  filtersocketdir = $(localstatedir)/filters
  allfiltersocketdir = $(localstatedir)/allfilters
-@@ -1435,8 +1436,6 @@ install-exec-hook:
+@@ -1435,18 +1436,14 @@ install-exec-hook:
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(filtersocketdir)
  	-$(mkinstalldirs) $(DESTDIR)$(allfiltersocketdir)
@@ -28,7 +28,9 @@ $NetBSD: patch-ad,v 1.7 2024/02/12 21:06:43 hans Exp $
  	-$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	-$(mkinstalldirs) $(DESTDIR)$(bindir)
  	chmod 500 $(DESTDIR)$(datadir)/filterctl
-@@ -1445,8 +1444,6 @@ install-data-hook:
+ 	rm -f $(DESTDIR)$(sbindir)/filterctl
+-	$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/filterctl` $(DESTDIR)$(sbindir)/filterctl
++	$(LN_S) `realpath $(DESTDIR)$(datadir)/filterctl` $(DESTDIR)$(sbindir)/filterctl
  	chmod 755 $(DESTDIR)$(filterbindir)
  	chmod 750 $(DESTDIR)$(filtersocketdir)
  	chmod 750 $(DESTDIR)$(allfiltersocketdir)

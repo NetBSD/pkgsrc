@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.24 2024/02/12 21:06:43 hans Exp $
+$NetBSD: distinfo,v 1.25 2024/03/16 14:23:28 tm Exp $
 
 BLAKE2s (courier-1.3.5.tar.bz2) = c642c73d91d1e49661461f2436bde29b3c67e34ccfc495c92ae065f508894aea
 SHA512 (courier-1.3.5.tar.bz2) = 5f51383356f4a36f9c114be6aa69d694c82bb95b1a336d2948d486d582bd6559da69be93b7c20aee2ff57826ab7eeb265aa20794074456d036b22da7f280f95d
 Size (courier-1.3.5.tar.bz2) = 7901040 bytes
-SHA1 (patch-aa) = 1be0b3b0a6ff226533310d94c51abadd4005ee40
+SHA1 (patch-aa) = 285d72739a6d3e295a7e4997bfb41f81e1e0172e
 SHA1 (patch-ab) = 253ceb334093a965753d6a796fcec1940acfc5f0
 SHA1 (patch-ac) = b7147b6c85530161fb1620409119d2d00d4a30dc
-SHA1 (patch-ad) = abff3e30b384af39dabd3c0d721ad9ae10b16481
+SHA1 (patch-ad) = 98157e56265309a82d1fab6c509079c294cf07ce
 SHA1 (patch-ae) = 25cf54b4764da79d7c2a4ee40189b93542a2d1ff
 SHA1 (patch-af) = bd07ca8fa0ce711fb4849bc218ed3b4478b05617
 SHA1 (patch-ag) = 913ea4897d96bf3ad885dd6221edb54f79e34af3
@@ -15,6 +15,6 @@ SHA1 (patch-ai) = ee3ae11ec6342afcd2284f4607b6f15412c1ac15
 SHA1 (patch-aj) = ddffd683d418d10880db4d407657b9995327567a
 SHA1 (patch-al) = 1c7935b46b7affafa86e4a858ba6a79b7fbebbc5
 SHA1 (patch-an) = 2b78be9a0e8a9daf528da83007ba865f9b8cc402
-SHA1 (patch-ax) = c7eb48d5aef5a51ae143385d688b092870b56e21
+SHA1 (patch-ax) = 9bd50a5791dc7dc05447c471cab26d61edb1a57d
 SHA1 (patch-ay) = 58da42d53f34394034ddcf2fcf6cd4a82e7c43cd
 SHA1 (patch-configure) = efad44aa1bf7ec5546ce97a01b48933a63b2489e
