@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2023/11/23 13:29:53 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.54 2024/03/16 07:01:26 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -166,6 +166,7 @@ share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
+share/mikutter/core/skin/data/unlisted.png
 share/mikutter/core/skin/data/verified.png
 share/mikutter/core/system/message.rb
 share/mikutter/core/system/system.rb
@@ -214,6 +215,7 @@ share/mikutter/plugin/activity/po/zh_CN/activity.po
 share/mikutter/plugin/activity/po/zh_TW/activity.po
 share/mikutter/plugin/activity_gtk/.mikutter.yml
 share/mikutter/plugin/activity_gtk/activity_gtk.rb
+share/mikutter/plugin/activity_gtk/activity_view.rb
 share/mikutter/plugin/activity_gtk/model_selector.rb
 share/mikutter/plugin/activity_gtk/po/ar/activity_gtk.po
 share/mikutter/plugin/activity_gtk/po/de/activity_gtk.po
@@ -513,14 +515,6 @@ share/mikutter/plugin/mastodon_account_viewer/relational_menu.rb
 share/mikutter/plugin/mastodon_custom_post/.mikutter.yml
 share/mikutter/plugin/mastodon_custom_post/mastodon_custom_post.rb
 share/mikutter/plugin/mastodon_gtk/.mikutter.yml
-share/mikutter/plugin/mastodon_gtk/icon/bot.png
-share/mikutter/plugin/mastodon_gtk/icon/direct.png
-share/mikutter/plugin/mastodon_gtk/icon/libre-gui-email.svg
-share/mikutter/plugin/mastodon_gtk/icon/libre-gui-lock.svg
-share/mikutter/plugin/mastodon_gtk/icon/libre-gui-unlock.svg
-share/mikutter/plugin/mastodon_gtk/icon/pin.png
-share/mikutter/plugin/mastodon_gtk/icon/private.png
-share/mikutter/plugin/mastodon_gtk/icon/unlisted.png
 share/mikutter/plugin/mastodon_gtk/mastodon_gtk.rb
 share/mikutter/plugin/mastodon_gtk/patch.rb
 share/mikutter/plugin/mastodon_gtk/subparts_status_info.rb
@@ -805,8 +799,6 @@ share/mikutter/plugin/sub_parts_voter_updater/sub_parts_voter_updater.rb
 share/mikutter/plugin/tco/.mikutter.yml
 share/mikutter/plugin/tco/tco.rb
 share/mikutter/plugin/template
-share/mikutter/plugin/twitter_api_keys/.mikutter.yml
-share/mikutter/plugin/twitter_api_keys/twitter_api_keys.rb
 share/mikutter/plugin/uitranslator/.mikutter.yml
 share/mikutter/plugin/uitranslator/Gemfile
 share/mikutter/plugin/uitranslator/uitranslator.rb

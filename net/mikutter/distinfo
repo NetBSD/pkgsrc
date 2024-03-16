@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.187 2023/11/23 13:29:53 tsutsui Exp $
+$NetBSD: distinfo,v 1.188 2024/03/16 07:01:26 tsutsui Exp $
 
-BLAKE2s (mikutter-5.0.5/1585-use-own-blowfish-impl.patch) = bee8637c9af366dec49855cc26ac22d3127a29e4a9a53da5113fb30395b30e74
-SHA512 (mikutter-5.0.5/1585-use-own-blowfish-impl.patch) = cddab2449c16b64bc12d272b9302eba01d3e80dfa1d9ade9b125d46508bdc49eb1b4990b25f43c915f76d3e3d4b669a9d5a6b09fbfb6e845690b39d336f120a0
-Size (mikutter-5.0.5/1585-use-own-blowfish-impl.patch) = 41698 bytes
-BLAKE2s (mikutter-5.0.5/mikutter-5.0.5.tar.gz) = 48e7289412146b48876a6233d9c18c1acc9571c94642d6d480a425bf8a9b7004
-SHA512 (mikutter-5.0.5/mikutter-5.0.5.tar.gz) = 8b7d178400b0d7cb674297f9109832e1a19563d35e985636a42028df2414973819ef49b39f80e1a51cf1964634062656dc2071ba8d934083ce327e0a9f3adf28
-Size (mikutter-5.0.5/mikutter-5.0.5.tar.gz) = 2379037 bytes
+BLAKE2s (mikutter-5.0.6/1585-use-own-blowfish-impl.patch) = bee8637c9af366dec49855cc26ac22d3127a29e4a9a53da5113fb30395b30e74
+SHA512 (mikutter-5.0.6/1585-use-own-blowfish-impl.patch) = cddab2449c16b64bc12d272b9302eba01d3e80dfa1d9ade9b125d46508bdc49eb1b4990b25f43c915f76d3e3d4b669a9d5a6b09fbfb6e845690b39d336f120a0
+Size (mikutter-5.0.6/1585-use-own-blowfish-impl.patch) = 41698 bytes
+BLAKE2s (mikutter-5.0.6/mikutter-5.0.6.tar.gz) = 939706504acd7ded7f69d860e950b4659afd4b4a8d65971357637d2246d16440
+SHA512 (mikutter-5.0.6/mikutter-5.0.6.tar.gz) = 6ea4b8677069e993ede27a9ef110fd8b64587c8fc8b773f027ab1515e532e31d4d5e8ac1818f60ddb1921b064a0e22a5f95385a4ddfb0cf4ca2877ce5e8e1f70
+Size (mikutter-5.0.6/mikutter-5.0.6.tar.gz) = 2372713 bytes
 SHA1 (patch-core_config.rb) = a3167ba101f840983d9d27ea36252ec5e0b0435d
-SHA1 (patch-mikutter.rb) = f3cc7f0226ab6041e8ad0080a33371041a6bdf85
+SHA1 (patch-mikutter.rb) = e9ce3b1ef7e31fb97f10c55384541343aa138d8a
