@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2024/03/04 18:14:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.91 2024/03/16 17:17:58 bsiegert Exp $
 
-DISTNAME=		tools-0.18.0
+DISTNAME=		tools-0.19.0
 PKGNAME=		go-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
@@ -51,7 +51,6 @@ CHECK_RELRO_SKIP+=	bin/deadcode
 CHECK_RELRO_SKIP+=	bin/digraph
 CHECK_RELRO_SKIP+=	bin/eg
 CHECK_RELRO_SKIP+=	bin/fiximports
-CHECK_RELRO_SKIP+=	bin/getgo
 CHECK_RELRO_SKIP+=	bin/gitauth
 CHECK_RELRO_SKIP+=	bin/go-contrib-init
 CHECK_RELRO_SKIP+=	bin/godex
