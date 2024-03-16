@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1886 2024/03/15 19:11:58 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.1887 2024/03/16 08:13:10 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3167,3 +3167,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/mise to 2024.3.2 [schmonz 2024-03-15]
 	Updated devel/nss to 3.99 [wiz 2024-03-15]
 	Updated www/gotosocial to 0.14.2 [nikita 2024-03-15]
+	Updated net/mikutter to 5.0.6 [tsutsui 2024-03-16]
