@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/12/10 12:39:09 js Exp $
+$NetBSD: distinfo,v 1.10 2024/03/16 01:00:16 js Exp $
 
 BLAKE2s (SickGear/release_3.30.5.tar.gz) = f3f7541cd69fb5d028fbcce78d4eeb9938e452ea9dcdff761b26fa0d0952ef9f
 SHA512 (SickGear/release_3.30.5.tar.gz) = 3d10fbfbadfa66db7f4ebf4d8c161657ce2a92e8facfd40c619b5a40b8737c15be030459f99141f0a9efde321bd66da2fdad41cabfd77496eccc1920bfd7a979
 Size (SickGear/release_3.30.5.tar.gz) = 16649271 bytes
+SHA1 (patch-sickgear.py) = 3ce73861fa16cba2b9267aebf1da51437fd743f3
