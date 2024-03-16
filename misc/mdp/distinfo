@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/03/16 22:25:05 nia Exp $
 
 BLAKE2s (mdp-1.0.15.tar.gz) = e0543e973984a55d59560894a513c96ecb98d2ec350df8104d907212e344745a
 SHA512 (mdp-1.0.15.tar.gz) = 88337224dc7b58bc82f68861083e31ac429ff97e6dfcf7a66042c302205ca01947df35445e0b4683c5c5a998c493db882d3aaff462673b5a387865c33752bb0e
 Size (mdp-1.0.15.tar.gz) = 37728 bytes
-SHA1 (patch-Makefile) = 39d409d26b6be6bb0f3c4bda9d1e92ecebe905bd
+SHA1 (patch-Makefile) = e74cedb4f50d0d1fd96c7d7301ef7b510f2139f2
