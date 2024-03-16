@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.54 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: DragonFly.mk,v 1.55 2024/03/16 22:56:03 nia Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -64,6 +64,8 @@ OPSYS_HAS_KQUEUE=	# defined
 .if exists(/usr/include/spawn.h)
 OPSYS_HAS_POSIX_SPAWN=	# defined
 .endif
+
+OPSYS_HAS_SENDFILE=	# defined
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
