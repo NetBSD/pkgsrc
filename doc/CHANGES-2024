@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1897 2024/03/16 18:35:16 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1898 2024/03/16 20:21:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added audio/cmus-legacy version 2.7.1 [nia 2024-03-16]
 	Updated net/py-comm to 0.2.2 [adam 2024-03-16]
 	Updated devel/py-traitlets to 5.14.2 [adam 2024-03-16]
+	Updated archivers/engrampa to 1.26.2 [gutteridge 2024-03-16]
