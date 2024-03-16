@@ -7,5 +7,5 @@ Name: mad
 Description: MPEG Audio Decoder
 Requires:
 Version: @VERSION@
-Libs: -Wl,-R${libdir} -L${libdir} -lmad -lm
+Libs: @COMPILER_RPATH_FLAG@${libdir} -L${libdir} -lmad -lm
 Cflags: -I${includedir}
