@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2019/11/24 01:02:37 gdt Exp $
+# $NetBSD: Makefile,v 1.97 2024/03/16 21:33:11 nia Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -58,6 +58,11 @@ SUBST_FILES.shlib2=	config.status config.h glibconfig.h
 SUBST_SED.shlib2=	-e "s|^\\(\#define.*GLIB_MAJOR_VERSION\\).*|\\1	${GLIB_MAJOR_VERSION}|"
 SUBST_SED.shlib2+=	-e "s|^\\(\#define.*GLIB_MINOR_VERSION\\).*|\\1	${GLIB_MINOR_VERSION}|"
 SUBST_SED.shlib2+=	-e "s|^\\(\#define.*GLIB_MICRO_VERSION\\).*|\\1	${GLIB_MICRO_VERSION}|"
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath=	glib-config.in
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 #post-configure:
 #	${CHMOD} +x config.status
