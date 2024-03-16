@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.31 2024/02/12 21:36:08 hans Exp $
+$NetBSD: distinfo,v 1.32 2024/03/16 14:23:15 tm Exp $
 
 BLAKE2s (courier-imap-5.2.6.tar.bz2) = 6cb868eaca36847cde3a8e5f0e3f763bb211570f0f7d7ddcad5adb285b24ceb3
 SHA512 (courier-imap-5.2.6.tar.bz2) = ee48ea5a5e043c3ce13027af2815ca07a1cba7d0ca328f8120ccc7f6134d18c610db202b2820c1dd589a427c1a3d096283c2f3fe9f9bd4815c9586dbe779d904
 Size (courier-imap-5.2.6.tar.bz2) = 3411210 bytes
-SHA1 (patch-aa) = 9a4a8dccb6a741fd3c31d81cc85856792d1e8c59
+SHA1 (patch-aa) = 8ac387e27517c0cc558a44e5ea3fd246fb3d3282
 SHA1 (patch-ad) = 1091c9a5991c746855db7fc4d3e2e744142b2e3c
 SHA1 (patch-ae) = 9d925f4639086af9f6faecd6a2fab2a9ecab670c
 SHA1 (patch-af) = 0fa0e0bd2f1908404f866de9358c74403615967f
