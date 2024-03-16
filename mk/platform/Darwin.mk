@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.137 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: Darwin.mk,v 1.138 2024/03/16 22:55:42 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -226,6 +226,7 @@ OPSYS_HAS_KQUEUE=	# defined
 # check for posix_spawn(3) support
 .if ${OPSYS_VERSION} >= 100500
 OPSYS_HAS_POSIX_SPAWN=	# defined
+OPSYS_HAS_SENDFILE=	# defined
 .endif
 
 # If the deployment target is not set explicitly, the linker in Tiger and prior
