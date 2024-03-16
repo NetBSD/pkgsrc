@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2023/11/30 10:35:44 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2024/03/16 23:42:39 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql16
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace llvm gssapi ldap nls pam lz4
-PKG_SUGGESTED_OPTIONS=	gssapi nls lz4
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam lz4
+PKG_SUGGESTED_OPTIONS=	gssapi icu nls lz4
 
 PLIST_VARS+=		gssapi llvm nls
 
@@ -71,4 +71,10 @@ CONFIGURE_ARGS+=	--disable-nls
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
+.endif
+
+.if !empty(PKG_OPTIONS:Micu)
+.  include "../../textproc/icu/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-icu
 .endif
