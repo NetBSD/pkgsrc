@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1888 2024/03/16 09:02:58 tm Exp $
+$NetBSD: CHANGES-2024,v 1.1889 2024/03/16 13:46:49 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3169,3 +3169,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/gotosocial to 0.14.2 [nikita 2024-03-15]
 	Updated net/mikutter to 5.0.6 [tsutsui 2024-03-16]
 	Added devel/gcli version 2.2.0 [tm 2024-03-16]
+	Updated biology/py-cutadapt to 4.7 [bacon 2024-03-16]
