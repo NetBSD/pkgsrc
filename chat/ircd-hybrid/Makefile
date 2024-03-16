@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/11/08 13:18:15 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/03/16 11:19:33 nia Exp $
 
 DISTNAME=	ircd-hybrid-8.2.43
 PKGREVISION=	4
@@ -69,6 +69,12 @@ SUBST_SED.bpaths+=	-e "s|RUNPATH \"/ircd.pid\"|\"${VARBASE}/run/ircd-hybrid/ircd
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
+
+# Macs lacked clock_gettime way past its implement-by date.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101200
+LDFLAGS+=	-lMacportsLegacySupport
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
 
 .include "options.mk"
 
