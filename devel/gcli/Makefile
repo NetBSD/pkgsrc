@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/16 09:01:24 tm Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/16 09:06:39 wiz Exp $
 
 DISTNAME=	gcli-2.2.0
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	https://herrhotzenplotz.de/gcli/releases/gcli-2.2.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tm@NetBSD.org
-HOMEPAGE=	https://herrhotzenplotz.de/gcli/releases/gcli-2.2.0/
+HOMEPAGE=	https://herrhotzenplotz.de/gcli/
 COMMENT=	Portable CLI tool for interacting with Git(Hub|Lab|Tea)
 LICENSE=	2-clause-bsd
 
