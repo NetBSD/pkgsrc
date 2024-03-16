@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/16 09:01:24 tm Exp $
+
+BLAKE2s (gcli-2.2.0.tar.bz2) = 2560ceb528c3672fa0b8c7debbd8439f4e0befe701d2c346c8480b1b55a9a4cd
+SHA512 (gcli-2.2.0.tar.bz2) = 43709083c5f9cb5dcd5f2e9946ba94ad14da4afb6c8f18b72a8b5f1cf503e050a5d3ad7a939b40a7d2c99d06e8ad695f0fe37955dddb6da3a37dcb59907ea62f
+Size (gcli-2.2.0.tar.bz2) = 456985 bytes
