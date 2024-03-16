@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.217 2023/11/23 13:29:53 tsutsui Exp $
+# $NetBSD: Makefile,v 1.218 2024/03/16 07:01:26 tsutsui Exp $
 
-DISTNAME=	mikutter-5.0.5
+DISTNAME=	mikutter-5.0.6
 DIST_SUBDIR=	${DISTNAME}	# for a pending patch in upstream Redmine
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
@@ -27,7 +26,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-httpclient>=2.8.3nb1:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.2:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta-[0-9]*:../../databases/ruby-moneta
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.8:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.7.0:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1.2:../../misc/ruby-typed-array
 
