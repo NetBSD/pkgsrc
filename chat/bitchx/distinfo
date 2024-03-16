@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:05:11 nia Exp $
+$NetBSD: distinfo,v 1.24 2024/03/16 13:11:55 nia Exp $
 
 BLAKE2s (bitchx-1.2.1.tar.gz) = 8ae54865abc252701948be70b9122b168e9b4de81af89afa9d3f32f95e3dfc5b
 SHA512 (bitchx-1.2.1.tar.gz) = d5e0a151c69a85cca2544db8478af9fbd8fca17f882993fab7f898a95221087bf6219ad2144caedecb5bc508dfa02fa724737c615fbda47aeb8df8298cdfd645
 Size (bitchx-1.2.1.tar.gz) = 2549182 bytes
 SHA1 (patch-configure) = fa29df53d26437edf98901fd1a192978cda2e685
+SHA1 (patch-dll_aim_toc_interface.c) = d0b5be5f4be3e929952fec7db30289b4e5e39f19
+SHA1 (patch-include_dcc.h) = bdfb044a4dc5f432762932bd8a39d07c65d16770
+SHA1 (patch-source_commands.c) = f97c82140ab8f189a5d4c14f090deb9d609cb84f
+SHA1 (patch-source_dcc.c) = b20e60c9170b5c376fc6b504c2e54a247b0f211d
+SHA1 (patch-source_expr2.c) = ae4955e51a1c6e6cac5c987dac0928b975ff71a1
+SHA1 (patch-source_modules.c) = b9d57405344ff8b14d06be23a5510b36fc9fdd9b
+SHA1 (patch-source_numbers.c) = 7d60a19ce987d61b30d4ba7ebbc3e34ac19e6176
