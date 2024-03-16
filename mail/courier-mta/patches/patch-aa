@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2024/02/12 21:06:43 hans Exp $
+$NetBSD: patch-aa,v 1.9 2024/03/16 14:23:28 tm Exp $
 
---- courier/Makefile.in.orig	2023-08-04 00:12:02.000000000 +0000
+--- courier/Makefile.in.orig	2023-11-23 21:09:35.000000000 +0000
 +++ courier/Makefile.in
 @@ -101,16 +101,16 @@ host_triplet = @host@
  target_triplet = @target@
@@ -113,8 +113,9 @@ $NetBSD: patch-aa,v 1.8 2024/02/12 21:06:43 hans Exp $
 -	for f in makealiases makehosteddomains makeimapaccess pop3d pop3d-ssl \
 +	for f in makealiases makehosteddomains \
  		; do rm -f $(DESTDIR)$(sbindir)/$$f ; \
- 		$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
+-		$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
 -	rm -f $(DESTDIR)$(sbindir)/webgpg ; $(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/sqwebmail/webgpg` $(DESTDIR)$(sbindir)/webgpg
++		$(LN_S) `realpath $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
  	$(INSTALL_PROGRAM) ../webadmin/webadmin $(DESTDIR)$(webmaildir)/webadmin
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared
