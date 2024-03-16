@@ -1,17 +1,34 @@
-$NetBSD: patch-ax,v 1.4 2024/02/12 21:06:43 hans Exp $
+$NetBSD: patch-ax,v 1.5 2024/03/16 14:23:29 tm Exp $
 
---- courier/module.esmtp/Makefile.in.orig	2023-04-24 02:29:24.000000000 +0000
+--- courier/module.esmtp/Makefile.in.orig	2023-11-18 22:20:17.000000000 +0000
 +++ courier/module.esmtp/Makefile.in
-@@ -1238,17 +1238,11 @@ install-data-local:
- 	test -f $(DESTDIR)$(sbindir)/courieresmtpd && exit 0; $(mkinstalldirs) $(DESTDIR)$(sbindir) || :; rm -f $(DESTDIR)$(sbindir)/courieresmtpd && $(LN_S) `realpath --relative-to $(sbindir) -m $(moduledir)/courieresmtpd` $(DESTDIR)$(sbindir)/courieresmtpd
+@@ -1128,8 +1128,8 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-databinSCRIPTS \
+-	install-modulePROGRAMS
++install-data-am: install-modulePROGRAMS install-databinSCRIPTS \
++	install-data-local
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-am
+@@ -1235,20 +1235,14 @@ install-data-hook:
+ 	test `id -u` = 0 || exit 0 ; cd $(DESTDIR)$(moduledir) || exit 1 ; chown @mailuser@ . ; chgrp @mailgroup@ .
+ 
+ install-data-local:
+-	test -f $(DESTDIR)$(sbindir)/courieresmtpd && exit 0; $(mkinstalldirs) $(DESTDIR)$(sbindir) || :; rm -f $(DESTDIR)$(sbindir)/courieresmtpd && $(LN_S) `realpath --relative-to $(sbindir) -m $(moduledir)/courieresmtpd` $(DESTDIR)$(sbindir)/courieresmtpd
++	test -f $(DESTDIR)$(sbindir)/courieresmtpd && exit 0; $(mkinstalldirs) $(DESTDIR)$(sbindir) || :; rm -f $(DESTDIR)$(sbindir)/courieresmtpd && $(LN_S) `realpath $(DESTDIR)$(moduledir)/courieresmtpd` $(DESTDIR)$(sbindir)/courieresmtpd
  	-$(mkinstalldirs) $(DESTDIR)$(bindir)
- 	test -f $(DESTDIR)$(bindir)/addcr && exit 0; rm -f $(DESTDIR)$(bindir)/addcr && $(LN_S) `realpath -m --relative-to $(bindir) $(moduledir)/addcr` $(DESTDIR)$(bindir)/addcr
+-	test -f $(DESTDIR)$(bindir)/addcr && exit 0; rm -f $(DESTDIR)$(bindir)/addcr && $(LN_S) `realpath -m --relative-to $(bindir) $(moduledir)/addcr` $(DESTDIR)$(bindir)/addcr
 -	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/esmtpacceptmailfor.dir
 -	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/esmtppercentrelay.dir
++	test -f $(DESTDIR)$(bindir)/addcr && exit 0; rm -f $(DESTDIR)$(bindir)/addcr && $(LN_S) `realpath $(DESTDIR)$(moduledir)/addcr` $(DESTDIR)$(bindir)/addcr
  	-$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	for f in $(databin_SCRIPTS) ; do \
  		rm -f $(DESTDIR)$(sbindir)/$$f ; \
- 		$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
+-		$(LN_S) `realpath -m --relative-to $(sbindir) $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
++		$(LN_S) `realpath $(datadir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
  	cat </dev/null >>$(DESTDIR)$(sysconfdir)/esmtpauthclient
 -	chmod 600 $(DESTDIR)$(sysconfdir)/esmtpauthclient
 -	test `id -u` = 0 || exit 0; \

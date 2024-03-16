@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2024/02/12 21:06:43 hans Exp $
+# $NetBSD: Makefile,v 1.67 2024/03/16 14:23:28 tm Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -14,6 +14,8 @@ HOMEPAGE=	https://www.courier-mta.org/
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
 DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
