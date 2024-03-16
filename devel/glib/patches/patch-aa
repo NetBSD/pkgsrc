@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1999/04/27 21:05:04 tron Exp $
+$NetBSD: patch-aa,v 1.4 2024/03/16 21:33:11 nia Exp $
 
 --- glib-config.in.orig	Wed Dec 16 02:29:18 1998
 +++ glib-config.in	Tue Apr 27 22:48:27 1999
@@ -7,5 +7,5 @@ $NetBSD: patch-aa,v 1.3 1999/04/27 21:05:04 tron Exp $
  		libsa="$libsa @G_MODULE_LIBS@"
  	fi
 -	echo -L@libdir@ $libsp $libsa
-+	echo -L@libdir@ -Wl,-R@libdir@ $libsp $libsa
++	echo -L@libdir@ @COMPILER_RPATH_FLAG@@libdir@ $libsp $libsa
  fi
