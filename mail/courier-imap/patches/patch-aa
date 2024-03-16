@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.16 2024/02/12 21:36:09 hans Exp $
+$NetBSD: patch-aa,v 1.17 2024/03/16 14:23:16 tm Exp $
 
---- Makefile.in.orig	2023-04-25 02:26:35.000000000 +0000
+--- Makefile.in.orig	2023-11-23 21:11:57.000000000 +0000
 +++ Makefile.in
 @@ -416,19 +416,18 @@ SUBDIRS = libs/numlib libs/bdbobj libs/g
  	libs/maildir libs/makedat libs/libhmac \
@@ -80,10 +80,11 @@ $NetBSD: patch-aa,v 1.16 2024/02/12 21:36:09 hans Exp $
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	for f in mkimapdcert mkpop3dcert mkdhparams; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
- 		$(LN_S) `realpath --relative-to $(sbindir) -m $(databindir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
+-		$(LN_S) `realpath --relative-to $(sbindir) -m $(databindir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
++		$(LN_S) `realpath $(DESTDIR)$(databindir)/$$f` $(DESTDIR)$(sbindir)/$$f ; done
 +	for f in imapd-ssl imapd pop3d pop3d-ssl; \
 +		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-+		$(LN_S) `realpath --relative-to $(sbindir) -m $(databindir)/$$f.rc` $(DESTDIR)$(sbindir)/$$f ; done
++		$(LN_S) `realpath $(DESTDIR)$(databindir)/$$f.rc` $(DESTDIR)$(sbindir)/$$f ; done
  	$(mkinstalldirs) $(DESTDIR)$(localstatedir)
  
  install-exec-hook:
