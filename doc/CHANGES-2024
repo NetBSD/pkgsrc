@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1891 2024/03/16 17:10:46 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.1892 2024/03/16 17:13:31 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated biology/py-cutadapt to 4.7 [bacon 2024-03-16]
 	Updated textproc/ruby-nokogiri to 1.16.3 [tsutsui 2024-03-16]
 	Updated www/caddy to 2.7.6 [bsiegert 2024-03-16]
+	Updated devel/gopls to 0.15.2 [bsiegert 2024-03-16]
