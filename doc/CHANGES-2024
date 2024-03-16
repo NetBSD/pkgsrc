@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1893 2024/03/16 17:18:14 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.1894 2024/03/16 17:21:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/caddy to 2.7.6 [bsiegert 2024-03-16]
 	Updated devel/gopls to 0.15.2 [bsiegert 2024-03-16]
 	Updated devel/go-tools to 0.19.0 [bsiegert 2024-03-16]
+	Updated devel/errcheck to 1.7.0 [bsiegert 2024-03-16]
