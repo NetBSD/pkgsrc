@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_loadables_getconf.c,v 1.3 2023/11/24 01:41:04 nia Exp $
+$NetBSD: patch-examples_loadables_getconf.c,v 1.4 2024/03/16 12:24:36 nia Exp $
 
 Handle _SC_RTSIG_MAX not being defined (NetBSD 9) as well as other missing
 definitions (_SC_REALTIME_SIGNALS, _SC_TIMER_MAX, _SC_CPUTIME,
@@ -66,7 +66,7 @@ versions.
      { "HOST_NAME_MAX", _SC_HOST_NAME_MAX, SYSCONF },
      { "LOGIN_NAME_MAX", _SC_LOGIN_NAME_MAX, SYSCONF },
      { "MQ_OPEN_MAX", _SC_MQ_OPEN_MAX, SYSCONF },
-@@ -846,14 +862,18 @@ static const struct conf vars[] =
+@@ -846,15 +862,21 @@ static const struct conf vars[] =
  #ifdef _SC_TRACE_LOG
      { "_POSIX_TRACE_LOG", _SC_TRACE_LOG, SYSCONF },
  #endif
@@ -82,6 +82,19 @@ versions.
 +#ifdef _SC_SIGQUEUE_MAX
      { "SIGQUEUE_MAX", _SC_SIGQUEUE_MAX, SYSCONF },
 +#endif
++#ifdef _PC_FILESIZEBITS
      { "FILESIZEBITS", _PC_FILESIZEBITS, PATHCONF },
++#endif
  #ifdef _PC_ALLOC_SIZE_MIN
      { "POSIX_ALLOC_SIZE_MIN", _PC_ALLOC_SIZE_MIN, PATHCONF },
+ #endif
+@@ -870,7 +892,9 @@ static const struct conf vars[] =
+ #ifdef _PC_REC_XFER_ALIGN
+     { "POSIX_REC_XFER_ALIGN", _PC_REC_XFER_ALIGN, PATHCONF },
+ #endif
++#ifdef _PC_SYMLINK_MAX
+     { "SYMLINK_MAX", _PC_SYMLINK_MAX, PATHCONF },
++#endif
+ #ifdef _PC_2_SYMLINKS
+     { "POSIX2_SYMLINKS", _PC_2_SYMLINKS, PATHCONF },
+ #endif
