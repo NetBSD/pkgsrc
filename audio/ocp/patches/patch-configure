@@ -1,40 +1,51 @@
-$NetBSD: patch-configure,v 1.3 2021/04/18 20:38:37 wiz Exp $
+$NetBSD: patch-configure,v 1.4 2024/03/17 17:34:06 nia Exp $
 
-Remove gcc check, trust pkgsrc to provide a working one.
+Shell portability.
 
---- configure.orig	2011-11-17 21:46:08.000000000 +0000
+--- configure.orig	2024-03-17 16:30:27.835226059 +0000
 +++ configure
-@@ -4579,33 +4579,6 @@ test "x$exec_prefix" = xNONE && exec_pre
+@@ -8953,7 +8953,7 @@ printf "%s\n" "no" >&6; }
+ 		PKG_CONFIG=""
+ 	fi
+ fi
+-if test "x$WINDOWS" == x
++if test "x$WINDOWS" = x
+ then :
  
  
+@@ -10165,7 +10165,7 @@ else $as_nop
+ fi
  
--{ $as_echo "$as_me:${as_lineno-$LINENO}: checking gcc version" >&5
--$as_echo_n "checking gcc version... " >&6; }
--cc_version=`( $CC -dumpversion ) 2>&1`
--if test "$?" -gt 0 || test x$cc_version = x; then
--	as_fn_error $? "not found" "$LINENO" 5
--else
--	case $cc_version in
--		'')
--			as_fn_error $? "not found" "$LINENO" 5;
--			;;
--		2.95.[2-9]|2.95.[2-9][-.]*|3.[0-9]|3.[0-9].[0-9]|3.[0-9]|3.[0-9].[0-9]-*|4.*)
--			_cc_major=`echo $cc_version | cut -d '.' -f 1`
--			_cc_minor=`echo $cc_version | cut -d '.' -f 2`
--			_cc_mini=`echo $cc_version | cut -d '.' -f 3`
--			if test $_cc_major -gt 2; then
--				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $cc_version, ok" >&5
--$as_echo "$cc_version, ok" >&6; }
--			else
--				as_fn_error $? "$cc_version, bad" "$LINENO" 5
--			fi
--			;;
--		*)
--			as_fn_error $? "$cc_version, bad" "$LINENO" 5
--			;;
--       esac
--fi
--
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for broken signed char to signed int in loops (gcc version 4.1.1)" >&5
- $as_echo_n "checking for broken signed char to signed int in loops (gcc version 4.1.1)... " >&6; }
- if test "$cross_compiling" = yes; then :
+ 
+-if test "x$WINDOWS" == x
++if test "x$WINDOWS" = x
+ then :
+ 
+ 
+@@ -15058,7 +15058,7 @@ printf "%s\n" "#define HAVE_CXX17 1" >>c
+   fi
+ 
+ 
+-if test $ax_cv_cxx_compile_cxx17__std_cpp17 == "yes"
++if test $ax_cv_cxx_compile_cxx17__std_cpp17 = "yes"
+ then :
+   printf "%s\n" "#define HAVE_CXX17 1" >>confdefs.h
+ 
+@@ -15556,7 +15556,7 @@ printf "%s\n" "#define HAVE_CXX14 1" >>c
+   fi
+ 
+ 
+-    if test $ax_cv_cxx_compile_cxx14__std_cpp14 == "yes"
++    if test $ax_cv_cxx_compile_cxx14__std_cpp14 = "yes"
+ then :
+   printf "%s\n" "#define HAVE_CXX14 1" >>confdefs.h
+ 
+@@ -15934,7 +15934,7 @@ printf "%s\n" "#define HAVE_CXX11 1" >>c
+   fi
+ 
+ 
+-        if test $ax_cv_cxx_compile_cxx11__std_cpp11 == "yes"
++        if test $ax_cv_cxx_compile_cxx11__std_cpp11 = "yes"
+ then :
+   printf "%s\n" "#define HAVE_CXX11 1" >>confdefs.h
+ 
