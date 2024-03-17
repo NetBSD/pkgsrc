@@ -29,9 +29,9 @@ First we need to check out the got source code on our host machine.
     $ chown -R _gotd:_gotd @VARBASE@/git
     ----------------------------------------------------------------
 
-For our examplei, we need to create an anonymous ssh login user
-and group with an empty password to allow everyone read only access.
-For a more restricted setup it is also possible to create a developer
+For our example, we need to create an anonymous ssh login user and
+group with an empty password to allow everyone read only access.
+For a more restricted setup, it is also possible to create a developer
 group and users with pre-shared ssh keys.
 
     ----------------------------------------------------------------
