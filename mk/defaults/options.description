@@ -520,6 +520,7 @@ libofa			Enable Open Fingerprint Architecture library support.
 libofx			Enable OFX support.
 libotf			Enable libotf support.
 libpcap			Enable libpcap support.
+libproxy		Use libproxy for automatic proxy configuration.
 libraw			Enable libraw support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
