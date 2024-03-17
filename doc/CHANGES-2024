@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1904 2024/03/17 11:39:19 vins Exp $
+$NetBSD: CHANGES-2024,v 1.1905 2024/03/17 11:48:33 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-test-jupyter to 0.9.1 [adam 2024-03-17]
 	Updated devel/py-ruff to 0.3.3 [adam 2024-03-17]
 	Updated devel/got to 0.97 [vins 2024-03-17]
+	Updated chat/toot to 0.42.0 [vins 2024-03-17]
