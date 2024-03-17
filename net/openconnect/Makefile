@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/11/08 13:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/03/17 11:24:34 nia Exp $
 
 DISTNAME=		openconnect-9.12
 PKGREVISION=		4
@@ -25,9 +25,9 @@ CONFIGURE_ARGS+=	--disable-docs
 REPLACE_PYTHON=		trojans/*.py
 REPLACE_BASH=		trojans/*.sh
 
+.include "options.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/libproxy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
