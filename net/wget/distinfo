@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.70 2023/05/16 20:33:01 wiz Exp $
+$NetBSD: distinfo,v 1.71 2024/03/17 14:24:32 wiz Exp $
 
-BLAKE2s (wget-1.21.4.tar.lz) = 62f3bb676f3d20cb2eec4cb16990a96894143de0d21642ab87e59b92a0eb2aa0
-SHA512 (wget-1.21.4.tar.lz) = 29523aad06db4604cbeddadca3c6b9ef2c26886057f1358044e5502cfb0d35cc0dfe41db3aa4468d7cef43cc9904d88e721f9193dca5e6b6bc836667e097d1d6
-Size (wget-1.21.4.tar.lz) = 2490548 bytes
+BLAKE2s (wget-1.24.5.tar.lz) = 5e66254de4410ed36135b49d13f19d60df92486ab101a9dabbaecef66a1a8b3d
+SHA512 (wget-1.24.5.tar.lz) = d8972e94d9125133d115750542e0f126b85a311634d5563a69d8fe85ecf1200836dcc83528ee4285d56834c58c722be580bfe749b26436158fbe4afc566f5cc0
+Size (wget-1.24.5.tar.lz) = 2545954 bytes
