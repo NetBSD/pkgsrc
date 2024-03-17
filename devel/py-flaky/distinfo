@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/03/11 06:52:59 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/03/17 10:06:55 adam Exp $
 
-BLAKE2s (flaky-3.8.0.tar.gz) = d18fe99486c94f45e4c596ae28de44f62d7267c89c6276bbb2087100977c0a9d
-SHA512 (flaky-3.8.0.tar.gz) = 3023bb136f9d91ffa149081f6483ae6bf85a4e689e0614b64d92880b3bdc312bfd2e6b1ddea43a33cd0a4a60daf3cedb1b2820bf25960adab21164d599d6fd44
-Size (flaky-3.8.0.tar.gz) = 25227 bytes
+BLAKE2s (flaky-3.8.1.tar.gz) = 67b24579eca18caa1e711ca24b271654d2511b7881d3d2d6ad3bd24530b3c30c
+SHA512 (flaky-3.8.1.tar.gz) = 486b8aeb9a63c5b4dfb0cf4a0ad86b29e90cdc4a604cdca7676c4b918fc4bb40e185fcc23a205a12916fd2b99316a2a89ca363b3f6efe2ebfb1e93722b4f4547
+Size (flaky-3.8.1.tar.gz) = 25248 bytes
