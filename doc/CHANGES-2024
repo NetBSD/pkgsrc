@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1931 2024/03/17 17:34:18 nia Exp $
+$NetBSD: CHANGES-2024,v 1.1932 2024/03/17 17:51:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jupyter_events to 0.9.1 [adam 2024-03-17]
 	Updated comms/py-jupyter_server_terminals to 0.5.3 [adam 2024-03-17]
 	Updated audio/ocp to 0.2.107 [nia 2024-03-17]
+	Updated chat/xaric to 0.13.9 [nia 2024-03-17]
