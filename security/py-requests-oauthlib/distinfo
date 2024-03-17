@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/02/06 19:04:17 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/03/17 14:08:17 wiz Exp $
 
-BLAKE2s (requests-oauthlib-1.3.1.tar.gz) = 430230dfa462afb14901f2040b19bc1121f090c0189c2addf25e101947ee3762
-SHA512 (requests-oauthlib-1.3.1.tar.gz) = fb4b52edf5f3e4f82f9bedc13b4bc4032e629fd17fef62e72c9eeb734d1963c08c081c9a96db464539637c678e1f5b7f4bf9bb618a8bc1b6aa2024c7b5c620ea
-Size (requests-oauthlib-1.3.1.tar.gz) = 52027 bytes
+BLAKE2s (requests-oauthlib-1.4.0.tar.gz) = d521e95465c4216e13ff26ffcb0d9804c155e55c7905cb62b253d1a83c5aed1c
+SHA512 (requests-oauthlib-1.4.0.tar.gz) = 20a0e097de1c7c895725d551efcb614cc6fa3acf26798e2282f1ed7dc577fa54496d6d0e45f14d4fefa967e4545cc62c20a07eacdb367bbb06ac822518d0c383
+Size (requests-oauthlib-1.4.0.tar.gz) = 55616 bytes
