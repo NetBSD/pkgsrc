@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/17 09:54:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -17,6 +17,7 @@ ${PYSITELIB}/asdf_standard/integration.pyo
 ${PYSITELIB}/asdf_standard/resource.py
 ${PYSITELIB}/asdf_standard/resource.pyc
 ${PYSITELIB}/asdf_standard/resource.pyo
+${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/astronomy/astronomy-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/core/core-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/core/core-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/core/core-1.2.0.yaml
@@ -26,6 +27,7 @@ ${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/core/core-1.5.0.y
 ${PYSITELIB}/asdf_standard/resources/manifests/asdf-format.org/core/core-1.6.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/asdf-format.org/core/extension_manifest-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/asdf-schema-1.0.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/asdf-schema-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/asdf-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/asdf-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/column-1.0.0.yaml
@@ -35,16 +37,22 @@ ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/extension_metad
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/externalarray-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/history_entry-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/integer-1.0.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/integer-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/ndarray-1.0.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/ndarray-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/software-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/subclass_metadata-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/core/table-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/fits/fits-1.0.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/fits/fits-1.1.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/table/column-1.1.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/table/table-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/time/time-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/time/time-1.1.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/time/time-1.2.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/unit/defunit-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/unit/quantity-1.1.0.yaml
+${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/unit/quantity-1.2.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/unit/unit-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/version_map-1.0.0.yaml
 ${PYSITELIB}/asdf_standard/resources/schemas/stsci.edu/asdf/version_map-1.1.0.yaml
