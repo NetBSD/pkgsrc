@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/11/10 18:53:24 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/03/17 09:56:26 adam Exp $
 
-BLAKE2s (asdf_transform_schemas-0.4.0.tar.gz) = e08d6af2d42207fdcb2ca6208764285601a6f22fe885d383cf192ec9b2310270
-SHA512 (asdf_transform_schemas-0.4.0.tar.gz) = e05ef02b1ca0753323840d5b93b05cba82ff263eecdd72b8b8165eba13c8a1fe464e4cea5b1e39586e5f467ccf7ef80e0a3f6f7b348d8ed1e7c2aec41cddb08e
-Size (asdf_transform_schemas-0.4.0.tar.gz) = 97482 bytes
+BLAKE2s (asdf_transform_schemas-0.5.0.tar.gz) = 55d3d06b912691164ab51e6f515c269c49e7e710dd123945952c4b4f616b2ec5
+SHA512 (asdf_transform_schemas-0.5.0.tar.gz) = 29c803ee8a3b5e3526191c503ff15309aab8e7dcee3df16dc2032156f725dd672862540a25a48f217a644701208ba01c9085f3d5b67f9a8dc68d0a732cfbde8a
+Size (asdf_transform_schemas-0.5.0.tar.gz) = 109226 bytes
