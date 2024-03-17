@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.34 2024/01/26 14:13:01 wiz Exp $
+$NetBSD: distinfo,v 1.35 2024/03/17 13:55:10 wiz Exp $
 
-BLAKE2s (geeqie-2.2.tar.xz) = e03408fa45c5384a7a92b13c1d6d318e6013ce896309a71f2d59d754acef5d38
-SHA512 (geeqie-2.2.tar.xz) = 7d03493b463a1949cbc5e377927abc4bc6fa62914e8cdddb30a832cb9c6caad579f5ba5bd2b8b0913b77063300c9c5ac1f7e671ddfb2ce18d8a8d0efcfb51dbe
-Size (geeqie-2.2.tar.xz) = 2169096 bytes
-SHA1 (patch-src_exif-common.cc) = 122c1ea386578a00f9eba36dce1f5aabe5f6343b
+BLAKE2s (geeqie-2.3.tar.xz) = f1d8dca993fed24ad5a91f79d2763b1a65370c2e4b071dde78acd1641548a979
+SHA512 (geeqie-2.3.tar.xz) = 9f45974d12c1f193a4a3624064b967fc06cf9c906c45160a4945a8f6a9d814b929b92c45a35006c7f1b20fa5fe360858f24fd54adbcd8863c3e7d787a3429899
+Size (geeqie-2.3.tar.xz) = 2184604 bytes
+SHA1 (patch-src_layout-util.cc) = 52091ef955eaaa977841a5757834b30e7988e17a
+SHA1 (patch-src_misc.cc) = 4adebd29d302f61289c882f5fee359cd0a9cf9bf
+SHA1 (patch-src_pan-view_pan-util.cc) = 509cb6eb0b0e6370cfdaa111aa88cf435674f5d8
