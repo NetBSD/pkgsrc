@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/09/22 11:01:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/17 14:21:08 wiz Exp $
 
-DISTNAME=	tree-sitter-lua-0.0.19
+DISTNAME=	tree-sitter-lua-0.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MunifTanjim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
