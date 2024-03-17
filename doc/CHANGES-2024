@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1919 2024/03/17 14:13:19 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.1920 2024/03/17 14:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3213,3 +3213,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-requests-oauthlib to 1.4.0 [wiz 2024-03-17]
 	Updated devel/py-urwid to 2.6.9 [wiz 2024-03-17]
 	Updated devel/py-wheel to 0.43.0 [wiz 2024-03-17]
+	Updated archivers/py-zipp to 3.18.1 [wiz 2024-03-17]
