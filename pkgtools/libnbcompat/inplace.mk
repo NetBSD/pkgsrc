@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.16 2024/03/17 13:40:14 nia Exp $
+# $NetBSD: inplace.mk,v 1.17 2024/03/17 21:44:21 wiz Exp $
 #
 # This file should not be included directly. Use USE_FEATURES instead.
 #
@@ -14,7 +14,8 @@ LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
 LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
 
 CPPFLAGS.nbcompat=	-DHAVE_NBCOMPAT_H=1 -I${LIBNBCOMPAT_SRCDIR}
-LDADD.nbcompat=		${LIBNBCOMPAT_SRCDIR}/libnbcompat.a
+LDFLAGS.nbcompat=	-L${LIBNBCOMPAT_SRCDIR}
+LDADD.nbcompat=		-lnbcompat
 
 .if !empty(LIBNBCOMPAT_USE_PIC:M[Yy][Ee][Ss])
 LIBNBCOMPAT_PICDIR=	${WRKDIR}/libnbcompat_pic
