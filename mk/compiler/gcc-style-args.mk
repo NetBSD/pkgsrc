@@ -1,4 +1,4 @@
-# $NetBSD: gcc-style-args.mk,v 1.4 2024/01/27 00:03:50 wiz Exp $
+# $NetBSD: gcc-style-args.mk,v 1.5 2024/03/17 14:15:59 nia Exp $
 
 #
 # Some compilers (e.g. clang) share command line argument formats with GCC.
@@ -43,7 +43,7 @@ CWRAPPERS_APPEND.cc+=	-std=${std}
 .if !empty(FORCE_CXX_STD)
 .  for std in ${_GCC_CXX_DIALECTS}
 .    if !empty(FORCE_CXX_STD:M${std})
-CWRAPPERS_APPEND.cxx+=	-std=${std}
+CWRAPPERS_APPEND.cxx+=	-std=${std:S,++03,++98,g}
 .    endif
 .  endfor
 .endif
