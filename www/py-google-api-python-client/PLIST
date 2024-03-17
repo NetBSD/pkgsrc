@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/03/11 13:17:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/03/17 13:58:40 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -201,6 +201,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datapipelines.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataplex.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dataportability.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataportability.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataproc.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataproc.v1beta2.json
@@ -436,6 +437,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/searchads360.v0.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/searchconsole.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1beta2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1beta2.json
