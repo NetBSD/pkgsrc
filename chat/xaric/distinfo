@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:05:28 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/03/17 17:51:22 nia Exp $
 
-BLAKE2s (xaric-0.13.6.tar.gz) = 9a047b2e83fceb803a7340cf5a12b8f027ec0a7f831c0a2f0996d3bccb80a172
-SHA512 (xaric-0.13.6.tar.gz) = 1c52e30cfab49d82306cd0b4402175f68cfc411b7ef04156b2361fadeea01648476742015306a0c242c13f4ab29916e8ac48a59f481ecdb5475584ef6cdf028f
-Size (xaric-0.13.6.tar.gz) = 479754 bytes
-SHA1 (patch-configure) = 93742a59e3c558d648957319ba79b1fba92d3f09
+BLAKE2s (xaric-0.13.9.tar.gz) = fc54e275d6aa0e15e4976953807cc1b2a806bf863d5c7f5b71f7e5b6f322aa1f
+SHA512 (xaric-0.13.9.tar.gz) = 98d7f38fcd8b087c437f61dbf37ad5cb6018d5d4b1e32903bac974406f849f7f13d638510c3965c33d7118ecaac4e9d0a246c8e9b2150210fcd850194b241cad
+Size (xaric-0.13.9.tar.gz) = 465984 bytes
+SHA1 (patch-defaults.h) = 3becff6bf433bccfdf69d13de7335b4bde961649
 SHA1 (patch-source_iflist.c) = 32647096ba2dcbb258676d70ccd147b508f931bd
 SHA1 (patch-source_ircterm.c) = 166b658d9fb41e69b0101bdeb0d524e71d745621
