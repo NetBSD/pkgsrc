@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24198 2024/03/17 17:51:33 nia Exp $
+$NetBSD: TODO,v 1.24199 2024/03/17 22:16:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1088,7 +1088,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-tiki-24.6 [replacing php-tiki6]
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
-	o php83-8.3.4
 	o phraseanet-4.1.7
 	o phraseanet-indexer-3.8.6
 	o pick-4.0.0
