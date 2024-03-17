@@ -1,2 +1,0 @@
-- In file selection mode, cursor background is not visible -- Konsole misfeature? works ok in xterm.
-- crashes in dlclose(), disabled it for now
