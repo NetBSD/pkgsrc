@@ -1,6 +1,7 @@
-$NetBSD: patch-src_pan-view_pan-util.cc,v 1.1 2024/03/17 13:55:11 wiz Exp $
+$NetBSD: patch-src_pan-view_pan-util.cc,v 1.2 2024/03/17 15:22:11 wiz Exp $
 
 Restrict Linux-specific header to Linux.
+(already fixed upstream, differently)
 
 --- src/pan-view/pan-util.cc.orig	2024-03-17 13:53:55.384404282 +0000
 +++ src/pan-view/pan-util.cc
