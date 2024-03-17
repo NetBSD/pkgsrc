@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/02/05 10:59:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/03/17 10:08:48 adam Exp $
 
-DISTNAME=	fsspec-2024.2.0
+DISTNAME=	fsspec-2024.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fsspec/}
