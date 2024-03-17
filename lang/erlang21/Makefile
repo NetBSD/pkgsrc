@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/24 22:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/03/17 18:34:26 nia Exp $
 
 DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=		${DISTNAME:S/OTP-/erlang21-/}
@@ -59,10 +59,12 @@ SMF_NAME=		epmd21
 
 CONFIGURE_ARGS.DragonFly+=	--disable-sctp
 
-###
-### XXX There may be others here.
-###
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Darwin"
+.if defined(OPSYS_HAS_KQUEUE) && ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--enable-kernel-poll
+.endif
+
+# Erlang rejects kqueue implementations before Sierra.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERISON} > 101200
 CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
 
