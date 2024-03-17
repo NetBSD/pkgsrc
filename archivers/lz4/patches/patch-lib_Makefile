@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_Makefile,v 1.11 2022/08/16 13:02:56 adam Exp $
+$NetBSD: patch-lib_Makefile,v 1.12 2024/03/17 12:39:50 nia Exp $
 
-Make portable. Unlock install target. Use pkgsrc install scripts.
+Make portable (inc. libtoolize).
+Unlock install target. Use pkgsrc install scripts.
 
 --- lib/Makefile.orig	2022-08-15 22:45:31.000000000 +0000
 +++ lib/Makefile
@@ -17,25 +18,53 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
  LIBVER_SCRIPT:= $(LIBVER_MAJOR_SCRIPT).$(LIBVER_MINOR_SCRIPT).$(LIBVER_PATCH_SCRIPT)
  LIBVER_MAJOR := $(shell echo $(LIBVER_MAJOR_SCRIPT))
  LIBVER_MINOR := $(shell echo $(LIBVER_MINOR_SCRIPT))
-@@ -46,6 +46,7 @@ LIBVER  := $(shell echo $(LIBVER_SCRIPT)
- BUILD_SHARED:=yes
- BUILD_STATIC:=yes
+@@ -56,6 +56,7 @@ CFLAGS  += $(DEBUGFLAGS)
+ FLAGS    = $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
  
-+OS ?= $(shell uname)
- CPPFLAGS+= -DXXH_NAMESPACE=LZ4_
- CPPFLAGS+= $(MOREFLAGS)
- CFLAGS  ?= -O3
-@@ -162,29 +163,24 @@ libdir      ?= $(LIBDIR)
- INCLUDEDIR  ?= $(prefix)/include
- includedir  ?= $(INCLUDEDIR)
+ SRCFILES := $(sort $(wildcard *.c))
++OBJFILES := $(patsubst %.c,%.lo,$(SRCFILES))
  
--  ifneq (,$(filter $(TARGET_OS),OpenBSD FreeBSD NetBSD DragonFly MidnightBSD))
--PKGCONFIGDIR ?= $(prefix)/libdata/pkgconfig
--  else
--PKGCONFIGDIR ?= $(libdir)/pkgconfig
--  endif
--pkgconfigdir ?= $(PKGCONFIGDIR)
-+pkgconfigdir ?= $(prefix)/lib/pkgconfig
+ include ../Makefile.inc
+ 
+@@ -92,10 +93,13 @@ all: lib
+ all32: CFLAGS+=-m32
+ all32: all
+ 
+-liblz4.a: $(SRCFILES)
++.SUFFIXES: .lo
++.c.lo:
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CFLAGS) $(CPPFLAGS) -c $^ -o $@
++
++liblz4.a: $(OBJFILES)
+ ifeq ($(BUILD_STATIC),yes)  # can be disabled on command line
+ 	@echo compiling static library
+-	$(COMPILE.c) $^
+ 	$(AR) rcs $@ *.o
+ endif
+ 
+@@ -117,17 +121,13 @@ $(LIBLZ4): $(SRCFILES) liblz4-dll.o
+ 
+ else   # not windows
+ 
+-$(LIBLZ4): $(SRCFILES)
+-	@echo compiling dynamic library $(LIBVER)
+-	$(CC) $(FLAGS) -shared $^ -fPIC -fvisibility=hidden $(SONAME_FLAGS) -o $@
+-	@echo creating versioned links
+-	$(LN_SF) $@ liblz4.$(SHARED_EXT_MAJOR)
+-	$(LN_SF) $@ liblz4.$(SHARED_EXT)
+-
++liblz4.la: $(OBJFILES)
++	@echo linking dynamic library $(LIBVER)
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info $(LIBVER_MAJOR):0 $^ -o $@
+ endif
+ 
+ .PHONY: liblz4
+-liblz4: $(LIBLZ4)
++liblz4: liblz4.la
+ 
+ .PHONY: clean
+ clean:
+@@ -171,20 +171,20 @@ pkgconfigdir ?= $(PKGCONFIGDIR)
  
  liblz4.pc: liblz4.pc.in Makefile
  	@echo creating pkgconfig
@@ -65,14 +94,14 @@ Make portable. Unlock install target. Use pkgsrc install scripts.
    endif
    ifeq ($(BUILD_SHARED),yes)
  # Traditionally, one installs the DLLs in the bin directory as programs
-@@ -194,15 +190,15 @@ install: lib liblz4.pc
+@@ -194,15 +194,13 @@ install: lib liblz4.pc
  	$(INSTALL_PROGRAM) dll/$(LIBLZ4).dll $(DESTDIR)$(bindir)
  	$(INSTALL_PROGRAM) dll/$(LIBLZ4_EXP) $(DESTDIR)$(libdir)
      else
 -	$(INSTALL_PROGRAM) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
-+	$(BSD_INSTALL_LIB) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)
- 	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
- 	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
+-	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT_MAJOR)
+-	$(LN_SF) liblz4.$(SHARED_EXT_VER) $(DESTDIR)$(libdir)/liblz4.$(SHARED_EXT)
++	$(LIBTOOL) --mode install $(BSD_INSTALL_LIB) liblz4.la $(DESTDIR)$(libdir)
      endif
    endif
  	@echo Installing headers in $(DESTDIR)$(includedir)

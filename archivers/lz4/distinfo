@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25 2023/06/15 10:03:34 riastradh Exp $
+$NetBSD: distinfo,v 1.26 2024/03/17 12:39:50 nia Exp $
 
 BLAKE2s (lz4-1.9.4.tar.gz) = 47eac8d4a549b2ab125e6b44d9c0acd1ed2c4d0e86054ecacc5f9704a0d4c208
 SHA512 (lz4-1.9.4.tar.gz) = 043a9acb2417624019d73db140d83b80f1d7c43a6fd5be839193d68df8fd0b3f610d7ed4d628c2a9184f7cde9a0fd1ba9d075d8251298e3eb4b3a77f52736684
 Size (lz4-1.9.4.tar.gz) = 354063 bytes
 SHA1 (patch-Makefile.inc) = 7f27fb9d4cde9c14623c8fce167990bec0332161
-SHA1 (patch-lib_Makefile) = 64441f91217cf5832f122ed32a31007b4a8dc5f4
+SHA1 (patch-lib_Makefile) = e62b85be5c4b9628f194398262a041f0309f2f6b
 SHA1 (patch-programs_Makefile) = bf3a8b296bfac8407c3e233c41fa037ba989876c

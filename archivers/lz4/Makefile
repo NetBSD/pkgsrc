@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/06/15 10:03:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.28 2024/03/17 12:39:50 nia Exp $
 
 DISTNAME=	lz4-1.9.4
 CATEGORIES=	archivers
@@ -12,9 +12,12 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 BUILD_TARGET=		# empty
 TEST_TARGET=		test
+
+MAKE_FLAGS+=		PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
 
 # Needed for nanosleep() on Solaris 10, PR pkg/56226
 LDFLAGS.SunOS+=		-lrt
