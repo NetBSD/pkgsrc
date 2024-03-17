@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/08/23 15:37:39 adam Exp $
+# $NetBSD: Makefile,v 1.97 2024/03/17 11:49:57 nia Exp $
 
 DISTNAME=	libsndfile-1.2.2
 CATEGORIES=	audio
@@ -18,6 +18,8 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	tool
+
+USE_FEATURES+=		strnlen
 
 TEST_TARGET=		check
 
