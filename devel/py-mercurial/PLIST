@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2023/12/07 09:31:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2024/03/17 15:12:16 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -459,6 +459,9 @@ ${PYSITELIB}/mercurial/__version__.pyo
 ${PYSITELIB}/mercurial/admin/__init__.py
 ${PYSITELIB}/mercurial/admin/__init__.pyc
 ${PYSITELIB}/mercurial/admin/__init__.pyo
+${PYSITELIB}/mercurial/admin/chainsaw.py
+${PYSITELIB}/mercurial/admin/chainsaw.pyc
+${PYSITELIB}/mercurial/admin/chainsaw.pyo
 ${PYSITELIB}/mercurial/admin/verify.py
 ${PYSITELIB}/mercurial/admin/verify.pyc
 ${PYSITELIB}/mercurial/admin/verify.pyo
