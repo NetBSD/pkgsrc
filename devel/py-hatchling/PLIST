@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/17 17:39:53 adam Exp $
 bin/hatchling-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -29,6 +29,9 @@ ${PYSITELIB}/hatchling/builders/__init__.pyo
 ${PYSITELIB}/hatchling/builders/app.py
 ${PYSITELIB}/hatchling/builders/app.pyc
 ${PYSITELIB}/hatchling/builders/app.pyo
+${PYSITELIB}/hatchling/builders/binary.py
+${PYSITELIB}/hatchling/builders/binary.pyc
+${PYSITELIB}/hatchling/builders/binary.pyo
 ${PYSITELIB}/hatchling/builders/config.py
 ${PYSITELIB}/hatchling/builders/config.pyc
 ${PYSITELIB}/hatchling/builders/config.pyo

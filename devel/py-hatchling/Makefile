@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/01/25 06:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/03/17 17:39:53 adam Exp $
 
-DISTNAME=	hatchling-1.21.1
+DISTNAME=	hatchling-1.22.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatchling/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://hatch.pypa.io/
 COMMENT=	Modern, extensible Python build backend
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-editables>=0.3:../../devel/py-editables
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.0.0:../../devel/py-pluggy
