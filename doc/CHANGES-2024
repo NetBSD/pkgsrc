@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1901 2024/03/17 07:13:48 fox Exp $
+$NetBSD: CHANGES-2024,v 1.1902 2024/03/17 09:57:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3186,3 +3186,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/mate to 1.26.1nb9 [gutteridge 2024-03-16]
 	Updated shells/oh-my-posh to 19.17.2 [pin 2024-03-16]
 	Updated audio/fasttracker2 to 1.77.1 [fox 2024-03-17]
+	Updated math/py-asdf-standard to 1.1.1 [adam 2024-03-17]
+	Updated math/py-asdf-unit-schemas to 0.2.0 [adam 2024-03-17]
+	Updated math/py-asdf-transform-schemas to 0.5.0 [adam 2024-03-17]
+	Updated math/py-asdf to 3.1.0 [adam 2024-03-17]
