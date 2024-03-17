@@ -1,6 +1,7 @@
-$NetBSD: patch-src_layout-util.cc,v 1.1 2024/03/17 13:55:10 wiz Exp $
+$NetBSD: patch-src_layout-util.cc,v 1.2 2024/03/17 15:22:11 wiz Exp $
 
 Add header for WEXITSTATUS().
+https://github.com/BestImageViewer/geeqie/pull/1294
 
 --- src/layout-util.cc.orig	2024-03-17 13:53:09.725464955 +0000
 +++ src/layout-util.cc
