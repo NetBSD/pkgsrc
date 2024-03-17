@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2024/03/17 18:34:26 nia Exp $
+# $NetBSD: Makefile,v 1.121 2024/03/17 18:35:50 nia Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
 
 # Erlang rejects kqueue implementations before Sierra.
-.if ${OPSYS} == "Darwin" && ${OPSYS_VERISON} > 101200
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} > 101200
 CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
 
