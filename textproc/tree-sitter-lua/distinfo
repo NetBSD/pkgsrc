@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/09/22 11:01:11 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/03/17 14:21:08 wiz Exp $
 
-BLAKE2s (tree-sitter-lua-0.0.19.tar.gz) = ad3c679f6d4a5c72321b7683546a1ca1bf8ab3aa56870fcd028be430127bad64
-SHA512 (tree-sitter-lua-0.0.19.tar.gz) = 886aa14a529c7221193811c0fde7ded0dd918b7b56d8a62ae6621148b3e34ee2e6b669b60b70866d0cb3718c5436679bfc2214c8d371df888ec333e5e00996a3
-Size (tree-sitter-lua-0.0.19.tar.gz) = 46370 bytes
+BLAKE2s (tree-sitter-lua-0.1.0.tar.gz) = 512cda9bfa74582854c54fc55ebd816d0004676e3e306b6587aa457f43356a9e
+SHA512 (tree-sitter-lua-0.1.0.tar.gz) = 7eceb729faacffd13328b7778e408219e76e5ae9aac38bdabd13584817633351161bfcc4074f0ce82c07a61054fdfe14ad5235713f2f2acf18bfd0b414b09a7b
+Size (tree-sitter-lua-0.1.0.tar.gz) = 56812 bytes
