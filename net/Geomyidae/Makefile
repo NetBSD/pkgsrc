@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/24 22:10:11 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/03/17 00:41:29 nia Exp $
 
 DISTNAME=	geomyidae-v0.69
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -39,6 +39,14 @@ SUBST_SED.rootdir=	-e 's;/var/gopher;${GEOMYIDAE_ROOTDIR};'
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+.include "../../mk/bsd.prefs.mk"
+
+# XXX getline (in libnbcompat), dprintf (not in libnbcompat)
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100600
+LDFLAGS+=	-lMacportsLegacySupport
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/geomyidae ${DESTDIR}${PREFIX}/bin
