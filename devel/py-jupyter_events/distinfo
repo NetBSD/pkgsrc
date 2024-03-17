@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/09 17:27:09 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/03/17 17:31:20 adam Exp $
 
-BLAKE2s (jupyter_events-0.9.0.tar.gz) = 65c4b625091eaa4bd169f8badeee544a0ad24457471d9b42301f826a8de6b3f7
-SHA512 (jupyter_events-0.9.0.tar.gz) = 7b70edd79b80a3d73f0fedd21f0dba8060cb190b0dc8a6d7d9d11fdfd5b219c7a2f54438f0888c062e00b7def37fa0d7cfb0213bfa8d93737a83802079e4b103
-Size (jupyter_events-0.9.0.tar.gz) = 60502 bytes
+BLAKE2s (jupyter_events-0.9.1.tar.gz) = 98b5e66a67e9f137fe40ce17f40bd34072861fe7669c90d3fb1f3ce79f8527cb
+SHA512 (jupyter_events-0.9.1.tar.gz) = 2c3984165287391462386583f32f492f037bbcb778025420a5fc0c28699bbf01a2c55100e227b8a14c3a8797220b7a3cf644975ecc7a09ee80102f8ef815c91c
+Size (jupyter_events-0.9.1.tar.gz) = 61082 bytes
