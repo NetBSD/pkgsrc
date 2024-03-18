@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sendmail.sh,v 1.3 2014/06/15 20:48:49 jnemeth Exp $
+# $NetBSD: sendmail.sh,v 1.4 2024/03/18 02:46:47 jnemeth Exp $
 #
 
 # PROVIDE: mail
@@ -22,8 +22,12 @@ makemap="@PREFIX@/sbin/makemap"
 newaliases="@PREFIX@/bin/newaliases"
 smbin="@PREFIX@/libexec/sendmail/sendmail"
 check_files="aliases access genericstable virtusertable domaintable mailertable"
-sendmail_flags="-Lsm-mta -bd -q30m"
 command=$smbin
+
+load_rc_config $name
+
+sendmail_queuetime=${sendmail_queuetime-"30m"}
+command_args="-Lsm-mta -bd -q${sendmail_queuetime}"
 
 sendmail_precmd()
 {
@@ -56,5 +60,4 @@ sendmail_precmd()
 	done
 }
 
-load_rc_config $name
 run_rc_command "$1"
