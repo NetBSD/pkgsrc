@@ -1,0 +1,15 @@
+$NetBSD: patch-src_modules_loaders_Makefile.in,v 1.1 2024/03/18 18:37:19 schmonz Exp $
+
+Remove non-portable linker flag not used with most other modules.
+
+--- src/modules/loaders/Makefile.in.orig	2024-03-18 18:29:12.716422280 +0000
++++ src/modules/loaders/Makefile.in
+@@ -622,7 +622,7 @@ gif_la_LIBADD = $(GIF_LIBS) $(top_buildd
+ gif_la_LIBTOOLFLAGS = --tag=disable-static
+ heif_la_SOURCES = loader_heif.c
+ heif_la_CPPFLAGS = $(HEIF_CFLAGS) $(AM_CPPFLAGS)
+-heif_la_LDFLAGS = -module -avoid-version -Wl,-z,nodelete
++heif_la_LDFLAGS = -module -avoid-version
+ heif_la_LIBADD = $(HEIF_LIBS) $(top_builddir)/src/lib/libImlib2.la
+ heif_la_LIBTOOLFLAGS = --tag=disable-static
+ ico_la_SOURCES = loader_ico.c
