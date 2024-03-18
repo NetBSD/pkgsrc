@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.695 2024/03/13 14:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.696 2024/03/18 11:31:31 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -51,6 +51,7 @@ SUBDIR+=	celt
 SUBDIR+=	chromaprint
 SUBDIR+=	cmp3
 SUBDIR+=	cmus
+SUBDIR+=	cmus-legacy
 SUBDIR+=	cmusfm
 SUBDIR+=	cplay
 SUBDIR+=	cripple
