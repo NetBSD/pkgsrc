@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/24 22:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/18 12:44:01 nia Exp $
 
 DISTNAME=	opus-tools-0.2
 PKGREVISION=	3
@@ -32,4 +32,5 @@ pre-configure:
 .include "../../audio/libopusenc/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
