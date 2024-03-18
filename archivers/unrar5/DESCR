@@ -1,0 +1,11 @@
+unRAR is a utility to extract, test and view the contents of archives
+created with the RAR archiver, version 1.50 and above.  The unRAR
+utility is a minor part of the RAR archiver and contains RAR
+uncompression algorithm. UnRAR requires very small volume of memory to
+operate.
+
+The license for this software states that "the code may not be used to
+develop a RAR (WinRAR) compatible archiver."
+
+This version exists for compatibility with legacy systems that lack a
+C++11 compiler.
