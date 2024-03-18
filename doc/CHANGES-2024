@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1944 2024/03/18 15:24:23 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1945 2024/03/18 15:26:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-cmudict to 1.0.21 [adam 2024-03-18]
 	Updated devel/py-tox to 4.14.1 [adam 2024-03-18]
 	Updated lang/openjdk21 to 1.21.0.2.13 [ryoon 2024-03-18]
+	Updated lang/openjdk17 to 1.17.0.10.7 [ryoon 2024-03-18]
