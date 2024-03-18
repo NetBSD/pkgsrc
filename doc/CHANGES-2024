@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1941 2024/03/18 09:14:29 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1942 2024/03/18 13:30:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-xmlschema to 3.1.0 [adam 2024-03-18]
 	Updated textproc/typst to 0.11.0 [pin 2024-03-18]
 	Added x11/i3lockr version 1.2.1 [pin 2024-03-18]
+	Updated sysutils/xplr to 0.21.7 [pin 2024-03-18]
