@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smmsp.sh,v 1.3 2014/06/15 20:48:49 jnemeth Exp $
+# $NetBSD: smmsp.sh,v 1.4 2024/03/18 02:46:47 jnemeth Exp $
 #
 
 # REQUIRE: mail
@@ -23,8 +23,11 @@ required_files="/etc/mail/submit.cf"
 extra_commands="reload"
 
 smbin="@PREFIX@/libexec/sendmail/sendmail"
-smmsp_flags="-Lsm-msp-queue -Ac -q30m"
 command=$smbin
 
 load_rc_config $name
+
+smmsp_queuetime=${smmsp_queuetime-"30m"}
+command_args="-Lsm-msp-queue -Ac -q${smmsp_queuetime}"
+
 run_rc_command "$1"
