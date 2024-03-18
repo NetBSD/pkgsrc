@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/18 11:34:38 nia Exp $
+
+BLAKE2s (unrarsrc-5.9.4.tar.gz) = d09479369ec1ba8698e84a5d2760eb2f7bfce4613cd38038687974ef180319fd
+SHA512 (unrarsrc-5.9.4.tar.gz) = 4c026bc12c38314c7df6e1b2f296be681fffa4ba525e378809063519cb5d51889fe8d3cbce16e802023354f02b45b1bcc672b79a6fa81b4baa13a374ce22c8f1
+Size (unrarsrc-5.9.4.tar.gz) = 229921 bytes
