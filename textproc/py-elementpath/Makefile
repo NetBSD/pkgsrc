@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/02/18 08:29:20 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/03/18 08:51:26 adam Exp $
 
-DISTNAME=	elementpath-4.3.0
+DISTNAME=	elementpath-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elementpath/}
