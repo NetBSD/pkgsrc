@@ -1,0 +1,23 @@
+mle is a small, flexible, terminal-based text editor written in C.
+Its features include:
+
+* Full UTF-8 support
+* Syntax highlighting
+* Stackable key maps (modes)
+* Extensible via Lua
+* Scriptable rc file
+* Key macros
+* Multiple splittable windows
+* Regex search and replace
+* Large file support
+* Incremental search
+* Linear undo and redo
+* Multiple cursors
+* Auto indent
+* Headless mode
+* Navigation via ctags
+* Movement via less
+* Fuzzy file search via fzf
+* File browsing via tree
+* File grep via grep
+* String manip via perl
