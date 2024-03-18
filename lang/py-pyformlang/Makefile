@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/02/17 10:59:06 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/18 18:34:29 adam Exp $
 
-DISTNAME=	pyformlang-1.0.7
+DISTNAME=	pyformlang-1.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyformlang/}
