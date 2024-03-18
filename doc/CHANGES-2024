@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1949 2024/03/18 15:48:23 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.1950 2024/03/18 17:39:34 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3249,3 +3249,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/ardour to 8.2.0 [ryoon 2024-03-18]
 	Updated lang/openjdk8 to 1.8.402 [ryoon 2024-03-18]
 	Updated multimedia/libaom to 3.8.2 [ryoon 2024-03-18]
+	Added cross/riscv64-none-elf-binutils [dogcow 2024-03-18]
+	Added cross/riscv64-none-elf-gcc [dogcow 2024-03-18]
