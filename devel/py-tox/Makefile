@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/03/06 13:31:30 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/03/18 15:11:03 adam Exp $
 
-DISTNAME=	tox-4.14.0
+DISTNAME=	tox-4.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
