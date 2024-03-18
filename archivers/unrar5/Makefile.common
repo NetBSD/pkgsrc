@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1 2024/03/18 11:34:38 nia Exp $
+#
+# used by archivers/unrar5/Makefile
+
+DISTNAME=	unrarsrc-5.9.4
+PKGNAME=	${DISTNAME:S/src//}
+CATEGORIES=	archivers
+MASTER_SITES=	https://www.rarlab.com/rar/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.rarlab.com/
+COMMENT=	Extract, view & test RAR archives (C++98 version)
+LICENSE=	unrar-license
+# From private mail addressed to pkgsrc maintainers:
+#
+# Date: Wed, 10 Sep 2008 18:27:35 +0600
+# From: Eugene Roshal <roshal@rarlab.com>
+# You can redistribute either original or modified binaries or sources.
+
+NO_CONFIGURE=	YES
+USE_LANGUAGES=	c++
+# XXX: makefile has DOS line endings
+USE_TOOLS+=	gmake
+
+MAKE_FILE=	makefile
+MAKE_FLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
+# usually set in Makefile, but overridden by line above
+LDFLAGS+=	-pthread
+CXXFLAGS+=	-fPIC
+
+WRKSRC=		${WRKDIR}/unrar
+
+DISTINFO_FILE=	${.CURDIR}/../../archivers/unrar5/distinfo
