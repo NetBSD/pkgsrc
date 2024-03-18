@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:06:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/03/18 11:50:49 nia Exp $
 
 BLAKE2s (Net-LibIDN-0.12.tar.gz) = 6ff28a9d76c339acae2d47755df09a566492f9a71a8091477c25954719e0f481
 SHA512 (Net-LibIDN-0.12.tar.gz) = 2c80d0e3d4635e225e8866a1ef6335e3b8642662101e89fde6529aa07acc1eaf8adbe20fadd1d44898651f9d67a3d00c11ff71a22a2aa3027e81643e700d79ee
 Size (Net-LibIDN-0.12.tar.gz) = 14262 bytes
-SHA1 (patch-aa) = 71f762435abb1ba5d772f2a15655cebe124bd9b7
+SHA1 (patch-aa) = 87cf297fce059533cfe570b727b27f712a62af41
