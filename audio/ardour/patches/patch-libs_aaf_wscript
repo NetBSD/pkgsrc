@@ -1,0 +1,21 @@
+$NetBSD: patch-libs_aaf_wscript,v 1.1 2024/03/18 15:36:15 ryoon Exp $
+
+From archlinux.
+
+--- libs/aaf/wscript.orig	2024-02-04 01:42:51.867490429 +0000
++++ libs/aaf/wscript
+@@ -37,13 +37,11 @@ def options(opt):
+     autowaf.set_options(opt)
+ 
+ def configure(conf):
++    return
+     if conf.is_defined('USE_EXTERNAL_LIBS'):
+         autowaf.check_pkg(conf, 'aaf', uselib_store='LIBAAF', mandatory=True)
+ 
+ def build(bld):
+-    if bld.is_defined('USE_EXTERNAL_LIBS'):
+-        return
+-
+     if bld.is_defined ('INTERNAL_SHARED_LIBS'):
+         obj              = bld.shlib(features = 'c cshlib', source=libaaf_sources)
+         obj.defines = [ 'LIBAAF_DLL_EXPORTS=1' ]
