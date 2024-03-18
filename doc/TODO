@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24201 2024/03/18 08:45:36 pin Exp $
+$NetBSD: TODO,v 1.24202 2024/03/18 09:05:42 pin Exp $
 
 Suggested new packages
 ======================
@@ -1342,7 +1342,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trojita-0.6
 	o ttftot42-0.4.1
 	o turba-4.2.12
-	o typst-0.11.0
 	o tyrquake-0.66
 	o uae-0.8.29
 	o ubs-0.20
