@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1943 2024/03/18 15:11:20 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1944 2024/03/18 15:24:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xplr to 0.21.7 [pin 2024-03-18]
 	Updated textproc/py-cmudict to 1.0.21 [adam 2024-03-18]
 	Updated devel/py-tox to 4.14.1 [adam 2024-03-18]
+	Updated lang/openjdk21 to 1.21.0.2.13 [ryoon 2024-03-18]
