@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/17 16:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/03/18 08:37:43 pin Exp $
 
-DISTNAME=	delta-0.16.5
-PKGREVISION=	2
+DISTNAME=	delta-0.17.0
 PKGNAME=	git-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dandavison/}
