@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.14 2024/02/06 14:37:38 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2024/03/18 18:37:19 schmonz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imlib2
-PKG_SUPPORTED_OPTIONS=	libwebp x11
+PKG_SUPPORTED_OPTIONS=	heif libwebp x11
 PKG_SUGGESTED_OPTIONS=	libwebp x11
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=	mmx
@@ -18,6 +18,15 @@ PKG_SUGGESTED_OPTIONS+=	imlib2-amd64
 CONFIGURE_ARGS+=	--enable-mmx
 .else
 CONFIGURE_ARGS+=	--disable-mmx
+.endif
+
+PLIST_VARS+=		heif
+.if !empty(PKG_OPTIONS:Mheif)
+.include "../../graphics/libheif/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-heif
+PLIST.heif=		yes
+.else
+CONFIGURE_ARGS+=	--without-heif
 .endif
 
 .if !empty(PKG_OPTIONS:Mimlib2-amd64)
