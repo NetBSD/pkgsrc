@@ -1,13 +1,17 @@
-$NetBSD: distinfo,v 1.11 2024/02/10 10:41:43 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/03/18 15:36:15 ryoon Exp $
 
-BLAKE2s (Ardour-6.9.0.tar.bz2) = 9be75d0e92ce43cd27acfbbcbb4fb3a66b6eb02981c1ad9d0850620138389d2c
-SHA512 (Ardour-6.9.0.tar.bz2) = ace45f5bfe6d0c9e4bb1712ae53ebaee2f15f883045650cae3ddcae251d4fd2f645ba745effb739b47c73a0568ae9e8ae443b711dd610584e04575fd9046b234
-Size (Ardour-6.9.0.tar.bz2) = 12297369 bytes
-SHA1 (patch-gtk2__ardour_ardour__ui.cc) = dc69522a66a715a164d0d9d360221dbc2e65d85f
-SHA1 (patch-gtk2__ardour_wscript) = 5dd0d0e86319d7d461587a37c555d9b505b97bed
-SHA1 (patch-libs_ardour_ardour_audio__backend.h) = 7d919909f768f386b6619772318ad818d797c25d
+BLAKE2s (Ardour-8.2.0.tar.bz2) = 29575950e77ed4261ddc4e79ef62c9200f68c696ddc6532e722c195d94ca9354
+SHA512 (Ardour-8.2.0.tar.bz2) = 62962929201c649a0028c2cfc1e7e6acce3ab9ee24adbc5ebb5a7c3d70f73430c579801788f696769afd2d14d766eb2ef4936b5957dce2288a30cf671ca62ee1
+Size (Ardour-8.2.0.tar.bz2) = 13897958 bytes
+SHA1 (patch-gtk2__ardour_wscript) = 511fd28b3815d490e39371ad26ac8acf1bc6fb4a
+SHA1 (patch-libs_aaf_AAFIAudioFiles.c) = b9bf289e409ec344a13ab9580ce6087e9f8596c9
+SHA1 (patch-libs_aaf_aaf_LibCFB.h) = 171512787650749979767117ada9260774998ec7
+SHA1 (patch-libs_aaf_wscript) = 11731e5b2f9b9b49477ea6bb3bc1ff571a77bbb0
+SHA1 (patch-libs_ardour_audiofile__tagger.cc) = 01c2f87cffecc55c5b148eb1f468db79afdeb520
 SHA1 (patch-libs_ardour_plugin__manager.cc) = 92564dc05e7f8febe6146f591f0a9c26d1ae0b60
 SHA1 (patch-libs_backends_jack_jack__utils.cc) = 5bf08ead83b3a2c4355a0424262878a1b89e1648
-SHA1 (patch-libs_pbd_xml++.cc) = 67ae9474e696e88f0e55685d93396de320c89d07
-SHA1 (patch-libs_qm-dsp_wscript) = 0589fe5d811b55ec474e1c48ef73656744e824fc
-SHA1 (patch-wscript) = f3b9b5dfcdf71ec66744ffa71413cc422a2dcbf2
+SHA1 (patch-libs_pbd_cpus.cc) = 48bec2917d7bf2a72306fce4d4135cb266aab00e
+SHA1 (patch-libs_qm-dsp_wscript) = c316676c696576555d2de8675cc44911e5b3807b
+SHA1 (patch-libs_vst3_pluginterfaces_base_fplatform.h) = a32d55b40e30d2662da881971251efe2052125ac
+SHA1 (patch-session__utils_wscript) = 9a56aa6c63b6174fb46f716a263e8bad803c51a1
+SHA1 (patch-wscript) = cc2b59aa3a556129bcf0d26dd25937124c60dc73

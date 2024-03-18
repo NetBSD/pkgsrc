@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.82 2024/01/30 14:21:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2024/03/18 15:36:15 ryoon Exp $
 
-DISTNAME=	Ardour-6.9.0
+DISTNAME=	Ardour-8.2.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	27
 CATEGORIES=	audio
 # currently, distfiles must be downloaded by hand from ardour.org
 # and uploaded using `make upload-distfiles`.
 # there is no canonical URL, only https://community.ardour.org/srctar
-MASTER_SITES=	https://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,13 +19,15 @@ UNLIMIT_RESOURCES=	stacksize
 USE_TOOLS+=	pkg-config perl itstool msgfmt perl
 USE_LANGUAGES=	c c++
 
-EGDIR=		${PREFIX}/share/examples/ardour6
+EGDIR=		${PREFIX}/share/examples/ardour8
 
 WAF_ENV+=	EGDIR=${EGDIR}
 
 USE_CXX_FEATURES+=	c++11
 
-PKG_SYSCONFSUBDIR=	ardour6
+CXXFLAGS+=	-fpermissive
+
+PKG_SYSCONFSUBDIR=	ardour8
 
 CONF_FILES+=	${EGDIR}/ardour.keys ${PKG_SYSCONFDIR}/ardour.keys
 CONF_FILES+=	${EGDIR}/ardour.menus ${PKG_SYSCONFDIR}/ardour.menus
@@ -34,7 +35,6 @@ CONF_FILES+=	${EGDIR}/clearlooks.ardoursans.rc ${PKG_SYSCONFDIR}/clearlooks.ardo
 CONF_FILES+=	${EGDIR}/clearlooks.rc ${PKG_SYSCONFDIR}/clearlooks.rc
 CONF_FILES+=	${EGDIR}/default_ui_config ${PKG_SYSCONFDIR}/default_ui_config
 CONF_FILES+=	${EGDIR}/system_config ${PKG_SYSCONFDIR}/system_config
-CONF_FILES+=	${EGDIR}/trx.menus ${PKG_SYSCONFDIR}/trx.menus
 
 ARD_BACKENDS=	dummy
 
@@ -47,26 +47,25 @@ WAF_ARGS+=	--dist-target=none
 WAF_ARGS+=	--cxx11
 WAF_ARGS+=	--freedesktop
 WAF_ARGS+=	--no-phone-home
-WAF_ARGS+=	--no-vst3
+#WAF_ARGS+=	--no-vst3
 WAF_ARGS+=	--use-external-libs
-WAF_ARGS+=	--nls
 
 # Does not set runtime search path for internal libraries...
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-comp.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-delay.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-eq.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-fluidsynth.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-reverb.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/LV2/a-reasonablesynth.lv2
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/backends
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/engines
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/panners
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/surfaces
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/utils
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour6/vamp
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-comp.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-delay.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-eq.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-fluidsynth.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-reverb.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/LV2/a-reasonablesynth.lv2
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/backends
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/engines
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/panners
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/surfaces
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/utils
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/vamp
 
 # strdup prototype difficulties...
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
@@ -81,14 +80,14 @@ INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/build/gtk2_ardour/ardour6.appdata.xml \
+	${INSTALL_DATA} ${WRKSRC}/build/gtk2_ardour/ardour8.appdata.xml \
 	    ${DESTDIR}${PREFIX}/share/appdata
-	${INSTALL_DATA} ${WRKSRC}/build/gtk2_ardour/ardour6.desktop \
+	${INSTALL_DATA} ${WRKSRC}/build/gtk2_ardour/ardour8.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 .for s in 16 22 32 48 256 512
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
-	${INSTALL_DATA} ${DESTDIR}${PREFIX}/share/ardour6/resources/Ardour-icon_${s}px.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/ardour6.png
+	${INSTALL_DATA} ${DESTDIR}${PREFIX}/share/ardour8/resources/Ardour-icon_${s}px.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/ardour8.png
 .endfor
 
 .include "../../devel/waf/waf.mk"
