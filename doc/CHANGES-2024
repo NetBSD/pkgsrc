@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1933 2024/03/18 06:39:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1934 2024/03/18 07:17:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/xaric to 0.13.9 [nia 2024-03-17]
 	Updated devel/py-hatchling to 1.22.2 [adam 2024-03-17]
 	Updated devel/py-test-rerunfailures to 14.0 [adam 2024-03-17]
+	Added editors/mle version 1.7.2 [wiz 2024-03-18]
