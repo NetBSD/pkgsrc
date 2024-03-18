@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/18 07:16:43 wiz Exp $
+
+BLAKE2s (mle-1.7.2.tar.gz) = ca85e28974b12393e338d428e73ed682327d2414e6f6839af219b6f06dcb1aba
+SHA512 (mle-1.7.2.tar.gz) = 63b86a5451bbb8772a34afc3b079b2ab66965c9984afdc2ea3d7eac6e3ace746c931426f0a5dd9a862e1c8a49c9e30d2a3279aec1060d3f15964e1dae9006696
+Size (mle-1.7.2.tar.gz) = 3629526 bytes
