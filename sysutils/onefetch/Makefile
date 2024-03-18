@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/11/30 22:01:00 pin Exp $
+# $NetBSD: Makefile,v 1.32 2024/03/18 08:42:02 pin Exp $
 
-DISTNAME=	onefetch-2.19.0
+DISTNAME=	onefetch-2.20.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=o2sh/}
 
