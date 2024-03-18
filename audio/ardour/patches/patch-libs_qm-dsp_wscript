@@ -1,22 +1,20 @@
-$NetBSD: patch-libs_qm-dsp_wscript,v 1.1 2021/09/11 16:33:11 nia Exp $
+$NetBSD: patch-libs_qm-dsp_wscript,v 1.2 2024/03/18 15:36:15 ryoon Exp $
 
 - Use internal copy of qm-dsp. From Arch Linux.
 - Install config files to examples, per pkgsrc policy
 
---- libs/qm-dsp/wscript.orig	2021-08-13 16:20:07.000000000 +0000
+--- libs/qm-dsp/wscript.orig	2024-02-04 01:47:23.964028392 +0000
 +++ libs/qm-dsp/wscript
-@@ -23,17 +23,10 @@ def options(opt):
-     autowaf.set_options(opt)
+@@ -14,6 +14,7 @@ def options(opt):
+     pass
  
  def configure(conf):
--    if conf.is_defined('USE_EXTERNAL_LIBS'):
--        conf.check_cxx(header_name="base/Pitch.h", mandatory=True)
--        conf.check_cxx(lib="qm-dsp", uselib_store="QMDSP", mandatory=True)
--    else:
--        conf.load('compiler_cxx')
--        autowaf.configure(conf)
-+    conf.load('compiler_cxx')
-+    autowaf.configure(conf)
++    return
+     if conf.is_defined('USE_EXTERNAL_LIBS'):
+         conf.check_cxx(header_name="base/Pitch.h", mandatory=True, msg="Checking for qm-dsp headers")
+         conf.check_cxx(lib="qm-dsp", uselib_store="QMDSP", mandatory=True)
+@@ -48,9 +49,6 @@ def configure(conf):
+                            )
  
  def build(bld):
 -    if bld.is_defined('USE_EXTERNAL_LIBS'):

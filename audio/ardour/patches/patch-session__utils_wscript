@@ -1,0 +1,18 @@
+$NetBSD: patch-session__utils_wscript,v 1.1 2024/03/18 15:36:15 ryoon Exp $
+
+From archlinux.
+
+--- session_utils/wscript.orig	2024-02-04 01:43:23.013560548 +0000
++++ session_utils/wscript
+@@ -45,10 +45,7 @@ def build_ardour_util(bld, util):
+     obj.uselib       += ' FFTW3F LO TAGLIB LILV RUBBERBAND AUBIO LRDF ARCHIVE VAMPSDK VAMPHOSTSDK'
+ 
+     if util == "new_aaf_session":
+-        if bld.is_defined('USE_EXTERNAL_LIBS'):
+-            obj.uselib += ' LIBAAF'
+-        else:
+-            obj.use.extend (['libaaf'])
++        obj.use.extend (['libaaf'])
+ 
+     if bld.is_defined('HAVE_SUIL'):
+         obj.uselib += ' SUIL'
