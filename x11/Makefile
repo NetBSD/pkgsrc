@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1012 2024/02/26 19:09:05 pin Exp $
+# $NetBSD: Makefile,v 1.1013 2024/03/18 09:13:10 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -112,6 +112,7 @@ SUBDIR+=	hs-X11
 SUBDIR+=	hs-X11-xft
 SUBDIR+=	hsetroot
 SUBDIR+=	i3lock
+SUBDIR+=	i3lockr
 SUBDIR+=	i3lock-color
 SUBDIR+=	iceauth
 SUBDIR+=	ico
