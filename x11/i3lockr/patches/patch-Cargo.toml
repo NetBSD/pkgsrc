@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2024/03/18 09:11:40 pin Exp $
+
+Work around unpublished crate.
+
+--- Cargo.toml.orig	2024-03-15 10:49:08.345033311 +0000
++++ Cargo.toml
+@@ -26,7 +26,7 @@ libc = "0.2" # should be same as xcb
+ num_cpus = "1"
+ rayon = { version = "1", optional = true }
+ rgb = "0.8"
+-scrap = { git = "https://github.com/owenthewizard/scrap" }
++scrap = { path = "scrap-21b9f233bb8ad0b650b8eabb8a796054538c64be" }
+ stackblur-iter = { version = "0.2", optional = true, features = ["blend-srgb"] }
+ structopt = { version = "0.3", default-features = false }
+ xcb = { version = "1", features = ["randr", "shm"] }
