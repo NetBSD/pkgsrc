@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/02/19 06:05:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/03/18 08:53:08 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -32,6 +32,9 @@ ${PYSITELIB}/xmlschema/converters/columnar.pyo
 ${PYSITELIB}/xmlschema/converters/default.py
 ${PYSITELIB}/xmlschema/converters/default.pyc
 ${PYSITELIB}/xmlschema/converters/default.pyo
+${PYSITELIB}/xmlschema/converters/gdata.py
+${PYSITELIB}/xmlschema/converters/gdata.pyc
+${PYSITELIB}/xmlschema/converters/gdata.pyo
 ${PYSITELIB}/xmlschema/converters/jsonml.py
 ${PYSITELIB}/xmlschema/converters/jsonml.pyc
 ${PYSITELIB}/xmlschema/converters/jsonml.pyo
@@ -200,9 +203,6 @@ ${PYSITELIB}/xmlschema/xpath/identity_parser.pyo
 ${PYSITELIB}/xmlschema/xpath/mixin.py
 ${PYSITELIB}/xmlschema/xpath/mixin.pyc
 ${PYSITELIB}/xmlschema/xpath/mixin.pyo
-${PYSITELIB}/xmlschema/xpath/protocols.py
-${PYSITELIB}/xmlschema/xpath/protocols.pyc
-${PYSITELIB}/xmlschema/xpath/protocols.pyo
 ${PYSITELIB}/xmlschema/xpath/proxy.py
 ${PYSITELIB}/xmlschema/xpath/proxy.pyc
 ${PYSITELIB}/xmlschema/xpath/proxy.pyo
