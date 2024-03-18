@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/22 04:28:50 pin Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/18 08:44:32 pin Exp $
 
-DISTNAME=	tree-sitter-0.21.0
+DISTNAME=	tree-sitter-0.22.2
 PKGNAME=	${DISTNAME:S/sitter/sitter-cli/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
