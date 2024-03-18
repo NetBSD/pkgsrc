@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/07/06 09:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/03/18 11:50:49 nia Exp $
 
 DISTNAME=	Net-LibIDN-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,11 @@ MAKE_PARAMS.makemaker+=	--with-libidn=${BUILDLINK_PREFIX.libidn}/lib
 MAKE_PARAMS.makemaker+=	--with-libidn-inc=${BUILDLINK_PREFIX.libidn}/include
 
 PERL5_PACKLIST=		auto/Net/LibIDN/.packlist
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath+=	Makefile.PL
+SUBST_VARS.rpath+=	COMPILER_RPATH_FLAG
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

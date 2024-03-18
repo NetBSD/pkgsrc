@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2013/01/03 20:48:47 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2024/03/18 11:50:49 nia Exp $
 
 Use both the LDFLAGS from Perl and the directory passed from the
 pkgsrc makefile to find libidn.
@@ -20,7 +20,7 @@ pkgsrc makefile to find libidn.
 -
 +	$Params{LIBS} = "";
 +	$Params{LIBS} .= "-L$libdir " if ($libdir);
-+	$Params{LIBS} .= "-Wl,-R$libdir " if ($libdir);
++	$Params{LIBS} .= "@COMPILER_RPATH_FLAG@$libdir " if ($libdir);
 +	$Params{LIBS} .= $Config{ldflags};
 +	$Params{LIBS} .= " -lidn";
 +	
