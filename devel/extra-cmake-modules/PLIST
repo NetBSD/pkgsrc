@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/06 11:23:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/03/19 11:19:55 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -13,6 +13,7 @@ share/ECM/find-modules/FindIcoTool.cmake
 share/ECM/find-modules/FindInotify.cmake
 share/ECM/find-modules/FindIsoCodes.cmake
 share/ECM/find-modules/FindKF5.cmake
+share/ECM/find-modules/FindKF6.cmake
 share/ECM/find-modules/FindLibExiv2.cmake
 share/ECM/find-modules/FindLibGit2.cmake
 share/ECM/find-modules/FindLibMount.cmake
@@ -58,12 +59,16 @@ share/ECM/kde-modules/KDEMetaInfoPlatformCheck.cmake
 share/ECM/kde-modules/KDEPackageAppTemplates.cmake
 share/ECM/kde-modules/KDESetupPrefixScript.cmake
 share/ECM/kde-modules/appstreamtest.cmake
-share/ECM/kde-modules/clang-format.in
+share/ECM/kde-modules/clang-format.cmake
 share/ECM/kde-modules/kde-git-commit-hooks/clang-format.sh
+share/ECM/kde-modules/kde-git-commit-hooks/combined.schema.json.in
+share/ECM/kde-modules/kde-git-commit-hooks/combined.schema.json.in.license
+share/ECM/kde-modules/kde-git-commit-hooks/json-schema.py
 share/ECM/kde-modules/kde-git-commit-hooks/pre-commit.in
-share/ECM/kde-modules/prefix.sh.fish.in
-share/ECM/kde-modules/prefix.sh.in
+share/ECM/kde-modules/prefix.sh.cmake
+share/ECM/kde-modules/prefix.sh.fish.cmake
 share/ECM/modules/CheckAtomic.cmake
+share/ECM/modules/ECMAddAndroidApk.cmake
 share/ECM/modules/ECMAddAppIcon.cmake
 share/ECM/modules/ECMAddQch.cmake
 share/ECM/modules/ECMAddQtDesignerPlugin.cmake
@@ -74,6 +79,7 @@ share/ECM/modules/ECMCoverageOption.cmake
 share/ECM/modules/ECMCreateQmFromPoFiles.cmake
 share/ECM/modules/ECMDeprecationSettings.cmake
 share/ECM/modules/ECMEnableSanitizers.cmake
+share/ECM/modules/ECMFeatureSummary.cmake
 share/ECM/modules/ECMFindModuleHelpers.cmake
 share/ECM/modules/ECMFindQmlModule.cmake
 share/ECM/modules/ECMFindQmlModule.cmake.in
@@ -98,6 +104,8 @@ share/ECM/modules/ECMQmlModule.cpp.in
 share/ECM/modules/ECMQmlModule.cpp.in.license
 share/ECM/modules/ECMQmlModule.h.in
 share/ECM/modules/ECMQmlModule.h.in.license
+share/ECM/modules/ECMQmlModule5.cmake
+share/ECM/modules/ECMQmlModule6.cmake
 share/ECM/modules/ECMQtDeclareLoggingCategory.cmake
 share/ECM/modules/ECMQtDeclareLoggingCategory.cpp.in
 share/ECM/modules/ECMQtDeclareLoggingCategory.h.in
@@ -115,8 +123,10 @@ share/ECM/modules/check-outbound-license.py
 share/ECM/modules/ecm_uninstall.cmake.in
 share/ECM/test-modules/test_execute_and_compare.cmake
 share/ECM/toolchain/Android.cmake
-share/ECM/toolchain/ECMAndroidDeployQt.cmake
+share/ECM/toolchain/ECMAndroidDeployQt5.cmake
 share/ECM/toolchain/deployment-file-qt514.json.in
+share/ECM/toolchain/deployment-file-qt6.json.in
+share/ECM/toolchain/deployment-file-qt6.json.in.license
 share/ECM/toolchain/deployment-file.json.in
 share/ECM/toolchain/generate-fastlane-metadata.py
 share/ECM/toolchain/hasMainSymbol.cmake
