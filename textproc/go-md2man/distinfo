@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2023/10/13 12:31:43 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/03/19 10:12:12 pin Exp $
 
 BLAKE2s (github.com_russross_blackfriday_v2_@v_v2.1.0.mod) = f0bc812b934149988d4ab1dcc12c2c63777f0a0d18126b5cba0e35ea880b775b
 SHA512 (github.com_russross_blackfriday_v2_@v_v2.1.0.mod) = ac376a387fa39fe35dc4d073d8becd74e79f52e9d36b0a6628740dfe0e7c1f4fb6533fc262212663b105afcaa104082e055fa87d20cb3068359faae6dcba7738
@@ -6,6 +6,6 @@ Size (github.com_russross_blackfriday_v2_@v_v2.1.0.mod) = 42 bytes
 BLAKE2s (github.com_russross_blackfriday_v2_@v_v2.1.0.zip) = 85686101dbbeab3cb9c505afd1304dbe587d6fd5c029748e5d8aaafba881f0c5
 SHA512 (github.com_russross_blackfriday_v2_@v_v2.1.0.zip) = 11e29cdd7a8baee7995009755582c26eb819efd715e9dfa1442b5743c7bf5752188f0fa8f5ddb3452f05f371a280324406410b683609f6a510277d3e03b30ca0
 Size (github.com_russross_blackfriday_v2_@v_v2.1.0.zip) = 122358 bytes
-BLAKE2s (go-md2man-2.0.3.tar.gz) = 68b985c641a4f0c9d9b28945d0fe187f9b4a6af55ee96446093e24c98b30bc94
-SHA512 (go-md2man-2.0.3.tar.gz) = 237e8039beea11b4efb7d0c75fb5826c17dea50057b0149b9533e72e2a5198811f9a3a5b264ea3788922d2f03b07cb57914448b2d4325d54d0f946fb42c42f40
-Size (go-md2man-2.0.3.tar.gz) = 64961 bytes
+BLAKE2s (go-md2man-2.0.4.tar.gz) = ccdf4c015f6b5544b4ac348a07cbfa75bb07f71bb1c7d04b54e8d6f09853034d
+SHA512 (go-md2man-2.0.4.tar.gz) = 2169f16a7ea769357511a72dff5f8a5728ec810ed4165e6a4b8c61ee2fa7bccab132bad94584a547c5ce4c63ca533a144a6c379d81f1977854eb22bfbe21e065
+Size (go-md2man-2.0.4.tar.gz) = 9902 bytes
