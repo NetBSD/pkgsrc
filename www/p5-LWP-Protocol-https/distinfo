@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/02/25 08:34:56 wiz Exp $
+$NetBSD: distinfo,v 1.15 2024/03/19 10:41:41 wiz Exp $
 
-BLAKE2s (LWP-Protocol-https-6.13.tar.gz) = 5434e93d92519aea7509fdfd34037f5aa9a3a92d22d97c7f5c7c708157e5ea3f
-SHA512 (LWP-Protocol-https-6.13.tar.gz) = d80dd4e6395fd254d3365f159a4a9eb8e184e3a8be650e721b5136f912235d9d06505c39eb7ad393ce8da027d44da3e06ad8635a5bee6a06a4af8176f5c2ca92
-Size (LWP-Protocol-https-6.13.tar.gz) = 33619 bytes
+BLAKE2s (LWP-Protocol-https-6.14.tar.gz) = 85acb01039d8f2b4d221d24fa504fdc8101090d83587af4fc0beeac789a16ecb
+SHA512 (LWP-Protocol-https-6.14.tar.gz) = 8f220c307833a803a8539a1c794598097133f24017edda9030eba2ff558d54104040fbae64d7068e99b9e03142e6e96a8b11c478e2a5571e908754a385b59fab
+Size (LWP-Protocol-https-6.14.tar.gz) = 33714 bytes
