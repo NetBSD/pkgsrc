@@ -1,6 +1,5 @@
-$NetBSD: patch-IkiWiki_Plugin_highlight.pm,v 1.5 2024/03/19 14:08:24 schmonz Exp $
+$NetBSD: patch-IkiWiki_Plugin_highlight.pm,v 1.6 2024/03/19 14:11:21 wiz Exp $
 
-Apply upstream patch 9ea3f9d to catch up to highlight 4.0 API change.
 Use pkgsrc paths.
 
 --- IkiWiki/Plugin/highlight.pm.orig	2024-03-18 16:42:55.000000000 +0000
