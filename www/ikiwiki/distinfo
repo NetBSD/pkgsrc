@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.142 2024/02/05 06:13:43 schmonz Exp $
+$NetBSD: distinfo,v 1.143 2024/03/19 14:08:23 schmonz Exp $
 
-BLAKE2s (ikiwiki_3.20200202.3.orig.tar.xz) = 2a29fcde488ca19f3977450b73e423808568cb65938a4ad7ffd4ff5abd64a5b5
-SHA512 (ikiwiki_3.20200202.3.orig.tar.xz) = a1d89ccc0d02cddb3ef53c4c4a4a3349139d558fd4eb418263551a48cb635ed29ef430f8276ef6b42486a9232706908752e15e88590e919db6665e1a8844a4e5
-Size (ikiwiki_3.20200202.3.orig.tar.xz) = 2689636 bytes
-SHA1 (patch-IkiWiki_Plugin_highlight.pm) = a2b1d84472f9b452d60b781f9a9951f5741673f3
+BLAKE2s (ikiwiki_3.20200202.4.orig.tar.xz) = 1408b690c9553387f79a0381e51fb4a286ee92fd707660e05b43e3208f76b14a
+SHA512 (ikiwiki_3.20200202.4.orig.tar.xz) = 2ed7084a0e4eee3360aca23be24ed1ba0b7d52d1c716379442ded67a408de3b628cd92d1112fc0b277f24c7fe5a9cd35f4b20924427f79afb1e631a98f0e0fab
+Size (ikiwiki_3.20200202.4.orig.tar.xz) = 2733060 bytes
+SHA1 (patch-IkiWiki_Plugin_highlight.pm) = 451762e67156c4970bc4a59fb909304929b9cbe1
 SHA1 (patch-IkiWiki_Plugin_polygen.pm) = 232c48aac1c0ab538b380def2b8a4b42373a3582
-SHA1 (patch-Makefile.PL) = 44324917c22ec3cd2aa216439e2ae5a3dc2f9787
+SHA1 (patch-Makefile.PL) = 52a1bde3301ccb60eede6ca3f18472e729b7508d
 SHA1 (patch-ikiwiki-mass-rebuild) = eb03ac0ec83078be593f76968f5a1f9080ea50b9
-SHA1 (patch-ikiwiki.in) = c45552b89ad10df949bc21ab6154997cb0153eb9
 SHA1 (patch-po_Makefile) = 468b500da41c606c6af6b65c8080d692acb69336

@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.PL,v 1.6 2019/08/31 21:32:13 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.7 2024/03/19 14:08:24 schmonz Exp $
 
 Avoid -regex, not available in OpenBSD find(1).
 Set example SYSCONFDIR separately.
 
---- Makefile.PL.orig	2019-02-26 23:01:54.000000000 +0000
+--- Makefile.PL.orig	2024-03-18 16:42:55.000000000 +0000
 +++ Makefile.PL
 @@ -20,6 +20,7 @@ SED?=sed
  # Additional configurable path variables.
@@ -17,13 +17,13 @@ Set example SYSCONFDIR separately.
  extra_install: underlay_install
  	# Install example sites.
  	set -e; \
--	for dir in `$(FIND) doc/examples -type d ! -regex '.*discussion.*' | $(SED) -e 's|^doc/examples/||'`; do \
-+	for dir in `$(FIND) doc/examples -type d ! -name discussion | $(SED) -e 's|^doc/examples/||'`; do \
+-	for dir in `$(FIND) doc/examples -type d ! -regex '.*discussion.*' | $(SED) -ne 's|^doc/examples/||p'`; do \
++	for dir in `$(FIND) doc/examples -type d ! -name discussion | $(SED) -ne 's|^doc/examples/||p'`; do \
  		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$dir; \
  	done
  	set -e; \
--	for file in `$(FIND) doc/examples -type f ! -regex '.*discussion.*' | $(SED) -e 's|^doc/examples/||'`; do \
-+	for file in `$(FIND) doc/examples -type f ! -name discussion.mdwn | $(SED) -e 's|^doc/examples/||'`; do \
+-	for file in `$(FIND) doc/examples -type f ! -regex '.*discussion.*' | $(SED) -ne 's|^doc/examples/||p'`; do \
++	for file in `$(FIND) doc/examples -type f ! -name discussion.mdwn | $(SED) -ne 's|^doc/examples/||p'`; do \
  		if ! cp -pRL doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file 2>/dev/null; then \
  			install -m 644 doc/examples/$$file $(DESTDIR)$(PREFIX)/share/ikiwiki/examples/$$file; \
  		fi; \

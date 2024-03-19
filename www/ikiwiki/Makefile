@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.181 2023/08/14 05:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2024/03/19 14:08:23 schmonz Exp $
 
-DISTNAME=		ikiwiki_3.20200202.3.orig
+DISTNAME=		ikiwiki_3.20200202.4.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=		10
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 EXTRACT_SUFX=		.tar.xz
@@ -66,6 +65,9 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 #	cd ${WRKSRC} && find . -type f -print | perl -ne 'open(F, "<$$_"); $$l=<F>; print if $$l =~ m|^#!/usr/bin/perl|'
 
 .include "options.mk"
+
+post-extract:
+	rm ${WRKSRC}/doc/examples/blog/posts/A_new_title*The_US_and_the_global_economic_developement___40__by_Stanley_Fisher__41__.mdwn
 
 pre-configure:
 	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
