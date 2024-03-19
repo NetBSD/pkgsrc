@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.274 2024/03/08 12:45:50 wiz Exp $
+# $NetBSD: gcc.mk,v 1.275 2024/03/19 23:22:50 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -364,6 +364,12 @@ _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 #
 # Note that pkgsrc also sets this flag itself for Darwin+clang.
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=sign-conversion
+.endif
+
+.if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[01234].*)
+# Added in GCC 4.5
+BUILDLINK_TRANSFORM+=	rm:-Wno-unused-result
 .endif
 
 .if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[012].*)
@@ -375,6 +381,18 @@ BUILDLINK_TRANSFORM+=	rm:-Wvla
 # Added in GCC 4.3
 BUILDLINK_TRANSFORM+=	rm:-Wc++-compat
 BUILDLINK_TRANSFORM+=	rm:-Wno-c++-compat
+.endif
+
+.if !empty(_GCC_VERSION:M[23456].*)
+# Added in GCC 7
+BUILDLINK_TRANSFORM+=	rm:-Wimplicit-fallthrough
+BUILDLINK_TRANSFORM+=	rm:-Wno-implicit-fallthrough
+.endif
+
+.if !empty(_GCC_VERSION:M3.*) || !empty(_GCC_VERSION:M4.[0-7].*)
+# Added in GCC 4.8
+BUILDLINK_TRANSFORM+=	opt:-std=c++03:-std=c++98
+BUILDLINK_TRANSFORM+=	opt:-std=gnu++03:-std=gnu++98
 .endif
 
 .if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[0-8].*)
@@ -393,10 +411,6 @@ _C_STD_FLAG.c99=	-std=gnu99
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
 .endfor
-.if !empty(_GCC_VERSION:M[34].[1234].*)
-_CXX_STD_FLAG.c++03=	-std=c++0x
-_CXX_STD_FLAG.gnu++03=	-std=gnu++0x
-.endif
 
 .if !empty(_CC:M${TOOLBASE}/*)
 _IS_BUILTIN_GCC=	NO
