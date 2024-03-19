@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2024/01/15 09:06:11 adam Exp $
+# $NetBSD: Makefile,v 1.91 2024/03/19 02:16:57 nia Exp $
 
 DISTNAME=	memcached-1.6.23
 CATEGORIES=	devel
@@ -19,6 +19,17 @@ RCD_SCRIPTS=		memcached
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
+
+# Macs lacked clock_gettime way past its implement-by date.
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101200
+LDFLAGS+=	-lMacportsLegacySupport
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath+=	configure
+SUBST_SED.rpath+=	-e 's|-Wl,-rpath,|${COMPILER_RPATH_FLAG}|g'
 
 .include "options.mk"
 
