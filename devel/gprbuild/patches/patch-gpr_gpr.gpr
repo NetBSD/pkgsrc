@@ -1,4 +1,4 @@
-$NetBSD: patch-gpr_gpr.gpr,v 1.1 2024/03/12 17:50:13 wiz Exp $
+$NetBSD: patch-gpr_gpr.gpr,v 1.2 2024/03/19 13:20:35 wiz Exp $
 
 Fix link time warning on NetBSD
 
@@ -13,4 +13,3 @@ Fix link time warning on NetBSD
 +               use "gpr-util-put_resource_usage__netbsd.adb";
        end case;
     end Naming;
-
