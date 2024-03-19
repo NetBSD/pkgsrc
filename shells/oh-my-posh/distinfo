@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2024/03/16 21:40:50 pin Exp $
+$NetBSD: distinfo,v 1.114 2024/03/19 10:09:57 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -729,8 +729,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-19.17.2.tar.gz) = d8ca458fb9a54ffea8075fe2590694b0ae2cafde73fe9924382a530b5f2e04ad
-SHA512 (oh-my-posh-19.17.2.tar.gz) = 80c6d065ec4ddc7e54a9431e29d15cbda6ae0539837f11ed8b4564c5cd71f4308fff5d522ccc60b44dd1fea265bac4d18ccbbe01ac6c1681784945f5909ef10d
-Size (oh-my-posh-19.17.2.tar.gz) = 6754029 bytes
+BLAKE2s (oh-my-posh-19.18.1.tar.gz) = 8978f8c9ffaef2e44673b8b8faabcad0b9e329d8f4654d34386943510a97b34b
+SHA512 (oh-my-posh-19.18.1.tar.gz) = 240c74088bd9765a058867a142faecb6bdcf49eb26a83ec6458a220c1a772bf292093c42f5347f89b3dadc324d55c30e3fe32028bf6f6788df6b6af2fe9f3e9d
+Size (oh-my-posh-19.18.1.tar.gz) = 6754046 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 37eb1ba8082c0d3dfc287dfd5e35bcd31a00ab6a
