@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/05/23 22:31:45 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/03/19 19:42:53 nikita Exp $
 
-BLAKE2s (i3lock-color-2.13.c.4.tar.gz) = 4db9c24672a329948737b62c3a3747b44c975ef77c3dbe8b73c2a7ea72661243
-SHA512 (i3lock-color-2.13.c.4.tar.gz) = 67b7b558f2894f8a389e559a5b146e176d4d0410b8da2a756190691062fa60e085449bc3afa57cbbdee7d2f002f995649d123bfb9d88eaae55da3cf8f68eee02
-Size (i3lock-color-2.13.c.4.tar.gz) = 215078 bytes
+BLAKE2s (i3lock-color-2.13.c.5.tar.gz) = 6c636e172ab026f5a3ce0594c23ba001897ae18908d6d401a3d73e66f91cad9a
+SHA512 (i3lock-color-2.13.c.5.tar.gz) = db52b8800a63a9fc85ffb644b140488588427d717b075a3f0d318486cb0177858ed7a2f148bb904e56539bbf679b0fd40eaf0df895b1f578498dfb70219eb9b8
+Size (i3lock-color-2.13.c.5.tar.gz) = 485084 bytes
 SHA1 (patch-jpg.c) = 2da0ba7d6ac2080991a47dad91e9813133f76a8f
