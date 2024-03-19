@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/01/27 08:32:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/03/19 10:10:35 abs Exp $
 
 DISTNAME=	mongodb-src-r4.4.28
 PKGNAME=	${DISTNAME:S/src-r//}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -28,7 +29,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17 filesystem
-GCC_REQD+=		11
+GCC_REQD+=		10
 
 USE_TOOLS+=	pkg-config
 
@@ -49,6 +50,7 @@ SCONS_BUILD_ARGS+=	--use-system-tcmalloc
 SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
+SCONS_BUILD_ARGS+=	--modules='' # avoid enterprise build
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
