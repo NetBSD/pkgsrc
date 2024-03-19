@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/02/06 11:23:05 markd Exp $
+# $NetBSD: Makefile,v 1.26 2024/03/19 11:19:55 markd Exp $
 
-DISTNAME=	extra-cmake-modules-5.114.0
+DISTNAME=	extra-cmake-modules-6.0.0
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +18,7 @@ CMAKE_ARGS+=	-DBUILD_MAN_DOCS=OFF
 CMAKE_ARGS+=	-DBUILD_QTHELP_DOCS=OFF
 
 CHECK_INTERPRETER_SKIP+=	share/ECM/kde-modules/kde-git-commit-hooks/clang-format.sh
+CHECK_INTERPRETER_SKIP+=	share/ECM/kde-modules/kde-git-commit-hooks/json-schema.py
 CHECK_INTERPRETER_SKIP+=	share/ECM/kde-modules/kde-git-commit-hooks/pre-commit.in
 
 pre-configure:
