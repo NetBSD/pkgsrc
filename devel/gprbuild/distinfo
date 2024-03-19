@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/03/12 17:50:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/03/19 13:20:35 wiz Exp $
 
 BLAKE2s (AdaCore-gprconfig_kb-v24.0.0.tar.gz) = e39c1e70b80923db53f0e6c4687536fcbfdc951209a34dc039423f9cc31319fa
 SHA512 (AdaCore-gprconfig_kb-v24.0.0.tar.gz) = 1bd28b7eba57a8952635f3fb61e06278935c31ed196182e19e9e8c2ffa3edbccea5a9b97b3f5a3c820e7c3f5b6878d87f7b42d66a7f57e083d0b56cb91a6eb84
@@ -12,7 +12,8 @@ Size (gprbuild-24.0.0.tar.gz) = 959615 bytes
 SHA1 (patch-Makefile) = 2feb8ed77093d88d70163366206ab4e4a716614a
 SHA1 (patch-bootstrap.sh) = f314016c046426d3f2a40013a9332cf433a4196a
 SHA1 (patch-deps_xmlada_Makefile.in) = 98632303e6829b0540abeca6a5a7cd427b455adf
-SHA1 (patch-gpr_gpr.gpr) = 28c7779f044db45b1daa029833c39e9c818fa061
+SHA1 (patch-gpr_gpr.gpr) = 8304a3a14be07908792a19af65750e3f6a968721
 SHA1 (patch-gpr_src_gpr-util-put__resource__usage____netbsd.adb) = d0acc610cce5a2a24b00efa196a658cbfd0afe77
+SHA1 (patch-gpr_src_gpr-version.ads) = 9321ae482f2f36b9d5a6c96225ae3a7a5e16a7e1
 SHA1 (patch-gpr_src_gpr_imports.c) = 945eefee50b198695ade7a4b88d4f87dd50f7925
 SHA1 (patch-gprbuild.gpr) = 557472a3b1fca73e14434b8ecd614e4fdfa726be
