@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/03/12 17:50:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/19 13:20:35 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	gprbuild-${GPRBUILD_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
