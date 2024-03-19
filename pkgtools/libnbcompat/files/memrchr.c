@@ -1,11 +1,11 @@
-/*	$NetBSD: string.h,v 1.7 2024/03/19 00:59:01 nia Exp $	*/
+/*	$NetBSD: memrchr.c,v 1.1 2024/03/19 00:59:00 nia Exp $	*/
 
 /*-
- * Copyright (c) 2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 2008 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Johnny C. Lam.
+ * by Christos Zoulas.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,47 +29,34 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _NBCOMPAT_STRING_H_
-#define _NBCOMPAT_STRING_H_
-
-#if HAVE_STRING_H
-# include <string.h>
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
 #endif
 
-/*
- * Declare functions and macros that may be missing in <string.h>.
- */
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+__RCSID("$NetBSD: memrchr.c,v 1.1 2024/03/19 00:59:00 nia Exp $");
+#endif /* LIBC_SCCS and not lint */
 
-#if !HAVE_DECL_STRDUP
-char	*strdup(const char *);
-#endif
-
-#if !HAVE_STRERROR
-char	*strerror(int);
-#endif
-
-#if !HAVE_STRLCAT
-size_t	strlcat(char *, const char *, size_t);
-#endif
-
-#if !HAVE_STRLCPY
-size_t	strlcpy(char *, const char *, size_t);
-#endif
-
-#if !HAVE_STRNLEN
-size_t	strnlen(const char *s, size_t maxlen);
-#endif
-
-#if !HAVE_STRNDUP
-char	*strndup(const char *, size_t);
-#endif
-
-#if !HAVE_STRSEP
-char	*strsep(char **stringp, const char *delim);
-#endif
+#include <nbcompat/assert.h>
+#include <nbcompat/string.h>
 
 #if !HAVE_MEMRCHR
-void	*memrchr(const void *, int, size_t);
-#endif
+void *
+memrchr(const void *s, int c, size_t n)
+{
+	_DIAGASSERT(s != NULL);
 
-#endif	/* !_NBCOMPAT_STRING_H_ */
+	if (n != 0) {
+		const unsigned char *p = (const unsigned char *)s + n;
+		const unsigned char cmp = c;
+
+		do {
+			if (*--p == cmp)
+				return __UNCONST(p);
+		} while (--n != 0);
+	}
+	return NULL;
+}
+#endif
