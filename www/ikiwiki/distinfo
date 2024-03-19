@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.143 2024/03/19 14:08:23 schmonz Exp $
+$NetBSD: distinfo,v 1.144 2024/03/19 14:11:21 wiz Exp $
 
 BLAKE2s (ikiwiki_3.20200202.4.orig.tar.xz) = 1408b690c9553387f79a0381e51fb4a286ee92fd707660e05b43e3208f76b14a
 SHA512 (ikiwiki_3.20200202.4.orig.tar.xz) = 2ed7084a0e4eee3360aca23be24ed1ba0b7d52d1c716379442ded67a408de3b628cd92d1112fc0b277f24c7fe5a9cd35f4b20924427f79afb1e631a98f0e0fab
 Size (ikiwiki_3.20200202.4.orig.tar.xz) = 2733060 bytes
-SHA1 (patch-IkiWiki_Plugin_highlight.pm) = 451762e67156c4970bc4a59fb909304929b9cbe1
+SHA1 (patch-IkiWiki_Plugin_highlight.pm) = f4d5522069f16a3be558fa053f5013bfde23553b
 SHA1 (patch-IkiWiki_Plugin_polygen.pm) = 232c48aac1c0ab538b380def2b8a4b42373a3582
 SHA1 (patch-Makefile.PL) = 52a1bde3301ccb60eede6ca3f18472e729b7508d
 SHA1 (patch-ikiwiki-mass-rebuild) = eb03ac0ec83078be593f76968f5a1f9080ea50b9
