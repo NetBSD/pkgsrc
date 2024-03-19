@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2024/02/06 11:23:05 markd Exp $
+$NetBSD: distinfo,v 1.25 2024/03/19 11:19:55 markd Exp $
 
-BLAKE2s (extra-cmake-modules-5.114.0.tar.xz) = e4a721436ec46d7dc5d340046b326f662c343115c6e1c09eefc6d4a9884fc029
-SHA512 (extra-cmake-modules-5.114.0.tar.xz) = 38431ab95a9648f2febe0d5a9e54a61a3a9d483f31ca1f410e2e9bdd4b4718ee501ec96c2b5097caa9facddf07b1f32671a510a4ccefa2d0791248684b3d934f
-Size (extra-cmake-modules-5.114.0.tar.xz) = 332492 bytes
+BLAKE2s (extra-cmake-modules-6.0.0.tar.xz) = bdf05ad1840b153e180b817f837e07affd3b1d253e981cae926f0f5e6ab49b27
+SHA512 (extra-cmake-modules-6.0.0.tar.xz) = 226f9eab4108b8b2aa91859a3ae818d2cc58ab370bffa13033e17f671f232c47041beaa4b3eaa9d2241a94141bfb0291e4aa572abe134f7782d45420a3c35525
+Size (extra-cmake-modules-6.0.0.tar.xz) = 340064 bytes
 SHA1 (patch-kde-modules_KDECompilerSettings.cmake) = fd20a82370a451aa45d4d8fa59127c76bdc5a441
 SHA1 (patch-kde-modules_KDEMetaInfoPlatformCheck.cmake) = 74a714c25f7c73c2e2d38ae22144cf52574009ae
