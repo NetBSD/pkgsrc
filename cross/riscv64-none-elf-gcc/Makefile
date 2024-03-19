@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/03/18 17:39:34 dogcow Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/19 14:24:34 dogcow Exp $
 
 DISTNAME=		gcc-13.2.0
 PKGNAME=		cross-riscv64-none-elf-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		cross
 NEWLIBVER=		4.4.0.20231231
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
@@ -51,6 +52,7 @@ GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 CONFIGURE_ARGS+=	--target=riscv64-none-elf
 CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--with-newlib
+CONFIGURE_ARGS+=	--disable-multilib
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-gcov
