@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:24:01 nia Exp $
-
-BLAKE2s (sms_sdl-0.9.4a-r7.1-src.zip) = 26d3cb16a08ac56ddf6a50af3a14b652de2ebf15b11abf4c3b619839ea45d3bc
-SHA512 (sms_sdl-0.9.4a-r7.1-src.zip) = e19bda4d9b7db4f7ceeec901fdb0184125c6454be71758f1adb3cdbea55e1b05addccea8ca0edf8f3bbe5c721be1b15c961cc8092723bb88c985bb4cf553782e
-Size (sms_sdl-0.9.4a-r7.1-src.zip) = 113154 bytes
-SHA1 (patch-aa) = 80a6ee341b8b3e4d5c92bcd42ef26164dac3e9f6
-SHA1 (patch-makefile) = 870393cc8b598af1f57bb78b63906988e28e78d5
-SHA1 (patch-sdl_Makefile) = 22e92498d263a443e6421b93c830bf6391fa74af
