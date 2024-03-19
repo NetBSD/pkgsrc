@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:44 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2024/03/19 01:51:17 nia Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -22,6 +22,12 @@ CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 LDFLAGS.SunOS+=			-lsocket -lnsl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+BUILDLINK_TRANSFORM+=	rm:-lutil
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${DESTDIR}${PREFIX:Q}/bin/
