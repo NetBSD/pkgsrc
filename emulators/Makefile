@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2024/02/12 08:25:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.358 2024/03/19 12:40:50 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -190,7 +190,6 @@ SUBDIR+=	simh
 SUBDIR+=	simh3
 SUBDIR+=	simulavr
 SUBDIR+=	ski
-SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
 SUBDIR+=	snes9x-gtk
 SUBDIR+=	softvms
