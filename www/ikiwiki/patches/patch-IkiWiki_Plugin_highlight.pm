@@ -1,9 +1,9 @@
-$NetBSD: patch-IkiWiki_Plugin_highlight.pm,v 1.4 2021/11/02 09:44:48 schmonz Exp $
+$NetBSD: patch-IkiWiki_Plugin_highlight.pm,v 1.5 2024/03/19 14:08:24 schmonz Exp $
 
 Apply upstream patch 9ea3f9d to catch up to highlight 4.0 API change.
 Use pkgsrc paths.
 
---- IkiWiki/Plugin/highlight.pm.orig	2020-02-02 20:23:50.000000000 +0000
+--- IkiWiki/Plugin/highlight.pm.orig	2024-03-18 16:42:55.000000000 +0000
 +++ IkiWiki/Plugin/highlight.pm
 @@ -36,14 +36,14 @@ sub getsetup () {
  		},
@@ -22,21 +22,7 @@ Use pkgsrc paths.
  			description => "location of highlight's langDefs directory",
  			safe => 0,
  			rebuild => undef,
-@@ -54,14 +54,20 @@ sub checkconfig () {
- 	eval q{use highlight};
- 	if (highlight::DataDir->can('new')) {
- 		$data_dir=new highlight::DataDir();
--		$data_dir->searchDataDir("");
-+		if ( $data_dir->can('initSearchDirectories') ) {
-+			# 4.0+
-+			$data_dir -> initSearchDirectories("");
-+		} else {
-+			# pre-4.0
-+			$data_dir -> searchDataDir("");
-+		}
- 	} else {
- 		$data_dir=undef;
- 	}
+@@ -67,7 +67,7 @@ sub checkconfig () {
  
  	if (! exists $config{filetypes_conf}) {
  	  if (! $data_dir ) {
@@ -45,7 +31,7 @@ Use pkgsrc paths.
  	      } elsif ( $data_dir -> can('getFiletypesConfPath') ) {
  		# 3.14 +
  		$config{filetypes_conf}=
-@@ -75,7 +81,7 @@ sub checkconfig () {
+@@ -81,7 +81,7 @@ sub checkconfig () {
  	# note that this is only used for old versions of highlight
  	# where $data_dir will not be defined.
  	if (! exists $config{langdefdir}) {
