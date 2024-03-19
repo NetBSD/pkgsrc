@@ -7571,6 +7571,30 @@ esac
 
 fi
 
+need_memrchr=no
+
+  for ac_func in memrchr
+do :
+  ac_fn_c_check_func "$LINENO" "memrchr" "ac_cv_func_memrchr"
+if test "x$ac_cv_func_memrchr" = xyes
+then :
+  printf "%s\n" "#define HAVE_MEMRCHR 1" >>confdefs.h
+ :
+else $as_nop
+  need_memrchr=yes
+fi
+
+done
+
+if test $need_memrchr = yes; then
+        case " $LIBOBJS " in
+  *" memrchr.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS memrchr.$ac_objext"
+ ;;
+esac
+
+fi
+
 ac_fn_check_decl "$LINENO" "endgrent" "ac_cv_have_decl_endgrent" "$ac_includes_default" "$ac_c_undeclared_builtin_options" "CFLAGS"
 if test "x$ac_cv_have_decl_endgrent" = xyes
 then :
