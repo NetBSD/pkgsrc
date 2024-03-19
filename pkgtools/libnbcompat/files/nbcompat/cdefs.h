@@ -1,4 +1,4 @@
-/*	$NetBSD: cdefs.h,v 1.3 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: cdefs.h,v 1.4 2024/03/19 00:59:01 nia Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -95,6 +95,19 @@
 # else
 #  define __restrict	/* delete __restrict when not supported */
 # endif
+#endif
+
+/*
+ * The following macro is used to remove const cast-away warnings
+ * from gcc -Wcast-qual; it should be used with caution because it
+ * can hide valid errors; in particular most valid uses are in
+ * situations where the API requires it, not to cast away string
+ * constants. We don't use *intptr_t on purpose here and we are
+ * explicit about unsigned long so that we don't have additional
+ * dependencies.
+ */
+#ifndef __UNCONST
+#  define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
 #endif
 
 #endif	/* !_NBCOMPAT_SYS_CDEFS_H_ */

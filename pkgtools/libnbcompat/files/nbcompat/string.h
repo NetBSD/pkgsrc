@@ -1,4 +1,4 @@
-/*	$NetBSD: string.h,v 1.6 2023/11/09 18:55:19 nia Exp $	*/
+/*	$NetBSD: string.h,v 1.7 2024/03/19 00:59:01 nia Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -66,6 +66,10 @@ char	*strndup(const char *, size_t);
 
 #if !HAVE_STRSEP
 char	*strsep(char **stringp, const char *delim);
+#endif
+
+#if !HAVE_MEMRCHR
+void	*memrchr(const void *, int, size_t);
 #endif
 
 #endif	/* !_NBCOMPAT_STRING_H_ */
