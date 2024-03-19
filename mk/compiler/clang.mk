@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.42 2023/10/18 08:48:51 jperkin Exp $
+# $NetBSD: clang.mk,v 1.43 2024/03/19 21:12:47 schmonz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -80,15 +80,44 @@ CWRAPPERS_PREPEND.cc+=	-Qunused-arguments
 _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
-# Xcode 12 has a zealous new default. Turn it off until we're ready,
-# while allowing callers (or users, via CFLAGS/CPPFLAGS) to override.
-.if ${OPSYS} == "Darwin"
-_NOERROR_IMPLICIT_cmd=	${CCPATH} -\#\#\# -E -x c /dev/null 2>&1 \
+# Xcode 12 and upstream Clang 16 have a zealous new default that the
+# wide world of random third-party software isn't ready for. Turn it
+# back off by default.
+#
+# Packages and users can override via CFLAGS/CPPFLAGS.
+_NOERROR_IMPLICIT_cmd=	${CCPATH} -\#\#\# -E -x c /dev/null \
+			2>&1 \
 			| ${GREP} -q Werror=implicit-function-declaration \
 			&& ${ECHO} -Wno-error=implicit-function-declaration \
 			|| ${TRUE}
 CWRAPPERS_PREPEND.cc+=	${_NOERROR_IMPLICIT_cmd:sh}
-.endif
+
+# Xcode 15 (Apple clang-1500.3.9.4) and upstream Clang 16 have several
+# more zealous new defaults. We can't default them off as precisely
+# (they don't show up in `clang -###` output), so we simply attempt to
+# turn them off for any clang that doesn't complain when we try.
+#
+# Packages and users can override via CFLAGS/CPPFLAGS.
+#
+# As soon as 2024Q1 branches, we should:
+#
+# 1. Do a bulk build with all these -Wno-error tweaks removed, so we can
+#    see how much is broken.
+# 2. If it's "too much" breakage and we'll have to keep overriding these
+#    compiler defaults for "a while", find a way to accomplish them with
+#    fewer compiler invocations. (Some ideas: define a default
+#    FORCE_C_STD, or apply overrides keyed on CC_VERSION or similar.) Do
+#    a bulk build to make sure things continue to work as before.
+# 3. Otherwise, fix as much as we can before 2024Q2. This will help with
+#    gcc 14 (which has many similar new defaults) as well.
+_WERROR_CLANG16=	implicit-int int-conversion incompatible-pointer-types
+_NOERROR_CLANG16_cmd=	for _warn_ in ${_WERROR_CLANG16}; do \
+			${CCPATH} -\#\#\# -Wno-error=$${_warn_} -x c /dev/null \
+			>/dev/null 2>&1 \
+			&& ${ECHO} -Wno-error=$${_warn_} \
+			|| ${TRUE}; \
+			done
+CWRAPPERS_PREPEND.cc+=	${_NOERROR_CLANG16_cmd:sh}
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
