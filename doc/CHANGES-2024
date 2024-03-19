@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1956 2024/03/19 10:11:06 pin Exp $
+$NetBSD: CHANGES-2024,v 1.1957 2024/03/19 10:12:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3258,3 +3258,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libgphoto2 to 2.5.27nb6 [wiz 2024-03-19]
 	Updated www/p5-HTTP-Message to 6.45nb1 [wiz 2024-03-19]
 	Updated shells/oh-my-posh to 19.18.1 [pin 2024-03-19]
+	Updated www/p5-HTML-Parser to 3.82 [wiz 2024-03-19]
