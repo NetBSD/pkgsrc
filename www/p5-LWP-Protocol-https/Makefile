@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/02/25 08:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/03/19 10:41:41 wiz Exp $
 
-DISTNAME=	LWP-Protocol-https-6.13
+DISTNAME=	LWP-Protocol-https-6.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
@@ -10,18 +10,17 @@ HOMEPAGE=	https://metacpan.org/release/LWP-Protocol-https
 COMMENT=	Provide https support for LWP::UserAgent
 LICENSE=	${PERL5_LICENSE}
 
-CONFLICTS+=	p5-libwww<6.02
-
-DEPENDS+=	p5-IO-Socket-SSL>=1.38:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-Mozilla-CA>=20110101:../../security/p5-Mozilla-CA
+DEPENDS+=	p5-IO-Socket-SSL>=1.970:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-libwww>=6.77:../../www/p5-libwww
+DEPENDS+=	p5-Net-HTTP>=0:../../www/p5-Net-HTTP
+TEST_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TEST_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
-# needed for tests (as LWP::UserAgent), but p5-libwww depends on this package
-#TEST_DEPENDS+=	p5-libwww>=6.06:../../www/p5-libwww
+
+CONFLICTS+=	p5-libwww<6.02
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/LWP/Protocol/https/.packlist
-
-TEST_TARGET?=	# to skip make test (but can be enabled by 'env TEST_TARGET=test make test')
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
