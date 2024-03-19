@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.90 2023/11/09 18:55:18 nia Exp $
+dnl $NetBSD: configure.ac,v 1.91 2024/03/19 00:59:00 nia Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -378,6 +378,13 @@ AC_CHECK_FUNCS([strndup], [:], [need_strndup=yes])
 
 if test $need_strndup = yes; then
         AC_LIBOBJ(strndup)
+fi
+
+need_memrchr=no
+AC_CHECK_FUNCS([memrchr], [:], [need_memrchr=yes])
+
+if test $need_memrchr = yes; then
+        AC_LIBOBJ(memrchr)
 fi
 
 AC_CHECK_DECLS([endgrent, endpwent, setpassent])
