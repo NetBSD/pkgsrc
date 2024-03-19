@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2023/11/08 13:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/03/19 09:58:13 wiz Exp $
 
 DISTNAME=	libgphoto2-2.5.27
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
