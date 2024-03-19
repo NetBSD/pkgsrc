@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/02/18 08:24:11 adam Exp $
+# $NetBSD: Makefile,v 1.59 2024/03/19 10:58:01 nia Exp $
 
 DISTNAME=	urllib3-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,16 +14,14 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 # optional dependencies:
 # "socks"; higher requirement from dev_requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
-# "brotli"
-DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.9:../../archivers/py-brotli
-DEPENDS+=	${PYPKGPREFIX}-brotlicffi>=0.8.0:../../archivers/py-brotlicffi
-# "zstd"
-DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 # "secure"
 #PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
 #DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
 #DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
 # but also needs unpackaged urlib3-secure-extra
+
+# brotli, zstd
+.include "options.mk"
 
 # needs py-cryptography>=39.0.1
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
