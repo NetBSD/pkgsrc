@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:04:14 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/20 11:26:15 markd Exp $
 
 DISTNAME=	xmltexconfig
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	35743
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	68933
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Files used to generate xmltex formats
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
