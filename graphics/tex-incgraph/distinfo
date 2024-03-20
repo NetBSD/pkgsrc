@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/08 23:27:33 markd Exp $
+$NetBSD: distinfo,v 1.5 2024/03/20 10:13:49 markd Exp $
 
-BLAKE2s (incgraph.r60810.tar.xz) = 550318893495ca19c62759fe51e74c013b0954d6d218518b5fa6c4388c09a710
-SHA512 (incgraph.r60810.tar.xz) = 06c7228e1ef4d760f6d7b1d308d4946eef7a55a60ff39bba6bdc6a96407cb6fab9f47dfd2c26f37d4f674d815e0ab7196badf2590638e214c980d26343a6bd55
-Size (incgraph.r60810.tar.xz) = 4976 bytes
+BLAKE2s (incgraph.r70635.tar.xz) = 17483456ff74bc0320644d42a7cf637b74fe7dd65ec7c023470f35fa2bab1fab
+SHA512 (incgraph.r70635.tar.xz) = 4acae7640b2cdbc3b7e9e7bef20882ad3f263c856303068cb3d64a1076456d4c979ff3733a2f6e5d41b8b3d4d66c6c97dd06696d741371861a3ef04c455a6877
+Size (incgraph.r70635.tar.xz) = 5724 bytes
