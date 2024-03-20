@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/04/09 12:57:30 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/03/20 11:17:20 markd Exp $
 
-BLAKE2s (tex4ebook.r66621.tar.xz) = e0c9e760fa28c0dd6b88b671d12aa98e9857be79285f9bb495a48737e8e7751b
-SHA512 (tex4ebook.r66621.tar.xz) = b0dd7eee40daae5cd87b39c8d52ee99569992dfb3f9d438cb43f2050f347f33653b5932c6b159b3d24382971aae5f631f9e8ac8e2e3219130ed346d5e466c0d1
-Size (tex4ebook.r66621.tar.xz) = 17980 bytes
+BLAKE2s (tex4ebook.r70112.tar.xz) = 0eaa4ed6815022b83ea0b6f3f96861e9e72f959be00740db452bb0f5508850f7
+SHA512 (tex4ebook.r70112.tar.xz) = 2a0ae5bf0959e517db009b66dab91d01a846ca37a1eda4450b7fe91931fac9aa7415cccbc793a6744e5a34ff9f02fb7b22df44ef8a1fcd045fc1dd48d405a203
+Size (tex4ebook.r70112.tar.xz) = 18184 bytes
