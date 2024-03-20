@@ -1,0 +1,4 @@
+Python with braces. Because Python is awesome, but whitespace is awful.
+
+Bython is a Python preprosessor which translates curly brackets into
+indentation.
