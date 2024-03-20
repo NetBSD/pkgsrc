@@ -3,4 +3,4 @@ utilize the Assuan protocol as described by the aegypten project.
 It provides programs for several graphical toolkits, such as GTK+ and
 QT, as well as for the console, using curses.
 
-This package contains the Qt5 frontend.
+This package contains the Qt6 frontend.

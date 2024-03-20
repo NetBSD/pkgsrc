@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.53 2022/01/13 08:05:48 adam Exp $
+# $NetBSD: Makefile,v 1.54 2024/03/20 15:46:37 adam Exp $
 
 COMMENT=	Applications for entering PINs or Passphrases
 
-CONFIGURE_ARGS+=	--enable-pinentry-tty
-CONFIGURE_ARGS+=	--enable-pinentry-emacs
 CONFIGURE_ARGS+=	--disable-pinentry-fltk
 CONFIGURE_ARGS+=	--disable-pinentry-gnome3
 CONFIGURE_ARGS+=	--disable-pinentry-gtk2
+CONFIGURE_ARGS+=	--disable-pinentry-qt
 CONFIGURE_ARGS+=	--disable-pinentry-qt5
 CONFIGURE_ARGS+=	--disable-pinentry-tqt
+CONFIGURE_ARGS+=	--enable-pinentry-emacs
+CONFIGURE_ARGS+=	--enable-pinentry-tty
 
 .include "../../security/pinentry/Makefile.common"
 
