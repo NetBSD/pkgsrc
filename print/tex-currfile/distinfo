@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/03 11:37:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/03/20 09:56:41 markd Exp $
 
-BLAKE2s (currfile.r64673.tar.xz) = 4568c0e63416b38a1f1782e3be8ac0a148d5e19fe780590b5cabfd4ebddd1cee
-SHA512 (currfile.r64673.tar.xz) = 4c63d6d33c21a0ac9aed990fa79eb1457908d9301dfb81b3dc7167d5b8089ebd20abfbcf29380a7dd348c6ca8c131260e366aa55819a6affde146408a8e80014
-Size (currfile.r64673.tar.xz) = 3748 bytes
+BLAKE2s (currfile.r70650.tar.xz) = e6fcd73dbfffcd9fd781731535af85ddecb98c114bd86ad5f7b99ad1daba00a4
+SHA512 (currfile.r70650.tar.xz) = 58506cd2ce8d9bf2081ff1a7924a2ea9900f4d49bb9166c9e8d1c2c2f44c961d0667bf7e099c21ab32c34ef1b6fe51fc016dfa62df32bb2ceafa19c2a9c0bedd
+Size (currfile.r70650.tar.xz) = 3872 bytes
