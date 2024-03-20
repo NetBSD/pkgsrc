@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/04/09 05:25:13 markd Exp $
+$NetBSD: distinfo,v 1.13 2024/03/20 10:06:15 markd Exp $
 
-BLAKE2s (epstopdf.doc.r66695.tar.xz) = eeb1417b434ca0cdfc7d2be087b95888df8e4ab12c18248adb4a4588896c7b88
-SHA512 (epstopdf.doc.r66695.tar.xz) = dfd26542d3be0037c43f5029de776d86d2d4c8215e18d845eedeb5090200ba4ae148cd51c42b4611509a35419e7a45b74e8f3ce4650c7a408dda5b029ac07a13
-Size (epstopdf.doc.r66695.tar.xz) = 30880 bytes
+BLAKE2s (epstopdf.doc.r68301.tar.xz) = 4792980f23c6794d8a30acb9fe5e0819e3a4d2442573b45532d5a7ad4f07593e
+SHA512 (epstopdf.doc.r68301.tar.xz) = 9d9068ce64a2e14ad72de11c6a608bf9379240c0fab77a7bd29fbf2774515c5eff12b375a592d3ad6c8accb06021309768c3965284d18b89fb0a57487e2dba06
+Size (epstopdf.doc.r68301.tar.xz) = 28860 bytes
