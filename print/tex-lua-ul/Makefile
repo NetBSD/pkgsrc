@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/08/21 14:23:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/20 10:45:05 markd Exp $
 
 DISTNAME=	lua-ul
-PKGNAME=	tex-${DISTNAME}-0.2.0
-TEXLIVE_REV=	63469
+PKGNAME=	tex-${DISTNAME}-0.2.1
+TEXLIVE_REV=	70203
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lua-ul
