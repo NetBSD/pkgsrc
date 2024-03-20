@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/01/06 13:48:35 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2024/03/20 13:30:24 adam Exp $
 
 DISTNAME=	ccid-1.5.5
 CATEGORIES=	security
@@ -39,6 +39,15 @@ REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	sbin share/doc/ccid
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id \
+		${PREFIX}/lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/MacOS/libccid.dylib \
+		${DESTDIR}${PREFIX}/lib/pcsc-lite/drivers/ifd-ccid.bundle/Contents/MacOS/libccid.dylib
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/ccid/README.md
