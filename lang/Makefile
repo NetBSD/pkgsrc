@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.721 2024/03/08 12:02:57 wiz Exp $
+# $NetBSD: Makefile,v 1.722 2024/03/20 04:08:24 mef Exp $
 #
 
 COMMENT=	Programming languages
@@ -19,6 +19,7 @@ SUBDIR+=	baci
 SUBDIR+=	boomerang
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
+SUBDIR+=	bython
 SUBDIR+=	caml-light
 SUBDIR+=	camlp5
 SUBDIR+=	cbmbasic
