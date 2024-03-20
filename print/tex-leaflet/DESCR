@@ -1,4 +1,6 @@
-A document class to create small hand-outs (flyers) that fit on a
-single sheet of paper which is then folded twice.  Pages are
-rearranged by LaTeX so that they print correctly on a single sheet--no
-external script is necessary.  (Works with PostScript and PDF.)
+A document class to create small hand-outs (flyers) that fit on
+a single sheet of paper which is then folded twice. Pages are
+rearranged by LaTeX so that they print correctly on a single
+sheet -- no external script is necessary. (Works with
+PostScript and PDF.) This is a complete reimplementation with
+permission of the original author Jurgen Schlegelmilch.

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/02/20 10:24:31 markd Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/20 10:35:33 markd Exp $
 
 DISTNAME=	leaflet.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.1a
-TEXLIVE_REV=	56878
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1c
+TEXLIVE_REV=	70652
 
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	https://ctan.org/pkg/leaflet
