@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24203 2024/03/20 09:25:03 wiz Exp $
+$NetBSD: TODO,v 1.24204 2024/03/20 11:36:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -585,7 +585,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elixir-1.16.2
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
