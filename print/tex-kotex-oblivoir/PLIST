@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/14 01:58:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/20 10:19:19 markd Exp $
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/10_5.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/fapapersize.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/memhangul-common.sty
@@ -8,6 +8,7 @@ share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/memucs-setspace.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/ob-koreanappendix.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/ob-nokoreanappendix.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/ob-toclof.sty
+share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/obchapterstyles.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/obchaptertoc.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-common/oblivoir-misc.sty
 share/texmf-dist/tex/latex/kotex-oblivoir/memhangul-ucs/hfontsel.sty
