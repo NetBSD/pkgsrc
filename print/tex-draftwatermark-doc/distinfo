@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:13:08 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/03/20 10:01:36 markd Exp $
 
-BLAKE2s (draftwatermark.doc.r57099.tar.xz) = 772a3e0fd73bc129115d35940796869a5c58559c61426db220b9c0633b6b57cf
-SHA512 (draftwatermark.doc.r57099.tar.xz) = bf3c28f78f03ebe43c84d722d668c14e0a751fb9e0d53ccb6a81cebf40b78f95b53fc3871ffa4919a94c260de861e93048b3adb590dee2bb8b600be1bbeaef3e
-Size (draftwatermark.doc.r57099.tar.xz) = 298848 bytes
+BLAKE2s (draftwatermark.doc.r70393.tar.xz) = 47373d4ac6c0670f2d1cc27a18d527d51dc7a2ea95ea0395a0f6c59a5c7f305d
+SHA512 (draftwatermark.doc.r70393.tar.xz) = 61dcb253a71bb10206120be8ee5d4309b651438a2c78748e19faabbe8bf59a95118107da36e197928cce632673af1c3332bb5e1e77d40d63a6dd34f3d7054366
+Size (draftwatermark.doc.r70393.tar.xz) = 153040 bytes
