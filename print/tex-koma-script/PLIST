@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/09/06 20:52:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/03/20 10:17:01 markd Exp $
 share/texmf-dist/doc/latex/koma-script/MANIFEST.md
 share/texmf-dist/doc/latex/koma-script/README.md
 share/texmf-dist/doc/latex/koma-script/examples/ich.lco
@@ -135,7 +135,6 @@ share/texmf-dist/doc/latex/koma-script/scrlttr2.html
 share/texmf-dist/doc/latex/koma-script/scrreport.html
 share/texmf-dist/doc/latex/koma-script/scrreprt.html
 share/texmf-dist/doc/latex/koma-script/scrtime.html
-share/texmf-dist/doc/latex/koma-script/scrwfile.html
 share/texmf-dist/doc/latex/koma-script/tocbasic.html
 share/texmf-dist/doc/latex/koma-script/typearea.html
 share/texmf-dist/source/latex/koma-script/doc/authorpart-de.tex
@@ -281,7 +280,6 @@ share/texmf-dist/source/latex/koma-script/scrmain.ins
 share/texmf-dist/source/latex/koma-script/scrstrip.inc
 share/texmf-dist/source/latex/koma-script/scrstrop.inc
 share/texmf-dist/source/latex/koma-script/scrtime.dtx
-share/texmf-dist/source/latex/koma-script/scrwfile.dtx
 share/texmf-dist/source/latex/koma-script/tocbasic.dtx
 share/texmf-dist/tex/latex/koma-script/DIN.lco
 share/texmf-dist/tex/latex/koma-script/DIN5008A.lco
@@ -335,7 +333,6 @@ share/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
 share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
 share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
 share/texmf-dist/tex/latex/koma-script/scrtime.sty
-share/texmf-dist/tex/latex/koma-script/scrwfile.sty
 share/texmf-dist/tex/latex/koma-script/setspace.hak
 share/texmf-dist/tex/latex/koma-script/standardsections.hak
 share/texmf-dist/tex/latex/koma-script/tocbasic.sty
