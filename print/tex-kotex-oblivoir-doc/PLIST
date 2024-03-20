@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/14 01:58:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/20 10:19:19 markd Exp $
 share/texmf-dist/doc/latex/kotex-oblivoir/ChangeLog
 share/texmf-dist/doc/latex/kotex-oblivoir/README
 share/texmf-dist/doc/latex/kotex-oblivoir/chapstyfig.pdf
 share/texmf-dist/doc/latex/kotex-oblivoir/ob-mathleading-doc.pdf
 share/texmf-dist/doc/latex/kotex-oblivoir/ob-mathleading-doc.tex
+share/texmf-dist/doc/latex/kotex-oblivoir/obchapterstyles-doc.pdf
+share/texmf-dist/doc/latex/kotex-oblivoir/obchapterstyles-doc.tex
 share/texmf-dist/doc/latex/kotex-oblivoir/obchaptertoc-doc.pdf
 share/texmf-dist/doc/latex/kotex-oblivoir/obchaptertoc-doc.tex
 share/texmf-dist/doc/latex/kotex-oblivoir/oblivoir-simpledoc.pdf
 share/texmf-dist/doc/latex/kotex-oblivoir/oblivoir-simpledoc.tex
 share/texmf-dist/doc/latex/kotex-oblivoir/oblivoir-test.tex
+share/texmf-dist/doc/latex/kotex-oblivoir/obsideparas.pdf
+share/texmf-dist/doc/latex/kotex-oblivoir/obsideparas.tex
