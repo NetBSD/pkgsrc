@@ -1,6 +1,12 @@
-The "draftwatermark" package provides a means to add a textual,
-light grey watermark on every page or on the first page of a document.
-Typical usage may consist in writing words such as DRAFT or
-CONFIDENTIAL across document pages. The package performs a similar
-function to that of draftcopy, but its implementation is output
-device independent, and very made simple by relying on everpage.
+The package provides a means to add a watermark (typically a
+light gray piece of text) on every page or on the first page of
+a document. Typical usage may consist in writing words such as
+DRAFT or CONFIDENTIAL across document pages. The package
+performs a similar function to that of draftcopy, but its
+implementation is output device independent. As of December
+2020, the package relies on the new shipout hooks directly
+provided by LaTeX. For users of older versions of LaTeX, the
+package also provides a legacy version of itself (that is
+automatically loaded, currently being at release 2.3) which
+relies on the everypage package. Note that this legacy version
+will progressively lag behind in terms of features.

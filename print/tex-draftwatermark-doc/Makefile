@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/02/20 10:08:29 markd Exp $
+# $NetBSD: Makefile,v 1.8 2024/03/20 10:01:36 markd Exp $
 
 DISTNAME=	draftwatermark.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.0
-TEXLIVE_REV=	57099
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.3
+TEXLIVE_REV=	70393
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://ctan.org/pkg/draftwatermark
