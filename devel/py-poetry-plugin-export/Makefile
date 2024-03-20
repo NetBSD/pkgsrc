@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/07 09:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/20 11:40:05 wiz Exp $
 
-DISTNAME=	poetry_plugin_export-1.6.0
+DISTNAME=	poetry_plugin_export-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry-plugin-export/}
