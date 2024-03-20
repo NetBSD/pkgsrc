@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/02/18 10:51:56 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/20 11:12:48 markd Exp $
 
 DISTNAME=	tagpdf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.98v
-TEXLIVE_REV=	69703
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.98x
+TEXLIVE_REV=	70256
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tagpdf
