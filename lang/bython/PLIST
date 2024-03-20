@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/20 04:05:47 mef Exp $
+bin/by2py
+bin/bython
+bin/py2by
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/bython/__init__.py
+${PYSITELIB}/bython/__init__.pyc
+${PYSITELIB}/bython/__init__.pyo
+${PYSITELIB}/bython/importing.py
+${PYSITELIB}/bython/importing.pyc
+${PYSITELIB}/bython/importing.pyo
+${PYSITELIB}/bython/logger.py
+${PYSITELIB}/bython/logger.pyc
+${PYSITELIB}/bython/logger.pyo
+${PYSITELIB}/bython/parser.py
+${PYSITELIB}/bython/parser.pyc
+${PYSITELIB}/bython/parser.pyo
+man/man1/by2py.1
+man/man1/bython.1
+man/man1/py2by.1
