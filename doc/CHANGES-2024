@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1972 2024/03/20 11:30:36 markd Exp $
+$NetBSD: CHANGES-2024,v 1.1973 2024/03/20 11:33:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3258,6 +3258,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libgphoto2 to 2.5.27nb6 [wiz 2024-03-19]
 	Updated www/p5-HTTP-Message to 6.45nb1 [wiz 2024-03-19]
 	Updated shells/oh-my-posh to 19.18.1 [pin 2024-03-19]
+	Updated devel/extra-cmake-modules to 6.0.0 [markd 2024-03-19]
 	Updated www/p5-HTML-Parser to 3.82 [wiz 2024-03-19]
 	Updated www/p5-HTML-Tagset to 3.24 [wiz 2024-03-19]
 	Updated textproc/go-md2man to 2.0.4 [pin 2024-03-19]
