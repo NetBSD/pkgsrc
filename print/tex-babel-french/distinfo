@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/03 01:41:43 markd Exp $
+$NetBSD: distinfo,v 1.20 2024/03/20 09:50:17 markd Exp $
 
-BLAKE2s (babel-french.r69205.tar.xz) = 1d1dab944286d2caa8632a401742481b6a5e8d5f3838e577a0bf5ce938cc0524
-SHA512 (babel-french.r69205.tar.xz) = ed7e71eb62c61cdc41c23a0e351d7f34b3b90fc245fd56129325774d64755e1bf42e755a295eb99ff39ad300945c3b32c514eab53a338195854fd9eef2c2c347
-Size (babel-french.r69205.tar.xz) = 15712 bytes
+BLAKE2s (babel-french.r70254.tar.xz) = 1dcbf217cd587bc1e359438e291623969121b9201cf4ed5396f92e9a6cf345e7
+SHA512 (babel-french.r70254.tar.xz) = 31cbe61104877dd2c0bd47e06f96462174534714490285faa981ac2181a8377331a333e14a8d7de86d0aa722615090d2694442c64dfe42feb448606c683812a2
+Size (babel-french.r70254.tar.xz) = 15768 bytes
