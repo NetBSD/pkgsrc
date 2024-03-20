@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.43 2024/03/19 21:12:47 schmonz Exp $
+# $NetBSD: clang.mk,v 1.44 2024/03/20 10:47:22 schmonz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -80,6 +80,7 @@ CWRAPPERS_PREPEND.cc+=	-Qunused-arguments
 _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
+.if defined(_PKGSRC_BARRIER)
 # Xcode 12 and upstream Clang 16 have a zealous new default that the
 # wide world of random third-party software isn't ready for. Turn it
 # back off by default.
@@ -118,6 +119,7 @@ _NOERROR_CLANG16_cmd=	for _warn_ in ${_WERROR_CLANG16}; do \
 			|| ${TRUE}; \
 			done
 CWRAPPERS_PREPEND.cc+=	${_NOERROR_CLANG16_cmd:sh}
+.endif
 
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
