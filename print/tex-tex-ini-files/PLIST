@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:17 markd Exp $
-share/texmf-dist/tex/generic/tex-ini-files/dvilualatex.ini
+@comment $NetBSD: PLIST,v 1.2 2024/03/20 11:28:53 markd Exp $
 share/texmf-dist/tex/generic/tex-ini-files/dviluatex.ini
-share/texmf-dist/tex/generic/tex-ini-files/lualatex.ini
 share/texmf-dist/tex/generic/tex-ini-files/luatex.ini
 share/texmf-dist/tex/generic/tex-ini-files/luatexconfig.tex
+share/texmf-dist/tex/generic/tex-ini-files/luatexiniconfig.tex
 share/texmf-dist/tex/generic/tex-ini-files/pdftexconfig.tex
-share/texmf-dist/tex/generic/tex-ini-files/xelatex.ini
+share/texmf-dist/tex/generic/tex-ini-files/pdfxmltex.ini
 share/texmf-dist/tex/generic/tex-ini-files/xetex.ini
+share/texmf-dist/tex/generic/tex-ini-files/xmltex.ini
+share/texmf-dist/tex/latex/tex-ini-files/dvilualatex.ini
+share/texmf-dist/tex/latex/tex-ini-files/latex.ini
+share/texmf-dist/tex/latex/tex-ini-files/lualatex.ini
+share/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
+share/texmf-dist/tex/latex/tex-ini-files/mllatex.ini
+share/texmf-dist/tex/latex/tex-ini-files/pdflatex.ini
+share/texmf-dist/tex/latex/tex-ini-files/xelatex.ini
