@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:13:53 nia Exp $
+$NetBSD: distinfo,v 1.17 2024/03/20 11:23:56 markd Exp $
 
-BLAKE2s (latexconfig.r53525.tar.xz) = bb039c677b3183ecf1013a9b1aaf767f9f0444b2823a9caef5421817346e056e
-SHA512 (latexconfig.r53525.tar.xz) = 2d98dafa5c2b90321ca8600171ba22cc7eff73a23d6d88073c477bcb84de37369ddf682163b7a9dc26ce77fb2b1c174a4f810b66a34b29646ad988a9965d9bb6
-Size (latexconfig.r53525.tar.xz) = 3996 bytes
+BLAKE2s (latexconfig.r68923.tar.xz) = 2e873ae80bd9781b3dee7b3071bc29ebd5354d229e8ec171cc41676074675427
+SHA512 (latexconfig.r68923.tar.xz) = 22e233cad5742691da573249b3f9cd4ea0c6ccf4e31a757837d710ca863e0cccd089106e523e40fb541255f3795d963273ccdf70211f19ff3caecb30d7fefcbe
+Size (latexconfig.r68923.tar.xz) = 2240 bytes
