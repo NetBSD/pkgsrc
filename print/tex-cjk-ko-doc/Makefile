@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/06/11 05:37:27 markd Exp $
+# $NetBSD: Makefile,v 1.11 2024/03/20 09:54:31 markd Exp $
 
 DISTNAME=	cjk-ko.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
-TEXLIVE_REV=	67252
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.5
+TEXLIVE_REV=	70300
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cjk-ko
