@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/18 10:33:54 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/03/20 10:58:43 markd Exp $
 
-BLAKE2s (newtx.r69756.tar.xz) = d66bbfb8ffed46e2d6db9b44d1dfce243e61afd9c391ceedc12883615361b310
-SHA512 (newtx.r69756.tar.xz) = f9dc7850bdac974ce905beaf163f19b433e692da4b9372b20d703715bcbe762761dfa5e07de60895101cf69841e5f25b7f0a3c790ffbd7e988f9252919dae2ec
-Size (newtx.r69756.tar.xz) = 6054376 bytes
+BLAKE2s (newtx.r70491.tar.xz) = 0fd02f5cc0289428cdb09a7afc54466e6b0b1fada2c766005ffcba8625da9487
+SHA512 (newtx.r70491.tar.xz) = 627805f1f2492bf50a5be469456f1c5c4e1fed267028c2e1a6a35a3c4582f4243f8aeb553a38c04efe220884921e780b431986d93dc4f82b9aa79db0a120bf85
+Size (newtx.r70491.tar.xz) = 6063496 bytes
