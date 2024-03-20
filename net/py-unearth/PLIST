@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/20 08:57:48 adam Exp $
 bin/unearth-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -23,6 +23,15 @@ ${PYSITELIB}/unearth/errors.pyo
 ${PYSITELIB}/unearth/evaluator.py
 ${PYSITELIB}/unearth/evaluator.pyc
 ${PYSITELIB}/unearth/evaluator.pyo
+${PYSITELIB}/unearth/fetchers/__init__.py
+${PYSITELIB}/unearth/fetchers/__init__.pyc
+${PYSITELIB}/unearth/fetchers/__init__.pyo
+${PYSITELIB}/unearth/fetchers/legacy.py
+${PYSITELIB}/unearth/fetchers/legacy.pyc
+${PYSITELIB}/unearth/fetchers/legacy.pyo
+${PYSITELIB}/unearth/fetchers/sync.py
+${PYSITELIB}/unearth/fetchers/sync.pyc
+${PYSITELIB}/unearth/fetchers/sync.pyo
 ${PYSITELIB}/unearth/finder.py
 ${PYSITELIB}/unearth/finder.pyc
 ${PYSITELIB}/unearth/finder.pyo
