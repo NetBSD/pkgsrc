@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:55:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/20 11:01:34 markd Exp $
+share/texmf-dist/fonts/enc/dvips/newtxtt/tcxAec.enc
+share/texmf-dist/fonts/enc/dvips/newtxtt/tcxBec.enc
+share/texmf-dist/fonts/enc/dvips/newtxtt/tcxCec.enc
+share/texmf-dist/fonts/enc/dvips/newtxtt/tcxDec.enc
+share/texmf-dist/fonts/enc/dvips/newtxtt/tcxEec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttAec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttAqec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttBec.enc
@@ -10,6 +15,26 @@ share/texmf-dist/fonts/enc/dvips/newtxtt/txttDqec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttEec.enc
 share/texmf-dist/fonts/enc/dvips/newtxtt/txttEqec.enc
 share/texmf-dist/fonts/map/dvips/newtxtt/newtxtt.map
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbsla.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbslb.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbslc.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbsld.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbsle.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbtta.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbttb.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbttc.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbttd.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxbtte.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxsla.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxslb.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxslc.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxsld.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxsle.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxtta.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxttb.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxttc.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxttd.tfm
+share/texmf-dist/fonts/tfm/public/newtxtt/newtcxtte.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/newtxbtta.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/newtxbttaq.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/newtxbttb.tfm
@@ -135,6 +160,8 @@ share/texmf-dist/fonts/tfm/public/newtxtt/tcxbttzsl.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/tcxttz.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/tcxttzsl.tfm
 share/texmf-dist/fonts/tfm/public/newtxtt/txttz.tfm
+share/texmf-dist/fonts/type1/public/newtxtt/newtcxbtt.pfb
+share/texmf-dist/fonts/type1/public/newtxtt/newtcxtt.pfb
 share/texmf-dist/fonts/type1/public/newtxtt/newtxbtt.pfb
 share/texmf-dist/fonts/type1/public/newtxtt/newtxbttsc.pfb
 share/texmf-dist/fonts/type1/public/newtxtt/newtxtt.pfb
