@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.53 2024/02/13 15:25:33 taca Exp $
+$NetBSD: distinfo,v 1.54 2024/03/20 14:57:54 taca Exp $
 
-BLAKE2s (bind-9.16.48.tar.xz) = e404e10f114fa98f6040137e645e22c49afd6ac259a4dd8e71aa9ae5f19d3105
-SHA512 (bind-9.16.48.tar.xz) = 83829a5045e2a29dd2b491d3ab72b545f5664023fcd4aa205a44dbb7bcc5c737b4466c0d73f124b8d88fd33c56776871a07dde1ba0530d43eec8e7304a08d353
-Size (bind-9.16.48.tar.xz) = 5131176 bytes
+BLAKE2s (bind-9.16.49.tar.xz) = bc14d82b01f0aeb0deb64a7db3e9bf75a53b0837f4154e98427b7568c2594f9c
+SHA512 (bind-9.16.49.tar.xz) = e57d57d0a7674ab04440399c0e187b693bf3abe5bd6f80b0f8094b4320793d3ffda3443dd5d247bfd21ad020f602fb83f85d6a68c873c9a3b10c940aecf94090
+Size (bind-9.16.49.tar.xz) = 5133308 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb
@@ -27,7 +27,7 @@ SHA1 (patch-lib_dns_lookup.c) = 6c7463aca16abf6bd578aba1733a3217608a39d3
 SHA1 (patch-lib_dns_pkcs11ecdsa__link.c) = 99f386b056c5a6471f69841c41a2698d36b6b275
 SHA1 (patch-lib_dns_pkcs11eddsa__link.c) = bd887a6c8960da3a8663cdf5e955e045f16dee3f
 SHA1 (patch-lib_dns_rbt.c) = c14eff9a609e4b49aa9db18f395461cd7c8944be
-SHA1 (patch-lib_dns_rbtdb.c) = 561646a8e47df765a24b40a0ac9f3e5fc4267621
+SHA1 (patch-lib_dns_rbtdb.c) = 3b889d3dd1ad6e56a69857b799b33093233b5cbe
 SHA1 (patch-lib_dns_request.c) = 82560e819cba0259883da8d47618ffabead22c55
 SHA1 (patch-lib_dns_sdb.c) = ed447ec7a134e620765b25ee36124a19dfd9fab0
 SHA1 (patch-lib_dns_sdlz.c) = 4fc15a577c64501c10c144eab147e54686e80309
