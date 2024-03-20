@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/25 19:40:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/20 10:37:55 markd Exp $
 share/texmf-dist/tex/latex/listings/listings-acm.prf
 share/texmf-dist/tex/latex/listings/listings-bash.prf
 share/texmf-dist/tex/latex/listings/listings-fortran.prf
 share/texmf-dist/tex/latex/listings/listings-hansl.prf
 share/texmf-dist/tex/latex/listings/listings-lua.prf
 share/texmf-dist/tex/latex/listings/listings-python.prf
+share/texmf-dist/tex/latex/listings/listings-rexx.prf
 share/texmf-dist/tex/latex/listings/listings.cfg
 share/texmf-dist/tex/latex/listings/listings.sty
 share/texmf-dist/tex/latex/listings/lstdoc.sty
