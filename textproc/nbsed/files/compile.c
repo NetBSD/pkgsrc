@@ -1,4 +1,4 @@
-/*	$NetBSD: compile.c,v 1.8 2024/03/12 16:45:07 christos Exp $	*/
+/*	$NetBSD: compile.c,v 1.9 2024/03/20 20:37:27 gutteridge Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -44,7 +44,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: compile.c,v 1.8 2024/03/12 16:45:07 christos Exp $");
+__RCSID("$NetBSD: compile.c,v 1.9 2024/03/20 20:37:27 gutteridge Exp $");
 #ifdef __FBSDID
 __FBSDID("$FreeBSD: head/usr.bin/sed/compile.c 259132 2013-12-09 18:57:20Z eadler $");
 #endif
@@ -880,10 +880,10 @@ compile_tr(char *p, struct s_tr **py)
 		while (*op != '\0') {
 			oclen = mbrlen(op, MB_LEN_MAX, &mbs1);
 			if (oclen == (size_t)-1 || oclen == (size_t)-2)
-				errc(1, EILSEQ, NULL);
+				errx(1, "Illegal byte sequence");
 			nclen = mbrlen(np, MB_LEN_MAX, &mbs2);
 			if (nclen == (size_t)-1 || nclen == (size_t)-2)
-				errc(1, EILSEQ, NULL);
+				errx(1, "Illegal byte sequence");
 			if (oclen == 1 && nclen == 1)
 				y->bytetab[(u_char)*op] = (u_char)*np;
 			else {
