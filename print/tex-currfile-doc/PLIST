@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/03 11:37:17 markd Exp $
-share/texmf-dist/doc/latex/currfile/README
+@comment $NetBSD: PLIST,v 1.2 2024/03/20 09:56:41 markd Exp $
+share/texmf-dist/doc/latex/currfile/README.txt
 share/texmf-dist/doc/latex/currfile/currfile.pdf

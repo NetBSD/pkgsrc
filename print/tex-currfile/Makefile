@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/04/03 11:37:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/20 09:56:41 markd Exp $
 
 DISTNAME=	currfile
-PKGNAME=	tex-${DISTNAME}-0.8
-TEXLIVE_REV=	64673
+PKGNAME=	tex-${DISTNAME}-1.0
+TEXLIVE_REV=	70650
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/currfile
