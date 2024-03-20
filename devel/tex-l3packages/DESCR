@@ -1,14 +1,7 @@
-This collection contains implementations for aspects of the
-LaTeX3 kernel, dealing with higher-level ideas such as the
-Designer Interface. The packages here are considered broadly
-stable (The LaTeX3 Project does not expect the interfaces to
-alter radically). These packages are built on LaTeX2e
-conventions at the interface level, and so may not migrate in
-the current form to a stand-alone LaTeX3 format. Packages
-provided: xparse, which provides a high-level interface for
-declaring document commands xfp, an expandable IEEE 754 FPU for
-LaTeX l3keys2e, which makes the facilities of the kernel module
-l3keys available for use by LaTeX 2e packages xtemplate, which
-provides a means of defining generic functions using a
-key-value syntax xfrac, which provides flexible split-level
-fractions
+This collection deals with higher-level ideas such as the
+Designer Interface, as part of LaTeX3 developments. The
+packages here have over time migrated into the LaTeX kernel:
+the material here is retained to support older files. The
+appropriate LaTeX kernel releases incorporating the ideas from
+the packages here are l3keys2e 2022-06-01 xfp 2022-06-01 xparse
+2020-10-01 xtemplate 2024-06-01
