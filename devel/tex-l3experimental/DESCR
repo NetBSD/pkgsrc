@@ -8,8 +8,7 @@ the time taken by TeX to run certain code; l3draw, a code-level
 interface for constructing drawings; l3graphics, an interfaces
 for the inclusion of graphics files; l3opacity, support for
 opacity in PDF output; l3str, support for string manipulation;
-l3sys-shell, which provides abstractions for common shell
-functions like file deletion and copying; xcoffins, which
-allows the alignment of boxes using a series of 'handle'
-positions, supplementing the simple TeX reference point;
-xgalley, which controls boxes receiving text for typesetting.
+xcoffins, which allows the alignment of boxes using a series of
+'handle' positions, supplementing the simple TeX reference
+point; xgalley, which controls boxes receiving text for
+typesetting.
