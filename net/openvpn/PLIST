@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/03/14 06:31:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/03/20 19:24:02 adam Exp $
 include/openvpn-msg.h
 include/openvpn-plugin.h
 ${PLIST.pam}lib/openvpn/plugins/openvpn-plugin-auth-pam.la
@@ -18,15 +18,11 @@ share/doc/openvpn/management-notes.txt
 share/examples/openvpn/config/README
 share/examples/openvpn/config/client.conf
 share/examples/openvpn/config/firewall.sh
-share/examples/openvpn/config/home.up
 share/examples/openvpn/config/loopback-client
 share/examples/openvpn/config/loopback-server
-share/examples/openvpn/config/office.up
 share/examples/openvpn/config/openvpn-shutdown.sh
 share/examples/openvpn/config/openvpn-startup.sh
 share/examples/openvpn/config/server.conf
-share/examples/openvpn/config/tls-home.conf
-share/examples/openvpn/config/tls-office.conf
 share/examples/openvpn/keys/README
 share/examples/openvpn/keys/ca.crt
 share/examples/openvpn/keys/ca.key
