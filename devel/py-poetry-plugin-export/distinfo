@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/07 09:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/03/20 11:40:05 wiz Exp $
 
-BLAKE2s (poetry_plugin_export-1.6.0.tar.gz) = 160b3cbc1306ffd271229e7f5725b5b70d304f6f52b9326ef07851094c2006d3
-SHA512 (poetry_plugin_export-1.6.0.tar.gz) = d071f69ace98dbc23a3b129ba7fb30c4e6eac07138f4ee5156c266150f8f025f8b69c61dfadd90d29e1895c70d448fc44a9b5cc502024f00e1657247ed3310bd
-Size (poetry_plugin_export-1.6.0.tar.gz) = 29265 bytes
+BLAKE2s (poetry_plugin_export-1.7.1.tar.gz) = 805b2f8c5e3353e0933679c14ab900bba023f76f0b0c77fcea6251941ac73206
+SHA512 (poetry_plugin_export-1.7.1.tar.gz) = d472d8e4d6eb803587722854be912009a9bc0a8f86ee0e3ef0046f385ed59236af229109dae85198e3a205702cff86780576939e518fa797f3e5093537a0d2f1
+Size (poetry_plugin_export-1.7.1.tar.gz) = 29656 bytes
