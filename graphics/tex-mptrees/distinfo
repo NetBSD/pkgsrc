@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/11 07:23:50 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/03/20 10:56:30 markd Exp $
 
-BLAKE2s (mptrees.r66952.tar.xz) = 43443bc97e29603011cb18cab289e3edf65362666a705a71adb9297466fe0208
-SHA512 (mptrees.r66952.tar.xz) = a3579aac7bff11c77416bf19447a429a3f56695bfc105f1218ae8f7d531adf0333ed73ff1fe93bab8af2ef590d6157ffa3c363bc306d3e81eb0d78766aa7871a
-Size (mptrees.r66952.tar.xz) = 7328 bytes
+BLAKE2s (mptrees.r70112.tar.xz) = d27b263e18468d340ba53b486438f32b29322eb4e8695dbe63670444ef301b26
+SHA512 (mptrees.r70112.tar.xz) = 86b68e221c12ef06dc44ccfa628f244b41a7be262d9d1ea21c22829e0d1dce14e53625a069e1525a86f394e2318e4fb436b68bd1fcdd6b0a2f6dadd14b6faf04
+Size (mptrees.r70112.tar.xz) = 11460 bytes
