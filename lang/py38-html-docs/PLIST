@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/06/07 13:25:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/03/20 15:39:02 adam Exp $
 share/doc/python3.8/.buildinfo
 share/doc/python3.8/_downloads/6b45dc135219d1404be49d606589a11d/tzinfo_examples.py
 share/doc/python3.8/_images/hashlib-blake2-tree.png
@@ -487,6 +487,7 @@ share/doc/python3.8/_sources/whatsnew/3.8.rst.txt
 share/doc/python3.8/_sources/whatsnew/changelog.rst.txt
 share/doc/python3.8/_sources/whatsnew/index.rst.txt
 share/doc/python3.8/_static/basic.css
+share/doc/python3.8/_static/caret-down.svg
 share/doc/python3.8/_static/changelog_search.js
 share/doc/python3.8/_static/classic.css
 share/doc/python3.8/_static/copybutton.js
@@ -504,11 +505,9 @@ share/doc/python3.8/_static/plus.png
 share/doc/python3.8/_static/py.png
 share/doc/python3.8/_static/py.svg
 share/doc/python3.8/_static/pydoctheme.css
-share/doc/python3.8/_static/pydoctheme_dark.css
 share/doc/python3.8/_static/pygments.css
 share/doc/python3.8/_static/searchtools.js
 share/doc/python3.8/_static/sidebar.js
-share/doc/python3.8/_static/themetoggle.js
 share/doc/python3.8/_static/underscore-1.3.1.js
 share/doc/python3.8/_static/underscore.js
 share/doc/python3.8/about.html
