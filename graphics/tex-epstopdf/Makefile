@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/04/09 05:25:13 markd Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/20 10:06:15 markd Exp $
 
 DISTNAME=	epstopdf
-PKGNAME=	tex-${DISTNAME}-2.31
-TEXLIVE_REV=	66695
+PKGNAME=	tex-${DISTNAME}-2.33
+TEXLIVE_REV=	68301
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/epstopdf
