@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2023/11/08 13:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2024/03/20 01:45:52 nia Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -39,6 +39,13 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .else
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101300
+# Apparently Xcode 8 and later add support for thread_local.
+CPPFLAGS+=	-DAP_NO_THREAD_LOCAL=1
 .endif
 
 BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
