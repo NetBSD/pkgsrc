@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/18 10:33:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/03/20 10:58:43 markd Exp $
 share/texmf-dist/fonts/afm/public/newtx/LibertineI-5nu.afm
 share/texmf-dist/fonts/afm/public/newtx/LibertineMathBMI.afm
 share/texmf-dist/fonts/afm/public/newtx/LibertineMathBMI5.afm
@@ -17,6 +17,8 @@ share/texmf-dist/fonts/afm/public/newtx/NewTXMI5.afm
 share/texmf-dist/fonts/afm/public/newtx/NewTXMI7.afm
 share/texmf-dist/fonts/afm/public/newtx/TeXGyreTermesX-Regular.afm
 share/texmf-dist/fonts/afm/public/newtx/TeXGyreTermesX-Slanted.afm
+share/texmf-dist/fonts/afm/public/newtx/ebgBMI.afm
+share/texmf-dist/fonts/afm/public/newtx/ebgMI.afm
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-Bold.afm
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/newtx/ntxsups-Italic.afm
@@ -505,8 +507,10 @@ share/texmf-dist/fonts/tfm/public/newtx/ntxdnom-Regular-t1.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxdnom-Slanted-ly1.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxdnom-Slanted-ot1.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxdnom-Slanted-t1.tfm
+share/texmf-dist/fonts/tfm/public/newtx/ntxebgbmi-alth.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxebgbmi.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxebgbmia.tfm
+share/texmf-dist/fonts/tfm/public/newtx/ntxebgmi-alth.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxebgmi.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxebgmia.tfm
 share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
@@ -893,8 +897,10 @@ share/texmf-dist/fonts/vf/public/newtx/ntxbsy.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxbsy5.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxbsy7.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxbsyc.vf
+share/texmf-dist/fonts/vf/public/newtx/ntxebgbmi-alth.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxebgbmi.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxebgbmia.vf
+share/texmf-dist/fonts/vf/public/newtx/ntxebgmi-alth.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxebgmi.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxebgmia.vf
 share/texmf-dist/fonts/vf/public/newtx/ntxexa.vf
