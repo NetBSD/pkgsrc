@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/20 04:05:47 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/20 06:40:07 wiz Exp $
 
 VERSION=	0.8
 DISTNAME=	bython-${VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mathialo/}
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/mathialo/bython/releases/tag/ # TODO: check
+HOMEPAGE=	https://github.com/mathialo/bython/
 COMMENT=	Python with braces. Because Python is awesome, but whitespace is awful
 LICENSE=	mit
 
