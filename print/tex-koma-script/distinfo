@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2023/04/01 11:34:14 markd Exp $
+$NetBSD: distinfo,v 1.28 2024/03/20 10:17:01 markd Exp $
 
-BLAKE2s (koma-script.r64685.tar.xz) = d7722589d4f3773f7d0fc0b57a93e8b1e30173aaa8cfd6e40998fcd785331685
-SHA512 (koma-script.r64685.tar.xz) = 2fe2a07d56107390a191c016c29f7bf77700647b7996957a3802aa89b9b7eacc4cefe1c444b6faa688a147a8b0d9c5d80fca511dc2454a15ada6ddaf6aa3ccb2
-Size (koma-script.r64685.tar.xz) = 7399992 bytes
+BLAKE2s (koma-script.r69755.tar.xz) = ff8d51a743c514c194011ee97629a93cd2545698a3d226eec37c73855e3d6dc5
+SHA512 (koma-script.r69755.tar.xz) = 610827993fa3d94f1b914ee24be0c0a2ec1062c1d1863dac8687e6ccf9c7866b7ea56fb45363587138d7d7842ff58cf1aa4e1c7970f48ca8f7a783e0fafea1a6
+Size (koma-script.r69755.tar.xz) = 7348176 bytes
