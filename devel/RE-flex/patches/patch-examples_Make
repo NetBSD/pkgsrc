@@ -1,0 +1,132 @@
+$NetBSD: patch-examples_Make,v 1.1 2024/03/21 20:44:40 wiz Exp $
+
+build examples out of tree and assume pkgsrc for dependencies
+
+--- examples/Make.orig	2024-03-05 18:02:16.000000000 +0000
++++ examples/Make
+@@ -1,50 +1,32 @@
+-# Some of these examples require Bison
++# To build the examples:
++# > make
+ #
+-# Change INCBOOST and LIBBOOST below to point to your Boost install paths
++# url_boost and wc_boost require devel/boost-{headers,libs}
++# > make boostexamples
+ #
+-# To quickly build the examples:
+-# > make -f Make
+-#
+-# Or use configure and make to build:
+-# > ./configure --enable-examples && make
+-#
+-# Bison C++ examples are built with:
+-# > make -f Make examplesxx
+-#
+-# flexexample9xx, reflexexample9xx, flexexample11xx, reflexexample11xx require Bison 3.0 or greater:
+-# > make -f Make examples3.2
+-#
+-# url_boost and wc_boost requires Boost.Regex installed:
+-# > make -f Make boostexamples
+-# Boost.regex normally includes libboost_regex-mt, if not change LIBBOOST below
+-#
+-# url_pcre2 and wc_pcre2 requires PCRE2 installed:
+-# > make -f Make pcre2examples
++# url_pcre2 and wc_pcre2 require devel/pcre2
++# > make pcre2examples
++
++CC        = @CC@
++CXX       = @CXX@
++
++CFLAGS    = -O2 -I. -I@PREFIX@/include -Wall -Wunused -Wextra #-DDEBUG
++CXXFLAGS  = $(CFLAGS) -fpermissive
+ 
+-CXX       = c++
+-REFLEX    = ../bin/reflex
++REFLEX    = @PREFIX@/bin/reflex
+ REFLAGS   =
+-LIBREFLEX = ../lib/libreflex.a
++LIBREFLEX = @PREFIX@/lib/libreflex.a
+ 
+-YACC      = bison -y
+-BISON     = bison
++YACC      = @PREFIX@/bin/bison -y
++BISON     = @PREFIX@/bin/bison
+ 
+-INCPCRE2  = /opt/local/include
+-LIBPCRE2  = -L/opt/local/lib -lpcre2-8
++INCPCRE2  = @PREFIX@/include
++LIBPCRE2  = -L@PREFIX@/lib -lpcre2-8
+ 
+-INCBOOST  = /opt/local/include
+-# LIBBOOST  = -L/opt/local/lib -lboost_regex
+-# LIBBOOST  = -L/opt/homebrew/lib -lboost_regex-mt
+-LIBBOOST  = -L/opt/local/lib -lboost_regex-mt
+-
+-CXXOFLAGS = -O2
+-CXXWFLAGS = -Wall -Wunused -Wextra
+-CXXIFLAGS = -I. -I../include -I $(INCBOOST)
+-CXXMFLAGS =
+-# CXXMFLAGS =-DDEBUG
+-CXXFLAGS  = $(CXXWFLAGS) $(CXXOFLAGS) $(CXXIFLAGS) $(CXXMFLAGS)
++INCBOOST  = @PREFIX@/include
++LIBBOOST  = -L@PREFIX@/lib -lboost_regex
+ 
+-all:		examples examplesxx
++all:		examples examplesxx examples3.2
+ 
+ .PHONY:		examples examplesxx examples3.2 boostexamples pcre2examples
+ 
+@@ -135,7 +117,7 @@ flexexample2:		flexexample2.l
+ flexexample3:		flexexample3.l flexexample3.y
+ 			$(YACC) -d flexexample3.y
+ 			$(REFLEX) $(REFLAGS) --flex --bison --header-file flexexample3.l
+-			$(CC) $(CXXFLAGS) -c y.tab.c
++			$(CC) $(CFLAGS) -c y.tab.c
+ 			$(CXX) $(CXXFLAGS) -o $@ y.tab.o lex.yy.cpp $(LIBREFLEX)
+ 			./flexexample3 < flexexample3.test
+ 
+@@ -148,7 +130,7 @@ flexexample3xx:		flexexample3.lxx flexex
+ flexexample4:		flexexample4.l flexexample4.y
+ 			$(YACC) -d flexexample4.y
+ 			$(REFLEX) $(REFLAGS) --flex --bison-bridge --header-file flexexample4.l
+-			$(CC) $(CXXFLAGS) -c y.tab.c
++			$(CC) $(CFLAGS) -c y.tab.c
+ 			$(CXX) $(CXXFLAGS) -o $@ y.tab.o lex.yy.cpp $(LIBREFLEX)
+ 			./flexexample4 < flexexample4.test
+ 
+@@ -161,7 +143,7 @@ flexexample4xx:		flexexample4.lxx flexex
+ flexexample5:		flexexample5.l flexexample5.y
+ 			$(YACC) -d flexexample5.y
+ 			$(REFLEX) $(REFLAGS) --flex --bison-bridge --header-file flexexample5.l
+-			$(CC) $(CXXFLAGS) -c y.tab.c
++			$(CC) $(CFLAGS) -c y.tab.c
+ 			$(CXX) $(CXXFLAGS) -o $@ y.tab.o lex.yy.cpp $(LIBREFLEX)
+ 			./flexexample5 < flexexample5.test
+ 
+@@ -179,7 +161,7 @@ flexexample6:		flexexample6.l
+ flexexample7:		flexexample7.l flexexample7.y
+ 			$(YACC) -d flexexample7.y
+ 			$(REFLEX) $(REFLAGS) --flex --bison-locations --header-file flexexample7.l
+-			$(CC) $(CXXFLAGS) -c y.tab.c
++			$(CC) $(CFLAGS) -c y.tab.c
+ 			$(CXX) $(CXXFLAGS) -o $@ y.tab.o lex.yy.cpp $(LIBREFLEX)
+ 			./flexexample7 < flexexample7.test
+ 
+@@ -192,7 +174,7 @@ flexexample7xx:		flexexample7.lxx flexex
+ flexexample8:		flexexample8.l flexexample8.y
+ 			$(YACC) -d flexexample8.y
+ 			$(REFLEX) $(REFLAGS) --flex --bison-locations --bison-bridge --header-file flexexample8.l
+-			$(CC) $(CXXFLAGS) -c y.tab.c
++			$(CC) $(CFLAGS) -c y.tab.c
+ 			$(CXX) $(CXXFLAGS) -o $@ y.tab.o lex.yy.cpp $(LIBREFLEX)
+ 			./flexexample8 < flexexample8.test
+ 
+@@ -472,7 +454,7 @@ minic:		minic.l minic.y minic.hpp
+ 		$(CXX) $(CXXFLAGS) -o $@ parser.cpp scanner.cpp $(LIBREFLEX)
+ 		rm -f minicdemo.class
+ 		./minic minicdemo.c
+-		java minicdemo
++		#java minicdemo
+ 
+ lua2lisp:	lua.l lua.y lua.hpp
+ 		$(BISON) -d lua.y
