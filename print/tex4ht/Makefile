@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2023/04/10 23:50:57 markd Exp $
+# $NetBSD: Makefile,v 1.20 2024/03/21 08:30:41 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	tex4ht-20180703
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
