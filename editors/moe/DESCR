@@ -1,0 +1,14 @@
+GNU moe is a console text editor for ISO-8859 and ASCII character encodings.
+It has a modeless, user-friendly interface, online help, multiple windows,
+global search/replace (on all buffers at once), block operations, automatic
+indentation, word wrapping, file name completion, directory browser, duplicate
+removal from prompt histories, delimiter matching, text conversion from/to
+UTF-8, romanization, etc. The file size, line length, number of buffers,
+and undo/redo capability are only limited by the amount of memory available
+and the size of the address space of your machine.
+
+Moe respects your work. By default it won't automatically add, change, or
+remove a single byte in your files. Moe is a WYTIWYG (what you type is what
+you get) editor.
+
+Moe can easily edit thousands of files at the same time.
