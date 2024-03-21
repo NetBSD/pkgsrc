@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1994 2024/03/21 10:34:30 nia Exp $
+$NetBSD: CHANGES-2024,v 1.1995 2024/03/21 11:30:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-license-expression to 30.3.0 [adam 2024-03-21]
 	Updated devel/py-limits to 3.10.1 [adam 2024-03-21]
 	Updated chat/mumble to 1.4.287 [nia 2024-03-21]
+	Updated devel/garden to 1.4.0 [pin 2024-03-21]
