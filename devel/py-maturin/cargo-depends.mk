@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2024/03/05 16:50:11 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2024/03/21 20:00:28 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.7
@@ -40,7 +40,6 @@ CARGO_CRATE_DEPENDS+=	clap-4.4.18
 CARGO_CRATE_DEPENDS+=	clap_builder-4.4.18
 CARGO_CRATE_DEPENDS+=	clap_complete-4.4.9
 CARGO_CRATE_DEPENDS+=	clap_complete_command-0.5.1
-CARGO_CRATE_DEPENDS+=	clap_complete_fig-4.4.2
 CARGO_CRATE_DEPENDS+=	clap_complete_nushell-0.1.11
 CARGO_CRATE_DEPENDS+=	clap_derive-4.4.7
 CARGO_CRATE_DEPENDS+=	clap_lex-0.6.0
@@ -107,7 +106,7 @@ CARGO_CRATE_DEPENDS+=	itoa-1.0.10
 CARGO_CRATE_DEPENDS+=	keyring-2.3.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lddtree-0.3.4
-CARGO_CRATE_DEPENDS+=	libc-0.2.152
+CARGO_CRATE_DEPENDS+=	libc-0.2.153
 CARGO_CRATE_DEPENDS+=	libredox-0.0.1
 CARGO_CRATE_DEPENDS+=	linux-keyutils-0.2.4
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.13
@@ -176,7 +175,7 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.2
 CARGO_CRATE_DEPENDS+=	rfc2047-decoder-0.2.2
 CARGO_CRATE_DEPENDS+=	ring-0.17.7
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
-CARGO_CRATE_DEPENDS+=	rustix-0.38.30
+CARGO_CRATE_DEPENDS+=	rustix-0.38.32
 CARGO_CRATE_DEPENDS+=	rustls-0.22.2
 CARGO_CRATE_DEPENDS+=	rustls-pemfile-2.1.0
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.3.1
