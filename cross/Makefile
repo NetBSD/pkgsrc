@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/09/26 21:20:42 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2024/03/21 07:38:45 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -74,6 +74,8 @@ SUBDIR+=	ppc-morphos-binutils
 SUBDIR+=	ppc-morphos-gcc-10
 SUBDIR+=	ppc-morphos-gcc-11
 SUBDIR+=	ppc-morphos-sdk
+SUBDIR+=	riscv64-none-elf-binutils
+SUBDIR+=	riscv64-none-elf-gcc
 SUBDIR+=	stlink
 SUBDIR+=	uisp
 SUBDIR+=	xtensa-esp32-elf-binutils
