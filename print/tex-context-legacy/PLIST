@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/19 10:31:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/21 11:38:01 markd Exp $
 bin/texexec
 bin/texmfstart
 share/texmf-dist/bibtex/bst/context/mkii/cont-ab.bst
@@ -71,14 +71,6 @@ share/texmf-dist/scripts/context/ruby/textools.rb
 share/texmf-dist/scripts/context/ruby/texutil.rb
 share/texmf-dist/scripts/context/ruby/tmftools.rb
 share/texmf-dist/scripts/context/ruby/xmltools.rb
-share/texmf-dist/scripts/context/stubs/unix/ctxtools
-share/texmf-dist/scripts/context/stubs/unix/pstopdf
-share/texmf-dist/scripts/context/stubs/unix/texexec
-share/texmf-dist/scripts/context/stubs/unix/texmfstart
-share/texmf-dist/scripts/context/stubs/win64/ctxtools.cmd
-share/texmf-dist/scripts/context/stubs/win64/pstopdf.cmd
-share/texmf-dist/scripts/context/stubs/win64/texexec.cmd
-share/texmf-dist/scripts/context/stubs/win64/texmfstart.cmd
 share/texmf-dist/tex/context/base/mkii/anch-bar.mkii
 share/texmf-dist/tex/context/base/mkii/anch-pgr.mkii
 share/texmf-dist/tex/context/base/mkii/anch-pos.mkii
@@ -710,6 +702,10 @@ share/texmf-dist/tex/context/patterns/mkii/lang-hr.hyp
 share/texmf-dist/tex/context/patterns/mkii/lang-hr.pat
 share/texmf-dist/tex/context/patterns/mkii/lang-hu.hyp
 share/texmf-dist/tex/context/patterns/mkii/lang-hu.pat
+share/texmf-dist/tex/context/patterns/mkii/lang-hy.hyp
+share/texmf-dist/tex/context/patterns/mkii/lang-hy.pat
+share/texmf-dist/tex/context/patterns/mkii/lang-id.hyp
+share/texmf-dist/tex/context/patterns/mkii/lang-id.pat
 share/texmf-dist/tex/context/patterns/mkii/lang-is.hyp
 share/texmf-dist/tex/context/patterns/mkii/lang-is.pat
 share/texmf-dist/tex/context/patterns/mkii/lang-it.hyp
