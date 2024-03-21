@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2023/04/11 03:24:28 markd Exp $
+# $NetBSD: Makefile,v 1.22 2024/03/21 20:00:52 markd Exp $
 
 DISTNAME=	collection-langarabic
-PKGNAME=	texlive-${DISTNAME}-2023
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59594
+TEXLIVE_REV=	69111
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,10 +28,14 @@ DEPENDS+=	tex-hvarabic-[0-9]*:../../print/tex-hvarabic
 DEPENDS+=	tex-hyphen-arabic-[0-9]*:../../print/tex-hyphen-arabic
 DEPENDS+=	tex-hyphen-farsi-[0-9]*:../../print/tex-hyphen-farsi
 DEPENDS+=	tex-imsproc-[0-9]*:../../print/tex-imsproc
+# depend iran-bibtex
+# depend khatalmaqala
 DEPENDS+=	tex-kurdishlipsum-[0-9]*:../../print/tex-kurdishlipsum
 # lshort-persian is documentation only
 DEPENDS+=	tex-luabidi-[0-9]*:../../print/tex-luabidi
 DEPENDS+=	tex-na-box-[0-9]*:../../print/tex-na-box
+# depend parsimatn
+# depend parsinevis
 DEPENDS+=	tex-persian-bib-[0-9]*:../../print/tex-persian-bib
 DEPENDS+=	tex-quran-[0-9]*:../../print/tex-quran
 DEPENDS+=	tex-sexam-[0-9]*:../../print/tex-sexam
