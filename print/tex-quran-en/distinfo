@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/21 19:51:22 markd Exp $
+
+BLAKE2s (quran-en.r68790.tar.xz) = ac366364f6ff424a6e02c9a83befb2f13d3fd233a780653171c2bce140ccea1a
+SHA512 (quran-en.r68790.tar.xz) = 75ed9751d6d9517970ca0cf842eca390a172ae24eb12be04a2b97ee1d2673446064489bf594a172677cd785c05ca31587db8b3f64f8d8a1080ce0be0bf191356
+Size (quran-en.r68790.tar.xz) = 2719088 bytes
