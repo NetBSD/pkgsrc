@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1986 2024/03/21 00:07:39 nia Exp $
+$NetBSD: CHANGES-2024,v 1.1987 2024/03/21 05:45:30 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3360,3 +3360,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ansible-lint to 24.2.1 [adam 2024-03-20]
 	Updated x11/libxfce4ui to 4.18.6 [gutteridge 2024-03-20]
 	Added editors/moe version 1.14 [nia 2024-03-21]
+	Added graphics/didder version 1.3.0 [charlotte 2024-03-21]
