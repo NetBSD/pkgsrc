@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/17 10:10:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/03/21 11:58:46 markd Exp $
 
-BLAKE2s (context-texlive.r66924.tar.xz) = 3ceb07b6bb35e4138a5363fd3c62955957f69c7f14c26cde7b98fd23ea573398
-SHA512 (context-texlive.r66924.tar.xz) = 64abf080ecfd9cf68f2ef12123ca6ee976d6fe3cb8382d34b32f424a1bfcf9165142bab2c1a9a1f394e1ed4bd53aaf2875363e7f357eae48ba00ddfc894e5d1f
-Size (context-texlive.r66924.tar.xz) = 1052 bytes
+BLAKE2s (context-texlive.r70437.tar.xz) = 41df1c7ceb56d661c819862cb7bcf417e74dfd745337e808f7f11366a2d79a84
+SHA512 (context-texlive.r70437.tar.xz) = f905235df295bbcd2883f9494aa585fed37ab3d7ce2d3aa4f49650e9bf19d69dcb87d6e3e6aed3f8b82c54127f1d6864f26b1bc5d2b0c37ceaf896cef0022d44
+Size (context-texlive.r70437.tar.xz) = 1696 bytes
