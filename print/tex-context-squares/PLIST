@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/19 10:26:20 markd Exp $
-share/texmf-dist/tex/context/third/squares/t-squares.lua
+@comment $NetBSD: PLIST,v 1.2 2024/03/21 11:43:27 markd Exp $
+share/texmf-dist/tex/context/third/squares/t-squares.lmt
 share/texmf-dist/tex/context/third/squares/t-squares.mklx
