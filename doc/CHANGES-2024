@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.1993 2024/03/21 10:05:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.1994 2024/03/21 10:34:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3404,3 +3404,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-fsspec to 2024.3.1 [adam 2024-03-21]
 	Updated devel/py-license-expression to 30.3.0 [adam 2024-03-21]
 	Updated devel/py-limits to 3.10.1 [adam 2024-03-21]
+	Updated chat/mumble to 1.4.287 [nia 2024-03-21]
