@@ -1,4 +1,4 @@
-$NetBSD: patch-sdl-gui_lin_build.sh,v 1.3 2016/03/29 22:03:08 joerg Exp $
+$NetBSD: patch-sdl-gui_lin_build.sh,v 1.4 2024/03/21 02:04:51 nia Exp $
 
 Make build parameters settable from pkg Makefile
 
@@ -19,6 +19,6 @@ Make build parameters settable from pkg Makefile
  
  
 -cmd="$CC -O3 -ggdb -flto $files sdl.c -lpthread -lm -lSDL2 -lGL -o shoebill"
-+cmd="$CC ${CFLAGS} $files sdl.c -lpthread -lm -lSDL2 -lGL ${LDFLAGS} -o shoebill"
++cmd="$CC ${CFLAGS} $files sdl.c -lpthread -lm -lSDL2 ${LDFLAGS} -o shoebill"
  echo $cmd
  $cmd
