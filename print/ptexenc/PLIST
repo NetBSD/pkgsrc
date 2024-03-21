@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:53 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/03/21 07:51:47 markd Exp $
+bin/ptekf
 include/ptexenc/ptexenc.h
 include/ptexenc/unicode-jp.h
 include/ptexenc/unicode.h
 lib/libptexenc.la
 lib/pkgconfig/ptexenc.pc
+man/man1/ptekf.1
