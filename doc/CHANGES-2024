@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2001 2024/03/21 20:00:00 markd Exp $
+$NetBSD: CHANGES-2024,v 1.2002 2024/03/21 20:06:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3446,3 +3446,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added print/tex-simplekv-doc version 0.2c [markd 2024-03-21]
 	Added print/tex-sjtutex version 2.1 [markd 2024-03-21]
 	Added print/tex-sjtutex-doc version 2.1 [markd 2024-03-21]
+	Updated devel/py-maturin to 1.5.1 [adam 2024-03-21]
+	Updated devel/py-ruff to 0.3.4 [adam 2024-03-21]
