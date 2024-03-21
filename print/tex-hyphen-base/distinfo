@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2023/04/11 00:11:37 markd Exp $
+$NetBSD: distinfo,v 1.24 2024/03/21 10:06:07 markd Exp $
 
-BLAKE2s (hyphen-base.r66413.tar.xz) = 206bcf20a4d3ab2a74b19ef60e53d42704e74bdecf1c0d4201205a23d7edff21
-SHA512 (hyphen-base.r66413.tar.xz) = 919ce5b609e6c3252c420ec723132c38866a1add9cabc79e07b212fea50e0fb343236619b5ff735101a333fceaeb9b69c2a27f45c9b94e51918181952c5b3c61
-Size (hyphen-base.r66413.tar.xz) = 22488 bytes
-SHA1 (patch-aa) = 7f435698a5e28a95a90274d241e263dc51b152fd
-SHA1 (patch-ab) = 4ed13284ab40050fc9f1e8fca716dccb7571665b
-SHA1 (patch-ac) = a270acd6fbc4ab3c2bbdf6064ecb0163ccb36bf0
+BLAKE2s (hyphen-base.r70247.tar.xz) = 35e5578d286e1ab2050004d5c22b1c96937faca1f235fde19c117a9a53f31800
+SHA512 (hyphen-base.r70247.tar.xz) = 4a3c458a0ed0fc0300adedc233a4a5eb7302952cd507d666682caf74910476534b1bff9c86f6352da0c89d4ef2ee0dfc8e7b6c732a3b649f95659eb410a5651c
+Size (hyphen-base.r70247.tar.xz) = 22596 bytes
+SHA1 (patch-aa) = 33f2cb3f85cdcdfdef92d927cbe5578eeb3686dd
+SHA1 (patch-ab) = f6d7b6090fd47c65c6ee10269682e88a36498873
+SHA1 (patch-ac) = 18d3469044fe50e909d7eca9e03d88a413ac876a
