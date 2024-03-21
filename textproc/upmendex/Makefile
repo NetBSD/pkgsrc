@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/11/08 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/21 08:50:43 markd Exp $
 
-PKGREVISION= 2
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	upmendex-1.07
+PKGNAME=	upmendex-1.08
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
