@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/12/07 08:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/21 10:03:43 adam Exp $
 
-DISTNAME=	license-expression-30.2.0
+DISTNAME=	license-expression-30.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/license-expression/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/nexB/license-expression
 COMMENT=	Library to parse, compare, simplify and normalize license expressions
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=50:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-boolean.py-[0-9]*:../../devel/py-boolean.py
+DEPENDS+=	${PYPKGPREFIX}-boolean.py>=4.0:../../devel/py-boolean.py
 
 USE_LANGUAGES=	# none
 
