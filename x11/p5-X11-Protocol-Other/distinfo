@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/21 14:37:55 mef Exp $
+
+BLAKE2s (X11-Protocol-Other-31.tar.gz) = 313af670c9fdd42f1fd275464848394fc2bf2760a5343e2cdb84e4eb3b42f77d
+SHA512 (X11-Protocol-Other-31.tar.gz) = e9fb0df63a2b920d1348fd5b725f1aa68ad8bf6a6d16cea80ed6c2da9ccbbaabb4daa09eec09276efe74cc75575b1207e883b3ec4286a729ce71d3eeea9bc80a
+Size (X11-Protocol-Other-31.tar.gz) = 271459 bytes
