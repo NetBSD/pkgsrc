@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.22 2024/03/19 11:18:49 nia Exp $
+# $NetBSD: platform.mk,v 1.23 2024/03/21 02:14:14 nia Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -6,18 +6,19 @@
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
-RUST_PLATFORMS+=	NetBSD-*-aarch64
-RUST_PLATFORMS+=	NetBSD-*-aarch64eb
-RUST_PLATFORMS+=	NetBSD-*-earmv6hf
-RUST_PLATFORMS+=	NetBSD-*-earmv7hf
-RUST_PLATFORMS+=	NetBSD-*-i386
-RUST_PLATFORMS+=	NetBSD-*-mipsel
-RUST_PLATFORMS+=	NetBSD-*-powerpc
-RUST_PLATFORMS+=	NetBSD-*-riscv64
-RUST_PLATFORMS+=	NetBSD-*-sparc64
-RUST_PLATFORMS+=	NetBSD-*-x86_64
-.endif
+# Little bit of future-proofing.
+.for i in 9 10 11
+RUST_PLATFORMS+=	NetBSD-${i}.*-aarch64
+RUST_PLATFORMS+=	NetBSD-${i}.*-aarch64eb
+RUST_PLATFORMS+=	NetBSD-${i}.*-earmv6hf
+RUST_PLATFORMS+=	NetBSD-${i}.*-earmv7hf
+RUST_PLATFORMS+=	NetBSD-${i}.*-i386
+RUST_PLATFORMS+=	NetBSD-${i}.*-mipsel
+RUST_PLATFORMS+=	NetBSD-${i}.*-powerpc
+RUST_PLATFORMS+=	NetBSD-${i}.*-riscv64
+RUST_PLATFORMS+=	NetBSD-${i}.*-sparc64
+RUST_PLATFORMS+=	NetBSD-${i}.*-x86_64
+.endfor
 
 RUST_PLATFORMS+=	Darwin-*-aarch64
 RUST_PLATFORMS+=	Darwin-*-x86_64
