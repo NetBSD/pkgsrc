@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2024/03/21 15:11:51 nia Exp $
+# $NetBSD: Makefile,v 1.45 2024/03/21 21:42:07 nia Exp $
 
 DISTNAME=	arcticfox-43.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -41,13 +41,12 @@ CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--with-branding=browser/branding/arcticfox
 
+# gtk3 now supported and default, but gtk2 less buggy
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+
 # Necessary for PaX safety on NetBSD.
 CONFIGURE_ARGS+=	--disable-precompiled-startupcache
 
-CONFIGURE_ARGS+=	--enable-system-cairo
-CONFIGURE_ARGS+=	--enable-system-pixman
-CONFIGURE_ARGS+=	--enable-system-hunspell
-CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-bz2
 # Needs libjpeg-turbo.
 # CONFIGURE_ARGS+=	--with-system-jpeg
@@ -58,6 +57,10 @@ CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--enable-system-cairo
+CONFIGURE_ARGS+=	--enable-system-hunspell
+CONFIGURE_ARGS+=	--enable-system-ffi
+CONFIGURE_ARGS+=	--enable-system-pixman
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 starts, but crashes on some sites
@@ -124,7 +127,6 @@ post-install:
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
@@ -137,7 +139,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../textproc/hunspell/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
