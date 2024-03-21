@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/01/30 14:21:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2024/03/21 02:04:51 nia Exp $
 
 DISTNAME=	shoebill-0.0.5
 PKGREVISION=	17
@@ -20,6 +20,13 @@ INSTALLATION_DIRS= bin ${DOCDIR}
 
 CFLAGS+=		-g3
 INSTALL_UNSTRIPPED=	yes
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=		-framework OpenGL
+.else
+LDFLAGS+=		-lGL
+.endif
 
 do-build:
 	( cd ${WRKSRC}/sdl-gui && \
