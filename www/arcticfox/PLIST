@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/07 19:25:44 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/03/21 12:47:19 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -17,7 +17,11 @@ lib/${PKGNAME}/defaults/pref/channel-prefs.js
 lib/${PKGNAME}/dependentlibs.list
 lib/${PKGNAME}/dictionaries/en-US.aff
 lib/${PKGNAME}/dictionaries/en-US.dic
+lib/${PKGNAME}/gtk2/libmozgtk.so
 lib/${PKGNAME}/liblgpllibs.so
+lib/${PKGNAME}/libmozavcodec.so
+lib/${PKGNAME}/libmozavutil.so
+lib/${PKGNAME}/libmozgtk.so
 lib/${PKGNAME}/libmozsqlite3.so
 lib/${PKGNAME}/libxul.so
 lib/${PKGNAME}/omni.ja
