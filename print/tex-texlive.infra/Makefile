@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/11/08 09:00:45 markd Exp $
+# $NetBSD: Makefile,v 1.34 2024/03/21 11:14:57 markd Exp $
 
 DISTNAME=	texlive.infra
-PKGNAME=	tex-${DISTNAME}-2023
-PKGREVISION=	1
-TEXLIVE_REV=	66512
+PKGNAME=	tex-${DISTNAME}-2024
+TEXLIVE_REV=	70660
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Basic TeX Live infrastructure
