@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/04/09 12:43:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/03/21 10:32:20 markd Exp $
 bin/lwarpmk
 share/texmf-dist/tex/latex/lwarp/lwarp-2in1.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-2up.sty
@@ -28,6 +28,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-amsthm.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-anonchap.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-anysize.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-appendix.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-apxproof.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-ar.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-arabicfront.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-array.sty
@@ -119,6 +120,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-decimal.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-decorule.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-diagbox.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-dingbat.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-doipubmed.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-dotlessi.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-dprogress.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-draftcopy.sty
@@ -184,6 +186,8 @@ share/texmf-dist/tex/latex/lwarp/lwarp-fnlineno.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fnpara.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fnpos.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome5-generic-helper.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome5-utex-helper.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontawesome5.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontaxes.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-fontenc.sty
