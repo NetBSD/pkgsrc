@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.15 2018/05/13 12:36:28 markd Exp $
+$NetBSD: patch-aa,v 1.16 2024/03/21 07:48:42 markd Exp $
 
 Set paths to texmf trees for pkgsrc.
 
---- texmf.cnf.orig	2018-03-26 12:23:43.000000000 +0000
+--- texmf.cnf.orig	2024-02-23 16:44:23.000000000 +0000
 +++ texmf.cnf
-@@ -58,7 +58,7 @@
+@@ -59,7 +59,7 @@
  % SELFAUTOPARENT (its grandparent = /usr/local/texlive/YYYY), and
  % SELFAUTOGRANDPARENT (its great-grandparent = /usr/local/texlive).
  % Sorry for the off-by-one-generation names.
 -TEXMFROOT = $SELFAUTOPARENT
 +TEXMFROOT = $SELFAUTODIR/share
  
- % The main tree of distributed packages and programs:
- TEXMFDIST = $TEXMFROOT/texmf-dist
-@@ -68,13 +68,13 @@ TEXMFDIST = $TEXMFROOT/texmf-dist
+ % The various texmf trees used by TeX Live, follow.
+ % They must must all have the TDS directory structure (https://tug.org/tds).
+@@ -72,13 +72,13 @@ TEXMFDIST = $TEXMFROOT/texmf-dist
  TEXMFMAIN = $TEXMFDIST
  
  % Local additions to the distribution trees.
@@ -30,7 +30,7 @@ Set paths to texmf trees for pkgsrc.
  
  % Per-user texmf tree(s) -- organized per the TDS, as usual.  To define
  % more than one per-user tree, set this to a list of directories in
-@@ -132,7 +132,7 @@ TEXMFCACHE = $TEXMFSYSVAR;$TEXMFVAR
+@@ -136,7 +136,7 @@ TEXMFCACHE = $TEXMFSYSVAR;$TEXMFVAR
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
  % varfonts feature was enabled in MT_FEATURES in mktex.cnf.
@@ -39,7 +39,7 @@ Set paths to texmf trees for pkgsrc.
  
  % On some systems, there will be a system tree which contains all the font
  % files that may be created as well as the formats.  For example
-@@ -511,33 +511,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -574,33 +574,7 @@ RUBYINPUTS   = $TEXMFDOTDIR;$TEXMF/scrip
  % since we don't want to scatter ../'s throughout the value.  Hence we
  % explicitly list every directory.  Arguably more understandable anyway.
  %
