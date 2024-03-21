@@ -1,11 +1,15 @@
-$NetBSD: distinfo,v 1.11 2022/04/10 07:47:22 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/03/21 10:34:10 nia Exp $
 
-BLAKE2s (mumble-1.4.230.tar.gz) = 71d12d9d94a06a3c57b8b2230040efe3dff77048cbc5c4da11d1762bd5378cc8
-SHA512 (mumble-1.4.230.tar.gz) = 6cffc7a95d88b33876f4093b99266468210f5c14f190fbd2fbe4991bef91a567e55296e7c8c6cc99e19c054853211085cc3cc08109e367e6776afb70766b3a53
-Size (mumble-1.4.230.tar.gz) = 9441667 bytes
+BLAKE2s (mumble-1.4.287.tar.gz) = 3de53d3709cccb51c93c6efa192633e14b9bd48fe7f9c25f7782cbb9c020c86b
+SHA512 (mumble-1.4.287.tar.gz) = 34ed30c18257ba8deae6938009a90147c8bc3a0aca28e69bea7ec0262e8d2cdacb9a840fac7d3dd623a52ef8d5903ed5424b62b483af21d6df6aa9632eae9d82
+Size (mumble-1.4.287.tar.gz) = 9457292 bytes
 SHA1 (patch-overlay__gl_init__unix.c) = e8db446ee6b62af5c8e580a3927664c9b52bf4f7
 SHA1 (patch-src_HostAddress.cpp) = 34ea0777f76dc236e96b83e43ba486952c676a1c
 SHA1 (patch-src_ProcessResolver.cpp) = f75286127d01c2f44308d6483e2af5b5e7bc1304
+SHA1 (patch-src_SelfSignedCertificate.cpp) = bfd3725e4936e00ac2ef6f7071affb8847a767de
+SHA1 (patch-src_SelfSignedCertificate.h) = 5cd0e3637cc282ae3c22ae25c16b6a472f85a405
+SHA1 (patch-src_crypto_CryptStateOCB2.cpp) = 1b088a8c5d4b64f6ac7a76445c56d70b204bf646
+SHA1 (patch-src_crypto_CryptStateOCB2.h) = 7fa2047bf13a397a6cb9cb48c14134ab36d768f4
 SHA1 (patch-src_mumble_CMakeLists.txt) = a171b707b8f5c8316f0c0c45bb0f8a38545f0f6a
 SHA1 (patch-src_mumble_OSS.cpp) = b0e38bade402998f7c5d0d71090a26fa4a77eb97
 SHA1 (patch-src_mumble_ServerHandler.cpp) = 915e05a3e91c78b42181ce6156231be0bae25fa1

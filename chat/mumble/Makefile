@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2024/01/30 14:21:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2024/03/21 10:34:10 nia Exp $
 
-DISTNAME=	mumble-1.4.230
-PKGREVISION=	19
+DISTNAME=	mumble-1.4.287
 CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mumble-voip/}
 GITHUB_PROJECT=	mumble
@@ -27,7 +26,8 @@ USE_CXX_FEATURES+=	c++11
 LDFLAGS.NetBSD+=	-lrt
 
 # Basic sensible stuff for packaging.
-CMAKE_ARGS+=	-Dbundled-celt=off
+# Requires 0.7.x, pkgsrc version is too new
+#CMAKE_ARGS+=	-Dbundled-celt=off
 CMAKE_ARGS+=	-Dbundled-opus=off
 CMAKE_ARGS+=	-Dbundled-speex=off
 CMAKE_ARGS+=	-Dwarnings-as-errors=off
@@ -59,7 +59,8 @@ CMAKE_ARGS+=	-Doss=off
 CHECK_PORTABILITY_SKIP+=	3rdparty/opus-src/doc/build_draft.sh
 
 .include "options.mk"
-.include "../../audio/celt/buildlink3.mk"
+# Requires 0.7.x, pkgsrc version is too new
+#.include "../../audio/celt/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
