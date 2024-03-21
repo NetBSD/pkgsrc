@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/11 00:14:40 markd Exp $
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2023-03-06.pat
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2023-03-06.tex
-share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2023-03-06.pat
-share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2023-03-06.tex
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2023-03-06.pat
-share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2023-03-06.tex
+@comment $NetBSD: PLIST,v 1.10 2024/03/21 09:44:09 markd Exp $
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphn-x-2024-02-28.tex
+share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2024-02-28.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehypht-x-2024-02-28.tex
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2024-02-28.pat
+share/texmf-dist/tex/generic/dehyph-exptl/dehyphts-x-2024-02-28.tex
