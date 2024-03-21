@@ -1,0 +1,5 @@
+autotype is a LuaLaTeX package for automatic language-specific
+typography. Currently, it supports ligature suppression at word
+boundaries, long s insertion for blackletter typesetting, and
+weighted hyphenation, but only for German (old and new
+orthography).
