@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2024/02/19 19:21:28 markd Exp $
+# $NetBSD: Makefile,v 1.46 2024/03/21 20:00:55 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2023pre4
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69865
+TEXLIVE_REV=	70530
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -64,6 +64,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend epspdfconversion
 # depend esk
 # depend euflag
+# depend fadingimage
 # depend fast-diagram
 # depend fenetrecas
 # depend fig4latex
