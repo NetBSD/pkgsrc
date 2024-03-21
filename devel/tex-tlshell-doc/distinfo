@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/09 13:02:44 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/03/21 10:41:03 markd Exp $
 
-BLAKE2s (tlshell.doc.r66771.tar.xz) = 758a1d6800912a4b1544db779c8f8679631135c716be1050c41e5eba6e1cbc15
-SHA512 (tlshell.doc.r66771.tar.xz) = a4e686c57454adbbead87afc078720e294bd865dc5f77905e0f8e183efe83fcd2f0057336aac17ba6bc91eccf785bf1b3b47959359fc3ea49069bceae3d21d6f
-Size (tlshell.doc.r66771.tar.xz) = 668 bytes
+BLAKE2s (tlshell.doc.r70419.tar.xz) = 0a8f167406774e83a2f6296ae248fe69e176b317154c3457ad4a772ea1a4c8da
+SHA512 (tlshell.doc.r70419.tar.xz) = 133264f19b6e4eee2412c3edb68459e639ea4c6f816ac9e8b72b0c7860173d0a535793a73eb58a5b02c33d240d9fe18633f2fdc794c74af1540610b81e1e0742
+Size (tlshell.doc.r70419.tar.xz) = 676 bytes
