@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/02/19 09:52:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/21 08:23:01 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	luajittex-1.17.0
+PKGNAME=	luajittex-1.18.0
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
