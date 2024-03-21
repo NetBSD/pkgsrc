@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/21 19:49:09 markd Exp $
+
+BLAKE2s (autotype.r69309.tar.xz) = ec25ec1b3998d267b5175c56031c87d44a4c2a753fd7cfe5f0509420357866f2
+SHA512 (autotype.r69309.tar.xz) = f7bbb705f28bd5f546125118c48fcb2e02043ddec76ace5866206a3b047448740db06537d969584197de375bc195a8ac5712eda8bc00633befc102eee7c4e538
+Size (autotype.r69309.tar.xz) = 456844 bytes

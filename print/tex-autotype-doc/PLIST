@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:49:09 markd Exp $
+share/texmf-dist/doc/lualatex/autotype/README
+share/texmf-dist/doc/lualatex/autotype/autotype-de.pdf
+share/texmf-dist/doc/lualatex/autotype/autotype-de.tex
