@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/03/21 20:00:28 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/03/21 20:02:50 adam Exp $
 
 DISTNAME=	maturin-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,6 @@ post-install:
 
 .include "cargo-depends.mk"
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
