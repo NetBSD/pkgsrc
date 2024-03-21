@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2024/01/30 14:22:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2024/03/21 12:47:19 nia Exp $
 
-DISTNAME=	arcticfox-43.0
-PKGREVISION=	5
+DISTNAME=	arcticfox-43.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://github.com/wicknix/Arctic-Fox
+HOMEPAGE=	https://github.com/rmottola/Arctic-Fox
 COMMENT=	Web browser for aging systems, forked from Firefox
 LICENSE=	mpl-1.1
 
@@ -140,6 +139,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../textproc/hunspell/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"

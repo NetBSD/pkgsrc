@@ -1,9 +1,5 @@
 /*
- * Copyright © 2022 Nia Alarie
- *
- * This is a playback-only version of the Sun driver specifically for
- * legacy Firefox (e.g. Arcticfox). Please see the most recent version
- * of the cubeb sources for the record & playback version.
+ * Copyright © 2019-2024 Nia Alarie
  *
  * This program is made available under an ISC-style license.  See the
  * accompanying file LICENSE for details.
@@ -19,6 +15,8 @@
 #include <math.h>
 #include "cubeb/cubeb.h"
 #include "cubeb-internal.h"
+
+#define CUBEB_OLD_API /* seamonkey and older firefox */
 
 #define BYTES_TO_FRAMES(bytes, channels) \
   (bytes / (channels * sizeof(int16_t)))
@@ -87,12 +85,17 @@ struct cubeb_stream {
   int floating;
   int running;
   int play_fd;
+  int record_fd;
   float volume;
   struct audio_info p_info; /* info for the play fd */
+  struct audio_info r_info; /* info for the record fd */
   cubeb_data_callback data_cb;
   cubeb_state_callback state_cb;
   int16_t * play_buf;
+  int16_t * record_buf;
   float * f_play_buf;
+  float * f_record_buf;
+  char input_name[32];
   char output_name[32];
   uint64_t frames_written;
   uint64_t blocks_written;
@@ -194,6 +197,121 @@ sun_prinfo_verify_sanity(struct audio_prinfo * prinfo)
      prinfo->sample_rate < SUN_MAX_RATE && prinfo->sample_rate > SUN_MIN_RATE;
 }
 
+#ifndef CUBEB_OLD_API
+static int
+sun_enumerate_devices(cubeb * context, cubeb_device_type type,
+                      cubeb_device_collection * collection)
+{
+  unsigned i;
+  cubeb_device_info device = {0};
+  char dev[16] = SUN_DEFAULT_DEVICE;
+  char dev_friendly[64];
+  struct audio_info hwfmt;
+  struct audio_device hwname;
+  struct audio_prinfo *prinfo = NULL;
+  int hwprops;
+
+  collection->device = calloc(SUN_DEVICE_COUNT, sizeof(cubeb_device_info));
+  if (collection->device == NULL) {
+    return CUBEB_ERROR;
+  }
+  collection->count = 0;
+
+  for (i = 0; i < SUN_DEVICE_COUNT; ++i) {
+    if (i > 0) {
+      (void)snprintf(dev, sizeof(dev), "/dev/audio%u", i - 1);
+    }
+    if (sun_get_hwinfo(dev, &hwfmt, &hwprops, &hwname) != CUBEB_OK) {
+      continue;
+    }
+#ifdef AUDIO_GETPROPS
+    device.type = 0;
+    if ((hwprops & AUDIO_PROP_CAPTURE) != 0 &&
+        sun_prinfo_verify_sanity(&hwfmt.record)) {
+      /* the device supports recording, probably */
+      device.type |= CUBEB_DEVICE_TYPE_INPUT;
+    }
+    if ((hwprops & AUDIO_PROP_PLAYBACK) != 0 &&
+        sun_prinfo_verify_sanity(&hwfmt.play)) {
+      /* the device supports playback, probably */
+      device.type |= CUBEB_DEVICE_TYPE_OUTPUT;
+    }
+    switch (device.type) {
+    case 0:
+      /* device doesn't do input or output, aliens probably involved */
+      continue;
+    case CUBEB_DEVICE_TYPE_INPUT:
+      if ((type & CUBEB_DEVICE_TYPE_INPUT) == 0) {
+        /* this device is input only, not scanning for those, skip it */
+        continue;
+      }
+      break;
+    case CUBEB_DEVICE_TYPE_OUTPUT:
+      if ((type & CUBEB_DEVICE_TYPE_OUTPUT) == 0) {
+        /* this device is output only, not scanning for those, skip it */
+        continue;
+      }
+      break;
+    }
+    if ((type & CUBEB_DEVICE_TYPE_INPUT) != 0) {
+      prinfo = &hwfmt.record;
+    }
+    if ((type & CUBEB_DEVICE_TYPE_OUTPUT) != 0) {
+      prinfo = &hwfmt.play;
+    }
+#endif
+    if (i > 0) {
+      (void)snprintf(dev_friendly, sizeof(dev_friendly), "%s %s %s (%d)",
+                     hwname.name, hwname.version, hwname.config, i - 1);
+    } else {
+      (void)snprintf(dev_friendly, sizeof(dev_friendly), "%s %s %s (default)",
+                     hwname.name, hwname.version, hwname.config);
+    }
+    device.devid = (void *)(uintptr_t)i;
+    device.device_id = strdup(dev);
+    device.friendly_name = strdup(dev_friendly);
+    device.group_id = strdup(dev);
+    device.vendor_name = strdup(hwname.name);
+    device.type = type;
+    device.state = CUBEB_DEVICE_STATE_ENABLED;
+    device.preferred = (i == 0) ? CUBEB_DEVICE_PREF_ALL : CUBEB_DEVICE_PREF_NONE;
+#ifdef AUDIO_GETFORMAT
+    device.max_channels = prinfo->channels;
+    device.default_rate = prinfo->sample_rate;
+#else
+    device.max_channels = 2;
+    device.default_rate = SUN_PREFER_RATE;
+#endif
+    device.default_format = CUBEB_DEVICE_FMT_S16NE;
+    device.format = CUBEB_DEVICE_FMT_S16NE;
+    device.min_rate = SUN_MIN_RATE;
+    device.max_rate = SUN_MAX_RATE;
+    device.latency_lo = SUN_LATENCY_MS * SUN_MIN_RATE / 1000;
+    device.latency_hi = SUN_LATENCY_MS * SUN_MAX_RATE / 1000;
+    collection->device[collection->count++] = device;
+  }
+  return CUBEB_OK;
+}
+#endif
+
+#ifndef CUBEB_OLD_API
+static int
+sun_device_collection_destroy(cubeb * context,
+                              cubeb_device_collection * collection)
+{
+  unsigned i;
+
+  for (i = 0; i < collection->count; ++i) {
+    free((char *)collection->device[i].device_id);
+    free((char *)collection->device[i].friendly_name);
+    free((char *)collection->device[i].group_id);
+    free((char *)collection->device[i].vendor_name);
+  }
+  free(collection->device);
+  return CUBEB_OK;
+}
+#endif
+
 static int
 sun_copy_params(int fd, cubeb_stream * stream, cubeb_stream_params * params,
                 struct audio_info * info, struct audio_prinfo * prinfo)
@@ -260,8 +378,13 @@ sun_stream_destroy(cubeb_stream * s)
   if (s->play_fd != -1) {
     close(s->play_fd);
   }
+  if (s->record_fd != -1) {
+    close(s->record_fd);
+  }
   free(s->f_play_buf);
+  free(s->f_record_buf);
   free(s->play_buf);
+  free(s->record_buf);
   free(s);
 }
 
@@ -311,8 +434,10 @@ sun_io_routine(void * arg)
 {
   cubeb_stream *s = arg;
   cubeb_state state = CUBEB_STATE_STARTED;
+  size_t to_read = 0;
   long to_write = 0;
   size_t write_ofs = 0;
+  size_t read_ofs = 0;
   int drain = 0;
 
   s->state_cb(s, s->user_ptr, CUBEB_STATE_STARTED);
@@ -325,8 +450,12 @@ sun_io_routine(void * arg)
     }
     pthread_mutex_unlock(&s->mutex);
     if (s->floating) {
+      if (s->record_fd != -1) {
+        sun_linear_to_float(s->record_buf, s->f_record_buf,
+                            s->r_info.record.channels, SUN_BUFFER_FRAMES);
+      }
       to_write = s->data_cb(s, s->user_ptr,
-                            s->f_play_buf, SUN_BUFFER_FRAMES);
+                            s->f_record_buf, s->f_play_buf, SUN_BUFFER_FRAMES);
       if (to_write == CUBEB_ERROR) {
         state = CUBEB_STATE_ERROR;
         break;
@@ -339,7 +468,7 @@ sun_io_routine(void * arg)
       }
     } else {
       to_write = s->data_cb(s, s->user_ptr,
-                            s->play_buf, SUN_BUFFER_FRAMES);
+                            s->record_buf, s->play_buf, SUN_BUFFER_FRAMES);
       if (to_write == CUBEB_ERROR) {
         state = CUBEB_STATE_ERROR;
         break;
@@ -354,8 +483,10 @@ sun_io_routine(void * arg)
       drain = 1;
     }
     to_write = s->play_fd != -1 ? to_write : 0;
+    to_read = s->record_fd != -1 ? SUN_BUFFER_FRAMES : 0;
     write_ofs = 0;
-    while (to_write > 0) {
+    read_ofs = 0;
+    while (to_write > 0 || to_read > 0) {
       size_t bytes;
       ssize_t n, frames;
 
@@ -372,6 +503,16 @@ sun_io_routine(void * arg)
         to_write -= frames;
         write_ofs += frames;
       }
+      if (to_read > 0) {
+        bytes = FRAMES_TO_BYTES(to_read, s->r_info.record.channels);
+        if ((n = read(s->record_fd, s->record_buf + read_ofs, bytes)) < 0) {
+          state = CUBEB_STATE_ERROR;
+          break;
+        }
+        frames = BYTES_TO_FRAMES(n, s->r_info.record.channels);
+        to_read -= frames;
+        read_ofs += frames;
+      }
     }
     if (drain && state != CUBEB_STATE_ERROR) {
       state = CUBEB_STATE_DRAINED;
@@ -386,7 +527,10 @@ static int
 sun_stream_init(cubeb * context,
                 cubeb_stream ** stream,
                 char const * stream_name,
-                cubeb_stream_params stream_params,
+                cubeb_devid input_device,
+                cubeb_stream_params * input_stream_params,
+                cubeb_devid output_device,
+                cubeb_stream_params * output_stream_params,
                 unsigned latency_frames,
                 cubeb_data_callback data_callback,
                 cubeb_state_callback state_callback,
@@ -401,18 +545,63 @@ sun_stream_init(cubeb * context,
     ret = CUBEB_ERROR;
     goto error;
   }
-  snprintf(s->output_name, sizeof(s->output_name), "%s", SUN_DEFAULT_DEVICE);
-  if ((s->play_fd = open(s->output_name, O_WRONLY)) == -1) {
-    ret = CUBEB_ERROR;
-    goto error;
+  s->record_fd = -1;
+  s->play_fd = -1;
+  if (input_device != 0) {
+    snprintf(s->input_name, sizeof(s->input_name),
+      "/dev/audio%zu", (uintptr_t)input_device - 1);
+  } else {
+    snprintf(s->input_name, sizeof(s->input_name), "%s", SUN_DEFAULT_DEVICE);
   }
-  AUDIO_INITINFO(&s->p_info);
-#ifdef AUMODE_PLAY
-  s->p_info.mode = AUMODE_PLAY;
+  if (output_device != 0) {
+    snprintf(s->output_name, sizeof(s->output_name),
+      "/dev/audio%zu", (uintptr_t)output_device - 1);
+  } else {
+    snprintf(s->output_name, sizeof(s->output_name), "%s", SUN_DEFAULT_DEVICE);
+  }
+  if (input_stream_params != NULL) {
+#ifndef CUBEB_OLD_API
+    if (input_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK) {
+      ret = CUBEB_ERROR_NOT_SUPPORTED;
+      goto error;
+    }
 #endif
-  if ((ret = sun_copy_params(s->play_fd, s, &stream_params,
-                             &s->p_info, &s->p_info.play)) != CUBEB_OK) {
-    goto error;
+    if (s->record_fd == -1) {
+      if ((s->record_fd = open(s->input_name, O_RDONLY)) == -1) {
+        ret = CUBEB_ERROR_DEVICE_UNAVAILABLE;
+        goto error;
+      }
+    }
+    AUDIO_INITINFO(&s->r_info);
+#ifdef AUMODE_RECORD
+    s->r_info.mode = AUMODE_RECORD;
+#endif
+    if ((ret = sun_copy_params(s->record_fd, s, input_stream_params,
+                               &s->r_info, &s->r_info.record)) != CUBEB_OK) {
+      goto error;
+    }
+  }
+  if (output_stream_params != NULL) {
+#ifndef CUBEB_OLD_API
+    if (output_stream_params->prefs & CUBEB_STREAM_PREF_LOOPBACK) {
+      ret = CUBEB_ERROR_NOT_SUPPORTED;
+      goto error;
+    }
+#endif
+    if (s->play_fd == -1) {
+      if ((s->play_fd = open(s->output_name, O_WRONLY)) == -1) {
+        ret = CUBEB_ERROR_DEVICE_UNAVAILABLE;
+        goto error;
+      }
+    }
+    AUDIO_INITINFO(&s->p_info);
+#ifdef AUMODE_PLAY
+    s->p_info.mode = AUMODE_PLAY;
+#endif
+    if ((ret = sun_copy_params(s->play_fd, s, output_stream_params,
+                               &s->p_info, &s->p_info.play)) != CUBEB_OK) {
+      goto error;
+    }
   }
   s->context = context;
   s->volume = 1.0;
@@ -427,9 +616,19 @@ sun_stream_init(cubeb * context,
     ret = CUBEB_ERROR;
     goto error;
   }
+  if (s->record_fd != -1 && (s->record_buf = calloc(SUN_BUFFER_FRAMES,
+      s->r_info.record.channels * sizeof(int16_t))) == NULL) {
+    ret = CUBEB_ERROR;
+    goto error;
+  }
   if (s->floating) {
     if (s->play_fd != -1 && (s->f_play_buf = calloc(SUN_BUFFER_FRAMES,
         s->p_info.play.channels * sizeof(float))) == NULL) {
+      ret = CUBEB_ERROR;
+      goto error;
+    }
+    if (s->record_fd != -1 && (s->f_record_buf = calloc(SUN_BUFFER_FRAMES,
+        s->r_info.record.channels * sizeof(float))) == NULL) {
       ret = CUBEB_ERROR;
       goto error;
     }
@@ -512,6 +711,8 @@ sun_get_current_device(cubeb_stream * stream, cubeb_device ** const device)
   if (*device == NULL) {
     return CUBEB_ERROR;
   }
+  (*device)->input_name = stream->record_fd != -1 ?
+    strdup(stream->input_name) : NULL;
   (*device)->output_name = stream->play_fd != -1 ?
     strdup(stream->output_name) : NULL;
   return CUBEB_OK;
@@ -521,6 +722,7 @@ static int
 sun_stream_device_destroy(cubeb_stream * stream, cubeb_device * device)
 {
   (void)stream;
+  free(device->input_name);
   free(device->output_name);
   free(device);
   return CUBEB_OK;
@@ -532,16 +734,24 @@ static struct cubeb_ops const sun_ops = {
   .get_max_channel_count = sun_get_max_channel_count,
   .get_min_latency = sun_get_min_latency,
   .get_preferred_sample_rate = sun_get_preferred_sample_rate,
+#ifndef CUBEB_OLD_API
+  .enumerate_devices = sun_enumerate_devices,
+  .device_collection_destroy = sun_device_collection_destroy,
+#endif
   .destroy = sun_destroy,
   .stream_init = sun_stream_init,
   .stream_destroy = sun_stream_destroy,
   .stream_start = sun_stream_start,
   .stream_stop = sun_stream_stop,
+#ifndef CUBEB_OLD_API
+  .stream_reset_default_device = NULL,
+#endif
   .stream_get_position = sun_stream_get_position,
   .stream_get_latency = sun_stream_get_latency,
   .stream_set_volume = sun_stream_set_volume,
   .stream_set_panning = NULL,
   .stream_get_current_device = sun_get_current_device,
   .stream_device_destroy = sun_stream_device_destroy,
-  .stream_register_device_changed_callback = NULL
+  .stream_register_device_changed_callback = NULL,
+  .register_device_collection_changed = NULL
 };
