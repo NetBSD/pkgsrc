@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/04/09 06:08:45 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/03/21 10:50:47 markd Exp $
 
-BLAKE2s (ptex.r66186.tar.xz) = 4f1edcb1c0ba8f96be3ae1ebef750dd292f4f8c87901b2fc78273ad226594037
-SHA512 (ptex.r66186.tar.xz) = dca32af2c2742207b380c909190204049e29eb9c824f534c39757e3544e305a9395c9fd6ff76d855f1e7fc67e0999bfd863640fc2d2f45dc44bdaa7df543568f
-Size (ptex.r66186.tar.xz) = 688 bytes
+BLAKE2s (ptex.r70058.tar.xz) = afd24d35339b78d6298bfc68aabaabcf81d22ddc7ae7bc362ceff2a5a9131144
+SHA512 (ptex.r70058.tar.xz) = 606e65bb7a8ac2c91da7320571d7050c022c517dd721470adf8606b167a56dc137426f3b890e7802ebc455cd4448e500745006d53d834536d6ffc14815d7ca56
+Size (ptex.r70058.tar.xz) = 692 bytes
