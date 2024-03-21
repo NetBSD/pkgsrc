@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.15 2023/04/11 00:11:37 markd Exp $
+$NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 
---- tex/generic/config/language.dat.lua.orig	2023-03-07 00:49:15.000000000 +0000
+--- tex/generic/config/language.dat.lua.orig	2024-02-29 00:44:25.000000000 +0000
 +++ tex/generic/config/language.dat.lua
 @@ -33,733 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
 --- from dehyph-exptl:
--	['german-x-2023-03-06'] = {
--		loader = 'dehypht-x-2023-03-06.tex',
+-	['german-x-2024-02-28'] = {
+-		loader = 'dehypht-x-2024-02-28.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'german-x-latest' },
 -		patterns = 'hyph-de-1901.pat.txt',
 -		hyphenation = '',
 -	},
--	['ngerman-x-2023-03-06'] = {
--		loader = 'dehyphn-x-2023-03-06.tex',
+-	['ngerman-x-2024-02-28'] = {
+-		loader = 'dehyphn-x-2024-02-28.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 2,
 -		synonyms = { 'ngerman-x-latest' },
