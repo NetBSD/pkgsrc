@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/02/19 10:31:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/03/21 11:38:01 markd Exp $
 
-BLAKE2s (context-legacy.r69173.tar.xz) = 7ceffbdea4100ed75399bd1fed86d546f60acb4ab00d103b3589eae4eca6c255
-SHA512 (context-legacy.r69173.tar.xz) = 79783a6096e3bbe21eff5967fa3ed4edffc573567bd027a59c40fbd1f5e3cfc7d0c213ddc9fabcdecd596bcbc9946cf4255edc4237f0148c89dbae7744f3f508
-Size (context-legacy.r69173.tar.xz) = 2459260 bytes
+BLAKE2s (context-legacy.r70191.tar.xz) = 3e6f4b0ac7c1be2fdcccd0424dc7563935fb63ff01c7083d87d667d6af673074
+SHA512 (context-legacy.r70191.tar.xz) = 029a95eb3c328e59ccf4eb5e8813ae45c2db1cbb717f7cd9bdc077ced8f2221d65d56a3659ff262182c9df0bdbc2f4f2ff10bcae05853459d3b3717b3ad7f403
+Size (context-legacy.r70191.tar.xz) = 2460784 bytes
