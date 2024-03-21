@@ -1,23 +1,7 @@
-$NetBSD: distinfo,v 1.46 2024/02/19 09:49:20 markd Exp $
+$NetBSD: distinfo,v 1.47 2024/03/21 08:27:03 markd Exp $
 
-BLAKE2s (texlive-20230313-source.tar.xz) = cd85d09bb3b6bf613a40b3c2308da75596cb6a1b5e4c7b3fcd8e3e43f206c379
-SHA512 (texlive-20230313-source.tar.xz) = 5874e7c9937ef63fdb03780f8137e0a63ad23a1b2a9d232a71bd2ab999669152981911fadc9c8ff3cf5e3a2cf828d575982b7fce1a15c101a62328d89d851a88
-Size (texlive-20230313-source.tar.xz) = 68630148 bytes
+BLAKE2s (texlive-20240312-source.tar.xz) = 72bccd07a7c210c1c5e3d86d72f3e86bfaf7c2922345f2e048c6336b2a1bd11b
+SHA512 (texlive-20240312-source.tar.xz) = e7ed4eb419da789f82d4295819ba72d10766398fd20c8675742fcec985851917b2005d259e4c9bb952790472855115644297d92257878882a66315cc940b9210
+Size (texlive-20240312-source.tar.xz) = 70140588 bytes
 SHA1 (patch-libs_lua53_lua53-src_src_luaconf.h) = 824ee4ba2c324e1e01967b82a54621b6b6f3edd3
 SHA1 (patch-texk_web2c_configure) = 474ea4f57d535e22355916d6d52d4490d1138cfe
-SHA1 (patch-texk_web2c_luatexdir_ChangeLog) = d6520c468a21f61d5e0ba1b736825c09bf24edc6
-SHA1 (patch-texk_web2c_luatexdir_NEWS) = a3aa2dabf8924ea7147ab049127370ba9ab654f2
-SHA1 (patch-texk_web2c_luatexdir_font_writettf.c) = 08306db325464aea3af229f3516b4d0a8b7a1a2d
-SHA1 (patch-texk_web2c_luatexdir_lua_llualib.c) = 012dd52cd97af785034622a502f208a82944de2a
-SHA1 (patch-texk_web2c_luatexdir_lua_loslibext.c) = 683dfe122af6bf3d6b3d174b86db11e21689e772
-SHA1 (patch-texk_web2c_luatexdir_lua_lpdflib.c) = 17f06ee6edddfce83692427181e8e81dbdc1ebba
-SHA1 (patch-texk_web2c_luatexdir_lua_luainit.c) = ee602cc56a95a01c891e5ccb7985e840ad9f3d79
-SHA1 (patch-texk_web2c_luatexdir_lua_luastuff.c) = 2eae3b71889079958c6342d157e89629ecd329c6
-SHA1 (patch-texk_web2c_luatexdir_lua_luatex-api.h) = fc9000090b501caae4aa511d64e2bbdfd99d4945
-SHA1 (patch-texk_web2c_luatexdir_lua_luatex-core.c) = ca8364cd60e9d459f689351c18274fe1042c9b2e
-SHA1 (patch-texk_web2c_luatexdir_lua_luatex-core.lua) = 2ed168b58b31d5f919909863fb9fdf8d3eacc288
-SHA1 (patch-texk_web2c_luatexdir_luafontloader_src_luafflib.c) = cb9d334bb9c272e591ccd1c1fc8538e7bcc7ffbd
-SHA1 (patch-texk_web2c_luatexdir_luasocket_src_lua_preload.c) = 45125d1bb28145a22a81b0d7d4398958075c8cd6
-SHA1 (patch-texk_web2c_luatexdir_luatex.c) = b9b499804d274e5f95b1d8e88e22d7800d85b02f
-SHA1 (patch-texk_web2c_luatexdir_luatex_svnversion.h) = c4e8b57e58cedc8cc624ed71a34910cd7b2edabf
-SHA1 (patch-texk_web2c_luatexdir_tex_texnodes.c) = ff191c6d29dc6beb22273737bacf5c23224c2f94
