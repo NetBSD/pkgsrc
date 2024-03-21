@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.25 2024/02/02 16:19:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/03/21 08:27:17 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -136,9 +137,6 @@ ${PYSITELIB}/_pytest/monkeypatch.pyo
 ${PYSITELIB}/_pytest/nodes.py
 ${PYSITELIB}/_pytest/nodes.pyc
 ${PYSITELIB}/_pytest/nodes.pyo
-${PYSITELIB}/_pytest/nose.py
-${PYSITELIB}/_pytest/nose.pyc
-${PYSITELIB}/_pytest/nose.pyo
 ${PYSITELIB}/_pytest/outcomes.py
 ${PYSITELIB}/_pytest/outcomes.pyc
 ${PYSITELIB}/_pytest/outcomes.pyo
