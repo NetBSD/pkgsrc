@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/21 00:07:27 nia Exp $
+
+BLAKE2s (moe-1.14.tar.lz) = aaed2a81253c0f776a56af66aa4a210964bfb860647d76cf7b647f16220cf0ee
+SHA512 (moe-1.14.tar.lz) = db45f7c05b9a1a06085b2604eb8e9857caeb7d3a56a4815df208806bbbf19cc47b19776619635c70860142cb8bb775c0eaf31b9b07698cc83b74f1c6d6f47d5c
+Size (moe-1.14.tar.lz) = 92905 bytes
