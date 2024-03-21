@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/21 14:37:55 mef Exp $
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
