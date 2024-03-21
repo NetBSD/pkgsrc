@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2022/04/18 06:14:02 markd Exp $
+# $NetBSD: Makefile,v 1.18 2024/03/21 20:00:54 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59564
+TEXLIVE_REV=	68719
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -33,11 +33,13 @@ DEPENDS+=	tex-babel-vietnamese-[0-9]*:../../print/tex-babel-vietnamese
 # depend chhaya
 DEPENDS+=	tex-cjhebrew-[0-9]*:../../fonts/tex-cjhebrew
 DEPENDS+=	tex-ctib-[0-9]*:../../print/tex-ctib
+# depend culmus
 # depend ebong
 DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
 DEPENDS+=	tex-ethiop-t1-[0-9]*:../../fonts/tex-ethiop-t1
 DEPENDS+=	tex-fc-[0-9]*:../../fonts/tex-fc
 DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
+# depend hebrew-fonts
 # hindawi-latex-template is documentation only
 DEPENDS+=	tex-hyphen-afrikaans-[0-9]*:../../print/tex-hyphen-afrikaans
 DEPENDS+=	tex-hyphen-armenian-[0-9]*:../../print/tex-hyphen-armenian
@@ -60,6 +62,7 @@ DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # ntheorem-vn is documentation only
 # depend padauk
 # depend quran-bn
+# depend quran-id
 # depend quran-ur
 # depend sanskrit
 # depend sanskrit-t1

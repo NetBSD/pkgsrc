@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/01/18 20:16:42 markd Exp $
+# $NetBSD: Makefile,v 1.25 2024/03/21 20:00:56 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2023pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	68675
@@ -100,7 +100,7 @@ DEPENDS+=	tex-resumemac-[0-9]*:../../print/tex-resumemac
 DEPENDS+=	tex-ruler-[0-9]*:../../print/tex-ruler
 # depend schemata
 # depend shade
-# depend simplekv
+DEPENDS+=	tex-simplekv-[0-9]*:../../print/tex-simplekv
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 DEPENDS+=	tex-swrule-[0-9]*:../../print/tex-swrule
 # depend systeme

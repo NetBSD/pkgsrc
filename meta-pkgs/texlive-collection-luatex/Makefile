@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2023/06/17 11:12:26 markd Exp $
+# $NetBSD: Makefile,v 1.27 2024/03/21 20:00:55 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2023pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	67348
+TEXLIVE_REV=	69404
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,6 +13,7 @@ COMMENT=	LuaTeX packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 # depend addliga
+# depend addtoluatexpath
 # depend auto-pst-pdf-lua
 # depend barracuda
 # depend bezierplot
@@ -28,6 +29,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend emoji
 # depend emojicite
 # depend enigma
+# depend gitinfo-lua
 # depend innerscript
 # depend interpreter
 # depend kanaparser
@@ -35,6 +37,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend linebreaker
 # depend lparse
 # depend lt3luabridge
+# depend lua-placeholders
 # depend lua-tinyyaml
 # depend lua-typo
 # depend lua-uca
@@ -54,9 +57,7 @@ DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 # depend luaimageembed
 # depend luaindex
 # depend luainputenc
-# depend luaintro
 # depend luakeys
-# depend lualatex-doc
 DEPENDS+=	tex-lualatex-math-[0-9]*:../../math/tex-lualatex-math
 # depend lualatex-truncate
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
@@ -68,6 +69,7 @@ DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
 # depend luaoptions
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 # depend luapackageloader
+# depend luaplot
 # depend luaprogtable
 # depend luaquotes
 # depend luaset
@@ -92,6 +94,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend pdfarticle
 # depend pdfextra
 # depend penlight
+# depend penlightplus
 # depend piton
 # depend placeat
 # depend plantuml
