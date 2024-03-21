@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:51:21 markd Exp $
+share/texmf-dist/tex/xelatex/quran-en/quran-en.sty
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-eniii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-eniv.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enix.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-env.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-envi.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-envii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enviii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enx.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxi.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxiii.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxiv.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxv.translation.def
+share/texmf-dist/tex/xelatex/quran-en/qurantext-enxvi.translation.def
