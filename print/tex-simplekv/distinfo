@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/21 19:53:20 markd Exp $
+
+BLAKE2s (simplekv.r68439.tar.xz) = f3611aee0e84d27402e2193a0fec82b721a9f2c76df4dddb8fcfdc5779fc7239
+SHA512 (simplekv.r68439.tar.xz) = 16b0136de5c1c97ff19beca9f9488768adae2ce7107310aead9f9da82230e9d9cbec62badeacf66175fbaa181d691558dc4203e848b979dcbc23f8cf9bb8e669
+Size (simplekv.r68439.tar.xz) = 3100 bytes

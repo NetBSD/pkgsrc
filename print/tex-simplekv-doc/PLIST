@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:53:20 markd Exp $
+share/texmf-dist/doc/generic/simplekv/README
+share/texmf-dist/doc/generic/simplekv/simplekv-fr.pdf
+share/texmf-dist/doc/generic/simplekv/simplekv-fr.tex
