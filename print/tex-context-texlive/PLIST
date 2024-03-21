@@ -1,3 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/11 01:22:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/21 11:58:46 markd Exp $
+bin/contextjit
+bin/luatools
+bin/mtxrunjit
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/unix/contextjit
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/unix/luatools
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/unix/mtxrunjit
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/win64/contextjit.cmd
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/win64/luatools.cmd
+share/texmf-dist/scripts/context-texlive/stubs-mkiv/win64/mtxrunjit.cmd
+share/texmf-dist/scripts/context-texlive/stubs/unix/ctxtools
+share/texmf-dist/scripts/context-texlive/stubs/unix/pstopdf
+share/texmf-dist/scripts/context-texlive/stubs/unix/texexec
+share/texmf-dist/scripts/context-texlive/stubs/unix/texmfstart
+share/texmf-dist/scripts/context-texlive/stubs/win64/ctxtools.cmd
+share/texmf-dist/scripts/context-texlive/stubs/win64/pstopdf.cmd
+share/texmf-dist/scripts/context-texlive/stubs/win64/texexec.cmd
+share/texmf-dist/scripts/context-texlive/stubs/win64/texmfstart.cmd
 share/texmf-dist/tex/context/texlive/cont-sys.mkiv
 share/texmf-dist/tex/context/texlive/cont-sys.mkxl
