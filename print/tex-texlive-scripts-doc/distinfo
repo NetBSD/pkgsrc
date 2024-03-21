@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/04/11 07:14:11 tnn Exp $
+$NetBSD: distinfo,v 1.9 2024/03/21 11:09:36 markd Exp $
 
-BLAKE2s (texlive-scripts.doc.r66817.tar.xz) = 0a5c0c60e2837fcbec6458f058d5e2f7c643fbd46b8a3ceb8b8500a5937945eb
-SHA512 (texlive-scripts.doc.r66817.tar.xz) = 1bac29a1647050239f221c73912644d2218730718fdbfd814a7738511d1aa9003b2895820a4f69af97174953d18b4541b4bc97e7494fc0d04732201545232517
-Size (texlive-scripts.doc.r66817.tar.xz) = 423552 bytes
+BLAKE2s (texlive-scripts.doc.r70709.tar.xz) = 16486b86093baeb901fa38c33a605c225d81af9be68223e1a93661e1b4cc6d6e
+SHA512 (texlive-scripts.doc.r70709.tar.xz) = c015066599145b52bac94909f3aeb77e3b0748c3b0d5a8255bcc8725ba54c3a576e63615a7a3cd9023bf1642cca678911653ee6ec87840631a187a989d7a295b
+Size (texlive-scripts.doc.r70709.tar.xz) = 434256 bytes

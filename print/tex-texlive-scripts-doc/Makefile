@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2023/04/11 07:14:11 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2024/03/21 11:09:36 markd Exp $
 
 DISTNAME=	texlive-scripts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2023
-TEXLIVE_REV=	66817
+PKGNAME=	tex-${DISTNAME:S/./-/}-2024
+TEXLIVE_REV=	70709
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-texlive-scripts
 LICENSE=	gnu-gpl-v2 AND public-domain
 
