@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2023/11/16 12:31:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.81 2024/03/21 06:08:38 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -1208,8 +1208,10 @@ man/man3/gnutls_x509_rdn_get2.3
 man/man3/gnutls_x509_rdn_get_by_oid.3
 man/man3/gnutls_x509_rdn_get_oid.3
 man/man3/gnutls_x509_spki_deinit.3
+man/man3/gnutls_x509_spki_get_rsa_oaep_params.3
 man/man3/gnutls_x509_spki_get_rsa_pss_params.3
 man/man3/gnutls_x509_spki_init.3
+man/man3/gnutls_x509_spki_set_rsa_oaep_params.3
 man/man3/gnutls_x509_spki_set_rsa_pss_params.3
 man/man3/gnutls_x509_tlsfeatures_add.3
 man/man3/gnutls_x509_tlsfeatures_check_crt.3
