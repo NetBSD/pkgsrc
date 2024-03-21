@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:49:09 markd Exp $
+share/texmf-dist/tex/lualatex/autotype/autotype-cls_pdnm_oop.lua
+share/texmf-dist/tex/lualatex/autotype/autotype-cls_pdnm_pattern.lua
+share/texmf-dist/tex/lualatex/autotype/autotype-cls_pdnm_spot.lua
+share/texmf-dist/tex/lualatex/autotype/autotype-cls_pdnm_trie_simple.lua
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1901-primary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1901-primary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1901-secondary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1901-secondary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1996-primary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1996-primary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1996-secondary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-1996-secondary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-CH-1901-primary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-CH-1901-primary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-CH-1901-secondary.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-hyph-de-CH-1901-secondary.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-ligbreak-de.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-ligbreak-de.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-pdnm_nl_manipulation.lua
+share/texmf-dist/tex/lualatex/autotype/autotype-round-s-de.lic.txt
+share/texmf-dist/tex/lualatex/autotype/autotype-round-s-de.pat.txt
+share/texmf-dist/tex/lualatex/autotype/autotype.lua
+share/texmf-dist/tex/lualatex/autotype/autotype.sty
