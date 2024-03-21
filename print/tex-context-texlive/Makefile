@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/03/21 11:58:46 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/21 12:09:19 markd Exp $
 
 DISTNAME=	context-texlive
 PKGNAME=	tex-${DISTNAME}-2024
 TEXLIVE_REV=	70437
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/context-texlive
 COMMENT=	TL-specific helpers for ConTeXt (caches, papersize)
 
 INSTALLATION_DIRS+=	bin
