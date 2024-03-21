@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2024/03/15 17:35:50 nia Exp $
+# $NetBSD: Makefile,v 1.109 2024/03/21 09:23:59 nia Exp $
 
 DISTNAME=	nano-7.2
 PKGREVISION=	2
@@ -45,4 +45,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
