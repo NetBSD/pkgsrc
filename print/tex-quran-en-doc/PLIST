@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/21 19:51:22 markd Exp $
+share/texmf-dist/doc/xelatex/quran-en/README
+share/texmf-dist/doc/xelatex/quran-en/quran-en-doc.pdf
+share/texmf-dist/doc/xelatex/quran-en/quran-en-doc.tex
+share/texmf-dist/doc/xelatex/quran-en/quran-en-test.pdf
+share/texmf-dist/doc/xelatex/quran-en/quran-en-test.tex
+share/texmf-dist/doc/xelatex/quran-en/quran.png
