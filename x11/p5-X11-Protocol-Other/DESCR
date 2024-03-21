@@ -1,0 +1,7 @@
+This is some window manager related functions for use by client
+programs, as per the "Inter-Client Communication Conventions Manual"
+and some of the Net-WM "Extended Window Manager Hints".
+
+    /usr/share/doc/xorg-docs/icccm/icccm.txt.gz
+
+    http://www.freedesktop.org/wiki/Specifications/wm-spec
