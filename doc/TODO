@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24208 2024/03/21 10:34:30 nia Exp $
+$NetBSD: TODO,v 1.24209 2024/03/21 20:54:23 dholland Exp $
 
 Suggested new packages
 ======================
@@ -343,6 +343,10 @@ Suggested new packages
 	FerretDB
 	https://blog.ferretdb.io/ferretdb-1-0-ga-opensource-mongodb-alternative/
         MongoDB compatibility layer for PostgreSQL
+
+	mrustc
+	https://github.com/thepowersgang/mrustc
+	C-based bootstrap compiler for rustc
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
