@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.12 2024/03/21 12:47:19 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/03/21 15:11:51 nia Exp $
 
 BLAKE2s (arcticfox-43.1.tar.gz) = 26cdcdf7ff023250df4aed3dcc7119031aa86f7466be2315bff9032f94227230
 SHA512 (arcticfox-43.1.tar.gz) = 19f2934fcf4cb07192176957fb7427d17d8ab4cd5cd10eadbc3630e4deb0a3ad3de5b1656e68b26d6537cff43d3c2997fa3e189fcf05ad70c6e62cb4d943818b
 Size (arcticfox-43.1.tar.gz) = 213148775 bytes
 SHA1 (patch-configure.in) = ccea0e59b808d8743b66c58bda07a2719e89e74f
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 98dd10e2eaa3ec2160f517d1a6cee01caa37ffb0
+SHA1 (patch-js_src_jit_ExecutableAllocatorPosix.cpp) = 91e900b6d995edc70b3234468580f7db5aa88446
+SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 7af433cde0b6391facdf7f785f8f1b660f458a73
 SHA1 (patch-media_libcubeb_src_cubeb.c) = b3c4bd8146e2f7146baf1c2050260f7629cdb09a
 SHA1 (patch-media_libcubeb_src_moz.build) = e98b39b6272b58d4183c526f36987ea239fadd5d
 SHA1 (patch-xpcom_reflect_xptcall_genstubs.pl) = 88a431a961fd910e1e7043877eba77d377185bc3
