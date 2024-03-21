@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.10 2022/04/17 11:13:07 markd Exp $
+# $NetBSD: texlive.pkg,v 1.11 2024/03/21 12:02:17 markd Exp $
 
-$version = "2022";
+$version = "2024";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
 $plist = $other = $maps = "";
 
