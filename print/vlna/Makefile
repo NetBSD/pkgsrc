@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2023/04/10 23:51:29 markd Exp $
+# $NetBSD: Makefile,v 1.12 2024/03/21 08:32:19 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	vlna-1.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
