@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2020/06/15 15:11:50 scole Exp $
+$NetBSD: MESSAGE,v 1.2 2024/03/21 20:44:40 wiz Exp $
 
 RE/flex has its own built-in regex engine, but other regex engines from the
 following packages may be used as well:
 
-    devel/boost-libs
+    devel/boost-{headers,libs}
     devel/pcre2
 
 It is possible to generate FSM graphs by using 'reflex' with the
@@ -14,6 +14,6 @@ It is possible to generate FSM graphs by using 'reflex' with the
 
 A vim Flex and RE/flex syntax highlighting mode file is included in
 the package and can by used by copying
-    ${PREFIX}/share/RE-Flex/lex.vim to ~/.vim/syntax
+    ${PREFIX}/share/doc/${PKGBASE}/lex.vim to ~/.vim/syntax
 
 ===========================================================================
