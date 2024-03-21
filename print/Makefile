@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.929 2024/03/03 18:10:28 leot Exp $
+# $NetBSD: Makefile,v 1.930 2024/03/21 19:58:55 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -279,6 +279,8 @@ SUBDIR+=	tex-atveryend
 SUBDIR+=	tex-atveryend-doc
 SUBDIR+=	tex-autonum
 SUBDIR+=	tex-autonum-doc
+SUBDIR+=	tex-autotype
+SUBDIR+=	tex-autotype-doc
 SUBDIR+=	tex-auxhook
 SUBDIR+=	tex-auxhook-doc
 SUBDIR+=	tex-babel
@@ -1404,6 +1406,8 @@ SUBDIR+=	tex-quran
 SUBDIR+=	tex-quran-de
 SUBDIR+=	tex-quran-de-doc
 SUBDIR+=	tex-quran-doc
+SUBDIR+=	tex-quran-en
+SUBDIR+=	tex-quran-en-doc
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
 SUBDIR+=	tex-ragged2e
@@ -1495,11 +1499,15 @@ SUBDIR+=	tex-sidenotes
 SUBDIR+=	tex-sidenotes-doc
 SUBDIR+=	tex-silence
 SUBDIR+=	tex-silence-doc
+SUBDIR+=	tex-simplekv
+SUBDIR+=	tex-simplekv-doc
 SUBDIR+=	tex-simplified-latex-doc
 SUBDIR+=	tex-simurgh
 SUBDIR+=	tex-simurgh-doc
 SUBDIR+=	tex-siunitx
 SUBDIR+=	tex-siunitx-doc
+SUBDIR+=	tex-sjtutex
+SUBDIR+=	tex-sjtutex-doc
 SUBDIR+=	tex-skak
 SUBDIR+=	tex-skak-doc
 SUBDIR+=	tex-skaknew
