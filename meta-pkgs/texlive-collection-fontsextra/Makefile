@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2024/02/19 19:23:26 markd Exp $
+# $NetBSD: Makefile,v 1.35 2024/03/21 20:00:52 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2023pre3
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69663
+TEXLIVE_REV=	70633
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -100,6 +100,7 @@ DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
 DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 # depend concmath-otf
+# depend context-companion-fonts
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
 # depend cooperhewitt
 # depend cormorantgaramond
@@ -221,6 +222,7 @@ DEPENDS+=	tex-kpfonts-[0-9]*:../../fonts/tex-kpfonts
 # depend kpfonts-otf
 DEPENDS+=	tex-kurier-[0-9]*:../../fonts/tex-kurier
 DEPENDS+=	tex-lato-[0-9]*:../../fonts/tex-lato
+# depend lato-math
 # depend lexend
 DEPENDS+=	tex-lfb-[0-9]*:../../fonts/tex-lfb
 DEPENDS+=	tex-libertine-[0-9]*:../../fonts/tex-libertine

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2023/05/30 11:58:44 markd Exp $
+# $NetBSD: Makefile,v 1.19 2024/03/21 20:00:56 markd Exp $
 
 DISTNAME=	collection-xetex
-PKGNAME=	texlive-${DISTNAME}-2023pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64951
+TEXLIVE_REV=	69452
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,7 +13,6 @@ COMMENT=	XeTeX and packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-arabxetex-[0-9]*:../../print/tex-arabxetex
-# depend awesomebox
 # depend bidi-atbegshi
 # depend bidicontour
 # depend bidipagegrid
