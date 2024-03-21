@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/09 12:46:30 markd Exp $
+$NetBSD: distinfo,v 1.14 2024/03/21 10:24:31 markd Exp $
 
-BLAKE2s (make4ht.doc.r66130.tar.xz) = 6fd2de18acca9fc55bb7704c3fc172adb5feacc1a49cc85691ca004b2c2503f9
-SHA512 (make4ht.doc.r66130.tar.xz) = 2552e84307b92538639481b64690b2d4853f03e795b11daa61f88a1a15896f24982dcd563c181497a287744eabc5a4c3e18a2a705bbfcd9099383b1858a02081
-Size (make4ht.doc.r66130.tar.xz) = 179688 bytes
+BLAKE2s (make4ht.doc.r70112.tar.xz) = 1c5e2019edf321a84a9448667562e2371b23db24fb7ae5766e4f878bbb844917
+SHA512 (make4ht.doc.r70112.tar.xz) = 8d465fae374029e1785e913fc738299ac7bb442930be8d3e7759bee9b2a06b3600698e1c0d168ae663dc06242a7193f624bf07ad1d75f752dc074744b599fba2
+Size (make4ht.doc.r70112.tar.xz) = 186176 bytes
