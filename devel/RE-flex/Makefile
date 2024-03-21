@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/11/28 20:22:32 scole Exp $
+# $NetBSD: Makefile,v 1.7 2024/03/21 20:44:40 wiz Exp $
 
-DISTNAME=	RE-flex-3.0.12
+DISTNAME=	RE-flex-4.1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,12 +13,12 @@ LICENSE=	modified-bsd
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-INSTALLATION_DIRS+=	bin lib share/RE-flex include/reflex ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin lib share/doc/RE-flex include/reflex ${PKGMANDIR}/man1
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake sed
 USE_LIBTOOL=	yes
 
 do-build:
@@ -39,7 +39,7 @@ do-install:
 
 post-install: post-install-doxygen post-install-examples
 .for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/RE-flex
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/RE-flex
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

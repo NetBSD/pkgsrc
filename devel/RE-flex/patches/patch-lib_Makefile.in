@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_Makefile.in,v 1.2 2021/11/28 20:22:33 scole Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.3 2024/03/21 20:44:40 wiz Exp $
 
 use libtool
 
---- lib/Makefile.in.orig	2021-10-12 02:10:38.000000000 +0000
+--- lib/Makefile.in.orig	2024-03-17 20:54:34.000000000 +0000
 +++ lib/Makefile.in
-@@ -250,11 +250,12 @@ AUTOCONF = @AUTOCONF@
+@@ -259,13 +259,14 @@ AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
@@ -13,15 +13,17 @@ use libtool
  CCDEPMODE = @CCDEPMODE@
  CFLAGS = @CFLAGS@
  CPPFLAGS = @CPPFLAGS@
+ CSCOPE = @CSCOPE@
+ CTAGS = @CTAGS@
 -CXX = @CXX@
 +CXXORIG = @CXX@
-+CXX=	$(LIBTOOL) --mode=compile @CXX@
- CXXCPP = @CXXCPP@
++CXX = $(LIBTOOL) --mode=compile @CXX@
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@
-@@ -425,15 +426,15 @@ uninstall-libLIBRARIES:
- clean-libLIBRARIES:
- 	-test -z "$(lib_LIBRARIES)" || rm -f $(lib_LIBRARIES)
+ CYGPATH_W = @CYGPATH_W@
+@@ -513,15 +514,15 @@ $(top_builddir)/unicode/libreflex_a-comp
+ 	$(top_builddir)/unicode/$(am__dirstamp) \
+ 	$(top_builddir)/unicode/$(DEPDIR)/$(am__dirstamp)
  
 -libreflex.a: $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES) 
 -	$(AM_V_at)-rm -f libreflex.a
@@ -32,12 +34,12 @@ use libtool
 -	$(AM_V_at)-rm -f libreflexmin.a
 -	$(AM_V_AR)$(libreflexmin_a_AR) libreflexmin.a $(libreflexmin_a_OBJECTS) $(libreflexmin_a_LIBADD)
 -	$(AM_V_at)$(RANLIB) libreflexmin.a
-+libreflex.a:  $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES) 
++libreflex.a:  $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES)
 +	$(AM_V_at)-rm -f libreflex.a libreflex.la
 +	$(LIBTOOL) --tag=CXX --mode=link $(CXXORIG) -o libreflex.la $(libreflex_a_OBJECTS:.o=.lo) \
 +		-rpath $(PREFIX)/lib -version-info 0:0
 +
-+libreflexmin.a:  $(libreflexmin_a_OBJECTS) $(libreflexmin_a_DEPENDENCIES) $(EXTRA_libreflexmin_a_DEPENDENCIES) 
++libreflexmin.a:  $(libreflexmin_a_OBJECTS) $(libreflexmin_a_DEPENDENCIES) $(EXTRA_libreflexmin_a_DEPENDENCIES)
 +	$(AM_V_at)-rm -f libreflexmin.a libreflexmin.la
 +	$(LIBTOOL) --tag=CXX --mode=link $(CXXORIG) -o libreflexmin.la $(libreflexmin_a_OBJECTS:.o=.lo) \
 +		-rpath $(PREFIX)/lib -version-info 0:0
