@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/03/07 16:36:56 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/03/21 05:53:45 adam Exp $
 
-DISTNAME=	importlib_metadata-7.0.2
+DISTNAME=	importlib_metadata-7.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -10,10 +10,12 @@ HOMEPAGE=	https://importlib-metadata.readthedocs.io/
 COMMENT=	Read metadata from Python packages
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.4:../../devel/py-jaraco.test
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf-[0-9]*:../../devel/py-test-perf
