@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:21 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.8 2024/03/21 05:58:46 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -43,6 +43,9 @@ ${PYSITELIB}/validators/i18n/es.pyo
 ${PYSITELIB}/validators/i18n/fi.py
 ${PYSITELIB}/validators/i18n/fi.pyc
 ${PYSITELIB}/validators/i18n/fi.pyo
+${PYSITELIB}/validators/i18n/fr.py
+${PYSITELIB}/validators/i18n/fr.pyc
+${PYSITELIB}/validators/i18n/fr.pyo
 ${PYSITELIB}/validators/iban.py
 ${PYSITELIB}/validators/iban.pyc
 ${PYSITELIB}/validators/iban.pyo
@@ -55,6 +58,7 @@ ${PYSITELIB}/validators/length.pyo
 ${PYSITELIB}/validators/mac_address.py
 ${PYSITELIB}/validators/mac_address.pyc
 ${PYSITELIB}/validators/mac_address.pyo
+${PYSITELIB}/validators/py.typed
 ${PYSITELIB}/validators/slug.py
 ${PYSITELIB}/validators/slug.pyc
 ${PYSITELIB}/validators/slug.pyo
