@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.31 2024/03/21 08:19:19 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	dvipsk-2023.1
+PKGNAME=	dvipsk-2024.1
 CATEGORIES=	print
 
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
