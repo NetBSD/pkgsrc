@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.65 2024/03/20 15:59:54 schmonz Exp $
+# $NetBSD: tools.Darwin.mk,v 1.66 2024/03/22 18:59:04 schmonz Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -110,6 +110,9 @@ OSX_PATH_TO_M4=			${OSX_PATH_TO_M4_cmd:sh}
 MAKEFLAGS+=			OSX_PATH_TO_M4=${OSX_PATH_TO_M4:Q}
 .if ${OSX_PATH_TO_M4} != ""
 TOOLS_PLATFORM.m4?=		${OSX_PATH_TO_M4}
+.else
+OSX_TOOLS_FORCE_NOOP+=		m4
+OSX_TOOLS_FORCE_NOOP+=		gm4
 .endif
 TOOLS_PLATFORM.mail?=		/usr/bin/mail
 .if exists(/usr/bin/makeinfo)
@@ -166,4 +169,6 @@ TOOLS_PLATFORM.wish?=		/usr/bin/wish
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 .if ${OSX_PATH_TO_YACC} != ""
 TOOLS_PLATFORM.yacc?=		${OSX_PATH_TO_YACC}
+.else
+OSX_TOOLS_FORCE_NOOP+=		yacc
 .endif
