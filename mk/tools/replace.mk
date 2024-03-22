@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.300 2023/07/25 17:21:07 gdt Exp $
+# $NetBSD: replace.mk,v 1.301 2024/03/22 18:59:04 schmonz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -430,6 +430,9 @@ TOOLS_CREATE+=			gm4
 TOOLS_PATH.gm4=			${TOOLBASE}/bin/gm4
 .  endif
 TOOLS_ALIASES.gm4=		m4
+.elif !empty(OSX_TOOLS_FORCE_NOOP:Mgm4)
+# After 2024Q1: switch to TOOLS_FAIL and/or generalize to all undeclared tools
+TOOLS_NOOP+=			gm4
 .endif
 
 .if !defined(TOOLS_IGNORE.gmake) && !empty(_USE_TOOLS:Mgmake)
@@ -583,6 +586,9 @@ TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			m4
 TOOLS_PATH.m4=			${TOOLBASE}/bin/gm4
 .  endif
+.elif !empty(OSX_TOOLS_FORCE_NOOP:Mm4)
+# After 2024Q1: switch to TOOLS_FAIL and/or generalize to all undeclared tools
+TOOLS_NOOP+=			m4
 .endif
 
 .if !defined(TOOLS_IGNORE.mail) && !empty(_USE_TOOLS:Mmail)
@@ -867,6 +873,12 @@ TOOLS_ARGS.yacc=		-y
 # so that bison will be correctly invoked in yacc-compatilility mode.
 #
 TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
+.  endif
+.elif !empty(OSX_TOOLS_FORCE_NOOP:Myacc)
+.  if (defined(TOOLS_IGNORE.bison-yacc) || empty(_USE_TOOLS:Mbison-yacc)) \
+   && (defined(TOOLS_IGNORE.byacc) || empty(_USE_TOOLS:Mbyacc))
+# After 2024Q1: switch to TOOLS_FAIL and/or generalize to all undeclared tools
+TOOLS_NOOP+=			yacc
 .  endif
 .endif
 
