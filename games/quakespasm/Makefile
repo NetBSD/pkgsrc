@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/01/30 14:22:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2024/03/22 23:05:42 nia Exp $
 
 DISTNAME=	quakespasm-0.96.1
 PKGREVISION=	1
@@ -17,6 +17,15 @@ MAKE_FLAGS+=	MP3LIB=mpg123
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Quake
 BUILD_TARGET=	quakespasm
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+MAKE_FLAGS+=	COMMON_LIBS="-framework OpenGL -lm"
+LDFLAGS+=	-framework CoreFoundation
+LDFLAGS+=	-framework IOKit
+LDFLAGS+=	-lSDL2main
+.endif
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
