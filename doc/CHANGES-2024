@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2010 2024/03/22 09:00:56 nia Exp $
+$NetBSD: CHANGES-2024,v 1.2011 2024/03/22 10:39:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3455,3 +3455,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/refi to 3.2.0 [pin 2024-03-22]
 	Updated sysutils/eza to 0.18.8 [pin 2024-03-22]
 	Updated emulators/raine to 0.96.7 [nia 2024-03-22]
+	Updated net/amfora to 1.10.0 [pin 2024-03-22]
