@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2016 2024/03/22 12:12:13 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2017 2024/03/22 12:14:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3461,3 +3461,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/cargo-audit to 0.20.0 [pin 2024-03-22]
 	Updated devel/cargo-c to 0.9.31 [pin 2024-03-22]
 	Updated databases/diesel-cli to 2.1.5 [pin 2024-03-22]
+	Updated x11/dmenu to 5.3 [pin 2024-03-22]
