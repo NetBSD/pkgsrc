@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24209 2024/03/21 20:54:23 dholland Exp $
+$NetBSD: TODO,v 1.24210 2024/03/22 09:00:56 nia Exp $
 
 Suggested new packages
 ======================
@@ -1186,7 +1186,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qutebrowser-3.0.1
 	o radiance-5.3
 	o rails-6.1.0
-	o raine-0.96.4
 	o rasmol-2.7.5.2
 	o rat-4.2.25
 	o rav1e-0.7.0
