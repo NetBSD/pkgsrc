@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2023/08/25 11:55:24 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.14 2024/03/22 13:46:07 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/stdnum/__init__.py
 ${PYSITELIB}/stdnum/__init__.pyc
 ${PYSITELIB}/stdnum/__init__.pyo
@@ -115,6 +115,9 @@ ${PYSITELIB}/stdnum/by/unp.pyo
 ${PYSITELIB}/stdnum/ca/__init__.py
 ${PYSITELIB}/stdnum/ca/__init__.pyc
 ${PYSITELIB}/stdnum/ca/__init__.pyo
+${PYSITELIB}/stdnum/ca/bc_phn.py
+${PYSITELIB}/stdnum/ca/bc_phn.pyc
+${PYSITELIB}/stdnum/ca/bc_phn.pyo
 ${PYSITELIB}/stdnum/ca/bn.py
 ${PYSITELIB}/stdnum/ca/bn.pyc
 ${PYSITELIB}/stdnum/ca/bn.pyo
@@ -322,6 +325,9 @@ ${PYSITELIB}/stdnum/eu/at_02.pyo
 ${PYSITELIB}/stdnum/eu/banknote.py
 ${PYSITELIB}/stdnum/eu/banknote.pyc
 ${PYSITELIB}/stdnum/eu/banknote.pyo
+${PYSITELIB}/stdnum/eu/ecnumber.py
+${PYSITELIB}/stdnum/eu/ecnumber.pyc
+${PYSITELIB}/stdnum/eu/ecnumber.pyo
 ${PYSITELIB}/stdnum/eu/eic.py
 ${PYSITELIB}/stdnum/eu/eic.pyc
 ${PYSITELIB}/stdnum/eu/eic.pyo
@@ -500,6 +506,9 @@ ${PYSITELIB}/stdnum/in_/gstin.pyo
 ${PYSITELIB}/stdnum/in_/pan.py
 ${PYSITELIB}/stdnum/in_/pan.pyc
 ${PYSITELIB}/stdnum/in_/pan.pyo
+${PYSITELIB}/stdnum/in_/vid.py
+${PYSITELIB}/stdnum/in_/vid.pyc
+${PYSITELIB}/stdnum/in_/vid.pyo
 ${PYSITELIB}/stdnum/is_/__init__.py
 ${PYSITELIB}/stdnum/is_/__init__.pyc
 ${PYSITELIB}/stdnum/is_/__init__.pyo
