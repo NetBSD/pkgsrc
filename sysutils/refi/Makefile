@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/02/20 21:33:05 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/22 08:26:48 pin Exp $
 
-DISTNAME=	refi-3.1.3
+DISTNAME=	refi-3.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITLAB:=miicat/}
 GITLAB_PROJECT=	refi
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/refi-v3.1.3-8bed8fcb954cc78e5f398144c654ba4e804a1d10
+WRKSRC=		${WRKDIR}/refi-v3.2.0-6530c47b177c916813bea899a9bca4eb502ba6f4
 
 INSTALLATION_DIRS=	bin
 
