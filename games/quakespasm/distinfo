@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2023/10/26 16:13:58 snj Exp $
+$NetBSD: distinfo,v 1.14 2024/03/22 23:05:42 nia Exp $
 
 BLAKE2s (quakespasm-0.96.1.tar.gz) = 6910026dcab003855d41b04631c786e31999355dc2a1a5073a708595274f6c50
 SHA512 (quakespasm-0.96.1.tar.gz) = 4bf442b866e90ecb0deaebd97f21847d38b0931b297547a598f9c98c4882de33ac422dfdc376c1d5f03b18e0d480932632052747afa3741b35613637371a69d0
 Size (quakespasm-0.96.1.tar.gz) = 11515757 bytes
+SHA1 (patch-main__sdl.c) = 7b67b1da9e2f5e35ff3f089069f76928d322e390
