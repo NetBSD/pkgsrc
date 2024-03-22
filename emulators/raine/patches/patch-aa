@@ -1,154 +1,56 @@
-$NetBSD: patch-aa,v 1.4 2011/03/14 12:04:31 obache Exp $
+$NetBSD: patch-aa,v 1.5 2024/03/22 09:00:43 nia Exp $
 
---- makefile.orig	2006-05-26 12:12:22.000000000 +0000
+Portable flags. Don't force strip binaries.
+
+--- makefile.orig	2024-01-24 09:14:16.000000000 +0000
 +++ makefile
-@@ -25,35 +25,6 @@ VERSION = "0.43.3"
- # Use asm video core ? (comment to use C core)
- ASM_VIDEO_CORE = 1
+@@ -703,22 +703,12 @@ else
+ # gcc-2.96
+ # These flags are for gcc-2.x
  
--# Try to detect mingw... If you want to build the dos and the mingw
--# version on the same system you should unset djdir before making
--# the mingw version.
--ifeq ("$(shell uname)","Linux")
--OSTYPE=linux-gnu
--endif
--
--ifeq ("$(shell uname)","FreeBSD")
--OSTYPE=linux-gnu
--endif
--
--ifeq ("$(OSTYPE)","msys")
--MINGDIR=1
--OSTYPE=mingw32
--ifeq (`nasm -r`,)
--ifdef VERBOSE
--ASM=nasmw
+-ifdef RAINE32
+-# when starting a game -> black screen if -O > 1 (bug in uint64 calculation)
+-CFLAGS += -O3
 -else
--ASM=@nasmw
--endif
--else
--ifdef VERBOSE
--ASM=nasm
--else
--ASM=@nasm
--endif
--endif
+-# Seems to work now, at least with the sdl version ? (to be tested with windows !)
+-CFLAGS = -O3
 -endif
 -
- ifdef mingdir
- MINGDIR=1
+ CFLAGS += $(INCDIR) \
+ 	$(DEFINE) \
+ 	$(_MARCH) \
+ 	-Wno-trigraphs \
+-	-fexpensive-optimizations \
+ 	-ffast-math \
+-	-w \
+-	-fomit-frame-pointer -fno-stack-protector
++	-w
+ 
+ # This is required for gcc-2.9x (bug in -fomit-frame-pointer)
+ ifeq ($(GCC_MAJOR),2)
+@@ -1520,7 +1510,7 @@ $(OBJDIR)/%.o: source/%.c
+ 
+ $(OBJDIR)/%.o: source/%.cpp
+ 	@echo Compiling c++ $<...
+-	$(CXXV) $(CFLAGS) -MD -c $< -o $@
++	$(CXXV) $(CXXFLAGS) $(CFLAGS) -MD -c $< -o $@
+ 	@cp $(OBJDIR)/$*.d $(OBJDIR)/$*.P; \
+             sed -e 's/#.*//' -e 's/^[^:]*: *//' -e 's/ *\\$$//' \
+                 -e '/^$$/ d' -e 's/$$/ :/' < $(OBJDIR)/$*.d >> $(OBJDIR)/$*.P; \
+@@ -1750,7 +1740,6 @@ install: install_dirs $(RAINE_LNG) $(RAI
+ else
+ install: install_dirs $(RAINE_EXE)
  endif
-@@ -123,8 +94,8 @@ RAINE32 = 1
- DEFINE = -D__RAINE__ \
- 	   -DRAINE_WIN32 \
- 
--   PNG_LFLAGS = "$(shell libpng-config --ldflags)"
--   PNG_STATIC_LFLAGS = "$(shell libpng-config --static --ldflags)"
-+   PNG_LFLAGS = "$(shell pkg-config --libs libpng)"
-+   PNG_STATIC_LFLAGS = "$(shell pkg-config --libs --static libpng)"
-    LIBS = -lz -lalleg $(PNG_LFAGS)
-    LIBS_STATIC = -lz -lalleg_s -lkernel32 -luser32 -lgdi32 -lcomdlg32 \
-    -lole32 -ldinput -lddraw -ldxguid -lwinmm -ldsound \
-@@ -153,9 +124,9 @@ endif
- 
-    AFLAGS = -f coff
- 
--   PNG_CFLAGS = "$(shell libpng-config --cflags)"
--   PNG_LFAGS = "$(shell libpng-config --ldflags)"
--   PNG_STATIC_LFLAGS = "$(shell libpng-config --static --ldflags)"
-+   PNG_CFLAGS = "$(shell pkg-config --cflags libpng)"
-+   PNG_LFAGS = "$(shell pkg-config --cflags libpng)"
-+   PNG_STATIC_LFLAGS = "$(shell pkg-config --cflags --static libpng)"
-    INCDIR += $(PNG_CFLAGS)
-    DEFINE = -D__RAINE__ \
- 	   -DRAINE_WIN32 \
-@@ -193,7 +164,7 @@ else
-    prefix = $(PREFIX)
-    bindir = $(prefix)/bin
-    sharedir = $(prefix)/share
--   mandir = $(prefix)/man/man6
-+   mandir = $(prefix)/${PKGMANDIR}/man6
-    rainedata = $(sharedir)/raine
-    langdir = $(rainedata)/languages
-    romdir = $(rainedata)/roms
-@@ -207,14 +178,14 @@ else
-    RAINE_UNIX = 1
- 
-    INSTALL = /usr/bin/install
--   INSTALL_BIN = $(INSTALL) -m 755
--   INSTALL_DATA = $(INSTALL) -m 644
-+   INSTALL_BIN = $(BSD_INSTALL_PROGRAM)
-+   INSTALL_DATA = $(BSD_INSTALL_DATA)
-    RD = rmdir --ignore-fail-on-non-empty
-    CD = cd
- 
-    AFLAGS = -f elf
- 
--   PNG_CFLAGS = "$(shell libpng-config --cflags)"
-+   PNG_CFLAGS = "$(shell pkg-config --cflags libpng)"
- ifndef SDL
- ALLEGRO_CFLAGS = "$(shell allegro-config --cflags)"
- endif
-@@ -226,9 +197,9 @@ endif
-    DEFINE = -D__RAINE__ \
- 	   -DRAINE_UNIX \
- 
--   LIBS = -lz `allegro-config --libs` `libpng-config --ldflags`
--   LIBS_DEBUG = -lz `allegro-config --libs ` `libpng-config --ldflags` # -lefence
--   LIBS_STATIC = -lz `allegro-config --static` `libpng-config --static --ldflags`
-+   LIBS = -lz `allegro-config --libs` `pkg-config --libs libpng`
-+   LIBS_DEBUG = -lz `allegro-config --libs ` `pkg-config --libs libpng` # -lefence
-+   LIBS_STATIC = -lz `allegro-config --static` `pkg-config --static --libs libpng`
- 
- ifeq ("$(shell if [ -e /usr/include/vga.h ] || [ -e /usr/local/include/vga.h ]; then echo yes; fi)","yes")
- GFX_SVGALIB=1
-@@ -838,13 +809,13 @@ LIBS += `sdl-config --libs`
- endif
- endif
- 
--all:	cpuinfo message maketree depend $(RAINE_EXE)
-+all:	message maketree depend $(RAINE_EXE)
- 
- depend:
- 	@echo dependencies : if you get an error here, install the required dev package
- ifndef RAINE_DOS
- 	@echo -n libpng:
--	@libpng-config --version
-+	@pkg-config --version libpng
- 	@echo -n sdl:
- 	@sdl-config --version
- endif
-@@ -1048,11 +1019,7 @@ dep: make.dep
- make.dep:
- 	./makedep $(OBJDIR) $(OBJS) > make.dep
- 
--cpuinfo:
--	@sh ./detect-cpu
--
- include make.dep
--include cpuinfo
- 
- # create directories
- 
-@@ -1094,11 +1061,18 @@ ifdef RAINE_UNIX
- 	$(INSTALL_DATA) $(RAINE_DAT) $(rainedata)
- 	sh -c "if [ -f hiscore.dat ]; then $(INSTALL_DATA) hiscore.dat $(rainedata); fi"
- 	$(INSTALL_DATA) config/cheats.cfg $(rainedata)
--	$(INSTALL_DATA) raine.desktop $(prefix)/usr/share/applications
--	$(INSTALL_DATA) raine.png $(prefix)/usr/share/pixmaps
-+	$(INSTALL_DATA) raine.desktop $(prefix)/share/applications
-+	$(INSTALL_DATA) raine.png $(prefix)/share/pixmaps
- 
- install_dirs:
--	$(MD) -pv $(bindir) $(rainedata) $(langdir) $(romdir) $(artdir) $(emudxdir) $(prefix)/usr/share/applications $(prefix)/usr/share/pixmaps
-+	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
-+	$(BSD_INSTALL_DATA_DIR) $(rainedata)
-+	$(BSD_INSTALL_DATA_DIR) $(langdir)
-+	$(BSD_INSTALL_DATA_DIR) $(romdir)
-+	$(BSD_INSTALL_DATA_DIR) $(artdir)
-+	$(BSD_INSTALL_DATA_DIR) $(emudxdir)
-+	$(BSD_INSTALL_DATA_DIR) $(prefix)/share/applications
-+	$(BSD_INSTALL_DATA_DIR) $(prefix)/share/pixmaps
- 
- $(RAINE_LNG):
- 	$(INSTALL_DATA) config/language/$@ $(langdir)
+-	strip $(RAINE_EXE)
+ ifdef RAINE_UNIX
+ 	@echo installing $(RAINE_EXE) in $(bindir)
+ 	$(INSTALL_BIN) $(RAINE_EXE) $(bindir)
+@@ -1765,7 +1754,7 @@ else
+ 		bitmaps/controllermap.bmp bitmaps/controllermap_back.bmp $(bitmaps_dir)
+ 	@echo installing shaders in $(shaders_dir)
+ 	$(INSTALL_DATA) shaders/*.shader $(shaders_dir)
+-	@cp -rfva scripts/* $(scripts_dir)
++	@cp -Rfva scripts/* $(scripts_dir)
+ 	$(INSTALL_DATA) gamecontrollerdb.txt $(rainedata)
+ 	$(INSTALL_DATA) command.dat $(rainedata)
+ #	$(INSTALL_DATA) blend/* $(bld_dir)
