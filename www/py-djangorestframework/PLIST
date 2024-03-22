@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2023/08/05 06:19:18 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.19 2024/03/22 18:45:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/rest_framework/__init__.py
 ${PYSITELIB}/rest_framework/__init__.pyc
 ${PYSITELIB}/rest_framework/__init__.pyo
@@ -41,6 +40,9 @@ ${PYSITELIB}/rest_framework/authtoken/migrations/0002_auto_20160226_1747.pyo
 ${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.py
 ${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.pyc
 ${PYSITELIB}/rest_framework/authtoken/migrations/0003_tokenproxy.pyo
+${PYSITELIB}/rest_framework/authtoken/migrations/0004_alter_tokenproxy_options.py
+${PYSITELIB}/rest_framework/authtoken/migrations/0004_alter_tokenproxy_options.pyc
+${PYSITELIB}/rest_framework/authtoken/migrations/0004_alter_tokenproxy_options.pyo
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.py
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.pyc
 ${PYSITELIB}/rest_framework/authtoken/migrations/__init__.pyo
@@ -241,7 +243,8 @@ ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
-${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.5.1.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.7.1.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/load-ajax-form.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/prettify-min.js
 ${PYSITELIB}/rest_framework/status.py
 ${PYSITELIB}/rest_framework/status.pyc
@@ -368,6 +371,9 @@ ${PYSITELIB}/rest_framework/utils/representation.pyo
 ${PYSITELIB}/rest_framework/utils/serializer_helpers.py
 ${PYSITELIB}/rest_framework/utils/serializer_helpers.pyc
 ${PYSITELIB}/rest_framework/utils/serializer_helpers.pyo
+${PYSITELIB}/rest_framework/utils/timezone.py
+${PYSITELIB}/rest_framework/utils/timezone.pyc
+${PYSITELIB}/rest_framework/utils/timezone.pyo
 ${PYSITELIB}/rest_framework/utils/urls.py
 ${PYSITELIB}/rest_framework/utils/urls.pyc
 ${PYSITELIB}/rest_framework/utils/urls.pyo

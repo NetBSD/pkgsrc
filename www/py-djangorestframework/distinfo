@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2023/08/05 06:19:18 adam Exp $
+$NetBSD: distinfo,v 1.29 2024/03/22 18:45:23 adam Exp $
 
-BLAKE2s (djangorestframework-3.14.0.tar.gz) = bf269384949a15269c7235c3dd8aba67cad1f88518b0956978d5c657c8611799
-SHA512 (djangorestframework-3.14.0.tar.gz) = 063dde9eaaf6adede1b1ce75ec9f61581639e7f0795052019bcf9b9cc02318bd2f5fd825e6893aa2f7353c601e6792f8a52c26351bbb1e930aa841faca61f385
-Size (djangorestframework-3.14.0.tar.gz) = 1055343 bytes
+BLAKE2s (djangorestframework-3.15.1.tar.gz) = 708e87473566322797f3e5ac8d286dbc0403b492bb536c154c6bba4696379c9d
+SHA512 (djangorestframework-3.15.1.tar.gz) = 153039f7b970075bec10f20557a9de7d1c259e7d83fbe374174a25048a1a129a075cfd3cc90363b0e4bc9511061582f788610c15544ccb49a72c7fc28a9ed6f1
+Size (djangorestframework-3.15.1.tar.gz) = 1066194 bytes
