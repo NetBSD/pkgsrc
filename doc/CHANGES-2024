@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2020 2024/03/22 12:19:42 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2021 2024/03/22 12:21:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3465,3 +3465,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated wm/dwm to 6.5 [pin 2024-03-22]
 	Updated wm/evilwm to 1.4.3 [pin 2024-03-22]
 	Updated x11/i3lock to 2.15 [pin 2024-03-22]
+	Updated shells/starship to 1.18.0 [pin 2024-03-22]
