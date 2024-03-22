@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:23:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/03/22 09:00:43 nia Exp $
 
-BLAKE2s (raines-0.43.3.tar.bz2) = 00b9fadf5ec1af4a65c88031264e72e74a9bac5a89f730f3f7d352d628978a4a
-SHA512 (raines-0.43.3.tar.bz2) = d67e991efab88fae62ca9f7a294cbc366672ff495936aad8f680ed3a602b2b17d684fc0180e72bf7bb21778fdc85cffc188f3b50b579b0ff3eca7c5417a7821c
-Size (raines-0.43.3.tar.bz2) = 1740971 bytes
-SHA1 (patch-aa) = 7e0d7955c55c2aba6ebdee1c2b9b59a8655b29ae
-SHA1 (patch-ab) = 9143d9f43150ec033d7a72d288256d0c759665d6
-SHA1 (patch-ac) = 82f0bc91dc840b250ec45899306c19b56f98a7ed
-SHA1 (patch-source_png_loadpng.c) = 9831bfd7c841f9c4c04c0f319f59662d7f058cd8
-SHA1 (patch-source_png_savepng.c) = 608caca883fda9222f1dc0f798d032bc572bf7b7
+BLAKE2s (raine-0.96.7.tar.gz) = 6505db4cb9a1a1ffe0b72dd9d661c7f930f01ad1fbee11208c9fa471a131997d
+SHA512 (raine-0.96.7.tar.gz) = 3f3d81f7cb0de5d662028493e442ea5dfc3b32c4da90f78ed510762488c16898e99bf36685a15a160b6ca085d3cd6712525734f3b74f4f9ebb37faf42fe353e8
+Size (raine-0.96.7.tar.gz) = 5991467 bytes
+SHA1 (patch-aa) = 2001a55fb08166cceb3342ea7995c892b0ea9c90
+SHA1 (patch-source_games_default.c) = de0d98a1585a19bbb2f4f29d583d59d43772396d
+SHA1 (patch-source_games_pengo.c) = ffe2d8c82456038de716172af8f54383f07f5d86
+SHA1 (patch-source_mini-unzip_ioapi.c) = 13f63158a86221e7576ad8faf268c392601a4017
+SHA1 (patch-source_neocd_neocd.c) = 0f2e2b18ccb69282884cc4b796cbf9d80cf4bc83
+SHA1 (patch-source_sdl_dialogs_about.cpp) = 6a35c368740f61e965b2ce9f702e06d3ed5d54ad
+SHA1 (patch-source_sdl_dialogs_controls.cpp) = 208a48dd5faa8d0e075e74e7fccca416bc7cc4fd
+SHA1 (patch-source_sdl_gui.cpp) = d1b148bf8ed5b96cd672cd079d7468fa792c5743
