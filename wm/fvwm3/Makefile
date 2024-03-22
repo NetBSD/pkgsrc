@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/01/14 12:54:52 vins Exp $
+# $NetBSD: Makefile,v 1.29 2024/03/22 13:54:54 wiz Exp $
 
 DISTNAME=	fvwm3-1.0.9
 CATEGORIES=	wm x11
@@ -19,7 +19,6 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	gmake # needed for manpages installation
 
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg				# fvwm-menu-desktop
-TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor	# asciidoctor
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# wants python3
 
@@ -38,9 +37,7 @@ SUBST_SED.paths+=	-e "s:/usr/local/share/fvwm:${PREFIX}/share/fvwm:g"
 # otherwise we get installed scripts that point to the tools directory.
 CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL5}
-CONFIGURE_ENV+=	ac_cv_prog_ASCIIDOC=${PREFIX}/bin/asciidoctor${RUBY_VER}
 
-CONFIGURE_ARGS+=	--enable-mandoc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/fvwm
 CONFIGURE_ARGS+=	--with-iconv-library=${BUILDLINK_PREFIX.iconv}/lib
 CONFIGURE_ARGS+=	--with-iconv-includes=${BUILDLINK_PREFIX.iconv}/${BUILDLINK_INCDIRS.iconv:Q}
@@ -53,7 +50,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/ruby/rubyversion.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
