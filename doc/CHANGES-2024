@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2014 2024/03/22 12:07:58 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2015 2024/03/22 12:09:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3459,3 +3459,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/smake to 1.7nb4 [micha 2024-03-22]
 	Updated sysutils/cdrtools to 3.02a10nb5 [micha 2024-03-22]
 	Updated security/cargo-audit to 0.20.0 [pin 2024-03-22]
+	Updated devel/cargo-c to 0.9.31 [pin 2024-03-22]
