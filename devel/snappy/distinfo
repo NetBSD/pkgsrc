@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2023/10/11 16:09:07 pho Exp $
+$NetBSD: distinfo,v 1.17 2024/03/22 07:53:09 wiz Exp $
 
 BLAKE2s (snappy-1.1.10.tar.gz) = 84a128717b35d7fcd8ce52e03d2efcd71d5928fc19ac5bf0ed3ee99656413541
 SHA512 (snappy-1.1.10.tar.gz) = 3578597f1d4ec09104ce0296b825b013590351230dfe56c635081fd282ce7a13a34caf2c283ac77bd24065e2d27af6db068d1f84b98cec2fd39a0e37a0d77070
 Size (snappy-1.1.10.tar.gz) = 1105312 bytes
-SHA1 (patch-CMakeLists.txt) = ecc43cc15cd58ef8bc7f2fe9ce87322474ee4741
+SHA1 (patch-CMakeLists.txt) = fce9856b530e781968c9e7fca443581685b005ff
 SHA1 (patch-snappy.cc) = c1d3749e9070e1dce6e99691df668d6d9acdee0b
