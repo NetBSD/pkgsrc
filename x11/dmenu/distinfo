@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/10/09 12:56:39 leot Exp $
+$NetBSD: distinfo,v 1.19 2024/03/22 12:12:59 pin Exp $
 
-BLAKE2s (dmenu-5.2.tar.gz) = 0d6067062cafc8142768009a6a9ccdd08f847620afda9046e8efbed2119ff27f
-SHA512 (dmenu-5.2.tar.gz) = 7be9bb76b11225ec86a30e643e9b884f6d13af581526085212cb7401383d448a72fe4dffc3ce84ffb8319dbf36ca8384597a89070cd27d39d5618f239a2da6e3
-Size (dmenu-5.2.tar.gz) = 16196 bytes
+BLAKE2s (dmenu-5.3.tar.gz) = e4cd98e7f8fb6b214fd1a3769857dbc154e643bfb8cd773a6c6672ecea7ec1cb
+SHA512 (dmenu-5.3.tar.gz) = 60f758134063ad7f304fbb0785c66dddc21461e5e5014f8735cf6d5c95dc22a177f069d48101e633ddffe5bbefc1118a2bf8b31daaf7b6438fdf6fe1bcb5d61c
+Size (dmenu-5.3.tar.gz) = 16274 bytes
