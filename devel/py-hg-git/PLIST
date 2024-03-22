@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/28 10:20:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/22 18:43:43 hauke Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,6 +23,9 @@ ${PYSITELIB}/hggit/compat.pyo
 ${PYSITELIB}/hggit/config.py
 ${PYSITELIB}/hggit/config.pyc
 ${PYSITELIB}/hggit/config.pyo
+${PYSITELIB}/hggit/debugcommands.py
+${PYSITELIB}/hggit/debugcommands.pyc
+${PYSITELIB}/hggit/debugcommands.pyo
 ${PYSITELIB}/hggit/git2hg.py
 ${PYSITELIB}/hggit/git2hg.pyc
 ${PYSITELIB}/hggit/git2hg.pyo
@@ -35,6 +38,10 @@ ${PYSITELIB}/hggit/gitdirstate.pyo
 ${PYSITELIB}/hggit/gitrepo.py
 ${PYSITELIB}/hggit/gitrepo.pyc
 ${PYSITELIB}/hggit/gitrepo.pyo
+${PYSITELIB}/hggit/helptext/__init__.py
+${PYSITELIB}/hggit/helptext/__init__.pyc
+${PYSITELIB}/hggit/helptext/__init__.pyo
+${PYSITELIB}/hggit/helptext/config.rst
 ${PYSITELIB}/hggit/hg2git.py
 ${PYSITELIB}/hggit/hg2git.pyc
 ${PYSITELIB}/hggit/hg2git.pyo

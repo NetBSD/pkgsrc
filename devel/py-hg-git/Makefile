@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/06/26 11:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/03/22 18:43:43 hauke Exp $
 
-DISTNAME=	hg-git-1.0.2
+DISTNAME=	hg-git-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${PKGVERSION_NOREV}/
@@ -12,8 +12,8 @@ COMMENT=	Push to and pull from a Git server repository using Mercurial
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.7:../../devel/py-dulwich
-DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
+DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.20.11:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.1:../../devel/py-mercurial
 
 USE_LANGUAGES=	# none
 
