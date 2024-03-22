@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/05/21 16:33:50 kim Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/22 05:37:43 kim Exp $
 man/man8/update-ca-certificates.8
 sbin/update-ca-certificates
 share/ca-certificates/mozilla/ACCVRAIZ1.crt
@@ -15,8 +15,11 @@ share/ca-certificates/mozilla/Amazon_Root_CA_2.crt
 share/ca-certificates/mozilla/Amazon_Root_CA_3.crt
 share/ca-certificates/mozilla/Amazon_Root_CA_4.crt
 share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt
+share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_ECC_TLS_2021.crt
+share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_RSA_TLS_2021.crt
 share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt
-share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.crt
+share/ca-certificates/mozilla/BJCA_Global_Root_CA1.crt
+share/ca-certificates/mozilla/BJCA_Global_Root_CA2.crt
 share/ca-certificates/mozilla/Baltimore_CyberTrust_Root.crt
 share/ca-certificates/mozilla/Buypass_Class_2_Root_CA.crt
 share/ca-certificates/mozilla/Buypass_Class_3_Root_CA.crt
@@ -33,6 +36,10 @@ share/ca-certificates/mozilla/Certum_EC-384_CA.crt
 share/ca-certificates/mozilla/Certum_Trusted_Network_CA.crt
 share/ca-certificates/mozilla/Certum_Trusted_Network_CA_2.crt
 share/ca-certificates/mozilla/Certum_Trusted_Root_CA.crt
+share/ca-certificates/mozilla/CommScope_Public_Trust_ECC_Root-01.crt
+share/ca-certificates/mozilla/CommScope_Public_Trust_ECC_Root-02.crt
+share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-01.crt
+share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-02.crt
 share/ca-certificates/mozilla/Comodo_AAA_Services_root.crt
 share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt
 share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt
@@ -48,9 +55,6 @@ share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt
 share/ca-certificates/mozilla/DigiCert_TLS_ECC_P384_Root_G5.crt
 share/ca-certificates/mozilla/DigiCert_TLS_RSA4096_Root_G5.crt
 share/ca-certificates/mozilla/DigiCert_Trusted_Root_G4.crt
-share/ca-certificates/mozilla/E-Tugra_Certification_Authority.crt
-share/ca-certificates/mozilla/E-Tugra_Global_Root_CA_ECC_v3.crt
-share/ca-certificates/mozilla/E-Tugra_Global_Root_CA_RSA_v3.crt
 share/ca-certificates/mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt
 share/ca-certificates/mozilla/Entrust_Root_Certification_Authority.crt
 share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_EC1.crt
@@ -76,7 +80,6 @@ share/ca-certificates/mozilla/HARICA_TLS_RSA_Root_CA_2021.crt
 share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt
 share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt
 share/ca-certificates/mozilla/HiPKI_Root_CA_-_G1.crt
-share/ca-certificates/mozilla/Hongkong_Post_Root_CA_1.crt
 share/ca-certificates/mozilla/Hongkong_Post_Root_CA_3.crt
 share/ca-certificates/mozilla/ISRG_Root_X1.crt
 share/ca-certificates/mozilla/ISRG_Root_X2.crt
@@ -99,7 +102,11 @@ share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt
 share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt
 share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_ECC.crt
 share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_RSA.crt
+share/ca-certificates/mozilla/SSL.com_TLS_ECC_Root_CA_2022.crt
+share/ca-certificates/mozilla/SSL.com_TLS_RSA_Root_CA_2022.crt
 share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt
+share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt
+share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt
 share/ca-certificates/mozilla/SecureSign_RootCA11.crt
 share/ca-certificates/mozilla/SecureTrust_CA.crt
 share/ca-certificates/mozilla/Secure_Global_CA.crt
@@ -119,9 +126,8 @@ share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt
 share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt
 share/ca-certificates/mozilla/TeliaSonera_Root_CA_v1.crt
 share/ca-certificates/mozilla/Telia_Root_CA_v2.crt
-share/ca-certificates/mozilla/TrustCor_ECA-1.crt
-share/ca-certificates/mozilla/TrustCor_RootCert_CA-1.crt
-share/ca-certificates/mozilla/TrustCor_RootCert_CA-2.crt
+share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G3.crt
+share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G4.crt
 share/ca-certificates/mozilla/Trustwave_Global_Certification_Authority.crt
 share/ca-certificates/mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt
 share/ca-certificates/mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt
