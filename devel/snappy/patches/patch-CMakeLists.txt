@@ -1,8 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2023/03/15 13:29:58 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2024/03/22 07:53:09 wiz Exp $
 
 Avoid -Werror.
+Check a different intrinsic to fix build on armv7.
 
---- CMakeLists.txt.orig	2023-03-15 13:20:25.399932889 +0000
+--- CMakeLists.txt.orig	2023-03-08 23:44:00.000000000 +0000
 +++ CMakeLists.txt
 @@ -66,12 +66,6 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSV
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
@@ -17,3 +18,15 @@ Avoid -Werror.
  
    # Disable C++ exceptions.
    string(REGEX REPLACE "-fexceptions" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+@@ -194,9 +188,9 @@ int main() {
+ check_cxx_source_compiles("
+ #include <arm_neon.h>
+ int main() {
+-  uint8_t val = 3, dup[8];
++  uint8_t val = 3;
+   uint8x16_t v = vld1q_dup_u8(&val);
+-  vst1q_u8(dup, v);
++  val = vmaxvq_u8(v);
+   return 0;
+ }" SNAPPY_HAVE_NEON)
+ 
