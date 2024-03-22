@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2022/10/09 13:06:03 leot Exp $
+$NetBSD: distinfo,v 1.22 2024/03/22 12:14:49 pin Exp $
 
-BLAKE2s (dwm-6.4.tar.gz) = 6fd22a3c5c113077cc3a4d6b1ea733c6575cb4dc3ddf6bc3206d641bab06f614
-SHA512 (dwm-6.4.tar.gz) = b13ac4390c7945cfb4e06bbec2cf69a9bf55867fe2babcba1a4945803a12bea88db31ad06dd06627445f8456950deb26f2d631f946c4207ae92e13f273051a51
-Size (dwm-6.4.tar.gz) = 25321 bytes
+BLAKE2s (dwm-6.5.tar.gz) = 0ae6d9a8ca576d50448a8464132a14049234bdee9643093b6d50cfccbfbbf754
+SHA512 (dwm-6.5.tar.gz) = 6cc3efd8d8a5e96517474fdcb1c1a6192fdf669c1bb02de6aea0a9f1a951360bf73c9576a5a0f06b00e2f839bacc304d60548d5ead0996bf46d82be4121ed248
+Size (dwm-6.5.tar.gz) = 25588 bytes
