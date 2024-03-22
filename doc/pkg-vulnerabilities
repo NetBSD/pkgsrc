@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.149 2024/03/21 09:01:30 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.150 2024/03/22 20:14:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25936,3 +25936,4 @@ python39<3.9.19	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-6
 python310<3.10.14	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-6597
 python311-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-6597
 python312-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-6597
+gnutls<3.8.4	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-28834
