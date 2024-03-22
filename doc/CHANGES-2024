@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2025 2024/03/22 18:48:49 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2026 2024/03/22 22:08:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hg-git to 1.1.1 [hauke 2024-03-22]
 	Updated www/py-djangorestframework to 3.15.1 [adam 2024-03-22]
 	Updated www/py-asgiref to 3.8.1 [adam 2024-03-22]
+	Updated sysutils/lsd to 1.1.0 [pin 2024-03-22]
