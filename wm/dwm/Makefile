@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/11/12 13:23:47 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/03/22 12:14:49 pin Exp $
 
-DISTNAME=	dwm-6.4
-PKGREVISION=	2
+DISTNAME=	dwm-6.5
 CATEGORIES=	wm
 MASTER_SITES=	https://dl.suckless.org/dwm/
 
