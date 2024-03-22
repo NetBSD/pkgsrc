@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2022/11/30 09:02:57 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/03/22 12:16:40 pin Exp $
 
-BLAKE2s (evilwm-1.4.2.tar.gz) = df02c1342213ef885a48c462c595ed82b201781cfd7a7ef6096e673b300a25cc
-SHA512 (evilwm-1.4.2.tar.gz) = 07f1d82a611b95606ef137bb76599f8eef4bc27bf90eae9f5aa15bc806808c3bc4e1d7e821cebe1651b134d03f2b129e336b95e9659f0509d9711faab9bd00ba
-Size (evilwm-1.4.2.tar.gz) = 73716 bytes
+BLAKE2s (evilwm-1.4.3.tar.gz) = 7a5860a1ff31b68f699d5bf7eca6b7c3ffa7644346184733678837338a63de46
+SHA512 (evilwm-1.4.3.tar.gz) = 3e2d4207b401261bce3ec2a185a1fb2385bb7d79595c0a61a13aeb3238d7ebb5502efb2121d00599af53ce98cdc5cf291751e6ac3a6fb0d623c06628a302047e
+Size (evilwm-1.4.3.tar.gz) = 74386 bytes
