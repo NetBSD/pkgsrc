@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/03/15 13:29:58 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/03/22 07:53:25 wiz Exp $
 
 DISTNAME=	snappy-1.1.10
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
