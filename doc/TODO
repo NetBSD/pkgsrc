@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24211 2024/03/22 20:13:33 wiz Exp $
+$NetBSD: TODO,v 1.24212 2024/03/23 20:29:19 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -430,7 +430,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o amanda-3.5.2
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5
-	o anope-2.0.9
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-mellon-0.14.2
