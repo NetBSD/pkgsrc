@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/10/31 15:40:38 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/03/23 16:34:07 adam Exp $
 
-DISTNAME=	graphviz-0.20.1
+DISTNAME=	graphviz-0.20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphviz/}
@@ -11,18 +11,16 @@ HOMEPAGE=	https://github.com/xflr6/graphviz
 COMMENT=	Create and render graph descriptions in DOT language
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.8:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
