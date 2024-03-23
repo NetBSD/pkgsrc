@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2047 2024/03/23 19:12:20 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2048 2024/03/23 20:29:19 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3502,3 +3502,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/garden to 1.4.1 [pin 2024-03-23]
 	Updated math/kalker to 2.1.0 [pin 2024-03-23]
 	Updated sysutils/lsd to 1.1.1 [pin 2024-03-23]
+	Updated chat/anope to 2.0.15 [bsiegert 2024-03-23]
