@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/02/14 21:31:01 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/03/23 07:22:52 adam Exp $
 
-BLAKE2s (threadpoolctl-3.3.0.tar.gz) = acaefeac4fbd7d1d79237262b7580a9d1fc9532930af0b9705c099a774ce0b42
-SHA512 (threadpoolctl-3.3.0.tar.gz) = e1f5602f60b973230f6af9b88384c906637f9c47c8f3c70781ca8e8913b62caa4febb511fd4be5331a2432a8b6f582757a3a92aa67083f301bced7ac025e3578
-Size (threadpoolctl-3.3.0.tar.gz) = 41035 bytes
+BLAKE2s (threadpoolctl-3.4.0.tar.gz) = 9b71e4f624e5e6095461e7ae911f96ed06d28cf9ac16fd9c6716fbb525cc2a23
+SHA512 (threadpoolctl-3.4.0.tar.gz) = 4d71a010107705150e2040fc862ee9b5a5c9ad062e6da9707e09657a46724854d57f5b50977ccaa8c6156a5f5535b3a1126ae118af58dd168d33511d6e0c6af3
+Size (threadpoolctl-3.4.0.tar.gz) = 41622 bytes
