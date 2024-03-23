@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/05 11:49:51 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/03/23 07:15:01 adam Exp $
 
-DISTNAME=	uncompyle6-3.9.0
+DISTNAME=	uncompyle6-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncompyle6/}
@@ -10,26 +10,24 @@ HOMEPAGE=	https://github.com/rocky/python-uncompyle6
 COMMENT=	Python cross-version byte-code decompiler
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-spark-parser>=1.8.9:../../lang/py-spark-parser
-DEPENDS+=	${PYPKGPREFIX}-xdis>=6.0.2:../../devel/py-xdis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-xdis>=6.0.8:../../devel/py-xdis
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xdis
-# no support for python 3.11 or 3.12 yet
-# https://github.com/rocky/python-uncompyle6/issues/423
-PYTHON_VERSIONS_INCOMPATIBLE+=	311 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
+# ModuleNotFoundError: No module named '__pkginfo__'
+pre-configure:
+	${RM} ${WRKSRC}/pyproject.toml
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pydisassemble pydisassemble-${PYVERSSUFFIX} && \
 	${MV} uncompyle6 uncompyle6-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC}/pytest && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
