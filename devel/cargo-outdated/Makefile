@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/11/02 18:09:41 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/03/23 19:08:38 pin Exp $
 
-DISTNAME=	cargo-outdated-0.14.0
+DISTNAME=	cargo-outdated-0.15.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kbknapp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
