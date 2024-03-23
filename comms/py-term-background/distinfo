@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/03/23 06:48:41 adam Exp $
+
+BLAKE2s (term-background-1.0.1.tar.gz) = 5bfd1773b508a123511180c06f2c90442736c67b87e02ce98455c5d67158b8b5
+SHA512 (term-background-1.0.1.tar.gz) = 132718aae6a6270f36a18db0146ac3c9177f72e184106949fa88b115c1355a94415a5f3126325f938724278a626fb5036b9c647b8ff63320b9ab1a816c6415f9
+Size (term-background-1.0.1.tar.gz) = 20302 bytes

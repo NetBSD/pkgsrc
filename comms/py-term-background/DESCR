@@ -1,0 +1,7 @@
+Determine if shell has a light or dark background.
+
+From Python you can call term_background.is_dark_background() which returns a
+True if we think the background is dark.
+
+The heuristics used is to try to query the background color using an xterm
+control sequence.
