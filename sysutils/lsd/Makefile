@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/03/22 22:08:12 pin Exp $
+# $NetBSD: Makefile,v 1.15 2024/03/23 19:12:02 pin Exp $
 
-DISTNAME=	lsd-1.1.0
+DISTNAME=	lsd-1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lsd-rs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,15 +10,18 @@ HOMEPAGE=	https://github.com/lsd-rs/lsd/
 COMMENT=	The next gen ls command
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
+
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	share/doc/lsd
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
+# Use go-md2man to generate manpages and install them
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/lsd.md \
-		${DESTDIR}${PREFIX}/share/doc/lsd
+	go-md2man < ${WRKSRC}/doc/lsd.md > ${WRKSRC}/doc/lsd.1
+	${INSTALL_MAN} ${WRKSRC}/doc/lsd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/libgit2/buildlink3.mk"

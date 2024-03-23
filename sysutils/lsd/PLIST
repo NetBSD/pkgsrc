@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/07 16:46:37 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/23 19:12:02 pin Exp $
 bin/lsd
-share/doc/lsd/lsd.md
+man/man1/lsd.1
