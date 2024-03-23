@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.152 2024/03/23 14:50:53 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.153 2024/03/23 15:16:59 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25940,3 +25940,4 @@ gnutls<3.8.4	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-28834
 ruby31-base>=3.1<3.1.4nb3	buffer-overread	https://www.ruby-lang.org/en/news/2024/03/21/buffer-overread-cve-2024-27280/
 ruby31-base>=3.1<3.1.4nb3	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
 ruby32-base>=3.2<3.2.3nb1	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
+ruby33>=3.3<3.3.0nb1	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
