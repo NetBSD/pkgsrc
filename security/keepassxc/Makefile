@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2024/03/11 13:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2024/03/23 10:49:00 ryoon Exp $
 
 DISTNAME=	keepassxc-2.7.7-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -42,6 +43,7 @@ qmake-bin-add:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
 .include "../../security/botan3/buildlink3.mk"
+.include "../../security/zxcvbn-c/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # no qt6 support yet
 # https://github.com/keepassxreboot/keepassxc/issues/7774
