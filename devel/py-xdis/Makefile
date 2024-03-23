@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2023/01/16 09:26:23 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/03/23 06:49:52 adam Exp $
 
-DISTNAME=	xdis-6.0.5
+DISTNAME=	xdis-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -10,19 +10,21 @@ HOMEPAGE=	https://github.com/rocky/python-xdis
 COMMENT=	Python cross-version byte-code disassembler and marshal routines
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+DEPENDS+=	${PYPKGPREFIX}-term-background>=1.0.1:../../comms/py-term-background
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pydisasm pydisasm-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
