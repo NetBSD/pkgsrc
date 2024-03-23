@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/01/12 18:47:30 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/03/23 07:26:06 adam Exp $
 
-DISTNAME=	trio-0.24.0
+DISTNAME=	trio-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -12,7 +12,7 @@ LICENSE=	mit OR apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=23.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-outcome-[0-9]*:../../devel/py-outcome
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.3.0:../../misc/py-sniffio
@@ -31,7 +31,6 @@ USE_LANGUAGES=	c
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 .endif
