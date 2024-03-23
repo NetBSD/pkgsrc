@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.218 2024/03/16 07:01:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.219 2024/03/23 08:42:12 tsutsui Exp $
 
-DISTNAME=	mikutter-5.0.6
+DISTNAME=	mikutter-5.0.7
 DIST_SUBDIR=	${DISTNAME}	# for a pending patch in upstream Redmine
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
