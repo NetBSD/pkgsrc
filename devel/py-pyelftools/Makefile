@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/09/29 09:18:37 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/23 07:21:47 adam Exp $
 
-DISTNAME=	pyelftools-0.30
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+DISTNAME=	pyelftools-0.31
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyelftools/}
 
@@ -10,7 +10,12 @@ HOMEPAGE=	https://github.com/eliben/pyelftools
 COMMENT=	Library for analyzing ELF files and DWARF debugging information
 LICENSE=	public-domain
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -19,5 +24,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/run_all_unittests.py
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

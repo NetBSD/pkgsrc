@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2023/09/29 09:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/23 07:21:47 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/elftools/__init__.py
 ${PYSITELIB}/elftools/__init__.pyc
 ${PYSITELIB}/elftools/__init__.pyo
@@ -160,3 +161,4 @@ ${PYSITELIB}/elftools/elf/segments.pyo
 ${PYSITELIB}/elftools/elf/structs.py
 ${PYSITELIB}/elftools/elf/structs.pyc
 ${PYSITELIB}/elftools/elf/structs.pyo
+${PYSITELIB}/elftools/py.typed
