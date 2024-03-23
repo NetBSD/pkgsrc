@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/12 18:47:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/23 07:26:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
@@ -204,6 +204,9 @@ ${PYSITELIB}/trio/_sync.pyo
 ${PYSITELIB}/trio/_tests/__init__.py
 ${PYSITELIB}/trio/_tests/__init__.pyc
 ${PYSITELIB}/trio/_tests/__init__.pyo
+${PYSITELIB}/trio/_tests/check_type_completeness.py
+${PYSITELIB}/trio/_tests/check_type_completeness.pyc
+${PYSITELIB}/trio/_tests/check_type_completeness.pyo
 ${PYSITELIB}/trio/_tests/module_with_deprecations.py
 ${PYSITELIB}/trio/_tests/module_with_deprecations.pyc
 ${PYSITELIB}/trio/_tests/module_with_deprecations.pyo
@@ -222,6 +225,9 @@ ${PYSITELIB}/trio/_tests/test_contextvars.pyo
 ${PYSITELIB}/trio/_tests/test_deprecate.py
 ${PYSITELIB}/trio/_tests/test_deprecate.pyc
 ${PYSITELIB}/trio/_tests/test_deprecate.pyo
+${PYSITELIB}/trio/_tests/test_deprecate_strict_exception_groups_false.py
+${PYSITELIB}/trio/_tests/test_deprecate_strict_exception_groups_false.pyc
+${PYSITELIB}/trio/_tests/test_deprecate_strict_exception_groups_false.pyo
 ${PYSITELIB}/trio/_tests/test_dtls.py
 ${PYSITELIB}/trio/_tests/test_dtls.pyc
 ${PYSITELIB}/trio/_tests/test_dtls.pyo
