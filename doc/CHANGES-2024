@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2046 2024/03/23 19:11:12 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2047 2024/03/23 19:12:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3501,3 +3501,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cargo-outdated to 0.15.0 [pin 2024-03-23]
 	Updated devel/garden to 1.4.1 [pin 2024-03-23]
 	Updated math/kalker to 2.1.0 [pin 2024-03-23]
+	Updated sysutils/lsd to 1.1.1 [pin 2024-03-23]
