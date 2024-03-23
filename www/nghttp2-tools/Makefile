@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/01/21 19:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/03/23 18:26:42 gdt Exp $
 
 .include "../../www/nghttp2/Makefile.common"
 
@@ -8,8 +8,8 @@ COMMENT=	Tools for nghttp2
 
 CONFLICTS+=	nghttp2<1.53.0nb1 # share/nghttp2/fetch-ocsp-response
 
-# Upstream documents that c++14 is required for C++ parts of the code;
-# the base package does not use C++.
+# The distfile contains a C library (built via www/nghttp2) and tools
+# (built by this package) in C++14.
 USE_LANGUAGES=		c c++14
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
