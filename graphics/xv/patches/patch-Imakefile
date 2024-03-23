@@ -1,12 +1,13 @@
-$NetBSD: patch-Imakefile,v 1.3 2023/08/16 17:02:20 tsutsui Exp $
+$NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
 
 - use jpeg, png, tiff, and zlib from pkgsrc
 - make ghostscript support optional
 - add webp support from forked upstream
   https://gitlab.com/DavidGriffith/xv/-/commit/5682a07e
   and use libwebp from pkgsrc
+- fix build errors on NetBSD/vax
 
---- Imakefile.orig	2023-08-16 16:51:48.939703880 +0000
+--- Imakefile.orig	2024-03-23 18:02:14.701404322 +0000
 +++ Imakefile
 @@ -6,13 +6,20 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
@@ -42,6 +43,15 @@ $NetBSD: patch-Imakefile,v 1.3 2023/08/16 17:02:20 tsutsui Exp $
  /*
   * if you are running on a SysV-based machine, such as HP, Silicon Graphics,
   * etc, uncomment one of the following lines to get you *most* of the way
+@@ -79,7 +90,7 @@
+ /* if your machine doesn't have 'vprintf()' or 'vsprintf()'
+  *   see vprintf.c for more information, if needed.
+  */
+-#if defined(VaxArchitecture) && !defined(UltrixArchitecture)
++#if defined(VaxArchitecture) && !defined(UltrixArchitecture) && !defined(NetBSDArchitecture)
+ VPRINTF=	-DNEED_VPRINTF -DINTSPRINTF -DLONGINT -DNOVOID
+ #else 
+ #  if defined(RtArchitecture) && !defined(AIXArchitecture)
 @@ -116,28 +127,84 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
  
  /* This marks the end of the configuration parameters */

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2023/11/25 08:19:15 tsutsui Exp $
+$NetBSD: distinfo,v 1.30 2024/03/23 18:07:38 tsutsui Exp $
 
 BLAKE2s (xv-3.10a-enhancements.20070520-20081216.diff) = 1333e3066444f6adf64e83c33a129a46143678d4b2c805f3740baae1320d3449
 SHA512 (xv-3.10a-enhancements.20070520-20081216.diff) = d7152799f6ec65404496b8d83a93681122fe1280741ffe4d20d7dc1b3791873081c778b3d9806f1217b9d45f5b5bfce6fdbfb655c26ed5e87388a6f517c4f2f7
@@ -9,7 +9,7 @@ Size (xv-3.10a-jumbo-patches-20070520.tar.gz) = 1363802 bytes
 BLAKE2s (xv-3.10a.tar.gz) = 1a48a6b641074c1fc1c51a01d6516024489ed0fab550abdd708f7d12aef8d292
 SHA512 (xv-3.10a.tar.gz) = 5b8c5890503e2796638921cabae8967e458c73e332acea8561b1025ed13c771bc44c0e309b4592852e33726eeaa9784f933d1312073b0ba2e0b8c0cedabcaa3f
 Size (xv-3.10a.tar.gz) = 2259124 bytes
-SHA1 (patch-Imakefile) = 908a3c30d1a1c08f91cf96362b3292f3ff795e13
+SHA1 (patch-Imakefile) = 129ecbffa87166858cdaa60a0089e5c34da4ab0d
 SHA1 (patch-bits_br__webp) = 47f2495f0e8d443e0e20b718593de331cf319dea
 SHA1 (patch-config.h) = fd0ef6bbf774a57dd0bb94676927dcc6eeef1014
 SHA1 (patch-vdcomp.c) = 4c603cdc2c01925fed283b2aa6030d1933cdaddc
