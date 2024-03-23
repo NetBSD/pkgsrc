@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2027 2024/03/22 22:52:41 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.2028 2024/03/23 00:24:58 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-asgiref to 3.8.1 [adam 2024-03-22]
 	Updated sysutils/lsd to 1.1.0 [pin 2024-03-22]
 	Updated www/snac to 2.50 [schmonz 2024-03-22]
+	Updated security/wolfssl to 5.7.0 [fox 2024-03-23]
