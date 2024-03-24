@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2024/02/09 13:16:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2024/03/24 20:10:35 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -463,6 +463,9 @@ ${PYSITELIB}/faker/providers/bank/ro_RO/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyo
+${PYSITELIB}/faker/providers/bank/sk_SK/__init__.py
+${PYSITELIB}/faker/providers/bank/sk_SK/__init__.pyc
+${PYSITELIB}/faker/providers/bank/sk_SK/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/th_TH/__init__.py
 ${PYSITELIB}/faker/providers/bank/th_TH/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/th_TH/__init__.pyo
@@ -709,6 +712,9 @@ ${PYSITELIB}/faker/providers/credit_card/pt_PT/__init__.pyo
 ${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.pyo
+${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.py
+${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.pyc
+${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/__init__.py
 ${PYSITELIB}/faker/providers/currency/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/__init__.pyo
@@ -1483,6 +1489,9 @@ ${PYSITELIB}/faker/providers/person/ro_RO/__init__.pyo
 ${PYSITELIB}/faker/providers/person/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/person/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/person/ru_RU/__init__.pyo
+${PYSITELIB}/faker/providers/person/sk_SK/__init__.py
+${PYSITELIB}/faker/providers/person/sk_SK/__init__.pyc
+${PYSITELIB}/faker/providers/person/sk_SK/__init__.pyo
 ${PYSITELIB}/faker/providers/person/sl_SI/__init__.py
 ${PYSITELIB}/faker/providers/person/sl_SI/__init__.pyc
 ${PYSITELIB}/faker/providers/person/sl_SI/__init__.pyo
