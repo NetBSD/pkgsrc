@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/04/16 00:38:00 markd Exp $
+# $NetBSD: Makefile,v 1.17 2024/03/24 11:06:27 markd Exp $
 
 DISTNAME=	xetex
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	62387
+PKGNAME=	tex-${DISTNAME}-2024
+TEXLIVE_REV=	70088
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xetex
@@ -10,16 +10,16 @@ COMMENT=	Unicode and OpenType-enabled TeX engine
 LICENSE=	x11
 
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
-DEPENDS+=	tex-etex>=2.1:../../print/tex-etex
+DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-graphics-def-[0-9]*:../../print/tex-graphics-def
+DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
-DEPENDS+=	tex-latex>=2010:../../print/tex-latex
-DEPENDS+=	tex-latexconfig>=2010.20663:../../print/tex-latexconfig
+DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-lm-[0-9]*:../../fonts/tex-lm
-DEPENDS+=	tex-plain>=3.141592653nb2:../../print/tex-plain
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
-DEPENDS+=	tex-xetexconfig>=2010:../../print/tex-xetexconfig
+DEPENDS+=	tex-xetexconfig-[0-9]*:../../print/tex-xetexconfig
 DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
 
 INSTALLATION_DIRS+=	bin
