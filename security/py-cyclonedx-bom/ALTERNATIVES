@@ -1,0 +1,1 @@
+bin/cyclonedx-py @PREFIX@/bin/cyclonedx-py-@PYVERSSUFFIX@
