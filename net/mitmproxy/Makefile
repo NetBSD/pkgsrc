@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2024/01/28 08:29:03 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/03/24 20:00:11 leot Exp $
 
-DISTNAME=	mitmproxy-10.2.1
+DISTNAME=	mitmproxy-10.2.4
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=39.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.11:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
