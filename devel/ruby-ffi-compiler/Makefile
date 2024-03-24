@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/11/02 15:13:27 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/24 14:04:18 taca Exp $
 
-DISTNAME=	ffi-compiler-1.0.1
-PKGREVISION=	1
+DISTNAME=	ffi-compiler-1.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
