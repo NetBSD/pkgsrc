@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2104 2024/03/24 20:45:06 leot Exp $
+$NetBSD: CHANGES-2024,v 1.2105 2024/03/24 20:51:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3596,3 +3596,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/tlsx to 1.1.6 [leot 2024-03-24]
 	Updated security/httpx to 1.6.0 [leot 2024-03-24]
 	Updated security/nuclei to 3.2.2 [leot 2024-03-24]
+	Updated misc/moreutils to 0.69 [leot 2024-03-24]
