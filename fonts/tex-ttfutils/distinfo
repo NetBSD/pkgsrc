@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/03/24 10:59:42 markd Exp $
 
-BLAKE2s (tex-ttfutils-31355/ttfutils.tar.xz) = 9c6f280729102342a59182f53fd032f2fd9c30ed360ff3c0eda9232483c86a2d
-SHA512 (tex-ttfutils-31355/ttfutils.tar.xz) = fa1ce4e6b04458d7c259a44fb3844342677e682119222587095a6993fce6eb845da1b1261e30e3dc6274c75fc59d045dba7fe63f9419a885d4e537f269353119
-Size (tex-ttfutils-31355/ttfutils.tar.xz) = 108640 bytes
+BLAKE2s (ttfutils.r70015.tar.xz) = 7e4782a9b9a7eb0fe6a790da747365765655b39791d28fa4e2bd292719b78c9c
+SHA512 (ttfutils.r70015.tar.xz) = 21090d6c7fa70bb55931959221ba429fa97fa559c3b3ea7a50196bea6253f3b425f7adef1c4c16328b9f800c72d0489d402acff0266ef0b2b07b2d8d2b139b83
+Size (ttfutils.r70015.tar.xz) = 108728 bytes
