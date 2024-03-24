@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/09 22:09:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/24 10:42:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -149,6 +149,9 @@ ${PYSITELIB}/google/api_core/retry_async.pyo
 ${PYSITELIB}/google/api_core/timeout.py
 ${PYSITELIB}/google/api_core/timeout.pyc
 ${PYSITELIB}/google/api_core/timeout.pyo
+${PYSITELIB}/google/api_core/universe.py
+${PYSITELIB}/google/api_core/universe.pyc
+${PYSITELIB}/google/api_core/universe.pyo
 ${PYSITELIB}/google/api_core/version.py
 ${PYSITELIB}/google/api_core/version.pyc
 ${PYSITELIB}/google/api_core/version.pyo
