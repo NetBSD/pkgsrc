@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/06/17 11:32:00 markd Exp $
+$NetBSD: distinfo,v 1.4 2024/03/24 10:41:57 markd Exp $
 
-BLAKE2s (hitex.doc.r66924.tar.xz) = 9cf3052c7dbab89c21df41547b5f95ee127694d44a52c1c6f7b307df7f1adb6b
-SHA512 (hitex.doc.r66924.tar.xz) = f278d0d4a4b37e4489ba46ee3325a9af5bd7205359b55f30a3de10de36182c754974e0b7a0f506ac233280ee395bfdb5a8f7f5c3ee1cbcb0c30480338968e0f9
-Size (hitex.doc.r66924.tar.xz) = 2670660 bytes
+BLAKE2s (hitex.doc.r70015.tar.xz) = e84fc73cacb04c3a4b08365cfdb4d407c19034408002f95a80310852c2b89f73
+SHA512 (hitex.doc.r70015.tar.xz) = c7e762db68d9a007f0ea037aafef3bc6a4af4c436c6723bad676d9ee98b8d9a0b0eb0c103fa2225fba875cdec9ea99f5b2b9ed226498b7589705e72abafe78c8
+Size (hitex.doc.r70015.tar.xz) = 2644972 bytes
