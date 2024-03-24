@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2082 2024/03/24 15:07:43 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.2083 2024/03/24 15:30:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3566,3 +3566,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-rack to 3.0.10 [taca 2024-03-24]
 	Updated www/ruby-rack2 to 2.2.9 [taca 2024-03-24]
 	Updated net/knot to 3.3.5 [ryoon 2024-03-24]
+	Updated devel/ast-grep to 0.20.0 [pin 2024-03-24]
