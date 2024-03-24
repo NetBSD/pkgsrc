@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2021/02/14 03:04:33 markd Exp $
+# $NetBSD: Makefile,v 1.37 2024/03/24 10:44:38 markd Exp $
 
 DISTNAME=	jadetex
-PKGNAME=	tex-${DISTNAME}-3.13.57186
-TEXLIVE_REV=	57186
+PKGNAME=	tex-${DISTNAME}-3.13.70002
+TEXLIVE_REV=	70002
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jadetex
@@ -12,7 +12,6 @@ DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
 DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-DEPENDS+=	tex-everyshi-[0-9]*:../../print/tex-everyshi
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
