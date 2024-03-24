@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/08/31 15:40:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/03/24 14:22:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
@@ -119,6 +119,7 @@ ${GEM_LIBDIR}/test/tc_dlv.rb
 ${GEM_LIBDIR}/test/tc_dns.rb
 ${GEM_LIBDIR}/test/tc_dnskey.rb
 ${GEM_LIBDIR}/test/tc_ds.rb
+${GEM_LIBDIR}/test/tc_ecdsa.rb
 ${GEM_LIBDIR}/test/tc_encoding.rb
 ${GEM_LIBDIR}/test/tc_escapedchars.rb
 ${GEM_LIBDIR}/test/tc_gpos.rb
