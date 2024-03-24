@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/04/14 02:40:23 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/03/24 10:49:09 markd Exp $
 
-BLAKE2s (mfware.r62387.tar.xz) = ed9ad7a56e9c86de4a3e286345c8784c768098342f47892a1b1598d60dd7f5ba
-SHA512 (mfware.r62387.tar.xz) = 4ed72f1fdd64298b0ae67af00c3ba64bc6ee0a4851ab09c674adf5824972ef183d2913f5bda7d0756be403cbb14817e67913274e350bed81201fbf7af5b2ec97
-Size (mfware.r62387.tar.xz) = 3180 bytes
+BLAKE2s (mfware.r70015.tar.xz) = d12fb707ec23a6be9e7f4c0d56f9f3937d1cd0678a7c0e0910ddf40a673cfe32
+SHA512 (mfware.r70015.tar.xz) = a175c2f4fa69a9c73e2194c8bcfeef23c545a34fb25b60e65095d65e6faf94549cd1a115bc49d2c3ed7a67548c054cf14a7fb6aaf78861f6d55fc3ce20362dc9
+Size (mfware.r70015.tar.xz) = 3180 bytes
