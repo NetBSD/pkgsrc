@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/17 17:28:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/03/24 13:43:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/cucumber/core.rb
@@ -27,6 +26,7 @@ ${GEM_LIBDIR}/lib/cucumber/core/test/filters/activate_steps_for_self_test.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/filters/locations_filter.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/filters/name_filter.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/filters/tag_filter.rb
+${GEM_LIBDIR}/lib/cucumber/core/test/hook_step.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/location.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/result.rb
 ${GEM_LIBDIR}/lib/cucumber/core/test/runner.rb
