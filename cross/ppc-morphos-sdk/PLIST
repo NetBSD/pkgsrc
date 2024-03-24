@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/20 20:27:22 js Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/03/24 10:48:09 js Exp $
 gg/bin/cvinclude.pl
 gg/bin/genfd.pl
 gg/include/FlexLexer.h
@@ -28,6 +28,7 @@ gg/include/ctype.h
 gg/include/curl/curl.h
 gg/include/curl/curlver.h
 gg/include/curl/easy.h
+gg/include/curl/header.h
 gg/include/curl/mprintf.h
 gg/include/curl/multi.h
 gg/include/curl/options.h
@@ -35,6 +36,7 @@ gg/include/curl/stdcheaders.h
 gg/include/curl/system.h
 gg/include/curl/typecheck-gcc.h
 gg/include/curl/urlapi.h
+gg/include/curl/websockets.h
 gg/include/db.h
 gg/include/diagnostics.h
 gg/include/dirent.h
@@ -91,6 +93,7 @@ gg/include/machine/signal.h
 gg/include/machine/trap.h
 gg/include/machine/types.h
 gg/include/machine/vmparam.h
+gg/include/magic.h
 gg/include/malloc.h
 gg/include/math-68881.h
 gg/include/math.h
@@ -541,6 +544,7 @@ gg/includestd/ctype.h
 gg/includestd/curl/curl.h
 gg/includestd/curl/curlver.h
 gg/includestd/curl/easy.h
+gg/includestd/curl/header.h
 gg/includestd/curl/mprintf.h
 gg/includestd/curl/multi.h
 gg/includestd/curl/options.h
@@ -548,6 +552,7 @@ gg/includestd/curl/stdcheaders.h
 gg/includestd/curl/system.h
 gg/includestd/curl/typecheck-gcc.h
 gg/includestd/curl/urlapi.h
+gg/includestd/curl/websockets.h
 gg/includestd/db.h
 gg/includestd/dirent.h
 gg/includestd/dos.h
@@ -563,7 +568,6 @@ gg/includestd/gentls.h
 gg/includestd/getopt.h
 gg/includestd/glob.h
 gg/includestd/glue.h
-gg/includestd/gmp.h
 gg/includestd/gnu.a.out.h
 gg/includestd/grp.h
 gg/includestd/gvarargs.h
@@ -774,8 +778,6 @@ gg/includestd/openssl/x509v3err.h
 gg/includestd/packets.h
 gg/includestd/param.h
 gg/includestd/paths.h
-gg/includestd/png.h
-gg/includestd/pngconf.h
 gg/includestd/protocols/dumprestore.h
 gg/includestd/protocols/routed.h
 gg/includestd/protocols/rwhod.h
@@ -896,6 +898,12 @@ gg/includestd/vis.h
 gg/includestd/wait.h
 gg/includestd/wchar.h
 gg/includestd/wctype.h
+gg/includestd/zconf.h
+gg/includestd/zlib.h
+gg/os-include/GL/freeglut.h
+gg/os-include/GL/freeglut_ext.h
+gg/os-include/GL/freeglut_std.h
+gg/os-include/GL/freeglut_ucall.h
 gg/os-include/GL/gl.h
 gg/os-include/GL/glu.h
 gg/os-include/GL/glut.h
@@ -937,6 +945,7 @@ gg/os-include/clib/bugreport_protos.h
 gg/os-include/clib/bullet_protos.h
 gg/os-include/clib/button_protos.h
 gg/os-include/clib/bz2_protos.h
+gg/os-include/clib/calendar_protos.h
 gg/os-include/clib/camd_protos.h
 gg/os-include/clib/cardres_protos.h
 gg/os-include/clib/cgxvideo_protos.h
@@ -967,6 +976,7 @@ gg/os-include/clib/expansion_protos.h
 gg/os-include/clib/expat_protos.h
 gg/os-include/clib/extras_protos.h
 gg/os-include/clib/fontconfig_protos.h
+gg/os-include/clib/freeglut_protos.h
 gg/os-include/clib/fuelgauge_protos.h
 gg/os-include/clib/gadtools_protos.h
 gg/os-include/clib/getfile_protos.h
@@ -1194,6 +1204,7 @@ gg/os-include/fd/bugreport_lib.fd
 gg/os-include/fd/bullet_lib.fd
 gg/os-include/fd/button_lib.fd
 gg/os-include/fd/bz2_lib.fd
+gg/os-include/fd/calendar_lib.fd
 gg/os-include/fd/camd_lib.fd
 gg/os-include/fd/cardres_lib.fd
 gg/os-include/fd/cgxvideo_lib.fd
@@ -1222,6 +1233,7 @@ gg/os-include/fd/expansion_lib.fd
 gg/os-include/fd/expat_lib.fd
 gg/os-include/fd/extras_lib.fd
 gg/os-include/fd/fontconfig_lib.fd
+gg/os-include/fd/freeglut_lib.fd
 gg/os-include/fd/fuelgauge_lib.fd
 gg/os-include/fd/gadtools_lib.fd
 gg/os-include/fd/getfile_lib.fd
@@ -1451,6 +1463,7 @@ gg/os-include/libraries/asyncio.h
 gg/os-include/libraries/btree.h
 gg/os-include/libraries/bugreport.h
 gg/os-include/libraries/bz2.h
+gg/os-include/libraries/calendar.h
 gg/os-include/libraries/camd.h
 gg/os-include/libraries/charsets.h
 gg/os-include/libraries/clipboard.h
@@ -1590,6 +1603,7 @@ gg/os-include/ppcinline/bugreport.h
 gg/os-include/ppcinline/bullet.h
 gg/os-include/ppcinline/button.h
 gg/os-include/ppcinline/bz2.h
+gg/os-include/ppcinline/calendar.h
 gg/os-include/ppcinline/camd.h
 gg/os-include/ppcinline/cardres.h
 gg/os-include/ppcinline/cgxvideo.h
@@ -1618,6 +1632,7 @@ gg/os-include/ppcinline/expansion.h
 gg/os-include/ppcinline/expat.h
 gg/os-include/ppcinline/extras.h
 gg/os-include/ppcinline/fontconfig.h
+gg/os-include/ppcinline/freeglut.h
 gg/os-include/ppcinline/fuelgauge.h
 gg/os-include/ppcinline/gadtools.h
 gg/os-include/ppcinline/getfile.h
@@ -1774,6 +1789,7 @@ gg/os-include/proto/bugreport.h
 gg/os-include/proto/bullet.h
 gg/os-include/proto/button.h
 gg/os-include/proto/bz2.h
+gg/os-include/proto/calendar.h
 gg/os-include/proto/camd.h
 gg/os-include/proto/cardres.h
 gg/os-include/proto/cgxvideo.h
@@ -1802,6 +1818,7 @@ gg/os-include/proto/expansion.h
 gg/os-include/proto/expat.h
 gg/os-include/proto/extras.h
 gg/os-include/proto/fontconfig.h
+gg/os-include/proto/freeglut.h
 gg/os-include/proto/fuelgauge.h
 gg/os-include/proto/gadtools.h
 gg/os-include/proto/getfile.h
@@ -1942,8 +1959,10 @@ gg/os-include/sqlite3.h
 gg/os-include/tgl/gl.h
 gg/os-include/tgl/gla.h
 gg/os-include/tgl/gla_pub.h
+gg/os-include/tgl/glstd.h
 gg/os-include/tgl/glu.h
 gg/os-include/tgl/glut.h
+gg/os-include/tgl/types.h
 gg/os-include/tiff.h
 gg/os-include/tiffio.h
 gg/os-include/utility/date.h
@@ -1964,9 +1983,7 @@ gg/ppc-morphos/lib/crt0i.o
 gg/ppc-morphos/lib/crt0ni.o
 gg/ppc-morphos/lib/lcrt0.o
 gg/ppc-morphos/lib/lcrt0i.o
-gg/ppc-morphos/lib/libGL.a
 gg/ppc-morphos/lib/libGLU.a
-gg/ppc-morphos/lib/libGLUT.a
 gg/ppc-morphos/lib/libabox.a
 gg/ppc-morphos/lib/libaboxstubs.a
 gg/ppc-morphos/lib/libb32/libabox.a
@@ -1977,6 +1994,7 @@ gg/ppc-morphos/lib/libb32/libm.a
 gg/ppc-morphos/lib/libb32/libmfd.a
 gg/ppc-morphos/lib/libb32/libnix/end.o
 gg/ppc-morphos/lib/libb32/libnix/endi.o
+gg/ppc-morphos/lib/libb32/libnix/libGL.a
 gg/ppc-morphos/lib/libb32/libnix/libauto.a
 gg/ppc-morphos/lib/libb32/libnix/libc.a
 gg/ppc-morphos/lib/libb32/libnix/libcrypto.a
@@ -2013,6 +2031,7 @@ gg/ppc-morphos/lib/libnix/end.o
 gg/ppc-morphos/lib/libnix/endi.o
 gg/ppc-morphos/lib/libnix/lcrt0.o
 gg/ppc-morphos/lib/libnix/lcrt0i.o
+gg/ppc-morphos/lib/libnix/libGL.a
 gg/ppc-morphos/lib/libnix/libauto.a
 gg/ppc-morphos/lib/libnix/libc.a
 gg/ppc-morphos/lib/libnix/libcrypto.a
@@ -2020,6 +2039,7 @@ gg/ppc-morphos/lib/libnix/libcrypto_shared.a
 gg/ppc-morphos/lib/libnix/libcrypto_sharedext.a
 gg/ppc-morphos/lib/libnix/libcurl.a
 gg/ppc-morphos/lib/libnix/libdl.a
+gg/ppc-morphos/lib/libnix/libglut.a
 gg/ppc-morphos/lib/libnix/libnghttp2.a
 gg/ppc-morphos/lib/libnix/libpthread.a
 gg/ppc-morphos/lib/libnix/libssl.a
