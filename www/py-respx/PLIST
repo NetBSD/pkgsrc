@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/08 08:41:15 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/03/24 17:17:58 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/respx/__init__.py
 ${PYSITELIB}/respx/__init__.pyc
 ${PYSITELIB}/respx/__init__.pyo
@@ -43,3 +42,6 @@ ${PYSITELIB}/respx/transports.pyo
 ${PYSITELIB}/respx/types.py
 ${PYSITELIB}/respx/types.pyc
 ${PYSITELIB}/respx/types.pyo
+${PYSITELIB}/respx/utils.py
+${PYSITELIB}/respx/utils.pyc
+${PYSITELIB}/respx/utils.pyo
