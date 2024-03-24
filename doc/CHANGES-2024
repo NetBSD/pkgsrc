@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2086 2024/03/24 16:02:44 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.2087 2024/03/24 16:03:33 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3570,3 +3570,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/csvlens to 0.8.0 [pin 2024-03-24]
 	Updated shells/starship to 1.18.1 [pin 2024-03-24]
 	Updated fonts/ibm-plex-otf to 6.4.0 [nikita 2024-03-24]
+	Updated fonts/ibm-plex-ttf to 6.4.0 [nikita 2024-03-24]
