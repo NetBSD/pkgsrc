@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/10 04:32:05 markd Exp $
+# $NetBSD: Makefile,v 1.6 2024/03/24 10:51:36 markd Exp $
 
 DISTNAME=	mltex
-PKGNAME=	tex-${DISTNAME}-2.2.54227
-PKGREVISION=	1
-TEXLIVE_REV=	54227
+PKGNAME=	tex-${DISTNAME}-2.2.70002
+TEXLIVE_REV=	70002
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mltex
@@ -11,10 +10,14 @@ COMMENT=	The MLTeX system
 
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
+DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
+DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
-DEPENDS+=	tex-latex>=2012:../../print/tex-latex
+DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
+DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
 
 INSTALLATION_DIRS=	bin
