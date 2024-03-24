@@ -1,25 +1,27 @@
-# $NetBSD: Makefile,v 1.11 2023/12/13 17:39:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2024/03/24 20:06:49 adam Exp $
 
-GITHUB_PROJECT=	helix
-DISTNAME=	22.12
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	helix-23.10-source
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helix-editor/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://helix-editor.com/
 COMMENT=	Modal editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pax
 
-INSTALLATION_DIRS+=	share/helix/runtime/grammars
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
+
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pax
+MAKE_ENV+=	HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
+
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/examples/helix/completion
+INSTALLATION_DIRS+=	share/helix/runtime/grammars
 
 .include "cargo-depends.mk"
 .include "tree-sitter-depends.mk"
@@ -34,12 +36,12 @@ SUBST_CLASSES+=		datadir
 SUBST_STAGE.datadir=	pre-configure
 SUBST_MESSAGE.datadir=	Fixing datadir
 SUBST_FILES.datadir=	helix-loader/src/lib.rs
-SUBST_SED.datadir+=	-e 's,%%DATADIR%%,${PREFIX}/share/helix,g'
+SUBST_SED.datadir=	-e 's,@DATADIR@,${PREFIX}/share/helix,g'
 
 .include "../../mk/bsd.prefs.mk"
 
 post-build:
-	${RUN} cd ${WRKSRC} && env HELIX_RUNTIME=${WRKSRC}/runtime \
+	${RUN} cd ${WRKSRC} && ${SETENV} HELIX_RUNTIME=${WRKSRC}/runtime \
 		./target/release/hx --grammar build
 # not under ${PREFIX}/lib, or else lang/rust/cargo.mk would handle it
 .if ${OPSYS} == "Darwin"

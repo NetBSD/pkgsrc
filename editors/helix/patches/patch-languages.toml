@@ -1,0 +1,23 @@
+$NetBSD: patch-languages.toml,v 1.1 2024/03/24 20:06:49 adam Exp $
+
+Skip languages that can't be fetched.
+
+--- languages.toml.orig	2024-03-24 19:48:47.058353747 +0000
++++ languages.toml
+@@ -2991,16 +2991,6 @@ name = "strace"
+ source = { git = "https://github.com/sigmaSd/tree-sitter-strace", rev = "2b18fdf9a01e7ec292cc6006724942c81beb7fd5" }
+ 
+ [[language]]
+-name = "gemini"
+-scope = "source.gmi"
+-file-types = ["gmi"]
+-roots = []
+-
+-[[grammar]]
+-name = "gemini"
+-source = { git = "https://git.sr.ht/~sfr/tree-sitter-gemini", rev = "3cc5e4bdf572d5df4277fc2e54d6299bd59a54b3" }
+-
+-[[language]]
+ name = "templ"
+ scope = "source.templ"
+ file-types = ["templ"]

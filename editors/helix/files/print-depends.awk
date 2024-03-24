@@ -35,11 +35,10 @@ BEGIN {
 
 END {
 	print ""
-	print "DISTFILES?=		${DEFAULT_DISTFILES}"
 	print ".for name rev url path in ${TS_FILES}"
 	print "TS_DISTFILE:=		${name}-${rev}.tar.gz"
 	print "TS_DISTFILES:=		${TS_DISTFILES} ${TS_DISTFILE}"
-	print "SITES.${TS_DISTFILE}=	-${url}/archive/${rev}.tar.gz"
+	print "SITES.${TS_DISTFILE}=	-${url}/archive/${rev}.tar.gz -${url}/-/archive/${rev}.tar.gz"
 	print ".endfor"
-	print "DISTFILES:=		${DISTFILES} ${TS_DISTFILES}"
+	print "DISTFILES:=		${DEFAULT_DISTFILES} ${TS_DISTFILES}"
 }
