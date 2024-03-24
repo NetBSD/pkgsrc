@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/03/07 16:35:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/03/24 19:24:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,6 +28,9 @@ ${PYSITELIB}/importlib_resources/compat/py38.pyo
 ${PYSITELIB}/importlib_resources/compat/py39.py
 ${PYSITELIB}/importlib_resources/compat/py39.pyc
 ${PYSITELIB}/importlib_resources/compat/py39.pyo
+${PYSITELIB}/importlib_resources/functional.py
+${PYSITELIB}/importlib_resources/functional.pyc
+${PYSITELIB}/importlib_resources/functional.pyo
 ${PYSITELIB}/importlib_resources/future/__init__.py
 ${PYSITELIB}/importlib_resources/future/__init__.pyc
 ${PYSITELIB}/importlib_resources/future/__init__.pyo
@@ -94,6 +97,9 @@ ${PYSITELIB}/importlib_resources/tests/test_custom.pyo
 ${PYSITELIB}/importlib_resources/tests/test_files.py
 ${PYSITELIB}/importlib_resources/tests/test_files.pyc
 ${PYSITELIB}/importlib_resources/tests/test_files.pyo
+${PYSITELIB}/importlib_resources/tests/test_functional.py
+${PYSITELIB}/importlib_resources/tests/test_functional.pyc
+${PYSITELIB}/importlib_resources/tests/test_functional.pyo
 ${PYSITELIB}/importlib_resources/tests/test_open.py
 ${PYSITELIB}/importlib_resources/tests/test_open.pyc
 ${PYSITELIB}/importlib_resources/tests/test_open.pyo
