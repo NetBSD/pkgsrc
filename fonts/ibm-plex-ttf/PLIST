@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/07/25 20:13:01 fcambus Exp $
-@pkgdir share/fonts/X11/OTF
+@comment $NetBSD: PLIST,v 1.4 2024/03/24 16:03:24 nikita Exp $
 share/fonts/X11/TTF/IBMPlexMono-Bold.ttf
 share/fonts/X11/TTF/IBMPlexMono-BoldItalic.ttf
 share/fonts/X11/TTF/IBMPlexMono-ExtraLight.ttf
@@ -88,6 +87,14 @@ share/fonts/X11/TTF/IBMPlexSansKR-Regular.ttf
 share/fonts/X11/TTF/IBMPlexSansKR-SemiBold.ttf
 share/fonts/X11/TTF/IBMPlexSansKR-Text.ttf
 share/fonts/X11/TTF/IBMPlexSansKR-Thin.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Bold.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-ExtraLight.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Light.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Medium.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Regular.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-SemiBold.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Text.ttf
+share/fonts/X11/TTF/IBMPlexSansTC-Thin.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-Bold.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-ExtraLight.ttf
 share/fonts/X11/TTF/IBMPlexSansThai-Light.ttf
@@ -120,3 +127,4 @@ share/fonts/X11/TTF/IBMPlexSerif-Text.ttf
 share/fonts/X11/TTF/IBMPlexSerif-TextItalic.ttf
 share/fonts/X11/TTF/IBMPlexSerif-Thin.ttf
 share/fonts/X11/TTF/IBMPlexSerif-ThinItalic.ttf
+@pkgdir share/fonts/X11/OTF
