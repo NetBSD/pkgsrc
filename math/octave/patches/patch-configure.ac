@@ -1,13 +1,15 @@
-$NetBSD: patch-configure.ac,v 1.6 2021/05/31 07:16:51 thor Exp $
+$NetBSD: patch-configure.ac,v 1.7 2024/03/24 12:46:23 adam Exp $
 
 install .oct loadable modules with INSTALL_LIB to avoid stripping them
 
 Allow overriding MKOCTFILE_F77 so we can install a full path gfortran
 (for building octave-forge packages like control)
 
---- configure.ac.orig	2021-02-19 17:36:34.000000000 +0000
+Portability fixes.
+
+--- configure.ac.orig	2024-03-12 18:00:23.000000000 +0000
 +++ configure.ac
-@@ -230,8 +230,11 @@ AC_PROG_LN_S
+@@ -238,8 +238,11 @@ AC_PROG_LN_S
  AC_PROG_MKDIR_P
  
  AC_PROG_INSTALL
@@ -20,7 +22,7 @@ Allow overriding MKOCTFILE_F77 so we can install a full path gfortran
  
  ## Programs used when running Octave.
  OCTAVE_PROG_GHOSTSCRIPT
-@@ -897,11 +900,11 @@ if test "$cross_compiling" = yes && test
+@@ -933,11 +936,11 @@ if test "$cross_compiling" = yes && test
    MKOCTFILE_F77=`echo "$F77" | $SED "s,$CROSS_TOOL_PREFIX,,"`
    MKOCTFILE_RANLIB=`echo "$RANLIB" | $SED "s,$CROSS_TOOL_PREFIX,,"`
  else
@@ -37,3 +39,21 @@ Allow overriding MKOCTFILE_F77 so we can install a full path gfortran
  fi
  AC_MSG_NOTICE([defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX])
  AC_MSG_NOTICE([defining MKOCTFILE_AR to be $MKOCTFILE_AR])
+@@ -2365,7 +2368,7 @@ fi
+ 
+ ### Check for SUNDIALS library features, some required, some optional.
+ 
+-if test "x$octave_have_sundials_libs" == xyes; then
++if test "x$octave_have_sundials_libs" = xyes; then
+ 
+   CPPFLAGS="$SUNDIALS_IDA_CPPFLAGS $SUNDIALS_NVECSERIAL_CPPFLAGS $KLU_CPPFLAGS $BLAS_CPPFLAGS $CPPFLAGS"
+   LDFLAGS="$SUNDIALS_IDA_LDFLAGS $SUNDIALS_NVECSERIAL_LDFLAGS $KLU_LDFLAGS $BLAS_LDFLAGS $LDFLAGS"
+@@ -2405,7 +2408,7 @@ dnl FIXME: The test on the sunlinsol_klu
+ dnl How can we do a better job here?  Do we need to disable sundials
+ dnl any tests fail, or can we fix __ode15__.cc so that it still partially
+ dnl works when some things are missing (for example, KLU)?
+-if test "x$octave_have_sundials_libs" == xyes; then
++if test "x$octave_have_sundials_libs" = xyes; then
+   if test "x$octave_cv_sundials_sunlinsol_dense" = xyes \
+       && test "x$octave_cv_sundials_realtype_is_double" = xyes \
+       && test "x$octave_have_sundials_compatible_api" = xyes; then
