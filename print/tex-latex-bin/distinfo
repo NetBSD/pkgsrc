@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:13:51 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/03/24 11:22:05 markd Exp $
 
-BLAKE2s (latex-bin.r57186.tar.xz) = d5371fc12e7242623db5e0324e2ee6026607fe3f5b22fdb7b44ad8ef22d7deb8
-SHA512 (latex-bin.r57186.tar.xz) = 69400750697649b24d8ea6a5887bd891ce30d0d46461b6cab3de02c434de0e43c06d89f70747d7c7718ac263e6cd63457cff443af24cc53e6c75266c81999777
-Size (latex-bin.r57186.tar.xz) = 620 bytes
+BLAKE2s (latex-bin.r70501.tar.xz) = b8c98e132d4b9d8c1e5cc496d88f25b5d215e73dd673fb483ed9f022f5d66d0a
+SHA512 (latex-bin.r70501.tar.xz) = bdf854f19390c341cb0079c0f98b1f334511e090d3346349083d38d54d1f5955858fed6965b8defd3227d3e98b79073aafb945c6592019ac8350461f049119e5
+Size (latex-bin.r70501.tar.xz) = 592 bytes
