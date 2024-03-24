@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/02/03 16:13:00 taca Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/24 14:27:58 taca Exp $
 
-DISTNAME=	ruby_smb-3.3.2
+DISTNAME=	ruby_smb-3.3.4
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,6 +15,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-openssl-ccm-[0-9]*:../../security/ruby-openssl-ccm
 DEPENDS+=	${RUBY_PKGPREFIX}-openssl-cmac-[0-9]*:../../security/ruby-openssl-cmac
 
 USE_LANGUAGES=	# none
+
+OVERRIDE_GEMSPEC+=	bindata>=2.4.15
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
