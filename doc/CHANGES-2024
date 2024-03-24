@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2093 2024/03/24 18:53:33 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2094 2024/03/24 19:20:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/conftest to 0.50.0 [leot 2024-03-24]
 	Updated x11/alacritty to 0.13.2 [pin 2024-03-24]
 	Updated net/tlrc to 1.9.0 [pin 2024-03-24]
+	Updated editors/emacs29 to 29.3 [wiz 2024-03-24]
