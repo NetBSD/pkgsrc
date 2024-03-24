@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/03/24 11:22:05 markd Exp $
+# $NetBSD: Makefile,v 1.17 2024/03/24 11:24:13 markd Exp $
 
 DISTNAME=	latex-bin
 PKGNAME=	tex-${DISTNAME}-2024
@@ -8,14 +8,11 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX executables
 
 CONFLICTS+=	tex-bin-latex<2009
-DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
-DEPENDS+=	tex-atveryend-[0-9]*:../../print/tex-atveryend
 DEPENDS+=	tex-babel>3.14:../../print/tex-babel
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
 DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
-DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex>=2012:../../print/tex-latex
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 SUPERSEDES=	tex-bin-latex<2009
