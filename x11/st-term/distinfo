@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/10/09 12:40:57 leot Exp $
+$NetBSD: distinfo,v 1.12 2024/03/24 20:53:39 leot Exp $
 
-BLAKE2s (st-0.9.tar.gz) = cc853e71e55e78d19e056da73a1690da338fa8bd6ec281c8b681c1ef8c72b427
-SHA512 (st-0.9.tar.gz) = 8d996a68d55c63d84da9962911b076ef437842e8cd83d74672d95531dfbaea91e049430886459a99e859ec760bb3754e94bbe1f646410998725e5a8997fb70ea
-Size (st-0.9.tar.gz) = 48171 bytes
+BLAKE2s (st-0.9.1.tar.gz) = a8416212632e35ba38d01a83af97b033382f7f19e227b33d142a40cdb8cf517b
+SHA512 (st-0.9.1.tar.gz) = 88406dcd7befb9cf88ffa41a235dfd330b4448834e0af4b6318b1eff6cf29bc9ea9aafc3343ddf5a7ae3871b82fa1a7c349df866bc944ae0412aa1ce95c40007
+Size (st-0.9.1.tar.gz) = 48412 bytes
