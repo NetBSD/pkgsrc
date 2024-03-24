@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.60 2024/01/13 11:40:36 adam Exp $
+$NetBSD: distinfo,v 1.61 2024/03/24 12:47:44 adam Exp $
 
-BLAKE2s (waf-2.0.26.tar.bz2) = e9f06fe1b4c7563852b8c44d3483a66676432540beb3e44b7ad8062b737c55f1
-SHA512 (waf-2.0.26.tar.bz2) = 0b1bc585d2e95124d29cbd27fcbdd41f628da4d31c74487733671a7d6d0b0ffd6a4efe7a03e638cad085359cc8c889abcda9359f8dd560fe533c1b799fd1170a
-Size (waf-2.0.26.tar.bz2) = 692358 bytes
+BLAKE2s (waf-2.0.27.tar.bz2) = 03c16d45782db1a779f00760ade2d8240bddb9eb75b7ea0fd7ea9d8b167a35fb
+SHA512 (waf-2.0.27.tar.bz2) = a62dbb1ee89d88969c31d3f634577d80b8a595460d445cae9b42ca423cfcbbb96347b5b67697165833f3dd496b4bc7e312e166af86cb3b97ed57ffe59f46b98a
+Size (waf-2.0.27.tar.bz2) = 693624 bytes
