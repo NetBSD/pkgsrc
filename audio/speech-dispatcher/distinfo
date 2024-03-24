@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/03/12 08:53:19 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/03/24 10:28:14 adam Exp $
 
 BLAKE2s (speech-dispatcher-0.11.5.tar.gz) = cf3c479b27173d96225026d886e360b6cf2d25474180b2cbf574d7f256171ab9
 SHA512 (speech-dispatcher-0.11.5.tar.gz) = d6d880bce0ae5bc2a5d519ef7740c689ae8b4b0bb658379762810e4beae3e465a429fbe19f7c490e89db0ea6a36aedd4b2287ac9251b90059b5c2cb3c0dd8a28
@@ -6,5 +6,7 @@ Size (speech-dispatcher-0.11.5.tar.gz) = 7230756 bytes
 SHA1 (patch-config_Makefile.in) = dd58a389bc9820d85e4fe912faff7e2cf969fa8e
 SHA1 (patch-config_clients_Makefile.in) = 4c172a7c33336343b88707ae17702c80c97c28f5
 SHA1 (patch-config_modules_Makefile.in) = 674d4306baf0e2c0d5d91f4576922be8405d93b3
+SHA1 (patch-configure) = 6396c925040cb4583b6e67178551b5dfd145c07d
 SHA1 (patch-src-audio-libao.c) = d974ecdb0653082ef39cdefb55b4c9b2f8ec1c68
+SHA1 (patch-src_modules_Makefile.in) = fde7e250546ba38ad27c4cf6ae136feb189c0591
 SHA1 (patch-src_modules_espeak.c) = e75d4269c393df15359b9574ca99643a9b87faf3
