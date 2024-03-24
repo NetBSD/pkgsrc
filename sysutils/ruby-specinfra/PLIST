@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/02/10 14:15:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/03/24 14:31:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/lib/specinfra/backend.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/base.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/cmd.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/docker.rb
+${GEM_LIBDIR}/lib/specinfra/backend/dockercli.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/dockerfile.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/exec.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/jexec.rb
@@ -400,6 +401,7 @@ ${GEM_LIBDIR}/lib/specinfra/processor.rb
 ${GEM_LIBDIR}/lib/specinfra/properties.rb
 ${GEM_LIBDIR}/lib/specinfra/runner.rb
 ${GEM_LIBDIR}/lib/specinfra/version.rb
+${GEM_LIBDIR}/spec/backend/dockercli/build_command_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/build_command_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/child_process_spec.rb
 ${GEM_LIBDIR}/spec/backend/exec/consume_exited_process_spec.rb
