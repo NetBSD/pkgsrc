@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.88 2024/01/10 08:26:42 adam Exp $
+# $NetBSD: Makefile,v 1.89 2024/03/24 00:32:41 gdt Exp $
 
 DISTNAME=	redis-7.2.4
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
+# NB: upsteram has changed to a proprietary license.  Probably (absent
+# discussion), this should not be updated until a license-ok version
+# is in pkgsrc.  A continuation fork is in progress at
+# https://codeberg.org/redict/redict
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
