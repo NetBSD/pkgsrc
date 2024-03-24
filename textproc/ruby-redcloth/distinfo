@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/12/17 15:54:25 taca Exp $
+$NetBSD: distinfo,v 1.18 2024/03/24 14:36:30 taca Exp $
 
-BLAKE2s (RedCloth-4.3.3.gem) = 24ef879b9b6e7a81e5f08c41ce32b851eca4693d294f2c6fffc7f81c8c7aae3e
-SHA512 (RedCloth-4.3.3.gem) = 12c8ff86aa0d7272acd265deb3ad51ace3a1f92060e34a270fcc9f5942042ccc5100d1cc9438b061aca8d4fa8c023c48a8b8f723de8408025f3f934d5c084865
-Size (RedCloth-4.3.3.gem) = 234496 bytes
+BLAKE2s (RedCloth-4.3.4.gem) = 5a8956f61eb26f76b3236295dc1bd4597c4df996b74ed55ad4bf0f46f66a5627
+SHA512 (RedCloth-4.3.4.gem) = 868972d90450606c8d4918d02765b2730cdb87243f0cb118992ebf1457df31c42821f0e79c1f9e93b2d924174d2d0d5514d2bc0ba5169eb0c10c3748d5d7a698
+Size (RedCloth-4.3.4.gem) = 234496 bytes

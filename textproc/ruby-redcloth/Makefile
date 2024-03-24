@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/12/17 15:54:25 taca Exp $
+# $NetBSD: Makefile,v 1.23 2024/03/24 14:36:30 taca Exp $
 
-DISTNAME=	RedCloth-4.3.3
+DISTNAME=	RedCloth-4.3.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc
 
