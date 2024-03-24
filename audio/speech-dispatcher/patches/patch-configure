@@ -1,0 +1,103 @@
+$NetBSD: patch-configure,v 1.1 2024/03/24 10:28:15 adam Exp $
+
+Allow _module_speak _module_speak_sync being undefined
+https://github.com/brailcom/speechd/pull/853
+
+--- configure.orig	2023-08-06 18:00:07.000000000 +0000
++++ configure
+@@ -775,6 +775,8 @@ GLIB_CFLAGS
+ PKG_CONFIG_LIBDIR
+ PKG_CONFIG_PATH
+ PKG_CONFIG
++DARWIN_HOST_FALSE
++DARWIN_HOST_TRUE
+ HAVE_HELP2MAN_FALSE
+ HAVE_HELP2MAN_TRUE
+ HELP2MAN
+@@ -20816,6 +20818,26 @@ fi
+ 
+ fi
+ 
++if test x$enable_shared = xyes;
++then
++	default_shim=shim
++else
++	default_shim=no
++fi
++
++case "$host" in
++	*-*darwin*)
++		darwin_host=yes
++		default_shim=no
++		;;
++esac
++ if test "$darwin_host" = yes; then
++  DARWIN_HOST_TRUE=
++  DARWIN_HOST_FALSE='#'
++else
++  DARWIN_HOST_TRUE='#'
++  DARWIN_HOST_FALSE=
++ fi
+ 
+ 
+ 
+@@ -23572,13 +23594,10 @@ printf "%s\n" "$as_me: error: in \`$ac_p
+ as_fn_error $? "IBMTTS is not available
+ See \`config.log' for more details" "$LINENO" 5; }
+ fi
+-		 with_ibmtts=shim
++		 with_ibmtts=$default_shim
+ fi
+ 
+ fi
+-if test "$with_ibmtts" = shim -a $enable_shared = no; then
+-  with_ibmtts=no
+-fi
+  if test $with_ibmtts != no; then
+   ibmtts_support_TRUE=
+   ibmtts_support_FALSE='#'
+@@ -23659,13 +23678,10 @@ printf "%s\n" "$as_me: error: in \`$ac_p
+ as_fn_error $? "Voxin is not available
+ See \`config.log' for more details" "$LINENO" 5; }
+ fi
+-		 with_voxin=shim
++		 with_voxin=$default_shim
+ fi
+ 
+ fi
+-if test "$with_voxin" = shim -a $enable_shared = no; then
+-  with_voxin=no
+-fi
+  if test "$with_voxin" != no; then
+   voxin_support_TRUE=
+   voxin_support_FALSE='#'
+@@ -23893,13 +23909,10 @@ printf "%s\n" "$as_me: error: in \`$ac_p
+ as_fn_error $? "Voxygen Baratinoo is not available
+ See \`config.log' for more details" "$LINENO" 5; }
+ fi
+-		 with_baratinoo=shim
++		 with_baratinoo=$default_shim
+ fi
+ 
+ fi
+-if test "$with_baratinoo" = shim -a $enable_shared = no; then
+-  with_baratinoo=no
+-fi
+  if test "$with_baratinoo" != no; then
+   baratinoo_support_TRUE=
+   baratinoo_support_FALSE='#'
+@@ -23979,13 +23992,10 @@ printf "%s\n" "$as_me: error: in \`$ac_p
+ as_fn_error $? "Kali is not available
+ See \`config.log' for more details" "$LINENO" 5; }
+ fi
+-		 with_kali=shim
++		 with_kali=$default_shim
+ fi
+ 
+ fi
+-if test "$with_kali" = shim -a $enable_shared = no; then
+-  with_kali=no
+-fi
+  if test $with_kali != no; then
+   kali_support_TRUE=
+   kali_support_FALSE='#'
