@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/10/20 14:17:44 adam Exp $
+$NetBSD: distinfo,v 1.27 2024/03/24 17:43:21 adam Exp $
 
-BLAKE2s (pytest-mock-3.12.0.tar.gz) = 221f0ee7d91178d12b9cca43b393a10bd85f3fcd44f79bb9e432898b2a84b51a
-SHA512 (pytest-mock-3.12.0.tar.gz) = 6da429e646a4e3a825f699969dbc87033136918bd9aa111ff334fac324e5ac89ef6516e82ffeeb20cb6a857fbbe904d8ee985acefba2d2b7bd0ffe4b9227ad82
-Size (pytest-mock-3.12.0.tar.gz) = 32139 bytes
+BLAKE2s (pytest-mock-3.14.0.tar.gz) = c61442a7db445661fcd0d4dc011f064d1cc749a23736c823f0cc39d0dbc6afd0
+SHA512 (pytest-mock-3.14.0.tar.gz) = c60059fe8fb64540f33382e52b9015dd9771483e2074d35c02cd5852a50eed02a64e202b7e81e920bbbd0621bd23fa9bb0467d2ceef7abd582df3e27eafeaa20
+Size (pytest-mock-3.14.0.tar.gz) = 32814 bytes
