@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/08/27 02:44:53 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/24 19:19:27 adam Exp $
 
-DISTNAME=	autopep8-2.0.4
+DISTNAME=	autopep8-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autopep8/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/hhatto/autopep8
 COMMENT=	Automatic formatter of Python code to conform to PEP 8
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.10.0:../../devel/py-codestyle
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.11.0:../../devel/py-codestyle
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -27,5 +27,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} autopep8 autopep8-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
