@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/03/24 10:47:24 markd Exp $
 
-BLAKE2s (luahbtex.r54498.tar.xz) = 3e225cb67a5d998231e51b9857034a00bc04376f0f909c793b8cc0333fa8e026
-SHA512 (luahbtex.r54498.tar.xz) = bffea9c260475928b1e40bda867d2dd2198f96aa08923cc63c5ba512d2490fcf1e8db686729cc04b0e62cae1dfededd13d4eeeae5ad321b42a9bf1219c0248aa
-Size (luahbtex.r54498.tar.xz) = 460 bytes
+BLAKE2s (luahbtex.r70015.tar.xz) = a79fa5435668652d45723aa639ed0ae957f9f79b3a6799edd6e0cc9653ef4f04
+SHA512 (luahbtex.r70015.tar.xz) = b1c78727ecda90057331e0e465f5d0f17cac3ecd4102f55743c070af23b10daf783e00c15edf70362708cf2dfd947623183cc433742d090d6314c71401019b0c
+Size (luahbtex.r70015.tar.xz) = 460 bytes
