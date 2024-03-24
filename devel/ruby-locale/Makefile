@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/03/23 15:36:04 taca Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/24 14:09:03 taca Exp $
 
-DISTNAME=	locale-2.1.3
+DISTNAME=	locale-2.1.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ruby-gettext.github.com/
+HOMEPAGE=	https://ruby-gettext.github.io/
 COMMENT=	Pure ruby library which provides basic APIs for localization
 LICENSE=	ruby-license OR gnu-lgpl-v3
 
