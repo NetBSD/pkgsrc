@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/16 14:36:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/24 14:04:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -11,6 +11,9 @@ ${GEM_LIBDIR}/lib/ffi-compiler/exporter.rb
 ${GEM_LIBDIR}/lib/ffi-compiler/fake_ffi/ffi-compiler/loader.rb
 ${GEM_LIBDIR}/lib/ffi-compiler/fake_ffi/ffi.rb
 ${GEM_LIBDIR}/lib/ffi-compiler/loader.rb
+${GEM_LIBDIR}/lib/ffi-compiler/multi_file_task.rb
 ${GEM_LIBDIR}/lib/ffi-compiler/platform.rb
+${GEM_LIBDIR}/lib/ffi-compiler/shell.rb
 ${GEM_LIBDIR}/lib/ffi-compiler/task.rb
+${GEM_LIBDIR}/lib/ffi-compiler/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
