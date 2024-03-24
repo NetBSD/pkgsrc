@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/15 04:55:51 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/03/24 11:03:38 markd Exp $
 
-BLAKE2s (uplatex.doc.r62387.tar.xz) = 53d774364219b38bfe54229df2efca84ee13669631e9cdaf1e5d7fca54d7a81d
-SHA512 (uplatex.doc.r62387.tar.xz) = 7a66eca2b04deea9af77b2663b423b928c25e4b3074ed01e7aa3305f1116c9c1d906c214588ede8b4310c7ded23fbd6a7a63ad070bf3e627d9a2b3bd23162b00
-Size (uplatex.doc.r62387.tar.xz) = 777384 bytes
+BLAKE2s (uplatex.doc.r70015.tar.xz) = b3318b39cbd212304dd57680e20360508c6c251c73cb0326ca60d314b6595328
+SHA512 (uplatex.doc.r70015.tar.xz) = 94fcfa9e76de7258c466954735186f56cfdcb65b553ec7246d27839d67ea9040a979d051f1e076a880b2f55dc5a36bbf52b957d58519959b7e24feabd6d5e61b
+Size (uplatex.doc.r70015.tar.xz) = 776308 bytes
