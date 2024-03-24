@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2022/04/15 04:55:51 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/24 11:03:38 markd Exp $
 
 DISTNAME=	uplatex
-PKGNAME=	tex-${DISTNAME}-2021.62387
-TEXLIVE_REV=	62387
+PKGNAME=	tex-${DISTNAME}-2024
+TEXLIVE_REV=	70015
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/uplatex
 COMMENT=	pLaTeX2e and miscellaneous macros for upTeX
 LICENSE=	modified-bsd
 
-DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
-DEPENDS+=	tex-atveryend-[0-9]*:../../print/tex-atveryend
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
-DEPENDS+=	tex-everyshi-[0-9]*:../../print/tex-everyshi
 DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
-DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-base-dev-[0-9]*:../../print/tex-latex-base-dev
 DEPENDS+=	tex-latex-firstaid-dev-[0-9]*:../../print/tex-latex-firstaid-dev

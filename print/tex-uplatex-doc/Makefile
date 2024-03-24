@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/04/15 04:55:51 markd Exp $
+# $NetBSD: Makefile,v 1.4 2024/03/24 11:03:38 markd Exp $
 
 DISTNAME=	uplatex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2021.62387
-TEXLIVE_REV=	62387
+PKGNAME=	tex-${DISTNAME:S/./-/}-2024
+TEXLIVE_REV=	70015
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/uplatex
