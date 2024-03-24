@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/09/13 12:03:13 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/24 16:02:32 nikita Exp $
 
-PKGNAME=	ibm-plex-otf-6.3.0
+PKGNAME=	ibm-plex-otf-6.4.0
 GITHUB_PROJECT=	plex
 DISTNAME=	OpenType
 CATEGORIES=	fonts
