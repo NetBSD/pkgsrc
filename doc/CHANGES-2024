@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2090 2024/03/24 18:34:05 leot Exp $
+$NetBSD: CHANGES-2024,v 1.2091 2024/03/24 18:49:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-test-mock to 3.14.0 [adam 2024-03-24]
 	Updated devel/py-progressbar2 to 4.4.2 [adam 2024-03-24]
 	Updated devel/opa to 0.62.1 [leot 2024-03-24]
+	Updated devel/conftest to 0.50.0 [leot 2024-03-24]
