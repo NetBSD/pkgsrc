@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/12 08:53:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/03/24 10:28:14 adam Exp $
 bin/spd-conf
 bin/spd-say
 bin/spdsend
@@ -43,7 +43,7 @@ ${PYSITELIB}/speechd_config/config.py
 ${PYSITELIB}/speechd_config/config.pyc
 ${PYSITELIB}/speechd_config/config.pyo
 lib/speech-dispatcher/spd_libao.la
-libexec/speech-dispatcher-modules/sd_baratinoo
+${PLIST.mods}libexec/speech-dispatcher-modules/sd_baratinoo
 libexec/speech-dispatcher-modules/sd_cicero
 libexec/speech-dispatcher-modules/sd_dummy
 libexec/speech-dispatcher-modules/sd_espeak-ng
@@ -51,13 +51,13 @@ libexec/speech-dispatcher-modules/sd_espeak-ng-mbrola
 libexec/speech-dispatcher-modules/sd_festival
 libexec/speech-dispatcher-modules/sd_flite
 libexec/speech-dispatcher-modules/sd_generic
-libexec/speech-dispatcher-modules/sd_kali
-libexec/speech-dispatcher-modules/sd_voxin
+${PLIST.mods}libexec/speech-dispatcher-modules/sd_kali
+${PLIST.mods}libexec/speech-dispatcher-modules/sd_voxin
 man/man1/spd-conf.1
 man/man1/spd-say.1
 man/man1/speech-dispatcher.1
 share/examples/speech-dispatcher/clients/emacs.conf
-share/examples/speech-dispatcher/modules/baratinoo.conf
+${PLIST.mods}share/examples/speech-dispatcher/modules/baratinoo.conf
 share/examples/speech-dispatcher/modules/cicero.conf
 share/examples/speech-dispatcher/modules/dtk-generic.conf
 share/examples/speech-dispatcher/modules/epos-generic.conf
@@ -68,12 +68,12 @@ share/examples/speech-dispatcher/modules/espeak-ng.conf
 share/examples/speech-dispatcher/modules/espeak.conf
 share/examples/speech-dispatcher/modules/festival.conf
 share/examples/speech-dispatcher/modules/flite.conf
-share/examples/speech-dispatcher/modules/kali.conf
+${PLIST.mods}share/examples/speech-dispatcher/modules/kali.conf
 share/examples/speech-dispatcher/modules/llia_phon-generic.conf
 share/examples/speech-dispatcher/modules/mary-generic.conf
 share/examples/speech-dispatcher/modules/mimic3-generic.conf
 share/examples/speech-dispatcher/modules/swift-generic.conf
-share/examples/speech-dispatcher/modules/voxin.conf
+${PLIST.mods}share/examples/speech-dispatcher/modules/voxin.conf
 share/examples/speech-dispatcher/speechd.conf
 share/locale/cs/LC_MESSAGES/speech-dispatcher.mo
 share/locale/de/LC_MESSAGES/speech-dispatcher.mo
@@ -88,14 +88,14 @@ share/sounds/speech-dispatcher/dummy-message.wav
 share/sounds/speech-dispatcher/test.wav
 share/speech-dispatcher/conf/clients/emacs.conf
 share/speech-dispatcher/conf/desktop/speechd.desktop
-share/speech-dispatcher/conf/modules/baratinoo.conf
+${PLIST.mods}share/speech-dispatcher/conf/modules/baratinoo.conf
 share/speech-dispatcher/conf/modules/cicero.conf
 share/speech-dispatcher/conf/modules/espeak-ng-mbrola.conf
 share/speech-dispatcher/conf/modules/espeak-ng.conf
 share/speech-dispatcher/conf/modules/espeak.conf
 share/speech-dispatcher/conf/modules/festival.conf
-share/speech-dispatcher/conf/modules/kali.conf
-share/speech-dispatcher/conf/modules/voxin.conf
+${PLIST.mods}share/speech-dispatcher/conf/modules/kali.conf
+${PLIST.mods}share/speech-dispatcher/conf/modules/voxin.conf
 share/speech-dispatcher/conf/speechd.conf
 share/speech-dispatcher/locale/af/emojis.dic
 share/speech-dispatcher/locale/am/emojis.dic

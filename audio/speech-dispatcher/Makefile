@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/03/12 08:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/03/24 10:28:14 adam Exp $
 
 DISTNAME=	speech-dispatcher-0.11.5
 CATEGORIES=	audio
@@ -11,11 +11,10 @@ HOMEPAGE=	https://devel.freebsoft.org/speechd
 COMMENT=	Common interface to speech synthesis library
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config makeinfo
-USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake intltool makeinfo msgfmt msgmerge pkg-config xgettext
+GNU_CONFIGURE=	yes
 
 INFO_FILES=	yes
 
@@ -60,8 +59,13 @@ CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/${module} \
 
 REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
 
+PLIST_VARS+=	mods
+
+.if ${OPSYS} != "Darwin"
+PLIST.mods=	yes
 post-install:
 	${INSTALL_LIB} ${WRKSRC}/src/modules/*so ${DESTDIR}${PREFIX}/lib
+.endif
 
 .include "../../audio/espeak-ng/buildlink3.mk"
 .include "../../audio/flite/buildlink3.mk"

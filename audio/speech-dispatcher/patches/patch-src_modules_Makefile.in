@@ -1,0 +1,121 @@
+$NetBSD: patch-src_modules_Makefile.in,v 1.1 2024/03/24 10:28:15 adam Exp $
+
+Allow _module_speak _module_speak_sync being undefined
+https://github.com/brailcom/speechd/pull/853
+
+--- src/modules/Makefile.in.orig	2023-08-06 18:00:06.000000000 +0000
++++ src/modules/Makefile.in
+@@ -107,6 +107,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
++@DARWIN_HOST_TRUE@am__append_1 = -Wl,-U,_module_speak -Wl,-U,_module_speak_sync
+ noinst_PROGRAMS = sd_skeleton0$(EXEEXT) sd_skeleton_config$(EXEEXT) \
+ 	$(am__EXEEXT_10)
+ modulebin_PROGRAMS = sd_dummy$(EXEEXT) sd_generic$(EXEEXT) \
+@@ -114,28 +115,28 @@ modulebin_PROGRAMS = sd_dummy$(EXEEXT) s
+ 	$(am__EXEEXT_2) $(am__EXEEXT_3) $(am__EXEEXT_4) \
+ 	$(am__EXEEXT_5) $(am__EXEEXT_6) $(am__EXEEXT_7) \
+ 	$(am__EXEEXT_8) $(am__EXEEXT_9)
+-@flite_support_TRUE@am__append_1 = sd_flite
+-@ibmtts_support_TRUE@am__append_2 = sd_ibmtts
+-@ibmtts_shim_TRUE@@ibmtts_support_TRUE@am__append_3 = -L.
+-@ibmtts_shim_TRUE@@ibmtts_support_TRUE@am__append_4 = $(EXTRA_sd_ibmtts_DEPENDENCIES)
+-@espeak_support_TRUE@am__append_5 = sd_espeak
+-@espeak_ng_support_TRUE@am__append_6 = sd_espeak-ng
+-@espeak_ng_support_TRUE@am__append_7 = sd_skeleton0_espeak-ng-sync \
++@flite_support_TRUE@am__append_2 = sd_flite
++@ibmtts_support_TRUE@am__append_3 = sd_ibmtts
++@ibmtts_shim_TRUE@@ibmtts_support_TRUE@am__append_4 = -L.
++@ibmtts_shim_TRUE@@ibmtts_support_TRUE@am__append_5 = $(EXTRA_sd_ibmtts_DEPENDENCIES)
++@espeak_support_TRUE@am__append_6 = sd_espeak
++@espeak_ng_support_TRUE@am__append_7 = sd_espeak-ng
++@espeak_ng_support_TRUE@am__append_8 = sd_skeleton0_espeak-ng-sync \
+ @espeak_ng_support_TRUE@	sd_skeleton0_espeak-ng-async \
+ @espeak_ng_support_TRUE@	sd_skeleton0_espeak-ng-sync-server \
+ @espeak_ng_support_TRUE@	sd_skeleton0_espeak-ng-async-server
+-@ivona_support_TRUE@am__append_8 = sd_ivona
+-@pico_support_TRUE@am__append_9 = sd_pico
+-@baratinoo_support_TRUE@am__append_10 = sd_baratinoo
+-@baratinoo_shim_TRUE@@baratinoo_support_TRUE@am__append_11 = -L.
+-@baratinoo_shim_TRUE@@baratinoo_support_TRUE@am__append_12 = $(EXTRA_sd_baratinoo_DEPENDENCIES)
+-@kali_support_TRUE@am__append_13 = sd_kali
+-@kali_shim_TRUE@@kali_support_TRUE@am__append_14 = -L.
+-@kali_shim_TRUE@@kali_support_TRUE@am__append_15 = -I$(srcdir)/kali_shim
+-@kali_shim_TRUE@@kali_support_TRUE@am__append_16 = $(EXTRA_sd_kali_DEPENDENCIES)
+-@voxin_support_TRUE@am__append_17 = sd_voxin
+-@voxin_shim_TRUE@@voxin_support_TRUE@am__append_18 = -L.
+-@voxin_shim_TRUE@@voxin_support_TRUE@am__append_19 = $(EXTRA_sd_voxin_DEPENDENCIES)
++@ivona_support_TRUE@am__append_9 = sd_ivona
++@pico_support_TRUE@am__append_10 = sd_pico
++@baratinoo_support_TRUE@am__append_11 = sd_baratinoo
++@baratinoo_shim_TRUE@@baratinoo_support_TRUE@am__append_12 = -L.
++@baratinoo_shim_TRUE@@baratinoo_support_TRUE@am__append_13 = $(EXTRA_sd_baratinoo_DEPENDENCIES)
++@kali_support_TRUE@am__append_14 = sd_kali
++@kali_shim_TRUE@@kali_support_TRUE@am__append_15 = -L.
++@kali_shim_TRUE@@kali_support_TRUE@am__append_16 = -I$(srcdir)/kali_shim
++@kali_shim_TRUE@@kali_support_TRUE@am__append_17 = $(EXTRA_sd_kali_DEPENDENCIES)
++@voxin_support_TRUE@am__append_18 = sd_voxin
++@voxin_shim_TRUE@@voxin_support_TRUE@am__append_19 = -L.
++@voxin_shim_TRUE@@voxin_support_TRUE@am__append_20 = $(EXTRA_sd_voxin_DEPENDENCIES)
+ subdir = src/modules
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
+@@ -624,7 +625,7 @@ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_P
+ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = @LDFLAGS@ $(am__append_1)
+ LIBAO_CFLAGS = @LIBAO_CFLAGS@
+ LIBAO_LIBS = @LIBAO_LIBS@
+ LIBICONV = @LIBICONV@
+@@ -773,8 +774,8 @@ EXTRA_DIST = baratinoo_shim.c README.bar
+ 	kali_KParle_shim.cpp kali_KAnalyse_shim.cpp ibmtts_shim.c \
+ 	eci.h voxin_shim.c voxin.h module_main.h module_utils.h \
+ 	dummy-message-default.wav dummy-message.txt
+-CLEANFILES = dummy-message.wav $(am__append_4) $(am__append_12) \
+-	$(am__append_16) $(am__append_19)
++CLEANFILES = dummy-message.wav $(am__append_5) $(am__append_13) \
++	$(am__append_17) $(am__append_20)
+ inc_local = -I$(top_srcdir)/include -I$(top_srcdir)/src/common
+ common_SOURCES = module_main.c module_readline.c module_process.c module_config.c module_utils.c module_utils.h
+ common_LDADD = $(DOTCONF_LIBS) $(GLIB_LIBS) $(audio_dlopen) -lpthread
+@@ -830,7 +831,7 @@ sd_cicero_LDADD = $(top_builddir)/src/co
+ @ibmtts_support_TRUE@sd_ibmtts_LDADD =  \
+ @ibmtts_support_TRUE@	$(top_builddir)/src/common/libcommon.la \
+ @ibmtts_support_TRUE@	-libmeci $(audio_dlopen_modules) \
+-@ibmtts_support_TRUE@	$(common_LDADD) $(am__append_3)
++@ibmtts_support_TRUE@	$(common_LDADD) $(am__append_4)
+ @ibmtts_support_TRUE@ibmtts_CPPFLAGS = $(AM_CPPFLAGS) \
+ @ibmtts_support_TRUE@	$(DOTCONF_CFLAGS) \
+ @ibmtts_support_TRUE@	$(ibmtts_include)
+@@ -877,16 +878,16 @@ sd_cicero_LDADD = $(top_builddir)/src/co
+ @baratinoo_support_TRUE@sd_baratinoo_SOURCES = baratinoo.c baratinoo_compat.h $(common_SOURCES)
+ @baratinoo_support_TRUE@sd_baratinoo_LDADD = $(top_builddir)/src/common/libcommon.la \
+ @baratinoo_support_TRUE@	-lbaratinoo $(common_LDADD) \
+-@baratinoo_support_TRUE@	$(am__append_11)
++@baratinoo_support_TRUE@	$(am__append_12)
+ @baratinoo_shim_TRUE@@baratinoo_support_TRUE@EXTRA_sd_baratinoo_DEPENDENCIES = libbaratinoo.so
+ @kali_support_TRUE@KALI_DIR = /usr/lib/kali
+ @kali_support_TRUE@sd_kali_SOURCES = kali.cpp $(common_SOURCES)
+ @kali_support_TRUE@sd_kali_LDADD =  \
+ @kali_support_TRUE@	$(top_builddir)/src/common/libcommon.la \
+ @kali_support_TRUE@	-lKali -lKGlobal -lKTrans -lKParle \
+-@kali_support_TRUE@	-lKAnalyse $(common_LDADD) $(am__append_14)
++@kali_support_TRUE@	-lKAnalyse $(common_LDADD) $(am__append_15)
+ @kali_support_TRUE@sd_kali_CPPFLAGS = -DLINUX $(AM_CPPFLAGS) \
+-@kali_support_TRUE@	$(am__append_15)
++@kali_support_TRUE@	$(am__append_16)
+ @kali_shim_TRUE@@kali_support_TRUE@noinst_HEADERS = kali_shim/kali/Kali/kali.h
+ @kali_shim_TRUE@@kali_support_TRUE@EXTRA_sd_kali_DEPENDENCIES = libKali.so libKGlobal.so libKTrans.so libKParle.so libKAnalyse.so
+ @voxin_support_TRUE@sd_voxin_SOURCES = ibmtts.c $(common_SOURCES) \
+@@ -894,7 +895,7 @@ sd_cicero_LDADD = $(top_builddir)/src/co
+ 
+ @voxin_support_TRUE@sd_voxin_LDADD =  \
+ @voxin_support_TRUE@	$(top_builddir)/src/common/libcommon.la \
+-@voxin_support_TRUE@	-lvoxin $(common_LDADD) $(am__append_18)
++@voxin_support_TRUE@	-lvoxin $(common_LDADD) $(am__append_19)
+ @voxin_support_TRUE@sd_voxin_CPPFLAGS = -DVOXIN $(AM_CPPFLAGS) \
+ @voxin_support_TRUE@	$(DOTCONF_CFLAGS) \
+ @voxin_support_TRUE@	$(ibmtts_include)
