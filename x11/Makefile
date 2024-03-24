@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1015 2024/03/21 14:40:07 mef Exp $
+# $NetBSD: Makefile,v 1.1016 2024/03/24 12:44:56 adam Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -288,6 +288,7 @@ SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
 SUBDIR+=	py-qt5-webengine
 SUBDIR+=	py-qt6
+SUBDIR+=	py-qt6-qscintilla
 SUBDIR+=	py-qtgraph-qt5
 SUBDIR+=	py-qwt-qt5
 SUBDIR+=	py-sip-qt5
@@ -346,6 +347,7 @@ SUBDIR+=	qt5-qtx11extras
 SUBDIR+=	qt5-qtxmlpatterns
 SUBDIR+=	qt5-styleplugins
 SUBDIR+=	qt5ct
+SUBDIR+=	qt6-qscintilla
 SUBDIR+=	qt6-qtbase
 SUBDIR+=	qt6-qtserialport
 SUBDIR+=	qt6ct
