@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2065 2024/03/24 14:19:15 taca Exp $
+$NetBSD: CHANGES-2024,v 1.2066 2024/03/24 14:21:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3549,3 +3549,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-rspec-rails to 6.1.2 [taca 2024-03-24]
 	Updated devel/ruby-shoulda-matchers to 6.2.0 [taca 2024-03-24]
 	Updated devel/ruby-term-ansicolor to 1.7.2 [taca 2024-03-24]
+	Updated devel/ruby-version_gem to 1.1.4 [taca 2024-03-24]
