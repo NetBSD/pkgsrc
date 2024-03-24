@@ -1,15 +1,32 @@
-$NetBSD: patch-helix-loader_src_lib.rs,v 1.3 2022/12/07 17:08:38 jperkin Exp $
+$NetBSD: patch-helix-loader_src_lib.rs,v 1.4 2024/03/24 20:06:49 adam Exp $
 
 Taken from FreeBSD ports, original patch by ashish@.
 
---- helix-loader/src/lib.rs.orig	2022-12-07 02:54:50
+--- helix-loader/src/lib.rs.orig	2023-10-25 16:37:27.000000000 +0000
 +++ helix-loader/src/lib.rs
-@@ -41,6 +41,8 @@ pub fn runtime_dir() -> PathBuf {
-         return conf_dir;
+@@ -75,8 +75,6 @@ fn prioritize_runtime_dirs() -> Vec<Path
+         rt_dirs.push(path);
      }
  
-+    return std::path::PathBuf::from("%%DATADIR%%").join(RT_DIR);
+-    let conf_rt_dir = config_dir().join(RT_DIR);
+-    rt_dirs.push(conf_rt_dir);
+ 
+     if let Ok(dir) = std::env::var("HELIX_RUNTIME") {
+         rt_dirs.push(dir.into());
+@@ -90,14 +88,8 @@ fn prioritize_runtime_dirs() -> Vec<Path
+         rt_dirs.push(dir.into());
+     }
+ 
+-    // fallback to location of the executable being run
+-    // canonicalize the path in case the executable is symlinked
+-    let exe_rt_dir = std::env::current_exe()
+-        .ok()
+-        .and_then(|path| std::fs::canonicalize(path).ok())
+-        .and_then(|path| path.parent().map(|path| path.to_path_buf().join(RT_DIR)))
+-        .unwrap();
+-    rt_dirs.push(exe_rt_dir);
++    rt_dirs.push(PathBuf::from("@DATADIR@").join(RT_DIR));
 +
-     // fallback to location of the executable being run
-     // canonicalize the path in case the executable is symlinked
-     std::env::current_exe()
+     rt_dirs
+ }
+ 

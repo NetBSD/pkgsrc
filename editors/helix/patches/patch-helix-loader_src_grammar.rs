@@ -1,10 +1,10 @@
-$NetBSD: patch-helix-loader_src_grammar.rs,v 1.3 2022/12/07 17:08:38 jperkin Exp $
+$NetBSD: patch-helix-loader_src_grammar.rs,v 1.4 2024/03/24 20:06:49 adam Exp $
 
 Taken from FreeBSD ports, original patch by ashish@.
 
---- helix-loader/src/grammar.rs.orig	2022-12-07 02:54:50
+--- helix-loader/src/grammar.rs.orig	2024-02-19 21:27:43.949172144 +0000
 +++ helix-loader/src/grammar.rs
-@@ -88,60 +88,6 @@ pub fn fetch_grammars() -> Result<()> {
+@@ -99,57 +99,6 @@ pub fn fetch_grammars() -> Result<()> {
      let mut grammars = get_grammar_configs()?;
      grammars.retain(|grammar| !matches!(grammar.source, GrammarSource::Local { .. }));
  
@@ -16,15 +16,12 @@ Taken from FreeBSD ports, original patch by ashish@.
 -    let mut git_up_to_date = 0;
 -    let mut non_git = Vec::new();
 -
--    for res in results {
+-    for (grammar_id, res) in results {
 -        match res {
 -            Ok(FetchStatus::GitUpToDate) => git_up_to_date += 1,
--            Ok(FetchStatus::GitUpdated {
--                grammar_id,
--                revision,
--            }) => git_updated.push((grammar_id, revision)),
--            Ok(FetchStatus::NonGit { grammar_id }) => non_git.push(grammar_id),
--            Err(e) => errors.push(e),
+-            Ok(FetchStatus::GitUpdated { revision }) => git_updated.push((grammar_id, revision)),
+-            Ok(FetchStatus::NonGit) => non_git.push(grammar_id),
+-            Err(e) => errors.push((grammar_id, e)),
 -        }
 -    }
 -
@@ -56,10 +53,10 @@ Taken from FreeBSD ports, original patch by ashish@.
 -
 -    if !errors.is_empty() {
 -        let len = errors.len();
--        println!("{} grammars failed to fetch", len);
--        for (i, error) in errors.into_iter().enumerate() {
--            println!("\tFailure {}/{}: {}", i + 1, len, error);
+-        for (i, (grammar, error)) in errors.into_iter().enumerate() {
+-            println!("Failure {}/{len}: {grammar} {error}", i + 1);
 -        }
+-        bail!("{len} grammars failed to fetch");
 -    }
 -
      Ok(())
