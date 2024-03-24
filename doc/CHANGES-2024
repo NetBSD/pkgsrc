@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2052 2024/03/24 10:56:49 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2053 2024/03/24 11:39:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3512,3 +3512,24 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cross/ppc-morphos-sdk to 20230510 [js 2024-03-24]
 	Updated www/py-nbconvert to 7.16.3 [adam 2024-03-24]
 	Updated www/py-nbformat to 5.10.3 [adam 2024-03-24]
+	Updated print/tex-hitex to 2024 [markd 2024-03-24]
+	Updated print/tex-hitex-doc to 2024 [markd 2024-03-24]
+	Updated print/tex-jadetex to 3.13.70002 [markd 2024-03-24]
+	Updated print/tex-jadetex-doc to 3.13.70002 [markd 2024-03-24]
+	Updated print/tex-luahbtex to 1.18.0 [markd 2024-03-24]
+	Updated print/tex-luahbtex-doc to 1.18.0 [markd 2024-03-24]
+	Updated fonts/tex-mfware to 2024 [markd 2024-03-24]
+	Updated print/tex-mltex to 2.2.70002 [markd 2024-03-24]
+	Updated print/tex-mltex-doc to 2.2.70002 [markd 2024-03-24]
+	Updated graphics/tex-mptopdf to 2024 [markd 2024-03-24]
+	Updated graphics/tex-mptopdf-doc to 2024 [markd 2024-03-24]
+	Updated print/tex-platex to 2024 [markd 2024-03-24]
+	Updated print/tex-platex-doc to 2024 [markd 2024-03-24]
+	Updated fonts/tex-ttfutils to 2024 [markd 2024-03-24]
+	Updated fonts/tex-ttfutils-doc to 2024 [markd 2024-03-24]
+	Updated print/tex-uplatex to 2024 [markd 2024-03-24]
+	Updated print/tex-uplatex-doc to 2024 [markd 2024-03-24]
+	Updated print/tex-xetex to 2024 [markd 2024-03-24]
+	Updated print/tex-xetex-doc to 2024 [markd 2024-03-24]
+	Updated print/tex-latex-bin to 2024 [markd 2024-03-24]
+	Updated print/tex-latex-bin-doc to 2024 [markd 2024-03-24]
