@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/12/07 18:15:44 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/03/24 17:22:44 adam Exp $
 
-DISTNAME=	tablib-3.5.0
+DISTNAME=	tablib-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=58:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # all without pandas
-DEPENDS+=	${PYPKGPREFIX}-markuppy-[0-9]*:../../textproc/py-markuppy
 DEPENDS+=	${PYPKGPREFIX}-odfpy-[0-9]*:../../textproc/py-odfpy
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.6.0:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-tabulate-[0-9]*:../../textproc/py-tabulate
