@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2100 2024/03/24 20:12:52 leot Exp $
+$NetBSD: CHANGES-2024,v 1.2101 2024/03/24 20:17:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/helix to 23.10 [adam 2024-03-24]
 	Updated devel/py-faker to 24.3.0 [adam 2024-03-24]
 	Updated security/dnsx to 1.2.1 [leot 2024-03-24]
+	Updated security/subfinder to 2.6.5 [leot 2024-03-24]
