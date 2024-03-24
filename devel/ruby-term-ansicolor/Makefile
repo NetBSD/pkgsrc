@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2019/01/20 14:07:23 taca Exp $
+# $NetBSD: Makefile,v 1.11 2024/03/24 14:18:59 taca Exp $
 
-DISTNAME=	term-ansicolor-1.7.1
+DISTNAME=	term-ansicolor-1.7.2
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	https://flori.github.com/term-ansicolor
+HOMEPAGE=	https://github.com/flori/term-ansicolor
 COMMENT=	Ruby library colors strings using ANSI escape sequences
 LICENSE=	apache-2.0
 
