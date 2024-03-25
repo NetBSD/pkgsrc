@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.153 2024/03/23 15:16:59 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.154 2024/03/25 03:09:27 jnemeth Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25050,7 +25050,9 @@ asterisk>=19<19.7.1	local-file-read	https://nvd.nist.gov/vuln/detail/CVE-2022-42
 asterisk>=16<16.29.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-42705
 asterisk>=18.14<18.15.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-42705
 asterisk>=19.6<19.7.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-42705
-asterisk-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37325
+asterisk<16.28.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37325
+asterisk>=17<18.14.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37325
+asterisk>=19<19.6.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37325
 salt-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-33226
 xdg-utils-[0-9]*	command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-4055
 mysql-client>=8<8.0.29	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2022.html#AppendixMSQL
