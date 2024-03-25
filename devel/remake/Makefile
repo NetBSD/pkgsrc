@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2022/04/25 15:43:12 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2024/03/25 15:16:32 nikita Exp $
 
-DISTNAME=	remake-4.2.1+dbg-1.4
+DISTNAME=	remake-4.3+dbg-1.6
+# upstream titles it 4.3.1
+PKGNAME=	remake-4.3.1+dbg-1.6
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bashdb/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rocky/}
+GITHUB_PROJECT=	remake
+GITHUB_RELEASE=	remake-4.3+dbg-1.6
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	http://bashdb.sourceforge.net/remake/
-COMMENT=	GNU make with debugger
+HOMEPAGE=	https://bashdb.sourceforge.net/remake/
+COMMENT=	GNU make with comprehensible tracing and a debugger
 LICENSE=	gnu-gpl-v3
 
 USE_FEATURES=	snprintf
