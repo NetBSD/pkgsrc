@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.156 2024/02/19 05:59:51 jnemeth Exp $
+# $NetBSD: Makefile,v 1.157 2024/03/25 03:36:33 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
+#       and libjwt
 
-DISTNAME=	asterisk-18.21.0
+DISTNAME=	asterisk-18.22.0
 #PKGREVISION=	24
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
@@ -47,6 +48,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
+CONFIGURE_ARGS+=	--with-libjwt-bundled=yes
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
 
@@ -160,13 +162,21 @@ CONFIGURE_ARGS+=	--without-unbound
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.13.1
+PJPROJ_VERSION=	2.14
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/MD5SUM.TXT
 DISTFILES+=	pjproject-${PJPROJ_VERSION}.tar.bz2 pjproject-${PJPROJ_VERSION}.md5
 ALL_ENV+=	EXTERNALS_CACHE_DIR=${DISTDIR}/${DIST_SUBDIR}
+
+# libjwt
+LIBJWT_VERSION=	1.15.3
+SITES.libjwt-${LIBJWT_VERSION}.tar.gz= \
+	-https://raw.githubusercontent.com/asterisk/third-party/master/libjwt/${LIBJWT_VERSION}/libjwt-${LIBJWT_VERSION}.tar.gz
+SITES.libjwt-${LIBJWT_VERSION}.md5= \
+	-https://raw.githubusercontent.com/asterisk/third-party/master/libjwt/${LIBJWT_VERSION}/MD5SUM.TXT
+DISTFILES+=	libjwt-${LIBJWT_VERSION}.tar.gz libjwt-${LIBJWT_VERSION}.md5
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
