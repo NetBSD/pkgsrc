@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/11 08:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/03/25 17:18:35 jperkin Exp $
 
 DISTNAME=	espeak-ng-1.51
 CATEGORIES=	audio
@@ -18,6 +18,8 @@ USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
 
