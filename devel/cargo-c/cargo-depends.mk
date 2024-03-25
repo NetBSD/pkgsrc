@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2024/03/22 12:08:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2024/03/25 16:51:42 jperkin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -194,7 +194,7 @@ CARGO_CRATE_DEPENDS+=	openssl-src-300.2.3+3.2.1
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.101
 CARGO_CRATE_DEPENDS+=	ordered-float-2.10.1
 CARGO_CRATE_DEPENDS+=	orion-0.17.6
-CARGO_CRATE_DEPENDS+=	os_info-3.8.1
+CARGO_CRATE_DEPENDS+=	os_info-3.8.2
 CARGO_CRATE_DEPENDS+=	overload-0.1.1
 CARGO_CRATE_DEPENDS+=	p384-0.13.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
