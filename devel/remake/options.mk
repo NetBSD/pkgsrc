@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/05/31 17:14:23 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2024/03/25 15:16:32 nikita Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.remake
 PKG_SUPPORTED_OPTIONS=	nls readline
@@ -12,7 +12,7 @@ PLIST_VARS+=		nls
 # to avoid a circular dependency (gmake->gettext-tools->ncurses->gmake).
 .include "../../devel/gettext-lib/builtin.mk"
 .if !empty(PKG_OPTIONS:Mnls) && \
-    !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+	${USE_BUILTIN.gettext:tl} == yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 .  include "../../devel/gettext-lib/buildlink3.mk"
