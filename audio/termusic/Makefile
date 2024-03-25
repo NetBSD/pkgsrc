@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2024/01/30 18:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.55 2024/03/25 13:17:59 pin Exp $
 
-DISTNAME=	termusic-0.7.11
-PKGREVISION=	4
+DISTNAME=	termusic-0.9.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
