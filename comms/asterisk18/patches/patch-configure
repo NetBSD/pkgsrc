@@ -1,50 +1,23 @@
-$NetBSD: patch-configure,v 1.4 2024/02/19 05:59:52 jnemeth Exp $
+$NetBSD: patch-configure,v 1.5 2024/03/25 03:36:33 jnemeth Exp $
 
---- configure.orig	2023-07-20 13:04:41.000000000 +0000
+--- configure.orig	2024-03-18 13:18:36.000000000 +0000
 +++ configure
-@@ -9303,12 +9303,12 @@ else
+@@ -10230,12 +10230,12 @@ else $as_nop
  
- 			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for clang -fblocks" >&5
- $as_echo_n "checking for clang -fblocks... " >&6; }
+ 			{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for clang -fblocks" >&5
+ printf %s "checking for clang -fblocks... " >&6; }
 -			if test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
 +			if test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c - 2>&1`" = ""; then
  				AST_CLANG_BLOCKS_LIBS=""
  				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
- $as_echo "yes" >&6; }
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ printf "%s\n" "yes" >&6; }
 -			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
 +			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -15580,7 +15580,7 @@ fi
- done
- 
- 
--ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
-+ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
- if test "x$ac_cv_header_sys_poll_h" = xyes; then :
- 
- else
-@@ -17562,7 +17562,7 @@ fi
- done
- 
- 
--for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim
-+for ac_func in asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale pipe2 ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strftime_l strlcat strlcpy strncasecmp strndup strnlen strptime_l strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv uselocale utime vasprintf getpeereid sysctl swapctl malloc_trim
- do :
-   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
- ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -17797,7 +17797,7 @@ rm -f core conftest.err conftest.$ac_obj
- LDFLAGS=${old_LDFLAGS}
- rm -f conftest.dynamics
- 
--ac_fn_c_check_header_mongrel "$LINENO" "sys/poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
-+ac_fn_c_check_header_mongrel "$LINENO" "poll.h" "ac_cv_header_sys_poll_h" "$ac_includes_default"
- if test "x$ac_cv_header_sys_poll_h" = xyes; then :
-   HAS_POLL=1
- 
-@@ -20126,6 +20126,148 @@ rm -f core conftest.err conftest.$ac_obj
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -22295,6 +22295,148 @@ rm -f core conftest.err conftest.$ac_obj
  
  
  

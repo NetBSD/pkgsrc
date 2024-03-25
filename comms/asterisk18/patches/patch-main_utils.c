@@ -1,10 +1,10 @@
-$NetBSD: patch-main_utils.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
+$NetBSD: patch-main_utils.c,v 1.3 2024/03/25 03:36:33 jnemeth Exp $
 
---- main/utils.c.orig	2018-05-01 20:12:26.000000000 +0000
+--- main/utils.c.orig	2024-03-18 13:18:36.000000000 +0000
 +++ main/utils.c
-@@ -39,6 +39,10 @@
- #elif defined(HAVE_SYS_THR_H)
- #include <sys/thr.h>
+@@ -41,6 +41,10 @@
+ #elif defined(__NetBSD__)
+ #include <lwp.h>
  #endif
 +#if defined(HAVE_GETIFADDRS)
 +#include <ifaddrs.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-main_utils.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  
  #include "asterisk/network.h"
  #include "asterisk/ast_version.h"
-@@ -204,7 +208,7 @@ struct hostent *ast_gethostbyname(const 
+@@ -213,7 +217,7 @@ struct hostent *ast_gethostbyname(const 
  	while (s && *s) {
  		if (*s == '.')
  			dots++;
@@ -22,7 +22,7 @@ $NetBSD: patch-main_utils.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  			break;
  		s++;
  	}
-@@ -612,7 +616,7 @@ const char *ast_inet_ntoa(struct in_addr
+@@ -937,7 +941,7 @@ const char *ast_inet_ntoa(struct in_addr
  
  static int dev_urandom_fd = -1;
  
@@ -31,7 +31,7 @@ $NetBSD: patch-main_utils.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  #undef pthread_create /* For ast_pthread_create function only */
  #endif /* !__linux__ */
  
-@@ -1820,13 +1824,13 @@ int ast_false(const char *s)
+@@ -2238,13 +2242,13 @@ int ast_false(const char *s)
  static struct timeval tvfix(struct timeval a)
  {
  	if (a.tv_usec >= ONE_MILLION) {
@@ -49,7 +49,7 @@ $NetBSD: patch-main_utils.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  		a.tv_usec = 0;
  	}
  	return a;
-@@ -1986,7 +1990,7 @@ char *ast_to_camel_case_delim(const char
+@@ -2404,7 +2408,7 @@ char *ast_to_camel_case_delim(const char
  
  	while (front) {
  		size = strlen(front);
