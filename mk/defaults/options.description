@@ -922,6 +922,7 @@ tests			Build and install tests.
 theora			Use the theora codecs.
 threads			Enable threads support.
 tiff			Enable TIFF support.
+tiff-unsupported	Enable unsupported tools in tiff package.
 timidity		Enable MIDI support using timidity.
 tin-use-inn-spool	Use the INN spool directories.
 tk			Support the Tk toolkit.
