@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2024/03/23 18:04:02 pgoyette Exp $
+$NetBSD: distinfo,v 1.30 2024/03/25 10:29:04 markd Exp $
 
-BLAKE2s (texlive-scripts.r70721.tar.xz) = 558d7490278017e1d8f9465df5e83fbd5721ba1c4c2033d93b92e341f2b3a1d8
-SHA512 (texlive-scripts.r70721.tar.xz) = dabd37f85dfb2c1ec3963511f5d4646c13e833ba51bd6cc3f3e943212a524cea7b967ceb3bec6621070fbda9aa439c0ef60b2b3c253ca7a82ea38ff0f3616ae3
-Size (texlive-scripts.r70721.tar.xz) = 114200 bytes
+BLAKE2s (texlive-scripts.r70742.tar.xz) = c40e9666eff5bc35cad9a51750c93684be8a043ef5e149b565d210491f3cf7a3
+SHA512 (texlive-scripts.r70742.tar.xz) = cb571d511e92a372591a3e602850a3514ea8f947712723ba3693697284e16d425ca2a7bcab6ce199fe20c932b46d8c9bade6b3192291852b04c5bc54ff72c8ff
+Size (texlive-scripts.r70742.tar.xz) = 114236 bytes
 SHA1 (patch-bin_fmtutil) = 038fdda482a6b3d9603d974bd3b010493706d7ff
 SHA1 (patch-bin_fmtutil-sys) = 85413eb237d1fae9261dddae99e6c347c22db10c
 SHA1 (patch-bin_mktexmf) = e58b8e521c65f44c18251621866ee23052f4de1b
