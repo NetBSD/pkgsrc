@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2024/03/21 20:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.28 2024/03/25 11:09:09 markd Exp $
 
 DISTNAME=	collection-luatex
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69404
+TEXLIVE_REV=	70711
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -30,6 +30,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend emojicite
 # depend enigma
 # depend gitinfo-lua
+# depend ideavault
 # depend innerscript
 # depend interpreter
 # depend kanaparser
