@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2024/03/21 20:00:54 markd Exp $
+# $NetBSD: Makefile,v 1.24 2024/03/25 11:02:55 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2024.70738
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69966
+TEXLIVE_REV=	70738
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -67,7 +67,6 @@ DEPENDS+=	tex-pxjahyper-[0-9]*:../../print/tex-pxjahyper
 DEPENDS+=	tex-pxjodel-[0-9]*:../../fonts/tex-pxjodel
 DEPENDS+=	tex-pxrubrica-[0-9]*:../../print/tex-pxrubrica
 DEPENDS+=	tex-pxufont-[0-9]*:../../fonts/tex-pxufont
-DEPENDS+=	tex-sjtutex-[0-9]*:../../print/tex-sjtutex
 # texlive-ja is documentation only
 DEPENDS+=	tex-uplatex-[0-9]*:../../print/tex-uplatex
 DEPENDS+=	tex-uptex-[0-9]*:../../print/tex-uptex
