@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2024/03/21 20:00:56 markd Exp $
+# $NetBSD: Makefile,v 1.37 2024/03/25 11:10:48 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69759
+TEXLIVE_REV=	70716
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -113,6 +113,8 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend hobete
 # depend hu-berlin-bundle
 # depend hustthesis
+# depend iaria
+# depend iaria-lite
 # depend icsv
 DEPENDS+=	tex-ieeeconf-[0-9]*:../../print/tex-IEEEconf
 # depend ieeepes
@@ -212,6 +214,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend seu-ml-assign
 # depend seuthesis
 # depend seuthesix
+# depend sfee
 # depend shortmathj
 # depend shtthesis
 # depend smflatex
