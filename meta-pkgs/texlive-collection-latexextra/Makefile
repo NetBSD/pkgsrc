@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.92 2024/03/21 20:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.93 2024/03/25 11:05:25 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70533
+TEXLIVE_REV=	70717
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -309,6 +309,7 @@ DEPENDS+=	tex-cutwin-[0-9]*:../../print/tex-cutwin
 # depend darkmode
 DEPENDS+=	tex-dashbox-[0-9]*:../../print/tex-dashbox
 DEPENDS+=	tex-dashrule-[0-9]*:../../print/tex-dashrule
+# depend dashrulex
 # depend dashundergaps
 # depend dataref
 DEPENDS+=	tex-datatool-[0-9]*:../../print/tex-datatool
@@ -1385,7 +1386,6 @@ DEPENDS+=	tex-textpos-[0-9]*:../../print/tex-textpos
 # depend texvc
 # depend theoremref
 # depend thinsp
-DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend threadcol
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 DEPENDS+=	tex-threeparttablex-[0-9]*:../../print/tex-threeparttablex
