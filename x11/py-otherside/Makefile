@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/03/25 15:11:48 adam Exp $
 
 DISTNAME=	pyotherside-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -22,6 +22,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake PYTHON_CONFIG=python${PYVERSSUFFIX}-config
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${QTDIR}/qml/io/thp/pyotherside/libpyothersideplugin.dylib \
+	${DESTDIR}${QTDIR}/qml/io/thp/pyotherside/libpyothersideplugin.dylib
+.endif
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
