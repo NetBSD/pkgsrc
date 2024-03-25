@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2024/03/11 08:03:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/03/25 17:18:08 jperkin Exp $
 
 BLAKE2s (espeak-ng-1.51.tar.gz) = 7e95a1f9619984f4b349c48146a4a7a3f50f359d7043366edb1c447089b1e383
 SHA512 (espeak-ng-1.51.tar.gz) = 6c29275706d21de2d5fa393702d2f173fc05d2ce4e2f46f3bf9a2742b0a8f294177663df0d079188e31cc2541f2c21a64e09e8afffe95befab667a4d00429fd2
 Size (espeak-ng-1.51.tar.gz) = 14260788 bytes
+SHA1 (patch-Makefile.am) = 734c3e1cc914cf9236eadf0e372ad7438845faa8
+SHA1 (patch-src_include_compat_wctype.h) = bfbea130635fe0f1368969e3eb5c406aa3f73bdc
 SHA1 (patch-src_libespeak-ng_spect.c) = 33f69d7ba5621796628477f5596e147db76e38e1
 SHA1 (patch-src_libespeak-ng_speech.c) = e4f906157b1fce54c19a740274573310b3f276fb
