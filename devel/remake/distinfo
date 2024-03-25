@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/03/25 15:16:32 nikita Exp $
 
-BLAKE2s (remake-4.2.1+dbg-1.4.tar.gz) = 59438d6c7cfe03eb420cb3509e5f8b7d2f349002609311e2032e177050667a0a
-SHA512 (remake-4.2.1+dbg-1.4.tar.gz) = 6232736439cae8101b65292d12344a938e1f1ca136e8fd62e23e43b3326f2cc5abbaf37a502f2c1dde24276d8a7a9f4346d669e105c865fb06d0a846f5df98da
-Size (remake-4.2.1+dbg-1.4.tar.gz) = 2177617 bytes
+BLAKE2s (remake-4.3+dbg-1.6.tar.gz) = f87b40a7f2e99746e574e9f80d52970c789da1bc2e6720ff4f7c781efa48e9eb
+SHA512 (remake-4.3+dbg-1.6.tar.gz) = d4f0ed0afa0bebf49e0cf6ef3fcfb0915fd457477424b6ffb5f06c6d2faf8d79bbdc9119a736c24c0787b23ceaeccf072e03a654dc01d05c08c88e030ae33539
+Size (remake-4.3+dbg-1.6.tar.gz) = 2596911 bytes

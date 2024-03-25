@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/06 17:35:31 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/25 15:16:32 nikita Exp $
 bin/remake
 include/gnuremake.h
 info/remake.info
 man/man1/remake.1
 ${PLIST.nls}share/locale/be/LC_MESSAGES/remake.mo
+${PLIST.nls}share/locale/bg/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/remake.mo
@@ -21,10 +22,13 @@ ${PLIST.nls}share/locale/ko/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/lt/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/remake.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/remake.mo
+${PLIST.nls}share/locale/sr/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/remake.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/remake.mo
+${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/remake.mo
