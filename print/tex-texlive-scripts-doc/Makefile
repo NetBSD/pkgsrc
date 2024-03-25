@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/03/23 18:04:02 pgoyette Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/25 10:29:04 markd Exp $
 
 DISTNAME=	texlive-scripts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2024
-TEXLIVE_REV=	70721
+PKGNAME=	tex-${DISTNAME:S/./-/}-2024.70742
+TEXLIVE_REV=	70742
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-texlive-scripts
