@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/03 01:47:04 markd Exp $
+$NetBSD: distinfo,v 1.6 2024/03/25 10:41:48 markd Exp $
 
-BLAKE2s (babel-norsk.r69603.tar.xz) = 23c5a8c485a2e58a9d7ad72ae473580b9892cf0da230c54c227def7131bd25c7
-SHA512 (babel-norsk.r69603.tar.xz) = cd5511b9ffa7a009cc9b330fadda4edbd431083a3301bd4722d19d9c9331cd160fbf79d0e246feb2d4bc69c6e2800931c4e697b9a052f92a424f5f59841840ee
-Size (babel-norsk.r69603.tar.xz) = 2504 bytes
+BLAKE2s (babel-norsk.r70691.tar.xz) = cee65a5f2217c7a45d00053c03ba24660482cbb8eaea8c6f479df333bb4a624f
+SHA512 (babel-norsk.r70691.tar.xz) = f19a996d1705af3435079b480246b696a79427fb0f6976cff8e1c77ae99d810ac5483b4ccd3e5956609f7f757683bf04cf0b2930551dadbfb58a65180bda441c
+Size (babel-norsk.r70691.tar.xz) = 2516 bytes
