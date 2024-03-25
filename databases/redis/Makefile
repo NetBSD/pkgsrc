@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/03/24 00:32:41 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2024/03/25 15:20:14 nikita Exp $
 
 DISTNAME=	redis-7.2.4
 CATEGORIES=	databases
@@ -6,8 +6,12 @@ MASTER_SITES=	http://download.redis.io/releases/
 
 # NB: upsteram has changed to a proprietary license.  Probably (absent
 # discussion), this should not be updated until a license-ok version
-# is in pkgsrc.  A continuation fork is in progress at
-# https://codeberg.org/redict/redict
+# is in pkgsrc.  Existing forks are:
+# 1. Redict https://codeberg.org/redict/redict
+# 2. KeyDB, an older redis fork (in terms of features) BSD3 licensed
+# version maintained by Snapchat.
+# 3. PlaceholderKV (name to be changed?) by former redis contributors
+# and AWS employees, BSD3 licensed.
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
