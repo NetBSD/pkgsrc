@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2023/11/07 22:38:02 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2024/03/26 20:45:56 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
-PKG_SUPPORTED_OPTIONS+=		doc idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS+=		doc idn pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 audio
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
@@ -76,7 +76,7 @@ CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 .endif
 
 # database support - they don't exclude other databases,
-# you can have mysql, pgsql, and the default all built in.
+# you can have pgsql, and the default all built in.
 # ideally we would check for at least sqlite3 existing, but
 # the build won't build when you have none of them.
 .if ${PKG_OPTIONS:Msqlite3}
@@ -85,15 +85,6 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 PLIST_SRC+=		PLIST.sqlite3
 .else
 CONFIGURE_ARGS+=	--without-sqlite3
-.endif
-
-.if ${PKG_OPTIONS:Mmysql}
-.include "../../databases/mysql80-client/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
-CONFIGURE_ENV+=		MYSQL_LIBDIR=${BUILDLINK_PREFIX.mysql-client}/lib
-PLIST_SRC+=		PLIST.mysql
-.else
-CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 .if ${PKG_OPTIONS:Mpgsql}
