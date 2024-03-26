@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2115 2024/03/26 13:54:24 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.2116 2024/03/26 20:46:11 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3613,3 +3613,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/termusic to 0.9.0 [pin 2024-03-25]
 	Updated devel/remake to 1.6 [nikita 2024-03-25]
 	Updated www/firefox115-l10n to 115.9.1 [gutteridge 2024-03-26]
+	Updated net/gnunet to 0.21.1 [nikita 2024-03-26]
