@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/23 17:30:45 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/26 20:49:39 nikita Exp $
 bin/gnunet-conversation-gtk
 bin/gnunet-fs-gtk
 bin/gnunet-namestore-gtk
-bin/gnunet-peerinfo-gtk
 bin/gnunet-setup
 bin/gnunet-statistics-gtk
 include/gnunet-gtk/gnunet_gtk.h
@@ -28,7 +27,6 @@ man/man1/gnunet-fs-gtk.1
 man/man1/gnunet-gns-gtk.1
 man/man1/gnunet-identity-gtk.1
 man/man1/gnunet-namestore-gtk.1
-man/man1/gnunet-peerinfo-gtk.1
 man/man1/gnunet-setup.1
 man/man1/gnunet-statistics-gtk.1
 share/applications/gnunet-fs-gtk.desktop
@@ -336,8 +334,6 @@ share/gnunet/gnunet_namestore_edit_txt.glade
 share/gnunet/gnunet_namestore_edit_vpn.glade
 share/gnunet/gnunet_namestore_gtk_main_window.glade
 share/gnunet/gnunet_namestore_gtk_qr_save_as_dialog.glade
-share/gnunet/gnunet_peerinfo_gtk_about_window.glade
-share/gnunet/gnunet_peerinfo_gtk_main_window.glade
 share/gnunet/gnunet_setup_calendar_dialog.glade
 share/gnunet/gnunet_setup_main_window.glade
 share/gnunet/gnunet_statistics_gtk_about_window.glade

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/24 16:00:18 nikita Exp $
+$NetBSD: distinfo,v 1.3 2024/03/26 20:49:39 nikita Exp $
 
-BLAKE2s (gnunet-gtk-0.20.0.tar.gz) = f3acf9f6c9121f240125295e16daee9fc380de5c7380829c08fefebd244b5285
-SHA512 (gnunet-gtk-0.20.0.tar.gz) = b1b14b3ded3571901b4d7f3ec878e3be84a6e56984d9598029cb79e0127e7c6d33a72bc79f363126a511af39d80a5b306cb7e45919ba128c79dd42774d1f9c17
-Size (gnunet-gtk-0.20.0.tar.gz) = 1576736 bytes
+BLAKE2s (gnunet-gtk-0.21.0.tar.gz) = a58e7a35184c3c0ecfa95d8635b229803ead6a9dc99b94aa6f0bf47c61ff6625
+SHA512 (gnunet-gtk-0.21.0.tar.gz) = 64b4ba030f08611d02b27935cfefc9f7339da8bae3dd5068c48dede2426ba0027a755f276389c3b9011c947480de4592ac283f913f092dc2cdf075bd962fd5ae
+Size (gnunet-gtk-0.21.0.tar.gz) = 1551692 bytes
