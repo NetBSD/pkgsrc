@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.301 2024/03/22 18:59:04 schmonz Exp $
+# $NetBSD: replace.mk,v 1.302 2024/03/26 16:27:13 schmonz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -76,6 +76,13 @@
 # bison implies "bison-yacc"
 .if !empty(USE_TOOLS:Mbison) || !empty(USE_TOOLS:Mbison\:*)
 USE_TOOLS+=	bison-yacc
+.endif
+
+# flex needs gm4
+.if !empty(USE_TOOLS:Mflex) || !empty(USE_TOOLS:Mflex\:*)
+# flex:run is used in a few packages, none of which actually build
+# binaries that exec flex. No other flex:* modifiers are being used.
+USE_TOOLS+=	gm4
 .endif
 
 ######################################################################
