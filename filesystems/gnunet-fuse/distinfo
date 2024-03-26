@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/24 16:01:26 nikita Exp $
+$NetBSD: distinfo,v 1.3 2024/03/26 20:50:45 nikita Exp $
 
-BLAKE2s (gnunet-fuse-0.20.0.tar.gz) = 5be14208b0b91023a003ec6997733f184fa2881727906f09649bcc5d22e00b9a
-SHA512 (gnunet-fuse-0.20.0.tar.gz) = f067e60bf391d71f55c48fa9b6166a01b192b2a60b8459b49c6dd250085cb0431bc482eb71fcdb3d48ca408a76ea48f0b799c64c4bdbb6d85ce28c348d1f43bf
-Size (gnunet-fuse-0.20.0.tar.gz) = 221946 bytes
+BLAKE2s (gnunet-fuse-0.21.0.tar.gz) = e2310de9f61c154be1636a1900bbde2dbdacf54a02a432b0cbd27b871ca18422
+SHA512 (gnunet-fuse-0.21.0.tar.gz) = 8c85ad98172e6fb8834368182835d32a9f1f5400bbcaa5521b3536fcc3867afca193956e50964ef965a7991a3487dba2b7e73fbb9858b3cb4e2d0560c1deb943
+Size (gnunet-fuse-0.21.0.tar.gz) = 221983 bytes
