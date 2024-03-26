@@ -1,4 +1,4 @@
-$NetBSD: patch-src_setu_gnunet-service-setu.c,v 1.2 2023/05/21 20:09:08 nikita Exp $
+$NetBSD: patch-src_setu_gnunet-service-setu.c,v 1.3 2024/03/26 20:45:56 nikita Exp $
 
 Crudely fix NetBSD's missing log2l.
 
@@ -6,8 +6,8 @@ log2* (2) is always 1.
 
 diff --git a/src/setu/gnunet-service-setu.c b/src/setu/gnunet-service-setu.c
 index f85ddb224..a8572c0e2 100644
---- src/setu/gnunet-service-setu.c.orig
-+++ src/setu/gnunet-service-setu.c
+--- src/service/setu/gnunet-service-setu.c.orig
++++ src/service/setu/gnunet-service-setu.c
 @@ -38,6 +38,10 @@
  #include "gnunet_setu_service.h"
  #include "setu.h"
