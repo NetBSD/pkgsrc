@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2024/01/24 15:58:21 nikita Exp $
+$NetBSD: distinfo,v 1.7 2024/03/26 20:45:56 nikita Exp $
 
-BLAKE2s (gnunet-0.20.0.tar.gz) = 8ea5ed260319634bc30b36ef6f62a0b8445f3c07e3de45d2f33950eafcd996fe
-SHA512 (gnunet-0.20.0.tar.gz) = bd06ac77d9812569acbc51b79ac6c1259eb0cfa9b44e8ef167723880bc9c1e142589014ad7edd54695a2ac35f2aa0d78ef23b052354d06a01751cc201153a9df
-Size (gnunet-0.20.0.tar.gz) = 9973798 bytes
+BLAKE2s (gnunet-0.21.1.tar.gz) = 123559ae8bc5f141b6316d244240821622128100a9c574d66b4a4dd4436edb0d
+SHA512 (gnunet-0.21.1.tar.gz) = 20e9dc7e0c37e83628142e5b45c9452604f60a7dddf0964822cee9a6acd0acf24be99649fdf5b866fd0ec76b8be0e04dfa11e6ac5140cc23353cc084358d6dff
+Size (gnunet-0.21.1.tar.gz) = 8225355 bytes
 SHA1 (patch-src_include_gnunet_common.h) = 44a0f31cd3d7fa4df5491cf9cf2efa31e695cdb9
-SHA1 (patch-src_setu_gnunet-service-setu.c) = f1ebdb55087f2cc3b344ad02ff8c54cc0c23aa02
+SHA1 (patch-src_setu_gnunet-service-setu.c) = daadb11c5b91bd6be13861aae0ab26e7f1fb879b
