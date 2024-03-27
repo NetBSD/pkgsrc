@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/18 18:19:43 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/03/27 15:52:32 js Exp $
 gg/bin/ppc-morphos-addr2line
 gg/bin/ppc-morphos-ar
 gg/bin/ppc-morphos-as
@@ -59,5 +59,7 @@ gg/ppc-morphos/lib/ldscripts/morphos_baserel.xu
 gg/share/info/as.info
 gg/share/info/bfd.info
 gg/share/info/binutils.info
+gg/share/info/ctf-spec.info
 gg/share/info/gprof.info
 gg/share/info/ld.info
+gg/share/info/sframe-spec.info
