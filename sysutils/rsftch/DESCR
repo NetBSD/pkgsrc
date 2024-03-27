@@ -1,0 +1,5 @@
+Command-line tool that displays system information, i.e. operating system,
+kernel version, uptime and more.
+
+Rsftch works on GNU/Linux, (most) BSD distributions and Mac OS, although
+windows support is planned.
