@@ -1,0 +1,13 @@
+$NetBSD: patch-gcc_doc_extend.texi,v 1.1 2024/03/27 23:26:29 js Exp $
+
+--- gcc/doc/extend.texi.orig	2024-03-27 23:14:48.307871116 +0000
++++ gcc/doc/extend.texi
+@@ -2487,7 +2487,7 @@ The following attributes are supported o
+ @table @code
+ @c Keep this table alphabetized by attribute name.  Treat _ as space.
+ 
+-@itemx access (@var{access-mode}, @var{ref-index})
++@item access (@var{access-mode}, @var{ref-index})
+ @itemx access (@var{access-mode}, @var{ref-index}, @var{size-index})
+ 
+ The @code{access} attribute enables the detection of invalid or unsafe
