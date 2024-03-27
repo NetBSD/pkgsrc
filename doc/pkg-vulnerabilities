@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.154 2024/03/25 03:09:27 jnemeth Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.155 2024/03/27 13:33:34 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25943,3 +25943,7 @@ ruby31-base>=3.1<3.1.4nb3	buffer-overread	https://www.ruby-lang.org/en/news/2024
 ruby31-base>=3.1<3.1.4nb3	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
 ruby32-base>=3.2<3.2.3nb1	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
 ruby33>=3.3<3.3.0nb1	remote-code-execution	https://www.ruby-lang.org/en/news/2024/03/21/rce-rdoc-cve-2024-27281/
+firefox<124.0.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-29944
+emacs<29.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-30205
+webkit-gtk<2.44.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42950
+curl<8.7.0	improper-validation-of-certificate	https://nvd.nist.gov/vuln/detail/CVE-2024-2466
