@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1114 2024/02/26 19:24:59 pin Exp $
+# $NetBSD: Makefile,v 1.1115 2024/03/27 10:00:38 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -639,6 +639,7 @@ SUBDIR+=	rkflashtool
 SUBDIR+=	rmtrash
 SUBDIR+=	roller
 SUBDIR+=	rox
+SUBDIR+=	rsftch
 SUBDIR+=	rsnapshot
 SUBDIR+=	rsyslog
 SUBDIR+=	rsyslog-dbi
