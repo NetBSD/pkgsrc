@@ -1,0 +1,17 @@
+$NetBSD: patch-libcc1_configure,v 1.1 2024/03/27 14:38:33 js Exp $
+
+pkgsrc doesn't use lib64.
+
+--- libcc1/configure.orig	2024-03-27 14:34:10.997080367 +0000
++++ libcc1/configure
+@@ -14905,10 +14905,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ 
+-libsuffix=
+-if test "$GXX" = yes; then
+-  libsuffix=`$CXX -print-multi-os-directory`
+-fi
+ 
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for socket libraries" >&5

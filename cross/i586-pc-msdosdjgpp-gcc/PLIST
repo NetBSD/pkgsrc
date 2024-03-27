@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/12/22 13:39:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/03/27 14:38:33 js Exp $
 cross-djgpp/bin/i586-pc-msdosdjgpp-c++
 cross-djgpp/bin/i586-pc-msdosdjgpp-cpp
 cross-djgpp/bin/i586-pc-msdosdjgpp-g++
@@ -43,8 +43,11 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/boost_concept_chec
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/c++0x_warning.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/char_traits.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/charconv.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/chrono.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/chrono_io.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/codecvt.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/concept_check.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/cow_string.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/cpp_type_traits.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/cxxabi_forced.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/cxxabi_init_exception.h
@@ -84,9 +87,13 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/locale_facets_noni
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/localefwd.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/mask_array.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/max_size_type.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/memory_resource.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/memoryfwd.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/mofunc_impl.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/move.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/move_only_function.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/nested_exception.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/new_allocator.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/node_handle.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/ostream.tcc
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/ostream_insert.h
@@ -117,6 +124,7 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/regex_executor.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/regex_executor.tcc
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/regex_scanner.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/regex_scanner.tcc
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/requires_hosted.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/semaphore_base.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/shared_ptr.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/shared_ptr_atomic.h
@@ -166,6 +174,7 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/unordered_map.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/unordered_set.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/uses_allocator.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/uses_allocator_args.h
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/utility.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/valarray_after.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/valarray_array.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/bits/valarray_array.tcc
@@ -245,6 +254,7 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/decimal/decimal.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/deque
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/exception
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/execution
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/expected
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/algorithm
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/any
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/array
@@ -266,6 +276,7 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/bits/simd_
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/bits/string_view.tcc
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/buffer
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/chrono
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/contract
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/deque
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/executor
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/forward_list
@@ -285,12 +296,14 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/propagate_
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/random
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/ratio
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/regex
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/scope
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/set
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/simd
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/socket
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/source_location
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/string
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/string_view
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/synchronized_value
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/system_error
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/timer
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/experimental/tuple
@@ -587,6 +600,7 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/ext/vstring_fwd.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/ext/vstring_util.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/fenv.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/filesystem
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/format
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/forward_list
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/fstream
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/functional
@@ -711,9 +725,13 @@ cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/set
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/shared_mutex
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/source_location
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/span
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/spanstream
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/sstream
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stack
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stacktrace
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stdatomic.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stdexcept
+cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stdfloat
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stdlib.h
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/stop_token
 cross-djgpp/i586-pc-msdosdjgpp/include/c++/${PKGVERSION}/streambuf
@@ -808,6 +826,7 @@ cross-djgpp/i586-pc-msdosdjgpp/lib/libssp.la
 cross-djgpp/i586-pc-msdosdjgpp/lib/libssp_nonshared.la
 cross-djgpp/i586-pc-msdosdjgpp/lib/libstdc++.a-gdb.py
 cross-djgpp/i586-pc-msdosdjgpp/lib/libstdc++.la
+cross-djgpp/i586-pc-msdosdjgpp/lib/libstdc++exp.la
 cross-djgpp/i586-pc-msdosdjgpp/lib/libsupc++.la
 cross-djgpp/info/cpp.info
 cross-djgpp/info/cppinternals.info
@@ -816,11 +835,11 @@ cross-djgpp/info/gccinstall.info
 cross-djgpp/info/gccint.info
 cross-djgpp/info/libquadmath.info
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include-fixed/README
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include-fixed/limits.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include-fixed/syslimits.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/adxintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/ammintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/amxbf16intrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/amxcomplexintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/amxfp16intrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/amxint8intrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/amxtileintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx2intrin.h
@@ -834,6 +853,8 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512cdintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512dqintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512erintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512fintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512fp16intrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512fp16vlintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512ifmaintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512ifmavlintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512pfintrin.h
@@ -850,7 +871,10 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512vp2intersecti
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512vp2intersectvlintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512vpopcntdqintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avx512vpopcntdqvlintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avxifmaintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avxintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avxneconvertintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avxvnniint8intrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/avxvnniintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/bmi2intrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/bmiintrin.h
@@ -861,6 +885,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/cldemoteintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/clflushoptintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/clwbintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/clzerointrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/cmpccxaddintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/cpuid.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/cross-stdarg.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/emmintrin.h
@@ -877,12 +902,14 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/ia32intrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/immintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/iso646.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/keylockerintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/limits.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/lwpintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/lzcntintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/mm3dnow.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/mm_malloc.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/mmintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/movdirintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/mwaitintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/mwaitxintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/nmmintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/objc/NXConstStr.h
@@ -899,9 +926,11 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/pconfigintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/pkuintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/pmmintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/popcntintrin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/prfchiintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/prfchwintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/quadmath.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/quadmath_weak.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/raointintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/rdseedintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/rtmintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/serializeintrin.h
@@ -921,6 +950,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/stdfix.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/stdint-gcc.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/stdint.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/stdnoreturn.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/syslimits.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/tbmintrin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/tgmath.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/include/tmmintrin.h
@@ -969,7 +999,6 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/backend.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/basic-block.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/bb-reorder.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/bitmap.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/brig-builtins.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/builtin-attrs.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/builtin-types.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/builtins.def
@@ -1002,11 +1031,11 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/color-macros
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/common/config/i386/i386-cpuinfo.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/conditions.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/dbxcoff.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/bsd.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/djgpp-stdint.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/djgpp.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/gas.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/i386-isa.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/i386-opts.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/i386-protos.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/config/i386/i386.h
@@ -1022,6 +1051,8 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/convert.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/coretypes.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/coroutine-builtins.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/coverage.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cp/contracts.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cp/cp-trait.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cp/cp-tree.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cp/cp-tree.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
@@ -1032,22 +1063,24 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cppbuiltin.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cppdefault.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cpplib.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/cselib.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ctfc.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/d/d-tree.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/data-streamer.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dbgcnt.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dbgcnt.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dbxout.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dce.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ddg.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/debug.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/defaults.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/df.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dfp.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-client-data-hooks.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-color.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-core.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-event-id.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-metadata.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-path.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-spec.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic-url.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/diagnostic.h
@@ -1059,6 +1092,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/double-int.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dump-context.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dumpfile.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dwarf2asm.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dwarf2ctf.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/dwarf2out.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/edit-context.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/emit-rtl.h
@@ -1101,13 +1135,19 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-fold.
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-iterator.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-low.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-match.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-predicate-analysis.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-predict.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-pretty-print.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-cache.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-edge.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-fold.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-gori.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-infer.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-op.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-path.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range-trace.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-range.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-ssa-evrp-analyze.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-ssa-warn-access.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-ssa-warn-restrict.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-ssa.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gimple-streamer.h
@@ -1123,7 +1163,6 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/graphds.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/graphite.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/graphviz.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gsstruct.def
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gstab.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gsyms.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gsyslimits.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/gtm-builtins.def
@@ -1184,6 +1223,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/libiberty.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/limitx.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/limity.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/line-map.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/logical-location.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/loop-unroll.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lower-subreg.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lra-int.h
@@ -1191,8 +1231,10 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lra.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lto-compress.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lto-section-names.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/lto-streamer.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/m2/m2-tree.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/machmode.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/machmode.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/make-unique.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/md5.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/mem-stats-traits.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/mem-stats.h
@@ -1220,6 +1262,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/optinfo-emit
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/optinfo.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/options.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/opts-diagnostic.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/opts-jobserver.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/opts.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ordered-hash-map.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/output.h
@@ -1230,6 +1273,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/plugin-api.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/plugin-version.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/plugin.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/plugin.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/pointer-query.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/poly-int-types.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/poly-int.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/predict.def
@@ -1286,7 +1330,6 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/splay-tree.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/sreal.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ssa-iterators.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ssa.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/stab.def
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/statistics.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/stmt.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/stor-layout.h
@@ -1331,6 +1374,7 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-if-conv
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-inline.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-into-ssa.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-iterator.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-logical-location.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-nested.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-object-size.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/tree-outof-ssa.h
@@ -1381,10 +1425,13 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/typeclass.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/typed-splay-tree.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/ubsan.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/valtrack.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-pointer-equiv.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-prof.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-query.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-range-equiv.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-range-pretty-print.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-range-storage.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-range.h
+cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/value-relation.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/varasm.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/vec-perm-indices.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/vec.h
@@ -1397,7 +1444,6 @@ cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/wide-int-bit
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/wide-int-print.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/wide-int.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/xcoff.h
-cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/include/xcoffout.h
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/libcc1plugin.la
 cross-djgpp/lib/gcc/i586-pc-msdosdjgpp/${PKGVERSION}/plugin/libcp1plugin.la
 cross-djgpp/lib/libcc1.la
@@ -1428,3 +1474,4 @@ cross-djgpp/share/gcc-${PKGVERSION}/python/libstdcxx/__init__.py
 cross-djgpp/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 cross-djgpp/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 cross-djgpp/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
+@pkgdir cross-djgpp/include
