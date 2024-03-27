@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/03/23 19:12:02 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/03/27 09:52:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -122,7 +122,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-2.0.52
 CARGO_CRATE_DEPENDS+=	sys-locale-0.3.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.10.1
-CARGO_CRATE_DEPENDS+=	term_grid-0.2.0
+CARGO_CRATE_DEPENDS+=	term_grid-0.1.7
 CARGO_CRATE_DEPENDS+=	terminal_size-0.2.6
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	termtree-0.4.1

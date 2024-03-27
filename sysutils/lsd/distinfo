@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/03/23 19:12:02 pin Exp $
+$NetBSD: distinfo,v 1.13 2024/03/27 09:52:01 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -237,9 +237,9 @@ Size (log-0.4.21.crate) = 43442 bytes
 BLAKE2s (lscolors-0.16.0.crate) = 4c72a772837152ea821d9a3954420b1e274d700fc1a375caa1a1866df774fa6e
 SHA512 (lscolors-0.16.0.crate) = 3b6f65e5cdad090fb05b278d4f5cc3d3219dcaa5413dcdb20ca4f673842906c09c71fab4dfe23a3669a9a3781af0d08a793e1626900a078e7e776286c676195a
 Size (lscolors-0.16.0.crate) = 23368 bytes
-BLAKE2s (lsd-1.1.1.tar.gz) = 4c6f1e5191bde5e711c0b0e7bc0c6bc98ebc213f85cfcd9fd1a9ab148e690268
-SHA512 (lsd-1.1.1.tar.gz) = 7a3f517bb9d9b2f3a43989caef1b7454c99fd7a4f49a86da09a221821a78273bf6be60404288fead4a36bf8e3f88cfb38e0b601c7edd2ff98ea847ca8ac0ed01
-Size (lsd-1.1.1.tar.gz) = 108035 bytes
+BLAKE2s (lsd-1.1.2.tar.gz) = 1401a02599ffd0372e6af7258c7df27d341673cce026787c9969918af91cd328
+SHA512 (lsd-1.1.2.tar.gz) = 2d0370c5fb463a4f5e1f2b0366e4fa4baab08eb307b8410d430361777d061a18b9bb9f75a7d19afbb12449c62a59d986cdb170937b7814f49cfbeb85612e8d54
+Size (lsd-1.1.2.tar.gz) = 108050 bytes
 BLAKE2s (memchr-2.7.1.crate) = 3524b154698575abbfc1f4461431368a94002f745e046cf4ca62411bbe9cf3f9
 SHA512 (memchr-2.7.1.crate) = 5120496faa31fc427c8b4178461a262b3a34d70eddb7ad17a19d6db8b9969c9e113d3625b5e6dc677087fc80907377b00ba0421aba9a92cf73ca2849d932f473
 Size (memchr-2.7.1.crate) = 96307 bytes
@@ -369,9 +369,9 @@ Size (sys-locale-0.3.1.crate) = 15681 bytes
 BLAKE2s (tempfile-3.10.1.crate) = 4f7b06eecc5247baecdae6f053b331230e880d2a72e0cce7b0814e70d7674a87
 SHA512 (tempfile-3.10.1.crate) = bac7515b85b0d01ea914b527f0fadd3a4d8e77c9eabe786977d2625d8a3e91decaec502dd15bab4d49a43597fa7cf7660fff4be1b043112d13b542a72443bf39
 Size (tempfile-3.10.1.crate) = 33653 bytes
-BLAKE2s (term_grid-0.2.0.crate) = 7c6d3f32c9728b94060b216dbc4592c99d84a9777a96a6f82320458f8fb3135b
-SHA512 (term_grid-0.2.0.crate) = c5ea7866f380fb1f2fda084906c517fdfd3d93a8b99ef778f011aa19fdb930e1233f351dde51cd15bbf6321368377e69fcd6d3edf21a3c71721e5440fdb49898
-Size (term_grid-0.2.0.crate) = 7879 bytes
+BLAKE2s (term_grid-0.1.7.crate) = bca0e758217c5e1797616d9917323108719dd3ef04dea4b8fff8a7cc6636f250
+SHA512 (term_grid-0.1.7.crate) = 12196d1f2579b6d593a7cdd34d74635b93fad710bcd682dd438143a9e814759346dc263dc8a65628b7ed8fc1dbcaa60fd9cec543d0cdae000cc5dc6fbb199bca
+Size (term_grid-0.1.7.crate) = 7353 bytes
 BLAKE2s (terminal_size-0.2.6.crate) = b0ab2a8fca02d013efab3fafd4c051ee476f12bd61445b0e6786ad29b306e1c3
 SHA512 (terminal_size-0.2.6.crate) = 95f38bc00f8c5e1a6913bb2a0a7c46d96e02a4f3234af1623ad3d7be41eae677e77f1b5d5d005d1e9d778fcc6c87196f67a51ab37caab5b4d299da79c85d06ed
 Size (terminal_size-0.2.6.crate) = 10585 bytes
