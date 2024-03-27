@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2024/01/31 07:21:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.98 2024/03/27 13:53:35 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -17,7 +17,6 @@ lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
 man/man1/curl.1
-man/man1/mk-ca-bundle.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
 man/man3/CURLINFO_APPCONNECT_TIME_T.3
@@ -89,6 +88,7 @@ man/man3/CURLINFO_TLS_SESSION.3
 man/man3/CURLINFO_TLS_SSL_PTR.3
 man/man3/CURLINFO_TOTAL_TIME.3
 man/man3/CURLINFO_TOTAL_TIME_T.3
+man/man3/CURLINFO_USED_PROXY.3
 man/man3/CURLINFO_XFER_ID.3
 man/man3/CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE.3
 man/man3/CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE.3
