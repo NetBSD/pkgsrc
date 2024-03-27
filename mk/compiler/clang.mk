@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.44 2024/03/20 10:47:22 schmonz Exp $
+# $NetBSD: clang.mk,v 1.45 2024/03/27 11:33:00 schmonz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -81,9 +81,9 @@ _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
 .if defined(_PKGSRC_BARRIER)
-# Xcode 12 and upstream Clang 16 have a zealous new default that the
-# wide world of random third-party software isn't ready for. Turn it
-# back off by default.
+# Xcode 12 (Apple clang-1200.0.32.2) and upstream Clang 16 have a
+# zealous new default that the wide world of random third-party software
+# isn't ready for. Turn it back off by default.
 #
 # Packages and users can override via CFLAGS/CPPFLAGS.
 _NOERROR_IMPLICIT_cmd=	${CCPATH} -\#\#\# -E -x c /dev/null \
