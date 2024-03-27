@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/03/21 20:44:40 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2024/03/27 13:59:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.RE-flex
 PKG_SUPPORTED_OPTIONS=	cpu-optimization doxygen examples
@@ -8,10 +8,16 @@ PKG_SUGGESTED_OPTIONS=	examples
 
 # don't build with cpu optimizations detected during configure
 .if empty(PKG_OPTIONS:Mcpu-optimization)
-CONFIGURE_ARGS+=	--disable-avx
+CONFIGURE_ARGS+=	--disable-avx2
 CONFIGURE_ARGS+=	--disable-sse2
 CONFIGURE_ARGS+=	--disable-neon
 .endif
+
+SUBST_CLASSES+=		path
+SUBST_FILES.path=	# set below
+SUBST_MESSAGE.path=	Updating paths.
+SUBST_STAGE.path=	pre-configure
+SUBST_VARS.path=	CC CXX PREFIX
 
 # build and install html docs
 PLIST_VARS+=		doxygen
@@ -21,6 +27,7 @@ DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}/html
 
 TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 post-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} doc/html
@@ -45,11 +52,7 @@ INSTALLATION_DIRS+=	${EXAMPLEDIR}
 
 DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-SUBST_CLASSES+=		path
-SUBST_FILES.path=	examples/Make
-SUBST_MESSAGE.path=	Updating paths.
-SUBST_STAGE.path=	pre-install
-SUBST_VARS.path=	CC CXX PREFIX
+SUBST_FILES.path+=	examples/Make
 
 .PHONY: post-install-examples
 
