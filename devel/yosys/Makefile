@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2024/03/02 23:08:00 thorpej Exp $
+# $NetBSD: Makefile,v 1.3 2024/03/27 22:52:32 wiz Exp $
 
 YOSYS_VERSION=	0.38
 YOSYS_TAG=	yosys-${YOSYS_VERSION}
 ABC_DISTNAME=	abc-${YOSYS_TAG}
 DISTNAME=	${YOSYS_TAG}
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 GITHUB_TAG=	${YOSYS_TAG}
 WRKSRC=		${WRKDIR}/yosys-${YOSYS_TAG}
 EXTRACT_SUFX=	.tar.gz		# needed early
-
-PKGREVISION=	1
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/YosysHQ/yosys
@@ -32,12 +31,13 @@ SITES.${ABC_DISTFILE}=	-${MASTER_SITE_GITHUB:=YosysHQ/abc/archive/}${GITHUB_TAG}
 EXTRACT_DIR.${ABC_DISTFILE}=		${WRKSRC}/abc
 EXTRACT_OPTS_TAR.${ABC_DISTFILE}=	--strip-components=1
 
-.if !empty(CC_VERSION:Mclang*)
+.if ${CC_VERSION:Mclang*}
 YOSYS_COMPILER=	clang
 .else
 YOSYS_COMPILER=	gcc
 .endif
 
+USE_TOOLS+=	bash
 USE_TOOLS+=	gmake
 USE_TOOLS+=	bison
 USE_TOOLS+=	flex
@@ -64,6 +64,8 @@ REPLACE_PYTHON+=	tests/opt_share/*.py
 REPLACE_PYTHON+=	tests/realmath/*.py
 REPLACE_PYTHON+=	tests/share/*.py
 REPLACE_PYTHON+=	tests/tools/*.py
+
+REPLACE_BASH+=		misc/yosys-config.in
 
 do-configure:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} config-${YOSYS_COMPILER}
