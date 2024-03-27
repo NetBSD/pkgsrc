@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2128 2024/03/27 15:52:41 js Exp $
+$NetBSD: CHANGES-2024,v 1.2129 2024/03/27 23:26:38 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3626,3 +3626,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/curl to 8.7.1 [wiz 2024-03-27]
 	Updated cross/i586-pc-msdosdjgpp-gcc to 13.2.0 [js 2024-03-27]
 	Updated cross/ppc-morphos-binutils to 2.40 [js 2024-03-27]
+	Updated cross/ppc-morphos-gcc-11 to 11.3.0 [js 2024-03-27]
