@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.2 2022/12/10 10:44:59 js Exp $
+$NetBSD: distinfo,v 1.3 2024/03/27 14:38:33 js Exp $
 
-BLAKE2s (gcc-11.2.0.tar.xz) = 528c6e78fd9ace664e49c25ffbccc8f3a7b45aa70e50ea9744b36f5719f4f11e
-SHA512 (gcc-11.2.0.tar.xz) = d53a0a966230895c54f01aea38696f818817b505f1e2bfa65e508753fcd01b2aedb4a61434f41f3a2ddbbd9f41384b96153c684ded3f0fa97c82758d9de5c7cf
-Size (gcc-11.2.0.tar.xz) = 80888824 bytes
-SHA1 (patch-libstdc++-v3_src_c++11_shared_ptr.cc) = 1ab8fba415a526eb7aa1f3d43eda356d54cde1fb
-SHA1 (patch-libstdc++-v3_src_c++17_fs_ops.cc) = 50ba6c15849c1d48f3449707894bc70d30d7f388
-SHA1 (patch-libstdc++-v3_src_filesystem_ops-common.h) = be95078e04628ce9f40318f492148a1da055686d
-SHA1 (patch-libstdc++-v3_src_filesystem_ops.cc) = 7a9c34d9ab33be3a041b0eaa9992eb0726a66ae6
+BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
+SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
+Size (gcc-13.2.0.tar.xz) = 87858592 bytes
+SHA1 (patch-gcc_configure) = 380bc31209ca1c933293f8a89eaf802545743c7e
+SHA1 (patch-gcc_plugin.c) = ea04eaa4c57741ddcde393607a47bdb2e8987067
+SHA1 (patch-libcc1_configure) = 76d81fdf07c2b05a9b7bca6f3800f2d5150b1fcf
+SHA1 (patch-libiberty_fibheap.c) = 8ecf7bd1db71c007ec541060de1db9d460f5a261
+SHA1 (patch-libiberty_filedescriptor.c) = 7ebdb028e3963ecdf7deabd5ff1516e97abd87aa
+SHA1 (patch-libiberty_pex-unix.c) = a49380e66f397055fb1ec3ee72847a237b973159
+SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 8ee47c2b3fe3df43b6f5d3c2928ece2e144b5fb5
