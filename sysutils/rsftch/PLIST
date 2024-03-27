@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/03/27 09:59:33 pin Exp $
+bin/rsftch
