@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/08/30 21:46:33 js Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/27 15:52:32 js Exp $
 
-DISTNAME=	sdk-source-20210211
-PKGNAME=	ppc-morphos-binutils-2.36.1
-PKGREVISION=	1
+DISTNAME=	sdk-source-20230510
+PKGNAME=	ppc-morphos-binutils-2.40
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz
