@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/17 13:25:31 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/27 23:26:29 js Exp $
 gg/bin/ppc-morphos-c++-11
 gg/bin/ppc-morphos-cpp-11
 gg/bin/ppc-morphos-g++-11
@@ -1472,44 +1472,4 @@ gg/share/info/gcc.info
 gg/share/info/gccinstall.info
 gg/share/info/gccint.info
 gg/share/info/libquadmath.info
-gg/share/locale/be/LC_MESSAGES/cpplib.mo
-gg/share/locale/be/LC_MESSAGES/gcc.mo
-gg/share/locale/ca/LC_MESSAGES/cpplib.mo
-gg/share/locale/da/LC_MESSAGES/cpplib.mo
-gg/share/locale/da/LC_MESSAGES/gcc.mo
-gg/share/locale/de/LC_MESSAGES/cpplib.mo
-gg/share/locale/de/LC_MESSAGES/gcc.mo
-gg/share/locale/el/LC_MESSAGES/cpplib.mo
-gg/share/locale/el/LC_MESSAGES/gcc.mo
-gg/share/locale/eo/LC_MESSAGES/cpplib.mo
-gg/share/locale/es/LC_MESSAGES/cpplib.mo
-gg/share/locale/es/LC_MESSAGES/gcc.mo
-gg/share/locale/fi/LC_MESSAGES/cpplib.mo
-gg/share/locale/fi/LC_MESSAGES/gcc.mo
-gg/share/locale/fr/LC_MESSAGES/cpplib.mo
-gg/share/locale/fr/LC_MESSAGES/gcc.mo
-gg/share/locale/hr/LC_MESSAGES/gcc.mo
-gg/share/locale/id/LC_MESSAGES/cpplib.mo
-gg/share/locale/id/LC_MESSAGES/gcc.mo
-gg/share/locale/ja/LC_MESSAGES/cpplib.mo
-gg/share/locale/ja/LC_MESSAGES/gcc.mo
-gg/share/locale/nl/LC_MESSAGES/cpplib.mo
-gg/share/locale/nl/LC_MESSAGES/gcc.mo
-gg/share/locale/pt_BR/LC_MESSAGES/cpplib.mo
-gg/share/locale/ru/LC_MESSAGES/cpplib.mo
-gg/share/locale/ru/LC_MESSAGES/gcc.mo
-gg/share/locale/sr/LC_MESSAGES/cpplib.mo
-gg/share/locale/sr/LC_MESSAGES/gcc.mo
-gg/share/locale/sv/LC_MESSAGES/cpplib.mo
-gg/share/locale/sv/LC_MESSAGES/gcc.mo
-gg/share/locale/tr/LC_MESSAGES/cpplib.mo
-gg/share/locale/tr/LC_MESSAGES/gcc.mo
-gg/share/locale/uk/LC_MESSAGES/cpplib.mo
-gg/share/locale/uk/LC_MESSAGES/gcc.mo
-gg/share/locale/vi/LC_MESSAGES/cpplib.mo
-gg/share/locale/vi/LC_MESSAGES/gcc.mo
-gg/share/locale/zh_CN/LC_MESSAGES/cpplib.mo
-gg/share/locale/zh_CN/LC_MESSAGES/gcc.mo
-gg/share/locale/zh_TW/LC_MESSAGES/cpplib.mo
-gg/share/locale/zh_TW/LC_MESSAGES/gcc.mo
 @pkgdir gg/include
