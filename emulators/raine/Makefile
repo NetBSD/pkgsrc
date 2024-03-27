@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/03/23 17:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/03/27 12:10:19 wiz Exp $
 
 DISTNAME=	raine-0.96.7
 CATEGORIES=	emulators
@@ -45,7 +45,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/raine ${DESTDIR}${PREFIX}/share/raine
 	${INSTALL_SCRIPT} ${WRKSRC}/raine.sh ${DESTDIR}${PREFIX}/bin/raine
 
-#.include "options.mk"
+.include "options.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
