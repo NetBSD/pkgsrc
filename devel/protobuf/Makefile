@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.74 2024/02/16 13:41:11 adam Exp $
+# $NetBSD: Makefile,v 1.75 2024/03/28 11:19:53 gdt Exp $
 #
-# When updating this, please also update devel/py-protobuf
+# When updating this, please also update devel/py-protobuf.
 #
-# Please note: this package often changes the major version
-# number of libraries, so please compare binary packages
-# from before and after, and do a recursive PKGREVISION
-# bump if necessary
+# NB: This package has very strange library versioning, lacking the
+# usual libfoo.so.X symlink to libfoo.so.X.Y.  Thus, any change to the
+# so version, e.g. .25.2.0 to .25.3.0, is an ABI change.  It is highly
+# likely that any upstream release, even if apparently minor, will
+# require a recursive revbump.
 
 DISTNAME=	protobuf-25.3
 CATEGORIES=	devel
