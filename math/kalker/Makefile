@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/23 19:10:49 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/03/28 12:06:01 pin Exp $
 
-DISTNAME=	kalker-2.1.0
+DISTNAME=	kalker-2.1.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaddiM8/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
