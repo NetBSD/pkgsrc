@@ -1,7 +1,7 @@
-# $NetBSD: plist-macros.awk,v 1.2 2008/01/05 17:03:04 rillig Exp $
+# $NetBSD: plist-macros.awk,v 1.3 2024/03/29 00:16:25 js Exp $
 
 BEGIN {
-	IMAKE_MANINSTALL = getenv_or_die("IMAKE_MANINSTALL")
+	IMAKE_MANINSTALL = ENVIRON["IMAKE_MANINSTALL"]
 }
 
 # XXX: Don't use this macro, since it is not yet supported.
