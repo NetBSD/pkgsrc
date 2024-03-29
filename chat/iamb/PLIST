@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/09 10:21:32 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/03/29 20:43:19 pin Exp $
 bin/iamb
+man/man1/iamb.1
+man/man5/iamb.5
+share/applications/iamb.desktop
+share/examples/iamb/config.example.toml
+share/icons/hicolor/scalable/apps/iamb.svg
