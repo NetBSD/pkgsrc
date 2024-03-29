@@ -58,6 +58,9 @@
 #endif
 #ifdef HAVE_FNMATCH_H
 #include <fnmatch.h>
+#ifndef FNM_CASEFOLD
+#define FNM_CASEFOLD 0
+#endif
 #endif
 #ifdef HAVE_STDARG_H
 #include <stdarg.h>
