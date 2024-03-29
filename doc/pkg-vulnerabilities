@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.156 2024/03/29 18:13:24 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.157 2024/03/29 18:22:44 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25947,4 +25947,4 @@ firefox<124.0.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-2
 emacs<29.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-30205
 webkit-gtk<2.44.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42950
 curl<8.7.0	improper-validation-of-certificate	https://nvd.nist.gov/vuln/detail/CVE-2024-2466
-xz>=5.6	backdoor	https://www.openwall.com/lists/oss-security/2024/03/29/4
+xz>=5.6<5.6.1nb100	backdoor	https://www.openwall.com/lists/oss-security/2024/03/29/4
