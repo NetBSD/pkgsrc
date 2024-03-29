@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2022/05/24 14:43:03 hauke Exp $
+# $NetBSD: Makefile,v 1.82 2024/03/29 00:37:19 js Exp $
 
 DISTNAME=	m4-1.4.19
 PKGREVISION=	1
@@ -18,6 +18,9 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 CFLAGS.AIX+=	-D_LINUX_SOURCE_COMPAT
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS.QNX+=	-march=i486  # Defaults to i386 otherwise, which lacks atomics
+.endif
 
 AUTO_MKDIRS=		yes
 
