@@ -20,3 +20,6 @@ XZ Utils consist of a few relatively separate parts:
     provides advanced options to finetune the compression settings.
   * A few shell scripts make diffing and grepping LZMA compressed
     files easy. The scripts were adapted from gzip and bzip2.
+
+Due to backdoor in 5.6.*, this package is currently called 5.6* but
+contains 5.4.*.
