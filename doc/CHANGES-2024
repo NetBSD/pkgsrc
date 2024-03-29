@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2136 2024/03/29 20:43:41 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2137 2024/03/29 22:06:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3633,3 +3633,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/twitch-tui to 2.6.6 [pin 2024-03-28]
 	Downgraded archivers/xz to 5.4.6 [wiz 2024-03-28]
 	Updated chat/iamb to 0.0.9 [pin 2024-03-29]
+	Updated net/tlrc to 1.9.1 [pin 2024-03-29]
