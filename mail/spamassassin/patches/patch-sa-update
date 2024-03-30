@@ -1,13 +1,10 @@
-$NetBSD: patch-sa-update,v 1.7 2023/08/15 10:20:00 abs Exp $
+$NetBSD: patch-sa-update,v 1.8 2024/03/30 14:22:33 gdt Exp $
 
 Prepare for substitution.
 
-Plus switch from rdatastr to rdstring to avoid deprecated warning
-https://svn.apache.org/viewvc?view=revision&revision=1910601
-
---- sa-update.raw.orig	2022-12-14 06:03:27.000000000 +0000
+--- sa-update.raw.orig	2024-03-26 04:52:25.000000000 +0000
 +++ sa-update.raw
-@@ -361,10 +361,10 @@ my $GPGPath;
+@@ -362,10 +362,10 @@ my $GPGPath;
  if ($GPG_ENABLED || $opt{'import'}) {
    # find GPG in the PATH
    # bug 4958: for *NIX it's "gpg", in Windows it's "gpg.exe"
@@ -20,16 +17,7 @@ https://svn.apache.org/viewvc?view=revision&revision=1910601
      dbg("gpg: found $GPGPath");
  
      # bug 5030: if GPGPath has a space, put it in quotes
-@@ -1458,7 +1458,7 @@ sub do_dns_query {
-       next if !$rr;  # no answer records, only rcode
-       next if $rr->type ne $rr_type;
-       # scalar context!
--      my $text = $rr->UNIVERSAL::can('txtdata') ? $rr->txtdata : $rr->rdatastr;
-+      my $text = $rr->UNIVERSAL::can('txtdata') ? $rr->txtdata : $rr->rdstring;
-       push(@result,$text)  if defined $text && $text ne '';
-     }
-     printf("DNS %s query: %s -> %s\n", $rr_type, $query, join(", ",@result))
-@@ -1628,10 +1628,8 @@ sub http_get {
+@@ -1629,10 +1629,8 @@ sub http_get {
        }
      }
    } else {
