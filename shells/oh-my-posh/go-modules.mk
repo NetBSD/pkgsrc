@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.44 2024/03/14 14:42:49 pin Exp $
+# $NetBSD: go-modules.mk,v 1.45 2024/03/30 20:08:29 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -64,8 +64,8 @@ GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.mod
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.zip
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.0.mod
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.0.zip
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.1.mod
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.1.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.3.3.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.4.0.zip
@@ -114,8 +114,8 @@ GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.zip
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.1.1.mod
-GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.1.1.zip
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.2.0.mod
+GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.2.0.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20210106213030-5aafc221ea8c.mod
