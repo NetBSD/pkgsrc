@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.524 2024/03/10 12:16:39 ryoon Exp $
+$NetBSD: distinfo,v 1.525 2024/03/30 11:48:34 maya Exp $
 
 BLAKE2s (firefox-123.0.1.source.tar.xz) = d242b65c21b81833e912cda955aed4512f438850f493aa727c8383116043ae59
 SHA512 (firefox-123.0.1.source.tar.xz) = e9af61c1ca800edd16ab7a0d24c9a36bbb34813ed0a11ff62389aa38fa83deba394bca5d95cdaad55ad29ffa3c0e5d3dd15ac1099f7fa3649f4b6c835b7498c2
@@ -35,6 +35,7 @@ SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 4cb0e1c88dc83370024ed1aac7f75445b9f98df8
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 8111952a107eb2cd665525ddd0e27c79eee3c1cd
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_video__capture__factory.cc) = 442a18a947bed338225e00967e8cd23f61378c8a
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
