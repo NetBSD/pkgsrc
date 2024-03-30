@@ -1,6 +1,7 @@
-$NetBSD: patch-src_greenlet_slp__platformselect.h,v 1.3 2024/03/30 19:40:05 he Exp $
+$NetBSD: patch-src_greenlet_slp__platformselect.h,v 1.4 2024/03/30 20:11:51 wiz Exp $
 
 Add support for NetBSD/powerpc.
+https://github.com/python-greenlet/greenlet/pull/402
 
 --- src/greenlet/slp_platformselect.h.orig	2023-12-21 21:57:40.000000000 +0000
 +++ src/greenlet/slp_platformselect.h
