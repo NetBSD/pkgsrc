@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.10 2024/03/12 16:45:07 christos Exp $	*/
+/*	$NetBSD: process.c,v 1.11 2024/03/31 13:31:41 js Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -44,7 +44,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: process.c,v 1.10 2024/03/12 16:45:07 christos Exp $");
+__RCSID("$NetBSD: process.c,v 1.11 2024/03/31 13:31:41 js Exp $");
 #ifdef __FBSDID
 __FBSDID("$FreeBSD: head/usr.bin/sed/process.c 192732 2009-05-25 06:45:33Z brian $");
 #endif
@@ -671,7 +671,11 @@ lputs(char *s, size_t len)
 			fputc('\n', outfile);
 			col = 0;
 		} else if (iswprint(wc)) {
+#ifdef HAVE_WCWIDTH
 			width = (size_t)wcwidth(wc);
+#else
+			width = 1;
+#endif
 			if (col + width >= termwidth) {
 				fprintf(outfile, "\\\n");
 				col = 0;

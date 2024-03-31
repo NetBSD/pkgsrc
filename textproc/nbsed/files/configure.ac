@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.11 2024/03/12 16:45:07 christos Exp $
+dnl $Id: configure.ac,v 1.12 2024/03/31 13:31:41 js Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ([2.72])
 AC_INIT([sed],[20040821],[agc@NetBSD.org])
@@ -33,6 +33,7 @@ dnl Check for functions
 AC_CHECK_FUNCS(regcomp)
 AC_CHECK_FUNCS(regexec)
 AC_CHECK_FUNCS(memcpy)
+AC_CHECK_FUNCS(wcwidth)
 
 AC_MSG_CHECKING([for working REG_STARTEND])
 AC_RUN_IFELSE([AC_LANG_SOURCE([[

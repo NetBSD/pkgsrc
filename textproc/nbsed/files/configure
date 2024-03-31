@@ -4090,6 +4090,13 @@ then :
 
 fi
 
+ac_fn_c_check_func "$LINENO" "wcwidth" "ac_cv_func_wcwidth"
+if test "x$ac_cv_func_wcwidth" = xyes
+then :
+  printf "%s\n" "#define HAVE_WCWIDTH 1" >>confdefs.h
+
+fi
+
 
 { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for working REG_STARTEND" >&5
 printf %s "checking for working REG_STARTEND... " >&6; }
