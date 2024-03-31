@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/03/16 14:01:45 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2024/03/31 22:08:42 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zsh
 PKG_SUPPORTED_OPTIONS=		debug static
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--enable-zsh-mem
 .endif
 
 PLIST_VARS+=		dynamic
-.if !empty(PKG_OPTIONS:Mstatic)
+.if !empty(PKG_OPTIONS:Mstatic) || ${OPSYS} == "QNX"
 CONFIGURE_ARGS+=	--disable-dynamic
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
 LDFLAGS+=		-static
