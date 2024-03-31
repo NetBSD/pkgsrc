@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2022/11/06 20:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2024/03/31 22:08:42 js Exp $
 
 DISTNAME=	zsh-5.9
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	The Z shell
 LICENSE=	gnu-gpl-v2 AND zsh
 
 USE_LANGUAGES=		c c99
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		autoconf automake autoreconf makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 TEXINFO_REQD=		4.0
@@ -76,6 +76,9 @@ SUBST_FILES.pkgdb=	Completion/BSD/Command/_bsd_pkg
 SUBST_VARS.pkgdb=	PKG_DBDIR
 
 .include "options.mk"
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 .for f in FEATURES NEWS Etc/BUGS Etc/FAQ
