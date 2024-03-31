@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.9 2024/03/05 14:24:44 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q4,v 1.1.2.10 2024/03/31 15:15:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q4 branch:
 
@@ -38,4 +38,8 @@ security/libfido2: NetBSD build fix
 
 Pullup ticket #6839 - requested by nia
 editors/nano: build fix
+
+Pullup ticket #6840 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
