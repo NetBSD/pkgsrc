@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.18 2023/03/31 10:50:26 adam Exp $
+# $NetBSD: depends.mk,v 1.19 2024/03/31 13:41:23 js Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -131,8 +131,8 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
 		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
-		unset _PKGSRC_BARRIER;					\
-		unset MAKEFLAGS;					\
+		unset _PKGSRC_BARRIER || true;				\
+		unset MAKEFLAGS || true;				\
 		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG:Q}\
 			_PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}"	\
 			PKGNAME_REQD="$$pattern"			\
