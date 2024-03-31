@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2140 2024/03/30 20:08:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2141 2024/03/31 19:57:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3637,3 +3637,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox to 123.0.1nb1 [maya 2024-03-30]
 	Updated mail/spamassassin to 4.0.1 [gdt 2024-03-30]
 	Updated shells/oh-my-posh to 19.19.0 [pin 2024-03-30]
+	Updated net/trippy to 0.10.0 [pin 2024-03-31]
