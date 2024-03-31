@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/07/06 09:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/03/31 14:41:20 js Exp $
 
 DISTNAME=	gettext-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -15,11 +15,20 @@ WRKSRC=		${WRKDIR}/Locale-${DISTNAME}
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Locale/gettext/.packlist
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=		intlpath
 SUBST_FILES.intlpath=	Makefile.PL
+.if ${OPSYS} == "QNX"
+SUBST_SED.intlpath+=	-e 's,-lintl,-L${BUILDLINK_PREFIX.gettext}/lib -lintl -liconv,g'
+.else
 SUBST_SED.intlpath+=	-e 's,-lintl,-L${BUILDLINK_PREFIX.gettext}/lib -lintl,g'
+.endif
 SUBST_STAGE.intlpath=	pre-configure
 
+.if ${OPSYS} == "QNX"
+.include "../../converters/libiconv/buildlink3.mk"
+.endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
