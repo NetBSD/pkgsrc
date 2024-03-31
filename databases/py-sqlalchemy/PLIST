@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/03/06 21:40:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/03/31 19:19:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,11 +24,16 @@ ${PYSITELIB}/sqlalchemy/cyextension/__init__.py
 ${PYSITELIB}/sqlalchemy/cyextension/__init__.pyc
 ${PYSITELIB}/sqlalchemy/cyextension/__init__.pyo
 ${PYSITELIB}/sqlalchemy/cyextension/collections.pyx
+${PYSITELIB}/sqlalchemy/cyextension/collections.so
 ${PYSITELIB}/sqlalchemy/cyextension/immutabledict.pxd
 ${PYSITELIB}/sqlalchemy/cyextension/immutabledict.pyx
+${PYSITELIB}/sqlalchemy/cyextension/immutabledict.so
 ${PYSITELIB}/sqlalchemy/cyextension/processors.pyx
+${PYSITELIB}/sqlalchemy/cyextension/processors.so
 ${PYSITELIB}/sqlalchemy/cyextension/resultproxy.pyx
+${PYSITELIB}/sqlalchemy/cyextension/resultproxy.so
 ${PYSITELIB}/sqlalchemy/cyextension/util.pyx
+${PYSITELIB}/sqlalchemy/cyextension/util.so
 ${PYSITELIB}/sqlalchemy/dialects/__init__.py
 ${PYSITELIB}/sqlalchemy/dialects/__init__.pyc
 ${PYSITELIB}/sqlalchemy/dialects/__init__.pyo
