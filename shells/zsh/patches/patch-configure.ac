@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2022/07/01 23:31:49 rin Exp $
+$NetBSD: patch-configure.ac,v 1.11 2024/03/31 22:08:43 js Exp $
 
 Fix SunOS flags.
 
---- configure.orig	2022-07-02 08:12:29.625197786 +0900
-+++ configure	2022-07-02 08:12:43.989244826 +0900
-@@ -14101,7 +14101,7 @@
+#include <time.h> for struct timespec, as per POSIX (fixes QNX).
+
+--- configure.ac.orig	2022-05-08 06:18:22.000000000 +0000
++++ configure.ac
+@@ -1165,6 +1165,7 @@ zsh_TYPE_EXISTS([
+ dnl Check for struct timespec since POSIX only gained it in 2008
+ zsh_TYPE_EXISTS([
+ #define _GNU_SOURCE 1
++#include <time.h>
+ #ifdef HAVE_SYS_TIME_H
+ # include <sys/time.h>
+ #endif
+@@ -2845,7 +2846,7 @@ char *argv[];
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
      aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
