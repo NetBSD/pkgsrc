@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24225 2024/03/31 08:26:31 wiz Exp $
+$NetBSD: TODO,v 1.24226 2024/03/31 17:34:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1131,6 +1131,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ply-3.11
 	o poco-1.12.4
 	o podcastdl-0.3.3
+	o poke-4.0
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
 	o posh-0.14.1
