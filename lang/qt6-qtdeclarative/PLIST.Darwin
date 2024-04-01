@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2023/08/03 20:01:30 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2024/04/01 13:40:26 adam Exp $
+lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
+qt6/include/QtQuickControls2IOSStyleImpl/${PKGVERSION}/QtQuickControls2IOSStyleImpl/private/qquickioscursorflashtimer_p.h
+qt6/include/QtQuickControls2IOSStyleImpl/${PKGVERSION}/QtQuickControls2IOSStyleImpl/private/qquickiosstyle_p.h
+qt6/include/QtQuickControls2IOSStyleImpl/QtQuickControls2IOSStyleImpl
+qt6/include/QtQuickControls2IOSStyleImpl/QtQuickControls2IOSStyleImplDepends
+qt6/include/QtQuickControls2IOSStyleImpl/QtQuickControls2IOSStyleImplVersion
+qt6/include/QtQuickControls2IOSStyleImpl/qtquickcontrols2iosstyleimplversion.h
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2iosstyleimplpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2iosstyleimplpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2iosstyleimplpluginConfigVersion.cmake
@@ -17,6 +24,23 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginConfigVersion
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2macosstylepluginTargets.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplConfig.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplConfigVersion.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplDependencies.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplTargets-release.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplTargets.cmake
+qt6/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6QuickControls2IOSStyleImplVersionlessTargets.cmake
+qt6/lib/libQt6QuickControls2IOSStyleImpl.${PKGVERSION}.so
+qt6/lib/libQt6QuickControls2IOSStyleImpl.prl
+qt6/lib/libQt6QuickControls2IOSStyleImpl.so
+qt6/lib/libQt6QuickControls2IOSStyleImpl.so.6
+qt6/lib/pkgconfig/Qt6QuickControls2IOSStyleImpl.pc
+qt6/metatypes/qt6quickcontrols2iosstyleimpl_release_metatypes.json
+qt6/mkspecs/modules/qt_lib_quickcontrols2iosstyleimpl.pri
+qt6/mkspecs/modules/qt_lib_quickcontrols2iosstyleimpl_private.pri
+qt6/modules/QuickControls2IOSStyleImpl.json
 qt6/qml/QtQuick/Controls/iOS/BusyIndicator.qml
 qt6/qml/QtQuick/Controls/iOS/Button.qml
 qt6/qml/QtQuick/Controls/iOS/CheckBox.qml
