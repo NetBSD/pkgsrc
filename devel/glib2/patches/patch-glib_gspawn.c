@@ -1,4 +1,4 @@
-$NetBSD: patch-glib_gspawn.c,v 1.2 2020/03/04 15:11:48 wiz Exp $
+$NetBSD: patch-glib_gspawn.c,v 1.3 2024/04/01 23:43:13 charlotte Exp $
 
 Avoid the build failure with Clang on FreeBSD (see PR 54752).
 Set environ as a weak symbol (thanks to Joerg).
@@ -9,7 +9,7 @@ Set environ as a weak symbol (thanks to Joerg).
  #ifdef HAVE__NSGETENVIRON
  #define environ (*_NSGetEnviron())
  #else
-+#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +extern __attribute__((__weak__)) char **environ;
 +#else
  extern char **environ;
