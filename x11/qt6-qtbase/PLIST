@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/16 17:39:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/04/01 13:40:25 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -968,6 +968,7 @@ qt6/include/QtCore/qttypetraits.h
 qt6/include/QtCore/qtversion.h
 qt6/include/QtCore/qtversionchecks.h
 qt6/include/QtCore/qtypeinfo.h
+qt6/include/QtCore/qtyperevision.h
 qt6/include/QtCore/qtypes.h
 qt6/include/QtCore/qurl.h
 qt6/include/QtCore/qurlquery.h
@@ -3072,7 +3073,7 @@ qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake
-${PLIST.cups}qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake
+qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-release.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessTargets.cmake
@@ -3111,6 +3112,7 @@ qt6/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake
+qt6/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake

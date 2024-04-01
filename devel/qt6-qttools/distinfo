@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2024/02/16 17:39:07 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/04/01 13:40:28 adam Exp $
 
-BLAKE2s (qttools-everywhere-src-6.6.2.tar.xz) = b5e06fbcce06977fe2f658d22de9422175cd79d0490f4fa3b4ac3ccb1e727645
-SHA512 (qttools-everywhere-src-6.6.2.tar.xz) = bf8d7fc92768b2a4992cef021576b1a6ed1405995ab18113db22c72f9e159b38012ff98d797b2a9578cc82527dc51fae92605a5e6a94fdeecd7e0da95509ce90
-Size (qttools-everywhere-src-6.6.2.tar.xz) = 8594492 bytes
+BLAKE2s (qttools-everywhere-src-6.6.3.tar.xz) = c5e1c77f4dd8adb1557c8bd442f500cb6b2aebe9f4c84e4662bfa392f2075b36
+SHA512 (qttools-everywhere-src-6.6.3.tar.xz) = 621277c1f8ea7b0742ce2679bc938d8c5611f712b06f6ec7afa8231e9d8ae3184870f0d9d9358076bdeac220072798e236745bf68c33eaf23dc7896a1a478235
+Size (qttools-everywhere-src-6.6.3.tar.xz) = 8596272 bytes
 SHA1 (patch-src_assistant_assistant_CMakeLists.txt) = 530cb39e7389f04c4fb93bf32b71115a2312f091
 SHA1 (patch-src_assistant_qlitehtml_src_container__qpainter.cpp) = 8e104c93753ab9dc9d29cee85c6dbd679f8889d8
 SHA1 (patch-src_assistant_qlitehtml_src_container__qpainter__p.h) = 10f725e9fcffdc9142dd2746da8e1693fb5118f6
