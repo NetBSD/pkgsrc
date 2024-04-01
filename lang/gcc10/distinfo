@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2024/04/01 14:33:57 js Exp $
+$NetBSD: distinfo,v 1.18 2024/04/01 18:08:48 js Exp $
 
 BLAKE2s (gcc-10.5.0.tar.xz) = af4a8b262d9d4e534e8e1c311897e68e7d64f147ad1eed42e77f9674da188bf3
 SHA512 (gcc-10.5.0.tar.xz) = d86dbc18b978771531f4039465e7eb7c19845bf607dc513c97abf8e45ffe1086a99d98f83dfb7b37204af22431574186de9d5ff80c8c3c3a98dbe3983195bffd
@@ -22,6 +22,7 @@ SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 367d83c808fd7b5b1989d0490b532ad06b425
 SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
+SHA1 (patch-gcc_ginclude_stddef.h) = bb9c7c85decd29d4b76bb59c1f640e7e958b1971
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_opts-common.c) = 8cfb8e50a8690b1094449f4eb2d278ddeeb4b633
 SHA1 (patch-gcc_opts-jobserver.h) = 7206af8d26fa773ce1df9234ee5cdd4afcc80918
@@ -47,7 +48,6 @@ SHA1 (patch-libgfortran_io_list__read.c) = 589cdb8dcd180b781ededc086e8775224fca5
 SHA1 (patch-libgfortran_io_read.c) = cf21493396d07a5e8ad0dfb70a8d25a11482fc98
 SHA1 (patch-libgfortran_runtime_environ.c) = c7217704a00f4c0314bbc1838ac6fc966cc854d0
 SHA1 (patch-libiberty_pex-unix.c) = 52896635b2578e8338a82ad3a3e9fd4d911c8489
-SHA1 (patch-libobjc_objc_runtime.h) = 420137482a6e3fa1f9dc4196e60dfde47a80f68a
 SHA1 (patch-libquadmath_printf_printf_fphex.c) = 4e3927bb2ba9013e1ef69e38d0481c930b77a2fc
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 9c862bd2e07f8724646896a9f93bb8bb15bb4185
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 1a3a419218fb260c1c4a0ed08f5a72bde683d039
@@ -56,7 +56,5 @@ SHA1 (patch-libstdc++-v3_include_bits_stl_function.h) = 2757a988fb0a19825abb9963
 SHA1 (patch-libstdc++-v3_include_c_global_cmath) = 24ec0941fcad205ce090b969a90ce5e85e235775
 SHA1 (patch-libstdc++-v3_include_c_global_cstring) = 0a87e7939448957bb352d8a50d5d3cb07f2f9a5d
 SHA1 (patch-libstdc++-v3_include_c_global_cwchar) = 9408c1876183fa3f9d4440acdc96217c8a47ed87
-SHA1 (patch-libstdc++-v3_libsupc++_cxxabi.h) = 3bf8c2c8528f9374d157fa47e8ad0d13fc16b8a4
-SHA1 (patch-libstdc++-v3_libsupc++_cxxabi_init_exception.h) = 260c4af26e88e0015f54b04910cf91dd2ee8cb5f
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6
 SHA1 (patch-libstdc++-v3_src_c++11_system_error.cc) = 2c4b5326f4a4f518b202055aa3fbcc76c27f51dd
