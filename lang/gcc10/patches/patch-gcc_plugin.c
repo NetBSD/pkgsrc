@@ -1,15 +1,18 @@
-$NetBSD: patch-gcc_plugin.c,v 1.1 2023/09/05 16:54:19 vins Exp $
+$NetBSD: patch-gcc_plugin.c,v 1.2 2024/04/01 14:33:57 js Exp $
 
 Support dynamic link interface functions.
 
---- gcc/plugin.c.orig	2022-05-27 07:21:11.335381405 +0000
+Needs to come after the other includes as those add some defines that change
+behavior (breaks QNX otherwise).
+
+--- gcc/plugin.c.orig	2023-07-07 07:08:19.000000000 +0000
 +++ gcc/plugin.c
-@@ -20,6 +20,8 @@ along with GCC; see the file COPYING3.
- /* This file contains the support for GCC plugin mechanism based on the
-    APIs described in doc/plugin.texi.  */
+@@ -30,6 +30,8 @@ along with GCC; see the file COPYING3.  
+ #include "intl.h"
+ #include "plugin.h"
  
 +#include <dlfcn.h>
 +
- #include "config.h"
- #include "system.h"
- #include "coretypes.h"
+ #ifdef ENABLE_PLUGIN
+ #include "plugin-version.h"
+ #endif
