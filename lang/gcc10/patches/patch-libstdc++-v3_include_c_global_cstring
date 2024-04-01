@@ -1,0 +1,15 @@
+$NetBSD: patch-libstdc++-v3_include_c_global_cstring,v 1.1 2024/04/01 14:33:58 js Exp $
+
+--- libstdc++-v3/include/c_global/cstring.orig	2023-07-07 07:08:22.000000000 +0000
++++ libstdc++-v3/include/c_global/cstring
+@@ -44,6 +44,10 @@
+ #ifndef _GLIBCXX_CSTRING
+ #define _GLIBCXX_CSTRING 1
+ 
++#ifdef __QNX__
++#define __CORRECT_ISO_CPP_STRING_H_PROTO
++#endif
++
+ // Get rid of those macros defined in <string.h> in lieu of real functions.
+ #undef memchr
+ #undef memcmp
