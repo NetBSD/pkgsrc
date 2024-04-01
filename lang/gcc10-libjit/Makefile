@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/04/06 22:09:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/01 15:34:06 gutteridge Exp $
 
 .include "../../lang/gcc10/Makefile.common"
 
 PKGNAME=	${GCC_PKGNAME}-libjit-${GCC10_DIST_VERSION}
+PKGREVISION=	1
 COMMENT=	GNU Compiler Collection 10 (gcclibjit library)
 
 # /usr/bin/ld: ./../intl/libintl.a(bindtextdom.o): relocation R_X86_64_32 against symbol `libintl_nl_default_dirname' can not be used when making a shared object; recompile with -fPIC
