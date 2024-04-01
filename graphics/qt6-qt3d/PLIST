@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/03 19:24:14 nros Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/01 13:40:25 adam Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -1126,6 +1126,7 @@ qt6/lib/cmake/Qt63DInput/Qt63DInputConfig.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputConfigVersion.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputDependencies.cmake
+qt6/lib/cmake/Qt63DInput/Qt63DInputPlugins.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputTargets-release.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputTargets.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputVersionlessTargets.cmake

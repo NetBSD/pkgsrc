@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/30 20:11:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/01 13:40:29 adam Exp $
 lib/pkgconfig/Qt6WaylandClient.pc
 lib/pkgconfig/Qt6WaylandCompositor.pc
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
@@ -9,7 +9,6 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-hardw
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-pointer-gestures-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-key-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-text-input-method-unstable-v1.h
-qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-toplevel-drag-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-windowmanager.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-server-buffer-extension.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-surface-extension.h
@@ -23,6 +22,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-wayla
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-wp-primary-selection-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-output-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-shell.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-xdg-toplevel-drag-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandabstractdecoration_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandbuffer_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandclientbufferintegration_p.h
@@ -81,7 +81,6 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-hardwa
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-pointer-gestures-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-key-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-text-input-method-unstable-v1-client-protocol.h
-qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-toplevel-drag-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-windowmanager-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-server-buffer-extension-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-surface-extension-client-protocol.h
@@ -95,6 +94,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-waylan
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-wp-primary-selection-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-output-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-shell-client-protocol.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-toplevel-drag-v1-client-protocol.h
 qt6/include/QtWaylandClient/QWaylandClientExtension
 qt6/include/QtWaylandClient/QWaylandClientExtensionTemplate
 qt6/include/QtWaylandClient/QtWaylandClient

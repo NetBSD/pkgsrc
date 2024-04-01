@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.3 2023/10/31 19:56:48 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.4 2024/04/01 13:40:25 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -95,7 +95,6 @@ qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake
-qt6/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake
 qt6/mkspecs/modules/qt_plugin_qdarwinbluetoothpermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwincalendarpermission.pri
 qt6/mkspecs/modules/qt_plugin_qdarwincamerapermission.pri
