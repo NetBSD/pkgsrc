@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/06/03 13:22:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/01 14:33:57 js Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -28,7 +28,8 @@ BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
 # Disable fixincludes on SmartOS, header changes result in broken includes
 # being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
-.if ${OS_VARIANT} == "SmartOS"
+# Same on QNX.
+.if ${OS_VARIANT} == "SmartOS" || ${OPSYS} == "QNX"
 SUBST_CLASSES+=		fixinc
 SUBST_STAGE.fixinc=	pre-configure
 SUBST_FILES.fixinc=	gcc/Makefile.in
@@ -47,6 +48,11 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 .else
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
+
+CONFIGURE_ENV.QNX+=	ACCEPT_INFERIOR_RM_PROGRAM=yes
+# Make invokes further configure scripts
+MAKE_ENV.QNX+=		ACCEPT_INFERIOR_RM_PROGRAM=yes
+MAKE_ENV.QNX+=		GENAUTOMATA_LDFLAGS="-Wl,--stack,10000000"
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}

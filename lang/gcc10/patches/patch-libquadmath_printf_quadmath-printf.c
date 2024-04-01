@@ -1,12 +1,20 @@
-$NetBSD: patch-libquadmath_printf_quadmath-printf.c,v 1.1 2020/05/17 19:47:20 rillig Exp $
+$NetBSD: patch-libquadmath_printf_quadmath-printf.c,v 1.2 2024/04/01 14:33:58 js Exp $
 
 Fix -Werror=char-subscripts.
 
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=95178
 
---- libquadmath/printf/quadmath-printf.c.orig	2020-05-07 10:50:02.000000000 +0000
+--- libquadmath/printf/quadmath-printf.c.orig	2023-07-07 07:08:21.000000000 +0000
 +++ libquadmath/printf/quadmath-printf.c
-@@ -189,7 +189,7 @@ quadmath_snprintf (char *str, size_t siz
+@@ -22,6 +22,7 @@ Boston, MA 02110-1301, USA.  */
+ #include <stdarg.h>
+ #include <string.h>
+ #include <stdio.h>
++#include <unistd.h>
+ #include "quadmath-printf.h"
+ 
+ /* Read a simple integer from a string and update the string pointer.
+@@ -189,7 +190,7 @@ quadmath_snprintf (char *str, size_t siz
        ++format;
        info.width = va_arg (ap, int);
      }
@@ -15,7 +23,7 @@ https://gcc.gnu.org/bugzilla/show_bug.cgi?id=95178
      /* Constant width specification.  */
      info.width = read_int (&format);
  
-@@ -206,7 +206,7 @@ quadmath_snprintf (char *str, size_t siz
+@@ -206,7 +207,7 @@ quadmath_snprintf (char *str, size_t siz
  
  	  info.prec = va_arg (ap, int);
  	}

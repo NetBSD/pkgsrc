@@ -1,8 +1,10 @@
-$NetBSD: patch-libgcc_crtstuff.c,v 1.1 2020/05/10 15:02:44 maya Exp $
+$NetBSD: patch-libgcc_crtstuff.c,v 1.2 2024/04/01 14:33:57 js Exp $
 
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90147
 
---- libgcc/crtstuff.c.orig	2017-01-01 12:07:43.000000000 +0000
+Disable TM clone registry on QNX, as the linker does not support it.
+
+--- libgcc/crtstuff.c.orig	2023-07-07 07:08:21.000000000 +0000
 +++ libgcc/crtstuff.c
 @@ -81,7 +81,7 @@ call_ ## FUNC (void)					\
  #endif
@@ -13,3 +15,13 @@ https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90147
  #define BSD_DL_ITERATE_PHDR_AVAILABLE
  #endif
   
+@@ -151,7 +151,8 @@ call_ ## FUNC (void)					\
+ # define HIDDEN_DTOR_LIST_END
+ #endif
+ 
+-#if !defined(USE_TM_CLONE_REGISTRY) && defined(OBJECT_FORMAT_ELF)
++#if !defined(USE_TM_CLONE_REGISTRY) && defined(OBJECT_FORMAT_ELF) \
++    && !defined(__QNX__)
+ # define USE_TM_CLONE_REGISTRY 1
+ #elif !defined(USE_TM_CLONE_REGISTRY)
+ # define USE_TM_CLONE_REGISTRY 0
