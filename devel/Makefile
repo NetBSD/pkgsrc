@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4196 2024/03/21 07:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4197 2024/04/01 21:43:23 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3006,6 +3006,7 @@ SUBDIR+=	py-scikit-build
 SUBDIR+=	py-scikit-build-core
 SUBDIR+=	py-selectors2
 SUBDIR+=	py-semantic_version
+SUBDIR+=	py-semver
 SUBDIR+=	py-sentry-sdk
 SUBDIR+=	py-serializable
 SUBDIR+=	py-serpent
