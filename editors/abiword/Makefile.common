@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.51 2021/07/13 13:24:43 nia Exp $
+# $NetBSD: Makefile.common,v 1.52 2024/04/01 15:46:40 gutteridge Exp $
 # used by editors/abiword-plugins/Makefile
 
 ABIVERSION=	3.0.5
+
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
