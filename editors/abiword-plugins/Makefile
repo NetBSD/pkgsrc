@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.147 2023/12/29 18:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.148 2024/04/01 15:41:08 gutteridge Exp $
 
-PKGREVISION=	20
+PKGREVISION=	21
 .include	"../../editors/abiword/Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
 PKGNAME=	abiword-plugins-${ABIVERSION}
@@ -27,7 +27,7 @@ USE_LANGUAGES=	c c++
 BUILD_DIRS=	plugins
 
 # All configure_args here
-CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
+CONFIGURE_ARGS+=	--disable-default-plugins	# Do not build any plugins by default
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
 CONFIGURE_ARGS+=	--with-inter7eps=no
 
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-evolution-data-server=no
 
 # Disabled plugins: gda rsvg mathview
 # rsvg is not needed with gtk, we don't have libgnomedb
-# and mathview doesn't work (in future versions mathveiw uses
+# and mathview doesn't work (in future versions mathview uses
 # lasem instead of gtkmathview, it might work)
 CONFIGURE_ARGS+=	--enable-plugins="\
 	aiksaurus \
@@ -88,6 +88,9 @@ CONFIGURE_ARGS+=	--enable-plugins="\
 	wpg \
 	xslfo"
 
+# collab no longer builds with boost/asio in some environments, when the
+# AbiCollab component is built, but that service seems defunct, anyway.
+CONFIGURE_ARGS+=	--enable-collab-backend-service=no
 
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
@@ -106,7 +109,7 @@ BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
-.include "../../devel/asio/buildlink3.mk"
+#.include "../../devel/asio/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
