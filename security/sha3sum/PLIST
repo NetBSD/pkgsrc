@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/01 21:41:35 wiz Exp $
+bin/sha3sum
