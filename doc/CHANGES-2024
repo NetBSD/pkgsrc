@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2151 2024/04/01 21:42:06 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2152 2024/04/01 21:43:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3650,3 +3650,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/bacon to 2.16.0 [pin 2024-04-01]
 	Updated devel/cargo-modules to 0.15.2 [pin 2024-04-01]
 	Added security/sha3sum version 1.2.0 [wiz 2024-04-01]
+	Added devel/py-semver version 3.0.2 [wiz 2024-04-01]
