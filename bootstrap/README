@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.38 2024/02/08 23:52:34 gutteridge Exp $
+$NetBSD: README,v 1.39 2024/04/01 23:40:21 charlotte Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -134,7 +134,6 @@ Platforms with at least a small number of users
 Platforms with unknown status
 -----------------------------
   Cygwin
-  DragonFly (no README)
   FreeMiNT (no README)
   GNUkFreeBSD
   MidnightBSD

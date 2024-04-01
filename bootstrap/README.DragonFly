@@ -1,0 +1,19 @@
+$NetBSD: README.DragonFly,v 1.1 2024/04/01 23:40:21 charlotte Exp $
+
+Please read the general README file as well.
+
+# Instructions
+
+pkgsrc bootstrap installs several tools whose names happen to match programs
+already provided by DragonFly. The two sets of package tools are not
+interchangeable, so you'll need to decide which ones should appear earlier in
+your PATH -- probably pkgsrc paths before system ones.
+
+
+# Status
+
+pkgsrc bootstrap has been tested on DragonFly 6.4.0 with the system-provided
+GCC.
+
+Once bootstrapped, many packages build without issue. There are several
+high-profile packages which currently are not available, such as lang/rust.
