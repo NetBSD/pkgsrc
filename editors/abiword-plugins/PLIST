@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/09/13 21:56:55 nros Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/04/01 15:41:08 gutteridge Exp $
 lib/abiword-3.0/plugins/aiksaurus.la
 lib/abiword-3.0/plugins/applix.la
 lib/abiword-3.0/plugins/babelfish.la
@@ -48,7 +48,6 @@ lib/abiword-3.0/plugins/wpg.la
 lib/abiword-3.0/plugins/xslfo.la
 lib/libAiksaurusGtk3.la
 share/abiword-3.0/Presentation.xml
-share/abiword-3.0/certs/cacert.pem
 share/abiword-3.0/omml_xslt/mml2omml.xsl
 share/abiword-3.0/omml_xslt/omml2mml.xsl
 share/abiword-3.0/ui/ap_UnixDialog_CollaborationAccounts.ui
@@ -57,8 +56,6 @@ share/abiword-3.0/ui/ap_UnixDialog_CollaborationAddBuddy.ui
 share/abiword-3.0/ui/ap_UnixDialog_CollaborationEditAccount.ui
 share/abiword-3.0/ui/ap_UnixDialog_CollaborationJoin.ui
 share/abiword-3.0/ui/ap_UnixDialog_CollaborationShare.ui
-share/abiword-3.0/ui/ap_UnixDialog_GenericInput.ui
-share/abiword-3.0/ui/ap_UnixDialog_GenericProgress.ui
 share/abiword-3.0/ui/ots.ui
 share/abiword-3.0/xsltml/README
 share/abiword-3.0/xsltml/cmarkup.xsl
