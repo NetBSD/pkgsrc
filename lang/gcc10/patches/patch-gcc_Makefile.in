@@ -1,11 +1,13 @@
-$NetBSD: patch-gcc_Makefile.in,v 1.1 2020/05/10 15:02:44 maya Exp $
+$NetBSD: patch-gcc_Makefile.in,v 1.2 2024/04/01 14:33:57 js Exp $
 
-Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
+Add gcc libdir to programs' rpath so that _this gcc's_ support libraries
 are found.
 
---- gcc/Makefile.in.orig	2017-04-18 18:10:27.000000000 +0000
+Add a hack to increase the stack for genautomata on QNX.
+
+--- gcc/Makefile.in.orig	2023-07-07 07:08:18.000000000 +0000
 +++ gcc/Makefile.in
-@@ -2112,6 +2112,7 @@ prefix.o: $(BASEVER)
+@@ -2206,6 +2206,7 @@ default-d.o: config/default-d.c
  # Language-independent files.
  
  DRIVER_DEFINES = \
@@ -13,3 +15,12 @@ are found.
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
+@@ -2860,7 +2861,7 @@ $(genprogerr:%=build/gen%$(build_exeext)
+ genprog = $(genprogerr) check checksum match
+ 
+ # These programs need libs over and above what they get from the above list.
+-build/genautomata$(build_exeext) : BUILD_LIBS += -lm
++build/genautomata$(build_exeext) : BUILD_LIBS += -lm $(GENAUTOMATA_LDFLAGS)
+ 
+ build/genrecog$(build_exeext) : build/hash-table.o build/inchash.o
+ build/gencfn-macros$(build_exeext) : build/hash-table.o build/vec.o \

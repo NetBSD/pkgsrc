@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2023/08/29 09:48:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/04/01 14:33:57 js Exp $
 # used by lang/gcc10-libjit/Makefile
 
 GCC_PKGNAME=		gcc10
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC10_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
@@ -82,7 +83,7 @@ MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
-.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
+.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly" || ${OPSYS} == "QNX"
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
