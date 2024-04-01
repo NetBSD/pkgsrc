@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2024/04/01 15:41:08 gutteridge Exp $
+# $NetBSD: Makefile,v 1.149 2024/04/01 15:46:40 gutteridge Exp $
 
 PKGREVISION=	21
 .include	"../../editors/abiword/Makefile.common"
@@ -22,7 +22,6 @@ TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
-USE_LANGUAGES=	c c++
 
 BUILD_DIRS=	plugins
 

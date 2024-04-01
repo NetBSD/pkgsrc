@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2023/12/23 03:01:39 zafer Exp $
+# $NetBSD: Makefile,v 1.225 2024/04/01 15:46:40 gutteridge Exp $
 
 PKGREVISION= 	16
 .include 	"Makefile.common"
@@ -20,9 +20,8 @@ TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake pkg-config
-USE_LANGUAGES=	c c++11
 
-CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
+CONFIGURE_ARGS+=	--disable-default-plugins	# Do not build any plugins by default
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
 CONFIGURE_ARGS+=	--enable-plugins=""
 # evolution data server can't be found even if buildlinked
