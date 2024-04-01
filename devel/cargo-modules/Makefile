@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2024/03/22 08:31:04 pin Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/01 19:19:59 pin Exp $
 
-# Do not update prior to freeze,
-# 0.15.0 and higher require Rust-1.76 or, higher.
-DISTNAME=	cargo-modules-0.14.1
+DISTNAME=	cargo-modules-0.15.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regexident/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/regexident/cargo-modules/
