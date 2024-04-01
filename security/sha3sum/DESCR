@@ -1,0 +1,7 @@
+Print or check SHA3 digests.
+
+Command line that wraps sha3 lib from RustCrypto/hashes.  Commands
+and options are similar to the GNU Linux command shaXXXsum.
+
+One of the goals of this project is to provide a cross-platform
+solution that does not require external dependencies.
