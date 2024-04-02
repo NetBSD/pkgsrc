@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2017/12/23 21:11:32 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2024/04/02 01:09:22 js Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fossil
-PKG_SUPPORTED_OPTIONS=	fossil-system-sqlite fossil-th1-hooks json tcl
+PKG_SUPPORTED_OPTIONS=	fossil-system-sqlite fossil-th1-hooks json openssl tcl
+PKG_SUGGESTED_OPTIONS=	openssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,6 +18,13 @@ CONFIGURE_ARGS+=	--with-th1-hooks
 
 .if !empty(PKG_OPTIONS:Mjson)
 CONFIGURE_ARGS+=	--json
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
+.include "../../security/openssl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-openssl=none
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcl)
