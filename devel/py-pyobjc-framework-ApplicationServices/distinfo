@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/01/23 22:14:45 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/04/02 17:25:45 adam Exp $
 
-BLAKE2s (pyobjc-framework-ApplicationServices-10.1.tar.gz) = 076b76c330b408f6b45dbe7ed4c9f2dec907cb7ae2dd6385e480ae5ca59752a9
-SHA512 (pyobjc-framework-ApplicationServices-10.1.tar.gz) = f264941219194e889845b859099ad9f49b66de97f9e28c9a74cb9a32a7f4d2c90a33e9416bb8d5d7c9dd0755829949ef1ecc2621eb5688e3194d4ad5392ef970
-Size (pyobjc-framework-ApplicationServices-10.1.tar.gz) = 220598 bytes
+BLAKE2s (pyobjc-framework-ApplicationServices-10.2.tar.gz) = 0e57739f9b7a8ebbb10ca304f9e0659d32e8bcec5bfd9fab8eab30b43013aea3
+SHA512 (pyobjc-framework-ApplicationServices-10.2.tar.gz) = 002dd970701b5ccbe90a035b43b5124da333a05c67a1e42cf49093dce1a79a72b90724db0066b376a2af97afb7616f67eaf603ac2d24c9911c0ad39b5a6feeb2
+Size (pyobjc-framework-ApplicationServices-10.2.tar.gz) = 220167 bytes

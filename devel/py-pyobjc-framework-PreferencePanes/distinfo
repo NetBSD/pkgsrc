@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/01/23 22:14:58 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/04/02 17:25:57 adam Exp $
 
-BLAKE2s (pyobjc-framework-PreferencePanes-10.1.tar.gz) = d7818de9cca42e9b911481a13533b62c7cb536a3c2626e15a4232dc6230a1264
-SHA512 (pyobjc-framework-PreferencePanes-10.1.tar.gz) = 3a9efa02c3a4727e6b68f7730630c41787d1bf2f6360ae8c5a4d61f050ccf83d850781055c41704d6008644e42883e619cce547eb60d1d77f92f289e70a0a7c8
-Size (pyobjc-framework-PreferencePanes-10.1.tar.gz) = 25578 bytes
+BLAKE2s (pyobjc-framework-PreferencePanes-10.2.tar.gz) = 5a61571c38bb78d6882c1db808b31b51a913b6f28a39978b110ee2b5c695c95d
+SHA512 (pyobjc-framework-PreferencePanes-10.2.tar.gz) = ac7d49e98656c7aec174df4efa1fe47536276e2a31a45ab60edd61c8c1ac4c88907be62043bfb18e5a56d97cb8746d30b51b9227a4682177b619f140a0f404d5
+Size (pyobjc-framework-PreferencePanes-10.2.tar.gz) = 25599 bytes

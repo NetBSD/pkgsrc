@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:48 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:48 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreMIDI-10.1.tar.gz) = 96c8e96d21551b3586a7b82262cf312b4cc54bdfd1a8a16a5d103da568e99ed1
-SHA512 (pyobjc-framework-CoreMIDI-10.1.tar.gz) = 7f13becc0ed9b05f2be94ef0b4960a9214ace82cf5a610bb5d801a323b9cf2004b0a6c8f0a509afc9c1ea1219c6d61c3c3cc38afae99df0cd8113bc16d4c7c39
-Size (pyobjc-framework-CoreMIDI-10.1.tar.gz) = 91755 bytes
+BLAKE2s (pyobjc-framework-CoreMIDI-10.2.tar.gz) = 3bdfa39b037403567b7a774436e9cecda48fec5055771fbfdc875b39081ca7cf
+SHA512 (pyobjc-framework-CoreMIDI-10.2.tar.gz) = 79e71300bb2294090b418fe8c06ed78741169c0ebc6a23ad8f62e78d7ff0fc8b6e4766d518333c565c02ae627e35d168438d2608d322ad2a70a6c5b6f6656c37
+Size (pyobjc-framework-CoreMIDI-10.2.tar.gz) = 91829 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/01/23 22:15:02 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/04/02 17:26:01 adam Exp $
 
-BLAKE2s (pyobjc-framework-WebKit-10.1.tar.gz) = 59619ab66eeec8dfe953fe658537f1798da9a99b0ff6fd6a7422c8054b1b7e35
-SHA512 (pyobjc-framework-WebKit-10.1.tar.gz) = 38e9dde72eb7d8ed5adaf3f26a840b3372081d7e57faa99e11bf1810420db944c1e8c63325af4ae50fc7c437f323c15bb92c83e821822b855908d7003f9abcb4
-Size (pyobjc-framework-WebKit-10.1.tar.gz) = 747949 bytes
+BLAKE2s (pyobjc-framework-WebKit-10.2.tar.gz) = 57b950a6faf80512acfdefc66f75dcd2a51325bfbfa79bab9c7084af54816f5e
+SHA512 (pyobjc-framework-WebKit-10.2.tar.gz) = 61b82a698d697e55c67e0c728da32e1fe986ea2a2229d53373be6335531cba13ff0d5dd2f934740a62c5cbf4c47fcb2105b453def5f3fdd37b0ab9eda403fc7d
+Size (pyobjc-framework-WebKit-10.2.tar.gz) = 748024 bytes

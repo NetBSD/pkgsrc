@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/01/23 22:14:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/04/02 17:25:51 adam Exp $
 
-BLAKE2s (pyobjc-framework-HealthKit-10.1.tar.gz) = efde185965699c2f21a3c256bf7b6a7ed88e6997c7ca04dd22aad2933b4f976f
-SHA512 (pyobjc-framework-HealthKit-10.1.tar.gz) = 0c7b3dcdf2ad86fafd78250521a03b65255350fde90f9756b6124094374f3f12fa82451708c0aa95f46e5bdf9349206017c1431edf1e53c7c5c33d6878dc99d1
-Size (pyobjc-framework-HealthKit-10.1.tar.gz) = 147731 bytes
+BLAKE2s (pyobjc-framework-HealthKit-10.2.tar.gz) = 40255be727b8cefbde39960a1027ffc16da3b68dc1c9fc9d40bbca681ae7f592
+SHA512 (pyobjc-framework-HealthKit-10.2.tar.gz) = 83a506709e1ba465a9dbdb37766e53dd07e6bc46644548199d080582b799da471e3565084ca3c1b99afb2b69245bc7b8b7a9d853b1406c59011699f0cb003bb0
+Size (pyobjc-framework-HealthKit-10.2.tar.gz) = 147765 bytes
