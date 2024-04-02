@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2023/11/15 15:59:36 bouyer Exp $
+$NetBSD: distinfo,v 1.15 2024/04/02 22:01:23 bouyer Exp $
 
 BLAKE2s (xen415/ipxe-988d2c13cdf0f0b4140685af35ced70ac5b3283c.tar.gz) = 67ded947316100f4f66fa61fe156baf1620db575450f4dc0dd8dcb323e57970b
 SHA512 (xen415/ipxe-988d2c13cdf0f0b4140685af35ced70ac5b3283c.tar.gz) = d888e0e653727ee9895fa866d8895e6d23a568b4e9e8439db4c4d790996700c60b0655e3a3129e599736ec2b4f7b987ce79d625ba208f06665fced8bddf94403
@@ -70,4 +70,5 @@ SHA1 (patch-tools_xl_Makefile) = 76f401d3f3dddb4fd48cf386494583db658e56b0
 SHA1 (patch-xen_Makefile) = fe7450f929aca11049c52c4fe53818441f1dc2ee
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
 SHA1 (patch-xen_arch_x86_Makefile) = 99db5e673e367f2a6c8c4fe776b3889cfb3372b1
+SHA1 (patch-xen_common_libelf_libelf-loader.c) = 1b3d9e315aa6c218e6eec1cb9b5536956d5c689c
 SHA1 (patch-xen_include_Makefile) = 71987b559a344b098b97e5a7439232ceda198798

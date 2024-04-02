@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/12/30 18:52:38 gdt Exp $
+$NetBSD: distinfo,v 1.3 2024/04/02 22:01:24 bouyer Exp $
 
 BLAKE2s (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = 82256e7e5d45980590a6493e17a4e133ff63fa28f00aff1963db96371e702448
 SHA512 (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = e1c11e37f53aab0cc6a3ceaace0b8417f07009b1f20ff8572320895fef24f1a796ade041094a024eb24c988b9bed404c556a1fdde809bba89fb49f0e0ff45a57
@@ -63,4 +63,5 @@ SHA1 (patch-tools_qemu-xen_net_tap.c) = 8fdcbefcd38c15ddd65f6df62e0e410e325bae4e
 SHA1 (patch-tools_xenpaging_xenpaging.c) = 3ade1afeb17210632ca350cdbb649f30d4697493
 SHA1 (patch-tools_xl_Makefile) = 76f401d3f3dddb4fd48cf386494583db658e56b0
 SHA1 (patch-xen_Makefile) = bba02be1c25c1a1cef44754602e073afc5de85eb
+SHA1 (patch-xen_common_libelf_libelf-loader.c) = 1b3d9e315aa6c218e6eec1cb9b5536956d5c689c
 SHA1 (patch-xen_include_Makefile) = 5bdd9f7e3eda76285fff1f8aa9c32d2fa9e4a837
