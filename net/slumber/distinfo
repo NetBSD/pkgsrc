@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/03/25 13:15:57 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/04/02 19:38:56 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -558,6 +558,9 @@ Size (serde_json_path_macros-0.1.4.crate) = 2669 bytes
 BLAKE2s (serde_json_path_macros_internal-0.1.1.crate) = 058f3a6867a679ec23b3ff4d9ead805a5b138d2a018f3a6cc79970fe92afffa2
 SHA512 (serde_json_path_macros_internal-0.1.1.crate) = 07e6782cf68c0de91c6ff76faaaaa776250342b280534865c8ed645365a7b7f034c21734f2b9dbb85b6f35c04d21c7bbf636c377a801a063a587f230eda29f55
 Size (serde_json_path_macros_internal-0.1.1.crate) = 5514 bytes
+BLAKE2s (serde_test-1.0.176.crate) = e7e754d30217a8fbad3128aa38a20b9865204e5fa949e624f3ac8fc1c579ab7a
+SHA512 (serde_test-1.0.176.crate) = a7d18de55a4b4e6871d62a5df63eb2132caffb7922edcb767a9ed8fad094d9aca16efe8bfa3b625f48a543cd4cb20c13d78e5ca9ed3965cfdeda9c9fa8bc9a0e
+Size (serde_test-1.0.176.crate) = 18390 bytes
 BLAKE2s (serde_urlencoded-0.7.1.crate) = 4d10ffcb9e7dc7e4f2d2e0ac6596c7c9f3b12e3f05799bb5219b0f1e0acd7629
 SHA512 (serde_urlencoded-0.7.1.crate) = b209ad01b6565e95c1d5b431a3f4f8a0df3d11c2a06a44123048bfa4b34ebb6807eec593f0c1c89de3a06ac3786a14747df9c70b4f4d5e4b72b4feb53084eb60
 Size (serde_urlencoded-0.7.1.crate) = 12822 bytes
@@ -582,9 +585,9 @@ Size (signal-hook-registry-1.4.1.crate) = 17987 bytes
 BLAKE2s (slab-0.4.9.crate) = 910e1c3640a12b3196dec14d77395cbb8ec6b85537612ac3653ee9bee7a415a5
 SHA512 (slab-0.4.9.crate) = b6b5423ae026472920f7c9a4abe0962314140a36dc562c0a9e3fa60725b2b8b7a8b343110d9d4c0e18fb318b0103e14c0ccbc9ae350d5563a5ac80c35f228c40
 Size (slab-0.4.9.crate) = 17108 bytes
-BLAKE2s (slumber-0.15.0.tar.gz) = 21f78c18b73841a455fe6f4f8a7a5c3547950e75001bb43531bc5dfcca9080df
-SHA512 (slumber-0.15.0.tar.gz) = 8729ab6840795e78883687610f5f927199f06f696db1a3db91126b9c3e7a171b48516feecb7d7259563a29904429454ade5b612a20fc4daabfb74efe1393877d
-Size (slumber-0.15.0.tar.gz) = 502038 bytes
+BLAKE2s (slumber-0.16.0.tar.gz) = 1494210c3df0ffd1a7b3ed5f8b352088f08dfe911714c0d3442700e88affc7c3
+SHA512 (slumber-0.16.0.tar.gz) = aa2e4de581c614ba67b1d8d6f80c4b8a014d455344027109f255cca5c1fb338ff14cf1363785433825b043ef585b2e4480d486cedb6742ce21d24ed0c6a95db3
+Size (slumber-0.16.0.tar.gz) = 505541 bytes
 BLAKE2s (smallvec-1.13.2.crate) = b0c6aa90972d031feb8f50aa1562ab0dbce3a027e6a54bea2586c819ef8e369b
 SHA512 (smallvec-1.13.2.crate) = a97c758b668e40ad9eb572e65feeae4954e09200a04ab92e26a13b48894381cd3a3d2571070c4b7a5e181182e1ede9688f990650342ec69ecfe1a264d234c679
 Size (smallvec-1.13.2.crate) = 35216 bytes
