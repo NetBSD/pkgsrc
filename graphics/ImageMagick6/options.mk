@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2024/01/01 02:15:27 gutteridge Exp $
+# $NetBSD: options.mk,v 1.9 2024/04/02 22:37:53 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick6
 PKG_SUPPORTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 djvu openexr
-PKG_SUPPORTED_OPTIONS+=		wmf fpx
+PKG_SUPPORTED_OPTIONS+=		wmf fpx pango
 PKG_OPTIONS_REQUIRED_GROUPS=	policy
 PKG_OPTIONS_GROUP.policy=	imagemagick-policy-limited imagemagick-policy-open imagemagick-policy-secure imagemagick-policy-websafe
-PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 imagemagick-policy-open
+PKG_SUGGESTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 imagemagick-policy-open pango
 PKG_OPTIONS_LEGACY_OPTS+=	jasper:jp2
 
 .include "../../mk/bsd.options.mk"
@@ -73,6 +73,13 @@ CONFIGURE_ARGS+=	--without-wmf
 CONFIGURE_ARGS+=	--with-fpx
 .else
 CONFIGURE_ARGS+=	--without-fpx
+.endif
+
+.if !empty(PKG_OPTIONS:Mfpx)
+.include "../../graphics/pango/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pango
+.else
+CONFIGURE_ARGS+=	--without-pango
 .endif
 
 .if !empty(PKG_OPTIONS:Mimagemagick-policy-limited)
