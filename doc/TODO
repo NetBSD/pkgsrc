@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24235 2024/04/02 20:20:34 adam Exp $
+$NetBSD: TODO,v 1.24236 2024/04/02 23:05:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,6 +397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-24.0.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
+	o PageEdit-2.1.0
 	o QuantLib-1.22
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
@@ -404,9 +405,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-labeling-0.4.2
 	o R-mapproj-3
 	o R-ncdf-1.6.9
+	o SDL2-2.30.2
 	o SOGo5-5.10.0 [wip]
 	o SOPE5-5.10.0 [wip]
 	o SQLiteCpp-2.5.0
+	o Sigil-2.1.0
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
@@ -861,7 +864,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ldapsdk-6.0.7
 	o ldb-2.9.0
 	o lgeneral-1.3.1
-	o libX11-1.8.8
+	o libX11-1.8.8 [wait for 1.8.9]
 	o libXmu-1.2.0
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
@@ -1223,6 +1226,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-gnupg-2.3.2
 	o qca2-ossl-2.3.2
 	o qconf-2.5
+	o qt6-6.7
 	o qtcreator-12.0
 	o quazip-1.1
 	o qutebrowser-3.0.1
