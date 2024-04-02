@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2159 2024/04/02 18:00:38 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.2160 2024/04/02 18:01:09 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
 	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
 	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
+	Updated shells/fish to 3.7.1 [nuclearkev 2024-04-02]
