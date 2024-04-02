@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/29 21:14:10 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/04/02 18:25:03 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/flexmock/__init__.py
 ${PYSITELIB}/flexmock/__init__.pyc
 ${PYSITELIB}/flexmock/__init__.pyo
@@ -12,6 +13,9 @@ ${PYSITELIB}/flexmock/_api.pyo
 ${PYSITELIB}/flexmock/_integrations.py
 ${PYSITELIB}/flexmock/_integrations.pyc
 ${PYSITELIB}/flexmock/_integrations.pyo
+${PYSITELIB}/flexmock/_pytest_plugin.py
+${PYSITELIB}/flexmock/_pytest_plugin.pyc
+${PYSITELIB}/flexmock/_pytest_plugin.pyo
 ${PYSITELIB}/flexmock/exceptions.py
 ${PYSITELIB}/flexmock/exceptions.pyc
 ${PYSITELIB}/flexmock/exceptions.pyo
