@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/12/29 19:52:06 bsiegert Exp $
+$NetBSD: distinfo,v 1.10 2024/04/02 13:48:51 jperkin Exp $
 
-BLAKE2s (go1.19.4.illumos-amd64.tar.gz) = 03a23d3f51c8d350d27fca63e102eb0543e9f722ceaf970c2addc44cffc3255e
-SHA512 (go1.19.4.illumos-amd64.tar.gz) = ad374aa60de31db8a7478b64a6c8d573e2ec0740301abf35ba8be67906a9592cfc08a0d0e87fcc46ecdcd0b16294f443682aa4634557466e4287620792d16b51
-Size (go1.19.4.illumos-amd64.tar.gz) = 156656196 bytes
 BLAKE2s (go1.21.5.darwin-amd64.tar.gz) = ffa3efd58cd6e3af21dd2509a697a80e92da630da3353f4074ece6cfbeb4fbed
 SHA512 (go1.21.5.darwin-amd64.tar.gz) = ddd5a73edfc4aa9a15fc0be0548a0f1a4369becbe1e2f4435e3dd705ff4d3b7d8787b2ebba2fbad664065be71ac83378f2149975b426ee3192314ce07ae4f1ec
 Size (go1.21.5.darwin-amd64.tar.gz) = 67299408 bytes
@@ -24,3 +21,6 @@ Size (go1.21.5.linux-armv6l.tar.gz) = 65399906 bytes
 BLAKE2s (go1.21.5.netbsd-arm64.tar.gz) = 03304aae0be5798cc6eedd6c7b1883aa73fac1b7af9d8403e62c5cfee99da49f
 SHA512 (go1.21.5.netbsd-arm64.tar.gz) = ef479d482f9e6f9407b3595e38ab6a6f8961ec57f684c65776c8bf1cf548cea3819a46bfd86f5bff04c7dbd2273d01b812db0f4628c0fbeecb2e77543a06d79b
 Size (go1.21.5.netbsd-arm64.tar.gz) = 63475955 bytes
+BLAKE2s (go1.21.8.illumos-amd64.tar.gz) = 0ab3f65f885c763f0c3074b7cf67c09edd9ec72af46f95db62bed35ce4dcf198
+SHA512 (go1.21.8.illumos-amd64.tar.gz) = cc11c4f50a9a85439cba0aca1c952dce55be06c86fc2665e0d00874e249db00c06d95b73fe5393369e1371a37db088be34dd4e27294c3fb58ee495ba457884ef
+Size (go1.21.8.illumos-amd64.tar.gz) = 104642821 bytes
