@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/01/05 23:47:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/04/02 05:55:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -275,12 +275,15 @@ ${PYSITELIB}/PIL/_binary.pyo
 ${PYSITELIB}/PIL/_deprecate.py
 ${PYSITELIB}/PIL/_deprecate.pyc
 ${PYSITELIB}/PIL/_deprecate.pyo
+${PYSITELIB}/PIL/_imaging.pyi
 ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingcms.pyi
 ${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.pyi
 ${PYSITELIB}/PIL/_imagingft.so
+${PYSITELIB}/PIL/_imagingmath.pyi
 ${PYSITELIB}/PIL/_imagingmath.so
+${PYSITELIB}/PIL/_imagingmorph.pyi
 ${PYSITELIB}/PIL/_imagingmorph.so
 ${PYSITELIB}/PIL/_imagingtk.so
 ${PYSITELIB}/PIL/_tkinter_finder.py
@@ -295,7 +298,12 @@ ${PYSITELIB}/PIL/_util.pyo
 ${PYSITELIB}/PIL/_version.py
 ${PYSITELIB}/PIL/_version.pyc
 ${PYSITELIB}/PIL/_version.pyo
+${PYSITELIB}/PIL/_webp.pyi
 ${PYSITELIB}/PIL/_webp.so
 ${PYSITELIB}/PIL/features.py
 ${PYSITELIB}/PIL/features.pyc
 ${PYSITELIB}/PIL/features.pyo
+${PYSITELIB}/PIL/py.typed
+${PYSITELIB}/PIL/report.py
+${PYSITELIB}/PIL/report.pyc
+${PYSITELIB}/PIL/report.pyo
