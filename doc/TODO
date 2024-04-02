@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24233 2024/04/02 19:33:36 adam Exp $
+$NetBSD: TODO,v 1.24234 2024/04/02 19:39:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -1212,7 +1212,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-trove-classifiers-2024.3.25
 	o py-uliweb-0.6
-	o py-urwid-2.6.10
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-vobject-0.9.7
 	o py-yubiauth-0.3.10
