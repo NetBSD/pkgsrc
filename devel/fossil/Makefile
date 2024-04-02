@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2024/01/04 18:26:29 js Exp $
+# $NetBSD: Makefile,v 1.86 2024/04/02 01:09:22 js Exp $
 
 DISTNAME=	fossil-src-2.23
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://fossil-scm.org/home/tarball/version-${PKGVERSION_NOREV}/
 
@@ -11,7 +12,6 @@ COMMENT=	High-reliability, distributed software configuration management
 LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib:Q}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
@@ -37,7 +37,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/extsrc/linenoise.h \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.include "../../security/openssl/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
 .include "../../converters/libiconv/buildlink3.mk"
 .endif
