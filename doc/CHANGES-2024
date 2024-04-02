@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2167 2024/04/02 19:38:12 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2168 2024/04/02 19:39:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3665,8 +3665,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-frozendict to 2.4.1 [adam 2024-04-02]
 	Updated devel/py-filelock to 3.13.3 [adam 2024-04-02]
 	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
-	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
-	Updated textproc/uncrustify to 0.78.1 [nuclearkev 2024-04-02]
 	Updated shells/fish to 3.7.1 [nuclearkev 2024-04-02]
 	Updated lang/rexx-regina to 3.9.5 [rhialto 2024-04-02]
 	Updated databases/py-sqlalchemy to 2.0.29 [adam 2024-04-02]
@@ -3680,3 +3678,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-build to 1.2.1 [adam 2024-04-02]
 	Updated net/py-apache-libcloud to 3.8.0 [adam 2024-04-02]
 	Updated finance/rex to 0.1.16 [pin 2024-04-02]
+	Updated www/py-respx to 0.21.1 [adam 2024-04-02]
+	Updated devel/py-urwid to 2.6.10 [adam 2024-04-02]
