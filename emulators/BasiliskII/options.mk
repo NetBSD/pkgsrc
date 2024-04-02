@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2020/01/20 21:14:49 nia Exp $
+# $NetBSD: options.mk,v 1.9 2024/04/02 20:34:16 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.BasiliskII
 PKG_SUPPORTED_OPTIONS=		gtk2 sdl
@@ -22,4 +22,7 @@ CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--enable-sdl-audio
 CONFIGURE_ARGS+=	--enable-sdl-video
 .include "../../devel/SDL/buildlink3.mk"
+.elif ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-macosx-gui
+CONFIGURE_ARGS+=	--enable-macosx-sound
 .endif
