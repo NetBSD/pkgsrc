@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.229 2024/03/22 06:29:39 adam Exp $
+$NetBSD: distinfo,v 1.230 2024/04/02 17:27:41 adam Exp $
 
-BLAKE2s (cmake-3.28.4.tar.gz) = 5fe53b56a30a85a2f39a1d9d36a8bdb8a981c20d0030cf5d12a14d8129208eaf
-SHA512 (cmake-3.28.4.tar.gz) = 284d201f5ce7b61edddb0e62945113b59d0070b1e58c28a49e86ba8d30b2a259da93b1cb7c2be66c6986c5ce7584cea92555fa8e054b8ad91ae4bf69068d2db3
-Size (cmake-3.28.4.tar.gz) = 11072355 bytes
+BLAKE2s (cmake-3.29.0.tar.gz) = 6f67befcd8919b82aab171a84fdecd355167984ff7c36f427ab21afd127bd522
+SHA512 (cmake-3.29.0.tar.gz) = abcca7a4db221d98864b77220445f0b70f87149626d3162ed49636862b87514b2640318438c0c711bfaafa1aba4d049b55f98e6ac28c44545543986c35fbd062
+Size (cmake-3.29.0.tar.gz) = 11244341 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 7a26ef79be53b9d0370029e83f203440aa0be2a4
 SHA1 (patch-CMakeLists.txt) = 0fb79458828a021a96e350bc4cf12875914f868b
-SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
+SHA1 (patch-Modules_Compiler_GNU.cmake) = e06fc41fd7a49ca9f8edaabb95d4ab1cde784112
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
@@ -15,8 +15,8 @@ SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_FortranCInterface_CMakeLists.txt) = 9782cba399e47770efc51a254267d6013fce9b50
 SHA1 (patch-Modules_Platform_Darwin.cmake) = 7629f034111ff64b144ff41316299d5edcfe081a
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 911271546d3ac52be0e8000857bdb236ac50ec1c
-SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = a3a578397b1c077008cce6a49e6c73d985b95fc2
-SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = c86cae48f7b39fb735eba4788d4e9d595b2ccf3b
+SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 98001e076c7bb44012d1a9ad035bda110585f209
+SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = 530ee1300595e64c97630d27792cc2dca3b9049a
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_Modules_CMakeBuildUtilities.cmake) = 7046fb8a0d2aadb81e027d8e2f1a4bccf2bd79cf
 SHA1 (patch-Source_QtDialog_CMakeLists.txt) = 1cefaa7ee6cd09e84d699ea54844ae3811d890f7
