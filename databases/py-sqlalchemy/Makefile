@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2024/03/31 19:19:12 adam Exp $
+# $NetBSD: Makefile,v 1.75 2024/04/02 18:11:22 adam Exp $
 
-DISTNAME=	SQLAlchemy-2.0.28
-PKGREVISION=	1
+DISTNAME=	SQLAlchemy-2.0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
@@ -16,6 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.18:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
