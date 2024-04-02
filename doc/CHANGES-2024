@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2165 2024/04/02 19:00:19 rhialto Exp $
+$NetBSD: CHANGES-2024,v 1.2166 2024/04/02 19:33:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3677,3 +3677,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-mongo to 4.6.3 [adam 2024-04-02]
 	Updated net/py-unearth to 0.15.1 [adam 2024-04-02]
 	Added lang/oorexx version 5.0.0 [rhialto 2024-04-02]
+	Updated devel/py-build to 1.2.1 [adam 2024-04-02]
+	Updated net/py-apache-libcloud to 3.8.0 [adam 2024-04-02]
