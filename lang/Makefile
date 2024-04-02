@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2024/03/20 04:08:24 mef Exp $
+# $NetBSD: Makefile,v 1.723 2024/04/02 18:58:26 rhialto Exp $
 #
 
 COMMENT=	Programming languages
@@ -202,6 +202,7 @@ SUBDIR+=	nuitka
 SUBDIR+=	objc
 SUBDIR+=	ocaml
 SUBDIR+=	oo2c
+SUBDIR+=	oorexx
 SUBDIR+=	open-cobol-ce
 SUBDIR+=	opencobol
 SUBDIR+=	openjdk-bin
