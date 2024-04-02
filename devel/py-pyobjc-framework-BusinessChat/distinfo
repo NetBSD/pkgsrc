@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:46 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:45 adam Exp $
 
-BLAKE2s (pyobjc-framework-BusinessChat-10.1.tar.gz) = e91fb6eb7ff34d6cf9f62a6b22d3bb38f51cd4e74cecd5c6a7a5ee4aec1fb131
-SHA512 (pyobjc-framework-BusinessChat-10.1.tar.gz) = 340266efc19b910c0744251c0498bd41b8e2da358c77e9004f62fd4c5406aa731ec7c059fa70ef7385dfef775f23614f1e0da932f3d43ec1d6cd6bff79432d81
-Size (pyobjc-framework-BusinessChat-10.1.tar.gz) = 12144 bytes
+BLAKE2s (pyobjc-framework-BusinessChat-10.2.tar.gz) = ccec7e5ec3df200a1431341b9808b408474aa70d2658e6134f4ec12c6f939e81
+SHA512 (pyobjc-framework-BusinessChat-10.2.tar.gz) = f81b975ec759c392bf22f082c1994ae489a409c5d6cd5691006843b37be88708568472445d493da934f77432b7a4eecbacdbd36894410bafe7c64a7699acf232
+Size (pyobjc-framework-BusinessChat-10.2.tar.gz) = 12146 bytes

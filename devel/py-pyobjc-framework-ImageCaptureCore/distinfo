@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/01/23 22:14:53 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/04/02 17:25:52 adam Exp $
 
-BLAKE2s (pyobjc-framework-ImageCaptureCore-10.1.tar.gz) = 7ab726c28e0867aaf794dc2f8bd7bfd83ff3912522c1fb6cfd8b9367542a1a59
-SHA512 (pyobjc-framework-ImageCaptureCore-10.1.tar.gz) = f61b09e4107a9b8282df3741d091b5d051e7436cc5de41af9291ebc7c5c49135595b1ee632f9285d57bcb8019c498c94f9c0d3badfc3b551f50ac21368df174b
-Size (pyobjc-framework-ImageCaptureCore-10.1.tar.gz) = 97263 bytes
+BLAKE2s (pyobjc-framework-ImageCaptureCore-10.2.tar.gz) = 186d8fa9180935fd0b16c9323dd6dc20d2fb8426dbd38603b64e3eb81cc56858
+SHA512 (pyobjc-framework-ImageCaptureCore-10.2.tar.gz) = eff005421d79e533065f125bf2f1b66353bc32d917abaea267225bb1b9d04830e29c4760477cf97818a34ea2ea0e3270559a35a1e7344287607a43bb71d748ae
+Size (pyobjc-framework-ImageCaptureCore-10.2.tar.gz) = 97277 bytes

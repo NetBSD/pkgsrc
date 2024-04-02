@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:54 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:53 adam Exp $
 
-BLAKE2s (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.1.tar.gz) = edec77add6a823e43fb81635602a9219c81be204647ebe5e8095ca5880a8491e
-SHA512 (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.1.tar.gz) = 8539079a1813d5347a1f38693daebbcf099199e698eb5984dfbfebf1b8805ecee50442cb881a55e62be48333804f3f5cfee20904cae104ff9000229ad6f501d7
-Size (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.1.tar.gz) = 13274 bytes
+BLAKE2s (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.2.tar.gz) = fa5795f958028eb158a2e895edf2aa66c487c6ad3b840ff65c8fa21121b55191
+SHA512 (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.2.tar.gz) = e858ca2685208fc2af8adf6c875bc603e14ec421382acffd725bdd321931b2d6d14a6b87a1c8aebbb86e701b73614f5208cf5c2e655ca09d147e853dc44a8540
+Size (pyobjc-framework-LocalAuthenticationEmbeddedUI-10.2.tar.gz) = 13264 bytes

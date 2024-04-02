@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:57 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:56 adam Exp $
 
-BLAKE2s (pyobjc-framework-OSAKit-10.1.tar.gz) = 51b4e8799927084dd79f61c55b5c95ea27dbed23b71952901b1a16cd80c71d4a
-SHA512 (pyobjc-framework-OSAKit-10.1.tar.gz) = 36c83891ce74d86b85fe1726882f73a80b55cffcdaf47b6801bfa3019a75a9e3363cb16d086f18dc97f72afb48ec6a41cb714b80266c9f152064bdc76ba2bb54
-Size (pyobjc-framework-OSAKit-10.1.tar.gz) = 18942 bytes
+BLAKE2s (pyobjc-framework-OSAKit-10.2.tar.gz) = 570fc78c733856df1f2184df452136bce49df25d3b1f2479f33bf9297aa40593
+SHA512 (pyobjc-framework-OSAKit-10.2.tar.gz) = e81af398742cdcebdc331b388b41790781c320feaba92098a5b1985ca317d781fb4e73144e0b62dc145f42ca96bc38bd34a5c7f81f98678cee0e7b49aac8d7e2
+Size (pyobjc-framework-OSAKit-10.2.tar.gz) = 18957 bytes

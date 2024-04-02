@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/01/23 22:14:57 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/04/02 17:25:56 adam Exp $
 
-BLAKE2s (pyobjc-framework-NotificationCenter-10.1.tar.gz) = 114b3a6286291f79498027e03c7d15e1f0fa973b860ca4a1ced648b14cde7785
-SHA512 (pyobjc-framework-NotificationCenter-10.1.tar.gz) = a6b8e1b3e678a4ed69120fa79e8e2da014133f4a6725c26444f345c986a76eaa0ae1b0e63e7980217197601c0bc146a8b7a2c8769f7eee69e29a9b830d58fdb6
-Size (pyobjc-framework-NotificationCenter-10.1.tar.gz) = 21477 bytes
+BLAKE2s (pyobjc-framework-NotificationCenter-10.2.tar.gz) = f66c46967dd8ddeec08cd50298f23b5931afdb6c9094048de258d1e0ae3a1527
+SHA512 (pyobjc-framework-NotificationCenter-10.2.tar.gz) = 0b12340e42f95c20c330e3f828eb1a4d972fda97123d24e5348ee074a259284af71bdbed2d1fa962fd276f12a92e1fb71a5391eefcfb8214feae9cac8bfb55d7
+Size (pyobjc-framework-NotificationCenter-10.2.tar.gz) = 21506 bytes
