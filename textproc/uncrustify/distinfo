@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/03/03 10:15:44 fcambus Exp $
+$NetBSD: distinfo,v 1.13 2024/04/02 17:26:45 ktnb Exp $
 
-BLAKE2s (uncrustify-0.76.0.tar.gz) = 54cf366aeda8f27d9bac0bae85c7401c84f7f323141c0a71cdc416ba13933db2
-SHA512 (uncrustify-0.76.0.tar.gz) = 2d0f4dcca091890d3c384b2253b87dd51dba264b289890cc0dd39eff307d9f4069638be0493a8814d3e03a58c10dd1dc40bee5afd342ce28cccbc45bb61e9ed9
-Size (uncrustify-0.76.0.tar.gz) = 1653093 bytes
-SHA1 (patch-src_log__rules.cpp) = f6d26fb3bed20829c187e1e04db9f2ee35968515
+BLAKE2s (uncrustify-0.78.1.tar.gz) = 578a2b63750990fd48512b61ba010e44d065bc4ea112fae9f205a47bf6fc95b4
+SHA512 (uncrustify-0.78.1.tar.gz) = 51ebbc8b08212adea76565cdb578ceb9435769066d70ac14b55fbf0d66bcb34bfcc1cedd9c14c7bafe7b75be8795b3b59a076e40bbad9d242cb06ee9c0ac8638
+Size (uncrustify-0.78.1.tar.gz) = 1733516 bytes
