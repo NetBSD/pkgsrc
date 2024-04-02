@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/02/29 21:09:17 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/02 19:30:22 adam Exp $
 
-DISTNAME=	build-1.1.1
+DISTNAME=	build-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pypa/build
 COMMENT=	Simple, correct PEP517 package builder
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=19.1:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks-[0-9]*:../../devel/py-pyproject_hooks
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.0:../../devel/py-wheel
@@ -34,8 +34,6 @@ post-install:
 	${MV} pyproject-build pyproject-build-${PYVERSSUFFIX} || ${TRUE}
 
 # needs 'make install'
-# as of 1.0.3:
-# 5 failed, 113 passed, 33 skipped, 1 xfailed, 6 errors
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
