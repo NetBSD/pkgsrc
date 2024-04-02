@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/11/14 14:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/04/02 20:34:16 nia Exp $
 
 DISTNAME=	BasiliskII-20190405
 PKGREVISION=	10
@@ -35,10 +35,7 @@ CONFIGURE_ARGS+=	--without-esd
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-macosx-gui
-CONFIGURE_ARGS+=	--enable-macosx-sound
-.else
+.if ${OPSYS} != "Darwin"
 post-extract:
 	${RM} ${WRKSRC}/src/Unix/semaphore.h
 .endif
