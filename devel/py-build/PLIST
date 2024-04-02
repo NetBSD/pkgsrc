@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/29 21:09:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/02 19:30:22 adam Exp $
 bin/pyproject-build-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,6 +11,9 @@ ${PYSITELIB}/build/__init__.pyo
 ${PYSITELIB}/build/__main__.py
 ${PYSITELIB}/build/__main__.pyc
 ${PYSITELIB}/build/__main__.pyo
+${PYSITELIB}/build/_builder.py
+${PYSITELIB}/build/_builder.pyc
+${PYSITELIB}/build/_builder.pyo
 ${PYSITELIB}/build/_compat/__init__.py
 ${PYSITELIB}/build/_compat/__init__.pyc
 ${PYSITELIB}/build/_compat/__init__.pyo
@@ -23,9 +26,15 @@ ${PYSITELIB}/build/_compat/tarfile.pyo
 ${PYSITELIB}/build/_compat/tomllib.py
 ${PYSITELIB}/build/_compat/tomllib.pyc
 ${PYSITELIB}/build/_compat/tomllib.pyo
+${PYSITELIB}/build/_ctx.py
+${PYSITELIB}/build/_ctx.pyc
+${PYSITELIB}/build/_ctx.pyo
 ${PYSITELIB}/build/_exceptions.py
 ${PYSITELIB}/build/_exceptions.pyc
 ${PYSITELIB}/build/_exceptions.pyo
+${PYSITELIB}/build/_types.py
+${PYSITELIB}/build/_types.pyc
+${PYSITELIB}/build/_types.pyo
 ${PYSITELIB}/build/_util.py
 ${PYSITELIB}/build/_util.pyc
 ${PYSITELIB}/build/_util.pyo
