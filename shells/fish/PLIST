@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/01/07 16:08:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/04/02 14:56:47 ktnb Exp $
 bin/fish
 bin/fish_indent
 bin/fish_key_reader
@@ -323,6 +323,7 @@ share/fish/completions/clojure.fish
 share/fish/completions/cmark.fish
 share/fish/completions/cmd.fish
 share/fish/completions/cmdkey.fish
+share/fish/completions/cobra-cli.fish
 share/fish/completions/code.fish
 share/fish/completions/color.fish
 share/fish/completions/colordiff.fish
@@ -390,6 +391,7 @@ share/fish/completions/djxl.fish
 share/fish/completions/dlocate.fish
 share/fish/completions/dm-tool.fish
 share/fish/completions/dmesg.fish
+share/fish/completions/dmidecode.fish
 share/fish/completions/dnf.fish
 share/fish/completions/doas.fish
 share/fish/completions/docker.fish
@@ -533,7 +535,6 @@ share/fish/completions/helm.fish
 share/fish/completions/help.fish
 share/fish/completions/heroku.fish
 share/fish/completions/hg.fish
-share/fish/completions/highlight.fish
 share/fish/completions/hikari.fish
 share/fish/completions/history.fish
 share/fish/completions/hjson.fish
@@ -693,6 +694,7 @@ share/fish/completions/mupdf.fish
 share/fish/completions/mutt.fish
 share/fish/completions/mv.fish
 share/fish/completions/mvn.fish
+share/fish/completions/mycli.fish
 share/fish/completions/mysql.fish
 share/fish/completions/mysqldump.fish
 share/fish/completions/namei.fish
@@ -732,6 +734,7 @@ share/fish/completions/octave.fish
 share/fish/completions/oggenc.fish
 share/fish/completions/oksh.fish
 share/fish/completions/okular.fish
+share/fish/completions/ollama.fish
 share/fish/completions/omega.fish
 share/fish/completions/op.fish
 share/fish/completions/opam.fish
@@ -815,6 +818,7 @@ share/fish/completions/ps2pdf14.fish
 share/fish/completions/ps2pdfwr.fish
 share/fish/completions/psql.fish
 share/fish/completions/pstack.fish
+share/fish/completions/pstree.fish
 share/fish/completions/psub.fish
 share/fish/completions/pushd.fish
 share/fish/completions/pv.fish
