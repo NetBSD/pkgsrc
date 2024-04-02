@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/01/04 22:38:08 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/02 17:38:26 adam Exp $
 
-DISTNAME=	frozendict-2.4.0
+DISTNAME=	frozendict-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozendict/}
