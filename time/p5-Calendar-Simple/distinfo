@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:24:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/04/02 01:23:39 wen Exp $
 
-BLAKE2s (Calendar-Simple-v2.0.1.tar.gz) = 6e8ed66e6f46479379718d6d41f906063f071be5cc4b6c027d03338884c8997b
-SHA512 (Calendar-Simple-v2.0.1.tar.gz) = 158df4171a712a14190ac539c32dd3afd8cfa9873e14295d19dd6f140b19d853574c9452485ac427e1dd803ee5721b2231e3a404f98c50a0441efbc7e983ac64
-Size (Calendar-Simple-v2.0.1.tar.gz) = 7079 bytes
+BLAKE2s (Calendar-Simple-v2.0.3.tar.gz) = 7f83f46d8edbf490146ee972d3af9c3131296ebdbdf6971685fd1bc9b8e2c2da
+SHA512 (Calendar-Simple-v2.0.3.tar.gz) = 9d490840df3591273ee332a622342c865b37499f435bae1cdf13e3ac3d3ff49ea825f9ab5c9809f8b790b4353284968c785559d8e3fb7a38472fb2796d13c810
+Size (Calendar-Simple-v2.0.3.tar.gz) = 7302 bytes
