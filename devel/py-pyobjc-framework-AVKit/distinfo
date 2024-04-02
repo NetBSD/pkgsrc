@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/01/23 22:14:44 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/04/02 17:25:43 adam Exp $
 
-BLAKE2s (pyobjc-framework-AVKit-10.1.tar.gz) = 390cd7a0f56a2c8d27759116258d6b23a4d9814ea5564f046f1c7535c73b0e7e
-SHA512 (pyobjc-framework-AVKit-10.1.tar.gz) = 0a430536a4faf48d5d9482d1c97faf5ad5eeaf24e301d1d1c981d122cd6cd5944cc10b83b4775a25c89fb19b718f201fef99f49aa02f0447ddbb7e5b08e10633
-Size (pyobjc-framework-AVKit-10.1.tar.gz) = 43201 bytes
+BLAKE2s (pyobjc-framework-AVKit-10.2.tar.gz) = d2b105599c2c8e7dea0bdd6dc012dc08b86fa517eb46b823f522ef9b944f3e18
+SHA512 (pyobjc-framework-AVKit-10.2.tar.gz) = 5bdf7d0597d7123983d92491505f7af72e6282b6e525dd2f76d3d41edc75d3582fdc94ff8fcc49a060cc6908e07951765ecfe38e2d4dcdb15c249d771802a1f6
+Size (pyobjc-framework-AVKit-10.2.tar.gz) = 43243 bytes
