@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:47 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:46 adam Exp $
 
-BLAKE2s (pyobjc-framework-ClassKit-10.1.tar.gz) = a5c5d055756a22bc894251b57d16072daa4370f2919e7fad6f9db7d17d1fb4f3
-SHA512 (pyobjc-framework-ClassKit-10.1.tar.gz) = 605f20794e69fba9a1f21e0b7e91a1b9e4f7fc0753267fb38cb510da0faf36b7f4d88002d14f149987b3d9d33dc0905a98dc7f88ad1339c4731285e8116bbb51
-Size (pyobjc-framework-ClassKit-10.1.tar.gz) = 37483 bytes
+BLAKE2s (pyobjc-framework-ClassKit-10.2.tar.gz) = df0a6ab85f656eb11df5d148e59b7abb3aa0749b422bb60c03f7ed48e0101f26
+SHA512 (pyobjc-framework-ClassKit-10.2.tar.gz) = 346eb2e90c7b20b890bde0d398f0db36e8f53d56cffdb06181de8c37aeb2b219bf8ae745645f2404fea30ad914181c23f8c378980b280043f6c9d3a1636d8d56
+Size (pyobjc-framework-ClassKit-10.2.tar.gz) = 37503 bytes

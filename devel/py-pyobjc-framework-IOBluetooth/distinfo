@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/01/23 22:14:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/04/02 17:25:51 adam Exp $
 
-BLAKE2s (pyobjc-framework-IOBluetooth-10.1.tar.gz) = d55ec795b0be503d2610930a73319a19138d27acc62c0ce717e46d31515edebe
-SHA512 (pyobjc-framework-IOBluetooth-10.1.tar.gz) = ceddf32de1d70bfa171afa59542eccae6c3b8e68e3246184acd496ba54addec765de1721683430012e554381ace7e7b47ef20fe61e49c1d76b1a36e330f61f3b
-Size (pyobjc-framework-IOBluetooth-10.1.tar.gz) = 226499 bytes
+BLAKE2s (pyobjc-framework-IOBluetooth-10.2.tar.gz) = 2f467cfc1dfa26f9a70e1ed2016f57183d3a2219b362f255fef7ff18a28841dd
+SHA512 (pyobjc-framework-IOBluetooth-10.2.tar.gz) = 74bdfd2ab0723f45636189539de61e0c20abaee632d95f64fca1b7270b73baa79b5abdb5e853241786ac63c3fc06fbe988ca989db6a1dd0bc2eed7ab69006548
+Size (pyobjc-framework-IOBluetooth-10.2.tar.gz) = 226527 bytes

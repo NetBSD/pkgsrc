@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/01/23 22:14:56 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/04/02 17:25:55 adam Exp $
 
-BLAKE2s (pyobjc-framework-MultipeerConnectivity-10.1.tar.gz) = 06c7855794b0e46a7f3dd42b6eef52d1dca09bf8eec637dfee75aca36f65ac3f
-SHA512 (pyobjc-framework-MultipeerConnectivity-10.1.tar.gz) = 70a62355760896717c3d52e9a60e92d386cf3d44c2396655a6bbe9701d99c740a0ae61ff98280c046b6cf042e8cf3b8cb9179097dad4ba7841108124d4c9de18
-Size (pyobjc-framework-MultipeerConnectivity-10.1.tar.gz) = 24043 bytes
+BLAKE2s (pyobjc-framework-MultipeerConnectivity-10.2.tar.gz) = eb1dcb88289437fe240c76932935a47f9cd65288f0191e835794ec72edf4b286
+SHA512 (pyobjc-framework-MultipeerConnectivity-10.2.tar.gz) = 8f44e805601a5fafd1e4d777cf89b13293b92aaa31820533a5b164a1cba0997928dfab399ea200d331dcf79fb479dc86341a543a50ce5ded1760f912f6d32d70
+Size (pyobjc-framework-MultipeerConnectivity-10.2.tar.gz) = 24059 bytes

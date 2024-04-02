@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/01/23 22:14:54 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/04/02 17:25:53 adam Exp $
 
-BLAKE2s (pyobjc-framework-LinkPresentation-10.1.tar.gz) = c52f50b9afbd5fa3be168101b668384ca3ca7f4aa250fcea39d048acc8b4ea39
-SHA512 (pyobjc-framework-LinkPresentation-10.1.tar.gz) = ad4d8cdf79ecfdc271483270bdc6fa231678674330198fe5d874a3485920a2b8e8ea82d23a010f960bd8489decd4e864e59d70e6f4bc890ef250b8f0851f27ad
-Size (pyobjc-framework-LinkPresentation-10.1.tar.gz) = 14376 bytes
+BLAKE2s (pyobjc-framework-LinkPresentation-10.2.tar.gz) = f63cfc765e730ba1d61403c4ba4c02514675de47d68a28aa9f4fa8193598319f
+SHA512 (pyobjc-framework-LinkPresentation-10.2.tar.gz) = 0e00faa0189ec78750a83045b52a19af8f2dffbad59c289b499bebd75cad9f0e68be9bb8120af761b7632f37af45e277bdf0e8598797a316e52dd65cba91453b
+Size (pyobjc-framework-LinkPresentation-10.2.tar.gz) = 14397 bytes

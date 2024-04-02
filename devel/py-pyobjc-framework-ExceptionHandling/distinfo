@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/01/23 22:14:51 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/04/02 17:25:50 adam Exp $
 
-BLAKE2s (pyobjc-framework-ExceptionHandling-10.1.tar.gz) = a6bc5208d651e946384c430140b3cb744f2b2c94148b0f587b8a08e77319d2bd
-SHA512 (pyobjc-framework-ExceptionHandling-10.1.tar.gz) = 65e76d88fb78602cc9a8828e31e2554572a7912a33dfc3d61cc98a7a6610aee7a853cf1c93cf63c2e0844deef7c48e9d548d39e51da4c973f649d8817ed5a3e9
-Size (pyobjc-framework-ExceptionHandling-10.1.tar.gz) = 17643 bytes
+BLAKE2s (pyobjc-framework-ExceptionHandling-10.2.tar.gz) = b765fad86b1b21432ac96872be4d43f92d141669afa2ef774f6946f5090c1cda
+SHA512 (pyobjc-framework-ExceptionHandling-10.2.tar.gz) = 38516cb4528f29c385d1c27cdd5e4c9338cc92a5eed8dda6ccb98575cee6f67949c92aed9fe5a71af0b39598297f5d0ea66b2898014a1726e1577c53895338b4
+Size (pyobjc-framework-ExceptionHandling-10.2.tar.gz) = 17666 bytes
