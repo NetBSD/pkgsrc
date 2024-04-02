@@ -1,0 +1,15 @@
+$NetBSD: patch-src_meson.build,v 1.1 2024/04/02 21:18:35 charlotte Exp $
+
+Unbreak DragonFly build
+
+--- src/meson.build.orig	2024-04-02 14:14:33.716072000 -0700
++++ src/meson.build	2024-04-02 14:13:56.000000000 -0700
+@@ -22,7 +22,7 @@
+ _pci_access_host_files = []
+ if host == 'linux'
+   _pci_access_host_files += ['linux_sysfs.c', 'linux_devmem.c', 'common_vgaarb.c']
+-elif host == 'freebsd'
++elif ['freebsd', 'dragonfly'].contains(host)
+   _pci_access_host_files += ['freebsd_pci.c', 'common_vgaarb_stub.c']
+ elif host == 'netbsd'
+   _pci_access_host_files += ['netbsd_pci.c', 'common_vgaarb_stub.c']
