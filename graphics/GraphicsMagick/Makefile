@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2023/11/15 13:20:53 adam Exp $
+# $NetBSD: Makefile,v 1.137 2024/04/02 20:32:18 nia Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config:run
 USE_FEATURES=		vsnprintf	# optional but recommended for security
+USE_FEATURES+=		strnlen
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-modules=yes
