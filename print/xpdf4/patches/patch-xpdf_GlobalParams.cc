@@ -1,13 +1,13 @@
-$NetBSD: patch-xpdf_GlobalParams.cc,v 1.1 2020/12/19 13:42:59 rhialto Exp $
+$NetBSD: patch-xpdf_GlobalParams.cc,v 1.2 2024/04/02 18:27:55 rhialto Exp $
 
 Adjust font search directories to @PREFIX@.
 
---- xpdf/GlobalParams.cc.orig	2019-09-25 19:54:33.000000000 +0000
+--- xpdf/GlobalParams.cc.orig	2024-02-07 20:32:41.000000000 +0000
 +++ xpdf/GlobalParams.cc
-@@ -109,11 +109,16 @@ static const char *displayFontDirs[] = {
- };
- #else
- static const char *displayFontDirs[] = {
+@@ -107,11 +107,16 @@ static const char *displayFontDirs[] = {
+   "c:/windows/fonts",
+   "c:/winnt/fonts",
+ #else // _WIN32
 -  "/usr/share/ghostscript/fonts",
 +  "@PREFIX@/share/ghostscript/fonts",
    "/usr/local/share/ghostscript/fonts",
