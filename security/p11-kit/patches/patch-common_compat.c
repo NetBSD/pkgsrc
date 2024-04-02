@@ -1,12 +1,23 @@
-$NetBSD: patch-common_compat.c,v 1.4 2019/03/24 18:03:54 ryoon Exp $
+$NetBSD: patch-common_compat.c,v 1.5 2024/04/02 02:13:01 charlotte Exp $
 
 - Hide getauxval() symbol because the implementation is incomplete
   and breaks for example openssl on NetBSD/evbarm
   https://github.com/p11-glue/p11-kit/issues/192
 
---- common/compat.c.orig	2018-08-10 09:54:46.000000000 +0000
-+++ common/compat.c
-@@ -791,6 +791,9 @@ mkdtemp (char *template)
+- issetugid() et al. are hidden behind __BSD_VISIBLE on DragonFly, too.
+
+--- common/compat.c.orig	2023-10-26 02:56:44.000000000 -0700
++++ common/compat.c	2024-04-01 19:04:55.358513000 -0700
+@@ -49,7 +49,7 @@
+  * This is needed to expose issetugid, getresuid, and getresgid, which are
+  * hidden with the _XOPEN_SOURCE setting above
+  */
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #undef __BSD_VISIBLE
+ #define __BSD_VISIBLE 1
+ #endif
+@@ -859,6 +859,9 @@
  #ifndef HAVE_GETAUXVAL
  
  unsigned long
