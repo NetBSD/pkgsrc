@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/04/02 18:59:15 rhialto Exp $
+
+BLAKE2s (ooRexx-5.0.0-pdf.zip) = 3921164b946553f5af2ab2880b88ff3f60b4089ccdc4da67d7b28ca00d7742f3
+SHA512 (ooRexx-5.0.0-pdf.zip) = 9ba7cc5f80590a75b9b59545d8ce3c2ae6a29cb4440d3c06ce4987cbf56946d6302da37f82ffc01a04a539ec80d797c9c611b8a623154c103c7139a34f0ea8a0
+Size (ooRexx-5.0.0-pdf.zip) = 17985018 bytes
+BLAKE2s (oorexx-5.0.0-12583.tar.gz) = 0d889b43ce033718ba530dccfa5e4ae2732968a9de1d7b850b4b0d5db8854d0e
+SHA512 (oorexx-5.0.0-12583.tar.gz) = 141af22e0a99731d50492940d5db55cc59099e5a7fa8acba918d1ae82bcd6e2983fb0ca71bbbf044cc4fc89e740c8a0ac81237eea5812d7a570f825bba5d08b9
+Size (oorexx-5.0.0-12583.tar.gz) = 6398458 bytes
+SHA1 (patch-CMakeLists.txt) = 4a9a7883c344766f62e92fca5241ce6cd6835baa

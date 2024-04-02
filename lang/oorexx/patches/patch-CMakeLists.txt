@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/04/02 18:59:16 rhialto Exp $
+
+Doesn't respect CMAKE_INSTALL_MANDIR.
+
+--- CMakeLists.txt.orig	2024-03-28 19:06:54.459436295 +0000
++++ CMakeLists.txt
+@@ -290,7 +290,7 @@ else ()
+    set (INSTALL_INCLUDE_DIR include)
+    set (INSTALL_SAMPLES_DIR share/${CMAKE_PROJECT_NAME}/samples)
+    set (INSTALL_DOC_DIR share/${CMAKE_PROJECT_NAME}/doc)
+-   set (INSTALL_MAN_DIR share/man)
++   set (INSTALL_MAN_DIR ${CMAKE_INSTALL_MANDIR})
+ endif ()
+ 
+ # Set compiler and linker flags common to all build environments
