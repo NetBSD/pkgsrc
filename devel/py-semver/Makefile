@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/01 21:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/02 23:24:11 jperkin Exp $
 
 DISTNAME=	semver-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pysemver ${DESTDIR}${PREFIX}/bin/pysemver-${PYVERSSUFFIX}
