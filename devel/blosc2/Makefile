@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/02/08 10:10:46 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/02 20:20:12 adam Exp $
 
-DISTNAME=	blosc2-2.13.2
+DISTNAME=	blosc2-2.14.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc2
@@ -34,6 +34,7 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 PKGCONFIG_OVERRIDE+=	blosc.pc.in
 
 .include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zlib-ng/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
