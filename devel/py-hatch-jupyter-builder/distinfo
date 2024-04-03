@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/05 10:37:12 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/04/03 08:56:37 adam Exp $
 
-BLAKE2s (hatch_jupyter_builder-0.8.3.tar.gz) = add45671366b77559dbe68931da0bda91cdefd8323aa88581969603e229e7cb1
-SHA512 (hatch_jupyter_builder-0.8.3.tar.gz) = c4dc0605338bafeeba21cc7260005815654d3e4646296d91af6fb3199be8645a06b2226608e6b0558ee01c7eed682162eefcf686a7e20636031b95c3a11ae265
-Size (hatch_jupyter_builder-0.8.3.tar.gz) = 54754 bytes
+BLAKE2s (hatch_jupyter_builder-0.9.1.tar.gz) = 3ba72598a7c141786589640c29b8af34dcc26af6da859420f97786e22d9c6b33
+SHA512 (hatch_jupyter_builder-0.9.1.tar.gz) = 705b4e9c1d73f81f7a6962070d9893c32ce61ee49d658ac053f508125b21e425a21732cd9ea8d1e9e1f8c62c2a14c0e7507418c8f2a4f77a5951ee03bbed171d
+Size (hatch_jupyter_builder-0.9.1.tar.gz) = 55953 bytes
