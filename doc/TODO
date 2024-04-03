@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24239 2024/04/03 16:08:07 wiz Exp $
+$NetBSD: TODO,v 1.24240 2024/04/03 17:28:10 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
 	o gnucash-5.6
-	o gnutime-1.9
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-ldap-3.3.0
