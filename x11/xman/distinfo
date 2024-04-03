@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/09/29 07:49:23 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/04/03 21:20:18 wiz Exp $
 
-BLAKE2s (xman-1.1.6.tar.xz) = 40002e9bd4a137c1bcd0fc9c3db650ff7ef0b9bc67ae2bed22426f4af3d31a56
-SHA512 (xman-1.1.6.tar.xz) = 3063bf7fa54a679993baad681d9a77569c101b7e27e012083d11a2a0900c8e30a9d052ef23d30cbc86ff22505701d23df1fa3b9c714ef733628f2bc132026530
-Size (xman-1.1.6.tar.xz) = 177732 bytes
+BLAKE2s (xman-1.2.0.tar.xz) = f00d9c1cd95dff128f4c9406e4be6764a2a0abb5a5302379579e757e82ef7ced
+SHA512 (xman-1.2.0.tar.xz) = 072dba172fd30606c1e185c6e50b3b9a9ec5e430eb2ac7f0c476e1c2de998e8c0b5fbf53de20a7339d39a8990255e77fe72d3928b43d055e8463f8069389d192
+Size (xman-1.2.0.tar.xz) = 177156 bytes
