@@ -1,0 +1,14 @@
+$NetBSD: patch-.._vendor_gmp-mpfr-sys-1.6.2_gmp-6.3.0-c_config.sub,v 1.1 2024/04/03 20:08:29 pin Exp $
+
+Recognize more powerpc variants.
+
+--- ../vendor/gmp-mpfr-sys-1.6.2/gmp-6.3.0-c/config.sub.orig	2024-04-03 19:31:29.252871556 +0000
++++ ../vendor/gmp-mpfr-sys-1.6.2/gmp-6.3.0-c/config.sub
+@@ -113,6 +113,7 @@ powerpc603 | powerpc603e | \
+ powerpc604 | powerpc604e | \
+ powerpc620 | powerpc630  | powerpc970  | \
+ powerpc740 | powerpc74[0-9][0-9] | powerpc750  | \
++powerpc7455 | powerpc7447 | \
+ powerpc801 | powerpc821 | powerpc823  | powerpc860 | \
+ powerpc64)
+   test_cpu=powerpc ;;
