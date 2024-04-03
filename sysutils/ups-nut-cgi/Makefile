@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.76 2023/11/12 13:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/04/03 17:42:54 gdt Exp $
 
-PKGREVISION= 1
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
@@ -31,10 +30,6 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 do-install:
 	(cd ${WRKSRC}/clients && env ${MAKE_ENV} \
 	    ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install-cgiexecPROGRAMS)
-	# cgiexec is overzealous and installs libraries (which are in ups-nut)
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libnut*
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libups*
-	${RMDIR} ${DESTDIR}${PREFIX}/lib
 	for f in hosts.conf.sample upsset.conf.sample \
 	    upsstats.html.sample upsstats-single.html.sample; do \
 		${INSTALL_DATA} ${WRKSRC}/conf/$$f ${DESTDIR}${NUT_EGDIR}; \
