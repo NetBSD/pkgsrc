@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2023/11/12 13:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/04/03 21:24:45 wiz Exp $
 
-DISTNAME=	xf86-video-vboxvideo-1.0.0
-PKGREVISION=	2
+DISTNAME=	xf86-video-vboxvideo-1.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
