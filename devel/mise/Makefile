@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/03/23 19:01:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/03 03:29:53 schmonz Exp $
 
-DISTNAME=		mise-2024.3.8
+DISTNAME=		mise-2024.4.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -16,7 +16,19 @@ USE_LANGUAGES=		c
 
 AUTO_MKDIRS=		yes
 
+.PHONY: maintainer-mise-changelog
+MISE_CHANGELOG_VERSION?=${PKGVERSION_NOREV}
+maintainer-mise-changelog:
+	@fetch -q -o - ${MASTER_SITES}mise/releases/tag/v${MISE_CHANGELOG_VERSION} \
+	| html2text --ignore-links --ignore-emphasis - \
+	| awk '/^## ${MISE_CHANGELOG_VERSION}/{flag=1} /^Assets /{flag=0} flag' \
+	| perl -pe 's/[^[:ascii:]]//g' \
+	| sed -e 's|#  |# |g' \
+		-e 's| by .* in .*$$||' \
+		-e 's|^  \*|*|g'
+
 post-install:
+	${TOUCH} ${DESTDIR}${PREFIX}/lib/mise/.disable-self-update
 	${INSTALL_DATA} ${WRKSRC}/man/man1/mise.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/completions/mise.bash		\
