@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2214 2024/04/03 21:23:42 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2215 2024/04/03 21:24:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xf86-video-chips to 1.5.0 [wiz 2024-04-03]
 	Updated x11/xf86-video-nv to 2.1.23 [wiz 2024-04-03]
 	Updated x11/xf86-video-savage to 2.4.1 [wiz 2024-04-03]
+	Updated x11/xf86-video-vboxvideo to 1.0.1 [wiz 2024-04-03]
