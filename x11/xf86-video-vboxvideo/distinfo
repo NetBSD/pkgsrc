@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/03 21:24:45 wiz Exp $
 
-BLAKE2s (xf86-video-vboxvideo-1.0.0.tar.bz2) = de16f77109a5393b3bd9d14de2fb126470a78f5b7dd26b3a31c6e3b5906a665c
-SHA512 (xf86-video-vboxvideo-1.0.0.tar.bz2) = 1a9856a966495a3a291592ee3113ed5ee83e3ef530bf37d91605206a62f641726511ad48ca79b8a3e94f601f8cf15341255b0c7d14f5c8acf985b84f965d8dfc
-Size (xf86-video-vboxvideo-1.0.0.tar.bz2) = 353342 bytes
+BLAKE2s (xf86-video-vboxvideo-1.0.1.tar.xz) = 4795f39df14b77e7627caea35adc5a871345c997c933c3b1291a5503e6418776
+SHA512 (xf86-video-vboxvideo-1.0.1.tar.xz) = a0428e81e2861d59d0cc0e75fee14ba320322f057257568e10eb6347a55d85bcc1ba8973e5a2dfda7f5f24bbefefad7f7a555d4af2823a7b0ccad2c18105139c
+Size (xf86-video-vboxvideo-1.0.1.tar.xz) = 304928 bytes
