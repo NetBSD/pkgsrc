@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2182 2024/04/03 07:22:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2183 2024/04/03 07:23:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-werkzeug-docs to 3.0.2 [adam 2024-04-03]
 	Updated devel/py-ruff to 0.3.5 [adam 2024-04-03]
 	Updated sysutils/p5-File-Copy-Recursive-Reduced to 0.008 [wiz 2024-04-03]
+	Updated devel/p5-Variable-Magic to 0.64 [wiz 2024-04-03]
