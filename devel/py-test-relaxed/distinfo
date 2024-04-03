@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/07/18 15:51:27 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/04/03 14:55:20 adam Exp $
 
-BLAKE2s (pytest-relaxed-2.0.1.tar.gz) = a1296ebd3d3533037230b03dcaa337c376791dc0ecc216ef1df7249b4c18104a
-SHA512 (pytest-relaxed-2.0.1.tar.gz) = 922040a3b824079b1d6010d9ee46a1288186927268478ef22aaffb3e824965cd08772516296db2b26b69bf7d968c997c49149117616e51b41e66a5d53dcb6b23
-Size (pytest-relaxed-2.0.1.tar.gz) = 26063 bytes
+BLAKE2s (pytest-relaxed-2.0.2.tar.gz) = f55014886f66dc436ac70f18c2743475a51c3ec25cf5d37360d0f73e46e320a2
+SHA512 (pytest-relaxed-2.0.2.tar.gz) = a2d7efbda8448fed55c3e54ed73b0fb39961ff50ff5f23abf87c8df098abfc07268659fa2f668623f5940a9d86c6f1d64bef94b48b4563c2fa5bdbc8aa4ca4dd
+Size (pytest-relaxed-2.0.2.tar.gz) = 27876 bytes
