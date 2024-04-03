@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2175 2024/04/03 01:11:14 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.2176 2024/04/03 02:26:15 jun Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xentools418 to 20231116nb1 [bouyer 2024-04-03]
 	Updated sysutils/xentools415 to 4.15.5nb4 [bouyer 2024-04-03]
 	Added cross/libdragon-binutils version 2.42 [js 2024-04-02]
+	Updated emulators/nono to 0.7.1 [jun 2024-04-03]
