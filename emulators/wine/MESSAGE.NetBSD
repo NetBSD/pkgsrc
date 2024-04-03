@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2020/05/22 17:49:26 nia Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.3 2024/04/03 11:15:41 nia Exp $
 
-In NetBSD >= 8.0, it's not possible to map the NULL page for security
-reasons. Many Windows programs will crash from this limitation. You
-can disable it with:
+In recent versions of NetBSD, disabling several security features
+is necessary to run WINE:
 
 # sysctl -w vm.user_va0_disable=0
+# sysctl -w machdep.user_ldt=1
 
 ===========================================================================
