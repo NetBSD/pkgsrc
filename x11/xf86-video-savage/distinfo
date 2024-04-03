@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/04/09 21:47:28 wiz Exp $
+$NetBSD: distinfo,v 1.17 2024/04/03 21:23:32 wiz Exp $
 
-BLAKE2s (xf86-video-savage-2.4.0.tar.xz) = 4f6a707b14ee443c78cde825459a30bac91ea8fbc5b8bb91d895a79ff8facf52
-SHA512 (xf86-video-savage-2.4.0.tar.xz) = a4db097c200f1430887e4c52bbe14aeaaa2c73dfc392beeed104c682114bd067f89b69994d649829cdc5d188cdbe7a41b22c82b0b49e3a02cdf366013ebbc161
-Size (xf86-video-savage-2.4.0.tar.xz) = 362900 bytes
+BLAKE2s (xf86-video-savage-2.4.1.tar.xz) = 94acb46ca1aa47d6dfd18457f0e362cef70880b6d5e28aaf0c51087f73bf9a98
+SHA512 (xf86-video-savage-2.4.1.tar.xz) = 7928dafa148340e4a6c0ecd2324a69a67aa8fec55d316468c7e68fd79d1a388fd0e1f593d39b6dab0c8a5876b23e7c65c037a3285d340fa82b27ec7c2d5c8713
+Size (xf86-video-savage-2.4.1.tar.xz) = 364272 bytes
