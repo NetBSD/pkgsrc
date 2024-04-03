@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/11/14 14:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2024/04/03 04:57:47 spz Exp $
 
 DISTNAME=		solfege-3.23.4
 PKGREVISION=		6
@@ -69,6 +69,9 @@ MIDIPLAYER=	${PREFIX}/bin/timidity
 MP3PLAYER=	/usr/bin/afplay
 OGGPLAYER=	${PREFIX}/bin/ogg123
 .endif
+
+# hanging lilypond
+NOT_FOR_BULK_PLATFORM	+= NetBSD-10.0-*
 
 post-install:
 	find ${DESTDIR}${PREFIX} -type d -name __pycache__ | xargs rm -rf
