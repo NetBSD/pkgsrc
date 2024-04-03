@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2024/03/18 07:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/03 00:55:28 ktnb Exp $
 
 DISTNAME=	mle-1.7.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adsr/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	ktnb@posteo.net
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/adsr/mle/
 COMMENT=	Termbox-based text editor
 LICENSE=	apache-2.0
