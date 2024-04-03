@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/03 21:36:16 wiz Exp $
 
 BLAKE2s (libgnt-2.14.0.tar.xz) = 458125d941c9cc07bfe6a7466af122869b5a500d157a89961669ce07c4d030c1
 SHA512 (libgnt-2.14.0.tar.xz) = 0d9c5550374696a0e6ede5246cda3c372d7055d21b9ffaf10be88d6a469bdf18c7dd1113ec612acf4889c0e5686ea87bb0e8348ca8985fd5ff8913afc5813b38
 Size (libgnt-2.14.0.tar.xz) = 102444 bytes
+SHA1 (patch-gntkeys.c) = 6bf7fe39b2ae387e9d7eea05907dffb4801dc465
