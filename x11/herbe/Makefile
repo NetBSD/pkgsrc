@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/12 13:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/03 00:55:28 ktnb Exp $
 
 # herbe does not contain a man page see below for info
 # https://github.com/dudik/herbe/blob/1.0.0/README.md
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dudik/}
 
-MAINTAINER=	kevin.bloom@posteo.net
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/dudik/herbe/
 COMMENT=	Daemon-less notifications without D-Bus
 LICENSE=	mit
