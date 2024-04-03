@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/12/27 22:42:02 thor Exp $
+# $NetBSD: Makefile,v 1.76 2024/04/03 19:36:38 thor Exp $
 
 DISTNAME=	scipy-1.11.4
 PKGREVISION=	2
@@ -64,6 +64,7 @@ BLAS_ACCEPTED=		${_BLAS_TYPES}
 BLAS_C_INTERFACE=	yes
 WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
+WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
