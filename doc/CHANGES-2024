@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2193 2024/04/03 17:44:21 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.2194 2024/04/03 17:44:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3716,3 +3716,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-test-jupyter to 0.10.0 [adam 2024-04-03]
 	Updated time/gnutime to 1.9nb1 [ktnb 2024-04-03]
 	Updated sysutils/ups-nut to 2.8.2 [gdt 2024-04-03]
+	Updated sysutils/ups-nut-cgi to 2.8.2 [gdt 2024-04-03]
