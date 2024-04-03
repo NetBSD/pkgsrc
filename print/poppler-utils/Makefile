@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/03/11 14:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/04/03 07:05:21 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -7,6 +7,8 @@ COMMENT=	PDF utilities (from poppler)
 
 CONFLICTS+=	poppler-0.5.1{,nb*}
 CONFLICTS+=	xpdf<3.02pl4nb1
+
+USE_CXX_FEATURES+=	filesystem
 
 # for pdfsig
 CMAKE_ARGS+=	-DENABLE_NSS3:BOOL=ON
