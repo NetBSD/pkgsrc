@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2024/03/30 20:08:29 pin Exp $
+$NetBSD: distinfo,v 1.116 2024/04/03 20:02:40 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -390,12 +390,12 @@ Size (github.com_sergi_go-diff_@v_v1.3.1.mod) = 281 bytes
 BLAKE2s (github.com_sergi_go-diff_@v_v1.3.1.zip) = 1a8127fe008e567c6807a673a9a851cb7d97983fef23490bfda47241da025b4f
 SHA512 (github.com_sergi_go-diff_@v_v1.3.1.zip) = 58540fb7bb76f955827204debc28471d0ad9a740b1e1f94450c3e7467c50468905664ac4695988d723b11d30eddfe7d40b050940fb57a80b656afdb6e54ef057
 Size (github.com_sergi_go-diff_@v_v1.3.1.zip) = 1350532 bytes
-BLAKE2s (github.com_shirou_gopsutil_v3_@v_v3.24.2.mod) = 369e8a829217c55ad4459ebddcfba6bf565dd5bf1bc005805ca654a7e6cdea9c
-SHA512 (github.com_shirou_gopsutil_v3_@v_v3.24.2.mod) = cedc58602f1593b30f993f7217a1421170886ff8d9b170040a8f97ed5ed86fb98247df95aa388468226cff62e16ba5d615fb062e52a210f94d78129142c983fd
-Size (github.com_shirou_gopsutil_v3_@v_v3.24.2.mod) = 417 bytes
-BLAKE2s (github.com_shirou_gopsutil_v3_@v_v3.24.2.zip) = 5d065539aabaa068ad0b9ac4da195acea9979977cbd73bf10d941673078d9fea
-SHA512 (github.com_shirou_gopsutil_v3_@v_v3.24.2.zip) = b073a612ee197f31b586ca9e5411e95a11f516562bbac5bfea3bd62070d5e394d00ad3e55d2189e9b14035345abc34090a47d8c0a9a535d8b7ee8b9f74eef8c0
-Size (github.com_shirou_gopsutil_v3_@v_v3.24.2.zip) = 314621 bytes
+BLAKE2s (github.com_shirou_gopsutil_v3_@v_v3.24.3.mod) = 05cee065dcf4757c8821cf4890dce0eecdf54c87e6a625597f574224057fbf20
+SHA512 (github.com_shirou_gopsutil_v3_@v_v3.24.3.mod) = 7ff6a8e20ef10df2244886264e6fc74b1c606000548bfcc0da861e00dd7a663783bc6f8449c5f79e98624b3dd2cad4c99c2cddf4e5ff422c0013ca6a680ae30b
+Size (github.com_shirou_gopsutil_v3_@v_v3.24.3.mod) = 417 bytes
+BLAKE2s (github.com_shirou_gopsutil_v3_@v_v3.24.3.zip) = 09ba57e60b253ec208ba4402ad687f61b55ebcc913594a6f86dd6fa4593d701d
+SHA512 (github.com_shirou_gopsutil_v3_@v_v3.24.3.zip) = d8fc6b0433d74309c5ed1330c5479e74cfa2f28460141c4bfb3ccda84013541d64316da5119759f0bb7e8eda54d1e63ae95f8df9f5f3fe12358e46a375ee1c65
+Size (github.com_shirou_gopsutil_v3_@v_v3.24.3.zip) = 314778 bytes
 BLAKE2s (github.com_shoenig_go-m1cpu_@v_v0.1.6.mod) = 611c3dae6faa7e3e42fc50d11b5d6a74f960149fa50a6368427aec911fb68316
 SHA512 (github.com_shoenig_go-m1cpu_@v_v0.1.6.mod) = e506c863868d0c972ffaafd6c7649eb35f9d5746f806710428d6e03bac5e4cade42ca581977d9739e0de0d51c6ca702b515f2235242491c36f5906cfbf1a572c
 Size (github.com_shoenig_go-m1cpu_@v_v0.1.6.mod) = 137 bytes
@@ -618,9 +618,6 @@ Size (golang.org_x_sys_@v_v0.1.0.mod) = 33 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.11.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.11.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.11.0.mod) = 33 bytes
-BLAKE2s (golang.org_x_sys_@v_v0.17.0.mod) = 546db01fa3b030f3f3b5f8d3674bc29d1f026a60a57e474fff3e1cd44fe694a1
-SHA512 (golang.org_x_sys_@v_v0.17.0.mod) = ec229018bf6fa169913d0c66821fc296766b8a71720123e8d8cfcf5b8b8da110e338d03b8233b1224b8586ea9d9e4231b9720c1f806d4be2523413c521acf97b
-Size (golang.org_x_sys_@v_v0.17.0.mod) = 33 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.18.0.mod) = 546db01fa3b030f3f3b5f8d3674bc29d1f026a60a57e474fff3e1cd44fe694a1
 SHA512 (golang.org_x_sys_@v_v0.18.0.mod) = ec229018bf6fa169913d0c66821fc296766b8a71720123e8d8cfcf5b8b8da110e338d03b8233b1224b8586ea9d9e4231b9720c1f806d4be2523413c521acf97b
 Size (golang.org_x_sys_@v_v0.18.0.mod) = 33 bytes
@@ -729,8 +726,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-19.19.0.tar.gz) = a8c714468c755c727bdf8ce4c920e20d1ec7858ecefbf38360413f99e9b4877a
-SHA512 (oh-my-posh-19.19.0.tar.gz) = 5bc47d495d8100f15201641564d313df21e31f49cd878318670242ebb8ea6abfaeb61f496403c77b964a09c037c6cfc8482ed01b01c65c69415b6bafd40810cd
-Size (oh-my-posh-19.19.0.tar.gz) = 6755449 bytes
+BLAKE2s (oh-my-posh-19.20.0.tar.gz) = a9f32651368763ffc65fe6dc5c7570338c1370fe66483513cdc6f59e82646586
+SHA512 (oh-my-posh-19.20.0.tar.gz) = f5ddd27cf9ca62c7f59683685466619cf79ca1f4514ddb3322e274730cdc8a3a1d4bacc20f265a791ccbca9ee897f9fdf096d7ea84068135294ba7bdeab2f2b1
+Size (oh-my-posh-19.20.0.tar.gz) = 6758369 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 37eb1ba8082c0d3dfc287dfd5e35bcd31a00ab6a

@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.45 2024/03/30 20:08:29 pin Exp $
+# $NetBSD: go-modules.mk,v 1.46 2024/04/03 20:02:40 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -130,8 +130,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.2.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.2.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.3.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.3.zip
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.mod
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.zip
 GO_MODULE_FILES+=	github.com/shoenig/test/@v/v0.6.4.mod
@@ -206,7 +206,6 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220722155257-8c9f86f7a55f.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220811171246-fbc7d0a398ab.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.11.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.17.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.18.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.18.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.2.0.mod
