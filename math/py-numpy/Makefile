@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2024/02/06 18:14:57 adam Exp $
+# $NetBSD: Makefile,v 1.121 2024/04/03 19:40:09 thor Exp $
 
 DISTNAME=	numpy-1.26.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -73,6 +73,7 @@ BLAS_C_INTERFACE=	yes
 # all APIs.
 WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
+WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS}
 
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
