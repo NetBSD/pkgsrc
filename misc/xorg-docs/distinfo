@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/04/04 09:50:37 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/04/03 21:21:01 wiz Exp $
 
-BLAKE2s (xorg-docs-1.7.2.tar.bz2) = ae8a36c6e746158453ba57276a66d99267771c1c437c36c4478e34d125755609
-SHA512 (xorg-docs-1.7.2.tar.bz2) = 474b7fac5832edbdf6fba319074c3fe8eae6394d251fc8886c013c4e4d9695e92bf59e30aee5e53aed8365255b5d7b16bdbbad7a8ace33901bb0e3158353cdbf
-Size (xorg-docs-1.7.2.tar.bz2) = 384172 bytes
+BLAKE2s (xorg-docs-1.7.3.tar.xz) = eb2b19adb1cb5a8b090445c43d05486859b4295e654f67dc8039fa168577ea3b
+SHA512 (xorg-docs-1.7.3.tar.xz) = d9c0ed401e6b4d7e8572fb13c773f1dbe0a1efed12076bdfdafd9759f5d359e1bc6638e983189b53c72784becd5e61d2b552893c4e9af4f2d538c9e213324b50
+Size (xorg-docs-1.7.3.tar.xz) = 326508 bytes

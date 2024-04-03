@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2022/04/04 09:50:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/03 21:21:01 wiz Exp $
 
-DISTNAME=		xorg-docs-1.7.2
+DISTNAME=		xorg-docs-1.7.3
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_XORG:=doc/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
