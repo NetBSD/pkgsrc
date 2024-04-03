@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.158 2024/04/03 19:23:02 rhialto Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.159 2024/04/03 21:01:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25796,8 +25796,8 @@ go121<1.21.5	insecure-fallback	https://nvd.nist.gov/vuln/detail/CVE-2023-45285
 curl>=7.46.0<8.5.0	information-exposure-through-sent-data	https://nvd.nist.gov/vuln/detail/CVE-2023-46218
 curl>=7.84.0<8.5.0	missing-encryption-of-sensitive-data	https://nvd.nist.gov/vuln/detail/CVE-2023-46219
 fish<3.6.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-49284
-modular-xorg-server<21.1.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6377
-modular-xorg-server<21.1.10	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6478
+modular-xorg-server<21.1.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-6377
+modular-xorg-server<21.1.10	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-6478
 opensc>=0.17.0<0.24.0	potential-pin-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-40660
 asterisk<18.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-49786
 asterisk>=20<20.5.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-49786
@@ -25828,7 +25828,7 @@ git-lfs<3.4.1	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
 exim<4.97.1	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2023-51766
 nuclei<3.1.3	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 glow<1.5.1	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
-sendmail<8.18.0.2	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-51765
+sendmail<8.18.0.2	email-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2023-51765
 packer<1.9.5	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 ssh-chat-[0-9]*	man-in-the-middle	https://pkg.go.dev/vuln/GO-2023-2402
 influxdb-[0-9]*	denial-of-service	https://pkg.go.dev/vuln/GO-2023-1571
@@ -25851,7 +25851,7 @@ filezilla<3.66.4	extension-negotiation-downgrade	https://nvd.nist.gov/vuln/detai
 libheif<1.17.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49462
 libde265<1.0.15	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49468
 gst-plugins1-bad<1.22.8	buffer-overflow	https://gstreamer.freedesktop.org/security/sa-2023-0011.html
-modular-xorg-server<21.1.11	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-CVE-2023-6816
+modular-xorg-server<21.1.11	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-6816
 coreutils<9.4		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-0684
 gnutls<3.8.3	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-0553
 py{27,38,39,310,311,312}-Pillow<10.2.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-50447
@@ -25948,3 +25948,12 @@ emacs<29.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-30205
 webkit-gtk<2.44.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42950
 curl<8.7.0	improper-validation-of-certificate	https://nvd.nist.gov/vuln/detail/CVE-2024-2466
 xz>=5.6<5.6.1nb100	backdoor	https://www.openwall.com/lists/oss-security/2024/03/29/4
+modular-xorg-server<21.1.12	heap-buffer-overread	https://nvd.nist.gov/vuln/detail/CVE-2024-31080
+modular-xorg-xwayland<23.2.5	heap-buffer-overread	https://nvd.nist.gov/vuln/detail/CVE-2024-31080
+nodejs>=18<19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
+nodejs>=20<21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
+nodejs>=21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
+go121-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
+go122-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
+nghttp2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28182
+apache-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28182
