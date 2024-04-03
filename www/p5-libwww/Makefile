@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.142 2024/03/19 10:40:00 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2024/04/03 07:15:39 wiz Exp $
 
 DISTNAME=	libwww-perl-6.77
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
@@ -20,6 +21,7 @@ DEPENDS+=	p5-HTTP-Negotiate>=6:../../www/p5-HTTP-Negotiate
 DEPENDS+=	p5-HTTP-Message>=6:../../www/p5-HTTP-Message
 DEPENDS+=	p5-LWP-MediaTypes>=6:../../www/p5-LWP-MediaTypes
 DEPENDS+=	p5-Net-HTTP>=6.18:../../www/p5-Net-HTTP
+DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-WWW-RobotRules>=6.01:../../www/p5-WWW-RobotRules
 # LWP::Protocol::https is an optional dependency, but it requires this package,
