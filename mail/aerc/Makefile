@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/03/04 13:05:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/03 00:55:28 ktnb Exp $
 
 DISTNAME=	0.17.0
 PKGNAME=	aerc-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
 
-MAINTAINER=	ktnb@posteo.net
+MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/
 COMMENT=	Terminal email client written in Go
 LICENSE=	mit
