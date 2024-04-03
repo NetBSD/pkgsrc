@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/03/17 10:10:19 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/04/03 15:00:50 adam Exp $
 
-BLAKE2s (pytest_jupyter-0.9.1.tar.gz) = 6e25d81925adde115780f4b2f84263df7168d2b41e3a8686092194bd29d51dc9
-SHA512 (pytest_jupyter-0.9.1.tar.gz) = bb513b4560fb4edcebfe3bef5f62544ec241de235a23cb644a6c9830d8284b7b22ac448e48ad48350dc17fa35a9117bcceabfdbeaa578a97be3db34fa3a5a1f8
-Size (pytest_jupyter-0.9.1.tar.gz) = 15519 bytes
+BLAKE2s (pytest_jupyter-0.10.0.tar.gz) = cb0e3f4e6c74bdfc5aa0b2c72659541dbfebf6ad4de331cda8f0307724535185
+SHA512 (pytest_jupyter-0.10.0.tar.gz) = 7d8e35ff5643703479aa116cac9b1b6d757319088b43fa3ae08a2865fc2bcf08cc25dd117edacc4695dfb2a18548d51658535984c5b0c10be14fb66e3e8cfc75
+Size (pytest_jupyter-0.10.0.tar.gz) = 15514 bytes
