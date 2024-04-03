@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/11/06 20:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/03 06:56:12 wiz Exp $
 
 DISTNAME=	zstandard-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zstandard/}
 
@@ -17,7 +18,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.5.5
+BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.5.6
+
+# https://github.com/indygreg/python-zstandard/issues/220
+post-extract:
+	${RM} ${WRKSRC}/zstd/zstd.h
+	${LN} -s ${BUILDLINK_DIR}/include/zstd.h ${WRKSRC}/zstd/zstd.h
+
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
