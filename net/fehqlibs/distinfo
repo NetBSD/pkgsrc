@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2023/04/03 23:36:45 schmonz Exp $
+$NetBSD: distinfo,v 1.23 2024/04/03 03:30:28 schmonz Exp $
 
-BLAKE2s (fehQlibs-22a.tgz) = 0f456dc026af6ca4edc1d360ce85b93864269785b54052c5979aebf62096da4d
-SHA512 (fehQlibs-22a.tgz) = 93364a24ec3d16e152c4e21966f0a28400d6d22d8cac12a0716c49d80422ed0644b98bfe8d30b76d7ce701718f3574e235ed81f4c03934e7809e2bb1a78ec688
-Size (fehQlibs-22a.tgz) = 87352 bytes
+BLAKE2s (fehQlibs-23.tgz) = de9ac2a4af2e76cb321b3569ddc95e311929706a9e6aab1d2efd497514d9b277
+SHA512 (fehQlibs-23.tgz) = 676b8e57cac2f6700cdf4643d72c55df2beca42a893dd7428cebfbb2844f3643608ab25205f8b36cf35741847476df862773dd8a14a604d25dc69bec3a5b5999
+Size (fehQlibs-23.tgz) = 87995 bytes
 SHA1 (patch-Makefile) = a5e168aa600f49908f3e5e825fe3b649e7a84f2b
 SHA1 (patch-install) = 860256635a5a19805ec3ed97f11833a35f67d3bb
