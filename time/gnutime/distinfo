@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:24:20 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/04/03 17:25:46 ktnb Exp $
 
-BLAKE2s (time-1.7.tar.gz) = 60291a2d23ebc6670a668595459a9cbe7ae17f881fe76019005b955129dad3ca
-SHA512 (time-1.7.tar.gz) = d759b651e343beddc0b3bd06af85881486b72319c979a2e7f752d5a34edd8b7c1c19391c5c7a2e8f6685746cc7a046bf2c8e082b31458a1dd043ed90a4cebcd1
-Size (time-1.7.tar.gz) = 103066 bytes
-SHA1 (patch-aa) = 73cf3ec312be4df97340a77f66c29b59c2afbf18
-SHA1 (patch-ab) = 235c62c2d35ebbcb65bf6b4a242946740a78a4f0
+BLAKE2s (time-1.9.tar.gz) = 4d2c68e080a55d688eaeca02b87a9449db89b916d922bf294907dda2c0aff4e1
+SHA512 (time-1.9.tar.gz) = 5c6dabbbe71e9103a47b892b86bb914c1704122d4fe7dff1e2cbd28503297163118d295077d8e062b035d673a1f91c36f8a45c7383f374fd766942b32bde4406
+Size (time-1.9.tar.gz) = 596779 bytes
