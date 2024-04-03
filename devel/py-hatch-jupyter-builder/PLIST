@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/03 08:56:37 adam Exp $
 bin/hatch-jupyter-builder-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -44,6 +44,7 @@ ${PYSITELIB}/hatch_jupyter_builder/migrate/jupyter_packaging.pyo
 ${PYSITELIB}/hatch_jupyter_builder/plugin.py
 ${PYSITELIB}/hatch_jupyter_builder/plugin.pyc
 ${PYSITELIB}/hatch_jupyter_builder/plugin.pyo
+${PYSITELIB}/hatch_jupyter_builder/py.typed
 ${PYSITELIB}/hatch_jupyter_builder/utils.py
 ${PYSITELIB}/hatch_jupyter_builder/utils.pyc
 ${PYSITELIB}/hatch_jupyter_builder/utils.pyo
