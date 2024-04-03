@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2024/04/03 21:26:00 wiz Exp $
 
 BUILTIN_PKG:=	libXmu
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libXmu=	no
 .  else
 USE_BUILTIN.libXmu=	${IS_BUILTIN.libXmu}
 .    if defined(BUILTIN_PKG.libXmu) && \
-        !empty(IS_BUILTIN.libXmu:M[yY][eE][sS])
+        ${IS_BUILTIN.libXmu:tl} == yes
 USE_BUILTIN.libXmu=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXmu}
-.        if !empty(USE_BUILTIN.libXmu:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXmu:tl} == yes
 USE_BUILTIN.libXmu!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXmu:Q}; then \
 		${ECHO} yes;						\
