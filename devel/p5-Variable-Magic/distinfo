@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2023/01/08 00:35:39 wen Exp $
+$NetBSD: distinfo,v 1.31 2024/04/03 07:23:03 wiz Exp $
 
-BLAKE2s (Variable-Magic-0.63.tar.gz) = 21bd346a515eeb82d01c2515b9155d948b2f4c1e52d796fa99fcc3659e9d968c
-SHA512 (Variable-Magic-0.63.tar.gz) = f815d71ffda0fc88b75716fb843a5dcb122b678ce0cb58ac23411af88b7b01180d401519db1b9801c5ee2942ae7b81d6c3d4284ceb57ed3f51d546fb77135611
-Size (Variable-Magic-0.63.tar.gz) = 78851 bytes
+BLAKE2s (Variable-Magic-0.64.tar.gz) = 7c116e4def3576b74c5f641bb6e77d09c997c9e6fb8131b475674fb87892a957
+SHA512 (Variable-Magic-0.64.tar.gz) = ba7eead52b9684a7ce0112a6b29b9739d52bd111d7985cf6b721a3d193d7a0513205c3547ec9504239cf4a3bd50de844cb6f7bb83906118c12b8d7b92c455a6a
+Size (Variable-Magic-0.64.tar.gz) = 76158 bytes
