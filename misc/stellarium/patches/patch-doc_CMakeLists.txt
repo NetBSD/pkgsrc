@@ -1,9 +1,9 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.4 2022/12/28 19:12:30 adam Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.5 2024/04/03 11:35:49 adam Exp $
 
 Install man pages also on Darwin.
 Use correct path to install man pages.
 
---- doc/CMakeLists.txt.orig	2022-12-25 14:37:17.000000000 +0000
+--- doc/CMakeLists.txt.orig	2024-02-18 07:16:39.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -2,7 +2,7 @@
  # to generate manual page:
@@ -18,12 +18,12 @@ Use correct path to install man pages.
            DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1
       )
  
--     IF(${CMAKE_SYSTEM_NAME} MATCHES "(DragonFly|FreeBSD|NetBSD|OpenBSD)" AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "kFreeBSD")
+-     IF(${CMAKE_SYSTEM_NAME} MATCHES "(DragonFly|NetBSD|OpenBSD)")
 -          INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION man/man1)
--     ELSE(${CMAKE_SYSTEM_NAME} MATCHES "(DragonFly|FreeBSD|NetBSD|OpenBSD)" AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "kFreeBSD")
+-     ELSE()
 -          INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION share/man/man1)
--     ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "(DragonFly|FreeBSD|NetBSD|OpenBSD)" AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "kFreeBSD")
+-     ENDIF()
 +     INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
- ENDIF(UNIX AND NOT WIN32 AND NOT APPLE)
+ ENDIF()
  
  
