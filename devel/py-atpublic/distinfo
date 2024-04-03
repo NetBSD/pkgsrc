@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/07/30 15:24:05 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/04/03 09:33:09 adam Exp $
 
-BLAKE2s (atpublic-4.0.tar.gz) = f92a2cb7b288a4f0342e05e9c94f011f9b435baa298d2d90c82b5b5e902d0ee6
-SHA512 (atpublic-4.0.tar.gz) = 2f338d3ae11d15e9ffe26881fab1c183154b9a0a7a66532a5eb39d1d48d41548078826875247c94f3853925bc1df2b8f86f4ed94533a8e58aa98de148cf5639c
-Size (atpublic-4.0.tar.gz) = 14684 bytes
+BLAKE2s (atpublic-4.1.0.tar.gz) = 92039e06f42c125887434161574f78403c0da4746f85a335e5396706ce466305
+SHA512 (atpublic-4.1.0.tar.gz) = bd840a44f3f9d8f7099c22d67866744ef43ed4bfa00e0fd8a6a7516e8e995287b234fb97eaf30be494f06a8ff1020c0479533bfe33adc56ae62bd976bd997b4b
+Size (atpublic-4.1.0.tar.gz) = 14426 bytes
