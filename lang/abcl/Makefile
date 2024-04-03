@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/03 14:15:41 ktnb Exp $
 
-DISTNAME=	abcl-src-1.7.1
+DISTNAME=	abcl-src-1.9.2
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://abcl.org/releases/${PKGVERSION_NOREV}/
@@ -9,7 +9,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://abcl.org/
 COMMENT=	Armed Bear Common Lisp
 
-PKG_JVMS_ACCEPTED=	openjdk11 openjdk8 oracle-jdk8 sun-jdk7 jdk16 jdk15 kaffe
+PKG_JVMS_ACCEPTED=	openjdk17 openjdk11 openjdk8 oracle-jdk8 sun-jdk7 jdk16 jdk15 kaffe
 
 TOOL_DEPENDS=	apache-ant>=1.7.1:../../devel/apache-ant
 
