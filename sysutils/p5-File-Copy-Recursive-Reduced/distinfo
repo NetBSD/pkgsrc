@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/04 10:50:44 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/04/03 07:22:06 wiz Exp $
 
-BLAKE2s (File-Copy-Recursive-Reduced-0.007.tar.gz) = 6f06de090f079bec62c613949cff55e549fa6bea60572eb9a328680debb01c75
-SHA512 (File-Copy-Recursive-Reduced-0.007.tar.gz) = 7b2029acc3cd4cf5775df60b0d716da3868283bbce4bf4717dcd95fad112973ccd4df25ab88312d5a2a4f332399312d412bb2fd81245f843a619eae0ee5be085
-Size (File-Copy-Recursive-Reduced-0.007.tar.gz) = 24177 bytes
+BLAKE2s (File-Copy-Recursive-Reduced-0.008.tar.gz) = 197008c90dac0223d928e502bbec6dac37865d592582f86b0c843eb84a2ef0d4
+SHA512 (File-Copy-Recursive-Reduced-0.008.tar.gz) = ea426a7c87909fd819972e8abdc37d2fb506f0c6b9acf6fb313d24a5794685cafefa9bbe42a04a2d429a8c64a9eb3ee8c62216987a44d30c342ce16f6af36be9
+Size (File-Copy-Recursive-Reduced-0.008.tar.gz) = 24458 bytes
