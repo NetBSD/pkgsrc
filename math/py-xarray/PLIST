@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/19 18:25:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/04/03 07:29:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -131,6 +131,9 @@ ${PYSITELIB}/xarray/core/dataarray.pyo
 ${PYSITELIB}/xarray/core/dataset.py
 ${PYSITELIB}/xarray/core/dataset.pyc
 ${PYSITELIB}/xarray/core/dataset.pyo
+${PYSITELIB}/xarray/core/datatree.py
+${PYSITELIB}/xarray/core/datatree.pyc
+${PYSITELIB}/xarray/core/datatree.pyo
 ${PYSITELIB}/xarray/core/dtypes.py
 ${PYSITELIB}/xarray/core/dtypes.pyc
 ${PYSITELIB}/xarray/core/dtypes.pyo
@@ -194,6 +197,9 @@ ${PYSITELIB}/xarray/core/rolling.pyo
 ${PYSITELIB}/xarray/core/rolling_exp.py
 ${PYSITELIB}/xarray/core/rolling_exp.pyc
 ${PYSITELIB}/xarray/core/rolling_exp.pyo
+${PYSITELIB}/xarray/core/treenode.py
+${PYSITELIB}/xarray/core/treenode.pyc
+${PYSITELIB}/xarray/core/treenode.pyo
 ${PYSITELIB}/xarray/core/types.py
 ${PYSITELIB}/xarray/core/types.pyc
 ${PYSITELIB}/xarray/core/types.pyo
@@ -290,12 +296,6 @@ ${PYSITELIB}/xarray/tests/data/example.ict
 ${PYSITELIB}/xarray/tests/data/example.uamiv
 ${PYSITELIB}/xarray/tests/data/example_1.nc
 ${PYSITELIB}/xarray/tests/data/example_1.nc.gz
-${PYSITELIB}/xarray/tests/datatree/conftest.py
-${PYSITELIB}/xarray/tests/datatree/conftest.pyc
-${PYSITELIB}/xarray/tests/datatree/conftest.pyo
-${PYSITELIB}/xarray/tests/datatree/test_io.py
-${PYSITELIB}/xarray/tests/datatree/test_io.pyc
-${PYSITELIB}/xarray/tests/datatree/test_io.pyo
 ${PYSITELIB}/xarray/tests/test_accessor_dt.py
 ${PYSITELIB}/xarray/tests/test_accessor_dt.pyc
 ${PYSITELIB}/xarray/tests/test_accessor_dt.pyo
@@ -317,6 +317,9 @@ ${PYSITELIB}/xarray/tests/test_backends_api.pyo
 ${PYSITELIB}/xarray/tests/test_backends_common.py
 ${PYSITELIB}/xarray/tests/test_backends_common.pyc
 ${PYSITELIB}/xarray/tests/test_backends_common.pyo
+${PYSITELIB}/xarray/tests/test_backends_datatree.py
+${PYSITELIB}/xarray/tests/test_backends_datatree.pyc
+${PYSITELIB}/xarray/tests/test_backends_datatree.pyo
 ${PYSITELIB}/xarray/tests/test_backends_file_manager.py
 ${PYSITELIB}/xarray/tests/test_backends_file_manager.pyc
 ${PYSITELIB}/xarray/tests/test_backends_file_manager.pyo
@@ -377,6 +380,9 @@ ${PYSITELIB}/xarray/tests/test_dataarray.pyo
 ${PYSITELIB}/xarray/tests/test_dataset.py
 ${PYSITELIB}/xarray/tests/test_dataset.pyc
 ${PYSITELIB}/xarray/tests/test_dataset.pyo
+${PYSITELIB}/xarray/tests/test_datatree.py
+${PYSITELIB}/xarray/tests/test_datatree.pyc
+${PYSITELIB}/xarray/tests/test_datatree.pyo
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.py
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.pyc
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.pyo
@@ -452,6 +458,9 @@ ${PYSITELIB}/xarray/tests/test_sparse.pyo
 ${PYSITELIB}/xarray/tests/test_strategies.py
 ${PYSITELIB}/xarray/tests/test_strategies.pyc
 ${PYSITELIB}/xarray/tests/test_strategies.pyo
+${PYSITELIB}/xarray/tests/test_treenode.py
+${PYSITELIB}/xarray/tests/test_treenode.pyc
+${PYSITELIB}/xarray/tests/test_treenode.pyo
 ${PYSITELIB}/xarray/tests/test_tutorial.py
 ${PYSITELIB}/xarray/tests/test_tutorial.pyc
 ${PYSITELIB}/xarray/tests/test_tutorial.pyo
