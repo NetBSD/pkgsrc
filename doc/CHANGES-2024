@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2187 2024/04/03 09:53:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2188 2024/04/03 11:38:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3706,3 +3706,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/py-emoji to 2.11.0 [adam 2024-04-03]
 	Updated textproc/py-validators to 0.26.0 [adam 2024-04-03]
 	Updated misc/py-trove-classifiers to 2024.3.25 [adam 2024-04-03]
+	Updated misc/stellarium to 24.1 [adam 2024-04-03]
+	Updated www/py-httpcore to 1.0.5 [adam 2024-04-03]
