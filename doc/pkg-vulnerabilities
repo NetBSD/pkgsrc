@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.157 2024/03/29 18:22:44 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.158 2024/04/03 19:23:02 rhialto Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14407,7 +14407,7 @@ asterisk>=14.0<14.7.6	denial-of-service	https://downloads.asterisk.org/pub/secur
 php{56,70,71,72}-drupal<7.57	multiple-vulnerabilities	https://www.drupal.org/sa-core-2018-001
 php{56,70,71,72}-drupal>8<8.4.5	multiple-vulnerabilities	https://www.drupal.org/sa-core-2018-001
 xpdf<4.1		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-7452
-xpdf<5.0		infinite-loop			https://nvd.nist.gov/vuln/detail/CVE-2018-7453
+xpdf<4.05		infinite-loop			https://nvd.nist.gov/vuln/detail/CVE-2018-7453
 xpdf<4.1		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-7454
 xpdf<4.1		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-7455
 php{56,70,71,72}-piwigo<2.9.3	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2018-6883
@@ -15847,7 +15847,7 @@ fig2dev-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-161
 jdbc-postgresql{93,94}-[0-9]*	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2018-10936
 tiff<4.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16335
 xpdf<4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16368
-xpdf<5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16369
+xpdf<4.05	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16369
 openjpeg<2.3.1	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-16375
 openjpeg<2.3.1nb1	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2018-16376
 jhead-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16554
@@ -24132,7 +24132,7 @@ xpdf-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-38227
 xpdf<4.04	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-38171
 xpdf<4.04	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-24107
 xpdf<4.04	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-24106
-xpdf<4.04	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-36561
+xpdf<4.05	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-36561
 xpdf<4.04	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-38334
 xpdf<4.05	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-38928
 xpdf<4.05	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38222
@@ -25679,11 +25679,11 @@ routinator<0.12.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39
 routinator>=0.9.0<0.12.2	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-39916
 sofia-sip<1.13.15	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-32307
 xpdf-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-26930
-xpdf-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2664
-xpdf-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2663
-xpdf-[0-9]*	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-2662
+xpdf<4.05	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2664
+xpdf<4.05	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2663
+xpdf<4.05	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-2662
 xpdf<4.05	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-3044
-xpdf-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3436
+xpdf<4.05	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3436
 xpdf-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-48545
 tcpdump-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-1801
 quickjs-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31922
