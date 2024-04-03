@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.32 2023/11/09 18:58:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/04/03 17:42:53 gdt Exp $
 bin/nut-scanner
+bin/nutconf
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -105,6 +106,7 @@ man/man3/nutclient_tcp_is_connected.3
 man/man3/nutclient_tcp_reconnect.3
 man/man3/nutclient_tcp_set_timeout.3
 man/man3/nutscan.3
+man/man3/nutscan_add_commented_option_to_device.3
 man/man3/nutscan_add_device_to_device.3
 man/man3/nutscan_add_option_to_device.3
 man/man3/nutscan_cidr_to_ip.3
@@ -121,6 +123,7 @@ man/man3/nutscan_scan_avahi.3
 man/man3/nutscan_scan_eaton_serial.3
 man/man3/nutscan_scan_ipmi.3
 man/man3/nutscan_scan_nut.3
+man/man3/nutscan_scan_nut_simulation.3
 man/man3/nutscan_scan_snmp.3
 man/man3/nutscan_scan_usb.3
 man/man3/nutscan_scan_xml_http_range.3
@@ -180,6 +183,7 @@ man/man8/microsol-apc.8
 man/man8/nut-driver-enumerator.8
 man/man8/nut-recorder.8
 man/man8/nut-scanner.8
+man/man8/nutconf.8
 man/man8/nutdrv_qx.8
 man/man8/nutdrv_siemens_sitop.8
 man/man8/nutupsdrv.8

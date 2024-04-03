@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2023/11/22 18:14:42 gdt Exp $
+# $NetBSD: Makefile,v 1.76 2024/04/03 17:42:53 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		2
 COMMENT=		Network UPS Tools
 
 SUBST_CLASSES+=		man-so
