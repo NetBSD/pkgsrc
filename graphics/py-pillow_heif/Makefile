@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/02/05 21:31:46 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/03 09:05:00 adam Exp $
 
-DISTNAME=	pillow_heif-0.15.0
+DISTNAME=	pillow_heif-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/bigcat88/pillow_heif
 COMMENT=	Python interface for libheif library
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.2.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.5.0:../../graphics/py-Pillow
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
