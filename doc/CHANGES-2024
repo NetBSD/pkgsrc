@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2222 2024/04/04 12:13:36 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2223 2024/04/04 13:31:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3745,3 +3745,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added mail/py-lieer version 1.6 [wiz 2024-04-04]
 	Updated devel/pango to 1.52.2 [pin 2024-04-04]
 	Updated security/dropbear to 2024.84 [wiz 2024-04-04]
+	Removed net/py-gsutil [wiz 2024-04-04]

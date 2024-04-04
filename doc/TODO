@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24244 2024/04/03 21:27:02 wiz Exp $
+$NetBSD: TODO,v 1.24245 2024/04/04 13:31:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1172,7 +1172,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gcovr-6.0
 	o py-glad2-2.0.6
 	o py-google-api-python-client-2.124.0
-	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-icalendar-5.0.12
