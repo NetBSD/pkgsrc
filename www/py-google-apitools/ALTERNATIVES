@@ -1,1 +1,0 @@
-bin/gen_client @PREFIX@/bin/gen_client-@PYVERSSUFFIX@
