@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.642 2024/02/29 21:00:42 vins Exp $
+# $NetBSD: Makefile,v 1.643 2024/04/04 04:21:32 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -341,6 +341,7 @@ SUBDIR+=	py-mail-parser
 SUBDIR+=	py-mailman-hyperkitty
 SUBDIR+=	py-mailmanclient
 SUBDIR+=	py-mailsuite
+SUBDIR+=	py-notmuch2
 SUBDIR+=	py-policyd-spf
 SUBDIR+=	py-postfix-mta-sts-resolver
 SUBDIR+=	py-sendmail-admin
