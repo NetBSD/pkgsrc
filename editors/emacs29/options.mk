@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2023/08/15 10:52:08 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2024/04/04 21:11:34 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -97,6 +97,7 @@ CONFIGURE_ARGS+=	--without-xml2
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
+USE_TOOLS+=		pkg-config
 .else
 CONFIGURE_ARGS+=	--without-gnutls
 .endif
