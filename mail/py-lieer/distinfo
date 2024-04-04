@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/04 04:23:55 wiz Exp $
+
+BLAKE2s (lieer-1.6.tar.gz) = 16fd0f498183abd6ed6ada191dc2195648ede1b8509a164b43900ce8fd237fe8
+SHA512 (lieer-1.6.tar.gz) = 1058cc54229319a02de3806b3d5d9a23fe490b56a8c31cd1db95167e212be219a86857437d5d29dc1ab49529c49cb61c8f98d4422a4004975dc86620296f7491
+Size (lieer-1.6.tar.gz) = 48773 bytes
