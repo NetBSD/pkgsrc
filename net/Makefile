@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1565 2024/03/11 07:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.1566 2024/04/04 13:31:21 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -734,7 +734,6 @@ SUBDIR+=	py-grequests
 SUBDIR+=	py-grpcio
 SUBDIR+=	py-grpcio-testing
 SUBDIR+=	py-grpcio-tools
-SUBDIR+=	py-gsutil
 SUBDIR+=	py-hatop
 SUBDIR+=	py-hpack
 SUBDIR+=	py-ifaddr
