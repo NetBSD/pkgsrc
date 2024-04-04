@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2024/02/26 19:27:51 pin Exp $
+# $NetBSD: Makefile,v 1.270 2024/04/04 13:41:23 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -173,7 +173,6 @@ SUBDIR+=	py-jinja2-time
 SUBDIR+=	py-jrnl
 SUBDIR+=	py-l18n
 SUBDIR+=	py-ligotimegps
-SUBDIR+=	py-monotonic
 SUBDIR+=	py-mxDateTime
 SUBDIR+=	py-parsedatetime
 SUBDIR+=	py-pytimeparse
