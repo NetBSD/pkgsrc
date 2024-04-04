@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2024/04/04 04:16:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/04/04 04:21:50 wiz Exp $
+#
 # used by mail/notmuch-emacs/Makefile
+# used by mail/py-notmuch2/Makefile
 
 DISTNAME=	notmuch-0.38.3
 CATEGORIES=	mail
