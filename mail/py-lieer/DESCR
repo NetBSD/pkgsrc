@@ -1,0 +1,4 @@
+This program can pull, and send, email and labels (and changes to
+labels) from your GMail account and store them locally in a maildir with
+the labels synchronized with a notmuch database. The changes to tags in
+the notmuch database may be pushed back remotely to your GMail account.
