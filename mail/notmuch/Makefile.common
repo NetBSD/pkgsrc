@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2024/03/10 12:11:09 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.6 2024/04/04 04:16:07 wiz Exp $
 # used by mail/notmuch-emacs/Makefile
 
 DISTNAME=	notmuch-0.38.3
@@ -23,7 +23,7 @@ TEST_TARGET=	check
 
 USE_CXX_FEATURES+=	c++11
 
-PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_FOR_BUILD_ONLY?=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_BASH+=	emacs/notmuch-emacs-mua
