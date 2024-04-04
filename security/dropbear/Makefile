@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2023/12/20 17:09:35 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/04/04 12:13:27 wiz Exp $
 
-DISTNAME=	dropbear-2022.83
-PKGREVISION=	1
+DISTNAME=	dropbear-2024.84
 CATEGORIES=	security
 MASTER_SITES=	https://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +35,7 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dropbear
 SUBST_CLASSES+=		config
 SUBST_MESSAGE.config=	Fixing path to config directory.
 SUBST_STAGE.config=	post-build
-SUBST_FILES.config=	dropbear.8 dropbearkey.1
+SUBST_FILES.config=	manpages/dropbear.8 manpages/dropbearkey.1
 SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
 
 # needed by dbscp
