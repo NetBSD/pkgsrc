@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4197 2024/04/01 21:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4198 2024/04/04 13:43:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2988,7 +2988,6 @@ SUBDIR+=	py-requests-unixsocket
 SUBDIR+=	py-requirements-parser
 SUBDIR+=	py-resolvelib
 SUBDIR+=	py-restructuredtext_lint
-SUBDIR+=	py-retry_decorator
 SUBDIR+=	py-rich-click
 SUBDIR+=	py-rlp
 SUBDIR+=	py-rope
