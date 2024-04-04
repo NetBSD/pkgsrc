@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1788 2024/03/10 14:43:37 taca Exp $
+# $NetBSD: Makefile,v 1.1789 2024/04/04 13:37:20 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -814,7 +814,6 @@ SUBDIR+=	py-flup
 SUBDIR+=	py-furl
 SUBDIR+=	py-genshi
 SUBDIR+=	py-google-api-python-client
-SUBDIR+=	py-google-apitools
 SUBDIR+=	py-grappelli_safe
 SUBDIR+=	py-gunicorn
 SUBDIR+=	py-h11
