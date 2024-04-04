@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.30 2023/12/20 17:09:35 wiz Exp $
+$NetBSD: distinfo,v 1.31 2024/04/04 12:13:27 wiz Exp $
 
-BLAKE2s (dropbear-2022.83.tar.bz2) = 71657e1f82711df54fc15b4aedf48e4bc6f3b79dc67e1016aec6711863e09fb1
-SHA512 (dropbear-2022.83.tar.bz2) = c63afa615d64b0c8c5e739c758eb8ae277ecc36a4223b766bf562702de69910904cbc3ea98d22989df478ae419e1f81057fe1ee09616c80cb859f58f44175422
-Size (dropbear-2022.83.tar.bz2) = 2322904 bytes
-SHA1 (patch-cli-session.c) = c994f83283c38ae966a32cb97432305d2ae61ec5
-SHA1 (patch-common-algo.c) = aca565c1bb2329466fa3e06c4602ae7750744099
-SHA1 (patch-common-kex.c) = dfa5fdec1e62913db6475ba656f92cd4df46be78
+BLAKE2s (dropbear-2024.84.tar.bz2) = 150b9d697a571dfc42fbd76430cb7324c3eed3e462871731606b9541296eb165
+SHA512 (dropbear-2024.84.tar.bz2) = 254daea819c5aeaa65bb43449386fb964f4aa13e3b3037fe11064120205c6e265925e7ef2d84f7ebe66c6a00cf0a22e6010314c065ed49a3815f47137b7aca44
+Size (dropbear-2024.84.tar.bz2) = 2306278 bytes
 SHA1 (patch-configure) = b17f647043b212adda53aad7fb8dc7e639be9494
-SHA1 (patch-default__options.h) = ef38d09e20b9d74abdd118901a4fc30459eb0dcb
-SHA1 (patch-kex.h) = 5a59be28ca209d8da26554fdeb2fdb5b84ddaf7c
-SHA1 (patch-process-packet.c) = 5f9a2c7e150786cb1cf974ffe3a294891e3b3e3e
-SHA1 (patch-ssh.h) = 9e830d59e26d5411713629fb4e716265eee85efe
-SHA1 (patch-svr-session.c) = 8cefae13d159e48b0834885167dfde79cd36e216
+SHA1 (patch-src_default__options.h) = af60ea91516639e055266b3dd74f100aa6100f0d
