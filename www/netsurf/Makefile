@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.110 2023/11/14 14:03:05 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2024/04/05 00:47:46 ktnb Exp $
 
-DISTNAME=	netsurf-all-3.10
+DISTNAME=	netsurf-all-3.11
 PKGNAME=	${DISTNAME:S/-all//}
 PKGREVISION=	18
 CATEGORIES=	www
@@ -44,6 +44,12 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# needed for strcasestr(3) and strndup(3)
 
 # Needed for the xxd utility
 TOOL_DEPENDS+=		vim-share-[0-9]*:../../editors/vim-share
+
+SUBST_CLASSES+=		tools
+SUBST_STAGE.tools=	pre-build
+SUBST_MESSAGE.tools=	Remove the -C option
+SUBST_FILES.tools=	buildsystem/makefiles/Makefile.tools
+SUBST_SED.tools=		-e 's,install -C,install,'
 
 SUBST_CLASSES+=		bin
 SUBST_STAGE.bin=	pre-install
