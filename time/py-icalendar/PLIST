@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/11/06 13:53:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/04/05 10:39:47 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -58,6 +58,8 @@ ${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_events.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_shuffeled_events.ics
 ${PYSITELIB}/icalendar/tests/calendars/multiple_calendar_components.ics
 ${PYSITELIB}/icalendar/tests/calendars/pacific_fiji.ics
+${PYSITELIB}/icalendar/tests/calendars/parsing_error.ics
+${PYSITELIB}/icalendar/tests/calendars/parsing_error_in_UTC_offset.ics
 ${PYSITELIB}/icalendar/tests/calendars/period_with_timezone.ics
 ${PYSITELIB}/icalendar/tests/calendars/pr_480_summary_with_colon.ics
 ${PYSITELIB}/icalendar/tests/calendars/small_bad_calendar.ics
@@ -94,6 +96,13 @@ ${PYSITELIB}/icalendar/tests/events/issue_64_event_with_ascii_summary.ics
 ${PYSITELIB}/icalendar/tests/events/issue_64_event_with_non_ascii_summary.ics
 ${PYSITELIB}/icalendar/tests/events/issue_70_rrule_causes_attribute_error.ics
 ${PYSITELIB}/icalendar/tests/events/issue_82_expected_output.ics
+${PYSITELIB}/icalendar/tests/fuzzed/__init__.py
+${PYSITELIB}/icalendar/tests/fuzzed/__init__.pyc
+${PYSITELIB}/icalendar/tests/fuzzed/__init__.pyo
+${PYSITELIB}/icalendar/tests/fuzzed/generate_python_test_cases_from_downloaded_clusterfuzz_test_cases.sh
+${PYSITELIB}/icalendar/tests/fuzzed/test_fuzzed_calendars.py
+${PYSITELIB}/icalendar/tests/fuzzed/test_fuzzed_calendars.pyc
+${PYSITELIB}/icalendar/tests/fuzzed/test_fuzzed_calendars.pyo
 ${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.py
 ${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.pyc
 ${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.pyo
@@ -113,12 +122,12 @@ ${PYSITELIB}/icalendar/tests/test_equality.pyo
 ${PYSITELIB}/icalendar/tests/test_examples.py
 ${PYSITELIB}/icalendar/tests/test_examples.pyc
 ${PYSITELIB}/icalendar/tests/test_examples.pyo
-${PYSITELIB}/icalendar/tests/test_fixed_issues.py
-${PYSITELIB}/icalendar/tests/test_fixed_issues.pyc
-${PYSITELIB}/icalendar/tests/test_fixed_issues.pyo
 ${PYSITELIB}/icalendar/tests/test_icalendar.py
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyc
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyo
+${PYSITELIB}/icalendar/tests/test_issue_116.py
+${PYSITELIB}/icalendar/tests/test_issue_116.pyc
+${PYSITELIB}/icalendar/tests/test_issue_116.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.py
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyo
@@ -146,6 +155,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
+${PYSITELIB}/icalendar/tests/test_oss_fuzz_errors.py
+${PYSITELIB}/icalendar/tests/test_oss_fuzz_errors.pyc
+${PYSITELIB}/icalendar/tests/test_oss_fuzz_errors.pyo
 ${PYSITELIB}/icalendar/tests/test_parsing.py
 ${PYSITELIB}/icalendar/tests/test_parsing.pyc
 ${PYSITELIB}/icalendar/tests/test_parsing.pyo
