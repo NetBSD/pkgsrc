@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/11/15 18:12:24 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.23 2024/04/05 13:55:23 wiz Exp $
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -74,6 +69,9 @@ ${PYSITELIB}/google/protobuf/internal/field_mask.pyo
 ${PYSITELIB}/google/protobuf/internal/message_listener.py
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyc
 ${PYSITELIB}/google/protobuf/internal/message_listener.pyo
+${PYSITELIB}/google/protobuf/internal/python_edition_defaults.py
+${PYSITELIB}/google/protobuf/internal/python_edition_defaults.pyc
+${PYSITELIB}/google/protobuf/internal/python_edition_defaults.pyo
 ${PYSITELIB}/google/protobuf/internal/python_message.py
 ${PYSITELIB}/google/protobuf/internal/python_message.pyc
 ${PYSITELIB}/google/protobuf/internal/python_message.pyo
@@ -149,4 +147,10 @@ ${PYSITELIB}/google/protobuf/util/__init__.pyo
 ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
-${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
+${PYSITELIB}/protobuf-${PKGVERSION}-py3.11-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
