@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2023/06/28 10:00:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.90 2024/04/05 11:12:27 wiz Exp $
 bin/finance-quote-wrapper
 bin/gnc-fq-update
 bin/gnucash
@@ -376,6 +376,7 @@ share/doc/gnucash/ChangeLog.2019
 share/doc/gnucash/ChangeLog.2020
 share/doc/gnucash/ChangeLog.2021
 share/doc/gnucash/ChangeLog.2022
+share/doc/gnucash/ChangeLog.2023
 share/doc/gnucash/DOCUMENTERS
 share/doc/gnucash/HACKING
 share/doc/gnucash/LICENSE
