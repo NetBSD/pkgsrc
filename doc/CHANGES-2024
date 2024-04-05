@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2245 2024/04/05 10:34:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2246 2024/04/05 10:35:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3775,3 +3775,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/ltm to 1.3.0 [wiz 2024-04-05]
 	Updated mail/neomutt to 20240329 [wiz 2024-04-05]
 	Updated devel/py-cparser to 2.22 [wiz 2024-04-05]
+	Updated graphics/py-glad2 to 2.0.6 [wiz 2024-04-05]
