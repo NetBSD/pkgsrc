@@ -1,4 +1,4 @@
-$NetBSD: patch-encoder_encoder.cpp,v 1.4 2024/04/05 09:22:33 adam Exp $
+$NetBSD: patch-encoder_encoder.cpp,v 1.5 2024/04/05 13:45:51 ryoon Exp $
 
 Fix error: call of overloaded 'pow(int, int)' is ambiguous
 

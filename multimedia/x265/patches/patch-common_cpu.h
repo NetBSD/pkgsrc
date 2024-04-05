@@ -1,4 +1,4 @@
-$NetBSD: patch-common_cpu.h,v 1.2 2024/04/05 09:22:33 adam Exp $
+$NetBSD: patch-common_cpu.h,v 1.3 2024/04/05 13:45:50 ryoon Exp $
 
 Retire detect512, use enable512 as a global
 

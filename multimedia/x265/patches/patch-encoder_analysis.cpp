@@ -1,4 +1,4 @@
-$NetBSD: patch-encoder_analysis.cpp,v 1.2 2024/04/05 09:22:33 adam Exp $
+$NetBSD: patch-encoder_analysis.cpp,v 1.3 2024/04/05 13:45:51 ryoon Exp $
 
 Ensure std::log() is used.
 
