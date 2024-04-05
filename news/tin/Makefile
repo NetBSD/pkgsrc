@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2024/01/17 16:07:19 micha Exp $
+# $NetBSD: Makefile,v 1.107 2024/04/05 09:57:50 micha Exp $
 
 DISTNAME=	tin-2.6.3
 CATEGORIES=	news
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
 MASTER_SITES+=	https://ftp.funet.fi/pub/unix/news/tin-unoff/
 MASTER_SITES+=	ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/
 MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
-EXTRACT_SUFX=	.tar.xz
+#EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tin.org/
