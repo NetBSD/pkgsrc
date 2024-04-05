@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2024/03/22 07:53:09 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/04/05 13:40:03 adam Exp $
 
-BLAKE2s (snappy-1.1.10.tar.gz) = 84a128717b35d7fcd8ce52e03d2efcd71d5928fc19ac5bf0ed3ee99656413541
-SHA512 (snappy-1.1.10.tar.gz) = 3578597f1d4ec09104ce0296b825b013590351230dfe56c635081fd282ce7a13a34caf2c283ac77bd24065e2d27af6db068d1f84b98cec2fd39a0e37a0d77070
-Size (snappy-1.1.10.tar.gz) = 1105312 bytes
-SHA1 (patch-CMakeLists.txt) = fce9856b530e781968c9e7fca443581685b005ff
+BLAKE2s (snappy-1.2.0.tar.gz) = 78f809394883b1552080f3689bdc3224cf683e86c835e7b2348c18e151550f7f
+SHA512 (snappy-1.2.0.tar.gz) = 5b3b4e73ff24295885ff9f3d75ccb090e6c7dba40d4965f0892163aa9876296e61590d62023a32d750949268af8ce89df93273b02179d5b3a55de00966a3ae0a
+Size (snappy-1.2.0.tar.gz) = 1107265 bytes
+SHA1 (patch-CMakeLists.txt) = 13bc212f15d3ba8b57e9205dccdb543e4ca567a0
 SHA1 (patch-snappy.cc) = c1d3749e9070e1dce6e99691df668d6d9acdee0b

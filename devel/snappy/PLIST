@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/08/27 09:13:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/05 13:40:03 adam Exp $
 include/snappy-c.h
 include/snappy-sinksource.h
 include/snappy-stubs-public.h
@@ -9,4 +9,4 @@ lib/cmake/Snappy/SnappyTargets-noconfig.cmake
 lib/cmake/Snappy/SnappyTargets.cmake
 lib/libsnappy.so
 lib/libsnappy.so.1
-lib/libsnappy.so.${PKGVERSION}
+lib/libsnappy.so.1.1.10
