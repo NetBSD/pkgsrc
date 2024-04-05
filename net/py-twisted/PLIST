@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/11/05 10:38:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/04/05 17:31:54 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -13,7 +13,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/twisted/11715.misc
 ${PYSITELIB}/twisted/__init__.py
 ${PYSITELIB}/twisted/__init__.pyc
 ${PYSITELIB}/twisted/__init__.pyo

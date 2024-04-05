@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2023/11/05 10:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/04/05 17:31:54 adam Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Framework for writing networked applications
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
 DEPENDS+=	${PYPKGPREFIX}-incremental>=22.10.0:../../devel/py-incremental
@@ -34,8 +34,6 @@ REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
 
 USE_LANGUAGES=	c99
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
