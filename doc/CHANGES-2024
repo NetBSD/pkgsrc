@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2278 2024/04/05 17:04:58 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2279 2024/04/05 17:26:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3811,3 +3811,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/prometheus to 2.51.1 [wiz 2024-04-05]
 	Updated devel/re2 to 20240401 [adam 2024-04-05]
 	Updated multimedia/py-m3u8 to 4.1.0 [adam 2024-04-05]
+	Updated multimedia/gstreamer1 to 1.24.1 [wiz 2024-04-05]
