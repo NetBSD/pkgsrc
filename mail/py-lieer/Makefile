@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/04 04:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/05 07:59:33 jperkin Exp $
 
 DISTNAME=	lieer-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
