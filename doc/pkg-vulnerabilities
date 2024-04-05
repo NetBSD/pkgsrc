@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.160 2024/04/05 07:02:57 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.161 2024/04/05 20:11:27 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25953,7 +25953,7 @@ modular-xorg-xwayland<23.2.5	heap-buffer-overread	https://nvd.nist.gov/vuln/deta
 nodejs>=18<18.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
 nodejs>=20<20.12.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
 nodejs>=21<21.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-27983
-go121-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
-go122-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
+go121<1.21.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
+go122<1.22.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45288
 nghttp2<1.61.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28182
-apache-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28182
+apache<2.4.59	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28182
