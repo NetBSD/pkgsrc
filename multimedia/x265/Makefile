@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.38 2024/04/05 09:22:33 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/04/05 13:45:50 ryoon Exp $
 
 DISTNAME=	x265_3.6
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265_git/downloads/
+DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.x265.org/
 COMMENT=	High Efficiency Video Coding (HEVC)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/source
+WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
 USE_LANGUAGES=	c c++
 
@@ -18,6 +19,13 @@ CMAKE_ARGS+=	-DENABLE_PIC=ON
 # Set version here instead of relying on git; see patch-CMakeLists.txt
 CMAKE_ARGS+=	-DX265_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DX265_LATEST_TAG=${PKGVERSION_NOREV}
+
+SUBST_CLASSES+=		cr
+SUBST_STAGE.cr=		post-extract
+SUBST_FILES.cr+=	*
+SUBST_FILES.cr+=	*/*
+SUBST_FILTER_CMD.cr=	${TR} -d '\r'
+SUBST_NOOP_OK.cr=	yes
 
 .include "options.mk"
 
