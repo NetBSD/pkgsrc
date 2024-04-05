@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/04/05 10:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/04/05 10:48:23 adam Exp $
 
-DISTNAME=	keyring-25.0.0
+DISTNAME=	keyring-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/jaraco/keyring
 COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.classes>=0:../../devel/py-jaraco.classes
+DEPENDS+=	${PYPKGPREFIX}-jaraco.context>=0:../../devel/py-jaraco.context
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=0:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.4.2:../../sysutils/py-jeepney
 DEPENDS+=	${PYPKGPREFIX}-secretstorage>=3.2:../../security/py-secretstorage
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
@@ -38,10 +39,6 @@ REPLACE_PYTHON+=	keyring/cli.py
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
-
-# 2 failed, 13 passed, 83 skipped
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
