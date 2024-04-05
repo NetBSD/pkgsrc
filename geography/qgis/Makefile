@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2024/01/30 14:22:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.199 2024/04/05 14:00:58 wiz Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -6,7 +6,7 @@
 # testing, on the theory that slightly old solid is better than
 # up-to-date with issues.
 DISTNAME=	qgis-3.28.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
