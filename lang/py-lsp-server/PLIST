@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/05 10:50:23 wiz Exp $
 bin/pylsp-${PYVERSSUFFIX}
 ${PYSITELIB}/pylsp/__init__.py
 ${PYSITELIB}/pylsp/__init__.pyc
@@ -93,9 +93,6 @@ ${PYSITELIB}/pylsp/plugins/rope_autoimport.pyo
 ${PYSITELIB}/pylsp/plugins/rope_completion.py
 ${PYSITELIB}/pylsp/plugins/rope_completion.pyc
 ${PYSITELIB}/pylsp/plugins/rope_completion.pyo
-${PYSITELIB}/pylsp/plugins/rope_rename.py
-${PYSITELIB}/pylsp/plugins/rope_rename.pyc
-${PYSITELIB}/pylsp/plugins/rope_rename.pyo
 ${PYSITELIB}/pylsp/plugins/signature.py
 ${PYSITELIB}/pylsp/plugins/signature.pyc
 ${PYSITELIB}/pylsp/plugins/signature.pyo
