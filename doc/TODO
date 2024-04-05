@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24287 2024/04/05 18:15:02 ktnb Exp $
+$NetBSD: TODO,v 1.24288 2024/04/05 18:33:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -629,6 +629,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o ffmpeg-7.0
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
@@ -1007,6 +1008,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o open-vm-tools-12.3.0 [security fix: CVE-2023-20900]
+	o openblas-0.3.27
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
