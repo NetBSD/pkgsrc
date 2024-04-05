@@ -1,10 +1,10 @@
-$NetBSD: patch-common_cpu.cpp,v 1.2 2019/01/25 09:01:13 adam Exp $
+$NetBSD: patch-common_cpu.cpp,v 1.3 2024/04/05 09:22:33 adam Exp $
 
 Retire detect512, make enable512 a global.
 
---- common/cpu.cpp.orig	2019-01-23 09:47:18.000000000 +0000
+--- common/cpu.cpp.orig	2024-04-04 09:39:50.000000000 +0000
 +++ common/cpu.cpp
-@@ -58,7 +58,7 @@ static void sigill_handler(int sig)
+@@ -62,7 +62,7 @@ static void sigill_handler(int sig)
  #endif // if X265_ARCH_ARM
  
  namespace X265_NS {
@@ -13,7 +13,7 @@ Retire detect512, make enable512 a global.
  const cpu_name_t cpu_names[] =
  {
  #if X265_ARCH_X86
-@@ -123,10 +123,6 @@ uint64_t PFX(cpu_xgetbv)(int xcr);
+@@ -135,10 +135,6 @@ uint64_t PFX(cpu_xgetbv)(int xcr);
  #pragma warning(disable: 4309) // truncation of constant value
  #endif
  

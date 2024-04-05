@@ -1,10 +1,10 @@
-$NetBSD: patch-encoder_analysis.cpp,v 1.1 2019/09/18 10:04:51 jperkin Exp $
+$NetBSD: patch-encoder_analysis.cpp,v 1.2 2024/04/05 09:22:33 adam Exp $
 
 Ensure std::log() is used.
 
---- encoder/analysis.cpp.orig	2019-07-08 11:10:19.000000000 +0000
+--- encoder/analysis.cpp.orig	2024-04-04 09:39:50.000000000 +0000
 +++ encoder/analysis.cpp
-@@ -3702,7 +3702,7 @@ void Analysis::normFactor(const pixel* s
+@@ -3739,7 +3739,7 @@ void Analysis::normFactor(const pixel* s
  
      // 2. Calculate ac component
      uint64_t z_k = 0;
