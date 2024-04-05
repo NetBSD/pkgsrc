@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.38 2024/04/05 09:22:33 adam Exp $
+$NetBSD: distinfo,v 1.39 2024/04/05 13:45:50 ryoon Exp $
 
-BLAKE2s (x265_3.6.tar.gz) = 9389825cc213ed0859e57fccf8382822501ad9cca2805502b80e502e059b2a06
-SHA512 (x265_3.6.tar.gz) = b3e00e18b410c2994699ae8b47ade8fa7011d48ae883bbd7e48a9b6a3e936cfe9298b1e72248dee243fcf0f361312c6a77daffd83fa066cc0c82179995012f74
-Size (x265_3.6.tar.gz) = 1668556 bytes
-SHA1 (patch-CMakeLists.txt) = 5b355d9d2d3c58b1455f19516ed9ee45618aff1d
-SHA1 (patch-common_cpu.cpp) = 9dbe83e44ab09d877d6a517dacdebfd206c7ec95
-SHA1 (patch-common_cpu.h) = 0bc594b87b26ed06827e56b6d1515b756f07504e
-SHA1 (patch-common_quant.cpp) = 2b2edfe6a167808854bb89582b81ce5bd338675d
-SHA1 (patch-common_version.cpp) = 0a157bbc23a2f41e735bdc984b148652ff55186c
-SHA1 (patch-encoder_analysis.cpp) = addc4174bd9bf1d0c5f7645414b2571d7a5a3053
-SHA1 (patch-encoder_encoder.cpp) = f81e0cd1030e6e3b57258feebfde1a6e309d9671
+BLAKE2s (x265_3.6/x265_3.6.tar.gz) = 5b0d4e3a05cb0bc5c3b9cef140029e7a93b3637e165381dbd3e866d0e2f8ef1c
+SHA512 (x265_3.6/x265_3.6.tar.gz) = 570429c3f0b560b2f946ac9baba97d66d7d6485e46eb695b17003b5913028f62d35822477633e911cd3ea60e6ce0ecc7d9d82de7d8257272f9ca7b43761438be
+Size (x265_3.6/x265_3.6.tar.gz) = 1655889 bytes
+SHA1 (patch-CMakeLists.txt) = b69463b742ad1408b96ef2a87162900674a2cc8a
+SHA1 (patch-common_cpu.cpp) = 63c57523ab8b194bcbdddf7ba6cbdc565fa04187
+SHA1 (patch-common_cpu.h) = 000f9b6e40a459db4e3428730c8a9f5eeb6d9449
+SHA1 (patch-common_quant.cpp) = 648e21479e7af9007e5aca1db86a7f1de50047ea
+SHA1 (patch-common_version.cpp) = b7deaf67279a391e79e1820078bfd248fb66759a
+SHA1 (patch-encoder_analysis.cpp) = c9661f34f73b03055273331065052f1f6bb41507
+SHA1 (patch-encoder_encoder.cpp) = 7305a5b065d02eb5f3824b1af1ab4a85a14cb4c4
