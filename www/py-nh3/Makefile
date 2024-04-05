@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/12/11 09:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/05 10:53:33 wiz Exp $
 
-DISTNAME=	nh3-0.2.15
+DISTNAME=	nh3-0.2.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nh3/}
