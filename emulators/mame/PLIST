@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2024/02/29 07:24:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2024/04/05 12:08:47 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -363,6 +363,7 @@ share/mame/hash/jakks_gamekey_mv.xml
 share/mame/hash/jakks_gamekey_nk.xml
 share/mame/hash/jakks_gamekey_nm.xml
 share/mame/hash/jakks_gamekey_sw.xml
+share/mame/hash/jaminator.xml
 share/mame/hash/jazz.xml
 share/mame/hash/jb3000_flop.xml
 share/mame/hash/jpopira_jp.xml
@@ -457,6 +458,7 @@ share/mame/hash/msx2.hsi
 share/mame/hash/msx2_cart.xml
 share/mame/hash/msx2_cass.xml
 share/mame/hash/msx2_flop.xml
+share/mame/hash/msx2p_cart.xml
 share/mame/hash/msx2p_flop.xml
 share/mame/hash/msx_softcard.xml
 share/mame/hash/msx_yamaha_minicart.xml
