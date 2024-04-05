@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2018/08/07 06:09:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/05 11:00:48 wiz Exp $
 bin/change_tz-${PYVERSSUFFIX}
 bin/ics_diff-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-2.0.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/vobject/__init__.py
 ${PYSITELIB}/vobject/__init__.pyc
 ${PYSITELIB}/vobject/__init__.pyo
