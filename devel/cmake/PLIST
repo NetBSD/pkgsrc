@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2024/04/02 17:27:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.80 2024/04/05 08:50:25 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -3035,6 +3035,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/HP-UX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Haiku-Initialize.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Haiku.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Absoft-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linux-Apple-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-CCur-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Clang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Clang-CUDA.cmake
