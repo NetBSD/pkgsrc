@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/11/19 14:20:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/04/05 10:41:19 wiz Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -12,12 +12,6 @@ ${PYSITELIB}/keyring/__init__.pyo
 ${PYSITELIB}/keyring/__main__.py
 ${PYSITELIB}/keyring/__main__.pyc
 ${PYSITELIB}/keyring/__main__.pyo
-${PYSITELIB}/keyring/_compat.py
-${PYSITELIB}/keyring/_compat.pyc
-${PYSITELIB}/keyring/_compat.pyo
-${PYSITELIB}/keyring/_properties_compat.py
-${PYSITELIB}/keyring/_properties_compat.pyc
-${PYSITELIB}/keyring/_properties_compat.pyo
 ${PYSITELIB}/keyring/backend.py
 ${PYSITELIB}/keyring/backend.pyc
 ${PYSITELIB}/keyring/backend.pyo
@@ -56,6 +50,15 @@ ${PYSITELIB}/keyring/backends/null.pyo
 ${PYSITELIB}/keyring/cli.py
 ${PYSITELIB}/keyring/cli.pyc
 ${PYSITELIB}/keyring/cli.pyo
+${PYSITELIB}/keyring/compat/__init__.py
+${PYSITELIB}/keyring/compat/__init__.pyc
+${PYSITELIB}/keyring/compat/__init__.pyo
+${PYSITELIB}/keyring/compat/properties.py
+${PYSITELIB}/keyring/compat/properties.pyc
+${PYSITELIB}/keyring/compat/properties.pyo
+${PYSITELIB}/keyring/compat/py312.py
+${PYSITELIB}/keyring/compat/py312.pyc
+${PYSITELIB}/keyring/compat/py312.pyo
 ${PYSITELIB}/keyring/completion.py
 ${PYSITELIB}/keyring/completion.pyc
 ${PYSITELIB}/keyring/completion.pyo
@@ -75,9 +78,6 @@ ${PYSITELIB}/keyring/http.py
 ${PYSITELIB}/keyring/http.pyc
 ${PYSITELIB}/keyring/http.pyo
 ${PYSITELIB}/keyring/py.typed
-${PYSITELIB}/keyring/py312compat.py
-${PYSITELIB}/keyring/py312compat.pyc
-${PYSITELIB}/keyring/py312compat.pyo
 ${PYSITELIB}/keyring/testing/__init__.py
 ${PYSITELIB}/keyring/testing/__init__.pyc
 ${PYSITELIB}/keyring/testing/__init__.pyo
