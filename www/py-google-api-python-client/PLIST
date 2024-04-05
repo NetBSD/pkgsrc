@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.26 2024/03/17 13:58:40 wiz Exp $
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
+@comment $NetBSD: PLIST,v 1.27 2024/04/05 10:50:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -141,6 +141,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbuild.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudbuild.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudchannel.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudcommerceprocurement.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudcontrolspartner.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudcontrolspartner.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/clouddebugger.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/clouddeploy.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/clouderrorreporting.v1beta1.json
@@ -456,6 +458,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/sheets.v4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/siteVerification.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/slides.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/smartdevicemanagement.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/solar.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sourcerepo.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/spanner.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/speech.v1.json
