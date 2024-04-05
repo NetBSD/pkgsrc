@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/03/05 14:45:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/04/05 17:26:42 wiz Exp $
 include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
 include/gstreamer-1.0/gst/analytics/analytics.h
 include/gstreamer-1.0/gst/analytics/gstanalyticsclassificationmtd.h
@@ -175,7 +175,7 @@ lib/libgstadaptivedemux-1.0.so.0
 lib/libgstadaptivedemux-1.0.so.0.${SHLIBVER}.0
 lib/libgstanalytics-1.0.so
 lib/libgstanalytics-1.0.so.0
-lib/libgstanalytics-1.0.so.0.2400.0
+lib/libgstanalytics-1.0.so.0.${SHLIBVER}.0
 lib/libgstbadaudio-1.0.so
 lib/libgstbadaudio-1.0.so.0
 lib/libgstbadaudio-1.0.so.0.${SHLIBVER}.0
@@ -190,7 +190,7 @@ lib/libgstcodecs-1.0.so.0
 lib/libgstcodecs-1.0.so.0.${SHLIBVER}.0
 lib/libgstdxva-1.0.so
 lib/libgstdxva-1.0.so.0
-lib/libgstdxva-1.0.so.0.2400.0
+lib/libgstdxva-1.0.so.0.${SHLIBVER}.0
 lib/libgstinsertbin-1.0.so
 lib/libgstinsertbin-1.0.so.0
 lib/libgstinsertbin-1.0.so.0.${SHLIBVER}.0
@@ -202,7 +202,7 @@ lib/libgstmpegts-1.0.so.0
 lib/libgstmpegts-1.0.so.0.${SHLIBVER}.0
 lib/libgstmse-1.0.so
 lib/libgstmse-1.0.so.0
-lib/libgstmse-1.0.so.0.2400.0
+lib/libgstmse-1.0.so.0.${SHLIBVER}.0
 lib/libgstphotography-1.0.so
 lib/libgstphotography-1.0.so.0
 lib/libgstphotography-1.0.so.0.${SHLIBVER}.0
