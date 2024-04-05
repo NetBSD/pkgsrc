@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/02/11 15:35:50 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/04/05 13:45:28 adam Exp $
 
-DISTNAME=	libproxy-0.5.4
+DISTNAME=	libproxy-0.5.5
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libproxy/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
