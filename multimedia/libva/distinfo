@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2023/11/06 20:02:56 wiz Exp $
+$NetBSD: distinfo,v 1.26 2024/04/05 10:27:42 wiz Exp $
 
-BLAKE2s (libva-2.20.0.tar.bz2) = f092cc87b2b18e78c4d7e6b80b5c5d95f0d27f74dbfdde9330679df15f29fc47
-SHA512 (libva-2.20.0.tar.bz2) = c7830936f5923e532acd75d605d4c02af0523805cfae85da86db2ab139646aae0c6238b956d5f03abbeb0e27e375a4fdaf9b856466371591172b671ccc463913
-Size (libva-2.20.0.tar.bz2) = 508653 bytes
+BLAKE2s (libva-2.21.0.tar.bz2) = e998e45e9e419e456a792cf12fe9a303785210ee79f8faecfd5452709bf85335
+SHA512 (libva-2.21.0.tar.bz2) = 47d15b7d85a005798adcaad95d0bded1abd746ed19a531f0dac42b448f914837fadaab2d12e1bd62a1ba74bb874e0209c3232b3182ec8541a66219a29c4510f0
+Size (libva-2.21.0.tar.bz2) = 521730 bytes
 SHA1 (patch-va_x11_dri2__util.c) = 6b77b7246f235d106e1fff3c83be564d2a0d0c5c
