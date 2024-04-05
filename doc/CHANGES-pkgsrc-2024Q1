@@ -1,4 +1,11 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.1 2024/04/01 12:38:00 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.2 2024/04/05 19:03:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
+
+Pullup ticket #6841 - requested by wiz
+www/p5-libwww: build fix
+
+Pullup ticket #6842 - requested by bouyer
+sysutils/xentools415: NetBSD 10 bugfix
+sysutils/xentools418: NetBSD 10 bugfix
 
