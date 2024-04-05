@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/01/04 22:36:43 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/05 17:34:11 adam Exp $
 
-DISTNAME=	channels-4.0.0
+DISTNAME=	channels-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/channels/}
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.5.0:../../www/py-asgiref
+DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-daphne>=4.0.0:../../www/py-daphne
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
