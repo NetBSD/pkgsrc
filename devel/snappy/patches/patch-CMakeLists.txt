@@ -1,9 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2024/03/22 07:53:09 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2024/04/05 13:40:03 adam Exp $
 
 Avoid -Werror.
 Check a different intrinsic to fix build on armv7.
 
---- CMakeLists.txt.orig	2023-03-08 23:44:00.000000000 +0000
+--- CMakeLists.txt.orig	2024-04-04 19:04:38.000000000 +0000
 +++ CMakeLists.txt
 @@ -66,12 +66,6 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSV
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
@@ -16,9 +16,9 @@ Check a different intrinsic to fix build on armv7.
 -    endif(NOT CMAKE_CXX_FLAGS MATCHES "-Werror")
 -  endif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
  
-   # Disable C++ exceptions.
-   string(REGEX REPLACE "-fexceptions" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-@@ -194,9 +188,9 @@ int main() {
+   # Disable sign comparison warnings. Matches upcoming Bazel setup.
+   if(NOT CMAKE_CXX_FLAGS MATCHES "-Wno-sign-compare")
+@@ -207,9 +201,9 @@ int main() {
  check_cxx_source_compiles("
  #include <arm_neon.h>
  int main() {
