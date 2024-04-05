@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2273 2024/04/05 13:46:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2274 2024/04/05 13:59:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/vala to 0.56.16 [adam 2024-04-05]
 	Updated www/libproxy to 0.5.5 [adam 2024-04-05]
 	Updated security/opensc to 0.25.1 [adam 2024-04-05]
+	Updated devel/protobuf to 26.1 [wiz 2024-04-05]
