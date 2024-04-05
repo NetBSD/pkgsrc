@@ -1,8 +1,8 @@
-$NetBSD: patch-common_version.cpp,v 1.1 2021/04/10 08:36:03 adam Exp $
+$NetBSD: patch-common_version.cpp,v 1.2 2024/04/05 09:22:33 adam Exp $
 
 Recognise NetBSD.
 
---- common/version.cpp.orig	2021-04-10 08:24:32.907512619 +0000
+--- common/version.cpp.orig	2024-04-05 09:11:41.485595483 +0000
 +++ common/version.cpp
 @@ -61,6 +61,8 @@
  #define ONOS    "[Windows]"
