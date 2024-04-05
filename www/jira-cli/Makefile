@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2024/02/18 02:19:07 fox Exp $
+# $NetBSD: Makefile,v 1.37 2024/04/05 19:14:13 bsiegert Exp $
 
 DISTNAME=	jira-cli-1.5.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
+PKGREVISION=	1
 CATEGORIES=	www
 DIST_SUBDIR=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
