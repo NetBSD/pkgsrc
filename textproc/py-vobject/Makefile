@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/01/05 15:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/05 11:00:48 wiz Exp $
 
-DISTNAME=	vobject-0.9.6.1
+DISTNAME=	vobject-0.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vobject/}
 
@@ -11,9 +10,11 @@ HOMEPAGE=	https://eventable.github.io/vobject/
 COMMENT=	Python iCalendar (ics) and vCard library
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -23,5 +24,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests.py
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
