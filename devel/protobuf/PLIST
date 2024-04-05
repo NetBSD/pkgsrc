@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/11/15 18:12:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/04/05 13:55:23 wiz Exp $
 bin/protoc
 bin/protoc-${PKGVERSION}.0
 include/google/protobuf/any.h
@@ -112,18 +112,22 @@ include/google/protobuf/compiler/python/helpers.h
 include/google/protobuf/compiler/python/pyi_generator.h
 include/google/protobuf/compiler/retention.h
 include/google/protobuf/compiler/ruby/ruby_generator.h
+include/google/protobuf/compiler/rust/accessors/accessor_case.h
 include/google/protobuf/compiler/rust/accessors/accessor_generator.h
 include/google/protobuf/compiler/rust/accessors/accessors.h
+include/google/protobuf/compiler/rust/accessors/helpers.h
 include/google/protobuf/compiler/rust/context.h
+include/google/protobuf/compiler/rust/crate_mapping.h
+include/google/protobuf/compiler/rust/enum.h
 include/google/protobuf/compiler/rust/generator.h
 include/google/protobuf/compiler/rust/message.h
 include/google/protobuf/compiler/rust/naming.h
 include/google/protobuf/compiler/rust/oneof.h
 include/google/protobuf/compiler/rust/relative_path.h
+include/google/protobuf/compiler/rust/rust_keywords.h
 include/google/protobuf/compiler/scc.h
 include/google/protobuf/compiler/subprocess.h
 include/google/protobuf/compiler/versions.h
-include/google/protobuf/compiler/versions_suffix.h
 include/google/protobuf/compiler/zip_writer.h
 include/google/protobuf/cpp_edition_defaults.h
 include/google/protobuf/cpp_features.pb.h
@@ -133,6 +137,7 @@ include/google/protobuf/descriptor.pb.h
 include/google/protobuf/descriptor.proto
 include/google/protobuf/descriptor_database.h
 include/google/protobuf/descriptor_legacy.h
+include/google/protobuf/descriptor_lite.h
 include/google/protobuf/descriptor_visitor.h
 include/google/protobuf/duration.pb.h
 include/google/protobuf/duration.proto
@@ -214,6 +219,7 @@ include/google/protobuf/stubs/common.h
 include/google/protobuf/stubs/platform_macros.h
 include/google/protobuf/stubs/port.h
 include/google/protobuf/stubs/status_macros.h
+include/google/protobuf/testing/file.h
 include/google/protobuf/text_format.h
 include/google/protobuf/thread_safe_arena.h
 include/google/protobuf/timestamp.pb.h
@@ -234,7 +240,8 @@ include/google/protobuf/wire_format.h
 include/google/protobuf/wire_format_lite.h
 include/google/protobuf/wrappers.pb.h
 include/google/protobuf/wrappers.proto
-include/java/core/src/main/java/com/google/protobuf/java_features.proto
+include/java/core/src/main/resources/google/protobuf/java_features.proto
+include/upb_generator/mangle.h
 include/utf8_range.h
 include/utf8_validity.h
 lib/cmake/protobuf/protobuf-config-version.cmake
