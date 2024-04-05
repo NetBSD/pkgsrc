@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2255 2024/04/05 10:50:32 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2256 2024/04/05 10:51:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3786,3 +3786,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-google-api-python-client to 2.124.0 [wiz 2024-04-05]
 	Updated graphics/openexr to 3.2.4 [wiz 2024-04-05]
 	Updated lang/py-lsp-server to 1.11.0 [wiz 2024-04-05]
+	Updated security/py-keyring to 25.1.0 [adam 2024-04-05]
+	Updated www/py-google-api-python-client to 2.125.0 [adam 2024-04-05]
