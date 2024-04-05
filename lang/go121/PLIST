@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/03/05 19:27:58 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/04/05 19:07:55 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -6469,6 +6469,7 @@ go121/src/internal/types/testdata/fixedbugs/issue61486.go
 go121/src/internal/types/testdata/fixedbugs/issue61879.go
 go121/src/internal/types/testdata/fixedbugs/issue61903.go
 go121/src/internal/types/testdata/fixedbugs/issue62157.go
+go121/src/internal/types/testdata/fixedbugs/issue66064.go
 go121/src/internal/types/testdata/fixedbugs/issue6977.go
 go121/src/internal/types/testdata/spec/assignability.go
 go121/src/internal/types/testdata/spec/comparable.go
