@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/02/23 12:58:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/04/05 11:17:03 wiz Exp $
 bin/adig
 bin/ahost
 include/ares.h
@@ -14,7 +14,7 @@ lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.12.0
+lib/libcares.so.2.13.1
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
 man/man1/adig.1
@@ -42,6 +42,7 @@ man/man3/ares_dns_rec_type_t.3
 man/man3/ares_dns_record.3
 man/man3/ares_dns_record_create.3
 man/man3/ares_dns_record_destroy.3
+man/man3/ares_dns_record_duplicate.3
 man/man3/ares_dns_record_get_flags.3
 man/man3/ares_dns_record_get_id.3
 man/man3/ares_dns_record_get_opcode.3
@@ -49,10 +50,13 @@ man/man3/ares_dns_record_get_rcode.3
 man/man3/ares_dns_record_query_add.3
 man/man3/ares_dns_record_query_cnt.3
 man/man3/ares_dns_record_query_get.3
+man/man3/ares_dns_record_query_set_name.3
+man/man3/ares_dns_record_query_set_type.3
 man/man3/ares_dns_record_rr_add.3
 man/man3/ares_dns_record_rr_cnt.3
 man/man3/ares_dns_record_rr_del.3
 man/man3/ares_dns_record_rr_get.3
+man/man3/ares_dns_record_rr_get_const.3
 man/man3/ares_dns_rr.3
 man/man3/ares_dns_rr_get_addr.3
 man/man3/ares_dns_rr_get_addr6.3
@@ -124,10 +128,16 @@ man/man3/ares_parse_txt_reply.3
 man/man3/ares_parse_uri_reply.3
 man/man3/ares_process.3
 man/man3/ares_query.3
+man/man3/ares_query_dnsrec.3
+man/man3/ares_queue.3
+man/man3/ares_queue_active_queries.3
+man/man3/ares_queue_wait_empty.3
 man/man3/ares_reinit.3
 man/man3/ares_save_options.3
 man/man3/ares_search.3
+man/man3/ares_search_dnsrec.3
 man/man3/ares_send.3
+man/man3/ares_send_dnsrec.3
 man/man3/ares_set_local_dev.3
 man/man3/ares_set_local_ip4.3
 man/man3/ares_set_local_ip6.3
