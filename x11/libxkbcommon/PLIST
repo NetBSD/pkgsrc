@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/10/19 14:57:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/04/05 10:36:19 wiz Exp $
 bin/xkbcli
 include/xkbcommon/xkbcommon-compat.h
 include/xkbcommon/xkbcommon-compose.h
@@ -19,10 +19,12 @@ lib/libxkbregistry.so.0.0.0
 lib/pkgconfig/xkbcommon-x11.pc
 lib/pkgconfig/xkbcommon.pc
 lib/pkgconfig/xkbregistry.pc
+libexec/xkbcommon/xkbcli-compile-compose
 libexec/xkbcommon/xkbcli-compile-keymap
 libexec/xkbcommon/xkbcli-how-to-type
 libexec/xkbcommon/xkbcli-interactive-x11
 libexec/xkbcommon/xkbcli-list
+man/man1/xkbcli-compile-compose.1
 man/man1/xkbcli-compile-keymap.1
 man/man1/xkbcli-how-to-type.1
 man/man1/xkbcli-interactive-x11.1
