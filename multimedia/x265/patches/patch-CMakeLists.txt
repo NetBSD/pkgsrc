@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2021/04/10 08:36:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2024/04/05 09:22:33 adam Exp $
 
 Get X265_VERSION and X265_LATEST_TAG from outside.
 
@@ -9,9 +9,9 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
             requesting a non executable stack. I don't know if Solaris ld
             is complying or just ignoring it.
 
---- CMakeLists.txt.orig	2021-03-16 12:53:00.000000000 +0000
+--- CMakeLists.txt.orig	2024-04-04 09:39:50.000000000 +0000
 +++ CMakeLists.txt
-@@ -485,7 +485,6 @@ if(POWER)
+@@ -523,7 +523,6 @@ if(POWER)
      endif()
  endif()
  
@@ -19,7 +19,7 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
  include_directories(. common encoder "${PROJECT_BINARY_DIR}")
  
  option(ENABLE_PPA "Enable PPA profiling instrumentation" OFF)
-@@ -665,7 +664,11 @@ if(ENABLE_SHARED)
+@@ -745,7 +744,11 @@ if(ENABLE_SHARED)
          elseif(CYGWIN)
              # Cygwin is not officially supported or tested. MinGW with msys is recommended.
          else()
