@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/04/03 00:55:28 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/05 19:14:04 bsiegert Exp $
 
 DISTNAME=	0.11.2
 PKGNAME=	qrcp-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=claudiodangelis/}
 DIST_SUBDIR=	qrcp
