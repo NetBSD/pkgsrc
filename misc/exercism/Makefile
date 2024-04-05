@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2024/02/20 01:11:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/05 19:14:02 bsiegert Exp $
 
 DISTNAME=		exercism-cli-3.3.0
 PKGNAME=		${DISTNAME:S/-cli-/-/}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=exercism/}
 GITHUB_PROJECT=		cli
