@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2023/12/28 13:29:26 thor Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/04/06 06:34:39 wiz Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pybind11/__init__.py
 ${PYSITELIB}/pybind11/__init__.pyc
 ${PYSITELIB}/pybind11/__init__.pyo
@@ -40,6 +39,7 @@ ${PYSITELIB}/pybind11/include/pybind11/embed.h
 ${PYSITELIB}/pybind11/include/pybind11/eval.h
 ${PYSITELIB}/pybind11/include/pybind11/functional.h
 ${PYSITELIB}/pybind11/include/pybind11/gil.h
+${PYSITELIB}/pybind11/include/pybind11/gil_safe_call_once.h
 ${PYSITELIB}/pybind11/include/pybind11/iostream.h
 ${PYSITELIB}/pybind11/include/pybind11/numpy.h
 ${PYSITELIB}/pybind11/include/pybind11/operators.h
@@ -50,6 +50,7 @@ ${PYSITELIB}/pybind11/include/pybind11/stl.h
 ${PYSITELIB}/pybind11/include/pybind11/stl/filesystem.h
 ${PYSITELIB}/pybind11/include/pybind11/stl_bind.h
 ${PYSITELIB}/pybind11/include/pybind11/type_caster_pyobject_ptr.h
+${PYSITELIB}/pybind11/include/pybind11/typing.h
 ${PYSITELIB}/pybind11/py.typed
 ${PYSITELIB}/pybind11/setup_helpers.py
 ${PYSITELIB}/pybind11/setup_helpers.pyc
