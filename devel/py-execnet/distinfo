@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/07/18 08:18:34 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/04/06 05:46:01 adam Exp $
 
-BLAKE2s (execnet-2.0.2.tar.gz) = e3dfcfe6dce9d0655b5fa85f5d9d6c02a6d7ac23ec217e91db82848167cc9959
-SHA512 (execnet-2.0.2.tar.gz) = 9e2e7ff4e04f50b12a3dd47d3326a3ea229f64926e8598bdce6ea25bd57afb41e96249e1c9f7333927a38a2793f67cac77965c922980055ed758dee361bf2ce4
-Size (execnet-2.0.2.tar.gz) = 161098 bytes
+BLAKE2s (execnet-2.1.0.tar.gz) = fb408ab3370d178b341daf7549a8552ec0025f95b4287971470656d2b8ae86c3
+SHA512 (execnet-2.1.0.tar.gz) = efd63147748d2f26fd75034b2a0a90c7aa10ac647468ceb27c845c3b66dfa6ffda8b8bd3b5d40ce34f429fb151bfd9fe5c2c6ebc20027789de555232851b5525
+Size (execnet-2.1.0.tar.gz) = 166475 bytes
