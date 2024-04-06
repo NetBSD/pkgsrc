@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2023/11/12 13:24:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2024/04/06 08:07:01 wiz Exp $
 
 BUILDLINK_TREE+=	kjobwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kjobwidgets
 KJOBWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kjobwidgets+=	kjobwidgets>=5.19.0
-BUILDLINK_ABI_DEPENDS.kjobwidgets?=	kjobwidgets>=5.108.0nb3
+BUILDLINK_ABI_DEPENDS.kjobwidgets?=	kjobwidgets>=5.114.0nb1
 BUILDLINK_PKGSRCDIR.kjobwidgets?=	../../x11/kjobwidgets
 
 .include "../../devel/kcoreaddons/buildlink3.mk"

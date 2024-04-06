@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2024/01/07 12:18:00 mef Exp $
+# $NetBSD: Makefile,v 1.62 2024/04/06 08:05:57 wiz Exp $
 
 PKGNAME=	gnuradio-fec-${VERSION}
+PKGREVISION=	1
 COMMENT=	Forward Error Correction blocks, utilities, & examples of GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/11/14 14:03:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/06 08:06:58 wiz Exp $
 
 DISTNAME=	gtkdatabox-1.0.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkdatabox/}
 

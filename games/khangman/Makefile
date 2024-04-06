@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2024/02/06 11:05:18 markd Exp $
+# $NetBSD: Makefile,v 1.80 2024/04/06 08:05:29 wiz Exp $
 
 DISTNAME=	khangman-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/education/khangman/

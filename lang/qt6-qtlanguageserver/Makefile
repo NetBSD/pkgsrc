@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/11/30 20:11:27 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/06 08:06:06 wiz Exp $
 
 DISTNAME=	qtlanguageserver-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtlanguageserver-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 language server implementation
 CATEGORIES=	lang devel
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

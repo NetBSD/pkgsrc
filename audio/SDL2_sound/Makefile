@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/01/30 14:21:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/06 08:04:46 wiz Exp $
 
 DISTNAME=	SDL2_sound-2.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
 GITHUB_PROJECT=	SDL_sound

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/11/12 13:22:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/04/06 08:05:49 wiz Exp $
 
 BUILDLINK_TREE+=	ksanecore
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ksanecore
 KSANECORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ksanecore+=	ksanecore>=22.08.0
-BUILDLINK_ABI_DEPENDS.ksanecore?=	ksanecore>=23.04.3nb4
+BUILDLINK_ABI_DEPENDS.ksanecore?=	ksanecore>=23.08.4nb1
 BUILDLINK_PKGSRCDIR.ksanecore?=	../../graphics/ksanecore
 
 .include "../../devel/ki18n/buildlink3.mk"

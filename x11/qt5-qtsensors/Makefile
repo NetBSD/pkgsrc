@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2023/12/30 16:18:34 adam Exp $
+# $NetBSD: Makefile,v 1.67 2024/04/06 08:07:11 wiz Exp $
 
 DISTNAME=	qtsensors-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtsensors-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for Sensors
 
 BUILD_TARGET=		sub-src

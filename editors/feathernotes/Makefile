@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2024/02/19 04:18:49 pin Exp $
+# $NetBSD: Makefile,v 1.31 2024/04/06 08:05:12 wiz Exp $
 
 VERSION=	1.2.0
 DISTNAME=	FeatherNotes-V${VERSION}
 PKGNAME=	feathernotes-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/02/06 11:05:23 markd Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/06 08:05:49 wiz Exp $
 
 DISTNAME=	kqtquickcharts-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://edu.kde.org/

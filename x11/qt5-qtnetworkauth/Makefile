@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2023/12/30 16:18:33 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/04/06 08:07:10 wiz Exp $
 
 DISTNAME=	qtnetworkauth-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtnetworkauth-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for networkauth framework
 
 BUILD_TARGET=		sub-src

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/01/30 14:21:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/06 08:05:16 wiz Exp $
 
 DISTNAME=	FBNeo-1.0.0.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=finalburnneo/}
 GITHUB_PROJECT=	fbneo

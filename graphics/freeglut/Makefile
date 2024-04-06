@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/05/03 15:20:41 triaxx Exp $
+# $NetBSD: Makefile,v 1.36 2024/04/06 08:05:45 wiz Exp $
 
 DISTNAME=	freeglut-3.4.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 
