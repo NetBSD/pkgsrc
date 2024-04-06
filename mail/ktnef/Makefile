@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/02/06 11:05:26 markd Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/06 08:06:08 wiz Exp $
 
 DISTNAME=	ktnef-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

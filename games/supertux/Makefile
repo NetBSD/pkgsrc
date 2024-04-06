@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/01/30 14:22:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2024/04/06 08:05:38 wiz Exp $
 
 PKGNAME=		supertux-0.6.3
-PKGREVISION=		6
+PKGREVISION=		7
 DISTNAME=		SuperTux-v${PKGVERSION_NOREV}-Source
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/}
