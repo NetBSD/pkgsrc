@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_Makefile.in,v 1.10 2021/01/20 20:40:28 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.11 2024/04/06 05:37:48 adam Exp $
 
 Support MirBSD.
 Honor LDFLAGS.
 Standardize file names.
 
---- unix/Makefile.in.orig	2020-12-31 01:55:50.000000000 +0000
+--- unix/Makefile.in.orig	2024-02-28 15:18:35.000000000 +0000
 +++ unix/Makefile.in
 @@ -14,6 +14,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
  MINOR_VERSION		= @TK_MINOR_VERSION@
@@ -90,15 +90,15 @@ Standardize file names.
  	@if test "x${LIB_FILE}" = "xlibtk${MAJOR_VERSION}.${MINOR_VERSION}.dll"; then \
  	    (cd ${TOP_DIR}/win; ${MAKE} tk${MAJOR_VERSION}${MINOR_VERSION}.dll); \
 @@ -715,7 +729,7 @@ install-strip:
- 		INSTALL_PROGRAM="$(INSTALL_PROGRAM) ${INSTALL_STRIP_PROGRAM}" \
- 		INSTALL_LIBRARY="$(INSTALL_LIBRARY) ${INSTALL_STRIP_LIBRARY}"
+ 		INSTALL_PROGRAM="STRIPPROG='${INSTALL_STRIP_PROGRAM}' $(INSTALL_PROGRAM) -s" \
+ 		INSTALL_LIBRARY="STRIPPROG='${INSTALL_STRIP_LIBRARY}' $(INSTALL_LIBRARY) -s"
  
 -install-binaries: $(TK_STUB_LIB_FILE) $(TK_LIB_FILE) ${WISH_EXE}
 +install-binaries: $(TK_STUB_LIB_FILE) $(TK_LIB_FILE) $(TK_LIB_A_FILE) ${WISH_EXE} ${TK_LIB_A_FILE}
  	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
  	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
  	    do \
-@@ -745,7 +759,13 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
+@@ -745,13 +759,20 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -113,7 +113,6 @@ Standardize file names.
  	@if test -f "tk${MAJOR_VERSION}${MINOR_VERSION}.dll"; then \
  	    $(INSTALL_LIBRARY) "tk${MAJOR_VERSION}${MINOR_VERSION}.dll" "$(DLL_INSTALL_DIR)";\
  	    chmod 555 "$(DLL_INSTALL_DIR)/tk${MAJOR_VERSION}${MINOR_VERSION}.dll";\
-@@ -754,6 +774,7 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	fi
  	@echo "Installing ${WISH_EXE} as $(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
  	@$(INSTALL_PROGRAM) ${WISH_EXE} "$(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
@@ -121,7 +120,7 @@ Standardize file names.
  	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -861,7 +882,7 @@ install-doc:
+@@ -859,7 +880,7 @@ install-doc:
  install-headers:
  	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
  	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
@@ -130,7 +129,7 @@ Standardize file names.
  	    do \
  	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -870,9 +891,12 @@ install-headers:
+@@ -868,9 +889,12 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
