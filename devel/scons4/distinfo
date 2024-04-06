@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/01/02 08:43:10 wiz Exp $
+$NetBSD: distinfo,v 1.4 2024/04/06 06:32:56 wiz Exp $
 
-BLAKE2s (SCons-4.6.0.post1.tar.gz) = af2d1211e1dde6fd02bcabaf775c6c7a7df312bd8241a02c5570333bf11f624f
-SHA512 (SCons-4.6.0.post1.tar.gz) = 1829e5ed0fc7ab4b4d921717e81171c13c2c1f9d77988bc35a3986c6e474664bae5d3b70a2b9758439c992a6b4ad2b507bc37beeb9c14d2654ee9b43171e98af
-Size (SCons-4.6.0.post1.tar.gz) = 3217478 bytes
+BLAKE2s (SCons-4.7.0.tar.gz) = ed80366b527710b811653fd84e923a7298189562405d43996a18d10433e84cb5
+SHA512 (SCons-4.7.0.tar.gz) = 4d607114eb4ed91a33bb86f07af8d60f89d55402752ca524ad79a5af8bd73cbc0d4e3490894200c71fe5fb62fb35558a3f9edbd1b03f134592c52de7ab146730
+Size (SCons-4.7.0.tar.gz) = 3220727 bytes
 SHA1 (patch-SCons_Platform_____init____.py) = 944c044beea35d47f144a6a4ab8fe77e28aaf706
