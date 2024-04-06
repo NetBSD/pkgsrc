@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/01/03 15:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/06 06:34:39 wiz Exp $
 
-DISTNAME=	pybind11-2.11.1
-PATCHLEVEL=	1
+DISTNAME=	pybind11-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
@@ -10,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pybind/pybind11
 COMMENT=	Seamless operability between C++11 and Python
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
@@ -21,7 +23,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pybind11-config pybind11-config-${PYVERSSUFFIX} || ${TRUE}
 
-USE_PKG_RESOURCES=	yes
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
