@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.22 2023/11/03 10:20:03 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.23 2024/04/06 08:53:35 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2023-08-17 21:21:27.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2024-03-08 13:19:26.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2340,6 +2340,36 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -2461,6 +2461,39 @@ pref("app.normandy.onsync_skew_sec", 600
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -32,6 +32,9 @@ each one.
 +
 +// Avoid runtime error from WebGL for NetBSD systems
 +pref("webgl.out-of-process", false);
++
++// Avoid unfunctional video and audio codecs
++pref("media.allow-audio-non-utility", true);
 +
 +// On NetBSD, many web applications (e.g. Telegram, Mastodon, Twitter)
 +// will freeze until the service worker is restarted in about:serviceworkers.

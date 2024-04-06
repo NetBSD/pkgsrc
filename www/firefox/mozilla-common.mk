@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.275 2024/02/22 17:42:34 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.276 2024/04/06 08:53:34 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -90,6 +90,7 @@ CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
+CONFIGURE_ARGS+=	--with-intl-api
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
@@ -208,6 +209,7 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
 # support is only available when the toolkit is cairo-cocoa.
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
+CONFIGURE_ARGS.NetBSD+=	--disable-sandbox
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -231,7 +233,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.97
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.98
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
