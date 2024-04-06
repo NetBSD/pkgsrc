@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/10/28 19:56:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/06 05:46:01 adam Exp $
 
-DISTNAME=	execnet-2.0.2
+DISTNAME=	execnet-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/execnet/}
 
@@ -13,14 +12,10 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
