@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/03/12 08:09:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/06 06:39:58 wiz Exp $
 
-DISTNAME=	rapidfuzz-3.6.2
+DISTNAME=	rapidfuzz-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.17.0:../../devel/py-scikit-build
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1:../../devel/py-test
 # optional dependency, but not optional for testing
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
