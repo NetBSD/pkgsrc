@@ -1,27 +1,23 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/06 06:10:01 adam Exp $
 
-DISTNAME=		hackrf-2023.01.1
-PKGREVISION=		1
-CATEGORIES=		ham
-MASTER_SITES=		${MASTER_SITE_GITHUB:=mossmann/}
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
-EXTRACT_SUFX=		.tar.xz
+DISTNAME=	hackrf-2024.02.1
+CATEGORIES=	ham
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mossmann/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://greatscottgadgets.com/hackrf/
-COMMENT=		HackRF, an open source SDR hardware platform
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://greatscottgadgets.com/hackrf/
+COMMENT=	HackRF, an open source SDR hardware platform
+LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
-USE_TOOLS=		pkg-config tar
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pax pkg-config
 
-# Suppress warning for developer
-CMAKE_ARGS+=		-Wno-dev
-CMAKE_ARGS+=		-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
+CONFIGURE_DIR=	host
+CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 
-CONFIGURE_DIRS=		host
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS+=	share/hackerRF
 
 REPLACE_PYTHON+=	firmware/tools/check_clock.py
 REPLACE_PYTHON+=	firmware/tools/cpld_bitstream.py
@@ -31,14 +27,16 @@ REPLACE_PYTHON+=	hardware/test/si5351-configure.py
 
 # suppress warning: "executable bit is set on non-executable file"
 pre-patch:
-	(cd ${WRKSRC}; find firmware* -type f -perm  0755 | xargs chmod 0644)
+	${FIND} ${WRKSRC}/firmware ${WRKSRC}/firmware-bin \
+		-type f -perm 0755 -exec chmod 0644 {} \;
 
 post-install:
-	(cd ${WRKSRC}; tar cf - \
-	COPYING  RELEASENOTES Readme.md doc firmware firmware-bin hardware |\
-	(cd ${DESTDIR}${PREFIX}/share/hackerRF ; tar xf - ) )
+.for dir in doc firmware firmware-bin hardware
+	cd ${WRKSRC} && ${PAX} -rw ${dir} ${DESTDIR}${PREFIX}/share/hackerRF
+.endfor
 
-.include "../../lang/python/application.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
