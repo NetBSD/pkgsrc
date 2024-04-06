@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24290 2024/04/06 06:33:05 wiz Exp $
+$NetBSD: TODO,v 1.24291 2024/04/06 06:34:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
-	o py-pybind11-2.12.0
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
