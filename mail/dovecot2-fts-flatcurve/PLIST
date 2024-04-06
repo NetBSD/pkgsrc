@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/06 12:45:26 nikita Exp $
+include/dovecot-fts-flatcurve/fts-flatcurve-config.h
+lib/dovecot/doveadm/lib21_doveadm_fts_flatcurve_plugin.la
+lib/dovecot/lib21_fts_flatcurve_plugin.la
