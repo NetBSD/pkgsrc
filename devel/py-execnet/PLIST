@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:56:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/06 05:46:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -27,6 +27,7 @@ ${PYSITELIB}/execnet/gateway_socket.pyo
 ${PYSITELIB}/execnet/multi.py
 ${PYSITELIB}/execnet/multi.pyc
 ${PYSITELIB}/execnet/multi.pyo
+${PYSITELIB}/execnet/py.typed
 ${PYSITELIB}/execnet/rsync.py
 ${PYSITELIB}/execnet/rsync.pyc
 ${PYSITELIB}/execnet/rsync.pyo
@@ -51,9 +52,6 @@ ${PYSITELIB}/execnet/script/socketserver.pyo
 ${PYSITELIB}/execnet/script/socketserverservice.py
 ${PYSITELIB}/execnet/script/socketserverservice.pyc
 ${PYSITELIB}/execnet/script/socketserverservice.pyo
-${PYSITELIB}/execnet/script/xx.py
-${PYSITELIB}/execnet/script/xx.pyc
-${PYSITELIB}/execnet/script/xx.pyo
 ${PYSITELIB}/execnet/xspec.py
 ${PYSITELIB}/execnet/xspec.pyc
 ${PYSITELIB}/execnet/xspec.pyo
