@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.60 2023/06/26 15:53:25 adam Exp $
+$NetBSD: distinfo,v 1.61 2024/04/06 05:37:48 adam Exp $
 
-BLAKE2s (tk8.6.13-src.tar.gz) = d49336a4961ac9338042287c8e22fce96bfda59a28a2531d6d41b46185e14940
-SHA512 (tk8.6.13-src.tar.gz) = 719aa6776bfdc814f817919a265d3f9d847782c9f0a5fc5c2ab139beeba921e6fde8c66e7e836d78f86f53c98a7df0e587f0b2f4b08cc5ce12eecbb7f1ab71a5
-Size (tk8.6.13-src.tar.gz) = 4546848 bytes
-SHA1 (patch-unix_Makefile.in) = f97307d551827c845c60e5ed775811a24c21f859
-SHA1 (patch-unix_configure) = af73fbbcba79d237a8c5915a217aeb19a1675fdd
+BLAKE2s (tk8.6.14-src.tar.gz) = f1603cd361fbfe8fe5f12ea13d982c8f9ea7477aeddf7922c32f06afa0b58426
+SHA512 (tk8.6.14-src.tar.gz) = 756903dfa56cf77c7934bb3680c9bef6027f99196f4e6a2e823b85c342ca860cbb4b42154f576cc88f7f1265d28ce2d84ab5f52f848b16cca0cf9af4c770183f
+Size (tk8.6.14-src.tar.gz) = 4510695 bytes
+SHA1 (patch-unix_Makefile.in) = b73f1e2e0eab9e85469baeeddeb87ccd1e7cb4c4
+SHA1 (patch-unix_configure) = b1ad5e81988b28b44ccd916ed471f05e7a2ed85b
