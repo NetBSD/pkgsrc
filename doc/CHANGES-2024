@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2289 2024/04/06 06:33:05 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2290 2024/04/06 06:34:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated ham/hackrf to 2024.02.1 [adam 2024-04-06]
 	Updated devel/py-ipykernel to 6.29.4 [adam 2024-04-06]
 	Updated devel/scons4 to 4.7.0 [wiz 2024-04-06]
+	Updated devel/py-pybind11 to 2.12.0 [wiz 2024-04-06]
