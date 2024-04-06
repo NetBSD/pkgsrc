@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/01/02 08:43:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/06 06:32:56 wiz Exp $
 
-DISTNAME=	SCons-4.6.0.post1
+DISTNAME=	SCons-4.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SCons/}
