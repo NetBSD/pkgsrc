@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/04/03 09:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/06 09:32:59 wiz Exp $
 
 DISTNAME=	pillow_heif-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
 
