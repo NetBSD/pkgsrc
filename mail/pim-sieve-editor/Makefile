@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/02/06 11:05:26 markd Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/06 08:06:09 wiz Exp $
 
 DISTNAME=	pim-sieve-editor-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

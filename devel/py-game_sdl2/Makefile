@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/01/30 14:21:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/06 08:05:08 wiz Exp $
 
 DISTNAME=	pygame_sdl2-2.1.0+renpy8.1.3
 PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0.8.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel games python
 MASTER_SITES=	https://www.renpy.org/dl/8.1.3/
 

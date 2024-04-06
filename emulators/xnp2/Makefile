@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/01/30 14:21:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2024/04/06 08:05:20 wiz Exp $
 
 DISTNAME=		xnp2-0.86
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.nonakap.org/np2/release/
 EXTRACT_SUFX=		.tar.bz2

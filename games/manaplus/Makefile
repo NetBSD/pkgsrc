@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2024/01/30 14:22:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2024/04/06 08:05:33 wiz Exp $
 
 DISTNAME=	manaplus-2.1.3.17
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	http://download.evolonline.org/manaplus/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

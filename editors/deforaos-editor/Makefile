@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2023/11/14 14:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/04/06 08:05:11 wiz Exp $
 #
 
 DISTNAME=	Editor-0.4.1
 PKGNAME=	deforaos-editor-0.4.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	editors
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Editor/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2024/02/10 02:20:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2024/04/06 08:06:05 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/uim-mozc-/}
+PKGREVISION=	1
 
 TOOL_DEPENDS+=	bazel-[0-9]*:../../devel/bazel
 

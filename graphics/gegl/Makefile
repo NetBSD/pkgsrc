@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.132 2024/02/22 13:15:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.133 2024/04/06 08:05:45 wiz Exp $
 
 DISTNAME=	gegl-0.4.48
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz

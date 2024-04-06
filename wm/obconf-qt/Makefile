@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/02/06 02:30:52 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/06 08:06:51 wiz Exp $
 
 DISTNAME=	obconf-qt-0.16.4
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

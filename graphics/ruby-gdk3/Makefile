@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2024/02/23 11:25:29 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/06 08:05:54 wiz Exp $
 #
 
 DISTNAME=		gdk3-${VERSION}
 COMMENT=		Ruby binding of GDK3
+PKGREVISION=		1
 CATEGORIES=		graphics
 
 MAINTAINER=		tsutsui@NetBSD.org

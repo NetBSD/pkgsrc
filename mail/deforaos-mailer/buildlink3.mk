@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/11/14 14:02:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2024/04/06 08:06:07 wiz Exp $
 
 BUILDLINK_TREE+=	deforaos-mailer
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deforaos-mailer
 DEFORAOS_MAILER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-mailer+=	deforaos-mailer>=0.1.6
-BUILDLINK_ABI_DEPENDS.deforaos-mailer?=	deforaos-mailer>=0.2.0nb15
+BUILDLINK_ABI_DEPENDS.deforaos-mailer?=	deforaos-mailer>=0.2.0nb16
 BUILDLINK_PKGSRCDIR.deforaos-mailer?=	../../mail/deforaos-mailer
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

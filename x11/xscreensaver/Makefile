@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.156 2024/02/08 01:54:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.157 2024/04/06 08:07:18 wiz Exp $
 
 DISTNAME=		xscreensaver-6.08
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
