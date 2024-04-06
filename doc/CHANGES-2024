@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2294 2024/04/06 08:54:19 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.2295 2024/04/06 12:46:17 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ast-grep to 0.20.2 [wiz 2024-04-06]
 	Updated www/firefox to 124.0.2 [ryoon 2024-04-06]
 	Updated www/firefox-l10n to 124.0.2 [ryoon 2024-04-06]
+	Added mail/dovecot2-fts-flatcurve version 1.0.2 [nikita 2024-04-06]
