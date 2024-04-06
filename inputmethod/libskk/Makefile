@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 10:11:55 nia Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/06 08:06:01 wiz Exp $
 #
 
 DISTNAME=	libskk-1.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ueno/}
 GITHUB_PROJECT=	${PKGBASE}

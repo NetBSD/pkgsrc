@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2023/11/14 14:02:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2024/04/06 08:06:01 wiz Exp $
 #
 
 BUILDLINK_TREE+=	input-pad
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	input-pad
 INPUT_PAD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.input-pad+=	input-pad>=1.0.2
-BUILDLINK_ABI_DEPENDS.input-pad?=	input-pad>=1.0.3nb29
+BUILDLINK_ABI_DEPENDS.input-pad?=	input-pad>=1.0.3nb30
 BUILDLINK_PKGSRCDIR.input-pad?=		../../inputmethod/input-pad
 
 .include "../../devel/gettext-lib/buildlink3.mk"

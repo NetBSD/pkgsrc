@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2023/11/12 13:21:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2024/04/06 08:05:04 wiz Exp $
 
 BUILDLINK_TREE+=	kservice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kservice
 KSERVICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kservice+=	kservice>=5.18.0
-BUILDLINK_ABI_DEPENDS.kservice?=	kservice>=5.108.0nb4
+BUILDLINK_ABI_DEPENDS.kservice?=	kservice>=5.114.0nb1
 BUILDLINK_PKGSRCDIR.kservice?=		../../devel/kservice
 
 .include "../../devel/kconfig/buildlink3.mk"

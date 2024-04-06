@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/11/14 14:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/06 08:05:50 wiz Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-PKGREVISION=	16
+PKGREVISION=	17
 DISTNAME=	mate-icon-theme-faenza-1.20.0
 CATEGORIES=	graphics
 MASTER_SITES+=	http://pub.mate-desktop.org/releases/1.20/
