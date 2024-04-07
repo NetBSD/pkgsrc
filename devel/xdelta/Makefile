@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2019/11/03 10:39:32 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.38 2024/04/07 07:22:36 wiz Exp $
 
 DISTNAME=		xdelta-1.1.4
 CATEGORIES=		devel
 MASTER_SITES=		http://xdelta.googlecode.com/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xdelta.org/
+#HOMEPAGE=		http://xdelta.org/
 COMMENT=		Enhanced diff that works on binary files
 
 BUILDLINK_API_DEPENDS.glib+=	glib>=1.2.8
