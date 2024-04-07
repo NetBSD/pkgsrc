@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/03/21 08:23:01 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/07 07:34:53 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	luajittex-1.18.0

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2023/11/14 14:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/04/07 07:34:34 wiz Exp $
 
 DISTNAME=		euler-1.61.0
 PKGNAME=		euler-1.61
 EXTRACT_SUFX=		.tgz
-PKGREVISION=		38
+PKGREVISION=		39
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=euler/}
 

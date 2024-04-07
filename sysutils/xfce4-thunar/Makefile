@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2024/04/06 08:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2024/04/07 07:35:04 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	thunar-4.18.10

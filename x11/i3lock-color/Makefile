@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/04/06 08:06:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/07 07:35:21 wiz Exp $
 
 DISTNAME=	i3lock-color-2.13.c.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Raymo111/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/12/30 19:31:38 zafer Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/07 07:35:16 wiz Exp $
 
 DISTNAME=	gcolor2-0.4
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcolor2/}
 
