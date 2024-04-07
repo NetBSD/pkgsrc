@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2329 2024/04/07 21:16:44 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2330 2024/04/07 21:19:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3872,3 +3872,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-scard to 2.0.9 [adam 2024-04-07]
 	Updated devel/blosc2 to 2.14.3 [adam 2024-04-07]
 	Updated fonts/py-fonttools to 4.51.0 [wiz 2024-04-07]
+	Updated time/libical to 3.0.18 [wiz 2024-04-07]
