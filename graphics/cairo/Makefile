@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2023/11/26 18:45:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.161 2024/04/07 07:31:19 wiz Exp $
 
 DISTNAME=	cairo-1.18.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -40,7 +40,6 @@ PLIST.trace=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
-.include "../../archivers/lzo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
