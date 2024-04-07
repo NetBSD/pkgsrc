@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/01 08:44:23 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2024/04/07 21:40:22 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/parso/__init__.py
 ${PYSITELIB}/parso/__init__.pyc
 ${PYSITELIB}/parso/__init__.pyo
@@ -46,6 +47,7 @@ ${PYSITELIB}/parso/python/errors.pyo
 ${PYSITELIB}/parso/python/grammar310.txt
 ${PYSITELIB}/parso/python/grammar311.txt
 ${PYSITELIB}/parso/python/grammar312.txt
+${PYSITELIB}/parso/python/grammar313.txt
 ${PYSITELIB}/parso/python/grammar36.txt
 ${PYSITELIB}/parso/python/grammar37.txt
 ${PYSITELIB}/parso/python/grammar38.txt
