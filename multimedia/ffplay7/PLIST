@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/07 17:51:35 ryoon Exp $
+bin/ffplay7
+man/man1/ffplay7.1
