@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.211 2024/04/07 07:34:04 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2024/04/07 21:39:03 adam Exp $
 
-DISTNAME=	wesnoth-1.16.11
-PKGREVISION=	3
+DISTNAME=	wesnoth-1.18.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
+USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash msgfmt perl:run pkg-config
@@ -21,31 +21,25 @@ CMAKE_ARGS+=		-DENABLE_HISTORY=OFF
 # if OPT is set, -O3 will not be added
 CMAKE_ARGS+=		-DOPT="${DBG}"
 
-USE_CXX_FEATURES+=	c++17
-
-CFLAGS.Darwin=		-framework Cocoa
-
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 REPLACE_BASH+=		data/tools/unit_tree/update-wmlunits
 
 REPLACE_PYTHON+=	data/tools/GUI.pyw
+REPLACE_PYTHON+=	data/tools/TeamColorizer
 REPLACE_PYTHON+=	data/tools/*.py
 REPLACE_PYTHON+=	data/tools/wesnoth/*.py
 REPLACE_PYTHON+=	data/tools/wml*
 REPLACE_PYTHON+=	data/tools/about_cfg_to_wiki
 REPLACE_PYTHON+=	data/tools/addon_manager/html.py
+REPLACE_PYTHON+=	data/tools/check_mixed_indent
 REPLACE_PYTHON+=	data/tools/extractbindings
 REPLACE_PYTHON+=	data/tools/imgcheck
-REPLACE_PYTHON+=	data/tools/journeylifter
-REPLACE_PYTHON+=	data/tools/rmtrans/rmtrans.py
 REPLACE_PYTHON+=	data/tools/steam-changelog
 REPLACE_PYTHON+=	data/tools/tmx_trackplacer
-REPLACE_PYTHON+=	data/tools/trackplacer
 REPLACE_PYTHON+=	data/tools/trackviewer.pyw
 REPLACE_PYTHON+=	data/tools/unit_tree/helpers.py
-REPLACE_PYTHON+=	data/tools/unit_tree/TeamColorizer
 REPLACE_PYTHON+=	data/tools/unit_tree/overview.py
 REPLACE_PYTHON+=	data/tools/wesnoth/trackplacer3/datatypes.py
 REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager
@@ -84,4 +78,5 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
