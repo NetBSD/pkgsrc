@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/06/18 15:42:22 js Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/07 18:19:42 ryoon Exp $
 sbin/acme.sh
 share/acmesh/acme.sh
 share/acmesh/deploy/apache.sh
@@ -44,12 +44,14 @@ share/acmesh/dnsapi/dns_active24.sh
 share/acmesh/dnsapi/dns_ad.sh
 share/acmesh/dnsapi/dns_ali.sh
 share/acmesh/dnsapi/dns_anx.sh
+share/acmesh/dnsapi/dns_artfiles.sh
 share/acmesh/dnsapi/dns_arvan.sh
 share/acmesh/dnsapi/dns_aurora.sh
 share/acmesh/dnsapi/dns_autodns.sh
 share/acmesh/dnsapi/dns_aws.sh
 share/acmesh/dnsapi/dns_azion.sh
 share/acmesh/dnsapi/dns_azure.sh
+share/acmesh/dnsapi/dns_bookmyname.sh
 share/acmesh/dnsapi/dns_bunny.sh
 share/acmesh/dnsapi/dns_cf.sh
 share/acmesh/dnsapi/dns_clouddns.sh
@@ -65,6 +67,7 @@ share/acmesh/dnsapi/dns_ddnss.sh
 share/acmesh/dnsapi/dns_desec.sh
 share/acmesh/dnsapi/dns_df.sh
 share/acmesh/dnsapi/dns_dgon.sh
+share/acmesh/dnsapi/dns_dnsexit.sh
 share/acmesh/dnsapi/dns_dnshome.sh
 share/acmesh/dnsapi/dns_dnsimple.sh
 share/acmesh/dnsapi/dns_dnsservices.sh
@@ -162,6 +165,7 @@ share/acmesh/dnsapi/dns_selfhost.sh
 share/acmesh/dnsapi/dns_servercow.sh
 share/acmesh/dnsapi/dns_simply.sh
 share/acmesh/dnsapi/dns_tele3.sh
+share/acmesh/dnsapi/dns_tencent.sh
 share/acmesh/dnsapi/dns_transip.sh
 share/acmesh/dnsapi/dns_udr.sh
 share/acmesh/dnsapi/dns_ultra.sh
@@ -178,6 +182,7 @@ share/acmesh/dnsapi/dns_yc.sh
 share/acmesh/dnsapi/dns_zilore.sh
 share/acmesh/dnsapi/dns_zone.sh
 share/acmesh/dnsapi/dns_zonomi.sh
+share/acmesh/notify/aws_ses.sh
 share/acmesh/notify/bark.sh
 share/acmesh/notify/callmebotWhatsApp.sh
 share/acmesh/notify/cqhttp.sh
