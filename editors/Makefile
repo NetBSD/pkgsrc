@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2024/03/21 00:07:27 nia Exp $
+# $NetBSD: Makefile,v 1.250 2024/04/07 17:56:06 ryoon Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -83,6 +83,7 @@ SUBDIR+=	leim21
 SUBDIR+=	lpe
 SUBDIR+=	lyx
 SUBDIR+=	manedit
+SUBDIR+=	manued
 SUBDIR+=	matlab-mode
 SUBDIR+=	medit
 SUBDIR+=	mflteco
