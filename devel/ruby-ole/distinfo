@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:19:39 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/04/07 14:41:25 taca Exp $
 
-BLAKE2s (ruby-ole-1.2.12.2.gem) = a34d81e793cd9babc05f24b2397c0ed58d732c604d348b6aded3e6c03a9e1ebe
-SHA512 (ruby-ole-1.2.12.2.gem) = 2c28336a827e42faed4183d79ae61d4dd2b888f3d13eb26fb2b7e967057127a01e184fb509c6e4718e7beebb7490ea2f7aa230f2c5e29efae49994fa92d604b7
-Size (ruby-ole-1.2.12.2.gem) = 56832 bytes
+BLAKE2s (ruby-ole-1.2.13.1.gem) = f74b9801a04bbf8459bcfac2b43106dfb7c85d642dc5c3680977ebc46d41485e
+SHA512 (ruby-ole-1.2.13.1.gem) = 5281d14e490b8dcae5b97f0e9c5088593c4c2ba39452884e4b0dda234638d4d701eb88f44d3863ec7436f39b770d5a9b556d2cd1cc6ac42c39951174cfe1ce88
+Size (ruby-ole-1.2.13.1.gem) = 56832 bytes
