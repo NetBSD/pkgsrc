@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/11/06 13:47:24 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/04/07 11:38:36 wiz Exp $
 
-BLAKE2s (contourpy-1.2.0.tar.gz) = 49f1afbdf2f7883e7757dc19d642dccad5601010d175aad46c32f95c6e855a05
-SHA512 (contourpy-1.2.0.tar.gz) = f63109cba8f62588cb2b96a29742195fa9fdaabe65177a3351b84f0bfc05613e1e711543c37aebbd9ff7c284fdc273170c081ec683dc62f8a3bc967433d64212
-Size (contourpy-1.2.0.tar.gz) = 13455881 bytes
+BLAKE2s (contourpy-1.2.1.tar.gz) = e51712ec9bab72695ebfe00b4deda4bc06318b69c16fc514ff76f2c32975f084
+SHA512 (contourpy-1.2.1.tar.gz) = a482296dff2a83dcce4b764edd875c5bb0d4f2aa550752d3d53a304ddf4def0ee8209fb939788e8aa2ab75507b62bd36ad52fa2e067aaa54b47b5198ccf0be54
+Size (contourpy-1.2.1.tar.gz) = 13457196 bytes
