@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.53 2024/02/12 13:58:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2024/04/07 21:16:35 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -452,6 +446,9 @@ ${PYSITELIB}/fontTools/ttLib/macUtils.pyo
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.py
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyc
 ${PYSITELIB}/fontTools/ttLib/removeOverlaps.pyo
+${PYSITELIB}/fontTools/ttLib/reorderGlyphs.py
+${PYSITELIB}/fontTools/ttLib/reorderGlyphs.pyc
+${PYSITELIB}/fontTools/ttLib/reorderGlyphs.pyo
 ${PYSITELIB}/fontTools/ttLib/scaleUpem.py
 ${PYSITELIB}/fontTools/ttLib/scaleUpem.pyc
 ${PYSITELIB}/fontTools/ttLib/scaleUpem.pyo
@@ -923,4 +920,10 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
