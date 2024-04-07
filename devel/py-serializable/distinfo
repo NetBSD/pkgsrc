@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/03/01 12:16:36 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/04/07 21:47:32 wiz Exp $
 
-BLAKE2s (py_serializable-1.0.2.tar.gz) = 58488b3792b86d6137fbfd7e8c7a272ad9f91a7f7d48189e2ae1dd36d647c694
-SHA512 (py_serializable-1.0.2.tar.gz) = 6413be9d697df93e2e5d80652213925ea7d54666826e6bc9fa7ad62892b7d2a1596100d67527d6c2595414f28da89ff779562e873b2896fe9d5da5cdac666f95
-Size (py_serializable-1.0.2.tar.gz) = 50676 bytes
+BLAKE2s (py_serializable-1.0.3.tar.gz) = 8d2300e556a5d65e1110d5509bccfde5d6c41107971a9f73ad7092c0e11e72d0
+SHA512 (py_serializable-1.0.3.tar.gz) = db06ef6f008ff7c029b713a4fe1f737cc36ede6b212800ff302cd8af57c73792723ae3e667d41b337f9713ba228d030d6d54626ee58e6cb05267198ecdbdd2bb
+Size (py_serializable-1.0.3.tar.gz) = 51376 bytes
