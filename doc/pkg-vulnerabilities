@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.162 2024/04/07 14:00:53 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.163 2024/04/07 21:36:33 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25962,3 +25962,4 @@ php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/
 php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3179
 php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3180
 php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3181
+p5-HTTP-Body<1.23	shell-escape	https://nvd.nist.gov/vuln/detail/CVE-2013-4407
