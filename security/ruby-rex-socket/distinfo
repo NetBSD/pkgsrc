@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2024/02/19 15:18:01 taca Exp $
+$NetBSD: distinfo,v 1.27 2024/04/07 15:03:14 taca Exp $
 
-BLAKE2s (rex-socket-0.1.56.gem) = 0d2edb41193ff144ccd3aef25d3bca189f745a41dd59ea4a22a3e7f424f2aa35
-SHA512 (rex-socket-0.1.56.gem) = 8ee94c2326c12d2a1aee7a7993381749c5accc1654f68526ab9f7950890bd2dc5681ed25b8ae1752482c2537c3e2f322ad414dbe1803f0c36817cd74d592d134
-Size (rex-socket-0.1.56.gem) = 44032 bytes
+BLAKE2s (rex-socket-0.1.57.gem) = 2b5be5a1b4e219907907fdd9ba8485b865ebb78f271554030a674d2a9b5f96b7
+SHA512 (rex-socket-0.1.57.gem) = b0e09c432c13a7d73e0cdbbdebc376030e799cf9abb099e150335fa8e9ba23f079839fa962d0cfc8064827f29a4298744276dc7411a9c7f507a3050b2e4eefe2
+Size (rex-socket-0.1.57.gem) = 44032 bytes
