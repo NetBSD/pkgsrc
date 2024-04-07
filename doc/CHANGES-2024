@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2312 2024/04/07 15:08:35 taca Exp $
+$NetBSD: CHANGES-2024,v 1.2313 2024/04/07 15:11:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3852,3 +3852,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-rex-socket to 0.1.57 [taca 2024-04-07]
 	Updated security/ruby-rex-text to 0.2.57 [taca 2024-04-07]
 	Updated security/ruby-sshkit to 1.22.1 [taca 2024-04-07]
+	Updated www/ruby-aws-partitions to 1.909.0 [taca 2024-04-07]
