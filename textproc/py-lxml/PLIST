@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/01/14 09:44:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/04/07 11:40:56 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSES.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -57,7 +57,6 @@ ${PYSITELIB}/lxml/html/builder.pyo
 ${PYSITELIB}/lxml/html/clean.py
 ${PYSITELIB}/lxml/html/clean.pyc
 ${PYSITELIB}/lxml/html/clean.pyo
-${PYSITELIB}/lxml/html/clean.so
 ${PYSITELIB}/lxml/html/defs.py
 ${PYSITELIB}/lxml/html/defs.pyc
 ${PYSITELIB}/lxml/html/defs.pyo
