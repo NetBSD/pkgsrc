@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/02/11 22:07:58 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2024/04/07 06:16:55 ryoon Exp $
 
-BLAKE2s (pkgconf-2.1.1.tar.gz) = 70da33c2fe19fd7a4f2ed1dd49521450179165a4857b3cb6c6445c8c60ca55ae
-SHA512 (pkgconf-2.1.1.tar.gz) = bdae47d7de41d5b03456ea6a3426c0f98fa78f6fa8f69957ce04552368283c0bc48339721eb3b85714b3a50237545767ff8f9fef55c1942e4c4daafc400a52a7
-Size (pkgconf-2.1.1.tar.gz) = 451327 bytes
+BLAKE2s (pkgconf-2.2.0.tar.gz) = af89943d1d73f0312f6fc3d7f01a63a6bc4b94006c17b3f8c6dd1e6ecc06b0f0
+SHA512 (pkgconf-2.2.0.tar.gz) = 0ca21e4e390c57c3ad8bfeb9f8d92e65c6a60f28c2a962c1b64e268610b8d88fd502febad23264aed45db68a67dd83321b10f4e896718ab869d4ae743d769676
+Size (pkgconf-2.2.0.tar.gz) = 451551 bytes
