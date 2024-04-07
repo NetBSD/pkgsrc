@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1456 2024/03/14 19:15:29 markd Exp $
+# $NetBSD: Makefile,v 1.1457 2024/04/07 19:03:47 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -235,6 +235,7 @@ SUBDIR+=	erlang-yconf
 SUBDIR+=	expat
 SUBDIR+=	expatobjc
 SUBDIR+=	ezxml
+SUBDIR+=	flycheck-mode
 SUBDIR+=	flyspell
 SUBDIR+=	fmtlib
 SUBDIR+=	fop
