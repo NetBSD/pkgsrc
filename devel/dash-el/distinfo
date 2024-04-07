@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/07 18:56:40 ryoon Exp $
+
+BLAKE2s (dash.el-2.19.1.tar.gz) = 1fb2e79763ce8a45149dbcdb28c5104832f7b232ba67bc3187fa231f62075521
+SHA512 (dash.el-2.19.1.tar.gz) = 6822e0068bf2f2082faa4de47521982eba0117037c333178517eca9e6db1c33a2767b250a6ecbd329d2e2ca9e107d2baf0b025e34ba50f1b60da5bb7da06c195
+Size (dash.el-2.19.1.tar.gz) = 155540 bytes
