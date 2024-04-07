@@ -1,0 +1,110 @@
+# $NetBSD: Makefile.common,v 1.1 2024/04/07 17:50:23 ryoon Exp $
+# used by multimedia/ffmpeg7/Makefile
+# used by multimedia/ffplay7/Makefile
+
+DISTNAME=	ffmpeg-7.0
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.ffmpeg.org/releases/
+EXTRACT_SUFX=	.tar.xz
+
+LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 ${ADDITIONAL_LICENSE}
+
+PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg7/patches
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pod2man perl pkg-config
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--cc=${CC:Q}
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--disable-stripping
+CONFIGURE_ARGS+=	--enable-gpl
+CONFIGURE_ARGS+=	--enable-libxml2
+CONFIGURE_ARGS+=	--enable-pthreads
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--progs-suffix=7
+
+CONFIGURE_ARGS+=	--enable-runtime-cpudetect
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/ffmpeg7
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/ffmpeg7
+CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg7
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg7
+CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg7
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg7
+# https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
+LDFLAGS.Darwin+=	-Wl,-ld_classic
+
+.if ${USE_CROSS_COMPILE:tl} == yes
+CONFIGURE_ARGS+=	--enable-cross-compile
+CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
+CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
+.  include "../../mk/endian.mk"
+.  if ${MACHINE_ENDIAN} == "big"
+CONFIGURE_ENV+=		bigendian=yes
+.  endif
+.endif
+
+# altivec support is detected at runtime, and only code that is gated
+# on the runtime detection can use it.  The code in ffmpeg that is
+# gated on the runtime detection doesn't need -maltivec -mabi=altivec.
+# But passing -maltivec -mabi=altivec tells the compiler that _any_
+# code, whether or not gated on runtime detection, can be done with
+# altivec -- and the compiler will quietly take advantage of this,
+# e.g. to zero-initialize objects on the stack.  This doesn't work too
+# well on powerpc CPUs without altivec, so nix the arguments.
+.if !empty(MACHINE_ARCH:Mpowerpc*)
+BUILDLINK_TRANSFORM+=	rm:-maltivec
+BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
+CONFIGURE_ARGS+=	--enable-opencl
+.endif
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=	bash:build
+CONFIG_SHELL=	${TOOLS_PATH.bash}
+.endif
+
+# Let's not put garbage into /tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+SUBST_CLASSES+=		sunwspro
+SUBST_MESSAGE.sunwspro=	Fixing compiler options for SunStudio C compiler.
+SUBST_STAGE.sunwspro=	post-configure
+SUBST_FILES.sunwspro=	config.mak
+SUBST_SED.sunwspro=	-e "s/-O /-KPIC -DPIC /"
+SUBST_SED.sunwspro+=	-e "s/-O3/-xO2/g"
+SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
+SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
+.endif
+
+.if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == i386
+TOOL_DEPENDS+=	nasm>=2.13:../../devel/nasm
+.endif
+
+REPLACE_PERL+=	doc/texi2pod.pl
+REPLACE_SH+=	configure
+REPLACE_SH+=	ffbuild/pkgconfig_generate.sh
+REPLACE_SH+=	ffbuild/version.sh
+
+PLIST_SRC+=	${PKGDIR}/PLIST
+
+MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/tmp
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
+.include "../../mk/pthread.buildlink3.mk"
