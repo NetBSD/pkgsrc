@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2024/02/05 15:50:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.39 2024/04/07 14:47:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -59,4 +59,34 @@ ${GEM_LIBDIR}/lib/rvg/text.rb
 ${GEM_LIBDIR}/lib/rvg/transformable.rb
 ${GEM_LIBDIR}/lib/rvg/units.rb
 ${GEM_LIBDIR}/rmagick.gemspec
+${GEM_LIBDIR}/sig/rmagick.rbs
+${GEM_LIBDIR}/sig/rmagick/_draw_common_methods.rbs
+${GEM_LIBDIR}/sig/rmagick/_image_common_methods.rbs
+${GEM_LIBDIR}/sig/rmagick/draw.rbs
+${GEM_LIBDIR}/sig/rmagick/draw_attribute.rbs
+${GEM_LIBDIR}/sig/rmagick/enum.rbs
+${GEM_LIBDIR}/sig/rmagick/error.rbs
+${GEM_LIBDIR}/sig/rmagick/fill.rbs
+${GEM_LIBDIR}/sig/rmagick/geometry.rbs
+${GEM_LIBDIR}/sig/rmagick/image.rbs
+${GEM_LIBDIR}/sig/rmagick/image_list.rbs
+${GEM_LIBDIR}/sig/rmagick/iptc.rbs
+${GEM_LIBDIR}/sig/rmagick/kernel_info.rbs
+${GEM_LIBDIR}/sig/rmagick/optional_method_arguments.rbs
+${GEM_LIBDIR}/sig/rmagick/pixel.rbs
+${GEM_LIBDIR}/sig/rmagick/struct.rbs
+${GEM_LIBDIR}/sig/rvg/clippath.rbs
+${GEM_LIBDIR}/sig/rvg/container.rbs
+${GEM_LIBDIR}/sig/rvg/deep_equal.rbs
+${GEM_LIBDIR}/sig/rvg/describable.rbs
+${GEM_LIBDIR}/sig/rvg/embellishable.rbs
+${GEM_LIBDIR}/sig/rvg/misc.rbs
+${GEM_LIBDIR}/sig/rvg/paint.rbs
+${GEM_LIBDIR}/sig/rvg/pathdata.rbs
+${GEM_LIBDIR}/sig/rvg/rvg.rbs
+${GEM_LIBDIR}/sig/rvg/stretchable.rbs
+${GEM_LIBDIR}/sig/rvg/stylable.rbs
+${GEM_LIBDIR}/sig/rvg/text.rbs
+${GEM_LIBDIR}/sig/rvg/transformable.rbs
+${GEM_LIBDIR}/sig/rvg/units.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
