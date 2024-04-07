@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/07/06 09:42:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/04/07 21:34:46 wiz Exp $
 
-DISTNAME=	HTTP-Body-1.22
+DISTNAME=	HTTP-Body-1.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
@@ -11,9 +10,8 @@ HOMEPAGE=	https://metacpan.org/release/HTTP-Body
 COMMENT=	HTTP Body Parser
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
-
 TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTTP/Body/.packlist
