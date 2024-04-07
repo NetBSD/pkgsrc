@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/11/16 09:22:50 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/04/07 07:33:45 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-pango/}
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 
 COMMENT=	Open source multimedia framework - pango plugin

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2023/12/22 18:12:01 zafer Exp $
+# $NetBSD: Makefile,v 1.85 2024/04/07 07:34:56 wiz Exp $
 #
 
 DISTNAME=	honeyd-1.5c
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	security net
 MASTER_SITES=	https://www.honeyd.org/uploads/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2023/12/23 20:44:09 zafer Exp $
+# $NetBSD: Makefile,v 1.92 2024/04/07 07:35:13 wiz Exp $
 #
 
 DISTNAME=	nspluginwrapper-1.4.4
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	www
 MASTER_SITES=	#
 DISTFILES=	${DISTNAME}.tar.gz ${DISTNAME}-suse121-generic.${WRAPPER_ARCH}.tar.gz

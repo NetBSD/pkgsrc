@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2024/04/06 08:05:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2024/04/07 07:33:46 wiz Exp $
 
 BUILDLINK_TREE+=	libdazzle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdazzle
 LIBDAZZLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdazzle+=	libdazzle>=3.34
-BUILDLINK_ABI_DEPENDS.libdazzle?=		libdazzle>=3.38.0nb14
+BUILDLINK_ABI_DEPENDS.libdazzle?=		libdazzle>=3.38.0nb15
 BUILDLINK_PKGSRCDIR.libdazzle?=		../../devel/libdazzle
 BUILDLINK_INCDIRS.libdazzle+=		include/libdazzle-1.0
 
