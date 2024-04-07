@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24293 2024/04/06 07:14:58 wiz Exp $
+$NetBSD: TODO,v 1.24294 2024/04/07 11:38:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,12 +1137,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-acme-2.10.0
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
+	o py-certbot-2.10.0
+	o py-certbot-nginx-2.10.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.51.0
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
@@ -1150,6 +1154,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-lxml-5.2.1
+	o py-matplotlib-3.8.4
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1157,15 +1163,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-parso-0.8.4
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
+	o py-qt-builder-1.16.0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-rapidfuzz-3.8.0
 	o py-sbws-1.1.0
+	o py-scard-2.0.9
 	o py-scgi-2.0
+	o py-serializable-1.0.3
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
