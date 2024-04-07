@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/07 17:55:08 ryoon Exp $
+
+BLAKE2s (manued-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7.tar.gz) = e042a27e7686ad2078e0dbf8baafb122ccffe68d1ca8a7b53066fe8fcc16efca
+SHA512 (manued-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7.tar.gz) = 6efe828584b1c65948d29d1eafe105d2e8576f15d66f5ade3de21bb8340a365f33f6f20787556f41c8c91a8768277454f2f985992a896298202eafd78cfe876a
+Size (manued-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7-eeff13e4416aeedf6cd88b049bb7bba4b5b80ef7.tar.gz) = 177190 bytes
