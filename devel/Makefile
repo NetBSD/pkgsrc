@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4198 2024/04/04 13:43:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4199 2024/04/07 18:57:49 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -302,6 +302,7 @@ SUBDIR+=	cxref
 SUBDIR+=	cxxopts
 SUBDIR+=	darcs
 SUBDIR+=	darts
+SUBDIR+=	dash-el
 SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
