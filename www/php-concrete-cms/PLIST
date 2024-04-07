@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/26 15:06:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/07 13:59:05 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -20421,6 +20421,7 @@ ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Loggers/DefaultLogger.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/AugmentParameters.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/AugmentProperties.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/AugmentRefs.php
+${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/AugmentRequestBody.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/AugmentSchemas.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/BuildPaths.php
 ${CC_WEBDIR}/concrete/vendor/zircote/swagger-php/src/Processors/CleanUnmerged.php
