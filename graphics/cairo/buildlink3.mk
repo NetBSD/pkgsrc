@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.69 2024/04/07 07:31:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.70 2024/04/07 07:33:26 wiz Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cairo
 CAIRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
-BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.18.0
+BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.18.0nb2
 BUILDLINK_PKGSRCDIR.cairo=	../../graphics/cairo
 
 .include "../../mk/bsd.fast.prefs.mk"

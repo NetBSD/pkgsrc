@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/11/14 14:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/07 07:35:23 wiz Exp $
 
 DISTNAME=	lxhotkey-0.1.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz

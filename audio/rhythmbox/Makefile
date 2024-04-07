@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.204 2024/04/06 08:04:52 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2024/04/07 07:33:34 wiz Exp $
 
 DISTNAME=	rhythmbox-3.4.6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

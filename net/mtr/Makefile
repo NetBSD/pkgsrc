@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2023/12/28 22:57:05 zafer Exp $
+# $NetBSD: Makefile,v 1.124 2024/04/07 07:34:49 wiz Exp $
 
 DISTNAME=	mtr-0.95
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 

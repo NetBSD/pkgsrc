@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/04/06 08:05:46 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/04/07 07:34:14 wiz Exp $
 
 DISTNAME=	goocanvas-2.0.4
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goocanvas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

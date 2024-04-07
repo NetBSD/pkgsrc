@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2023/11/14 14:01:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2024/04/07 07:33:46 wiz Exp $
 
 BUILDLINK_TREE+=	libglademm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libglademm
 LIBGLADEMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libglademm+=	libglademm>=2.6.0
-BUILDLINK_ABI_DEPENDS.libglademm+=	libglademm>=2.6.7nb48
+BUILDLINK_ABI_DEPENDS.libglademm+=	libglademm>=2.6.7nb49
 BUILDLINK_PKGSRCDIR.libglademm?=	../../devel/libglademm
 
 .include "../../devel/libglade/buildlink3.mk"

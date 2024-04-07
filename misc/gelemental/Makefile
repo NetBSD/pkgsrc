@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2023/11/14 14:02:29 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/04/07 07:34:37 wiz Exp $
 
 DISTNAME=	gelemental-2.0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ginggs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

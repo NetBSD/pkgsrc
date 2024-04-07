@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2024/04/06 08:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2024/04/07 07:34:33 wiz Exp $
 
 DISTNAME=	Mailer-0.2.0
 PKGNAME=	deforaos-mailer-0.2.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	mail
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Mailer/
 

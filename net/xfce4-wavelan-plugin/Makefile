@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2024/04/06 08:06:32 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2024/04/07 07:34:50 wiz Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-wavelan-plugin-0.6.3

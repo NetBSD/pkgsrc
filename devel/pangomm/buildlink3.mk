@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2023/11/14 14:01:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2024/04/07 07:33:49 wiz Exp $
 
 BUILDLINK_TREE+=	pangomm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pangomm
 PANGOMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pangomm+=	pangomm>=2.26.2
-BUILDLINK_ABI_DEPENDS.pangomm+=	pangomm>=2.46.3nb3
+BUILDLINK_ABI_DEPENDS.pangomm+=	pangomm>=2.46.3nb4
 BUILDLINK_PKGSRCDIR.pangomm?=	../../devel/pangomm
 
 .include "../../devel/glibmm/buildlink3.mk"

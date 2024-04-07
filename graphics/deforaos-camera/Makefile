@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2024/04/06 08:05:43 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/04/07 07:34:09 wiz Exp $
 #
 
 DISTNAME=	Camera-0.3.0
 PKGNAME=	deforaos-camera-0.3.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Camera/
 
