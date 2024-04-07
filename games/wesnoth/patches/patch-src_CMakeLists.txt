@@ -1,13 +1,13 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.4 2021/11/02 18:35:04 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.5 2024/04/07 21:39:03 adam Exp $
 
 On macOS, do not build SDLMain.mm; only needed for app bundle.
 
---- src/CMakeLists.txt.orig	2021-10-24 00:23:51.000000000 +0000
+--- src/CMakeLists.txt.orig	2024-03-18 00:11:38.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -154,8 +154,6 @@ if(ENABLE_GAME)
- 	if(WIN32)
- 		add_executable(wesnoth WIN32 wesnoth.cpp ../packaging/windows/wesnoth.rc)
- 		target_link_options(wesnoth PRIVATE /WX /WHOLEARCHIVE:wesnoth-widgets)
+@@ -239,8 +239,6 @@ if(ENABLE_GAME)
+ 		if(MSVC)
+ 			target_link_options(wesnoth PRIVATE /WX /WHOLEARCHIVE:wesnoth-widgets)
+ 		endif()
 -	elseif(APPLE)
 -		add_executable(wesnoth wesnoth.cpp macosx/SDLMain.mm)
  	else()
