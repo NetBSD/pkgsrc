@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2023/02/25 17:42:43 ryoon Exp $
+$NetBSD: distinfo,v 1.39 2024/04/07 04:24:23 pho Exp $
 
 BLAKE2s (uim-1.8.9.tar.gz) = 21175907f7ff2bbfb508e32b98d72fa63767a10591b067c809828aec25312845
 SHA512 (uim-1.8.9.tar.gz) = ef731d255259b00e41a96e325cfa001579f14b98329d1882508190b8f2a9552ba4165572a7faf865b58bf392b69de2933e6ff13174941b5313ad690fbc36e337
@@ -16,3 +16,7 @@ SHA1 (patch-sigscheme_include_sigscheme_Makefile.am) = d54b38982c199b321c6ac0d87
 SHA1 (patch-uim_Makefile.am) = e3a9e4dc99965c271fd6e783d42a6a136bf904b2
 SHA1 (patch-uim_skk.c) = 0d0bcf3c996ab5a4351e30cdf0f6f1fdc6faf5ad
 SHA1 (patch-uim_uim-module-manager.c) = 345b09a209fc1ccc9ba96aa50a5adac1f2ef35ee
+SHA1 (patch-xim_connection.cpp) = d3a34c533e99c6d6991093761ed7dcc40773520b
+SHA1 (patch-xim_ximic.cpp) = 8c19425ef926c384028db1edbb39a8a81dfd4ade
+SHA1 (patch-xim_ximim.cpp) = 5e3f36136af16b59504b722863bf0b588773cd3a
+SHA1 (patch-xim_ximtrans.cpp) = 3a99700f124b72e2d67e3a4227b41949e6a96069
