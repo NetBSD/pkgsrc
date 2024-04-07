@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/07 19:02:45 ryoon Exp $
+
+BLAKE2s (flycheck-33.0.tar.gz) = b8b5f8425a7c8ac5535c8d4f47feb588eef8b54f20acc24efb84ad1ae6ee741c
+SHA512 (flycheck-33.0.tar.gz) = 6c0b2387417f0d6cd00ca33b15fa8b38c74cc76c445e1528d76e824c6cfef08a318182bdc565608dde85446efe1c63e65531adf7235970ea03b0e8dc1acb3162
+Size (flycheck-33.0.tar.gz) = 1043605 bytes

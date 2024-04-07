@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/07 19:02:45 ryoon Exp $
+${EMACS_LISPPREFIX}/flycheck-ert.el
+${EMACS_LISPPREFIX}/flycheck-ert.elc
+${EMACS_LISPPREFIX}/flycheck.el
+${EMACS_LISPPREFIX}/flycheck.elc
