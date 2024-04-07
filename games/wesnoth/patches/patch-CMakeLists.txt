@@ -1,30 +1,30 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2022/07/27 08:40:58 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2024/04/07 21:39:03 adam Exp $
 
 Do not look for X11 on macOS.
 We don't have readline as a module.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2022-07-13 16:10:31.000000000 +0000
+--- CMakeLists.txt.orig	2024-03-18 00:11:38.000000000 +0000
 +++ CMakeLists.txt
-@@ -76,7 +76,9 @@ find_package(ICU REQUIRED COMPONENTS dat
- # no, gettext executables are not required when NLS is deactivated
+@@ -100,7 +100,9 @@ find_package(ICU REQUIRED COMPONENTS dat
  find_package(Gettext)
+ find_package(Python)
  
 +if(NOT APPLE)
  find_package(X11)
 +endif(NOT APPLE)
  
- if(NOT WIN32)
- 	# needed to get some SDL2 defines in... (as of rev31694 -D_GNU_SOURCE=1 is required!)
-@@ -500,7 +502,6 @@ if(ENABLE_GAME OR ENABLE_TESTS)
- # TODO: can use find_package and Fontconfig::Fontconfig with cmake 3.14+
- 	pkg_check_modules(FONTCONFIG REQUIRED fontconfig>=2.4.1)
- 	pkg_check_modules(PANGO REQUIRED pango>=1.22.0)
+ if(NOT WIN32 AND NOT ENABLE_SYSTEM_LUA)
+ 	# Use the safer `mkstemp' instead of `tmpnam' on POSIX systems.
+@@ -542,7 +544,6 @@ if(ENABLE_GAME OR ENABLE_TESTS)
+ 	pkg_check_modules(CAIRO REQUIRED cairo>=1.10)
+ 	pkg_check_modules(PANGOCAIRO REQUIRED pangocairo>=1.44.0)
+ 	pkg_check_modules(PANGO REQUIRED pango>=1.44.0)
 -	pkg_check_modules(LIBREADLINE readline)
  endif()
  
  if(ENABLE_TESTS)
-@@ -583,11 +584,6 @@ endif()
+@@ -625,11 +626,6 @@ endif()
  # uninstall
  #
  
