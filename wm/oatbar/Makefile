@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/04/06 08:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/07 07:35:09 wiz Exp $
 
 DISTNAME=	oatbar-0.0.30
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igor-petruk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/11/14 14:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/07 07:33:33 wiz Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../audio/ossinfo/Makefile.common"
 
 PKGNAME=	ossxmix-${OSS_CMD_VER}

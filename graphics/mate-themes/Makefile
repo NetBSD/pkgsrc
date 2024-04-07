@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/04/06 08:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/04/07 07:34:17 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
 VERSION=	3.22.24

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2023/11/14 14:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/04/07 07:34:10 wiz Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
-PKGREVISION=	64
+PKGREVISION=	65
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/gimmage/
 

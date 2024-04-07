@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2024/04/06 08:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/04/07 07:34:29 wiz Exp $
 #
 
 DISTNAME=		scim-1.4.17
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 

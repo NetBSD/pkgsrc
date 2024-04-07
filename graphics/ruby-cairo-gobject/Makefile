@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2024/02/23 11:25:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/07 07:34:20 wiz Exp $
 #
 
 DISTNAME=		cairo-gobject-${VERSION}
 COMMENT=		Ruby binding of cairo-gobject
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 
 MAINTAINER=		tsutsui@NetBSD.org

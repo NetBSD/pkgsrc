@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2024/04/06 08:04:51 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/04/07 07:33:34 wiz Exp $
 #
 
 DISTNAME=	pavumeter-0.9.3
-PKGREVISION=	85
+PKGREVISION=	86
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pavumeter/
 

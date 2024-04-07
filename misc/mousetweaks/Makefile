@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2024/04/06 08:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2024/04/07 07:34:39 wiz Exp $
 
 DISTNAME=	mousetweaks-3.32.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/3.32/}
 EXTRACT_SUFX=	.tar.xz

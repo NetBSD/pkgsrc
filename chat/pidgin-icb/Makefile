@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2023/11/14 14:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2024/04/07 07:33:39 wiz Exp $
 
 DISTNAME=	pidgin-icb-20070505
-PKGREVISION=	62
+PKGREVISION=	63
 CATEGORIES=	chat
 MASTER_SITES=	http://nic.com.pl/~alek/pidgin-icb/
 

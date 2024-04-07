@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/04/06 08:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/04/07 07:35:01 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-notification-daemon-${VERSION:R}.1
