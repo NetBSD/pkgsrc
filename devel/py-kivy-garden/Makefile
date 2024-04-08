@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/11/26 14:34:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/08 20:57:33 wiz Exp $
 
 DISTNAME=	Kivy%20Garden-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/%20/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=k/kivy-garden/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy-garden/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kivy-garden/garden
