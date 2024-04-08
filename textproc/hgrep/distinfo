@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2024/04/01 19:16:20 pin Exp $
+$NetBSD: distinfo,v 1.18 2024/04/08 10:42:38 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -207,9 +207,9 @@ Size (hashbrown-0.14.3.crate) = 141425 bytes
 BLAKE2s (hermit-abi-0.3.9.crate) = e79ea390b597a58b10dae2062cf72b653e4f5e9e2032d5cc6ea2caadf1802afd
 SHA512 (hermit-abi-0.3.9.crate) = f3a5a51d834a6ad55480b53f7e9cdc73a512ab0cc6c246a6ab1e8bf8f9851a0c8a55982f5bba6cb57b5a03b54870e73b0bab0a79195764c308318394a3ea8045
 Size (hermit-abi-0.3.9.crate) = 16165 bytes
-BLAKE2s (hgrep-0.3.5.tar.gz) = f871e3db097be3e30152164b19e8049830e49bc433f915b749ea45eb3bb2f10b
-SHA512 (hgrep-0.3.5.tar.gz) = 95398b20747fd4eb09b1cba3e22f751284c5c285020455ebda3635f6f60ee4b29bb239bbed08d2b2ba8489afbf2614ad64a97739e17df8db52753bad13f6e06f
-Size (hgrep-0.3.5.tar.gz) = 971020 bytes
+BLAKE2s (hgrep-0.3.6.tar.gz) = 9d72a3855caeb3d291f754cf0145bb44a4872edf6a916832c8f156556db78ce7
+SHA512 (hgrep-0.3.6.tar.gz) = 00791e8cb23d4ff5e3ea27e2dda3185cfe1396efd0d2770bfd130f5493e61182eafa18ab6a305a46f00fd0005aef2fc53e5526dc64a3b40fae516c64aa6db7bc
+Size (hgrep-0.3.6.tar.gz) = 974115 bytes
 BLAKE2s (home-0.5.9.crate) = 3ca501737a66c3e850c8337fb10efe9f3fbadabd3f9219e72e15cd380e788f1c
 SHA512 (home-0.5.9.crate) = 3f1f7b619f1a47694cda92321a11d66ebbb2dc0b0c33446a7a4b886f547ee88231b61c038de04bb82acd50e617f19b5085893b8401206d32cd54502033e04bf1
 Size (home-0.5.9.crate) = 8760 bytes
