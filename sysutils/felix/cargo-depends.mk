@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.30 2024/02/03 22:21:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.31 2024/04/08 10:40:23 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aes-0.8.3
@@ -69,6 +69,7 @@ CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
 CARGO_CRATE_DEPENDS+=	mio-0.8.10
 CARGO_CRATE_DEPENDS+=	natord-1.0.9
 CARGO_CRATE_DEPENDS+=	nix-0.26.4
+CARGO_CRATE_DEPENDS+=	normpath-1.2.0
 CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.17
 CARGO_CRATE_DEPENDS+=	num_threads-0.1.6
