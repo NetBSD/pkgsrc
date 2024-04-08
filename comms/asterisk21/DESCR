@@ -1,0 +1,18 @@
+Asterisk is a complete PBX in software.  It provides all of the
+features you would expect from a PBX and more. Asterisk does voice
+over IP in three protocols, and can interoperate with almost all
+standards-based telephony equipment using relatively inexpensive
+hardware.
+
+Asterisk provides Voicemail services with Directory, Call Conferencing,
+Interactive Voice Response, Call Queuing. It has support for
+three-way calling, caller ID services, ADSI, SIP and IAX.
+
+This is an standard version.  It is secheduled to go to security
+fixes only on November 18th, 2025, and EOL on November 18th, 2026.
+See here for more information about Asterisk versions:
+https://docs.asterisk.org/About-the-Project/Asterisk-Versions
+
+Note that many things that have long been deprecated have now been
+removed, such as chan_sip and app_macro.  See here for a complete
+list:  http://docs.asterisk.org/Development/Asterisk-Module-Deprecations
