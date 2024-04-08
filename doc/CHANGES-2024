@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2359 2024/04/08 12:49:58 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2360 2024/04/08 14:21:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3910,3 +3910,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/tp-note to 1.24.0 [pin 2024-04-08]
 	Updated lang/python311 to 3.11.9 [adam 2024-04-08]
 	Updated lang/py311-html-docs to 3.11.9 [adam 2024-04-08]
+	Updated devel/py-gitpython to 3.1.43 [adam 2024-04-08]
+	Updated net/py-geventhttpclient to 2.0.12 [adam 2024-04-08]
