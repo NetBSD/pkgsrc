@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.49 2024/04/01 19:15:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.50 2024/04/08 10:46:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.23
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -253,7 +253,7 @@ CARGO_CRATE_DEPENDS+=	gpu-allocator-0.25.0
 CARGO_CRATE_DEPENDS+=	gpu-descriptor-0.2.4
 CARGO_CRATE_DEPENDS+=	gpu-descriptor-types-0.1.2
 CARGO_CRATE_DEPENDS+=	gtk-sys-0.18.0
-CARGO_CRATE_DEPENDS+=	h2-0.3.24
+CARGO_CRATE_DEPENDS+=	h2-0.3.26
 CARGO_CRATE_DEPENDS+=	half-2.3.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	hashbrown-0.13.2
