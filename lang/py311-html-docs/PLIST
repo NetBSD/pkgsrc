@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/07 08:02:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/08 12:49:33 adam Exp $
 share/doc/python3.11/.buildinfo
 share/doc/python3.11/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.11/_images/hashlib-blake2-tree.png
@@ -37,6 +37,7 @@ share/doc/python3.11/_sources/c-api/frame.rst.txt
 share/doc/python3.11/_sources/c-api/function.rst.txt
 share/doc/python3.11/_sources/c-api/gcsupport.rst.txt
 share/doc/python3.11/_sources/c-api/gen.rst.txt
+share/doc/python3.11/_sources/c-api/hash.rst.txt
 share/doc/python3.11/_sources/c-api/import.rst.txt
 share/doc/python3.11/_sources/c-api/index.rst.txt
 share/doc/python3.11/_sources/c-api/init.rst.txt
@@ -114,6 +115,7 @@ share/doc/python3.11/_sources/howto/curses.rst.txt
 share/doc/python3.11/_sources/howto/descriptor.rst.txt
 share/doc/python3.11/_sources/howto/enum.rst.txt
 share/doc/python3.11/_sources/howto/functional.rst.txt
+share/doc/python3.11/_sources/howto/gdb_helpers.rst.txt
 share/doc/python3.11/_sources/howto/index.rst.txt
 share/doc/python3.11/_sources/howto/instrumentation.rst.txt
 share/doc/python3.11/_sources/howto/ipaddress.rst.txt
@@ -560,6 +562,7 @@ share/doc/python3.11/c-api/frame.html
 share/doc/python3.11/c-api/function.html
 share/doc/python3.11/c-api/gcsupport.html
 share/doc/python3.11/c-api/gen.html
+share/doc/python3.11/c-api/hash.html
 share/doc/python3.11/c-api/import.html
 share/doc/python3.11/c-api/index.html
 share/doc/python3.11/c-api/init.html
@@ -668,6 +671,7 @@ share/doc/python3.11/howto/curses.html
 share/doc/python3.11/howto/descriptor.html
 share/doc/python3.11/howto/enum.html
 share/doc/python3.11/howto/functional.html
+share/doc/python3.11/howto/gdb_helpers.html
 share/doc/python3.11/howto/index.html
 share/doc/python3.11/howto/instrumentation.html
 share/doc/python3.11/howto/ipaddress.html
