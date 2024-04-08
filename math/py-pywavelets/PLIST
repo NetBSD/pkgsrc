@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/12/02 09:59:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/08 05:52:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -70,8 +70,8 @@ ${PYSITELIB}/pywt/data/camera.npz
 ${PYSITELIB}/pywt/data/create_dat.py
 ${PYSITELIB}/pywt/data/create_dat.pyc
 ${PYSITELIB}/pywt/data/create_dat.pyo
-${PYSITELIB}/pywt/data/ecg.npy
-${PYSITELIB}/pywt/data/sst_nino3.npy
+${PYSITELIB}/pywt/data/ecg.npz
+${PYSITELIB}/pywt/data/sst_nino3.npz
 ${PYSITELIB}/pywt/tests/data/cwt_matlabR2015b_result.npz
 ${PYSITELIB}/pywt/tests/data/dwt_matlabR2012a_result.npz
 ${PYSITELIB}/pywt/tests/data/generate_matlab_data.py
