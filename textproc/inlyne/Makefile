@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/02/20 21:29:28 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/08 10:44:27 pin Exp $
 
-DISTNAME=	inlyne-0.4.1
+DISTNAME=	inlyne-0.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
