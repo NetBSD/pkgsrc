@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/02/04 08:18:32 adam Exp $
+$NetBSD: distinfo,v 1.24 2024/04/08 05:11:17 adam Exp $
 
-BLAKE2s (flask-3.0.2.tar.gz) = 6a5b6dc64b7533673095932ac520bb832a26e2c129e9c86747077f9db6fc9deb
-SHA512 (flask-3.0.2.tar.gz) = 02f937dae7d654f6286eb9fcf2d68d83f3ef56dbc4d59a961ea1bd95d17fac7a5ace3f27ebb03ff0592f6a87361e59934ffda098714fc8a049a487d4c0bbc0ef
-Size (flask-3.0.2.tar.gz) = 675248 bytes
+BLAKE2s (flask-3.0.3.tar.gz) = ceb0e32ae556dde16d64e1db335968091252b59eccf1fc8b92f3cdbf2d1c91da
+SHA512 (flask-3.0.3.tar.gz) = 977c0e5fd2d496fae8e34a035f211118642dc6518a14dc5f6c175b72c6a76407aeb9ff0ed1f5db636370a9aa7e0d36baa783713ea7bdabd7f28c8c2b94643cd1
+Size (flask-3.0.3.tar.gz) = 676315 bytes
