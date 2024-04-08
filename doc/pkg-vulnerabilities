@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.163 2024/04/07 21:36:33 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.164 2024/04/08 06:06:36 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16636,7 +16636,7 @@ cacti<1.2.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-20723
 cacti<1.2.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-20724
 cacti<1.2.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-20725
 cacti<1.2.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-20726
-cairo-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6461
+cairo<1.18.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6461
 cairo<1.16.0nb8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6462
 py{27,34,35,36,37,38}-numpy-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-6446
 php{56,70,71,72}-drupal>=7<7.62		unspecified			https://www.drupal.org/SA-CORE-2019-001
@@ -25136,11 +25136,9 @@ ghostscript-agpl<10.01.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/
 git-base<2.40.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2023-25652
 git-base<2.40.1	arbitrary-messages	https://nvd.nist.gov/vuln/detail/CVE-2023-25815
 git-base<2.40.1	configuration-misinterpretation	https://nvd.nist.gov/vuln/detail/CVE-2023-29007
-# CPAN up to and including 2.34
-perl-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31484
+perl<5.38.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31484
 p5-GitLab-API-v4-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31485
-# HTTP::Tiny up to and including 0.082, part of perl
-perl-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31486
+perl<5.38.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31486
 py{36,37,38,39,310,311}-django>=3.2<3.2.19	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 py{36,37,38,39,310,311}-django>=4.1<4.1.9	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 py{36,37,38,39,310,311}-django>=4.2<4.2.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
@@ -25441,8 +25439,10 @@ wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4513
 wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4512
 wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4511
 wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-5371
-w3m-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
-w3m-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38253
+w3m<0.5.3.0.20230121nb4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
+w3m-img<0.5.3.0.20230121nb2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
+w3m<0.5.3.0.20230121nb4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38253
+w3m-img<0.5.3.0.20230121nb2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38253
 vsftpd-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-30047
 vorbis-tools-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43361
 matrix-synapse<1.74.0	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-32323
