@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/03/05 16:55:54 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/04/08 05:54:12 adam Exp $
 
-BLAKE2s (ipyparallel-8.7.0.tar.gz) = 23d54520ce42eb1ac920925243ff2d97d4bcec4d37900e34b15dd2e3759d200c
-SHA512 (ipyparallel-8.7.0.tar.gz) = 96b9a3c1435dcb609c81856e5fc2763265a14610483e9d6c1a0b1fe5f7d6981d42d8f0d7b0c245cdf1fec10d4a832854dc745ca02ce90623734216dc858bb322
-Size (ipyparallel-8.7.0.tar.gz) = 6798726 bytes
+BLAKE2s (ipyparallel-8.8.0.tar.gz) = 49a0e124a168c88d17b76a7fb34512d0df97960bc64c49e09c8c66121cd9f7bb
+SHA512 (ipyparallel-8.8.0.tar.gz) = 9b0a03e1f581acbe56e3b51331d9fb97c422469e1d93348e6403d7c95a985f1f5a2a390645222fc4b60c0027ba168933679662561adb618d19ae7d680a2bb680
+Size (ipyparallel-8.8.0.tar.gz) = 6800541 bytes
