@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2355 2024/04/08 10:47:34 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2356 2024/04/08 10:49:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/hgrep to 0.3.6 [pin 2024-04-08]
 	Updated textproc/inlyne to 0.4.2 [pin 2024-04-08]
 	Updated graphics/oculante to 0.8.18 [pin 2024-04-08]
+	Updated sysutils/ripdrag to 0.4.7 [pin 2024-04-08]
