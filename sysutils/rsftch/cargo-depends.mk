@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2024/04/02 19:39:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2024/04/08 10:50:04 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
