@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/03/18 18:34:29 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/04/08 07:42:37 adam Exp $
 
-BLAKE2s (pyformlang-1.0.9.tar.gz) = 916c377619a806b77f720b2f18d08a2b1ad21b2d0d21a938d3d06f95e5ca737e
-SHA512 (pyformlang-1.0.9.tar.gz) = 0cfa92d727a1364d23ae8b10d2954cb6e909288b83acad6be326129f24d390700d4081691f53d67f4ad21f6f3d4008f2d44568fc8ec90d9e2bdee01808923cd4
-Size (pyformlang-1.0.9.tar.gz) = 94861 bytes
+BLAKE2s (pyformlang-1.0.10.tar.gz) = 0e0e903fde0965b5db55324a1eeb09b39729c409fdf16a398f27961b193c5dd7
+SHA512 (pyformlang-1.0.10.tar.gz) = 14492adf15b616957c9edf060507d8ac51233078f5ab0a290c95fcdb9ba93482dc2f73f928402ec154f9114b97e44c27166a671acc0ba6cd342a8a1af8007298
+Size (pyformlang-1.0.10.tar.gz) = 95117 bytes
