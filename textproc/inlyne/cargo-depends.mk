@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2024/02/20 21:29:28 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2024/04/08 10:44:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -382,7 +382,7 @@ CARGO_CRATE_DEPENDS+=	slug-0.1.4
 CARGO_CRATE_DEPENDS+=	smallvec-1.11.1
 CARGO_CRATE_DEPENDS+=	smart-debug-0.0.3
 CARGO_CRATE_DEPENDS+=	smart-debug-derive-0.0.3
-CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.16.0
+CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.16.1
 CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.18.0
 CARGO_CRATE_DEPENDS+=	smithay-clipboard-0.7.0
 CARGO_CRATE_DEPENDS+=	socket2-0.4.9
