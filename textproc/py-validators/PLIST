@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/04/03 09:52:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/08 05:17:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,6 +10,7 @@ ${PYSITELIB}/validators/__init__.pyo
 ${PYSITELIB}/validators/_extremes.py
 ${PYSITELIB}/validators/_extremes.pyc
 ${PYSITELIB}/validators/_extremes.pyo
+${PYSITELIB}/validators/_tld.txt
 ${PYSITELIB}/validators/between.py
 ${PYSITELIB}/validators/between.pyc
 ${PYSITELIB}/validators/between.pyo
@@ -19,9 +20,9 @@ ${PYSITELIB}/validators/btc_address.pyo
 ${PYSITELIB}/validators/card.py
 ${PYSITELIB}/validators/card.pyc
 ${PYSITELIB}/validators/card.pyo
-${PYSITELIB}/validators/country_code.py
-${PYSITELIB}/validators/country_code.pyc
-${PYSITELIB}/validators/country_code.pyo
+${PYSITELIB}/validators/country.py
+${PYSITELIB}/validators/country.pyc
+${PYSITELIB}/validators/country.pyo
 ${PYSITELIB}/validators/cron.py
 ${PYSITELIB}/validators/cron.pyc
 ${PYSITELIB}/validators/cron.pyo
@@ -31,6 +32,12 @@ ${PYSITELIB}/validators/domain.pyo
 ${PYSITELIB}/validators/email.py
 ${PYSITELIB}/validators/email.pyc
 ${PYSITELIB}/validators/email.pyo
+${PYSITELIB}/validators/encoding.py
+${PYSITELIB}/validators/encoding.pyc
+${PYSITELIB}/validators/encoding.pyo
+${PYSITELIB}/validators/finance.py
+${PYSITELIB}/validators/finance.pyc
+${PYSITELIB}/validators/finance.pyo
 ${PYSITELIB}/validators/hashes.py
 ${PYSITELIB}/validators/hashes.pyc
 ${PYSITELIB}/validators/hashes.pyo
@@ -49,6 +56,9 @@ ${PYSITELIB}/validators/i18n/fi.pyo
 ${PYSITELIB}/validators/i18n/fr.py
 ${PYSITELIB}/validators/i18n/fr.pyc
 ${PYSITELIB}/validators/i18n/fr.pyo
+${PYSITELIB}/validators/i18n/ind.py
+${PYSITELIB}/validators/i18n/ind.pyc
+${PYSITELIB}/validators/i18n/ind.pyo
 ${PYSITELIB}/validators/iban.py
 ${PYSITELIB}/validators/iban.pyc
 ${PYSITELIB}/validators/iban.pyo
@@ -65,6 +75,9 @@ ${PYSITELIB}/validators/py.typed
 ${PYSITELIB}/validators/slug.py
 ${PYSITELIB}/validators/slug.pyc
 ${PYSITELIB}/validators/slug.pyo
+${PYSITELIB}/validators/uri.py
+${PYSITELIB}/validators/uri.pyc
+${PYSITELIB}/validators/uri.pyo
 ${PYSITELIB}/validators/url.py
 ${PYSITELIB}/validators/url.pyc
 ${PYSITELIB}/validators/url.pyo
