@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2024/04/07 07:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/04/08 12:41:01 pin Exp $
 
-DISTNAME=	tp-note-1.23.10
-PKGREVISION=	2
+DISTNAME=	tp-note-1.24.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/tp-note-v1.23.10-a0280a258492a015e502793427e9bedbae0e3c78
+WRKSRC=		${WRKDIR}/tp-note-v1.24.0-6d3be80390c2cb881ae1d6ae7d6e909ae8ca472e
 
 USE_TOOLS+=	pkg-config
 
