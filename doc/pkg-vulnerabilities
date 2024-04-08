@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.165 2024/04/08 06:21:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.166 2024/04/08 06:31:39 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22398,7 +22398,10 @@ moodle<3.9.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-39
 moodle>=3.10<3.10.8	remote-code-execution 	https://nvd.nist.gov/vuln/detail/CVE-2021-3943
 moodle<3.9.11	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43558
 moodle>=3.10<3.10.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43558
-lua54-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+lua51-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+lua52-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+lua53<5.3.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+lua54<5.4.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
 matrix-synapse<1.47.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2021-41281
 libcares<1.17.2	dns-hijacking	https://nvd.nist.gov/vuln/detail/CVE-2021-3672
 wordpress<5.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-44223
@@ -22682,7 +22685,7 @@ libde265<1.0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-36408
 libde265<1.0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-36409
 libde265<1.0.9	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-36410
 libde265<1.0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-36411
-lua54-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-44647
+lua54<5.4.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-44647
 binaryen<105	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46048
 binaryen-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-46050
 binaryen<105	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46052
@@ -23204,7 +23207,7 @@ njs<0.7.3	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-27007
 mutt<2.2.3	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1328
 subversion-base<1.14.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-28544
 ap24-subversion<1.14.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-28544
-lua54-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-28805
+lua54<5.4.4	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-28805
 e2fsprogs-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-1304
 go116-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27191
 go117<1.17.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27191
@@ -23868,7 +23871,7 @@ SDL-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-34568
 packagekit-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-0987
 squid4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46784
 py{27,36,37,38,39,310}-sanic<22.6.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-35920
-lua54-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-33099
+lua54<5.4.5	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-33099
 mariadb-server<10.5.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-32089
 mariadb-server>=10.6.0<10.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-32089
 mariadb-server<10.4.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-32087
