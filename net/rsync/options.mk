@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/11/10 10:01:37 nia Exp $
+# $NetBSD: options.mk,v 1.7 2024/04/08 18:52:00 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rsync
 
@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS+=	zstd
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Macl)
-CONFIGURE_ARGS+=       --disable-acl-support
+CONFIGURE_ARGS+=	--disable-acl-support
 .endif
 
 .if !empty(PKG_OPTIONS:Mzstd)
