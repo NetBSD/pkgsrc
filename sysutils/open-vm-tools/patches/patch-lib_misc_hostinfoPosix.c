@@ -1,8 +1,19 @@
-$NetBSD: patch-lib_misc_hostinfoPosix.c,v 1.1 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-lib_misc_hostinfoPosix.c,v 1.2 2024/04/09 01:12:36 pho Exp $
 
---- lib/misc/hostinfoPosix.c.orig	2016-02-16 20:06:46.000000000 +0000
+Fix build on NetBSD.
+
+--- lib/misc/hostinfoPosix.c.orig	2024-02-06 15:08:41.000000000 +0000
 +++ lib/misc/hostinfoPosix.c
-@@ -3289,7 +3289,7 @@ HostinfoSysinfo(uint64 *totalRam,  // OU
+@@ -93,7 +93,7 @@
+ #include <paths.h>
+ #endif
+ 
+-#if defined(__linux__) || defined(__APPLE__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__NetBSD__)
+ #include <dlfcn.h>
+ #endif
+ 
+@@ -4184,7 +4184,7 @@ HostinfoSysinfo(uint64 *totalRam,  // OU
  #endif // ifndef __APPLE__
  
  
