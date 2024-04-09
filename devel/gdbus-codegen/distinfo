@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.46 2024/02/09 09:31:45 adam Exp $
+$NetBSD: distinfo,v 1.47 2024/04/09 16:57:17 wiz Exp $
 
-BLAKE2s (glib-2.78.4.tar.xz) = 99e73c55068a1eb95703d3df83019a5bb6b5d22e7922f5230a56df5ed5194037
-SHA512 (glib-2.78.4.tar.xz) = 6f3a06e10e7373a2dbf0688512de4126472fb73cbec488b7983b5ffecff09c64d7e1ca462f892e8f215d3d277d103ca802bad7ef0bd0f91edf26fc6ce67187b6
-Size (glib-2.78.4.tar.xz) = 5331892 bytes
-SHA1 (patch-meson.build) = 4f9d178950414e1537b48a552d63c9e551801999
+BLAKE2s (glib-2.80.0.tar.xz) = 606bc10df34172dfe419dd293fe6f51ab2f7e7b951dc4e53d86bc812db604293
+SHA512 (glib-2.80.0.tar.xz) = 1514d62aeb4c4a1a1048ae0f84f7db7f0dbf355772b2dadf6a34ec547045b163a5e28331b096e7616fe3c9c19bed98025a0202b05073f5d7ee901d0efaffe143
+Size (glib-2.80.0.tar.xz) = 5510536 bytes
+SHA1 (patch-meson.build) = 5f0643d176cf3494157fb77e5d5c398c49935742
