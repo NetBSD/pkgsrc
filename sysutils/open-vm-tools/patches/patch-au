@@ -1,13 +1,15 @@
-$NetBSD: patch-au,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-au,v 1.4 2024/04/09 01:12:36 pho Exp $
 
---- lib/include/su.h.orig	2016-02-16 20:06:46.000000000 +0000
+Fix build on NetBSD.
+
+--- lib/include/su.h.orig	2024-02-06 15:08:43.000000000 +0000
 +++ lib/include/su.h
-@@ -50,7 +50,7 @@ Bool Id_AuthCheck(char const *right,
-                   char const *localizedDescription,
+@@ -56,7 +56,7 @@ Bool Id_AuthCheck(char const *right,
                    Bool showDialogIfNeeded);
  
--#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__))
-+#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__))
+ #elif defined(__linux__) || defined(sun) || defined(__FreeBSD__) || \
+-      defined(__EMSCRIPTEN__)
++      defined(__NetBSD__) || defined(__EMSCRIPTEN__)
  
  #include <sys/types.h>
  #include <unistd.h>

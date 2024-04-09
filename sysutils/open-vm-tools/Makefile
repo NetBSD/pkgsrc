@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.126 2024/04/07 07:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2024/04/09 01:12:36 pho Exp $
 
-OVTVER=		12.1.5
-DISTNAME=	open-vm-tools-${OVTVER}-20735119
+OVTVER=		12.4.0
+DISTNAME=	open-vm-tools-${OVTVER}-23259341
 PKGNAME=	open-vm-tools-${OVTVER}
-PKGREVISION=	9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
 GITHUB_RELEASE=	stable-${OVTVER}
@@ -13,7 +12,7 @@ HOMEPAGE=	https://github.com/vmware/open-vm-tools
 COMMENT=	Open source VMware tools
 LICENSE=	gnu-lgpl-v2.1
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+BROKEN_EXCEPT_ON_PLATFORM=	*-*-aarch64 *-*-i386 *-*-x86_64
 
 # Workaround for glib2-2.68.0 c++ fallout.
 CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
