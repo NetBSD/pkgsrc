@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/04/05 18:51:52 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2024/04/09 16:57:45 jperkin Exp $
 
 BLAKE2s (go1.22.2.src.tar.gz) = 1cda38de9b035db9c153c21042f23f62bc3ad1cd516b012916a446ca09b94d70
 SHA512 (go1.22.2.src.tar.gz) = f2491d2b5d4ef2dd86ca7820503a2534cd1860822049dc01a6cb40b556a0812cfc4196fa83173765816060253ac949f4165b0fb4b2bed5d45e30d03bb69e434d
@@ -8,4 +8,5 @@ SHA1 (patch-src_cmd_dist_build.go) = cbb9576f832806b0cbef121ea38ba6a54db95bc3
 SHA1 (patch-src_crypto_x509_root__bsd.go) = 0b5dead901450967109303f873a2696c65ccac35
 SHA1 (patch-src_crypto_x509_root__solaris.go) = d636a1599ede225ac339388fba2b6e253112d461
 SHA1 (patch-src_syscall_syscall__solaris.go) = a23052ad13e128578c1c0cf46812f26d2d8ccdd1
+SHA1 (patch-src_syscall_zerrors__solaris__amd64.go) = f2a10b7436e1abedfe9491f8bde4c0bf3b2a893f
 SHA1 (patch-src_syscall_zsysnum__solaris__amd64.go) = ec28a0fa37ba9599ec1651c8e9337a2efc48a26b
