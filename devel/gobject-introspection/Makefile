@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2023/11/25 05:10:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.92 2024/04/09 17:55:46 wiz Exp $
 
-DISTNAME=	gobject-introspection-1.78.1
-PKGREVISION=	2
+DISTNAME=	gobject-introspection-1.80.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,6 +12,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
+
 USE_TOOLS+=	pkg-config flex bison
 
 MESON_ARGS+=	-Dpython=${PYTHONBIN}
@@ -22,19 +27,6 @@ PKGCONFIG_OVERRIDE+=	output/meson-private/gobject-introspection-1.0.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gobject-introspection-no-export-1.0.pc
 
 PKGCONFIG_OVERRIDE_STAGE=	post-build
-
-SUBST_CLASSES+=		timet
-SUBST_STAGE.timet=	pre-configure
-SUBST_FILES.timet=	giscanner/ast.py
-SUBST_FILES.timet+=	tests/scanner/Regress-1.0-expected.gir
-.include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_PLATFORM:MNetBSD-*} || ${MACHINE_PLATFORM:MMirBSD-*}
-SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_INT64,g'
-SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
-.else
-SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_LONG,g'
-SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
-.endif
 
 SUBST_CLASSES+=		libdirs
 SUBST_STAGE.libdirs=	pre-configure
@@ -50,7 +42,7 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/girepository
 # Disable cache to keep fake homedir clean
 MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.78.1
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.79
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
