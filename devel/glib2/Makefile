@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.300 2024/02/09 09:31:45 adam Exp $
+# $NetBSD: Makefile,v 1.301 2024/04/09 16:57:18 wiz Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 .include "options.mk"
 

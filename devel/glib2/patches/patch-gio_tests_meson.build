@@ -1,10 +1,10 @@
-$NetBSD: patch-gio_tests_meson.build,v 1.8 2023/08/22 14:09:37 schmonz Exp $
+$NetBSD: patch-gio_tests_meson.build,v 1.9 2024/04/09 16:57:18 wiz Exp $
 
 Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
 
---- gio/tests/meson.build.orig	2023-07-06 15:39:47.000000000 +0000
+--- gio/tests/meson.build.orig	2024-03-07 21:35:05.000000000 +0000
 +++ gio/tests/meson.build
-@@ -756,6 +756,10 @@ if not meson.is_cross_build()
+@@ -798,6 +798,10 @@ if not meson.is_cross_build()
      plugin_resources_c = custom_target('plugin-resources.c',
        input : 'test4.gresource.xml',
        output : 'plugin-resources.c',
@@ -15,9 +15,9 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
        command : [glib_compile_resources,
                   compiler_type,
                   '--target=@OUTPUT@',
-@@ -785,6 +789,10 @@ if not meson.is_cross_build()
-   test_gresource = custom_target('test.gresource',
+@@ -831,6 +835,10 @@ if not meson.is_cross_build()
      input : 'test.gresource.xml',
+     depends : test_generated_txt,
      output : 'test.gresource',
 +    env : {
 +      'LC_ALL': 'en_US.UTF-8',
@@ -26,7 +26,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -799,6 +807,10 @@ if not meson.is_cross_build()
+@@ -845,6 +853,10 @@ if not meson.is_cross_build()
    test_resources2_c = custom_target('test_resources2.c',
      input : 'test3.gresource.xml',
      output : 'test_resources2.c',
@@ -37,7 +37,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -812,6 +824,10 @@ if not meson.is_cross_build()
+@@ -858,6 +870,10 @@ if not meson.is_cross_build()
    test_resources2_h = custom_target('test_resources2.h',
      input : 'test3.gresource.xml',
      output : 'test_resources2.h',
@@ -48,7 +48,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -826,6 +842,10 @@ if not meson.is_cross_build()
+@@ -872,6 +888,10 @@ if not meson.is_cross_build()
      input : 'test2.gresource.xml',
      depends : big_test_resource,
      output : 'test_resources.c',
@@ -59,7 +59,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -839,6 +859,10 @@ if not meson.is_cross_build()
+@@ -885,6 +905,10 @@ if not meson.is_cross_build()
    digit_test_resources_c = custom_target('digit_test_resources.c',
      input : '111_digit_test.gresource.xml',
      output : 'digit_test_resources.c',
@@ -70,7 +70,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -852,6 +876,10 @@ if not meson.is_cross_build()
+@@ -898,6 +922,10 @@ if not meson.is_cross_build()
    digit_test_resources_h = custom_target('digit_test_resources.h',
      input : '111_digit_test.gresource.xml',
      output : 'digit_test_resources.h',
