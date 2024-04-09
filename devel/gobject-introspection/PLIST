@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/02/15 17:34:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/04/09 17:55:46 wiz Exp $
 bin/g-ir-annotation-tool
 bin/g-ir-compiler
 bin/g-ir-generate
@@ -30,10 +30,6 @@ lib/girepository-1.0/DBus-1.0.typelib
 lib/girepository-1.0/DBusGLib-1.0.typelib
 lib/girepository-1.0/GIRepository-2.0.typelib
 lib/girepository-1.0/GL-1.0.typelib
-lib/girepository-1.0/GLib-2.0.typelib
-lib/girepository-1.0/GModule-2.0.typelib
-lib/girepository-1.0/GObject-2.0.typelib
-lib/girepository-1.0/Gio-2.0.typelib
 lib/girepository-1.0/Vulkan-1.0.typelib
 lib/girepository-1.0/cairo-1.0.typelib
 lib/girepository-1.0/fontconfig-2.0.typelib
@@ -151,10 +147,6 @@ share/gir-1.0/DBus-1.0.gir
 share/gir-1.0/DBusGLib-1.0.gir
 share/gir-1.0/GIRepository-2.0.gir
 share/gir-1.0/GL-1.0.gir
-share/gir-1.0/GLib-2.0.gir
-share/gir-1.0/GModule-2.0.gir
-share/gir-1.0/GObject-2.0.gir
-share/gir-1.0/Gio-2.0.gir
 share/gir-1.0/Vulkan-1.0.gir
 share/gir-1.0/cairo-1.0.gir
 share/gir-1.0/fontconfig-2.0.gir
