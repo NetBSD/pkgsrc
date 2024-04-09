@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/09 16:30:27 wiz Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -26,6 +26,8 @@ CONF_FILES=	${EXDIR}/jpg-config.inc ${PKG_SYSCONFDIR}/jpg-config.inc
 PKG_SYSCONFSUBDIR?=	php-jpgraph
 
 MESSAGE_SUBST+=	PJCONFFILE=${PJCONFFILE} PJDIR=${PJDIR} EXDIR=${EXDIR}
+
+PHP_VERSIONS_ACCEPTED=	56 74 80 81 82
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
