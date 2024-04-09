@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2367 2024/04/09 16:35:13 taca Exp $
+$NetBSD: CHANGES-2024,v 1.2368 2024/04/09 16:40:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3938,3 +3938,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-certbot-dns-sakuracloud to 2.10.0 [adam 2024-04-09]
 	Updated security/py-certbot-nginx to 2.10.0 [adam 2024-04-09]
 	Updated net/pear-Net_Sieve to 1.4.7 [taca 2024-04-09]
+	Updated databases/ruby-odbc to 0.999992 [taca 2024-04-09]
