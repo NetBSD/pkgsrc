@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/12 13:23:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/09 17:01:12 pin Exp $
 
-DISTNAME=	sniffnet-1.2.2
-PKGREVISION=	2
+DISTNAME=	sniffnet-1.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
