@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2024/04/09 16:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.302 2024/04/09 20:23:44 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 .include "options.mk"
 
+MESON_ARGS+=	-Dintrospection=disabled
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=disabled
