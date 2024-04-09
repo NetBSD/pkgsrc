@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.13 2023/10/24 21:30:35 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2024/04/09 17:16:45 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	zlib threads
 PKG_SUGGESTED_OPTIONS=	threads
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mzlib)
 CONFIGURE_ARGS+=	zlib
