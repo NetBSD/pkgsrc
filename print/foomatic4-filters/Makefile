@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/07/25 11:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/04/09 20:18:42 rillig Exp $
 
 DISTNAME=	foomatic-filters-4.0.17
 PKGREVISION=	16
@@ -27,7 +27,7 @@ BUILD_DEFS+=	MANINSTALL
 
 .if ${OPSYS} == "SunOS"
 # SunOS nroff has problems with foomatic-rip.1
-MANINSTALL=	none
+MANINSTALL=	# none
 INSTALL_TARGET=	install-bin
 .else
 INSTALL_TARGET=	install-bin install-man
