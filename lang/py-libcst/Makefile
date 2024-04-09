@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/02/20 04:55:23 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/09 16:41:06 adam Exp $
 
-DISTNAME=	libcst-1.2.0
+DISTNAME=	libcst-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libcst/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.2:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.4.0:../../devel/py-typing-inspect
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesmith>=0.0.4:../../devel/py-hypothesmith
 
@@ -30,8 +28,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 pre-build:
 	cd ${WRKSRC}/.cargo && ${LN} -f -s ../native/.cargo/config config
-
-#CHECK_WRKREF_SKIP+=	${PYSITELIB}/libcst/native.so
 
 .include "cargo-depends.mk"
 
