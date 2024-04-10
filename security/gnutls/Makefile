@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.248 2024/04/05 08:51:32 adam Exp $
+# $NetBSD: Makefile,v 1.249 2024/04/10 10:13:17 adam Exp $
 
 DISTNAME=	gnutls-3.8.5
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -99,7 +100,6 @@ CONFIGURE_ARGS.SunOS+=	--disable-tests
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/libcfg+/buildlink3.mk"
 # Avoid creating a fake zlib.pc, because if it does
 # gnutls will add a Requires.private for it in its .pc file
 CHECK_BUILTIN.zlib:=yes
