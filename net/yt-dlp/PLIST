@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/03/11 08:37:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/04/10 08:01:17 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -273,6 +273,9 @@ ${PYSITELIB}/yt_dlp/extractor/arte.pyo
 ${PYSITELIB}/yt_dlp/extractor/asobichannel.py
 ${PYSITELIB}/yt_dlp/extractor/asobichannel.pyc
 ${PYSITELIB}/yt_dlp/extractor/asobichannel.pyo
+${PYSITELIB}/yt_dlp/extractor/asobistage.py
+${PYSITELIB}/yt_dlp/extractor/asobistage.pyc
+${PYSITELIB}/yt_dlp/extractor/asobistage.pyo
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.py
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.pyc
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.pyo
@@ -876,6 +879,9 @@ ${PYSITELIB}/yt_dlp/extractor/facebook.pyo
 ${PYSITELIB}/yt_dlp/extractor/fancode.py
 ${PYSITELIB}/yt_dlp/extractor/fancode.pyc
 ${PYSITELIB}/yt_dlp/extractor/fancode.pyo
+${PYSITELIB}/yt_dlp/extractor/fathom.py
+${PYSITELIB}/yt_dlp/extractor/fathom.pyc
+${PYSITELIB}/yt_dlp/extractor/fathom.pyo
 ${PYSITELIB}/yt_dlp/extractor/faz.py
 ${PYSITELIB}/yt_dlp/extractor/faz.pyc
 ${PYSITELIB}/yt_dlp/extractor/faz.pyo
@@ -1410,6 +1416,9 @@ ${PYSITELIB}/yt_dlp/extractor/livestreamfails.pyo
 ${PYSITELIB}/yt_dlp/extractor/lnkgo.py
 ${PYSITELIB}/yt_dlp/extractor/lnkgo.pyc
 ${PYSITELIB}/yt_dlp/extractor/lnkgo.pyo
+${PYSITELIB}/yt_dlp/extractor/loom.py
+${PYSITELIB}/yt_dlp/extractor/loom.pyc
+${PYSITELIB}/yt_dlp/extractor/loom.pyo
 ${PYSITELIB}/yt_dlp/extractor/lovehomeporn.py
 ${PYSITELIB}/yt_dlp/extractor/lovehomeporn.pyc
 ${PYSITELIB}/yt_dlp/extractor/lovehomeporn.pyo
@@ -2283,6 +2292,9 @@ ${PYSITELIB}/yt_dlp/extractor/seznamzpravy.pyo
 ${PYSITELIB}/yt_dlp/extractor/shahid.py
 ${PYSITELIB}/yt_dlp/extractor/shahid.pyc
 ${PYSITELIB}/yt_dlp/extractor/shahid.pyo
+${PYSITELIB}/yt_dlp/extractor/sharepoint.py
+${PYSITELIB}/yt_dlp/extractor/sharepoint.pyc
+${PYSITELIB}/yt_dlp/extractor/sharepoint.pyo
 ${PYSITELIB}/yt_dlp/extractor/sharevideos.py
 ${PYSITELIB}/yt_dlp/extractor/sharevideos.pyc
 ${PYSITELIB}/yt_dlp/extractor/sharevideos.pyo
@@ -3105,6 +3117,9 @@ ${PYSITELIB}/yt_dlp/minicurses.pyo
 ${PYSITELIB}/yt_dlp/networking/__init__.py
 ${PYSITELIB}/yt_dlp/networking/__init__.pyc
 ${PYSITELIB}/yt_dlp/networking/__init__.pyo
+${PYSITELIB}/yt_dlp/networking/_curlcffi.py
+${PYSITELIB}/yt_dlp/networking/_curlcffi.pyc
+${PYSITELIB}/yt_dlp/networking/_curlcffi.pyo
 ${PYSITELIB}/yt_dlp/networking/_helper.py
 ${PYSITELIB}/yt_dlp/networking/_helper.pyc
 ${PYSITELIB}/yt_dlp/networking/_helper.pyo
@@ -3123,6 +3138,9 @@ ${PYSITELIB}/yt_dlp/networking/common.pyo
 ${PYSITELIB}/yt_dlp/networking/exceptions.py
 ${PYSITELIB}/yt_dlp/networking/exceptions.pyc
 ${PYSITELIB}/yt_dlp/networking/exceptions.pyo
+${PYSITELIB}/yt_dlp/networking/impersonate.py
+${PYSITELIB}/yt_dlp/networking/impersonate.pyc
+${PYSITELIB}/yt_dlp/networking/impersonate.pyo
 ${PYSITELIB}/yt_dlp/networking/websocket.py
 ${PYSITELIB}/yt_dlp/networking/websocket.pyc
 ${PYSITELIB}/yt_dlp/networking/websocket.pyo
