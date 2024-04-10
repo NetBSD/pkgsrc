@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/07 09:56:52 adam Exp $
+$NetBSD: distinfo,v 1.14 2024/04/10 16:49:09 adam Exp $
 
-BLAKE2s (archinfo-9.2.89.tar.gz) = e93edd2ee14f62222da1ea6d7f6ba8e8cb066cc0688debaeecc3319126ee7cd4
-SHA512 (archinfo-9.2.89.tar.gz) = e30a1463d201cb4cc3a547c129413926c7d4f73cbe144400ea82004ffcbbdeba230a2255f5e7f2f7844e0f67514ebe95a1467aac944565188308f462a1c86aa2
-Size (archinfo-9.2.89.tar.gz) = 53209 bytes
+BLAKE2s (archinfo-9.2.98.tar.gz) = ca685e3e940bf081c3c4fe8255d335f1403115c472d5e024cfc35b661cfbf97b
+SHA512 (archinfo-9.2.98.tar.gz) = 4bb3d037423e7dfb2c54473b8500c3e7387f374c0a763b00b76520b680886a820f3e707d1e61c0d58b6c9cf224d89fcebe37a7ccb8c80720d3f8442bf1c1e179
+Size (archinfo-9.2.98.tar.gz) = 53250 bytes
