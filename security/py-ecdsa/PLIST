@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/10 10:57:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/10 11:16:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/ecdsa/__init__.pyo
 ${PYSITELIB}/ecdsa/_compat.py
 ${PYSITELIB}/ecdsa/_compat.pyc
 ${PYSITELIB}/ecdsa/_compat.pyo
-${PYSITELIB}/ecdsa/_rwlock.py
-${PYSITELIB}/ecdsa/_rwlock.pyc
-${PYSITELIB}/ecdsa/_rwlock.pyo
 ${PYSITELIB}/ecdsa/_sha3.py
 ${PYSITELIB}/ecdsa/_sha3.pyc
 ${PYSITELIB}/ecdsa/_sha3.pyo
@@ -49,6 +46,9 @@ ${PYSITELIB}/ecdsa/numbertheory.pyo
 ${PYSITELIB}/ecdsa/rfc6979.py
 ${PYSITELIB}/ecdsa/rfc6979.pyc
 ${PYSITELIB}/ecdsa/rfc6979.pyo
+${PYSITELIB}/ecdsa/ssh.py
+${PYSITELIB}/ecdsa/ssh.pyc
+${PYSITELIB}/ecdsa/ssh.pyo
 ${PYSITELIB}/ecdsa/test_curves.py
 ${PYSITELIB}/ecdsa/test_curves.pyc
 ${PYSITELIB}/ecdsa/test_curves.pyo
@@ -82,9 +82,6 @@ ${PYSITELIB}/ecdsa/test_numbertheory.pyo
 ${PYSITELIB}/ecdsa/test_pyecdsa.py
 ${PYSITELIB}/ecdsa/test_pyecdsa.pyc
 ${PYSITELIB}/ecdsa/test_pyecdsa.pyo
-${PYSITELIB}/ecdsa/test_rw_lock.py
-${PYSITELIB}/ecdsa/test_rw_lock.pyc
-${PYSITELIB}/ecdsa/test_rw_lock.pyo
 ${PYSITELIB}/ecdsa/test_sha3.py
 ${PYSITELIB}/ecdsa/test_sha3.pyc
 ${PYSITELIB}/ecdsa/test_sha3.pyo
