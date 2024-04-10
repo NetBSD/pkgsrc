@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2391 2024/04/10 17:42:02 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2392 2024/04/10 19:27:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3984,3 +3984,9 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pyvex to 9.2.98 [adam 2024-04-10]
 	Updated games/scummvm to 2.8.1 [adam 2024-04-10]
 	Updated devel/abseil to 20240116.2 [adam 2024-04-10]
+	Updated databases/mariadb105-client to 10.5.24 [nia 2024-04-10]
+	Updated databases/mariadb105-server to 10.5.24 [nia 2024-04-10]
+	Updated databases/mariadb106-client to 10.6.17 [nia 2024-04-10]
+	Updated databases/mariadb106-server to 10.6.17 [nia 2024-04-10]
+	Updated databases/mariadb1011-client to 10.11.7 [nia 2024-04-10]
+	Updated databases/mariadb1011-server to 10.11.7 [nia 2024-04-10]
