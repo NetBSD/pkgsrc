@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/08/10 10:57:45 adam Exp $
+$NetBSD: distinfo,v 1.15 2024/04/10 11:16:20 adam Exp $
 
-BLAKE2s (ecdsa-0.18.0.tar.gz) = beb708dbd7761d33c350b19a2091c6a4f635e94d20c542cf3c1de3301ec0dc1c
-SHA512 (ecdsa-0.18.0.tar.gz) = f26dbeccd8e6ec832405d419b7244ca97b43a2811513493913a4f2f2fd1d2f453068fe0ba7b90b972f42a0d7b9834212fbd4d4559475cffeb1d80075fa954d78
-Size (ecdsa-0.18.0.tar.gz) = 197938 bytes
+BLAKE2s (ecdsa-0.19.0.tar.gz) = 190160db9b5c96a19c89b3fe0d57bedc9ceea82bf9560e8c62617bbf0401d32f
+SHA512 (ecdsa-0.19.0.tar.gz) = 7fa90c810800f453ffcdf1872f9a8448cb6081478980cc3d7f282284b4e5483c3a86dc7b1ad6c3a4f46102479e9c8493a9d16903c462383ebf09f9021c0f3217
+Size (ecdsa-0.19.0.tar.gz) = 197791 bytes
