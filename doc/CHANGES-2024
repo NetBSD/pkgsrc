@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2382 2024/04/10 09:24:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2383 2024/04/10 09:31:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3965,3 +3965,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-types-setuptools to 69.2.0.20240317 [adam 2024-04-10]
 	Updated devel/py-types-toml to 0.10.8.20240310 [adam 2024-04-10]
 	Updated textproc/py-types-yaml to 6.0.12.20240311 [adam 2024-04-10]
+	Updated devel/py-nihtest to 1.6.0 [wiz 2024-04-10]
