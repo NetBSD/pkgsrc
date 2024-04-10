@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2380 2024/04/10 08:50:51 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2381 2024/04/10 09:15:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added net/bropages version 1.41.0 [pin 2024-04-10]
 	Updated audio/taglib to 2.0.1 [adam 2024-04-10]
 	Updated www/py-django-import-export to 3.3.8 [adam 2024-04-10]
+	Updated devel/gobject-introspection to 1.80.1nb2 [wiz 2024-04-10]
