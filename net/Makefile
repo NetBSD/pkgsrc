@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1567 2024/04/04 13:33:54 wiz Exp $
+# $NetBSD: Makefile,v 1.1568 2024/04/10 08:15:25 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -52,6 +52,7 @@ SUBDIR+=	bmon
 SUBDIR+=	bombadillo
 SUBDIR+=	bounce
 SUBDIR+=	bridged
+SUBDIR+=	bropages
 SUBDIR+=	bsddip
 SUBDIR+=	btget
 SUBDIR+=	btpd
