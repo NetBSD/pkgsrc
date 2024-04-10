@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:15:15 nia Exp $
-
-BLAKE2s (libcfg+-0.7.0.tar.gz) = 407cd8ef8f829f589169d8975056c355e01be5b28f10c9ea287ec843ad19091f
-SHA512 (libcfg+-0.7.0.tar.gz) = 73444c89aab9e835ecc630b8fee5e83717fccc3d78736b1e9055b2404cbac7caf9b9fb84709b48800e2409bd40a8727e74db77eeb796079cd435aec8e3bdcc2b
-Size (libcfg+-0.7.0.tar.gz) = 248406 bytes
-SHA1 (patch-aa) = ba63ccc5c031a893b111caac1ba9ddf13c18b4fc
-SHA1 (patch-ab) = 96732574c5036883e62286f6f9c6ea34dd202442

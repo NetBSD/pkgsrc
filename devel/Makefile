@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4199 2024/04/07 18:57:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.4200 2024/04/10 10:37:13 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -896,7 +896,6 @@ SUBDIR+=	libblkid
 SUBDIR+=	libbsd
 SUBDIR+=	libcbor
 SUBDIR+=	libcerf
-SUBDIR+=	libcfg+
 SUBDIR+=	libcompizconfig
 SUBDIR+=	libconfig
 SUBDIR+=	libctl

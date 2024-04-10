@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/11/07 11:54:08 nia Exp $
+# $NetBSD: Makefile,v 1.58 2024/04/10 10:37:13 adam Exp $
 
 DISTNAME=	bulk-small-20231107
 CATEGORIES=	meta-pkgs
@@ -267,7 +267,6 @@ TRANSITIVE+=	jbigkit-[0-9]*:../../graphics/jbigkit
 # required by security/gnutls
 TRANSITIVE+=	autoconf-[0-9]*:../../devel/autoconf		# via ?
 TRANSITIVE+=	gettext-tools-[0-9]*:../../devel/gettext-tools
-TRANSITIVE+=	libcfg+-[0-9]*:../../devel/libcfg+
 TRANSITIVE+=	gmp-[0-9]*:../../devel/gmp
 TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi		# via p11-kit
 TRANSITIVE+=	libtasn1-[0-9]*:../../security/libtasn1
