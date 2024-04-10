@@ -1,0 +1,4 @@
+Highly readable supplement to man pages. Shows simple, concise examples for
+commands with syntax highlighting.
+
+This is an unofficial rust port of https://rubygems.org/gems/bropages
