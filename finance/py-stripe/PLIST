@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/04/08 14:27:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/04/10 07:40:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -223,6 +223,9 @@ ${PYSITELIB}/stripe/_dispute_service.pyo
 ${PYSITELIB}/stripe/_encode.py
 ${PYSITELIB}/stripe/_encode.pyc
 ${PYSITELIB}/stripe/_encode.pyo
+${PYSITELIB}/stripe/_entitlements_service.py
+${PYSITELIB}/stripe/_entitlements_service.pyc
+${PYSITELIB}/stripe/_entitlements_service.pyo
 ${PYSITELIB}/stripe/_ephemeral_key.py
 ${PYSITELIB}/stripe/_ephemeral_key.pyc
 ${PYSITELIB}/stripe/_ephemeral_key.pyo
@@ -394,6 +397,12 @@ ${PYSITELIB}/stripe/_price_service.pyo
 ${PYSITELIB}/stripe/_product.py
 ${PYSITELIB}/stripe/_product.pyc
 ${PYSITELIB}/stripe/_product.pyo
+${PYSITELIB}/stripe/_product_feature.py
+${PYSITELIB}/stripe/_product_feature.pyc
+${PYSITELIB}/stripe/_product_feature.pyo
+${PYSITELIB}/stripe/_product_feature_service.py
+${PYSITELIB}/stripe/_product_feature_service.pyc
+${PYSITELIB}/stripe/_product_feature_service.pyo
 ${PYSITELIB}/stripe/_product_service.py
 ${PYSITELIB}/stripe/_product_service.pyc
 ${PYSITELIB}/stripe/_product_service.pyo
@@ -778,6 +787,15 @@ ${PYSITELIB}/stripe/api_resources/discount.pyo
 ${PYSITELIB}/stripe/api_resources/dispute.py
 ${PYSITELIB}/stripe/api_resources/dispute.pyc
 ${PYSITELIB}/stripe/api_resources/dispute.pyo
+${PYSITELIB}/stripe/api_resources/entitlements/__init__.py
+${PYSITELIB}/stripe/api_resources/entitlements/__init__.pyc
+${PYSITELIB}/stripe/api_resources/entitlements/__init__.pyo
+${PYSITELIB}/stripe/api_resources/entitlements/active_entitlement.py
+${PYSITELIB}/stripe/api_resources/entitlements/active_entitlement.pyc
+${PYSITELIB}/stripe/api_resources/entitlements/active_entitlement.pyo
+${PYSITELIB}/stripe/api_resources/entitlements/feature.py
+${PYSITELIB}/stripe/api_resources/entitlements/feature.pyc
+${PYSITELIB}/stripe/api_resources/entitlements/feature.pyo
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.py
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.pyc
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.pyo
@@ -913,6 +931,9 @@ ${PYSITELIB}/stripe/api_resources/price.pyo
 ${PYSITELIB}/stripe/api_resources/product.py
 ${PYSITELIB}/stripe/api_resources/product.pyc
 ${PYSITELIB}/stripe/api_resources/product.pyo
+${PYSITELIB}/stripe/api_resources/product_feature.py
+${PYSITELIB}/stripe/api_resources/product_feature.pyc
+${PYSITELIB}/stripe/api_resources/product_feature.pyo
 ${PYSITELIB}/stripe/api_resources/promotion_code.py
 ${PYSITELIB}/stripe/api_resources/promotion_code.pyc
 ${PYSITELIB}/stripe/api_resources/promotion_code.pyo
@@ -1190,6 +1211,21 @@ ${PYSITELIB}/stripe/climate/_supplier_service.py
 ${PYSITELIB}/stripe/climate/_supplier_service.pyc
 ${PYSITELIB}/stripe/climate/_supplier_service.pyo
 ${PYSITELIB}/stripe/data/ca-certificates.crt
+${PYSITELIB}/stripe/entitlements/__init__.py
+${PYSITELIB}/stripe/entitlements/__init__.pyc
+${PYSITELIB}/stripe/entitlements/__init__.pyo
+${PYSITELIB}/stripe/entitlements/_active_entitlement.py
+${PYSITELIB}/stripe/entitlements/_active_entitlement.pyc
+${PYSITELIB}/stripe/entitlements/_active_entitlement.pyo
+${PYSITELIB}/stripe/entitlements/_active_entitlement_service.py
+${PYSITELIB}/stripe/entitlements/_active_entitlement_service.pyc
+${PYSITELIB}/stripe/entitlements/_active_entitlement_service.pyo
+${PYSITELIB}/stripe/entitlements/_feature.py
+${PYSITELIB}/stripe/entitlements/_feature.pyc
+${PYSITELIB}/stripe/entitlements/_feature.pyo
+${PYSITELIB}/stripe/entitlements/_feature_service.py
+${PYSITELIB}/stripe/entitlements/_feature_service.pyc
+${PYSITELIB}/stripe/entitlements/_feature_service.pyo
 ${PYSITELIB}/stripe/error.py
 ${PYSITELIB}/stripe/error.pyc
 ${PYSITELIB}/stripe/error.pyo
