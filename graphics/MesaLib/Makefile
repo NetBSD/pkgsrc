@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2023/10/23 06:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2024/04/10 10:12:01 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -140,6 +140,13 @@ CPPFLAGS+=	-DHAVE_NOATEXIT
 CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+# mako check in meson uses distutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 BUILDLINK_TRANSFORM+=		rm:-Werror=incompatible-pointer-types
 
