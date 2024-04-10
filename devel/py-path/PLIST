@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/04 19:38:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/10 12:53:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -17,7 +17,6 @@ ${PYSITELIB}/path/compat/py38.pyc
 ${PYSITELIB}/path/compat/py38.pyo
 ${PYSITELIB}/path/masks.py
 ${PYSITELIB}/path/masks.pyc
-${PYSITELIB}/path/masks.pyi
 ${PYSITELIB}/path/masks.pyo
 ${PYSITELIB}/path/matchers.py
 ${PYSITELIB}/path/matchers.pyc
