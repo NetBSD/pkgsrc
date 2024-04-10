@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/08/10 10:57:45 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/04/10 11:16:20 adam Exp $
 
-DISTNAME=	ecdsa-0.18.0
+DISTNAME=	ecdsa-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ecdsa/}
