@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2024/04/09 17:16:45 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2024/04/10 10:34:13 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -38,7 +38,8 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 	(${MACHINE_ARCH} == "mips") || \
 	(${MACHINE_ARCH} == "powerpc") || \
 	(${MACHINE_ARCH} == "riscv32") || \
-	(${MACHINE_ARCH} == "sh3") || \
+	(${MACHINE_ARCH} == "sh3eb") || \
+	(${MACHINE_ARCH} == "sh3el") || \
 	(${MACHINE_ARCH} == "sparc") || \
 	(${MACHINE_ARCH} == "vax"))
 # Use OpenSSL's built-in fallbacks (not actually clang-specific)
