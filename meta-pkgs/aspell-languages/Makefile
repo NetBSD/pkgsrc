@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 19:03:44 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/10 19:56:02 nia Exp $
 
-DISTNAME=	aspell-languages-20230814
+DISTNAME=	aspell-languages-20240410
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,15 +9,6 @@ MAINTAINER=	bsiegert@NetBSD.org
 COMMENT=	Meta package for aspell language packs
 
 META_PACKAGE=	yes
-
-.include "../../mk/bsd.prefs.mk"
-.if ${PKG_FORMAT} != "pkg" || ${OPSYS} != "Linux"
-# Non-ASCII PLISTs and thus problem with libarchive on glibc systems.
-DEPENDS+=	aspell-csb-[0-9]*:../../textproc/aspell-csb
-DEPENDS+=	aspell-fo-[0-9]*:../../textproc/aspell-fo
-DEPENDS+=	aspell-is-[0-9]*:../../textproc/aspell-is
-DEPENDS+=	aspell-nb-[0-9]*:../../textproc/aspell-nb
-.endif
 
 DEPENDS+=	aspell-af-[0-9]*:../../textproc/aspell-af
 DEPENDS+=	aspell-am-[0-9]*:../../textproc/aspell-am
