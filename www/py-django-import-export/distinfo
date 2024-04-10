@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/02/08 14:06:05 adam Exp $
+$NetBSD: distinfo,v 1.21 2024/04/10 08:50:33 adam Exp $
 
-BLAKE2s (django-import-export-3.3.7.tar.gz) = 8557c8573be7df99ee34e3d09b8a97adb7797a30f1a15a140a1eb6a90dc1dafb
-SHA512 (django-import-export-3.3.7.tar.gz) = 6b139a2aa36e41ec2e387a87268bcc06992b0471c07402e5b16909a83b19ec1057c660cd18e3ce18b69606155ca418be93851d167bd52ebce882fbcbe21dab53
-Size (django-import-export-3.3.7.tar.gz) = 63834 bytes
+BLAKE2s (django-import-export-3.3.8.tar.gz) = 7700b675f3dfad27b05a4ed8919b4859b59146cce5b35edd943330e7cc7feb65
+SHA512 (django-import-export-3.3.8.tar.gz) = 0bb19da6e6f4f62fa3735ca208b3efa008c517591e85df9b1a0990f7893437edf362923859e8f2d1bdb272ae4926cb8eca804d1b7971d5ee01b01629da445b7a
+Size (django-import-export-3.3.8.tar.gz) = 63833 bytes
