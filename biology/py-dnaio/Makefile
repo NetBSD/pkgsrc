@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/02/15 21:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/10 23:48:52 bacon Exp $
 
 DISTNAME=	dnaio-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnaio/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/marcelm/dnaio
 COMMENT=	Read and write FASTQ and FASTA files
 LICENSE=	mit
