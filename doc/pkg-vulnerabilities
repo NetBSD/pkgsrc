@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.167 2024/04/10 07:27:00 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.168 2024/04/10 19:49:30 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22743,9 +22743,15 @@ librecad-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-45342
 librecad-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45343
 libsixel-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45340
 libspf2<1.2.11	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-33912
-mariadb-server<10.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
-mariadb-server<10.6.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46658
-mariadb-server<10.7.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46659
+mariadb-server>=10.4<10.4.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
+mariadb-server>=10.5<10.5.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
+mariadb-server>=10.6<10.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
+mariadb-server>=10.4<10.4.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46658
+mariadb-server>=10.5<10.5.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46658
+mariadb-server>=10.6<10.6.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46658
+mariadb-server>=10.4<10.4.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46659
+mariadb-server>=10.5<10.5.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46659
+mariadb-server>=10.6<10.6.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46659
 moodle<3.11.5	sql-injection			https://nvd.nist.gov/vuln/detail/CVE-2022-0332
 moodle<3.11.5	invalid-validation		https://nvd.nist.gov/vuln/detail/CVE-2022-0333
 moodle<3.11.5	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2022-0334
@@ -23553,10 +23559,18 @@ libxml2<2.9.14	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-29824
 lighttpd<1.4.59	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-30780
 lrzip-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-33067
 mantis<2.25.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-33910
-mariadb-server<10.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31621
-mariadb-server<10.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31622
-mariadb-server<10.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31623
-mariadb-server<10.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31624
+mariadb-server>=10.4<10.4.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31621
+mariadb-server>=10.5<10.5.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31621
+mariadb-server>=10.6<10.6.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31621
+mariadb-server>=10.4<10.4.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31622
+mariadb-server>=10.5<10.5.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31622
+mariadb-server>=10.6<10.6.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31622
+mariadb-server>=10.4<10.4.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31623
+mariadb-server>=10.5<10.5.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31623
+mariadb-server>=10.6<10.6.66	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31623
+mariadb-server>=10.4<10.4.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31624
+mariadb-server>=10.5<10.5.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31624
+mariadb-server>=10.6<10.6.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31624
 matio<1.5.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1515
 moodle<4.0.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-30596
 moodle<4.0.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-30597
