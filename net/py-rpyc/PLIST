@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/04 19:54:28 wiz Exp $
-bin/rpyc_classic.py
-bin/rpyc_registry.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2024/04/10 12:51:33 adam Exp $
+bin/rpyc_classic-${PYVERSSUFFIX}
+bin/rpyc_registry-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/rpyc/__init__.py
 ${PYSITELIB}/rpyc/__init__.pyc
 ${PYSITELIB}/rpyc/__init__.pyo
+${PYSITELIB}/rpyc/cli/__init__.py
+${PYSITELIB}/rpyc/cli/__init__.pyc
+${PYSITELIB}/rpyc/cli/__init__.pyo
+${PYSITELIB}/rpyc/cli/rpyc_classic.py
+${PYSITELIB}/rpyc/cli/rpyc_classic.pyc
+${PYSITELIB}/rpyc/cli/rpyc_classic.pyo
+${PYSITELIB}/rpyc/cli/rpyc_registry.py
+${PYSITELIB}/rpyc/cli/rpyc_registry.pyc
+${PYSITELIB}/rpyc/cli/rpyc_registry.pyo
 ${PYSITELIB}/rpyc/core/__init__.py
 ${PYSITELIB}/rpyc/core/__init__.pyc
 ${PYSITELIB}/rpyc/core/__init__.pyo
