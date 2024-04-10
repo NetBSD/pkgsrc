@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/03/11 13:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/10 11:19:09 adam Exp $
 
-DISTNAME=	pypdf-4.1.0
+DISTNAME=	pypdf-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -21,7 +21,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
