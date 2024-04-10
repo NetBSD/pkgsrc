@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/21 20:28:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/10 11:19:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -42,6 +42,9 @@ ${PYSITELIB}/pypdf/_crypt_providers/_fallback.pyo
 ${PYSITELIB}/pypdf/_crypt_providers/_pycryptodome.py
 ${PYSITELIB}/pypdf/_crypt_providers/_pycryptodome.pyc
 ${PYSITELIB}/pypdf/_crypt_providers/_pycryptodome.pyo
+${PYSITELIB}/pypdf/_doc_common.py
+${PYSITELIB}/pypdf/_doc_common.pyc
+${PYSITELIB}/pypdf/_doc_common.pyo
 ${PYSITELIB}/pypdf/_encryption.py
 ${PYSITELIB}/pypdf/_encryption.pyc
 ${PYSITELIB}/pypdf/_encryption.pyo
