@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/03/07 10:28:02 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/04/10 19:21:45 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -115,6 +115,7 @@ include/mysql/server/private/lex_token.h
 include/mysql/server/private/lock.h
 include/mysql/server/private/log.h
 include/mysql/server/private/log_event.h
+include/mysql/server/private/log_event_data_type.h
 include/mysql/server/private/log_event_old.h
 include/mysql/server/private/log_slow.h
 include/mysql/server/private/mariadb.h
