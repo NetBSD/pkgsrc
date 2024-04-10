@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/30 19:24:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/04/10 16:49:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -103,6 +103,9 @@ ${PYSITELIB}/cle/backends/elf/relocation/ppc.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.py
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.pyo
+${PYSITELIB}/cle/backends/elf/relocation/sparc.py
+${PYSITELIB}/cle/backends/elf/relocation/sparc.pyc
+${PYSITELIB}/cle/backends/elf/relocation/sparc.pyo
 ${PYSITELIB}/cle/backends/elf/subprogram.py
 ${PYSITELIB}/cle/backends/elf/subprogram.pyc
 ${PYSITELIB}/cle/backends/elf/subprogram.pyo
@@ -229,6 +232,9 @@ ${PYSITELIB}/cle/backends/regions.pyo
 ${PYSITELIB}/cle/backends/relocation.py
 ${PYSITELIB}/cle/backends/relocation.pyc
 ${PYSITELIB}/cle/backends/relocation.pyo
+${PYSITELIB}/cle/backends/srec.py
+${PYSITELIB}/cle/backends/srec.pyc
+${PYSITELIB}/cle/backends/srec.pyo
 ${PYSITELIB}/cle/backends/static_archive.py
 ${PYSITELIB}/cle/backends/static_archive.pyc
 ${PYSITELIB}/cle/backends/static_archive.pyo
