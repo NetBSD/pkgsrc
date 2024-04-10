@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2024/03/20 22:29:39 bacon Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/10 23:47:55 bacon Exp $
 
 DISTNAME=	cutadapt-4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cutadapt.readthedocs.io/en/stable/
 COMMENT=	Find and remove adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit
