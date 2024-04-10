@@ -1,0 +1,2 @@
+bin/rpyc_classic @PREFIX@/bin/rpyc_classic-@PYVERSSUFFIX@
+bin/rpyc_registry @PREFIX@/bin/rpyc_registry-@PYVERSSUFFIX@
