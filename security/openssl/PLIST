@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/04/09 17:16:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/04/10 05:23:16 adam Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -153,7 +153,7 @@ lib/libcrypto.so.3
 lib/libssl.a
 lib/libssl.so
 lib/libssl.so.3
-lib/ossl-modules/legacy.so
+lib/ossl-modules/legacy.${SOEXT}
 lib/pkgconfig/libcrypto.pc
 lib/pkgconfig/libssl.pc
 lib/pkgconfig/openssl.pc
