@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/12/31 08:57:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/04/10 17:40:41 adam Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/applications/org.scummvm.scummvm.desktop
@@ -41,6 +41,7 @@ share/scummvm/hugo.dat
 share/scummvm/kyra.dat
 share/scummvm/lure.dat
 share/scummvm/macgui.dat
+share/scummvm/mm.dat
 share/scummvm/mort.dat
 share/scummvm/myst3.dat
 share/scummvm/nancy.dat
