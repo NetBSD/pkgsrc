@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24312 2024/04/09 17:16:56 wiz Exp $
+$NetBSD: TODO,v 1.24313 2024/04/10 10:54:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1335,6 +1335,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-cpp-0.21.0 [https://github.com/tree-sitter/tree-sitter-cpp/issues/256]
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
