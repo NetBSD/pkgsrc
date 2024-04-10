@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.166 2024/04/08 06:31:39 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.167 2024/04/10 07:27:00 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14881,7 +14881,8 @@ awstats-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-
 binutils<2.31	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-8945
 zabbix<3.4.1	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2017-2825
 nasm<2.14	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10254
-tiff-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-10126
+# reported against tiff, see https://gitlab.com/libtiff/libtiff/-/issues/128
+jpeg<9d	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-10126
 mupdf<1.14.0	infinite-loop			https://nvd.nist.gov/vuln/detail/CVE-2018-10289
 curl<7.52.0	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2016-9586
 curl<7.52.1	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2016-9594
@@ -16677,7 +16678,7 @@ ghostscript-gpl-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail
 ghostscript-agpl<9.27	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-6116
 py27-gnupg<0.4.4	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2019-6690
 gd<2.3.0		double-free			https://nvd.nist.gov/vuln/detail/CVE-2019-6978
-openjpeg-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-6988
+openjpeg<2.4.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-6988
 zoneminder-[0-9]*	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-6990
 zoneminder-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-6991
 zoneminder-[0-9]*	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-6992
@@ -22959,7 +22960,7 @@ cmark-gfm<0.29.0.gfm.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-202
 cacti-[0-9]*	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-0730
 py{27,36,37,38,39,310}-twisted<22.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-21716
 qemu<7.2.0	arbitrary-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2021-3638
-openjpeg-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3575
+openjpeg<2.5.1	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3575
 openexr<2.5.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-20303
 openexr<2.5.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-20300
 openexr<2.5.4	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2021-20302
