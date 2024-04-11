@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/01/10 16:10:17 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/11 14:49:41 bacon Exp $
 #
 
-# Update minor version when adding or removing dependencies
-# Update revision for all other changes
-DISTNAME=	atac-seq-1.4
+DISTNAME=	atac-seq-1.5.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -23,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-macs2>0:../../biology/py-macs2
 DEPENDS+=	${PYPKGPREFIX}-macs3>0:../../biology/py-macs3
 DEPENDS+=	fasda>0:../../biology/fasda
 DEPENDS+=	peak-classifier>0:../../biology/peak-classifier
-DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../biology/py-multiqc
 DEPENDS+=	webbrowser>0:../../www/webbrowser
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	lz4>0:../../archivers/lz4
