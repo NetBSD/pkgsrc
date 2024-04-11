@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/11 17:59:48 ktnb Exp $
+bin/nut
+bin/nut-update
+libexec/nut/nut.tcl
+libexec/nut/updateNUT.tcl
+man/man1/nut.1
+share/doc/nut/README
+share/doc/nut/README.pkgsrc.txt

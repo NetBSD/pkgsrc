@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/11 17:59:48 ktnb Exp $
+
+BLAKE2s (NUTsqlite-2.0.6.zip) = 9d69a4b64129c73c8391216e8cff39410410a43eea77392663bf4de9e69b8a71
+SHA512 (NUTsqlite-2.0.6.zip) = ca413da37a863500300e3a601b7783a6d8b622fbbcdaff478de8be142e2da4a16ab126ac6af93ef44e45163792099fa5aba7b65b45599d5425ac2037fbef1e4b
+Size (NUTsqlite-2.0.6.zip) = 138912 bytes
