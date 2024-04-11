@@ -1,0 +1,2 @@
+#!/bin/sh
+@PREFIX@/bin/tclsh @PREFIX@/libexec/nut/updateNUT.tcl "$@"
