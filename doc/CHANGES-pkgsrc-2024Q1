@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.2 2024/04/05 19:03:55 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.3 2024/04/11 15:24:36 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -8,4 +8,13 @@ www/p5-libwww: build fix
 Pullup ticket #6842 - requested by bouyer
 sysutils/xentools415: NetBSD 10 bugfix
 sysutils/xentools418: NetBSD 10 bugfix
+
+Pullup ticket #6843 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #6844 - requested by taca
+editors/abiword-plugins: build fix
+
+Pullup ticket #6845 - requested by taca
+www/php-concrete-cms: security fix
 
