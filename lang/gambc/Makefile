@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/08/02 19:21:54 nia Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/11 15:19:10 ktnb Exp $
 #
 
 DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
 PKGNAME=	gambc-${GAMBC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://gambitscheme.org/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -34,8 +33,6 @@ MAKE_FILE=		makefile
 
 BUILD_TARGET+=		bootstrap
 TEST_TARGET=		check
-
-WRKSRC=			${WRKDIR}/gambit-${PKGVERSION_NOREV}
 
 # Fails with C++14 default language
 FORCE_CXX_STD=		c++03
