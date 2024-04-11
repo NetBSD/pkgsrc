@@ -1,5 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2024/04/05 07:31:25 pin Exp $
+# $NetBSD: Makefile,v 1.53 2024/04/11 09:06:33 pin Exp $
 
+# Please don't update to 0.92.2
+# The latest version has Rust-1.77.2 as minimum required version.
+# This is due to CVE-2024-24576 that only affects Windows.
+# see, https://blog.rust-lang.org/2024/04/09/cve-2024-24576.html
 DISTNAME=	nushell-0.92.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
