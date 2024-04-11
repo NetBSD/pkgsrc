@@ -1,12 +1,128 @@
-$NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
+$NetBSD: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
 
 * Enable deleting remote directories.
 * Proper signal handling.
 * Miscellaneous bug fixes.
+* Fix deprecation warning (change ' to ::) for newer perl
 
---- ftp.pl.orig	1998-06-05 09:10:27.000000000 +0000
-+++ ftp.pl
-@@ -233,7 +233,7 @@ sub timed_open
+--- ftp.pl.orig	2024-04-11 11:08:05.969004188 +0200
++++ ftp.pl	2024-04-11 11:07:48.797471889 +0200
+@@ -28,17 +28,17 @@
+ #  $ftp_port = 21;
+ #  $retry_call = 1;
+ #  $attempts = 2;
+-#  if( &ftp'open( $site, $ftp_port, $retry_call, $attempts ) != 1 ){
++#  if( &ftp::open( $site, $ftp_port, $retry_call, $attempts ) != 1 ){
+ #   die "failed to open ftp connection";
+ #  }
+-#  if( ! &ftp'login( $user, $pass ) ){
++#  if( ! &ftp::login( $user, $pass ) ){
+ #   die "failed to login";
+ #  }
+-#  &ftp'type( $text_mode ? 'A' : 'I' );
+-#  if( ! &ftp'get( $remote_filename, $local_filename, 0 ) ){
++#  &ftp::type( $text_mode ? 'A' : 'I' );
++#  if( ! &ftp::get( $remote_filename, $local_filename, 0 ) ){
+ #   die "failed to get file";
+ #  }
+-#  &ftp'close();
++#  &ftp::close();
+ #
+ #
+ # $Id: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
+@@ -94,9 +94,9 @@
+ 
+ # This is a "global" it contains the last response from the remote ftp server
+ # for use in error messages
+-$ftp'response = "";
++$ftp::response = "";
+ 
+-# Also ftp'NS is the socket containing the data coming in from the remote ls
++# Also ftp::NS is the socket containing the data coming in from the remote ls
+ # command.
+ 
+ # The size of block to be read or written when talking to the remote
+@@ -115,12 +115,12 @@
+ $real_site = "";
+ 
+ # "Global" Where error/log reports are sent to
+-$ftp'showfd = 'STDERR';
++$ftp::showfd = 'STDERR';
+ 
+ # Should a 421 be treated as a connection close and return 99 from
+-# ftp'expect.  This is against rfc1123 recommendations but I've found
++# ftp::expect.  This is against rfc1123 recommendations but I've found
+ # it to be a wise default.
+-$ftp'drop_on_421 = 1;
++$ftp::drop_on_421 = 1;
+ 
+ # Name of a function to call on a pathname to map it into a remote
+ # pathname.
+@@ -131,7 +131,7 @@
+ $ftp_show = 0;
+ 
+ # Global set on a error that aborts the connection
+-$ftp'fatalerror = 0;
++$ftp::fatalerror = 0;
+ 
+ # Whether to keep the continuation messages so the user can look at them
+ $keep_continuations = 0;
+@@ -140,7 +140,7 @@
+ $read_in = undef;
+ 
+ # should we use the PASV extension to the ftp protocol?
+-$ftp'use_pasv = 0;    # 0=no (default), 1=yes
++$ftp::use_pasv = 0;    # 0=no (default), 1=yes
+ 
+ # Variable only used if proxying
+ $proxy = $proxy_gateway = $proxy_ftp_port = '';
+@@ -150,30 +150,30 @@
+ # (Normally set elsewhere - this is just a sensible default.)
+ # Is expected to take count and code as arguments and prompt
+ # for the secret key  with 'password:' on stdout and then print the password.
+-$ftp'keygen_prog = '/usr/local/bin/key';
++$ftp::keygen_prog = '/usr/local/bin/key';
+ 
+ # Uncomment to turn on lots of debugging.
+ # &debug( 10 );
+ 
+-# Limit how much data any one ftp'get can pull back
++# Limit how much data any one ftp::get can pull back
+ # Negative values cause the size check to be skipped.
+ $max_get_size = -1;
+ 
+ # Where I am connected to.
+ $connect_site = '';
+ 
+-# &ftp'debug( debugging_level )
++# &ftp::debug( debugging_level )
+ # Turn on debugging ranging from 1 = some to 10 = everything
+-sub ftp'debug
++sub ftp::debug
+ {
+ 	$ftp_show = $_[0];
+ 	if( $ftp_show > 9 ){
+-		$chat'debug = 1;
++		$chat::debug = 1;
+ 	}
+ }
+ 
+-# &ftp'set_timeout( seconds )
+-sub ftp'set_timeout
++# &ftp::set_timeout( seconds )
++sub ftp::set_timeout
+ {
+ 	local( $to ) = @_;
+ 	return if $to == $timeout;
+@@ -226,21 +226,21 @@
+ 			$connect_site = $site;
+ 			$connect_port = $ftp_port;
+ 		}
+-		if( ! &chat'open_port( $connect_site, $connect_port ) ){
++		if( ! &chat::open_port( $connect_site, $connect_port ) ){
+ 			if( $retry_call ){
+ 				print $showfd "Failed to connect\n" if $ftp_show;
+ 				next;
  			}
  			else {
  				print $showfd "proxy connection failed " if $proxy;
@@ -15,22 +131,119 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
  				return 0;
  			}
  		}
-@@ -270,6 +270,14 @@ sub ftp'set_signals
- 	$SIG{ 'PIPE' } = "ftp'ftp__sighandler";
+ 		$ret = &expect( $timeout,
+ 			2, 1 ); # ready for login to $site
+ 		if( $ret != 1 ){
+-			&chat'close();
++			&chat::close();
+ 			next;
+ 		}
+ 		return 1;
+@@ -264,14 +264,22 @@
  }
  
+ # Setup a signal handler for possible errors.
+-sub ftp'set_signals
++sub ftp::set_signals
+ {
+ 	$ftp_logger = @_;
+-	$SIG{ 'PIPE' } = "ftp'ftp__sighandler";
++	$SIG{ 'PIPE' } = "ftp::ftp__sighandler";
+ }
+ 
+-# &ftp'set_namemap( function to map outgoing name,  function to map incoming )
+-sub ftp'set_namemap
 +# Setup a signal handler for user interrupts.
-+sub ftp'set_user_signals
++sub ftp::set_user_signals
 +{
 + 	$ftp_logger = @_;
-+ 	$SIG{ 'INT' } = "ftp'ftp__sighandler";
++ 	$SIG{ 'INT' } = "ftp::ftp__sighandler";
 +}
 + 
 +
- # &ftp'set_namemap( function to map outgoing name,  function to map incoming )
- sub ftp'set_namemap
++# &ftp::set_namemap( function to map outgoing name,  function to map incoming )
++sub ftp::set_namemap
  {
-@@ -486,7 +494,7 @@ sub pasv
+ 	($mapunixout, $mapunixin) = @_;
+ 	if( $debug ) {
+@@ -280,12 +288,12 @@
+ }
+ 
+ 
+-# &ftp'open( hostname or address,
++# &ftp::open( hostname or address,
+ #            port to use,
+ #            retry on call failure,
+ #	     number of attempts to retry )
+ # returns 1 if connected, 0 otherwise
+-sub ftp'open
++sub ftp::open
+ {
+ 	local( $site, $ftp_port, $retry_call, $attempts ) = @_;
+ 
+@@ -312,9 +320,9 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'login( user, password, account )
++# &ftp::login( user, password, account )
+ # the account part is optional unless the remote service requires one.
+-sub ftp'login
++sub ftp::login
+ {
+ 	local( $remote_user, $remote_password, $remote_account ) = @_;
+         local( $ret );
+@@ -351,11 +359,11 @@
+ 		# check for s/key challenge - eg, [s/key 994 ph29005]
+ 		# If we are talking to skey then use remote_password as the
+ 		# secret to generate a real password
+-		if( $ftp'response =~ m#\[s/key (\d+) (\w+)\]# ){
++		if( $ftp::response =~ m#\[s/key (\d+) (\w+)\]# ){
+ 			local( $count, $code ) = ($1, $2);
+ 
+ 			# TODO: report open failure & remove need for echo
+-			open( SKEY, "echo $remote_password | $ftp'keygen_prog $count $code |" );
++			open( SKEY, "echo $remote_password | $ftp::keygen_prog $count $code |" );
+ 			while( <SKEY> ){
+ 				if( ! /password:/ ){
+ 					chop( $remote_password = $_ );
+@@ -411,21 +419,21 @@
+ sub service_closed
+ {
+ 	$service_open = 0;
+-	&chat'close();
++	&chat::close();
+ }
+ 
+ # Close down the current ftp connecting in an orderly way.
+-sub ftp'close
++sub ftp::close
+ {
+ 	&quit();
+ 	$service_open = 0;
+-	&chat'close();
++	&chat::close();
+ }
+ 
+-# &ftp'cwd( directory )
++# &ftp::cwd( directory )
+ # Change to the given directory
+ # return 1 if successful, 0 otherwise
+-sub ftp'cwd
++sub ftp::cwd
+ {
+ 	local( $dir ) = @_;
+ 	local( $ret );
+@@ -460,7 +468,7 @@
+ sub pasv
+ {
+ 	# At some point I need to close/free S2, no?
+-	unless( socket( S2, $main'pf_inet, $main'sock_stream, $main'tcp_proto ) ){
++	unless( socket( S2, $main::pf_inet, $main::sock_stream, $main::tcp_proto ) ){
+ 		($!) = ($!, close(S2)); # close S2 while saving $!
+ 		return undef;
+ 	}
+@@ -486,7 +494,7 @@
  		return 0;
  	}
  	if( $ret == 1 ) {
@@ -39,7 +252,40 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
  			$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
  			$newport = $5 * 256 + $6;
  		}
-@@ -581,6 +589,9 @@ sub ftp'dir_close
+@@ -497,7 +505,7 @@
+ 	}
+ 
+ 	# now need to connect() the new socket
+-	if( ! &chat'open_newport( $newhost, $newport, *S2 ) ){
++	if( ! &chat::open_newport( $newhost, $newport, *S2 ) ){
+ 		if( $retry_call ){
+ 			print $showfd "Failed to connect newport\n" if $ftp_show;
+ 			next;
+@@ -511,12 +519,12 @@
+ }
+ 
+ 
+-# &ftp'dir( remote LIST options )
++# &ftp::dir( remote LIST options )
+ # Start a list going with the given options.
+ # Presuming that the remote deamon uses the ls command to generate the
+ # data to send back then then you can send it some extra options (eg: -lRa)
+ # return 1 if sucessful, 0 otherwise
+-sub ftp'dir_open
++sub ftp::dir_open
+ {
+ 	local( $options ) = @_;
+ 	local( $ret );
+@@ -573,7 +581,7 @@
+ 
+ # Close down reading the result of a remote ls command
+ # return 1 if successful, 0 otherwise
+-sub ftp'dir_close
++sub ftp::dir_close
+ {
+ 	local( $ret );
+ 
+@@ -581,6 +589,9 @@
  		return 0;
  	}
  
@@ -49,7 +295,7 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
  	# read the close
  	#
  	$ret = &expect($timeout,
-@@ -590,8 +601,6 @@ sub ftp'dir_close
+@@ -590,8 +601,6 @@
  		$ret = 0;
  	}
  
@@ -58,7 +304,41 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
  
  	if( ! $ret ){
  		return 0;
-@@ -708,6 +717,7 @@ sub ftp'get
+@@ -602,7 +611,7 @@
+ 
+ # Quit from the remote ftp server
+ # return 1 if successful and 0 on failure
+-#  Users should be calling &ftp'close();
++#  Users should be calling &ftp::close();
+ sub quit
+ {
+ 	local( $ret );
+@@ -687,20 +696,20 @@
+ 	return syswrite( NS, $ftpbuf, $ftpbufsize );
+ }
+ 
+-# &ftp'dostrip( true or false )
++# &ftp::dostrip( true or false )
+ # Turn on or off stripping of incoming carriage returns.
+-sub ftp'dostrip
++sub ftp::dostrip
+ {
+ 	($strip_cr ) = @_;
+ }
+ 
+-# &ftp'get( remote file, local file, try restarting where last xfer failed )
++# &ftp::get( remote file, local file, try restarting where last xfer failed )
+ # Get a remote file back into a local file.
+ # If no loc_fname passed then uses rem_fname.
+ # If $restart set and the remote site supports it then restart where
+ # last xfer left off.
+ # returns 1 on success, 0 otherwise
+-sub ftp'get
++sub ftp::get
+ {
+ 	local($rem_fname, $loc_fname, $restart ) = @_;
+ 	local( $ret );
+@@ -708,6 +717,7 @@
  	if( ! $service_open ){
  		return 0;
  	}
@@ -66,7 +346,16 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
  
  	if( $loc_fname eq "" ){
  		$loc_fname = $rem_fname;
-@@ -917,10 +927,27 @@ sub delete
+@@ -887,7 +897,7 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'delete( remote filename )
++# &ftp::delete( remote filename )
+ # Delete a file from the remote site.
+ # returns 1 if successful, 0 otherwise
+ sub delete
+@@ -917,15 +927,32 @@
  
  sub deldir
  {
@@ -96,4 +385,133 @@ $NetBSD: patch-ae,v 1.7 2011/09/12 16:35:43 taca Exp $
 +	return $ret == 1;
  }
  
- # &ftp'put( local filename, remote filename, restart where left off )
+-# &ftp'put( local filename, remote filename, restart where left off )
++# &ftp::put( local filename, remote filename, restart where left off )
+ # Similar to get but sends file to the remote site.
+-sub ftp'put
++sub ftp::put
+ {
+ 	local( $loc_fname, $rem_fname ) = @_;
+ 	local( $strip_cr );
+@@ -1091,9 +1118,9 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'restart( byte_offset )
++# &ftp::restart( byte_offset )
+ # Restart the next transfer from the given offset
+-sub ftp'restart
++sub ftp::restart
+ {
+ 	local( $restart_point, $ret ) = @_;
+ 
+@@ -1115,7 +1142,7 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'type( 'A' or 'I' )
++# &ftp::type( 'A' or 'I' )
+ # set transfer type to Ascii or Image.
+ sub type
+ {
+@@ -1143,7 +1170,7 @@
+ @site_command_list = ();
+ 
+ # routine to query the remote server for 'SITE' commands supported
+-sub ftp'site_commands
++sub ftp::site_commands
+ {
+ 	local( $ret );
+ 	
+@@ -1183,7 +1210,7 @@
+ }
+ 
+ # return the pwd, or null if we can't get the pwd
+-sub ftp'pwd
++sub ftp::pwd
+ {
+ 	local( $ret, $cwd );
+ 
+@@ -1214,7 +1241,7 @@
+ 	return $cwd;
+ }
+ 
+-# &ftp'mkdir( directory name )
++# &ftp::mkdir( directory name )
+ # Create a directory on the remote site
+ # return 1 for success, 0 otherwise
+ sub mkdir
+@@ -1244,7 +1271,7 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'chmod( pathname, new mode )
++# &ftp::chmod( pathname, new mode )
+ # Change the mode of a file on the remote site.
+ # return 1 for success, 0 for failure
+ sub chmod
+@@ -1274,10 +1301,10 @@
+ 	return $ret;
+ }
+ 
+-# &ftp'rename( old name, new name )
++# &ftp::rename( old name, new name )
+ # Rename a file on the remote site.
+ # returns 1 if successful, 0 otherwise
+-sub ftp'rename
++sub ftp::rename
+ {
+ 	local( $old_name, $new_name ) = @_;
+ 	local( $ret );
+@@ -1325,8 +1352,8 @@
+ }
+ 
+ 
+-# &ftp'quote( site command );
+-sub ftp'quote
++# &ftp::quote( site command );
++sub ftp::quote
+ {
+ 	local( $cmd ) = @_;
+ 	local( $ret );
+@@ -1364,7 +1391,7 @@
+ }
+ 
+ #
+-#  create the list of parameters for chat'expect
++#  create the list of parameters for chat::expect
+ #
+ #  expect( time_out, {value, return value} );
+ #  the last response is stored in $response
+@@ -1427,7 +1454,7 @@
+ 		if( $ftp_show > 9 ){
+ 			&printargs( $time_out, @expect_args );
+ 		}
+-		$ret = &chat'expect( $time_out, @expect_args );
++		$ret = &chat::expect( $time_out, @expect_args );
+ 	}
+ 
+ 	return $ret;
+@@ -1449,10 +1476,10 @@
+ 	
+ 	$sockaddr = 'S n a4 x8';
+ 
+-	($a,$b,$c,$d) = unpack( 'C4', $chat'thisaddr );
+-	$this = $chat'thisproc;
++	($a,$b,$c,$d) = unpack( 'C4', $chat::thisaddr );
++	$this = $chat::thisproc;
+ 	
+-	if( ! socket( S, $main'pf_inet, $main'sock_stream, $main'tcp_proto ) ){
++	if( ! socket( S, $main::pf_inet, $main::sock_stream, $main::tcp_proto ) ){
+ 		warn "socket: $!";
+ 		return 0;
+ 	}
+@@ -1505,7 +1532,7 @@
+ 		print $showfd "---> $sc\n";
+ 	}
+ 	
+-	&chat'print( "$send_cmd\r\n" );
++	&chat::print( "$send_cmd\r\n" );
+ }
+ 
+ sub accept
