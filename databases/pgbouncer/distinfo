@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:09:43 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/04/11 06:55:27 wiz Exp $
 
-BLAKE2s (pgbouncer-1.10.0.tar.gz) = 157fa199308bd6fc2853be48733bdf08e8a029074db7976d55b169e81b5737a6
-SHA512 (pgbouncer-1.10.0.tar.gz) = 8ec9f102b57ca5f92fb689588ec090056ac29f21825400ec67bca413fe076ad50e0b491e65c4cfebc488cc245eb3c88c36db2ee0ba1cb737f35404be0983dd1d
-Size (pgbouncer-1.10.0.tar.gz) = 480571 bytes
-SHA1 (patch-Makefile) = 91a59289d4fcd4b8258ed191f2deeb1e24853106
+BLAKE2s (pgbouncer-1.22.1.tar.gz) = b88eb7d1499ee266a2e29c03968fd9824028524f1e5e7f6aa18d785420a24f3a
+SHA512 (pgbouncer-1.22.1.tar.gz) = ac63fe877f68745f1faab096ee9d9e185de9cab97d4fef121c2c551fa0e69ea22342dc8b5ce75cadff755314e5493a5440f0748b5ee9f524f71d871ec1861530
+Size (pgbouncer-1.22.1.tar.gz) = 677351 bytes
+SHA1 (patch-Makefile) = 810c25a5ea7d03f60b909d2659ff9f89bf7a772f
