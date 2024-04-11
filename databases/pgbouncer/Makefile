@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/10/24 22:08:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2024/04/11 06:55:27 wiz Exp $
 
-DISTNAME=	pgbouncer-1.10.0
-PKGREVISION=	2
+DISTNAME=	pgbouncer-1.22.1
 CATEGORIES=	databases
 MASTER_SITES=	http://pgbouncer.github.io/downloads/files/${PKGVERSION_NOREV}/
 
@@ -12,7 +10,7 @@ COMMENT=	Lightweight connection pooler for PostgreSQL
 LICENSE=	original-bsd
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -49,7 +47,6 @@ SUBST_SED.path+=	-e 's|/etc/pgbouncer|${PKG_SYSCONFDIR}|g'
 SUBST_SED.path+=	-e 's|userlist.txt|pgbouncer.userlist|g'
 
 CONFIGURE_ARGS+=	--with-cares=${BUILDLINK_PREFIX.libcares}
-CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
 CPPFLAGS.SunOS+=	-D_STRUCTURED_PROC=1
 
