@@ -1,8 +1,74 @@
-$NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
+$NetBSD: patch-ad,v 1.6 2024/04/11 10:23:44 bouyer Exp $
 
---- lchat.pl.orig	Wed Jun  7 22:19:22 1995
-+++ lchat.pl	Wed May 12 18:10:54 1999
-@@ -79,7 +79,7 @@
+--- lchat.pl.orig	2024-04-11 11:08:05.970309238 +0200
++++ lchat.pl	2024-04-11 11:07:48.798330768 +0200
+@@ -34,7 +34,7 @@
+ # Lots of changes.  See CHANGES since 2.8 file.
+ #
+ # Revision 2.3  1994/02/03  13:45:35  lmjm
+-# Correct chat'read (bfriesen@simple.sat.tx.us)
++# Correct chat::read (bfriesen@simple.sat.tx.us)
+ #
+ # Revision 2.2  1993/12/14  11:09:03  lmjm
+ # Only include sys/socket.ph if not already there.
+@@ -55,7 +55,7 @@
+ 	eval "use Socket";
+ }
+ else {
+-	unless( defined &'PF_INET ){
++	unless( defined &::PF_INET ){
+ 		eval "sub ATT { 0; } sub INTEL { 0; }";
+ 		do 'sys/socket.ph';
+ 	}
+@@ -65,18 +65,18 @@
+ if( $] =~ /^5\.\d+$/ ){
+ 	# Perl 5 has a special way of getting them via the 'use Socket'
+ 	# above.
+-	$main'pf_inet = &Socket'PF_INET;
+-	$main'sock_stream = &Socket'SOCK_STREAM;
++	$main::pf_inet = &Socket::PF_INET;
++	$main::sock_stream = &Socket::SOCK_STREAM;
+ 	local($name, $aliases, $proto) = getprotobyname( 'tcp' );
+-	$main'tcp_proto = $proto;
++	$main::tcp_proto = $proto;
+ }
+-elsif( defined( &'PF_INET ) ){
++elsif( defined( &::PF_INET ) ){
+ 	# Perl 4 needs to have the socket.ph file created when perl was
+ 	# installed.
+-	$main'pf_inet = &'PF_INET;
+-	$main'sock_stream = &'SOCK_STREAM;
++	$main::pf_inet = &::PF_INET;
++	$main::sock_stream = &::SOCK_STREAM;
+ 	local($name, $aliases, $proto) = getprotobyname( 'tcp' );
+-	$main'tcp_proto = $proto;
++	$main::tcp_proto = $proto;
+ }
+ else {
+ 	# Whoever installed perl didn't run h2ph !!!
+@@ -84,9 +84,9 @@
+ 	#  last resort
+ 	# Use hardwired versions
+ 	# but who the heck would change these anyway? (:-)
+-	$main'pf_inet = 2;
+-	$main'sock_stream = 1; # Sigh... On Solaris set this to 2
+-	$main'tcp_proto = 6;
++	$main::pf_inet = 2;
++	$main::sock_stream = 1; # Sigh... On Solaris set this to 2
++	$main::tcp_proto = 6;
+ 	warn "lchat.pl: using hardwired in network constantants";
+ }
+ 
+@@ -108,7 +108,7 @@
+ }
+ 
+ 
+-## &chat'open_port("server.address",$port_number);
++## &chat::open_port("server.address",$port_number);
+ ## opens a named or numbered TCP server
+ sub open_port { ## public
+ 	local($server, $port) = @_;
+@@ -117,7 +117,7 @@
  
  	# We may be multi-homed, start with 0, fixup once connexion is made
  	$thisaddr = "\0\0\0\0" ;
@@ -11,16 +77,18 @@ $NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
  
  	if ($server =~ /^(\d+)+\.(\d+)\.(\d+)\.(\d+)$/) {
  		$serveraddr = pack('C4', $1, $2, $3, $4);
-@@ -90,7 +90,7 @@
+@@ -128,8 +128,8 @@
  		}
  		$serveraddr = $x[4];
  	}
 -	$serverproc = pack($sockaddr, 2, $port, $serveraddr);
+-	unless (socket(S, $main'pf_inet, $main'sock_stream, $main'tcp_proto)) {
 +	$serverproc = pack_sockaddr_in($port, $serveraddr);
- 	unless (socket(S, $main'pf_inet, $main'sock_stream, $main'tcp_proto)) {
++	unless (socket(S, $main::pf_inet, $main::sock_stream, $main::tcp_proto)) {
  		($!) = ($!, close(S)); # close S while saving $!
  		return undef;
-@@ -99,12 +99,12 @@
+ 	}
+@@ -137,12 +137,12 @@
  	# The SOCKS documentation claims that this bind before the connet
  	# is unnecessary.  Not just, that, but when used with SOCKS,
  	# a connect() must not follow a bind(). -Erez Zadok.
@@ -39,7 +107,7 @@ $NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
  	unless (connect(S, $serverproc)) {
  		($!) = ($!, close(S)); # close S while saving $!
  		return undef;
-@@ -114,7 +114,7 @@
+@@ -152,7 +152,7 @@
  # multi-homed, with IP forwarding off, so fix-up.
  	local($fam,$lport);
  	($fam,$lport,$thisaddr) = unpack($sockaddr, getsockname(S));
@@ -48,7 +116,7 @@ $NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
  # end of post-connect fixup
  	select((select(S), $| = 1)[0]);
  	return 1;
-@@ -129,7 +129,7 @@
+@@ -167,7 +167,7 @@
  
  	# We may be multi-homed, start with 0, fixup once connexion is made
  	$thisaddr = "\0\0\0\0" ;
@@ -57,7 +125,7 @@ $NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
  
  	if ($server =~ /^(\d+)+\.(\d+)\.(\d+)\.(\d+)$/) {
  		$serveraddr = pack('C4', $1, $2, $3, $4);
-@@ -151,7 +151,7 @@
+@@ -189,7 +189,7 @@
  # multi-homed, with IP forwarding off, so fix-up.
  	local($fam,$lport);
  	($fam,$lport,$thisaddr) = unpack($sockaddr, getsockname($newsock));
@@ -66,3 +134,47 @@ $NetBSD: patch-ad,v 1.5 1999/12/28 18:15:43 itojun Exp $
  # end of post-connect fixup
  	select((select($newsock), $| = 1)[0]);
  	return 1;
+@@ -197,7 +197,7 @@
+ ##############################################################################
+ 
+ 
+-## $return = &chat'expect($timeout_time,
++## $return = &chat::expect($timeout_time,
+ ## 	$pat1, $body1, $pat2, $body2, ... )
+ ## $timeout_time is the time (either relative to the current time, or
+ ## absolute, ala time(2)) at which a timeout event occurs.
+@@ -293,7 +293,7 @@
+ 		 		select($rmask, undef, undef, $endtime - time);
+ 			if ($nfound) {
+ 				$nread = sysread(S, $thisbuf, 1024);
+-				if( $chat'debug ){
++				if( $chat::debug ){
+ 					print STDERR "sysread $nread ";
+ 					print STDERR ">>$thisbuf<<\n";
+ 				}
+@@ -316,21 +316,21 @@
+ 	& $subname();
+ }
+ 
+-## &chat'print(@data)
++## &chat::print(@data)
+ sub print { ## public
+ 	print S @_;
+-	if( $chat'debug ){
++	if( $chat::debug ){
+ 		print STDERR "printed:";
+ 		print STDERR @_;
+ 	}
+ }
+ 
+-## &chat'close()
++## &chat::close()
+ sub close { ## public
+ 	close(S);
+ }
+ 
+-# &chat'read(*buf, $ntoread )
++# &chat::read(*buf, $ntoread )
+ # blocking read. returns no. of bytes read and puts data in $buf.
+ # If called with ntoread < 0 then just do the accept and return 0.
+ sub read { ## public

@@ -1,14 +1,33 @@
-$NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
+$NetBSD: patch-ac,v 1.6 2024/04/11 10:23:44 bouyer Exp $
 
 * Fix path for pkgsrc.
 * Use md5(1) instead of sum(1).
 * Add -f option to compress program.
 * Fix deleting remote directories.
 * Fix display of transfer direction.
+* Fix deprecation warning (change ' to ::) for newer perl
 
---- mirror.pl.orig	1998-06-08 10:55:27.000000000 +0000
-+++ mirror.pl
-@@ -104,7 +104,7 @@ $load_defaults = 1;
+--- mirror.pl.orig	2024-04-11 11:08:05.973997402 +0200
++++ mirror.pl	2024-04-11 11:07:48.794686287 +0200
+@@ -38,7 +38,7 @@
+ # Allow for remote_account pasword.
+ # Only one arg to undef, for early perl5's
+ # Use all capitals for file descriptors.
+-# Use ftp'close not ftp'quit
++# Use ftp::close not ftp::quit
+ # Avoid file renaming under MACos
+ # Corrected file deleting.
+ #
+@@ -51,7 +51,7 @@
+ # Allow strip_cr (from Andrew).
+ # More symlink handling...
+ # Set type for vms correctly.
+-# Changed response from ftp'delete, also corrected path used.
++# Changed response from ftp::delete, also corrected path used.
+ #
+ # Revision 2.4  1994/04/29  20:11:09  lmjm
+ # Use correct variable for hostname
+@@ -104,7 +104,7 @@
  # Try to find the default location of various programs via
  # the users PATH then using $extra_path
  if( ! $on_win ){
@@ -17,7 +36,7 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
  }
  if( $extra_path ne '' ){
  	$ENV{ 'PATH' } .= $path_sep . $extra_path;
-@@ -159,19 +159,20 @@ if( ! $mail_prog ){
+@@ -159,19 +159,20 @@
  $rm_prog = &find_prog( 'rm' );
  
  # Generate checksums
@@ -42,7 +61,25 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
  unshift( @INC, $dir );
  
  # Debian GNU/Linux stores mirror.defaults in /etc/mirror
-@@ -1022,7 +1023,7 @@ sub do_mirror
+@@ -259,7 +260,7 @@
+ $default{ 'remote_gpass' } = '';
+ $default{ 'timeout' } = 120;	# timeout ftp requests after this many seconds
+ $default{ 'failed_gets_excl' } = ''; # failed messages to ignore while getting,
+-				# if failed to ftp'get
++				# if failed to ftp::get
+ $default{ 'ftp_port' } = 21;	# port number of remote ftp daemon
+ $default{ 'proxy' } = 0;	# normally use regular ftp
+ $default{ 'proxy_ftp_port' } = 4514; # default from Sun
+@@ -656,7 +657,7 @@
+ 		# THIS DOES NOT YET WORK!!!!!
+ 		$dumped_version = 1;
+ 		warn "Dumping perl\n";
+-		dump parse_args;
++		CORE::dump parse_args;
+ 	}
+ 
+ 	warn "Unknown arg $arg, skipping\n";
+@@ -1022,7 +1023,7 @@
  		&pr_variables( "\n" );
  	}
  	elsif( $package && ! $pretty_print ){
@@ -51,7 +88,177 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
  			&msg( "package=$package $site:$remote_dir -> $local_dir\n");
  		}
  		else {
-@@ -1807,7 +1808,7 @@ sub get_remote_directory_details
+@@ -1053,10 +1054,10 @@
+ 
+ 	if( $debug ){
+ 		# Keep the ftp debugging lower than the rest.
+-		&ftp'debug( $debug - 1);
++		&ftp::debug( $debug - 1);
+ 	}
+ 	else {
+-		&ftp'debug( $verbose );
++		&ftp::debug( $verbose );
+ 	}
+ 
+ 	if( $recurse_hard ){
+@@ -1069,19 +1070,19 @@
+ 	}
+ 
+ 	if( ! $interactive ){
+-		$ftp'showfd = 'STDOUT';
++		$ftp::showfd = 'STDOUT';
+ 	}
+-	&ftp'set_timeout( $timeout );
+-	&ftp'set_signals( "main'msg" );
++	&ftp::set_timeout( $timeout );
++	&ftp::set_signals( "main'msg" );
+ 
+ 	# set passive ftp mode
+ 	if( $passive_ftp ){
+-		$ftp'use_pasv = 1;
++		$ftp::use_pasv = 1;
+ 	}
+ 
+ 	# Are we using the SOCKS version of perl?
+ 	if( $using_socks ){
+-		$chat'using_socks = 1;
++		$chat::using_socks = 1;
+ 	}
+ 
+ 	# Useful string in prints
+@@ -1216,13 +1217,13 @@
+ 	if( $con == 1 ){
+ 		&msg( "login as $remote_user\n" ) if $debug > 1;
+ 		$curr_remote_user = $remote_user;
+-		if( ! &ftp'login( $remote_user, $remote_password, $remote_account ) ){
++		if( ! &ftp::login( $remote_user, $remote_password, $remote_account ) ){
+ 			&msg( "Cannot login, skipping package\n" );
+ 			&disconnect();
+ 			&msg( "\n" );
+ 			return $exit_status;
+ 		}
+-		$can_restart = (&ftp'restart(0) == 1);
++		$can_restart = (&ftp::restart(0) == 1);
+ 		if( $debug > 1 ){
+ 			&msg( "Can " . ($can_restart ? '' : "not ") . "do restarts\n" );
+ 
+@@ -1233,7 +1234,7 @@
+ 		&msg( "Already connected to site $site\n" ) if $debug;
+ 	}
+ 
+-	if( ! &ftp'type( $text_mode ? 'A' : 'I' ) ){
++	if( ! &ftp::type( $text_mode ? 'A' : 'I' ) ){
+ 		&msg( "Cannot set type\n" );
+ 	}
+ 
+@@ -1244,16 +1245,16 @@
+ 	# setting the namemap functions.
+ 	if( $remote_fs =~ /vms/i ){
+ 		$vms = 1;
+-		&ftp'set_namemap( "main'unix2vms", "main'vms2unix" );
++		&ftp::set_namemap( "main'unix2vms", "main'vms2unix" );
+ 	}
+ 	else {
+ 		$vms = 0;
+ 		# No mapping necessary
+-		&ftp'set_namemap( '' );
++		&ftp::set_namemap( '' );
+ 	}
+ 
+ 	if( ! $get_file || $remote_idle ){
+-		local( @rhelp ) = &ftp'site_commands();
++		local( @rhelp ) = &ftp::site_commands();
+ 		$remote_has_chmod = grep( $_ eq 'CHMOD', @rhelp);
+ 		$remote_has_rename = grep( $_ eq 'RNFR', @rhelp) && grep( $_ eq 'RNTO', @rhelp);
+ 		$remote_has_idle = grep( $_ eq 'IDLE', @rhelp);
+@@ -1264,7 +1265,7 @@
+ 	}
+ 	
+ 	if( $remote_has_idle && $remote_idle ){
+-		if( ! &ftp'quote( "site idle $remote_idle" ) ){
++		if( ! &ftp::quote( "site idle $remote_idle" ) ){
+ 			&msg( "Cannot set remote idle\n" );
+ 		}
+ 		elsif( $debug > 2 ){
+@@ -1273,7 +1274,7 @@
+ 	}
+ 
+ 	if( $remote_group ){
+-		if( ! &ftp'quote( "site group $remote_group" ) ){
++		if( ! &ftp::quote( "site group $remote_group" ) ){
+ 			&msg( "Cannot set remote group\n" );
+ 		}
+ 		elsif( $debug > 2 ){
+@@ -1282,7 +1283,7 @@
+ 	}
+ 	
+ 	if( $remote_gpass ){
+-		if( ! &ftp'quote( "site gpass $remote_gpass" ) ){
++		if( ! &ftp::quote( "site gpass $remote_gpass" ) ){
+ 			&msg( "Cannot set remote gpass\n" );
+ 		}
+ 		elsif( $debug > 2 ){
+@@ -1496,11 +1497,11 @@
+ {
+ 	if( $connected ){
+ 		&msg( "disconnecting from $connected\n" ) if $debug;
+-		if( ! $ftp'fatalerror ){
+-			&ftp'close();
++		if( ! $ftp::fatalerror ){
++			&ftp::close();
+ 		}
+ 		else {
+-			&ftp'service_closed();
++			&ftp::service_closed();
+ 		}
+ 	}
+ 	$connected = '';
+@@ -1524,11 +1525,11 @@
+ 	&disconnect();
+ 
+ 	if( $proxy ){
+-	    $ftp'proxy = $proxy;
+-	    $ftp'proxy_gateway = $proxy_gateway;
+-	    $ftp'proxy_ftp_port = $proxy_ftp_port;
++	    $ftp::proxy = $proxy;
++	    $ftp::proxy_gateway = $proxy_gateway;
++	    $ftp::proxy_ftp_port = $proxy_ftp_port;
+ 	}
+-	$res = &ftp'open( $site, $ftp_port, $retry_call, $attempts );
++	$res = &ftp::open( $site, $ftp_port, $retry_call, $attempts );
+ 	if( $res == 1 ){
+ 		# Connected
+ 		$connected = $site;
+@@ -1544,7 +1545,7 @@
+ 	if( $debug > 2 ){
+ 		&msg( " prodding remote ftpd\n" );
+ 	}
+-	&ftp'pwd();
++	&ftp::pwd();
+ }
+ 
+ # checkout and fixup any regexps.
+@@ -1774,7 +1775,7 @@
+ 	$remote_type[ 0 ] = 0;
+ 	$remote_mode[ 0 ] = 0;
+ 
+-	if( $remote_fs !~ /cms/ && ! &ftp'cwd( $remote_dir ) ){
++	if( $remote_fs !~ /cms/ && ! &ftp::cwd( $remote_dir ) ){
+ 		if( $get_file ){
+ 			# no files to get
+ 			return 0;
+@@ -1783,8 +1784,8 @@
+ 		&msg( "Failed to change to remote directory ($remote_dir) trying to create it\n" );
+ 		&mkdirs( $remote_dir );
+ 
+-		if( ! &ftp'cwd( $remote_dir ) ){
+-			&msg( "Cannot change to remote directory ($remote_dir) because: $ftp'response\n" );
++		if( ! &ftp::cwd( $remote_dir ) ){
++			&msg( "Cannot change to remote directory ($remote_dir) because: $ftp::response\n" );
+ 			return 0;
+ 		}
+ 	}
+@@ -1807,7 +1808,7 @@
    			local( $f );
    			$f = $dirtmp;
  			$f =~ s/($shell_metachars)/\\$1/g;
@@ -60,7 +267,16 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
    		}
  		if( ! open( DIRTMP, $dirtmp ) ){
  			&msg( "Cannot open $dirtmp\n" );
-@@ -1845,7 +1846,7 @@ sub get_remote_directory_details
+@@ -1827,7 +1828,7 @@
+ 		}
+ 
+ 		&msg( " Getting directory listing from remote file $ls_lR_file\n" ) if $debug;
+-		if( ! &ftp'get( $ls_lR_file, $dirtmp, 0 ) ){
++		if( ! &ftp::get( $ls_lR_file, $dirtmp, 0 ) ){
+ 			&msg( "Cannot get dir listing file\n" );
+ 			return 0;
+ 		}
+@@ -1845,7 +1846,7 @@
    			$f = $dirtmp;
    			$dirtmp =~ s/\.($sys_compress_suffix|$gzip_suffix|$old_gzip_suffix)$//;
    			$udirtmp =~ s/\.($sys_compress_suffix|$gzip_suffix|$ol_gzip_suffix)$//;
@@ -69,7 +285,163 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
  				&msg( "Cannot uncompress directory listing\n" );
  				return 0;
  			}
-@@ -2760,7 +2761,7 @@ sub transfer_file
+@@ -1860,7 +1861,7 @@
+ 	}
+ 	else {
+ 		$use_ls = 1;
+-		if( ! &ftp'type( 'A' ) ){
++		if( ! &ftp::type( 'A' ) ){
+ 			&msg( "Cannot set type to ascii for dir listing, ignored\n" );
+ 			$type_changed = 0;
+ 		}
+@@ -1869,21 +1870,21 @@
+ 		}
+ 	}
+ 	
+-	$lsparse'fstype = $remote_fs;
+-	$lsparse'name = "$site:$package";
++	$lsparse::fstype = $remote_fs;
++	$lsparse::name = "$site:$package";
+ 	
+ 	if( $use_ls ){
+ 		local( $flags ) = $flags_nonrecursive;
+ 		if( $recursive && ! $recurse_hard ){
+ 			$flags = $flags_recursive;
+ 		}
+-		$lsparse'report_subdirs = (! $recurse_hard && $algorithm == 0);
+-	 	if( !&ftp'dir_open( $flags ) ){
+-			&msg( "Cannot get remote directory listing because: $ftp'response\n" );
++		$lsparse::report_subdirs = (! $recurse_hard && $algorithm == 0);
++	 	if( !&ftp::dir_open( $flags ) ){
++			&msg( "Cannot get remote directory listing because: $ftp::response\n" );
+ 			return 0;
+ 		}
+ 		
+-		$rls = "ftp'NS";
++		$rls = "ftp::NS";
+ 	}
+ 		
+ 	$rcwd = '';
+@@ -1892,8 +1893,8 @@
+ 		# relative to the remote_dir
+ 		$rcwd = $remote_dir;
+ 	}
+-	$dateconv'use_timelocal = $use_timelocal;
+-	if( !&lsparse'reset( $rcwd ) ){
++	$dateconv::use_timelocal = $use_timelocal;
++	if( !&lsparse::reset( $rcwd ) ){
+ 		&msg( "$remote_fs: unknown fstype\n" );
+ 		return 0;
+ 	}
+@@ -1923,7 +1924,7 @@
+ 		# Could optimise this out - but it makes sure that
+ 		# the other end gets a command straight after a possibly
+ 		# long dir listing.
+-		if( ! &ftp'type( $text_mode ? 'A' : 'I' ) ){
++		if( ! &ftp::type( $text_mode ? 'A' : 'I' ) ){
+ 			local( $msg ) = "Cannot reset type after dir listing, ";
+ 			if( $type_changed ){
+ 				# I changed it before - so I must be able to
+@@ -1995,7 +1996,7 @@
+ 	while( 1 ){
+ 		while( !eof( $rls ) ){
+ 			( $path, $size, $time, $type, $mode ) =
+-				&lsparse'line( $rls );
++				&lsparse::line( $rls );
+ 			last if $path eq '';
+ 			if( $ls_fix_mappings ){
+ 				local( $old_path ) = $path;
+@@ -2086,9 +2087,9 @@
+ 		}
+ 
+ 		if( $use_ls ){
+-			if( ! &ftp'dir_close() ){
++			if( ! &ftp::dir_close() ){
+ 				&msg( "Failure at end of remote directory" .
+-				 " ($rdir) because: $ftp'response\n" );
++				 " ($rdir) because: $ftp::response\n" );
+ 				return 0;
+ 			}
+ 		}
+@@ -2098,9 +2099,9 @@
+ 			while( 1 ){
+ 				if( $#dir_list < 0 ){
+ 					# Make sure we end in the right directory.
+-					if( ! &ftp'cwd( $remote_dir ) ){
++					if( ! &ftp::cwd( $remote_dir ) ){
+ 						&msg( "Cannot change to remote directory" .
+-						 " ($rdir) because: $ftp'response\n" );
++						 " ($rdir) because: $ftp::response\n" );
+ 						return 0;
+ 					}
+ 					$done = 1;
+@@ -2111,9 +2112,9 @@
+ 				if( $debug > 2 ){
+ 					print "scanning: $remote_dir / $rcwd\n";
+ 				}
+-				if( ! &ftp'cwd( $rdir ) ){
++				if( ! &ftp::cwd( $rdir ) ){
+ 					&msg( "Cannot change to remote directory" .
+-					 " ($rdir) because: $ftp'response\n" );
++					 " ($rdir) because: $ftp::response\n" );
+ 					next;
+ 				}
+ 				last;
+@@ -2121,12 +2122,12 @@
+ 			if( $done ){
+ 				last;
+ 			}
+-		 	if( !&ftp'dir_open( $flags_nonrecursive ) ){
++		 	if( !&ftp::dir_open( $flags_nonrecursive ) ){
+ 				&msg( "Cannot get remote directory" .
+-				  	" listing because: $ftp'response\n" );
++				  	" listing because: $ftp::response\n" );
+ 				return 0;
+ 			}
+-			&lsparse'reset( $rcwd );
++			&lsparse::reset( $rcwd );
+ 			
+ 			# round the loop again.
+ 			next;
+@@ -2517,7 +2518,7 @@
+ 	
+ 	if( $external_mapping ){
+ 		$old_name = $name;
+-		local( $tmp ) = &extmap'map( $name );
++		local( $tmp ) = &extmap::map( $name );
+ 		if( $tmp ne $old_name ){
+ 			$name = $tmp;
+ 		}
+@@ -2678,11 +2679,11 @@
+ 			&transfer_file( $src_path, $dest_path,
+ 				       $attribs, $remote_time[ $srci ] );
+ 		if( $get_file && $newpath eq '' ){
+-			&msg( $log, "Failed to $XFER file $ftp'response\n" );
+-			if( $ftp'response =~ /timeout|timed out/i ){
++			&msg( $log, "Failed to $XFER file $ftp::response\n" );
++			if( $ftp::response =~ /timeout|timed out/i ){
+ 				$timeouts++;
+ 			}
+-			if( $ftp'fatalerror || $timeouts > $max_timeouts ){
++			if( $ftp::fatalerror || $timeouts > $max_timeouts ){
+ 				&msg( $log, "Fatal error talking to site, skipping rest of transfers\n" );
+ 				&disconnect();
+ 				return;
+@@ -2742,11 +2743,11 @@
+ 	}
+ 	
+ 	if( $vms ){
+-		&ftp'type( ($src_path =~ /$vms_xfer_text/i) ? 'A' : 'I' );
++		&ftp::type( ($src_path =~ /$vms_xfer_text/i) ? 'A' : 'I' );
+ 	}
+ 	
+ 	if( $remote_fs eq 'macos' && ! $get_file ){
+-		&ftp'type( 'A' );
++		&ftp::type( 'A' );
+ 	}
+ 	
+ 	if( ! $get_file ){
+@@ -2760,7 +2761,7 @@
    			local( $f ) = $src_file;
  			$f =~ s/($shell_metachars)/\\$1/g;
    			$comptemp = "$big_temp/.out$$";
@@ -78,7 +450,52 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
    			$src_file = $comptemp;
  		}
  		
-@@ -2840,10 +2841,10 @@ sub transfer_file
+@@ -2768,15 +2769,15 @@
+ 			$temp = $dest_path;
+ 		}
+ 
+-		if( ! &ftp'put( $src_file, $temp, $restart ) ){
+-			&msg( $log, "Failed to put $src_file: $ftp'response\n" );
++		if( ! &ftp::put( $src_file, $temp, $restart ) ){
++			&msg( $log, "Failed to put $src_file: $ftp::response\n" );
+ 			unlink( $comptemp ) if $comptemp;
+ 			return '';
+ 		}
+ 	
+ 		unlink( $comptemp ) if $comptemp;
+-		if( !$no_rename && ! &ftp'rename( $temp, $dest_path ) ){
+-			&msg( $log, "Failed to remote rename $temp to $dest_path: $ftp'response\n" );
++		if( !$no_rename && ! &ftp::rename( $temp, $dest_path ) ){
++			&msg( $log, "Failed to remote rename $temp to $dest_path: $ftp::response\n" );
+ 			return '';
+ 		}
+ 
+@@ -2800,11 +2801,11 @@
+ 	# it.
+ 
+ 	# Get a file
+-	&ftp'dostrip( $strip_cr );
++	&ftp::dostrip( $strip_cr );
+ 	$start_time = time;
+-	if( ! &ftp'get( $src_path, $temp, $restart ) ){
+-		if( !$failed_gets_excl || $ftp'response !~ /$failed_gets_excl/ ){
+-			&msg( $log, "Failed to get $src_path: $ftp'response\n" );
++	if( ! &ftp::get( $src_path, $temp, $restart ) ){
++		if( !$failed_gets_excl || $ftp::response !~ /$failed_gets_excl/ ){
++			&msg( $log, "Failed to get $src_path: $ftp::response\n" );
+ 		}
+ 
+ 		# Time stamp the temp file to allow for a restart
+@@ -2823,7 +2824,7 @@
+ 
+ 	# delete source file after successful transfer
+ 	if( $delete_source ){
+-		if( &ftp'delete( $src_path ) ){
++		if( &ftp::delete( $src_path ) ){
+ 			&msg( $log, "Deleted remote $src_path\n");
+ 		}
+ 		else {
+@@ -2840,10 +2841,10 @@
    		# Am I doing compress to gzip conversion?
     		if( $compress_conv_patt && $src_path =~ /$compress_conv_patt/ &&
    		    $compress_suffix eq $gzip_suffix ){
@@ -91,7 +508,7 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
    		}
    		&sys( $comp );
  		$temp =~ s/\\($shell_metachars)/$1/g;
-@@ -3174,9 +3175,9 @@ sub do_delete
+@@ -3174,9 +3175,9 @@
  					&msg( $log, "rmdir $cwd/$del failed: $!\n" );
  			}
  			else {
@@ -99,8 +516,77 @@ $NetBSD: patch-ac,v 1.5 2011/09/12 16:35:43 taca Exp $
 -				&ftp'delete( "$del" ) ||
 -					&msg( $log, "ftp delete DIR $del failed\n" );
 +				&msg( $log, "deldir DIR $del\n" );
-+				&ftp'deldir( "$del" ) ||
++				&ftp::deldir( "$del" ) ||
 +					&msg( $log, "ftp deldir DIR $del failed\n" );
  			}
  		}
  		else {
+@@ -3184,7 +3185,7 @@
+ 				&msg( $log, "NEED TO rmdir $cwd/$del\n" );
+ 			}
+ 			else {
+-				&msg( $log, "NEED TO ftp'deldir $del\n" );
++				&msg( $log, "NEED TO ftp::deldir $del\n" );
+ 			}
+ 		}
+ 		return;
+@@ -3199,7 +3200,7 @@
+ 		}
+ 		else {
+ 			&msg( $log, "delete FILE $del\n" );
+-			&ftp'delete( "$del" ) ||
++			&ftp::delete( "$del" ) ||
+ 				&msg( $log, "ftp delete FILE $del failed\n" );
+ 		}
+ 	}
+@@ -3208,7 +3209,7 @@
+ 			&msg( $log, "NEED TO unlink $cwd/$del\n" );
+ 		}
+ 		else {
+-			&msg( $log, "NEED TO ftp'delete $del\n" );
++			&msg( $log, "NEED TO ftp::delete $del\n" );
+ 		}
+ 	}
+ }
+@@ -3345,12 +3346,12 @@
+ 	}
+ 	else {
+ 		# make a remote directory
+-		$val = &ftp'mkdir( $dir );
++		$val = &ftp::mkdir( $dir );
+ 
+ 		# The mkdir might have failed due to bad mode
+ 		# So try to chmod it anyway
+ 		if( $remote_has_chmod ){
+-			$val = &ftp'chmod( $dir, $mode );
++			$val = &ftp::chmod( $dir, $mode );
+ 		}
+ 	}
+ 
+@@ -3369,14 +3370,14 @@
+ 	}
+ 	else {
+ 		# check if remote directory exists
+-		local($old_dir) = &ftp'pwd();		
++		local($old_dir) = &ftp::pwd();		
+ 		
+-		$val = &ftp'cwd($dir);
++		$val = &ftp::cwd($dir);
+ 
+ 		# If I didn't manage to change dir should be where I was!
+ 		if( $val ){
+ 			# go back to the original directory
+-			&ftp'cwd($old_dir) || die "Cannot cd to original remote directory";
++			&ftp::cwd($old_dir) || die "Cannot cd to original remote directory";
+ 		}
+ 	}
+ 	return $val;
+@@ -3430,7 +3431,7 @@
+ 	else {
+ 		# change the remote file
+ 		if( $remote_has_chmod ){
+-			&ftp'chmod( $path, $mode );
++			&ftp::chmod( $path, $mode );
+ 		}
+ 	}
+ }
