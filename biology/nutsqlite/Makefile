@@ -1,6 +1,7 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.2 2024/04/11 18:21:04 wiz Exp $
 
 DISTNAME=	NUTsqlite-2.0.6
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nut/}
 EXTRACT_SUFX=	.zip
