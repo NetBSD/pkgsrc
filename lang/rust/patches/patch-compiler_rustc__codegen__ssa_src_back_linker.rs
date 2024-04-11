@@ -1,7 +1,7 @@
-$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.13 2024/04/11 19:53:50 tnn Exp $
+$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.14 2024/04/11 19:54:42 tnn Exp $
 
 Do not use @rpath on Darwin.
-Find external linunwind on Linux.
+Find external libunwind on Linux.
 
 --- compiler/rustc_codegen_ssa/src/back/linker.rs.orig	2023-12-21 16:55:28.000000000 +0000
 +++ compiler/rustc_codegen_ssa/src/back/linker.rs
