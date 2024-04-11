@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/01/10 15:17:50 bacon Exp $
+# $NetBSD: Makefile,v 1.101 2024/04/11 18:47:42 wiz Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -56,7 +56,7 @@ SUBDIR+=	mopac
 SUBDIR+=	mpqc
 SUBDIR+=	mummer
 SUBDIR+=	ncbi-blast+
-SUBDIR+=	nut
+SUBDIR+=	nutsqlite
 SUBDIR+=	openbabel
 SUBDIR+=	p5-Bio-ASN1-EntrezGene
 SUBDIR+=	pdbalign
