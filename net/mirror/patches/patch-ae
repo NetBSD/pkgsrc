@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
+$NetBSD: patch-ae,v 1.9 2024/04/11 17:11:00 bouyer Exp $
 
 * Enable deleting remote directories.
 * Proper signal handling.
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
 
 --- ftp.pl.orig	2024-04-11 11:08:05.969004188 +0200
 +++ ftp.pl	2024-04-11 11:07:48.797471889 +0200
-@@ -28,17 +28,17 @@
+@@ -28,16 +28,16 @@
  #  $ftp_port = 21;
  #  $retry_call = 1;
  #  $attempts = 2;
@@ -29,7 +29,6 @@ $NetBSD: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
 +#  &ftp::close();
  #
  #
- # $Id: patch-ae,v 1.8 2024/04/11 10:23:44 bouyer Exp $
 @@ -94,9 +94,9 @@
  
  # This is a "global" it contains the last response from the remote ftp server
