@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2024/03/27 09:15:02 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2024/04/11 06:52:56 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -74,7 +74,7 @@ CARGO_CRATE_DEPENDS+=	memchr-2.6.3
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.0
 CARGO_CRATE_DEPENDS+=	natord-1.0.9
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
-CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.49.0
+CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	number_prefix-0.4.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
@@ -121,7 +121,7 @@ CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.5
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	similar-2.2.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.11
-CARGO_CRATE_DEPENDS+=	snapbox-0.5.5
+CARGO_CRATE_DEPENDS+=	snapbox-0.5.9
 CARGO_CRATE_DEPENDS+=	snapbox-macros-0.3.8
 CARGO_CRATE_DEPENDS+=	syn-2.0.29
 CARGO_CRATE_DEPENDS+=	tempfile-3.8.0
@@ -137,7 +137,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec-1.2.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.5
 CARGO_CRATE_DEPENDS+=	toml_edit-0.22.6
-CARGO_CRATE_DEPENDS+=	trycmd-0.15.0
+CARGO_CRATE_DEPENDS+=	trycmd-0.15.1
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.5
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.11
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.17
