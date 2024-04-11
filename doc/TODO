@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24315 2024/04/11 06:55:36 wiz Exp $
+$NetBSD: TODO,v 1.24316 2024/04/11 18:37:29 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -982,7 +982,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ntop-5.0
 	o nts-82
 	o nuitka-0.6.14.4
-	o nut-20.1
 	o nvidia-texture-tools-2.1.1
 	o nxtvepg-2.8.1
 	o objc-3.3.24
