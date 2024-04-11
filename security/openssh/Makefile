@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.280 2023/12/18 15:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.281 2024/04/11 05:29:57 schmonz Exp $
 
 DISTNAME=		openssh-9.6p1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -130,6 +131,7 @@ PLIST.darwin=		yes
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 OWN_DIRS=		${OPENSSH_CHROOT}
+MAKE_DIRS=		${SSH_PID_DIR}
 RCD_SCRIPTS=		sshd
 RCD_SCRIPT_SRC.sshd=	${WRKDIR}/sshd.sh
 SMF_METHODS=		sshd
