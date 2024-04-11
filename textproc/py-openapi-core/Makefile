@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/02/21 19:53:03 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/11 07:58:04 adam Exp $
 
-DISTNAME=	openapi_core-0.19.0
+DISTNAME=	openapi_core-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-core/}

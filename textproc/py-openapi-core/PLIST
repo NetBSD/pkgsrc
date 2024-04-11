@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/21 19:53:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/11 07:58:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -292,6 +292,15 @@ ${PYSITELIB}/openapi_core/templating/paths/exceptions.pyo
 ${PYSITELIB}/openapi_core/templating/paths/finders.py
 ${PYSITELIB}/openapi_core/templating/paths/finders.pyc
 ${PYSITELIB}/openapi_core/templating/paths/finders.pyo
+${PYSITELIB}/openapi_core/templating/paths/iterators.py
+${PYSITELIB}/openapi_core/templating/paths/iterators.pyc
+${PYSITELIB}/openapi_core/templating/paths/iterators.pyo
+${PYSITELIB}/openapi_core/templating/paths/protocols.py
+${PYSITELIB}/openapi_core/templating/paths/protocols.pyc
+${PYSITELIB}/openapi_core/templating/paths/protocols.pyo
+${PYSITELIB}/openapi_core/templating/paths/types.py
+${PYSITELIB}/openapi_core/templating/paths/types.pyc
+${PYSITELIB}/openapi_core/templating/paths/types.pyo
 ${PYSITELIB}/openapi_core/templating/paths/util.py
 ${PYSITELIB}/openapi_core/templating/paths/util.pyc
 ${PYSITELIB}/openapi_core/templating/paths/util.pyo
