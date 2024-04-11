@@ -1,11 +1,12 @@
-$NetBSD: patch-ag,v 1.2 2011/09/12 16:35:43 taca Exp $
+$NetBSD: patch-ag,v 1.3 2024/04/11 10:23:44 bouyer Exp $
 
 * Avoid to use timelocal.pl which cause obsolete warning with perl 5.14.
 * Make sure to use 4-digit year.
+* Fix deprecation warning (change ' to ::) for newer perl
 
---- dateconv.pl.orig	1998-05-29 19:04:32.000000000 +0000
-+++ dateconv.pl
-@@ -47,7 +47,8 @@ sub lstime_to_standard
+--- dateconv.pl.orig	2024-04-11 11:08:05.967542752 +0200
++++ dateconv.pl	2024-04-11 11:07:48.795406481 +0200
+@@ -47,7 +47,8 @@
  }
  
  
@@ -15,7 +16,35 @@ $NetBSD: patch-ag,v 1.2 2011/09/12 16:35:43 taca Exp $
  package dateconv;
  
  # Use timelocal rather than gmtime.
-@@ -149,5 +150,5 @@ sub main'time_to_standard
+@@ -74,7 +75,7 @@
+ # input date and time string from ftp "ls -l", such as Mmm dd yyyy or
+ # Mmm dd HH:MM,
+ # return $time number via gmlocal( $string ).
+-sub main'lstime_to_time
++sub main::lstime_to_time
+ {
+ 	package dateconv;
+ 
+@@ -133,15 +134,15 @@
+ 	$year += 50 if 37 < $year && $year < 70 ;
+ 
+ 	if( $use_timelocal ){
+-		return &'timelocal( $secs, $mins, $hours, $day, $month, $year );
++		return &::timelocal( $secs, $mins, $hours, $day, $month, $year );
+ 	}
+ 	else {
+-		return &'timegm( $secs, $mins, $hours, $day, $month, $year );
++		return &::timegm( $secs, $mins, $hours, $day, $month, $year );
+ 	}
+ }
+ 
+ # input time number, output GMT string as "dd Mmm YY HH:MM"
+-sub main'time_to_standard
++sub main::time_to_standard
+ {
+ 	package dateconv;
+ 
+@@ -149,5 +150,5 @@
  
  	local( $sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst ) =
  		 gmtime( $time );
