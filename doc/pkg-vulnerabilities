@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.168 2024/04/10 19:49:30 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.169 2024/04/11 06:46:19 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14031,7 +14031,7 @@ fontforge-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-175
 global<6.6.1		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17531
 ocaml-batteries-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17519
 swi-prolog-lite-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17524
-scummvm-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17528
+scummvm<2.2.0		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17528
 py{27,34,35,36}-kiwi-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17532
 ruby{22,23,24}-nexpose-[0-9]*		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17532
 vlc<3.0.0		memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2017-17670
@@ -15888,7 +15888,7 @@ hdf5-[0-9]*	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-16438
 pidgin<2.11.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2016-1000030
 npm<3.10.7	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2016-1000232
 py{27,34,35,36,37,38}-flask-admin-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-16516
-zziplib-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-16548
+zziplib<0.13.70	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2018-16548
 sympa<6.2.36	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-1000671
 okular<18.08.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2018-1000801
 accountsservice<0.6.50	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2018-14036
