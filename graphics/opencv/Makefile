@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2024/04/11 11:45:46 joerg Exp $
+# $NetBSD: Makefile,v 1.132 2024/04/11 18:47:53 adam Exp $
 
 # Used by pyversion.mk
 BUILD_USES_CMAKE=	yes
@@ -15,7 +15,7 @@ INSTALLATION_DIRS+=	share/doc/opencv/papers
 INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
 INSTALLATION_DIRS+=	share/OpenCV/haarcascades
 
-PKGCONFIG_OVERRIDE+=		cmake-pkgsrc-build/unix-install/opencv.pc
+PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/unix-install/opencv.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 PY_PATCHPLIST=		yes
