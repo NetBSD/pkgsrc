@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/11/26 09:53:22 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/11 07:49:44 adam Exp $
 
-DISTNAME=	idna-3.6
+DISTNAME=	idna-3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/idna/}
