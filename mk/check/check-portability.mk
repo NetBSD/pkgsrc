@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.20 2022/11/23 11:55:43 jperkin Exp $
+# $NetBSD: check-portability.mk,v 1.21 2024/04/11 11:44:34 joerg Exp $
 #
 # This file checks that the extracted shell programs don't contain
 # bashisms or other constructs that only work on some platforms.
@@ -53,4 +53,5 @@ _check-portability:
 		PREFIX=${PREFIX}					\
 		PATCHDIR=${PATCHDIR}					\
 		CHECK_PORTABILITY_EXPERIMENTAL=${CHECK_PORTABILITY_EXPERIMENTAL:Uno} \
+		LC_ALL=C \
 		${SH} ${PKGSRCDIR}/mk/check/check-portability.sh
