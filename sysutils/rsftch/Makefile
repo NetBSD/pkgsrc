@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/04/11 18:43:42 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/12 11:56:29 pin Exp $
 
-DISTNAME=	rsftch-0.4.1
+DISTNAME=	rsftch-0.4.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
