@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2024/04/12 19:40:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.342 2024/04/12 19:41:56 riastradh Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -57,6 +57,17 @@ CONFIGURE_ARGS.Darwin+=	--disable-visibility
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+TOOL_DEPENDS+=		glib2-tools>=0:../../devel/glib2-tools
+CONFIGURE_ARGS+=	GLIB_GENMARSHAL=${TOOLBASE:Q}/bin/glib-genmarshal
+CONFIGURE_ARGS+=	GLIB_MKENUMS=${TOOLBASE:Q}/bin/glib-mkenums
+
+# XXX Sure would be nice if this didn't rely on pulling in all the
+# graphics stack dependencies at build-time for this single program.
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
+CONFIGURE_ARGS+=	GTK_UPDATE_ICON_CACHE=${TOOLBASE:Q}/bin/gtk2-update-icon-cache
+.endif
 
 #SUBST_CLASSES+=	pthread
 #SUBST_STAGE.pthread=	pre-configure
