@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2024/04/12 19:40:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.110 2024/04/12 19:40:56 riastradh Exp $
 
 DISTNAME=	atk-2.38.0
 PKGREVISION=	1
@@ -18,6 +18,15 @@ MESON_REQD+=	0.56.2
 PKGCONFIG_OVERRIDE=		output/meson-private/atk.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
+MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
+MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
+MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
