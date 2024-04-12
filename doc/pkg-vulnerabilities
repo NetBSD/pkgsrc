@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.169 2024/04/11 06:46:19 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.170 2024/04/12 07:28:33 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14074,8 +14074,8 @@ poppler-utils<0.57.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-97
 poppler<0.60.0		null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2017-14975
 poppler<0.60.0		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-14976
 poppler<0.60.0		null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2017-14977
-tex-context-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17513
-tex-lualibs-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17513
+tex-context<2024	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17513
+tex-lualibs<2.61	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17513
 ruby{22,23,24,25}-rails-[0-9]*	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2017-17920
 ImageMagick<7.0.7.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-18008
 opencv<3.4.1		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-18009
