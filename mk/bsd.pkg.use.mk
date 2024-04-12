@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.74 2023/06/27 10:27:20 riastradh Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.75 2024/04/12 19:54:44 riastradh Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -91,8 +91,8 @@ TOOL_DEPENDS+=		libtool-fortran>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../d
 .  endif
 .else
 .  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-PKG_LIBTOOL?=		${TOOLBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/libtool
-PKG_SHLIBTOOL?=		${TOOLBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/shlibtool
+PKG_LIBTOOL?=		${TOOLBASE}/cross-${TARGET_MACHINE_PLATFORM:U${MACHINE_PLATFORM}}/bin/libtool
+PKG_SHLIBTOOL?=		${TOOLBASE}/cross-${TARGET_MACHINE_PLATFORM:U${MACHINE_PLATFORM}}/bin/shlibtool
 .  else
 PKG_LIBTOOL?=		${TOOLBASE}/bin/libtool
 PKG_SHLIBTOOL?=		${TOOLBASE}/bin/shlibtool
@@ -103,7 +103,7 @@ SHLIBTOOL?=		${WRAPPER_BINDIR}/shlibtool
 .if defined(USE_LIBTOOL)
 LIBTOOL_REQD?=		2.4.2nb9
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-TOOL_DEPENDS+=		cross-libtool-base-${MACHINE_ARCH}>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../cross/cross-libtool-base
+TOOL_DEPENDS+=		cross-libtool-base-${MACHINE_PLATFORM}>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../cross/cross-libtool-base
 .else
 TOOL_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 .endif

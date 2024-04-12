@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.19 2024/03/31 13:41:23 js Exp $
+# $NetBSD: depends.mk,v 1.20 2024/04/12 19:54:44 riastradh Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -90,6 +90,8 @@ _RESOLVE_DEPENDS_CMD=	\
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
+CROSSTARGETSETTINGS=	${CROSSVARS:@_v_@TARGET_${_v_}=${${_v_}}@}
+
 # _DEPENDS_INSTALL_CMD checks whether the package $pattern is installed,
 #	and installs it if necessary.
 #
@@ -110,17 +112,20 @@ _DEPENDS_INSTALL_CMD=							\
 	case $$type in							\
 	bootstrap|tool)							\
 		case "${USE_CROSS_COMPILE:Uno:tl}" in			\
-		yes) extradep="" ;;					\
-		*) extradep=" ${PKGNAME}" ;;				\
+		yes)	extradep="";					\
+			crosstargetsettings=${CROSSTARGETSETTINGS:Q};	\
+			;;						\
+		*)	extradep=" ${PKGNAME}";				\
+			crosstargetsettings=;				\
+			;;						\
 		esac;							\
 		cross=no;						\
-		archopt=TARGET_ARCH=${MACHINE_ARCH};			\
 		pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		;;							\
-	build|test|full)							\
+	build|test|full)						\
 		extradep=" ${PKGNAME}";					\
+		crosstargetsettings=;					\
 		cross=${USE_CROSS_COMPILE:Uno};				\
-		archopt=;						\
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		;;							\
 	esac;								\
@@ -133,11 +138,12 @@ _DEPENDS_INSTALL_CMD=							\
 		cd $$dir;						\
 		unset _PKGSRC_BARRIER || true;				\
 		unset MAKEFLAGS || true;				\
+		unset ${CROSSVARS:@_v_@TARGET_${_v_}@} || true;		\
 		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG:Q}\
 			_PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}"	\
 			PKGNAME_REQD="$$pattern"			\
 			USE_CROSS_COMPILE=$$cross			\
-			$$archopt					\
+			$$crosstargetsettings				\
 		    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target;	\
 		case $$type in						\
 		bootstrap|tool)						\
