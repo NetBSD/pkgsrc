@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.21 2024/04/12 19:55:29 riastradh Exp $
+# $NetBSD: depends.mk,v 1.22 2024/04/12 19:57:34 riastradh Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -225,11 +225,22 @@ _pkgformat-post-install-dependencies: .PHONY ${_RDEPENDS_FILE} ${_RRDEPENDS_FILE
 pkg_install-depends:
 	${RUN}if [ `${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302` -lt ${PKGTOOLS_REQD} ]; then \
 	${PHASE_MSG} "Trying to handle out-dated pkg_install..."; \
-	cd ../../pkgtools/pkg_install && ${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
+	case "${USE_CROSS_COMPILE:Unu:tl}" in \
+	yes)	extradep="";; \
+	*)	extradep=" ${PKGNAME}";; \
+	esac; \
+	unset _PKGSRC_BARRIER || true; \
+	unset MAKEFLAGS || true; \
+	unset ${CROSSVARS:@_v_@TARGET_${_v_}@} || true; \
+	cd ../../pkgtools/pkg_install && \
+	${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG:Q} \
+	    _PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}" \
+	    USE_CROSS_COMPILE=no \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes clean && \
-	cd ../../pkgtools/pkg_install && ${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS=" ${PKGNAME}${_PKGSRC_DEPS}" \
+	cd ../../pkgtools/pkg_install && \
+	${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG:Q} \
+	    _PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}" \
+	    USE_CROSS_COMPILE=no \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes ${DEPENDS_TARGET:Q}; \
 	fi
 
