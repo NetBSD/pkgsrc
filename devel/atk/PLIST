@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2022/11/23 10:59:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2024/04/12 19:40:41 riastradh Exp $
 include/atk-1.0/atk/atk-autocleanups.h
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
@@ -34,12 +34,12 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 include/atk-1.0/atk/atkversion.h
 include/atk-1.0/atk/atkwindow.h
-lib/girepository-1.0/Atk-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/Atk-1.0.typelib
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
 lib/libatk-1.0.so.0.23809.1
 lib/pkgconfig/atk.pc
-share/gir-1.0/Atk-1.0.gir
+${PLIST.introspection}share/gir-1.0/Atk-1.0.gir
 share/locale/af/LC_MESSAGES/atk10.mo
 share/locale/am/LC_MESSAGES/atk10.mo
 share/locale/an/LC_MESSAGES/atk10.mo
