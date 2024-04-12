@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2411 2024/04/12 09:09:16 hauke Exp $
+$NetBSD: CHANGES-2024,v 1.2412 2024/04/12 09:58:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4015,3 +4015,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/php-jpgraph to 4.4.2 [wiz 2024-04-12]
 	Updated devel/alex to 3.5.1.0 [wiz 2024-04-12]
 	Updated net/netatalk22 to 2.3.2 [hauke 2024-04-12]
+	Updated devel/py-test-cov to 5.0.0 [adam 2024-04-12]
+	Updated devel/py-test-isort to 4.0.0 [adam 2024-04-12]
