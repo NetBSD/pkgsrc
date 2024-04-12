@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2024/04/07 07:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2024/04/12 19:41:09 riastradh Exp $
 
 DISTNAME=	pango-1.52.2
 PKGREVISION=	1
@@ -22,10 +22,22 @@ SUBST_STAGE.wrksrc=	pre-configure
 SUBST_FILES.wrksrc=	output/utils/pango-view.sh
 SUBST_VARS.wrksrc=	WRKSRC
 
+.include "../../mk/bsd.prefs.mk"
+
 MESON_REQD+=		0.55.3
 MESON_ARGS+=		-Dcairo=enabled
 MESON_ARGS+=		-Dfontconfig=enabled
-MESON_ARGS+=		-Dintrospection=enabled
+
+PLIST_VARS+=		native
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
+MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
+MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
+MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+.else
+PLIST.native=				yes
+.endif
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/pangocairo.pc
@@ -57,8 +69,6 @@ BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=1.0.6
 .include "../../converters/fribidi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.60
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.11.91
 .include "../../fonts/fontconfig/buildlink3.mk"

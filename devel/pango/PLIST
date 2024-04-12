@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2024/04/04 08:10:08 pin Exp $
+@comment $NetBSD: PLIST,v 1.92 2024/04/12 19:41:09 riastradh Exp $
 bin/pango-list
 bin/pango-segmentation
 bin/pango-view
@@ -40,12 +40,12 @@ include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
 ${PLIST.x11}include/pango-1.0/pango/pangoxft-render.h
 ${PLIST.x11}include/pango-1.0/pango/pangoxft.h
-lib/girepository-1.0/Pango-1.0.typelib
-lib/girepository-1.0/PangoCairo-1.0.typelib
-lib/girepository-1.0/PangoFT2-1.0.typelib
-lib/girepository-1.0/PangoFc-1.0.typelib
-lib/girepository-1.0/PangoOT-1.0.typelib
-${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/Pango-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/PangoCairo-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/PangoFT2-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/PangoFc-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/PangoOT-1.0.typelib
+${PLIST.introspection}${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
 lib/libpango-1.0.so.0.5200.2
@@ -64,10 +64,10 @@ lib/pkgconfig/pangofc.pc
 lib/pkgconfig/pangoft2.pc
 lib/pkgconfig/pangoot.pc
 ${PLIST.x11}lib/pkgconfig/pangoxft.pc
-man/man1/pango-view.1
-share/gir-1.0/Pango-1.0.gir
-share/gir-1.0/PangoCairo-1.0.gir
-share/gir-1.0/PangoFT2-1.0.gir
-share/gir-1.0/PangoFc-1.0.gir
-share/gir-1.0/PangoOT-1.0.gir
-${PLIST.x11}share/gir-1.0/PangoXft-1.0.gir
+${PLIST.native}man/man1/pango-view.1
+${PLIST.introspection}share/gir-1.0/Pango-1.0.gir
+${PLIST.introspection}share/gir-1.0/PangoCairo-1.0.gir
+${PLIST.introspection}share/gir-1.0/PangoFT2-1.0.gir
+${PLIST.introspection}share/gir-1.0/PangoFc-1.0.gir
+${PLIST.introspection}share/gir-1.0/PangoOT-1.0.gir
+${PLIST.introspection}${PLIST.x11}share/gir-1.0/PangoXft-1.0.gir
