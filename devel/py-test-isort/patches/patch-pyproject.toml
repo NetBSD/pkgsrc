@@ -1,0 +1,14 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/04/12 09:58:07 adam Exp $
+
+Do not install additional LICENSE.
+
+--- pyproject.toml.orig	2024-04-12 09:55:54.110167676 +0000
++++ pyproject.toml
+@@ -26,7 +26,6 @@ classifiers = [
+ 	"Framework :: Pytest",
+ ]
+ packages = [{ include = "pytest_isort" }]
+-include = ["LICENSE.rst"]
+ 
+ [tool.poetry.plugins.pytest11]
+ isort = "pytest_isort"
