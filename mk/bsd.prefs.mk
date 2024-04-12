@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.439 2024/01/26 03:25:47 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.440 2024/04/12 19:53:25 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -87,23 +87,23 @@ UNAME=/run/current-system/sw/bin/uname
 UNAME=echo Unknown
 .endif
 
-.if !defined(OPSYS)
-OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g:C/^CYGWIN_.*$/Cygwin/}
-MAKEFLAGS+=		OPSYS=${OPSYS:Q}
+.if !defined(NATIVE_OPSYS)
+NATIVE_OPSYS:=		${:!${UNAME} -s!:S/-//g:S/\///g:C/^CYGWIN_.*$/Cygwin/}
+MAKEFLAGS+=		NATIVE_OPSYS=${NATIVE_OPSYS:Q}
 .endif
 
 # OS_VARIANT is used to differentiate operating systems which have a common
 # basis but offer contrasting environments, for example Linux distributions
 # or illumos forks.
-OS_VARIANT?=		# empty
+NATIVE_OS_VARIANT?=	# empty
 
 # The _CMD indirection allows code below to modify these values
 # without executing the commands at all.  Later, recursed make
 # invocations will skip these blocks entirely thanks to MAKEFLAGS.
-.if !defined(OS_VERSION)
-_OS_VERSION_CMD=	${UNAME} -r
-OS_VERSION=		${_OS_VERSION_CMD:sh}
-MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
+.if !defined(NATIVE_OS_VERSION)
+_NATIVE_OS_VERSION_CMD=	${UNAME} -r
+NATIVE_OS_VERSION=	${_NATIVE_OS_VERSION_CMD:sh}
+MAKEFLAGS+=		NATIVE_OS_VERSION=${NATIVE_OS_VERSION:Q}
 .endif
 
 #
@@ -112,11 +112,11 @@ MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 # default command is likely correct for most OS, those that need to can set
 # it to a custom command in the later OPSYS-specific section.
 #
-.if !defined(OPSYS_VERSION)
-_OPSYS_VERSION_CMD=	${UNAME} -r | \
+.if !defined(NATIVE_OPSYS_VERSION)
+_NATIVE_OPSYS_VERSION_CMD=	${UNAME} -r | \
 			awk -F. '{major=int($$1); minor=int($$2); if (minor>=100) minor=99; patch=int($$3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'
-OPSYS_VERSION=		${_OPSYS_VERSION_CMD:sh}
-MAKEFLAGS+=		OPSYS_VERSION=${OPSYS_VERSION:Q}
+NATIVE_OPSYS_VERSION=	${_NATIVE_OPSYS_VERSION_CMD:sh}
+MAKEFLAGS+=		NATIVE_OPSYS_VERSION=${NATIVE_OPSYS_VERSION:Q}
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk,
@@ -155,194 +155,244 @@ MACHINE_GNU_ARCH?=		${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 
 ## If changes are made to how OS_VERSION is set below please keep
 ## "pkgsrc/pkgtools/osabi/INSTALL" in-sync.
-.if ${OPSYS} == "NetBSD"
-LOWER_OPSYS?=		netbsd
+.if ${NATIVE_OPSYS} == "NetBSD"
+NATIVE_LOWER_OPSYS?=	netbsd
 
-.elif ${OPSYS} == "AIX"
+.elif ${NATIVE_OPSYS} == "AIX"
 .  if exists(/usr/bin/oslevel)
-_OS_VERSION!=		/usr/bin/oslevel
+_NATIVE_OS_VERSION!=	/usr/bin/oslevel
 .  else
-_OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
+_NATIVE_OS_VERSION!=	echo `${UNAME} -v`.`${UNAME} -r`
 .  endif
-OS_VERSION=		${_OS_VERSION:C/([0-9]*\.[0-9]*).*/\1/}
-LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
-LOWER_OPSYS?=		aix
-LOWER_VENDOR?=		ibm
+NATIVE_OS_VERSION=		${_NATIVE_OS_VERSION:C/([0-9]*\.[0-9]*).*/\1/}
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${_NATIVE_OS_VERSION}
+NATIVE_LOWER_OPSYS?=		aix
+NATIVE_LOWER_VENDOR?=		ibm
 
-.elif ${OPSYS} == "BSDOS"
-LOWER_OPSYS?=		bsdi
+.elif ${NATIVE_OPSYS} == "BSDOS"
+NATIVE_LOWER_OPSYS?=	bsdi
 
-.elif ${OPSYS} == "Cygwin"
-LOWER_OPSYS?=		cygwin
-LOWER_VENDOR?=		pc
-_OS_VERSION!=		${UNAME} -r
-OS_VERSION=		${_OS_VERSION:C/\(.*\)//}
-OS_VARIANT!=		${UNAME} -s
+.elif ${NATIVE_OPSYS} == "Cygwin"
+NATIVE_LOWER_OPSYS?=	cygwin
+NATIVE_LOWER_VENDOR?=	pc
+_NATIVE_OS_VERSION!=	${UNAME} -r
+NATIVE_OS_VERSION=	${_NATIVE_OS_VERSION:C/\(.*\)//}
+NATIVE_OS_VARIANT!=	${UNAME} -s
 
-.elif ${OPSYS} == "Darwin"
-LOWER_OPSYS?=		darwin
-LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
-LOWER_VENDOR?=		apple
-_OPSYS_VERSION_CMD=	sw_vers -productVersion | \
+.elif ${NATIVE_OPSYS} == "Darwin"
+NATIVE_LOWER_OPSYS?=		darwin
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${NATIVE_OS_VERSION:C/([0-9]*).*/\1/}
+NATIVE_LOWER_VENDOR?=		apple
+_NATIVE_OPSYS_VERSION_CMD=	sw_vers -productVersion | \
 			awk -F. '{major=int($$1); minor=int($$2); if (minor>=100) minor=99; patch=int($$3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'
 
-.elif ${OPSYS} == "DragonFly"
-OS_VERSION:=		${OS_VERSION:C/-.*$//}
-LOWER_OPSYS?=		dragonfly
-LOWER_VENDOR?=		pc
+.elif ${NATIVE_OPSYS} == "DragonFly"
+NATIVE_OS_VERSION:=	${NATIVE_OS_VERSION:C/-.*$//}
+NATIVE_LOWER_OPSYS?=	dragonfly
+NATIVE_LOWER_VENDOR?=	pc
 
-.elif ${OPSYS} == "FreeBSD"
-OS_VERSION:=		${OS_VERSION:C/-.*$//}
-LOWER_OPSYS?=		freebsd
-LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
+.elif ${NATIVE_OPSYS} == "FreeBSD"
+NATIVE_OS_VERSION:=		${OS_VERSION:C/-.*$//}
+NATIVE_LOWER_OPSYS?=		freebsd
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
 .  if ${MACHINE_ARCH} == "i386"
-LOWER_VENDOR?=		pc
+NATIVE_LOWER_VENDOR?=		pc
 .  endif
-LOWER_VENDOR?=		unknown
+NATIVE_LOWER_VENDOR?=		unknown
 
-.elif ${OPSYS} == "Haiku"
-LOWER_OPSYS?=		haiku
-.  if ${MACHINE_ARCH} == "i386"
-LOWER_VENDOR?=		pc
+.elif ${NATIVE_OPSYS} == "Haiku"
+NATIVE_LOWER_OPSYS?=		haiku
+.  if ${NATIVE_MACHINE_ARCH} == "i386"
+NATIVE_LOWER_VENDOR?=		pc
 .  endif
 
-.elif ${OPSYS} == "Interix"
-LOWER_OPSYS?=		interix
-LOWER_VENDOR?=		pc
+.elif ${NATIVE_OPSYS} == "Interix"
+NATIVE_LOWER_OPSYS?=		interix
+NATIVE_LOWER_VENDOR?=		pc
 .  if exists(/usr/lib/libc.so.5.2) || exists(/usr/lib/x86/libc.so.5.2)
-LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${NATIVE_OS_VERSION:C/([0-9]*).*/\1/}
 .  else
-LOWER_OPSYS_VERSUFFIX?=	3
+NATIVE_LOWER_OPSYS_VERSUFFIX?=	3
 .    if exists(/usr/lib/libc.so.3.5)
-OS_VERSION=		3.5
+NATIVE_OS_VERSION=		3.5
 .    elif exists(/usr/lib/libc.so.3.1)
-OS_VERSION=		3.1
+NATIVE_OS_VERSION=		3.1
 .    else
-OS_VERSION=		3.0
+NATIVE_OS_VERSION=		3.0
 .    endif
 .  endif
 
-.elif ${OPSYS} == "MirBSD"
-LOWER_OPSYS?=		mirbsd
-LOWER_OPSYS_VERSUFFIX=	${OS_VERSION}
-LOWER_VENDOR?=		unknown
+.elif ${NATIVE_OPSYS} == "MirBSD"
+NATIVE_LOWER_OPSYS?=		mirbsd
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${NATIVE_OS_VERSION}
+NATIVE_LOWER_VENDOR?=		unknown
 
-.elif !empty(OPSYS:MIRIX*)
-LOWER_OPSYS?=		irix
-LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
-LOWER_VENDOR?=		sgi
+.elif !empty(NATIVE_OPSYS:MIRIX*)
+NATIVE_LOWER_OPSYS?=		irix
+NATIVE_LOWER_OPSYS_VERSUFFIX?=	${NATIVE_OS_VERSION}
+NATIVE_LOWER_VENDOR?=		sgi
 
-.elif ${OPSYS} == "Linux"
-OS_VERSION:=		${OS_VERSION:C/-.*$//}
-LOWER_OPSYS?=		linux
+.elif ${NATIVE_OPSYS} == "Linux"
+NATIVE_OS_VERSION:=		${NATIVE_OS_VERSION:C/-.*$//}
+NATIVE_LOWER_OPSYS?=		linux
 .  if exists(/etc/lsb-release)
 CHROMEOS_RELEASE_NAME!=	awk -F = '$$1 == "CHROMEOS_RELEASE_NAME" { print $$2 }' /etc/lsb-release
 .  endif
 .  if exists(/etc/debian_version)
-LOWER_VENDOR?=		debian
+NATIVE_LOWER_VENDOR?=		debian
 .  elif exists(/etc/mandrake-release)
-LOWER_VENDOR?=		mandrake
+NATIVE_LOWER_VENDOR?=		mandrake
 .  elif exists(/etc/redhat-version) || exists(/etc/redhat-release)
-LOWER_VENDOR?=		redhat
+NATIVE_LOWER_VENDOR?=		redhat
 .  elif exists(/etc/slackware-version)
-LOWER_VENDOR?=		slackware
+NATIVE_LOWER_VENDOR?=		slackware
 .  elif exists(/etc/ssdlinux_version)
-LOWER_VENDOR?=		ssd
+NATIVE_LOWER_VENDOR?=		ssd
 .  elif !empty(CHROMEOS_RELEASE_NAME)
-LOWER_VENDOR?=		chromeos
-.  elif ${MACHINE_ARCH} == "i386"
-LOWER_VENDOR?=          pc
+NATIVE_LOWER_VENDOR?=		chromeos
+.  elif ${NATIVE_MACHINE_ARCH} == "i386"
+NATIVE_LOWER_VENDOR?=          pc
 .  endif
-LOWER_VENDOR?=          unknown
-OS_VARIANT!=		${UNAME} -r
-OS_VARIANT:=		${OS_VARIANT:C/^.*-//}
-.  if ${OS_VARIANT} != "Microsoft"
-OS_VARIANT=		${LOWER_VENDOR}
+NATIVE_LOWER_VENDOR?=          unknown
+NATIVE_OS_VARIANT!=		${UNAME} -r
+NATIVE_OS_VARIANT:=		${NATIVE_OS_VARIANT:C/^.*-//}
+.  if ${NATIVE_OS_VARIANT} != "Microsoft"
+NATIVE_OS_VARIANT=		${NATIVE_LOWER_VENDOR}
 .  endif
+# XXX NATIVE_HOST_MACHINE_ARCH?  ???
 .  if !defined(HOST_MACHINE_ARCH)
 HOST_MACHINE_ARCH!=	${UNAME} -m
 MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
 .  endif
 
-.elif ${OPSYS} == "OpenBSD"
-LOWER_OPSYS?= 		openbsd
+.elif ${NATIVE_OPSYS} == "OpenBSD"
+NATIVE_LOWER_OPSYS?= 		openbsd
 
-.elif ${OPSYS} == "OSF1"
-OS_VERSION:=		${OS_VERSION:C/^V//}
-LOWER_OPSYS?=		osf1
-LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
-LOWER_VENDOR?=		dec
+.elif ${NATIVE_OPSYS} == "OSF1"
+NATIVE_OS_VERSION:=		${NATIVE_OS_VERSION:C/^V//}
+NATIVE_LOWER_OPSYS?=		osf1
+NATIVE_LOWER_OPSYS_VERSUFFIX?=	${NATIVE_OS_VERSION}
+NATIVE_LOWER_VENDOR?=		dec
 
-.elif ${OPSYS} == "HPUX"
-OS_VERSION:=		${OS_VERSION:C/^B.//}
-LOWER_OPSYS?=		hpux
-LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
-LOWER_VENDOR?=		hp
+.elif ${NATIVE_OPSYS} == "HPUX"
+NATIVE_OS_VERSION:=		${NATIVE_OS_VERSION:C/^B.//}
+NATIVE_LOWER_OPSYS?=		hpux
+NATIVE_LOWER_OPSYS_VERSUFFIX?=	${NATIVE_OS_VERSION}
+NATIVE_LOWER_VENDOR?=		hp
 
-.elif ${OPSYS} == "SunOS"
-LOWER_VENDOR?=		sun
-LOWER_OPSYS?=		solaris
-LOWER_OPSYS_VERSUFFIX=	2.${OS_VERSION:C/5.//}
+.elif ${NATIVE_OPSYS} == "SunOS"
+NATIVE_LOWER_VENDOR?=		sun
+NATIVE_LOWER_OPSYS?=		solaris
+NATIVE_LOWER_OPSYS_VERSUFFIX=	2.${NATIVE_OS_VERSION:C/5.//}
 .  if !defined(_UNAME_V)
 _UNAME_V!=		${UNAME} -v
 MAKEFLAGS+=		_UNAME_V=${_UNAME_V:Q}
 .  endif
 .  if !empty(_UNAME_V:Mjoyent_*)
-OS_VARIANT=		SmartOS
-LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
+NATIVE_OS_VARIANT=		SmartOS
+NATIVE_LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
 .  elif !empty(_UNAME_V:Momnios-*)
-OS_VARIANT=		OmniOS
-LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
+NATIVE_OS_VARIANT=		OmniOS
+NATIVE_LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
 .  elif !empty(_UNAME_V:Mtribblix-*)
-OS_VARIANT=		Tribblix
-LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$2; exit 0; }' /etc/release
+NATIVE_OS_VARIANT=		Tribblix
+NATIVE_LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$2; exit 0; }' /etc/release
 .  else
-OS_VARIANT=		Solaris
-LOWER_VARIANT_VERSION=	${_UNAME_V}
+NATIVE_OS_VARIANT=		Solaris
+NATIVE_LOWER_VARIANT_VERSION=	${_UNAME_V}
 .  endif
 
 .elif ${OPSYS} == "SCO_SV"
-SCO_RELEASE!=		${UNAME} -r
-SCO_VERSION!=		${UNAME} -v
-LOWER_VENDOR?=		pc
-LOWER_OPSYS?=		sco
-LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}v${SCO_VERSION}
-_UNAME_V!=		${UNAME} -v
+SCO_RELEASE!=			${UNAME} -r
+SCO_VERSION!=			${UNAME} -v
+NATIVE_LOWER_VENDOR?=		pc
+NATIVE_LOWER_OPSYS?=		sco
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}v${SCO_VERSION}
+_UNAME_V!=			${UNAME} -v
 .  if !empty(_UNAME_V:M5.0*)
-OS_VARIANT=		SCOOSR5
+NATIVE_OS_VARIANT=		SCOOSR5
 .  elif !empty(_UNAME_V:M6.0*)
-OS_VARIANT=		SCOOSR6
+NATIVE_OS_VARIANT=		SCOOSR6
 .  endif
 
-.elif ${OPSYS} == "UnixWare"
-SCO_RELEASE?=		sysv5${OPSYS}
-SCO_VERSION!=		${UNAME} -v
-LOWER_VENDOR?=		unknown
-LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}${SCO_VERSION}
+.elif ${NATIVE_OPSYS} == "UnixWare"
+SCO_RELEASE?=			sysv5${NATIVE_OPSYS}
+SCO_VERSION!=			${UNAME} -v
+NATIVE_LOWER_VENDOR?=		unknown
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}${SCO_VERSION}
 
-.elif ${OPSYS} == "Minix"
-LOWER_VENDOR?=		unknown
-LOWER_OPSYS:=		${OPSYS:tl}
+.elif ${NATIVE_OPSYS} == "Minix"
+NATIVE_LOWER_VENDOR?=		unknown
+NATIVE_LOWER_OPSYS:=		${NATIVE_OPSYS:tl}
 
-.elif !defined(LOWER_OPSYS)
-LOWER_OPSYS:=		${OPSYS:tl}
+.elif !defined(NATIVE_LOWER_OPSYS)
+NATIVE_LOWER_OPSYS:=		${NATIVE_OPSYS:tl}
 .endif
 
 # Now commit the version values computed above, eliding the :sh
-OS_VERSION:=		${OS_VERSION}
+NATIVE_OS_VERSION:=	${NATIVE_OS_VERSION}
 
-MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
+MAKEFLAGS+=		NATIVE_LOWER_OPSYS=${NATIVE_LOWER_OPSYS:Q}
 
-LOWER_VENDOR?=			# empty ("arch--opsys")
+NATIVE_LOWER_VENDOR?=	# empty ("arch--opsys")
 
+# List of variables that must be set to determine a cross-compilation
+# target.
+CROSSVARS?=	# empty
+
+# Cross-compilation target settings.
+#
+# We set these to have conditional expansions so that when <bsd.own.mk>
+# includes mk.conf, and mk.conf sets USE_CROSS_COMPILE, the _rest_ of
+# <bsd.own.mk> gets the right cross vs native versions of the
+# variables.
+#
+# As soon as <bsd.own.mk> is done we can commit the switcheroo without
+# the conditional expansions -- but there's no hook to do that inside
+# <bsd.own.mk> between inclusion of mk.conf and the rest of
+# <bsdf.own.mk>.  And there's no way to know, before we include
+# mk.conf, whether the user _might_ be doing cross-builds.  So we have
+# to use this massive kludge.
+#
+CROSSVARS+=	OPSYS
+OPSYS=			\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_OPSYS}:${NATIVE_OPSYS}}
+CROSSVARS+=	OS_VERSION
+OS_VERSION=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_OS_VERSION}:${NATIVE_OS_VERSION}}
+CROSSVARS+=	OPSYS_VERSION
+OPSYS_VERSION=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_OPSYS_VERSION}:${NATIVE_OPSYS_VERSION}}
+CROSSVARS+=	LOWER_OPSYS
+LOWER_OPSYS=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_LOWER_OPSYS}:${NATIVE_LOWER_OPSYS}}
+CROSSVARS+=	LOWER_OPSYS_VERSUFFIX
+LOWER_OPSYS_VERSUFFIX=	\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_LOWER_OPSYS_VERSUFFIX}:${NATIVE_LOWER_OPSYS_VERSUFFIX}}
+CROSSVARS+=	LOWER_VARIANT_VERSION
+LOWER_VARIANT_VERSION=	\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_LOWER_VARIANT_VERSION}:${NATIVE_LOWER_VARIANT_VERSION}}
+CROSSVARS+=	LOWER_VENDOR
+LOWER_VENDOR=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_LOWER_VENDOR}:${NATIVE_LOWER_VENDOR}}
+CROSSVARS+=	LOWER_OS_VARIANT
+OS_VARIANT=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_OS_VARIANT}:${NATIVE_OS_VARIANT}}
+
+# Remember the MACHINE_ARCH that make was built with before we override
+# it with CROSS_MACHINE_ARCH if USE_CROSS_COMPILE is enabled.
+CROSSVARS+=	MACHINE_ARCH
 NATIVE_MACHINE_ARCH:=		${MACHINE_ARCH}
+
 NATIVE_MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${NATIVE_MACHINE_ARCH}
 MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
+NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${NATIVE_LOWER_VENDOR}-${NATIVE_LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${NATIVE_LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
 MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
 # Set this before <bsd.own.mk> does, since it doesn't know about Darwin
-.if ${OPSYS} == "Darwin"
+# We will later set OBJECT_FMT to be conditional on USE_CROSS_COMPILE.
+.if ${NATIVE_OPSYS} == "Darwin"
+NATIVE_OBJECT_FMT?=	Mach-O
 OBJECT_FMT?=		Mach-O
 .endif
 
@@ -368,6 +418,9 @@ PKG_FAIL_REASON+=	"Must set TARGET_ARCH for cross-libtool."
 MACHINE_ARCH:=			${TARGET_ARCH}
 _BUILD_DEFS.MACHINE_ARCH=	${NATIVE_MACHINE_ARCH}
 _BUILD_DEFS.MACHINE_GNU_ARCH=	${NATIVE_MACHINE_GNU_ARCH}
+_BUILD_DEFS.OBJECT_FMT=		${NATIVE_OBJECT_FMT}
+_BUILD_DEFS.OPSYS=		${NATIVE_OPSYS}
+_BUILD_DEFS.OS_VERSION=		${NATIVE_OS_VERSION}
 TOOLS_USE_CROSS_COMPILE=	yes
 .else
 TOOLS_USE_CROSS_COMPILE=	${USE_CROSS_COMPILE:Uno}
@@ -389,9 +442,17 @@ PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 # Load the settings from MAKECONF, which is /etc/mk.conf by default.
 .include <bsd.own.mk>
 
+# Save the OBJECT_FMT determined by bsd.own.mk, and turn OBJECT_FMT
+# into a cross-compilation variable so it can be overridden by
+# CROSS_OBJECT_FMT.
+NATIVE_OBJECT_FMT:=	${OBJECT_FMT}
+CROSSVARS+=		OBJECT_FMT
+OBJECT_FMT=		\
+	${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_OBJECT_FMT}:${NATIVE_OBJECT_FMT}}
+
 # When cross-compilation support is requested, the following options
 # must be specified as well or guessable:
-# - MACHINE_ARCH is set to TARGET_ARCH if set.
+# - Variables like MACHINE_ARCH are set to CROSS_MACHINE_ARCH.
 # - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
 # - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
 # - DESTDIR support is required
@@ -399,9 +460,16 @@ PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 # _CROSS_DESTDIR is set for internal use to avoid conditionalising
 # the use.
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.  if defined(TARGET_ARCH)
-MACHINE_ARCH=	${TARGET_ARCH}
+.if ${USE_CROSS_COMPILE:U:tl} == "yes" # defaults/mk.conf not yet loaded, so :U
+.  for _v_ in ${CROSSVARS}
+.    ifndef CROSS_${_v_}
+MISSING_CROSSVARS=	yes
+.      warning Missing CROSS_${_v_} setting
+.    endif
+${_v_}:=	${CROSS_${_v_}}
+.  endfor
+.  ifdef MISSING_CROSSVARS
+.    error USE_CROSS_COMPILE=yes but missing cross variable settings
 .  endif
 CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
 .  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
@@ -562,9 +630,6 @@ TOOLS_CROSS_DESTDIR=		# empty
 
 # Depends on MACHINE_ARCH override above
 .if ${OPSYS} == "NetBSD"
-# XXX NATIVE_OBJECT_FMT is a cop-out -- but seriously, who is going to
-# do cross-builds on a NetBSD host that still uses a.out?
-NATIVE_OBJECT_FMT?=	${OBJECT_FMT}
 .  if ${NATIVE_OBJECT_FMT} == "ELF" && \
    (!empty(NATIVE_MACHINE_ARCH:Mearm*) || \
     ${NATIVE_MACHINE_GNU_ARCH} == "arm" || \

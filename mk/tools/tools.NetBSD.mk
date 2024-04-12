@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.74 2023/05/09 12:16:01 thor Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.75 2024/04/12 19:53:25 riastradh Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -58,11 +58,7 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.ident?=		/usr/bin/ident
-.if ${TOOLS_USE_CROSS_COMPILE:tl} != yes
 TOOLS_PLATFORM.install?=	/usr/bin/install
-.else
-TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
-.endif
 .if exists(/usr/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
 .endif
@@ -102,11 +98,7 @@ TOOLS_PLATFORM.paxctl?=		/usr/sbin/paxctl
 .endif
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
-.if ${TOOLS_USE_CROSS_COMPILE:U:tl} != yes
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
-.else
-TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
-.endif
 TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
 .if exists(/usr/bin/realpath)
 TOOLS_PLATFORM.realpath?=	/usr/bin/realpath
@@ -120,11 +112,7 @@ TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
-.if ${TOOLS_USE_CROSS_COMPILE:U:tl} != yes
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
-.else
-TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
-.endif
 
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 .if exists(/bin/tar)
@@ -157,29 +145,9 @@ TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
 .if ${TOOLS_USE_CROSS_COMPILE:U:tl} == yes
-.  for _t_ in ar as ld nm objcopy objdump ranlib readelf strip
-TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
-	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
-TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
-.  endfor
-
-TOOLS_PATH.ar?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ar
-TOOLS_CREATE+=			ar
-TOOLS_PATH.ranlib?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ranlib
-TOOLS_CREATE+=			ranlib
-TOOLS_PATH.readelf?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
-TOOLS_CREATE+=			readelf
-
 NATIVE_CC:=	/usr/bin/cc -B /usr/libexec -B /usr/bin
-CC=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-gcc
-
 NATIVE_CXX:=	/usr/bin/c++ -B /usr/libexec -B /usr/bin
-CXX=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-g++
-
 NATIVE_LD:=	/usr/bin/ld
-LD=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ld
-
 NATIVE_AR:=	/usr/bin/ar
 NATIVE_RANLIB:=	/usr/bin/ranlib
-
 .endif
