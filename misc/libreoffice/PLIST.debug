@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.debug,v 1.3 2024/04/12 21:09:20 nikita Exp $
+@comment $NetBSD: PLIST.debug,v 1.4 2024/04/12 21:11:24 wiz Exp $
 ${PKGNAME}/lib/libreoffice/readmes/README_qtz
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_qtz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_qtz.properties
@@ -3069,4 +3069,3 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/templates/MediaWiki/m
 ${PKGNAME}/lib/libreoffice/share/registry/reportbuilder.xcd
 ${PKGNAME}/lib/libreoffice/share/template/common/wizard/report/default.otr
 ${PKGNAME}/lib/libreoffice/share/wizards/resources_qtz.properties
-
