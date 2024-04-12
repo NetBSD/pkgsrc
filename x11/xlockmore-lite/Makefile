@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/24 18:10:32 micha Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/12 15:20:00 micha Exp $
 
 .include "../../x11/xlockmore/Makefile.common"
 
@@ -7,6 +7,11 @@ PKGNAME=	${DISTNAME:S/-/-lite-/}
 COMMENT=	"lite" version of xlockmore
 
 CONFLICTS+=	xlockmore-[0-9]*
+
+FILESDIR=	../../x11/xlockmore/files
+PATCHDIR=	../../x11/xlockmore/patches
+
+USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--without-esound
 CONFIGURE_ARGS+=	--without-freetype
