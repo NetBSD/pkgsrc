@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/02/29 07:00:38 adam Exp $
+# $NetBSD: Makefile,v 1.67 2024/04/12 11:10:21 adam Exp $
 
-DISTNAME=	botocore-1.34.52
+DISTNAME=	botocore-1.34.83
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -10,11 +10,14 @@ HOMEPAGE=	https://github.com/boto/botocore
 COMMENT=	Low-level interface to a growing number of Amazon Web Services
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.43.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.4:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.2.1:../../www/py-urllib3
+TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.21.1:../../textproc/py-jsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5.0.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.5.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
