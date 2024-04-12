@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/06/08 22:59:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/12 19:54:43 riastradh Exp $
 
 # XXX This is kludgerific copypasta of devel/libtool-base/Makefile for
 # cross-compilation.  Please make it go away!
@@ -37,7 +37,7 @@ LIBTOOL_CROSS_COMPILE=	yes
 
 # XXX Tweaked for cross-compilation.
 #PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGNAME=	${DISTNAME:S/^libtool-/cross-libtool-base-${MACHINE_ARCH}-/}
+PKGNAME=	${DISTNAME:S/^libtool-/cross-libtool-base-${MACHINE_PLATFORM}-/}
 PKGREVISION=	8
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -64,10 +64,11 @@ CFLAGS.SunOS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # and Fortran compilers.
 #
 USE_LANGUAGES=		c c++
-# XXX Added for cross-compilation.  XXX Should be ${TARGET_ARCH}, but
-# currently we have to fake-cross-compile libtool because it's broken
-# upstream.
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross-${MACHINE_ARCH}
+# XXX Added for cross-compilation.  XXX Should be
+# ${TARGET_MACHINE_PLATFORM}, but currently we have to
+# fake-cross-compile libtool because it's broken upstream.
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross-${MACHINE_PLATFORM}
+PLIST_SUBST+=		MACHINE_PLATFORM=${MACHINE_PLATFORM:Q}
 CONFIGURE_ARGS+=	--disable-ltdl-install
 CONFIGURE_ARGS+=	F77=no FC=no
 
@@ -96,7 +97,7 @@ post-build:
 		${FILESDIR}/shlibtool.in > ${WRKSRC}/shlibtool
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/cross-${MACHINE_ARCH}/bin/shlibtool
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/cross-${MACHINE_PLATFORM}/bin/shlibtool
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 

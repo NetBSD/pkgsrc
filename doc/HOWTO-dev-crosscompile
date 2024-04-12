@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.6 2023/06/27 10:27:20 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.7 2024/04/12 19:54:43 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -11,34 +11,42 @@ have ever thought of cross-compilation.
 
 * Native and target platform
 
-When building a package, MACHINE_ARCH, MACHINE_GNU_PLATFORM, &c.,
-describe the platform for which the package is being built.  If
+When building a package, MACHINE_ARCH, OPSYS, &c., describe the
+platform for which the package is being built.  If
 USE_CROSS_COMPILE=no, this is the native platform; otherwise, if
-USE_CROSS_COMPILE=yes, it is the target platform, and the additional
-variables NATIVE_MACHINE_ARCH, NATIVE_MACHINE_GNU_PLATFORM, &c.,
-describe the native platform.
+USE_CROSS_COMPILE=yes, it is the target platform.  The additional
+variables NATIVE_MACHINE_ARCH, NATIVE_OPSYS, &c., always describe the
+native platform.
 
 When building a native package for cross-compilation, such as a
-compiler for the target, the variable TARGET_ARCH describes the target
-platform like MACHINE_ARCH.  If the build product varies with the
-choice of target, then TARGET_ARCH should be embedded into the PKGNAME
+compiler for the target, the variables TARGET_MACHINE_ARCH,
+TARGET_OPSYS, &c., describe the target platform.  If the build product
+varies with the choice of target, then TARGET_MACHINE_ARCH or
+TARGET_OPSYS or whatever affects it should be embedded into the PKGNAME
 somewhere so that the different build products are distinguished by
 having different package names.
 
-XXX This pattern is incompletely realized.  We should probably replace
-TARGET_ARCH by TARGET_MACHINE_ARCH, TARGET_MACHINE_GNU_PLATFORM, &c.,
-and perhaps decide which of those is the main switch that you set when
-you want to select cross-compilation.  Ideally, this switch should
-also support cross-compilation to other operating systems.
+XXX Missing:
+XXX - TARGET_MACHINE_GNU_PLATFORM
+XXX - TARGET_MACHINE_GNU_ARCH
+XXX - probably other variables defined in terms of the CROSSVARS
 
 * Specifying the toolchain
 
-Software built following GNU conventions can set GNU_CONFIGURE=yes so
-that pkgsrc will automatically specify the right --build, --host, and
---target options for cross-compilation and point everything at the
-right toolchain.
+The following build systems should automagically handle
+cross-compilation by passing through the architecture and OS
+information:
 
-XXX And software not built following GNU conventions...?
+- GNU_CONFIGURE=yes
+- .include "../../devel/meson/build.mk" (sets
+- .include "../../devel/cmake/build.mk" (and legacy USE_CMAKE=yes)
+
+Additional tweaks are sometimes needed (but not always), conditional on
+${USE_CROSS_COMPILE:tl} == "yes" (after including bsd.prefs.mk):
+
+- (pkg-config) ALL_ENV+= PKG_CONFIG_SYSROOT_DIR=${CROSS_DESTDIR:Q}
+- (pkg-config) ALL_ENV+= PKG_CONFIG_FDO_SYSROOT_RULES=1
+- (cmake) CMAKE_ARGS+= -DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
 
 * Tool dependencies
 
@@ -107,7 +115,7 @@ pre-answer the tests for autoconf:
 
 .include "../../bsd.prefs.mk"
 
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+.if ${USE_CROSS_COMPILE:tl} == "yes"
 # Configure wants to check for /dev/random but can't.  We know NetBSD
 # always has a /dev/random, so inform autoconf of the fact.
 CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
