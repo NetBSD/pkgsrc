@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.446 2024/04/12 19:58:04 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.447 2024/04/12 19:58:22 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -157,6 +157,11 @@ MACHINE_GNU_ARCH?=		${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 ## "pkgsrc/pkgtools/osabi/INSTALL" in-sync.
 .if ${NATIVE_OPSYS} == "NetBSD"
 NATIVE_LOWER_OPSYS?=	netbsd
+
+.  if !defined(HOST_MACHINE_ARCH)
+HOST_MACHINE_ARCH!=	${UNAME} -m
+MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
+.  endif
 
 .elif ${NATIVE_OPSYS} == "AIX"
 .  if exists(/usr/bin/oslevel)
