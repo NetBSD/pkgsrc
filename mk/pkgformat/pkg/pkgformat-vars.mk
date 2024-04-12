@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.16 2024/01/26 12:40:04 riastradh Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.17 2024/04/12 19:56:23 riastradh Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -16,7 +16,21 @@ USE_TOOLS+=	date
 .endif
 
 # This is the package database directory for the default view.
+.if ${USE_CROSS_COMPILE:tl} != "yes"
 PKG_DBDIR?=		${LOCALBASE}/pkgdb
+.else
+.  ifndef HOST_PKG_DBDIR
+# XXX This isn't quite right: if PKG_DBDIR is defined in terms of
+# LOCALBASE, we really want to resolve it (`HOST_PKG_DBDIR:=') in
+# bsd.prefs.mk before we switch LOCALBASE to CROSS_LOCALBASE.  But
+# there's no place there to put pkgformat-vars business.  Fortunately,
+# bootstrap just writes out the full path so this is only an issue if
+# you explicitly write out `PKG_DBDIR= ...${LOCALBASE}...' in your
+# mk.conf.
+HOST_PKG_DBDIR:=	${PKG_DBDIR:U${TOOLBASE}/pkgdb}
+.  endif
+PKG_DBDIR=		${CROSS_PKG_DBDIR:U${LOCALBASE}/pkgdb}
+.endif
 
 # _PKG_DBDIR is the actual packages database directory where we register
 # packages.
