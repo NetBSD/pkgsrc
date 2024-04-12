@@ -159,6 +159,11 @@ OPTIONS
 	     group name that will be stored in the archive; the name will not
 	     be verified against the system group database.
 
+     --group name[:gid]
+	     Use the provided group, if gid is not provided, name can be ei‐
+	     ther a group name or numeric id.  See the --gname option for de‐
+	     tails.
+
      -H	     (c and r modes only) Symbolic links named on the command line
 	     will be followed; the target of the link will be archived, not
 	     the link itself.
@@ -254,7 +259,8 @@ OPTIONS
 	     extended ACLs and extended file attributes using copyfile(3) in
 	     AppleDouble format.  This is the reverse of --no-mac-metadata.
 	     and the default behavior in c, r, and u modes or if tar is run in
-	     x mode as root.
+	     x mode as root.  Currently supported only for pax formats (in‐
+	     cluding "pax restricted", the default tar format for bsdtar.)
 
      -n, --norecurse, --no-recursion
 	     Do not operate recursively on the content of directories.
@@ -437,13 +443,30 @@ OPTIONS
 	     zstd:frame-per-file
 		     Start a new compression frame at the beginning of each
 		     file in the archive.
-	     zstd:min-frame-size=N
+	     zstd:min-frame-in=N
 		     In combination with zstd:frame-per-file, do not start a
-		     new compression frame unless the current frame is at
-		     least N bytes.
-	     zstd:max-frame-size=N
-		     Start a new compression frame as soon as the current
-		     frame exceeds N bytes.
+		     new compression frame unless the uncompressed size of the
+		     current frame is at least N bytes.	 The number may be
+		     followed by k / kB, M / MB, or G / GB to indicate kilo‐
+		     bytes, megabytes or gigabytes respectively.
+	     zstd:min-frame-out=N, zstd:min-frame-size=N
+		     In combination with zstd:frame-per-file, do not start a
+		     new compression frame unless the compressed size of the
+		     current frame is at least N bytes.	 The number may be
+		     followed by k / kB, M / MB, or G / GB to indicate kilo‐
+		     bytes, megabytes or gigabytes respectively.
+	     zstd:max-frame-in=N, zstd:max-frame-size=N
+		     Start a new compression frame as soon as possible after
+		     the uncompressed size of the current frame exceeds N
+		     bytes.  The number may be followed by k / kB, M / MB, or
+		     G / GB to indicate kilobytes, megabytes or gigabytes re‐
+		     spectively.  Values less than 1,024 will be rejected.
+	     zstd:max-frame-out=N
+		     Start a new compression frame as soon as possible after
+		     the compressed size of the current frame exceeds N bytes.
+		     The number may be followed by k / kB, M / MB, or G / GB
+		     to indicate kilobytes, megabytes or gigabytes respec‐
+		     tively.  Values less than 1,024 will be rejected.
 	     lzop:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
@@ -534,7 +557,7 @@ OPTIONS
 
      -s pattern
 	     Modify file or archive member names according to pattern.	The
-	     pattern has the format /old/new/[ghHprRsS] where old is a basic
+	     pattern has the format /old/new/[bghHprRsS] where old is a basic
 	     regular expression, new is the replacement string of the matched
 	     part, and the optional trailing letters modify how the replace‐
 	     ment is handled.  If old is not matched, the pattern is skipped.
@@ -545,13 +568,17 @@ OPTIONS
 	     trailing s specifies that the pattern applies to the value of
 	     symbolic links.  The optional trailing p specifies that after a
 	     successful substitution the original path name and the new path
-	     name should be printed to standard error.	Optional trailing H,
-	     R, or S characters suppress substitutions for hardlink targets,
-	     regular filenames, or symlink targets, respectively.  Optional
-	     trailing h, r, or s characters enable substitutions for hardlink
-	     targets, regular filenames, or symlink targets, respectively.
-	     The default is hrs which applies substitutions to all names.  In
-	     particular, it is never necessary to specify h, r, or s.
+	     name should be printed to standard error.	The optional trailing
+	     b specifies that the substitution should be matched from the be‐
+	     ginning of the string rather than from right after the position
+	     at which the previous matching substitution ended.	 Optional
+	     trailing H, R, or S characters suppress substitutions for
+	     hardlink targets, regular filenames, or symlink targets, respec‐
+	     tively.  Optional trailing h, r, or s characters enable substitu‐
+	     tions for hardlink targets, regular filenames, or symlink tar‐
+	     gets, respectively.  The default is hrs which applies substitu‐
+	     tions to all names.  In particular, it is never necessary to
+	     specify h, r, or s.
 
      --safe-writes
 	     (x mode only) Extract files atomically.  By default tar unlinks
@@ -616,6 +643,10 @@ OPTIONS
      --use-compress-program program
 	     Pipe the input (in x or t mode) or the output (in c mode) through
 	     program instead of using the builtin compression support.
+
+     --owner name[:uid]
+	     Use the provided user, if uid is not provided, name can be either
+	     an username or numeric id.	 See the --uname option for details.
 
      -v, --verbose
 	     Produce verbose output.  In create and extract modes, tar will
@@ -863,4 +894,4 @@ BUGS
      is a consequence of the incompatible ways that different archive formats
      store hardlink information.)
 
-BSD			       December 1, 2022				   BSD
+BSD				 March 1, 2024				   BSD

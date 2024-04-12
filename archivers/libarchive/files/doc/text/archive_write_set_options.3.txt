@@ -152,16 +152,18 @@ OPTIONS
 		     the number of physical CPU cores.
      Format 7zip
 	     compression
-		     The value is one of “store”, “deflate”, “bzip2”, “lzma1”,
-		     “lzma2” or “ppmd” to indicate how the following entries
-		     should be compressed.  Note that this setting is ignored
+		     The value is one of “store”, “copy”, “deflate”, “bzip2”,
+		     “lzma1”, “lzma2” or “ppmd” to indicate how the following
+		     entries should be compressed.  The values “store” and
+		     “copy” are synonyms.  Note that this setting is ignored
 		     for directories, symbolic links, and other special en‐
 		     tries.
 	     compression-level
 		     The value is interpreted as a decimal integer specifying
 		     the compression level.  Values between 0 and 9 are sup‐
-		     ported.  The interpretation of the compression level de‐
-		     pends on the chosen compression method.
+		     ported, with the exception of bzip2 which only supports
+		     values between 1 and 9.  The interpretation of the com‐
+		     pression level depends on the chosen compression method.
      Format bin
 	     hdrcharset
 		     The value is used as a character set name that will be

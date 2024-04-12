@@ -265,6 +265,15 @@ will be used instead.
 On create, this sets the group name that will be stored 
 in the archive; 
 the name will not be verified against the system group database. 
+</dd><dt>--group ''name''<nowiki>[</nowiki>:''gid''<nowiki>]</nowiki></dt><dd> 
+Use the provided group, if 
+''gid'' 
+is not provided, 
+''name'' 
+can be either a group name or numeric id. 
+See the 
+--gname 
+option for details. 
 </dd><dt>-H</dt><dd> 
 (c and r modes only) 
 Symbolic links named on the command line will be followed; the 
@@ -396,6 +405,8 @@ This is the reverse of
 and the default behavior in c, r, and u modes or if 
 '''tar''' 
 is run in x mode as root. 
+Currently supported only for pax formats 
+(including "pax restricted", the default tar format for bsdtar.) 
 </dd><dt>-n, --norecurse, --no-recursion</dt><dd> 
 Do not operate recursively on the content of directories. 
 </dd><dt>--newer ''date''</dt><dd> 
@@ -639,16 +650,116 @@ use as many threads as there are CPU cores on the system.
 </dd><dt>'''zstd:frame-per-file'''</dt><dd> 
 Start a new compression frame at the beginning of each file in the 
 archive. 
-</dd><dt>'''zstd:min-frame-size'''=''N''</dt><dd> 
+</dd><dt>'''zstd:min-frame-in'''=''N''</dt><dd> 
 In combination with 
 '''zstd:frame-per-file''', 
-do not start a new compression frame unless the current frame is at least 
+do not start a new compression frame unless the uncompressed size of 
+the current frame is at least 
 ''N'' 
 bytes. 
-</dd><dt>'''zstd:max-frame-size'''=''N''</dt><dd> 
-Start a new compression frame as soon as the current frame exceeds 
+The number may be followed by 
+```text
+k / 
+```
+```text
+kB, 
+```
+```text
+M / 
+```
+```text
+MB, 
+```
+or 
+```text
+G / 
+```
+```text
+GB 
+```
+to indicate kilobytes, megabytes or gigabytes respectively. 
+</dd><dt>'''zstd:min-frame-out'''=''N'', '''zstd:min-frame-size'''=''N''</dt><dd> 
+In combination with 
+'''zstd:frame-per-file''', 
+do not start a new compression frame unless the compressed size of the 
+current frame is at least 
 ''N'' 
 bytes. 
+The number may be followed by 
+```text
+k / 
+```
+```text
+kB, 
+```
+```text
+M / 
+```
+```text
+MB, 
+```
+or 
+```text
+G / 
+```
+```text
+GB 
+```
+to indicate kilobytes, megabytes or gigabytes respectively. 
+</dd><dt>'''zstd:max-frame-in'''=''N'', '''zstd:max-frame-size'''=''N''</dt><dd> 
+Start a new compression frame as soon as possible after the 
+uncompressed size of the current frame exceeds 
+''N'' 
+bytes. 
+The number may be followed by 
+```text
+k / 
+```
+```text
+kB, 
+```
+```text
+M / 
+```
+```text
+MB, 
+```
+or 
+```text
+G / 
+```
+```text
+GB 
+```
+to indicate kilobytes, megabytes or gigabytes respectively. 
+Values less than 1,024 will be rejected. 
+</dd><dt>'''zstd:max-frame-out'''=''N''</dt><dd> 
+Start a new compression frame as soon as possible after the compressed 
+size of the current frame exceeds 
+''N'' 
+bytes. 
+The number may be followed by 
+```text
+k / 
+```
+```text
+kB, 
+```
+```text
+M / 
+```
+```text
+MB, 
+```
+or 
+```text
+G / 
+```
+```text
+GB 
+```
+to indicate kilobytes, megabytes or gigabytes respectively. 
+Values less than 1,024 will be rejected. 
 </dd><dt>'''lzop:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lzop compression level. 
 </dd><dt>'''xz:compression-level'''</dt><dd> 
@@ -767,7 +878,7 @@ This works similar to the conv=sparse option of dd.
 Modify file or archive member names according to 
 ''pattern''. 
 The pattern has the format 
-''/old/new/''<nowiki>[</nowiki>ghHprRsS<nowiki>]</nowiki> 
+''/old/new/''<nowiki>[</nowiki>bghHprRsS<nowiki>]</nowiki> 
 where 
 ''old'' 
 is a basic regular expression, 
@@ -789,6 +900,9 @@ of symbolic links.
 The optional trailing p specifies that after a successful substitution 
 the original path name and the new path name should be printed to 
 standard error. 
+The optional trailing b specifies that the substitution should be 
+matched from the beginning of the string rather than from right after the 
+position at which the previous matching substitution ended. 
 Optional trailing H, R, or S characters suppress substitutions 
 for hardlink targets, regular filenames, or symlink targets, 
 respectively. 
@@ -894,6 +1008,15 @@ the name is not verified against the system user database.
 Pipe the input (in x or t mode) or the output (in c mode) through 
 ''program'' 
 instead of using the builtin compression support. 
+</dd><dt>--owner ''name''<nowiki>[</nowiki>:''uid''<nowiki>]</nowiki></dt><dd> 
+Use the provided user, if 
+''uid'' 
+is not provided, 
+''name'' 
+can be either an username or numeric id. 
+See the 
+--uname 
+option for details. 
 </dd><dt>-v, --verbose</dt><dd> 
 Produce verbose output. 
 In create and extract modes, 

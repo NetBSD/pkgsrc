@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Mon Sep 11 22:06:21 2023 -->
+<!-- CreationDate: Sun Apr  7 22:36:27 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -285,20 +285,23 @@ cores.</p>
 compression</b></p>
 
 <p style="margin-left:27%;">The value is one of
-&ldquo;store&rdquo;, &ldquo;deflate&rdquo;,
-&ldquo;bzip2&rdquo;, &ldquo;lzma1&rdquo;,
-&ldquo;lzma2&rdquo; or &ldquo;ppmd&rdquo; to indicate how
-the following entries should be compressed. Note that this
-setting is ignored for directories, symbolic links, and
-other special entries.</p>
+&ldquo;store&rdquo;, &ldquo;copy&rdquo;,
+&ldquo;deflate&rdquo;, &ldquo;bzip2&rdquo;,
+&ldquo;lzma1&rdquo;, &ldquo;lzma2&rdquo; or
+&ldquo;ppmd&rdquo; to indicate how the following entries
+should be compressed. The values &ldquo;store&rdquo; and
+&ldquo;copy&rdquo; are synonyms. Note that this setting is
+ignored for directories, symbolic links, and other special
+entries.</p>
 
 <p><b>compression-level</b></p>
 
 <p style="margin-left:27%;">The value is interpreted as a
 decimal integer specifying the compression level. Values
-between 0 and 9 are supported. The interpretation of the
-compression level depends on the chosen compression
-method.</p>
+between 0 and 9 are supported, with the exception of bzip2
+which only supports values between 1 and 9. The
+interpretation of the compression level depends on the
+chosen compression method.</p>
 
 <p>Format bin <b><br>
 hdrcharset</b></p>
