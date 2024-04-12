@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.20 2024/04/12 19:54:44 riastradh Exp $
+# $NetBSD: depends.mk,v 1.21 2024/04/12 19:55:29 riastradh Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -162,16 +162,18 @@ _DEPENDS_INSTALL_CMD=							\
 	*)								\
 		case $$type in						\
 		bootstrap|tool)						\
-			objfmt=`${HOST_PKG_INFO} -Q OBJECT_FMT "$$pkg"`;; \
+			objfmt=`${HOST_PKG_INFO} -Q OBJECT_FMT "$$pkg"`; \
+			needobjfmt=${NATIVE_OBJECT_FMT:Q};;		\
 		build|test|full)					\
-			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;;	\
+			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;	\
+			needobjfmt=${OBJECT_FMT:Q};;			\
 		esac;							\
 		case "$$objfmt" in					\
 		"")	${WARNING_MSG} "[depends.mk] Unknown object format for installed package $$pkg" ;; \
-		${OBJECT_FMT})	;;					\
+		$$needobjfmt)	;;					\
 		*)	${ERROR_MSG} "[depends.mk] Installed package $$pkg has an"; \
-			${ERROR_MSG} "    object format \`\`$$objfmt'' which differs from \`\`${OBJECT_FMT}''.  Please"; \
-			${ERROR_MSG} "    update the $$pkg package to ${OBJECT_FMT}."; \
+			${ERROR_MSG} "    object format \`\`$$objfmt'' which differs from \`\`$$needobjfmt''.  Please"; \
+			${ERROR_MSG} "    update the $$pkg package to $$needobjfmt."; \
 			exit 1;						\
 			;;						\
 		esac;							\
