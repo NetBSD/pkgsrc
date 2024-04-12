@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/10/21 17:10:27 gdt Exp $
+# $NetBSD: Makefile,v 1.63 2024/04/12 19:41:39 riastradh Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.10
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -18,9 +18,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 CONFLICTS+=	gtk2+<2.22
 
 USE_TOOLS+=	pkg-config xgettext
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
-# For Darwin
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 SUBST_CLASSES+=		rst2man
 SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
@@ -45,6 +42,24 @@ MESON_ARGS+=			-D installed_tests=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
 
+PLIST_VARS+=		native
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+
+TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
+MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
+MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
+MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+
+.else
+
+PLIST.native=	yes
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+
+.endif
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
@@ -53,13 +68,13 @@ PYTHON_FOR_BUILD_ONLY=		tool
 _BUILDING_GTK2= yes
 .include "loaders.mk"
 
+.include "options.mk"
+
 .include "../../devel/meson/build.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/py-gi-docgen/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection:= build
-.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
