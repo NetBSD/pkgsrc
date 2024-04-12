@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.442 2024/04/12 19:55:16 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.443 2024/04/12 19:56:03 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -701,6 +701,8 @@ LOCALBASE?=		/usr/pkg
 TOOLBASE:=		${LOCALBASE}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 LOCALBASE=		${CROSS_LOCALBASE:U/usr/pkg}
+VARBASE=		${CROSS_VARBASE:U/var}
+SYSCONFBASE=		${CROSS_SYSCONFBASE:U/etc}
 .endif
 X11_TYPE?=		modular
 .if !empty(X11_TYPE:Mnative)
