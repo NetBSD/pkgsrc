@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.c,v 1.1.1.5 2024/01/18 17:37:42 adam Exp $	*/
+/*	$NetBSD: archive_pack_dev.c,v 1.1.1.6 2024/04/12 15:27:39 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -32,13 +32,6 @@
 /* Originally from NetBSD's mknod(8) source. */
 
 #include "archive_platform.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
-#if !defined(lint)
-__RCSID("$NetBSD: archive_pack_dev.c,v 1.1.1.5 2024/01/18 17:37:42 adam Exp $");
-#endif /* not lint */
 
 #ifdef HAVE_LIMITS_H
 #include <limits.h>

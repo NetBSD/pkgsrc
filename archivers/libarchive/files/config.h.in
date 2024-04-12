@@ -673,6 +673,12 @@
 /* Define to 1 if you have the `pcre' library (-lpcre). */
 #undef HAVE_LIBPCRE
 
+/* Define to 1 if you have the `pcre2' library (-lpcre2). */
+#undef HAVE_LIBPCRE2
+
+/* Define to 1 if you have the `pcre2-posix' library (-lpcre2-posix). */
+#undef HAVE_LIBPCRE2_POSIX
+
 /* Define to 1 if you have the `pcreposix' library (-lpcreposix). */
 #undef HAVE_LIBPCREPOSIX
 
@@ -696,10 +702,6 @@
 
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #undef HAVE_LIBZSTD
-
-/* Define to 1 if you have the `zstd' library (-lzstd) with compression
-   support. */
-#undef HAVE_LIBZSTD_COMPRESSOR
 
 /* Define to 1 if you have the <limits.h> header file. */
 #undef HAVE_LIMITS_H
@@ -869,6 +871,9 @@
 
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
+
+/* Define to 1 if you have the <pcre2posix.h> header file. */
+#undef HAVE_PCRE2POSIX_H
 
 /* Define to 1 if you have the <pcreposix.h> header file. */
 #undef HAVE_PCREPOSIX_H
@@ -1254,6 +1259,10 @@
 /* Define to 1 if you have the <zstd.h> header file. */
 #undef HAVE_ZSTD_H
 
+/* Define to 1 if you have the `zstd' library (-lzstd) with compression
+   support. */
+#undef HAVE_ZSTD_compressStream
+
 /* Define to 1 if you have the `_fseeki64' function. */
 #undef HAVE__FSEEKI64
 
@@ -1310,6 +1319,9 @@
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
+
+/* Define to 1 if PCRE2_STATIC needs to be defined. */
+#undef PCRE2_STATIC
 
 /* Define to 1 if PCRE_STATIC needs to be defined. */
 #undef PCRE_STATIC
