@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.24 2022/11/13 09:59:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/04/12 19:41:39 riastradh Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
-bin/gdk-pixbuf-thumbnailer
+${PLIST.native}bin/gdk-pixbuf-thumbnailer
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
@@ -27,16 +27,16 @@ lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tga.so
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tiff.so
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xbm.so
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xpm.so
-lib/girepository-1.0/GdkPixbuf-2.0.typelib
-lib/girepository-1.0/GdkPixdata-2.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GdkPixbuf-2.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GdkPixdata-2.0.typelib
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
 lib/libgdk_pixbuf-2.0.so.0.4200.10
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 man/man1/gdk-pixbuf-query-loaders.1
-share/gir-1.0/GdkPixbuf-2.0.gir
-share/gir-1.0/GdkPixdata-2.0.gir
+${PLIST.introspection}share/gir-1.0/GdkPixbuf-2.0.gir
+${PLIST.introspection}share/gir-1.0/GdkPixdata-2.0.gir
 share/locale/ab/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/af/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ang/LC_MESSAGES/gdk-pixbuf.mo
@@ -144,4 +144,4 @@ share/locale/yi/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_CN/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_HK/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_TW/LC_MESSAGES/gdk-pixbuf.mo
-share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
+${PLIST.native}share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
