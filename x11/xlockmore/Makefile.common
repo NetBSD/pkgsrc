@@ -1,12 +1,11 @@
-# $NetBSD: Makefile.common,v 1.88 2023/07/19 08:42:57 tnn Exp $
+# $NetBSD: Makefile.common,v 1.89 2024/04/12 14:28:44 micha Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
 
-DISTNAME=	xlockmore-5.72
+DISTNAME=	xlockmore-5.77
 CATEGORIES=	x11
-# the curl User-Agent is blocked with code 406
-#MASTER_SITES=	http://sillycycle.com/xlock/
+MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,12 +13,17 @@ HOMEPAGE=	https://sillycycle.com/xlockmore.html
 # Similar to BSD license, but uses different words (see xlockmore.spec)
 LICENSE=	2-clause-bsd
 
+.include "../../mk/bsd.prefs.mk"
+
+# The curl User-Agent is blocked with code 406
+.if ${FETCH_USING} == "curl"
+FETCH_USING=	manual
+.endif
+
 DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../../x11/xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../../x11/xlockmore/PLIST
 FILESDIR?=		${.CURDIR}/../../x11/xlockmore/files
-
-.include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xlockmore
 PKG_SUPPORTED_OPTIONS=		xlockmore-allow-root xlockmore-dpms pam
