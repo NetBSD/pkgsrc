@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.445 2024/04/12 19:57:52 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.446 2024/04/12 19:58:04 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -833,7 +833,7 @@ MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
 .endif
 PKGSRCDIR=		${_PKGSRCDIR}
 
-.if ${USE_CROSS_COMPILE:tl} == "yes"
+.if ${TOOLS_USE_CROSS_COMPILE:tl} == "yes"
 _CROSSDIR_SUFFIX=	.${MACHINE_PLATFORM}
 .endif
 
