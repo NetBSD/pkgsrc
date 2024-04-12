@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.21 2024/04/12 19:41:09 riastradh Exp $
+# $NetBSD: options.mk,v 1.22 2024/04/12 21:35:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	introspection libthai x11
 PKG_SUGGESTED_OPTIONS=	x11
 
-PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?introspection:}
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 
