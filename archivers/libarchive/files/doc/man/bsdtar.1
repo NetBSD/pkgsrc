@@ -1,4 +1,4 @@
-.TH TAR 1 "December 1, 2022" ""
+.TH TAR 1 "March 1, 2024" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -290,6 +290,16 @@ On create, this sets the group name that will be stored
 in the archive;
 the name will not be verified against the system group database.
 .TP
+\fB\-Fl\fP group \fIname\fP [: \fIgid\fP]
+Use the provided group, if
+\fIgid\fP
+is not provided,
+\fIname\fP
+can be either a group name or numeric id.
+See the
+\fB\-Fl\fP gname
+option for details.
+.TP
 \fB\-H\fP
 (c and r modes only)
 Symbolic links named on the command line will be followed; the
@@ -440,6 +450,8 @@ This is the reverse of
 and the default behavior in c, r, and u modes or if
 \fB\%tar\fP
 is run in x mode as root.
+Currently supported only for pax formats
+(including "pax restricted", the default tar format for bsdtar.)
 .TP
 \fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
 Do not operate recursively on the content of directories.
@@ -728,17 +740,119 @@ use as many threads as there are CPU cores on the system.
 Start a new compression frame at the beginning of each file in the
 archive.
 .TP
-\fBzstd:min-frame-size\fP=\fIN\fP
+\fBzstd:min-frame-in\fP=\fIN\fP
 In combination with
 \fBzstd:frame-per-file\fP,
-do not start a new compression frame unless the current frame is at least
+do not start a new compression frame unless the uncompressed size of
+the current frame is at least
 \fIN\fP
 bytes.
+The number may be followed by
+.RS 4
+k /
+.RE
+.RS 4
+kB,
+.RE
+.RS 4
+M /
+.RE
+.RS 4
+MB,
+.RE
+or
+.RS 4
+G /
+.RE
+.RS 4
+GB
+.RE
+to indicate kilobytes, megabytes or gigabytes respectively.
 .TP
-\fBzstd:max-frame-size\fP=\fIN\fP
-Start a new compression frame as soon as the current frame exceeds
+\fBzstd:min-frame-out\fP=\fIN\fP, \fBzstd:min-frame-size\fP=\fIN\fP
+In combination with
+\fBzstd:frame-per-file\fP,
+do not start a new compression frame unless the compressed size of the
+current frame is at least
 \fIN\fP
 bytes.
+The number may be followed by
+.RS 4
+k /
+.RE
+.RS 4
+kB,
+.RE
+.RS 4
+M /
+.RE
+.RS 4
+MB,
+.RE
+or
+.RS 4
+G /
+.RE
+.RS 4
+GB
+.RE
+to indicate kilobytes, megabytes or gigabytes respectively.
+.TP
+\fBzstd:max-frame-in\fP=\fIN\fP, \fBzstd:max-frame-size\fP=\fIN\fP
+Start a new compression frame as soon as possible after the
+uncompressed size of the current frame exceeds
+\fIN\fP
+bytes.
+The number may be followed by
+.RS 4
+k /
+.RE
+.RS 4
+kB,
+.RE
+.RS 4
+M /
+.RE
+.RS 4
+MB,
+.RE
+or
+.RS 4
+G /
+.RE
+.RS 4
+GB
+.RE
+to indicate kilobytes, megabytes or gigabytes respectively.
+Values less than 1,024 will be rejected.
+.TP
+\fBzstd:max-frame-out\fP=\fIN\fP
+Start a new compression frame as soon as possible after the compressed
+size of the current frame exceeds
+\fIN\fP
+bytes.
+The number may be followed by
+.RS 4
+k /
+.RE
+.RS 4
+kB,
+.RE
+.RS 4
+M /
+.RE
+.RS 4
+MB,
+.RE
+or
+.RS 4
+G /
+.RE
+.RS 4
+GB
+.RE
+to indicate kilobytes, megabytes or gigabytes respectively.
+Values less than 1,024 will be rejected.
 .TP
 \fBlzop:compression-level\fP
 A decimal integer from 1 to 9 specifying the lzop compression level.
@@ -876,7 +990,7 @@ This works similar to the conv=sparse option of dd.
 Modify file or archive member names according to
 \fIpattern\fP.
 The pattern has the format
-\fI/old/new/\fP [ghHprRsS]
+\fI/old/new/\fP [bghHprRsS]
 where
 \fIold\fP
 is a basic regular expression,
@@ -898,6 +1012,9 @@ of symbolic links.
 The optional trailing p specifies that after a successful substitution
 the original path name and the new path name should be printed to
 standard error.
+The optional trailing b specifies that the substitution should be
+matched from the beginning of the string rather than from right after the
+position at which the previous matching substitution ended.
 Optional trailing H, R, or S characters suppress substitutions
 for hardlink targets, regular filenames, or symlink targets,
 respectively.
@@ -1012,6 +1129,16 @@ the name is not verified against the system user database.
 Pipe the input (in x or t mode) or the output (in c mode) through
 \fIprogram\fP
 instead of using the builtin compression support.
+.TP
+\fB\-Fl\fP owner \fIname\fP [: \fIuid\fP]
+Use the provided user, if
+\fIuid\fP
+is not provided,
+\fIname\fP
+can be either an username or numeric id.
+See the
+\fB\-Fl\fP uname
+option for details.
 .TP
 \fB\-v\fP, \fB\-Fl\fP verbose
 Produce verbose output.
