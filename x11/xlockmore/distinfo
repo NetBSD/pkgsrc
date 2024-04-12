@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2023/07/14 10:43:33 micha Exp $
+$NetBSD: distinfo,v 1.64 2024/04/12 14:28:44 micha Exp $
 
-BLAKE2s (xlockmore-5.72.tar.xz) = a699f3f5ec1b6c87761636961c5af85a60e44bcecea9a609b7a885a5deee76e4
-SHA512 (xlockmore-5.72.tar.xz) = d6e59a4e37cb4867d045bb8c907682b35924c3c6f6b2387d5b810fbebcda7ab6591a16cfe59fe142f0ae29e000b5cbc5e6a86d03198e24d72bb5b2063767ccd7
-Size (xlockmore-5.72.tar.xz) = 2024132 bytes
+BLAKE2s (xlockmore-5.77.tar.xz) = c120acc1299523c85f6a002ca297663c41ee2f1d0ba1af3055f7866bdc9be07d
+SHA512 (xlockmore-5.77.tar.xz) = 468d03f829c2b169295b33b3b3fd3747249fbe6306d99bd731e4f117d0c79e8edda8b871cbc06aba7a718578b56301bd358d756d786294e53bd333e57925cb87
+Size (xlockmore-5.77.tar.xz) = 2069348 bytes
 SHA1 (patch-configure.ac) = 9bb4e744a493d8a30933d8a1d37d73f8de03ea0f
 SHA1 (patch-modes_Makefile.in) = 256c762e3bb02600da0bc14bc16b06604eb41eaa
 SHA1 (patch-xlock_XLock.ad) = f4754850a171530465be1949b0ea4f49b359bb3a
