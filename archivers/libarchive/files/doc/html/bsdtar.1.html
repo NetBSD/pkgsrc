@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Mon Sep 11 22:06:22 2023 -->
+<!-- CreationDate: Sun Apr  7 22:36:28 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -301,6 +301,14 @@ will be used instead. On create, this sets the group name
 that will be stored in the archive; the name will not be
 verified against the system group database.</p>
 
+<p style="margin-top: 1em"><b>--group</b>
+<i>name</i>[:<i>gid</i>]</p>
+
+<p style="margin-left:17%;">Use the provided group, if
+<i>gid</i> is not provided, <i>name</i> can be either a
+group name or numeric id. See the <b>--gname</b> option for
+details.</p>
+
 <p style="margin-top: 1em"><b>-H</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(c and r modes
@@ -454,7 +462,9 @@ OS X specific. Archive or extract extended ACLs and extended
 file attributes using copyfile(3) in AppleDouble format.
 This is the reverse of <b>--no-mac-metadata</b>. and the
 default behavior in c, r, and u modes or if <b>tar</b> is
-run in x mode as root.</p>
+run in x mode as root. Currently supported only for pax
+formats (including &quot;pax restricted&quot;, the default
+tar format for bsdtar.)</p>
 
 <p style="margin-top: 1em"><b>-n</b>, <b>--norecurse</b>,
 <b>--no-recursion</b></p>
@@ -754,17 +764,43 @@ system.</p>
 <p style="margin-left:27%;">Start a new compression frame
 at the beginning of each file in the archive.</p>
 
-<p><b>zstd:min-frame-size</b>=<i>N</i></p>
+<p><b>zstd:min-frame-in</b>=<i>N</i></p>
 
 <p style="margin-left:27%;">In combination with
 <b>zstd:frame-per-file</b>, do not start a new compression
-frame unless the current frame is at least <i>N</i>
-bytes.</p>
+frame unless the uncompressed size of the current frame is
+at least <i>N</i> bytes. The number may be followed by k /
+kB, M / MB, or G / GB to indicate kilobytes, megabytes or
+gigabytes respectively.</p>
 
-<p><b>zstd:max-frame-size</b>=<i>N</i></p>
+<p><b>zstd:min-frame-out</b>=<i>N</i>,
+<b>zstd:min-frame-size</b>=<i>N</i></p>
+
+<p style="margin-left:27%;">In combination with
+<b>zstd:frame-per-file</b>, do not start a new compression
+frame unless the compressed size of the current frame is at
+least <i>N</i> bytes. The number may be followed by k / kB,
+M / MB, or G / GB to indicate kilobytes, megabytes or
+gigabytes respectively.</p>
+
+<p><b>zstd:max-frame-in</b>=<i>N</i>,
+<b>zstd:max-frame-size</b>=<i>N</i></p>
 
 <p style="margin-left:27%;">Start a new compression frame
-as soon as the current frame exceeds <i>N</i> bytes.</p>
+as soon as possible after the uncompressed size of the
+current frame exceeds <i>N</i> bytes. The number may be
+followed by k / kB, M / MB, or G / GB to indicate kilobytes,
+megabytes or gigabytes respectively. Values less than 1,024
+will be rejected.</p>
+
+<p><b>zstd:max-frame-out</b>=<i>N</i></p>
+
+<p style="margin-left:27%;">Start a new compression frame
+as soon as possible after the compressed size of the current
+frame exceeds <i>N</i> bytes. The number may be followed by
+k / kB, M / MB, or G / GB to indicate kilobytes, megabytes
+or gigabytes respectively. Values less than 1,024 will be
+rejected.</p>
 
 <p><b>lzop:compression-level</b></p>
 
@@ -911,7 +947,7 @@ dd.</p>
 
 <p style="margin-left:17%;">Modify file or archive member
 names according to <i>pattern</i>. The pattern has the
-format <i>/old/new/</i>[ghHprRsS] where <i>old</i> is a
+format <i>/old/new/</i>[bghHprRsS] where <i>old</i> is a
 basic regular expression, <i>new</i> is the replacement
 string of the matched part, and the optional trailing
 letters modify how the replacement is handled. If <i>old</i>
@@ -923,15 +959,18 @@ part and stop on the first unmatched pattern. The optional
 trailing s specifies that the pattern applies to the value
 of symbolic links. The optional trailing p specifies that
 after a successful substitution the original path name and
-the new path name should be printed to standard error.
-Optional trailing H, R, or S characters suppress
-substitutions for hardlink targets, regular filenames, or
-symlink targets, respectively. Optional trailing h, r, or s
-characters enable substitutions for hardlink targets,
-regular filenames, or symlink targets, respectively. The
-default is <i>hrs</i> which applies substitutions to all
-names. In particular, it is never necessary to specify h, r,
-or s.</p>
+the new path name should be printed to standard error. The
+optional trailing b specifies that the substitution should
+be matched from the beginning of the string rather than from
+right after the position at which the previous matching
+substitution ended. Optional trailing H, R, or S characters
+suppress substitutions for hardlink targets, regular
+filenames, or symlink targets, respectively. Optional
+trailing h, r, or s characters enable substitutions for
+hardlink targets, regular filenames, or symlink targets,
+respectively. The default is <i>hrs</i> which applies
+substitutions to all names. In particular, it is never
+necessary to specify h, r, or s.</p>
 
 <p style="margin-top: 1em"><b>--safe-writes</b></p>
 
@@ -1018,6 +1057,14 @@ name is not verified against the system user database.</p>
 <p style="margin-left:17%;">Pipe the input (in x or t mode)
 or the output (in c mode) through <i>program</i> instead of
 using the builtin compression support.</p>
+
+<p style="margin-top: 1em"><b>--owner</b>
+<i>name</i>[:<i>uid</i>]</p>
+
+<p style="margin-left:17%;">Use the provided user, if
+<i>uid</i> is not provided, <i>name</i> can be either an
+username or numeric id. See the <b>--uname</b> option for
+details.</p>
 
 <p style="margin-top: 1em"><b>-v</b>, <b>--verbose</b></p>
 
@@ -1421,7 +1468,7 @@ incompatible ways that different archive formats store
 hardlink information.)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-December&nbsp;1, 2022 BSD</p>
+March&nbsp;1, 2024 BSD</p>
 <hr>
 </body>
 </html>
