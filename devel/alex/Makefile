@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/11/13 18:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/12 08:57:24 wiz Exp $
 
-DISTNAME=	alex-3.4.0.1
+DISTNAME=	alex-3.5.1.0
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
