@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.13 2024/04/12 19:53:25 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.14 2024/04/12 19:56:03 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -59,16 +59,25 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    CROSS_LOWER_VARIANT_VERSION= # empty
    CROSS_LOWER_VENDOR=          # empty
 
-Optionally, you can set CROSS_LOCALBASE for cross-compiled packages
-separately from LOCALBASE for natively compiled packages.  For example,
+Optionally, you can set CROSS_LOCALBASE, CROSS_SYSCONFBASE, and
+CROSS_VARBASE for cross-compiled packages separately from LOCALBASE,
+SYSCONFBASE, and VARBASE for natively compiled packages.  For example,
 you can use an unprivileged pkgsrc build into /home/user/cross/pkg that
 will create packages which install to /opt/pkg:
 
    LOCALBASE=		/home/user/cross/pkg
    CROSS_LOCALBASE=	/opt/pkg
 
-By default, CROSS_LOCALBASE will be /usr/pkg, meaning packages that are
-being cross-compiled will see LOCALBASE=/usr/pkg.
+By default, pkgsrc will assume:
+
+   CROSS_LOCALBASE=	/usr/pkg
+   CROSS_SYSCONFBASE=	/etc
+   CROSS_VARBASE=	/var
+
+That is, no matter what you set LOCALBASE, SYSCONFBASE, and VARBASE to
+in mk.conf for native packages, like directores under /home/user, by
+default cross-compiled packages will see LOCALBASE=/usr/pkg,
+SYSCONFBASE=/etc, and VARBASE=/var.
 
 ** Bootstrapped pkgsrc
 
