@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/03/06 18:13:53 nikita Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/04/12 15:10:20 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -34,6 +34,11 @@ share/examples/gotosocial/web/assets/logo.png
 share/examples/gotosocial/web/assets/logo.svg
 share/examples/gotosocial/web/assets/mastodon.svg
 share/examples/gotosocial/web/assets/plyr.svg
+share/examples/gotosocial/web/assets/themes/blurple-dark.css
+share/examples/gotosocial/web/assets/themes/blurple-light.css
+share/examples/gotosocial/web/assets/themes/midnight-trip.css
+share/examples/gotosocial/web/assets/themes/soft.css
+share/examples/gotosocial/web/assets/themes/sunset-light.css
 share/examples/gotosocial/web/assets/tusky.svg
 share/examples/gotosocial/web/source/.browserslistrc
 share/examples/gotosocial/web/source/.eslintignore
@@ -131,6 +136,7 @@ share/examples/gotosocial/web/source/settings/lib/types/instance.ts
 share/examples/gotosocial/web/source/settings/lib/types/migration.ts
 share/examples/gotosocial/web/source/settings/lib/types/query.ts
 share/examples/gotosocial/web/source/settings/lib/types/report.ts
+share/examples/gotosocial/web/source/settings/lib/types/theme.ts
 share/examples/gotosocial/web/source/settings/lib/util/domain-permission.ts
 share/examples/gotosocial/web/source/settings/redux/checklist.ts
 share/examples/gotosocial/web/source/settings/redux/oauth.ts
