@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.22 2024/04/09 16:30:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/12 08:02:57 wiz Exp $
 
-DISTNAME=	jpgraph-1.18
+DISTNAME=	jpgraph-4.4.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	graphics www
-MASTER_SITES=	http://members.chello.se/jpgraph/jpgdownloads/
+#MASTER_SITES=	https://jpgraph.net/download/download.php?p=57
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jpgraph.net/
 COMMENT=	Object Oriented class library for PHP
-
-CONFLICTS=	php-jgraph-[0-9]*
+LICENSE=	qpl-v1.0
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.1:../../graphics/php-gd
+
+CONFLICTS=	php-jgraph-[0-9]*
 
 USE_TOOLS+=	pax
 
@@ -20,43 +21,32 @@ NO_BUILD=	YES
 
 EXDIR=		${PREFIX}/share/examples/php-jpgraph
 PJDIR=		${PREFIX}/share/php-jpgraph
-PJCONFFILE=	${PKG_SYSCONFDIR}/jpg-config.inc
-CONF_FILES=	${EXDIR}/jpg-config.inc ${PKG_SYSCONFDIR}/jpg-config.inc
 
 PKG_SYSCONFSUBDIR?=	php-jpgraph
 
 MESSAGE_SUBST+=	PJCONFFILE=${PJCONFFILE} PJDIR=${PJDIR} EXDIR=${EXDIR}
 
-PHP_VERSIONS_ACCEPTED=	56 74 80 81 82
+PHP_VERSIONS_ACCEPTED=	82 81 80 74 56
+
+INSTALLATION_DIRS+=	${EXDIR} ${PJDIR} share/doc/php-jpgraph/html
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html
-	${INSTALL_DATA_DIR} ${DESTDIR}${PJDIR}
-
 	${INSTALL_SCRIPT} ${WRKSRC}/src/Examples/*.php ${DESTDIR}${EXDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.png ${DESTDIR}${EXDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.gif ${DESTDIR}${EXDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.jpg ${DESTDIR}${EXDIR}
 
-	${RM} -f ${DESTDIR}${PJDIR}/jpg-config.inc
-
 	${INSTALL_SCRIPT} ${WRKSRC}/src/*.php ${DESTDIR}${PJDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/*.inc ${DESTDIR}${PJDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/*.dat ${DESTDIR}${PJDIR}
+	cd ${WRKSRC}/src && pax -rw barcode flag_mapping fonts lang themes ${DESTDIR}${PJDIR}
 
-	${MV} -f ${DESTDIR}${PJDIR}/jpg-config.inc ${DESTDIR}${EXDIR}
-	${LN} -sf ${PJCONFFILE} ${DESTDIR}${PJDIR}/jpg-config.inc
-
-	for f in README QPL.txt; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f \
-			${DESTDIR}${PREFIX}/share/doc/php-jpgraph; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/php-jpgraph
 	cd ${WRKSRC}/docs && pax -rw . \
 		${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html
 	${FIND} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html -type d | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html ${DESTDIR}${PJDIR} ${DESTDIR}${EXDIR} -type f | \
+		${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/12 08:02:57 wiz Exp $
 
-BLAKE2s (jpgraph-1.18.tar.gz) = a2eacbca27f732503217a86826d3749669f6a0147417ce6a39582deb538c6236
-SHA512 (jpgraph-1.18.tar.gz) = 9c652eef61d8fa8894719f4bd69fa1b1b78c3c780926ee3221ff7ea330667523c0e51c2e979f3aa3fa3c5a8e780a568ebd2395542da3c490c7097250d287d8a6
-Size (jpgraph-1.18.tar.gz) = 4065908 bytes
+BLAKE2s (jpgraph-4.4.2.tar.gz) = 305171fd916fb31d13c2e9233b02829ba5a05c794639c62a403039c3f970b3b4
+SHA512 (jpgraph-4.4.2.tar.gz) = 959f9700473037c112c18d91d8d7e463134ff42a4d269d343704ada65819bbf7805efbc042b40b3469987dc5dc5b2414c9f00041ebbcdc7b4cd1aa073ff4abd9
+Size (jpgraph-4.4.2.tar.gz) = 13286882 bytes
