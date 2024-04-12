@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2416 2024/04/12 11:56:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2417 2024/04/12 12:15:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4029,3 +4029,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-eth-abi to 5.1.0 [adam 2024-04-12]
 	Updated finance/py-eth-rlp to 2.1.0 [adam 2024-04-12]
 	Updated sysutils/rsftch to 0.4.5 [pin 2024-04-12]
+	Updated misc/py-trove-classifiers to 2024.4.10 [adam 2024-04-12]
+	Updated devel/py-versioningit to 3.1.0 [adam 2024-04-12]
