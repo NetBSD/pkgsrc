@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/01/11 10:01:54 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/12 11:28:56 adam Exp $
 
-DISTNAME=	eth-hash-0.6.0
+DISTNAME=	eth-hash-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-hash/}
