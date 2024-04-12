@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.440 2024/04/12 19:53:25 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.441 2024/04/12 19:54:44 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -389,6 +389,12 @@ MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${NATIVE_LOWER_VENDOR}-${NATIVE_LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${NATIVE_LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
 MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
+.ifdef TARGET_MACHINE_ARCH
+TARGET_MACHINE_GNU_ARCH=	${GNU_ARCH.${TARGET_MACHINE_ARCH}:U${TARGET_MACHINE_ARCH}}
+TARGET_MACHINE_GNU_PLATFORM=	${TARGET_MACHINE_GNU_ARCH}-${TARGET_LOWER_VENDOR}-${TARGET_LOWER_OPSYS:C/[0-9]//g}${TARGET_APPEND_ELF}${TARGET_LOWER_OPSYS_VERSUFFIX}${TARGET_APPEND_ABI}
+TARGET_MACHINE_PLATFORM=	${TARGET_OPSYS}-${TARGET_OS_VERSION}-${TARGET_MACHINE_ARCH}
+.endif
+
 # Set this before <bsd.own.mk> does, since it doesn't know about Darwin
 # We will later set OBJECT_FMT to be conditional on USE_CROSS_COMPILE.
 .if ${NATIVE_OPSYS} == "Darwin"
@@ -407,15 +413,18 @@ OBJECT_FMT?=		Mach-O
 # the rest of the native package build with USE_CROSS_COMPILE=no.
 #
 # This can't live inside the cross-libtool makefile because the
-# TARGET_ARCH / MACHINE_ARCH / NATIVE_MACHINE_ARCH switcheroo has to
-# happen in the middle of this file -- after NATIVE_MACHINE_ARCH is
-# determined, before MACHINE_ARCH is used for anything else.
+# TARGET_MACHINE_ARCH / MACHINE_ARCH / NATIVE_MACHINE_ARCH switcheroo
+# has to happen in the middle of this file -- after NATIVE_MACHINE_ARCH
+# is determined, before MACHINE_ARCH is used for anything else.
 #
-.if !empty(LIBTOOL_CROSS_COMPILE:M[yY][eE][sS])
-.  if !defined(TARGET_ARCH)
-PKG_FAIL_REASON+=	"Must set TARGET_ARCH for cross-libtool."
+.if ${LIBTOOL_CROSS_COMPILE:U:tl} == "yes"
+.  if !defined(TARGET_MACHINE_ARCH)
+PKG_FAIL_REASON+=	"Must set TARGET_MACHINE_ARCH for cross-libtool."
 .  endif
-MACHINE_ARCH:=			${TARGET_ARCH}
+.  for _v_ in ${CROSSVARS}
+${_v_}=				${TARGET_${_v_}}
+.  endfor
+# XXX Other CROSSVARS for _BUILD_DEFS?
 _BUILD_DEFS.MACHINE_ARCH=	${NATIVE_MACHINE_ARCH}
 _BUILD_DEFS.MACHINE_GNU_ARCH=	${NATIVE_MACHINE_GNU_ARCH}
 _BUILD_DEFS.OBJECT_FMT=		${NATIVE_OBJECT_FMT}
@@ -630,6 +639,9 @@ TOOLS_CROSS_DESTDIR=		# empty
 
 # Depends on MACHINE_ARCH override above
 .if ${OPSYS} == "NetBSD"
+.  ifdef TARGET_MACHINE_ARCH
+TARGET_OBJECT_FMT?=	${OBJECT_FMT} # XXX
+.  endif
 .  if ${NATIVE_OBJECT_FMT} == "ELF" && \
    (!empty(NATIVE_MACHINE_ARCH:Mearm*) || \
     ${NATIVE_MACHINE_GNU_ARCH} == "arm" || \
@@ -654,11 +666,27 @@ NATIVE_APPEND_ELF=	elf
     ${MACHINE_ARCH} == "vax")
 APPEND_ELF=		elf
 .  endif
+.  if defined(TARGET_MACHINE_ARCH) && \
+   ${TARGET_OBJECT_FMT} == "ELF" && \
+   (!empty(TARGET_MACHINE_ARCH:Mearm*) || \
+    ${TARGET_MACHINE_GNU_ARCH} == "arm" || \
+    ${TARGET_MACHINE_ARCH} == "i386" || \
+    ${TARGET_MACHINE_ARCH} == "m68k" || \
+    ${TARGET_MACHINE_ARCH} == "m68000" || \
+    ${TARGET_MACHINE_GNU_ARCH} == "sh" || \
+    ${TARGET_MACHINE_GNU_ARCH} == "shle" || \
+    ${TARGET_MACHINE_ARCH} == "sparc" || \
+    ${TARGET_MACHINE_ARCH} == "vax")
+TARGET_APPEND_ELF=	elf
+.  endif
 .  if !empty(NATIVE_MACHINE_ARCH:Mearm*)
 NATIVE_APPEND_ABI=	-${NATIVE_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
 .  endif
 .  if !empty(MACHINE_ARCH:Mearm*)
 APPEND_ABI=		-${MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
+.  endif
+.  if !empty(TARGET_MACHINE_ARCH:Mearm*)
+TARGET_APPEND_ABI=	-${TARGET_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
 .  endif
 .endif
 
