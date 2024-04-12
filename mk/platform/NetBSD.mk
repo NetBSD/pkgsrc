@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.79 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.80 2024/04/12 19:56:40 riastradh Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -35,7 +35,11 @@ NOLOGIN?=		/sbin/nologin
 # This must be lazy and using :? evaluation doesn't work due to a make bugs.
 NATIVE_PKG_TOOLS_BIN_cmd=	if [ -x ${TOOLBASE}/sbin/pkg_info ]; then echo ${TOOLBASE}/sbin; else echo /usr/sbin; fi
 NATIVE_PKG_TOOLS_BIN?=		${NATIVE_PKG_TOOLS_BIN_cmd:sh}
-PKG_TOOLS_BIN?=			${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_PKG_TOOLS_BIN:U/usr/sbin}:${NATIVE_PKG_TOOLS_BIN}}
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+PKG_TOOLS_BIN=			${CROSS_PKG_TOOLS_BIN:U/usr/sbin}
+.else
+PKG_TOOLS_BIN?=			${NATIVE_PKG_TOOLS_BIN}
+.endif
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
