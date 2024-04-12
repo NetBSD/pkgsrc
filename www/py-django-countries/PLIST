@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/30 14:41:43 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2024/04/12 07:54:31 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django_countries/__init__.py
 ${PYSITELIB}/django_countries/__init__.pyc
 ${PYSITELIB}/django_countries/__init__.pyo
@@ -116,10 +115,14 @@ ${PYSITELIB}/django_countries/locale/sr_Latn_BA/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sr_Latn_BA/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/sv/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/sv/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/th_TH/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/th_TH/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/tr_TR/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/tr_TR/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/uk/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/vi/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/vi/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/zh_CN/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/zh_CN/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/zh_Hans/LC_MESSAGES/django.mo
