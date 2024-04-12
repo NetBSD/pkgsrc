@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2024/03/03 14:53:32 he Exp $
+# $NetBSD: Makefile,v 1.304 2024/04/12 19:59:38 riastradh Exp $
 
 DISTNAME=	rustc-1.75.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -701,7 +701,7 @@ DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 TOOL_DEPENDS+= cmake-[0-9]*:../../devel/cmake
-.include "../../devel/cmake/buildlink3.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
