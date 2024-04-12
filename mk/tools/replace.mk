@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.302 2024/03/26 16:27:13 schmonz Exp $
+# $NetBSD: replace.mk,v 1.303 2024/04/12 19:55:49 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -140,6 +140,9 @@ _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BOOTSTRAP_DEPENDS
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	TOOL_DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:M*\:run}
+.  if ${USE_CROSS_COMPILE:tl} == "yes" && ${OPSYS} != ${NATIVE_OPSYS}
+PKG_FAIL_REASON+=	"USE_TOOLS+=${_t_} not supported in cross-compilation"
+.  endif
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:M*\:test}
