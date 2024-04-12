@@ -1,11 +1,14 @@
-# $NetBSD: options.mk,v 1.20 2021/03/22 07:03:57 adam Exp $
+# $NetBSD: options.mk,v 1.21 2024/04/12 19:41:09 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
-PKG_SUPPORTED_OPTIONS=	libthai x11
+PKG_SUPPORTED_OPTIONS=	introspection libthai x11
 PKG_SUGGESTED_OPTIONS=	x11
+
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?introspection:}
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	introspection
 PLIST_VARS+=	x11
 
 ###
@@ -23,6 +26,18 @@ BUILDLINK_DEPMETHOD.libXt?=	build # only for configure
 .include "../../x11/libXt/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dxft=disabled
+.endif
+
+###
+### gobject-introspection
+###
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
+MESON_ARGS+=	-Dintrospection=enabled
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dintrospection=disabled
 .endif
 
 ###
