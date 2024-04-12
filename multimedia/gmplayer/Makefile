@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2024/04/12 19:32:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.168 2024/04/12 19:42:05 riastradh Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -104,7 +104,7 @@ DISTINFO_FILE=	${.CURDIR}/distinfo
 DIST_SUBDIR=	mplayer
 
 USE_TOOLS+=		pax pkg-config
-CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
+CONFIGURE_ARGS+=	--enable-gui --enable-x11 --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-xvmc
 
