@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.31 2024/01/13 20:09:28 riastradh Exp $
+# $NetBSD: gnu-configure.mk,v 1.32 2024/04/12 19:54:56 riastradh Exp $
 #
 # Package-settable variables:
 #
@@ -40,7 +40,7 @@ _PKG_VARS.gnu-configure=	\
 	GNU_CONFIGURE_LIBDIR GNU_CONFIGURE_INFODIR GNU_CONFIGURE_MANDIR \
 	CONFIGURE_HAS_LIBDIR CONFIGURE_HAS_MANDIR CONFIGURE_HAS_INFODIR \
 	OVERRIDE_DIRDEPTH.configure \
-	USE_GNU_CONFIGURE_HOST
+	USE_GNU_CONFIGURE_HOST USE_GNU_CONFIGURE_TARGET
 
 HAS_CONFIGURE=			defined
 OVERRIDE_GNU_CONFIG_SCRIPTS=	defined
@@ -85,6 +85,7 @@ CONFIGURE_ARGS+=	--libdir=${GNU_CONFIGURE_LIBDIR}
 .endif
 
 USE_GNU_CONFIGURE_HOST?=	yes
+USE_GNU_CONFIGURE_TARGET?=	no # enable for toolchain packages
 .if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
 .  if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
@@ -92,6 +93,9 @@ CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 .  endif
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+.  if ${USE_GNU_CONFIGURE_TARGET:tl} == "yes"
+CONFIGURE_ARGS+=	--target=${TARGET_MACHINE_GNU_PLATFORM:Q}
+.  endif
 .endif
 
 # PKGINFODIR is the subdirectory of ${PREFIX} into which the info
