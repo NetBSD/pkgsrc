@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/11/30 10:31:07 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/04/12 09:58:07 adam Exp $
 
-BLAKE2s (pytest_isort-3.1.0.tar.gz) = 9e8bc18d564e1d8a344f982411c83a7a1aa7f30f75cce71a0a5970e1da736f32
-SHA512 (pytest_isort-3.1.0.tar.gz) = 274f4bdf29edda8131e5473f3a51a152613fa262745523b7dd07de3ff2d6cad967381d8fd76214591eb4d73a69aee26a596b1c6009bdf85b10cdf27d375ad340
-Size (pytest_isort-3.1.0.tar.gz) = 6287 bytes
+BLAKE2s (pytest_isort-4.0.0.tar.gz) = d7e98adcadd59b7de1a25fdba72f2c308b427064b5a7b1eec99ccbb804421667
+SHA512 (pytest_isort-4.0.0.tar.gz) = f555e32595b56c997b35bbf1e868462671a5162c781a714779606ebdf2c5949ef2180d5a244d53581b0b9b8f3bfee045538eb26cbcd169e07312f146eeddc5cc
+Size (pytest_isort-4.0.0.tar.gz) = 5597 bytes
+SHA1 (patch-pyproject.toml) = 0ab708c790587491385d7ce066c439559344b7c7
