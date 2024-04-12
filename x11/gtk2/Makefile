@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2024/04/07 07:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.341 2024/04/12 19:40:24 riastradh Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -92,9 +92,6 @@ BUILDLINK_API_DEPENDS.atk+=	atk>=1.30.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection:=	build
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.3
-.include "../../devel/gobject-introspection/buildlink3.mk"
 
 .include "options.mk"
 

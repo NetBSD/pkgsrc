@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.19 2022/10/19 10:36:47 jperkin Exp $
+# $NetBSD: options.mk,v 1.20 2024/04/12 19:40:24 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gtk2
-PKG_SUPPORTED_OPTIONS=		cups debug
+PKG_SUPPORTED_OPTIONS=		cups debug introspection
 PKG_OPTIONS_REQUIRED_GROUPS=	gdk-target
 PKG_OPTIONS_GROUP.gdk-target=	x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
@@ -10,6 +10,8 @@ PKG_SUGGESTED_OPTIONS=		quartz
 .else
 PKG_SUGGESTED_OPTIONS=		x11
 .endif
+
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,6 +25,17 @@ CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug=yes
+.endif
+
+PLIST_VARS+=		introspection
+.if !empty(PKG_OPTIONS:Mintrospection)
+CONFIGURE_ARGS+=	--enable-introspection=yes
+PLIST.introspection=	yes
+BUILDLINK_DEPMETHOD.gobject-introspection:=	build
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.3
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--enable-introspection=no
 .endif
 
 ###
