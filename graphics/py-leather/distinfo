@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/04/13 05:22:06 adam Exp $
 
-BLAKE2s (leather-0.3.4.tar.gz) = aabbc59b5000ce088581d35b5941c7e35b9d3c39b2b8169450f4b5c357f09595
-SHA512 (leather-0.3.4.tar.gz) = e22861d4404b54ca183de407b3e9d6c58d1a2ac901d2cd9474485219dbf281c08f24c4113036617c4ef059818192a18289fdaf68ee0d4802cca3685477054bc2
-Size (leather-0.3.4.tar.gz) = 30605 bytes
+BLAKE2s (leather-0.4.0.tar.gz) = ac17a122a064bd6c09f8ff229ed99dd16464d3df7db1e59d92c800a4c12d7e83
+SHA512 (leather-0.4.0.tar.gz) = 2ad71c5ceaf7d76f5c03da675d527a67b6a582dacc91c9ad6d0536acff314e9f99093032ffd34638bcd662a1b64590ec3aae4a7f495e3644c686f68e093bfc5e
+Size (leather-0.4.0.tar.gz) = 43877 bytes
