@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2431 2024/04/13 05:22:28 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2432 2024/04/13 05:35:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4049,3 +4049,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-black to 24.4.0 [adam 2024-04-13]
 	Updated devel/py-ruff to 0.3.7 [adam 2024-04-13]
 	Updated graphics/py-leather to 0.4.0 [adam 2024-04-13]
+	Updated www/py-django-bootstrap5 to 24.1 [adam 2024-04-13]
+	Updated devel/py-joblib to 1.4.0 [adam 2024-04-13]
+	Updated audio/libopus to 1.5.2 [adam 2024-04-13]
+	Updated devel/blosc2 to 2.14.4 [adam 2024-04-13]
