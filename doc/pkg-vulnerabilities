@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.172 2024/04/13 03:12:37 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.173 2024/04/13 08:14:24 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25981,14 +25981,14 @@ php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/
 php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3180
 php{80,81,82}-concrete-cms<9.2.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-3181
 p5-HTTP-Body<1.23	shell-escape	https://nvd.nist.gov/vuln/detail/CVE-2013-4407
-php81<8.1.28	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
-php81>=8.1.11<8.1.28	security-bypass	https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
-php81<8.1.28	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
-php82<8.2.18	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
-php82<8.2.18	security-bypass https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
-php82<8.2.18	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
-php83<8.3.5	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
-php83<8.3.5     security-bypass https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
-php83<8.3.5	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
-php-7.4.[0-9]*		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-php-8.0.[0-9]*		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+php>=8.1<8.1.28	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
+php>=8.1.11<8.1.28	security-bypass	https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
+php>=8.1<8.1.28	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
+php>=8.2<8.2.18	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
+php>=8.2<8.2.18	security-bypass https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
+php>=8.2<8.2.18	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
+php>=8.3<8.3.5	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
+php>=8.3<8.3.5     security-bypass https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
+php>=8.3<8.3.5	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
+php>=7.4<8.0		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+php>=8.0<8.1		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages

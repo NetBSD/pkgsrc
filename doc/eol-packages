@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.7 2024/04/13 03:11:38 taca Exp $
+# $NetBSD: eol-packages,v 1.8 2024/04/13 08:14:24 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1131,7 +1131,7 @@ Description: Update to newer version.
 Package: PHP (7.4)
 eol date: November 28, 2022
 URL: http://php.net/supported-versions.php
-Description: Upgrade to PHP 8.0 or newer.
+Description: Upgrade to PHP 8.1 or newer.
 
 Package: PHP (8.0)
 eol date: November 26, 2023
