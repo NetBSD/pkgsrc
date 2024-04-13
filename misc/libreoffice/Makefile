@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.328 2024/04/07 07:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.329 2024/04/13 12:16:10 ryoon Exp $
 
-VERREL=		24.2.1
+VERREL=		24.2.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -140,6 +139,7 @@ MORE_DISTFILES= \
 	NotoSerif-v2.012.zip \
 	NotoSerifHebrew-v2.003.zip \
 	NotoSansArabic-v2.010.zip \
+	NotoKufiArabic-v2.109.zip \
 	NotoNaskhArabic-v2.016.zip \
 	NotoSansHebrew-v2.003.zip \
 	NotoSansArmenian-v2.008.zip \
