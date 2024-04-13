@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.171 2024/04/13 03:10:35 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.172 2024/04/13 03:12:37 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25990,3 +25990,5 @@ php82<8.2.18	authentication-bypass	https://github.com/php/php-src/security/advis
 php83<8.3.5	command-injection	https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
 php83<8.3.5     security-bypass https://github.com/php/php-src/security/advisories/GHSA-wpj3-hf5j-x4v4
 php83<8.3.5	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
+php-7.4.[0-9]*		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+php-8.0.[0-9]*		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
