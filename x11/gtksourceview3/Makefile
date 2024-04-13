@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/04/07 07:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/04/13 00:48:57 riastradh Exp $
 
 DISTNAME=	gtksourceview-3.24.11
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	gtksourceview-3.0.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtksourceview3
 PKG_SUPPORTED_OPTIONS=	introspection
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 PLIST_VARS+=		introspection
 
 .include "../../mk/bsd.options.mk"

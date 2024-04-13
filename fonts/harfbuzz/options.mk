@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.15 2024/01/27 09:58:18 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2024/04/13 00:48:57 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.harfbuzz
 PKG_SUPPORTED_OPTIONS+=	doc introspection
-PKG_SUGGESTED_OPTIONS=	doc introspection
+PKG_SUGGESTED_OPTIONS=	doc
+
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 

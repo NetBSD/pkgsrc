@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/04/07 07:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/13 00:48:57 riastradh Exp $
 
 DISTNAME=	librsvg-2.40.21
 PKGREVISION=	17
@@ -28,7 +28,7 @@ CONFIGURE_ARGS.Darwin+=	--disable-Bsymbolic
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.librsvg
 PKG_SUPPORTED_OPTIONS=	introspection
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	introspection

@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2013/12/07 11:32:31 obache Exp $
+# $NetBSD: options.mk,v 1.6 2024/04/13 00:48:57 riastradh Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.input-pad
 PKG_SUPPORTED_OPTIONS=	eekboard introspection xtest
-PKG_SUGGESTED_OPTIONS=	introspection xtest
+PKG_SUGGESTED_OPTIONS=	xtest
+
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 
