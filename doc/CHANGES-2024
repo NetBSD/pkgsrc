@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2427 2024/04/12 21:35:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2428 2024/04/13 02:50:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/modular-xorg-server to 21.1.13 [wiz 2024-04-12]
 	Updated x11/modular-xorg-xephyr to 21.1.13 [wiz 2024-04-12]
 	Updated devel/pango to 1.52.2nb2 [wiz 2024-04-12]
+	Updated lang/php82 to 8.2.18 [taca 2024-04-13]
