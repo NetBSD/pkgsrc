@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.6 2024/02/12 04:35:57 jnemeth Exp $
+# $NetBSD: eol-packages,v 1.7 2024/04/13 03:11:38 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1127,3 +1127,13 @@ Package: asterisk 13.X
 eol date: October 24, 2021
 URL: https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
 Description: Update to newer version.
+
+Package: PHP (7.4)
+eol date: November 28, 2022
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 8.0 or newer.
+
+Package: PHP (8.0)
+eol date: November 26, 2023
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 8.1 or newer.
