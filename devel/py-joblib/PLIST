@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/03 10:35:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/04/13 05:27:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -52,9 +52,6 @@ ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle.pyo
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.py
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyc
 ${PYSITELIB}/joblib/externals/cloudpickle/cloudpickle_fast.pyo
-${PYSITELIB}/joblib/externals/cloudpickle/compat.py
-${PYSITELIB}/joblib/externals/cloudpickle/compat.pyc
-${PYSITELIB}/joblib/externals/cloudpickle/compat.pyo
 ${PYSITELIB}/joblib/externals/loky/__init__.py
 ${PYSITELIB}/joblib/externals/loky/__init__.pyc
 ${PYSITELIB}/joblib/externals/loky/__init__.pyo
@@ -255,6 +252,9 @@ ${PYSITELIB}/joblib/test/test_memmapping.pyo
 ${PYSITELIB}/joblib/test/test_memory.py
 ${PYSITELIB}/joblib/test/test_memory.pyc
 ${PYSITELIB}/joblib/test/test_memory.pyo
+${PYSITELIB}/joblib/test/test_memory_async.py
+${PYSITELIB}/joblib/test/test_memory_async.pyc
+${PYSITELIB}/joblib/test/test_memory_async.pyo
 ${PYSITELIB}/joblib/test/test_missing_multiprocessing.py
 ${PYSITELIB}/joblib/test/test_missing_multiprocessing.pyc
 ${PYSITELIB}/joblib/test/test_missing_multiprocessing.pyo
