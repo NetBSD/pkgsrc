@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/13 11:03:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/14 09:37:31 wiz Exp $
 bin/riemann-client
 include/riemann/attribute.h
 include/riemann/client.h
+include/riemann/communicate.h
 include/riemann/event.h
 include/riemann/message.h
 include/riemann/proto/riemann.pb-c.h
 include/riemann/query.h
 include/riemann/riemann-client.h
 include/riemann/simple.h
-lib/libriemann-client.la
+lib/libriemann-client-gnutls.la
 lib/pkgconfig/riemann-client.pc
 man/man1/riemann-client.1

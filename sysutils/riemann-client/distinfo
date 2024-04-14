@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/04/14 09:37:31 wiz Exp $
 
-BLAKE2s (riemann-c-client-1.10.4.tar.gz) = cf931d2be8152138b4d54c4d52353aa44932f2e8a149d917bcf9f88baa552f23
-SHA512 (riemann-c-client-1.10.4.tar.gz) = b46d892adc031a6636d1b3688f9bf7d56a7c956100a544f0d0daa9ba6a1478b65933fff7dafd6e535ebb3589807e6139bd89370d39e24bd5ce7a7f2fe72300a1
-Size (riemann-c-client-1.10.4.tar.gz) = 64007 bytes
-SHA1 (patch-src_cmd-send.c) = a4fa24be0b4c88fd4586807a636d10ca4b3ae743
+BLAKE2s (riemann-c-client-2.2.0.tar.gz) = 6503b21198cf02b6c4a724169bbc47f7b25f00f6481b1f3b5a2af2b9762d4919
+SHA512 (riemann-c-client-2.2.0.tar.gz) = 2f9b68a62227a67400b0964a797d5b41e673b94e0cf2edf9825da0d2d6ecd9a14bc372520c3ba0be017d602de62f83ec0ba917865ee33056f7ab1228aa01aa24
+Size (riemann-c-client-2.2.0.tar.gz) = 68880 bytes
