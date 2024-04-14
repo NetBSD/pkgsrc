@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2024/03/11 21:03:24 js Exp $
+# $NetBSD: Makefile,v 1.24 2024/04/14 17:05:03 js Exp $
 
-DISTNAME=	objfw-1.0.12
+DISTNAME=	objfw-1.1
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://objfw.nil.im/
 COMMENT=	Portable, lightweight framework for the Objective-C language
-LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
@@ -42,5 +42,7 @@ do-test:
 
 .include "options.mk"
 
+.if ${OPSYS} != "Darwin"
 .include "../../lang/clang/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"

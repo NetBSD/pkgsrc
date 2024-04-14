@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2023/09/10 15:56:43 js Exp $
+# $NetBSD: options.mk,v 1.2 2024/04/14 17:05:03 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
 PKG_OPTIONS_OPTIONAL_GROUPS=	tls
-PKG_OPTIONS_GROUP.tls=		openssl gnutls
+PKG_OPTIONS_GROUP.tls=		openssl gnutls mbedtls
 .if ${OPSYS} == "Darwin"
 PKG_OPTIONS_GROUP.tls+=		securetransport
 PKG_SUGGESTED_OPTIONS=		securetransport
@@ -28,6 +28,13 @@ PLIST_SRC+=		PLIST.tlsframework
 .  endif
 .elif !empty(PKG_OPTIONS:Msecuretransport)
 CONFIGURE_ARGS+=	--with-tls=securetransport
+PLIST_SRC+=		PLIST.tls
+.  if ${OPSYS} == "Darwin"
+PLIST_SRC+=		PLIST.tlsframework
+.  endif
+.elif !empty(PKG_OPTIONS:Mmbedtls)
+.  include "../../security/mbedtls3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-tls=mbedtls
 PLIST_SRC+=		PLIST.tls
 .  if ${OPSYS} == "Darwin"
 PLIST_SRC+=		PLIST.tlsframework
