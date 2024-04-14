@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/04/07 07:34:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/14 14:22:48 adam Exp $
 
-DISTNAME=	gnome-nibbles-4.0.1
-PKGREVISION=	1
+DISTNAME=	gnome-nibbles-4.0.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-nibbles/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
