@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:17:38 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/14 12:52:09 gdt Exp $
 
-BLAKE2s (pkcs11-helper-1.27.0.tar.bz2) = 80529710ded5b83ac36649ab16602546ff4a63bc26e21c3b3f2e72bb6c6a7a80
-SHA512 (pkcs11-helper-1.27.0.tar.bz2) = 5799342cb755dae8b7ba0880d652e9d4b4f1e52a74043015e1185e1e059326cb2689bb51957db98060ac2257dee34e2f047dcf3d52ad59fd49b91fedcfc5332b
-Size (pkcs11-helper-1.27.0.tar.bz2) = 422425 bytes
+BLAKE2s (pkcs11-helper-1.30.0.tar.bz2) = 5b9bda47fa65eb9a280d569cde20a8cf0ae60c417d9e394cf757d22c1a407f66
+SHA512 (pkcs11-helper-1.30.0.tar.bz2) = 19fba76e41210cc17f9efa4501d0214d4a5c777ab7b2671888fd280b150bae4a6b190c7f47fb783015f9aa40d409fd6087264e531d6f28d0bed4293dcbf8bdd5
+Size (pkcs11-helper-1.30.0.tar.bz2) = 423196 bytes
