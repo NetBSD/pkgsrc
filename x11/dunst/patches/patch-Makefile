@@ -1,10 +1,20 @@
-$NetBSD: patch-Makefile,v 1.10 2024/03/10 08:25:45 wiz Exp $
+$NetBSD: patch-Makefile,v 1.11 2024/04/14 15:42:44 wiz Exp $
 
+Use more portable find options.
 Use BSD_INSTALL.
 
---- Makefile.orig	2023-04-20 16:55:58.000000000 +0000
+--- Makefile.orig	2024-02-19 20:44:18.000000000 +0000
 +++ Makefile
-@@ -187,22 +187,22 @@ clean-wayland-protocols:
+@@ -35,7 +35,7 @@ LDFLAGS := ${DEFAULT_LDFLAGS} ${LDFLAGS}
+ 
+ ifeq (0,${WAYLAND})
+ # without wayland support
+-SRC := $(sort $(shell ${FIND} src/ -not \( -path src/wayland -prune \) -name '*.c'))
++SRC := $(sort $(shell ${FIND} src/ ! \( -path src/wayland -prune \) -name '*.c'))
+ else
+ # with Wayland support
+ CFLAGS += -DHAVE_WL_CURSOR_SHAPE -DHAVE_WL_EXT_IDLE_NOTIFY
+@@ -198,22 +198,22 @@ clean-wayland-protocols:
  install: install-dunst install-dunstctl install-dunstrc install-service 
  
  install-dunst: dunst doc
@@ -34,7 +44,7 @@ Use BSD_INSTALL.
  ifneq (0,${SYSTEMD})
  install-service: install-service-systemd
  install-service-systemd: service-systemd
-@@ -212,7 +212,7 @@ endif
+@@ -223,7 +223,7 @@ endif
  ifneq (0,${DUNSTIFY})
  install: install-dunstify
  install-dunstify: dunstify
