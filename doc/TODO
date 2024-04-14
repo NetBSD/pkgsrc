@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24319 2024/04/13 08:36:37 wiz Exp $
+$NetBSD: TODO,v 1.24320 2024/04/14 08:07:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -465,6 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.20.5
 	o audacity-3.4
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -602,6 +603,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epubcheck-4.0.2
 	o epstool-3.0.9
 	o eric5-5.4.6
+	o erlang-26.2.4
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -734,7 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
-	o grafana-10.4.1
+	o grafana-10.4.2
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -889,6 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libvirt-10.0
+	o libwildmidi-0.4.6
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
 	o lighttpd-1.4.76
@@ -897,7 +900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-17.0.6 [wip]
-	o llvm-18.1.2
+	o llvm-18.1.3
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -976,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
+	o ninja-build-1.12.0
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -998,6 +1002,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-safepass-3.1
 	o ocaml-zip-110
 	o ocamlbuild-4.02.3
+	o ocp-0.2.109
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
@@ -1123,6 +1128,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
+	o prometheus-2.51.2
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1136,6 +1142,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.1.0
+	o py-docutils-0.21.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
@@ -1146,6 +1154,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-mako-1.3.3
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1164,11 +1173,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autodoc-typehints-2.0.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-uwsgi-2.0.25
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1333,6 +1344,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-0.22.4
+	o tree-sitter-cli-0.22.4
+	o tree-sitter-elixir-0.2.0
+	o tree-sitter-json-0.21.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
