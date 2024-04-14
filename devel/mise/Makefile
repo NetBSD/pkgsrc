@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/03 03:29:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/14 08:34:10 wiz Exp $
 
 DISTNAME=		mise-2024.4.0
 CATEGORIES=		devel
@@ -11,6 +11,7 @@ COMMENT=		Polyglot tool version manager like asdf
 LICENSE=		mit
 
 USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
 
 .include "cargo-depends.mk"
 
@@ -39,4 +40,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/
 
 .include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
