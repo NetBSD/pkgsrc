@@ -1,24 +1,24 @@
-$NetBSD: patch-Makefile.in,v 1.4 2023/04/11 05:45:45 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2024/04/14 17:25:28 adam Exp $
 
 Make it possible to respect MAKE_JOBS.
 
---- Makefile.in.orig	2023-03-17 20:14:26.000000000 +0000
+--- Makefile.in.orig	2024-03-17 17:06:40.000000000 +0000
 +++ Makefile.in
-@@ -1553,7 +1553,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
+@@ -1637,7 +1637,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
  	PKG_CONFIG_ALLOW_CROSS=1						\
  	PKG_CONFIG='$(PKG_CONFIG)'						\
  	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
--	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --lib \
-+	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --lib \
- 	&& cd $(LIBRSVG_BUILD_DIR) && $(LINK) $< && mv $(RUST_LIB) .libs/librsvg_c_api.a
+-	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --package librsvg-c \
++	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --package librsvg-c \
+ 	&& cd $(LIBRSVG_BUILD_DIR) && $(LINK) $< && cp $(RUST_LIB) .libs/librsvg_c_api.a
  
  $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC) | librsvg_c_api.la
-@@ -1561,7 +1561,7 @@ $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC)
+@@ -1645,7 +1645,7 @@ $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC)
  	PKG_CONFIG_ALLOW_CROSS=1						\
  	PKG_CONFIG='$(PKG_CONFIG)'						\
  	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
--	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --bin rsvg-convert
-+	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --bin rsvg-convert
+-	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --package rsvg_convert
++	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --package rsvg_convert
  
  rsvg-convert$(EXEEXT): $(RSVG_CONVERT_BIN)
- 	cd $(LIBRSVG_BUILD_DIR) && mv $(RSVG_CONVERT_BIN) rsvg-convert$(EXEEXT)
+ 	cd $(LIBRSVG_BUILD_DIR) && cp $(RSVG_CONVERT_BIN) rsvg-convert$(EXEEXT)
