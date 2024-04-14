@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24321 2024/04/14 09:37:39 wiz Exp $
+$NetBSD: TODO,v 1.24322 2024/04/14 16:18:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
-	o ninja-build-1.12.0
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
