@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.160 2024/04/07 07:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2024/04/14 17:25:28 adam Exp $
 
-DISTNAME=	librsvg-2.56.3
-PKGREVISION=	5
+DISTNAME=	librsvg-2.58.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,11 +10,12 @@ HOMEPAGE=	https://wiki.gnome.org/LibRsvg
 COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2.1
 
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
-USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-Bsymbolic
+TEST_TARGET=		check
 
 PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -36,8 +36,6 @@ SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
 SUBST_STAGE.rst2man=	pre-configure
 SUBST_FILES.rst2man=	configure
 SUBST_SED.rst2man=	-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
-
-TEST_TARGET=		check
 
 .include "cargo-depends.mk"
 
