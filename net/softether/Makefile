@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/03/07 11:48:35 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/14 08:56:02 wiz Exp $
 
 NAME=		softether
 VERSION=	5.02.5181
 PKGNAME=	${NAME}-${VERSION}
+PKGREVISION=	1
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_RELEASE}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SoftEtherVPN/}
@@ -52,7 +53,7 @@ post-install:
 .endfor
 
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
