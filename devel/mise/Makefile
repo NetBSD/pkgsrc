@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/04/14 08:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/14 18:50:10 schmonz Exp $
 
-DISTNAME=		mise-2024.4.0
+DISTNAME=		mise-2024.4.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -22,9 +22,11 @@ MISE_CHANGELOG_VERSION?=${PKGVERSION_NOREV}
 maintainer-mise-changelog:
 	@fetch -q -o - ${MASTER_SITES}mise/releases/tag/v${MISE_CHANGELOG_VERSION} \
 	| html2text --ignore-links --ignore-emphasis - \
-	| awk '/^## ${MISE_CHANGELOG_VERSION}/{flag=1} /^Assets /{flag=0} flag' \
+	| awk '/^v${MISE_CHANGELOG_VERSION}/{flag=1} /^Assets /{flag=0} flag' \
+	| awk '/^This .* was /{flag=1} /^Learn about vigilant mode\.$$/{flag=0; next} !flag' \
 	| perl -pe 's/[^[:ascii:]]//g' \
 	| sed -e 's|#  |# |g' \
+		-e 's|^# v||' \
 		-e 's| by .* in .*$$||' \
 		-e 's|^  \*|*|g'
 
