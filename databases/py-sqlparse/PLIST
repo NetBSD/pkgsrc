@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:56:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/14 18:10:08 adam Exp $
 bin/sqlformat-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/sqlparse/__init__.py
 ${PYSITELIB}/sqlparse/__init__.pyc
 ${PYSITELIB}/sqlparse/__init__.pyo
