@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/11/27 11:16:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2024/04/14 16:16:04 adam Exp $
 
-DISTNAME=	libgee-0.20.3
-PKGREVISION=	10
+DISTNAME=	libgee-0.20.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgee/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,13 +10,12 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Libgee
 COMMENT=	Library providing GObject-based interfaces and classes
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
+GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	gee-0.8.pc.in
-
-TEST_TARGET=	check
 
 BUILDLINK_DEPMETHOD.gobject-introspection:= build
 .include "../../devel/gobject-introspection/buildlink3.mk"
