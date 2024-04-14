@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/02/13 17:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/14 18:12:30 adam Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-2.0.0
+DISTNAME=	sphinx_autodoc_typehints-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/tox-dev/sphinx-autodoc-typehints
 COMMENT=	Type hints support for the Sphinx autodoc extension
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.18:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.21.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.1.2:../../textproc/py-sphinx
 # optional
 DEPENDS+=	${PYPKGPREFIX}-nptyping>=2.5:../../math/py-nptyping
