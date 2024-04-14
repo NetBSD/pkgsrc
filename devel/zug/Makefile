@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/14 19:27:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/14 08:35:26 wiz Exp $
 
 DISTNAME=	zug-0.1.1
 CATEGORIES=	devel
@@ -13,4 +13,5 @@ LICENSE=	boost-license
 USE_LANGUAGES=	c c++
 
 .include "../../devel/cmake/build.mk"
+.include "../../devel/catch2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
