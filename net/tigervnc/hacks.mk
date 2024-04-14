@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.1 2024/04/14 09:03:01 pho Exp $
+# $NetBSD: hacks.mk,v 1.2 2024/04/14 09:14:03 pho Exp $
 
-.if !defined(FOO_HACKS_MK)
-FOO_HACKS_MK=	defined
+.if !defined(TIGERVNC_HACKS_MK)
+TIGERVNC_HACKS_MK=	defined
 
 ### [Tue Apr  9 13:40:46 JST 2024 : pho]
 ###
@@ -23,4 +23,4 @@ PKG_HACKS+=	smart-scheduler-workaround
 CONFIGURE_ENV+=	ac_cv_func_setitimer=no
 .endif
 
-.endif  # FOO_HACKS_MK
+.endif  # TIGERVNC_HACKS_MK
