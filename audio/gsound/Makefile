@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/04/07 07:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/04/14 14:20:28 adam Exp $
 
-DISTNAME=	gsound-1.0.2
-PKGREVISION=	14
+DISTNAME=	gsound-1.0.3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,15 +10,13 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gsound
 COMMENT=	Small library for playing system sounds
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	pkg-config gmake
-USE_LIBTOOL=	yes
-
-GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	gsound/gsound.pc
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
