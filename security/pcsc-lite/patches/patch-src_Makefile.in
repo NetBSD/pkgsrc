@@ -1,12 +1,12 @@
-$NetBSD: patch-src_Makefile.in,v 1.8 2022/01/10 16:11:52 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.9 2024/04/14 05:54:18 adam Exp $
 
 Make sure libpcsclite.so is not linked against -lpthread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden.
 Disable installation of pcsc-spy
 
---- src/Makefile.in.orig	2021-12-04 12:29:54.000000000 +0000
+--- src/Makefile.in.orig	2024-04-12 09:51:08.000000000 +0000
 +++ src/Makefile.in
-@@ -435,6 +435,8 @@ PTHREAD_CC = @PTHREAD_CC@
+@@ -450,6 +450,8 @@ PTHREAD_CC = @PTHREAD_CC@
  PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
  PTHREAD_CXX = @PTHREAD_CXX@
  PTHREAD_LIBS = @PTHREAD_LIBS@
@@ -15,7 +15,7 @@ Disable installation of pcsc-spy
  RANLIB = @RANLIB@
  SED = @SED@
  SET_MAKE = @SET_MAKE@
-@@ -503,7 +505,6 @@ top_build_prefix = @top_build_prefix@
+@@ -518,7 +520,6 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  usbdropdir = @usbdropdir@
@@ -23,14 +23,14 @@ Disable installation of pcsc-spy
  AM_CPPFLAGS = -I$(top_srcdir)/src/PCSC -I$(top_builddir)/src/PCSC \
  	$(SYMBOL_VISIBILITY)
  
-@@ -524,8 +525,8 @@ libpcsclite_la_SOURCES = \
+@@ -545,8 +546,8 @@ libpcsclite_real_la_SOURCES = \
  	winscard_msg.c
  
- libpcsclite_la_LDFLAGS = -version-info 1:0:0
--libpcsclite_la_CFLAGS = $(CFLAGS) $(PTHREAD_CFLAGS) -DLIBPCSCLITE -DSIMCLIST_NO_DUMPRESTORE
--libpcsclite_la_LIBADD = $(PTHREAD_CFLAGS) $(PTHREAD_LIBS)
-+libpcsclite_la_CFLAGS = $(CFLAGS) $(LIBPCSC_PTHREAD_CFLAGS) -DLIBPCSCLITE -DSIMCLIST_NO_DUMPRESTORE
-+libpcsclite_la_LIBADD = $(LIBPCSC_PTHREAD_CFLAGS) $(PTHREAD_LIBS)
- pcscd_SOURCES = \
- 	auth.c \
- 	auth.h \
+ libpcsclite_real_la_LDFLAGS = -version-info 1:0:0
+-libpcsclite_real_la_CFLAGS = $(PTHREAD_CFLAGS) -DLIBPCSCLITE -DSIMCLIST_NO_DUMPRESTORE
+-libpcsclite_real_la_LIBADD = $(PTHREAD_CFLAGS) $(PTHREAD_LIBS)
++libpcsclite_real_la_CFLAGS = $(LIBPCSC_PTHREAD_CFLAGS) -DLIBPCSCLITE -DSIMCLIST_NO_DUMPRESTORE
++libpcsclite_real_la_LIBADD = $(LIBPCSC_PTHREAD_CFLAGS) $(PTHREAD_LIBS)
+ libpcsclite_fake_la_SOURCES = \
+ 	libfake.c
+ 
