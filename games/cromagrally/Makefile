@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/06 08:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/14 08:42:52 wiz Exp $
 
 DISTNAME=	cromagrally-3.0.1
 PKGREVISION=	1
@@ -13,10 +13,11 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 GITHUB_SUBMODULES=	\
 	jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 extern/Pomme
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
-FORCE_CXX_STD=	c++20
-USE_TOOLS+=	pax pkg-config
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++20
+USE_CXX_FEATURES=	c++20
+USE_TOOLS+=		pax pkg-config
 
 WRKSRC=		${WRKDIR}/CroMagRally-${GITHUB_TAG}
 
