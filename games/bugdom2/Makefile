@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/06 08:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/14 08:42:22 wiz Exp $
 
 DISTNAME=	bugdom2-4.0.0
 PKGREVISION=	1
@@ -14,10 +14,11 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 GITHUB_SUBMODULES=	\
 	jorio Pomme c6a38eab19a11847024a13f9b3e2af0c2d908c3e extern/Pomme
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
-FORCE_CXX_STD=	c++20
-USE_TOOLS+=	pax pkg-config
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++20
+USE_CXX_FEATURES=	c++20
+USE_TOOLS+=		pax pkg-config
 
 WRKSRC=		${WRKDIR}/Bugdom2-${PKGVERSION_NOREV}
 
