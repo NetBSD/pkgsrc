@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2024/04/07 07:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/04/14 14:21:33 adam Exp $
 
-DISTNAME=	gtk-4.12.5
+DISTNAME=	gtk-4.14.2
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -28,9 +27,7 @@ MESON_REQD+=		0.60.0
 MESON_ARGS+=		-Dintrospection=enabled
 # needs gstreamer-gl
 MESON_ARGS+=		-Dmedia-gstreamer=disabled
-# ffmpeg backend is disabled by default
-# https://gitlab.gnome.org/GNOME/gtk/-/issues/5581
-MESON_ARGS+=		-Dmedia-ffmpeg=enabled
+MESON_ARGS+=		-Dvulkan=disabled
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-x11.pc
@@ -44,6 +41,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
 .include "../../devel/pango/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
@@ -55,10 +53,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 # librsvg is required by a demo only.
 #.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
-# does not support ffmpeg6 yet
-# https://gitlab.gnome.org/GNOME/gtk/-/issues/5581
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
-.include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

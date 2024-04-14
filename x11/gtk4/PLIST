@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/02/14 08:40:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/04/14 14:21:33 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -6,6 +6,7 @@ bin/gtk4-encode-symbolic-svg
 bin/gtk4-icon-browser
 bin/gtk4-launch
 bin/gtk4-node-editor
+bin/gtk4-path-tool
 bin/gtk4-print-editor
 bin/gtk4-query-settings
 bin/gtk4-rendernode-tool
@@ -29,6 +30,9 @@ include/gtk-4.0/gdk/gdkdevicepad.h
 include/gtk-4.0/gdk/gdkdevicetool.h
 include/gtk-4.0/gdk/gdkdisplay.h
 include/gtk-4.0/gdk/gdkdisplaymanager.h
+include/gtk-4.0/gdk/gdkdmabufformats.h
+include/gtk-4.0/gdk/gdkdmabuftexture.h
+include/gtk-4.0/gdk/gdkdmabuftexturebuilder.h
 include/gtk-4.0/gdk/gdkdrag.h
 include/gtk-4.0/gdk/gdkdragsurface.h
 include/gtk-4.0/gdk/gdkdragsurfacesize.h
@@ -89,16 +93,24 @@ ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11selection.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11surface.h
 ${PLIST.x11}include/gtk-4.0/gdk/x11/gdkx11utils.h
 include/gtk-4.0/gsk/gl/gskglrenderer.h
+include/gtk-4.0/gsk/gpu/gskvulkanrenderer.h
 include/gtk-4.0/gsk/gsk.h
 include/gtk-4.0/gsk/gskcairorenderer.h
 include/gtk-4.0/gsk/gskenums.h
 include/gtk-4.0/gsk/gskenumtypes.h
 include/gtk-4.0/gsk/gskglshader.h
+include/gtk-4.0/gsk/gskpath.h
+include/gtk-4.0/gsk/gskpathbuilder.h
+include/gtk-4.0/gsk/gskpathmeasure.h
+include/gtk-4.0/gsk/gskpathpoint.h
 include/gtk-4.0/gsk/gskrenderer.h
 include/gtk-4.0/gsk/gskrendernode.h
 include/gtk-4.0/gsk/gskroundedrect.h
+include/gtk-4.0/gsk/gskstroke.h
 include/gtk-4.0/gsk/gsktransform.h
 include/gtk-4.0/gsk/gsktypes.h
+include/gtk-4.0/gtk/a11y/gtkatspi.h
+include/gtk-4.0/gtk/a11y/gtkatspisocket.h
 include/gtk-4.0/gtk/css/gtkcss.h
 include/gtk-4.0/gtk/css/gtkcssenums.h
 include/gtk-4.0/gtk/css/gtkcssenumtypes.h
@@ -165,6 +177,7 @@ include/gtk-4.0/gtk/gtkaboutdialog.h
 include/gtk-4.0/gtk/gtkaccelgroup.h
 include/gtk-4.0/gtk/gtkaccessible.h
 include/gtk-4.0/gtk/gtkaccessiblerange.h
+include/gtk-4.0/gtk/gtkaccessibletext.h
 include/gtk-4.0/gtk/gtkactionable.h
 include/gtk-4.0/gtk/gtkactionbar.h
 include/gtk-4.0/gtk/gtkadjustment.h
@@ -197,6 +210,7 @@ include/gtk-4.0/gtk/gtkcolumnviewcell.h
 include/gtk-4.0/gtk/gtkcolumnviewcolumn.h
 include/gtk-4.0/gtk/gtkcolumnviewrow.h
 include/gtk-4.0/gtk/gtkcolumnviewsorter.h
+include/gtk-4.0/gtk/gtkconfig.h
 include/gtk-4.0/gtk/gtkconstraint.h
 include/gtk-4.0/gtk/gtkconstraintguide.h
 include/gtk-4.0/gtk/gtkconstraintlayout.h
@@ -251,6 +265,7 @@ include/gtk-4.0/gtk/gtkgesturestylus.h
 include/gtk-4.0/gtk/gtkgestureswipe.h
 include/gtk-4.0/gtk/gtkgesturezoom.h
 include/gtk-4.0/gtk/gtkglarea.h
+include/gtk-4.0/gtk/gtkgraphicsoffload.h
 include/gtk-4.0/gtk/gtkgrid.h
 include/gtk-4.0/gtk/gtkgridlayout.h
 include/gtk-4.0/gtk/gtkgridview.h
@@ -299,6 +314,7 @@ include/gtk-4.0/gtk/gtkpicture.h
 include/gtk-4.0/gtk/gtkpopover.h
 include/gtk-4.0/gtk/gtkpopovermenu.h
 include/gtk-4.0/gtk/gtkpopovermenubar.h
+include/gtk-4.0/gtk/gtkprintdialog.h
 include/gtk-4.0/gtk/gtkprogressbar.h
 include/gtk-4.0/gtk/gtkrange.h
 include/gtk-4.0/gtk/gtkrecentmanager.h
@@ -388,12 +404,12 @@ lib/girepository-1.0/Gdk-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
-lib/gtk-4.0/4.0.0/media/libmedia-ffmpeg.so
 ${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lib/libgtk-4.so
 lib/libgtk-4.so.1
-lib/libgtk-4.so.1.1200.5
+lib/libgtk-4.so.1.1400.2
+lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
 ${PLIST.x11}lib/pkgconfig/gtk4-x11.pc
@@ -506,6 +522,7 @@ share/locale/is/LC_MESSAGES/gtk40.mo
 share/locale/it/LC_MESSAGES/gtk40.mo
 share/locale/ja/LC_MESSAGES/gtk40.mo
 share/locale/ka/LC_MESSAGES/gtk40.mo
+share/locale/kab/LC_MESSAGES/gtk40.mo
 share/locale/kg/LC_MESSAGES/gtk40.mo
 share/locale/kk/LC_MESSAGES/gtk40.mo
 share/locale/km/LC_MESSAGES/gtk40.mo
