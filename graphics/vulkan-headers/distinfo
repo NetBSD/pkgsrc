@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/04/05 11:03:42 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/04/14 14:24:47 adam Exp $
 
-BLAKE2s (Vulkan-Headers-1.3.281.tar.gz) = bc1e426309e0d907716be703850ef6f1451d8d2eaa87c1fa31ceb1c7def35638
-SHA512 (Vulkan-Headers-1.3.281.tar.gz) = 0f2d7667abe18c6cc5d4f14e86de767a0bae845a100ca3abbc3e1323e6684ddebfdd9961cafc0a3f8576f74df6d0453d42dd64b5e9d38acc5039b0dc3a5c530f
-Size (Vulkan-Headers-1.3.281.tar.gz) = 2264436 bytes
+BLAKE2s (Vulkan-Headers-1.3.282.tar.gz) = 99839c83be0edb8f0a092a1f4b2d624cb1abe76c1b78916b0ca4db7a874c7e6b
+SHA512 (Vulkan-Headers-1.3.282.tar.gz) = 78ddc1ad201260fd95dd55104e8481c10bcc64651f75c36f0c40f5991eb2ecf9efc194e5d53c9b247362ca3d64edb1f4a5eecab8c8fca3946e536670a2f8e300
+Size (Vulkan-Headers-1.3.282.tar.gz) = 2269847 bytes
