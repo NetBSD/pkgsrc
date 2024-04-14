@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24322 2024/04/14 16:18:48 adam Exp $
+$NetBSD: TODO,v 1.24323 2024/04/14 18:05:05 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libwildmidi-0.4.6
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
-	o lighttpd-1.4.76
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
