@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2024/03/13 15:56:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.129 2024/04/14 18:04:59 schmonz Exp $
 
-DISTNAME=	lighttpd-1.4.75
+DISTNAME=	lighttpd-1.4.76
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LIBTOOL=			yes
 SHLIBTOOL_OVERRIDE=		# empty
-USE_TOOLS+=			pkg-config perl:test
+USE_TOOLS+=			autoconf automake autoreconf m4 pkg-config perl:test
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-pcre2
@@ -64,6 +64,9 @@ SUBST_FILES.path=	doc/config/lighttpd.conf doc/lighttpd.8
 SUBST_VARS.path=	LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR LIGHTTPD_USER \
 			LIGHTTPD_CACHEDIR LIGHTTPD_HOMEDIR              \
 			LIGHTTPD_GROUP PKG_SYSCONFDIR VARBASE
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} ./autogen.sh
 
 post-install:
 	set -e; cd ${WRKSRC}/doc;				\
