@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2435 2024/04/14 05:33:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2436 2024/04/14 05:57:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4057,3 +4057,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake to 3.29.2 [adam 2024-04-13]
 	Updated devel/cmake-gui to 3.29.2 [adam 2024-04-13]
 	Updated devel/p5-Test2-Plugin-NoWarnings to 0.10 [wiz 2024-04-14]
+	Updated security/pcsc-lite to 2.1.0 [adam 2024-04-14]
+	Updated net/tor to 0.4.8.11 [adam 2024-04-14]
