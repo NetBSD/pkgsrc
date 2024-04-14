@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/04/05 11:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/04/14 14:24:47 adam Exp $
 
-DISTNAME=	Vulkan-Headers-1.3.281
+DISTNAME=	Vulkan-Headers-1.3.282
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
