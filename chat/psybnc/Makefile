@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/04/25 19:13:12 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/14 08:23:22 wiz Exp $
 
-DISTNAME=	psyBNC-2.4BETA2
-PKGNAME=	psybnc-2.4b2
-PKGREVISION=	2
+DISTNAME=	psyBNC-2.4.3
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psybnc/}
+MASTER_SITES=	http://psybnc.org/download/
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.psybnc.at/
