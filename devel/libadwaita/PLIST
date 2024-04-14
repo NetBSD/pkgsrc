@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/15 08:30:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/14 17:23:52 adam Exp $
 bin/adwaita-1-demo
 include/libadwaita-1/adw-about-window.h
 include/libadwaita-1/adw-action-row.h
@@ -103,6 +103,7 @@ share/locale/ka/LC_MESSAGES/libadwaita.mo
 share/locale/kk/LC_MESSAGES/libadwaita.mo
 share/locale/ko/LC_MESSAGES/libadwaita.mo
 share/locale/lt/LC_MESSAGES/libadwaita.mo
+share/locale/nb/LC_MESSAGES/libadwaita.mo
 share/locale/ne/LC_MESSAGES/libadwaita.mo
 share/locale/nl/LC_MESSAGES/libadwaita.mo
 share/locale/oc/LC_MESSAGES/libadwaita.mo
