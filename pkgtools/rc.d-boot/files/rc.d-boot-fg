@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+main() {
+	@PREFIX@/sbin/rc.d-boot "$@" || @TRUE@
+	exec @PREFIX@/sbin/rc.d-boot-pause
+}
+
+main "$@"
+exit $?

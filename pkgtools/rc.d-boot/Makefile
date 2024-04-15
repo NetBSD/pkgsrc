@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/05/10 19:22:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2024/04/15 20:25:07 schmonz Exp $
 #
 
-PKGNAME=		rc.d-boot-20230510
+PKGNAME=		rc.d-boot-20240415
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -22,15 +22,17 @@ RCORDER=		${PREFIX}/sbin/rcorder
 .endif
 
 NO_CHECKSUM=		yes
-NO_BUILD=		yes
+BUILD_TARGET=		rc.d-boot-pause
+MAKE_FILE=		/dev/null
+USE_TOOLS+=		true:run
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	rc.d-boot
+SUBST_FILES.paths=	rc.d-boot rc.d-boot-fg
 SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
 			pkgsrc-rc.d-boot \
 			pkgsrc-rc.d-boot.service
-SUBST_VARS.paths=	GREP SYSCONFBASE PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
+SUBST_VARS.paths=	GREP SYSCONFBASE PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER TRUE VARBASE
 
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:Q}
@@ -93,6 +95,8 @@ do-install:
 .for i in pkgsrc-rc.d-boot
 	${INSTALL_SCRIPT} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/${EGDIR}/
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/rc.d-boot ${DESTDIR}${PREFIX}/sbin/
+.for i in rc.d-boot rc.d-boot-fg rc.d-boot-pause
+	${INSTALL_SCRIPT} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/sbin/
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
