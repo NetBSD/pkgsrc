@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.173 2024/04/13 08:14:24 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.174 2024/04/15 22:12:14 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25992,3 +25992,5 @@ php>=8.3<8.3.5     security-bypass https://github.com/php/php-src/security/advis
 php>=8.3<8.3.5	authentication-bypass	https://github.com/php/php-src/security/advisories/GHSA-h746-cjrr-wfmr
 php>=7.4<8.0		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 php>=8.0<8.1		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+putty<0.81	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-31497
+filezilla<3.67.0	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-31497
