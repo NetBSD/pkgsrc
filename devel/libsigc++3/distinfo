@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/07/25 19:45:35 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/04/15 09:25:06 adam Exp $
 
-BLAKE2s (libsigc++-3.2.0.tar.xz) = 35b74dbcca38eb10f16743ef09bb77fac3be842e86d62b28b9a1a81b493ecc18
-SHA512 (libsigc++-3.2.0.tar.xz) = 91315cecc79a1ad6ea165b66a13a5afd4e5bc101842f9d4c58811ea78536c07fc8821c51aa5110a032ed71c09f85790b3a02f2ad7fe8cc3aed6e03b2bafcd70c
-Size (libsigc++-3.2.0.tar.xz) = 785900 bytes
+BLAKE2s (libsigc++-3.6.0.tar.xz) = 10aec9a819ebebc3e90aa659f55ded39765c4f5aa48b8c2ae297dd64daf201c0
+SHA512 (libsigc++-3.6.0.tar.xz) = fa79067b4fecf68501288b93eed3d3e7017899cb8a02d3106a41f6dd1818f7b8c724a5b38d4b9ac89699fd8084976f9ad8eca8e832a45a5b6dc7cae5db99cb56
+Size (libsigc++-3.6.0.tar.xz) = 991392 bytes
