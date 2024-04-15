@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2024/03/24 15:31:52 pin Exp $
+# $NetBSD: Makefile,v 1.32 2024/04/15 09:14:03 wiz Exp $
 
-DISTNAME=	starship-1.18.1
+DISTNAME=	starship-1.18.2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ COMMENT=	Fast, customizable cross-shell prompt
 LICENSE=	isc
 
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+
 # The libc and rust-battery crates currently have limited platform support
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
@@ -42,8 +44,6 @@ do-install:
 	${WRKSRC}/target/release/starship completions bash > ${DESTDIR}${EGDIR}/starship.bash
 	${WRKSRC}/target/release/starship completions fish > ${DESTDIR}${EGDIR}/starship.fish
 	${WRKSRC}/target/release/starship completions zsh > ${DESTDIR}${EGDIR}/_starship
-
-DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
