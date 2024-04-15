@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2024/04/15 10:51:34 micha Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/15 17:12:06 wiz Exp $
 
 YOSYS_VERSION=	0.38
 YOSYS_TAG=	yosys-${YOSYS_VERSION}
 ABC_DISTNAME=	abc-${YOSYS_TAG}
 DISTNAME=	${YOSYS_TAG}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 GITHUB_TAG=	${YOSYS_TAG}
@@ -15,6 +15,8 @@ MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/YosysHQ/yosys
 COMMENT=	Yosys Open SYnthesis Suite
 LICENSE=	isc
+
+DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 ONLY_FOR_COMPILER=	clang gcc
 USE_LANGUAGES=		c c++
@@ -77,6 +79,5 @@ do-configure:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/pkgconf/buildlink3.mk"
-.include "../../graphics/graphviz/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
