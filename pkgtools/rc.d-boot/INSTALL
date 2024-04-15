@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.8 2023/05/10 19:22:33 schmonz Exp $
+# $NetBSD: INSTALL,v 1.9 2024/04/15 20:25:07 schmonz Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
@@ -27,7 +27,7 @@ POST-INSTALL)
 		else
 			launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
 		fi
-		if fdesetup status | awk '{print $3}' | grep -q '^On\.$'; then
+		if ( fdesetup status 2>/dev/null || true ) | awk '{print $3}' | grep -q '^On\.$'; then
 			warning_filevault
 		fi
 		;;
