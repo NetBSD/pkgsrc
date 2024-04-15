@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/04/15 14:52:33 hauke Exp $
+
+setuid binaries should not be writable by anyone.
+
+--- CMakeLists.txt.orig	2024-04-05 17:22:48.812504624 +0000
++++ CMakeLists.txt
+@@ -154,7 +154,7 @@ endif()
+ # Installation
+ install(TARGETS hiawatha wigwam DESTINATION ${CMAKE_INSTALL_SBINDIR})
+ install(TARGETS cgi-wrapper DESTINATION ${CMAKE_INSTALL_SBINDIR}
+-	PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
++	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
+ install(TARGETS ssi-cgi DESTINATION ${CMAKE_INSTALL_BINDIR})
+ 
+ foreach(configfile ${config_files})

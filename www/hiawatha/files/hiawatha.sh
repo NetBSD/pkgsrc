@@ -1,58 +1,24 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: hiawatha.sh,v 1.2 2003/08/04 11:00:32 jmmv Exp $
+# $NetBSD: hiawatha.sh,v 1.3 2024/04/15 14:52:33 hauke Exp $
 #
 # PROVIDE: hiawatha
 # REQUIRE: DAEMON
-
-PREFIX=@PREFIX@
-PKG_SYSCONFDIR=@PKG_SYSCONFDIR@
-
-pidfile=/var/run/hiawatha.pid
-
-if [ -z "${JAVA_HOME}" ]
-then
-	JAVA_HOME=${PREFIX}/java
-	export ${JAVA_HOME}
-fi
-
-CLASSPATH=${PREFIX}/lib/java/hiawatha/hiawatha.jar:${PREFIX}/lib/java/hiawatha/xsls.jar:${PREFIX}/lib/java/saxon.jar:${CLASSPATH}
-export CLASSPATH
+# KEYWORD: shutdown
 
 name="hiawatha"
-command="${JAVA_HOME}/bin/java com.pault.hiawatha.Server ${PKG_SYSCONFDIR}/hiawatha.cfg"
+command="@PREFIX@/sbin/${name}"
 
-if [ ! -d /var/spool/hiawatha ]
-then
-	echo "you must create /var/spool/hiawatha and any needed spool directories therein before starting hiawatha"
-	exit 0
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+    	. @SYSCONFBASE@/rc.subr
+
+	rcvar=${name}
+	required_files="@PKG_SYSCONFDIR@/${name}.conf"
+	pidfile="@VARBASE@/run/${name}.pid"
+
+	load_rc_config ${name}
+	run_rc_command "$1"
+else
+        @ECHO@ -n " ${name}"
+	${command} ${hiawatha_flags}
 fi
-
-cmd=${1:-start}
-
-case ${cmd} in
-	start)
-		echo "Starting ${name}."
-		cd /var/spool/hiawatha 
-		${command}&
-		echo $! > ${pidfile}
-		;;
-
-	stop)
-		echo "Stopping ${name}."
-		kill `cat ${pidfile}`
-		rm ${pidfile}
-		;;
-
-	restart)
-		( $0 stop )
-		sleep 5
-		$0 start
-		;;
-
-	*)
-		echo 1>&2 "Usage: $0 [restart|start|stop]"
-		exit 1
-		;;
-esac
-exit 0
