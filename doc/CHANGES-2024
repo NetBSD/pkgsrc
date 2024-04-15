@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2483 2024/04/15 17:12:15 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2484 2024/04/15 17:21:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4132,3 +4132,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/lemon to 1.0.3.45.3 [adam 2024-04-15]
 	Updated devel/doxygen to 1.10.0nb3 [wiz 2024-04-15]
 	Updated devel/yosys to 0.38nb4 [wiz 2024-04-15]
+	Updated audio/musicpd to 0.23.15nb4 [wiz 2024-04-15]
