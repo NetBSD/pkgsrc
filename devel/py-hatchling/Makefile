@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/04/05 08:25:51 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/15 05:17:48 adam Exp $
 
-DISTNAME=	hatchling-1.22.5
+DISTNAME=	hatchling-1.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatchling/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://hatch.pypa.io/
 COMMENT=	Modern, extensible Python build backend
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.0.0:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-trove-classifiers-[0-9]*:../../misc/py-trove-classifiers
