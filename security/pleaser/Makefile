@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/02/09 08:15:50 pin Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/15 07:45:00 pin Exp $
 
-DISTNAME=	please-0.5.4
-PKGNAME=	pleaser-0.5.4
+DISTNAME=	please-0.5.5
+PKGNAME=	pleaser-0.5.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=edneville/}
 GITLAB_PROJECT=	please
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/please-v0.5.4-68c82e4be33f52a6fc4444fd28539e11d47d0602
+WRKSRC=			${WRKDIR}/please-v0.5.5-b9feb1931e2f096bdcbc8c5b1be89b27a6c9040a
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -31,7 +31,7 @@ SUBST_SED.prefix+=	-e 's,/usr/bin/please,${PREFIX}/bin/please,g'
 SPECIAL_PERMS+=		bin/please ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/pleaseedit ${SETUID_ROOT_PERMS}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+AUTO_MKDIRS=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/please \
@@ -42,6 +42,10 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/please.1
 	${INSTALL_MAN} ${WRKSRC}/man/please.ini.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/please.ini.5
+	${INSTALL_DATA} ${WRKSRC}/completions/bash/please \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/
+	${INSTALL_DATA} ${WRKSRC}/completions/zsh/_please \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/pam.buildlink3.mk"
