@@ -1,3 +1,12 @@
-Hiawatha is a standalone webserver with build-in support for XML,
-XSL, XSLScript, HTTP, and CGI (GET and POST). Hiawatha is written
-in Java and it is Open Source ( and 100% free ).
+Hiawatha is an advanced and secure webserver for Unix.
+
+Hiawatha offers protection against SQL injections, Cross-site
+Scripting (XSS), Cross-site Request Forgery (CSRF/XSRF) and DoS
+attacks.
+
+Hiawatha supports the FastCGI protocol, including load balancing, for
+improved CGI performance.
+
+Via Hiawatha's built-in reverse proxy, you can easily integrate other
+web solutions or use Hiawatha as an application firewall to protect
+other webservers.

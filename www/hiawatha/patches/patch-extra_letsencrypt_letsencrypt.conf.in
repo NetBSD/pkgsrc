@@ -1,0 +1,17 @@
+$NetBSD: patch-extra_letsencrypt_letsencrypt.conf.in,v 1.1 2024/04/15 14:52:33 hauke Exp $
+
+Whatever the start script directory, init.d is unlikely
+
+The related pkglint error is bogus - "/etc/rc.d" is not PKG_SYSCONFDIR.
+
+--- extra/letsencrypt/letsencrypt.conf.in.orig	2024-04-15 14:11:19.018051975 +0000
++++ extra/letsencrypt/letsencrypt.conf.in
+@@ -7,7 +7,7 @@ ACCOUNT_EMAIL_ADDRESS = info@example.org
+ #
+ HIAWATHA_CONFIG_DIR = @CONFIG_DIR@
+ HIAWATHA_CERT_DIR = {HIAWATHA_CONFIG_DIR}/tls
+-HIAWATHA_RESTART_COMMAND = /etc/init.d/hiawatha restart
++HIAWATHA_RESTART_COMMAND = /etc/rc.d/hiawatha restart
+ 
+ # Certificate settings
+ #
