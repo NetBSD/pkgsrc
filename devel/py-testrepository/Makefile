@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/11/07 22:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/15 11:36:11 adam Exp $
 
-DISTNAME=	testrepository-0.0.20
+DISTNAME=	testrepository-0.0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testrepository/}
 
@@ -11,22 +10,22 @@ HOMEPAGE=	https://launchpad.net/testrepository
 COMMENT=	Repository of test results
 LICENSE=	apache-2.0 OR modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
-DEPENDS+=	${PYPKGPREFIX}-subunit>=0.0.18:../../net/py-subunit
-DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-subunit>=1.0.0:../../net/py-subunit
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} testr testr-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

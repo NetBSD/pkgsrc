@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/15 11:36:11 adam Exp $
 
-BLAKE2s (testrepository-0.0.20.tar.gz) = 9ae532c11d4ee7b4d1d2d1c62f8e4a436649b1105fb415d985005cce9cfe5b17
-SHA512 (testrepository-0.0.20.tar.gz) = df14500e2b27b6f39d9d4c4f42961efd63dfe25186e561eb1678952a8ab9311f17c36b78819fea33e0ac879c47a33d45c31ff58be017609c8a6157905ee712d6
-Size (testrepository-0.0.20.tar.gz) = 84956 bytes
+BLAKE2s (testrepository-0.0.21.tar.gz) = ed00e1eaf1ed3eb74d959fa920455ce634825d5e3775698af9c068d89e9f15d3
+SHA512 (testrepository-0.0.21.tar.gz) = c03108434a4ab3145106a6d05f4ff42d6d2b8f103de8dee7e0e829f5a450e838c8f9c7033e97afbc764badcbe2050aa41f2da30c439edb390ce38c73c0244065
+Size (testrepository-0.0.21.tar.gz) = 2416956 bytes
