@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.283 2024/04/07 07:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.284 2024/04/15 10:25:57 micha Exp $
 
-DISTNAME=	graphviz-8.1.0
-PKGREVISION=	10
+DISTNAME=	graphviz-10.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
-EXTRACT_SUFX=	.tar.xz
+#EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
@@ -14,7 +13,10 @@ LICENSE=	epl-v1.0
 CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
-USE_LANGUAGES=		c99 c++11
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
+USE_CXX_FEATURES+=	c++11 unique_ptr
+
 USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -96,7 +98,7 @@ REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 # Override Xaw type configured by user
 XAW_TYPE=		standard
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc")
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
 # Forces link with -lgomp directly instead of via dlopen()
 # so we don't overflow thread-local storage in ld.elf_so
 CFLAGS+=		-fopenmp
@@ -130,6 +132,7 @@ DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 .include "../../devel/libltdl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.22.0
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gts/buildlink3.mk"
