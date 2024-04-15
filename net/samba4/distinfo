@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.102 2024/02/20 05:21:35 adam Exp $
+$NetBSD: distinfo,v 1.103 2024/04/15 07:16:38 adam Exp $
 
-BLAKE2s (samba-4.19.5.tar.gz) = 98182d21d4688af08cf657c2320eee5cfd0bfdf3b75fcb79e6eed64cfee9e00b
-SHA512 (samba-4.19.5.tar.gz) = 5b0934f2e44a28ffc4aa07e5495b339cf3a7548c49e29d1bae87de6c3a6f57c2a9130592dce782895079f559ed3bc8b5e4514c9c0fd8d5638aef68f0d0a3391f
-Size (samba-4.19.5.tar.gz) = 41840159 bytes
+BLAKE2s (samba-4.20.0.tar.gz) = 88938a680efad8d1a29fe591a95a125c194ddf45b435ebc1b21983078241ce84
+SHA512 (samba-4.20.0.tar.gz) = e820739706992ef3b4e3a7a771ad5d8efc6b87d5ccdcee7ebd41483d90fa3cc0420ba9680d059e71d7083c9c12b0d36deafcdce0224560f49bbfc3a277e7e77c
+Size (samba-4.20.0.tar.gz) = 42433302 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
@@ -24,6 +24,7 @@ SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe8
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdfc6fc12df2
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 1214bfbd7714b64f3ff3eb97b6f24e3d2629370f
 SHA1 (patch-nsswitch_wscript__build) = 5be3e07f8a34ae3e2f68126eb6f05f8b65f5be2f
+SHA1 (patch-source3_lib_sysquotas__4A.c) = da4e557485b95dbd780b3345613c506ef18d7923
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 962bb35b140ec11c0035ffa7fb83c9143fa5615f
 SHA1 (patch-source3_modules_vfs__solarisacl.c) = 1a56006393d08d9977c60e75fddfcf501e2233f7
 SHA1 (patch-source3_modules_vfs__solarisacl.h) = 11f8664641a14fd83d78b1a7e10056a77b7b634f
