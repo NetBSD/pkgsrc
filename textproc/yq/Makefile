@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/09/18 12:53:57 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/15 05:11:58 adam Exp $
 
-DISTNAME=	yq-3.2.3
+DISTNAME=	yq-3.3.0
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yq/}
 
@@ -22,12 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test.py -v
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
