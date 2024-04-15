@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.46 2023/06/02 16:48:42 wiz Exp $
+# $NetBSD: options.mk,v 1.47 2024/04/15 17:21:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -84,7 +84,7 @@ MESON_ARGS+=	-Dfaad=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.  include "../../multimedia/ffmpeg6/buildlink3.mk"
+.  include "../../multimedia/ffmpeg7/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dffmpeg=disabled
 .endif
