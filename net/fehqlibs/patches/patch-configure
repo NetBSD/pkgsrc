@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2024/04/15 16:24:52 schmonz Exp $
+
+Libtoolize for portable shared libraries.
+
+--- configure.orig	2021-09-22 09:36:02.000000000 +0000
++++ configure
+@@ -47,23 +47,20 @@ echo " found!"
+ echo -n "Checking for compile ... "
+ CC="cc"
+ ( echo '#!/bin/sh'
+-  echo exec "$CC" "$CFLAGS" -c '${1+"$@"}' ) > compile
++  echo exec libtool --tag=CC --mode=compile "$CC" "$CFLAGS" -c '${1+"$@"}' ) > compile
+ chmod 755 compile
+ echo " created!"
+ 
+ echo -n "Checking for makelib ... "
+ ( echo '#!/bin/sh' ;
+   echo "" ;
+-  echo 'main="$1"; shift' ; \
+-  echo 'rm -f "$main"' ; \
+-  echo 'ar cr "$main" ${1+"$@"}' ; \
+-  echo 'ranlib "$main"') > makelib
++  echo exec libtool --tag=CC --mode=link "$CC" "$LDFLAGS" -o '${1+"$@"}' ) > makelib
+ chmod 755 makelib
+ echo " created!"
+ 
+ echo -n "Checking for sharedlib ... "
+ CC="cc"
+ ( echo '#!/bin/sh'
+-  echo exec "$CC" -shared '${1+"$@"}' ) > sharedlib
++  echo exec libtool --tag=CC --mode=link "$CC" "$LDFLAGS" -shared -o '${1+"$@"}' ) > sharedlib
+ chmod 755 sharedlib
+ echo " created!"

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2024/04/03 03:30:28 schmonz Exp $
+$NetBSD: distinfo,v 1.24 2024/04/15 16:24:52 schmonz Exp $
 
 BLAKE2s (fehQlibs-23.tgz) = de9ac2a4af2e76cb321b3569ddc95e311929706a9e6aab1d2efd497514d9b277
 SHA512 (fehQlibs-23.tgz) = 676b8e57cac2f6700cdf4643d72c55df2beca42a893dd7428cebfbb2844f3643608ab25205f8b36cf35741847476df862773dd8a14a604d25dc69bec3a5b5999
 Size (fehQlibs-23.tgz) = 87995 bytes
-SHA1 (patch-Makefile) = a5e168aa600f49908f3e5e825fe3b649e7a84f2b
-SHA1 (patch-install) = 860256635a5a19805ec3ed97f11833a35f67d3bb
+SHA1 (patch-Makefile) = 538147923d27c039b48711453a5b3deb775c36d2
+SHA1 (patch-configure) = 2d38e849e3cc684477831a6a1565860bc4c0e57f
+SHA1 (patch-dnsstub_Makefile) = 5eb9f77dd72c73126fe984d1cf626a9c28e932d2
