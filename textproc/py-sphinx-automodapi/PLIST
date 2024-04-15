@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/14 15:44:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/15 05:38:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -116,7 +116,6 @@ ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/README.md
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/input/index.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.functions.add.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.functions.multiply.rst
-${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.nonascii.NonAsciiÄöüßő.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodapi
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodsumm
 ${PYSITELIB}/sphinx_automodapi/tests/cases/slots/README.md
