@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.185 2024/04/15 10:51:34 micha Exp $
+# $NetBSD: Makefile,v 1.186 2024/04/15 17:07:53 wiz Exp $
 
 DISTNAME=	doxygen-1.10.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://doxygen.nl/files/
 
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.doxygen.nl/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 EXTRACT_USING=	gtar # Cannot restore extended attributes
 
@@ -78,7 +80,6 @@ CMAKE_GENERATOR=	make
 
 .include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
