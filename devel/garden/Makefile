@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/03/23 19:09:39 pin Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/15 07:42:54 pin Exp $
 
-DISTNAME=	garden-1.4.1
+DISTNAME=	garden-1.5.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v1.4.1/}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v1.5.0/}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://garden-rs.gitlab.io/
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/garden-v1.4.1-efbd9230135bd3b4a23b9e2decc449d74992bd5d
+WRKSRC=		${WRKDIR}/garden-v1.5.0-bd52d7f83a468b5dd7a539c62eba8903967f0d22
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
