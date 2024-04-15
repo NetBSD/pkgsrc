@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/20 12:48:48 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/15 05:11:59 adam Exp $
 bin/tomlq
 bin/xq
 bin/yq
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/yq/__init__.py
 ${PYSITELIB}/yq/__init__.pyc
 ${PYSITELIB}/yq/__init__.pyo
@@ -23,6 +23,3 @@ ${PYSITELIB}/yq/loader.pyo
 ${PYSITELIB}/yq/parser.py
 ${PYSITELIB}/yq/parser.pyc
 ${PYSITELIB}/yq/parser.pyo
-${PYSITELIB}/yq/version.py
-${PYSITELIB}/yq/version.pyc
-${PYSITELIB}/yq/version.pyo
