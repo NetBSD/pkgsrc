@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/15 05:15:56 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
@@ -8,9 +12,6 @@ ${PYSITELIB}/pdm/backend/_vendor/__init__.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE.APACHE
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE.BSD
-${PYSITELIB}/pdm/backend/_vendor/packaging/__about__.py
-${PYSITELIB}/pdm/backend/_vendor/packaging/__about__.pyc
-${PYSITELIB}/pdm/backend/_vendor/packaging/__about__.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/__init__.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/__init__.pyo
@@ -35,6 +36,9 @@ ${PYSITELIB}/pdm/backend/_vendor/packaging/_tokenizer.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pdm/backend/_vendor/packaging/markers.pyo
+${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.py
+${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.pyc
+${PYSITELIB}/pdm/backend/_vendor/packaging/metadata.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/py.typed
 ${PYSITELIB}/pdm/backend/_vendor/packaging/requirements.py
 ${PYSITELIB}/pdm/backend/_vendor/packaging/requirements.pyc
@@ -125,7 +129,3 @@ ${PYSITELIB}/pdm/backend/utils.pyo
 ${PYSITELIB}/pdm/backend/wheel.py
 ${PYSITELIB}/pdm/backend/wheel.pyc
 ${PYSITELIB}/pdm/backend/wheel.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
