@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/06/26 19:34:16 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/04/15 09:23:36 adam Exp $
 
-BLAKE2s (mm-common-1.0.5.tar.xz) = 35513fd0c726a84e2549c3062a788e387dec9832cefa8ea9c590c8198bd46ba1
-SHA512 (mm-common-1.0.5.tar.xz) = bf681b4d63d5bf531a9315b0c8841e3815af276828d1828a3eb04dcb805cbbfbaac182f79f5e48688a7eef8666975b9079144e320093e4ee3addff48813e61ad
-Size (mm-common-1.0.5.tar.xz) = 290608 bytes
+BLAKE2s (mm-common-1.0.6.tar.xz) = 9dbcea63878fa002d1bb863a34f78a267c38b30a3409d8d85c81dfb1cec65b3a
+SHA512 (mm-common-1.0.6.tar.xz) = 2141ce9dabdae153e5708b09d30e7917182888e521ff0c2a4f85c7ec2dd86b2c8753e0513bf9c9f9a00d4e579173ffa859a3efd006e706fdfa2f33b0e77af48b
+Size (mm-common-1.0.6.tar.xz) = 287832 bytes
