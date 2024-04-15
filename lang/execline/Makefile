@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/02/29 01:17:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2024/04/15 20:41:11 schmonz Exp $
 
-DISTNAME=	execline-2.9.4.0
+DISTNAME=	execline-2.9.5.0
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -34,5 +34,6 @@ do-install-manpages:
 		done \
 	done
 
+BUILDLINK_API_DEPENDS.skalibs+=	skalibs>=2.14.1.1
 .include "../../devel/skalibs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
