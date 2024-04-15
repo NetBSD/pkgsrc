@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2474 2024/04/15 14:37:13 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2475 2024/04/15 14:52:45 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4120,3 +4120,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/nsd to 4.9.1 [ryoon 2024-04-15]
 	Updated www/py-daphne to 4.1.2 [adam 2024-04-15]
 	Updated textproc/py-cmudict to 1.0.23 [adam 2024-04-15]
+	Updated www/hiawatha to 11.5 [hauke 2024-04-15]
