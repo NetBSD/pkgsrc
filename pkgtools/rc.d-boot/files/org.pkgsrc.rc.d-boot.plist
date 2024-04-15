@@ -10,15 +10,13 @@
 	<string>org.pkgsrc.rc.d-boot</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>@PREFIX@/sbin/rc.d-boot</string>
+		<string>@PREFIX@/sbin/rc.d-boot-fg</string>
 		<string>start</string>
 	</array>
 	<key>OnDemand</key>
 	<false/>
 	<key>KeepAlive</key>
 	<false/>
-	<key>LaunchOnlyOnce</key>
-	<true/>
 	<key>StandardOutPath</key>
 	<string>@VARBASE@/log/pkgsrc-rc.d-boot.out</string>
 	<key>StandardErrorPath</key>
