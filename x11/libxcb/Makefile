@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/03/03 10:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/04/15 16:37:01 wiz Exp $
 
-DISTNAME=	libxcb-1.16.1
+DISTNAME=	libxcb-1.17.0
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.xz
@@ -100,7 +100,7 @@ X11_LIB_NAME?=		libxcb
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.14
+BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.17
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
