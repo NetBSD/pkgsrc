@@ -1,29 +1,20 @@
-# $NetBSD: options.mk,v 1.37 2023/12/30 12:57:52 wiz Exp $
+# $NetBSD: options.mk,v 1.38 2024/04/15 10:25:57 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua perl poppler svg tcl x11
+PKG_SUPPORTED_OPTIONS=	gd ghostscript lua perl poppler svg tcl x11
+PKG_SUGGESTED_OPTIONS=	gd
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
 PKG_SUGGESTED_OPTIONS+=	quartz
 .else
 PKG_SUGGESTED_OPTIONS+=	x11
 .endif
-PKG_SUGGESTED_OPTIONS=	gd
-# Explanation of consequence of options, to help those trying to slim down:
-#   lua tcl perl: extension language support
-#   x11: Omits all linking with x11, which means x11 graphics supports as
-#     well as x11 frontend support.
-#   gtk: basic graphic format support (in addition to gd, which isn't
-#     maintained anymore)
-#   svg: Omitting loses svg support. librsvg has large dependencies
-#     including some GNOME libs.
-#   gd: basic graphic format support, especially gif
-#   ghostscript: provides better ps/pdf-support, plus eps
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk lua perl poppler quartz svg swig tcl x11
+PLIST_VARS+=		gd ghostscript lua perl poppler quartz svg swig tcl x11
 
+# Basic graphic format support, especially GIF
 .if !empty(PKG_OPTIONS:Mgd)
 .  include "../../graphics/gd/buildlink3.mk"
 PLIST.gd=		yes
@@ -32,6 +23,7 @@ CONFIGURE_ARGS+=	--with-libgd
 CONFIGURE_ARGS+=	--without-libgd
 .endif
 
+# Better support for PS/PDF, plus EPS
 .if !empty(PKG_OPTIONS:Mghostscript)
 .  include "../../print/ghostscript/buildlink3.mk"
 # Also required as tool dependency according to documentation
@@ -42,20 +34,7 @@ CONFIGURE_ARGS+=	--with-ghostscript
 CONFIGURE_ARGS+=	--without-ghostscript
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk)
-.  include "../../x11/gtk2/buildlink3.mk"
-PLIST.gtk=		yes
-CONFIGURE_ARGS+=	--with-gdk
-CONFIGURE_ARGS+=	--with-gdk-pixbuf
-CONFIGURE_ARGS+=	--with-gtk
-CONFIGURE_ARGS+=	--with-gnomeui
-.else
-CONFIGURE_ARGS+=	--without-gdk
-CONFIGURE_ARGS+=	--without-gdk-pixbuf
-CONFIGURE_ARGS+=	--without-gtk
-CONFIGURE_ARGS+=	--without-gnomeui
-.endif
-
+# Support for reading PDF images
 .if !empty(PKG_OPTIONS:Mpoppler)
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .  include "../../print/poppler/buildlink3.mk"
@@ -65,6 +44,7 @@ CONFIGURE_ARGS+=	--with-poppler
 CONFIGURE_ARGS+=	--without-poppler
 .endif
 
+# Support for Quartz on macOS
 .if !empty(PKG_OPTIONS:Mquartz)
 PLIST.quartz=		yes
 CONFIGURE_ARGS+=	--with-quartz
@@ -72,6 +52,7 @@ CONFIGURE_ARGS+=	--with-quartz
 CONFIGURE_ARGS+=	--without-quartz
 .endif
 
+# Support for SVG images. Attention: librsvg has large dependencies!
 .if !empty(PKG_OPTIONS:Msvg)
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.36.0
 .  include "../../graphics/librsvg/buildlink3.mk"
@@ -81,6 +62,7 @@ CONFIGURE_ARGS+=	--with-rsvg
 CONFIGURE_ARGS+=	--without-rsvg
 .endif
 
+# X11 graphics supports as well as X11 frontend support
 .if !empty(PKG_OPTIONS:Mx11)
 .  include "../../mk/xaw.buildlink3.mk"
 .  include "../../x11/libXrender/buildlink3.mk"
@@ -93,6 +75,7 @@ CONFIGURE_ARGS+=	--without-x
 
 USING_SWIG=	no
 
+# Extension language support
 .if !empty(PKG_OPTIONS:Mlua)
 USING_SWIG=	yes
 .  include "../../lang/lua/tool.mk"
@@ -104,6 +87,7 @@ CONFIGURE_ARGS+=	--enable-lua
 CONFIGURE_ARGS+=	--disable-lua
 .endif
 
+# Extension language support
 .if !empty(PKG_OPTIONS:Mtcl)
 .  if empty(PKG_OPTIONS:Mx11)
 PKG_FAIL_REASON=	"tcl option requires x11 option"
@@ -121,6 +105,7 @@ CONFIGURE_ARGS+=	--enable-tcl
 CONFIGURE_ARGS+=	--disable-tcl
 .endif
 
+# Extension language support
 .if !empty(PKG_OPTIONS:Mperl)
 USING_SWIG=	yes
 .  include "../../lang/perl5/buildlink3.mk"
@@ -131,6 +116,7 @@ CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--disable-perl
 .endif
 
+# Required by some of the other options
 .if !empty(USING_SWIG:Myes)
 PLIST.swig=		yes
 # Tool dependency according to documentation
