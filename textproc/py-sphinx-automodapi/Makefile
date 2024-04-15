@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/09 16:43:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/15 05:38:33 adam Exp $
 
 DISTNAME=	sphinx-automodapi-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+# Filenames with non-ASCII characters are not portable.
+post-extract:
+	${RM} ${WRKSRC}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.nonascii.*
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
