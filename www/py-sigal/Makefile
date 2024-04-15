@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/15 17:22:53 wiz Exp $
 
 DISTNAME=	sigal-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sigal/}
 
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	ffmpeg6-[0-9]*:../../multimedia/ffmpeg6
+DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
