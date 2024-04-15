@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/02/07 18:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/15 09:27:50 adam Exp $
 
-DISTNAME=	glibmm-2.78.1
+DISTNAME=	glibmm-2.80.0
 PKGNAME=	${DISTNAME:S/glibmm/glibmm2.68/}
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/${PKGVERSION_NOREV:R}/}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for glib (2.68 API)
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++11 regex
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gm4:run perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	gio/giomm.pc.in
 PKGCONFIG_OVERRIDE+=	glib/glibmm.pc.in
@@ -37,7 +37,7 @@ PLIST_VARS+=	notmac
 PLIST.notmac=	yes
 .endif
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.77.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
