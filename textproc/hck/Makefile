@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/15 19:33:55 pin Exp $
 
-DISTNAME=	hck-0.9.2
+DISTNAME=	hck-0.10.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,11 +14,7 @@ TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hck \
-		${DESTDIR}${PREFIX}/bin
+USE_LANGUAGES+=		c c++
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
