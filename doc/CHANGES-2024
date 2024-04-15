@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2459 2024/04/15 07:42:07 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2460 2024/04/15 07:44:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/ldb to 2.9.0 [adam 2024-04-15]
 	Updated net/samba4 to 4.20.0 [adam 2024-04-15]
 	Updated devel/cargo-modules to 0.15.4 [pin 2024-04-15]
+	Updated devel/garden to 1.5.0 [pin 2024-04-15]
