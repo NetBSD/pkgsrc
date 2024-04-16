@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.447 2024/04/12 19:58:22 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.448 2024/04/16 21:15:45 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -158,6 +158,9 @@ MACHINE_GNU_ARCH?=		${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 .if ${NATIVE_OPSYS} == "NetBSD"
 NATIVE_LOWER_OPSYS?=	netbsd
 
+# Ensure HOST_MACHINE_ARCH is set for native-but-compat builds, such as
+# building i386 packages on an amd64 system with compat32 libraries.
+# This is not quite a cross-build, so not NATIVE_ or CROSS_ here.
 .  if !defined(HOST_MACHINE_ARCH)
 HOST_MACHINE_ARCH!=	${UNAME} -m
 MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
@@ -197,17 +200,17 @@ NATIVE_LOWER_OPSYS?=	dragonfly
 NATIVE_LOWER_VENDOR?=	pc
 
 .elif ${NATIVE_OPSYS} == "FreeBSD"
-NATIVE_OS_VERSION:=		${OS_VERSION:C/-.*$//}
+NATIVE_OS_VERSION:=		${NATIVE_OS_VERSION:C/-.*$//}
 NATIVE_LOWER_OPSYS?=		freebsd
-NATIVE_LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
-.  if ${MACHINE_ARCH} == "i386"
+NATIVE_LOWER_OPSYS_VERSUFFIX=	${NATIVE_OS_VERSION:C/([0-9]*).*/\1/}
+.  if ${MACHINE_ARCH} == "i386"		# pre-NATIVE_MACHINE_ARCH switcheroo
 NATIVE_LOWER_VENDOR?=		pc
 .  endif
 NATIVE_LOWER_VENDOR?=		unknown
 
 .elif ${NATIVE_OPSYS} == "Haiku"
 NATIVE_LOWER_OPSYS?=		haiku
-.  if ${NATIVE_MACHINE_ARCH} == "i386"
+.  if ${MACHINE_ARCH} == "i386"		# pre-NATIVE_MACHINE_ARCH switcheroo
 NATIVE_LOWER_VENDOR?=		pc
 .  endif
 
@@ -255,7 +258,7 @@ NATIVE_LOWER_VENDOR?=		slackware
 NATIVE_LOWER_VENDOR?=		ssd
 .  elif !empty(CHROMEOS_RELEASE_NAME)
 NATIVE_LOWER_VENDOR?=		chromeos
-.  elif ${NATIVE_MACHINE_ARCH} == "i386"
+.  elif ${MACHINE_ARCH} == "i386"	# pre-NATIVE_MACHINE_ARCH switcheroo
 NATIVE_LOWER_VENDOR?=          pc
 .  endif
 NATIVE_LOWER_VENDOR?=          unknown
@@ -264,7 +267,9 @@ NATIVE_OS_VARIANT:=		${NATIVE_OS_VARIANT:C/^.*-//}
 .  if ${NATIVE_OS_VARIANT} != "Microsoft"
 NATIVE_OS_VARIANT=		${NATIVE_LOWER_VENDOR}
 .  endif
-# XXX NATIVE_HOST_MACHINE_ARCH?  ???
+# Ensure HOST_MACHINE_ARCH is set for native-but-compat builds, such as
+# building i386 packages on an amd64 system with compat32 libraries.
+# This is not quite a cross-build, so not NATIVE_ or CROSS_ here.
 .  if !defined(HOST_MACHINE_ARCH)
 HOST_MACHINE_ARCH!=	${UNAME} -m
 MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
