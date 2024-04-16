@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/04/15 05:11:58 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/16 04:29:46 adam Exp $
 
-DISTNAME=	yq-3.3.0
+DISTNAME=	yq-3.3.1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yq/}
 
@@ -9,7 +9,9 @@ HOMEPAGE=	https://kislyuk.github.io/yq/
 COMMENT=	Command-line YAML and XML processor
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	jq-[0-9]*:../../devel/jq
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.8.1:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.6:../../textproc/py-tomlkit
