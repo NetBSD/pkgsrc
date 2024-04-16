@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.526 2024/04/06 08:53:34 ryoon Exp $
+$NetBSD: distinfo,v 1.527 2024/04/16 20:10:32 ryoon Exp $
 
-BLAKE2s (firefox-124.0.2.source.tar.xz) = 93de7e9a7291f5761b2a660218ac3fffbe5692072593057f7b57e38e2adad3fc
-SHA512 (firefox-124.0.2.source.tar.xz) = 8cf340de6e34812f8ae3363265859a263330af770d981c3dd1ca1e7e0cfe513604d3e68184d4aa1446569aefbdf359d561fbc200faf19a5ed020a1709d9ef10e
-Size (firefox-124.0.2.source.tar.xz) = 555223648 bytes
-BLAKE2s (nodejs-output-124.0.tgz) = b644e93be28b5c4f32e3a7188825b7ee82de1414277201b1c531dc035d79a0e6
-SHA512 (nodejs-output-124.0.tgz) = ca6c5168e33bcee45e32eb4d541beb8c92e2821e0d40cf56c910515b6636cd43a27e0bd255e6663441df29912e6b93b71c8b47f5c958265e93cc870d241fb7a0
-Size (nodejs-output-124.0.tgz) = 223660 bytes
+BLAKE2s (firefox-125.0.1.source.tar.xz) = 9ed1d68bd671ae3580cd16e62520ac854349e1e2543c34e9ddd874af95d4fa54
+SHA512 (firefox-125.0.1.source.tar.xz) = 6f2f336de8b0ec9cb19ba20c909407b7b88c0319ee3b2f1f3429133516b0c45b4c7846f287985a0cdb9f34acc7d5378ed14fb48e26bef113c8ac360501a30c4d
+Size (firefox-125.0.1.source.tar.xz) = 553213768 bytes
+BLAKE2s (nodejs-output-125.0.1.tgz) = d71ccbe962c933929c1d60c16932ffeced62f2bbf89a9747f701294423391ff2
+SHA512 (nodejs-output-125.0.1.tgz) = 008bbb4b7ec535d5144f0bba2eba174f05487063c34f4a5b6b544fca2f91b8d2cea50503cce57d948448f60ab7d5aa58480887b03047ea3b03bdf19345197aa3
+Size (nodejs-output-125.0.1.tgz) = 224740 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
@@ -24,7 +24,7 @@ SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f81
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
-SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
+SHA1 (patch-media_libpng_pngpriv.h) = 8320a1f7534ed5c4914b597bb3d6117d0060318f
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 8e1d9a0746b637f5f4259e448e72172cfb08b23f
