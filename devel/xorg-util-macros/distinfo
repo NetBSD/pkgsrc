@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/02/13 20:10:48 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/04/16 21:19:27 wiz Exp $
 
-BLAKE2s (util-macros-1.20.0.tar.xz) = d7f319d695f94dc1ae325bcae798f045aee2d63a996b0b0dff1479a5a5250ecf
-SHA512 (util-macros-1.20.0.tar.xz) = 76caefb118bf1675d7b2b96e1bbb04eb9a320b02e120839e55a22ef98538ecf00d0e686a67186fc8fdc8492d277ffe3125ae8b7ac61ce4739edc0de3f468d2eb
-Size (util-macros-1.20.0.tar.xz) = 83324 bytes
+BLAKE2s (util-macros-1.20.1.tar.xz) = d32e55f098e8633a56491784c39c07dd8278e2e50a28f67e6565b877b2855792
+SHA512 (util-macros-1.20.1.tar.xz) = 5f44d73c18ff87459cd94a68a961465b3970a36f0b55be65c0ec228320a675561eb24a1b1359745124302446a1a3fadc2f50d3378f439df5bd3e866cb8015286
+Size (util-macros-1.20.1.tar.xz) = 83124 bytes

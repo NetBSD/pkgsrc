@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/02/13 20:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/16 21:19:27 wiz Exp $
 
-DISTNAME=		util-macros-1.20.0
+DISTNAME=		util-macros-1.20.1
 PKGNAME=		xorg-${DISTNAME}
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
