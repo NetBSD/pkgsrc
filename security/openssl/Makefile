@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2024/04/16 07:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.300 2024/04/16 15:47:25 jperkin Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -111,6 +111,9 @@ OPENSSL_HOST.SunOS-x86_64=	solaris64-x86_64-cc
 OPENSSL_HOST.SunOS-x86_64=	solaris64-x86_64-gcc
 .endif
 OPENSSL_HOST.Darwin-aarch64=	darwin64-arm64-cc
+
+# Ensure consistent socket interfaces are used across the codebase.
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 LDFLAGS.SunOS+=		-lrt
 CPPFLAGS.OpenBSD+=	-D__STDC_NO_ATOMICS__
