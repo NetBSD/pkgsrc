@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/15 20:41:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/16 13:34:19 schmonz Exp $
 
 DISTNAME=		tipidee-0.0.4.0
 CATEGORIES=		www
@@ -11,7 +11,7 @@ COMMENT=		Minimalistic web server
 LICENSE=		isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	0.0.3.0.1
+MANPAGES_VERSION=	0.0.4.0.1
 MANPAGES_DIST=		tipidee-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/tipidee-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
@@ -23,12 +23,12 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 .PHONY: do-install-manpages
 post-install: do-install-manpages
 do-install-manpages:
-	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 5 8; do \
+	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 1 5 8; do \
 		for j in man$$i/*.$$i; do \
 			${INSTALL_MAN} $$j \
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
