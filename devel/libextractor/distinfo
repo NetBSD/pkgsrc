@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2023/07/19 07:35:25 wiz Exp $
+$NetBSD: distinfo,v 1.33 2024/04/16 19:01:49 nikita Exp $
 
-BLAKE2s (libextractor-1.11.tar.gz) = 7e8353de830a60b6d4cfc04bc3c6d5b98bdc569dd353b27123d0dfd7193ae520
-SHA512 (libextractor-1.11.tar.gz) = 7023d8cb377fda854523242ac9fd14a97eed86d2cd829b126bb4d5a26d5f3650642f3871cf74ae3b0788447cc0a2dce942684ef0d45f17c9ba9248b5aed623d3
-Size (libextractor-1.11.tar.gz) = 8367637 bytes
+BLAKE2s (libextractor-1.13.tar.gz) = 424c3c27c3c6d5f84ec9523292b697f5b4757a13b43711abda5d2f714f0f4dc3
+SHA512 (libextractor-1.13.tar.gz) = 8e6844bbd8e7dc3e19fa151719549ecdfc4f3beacc165090ca4446b0306c8d99b3c336bc0ca20af2b557c9df29be084eedda9eb66a340a64fb84e63c90dc112e
+Size (libextractor-1.13.tar.gz) = 8173930 bytes
 SHA1 (patch-src_plugins_exiv2__extractor.cc) = 3567c93412d9747322c00d46a7e8e3068b285bde
