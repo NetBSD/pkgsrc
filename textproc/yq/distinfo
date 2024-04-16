@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/15 05:11:59 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/04/16 04:29:46 adam Exp $
 
-BLAKE2s (yq-3.3.0.tar.gz) = facfc05942cb651006d35db641de728c6459d1affa1a766e9dc6a3b1db122605
-SHA512 (yq-3.3.0.tar.gz) = 9e4533357eaaeec39caae7380db6c1a02e70a079abf968c9155a287c690c0ff06302ac2e618acda100e6999b5f2c846f36b0659a6301e9d82b5758e9e461d0c8
-Size (yq-3.3.0.tar.gz) = 32353 bytes
+BLAKE2s (yq-3.3.1.tar.gz) = 1f86608288358a084cea1e9c4719c921136dd15e4aa5dcae39f4a402607bb2a8
+SHA512 (yq-3.3.1.tar.gz) = 1b7cc3715d84ae8c8f7ab2e92f9ab6b7ae99dbed68058a4faab5ca94f3385750caa379dae9fd2881ab944198bb5a24edc509746c6a4a759ccf5cb00222d0651d
+Size (yq-3.3.1.tar.gz) = 32171 bytes
