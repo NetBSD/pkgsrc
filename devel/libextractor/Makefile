@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/04/16 19:01:49 nikita Exp $
+# $NetBSD: Makefile,v 1.118 2024/04/16 22:16:49 nikita Exp $
 
 DISTNAME=	libextractor-1.13
 CATEGORIES=	devel
@@ -40,6 +40,7 @@ SHLIBTOOL_OVERRIDE=	# empty
 .include "../../multimedia/mp4v2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../www/tidy/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
