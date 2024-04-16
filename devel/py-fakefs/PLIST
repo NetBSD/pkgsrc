@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/02 08:20:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/16 15:33:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -90,6 +90,12 @@ ${PYSITELIB}/pyfakefs/pytest_tests/pytest_plugin_failing_helper.pyo
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_plugin_test.py
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_plugin_test.pyc
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_plugin_test.pyo
+${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.py
+${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.pyc
+${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.pyo
+${PYSITELIB}/pyfakefs/pytest_tests/unhashable.py
+${PYSITELIB}/pyfakefs/pytest_tests/unhashable.pyc
+${PYSITELIB}/pyfakefs/pytest_tests/unhashable.pyo
 ${PYSITELIB}/pyfakefs/tests/__init__.py
 ${PYSITELIB}/pyfakefs/tests/__init__.pyc
 ${PYSITELIB}/pyfakefs/tests/__init__.pyo
