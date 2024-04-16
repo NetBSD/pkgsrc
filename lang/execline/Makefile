@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/04/15 20:41:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/16 13:32:07 schmonz Exp $
 
 DISTNAME=	execline-2.9.5.0
 CATEGORIES=	lang shells
@@ -11,7 +11,7 @@ COMMENT=	The execline scripting language
 LICENSE=	isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	2.9.4.0.1
+MANPAGES_VERSION=	2.9.5.0.1
 MANPAGES_DIST=		execline-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/execline-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
