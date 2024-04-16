@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2024/03/14 07:59:57 adam Exp $
+$NetBSD: distinfo,v 1.24 2024/04/16 13:06:28 wiz Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.13.tar.xz) = 5233fe78d5d63fd48623699acdbf6e2ad38837076115469b7b9d2db1e8e749b7
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.13.tar.xz) = 0c9aa844148e908c2eb5af93b51d2809f183f775d5760b4654f8f34ac825fd8b9d81a9b70cb9d79d16502bdce7bd6d77484c5b04797d99726f6ff5e9e40af03f
@@ -245,7 +245,7 @@ SHA1 (patch-src_3rdparty_chromium_components_viz_service_frame__sinks_root__comp
 SHA1 (patch-src_3rdparty_chromium_components_webcrypto_algorithms_test__helpers.cc) = 208b91b7b2172baf9a984a384f86f868db63d3ae
 SHA1 (patch-src_3rdparty_chromium_content_app_content__main.cc) = 598bc0a6abdfe3eff4581976915ff18f7b975638
 SHA1 (patch-src_3rdparty_chromium_content_app_content__main__runner__impl.cc) = 6d4022d4cf4abc946224ee155d29eea019dc9262
-SHA1 (patch-src_3rdparty_chromium_content_browser_BUILD.gn) = aabef87e186ec44ab5fa5767059104a13ab70cdc
+SHA1 (patch-src_3rdparty_chromium_content_browser_BUILD.gn) = 7fbbcf0eeb10339c4cbc78e69423dd6eb3d8b6fb
 SHA1 (patch-src_3rdparty_chromium_content_browser_browser__main__loop.cc) = 5ba18f78394bb5b777bff072a447e14a12824636
 SHA1 (patch-src_3rdparty_chromium_content_browser_child__process__launcher__helper__linux.cc) = c7603af71fba00d148c575c7dad8125fa8eff438
 SHA1 (patch-src_3rdparty_chromium_content_browser_compositor_viz__process__transport__factory.cc) = bded50a3060ac935616fcd66f94c0f6f2f5a7cdf
