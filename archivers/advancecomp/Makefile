@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2019/10/04 18:02:48 nia Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/16 20:11:14 nikita Exp $
 
-DISTNAME=	advancecomp-2.1
+DISTNAME=	advancecomp-2.6
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amadvance/}
 GITHUB_PROJECT=	advancecomp
