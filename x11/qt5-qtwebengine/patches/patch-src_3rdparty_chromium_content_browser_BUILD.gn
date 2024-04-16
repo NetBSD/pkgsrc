@@ -1,11 +1,19 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.3 2023/06/08 20:38:06 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.4 2024/04/16 13:06:28 wiz Exp $
 
 support bsd
 build with python3 (remove catapult)
 
---- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
+--- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2023-02-27 18:57:08.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
-@@ -2067,7 +2067,7 @@ jumbo_static_library("browser") {
+@@ -36,6 +36,7 @@ jumbo_static_library("devtools_protocol"
+ 
+   deps = [
+     "//base",
++    "//components/spellcheck:buildflags",
+     "//content/browser/devtools:devtools_background_services_proto",
+     "//content/browser/devtools:protocol_sources",
+     "//content/common:buildflags",
+@@ -2067,7 +2068,7 @@ jumbo_static_library("browser") {
      deps += [ "//ui/events" ]
    }
  
@@ -14,7 +22,7 @@ build with python3 (remove catapult)
      sources += [
        "font_access/font_enumeration_cache_fontconfig.cc",
        "font_access/font_enumeration_cache_fontconfig.h",
-@@ -2110,7 +2110,7 @@ jumbo_static_library("browser") {
+@@ -2110,7 +2111,7 @@ jumbo_static_library("browser") {
      deps += [ "//chromecast:chromecast_buildflags" ]
    }
  
@@ -23,7 +31,7 @@ build with python3 (remove catapult)
      sources += [
        "tracing/cast_tracing_agent.cc",
        "tracing/cast_tracing_agent.h",
-@@ -2169,7 +2169,6 @@ jumbo_static_library("browser") {
+@@ -2169,7 +2170,6 @@ jumbo_static_library("browser") {
    if (!is_android) {
      deps += [
        "//components/vector_icons",
@@ -31,7 +39,7 @@ build with python3 (remove catapult)
      ]
    }
  
-@@ -2417,7 +2416,7 @@ jumbo_static_library("browser") {
+@@ -2417,7 +2417,7 @@ jumbo_static_library("browser") {
        sources += [ "renderer_host/pepper/pepper_truetype_font_list_pango.cc" ]
      }
  
@@ -40,7 +48,7 @@ build with python3 (remove catapult)
        deps += [ "//components/services/font:ppapi_fontconfig_matching" ]
      }
    }
-@@ -2455,7 +2454,7 @@ jumbo_static_library("browser") {
+@@ -2455,7 +2455,7 @@ jumbo_static_library("browser") {
      }
    }
  
@@ -49,7 +57,7 @@ build with python3 (remove catapult)
      deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -2726,7 +2725,7 @@ jumbo_static_library("browser") {
+@@ -2726,7 +2726,7 @@ jumbo_static_library("browser") {
        "web_contents/aura/gesture_nav_simple.h",
      ]
  
@@ -58,7 +66,7 @@ build with python3 (remove catapult)
        deps += [ "//ui/base/ime/linux" ]
      }
    } else {  # Not aura.
-@@ -2807,7 +2806,7 @@ jumbo_static_library("browser") {
+@@ -2807,7 +2807,7 @@ jumbo_static_library("browser") {
      ]
    }
  
