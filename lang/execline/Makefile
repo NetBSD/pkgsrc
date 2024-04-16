@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/04/16 13:32:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/16 18:26:55 schmonz Exp $
 
-DISTNAME=	execline-2.9.5.0
+DISTNAME=	execline-2.9.5.1
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
