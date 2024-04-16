@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 09:57:04 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/04/16 20:11:14 nikita Exp $
 
-BLAKE2s (advancecomp-2.1.tar.gz) = 17c818fa5931408ddbc2cc486bb5ab5a9f5ffb336fb7cd5f3b9e10b46adc5229
-SHA512 (advancecomp-2.1.tar.gz) = 62abc585b282483bf5994491db3965463f4a54db642e489460d678f95faefc5d62f80bcd9e5a2a2ba3cd708d5cda7457a2b773be1a65385ef5528324e2d2949b
-Size (advancecomp-2.1.tar.gz) = 1292135 bytes
+BLAKE2s (advancecomp-2.6.tar.gz) = 89955b33e49cb203eea68f49029390b8f147b2b6fcdb24b9c56fbe38aaf37e5a
+SHA512 (advancecomp-2.6.tar.gz) = 10cc2a72b0cf486868b52cdb78a8dc2c965bfa9f43f712fdf97af58e4b0eac62460a635fe58435e2efbc605ed281b8bf0dc560b08bbbe66ee5a8673ec40ea0a6
+Size (advancecomp-2.6.tar.gz) = 1343700 bytes
 SHA1 (patch-aa) = ddc8b6981e1e0b46ac6291aee65d56cdae9f0998
 SHA1 (patch-ab) = 1e6e10943bd2a414d4f704bd94b1de3d1036dd90
 SHA1 (patch-ac) = d08d44224c4351c66c920b26bacc3f749a54d31a
-SHA1 (patch-libdeflate_compiler__gcc.h) = 5e8fe8d3a7d45097cbc04523c2085ef38c7d0de0
