@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.298 2024/04/10 10:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2024/04/16 07:19:48 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
 DISTNAME=	openssl-3.3.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -22,7 +23,7 @@ TEST_TARGET=		test
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--libdir=lib
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared
 MAKE_FLAGS+=		MANSUFFIX=
