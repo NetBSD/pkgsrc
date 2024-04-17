@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/10/24 22:10:56 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2024/04/17 10:38:36 wiz Exp $
 
 MODNAME=		ssh2
 PECL_VERSION=		1.3.1
@@ -10,8 +9,6 @@ HOMEPAGE=		https://www.libssh2.org/
 COMMENT=		PHP bindings to the functions of libssh2
 PKGREVISION=		1
 LICENSE=		php
-
-CONFLICTS=	${PHP_PKG_PREFIX}-${MODNAME}<1.0
 
 CONFIGURE_ARGS+=	--with-ssh2=${PREFIX}
 
