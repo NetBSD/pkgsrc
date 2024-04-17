@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/08/25 22:09:14 thor Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/04/17 14:50:01 adam Exp $
 bin/aggregate_profile.pl
 bin/mpiCC
 bin/mpic++
@@ -49,7 +49,6 @@ lib/libmca_common_sm.la
 lib/libmpi.la
 ${PLIST.java}lib/libmpi_java.la
 ${PLIST.f90}lib/libmpi_mpifh.la
-${PLIST.f90}${PLIST.noignoretkr}lib/libmpi_usempi.la
 ${PLIST.f90}${PLIST.ignoretkr}lib/libmpi_usempi_ignore_tkr.la
 ${PLIST.f08}lib/libmpi_usempif08.la
 lib/libompitrace.la
@@ -113,7 +112,7 @@ lib/openmpi/mca_mpool_hugepage.la
 lib/openmpi/mca_odls_default.la
 lib/openmpi/mca_odls_pspawn.la
 lib/openmpi/mca_oob_tcp.la
-lib/openmpi/mca_op_avx.la
+${PLIST.avx}lib/openmpi/mca_op_avx.la
 lib/openmpi/mca_osc_monitoring.la
 lib/openmpi/mca_osc_pt2pt.la
 lib/openmpi/mca_osc_rdma.la
@@ -127,12 +126,10 @@ lib/openmpi/mca_pmix_pmix3x.la
 lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_monitoring.la
 lib/openmpi/mca_pml_ob1.la
-${PLIST.linux}lib/openmpi/mca_pstat_linux.la
 ${PLIST.pstattest}lib/openmpi/mca_pstat_test.la
 ${PLIST.sge}lib/openmpi/mca_ras_gridengine.la
 lib/openmpi/mca_ras_simulator.la
 lib/openmpi/mca_rcache_grdma.la
-${PLIST.linux}lib/openmpi/mca_reachable_netlink.la
 lib/openmpi/mca_reachable_weighted.la
 lib/openmpi/mca_regx_fwd.la
 lib/openmpi/mca_regx_naive.la
@@ -179,7 +176,6 @@ lib/pmix/mca_bfrops_v20.la
 lib/pmix/mca_bfrops_v21.la
 lib/pmix/mca_bfrops_v3.la
 lib/pmix/mca_gds_ds12.la
-${PLIST.linux}lib/pmix/mca_gds_ds21.la
 lib/pmix/mca_gds_hash.la
 lib/pmix/mca_pcompress_zlib.la
 lib/pmix/mca_plog_default.la
@@ -696,7 +692,6 @@ share/openmpi/help-opal-runtime.txt
 share/openmpi/help-opal-shmem-mmap.txt
 share/openmpi/help-opal-shmem-posix.txt
 share/openmpi/help-opal-shmem-sysv.txt
-${PLIST.linux}share/openmpi/help-opal-timer-linux.txt
 share/openmpi/help-opal-util.txt
 share/openmpi/help-opal-wrapper.txt
 share/openmpi/help-opal_info.txt

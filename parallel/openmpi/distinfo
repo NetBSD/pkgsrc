@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2022/08/25 22:09:14 thor Exp $
+$NetBSD: distinfo,v 1.24 2024/04/17 14:50:01 adam Exp $
 
-BLAKE2s (openmpi-4.1.4.tar.bz2) = 0d98f1b9404f2a4328288c01d614421ca0a409f7e8550164664a5d692209b4b4
-SHA512 (openmpi-4.1.4.tar.bz2) = c70a92c9b16b8c76a871183f9b180d60861186e64140da897d206d53bc06213f31ea93b31734645f580f4bf28dda5605d85dbce2417e4596955384d961bed653
-Size (openmpi-4.1.4.tar.bz2) = 10042839 bytes
+BLAKE2s (openmpi-4.1.6.tar.bz2) = 5333eb0abe9b0bd794c9849e694fb2f5538650b964b4591d4352a62d68674ba4
+SHA512 (openmpi-4.1.6.tar.bz2) = 0ef3240f9c436fb19b67e836cac376eafeb7825d12de3387dad04329dee9f182799d17d785ea23eba763810f479015bb5230593c28950b616b2f0aa1c0a81e71
+Size (openmpi-4.1.6.tar.bz2) = 10017002 bytes
 SHA1 (patch-ak) = 1dba883fb533df57f5869b743e499a3117339529
 SHA1 (patch-config_opal__setup__wrappers.m4) = c3fe3cb5ff7cedcb5c847f25eea129d4299dd5d2
 SHA1 (patch-configure) = bb6373289ffa2beabccedb6ead679367c85dbe1e

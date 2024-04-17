@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/01/12 11:34:10 markd Exp $
+# $NetBSD: Makefile,v 1.53 2024/04/17 14:50:01 adam Exp $
 
-DISTNAME=	openmpi-4.1.4
+DISTNAME=	openmpi-4.1.6
 CATEGORIES=	parallel
-MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v4.1/
+MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	thor@NetBSD.org
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run bash:run
 GNU_CONFIGURE=		yes
 CONFIG_SHELL=		bash
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=${BUILDLINK_PREFIX.libltdl}
 # See below about external hwloc.
@@ -36,30 +36,23 @@ SHLIBTOOL_OVERRIDE=	config/libtool.m4
 
 TEST_TARGET=	check
 
-# Unsurprisingly, files that are only produced on GNU/Linux systems.
-PLIST_VARS+=	linux
+# CPU with AVX support.
+PLIST_VARS+=	avx
 # \todo Explain.  Apparently built if !Linux.
 PLIST_VARS+=	pstattest
 # \todo Explain.
 PLIST_VARS+=	ignoretkr
-PLIST_VARS+=	noignoretkr
 
-
-.if ${OPSYS} == "Linux"
-PLIST.linux=		yes
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.avx=		yes
 .endif
 
 .if ${OPSYS} != "Linux"
 PLIST.pstattest=	yes
 .endif
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 PLIST.ignoretkr=	yes
-.else
-# \todo Explain why on Darwin we don't set one of them.
-.  if ${OPSYS} != "Darwin"
-PLIST.noignoretkr=	yes
-.  endif
 .endif
 
 REPLACE_PERL=	ompi/tools/wrappers/mpijavac.pl.in
