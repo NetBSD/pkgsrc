@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/11/23 08:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/17 10:38:34 wiz Exp $
 
 DISTNAME=	PyPika-0.48.9
 PKGREVISION=	1
@@ -11,10 +11,10 @@ HOMEPAGE=	https://github.com/kayak/pypika
 COMMENT=	SQL query builder API for Python
 LICENSE=	apache-2.0
 
-CONFLICTS=	${PYPKGPREFIX}-pypika-tortoise-[0-9]*
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+CONFLICTS=	py[0-9]*-pypika-tortoise-[0-9]*
 
 USE_LANGUAGES=	# none
 

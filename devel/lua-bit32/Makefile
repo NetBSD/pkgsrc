@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/07/11 15:14:29 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/17 10:38:34 wiz Exp $
 
 # Keep versioning in sync with the luarocks rockspec.
 DISTNAME=	lua-compat53-0.9
@@ -13,8 +13,8 @@ HOMEPAGE=	https://luarocks.org/modules/siffiejoe/bit32
 COMMENT=	Lua 5.2 bit manipulation library
 LICENSE=	mit
 
-CONFLICTS+=	${LUA_PKGPREFIX}-bitlib-[0-9]*
-SUPERSEDES+=	${LUA_PKGPREFIX}-bitlib-[0-9]*
+CONFLICTS+=	lua[0-9]*-bitlib-[0-9]*
+SUPERSEDES+=	lua[0-9]*-bitlib-[0-9]*
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 

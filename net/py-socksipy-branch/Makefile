@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/22 14:31:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/17 10:38:35 wiz Exp $
 
 DISTNAME=	SocksiPy-branch-1.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://code.google.com/p/socksipy-branch/
 COMMENT=	Python SOCKS module
 LICENSE=	modified-bsd
 
-CONFLICTS=	${PYPKGPREFIX}-Socks-[0-9]*
+CONFLICTS=	py[0-9]*-Socks-[0-9]*
 
 .include "../../lang/python/pyversion.mk"
 

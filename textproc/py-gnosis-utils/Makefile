@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/10/23 06:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/17 10:38:36 wiz Exp $
 
 DISTNAME=	Gnosis_Utils-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Gnosis_Utils/gnosis-utils/}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	#none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.2.2
 
-CONFLICTS+=	${PYPKGPREFIX}-Gnosis-Utils-[0-9]*
+CONFLICTS+=	py[0-9]*-Gnosis-Utils-[0-9]*
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"

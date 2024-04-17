@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/12 13:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/17 10:38:35 wiz Exp $
 
 DISTNAME=	Pillow-6.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
+CONFLICTS+=	py[0-9]*-imaging-[0-9]*
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
