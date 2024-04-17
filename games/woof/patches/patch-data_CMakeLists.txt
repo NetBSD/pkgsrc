@@ -1,12 +1,15 @@
-$NetBSD: patch-data_CMakeLists.txt,v 1.5 2024/01/17 14:40:51 micha Exp $
+$NetBSD: patch-data_CMakeLists.txt,v 1.6 2024/04/17 16:58:25 micha Exp $
 
 Treat macOS as Unix.
 
---- data/CMakeLists.txt.orig	2023-12-13 09:45:57.000000000 +0000
+--- data/CMakeLists.txt.orig	2024-03-15 07:15:40.000000000 +0000
 +++ data/CMakeLists.txt
-@@ -1,4 +1,4 @@
+@@ -4,7 +4,7 @@ configure_file(io.github.fabiangreffrath
+                io.github.fabiangreffrath.woof.metainfo.xml
+                ESCAPE_QUOTES @ONLY)
+ 
 -if(UNIX AND NOT APPLE)
 +if(UNIX)
      install(FILES io.github.fabiangreffrath.woof.desktop DESTINATION share/applications)
-     install(FILES io.github.fabiangreffrath.woof.metainfo.xml DESTINATION share/metainfo)
-     install(FILES io.github.fabiangreffrath.woof-setup.desktop DESTINATION share/applications)
+     install(FILES "${CMAKE_CURRENT_BINARY_DIR}/io.github.fabiangreffrath.woof.metainfo.xml"
+             DESTINATION share/metainfo)
