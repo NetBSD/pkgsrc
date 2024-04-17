@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/12/30 13:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/17 15:01:58 adam Exp $
 
 DISTNAME=	bulk-test-boost-20231230
 CATEGORIES=	meta-pkgs
@@ -41,7 +41,6 @@ DEPENDS+=	libreoffice-[0-9]*:../../misc/libreoffice
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
 DEPENDS+=	mumble-[0-9]*:../../chat/mumble
 DEPENDS+=	musicpd-[0-9]*:../../audio/musicpd
-DEPENDS+=	mysql-server>=5.7<8.0:../../databases/mysql57-server
 DEPENDS+=	ncmpcpp-[0-9]*:../../audio/ncmpcpp
 DEPENDS+=	osm2pgsql-[0-9]*:../../geography/osm2pgsql
 DEPENDS+=	openscad-[0-9]*:../../cad/openscad
