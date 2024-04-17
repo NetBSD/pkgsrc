@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4204 2024/04/17 14:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4205 2024/04/17 14:32:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1027,7 +1027,6 @@ SUBDIR+=	libusb1
 SUBDIR+=	libuuid
 SUBDIR+=	libuv
 SUBDIR+=	libuxre
-SUBDIR+=	libview
 SUBDIR+=	libvolume_id
 SUBDIR+=	libvterm01
 SUBDIR+=	libvterm03
