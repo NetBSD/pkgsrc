@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.3 2024/04/17 14:50:01 adam Exp $
+lib/openmpi/mca_pstat_linux.la
+lib/openmpi/mca_reachable_netlink.la
+lib/pmix/mca_gds_ds21.la
+share/openmpi/help-opal-timer-linux.txt
