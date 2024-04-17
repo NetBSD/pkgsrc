@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2511 2024/04/17 09:15:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2512 2024/04/17 10:21:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4163,3 +4163,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/cobalt to 0.19.3 [pin 2024-04-17]
 	Updated devel/py-virtualenv to 20.25.2 [adam 2024-04-17]
 	Updated textproc/py-regex to 2024.4.16 [adam 2024-04-17]
+	Updated devel/py-pyleri to 1.4.3 [adam 2024-04-17]
+	Updated www/py-django-admin-rangefilter to 0.12.4 [adam 2024-04-17]
