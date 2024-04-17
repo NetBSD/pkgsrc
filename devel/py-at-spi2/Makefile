@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/01/28 11:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/04/17 10:38:34 wiz Exp $
 
 DISTNAME=	pyatspi-2.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
-CONFLICTS=	${PYPKGPREFIX}-at-spi-[0-9]*
+CONFLICTS=	py[0-9]*-at-spi-[0-9]*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

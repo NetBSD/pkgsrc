@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/01/10 07:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/17 10:38:35 wiz Exp $
 
 DISTNAME=	adns-python-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/adns-python/
 COMMENT=	Python interface to the GNU asynchronous DNS resolver library
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=	${PYPKGPREFIX}-adns-python-[0-9]*
+CONFLICTS=	py[0-9]*-adns-python-[0-9]*
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.2.1
 
