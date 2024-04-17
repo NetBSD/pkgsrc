@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/01/28 20:44:28 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/04/17 13:28:35 adam Exp $
 
-DISTNAME=	zeroconf-0.131.0
+DISTNAME=	zeroconf-0.132.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jstasiak/python-zeroconf
 COMMENT=	Pure Python Multicast DNS Service Discovery Library
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.5:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.8:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.5.2:../../devel/py-poetry-core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.4.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ifaddr>=0.1.7:../../net/py-ifaddr
