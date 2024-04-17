@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1041 2024/04/17 12:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1042 2024/04/17 12:59:30 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -104,7 +104,6 @@ SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-icon-theme
 SUBDIR+=	denemo
 SUBDIR+=	dia
-SUBDIR+=	dia-python
 SUBDIR+=	didder
 SUBDIR+=	digikam
 SUBDIR+=	djview4
