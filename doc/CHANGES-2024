@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2508 2024/04/16 22:08:31 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2509 2024/04/17 04:13:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4159,3 +4159,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libXmu to 1.2.1 [wiz 2024-04-16]
 	Updated devel/xorg-util-macros to 1.20.1 [wiz 2024-04-16]
 	Updated mail/neomutt to 20240416 [wiz 2024-04-16]
+	Updated textproc/lok to 0.2.5 [pin 2024-04-17]
