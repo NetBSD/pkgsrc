@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2024/04/17 10:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2024/04/17 11:57:36 wiz Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python bindings for GTK+2
 LICENSE=	gnu-lgpl-v2.1
 
-CONFLICTS=	py[0-9]*-gtk<0.6.10
+CONFLICTS=	py27-gtk<0.6.10
 
 # IOError: [Errno 2] No such file or directory: 'gtk-types.defs'
 MAKE_JOBS_SAFE=	no

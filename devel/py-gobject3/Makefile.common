@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2024/04/17 10:38:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2024/04/17 11:57:36 wiz Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
@@ -17,5 +17,5 @@ USE_TOOLS+=	pkg-config
 DISTINFO_FILE=	../../devel/py-gobject3/distinfo
 #PATCHDIR=	../../devel/py-gobject3/patches
 
-CONFLICTS+=	py[0-9]*-gtk2<2.8.4
-CONFLICTS+=	py[0-9]*-gobject<2.28.6nb4
+CONFLICTS+=	py27-gtk2<2.8.4
+CONFLICTS+=	py27-gobject<2.28.6nb4
