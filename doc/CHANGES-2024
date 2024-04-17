@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2520 2024/04/17 13:02:12 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2521 2024/04/17 13:04:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4174,3 +4174,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed graphics/comix successor graphics/py-mcomix [wiz 2024-04-17]
 	Removed graphics/dia-python [wiz 2024-04-17]
 	Removed graphics/py-gtkglext [wiz 2024-04-17]
+	Updated graphics/dia to 0.97.3nb35 [wiz 2024-04-17]
