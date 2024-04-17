@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1042 2024/04/17 12:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.1043 2024/04/17 13:02:11 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -511,7 +511,6 @@ SUBDIR+=	py-gdmodule
 SUBDIR+=	py-ggplot
 SUBDIR+=	py-glad2
 SUBDIR+=	py-graphviz
-SUBDIR+=	py-gtkglext
 SUBDIR+=	py-imageio
 SUBDIR+=	py-imagesize
 SUBDIR+=	py-imaging
