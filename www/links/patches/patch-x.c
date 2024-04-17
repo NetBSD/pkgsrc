@@ -1,8 +1,8 @@
-$NetBSD: patch-x.c,v 1.3 2022/05/29 17:58:53 fcambus Exp $
+$NetBSD: patch-x.c,v 1.4 2024/04/17 14:08:26 nat Exp $
 
-Fix display for color depths lower than 4bpp.
+Fix display for all color depths lower than 8bpp.
 
---- x.c.orig	2022-04-07 16:18:34.000000000 +0000
+--- x.c.orig	2024-04-12 21:04:10.197723954 +0000
 +++ x.c
 @@ -1667,12 +1667,12 @@ static unsigned char *x_init_driver(unsi
  
@@ -44,7 +44,7 @@ Fix display for color depths lower than 4bpp.
  		if (x_depth > 8)
  			return stracpy(cast_uchar "Static color supported for up to 8-bit depth.\n");
  		if ((err = x_query_palette()))
-@@ -2223,13 +2225,32 @@ static void x_translate_colors(unsigned 
+@@ -2223,13 +2225,58 @@ static void x_translate_colors(unsigned 
  		return;
  	}
  
@@ -57,7 +57,33 @@ Fix display for color depths lower than 4bpp.
  		}
 -		return;
 +	}
-+	if (x_depth == 1) {
++
++	int n, whole;
++	if (x_depth == 4) {
++		whole = x % 2;
++		for (j = 0; j < y; j++) {
++			n = 0;
++			for (i = 0; i < x - whole;i += 2)
++				mypic[n++] = mypic[i] << 4 | mypic[i + 1];
++			if (whole)
++				mypic[n++] = mypic[i] << 4;
++			mypic += skip;
++		}
++	} else if (x_depth == 2) {
++		whole = x % 4;
++		for (j = 0; j < y; j++) {
++			n = 0;
++			for (i = 0; i < x - whole;i += 4) {
++				mypic[n++] = mypic[i] << 6 | mypic[i + 1] << 4
++				    | mypic[i + 2] << 2 | mypic[i + 3];
++			}
++			for (; i < x; i++) {
++				mypic[n] |= mypic[i];
++				mypic[n] << 2;
++			}
++			mypic += skip;
++		}
++	} else if (x_depth == 1) {
 +		unsigned char s;
 +		for (j = 0; j < y; j++) {
 +			s = 0;
