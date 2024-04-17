@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.697 2024/04/17 14:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.698 2024/04/17 14:37:28 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -359,7 +359,6 @@ SUBDIR+=	paprefs
 SUBDIR+=	parlatype
 SUBDIR+=	pavucontrol
 SUBDIR+=	pavucontrol-qt
-SUBDIR+=	pavumeter
 SUBDIR+=	pcaudiolib
 SUBDIR+=	pd
 SUBDIR+=	pianobar
