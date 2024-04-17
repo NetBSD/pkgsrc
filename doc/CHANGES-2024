@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2535 2024/04/17 13:55:57 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.2536 2024/04/17 14:20:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox115 to 115.10.0 [gutteridge 2024-04-17]
 	Updated www/firefox115-l10n to 115.10.0 [gutteridge 2024-04-17]
 	Updated www/hugo to 0.125.0 [nikita 2024-04-17]
+	Added editors/libinfinity version 0.7.2 [wiz 2024-04-17]
