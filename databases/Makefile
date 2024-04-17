@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.706 2024/03/06 20:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.707 2024/04/17 12:03:30 wiz Exp $
 
 COMMENT=	Databases
 
@@ -45,7 +45,6 @@ SUBDIR+=	geneweb
 SUBDIR+=	gigabase
 SUBDIR+=	gnats
 SUBDIR+=	gom
-SUBDIR+=	gourmet
 SUBDIR+=	gramps5
 SUBDIR+=	gtkdbfeditor
 SUBDIR+=	guile-pg
