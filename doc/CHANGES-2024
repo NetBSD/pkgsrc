@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2542 2024/04/17 14:32:32 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2543 2024/04/17 14:33:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4197,3 +4197,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/libsexymm [wiz 2024-04-17]
 	Removed devel/libsexy [wiz 2024-04-17]
 	Removed devel/libview [wiz 2024-04-17]
+	Removed graphics/gimmage [wiz 2024-04-17]
