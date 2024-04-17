@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2024/04/07 07:34:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2024/04/17 12:02:15 wiz Exp $
 
 BUILDLINK_TREE+=	gtk-vnc
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gtk-vnc?=	../../net/gtk-vnc
 
 pkgbase := gtk-vnc
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.gtk-vnc:Mvnc-sasl)
+.if ${PKG_BUILD_OPTIONS.gtk-vnc:Mvnc-sasl}
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
