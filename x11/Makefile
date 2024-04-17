@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1021 2024/04/17 13:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.1022 2024/04/17 13:19:44 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -277,7 +277,6 @@ SUBDIR+=	plasma-framework
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gtk2
-SUBDIR+=	py-gtksourceview
 SUBDIR+=	py-otherside
 SUBDIR+=	py-pyperclip
 SUBDIR+=	py-qt-builder
