@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:08 nia Exp $
-
-BLAKE2s (libdesktop-agnostic-0.3.92.tar.gz) = 7d144f640f6dc0062206f048402e77b215380dfc15582c8ca076373fbdb051b0
-SHA512 (libdesktop-agnostic-0.3.92.tar.gz) = c383a45edb6a1fed1b1a13ed583627eceda444519276a5d62a8442bcdc1be5e7d37a0449b678e2ccfcf7441648ca6bff6c40e5930dbec9221182657201671e90
-Size (libdesktop-agnostic-0.3.92.tar.gz) = 442653 bytes
-SHA1 (patch-data_wscript) = b43f9ee46a99f393236ed9a91386368045ad0ed2
-SHA1 (patch-gen__src_libdesktop-agnostic_vfs-glob.c) = 915cdfa4a1bd0c2112cdf5e63ba92e9f4ea377ab
