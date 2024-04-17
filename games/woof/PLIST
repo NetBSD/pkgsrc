@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/01/17 14:40:51 micha Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/04/17 16:58:25 micha Exp $
 bin/woof
 bin/woof-setup
 man/man6/woof-setup.6
@@ -30,7 +30,6 @@ share/doc/woof/examples/playbud.deh
 share/doc/woof/examples/possbud.deh
 share/doc/woof/examples/sky.wad
 share/doc/woof/examples/touchy.deh
-share/doc/woof/mapcolors_vanilla.cfg
 share/doc/woof/mbf.txt
 share/doc/woof/mbfedit.txt
 share/doc/woof/mbffaq.txt

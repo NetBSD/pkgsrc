@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/04/06 08:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/04/17 16:58:25 micha Exp $
 
-DISTNAME=	woof_12.0.2
+DISTNAME=	woof_14.3.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -13,7 +12,8 @@ HOMEPAGE=	https://github.com/fabiangreffrath/woof/
 COMMENT=	Continuation of Lee Killough's Doom source port MBF
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c99
+USE_CC_FEATURES=	c99
+
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-G "Unix Makefiles" ..
