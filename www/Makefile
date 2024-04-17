@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1789 2024/04/04 13:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1790 2024/04/17 13:13:55 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -195,7 +195,6 @@ SUBDIR+=	http-parser
 SUBDIR+=	http_load
 SUBDIR+=	httpfile
 SUBDIR+=	hugo
-SUBDIR+=	ies4linux
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
 SUBDIR+=	jalbum
