@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2024/04/17 14:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.699 2024/04/17 14:47:54 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -355,7 +355,6 @@ SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	p5-MPEG-Audio-Frame
 SUBDIR+=	p5-MusicBrainz-DiscID
-SUBDIR+=	paprefs
 SUBDIR+=	parlatype
 SUBDIR+=	pavucontrol
 SUBDIR+=	pavucontrol-qt
