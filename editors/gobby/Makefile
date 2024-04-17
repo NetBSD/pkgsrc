@@ -1,26 +1,35 @@
-# $NetBSD: Makefile,v 1.81 2024/04/07 07:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/04/17 14:22:38 wiz Exp $
 
-DISTNAME=	gobby-0.4.12
-PKGREVISION=	61
+DISTNAME=	gobby-0.6.0
 CATEGORIES=	editors
-MASTER_SITES=	http://releases.0x539.de/gobby/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gobby/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gobby.0x539.de/
-COMMENT=	Collaborative Editor
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	https://github.com/gobby/gobby/wiki
+COMMENT=	Multi-Platform Collaborative Editor
+LICENSE=	isc
+
+# for m4 fragments for autoconf/automake
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		autoconf automake autoreconf
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
-.include "../../editors/obby/buildlink3.mk"
+.include "../../editors/libinfinity/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/net6/buildlink3.mk"
+.include "../../security/gsasl/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
-.include "../../x11/gtkmm/buildlink3.mk"
-.include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../x11/gtkmm3/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
