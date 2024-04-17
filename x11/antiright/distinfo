@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:42 nia Exp $
-
-BLAKE2s (antiright-3.4.tar.bz2) = 3067959e181d2a7222df8951cbc0f0a728dc304e63fb53540fd36dd631fdacb8
-SHA512 (antiright-3.4.tar.bz2) = 51439443c9fffbaafb18501ee473df8dc9816812fce4c22518693b26b01ec9bf6268e88539391ac6f105f0faade79a935f114aa11ba40bbbe9904d3b94547988
-Size (antiright-3.4.tar.bz2) = 193282 bytes
