@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2024/02/24 02:43:38 rxg Exp $
+# $NetBSD: Makefile,v 1.133 2024/04/17 13:09:52 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -142,7 +142,6 @@ SUBDIR+=	skkserv
 SUBDIR+=	skktools
 SUBDIR+=	tamago-tsunagi
 SUBDIR+=	tc
-SUBDIR+=	tegaki-pygtk
 SUBDIR+=	tegaki-python
 SUBDIR+=	tegaki-recognize
 SUBDIR+=	tegaki-tools
