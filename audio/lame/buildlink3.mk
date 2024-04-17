@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2022/08/30 15:45:28 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/04/17 16:34:15 micha Exp $
 
 BUILDLINK_TREE+=	lame
 
@@ -15,6 +15,9 @@ pkgbase:= lame
 .if ${PKG_BUILD_OPTIONS.lame:Municode}
 .  include "../../converters/libiconv/buildlink3.mk"
 .endif
+
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
 .endif # LAME_BUILDLINK3_MK
 
