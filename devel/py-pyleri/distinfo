@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/03/16 17:40:32 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/04/17 10:19:12 adam Exp $
 
-BLAKE2s (pyleri-1.4.2.tar.gz) = 4e2768259d3629fb1112f1ecd7bbf11fb05c9a41bdb19638fc2081d75304692d
-SHA512 (pyleri-1.4.2.tar.gz) = ed95212a3fbddf9f851bbb7ccd058f1999e9c012463029a5e9be9ace005a72a24c03f2570b2dfe19c630d5c001299343721c409bf9bbedf465b2635357198f41
-Size (pyleri-1.4.2.tar.gz) = 36482 bytes
+BLAKE2s (pyleri-1.4.3.tar.gz) = fc667c7cb2d5d4a9af7eff5182c8086e3d4cecad6e02bb4741ac76c46ecd0e41
+SHA512 (pyleri-1.4.3.tar.gz) = d42dd7bf6ce194256efef3cf0631f7770469db379e29e8050faf0f8b10cb9e32d9fead5d7b64852c88a3fae3e791e2a615e9a4129dc3bea1088516902448442d
+Size (pyleri-1.4.3.tar.gz) = 36111 bytes
