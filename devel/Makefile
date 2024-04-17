@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4200 2024/04/10 10:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.4201 2024/04/17 12:05:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -327,7 +327,6 @@ SUBDIR+=	diff-so-fancy
 SUBDIR+=	diffbreaker
 SUBDIR+=	diffsitter
 SUBDIR+=	difftastic
-SUBDIR+=	diffuse
 SUBDIR+=	diffutils
 SUBDIR+=	distcc
 SUBDIR+=	distcc-pump
