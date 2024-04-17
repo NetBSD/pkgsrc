@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/04/16 07:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/04/17 10:28:23 wiz Exp $
 
 DISTNAME=	meson-1.4.0
 CATEGORIES=	devel python
@@ -13,16 +13,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
-CONFLICTS+=	py38-meson-[0-9]*
-CONFLICTS+=	py39-meson-[0-9]*
-CONFLICTS+=	py310-meson-[0-9]*
-CONFLICTS+=	py311-meson-[0-9]*
-CONFLICTS+=	py312-meson-[0-9]*
-SUPERSEDES+=	py38-meson-[0-9]*
-SUPERSEDES+=	py39-meson-[0-9]*
-SUPERSEDES+=	py310-meson-[0-9]*
-SUPERSEDES+=	py311-meson-[0-9]*
-SUPERSEDES+=	py312-meson-[0-9]*
+CONFLICTS+=	py[0-9]*-meson-[0-9]*
+SUPERSEDES+=	py[0-9]*-meson-[0-9]*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
