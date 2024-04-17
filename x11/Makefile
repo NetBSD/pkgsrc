@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1019 2024/04/17 13:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.1020 2024/04/17 13:17:23 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -278,7 +278,6 @@ SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-gtksourceview
-SUBDIR+=	py-keybinder
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-otherside
 SUBDIR+=	py-pyperclip
