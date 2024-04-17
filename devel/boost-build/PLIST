@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2023/08/22 20:16:09 adam Exp $
-share/boost-build/bootstrap.jam
+@comment $NetBSD: PLIST,v 1.35 2024/04/17 16:14:01 adam Exp $
 share/boost-build/build-system.jam
 share/boost-build/build/ac.jam
 share/boost-build/build/alias.jam
@@ -11,7 +10,6 @@ share/boost-build/build/generators.jam
 share/boost-build/build/project.jam
 share/boost-build/build/property-set.jam
 share/boost-build/build/property.jam
-share/boost-build/build/readme.txt
 share/boost-build/build/scanner.jam
 share/boost-build/build/targets.jam
 share/boost-build/build/toolset.jam
@@ -22,10 +20,6 @@ share/boost-build/contrib/boost.jam
 share/boost-build/contrib/modular.jam
 share/boost-build/contrib/tntnet.jam
 share/boost-build/contrib/wxFormBuilder.jam
-share/boost-build/kernel/bootstrap.jam
-share/boost-build/kernel/class.jam
-share/boost-build/kernel/errors.jam
-share/boost-build/kernel/modules.jam
 share/boost-build/options/help.jam
 share/boost-build/tools/acc.jam
 share/boost-build/tools/asciidoctor.jam
@@ -224,9 +218,6 @@ share/boost-build/util/os.jam
 share/boost-build/util/param.jam
 share/boost-build/util/path.jam
 share/boost-build/util/print.jam
-share/boost-build/util/regex.jam
 share/boost-build/util/sequence.jam
-share/boost-build/util/set.jam
-share/boost-build/util/string.jam
 share/boost-build/util/utility.jam
 share/examples/boost-build/site-config.jam
