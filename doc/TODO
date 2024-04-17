@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24330 2024/04/17 13:18:42 wiz Exp $
+$NetBSD: TODO,v 1.24331 2024/04/17 13:29:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ddd-3.4.0
 	o dega-1.12
 	o delegate-9.9.13
-	o denemo-2.6
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o diction-1.14
@@ -750,7 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gtl-3.6
 	o guacamole-server-1.3.0
 	o guile-gtk-2.1
-	o gummi-0.8.1
+	o gummi-0.8.3
 	o gvfs-1.52.1
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
