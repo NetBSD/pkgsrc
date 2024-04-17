@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2024/04/07 07:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2024/04/17 15:00:32 wiz Exp $
 
 DISTNAME=	anjuta-3.34.0
 PKGREVISION=	27
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/3.34/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.anjuta.org/
+HOMEPAGE=	https://wiki.gnome.org/Apps/Anjuta/
 COMMENT=	GTK+ based IDE for C and C++
 LICENSE=	gnu-gpl-v2
 
