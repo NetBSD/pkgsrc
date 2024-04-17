@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2552 2024/04/17 17:01:42 micha Exp $
+$NetBSD: CHANGES-2024,v 1.2553 2024/04/17 17:02:43 micha Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-boost to 1.85.0 [adam 2024-04-17]
 	Updated meta-pkgs/boost to 1.85.0 [adam 2024-04-17]
 	Updated audio/lame to 3.100nb6 [micha 2024-04-17]
+	Updated games/woof to 14.3.0 [micha 2024-04-17]
