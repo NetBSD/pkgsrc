@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1025 2024/04/17 13:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.1026 2024/04/17 14:51:45 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -93,7 +93,6 @@ SUBDIR+=	gtkdatabox
 SUBDIR+=	gtkglarea
 SUBDIR+=	gtkglarea2
 SUBDIR+=	gtkmm
-SUBDIR+=	gtkmm-utils
 SUBDIR+=	gtkmm3
 SUBDIR+=	gtkmm4
 SUBDIR+=	gtksourceview2
