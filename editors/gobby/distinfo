@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:21:29 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/04/17 14:22:38 wiz Exp $
 
-BLAKE2s (gobby-0.4.12.tar.gz) = 06877bc786fb8abe50dfbc62dcfa7aeccd292d6bdbc5c4cf8d31347305657223
-SHA512 (gobby-0.4.12.tar.gz) = cd8280aeaf792f08a5b8bc96dd64a746dfc752e9cefff46d982bfea8be1f9f8a98bacadd3f1adaf88b437df99d217a46dfdd99e97581e36c92f04362e7c9fbc6
-Size (gobby-0.4.12.tar.gz) = 464464 bytes
-SHA1 (patch-aa) = be469582c2e0d0b958adc7a8edb17b796f3ac15b
-SHA1 (patch-configure) = b3b9fd5d5698cfb7db946304f86d7c524d6bc948
-SHA1 (patch-inc_config.hpp) = c9b08460b0b11dab30069c092a7f1ce22c42a2a1
-SHA1 (patch-inc_preferencesdialog.hpp) = f38ae013fd8976a0ee5880d58a55c83825a43e87
-SHA1 (patch-src_gselector_cpp) = 2b3065f34ab4557800e1dc5da9253da23fffa565
+BLAKE2s (gobby-0.6.0.tar.gz) = 9978549db79608d14c9e1c27d868ee0be90847f988a83ea1feb3e43931cff0d2
+SHA512 (gobby-0.6.0.tar.gz) = 8cce000db3ac1f3f15317f010d40bf85bd52dafebfda7b0410a9139188a0400e65d69f64ff63a918c98389fc836d5d44110e64878963ca5b6f3fb9b5ace3ae00
+Size (gobby-0.6.0.tar.gz) = 509088 bytes
