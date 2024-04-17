@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/03/16 17:40:32 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/17 10:19:12 adam Exp $
 
-DISTNAME=	pyleri-1.4.2
+DISTNAME=	pyleri-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyleri/}
@@ -10,12 +10,15 @@ HOMEPAGE=	https://github.com/cesbit/pyleri
 COMMENT=	Python Left-Right Parser
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
+z-do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest test/*
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
