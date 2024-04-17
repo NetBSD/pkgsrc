@@ -1,7 +1,0 @@
-Utility functions, classes and widgets written on top of gtkmm and
-glibmm.
-
- - logging framework
- - option parsing, date and string utilities
- - tile widgets
- - dialog helpers
