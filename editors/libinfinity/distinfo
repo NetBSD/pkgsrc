@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/17 14:20:33 wiz Exp $
+
+BLAKE2s (libinfinity-0.7.2.tar.gz) = 01dc13b4d8ab652a50f870e4c9c0b57b93f7defa94d9fe7edee67d1699175e2e
+SHA512 (libinfinity-0.7.2.tar.gz) = 02b76affc095546f858a315d9a6a485d4e893e18a897f84e5263f06fba9c9d66aef5840482820992f45acfc11a92a323721676f71aaed4cfcaade3099b67478f
+Size (libinfinity-0.7.2.tar.gz) = 2069487 bytes
