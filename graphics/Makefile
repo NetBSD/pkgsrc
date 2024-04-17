@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1040 2024/03/21 05:44:19 charlotte Exp $
+# $NetBSD: Makefile,v 1.1041 2024/04/17 12:33:53 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -95,7 +95,6 @@ SUBDIR+=	cnxtview
 SUBDIR+=	cogl
 SUBDIR+=	colord
 SUBDIR+=	colord-gtk
-SUBDIR+=	comix
 SUBDIR+=	compface
 SUBDIR+=	cpia2view
 SUBDIR+=	cqcam
