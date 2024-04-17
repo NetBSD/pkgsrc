@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/06/13 07:02:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/17 12:02:15 wiz Exp $
 bin/gvnccapture
 include/gtk-vnc-1.0/gtk-vnc.h
 include/gtk-vnc-1.0/vncdisplay.h
@@ -33,7 +33,6 @@ lib/pkgconfig/gtk-vnc-1.0.pc
 lib/pkgconfig/gtk-vnc-2.0.pc
 lib/pkgconfig/gvnc-1.0.pc
 ${PLIST.pulseaudio}lib/pkgconfig/gvncpulse-1.0.pc
-${PLIST.python}${PYSITELIB}/gtkvnc.la
 man/man1/gvnccapture.1
 share/locale/ca/LC_MESSAGES/gtk-vnc.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk-vnc.mo
