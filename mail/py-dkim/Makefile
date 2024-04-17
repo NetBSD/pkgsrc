@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/27 10:28:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/17 19:58:31 adam Exp $
 
-DISTNAME=	dkimpy-1.1.5
+DISTNAME=	dkimpy-1.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dkimpy/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
-DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
 USE_LANGUAGES=	# none
