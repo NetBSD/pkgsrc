@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2024/04/17 10:38:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2024/04/17 11:57:36 wiz Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
@@ -25,4 +25,4 @@ DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject/distinfo
 
 PKGCONFIG_OVERRIDE+=	pygobject-2.0.pc.in
 PY_PATCHPLIST=		yes
-CONFLICTS+=		py[0-9]*-gtk2<2.8.4
+CONFLICTS+=		py27-gtk2<2.8.4
