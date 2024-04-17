@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/17 10:38:33 wiz Exp $
 
 DISTNAME=	pyserial-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/pyserial/pyserial
 COMMENT=	Python Serial Port Extension
 LICENSE=	modified-bsd
 
-CONFLICTS+=	${PYPKGPREFIX}-pyserial-[0-9]*
+CONFLICTS+=	py[0-9]*-pyserial-[0-9]*
 
 USE_LANGUAGES=	# none
 

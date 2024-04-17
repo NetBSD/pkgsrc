@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/17 17:26:07 taca Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/17 10:38:35 wiz Exp $
 
 DISTNAME=	cucumber-gherkin-27.0.0
 CATEGORIES=	lang
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=19.1.4<23:../../devel/ruby-cucumber-messages
 
-CONFLICTS+=	${RUBY_PKGPREFIX}-gherkin-[0-9]*
+CONFLICTS+=	ruby[0-9]*-gherkin-[0-9]*
 
 USE_LANGUAGES=	# none
 
