@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2024/04/04 03:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.1019 2024/04/17 13:15:01 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -40,7 +40,6 @@ SUBDIR+=	devilspie
 SUBDIR+=	dmenu
 SUBDIR+=	docker
 SUBDIR+=	drawterm
-SUBDIR+=	driconf
 SUBDIR+=	dtx11session
 SUBDIR+=	dunst
 SUBDIR+=	dxpc
