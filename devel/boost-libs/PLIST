@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.44 2023/01/22 16:24:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45 2024/04/17 16:14:01 adam Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${PKGVERSION}
+lib/libboost_charconv.a
+lib/libboost_charconv.so
+lib/libboost_charconv.so.${PKGVERSION}
 lib/libboost_chrono.a
 lib/libboost_chrono.so
 lib/libboost_chrono.so.${PKGVERSION}
