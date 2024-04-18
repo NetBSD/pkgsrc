@@ -1,8 +1,8 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.12 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.13 2024/04/18 09:29:43 pin Exp $
 
 Provide defaults for the various NetBSD targets.
 
---- vendor/openssl-src/src/lib.rs.orig	2023-07-12 05:06:32.000000000 +0000
+--- vendor/openssl-src/src/lib.rs.orig	2024-02-04 14:52:05.000000000 +0000
 +++ vendor/openssl-src/src/lib.rs
 @@ -239,6 +239,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
@@ -36,7 +36,7 @@ Provide defaults for the various NetBSD targets.
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
 +            "i686-unknown-netbsd" => "BSD-x86-elf",
-             "loongarch64-unknown-linux-gnu" => "linux64-loongarch64",
+             "loongarch64-unknown-linux-gnu" => "linux-generic64",
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
 @@ -273,9 +279,11 @@ impl Build {

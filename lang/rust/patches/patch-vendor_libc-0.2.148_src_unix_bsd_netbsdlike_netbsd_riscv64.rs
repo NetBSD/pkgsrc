@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.148_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2024/03/03 14:53:33 he Exp $
+$NetBSD: patch-vendor_libc-0.2.148_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.2 2024/04/18 09:29:42 pin Exp $
 
 Add support for NetBSD/riscv64.
 
