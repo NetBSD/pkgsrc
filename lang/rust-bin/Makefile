@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2024/03/03 18:16:43 he Exp $
+# $NetBSD: Makefile,v 1.64 2024/04/18 09:36:01 pin Exp $
 
-DISTNAME=	rust-1.75.0
+DISTNAME=	rust-1.76.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -32,6 +32,9 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
 ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
+
+# Illumos, jperkin@ provided binaries
+ONLY_FOR_PLATFORM+=	SunOS-*-x86_64
 
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
@@ -179,6 +182,17 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
+
+# Illumos:
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	x86_64-unknown-illumos
+DN:=		${DISTNAME}
+EXTRACT_SUFX=	.tar.gz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.endif
+
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
