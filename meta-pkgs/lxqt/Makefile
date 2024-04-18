@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/03/06 23:57:29 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/18 02:06:28 gutteridge Exp $
 
 PKGNAME=	lxqt-1.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,7 +31,7 @@ DEPENDS+=	lxqt-globalkeys>=1.4.0:../../x11/lxqt-globalkeys
 DEPENDS+=	lxqt-openssh-askpass>=1.4.0:../../security/lxqt-openssh-askpass
 DEPENDS+=	lxqt-notificationd>=1.4.0:../../x11/lxqt-notificationd
 DEPENDS+=	lxqt-powermanagement>=1.4.0:../../sysutils/lxqt-powermanagement
-DEPENDS+=	lxqt-qtplugin>=1.4.0:../../x11/lxqt-qtplugin
+DEPENDS+=	lxqt-qtplugin>=1.4.1:../../x11/lxqt-qtplugin
 DEPENDS+=	lxqt-session>=1.4.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=1.4.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=1.4.1:../../sysutils/pcmanfm-qt
