@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/03/16 14:23:28 tm Exp $
+# $NetBSD: Makefile,v 1.68 2024/04/18 06:53:15 wiz Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -17,7 +17,7 @@ DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run realpath
 USE_LANGUAGES=		c c++
 
 .include "Makefile.common"
