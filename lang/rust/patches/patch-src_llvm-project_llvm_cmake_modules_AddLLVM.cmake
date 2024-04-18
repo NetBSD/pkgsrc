@@ -1,4 +1,4 @@
-$NetBSD: patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake,v 1.14 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake,v 1.15 2024/04/18 09:29:42 pin Exp $
 
 On Darwin, use correct install-name for shared libraries.
 

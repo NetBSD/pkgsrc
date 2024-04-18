@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_crossbeam-utils-0.8.14-no__atomic.rs,v 1.2 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_crossbeam-utils-0.8.14-no__atomic.rs,v 1.3 2024/04/18 09:29:42 pin Exp $
 
 No 64-bit atomics on NetBSD/mipsel.
 

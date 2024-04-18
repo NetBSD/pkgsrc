@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc_src_unix_solarish_mod.rs,v 1.14 2024/03/03 14:53:33 he Exp $
+$NetBSD: patch-vendor_libc_src_unix_solarish_mod.rs,v 1.15 2024/04/18 09:29:43 pin Exp $
 
 Fix xattr build.
 
