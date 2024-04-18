@@ -1,0 +1,25 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/04/18 04:02:26 pho Exp $
+
+Hunk #0:
+    See patch-src_s3fs.cpp.
+    TODO: Upstream this
+
+Hunk #1:
+    Do not define _FORTIFY_SOURCE. pkgsrc automatically handle it.
+    This is pkgsrc-specific and is not eligible for upstreaming.
+
+--- configure.ac.orig	2024-02-25 04:08:43.000000000 +0000
++++ configure.ac
+@@ -32,9 +32,11 @@ AC_PROG_CC
+ AC_CHECK_HEADERS([sys/xattr.h])
+ AC_CHECK_HEADERS([attr/xattr.h])
+ AC_CHECK_HEADERS([sys/extattr.h])
++AC_CHECK_HEADERS([sys/wait.h])
++AC_CHECK_HEADERS([sys/sysmacros.h])
+ AC_CHECK_FUNCS([fallocate])
+ 
+-CXXFLAGS="-Wall -fno-exceptions -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=3 -std=c++11 $CXXFLAGS"
++CXXFLAGS="-Wall -fno-exceptions -D_FILE_OFFSET_BITS=64 -std=c++11 $CXXFLAGS"
+ 
+ dnl ----------------------------------------------
+ dnl For macOS
