@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/03/25 10:58:32 markd Exp $
+# $NetBSD: Makefile,v 1.31 2024/04/18 07:40:20 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2024pre1
@@ -39,7 +39,7 @@ DEPENDS+=	detex-[0-9]*:../../textproc/detex
 # depend dtxgen
 DEPENDS+=	dvi2tty-[0-9]*:../../converters/dvi2tty
 # depend dviasm
-# depend dvicopy
+# dvicopy entirely included in web2c
 DEPENDS+=	dvidvi-[0-9]*:../../print/dvidvi
 # depend dviinfox
 DEPENDS+=	dviljk-[0-9]*:../../print/dviljk
@@ -72,7 +72,7 @@ DEPENDS+=	latexmk-[0-9]*:../../print/latexmk
 # depend ltximg
 DEPENDS+=	tex-make4ht-[0-9]*:../../print/tex-make4ht
 # depend match_parens
-# depend mflua
+# mflua entirely included in web2c
 # depend mkjobtexmf
 # depend optexcount
 # patgen entirely included in web2c
@@ -81,7 +81,7 @@ DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
 DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
 # depend pdflatexpicscale
 # depend pdftex-quiet
-# depend pdftosrc
+# pdftosrc entirely included in web2c
 # depend pdfxup
 # depend pfarrei
 DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
@@ -94,7 +94,7 @@ DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
 # depend spix
 # depend srcredact
 # depend sty2dtx
-# depend synctex
+# synctex entirely included in web2c
 DEPENDS+=	tex-tex4ebook-[0-9]*:../../print/tex-tex4ebook
 # depend texaccents
 # depend texblend
