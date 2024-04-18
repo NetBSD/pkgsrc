@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2554 2024/04/17 20:05:59 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2555 2024/04/18 01:44:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4217,3 +4217,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/lame to 3.100nb6 [micha 2024-04-17]
 	Updated games/woof to 14.3.0 [micha 2024-04-17]
 	Updated mail/py-dkim to 1.1.6 [adam 2024-04-17]
+	Updated x11/lxqt-qtplugin to 1.4.1 [gutteridge 2024-04-18]
