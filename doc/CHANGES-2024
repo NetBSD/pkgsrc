@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2563 2024/04/18 07:58:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2564 2024/04/18 08:44:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jupyter_events to 0.10.0 [adam 2024-04-18]
 	Updated math/qalculate to 5.0.0 [wiz 2024-04-18]
 	Updated math/qalculate-gtk to 5.0.0 [wiz 2024-04-18]
+	Updated audio/ocp to 0.2.109 [wiz 2024-04-18]
