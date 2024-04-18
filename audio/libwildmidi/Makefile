@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/01/24 18:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/18 08:46:36 wiz Exp $
 
-DISTNAME=	wildmidi-0.4.5
+DISTNAME=	wildmidi-0.4.6
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Mindwerks/}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	wildmidi
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pallegra@gmail.com
-HOMEPAGE=	https://www.mindwerks.net/projects/wildmidi/
+HOMEPAGE=	https://github.com/Mindwerks/wildmidi
 COMMENT=	Midi processing library and a midi player using the GUS patch set
 LICENSE=	gnu-lgpl-v3
 
