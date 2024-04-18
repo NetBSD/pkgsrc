@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2557 2024/04/18 04:03:45 pho Exp $
+$NetBSD: CHANGES-2024,v 1.2558 2024/04/18 04:44:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4220,3 +4220,9 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/lxqt-qtplugin to 1.4.1 [gutteridge 2024-04-18]
 	Updated meta-pkgs/lxqt to 1.4.0nb4 [gutteridge 2024-04-18]
 	Added filesystems/fuse-s3fs version 1.94 [pho 2024-04-18]
+	Updated devel/py-virtualenv to 20.25.3 [adam 2024-04-18]
+	Updated databases/py-peewee to 3.17.3 [adam 2024-04-18]
+	Updated devel/py-faker to 24.11.0 [adam 2024-04-18]
+	Updated devel/py-hatchling to 1.24.1 [adam 2024-04-18]
+	Updated devel/py-meson_python to 0.16.0 [adam 2024-04-18]
+	Updated devel/py-project-metadata to 0.8.0 [adam 2024-04-18]
