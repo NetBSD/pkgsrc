@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/18 04:02:26 pho Exp $
+bin/s3fs
+man/man1/s3fs.1
