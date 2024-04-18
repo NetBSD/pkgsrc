@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_nix_src_sys_signal.rs,v 1.4 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_nix-0.26.2_src_sys_signal.rs,v 1.1 2024/04/18 09:29:43 pin Exp $
 
 Narrow the conditional on mips to only apply to Linux.
 
---- vendor/nix/src/sys/signal.rs.orig	2023-01-25 01:49:16.000000000 +0000
-+++ vendor/nix/src/sys/signal.rs
+--- vendor/nix-0.26.2/src/sys/signal.rs.orig	2024-02-18 16:20:52.047002882 +0000
++++ vendor/nix-0.26.2/src/sys/signal.rs
 @@ -1069,7 +1069,7 @@ mod sigevent {
                  SigevNotify::SigevThreadId{..} => libc::SIGEV_THREAD_ID,
                  #[cfg(all(target_os = "linux", target_env = "uclibc"))]
