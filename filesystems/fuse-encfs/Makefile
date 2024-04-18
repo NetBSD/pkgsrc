@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2023/10/24 22:09:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/04/18 05:36:13 pho Exp $
 #
 
-GITHUB_PROJECT=	encfs
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	encfs-1.9.5
-PKGREVISION=	2
 PKGNAME=	fuse-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
+GITHUB_PROJECT=	encfs
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://vgough.github.io/encfs/
@@ -38,6 +38,7 @@ TEST_TARGET=	test
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
