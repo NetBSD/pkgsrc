@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2024/04/16 22:08:23 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2024/04/18 06:54:20 wiz Exp $
 
 DISTNAME=		neomutt-20240416
 CATEGORIES=		mail
@@ -29,6 +29,8 @@ EGDIR=			${PREFIX}/share/examples/neomutt
 CONF_FILES=		${EGDIR}/neomuttrc ${PKG_SYSCONFDIR}/neomuttrc
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
+
+GCC_REQD+=		8
 
 .include "../../mk/bsd.prefs.mk"
 
