@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2023/04/27 13:16:35 yhardy Exp $
+$NetBSD: distinfo,v 1.12 2024/04/18 17:42:17 adam Exp $
 
 BLAKE2s (ledger-3.3.2.tar.gz) = 9204b163d03fe6d2d286614a47d65317d33c8d1bca885d7f3c9447f334b57d7c
 SHA512 (ledger-3.3.2.tar.gz) = d5d7058f0e9a02ad1d46e6780675d446070824b321f0f4c1ea6ac0c3dd4f11f259113bc36cbc796e4bb6d0a7898d6a68a25cce639e27a2b2434eec11a612ecb0
 Size (ledger-3.3.2.tar.gz) = 825274 bytes
 SHA1 (patch-src_CMakeLists.txt) = 8d6a16523554c98c8559702db681af6fb4f413aa
 SHA1 (patch-src_main.cc) = 7e21f5d903e3148c184f7473d003eb2dc27581c5
+SHA1 (patch-src_system.hh.in) = 2993ef00740cbaa0ba60792e421a33642b8bba6e
