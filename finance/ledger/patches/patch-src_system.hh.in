@@ -1,0 +1,14 @@
+$NetBSD: patch-src_system.hh.in,v 1.3 2024/04/18 17:42:17 adam Exp $
+
+Fix build with newer boost.
+
+--- src/system.hh.in.orig	2024-04-18 17:33:59.959388333 +0000
++++ src/system.hh.in
+@@ -144,7 +144,6 @@
+ #include <boost/date_time/posix_time/posix_time_io.hpp>
+ #include <boost/date_time/gregorian/gregorian_io.hpp>
+ 
+-#include <boost/filesystem/convenience.hpp>
+ #include <boost/filesystem/exception.hpp>
+ #include <boost/filesystem/fstream.hpp>
+ #include <boost/filesystem/operations.hpp>
