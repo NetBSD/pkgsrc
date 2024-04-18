@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/31 00:03:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/18 12:26:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -30,6 +30,9 @@ ${PYSITELIB}/pydantic/_internal/_decorators_v1.pyo
 ${PYSITELIB}/pydantic/_internal/_discriminated_union.py
 ${PYSITELIB}/pydantic/_internal/_discriminated_union.pyc
 ${PYSITELIB}/pydantic/_internal/_discriminated_union.pyo
+${PYSITELIB}/pydantic/_internal/_docs_extraction.py
+${PYSITELIB}/pydantic/_internal/_docs_extraction.pyc
+${PYSITELIB}/pydantic/_internal/_docs_extraction.pyo
 ${PYSITELIB}/pydantic/_internal/_fields.py
 ${PYSITELIB}/pydantic/_internal/_fields.pyc
 ${PYSITELIB}/pydantic/_internal/_fields.pyo
@@ -278,6 +281,9 @@ ${PYSITELIB}/pydantic/v1/typing.pyo
 ${PYSITELIB}/pydantic/v1/utils.py
 ${PYSITELIB}/pydantic/v1/utils.pyc
 ${PYSITELIB}/pydantic/v1/utils.pyo
+${PYSITELIB}/pydantic/v1/v1.py
+${PYSITELIB}/pydantic/v1/v1.pyc
+${PYSITELIB}/pydantic/v1/v1.pyo
 ${PYSITELIB}/pydantic/v1/validators.py
 ${PYSITELIB}/pydantic/v1/validators.pyc
 ${PYSITELIB}/pydantic/v1/validators.pyo
