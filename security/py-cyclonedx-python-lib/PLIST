@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/02/05 10:53:31 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+@comment $NetBSD: PLIST,v 1.11 2024/04/18 08:55:26 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -52,6 +47,12 @@ ${PYSITELIB}/cyclonedx/model/bom_ref.pyo
 ${PYSITELIB}/cyclonedx/model/component.py
 ${PYSITELIB}/cyclonedx/model/component.pyc
 ${PYSITELIB}/cyclonedx/model/component.pyo
+${PYSITELIB}/cyclonedx/model/contact.py
+${PYSITELIB}/cyclonedx/model/contact.pyc
+${PYSITELIB}/cyclonedx/model/contact.pyo
+${PYSITELIB}/cyclonedx/model/crypto.py
+${PYSITELIB}/cyclonedx/model/crypto.pyc
+${PYSITELIB}/cyclonedx/model/crypto.pyo
 ${PYSITELIB}/cyclonedx/model/dependency.py
 ${PYSITELIB}/cyclonedx/model/dependency.pyc
 ${PYSITELIB}/cyclonedx/model/dependency.pyo
@@ -102,6 +103,8 @@ ${PYSITELIB}/cyclonedx/schema/_res/bom-1.4.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.4.SNAPSHOT.xsd
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.5.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/bom-1.5.SNAPSHOT.xsd
+${PYSITELIB}/cyclonedx/schema/_res/bom-1.6.SNAPSHOT.schema.json
+${PYSITELIB}/cyclonedx/schema/_res/bom-1.6.SNAPSHOT.xsd
 ${PYSITELIB}/cyclonedx/schema/_res/jsf-0.82.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.schema.json
 ${PYSITELIB}/cyclonedx/schema/_res/spdx.SNAPSHOT.xsd
@@ -126,3 +129,8 @@ ${PYSITELIB}/cyclonedx/validation/model.pyo
 ${PYSITELIB}/cyclonedx/validation/xml.py
 ${PYSITELIB}/cyclonedx/validation/xml.pyc
 ${PYSITELIB}/cyclonedx/validation/xml.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
