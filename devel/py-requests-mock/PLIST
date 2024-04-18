@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/08 07:33:35 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2024/04/18 07:13:20 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/requests_mock/__init__.py
 ${PYSITELIB}/requests_mock/__init__.pyc
 ${PYSITELIB}/requests_mock/__init__.pyi
@@ -15,9 +13,6 @@ ${PYSITELIB}/requests_mock/adapter.py
 ${PYSITELIB}/requests_mock/adapter.pyc
 ${PYSITELIB}/requests_mock/adapter.pyi
 ${PYSITELIB}/requests_mock/adapter.pyo
-${PYSITELIB}/requests_mock/compat.py
-${PYSITELIB}/requests_mock/compat.pyc
-${PYSITELIB}/requests_mock/compat.pyo
 ${PYSITELIB}/requests_mock/contrib/__init__.py
 ${PYSITELIB}/requests_mock/contrib/__init__.pyc
 ${PYSITELIB}/requests_mock/contrib/__init__.pyo
