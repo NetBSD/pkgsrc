@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/04/16 15:26:38 adam Exp $
+$NetBSD: distinfo,v 1.21 2024/04/18 04:36:17 adam Exp $
 
-BLAKE2s (hatchling-1.24.0.tar.gz) = c1aa4a635fa16f22ded134ddfa3381257ddc9c9218e6da9b62f3b7a5504585ba
-SHA512 (hatchling-1.24.0.tar.gz) = faa1eb8ba954da678f9bfbd69f01b89da5a529d0195fc111050ef55933db761fed4ce48c6713a6e2aa5826cbf341ce83ae756220776298b9893030004feee2e8
-Size (hatchling-1.24.0.tar.gz) = 63800 bytes
+BLAKE2s (hatchling-1.24.1.tar.gz) = 3c931330a9e369bf1c20294a033d543a97fad6f1dbcd33e3809ec9ffb8cb9dc0
+SHA512 (hatchling-1.24.1.tar.gz) = 0069457577814c69982ad554d3897a7a7b6be9907ec51a86034f4c86b9ad1d2de733c6710f2107eedb7927c6ac18390fa8a1b2752d9ba1b6329601860ce7fd4c
+Size (hatchling-1.24.1.tar.gz) = 63920 bytes
