@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/11/08 13:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/04/18 09:21:03 nikita Exp $
 
 DISTNAME=	zig-0.11.0
 PKGREVISION=	1
@@ -11,6 +11,8 @@ HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
 
+# Broken at least on *BSD, needs a new release, 0.11.0 does not build
+# stage 3 of the build process (fixed upstream).
 USE_CXX_FEATURES+=	c++14
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run
