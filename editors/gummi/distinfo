@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:21:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/18 06:41:27 wiz Exp $
 
-BLAKE2s (gummi-0.6.6.tar.gz) = e83a85ec68bc9eff10102e4a6e6600f71a7e319f8c2b543c66ff547b327239b3
-SHA512 (gummi-0.6.6.tar.gz) = 3be94927c9aafa4914ed2b6f6f5022dce5bcca315a1f947fafb8a4c8bbc5a2bc57f07f8ceaaacdd0b92a5a30483ea8b00e570faf62479280d2ad874716e4c47d
-Size (gummi-0.6.6.tar.gz) = 792642 bytes
-SHA1 (patch-configure.ac) = 3034e1f140b4817f8754d2dba64148422f0ad52d
-SHA1 (patch-src_Makefile.am) = 518dc5de88db7b64efcb0cfddc993faaf01f2efe
+BLAKE2s (gummi-0.8.3.tar.gz) = f367b5cd517e426d094f024738590d2d9dd0964fb763cf7532a47024b1cf24c9
+SHA512 (gummi-0.8.3.tar.gz) = c74a629a67c3dfd04e1b4f9bc2cc7ad22f3d71d1693b315eb449cc6f8bbfd08257faf4e69e02a05a6a8bb250de0184288dcab4931849d9a0a431419d85a2983e
+Size (gummi-0.8.3.tar.gz) = 384794 bytes
+SHA1 (patch-dev_bump__version) = 06d31fe57980dc7a72f1c2dd06c7f1d018d9ccba
