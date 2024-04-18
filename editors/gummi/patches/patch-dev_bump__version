@@ -1,0 +1,14 @@
+$NetBSD: patch-dev_bump__version,v 1.1 2024/04/18 06:41:27 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- dev/bump_version.orig	2024-04-17 13:46:34.666481747 +0000
++++ dev/bump_version
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if [ "$1" == "" ]; then
++if [ "$1" = "" ]; then
+     echo "This script requires a command line argument <version number>"
+ fi
+ 
