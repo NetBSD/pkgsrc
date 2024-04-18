@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2024/04/07 21:32:28 wiz Exp $
+$NetBSD: distinfo,v 1.17 2024/04/18 08:44:11 wiz Exp $
 
-BLAKE2s (ocp-0.2.108.tar.gz) = 3ae08236e7b1ea4c2eedb065b00457768a4a632637cd40b6038945b26dac6144
-SHA512 (ocp-0.2.108.tar.gz) = c6d92630927d7ac3d477ad289a2478db090d697610c73179ba83193aea63cb35ba636555ea2bda46797733ffcb16068220b6e6209140c2d78dd3b2f4b1487a5f
-Size (ocp-0.2.108.tar.gz) = 6224933 bytes
+BLAKE2s (ocp-0.2.109.tar.gz) = a7ce3e6f6dda90a5d4aafd98c177948751e2064fad3d028744cdd5ab5cb963a2
+SHA512 (ocp-0.2.109.tar.gz) = 78446dff3b083b39c94d512d3122c00cc9bc2b9cdd51ccba60da5f7d878e6265857bfbe60403bc21d728d1116fc1f4dee27c9139a85e28a3c3557b765bf8a9bb
+Size (ocp-0.2.109.tar.gz) = 6224802 bytes
 SHA1 (patch-configure) = b1fa4d795fe13b9d6b9875d295a921d99fcacbc4
