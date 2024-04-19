@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2023/10/13 15:50:29 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.2 2024/04/19 07:43:01 pho Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -483,8 +483,8 @@ GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod
-GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20210107192922-496545a6307b.mod
-GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20210107192922-496545a6307b.zip
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0.zip
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.0-20190102054323-c2f93a96b099.mod
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.0-20190106161140-3f1c8253044a.mod
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.0-20190418001031-e561f6794a2a.mod
