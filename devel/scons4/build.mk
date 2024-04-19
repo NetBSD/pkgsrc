@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.6 2023/07/27 10:16:39 adam Exp $
+# $NetBSD: build.mk,v 1.7 2024/04/19 11:46:29 nia Exp $
 #
 # This Makefile fragment supports building using the SCons build tool.
 #
@@ -17,6 +17,11 @@
 #	Use scons' install target. (Some scons scripts do not provide this.)
 #	Default: yes
 #
+
+CONFIGURE_DIRS?=	.
+BUILD_DIRS?=		${CONFIGURE_DIRS}
+INSTALL_DIRS?=		${CONFIGURE_DIRS}
+TEST_DIRS?=		${CONFIGURE_DIRS}
 
 PYTHON_FOR_BUILD_ONLY?=		tool
 # scons4 does not support Python 2
@@ -42,16 +47,22 @@ _SCONS_TEST_ARGS+=	${SCONS_TEST_ARGS}
 
 do-build: scons-build
 scons-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${_SCONS_BUILD_ARGS}
+.for d in ${BUILD_DIRS}
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${_SCONS_BUILD_ARGS}
+.endfor
 
 do-test: scons-test
 scons-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${SCONSBIN} ${_SCONS_TEST_ARGS} check
+.for d in ${TEST_DIRS}
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} ${SCONSBIN} ${_SCONS_TEST_ARGS} check
+.endfor
 
 .if ${SCONS_DO_INSTALL} == "yes"
 do-install: scons-install
 scons-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${SCONSBIN} ${_SCONS_INSTALL_ARGS} ${INSTALL_TARGET}
+.for d in ${INSTALL_DIRS}
+	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${SCONSBIN} ${_SCONS_INSTALL_ARGS} ${INSTALL_TARGET}
+.endfor
 .endif
 
 _VARGROUPS+=		scons
