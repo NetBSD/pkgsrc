@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/07/20 08:33:11 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/19 04:23:30 adam Exp $
 
-DISTNAME=	requirements-parser-0.5.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	requirements_parser-0.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requirements-parser/}
 
@@ -10,11 +10,12 @@ HOMEPAGE=	https://github.com/davidfischer/requirements-parser
 COMMENT=	Parses Pip requirement files
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-types-setuptools>=57.0.0:../../devel/py-types-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-types-setuptools>=69.1.0:../../devel/py-types-setuptools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
