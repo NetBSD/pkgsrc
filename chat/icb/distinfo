@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:05:15 nia Exp $
+$NetBSD: distinfo,v 1.23 2024/04/19 17:00:47 chuck Exp $
 
 BLAKE2s (icb-5.0.9.tar.gz) = e36c28e37b84806ff0b2eab323710be73251b31a231d639ad4f0e2a519d38adf
 SHA512 (icb-5.0.9.tar.gz) = d72a30cd671242dceb98defae80780bffd2aaaddfea2bf50d0970368f2601dd203b13939d102ce9af3c8d46373addcd2bcf385a1bb8e3c3b3674c21072fd8d00
 Size (icb-5.0.9.tar.gz) = 357565 bytes
+SHA1 (patch-Makefile) = 466e900febf580de486de3336de93b8b4030927e
 SHA1 (patch-aa) = b82fb642c79a200aaa47b0db397c82f19fb7f9ff
 SHA1 (patch-ab) = 30c85ad51b12d7730e950a641fccf3f319902fcc
 SHA1 (patch-ac) = 99631dd1c526d5a07339205bad031003f6920495
