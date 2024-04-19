@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.4 2024/04/19 12:04:23 nia Exp $
+bin/gambatte_sdl
+man/man1/gambatte_sdl.1
