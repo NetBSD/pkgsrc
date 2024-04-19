@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2024/04/19 12:04:23 nia Exp $
+
+BLAKE2s (gambatte_src-r571.tar.gz) = 778eada29c6682bbcfabb39ce29aef44888a93dfaea2e30601cdeed81e46ec60
+SHA512 (gambatte_src-r571.tar.gz) = 66b05df1e37b95f5971aa8d2928ba32549454833a6c8de8ddcfdc5246a5c19a5edd7081527cf67d130e220fb0b75e7842d6ce17288c5eb41d0719d6668d8824b
+Size (gambatte_src-r571.tar.gz) = 522199 bytes
+SHA1 (patch-gambatte__sdl_SConstruct) = 4f79bcf96d53435edd66ec594ed7afb4b89ee03f
+SHA1 (patch-libgambatte_SConstruct) = 89e8d3ad5409f15705c23db15d531def967614ac

@@ -1,0 +1,50 @@
+$NetBSD: patch-libgambatte_SConstruct,v 1.4 2024/04/19 12:04:23 nia Exp $
+
+Copy environment to SCons environment.
+
+--- libgambatte/SConstruct.orig	2024-04-15 16:11:45.938327465 +0000
++++ libgambatte/SConstruct
+@@ -1,14 +1,9 @@
+-global_cflags = ARGUMENTS.get('CFLAGS', '-Wall -Wextra -O2 -fomit-frame-pointer')
+-global_cxxflags = ARGUMENTS.get('CXXFLAGS', global_cflags + ' -fno-exceptions -fno-rtti')
+-global_defines = ' -DHAVE_STDINT_H'
+-vars = Variables()
+-vars.Add('CC')
+-vars.Add('CXX')
++import SCons
++import subprocess
++import os
+ 
+ env = Environment(CPPPATH = ['src', 'include', '../common'],
+-                  CFLAGS = global_cflags + global_defines,
+-                  CXXFLAGS = global_cxxflags + global_defines,
+-                  variables = vars)
++                  CPPDEFINES = [ 'HAVE_STDINT_H', None ])
+ 
+ sourceFiles = Split('''
+ 			src/bitmap_font.cpp
+@@ -42,6 +37,24 @@ sourceFiles = Split('''
+ 			src/video/sprite_mapper.cpp
+ 		   ''')
+ 
++
++# copy environment variables because scons doesn't do this by default
++for var in ["CC","CXX","LD","LIBPATH","STRIP"]:
++	if var in os.environ:
++		env[var] = os.environ[var]
++		print("copying environment variable {0}={1!r}".format(var,os.environ[var]))
++
++# variables containing several space separated things
++for var in ["CFLAGS","CCFLAGS","CXXFLAGS","LINKFLAGS","CPPDEFINES","CPPPATH"]:
++	if var in os.environ:
++		if var in env:
++			env[var] += SCons.Util.CLVar(os.environ[var])
++		else:
++			env[var] = SCons.Util.CLVar(os.environ[var])
++		print("copying environment variable {0}={1!r}".format(var,os.environ[var]))
++
++env.Append(CXXFLAGS=['-fno-exceptions', '-fno-rtti'])
++
+ conf = env.Configure()
+ 
+ if conf.CheckHeader('zlib.h'):
