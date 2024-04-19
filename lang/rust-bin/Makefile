@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/04/19 14:08:39 pho Exp $
+# $NetBSD: Makefile,v 1.66 2024/04/19 22:18:21 gutteridge Exp $
 
 DISTNAME=	rust-1.76.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -260,7 +260,7 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver miri rls rustc rustdoc
+.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
 	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} ; \
