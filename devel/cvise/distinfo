@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/11/07 20:01:20 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/04/19 04:48:55 adam Exp $
 
-BLAKE2s (cvise-2.9.0.tar.gz) = df76233e1b141856f4776b7deb5bd7c6fe6241eb8ef06a15dea5db44271d40f1
-SHA512 (cvise-2.9.0.tar.gz) = dd3b2e5c4603e8a73594863ce5b83d0ca864fc688a7b094c84b745b7086d384173809b9a915edb51938a7df8310eabbde1ea6a997c480d19618065c0d8270c52
-Size (cvise-2.9.0.tar.gz) = 269921 bytes
-SHA1 (patch-CMakeLists.txt) = b60607c84fffa278b3b9d9dc30fd1c172b628955
+BLAKE2s (cvise-2.10.0.tar.gz) = af43cb776202379de9b97a0b05cf86b570f270658bc258714facfc7dfa20dce6
+SHA512 (cvise-2.10.0.tar.gz) = 31950f8731f7a8d6b9568be621b14d1f976a71ed0a6caef0cdcc0d31c99eca86c03913e2949f1f4e21a66fbe1618341f5daaff01da51b426b4ce0e6518479281
+Size (cvise-2.10.0.tar.gz) = 270839 bytes
+SHA1 (patch-CMakeLists.txt) = f7eb3f258a02499a268921ef08ec3c6f6a62da8d
