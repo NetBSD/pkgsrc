@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/04/18 09:36:01 pin Exp $
+# $NetBSD: Makefile,v 1.65 2024/04/19 14:08:39 pho Exp $
 
 DISTNAME=	rust-1.76.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -212,7 +212,7 @@ do-install:
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-.  for bin in clippy-driver miri rls rustc rustdoc
+.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
 	otool -XL ${DESTDIR}${PREFIX}/bin/${bin}			\
 	    | ${GREP} '@rpath' | while read rpath rest; do		\
 		install_name_tool -change $$rpath			\
