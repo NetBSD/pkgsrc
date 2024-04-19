@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:33:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/19 08:58:28 pho Exp $
 
-BLAKE2s (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = 8912f18b7c30a3dc27a47100b92e1e487381d73d5940272a7f0db199f8cafc73
-SHA512 (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = f3d57b480f5ec6edee45f6198787320920bb8c5dc8bd067fffc421ad3a3de232e79c9b0eb20625e312ec21e56d6f52ab306a78158f12da0062531a3752afd46e
-Size (Swordfish90-qmltermwidget-5c47d1f49455394226e0e595f79c148f0c098006.tar.gz) = 235234 bytes
-BLAKE2s (cool-retro-term-1.1.1.tar.gz) = e1974c41b32547513469c72dc31291b8152759046eb06b8bb227e7ab23ac14a6
-SHA512 (cool-retro-term-1.1.1.tar.gz) = 59da4b5d18ad64b917caebbc63ea9e3d562ed2a2dc9eae00f36cf434df44d17adca084b448f860f24a74ee6b59cd083d6a81e2217df1fb5e9f2731eaf1752148
-Size (cool-retro-term-1.1.1.tar.gz) = 1975853 bytes
+BLAKE2s (Swordfish90-qmltermwidget-63228027e1f97c24abb907550b22ee91836929c5.tar.gz) = d0e43ff75eccc8a2e4b1e4a2ab9bf46bb580654e824e9ea4d77d6e842772cefc
+SHA512 (Swordfish90-qmltermwidget-63228027e1f97c24abb907550b22ee91836929c5.tar.gz) = 7b80ef2cba24d4ceaf50ebb4adc69efe54919ef9a0dfa49ce766f56c3500ad200468db76676dd048cd3e41209b3a06b3ef5505c64d683702bf181ff8ec82c07e
+Size (Swordfish90-qmltermwidget-63228027e1f97c24abb907550b22ee91836929c5.tar.gz) = 235028 bytes
+BLAKE2s (cool-retro-term-1.2.0.tar.gz) = 5962c9ba6f8968faee92f92fe919794794e0d720cf4d491fa6b91ab410bcaf7e
+SHA512 (cool-retro-term-1.2.0.tar.gz) = 21d3551d429380b026f8003652d78d186e5ac7079d3f143fe7f8f0c57876df263e5c40f218577ef236da859e779699f766414949591ecab38921caec5fd59209
+Size (cool-retro-term-1.2.0.tar.gz) = 1996540 bytes
