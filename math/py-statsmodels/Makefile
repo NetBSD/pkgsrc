@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/12/17 08:34:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/04/19 19:29:23 adam Exp $
 
-DISTNAME=	statsmodels-0.14.1
+DISTNAME=	statsmodels-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://www.statsmodels.org/
 COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.28:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.33:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.0.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.21:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5.2:../../math/py-patsy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.3:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1.1:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5.6:../../math/py-patsy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13.0:../../math/py-scipy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
