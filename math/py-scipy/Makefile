@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2024/04/04 21:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/04/19 19:24:25 adam Exp $
 
-DISTNAME=	scipy-1.11.4
-PKGREVISION=	2
+DISTNAME=	scipy-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -19,19 +18,19 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.10.4:../../devel/py-pybind11
 DEPENDS+=	${PYPKGPREFIX}-pythran>=0.12.0:../../math/py-pythran
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pooch-[0-9]*:../../devel/py-pooch
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-USE_LANGUAGES+=	c99 c++11 fortran
-USE_TOOLS+=	pkg-config
-MAKE_ENV+=	ATLAS=None
-GCC_REQD+=	8
-EGG_NAME=	${DISTNAME:S/scipy/SciPy/}
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++ fortran
+USE_TOOLS+=		pkg-config
+MAKE_ENV+=		ATLAS=None
+GCC_REQD+=		8
 
 SUBST_CLASSES+=		pythran
 SUBST_STAGE.pythran=	pre-configure
@@ -61,7 +60,6 @@ LDFLAGS.Darwin+=	-headerpad_max_install_names
 # one can specify blas and cblas separately. The distinction
 # does not matter for openblas.
 BLAS_ACCEPTED=		${_BLAS_TYPES}
-BLAS_C_INTERFACE=	yes
 WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
@@ -95,7 +93,7 @@ do-test:
 .include "../../lang/python/wheel.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/blas.buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.21.6
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.22.4
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
