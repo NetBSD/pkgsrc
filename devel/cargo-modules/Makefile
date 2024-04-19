@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/04/15 07:40:59 pin Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/19 03:31:54 pin Exp $
 
-DISTNAME=	cargo-modules-0.15.4
+DISTNAME=	cargo-modules-0.15.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regexident/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
