@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2583 2024/04/19 00:10:16 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.2584 2024/04/19 03:32:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4253,3 +4253,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/bind916 to 9.16.50 [taca 2024-04-18]
 	Updated devel/jj to 0.16.0 [wiz 2024-04-18]
 	Updated geography/gama to 2.30 [gdt 2024-04-19]
+	Updated devel/cargo-modules to 0.15.5 [pin 2024-04-19]
