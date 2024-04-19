@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/04/06 08:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/19 08:58:28 pho Exp $
 
-DISTNAME=	cool-retro-term-1.1.1
-PKGREVISION=	12
+DISTNAME=	cool-retro-term-1.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Swordfish90/}
 
@@ -24,7 +23,7 @@ SUBST_FILES.paths+=	cool-retro-term.pro
 SUBST_SED.paths=	-e 's,/usr,${PREFIX},g'
 
 GITHUB_SUBMODULES=	Swordfish90 qmltermwidget \
-			5c47d1f49455394226e0e595f79c148f0c098006 qmltermwidget
+			63228027e1f97c24abb907550b22ee91836929c5 qmltermwidget
 EXTRACT_USING=		bsdtar
 
 do-configure:
@@ -40,6 +39,6 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
