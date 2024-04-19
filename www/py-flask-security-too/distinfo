@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/12 05:25:03 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/04/19 09:19:48 adam Exp $
 
-BLAKE2s (Flask-Security-Too-5.3.3.tar.gz) = 456e0735a1319a2db8b3383b73396ca513c91212c45caa3ffe48203925a46dd9
-SHA512 (Flask-Security-Too-5.3.3.tar.gz) = 9c60658fe3343b589aad13de75271a0154467de8da29d73ed6e685c57c47685decbb5691e3ee7a812d871b687de67085ae743a775da3387252a53d6a5d62d6ac
-Size (Flask-Security-Too-5.3.3.tar.gz) = 616595 bytes
+BLAKE2s (Flask-Security-Too-5.4.3.tar.gz) = 9a6173cfe99bcf46e6a8651a21e82d1592227104acd97d24bbc95e3f8802bc0f
+SHA512 (Flask-Security-Too-5.4.3.tar.gz) = fececcd877d4db6e324ad7122d8349b4eb52613937d2c62d6e7b95c4f21d9806605ca5917ab167231abec6a9fb53e60d33911a25c7583d954098697e4aea05f3
+Size (Flask-Security-Too-5.4.3.tar.gz) = 652228 bytes
