@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/20 09:18:21 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/04/19 04:18:11 adam Exp $
 
-BLAKE2s (jaraco.functools-4.0.0.tar.gz) = 8afaf9b18dbd69778e7787d9ec29ea439e45e8d521a51d66c700e1261860641f
-SHA512 (jaraco.functools-4.0.0.tar.gz) = 2545bf3b9c9357ae867e7a5627582e14d0bdf25bac6acc5fbbb7e86f7aa24bc33b5bca584543b4180abdde203610b9716950110253045c1fe11f8bd045283c78
-Size (jaraco.functools-4.0.0.tar.gz) = 17779 bytes
+BLAKE2s (jaraco_functools-4.0.1.tar.gz) = a683634f5e1258a47d7fcbbeac76042d9752beac7a68f20407f7b7f5ef6a3c12
+SHA512 (jaraco_functools-4.0.1.tar.gz) = 04e0ea4719ec8c4439e5a1dd3c3ba0241b21b54b06d53ecc44263046e994aa736b9d196490edd3fd9d7ea997c23c177b30db506b2088bd9de62c637856101982
+Size (jaraco_functools-4.0.1.tar.gz) = 18169 bytes
