@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.174 2024/04/15 22:12:14 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.175 2024/04/19 05:58:51 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -5581,8 +5581,8 @@ suse{,32}_libxml2<11.3nb4	remote-system-access	http://secunia.com/advisories/475
 suse{,32}_libxml2<11.3nb5	remote-system-access	http://secunia.com/advisories/47647/
 openldap-server<2.4.24nb1	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4079
 tor<0.2.2.34		remote-security-bypass	http://secunia.com/advisories/46634/
-net6-[0-9]*		multiple-vulnerabilities	http://secunia.com/advisories/46605/
-gobby-[0-9]*		multiple-vulnerabilities	http://secunia.com/advisories/46698/
+net6-[0-9]*		multiple-vulnerabilities	https://www.openwall.com/lists/oss-security/2011/10/30/3
+libobby-[0-9]*		multiple-vulnerabilities	https://www.openwall.com/lists/oss-security/2011/10/30/3
 calibre<0.8.25		multiple-vulnerabilities	http://secunia.com/advisories/46620/
 squid>=3<3.1.16		denial-of-service		http://secunia.com/advisories/46609/
 qt4-tiff<4.7.3nb1	buffer-overflow			http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3194
@@ -12814,8 +12814,8 @@ binutils<2.30		null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2017-12457
 binutils<2.30		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-12458
 binutils<2.30		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-12456
 binutils<2.30		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-12459
-ledger-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-12481
-ledger-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-12482
+ledger<3.1.2	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-12481
+ledger<3.1.2	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-12482
 ImageMagick6<6.9.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-11724
 ImageMagick<7.0.6.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-11724
 ffmpeg2<2.8.13		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-11665
@@ -13142,8 +13142,8 @@ opencv<3.3.1		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2017-1413
 evince<3.22.1nb6	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-1000083
 gedit-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-14108
 py{27,34,35,36}-scrapy-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-14158
-ledger-[0-9]*		buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-2807
-ledger-[0-9]*		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2017-2808
+ledger<3.1.2		buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-2807
+ledger<3.1.2		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2017-2808
 GraphicsMagick<1.3.27	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-14165
 libarchive<3.3.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-14166
 ruby19<1.9.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2014-6438
@@ -20425,7 +20425,7 @@ nagios-base-[0-9]*	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/C
 opensmtpd<6.8.0p1	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2020-35679
 opensmtpd<6.8.0p1	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-35680
 gdk-pixbuf2<2.42.2	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-29385
-gobby-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-35450
+gobby<0.6		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-35450
 libvorbis<1.3.6		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-20412
 pure-ftpd-[0-9]*	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-35359
 xpdf-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-35376
