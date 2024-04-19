@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/12 05:25:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/19 09:19:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -53,6 +53,9 @@ ${PYSITELIB}/flask_security/models/fsqla_v3.pyo
 ${PYSITELIB}/flask_security/oauth_glue.py
 ${PYSITELIB}/flask_security/oauth_glue.pyc
 ${PYSITELIB}/flask_security/oauth_glue.pyo
+${PYSITELIB}/flask_security/oauth_provider.py
+${PYSITELIB}/flask_security/oauth_provider.pyc
+${PYSITELIB}/flask_security/oauth_provider.pyo
 ${PYSITELIB}/flask_security/password_util.py
 ${PYSITELIB}/flask_security/password_util.pyc
 ${PYSITELIB}/flask_security/password_util.pyo
@@ -155,6 +158,8 @@ ${PYSITELIB}/flask_security/translations/hy_AM/LC_MESSAGES/flask_security.mo
 ${PYSITELIB}/flask_security/translations/hy_AM/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/translations/is_IS/LC_MESSAGES/flask_security.mo
 ${PYSITELIB}/flask_security/translations/is_IS/LC_MESSAGES/flask_security.po
+${PYSITELIB}/flask_security/translations/it_IT/LC_MESSAGES/flask_security.mo
+${PYSITELIB}/flask_security/translations/it_IT/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/translations/ja_JP/LC_MESSAGES/flask_security.mo
 ${PYSITELIB}/flask_security/translations/ja_JP/LC_MESSAGES/flask_security.po
 ${PYSITELIB}/flask_security/translations/nl_NL/LC_MESSAGES/flask_security.mo
