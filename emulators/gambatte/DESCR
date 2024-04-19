@@ -1,0 +1,6 @@
+Gambatte is a portable, open-source Game Boy Color emulator.
+
+The accuracy of the emulator is among the highest and is based off
+numerous reverse engineering tests and document studies.
+
+This package contains the command-line / SDL version.

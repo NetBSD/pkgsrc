@@ -1,0 +1,50 @@
+$NetBSD: patch-gambatte__sdl_SConstruct,v 1.4 2024/04/19 12:04:23 nia Exp $
+
+Copy environment to SCons environment.
+
+Use absolute path for sdl-config. I don't understand why this is necessary,
+since PATH is set properly, but life's too short for debugging scons.
+
+--- gambatte_sdl/SConstruct.orig	2014-09-28 22:13:10.000000000 +0000
++++ gambatte_sdl/SConstruct
+@@ -1,17 +1,29 @@
++import SCons
+ import subprocess
+-
+-cflags   = ARGUMENTS.get('CFLAGS', '-Wall -Wextra -O2 -fomit-frame-pointer')
+-cxxflags = ARGUMENTS.get('CXXFLAGS', cflags + ' -fno-exceptions -fno-rtti')
+-vars = Variables()
+-vars.Add('CC')
+-vars.Add('CXX')
++import os
+ 
+ env = Environment(CPPPATH = ['src', '../libgambatte/include', '../common'],
+-                  CFLAGS = cflags,
+-                  CXXFLAGS = cxxflags,
+-                  CPPDEFINES = [ 'HAVE_STDINT_H', None ],
+-                  variables = vars)
+-env.ParseConfig('sdl-config --cflags --libs')
++                  CPPDEFINES = [ 'HAVE_STDINT_H', None ])
++
++
++# copy environment variables because scons doesn't do this by default
++for var in ["CC","CXX","LD","LIBPATH","STRIP"]:
++	if var in os.environ:
++		env[var] = os.environ[var]
++		print("copying environment variable {0}={1!r}".format(var,os.environ[var]))
++
++# variables containing several space separated things
++for var in ["CFLAGS","CCFLAGS","CXXFLAGS","LINKFLAGS","CPPDEFINES","CPPPATH"]:
++	if var in os.environ:
++		if var in env:
++			env[var] += SCons.Util.CLVar(os.environ[var])
++		else:
++			env[var] = SCons.Util.CLVar(os.environ[var])
++		print("copying environment variable {0}={1!r}".format(var,os.environ[var]))
++
++env.Append(CXXFLAGS=['-fno-exceptions', '-fno-rtti'])
++
++env.ParseConfig('@PREFIX@/bin/sdl-config --cflags --libs')
+ 
+ sourceFiles = Split('''
+ 			src/audiosink.cpp
