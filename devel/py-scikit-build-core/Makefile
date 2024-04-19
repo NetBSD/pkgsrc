@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/03/01 06:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/19 19:38:48 adam Exp $
 
-DISTNAME=	scikit_build_core-0.8.2
+DISTNAME=	scikit_build_core-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -12,18 +12,18 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-# optional
+DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
-DEPENDS+=	${PYPKGPREFIX}-project-metadata>=0.5:../../devel/py-project-metadata
-TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs-[0-9]*:../../devel/py-cattrs
+TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.8:../../devel/py-build
+TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs>=22.2.0:../../devel/py-cattrs
 # unpackaged
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess>=1.5:../../devel/py-test-subprocess
-TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
-TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=22:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.11:../../devel/py-pybind11
+TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.28:../../devel/py-virtualenv
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 
 # only needed for tests
 USE_LANGUAGES=	c c++
@@ -36,11 +36,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 309
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=1.3:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
 .endif
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0:../../devel/py-exceptiongroup
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
 .endif
 
 .include "../../lang/python/wheel.mk"
