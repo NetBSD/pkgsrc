@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2024/04/05 19:14:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.48 2024/04/20 03:12:03 pho Exp $
 
 DISTNAME=	restic-0.16.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +17,7 @@ GO_BUILD_PATTERN=	./cmd/restic
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 \
 			share/bash-completion/completions \
+			share/fish/completions \
 			share/zsh/site-functions
 
 .include "go-modules.mk"
@@ -24,6 +25,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/bash-completion.sh \
 			${DESTDIR}${PREFIX}/share/bash-completion/completions/restic
+	${INSTALL_DATA} ${WRKSRC}/doc/fish-completion.fish \
+			${DESTDIR}${PREFIX}/share/fish/completions/restic.fish
 	${INSTALL_DATA} ${WRKSRC}/doc/zsh-completion.zsh \
 			${DESTDIR}${PREFIX}/share/zsh/site-functions/_restic
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-backup.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
