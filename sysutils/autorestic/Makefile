@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/04/19 07:43:01 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/20 03:06:21 pho Exp $
 
 DISTNAME=	autorestic-1.8.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cupcakearmy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,7 +26,7 @@ PLIST_VARS+=	comp
 .if ${USE_CROSS_COMPILE:U:tl} != "yes"
 COMP.shell-types=	bash fish zsh
 COMP.script.bash=	share/bash-completion/completions/autorestic
-COMP.script.fish=	share/fish/completions/autorestic
+COMP.script.fish=	share/fish/completions/autorestic.fish
 COMP.script.zsh=	share/zsh/site-functions/_autorestic
 
 .  for sh in ${COMP.shell-types}
