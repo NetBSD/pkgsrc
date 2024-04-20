@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2024/04/18 13:39:53 taca Exp $
+$NetBSD: distinfo,v 1.56 2024/04/20 14:01:08 taca Exp $
 
 BLAKE2s (bind-9.16.50.tar.xz) = 2b4c06e4a435091054844cd2075461b2016889cc6bae8aed1c58703877caeca0
 SHA512 (bind-9.16.50.tar.xz) = 7627e0606ac389343046fa9d1ca789ed732b3c8d99e83ba6f59593f816cebc0b2ebd319c2812ac1f604c68f5115bbc281d432036c0d31bbe489ee2d678374213
@@ -54,7 +54,7 @@ SHA1 (patch-lib_ns_client.c) = e1e2de8983934378f749ae9610b38fb8e4f26592
 SHA1 (patch-lib_ns_include_ns_client.h) = 3ccd630aee77ea638fb3b954b85bad9c74b0c86e
 SHA1 (patch-lib_ns_include_ns_pfilter.h) = cc86752971b4f9f7492283c4ad3ff29bc1bae237
 SHA1 (patch-lib_ns_pfilter.c) = 8f4a3b3a729360a131eb1962c42a9f9f985c7e7b
-SHA1 (patch-lib_ns_query.c) = 0c3c4a20aa4b40c144c4f986599cda67db3e2491
+SHA1 (patch-lib_ns_query.c) = 540ccddeafc186dc2915c4608ac1e42bb945ed70
 SHA1 (patch-lib_ns_update.c) = 2c5a9302178abe9dc9b6396b053319e39e1ef950
 SHA1 (patch-lib_ns_xfrout.c) = 79d9e4add58ffd75ea9718f5501f1517e67416e3
 SHA1 (patch-make_rules.in) = 5fb3a44ff0066c93872c25596267fbabffc6da8f
