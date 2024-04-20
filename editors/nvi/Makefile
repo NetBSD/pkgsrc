@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/06/29 19:30:04 leot Exp $
+# $NetBSD: Makefile,v 1.57 2024/04/20 11:27:29 nia Exp $
 
 DISTNAME=	nvi-1.81.6
 PKGREVISION=	13
@@ -20,6 +20,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
 CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH}
+
+.if ${OBJECT_FMT} == "Mach-O"
+CONFIGURE_ARGS+=	--disable-runpath
+.endif
 
 .if ${OPSYS} == "NetBSD"
 # XXX ignore NetBSD 2.0F and later's granpt(2) and SysV pty for just now
