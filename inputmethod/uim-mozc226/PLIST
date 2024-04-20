@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/20 09:20:28 tsutsui Exp $
+lib/uim/plugin/libuim-mozc.so
+share/uim/mozc-custom.scm
+share/uim/mozc-key-custom.scm
+share/uim/mozc.scm
+share/uim/pixmaps/mozc.png
+share/uim/pixmaps/mozc_tool_config_dialog.png
+share/uim/pixmaps/mozc_tool_dictionary_tool.png
+share/uim/pixmaps/mozc_tool_selector.png
