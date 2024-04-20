@@ -721,6 +721,7 @@ php-cgi			Use PHP via CGI.
 php-embed		Enable PHP building of embedded SAPI.
 php-fpm			Use PHP via FastCGI Process Manager.
 php-sockets		Enable php-sockets support.
+physfs			Use the PhysicsFS archive I/O abstraction for file access.
 pic			Enable compiling with -fPIC
 pim			Enable pim (personal information management) support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
