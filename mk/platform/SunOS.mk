@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.88 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: SunOS.mk,v 1.89 2024/04/20 13:43:49 nia Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -82,6 +82,7 @@ _OPSYS_MISSING_FEATURES+=	err
 
 .if ${OPSYS_VERSION} < 051100
 _OPSYS_MISSING_FEATURES+=	strnlen
+_OPSYS_MISSING_FEATURES+= 	memrchr
 .endif
 
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
