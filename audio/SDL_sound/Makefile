@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/09/11 12:51:02 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/04/20 07:35:24 nia Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.3
@@ -14,11 +14,11 @@ LICENSE=		gnu-lgpl-v2.1
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
+.include "options.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/physfs/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
