@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/11/23 07:30:52 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/20 02:59:05 pho Exp $
 
-DISTNAME=	yadm-3.1.1
+DISTNAME=	yadm-3.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TheLocehiliosan/}
 
@@ -48,10 +48,11 @@ REPLACE_FILES.env-bash+=	contrib/hooks/parsing_full_command_example/pre_log
 
 .include "options.mk"
 
+# It has a completion script for fish too, but shells/fish also provides
+# one and conflicts. So this package intentionally doesn't install it.
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/bash-completion/completions
-INSTALLATION_DIRS+=	share/fish/completions
 INSTALLATION_DIRS+=	share/zsh/site-functions
 INSTALLATION_DIRS+=	share/doc/yadm
 INSTALLATION_DIRS+=	share/examples/yadm
@@ -65,9 +66,6 @@ do-install:
 	${INSTALL_DATA} \
 		"${WRKSRC}/completion/bash/yadm" \
 		"${DESTDIR}${PREFIX}/share/bash-completion/completions/"
-	${INSTALL_DATA} \
-		"${WRKSRC}/completion/fish/yadm.fish" \
-		"${DESTDIR}${PREFIX}/share/fish/completions/"
 	${INSTALL_DATA} \
 		"${WRKSRC}/completion/zsh/_yadm" \
 		"${DESTDIR}${PREFIX}/share/zsh/site-functions/"
