@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/05 00:13:31 iquiw Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/20 03:12:03 pho Exp $
 bin/restic
 man/man1/restic-backup.1
 man/man1/restic-cache.1
@@ -31,4 +31,5 @@ man/man1/restic-unlock.1
 man/man1/restic-version.1
 man/man1/restic.1
 share/bash-completion/completions/restic
+share/fish/completions/restic.fish
 share/zsh/site-functions/_restic
