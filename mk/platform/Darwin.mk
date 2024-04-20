@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.138 2024/03/16 22:55:42 nia Exp $
+# $NetBSD: Darwin.mk,v 1.139 2024/04/20 13:43:49 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -258,6 +258,8 @@ _WRAP_EXTRA_ARGS.LD+=	-m
 .if defined(GNU_CONFIGURE) && !empty(OS_VERSION:M15.[01].0)
 CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 .endif
+
+_OPSYS_MISSING_FEATURES+= 	memrchr
 
 # strnlen(3) and getline(3) are available from Lion onwards
 .if ${OPSYS_VERSION} < 100700
