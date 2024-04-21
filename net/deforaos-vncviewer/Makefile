@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/04/21 14:48:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.37 2024/04/21 15:11:13 wiz Exp $
 
 DISTNAME=	VNCViewer-0.1.0
 PKGNAME=	deforaos-vncviewer-0.1.0
@@ -10,8 +9,9 @@ MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/VNCViewer/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop VNC viewer
-
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Does not support gtk-vnc 1.3."
 
 USE_TOOLS+=	pkg-config
 
