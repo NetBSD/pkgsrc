@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2024/04/21 18:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2024/04/21 19:32:16 wiz Exp $
 
 DISTNAME=	gtk-vnc-1.3.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +27,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
