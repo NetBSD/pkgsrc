@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/04/21 17:07:36 adam Exp $
 
 BLAKE2s (violetland-0.5-source-with-dependencies.tar.gz) = 30c3fe743ba04e5b1006ee561ee2a4632c983b121ecad2d53619fd6cadb7dff6
 SHA512 (violetland-0.5-source-with-dependencies.tar.gz) = 9b00fa600332c956c49bc5906f373c0dfff08a13320617014942ac4dbc199de8f84bef87ed218b38812ae3c53622e9148aa4463c4ea219056360bff1c73b7f88
 Size (violetland-0.5-source-with-dependencies.tar.gz) = 11495885 bytes
 SHA1 (patch-lib_CMake-Gettext_GettextTranslate.cmake) = 569cc6476dbac487f603fb666fe372e79cd4f43d
+SHA1 (patch-src_game_Highscores.cpp) = 2d4379672d1676db1057a078655035e0720783fe
 SHA1 (patch-src_program.cpp) = f06e7935d2cf8cd23dd3ab9c75990f8b289476cd
 SHA1 (patch-src_system_utility_FileUtility.cpp) = d6663de57b76121dc4f84b8e7ed20e93134940b4
