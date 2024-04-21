@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.62 2024/04/21 14:47:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.63 2024/04/21 14:53:55 wiz Exp $
 
 BUILDLINK_TREE+=	gtk-vnc
 
@@ -17,6 +17,7 @@ pkgbase := gtk-vnc
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .endif # GTK_VNC_BUILDLINK3_MK
