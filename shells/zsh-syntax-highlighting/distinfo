@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:18:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/21 15:48:01 wiz Exp $
 
-BLAKE2s (zsh-syntax-highlighting-0.6.0.tar.gz) = e73b7d57ca3ed6e99bef92acbc5f7d4eaa9170fd17cfe0569c70f450334de206
-SHA512 (zsh-syntax-highlighting-0.6.0.tar.gz) = bb83f41336e9010aa78ee5adc9a216ee53f3b4347041d1b273083940d9db4d0e4acd960150b28c41f6e5e8d00b029f00fca6f9a46955892e4547a9f2345e3b85
-Size (zsh-syntax-highlighting-0.6.0.tar.gz) = 111534 bytes
+BLAKE2s (zsh-syntax-highlighting-0.8.0.tar.gz) = 34e4ab8bacff7ff5691e533fefba23dba25fa3ef72dae868ed731d9406fdfb4a
+SHA512 (zsh-syntax-highlighting-0.8.0.tar.gz) = 58593c8bf3fa1476ecf0fceb1fc4eab986a778de657d359a28fe48798e787896fbf2588441c69b017a08227ab44dd46473afb16e0f125aae59cc58004bfa8c2e
+Size (zsh-syntax-highlighting-0.8.0.tar.gz) = 155914 bytes
