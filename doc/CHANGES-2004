@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.23 2015/08/03 12:26:06 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.24 2024/04/21 07:26:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6472,7 +6472,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated festival to 1.95beta [agc 2004-12-21]
 	Updated hatari to 0.60 [xtraeme 2004-12-21]
 	Updated dhisd to 5.1 [hubertf 2004-12-21]
-	Updated freeradius to 1.0.1nb5 [adrianp 2002-12-21]
+	Updated freeradius to 1.0.1nb5 [adrianp 2004-12-21]
 	Added netgroup-0.0 [christos 2004-12-21]
 	Updated tiff to 3.6.1nb6 [reed 2004-12-22]
 	Updated openldap to 2.2.19 [jlam 2004-12-22]
