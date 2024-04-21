@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.122 2024/04/21 14:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2024/04/21 15:00:04 wiz Exp $
 
-DISTNAME=	vinagre-3.6.2
-PKGREVISION=	78
+DISTNAME=	vinagre-3.8.3
 CATEGORIES=	net x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/3.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c c++
+
+USE_CC_FEATURES+=	c99
 
 USE_PKGLOCALEDIR=	yes
 
@@ -28,25 +29,10 @@ LDFLAGS.SunOS+=	-lnsl
 CFLAGS+=	-Wno-error=format-nonliteral
 .endif
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.vinagre
-PKG_SUPPORTED_OPTIONS=	avahi telepathy
-.include "../../mk/bsd.options.mk"
-.if empty(PKG_OPTIONS:Mavahi)
-CONFIGURE_ARGS+= --without-avahi
-.else
-.include "../../net/avahi/buildlink3.mk"
-.endif
-PLIST_VARS+= telepathy
-.if !empty(PKG_OPTIONS:Mtelepathy)
-CONFIGURE_ARGS+= --with-telepathy
-.include "../../chat/telepathy-glib/buildlink3.mk"
-PLIST.telepathy= yes
-.else
-CONFIGURE_ARGS+= --without-telepathy
-.endif
-
 # Interface conflicts with glibc's version
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_ptsname_r=no
+
+.include "options.mk"
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
