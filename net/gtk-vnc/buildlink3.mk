@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.61 2024/04/17 12:02:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.62 2024/04/21 14:47:50 wiz Exp $
 
 BUILDLINK_TREE+=	gtk-vnc
 
@@ -6,12 +6,12 @@ BUILDLINK_TREE+=	gtk-vnc
 GTK_VNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.5.1
-BUILDLINK_ABI_DEPENDS.gtk-vnc+=	gtk-vnc>=0.5.2nb65
+BUILDLINK_ABI_DEPENDS.gtk-vnc+=	gtk-vnc>=1.3.1
 BUILDLINK_PKGSRCDIR.gtk-vnc?=	../../net/gtk-vnc
 
 pkgbase := gtk-vnc
 .include "../../mk/pkg-build-options.mk"
-.if ${PKG_BUILD_OPTIONS.gtk-vnc:Mvnc-sasl}
+.if ${PKG_BUILD_OPTIONS.gtk-vnc:Msasl}
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 

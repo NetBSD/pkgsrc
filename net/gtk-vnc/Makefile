@@ -1,65 +1,32 @@
-# $NetBSD: Makefile,v 1.107 2024/04/17 12:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2024/04/21 14:47:50 wiz Exp $
 
-DISTNAME=	gtk-vnc-0.5.2
-PKGREVISION=	66
+DISTNAME=	gtk-vnc-1.3.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/0.5/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://live.gnome.org/gtk-vnc
+HOMEPAGE=	https://wiki.gnome.org/Projects/gtk-vnc
 COMMENT=	VNC viewer widget for GTK
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool msgfmt pkg-config
+USE_TOOLS+=	intltool msgfmt pkg-config
 
-PKGCONFIG_OVERRIDE+=	gtk-vnc-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gtk-vnc-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gvnc-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gvncpulse-1.0.pc.in
-PY_PATCHPLIST=		yes
+PKGCONFIG_OVERRIDE+=	output/meson-private/*.pc
 
-CONFIGURE_ARGS+=	--with-coroutine=gthread
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
+
+MESON_ARGS+=		-D with-coroutine=gthread
 
 .include "options.mk"
 
-# idea from arch linux PKGBUILD
-CONFIGURE_SCRIPT=	../configure
-CONFIGURE_DIRS=		gtk2-build gtk3-build
-BUILD_DIRS=		gtk2-build gtk3-build
-INSTALL_DIRS=		gtk2-build gtk3-build
-
-pre-configure:
-	${RM} -rf ${WRKSRC}/gtk2-build ${WRKSRC}/gtk3-build
-	${MKDIR} ${WRKSRC}/gtk2-build ${WRKSRC}/gtk3-build
-
-do-configure:
-	cd ${WRKSRC}/gtk2-build \
-	&& ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
-	--with-gtk=2.0
-	cd ${WRKSRC}/gtk3-build \
-	&& ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} \
-	--with-gtk=3.0
-
-# The GTK3 build excludes some functions which are still listed in the mapfile.
-SUBST_CLASSES.SunOS+=	mapfile
-SUBST_STAGE.mapfile=	pre-build
-SUBST_FILES.mapfile=	gtk3-build/src/Makefile
-SUBST_SED.mapfile=	-e '/VERSION_SCRIPT_FLAGS.*GTK_VNC_VERSION_FILE/d'
-
-#VIEW_REQUIRED=	0.6.0
-#libview
-
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-# libview is only used for an example which is not installed
-#.include "../../devel/libview/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.0
-.include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.0.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
