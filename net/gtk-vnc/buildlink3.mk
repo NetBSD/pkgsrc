@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.63 2024/04/21 14:53:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.64 2024/04/21 20:38:27 khorben Exp $
 
 BUILDLINK_TREE+=	gtk-vnc
 
@@ -15,7 +15,12 @@ pkgbase := gtk-vnc
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
+.if ${PKG_BUILD_OPTIONS.gtk-vnc:Mpulseaudio}
+.include "../../audio/pulseaudio/buildlink3.mk"
+.endif
+
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
