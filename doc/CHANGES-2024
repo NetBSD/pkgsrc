@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2619 2024/04/21 08:55:18 iquiw Exp $
+$NetBSD: CHANGES-2024,v 1.2620 2024/04/21 10:15:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -1417,7 +1417,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/kcontacts to 5.114.0 [markd 2024-02-06]
 	Updated misc/kdav to 5.114.0 [markd 2024-02-06]
 	Updated misc/kemoticons to 5.114.0 [markd 2024-02-06]
-	Updated misc/kquickcharts to 5.114.0 [markd 2021-09-04]
+	Updated misc/kquickcharts to 5.114.0 [markd 2024-02-06]
 	Updated misc/kunitconversion to 5.114.0 [markd 2024-02-06]
 	Updated multimedia/kmediaplayer to 5.114.0 [markd 2024-02-06]
 	Updated net/kdnssd to 5.114.0 [markd 2024-02-06]
@@ -1509,7 +1509,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/kolf to 23.08.4 [markd 2024-02-06]
 	Updated games/kollision to 23.08.4 [markd 2024-02-06]
 	Updated games/konquest to 23.08.4 [markd 2024-02-06]
-	Updated games/kpat to 23.08.4 [markd 2021-04-08]
+	Updated games/kpat to 23.08.4 [markd 2024-04-06]
 	Updated games/kreversi to 23.08.4 [markd 2024-02-06]
 	Updated games/kshisen to 23.08.4 [markd 2024-02-06]
 	Updated games/ksirk to 23.08.4 [markd 2024-02-06]
@@ -1604,9 +1604,9 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/audiocd-kio to 23.08.4 [markd 2024-02-06]
 	Updated multimedia/dragon to 23.08.4 [markd 2024-02-06]
 	Updated multimedia/ffmpegthumbs to 23.08.4 [markd 2024-02-06]
-	Updated multimedia/juk to 23.08.4 [markd 2021-04-05]
+	Updated multimedia/juk to 23.08.4 [markd 2024-04-06]
 	Updated multimedia/kdenlive to 23.08.4 [markd 2024-02-06]
-	Updated multimedia/kmix to 23.08.4 [markd 2021-09-01]
+	Updated multimedia/kmix to 23.08.4 [markd 2024-02-06]
 	Updated multimedia/libkcddb to 23.08.4 [markd 2024-02-06]
 	Updated multimedia/libkcompactdisc to 23.08.4 [markd 2024-02-06]
 	Updated net/kget to 23.08.4 [markd 2024-02-06]
@@ -1623,7 +1623,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/baloo-widgets to 23.08.4 [markd 2024-02-06]
 	Updated sysutils/dolphin to 23.08.4 [markd 2024-02-06]
 	Updated sysutils/filelight to 23.08.4 [markd 2024-02-06]
-	Updated sysutils/k3b to 23.08.4 [markd 2021-04-05]
+	Updated sysutils/k3b to 23.08.4 [markd 2024-04-06]
 	Updated sysutils/kdf to 23.08.4 [markd 2024-02-06]
 	Updated sysutils/ksystemlog to 23.08.4 [markd 2024-02-06]
 	Updated textproc/kpimtextedit to 23.08.4 [markd 2024-02-06]
