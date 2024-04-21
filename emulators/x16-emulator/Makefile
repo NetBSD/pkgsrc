@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/04/06 08:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/21 19:56:10 thorpej Exp $
 
-DISTNAME=	x16-emulator-46
-PKGREVISION=	2
+DISTNAME=	x16-emulator-47
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=X16Community/}
 GITHUB_PROJECT=	x16-emulator
@@ -12,7 +11,7 @@ HOMEPAGE=	http://commanderx16.com/
 COMMENT=	Emulator for the Commander X16 computer system
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	x16-rom-46{,nb*}:../../emulators/x16-rom
+DEPENDS+=	x16-rom-47{,nb*}:../../emulators/x16-rom
 MAKE_ENV+=	ROM_RELATIVE_PATH=../share/x16/
 MAKE_ENV+=	GIT_REV=${GITHUB_TAG}
 

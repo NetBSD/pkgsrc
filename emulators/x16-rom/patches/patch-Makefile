@@ -1,20 +1,16 @@
-$NetBSD: patch-Makefile,v 1.1 2023/11/27 03:21:00 thorpej Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/04/21 19:56:10 thorpej Exp $
 
 Allow the git revision to be overridden.
 
---- Makefile.orig	2023-11-06 03:34:39
-+++ Makefile	2023-11-27 03:12:47
-@@ -336,10 +336,16 @@ $(GIT_SIGNATURE): FORCE
- 	rm -rf $(BUILD_DIR)
- 	$(MAKE) -C codex clean
+--- Makefile.orig	2024-04-21 19:28:08.260002442 +0000
++++ Makefile	2024-04-21 19:29:10.060382341 +0000
+@@ -352,8 +352,12 @@ clean:
  
-+ifdef GIT_REV
-+$(GIT_SIGNATURE): FORCE
-+	@mkdir -p $(BUILD_DIR)
-+	/bin/echo -n ${GIT_REV} | tr '[:lower:]' '[:upper:]' > $(GIT_SIGNATURE)
-+else
  $(GIT_SIGNATURE): FORCE
  	@mkdir -p $(BUILD_DIR)
++ifdef GIT_REV
++	/bin/echo -n ${GIT_REV} | tr '[:lower:]' '[:upper:]' > $(GIT_SIGNATURE)
++else
  	git diff --quiet && /bin/echo -n $$( (git rev-parse --short=8 HEAD || /bin/echo "00000000") | tr '[:lower:]' '[:upper:]') > $(GIT_SIGNATURE) \
  	|| /bin/echo -n $$( /bin/echo -n $$(git rev-parse --short=7 HEAD || echo "0000000") | tr '[:lower:]' '[:upper:]'; /bin/echo -n '+') > $(GIT_SIGNATURE)
 +endif
