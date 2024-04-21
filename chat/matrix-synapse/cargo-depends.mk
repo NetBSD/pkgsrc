@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2024/04/02 20:37:16 js Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2024/04/21 17:30:42 gdt Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.2
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.81
@@ -35,14 +35,14 @@ CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.20.3
 CARGO_CRATE_DEPENDS+=	pythonize-0.20.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.35
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
-CARGO_CRATE_DEPENDS+=	regex-1.10.3
+CARGO_CRATE_DEPENDS+=	regex-1.10.4
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.4
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.2
 CARGO_CRATE_DEPENDS+=	ryu-1.0.11
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.197
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.197
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.114
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.115
 CARGO_CRATE_DEPENDS+=	smallvec-1.10.0
 CARGO_CRATE_DEPENDS+=	subtle-2.4.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.48

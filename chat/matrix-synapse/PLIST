@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2024/03/03 20:29:33 js Exp $
+@comment $NetBSD: PLIST,v 1.52 2024/04/21 17:30:42 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1848,6 +1848,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/83/06_event_push_summary_room.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/01_auth_links_stats.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/02_auth_links_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/03_auth_links_analyze.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/84/04_access_token_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
