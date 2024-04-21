@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/02/13 23:38:48 thorpej Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/21 20:37:52 thorpej Exp $
 
-MINIPRO_VERS=	0.6
+MINIPRO_VERS=	0.7
 
 DISTNAME=	minipro-${MINIPRO_VERS}
 CATEGORIES=	sysutils
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://gitlab.com/DavidGriffith/minipro/
-COMMENT=	Control the MiniPRO TL866xx series of chip programmers
+COMMENT=	Control the MiniPRO TL866xx / Xgecu family of chip programmers
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pkg-config
