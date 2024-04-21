@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/20 07:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/04/21 18:06:38 adam Exp $
 
-BLAKE2s (aiodns-3.1.1.tar.gz) = 25e03c188285dec4fb2d7db5e357c0e69816b2066605c797dee6a4b40d0a811f
-SHA512 (aiodns-3.1.1.tar.gz) = 7c28cc6256a575681778376cc197a9504133b1127eb3508f6e5cd1c992c95adef66cf8399b7e90ca012347485e476f71e3f032f7e2f555954ad9a0cade8df5f9
-Size (aiodns-3.1.1.tar.gz) = 7363 bytes
+BLAKE2s (aiodns-3.2.0.tar.gz) = 4f916e9900f0ad25d1867a86b5fb4fecd5c7d199af8c699f4b1779e48b33b255
+SHA512 (aiodns-3.2.0.tar.gz) = ca6ae2d53cc0a0e5b8cd5f47da56d7db43236eb6738509d5cc088e56db996c49eba8b024cfe368e5acf44ad4de4cb5d6f949c7f0d4cd16ff4d5cc42ae3b27cb1
+Size (aiodns-3.2.0.tar.gz) = 7823 bytes
