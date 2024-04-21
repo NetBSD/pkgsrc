@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2024/04/02 18:58:26 rhialto Exp $
+# $NetBSD: Makefile,v 1.724 2024/04/21 14:30:33 nikita Exp $
 #
 
 COMMENT=	Programming languages
@@ -112,6 +112,7 @@ SUBDIR+=	go120
 SUBDIR+=	go121
 SUBDIR+=	go122
 SUBDIR+=	go14
+SUBDIR+=	goplus
 SUBDIR+=	gpc
 SUBDIR+=	gprolog
 SUBDIR+=	guile18
