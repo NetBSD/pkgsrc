@@ -1,9 +1,19 @@
-$NetBSD: patch-common_kernel_command.cc,v 1.2 2024/03/02 23:08:00 thorpej Exp $
+$NetBSD: patch-common_kernel_command.cc,v 1.3 2024/04/21 16:28:25 adam Exp $
 
+Fix build with newer boost.
 On NetBSD, also use KERN_PROC_PATHNAME to get the path to the executable.
 
 --- common/kernel/command.cc.orig	2024-01-23 13:00:29.000000000 +0000
-+++ common/kernel/command.cc	2024-03-02 22:33:39.900391210 +0000
++++ common/kernel/command.cc
+@@ -29,7 +29,7 @@
+ 
+ #include <boost/algorithm/string.hpp>
+ #include <boost/algorithm/string/join.hpp>
+-#include <boost/filesystem/convenience.hpp>
++#include <boost/filesystem/path.hpp>
+ #include <boost/program_options.hpp>
+ #include <fstream>
+ #include <iostream>
 @@ -61,7 +61,7 @@
  #include <unistd.h>
  #endif
