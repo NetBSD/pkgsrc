@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2639 2024/04/21 17:32:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2640 2024/04/21 18:07:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4347,3 +4347,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/matrix-synapse to 1.105.0 [gdt 2024-04-21]
 	Updated textproc/lucene++ to 3.0.9 [adam 2024-04-21]
 	Updated textproc/yq to 3.4.1 [adam 2024-04-21]
+	Updated math/py-asdf to 3.2.0 [adam 2024-04-21]
+	Updated net/py-aiodns to 3.2.0 [adam 2024-04-21]
