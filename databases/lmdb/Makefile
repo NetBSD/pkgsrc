@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/01/31 18:17:22 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/04/21 11:22:05 nia Exp $
 
 .include "../../databases/openldap/Makefile.version"
 
@@ -11,6 +11,7 @@ COMMENT=	Symas Lightning Memory-Mapped Database
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 
 BUILD_DIRS=		libraries/liblmdb
 MAKE_FLAGS+=		CC=${CC:Q}
@@ -27,13 +28,20 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
+LDFLAGS+=	-lpthread
+
 .if ${OPSYS} == "SunOS" && (${OS_VERSION} == "5.9" || ${OS_VERSION} == "5.10")
 LDFLAGS+=	-lrt
 .endif
 
-.if ${OPSYS} == "Darwin"
-MAKE_FLAGS+=	SOEXT=.dylib
-MAKE_FLAGS+=	SOLIBS=-install_name\ ${PREFIX}/lib/liblmdb.dylib
+.if ${OPSYS} == "NetBSD"
+LDFLAGS+=	-lrt
+.endif
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100600
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+# posix_memalign is missing before 10.6
+LDFLAGS+=	-lMacportsLegacySupport
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
