@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2024/01/17 20:21:42 markd Exp $
+# $NetBSD: Makefile,v 1.420 2024/04/21 06:36:09 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -44,6 +44,7 @@ SUBDIR+=	babelstone-tibetan-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
 SUBDIR+=	bdftopcf
+SUBDIR+=	biz-ud-gothic-ttf
 SUBDIR+=	biznet-iso8859_2
 SUBDIR+=	cantarell-fonts
 SUBDIR+=	cascadia-ttf
