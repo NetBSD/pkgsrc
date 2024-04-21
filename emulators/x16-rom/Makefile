@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2023/11/27 03:21:00 thorpej Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/21 19:09:21 thorpej Exp $
 
 DISTNAME=	x16-rom-46
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=X16Community/}
 GITHUB_PROJECT=	x16-rom
 GITHUB_TAG=	r${PKGVERSION_NOREV}
+
+# Parallel-ized builds don't work for this package.
+MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	http://commanderx16.com/
