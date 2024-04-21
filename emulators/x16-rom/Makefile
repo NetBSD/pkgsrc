@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/04/21 19:09:21 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/21 19:56:10 thorpej Exp $
 
-DISTNAME=	x16-rom-46
+DISTNAME=	x16-rom-47
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=X16Community/}
 GITHUB_PROJECT=	x16-rom
