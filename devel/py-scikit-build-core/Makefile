@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/04/19 19:38:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/21 07:29:19 adam Exp $
 
-DISTNAME=	scikit_build_core-0.9.0
+DISTNAME=	scikit_build_core-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
