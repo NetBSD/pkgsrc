@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/21 06:35:01 ryoon Exp $
+share/fonts/X11/TTF/BIZUDGothic-Bold.ttf
+share/fonts/X11/TTF/BIZUDGothic-Regular.ttf
+share/fonts/X11/TTF/BIZUDPGothic-Bold.ttf
+share/fonts/X11/TTF/BIZUDPGothic-Regular.ttf
