@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.27 2024/04/05 10:50:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/04/21 15:37:27 wiz Exp $
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -37,6 +37,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/accessapproval.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/accesscontextmanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/accesscontextmanager.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/acmedns.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/addressvalidation.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adexchangebuyer.v1.4.json
@@ -225,6 +226,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/digitalassetlinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discovery.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/discoveryengine.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/displayvideo.v1.json
@@ -271,6 +273,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseml.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseml.v1beta2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseml.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaserules.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasestorage.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firestore.v1.json
