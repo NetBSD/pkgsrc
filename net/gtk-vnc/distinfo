@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:05:42 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/04/21 14:47:50 wiz Exp $
 
-BLAKE2s (gtk-vnc-0.5.2.tar.xz) = ac97e0655c40965714a9359d1d0d306dacfc55b9d19417d77abe4e1b30af8daf
-SHA512 (gtk-vnc-0.5.2.tar.xz) = e58a0bbb4c5d1802d51936d5869ccad55cd405f6939f49445e224863866a33173e47e055d88f50e60b3f864a7e393faf0c78a219a08ee8a8c1fc8fe108f9824a
-Size (gtk-vnc-0.5.2.tar.xz) = 388112 bytes
-SHA1 (patch-ab) = f59d1260533ed8c8e2932f6af416d8e5a6088650
-SHA1 (patch-ae) = 75b082408787267888d0f9ba5a6fcf7f953de13f
-SHA1 (patch-src_Makefile.in) = 15214b84ee70e20d12a9515281bb0f2660e5b57d
+BLAKE2s (gtk-vnc-1.3.1.tar.xz) = df663f6fc73d11bf4d0826fad39328d780502679581491b5e8a7bd5919c6ee25
+SHA512 (gtk-vnc-1.3.1.tar.xz) = 01c9af407f913b214814252d7b204822372293ffc5f658aa646936f9f8cdcd77589c127e4d0e893e914c61470d4616e32f7b1fa9bd3739b2a22caef6710953b9
+Size (gtk-vnc-1.3.1.tar.xz) = 222204 bytes
