@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/04/18 07:13:20 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/21 13:41:01 wiz Exp $
 
 DISTNAME=	requests-mock-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Mock out responses from the requests package
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
