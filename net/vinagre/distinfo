@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.13 2024/04/21 15:00:04 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/04/21 15:08:43 wiz Exp $
 
-BLAKE2s (vinagre-3.8.3.tar.xz) = bcf2d812dd98be70183016d33a58cdf7fd822d1faea78c3a8b82fcc5d9f429b6
-SHA512 (vinagre-3.8.3.tar.xz) = 1674a3e5a1a7bb2f08c27c32051c6e651802e217b475218cf001f0dba547b736b81c906f17e36be9313cdeaae6177501f0aa2835f766f11d07bd61d8ab81523a
-Size (vinagre-3.8.3.tar.xz) = 1062796 bytes
-SHA1 (patch-configure) = d9622874fbeba6705c1dcbbf01aed7a6588afce0
-SHA1 (patch-vinagre_pty__open.c) = dfc8bd7235a65353b506ee6acf726cb15706c5d3
+BLAKE2s (vinagre-3.22.0.tar.xz) = 3f7862be33400ce3402ade74ac6c0ec25255ac7271f0d578b2b60c1feacbfb04
+SHA512 (vinagre-3.22.0.tar.xz) = 6a84b353d75b48649af507cb747688115b35268bc0303554afc9684bbfec4f9c3b2d93d89fa64480ede07bb4fb1eabe360b6eccd11e58691ce9f955f329c615f
+Size (vinagre-3.22.0.tar.xz) = 1574984 bytes
+SHA1 (patch-vinagre_pty__open.c) = 84dc7df629ec97281b0cf33f42bbf5b5af18fd45
