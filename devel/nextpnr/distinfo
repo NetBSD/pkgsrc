@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2024/03/02 23:07:59 thorpej Exp $
+$NetBSD: distinfo,v 1.3 2024/04/21 16:28:25 adam Exp $
 
 BLAKE2s (nextpnr-0.7.tar.gz) = 27dfd76a6c8bc84b3178083a1b21bf4d542387a29ebaf533553121ac6c31a486
 SHA512 (nextpnr-0.7.tar.gz) = feb190d3a656c7bcdd2bcc1def9972e2c9bec7171a064308b16260240ce9f552eb03d907ef7d032a17ae7ef7e869950e7399c61df22ba36484a4cf2ef7ce7de2
 Size (nextpnr-0.7.tar.gz) = 4711765 bytes
-SHA1 (patch-common_kernel_command.cc) = 48c0536839f18583d7be190c16a97d6537d80172
+SHA1 (patch-bba_main.cc) = e3713835b14ac9155d0465d8102636ac02fa7c16
+SHA1 (patch-common_kernel_command.cc) = bbb8e02cf0d79092d4517bf492fc1d91ea7e3ad6
