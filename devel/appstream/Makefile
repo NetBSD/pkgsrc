@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/14 17:22:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/21 13:37:31 wiz Exp $
 
 DISTNAME=	appstream-1.0.2
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
