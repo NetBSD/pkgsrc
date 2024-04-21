@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2625 2024/04/21 14:48:00 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2626 2024/04/21 15:00:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4329,3 +4329,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-gidgethub to 5.3.0 [wiz 2024-04-21]
 	Added lang/goplus version 1.2.6 [nikita 2024-04-21]
 	Updated net/gtk-vnc to 1.3.1 [wiz 2024-04-21]
+	Updated net/vinagre to 3.8.3 [wiz 2024-04-21]
