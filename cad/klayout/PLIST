@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/12/18 22:29:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/21 20:27:18 mef Exp $
 bin/klayout
 bin/strm2cif
 bin/strm2dxf
@@ -251,6 +251,8 @@ lib/klayout/pymod/klayout/lay/__init__.py
 lib/klayout/pymod/klayout/laycore.so
 lib/klayout/pymod/klayout/lib/__init__.py
 lib/klayout/pymod/klayout/libcore.${RUBY_DLEXT}
+lib/klayout/pymod/klayout/pya/__init__.py
+lib/klayout/pymod/klayout/pyacore.so
 lib/klayout/pymod/klayout/rdb/__init__.py
 lib/klayout/pymod/klayout/rdbcore.${RUBY_DLEXT}
 lib/klayout/pymod/klayout/tl/__init__.py
