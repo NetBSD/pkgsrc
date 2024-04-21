@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/21 06:37:30 ryoon Exp $
+
+BLAKE2s (morisawa-biz-ud-mincho-v1.06/morisawa-biz-ud-mincho-fonts.zip) = ec1ad44495520ac118a7012dfc2c71a33d62dac780bbf57d71b01fd6ac5cf91f
+SHA512 (morisawa-biz-ud-mincho-v1.06/morisawa-biz-ud-mincho-fonts.zip) = 6b12ac6054b9ae18bbbeb2eb79e386715445bf3cccce561239b0c298022d2847fdca8ad03b80fdd452dff6f861efe3077698e42ee591de09139f5c6999f09466
+Size (morisawa-biz-ud-mincho-v1.06/morisawa-biz-ud-mincho-fonts.zip) = 35198822 bytes
