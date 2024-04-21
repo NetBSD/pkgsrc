@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/09/20 09:52:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/04/21 12:54:24 ryoon Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -48,6 +48,7 @@ bin/pamarith
 bin/pambackground
 bin/pambayer
 bin/pambrighten
+bin/pamcat
 bin/pamchannel
 bin/pamcomp
 bin/pamcrater
@@ -69,6 +70,7 @@ bin/pamfunc
 bin/pamgauss
 bin/pamgetcolor
 bin/pamgradient
+bin/pamhomography
 bin/pamhue
 bin/pamlevels
 bin/pamlookup
@@ -82,6 +84,7 @@ bin/pamperspective
 bin/pampick
 bin/pampop9
 bin/pamrecolor
+bin/pamrestack
 bin/pamrgbatopng
 bin/pamrubber
 bin/pamscale
@@ -89,6 +92,7 @@ bin/pamseq
 bin/pamshadedrelief
 bin/pamsharpmap
 bin/pamsharpness
+bin/pamshuffle
 bin/pamsistoaglyph
 bin/pamslice
 bin/pamsplit
@@ -115,6 +119,7 @@ bin/pamtopdbimg
 bin/pamtopfm
 bin/pamtopng
 bin/pamtopnm
+bin/pamtoqoi
 bin/pamtosrf
 bin/pamtosvg
 bin/pamtotga
@@ -132,6 +137,7 @@ bin/pbmlife
 bin/pbmmake
 bin/pbmmask
 bin/pbmminkowski
+bin/pbmnoise
 bin/pbmpage
 bin/pbmpscale
 bin/pbmreduce
@@ -231,6 +237,7 @@ bin/pnmhisteq
 bin/pnmhistmap
 bin/pnmindex
 bin/pnminterp
+bin/pnminterp-gen
 bin/pnminvert
 bin/pnmmargin
 bin/pnmmercator
@@ -340,6 +347,7 @@ bin/ppmtv
 bin/ppmwheel
 bin/psidtopgm
 bin/pstopnm
+bin/qoitopam
 bin/qrttoppm
 bin/rasttopnm
 bin/rawtopgm
@@ -392,13 +400,12 @@ include/netpbm/ppm.h
 include/netpbm/ppmcmap.h
 include/netpbm/ppmdfont.h
 include/netpbm/ppmdraw.h
-include/netpbm/ppmfloyd.h
 include/netpbm/runlength.h
 include/netpbm/shhopt.h
 lib/libnetpbm.a
 lib/libnetpbm.so
 lib/libnetpbm.so.11
-lib/libnetpbm.so.11.86
+lib/libnetpbm.so.11.102
 man/man1/411toppm.1
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
