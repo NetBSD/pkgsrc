@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/04/07 07:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/04/21 15:29:52 wiz Exp $
 
-DISTNAME=	dunst-1.10.0
-PKGREVISION=	1
+DISTNAME=	dunst-1.11.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -45,6 +44,9 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/dbus-1/services
 INSTALLATION_DIRS+=	share/dunst
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/zsh/site-functions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
