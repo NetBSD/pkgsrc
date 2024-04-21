@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6443 2023/06/16 20:22:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6444 2024/04/21 07:26:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3282,7 +3282,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/kcontacts to 5.93.0 [markd 2022-04-25]
 	Updated misc/kdav to 5.93.0 [markd 2022-04-25]
 	Updated misc/kemoticons to 5.93.0 [markd 2022-04-25]
-	Updated misc/kquickcharts to 5.93.0 [markd 2021-09-04]
+	Updated misc/kquickcharts to 5.93.0 [markd 2022-04-25]
 	Updated misc/kunitconversion to 5.93.0 [markd 2022-04-25]
 	Updated multimedia/kmediaplayer to 5.93.0 [markd 2022-04-25]
 	Updated net/kdnssd to 5.93.0 [markd 2022-04-25]
@@ -6993,7 +6993,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/kcontacts to 5.98.0 [markd 2022-09-29]
 	Updated misc/kdav to 5.98.0 [markd 2022-09-29]
 	Updated misc/kemoticons to 5.98.0 [markd 2022-09-29]
-	Updated misc/kquickcharts to 5.98.0 [markd 2021-09-04]
+	Updated misc/kquickcharts to 5.98.0 [markd 2022-09-29]
 	Updated misc/kunitconversion to 5.98.0 [markd 2022-09-29]
 	Updated multimedia/kmediaplayer to 5.98.0 [markd 2022-09-29]
 	Updated net/kdnssd to 5.98.0 [markd 2022-09-29]
@@ -7045,7 +7045,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/kcachegrind to 22.08.1 [markd 2022-09-29]
 	Updated devel/kde-dev-scripts to 22.08.1 [markd 2022-09-29]
 	Updated devel/kde-dev-utils to 22.08.1 [markd 2022-09-29]
-	Updated devel/kio-extras to 22.08.1 [markd 2021-04-05]
+	Updated devel/kio-extras to 22.08.1 [markd 2022-09-29]
 	Updated devel/kompare to 22.08.1 [markd 2022-09-29]
 	Updated devel/libkomparediff2 to 22.08.1 [markd 2022-09-29]
 	Updated devel/lokalize to 22.08.1 [markd 2022-09-29]
@@ -7081,7 +7081,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/kolf to 22.08.1 [markd 2022-09-29]
 	Updated games/kollision to 22.08.1 [markd 2022-09-29]
 	Updated games/konquest to 22.08.1 [markd 2022-09-29]
-	Updated games/kpat to 22.08.1 [markd 2021-04-08]
+	Updated games/kpat to 22.08.1 [markd 2022-09-29]
 	Updated games/kreversi to 22.08.1 [markd 2022-09-29]
 	Updated games/kshisen to 22.08.1 [markd 2022-09-29]
 	Updated games/ksirk to 22.08.1 [markd 2022-09-29]
@@ -7143,9 +7143,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/step to 22.08.1 [markd 2022-09-29]
 	Updated multimedia/audiocd-kio to 22.08.1 [markd 2022-09-29]
 	Updated multimedia/dragon to 22.08.1 [markd 2022-09-29]
-	Updated multimedia/juk to 22.08.1 [markd 2021-04-05]
+	Updated multimedia/juk to 22.08.1 [markd 2022-09-29]
 	Updated multimedia/kdenlive to 22.08.1 [markd 2022-09-29]
-	Updated multimedia/kmix to 22.08.1 [markd 2021-09-01]
+	Updated multimedia/kmix to 22.08.1 [markd 2022-09-29]
 	Updated multimedia/libkcddb to 22.08.1 [markd 2022-09-29]
 	Updated multimedia/libkcompactdisc to 22.08.1 [markd 2022-09-29]
 	Updated net/krdc to 22.08.1 [markd 2022-09-29]
@@ -7155,7 +7155,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/baloo-widgets to 22.08.1 [markd 2022-09-29]
 	Updated sysutils/dolphin to 22.08.1 [markd 2022-09-29]
 	Updated sysutils/filelight to 22.08.1 [markd 2022-09-29]
-	Updated sysutils/k3b to 22.08.1 [markd 2021-04-05]
+	Updated sysutils/k3b to 22.08.1 [markd 2022-09-29]
 	Updated sysutils/kdf to 22.08.1 [markd 2022-09-29]
 	Updated sysutils/kfloppy to 22.08.1 [markd 2022-09-29]
 	Updated sysutils/ksystemlog to 22.08.1 [markd 2022-09-29]

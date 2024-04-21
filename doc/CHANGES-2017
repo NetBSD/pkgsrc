@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.5468 2019/03/31 10:35:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.5469 2024/04/21 07:26:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -5118,7 +5118,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed print/tex-kotex-doc [markd 2017-09-06]
 	Removed print/tex-kotex-dev [markd 2017-09-06]
 	Removed print/tex-kotex-dev-doc [markd 2017-09-06]
-	Updated security/p5-Digest-SHA to 5.97 [wen 2027-09-06]
+	Updated security/p5-Digest-SHA to 5.97 [wen 2017-09-06]
 	Updated security/p5-Digest-SHA3 to 0.26 [wen 2017-09-06]
 	Updated security/gnutls to 3.6.0 [wiz 2017-09-06]
 	Removed net/p5-grake [ryoon 2017-09-06]
@@ -7597,7 +7597,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/py-Send2Trash to 1.4.2 [adam 2017-12-14]
 	Updated emulators/atari800 to 3.1.0 [adam 2017-12-14]
 	Updated devel/cmake to 3.10.1 [adam 2017-12-14]
-	Updated sysutils/smartmontools to 6.6 [nonaka 2016-12-15]
+	Updated sysutils/smartmontools to 6.6 [nonaka 2017-12-15]
 	Updated lang/ruby23-base to 2.3.6 [taca 2017-12-15]
 	Updated databases/ruby-gdbm to 2.3.6 [taca 2017-12-15]
 	Updated devel/ruby-fiddle to 2.3.6 [taca 2017-12-15]
