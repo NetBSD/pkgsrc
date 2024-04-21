@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/03/17 09:57:09 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/21 18:04:31 adam Exp $
 
-DISTNAME=	asdf-3.1.0
+DISTNAME=	asdf-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
@@ -13,10 +13,10 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.0.1:../../math/py-asdf-standard
+DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
 DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.3:../../math/py-asdf-transform-schemas
 DEPENDS+=	${PYPKGPREFIX}-asdf-unit-schemas>=0.1:../../math/py-asdf-unit-schemas
-DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0":../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
