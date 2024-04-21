@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.111 2022/09/20 09:52:40 wiz Exp $
+$NetBSD: distinfo,v 1.112 2024/04/21 12:54:24 ryoon Exp $
 
-BLAKE2s (netpbm-10.86.34.tar.gz) = ded05402246c0820f1e8988135ade47d7db3ff16948347e7209aafba45035533
-SHA512 (netpbm-10.86.34.tar.gz) = af16a6877be19cc8b28af84268bc290fa282c1455bbd667d2cd57a635614929999609b46bb11ee549020f13754c69ff1dcb741ec246dcc5a7cb3b29c3dc62d53
-Size (netpbm-10.86.34.tar.gz) = 2860385 bytes
-BLAKE2s (netpbm-docs-r4426.tar.gz) = d645c632e84bc570d7c891981c413f4de371a9265ee104dd315ecd795d91fb4d
-SHA512 (netpbm-docs-r4426.tar.gz) = d363be98e81a38602bc8a049697ea6e208bf72032f89602ad9e818597eb6c03d0cada354b17ddeed45b69f90836e1687e44148acf32b56a60dd050599de99fdc
-Size (netpbm-docs-r4426.tar.gz) = 523172 bytes
+BLAKE2s (netpbm-11.02.09.tar.gz) = de06ee95562612ba6ddcf098e344451c8b0597e12b52d54fdbe06dcfcf9ee6c3
+SHA512 (netpbm-11.02.09.tar.gz) = c3378d895a6cbaf32f3c4d4bb5d90d876ea33997879bb4fb40baf93591cea113ea3c603bd8a9b0e0cd7a64c48607d3f780805a3d791dde5816a46039f79ae4f4
+Size (netpbm-11.02.09.tar.gz) = 2991886 bytes
+BLAKE2s (netpbm-docs-r4908.tar.gz) = 009879ddcc45a0217e8ee46b78184b6583470872f3b6d9c41ada00e5ecbdc046
+SHA512 (netpbm-docs-r4908.tar.gz) = 2361be1917c0ff27dd0faefcff7780d0808be67bf09d13a094b3f22942bb3c5155cb260ce4b749d3214fa0bce7f2d15806e4d2b88c95d9d59886299de3895bd0
+Size (netpbm-docs-r4908.tar.gz) = 529814 bytes
 SHA1 (patch-common.mk) = f37a95014c04ad50fab09da61608590a63a06386
 SHA1 (patch-lib_Makefile) = dc9d14d911773b282d1f0169f665baccb5247337
 SHA1 (patch-pm__config.in.h) = dfe51691507a2c7be2946013b1f1b6bdd9b39f49
