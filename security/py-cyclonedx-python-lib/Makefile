@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/04/18 08:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/04/21 15:35:36 wiz Exp $
 
-DISTNAME=	cyclonedx_python_lib-7.1.0
+DISTNAME=	cyclonedx_python_lib-7.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
