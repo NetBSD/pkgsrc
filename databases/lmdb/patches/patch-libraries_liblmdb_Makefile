@@ -1,9 +1,28 @@
-$NetBSD: patch-libraries_liblmdb_Makefile,v 1.5 2020/03/15 21:01:47 tnn Exp $
+$NetBSD: patch-libraries_liblmdb_Makefile,v 1.6 2024/04/21 11:22:05 nia Exp $
 
+Libtoolize.
 Use proper install commands.
 
---- libraries/liblmdb/Makefile.orig	2020-01-30 17:58:35.000000000 +0000
+--- libraries/liblmdb/Makefile.orig	2024-01-29 18:52:23.000000000 +0000
 +++ libraries/liblmdb/Makefile
+@@ -26,7 +26,7 @@ OPT = -O2 -g
+ CFLAGS	= $(THREADS) $(OPT) $(W) $(XCFLAGS)
+ LDLIBS	=
+ SOLIBS	=
+-SOEXT	= .so
++SOEXT	= .la
+ prefix	= /usr/local
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+@@ -38,7 +38,7 @@ mandir = $(datarootdir)/man
+ ########################################################################
+ 
+ IHDRS	= lmdb.h
+-ILIBS	= liblmdb.a liblmdb$(SOEXT)
++ILIBS	= liblmdb$(SOEXT)
+ IPROGS	= mdb_stat mdb_copy mdb_dump mdb_load
+ IDOCS	= mdb_stat.1 mdb_copy.1 mdb_dump.1 mdb_load.1
+ PROGS	= $(IPROGS) mtest mtest2 mtest3 mtest4 mtest5
 @@ -49,10 +49,10 @@ install: $(ILIBS) $(IPROGS) $(IHDRS)
  	mkdir -p $(DESTDIR)$(libdir)
  	mkdir -p $(DESTDIR)$(includedir)
@@ -13,15 +32,18 @@ Use proper install commands.
 -	for f in $(IHDRS); do cp $$f $(DESTDIR)$(includedir); done
 -	for f in $(IDOCS); do cp $$f $(DESTDIR)$(mandir)/man1; done
 +	for f in $(IPROGS); do $(BSD_INSTALL_PROGRAM) $$f $(DESTDIR)$(prefix)/bin; done
-+	for f in $(ILIBS); do $(BSD_INSTALL_LIB) $$f $(DESTDIR)$(prefix)/lib; done
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) liblmdb.la $(DESTDIR)$(prefix)/lib
 +	for f in $(IHDRS); do $(BSD_INSTALL_DATA) $$f $(DESTDIR)$(prefix)/include; done
 +	for f in $(IDOCS); do $(BSD_INSTALL_MAN) $$f $(DESTDIR)$(prefix)/$(PKGMANDIR)/man1; done
  
  clean:
  	rm -rf $(PROGS) *.[ao] *.[ls]o *~ testdb
-@@ -68,10 +68,14 @@ liblmdb$(SOEXT):	mdb.lo midl.lo
+@@ -66,12 +66,16 @@ liblmdb.a:	mdb.o midl.o
+ 
+ liblmdb$(SOEXT):	mdb.lo midl.lo
  #	$(CC) $(LDFLAGS) -pthread -shared -Wl,-Bsymbolic -o $@ mdb.o midl.o $(SOLIBS)
- 	$(CC) $(LDFLAGS) -pthread -shared -o $@ mdb.lo midl.lo $(SOLIBS)
+-	$(CC) $(LDFLAGS) -pthread -shared -o $@ mdb.lo midl.lo $(SOLIBS)
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -pthread -rpath $(PREFIX)/lib -o $@ mdb.lo midl.lo $(SOLIBS)
  
 -mdb_stat: mdb_stat.o liblmdb.a
 -mdb_copy: mdb_copy.o liblmdb.a
@@ -38,3 +60,16 @@ Use proper install commands.
  mtest:    mtest.o    liblmdb.a
  mtest2:	mtest2.o liblmdb.a
  mtest3:	mtest3.o liblmdb.a
+@@ -87,10 +91,10 @@ midl.o: midl.c midl.h
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -c midl.c
+ 
+ mdb.lo: mdb.c lmdb.h midl.h
+-	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) -c mdb.c -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CFLAGS) $(CPPFLAGS) -c mdb.c -o $@
+ 
+ midl.lo: midl.c midl.h
+-	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) -c midl.c -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CFLAGS)  $(CPPFLAGS) -c midl.c -o $@
+ 
+ %:	%.o
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $^ $(LDLIBS) -o $@
