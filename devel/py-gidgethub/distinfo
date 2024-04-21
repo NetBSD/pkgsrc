@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/26 21:36:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/04/21 13:40:01 wiz Exp $
 
-BLAKE2s (gidgethub-5.1.0.tar.gz) = 1df33ac51a23de7215454988cac7637422caac0dd564451a50dc35beeff0665a
-SHA512 (gidgethub-5.1.0.tar.gz) = 90006e8f386068ed979c84372a3c9a43cf41b3902fdc02aa19b0d5c19d9259a058d3b2e1b288bcf0f109eaa98818c8ed55eb7e1c657b45b9648ae06f57c86950
-Size (gidgethub-5.1.0.tar.gz) = 125577 bytes
+BLAKE2s (gidgethub-5.3.0.tar.gz) = c28e4d4e31c77816296d8eb6d16c4aa1dcb1a4d6c290f3d1b4e2731af3155afa
+SHA512 (gidgethub-5.3.0.tar.gz) = 5584ac59483d9f87d77bd8c6839b78891b93a695ff378a6ba197453a616335af7247f4ca5b485a8c27fe2e7a35a6b606ed185df9d54c39a45498a408f847109f
+Size (gidgethub-5.3.0.tar.gz) = 125885 bytes
