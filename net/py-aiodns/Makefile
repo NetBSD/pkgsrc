@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/11/30 05:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/21 18:06:38 adam Exp $
 
-DISTNAME=	aiodns-3.1.1
-PKGREVISION=	1
+DISTNAME=	aiodns-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiodns/}
