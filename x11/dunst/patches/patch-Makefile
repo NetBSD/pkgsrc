@@ -1,21 +1,12 @@
-$NetBSD: patch-Makefile,v 1.11 2024/04/14 15:42:44 wiz Exp $
+$NetBSD: patch-Makefile,v 1.12 2024/04/21 15:29:52 wiz Exp $
 
 Use more portable find options.
 Use BSD_INSTALL.
 
---- Makefile.orig	2024-02-19 20:44:18.000000000 +0000
+--- Makefile.orig	2024-04-15 20:20:32.000000000 +0000
 +++ Makefile
-@@ -35,7 +35,7 @@ LDFLAGS := ${DEFAULT_LDFLAGS} ${LDFLAGS}
- 
- ifeq (0,${WAYLAND})
- # without wayland support
--SRC := $(sort $(shell ${FIND} src/ -not \( -path src/wayland -prune \) -name '*.c'))
-+SRC := $(sort $(shell ${FIND} src/ ! \( -path src/wayland -prune \) -name '*.c'))
- else
- # with Wayland support
- CFLAGS += -DHAVE_WL_CURSOR_SHAPE -DHAVE_WL_EXT_IDLE_NOTIFY
-@@ -198,22 +198,22 @@ clean-wayland-protocols:
- install: install-dunst install-dunstctl install-dunstrc install-service 
+@@ -207,22 +207,22 @@ clean-wayland-protocols:
+ install: install-dunst install-dunstctl install-dunstrc install-service
  
  install-dunst: dunst doc
 -	install -Dm755 dunst ${DESTDIR}${BINDIR}/dunst
@@ -44,7 +35,7 @@ Use BSD_INSTALL.
  ifneq (0,${SYSTEMD})
  install-service: install-service-systemd
  install-service-systemd: service-systemd
-@@ -223,7 +223,7 @@ endif
+@@ -232,18 +232,18 @@ endif
  ifneq (0,${DUNSTIFY})
  install: install-dunstify
  install-dunstify: dunstify
@@ -52,4 +43,21 @@ Use BSD_INSTALL.
 +	${BSD_INSTALL_PROGRAM} dunstify ${DESTDIR}${BINDIR}/dunstify
  endif
  
- uninstall: uninstall-keepconf
+ ifneq (0,${COMPLETIONS})
+ install: install-completions
+ install-completions:
+-	install -Dm644 completions/dunst.bashcomp ${DESTDIR}${BASHCOMPLETIONDIR}/dunst
+-	install -Dm644 completions/dunstctl.bashcomp ${DESTDIR}${BASHCOMPLETIONDIR}/dunstctl
+-	install -Dm644 completions/_dunst.zshcomp ${DESTDIR}${ZSHCOMPLETIONDIR}/_dunst
+-	install -Dm644 completions/_dunstctl.zshcomp ${DESTDIR}${ZSHCOMPLETIONDIR}/_dunstctl
+-	install -Dm644 completions/dunst.fishcomp ${DESTDIR}${FISHCOMPLETIONDIR}/dunst
+-	install -Dm644 completions/dunstctl.fishcomp ${DESTDIR}${FISHCOMPLETIONDIR}/dunstctl
++	${BSD_INSTALL_DATA} completions/dunst.bashcomp ${DESTDIR}${BASHCOMPLETIONDIR}/dunst
++	${BSD_INSTALL_DATA} completions/dunstctl.bashcomp ${DESTDIR}${BASHCOMPLETIONDIR}/dunstctl
++	${BSD_INSTALL_DATA} completions/_dunst.zshcomp ${DESTDIR}${ZSHCOMPLETIONDIR}/_dunst
++	${BSD_INSTALL_DATA} completions/_dunstctl.zshcomp ${DESTDIR}${ZSHCOMPLETIONDIR}/_dunstctl
++	${BSD_INSTALL_DATA} completions/dunst.fishcomp ${DESTDIR}${FISHCOMPLETIONDIR}/dunst
++	${BSD_INSTALL_DATA} completions/dunstctl.fishcomp ${DESTDIR}${FISHCOMPLETIONDIR}/dunstctl
+ 
+ ifneq (0,${DUNSTIFY})
+ install: install-completions-dunstify
