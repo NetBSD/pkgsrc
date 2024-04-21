@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2023/11/07 22:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2024/04/21 15:44:44 wiz Exp $
 
-DISTNAME=	sphinx-7.2.6
+DISTNAME=	sphinx-7.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -11,8 +11,9 @@ COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
+DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.14:../../textproc/py-alabaster
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.9:../../devel/py-babel
+DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.18.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize>=1.3:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
@@ -38,6 +39,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.0:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../devel/py-tomli
 .endif
 
 post-install:
