@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.175 2024/04/19 05:58:51 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.176 2024/04/21 06:54:04 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -5582,7 +5582,7 @@ suse{,32}_libxml2<11.3nb5	remote-system-access	http://secunia.com/advisories/476
 openldap-server<2.4.24nb1	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4079
 tor<0.2.2.34		remote-security-bypass	http://secunia.com/advisories/46634/
 net6-[0-9]*		multiple-vulnerabilities	https://www.openwall.com/lists/oss-security/2011/10/30/3
-libobby-[0-9]*		multiple-vulnerabilities	https://www.openwall.com/lists/oss-security/2011/10/30/3
+obby-[0-9]*		multiple-vulnerabilities	https://www.openwall.com/lists/oss-security/2011/10/30/3
 calibre<0.8.25		multiple-vulnerabilities	http://secunia.com/advisories/46620/
 squid>=3<3.1.16		denial-of-service		http://secunia.com/advisories/46609/
 qt4-tiff<4.7.3nb1	buffer-overflow			http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3194
