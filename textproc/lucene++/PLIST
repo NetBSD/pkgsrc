@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/17 03:02:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/21 17:28:32 adam Exp $
 include/lucene++/ASCIIFoldingFilter.h
 include/lucene++/AbstractAllTermDocs.h
 include/lucene++/AbstractField.h
@@ -453,11 +453,15 @@ include/lucene++/WildcardQuery.h
 include/lucene++/WildcardTermEnum.h
 include/lucene++/WordlistLoader.h
 include/lucene++/targetver.h
+lib/cmake/liblucene++-contrib/liblucene++-contribConfig.cmake
+lib/cmake/liblucene++-contrib/liblucene++-contribConfigVersion.cmake
+lib/cmake/liblucene++/liblucene++Config.cmake
+lib/cmake/liblucene++/liblucene++ConfigVersion.cmake
 lib/liblucene++-contrib.so
-lib/liblucene++-contrib.so.0
 lib/liblucene++-contrib.so.${PKGVERSION}
+lib/liblucene++-contrib.so.0
 lib/liblucene++.so
-lib/liblucene++.so.0
 lib/liblucene++.so.${PKGVERSION}
+lib/liblucene++.so.0
 lib/pkgconfig/liblucene++-contrib.pc
 lib/pkgconfig/liblucene++.pc
