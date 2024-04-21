@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2024/04/21 14:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2024/04/21 18:16:39 wiz Exp $
 
 DISTNAME=	gtk-vnc-1.3.1
 CATEGORIES=	net
@@ -22,6 +22,7 @@ MESON_ARGS+=		-D with-coroutine=gthread
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
