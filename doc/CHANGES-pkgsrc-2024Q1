@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.3 2024/04/11 15:24:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.4 2024/04/22 16:26:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -17,4 +17,13 @@ editors/abiword-plugins: build fix
 
 Pullup ticket #6845 - requested by taca
 www/php-concrete-cms: security fix
+
+Pullup ticket #6847 - requested by taca
+lang/php82: security fix
+
+Pullup ticket #6848 - requested by taca
+lang/php83: security fix
+
+Pullup ticket #6849 - requested by taca
+lang/php81: security fix
 
