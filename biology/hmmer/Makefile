@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/12/29 00:38:59 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2024/04/22 13:44:10 he Exp $
 #
 
 DISTNAME=		hmmer-3.0
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		http://eddylab.org/software/hmmer/
 
