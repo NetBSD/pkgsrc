@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/10/06 19:23:24 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/22 07:50:55 adam Exp $
 
 # This version should be kept in sync with what
 # parallel/spirv-llvm-translator's ${WRKSRC}/spirv-headers-tag.conf
 # contains.
-DISTNAME=	SPIRV-Headers-1.3.246.1
+DISTNAME=	SPIRV-Headers-1.3.261.1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	sdk-${PKGVERSION_NOREV}
