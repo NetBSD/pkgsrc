@@ -1,10 +1,21 @@
-$NetBSD: patch-src_runtime_objs_mk.ppc-netbsd,v 1.1 2019/10/12 20:52:54 he Exp $
+$NetBSD: patch-src_runtime_objs_mk.ppc-netbsd,v 1.2 2024/04/22 18:35:06 he Exp $
 
 Don't pass an empty RANLIB.
+Define ARCH_PPC and not HOST_PPC, and do -lm.
 
 --- src/runtime/objs/mk.ppc-netbsd.orig	2019-10-12 20:10:48.309504473 +0000
 +++ src/runtime/objs/mk.ppc-netbsd
-@@ -22,4 +22,4 @@ VERSION =	v-ppc-netbsd
+@@ -14,12 +14,13 @@ CPP =		$(GCC) -x c -E -P
+ #XOBJS =	xmonitor.o
+ #LD_LIBS =	-lX11
+ #BASE_DEFS =	-DHEAP_MONITOR -DPOLL_DEBUG
++LD_LIBS=	-lm
+ XOBJS =
+ XLIBS =
+-DEFS =		$(BASE_DEFS) -DHOST_PPC -DTARGET_PPC -DOPSYS_UNIX -DOPSYS_NETBSD
++DEFS =		$(BASE_DEFS) -DARCH_PPC -DTARGET_PPC -DOPSYS_UNIX -DOPSYS_NETBSD
+ TARGET =	PPC
+ VERSION =	v-ppc-netbsd
  RUNTIME =	run.ppc-netbsd
  
  all:
