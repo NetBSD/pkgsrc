@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/09 15:19:57 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/22 10:43:00 adam Exp $
 include/CL/cl.h
 include/CL/cl_d3d10.h
 include/CL/cl_d3d11.h
@@ -7,6 +7,7 @@ include/CL/cl_dx9_media_sharing_intel.h
 include/CL/cl_egl.h
 include/CL/cl_ext.h
 include/CL/cl_ext_intel.h
+include/CL/cl_function_types.h
 include/CL/cl_gl.h
 include/CL/cl_gl_ext.h
 include/CL/cl_half.h
@@ -19,3 +20,4 @@ include/CL/opencl.h
 share/cmake/OpenCLHeaders/OpenCLHeadersConfig.cmake
 share/cmake/OpenCLHeaders/OpenCLHeadersConfigVersion.cmake
 share/cmake/OpenCLHeaders/OpenCLHeadersTargets.cmake
+share/pkgconfig/OpenCL-Headers.pc
