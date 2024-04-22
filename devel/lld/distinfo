@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.22 2023/10/06 19:15:19 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/04/22 07:06:39 adam Exp $
 
-BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
-SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
-Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
-BLAKE2s (lld-16.0.6.src.tar.xz) = b2c825a96aedf7a14033019ed7ddaf73fb5a50610ce650dd59a72448f0ab9caf
-SHA512 (lld-16.0.6.src.tar.xz) = 8df248785cd77e683f3daf9cab76a4a230305b881a7a844ef644b6a55fee366d5fcca23593ca09945ba8ddae0ae119042afe3f43547c106571e98004dbc7f1e6
-Size (lld-16.0.6.src.tar.xz) = 1455688 bytes
-SHA1 (patch-CMakeLists.txt) = afcd342966b989026b39445645807e6a541b351e
+BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
+SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
+Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
+BLAKE2s (lld-17.0.6.src.tar.xz) = e52fa27ce04c4d316d793c17e118d748469aa03216d7a20a7f10d01bf073b41e
+SHA512 (lld-17.0.6.src.tar.xz) = 55955fc24b3fb87012486618cf227a1640ad9a6d607c898d890337aa8c28f3e6a9ed48a52bd0ed57f365f0dc5081a6b3a037cb65da9a9f2cbc53a1527cb8db60
+Size (lld-17.0.6.src.tar.xz) = 1506048 bytes
+BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
+SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
+Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
 SHA1 (patch-ELF_Config.h) = 50861ef74c2ff9a9091afcbc8d076e379d9531e5
 SHA1 (patch-ELF_Options.td) = c81907d6e5e099ed2c26de972c6744b7197de3d3
