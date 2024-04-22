@@ -1,11 +1,25 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/04/16 21:46:12 khorben Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/04/22 09:59:20 he Exp $
 
 Build fix for NetBSD, where:
 * <alloca.h> does not exist but alloca(3) is available in <stdlib.h> instead
 * <sys/select.h> is not automatically visible
+* probe for gnu99 not c99 for more universal alloca() availability
 
 --- configure.ac.orig	2016-05-03 06:11:49.000000000 +0000
 +++ configure.ac
+@@ -26,9 +26,9 @@ AC_C_INLINE
+ AC_C_FUNC
+ 
+ # C99 support (mandatory)
+-AC_TRY_CFLAGS(-std=c99,
+- [CFLAGS="${CFLAGS} -std=c99"],
+- [AC_MSG_ERROR(support for C99 (-std=c99) required)])
++AC_TRY_CFLAGS(-std=gnu99,
++ [CFLAGS="${CFLAGS} -std=gnu99"],
++ [AC_MSG_ERROR(support for GNU C99 (-std=gnu99) required)])
+ 
+ # Library suffix
+ AC_MSG_CHECKING(for libzzuf full name)
 @@ -65,9 +65,9 @@ AC_SUBST(DLL_LDFLAGS)
  
  AC_CHECK_HEADERS(unistd.h inttypes.h stdint.h endian.h libc.h)
