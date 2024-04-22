@@ -1,23 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:10:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/04/22 10:43:29 adam Exp $
 
-BLAKE2s (ocl-icd-2.3.0.tar.gz) = caa35152919bc104a2b53d01f63d0901a57858f0fc728ddcafc58bfd3159a187
-SHA512 (ocl-icd-2.3.0.tar.gz) = 003f3661b7086a7364e79d1058591f12a7095aa2c3decfc4b496f00a0863a91cd81080f33b9308e3948045f8aca5856868ed2725f478654230e51a60d654e613
-Size (ocl-icd-2.3.0.tar.gz) = 100848 bytes
-SHA1 (patch-OpenCL.pc.in) = 4cef1fd6d976b4953e7afc8a53d26ce27ef5530b
-SHA1 (patch-icd__generator.rb) = d4522e8b264a3eb944f019e7139598e3ac6dc371
-SHA1 (patch-khronos-headers_CL_cl.h) = 016b3e07fc529b104530d29826b1375e8b0c4745
-SHA1 (patch-khronos-headers_CL_cl__d3d10.h) = efbd00d2ffae3e24a2d5671835d474f7c813da20
-SHA1 (patch-khronos-headers_CL_cl__d3d11.h) = 8865f5e4fafbf7216a212fc91e372a0f76772025
-SHA1 (patch-khronos-headers_CL_cl__dx9__media__sharing.h) = c70eec07f90db0b034c4c8e8761051a6967606c3
-SHA1 (patch-khronos-headers_CL_cl__egl.h) = 2426e022486e39f5e418d7d509fb7fe98c3c8697
-SHA1 (patch-khronos-headers_CL_cl__ext.h) = aa19f68954d390348dc4c85058d8b78e91d943c3
-SHA1 (patch-khronos-headers_CL_cl__gl.h) = 21707229aea5e2268af6ff49e5fc9ac834f7579b
-SHA1 (patch-khronos-headers_CL_cl__gl__ext.h) = 6daced51363b5157f66025c119ec9a08d68bfb2d
-SHA1 (patch-khronos-headers_CL_cl__icd.h) = ed0a46b8c1260b43f1578e07e34e0a5dbe53b5e6
-SHA1 (patch-khronos-headers_CL_cl__layer.h) = d1b0ae935c4eed12076d7e4da956626e38e93841
-SHA1 (patch-khronos-headers_CL_cl__platform.h) = 4010d874b9c25a8701c52460c8de822cf579c8c2
-SHA1 (patch-khronos-headers_CL_cl__va__api__media__sharing__intel.h) = 98a6605f15a7e583eacae59fd522f94ca01a51e6
-SHA1 (patch-khronos-headers_CL_opencl.h) = 2aa2d9b484252906f0ed82d176a95bb86614c617
-SHA1 (patch-ocl-icd.pc.in) = b484d17599ab9025f027191f10d6e56d2c015772
-SHA1 (patch-ocl__interface.yaml) = 41a400fdb541220de5a296e099bb646b00f189a3
-SHA1 (patch-run__dummy__icd.c) = b60c3b48730402ed8434dd2434e013dd1c26388e
+BLAKE2s (ocl-icd-2.3.2.tar.gz) = cd01c51dbc9f8cc795bde6d2bd97f4c0f0dfb2a877cef5d10273836b2000f8c2
+SHA512 (ocl-icd-2.3.2.tar.gz) = 5129975a10ffade76d20444345a59c82506914347391ad6c0b4c3826f51dcc641924b4a5abcc65c41766597af9cc7a76b9e5821f41898ff0251a05963e117796
+Size (ocl-icd-2.3.2.tar.gz) = 108988 bytes
+SHA1 (patch-OpenCL.pc.in) = 05579dc8147032d68ad9f95f6463bca61615025c
+SHA1 (patch-configure.ac) = d9f65968ef8b527108737856a43e1965a7ea0443
+SHA1 (patch-ocl-icd.pc.in) = 1db18536653335c095f34d34794dee9f82087e22

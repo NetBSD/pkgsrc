@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/04/22 10:43:29 adam Exp $
+
+Portability fix.
+
+--- configure.ac.orig	2024-04-22 09:53:57.568809574 +0000
++++ configure.ac
+@@ -196,7 +196,7 @@ AS_IF([test x"$OCL_ICD_LAYERDIR" = x"/et
+ ])
+ 
+ # always use versionned symbols (check required for MacOSX)
+-if test "x$macos" == xyes ; then
++if test "x$macos" = xyes ; then
+ AM_CONDITIONAL([USE_MAP], [false])
+ else
+ AM_CONDITIONAL([USE_MAP], [true])
