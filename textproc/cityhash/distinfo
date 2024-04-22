@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:21:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/04/22 10:21:52 he Exp $
 
 BLAKE2s (cityhash-1.1.1.tar.gz) = 41e650077d3b87abf8e02efac7dfa6e1e833b4ec004c4f50cd07a0f06a0596a4
 SHA512 (cityhash-1.1.1.tar.gz) = f5476a608fad87770aa6622f3c9ac441db1a0b1731e5235bf8599499943184a1fe5b91329cb9153b363a3e34605f7641b233114440e8895791df7d13452bb4f6
 Size (cityhash-1.1.1.tar.gz) = 376456 bytes
-SHA1 (patch-src_city.cc) = 1620e169d4bbabfcc5fb68ec471b6aeac4ae09cc
+SHA1 (patch-src_city.cc) = 2c4cc6824b10e984f33fd3d3aa875885a36d96c5
