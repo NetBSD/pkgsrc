@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2655 2024/04/22 10:00:00 he Exp $
+$NetBSD: CHANGES-2024,v 1.2656 2024/04/22 10:47:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4385,3 +4385,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/woboq_codebrowser to 2.1.20231117 [adam 2024-04-22]
 	Updated parallel/opencl-clang to 17.0.0 [adam 2024-04-22]
 	Updated devel/zzuf to 0.15nb1 [he 2024-04-22]
+	Updated parallel/opencl-headers to 2023.12.14 [adam 2024-04-22]
+	Updated parallel/ocl-icd to 2.3.2 [adam 2024-04-22]
+	Updated parallel/pocl to 5.0 [adam 2024-04-22]
