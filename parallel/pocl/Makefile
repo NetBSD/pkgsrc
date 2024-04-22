@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/11/08 13:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/22 10:44:56 adam Exp $
 
-DISTNAME=	pocl-4.0
-PKGREVISION=	1
+DISTNAME=	pocl-5.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,18 +10,14 @@ HOMEPAGE=	http://portablecl.org/
 COMMENT=	Portable implementation of the OpenCL standard
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+TEST_TARGET=		check
 
-TEST_TARGET=	check
-
-USE_CXX_FEATURES+=	c++11
-
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
-CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR="lib"
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+#CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendors"
-CMAKE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/pocl
@@ -33,9 +28,11 @@ GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 
 .include "../../mk/bsd.prefs.mk"
 
-# "LLVM could not recognize your CPU model automatically..."
-.if !empty(MACHINE_ARCH:Maarch64*)
+# "Don't know what CPU variants to use for kernel library on this platform."
+.if ${MACHINE_ARCH:Maarch64*}
 CMAKE_ARGS+=	-DLLC_HOST_CPU="cortex-a53"
+.else
+CMAKE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
 .endif
 
 pre-configure:
@@ -54,6 +51,7 @@ CONF_FILES+=	${PREFIX}/share/examples/OpenCL/vendors/pocl.icd \
 
 PKGCONFIG_OVERRIDE+=	pocl.pc.in.cmake
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../parallel/hwloc/buildlink3.mk"
