@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/12/14 13:16:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/22 07:55:27 adam Exp $
 
-DISTNAME=	opencl-clang-16.0.0
+DISTNAME=	opencl-clang-17.0.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_PROJECT=	opencl-clang	# do not remove this, it breaks cwrappers
