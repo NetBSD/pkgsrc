@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2023/10/06 19:15:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.56 2024/04/22 07:03:35 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 GCC_REQD+=		7
@@ -129,7 +129,7 @@ CMAKE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
 LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
 
-PKGVERSION_MAJOR=	16
+PKGVERSION_MAJOR=	17
 PLIST_SUBST+=		PKGVERSION_MAJOR=${PKGVERSION_MAJOR}
 
 PLIST_VARS+=	notdylib

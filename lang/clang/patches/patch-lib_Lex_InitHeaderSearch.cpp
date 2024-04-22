@@ -1,13 +1,13 @@
-$NetBSD: patch-lib_Lex_InitHeaderSearch.cpp,v 1.3 2023/10/06 19:15:20 adam Exp $
+$NetBSD: patch-lib_Lex_InitHeaderSearch.cpp,v 1.4 2024/04/22 07:03:35 adam Exp $
 
 Don't add /usr/local/include by default on Solaris.
 was: patch-lib_Frontend_InitHeaderSearch.cpp
 
---- lib/Lex/InitHeaderSearch.cpp.orig	2023-04-05 05:36:38.000000000 +0200
-+++ lib/Lex/InitHeaderSearch.cpp	2023-04-28 23:52:32.313523683 +0200
-@@ -236,6 +236,7 @@
-     case llvm::Triple::PS4:
-     case llvm::Triple::PS5:
+--- lib/Lex/InitHeaderSearch.cpp.orig	2023-10-03 06:37:35.000000000 +0000
++++ lib/Lex/InitHeaderSearch.cpp
+@@ -234,6 +234,7 @@ void InitHeaderSearch::AddDefaultCInclud
+     case llvm::Triple::CloudABI:
+     case llvm::Triple::NaCl:
      case llvm::Triple::ELFIAMCU:
 +    case llvm::Triple::Solaris:
        break;
