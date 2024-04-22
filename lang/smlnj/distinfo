@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2024/04/22 18:35:05 he Exp $
 
 BLAKE2s (smlnj-110.99.3/MLRISC.tgz) = cb6a621384f1ef29c31b659a0ad071a8925e1e54d118d6cb292bd0146025fef3
 SHA512 (smlnj-110.99.3/MLRISC.tgz) = f1f2d7cd1316bd6c4156fc184990ccfee916993283ce0963ff30306089b5c6297d2c4fe55a280f17ae05ad45a764e3bdfcfd1b8ee9a8382a049f323b48692c8a
@@ -90,7 +90,9 @@ SHA1 (patch-src_runtime_gc_c-globals-tbl.c) = 19ac4ccc3ed0e784c1aeab0fe3ed781417
 SHA1 (patch-src_runtime_gc_gc-stats.h) = 0160eec114563b2feebef62445225c39455ac193
 SHA1 (patch-src_runtime_gc_heap-out-util.c) = 214c673e57efda9346b200509a1beb48af2aa443
 SHA1 (patch-src_runtime_gc_init-gc.c) = e0c2330c7d5ca4b4e6a68c5ce8cbad8dcbee1363
+SHA1 (patch-src_runtime_include_asm-base.h) = 77679d5b93d1f788d6b9f732d4ef7168ff78518f
 SHA1 (patch-src_runtime_mach-dep_signal-sysdep.h) = 7d91bae4f7eb5c944de79c68be80e86b1143c092
+SHA1 (patch-src_runtime_mach-dep_unix-fault.c) = bbb6e1e371f9e9866f9d0d948bcb6787112c55c0
 SHA1 (patch-src_runtime_mach-dep_unix-prof.c) = 90a4b81e2a8532e4e06f29bfe42c55423a0f4154
 SHA1 (patch-src_runtime_objs_mk.amd64-cygwin) = 4d9d856001b4ecf245a3727fc9b2f7568fb1eb74
 SHA1 (patch-src_runtime_objs_mk.amd64-darwin) = 51a18c3e3aae9af87b8baabc009306a1840a5613
@@ -100,7 +102,7 @@ SHA1 (patch-src_runtime_objs_mk.amd64-netbsd) = 2310cca7687200419f28ffced9d91bfc
 SHA1 (patch-src_runtime_objs_mk.ppc-aix) = 509ffc0152b2cdfa4e0f6621bed026fe0f1edc99
 SHA1 (patch-src_runtime_objs_mk.ppc-darwin) = 6ae822c7b39255b5204e358e3c21aa23b93883ec
 SHA1 (patch-src_runtime_objs_mk.ppc-linux) = 171ec491a536aa782880d3b3392cf0d728fd9c03
-SHA1 (patch-src_runtime_objs_mk.ppc-netbsd) = dd532b009e08825fe7765772f93312202defabfc
+SHA1 (patch-src_runtime_objs_mk.ppc-netbsd) = a4807093a85a6658a6adebb6b6ed12182fdac66e
 SHA1 (patch-src_runtime_objs_mk.x86-cygwin) = 40ec254c8ab1d098c1c7b9a792a36137e54ed9df
 SHA1 (patch-src_runtime_objs_mk.x86-darwin) = 0a4c7eec294da0c3b4cd1dfe607456bd604d543c
 SHA1 (patch-src_runtime_objs_mk.x86-freebsd) = ff5b8d11ed0865e6178728270017360bd4a4250f
