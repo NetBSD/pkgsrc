@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/07/09 18:38:59 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/22 14:44:53 thorpej Exp $
 #
 
-COCOFS_VERS=	1.0
+COCOFS_VERS=	1.0.1
 
 GITHUB_PROJECT=	cocofs
 GITHUB_TAG=	v${COCOFS_VERS}
