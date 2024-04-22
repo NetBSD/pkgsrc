@@ -1,11 +1,10 @@
-#	$NetBSD: SCO_SV.sys.mk,v 1.1 2014/03/14 22:03:16 ryoon Exp $
+#	$NetBSD: SCO_SV.sys.mk,v 1.2 2024/04/22 07:33:05 jperkin Exp $
 #	NetBSD: UnixWare.sys.mk,v 1.2 2006/11/11 18:24:52 jschauma Exp
 #	NetBSD: SunOS.sys.mk,v 1.1.1.1 2004/03/11 13:04:00 grant Exp
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix.
-OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4

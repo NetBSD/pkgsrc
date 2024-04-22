@@ -1,9 +1,8 @@
-#	$NetBSD: Linux.sys.mk,v 1.7 2016/09/08 14:28:12 joerg Exp $
+#	$NetBSD: Linux.sys.mk,v 1.8 2024/04/22 07:33:05 jperkin Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
-OS?=		Linux
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4

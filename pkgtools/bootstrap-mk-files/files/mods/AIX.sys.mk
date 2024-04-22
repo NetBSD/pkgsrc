@@ -1,8 +1,7 @@
-#	$NetBSD: AIX.sys.mk,v 1.2 2016/09/08 14:28:12 joerg Exp $
+#	$NetBSD: AIX.sys.mk,v 1.3 2024/04/22 07:33:05 jperkin Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
-OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
