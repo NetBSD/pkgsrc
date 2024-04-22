@@ -1,7 +1,6 @@
-#	$NetBSD: Interix.sys.mk,v 1.2 2006/11/11 18:24:52 jschauma Exp $
+#	$NetBSD: Interix.sys.mk,v 1.3 2024/04/22 07:33:05 jperkin Exp $
 
 unix?=		We run Unix
-OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4

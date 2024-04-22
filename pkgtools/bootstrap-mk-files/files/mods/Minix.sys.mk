@@ -1,8 +1,7 @@
-#	$NetBSD: Minix.sys.mk,v 1.4 2016/09/08 14:28:12 joerg Exp $
+#	$NetBSD: Minix.sys.mk,v 1.5 2024/04/22 07:33:05 jperkin Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix.
-OS?=		Minix
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4

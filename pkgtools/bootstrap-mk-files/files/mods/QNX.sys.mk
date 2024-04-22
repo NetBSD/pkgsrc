@@ -1,8 +1,7 @@
-#	$NetBSD: QNX.sys.mk,v 1.3 2020/08/29 20:11:21 js Exp $
+#	$NetBSD: QNX.sys.mk,v 1.4 2024/04/22 07:33:05 jperkin Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
-OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4

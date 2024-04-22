@@ -1,7 +1,6 @@
-#	$NetBSD: Cygwin.sys.mk,v 1.1 2013/02/10 06:15:52 obache Exp $
+#	$NetBSD: Cygwin.sys.mk,v 1.2 2024/04/22 07:33:05 jperkin Exp $
 
 unix?=		We run Unix
-OS!=		uname -s
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
