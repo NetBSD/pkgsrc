@@ -1,13 +1,13 @@
-$NetBSD: patch-src_filesystem_filesystem__common.h,v 1.1 2022/08/13 09:38:09 tnn Exp $
+$NetBSD: patch-src_filesystem_file__descriptor.h,v 1.1 2024/04/22 07:05:15 adam Exp $
 
 Support POSIX file modes.
 
---- src/filesystem/filesystem_common.h.orig	2022-06-22 16:46:24.000000000 +0000
-+++ src/filesystem/filesystem_common.h
-@@ -538,7 +538,21 @@ bool set_file_times(const path& p, std::
+--- src/filesystem/file_descriptor.h.orig	2023-10-17 06:20:52.000000000 +0000
++++ src/filesystem/file_descriptor.h
+@@ -41,7 +41,21 @@ namespace detail {
  #if defined(DT_BLK)
  template <class DirEntT, class = decltype(DirEntT::d_type)>
- static file_type get_file_type(DirEntT* ent, int) {
+ file_type get_file_type(DirEntT* ent, int) {
 +#ifdef __sun
 +#define DT_BLK		S_IFBLK
 +#define DT_CHR		S_IFCHR

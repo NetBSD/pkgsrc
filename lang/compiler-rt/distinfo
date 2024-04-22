@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.24 2023/10/06 19:15:20 adam Exp $
+$NetBSD: distinfo,v 1.25 2024/04/22 07:05:15 adam Exp $
 
-BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
-SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
-Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
-BLAKE2s (compiler-rt-16.0.6.src.tar.xz) = 347c0c1e7d13ab026bc18d21a892047cf75039f940f58d32a2b365f51f5f3aa6
-SHA512 (compiler-rt-16.0.6.src.tar.xz) = 852e2105facb12ea0943aa24e0c220f76671ad76dfe7d07b8164c3a1d8360670ca565a2b6dd590722b974e16a2adf3c466fdabdfd3bb3ebbd005162c8ac4406c
-Size (compiler-rt-16.0.6.src.tar.xz) = 2358240 bytes
+BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
+SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
+Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
+BLAKE2s (compiler-rt-17.0.6.src.tar.xz) = 8040b6b978282e9e1c096321ce72be431ac88683cb1126f24e72637a21eef328
+SHA512 (compiler-rt-17.0.6.src.tar.xz) = 56dc9d304dd4ba8d28179077dd99ca7c820ce26dbc70d33b2ba41769928adc900f7618d3efef756b2fc92e322d2f25dba49be966d6583d2d8f1fce9283a9cdf7
+Size (compiler-rt-17.0.6.src.tar.xz) = 2421808 bytes
+BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
+SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
+Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
-SHA1 (patch-lib_asan_CMakeLists.txt) = f91335b88c8c28a25d7dfada85769f799660f82a
-SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 708b4def299a1cc47fca3c48f70745f8528c0fb8
+SHA1 (patch-lib_asan_CMakeLists.txt) = b06a9cf121847d4fabf1da34e3af1d036c110b43

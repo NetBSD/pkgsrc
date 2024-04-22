@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/04/11 17:02:03 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/04/22 07:05:15 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 
