@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.15 2023/10/06 19:15:20 adam Exp $
+# $NetBSD: version.mk,v 1.16 2024/04/22 06:52:42 adam Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -14,7 +14,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	16.0.6
+LLVM_VERSION=	17.0.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
 GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
@@ -24,8 +24,11 @@ LLVM_MAJOR_VERSION=	${LLVM_VERSION:tu:C/\\.[[:digit:]\.]*//}
 
 # As of v15.0.0 llvm requires cmake source code to build
 CMAKE_DIST=	cmake-${LLVM_VERSION}.src
-EXTRA_DIST+=	${CMAKE_DIST}${EXTRACT_SUFX}
+RUNTIMES_DIST=	runtimes-${LLVM_VERSION}.src
+EXTRA_DIST+=	${CMAKE_DIST}${EXTRACT_SUFX} ${RUNTIMES_DIST}${EXTRACT_SUFX}
 SITES.${CMAKE_DIST}${EXTRACT_SUFX}=	\
+		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${RUNTIMES_DIST}${EXTRACT_SUFX}=	\
 		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
@@ -33,3 +36,4 @@ DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 post-extract: llvm-cmake-modules
 llvm-cmake-modules:
 	${LN} -f -s ${WRKDIR}/${CMAKE_DIST} ${WRKDIR}/cmake
+	${LN} -f -s ${WRKDIR}/${RUNTIMES_DIST} ${WRKDIR}/runtimes
