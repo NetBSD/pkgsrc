@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:03:40 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/04/22 13:44:10 he Exp $
 
 BLAKE2s (hmmer-3.0.tar.gz) = 3c1f4bc23fbf62069bb6eb137db0cd61123b38a9010aba5cf487ea47ad92acaf
 SHA512 (hmmer-3.0.tar.gz) = 752f06b0494a87ccd2cf6aa93e622fd02173eaa0df60df0527b3361dcaa2baf2b45a2daf0123217c0029bc9d95e505a92f1e97039eb8b7218b4c4b65ddad1db5
 Size (hmmer-3.0.tar.gz) = 3952015 bytes
 SHA1 (patch-aa) = 8d0d3be4401590c20d102b7e0ebadcb1b6c03066
+SHA1 (patch-easel_esl__vmx.c) = 43d82ea069168a4216b744966408ef9ae44af46d
+SHA1 (patch-easel_esl__vmx.h) = a5cfca3438ddb827fe9e2308a974341059781f3d
