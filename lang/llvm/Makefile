@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/11/23 11:01:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.95 2024/04/22 06:52:42 adam Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -23,7 +23,6 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility.
 
-PKGREVISION= 1
 .include "version.mk"
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
@@ -35,7 +34,8 @@ HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=		c c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -80,6 +80,7 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 # all platforms.  Change this to a patch if verified.
 SUBST_CLASSES.SunOS+=	linkmap
 SUBST_STAGE.linkmap=	pre-configure
+SUBST_FILES.linkmap=	tools/lto/lto.exports
 SUBST_FILES.linkmap+=	tools/remarks-shlib/Remarks.exports
 SUBST_SED.linkmap=	-e '/^LLVM/d'
 
