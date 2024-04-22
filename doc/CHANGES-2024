@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2654 2024/04/22 07:57:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2655 2024/04/22 10:00:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4384,3 +4384,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated parallel/spirv-llvm-translator to 17.0.0 [adam 2024-04-22]
 	Updated devel/woboq_codebrowser to 2.1.20231117 [adam 2024-04-22]
 	Updated parallel/opencl-clang to 17.0.0 [adam 2024-04-22]
+	Updated devel/zzuf to 0.15nb1 [he 2024-04-22]
