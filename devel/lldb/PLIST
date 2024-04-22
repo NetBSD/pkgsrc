@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/10/06 19:15:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/04/22 07:06:39 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
@@ -48,6 +48,7 @@ include/lldb/API/SBProcessInfo.h
 include/lldb/API/SBQueue.h
 include/lldb/API/SBQueueItem.h
 include/lldb/API/SBReproducer.h
+include/lldb/API/SBScriptObject.h
 include/lldb/API/SBSection.h
 include/lldb/API/SBSourceManager.h
 include/lldb/API/SBStream.h
@@ -112,10 +113,10 @@ include/lldb/Core/DebuggerEvents.h
 include/lldb/Core/Declaration.h
 include/lldb/Core/Disassembler.h
 include/lldb/Core/DumpDataExtractor.h
+include/lldb/Core/DumpRegisterInfo.h
 include/lldb/Core/DumpRegisterValue.h
 include/lldb/Core/EmulateInstruction.h
 include/lldb/Core/FileLineResolver.h
-include/lldb/Core/FileSpecList.h
 include/lldb/Core/FormatEntity.h
 include/lldb/Core/Highlighter.h
 include/lldb/Core/IOHandler.h
@@ -141,7 +142,6 @@ include/lldb/Core/StreamAsynchronousIO.h
 include/lldb/Core/StreamBuffer.h
 include/lldb/Core/StreamFile.h
 include/lldb/Core/StructuredDataImpl.h
-include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
 include/lldb/Core/ThreadSafeValue.h
 include/lldb/Core/ThreadedCommunication.h
@@ -196,6 +196,7 @@ include/lldb/Expression/IRInterpreter.h
 include/lldb/Expression/IRMemoryMap.h
 include/lldb/Expression/LLVMUserExpression.h
 include/lldb/Expression/Materializer.h
+include/lldb/Expression/ObjectFileJIT.h
 include/lldb/Expression/REPL.h
 include/lldb/Expression/UserExpression.h
 include/lldb/Expression/UtilityFunction.h
@@ -248,6 +249,7 @@ include/lldb/Host/common/NativeThreadProtocol.h
 include/lldb/Host/common/NativeWatchpointList.h
 include/lldb/Host/common/TCPSocket.h
 include/lldb/Host/common/UDPSocket.h
+include/lldb/Host/common/ZipFileResolver.h
 include/lldb/Host/freebsd/HostInfoFreeBSD.h
 include/lldb/Host/linux/AbstractSocket.h
 include/lldb/Host/linux/Host.h
@@ -331,8 +333,8 @@ include/lldb/Interpreter/OptionValues.h
 include/lldb/Interpreter/Options.h
 include/lldb/Interpreter/Property.h
 include/lldb/Interpreter/ScriptInterpreter.h
+include/lldb/Interpreter/ScriptObject.h
 include/lldb/Interpreter/ScriptedInterface.h
-include/lldb/Interpreter/ScriptedMetadata.h
 include/lldb/Interpreter/ScriptedPlatformInterface.h
 include/lldb/Interpreter/ScriptedProcessInterface.h
 include/lldb/Symbol/ArmUnwindInfo.h
@@ -403,7 +405,9 @@ include/lldb/Target/QueueList.h
 include/lldb/Target/RegisterCheckpoint.h
 include/lldb/Target/RegisterContext.h
 include/lldb/Target/RegisterContextUnwind.h
+include/lldb/Target/RegisterFlags.h
 include/lldb/Target/RegisterNumber.h
+include/lldb/Target/RegisterTypeBuilder.h
 include/lldb/Target/RemoteAwarePlatform.h
 include/lldb/Target/Runtime.h
 include/lldb/Target/SectionLoadHistory.h
@@ -468,6 +472,7 @@ include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
 include/lldb/Utility/Event.h
 include/lldb/Utility/FileSpec.h
+include/lldb/Utility/FileSpecList.h
 include/lldb/Utility/Flags.h
 include/lldb/Utility/GDBRemote.h
 include/lldb/Utility/IOObject.h
@@ -485,6 +490,7 @@ include/lldb/Utility/RangeMap.h
 include/lldb/Utility/RegisterValue.h
 include/lldb/Utility/RegularExpression.h
 include/lldb/Utility/Scalar.h
+include/lldb/Utility/ScriptedMetadata.h
 include/lldb/Utility/SelectHelper.h
 include/lldb/Utility/SharedCluster.h
 include/lldb/Utility/State.h
@@ -497,6 +503,7 @@ include/lldb/Utility/StringExtractorGDBRemote.h
 include/lldb/Utility/StringLexer.h
 include/lldb/Utility/StringList.h
 include/lldb/Utility/StructuredData.h
+include/lldb/Utility/ThreadSafeDenseMap.h
 include/lldb/Utility/TildeExpressionResolver.h
 include/lldb/Utility/Timeout.h
 include/lldb/Utility/Timer.h
@@ -510,6 +517,7 @@ include/lldb/Utility/UserIDResolver.h
 include/lldb/Utility/VASPrintf.h
 include/lldb/Utility/VMRange.h
 include/lldb/Utility/XcodeSDK.h
+include/lldb/Utility/ZipFile.h
 include/lldb/Version/Version.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
@@ -523,8 +531,8 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.${PKGVERSION}
 lib/liblldb.so.${LLVM_MAJOR_VERSION}
+lib/liblldb.so.${PKGVERSION}
 lib/lua/5.3/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
