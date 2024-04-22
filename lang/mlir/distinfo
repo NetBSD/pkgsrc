@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.1 2023/10/06 19:15:21 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/04/22 07:28:21 adam Exp $
 
-BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
-SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
-Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
-BLAKE2s (mlir-16.0.6.src.tar.xz) = 296bc315f0a73cacf168539a0f1fed67edc928aed20cdf9eff2227e37dace2fc
-SHA512 (mlir-16.0.6.src.tar.xz) = 93a34061a6939aff0009883a14627cf8391530aa86740cf2341b73c63db394fde4b7066de84afb49a7adf79d1dc4d0c35f6dbc261fccc5ffc645109facd7802d
-Size (mlir-16.0.6.src.tar.xz) = 4555584 bytes
+BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
+SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
+Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
+BLAKE2s (mlir-17.0.6.src.tar.xz) = 222120f283eb3cdb326a1cda5161816988cf4f82dac90ca40466c1e05d58bc18
+SHA512 (mlir-17.0.6.src.tar.xz) = 40e5310d1ee613d38d2fc1f72cd4902c402e72e18fc44c275bbd7605e86934093a9b1e64329e91a5e99adb7e95c5cede550dd8c500bf505f037ad264ecba268a
+Size (mlir-17.0.6.src.tar.xz) = 5336028 bytes
+BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
+SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
+Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
 SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 528ffcd98d35b22c168b228daca28af319a47c5c
-SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 668c55c4a056badf43add0bce3fadc07837336d9
+SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 7b78acbf8a85443f2cc3f13786bbbda25b0b8d74
