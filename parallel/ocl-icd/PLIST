@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/10 05:55:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/22 10:43:29 adam Exp $
+bin/cllayerinfo
 include/ocl_icd.h
 lib/libOpenCL.la
 lib/pkgconfig/OpenCL.pc
