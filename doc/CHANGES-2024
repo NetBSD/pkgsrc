@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2657 2024/04/22 10:58:03 he Exp $
+$NetBSD: CHANGES-2024,v 1.2658 2024/04/22 13:26:35 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4389,3 +4389,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated parallel/ocl-icd to 2.3.2 [adam 2024-04-22]
 	Updated parallel/pocl to 5.0 [adam 2024-04-22]
 	Updated security/beecrypt to 4.1.1nb2 [he 2024-04-22]
+	Updated lang/nim to 2.0.4 [nikita 2024-04-22]
