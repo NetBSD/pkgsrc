@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.18 2023/10/06 19:15:20 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/04/22 07:04:01 adam Exp $
 
-BLAKE2s (clang-16.0.6.src.tar.xz) = 528647ba7c3b87280ceb8c4a46eecf514600bad27cd1b71ee5ab32a28f8c5069
-SHA512 (clang-16.0.6.src.tar.xz) = 92c65b882e1504f4a9b8a3f6b8a24061505987aaacc8bb835115b4e4d74ac3a8c98343a308567b07c6b42bb99877c300bce3c4a5a25ada77abe65606aa25188d
-Size (clang-16.0.6.src.tar.xz) = 20356652 bytes
-BLAKE2s (clang-tools-extra-16.0.6.src.tar.xz) = f819493b015d8fc14400d723827c823c364f560854fb67295dc0920169929884
-SHA512 (clang-tools-extra-16.0.6.src.tar.xz) = ec1a0834f223e393d24c11586b744167a41cea6c39d1bb18c433d2fb736501950fdff42f1eb0caa13c75bcb8ef9ac309eb0687644307698ec0420ff8a769c710
-Size (clang-tools-extra-16.0.6.src.tar.xz) = 3151928 bytes
-BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
-SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
-Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (clang-17.0.6.src.tar.xz) = 888020252b920ca120cc022d13cf411d7dc024f4076ccaff5eccc38dc1e4b438
+SHA512 (clang-17.0.6.src.tar.xz) = da6f670a52d60c46bbe6bfa2870106f6a6714c9566fab293b8c624a555308104a1a05cd065643091d7006ef4533a9a722dff1fccaf26f348a0c0a5c7b9331439
+Size (clang-17.0.6.src.tar.xz) = 21577596 bytes
+BLAKE2s (clang-tools-extra-17.0.6.src.tar.xz) = 34adb6dfd8e8cb375e798d0473f70affd3d9a481368754eace97e08416de3412
+SHA512 (clang-tools-extra-17.0.6.src.tar.xz) = 5110dd36ee1c966d22760000f0c28cf070fd00b05445d418d264dbd3b48426a203f934e402d408fab2602dbf39a29d66898cc7c69c1a52b5e0e6e7097f9db877
+Size (clang-tools-extra-17.0.6.src.tar.xz) = 3269980 bytes
+BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
+SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
+Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
+BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
+SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
+Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
