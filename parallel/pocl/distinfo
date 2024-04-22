@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/09/11 14:29:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/22 10:44:56 adam Exp $
 
-BLAKE2s (pocl-4.0.tar.gz) = 22d5266690023cf30a24f66b8c4bed621d6c2043dd0911bd9ebfc6b9093bfd3a
-SHA512 (pocl-4.0.tar.gz) = 3835a9e8fc8562d50a91a11b807cf87a096891f5c27675127b66412eacff2e541b6143b49b4155f43a09f4e53faa062ec20f3b20badeca206ece9f45ad50f26a
-Size (pocl-4.0.tar.gz) = 2140919 bytes
+BLAKE2s (pocl-5.0.tar.gz) = c6938b163c59a29722308e33b93060ce42e8739858b57624171ebf53928f4701
+SHA512 (pocl-5.0.tar.gz) = c2d6c80cbcba7af1c31dfa794c2aa7be6d1ce2cc9900fbf6e0a1536747440602cdc0f1a84f81f85737818a7ea60b490558ef328b3b156e52c63db3fe4ce490b0
+Size (pocl-5.0.tar.gz) = 2361502 bytes
+SHA1 (patch-CMakeLists.txt) = df51c150925dbac06f95f94c260230d9dd97f049
