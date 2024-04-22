@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:20:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/22 09:59:20 he Exp $
 
 BLAKE2s (zzuf-0.15.tar.gz) = 6a94c6acac04d25d02331714fd828e82449be8da82eb77954dacfa71e8932da0
 SHA512 (zzuf-0.15.tar.gz) = f5b26f630343d4e0d87705df26b2fa01059ea7ffd7a4970a353014f9e59bc31526edde675de6a4dab9372e39d762cfd180a38990e498f609a3c7ae7fe44ba487
 Size (zzuf-0.15.tar.gz) = 493559 bytes
 SHA1 (patch-config.h.in) = 517bc764b4b53b15e189fe39322341fe50af3ec8
-SHA1 (patch-configure) = e6797a1b4f90ebb41ea86e7d99241ca78b9b0ad9
-SHA1 (patch-configure.ac) = d236876a47c3df13b6a82dda5c941f7a314b1abc
+SHA1 (patch-configure) = a8eb51b90566efd44874e6e154628115205618a9
+SHA1 (patch-configure.ac) = b1cb0190a86621dd8ee47a400700cb1abaf11a67
 SHA1 (patch-src_util_md5.c) = 12c0068355fb8c3a63f329e5774aa0cebcad7b44
 SHA1 (patch-src_zzuf.c) = 28a1223a7a4d4a3d6a0320910b7c782ce202c8d0

@@ -1,11 +1,38 @@
-$NetBSD: patch-configure,v 1.1 2017/04/16 21:46:12 khorben Exp $
+$NetBSD: patch-configure,v 1.2 2024/04/22 09:59:20 he Exp $
 
 Build fix for NetBSD, where:
 * <alloca.h> does not exist but alloca(3) is available in <stdlib.h> instead
 * <sys/select.h> is not automatically visible
+* probe for gnu99 not c99 for more universal alloca() availability
 
 --- configure.orig	2016-05-03 06:12:05.000000000 +0000
 +++ configure
+@@ -12352,10 +12352,10 @@ _ACEOF
+ $as_echo "$ac_v_func" >&6; }
+ 
+ # C99 support (mandatory)
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $CC supports -std=c99 flags" >&5
+-$as_echo_n "checking if $CC supports -std=c99 flags... " >&6; }
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $CC supports -std=gnu99 flags" >&5
++$as_echo_n "checking if $CC supports -std=gnu99 flags... " >&6; }
+     SAVE_CFLAGS="$CFLAGS"
+-    CFLAGS="-std=c99"
++    CFLAGS="-std=gnu99"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -12377,9 +12377,9 @@ rm -f core conftest.err conftest.$ac_obj
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_try_cflags_ok" >&5
+ $as_echo "$ac_cv_try_cflags_ok" >&6; }
+     if test x"$ac_cv_try_cflags_ok" = x"yes"; then
+-        CFLAGS="${CFLAGS} -std=c99"
++        CFLAGS="${CFLAGS} -std=gnu99"
+     else
+-        as_fn_error $? "support for C99 (-std=c99) required" "$LINENO" 5
++        as_fn_error $? "support for GNU C99 (-std=gnu99) required" "$LINENO" 5
+     fi
+ 
+ # Library suffix
 @@ -12561,7 +12561,7 @@ fi
  
  done
