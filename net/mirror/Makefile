@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2022/06/28 11:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46.14.1 2024/04/22 18:28:54 bsiegert Exp $
 
 DISTNAME=	mirror-2.9
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	# ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
