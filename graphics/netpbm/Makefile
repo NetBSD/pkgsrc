@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.245 2024/04/21 12:54:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.246 2024/04/22 03:50:52 ryoon Exp $
 
 DISTNAME=	netpbm-11.02.09
 CATEGORIES=	graphics
-MASTER_SITES=	#
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/stable netpbm
 # tar --exclude netpbm/.svn -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
