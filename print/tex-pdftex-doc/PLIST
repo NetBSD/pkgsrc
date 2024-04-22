@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/09 05:58:51 markd Exp $
-man/man1/pdfetex.1
+@comment $NetBSD: PLIST,v 1.10 2024/04/22 11:57:16 markd Exp $
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
 share/texmf-dist/doc/pdftex/manual/ChangeLog
