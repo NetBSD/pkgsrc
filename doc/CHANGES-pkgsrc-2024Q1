@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.4 2024/04/22 16:26:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.5 2024/04/22 18:29:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -26,4 +26,11 @@ lang/php83: security fix
 
 Pullup ticket #6849 - requested by taca
 lang/php81: security fix
+
+Pullup ticket #6846 - requested by bouyer
+net/mirror: build fix
+
+Pullup ticket #6850 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
