@@ -1,0 +1,39 @@
+$NetBSD: patch-Makefile,v 1.1 2024/04/23 21:33:37 schmonz Exp $
+
+Tiger lipo(1) doesn't have -archs.
+
+--- Makefile.orig	2024-04-21 18:16:19.000000000 +0000
++++ Makefile
+@@ -117,12 +117,13 @@ define splitandfilterandmergemultiarch
+ 	grep='$(6)' && \
+ 	platform='$(7)' && \
+ 	force_arch='$(8)' && \
++	sed='$(9)' && \
+ 	objectlist="$${output}".* && \
+ 	archlist='' && \
+ 	fatness='' && \
+ 	for object in $${objectlist}; do \
+ 		if [ -z "$${force_arch}" ]; then \
+-			archlist_new="$$($${lipo} -archs "$${object}")"; \
++			archlist_new="$$($${lipo} -info "$${object}" | $${sed} -e 's|^Architectures.*are: ||' -e 's|^Non-fat.*architecture: ||')"; \
+ 		else \
+ 			archlist_new="$${force_arch}"; \
+ 		fi && \
+@@ -222,7 +223,7 @@ $(MULTIDLIBOBJS): %$(DLIBOBJEXT): %.c $(
+ 	$(CC) -c -I$(SRCINCDIR) $(CFLAGS) $(DLIBCFLAGS) -D__DARWIN_UNIX03=1 -D__DARWIN_ONLY_UNIX_CONFORMANCE=1 -D__DARWIN_64_BIT_INO_T=1 -D__DARWIN_ONLY_64_BIT_INO_T=0 $< -o $@.inode64
+ 	$(CC) -c -I$(SRCINCDIR) $(CFLAGS) $(DLIBCFLAGS) -D__DARWIN_UNIX03=1 -D__DARWIN_ONLY_UNIX_CONFORMANCE=0 -D__DARWIN_64_BIT_INO_T=1 -D__DARWIN_ONLY_64_BIT_INO_T=0 $< -o $@.inode64unix2003
+ 	# ... and split them up, because ld can only generate single-architecture files ...
+-	$(call splitandfilterandmergemultiarch,$@,$(LIPO),$(RM),$(CP),$(LD),$(GREP),$(PLATFORM),$(FORCE_ARCH))
++	$(call splitandfilterandmergemultiarch,$@,$(LIPO),$(RM),$(CP),$(LD),$(GREP),$(PLATFORM),$(FORCE_ARCH),$(SED))
+ 
+ $(MULTISLIBOBJS): %$(SLIBOBJEXT): %.c $(ALLHEADERS)
+ 	# Generate possibly multi-architecture object files ...
+@@ -231,7 +232,7 @@ $(MULTISLIBOBJS): %$(SLIBOBJEXT): %.c $(
+ 	$(CC) -c -I$(SRCINCDIR) $(CFLAGS) $(SLIBCFLAGS) -D__DARWIN_UNIX03=1 -D__DARWIN_ONLY_UNIX_CONFORMANCE=1 -D__DARWIN_64_BIT_INO_T=1 -D__DARWIN_ONLY_64_BIT_INO_T=0 $< -o $@.inode64
+ 	$(CC) -c -I$(SRCINCDIR) $(CFLAGS) $(SLIBCFLAGS) -D__DARWIN_UNIX03=1 -D__DARWIN_ONLY_UNIX_CONFORMANCE=0 -D__DARWIN_64_BIT_INO_T=1 -D__DARWIN_ONLY_64_BIT_INO_T=0 $< -o $@.inode64unix2003
+ 	# ... and split them up, because ld can only generate single-architecture files ...
+-	$(call splitandfilterandmergemultiarch,$@,$(LIPO),$(RM),$(CP),$(LD),$(GREP),$(PLATFORM),$(FORCE_ARCH))
++	$(call splitandfilterandmergemultiarch,$@,$(LIPO),$(RM),$(CP),$(LD),$(GREP),$(PLATFORM),$(FORCE_ARCH),$(SED))
+ 
+ # Generously marking all header files as potential dependencies
+ $(DLIBOBJS): %$(DLIBOBJEXT): %.c $(ALLHEADERS)

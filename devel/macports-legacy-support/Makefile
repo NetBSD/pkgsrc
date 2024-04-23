@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/11/15 15:23:13 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/23 21:33:37 schmonz Exp $
 
-DISTNAME=	macports-legacy-support-1.1.1
+DISTNAME=	macports-legacy-support-1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=macports/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
