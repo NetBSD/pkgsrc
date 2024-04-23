@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:34:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/04/23 21:25:58 wiz Exp $
 
-BLAKE2s (rendercheck-1.5.tar.bz2) = 5598cb65fb6b991d0d2457d74abaed7459c443a724b79a3e4eba71c28d0607f1
-SHA512 (rendercheck-1.5.tar.bz2) = ffa1abf317f85a8bcef3544e3f810b34567553524ac0a784d2a67470e0811854d7983af8600a04aadecf42871ccb83ad5c0e9e25179142fda2a8f5853a07f616
-Size (rendercheck-1.5.tar.bz2) = 143656 bytes
+BLAKE2s (rendercheck-1.6.tar.xz) = 42b5b4e26d64f56b8d9806d759599342e837033b3e569227e38123a99cf1d6c5
+SHA512 (rendercheck-1.6.tar.xz) = 0cc5372a318d4a28d63d82a2efc42f15b810186ce91b226bc5b962520637b628b1ae991a9e7745f8239c4fd100bf8f8eab79bc3803a01cad6827022af49be1a3
+Size (rendercheck-1.6.tar.xz) = 23996 bytes
