@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.323 2024/03/22 23:34:00 gutteridge Exp $
+# $NetBSD: bootstrap,v 1.324 2024/04/23 07:38:14 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -748,6 +748,13 @@ Linux)
 	elif grep -sq '^CHROMEOS_RELEASE_NAME' /etc/lsb-release; then
 		need_awk=yes
 		need_sed=yes
+	fi
+	# Some distros, eg. OpenWRT provide no groups(1), whoami(1) by default:
+	if ! groups >/dev/null 2>&1; then
+		groupsprog="id -gn"
+	fi
+	if ! whoami >/dev/null 2>&1; then
+		whoamiprog="id -un"
 	fi
 	machine_arch=`uname -m`
 	# Override machine_arch where required.
