@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.177 2024/04/23 07:16:08 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.178 2024/04/23 12:12:07 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -21731,7 +21731,6 @@ gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-32438
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-32439
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-32440
 libsixel<1.8.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21677
-nim-[0-9]*	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2020-23171
 perl>=5.32.0<5.34.0nb3	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2021-36770
 php{56,72,73,74,80}-typo3<7.6.53	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32768
 py{27,36,37,38,39}-notebook<6.4.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32798
