@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.5 2024/04/22 18:29:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.6 2024/04/23 16:19:22 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -33,4 +33,10 @@ net/mirror: build fix
 Pullup ticket #6850 - requested by gutteridge
 www/firefox115: security fix
 www/firefox115-l10n: dependent update
+
+Pullup ticket #6851 - requested by taca
+net/bind918: blocklist handling fix (PR bin/58170)
+
+Pullup ticket #6852 - requested by taca
+net/bind916: blocklist handling fix (PR bin/58170)
 
