@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2024/04/23 16:25:49 hauke Exp $
+$NetBSD: distinfo,v 1.11 2024/04/23 16:35:46 hauke Exp $
 
 BLAKE2s (mailgraph-1.14.tar.gz) = 7fa8d0020b9eebe7ed325426ea7e82b5153456c8a84f8602809106331449f722
 SHA512 (mailgraph-1.14.tar.gz) = 3df0dae010ad166a157eb34a8b1fcf837ab42445d417855ea58937a75b74ca55c06044eefb6077a6117073c39a087bcdf5f58fe35c0e4d9c7d6b18bded7a0193
 Size (mailgraph-1.14.tar.gz) = 22014 bytes
 SHA1 (patch-mailgraph.cgi) = 835d3537dc95f91f860857f45c542ca01bc12082
-SHA1 (patch-mailgraph.pl) = 6804585ee5c43bc57df6ffbda34a01394b11f42a
+SHA1 (patch-mailgraph.pl) = f9976c9d03ea2d07413f4a5f4b4b13af13e50d71

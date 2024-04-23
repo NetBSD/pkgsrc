@@ -1,6 +1,7 @@
-$NetBSD: patch-mailgraph.pl,v 1.2 2024/04/23 16:25:49 hauke Exp $
+$NetBSD: patch-mailgraph.pl,v 1.3 2024/04/23 16:35:46 hauke Exp $
 
 * Use log/maillog as default mail logfile.
+* Use db/mailgraph as default RRD directory.
 * Change hardcoded /var to pkgsrc compliant VARBASE.
 
 --- mailgraph.pl.orig	2007-08-29 09:06:01.000000000 +0000
@@ -57,7 +58,7 @@ $NetBSD: patch-mailgraph.pl,v 1.2 2024/04/23 16:25:49 hauke Exp $
       --host=HOST    use only entries for HOST (regexp) in syslog
   -d, --daemon       start in the background
 - --daemon-pid=FILE  write PID to FILE instead of /var/run/mailgraph.pid
-- --daemon-rrd=DIR   write RRDs to DIR instead of /var/db/mailgraph
+- --daemon-rrd=DIR   write RRDs to DIR instead of /var/log
 - --daemon-log=FILE  write verbose-log to FILE instead of /var/log/mailgraph.log
 + --daemon-pid=FILE  write PID to FILE instead of @VARBASE@/run/mailgraph.pid
 + --daemon-rrd=DIR   write RRDs to DIR instead of @VARBASE@/db/mailgraph
