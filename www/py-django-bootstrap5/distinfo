@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/04/13 05:24:27 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/04/23 16:49:57 adam Exp $
 
-BLAKE2s (django-bootstrap5-24.1.tar.gz) = c6de738747be666e16cea2da4ebf0e8a8c2cdaa7e030afcfca2e49e1bb54d3e3
-SHA512 (django-bootstrap5-24.1.tar.gz) = cfd4fb2e4a467c067ee5d5a7845db8b71f57fa738b0951c20ae9b93098635ab27da04884666e2e3a07d848531904bd8ca88f83bcb8c895a287506b1962428215
-Size (django-bootstrap5-24.1.tar.gz) = 53938 bytes
+BLAKE2s (django_bootstrap5-24.2.tar.gz) = 4e2ff58fa4672adfd0807de0849a869f4b2e7e06e46c2bf4a1046847720fd00f
+SHA512 (django_bootstrap5-24.2.tar.gz) = d3683e8022e819d5418cb3611cb9fc0339ef5fac8f28e1c29e86c6acb0dea5ab94842186c8fce98796befdf0de78046c01e9f0ea2449cd107f28ae7e4a39cdbb
+Size (django_bootstrap5-24.2.tar.gz) = 52683 bytes
