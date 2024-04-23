@@ -1,4 +1,4 @@
-$NetBSD: patch-mailgraph.pl,v 1.1 2019/10/02 14:30:31 triaxx Exp $
+$NetBSD: patch-mailgraph.pl,v 1.2 2024/04/23 16:25:49 hauke Exp $
 
 * Use log/maillog as default mail logfile.
 * Change hardcoded /var to pkgsrc compliant VARBASE.
@@ -32,7 +32,7 @@ $NetBSD: patch-mailgraph.pl,v 1.1 2019/10/02 14:30:31 triaxx Exp $
 -	print "  --daemon-rrd=DIR   write RRDs to DIR instead of /var/log\n";
 -	print "  --daemon-log=FILE  write verbose-log to FILE instead of /var/log/mailgraph.log\n";
 +	print "  --daemon-pid=FILE  write PID to FILE instead of @VARBASE@/run/mailgraph.pid\n";
-+	print "  --daemon-rrd=DIR   write RRDs to DIR instead of @VARBASE@/log\n";
++	print "  --daemon-rrd=DIR   write RRDs to DIR instead of @VARBASE@/db/mailgraph\n";
 +	print "  --daemon-log=FILE  write verbose-log to FILE instead of @VARBASE@/log/mailgraph.log\n";
  	print "  --ignore-localhost ignore mail to/from localhost (used for virus scanner)\n";
  	print "  --ignore-host=HOST ignore mail to/from HOST regexp (used for virus scanner)\n";
@@ -57,10 +57,10 @@ $NetBSD: patch-mailgraph.pl,v 1.1 2019/10/02 14:30:31 triaxx Exp $
       --host=HOST    use only entries for HOST (regexp) in syslog
   -d, --daemon       start in the background
 - --daemon-pid=FILE  write PID to FILE instead of /var/run/mailgraph.pid
-- --daemon-rrd=DIR   write RRDs to DIR instead of /var/log
+- --daemon-rrd=DIR   write RRDs to DIR instead of /var/db/mailgraph
 - --daemon-log=FILE  write verbose-log to FILE instead of /var/log/mailgraph.log
 + --daemon-pid=FILE  write PID to FILE instead of @VARBASE@/run/mailgraph.pid
-+ --daemon-rrd=DIR   write RRDs to DIR instead of @VARBASE@/log
++ --daemon-rrd=DIR   write RRDs to DIR instead of @VARBASE@/db/mailgraph
 + --daemon-log=FILE  write verbose-log to FILE instead of @VARBASE@/log/mailgraph.log
   --ignore-localhost ignore mail to/from localhost (used for virus scanner)
   --ignore-host=HOST ignore mail to/from HOST regexp (used for virus scanner)
