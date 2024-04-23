@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/10/07 20:12:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/23 19:32:53 schmonz Exp $
 
 DISTNAME=		libspf2-1.2.11
 PKGREVISION=		2
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 CONFLICTS+=		libspf_alt-[0-9]*
+
+LDFLAGS.Darwin+=	-lresolv
 
 .include "../../mk/bsd.fast.prefs.mk"
 
