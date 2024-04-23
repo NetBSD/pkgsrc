@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24367 2024/04/23 12:18:40 wiz Exp $
+$NetBSD: TODO,v 1.24368 2024/04/23 21:26:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
-	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-18.1.4
