@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/06 03:57:49 mef Exp $
-bin/relatorio-render
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/04/23 16:55:39 adam Exp $
+bin/relatorio-render-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/relatorio/__init__.py
 ${PYSITELIB}/relatorio/__init__.pyc
 ${PYSITELIB}/relatorio/__init__.pyo
