@@ -1,0 +1,1 @@
+bin/relatorio-render @PREFIX@/bin/relatorio-render-@PYVERSSUFFIX@
