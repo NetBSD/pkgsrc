@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24366 2024/04/23 07:16:08 wiz Exp $
+$NetBSD: TODO,v 1.24367 2024/04/23 12:18:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,9 +379,6 @@ Suggested new packages
 	libretro-tyrquake (wip), libretro-prboom (wip), libretro-easyrpg,
 	libretro-scummvm, libretro-stonesoup, libretro-cannonball,
 	libretro-reminiscence
-
-	Missing components for modern DEs
-	libayatana-indicator
 
 Suggested package updates
 =========================
