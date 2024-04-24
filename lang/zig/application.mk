@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.7 2024/04/24 20:24:37 nikita Exp $
+# $NetBSD: application.mk,v 1.8 2024/04/24 20:48:30 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -25,6 +25,7 @@ ZIGCPUMODE?=		-Dcpu=baseline
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
 ZIGPIE?=		yes
+ZIGSTRIP?=		yes
 
 TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
@@ -34,10 +35,12 @@ USE_LANGUAGES=		c
 .if ${ZIGPIE:Uyes:M[yY][eE][sS]}
 ZIGBUILDARGS+=		-Dpie=true
 .endif
-# figure out how to detect support for this in zig packages:
-#.if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
-#ZIGBUILDARGS+=		-Dstrip=true
-#.endif
+
+.if ${ZIGSTRIP:Uyes:M[yY][eE][sS]}
+.  if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
+ZIGBUILDARGS+=		-Dstrip=true
+.  endif
+.endif
 
 do-build:
 	mkdir ${WRKSRC}/tmp
