@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/11/17 21:22:18 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/04/24 07:24:18 adam Exp $
 
-DISTNAME=	django-tastypie-0.14.6
+DISTNAME=	django-tastypie-0.14.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-tastypie/}
