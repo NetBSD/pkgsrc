@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.6 2023/06/06 12:41:47 riastradh Exp $
+# $NetBSD: application.mk,v 1.7 2024/04/24 20:24:37 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -20,20 +20,21 @@
 # ReleaseSmall (-Drelease-small=true)
 # Medium runtime performance, Safety checks disabled, Slow compilation speed
 # Small binary size
-ZIGBUILDMODE?=		-Drelease-safe=true
+ZIGBUILDMODE?=		--release=safe
 ZIGCPUMODE?=		-Dcpu=baseline
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
+ZIGPIE?=		yes
 
 TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
 
 #MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKSRC}/tmp
-# \todo: There is currently an issue building zig packages as RELRO.
-#RELRO_SUPPORTED=	no
 
-# figure out how to do this for all zig packages:
-#ZIGBUILDARGS+=		-Dpie=true
+.if ${ZIGPIE:Uyes:M[yY][eE][sS]}
+ZIGBUILDARGS+=		-Dpie=true
+.endif
+# figure out how to detect support for this in zig packages:
 #.if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
 #ZIGBUILDARGS+=		-Dstrip=true
 #.endif
