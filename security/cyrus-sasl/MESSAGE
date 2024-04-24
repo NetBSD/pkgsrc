@@ -1,25 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2017/07/26 09:21:10 hauke Exp $
+$NetBSD: MESSAGE,v 1.5 2024/04/24 12:46:59 jperkin Exp $
 
 ${PKGNAME} by default does *not* install any authentication plugin
 modules.  Until the necessary authentication plugin modules are
 installed, e.g. security/cy2-crammd5 or security/cy2-gssapi, you
 will probably get errors about "no appropriate mechs available".
 
-The configuration files for applications using the sasl2 libraries
-used to be in ${PLUGINDIR}/, but are now expected in
-${PKG_SYSCONFDIR}/. You need to move them after upgrading the pkg.
-
-${PKGNAME} will use the following directory as the default
-path to its plugin modules:
-
-	${PLUGINDIR}
-
-The search path for plugin modules can be customized by setting the
-SASL_PATH variable to a colon-delimted list of directories in the shell
-environment.
-
-To allow plaintext authentication without using the auxprop mechanism, the
-package security/cyrus-saslauthd should be installed.
+To allow plaintext authentication without using the auxprop mechanism,
+the package security/cyrus-saslauthd should be installed.
 
 ===========================================================================
