@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/04/17 10:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/24 20:27:39 nikita Exp $
 
-DISTNAME=	1.5
-PKGNAME=	passphrase-1.5
-PKGREVISION=	1
+DISTNAME=	1.8
+PKGNAME=	passphrase-1.8
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
 MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
@@ -14,10 +13,6 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-# \todo: There is currently an issue building this as RELRO.
-RELRO_SUPPORTED=	no
-
-ZIGBUILDARGS=		-Dpie=true
 .if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
 ZIGBUILDARGS+=		-Dstrip=true
 .endif
@@ -28,7 +23,7 @@ SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-build
 SUBST_MESSAGE.mandir=	replacing mandir location
 SUBST_FILES.mandir=	build.zig
-SUBST_SED.mandir+=	-e 's,"share" ++ sep ++ "man","${PKGMANDIR}",g'
+SUBST_SED.mandir+=	-e 's|"share",||g'
 
 .include "../../lang/zig/application.mk"
 .include "../../mk/bsd.pkg.mk"
