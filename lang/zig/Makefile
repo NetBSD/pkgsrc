@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/04/22 07:49:53 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/04/24 19:14:11 nikita Exp $
 
 DISTNAME=	zig-0.12.0
 CATEGORIES=	lang
@@ -18,7 +18,7 @@ USE_TOOLS+=		bash:run
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DZIG_SHARED_LLVM=ON
-CMAKE_CONFIGURE_ARGS+=	-DDESTDIR=${DESTDIR}
+CMAKE_CONFIGURE_ARGS+=	-DDESTDIR=${DESTDIR}${PREFIX}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
 CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
