@@ -1,0 +1,16 @@
+$NetBSD: patch-build-zig,v 1.1 2024/04/24 21:17:22 nikita Exp $
+
+--- build.zig.orig	2024-04-24 22:37:10.855733140 +0200
++++ build.zig	2024-04-24 22:38:08.506663973 +0200
+@@ -17,6 +17,11 @@
+         .target = target,
+         .optimize = optimize,
+         .link_libc = true,
++        .strip = b.option(
++            bool,
++            "strip",
++            "Omit debug symbols",
++        ) orelse (optimize != .Debug),
+     });
+ 
+     exe.pie = pie;
