@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/12/15 11:30:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2024/04/24 14:39:31 jperkin Exp $
 
 DISTNAME=		trn-4.0-test77
 PKGNAME=		trn-4.77
@@ -12,6 +12,9 @@ COMMENT=		Threaded version of rn, the classic news reader
 LICENSE=		trn-license
 
 PKG_SYSCONFSUBDIR=	nntp
+
+# Runs an interactive program to determine where libc is.
+NOT_FOR_BULK_PLATFORM+=	Darwin-*-*
 
 .include "options.mk"
 
