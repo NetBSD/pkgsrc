@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.19 2023/12/05 18:20:01 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.LESSER
+@comment $NetBSD: PLIST,v 1.20 2024/04/24 12:50:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/zmq/__init__.pxd
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -42,10 +40,12 @@ ${PYSITELIB}/zmq/backend/__init__.py
 ${PYSITELIB}/zmq/backend/__init__.pyc
 ${PYSITELIB}/zmq/backend/__init__.pyi
 ${PYSITELIB}/zmq/backend/__init__.pyo
+${PYSITELIB}/zmq/backend/cffi/README.md
 ${PYSITELIB}/zmq/backend/cffi/__init__.py
 ${PYSITELIB}/zmq/backend/cffi/__init__.pyc
 ${PYSITELIB}/zmq/backend/cffi/__init__.pyo
 ${PYSITELIB}/zmq/backend/cffi/_cdefs.h
+${PYSITELIB}/zmq/backend/cffi/_cffi_src.c
 ${PYSITELIB}/zmq/backend/cffi/_poll.py
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyc
 ${PYSITELIB}/zmq/backend/cffi/_poll.pyo
@@ -71,21 +71,14 @@ ${PYSITELIB}/zmq/backend/cython/__init__.pxd
 ${PYSITELIB}/zmq/backend/cython/__init__.py
 ${PYSITELIB}/zmq/backend/cython/__init__.pyc
 ${PYSITELIB}/zmq/backend/cython/__init__.pyo
-${PYSITELIB}/zmq/backend/cython/_device.so
-${PYSITELIB}/zmq/backend/cython/_poll.so
-${PYSITELIB}/zmq/backend/cython/_proxy_steerable.so
-${PYSITELIB}/zmq/backend/cython/_version.so
-${PYSITELIB}/zmq/backend/cython/checkrc.pxd
+${PYSITELIB}/zmq/backend/cython/_externs.pxd
+${PYSITELIB}/zmq/backend/cython/_zmq.pxd
+${PYSITELIB}/zmq/backend/cython/_zmq.py
+${PYSITELIB}/zmq/backend/cython/_zmq.pyc
+${PYSITELIB}/zmq/backend/cython/_zmq.pyo
+${PYSITELIB}/zmq/backend/cython/_zmq.so
 ${PYSITELIB}/zmq/backend/cython/constant_enums.pxi
-${PYSITELIB}/zmq/backend/cython/context.pxd
-${PYSITELIB}/zmq/backend/cython/context.so
-${PYSITELIB}/zmq/backend/cython/error.so
 ${PYSITELIB}/zmq/backend/cython/libzmq.pxd
-${PYSITELIB}/zmq/backend/cython/message.pxd
-${PYSITELIB}/zmq/backend/cython/message.so
-${PYSITELIB}/zmq/backend/cython/socket.pxd
-${PYSITELIB}/zmq/backend/cython/socket.so
-${PYSITELIB}/zmq/backend/cython/utils.so
 ${PYSITELIB}/zmq/backend/select.py
 ${PYSITELIB}/zmq/backend/select.pyc
 ${PYSITELIB}/zmq/backend/select.pyo
@@ -101,11 +94,9 @@ ${PYSITELIB}/zmq/devices/__init__.pyo
 ${PYSITELIB}/zmq/devices/basedevice.py
 ${PYSITELIB}/zmq/devices/basedevice.pyc
 ${PYSITELIB}/zmq/devices/basedevice.pyo
-${PYSITELIB}/zmq/devices/monitoredqueue.pxd
 ${PYSITELIB}/zmq/devices/monitoredqueue.py
 ${PYSITELIB}/zmq/devices/monitoredqueue.pyc
 ${PYSITELIB}/zmq/devices/monitoredqueue.pyo
-${PYSITELIB}/zmq/devices/monitoredqueue.so
 ${PYSITELIB}/zmq/devices/monitoredqueuedevice.py
 ${PYSITELIB}/zmq/devices/monitoredqueuedevice.pyc
 ${PYSITELIB}/zmq/devices/monitoredqueuedevice.pyo
@@ -317,8 +308,6 @@ ${PYSITELIB}/zmq/utils/__init__.py
 ${PYSITELIB}/zmq/utils/__init__.pyc
 ${PYSITELIB}/zmq/utils/__init__.pyo
 ${PYSITELIB}/zmq/utils/buffers.pxd
-${PYSITELIB}/zmq/utils/compiler.json
-${PYSITELIB}/zmq/utils/config.json
 ${PYSITELIB}/zmq/utils/garbage.py
 ${PYSITELIB}/zmq/utils/garbage.pyc
 ${PYSITELIB}/zmq/utils/garbage.pyo
