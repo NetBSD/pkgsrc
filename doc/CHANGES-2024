@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2681 2024/04/24 20:30:20 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.2682 2024/04/24 21:20:04 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4419,3 +4419,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox to 125.0.2 [ryoon 2024-04-24]
 	Updated www/firefox-l10n to 125.0.2 [ryoon 2024-04-24]
 	Updated security/passphrase to 1.8 [nikita 2024-04-24]
+	Updated sysutils/ncdu2 to 2.4 [nikita 2024-04-24]
