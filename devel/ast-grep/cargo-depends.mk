@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2024/04/08 10:36:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2024/04/24 08:32:07 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -10,7 +10,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.3
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.2
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.2
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.81
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.82
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.14
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.79
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -98,7 +98,7 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.2
 CARGO_CRATE_DEPENDS+=	mio-0.8.11
 CARGO_CRATE_DEPENDS+=	napi-2.16.1
-CARGO_CRATE_DEPENDS+=	napi-build-2.1.2
+CARGO_CRATE_DEPENDS+=	napi-build-2.1.3
 CARGO_CRATE_DEPENDS+=	napi-derive-2.16.1
 CARGO_CRATE_DEPENDS+=	napi-derive-backend-1.0.63
 CARGO_CRATE_DEPENDS+=	napi-sys-2.3.0
@@ -164,8 +164,8 @@ CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.14
 CARGO_CRATE_DEPENDS+=	tempfile-3.10.1
 CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
 CARGO_CRATE_DEPENDS+=	termtree-0.4.1
-CARGO_CRATE_DEPENDS+=	thiserror-1.0.58
-CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.58
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.59
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.59
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.8
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
