@@ -1,10 +1,10 @@
-$NetBSD: patch-hw_mips_meson.build,v 1.3 2021/08/27 03:32:37 ryoon Exp $
+$NetBSD: patch-hw_mips_meson.build,v 1.4 2024/04/24 07:20:59 adam Exp $
 
---- hw/mips/meson.build.orig	2021-08-04 16:29:07.000000000 +0000
+--- hw/mips/meson.build.orig	2024-04-10 17:43:25.000000000 +0000
 +++ hw/mips/meson.build
 @@ -7,7 +7,7 @@ mips_ss.add(when: 'CONFIG_MIPS_CPS', if_
  
- if 'CONFIG_TCG' in config_all
+ if 'CONFIG_TCG' in config_all_accel
  mips_ss.add(when: 'CONFIG_JAZZ', if_true: files('jazz.c'))
 -mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c'))
 +mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c', 'mipssim_virtio.c'))

@@ -40,7 +40,6 @@
 #include "net/net.h"
 #include "sysemu/sysemu.h"
 #include "hw/boards.h"
-#include "hw/mips/bios.h"
 #include "hw/loader.h"
 #include "hw/or-irq.h"
 #include "elf.h"

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.340 2024/04/07 07:33:58 wiz Exp $
+# $NetBSD: Makefile,v 1.341 2024/04/24 07:20:59 adam Exp $
 
-DISTNAME=	qemu-8.2.2
-PKGREVISION=	2
+DISTNAME=	qemu-9.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +22,7 @@ UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
-GCC_REQD+=		7
+GCC_REQD+=	7
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -212,6 +211,7 @@ post-install:
 .include "../../lang/python/tool.mk"
 .include "../../net/libslirp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/dtc/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
