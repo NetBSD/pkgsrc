@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/12/31 19:50:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/04/24 12:54:37 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -102,6 +102,9 @@ ${PYSITELIB}/coverage/python.pyo
 ${PYSITELIB}/coverage/pytracer.py
 ${PYSITELIB}/coverage/pytracer.pyc
 ${PYSITELIB}/coverage/pytracer.pyo
+${PYSITELIB}/coverage/regions.py
+${PYSITELIB}/coverage/regions.pyc
+${PYSITELIB}/coverage/regions.pyo
 ${PYSITELIB}/coverage/report.py
 ${PYSITELIB}/coverage/report.pyc
 ${PYSITELIB}/coverage/report.pyo
