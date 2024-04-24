@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/04/21 15:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/04/24 22:02:32 wiz Exp $
 
 DISTNAME=	sphinx-7.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -39,7 +39,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.0:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../devel/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
 
 post-install:
