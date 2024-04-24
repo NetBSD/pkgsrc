@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/04 08:28:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/24 05:05:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,14 +7,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/freezegun/__init__.py
 ${PYSITELIB}/freezegun/__init__.pyc
-${PYSITELIB}/freezegun/__init__.pyi
 ${PYSITELIB}/freezegun/__init__.pyo
 ${PYSITELIB}/freezegun/_async.py
 ${PYSITELIB}/freezegun/_async.pyc
 ${PYSITELIB}/freezegun/_async.pyo
 ${PYSITELIB}/freezegun/api.py
 ${PYSITELIB}/freezegun/api.pyc
-${PYSITELIB}/freezegun/api.pyi
 ${PYSITELIB}/freezegun/api.pyo
 ${PYSITELIB}/freezegun/config.py
 ${PYSITELIB}/freezegun/config.pyc
