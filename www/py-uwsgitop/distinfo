@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:50 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/24 08:07:26 adam Exp $
 
-BLAKE2s (uwsgitop-0.11.tar.gz) = fbe67a4c53260ee779ec58eb080b87f89622d0b97fa2a4e684fb1c74c1ffc890
-SHA512 (uwsgitop-0.11.tar.gz) = a3e994c6a20c4dc7b4c266fe98b53c062e78adddcf5e225cfe89c90d85a2ae1b7f34f71d1f465031928fd658d7d3c9d67bbf2c0e297a22709fa396864bb8b8a1
-Size (uwsgitop-0.11.tar.gz) = 6052 bytes
+BLAKE2s (uwsgitop-0.12.tar.gz) = 71d3029d59042d014d0031273fbfe102fb00eeb5a6d640d9206f536e6dd1d542
+SHA512 (uwsgitop-0.12.tar.gz) = f91484f9a5b2313acd718589d6fb9402cf1ffc0d2c7470186f8fd22a8b9f0138b5181e141eb69103e9078c653dbabf3b2b6418126953c967b7a1c839cfde84ac
+Size (uwsgitop-0.12.tar.gz) = 6574 bytes
