@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/24 20:27:39 nikita Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/24 21:21:29 nikita Exp $
 
 DISTNAME=	1.8
 PKGNAME=	passphrase-1.8
@@ -12,10 +12,6 @@ COMMENT=	Zero-dependency passphrase generator
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
-.if ${MKDEBUG:Uyes:M[yY][eE][sS]} && ${INSTALL_UNSTRIPPED:Uyes:tl} == yes
-ZIGBUILDARGS+=		-Dstrip=true
-.endif
 
 CONFLICTS+=	py[0-9]*-pyutil-[0-9]*
 
