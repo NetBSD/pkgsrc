@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2024/04/23 16:34:09 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2024/04/24 06:47:55 wiz Exp $
 
 BLAKE2s (guile-3.0.9.tar.gz) = 0b58897075659445a370db20baab6c90c284bd27f897e269498977fcbf686543
 SHA512 (guile-3.0.9.tar.gz) = 6fd14f0860c7f5b7a9b53c43a60c6a7ca53072684ddc818cd10c720af2c5761ef110b29af466b89ded884fb66d66060894b14e615eaebee8844c397932d05fa2
 Size (guile-3.0.9.tar.gz) = 9734735 bytes
 SHA1 (patch-libguile_loader.c) = 32b012d095c343995f93d0c8160411c4b0cfbee1
-SHA1 (patch-libguile_posix.c) = 63b4ae471db79f7ee2b7b8b225d59b0bdc2cc28f
+SHA1 (patch-libguile_posix.c) = 175dd5caf7251043ebc7c44ad2ea4547726e15d4
