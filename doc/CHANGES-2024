@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2673 2024/04/24 06:52:31 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2674 2024/04/24 07:24:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4407,3 +4407,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-freezegun to 1.5.0 [adam 2024-04-24]
 	Updated graphics/oxipng to 9.1.1 [pin 2024-04-24]
 	Updated sysutils/yazi to 0.2.5 [pin 2024-04-24]
+	Updated emulators/qemu to 9.0.0 [adam 2024-04-24]
+	Updated www/py-django-tastypie to 0.14.7 [adam 2024-04-24]
