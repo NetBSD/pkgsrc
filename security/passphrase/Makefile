@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2024/04/25 12:29:44 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/25 22:31:24 nikita Exp $
 
 DISTNAME=	1.8.1
 PKGNAME=	passphrase-1.8.1
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
-MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
+MASTER_SITES=	https://codeberg.org/owl/passphrase/archive/
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://git.sr.ht/~alva/passphrase
+HOMEPAGE=	https://codeberg.org/owl/passphrase
 COMMENT=	Zero-dependency passphrase generator
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/passphrase
 
 ZIGBUILDARGS+=	-Dman-dir=${PKGMANDIR}
 
