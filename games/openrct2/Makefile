@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2024/04/06 08:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/04/25 19:25:11 triaxx Exp $
 
-DISTNAME=	openrct2-0.4.9
-PKGREVISION=	1
+DISTNAME=	openrct2-0.4.10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2
