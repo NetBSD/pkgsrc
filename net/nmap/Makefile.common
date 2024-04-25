@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2023/06/06 10:45:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/04/25 07:15:03 adam Exp $
 # used by net/ndiff/Makefile
 # used by net/nmap/Makefile
 # used by net/zenmap/Makefile
 
-DISTNAME=	nmap-7.94
+DISTNAME=	nmap-7.95
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
