@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/12/20 18:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/04/25 08:07:31 adam Exp $
 
 DISTNAME=	otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/otp_doc_html_/erlang-doc-/}
@@ -22,10 +22,7 @@ USE_TOOLS+=	pax
 INSTALLATION_DIRS=	lib/erlang
 
 do-install:
-	cd ${WRKDIR} && pax -rw doc erts-* lib ${DESTDIR}${PREFIX}/lib/erlang/
+	cd ${WRKDIR} && ${PAX} -rw doc erts-* lib ${DESTDIR}${PREFIX}/lib/erlang/
 
 .include "../../lang/erlang/Makefile.versions"
-# overrides
-
-
 .include "../../mk/bsd.pkg.mk"
