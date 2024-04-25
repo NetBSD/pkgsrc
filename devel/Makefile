@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4206 2024/04/17 14:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4207 2024/04/25 00:34:40 thorpej Exp $
 #
 
 COMMENT=	Development utilities
@@ -1295,6 +1295,7 @@ SUBDIR+=	okteta
 SUBDIR+=	omake
 SUBDIR+=	opa
 SUBDIR+=	open-vcdiff
+SUBDIR+=	openFPGALoader
 SUBDIR+=	opengrok
 SUBDIR+=	openocd
 SUBDIR+=	openrcs
