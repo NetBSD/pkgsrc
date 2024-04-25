@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2022/07/21 10:12:36 jperkin Exp $
+# $NetBSD: options.mk,v 1.37 2024/04/25 13:12:42 wiz Exp $
 
 # Global and legacy options
 
@@ -13,9 +13,6 @@ PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox mutt-smtp
 PKG_SUPPORTED_OPTIONS+=		gssapi
 PKG_SUGGESTED_OPTIONS=		curses gpgme mutt-hcache mutt-smtp smime openssl
 PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox sasl
-# remove after 2019Q1
-PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
-PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
 
 # Must be at the top; some other buildlink files indirectly
 # include bdb.buildlink3.mk.
