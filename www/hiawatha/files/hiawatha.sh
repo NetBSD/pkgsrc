@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: hiawatha.sh,v 1.3 2024/04/15 14:52:33 hauke Exp $
+# $NetBSD: hiawatha.sh,v 1.4 2024/04/25 13:54:17 hauke Exp $
 #
 # PROVIDE: hiawatha
 # REQUIRE: DAEMON
@@ -8,6 +8,8 @@
 
 name="hiawatha"
 command="@PREFIX@/sbin/${name}"
+
+extra_commands=reload
 
 if [ -f @SYSCONFBASE@/rc.subr ]; then
     	. @SYSCONFBASE@/rc.subr
