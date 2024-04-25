@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2691 2024/04/25 10:07:37 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2692 2024/04/25 12:32:24 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4439,3 +4439,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/mame to 0.265 [wiz 2024-04-25]
 	Updated devel/py-gobject3-common to 3.48.2 [adam 2024-04-25]
 	Updated devel/py-gobject3 to 3.48.2 [adam 2024-04-25]
+	Updated security/passphrase to 1.8.1 [nikita 2024-04-25]
