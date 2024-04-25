@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/04/22 07:28:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/25 07:52:26 wiz Exp $
 bin/mlir-tblgen
 include/mlir-c/AffineExpr.h
 include/mlir-c/AffineMap.h
@@ -1364,6 +1364,7 @@ lib/cmake/mlir/MLIRDetectPythonEnv.cmake
 lib/cmake/mlir/MLIRTargets-release.cmake
 lib/cmake/mlir/MLIRTargets.cmake
 lib/libMLIR-C.so
+${PLIST.notdarwin}lib/libMLIR-C.so.17
 lib/libMLIRAMDGPUDialect.a
 lib/libMLIRAMDGPUToROCDL.a
 lib/libMLIRAMDGPUTransforms.a
@@ -1621,6 +1622,10 @@ lib/libMLIRX86VectorDialect.a
 lib/libMLIRX86VectorToLLVMIRTranslation.a
 lib/libMLIRX86VectorTransforms.a
 lib/libmlir_async_runtime.so
+${PLIST.notdarwin}lib/libmlir_async_runtime.so.17
 lib/libmlir_c_runner_utils.so
+${PLIST.notdarwin}lib/libmlir_c_runner_utils.so.17
 lib/libmlir_float16_utils.so
+${PLIST.notdarwin}lib/libmlir_float16_utils.so.17
 lib/libmlir_runner_utils.so
+${PLIST.notdarwin}lib/libmlir_runner_utils.so.17

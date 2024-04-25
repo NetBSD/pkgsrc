@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/22 07:28:21 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/25 07:52:26 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,6 +18,14 @@ USE_TOOLS+=		gmake
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DMLIR_INSTALL_AGGREGATE_OBJECTS=NO
 CMAKE_ARGS+=	-DMLIR_BUILD_MLIR_C_DYLIB=YES
+
+PLIST_VARS=	notdarwin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+PLIST.notdarwin=	yes
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
