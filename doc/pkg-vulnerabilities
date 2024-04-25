@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.179 2024/04/25 07:24:08 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.180 2024/04/25 15:14:49 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25992,3 +25992,6 @@ php>=7.4<8.0		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 php>=8.0<8.1		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 putty<0.81	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-31497
 filezilla<3.67.0	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-31497
+ruby31-base>=3.1<3.1.5	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
+ruby32-base>=3.2<3.2.4	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
+ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
