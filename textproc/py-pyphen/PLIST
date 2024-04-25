@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/10/28 19:57:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/04/25 15:48:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.GPL
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.LGPL
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.MPL
@@ -9,6 +9,39 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/pyphen/__init__.py
 ${PYSITELIB}/pyphen/__init__.pyc
 ${PYSITELIB}/pyphen/__init__.pyo
+${PYSITELIB}/pyphen/dictionaries/README_hyph_NO.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_be_BY.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_bg_BG.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_ca.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_cs_CZ.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_da_DK.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_de.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_el_GR.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_en_GB.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_en_US.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_es.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_et_EE.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_eu.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_fr.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_gl.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_hr_HR.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_hu_HU.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_is.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_it_IT.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_lt_LT.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_lv_LV.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_pl_PL.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_pt_BR.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_pt_PT.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_ro_RO.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_sk_SK.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_sl_SI.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_sq_AL.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_sr.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_sv.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_te_IN.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_th_TH.txt
+${PYSITELIB}/pyphen/dictionaries/README_hyph_uk_UA.txt
 ${PYSITELIB}/pyphen/dictionaries/hyph_af_ZA.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_be_BY.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_bg_BG.dic
@@ -24,6 +57,7 @@ ${PYSITELIB}/pyphen/dictionaries/hyph_en_US.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_eo.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_es.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_et_EE.dic
+${PYSITELIB}/pyphen/dictionaries/hyph_eu.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_fr.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_gl.dic
 ${PYSITELIB}/pyphen/dictionaries/hyph_hr_HR.dic
