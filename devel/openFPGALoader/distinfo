@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/25 00:34:41 thorpej Exp $
+
+BLAKE2s (openFPGALoader-v0.12.1.tar.gz) = a6b0d11bcf46801e6c5400f6c654c813cb72cd6c17c7129cadf8771435c4eece
+SHA512 (openFPGALoader-v0.12.1.tar.gz) = bc9a9e0d6f62dc15a78bc84b9b0daa12715d487cd1dfd27b511b820c77756ac2f8dd298d601b5f2d38dc3f96a1a6bce69117defc41cf9572d315e082aaaf78e9
+Size (openFPGALoader-v0.12.1.tar.gz) = 1751631 bytes
