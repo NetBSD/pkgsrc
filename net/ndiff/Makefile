@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.9 2023/08/14 05:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/25 07:15:03 adam Exp $
 
-PKGREVISION= 1
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/ndiff/}
@@ -10,6 +9,8 @@ COMMENT=	Compares Nmap scans
 WRKSRC=		${WRKDIR}/${DISTNAME}/ndiff
 
 EXTRACT_ELEMENTS=	${DISTNAME}/ndiff
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
