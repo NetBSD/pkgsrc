@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_rubygems_config__file.rb,v 1.1 2024/01/21 08:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems_config__file.rb,v 1.2 2024/04/25 15:12:05 taca Exp $
 
 Avoid update suggestion default.
 
---- lib/rubygems/config_file.rb.orig	2023-12-11 07:06:03.000000000 +0000
+--- lib/rubygems/config_file.rb.orig	2024-04-23 10:20:14.000000000 +0000
 +++ lib/rubygems/config_file.rb
-@@ -202,6 +202,8 @@ class Gem::ConfigFile
-       @hash = @hash.merge environment_config
+@@ -213,6 +213,8 @@ class Gem::ConfigFile
+       end
      end
  
 +    @hash['prevent_update_suggestion'] = true
