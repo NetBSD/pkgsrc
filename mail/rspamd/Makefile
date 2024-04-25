@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2024/03/03 11:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/04/25 15:19:22 taca Exp $
 
 DISTNAME=	rspamd-3.8.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
