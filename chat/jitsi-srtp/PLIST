@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/16 09:55:38 khorben Exp $
-lib/libjitsisrtp_${PKGVERSION}.so
+@comment $NetBSD: PLIST,v 1.2 2024/04/25 17:00:15 khorben Exp $
+lib/libjitsisrtp_3.so
