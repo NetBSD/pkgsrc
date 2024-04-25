@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/04/24 21:21:29 nikita Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/25 12:29:44 nikita Exp $
 
-DISTNAME=	1.8
-PKGNAME=	passphrase-1.8
+DISTNAME=	1.8.1
+PKGNAME=	passphrase-1.8.1
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
 MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
@@ -13,13 +13,9 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-CONFLICTS+=	py[0-9]*-pyutil-[0-9]*
+ZIGBUILDARGS+=	-Dman-dir=${PKGMANDIR}
 
-SUBST_CLASSES+=		mandir
-SUBST_STAGE.mandir=	pre-build
-SUBST_MESSAGE.mandir=	replacing mandir location
-SUBST_FILES.mandir=	build.zig
-SUBST_SED.mandir+=	-e 's|"share",||g'
+CONFLICTS+=	py[0-9]*-pyutil-[0-9]*
 
 .include "../../lang/zig/application.mk"
 .include "../../mk/bsd.pkg.mk"
