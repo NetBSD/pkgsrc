@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/12/20 18:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/25 08:07:31 adam Exp $
 
 DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/otp_doc_man_/erlang-man-/}
@@ -21,8 +21,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	lib/erlang
 
 do-install:
-	cd ${WRKDIR} && pax -rw man ${DESTDIR}${PREFIX}/lib/erlang/
+	cd ${WRKDIR} && ${PAX} -rw man ${DESTDIR}${PREFIX}/lib/erlang/
 
 .include "../../lang/erlang/Makefile.versions"
-
 .include "../../mk/bsd.pkg.mk"
