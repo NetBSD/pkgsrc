@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/06 08:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/25 15:03:09 jperkin Exp $
 
 DISTNAME=	messagelib-${KAPPSVER}
 PKGREVISION=	1
@@ -15,7 +15,7 @@ USE_TOOLS+=	msgmerge
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/boost-headers/buildlink3.mk"
-.if ${OPSYS} != "Linux"
+.if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
 .endif
 .include "../../mail/kmailtransport/buildlink3.mk"
