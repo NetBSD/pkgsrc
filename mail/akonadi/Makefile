@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2024/04/06 08:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2024/04/25 14:55:28 jperkin Exp $
 
 DISTNAME=	akonadi-${KAPPSVER}
 PKGREVISION=	1
@@ -18,6 +18,8 @@ CMAKE_ARGS+=	-DPOSTGRES_PATH="${PREFIX}/bin"
 CMAKE_ARGS+=	-DINSTALL_APPARMOR=FALSE
 
 USE_TOOLS+=	gmake msgmerge pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
