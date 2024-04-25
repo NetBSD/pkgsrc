@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2024/04/05 12:08:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.84 2024/04/25 09:51:16 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -208,6 +208,7 @@ share/mame/hash/clipper_flop.xml
 share/mame/hash/coco_cart.xml
 share/mame/hash/coco_flop.xml
 share/mame/hash/coleco.xml
+share/mame/hash/coleco_homebrew.xml
 share/mame/hash/compclr2_flop.xml
 share/mame/hash/compis.xml
 share/mame/hash/comx35_flop.xml
