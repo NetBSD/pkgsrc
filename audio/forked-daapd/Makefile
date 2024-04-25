@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/04/05 14:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/04/25 15:03:22 jperkin Exp $
 
 DISTNAME=	forked-daapd-27.4
 PKGREVISION=	29
@@ -42,7 +42,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/cache/forked-daapd \
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2
 .include "../../devel/libantlr3c/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
-.if ${OPSYS} != "Linux"
+.if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 .  include "../../devel/libinotify/buildlink3.mk"
 .endif
 .include "../../devel/protobuf/buildlink3.mk"
