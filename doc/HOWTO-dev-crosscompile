@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.7 2024/04/12 19:54:43 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.8 2024/04/25 14:56:30 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -120,3 +120,8 @@ pre-answer the tests for autoconf:
 # always has a /dev/random, so inform autoconf of the fact.
 CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
 .endif
+
+* XXX TODO
+
+** document meson issues
+** document cmake issues
