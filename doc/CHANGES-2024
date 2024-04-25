@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2694 2024/04/25 14:52:54 taca Exp $
+$NetBSD: CHANGES-2024,v 1.2695 2024/04/25 15:06:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-virtualenv to 20.26.0 [adam 2024-04-25]
 	Updated devel/py-types-setuptools to 69.5.0.20240423 [adam 2024-04-25]
 	Updated lang/ruby31-base to 3.1.5 [taca 2024-04-25]
+	Updated lang/ruby32-base to 3.2.4 [taca 2024-04-25]
