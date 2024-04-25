@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2024/02/17 10:13:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2024/04/25 08:27:08 jperkin Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -25,9 +25,6 @@ MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://github.com/OpenMathLib/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2 (variant ${OPENBLAS_VARIANT})
 LICENSE=	modified-bsd
-
-# Untested on other platforms
-ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
