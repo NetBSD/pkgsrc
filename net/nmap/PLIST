@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2023/06/06 10:45:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/04/25 07:15:03 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -115,6 +115,7 @@ ${PLIST.lua}share/nmap/nselib/http.lua
 ${PLIST.lua}share/nmap/nselib/httpspider.lua
 ${PLIST.lua}share/nmap/nselib/iax2.lua
 ${PLIST.lua}share/nmap/nselib/idna.lua
+${PLIST.lua}share/nmap/nselib/iec61850mms.lua
 ${PLIST.lua}share/nmap/nselib/ike.lua
 ${PLIST.lua}share/nmap/nselib/imap.lua
 ${PLIST.lua}share/nmap/nselib/informix.lua
@@ -160,7 +161,6 @@ ${PLIST.lua}share/nmap/nselib/openssl.luadoc
 ${PLIST.lua}share/nmap/nselib/ospf.lua
 ${PLIST.lua}share/nmap/nselib/outlib.lua
 ${PLIST.lua}share/nmap/nselib/packet.lua
-${PLIST.lua}share/nmap/nselib/pcre.luadoc
 ${PLIST.lua}share/nmap/nselib/pgsql.lua
 ${PLIST.lua}share/nmap/nselib/pop3.lua
 ${PLIST.lua}share/nmap/nselib/pppoe.lua
@@ -362,6 +362,7 @@ ${PLIST.lua}share/nmap/scripts/hadoop-jobtracker-info.nse
 ${PLIST.lua}share/nmap/scripts/hadoop-namenode-info.nse
 ${PLIST.lua}share/nmap/scripts/hadoop-secondary-namenode-info.nse
 ${PLIST.lua}share/nmap/scripts/hadoop-tasktracker-info.nse
+${PLIST.lua}share/nmap/scripts/hartip-info.nse
 ${PLIST.lua}share/nmap/scripts/hbase-master-info.nse
 ${PLIST.lua}share/nmap/scripts/hbase-region-info.nse
 ${PLIST.lua}share/nmap/scripts/hddtemp-info.nse
@@ -508,6 +509,7 @@ ${PLIST.lua}share/nmap/scripts/iax2-brute.nse
 ${PLIST.lua}share/nmap/scripts/iax2-version.nse
 ${PLIST.lua}share/nmap/scripts/icap-info.nse
 ${PLIST.lua}share/nmap/scripts/iec-identify.nse
+${PLIST.lua}share/nmap/scripts/iec61850-mms.nse
 ${PLIST.lua}share/nmap/scripts/ike-version.nse
 ${PLIST.lua}share/nmap/scripts/imap-brute.nse
 ${PLIST.lua}share/nmap/scripts/imap-capabilities.nse
@@ -584,6 +586,7 @@ ${PLIST.lua}share/nmap/scripts/ms-sql-tables.nse
 ${PLIST.lua}share/nmap/scripts/ms-sql-xp-cmdshell.nse
 ${PLIST.lua}share/nmap/scripts/msrpc-enum.nse
 ${PLIST.lua}share/nmap/scripts/mtrace.nse
+${PLIST.lua}share/nmap/scripts/multicast-profinet-discovery.nse
 ${PLIST.lua}share/nmap/scripts/murmur-version.nse
 ${PLIST.lua}share/nmap/scripts/mysql-audit.nse
 ${PLIST.lua}share/nmap/scripts/mysql-brute.nse
@@ -646,6 +649,7 @@ ${PLIST.lua}share/nmap/scripts/pop3-capabilities.nse
 ${PLIST.lua}share/nmap/scripts/pop3-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/port-states.nse
 ${PLIST.lua}share/nmap/scripts/pptp-version.nse
+${PLIST.lua}share/nmap/scripts/profinet-cm-lookup.nse
 ${PLIST.lua}share/nmap/scripts/puppet-naivesigning.nse
 ${PLIST.lua}share/nmap/scripts/qconn-exec.nse
 ${PLIST.lua}share/nmap/scripts/qscan.nse
