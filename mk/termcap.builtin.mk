@@ -1,11 +1,11 @@
-# $NetBSD: termcap.builtin.mk,v 1.10 2013/11/23 09:10:14 obache Exp $
+# $NetBSD: termcap.builtin.mk,v 1.11 2024/04/25 14:32:26 tnn Exp $
 
 BUILTIN_PKG:=	termcap
 
 BUILTIN_FIND_LIBS:=		terminfo curses termcap termlib tinfo
-BUILTIN_FIND_HEADERS_VAR:=	H_TERM H_TERMCAP H_TERMLIB
-BUILTIN_FIND_HEADERS.H_TERM:=	term.h
-BUILTIN_FIND_GREP.H_TERM:=	tgetent
+BUILTIN_FIND_HEADERS_VAR:=	H_TERM_TC H_TERMCAP H_TERMLIB
+BUILTIN_FIND_HEADERS.H_TERM_TC:=term.h
+BUILTIN_FIND_GREP.H_TERM_TC:=	tgetent
 BUILTIN_FIND_HEADERS.H_TERMCAP:=	termcap.h
 BUILTIN_FIND_GREP.H_TERMCAP:=	tgetent
 BUILTIN_FIND_HEADERS.H_TERMLIB:=	termlib.h
@@ -19,7 +19,7 @@ BUILTIN_FIND_GREP.H_TERMLIB:=	tgetent
 ###
 .if !defined(IS_BUILTIN.termcap)
 IS_BUILTIN.termcap=	no
-.  if empty(H_TERM:M__nonexistent__) && empty(H_TERM:M${LOCALBASE}/*) || \
+.  if empty(H_TERM_TC:M__nonexistent__) && empty(H_TERM_TC:M${LOCALBASE}/*) || \
       empty(H_TERMCAP:M__nonexistent__) && empty(H_TERMCAP:M${LOCALBASE}/*) || \
       empty(H_TERMLIB:M__nonexistent__) && empty(H_TERMLIB:M${LOCALBASE}/*) || \
       !empty(BUILTIN_LIB_FOUND.termlib:M[yY][eE][sS])
@@ -55,7 +55,7 @@ MAKEVARS+=	USE_BUILTIN.termcap
 # (7) If <termlib.h> exists and libtermlib doesn't, then it's "c".
 # (8) If libtermlib exists by itself, then it's "termlib".
 #
-.if empty(H_TERM:M__nonexistent__) && empty(H_TERM:M${LOCALBASE}/*)
+.if empty(H_TERM_TC:M__nonexistent__) && empty(H_TERM_TC:M${LOCALBASE}/*)
 .  if !empty(BUILTIN_LIB_FOUND.terminfo:M[yY][eE][sS])
 BUILTIN_LIBNAME.termcap=	terminfo
 .  elif !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
