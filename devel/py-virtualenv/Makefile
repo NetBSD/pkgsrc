@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2024/04/18 04:32:36 adam Exp $
+# $NetBSD: Makefile,v 1.85 2024/04/25 13:35:49 adam Exp $
 
-DISTNAME=	virtualenv-20.25.3
+DISTNAME=	virtualenv-20.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -11,7 +11,7 @@ COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.14:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.17.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.7:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.12.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.9.1:../../misc/py-platformdirs
@@ -26,11 +26,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.12:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine>=2.10:../../time/py-time-machine
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	# see patches
