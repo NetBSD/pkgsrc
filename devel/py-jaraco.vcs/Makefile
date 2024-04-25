@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/01/20 08:37:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/25 15:52:55 adam Exp $
 
-DISTNAME=	jaraco.vcs-2.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	jaraco_vcs-2.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.vcs/}
 
@@ -10,9 +10,12 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.vcs
 COMMENT=	Facilities for working with VCS repositories
 LICENSE=	mit
 
+WHEEL_NAME=	${DISTNAME:S/_/./:C/-([^0-9])/_\1/g}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
 DEPENDS+=	${PYPKGPREFIX}-jaraco.versioning-[0-9]*:../../devel/py-jaraco.versioning
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
