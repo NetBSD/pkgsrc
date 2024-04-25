@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.178 2024/04/23 12:12:07 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.179 2024/04/25 07:24:08 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19713,7 +19713,7 @@ evolution-data-server<3.36.4	command-injection	https://nvd.nist.gov/vuln/detail/
 radare2<4.5.0	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-15121
 clamav<0.102.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-3481
 clamav<0.102.4	arbitrary-file-deletion	https://nvd.nist.gov/vuln/detail/CVE-2020-3350
-qemu-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-15859
+qemu<6.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-15859
 qemu<5.1.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-15863
 lua54<5.4.1	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-15888
 lua54<5.4.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-15889
