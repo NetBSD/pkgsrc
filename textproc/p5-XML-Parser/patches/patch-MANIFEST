@@ -1,0 +1,14 @@
+$NetBSD: patch-MANIFEST,v 1.1 2024/04/25 17:59:47 schmonz Exp $
+
+Use pkgsrc p5-Devel-CheckLib.
+
+--- MANIFEST.orig	2024-04-25 17:49:31.938028506 +0000
++++ MANIFEST
+@@ -4,7 +4,6 @@ Expat/Expat.pm			XML::Parser::Expat modu
+ Expat/Expat.xs			Extension library
+ Expat/Makefile.PL		perl MakeMaker script for XML::Parser::Expat
+ Expat/typemap			XS typemap
+-inc/Devel/CheckLib.pm
+ LICENSE
+ Makefile.PL			perl MakeMaker script for XML::Parser
+ MANIFEST			This file
