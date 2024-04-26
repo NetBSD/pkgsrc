@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.422 2024/04/26 17:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.423 2024/04/26 19:48:07 wiz Exp $
 #
 
 COMMENT=	Fonts
 
 SUBDIR+=	AnonymousPro
+SUBDIR+=	Azeret
 SUBDIR+=	CamingoCode
 SUBDIR+=	Code-New-Roman
 SUBDIR+=	CutiveFont
