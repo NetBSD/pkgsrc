@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/09/22 05:59:26 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/04/26 11:48:09 micha Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -92,6 +92,12 @@ avr/lib/ldscripts/avrxmega2.xe
 avr/lib/ldscripts/avrxmega2.xn
 avr/lib/ldscripts/avrxmega2.xr
 avr/lib/ldscripts/avrxmega2.xu
+avr/lib/ldscripts/avrxmega2_flmap.x
+avr/lib/ldscripts/avrxmega2_flmap.xbn
+avr/lib/ldscripts/avrxmega2_flmap.xe
+avr/lib/ldscripts/avrxmega2_flmap.xn
+avr/lib/ldscripts/avrxmega2_flmap.xr
+avr/lib/ldscripts/avrxmega2_flmap.xu
 avr/lib/ldscripts/avrxmega3.x
 avr/lib/ldscripts/avrxmega3.xbn
 avr/lib/ldscripts/avrxmega3.xe
@@ -104,6 +110,12 @@ avr/lib/ldscripts/avrxmega4.xe
 avr/lib/ldscripts/avrxmega4.xn
 avr/lib/ldscripts/avrxmega4.xr
 avr/lib/ldscripts/avrxmega4.xu
+avr/lib/ldscripts/avrxmega4_flmap.x
+avr/lib/ldscripts/avrxmega4_flmap.xbn
+avr/lib/ldscripts/avrxmega4_flmap.xe
+avr/lib/ldscripts/avrxmega4_flmap.xn
+avr/lib/ldscripts/avrxmega4_flmap.xr
+avr/lib/ldscripts/avrxmega4_flmap.xu
 avr/lib/ldscripts/avrxmega5.x
 avr/lib/ldscripts/avrxmega5.xbn
 avr/lib/ldscripts/avrxmega5.xe

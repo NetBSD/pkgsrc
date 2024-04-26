@@ -1,0 +1,61 @@
+$NetBSD: patch-binutils_testsuite_binutils-all_ar.exp,v 1.1 2024/04/26 11:48:10 micha Exp $
+
+From Debian for MinGW:
+https://salsa.debian.org/mingw-w64-team/binutils-mingw-w64/-/blob/master/debian/patches/non-deterministic-tests.patch
+
+    tests: force non-deterministic mode in non-deterministic tests
+
+    Since ar can be built defaulting to deterministic mode, tests which
+    expect non-deterministic behaviour need to explicitly set the U flag.
+
+    The non-deterministic member test expects SOURCE_DATE_EPOCH to not be
+    set; this documents that. Unconditionally unsetting the variable
+    causes issues in test infrastructure (which expects unsetenv to only
+    be called on variables which are already set).
+
+--- binutils/testsuite/binutils-all/ar.exp.orig	2024-01-29 00:00:00.000000000 +0000
++++ binutils/testsuite/binutils-all/ar.exp
+@@ -538,6 +538,7 @@ proc replacing_deterministic_member { } 
+ }
+ 
+ # Test replacing a member of a non-deterministic archive.
++# This test expects SOURCE_DATE_EPOCH to not be set in the environment.
+ 
+ proc replacing_non_deterministic_member { } {
+     global AR
+@@ -581,7 +582,7 @@ proc replacing_non_deterministic_member 
+ 
+     # Build the archive with the *newer* object file.
+     
+-    set got [binutils_run $AR "rc $archive ${newer_objfile}"]
++    set got [binutils_run $AR "rcU $archive ${newer_objfile}"]
+     if ![string match "" $got] {
+ 	fail "$testname: (could not build archive)"
+ 	return
+@@ -589,7 +590,7 @@ proc replacing_non_deterministic_member 
+ 
+     # Now try to replace the newer file with the older one.  This should not work.
+     
+-    set got [binutils_run $AR "ru $archive $older_objfile"]
++    set got [binutils_run $AR "ruU $archive $older_objfile"]
+     if ![string match "" $got] {
+ 	fail "$testname: (failed to replace file)"
+ 	return
+@@ -651,7 +652,7 @@ proc replacing_sde_deterministic_member 
+     # Build the archive with the *newer* object file.
+     setenv SOURCE_DATE_EPOCH "1000"
+     
+-    set got [binutils_run $AR "rc $archive ${newer_objfile}"]
++    set got [binutils_run $AR "rcU $archive ${newer_objfile}"]
+     if ![string match "" $got] {
+ 	fail "$testname: (could not build archive)"
+ 	unsetenv SOURCE_DATE_EPOCH
+@@ -662,7 +663,7 @@ proc replacing_sde_deterministic_member 
+     # archive this will not work, but one created to be deterministic
+     # should always replace its members.
+     
+-    set got [binutils_run $AR "ru $archive $older_objfile"]
++    set got [binutils_run $AR "ruU $archive $older_objfile"]
+     if ![string match "" $got] {
+ 	fail "$testname: (failed to replace file)"
+ 	unsetenv SOURCE_DATE_EPOCH
