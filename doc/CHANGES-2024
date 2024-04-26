@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2735 2024/04/26 17:27:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2736 2024/04/26 18:50:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added fonts/nerd-fonts-Hack version 3.2.1 [wiz 2024-04-26]
 	Updated devel/spdlog to 1.14.0 [adam 2024-04-26]
 	Updated sysutils/py-borgbackup to 1.2.8 [adam 2024-04-26]
+	Updated pkgtools/pkglint to 23.4.1 [rillig 2024-04-26]
