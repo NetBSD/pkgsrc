@@ -1,9 +1,7 @@
-# $NetBSD: Makefile.common,v 1.75 2022/10/06 02:58:17 markd Exp $
+# $NetBSD: Makefile.common,v 1.76 2024/04/26 15:34:20 wiz Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
-# used by sysutils/bacula-tray-monitor/Makefile
 # used by sysutils/bacula-tray-monitor-qt5/Makefile
-# used by sysutils/bacula-qt-console/Makefile
 # used by sysutils/bacula-qt5-console/Makefile
 
 DISTNAME=	bacula-13.0.1
