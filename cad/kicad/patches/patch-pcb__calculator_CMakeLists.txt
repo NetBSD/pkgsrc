@@ -1,12 +1,12 @@
-$NetBSD: patch-pcb__calculator_CMakeLists.txt,v 1.2 2023/02/13 07:59:01 tnn Exp $
+$NetBSD: patch-pcb__calculator_CMakeLists.txt,v 1.3 2024/04/26 16:46:29 tnn Exp $
 
 Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- pcb_calculator/CMakeLists.txt.orig	2023-02-11 16:03:39.000000000 +0000
+--- pcb_calculator/CMakeLists.txt.orig	2024-04-26 07:08:39.144017670 +0000
 +++ pcb_calculator/CMakeLists.txt
-@@ -123,6 +123,9 @@ if( MAKE_LINK_MAPS )
-         LINK_FLAGS "-Wl,-cref,-Map=_pcb_calculator.kiface.map" )
- endif()
+@@ -135,6 +135,9 @@ target_link_options( pcb_calculator_kifa
+     $<$<BOOL:${KICAD_MAKE_LINK_MAPS}>:-Wl,--cref,-Map=_pcb_calculator.kiface.map>
+     )
  
 +set_property(TARGET pcb_calculator_kiface APPEND_STRING
 +      PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
