@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2024/04/26 09:10:10 nia Exp $
+
+BLAKE2s (notaz-libpicofe-33787db41d955f8dcafe833097f2cc87d70186ec.tar.gz) = 5d836e608eef8bc34f1d33ff515a769430451a4c6a8210a6acfd98d58edc48eb
+SHA512 (notaz-libpicofe-33787db41d955f8dcafe833097f2cc87d70186ec.tar.gz) = 7a59069a48194f7da50d5cf44833dab6a88458c22af6796218c8b010138ddca4cf4095b082d822168161ec2e3c2b8fe8153d15f810911ffdb8e4f7f521699a31
+Size (notaz-libpicofe-33787db41d955f8dcafe833097f2cc87d70186ec.tar.gz) = 86973 bytes
+BLAKE2s (pcsx-rearmed-23.tar.gz) = 98b3f575224bcdc9181364a0b5d917458f7aa475eb544616c64982c97d10795b
+SHA512 (pcsx-rearmed-23.tar.gz) = 877c19bc79cb43b2a30b27b983126aee6b89c11d3caba2e55ac509ae7a0dfb032f9e89bc138a43c150e4d5604008c7b36d03a7e1f7d4a1c5ebf1b9361ddbf5a7
+Size (pcsx-rearmed-23.tar.gz) = 1129836 bytes
+BLAKE2s (rtissera-libchdr-a03e69319164f69d781ab8e453f8cf407387bd13.tar.gz) = 6bf82738cb3c3b5d072ad8a34a80a09dea807c046afa99b9be36032b6bfb9b74
+SHA512 (rtissera-libchdr-a03e69319164f69d781ab8e453f8cf407387bd13.tar.gz) = 407b1b310126e223b596ef99b7cbf0baadc06c3cb84e3173a40a2ddcf3b994e86e420fdafd814f11a7d0ac2c9feea30c28ff9ece6834d5f317064185546d4101
+Size (rtissera-libchdr-a03e69319164f69d781ab8e453f8cf407387bd13.tar.gz) = 415504 bytes
+SHA1 (patch-Makefile) = b840622b2e2100406cd42c103686dbfb8682d86e
+SHA1 (patch-frontend_libpicofe_linux_plat.c) = c53fa780b97725d8263d6c239c1a815ac0e8258c
+SHA1 (patch-frontend_libpicofe_posix.h) = 43111f0440e90b66baa96e856a6c4a0a6c6f845a
+SHA1 (patch-frontend_menu.c) = b1321d3d84c54c2af1ac865eff33a20cea95b57a
