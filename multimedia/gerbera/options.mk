@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2022/07/11 11:49:48 adam Exp $
+# $NetBSD: options.mk,v 1.3 2024/04/26 15:28:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gerbera
 
-PKG_SUPPORTED_OPTIONS=	debug ffmpeg ffmpegthumbnailer javascript lastfm matroska systemd
+PKG_SUPPORTED_OPTIONS=	debug ffmpeg ffmpegthumbnailer javascript matroska systemd
 PKG_SUGGESTED_OPTIONS=	ffmpegthumbnailer javascript matroska
 
 .include "../../mk/bsd.options.mk"
@@ -19,11 +19,6 @@ CMAKE_ARGS+=	-DWITH_AVCODEC=ON
 .if !empty(PKG_OPTIONS:Mffmpegthumbnailer)
 CMAKE_ARGS+=	-DWITH_FFMPEGTHUMBNAILER=ON
 .  include "../../multimedia/ffmpegthumbnailer/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mlastfm)
-CMAKE_ARGS+=	-DWITH_LASTFM=ON
-.  include "../../audio/liblastfm/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjavascript)
