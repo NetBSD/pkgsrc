@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2708 2024/04/26 09:44:49 pin Exp $
+$NetBSD: CHANGES-2024,v 1.2709 2024/04/26 11:49:33 micha Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4461,3 +4461,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ast-grep to 0.21.1 [pin 2024-04-26]
 	Updated net/slumber to 1.0.0 [pin 2024-04-26]
 	Updated shells/oh-my-posh to 19.24.3 [pin 2024-04-26]
+	Updated cross/avr-binutils to 2.42 [micha 2024-04-26]
