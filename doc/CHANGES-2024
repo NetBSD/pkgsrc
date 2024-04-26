@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2704 2024/04/26 09:04:44 nia Exp $
+$NetBSD: CHANGES-2024,v 1.2705 2024/04/26 09:10:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4457,3 +4457,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ruff to 0.4.2 [adam 2024-04-26]
 	Added x11/tinyx-wscons 0.3 [nat 2024-04-26]
 	Added emulators/picodrive version 1.93 [nia 2024-04-26]
+	Added emulators/pcsx-rearmed version 23 [nia 2024-04-26]
