@@ -1,4 +1,4 @@
-$NetBSD: patch-gas_Makefile.in,v 1.2 2022/05/23 11:56:35 micha Exp $
+$NetBSD: patch-gas_Makefile.in,v 1.3 2024/04/26 11:48:10 micha Exp $
 
 Avoid installing info files (which duplicates with other CPU).
 
