@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.699 2024/04/17 14:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.700 2024/04/26 15:01:03 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -228,7 +228,6 @@ SUBDIR+=	libid3tag
 SUBDIR+=	libifp
 SUBDIR+=	libilbc
 SUBDIR+=	libkeyfinder
-SUBDIR+=	liblastfm
 SUBDIR+=	liblo
 SUBDIR+=	libltc
 SUBDIR+=	libmad
