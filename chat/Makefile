@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2024/02/10 10:26:14 wiz Exp $
+# $NetBSD: Makefile,v 1.289 2024/04/26 15:01:54 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -131,7 +131,6 @@ SUBDIR+=	telepathy-haze
 SUBDIR+=	telepathy-idle
 SUBDIR+=	telepathy-logger
 SUBDIR+=	telepathy-mission-control5
-SUBDIR+=	telepathy-qt
 SUBDIR+=	telepathy-qt5
 SUBDIR+=	tik
 SUBDIR+=	tirc
