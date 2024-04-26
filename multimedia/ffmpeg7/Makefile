@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/04/07 17:50:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/26 08:48:14 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg7/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
-COMMENT=	Decoding, encoding and streaming software (v6.x)
+COMMENT=	Decoding, encoding and streaming software (v7.x)
 
 CONFIGURE_ARGS+=	--enable-avfilter
 CONFIGURE_ARGS+=	--enable-postproc
