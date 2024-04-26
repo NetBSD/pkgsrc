@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PCSX ReARMed
+Comment=Sony PlayStation emulator
+Exec=pcsx-rearmed %f
+Icon=pcsx-rearmed
+Categories=Game;Emulator;
+Terminal=false
+Type=Application
+StartupNotify=true
