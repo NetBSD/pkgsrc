@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2023/12/29 18:25:01 adam Exp $
+# $NetBSD: Makefile,v 1.142 2024/04/26 15:22:14 wiz Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -92,13 +92,11 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 BUILDLINK_API_DEPENDS.strigi+=		strigi>=0.5.11
-#BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.5.60
 #BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.10.0
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../sysutils/strigi/buildlink3.mk"
-#.include "../../textproc/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/grantlee/buildlink3.mk"
 .include "../../devel/libdbusmenu-qt/buildlink3.mk"
