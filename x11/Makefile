@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1027 2024/04/18 06:45:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1028 2024/04/26 07:24:50 nat Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -381,6 +381,7 @@ SUBDIR+=	sxhkd
 SUBDIR+=	tabbed
 SUBDIR+=	tile
 SUBDIR+=	tint2
+SUBDIR+=	tinyx-wscons
 SUBDIR+=	tk
 SUBDIR+=	tk-BWidget
 SUBDIR+=	tk-Tix
