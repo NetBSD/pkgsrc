@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/12/13 19:14:29 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/26 20:13:03 adam Exp $
 
-DISTNAME=	tortoise_orm-0.20.0
+DISTNAME=	tortoise_orm-0.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tortoise-orm/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-aiosqlite>=0.16.0:../../databases/py-aiosqlite
-DEPENDS+=	${PYPKGPREFIX}-iso8601>=0.1.13:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-iso8601>=1.0.2:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-pypika-tortoise>=0.1.6:../../databases/py-pypika-tortoise
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.4:../../time/py-pytz
 # accel
