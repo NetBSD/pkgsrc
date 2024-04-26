@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/26 09:04:31 nia Exp $
+bin/picodrive
+share/applications/picodrive.desktop
+share/picodrive/skin/background.png
+share/picodrive/skin/font.png
+share/picodrive/skin/readme.txt
+share/picodrive/skin/selector.png
+share/picodrive/skin/skin.txt
+share/pixmaps/picodrive.png

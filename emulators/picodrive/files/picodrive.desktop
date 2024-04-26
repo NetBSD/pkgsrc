@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PicoDrive
+Comment=A Mega Drive/Genesis emulator
+Exec=picodrive %f
+Icon=picodrive
+Categories=Game;Emulator;
+Terminal=false
+Type=Application
+StartupNotify=true
