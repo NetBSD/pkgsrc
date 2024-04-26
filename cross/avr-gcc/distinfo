@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2022/04/15 17:16:08 tnn Exp $
+$NetBSD: distinfo,v 1.17 2024/04/26 13:05:01 micha Exp $
 
-BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
-SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
-Size (gcc-10.3.0.tar.xz) = 76692288 bytes
-SHA1 (patch-gcc_config_host-darwin.c) = ce5647dfb0bf93e222f30cdad3f00f5a4f633afc
-SHA1 (patch-gcc_configure) = 613d33d859ec3f108046274d09396aeb344e04cf
+BLAKE2s (gcc-13.2.0.tar.gz) = ac85decaf0c3e7718a38305b857fdcd5f7a5714563b04b55b8246a961f26e1c0
+SHA512 (gcc-13.2.0.tar.gz) = 41c8c77ac5c3f77de639c2913a8e4ff424d48858c9575fc318861209467828ccb7e6e5fe3618b42bf3d745be8c7ab4b4e50e424155e691816fa99951a2b870b9
+Size (gcc-13.2.0.tar.gz) = 153347847 bytes
+SHA1 (patch-gcc_config_nvptx_gen-opt.sh) = e57ddb20c40929328bbc4da696d60403925cb99d
+SHA1 (patch-gcc_configure) = 7607ef87ef4282909d3c83cc2236f6798ca0e90f
+SHA1 (patch-libgcc_libgcov.h) = 1fe3a2b55bac15ea1332040462675755945f5b05
