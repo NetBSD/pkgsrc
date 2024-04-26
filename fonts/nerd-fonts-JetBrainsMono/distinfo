@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/12 07:56:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/04/26 17:07:51 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.0.2/JetBrainsMono.tar.xz) = 70b664b2c74432380038f3d3ec8cf2f6492267f6c91957eb97e3deb056352483
-SHA512 (nerd-fonts/3.0.2/JetBrainsMono.tar.xz) = 5ad9452a2ee72c446a9dfb418597b3c6ee003a4e55301b6e59c5ce38553727f5e9b501a9087c9bf3c16e55459115a906b845b528bb28b1333d4757cba349f6c4
-Size (nerd-fonts/3.0.2/JetBrainsMono.tar.xz) = 3609456 bytes
+BLAKE2s (nerd-fonts/3.2.1/JetBrainsMono.tar.xz) = 41d4512daa01d9c6fdac9cb26313e0c7d9592407dbf5a39c2d8a493420cd9ced
+SHA512 (nerd-fonts/3.2.1/JetBrainsMono.tar.xz) = b4eb3d2e95881de683d655d5b4f40d681d138a08450a366bd5778ea1103d29153b7ddabe320c44ff569c10bed4f825531ac2ce2c44235c0e488713828d143c27
+Size (nerd-fonts/3.2.1/JetBrainsMono.tar.xz) = 5681764 bytes
