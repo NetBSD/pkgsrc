@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1046 2024/04/26 15:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.1047 2024/04/26 15:06:11 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -538,7 +538,6 @@ SUBDIR+=	py-tifffile
 SUBDIR+=	py-uniconvertor
 SUBDIR+=	py-wand
 SUBDIR+=	py-wcag-contrast-ratio
-SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
 SUBDIR+=	qr-code-generator
 SUBDIR+=	qr-code-generator16
