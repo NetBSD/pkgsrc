@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2702 2024/04/26 07:27:00 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2703 2024/04/26 07:55:11 nat Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4455,3 +4455,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-black to 24.4.2 [adam 2024-04-26]
 	Updated net/py-minio to 7.2.6 [adam 2024-04-26]
 	Updated devel/py-ruff to 0.4.2 [adam 2024-04-26]
+	Added x11/tinyx-wscons 0.3 [nat 2024-04-26]
