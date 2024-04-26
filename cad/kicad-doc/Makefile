@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/01/08 08:04:35 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2024/04/26 16:46:30 tnn Exp $
 #
+
+# This package should be updated to >= 8.0.1 but there is no
+# prebuilt docs distfile right now.
 
 V=		7.0.10
 DISTNAME=	kicad-doc-${V}

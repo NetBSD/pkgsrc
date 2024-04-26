@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/01/08 08:04:36 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/26 16:46:30 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -132,6 +132,7 @@ share/kicad/symbols/MCU_ST_STM32F4.kicad_sym
 share/kicad/symbols/MCU_ST_STM32F7.kicad_sym
 share/kicad/symbols/MCU_ST_STM32G0.kicad_sym
 share/kicad/symbols/MCU_ST_STM32G4.kicad_sym
+share/kicad/symbols/MCU_ST_STM32H5.kicad_sym
 share/kicad/symbols/MCU_ST_STM32H7.kicad_sym
 share/kicad/symbols/MCU_ST_STM32L0.kicad_sym
 share/kicad/symbols/MCU_ST_STM32L1.kicad_sym
@@ -140,6 +141,7 @@ share/kicad/symbols/MCU_ST_STM32L5.kicad_sym
 share/kicad/symbols/MCU_ST_STM32MP1.kicad_sym
 share/kicad/symbols/MCU_ST_STM32U5.kicad_sym
 share/kicad/symbols/MCU_ST_STM32WB.kicad_sym
+share/kicad/symbols/MCU_ST_STM32WBA.kicad_sym
 share/kicad/symbols/MCU_ST_STM32WL.kicad_sym
 share/kicad/symbols/MCU_ST_STM8.kicad_sym
 share/kicad/symbols/MCU_SiFive.kicad_sym
@@ -148,6 +150,7 @@ share/kicad/symbols/MCU_Texas.kicad_sym
 share/kicad/symbols/MCU_Texas_MSP430.kicad_sym
 share/kicad/symbols/MCU_Texas_SimpleLink.kicad_sym
 share/kicad/symbols/MCU_WCH_CH32V0.kicad_sym
+share/kicad/symbols/MCU_WCH_CH32V3.kicad_sym
 share/kicad/symbols/Mechanical.kicad_sym
 share/kicad/symbols/Memory_EEPROM.kicad_sym
 share/kicad/symbols/Memory_EPROM.kicad_sym
