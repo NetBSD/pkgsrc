@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/26 17:23:41 wiz Exp $
+share/fonts/X11/TTF/HackNerdFont-Bold.ttf
+share/fonts/X11/TTF/HackNerdFont-BoldItalic.ttf
+share/fonts/X11/TTF/HackNerdFont-Italic.ttf
+share/fonts/X11/TTF/HackNerdFont-Regular.ttf
+share/fonts/X11/TTF/HackNerdFontMono-Bold.ttf
+share/fonts/X11/TTF/HackNerdFontMono-BoldItalic.ttf
+share/fonts/X11/TTF/HackNerdFontMono-Italic.ttf
+share/fonts/X11/TTF/HackNerdFontMono-Regular.ttf
+share/fonts/X11/TTF/HackNerdFontPropo-Bold.ttf
+share/fonts/X11/TTF/HackNerdFontPropo-BoldItalic.ttf
+share/fonts/X11/TTF/HackNerdFontPropo-Italic.ttf
+share/fonts/X11/TTF/HackNerdFontPropo-Regular.ttf
+@pkgdir share/fonts/X11/OTF
