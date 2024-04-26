@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/04/19 03:33:02 pin Exp $
+$NetBSD: distinfo,v 1.11 2024/04/26 09:43:29 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -387,6 +387,9 @@ Size (nom-7.1.3.crate) = 117570 bytes
 BLAKE2s (notify-6.1.1.crate) = ea29a790a8d365b5556f962e558d2473346ce0c9dc2a2a0623bf96034335d8f9
 SHA512 (notify-6.1.1.crate) = 58a44759d96c3ec7c431a37d92e1c1a0f112d75fac9651e9fead7a3a1de46074d79a251320b0522891711879da4ab42dd008c5a28a994039890f8d434d215e69
 Size (notify-6.1.1.crate) = 40117 bytes
+BLAKE2s (nu-ansi-term-0.46.0.crate) = ffae3900c1fe2fe2257c2ea57d1d00e34f5d200c51dc249c4e64dc40c441e38b
+SHA512 (nu-ansi-term-0.46.0.crate) = b4f37786dc85e0596e2b7b261a5a9fe0265bf1651c39efb358dd649b926b12c3093f307b98bf0c4df3899f0a7cb1854f2596bd5c3e22fbbef42f912ab2eb5043
+Size (nu-ansi-term-0.46.0.crate) = 24311 bytes
 BLAKE2s (num-traits-0.2.18.crate) = bc2f1ba5bfae387f4dfa386729c79df144d4d98e4363991dca9f43343819944d
 SHA512 (num-traits-0.2.18.crate) = e395ad9f3b21b0dd1d3a94cefe0d68a42d1b1d429ddb2823696f9cd75042568a635d93d133ddb9497ed357e5b3be5caddb8e4a4af87b65882bbdc60b05c74ebc
 Size (num-traits-0.2.18.crate) = 51930 bytes
@@ -417,6 +420,9 @@ Size (option-ext-0.2.0.crate) = 7345 bytes
 BLAKE2s (os_pipe-1.1.5.crate) = c4a3c1f7817aec644e4156253e549395982ae29e7c1c1a6425b407a6a35c3b62
 SHA512 (os_pipe-1.1.5.crate) = d862484e9a0594f31e45531fac9a892fe247c1003a9c365a28083c0b5132719fe6fcd7ed996716a4baddf1f8ec4857d62d05663d3fd7ecee5802005c55368048
 Size (os_pipe-1.1.5.crate) = 11430 bytes
+BLAKE2s (overload-0.1.1.crate) = d4fee1c8c08687a6412b7a83d8779f720d24141bd8786c3b6629dfae349d18a9
+SHA512 (overload-0.1.1.crate) = f79bc3321f45df5e3d0e5fa9c4e60524e4e28dd3729a09956766738adcf99ca42c187a01d48701ebe23d39aee00a19d4a07da798edc781b942e866b339613532
+Size (overload-0.1.1.crate) = 24439 bytes
 BLAKE2s (parking_lot-0.12.1.crate) = 6968a4adcbd417d1ae7674819c446c19488b7056b77259e31747d5ebad3298be
 SHA512 (parking_lot-0.12.1.crate) = 07327d3b737a913508dffb66023766348ce7f9d555c224a099cabb05baefd16a28e15fec638e3a148a5169dbd980c4541b0f8820ae9d06dfe0704482838fbd5c
 Size (parking_lot-0.12.1.crate) = 40967 bytes
@@ -603,9 +609,9 @@ Size (similar-2.5.0.crate) = 51648 bytes
 BLAKE2s (slab-0.4.9.crate) = 910e1c3640a12b3196dec14d77395cbb8ec6b85537612ac3653ee9bee7a415a5
 SHA512 (slab-0.4.9.crate) = b6b5423ae026472920f7c9a4abe0962314140a36dc562c0a9e3fa60725b2b8b7a8b343110d9d4c0e18fb318b0103e14c0ccbc9ae350d5563a5ac80c35f228c40
 Size (slab-0.4.9.crate) = 17108 bytes
-BLAKE2s (slumber-0.18.0.tar.gz) = 7479d5aa73109123ea0ce2e228766a8b31f3122ca1d724366c691af256ccecbf
-SHA512 (slumber-0.18.0.tar.gz) = 34ef13814aaef1d6a8289d3d2e2e179c01c61a178a34ebea0f8c6471bc6ef02ff2d40a1537b563a062b1f3ce7d13df4092bbde1d348802106f6d4589db481c34
-Size (slumber-0.18.0.tar.gz) = 677840 bytes
+BLAKE2s (slumber-1.0.0.tar.gz) = eb0ddbcb8f227ef48eae3beda65cbc8f4c40f149e5ffde8ccbfbc46a5a2251ee
+SHA512 (slumber-1.0.0.tar.gz) = 40cadf523dea23ece3ebd5b2e1fc774befaed54d0001b5f75d3a1c9643c75e74de37ed628950b847aeaa3d7fed3b769e4f27603f86a71b9a62c438725e894b12
+Size (slumber-1.0.0.tar.gz) = 692283 bytes
 BLAKE2s (smallvec-1.13.2.crate) = b0c6aa90972d031feb8f50aa1562ab0dbce3a027e6a54bea2586c819ef8e369b
 SHA512 (smallvec-1.13.2.crate) = a97c758b668e40ad9eb572e65feeae4954e09200a04ab92e26a13b48894381cd3a3d2571070c4b7a5e181182e1ede9688f990650342ec69ecfe1a264d234c679
 Size (smallvec-1.13.2.crate) = 35216 bytes
