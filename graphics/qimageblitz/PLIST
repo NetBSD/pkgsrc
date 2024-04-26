@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.4 2024/04/26 15:32:01 wiz Exp $
+bin/blitztest
+include/qimageblitz/blitzcpu.h
+include/qimageblitz/qimageblitz.h
+include/qimageblitz/qimageblitz_export.h
+lib/libqimageblitz.so
+lib/libqimageblitz.so.4
+lib/libqimageblitz.so.4.0.0
+lib/pkgconfig/qimageblitz.pc
