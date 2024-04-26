@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2731 2024/04/26 16:50:13 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2732 2024/04/26 17:02:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4489,3 +4489,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-rlp to 4.0.1 [adam 2024-04-26]
 	Updated finance/py-eth-keys to 0.5.1 [adam 2024-04-26]
 	Updated finance/py-eth-keyfile to 0.8.1 [adam 2024-04-26]
+	Updated textproc/py-ftfy to 6.2.0 [adam 2024-04-26]
+	Updated graphics/py-tifffile to 2024.4.24 [adam 2024-04-26]
+	Updated www/py-websocket-client to 1.8.0 [adam 2024-04-26]
+	Updated net/py-stone to 3.3.3 [adam 2024-04-26]
