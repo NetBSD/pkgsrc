@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1030 2024/04/26 15:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.1031 2024/04/26 15:26:27 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -344,7 +344,6 @@ SUBDIR+=	qt6ct
 SUBDIR+=	qterminal
 SUBDIR+=	qtermwidget
 SUBDIR+=	qtxdg-tools
-SUBDIR+=	qwt6-qt4
 SUBDIR+=	qwt6-qt5
 SUBDIR+=	qwtplot3d-qt4
 SUBDIR+=	ratmen
