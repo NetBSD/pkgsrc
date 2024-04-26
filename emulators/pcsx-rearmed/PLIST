@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/26 09:10:10 nia Exp $
+bin/pcsx-rearmed
+share/applications/pcsx-rearmed.desktop
+share/pcsx-rearmed/skin/background.png
+share/pcsx-rearmed/skin/font.png
+share/pcsx-rearmed/skin/readme.txt
+share/pcsx-rearmed/skin/selector.png
+share/pcsx-rearmed/skin/skin.txt
+share/pixmaps/pcsx-rearmed.png
