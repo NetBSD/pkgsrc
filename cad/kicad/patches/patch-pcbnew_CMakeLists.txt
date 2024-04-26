@@ -1,12 +1,12 @@
-$NetBSD: patch-pcbnew_CMakeLists.txt,v 1.6 2023/02/13 07:59:01 tnn Exp $
+$NetBSD: patch-pcbnew_CMakeLists.txt,v 1.7 2024/04/26 16:46:29 tnn Exp $
 
 Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- pcbnew/CMakeLists.txt.orig	2023-02-11 16:03:39.000000000 +0000
+--- pcbnew/CMakeLists.txt.orig	2024-03-13 15:55:00.000000000 +0000
 +++ pcbnew/CMakeLists.txt
-@@ -716,6 +716,9 @@ if( PCBNEW_LINK_MAPS )
-         )
- endif()
+@@ -714,6 +714,9 @@ target_link_options( pcbnew_kiface PRIVA
+     $<$<BOOL:${KICAD_MAKE_LINK_MAPS}>:-Wl,--cref,-Map=_pcbnew.kiface.map>
+     )
  
 +set_property(TARGET pcbnew_kiface APPEND_STRING
 +	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")

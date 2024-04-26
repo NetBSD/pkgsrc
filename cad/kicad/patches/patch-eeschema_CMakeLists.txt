@@ -1,12 +1,12 @@
-$NetBSD: patch-eeschema_CMakeLists.txt,v 1.7 2023/02/13 07:59:01 tnn Exp $
+$NetBSD: patch-eeschema_CMakeLists.txt,v 1.8 2024/04/26 16:46:29 tnn Exp $
 
 Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- eeschema/CMakeLists.txt.orig	2023-02-11 16:03:39.000000000 +0000
+--- eeschema/CMakeLists.txt.orig	2024-04-26 07:12:02.064376189 +0000
 +++ eeschema/CMakeLists.txt
-@@ -531,6 +531,9 @@ if( MAKE_LINK_MAPS )
-         )
- endif()
+@@ -611,6 +611,9 @@ target_link_options( eeschema PRIVATE
+     $<$<BOOL:${KICAD_MAKE_LINK_MAPS}>:-Wl,--cref,-Map=eeschema.map>
+     )
  
 +set_property(TARGET eeschema_kiface APPEND_STRING
 +	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")

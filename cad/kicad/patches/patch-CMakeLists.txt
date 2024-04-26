@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.8 2024/04/26 16:46:29 tnn Exp $
+
+Something is wrong with find_package. If EGL is found it complains
+that OpenGL is not found. Just disable the check for now.
+
+--- CMakeLists.txt.orig	2024-03-13 15:55:00.000000000 +0000
++++ CMakeLists.txt
+@@ -728,7 +728,13 @@ endif()
+ # Find OpenGL library, required
+ #
+ if( KICAD_USE_EGL )
+-    find_package( OpenGL REQUIRED COMPONENTS OpenGL EGL )
++#    find_package( OpenGL REQUIRED COMPONENTS OpenGL EGL )
++    find_package( OpenGL REQUIRED COMPONENTS OpenGL )
++    if (OpenGL_EGL_FOUND)
++        message("Found OpenGL with EGL as expected")
++    else()
++        message(FATAL_ERROR "Found OpenGL without EGL")
++    endif()
+ else()
+     set( OpenGL_GL_PREFERENCE "LEGACY" )     # CMake 3.11+ setting; see 'cmake --help-policy CMP0072'
+     find_package( OpenGL REQUIRED )
