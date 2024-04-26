@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/25 22:31:24 nikita Exp $
+$NetBSD: distinfo,v 1.10 2024/04/26 11:09:57 nikita Exp $
 
-BLAKE2s (passphrase/1.8.1.tar.gz) = 60009e8831e4e8bb6e91bdaa683a98b2f8d0281e25a510b2f4342ca21d49a77b
-SHA512 (passphrase/1.8.1.tar.gz) = 1fcd7613c50731c11c768f85fec94f56f12637597b24fac1f690a92a2590ce8bc6bd8fb8a7880821232b8cb4f2fab1310352c2607cd326abe7fc8954a4c4dec4
-Size (passphrase/1.8.1.tar.gz) = 33218 bytes
+BLAKE2s (passphrase-1/1.8.1.tar.gz) = 60009e8831e4e8bb6e91bdaa683a98b2f8d0281e25a510b2f4342ca21d49a77b
+SHA512 (passphrase-1/1.8.1.tar.gz) = 1fcd7613c50731c11c768f85fec94f56f12637597b24fac1f690a92a2590ce8bc6bd8fb8a7880821232b8cb4f2fab1310352c2607cd326abe7fc8954a4c4dec4
+Size (passphrase-1/1.8.1.tar.gz) = 33218 bytes
