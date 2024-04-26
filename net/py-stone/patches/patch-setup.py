@@ -1,16 +1,14 @@
-$NetBSD: patch-setup.py,v 1.1 2023/05/04 21:06:06 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2024/04/26 17:02:07 adam Exp $
 
 Relax requirement.
 
---- setup.py.orig	2022-01-25 21:31:58.000000000 +0000
+--- setup.py.orig	2024-03-28 16:48:27.000000000 +0000
 +++ setup.py
-@@ -22,9 +22,7 @@ with open('requirements.txt') as f:  # p
+@@ -21,7 +21,7 @@ with open('requirements.txt') as f:  # p
      install_reqs += f.read().splitlines()
  
  setup_requires = [
--    # Pin pytest-runner to 5.2.0, since 5.3.0 uses `find_namespaces` directive, not supported in
--    # Python 2.7
--    'pytest-runner == 5.2.0',
+-    'pytest-runner == 5.3.2',
 +    'pytest-runner',
  ]
  
