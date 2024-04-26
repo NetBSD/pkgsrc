@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2024/04/19 12:04:22 nia Exp $
+# $NetBSD: Makefile,v 1.360 2024/04/26 09:11:15 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -176,7 +176,9 @@ SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
+SUBDIR+=	pcsx-rearmed
 SUBDIR+=	pearpc
+SUBDIR+=	picodrive
 SUBDIR+=	py-keystone
 SUBDIR+=	py-unicorn
 SUBDIR+=	qemu
