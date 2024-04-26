@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2024/04/26 09:04:31 nia Exp $
+
+Don't build support for evdev by default on non-Linux.
+
+--- Makefile.orig	2024-04-16 19:16:33.283380940 +0000
++++ Makefile
+@@ -132,7 +132,7 @@ OBJS += platform/common/main.o platform/
+ 
+ # libpicofe
+ OBJS += platform/libpicofe/input.o platform/libpicofe/readpng.o \
+-	platform/libpicofe/fonts.o platform/libpicofe/linux/in_evdev.o \
++	platform/libpicofe/fonts.o \
+ 	platform/libpicofe/linux/plat.o
+ 
+ # libpicofe - sound
