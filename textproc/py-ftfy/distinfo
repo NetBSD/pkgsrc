@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/04/26 16:52:00 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/04/26 20:10:47 adam Exp $
 
 BLAKE2s (ftfy-6.2.0.tar.gz) = cd1218ff1f24eef6e80a53d73b52afe7d80bd1d2dcc59fea7fafa9a34630a26e
 SHA512 (ftfy-6.2.0.tar.gz) = 31724b3f65936a146f567a493988b3a3ce5ba87ac7578b97a64f0946cc20d09fcab040964cec9bcf3fbac1f79cad0b67c5e74aaa871a7d6c856f5939e7a30529
 Size (ftfy-6.2.0.tar.gz) = 63675 bytes
+SHA1 (patch-pyproject.toml) = bc5e3a8cd525b1b60d5a92e3a9c8814d8b6f8e04
