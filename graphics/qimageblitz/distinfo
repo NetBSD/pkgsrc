@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2024/04/26 15:32:01 wiz Exp $
+
+BLAKE2s (qimageblitz-0.0.6.tar.bz2) = c88b6dd40a81539a75fa889a1b4917d8e430975c9f725f6a8995be6e7663384f
+SHA512 (qimageblitz-0.0.6.tar.bz2) = dbd506c01622824efdec69640eb95e737d7848fa15d33351084a6499ca2321d7bc08e080d1e443f8ab9015cd2967c10d9b5aa2f3c6eaa7558153821c46133af9
+Size (qimageblitz-0.0.6.tar.bz2) = 57617 bytes
+SHA1 (patch-blitz_CMakeLists.txt) = 031a5a4cb70fd8a5d600444ce95ebc653a66d050
+SHA1 (patch-blitz_convolve.cpp) = 300f7da93b1704a6bc7f481161c59ba110a2ebf5
