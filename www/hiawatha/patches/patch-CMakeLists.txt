@@ -1,6 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2024/04/26 09:14:47 hauke Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2024/04/26 09:18:00 hauke Exp $
 
 setuid binaries should not be writable by anyone.
+
+Keep build system from installing to PKG_SYSCONFDIR - we handle
+preference files ourselves.
 
 --- CMakeLists.txt.orig	2023-10-13 13:21:31.000000000 +0000
 +++ CMakeLists.txt
