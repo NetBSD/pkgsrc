@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2024/04/26 19:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.424 2024/04/26 19:56:33 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -41,6 +41,7 @@ SUBDIR+=	artwiz-fonts
 SUBDIR+=	asea-ttf
 SUBDIR+=	awesome-otf
 SUBDIR+=	awesome-ttf
+SUBDIR+=	b612
 SUBDIR+=	babelstone-tibetan-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
