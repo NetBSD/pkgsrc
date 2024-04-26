@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2024/04/15 14:52:33 hauke Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/04/26 09:14:47 hauke Exp $
 
 setuid binaries should not be writable by anyone.
 
---- CMakeLists.txt.orig	2024-04-05 17:22:48.812504624 +0000
+--- CMakeLists.txt.orig	2023-10-13 13:21:31.000000000 +0000
 +++ CMakeLists.txt
-@@ -154,7 +154,7 @@ endif()
+@@ -154,16 +154,9 @@ endif()
  # Installation
  install(TARGETS hiawatha wigwam DESTINATION ${CMAKE_INSTALL_SBINDIR})
  install(TARGETS cgi-wrapper DESTINATION ${CMAKE_INSTALL_SBINDIR}
@@ -12,4 +12,13 @@ setuid binaries should not be writable by anyone.
 +	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE SETUID)
  install(TARGETS ssi-cgi DESTINATION ${CMAKE_INSTALL_BINDIR})
  
- foreach(configfile ${config_files})
+-foreach(configfile ${config_files})
+-	install(CODE "copy_if_not_exists(\"${CMAKE_SOURCE_DIR}/${configfile}\" \"${CONFIG_DIR}\")")
+-endforeach()
+-foreach(configfile ${config_files_in})
+-	install(CODE "copy_if_not_exists(\"${CMAKE_CURRENT_BINARY_DIR}/${configfile}\" \"${CONFIG_DIR}\")")
+-endforeach()
+-
+ install(FILES ${manual_pages} DESTINATION ${CMAKE_INSTALL_FULL_MANDIR}/man1)
+ foreach(manpage ${manual_pages_in})
+ 	install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${manpage} DESTINATION ${CMAKE_INSTALL_FULL_MANDIR}/man1)
