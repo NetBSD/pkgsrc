@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.8 2024/04/24 20:48:30 nikita Exp $
+# $NetBSD: application.mk,v 1.9 2024/04/26 11:38:07 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -30,7 +30,8 @@ ZIGSTRIP?=		yes
 TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
 
-#MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKSRC}/tmp
+MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-gobal-cache
+MAKE_ENV+=		ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
 
 .if ${ZIGPIE:Uyes:M[yY][eE][sS]}
 ZIGBUILDARGS+=		-Dpie=true
@@ -43,7 +44,6 @@ ZIGBUILDARGS+=		-Dstrip=true
 .endif
 
 do-build:
-	mkdir ${WRKSRC}/tmp
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build ${ZIGBUILDMODE} ${ZIGCPUMODE} ${ZIGBUILDARGS} --prefix ${DESTDIR}${PREFIX}
 
 do-install:
