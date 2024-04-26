@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/04/19 03:33:02 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/04/26 09:43:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -129,6 +129,7 @@ CARGO_CRATE_DEPENDS+=	mockito-1.4.0
 CARGO_CRATE_DEPENDS+=	nix-0.24.3
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	notify-6.1.1
+CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.46.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.18
 CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
 CARGO_CRATE_DEPENDS+=	objc-0.2.7
@@ -139,6 +140,7 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	open-5.1.2
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.1.5
+CARGO_CRATE_DEPENDS+=	overload-0.1.1
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.9
 CARGO_CRATE_DEPENDS+=	paste-1.0.14
