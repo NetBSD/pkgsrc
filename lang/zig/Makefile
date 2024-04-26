@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2024/04/26 09:57:34 nikita Exp $
+# $NetBSD: Makefile,v 1.36 2024/04/26 11:38:07 nikita Exp $
 
 DISTNAME=	zig-0.12.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -24,15 +25,14 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX}
 CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
 CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
 
+MAKE_ENV+=	ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
+MAKE_ENV+=	ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
+
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
 UNLIMIT_RESOURCES=	stacksize
 
-# \todo: There is currently an issue building this as a PIE
-#MKPIE_SUPPORTED=	no
-# RELRO checks fail for this package at the moment
-#RELRO_SUPPORTED=	no
 # TODO: /usr/bin/env + /bin/env in lib/std/zig/system.zig
 
 # after install, because the zig binary ends up in paths like
