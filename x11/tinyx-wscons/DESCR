@@ -1,0 +1,6 @@
+tinyx-wscons: Mininal X11 from Tiny Core Linux supporting wscons(9).
+
+This comes with a small memory footprint and high performance.
+
+It lacks support for GL GLX and DRI.  It is primarily targeted towards
+older hardware.  It has support for 16 color up to true color displays.

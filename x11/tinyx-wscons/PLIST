@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/26 07:23:21 nat Exp $
+sbin/Xwscons
