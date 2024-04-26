@@ -1,0 +1,9 @@
+Nerd Fonts patches developer targeted fonts with a high number of
+glyphs (icons). Specifically to add a high number of extra glyphs
+from popular 'iconic fonts' such as Font Awesome, Devicons,
+Octicons, and others.
+
+Source Code Pro is a set of OpenType fonts that have been designed
+to work well in user interface (UI) environments.  SauceCodePro is
+the nerd-fonts variant, which needs to have a different name because
+of the OFL license.
