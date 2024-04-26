@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.17 2022/05/23 11:56:34 micha Exp $
+$NetBSD: distinfo,v 1.18 2024/04/26 11:48:09 micha Exp $
 
-BLAKE2s (binutils-2.38.tar.bz2) = 80609a31f2040a8418a2004cb9de8b3d409e954c7c1d17afef8e9237227d00ee
-SHA512 (binutils-2.38.tar.bz2) = 7690b4158bd6587a85c6b98903980b9ac6f16b47f7fd1e60986b0a70388bedcfdc05d75597aa49c81fec1609ce24bed6c26583f76fd2471a9d63394fd9798afc
-Size (binutils-2.38.tar.bz2) = 34866647 bytes
-SHA1 (patch-bfd_Makefile.in) = f8855061f6ee3b365b9482bd55412d551e4e1206
+BLAKE2s (binutils-2.42.tar.lz) = 9d915e5ce9348ae0cd4ad6eb2f4c999e78e596571555f3006f361543edda9e92
+SHA512 (binutils-2.42.tar.lz) = 1013012d7dbec2b74a820b942a481e0e0b1953bcc919a2dbeffb919eb92ec551789f1726bb107fb87cd15f6c1a8b09bdcf2e9934dc3da97d037ed2e1554a8bea
+Size (binutils-2.42.tar.lz) = 27112996 bytes
+SHA1 (patch-bfd_Makefile.in) = 9b0d2f502fc8e7f29e3a0f363bf339cd97b1e802
 SHA1 (patch-binutils_Makefile.in) = e264bf986cd75f2c45e07ee3bd40a81c13760e7b
+SHA1 (patch-binutils_testsuite_binutils-all_ar.exp) = 36f312a21cc2e659f91cf32eb176e94cd9347158
 SHA1 (patch-gas_Makefile.in) = c11e7ae5913f62bb0aa50b728dbae88172f154c3
-SHA1 (patch-gprof_Makefile.in) = d0fa34064b1fdde3bacff1d223e7490d4747a0b9
-SHA1 (patch-ld_Makefile.in) = 609f81b79b9d0de857d32c1e17eaccf6073aba3f
+SHA1 (patch-gprof_Makefile.in) = 0a81ec9fcf32a45e96f0bb8291eead3ec376ebe4
+SHA1 (patch-ld_Makefile.in) = d5242bf42821c11f97120593fe6dde5f75e72cec
 SHA1 (patch-libctf_Makefile.in) = 8858241ac2db31b74883b2490212b72ac1420a99
+SHA1 (patch-libsframe_Makefile.in) = 8de7f6cbc590e3183489d16da88341732cddee68
