@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4207 2024/04/25 00:34:40 thorpej Exp $
+# $NetBSD: Makefile,v 1.4208 2024/04/26 15:03:41 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3168,7 +3168,6 @@ SUBDIR+=	qore-uuid-module
 SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qttools
 SUBDIR+=	qt6-qtwayland
-SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	radamsa
 SUBDIR+=	radare2
