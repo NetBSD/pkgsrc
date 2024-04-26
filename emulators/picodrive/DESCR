@@ -1,0 +1,3 @@
+Picodrive is yet another Megadrive / Genesis / Sega CD / Mega CD / 32X / SMS
+emulator, which was written with ARM-based handheld devices in mind
+but also runs on non-ARM little-endian hardware too.
