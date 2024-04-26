@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.944 2024/04/04 13:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.945 2024/04/26 15:16:52 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -543,7 +543,6 @@ SUBDIR+=	qident
 SUBDIR+=	qoauth
 SUBDIR+=	qore-ssh2-module
 SUBDIR+=	qore-xmlsec-module
-SUBDIR+=	qt4-qtkeychain
 SUBDIR+=	qt5-qtkeychain
 SUBDIR+=	qt6-qtnetworkauth
 SUBDIR+=	racoon2
