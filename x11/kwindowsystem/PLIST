@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/07/29 02:49:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/04/26 16:11:04 wiz Exp $
 include/KF5/KWindowSystem/KKeyServer
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionOwner
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionWatcher
@@ -11,7 +11,7 @@ include/KF5/KWindowSystem/KWindowShadowTile
 include/KF5/KWindowSystem/KWindowSystem
 ${PLIST.x11}include/KF5/KWindowSystem/KXMessages
 ${PLIST.x11}include/KF5/KWindowSystem/NETWM
-include/KF5/KWindowSystem/KX11Extras
+${PLIST.x11}include/KF5/KWindowSystem/KX11Extras
 include/KF5/KWindowSystem/config-kwindowsystem.h
 ${PLIST.x11}include/KF5/KWindowSystem/fixx11h.h
 include/KF5/KWindowSystem/kkeyserver.h
@@ -28,7 +28,7 @@ include/KF5/KWindowSystem/kwindowshadow.h
 include/KF5/KWindowSystem/kwindowsystem.h
 include/KF5/KWindowSystem/kwindowsystem_export.h
 include/KF5/KWindowSystem/kwindowsystem_version.h
-include/KF5/KWindowSystem/kx11extras.h
+${PLIST.x11}include/KF5/KWindowSystem/kx11extras.h
 ${PLIST.x11}include/KF5/KWindowSystem/kxmessages.h
 ${PLIST.x11}include/KF5/KWindowSystem/netwm.h
 include/KF5/KWindowSystem/netwm_def.h
