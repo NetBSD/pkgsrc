@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/11/13 07:57:53 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/04/26 22:47:59 wiz Exp $
 
 DISTNAME=	autobahn-23.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+BUILDLINK_TRANSFORM+=	rm:-march=native
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX}
