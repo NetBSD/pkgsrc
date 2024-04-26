@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.13 2023/01/13 23:46:22 gutteridge Exp $
+$NetBSD: patch-ag,v 1.14 2024/04/26 15:37:31 wiz Exp $
 
 Handle newer NetBSD versions.  Default to NetBSD 10 if we can't guess,
 not NetBSD 1.6.
@@ -60,17 +60,13 @@ not NetBSD 1.6.
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="7099000"
 +	;;
-+      8.[0123]*)
-+	LSOF_TSTBIGF=" "
-+	LSOF_VERS="8000000"
-+	;;
 +      8.99.*)
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="8099000"
 +	;;
-+      9.[0123]*)
++      8.*.*)
 +	LSOF_TSTBIGF=" "
-+	LSOF_VERS="9000000"
++	LSOF_VERS="8000000"
 +	;;
 +      9.99.10[45678])
 +	LSOF_TSTBIGF=" "
@@ -79,6 +75,10 @@ not NetBSD 1.6.
 +      9.99.*)
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="9099000"
++	;;
++      9.*.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="9000000"
 +	;;
 +      10.99.*)
 +	LSOF_TSTBIGF=" "
