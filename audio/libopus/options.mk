@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2023/06/06 12:40:17 riastradh Exp $
+# $NetBSD: options.mk,v 1.3 2024/04/26 15:43:05 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.opus
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libopus
 PKG_SUPPORTED_OPTIONS=	doc
 
 .include "../../mk/bsd.options.mk"
