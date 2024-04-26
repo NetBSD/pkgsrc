@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2024/04/07 07:33:37 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/04/26 16:46:29 tnn Exp $
 #
 
-V=		7.0.10
+V=		8.0.1
 DISTNAME=	kicad-${V}
-PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
 GITLAB_PROJECT=	kicad
@@ -55,6 +54,7 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
@@ -63,6 +63,7 @@ BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
