@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.89 2024/04/12 14:28:44 micha Exp $
+# $NetBSD: Makefile.common,v 1.90 2024/04/26 09:54:06 tnn Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -17,7 +17,7 @@ LICENSE=	2-clause-bsd
 
 # The curl User-Agent is blocked with code 406
 .if ${FETCH_USING} == "curl"
-FETCH_USING=	manual
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 .endif
 
 DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
