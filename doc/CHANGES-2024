@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2710 2024/04/26 13:06:25 micha Exp $
+$NetBSD: CHANGES-2024,v 1.2711 2024/04/26 14:26:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/oh-my-posh to 19.24.3 [pin 2024-04-26]
 	Updated cross/avr-binutils to 2.42 [micha 2024-04-26]
 	Updated cross/avr-gcc to 13.2.0 [micha 2024-04-26]
+	mk: changed default emacs version to emacs29 [wiz 2024-04-26]
