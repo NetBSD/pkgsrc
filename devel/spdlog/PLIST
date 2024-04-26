@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/07/18 04:59:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/26 17:20:24 adam Exp $
 include/spdlog/async.h
 include/spdlog/async_logger-inl.h
 include/spdlog/async_logger.h
@@ -47,6 +47,7 @@ include/spdlog/formatter.h
 include/spdlog/fwd.h
 include/spdlog/logger-inl.h
 include/spdlog/logger.h
+include/spdlog/mdc.h
 include/spdlog/pattern_formatter-inl.h
 include/spdlog/pattern_formatter.h
 include/spdlog/sinks/android_sink.h
