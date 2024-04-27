@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.180 2024/04/25 15:14:49 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.181 2024/04/27 06:10:26 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -5172,7 +5172,6 @@ py{24,25,26,27,31}-moin<1.9.3nb1	arbitrary-code-execution	http://cve.mitre.org/c
 postfix<2.7.3		command-injection		http://www.kb.cert.org/vuls/id/555316
 postfix>=2.8.20100000<2.8.20110115	command-injection	http://www.kb.cert.org/vuls/id/555316
 TeXmacs-[0-9]*		privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3394
-hiawatha-[0-9]*		multiple-vulnerabilities	http://www.hiawatha-webserver.org/changelog
 patch<2.7		remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4651
 tiff<3.9.4nb2		remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0192
 suse{,32}_libtiff<11.3nb2	remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-5022
@@ -25099,9 +25098,9 @@ knot<5.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-26249
 jd-gui-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-26235
 jd-gui-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2023-26234
 glusterfs-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-48340
-emacs-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-48339
-emacs-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-48338
-emacs-[0-9]*	shell-command-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-48337
+emacs<29.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-48339
+emacs<29.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-48338
+emacs<29.1	shell-command-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-48337
 zoneminder<1.36.33	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-26039
 zoneminder<1.36.33	local-file-inclusion	https://nvd.nist.gov/vuln/detail/CVE-2023-26038
 zoneminder<1.36.33	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-26037
