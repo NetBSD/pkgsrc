@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/12/01 13:30:32 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/27 11:52:59 adam Exp $
 
-DISTNAME=	PyQt-builder-1.15.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt/qt/}
+DISTNAME=	pyqt_builder-1.16.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt_/qt-/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
 
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6.7:../../x11/py-sip6
+
+WHEEL_NAME=	${DISTNAME:S/pyqt_/PyQt_/:C/-([^0-9])/_\1/g}
 
 USE_LANGUAGES=	c c++
 
