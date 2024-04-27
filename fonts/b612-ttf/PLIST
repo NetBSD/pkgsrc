@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/27 20:05:26 wiz Exp $
+share/fonts/X11/TTF/B612-Bold.ttf
+share/fonts/X11/TTF/B612-BoldItalic.ttf
+share/fonts/X11/TTF/B612-Italic.ttf
+share/fonts/X11/TTF/B612-Regular.ttf
+share/fonts/X11/TTF/B612Mono-Bold.ttf
+share/fonts/X11/TTF/B612Mono-BoldItalic.ttf
+share/fonts/X11/TTF/B612Mono-Italic.ttf
+share/fonts/X11/TTF/B612Mono-Regular.ttf
