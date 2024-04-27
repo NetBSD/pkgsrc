@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.141 2024/04/07 07:34:51 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2024/04/27 15:00:12 rhialto Exp $
 
-PKGNAME=		pan-0.155
-PKGREVISION=		5
+PKGNAME=		pan-0.158
 CATEGORIES=		news
 TAG=			${PKGNAME_NOREV:S/pan-/v/} # e.g. v0.151
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
@@ -25,7 +24,7 @@ CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-gtkspell
 
 .include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux")
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux"
 LIBS+=			-lcompat
 .endif
 
