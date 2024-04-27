@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.15 2024/03/18 18:37:19 schmonz Exp $
+# $NetBSD: options.mk,v 1.16 2024/04/27 03:05:38 schmonz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imlib2
 PKG_SUPPORTED_OPTIONS=	heif libwebp x11
-PKG_SUGGESTED_OPTIONS=	libwebp x11
+PKG_SUGGESTED_OPTIONS=	heif libwebp x11
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=	mmx
 .elif ${MACHINE_ARCH} == "x86_64" && empty(PKGSRC_COMPILER:Mclang)
