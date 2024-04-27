@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.50 2023/05/11 16:52:34 schmonz Exp $
+$NetBSD: distinfo,v 1.51 2024/04/27 19:34:26 schmonz Exp $
 
+BLAKE2s (netqmail-1.05-TAI-leapsecs.patch) = 9904388c38820c4866fe9b57cddbc0a8d4c12655e903da1b1701142c31454fe2
+SHA512 (netqmail-1.05-TAI-leapsecs.patch) = 2278139b825330a418171ad6dd4667410819591d3828f8b40dda789e1aafe1cefcc638fdc6d9de21a8c0ca6caffb41fbbb44bab2dd80f570e81c6e900c8596f7
+Size (netqmail-1.05-TAI-leapsecs.patch) = 16382 bytes
 BLAKE2s (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = eb5736e4fe3bd2ebac518969117a829b4b937f78aa000aa9495020a10008b0e4
 SHA512 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = a02cad7ef0f57a9eee8a12444a30df4d112ba256fa581124d7f0fb78acee4da53d0211d98de5822f058518d6a872e01e737f28e437b8ed5f8fa392ae8808468b
 Size (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = 6962 bytes
