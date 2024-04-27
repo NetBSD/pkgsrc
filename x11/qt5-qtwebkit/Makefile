@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/04/06 08:07:12 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2024/04/27 07:54:18 adam Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -26,7 +26,7 @@ CMAKE_INSTALL_NAME_DIR=	${QTDIR}/lib
 TEST_TARGET=		test
 
 # Source/JavaScriptCore/offlineasm/parser.rb:587:in `block in parseSequence': undefined method `=~'
-RUBY_VERSIONS_INCOMPATIBLE=	32
+RUBY_VERSIONS_ACCEPTED=		31
 
 CMAKE_ARGS+=	-DPORT=Qt
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
