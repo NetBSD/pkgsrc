@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2024/04/06 09:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/04/27 03:05:37 schmonz Exp $
 
-DISTNAME=	imlib2-1.9.1
-PKGREVISION=	6
+DISTNAME=	imlib2-1.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +13,20 @@ LICENSE=	mit	# with some modifications
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-gif
+CONFIGURE_ARGS+=	--with-jpeg
+CONFIGURE_ARGS+=	--without-j2k
+CONFIGURE_ARGS+=	--without-jxl
+CONFIGURE_ARGS+=	--with-png
+CONFIGURE_ARGS+=	--without-ps
+CONFIGURE_ARGS+=	--without-raw
+CONFIGURE_ARGS+=	--without-svg
+CONFIGURE_ARGS+=	--with-tiff
+CONFIGURE_ARGS+=	--without-y4m
+CONFIGURE_ARGS+=	--with-bz2
+CONFIGURE_ARGS+=	--with-lzma
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--without-id3
 
 PKGCONFIG_OVERRIDE=	imlib2.pc.in
 

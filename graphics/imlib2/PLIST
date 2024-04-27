@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/03/18 18:37:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/04/27 03:05:37 schmonz Exp $
 ${PLIST.x11}bin/imlib2_bumpmap
 ${PLIST.x11}bin/imlib2_colorspace
 bin/imlib2_conv
@@ -9,9 +9,11 @@ ${PLIST.x11}bin/imlib2_show
 ${PLIST.x11}bin/imlib2_test
 ${PLIST.x11}bin/imlib2_view
 include/Imlib2.h
+include/Imlib2_Loader.h
 lib/imlib2/filters/bumpmap.la
 lib/imlib2/filters/colormod.la
 lib/imlib2/filters/testfilter.la
+lib/imlib2/loaders/ani.la
 lib/imlib2/loaders/argb.la
 lib/imlib2/loaders/bmp.la
 lib/imlib2/loaders/bz2.la
@@ -24,6 +26,7 @@ lib/imlib2/loaders/lbm.la
 lib/imlib2/loaders/lzma.la
 lib/imlib2/loaders/png.la
 lib/imlib2/loaders/pnm.la
+lib/imlib2/loaders/qoi.la
 lib/imlib2/loaders/tga.la
 lib/imlib2/loaders/tiff.la
 ${PLIST.webp}lib/imlib2/loaders/webp.la
@@ -54,3 +57,4 @@ share/imlib2/data/images/sh2.png
 share/imlib2/data/images/sh3.png
 share/imlib2/data/images/stop.png
 share/imlib2/data/images/tnt.png
+share/imlib2/rgb.txt

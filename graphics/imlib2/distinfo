@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.50 2024/03/18 18:37:19 schmonz Exp $
+$NetBSD: distinfo,v 1.51 2024/04/27 03:05:38 schmonz Exp $
 
-BLAKE2s (imlib2-1.9.1.tar.xz) = 58f6cdd4dac5d538bd74cf4c0a939f2e87293042861672c6f930dc4b93d70ab7
-SHA512 (imlib2-1.9.1.tar.xz) = 00eb8804a32e1403614e9f899f358dd9797f4bcfa7e9fdecd37992731019933e39834a60bd20be8fb69a35161ba1e784bd638b5ecb626d01a4f69c70c330e5f1
-Size (imlib2-1.9.1.tar.xz) = 813104 bytes
-SHA1 (patch-src_bin_imlib2__view.c) = 53a7bdb2e1f8687db095b796b46945ee5a72f552
+BLAKE2s (imlib2-1.12.2.tar.xz) = be2bd17f10fcfa90038d279c55b9158d7e4e8cae88c8532e41e29c211f576ade
+SHA512 (imlib2-1.12.2.tar.xz) = 3bffb8f0f6b3ec73a81f1d0c6ef3a3443425677cd8a1950422f102b67769c06df54128b21f84bd6c7880120cc5ec6f30d2ab134b3c001ad77f2d39efd749a5b7
+Size (imlib2-1.12.2.tar.xz) = 831812 bytes
+SHA1 (patch-src_bin_imlib2__view.c) = b819e6e05d2d9df27e21327af7811e41b9f7aff5
 SHA1 (patch-src_lib_amd64__blend.S) = 09e89c6b1d6fb622b3ee88f6c3a5e9b6f3ab3fad
 SHA1 (patch-src_lib_amd64__blend__cmod.S) = d533eeacd4b196086f1854c657d3e0773596790b
-SHA1 (patch-src_modules_loaders_Makefile.am) = 00c441c3c0227b6eba9afd526a03caea1ec3f51f
-SHA1 (patch-src_modules_loaders_Makefile.in) = 9f3326cbe20272b6b33e96b5898466cdfeba8d3f
