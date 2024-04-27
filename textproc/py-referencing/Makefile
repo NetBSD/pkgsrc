@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/17 12:52:13 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/04/27 05:03:13 adam Exp $
 
-DISTNAME=	referencing-0.34.0
+DISTNAME=	referencing-0.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/referencing/}
@@ -14,6 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-rpds-py>=0.7.0:../../devel/py-rpds-py
+# Circular dependency
+#TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests-[0-9]*:../../devel/py-test-subtests
 
 USE_LANGUAGES=	# none
 
