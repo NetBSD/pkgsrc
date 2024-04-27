@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/31 20:21:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/27 11:54:14 adam Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -151,6 +151,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qhash.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qmap.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qset.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_optional.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_pair.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_virtual_error_handler.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qrandom.sip
@@ -192,6 +193,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qtipccommon.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtranslator.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtransposeproxymodel.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtversion.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qtyperevision.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtypes.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qurl.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qurlquery.sip
@@ -202,6 +204,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qversionnumber.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qwaitcondition.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qwineventnotifier.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qxmlstream.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qyieldcpu.sip
 ${PYSITELIB}/PyQt6/bindings/QtDBus/QtDBus.toml
 ${PYSITELIB}/PyQt6/bindings/QtDBus/QtDBusmod.sip
 ${PYSITELIB}/PyQt6/bindings/QtDBus/qdbusabstractadaptor.sip
@@ -375,6 +378,7 @@ ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediatimerange.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qpymultimedia_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qscreencapture.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qsoundeffect.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qtvideo.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframe.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframeformat.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideosink.sip
@@ -394,6 +398,7 @@ ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhostinfo.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhstspolicy.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhttp1configuration.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhttp2configuration.sip
+${PYSITELIB}/PyQt6/bindings/QtNetwork/qhttpheaders.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhttpmultipart.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qlocalserver.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qlocalsocket.sip
@@ -545,6 +550,7 @@ ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgrendererinterface.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgrendernode.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgsimplerectnode.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgsimpletexturenode.sip
+${PYSITELIB}/PyQt6/bindings/QtQuick/qsgtextnode.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgtexture.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgtexture_platform.sip
 ${PYSITELIB}/PyQt6/bindings/QtQuick/qsgtexturematerial.sip
@@ -616,6 +622,7 @@ ${PYSITELIB}/PyQt6/bindings/QtSvg/QtSvg.toml
 ${PYSITELIB}/PyQt6/bindings/QtSvg/QtSvgmod.sip
 ${PYSITELIB}/PyQt6/bindings/QtSvg/qsvggenerator.sip
 ${PYSITELIB}/PyQt6/bindings/QtSvg/qsvgrenderer.sip
+${PYSITELIB}/PyQt6/bindings/QtSvg/qtsvgglobal.sip
 ${PYSITELIB}/PyQt6/bindings/QtSvgWidgets/QtSvgWidgets.toml
 ${PYSITELIB}/PyQt6/bindings/QtSvgWidgets/QtSvgWidgetsmod.sip
 ${PYSITELIB}/PyQt6/bindings/QtSvgWidgets/qgraphicssvgitem.sip
@@ -863,6 +870,9 @@ ${PYSITELIB}/PyQt6/uic/widget-plugins/qscintilla.pyo
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtcharts.py
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtcharts.pyc
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtcharts.pyo
+${PYSITELIB}/PyQt6/uic/widget-plugins/qtopenglwidgets.py
+${PYSITELIB}/PyQt6/uic/widget-plugins/qtopenglwidgets.pyc
+${PYSITELIB}/PyQt6/uic/widget-plugins/qtopenglwidgets.pyo
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtprintsupport.py
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtprintsupport.pyc
 ${PYSITELIB}/PyQt6/uic/widget-plugins/qtprintsupport.pyo

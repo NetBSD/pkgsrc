@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/04/06 08:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/27 11:54:14 adam Exp $
 
-DISTNAME=	PyQt6-6.6.1
+DISTNAME=	PyQt6-6.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt6/qt6/}
-PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
 
@@ -12,7 +11,9 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.15:../../x11/py-qt-builder
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.5:../../x11/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.8:../../x11/py-sip6
+# Binaries won't work without this:
+DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
