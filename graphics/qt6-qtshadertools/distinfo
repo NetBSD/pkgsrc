@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/04/01 13:40:28 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/04/27 11:49:43 adam Exp $
 
-BLAKE2s (qtshadertools-everywhere-src-6.6.3.tar.xz) = ad69c488a06e96d1fa92a49d962eccf4a79393ca8b862893907bf3bdb86ceca4
-SHA512 (qtshadertools-everywhere-src-6.6.3.tar.xz) = 7c6aefb6fe18e7febaa45ef84853d9400d57dfa424c7fc847dee50d155a95a54e27dafdd9a0186a8ce9476dec8b3715ad8d5b9fe6053ab777f6acb9213ab0519
-Size (qtshadertools-everywhere-src-6.6.3.tar.xz) = 1054688 bytes
+BLAKE2s (qtshadertools-everywhere-src-6.7.0.tar.xz) = 33d32fb3e0a4ff83ee4e9261e51dd20da3897be1586fff6d02930b141fca8633
+SHA512 (qtshadertools-everywhere-src-6.7.0.tar.xz) = 30f737093fcdba6b247425c21f15d5682454255fdcf04cbe9f822e5b549dcdbb6fa519bfbcd0f2ba8acfa775cec7c30a630b61d50e00afa8c017ae9a16a73497
+Size (qtshadertools-everywhere-src-6.7.0.tar.xz) = 1110704 bytes

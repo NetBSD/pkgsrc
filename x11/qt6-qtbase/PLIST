@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/04/01 13:40:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/04/27 11:49:40 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -151,6 +151,7 @@ qt6/doc/global/template/style/offline.css
 qt6/doc/global/template/style/online.css
 qt6/doc/global/template/style/tech_preview.svg
 qt6/doc/global/template/style/theqtcompany.png
+qt6/doc/global/warninglimit.qdocconf
 qt6/include/QtConcurrent/QtConcurrent
 qt6/include/QtConcurrent/QtConcurrentDepends
 qt6/include/QtConcurrent/QtConcurrentFilter
@@ -181,7 +182,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractfileengine_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractitemmodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractproxymodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qanimationgroup_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qatomicscopedvaluerollback_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qbytearray_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qbytedata_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcalendarbackend_p.h
@@ -193,6 +193,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qconfig_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_unix_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcoreapplication_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcorecmdlineargs_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcoreevent_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdatastream_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdataurl_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdatetime_p.h
@@ -294,6 +295,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsettings_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsharedmemory_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsimd_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsimd_x86_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsingleshottimer_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qspan_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstorageinfo_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstringalgorithms_p.h
@@ -350,6 +352,7 @@ qt6/include/QtCore/QAssociativeIterator
 qt6/include/QtCore/QAtomicInt
 qt6/include/QtCore/QAtomicInteger
 qt6/include/QtCore/QAtomicPointer
+qt6/include/QtCore/QAtomicScopedValueRollback
 qt6/include/QtCore/QBEInteger
 qt6/include/QtCore/QBaseIterator
 qt6/include/QtCore/QBasicMutex
@@ -402,7 +405,6 @@ qt6/include/QtCore/QDateTime
 qt6/include/QtCore/QDeadlineTimer
 qt6/include/QtCore/QDebug
 qt6/include/QtCore/QDebugStateSaver
-qt6/include/QtCore/QDeferredDeleteEvent
 qt6/include/QtCore/QDir
 qt6/include/QtCore/QDirIterator
 qt6/include/QtCore/QDynamicPropertyChangeEvent
@@ -611,11 +613,13 @@ qt6/include/QtCore/QSizeF
 qt6/include/QtCore/QSocketDescriptor
 qt6/include/QtCore/QSocketNotifier
 qt6/include/QtCore/QSortFilterProxyModel
+qt6/include/QtCore/QSpan
 qt6/include/QtCore/QSpecialInteger
 qt6/include/QtCore/QStack
 qt6/include/QtCore/QStandardPaths
 qt6/include/QtCore/QStaticByteArrayMatcher
 qt6/include/QtCore/QStaticByteArrayMatcherBase
+qt6/include/QtCore/QStaticLatin1StringMatcher
 qt6/include/QtCore/QStaticPlugin
 qt6/include/QtCore/QStorageInfo
 qt6/include/QtCore/QString
@@ -637,6 +641,7 @@ qt6/include/QtCore/QSysInfo
 qt6/include/QtCore/QSystemSemaphore
 qt6/include/QtCore/QTaggedIterator
 qt6/include/QtCore/QTaggedPointer
+qt6/include/QtCore/QTemplatedMetaMethodReturnArgument
 qt6/include/QtCore/QTemporaryDir
 qt6/include/QtCore/QTemporaryFile
 qt6/include/QtCore/QTextBoundaryFinder
@@ -739,8 +744,10 @@ qt6/include/QtCore/q20algorithm.h
 qt6/include/QtCore/q20chrono.h
 qt6/include/QtCore/q20functional.h
 qt6/include/QtCore/q20iterator.h
+qt6/include/QtCore/q20map.h
 qt6/include/QtCore/q20memory.h
 qt6/include/QtCore/q20type_traits.h
+qt6/include/QtCore/q20vector.h
 qt6/include/QtCore/q23functional.h
 qt6/include/QtCore/q23utility.h
 qt6/include/QtCore/qabstractanimation.h
@@ -759,6 +766,7 @@ qt6/include/QtCore/qassert.h
 qt6/include/QtCore/qassociativeiterable.h
 qt6/include/QtCore/qatomic.h
 qt6/include/QtCore/qatomic_cxx11.h
+qt6/include/QtCore/qatomicscopedvaluerollback.h
 qt6/include/QtCore/qbasicatomic.h
 qt6/include/QtCore/qbasictimer.h
 qt6/include/QtCore/qbindingstorage.h
@@ -784,6 +792,7 @@ qt6/include/QtCore/qcommandlineoption.h
 qt6/include/QtCore/qcommandlineparser.h
 qt6/include/QtCore/qcompare.h
 qt6/include/QtCore/qcompare_impl.h
+qt6/include/QtCore/qcomparehelpers.h
 qt6/include/QtCore/qcompilerdetection.h
 qt6/include/QtCore/qconcatenatetablesproxymodel.h
 qt6/include/QtCore/qconfig.h
@@ -915,8 +924,10 @@ qt6/include/QtCore/qsimd.h
 qt6/include/QtCore/qsize.h
 qt6/include/QtCore/qsocketnotifier.h
 qt6/include/QtCore/qsortfilterproxymodel.h
+qt6/include/QtCore/qspan.h
 qt6/include/QtCore/qstack.h
 qt6/include/QtCore/qstandardpaths.h
+qt6/include/QtCore/qstaticlatin1stringmatcher.h
 qt6/include/QtCore/qstorageinfo.h
 qt6/include/QtCore/qstring.h
 qt6/include/QtCore/qstringalgorithms.h
@@ -963,6 +974,7 @@ qt6/include/QtCore/qtranslator.h
 qt6/include/QtCore/qtransposeproxymodel.h
 qt6/include/QtCore/qtresource.h
 qt6/include/QtCore/qtsan_impl.h
+qt6/include/QtCore/qtsymbolmacros.h
 qt6/include/QtCore/qttranslation.h
 qt6/include/QtCore/qttypetraits.h
 qt6/include/QtCore/qtversion.h
@@ -988,6 +1000,7 @@ qt6/include/QtCore/qwineventnotifier.h
 qt6/include/QtCore/qxmlstream.h
 qt6/include/QtCore/qxpfunctional.h
 qt6/include/QtCore/qxptype_traits.h
+qt6/include/QtCore/qyieldcpu.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/dbus_minimal_p.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbus_symbols_p.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbusabstractadaptor_p.h
@@ -1042,7 +1055,6 @@ ${PLIST.dbus}qt6/include/QtDBus/qdbuscontext.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbuserror.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusextratypes.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusinterface.h
-${PLIST.dbus}qt6/include/QtDBus/qdbusmacros.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusmessage.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusmetatype.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbuspendingcall.h
@@ -1277,8 +1289,8 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qunixeventdispatcher_qpa_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvectorpath_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxbmhandler_p.h
-${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxkbcommon_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxpmhandler_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformaccessibility.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformbackingstore.h
@@ -1296,6 +1308,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatforminputcontextplugin_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformintegration.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformintegrationfactory_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformintegrationplugin.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformkeymapper.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformmenu.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformmenu_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformnativeinterface.h
@@ -1358,6 +1371,7 @@ qt6/include/QtGui/QBitmap
 qt6/include/QtGui/QBrush
 qt6/include/QtGui/QBrushData
 qt6/include/QtGui/QBrushDataPointerDeleter
+qt6/include/QtGui/QChildWindowEvent
 qt6/include/QtGui/QClipboard
 qt6/include/QtGui/QCloseEvent
 qt6/include/QtGui/QColor
@@ -1617,6 +1631,7 @@ qt6/include/QtGui/qrgb.h
 qt6/include/QtGui/qrgba64.h
 qt6/include/QtGui/qrgbafloat.h
 qt6/include/QtGui/qscreen.h
+qt6/include/QtGui/qscreen_platform.h
 qt6/include/QtGui/qsessionmanager.h
 qt6/include/QtGui/qshortcut.h
 qt6/include/QtGui/qstandarditemmodel.h
@@ -1675,6 +1690,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhostaddress_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhostinfo_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhsts_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhstsstore_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttp2connection_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttp2protocolhandler_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttpheaderparser_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qhttpmultipart_p.h
@@ -1712,8 +1728,11 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qnetworkreplyfileimpl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qnetworkreplyhttpimpl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qnetworkreplyimpl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qnetworkrequest_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qnetworkrequestfactory_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qocsp_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qocspresponse_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qrestaccessmanager_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qrestreply_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsocks5socketengine_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qssl_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslcertificate_p.h
@@ -1748,6 +1767,7 @@ qt6/include/QtNetwork/QHostInfo
 qt6/include/QtNetwork/QHstsPolicy
 qt6/include/QtNetwork/QHttp1Configuration
 qt6/include/QtNetwork/QHttp2Configuration
+qt6/include/QtNetwork/QHttpHeaders
 qt6/include/QtNetwork/QHttpMultiPart
 qt6/include/QtNetwork/QHttpPart
 qt6/include/QtNetwork/QIPv6Address
@@ -1767,8 +1787,10 @@ qt6/include/QtNetwork/QNetworkProxyFactory
 qt6/include/QtNetwork/QNetworkProxyQuery
 qt6/include/QtNetwork/QNetworkReply
 qt6/include/QtNetwork/QNetworkRequest
+qt6/include/QtNetwork/QNetworkRequestFactory
 qt6/include/QtNetwork/QOcspResponse
 qt6/include/QtNetwork/QPasswordDigestor
+qt6/include/QtNetwork/QRestReply
 qt6/include/QtNetwork/QSsl
 qt6/include/QtNetwork/QSslCertificate
 qt6/include/QtNetwork/QSslCertificateExtension
@@ -1798,6 +1820,7 @@ qt6/include/QtNetwork/qhostinfo.h
 qt6/include/QtNetwork/qhstspolicy.h
 qt6/include/QtNetwork/qhttp1configuration.h
 qt6/include/QtNetwork/qhttp2configuration.h
+qt6/include/QtNetwork/qhttpheaders.h
 qt6/include/QtNetwork/qhttpmultipart.h
 qt6/include/QtNetwork/qlocalserver.h
 qt6/include/QtNetwork/qlocalsocket.h
@@ -1811,8 +1834,11 @@ qt6/include/QtNetwork/qnetworkinterface.h
 qt6/include/QtNetwork/qnetworkproxy.h
 qt6/include/QtNetwork/qnetworkreply.h
 qt6/include/QtNetwork/qnetworkrequest.h
+qt6/include/QtNetwork/qnetworkrequestfactory.h
 qt6/include/QtNetwork/qocspresponse.h
 qt6/include/QtNetwork/qpassworddigestor.h
+qt6/include/QtNetwork/qrestaccessmanager.h
+qt6/include/QtNetwork/qrestreply.h
 qt6/include/QtNetwork/qssl.h
 qt6/include/QtNetwork/qsslcertificate.h
 qt6/include/QtNetwork/qsslcertificateextension.h
@@ -2017,7 +2043,6 @@ qt6/include/QtSql/QSqlTableModel
 qt6/include/QtSql/QtSql
 qt6/include/QtSql/QtSqlDepends
 qt6/include/QtSql/QtSqlVersion
-qt6/include/QtSql/qsql.h
 qt6/include/QtSql/qsqldatabase.h
 qt6/include/QtSql/qsqldriver.h
 qt6/include/QtSql/qsqldriverplugin.h
@@ -2043,6 +2068,7 @@ qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkmeasurement_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkmetric_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkperfevents_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarktimemeasurers_p.h
+qt6/include/QtTest/${PKGVERSION}/QtTest/private/qcomparisontesthelper_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qcsvbenchmarklogger_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qemulationdetector_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qjunittestlogger_p.h
@@ -2089,7 +2115,6 @@ qt6/include/QtTest/qbenchmark.h
 qt6/include/QtTest/qbenchmarkmetric.h
 qt6/include/QtTest/qsignalspy.h
 qt6/include/QtTest/qtest.h
-qt6/include/QtTest/qtest_global.h
 qt6/include/QtTest/qtest_gui.h
 qt6/include/QtTest/qtest_network.h
 qt6/include/QtTest/qtest_widgets.h
@@ -2182,6 +2207,7 @@ qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qpixmapstyle_p_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qplaintextedit_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qproxystyle_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qpushbutton_p.h
+qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qrhiwidget_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qscrollarea_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qscrollbar_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qscroller_p.h
@@ -2335,6 +2361,7 @@ qt6/include/QtWidgets/QProgressDialog
 qt6/include/QtWidgets/QProxyStyle
 qt6/include/QtWidgets/QPushButton
 qt6/include/QtWidgets/QRadioButton
+qt6/include/QtWidgets/QRhiWidget
 qt6/include/QtWidgets/QRubberBand
 qt6/include/QtWidgets/QScrollArea
 qt6/include/QtWidgets/QScrollBar
@@ -2499,6 +2526,7 @@ qt6/include/QtWidgets/qprogressdialog.h
 qt6/include/QtWidgets/qproxystyle.h
 qt6/include/QtWidgets/qpushbutton.h
 qt6/include/QtWidgets/qradiobutton.h
+qt6/include/QtWidgets/qrhiwidget.h
 qt6/include/QtWidgets/qrubberband.h
 qt6/include/QtWidgets/qscrollarea.h
 qt6/include/QtWidgets/qscrollbar.h
@@ -2608,6 +2636,7 @@ qt6/lib/cmake/Qt6/FindMySQL.cmake
 qt6/lib/cmake/Qt6/FindOracle.cmake
 qt6/lib/cmake/Qt6/FindPPS.cmake
 qt6/lib/cmake/Qt6/FindPostgreSQL.cmake
+qt6/lib/cmake/Qt6/FindRenderDoc.cmake
 qt6/lib/cmake/Qt6/FindSlog2.cmake
 qt6/lib/cmake/Qt6/FindTslib.cmake
 qt6/lib/cmake/Qt6/FindWrapAtomic.cmake
@@ -2795,6 +2824,7 @@ qt6/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in
 qt6/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake
 qt6/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake
 qt6/lib/cmake/Qt6Core/Qt6CoreMacros.cmake
+qt6/lib/cmake/Qt6Core/Qt6CoreResourceInit.in.cpp
 qt6/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake
 qt6/lib/cmake/Qt6Core/Qt6CoreTargets.cmake
 qt6/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake
@@ -3214,7 +3244,7 @@ qt6/lib/libQt6Xml.prl
 qt6/lib/libQt6Xml.so
 qt6/lib/libQt6Xml.so.${PKGVERSION}
 qt6/lib/libQt6Xml.so.6
-qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.rcc/qrc_example_icons.cpp.o
+qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.rcc/qrc_example_icons_init.cpp.o
 qt6/lib/pkgconfig/Qt6Concurrent.pc
 qt6/lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}qt6/lib/pkgconfig/Qt6DBus.pc
@@ -3228,7 +3258,6 @@ qt6/lib/pkgconfig/Qt6Sql.pc
 qt6/lib/pkgconfig/Qt6Test.pc
 qt6/lib/pkgconfig/Qt6Widgets.pc
 qt6/lib/pkgconfig/Qt6Xml.pc
-qt6/libexec/android_emulator_launcher.sh
 qt6/libexec/cmake_automoc_parser
 qt6/libexec/ensure_pro_file.cmake
 qt6/libexec/moc
@@ -3323,6 +3352,7 @@ qt6/mkspecs/common/uikit/GLES2/gl2.h
 qt6/mkspecs/common/uikit/clang.conf
 qt6/mkspecs/common/uikit/qmake.conf
 qt6/mkspecs/common/unix.conf
+qt6/mkspecs/common/vxworks/qplatformdefs.h
 qt6/mkspecs/common/wasm/qplatformdefs.h
 qt6/mkspecs/common/wasm/wasm.conf
 qt6/mkspecs/common/watchos.conf
@@ -3723,6 +3753,8 @@ qt6/mkspecs/unsupported/vxworks-simpentium-dcc/qmake.conf
 qt6/mkspecs/unsupported/vxworks-simpentium-dcc/qplatformdefs.h
 qt6/mkspecs/unsupported/vxworks-simpentium-g++/qmake.conf
 qt6/mkspecs/unsupported/vxworks-simpentium-g++/qplatformdefs.h
+qt6/mkspecs/vxworks-clang/qmake.conf
+qt6/mkspecs/vxworks-clang/qplatformdefs.h
 qt6/mkspecs/wasm-emscripten-64/qmake.conf
 qt6/mkspecs/wasm-emscripten-64/qplatformdefs.h
 qt6/mkspecs/wasm-emscripten/qmake.conf
