@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2745 2024/04/27 11:54:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2746 2024/04/27 16:33:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/qt6 to 6.7.0 [adam 2024-04-27]
 	Updated x11/py-qt-builder to 1.16.2 [adam 2024-04-27]
 	Updated x11/py-qt6 to 6.7.0 [adam 2024-04-27]
+	Updated devel/py-tortoisehg to 6.6.3nb1 [wiz 2024-04-27]
