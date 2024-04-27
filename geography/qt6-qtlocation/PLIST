@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/09/29 21:12:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/27 11:49:41 adam Exp $
 lib/pkgconfig/Qt6Location.pc
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
@@ -8,6 +8,7 @@ qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativecirclemapite
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativecirclemapitem_p_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativecontactdetails_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeocodemodel_p.h
+qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeojsondata_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomap_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapcopyrightsnotice_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qdeclarativegeomapitembase_p.h
