@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2023/12/01 13:30:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/27 11:52:59 adam Exp $
 bin/pyqt-bundle-${PYVERSSUFFIX}
 bin/pyqt-qt-wheel-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-GPL2
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-GPL3
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +10,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyqtbuild/__init__.py
 ${PYSITELIB}/pyqtbuild/__init__.pyc
 ${PYSITELIB}/pyqtbuild/__init__.pyo
+${PYSITELIB}/pyqtbuild/_version.py
+${PYSITELIB}/pyqtbuild/_version.pyc
+${PYSITELIB}/pyqtbuild/_version.pyo
 ${PYSITELIB}/pyqtbuild/bindings.py
 ${PYSITELIB}/pyqtbuild/bindings.pyc
 ${PYSITELIB}/pyqtbuild/bindings.pyo
