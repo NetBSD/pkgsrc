@@ -1,16 +1,21 @@
-@comment $NetBSD: PLIST.Darwin,v 1.4 2024/04/01 13:40:25 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.5 2024/04/27 11:49:40 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_mac_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_cf_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_fsevents_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_mac_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qmachparser_p.h
 qt6/include/QtDeviceDiscoverySupport/${PKGVERSION}/QtDeviceDiscoverySupport/private/qdevicediscovery_dummy_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qappleiconengine_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qapplekeymapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcoregraphics_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcoretextfontdatabase_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qfontengine_coretext_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapturemetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhibackingstore_p.h

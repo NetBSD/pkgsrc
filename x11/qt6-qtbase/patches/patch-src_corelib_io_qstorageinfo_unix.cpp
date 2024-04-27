@@ -1,12 +1,12 @@
-$NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.1 2022/11/24 11:11:38 nros Exp $
+$NetBSD: patch-src_corelib_io_qstorageinfo_unix.cpp,v 1.2 2024/04/27 11:49:40 adam Exp $
 
-* fix build on SunOS
+Fix build on SunOS.
 
---- src/corelib/io/qstorageinfo_unix.cpp.orig	2015-10-13 04:35:31 UTC
+--- src/corelib/io/qstorageinfo_unix.cpp.orig	2024-03-19 15:46:43.000000000 +0000
 +++ src/corelib/io/qstorageinfo_unix.cpp
-@@ -87,7 +87,7 @@
- #  if !defined(ST_RDONLY)
- #    define ST_RDONLY 1 // hack for missing define on Android
+@@ -51,7 +51,7 @@
+ #  if !defined(_STATFS_F_FLAGS) && !defined(Q_OS_NETBSD)
+ #    define _STATFS_F_FLAGS 1
  #  endif
 -#elif defined(Q_OS_HAIKU)
 +#elif defined(Q_OS_HAIKU) || defined(Q_OS_SOLARIS)

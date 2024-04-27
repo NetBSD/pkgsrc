@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/01 13:40:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/27 11:49:44 adam Exp $
 lib/pkgconfig/Qt6WaylandClient.pc
 lib/pkgconfig/Qt6WaylandCompositor.pc
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
@@ -15,7 +15,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-surfa
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-tablet-unstable-v2.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v2.h
-qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v4-wip.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v3.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-touch-extension.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-viewporter.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-wayland.h
@@ -71,6 +71,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtablet
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputinterface_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv1_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv2_p.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv3_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtouch_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandviewport_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandwindow_p.h
@@ -87,7 +88,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-surfac
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-tablet-unstable-v2-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v2-client-protocol.h
-qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v4-wip-client-protocol.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v3-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-touch-extension-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-viewporter-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-wayland-client-protocol.h
@@ -104,7 +105,6 @@ qt6/include/QtWaylandClient/qtwaylandclient-config.h
 qt6/include/QtWaylandClient/qtwaylandclientexports.h
 qt6/include/QtWaylandClient/qtwaylandclientglobal.h
 qt6/include/QtWaylandClient/qtwaylandclientversion.h
-qt6/include/QtWaylandClient/qwaylandclientexport.h
 qt6/include/QtWaylandClient/qwaylandclientextension.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qtwaylandcompositor-config_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qtwaylandcompositorglobal_p.h
@@ -119,7 +119,7 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayla
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-scaler.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-server-buffer-extension.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-text-input-unstable-v2.h
-qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-text-input-unstable-v4-wip.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-text-input-unstable-v3.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-touch-extension.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-viewporter.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-wayland.h
@@ -155,6 +155,8 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayla
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandsurface_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinput_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinputmanager_p.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinputmanagerv3_p.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinputv3_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtouch_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandutils_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandview_p.h
@@ -197,7 +199,7 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/waylan
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-scaler-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-server-buffer-extension-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-text-input-unstable-v2-server-protocol.h
-qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-text-input-unstable-v4-wip-server-protocol.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-text-input-unstable-v3-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-touch-extension-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-viewporter-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-wayland-server-protocol.h
@@ -243,6 +245,8 @@ qt6/include/QtWaylandCompositor/QWaylandSurfaceGrabber
 qt6/include/QtWaylandCompositor/QWaylandSurfaceRole
 qt6/include/QtWaylandCompositor/QWaylandTextInput
 qt6/include/QtWaylandCompositor/QWaylandTextInputManager
+qt6/include/QtWaylandCompositor/QWaylandTextInputManagerV3
+qt6/include/QtWaylandCompositor/QWaylandTextInputV3
 qt6/include/QtWaylandCompositor/QWaylandTouch
 qt6/include/QtWaylandCompositor/QWaylandView
 qt6/include/QtWaylandCompositor/QWaylandViewporter
@@ -269,7 +273,6 @@ qt6/include/QtWaylandCompositor/qwaylandcompositor.h
 qt6/include/QtWaylandCompositor/qwaylandcompositorextension.h
 qt6/include/QtWaylandCompositor/qwaylanddestroylistener.h
 qt6/include/QtWaylandCompositor/qwaylanddrag.h
-qt6/include/QtWaylandCompositor/qwaylandexport.h
 qt6/include/QtWaylandCompositor/qwaylandidleinhibitv1.h
 qt6/include/QtWaylandCompositor/qwaylandinputmethodcontrol.h
 qt6/include/QtWaylandCompositor/qwaylandiviapplication.h
@@ -299,6 +302,8 @@ qt6/include/QtWaylandCompositor/qwaylandsurface.h
 qt6/include/QtWaylandCompositor/qwaylandsurfacegrabber.h
 qt6/include/QtWaylandCompositor/qwaylandtextinput.h
 qt6/include/QtWaylandCompositor/qwaylandtextinputmanager.h
+qt6/include/QtWaylandCompositor/qwaylandtextinputmanagerv3.h
+qt6/include/QtWaylandCompositor/qwaylandtextinputv3.h
 qt6/include/QtWaylandCompositor/qwaylandtouch.h
 qt6/include/QtWaylandCompositor/qwaylandview.h
 qt6/include/QtWaylandCompositor/qwaylandviewporter.h

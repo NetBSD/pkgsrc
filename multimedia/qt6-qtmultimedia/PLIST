@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/04/01 13:40:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/04/27 11:49:42 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -45,7 +45,6 @@ ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/q
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsamplecache_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtvideo_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframe_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversionhelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter_p.h
@@ -81,6 +80,7 @@ qt6/include/QtMultimedia/QVideoFrameFormat
 qt6/include/QtMultimedia/QVideoSink
 qt6/include/QtMultimedia/QWaveDecoder
 qt6/include/QtMultimedia/QWindowCapture
+qt6/include/QtMultimedia/QtAudio
 qt6/include/QtMultimedia/QtMultimedia
 qt6/include/QtMultimedia/QtMultimediaDepends
 qt6/include/QtMultimedia/QtMultimediaVersion
@@ -107,11 +107,12 @@ qt6/include/QtMultimedia/qmediarecorder.h
 qt6/include/QtMultimedia/qmediatimerange.h
 qt6/include/QtMultimedia/qscreencapture.h
 qt6/include/QtMultimedia/qsoundeffect.h
+qt6/include/QtMultimedia/qtaudio.h
 qt6/include/QtMultimedia/qtmultimedia-config.h
-qt6/include/QtMultimedia/qtmultimediadefs.h
 qt6/include/QtMultimedia/qtmultimediaexports.h
 qt6/include/QtMultimedia/qtmultimediaglobal.h
 qt6/include/QtMultimedia/qtmultimediaversion.h
+qt6/include/QtMultimedia/qtvideo.h
 qt6/include/QtMultimedia/qvideoframe.h
 qt6/include/QtMultimedia/qvideoframeformat.h
 qt6/include/QtMultimedia/qvideosink.h
@@ -139,7 +140,6 @@ qt6/include/QtMultimediaWidgets/QtMultimediaWidgets
 qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsDepends
 qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsVersion
 qt6/include/QtMultimediaWidgets/qgraphicsvideoitem.h
-qt6/include/QtMultimediaWidgets/qtmultimediawidgetdefs.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsversion.h
