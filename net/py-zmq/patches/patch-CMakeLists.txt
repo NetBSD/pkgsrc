@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/04/27 02:42:18 ryoon Exp $
+
+* Fix _zmq.so build.
+
+--- CMakeLists.txt.orig	2024-04-27 02:25:29.115223723 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,7 @@
+ cmake_minimum_required(VERSION 3.14...3.28)
+ project(${SKBUILD_PROJECT_NAME} LANGUAGES C CXX)
+ set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
++set(CMAKE_SKIP_RPATH TRUE)
+ 
+ list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+ find_package(

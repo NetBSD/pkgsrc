@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/04/24 12:50:28 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/04/27 02:42:18 ryoon Exp $
 
 DISTNAME=	pyzmq-26.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-build-core
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	cmake pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
