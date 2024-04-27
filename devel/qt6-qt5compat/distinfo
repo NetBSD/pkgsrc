@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/04/01 13:40:25 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/04/27 11:49:40 adam Exp $
 
-BLAKE2s (qt5compat-everywhere-src-6.6.3.tar.xz) = b34c9d4591fea40878eac3e10513c97e97d75d8d70cc3a2991d282734c96a366
-SHA512 (qt5compat-everywhere-src-6.6.3.tar.xz) = 11a1e03216c434c07ff984fc7f225072067bd17f1d469513e84d610d067953ad8f0e492973cfab3afbaaadffd5b1d0db3e84cc96f1abfad4fced0ee852729330
-Size (qt5compat-everywhere-src-6.6.3.tar.xz) = 14634848 bytes
+BLAKE2s (qt5compat-everywhere-src-6.7.0.tar.xz) = 73e3d07f9b9ecc4dd5f3ff0ccc7bfbc3cd1ba833cc859fe9f84379453c118251
+SHA512 (qt5compat-everywhere-src-6.7.0.tar.xz) = 92115ca88b839171cf69360e0c3add64bb84305fdc28b9459da5eb69df79bfc2884616991ada898242e3614ac4f188dd76aa17889b5fb7fa72316a11efd61c85
+Size (qt5compat-everywhere-src-6.7.0.tar.xz) = 14629204 bytes

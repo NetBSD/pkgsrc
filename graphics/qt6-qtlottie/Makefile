@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/04/06 08:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/27 11:49:41 adam Exp $
 
 DISTNAME=	qtlottie-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtlottie-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 module for lottie animations
 CATEGORIES=	graphics
 LICENSE=	gnu-gpl-v3

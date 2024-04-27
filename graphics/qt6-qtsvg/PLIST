@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2023/09/29 21:12:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/27 11:49:43 adam Exp $
 lib/pkgconfig/Qt6Svg.pc
 lib/pkgconfig/Qt6SvgWidgets.pc
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfilter_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvggraphics_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvghandler_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvghelper_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgnode_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgvisitor_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgexports_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgglobal_p.h
 qt6/include/QtSvg/QSvgGenerator
