@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/13 15:46:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/04/27 07:33:35 adam Exp $
 bin/ffmpeg6
 bin/ffprobe6
 include/ffmpeg6/libavcodec/ac3_parser.h
@@ -203,6 +203,7 @@ man/man3/libswresample6.3
 man/man3/libswscale6.3
 ${PLIST.doc}share/doc/ffmpeg6/bootstrap.min.css
 share/doc/ffmpeg6/build_system.txt
+${PLIST.doc}share/doc/ffmpeg6/community.html
 ${PLIST.doc}share/doc/ffmpeg6/default.css
 ${PLIST.doc}share/doc/ffmpeg6/developer.html
 share/doc/ffmpeg6/errno.txt
