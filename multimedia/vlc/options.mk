@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.40 2024/01/31 16:32:05 ryoon Exp $
+# $NetBSD: options.mk,v 1.41 2024/04/27 12:18:10 pho Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -101,6 +101,9 @@ CONFIGURE_ARGS+=	--disable-optimizations
 
 PLIST_VARS+=		vlc-skins
 .if !empty(PKG_OPTIONS:Mvlc-skins)
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-skins2
 PLIST.vlc-skins=	yes
 INSTALLATION_DIRS+=	share/vlc/skins2
