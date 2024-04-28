@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/04/17 11:57:36 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/28 10:01:12 wiz Exp $
 
-DISTNAME=	roman-4.1
+DISTNAME=	roman-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roman/}
@@ -10,15 +10,16 @@ HOMEPAGE=	https://github.com/zopefoundation/roman
 COMMENT=	Integer to Roman numerals converter for Python
 LICENSE=	zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} roman roman-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
