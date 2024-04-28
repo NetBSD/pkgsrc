@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/26 03:23:43 pho Exp $
-lib/colour-${PKGVERSION}/${HS_VERSION}/package-description
-lib/colour-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 20:36:03 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Colour.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Colour.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Colour.p_hi
@@ -46,6 +44,10 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Colour/SRGB/Linear.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/colour-${PKGVERSION}/${HS_VERSION}/package-description
+lib/colour-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/colour-${PKGVERSION}/CHANGELOG
+share/${HS_PLATFORM}/colour-${PKGVERSION}/README
 share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/Data-Colour-CIE-Illuminant.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/Data-Colour-CIE.html
@@ -81,13 +83,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/colour-${PKGVERSION}/html/synopsis.png
-share/${HS_PLATFORM}/colour-${PKGVERSION}/CHANGELOG
-share/${HS_PLATFORM}/colour-${PKGVERSION}/README
