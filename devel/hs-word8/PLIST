@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/24 10:01:46 pho Exp $
-lib/word8-${PKGVERSION}/${HS_VERSION}/package-description
-lib/word8-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 12:19:51 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char8.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char8.hi
@@ -10,16 +8,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Word8.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Word8.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/word8-${PKGVERSION}/${HS_VERSION}/package-description
+lib/word8-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/Data-Char8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/Data-Word8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/word8-${PKGVERSION}/html/word8.haddock
