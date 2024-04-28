@@ -1,6 +1,7 @@
 # -*- sh -*-
-# $NetBSD: DEINSTALL.in,v 1.3 2022/02/11 01:11:57 pho Exp $
+# $NetBSD: DEINSTALL.in,v 1.4 2024/04/28 08:55:37 pho Exp $
 #
+HASKELL_GLOBAL_PKG_DB="@HASKELL_GLOBAL_PKG_DB@"
 HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
 HASKELL_PKG_ID_FILE="@HASKELL_PKG_ID_FILE@"
 AWK="@AWK@"
@@ -19,7 +20,11 @@ case ${STAGE} in
                                 print lines[j--] }' "${HASKELL_PKG_ID_FILE}" |
                 while read pkg_id; do
                     ${ECHO} "Unregistering \`$pkg_id'..."
-                    ${HASKELL_PKG_BIN} unregister --force --ipid "$pkg_id"
+                    ${HASKELL_PKG_BIN} \
+                        --package-db="${HASKELL_GLOBAL_PKG_DB}" \
+                        --force \
+                        --ipid \
+                        unregister "$pkg_id"
                 done
         fi
         ;;
