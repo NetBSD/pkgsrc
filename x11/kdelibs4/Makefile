@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.142 2024/04/26 15:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2024/04/28 10:30:03 wiz Exp $
 
 DISTNAME=	kdelibs-4.14.38
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/17.08.3/src/}
@@ -91,7 +91,6 @@ CXXFLAGS+=	-fpermissive
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-BUILDLINK_API_DEPENDS.strigi+=		strigi>=0.5.11
 #BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.10.0
 
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -117,7 +116,7 @@ BUILDLINK_API_DEPENDS.strigi+=		strigi>=0.5.11
 .include "../../security/qca2/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+#.include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 #.include "../../textproc/shared-desktop-ontologies/buildlink3.mk"
