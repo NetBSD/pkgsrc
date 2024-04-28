@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2756 2024/04/28 08:19:15 wen Exp $
+$NetBSD: CHANGES-2024,v 1.2757 2024/04/28 08:26:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4571,3 +4571,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/p5-PDF-Table to 1.006 [wen 2024-04-28]
 	Added lang/ghc98 version 9.8.2 [pho 2024-04-28]
 	Updated finance/p5-Finance-Quote to 1.61 [wen 2024-04-28]
+	Updated devel/p5-Date-Manip to 6.95 [wen 2024-04-28]
