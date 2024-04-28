@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/24 08:35:10 pho Exp $
-lib/quote-quot-${PKGVERSION}/${HS_VERSION}/package-description
-lib/quote-quot-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 11:52:04 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/QuoteQuot.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/QuoteQuot.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/QuoteQuot.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/quote-quot-${PKGVERSION}/${HS_VERSION}/package-description
+lib/quote-quot-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/Numeric-QuoteQuot.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/quote-quot.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/quote-quot-${PKGVERSION}/html/synopsis.png
