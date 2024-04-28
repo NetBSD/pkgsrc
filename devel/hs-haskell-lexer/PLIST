@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/24 17:30:34 pho Exp $
-lib/haskell-lexer-${PKGVERSION}/${HS_VERSION}/package-description
-lib/haskell-lexer-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/28 16:55:53 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Lexer.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Lexer.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Lexer.p_hi
@@ -22,15 +20,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Lexer/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/haskell-lexer-${PKGVERSION}/${HS_VERSION}/package-description
+lib/haskell-lexer-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/Language-Haskell-Lexer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/haskell-lexer.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-lexer-${PKGVERSION}/html/synopsis.png
