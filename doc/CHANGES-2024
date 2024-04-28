@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2768 2024/04/28 09:45:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2769 2024/04/28 09:47:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Test2-Suite to 0.000162 [wiz 2024-04-28]
 	Updated devel/p5-XS-Parse-Keyword to 0.41 [wiz 2024-04-28]
 	Updated archivers/ancient to 2.1.1 [wiz 2024-04-28]
+	Updated textproc/enchant2 to 2.7.2 [wiz 2024-04-28]
