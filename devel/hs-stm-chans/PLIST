@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/25 18:00:02 pho Exp $
-lib/stm-chans-${PKGVERSION}/${HS_VERSION}/package-description
-lib/stm-chans-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 20:20:44 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/TBChan.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/TBChan.hi
@@ -19,6 +17,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/TMQueue.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/TMQueue.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/stm-chans-${PKGVERSION}/${HS_VERSION}/package-description
+lib/stm-chans-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/Control-Concurrent-STM-TBChan.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/Control-Concurrent-STM-TBMChan.html
@@ -26,12 +26,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/Control-Concur
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/Control-Concurrent-STM-TMChan.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/Control-Concurrent-STM-TMQueue.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/stm-chans.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-chans-${PKGVERSION}/html/synopsis.png
