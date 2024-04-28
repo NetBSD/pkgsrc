@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:20:00 pho Exp $
-lib/rawfilepath-${PKGVERSION}/${HS_VERSION}/package-description
-lib/rawfilepath-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 11:39:43 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/RawFilePath.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/RawFilePath.hi
@@ -40,6 +38,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/RawFilePath/Process/Utility.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/RawFilePath/Process/Utility.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/rawfilepath-${PKGVERSION}/${HS_VERSION}/package-description
+lib/rawfilepath-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/Data-ByteString-RawFilePath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/RawFilePath-Directory.html
@@ -67,12 +67,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/doc-index-U.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/rawfilepath.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rawfilepath-${PKGVERSION}/html/synopsis.png
