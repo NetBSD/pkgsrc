@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:43 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/28 16:50:07 pho Exp $
 
-DISTNAME=	lens-family-core-2.1.2
-PKGREVISION=	3
+DISTNAME=	lens-family-core-2.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
