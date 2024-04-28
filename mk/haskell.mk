@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.59 2024/04/28 08:33:44 pho Exp $
+# $NetBSD: haskell.mk,v 1.60 2024/04/28 08:55:37 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -109,6 +109,7 @@ _DEF_VARS.haskell= \
 	DEINSTALL_TEMPLATES \
 	UNLIMIT_RESOURCES \
 	_HASKELL_BIN \
+	_HASKELL_GLOBAL_PKG_DB \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE_OR_DIR \
 	_HASKELL_PKG_ID_FILE \
@@ -121,7 +122,9 @@ _USE_VARS.haskell= \
 	MASTER_SITE_HASKELL_HACKAGE \
 	PKGDIR DESTDIR \
 	PREFIX \
-	WRKSRC
+	WRKSRC \
+	_MAKE_JOBS_N \
+	_PATH_ORIG
 _SORTED_VARS.haskell= \
 	HASKELL_UNRESTRICT_DEPENDENCIES
 _LISTED_VARS.haskell= \
@@ -166,6 +169,13 @@ _HASKELL_VERSION_CMD=	${_HASKELL_BIN:Q} --numeric-version
 _HASKELL_VERSION:=	ghc-${_HASKELL_VERSION_CMD:sh}
 .endif
 MAKEVARS+=		_HASKELL_VERSION
+
+# Determine the path to the global Haskell package database. We need this
+# in our INSTALL and DEINSTALL hooks.
+.if !defined(_HASKELL_GLOBAL_PKG_DB)
+_HASKELL_GLOBAL_PKG_DB!=	${_HASKELL_BIN:Q} --print-global-package-db
+.endif
+MAKEVARS+=			_HASKELL_GLOBAL_PKG_DB
 
 # By default GHC uses a per-user default environment file if one is
 # available. Cabal has to be visible in order to compile Setup.?hs,
@@ -306,7 +316,7 @@ _HS_PLIST_STATUS=	ok
 # description of "base" (which always exists) and extract the platform
 # from it.
 .if !defined(_HS_PLIST.platform)
-_HS_PLIST.platform.cmd=		${_HASKELL_PKG_BIN} --simple-output field base data-dir
+_HS_PLIST.platform.cmd=		${_HASKELL_PKG_BIN:Q} --simple-output field base data-dir
 _HS_PLIST.platform:=		${_HS_PLIST.platform.cmd:sh:H:T}
 .endif
 MAKEVARS+=			_HS_PLIST.platform
@@ -472,9 +482,10 @@ do-install:
 		${XARGS} ${RMDIR} -p 2>/dev/null || ${TRUE}
 
 # Substitutions for INSTALL and DEINSTALL.
-FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN}
-FILES_SUBST+=	HASKELL_PKG_DESCR_FILE_OR_DIR=${_HASKELL_PKG_DESCR_FILE_OR_DIR}
-FILES_SUBST+=	HASKELL_PKG_ID_FILE=${_HASKELL_PKG_ID_FILE}
+FILES_SUBST+=	HASKELL_GLOBAL_PKG_DB=${_HASKELL_GLOBAL_PKG_DB:Q}
+FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN:Q}
+FILES_SUBST+=	HASKELL_PKG_DESCR_FILE_OR_DIR=${_HASKELL_PKG_DESCR_FILE_OR_DIR:Q}
+FILES_SUBST+=	HASKELL_PKG_ID_FILE=${_HASKELL_PKG_ID_FILE:Q}
 FILES_SUBST+=	AWK=${AWK:Q}
 FILES_SUBST+=	EXPR=${EXPR:Q}
 FILES_SUBST+=	TRUE=${TRUE:Q}

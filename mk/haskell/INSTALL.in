@@ -1,6 +1,7 @@
 # -*- sh -*-
-# $NetBSD: INSTALL.in,v 1.3 2022/02/11 01:11:57 pho Exp $
+# $NetBSD: INSTALL.in,v 1.4 2024/04/28 08:55:37 pho Exp $
 #
+HASKELL_GLOBAL_PKG_DB="@HASKELL_GLOBAL_PKG_DB@"
 HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
 HASKELL_PKG_DESCR_FILE_OR_DIR="@HASKELL_PKG_DESCR_FILE_OR_DIR@"
 EXPR="@EXPR@"
@@ -10,7 +11,9 @@ case ${STAGE} in
     POST-INSTALL)
         if [ -f "${HASKELL_PKG_DESCR_FILE_OR_DIR}" ]; then
             # The package contains a single library.
-            ${HASKELL_PKG_BIN} register "${HASKELL_PKG_DESCR_FILE_OR_DIR}";
+            ${HASKELL_PKG_BIN} \
+                --package-db="${HASKELL_GLOBAL_PKG_DB}" \
+                register "${HASKELL_PKG_DESCR_FILE_OR_DIR}";
 
         elif [ -d "${HASKELL_PKG_DESCR_FILE_OR_DIR}" ]; then
             # The package contains two or more libraries. The order of
@@ -20,6 +23,7 @@ case ${STAGE} in
             while ${TRUE}; do
                 if [ -f "${HASKELL_PKG_DESCR_FILE_OR_DIR}/${i}" ]; then
                     ${HASKELL_PKG_BIN} \
+                        --package-db="${HASKELL_GLOBAL_PKG_DB}" \
                         register "${HASKELL_PKG_DESCR_FILE_OR_DIR}/${i}"
                     i=`${EXPR} $i + 1`
                 else
