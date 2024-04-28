@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/24 14:09:42 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 16:51:57 pho Exp $
 lib/IfElse-${PKGVERSION}/${HS_VERSION}/package-description
 lib/IfElse-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/IfElse.dyn_hi
@@ -11,11 +11,9 @@ share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/Control-Monad-IfElse.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/IfElse.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/IfElse-${PKGVERSION}/html/synopsis.png
