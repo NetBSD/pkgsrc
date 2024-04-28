@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/26 05:08:11 pho Exp $
-lib/extra-${PKGVERSION}/${HS_VERSION}/package-description
-lib/extra-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/28 20:46:53 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Extra.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Extra.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Extra.p_hi
@@ -70,6 +68,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Extra.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/extra-${PKGVERSION}/${HS_VERSION}/package-description
+lib/extra-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/CHANGES.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Control-Concurrent-Extra.html
@@ -132,12 +132,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/extra.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/synopsis.png
