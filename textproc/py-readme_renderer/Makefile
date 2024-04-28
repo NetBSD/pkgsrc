@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/03/03 11:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/28 17:11:31 wiz Exp $
 
 DISTNAME=	readme_renderer-43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/pypa/readme_renderer
 COMMENT=	Library for rendering "readme" descriptions for Warehouse
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.13.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.5.1:../../textproc/py-pygments
