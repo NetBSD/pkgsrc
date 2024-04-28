@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 08:59:29 pho Exp $
-lib/text-manipulate-${PKGVERSION}/${HS_VERSION}/package-description
-lib/text-manipulate-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 12:16:27 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lazy/Manipulate.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lazy/Manipulate.hi
@@ -16,16 +14,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Manipulate/Internal/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Manipulate/Internal/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/text-manipulate-${PKGVERSION}/${HS_VERSION}/package-description
+lib/text-manipulate-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/Data-Text-Lazy-Manipulate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/Data-Text-Manipulate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-manipulate-${PKGVERSION}/html/text-manipulate.haddock
