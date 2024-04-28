@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/01/22 19:26:48 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/28 18:02:50 adam Exp $
 
-DISTNAME=	junos-eznc-2.7.0
+DISTNAME=	junos-eznc-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
