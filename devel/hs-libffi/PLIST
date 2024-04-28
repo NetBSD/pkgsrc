@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/24 14:02:46 pho Exp $
-lib/libffi-${PKGVERSION}/${HS_VERSION}/package-description
-lib/libffi-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/28 16:48:42 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/LibFFI.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/LibFFI.hi
@@ -19,6 +17,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/LibFFI/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/LibFFI/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/libffi-${PKGVERSION}/${HS_VERSION}/package-description
+lib/libffi-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/Foreign-LibFFI-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/Foreign-LibFFI-FFITypes.html
@@ -26,12 +26,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/Foreign-LibFFI-In
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/Foreign-LibFFI-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/Foreign-LibFFI.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/libffi.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/libffi-${PKGVERSION}/html/synopsis.png
