@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 07:51:01 pho Exp $
-lib/hxt-charproperties-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hxt-charproperties-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 11:02:57 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/Properties/UnicodeBlocks.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/Properties/UnicodeBlocks.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/Properties/UnicodeBlocks.p_hi
@@ -16,6 +14,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Set/CharSet.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hxt-charproperties-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hxt-charproperties-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/Data-Char-Properties-UnicodeBlocks.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/Data-Char-Properties-UnicodeCharProps.html
@@ -35,12 +35,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/doc-i
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/hxt-charproperties.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-charproperties-${PKGVERSION}/html/synopsis.png
