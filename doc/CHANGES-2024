@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2773 2024/04/28 09:51:04 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2774 2024/04/28 09:52:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/libdiscid to 0.6.4 [wiz 2024-04-28]
 	Updated textproc/tree-sitter-cpp to 0.22.0 [wiz 2024-04-28]
 	Updated textproc/tree-sitter-rust to 0.21.2 [wiz 2024-04-28]
+	Updated devel/py-blinker to 1.8.0 [wiz 2024-04-28]
