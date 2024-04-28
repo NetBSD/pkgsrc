@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/26 03:01:56 pho Exp $
-lib/hourglass-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hourglass-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 20:35:24 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hourglass.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hourglass.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hourglass.p_hi
@@ -55,6 +53,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Time/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hourglass-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hourglass-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/Data-Hourglass-Compat.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/Data-Hourglass-Epoch.html
@@ -65,12 +65,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/Time-Compat.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/Time-System.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/Time-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/hourglass.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hourglass-${PKGVERSION}/html/synopsis.png
