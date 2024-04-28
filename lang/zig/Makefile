@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/04/28 18:01:54 nikita Exp $
+# $NetBSD: Makefile,v 1.38 2024/04/28 18:08:48 nikita Exp $
 
 DISTNAME=	zig-0.12.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 # Broken at least on *BSD, needs a new release, 0.11.0 does not build
 # stage 3 of the build process (fixed upstream).
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run
 
