@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/04 15:14:16 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+@comment $NetBSD: PLIST,v 1.7 2024/04/28 09:51:54 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/blinker/__init__.py
 ${PYSITELIB}/blinker/__init__.pyc
 ${PYSITELIB}/blinker/__init__.pyo
-${PYSITELIB}/blinker/_saferef.py
-${PYSITELIB}/blinker/_saferef.pyc
-${PYSITELIB}/blinker/_saferef.pyo
 ${PYSITELIB}/blinker/_utilities.py
 ${PYSITELIB}/blinker/_utilities.pyc
 ${PYSITELIB}/blinker/_utilities.pyo
