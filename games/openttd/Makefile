@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2024/04/06 08:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2024/04/28 20:01:49 triaxx Exp $
 
-DISTNAME=	openttd-13.4-source
+DISTNAME=	openttd-14.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 MASTER_SITES+=	https://cdn.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
@@ -17,12 +16,12 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-USE_CXX_FEATURES+=	c++17 charconv
+USE_CXX_FEATURES+=	c++20 charconv
 
 BUILD_DEFS+=	VARBASE
 
 # Uses alloca, cannot use standard C++ on NetBSD
-FORCE_CXX_STD=		gnu++17
+FORCE_CXX_STD=		gnu++20
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,5 +54,6 @@ PLIST.unix=	yes
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
