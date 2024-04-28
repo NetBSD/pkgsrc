@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/08/14 05:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/28 17:33:57 jperkin Exp $
 
 DISTNAME=	tegaki-train-0.3.1
 PKGREVISION=	6
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Train Tegaki with your own handwriting
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
 
 USE_LANGUAGES=	# none
 
