@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.83 2024/04/26 15:22:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.84 2024/04/28 10:30:03 wiz Exp $
 
 BUILDLINK_TREE+=	kdelibs
 
@@ -24,7 +24,6 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs4
 .include "../../mk/fam.buildlink3.mk"
 .include "../../sysutils/strigi/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"

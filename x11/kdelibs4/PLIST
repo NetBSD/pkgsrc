@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/07/08 21:32:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/04/28 10:30:03 wiz Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1899,7 +1899,6 @@ lib/kde4/krossmoduleforms.so
 lib/kde4/krossmodulekdetranslation.so
 lib/kde4/krossqts.so
 lib/kde4/kspell_aspell.so
-lib/kde4/kspell_enchant.so
 lib/kde4/ktranscript.so
 lib/kde4/libexec/filesharelist
 lib/kde4/libexec/fileshareset
@@ -3342,7 +3341,6 @@ share/kde4/services/khtmlimage.desktop
 share/kde4/services/kjavaappletviewer.desktop
 share/kde4/services/kmultipart.desktop
 share/kde4/services/kspell_aspell.desktop
-share/kde4/services/kspell_enchant.desktop
 share/kde4/services/metainfo.protocol
 share/kde4/services/mms.protocol
 share/kde4/services/mmst.protocol
