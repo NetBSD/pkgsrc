@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.61 2024/04/28 10:58:06 pho Exp $
+# $NetBSD: haskell.mk,v 1.62 2024/04/28 14:13:48 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -40,6 +40,13 @@
 #
 #	Possible values: yes, no
 #	Default value: no
+#
+# HASKELL_DISABLE_EXECUTABLES
+#	A list of executables that we don't want to build or
+#	install. Listing executables in this variable will cause the
+#	*.cabal file to be rewritten so that they won't be built.
+#
+#	Default value: empty
 #
 # HASKELL_UNRESTRICT_DEPENDENCIES
 #	A list of Cabal packages that the package depends on, whose version
@@ -93,6 +100,7 @@ _PKG_VARS.haskell= \
 	HASKELL_ENABLE_TESTS \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
+	HASKELL_DISABLE_EXECUTABLES \
 	HASKELL_UNRESTRICT_DEPENDENCIES \
 	PKGNAME HOMEPAGE MASTER_SITES
 _DEF_VARS.haskell= \
@@ -126,6 +134,7 @@ _USE_VARS.haskell= \
 	_MAKE_JOBS_N \
 	_PATH_ORIG
 _SORTED_VARS.haskell= \
+	HASKELL_DISABLE_EXECUTABLES \
 	HASKELL_UNRESTRICT_DEPENDENCIES
 _LISTED_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
@@ -149,9 +158,10 @@ HASKELL_ENABLE_SHARED_LIBRARY?=		yes
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 HASKELL_ENABLE_TESTS?=			no
+HASKELL_DISABLE_EXECUTABLES?=		# empty
 HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 
-.include "../../lang/ghc98/buildlink3.mk"
+.include "../../lang/ghc96/buildlink3.mk"
 
 # Some Cabal packages requires preprocessors to build, and we don't
 # want them to implicitly depend on such tools. Place dummy scripts by
@@ -189,6 +199,19 @@ _HASKELL_BUILD_SETUP_OPTS=	-package-env -
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
 
+# Some Haskell libraries builds and installs example executables that are
+# useless aside from debugging the libraries, and we don't want them to be
+# installed.
+.if !empty(HASKELL_DISABLE_EXECUTABLES)
+SUBST_CLASSES+=		exec
+SUBST_STAGE.exec?=	post-extract
+SUBST_FILES.exec?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
+SUBST_MESSAGE.exec?=	Disabling executables: ${HASKELL_DISABLE_EXECUTABLES}
+SUBST_FILTER_CMD.exec=	\
+	${AWK} -f "${.CURDIR}/../../mk/haskell/disable-executables.awk" \
+		-v exec="${HASKELL_DISABLE_EXECUTABLES:ts\t}"
+.endif
+
 # Haskell packages don't use semvars but they use something similar to it,
 # which is called Haskell PVP (https://pvp.haskell.org/). Packages usually
 # have version constraints on their dependencies that specify not only
@@ -196,14 +219,14 @@ USE_LANGUAGES+=	c
 # bounds are mostly accurate, package authors can not be sure about upper
 # bounds so they tend to be too pessimistic about compatibility.
 .if !empty(HASKELL_UNRESTRICT_DEPENDENCIES)
-SUBST_CLASSES+=		cabal
-SUBST_STAGE.cabal?=	post-extract
-SUBST_FILES.cabal?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
-SUBST_MESSAGE.cabal?=	Relaxing version constraints on dependencies
+SUBST_CLASSES+=		deps
+SUBST_STAGE.deps?=	post-extract
+SUBST_FILES.deps?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
+SUBST_MESSAGE.deps?=	Relaxing version constraints on dependencies
 .  for _pkg_ in ${HASKELL_UNRESTRICT_DEPENDENCIES}
 # Leading whitespace, or commas, or colons to avoid mismatches, remove
 # version constraints up to end of line, ',', or '}'.
-SUBST_SED.cabal+=	-Ee 's/((^|[,:])[[:space:]]*${_pkg_})[[:space:]=><^][^,}]+([,}]|$$)/\1\3/g'
+SUBST_SED.deps+=	-Ee 's/((^|[,:])[[:space:]]*${_pkg_})[[:space:]=><^][^,}]+([,}]|$$)/\1\3/g'
 .  endfor
 .endif
 
