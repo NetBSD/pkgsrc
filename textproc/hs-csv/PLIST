@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 11:09:40 pho Exp $
-lib/csv-${PKGVERSION}/${HS_VERSION}/package-description
-lib/csv-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 14:24:56 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/CSV.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/CSV.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/CSV.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/csv-${PKGVERSION}/${HS_VERSION}/package-description
+lib/csv-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/COPYING
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/Text-CSV.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/csv.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/csv-${PKGVERSION}/html/synopsis.png
