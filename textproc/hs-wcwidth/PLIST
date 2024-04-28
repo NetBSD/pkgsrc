@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 07:40:13 pho Exp $
-lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-description
-lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 10:55:54 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Char/WCWidth.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wcwidth-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/Data-Char-WCWidth.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wcwidth-${PKGVERSION}/html/wcwidth.haddock
