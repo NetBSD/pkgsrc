@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/04/28 20:34:00 pho Exp $
 
-BLAKE2s (auto-update-0.1.6.tar.gz) = 27cde86f07e61c7023e6768ca11fa6d5d6d5cd9943cae6b0e07a31de8458fff1
-SHA512 (auto-update-0.1.6.tar.gz) = ff0f4f835d0b24aafbe18dbc42a9c3cc396cea24be3f4b13b5f5dac49b3b21030c941c8b09a5c33ba175c9902d076aa12fc9eb5a6a79c94ee5c9b60935fa047f
-Size (auto-update-0.1.6.tar.gz) = 10929 bytes
+BLAKE2s (auto-update-0.2.0.tar.gz) = 3bcd729cc8b42242e26c8ccf2498b3e229604ae602e71c009efe5d6479733444
+SHA512 (auto-update-0.2.0.tar.gz) = 87b9f3bb8f3c961e82a697a8a9aebcafebdd39fab9ec02a781abcf0e0c20a1698783d64125ce1b8679637c8c700f9b9774c74134415dd5cfc5bbb0f39d0eac33
+Size (auto-update-0.2.0.tar.gz) = 11732 bytes
