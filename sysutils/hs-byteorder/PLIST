@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/24 08:33:16 pho Exp $
-lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-description
-lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 11:51:01 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-description
+lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/System-ByteOrder.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/byteorder.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/synopsis.png
