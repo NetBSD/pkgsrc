@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:06:45 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/28 10:06:35 wiz Exp $
 
 MODNAME=		enchant
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for ENCHANT (spelling) support
-PKGREVISION=		2
+PKGREVISION=		3
 
-CONFIGURE_ARGS+=	--with-enchant=shared,${BUILDLINK_PREFIX.enchant}
+CONFIGURE_ARGS+=	--with-enchant=shared,${BUILDLINK_PREFIX.enchant2}
 
 USE_PHP_EXT_PATCHES=	yes
 
-BUILDLINK_API_DEPENDS.enchant+=	enchant>=1.2.4
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 .include "../../lang/php/ext.mk"
-.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/enchant2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
