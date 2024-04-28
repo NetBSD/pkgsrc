@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/24 14:13:52 pho Exp $
-lib/js-flot-${PKGVERSION}/${HS_VERSION}/package-description
-lib/js-flot-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 16:52:41 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/Flot.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/Flot.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/Flot.p_hi
@@ -10,18 +8,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_flot.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/LICENSE
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/Language-Javascript-Flot.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/doc-index.json
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/haddock-bundle.min.js
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/js-flot.haddock
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/linuwial.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/meta.json
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/quick-jump.min.js
-${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/synopsis.png
+lib/js-flot-${PKGVERSION}/${HS_VERSION}/package-description
+lib/js-flot-${PKGVERSION}/${HS_VERSION}/package-id
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.canvas.min.js
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.categories.min.js
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.crosshair.min.js
@@ -37,3 +25,13 @@ share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.stack.min.js
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.symbol.min.js
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.threshold.min.js
 share/${HS_PLATFORM}/js-flot-${PKGVERSION}/jquery.flot.time.min.js
+share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/Language-Javascript-Flot.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/js-flot.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/js-flot-${PKGVERSION}/html/synopsis.png
