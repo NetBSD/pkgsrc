@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.64 2024/04/28 19:08:37 pho Exp $
+# $NetBSD: haskell.mk,v 1.65 2024/04/28 19:11:43 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -182,10 +182,8 @@ _HASKELL_VERSION=	ghc-${_HASKELL_VERSION_CMD:sh}
 
 # Determine the path to the global Haskell package database. We need this
 # in our INSTALL and DEINSTALL hooks.
-.if !defined(_HASKELL_GLOBAL_PKG_DB)
-_HASKELL_GLOBAL_PKG_DB!=	${_HASKELL_BIN:Q} --print-global-package-db
-.endif
-MAKEVARS+=			_HASKELL_GLOBAL_PKG_DB
+_HASKELL_GLOBAL_PKG_DB_CMD=	${_HASKELL_BIN:Q} --print-global-package-db
+_HASKELL_GLOBAL_PKG_DB=		${_HASKELL_GLOBAL_PKG_DB_CMD:sh}
 
 # By default GHC uses a per-user default environment file if one is
 # available. Cabal has to be visible in order to compile Setup.?hs,
