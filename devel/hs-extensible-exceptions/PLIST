@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/25 11:55:59 pho Exp $
-lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-description
-lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/28 18:18:14 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-description
+lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/Control-Exception-Extensible.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/extensible-exceptions.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/synopsis.png
