@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2024/01/21 08:24:45 taca Exp $
+# $NetBSD: Makefile.common,v 1.51 2024/04/28 13:03:00 wiz Exp $
 #
 # Ruby base distribution common definition
 #
@@ -27,11 +27,9 @@ RUBY_SITE_SUBDIR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 
 MASTER_SITE_RUBY?= \
 	http://cache.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_SITE_SUBDIR}/
 
 # Ruby distribution
 RUBY_DISTINFO_FILE=	${.CURDIR}/${RUBY_SRCDIR}/distinfo
