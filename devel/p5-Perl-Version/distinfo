@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/04/28 08:39:07 wen Exp $
 
-BLAKE2s (Perl-Version-1.013.tar.gz) = 90d0adb1e7b13221e92f08fe6b9305be7983dfc32a59bc8547f85ccf13e00024
-SHA512 (Perl-Version-1.013.tar.gz) = a6740b113c65c9ef4c8c2ce76ea17250ebf582a669086b3bac9df7a68af6765813f03c7e99b55c2a5f3f4c843d426ae3d22df0865d39a25faf6b87b202a3328c
-Size (Perl-Version-1.013.tar.gz) = 23012 bytes
+BLAKE2s (Perl-Version-1.017.tar.gz) = d1b843a1066f908e3711e06930c23c6e1ba797969d64e26acc43bc1bd8e6c221
+SHA512 (Perl-Version-1.017.tar.gz) = 0aafef2f0fa208502236f1f32cf7e19a5d29b628587f116a46be3b0111036cd0304581b3ca0ab53f6277aedfe18681cf2dea842172289a7ec67124f1f4ef4697
+Size (Perl-Version-1.017.tar.gz) = 30441 bytes
