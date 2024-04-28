@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/10/14 09:19:40 wiz Exp $
-
-For whichever spell-checkers you've installed (perhaps indirectly
-by selecting options to this package), you need to install one
-or more language-specific dictionaries.
-
-===========================================================================
