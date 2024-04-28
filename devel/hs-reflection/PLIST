@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/24 14:06:24 pho Exp $
-lib/reflection-${PKGVERSION}/${HS_VERSION}/package-description
-lib/reflection-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/28 16:50:46 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Reflection.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Reflection.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Reflection.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/reflection-${PKGVERSION}/${HS_VERSION}/package-description
+lib/reflection-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/Data-Reflection.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/reflection.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/reflection-${PKGVERSION}/html/synopsis.png
