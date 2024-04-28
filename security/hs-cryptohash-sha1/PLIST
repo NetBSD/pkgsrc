@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 10:21:55 pho Exp $
-lib/cryptohash-sha1-${PKGVERSION}/${HS_VERSION}/package-description
-lib/cryptohash-sha1-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 20:46:02 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Compat.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Compat.p_hi
@@ -13,15 +11,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Hash/SHA1/FFI.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/cryptohash-sha1-${PKGVERSION}/${HS_VERSION}/package-description
+lib/cryptohash-sha1-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/Crypto-Hash-SHA1.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/cryptohash-sha1.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cryptohash-sha1-${PKGVERSION}/html/synopsis.png
