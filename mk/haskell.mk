@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.58 2023/11/01 17:55:08 pho Exp $
+# $NetBSD: haskell.mk,v 1.59 2024/04/28 08:33:44 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -108,12 +108,12 @@ _DEF_VARS.haskell= \
 	INSTALL_TEMPLATES \
 	DEINSTALL_TEMPLATES \
 	UNLIMIT_RESOURCES \
-	_HASKELL_VERSION_CMD \
 	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE_OR_DIR \
 	_HASKELL_PKG_ID_FILE \
-	_HASKELL_VERSION
+	_HASKELL_VERSION \
+	_HS_ORIG_LD_CMD
 _USE_VARS.haskell= \
 	DISTNAME \
 	PKG_VERBOSE \
@@ -158,11 +158,14 @@ HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 .include "../../mk/haskell/tools/happy.mk"
 
 # Tools
-_HASKELL_BIN=		${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc
-_HASKELL_PKG_BIN=	${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc-pkg
+_HASKELL_BIN=		${BUILDLINK_PREFIX.ghc:U${LOCALBASE}}/bin/ghc
+_HASKELL_PKG_BIN=	${BUILDLINK_PREFIX.ghc:U${LOCALBASE}}/bin/ghc-pkg
 
-_HASKELL_VERSION_CMD=	${_HASKELL_BIN} -V 2>/dev/null | ${CUT} -d ' ' -f 8
-_HASKELL_VERSION=	ghc-${_HASKELL_VERSION_CMD:sh}
+.if !defined(_HASKELL_VERSION)
+_HASKELL_VERSION_CMD=	${_HASKELL_BIN:Q} --numeric-version
+_HASKELL_VERSION:=	ghc-${_HASKELL_VERSION_CMD:sh}
+.endif
+MAKEVARS+=		_HASKELL_VERSION
 
 # By default GHC uses a per-user default environment file if one is
 # available. Cabal has to be visible in order to compile Setup.?hs,
@@ -260,7 +263,7 @@ CONFIGURE_ARGS+=	${LDFLAGS:S/^/--ghc-options=-optl\ /}
 # wrapper is going to inject the relro flags. In this case these flags
 # don't make sense so ld(1) emits warnings. Use the original,
 # non-wrapped ld(1) for merging objects as a dirty workaround.
-_HS_ORIG_LD_CMD=	${SETENV} PATH=${_PATH_ORIG} which ld
+_HS_ORIG_LD_CMD=	${SETENV} PATH=${_PATH_ORIG} which ${LD}
 CONFIGURE_ARGS+=	--ghc-options=-pgmlm\ ${_HS_ORIG_LD_CMD:sh}
 CONFIGURE_ARGS+=	--ghc-options=-optlm\ -r
 
@@ -302,8 +305,11 @@ _HS_PLIST_STATUS=	ok
 # executable-only there's no such file. As a workaround we read the
 # description of "base" (which always exists) and extract the platform
 # from it.
+.if !defined(_HS_PLIST.platform)
 _HS_PLIST.platform.cmd=		${_HASKELL_PKG_BIN} --simple-output field base data-dir
-_HS_PLIST.platform=		${_HS_PLIST.platform.cmd:sh:H:T}
+_HS_PLIST.platform:=		${_HS_PLIST.platform.cmd:sh:H:T}
+.endif
+MAKEVARS+=			_HS_PLIST.platform
 # Abbreviated compiler version. Used for shared libraries.
 _HS_PLIST.short-ver=		${_HASKELL_VERSION:S,-,,}
 
