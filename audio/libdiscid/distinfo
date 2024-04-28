@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:59:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/04/28 09:49:10 wiz Exp $
 
-BLAKE2s (libdiscid-0.6.2.tar.gz) = f04dac02cb8732572a76fd2932fc9254f592f079ba7c0993d8e65511a79b054a
-SHA512 (libdiscid-0.6.2.tar.gz) = 7ce9bb589f64644ef44400620bd3e65a329e52c5698b44c3dc1569fb143d9af15d540b95fbdce1b87db0263e2ff55c81133213ed1708cdb25af1b38a46c4e1ac
-Size (libdiscid-0.6.2.tar.gz) = 401455 bytes
+BLAKE2s (libdiscid-0.6.4.tar.gz) = 3139434f2a0a3e9abc15162f6c66e6c97792cef81dea259dd33fce039a645a33
+SHA512 (libdiscid-0.6.4.tar.gz) = 36a25ea3b3c009dba53623211e3858209318c1dc5526d1a27c7bf39ce765651de7f93ab6a43650fe4fe5d69b3f3c622f457d992dcc5e746263f0cbcb150b1ceb
+Size (libdiscid-0.6.4.tar.gz) = 393070 bytes
