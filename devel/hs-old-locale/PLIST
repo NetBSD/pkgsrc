@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/26 02:38:26 pho Exp $
-lib/old-locale-${PKGVERSION}/${HS_VERSION}/package-description
-lib/old-locale-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/28 20:28:07 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Locale.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Locale.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Locale.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/old-locale-${PKGVERSION}/${HS_VERSION}/package-description
+lib/old-locale-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/System-Locale.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/old-locale.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-locale-${PKGVERSION}/html/synopsis.png
