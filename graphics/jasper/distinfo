@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.54 2024/04/05 11:14:57 wiz Exp $
+$NetBSD: distinfo,v 1.55 2024/04/28 08:44:48 adam Exp $
 
-BLAKE2s (jasper-4.2.3.tar.gz) = cf0a43327bd1c1aef316d4642dce2ab89a11263597ff9be081cec7c666d85182
-SHA512 (jasper-4.2.3.tar.gz) = d7edb67fe607f42645997e246c15887b84f75fa48229fba218c7e2efb14b24e8b50c45cc5d61441b3bb692a6f28fbbefe04de5cfc19c500f8cdb2fd3f4950bf5
-Size (jasper-4.2.3.tar.gz) = 2116436 bytes
+BLAKE2s (jasper-4.2.4.tar.gz) = 5340810e5061badb10e506e34fef4c383f57ca23b87bfa8fc91e004d0cea3935
+SHA512 (jasper-4.2.4.tar.gz) = 54af8813afddafffdddc7bd8b8eb5ac90ff73fb28aa4b8d77e4d5e1231fd05e4052f843912c4b3dac6e8ab286e97248d900e8541577642016e2a0049eb707ec9
+Size (jasper-4.2.4.tar.gz) = 2125651 bytes
 SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = a2d5d53cd28f653f9e6e302f76c187fba50b1ce2
