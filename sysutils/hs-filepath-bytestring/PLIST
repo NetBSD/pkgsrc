@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/24 08:19:49 pho Exp $
-lib/filepath-bytestring-${PKGVERSION}/${HS_VERSION}/package-description
-lib/filepath-bytestring-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 11:48:16 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FilePath/ByteString.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FilePath/ByteString.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FilePath/ByteString.p_hi
@@ -13,6 +11,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FilePath/Windows/ByteString.p
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/filepath-bytestring-${PKGVERSION}/${HS_VERSION}/package-description
+lib/filepath-bytestring-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/CHANGELOG
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/README.md
@@ -21,12 +21,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/Syst
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/System-FilePath-Windows-ByteString.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/TODO
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/filepath-bytestring.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/filepath-bytestring-${PKGVERSION}/html/synopsis.png
