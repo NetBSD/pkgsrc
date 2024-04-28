@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/04/05 10:23:27 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/04/28 09:47:24 wiz Exp $
 
-DISTNAME=		enchant-2.6.9
+DISTNAME=		enchant-2.7.2
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}

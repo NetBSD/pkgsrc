@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/26 13:33:48 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/28 09:47:24 wiz Exp $
 bin/enchant-2
 bin/enchant-lsmod-2
 include/enchant-2/enchant++.h
-include/enchant-2/enchant-provider.h
 include/enchant-2/enchant.h
 ${PLIST.aspell}lib/enchant-2/enchant_aspell.la
 ${PLIST.hunspell}lib/enchant-2/enchant_hunspell.la
