@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:44:23 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/04/28 09:14:59 wiz Exp $
 
-BLAKE2s (rftg-0.9.4.tar.bz2) = b19edc5277f88cbee2755919b7c28b9b48ca1b8558aab5f34a7ec792c37dfa76
-SHA512 (rftg-0.9.4.tar.bz2) = 76275851cd4f6200042ee66c323fb8251f37ff7f7804940414d406e26428bc551e93bd0c79760df5b36fc1c95d8d3e7d5cab9f81fcf15f6ec48812ecdea000be
-Size (rftg-0.9.4.tar.bz2) = 35161850 bytes
-SHA1 (patch-osx_bundle_launcher.sh) = 01ef5b0f18e792872253569e974395310c3fbab1
+BLAKE2s (rftg-0.9.5.zip) = feae3bbb07a212390cf8da09cef8c3b52657d459ab28964afa934dffa112c7b5
+SHA512 (rftg-0.9.5.zip) = 7b8c4eb98e0035c32498c5968cbc4d42c6896ce41ba6d9e45bf9fdc3c2ac089284b57606ad83fba8c31b7dfda1845f948b72cdae770b53314817feb7964e9c73
+Size (rftg-0.9.5.zip) = 58446822 bytes

@@ -1,22 +1,28 @@
-# $NetBSD: Makefile,v 1.53 2024/04/07 07:34:04 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/04/28 09:14:59 wiz Exp $
 
-DISTNAME=	rftg-0.9.4
-PKGREVISION=	19
+DISTNAME=	rftg-0.9.5
 CATEGORIES=	games
-MASTER_SITES=	http://keldon.net/rftg/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bnordli/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://keldon.net/rftg/
 COMMENT=	AI opponent(s) for the card game Race for the Galaxy
-#LICENSE=	gnu-gpl-v2 AND ??? (but allowed)
+LICENSE=	gnu-gpl-v2 AND rftg-license
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoconf automake autoreconf
 
 LIBS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS+=	libexec share/doc/rftg
+
+CHECK_PORTABILITY_SKIP+=	osx/bundle/launcher.sh
+
+WRKSRC=	${WRKDIR}/${DISTNAME}/src/
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 post-build:
 	${ECHO} '#!/bin/sh' > ${WRKSRC}/rftg.sh
