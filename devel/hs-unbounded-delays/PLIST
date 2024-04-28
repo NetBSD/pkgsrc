@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 11:08:13 pho Exp $
-lib/unbounded-delays-${PKGVERSION}/${HS_VERSION}/package-description
-lib/unbounded-delays-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 14:24:33 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Thread/Delay.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Thread/Delay.hi
@@ -10,16 +8,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Timeout.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Timeout.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/unbounded-delays-${PKGVERSION}/${HS_VERSION}/package-description
+lib/unbounded-delays-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/Control-Concurrent-Thread-Delay.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/Control-Concurrent-Timeout.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unbounded-delays-${PKGVERSION}/html/unbounded-delays.haddock
