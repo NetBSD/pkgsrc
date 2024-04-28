@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/26 04:10:02 pho Exp $
-lib/fmlist-${PKGVERSION}/${HS_VERSION}/package-description
-lib/fmlist-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 20:40:11 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/FMList.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/FMList.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/FMList.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/fmlist-${PKGVERSION}/${HS_VERSION}/package-description
+lib/fmlist-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/Data-FMList.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/fmlist.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fmlist-${PKGVERSION}/html/synopsis.png
