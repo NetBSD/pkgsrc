@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/24 08:11:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/28 11:10:05 pho Exp $
 lib/HsYAML-${PKGVERSION}/${HS_VERSION}/package-description
 lib/HsYAML-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/DList.dyn_hi
@@ -74,11 +74,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HsYAML-${PKGVERSION}/html/synopsis.png
