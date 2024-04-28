@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 17:05:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 14:30:10 pho Exp $
 lib/SafeSemaphore-${PKGVERSION}/${HS_VERSION}/package-description
 lib/SafeSemaphore-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/FairRWLock.dyn_hi
@@ -38,11 +38,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/Control-Co
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/Control-Concurrent-STM-SSem.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/SafeSemaphore.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/SafeSemaphore-${PKGVERSION}/html/synopsis.png
