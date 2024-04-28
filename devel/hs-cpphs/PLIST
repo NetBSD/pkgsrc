@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/26 05:00:31 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/28 20:44:53 pho Exp $
 bin/cpphs
-lib/cpphs-${PKGVERSION}/${HS_VERSION}/package-description
-lib/cpphs-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Preprocessor/Cpphs.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Preprocessor/Cpphs.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Preprocessor/Cpphs.p_hi
@@ -41,17 +39,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/TimeCompat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/cpphs-${PKGVERSION}/${HS_VERSION}/package-description
+lib/cpphs-${PKGVERSION}/${HS_VERSION}/package-id
 man/man1/cpphs.1
 share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/LICENCE-LGPL
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/Language-Preprocessor-Cpphs.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/Language-Preprocessor-Unlit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/cpphs.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cpphs-${PKGVERSION}/html/synopsis.png
