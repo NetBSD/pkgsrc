@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/24 03:38:58 pho Exp $
-lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-description
-lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/28 10:54:07 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-description
+lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/Data-Time-LocalTime-TimeZone-Series.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/timezone-series-${PKGVERSION}/html/timezone-series.haddock
