@@ -1,0 +1,16 @@
+$NetBSD: patch-libraries_terminfo_configure.ac,v 1.1 2024/04/28 05:58:58 pho Exp $
+
+Don't use "==" as it's a Bash-ism:
+https://github.com/judah/terminfo/commit/09fe6ebe02d439c507c0bad6e500c9212f56e8e3
+
+--- libraries/terminfo/configure.ac.orig	2023-10-23 02:48:49.253512773 +0000
++++ libraries/terminfo/configure.ac
+@@ -18,7 +18,7 @@ if test "x$curses_libraries" != "xNONE";
+   TERMINFO_LIB_DIRS=$curses_libraries
+ fi
+ 
+-if test "x$curses_library" == "xNONE"; then
++if test "x$curses_library" = "xNONE"; then
+ AC_PROG_CC()
+ 
+ AC_CHECK_LIB(tinfow, setupterm, HaveLibCurses=YES; LibCurses=tinfow,

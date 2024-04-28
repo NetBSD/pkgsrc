@@ -1,0 +1,28 @@
+$NetBSD: hadrian-clock.patch,v 1.1 2024/04/28 05:58:57 pho Exp $
+
+Building "clock" needs patching on NetBSD due to its ccall to
+clock_gettime(2) and clock_getres(2).
+
+This hack can be removed if we upstream this patch and GHC adopts it in
+hadrian/bootstrap/*.json. This incurs a small runtime cost but it's what
+GHC devs recommend:
+https://www.haskell.org/ghc/blog/20210709-capi-usage.html
+
+--- clock-0.8.3/System/Clock.hsc.orig	2024-04-27 16:18:19.639792537 +0000
++++ clock-0.8.3/System/Clock.hsc
+@@ -1,3 +1,4 @@
++{-# LANGUAGE CApiFFI #-}
+ -- | High-resolution, realtime clock and timer functions for Posix
+ --   systems. This module is being developed according to IEEE Std
+ --   1003.1-2008: <http://www.opengroup.org/onlinepubs/9699919799/>,
+@@ -132,8 +133,8 @@ foreign import ccall unsafe hs_clock_win
+ foreign import ccall unsafe hs_clock_win32_getres_processtime :: Ptr TimeSpec -> IO ()
+ foreign import ccall unsafe hs_clock_win32_getres_threadtime :: Ptr TimeSpec -> IO ()
+ #else
+-foreign import ccall unsafe clock_gettime :: #{type clockid_t} -> Ptr TimeSpec -> IO CInt
+-foreign import ccall unsafe clock_getres  :: #{type clockid_t} -> Ptr TimeSpec -> IO CInt
++foreign import capi unsafe "time.h clock_gettime" clock_gettime :: #{type clockid_t} -> Ptr TimeSpec -> IO CInt
++foreign import capi unsafe "time.h clock_getres" clock_getres  :: #{type clockid_t} -> Ptr TimeSpec -> IO CInt
+ #endif
+ 
+ #if !defined(_WIN32)

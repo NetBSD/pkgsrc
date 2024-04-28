@@ -1,0 +1,21 @@
+$NetBSD: hadrian-shake.patch,v 1.1 2024/04/28 05:58:57 pho Exp $
+
+This file is used by bootstrap.py.
+
+The shake package tries to build an unneeded executable with hard-coded
+"-thread". The only way to disable it is to modify its .cabal file.
+
+This hack can be removed when GHC adopts the version containing this commit
+in hadrian/bootstrap/*.json:
+https://github.com/ndmitchell/shake/pull/836
+
+--- shake-0.19.7/shake.cabal.orig	2024-04-27 16:15:52.267668874 +0000
++++ shake-0.19.7/shake.cabal
+@@ -204,6 +204,7 @@ library
+ 
+ 
+ executable shake
++    buildable: False
+     default-language: Haskell2010
+     hs-source-dirs:   src
+     ghc-options: -main-is Run.main -rtsopts -threaded "-with-rtsopts=-I0 -qg"

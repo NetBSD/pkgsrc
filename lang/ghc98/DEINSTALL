@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+PKGVERSION_NOREV="@PKGVERSION_NOREV@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
+
+case ${STAGE} in
+    DEINSTALL)
+        # We can't just remove the entire package.conf.d because then
+        # reinstalling GHC would destroy the database and every installed
+        # Haskell package breaks.
+        ${RM} -f ${PKG_PREFIX}/lib/ghc-${PKGVERSION_NOREV}/lib/package.conf.d/package.cache*
+        ${RMDIR} -p ${PKG_PREFIX}/lib/ghc-${PKGVERSION_NOREV}/lib/package.conf.d 2>/dev/null || ${TRUE}
+        ;;
+esac
