@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/07/20 21:09:00 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/04/28 09:45:12 wiz Exp $
 
-DISTNAME=	ancient-2.0.0
+DISTNAME=	ancient-2.1.1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=temisu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +15,7 @@ TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+# pkg-config needed by autoconf for m4 files
 USE_TOOLS+=		automake autoconf pkg-config
 
 USE_CXX_FEATURES+=	c++17
