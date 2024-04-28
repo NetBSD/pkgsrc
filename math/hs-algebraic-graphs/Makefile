@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:37:10 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/28 16:54:46 pho Exp $
 
 DISTNAME=	algebraic-graphs-0.7
 PKGREVISION=	3
@@ -9,6 +9,7 @@ COMMENT=	Library for algebraic graph construction and transformation
 LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES=	\
+	deepseq \
 	transformers
 
 .include "../../mk/haskell.mk"
