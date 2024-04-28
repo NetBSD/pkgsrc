@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/26 02:34:10 pho Exp $
-lib/bloomfilter-${PKGVERSION}/${HS_VERSION}/package-description
-lib/bloomfilter-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 20:27:34 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/BloomFilter.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/BloomFilter.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/BloomFilter.p_hi
@@ -26,6 +24,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/include/lookup3.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/bloomfilter-${PKGVERSION}/${HS_VERSION}/package-description
+lib/bloomfilter-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/Data-BloomFilter-Easy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/Data-BloomFilter-Hash.html
@@ -33,11 +33,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/Data-BloomFi
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/Data-BloomFilter.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/bloomfilter.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bloomfilter-${PKGVERSION}/html/synopsis.png
