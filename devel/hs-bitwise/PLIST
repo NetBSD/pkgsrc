@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:08:30 pho Exp $
-lib/bitwise-${PKGVERSION}/${HS_VERSION}/package-description
-lib/bitwise-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 20:28:53 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Image/PBM.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Image/PBM.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Image/PBM.p_hi
@@ -25,6 +23,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Bits/Bitwise.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/bitwise-${PKGVERSION}/${HS_VERSION}/package-description
+lib/bitwise-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/Codec-Image-PBM.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/Data-Array-BitArray-ByteString.html
@@ -34,11 +34,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/Data-Array-BitAr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/Data-Bits-Bitwise.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/bitwise.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/bitwise-${PKGVERSION}/html/synopsis.png
