@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2024/04/27 16:33:08 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2024/04/28 09:56:52 wiz Exp $
 
 DISTNAME=	tortoisehg-6.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	https://www.mercurial-scm.org/release/tortoisehg/targz/
 
@@ -11,6 +11,8 @@ HOMEPAGE=	https://tortoisehg.bitbucket.io/
 COMMENT=	GUI for Mercurial
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.0.0:../../devel/py-mercurial
@@ -50,6 +52,6 @@ post-install:
 	cd ${WRKSRC}/doc/build && ${PAX} -pp -rw html ${DESTDIR}${PREFIX}/share/doc/tortoisehg
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
