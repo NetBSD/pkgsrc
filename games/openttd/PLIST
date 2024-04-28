@@ -1,12 +1,27 @@
-@comment $NetBSD: PLIST,v 1.31 2023/07/17 21:07:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/04/28 20:01:49 triaxx Exp $
 bin/openttd
 man/man6/openttd.6
 ${PLIST.unix}share/applications/openttd.desktop
+share/doc/openttd/CONTRIBUTING.md
 share/doc/openttd/COPYING.md
+share/doc/openttd/CREDITS.md
 share/doc/openttd/README.md
 share/doc/openttd/changelog.txt
+share/doc/openttd/docs/admin_network.md
+share/doc/openttd/docs/debugging_desyncs.md
+share/doc/openttd/docs/desync.md
+share/doc/openttd/docs/directory_structure.md
+share/doc/openttd/docs/eints.md
+share/doc/openttd/docs/game_coordinator.md
+share/doc/openttd/docs/linkgraph.md
+share/doc/openttd/docs/logging_and_performance_metrics.md
+share/doc/openttd/docs/multiplayer.md
+share/doc/openttd/docs/obg_format.txt
+share/doc/openttd/docs/obm_format.txt
+share/doc/openttd/docs/obs_format.txt
+share/doc/openttd/docs/savegame_format.md
+share/doc/openttd/docs/symbol_server.md
 share/doc/openttd/known-bugs.txt
-share/doc/openttd/multiplayer.md
 ${PLIST.unix}share/icons/hicolor/128x128/apps/openttd.png
 ${PLIST.unix}share/icons/hicolor/16x16/apps/openttd.png
 ${PLIST.unix}share/icons/hicolor/256x256/apps/openttd.png
@@ -28,6 +43,11 @@ share/openttd/ai/compat_1.8.nut
 share/openttd/ai/compat_1.9.nut
 share/openttd/ai/compat_12.nut
 share/openttd/ai/compat_13.nut
+share/openttd/ai/compat_14.nut
+share/openttd/baseset/OpenTTD-Mono.ttf
+share/openttd/baseset/OpenTTD-Sans.ttf
+share/openttd/baseset/OpenTTD-Serif.ttf
+share/openttd/baseset/OpenTTD-Small.ttf
 share/openttd/baseset/no_music.obm
 share/openttd/baseset/no_sound.obs
 share/openttd/baseset/openttd.32.bmp
@@ -54,6 +74,7 @@ share/openttd/game/compat_1.8.nut
 share/openttd/game/compat_1.9.nut
 share/openttd/game/compat_12.nut
 share/openttd/game/compat_13.nut
+share/openttd/game/compat_14.nut
 share/openttd/lang/afrikaans.lng
 share/openttd/lang/arabic_egypt.lng
 share/openttd/lang/basque.lng
