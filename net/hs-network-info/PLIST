@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/24 10:34:22 pho Exp $
-lib/network-info-${PKGVERSION}/${HS_VERSION}/package-description
-lib/network-info-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 14:19:39 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/network-info-${PKGVERSION}/${HS_VERSION}/package-description
+lib/network-info-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/Network-Info.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/network-info.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/synopsis.png
