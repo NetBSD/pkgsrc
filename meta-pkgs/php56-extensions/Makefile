@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2021/06/19 06:06:12 nia Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/28 10:06:35 wiz Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +19,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_VERSION}<${NEXT_VERS}:../../archivers/php
 DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=${PHP_VERSION}<${NEXT_VERS}:../../time/php-calendar
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_VERSION}<${NEXT_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dba>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-dba
-DEPENDS+=	${PHP_PKG_PREFIX}-enchant>=${PHP_VERSION}:../../textproc/php-enchant
+#DEPENDS+=	${PHP_PKG_PREFIX}-enchant>=${PHP_VERSION}:../../textproc/php-enchant
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_VERSION}<${NEXT_VERS}:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-ftp>=${PHP_VERSION}<${NEXT_VERS}:../../net/php-ftp
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_VERSION}<${NEXT_VERS}:../../graphics/php-gd
