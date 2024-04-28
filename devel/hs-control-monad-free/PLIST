@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/25 16:55:48 pho Exp $
-lib/control-monad-free-${PKGVERSION}/${HS_VERSION}/package-description
-lib/control-monad-free-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 20:17:19 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Free.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Free.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Free.p_hi
@@ -13,16 +11,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Free/Zip.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/control-monad-free-${PKGVERSION}/${HS_VERSION}/package-description
+lib/control-monad-free-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/Control-Monad-Free-Improve.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/Control-Monad-Free-Zip.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/Control-Monad-Free.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/control-monad-free.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/control-monad-free-${PKGVERSION}/html/synopsis.png
