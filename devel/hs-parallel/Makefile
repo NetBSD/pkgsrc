@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:50 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/28 16:57:35 pho Exp $
 
 DISTNAME=	parallel-3.2.2.0
 PKGREVISION=	4
@@ -9,7 +9,8 @@ COMMENT=	Parallel programming library
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base \
+	deepseq
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
