@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/02 02:10:03 pho Exp $
-lib/magic-${PKGVERSION}/${HS_VERSION}/package-description
-lib/magic-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 11:51:24 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Magic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Magic.hi
@@ -25,6 +23,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Magic/Utils.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Magic/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/magic-${PKGVERSION}/${HS_VERSION}/package-description
+lib/magic-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/COPYING
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/Magic-Data.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/Magic-Init.html
@@ -32,12 +32,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/Magic-Operations.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/Magic-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/Magic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/magic.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/magic-${PKGVERSION}/html/synopsis.png
