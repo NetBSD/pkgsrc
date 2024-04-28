@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.62 2024/04/28 14:13:48 pho Exp $
+# $NetBSD: haskell.mk,v 1.63 2024/04/28 14:17:49 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -209,7 +209,7 @@ SUBST_FILES.exec?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
 SUBST_MESSAGE.exec?=	Disabling executables: ${HASKELL_DISABLE_EXECUTABLES}
 SUBST_FILTER_CMD.exec=	\
 	${AWK} -f "${.CURDIR}/../../mk/haskell/disable-executables.awk" \
-		-v exec="${HASKELL_DISABLE_EXECUTABLES:ts\t}"
+		-v exec=${HASKELL_DISABLE_EXECUTABLES:Q}
 .endif
 
 # Haskell packages don't use semvars but they use something similar to it,
