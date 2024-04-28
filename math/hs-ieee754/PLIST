@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/24 08:49:07 pho Exp $
-lib/ieee754-${PKGVERSION}/${HS_VERSION}/package-description
-lib/ieee754-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/28 12:15:51 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/AEq.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/AEq.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/AEq.p_hi
@@ -10,16 +8,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/IEEE.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/ieee754-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ieee754-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/Data-AEq.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/Numeric-IEEE.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/ieee754.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ieee754-${PKGVERSION}/html/synopsis.png
