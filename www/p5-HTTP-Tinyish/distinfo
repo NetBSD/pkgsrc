@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/09/11 01:10:07 wen Exp $
+$NetBSD: distinfo,v 1.7 2024/04/28 00:34:19 wen Exp $
 
-BLAKE2s (HTTP-Tinyish-0.18.tar.gz) = 76ef150b7d95e62959f49b8d9db8ec7f367be2214b92bb689f762c60cd0ee90c
-SHA512 (HTTP-Tinyish-0.18.tar.gz) = 6afaa11bc01ac276dd774d05dc67c467b5c1eab2251a410ff0addc4a910dca3c41bb74b6071555b2ef2c63df1fe20a26e1fed816b24eefbec7c1d85c66f80bc5
-Size (HTTP-Tinyish-0.18.tar.gz) = 17527 bytes
+BLAKE2s (HTTP-Tinyish-0.19.tar.gz) = 0d3bae5e47f426259ec2e1bfad21b39d5bf4ad01a6c45912bc517f3df9caba49
+SHA512 (HTTP-Tinyish-0.19.tar.gz) = cfc20e7b526c91a9baf8d049753762c35033c5e1bdf5b5239ba7695c2b0319e1e41bc669f617fc7e61ef8fcfaddbcdd299fad2c406d9cb166be304c401401010
+Size (HTTP-Tinyish-0.19.tar.gz) = 17670 bytes
