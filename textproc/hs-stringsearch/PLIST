@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/24 08:44:17 pho Exp $
-lib/stringsearch-${PKGVERSION}/${HS_VERSION}/package-description
-lib/stringsearch-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/28 12:14:15 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/Lazy/Search.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/Lazy/Search.hi
@@ -49,6 +47,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/Search/Substitution.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/ByteString/Search/Substitution.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/stringsearch-${PKGVERSION}/${HS_VERSION}/package-description
+lib/stringsearch-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/LICENCE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/Data-ByteString-Lazy-Search-DFA.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/Data-ByteString-Lazy-Search-KMP.html
@@ -62,12 +62,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/Data-ByteSt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/Data-ByteString-Search-Substitution.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/Data-ByteString-Search.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/stringsearch.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stringsearch-${PKGVERSION}/html/synopsis.png
