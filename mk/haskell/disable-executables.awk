@@ -1,10 +1,10 @@
-# $NetBSD: disable-executables.awk,v 1.1 2024/04/28 14:13:48 pho Exp $
+# $NetBSD: disable-executables.awk,v 1.2 2024/04/28 14:17:49 pho Exp $
 #
-# Prevent executables specified with "exec=foo\tbar\t..." from being
-# built or installed.
+# Prevent executables specified with -v "exec=foo bar ..." from being built
+# or installed.
 #
 BEGIN {
-    split(exec, execv, /\t/);
+    split(exec, execv, /[[:space:]]+/);
 }
 
 {
