@@ -1,23 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/24 17:37:56 pho Exp $
-lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-description
-lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/28 16:56:38 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-description
+lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/Data-SortedList.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/changelog.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/readme.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/sorted-list.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/synopsis.png
