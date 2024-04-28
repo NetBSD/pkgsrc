@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2804 2024/04/28 20:31:29 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.2805 2024/04/28 20:34:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4621,3 +4621,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/openttd to 14.0 [triaxx 2024-04-28]
 	Updated devel/hs-terminal-size to 0.3.4 [pho 2024-04-28]
 	Updated multimedia/libaom to 3.9.0 [ryoon 2024-04-28]
+	Updated devel/hs-auto-update to 0.2.0 [pho 2024-04-28]
