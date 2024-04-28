@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/24 08:22:12 pho Exp $
-lib/disk-free-space-${PKGVERSION}/${HS_VERSION}/package-description
-lib/disk-free-space-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/28 11:48:56 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/DiskSpace.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/DiskSpace.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/DiskSpace.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/disk-free-space-${PKGVERSION}/${HS_VERSION}/package-description
+lib/disk-free-space-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/System-DiskSpace.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/disk-free-space.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/disk-free-space-${PKGVERSION}/html/synopsis.png
