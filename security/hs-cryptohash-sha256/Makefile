@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:37:19 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/04/28 12:18:27 pho Exp $
 
 DISTNAME=	cryptohash-sha256-0.11.102.1
 PKGREVISION=	5
@@ -9,7 +9,8 @@ COMMENT=	Fast, pure and practical SHA-256 implementation
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base \
+	bytestring
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
