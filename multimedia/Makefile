@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2024/04/26 15:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.345 2024/04/28 13:03:31 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -162,7 +162,6 @@ SUBDIR+=	openquicktime
 SUBDIR+=	p5-xmltv
 SUBDIR+=	phonon
 SUBDIR+=	phonon-backend-gstreamer-shared
-SUBDIR+=	phonon-backend-vlc
 SUBDIR+=	phonon-qt5
 SUBDIR+=	phonon-qt5-backend-gstreamer
 SUBDIR+=	phonon-qt5-backend-vlc
