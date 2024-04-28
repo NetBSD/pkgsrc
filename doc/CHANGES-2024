@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2779 2024/04/28 09:59:09 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2780 2024/04/28 09:59:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-tortoisehg to 6.6.3nb2 [wiz 2024-04-28]
 	Updated www/py-google-api-python-client to 2.127.0 [wiz 2024-04-28]
 	Updated devel/py-jaraco.context to 5.3.0 [wiz 2024-04-28]
+	Updated sysutils/py-puremagic to 1.22 [wiz 2024-04-28]
