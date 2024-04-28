@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/04/26 11:38:07 nikita Exp $
+# $NetBSD: Makefile,v 1.37 2024/04/28 18:01:54 nikita Exp $
 
 DISTNAME=	zig-0.12.0
 PKGREVISION=	1
@@ -27,6 +27,8 @@ CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
 
 MAKE_ENV+=	ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
 MAKE_ENV+=	ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
+
+MAKE_ENV+=	VERBOSE=1
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
