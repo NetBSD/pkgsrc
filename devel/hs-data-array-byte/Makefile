@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:24 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/28 20:15:42 pho Exp $
 
 DISTNAME=	data-array-byte-0.1.0.1
 PKGREVISION=	3
@@ -10,6 +10,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES=	\
 	base	\
+	deepseq	\
 	template-haskell
 
 .include "../../mk/haskell.mk"
