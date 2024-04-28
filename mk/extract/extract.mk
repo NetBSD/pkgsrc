@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.44 2022/11/23 13:30:38 jperkin Exp $
+# $NetBSD: extract.mk,v 1.45 2024/04/28 18:07:33 wiz Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -220,7 +220,7 @@ DOWNLOADED_DISTFILE=	"$${extract_file}"
 do-extract: ${WRKDIR}
 .  for f in ${EXTRACT_ONLY}
 	${RUN} extract_file=${_DISTDIR:Q}/${f:Q}; export extract_file;	\
-	EXTRACT_OPTS_TAR=${EXTRACT_OPTS_TAR.${f}}; export EXTRACT_OPTS_TAR;	\
+	if [ "" != "${EXTRACT_OPTS_TAR.${f}}" ]; then EXTRACT_OPTS_TAR=${EXTRACT_OPTS_TAR.${f}}; export EXTRACT_OPTS_TAR; fi; \
 	cd ${WRKDIR} && cd ${EXTRACT_DIR.${f}} && ${EXTRACT_CMD}
 .  endfor
 .endif
