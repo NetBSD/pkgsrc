@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/27 19:20:33 pho Exp $
-lib/gitrev-${PKGVERSION}/${HS_VERSION}/package-description
-lib/gitrev-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 09:10:45 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/GitRev.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/GitRev.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/GitRev.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/gitrev-${PKGVERSION}/${HS_VERSION}/package-description
+lib/gitrev-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/Development-GitRev.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/gitrev.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gitrev-${PKGVERSION}/html/synopsis.png

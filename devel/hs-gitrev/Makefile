@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:33 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/29 09:10:45 pho Exp $
 
 DISTNAME=	gitrev-1.3.1
 PKGREVISION=	4
@@ -7,6 +7,8 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Compile git revision info into Haskell projects
 LICENSE=	modified-bsd
+
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 .include "../../devel/hs-base-compat/buildlink3.mk"
 .include "../../mk/haskell.mk"
