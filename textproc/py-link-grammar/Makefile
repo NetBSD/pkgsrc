@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/02/10 10:13:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/04/29 00:12:29 ryoon Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
@@ -10,10 +10,15 @@ COMMENT=	Python binding of syntactic parsing library
 
 DEPENDS+=	link-grammar-[0-9]*:../../textproc/link-grammar
 
-# not for 3.12: tries to use distutils
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_DEPMETHOD.python=	full
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 CONFIGURE_ARGS+=	--enable-python-bindings
 CONFIGURE_ARGS+=	PYTHON_VERSION=${PYVERSSUFFIX}
