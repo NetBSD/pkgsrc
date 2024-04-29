@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/26 08:36:42 pho Exp $
-lib/old-time-${PKGVERSION}/${HS_VERSION}/package-description
-lib/old-time-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 02:20:52 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Time.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Time.hi
@@ -8,15 +6,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Time.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/include/HsTime.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/old-time-${PKGVERSION}/${HS_VERSION}/package-description
+lib/old-time-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/System-Time.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/old-time.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/old-time-${PKGVERSION}/html/synopsis.png

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/25 01:45:34 pho Exp $
+$NetBSD: distinfo,v 1.6 2024/04/29 02:20:52 pho Exp $
 
-BLAKE2s (old-time-1.1.0.3.tar.gz) = 2f39c49ac20c4753c2d09da8c9a175030c77ae71f10defb3b7546996e67ced27
-SHA512 (old-time-1.1.0.3.tar.gz) = a701c62266f9f3c6dc60eba970b6c25a61bf82b6b8bb6b0073e0e44908598926fe7813a7ae1b1f9da98e4861a8f0565d0bd025cb97307b71c08cb9b0b2e321bb
-Size (old-time-1.1.0.3.tar.gz) = 74219 bytes
+BLAKE2s (old-time-1.1.0.4.tar.gz) = a3d2abda3aaea83433b7f460f46dcd999e32da2d1c49e4e75dbf688912d809cb
+SHA512 (old-time-1.1.0.4.tar.gz) = ec2386eb6276beadf0bec7fbf1f199ae514919c505308374c2935a2581deb7719a07553e53df0179642cb339b32b06365c000c1c9d6980f1e371dc02e2a172a3
+Size (old-time-1.1.0.4.tar.gz) = 75542 bytes
