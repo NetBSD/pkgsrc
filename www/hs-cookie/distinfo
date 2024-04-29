@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/01/25 10:00:29 pho Exp $
+$NetBSD: distinfo,v 1.5 2024/04/29 04:06:39 pho Exp $
 
-BLAKE2s (cookie-0.4.6.tar.gz) = b1e0f243e30c8e41a631379bdcaf817c72aa4577fd6748b74b280cdbb138431b
-SHA512 (cookie-0.4.6.tar.gz) = 8ba83a26940c8ff21a9a881e3ecc9947221dfcbfc31bd33a5d1c28f8256bd1260d16672d55bb91eadd1eafbe930195108c6ab8b6fe924f05f979c77a2ec0fba6
-Size (cookie-0.4.6.tar.gz) = 6219 bytes
+BLAKE2s (cookie-0.5.0.tar.gz) = 9546afbe07f5c1e68e2b3b278cbd888efe71ea27792b0af90c7b0725e900096c
+SHA512 (cookie-0.5.0.tar.gz) = f4a320280e01cf1a881f49b5ab037e1618983ce521585fcfe3837ec3292532f804717caa51db0fb42b84e149529cb4e665879af58edd974888b6ab129886d811
+Size (cookie-0.5.0.tar.gz) = 6554 bytes
