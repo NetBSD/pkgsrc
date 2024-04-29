@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 14:00:55 pho Exp $
-lib/generic-deriving-${PKGVERSION}/${HS_VERSION}/package-description
-lib/generic-deriving-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 05:14:57 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.p_hi
@@ -70,6 +68,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_generic_deriving.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/generic-deriving-${PKGVERSION}/${HS_VERSION}/package-description
+lib/generic-deriving-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/Generics-Deriving-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/Generics-Deriving-ConNames.html
@@ -110,12 +110,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/generic-deriving.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/generic-deriving-${PKGVERSION}/html/synopsis.png
