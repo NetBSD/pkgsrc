@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 11:48:23 pho Exp $
-lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 04:34:15 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Client.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Client.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Client.p_hi
@@ -124,15 +122,14 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Util/Stack.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Util/TypedEmbedded.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Util/TypedEmbedded.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Util/TypedEmbedded.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/MyPrelude.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/MyPrelude.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/MyPrelude.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON/Canonical.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON/Canonical.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON/Canonical.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/Hackage-Security-Client-Formats.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/Hackage-Security-Client-Repository-Cache.html
@@ -178,12 +175,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/hackage-security.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/synopsis.png
