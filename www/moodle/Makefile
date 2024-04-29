@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2024/03/06 23:09:32 jym Exp $
+# $NetBSD: Makefile,v 1.102 2024/04/29 07:20:29 wen Exp $
 
-DISTNAME=	moodle-4.3.3
+DISTNAME=	moodle-4.4
 CATEGORIES=	www
-MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable403/ \
-		https://jaist.dl.sourceforge.net/project/moodle/Moodle/stable403/
+MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable404/ \
+		https://jaist.dl.sourceforge.net/project/moodle/Moodle/stable404/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
@@ -11,15 +11,16 @@ HOMEPAGE=	https://moodle.org/
 COMMENT=	Course management system based on social constructionism
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=8.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-soap>=8.0:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=8.0:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.1:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=8.1:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.1:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.1:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=8.1:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.1:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.1:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.1:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=8.1:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=8.1:../../security/php-sodium
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
@@ -31,7 +32,7 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_INCOMPATIBLE=	56 74
+PHP_VERSIONS_INCOMPATIBLE=	56 74 80
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
