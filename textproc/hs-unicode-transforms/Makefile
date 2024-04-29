@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/02 06:37:40 pho Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/29 02:39:44 pho Exp $
 
 DISTNAME=	unicode-transforms-0.4.0.1
 PKGREVISION=	3
@@ -9,8 +9,10 @@ COMMENT=	Unicode normalization
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
+	base		\
+	bytestring	\
 	ghc-prim	\
+	text		\
 	unicode-data
 
 .include "../../textproc/hs-unicode-data/buildlink3.mk"
