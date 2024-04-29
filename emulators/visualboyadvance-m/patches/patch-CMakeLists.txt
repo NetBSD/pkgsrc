@@ -1,0 +1,37 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/04/29 09:18:40 nia Exp $
+
+Find libintl/libiconv in a more standard way, fixes a compilation issue.
+
+--- CMakeLists.txt.orig	2019-10-02 14:17:30.000000000 +0000
++++ CMakeLists.txt
+@@ -396,22 +396,14 @@ if(ENABLE_NLS)
+         endif()
+     endif()
+     if(ENABLE_LINK)
+-        find_path(LIBINTL_INC libintl.h)
+-        find_library(LIBINTL_LIB intl)
+-        find_library(LIBICONV_LIB iconv)
+-        if(LIBINTL_LIB)
+-            set(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} ${LIBINTL_LIB})
+-            set(VBAMCORE_LIBS ${VBAMCORE_LIBS} ${LIBINTL_LIB})
+-        endif()
+-        if(LIBICONV_LIB)
+-            set(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} ${LIBICONV_LIB})
+-            set(VBAMCORE_LIBS ${VBAMCORE_LIBS} ${LIBICONV_LIB})
+-        endif()
+-        include(CheckFunctionExists)
+-        check_function_exists(gettext GETTEXT_FN)
+-        if(NOT (LIBINTL_INC OR GETTEXT_FN))
+-            message(FATAL_ERROR "NLS requires libintl/gettext")
+-        endif()
++        find_package(Iconv REQUIRED)
++        list(APPEND CMAKE_REQUIRED_LIBRARIES ${Iconv_LIBRARIES})
++        list(APPEND VBAMCORE_LIBS ${Iconv_LIBRARIES})
++
++        find_package(Intl REQUIRED)
++        list(APPEND CMAKE_REQUIRED_LIBRARIES ${Intl_LIBRARIES})
++        list(APPEND VBAMCORE_LIBS ${Intl_LIBRARIES})
++
+         include_directories(${LIBINTL_INC})
+     endif()
+ endif()
