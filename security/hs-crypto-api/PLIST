@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/27 11:01:30 pho Exp $
-lib/crypto-api-${PKGVERSION}/${HS_VERSION}/package-description
-lib/crypto-api-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/04/29 04:26:12 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/CPoly.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/CPoly.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/CPoly.p_hi
@@ -31,6 +29,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Util.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/crypto-api-${PKGVERSION}/${HS_VERSION}/package-description
+lib/crypto-api-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/Crypto-Classes-Exceptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/Crypto-Classes.html
@@ -42,11 +42,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/Crypto-Types.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/Crypto-Util.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/crypto-api.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypto-api-${PKGVERSION}/html/synopsis.png
