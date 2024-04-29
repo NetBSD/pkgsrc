@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/23 15:41:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/04/29 14:37:31 nia Exp $
 bin/renpy
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -351,7 +351,7 @@ share/renpy/launcher/game/androidstrings.rpy
 share/renpy/launcher/game/androidstrings.rpyc
 share/renpy/launcher/game/archiver.rpy
 share/renpy/launcher/game/archiver.rpyc
-share/renpy/launcher/game/cache/bytecode-311.rpyb
+share/renpy/launcher/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/launcher/game/cache/py3analysis.rpyb
 share/renpy/launcher/game/cache/screens.rpyb
 share/renpy/launcher/game/change_icon.py
@@ -1465,7 +1465,7 @@ share/renpy/the_question/android-icon_foreground.png
 share/renpy/the_question/android.json
 share/renpy/the_question/android.keystore
 share/renpy/the_question/bundle.keystore
-share/renpy/the_question/game/cache/bytecode-311.rpyb
+share/renpy/the_question/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/the_question/game/cache/py3analysis.rpyb
 share/renpy/the_question/game/cache/screens.rpyb
 share/renpy/the_question/game/gui.rpy
@@ -1621,7 +1621,7 @@ share/renpy/tutorial/game/01director_support.rpy
 share/renpy/tutorial/game/01director_support.rpyc
 share/renpy/tutorial/game/01example.rpy
 share/renpy/tutorial/game/01example.rpyc
-share/renpy/tutorial/game/cache/bytecode-311.rpyb
+share/renpy/tutorial/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/tutorial/game/cache/py3analysis.rpyb
 share/renpy/tutorial/game/cache/screens.rpyb
 share/renpy/tutorial/game/examples.rpy
