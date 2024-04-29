@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/27 02:25:34 pho Exp $
-lib/random-${PKGVERSION}/${HS_VERSION}/package-description
-lib/random-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 03:02:49 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random.hi
@@ -16,16 +14,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Stateful.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Stateful.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/random-${PKGVERSION}/${HS_VERSION}/package-description
+lib/random-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/random-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/System-Random-Stateful.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/System-Random.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/random.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/random-${PKGVERSION}/html/synopsis.png

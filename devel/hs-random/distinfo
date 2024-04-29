@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/18 19:00:48 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/04/29 03:02:49 pho Exp $
 
-BLAKE2s (random-1.2.1.1.tar.gz) = d13259e945d253a2e49aee035cc5a2282efbb0b25226ca3d730b86033c0ad8d6
-SHA512 (random-1.2.1.1.tar.gz) = 4d5565390849cf85b2f307cd93f284a1f9094cfcd692beb5dd5f3ec917dd69ad7158fb52b1faa581eb573af25beee1f6c2830472ebb6553da6cfa01a4e954326
-Size (random-1.2.1.1.tar.gz) = 47109 bytes
+BLAKE2s (random-1.2.1.2.tar.gz) = 4ba08e467084a63a1c3f2f21372c07c8d4428b518f9fd69b421708273a5c51af
+SHA512 (random-1.2.1.2.tar.gz) = 04a98a5ae2baa6b4d016c7951bed7057b1c5d850c81ea7ab46d0c7fdb68e21c680914eb55ab3ff9b78e64a29d77c65b00c14601250b32758e2d5343e72708517
+Size (random-1.2.1.2.tar.gz) = 47229 bytes
