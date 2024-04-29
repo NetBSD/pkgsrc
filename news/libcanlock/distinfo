@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/12/03 10:50:56 micha Exp $
+$NetBSD: distinfo,v 1.11 2024/04/29 12:20:34 micha Exp $
 
 BLAKE2s (libcanlock-3.3.0.tar.bz2) = e92e29824779fc262d3775e217c6d76d8a99baf8d55c837c317d0025b53349a3
 SHA512 (libcanlock-3.3.0.tar.bz2) = 100d2b4bf3eadedb7da230317cd37b2c1b259bbd783099a74e0d75fdc6ecddb8a6fd854a2b272bda3629bcf1ac1ae2b3d5657fca9137c17e38aad88f30e4c81c
 Size (libcanlock-3.3.0.tar.bz2) = 625796 bytes
+SHA1 (patch-libcanlock-3.pc.in) = a53dbe83d65486af6c0900fd5d65dbada552daa9
