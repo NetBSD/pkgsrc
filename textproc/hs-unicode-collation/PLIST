@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 11:58:03 pho Exp $
-lib/unicode-collation-${PKGVERSION}/${HS_VERSION}/package-description
-lib/unicode-collation-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 12:20:29 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Collate.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Collate.hi
@@ -34,6 +32,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Collate/UnicodeData.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Collate/UnicodeData.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/unicode-collation-${PKGVERSION}/${HS_VERSION}/package-description
+lib/unicode-collation-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/README.md
@@ -41,12 +41,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/Text-C
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/Text-Collate-Normalize.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/Text-Collate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-collation-${PKGVERSION}/html/unicode-collation.haddock
