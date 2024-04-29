@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 07:16:24 pho Exp $
-lib/math-functions-${PKGVERSION}/${HS_VERSION}/package-description
-lib/math-functions-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 04:46:36 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/MathFunctions/Comparison.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/MathFunctions/Comparison.hi
@@ -37,6 +35,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/Sum.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Numeric/Sum.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/math-functions-${PKGVERSION}/${HS_VERSION}/package-description
+lib/math-functions-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/Numeric-MathFunctions-Comparison.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/Numeric-MathFunctions-Constants.html
@@ -48,12 +48,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/Numeric-S
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/Numeric-SpecFunctions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/Numeric-Sum.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/math-functions.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/math-functions-${PKGVERSION}/html/synopsis.png
