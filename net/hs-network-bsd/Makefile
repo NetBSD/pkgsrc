@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:17 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/29 04:29:04 pho Exp $
 
 DISTNAME=	network-bsd-2.8.1.0
 PKGREVISION=	4
@@ -9,6 +9,7 @@ COMMENT=	POSIX network database (<netdb.h>) API
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	deepseq	\
 	network
 
 .include "../../net/hs-network/buildlink3.mk"
