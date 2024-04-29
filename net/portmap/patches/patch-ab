@@ -1,16 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/03/07 23:40:06 reed Exp $
+$NetBSD: patch-ab,v 1.2 2024/04/29 10:11:14 nia Exp $
 
---- portmap.c.orig	2003-03-19 23:42:46.000000000 -0800
-+++ portmap.c	2003-03-19 23:44:06.000000000 -0800
-@@ -85,6 +85,7 @@
+--- portmap.c.orig	1996-05-31 13:52:59.000000000 +0000
++++ portmap.c
+@@ -85,6 +85,8 @@ static char sccsid[] = "@(#)portmap.c 1.
  #include <stdio.h>
  #include <syslog.h>
  #include <netdb.h>
 +#include <errno.h>
++#include <unistd.h>
  #include <sys/socket.h>
  #include <sys/ioctl.h>
  #include <sys/wait.h>
-@@ -124,7 +125,6 @@
+@@ -124,7 +126,6 @@ void reap();
  static void callit();
  struct pmaplist *pmaplist;
  int debugging = 0;
@@ -18,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/03/07 23:40:06 reed Exp $
  
  #include "pmap_check.h"
  
-@@ -235,7 +235,7 @@
+@@ -235,7 +236,7 @@ main(argc, argv)
  /* need to override perror calls in rpc library */
  void
  perror(what)

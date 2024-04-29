@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/07 23:40:06 reed Exp $
+$NetBSD: patch-aa,v 1.2 2024/04/29 10:11:14 nia Exp $
 
---- Makefile.orig	1996-05-31 06:50:40.000000000 -0700
+--- Makefile.orig	1996-05-31 13:50:40.000000000 +0000
 +++ Makefile
 @@ -8,7 +8,7 @@
  # if you disagree. See `man 3 syslog' for examples. Some syslog versions
@@ -20,17 +20,33 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/03/07 23:40:06 reed Exp $
  
  # Uncomment the following macro if your system does not have u_long.
  #
-@@ -46,11 +46,11 @@ CHECK_PORT = -DCHECK_PORT
+@@ -46,11 +46,7 @@ CHECK_PORT = -DCHECK_PORT
  # libwrap.a object library. WRAP_DIR should specify the directory with
  # that library.
  
 -WRAP_DIR= ../tcp_wrappers
-+#WRAP_DIR= ../tcp_wrappers
- 
- # Auxiliary object files that may be missing from your C library.
- #
+-
+-# Auxiliary object files that may be missing from your C library.
+-#
 -AUX	= daemon.o strerror.o
-+AUX	= daemon.o
++#WRAP_DIR= ../tcp_wrappers
  
  # NEXTSTEP is a little different. The following seems to work with NS 3.2
  #
+@@ -75,7 +71,7 @@ OBJECTS	= portmap.o pmap_check.o from_lo
+ all:	portmap pmap_dump pmap_set
+ 
+ portmap: $(OBJECTS) $(WRAP_DIR)/libwrap.a
+-	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(WRAP_DIR)/libwrap.a $(LIBS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJECTS) -lwrap $(LIBS)
+ 
+ pmap_dump: pmap_dump.c
+ 	$(CC) $(CFLAGS) -o $@ $? $(LIBS)
+@@ -98,7 +94,6 @@ tidy:	clean
+ deps:
+ 	@$(CC) -M $(CFLAGS) *.c | grep -v /usr/include |sed 's/\.\///'
+ 
+-daemon.o: daemon.c
+ from_local.o: from_local.c
+ pmap_check.o: pmap_check.c pmap_check.h Makefile
+ pmap_dump.o: pmap_dump.c
