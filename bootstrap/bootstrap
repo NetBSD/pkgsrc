@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.324 2024/04/23 07:38:14 nia Exp $
+# $NetBSD: bootstrap,v 1.325 2024/04/29 12:37:25 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1297,7 +1297,7 @@ run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C 
 case "$need_mksh" in
 yes)	echo_msg "Bootstrapping mksh"
 	copy_src $pkgsrcdir/shells/mksh/files mksh
-	run_cmd "(cd $wrkdir/mksh && env $BSTRAP_ENV CC=\"${CC}\" $shprog Build.sh -r)"
+	run_cmd "(cd $wrkdir/mksh && env $BSTRAP_ENV CC=\"${CC}\" USE_PRINTF_BUILTIN=1 $shprog Build.sh -r)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/mksh/mksh $wrkdir/bin/mksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/mksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/mksh" >> ${BOOTSTRAP_MKCONF}
