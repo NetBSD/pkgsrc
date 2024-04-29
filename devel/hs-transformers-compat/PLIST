@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 14:21:29 pho Exp $
-lib/transformers-compat-${PKGVERSION}/${HS_VERSION}/package-description
-lib/transformers-compat-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 23:36:10 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Instances.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Instances.hi
@@ -16,17 +14,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_transformers_compat.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_transformers_compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/transformers-compat-${PKGVERSION}/${HS_VERSION}/package-description
+lib/transformers-compat-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/Control-Monad-Trans-Instances.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/Data-Functor-Classes-Generic-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/Data-Functor-Classes-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-compat-${PKGVERSION}/html/transformers-compat.haddock
