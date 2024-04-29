@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/27 12:03:48 pho Exp $
-lib/edit-distance-${PKGVERSION}/${HS_VERSION}/package-description
-lib/edit-distance-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 04:41:58 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/EditDistance.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/EditDistance.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/EditDistance.p_hi
@@ -25,15 +23,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/EditDistance/SquareSTUArray.p_h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/edit-distance-${PKGVERSION}/${HS_VERSION}/package-description
+lib/edit-distance-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/Text-EditDistance.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/edit-distance.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/edit-distance-${PKGVERSION}/html/synopsis.png
