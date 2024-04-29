@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:18 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/29 08:56:01 pho Exp $
 
-DISTNAME=	atomic-primops-0.8.4
-PKGREVISION=	1
+DISTNAME=	atomic-primops-0.8.7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
