@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/22 19:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/29 08:40:04 jperkin Exp $
 
 DISTNAME=		sshfs-3.7.4a
 PKGNAME=		fuse-${DISTNAME}
@@ -8,11 +8,15 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=deadbeefsociety/}
 GITHUB_PROJECT=		sshfs
 GITHUB_RELEASE=		${DISTNAME}
 EXTRACT_SUFX=		.tar.xz
+EXTRACT_USING=		bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/deadbeefsociety/sshfs/
 COMMENT=	File system client based on the SFTP protocol
 LICENSE=	gnu-gpl-v2
+
+# Cannot restore extended attributes: com.apple.provenance
+EXTRACT_OPTS_TAR.${DISTNAME}${EXTRACT_SUFX}=	--no-xattr
 
 USE_LANGUAGES=	c
 USE_TOOLS=	pkg-config
