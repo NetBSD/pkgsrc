@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:30 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/29 07:21:01 pho Exp $
 
 DISTNAME=	foldable1-classes-compat-0.1
 PKGREVISION=	1
@@ -7,6 +7,10 @@ CATEGORIES=	devel
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Compatibility package for the Foldable1 and Bifoldable1 type classes
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base	\
+	ghc-prim
 
 .include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../mk/haskell.mk"
