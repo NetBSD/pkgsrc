@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/02/12 11:58:57 markd Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/29 07:50:16 markd Exp $
 
-DISTNAME=	mailman-web-0.0.8
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	mailman_web-0.0.9
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman-web/}
 
@@ -10,8 +10,8 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	Mailman 3 Web interface
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django4
 DEPENDS+=	${PYPKGPREFIX}-hyperkitty-[0-9]*:../../www/py-hyperkitty
 DEPENDS+=	${PYPKGPREFIX}-postorius-[0-9]*:../../www/py-postorius
 DEPENDS+=	${PYPKGPREFIX}-Whoosh-[0-9]*:../../textproc/py-Whoosh
@@ -67,6 +67,8 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/settings.py ${DESTDIR}${PREFIX}/${EGDIR}/settings.py
 	${INSTALL_DATA} ${WRKSRC}/crontab.sample ${DESTDIR}${PREFIX}/${EGDIR}/crontab.sample
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/mailman_web/settings/*.orig
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/mailman_web/*.orig
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
