@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 06:06:11 pho Exp $
-lib/crypton-${PKGVERSION}/${HS_VERSION}/package-description
-lib/crypton-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 09:35:01 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/AES.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/AES.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/AES.p_hi
@@ -244,6 +242,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/HMAC.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KMAC.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KMAC.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KMAC.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KeyedBlake2.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KeyedBlake2.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/KeyedBlake2.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/Poly1305.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/Poly1305.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/MAC/Poly1305.p_hi
@@ -382,9 +383,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.p_hi
-${PLIST.shlibs}${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.dyn_hi
-${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.hi
-${PLIST.prof}${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.p_hi
@@ -415,6 +413,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Tutorial.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/crypton-${PKGVERSION}/${HS_VERSION}/package-description
+lib/crypton-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-Cipher-AES.html
@@ -450,6 +450,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-KDF-Scryp
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-MAC-CMAC.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-MAC-HMAC.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-MAC-KMAC.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-MAC-KeyedBlake2.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-MAC-Poly1305.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-Number-Basic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/Crypto-Number-F2m.html
@@ -524,11 +525,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-${PKGVERSION}/html/synopsis.png
