@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/16 18:16:46 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/29 10:35:50 adam Exp $
 
-DISTNAME=	crytic-compile-0.3.6
+DISTNAME=	crytic-compile-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crytic-compile/}
