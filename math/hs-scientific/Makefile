@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/11/02 06:37:14 pho Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/29 23:06:07 pho Exp $
 
 DISTNAME=	scientific-0.3.7.0
 PKGREVISION=	5
@@ -9,9 +9,11 @@ COMMENT=	Numbers represented using scientific notation
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	hashable	\
-	primitive	\
+	base			\
+	bytestring		\
+	deepseq			\
+	hashable		\
+	primitive		\
 	template-haskell	\
 	text
 
