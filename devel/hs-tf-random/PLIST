@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 12:25:08 pho Exp $
-lib/tf-random-${PKGVERSION}/${HS_VERSION}/package-description
-lib/tf-random-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 04:56:23 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/TF.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/TF.hi
@@ -16,18 +14,18 @@ lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/TF/Instances.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/TF/Instances.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/tf-random-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tf-random-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/System-Random-TF-Gen.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/System-Random-TF-Init.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/System-Random-TF-Instances.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/System-Random-TF.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tf-random-${PKGVERSION}/html/tf-random.haddock
