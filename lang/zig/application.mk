@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.9 2024/04/26 11:38:07 nikita Exp $
+# $NetBSD: application.mk,v 1.10 2024/04/29 13:22:43 nikita Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -30,7 +30,7 @@ ZIGSTRIP?=		yes
 TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
 
-MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-gobal-cache
+MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
 MAKE_ENV+=		ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
 
 .if ${ZIGPIE:Uyes:M[yY][eE][sS]}
@@ -42,6 +42,28 @@ ZIGBUILDARGS+=		-Dpie=true
 ZIGBUILDARGS+=		-Dstrip=true
 .  endif
 .endif
+
+# TODO: save to distfiles. zig fetch is distributed not centralized to github.com
+# DISTFILES?=			${DEFAULT_DISTFILES}
+# .for pkg in ${ZIG_PACKAGE_DEPENDS}
+# DIST_SUBDIR=			${PKGNAME}
+# DISTFILES+=			${pkg}
+# SITES.${pkg}+=			-${pkg}
+# .endfor
+
+.PHONY: print-zig-depends
+print-zig-depends:
+	${RUN}${AWK} 'BEGIN {print "# $$Net" "BSD$$"; print;} \
+                /url = / { split($$0, a, "\""); url=a[2]; print "ZIG_PACKAGE_DEPENDS+=\t" url; }' \
+		${WRKSRC}/build.zig.zon
+
+post-extract: zig-vendor-packages
+.PHONY: zig-vendor-packages
+zig-vendor-packages:
+.for pkg in ${ZIG_PACKAGE_DEPENDS}
+	${RUN} ${PREFIX}/bin/zig fetch --global-cache-dir ${WRKDIR}/zig-global-cache ${pkg}
+.endfor
+
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} zig build ${ZIGBUILDMODE} ${ZIGCPUMODE} ${ZIGBUILDARGS} --prefix ${DESTDIR}${PREFIX}
