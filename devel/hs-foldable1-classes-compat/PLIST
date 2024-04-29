@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/27 14:11:39 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/29 07:21:01 pho Exp $
 lib/foldable1-classes-compat-${PKGVERSION}/${HS_VERSION}/package-description
 lib/foldable1-classes-compat-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/foldable1-classes-compat-${PKGVERSION}/LICENSE
