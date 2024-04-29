@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/27 10:22:19 pho Exp $
+$NetBSD: distinfo,v 1.2 2024/04/29 04:15:50 pho Exp $
 
-BLAKE2s (toml-parser-1.3.0.0.tar.gz) = e5782d66d0228835eec3a8562f11a6b031df0b46623056f7726cef6ad21df998
-SHA512 (toml-parser-1.3.0.0.tar.gz) = 95bed0702a8d00289063782a4387e43a1bbc4096a89311281451a4d88813040869740e8d57fb7de3c317256a7cdd7a53cd75b11dc96d599a7242ab0d14cecce8
-Size (toml-parser-1.3.0.0.tar.gz) = 39211 bytes
+BLAKE2s (toml-parser-2.0.0.0.tar.gz) = 85cab25420f14e474e69556f1fcafa0c82d18e22379e40ccb7e9b039fe33589e
+SHA512 (toml-parser-2.0.0.0.tar.gz) = 9a7fb2cd9497aefb0fce5b36fe0497695968176c03de8bc1f2fdccbb79a8ac8872642ab11ceb598c87a2a98a532c5038421a107d627fd87731d21ad530da8c52
+Size (toml-parser-2.0.0.0.tar.gz) = 48033 bytes
