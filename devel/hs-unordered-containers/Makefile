@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2023/11/02 06:37:02 pho Exp $
+# $NetBSD: Makefile,v 1.24 2024/04/29 23:10:55 pho Exp $
 
-DISTNAME=	unordered-containers-0.2.19.1
-PKGREVISION=	3
+DISTNAME=	unordered-containers-0.2.20
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Efficient hashing-based container types
 LICENSE=	modified-bsd
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	template-haskell
-
-.include "../../mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
