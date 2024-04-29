@@ -2,6 +2,7 @@
 
 DISTNAME=	python-bugzilla-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bugzilla/}
 
