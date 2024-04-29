@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/27 11:06:14 pho Exp $
-lib/iproute-${PKGVERSION}/${HS_VERSION}/package-description
-lib/iproute-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 04:27:49 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/IP.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/IP.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/IP.p_hi
@@ -31,6 +29,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/IP/RouteTable/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/iproute-${PKGVERSION}/${HS_VERSION}/package-description
+lib/iproute-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/Data-IP-Builder.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/Data-IP-Internal.html
@@ -38,12 +38,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/Data-IP-RouteTab
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/Data-IP-RouteTable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/Data-IP.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/iproute.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/iproute-${PKGVERSION}/html/synopsis.png
