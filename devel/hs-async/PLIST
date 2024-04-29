@@ -1,21 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 09:38:41 pho Exp $
-lib/async-${PKGVERSION}/${HS_VERSION}/package-description
-lib/async-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 12:11:10 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/async-${PKGVERSION}/${HS_VERSION}/package-description
+lib/async-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/async-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/Control-Concurrent-Async-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/Control-Concurrent-Async.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/async.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-${PKGVERSION}/html/synopsis.png
