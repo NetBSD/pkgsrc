@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/29 13:27:52 nikita Exp $
+bin/zls
