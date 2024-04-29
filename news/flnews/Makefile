@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/11/12 13:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/29 08:57:09 micha Exp $
 
-FLNEWS_VERSION=	1.2.0
+FLNEWS_VERSION=	1.2.1
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
-PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
@@ -20,7 +19,7 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	test
 
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV+=	SOURCE_DATE_EPOCHE=1686232922
+CONFIGURE_ENV+=	SOURCE_DATE_EPOCHE=1714225440
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
