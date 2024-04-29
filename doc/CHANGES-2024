@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2838 2024/04/29 04:40:17 pho Exp $
+$NetBSD: CHANGES-2024,v 1.2839 2024/04/29 04:46:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/hs-unix-time to 0.4.12 [pho 2024-04-29]
 	Updated security/hs-hackage-security to 0.6.2.6 [pho 2024-04-29]
 	Updated math/hs-monoid-subclasses to 1.2.5 [pho 2024-04-29]
+	Updated math/hs-math-functions to 0.3.4.4 [pho 2024-04-29]
