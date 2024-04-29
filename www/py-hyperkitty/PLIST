@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/12 12:02:50 markd Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 07:55:36 markd Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/hyperkitty/__init__.py
 ${PYSITELIB}/hyperkitty/__init__.pyc
 ${PYSITELIB}/hyperkitty/__init__.pyo
@@ -43,6 +43,8 @@ ${PYSITELIB}/hyperkitty/checks.pyo
 ${PYSITELIB}/hyperkitty/context_processors.py
 ${PYSITELIB}/hyperkitty/context_processors.pyc
 ${PYSITELIB}/hyperkitty/context_processors.pyo
+${PYSITELIB}/hyperkitty/contrib/check_hk_import
+${PYSITELIB}/hyperkitty/contrib/cleanarch3
 ${PYSITELIB}/hyperkitty/feed.py
 ${PYSITELIB}/hyperkitty/feed.pyc
 ${PYSITELIB}/hyperkitty/feed.pyo
@@ -90,6 +92,9 @@ ${PYSITELIB}/hyperkitty/lib/analysis.pyo
 ${PYSITELIB}/hyperkitty/lib/compat.py
 ${PYSITELIB}/hyperkitty/lib/compat.pyc
 ${PYSITELIB}/hyperkitty/lib/compat.pyo
+${PYSITELIB}/hyperkitty/lib/haystack.py
+${PYSITELIB}/hyperkitty/lib/haystack.pyc
+${PYSITELIB}/hyperkitty/lib/haystack.pyo
 ${PYSITELIB}/hyperkitty/lib/incoming.py
 ${PYSITELIB}/hyperkitty/lib/incoming.pyc
 ${PYSITELIB}/hyperkitty/lib/incoming.pyo
@@ -114,6 +119,7 @@ ${PYSITELIB}/hyperkitty/lib/utils.pyo
 ${PYSITELIB}/hyperkitty/lib/view_helpers.py
 ${PYSITELIB}/hyperkitty/lib/view_helpers.pyc
 ${PYSITELIB}/hyperkitty/lib/view_helpers.pyo
+${PYSITELIB}/hyperkitty/locale/LINGUAS
 ${PYSITELIB}/hyperkitty/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/hyperkitty/locale/am/LC_MESSAGES/django.po
 ${PYSITELIB}/hyperkitty/locale/an/LC_MESSAGES/django.po
