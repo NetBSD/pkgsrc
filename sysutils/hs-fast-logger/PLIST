@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/27 12:34:40 pho Exp $
-lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-description
-lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 04:58:56 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger.p_hi
@@ -43,6 +41,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Write.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-description
+lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger-Date.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger-File.html
@@ -51,12 +51,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-F
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/fast-logger.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/synopsis.png
