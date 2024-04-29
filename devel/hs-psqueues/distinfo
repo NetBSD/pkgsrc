@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 13:19:59 pho Exp $
+$NetBSD: distinfo,v 1.5 2024/04/29 05:01:12 pho Exp $
 
-BLAKE2s (psqueues-0.2.7.3.tar.gz) = e31f03b098b85c62f9c7a8720d97c15747108cd2acd067b2df73400aa4eedfd5
-SHA512 (psqueues-0.2.7.3.tar.gz) = 7a089a68f8b99f93780cc05e1b3454c266077f47a453f139bbe368cdca889e8b7098aa2770c86fcb32eddcb15837a7d60c70da946ad5a234a72bf01fff017fff
-Size (psqueues-0.2.7.3.tar.gz) = 27328 bytes
+BLAKE2s (psqueues-0.2.8.0.tar.gz) = f1bd37d7355c261ec87cdab8290e059dcd9e25412dfa131648b21a8a213ac434
+SHA512 (psqueues-0.2.8.0.tar.gz) = 95c7d9640269a8dcf082766fdf4622d8d9bb082536b0f9c7d8d95be8c45486867fa3fd755a7b8ac0cb1264dd3b4586809286d325d3c4f97a81a45c3675ca13d1
+Size (psqueues-0.2.8.0.tar.gz) = 27549 bytes
