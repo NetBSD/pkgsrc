@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/30 03:33:18 pho Exp $
-lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-description
-lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.8 2024/04/29 23:17:11 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms.hi
@@ -38,6 +36,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Algorithms/Tim.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/include/vector.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-description
+lib/vector-algorithms-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-AmericanFlag.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Heap.html
@@ -50,12 +50,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-V
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Tim.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-algorithms-${PKGVERSION}/html/vector-algorithms.haddock
