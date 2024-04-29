@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/08/18 19:16:58 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/04/29 23:10:55 pho Exp $
 
-BLAKE2s (unordered-containers-0.2.19.1.tar.gz) = 812f60b39f37bfec8ca05bed7a4c65616a9408dc3363dac7f677b7029a2fd3db
-SHA512 (unordered-containers-0.2.19.1.tar.gz) = 2ea49766210fcec1f8f8bd99c2bb296c4ffcb7ab00317b7663436b6ab0037f9b78cfa22631a1e2bc1f34b6c9b08614aa0ca98c5256ab18258645bfd72351b712
-Size (unordered-containers-0.2.19.1.tar.gz) = 58030 bytes
+BLAKE2s (unordered-containers-0.2.20.tar.gz) = d909927ed21af8403413bed5398c142661322ebbbdf7e67e862d06fbd167fa5d
+SHA512 (unordered-containers-0.2.20.tar.gz) = 836077c204dc5a8f12abd6bfe3de1b6334bcf35c43e0a81025bc154a5450d2c5e70c3ce1f1c8967d3601c1b972be1a4c1d573c92052bf13eae28ee76211a7a19
+Size (unordered-containers-0.2.20.tar.gz) = 59823 bytes
