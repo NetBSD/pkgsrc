@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/27 01:06:21 pho Exp $
-lib/blaze-markup-${PKGVERSION}/${HS_VERSION}/package-description
-lib/blaze-markup-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 02:50:20 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze.p_hi
@@ -22,6 +20,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze/Renderer/Utf8.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/blaze-markup-${PKGVERSION}/${HS_VERSION}/package-description
+lib/blaze-markup-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/Text-Blaze-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/Text-Blaze-Renderer-Pretty.html
@@ -31,11 +31,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/Text-Blaze-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/Text-Blaze.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/blaze-markup.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-markup-${PKGVERSION}/html/synopsis.png
