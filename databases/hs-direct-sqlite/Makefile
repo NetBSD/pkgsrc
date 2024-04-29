@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/23 11:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/29 02:33:36 pho Exp $
 
-DISTNAME=	direct-sqlite-2.3.28
-PKGREVISION=	2
+DISTNAME=	direct-sqlite-2.3.29
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
