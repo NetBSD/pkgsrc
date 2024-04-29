@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/03/09 05:23:51 mef Exp $
+# $NetBSD: Makefile,v 1.50 2024/04/29 03:49:06 mef Exp $
 
-DISTNAME=	nqp-2024.02
+DISTNAME=	nqp-2024.04
 CATEGORIES=	lang perl6
 #ASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
@@ -30,7 +30,7 @@ EXTRA_MODULES+=		Config.pm Macros.pm
 
 # please (or let me ) correct later for hard coding
 post-install:
-	${INSTALL_DIR}                                   ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.38.0/NQP
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.38.0/NQP
 	(cd ${WRKSRC} ; \
 	for i in ${EXTRA_MODULES} ; \
 	do \
