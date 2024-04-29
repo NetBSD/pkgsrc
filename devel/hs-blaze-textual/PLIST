@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 11:41:29 pho Exp $
-lib/blaze-textual-${PKGVERSION}/${HS_VERSION}/package-description
-lib/blaze-textual-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 12:12:19 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Blaze/Text.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Blaze/Text.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Blaze/Text.p_hi
@@ -16,17 +14,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Blaze/Text/Int.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/blaze-textual-${PKGVERSION}/${HS_VERSION}/package-description
+lib/blaze-textual-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/Blaze-Text-Double.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/Blaze-Text-Int.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/Blaze-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/blaze-textual.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-textual-${PKGVERSION}/html/synopsis.png
