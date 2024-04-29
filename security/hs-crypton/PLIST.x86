@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.x86,v 1.1 2024/04/29 09:40:16 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.p_hi
