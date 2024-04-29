@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/04/29 09:39:44 nia Exp $
 
 BLAKE2s (WCMCommander-0.20.0.tar.gz) = 4536511589680497c7da07dcb33140e05d5ffd0e7f1c43af91afaafeb08bd846
 SHA512 (WCMCommander-0.20.0.tar.gz) = 4c57b741b9336d8c2e4fe69765bdc2a0b17c2785c71877bbd9b928cd26ab36d92dd2e16f53399a77a50762fa6d87bc52dfcd9037c5ba8179f6274b6480b314aa
 Size (WCMCommander-0.20.0.tar.gz) = 5005688 bytes
 SHA1 (patch-src_tcp__sock.cpp) = 5d0758a7f0e53255de1ea9a47ad12b7a7e3b4809
+SHA1 (patch-src_vfs_vfs-sftp2.cpp) = e1d7681881c1e255ba4fda3d89da0999d707666c
 SHA1 (patch-src_vfs_vfs.cpp) = 47270fe6ee671370635fb880a998630bc2011143
 SHA1 (patch-src_wal_wal__sys__api.cpp) = 435a3a5ff4f6f55310f7aa22bbd8b76045302263
