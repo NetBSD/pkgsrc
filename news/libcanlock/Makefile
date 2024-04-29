@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/21 13:29:44 micha Exp $
+# $NetBSD: Makefile,v 1.11 2024/04/29 12:20:34 micha Exp $
 
 DISTNAME=	libcanlock-3.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,5 +23,7 @@ CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
 CONFIGURE_ARGS+=	--disable-hp
 
 TEST_TARGET=		test
+
+PKGCONFIG_OVERRIDE+=	libcanlock-3.pc.in
 
 .include "../../mk/bsd.pkg.mk"
