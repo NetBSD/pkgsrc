@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/29 09:35:01 pho Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/29 09:40:16 pho Exp $
 
 DISTNAME=	crypton-1.0.0
 CATEGORIES=	security
@@ -8,11 +8,10 @@ COMMENT=	Cryptography Primitives sink
 LICENSE=	modified-bsd
 
 # Some modules are only built on specific platforms.
-PLIST_VARS+=		x86
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PLIST.x86=		yes
+PLIST_SRC+=		PLIST.x86
 .endif
-PRINT_PLIST_AWK+=	/\/Entropy\/RDRand\./ { $$0 = "$${PLIST.x86}" $$0 }
+PRINT_PLIST_AWK+=	/\/Entropy\/RDRand\./ { next }
 
 .include "../../devel/hs-basement/buildlink3.mk"
 .include "../../devel/hs-memory/buildlink3.mk"
