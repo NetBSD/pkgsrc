@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 07:26:45 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 03:33:52 pho Exp $
 lib/QuickCheck-${PKGVERSION}/${HS_VERSION}/package-description
 lib/QuickCheck-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Test/QuickCheck.dyn_hi
@@ -89,11 +89,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/QuickCheck-${PKGVERSION}/html/synopsis.png
