@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/29 00:27:03 gutteridge Exp $
+share/u-boot/beaglebonegreen/MLO
+share/u-boot/beaglebonegreen/installboot.plist
+share/u-boot/beaglebonegreen/u-boot.img
