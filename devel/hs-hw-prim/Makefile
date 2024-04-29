@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:41 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/29 05:06:32 pho Exp $
 
 DISTNAME=	hw-prim-0.6.3.2
 PKGREVISION=	3
@@ -9,6 +9,8 @@ COMMENT=	Primitive functions and data types
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	bytestring	\
+	deepseq		\
 	ghc-prim
 
 .include "../../devel/hs-mmap/buildlink3.mk"
