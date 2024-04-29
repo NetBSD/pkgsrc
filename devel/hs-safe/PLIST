@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 02:22:32 pho Exp $
-lib/safe-${PKGVERSION}/${HS_VERSION}/package-description
-lib/safe-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 03:01:09 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Safe.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Safe.hi
@@ -19,6 +17,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Safe/Util.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Safe/Util.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/safe-${PKGVERSION}/${HS_VERSION}/package-description
+lib/safe-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/CHANGES.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/README.md
@@ -27,12 +27,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/Safe-Foldable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/Safe-Partial.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/Safe.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/safe.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/safe-${PKGVERSION}/html/synopsis.png
