@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1117 2024/04/26 15:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.1118 2024/04/29 00:30:11 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -778,6 +778,7 @@ SUBDIR+=	u-boot-bananapi-r2
 SUBDIR+=	u-boot-bananapro
 SUBDIR+=	u-boot-beagleboard
 SUBDIR+=	u-boot-beagleboneblack
+SUBDIR+=	u-boot-beaglebonegreen
 SUBDIR+=	u-boot-beaglebonewhite
 SUBDIR+=	u-boot-chip
 SUBDIR+=	u-boot-chip-pro
