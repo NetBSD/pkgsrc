@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 06:17:17 pho Exp $
-lib/ghc-lib-parser-${PKGVERSION}/${HS_VERSION}/package-description
-lib/ghc-lib-parser-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 09:29:57 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/BaseDir.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/GHC/BaseDir.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/BaseDir.p_hi
@@ -1180,6 +1178,11 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/TH/Syntax.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/ghc-lib-parser-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ghc-lib-parser-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/llvm-passes
+share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/llvm-targets
+share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/settings
 share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/GHC-BaseDir.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/GHC-Builtin-Names.html
@@ -1617,15 +1620,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/doc-index
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/ghc-lib-parser.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/html/synopsis.png
-share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/llvm-passes
-share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/llvm-targets
-share/${HS_PLATFORM}/ghc-lib-parser-${PKGVERSION}/settings
