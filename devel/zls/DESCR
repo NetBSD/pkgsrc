@@ -1,0 +1,4 @@
+The Zig Language Server (ZLS) is a tool that implements
+Microsoft's Language Server Protocol for Zig in Zig.
+In simpler terms: it'll provide you with completions,
+go-to definition, etc. when you write Zig code!
