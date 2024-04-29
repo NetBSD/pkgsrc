@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/04/15 08:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/04/29 07:52:16 nia Exp $
 
 DISTNAME=		fceu-0.98.13.src
 PKGNAME=		${DISTNAME:S/.src//}
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://pdaxrom.theinternet.nl/fceu/
 COMMENT=		Portable NES and Famicom emulator
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/fceu
 USE_PKGLOCALEDIR=	yes

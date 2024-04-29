@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:23:49 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/04/29 07:52:16 nia Exp $
 
 BLAKE2s (fceu-0.98.13.src.tar.bz2) = 8dd1d1cc107486bbeab051ab87c7c4a6eaf2b9f165656e1418246fe8b335aa1c
 SHA512 (fceu-0.98.13.src.tar.bz2) = f848f8752637f0aa4cd9aef9c539be7b4a35ad609bceb599c76ae02f48e3a87cffb3b066235b96e91c4bda2196945aecdfa4e129d314419cfce7c46f74afb4b0
@@ -7,4 +7,5 @@ SHA1 (patch-aa) = 31ce24167b8f76df2961ce902d42f45b5278e451
 SHA1 (patch-ac) = 8a5297b11484c6eaf5d70a391bb486ff58475f35
 SHA1 (patch-af) = a2b55359d65c60ecb7e7d79390ef872873c0eba1
 SHA1 (patch-ah) = cc48e36406b6d9e4cf88179510824135507aa6f9
+SHA1 (patch-src_drivers_common_hq3x.c) = b2bfe78d66db7ff5676a0ca2ba6d0fdaefc30c0f
 SHA1 (patch-src_file.c) = 6a801513eae47f30eb5f9b7857c7b40b30063129
