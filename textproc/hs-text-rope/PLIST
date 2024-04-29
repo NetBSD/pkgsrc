@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 08:15:58 pho Exp $
-lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-description
-lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 05:12:16 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines.hi
@@ -22,6 +20,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope/Mixed.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope/Mixed.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-description
+lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/text-rope-${PKGVERSION}/bench/bench.txt
 share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Lines.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Rope.html
@@ -29,13 +30,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf1
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf16-Rope-Mixed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf16-Rope.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/text-rope.haddock
-share/${HS_PLATFORM}/text-rope-${PKGVERSION}/bench/bench.txt
