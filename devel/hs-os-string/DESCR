@@ -1,0 +1,8 @@
+An implementation of platform specific short OsString, which is:
+
+* on windows wide char bytes ([Word16])
+* on unix char bytes ([Word8])
+
+It captures the notion of syscall specific encoding (or the lack thereof)
+to avoid roundtrip issues and memory fragmentation by using unpinned byte
+arrays. Bytes are not touched or interpreted.
