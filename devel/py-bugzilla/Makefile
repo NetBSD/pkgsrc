@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/07/08 14:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/29 18:57:35 bsiegert Exp $
 
 DISTNAME=	python-bugzilla-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bugzilla/}
 
