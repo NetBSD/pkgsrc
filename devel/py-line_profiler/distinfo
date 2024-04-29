@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/12 14:42:21 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/04/29 08:44:37 adam Exp $
 
-BLAKE2s (line_profiler-4.1.2.tar.gz) = 19246782af50977b0b03c8dc3be533dfdc1a8328249353c8d2a9825ee6edeff7
-SHA512 (line_profiler-4.1.2.tar.gz) = e5fb3c84d08b4e46a46618efb041eea4d46b2e0a5a04554c9b45fde5084e02ea5e99c93b81886bdc082decfdabf7bbc28efb3df1076899363005df819ef16b8a
-Size (line_profiler-4.1.2.tar.gz) = 78149 bytes
+BLAKE2s (line_profiler-4.1.3.tar.gz) = 01223ece562bc8b4775b4bb015b1ce82a423bf098e068a322b605728eba6933f
+SHA512 (line_profiler-4.1.3.tar.gz) = f048571940a0556c58ad6f699c17c29eb632f21c4b97a6012b08f01bac8f6e05de1cc6d42048528aa75466f51c9c237f50648974617606f8a48bc87098f94422
+Size (line_profiler-4.1.3.tar.gz) = 196850 bytes
