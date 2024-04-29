@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/26 14:11:44 pho Exp $
-lib/tagsoup-${PKGVERSION}/${HS_VERSION}/package-description
-lib/tagsoup-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 02:40:25 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/HTML/TagSoup.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/HTML/TagSoup.hi
@@ -43,6 +41,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/StringLike.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/StringLike.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/tagsoup-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tagsoup-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/CHANGES.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/README.md
@@ -52,12 +52,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/Text-HTML-TagSou
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/Text-HTML-TagSoup.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/Text-StringLike.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tagsoup-${PKGVERSION}/html/tagsoup.haddock
