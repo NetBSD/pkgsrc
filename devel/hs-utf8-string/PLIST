@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/26 13:19:22 pho Exp $
-lib/utf8-string-${PKGVERSION}/${HS_VERSION}/package-description
-lib/utf8-string-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 02:35:00 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Binary/UTF8/Generic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Binary/UTF8/Generic.hi
@@ -19,6 +17,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/UTF8.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/UTF8.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/utf8-string-${PKGVERSION}/${HS_VERSION}/package-description
+lib/utf8-string-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/Codec-Binary-UTF8-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/Codec-Binary-UTF8-String.html
@@ -26,12 +26,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/Data-ByteStr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/Data-ByteString-UTF8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/Data-String-UTF8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/utf8-string-${PKGVERSION}/html/utf8-string.haddock
