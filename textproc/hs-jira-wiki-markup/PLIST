@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/26 16:34:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 02:41:50 pho Exp $
 bin/jira-wiki-markup
-lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-description
-lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Jira/Markup.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Jira/Markup.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Jira/Markup.p_hi
@@ -29,6 +27,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Jira/Printer.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-description
+lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/README.md
@@ -60,12 +60,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/jira-wiki-markup.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/synopsis.png
