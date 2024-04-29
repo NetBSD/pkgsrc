@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 15:12:30 pho Exp $
-lib/base-compat-batteries-${PKGVERSION}/${HS_VERSION}/package-description
-lib/base-compat-batteries-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 03:41:32 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Compat.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Compat.p_hi
@@ -394,6 +392,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Type/Reflection/Compat/Repl/Batterie
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/base-compat-batteries-${PKGVERSION}/${HS_VERSION}/package-description
+lib/base-compat-batteries-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/Control-Concurrent-Compat-Repl-Batteries.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/Control-Concurrent-Compat.html
@@ -571,11 +571,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/do
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/base-compat-batteries-${PKGVERSION}/html/synopsis.png
