@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/25 17:24:43 pho Exp $
-lib/code-page-${PKGVERSION}/${HS_VERSION}/package-description
-lib/code-page-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 03:40:13 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/CodePage.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/CodePage.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/CodePage.p_hi
@@ -13,17 +11,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Win32/CodePage.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/code-page-${PKGVERSION}/${HS_VERSION}/package-description
+lib/code-page-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/System-IO-CodePage-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/System-IO-CodePage.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/System-Win32-CodePage.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/code-page.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/code-page-${PKGVERSION}/html/synopsis.png
