@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/18 12:01:03 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/04/29 10:45:24 adam Exp $
 
-BLAKE2s (fire-0.5.0.tar.gz) = f88cc4a6b14b8495034a99c14bee1d3fce8275a21f69b07c1b649fa3c7869346
-SHA512 (fire-0.5.0.tar.gz) = 645a9973e27a42aab58b0c045c5ceaa087c9f27b854d870addc4dbf697a0d6f633bf7754a6c07761a965433fe6f1a701b62408d17b590bb5233d99d7fbab0ecf
-Size (fire-0.5.0.tar.gz) = 88282 bytes
+BLAKE2s (fire-0.6.0.tar.gz) = 071b7caed4a4f6db700f58d6d306101679dae311bcf30419267834fb5d9a300a
+SHA512 (fire-0.6.0.tar.gz) = 491f224d31038494be2f40dd55e8713da20e4a20dc044ed1346deaeff69d65908ac754679b36ae1dbf42319c26cb30acc664a444f2d735d173971001447a9dd3
+Size (fire-0.6.0.tar.gz) = 88439 bytes
