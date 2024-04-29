@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:17:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/04/29 07:07:32 wen Exp $
 
-BLAKE2s (Crypt-OpenSSL-Random-0.15.tar.gz) = ed05b5e41f60dd58d62e07cc72c01c8d311c98714395285d321ad81c52c72ec5
-SHA512 (Crypt-OpenSSL-Random-0.15.tar.gz) = bba8ce86b97ce2d6271be503efff6e6e0ff60a797282a2b7cb9c6c0592b69cc43344f9738b4790e5fc165a7273ff01e35ada481cf8c4dfde38cb7ad741d97530
-Size (Crypt-OpenSSL-Random-0.15.tar.gz) = 15506 bytes
+BLAKE2s (Crypt-OpenSSL-Random-0.16.tar.gz) = f2fff1ecfcba05ca6f3a89d37d9c4fe2bf5458438833472548646866102537e9
+SHA512 (Crypt-OpenSSL-Random-0.16.tar.gz) = 832033ca87f36b34c9d4774cb01b6f96ef3b1dfd9441c504e534e12a25d1f95b6d3d59add2bbdf84680f2df41aebe87f01fa5b94b4d08e11ce91329b64edb29d
+Size (Crypt-OpenSSL-Random-0.16.tar.gz) = 19642 bytes
