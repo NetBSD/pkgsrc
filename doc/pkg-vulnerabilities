@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.181 2024/04/27 06:10:26 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.182 2024/04/29 06:06:11 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -13091,7 +13091,7 @@ tiff<4.0.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13726
 tiff<4.0.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13727
 ncurses<6.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13728
 libraw<0.18.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13735
-jasper-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13745
+jasper<2.0.17		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-13745
 mpg123<1.18.0		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2014-9497
 libgcrypt<1.8.1		side-channel		https://nvd.nist.gov/vuln/detail/CVE-2017-0379
 sleuthkit<4.1.3nb6	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-13755
