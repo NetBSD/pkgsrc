@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 14:08:18 pho Exp $
-lib/contravariant-${PKGVERSION}/${HS_VERSION}/package-description
-lib/contravariant-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 07:15:44 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Contravariant/Compose.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Contravariant/Compose.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Contravariant/Compose.p_hi
@@ -13,17 +11,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Contravariant/Generic.p
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/contravariant-${PKGVERSION}/${HS_VERSION}/package-description
+lib/contravariant-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/Data-Functor-Contravariant-Compose.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/Data-Functor-Contravariant-Divisible.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/Data-Functor-Contravariant-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/contravariant.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/contravariant-${PKGVERSION}/html/synopsis.png
