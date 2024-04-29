@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 14:56:59 pho Exp $
-lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-description
-lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 07:59:39 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-description
+lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/Data-Default-Instances-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/data-default-instances-base.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/synopsis.png
