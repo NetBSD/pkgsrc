@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/27 10:30:39 pho Exp $
-lib/hxt-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hxt-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 04:20:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Arrow/ArrowExc.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Arrow/ArrowExc.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Arrow/ArrowExc.p_hi
@@ -250,6 +248,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/XMLSchema/DataTypeLibW3
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hxt-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hxt-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/Control-Arrow-ArrowExc.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/Control-Arrow-ArrowIO.html
@@ -371,12 +371,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/hxt.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-${PKGVERSION}/html/synopsis.png
