@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/26 08:29:00 pho Exp $
-lib/haskell-src-exts-${PKGVERSION}/${HS_VERSION}/package-description
-lib/haskell-src-exts-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 02:17:26 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Exts.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Exts.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Exts.p_hi
@@ -58,6 +56,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Preprocessor/Unlit.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/haskell-src-exts-${PKGVERSION}/${HS_VERSION}/package-description
+lib/haskell-src-exts-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Build.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Comments.html
@@ -100,12 +100,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/haskell-src-exts.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/haskell-src-exts-${PKGVERSION}/html/synopsis.png
