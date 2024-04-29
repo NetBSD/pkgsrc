@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/29 03:27:02 pho Exp $
+
+BLAKE2s (os-string-2.0.2.1.tar.gz) = 2a98aecfad2604a86fa44cc5a0ad24d2f7e2bf214762f49f53eab9861a28cc58
+SHA512 (os-string-2.0.2.1.tar.gz) = 10db48e68ec4e172e600e484b9bffd21c40e4ba849e0a908375023137aacc3f3ea9b231c510221d653e5abcaf7e2cbae7c13ca403be20408dbb73010ca3825b5
+Size (os-string-2.0.2.1.tar.gz) = 42963 bytes
