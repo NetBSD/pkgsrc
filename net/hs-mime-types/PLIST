@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 02:11:26 pho Exp $
-lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-description
-lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/04/29 02:56:48 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Mime.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-description
+lib/mime-types-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/Network-Mime.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/mime-types.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mime-types-${PKGVERSION}/html/synopsis.png
