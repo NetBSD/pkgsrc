@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/27 11:39:39 pho Exp $
-lib/regex-posix-${PKGVERSION}/${HS_VERSION}/package-description
-lib/regex-posix-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 04:31:09 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_regex_posix.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_regex_posix.hi
@@ -25,6 +23,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Posix/Wrap.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Posix/Wrap.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/regex-posix-${PKGVERSION}/${HS_VERSION}/package-description
+lib/regex-posix-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/Text-Regex-Posix-ByteString-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/Text-Regex-Posix-ByteString.html
@@ -33,12 +33,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/Text-Regex-P
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/Text-Regex-Posix-Wrap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/Text-Regex-Posix.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/regex-posix.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-posix-${PKGVERSION}/html/synopsis.png
