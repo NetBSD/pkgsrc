@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/27 04:44:02 pho Exp $
-lib/cmdargs-${PKGVERSION}/${HS_VERSION}/package-description
-lib/cmdargs-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/04/29 03:11:20 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Generics/Any.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Generics/Any.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Generics/Any.p_hi
@@ -79,6 +77,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/CmdArgs/Verbosity.p_h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/cmdargs-${PKGVERSION}/${HS_VERSION}/package-description
+lib/cmdargs-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/CHANGES.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/README.md
@@ -119,11 +119,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cmdargs-${PKGVERSION}/html/synopsis.png
