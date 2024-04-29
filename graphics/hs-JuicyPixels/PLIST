@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 15:43:42 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/04/29 12:28:58 pho Exp $
 lib/JuicyPixels-${PKGVERSION}/${HS_VERSION}/package-description
 lib/JuicyPixels-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Picture.dyn_hi
@@ -151,7 +151,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-V.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/docimages/juicy.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/docimages/pixelgraph.svg
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/haddock-bundle.min.js
@@ -159,5 +158,4 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/synopsis.png
