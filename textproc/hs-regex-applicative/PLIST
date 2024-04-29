@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/26 10:42:16 pho Exp $
-lib/regex-applicative-${PKGVERSION}/${HS_VERSION}/package-description
-lib/regex-applicative-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/29 02:23:32 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Applicative.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Applicative.hi
@@ -28,6 +26,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Applicative/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Applicative/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/regex-applicative-${PKGVERSION}/${HS_VERSION}/package-description
+lib/regex-applicative-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/Text-Regex-Applicative-Common.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/Text-Regex-Applicative-Object.html
@@ -35,12 +35,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/Text-R
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/Text-Regex-Applicative-StateQueue.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/Text-Regex-Applicative.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/regex-applicative.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-applicative-${PKGVERSION}/html/synopsis.png
