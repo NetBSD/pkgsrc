@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2023/11/02 06:37:27 pho Exp $
+# $NetBSD: Makefile,v 1.19 2024/04/29 02:52:29 pho Exp $
 
-DISTNAME=	blaze-html-0.9.1.2
-PKGREVISION=	7
+DISTNAME=	blaze-html-0.9.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Blazingly fast HTML combinator library for Haskell
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	bytestring	\
-	text
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
