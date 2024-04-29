@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
+$NetBSD: patch-ab,v 1.7 2024/04/29 09:59:16 nia Exp $
 
 * Use the correct API version. fuse_operations::readdir() was
   introduced in FUSE 2.3, not 2.2.
@@ -17,19 +17,20 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
 
 --- LZOlayer_fs.c.orig	2006-05-18 19:23:35.000000000 +0000
 +++ LZOlayer_fs.c
-@@ -7,9 +7,10 @@
+@@ -7,9 +7,11 @@
      Use it at your OWN RISK
      Absolutely NO WARANTY
  */
 -#define FUSE_USE_VERSION 22
 +#define FUSE_USE_VERSION 23
  #include <fuse.h>
++#include <limits.h>
  #include <stdio.h>
 +#include <stdint.h>
  #include <stdlib.h>
  #include <string.h>
  #include <errno.h>
-@@ -21,6 +22,9 @@
+@@ -21,6 +23,9 @@
  #define __USE_UNIX98
  #include <unistd.h>
  #include <zlib.h>
@@ -39,11 +40,11 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
  
  #include "minilzo.h"
  #define HEAP_ALLOC(var, size) \
-@@ -143,15 +147,26 @@ static int LZOlayer_getattr(const char *
+@@ -143,15 +148,26 @@ static int LZOlayer_getattr(const char *
  
  static int LZOlayer_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset, struct fuse_file_info *fi)
  {
-+  char     dpath[MAXPATHLEN+1];
++  char     dpath[PATH_MAX+1];
    char     *xPath = LZOlayer_makePath(path);
 +  char     *p;
  
@@ -68,7 +69,7 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
      else break;
    }
    
-@@ -181,7 +196,7 @@ static int LZOlayer_open(const char *pat
+@@ -181,7 +197,7 @@ static int LZOlayer_open(const char *pat
    filePtr->cache.size    = 0;
    filePtr->cache.offset  = 0;
    
@@ -77,7 +78,7 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
    
    return 0;
  }
-@@ -357,8 +372,18 @@ static int LZOlayer_write(const char *pa
+@@ -357,8 +373,18 @@ static int LZOlayer_write(const char *pa
  static int LZOlayer_mknod(const char *path, mode_t mode, dev_t rdev)
  {
    char *xPath = LZOlayer_makePath(path);
@@ -98,7 +99,7 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
    if (res == -1)
    {
      res = -errno;
-@@ -373,6 +398,7 @@ static int LZOlayer_mknod(const char *pa
+@@ -373,6 +399,7 @@ static int LZOlayer_mknod(const char *pa
      close(fd);
  	 
      chown(xPath, fuse_get_context()->uid, fuse_get_context()->gid);
@@ -106,7 +107,7 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
    }
    free(xPath);
    
-@@ -425,7 +451,7 @@ static int LZOlayer_truncate(const char 
+@@ -425,7 +452,7 @@ static int LZOlayer_truncate(const char 
      ftruncate(fd, curr_pos);
      
      lseek(fd, 0, SEEK_SET);
@@ -115,7 +116,7 @@ $NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
      
      close(fd);
      free(mem);
-@@ -469,7 +495,7 @@ static int LZOlayer_truncate(const char 
+@@ -469,7 +496,7 @@ static int LZOlayer_truncate(const char 
      ftruncate(fd, curr_pos);
      
      lseek(fd, 0, SEEK_SET);
