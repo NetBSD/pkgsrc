@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.66 2024/04/28 20:02:21 pho Exp $
+# $NetBSD: haskell.mk,v 1.67 2024/04/29 07:58:38 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -118,6 +118,7 @@ _DEF_VARS.haskell= \
 	UNLIMIT_RESOURCES \
 	_HASKELL_VERSION_CMD \
 	_HASKELL_BIN \
+	_HASKELL_INTERP_BIN \
 	_HASKELL_GLOBAL_PKG_DB \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE_OR_DIR \
@@ -175,6 +176,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 
 # Tools
 _HASKELL_BIN=		${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc
+_HASKELL_INTERP_BIN=	${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/runghc
 _HASKELL_PKG_BIN=	${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc-pkg
 
 _HASKELL_VERSION_CMD=	${_HASKELL_BIN} -V 2>/dev/null | ${CUT} -d ' ' -f 8
@@ -186,8 +188,8 @@ _HASKELL_GLOBAL_PKG_DB_CMD=	${_HASKELL_BIN:Q} --print-global-package-db
 _HASKELL_GLOBAL_PKG_DB=		${_HASKELL_GLOBAL_PKG_DB_CMD:sh}
 
 # By default GHC uses a per-user default environment file if one is
-# available. Cabal has to be visible in order to compile Setup.?hs,
-# but per-user default environment files usually don't mark it as
+# available. Cabal has to be visible in order to compile (or interpret)
+# Setup.hs, but per-user default environment files usually don't mark it as
 # visible. Tell GHC not to read any environment files.
 _HASKELL_BUILD_SETUP_OPTS=	-package-env -
 
@@ -401,10 +403,10 @@ WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
 .  endif
 .endif
 
-# Define configure target. We might not have any working Haskell
-# interpreter so compile Setup.?hs to a binary. Since dynamic linkage
-# is much faster, we try it and then fall back to static linkage if
-# that didn't work.
+# Define configure target. There are 3 ways to run Setup.hs: [1] interpret
+# it with runghc, [2] compile it dynamically, and [3] compile it
+# statically. [1] is fastest but is least reliable. [3] is slowest but is
+# most reliable. So we try all these 3 ways in this order.
 do-configure:
 # Cabal packages are expected to have either Setup.hs or Setup.lhs,
 # but its existence is not mandatory these days because the standard
@@ -422,12 +424,27 @@ do-configure:
 			exit $$ret; \
 		fi; \
 	fi
-	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-		( ${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -dynamic || \
-			${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -static )
-	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
+	${RUN} set -eu; \
+	cd ${WRKSRC:Q}; \
+	if ${TEST} -f Setup.hs; then \
+		setup_src=Setup.hs; \
+	else \
+		setup_src=Setup.lhs; \
+	fi; \
+	if ${SETENV} ${CONFIGURE_ENV} \
+		${_HASKELL_INTERP_BIN} ${_HASKELL_BUILD_SETUP_OPTS:%=--ghc-arg=%} \
+			$$setup_src configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}; then \
+		${ECHO} '#!/bin/sh' > Setup; \
+		${ECHO} 'exec' ${_HASKELL_INTERP_BIN} \
+			${_HASKELL_BUILD_SETUP_OPTS:%=--ghc-arg=%} \
+			$$setup_src '"$$@"' >> Setup; \
+		${CHMOD} +x Setup; \
+	else \
+		${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -dynamic || \
+			${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -static; \
 		${SETENV} ${CONFIGURE_ENV} \
-			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
+			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}; \
+	fi
 
 # Define build target. _MAKE_JOBS_N is defined in build/build.mk
 do-build:
