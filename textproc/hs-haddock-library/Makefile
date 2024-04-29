@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/02 06:37:31 pho Exp $
+# $NetBSD: Makefile,v 1.13 2024/04/29 02:43:42 pho Exp $
 
 DISTNAME=	haddock-library-1.11.0
 PKGREVISION=	3
@@ -9,7 +9,8 @@ COMMENT=	Library exposing some functionality of Haddock
 LICENSE=	2-clause-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base	\
+	text
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
