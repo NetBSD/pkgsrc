@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/04/29 10:11:14 nia Exp $
 
 BLAKE2s (portmap_4.tar.gz) = 0887d0c6863ca31e6cd109198d0048251b4b8586d6bec9efe95c4645840f6440
 SHA512 (portmap_4.tar.gz) = 58454a6e0b9ff9d167e5734fbc7fa1287edd9b37c10496b574020254e3052231ef97dad48d11fc808edeec5102e7820a5aea19e697498c9774f6b27515aa2cfc
 Size (portmap_4.tar.gz) = 16152 bytes
-SHA1 (patch-aa) = f26735fc93188c8f1d4503bab7e9ccb616847743
-SHA1 (patch-ab) = ebc8a440384f93724dfba10df4f4583b78af4b5d
+SHA1 (patch-aa) = 0857cb92a4611de2911217b88affb65e5e6379d4
+SHA1 (patch-ab) = 38e322e6e1837cb13ecdc90d0562301659092d60
+SHA1 (patch-from__local.c) = d9576edf67237783060b30aec5bb9df4853504af
+SHA1 (patch-pmap__check.c) = 62e4f67645fe84be45a5db48689ef2cabfb1b336
+SHA1 (patch-pmap__set.c) = 37a25230e525a739aa44b6703f9c96dc532bc01c
