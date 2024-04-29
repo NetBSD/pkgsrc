@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.139 2024/04/20 13:43:49 nia Exp $
+# $NetBSD: Darwin.mk,v 1.140 2024/04/29 13:57:55 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -130,19 +130,6 @@ _OPSYS_INCLUDE_DIRS?=	${OSX_SDK_PATH}/usr/include
 .  else
 PKG_FAIL_REASON+=	"No suitable Xcode SDK or Command Line Tools installed."
 .  endif
-.endif
-
-#
-# Explicitly pass arm64 flags when building for arm64 so that everything works
-# as expected when effectively cross-compiling inside an x86_64 chroot.
-#
-.if ${MACHINE_ARCH} == "aarch64"
-CWRAPPERS_APPEND.cc+=	-arch arm64
-CWRAPPERS_APPEND.cxx+=	-arch arm64
-CWRAPPERS_APPEND.ld+=	-arch arm64
-_WRAP_EXTRA_ARGS.CC+=	-arch arm64
-_WRAP_EXTRA_ARGS.CXX+=	-arch arm64
-_WRAP_EXTRA_ARGS.LD+=	-arch arm64
 .endif
 
 #
