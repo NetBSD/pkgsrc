@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/02 06:37:35 pho Exp $
+# $NetBSD: Makefile,v 1.17 2024/04/29 02:22:59 pho Exp $
 
 DISTNAME=	regex-base-0.94.0.2
 PKGREVISION=	5
@@ -9,7 +9,9 @@ COMMENT=	Replaces/Enhances Haskell Text.Regex
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base		\
+	bytestring	\
+	text
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
