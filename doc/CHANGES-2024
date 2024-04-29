@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2822 2024/04/29 03:27:09 pho Exp $
+$NetBSD: CHANGES-2024,v 1.2823 2024/04/29 03:29:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/hs-file-embed to 0.0.16.0 [pho 2024-04-29]
 	Updated devel/hs-th-abstraction to 0.7.0.0 [pho 2024-04-29]
 	Added devel/hs-os-string version 2.0.2.1 [pho 2024-04-29]
+	Updated devel/hs-hashable to 1.4.4.0 [pho 2024-04-29]
