@@ -1,0 +1,16 @@
+$NetBSD: patch-src_wx_CMakeLists.txt,v 1.1 2024/04/29 09:18:40 nia Exp $
+
+OpenGL segfaults on NetBSD - needs investigating, might be ELF TLS
+issues in Mesa again
+
+--- src/wx/CMakeLists.txt.orig	2024-04-29 08:47:46.139352750 +0000
++++ src/wx/CMakeLists.txt
+@@ -385,7 +385,7 @@ int main(int argc, char** argv) {
+ }" WX_HAS_OPENGL)
+     endif()
+ 
+-    if(NOT WX_HAS_OPENGL)
++    if((NOT WX_HAS_OPENGL) OR (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD"))
+         add_definitions(-DNO_OGL)
+     endif()
+ 
