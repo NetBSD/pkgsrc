@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/04/12 12:14:47 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/29 19:08:34 adam Exp $
 
-DISTNAME=	versioningit-3.1.0
+DISTNAME=	versioningit-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/versioningit/}
@@ -12,7 +12,6 @@ LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-packaging>=17.1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.0:../../devel/py-pydantic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
