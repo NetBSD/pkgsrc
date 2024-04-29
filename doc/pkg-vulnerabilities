@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.182 2024/04/29 06:06:11 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.183 2024/04/29 21:31:42 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25994,3 +25994,4 @@ filezilla<3.67.0	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-3
 ruby31-base>=3.1<3.1.5	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 ruby32-base>=3.2<3.2.4	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
+R<4.4.0		arbirary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
