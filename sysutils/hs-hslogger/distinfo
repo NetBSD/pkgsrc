@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/25 14:43:17 pho Exp $
+$NetBSD: distinfo,v 1.3 2024/04/29 05:05:09 pho Exp $
 
-BLAKE2s (hslogger-1.3.1.0.tar.gz) = 7f03dd7d459ee977af7b8eaef8d28627a5d1283e7843340a7b52598943edabb2
-SHA512 (hslogger-1.3.1.0.tar.gz) = a08e7c85efe2b3f97e87b54db993f78ac31380f9b6f8d926517854771f482b2c64c358ddd12a449a413e5af0f374c034161b6f772148835b50551dc2cdbfa15a
-Size (hslogger-1.3.1.0.tar.gz) = 37468 bytes
+BLAKE2s (hslogger-1.3.1.1.tar.gz) = b32c54719d02ca9f00d0a8d86114ef3fcff7fe7da58bfa8fc4089ead44254501
+SHA512 (hslogger-1.3.1.1.tar.gz) = b1ac3b378600b179c96fa4ec84daaf2edf58cc83830cfa8a3bce062a38e8e46790d1acc9a58b9b4b84ffed8eea644dbaf271f5dec4c7cde2c4f5eaf4f4221b88
+Size (hslogger-1.3.1.1.tar.gz) = 37438 bytes
