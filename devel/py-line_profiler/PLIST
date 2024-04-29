@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/12 14:42:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/29 08:44:37 adam Exp $
 bin/kernprof-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_Python.txt
@@ -22,21 +22,27 @@ ${PYSITELIB}/line_profiler/autoprofile/__init__.pyc
 ${PYSITELIB}/line_profiler/autoprofile/__init__.pyo
 ${PYSITELIB}/line_profiler/autoprofile/ast_profle_transformer.py
 ${PYSITELIB}/line_profiler/autoprofile/ast_profle_transformer.pyc
+${PYSITELIB}/line_profiler/autoprofile/ast_profle_transformer.pyi
 ${PYSITELIB}/line_profiler/autoprofile/ast_profle_transformer.pyo
 ${PYSITELIB}/line_profiler/autoprofile/ast_tree_profiler.py
 ${PYSITELIB}/line_profiler/autoprofile/ast_tree_profiler.pyc
+${PYSITELIB}/line_profiler/autoprofile/ast_tree_profiler.pyi
 ${PYSITELIB}/line_profiler/autoprofile/ast_tree_profiler.pyo
 ${PYSITELIB}/line_profiler/autoprofile/autoprofile.py
 ${PYSITELIB}/line_profiler/autoprofile/autoprofile.pyc
+${PYSITELIB}/line_profiler/autoprofile/autoprofile.pyi
 ${PYSITELIB}/line_profiler/autoprofile/autoprofile.pyo
 ${PYSITELIB}/line_profiler/autoprofile/line_profiler_utils.py
 ${PYSITELIB}/line_profiler/autoprofile/line_profiler_utils.pyc
+${PYSITELIB}/line_profiler/autoprofile/line_profiler_utils.pyi
 ${PYSITELIB}/line_profiler/autoprofile/line_profiler_utils.pyo
 ${PYSITELIB}/line_profiler/autoprofile/profmod_extractor.py
 ${PYSITELIB}/line_profiler/autoprofile/profmod_extractor.pyc
+${PYSITELIB}/line_profiler/autoprofile/profmod_extractor.pyi
 ${PYSITELIB}/line_profiler/autoprofile/profmod_extractor.pyo
 ${PYSITELIB}/line_profiler/autoprofile/util_static.py
 ${PYSITELIB}/line_profiler/autoprofile/util_static.pyc
+${PYSITELIB}/line_profiler/autoprofile/util_static.pyi
 ${PYSITELIB}/line_profiler/autoprofile/util_static.pyo
 ${PYSITELIB}/line_profiler/explicit_profiler.py
 ${PYSITELIB}/line_profiler/explicit_profiler.pyc
