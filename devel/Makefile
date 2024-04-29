@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4208 2024/04/26 15:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4209 2024/04/29 03:27:18 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -703,6 +703,7 @@ SUBDIR+=	hs-optional-args
 SUBDIR+=	hs-optparse-applicative
 SUBDIR+=	hs-optparse-simple
 SUBDIR+=	hs-ordered-containers
+SUBDIR+=	hs-os-string
 SUBDIR+=	hs-pandoc-lua-marshal
 SUBDIR+=	hs-parallel
 SUBDIR+=	hs-parser-combinators
