@@ -1,11 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/09 06:41:02 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/04/30 12:25:04 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/apipkg/__init__.py
 ${PYSITELIB}/apipkg/__init__.pyc
 ${PYSITELIB}/apipkg/__init__.pyo
-${PYSITELIB}/apipkg/version.py
-${PYSITELIB}/apipkg/version.pyc
-${PYSITELIB}/apipkg/version.pyo
+${PYSITELIB}/apipkg/_alias_module.py
+${PYSITELIB}/apipkg/_alias_module.pyc
+${PYSITELIB}/apipkg/_alias_module.pyo
+${PYSITELIB}/apipkg/_importing.py
+${PYSITELIB}/apipkg/_importing.pyc
+${PYSITELIB}/apipkg/_importing.pyo
+${PYSITELIB}/apipkg/_module.py
+${PYSITELIB}/apipkg/_module.pyc
+${PYSITELIB}/apipkg/_module.pyo
+${PYSITELIB}/apipkg/_syncronized.py
+${PYSITELIB}/apipkg/_syncronized.pyc
+${PYSITELIB}/apipkg/_syncronized.pyo
+${PYSITELIB}/apipkg/_version.py
+${PYSITELIB}/apipkg/_version.pyc
+${PYSITELIB}/apipkg/_version.pyo
+${PYSITELIB}/apipkg/py.typed

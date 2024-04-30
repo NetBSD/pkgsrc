@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/04/30 12:25:04 wiz Exp $
 
-BLAKE2s (apipkg-1.5.tar.gz) = 79b5bdbd68d2344e7445e3125d54f0f4f70aa598f195a9208252a28b91042180
-SHA512 (apipkg-1.5.tar.gz) = 828937ca5e203915248fac54db8e7c13f941e006403f2a415c27fa4d1aa114790be3d7b5dd892f528611e5e6dfe75114ee80f4f4589a03c3f789ae6ddfcae0bf
-Size (apipkg-1.5.tar.gz) = 11186 bytes
+BLAKE2s (apipkg-3.0.2.tar.gz) = 79259490285e59db77186384f4222f8687df79bd1c147841d6d01b0cef9c58a5
+SHA512 (apipkg-3.0.2.tar.gz) = 82cacd3cb8074a5616c6c45bc1742e0774345e9e6f6a0e6f1786d23e2a8fe55f7330e9011de297d4decf7020aa737630db0b1063fe604daec544e754a92f7a0a
+Size (apipkg-3.0.2.tar.gz) = 6594 bytes
