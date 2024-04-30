@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/30 14:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/30 14:31:11 wiz Exp $
 
 DISTNAME=	nose-exclude-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
