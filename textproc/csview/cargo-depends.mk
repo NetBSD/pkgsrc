@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2024/04/29 13:41:46 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2024/04/30 09:58:52 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.13
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
@@ -39,7 +39,7 @@ CARGO_CRATE_DEPENDS+=	syn-2.0.59
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-truncate-1.0.0
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.12
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
