@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/04/30 19:43:48 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/04/30 20:51:14 cheusov Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2062,7 +2062,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes_test.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_curses.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_curses_panel.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_datetime.so
-${PLIST.dbm}lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_decimal.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_elementtree.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_hashlib.so

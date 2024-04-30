@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/04/30 17:13:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.28 2024/04/30 20:51:14 cheusov Exp $
 
 .include "dist.mk"
 
@@ -111,10 +111,7 @@ CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 
 LDFLAGS.SunOS+=	-lresolv
 
-PLIST_VARS+=	dbm nis
-.if ${OPSYS} != "Linux"
-PLIST.dbm=	yes
-.endif
+PLIST_VARS+=	nis
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
 .  if exists(${incdir}/rpc/rpc.h)
 HAVE_RPC_H=	yes
@@ -236,6 +233,9 @@ setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
+.if ${OPSYS} == "Linux"
+.include "../../databases/gdbm_compat/buildlink3.mk"
+.endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
