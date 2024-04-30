@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/04/07 07:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/30 08:15:20 wiz Exp $
 
-DISTNAME=	cairocffi-0.9.0
+DISTNAME=	cairocffi-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	12
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairocffi/}
 
@@ -11,13 +10,17 @@ HOMEPAGE=	https://github.com/SimonSapin/cairocffi
 COMMENT=	CFFI-based Cairo bindings for Python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES=	cffi
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+TEST_DEPENDS+=	${PYPKGPREFIX}-pikepdf-[0-9]*:../../print/py-pikepdf
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
