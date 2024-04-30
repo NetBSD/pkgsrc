@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.932 2024/04/30 07:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.933 2024/04/30 08:15:04 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -142,6 +142,7 @@ SUBDIR+=	py-octoprint
 SUBDIR+=	py-octoprint-filecheck
 SUBDIR+=	py-octoprint-firmwarecheck
 SUBDIR+=	py-octoprint-pisupport
+SUBDIR+=	py-pikepdf
 SUBDIR+=	py-pslib
 SUBDIR+=	py-pspdfutils
 SUBDIR+=	py-pydyf
