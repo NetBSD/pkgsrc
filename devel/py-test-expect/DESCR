@@ -1,0 +1,4 @@
+A py.test plugin that stores test expectations by saving the set
+of failing tests, allowing them to be marked as xfail when running
+them in future. The tests expectations are stored such that they
+can be distributed alongside the tests.
