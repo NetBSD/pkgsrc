@@ -1008,6 +1008,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_ustar_filename.c \
 	libarchive/test/test_read_format_warc.c \
 	libarchive/test/test_read_format_xar.c \
+	libarchive/test/test_read_format_xar_doublelink.c \
 	libarchive/test/test_read_format_zip.c \
 	libarchive/test/test_read_format_zip_7075_utf8_paths.c \
 	libarchive/test/test_read_format_zip_comment_stored.c \
@@ -1427,6 +1428,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_ustar_filename.$(OBJEXT) \
 	libarchive/test/test-test_read_format_warc.$(OBJEXT) \
 	libarchive/test/test-test_read_format_xar.$(OBJEXT) \
+	libarchive/test/test-test_read_format_xar_doublelink.$(OBJEXT) \
 	libarchive/test/test-test_read_format_zip.$(OBJEXT) \
 	libarchive/test/test-test_read_format_zip_7075_utf8_paths.$(OBJEXT) \
 	libarchive/test/test-test_read_format_zip_comment_stored.$(OBJEXT) \
@@ -2061,6 +2063,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_ustar_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_warc.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_xar.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_zip.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_zip_7075_utf8_paths.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_zip_comment_stored.Po \
@@ -3147,6 +3150,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_ustar_filename.c \
 	libarchive/test/test_read_format_warc.c \
 	libarchive/test/test_read_format_xar.c \
+	libarchive/test/test_read_format_xar_doublelink.c \
 	libarchive/test/test_read_format_zip.c \
 	libarchive/test/test_read_format_zip_7075_utf8_paths.c \
 	libarchive/test/test_read_format_zip_comment_stored.c \
@@ -3542,6 +3546,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_ustar_filename_eucjp.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_warc.warc.uu \
+	libarchive/test/test_read_format_xar_doublelink.xar.uu \
 	libarchive/test/test_read_format_zip.zip.uu \
 	libarchive/test/test_read_format_zip_7075_utf8_paths.zip.uu \
 	libarchive/test/test_read_format_zip_7z_deflate.zip.uu \
@@ -5902,6 +5907,9 @@ libarchive/test/test-test_read_format_warc.$(OBJEXT):  \
 libarchive/test/test-test_read_format_xar.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_xar_doublelink.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_zip.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -6782,6 +6790,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_ustar_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_warc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_xar.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_zip.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_zip_7075_utf8_paths.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_zip_comment_stored.Po@am__quote@ # am--include-marker
@@ -13744,6 +13753,20 @@ libarchive/test/test-test_read_format_xar.obj: libarchive/test/test_read_format_
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_xar.obj `if test -f 'libarchive/test/test_read_format_xar.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_xar.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_xar.c'; fi`
 
+libarchive/test/test-test_read_format_xar_doublelink.o: libarchive/test/test_read_format_xar_doublelink.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_xar_doublelink.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Tpo -c -o libarchive/test/test-test_read_format_xar_doublelink.o `test -f 'libarchive/test/test_read_format_xar_doublelink.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_xar_doublelink.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_xar_doublelink.c' object='libarchive/test/test-test_read_format_xar_doublelink.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_xar_doublelink.o `test -f 'libarchive/test/test_read_format_xar_doublelink.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_xar_doublelink.c
+
+libarchive/test/test-test_read_format_xar_doublelink.obj: libarchive/test/test_read_format_xar_doublelink.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_xar_doublelink.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Tpo -c -o libarchive/test/test-test_read_format_xar_doublelink.obj `if test -f 'libarchive/test/test_read_format_xar_doublelink.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_xar_doublelink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_xar_doublelink.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_xar_doublelink.c' object='libarchive/test/test-test_read_format_xar_doublelink.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_xar_doublelink.obj `if test -f 'libarchive/test/test_read_format_xar_doublelink.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_xar_doublelink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_xar_doublelink.c'; fi`
+
 libarchive/test/test-test_read_format_zip.o: libarchive/test/test_read_format_zip.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_zip.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_zip.Tpo -c -o libarchive/test/test-test_read_format_zip.o `test -f 'libarchive/test/test_read_format_zip.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_zip.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_zip.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_zip.Po
@@ -16596,6 +16619,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_ustar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_warc.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_xar.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_7075_utf8_paths.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_comment_stored.Po
@@ -17374,6 +17398,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_ustar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_warc.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_xar.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_xar_doublelink.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_7075_utf8_paths.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_comment_stored.Po
