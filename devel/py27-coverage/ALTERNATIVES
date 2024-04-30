@@ -1,1 +1,0 @@
-bin/coverage @PREFIX@/bin/coverage-@PYVERSSUFFIX@
