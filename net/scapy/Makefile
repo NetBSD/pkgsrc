@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/04/30 10:38:15 wiz Exp $
 
 DISTNAME=	scapy-2.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,9 +11,13 @@ HOMEPAGE=	https://scapy.net/
 COMMENT=	Interactive packet manipulation program
 LICENSE=	gnu-gpl-v2
 
-NO_BUILD=	yes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
@@ -22,9 +26,6 @@ SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	setup.py
 SUBST_SED.config+=	-e "s|share/man|${PKGMANDIR}|g"
 SUBST_MESSAGE.config=	Fixing paths.
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
 
 DATE_VAL=	${DATE} "+%Y%m%d-%H%M%S"
 
@@ -39,5 +40,5 @@ do-test:
 		-o /tmp/scapy_regression_test_${DATE_VAL:sh}.html
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
