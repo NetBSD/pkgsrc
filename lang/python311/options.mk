@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.1 2022/10/31 09:50:40 adam Exp $
+# $NetBSD: options.mk,v 1.2 2024/04/30 17:01:15 cheusov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python311
-PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11 readline
+PKG_SUGGESTED_OPTIONS=	x11 readline
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dtrace
+PLIST_VARS+=		dtrace readline
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
@@ -38,4 +38,17 @@ SUBST_SED.cdlopen=	-e "s!\(libraries=\[\],\)!\1 runtime_library_dirs=\['${X11BAS
 CONFIGURE_ARGS+=	--with-pymalloc
 .else
 CONFIGURE_ARGS+=	--without-pymalloc
+.endif
+
+# readline/editline
+.if empty(PKG_OPTIONS:Mreadline)
+CONFIGURE_ARGS+= --without-readline
+.else
+.include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+= --with-readline=editline
+.else
+CONFIGURE_ARGS+= --with-readline
+.endif
+PLIST.readline=	yes
 .endif
