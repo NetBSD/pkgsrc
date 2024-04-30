@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4212 2024/04/30 08:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4213 2024/04/30 09:20:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3154,7 +3154,6 @@ SUBDIR+=	py-zope.schema
 SUBDIR+=	py-zope.testing
 SUBDIR+=	py-zope.testrunner
 SUBDIR+=	py27-attrs
-SUBDIR+=	py27-babel
 SUBDIR+=	py27-cffi
 SUBDIR+=	py27-coverage
 SUBDIR+=	py27-game
