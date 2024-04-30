@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2950 2024/04/30 14:25:09 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2951 2024/04/30 14:26:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4787,3 +4787,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-astor to 0.8.1nb2 [wiz 2024-04-30]
 	Updated devel/py-blessings to 1.7nb2 [wiz 2024-04-30]
 	Updated devel/py-exam to 0.10.6nb2 [wiz 2024-04-30]
+	Updated devel/py-nose-exclude to 0.5.0nb2 [wiz 2024-04-30]
