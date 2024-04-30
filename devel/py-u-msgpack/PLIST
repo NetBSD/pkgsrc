@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/30 08:55:30 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/umsgpack/__init__.py
+${PYSITELIB}/umsgpack/__init__.pyc
+${PYSITELIB}/umsgpack/__init__.pyi
+${PYSITELIB}/umsgpack/__init__.pyo
