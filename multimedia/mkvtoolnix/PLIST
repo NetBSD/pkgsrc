@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/03/11 09:31:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/04/30 09:07:29 adam Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -137,6 +137,7 @@ share/locale/it/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ja/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ko/LC_MESSAGES/mkvtoolnix.mo
 share/locale/lt/LC_MESSAGES/mkvtoolnix.mo
+share/locale/nb/LC_MESSAGES/mkvtoolnix.mo
 share/locale/nl/LC_MESSAGES/mkvtoolnix.mo
 share/locale/pl/LC_MESSAGES/mkvtoolnix.mo
 share/locale/pt/LC_MESSAGES/mkvtoolnix.mo
