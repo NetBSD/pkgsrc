@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 20:16:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/04/30 05:36:00 pho Exp $
 lib/X11-xft-${PKGVERSION}/${HS_VERSION}/package-description
 lib/X11-xft-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xft.dyn_hi
@@ -15,11 +15,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/Graphics-X11-Xft
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/Graphics-X11-Xrender.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/X11-xft.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/synopsis.png
