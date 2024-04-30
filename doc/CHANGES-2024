@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2891 2024/04/30 07:40:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2892 2024/04/30 08:15:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4722,3 +4722,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-sphinx-gallery to 0.16.0 [adam 2024-04-30]
 	Removed print/py-weasyprint0 successor print/py-weasyprint [wiz 2024-04-30]
 	Removed converters/py27-cairosvg successor converters/py-cairosvg [wiz 2024-04-30]
+	Added print/py-pikepdf version 8.15.1 [wiz 2024-04-30]
