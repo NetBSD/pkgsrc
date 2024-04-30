@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/10/01 12:01:50 prlw1 Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/04/30 13:59:02 wiz Exp $
 ${PYSITELIB}/Xlib/X.py
 ${PYSITELIB}/Xlib/X.pyc
 ${PYSITELIB}/Xlib/X.pyo
@@ -52,6 +47,12 @@ ${PYSITELIB}/Xlib/ext/randr.pyo
 ${PYSITELIB}/Xlib/ext/record.py
 ${PYSITELIB}/Xlib/ext/record.pyc
 ${PYSITELIB}/Xlib/ext/record.pyo
+${PYSITELIB}/Xlib/ext/res.py
+${PYSITELIB}/Xlib/ext/res.pyc
+${PYSITELIB}/Xlib/ext/res.pyo
+${PYSITELIB}/Xlib/ext/screensaver.py
+${PYSITELIB}/Xlib/ext/screensaver.pyc
+${PYSITELIB}/Xlib/ext/screensaver.pyo
 ${PYSITELIB}/Xlib/ext/security.py
 ${PYSITELIB}/Xlib/ext/security.pyc
 ${PYSITELIB}/Xlib/ext/security.pyo
@@ -193,3 +194,8 @@ ${PYSITELIB}/Xlib/xobject/icccm.pyo
 ${PYSITELIB}/Xlib/xobject/resource.py
 ${PYSITELIB}/Xlib/xobject/resource.pyc
 ${PYSITELIB}/Xlib/xobject/resource.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
