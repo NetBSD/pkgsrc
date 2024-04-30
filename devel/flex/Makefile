@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/04/30 11:35:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.66 2024/04/30 12:06:15 cheusov Exp $
 
 DISTNAME=	flex-2.6.4
 CATEGORIES=	devel lang
@@ -17,7 +17,7 @@ USE_LANGUAGES=		c99 c++
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4:run	gmake makeinfo gettext
+USE_TOOLS+=		gm4:run	gmake makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
