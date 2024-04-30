@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/29 03:57:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/04/30 13:22:57 pho Exp $
 bin/cabal
-lib/${PKGNAME}/${HS_VERSION}/package-description
-lib/${PKGNAME}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/BuildReports/Anonymous.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/BuildReports/Anonymous.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/BuildReports/Anonymous.p_hi
@@ -212,6 +210,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/JobControl.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/List.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/List.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/List.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Main.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Main.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Main.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Manpage.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Manpage.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Manpage.p_hi
@@ -401,6 +402,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Deprecated/ViewAsFieldD
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${PKGNAME}/${HS_VERSION}/package-description
+lib/${PKGNAME}/${HS_VERSION}/package-id
 share/bash-completion/completions/cabal
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-BuildReports-Anonymous.html
@@ -473,6 +476,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Install
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-InstallSymlink.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-JobControl.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-List.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Main.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Manpage.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ManpageFlags.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Nix.html
@@ -578,11 +582,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
