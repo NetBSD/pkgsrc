@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4218 2024/04/30 13:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4219 2024/04/30 13:24:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2626,7 +2626,6 @@ SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
 SUBDIR+=	py-hglib
-SUBDIR+=	py-hgtools
 SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-hypothesis4
