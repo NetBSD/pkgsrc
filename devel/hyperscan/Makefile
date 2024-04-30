@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.15 2023/11/08 13:18:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/04/30 13:28:57 wiz Exp $
 
 DISTNAME=	hyperscan-5.0.0
 PKGREVISION=	8
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://01.org/hyperscan
+HOMEPAGE=	https://github.com/intel/hyperscan
 COMMENT=	High-performance regular expression matching library
-LICENSE=	modified-bsd
-
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+#LICENSE=	modified-bsd AND more
 
 TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
-PYTHON_FOR_BUILD_ONLY=	yes
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
+
 USE_CMAKE=		yes
 USE_LANGUAGES=		c99 c++
 USE_CXX_FEATURES+=	c++11
 USE_TOOLS+=		pkg-config
+PYTHON_FOR_BUILD_ONLY=	yes
 
 CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=ON
 PKGCONFIG_OVERRIDE+=	libhs.pc.in
