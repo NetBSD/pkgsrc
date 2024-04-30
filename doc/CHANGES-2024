@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2913 2024/04/30 10:14:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2914 2024/04/30 10:31:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4747,3 +4747,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/csview to 1.3.2 [pin 2024-04-30]
 	Updated devel/py-dulwich to 0.22.1 [adam 2024-04-30]
 	Updated net/py-xandikos to 0.2.11 [adam 2024-04-30]
+	Updated security/py-keyrings.alt to 5.0.1 [adam 2024-04-30]
+	Updated textproc/py-tinycss2 to 1.3.0 [adam 2024-04-30]
