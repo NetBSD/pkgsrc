@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/04/30 08:14:43 wiz Exp $
+
+BLAKE2s (pikepdf-8.15.1.tar.gz) = 96c68ae0ce16ca91f1666b788dd0c9b94ebfe6663d7a1eabae3db58ac6f004f7
+SHA512 (pikepdf-8.15.1.tar.gz) = ae6b0b8bdf7e395943caf503f1d498861bd2719185e6382a522b8c0d4e38413a1b070e912367852bc5735d29b8453d05c57ff384ede825830722470445a534f6
+Size (pikepdf-8.15.1.tar.gz) = 2870723 bytes
+SHA1 (patch-pyproject.toml) = fd992de98ff3aaebb50373c94ae2584b48bec4eb
