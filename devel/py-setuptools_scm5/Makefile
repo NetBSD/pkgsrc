@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/17 09:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/30 11:17:53 wiz Exp $
 
 DISTNAME=	setuptools_scm-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,9 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 # does not support python 2.7
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip20
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test4
 
-PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
 PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=	# none
@@ -24,5 +25,4 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} testing
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
