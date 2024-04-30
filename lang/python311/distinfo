@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2024/04/30 17:07:17 cheusov Exp $
+$NetBSD: distinfo,v 1.18 2024/04/30 19:05:17 cheusov Exp $
 
 BLAKE2s (Python-3.11.9.tar.xz) = 82562f4c5e5a6feb3d9ec5186c7402da21b83a65c761cbb1e4f6b840892c1b89
 SHA512 (Python-3.11.9.tar.xz) = 2b0a1d936b4ef8376f9655797aece8ffdff75031ad7bfa840f330cac2aed189aecc80c163edc12ea772851d7a011f3fc1960470a73d9d4290cf3ab8ad6ed7e6a
@@ -9,6 +9,6 @@ SHA1 (patch-Lib_distutils_unixccompiler.py) = 8a91e8f4f86517a62408c3a10ed5eb50c4
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 593c4e93c5653ab400f0a98b91db92630c0a7390
 SHA1 (patch-Lib_sysconfig.py) = bc6d91bf8f7121456b26ea7f080f588c96f2596f
 SHA1 (patch-Makefile.pre.in) = fdb5794d112f422a1f28aa9f8b179dc05520f9e1
-SHA1 (patch-Modules_readline.c) = 7c144fd63573356f8c2fe7770a3c96b762e4ef82
+SHA1 (patch-Modules_readline.c) = 232f6ac43b5a0e87c915f13117bae91ef069a6c1
 SHA1 (patch-configure) = a6d9a00ff160581245bc30d1b0d2ec0e9da8fb0b
 SHA1 (patch-setup.py) = 874b114febf51181509593a272ad5cdd4acaf3b4

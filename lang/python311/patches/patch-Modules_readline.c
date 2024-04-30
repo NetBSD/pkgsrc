@@ -1,8 +1,10 @@
-$NetBSD: patch-Modules_readline.c,v 1.1 2024/04/30 16:55:22 cheusov Exp $
+$NetBSD: patch-Modules_readline.c,v 1.2 2024/04/30 19:05:18 cheusov Exp $
 
 pkgsrc buildlink framework installs libedit headers to readline/ subdirectory.
 
---- Modules/readline.c.orig	2024-04-30 14:54:41.228944748 +0000
+VFunction type is not available on NetBSD`s native libedit.
+
+--- Modules/readline.c.orig	2024-04-02 08:25:04.000000000 +0000
 +++ Modules/readline.c
 @@ -29,7 +29,7 @@
  #endif
@@ -13,3 +15,12 @@ pkgsrc buildlink framework installs libedit headers to readline/ subdirectory.
  #else
  /* GNU readline definitions */
  #  undef HAVE_CONFIG_H /* Else readline/chardefs.h includes strings.h */
+@@ -443,7 +443,7 @@ readline_set_completion_display_matches_
+ #if defined(HAVE_RL_COMPDISP_FUNC_T)
+         (rl_compdisp_func_t *)on_completion_display_matches_hook : 0;
+ #else
+-        (VFunction *)on_completion_display_matches_hook : 0;
++        on_completion_display_matches_hook : 0;
+ #endif
+ #endif
+     return result;
