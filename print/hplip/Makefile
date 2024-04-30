@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/11/12 13:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2024/04/30 11:36:31 wiz Exp $
 
 DISTNAME=	hplip-3.19.12
 PKGREVISION=	25
@@ -45,6 +45,8 @@ CONFIGURE_ARGS+=	--enable-foomatic-rip-hplip-install
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 EGFILES=		hp/hplip.conf
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}

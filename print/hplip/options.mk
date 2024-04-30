@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2023/11/04 14:22:03 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2024/04/30 11:36:31 wiz Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -50,8 +50,7 @@ PLIST_SRC+=		PLIST.scan
 CONFIGURE_ARGS+=	--enable-scan-build
 MESSAGE_SRC+=		MESSAGE.scan
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
-.include "../../lang/python/versioned_dependencies.mk"
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 .include "../../graphics/sane-backends/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-scan-build
