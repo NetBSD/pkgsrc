@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 20:32:37 pho Exp $
-lib/charset-${PKGVERSION}/${HS_VERSION}/package-description
-lib/charset-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/30 07:57:07 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/CharSet.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/CharSet.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/CharSet.p_hi
@@ -31,6 +29,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/CharSet/Unicode/Category.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/charset-${PKGVERSION}/${HS_VERSION}/package-description
+lib/charset-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/Data-CharSet-ByteSet.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/Data-CharSet-Common.html
@@ -68,11 +68,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/charset-${PKGVERSION}/html/synopsis.png
