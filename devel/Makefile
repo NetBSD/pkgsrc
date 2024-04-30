@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4210 2024/04/29 13:27:52 nikita Exp $
+# $NetBSD: Makefile,v 1.4211 2024/04/30 03:18:15 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -2147,6 +2147,7 @@ SUBDIR+=	p5-Test-EOL
 SUBDIR+=	p5-Test-Exception
 SUBDIR+=	p5-Test-Exit
 SUBDIR+=	p5-Test-Expect
+SUBDIR+=	p5-Test-ExpectAndCheck
 SUBDIR+=	p5-Test-FailWarnings
 SUBDIR+=	p5-Test-Fatal
 SUBDIR+=	p5-Test-File
