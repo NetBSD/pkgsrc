@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2945 2024/04/30 14:07:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2946 2024/04/30 14:12:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/py-Xlib to 0.33 [wiz 2024-04-30]
 	Updated devel/py-coverage-enable-subprocess to 1.0nb1 [wiz 2024-04-30]
 	Updated devel/py-nose2 to 0.10.0nb3 [wiz 2024-04-30]
+	Updated textproc/py-biplist to 1.0.3nb2 [wiz 2024-04-30]
