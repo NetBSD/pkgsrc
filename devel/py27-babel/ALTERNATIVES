@@ -1,1 +1,0 @@
-bin/pybabel @PREFIX@/bin/pybabel-@PYVERSSUFFIX@
