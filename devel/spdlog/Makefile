@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/04/26 17:20:24 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/04/30 18:09:09 adam Exp $
 
-DISTNAME=	spdlog-1.14.0
+DISTNAME=	spdlog-1.14.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gabime/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
