@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/11/14 00:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/04/30 14:09:52 wiz Exp $
 
 DISTNAME=	numpy-1.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,7 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_ACCEPTED=	38
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_PKG_RESOURCES=	yes
 
@@ -64,6 +63,5 @@ BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.29.2
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
