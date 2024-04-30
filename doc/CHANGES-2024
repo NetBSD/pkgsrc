@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2953 2024/04/30 14:29:21 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2954 2024/04/30 14:33:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-nose-exclude to 0.5.0nb2 [wiz 2024-04-30]
 	Updated net/py-cymruwhois to 1.6nb3 [wiz 2024-04-30]
 	Updated security/py-hkdf to 0.0.3nb2 [wiz 2024-04-30]
+	Updated security/py-mohawk to 1.1.0nb2 [wiz 2024-04-30]
