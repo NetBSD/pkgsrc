@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2939 2024/04/30 13:46:00 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2940 2024/04/30 13:47:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hyperscan to 0.0.2nb2 [wiz 2024-04-30]
 	Updated devel/hs-protolude to 0.3.4 [pho 2024-04-30]
 	Updated devel/py-wasm to 1.2nb3 [wiz 2024-04-30]
+	Updated net/speedtest-cli to 2.1.3nb5 [wiz 2024-04-30]
