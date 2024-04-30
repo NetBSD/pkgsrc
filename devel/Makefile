@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4216 2024/04/30 13:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4217 2024/04/30 13:17:06 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2661,6 +2661,7 @@ SUBDIR+=	py-jaraco.functools
 SUBDIR+=	py-jaraco.itertools
 SUBDIR+=	py-jaraco.logging
 SUBDIR+=	py-jaraco.path
+SUBDIR+=	py-jaraco.stream
 SUBDIR+=	py-jaraco.test
 SUBDIR+=	py-jaraco.vcs
 SUBDIR+=	py-jaraco.versioning
