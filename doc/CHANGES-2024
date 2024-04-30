@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2909 2024/04/30 09:32:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2910 2024/04/30 09:35:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4742,3 +4742,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-click7 [wiz 2024-04-30]
 	Updated textproc/py-myst-parser to 3.0.1 [adam 2024-04-30]
 	Updated lang/py-mypy to 1.10.0 [adam 2024-04-30]
+	Updated time/py-relativetimebuilder to 3.0.0nb1 [wiz 2024-04-30]
