@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2924 2024/04/30 12:23:03 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2925 2024/04/30 12:25:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-strich to 0.8nb2 [wiz 2024-04-30]
 	Removed graphics/py-Pillow6 [wiz 2024-04-30]
 	Updated devel/py-buildbot-pkg to 2.6.0nb2 [wiz 2024-04-30]
+	Updated devel/py-apipkg to 3.0.2 [wiz 2024-04-30]
