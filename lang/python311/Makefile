@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/04/30 20:51:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.29 2024/04/30 21:09:15 cheusov Exp $
 
 .include "dist.mk"
 
@@ -45,15 +45,17 @@ CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
-# NetBSD-8 curses has enough support for py-curses
-USE_CURSES=		getsyx wide
-# But we build as ncurses still to get the full feature set easily
-FAKE_NCURSES=		yes
-
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+# NetBSD-8 curses has enough support for py-curses
+USE_CURSES=		getsyx wide
+# But we build as ncurses still to get the full feature set easily
+.if ${OPSYS} == "NetBSD"
+FAKE_NCURSES=		yes
+.endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
