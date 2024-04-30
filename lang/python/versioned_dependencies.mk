@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.102 2024/04/30 09:19:33 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.103 2024/04/30 09:28:37 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: OpenSSL Pillow X cairo cffi click coverage cryptography dns hypothesis pip setuptools setuptools_scm test
+#       Possible values: OpenSSL Pillow X cairo cffi coverage cryptography dns hypothesis pip setuptools setuptools_scm test
 #       Default: (nothing)
 #
 
@@ -40,9 +40,6 @@ _PY_VERS_PKG.27.cairo=		graphics/py-cairo118
 
 _PY_VERS_PKG.default.cffi=	devel/py-cffi
 _PY_VERS_PKG.27.cffi=		devel/py27-cffi
-
-_PY_VERS_PKG.default.click=	devel/py-click
-_PY_VERS_PKG.27.click=		devel/py-click7
 
 _PY_VERS_PKG.default.coverage=	devel/py-coverage
 _PY_VERS_PKG.27.coverage=	devel/py27-coverage
