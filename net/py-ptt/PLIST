@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/02 13:08:31 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/30 13:21:43 wiz Exp $
 bin/twitter
 bin/twitter-archiver
 bin/twitter-follow
 bin/twitter-log
 bin/twitter-stream-example
 bin/twitterbot
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/twitter/__init__.py
 ${PYSITELIB}/twitter/__init__.pyc
 ${PYSITELIB}/twitter/__init__.pyo
@@ -41,6 +43,9 @@ ${PYSITELIB}/twitter/logger.pyo
 ${PYSITELIB}/twitter/oauth.py
 ${PYSITELIB}/twitter/oauth.pyc
 ${PYSITELIB}/twitter/oauth.pyo
+${PYSITELIB}/twitter/oauth2.py
+${PYSITELIB}/twitter/oauth2.pyc
+${PYSITELIB}/twitter/oauth2.pyo
 ${PYSITELIB}/twitter/oauth_dance.py
 ${PYSITELIB}/twitter/oauth_dance.pyc
 ${PYSITELIB}/twitter/oauth_dance.pyo
@@ -50,6 +55,9 @@ ${PYSITELIB}/twitter/stream.pyo
 ${PYSITELIB}/twitter/stream_example.py
 ${PYSITELIB}/twitter/stream_example.pyc
 ${PYSITELIB}/twitter/stream_example.pyo
+${PYSITELIB}/twitter/timezones.py
+${PYSITELIB}/twitter/timezones.pyc
+${PYSITELIB}/twitter/timezones.pyo
 ${PYSITELIB}/twitter/twitter_globals.py
 ${PYSITELIB}/twitter/twitter_globals.pyc
 ${PYSITELIB}/twitter/twitter_globals.pyo
