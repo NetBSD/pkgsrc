@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/08/03 23:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/04/30 14:45:54 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose/}
 
@@ -11,11 +11,14 @@ HOMEPAGE=	https://nose.readthedocs.io/
 COMMENT=	Unittest-based testing framework for python
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+# only needed for a plugin
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=		yes
-# only needed for a plugin
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -23,16 +26,8 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/nosetests ${DESTDIR}${PREFIX}/bin/nosetests-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/man/man1/nosetests.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nosetests${PYVERSSUFFIX}.1
 
-.include "../../lang/python/egg.mk"
-
-.if ${PYTHON_VERSION} == 207
-# only work with python 2.x
-#do-test:
-#	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
-.else
 pre-build:
 	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs nose
-.endif
 
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
