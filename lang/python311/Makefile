@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/02/02 15:50:55 tsutsui Exp $
+# $NetBSD: Makefile,v 1.26 2024/04/30 17:01:15 cheusov Exp $
 
 .include "dist.mk"
 
@@ -38,7 +38,6 @@ USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-readline=readline # XXX editline?
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
@@ -246,7 +245,6 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
