@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.126 2024/04/26 19:56:28 adam Exp $
+# $NetBSD: Makefile,v 1.127 2024/04/30 04:01:25 adam Exp $
 
-DISTNAME=	pytest-8.1.2
+DISTNAME=	pytest-8.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_sc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-iniconfig-[0-9]*:../../devel/py-iniconfig
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.4:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.5:../../devel/py-pluggy
 TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
