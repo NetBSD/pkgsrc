@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/06 09:59:00 tnn Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.2 2024/04/30 09:25:05 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/click_plugins/__init__.py
 ${PYSITELIB}/click_plugins/__init__.pyc
 ${PYSITELIB}/click_plugins/__init__.pyo
