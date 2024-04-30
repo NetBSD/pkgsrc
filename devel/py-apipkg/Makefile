@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/13 19:31:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/30 12:25:04 wiz Exp $
 
-DISTNAME=	apipkg-1.5
+DISTNAME=	apipkg-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/apipkg/}
 
@@ -11,10 +10,12 @@ HOMEPAGE=	https://github.com/pytest-dev/apipkg
 COMMENT=	Namespace control and lazy-import mechanism
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
