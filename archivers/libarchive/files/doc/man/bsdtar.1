@@ -1,4 +1,4 @@
-.TH TAR 1 "March 1, 2024" ""
+.TH TAR 1 "April 23, 2024" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -726,15 +726,14 @@ A decimal integer from 4 to 7 specifying the lz4 compression block size
 Use the previous block of the block being compressed for
 a compression dictionary to improve compression ratio.
 .TP
-\fBzstd:compression-level\fP
-A decimal integer specifying the zstd compression level. Supported values depend
+\fBzstd:compression-level\fP=\fIN\fP
+A decimal integer specifying the zstd compression level.
+Supported values depend
 on the library version, common values are from 1 to 22.
 .TP
-\fBzstd:threads\fP
-Specify the number of worker threads to use.
-Setting threads to a special value 0 makes
-\fBzstd\fP(1)
-use as many threads as there are CPU cores on the system.
+\fBzstd:threads\fP=\fIN\fP
+Specify the number of worker threads to use, or 0 to use as many
+threads as there are CPU cores in the system.
 .TP
 \fBzstd:frame-per-file\fP
 Start a new compression frame at the beginning of each file in the

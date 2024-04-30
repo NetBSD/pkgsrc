@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Sun Apr  7 22:36:26 2024 -->
+<!-- CreationDate: Fri Apr 26 09:23:46 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -381,7 +381,7 @@ archive_read_header(3) calls. If matched based on calls to
 archive_match_path_excluded, archive_match_time_excluded, or
 archive_match_owner_excluded, then the callback function
 specified by the _excluded_func parameter will execute. This
-function will recieve data provided to the fourth parameter,
+function will receive data provided to the fourth parameter,
 void *_client_data.</p>
 
 
@@ -390,7 +390,7 @@ void *_client_data.</p>
 <p style="margin-left:17%;">Allows the caller to set a
 callback function during calls to archive_read_header(3) to
 filter out metadata for each entry. The callback function
-recieves the struct archive object, void* custom filter
+receives the struct archive object, void* custom filter
 data, and the struct archive_entry. If the callback function
 returns an error, ARCHIVE_RETRY will be returned and the
 entry will not be further processed.</p>

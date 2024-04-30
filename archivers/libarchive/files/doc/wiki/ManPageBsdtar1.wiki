@@ -639,14 +639,13 @@ A decimal integer from 4 to 7 specifying the lz4 compression block size
 </dd><dt>'''lz4:block-dependence'''</dt><dd> 
 Use the previous block of the block being compressed for 
 a compression dictionary to improve compression ratio. 
-</dd><dt>'''zstd:compression-level'''</dt><dd> 
-A decimal integer specifying the zstd compression level. Supported values depend 
+</dd><dt>'''zstd:compression-level'''=''N''</dt><dd> 
+A decimal integer specifying the zstd compression level. 
+Supported values depend 
 on the library version, common values are from 1 to 22. 
-</dd><dt>'''zstd:threads'''</dt><dd> 
-Specify the number of worker threads to use. 
-Setting threads to a special value 0 makes 
-[[zstd(1)|http://www.freebsd.org/cgi/man.cgi?query=zstd&sektion=1]] 
-use as many threads as there are CPU cores on the system. 
+</dd><dt>'''zstd:threads'''=''N''</dt><dd> 
+Specify the number of worker threads to use, or 0 to use as many 
+threads as there are CPU cores in the system. 
 </dd><dt>'''zstd:frame-per-file'''</dt><dd> 
 Start a new compression frame at the beginning of each file in the 
 archive. 
