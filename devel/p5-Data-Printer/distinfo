@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/12/16 10:23:47 mef Exp $
+$NetBSD: distinfo,v 1.12 2024/04/30 01:00:15 wen Exp $
 
-BLAKE2s (Data-Printer-1.001001.tar.gz) = 4dc9211b46992e86bb4955c6c9339d03fdaebe1e170eaa8b149a146601cf4148
-SHA512 (Data-Printer-1.001001.tar.gz) = 3f92443fe2aa32a1f022e6e5fce1c8e2d1abe6e40d322fde9c195df38c40ff5e962370bdda65f5f93e27cdb806efbe93e56b075ee639491b4805ade6bb36f1cc
-Size (Data-Printer-1.001001.tar.gz) = 118789 bytes
+BLAKE2s (Data-Printer-1.002001.tar.gz) = 50c3d47d1ff75d76159bf556939df6de9e96f56d33cbd42765201c789aea9e2d
+SHA512 (Data-Printer-1.002001.tar.gz) = 17d6f96d85d01ab5d3969fc7219301eccf5757b009d5941d8aea9a9731e55bf2ed04ccd81df06dd92b9eae3b56c909233095c0dac89cd1e9815e73749169f614
+Size (Data-Printer-1.002001.tar.gz) = 119574 bytes
