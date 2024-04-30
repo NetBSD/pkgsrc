@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.12 2021/11/09 20:10:28 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/04/30 09:01:14 wiz Exp $
 
 BLAKE2s (html5lib-1.1.tar.gz) = de98dc78f784829b373e37ad38851c062983d16b91322a32a2a77113e34b3240
 SHA512 (html5lib-1.1.tar.gz) = af7c29591007fded99be6c38e3d0ae5a4ac32d71d26046a615918ae732cb1c1ecbf754f47ceca1a53726c3843f3ecea7af87a7362281b45ff3af495815818626
 Size (html5lib-1.1.tar.gz) = 272215 bytes
+SHA1 (patch-html5lib_tests_conftest.py) = 7aefd6920c5b490e0d033003aef2a31cc0b87b86
+SHA1 (patch-html5lib_tests_sanitizer.py) = 7ef8278779354a83b59001b1c4eb726e668b58ef
+SHA1 (patch-html5lib_tests_tokenizer.py) = 069535e27579ab9e297986da60ea5072ea15c4f8
+SHA1 (patch-html5lib_tests_tree__construction.py) = 471730a2408cb7c46e1d76448101f6a708b298f4
+SHA1 (patch-requirements-test.txt) = e9c89a4bbd6fac87f5143bc4b1f0016993c14450
