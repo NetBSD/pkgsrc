@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/01/02 09:05:43 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/04/30 12:22:57 cheusov Exp $
 
 DISTNAME=	help2man-1.49.3
 CATEGORIES=	converters
@@ -14,7 +14,7 @@ DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 
 USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl:run msgfmt gmake
+USE_TOOLS+=		perl:run gmake
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		paths
@@ -26,6 +26,8 @@ SUBST_SED.paths=	-e 's,(libdir)/help2man,(libdir),g'
 INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "options.mk"
 
 .if ${OPSYS} == "Darwin"
 SOEXT=			dylib
