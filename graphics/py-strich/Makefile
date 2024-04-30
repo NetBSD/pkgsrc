@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/04/30 11:39:54 wiz Exp $
 
 DISTNAME=	pyStrich-0.8
 PKGNAME=	${PYPKGPREFIX}-strich-0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyStrich/}
 
@@ -11,12 +11,11 @@ HOMEPAGE=	https://github.com/mmulqueen/pyStrich
 COMMENT=	1D and 2D barcode generator
 LICENSE=	2-clause-bsd AND apache-2.0
 
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
-do-test:
-	${MKDIR} ${WRKSRC}/pystrich/code128/test_img ${WRKSRC}/pystrich/ean13/test_img
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
