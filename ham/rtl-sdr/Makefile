@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/11/05 15:17:28 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2024/04/30 00:37:59 gdt Exp $
 
 DISTNAME=		rtl-sdr-2.0.1
 CATEGORIES=		ham
@@ -11,7 +11,7 @@ GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
 #   https://github.com/librtlsdr/librtlsdr (forked from steve-m)
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		https://osmocom.org/projects/rtl-sdr/wik
+HOMEPAGE=		https://osmocom.org/projects/rtl-sdr/wiki
 COMMENT=		Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
 LICENSE=		gnu-gpl-v2
 
