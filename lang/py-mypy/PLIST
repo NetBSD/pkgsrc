@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/03/11 08:40:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/04/30 09:31:52 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -545,6 +545,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_heapq.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_imp.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_json.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_locale.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_lsprof.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_markupbase.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_msi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_operator.pyi
@@ -1367,6 +1368,21 @@ ${PYSITELIB}/mypyc/lib-rt/setup.pyo
 ${PYSITELIB}/mypyc/lib-rt/str_ops.c
 ${PYSITELIB}/mypyc/lib-rt/test_capi.cc
 ${PYSITELIB}/mypyc/lib-rt/tuple_ops.c
+${PYSITELIB}/mypyc/lower/__init__.py
+${PYSITELIB}/mypyc/lower/__init__.pyc
+${PYSITELIB}/mypyc/lower/__init__.pyo
+${PYSITELIB}/mypyc/lower/int_ops.py
+${PYSITELIB}/mypyc/lower/int_ops.pyc
+${PYSITELIB}/mypyc/lower/int_ops.pyo
+${PYSITELIB}/mypyc/lower/list_ops.py
+${PYSITELIB}/mypyc/lower/list_ops.pyc
+${PYSITELIB}/mypyc/lower/list_ops.pyo
+${PYSITELIB}/mypyc/lower/misc_ops.py
+${PYSITELIB}/mypyc/lower/misc_ops.pyc
+${PYSITELIB}/mypyc/lower/misc_ops.pyo
+${PYSITELIB}/mypyc/lower/registry.py
+${PYSITELIB}/mypyc/lower/registry.pyc
+${PYSITELIB}/mypyc/lower/registry.pyo
 ${PYSITELIB}/mypyc/namegen.py
 ${PYSITELIB}/mypyc/namegen.pyc
 ${PYSITELIB}/mypyc/namegen.pyo
@@ -1467,6 +1483,10 @@ ${PYSITELIB}/mypyc/test-data/irbuild-tuple.test
 ${PYSITELIB}/mypyc/test-data/irbuild-u8.test
 ${PYSITELIB}/mypyc/test-data/irbuild-unreachable.test
 ${PYSITELIB}/mypyc/test-data/irbuild-vectorcall.test
+${PYSITELIB}/mypyc/test-data/lowering-int.test
+${PYSITELIB}/mypyc/test-data/lowering-list.test
+${PYSITELIB}/mypyc/test-data/opt-copy-propagation.test
+${PYSITELIB}/mypyc/test-data/opt-flag-elimination.test
 ${PYSITELIB}/mypyc/test-data/refcount.test
 ${PYSITELIB}/mypyc/test-data/run-async.test
 ${PYSITELIB}/mypyc/test-data/run-attrs.test
@@ -1546,9 +1566,15 @@ ${PYSITELIB}/mypyc/test/test_ircheck.pyo
 ${PYSITELIB}/mypyc/test/test_literals.py
 ${PYSITELIB}/mypyc/test/test_literals.pyc
 ${PYSITELIB}/mypyc/test/test_literals.pyo
+${PYSITELIB}/mypyc/test/test_lowering.py
+${PYSITELIB}/mypyc/test/test_lowering.pyc
+${PYSITELIB}/mypyc/test/test_lowering.pyo
 ${PYSITELIB}/mypyc/test/test_namegen.py
 ${PYSITELIB}/mypyc/test/test_namegen.pyc
 ${PYSITELIB}/mypyc/test/test_namegen.pyo
+${PYSITELIB}/mypyc/test/test_optimizations.py
+${PYSITELIB}/mypyc/test/test_optimizations.pyc
+${PYSITELIB}/mypyc/test/test_optimizations.pyo
 ${PYSITELIB}/mypyc/test/test_pprint.py
 ${PYSITELIB}/mypyc/test/test_pprint.pyc
 ${PYSITELIB}/mypyc/test/test_pprint.pyo
@@ -1579,9 +1605,21 @@ ${PYSITELIB}/mypyc/test/testutil.pyo
 ${PYSITELIB}/mypyc/transform/__init__.py
 ${PYSITELIB}/mypyc/transform/__init__.pyc
 ${PYSITELIB}/mypyc/transform/__init__.pyo
+${PYSITELIB}/mypyc/transform/copy_propagation.py
+${PYSITELIB}/mypyc/transform/copy_propagation.pyc
+${PYSITELIB}/mypyc/transform/copy_propagation.pyo
 ${PYSITELIB}/mypyc/transform/exceptions.py
 ${PYSITELIB}/mypyc/transform/exceptions.pyc
 ${PYSITELIB}/mypyc/transform/exceptions.pyo
+${PYSITELIB}/mypyc/transform/flag_elimination.py
+${PYSITELIB}/mypyc/transform/flag_elimination.pyc
+${PYSITELIB}/mypyc/transform/flag_elimination.pyo
+${PYSITELIB}/mypyc/transform/ir_transform.py
+${PYSITELIB}/mypyc/transform/ir_transform.pyc
+${PYSITELIB}/mypyc/transform/ir_transform.pyo
+${PYSITELIB}/mypyc/transform/lower.py
+${PYSITELIB}/mypyc/transform/lower.pyc
+${PYSITELIB}/mypyc/transform/lower.pyo
 ${PYSITELIB}/mypyc/transform/refcount.py
 ${PYSITELIB}/mypyc/transform/refcount.pyc
 ${PYSITELIB}/mypyc/transform/refcount.pyo
