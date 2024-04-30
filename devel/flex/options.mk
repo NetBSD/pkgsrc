@@ -8,6 +8,7 @@ PLIST_VARS+=		nls
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mnls)
+USE_TOOLS+=		gettext
 .include "../../devel/gettext-lib/buildlink3.mk"
 PLIST.nls=		yes
 .else
