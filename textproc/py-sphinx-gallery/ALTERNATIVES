@@ -1,0 +1,1 @@
+bin/sphinx_gallery_py2jupyter @PREFIX@/bin/sphinx_gallery_py2jupyter-@PYVERSSUFFIX@
