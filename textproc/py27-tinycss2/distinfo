@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2022/11/30 09:33:05 adam Exp $
-
-BLAKE2s (tinycss2-0.6.1.tar.gz) = c7b9195754a48058291b72fd41324d9f1a53b4e168fd97e049ee6b7ec8dcc6ea
-SHA512 (tinycss2-0.6.1.tar.gz) = fa064bbb06d641a497a3c1eb35118bbf8ca8c4d32fbd3d8c64bb10d6cdab24387e77cd4c3277a957f23de2bd527a407836245f4387d7f880958858bd9cc7ab89
-Size (tinycss2-0.6.1.tar.gz) = 59548 bytes
-SHA1 (patch-setup.cfg) = 64b02b00fa864704f4a03f4bcd22666875b30ddb
-SHA1 (patch-setup.py) = 597ee3cbc981cebdea1c7fadfcbc567dd92b1c1e
