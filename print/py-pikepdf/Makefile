@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/30 08:14:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/30 08:28:04 wiz Exp $
 
 DISTNAME=	pikepdf-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
