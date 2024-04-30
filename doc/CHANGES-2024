@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2922 2024/04/30 11:37:31 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2923 2024/04/30 11:40:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4757,3 +4757,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-backports.os [wiz 2024-04-30]
 	Updated devel/py-blessed to 1.20.0nb2 [wiz 2024-04-30]
 	Updated graphics/py-blurhash to 1.1.4nb2 [wiz 2024-04-30]
+	Updated graphics/py-strich to 0.8nb2 [wiz 2024-04-30]
+	Removed graphics/py-Pillow6 [wiz 2024-04-30]
