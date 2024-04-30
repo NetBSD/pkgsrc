@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/04/30 14:26:29 wiz Exp $
 
 DISTNAME=	nose-exclude-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose-exclude/}
 
@@ -11,9 +11,11 @@ HOMEPAGE=	https://pypi.python.org/pypi/nose-exclude
 COMMENT=	Exclude specific directories from nosetests runs
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
