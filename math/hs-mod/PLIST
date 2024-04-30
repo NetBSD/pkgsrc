@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 07:39:59 pho Exp $
-lib/mod-${PKGVERSION}/${HS_VERSION}/package-description
-lib/mod-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/04/30 13:56:03 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Mod.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Mod.hi
@@ -13,16 +11,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Mod/Word.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Mod/Word.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/mod-${PKGVERSION}/${HS_VERSION}/package-description
+lib/mod-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/Data-Mod-Word.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/Data-Mod.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/mod.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mod-${PKGVERSION}/html/synopsis.png
