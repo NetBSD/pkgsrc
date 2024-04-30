@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/04/30 12:44:18 adam Exp $
 
-DISTNAME=	truststore-0.8.0
+DISTNAME=	truststore-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/truststore/}
 
@@ -12,6 +11,8 @@ COMMENT=	Verify certificates using native system trust stores
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver-[0-9]*:../../devel/py-test-httpserver
 
 USE_LANGUAGES=	# none
 
