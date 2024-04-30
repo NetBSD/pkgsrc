@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/08 09:00:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/30 10:14:29 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xandikos/__init__.py
 ${PYSITELIB}/xandikos/__init__.pyc
 ${PYSITELIB}/xandikos/__init__.pyo
@@ -35,6 +37,7 @@ ${PYSITELIB}/xandikos/icalendar.pyo
 ${PYSITELIB}/xandikos/infit.py
 ${PYSITELIB}/xandikos/infit.pyc
 ${PYSITELIB}/xandikos/infit.pyo
+${PYSITELIB}/xandikos/py.typed
 ${PYSITELIB}/xandikos/quota.py
 ${PYSITELIB}/xandikos/quota.pyc
 ${PYSITELIB}/xandikos/quota.pyo
@@ -74,6 +77,9 @@ ${PYSITELIB}/xandikos/tests/test_api.pyo
 ${PYSITELIB}/xandikos/tests/test_caldav.py
 ${PYSITELIB}/xandikos/tests/test_caldav.pyc
 ${PYSITELIB}/xandikos/tests/test_caldav.pyo
+${PYSITELIB}/xandikos/tests/test_carddav.py
+${PYSITELIB}/xandikos/tests/test_carddav.pyc
+${PYSITELIB}/xandikos/tests/test_carddav.pyo
 ${PYSITELIB}/xandikos/tests/test_config.py
 ${PYSITELIB}/xandikos/tests/test_config.pyc
 ${PYSITELIB}/xandikos/tests/test_config.pyo
@@ -83,6 +89,9 @@ ${PYSITELIB}/xandikos/tests/test_icalendar.pyo
 ${PYSITELIB}/xandikos/tests/test_store.py
 ${PYSITELIB}/xandikos/tests/test_store.pyc
 ${PYSITELIB}/xandikos/tests/test_store.pyo
+${PYSITELIB}/xandikos/tests/test_vcard.py
+${PYSITELIB}/xandikos/tests/test_vcard.pyc
+${PYSITELIB}/xandikos/tests/test_vcard.pyo
 ${PYSITELIB}/xandikos/tests/test_web.py
 ${PYSITELIB}/xandikos/tests/test_web.pyc
 ${PYSITELIB}/xandikos/tests/test_web.pyo
@@ -113,4 +122,3 @@ ${PYSITELIB}/xandikos/wsgi_helpers.pyo
 ${PYSITELIB}/xandikos/xmpp.py
 ${PYSITELIB}/xandikos/xmpp.pyc
 ${PYSITELIB}/xandikos/xmpp.pyo
-man/man8/xandikos-${PYVERSSUFFIX}.8
