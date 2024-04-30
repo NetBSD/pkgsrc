@@ -278,11 +278,11 @@ calls. If matched based on calls to
 '''archive_match_time_excluded ,''' 
 or 
 '''archive_match_owner_excluded ,''' 
-then the callback function specified by the _excluded_func parameter will execute. This function will recieve data provided to the fourth parameter, void *_client_data. 
+then the callback function specified by the _excluded_func parameter will execute. This function will receive data provided to the fourth parameter, void *_client_data. 
 </dd><dt>'''archive_read_disk_set_metadata_filter_callback'''()</dt><dd> 
 Allows the caller to set a callback function during calls to 
 [[ManPageArchiveReadHeader3]] 
-to filter out metadata for each entry. The callback function recieves the 
+to filter out metadata for each entry. The callback function receives the 
 '''struct archive''' 
 object, void* custom filter data, and the  
 '''struct archive_entry .''' 

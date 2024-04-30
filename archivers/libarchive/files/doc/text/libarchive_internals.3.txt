@@ -71,7 +71,7 @@ READ ARCHITECTURE
      single block; other clients may begin asynchronous I/O operations for the
      next block on each request.
 
-   Decompresssion Layer
+   Decompression Layer
      The decompression layer not only handles decompression, it also buffers
      data so that the format handlers see a much nicer I/O model.  The decom‐
      pression API is a two stage peek/consume model.  A read_ahead request

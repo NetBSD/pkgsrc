@@ -127,54 +127,26 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.13  2024/01/18 18:00:13  adam
-libarchive: updated to 3.7.2
+Revision 1.14  2024/04/30 06:05:17  adam
+libarchive: updated to 3.7.4
 
-Libarchive 3.7.2 is a security, bugfix and feature release.
-
-Security fixes:
-
-Multiple vulnerabilities have been fixed in the PAX writer (1b4e0d0)
-Important bugfixes:
-
-bsdunzip(1) now correctly handles arguments following an -x after the zipfile
-New features:
-
-bsdunzip(1) now supports the "--version" flag
-7-zip reader now translates Windows permissions into UNIX permissions
-uudecode filter in raw mode now supports file name and file mode
-zstd filter now supports the "long" write option
-
-
-Libarchive 3.7.1 is a security, feature and bugfix release.
+Libarchive 3.7.4 is a bugfix and security release
 
 Security fixes:
 
-SEGV and stack buffer overflow in verbose mode of cpio
-Feature updates:
+rar: Fix OOB in rar e8 filter (CVE-2024-26256)
+zip: Fix out of boundary access
 
-bsdunzip updated to match latest upstream code
 Important bugfixes:
 
-miscellaneous functional bugfixes
-build fixes on multiple platforms
-
-
-Libarchive 3.7.0 is a feature and bugfix release.
-
-New features:
-
-bsdunzip: new tool ported from FreeBSD
-drop-in replacement for Info-ZIP unzip, not yet ported for Windows
-7zip reader: support for Zstandard compression
-7zip reader: support for ARM64 filter
-zstd filter: support for multi-frame zstd archives
-Other notable bugfixes and improvements:
-
-pax: fix year 2038 problem on platforms with 64-bit time_t
-Windows: Universal Windows Platform (UWP) fixes and improvements
-Windows: bcrypt usage fixes and improvements
-Windows: time function usage fixes and improvements
+7zip: Limit amount of properties
+bsdtar: Fix error handling around strtol() usages
+passphrase: Improve newline handling on Windows
+passphrase: Never allow empty passwords
+rar: Fix "File CRC Error" when extracting specific rar4 archives
+xar: Avoid infinite link loop
+zip: Update AppleDouble support for directories
+zstd: Implement core detection
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3
