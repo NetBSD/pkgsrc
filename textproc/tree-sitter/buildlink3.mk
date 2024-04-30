@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/04/20 17:21:28 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/04/30 18:30:52 wiz Exp $
 
 BUILDLINK_TREE+=	tree-sitter
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	tree-sitter
 TREE_SITTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tree-sitter+=	tree-sitter>=0.20.0
+BUILDLINK_ABI_DEPENDS.tree-sitter+=	tree-sitter>=0.22.5
 BUILDLINK_PKGSRCDIR.tree-sitter?=	../../textproc/tree-sitter
 .endif	# TREE_SITTER_BUILDLINK3_MK
 
