@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/10/29 07:30:13 pho Exp $
+$NetBSD: distinfo,v 1.4 2024/04/30 13:38:14 pho Exp $
 
-BLAKE2s (protolude-0.3.3.tar.gz) = 0ff764a7a878179effc6b22c19aff521bbb9cef07ac80302dd39460a60ef421a
-SHA512 (protolude-0.3.3.tar.gz) = 5c5ee4d9366b06fd8a86d763589f613019f44e5fed6b847eb083ee83836d3c33f22c0639feda24fa6f77b7c5e817aa52a02320a19943c5394b08048272961bc1
-Size (protolude-0.3.3.tar.gz) = 19316 bytes
+BLAKE2s (protolude-0.3.4.tar.gz) = 55016f2ad0801cbe47d3439aae82a2c31d3531bbb0e247b8f5f7a84f3cafa105
+SHA512 (protolude-0.3.4.tar.gz) = cd1e46d01fee8797bf3556db25791e80f91a9775a4945820246b36c62714ea02d079e3fc4abcec9e28a379fe9aace7cc8b7514c65d27f1579dca1aa49e7b919a
+Size (protolude-0.3.4.tar.gz) = 19321 bytes
