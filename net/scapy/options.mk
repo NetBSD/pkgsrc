@@ -1,7 +1,6 @@
-# $NetBSD: options.mk,v 1.15 2023/01/19 00:35:26 gutteridge Exp $
+# $NetBSD: options.mk,v 1.16 2024/04/30 10:38:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
-
 PKG_SUPPORTED_OPTIONS=	libpcap scapy-crypto scapy-pyx
 PKG_SUGGESTED_OPTIONS=	libpcap
 
@@ -28,6 +27,7 @@ PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 ### Add in TeX support for psdump() and/or pdfdump()
 ###
 .if !empty(PKG_OPTIONS:Mscapy-pyx)
-PYTHON_VERSIONED_DEPENDENCIES+=	X
-.include "../../lang/python/versioned_dependencies.mk"
+DEPENDS+=	${PYPKGPREFIX}-X-[0-9]*:../../textproc/py-X
 .endif
+
+### TODO: matplotlib is another optional dependency
