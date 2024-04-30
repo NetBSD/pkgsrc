@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/30 13:16:52 wiz Exp $
+
+BLAKE2s (jaraco.stream-3.0.3.tar.gz) = af1a60df8bbc2ecd60cb9e3072184225d5011b14a7d68efb1175df2f91849930
+SHA512 (jaraco.stream-3.0.3.tar.gz) = fe50c21b26e734c9c2d0b7cf8a1c8cc8bab80417adf073a4ae213ba4067aa33e2f6c8886aac996971d2f98aacd295d9999aa3ac7dba24dd952cc27d15bef22e2
+Size (jaraco.stream-3.0.3.tar.gz) = 8877 bytes
