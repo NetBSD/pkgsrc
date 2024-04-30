@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/01/19 22:11:47 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/30 19:42:43 adam Exp $
 
-DISTNAME=	Flask-Caching-2.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	flask_caching-2.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Caching/}
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sh4nks/flask-caching
 COMMENT=	Caching support to your Flask application
 LICENSE=	modified-bsd
+
+WHEEL_NAME=	Flask_Caching-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
