@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2889 2024/04/30 07:28:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2890 2024/04/30 07:38:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4720,3 +4720,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-test-xdist to 3.6.1 [adam 2024-04-30]
 	Updated parallel/py-threadpoolctl to 3.5.0 [adam 2024-04-30]
 	Updated textproc/py-sphinx-gallery to 0.16.0 [adam 2024-04-30]
+	Removed print/py-weasyprint0 successor print/py-weasyprint [wiz 2024-04-30]
