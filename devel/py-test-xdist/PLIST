@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:57:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/04/30 06:35:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -50,6 +50,9 @@ ${PYSITELIB}/xdist/scheduler/loadgroup.pyo
 ${PYSITELIB}/xdist/scheduler/loadscope.py
 ${PYSITELIB}/xdist/scheduler/loadscope.pyc
 ${PYSITELIB}/xdist/scheduler/loadscope.pyo
+${PYSITELIB}/xdist/scheduler/protocol.py
+${PYSITELIB}/xdist/scheduler/protocol.pyc
+${PYSITELIB}/xdist/scheduler/protocol.pyo
 ${PYSITELIB}/xdist/scheduler/worksteal.py
 ${PYSITELIB}/xdist/scheduler/worksteal.pyc
 ${PYSITELIB}/xdist/scheduler/worksteal.pyo
