@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2023/11/27 15:06:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2024/04/30 11:11:31 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 PKGREVISION=	5
 
-PYTHON_VERSIONED_DEPENDENCIES+=	cairo
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
@@ -39,5 +39,4 @@ CONFIGURE_ARGS+=	--disable-introspection
 .include "../../devel/py-gobject-shared/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
