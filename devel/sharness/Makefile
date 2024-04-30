@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/02/19 20:50:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/04/30 16:21:29 schmonz Exp $
 
-DISTNAME=		sharness-v1.2.0
+DISTNAME=		sharness-v1.2.1
 PKGNAME=		${DISTNAME:S/-v/-/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=felipec/}
