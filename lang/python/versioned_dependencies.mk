@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.108 2024/04/30 11:37:50 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.109 2024/04/30 14:00:19 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: OpenSSL cffi coverage cryptography dns setuptools setuptools_scm test
+#       Possible values: OpenSSL cffi coverage cryptography dns setuptools_scm test
 #       Default: (nothing)
 #
 
@@ -41,9 +41,6 @@ _PY_VERS_PKG.dependency.cryptography=	yes
 
 _PY_VERS_PKG.default.dns=	net/py-dns
 _PY_VERS_PKG.27.dns=		net/py-dns1
-
-_PY_VERS_PKG.default.setuptools=	devel/py-setuptools
-_PY_VERS_PKG.27.setuptools=		devel/py-setuptools44
 
 _PY_VERS_PKG.default.setuptools_scm=	devel/py-setuptools_scm
 _PY_VERS_PKG.27.setuptools_scm=		devel/py-setuptools_scm5
