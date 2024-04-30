@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/09/22 20:17:21 vins Exp $
+# $NetBSD: Makefile,v 1.12 2024/04/30 22:01:33 nikita Exp $
 
-DISTNAME=		lua-language-server-3.6.21
+DISTNAME=		lua-language-server-3.8.3
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
@@ -31,15 +31,14 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
 
-# TODO: Maybe unbundle (some of) them? (lls does build with them included though)
-GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 82aca211b6ee403a832412b9f7938db797c564d8 3rd/EmmyLuaCodeStyle
-GITHUB_SUBMODULES+=	actboy168 bee.lua a131e39521e230ea2bbca20cb6b1c5abbc6a437b 3rd/bee.lua
-GITHUB_SUBMODULES+=	actboy168 json.lua bd7b7787bb8b586e59b5afe5886dd1b76c86eb56 3rd/json.lua
-GITHUB_SUBMODULES+=	love2d-community love-api ab6dc6756683686b5506107116f994253aef5a20 3rd/love-api
-GITHUB_SUBMODULES+=	bjornbytes lovr-docs 441a21a6eb32e611be889cadf41df16938eda43d 3rd/lovr-api
-GITHUB_SUBMODULES+=	sqmedeiros lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d 3rd/lpeglabel
-GITHUB_SUBMODULES+=	actboy168 luamake 22f861ac8444d1b85ceb29561b2a599fcbff4e3f 3rd/luamake
-GITHUB_SUBMODULES+=	actboy168 bee.lua 8ff095021f73f5883d4b67ba6eb233eae44f3bb9 3rd/luamake/bee.lua
+GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 660a26085ff2c1275392a291063404d54fdd32b9 3rd/EmmyLuaCodeStyle
+GITHUB_SUBMODULES+=	actboy168 bee.lua 8c01c7d79612d47f47f17d80304e66ae14d7b953 3rd/bee.lua
+GITHUB_SUBMODULES+=	actboy168 json.lua 21c9584d30fa36c542c98b6b1410393318583712 3rd/json.lua
+GITHUB_SUBMODULES+=	love2d-community love-api 728ba001f3398fd11b0a3909b919a7caf3e329a4 3rd/love-api
+GITHUB_SUBMODULES+=	bjornbytes lovr-docs e89c753e1c2849b7533481fcf058095f8e050b9f 3rd/lovr-api
+GITHUB_SUBMODULES+=	sqmedeiros lpeglabel 912b0b9e8641074408ffc2259e069b188e0c717b 3rd/lpeglabel
+GITHUB_SUBMODULES+=	actboy168 luamake c086f35cfad0236f74ba380d51f211c52a2c8abc 3rd/luamake
+GITHUB_SUBMODULES+=	actboy168 bee.lua 038aef6f41dc09dad43325e5d3cdc3e207b6d3c0 3rd/luamake/bee.lua
 
 post-extract:
 	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
@@ -65,7 +64,7 @@ SUBST_STAGE.tests=	pre-configure
 SUBST_MESSAGE.tests=	Do not run randomly failing filewatch tests.
 SUBST_FILES.tests+=	3rd/bee.lua/test/test.lua
 SUBST_FILES.tests+=	3rd/luamake/bee.lua/test/test.lua
-SUBST_SED.tests=	-e "s,require 'test_filewatch',,"
+SUBST_SED.tests=	-e 's,require "test_filewatch",,'
 
 do-build:
 	# probably needs much more fixes for systems noch supported by luamake.
