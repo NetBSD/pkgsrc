@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:03 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/30 13:43:14 pho Exp $
 
 DISTNAME=	uuid-1.3.15
 PKGREVISION=	4
@@ -9,7 +9,8 @@ COMMENT=	For creating, comparing, parsing and printing UUIDs
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	text	\
+	bytestring	\
+	text		\
 	time
 
 .include "../../security/hs-cryptohash-md5/buildlink3.mk"
