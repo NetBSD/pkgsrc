@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/22 16:28:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/04/30 09:28:14 adam Exp $
 bin/myst-anchors-${PYVERSSUFFIX}
 bin/myst-docutils-demo-${PYVERSSUFFIX}
 bin/myst-docutils-html-${PYVERSSUFFIX}
@@ -69,6 +69,9 @@ ${PYSITELIB}/myst_parser/parsers/docutils_.pyo
 ${PYSITELIB}/myst_parser/parsers/mdit.py
 ${PYSITELIB}/myst_parser/parsers/mdit.pyc
 ${PYSITELIB}/myst_parser/parsers/mdit.pyo
+${PYSITELIB}/myst_parser/parsers/options.py
+${PYSITELIB}/myst_parser/parsers/options.pyc
+${PYSITELIB}/myst_parser/parsers/options.pyo
 ${PYSITELIB}/myst_parser/parsers/parse_html.py
 ${PYSITELIB}/myst_parser/parsers/parse_html.pyc
 ${PYSITELIB}/myst_parser/parsers/parse_html.pyo
