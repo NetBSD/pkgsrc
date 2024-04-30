@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/13 11:07:20 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.11 2024/04/30 09:40:22 wiz Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -60,3 +54,9 @@ ${PYSITELIB}/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.py
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyc
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
