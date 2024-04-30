@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/04/30 13:13:39 wiz Exp $
+
+BLAKE2s (jaraco.logging-3.3.0.tar.gz) = f033710a3b993252b69a89752557ad4db395db44eb878a8f0769c9a443253d32
+SHA512 (jaraco.logging-3.3.0.tar.gz) = edb0ce89420a05d0f0634b3486b831e01a51e9a8e186afc3a496013c4326aeb3f67f5492900de8991e18faf171ae1785eda60b0523da7065da9fdb0a2fa10a5d
+Size (jaraco.logging-3.3.0.tar.gz) = 9082 bytes
