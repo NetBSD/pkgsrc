@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2018/11/01 09:36:47 bsiegert Exp $
+# $NetBSD: options.mk,v 1.2 2024/04/30 06:30:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enchant2
 PKG_SUPPORTED_OPTIONS=	aspell enchant-zemberek hunspell
-# Package also supports the following:
+# Code also supports the following:
 # hspell - Hebrew spelling
 # uspell - Yiddish spelling
 # voikko - Finnish spelling
@@ -31,7 +31,6 @@ CONFIGURE_ARGS+=	--without-zemberek
 PLIST_VARS+=            hunspell
 .if !empty(PKG_OPTIONS:Mhunspell)
 CONFIGURE_ARGS+=	--with-hunspell
-CONFIGURE_ARGS+=	--with-hunspell-dir=${BUILDLINK_PREFIX.hunspell}/share/hunspell
 .include "../../textproc/hunspell/buildlink3.mk"
 DEPENDS+=		hunspell-en_US-[0-9]*:../../textproc/hunspell-en_US
 PLIST.hunspell=		yes
