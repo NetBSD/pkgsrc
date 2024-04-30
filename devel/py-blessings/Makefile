@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/30 14:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/04/30 14:31:10 wiz Exp $
 
 DISTNAME=	blessings-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
