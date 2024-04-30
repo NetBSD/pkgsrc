@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/04/30 13:16:52 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jaraco/stream/__init__.py
+${PYSITELIB}/jaraco/stream/__init__.pyc
+${PYSITELIB}/jaraco/stream/__init__.pyo
+${PYSITELIB}/jaraco/stream/buffer.py
+${PYSITELIB}/jaraco/stream/buffer.pyc
+${PYSITELIB}/jaraco/stream/buffer.pyo
+${PYSITELIB}/jaraco/stream/gzip.py
+${PYSITELIB}/jaraco/stream/gzip.pyc
+${PYSITELIB}/jaraco/stream/gzip.pyo
+${PYSITELIB}/jaraco/stream/test_gzip.py
+${PYSITELIB}/jaraco/stream/test_gzip.pyc
+${PYSITELIB}/jaraco/stream/test_gzip.pyo
