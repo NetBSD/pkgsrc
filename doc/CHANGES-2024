@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2919 2024/04/30 11:24:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2920 2024/04/30 11:28:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/playitslowly to 1.5.1nb8 [wiz 2024-04-30]
 	Updated lang/py-asttokens to 2.4.1nb1 [wiz 2024-04-30]
 	Updated devel/py-pip2pi to 0.8.2nb1 [wiz 2024-04-30]
+	Removed devel/py-backports.os [wiz 2024-04-30]
