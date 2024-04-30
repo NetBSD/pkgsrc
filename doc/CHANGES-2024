@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2957 2024/04/30 14:46:03 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2958 2024/04/30 14:47:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-pid to 3.0.4nb2 [wiz 2024-04-30]
 	Updated www/py-webassets to 2.0nb3 [wiz 2024-04-30]
 	Updated devel/py-nose to 1.3.7nb4 [wiz 2024-04-30]
+	Removed devel/py27-coverage [wiz 2024-04-30]
