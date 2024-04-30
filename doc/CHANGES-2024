@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2917 2024/04/30 11:09:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2918 2024/04/30 11:21:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/scapy to 2.5.0nb3 [wiz 2024-04-30]
 	Removed textproc/py-X2 [wiz 2024-04-30]
 	Updated audio/playitslowly to 1.5.1nb8 [wiz 2024-04-30]
+	Updated lang/py-asttokens to 2.4.1nb1 [wiz 2024-04-30]
