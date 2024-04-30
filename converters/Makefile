@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2023/11/02 01:54:05 pho Exp $
+# $NetBSD: Makefile,v 1.210 2024/04/30 07:40:16 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -141,7 +141,6 @@ SUBDIR+=	py-unicode-slugify
 SUBDIR+=	py-yenc
 SUBDIR+=	py-zfec
 SUBDIR+=	py-zhCodecs
-SUBDIR+=	py27-cairosvg
 SUBDIR+=	pyzy
 SUBDIR+=	qkc
 SUBDIR+=	qrencode
