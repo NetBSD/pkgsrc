@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24394 2024/04/30 13:21:53 wiz Exp $
+$NetBSD: TODO,v 1.24395 2024/04/30 13:36:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -766,7 +766,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hplip-3.22.2
 	o html2wml-0.4.11
 	o http_load-20140814
-	o hyperscan-5.4.0
+	o hyperscan-5.4.2
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
 	o icedtea-web-1.6.2
@@ -1130,7 +1130,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-6.0
 	o py-hgview-1.9.0
-	o py-hyperscan-0.2.0
+	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
