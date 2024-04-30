@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/04/30 17:01:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.27 2024/04/30 17:13:55 cheusov Exp $
 
 .include "dist.mk"
 
@@ -239,7 +239,6 @@ setuptools-preinstall:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
