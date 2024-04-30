@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2053 2023/08/20 18:38:37 tnn Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2054 2024/04/30 20:59:25 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -183,6 +183,13 @@ ALL_ENV+=	PATH=${PATH:Q}:${TOOLBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MAKELEVEL=0
 ALL_ENV+=	CONFIG_SITE=${PKGSRC_CONFIG_SITE:U}
+.if !defined(ALLOW_NETWORK_ACCESS)
+# try stopping downloads during configure/build/...
+ALL_ENV+=	ftp_proxy=downloads-forbidden-except-during-fetch
+ALL_ENV+=	http_proxy=downloads-forbidden-except-during-fetch
+ALL_ENV+=	https_proxy=downloads-forbidden-except-during-fetch
+ALL_ENV+=	no_proxy=
+.endif
 
 # This variable can be added to MAKE_ENV to ease installation of packages
 # that use BSD-style Makefiles.
