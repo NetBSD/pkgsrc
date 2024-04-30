@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/11/07 22:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/04/30 12:17:42 wiz Exp $
 
 DISTNAME=	buildbot-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://buildbot.net/
 COMMENT=	Continuous integration system
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.16.0:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
@@ -33,8 +34,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-
 USE_LANGUAGES=	# none
 
 post-install:
@@ -44,5 +43,4 @@ post-install:
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
