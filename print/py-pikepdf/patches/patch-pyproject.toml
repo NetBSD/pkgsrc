@@ -1,0 +1,24 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/04/30 08:14:43 wiz Exp $
+
+https://github.com/pikepdf/pikepdf/issues/581
+
+--- pyproject.toml.orig	2024-04-30 08:07:05.917031294 +0000
++++ pyproject.toml
+@@ -92,7 +92,7 @@ exclude = '''
+ '''
+ 
+ [tool.cibuildwheel]
+-test-command = "pytest -nauto {project}/tests"
++test-command = "pytest {project}/tests"
+ test-extras = "test"
+ # Reminder:
+ #   build.yml sets CIBW_BUILD to select what can be built
+@@ -181,7 +181,7 @@ ignore_missing_imports = true
+ minversion = "6.0"
+ norecursedirs = ["lib", ".pc", ".git", "venv"]
+ testpaths = ["tests"]
+-addopts = "-n auto"
++addopts = ""
+ 
+ [tool.coverage.run]
+ concurrency = ["multiprocessing"]
