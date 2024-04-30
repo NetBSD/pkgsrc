@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2024/04/22 06:52:42 adam Exp $
+# $NetBSD: Makefile,v 1.96 2024/04/30 06:26:14 wiz Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -69,9 +69,6 @@ REPLACE_PYTHON+=	utils/Misc/zkill
 REPLACE_PYTHON+=	utils/bisect
 REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
 REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest.py
-REPLACE_PYTHON+=	utils/llvm-build/llvm-build
-REPLACE_PYTHON+=	utils/llvm-compilers-check
-REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
 
 TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
@@ -80,7 +77,6 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 # all platforms.  Change this to a patch if verified.
 SUBST_CLASSES.SunOS+=	linkmap
 SUBST_STAGE.linkmap=	pre-configure
-SUBST_FILES.linkmap=	tools/lto/lto.exports
 SUBST_FILES.linkmap+=	tools/remarks-shlib/Remarks.exports
 SUBST_SED.linkmap=	-e '/^LLVM/d'
 
