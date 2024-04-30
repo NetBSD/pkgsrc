@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2933 2024/04/30 13:23:23 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2934 2024/04/30 13:24:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4770,3 +4770,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-ptt to 1.19.6 [wiz 2024-04-30]
 	Updated net/py-irclib to 20.4.0 [wiz 2024-04-30]
 	Removed devel/py-jaraco_util [wiz 2024-04-30]
+	Removed devel/py-hgtools [wiz 2024-04-30]
