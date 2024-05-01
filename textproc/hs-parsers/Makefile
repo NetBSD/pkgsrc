@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:34 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/01 17:02:37 pho Exp $
 
 DISTNAME=	parsers-0.12.11
 PKGREVISION=	3
@@ -7,6 +7,9 @@ CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Parsing combinators
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	text
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"
 .include "../../textproc/hs-charset/buildlink3.mk"
