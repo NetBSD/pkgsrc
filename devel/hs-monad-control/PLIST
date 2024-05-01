@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/29 10:36:29 pho Exp $
-lib/monad-control-${PKGVERSION}/${HS_VERSION}/package-description
-lib/monad-control-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.7 2024/05/01 08:03:19 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Control.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Control.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Control.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/monad-control-${PKGVERSION}/${HS_VERSION}/package-description
+lib/monad-control-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/Control-Monad-Trans-Control.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/monad-control.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monad-control-${PKGVERSION}/html/synopsis.png
