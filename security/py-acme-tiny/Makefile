@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/30 13:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/01 08:57:22 jperkin Exp $
 
 DISTNAME=	acme-tiny-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
