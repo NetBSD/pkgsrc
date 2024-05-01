@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.20 2024/04/24 12:50:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/05/01 19:07:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/zmq/__init__.pxd
 ${PYSITELIB}/zmq/__init__.py
