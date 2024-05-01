@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/05/01 22:36:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.65 2024/05/01 22:44:09 cheusov Exp $
 
 DISTNAME=	sed-4.9
 PKGNAME=	g${DISTNAME}
@@ -52,5 +52,4 @@ post-install:
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
