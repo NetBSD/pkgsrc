@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2024/01/21 19:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2024/05/01 22:32:15 cheusov Exp $
 
 DISTNAME=	libidn-1.42
 CATEGORIES=	devel
@@ -26,7 +26,9 @@ CONFIGURE_ARGS.Interix+=	--disable-ld-version-script
 PKGCONFIG_OVERRIDE+=	lib/libidn.pc.in
 TEST_TARGET=		check
 
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

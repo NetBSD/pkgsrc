@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/05/10 20:40:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.64 2024/05/01 22:36:29 cheusov Exp $
 
 DISTNAME=	sed-4.9
 PKGNAME=	g${DISTNAME}
@@ -31,6 +31,7 @@ USE_TOOLS+=		grep makeinfo
 CONFIGURE_ARGS+=	--program-prefix=g
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 _MAINTAINER_MANPAGE?=	no
 .if !empty(_MAINTAINER_MANPAGE:M[Yy][Ee][Ss])
