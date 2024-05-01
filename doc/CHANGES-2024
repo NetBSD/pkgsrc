@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2979 2024/05/01 12:54:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.2980 2024/05/01 14:16:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4820,3 +4820,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/hs-http-client to 0.7.17 [pho 2024-05-01]
 	Updated x11/qwt6-qt5 to 6.2.0 [adam 2024-05-01]
 	Updated sysutils/ansible-lint to 24.2.3 [adam 2024-05-01]
+	Updated converters/hs-base64 to 1.0 [pho 2024-05-01]
