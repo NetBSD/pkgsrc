@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/29 08:00:37 pho Exp $
-lib/lucid-${PKGVERSION}/${HS_VERSION}/package-description
-lib/lucid-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/05/01 06:50:33 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lucid.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Lucid.hi
@@ -16,6 +14,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Lucid/Html5.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lucid/Html5.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/lucid-${PKGVERSION}/${HS_VERSION}/package-description
+lib/lucid-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/Lucid-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/Lucid-Bootstrap.html
@@ -45,12 +45,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/lucid.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lucid-${PKGVERSION}/html/synopsis.png
