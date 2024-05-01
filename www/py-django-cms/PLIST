@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2024/02/09 10:50:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2024/05/01 19:11:18 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -773,7 +773,7 @@ ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.base.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.pagetree.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.welcome.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.wizard.css
-${PYSITELIB}/cms/static/cms/css/4.1.0/cms.admin.css
+${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.admin.css
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.eot
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.svg
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.ttf
@@ -1927,6 +1927,9 @@ ${PYSITELIB}/cms/utils/compat/forms.pyo
 ${PYSITELIB}/cms/utils/compat/response.py
 ${PYSITELIB}/cms/utils/compat/response.pyc
 ${PYSITELIB}/cms/utils/compat/response.pyo
+${PYSITELIB}/cms/utils/compat/warnings.py
+${PYSITELIB}/cms/utils/compat/warnings.pyc
+${PYSITELIB}/cms/utils/compat/warnings.pyo
 ${PYSITELIB}/cms/utils/conf.py
 ${PYSITELIB}/cms/utils/conf.pyc
 ${PYSITELIB}/cms/utils/conf.pyo
