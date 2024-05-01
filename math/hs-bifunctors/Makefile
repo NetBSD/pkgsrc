@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:37:11 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/01 07:19:57 pho Exp $
 
-DISTNAME=	bifunctors-5.6.1
-PKGREVISION=	1
+DISTNAME=	bifunctors-5.6.2
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Bifunctors
 LICENSE=	2-clause-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	th-abstraction
 
 .include "../../devel/hs-assoc/buildlink3.mk"
 .include "../../math/hs-comonad/buildlink3.mk"
