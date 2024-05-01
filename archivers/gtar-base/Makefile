@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/10/10 10:27:21 pho Exp $
+# $NetBSD: Makefile,v 1.99 2024/05/01 21:20:12 cheusov Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
@@ -16,6 +16,7 @@ INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}libexec
 INSTALLATION_DIRS+=	${PKGGNUDIR}${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
@@ -74,5 +75,4 @@ post-install:
 	${LN} -sf ${PREFIX}/${o} ${DESTDIR}${PREFIX}/${n}
 .endfor
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
