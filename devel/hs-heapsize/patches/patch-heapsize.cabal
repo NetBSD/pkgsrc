@@ -1,0 +1,26 @@
+$NetBSD: patch-heapsize.cabal,v 1.1 2024/05/01 06:59:38 pho Exp $
+
+Fix build on GHC 9.8:
+https://github.com/pepeiborra/Heapsize/pull/1
+
+--- heapsize.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ heapsize.cabal
+@@ -1,7 +1,7 @@
+-cabal-version:      2.0
++cabal-version:      3.0
+ name:               heapsize
+ version:            0.3.0.1
+-license:            BSD3
++license:            BSD-3-Clause
+ license-file:       LICENSE
+ category:           GHC, Debug, Development
+ build-type:         Simple
+@@ -16,7 +16,7 @@ description:        heapsize is a tool t
+ Library
+   Exposed-modules:
+     HeapSize
+-  c-sources:
++  cmm-sources:
+     cbits/heapsize_prim.cmm
+   Default-Language: Haskell2010
+   Build-depends:
