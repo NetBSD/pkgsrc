@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 11:46:14 pho Exp $
-lib/http-types-${PKGVERSION}/${HS_VERSION}/package-description
-lib/http-types-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 10:45:52 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Types.p_hi
@@ -25,6 +23,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Types/Version.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/http-types-${PKGVERSION}/${HS_VERSION}/package-description
+lib/http-types-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/Network-HTTP-Types-Header.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/Network-HTTP-Types-Method.html
@@ -54,12 +54,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/doc-index-S.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/http-types.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-types-${PKGVERSION}/html/synopsis.png
