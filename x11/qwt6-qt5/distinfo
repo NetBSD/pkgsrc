@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2023/08/06 10:18:07 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/05/01 12:45:31 adam Exp $
 
-BLAKE2s (qwt-6.1.6.tar.bz2) = d2986b3229bde0780db18a3d577818b49e358e44cb81df46fa39c7625475335f
-SHA512 (qwt-6.1.6.tar.bz2) = 0525672a2cbc07aeb4b9c0fb1c020540dcb8963d845e697a220ae0dfa8f543c529fa1fc2aa862826e627579cb5e987d0bd1da8ca95ccf02bcbced80fe5f8ed17
-Size (qwt-6.1.6.tar.bz2) = 4306402 bytes
+BLAKE2s (qwt-6.2.0.tar.bz2) = a428a9e8d5b9612b71e852c2d3d925647e850a4f8f7d3af23c2b1c85b745a1c7
+SHA512 (qwt-6.2.0.tar.bz2) = d992f9dddb09ad0e1d09e23a24a9331c950ca19a413d2627cf423e1ddc2a4ad4eb951646f789e8c7a9ab42668c30d7108071f3f8bbd8e1f4118cadb67c34939d
+Size (qwt-6.2.0.tar.bz2) = 4815773 bytes
 SHA1 (patch-qwt.prf) = f952dfc68909a24c847a8c33ea4b2cd21591fd31
-SHA1 (patch-qwtconfig.pri) = a39ab75ac32fe47b60c9c913abac6d0a8d27fa28
+SHA1 (patch-qwtconfig.pri) = c742015768cde3a68aa7247b72a2d281197edca6
