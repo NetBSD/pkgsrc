@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/02/16 00:35:19 mef Exp $
+# $NetBSD: Makefile,v 1.55 2024/05/01 22:11:22 cheusov Exp $
 
 DISTNAME=	cpio-2.13
 PKGNAME=	g${DISTNAME}
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--program-prefix=g
 PLIST_VARS+=	rmt
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # don't include rmt if gtar won't build it
 # macOS does not support rmt driver, so it won't be built
@@ -42,5 +43,4 @@ post-install:
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gcpio.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/cpio.1
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/gmt.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/mt.1
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
