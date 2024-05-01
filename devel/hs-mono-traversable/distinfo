@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/12 04:54:08 pho Exp $
+$NetBSD: distinfo,v 1.7 2024/05/01 07:26:30 pho Exp $
 
-BLAKE2s (mono-traversable-1.0.15.3.tar.gz) = 62024a5d7f704a783ba0f05692f2c8629bf78f7aad3c5005694469f5701058f1
-SHA512 (mono-traversable-1.0.15.3.tar.gz) = 55f469149b84ace246e6c0791de25fcc73317152986e4949c7ae9ae020bd6540586da090d58ba495ef7f251c4a3a02979a796af9fde975a54d3d1541527b7691
-Size (mono-traversable-1.0.15.3.tar.gz) = 40461 bytes
+BLAKE2s (mono-traversable-1.0.17.0.tar.gz) = c0b7562ed078902ec6a138ea418624f994a2ae34b144f4e3dde31d5b4bbc03e0
+SHA512 (mono-traversable-1.0.17.0.tar.gz) = 894f86c23e8b6fad4c13b2c2bf5f379b7001bc6ffc62b354abbeac2d6b1597afad4362e0d7d9b5a5af8eb2f2e31f842f61835a10ad3b85e8e6aa6d93753173d3
+Size (mono-traversable-1.0.17.0.tar.gz) = 42225 bytes
