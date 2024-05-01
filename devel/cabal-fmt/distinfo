@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/29 11:38:52 pho Exp $
+$NetBSD: distinfo,v 1.3 2024/05/01 09:31:24 pho Exp $
 
-BLAKE2s (cabal-fmt-0.1.9.tar.gz) = 2dfcd830aa505a4b1b350935cb49d78a3a1f5b964febe909afcdbb5199476f90
-SHA512 (cabal-fmt-0.1.9.tar.gz) = 599434df5e19b99e443683a883aa1fa5df89aa91055caf9ba1d08ee66c415e758119f78e30da421f9fc505bd9e57651e6ed213f9b5c6499a70a2f4801dc23332
-Size (cabal-fmt-0.1.9.tar.gz) = 50055 bytes
+BLAKE2s (cabal-fmt-0.1.11.tar.gz) = e5326c79ff89f9158256022f58fc1ac8140aa222c2362142f7d7b9d103f93a32
+SHA512 (cabal-fmt-0.1.11.tar.gz) = 3f7f65c2e006b412302eb489c304985e3f5d33ff26abd47f6b433aaa6855791bd8e43ec83d8fc751c4c4fa9dcc1b2fb72da2321fcb71d65917ff8006a0335470
+Size (cabal-fmt-0.1.11.tar.gz) = 52183 bytes
