@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/29 18:42:06 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/01 16:53:35 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_xss_sanitize.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_xss_sanitize.hi
@@ -16,12 +16,10 @@ lib/xss-sanitize-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/Text-HTML-SanitizeXSS.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xss-sanitize-${PKGVERSION}/html/xss-sanitize.haddock
