@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:37:48 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/01 14:26:59 pho Exp $
 
-DISTNAME=	websockets-0.12.7.3
-PKGREVISION=	5
+DISTNAME=	websockets-0.13.0.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,7 @@ COMMENT=	Sensible and clean way to write WebSocket-capable servers in Haskell
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	text
+	network
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
