@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/11/02 06:37:27 pho Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/01 14:17:47 pho Exp $
 
 DISTNAME=	attoparsec-0.14.4
 PKGREVISION=	5
@@ -9,6 +9,7 @@ COMMENT=	Fast combinator parsing for bytestrings and text
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	bytestring	\
 	ghc-prim
 
 .include "../../math/hs-scientific/buildlink3.mk"
