@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 06:31:33 pho Exp $
-lib/process-extras-${PKGVERSION}/${HS_VERSION}/package-description
-lib/process-extras-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 05:27:27 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Process/ByteString.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Process/ByteString.hi
@@ -34,6 +32,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Utils.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/process-extras-${PKGVERSION}/${HS_VERSION}/package-description
+lib/process-extras-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/System-Process-ByteString-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/System-Process-ByteString.html
@@ -45,12 +45,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/System-Pr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/System-Process-Text-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/System-Process-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/process-extras.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/process-extras-${PKGVERSION}/html/synopsis.png
