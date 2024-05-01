@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/09 16:57:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/01 15:56:03 cheusov Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -1644,7 +1644,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes_test.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_curses.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_curses_panel.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_datetime.so
-${PLIST.dbm}lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_decimal.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_elementtree.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_hashlib.so
@@ -1692,7 +1692,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
 ${PLIST.nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/pyexpat.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/readline.so
+${PLIST.readline}lib/python${PY_VER_SUFFIX}/lib-dynload/readline.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/select.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/syslog.so
