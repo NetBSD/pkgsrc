@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/05/01 20:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/01 20:37:09 wiz Exp $
 
 DISTNAME=	emacs-packages-0.12
 PKGREVISION=	3
@@ -21,7 +21,9 @@ META_PACKAGE=	yes
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel-[0-9]*:../../devel/apel
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}artist-[0-9]*:../../graphics/artist
+.if ${EMACS_VERSION_MAJOR} > 25
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}auctex-[0-9]*:../../print/auctex
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb3
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "20"
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}calc-[0-9]*:../../math/calc
