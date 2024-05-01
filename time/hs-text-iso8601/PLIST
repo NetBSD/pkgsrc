@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/29 18:28:37 pho Exp $
-lib/text-iso8601-${PKGVERSION}/${HS_VERSION}/package-description
-lib/text-iso8601-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/01 14:18:53 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/FromText.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/FromText.hi
@@ -10,16 +8,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/ToText.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/ToText.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/text-iso8601-${PKGVERSION}/${HS_VERSION}/package-description
+lib/text-iso8601-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/Data-Time-FromText.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/Data-Time-ToText.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-iso8601-${PKGVERSION}/html/text-iso8601.haddock
