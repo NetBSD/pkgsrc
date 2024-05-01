@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/09/17 04:23:40 mef Exp $
+# $NetBSD: Makefile,v 1.38 2024/05/01 20:25:18 wiz Exp $
 
 DISTNAME=	emacs-packages-0.12
 PKGREVISION=	3
@@ -70,13 +70,15 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}pcl-cvs-[0-9]*:../../devel/pcl-cvs
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}pvs-[0-9]*:../../devel/pvs	# XXX pvs-license
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}psgml-mode-[0-9]*:../../textproc/psgml-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ruby-rd-mode-[0-9]*:../../devel/ruby-rd-mode
-.if ${EMACS_VERSION_MAJOR} < 23
+.if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semantic-[0-9]*:../../devel/semantic
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}skk-[0-9]*:../../inputmethod/skk
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}sml-mode-[0-9]*:../../devel/sml-mode
+.if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar-[0-9]*:../../editors/speedbar
+.endif
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tamago-[0-9]*:../../editors/tamago
 .endif
