@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/30 08:05:46 pho Exp $
-lib/mono-traversable-${PKGVERSION}/${HS_VERSION}/package-description
-lib/mono-traversable-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 07:26:30 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Containers.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Containers.hi
@@ -22,6 +20,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_mono_traversable.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_mono_traversable.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/mono-traversable-${PKGVERSION}/${HS_VERSION}/package-description
+lib/mono-traversable-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/Data-Containers.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/Data-MonoTraversable-Unprefixed.html
@@ -52,12 +52,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/mono-traversable.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-${PKGVERSION}/html/synopsis.png
