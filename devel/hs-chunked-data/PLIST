@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 10:03:09 pho Exp $
-lib/chunked-data-${PKGVERSION}/${HS_VERSION}/package-description
-lib/chunked-data-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 08:00:15 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Builder.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Builder.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Builder.p_hi
@@ -16,17 +14,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_chunked_data.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/chunked-data-${PKGVERSION}/${HS_VERSION}/package-description
+lib/chunked-data-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/Data-Builder.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/Data-ChunkedZip.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/Data-IOData.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/chunked-data.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/chunked-data-${PKGVERSION}/html/synopsis.png
