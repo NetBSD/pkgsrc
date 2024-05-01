@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/11/02 06:36:32 pho Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/01 08:07:22 pho Exp $
 
-DISTNAME=	ghc-lib-parser-ex-9.8.0.0
-PKGREVISION=	1
+DISTNAME=	ghc-lib-parser-ex-9.8.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
