@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/04/01 23:38:27 charlotte Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/01 15:56:03 cheusov Exp $
 
 .include "dist.mk"
 
@@ -47,10 +47,6 @@ CONFIGURE_ENV+=		py_cv_module__gdbm="n/a"
 CONFIGURE_ENV+=		py_cv_module_xxlimited="n/a"
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
-# NetBSD-8 curses has enough support for py-curses
-USE_CURSES=		getsyx update_panels wide
-# But we build as ncurses still to get the full feature set easily
-FAKE_NCURSES=		yes
 # libpanelw seems to be a Linux thing?
 SUBST_CLASSES+=		panel
 SUBST_MESSAGE.panel=	Replacing panelw with panel.
@@ -62,6 +58,13 @@ PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+# NetBSD-8 curses has enough support for py-curses
+USE_CURSES=		getsyx update_panels wide
+# But we build as ncurses still to get the full feature set easily
+.if ${OPSYS} == "NetBSD"
+FAKE_NCURSES=		yes
+.endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
@@ -110,10 +113,7 @@ CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 
 LDFLAGS.SunOS+=	-lresolv
 
-PLIST_VARS+=	dbm nis tkinter
-.if ${OPSYS} != "Linux"
-PLIST.dbm=	yes
-.endif
+PLIST_VARS+=	nis tkinter
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
 .  if exists(${incdir}/rpc/rpc.h)
 HAVE_RPC_H=	yes
@@ -234,16 +234,17 @@ setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
+.if ${OPSYS} == "Linux"
+.include "../../databases/gdbm_compat/buildlink3.mk"
+.endif
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
