@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/29 07:57:30 pho Exp $
-lib/hint-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hint-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/05/01 06:49:23 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Ghc.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Ghc.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Ghc.p_hi
@@ -61,6 +59,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/Interpreter/Unsafe.
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hint-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hint-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/Hint-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/Language-Haskell-Interpreter-Extension.html
@@ -93,12 +93,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/hint.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hint-${PKGVERSION}/html/synopsis.png
