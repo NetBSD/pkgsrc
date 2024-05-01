@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/30 08:02:31 pho Exp $
-lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-description
-lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 07:12:35 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.p_hi
@@ -16,6 +14,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Flip.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-description
+lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Compose.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Extras-TH.html
@@ -23,11 +23,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Flip.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/constraints-extras.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/synopsis.png
