@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 09:52:45 pho Exp $
-lib/unliftio-${PKGVERSION}/${HS_VERSION}/package-description
-lib/unliftio-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 07:20:57 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_unliftio.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_unliftio.hi
@@ -73,6 +71,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Timeout.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Timeout.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/unliftio-${PKGVERSION}/${HS_VERSION}/package-description
+lib/unliftio-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/UnliftIO-Async.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/UnliftIO-Chan.html
@@ -123,12 +123,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/doc-index-X.htm
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-${PKGVERSION}/html/unliftio.haddock
