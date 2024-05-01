@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 06:20:22 pho Exp $
-lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-description
-lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/05/01 08:07:22 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GhclibParserEx/Dump.p_hi
@@ -59,6 +57,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/include/cbits/ghclib_api.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ghc-lib-parser-ex-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-Dump.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-Fixity.html
@@ -78,12 +78,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Langua
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-GHC-Types-Name-Reader.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/Language-Haskell-GhclibParserEx-GHC-Utils-Outputable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/ghc-lib-parser-ex.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-lib-parser-ex-${PKGVERSION}/html/synopsis.png
