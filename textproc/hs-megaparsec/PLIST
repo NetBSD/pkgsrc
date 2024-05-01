@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/29 11:13:35 pho Exp $
-lib/megaparsec-${PKGVERSION}/${HS_VERSION}/package-description
-lib/megaparsec-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/05/01 08:16:52 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec.hi
@@ -52,6 +50,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Stream.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Stream.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/megaparsec-${PKGVERSION}/${HS_VERSION}/package-description
+lib/megaparsec-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/LICENSE.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/README.md
@@ -65,6 +65,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megapars
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Error.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Pos.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-State.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Stream.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-60.html
@@ -90,12 +91,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/megaparsec.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/synopsis.png
