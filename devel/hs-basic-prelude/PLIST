@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 10:08:24 pho Exp $
-lib/basic-prelude-${PKGVERSION}/${HS_VERSION}/package-description
-lib/basic-prelude-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 08:00:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/BasicPrelude.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/BasicPrelude.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/BasicPrelude.p_hi
@@ -13,6 +11,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_basic_prelude.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/basic-prelude-${PKGVERSION}/${HS_VERSION}/package-description
+lib/basic-prelude-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/BasicPrelude.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/CorePrelude.html
@@ -56,11 +56,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/doc-index-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/basic-prelude-${PKGVERSION}/html/synopsis.png
