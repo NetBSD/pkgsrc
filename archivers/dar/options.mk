@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/05/01 19:20:47 cheusov Exp $
+# $NetBSD: options.mk,v 1.4 2024/05/01 19:31:21 cheusov Exp $
 
 ## Our threading check here is the same as the one used in devel/perl5.
 #
@@ -53,6 +53,7 @@ CONFIGURE_ARGS+=	--disable-thread-safe
 
 # nls option
 .if !empty(PKG_OPTIONS:Mnls)
+.include "../../devel/gettext-lib/buildlink3.mk"
 CONFIGURE_ARGS+= --enable-nls
 PLIST.nls=	yes
 .else
