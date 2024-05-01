@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/29 10:41:58 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/01 08:04:53 pho Exp $
 lib/MonadRandom-${PKGVERSION}/${HS_VERSION}/package-description
 lib/MonadRandom-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Random.dyn_hi
@@ -35,11 +35,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/Control-Mona
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/Control-Monad-Trans-Random.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/MonadRandom.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MonadRandom-${PKGVERSION}/html/synopsis.png
