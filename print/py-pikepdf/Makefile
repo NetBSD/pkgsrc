@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/30 08:28:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/01 08:55:15 jperkin Exp $
 
 DISTNAME=	pikepdf-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
 USE_CXX_FEATURES+=	c++17
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../print/qpdf/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
