@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 08:12:32 pho Exp $
-lib/optparse-simple-${PKGVERSION}/${HS_VERSION}/package-description
-lib/optparse-simple-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 08:14:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Options/Applicative/Simple.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Options/Applicative/Simple.hi
@@ -10,6 +8,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_optparse_simple.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_optparse_simple.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/optparse-simple-${PKGVERSION}/${HS_VERSION}/package-description
+lib/optparse-simple-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/Options-Applicative-Simple.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-index-42.html
@@ -36,12 +36,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-inde
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/optparse-simple.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/optparse-simple-${PKGVERSION}/html/synopsis.png
