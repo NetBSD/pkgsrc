@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/07/17 14:15:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2024/05/01 22:42:42 cheusov Exp $
 
 DISTNAME=	grep-3.11
 CATEGORIES=	textproc
@@ -23,6 +23,7 @@ TEXINFO_REQD=		4.0
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OS_VARIANT} == "SCOOSR5"
 # SCO OpenServer 5.0.7/3.2's pthread is builtin GNU pth.
@@ -38,6 +39,5 @@ post-install:
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
