@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/11/08 13:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/05/01 19:31:21 cheusov Exp $
 
 DISTNAME=	dar-2.7.7
 PKGREVISION=	4
@@ -67,7 +67,6 @@ BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:elf
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../net/librsync/buildlink3.mk"
