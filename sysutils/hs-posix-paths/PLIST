@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:16:37 pho Exp $
-lib/posix-paths-${PKGVERSION}/${HS_VERSION}/package-description
-lib/posix-paths-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/01 16:54:52 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Posix/Directory/Foreign.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Posix/Directory/Foreign.hi
@@ -13,17 +11,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/System/Posix/FilePath.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Posix/FilePath.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/posix-paths-${PKGVERSION}/${HS_VERSION}/package-description
+lib/posix-paths-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/System-Posix-Directory-Foreign.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/System-Posix-Directory-Traversals.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/System-Posix-FilePath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/posix-paths.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/posix-paths-${PKGVERSION}/html/synopsis.png
