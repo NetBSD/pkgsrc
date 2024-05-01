@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:18 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/01 08:02:03 pho Exp $
 
 DISTNAME=	atomic-write-0.2.0.7
 PKGREVISION=	4
-CATEGORIES=	devel
+CATEGORIES=	devel # XXX: Should be moved to sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Atomically write to a file
