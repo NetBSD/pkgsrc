@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 12:01:48 pho Exp $
-lib/gridtables-${PKGVERSION}/${HS_VERSION}/package-description
-lib/gridtables-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 14:11:25 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/GridTable.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/GridTable.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/GridTable.p_hi
@@ -16,6 +14,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/GridTable/Trace.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/gridtables-${PKGVERSION}/${HS_VERSION}/package-description
+lib/gridtables-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/README.md
@@ -24,12 +24,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/Text-GridTabl
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/Text-GridTable-Trace.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/Text-GridTable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/gridtables.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/gridtables-${PKGVERSION}/html/synopsis.png
