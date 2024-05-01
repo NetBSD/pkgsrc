@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2966 2024/04/30 22:04:14 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.2967 2024/05/01 05:26:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4805,3 +4805,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/oh-my-posh to 19.25.0 [pin 2024-04-30]
 	mk: add some logic to disable network during configure/build/test [wiz 2024-04-30]
 	Updated devel/lua-language-server to 3.8.3 [nikita 2024-04-30]
+	Downgraded devel/py-pyproject_hooks to 1.0.0nb1 [adam 2024-05-01]
+	Updated net/py-minio to 7.2.7 [adam 2024-05-01]
