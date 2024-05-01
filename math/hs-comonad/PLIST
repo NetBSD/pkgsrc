@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 09:33:57 pho Exp $
-lib/comonad-${PKGVERSION}/${HS_VERSION}/package-description
-lib/comonad-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 07:10:58 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Comonad.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Comonad.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Comonad.p_hi
@@ -49,6 +47,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Composition.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/comonad-${PKGVERSION}/${HS_VERSION}/package-description
+lib/comonad-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/Control-Comonad-Env-Class.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/Control-Comonad-Env.html
@@ -67,11 +67,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/Control-Comonad.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/Data-Functor-Composition.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/comonad.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/comonad-${PKGVERSION}/html/synopsis.png
