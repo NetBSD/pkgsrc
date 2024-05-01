@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.53 2024/01/13 04:20:40 riastradh Exp $
+$NetBSD: distinfo,v 1.54 2024/05/01 16:43:37 js Exp $
 
-BLAKE2s (fossil-src-2.23.tar.gz) = e1581c5e194e14f1eef03e71cce3656dd9d5769147474900c7ea32f88e28ddc5
-SHA512 (fossil-src-2.23.tar.gz) = bba67e16b26b97aa40023a4a2aa3b2abfc9393ec8d3244ec88dab5b7d2c4d46e7d6ee89b008a6bce1f18c96c351c8d41d64f02ba28c0eb3eb04d01e308f3335b
-Size (fossil-src-2.23.tar.gz) = 6799177 bytes
-SHA1 (patch-autosetup_autosetup-find-tclsh) = 2baa22e090141e14a3bba9395ff8afb633f4a9e8
+BLAKE2s (fossil-src-2.24.tar.gz) = ed2923337f51cacfe256fe751f6269c29bfeed3e42ed3154030fd11be16a3d98
+SHA512 (fossil-src-2.24.tar.gz) = 7fc7de7d947b0946866df38c6cb2215f6452d31903cae6470bb4a692816b2803eb66ea372280256e5cd00759e4d02a0ae459de2f56f39af10e873579d53d33ee
+Size (fossil-src-2.24.tar.gz) = 6904302 bytes
+SHA1 (patch-autosetup_autosetup-find-tclsh) = 43abdf91bb3be7e39426c83fb346349d610be682
