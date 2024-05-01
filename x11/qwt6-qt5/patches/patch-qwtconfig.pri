@@ -1,7 +1,6 @@
-$NetBSD: patch-qwtconfig.pri,v 1.2 2020/08/30 08:19:06 tnn Exp $
+$NetBSD: patch-qwtconfig.pri,v 1.3 2024/05/01 12:45:32 adam Exp $
 
 Don't hardcode PREFIX.
-Ship the pkg-config file. Needed by gnuradio-qtgui.
 
 --- qwtconfig.pri.orig	2020-06-01 16:48:07.325112226 +0000
 +++ qwtconfig.pri
@@ -31,10 +30,3 @@ Ship the pkg-config file. Needed by gnuradio-qtgui.
  
  ######################################################################
  # Features
-@@ -171,5 +171,5 @@ macx:!static:CONFIG(qt_framework, qt_fra
- 
- unix {
- 
--    #QWT_CONFIG     += QwtPkgConfig
-+    QWT_CONFIG     += QwtPkgConfig
- }
