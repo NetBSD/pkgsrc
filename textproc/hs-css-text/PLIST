@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 18:40:17 pho Exp $
-lib/css-text-${PKGVERSION}/${HS_VERSION}/package-description
-lib/css-text-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 14:32:55 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_css_text.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_css_text.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_css_text.p_hi
@@ -13,16 +11,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/CSS/Render.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/css-text-${PKGVERSION}/${HS_VERSION}/package-description
+lib/css-text-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/Text-CSS-Parse.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/Text-CSS-Render.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/css-text.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/css-text-${PKGVERSION}/html/synopsis.png
