@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2024/03/20 13:10:10 pin Exp $
+$NetBSD: distinfo,v 1.24 2024/05/01 20:10:29 wiz Exp $
 
-BLAKE2s (Kvantum-1.1.0.tar.gz) = 10efe7b556d4ad7b4b1799789d762ad75f5f28277393006dec138d3e27b6b251
-SHA512 (Kvantum-1.1.0.tar.gz) = dc6bc3cb44d3a050a7e43196f7c0ab69d5f33c5fa645cdf191631164384aed8d8130093a4da4367b061c33d0d844dc57f91352d96a9368dd9abd6694a404d7f6
-Size (Kvantum-1.1.0.tar.gz) = 3038723 bytes
+BLAKE2s (Kvantum-1.1.1.tar.gz) = d4325b8f806b642f87a451e39814ef9d6a9de217bc087d11f850e1c89670b637
+SHA512 (Kvantum-1.1.1.tar.gz) = c56b23999035c09f1a890e64c0ea965e2183f326db7fc52b24856425786122cbc4d1bd7ed5f4627576fc31bd627ddc64fed34f51ffe1fb31513b45548286f186
+Size (Kvantum-1.1.1.tar.gz) = 3040798 bytes
 SHA1 (patch-CMakeLists.txt) = 0b044c8efb1bd846a90d03520a4a40324b383d01
