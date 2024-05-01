@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2024/05/01 16:06:46 cheusov Exp $
+# $NetBSD: options.mk,v 1.6 2024/05/01 17:44:16 cheusov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python312
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
@@ -48,6 +48,9 @@ CONFIGURE_ARGS+= --without-readline
 .else
 .include "../../mk/readline.buildlink3.mk"
 .if ${READLINE_TYPE} == "editline"
+# the following is here, because pkgsrc buildlink framework provides
+# readline/readline.h header but python checks for editline/readline.h
+CONFIGURE_ENV+= ac_cv_header_editline_readline_h=yes
 CONFIGURE_ARGS+= --with-readline=editline
 .else
 CONFIGURE_ARGS+= --with-readline
