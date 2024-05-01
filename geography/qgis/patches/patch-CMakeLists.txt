@@ -1,0 +1,74 @@
+$NetBSD: patch-CMakeLists.txt,v 1.5 2024/05/01 12:46:59 adam Exp $
+
+On Darwin, don't build application bundle.
+Use modern protobuf support.
+
+--- CMakeLists.txt.orig	2024-01-19 12:02:29.000000000 +0000
++++ CMakeLists.txt
+@@ -23,7 +23,7 @@ set(COMPLETE_VERSION ${CPACK_PACKAGE_VER
+ set(RELEASE_NAME "Firenze")
+ project(qgis VERSION ${COMPLETE_VERSION})
+ 
+-if (APPLE)
++if (FALSE)
+   set(QGIS_APP_NAME "QGIS")
+ else()
+   set(QGIS_APP_NAME "qgis")
+@@ -36,7 +36,7 @@ message(STATUS "QGIS version: ${COMPLETE
+ set (ENABLE_LOCAL_BUILD_SHORTCUTS FALSE CACHE BOOL "Disables some build steps which are only relevant for releases to speed up compilation time for development")
+ 
+ #############################################################
+-if (APPLE)
++if (FALSE)
+   # QGIS custom dependencies package from qgis/QGIS-Mac-Packager
+   # they can be downloaded from https://qgis.org/downloads/macos/qgis-deps
+   # and extracted to /opt/QGIS/qgis-deps-<deps-version>/stage
+@@ -366,11 +366,8 @@ if(WITH_CORE)
+     message (SEND_ERROR "sqlite3 dependency was not found!")
+   endif()
+ 
+-  find_package(Protobuf REQUIRED)   # for decoding of vector tiles in MVT format
++  find_package(Protobuf REQUIRED CONFIG)   # for decoding of vector tiles in MVT format
+   message(STATUS "Found Protobuf: ${Protobuf_LIBRARIES}")
+-  if (NOT Protobuf_PROTOC_EXECUTABLE)
+-    message (SEND_ERROR "Protobuf library's 'protoc' tool was not found!")
+-  endif()
+   find_package(ZLIB REQUIRED)       # for decompression of vector tiles in MBTiles file
+   message(STATUS "Found zlib: ${ZLIB_LIBRARIES}")
+ 
+@@ -769,7 +766,7 @@ if (WITH_CORE)
+   else()
+ 
+     if(APPLE)
+-        set(QGIS_MACAPP_FRAMEWORK TRUE CACHE BOOL "Build as a framework on OSX")
++        set(QGIS_MACAPP_FRAMEWORK FALSE CACHE BOOL "Build as a framework on OSX")
+     endif()
+ 
+     if (APPLE AND QGIS_MACAPP_FRAMEWORK)
+@@ -940,7 +937,7 @@ set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${QG
+ file(WRITE ${QGIS_OUTPUT_DIRECTORY}/${QGIS_BIN_SUBDIR}/qgisbuildpath.txt "${CMAKE_SOURCE_DIR}\n${QGIS_OUTPUT_DIRECTORY}")
+ 
+ # manual page - makes sense only on unix systems
+-if (UNIX AND NOT APPLE)
++if (UNIX)
+   set (DEFAULT_MANUAL_SUBDIR  man)
+   set (QGIS_MANUAL_SUBDIR  ${DEFAULT_MANUAL_SUBDIR}  CACHE STRING "Subdirectory where manual files will be installed")
+   mark_as_advanced (QGIS_MANUAL_SUBDIR)
+@@ -1050,7 +1047,7 @@ if (WITH_CORE)
+     add_subdirectory(python)
+   endif()
+ 
+-  if (APPLE)
++  if (FALSE)
+     # must be last for install, so install_name_tool can do its work
+     add_subdirectory(mac)
+ 
+@@ -1067,7 +1064,7 @@ if (WITH_CORE)
+   endif()
+ 
+   # manual page - makes sense only on unix systems
+-  if (UNIX AND NOT APPLE)
++  if (UNIX)
+     install (FILES qgis.1 DESTINATION ${QGIS_MANUAL_DIR}/man1)
+   endif()
+ 
