@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 11:38:52 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 09:31:24 pho Exp $
 bin/cabal-fmt
-lib/${PKGNAME}/${HS_VERSION}/package-description/1
-lib/${PKGNAME}/${HS_VERSION}/package-description/2
-lib/${PKGNAME}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.p_hi
@@ -30,6 +32,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Fields/SourceFiles.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Fields/TestedWith.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Fields/TestedWith.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Fields/TestedWith.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/FreeText.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/FreeText.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/FreeText.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Glob.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Glob.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Glob.p_hi
@@ -65,13 +70,11 @@ lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Refactoring/Type.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Refactoring/Type.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/libHS${HS_PKGID.2}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/libHS${HS_PKGID.2}_p.a
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}.a
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}_p.a
-${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.2}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.2}-${HS_VER}.so
+lib/${PKGNAME}/${HS_VERSION}/package-description/1
+lib/${PKGNAME}/${HS_VERSION}/package-description/2
+lib/${PKGNAME}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Comments.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Error.html
@@ -81,6 +84,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Fields-Modules.htm
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Fields-SourceFiles.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Fields-TestedWith.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Fields.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-FreeText.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Glob.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Monad.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Options.html
@@ -96,11 +100,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/VersionInterval.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/cabal-fmt.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
