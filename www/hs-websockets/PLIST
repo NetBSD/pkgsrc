@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/29 18:33:27 pho Exp $
-lib/websockets-${PKGVERSION}/${HS_VERSION}/package-description
-lib/websockets-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/01 14:26:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets.hi
@@ -14,6 +12,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/Options.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/Options.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/Options.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/PingPong.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/PingPong.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Connection/PingPong.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Extensions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Extensions.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Extensions.p_hi
@@ -52,19 +53,20 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/websockets-${PKGVERSION}/${HS_VERSION}/package-description
+lib/websockets-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/LICENCE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Client.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Connection-PingPong.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Connection.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Extensions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Stream.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/websockets.haddock
