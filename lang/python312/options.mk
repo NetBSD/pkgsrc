@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2023/12/08 09:22:42 adam Exp $
+# $NetBSD: options.mk,v 1.3 2024/05/01 15:56:03 cheusov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python312
-PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11
+PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dtrace
+PLIST_VARS+=		dtrace readline
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
@@ -40,4 +40,18 @@ USE_X11=	weak
 CONFIGURE_ARGS+=	--with-pymalloc
 .else
 CONFIGURE_ARGS+=	--without-pymalloc
+.endif
+
+# readline/editline
+.if empty(PKG_OPTIONS:Mreadline)
+.info "Disable readline"
+CONFIGURE_ARGS+= --without-readline
+.else
+.include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+= --with-readline=editline
+.else
+CONFIGURE_ARGS+= --with-readline
+.endif
+PLIST.readline=	yes
 .endif
