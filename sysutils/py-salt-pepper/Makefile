@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/30 13:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/01 08:58:52 jperkin Exp $
 
 DISTNAME=	salt-pepper-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	salt-[0-9]*:../../sysutils/salt
 
 USE_LANGUAGES=	c # for tests
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
