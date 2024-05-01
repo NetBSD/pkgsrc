@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/04/27 11:49:40 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/01 09:06:54 jperkin Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -245,9 +245,11 @@ PLIST.x11=	yes
 .include "../../graphics/glu/buildlink3.mk"
 .  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
+.    if exists(${X11BASE}/include/EGL/eglext.h)
 EGL_EXT_FILE=	cat ${X11BASE}/include/EGL/eglext.h
-.    if exists(${X11BASE}/include/EGL/eglext.h) && !empty(EGL_EXT_FILE:sh:MEGL_DRM_MASTER_FD_EXT)
+.      if !empty(EGL_EXT_FILE:sh:MEGL_DRM_MASTER_FD_EXT)
 PLIST.egldevice=	yes
+.      endif
 .    endif
 .  endif
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11
