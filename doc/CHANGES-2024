@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2991 2024/05/01 20:10:38 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.2992 2024/05/01 20:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-cms to 4.1.1 [adam 2024-05-01]
 	Updated finance/py-eth-typing to 4.2.2 [adam 2024-05-01]
 	Updated graphics/kvantum to 1.1.1 [wiz 2024-05-01]
+	Updated print/auctex to 13.3 [wiz 2024-05-01]
