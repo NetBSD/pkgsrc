@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/29 09:42:13 pho Exp $
-lib/streaming-commons-${PKGVERSION}/${HS_VERSION}/package-description
-lib/streaming-commons-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.6 2024/05/01 07:14:30 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Streaming/ByteString/Builder.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Streaming/ByteString/Builder.hi
@@ -37,6 +35,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Streaming/Zlib/Lowlevel.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Streaming/Zlib/Lowlevel.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/streaming-commons-${PKGVERSION}/${HS_VERSION}/package-description
+lib/streaming-commons-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/Data-Streaming-ByteString-Builder-Buffer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/Data-Streaming-ByteString-Builder.html
@@ -70,12 +70,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/doc-in
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/streaming-commons.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/streaming-commons-${PKGVERSION}/html/synopsis.png
