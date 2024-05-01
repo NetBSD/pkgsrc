@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 10:00:56 pho Exp $
-lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-description
-lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 14:29:33 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-description
+lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/System-TimeManager.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/time-manager.haddock
