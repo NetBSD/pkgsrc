@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/05/01 19:00:19 cheusov Exp $
+# $NetBSD: options.mk,v 1.3 2024/05/01 19:20:47 cheusov Exp $
 
 ## Our threading check here is the same as the one used in devel/perl5.
 #
@@ -51,7 +51,7 @@ BUILDLINK_TRANSFORM+=	rm:-lpthread
 CONFIGURE_ARGS+=	--disable-thread-safe
 .endif
 
-# readline/editline
+# nls option
 .if !empty(PKG_OPTIONS:Mnls)
 CONFIGURE_ARGS+= --enable-nls
 PLIST.nls=	yes
