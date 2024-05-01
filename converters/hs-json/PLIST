@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/27 03:52:58 pho Exp $
-lib/json-${PKGVERSION}/${HS_VERSION}/package-description
-lib/json-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 08:11:30 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON.p_hi
@@ -25,6 +23,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/json-${PKGVERSION}/${HS_VERSION}/package-description
+lib/json-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/json-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/CHANGES
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/Text-JSON-Generic.html
@@ -61,12 +61,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/json.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/json-${PKGVERSION}/html/synopsis.png
