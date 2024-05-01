@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/29 10:34:23 pho Exp $
-lib/atomic-write-${PKGVERSION}/${HS_VERSION}/package-description
-lib/atomic-write-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/01 08:02:03 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/AtomicWrite/Internal.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/AtomicWrite/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/AtomicWrite/Internal.p_hi
@@ -40,6 +38,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/AtomicWrite/Writer/Text/Binar
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/atomic-write-${PKGVERSION}/${HS_VERSION}/package-description
+lib/atomic-write-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/System-AtomicWrite-Writer-ByteString-Binary.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/System-AtomicWrite-Writer-ByteString.html
@@ -54,11 +54,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/System-Atom
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/System-AtomicWrite-Writer-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/atomic-write.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/atomic-write-${PKGVERSION}/html/synopsis.png
