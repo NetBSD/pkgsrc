@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/02/18 22:54:35 fcambus Exp $
+# $NetBSD: Makefile,v 1.43 2024/05/01 21:30:47 cheusov Exp $
 
 DISTNAME=	diffutils-3.9
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=	GNU diff utilities - find the differences between files
 LICENSE=	gnu-gpl-v3
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 AUTO_MKDIRS=		yes
 INFO_FILES=		yes
@@ -30,5 +33,4 @@ post-install:
 	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
