@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2024/04/28 05:58:57 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2024/05/01 03:22:32 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -157,7 +157,7 @@ pre-build:
 
 	@${PHASE_MSG} "Building Hadrian for GHC ${BOOT_VERSION}"
 	${RUN}cd ${WRKSRC}/hadrian/bootstrap && \
-		${PKGSRC_SET_ENV} ${ALL_ENV} \
+		${PKGSRC_SETENV} ${ALL_ENV} FILESDIR=${FILESDIR:Q} \
 			python bootstrap.py \
 				-j ${_MAKE_JOBS_N} \
 				-s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
@@ -325,9 +325,10 @@ ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
 	done; \
 	PATH="$$pruned_path"; \
 	cd ${WRKSRC}/hadrian/bootstrap && \
-		python bootstrap.py \
-			-j ${_MAKE_JOBS_N} \
-			-s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
+		${PKGSRC_SETENV} FILESDIR=${FILESDIR:Q} \
+			python bootstrap.py \
+				-j ${_MAKE_JOBS_N} \
+				-s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
 
 	@${PHASE_MSG} "Building bootstrapping compiler ${PKGNAME_NOREV}"
 	for f in ${BUILDLINK_DIR:Q}/lib/libffi.*; do \
