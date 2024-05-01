@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.20 2022/08/22 08:49:44 markd Exp $
-${EMACS_INFOPREFIX}/auctex.info
-${EMACS_INFOPREFIX}/preview-latex.info
+@comment $NetBSD: PLIST,v 1.21 2024/05/01 20:36:20 wiz Exp $
+info/auctex.info
+info/preview-latex.info
+share/doc/auctex/tex-ref.pdf
 ${EMACS_LISPPREFIX}/auctex.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.elc
@@ -94,10 +95,14 @@ ${EMACS_LISPPREFIX}/auctex/style/algorithm.el
 ${EMACS_LISPPREFIX}/auctex/style/algorithm.elc
 ${EMACS_LISPPREFIX}/auctex/style/algpseudocode.el
 ${EMACS_LISPPREFIX}/auctex/style/algpseudocode.elc
+${EMACS_LISPPREFIX}/auctex/style/algpseudocodex.el
+${EMACS_LISPPREFIX}/auctex/style/algpseudocodex.elc
 ${EMACS_LISPPREFIX}/auctex/style/alltt.el
 ${EMACS_LISPPREFIX}/auctex/style/alltt.elc
 ${EMACS_LISPPREFIX}/auctex/style/alphanum.el
 ${EMACS_LISPPREFIX}/auctex/style/alphanum.elc
+${EMACS_LISPPREFIX}/auctex/style/amsaddr.el
+${EMACS_LISPPREFIX}/auctex/style/amsaddr.elc
 ${EMACS_LISPPREFIX}/auctex/style/amsart.el
 ${EMACS_LISPPREFIX}/auctex/style/amsart.elc
 ${EMACS_LISPPREFIX}/auctex/style/amsbook.el
@@ -178,6 +183,10 @@ ${EMACS_LISPPREFIX}/auctex/style/captcont.el
 ${EMACS_LISPPREFIX}/auctex/style/captcont.elc
 ${EMACS_LISPPREFIX}/auctex/style/caption.el
 ${EMACS_LISPPREFIX}/auctex/style/caption.elc
+${EMACS_LISPPREFIX}/auctex/style/catchfilebetweentags.el
+${EMACS_LISPPREFIX}/auctex/style/catchfilebetweentags.elc
+${EMACS_LISPPREFIX}/auctex/style/changebar.el
+${EMACS_LISPPREFIX}/auctex/style/changebar.elc
 ${EMACS_LISPPREFIX}/auctex/style/changelog.el
 ${EMACS_LISPPREFIX}/auctex/style/changelog.elc
 ${EMACS_LISPPREFIX}/auctex/style/changes.el
@@ -234,6 +243,8 @@ ${EMACS_LISPPREFIX}/auctex/style/erewhon.el
 ${EMACS_LISPPREFIX}/auctex/style/erewhon.elc
 ${EMACS_LISPPREFIX}/auctex/style/eso-pic.el
 ${EMACS_LISPPREFIX}/auctex/style/eso-pic.elc
+${EMACS_LISPPREFIX}/auctex/style/etoolbox.el
+${EMACS_LISPPREFIX}/auctex/style/etoolbox.elc
 ${EMACS_LISPPREFIX}/auctex/style/everysel.el
 ${EMACS_LISPPREFIX}/auctex/style/everysel.elc
 ${EMACS_LISPPREFIX}/auctex/style/exam.el
@@ -306,8 +317,20 @@ ${EMACS_LISPPREFIX}/auctex/style/hyperref.el
 ${EMACS_LISPPREFIX}/auctex/style/hyperref.elc
 ${EMACS_LISPPREFIX}/auctex/style/icelandic.el
 ${EMACS_LISPPREFIX}/auctex/style/icelandic.elc
+${EMACS_LISPPREFIX}/auctex/style/ifetex.el
+${EMACS_LISPPREFIX}/auctex/style/ifetex.elc
 ${EMACS_LISPPREFIX}/auctex/style/ifluatex.el
 ${EMACS_LISPPREFIX}/auctex/style/ifluatex.elc
+${EMACS_LISPPREFIX}/auctex/style/ifpdf.el
+${EMACS_LISPPREFIX}/auctex/style/ifpdf.elc
+${EMACS_LISPPREFIX}/auctex/style/iftex.el
+${EMACS_LISPPREFIX}/auctex/style/iftex.elc
+${EMACS_LISPPREFIX}/auctex/style/ifthen.el
+${EMACS_LISPPREFIX}/auctex/style/ifthen.elc
+${EMACS_LISPPREFIX}/auctex/style/ifvtex.el
+${EMACS_LISPPREFIX}/auctex/style/ifvtex.elc
+${EMACS_LISPPREFIX}/auctex/style/ifxetex.el
+${EMACS_LISPPREFIX}/auctex/style/ifxetex.elc
 ${EMACS_LISPPREFIX}/auctex/style/imakeidx.el
 ${EMACS_LISPPREFIX}/auctex/style/imakeidx.elc
 ${EMACS_LISPPREFIX}/auctex/style/index.el
@@ -340,8 +363,16 @@ ${EMACS_LISPPREFIX}/auctex/style/jurabib.el
 ${EMACS_LISPPREFIX}/auctex/style/jurabib.elc
 ${EMACS_LISPPREFIX}/auctex/style/kantlipsum.el
 ${EMACS_LISPPREFIX}/auctex/style/kantlipsum.elc
+${EMACS_LISPPREFIX}/auctex/style/keyval.el
+${EMACS_LISPPREFIX}/auctex/style/keyval.elc
 ${EMACS_LISPPREFIX}/auctex/style/kpfonts.el
 ${EMACS_LISPPREFIX}/auctex/style/kpfonts.elc
+${EMACS_LISPPREFIX}/auctex/style/kvoptions.el
+${EMACS_LISPPREFIX}/auctex/style/kvoptions.elc
+${EMACS_LISPPREFIX}/auctex/style/kvsetkeys.el
+${EMACS_LISPPREFIX}/auctex/style/kvsetkeys.elc
+${EMACS_LISPPREFIX}/auctex/style/l3doc.el
+${EMACS_LISPPREFIX}/auctex/style/l3doc.elc
 ${EMACS_LISPPREFIX}/auctex/style/letter.el
 ${EMACS_LISPPREFIX}/auctex/style/letter.elc
 ${EMACS_LISPPREFIX}/auctex/style/lettrine.el
@@ -356,6 +387,8 @@ ${EMACS_LISPPREFIX}/auctex/style/lscape.el
 ${EMACS_LISPPREFIX}/auctex/style/lscape.elc
 ${EMACS_LISPPREFIX}/auctex/style/ltablex.el
 ${EMACS_LISPPREFIX}/auctex/style/ltablex.elc
+${EMACS_LISPPREFIX}/auctex/style/ltcaption.el
+${EMACS_LISPPREFIX}/auctex/style/ltcaption.elc
 ${EMACS_LISPPREFIX}/auctex/style/ltugboat.el
 ${EMACS_LISPPREFIX}/auctex/style/ltugboat.elc
 ${EMACS_LISPPREFIX}/auctex/style/ltx-base.el
@@ -390,6 +423,8 @@ ${EMACS_LISPPREFIX}/auctex/style/metalogo.el
 ${EMACS_LISPPREFIX}/auctex/style/metalogo.elc
 ${EMACS_LISPPREFIX}/auctex/style/mflogo.el
 ${EMACS_LISPPREFIX}/auctex/style/mflogo.elc
+${EMACS_LISPPREFIX}/auctex/style/microtype.el
+${EMACS_LISPPREFIX}/auctex/style/microtype.elc
 ${EMACS_LISPPREFIX}/auctex/style/midfloat.el
 ${EMACS_LISPPREFIX}/auctex/style/midfloat.elc
 ${EMACS_LISPPREFIX}/auctex/style/minted.el
@@ -400,6 +435,8 @@ ${EMACS_LISPPREFIX}/auctex/style/mnras.el
 ${EMACS_LISPPREFIX}/auctex/style/mnras.elc
 ${EMACS_LISPPREFIX}/auctex/style/moodle.el
 ${EMACS_LISPPREFIX}/auctex/style/moodle.elc
+${EMACS_LISPPREFIX}/auctex/style/multibib.el
+${EMACS_LISPPREFIX}/auctex/style/multibib.elc
 ${EMACS_LISPPREFIX}/auctex/style/multicol.el
 ${EMACS_LISPPREFIX}/auctex/style/multicol.elc
 ${EMACS_LISPPREFIX}/auctex/style/multido.el
@@ -450,12 +487,16 @@ ${EMACS_LISPPREFIX}/auctex/style/paracol.el
 ${EMACS_LISPPREFIX}/auctex/style/paracol.elc
 ${EMACS_LISPPREFIX}/auctex/style/paralist.el
 ${EMACS_LISPPREFIX}/auctex/style/paralist.elc
+${EMACS_LISPPREFIX}/auctex/style/parskip.el
+${EMACS_LISPPREFIX}/auctex/style/parskip.elc
 ${EMACS_LISPPREFIX}/auctex/style/pdflscape.el
 ${EMACS_LISPPREFIX}/auctex/style/pdflscape.elc
 ${EMACS_LISPPREFIX}/auctex/style/pdfpages.el
 ${EMACS_LISPPREFIX}/auctex/style/pdfpages.elc
 ${EMACS_LISPPREFIX}/auctex/style/pdfsync.el
 ${EMACS_LISPPREFIX}/auctex/style/pdfsync.elc
+${EMACS_LISPPREFIX}/auctex/style/physics.el
+${EMACS_LISPPREFIX}/auctex/style/physics.elc
 ${EMACS_LISPPREFIX}/auctex/style/placeins.el
 ${EMACS_LISPPREFIX}/auctex/style/placeins.elc
 ${EMACS_LISPPREFIX}/auctex/style/plext.el
@@ -476,6 +517,8 @@ ${EMACS_LISPPREFIX}/auctex/style/portuguese.el
 ${EMACS_LISPPREFIX}/auctex/style/portuguese.elc
 ${EMACS_LISPPREFIX}/auctex/style/preview.el
 ${EMACS_LISPPREFIX}/auctex/style/preview.elc
+${EMACS_LISPPREFIX}/auctex/style/proc.el
+${EMACS_LISPPREFIX}/auctex/style/proc.elc
 ${EMACS_LISPPREFIX}/auctex/style/prosper.el
 ${EMACS_LISPPREFIX}/auctex/style/prosper.elc
 ${EMACS_LISPPREFIX}/auctex/style/psfig.el
@@ -494,6 +537,8 @@ ${EMACS_LISPPREFIX}/auctex/style/pythontex.el
 ${EMACS_LISPPREFIX}/auctex/style/pythontex.elc
 ${EMACS_LISPPREFIX}/auctex/style/ragged2e.el
 ${EMACS_LISPPREFIX}/auctex/style/ragged2e.elc
+${EMACS_LISPPREFIX}/auctex/style/refcount.el
+${EMACS_LISPPREFIX}/auctex/style/refcount.elc
 ${EMACS_LISPPREFIX}/auctex/style/relsize.el
 ${EMACS_LISPPREFIX}/auctex/style/relsize.elc
 ${EMACS_LISPPREFIX}/auctex/style/report.el
@@ -524,12 +569,16 @@ ${EMACS_LISPPREFIX}/auctex/style/shortvrb.el
 ${EMACS_LISPPREFIX}/auctex/style/shortvrb.elc
 ${EMACS_LISPPREFIX}/auctex/style/sidecap.el
 ${EMACS_LISPPREFIX}/auctex/style/sidecap.elc
+${EMACS_LISPPREFIX}/auctex/style/simpleicons.el
+${EMACS_LISPPREFIX}/auctex/style/simpleicons.elc
 ${EMACS_LISPPREFIX}/auctex/style/siunitx.el
 ${EMACS_LISPPREFIX}/auctex/style/siunitx.elc
 ${EMACS_LISPPREFIX}/auctex/style/slides.el
 ${EMACS_LISPPREFIX}/auctex/style/slides.elc
 ${EMACS_LISPPREFIX}/auctex/style/slovak.el
 ${EMACS_LISPPREFIX}/auctex/style/slovak.elc
+${EMACS_LISPPREFIX}/auctex/style/soul.el
+${EMACS_LISPPREFIX}/auctex/style/soul.elc
 ${EMACS_LISPPREFIX}/auctex/style/sourcecodepro.el
 ${EMACS_LISPPREFIX}/auctex/style/sourcecodepro.elc
 ${EMACS_LISPPREFIX}/auctex/style/splitidx.el
@@ -558,6 +607,8 @@ ${EMACS_LISPPREFIX}/auctex/style/tcolorbox.el
 ${EMACS_LISPPREFIX}/auctex/style/tcolorbox.elc
 ${EMACS_LISPPREFIX}/auctex/style/tcolorboxlib-raster.el
 ${EMACS_LISPPREFIX}/auctex/style/tcolorboxlib-raster.elc
+${EMACS_LISPPREFIX}/auctex/style/tcolorboxlib-theorems.el
+${EMACS_LISPPREFIX}/auctex/style/tcolorboxlib-theorems.elc
 ${EMACS_LISPPREFIX}/auctex/style/tex-live.el
 ${EMACS_LISPPREFIX}/auctex/style/tex-live.elc
 ${EMACS_LISPPREFIX}/auctex/style/textcomp.el
@@ -602,6 +653,8 @@ ${EMACS_LISPPREFIX}/auctex/style/virtex.el
 ${EMACS_LISPPREFIX}/auctex/style/virtex.elc
 ${EMACS_LISPPREFIX}/auctex/style/vwcol.el
 ${EMACS_LISPPREFIX}/auctex/style/vwcol.elc
+${EMACS_LISPPREFIX}/auctex/style/wasysym.el
+${EMACS_LISPPREFIX}/auctex/style/wasysym.elc
 ${EMACS_LISPPREFIX}/auctex/style/wrapfig.el
 ${EMACS_LISPPREFIX}/auctex/style/wrapfig.elc
 ${EMACS_LISPPREFIX}/auctex/style/xcolor.el
@@ -622,8 +675,6 @@ ${EMACS_LISPPREFIX}/auctex/style/zlmtt.el
 ${EMACS_LISPPREFIX}/auctex/style/zlmtt.elc
 ${EMACS_LISPPREFIX}/auctex/tex-bar.el
 ${EMACS_LISPPREFIX}/auctex/tex-bar.elc
-${EMACS_LISPPREFIX}/auctex/tex-buf.el
-${EMACS_LISPPREFIX}/auctex/tex-buf.elc
 ${EMACS_LISPPREFIX}/auctex/tex-fold.el
 ${EMACS_LISPPREFIX}/auctex/tex-fold.elc
 ${EMACS_LISPPREFIX}/auctex/tex-font.el
@@ -646,7 +697,6 @@ ${EMACS_LISPPREFIX}/auctex/toolbar-x.el
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.elc
 ${EMACS_LISPPREFIX}/preview-latex.el
 ${EMACS_LISPPREFIX}/tex-site.el
-share/doc/auctex/tex-ref.pdf
 share/texmf-local/doc/latex/styles/preview.pdf
 share/texmf-local/tex/latex/preview/prauctex.cfg
 share/texmf-local/tex/latex/preview/prauctex.def
