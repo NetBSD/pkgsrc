@@ -1,8 +1,13 @@
-# $NetBSD: options.mk,v 1.14 2024/04/09 17:16:45 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2024/05/01 21:11:18 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	zlib threads
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !${MACHINE_PLATFORM:MDarwin-*-powerpc*}
 PKG_SUGGESTED_OPTIONS=	threads
+.endif
 
 .include "../../mk/bsd.options.mk"
 
