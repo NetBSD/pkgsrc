@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/10/03 16:09:53 nros Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/05/01 19:00:19 cheusov Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -169,5 +169,5 @@ share/doc/dar/restoration-with-dar.html
 share/doc/dar/style.css
 share/doc/dar/usage_notes.html
 share/examples/dar/darrc
-share/locale/fr/LC_MESSAGES/dar.mo
-share/locale/sv/LC_MESSAGES/dar.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/dar.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/dar.mo
