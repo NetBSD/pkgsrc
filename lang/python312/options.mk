@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/05/01 17:44:16 cheusov Exp $
+# $NetBSD: options.mk,v 1.7 2024/05/01 18:38:14 cheusov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python312
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
@@ -50,10 +50,12 @@ CONFIGURE_ARGS+= --without-readline
 .if ${READLINE_TYPE} == "editline"
 # the following is here, because pkgsrc buildlink framework provides
 # readline/readline.h header but python checks for editline/readline.h
-CONFIGURE_ENV+= ac_cv_header_editline_readline_h=yes
-CONFIGURE_ARGS+= --with-readline=editline
+# CONFIGURE_ENV+= ac_cv_header_editline_readline_h=yes
+
+# NetBSD libedit works like libreadline 
+CONFIGURE_ARGS+= --with-readline=readline
 .else
-CONFIGURE_ARGS+= --with-readline
+CONFIGURE_ARGS+= --with-readline=readline
 .endif
 PLIST.readline=	yes
 .endif
