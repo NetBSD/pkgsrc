@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.2985 2024/05/01 14:32:05 pho Exp $
+$NetBSD: CHANGES-2024,v 1.2986 2024/05/01 16:43:48 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4826,3 +4826,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/hs-websockets to 0.13.0.0 [pho 2024-05-01]
 	Updated time/hs-time-manager to 0.1.0 [pho 2024-05-01]
 	Updated textproc/hs-libyaml to 0.1.4 [pho 2024-05-01]
+	Updated devel/fossil to 2.24 [js 2024-05-01]
