@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2024/04/11 14:15:11 pin Exp $
+# $NetBSD: Makefile,v 1.55 2024/05/02 08:08:51 pin Exp $
 
-DISTNAME=	nushell-0.92.2
+DISTNAME=	nushell-0.93.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-PKG_SHELL=		bin/nu
+PKG_SHELL=	bin/nu
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
