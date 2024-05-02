@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/30 10:21:18 pho Exp $
-lib/turtle-${PKGVERSION}/${HS_VERSION}/package-description
-lib/turtle-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/02 08:15:17 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Turtle.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Turtle.hi
@@ -34,6 +32,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Turtle/Tutorial.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Turtle/Tutorial.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/turtle-${PKGVERSION}/${HS_VERSION}/package-description
+lib/turtle-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/Turtle-Bytes.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/Turtle-Format.html
@@ -77,12 +77,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/turtle-${PKGVERSION}/html/turtle.haddock
