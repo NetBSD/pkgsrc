@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/02 10:35:02 wiz Exp $
+
+BLAKE2s (humungus-0.9.7.tgz) = 84d31443f91b155d3ef5bafcb1555831621f5eef277cae7cffc9e5df6a70a99e
+SHA512 (humungus-0.9.7.tgz) = f00f4fbb5bacdd975af1ca7ad66139260dc320641f6f9b779d41933432f69703ec85a22c4f328b2403fd338d2ec7140f956b572eaf91ada10a61f54884865c72
+Size (humungus-0.9.7.tgz) = 2558467 bytes
