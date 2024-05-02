@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/11/02 06:37:10 pho Exp $
+# $NetBSD: Makefile,v 1.21 2024/05/02 11:51:20 pho Exp $
 
 DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
@@ -17,18 +17,19 @@ LICENSE=	modified-bsd
 # newer GHC. We should really switch to Idris2, or at least stop manually
 # patching sources and use devel/retrie to automate it.
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	aeson	\
-	ansi-terminal	\
-	ansi-wl-pprint	\
-	bytestring	\
-	fsnotify	\
-	libffi	\
-	mtl	\
-	network	\
+	aeson			\
+	ansi-terminal		\
+	ansi-wl-pprint		\
+	bytestring		\
+	deepseq			\
+	fsnotify		\
+	libffi			\
+	mtl			\
+	network			\
 	optparse-applicative	\
-	text	\
-	transformers	\
-	unix	\
+	text			\
+	transformers		\
+	unix			\
 	vector
 
 CONFIGURE_ARGS+=	-f release
