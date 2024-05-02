@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/05/02 04:27:50 pho Exp $
 
-BLAKE2s (wai-3.2.3.tar.gz) = 3e8c12b7df53bbddac96b0f7a2062a7b9b875cce49092cd141b36efac5b3e466
-SHA512 (wai-3.2.3.tar.gz) = 1851da58310c45a809ec1cd3efd760e45bee814e41526a9f3404ea55e2428e92ff1563785b3118e8c605d5edaacd70670d21b5e5b300ce477f16b159c33a2040
-Size (wai-3.2.3.tar.gz) = 11619 bytes
+BLAKE2s (wai-3.2.4.tar.gz) = 582a143c5d735c88e0608c5664635b96e6304c9546f466543e3edd2dd88541ff
+SHA512 (wai-3.2.4.tar.gz) = 4c5c841eb565c65bbb20b51251c351042e3ac60a6db27a95464f3b0145e5d86d77d77cb03d68b33865e0f9e7c025e3b64f176cc8158a1efe1ee54b030c047e61
+Size (wai-3.2.4.tar.gz) = 13302 bytes
