@@ -1,8 +1,21 @@
-$NetBSD: distinfo,v 1.12 2024/04/18 17:42:17 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/05/02 13:27:04 riastradh Exp $
 
 BLAKE2s (ledger-3.3.2.tar.gz) = 9204b163d03fe6d2d286614a47d65317d33c8d1bca885d7f3c9447f334b57d7c
 SHA512 (ledger-3.3.2.tar.gz) = d5d7058f0e9a02ad1d46e6780675d446070824b321f0f4c1ea6ac0c3dd4f11f259113bc36cbc796e4bb6d0a7898d6a68a25cce639e27a2b2434eec11a612ecb0
 Size (ledger-3.3.2.tar.gz) = 825274 bytes
 SHA1 (patch-src_CMakeLists.txt) = 8d6a16523554c98c8559702db681af6fb4f413aa
+SHA1 (patch-src_amount.cc) = 245d2dfe0182ca431188c324531ac1204be902be
+SHA1 (patch-src_expr.cc) = e707cbcba58a31534072ed490c9ba95f8dc4005d
+SHA1 (patch-src_format.cc) = c7fe4821bc86a9126978235fa44859f84ea92989
+SHA1 (patch-src_item.cc) = 5e97a09824a04092161d8a0ca956a43ef084a03d
+SHA1 (patch-src_lookup.cc) = 0140f88386a6a9bbfa82e48fca4f3555f40a03aa
 SHA1 (patch-src_main.cc) = 7e21f5d903e3148c184f7473d003eb2dc27581c5
+SHA1 (patch-src_option.cc) = e2fced2a03927b91afbc3b3e390b5e1d9ea09a6e
+SHA1 (patch-src_pool.cc) = 69198d4961646171b85b73fbfa6920cfe4a5ac5c
+SHA1 (patch-src_report.cc) = b17a06c54dd7c3b20e8219add23cf2b26095f6d7
+SHA1 (patch-src_strptime.cc) = 730ba4f65e10721ecf4a9135f3fe65d669f6cf47
 SHA1 (patch-src_system.hh.in) = 2993ef00740cbaa0ba60792e421a33642b8bba6e
+SHA1 (patch-src_textual.cc) = 698581b6193b39449f84ff27bc695a9b14c877c9
+SHA1 (patch-src_times.cc) = 544235432f6811f1a5c73ee72b3011709b606f17
+SHA1 (patch-src_utils.cc) = 06d8c17822a945a9d08c1122fb05f0568fdcf493
+SHA1 (patch-src_xact.cc) = 89befd42102146e7a46f92ce458a7f1bc321ce55
