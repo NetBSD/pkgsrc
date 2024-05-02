@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2024/04/19 09:46:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2024/05/02 09:35:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -16,6 +16,7 @@ CARGO_CRATE_DEPENDS+=	base64-0.21.5
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.4.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.13.0
+CARGO_CRATE_DEPENDS+=	by_address-1.2.1
 CARGO_CRATE_DEPENDS+=	byteorder-1.4.3
 CARGO_CRATE_DEPENDS+=	cast-0.3.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.79
@@ -62,7 +63,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.9
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.22
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
-CARGO_CRATE_DEPENDS+=	libc-0.2.153
+CARGO_CRATE_DEPENDS+=	libc-0.2.154
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.16.2+1.7.2
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.2
 CARGO_CRATE_DEPENDS+=	line-wrap-0.2.0
@@ -82,8 +83,8 @@ CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
 CARGO_CRATE_DEPENDS+=	openssl-src-111.26.0+1.1.1u
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.61
 CARGO_CRATE_DEPENDS+=	os_pipe-1.1.4
-CARGO_CRATE_DEPENDS+=	palette-0.7.5
-CARGO_CRATE_DEPENDS+=	palette_derive-0.7.5
+CARGO_CRATE_DEPENDS+=	palette-0.7.6
+CARGO_CRATE_DEPENDS+=	palette_derive-0.7.6
 CARGO_CRATE_DEPENDS+=	partition-identity-0.3.0
 CARGO_CRATE_DEPENDS+=	path-clean-1.0.1
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
@@ -141,11 +142,11 @@ CARGO_CRATE_DEPENDS+=	trycmd-0.15.1
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.5
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.11
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.17
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.12
 CARGO_CRATE_DEPENDS+=	url-2.2.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	uutils_term_grid-0.6.0
-CARGO_CRATE_DEPENDS+=	uzers-0.11.3
+CARGO_CRATE_DEPENDS+=	uzers-0.12.0
 CARGO_CRATE_DEPENDS+=	vcpkg-0.2.12
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
 CARGO_CRATE_DEPENDS+=	walkdir-2.4.0
