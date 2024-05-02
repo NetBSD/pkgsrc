@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 13:42:04 pho Exp $
-lib/skylighting-format-blaze-html-${PKGVERSION}/${HS_VERSION}/package-description
-lib/skylighting-format-blaze-html-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 11:31:02 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/HTML.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/HTML.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/HTML.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/skylighting-format-blaze-html-${PKGVERSION}/${HS_VERSION}/package-description
+lib/skylighting-format-blaze-html-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/Skylighting-Format-HTML.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/skylighting-format-blaze-html.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-blaze-html-${PKGVERSION}/html/synopsis.png
