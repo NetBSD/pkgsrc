@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ofont.c,v 1.1 2013/02/26 11:10:28 joerg Exp $
+$NetBSD: patch-src_ofont.c,v 1.2 2024/05/02 20:04:32 triaxx Exp $
+
+Remove inlining.
 
 --- src/ofont.c.orig	2013-02-25 16:31:40.000000000 +0000
 +++ src/ofont.c
