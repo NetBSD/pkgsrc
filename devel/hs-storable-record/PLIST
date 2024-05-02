@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 03:21:23 pho Exp $
-lib/storable-record-${PKGVERSION}/${HS_VERSION}/package-description
-lib/storable-record-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 04:05:05 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Storable/FixedArray.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Storable/FixedArray.hi
@@ -28,6 +26,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Storable/TraversableUnequalSizes.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Storable/TraversableUnequalSizes.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/storable-record-${PKGVERSION}/${HS_VERSION}/package-description
+lib/storable-record-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/Foreign-Storable-FixedArray.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/Foreign-Storable-Newtype.html
@@ -35,12 +35,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/Foreign-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/Foreign-Storable-Record.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/Foreign-Storable-Traversable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/storable-record.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/storable-record-${PKGVERSION}/html/synopsis.png
