@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/27 06:20:28 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/02 23:23:12 wiz Exp $
 lib/th-abstraction-${PKGVERSION}/${HS_VERSION}/package-description
 lib/th-abstraction-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -17,12 +17,10 @@ share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/Language-Haskell-TH-Datatype-TyVarBndr.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/Language-Haskell-TH-Datatype.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-abstraction-${PKGVERSION}/html/th-abstraction.haddock
