@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 17:28:26 pho Exp $
-lib/wai-extra-${PKGVERSION}/${HS_VERSION}/package-description
-lib/wai-extra-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 10:20:02 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/EventSource.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/EventSource.hi
@@ -121,6 +119,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Util.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Util.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/wai-extra-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wai-extra-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-EventSource-EventStream.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-EventSource.html
@@ -183,12 +183,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/doc-index-U.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/wai-extra.haddock
