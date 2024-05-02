@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 02:47:54 pho Exp $
-lib/rio-orphans-${PKGVERSION}/${HS_VERSION}/package-description
-lib/rio-orphans-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 08:19:18 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_rio_orphans.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_rio_orphans.hi
@@ -10,15 +8,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/RIO/Orphans.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/RIO/Orphans.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/rio-orphans-${PKGVERSION}/${HS_VERSION}/package-description
+lib/rio-orphans-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/RIO-Orphans.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/rio-orphans.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-orphans-${PKGVERSION}/html/synopsis.png
