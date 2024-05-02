@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 09:19:31 pho Exp $
-lib/wai-websockets-${PKGVERSION}/${HS_VERSION}/package-description
-lib/wai-websockets-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 06:46:23 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WebSockets.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WebSockets.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Handler/WebSockets.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/wai-websockets-${PKGVERSION}/${HS_VERSION}/package-description
+lib/wai-websockets-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/Network-Wai-Handler-WebSockets.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-websockets-${PKGVERSION}/html/wai-websockets.haddock
