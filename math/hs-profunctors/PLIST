@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/30 07:48:00 pho Exp $
-lib/profunctors-${PKGVERSION}/${HS_VERSION}/package-description
-lib/profunctors-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/02 04:16:04 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Profunctor.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Profunctor.hi
@@ -52,6 +50,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Profunctor/Yoneda.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Profunctor/Yoneda.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/profunctors-${PKGVERSION}/${HS_VERSION}/package-description
+lib/profunctors-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/Data-Profunctor-Adjunction.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/Data-Profunctor-Cayley.html
@@ -91,12 +91,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/doc-index-U.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/profunctors.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/profunctors-${PKGVERSION}/html/synopsis.png
