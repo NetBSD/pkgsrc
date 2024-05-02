@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2023/11/02 06:37:06 pho Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/02 11:59:34 pho Exp $
 
-DISTNAME=	hledger-lib-1.31
+DISTNAME=	hledger-lib-1.33.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Plain-text accounting tool
 LICENSE=	gnu-gpl-v3
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	megaparsec
 
 # The compiler consumes about 3.5 GiB of memory when -O2 is in effect. It
 # keeps getting swapped in and out and never finishes the compilation.
