@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.guile,v 1.1 2024/05/02 13:35:48 ktnb Exp $
+guile/3.0/lib/guile/3.0/extensions/libguile-mu.so
+info/mu-guile.info
+share/doc/mu/NEWS.org
+share/guile/site/3.0/mu.scm
+share/guile/site/3.0/mu/message.scm
+share/guile/site/3.0/mu/plot.scm
+share/guile/site/3.0/mu/script.scm
+share/guile/site/3.0/mu/stats.scm
+share/mu/scripts/find-dups.scm
+share/mu/scripts/histogram.scm
+share/mu/scripts/msgs-count.scm
