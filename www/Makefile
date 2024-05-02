@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1790 2024/04/17 13:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1791 2024/05/02 06:54:58 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -160,6 +160,7 @@ SUBDIR+=	hs-http-client-tls
 SUBDIR+=	hs-http-conduit
 SUBDIR+=	hs-http-date
 SUBDIR+=	hs-http-media
+SUBDIR+=	hs-http-semantics
 SUBDIR+=	hs-http-types
 SUBDIR+=	hs-http2
 SUBDIR+=	hs-js-chart
