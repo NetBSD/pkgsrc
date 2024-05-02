@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/05/02 07:33:19 nia Exp $
+
+BLAKE2s (ClassiCube-1.3.6.tar.gz) = 395c64236e47abbb255b80e66ff4966b8e336d9ff46fbd522aac1c361ca9e3b6
+SHA512 (ClassiCube-1.3.6.tar.gz) = cc5b7aca6536d2521e48bd75bc5efe0e262bf62c5bc97f5028a28a1236891a9d68678a3bf8c24492742a228f216e5492347d651b98eb63ef9cf389d3f5dcf87d
+Size (ClassiCube-1.3.6.tar.gz) = 2490780 bytes
+SHA1 (patch-Makefile) = ee307475f22df60845d4658cc11f5323631aa823
+SHA1 (patch-src_Audio.c) = 94fceb5c5302115bf92212e703c68b631a6a531f
+SHA1 (patch-src_Http__Worker.c) = 73154e84f95bbfa3f302632f3bb0c4174c7ae0ed
+SHA1 (patch-src_Platform__Posix.c) = 1c20474180aaedbf94d74449711566f158ec8d25

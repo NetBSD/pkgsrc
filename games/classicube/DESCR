@@ -1,0 +1,10 @@
+ClassiCube is a custom Minecraft Classic compatible client written in C from
+scratch.
+
+ClassiCube aims to replicate the 2009 Minecraft Classic client while offering
+optional enhancements to improve gameplay.
+
+ClassiCube is not trying to replicate modern Minecraft versions. It will
+never support survival, logging in with Minecraft accounts or connecting to
+Minecraft servers.  It is not affiliated with (or supported by) Mojang AB,
+Minecraft, or Microsoft in any way.
