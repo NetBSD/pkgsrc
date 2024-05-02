@@ -1,15 +1,15 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2024/04/11 14:15:12 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2024/05/02 08:08:51 pin Exp $
 
-Don't require latest to fix a bug that only affects Windows.
+Don't require latest version of Rust to fix a bug that only affects Windows.
 
---- Cargo.toml.orig	2024-04-11 09:59:36.434842357 +0000
+--- Cargo.toml.orig	2024-05-01 14:34:38.922478814 +0000
 +++ Cargo.toml
 @@ -10,7 +10,7 @@ homepage = "https://www.nushell.sh"
  license = "MIT"
  name = "nu"
  repository = "https://github.com/nushell/nushell"
 -rust-version = "1.77.2"
-+rust-version = "1.75.0"
- version = "0.92.2"
++rust-version = "1.76.0"
+ version = "0.93.0"
  
  # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
