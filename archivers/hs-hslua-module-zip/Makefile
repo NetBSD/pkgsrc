@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:09 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/02 06:45:32 pho Exp $
 
-DISTNAME=	hslua-module-zip-1.1.0
-PKGREVISION=	1
+DISTNAME=	hslua-module-zip-1.1.1
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
