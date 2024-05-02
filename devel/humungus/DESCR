@@ -1,0 +1,10 @@
+humungus - an hg server
+
+- View changes, files, changesets, etc. Some syntax highlighting.
+- Read only web access. Write access via ssh keys.
+- Serves multiple repositories.
+- Allows cloning via the obvious URL. Supports go get.
+- Federates via ActivityPub.
+- Serves files for downloads.
+- Online documentation via mandoc.
+- Terminal based admin interface.
