@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 12:59:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/02 11:01:13 pho Exp $
 bin/skylighting-extract
-lib/skylighting-core-${PKGVERSION}/${HS_VERSION}/package-description
-lib/skylighting-core-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Regex/KDE.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Regex/KDE.hi
@@ -38,6 +36,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/skylighting-core-${PKGVERSION}/${HS_VERSION}/package-description
+lib/skylighting-core-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/Skylighting-Core.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/Skylighting-Loader.html
@@ -68,12 +68,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/skylighting-core.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-core-${PKGVERSION}/html/synopsis.png
