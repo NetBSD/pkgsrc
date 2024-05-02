@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.543 2024/02/14 19:47:36 charlotte Exp $
+# $NetBSD: Makefile,v 1.544 2024/05/02 07:33:19 nia Exp $
 #
 
 COMMENT=	Games
@@ -73,6 +73,7 @@ SUBDIR+=	chocolate-doom
 SUBDIR+=	chromium-bsu
 SUBDIR+=	circuslinux
 SUBDIR+=	civctp-demo
+SUBDIR+=	classicube
 SUBDIR+=	cmatrix
 SUBDIR+=	colchess
 SUBDIR+=	colchess-book-colchess

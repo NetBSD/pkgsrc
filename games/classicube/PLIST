@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/02 07:33:19 nia Exp $
+bin/classicube
+libexec/ClassiCube
+share/applications/classicube.desktop
+share/pixmaps/classicube.png

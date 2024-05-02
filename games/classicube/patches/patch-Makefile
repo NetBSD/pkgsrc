@@ -1,0 +1,94 @@
+$NetBSD: patch-Makefile,v 1.1 2024/05/02 07:33:19 nia Exp $
+
+Honour CFLAGS/LDFLAGS from pkgsrc.
+
+--- Makefile.orig	2024-05-02 07:03:19.920418789 +0000
++++ Makefile
+@@ -3,8 +3,7 @@ C_OBJECTS:=$(patsubst %.c, %.o, $(C_SOUR
+ OBJECTS:=$(C_OBJECTS)
+ ENAME=ClassiCube
+ DEL=rm
+-CFLAGS=-g -pipe -fno-math-errno
+-LDFLAGS=-g -rdynamic
++CFLAGS+= -fno-math-errno
+ 
+ ifndef $(PLAT)
+ 	ifeq ($(OS),Windows_NT)
+@@ -42,59 +41,43 @@ LIBS=-lX11 -lXi -lpthread -lGL -lm -ldl
+ endif
+ 
+ ifeq ($(PLAT),sunos)
+-CFLAGS=-g -pipe -fno-math-errno
+ LIBS=-lm -lsocket -lX11 -lXi -lGL
+ endif
+ 
+ ifeq ($(PLAT),mac_x32)
+-CFLAGS=-g -m32 -pipe -fno-math-errno
+-LIBS=
+-LDFLAGS=-rdynamic -framework Carbon -framework AGL -framework OpenGL -framework IOKit
++LDFLAGS+=-rdynamic -framework Carbon -framework AGL -framework OpenGL -framework IOKit
+ endif
+ 
+ ifeq ($(PLAT),mac_x64)
+ OBJECTS+=src/interop_cocoa.o
+-CFLAGS=-g -m64 -pipe -fno-math-errno
+ LIBS=
+-LDFLAGS=-rdynamic -framework Cocoa -framework OpenGL -framework IOKit -lobjc
++LDFLAGS+=-rdynamic -framework Cocoa -framework OpenGL -framework IOKit -lobjc
+ endif
+ 
+ ifeq ($(PLAT),freebsd)
+-CFLAGS=-g -pipe -I /usr/local/include -fno-math-errno
+-LDFLAGS=-L /usr/local/lib -rdynamic
+-LIBS=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
++LIBS+=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
+ endif
+ 
+ ifeq ($(PLAT),openbsd)
+-CFLAGS=-g -pipe -I /usr/X11R6/include -I /usr/local/include -fno-math-errno
+-LDFLAGS=-L /usr/X11R6/lib -L /usr/local/lib -rdynamic
+-LIBS=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
++LIBS+=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
+ endif
+ 
+ ifeq ($(PLAT),netbsd)
+-CFLAGS=-g -pipe -I /usr/X11R7/include -I /usr/pkg/include -fno-math-errno
+-LDFLAGS=-L /usr/X11R7/lib -L /usr/pkg/lib -rdynamic
+-LIBS=-lexecinfo -lGL -lX11 -lXi -lpthread
++LIBS+=-lexecinfo -lGL -lX11 -lXi -lpthread
+ endif
+ 
+ ifeq ($(PLAT),dragonfly)
+-CFLAGS=-g -pipe -I /usr/local/include -fno-math-errno
+-LDFLAGS=-L /usr/local/lib -rdynamic
+-LIBS=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
++LIBS+=-lexecinfo -lGL -lX11 -lXi -lm -lpthread
+ endif
+ 
+ ifeq ($(PLAT),haiku)
+ OBJECTS+=src/interop_BeOS.o
+-CFLAGS=-g -pipe -fno-math-errno
+-LDFLAGS=-g
+-LIBS=-lm -lGL -lnetwork -lstdc++ -lbe -lgame -ltracker
++LIBS+=-lm -lGL -lnetwork -lstdc++ -lbe -lgame -ltracker
+ endif
+ 
+ ifeq ($(PLAT),beos)
+ OBJECTS+=src/interop_BeOS.o
+-CFLAGS=-g -pipe
+-LDFLAGS=-g
+-LIBS=-lGL -lnetwork -lstdc++ -lbe -lgame -ltracker
++LIBS+=-lGL -lnetwork -lstdc++ -lbe -lgame -ltracker
+ endif
+ 
+ ifeq ($(PLAT),serenityos)
+@@ -102,8 +85,7 @@ LIBS=-lgl -lSDL2
+ endif
+ 
+ ifeq ($(PLAT),irix)
+-CC=gcc
+-LIBS=-lGL -lX11 -lXi -lm -lpthread -ldl
++LIBS+=-lGL -lX11 -lXi -lm -lpthread -ldl
+ endif
+ 
+ ifeq ($(OS),Windows_NT)
