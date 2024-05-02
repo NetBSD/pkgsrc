@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:36:43 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/02 08:20:54 pho Exp $
 
-DISTNAME=	lifted-async-0.10.2.4
-PKGREVISION=	1
+DISTNAME=	lifted-async-0.10.2.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Run lifted IO operations asynchronously and wait for their results
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	constraints
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-lifted-base/buildlink3.mk"
