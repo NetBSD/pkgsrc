@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/02 06:36:26 pho Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/02 04:22:05 pho Exp $
 
-DISTNAME=	deferred-folds-0.9.18.5
-PKGREVISION=	1
+DISTNAME=	deferred-folds-0.9.18.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
