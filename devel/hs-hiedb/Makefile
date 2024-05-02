@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2023/11/08 13:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/02 10:06:47 pho Exp $
 
-DISTNAME=	hiedb-0.4.3.0
-PKGREVISION=	2
+DISTNAME=	hiedb-0.6.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generates a references DB from .hie files
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	algebraic-graphs
 
 # hiedb is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
