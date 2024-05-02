@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/30 09:45:10 pho Exp $
-lib/crypton-x509-store-${PKGVERSION}/${HS_VERSION}/package-description
-lib/crypton-x509-store-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/02 08:05:15 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/X509/CertificateStore.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/X509/CertificateStore.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/X509/CertificateStore.p_hi
@@ -13,17 +11,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/X509/Memory.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/crypton-x509-store-${PKGVERSION}/${HS_VERSION}/package-description
+lib/crypton-x509-store-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/Data-X509-CertificateStore.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/Data-X509-File.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/Data-X509-Memory.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/crypton-x509-store.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-x509-store-${PKGVERSION}/html/synopsis.png
