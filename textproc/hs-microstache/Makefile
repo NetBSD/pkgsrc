@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:33 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/02 11:19:57 pho Exp $
 
 DISTNAME=	microstache-1.0.2.3
 PKGREVISION=	1
@@ -10,7 +10,9 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	aeson	\
-	base
+	base	\
+	deepseq	\
+	text
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
