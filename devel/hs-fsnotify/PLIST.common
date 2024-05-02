@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2023/10/30 13:58:33 pho Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2024/05/02 09:44:00 pho Exp $
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify.dyn_hi
@@ -29,12 +29,10 @@ share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/System-FSNotify-Devel.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/System-FSNotify.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/fsnotify.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/synopsis.png
