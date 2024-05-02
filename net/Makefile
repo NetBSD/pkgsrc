@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1569 2024/04/19 05:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.1570 2024/05/02 06:58:49 pho Exp $
 #
 
 COMMENT=	Networking tools
@@ -248,6 +248,7 @@ SUBDIR+=	hs-mime-types
 SUBDIR+=	hs-network
 SUBDIR+=	hs-network-bsd
 SUBDIR+=	hs-network-byte-order
+SUBDIR+=	hs-network-control
 SUBDIR+=	hs-network-info
 SUBDIR+=	hs-network-multicast
 SUBDIR+=	hs-network-uri
