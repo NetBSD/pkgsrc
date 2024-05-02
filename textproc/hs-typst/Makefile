@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:40 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/02 10:49:38 pho Exp $
 
-DISTNAME=	typst-0.3.2.1
-PKGREVISION=	1
+DISTNAME=	typst-0.5.0.3
 CATEGORIES=	textproc print
 DIST_SUBDIR=	hs-typst # So that it won't conflict with textproc/typst
 
@@ -11,7 +10,6 @@ LICENSE=	modified-bsd
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-cassava/buildlink3.mk"
-.include "../../math/hs-digits/buildlink3.mk"
 .include "../../devel/hs-ordered-containers/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
