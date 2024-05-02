@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3032 2024/05/02 12:03:33 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3033 2024/05/02 13:22:43 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/hs-yesod-core to 1.6.25.1 [pho 2024-05-02]
 	Updated finance/hledger-lib to 1.33.1 [pho 2024-05-02]
 	Updated finance/hledger to 1.33.1 [pho 2024-05-02]
+	Updated lang/chezscheme to 10.0.0 [pho 2024-05-02]
