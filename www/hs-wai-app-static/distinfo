@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/30 19:03:00 pho Exp $
+$NetBSD: distinfo,v 1.3 2024/05/02 11:26:55 pho Exp $
 
-BLAKE2s (wai-app-static-3.1.8.tar.gz) = 99892594147af8d70f744c6d8547f3e5c479c45f1efe6ae3d2c70476446e2f67
-SHA512 (wai-app-static-3.1.8.tar.gz) = 19268c7f7cbdb8b3e8233856f27d2b99ae30b5cffcad6bdb99c9b680fb1128ee9dd248a24568cec693399f339fa4e885167996583a709478cf9d9a257e62a6cc
-Size (wai-app-static-3.1.8.tar.gz) = 23118 bytes
+BLAKE2s (wai-app-static-3.1.9.tar.gz) = 6aeb0bea8eec0b2435e730889ae59688639e66d8cb13e93cf5d5287ba3965002
+SHA512 (wai-app-static-3.1.9.tar.gz) = 2b28f196ae10ace1db0bf1ca160bf9dbf188b373f6d0176a4d5d634deb7ae719a63b301ec9a5bdd01f89d17aa8b6d22eec63a9a600b3f35cde02594cf87f701b
+Size (wai-app-static-3.1.9.tar.gz) = 23416 bytes
