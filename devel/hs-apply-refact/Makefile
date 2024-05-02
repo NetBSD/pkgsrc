@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:17 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/02 10:03:18 pho Exp $
 
-DISTNAME=	apply-refact-0.13.0.0
-PKGREVISION=	1
+DISTNAME=	apply-refact-0.14.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
