@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/11/02 06:37:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/05/02 10:20:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai-extra
 
 .if !defined(HS_WAI_EXTRA_BUILDLINK3_MK)
 HS_WAI_EXTRA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-wai-extra+=	hs-wai-extra>=3.1.13
-BUILDLINK_ABI_DEPENDS.hs-wai-extra+=	hs-wai-extra>=3.1.13.0nb3
+BUILDLINK_API_DEPENDS.hs-wai-extra+=	hs-wai-extra>=3.1.14
+BUILDLINK_ABI_DEPENDS.hs-wai-extra+=	hs-wai-extra>=3.1.14
 BUILDLINK_PKGSRCDIR.hs-wai-extra?=	../../www/hs-wai-extra
 
 .include "../../converters/hs-aeson/buildlink3.mk"
