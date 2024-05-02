@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/02 02:50:25 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/02 11:24:25 pho Exp $
 bin/criterion-report
-lib/criterion-${PKGVERSION}/${HS_VERSION}/package-description
-lib/criterion-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Criterion.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Criterion.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Criterion.p_hi
@@ -41,6 +39,12 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_criterion.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/criterion-${PKGVERSION}/${HS_VERSION}/package-description
+lib/criterion-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/criterion.css
+share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/criterion.js
+share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/default.tpl
+share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/json.tpl
 share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/Criterion-Analysis.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/Criterion-IO-Printf.html
@@ -78,15 +82,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/doc-index-U.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/criterion-${PKGVERSION}/html/synopsis.png
-share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/criterion.css
-share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/criterion.js
-share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/default.tpl
-share/${HS_PLATFORM}/criterion-${PKGVERSION}/templates/json.tpl
