@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2023/11/02 06:37:05 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/02 04:12:34 pho Exp $
 
-DISTNAME=	ormolu-0.7.3.0
+DISTNAME=	ormolu-0.7.4.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Formatter for Haskell source code
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	ansi-terminal
 
 # lib:ormolu
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
