@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/04/30 17:01:15 cheusov Exp $
+# $NetBSD: options.mk,v 1.3 2024/05/02 06:50:00 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python311
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc x11 readline
@@ -40,15 +40,14 @@ CONFIGURE_ARGS+=	--with-pymalloc
 CONFIGURE_ARGS+=	--without-pymalloc
 .endif
 
-# readline/editline
-.if empty(PKG_OPTIONS:Mreadline)
-CONFIGURE_ARGS+= --without-readline
+.if ${PKG_OPTIONS:Mreadline}
+.  include "../../mk/readline.buildlink3.mk"
+.  if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-readline=editline
+.  else
+CONFIGURE_ARGS+=	--with-readline
+.  endif
+PLIST.readline=		yes
 .else
-.include "../../mk/readline.buildlink3.mk"
-.if ${READLINE_TYPE} == "editline"
-CONFIGURE_ARGS+= --with-readline=editline
-.else
-CONFIGURE_ARGS+= --with-readline
-.endif
-PLIST.readline=	yes
+CONFIGURE_ARGS+=	--without-readline
 .endif
