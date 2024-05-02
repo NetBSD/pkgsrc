@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/30 09:11:41 pho Exp $
-lib/aeson-${PKGVERSION}/${HS_VERSION}/package-description
-lib/aeson-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.8 2024/05/02 04:52:05 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.p_hi
@@ -106,6 +104,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Types/ToJSON.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/aeson-${PKGVERSION}/${HS_VERSION}/package-description
+lib/aeson-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Decoding-ByteString-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Decoding-ByteString.html
@@ -152,11 +152,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/synopsis.png
