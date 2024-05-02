@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/05/02 13:34:56 hauke Exp $
+
+The http-01 challenge protocol expects that the letsencrypt server can
+read back the provided domain challenge via http under the path
+"/.well-known/acme-challenge/".
+
+Your web server needs to alias this directory to "${UACME_CHALLENGE_PATH}".
+
+===========================================================================
