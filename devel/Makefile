@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4220 2024/04/30 14:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4221 2024/05/02 10:35:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -801,6 +801,7 @@ SUBDIR+=	hs-word8
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
 SUBDIR+=	hugs-unix
+SUBDIR+=	humungus
 SUBDIR+=	hyperscan
 SUBDIR+=	iaito
 SUBDIR+=	icestorm
