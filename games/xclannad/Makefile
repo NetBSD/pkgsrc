@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/12 13:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/02 13:28:43 jperkin Exp $
 #
 
 DISTNAME=	xclannad-7hc
@@ -16,6 +16,8 @@ LICENSE=	modified-bsd AND gnu-gpl-v2
 WRKSRC=		${WRKDIR}/xclannad-0.07h
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++03
+
+CONFIGURE_ARGS+=	--disable-smpegtest
 
 .include "../../mk/bsd.prefs.mk"
 
