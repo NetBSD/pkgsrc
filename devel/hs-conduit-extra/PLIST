@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/30 11:34:02 pho Exp $
-lib/conduit-extra-${PKGVERSION}/${HS_VERSION}/package-description
-lib/conduit-extra-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/02 04:23:04 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Attoparsec.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Attoparsec.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Attoparsec.p_hi
@@ -43,6 +41,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Zlib.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/conduit-extra-${PKGVERSION}/${HS_VERSION}/package-description
+lib/conduit-extra-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/Data-Conduit-Attoparsec.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/Data-Conduit-Binary.html
@@ -79,11 +79,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/doc-index-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-extra-${PKGVERSION}/html/synopsis.png
