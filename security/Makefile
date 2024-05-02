@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.945 2024/04/26 15:16:52 wiz Exp $
+# $NetBSD: Makefile,v 1.946 2024/05/02 13:34:56 hauke Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -664,6 +664,7 @@ SUBDIR+=	tor-browser-https-everywhere
 SUBDIR+=	tor-browser-noscript
 SUBDIR+=	tripwire
 SUBDIR+=	trufflehog
+SUBDIR+=	uacme
 SUBDIR+=	validns
 SUBDIR+=	vault
 SUBDIR+=	vaultwarden

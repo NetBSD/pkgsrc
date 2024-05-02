@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/02 13:34:56 hauke Exp $
+bin/uacme
+bin/ualpn
+libexec/uacme/nsupdate.sh
+libexec/uacme/uacme.sh
+libexec/uacme/ualpn.sh
+man/man1/uacme.1
+man/man1/ualpn.1
+share/doc/uacme/README.md

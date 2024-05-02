@@ -1,0 +1,44 @@
+$NetBSD: patch-Makefile.am,v 1.1 2024/05/02 13:34:56 hauke Exp $
+
+Do not bother with html docs - man pages are good enough 
+for Ents and Men
+
+--- Makefile.am.orig	2024-04-21 18:01:13.826158561 +0000
++++ Makefile.am
+@@ -67,23 +67,15 @@ endif
+ 
+ if ENABLE_DOCS
+ dist_man1_MANS = uacme.1
+-dist_html_DATA = docs/uacme.html
+ 
+ if ENABLE_UALPN
+ dist_man1_MANS += ualpn.1
+-dist_html_DATA += docs/ualpn.html
+ 
+ ualpn.1: ualpn.1.txt $(top_srcdir)/.version
+ 	$(AM_V_GEN)$(A2X) -L -d manpage -f manpage \
+ 	    -a revision=$(VERSION) \
+ 	    -a sysconfdir="${sysconfdir}" \
+ 	    -a runstatedir="${runstatedir}" $<
+-
+-docs/ualpn.html: ualpn.1.txt $(top_srcdir)/.version
+-	$(AM_V_GEN)$(ASCIIDOC) -d manpage -b html5 -o $@ \
+-	    -a revision=$(VERSION) \
+-	    -a sysconfdir="${sysconfdir}" \
+-	    -a runstatedir="${runstatedir}" $<
+ endif
+ 
+ uacme.1: uacme.1.txt $(top_srcdir)/.version
+@@ -91,12 +83,6 @@ uacme.1: uacme.1.txt $(top_srcdir)/.vers
+ 	    -a revision=$(VERSION) \
+ 	    -a sysconfdir="${sysconfdir}" \
+ 	    -a runstatedir="${runstatedir}" $<
+-
+-docs/uacme.html: uacme.1.txt $(top_srcdir)/.version
+-	$(AM_V_GEN)$(ASCIIDOC) -d manpage -b html5 -o $@ \
+-	    -a revision=$(VERSION) \
+-	    -a sysconfdir="${sysconfdir}" \
+-	    -a runstatedir="${runstatedir}" $<
+ endif
+ 
+ .PHONY: valgrind

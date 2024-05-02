@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/05/02 13:34:56 hauke Exp $
+
+BLAKE2s (v1.7.5.tar.gz) = 1947951f05e8b61a896394d1f67367446969dc14205440514ad679e1951bf208
+SHA512 (v1.7.5.tar.gz) = c219e3ade3a81e3088cc95ecc6422022d18bffd11f26aa1618d7e4bdbf492034ae886ad6d4428ba9bbe64dbe6e6576945f50ea8ae9d6f85098758a20ff82051c
+Size (v1.7.5.tar.gz) = 258398 bytes
+SHA1 (patch-Makefile.am) = 562ca9e346d95771798c8fab146f59aaefb57b52
+SHA1 (patch-uacme.c) = ef74f682f7a4336da4b3686aa50678298608f67e
+SHA1 (patch-uacme.sh) = 24da3e33aac08634d61287d1fb971f0b4095de8e
