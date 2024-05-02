@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/02 06:54:42 pho Exp $
+
+BLAKE2s (http-semantics-0.0.0.tar.gz) = 3f43a2d538e0be5f665627097c7dbe6e393102135e77e0ca8b6712c3e3af3493
+SHA512 (http-semantics-0.0.0.tar.gz) = dcc125f09096474ab57032889d3fdcde8d5a2e77785a12e0285ab08e625a1ee304938e6d04f408015ae8ea8707f32c0f2b4e92b93da90670b735fff1c222c5cb
+Size (http-semantics-0.0.0.tar.gz) = 12672 bytes
