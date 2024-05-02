@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:47 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/02 10:09:00 pho Exp $
 
-DISTNAME=	monad-dijkstra-0.1.1.4
-PKGREVISION=	1
+DISTNAME=	monad-dijkstra-0.1.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
