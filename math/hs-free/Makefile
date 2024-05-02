@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:37:12 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/02 09:33:16 pho Exp $
 
 DISTNAME=	free-5.2
 PKGREVISION=	1
@@ -9,7 +9,8 @@ COMMENT=	Monads for free
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	semigroupoids	\
+	semigroupoids		\
+	template-haskell	\
 	th-abstraction
 
 .include "../../math/hs-comonad/buildlink3.mk"
