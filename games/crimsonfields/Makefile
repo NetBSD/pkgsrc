@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/11/12 13:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/05/02 13:42:24 jperkin Exp $
 
 DISTNAME=	crimson-0.5.3
 PKGNAME=	${DISTNAME:S/crimson/crimsonfields/}
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--enable-bi2cf
 CONFIGURE_ARGS+=	--enable-cf2bmp
 CONFIGURE_ARGS+=	--enable-cfed
 CONFIGURE_ARGS+=	--enable-comet
+
+# Hangs in "../tools/mkunitset ../tools/default.usrc default.units ../gfx"
+NOT_FOR_BULK_PLATFORM+=	Darwin-*-*
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
