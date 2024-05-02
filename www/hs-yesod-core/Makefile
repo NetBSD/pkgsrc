@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:48 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/02 11:38:03 pho Exp $
 
-DISTNAME=	yesod-core-1.6.25.0
-PKGREVISION=	1
+DISTNAME=	yesod-core-1.6.25.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Creation of type-safe, RESTful web applications
 LICENSE=	mit
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	cookie
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-attoparsec-aeson/buildlink3.mk"
