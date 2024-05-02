@@ -1,22 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 13:29:01 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/02 11:15:40 pho Exp $
 bin/aeson-pretty
-lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-description
-lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode/Pretty.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-description
+lib/aeson-pretty-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/Data-Aeson-Encode-Pretty.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/aeson-pretty.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-pretty-${PKGVERSION}/html/synopsis.png
