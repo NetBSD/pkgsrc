@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.183 2024/04/29 21:31:42 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.184 2024/05/02 14:51:53 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25995,3 +25995,4 @@ ruby31-base>=3.1<3.1.5	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2
 ruby32-base>=3.2<3.2.4	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 R<4.4.0		arbirary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
+py{27,37,38,39,310,311,312}-aiohttp<3.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-30251
