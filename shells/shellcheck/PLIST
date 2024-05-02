@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 09:39:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/02 07:51:56 pho Exp $
 bin/shellcheck
 lib/ShellCheck-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ShellCheck-${PKGVERSION}/${HS_VERSION}/package-id
@@ -145,11 +145,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/synopsis.png
