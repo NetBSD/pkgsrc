@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/02 08:24:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-git-lfs
 
 .if !defined(HS_GIT_LFS_BUILDLINK3_MK)
 HS_GIT_LFS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-git-lfs+=	hs-git-lfs>=1.2.1
-BUILDLINK_ABI_DEPENDS.hs-git-lfs+=	hs-git-lfs>=1.2.1nb1
+BUILDLINK_API_DEPENDS.hs-git-lfs+=	hs-git-lfs>=1.2.2
+BUILDLINK_ABI_DEPENDS.hs-git-lfs+=	hs-git-lfs>=1.2.2
 BUILDLINK_PKGSRCDIR.hs-git-lfs?=	../../devel/hs-git-lfs
 
 .include "../../converters/hs-aeson/buildlink3.mk"
