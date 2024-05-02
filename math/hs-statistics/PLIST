@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/02 02:47:40 pho Exp $
-lib/statistics-${PKGVERSION}/${HS_VERSION}/package-description
-lib/statistics-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/02 11:21:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Statistics/Autocorrelation.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Statistics/Autocorrelation.hi
@@ -151,6 +149,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Statistics/Types/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Statistics/Types/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/statistics-${PKGVERSION}/${HS_VERSION}/package-description
+lib/statistics-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/Statistics-Autocorrelation.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/Statistics-ConfidenceInt.html
@@ -222,12 +222,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/statistics.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/statistics-${PKGVERSION}/html/synopsis.png
