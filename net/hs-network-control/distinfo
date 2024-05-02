@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/02 06:58:33 pho Exp $
+
+BLAKE2s (network-control-0.1.0.tar.gz) = 3cff0ae5ee1bc11dfddec6239a54fae4e4526684e0f20ebb0aaaa19504042261
+SHA512 (network-control-0.1.0.tar.gz) = 6adf7da61443be77855e160f596c8b4399410e01aaecdaff32593b8112a60972777ff1b025618484771b41dc9f5e2f4f1a531157adc8eb376e7ed59c18ea88ef
+Size (network-control-0.1.0.tar.gz) = 5616 bytes
