@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/11/02 06:36:41 pho Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/02 10:27:16 pho Exp $
 
-DISTNAME=	hslua-module-system-1.1.0.1
-PKGREVISION=	1
+DISTNAME=	hslua-module-system-1.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
