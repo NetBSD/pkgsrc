@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/02 06:37:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/05/02 08:07:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-invariant
 
 .if !defined(HS_INVARIANT_BUILDLINK3_MK)
 HS_INVARIANT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-invariant+=	hs-invariant>=0.6.2
-BUILDLINK_ABI_DEPENDS.hs-invariant+=	hs-invariant>=0.6.2nb1
+BUILDLINK_API_DEPENDS.hs-invariant+=	hs-invariant>=0.6.3
+BUILDLINK_ABI_DEPENDS.hs-invariant+=	hs-invariant>=0.6.3
 BUILDLINK_PKGSRCDIR.hs-invariant?=	../../math/hs-invariant
 
 .include "../../math/hs-bifunctors/buildlink3.mk"
