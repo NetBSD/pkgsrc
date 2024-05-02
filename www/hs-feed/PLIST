@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/30 13:51:46 pho Exp $
-lib/feed-${PKGVERSION}/${HS_VERSION}/package-description
-lib/feed-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/02 07:40:57 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Util.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Util.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Util.p_hi
@@ -76,6 +74,11 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/RSS1/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/feed-${PKGVERSION}/${HS_VERSION}/package-description
+lib/feed-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/atom.xml
+share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/import_export_atom.xml
+share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/rss20.xml
 share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/Text-Atom-Feed-Export.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/Text-Atom-Feed-Import.html
@@ -122,15 +125,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/feed.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/feed-${PKGVERSION}/html/synopsis.png
-share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/atom.xml
-share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/import_export_atom.xml
-share/${HS_PLATFORM}/feed-${PKGVERSION}/tests/files/rss20.xml
