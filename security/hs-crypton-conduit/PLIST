@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/01 03:08:32 pho Exp $
-lib/crypton-conduit-${PKGVERSION}/${HS_VERSION}/package-description
-lib/crypton-conduit-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/02 07:55:55 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/ChaChaPoly1305/Conduit.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/ChaChaPoly1305/Conduit.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/ChaChaPoly1305/Conduit.p_hi
@@ -16,6 +14,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/PubKey/ECIES/Conduit.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/crypton-conduit-${PKGVERSION}/${HS_VERSION}/package-description
+lib/crypton-conduit-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/Crypto-Cipher-ChaChaPoly1305-Conduit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/Crypto-Hash-Conduit.html
@@ -23,11 +23,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/Crypto-M
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/Crypto-PubKey-ECIES-Conduit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/crypton-conduit.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-conduit-${PKGVERSION}/html/synopsis.png
