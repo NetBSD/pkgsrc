@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:46:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/05/02 20:04:32 triaxx Exp $
 
 BLAKE2s (quesoglc-0.7.1-free.tar.bz2) = 7391b11961cba58e0d8dae7e05f899fcb18424d6e299a1654fb22f9fb5b02ac4
 SHA512 (quesoglc-0.7.1-free.tar.bz2) = 7a0c875b4eb24f01490fb9d982f91c8503e0ea0d177dd32eb5921febf1eab4b5abb2f95d4015714f974f6d384539577ec889389c072f1c686e427d3230ddde9e
 Size (quesoglc-0.7.1-free.tar.bz2) = 641475 bytes
-SHA1 (patch-src_ofont.c) = 5e3b4604c327fe186c02144d6c831253beadce7f
-SHA1 (patch-src_ofont.h) = c8ff08d3bc4fb13a44ab7e2534689d05ef668c06
+SHA1 (patch-src_ofont.c) = 99531668f11606fb8a9c2d161c8ea74e024bb528
+SHA1 (patch-src_ofont.h) = dd7eed567663b9d0a11831ac3309e29f6ed8b525
