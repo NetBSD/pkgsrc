@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/02 06:37:01 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/02 08:15:17 pho Exp $
 
 DISTNAME=	turtle-1.6.2
 PKGREVISION=	1
@@ -7,6 +7,10 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Shell programming, Haskell-style
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	bytestring	\
+	text
 
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
 .include "../../devel/hs-async/buildlink3.mk"
