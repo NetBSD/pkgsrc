@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 07:45:17 pho Exp $
-lib/semigroupoids-${PKGVERSION}/${HS_VERSION}/package-description
-lib/semigroupoids-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.5 2024/05/02 04:15:24 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Bifunctor/Apply.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Bifunctor/Apply.hi
@@ -85,6 +83,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Semigroupoids/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Semigroupoids/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/semigroupoids-${PKGVERSION}/${HS_VERSION}/package-description
+lib/semigroupoids-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/Data-Bifunctor-Apply.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/Data-Functor-Alt.html
@@ -113,13 +113,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/Data-Semig
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/Data-Traversable-Instances.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/Semigroupoids-Do.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/img/classes.svg
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/semigroupoids.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semigroupoids-${PKGVERSION}/html/synopsis.png
