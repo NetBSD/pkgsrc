@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 13:24:57 pho Exp $
-lib/hslua-aeson-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hslua-aeson-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/02 11:08:49 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Aeson.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Aeson.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Aeson.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hslua-aeson-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hslua-aeson-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/HsLua-Aeson.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/hslua-aeson.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-aeson-${PKGVERSION}/html/synopsis.png
