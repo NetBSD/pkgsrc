@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/01 02:34:32 pho Exp $
+$NetBSD: distinfo,v 1.2 2024/05/02 11:38:03 pho Exp $
 
-BLAKE2s (yesod-core-1.6.25.0.tar.gz) = 14ed1b636a1d32726cc096fb6862cb98e88c6d59944e22be65354ab040b08c00
-SHA512 (yesod-core-1.6.25.0.tar.gz) = 1e0babfa9eb7e0e771dd6598988a79925a365ff49a6ca6914e0a05f658768264791bd6fd2bf1beff754a6b3edeff1d2f94aa23bf76457136d819042eff77db45
-Size (yesod-core-1.6.25.0.tar.gz) = 105599 bytes
+BLAKE2s (yesod-core-1.6.25.1.tar.gz) = a1df705fb89038c211b20f43e02cfa6eebc3245c9314a0a6b85ac2c616a3e751
+SHA512 (yesod-core-1.6.25.1.tar.gz) = bb1a4f4b835e1290f87fb0b268e7ef96baa50f023d0a5033e1e2e1bba79557aae572bb5d0b3cff4da7f442bfc7881c59d685d013145be3404891e9554d5a0bbb
+Size (yesod-core-1.6.25.1.tar.gz) = 105723 bytes
