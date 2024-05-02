@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2023/10/30 14:02:52 pho Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2024/05/02 08:04:28 pho Exp $
 lib/simple-sendfile-${PKGVERSION}/${HS_VERSION}/package-description
 lib/simple-sendfile-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -13,12 +13,10 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/Network-Sendfile.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/simple-sendfile.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/simple-sendfile-${PKGVERSION}/html/synopsis.png
