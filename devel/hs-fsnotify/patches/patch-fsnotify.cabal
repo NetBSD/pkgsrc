@@ -1,4 +1,4 @@
-$NetBSD: patch-fsnotify.cabal,v 1.2 2023/01/26 15:08:26 pho Exp $
+$NetBSD: patch-fsnotify.cabal,v 1.3 2024/05/02 09:44:00 pho Exp $
 
 Use hinotify on some BSDs. libinotify emulates it with kqueue(2) which is
 much better than polling.
@@ -8,7 +8,7 @@ Not upstreamed yet; can only be upstreamed after
 
 --- fsnotify.cabal.orig	2022-10-17 01:19:16.000000000 +0000
 +++ fsnotify.cabal
-@@ -46,15 +46,13 @@ library
+@@ -46,15 +46,15 @@ library
      , time >=1.1
      , unix-compat >=0.2
    default-language: Haskell2010
@@ -20,9 +20,26 @@ Not upstreamed yet; can only be upstreamed after
    if os(darwin)
      cpp-options: -DOS_Mac
 -  if os(freebsd) || os(netbsd) || os(openbsd)
--    cpp-options: -DOS_BSD
++  if !os(linux) && !os(freebsd) && !os(netbsd) && !os(openbsd) && !os(windows)
+     cpp-options: -DOS_BSD
 -  if os(linux)
 +  if os(linux) || os(freebsd) || os(netbsd) || os(openbsd)
      other-modules:
          System.FSNotify.Linux
+     build-depends:
+@@ -99,13 +99,13 @@ test-suite tests
+     , unix-compat
+     , unliftio >=0.2.20
+   default-language: Haskell2010
+-  if os(linux)
++  if os(linux) || os(freebsd) || os(netbsd) || os(openbsd)
+     cpp-options: -DOS_Linux
+   if os(windows)
+     cpp-options: -DOS_Win32
+   if os(darwin)
+     cpp-options: -DOS_Mac
+-  if os(freebsd) || os(netbsd) || os(openbsd)
++  if !os(linux) && !os(freebsd) && !os(netbsd) && !os(openbsd) && !os(windows)
+     cpp-options: -DOS_BSD
+   if os(windows)
      build-depends:
