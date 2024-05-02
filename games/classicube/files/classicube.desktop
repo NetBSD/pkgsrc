@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=ClassiCube
+GenericName=Minecraft Classic client
+Comment=Minecraft Classic client
+Icon=classicube
+Exec=classicube
+Terminal=false
+Categories=Game;
