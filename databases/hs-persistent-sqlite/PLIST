@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 17:00:26 pho Exp $
-lib/persistent-sqlite-${PKGVERSION}/${HS_VERSION}/package-description
-lib/persistent-sqlite-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 09:33:19 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist/Sqlite.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist/Sqlite.hi
@@ -13,13 +11,14 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Database/Sqlite/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Database/Sqlite/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/persistent-sqlite-${PKGVERSION}/${HS_VERSION}/package-description
+lib/persistent-sqlite-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/Database-Persist-Sqlite.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/Database-Sqlite-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/Database-Sqlite.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-124.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-33.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-36.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-42.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-43.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-45.html
@@ -49,12 +48,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-in
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/persistent-sqlite.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-sqlite-${PKGVERSION}/html/synopsis.png
