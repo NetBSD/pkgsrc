@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/10/30 10:33:02 micha Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/03 09:53:28 micha Exp $
 
-DISTNAME=	freedoom-0.12.1
+DISTNAME=	freedoom-0.13.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freedoom/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -34,8 +34,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doom/freedoom1.wad
 	${INSTALL_DATA} ${WRKSRC}/freedoom2.wad \
 		${DESTDIR}${PREFIX}/share/doom/freedoom2.wad
-	${INSTALL_DATA} ${WRKSRC}/freedoom-manual.pdf \
-		${DESTDIR}${PREFIX}/share/doc/freedoom/freedoom-manual.pdf
+	${INSTALL_DATA} ${WRKSRC}/freedoom-manual-en.pdf \
+		${DESTDIR}${PREFIX}/share/doc/freedoom/freedoom-manual-en.pdf
+	${INSTALL_DATA} ${WRKSRC}/freedoom-manual-es.pdf \
+		${DESTDIR}${PREFIX}/share/doc/freedoom/freedoom-manual-es.pdf
+	${INSTALL_DATA} ${WRKSRC}/freedoom-manual-fr.pdf \
+		${DESTDIR}${PREFIX}/share/doc/freedoom/freedoom-manual-fr.pdf
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/freedoom/INSTALL.pkgsrc
 
