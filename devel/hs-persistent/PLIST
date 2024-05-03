@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:52:30 pho Exp $
-lib/persistent-${PKGVERSION}/${HS_VERSION}/package-description
-lib/persistent-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 09:31:00 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist.hi
@@ -142,6 +140,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist/Types/Base.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Database/Persist/Types/Base.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/persistent-${PKGVERSION}/${HS_VERSION}/package-description
+lib/persistent-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/Database-Persist-Class-PersistConfig.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/Database-Persist-Class-PersistEntity.html
@@ -180,7 +180,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/Database-Pers
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/Database-Persist.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-124.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-33.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-36.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-42.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-43.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-45.html
@@ -211,12 +210,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/persistent.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/persistent-${PKGVERSION}/html/synopsis.png
