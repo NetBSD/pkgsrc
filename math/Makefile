@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.590 2024/02/26 19:21:30 pin Exp $
+# $NetBSD: Makefile,v 1.591 2024/05/03 10:09:58 wiz Exp $
 
 COMMENT=	Mathematics
 
+SUBDIR+=	QXlsx
 SUBDIR+=	R
 SUBDIR+=	R-CGIwithR
 SUBDIR+=	R-DAAG
