@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 16:16:39 pho Exp $
-lib/primitive-extras-${PKGVERSION}/${HS_VERSION}/package-description
-lib/primitive-extras-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/03 07:43:14 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/PrimitiveExtras/Bitmap.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/PrimitiveExtras/Bitmap.hi
@@ -34,6 +32,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/PrimitiveExtras/UnliftedArray.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/PrimitiveExtras/UnliftedArray.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/primitive-extras-${PKGVERSION}/${HS_VERSION}/package-description
+lib/primitive-extras-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/PrimitiveExtras-Bitmap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/PrimitiveExtras-By6Bits.html
@@ -42,12 +42,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/Primiti
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/PrimitiveExtras-SmallArray.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/PrimitiveExtras-UnliftedArray.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/primitive-extras.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-extras-${PKGVERSION}/html/synopsis.png
