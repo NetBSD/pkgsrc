@@ -1,8 +1,8 @@
-$NetBSD: patch-src_text__codec.cpp,v 1.2 2024/01/16 21:26:03 pin Exp $
+$NetBSD: patch-src_text__codec.cpp,v 1.3 2024/05/03 09:16:52 pin Exp $
 
 NetBSD 9 uses const in the second argument to iconv.
 
---- src/text_codec.cpp.orig	2024-01-16 21:02:09.859731226 +0000
+--- src/text_codec.cpp.orig	2024-05-03 08:38:17.190099116 +0000
 +++ src/text_codec.cpp
 @@ -14,6 +14,13 @@
  
