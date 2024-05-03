@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/01 02:57:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 18:25:52 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Yesod/Form.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Yesod/Form.hi
@@ -120,12 +120,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-form-${PKGVERSION}/html/yesod-form.haddock
