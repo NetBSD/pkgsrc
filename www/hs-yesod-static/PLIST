@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/01 03:18:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 18:24:43 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Yesod/EmbeddedStatic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Yesod/EmbeddedStatic.hi
@@ -32,12 +32,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/Yesod-Embed
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/Yesod-EmbeddedStatic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/Yesod-Static.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/yesod-static-${PKGVERSION}/html/yesod-static.haddock
