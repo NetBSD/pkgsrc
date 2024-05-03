@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/11/02 06:37:36 pho Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/03 09:59:49 pho Exp $
 
-DISTNAME=	skylighting-0.14
-PKGREVISION=	1
+DISTNAME=	skylighting-0.14.1.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
