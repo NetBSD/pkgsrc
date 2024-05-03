@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/12/16 12:01:18 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2024/05/03 19:19:20 he Exp $
 
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	base64-0.21.5
@@ -26,7 +26,7 @@ CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.9
 CARGO_CRATE_DEPENDS+=	pbkdf2-0.12.2
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.70
-CARGO_CRATE_DEPENDS+=	pyo3-0.20.0
+CARGO_CRATE_DEPENDS+=	pyo3-0.20.3
 CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.20.0
 CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.20.0
 CARGO_CRATE_DEPENDS+=	pyo3-macros-0.20.0

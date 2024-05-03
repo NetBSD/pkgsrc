@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2023/12/16 12:01:18 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/05/03 19:19:20 he Exp $
 
 BLAKE2s (autocfg-1.1.0.crate) = dd57bc2348994ace592664469f4b2389f230343402c627a9981eb582f10b0060
 SHA512 (autocfg-1.1.0.crate) = df972c09abbdc0b6cb6bb55b1e29c7fed706ece38a62613d9e275bac46a19574a7f96f0152cccb0239efea04ee90083a146b58b15307696c4c81878cd12de28f
@@ -81,9 +81,9 @@ Size (pbkdf2-0.12.2.crate) = 13906 bytes
 BLAKE2s (proc-macro2-1.0.70.crate) = 75917ed24f72060030539b9c898e784d8c2cca27bd30cf04c955d4ac7a2b78b9
 SHA512 (proc-macro2-1.0.70.crate) = ae9366856853f7d96caf7a7581843d36bfc7843f8683897b19ffc666c03b0b1eff502ddb18ca4c1c1a239a368f03f6cc258b0e2795f64b61c6a31404462eec5f
 Size (proc-macro2-1.0.70.crate) = 44343 bytes
-BLAKE2s (pyo3-0.20.0.crate) = 37d6a47bb0d8ee8be0270dc77db092c506fa4108aeef1e622b092e5481c8919b
-SHA512 (pyo3-0.20.0.crate) = 85d9533c75f905752c62f6a4898582ae48daf085e287b44949c47260301205a5f00477927877ce46300d2801d22fbc04a958c058a37eb28374c834fff27feca1
-Size (pyo3-0.20.0.crate) = 431766 bytes
+BLAKE2s (pyo3-0.20.3.crate) = 7f2bd95335b519fc2115d14b351045b3467b058e0e9eb4b16f956d1444bace6a
+SHA512 (pyo3-0.20.3.crate) = 77cce558fa60bbd8d9981ff5e62fdfa9bac94bd650b287fbf14ac93ef1c326c8ae7fda82d744e3582df03cab8adf490e0f2752fabd9ae3de044e7d80984e0350
+Size (pyo3-0.20.3.crate) = 434673 bytes
 BLAKE2s (pyo3-build-config-0.20.0.crate) = 10bd4ce7bc5826dc0893f085be0b35ac87c4ff15d5a435de2c95b7ee0d12e8d7
 SHA512 (pyo3-build-config-0.20.0.crate) = a01d06ebeb4b9cfe6ff6731046101e9437498453ca5aa68ec53df3bfb2f34665a489f8072636c2da16c1e867f536032fd293f05a43561117fd131bde5fe5aac7
 Size (pyo3-build-config-0.20.0.crate) = 29534 bytes
@@ -162,3 +162,5 @@ Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
 BLAKE2s (zeroize-1.7.0.crate) = baa7e9c604cbab771f49a3a213e3e2bb1c598b370aba7cdb7b5370c85cb7d733
 SHA512 (zeroize-1.7.0.crate) = 9d31e3e76e8c861309a3579c21f6da5fd6b056c7d7a350427445a1a832e8827204804783f7f9b808acaa2148efef883d9078bf84943b1db55526bba5bf5a2756
 Size (zeroize-1.7.0.crate) = 19039 bytes
+SHA1 (patch-src___bcrypt_Cargo.lock) = 841b940924e16a3baef32a79f0636d0904c96f53
+SHA1 (patch-src___bcrypt_Cargo.toml) = c31653b920f8c4e157863c3eba651652e3fd0332
