@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/12/16 12:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/03 19:19:20 he Exp $
 
 DISTNAME=	bcrypt-4.1.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
@@ -15,6 +16,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+CARGO_WRKSRC=	${WRKSRC}/src/_bcrypt/
+
+CHECK_WRKREF_SKIP+=lib/python*/site-packages/bcrypt/_bcrypt.so	
 
 .include "cargo-depends.mk"
 
