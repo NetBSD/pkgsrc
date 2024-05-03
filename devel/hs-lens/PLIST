@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 18:52:37 pho Exp $
-lib/lens-${PKGVERSION}/${HS_VERSION}/package-description
-lib/lens-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/03 10:43:32 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Lens.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Lens.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Lens.p_hi
@@ -259,6 +257,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Error/Lens.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/lens-${PKGVERSION}/${HS_VERSION}/package-description
+lib/lens-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/Control-Exception-Lens.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/Control-Lens-At.html
@@ -384,7 +384,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/images/Hierarchy.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/images/overview.png
@@ -393,5 +392,4 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/lens.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lens-${PKGVERSION}/html/synopsis.png
