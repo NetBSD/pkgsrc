@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/02 01:06:39 pho Exp $
-lib/dbus-${PKGVERSION}/${HS_VERSION}/package-description
-lib/dbus-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 18:29:01 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/DBus.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/DBus.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/DBus.p_hi
@@ -46,6 +44,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/DBus/Transport.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/dbus-${PKGVERSION}/${HS_VERSION}/package-description
+lib/dbus-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/DBus-Client.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/DBus-Generation.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/DBus-Internal-Address.html
@@ -84,12 +84,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/html/synopsis.png
 share/doc/${HS_PLATFORM}/dbus-${PKGVERSION}/license.txt
