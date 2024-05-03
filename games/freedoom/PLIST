@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/21 09:58:35 micha Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/03 09:53:28 micha Exp $
 share/doc/freedoom/INSTALL.pkgsrc
-share/doc/freedoom/freedoom-manual.pdf
+share/doc/freedoom/freedoom-manual-en.pdf
+share/doc/freedoom/freedoom-manual-es.pdf
+share/doc/freedoom/freedoom-manual-fr.pdf
 share/doom/freedoom1.wad
 share/doom/freedoom2.wad
