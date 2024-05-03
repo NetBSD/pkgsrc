@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3046 2024/05/03 09:24:32 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3047 2024/05/03 09:31:10 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4889,3 +4889,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/focuswriter to 1.8.7 [pin 2024-05-03]
 	Updated devel/fourmolu to 0.15.0.0 [pho 2024-05-03]
 	Updated devel/floskell to 0.11.1 [pho 2024-05-03]
+	Updated devel/hs-persistent to 2.14.6.1 [pho 2024-05-03]
