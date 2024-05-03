@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/11/01 15:37:07 pho Exp $
+# $NetBSD: options.mk,v 1.2 2024/05/03 09:55:29 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hs-texmath
 PKG_SUPPORTED_OPTIONS=	server
@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS=	# none
 CONFIGURE_ARGS+=			-fserver
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	texmath-server
 PLIST.server=				yes
-.include "../../devel/hs-optparse-applicative/buildlink3.mk"
+.include "../../devel/hs-optparse-applicative/application.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../www/hs-servant-server/buildlink3.mk"
 .include "../../www/hs-wai/buildlink3.mk"
