@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/10/30 16:58:17 pho Exp $
+$NetBSD: distinfo,v 1.7 2024/05/03 09:11:28 pho Exp $
 
-BLAKE2s (hlint-3.6.1.tar.gz) = 93987d2544ae0f6adb529ee4849f201bd5b79fbdc138225925dd8c7f94bd369b
-SHA512 (hlint-3.6.1.tar.gz) = 1e46092efafc6853f94030a7aa632d0a9b161a6adfaf60df80ed41522ee1cc291665be566123d1d1a8962d9c112cc68b2b60ac2fb7d2a2d8aa6fd57b3ccd8296
-Size (hlint-3.6.1.tar.gz) = 182072 bytes
+BLAKE2s (hlint-3.8.tar.gz) = c369e18d08ea9b9cfe44edc91e0452ad695e846b9c0e3b00bbf2cd0304e54b3b
+SHA512 (hlint-3.8.tar.gz) = 7dd1eb0195ebe1453aba0f690e2de65c9a4d487eac2f13b9e7ed013bb880033f75b599585634ae2582f316dc8e4745495caeb3986961f4ea7cb555f5905be95b
+Size (hlint-3.8.tar.gz) = 183849 bytes
