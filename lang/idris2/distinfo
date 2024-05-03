@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/05/03 06:47:18 pho Exp $
+$NetBSD: distinfo,v 1.4 2024/05/03 06:47:52 pho Exp $
 
 BLAKE2s (idris2-0.7.0.tar.gz) = c712b388684f4bd5b96d223ee93e56d3faea52f7c3dc73aa3247f169dd99c024
 SHA512 (idris2-0.7.0.tar.gz) = 3c645807d71ecf62bc66b674438ebf80ec6e7e4bbf473d86ec06bc7b59f8187618e0d56535380079837e15caebef02deba9beb3eb3c77da787befac88d7a6d2b
 Size (idris2-0.7.0.tar.gz) = 6987849 bytes
-SHA1 (patch-src_Idris_SetOptions.idr) = 0a7c153290d39c07ac83406e9e8b1d9c0072366d
