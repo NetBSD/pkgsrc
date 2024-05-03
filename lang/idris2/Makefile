@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2023/11/06 17:17:50 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/03 06:47:18 pho Exp $
 
-DISTNAME=	idris2-0.6.0
+# ABI version: See ${WRKSRC}/src/Core/Binary.idr (ttcVersion)
+IDRIS2_TTC_VERSION=	2023090800
+
+DISTNAME=	idris2-0.7.0
 CATEGORIES=	lang
-MASTER_SITES=	https://www.idris-lang.org/idris2-src/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=idris-lang/}
+GITHUB_PROJECT=	Idris2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.idris-lang.org/index.html
+HOMEPAGE=	https://www.idris-lang.org/
 COMMENT=	Functional Programming Language with Dependent Types
 LICENSE=	modified-bsd
 
@@ -14,10 +18,17 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/idris2/Idris2/}
 
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
+
+#
+# Targets (See ${WRKSRC}/INSTALL.mk)
+#
 BUILD_TARGET=	bootstrap
 MAKE_FLAGS=	SCHEME=chezscheme
 TEST_TARGET=	test
 
+#
+# Build
+#
 post-build:
 	${WRKSRC}/build/exec/idris2 --bash-completion-script idris2 > ${WRKDIR}/idris2.bash
 	( \
@@ -26,9 +37,9 @@ post-build:
 		${CAT} ${WRKDIR}/idris2.bash; \
 	) > ${WRKDIR}/idris2.zsh
 
-# TODO: It would be nice to install API documentation too, but "make
-# install-api" currently doesn't work because it tries to read files from
-# the final installation path ${PREFIX} but not from ${DESTDIR}.
+#
+# Install
+#
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/zsh/site-functions
@@ -54,6 +65,21 @@ SUBST_FILES.app=	${DESTDIR}${PREFIX}/bin/idris2
 SUBST_FILTER_CMD.app=	${AWK} '/fi/	{ print $$0; print "DIR=$$DIR/../libexec"; next } \
 					{ print $$0 }'
 
+# These .so files aren't shared libraries.
+CHECK_SHLIBS_SKIP+=	${PKGNAME_NOREV}/*.so
+CHECK_SHLIBS_SKIP+=	libexec/idris2_app/idris2.so
+
+#
+# PLIST
+#
+PRINT_PLIST_AWK+=	{ gsub("${PKGNAME_NOREV}", "$${PKGNAME_NOREV}") }
+PRINT_PLIST_AWK+=	{ gsub("${IDRIS2_TTC_VERSION}", "$${IDRIS2_TTC_VERSION}") }
+PLIST_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
+PLIST_SUBST+=		IDRIS2_TTC_VERSION=${IDRIS2_TTC_VERSION}
+
+#
+# Dependencies
+#
 # It uses Chez Scheme at run time in order to compile Scheme source
 # (compiled from Idris 2) into native code.
 DEPENDS+=	chezscheme-[0-9]*:../../lang/chezscheme
