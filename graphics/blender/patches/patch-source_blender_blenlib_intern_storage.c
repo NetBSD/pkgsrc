@@ -1,9 +1,9 @@
-$NetBSD: patch-source_blender_blenlib_intern_storage.c,v 1.2 2023/10/15 19:53:20 ryoon Exp $
+$NetBSD: patch-source_blender_blenlib_intern_storage.c,v 1.3 2024/05/03 20:34:37 ryoon Exp $
 
 Use statvfs on Solaris. (From PR 35928)
 
---- source/blender/blenlib/intern/storage.c.orig	2023-05-17 23:38:29.000000000 +0000
-+++ source/blender/blenlib/intern/storage.c
+--- source/blender/blenlib/intern/storage.cc.orig	2023-05-17 23:38:29.000000000 +0000
++++ source/blender/blenlib/intern/storage.cc
 @@ -13,7 +13,7 @@
  
  #include <sys/stat.h>
