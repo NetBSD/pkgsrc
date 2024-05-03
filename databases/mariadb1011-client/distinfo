@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/04/10 19:24:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/05/03 09:48:19 wiz Exp $
 
 BLAKE2s (mariadb-10.11.7.tar.gz) = 66a70689bd177e2b4c886b9fdda7426314c767207408d2ded8d8f4f6714ab3d5
 SHA512 (mariadb-10.11.7.tar.gz) = a6ebc9ba88b52e5d339b176b6fa48c03fcbe5bb590740a02c1bbd083a3d62e619937e645de2504a9f9adeed2f67127fab0307dece524b7c5217ad5df0f3ccc71
@@ -7,6 +7,7 @@ SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc
 SHA1 (patch-CMakeLists.txt) = 9bdc3c88521b9bd217d37d286950a71ae0d0e1e0
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = e9c33cd51c11b6be309ee6d1404da2d9ece38efd
+SHA1 (patch-cmake_libfmt.cmake) = 2337c62c19d625b44e5082d0f1cae6afde708601
 SHA1 (patch-extra_readline_CMakeLists.txt) = 37873deaeccb37e1313179103bb12dcde4a496d6
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-mysys_my__gethwaddr.c) = c3f179aa659e16f2fd9b858a718dd1cdd6f93c9f
