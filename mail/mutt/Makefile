@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2024/03/09 18:32:16 tron Exp $
+# $NetBSD: Makefile,v 1.277 2024/05/03 06:34:18 jperkin Exp $
 
 DISTNAME=		mutt-2.2.13
 CATEGORIES=		mail
@@ -24,7 +24,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mailpath=${VARBASE}/mail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt
-CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-pop
 CONFIGURE_ARGS+=	--enable-imap
