@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:36:15 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/03 09:11:28 pho Exp $
 
-DISTNAME=	hlint-3.6.1
+DISTNAME=	hlint-3.8
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell source code suggestions
 LICENSE=	modified-bsd
-
-# It's too much effort to locally patch the source to make it
-# compatible. Let's just wait for the upstream to do it.
-BROKEN+=	"hlint is currently not buildable because it's incompatible with ghc-lib-parser 9.8"
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
