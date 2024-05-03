@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/11/02 06:37:06 pho Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/03 08:48:18 pho Exp $
 
-DISTNAME=	retrie-1.2.2
+DISTNAME=	retrie-1.2.3
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,11 +9,7 @@ COMMENT=	Powerful, easy-to-use codemodding tool for Haskell
 LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	ansi-terminal	\
-	mtl	\
-	optparse-applicative	\
-	transformers
+	ansi-terminal
 
 # If retrie is to be linked dynamically, it will depend on more than 80
 # shared objects and the dynamic linker will spend too much time to resolve
@@ -22,6 +17,11 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 # launched very frequently by editors and IDEs. This wastes storage, but
 # time is more expensive than disks.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
+
+# Although we want the executable "retrie" to be built, we don't want
+# "demo-retrie". The upstream should really decouple these.
+HASKELL_DISABLE_EXECUTABLES+=	\
+	demo-retrie
 
 CONFIGURE_ARGS+=	-f BuildExecutable
 
