@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 03:44:03 pho Exp $
-lib/row-types-${PKGVERSION}/${HS_VERSION}/package-description
-lib/row-types-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.2 2024/05/03 09:03:22 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Row.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Row.hi
@@ -22,6 +20,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Row/Variants.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Row/Variants.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/row-types-${PKGVERSION}/${HS_VERSION}/package-description
+lib/row-types-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/Data-Row-Dictionaries.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/Data-Row-Internal.html
@@ -53,12 +53,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/doc-index-V.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/row-types.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/row-types-${PKGVERSION}/html/synopsis.png
