@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/11/02 06:36:15 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/05/03 09:24:23 pho Exp $
 
 BUILDLINK_TREE+=	floskell
 
 .if !defined(FLOSKELL_BUILDLINK3_MK)
 FLOSKELL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.floskell+=	floskell>=0.11.0
-BUILDLINK_ABI_DEPENDS.floskell+=	floskell>=0.11.0nb1
+BUILDLINK_API_DEPENDS.floskell+=	floskell>=0.11.1
+BUILDLINK_ABI_DEPENDS.floskell+=	floskell>=0.11.1
 BUILDLINK_PKGSRCDIR.floskell?=		../../devel/floskell
 
 .include "../../converters/hs-aeson/buildlink3.mk"
