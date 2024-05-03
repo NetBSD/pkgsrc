@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2024/03/13 05:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.642 2024/05/03 11:17:25 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -126,6 +126,7 @@ SUBDIR+=	hs-magic
 SUBDIR+=	hs-pager
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	incidenceeditor
+SUBDIR+=	indi
 SUBDIR+=	ipbt
 SUBDIR+=	iselect
 SUBDIR+=	iwatch
