@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/05/02 11:51:20 pho Exp $
+# $NetBSD: Makefile,v 1.22 2024/05/03 07:36:41 pho Exp $
 
 DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
@@ -9,13 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Functional Programming Language with Dependent Types
 LICENSE=	modified-bsd
 
-# Idris 1 is no longer maintained actively. We should consider packaging
-# Idris 2, which is much harder to package due to the way how it's
-# built: https://github.com/idris-lang/Idris2
-#
-# ...and it's getting harder and harder to keep it getting compiled with
-# newer GHC. We should really switch to Idris2, or at least stop manually
-# patching sources and use devel/retrie to automate it.
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	aeson			\
 	ansi-terminal		\

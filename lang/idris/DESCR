@@ -4,3 +4,8 @@ predicated on values, meaning that some aspects of a program's
 behaviour can be specified precisely in the type. The language is
 closely related to Epigram and Agda. There is a tutorial at
 http://www.idris-lang.org/documentation
+
+This package provides Idris 1, which is no longer maintained by
+upstream. It's getting harder and harder to keep it compatible with newer
+versions of GHC, and next time it breaks we will remove this
+package. Existing users should migrate to lang/idris2 urgently.
