@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2023/11/02 06:36:15 pho Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/03 09:21:00 pho Exp $
 
-DISTNAME=	fourmolu-0.14.1.0
+DISTNAME=	fourmolu-0.15.0.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Formatter for Haskell source code
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	ansi-terminal
 
 # lib:fourmolu
 .include "../../converters/hs-aeson/buildlink3.mk"

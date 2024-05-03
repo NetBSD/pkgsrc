@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/10/30 17:10:56 pho Exp $
+$NetBSD: distinfo,v 1.5 2024/05/03 09:21:00 pho Exp $
 
-BLAKE2s (fourmolu-0.14.1.0.tar.gz) = e1e85c9bd90c5b5474742a6237e05f0eb5252b1dfb4ab1b171c17d36608b5be1
-SHA512 (fourmolu-0.14.1.0.tar.gz) = 242dcff87a24f2ba26ab07466917331f922163cd3eb299a3f4240d134f30a75e0687c9067e55557c7cfdc59247949a76ac1f3f577391b52b56521d64ec31309f
-Size (fourmolu-0.14.1.0.tar.gz) = 404075 bytes
+BLAKE2s (fourmolu-0.15.0.0.tar.gz) = cbdec50787223df8ebe1f2610efa33fc92af6caba4c49f26ed23e549b851ef55
+SHA512 (fourmolu-0.15.0.0.tar.gz) = 8e98577cb7c091641b32db04ddd12b10f5c0095b11ff028eb317d60f35975626026c3156dc85b654ba9e2625c1c0da5e9b682b9ffb68e954c6ebb7c9e16f3962
+Size (fourmolu-0.15.0.0.tar.gz) = 409507 bytes
