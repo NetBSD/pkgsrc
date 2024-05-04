@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:37:16 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/04 14:15:59 pho Exp $
 
-DISTNAME=	hoogle-5.0.18.3
+DISTNAME=	hoogle-5.0.18.4
 PKGNAME=	${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
@@ -15,13 +14,6 @@ LICENSE=	modified-bsd
 # be launched very frequently by editors and IDEs. This wastes storage, but
 # time is more expensive than disks.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
-
-# "connection" is outdated and is no longer buildable. Use
-# crypton-connection instead.
-SUBST_CLASSES+=		conn
-SUBST_STAGE.conn=	post-extract
-SUBST_FILES.conn=	hoogle.cabal
-SUBST_SED.conn=		-e 's/connection,/crypton-connection,/'
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
@@ -43,6 +35,7 @@ SUBST_SED.conn=		-e 's/connection,/crypton-connection,/'
 .include "../../sysutils/hs-process-extras/buildlink3.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../devel/hs-resourcet/buildlink3.mk"
+.include "../../devel/hs-safe/buildlink3.mk"
 .include "../../devel/hs-storable-tuple/buildlink3.mk"
 .include "../../archivers/hs-tar/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
