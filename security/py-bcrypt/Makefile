@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/05/03 19:19:20 he Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/04 10:18:12 he Exp $
 
-DISTNAME=	bcrypt-4.1.2
-PKGREVISION=	1
+DISTNAME=	bcrypt-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
