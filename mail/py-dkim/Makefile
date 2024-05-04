@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/04/17 19:58:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/04 23:52:06 jym Exp $
 
 DISTNAME=	dkimpy-1.1.6
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dkimpy/}
@@ -25,10 +26,13 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
-.if ${PKGMANDIR} != "share/man"
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endif
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	setup.py
+SUBST_VARS.paths=	PKGMANDIR
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

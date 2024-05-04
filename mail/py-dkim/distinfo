@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/04/17 19:58:31 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/05/04 23:52:06 jym Exp $
 
 BLAKE2s (dkimpy-1.1.6.tar.gz) = 70fa5797b71ca5f5c421bbeb8ce0703302b267b77a155c1e1d692977cb52b6e3
 SHA512 (dkimpy-1.1.6.tar.gz) = d61331cc7baa3bd5156d919a4a88ad792ac3c3077381585f8b5aa1a35dc50761b86286312e13f3514496ab50bdc6f2dac469f4b5419b49053c1c9204d569d317
 Size (dkimpy-1.1.6.tar.gz) = 66557 bytes
+SHA1 (patch-setup.py) = 9515270a101c71e9adce4ced196b32f3cf8a23dc
