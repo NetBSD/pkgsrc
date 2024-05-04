@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/04 13:31:29 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/04 13:33:08 pho Exp $
 
 DISTNAME=	servant-server-0.20
 PKGREVISION=	1
@@ -7,6 +7,9 @@ CATEGORIES=	www
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Family of combinators for defining webservices APIs and serving them
 LICENSE=	modified-bsd
+
+HASKELL_DISABLE_EXECUTABLES+=	\
+	greet
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base		\
