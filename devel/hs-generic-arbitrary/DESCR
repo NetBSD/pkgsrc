@@ -1,0 +1,4 @@
+Generic implementations of methods of the Arbitrary class from the
+QuickCheck library. The approach taken here can lead to diverging instances
+for mutually recursive types but is safe for simply recursive ones and
+guarantees flat distribution for constructors of sum-types.
