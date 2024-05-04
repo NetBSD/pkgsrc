@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/02 06:37:07 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/04 12:41:41 pho Exp $
 
-DISTNAME=	dhall-1.42.0
+DISTNAME=	dhall-1.42.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,11 +10,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	Diff	\
-	aeson	\
-	ansi-terminal	\
-	optparse-applicative	\
-	template-haskell	\
-	unix-compat
+	ansi-terminal
 
 # If bin/dhall is to be linked dynamically, it will depend on more than 140
 # shared objects and the dynamic linker will spend more than a second to
