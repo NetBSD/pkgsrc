@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2022/11/24 12:56:03 adam Exp $
+# $NetBSD: options.mk,v 1.17 2024/05/04 18:39:00 tnn Exp $
 
 .include "../../comms/lirc/available.mk"
 
@@ -28,10 +28,10 @@ MESON_ARGS+=		-Dgsettings=disabled
 
 .if !empty(PKG_OPTIONS:Mlirc)
 PLIST.lirc=		yes
-CONFIGURE_ARGS+=	--enable-lirc
+MESON_ARGS+=		-Dlirc=enabled
 .include "../../comms/lirc/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-lirc
+MESON_ARGS+=		-Dlirc=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
@@ -41,8 +41,9 @@ CONFIGURE_ARGS+=	--disable-lirc
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 PLIST.x11=		yes
+MESON_ARGS+=		-Dx11=enabled
 .else
-CONFIGURE_ARGS+=	--disable-x11
+MESON_ARGS+=		-Dx11=disabled
 .endif
 
 PRINT_PLIST_AWK+=	{if ($$0 ~ /x11/ && !($$0 ~ /start-pulseaudio-x11.1/)) {$$0 = "$${PLIST.x11}" $$0;}}
