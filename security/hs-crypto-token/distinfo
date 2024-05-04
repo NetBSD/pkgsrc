@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/04 08:21:56 pho Exp $
+
+BLAKE2s (crypto-token-0.1.1.tar.gz) = e932bc0872176e46e02490e063551037bd1d4ce7f58dedb83048f4b73a1d866c
+SHA512 (crypto-token-0.1.1.tar.gz) = 915238a2dec4af49faaaaf056dc6080d072c0ef9e66ca344b4f5394d3b4384ffd5c9bbdd438d3ae2d21a507abb1d62c5c0ccc7aea5eee388924af22b3bd93d24
+Size (crypto-token-0.1.1.tar.gz) = 4227 bytes
