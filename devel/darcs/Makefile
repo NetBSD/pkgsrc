@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/11/02 06:36:14 pho Exp $
+# $NetBSD: Makefile,v 1.74 2024/05/04 13:25:03 pho Exp $
 
-DISTNAME=	darcs-2.16.5
+DISTNAME=	darcs-2.18.2
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,22 +10,9 @@ COMMENT=	Distributed revision control system
 LICENSE=	gnu-gpl-v2
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	attoparsec	\
-	base	\
-	bytestring	\
-	constraints	\
-	cryptonite	\
-	fgl	\
-	hashable	\
-	memory	\
-	mtl	\
-	regex-tdfa	\
-	text	\
-	time	\
-	transformers	\
-	unix	\
-	unix-compat	\
-	vector
+	crypton	\
+	network	\
+	tls
 
 # Use crypton instead of outdated cryptonite.
 SUBST_CLASSES+=		crypton
@@ -73,8 +59,12 @@ post-install:
 .include "../../textproc/hs-regex-applicative/buildlink3.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
 .include "../../textproc/hs-regex-compat-tdfa/buildlink3.mk"
+.include "../../devel/hs-safe/buildlink3.mk"
+.include "../../devel/hs-strict-identity/buildlink3.mk"
 .include "../../archivers/hs-tar/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../devel/hs-terminal-size/buildlink3.mk"
+.include "../../security/hs-tls/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
