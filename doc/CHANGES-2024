@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3080 2024/05/04 10:42:36 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3081 2024/05/04 11:25:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/purescript to 0.15.15 [pho 2024-05-04]
 	Updated security/py-bcrypt to 4.1.3 [he 2024-05-04]
 	Updated devel/hs-hls-plugin-api to 2.7.0.0 [pho 2024-05-04]
+	Updated devel/hs-ghcide to 2.7.0.0 [pho 2024-05-04]
