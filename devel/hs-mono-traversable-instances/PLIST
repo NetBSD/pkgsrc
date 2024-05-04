@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 03:23:25 pho Exp $
-lib/mono-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-description
-lib/mono-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 06:27:54 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/MonoTraversable/Instances.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/MonoTraversable/Instances.hi
@@ -10,15 +8,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_mono_traversable_instances.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_mono_traversable_instances.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/mono-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-description
+lib/mono-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/Data-MonoTraversable-Instances.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/mono-traversable-instances.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mono-traversable-instances-${PKGVERSION}/html/synopsis.png
