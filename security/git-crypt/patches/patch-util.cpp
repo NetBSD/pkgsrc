@@ -1,9 +1,9 @@
-$NetBSD: patch-util.cpp,v 1.1 2022/12/05 21:57:58 nikita Exp $
+$NetBSD: patch-util.cpp,v 1.2 2024/05/04 11:07:17 leot Exp $
 
 Keep the C++ streams synchronized to the standard C streams on NetBSD otherwise
 it is not possible to read via std::cin.
 
-XXX: Why?
+Related to PR lib/58206.
 
 --- util.cpp.orig	2017-11-26 18:24:03.000000000 +0000
 +++ util.cpp
