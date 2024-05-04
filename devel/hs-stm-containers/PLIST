@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 02:55:55 pho Exp $
-lib/stm-containers-${PKGVERSION}/${HS_VERSION}/package-description
-lib/stm-containers-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 06:16:17 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/StmContainers/Bimap.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/StmContainers/Bimap.hi
@@ -19,18 +17,18 @@ lib/${HS_PLATFORM}/${HS_PKGID}/StmContainers/Set.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/StmContainers/Set.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/stm-containers-${PKGVERSION}/${HS_VERSION}/package-description
+lib/stm-containers-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/StmContainers-Bimap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/StmContainers-Map.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/StmContainers-Multimap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/StmContainers-Set.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/stm-containers.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/stm-containers-${PKGVERSION}/html/synopsis.png
