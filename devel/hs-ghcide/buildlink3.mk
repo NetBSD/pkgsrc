@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.14 2023/11/08 13:18:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2024/05/04 11:24:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghcide
 
 .if !defined(HS_GHCIDE_BUILDLINK3_MK)
 HS_GHCIDE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.4.0.0nb2
+BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.7.0
+BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.7.0.0
 BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -36,7 +36,6 @@ BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 .include "../../devel/hs-hls-graph/buildlink3.mk"
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
 .include "../../devel/hs-implicit-hie/buildlink3.mk"
-.include "../../devel/hs-implicit-hie-cradle/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-list-t/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
