@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/30 19:04:33 pho Exp $
-lib/tls-session-manager-${PKGVERSION}/${HS_VERSION}/package-description
-lib/tls-session-manager-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 08:22:50 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/Imports.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/Imports.hi
@@ -8,17 +6,21 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/Imports.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionManager.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionManager.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionManager.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionTicket.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionTicket.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/SessionTicket.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/tls-session-manager-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tls-session-manager-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/Network-TLS-SessionManager.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/Network-TLS-SessionTicket.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-session-manager-${PKGVERSION}/html/tls-session-manager.haddock
