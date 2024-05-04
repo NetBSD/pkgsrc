@@ -1,0 +1,8 @@
+QuickCheck instances.
+
+The goal is to supply QuickCheck instances for types provided by the
+Haskell Platform.
+
+Since all of these instances are provided as orphans, I recommend that you
+do not use this library within another library module, so that you don't
+impose these instances on down-stream consumers of your code.
