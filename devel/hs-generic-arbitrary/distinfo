@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/04 06:38:21 pho Exp $
+
+BLAKE2s (generic-arbitrary-1.0.1.tar.gz) = 823d40c8e91d7942769480b1371f62541deee7953b289bfcf1162f1dd3553d8f
+SHA512 (generic-arbitrary-1.0.1.tar.gz) = 4ee596c93b4ea0cf16da38841b521ae3cc1353a6affed657060f9d7dd3a10441c856533ce31d276b966403fc8b6efc17cfb21703dd64827bacc8888b57256859
+Size (generic-arbitrary-1.0.1.tar.gz) = 6826 bytes
