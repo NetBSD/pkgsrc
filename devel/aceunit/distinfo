@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/05/04 18:06:23 schmonz Exp $
+
+BLAKE2s (aceunit-v3.0.0.tar.gz) = 6c3d1e740fee1dd6c20fd4d29b4afc6006104f35ee8410523885ec967c19a753
+SHA512 (aceunit-v3.0.0.tar.gz) = 5ba2e3a0e8eb5297f32799ad577407d06aba6dc7e08bf179276cf87c28857265c90c2473f8daefa6f7c2b5199a92e45840a49e23b33c81ffbd28167f277f7ba1
+Size (aceunit-v3.0.0.tar.gz) = 30498 bytes
+SHA1 (patch-Makefile) = 0bd2b6084a5da98d931e8d1b32ab8de8ae85c15d
