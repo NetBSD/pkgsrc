@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 09:41:18 pho Exp $
-lib/http-conduit-${PKGVERSION}/${HS_VERSION}/package-description
-lib/http-conduit-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 13:07:39 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Client/Conduit.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Client/Conduit.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Client/Conduit.p_hi
@@ -13,6 +11,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Simple.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/http-conduit-${PKGVERSION}/${HS_VERSION}/package-description
+lib/http-conduit-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/Network-HTTP-Client-Conduit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/Network-HTTP-Conduit.html
@@ -40,12 +40,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/doc-index-T
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/http-conduit.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-conduit-${PKGVERSION}/html/synopsis.png
