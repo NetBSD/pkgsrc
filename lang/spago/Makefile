@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/02 06:37:10 pho Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/04 15:46:22 pho Exp $
 
 # NOTE: spago is getting rewritten in PureScript, and this Haskell
 # implementation is being phased out. We should remove this package and
@@ -9,10 +9,13 @@ PKGNAME=	${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=purescript/}
+GITHUB_PROJECT=	spago-legacy
+
 DISTFILES=	${DEFAULT_DISTFILES}
 DIST_SUBDIR=	${PKGBASE}
 
 # NOTE: This has to be kept in sync with ${WRKSRC}/scripts/fetch-templates
+.include "../../lang/nodejs/application.mk"
 .for version in 0.0.10 0.0.11
 DISTFILES+=					docs-search-app-${version}.js
 EXTRACT_DIR.docs-search-app-${version}.js=	${WRKSRC}/templates
@@ -24,17 +27,13 @@ EXTRACT_DIR.purescript-docs-search-${version}=	${WRKSRC}/templates
 SITES.purescript-docs-search-${version}=	\
 	-https://github.com/purescript/purescript-docs-search/releases/download/v${version}/purescript-docs-search
 
-REPLACE_FILES.node+=	templates/purescript-docs-search-${version}
+REPLACE_NODEJS+=	templates/purescript-docs-search-${version}
 .endfor
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/purescript/spago\#readme
 COMMENT=	PureScript package manager and build tool
 LICENSE=	modified-bsd
-
-REPLACE_INTERPRETER+=	node
-REPLACE.node.old=	.*node
-REPLACE.node.new=	${PREFIX}/bin/node
 
 # Use crypton instead of outdated cryptonite.
 SUBST_CLASSES+=		crypton
@@ -59,6 +58,12 @@ HASKELL_ENABLE_LIBRARY_PROFILING=	no
 # This package installs an executable that can generate shell completion
 # scripts automatically.
 .include "../../devel/hs-optparse-applicative/application.mk"
+
+# <kludge>
+#   shells/fish provides its own spago.fish and conflicts with what
+#   optparse-applicative generates.
+OA.shell-types:=	${OA.shell-types:Nfish}
+# </kludge>
 
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"

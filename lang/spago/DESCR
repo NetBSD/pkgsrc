@@ -1,2 +1,7 @@
 PureScript package manager and build tool powered by Dhall and
 package-sets.
+
+This package provides the legacy implementation of Spago in Haskell. It's
+the version that has the "migrate" sub-command. Existing users should
+migrate to the new PureScript rewrite urgently:
+https://github.com/purescript/spago?tab=readme-ov-file#migrate-from-spagodhall-to-spagoyaml
