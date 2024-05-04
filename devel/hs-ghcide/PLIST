@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/31 09:23:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/04 11:24:53 pho Exp $
 bin/ghcide
-lib/ghcide-${PKGVERSION}/${HS_VERSION}/package-description
-lib/ghcide-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Strict.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Strict.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Strict.p_hi
@@ -68,6 +66,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/CPP.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/CmdLine.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/CmdLine.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/CmdLine.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/Core.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/Core.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/Core.p_hi
@@ -173,6 +174,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Diagnostics.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Diagnostics.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Diagnostics.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.p_hi
@@ -227,6 +231,8 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy/Parallel.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/ghcide-${PKGVERSION}/${HS_VERSION}/package-description
+lib/ghcide-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Control-Concurrent-Strict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-Actions.html
@@ -246,6 +252,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-C
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-Shake.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-Tracing.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-UseStale.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-CmdLine.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-Core.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-Env.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-Iface.html
@@ -271,6 +278,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-M
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Main.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Monitoring-EKG.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Monitoring-OpenTelemetry.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-Completions-Logic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-Completions-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-Completions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-HLS-GhcIde.html
@@ -279,6 +287,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-P
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-TypeLenses.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Session-Diagnostics.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Session-Implicit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Session.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Spans-AtPoint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Spans-Common.html
@@ -299,6 +308,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Text-Fuzzy-Parall
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-36.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-42.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-60.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-95.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-A.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-All.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-B.html
@@ -327,12 +337,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/ghcide.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/synopsis.png
