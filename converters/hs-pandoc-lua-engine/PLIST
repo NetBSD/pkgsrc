@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 11:05:23 pho Exp $
-lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-description
-lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 13:37:11 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua.hi
@@ -97,15 +95,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/COPYING.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/Text-Pandoc-Lua.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/pandoc-lua-engine.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/synopsis.png
