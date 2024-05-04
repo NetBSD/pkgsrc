@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2024/04/07 07:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2024/05/04 21:30:27 nikita Exp $
 
-DISTNAME=	zathura-0.4.9
-PKGREVISION=	13
+DISTNAME=	zathura-0.5.4
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura/download/
 EXTRACT_SUFX=	.tar.xz
@@ -45,5 +44,6 @@ BUILDLINK_API_DEPENDS.girara?=	girara>=0.3.7
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/file/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
