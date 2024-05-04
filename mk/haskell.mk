@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.67 2024/04/29 07:58:38 pho Exp $
+# $NetBSD: haskell.mk,v 1.68 2024/05/04 11:21:26 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -45,6 +45,13 @@
 #	A list of executables that we don't want to build or
 #	install. Listing executables in this variable will cause the
 #	*.cabal file to be rewritten so that they won't be built.
+#
+#	Default value: empty
+#
+# HASKELL_DISABLE_LIBRARIES
+#	A list of libraries that we don't want to build or install. Listing
+#	libraries in this variable will cause the *.cabal file to be
+#	rewritten so that they won't be built.
 #
 #	Default value: empty
 #
@@ -101,6 +108,7 @@ _PKG_VARS.haskell= \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
 	HASKELL_DISABLE_EXECUTABLES \
+	HASKELL_DISABLE_LIBRARIES \
 	HASKELL_UNRESTRICT_DEPENDENCIES \
 	PKGNAME HOMEPAGE MASTER_SITES
 _DEF_VARS.haskell= \
@@ -136,6 +144,7 @@ _USE_VARS.haskell= \
 	_PATH_ORIG
 _SORTED_VARS.haskell= \
 	HASKELL_DISABLE_EXECUTABLES \
+	HASKELL_DISABLE_LIBRARIES \
 	HASKELL_UNRESTRICT_DEPENDENCIES
 _LISTED_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
@@ -160,6 +169,7 @@ HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 HASKELL_ENABLE_TESTS?=			no
 HASKELL_DISABLE_EXECUTABLES?=		# empty
+HASKELL_DISABLE_LIBRARIES?=		# empty
 HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 
 .include "../../lang/ghc96/buildlink3.mk"
@@ -196,17 +206,29 @@ _HASKELL_BUILD_SETUP_OPTS=	-package-env -
 # GHC requires C compiler.
 USE_LANGUAGES+=	c
 
-# Some Haskell libraries builds and installs example executables that are
-# useless aside from debugging the libraries, and we don't want them to be
+# Some Haskell packages build and install example executables that are
+# useless aside from debugging the packages, and we don't want them to be
 # installed.
 .if !empty(HASKELL_DISABLE_EXECUTABLES)
-SUBST_CLASSES+=		exec
-SUBST_STAGE.exec?=	post-extract
-SUBST_FILES.exec?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
-SUBST_MESSAGE.exec?=	Disabling executables: ${HASKELL_DISABLE_EXECUTABLES}
-SUBST_FILTER_CMD.exec=	\
-	${AWK} -f "${.CURDIR}/../../mk/haskell/disable-executables.awk" \
-		-v exec=${HASKELL_DISABLE_EXECUTABLES:Q}
+SUBST_CLASSES+=		exe
+SUBST_STAGE.exe?=	post-extract
+SUBST_FILES.exe?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
+SUBST_MESSAGE.exe?=	Disabling executables: ${HASKELL_DISABLE_EXECUTABLES}
+SUBST_FILTER_CMD.exe=	\
+	${AWK} -f "${.CURDIR}/../../mk/haskell/disable-components.awk" \
+		-v exe=${HASKELL_DISABLE_EXECUTABLES:Q}
+.endif
+
+# Some Haskell packages build and install libraries that are useless aside
+# from debugging the packages, and we don't want them to be installed.
+.if !empty(HASKELL_DISABLE_LIBRARIES)
+SUBST_CLASSES+=		lib
+SUBST_STAGE.lib?=	post-extract
+SUBST_FILES.lib?=	${HASKELL_PKG_NAME:C/-[[:digit:].]+$//}.cabal
+SUBST_MESSAGE.lib?=	Disabling libraries: ${HASKELL_DISABLE_LIBRARIES}
+SUBST_FILTER_CMD.lib=	\
+	${AWK} -f "${.CURDIR}/../../mk/haskell/disable-components.awk" \
+		-v lib=${HASKELL_DISABLE_LIBRARIES:Q}
 .endif
 
 # Haskell packages don't use semvars but they use something similar to it,
@@ -440,6 +462,7 @@ do-configure:
 			$$setup_src '"$$@"' >> Setup; \
 		${CHMOD} +x Setup; \
 	else \
+		${ECHO} "[mk/haskell.mk] Failed to interpret $$setup_src; falling back to compilation"; \
 		${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -dynamic || \
 			${_HASKELL_BIN:Q} ${_HASKELL_BUILD_SETUP_OPTS} --make Setup -static; \
 		${SETENV} ${CONFIGURE_ENV} \
