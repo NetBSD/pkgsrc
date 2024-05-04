@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2024/04/07 07:34:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2024/05/04 21:30:27 nikita Exp $
 
 BUILDLINK_TREE+=	zathura
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.zathura?=	../../print/zathura
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/girara/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .endif # ZATHURA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-zathura
