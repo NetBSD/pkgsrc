@@ -1,2 +1,3 @@
 dkimpy is a library that implements DKIM (DomainKeys Identified Mail) email
-signing and verification. Basic DKIM requirements are defined in RFC 6376
+signing and verification. It supports both RSA and Ed25519-based signatures.
+Basic DKIM requirements are defined in RFC 6376.
