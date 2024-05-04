@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile,v 1.1 2024/05/04 18:06:23 schmonz Exp $
+
+Set permissions more precisely.
+Install without building and running the tests.
+
+--- Makefile.orig	2024-05-04 13:27:28.000000000 +0000
++++ Makefile
+@@ -6,7 +6,7 @@ include recurse.mk
+ ## clean:		Remove all generated files.
+ ## lib-all:	Build and self-test the AceUnit library.
+ 
+-test-all examples-all install: lib-all
++test-all examples-all: lib-all
+ 
+ versions:=c90 c99 c11 c17 c2x gnu90 gnu99 gnu11 gnu17 gnu2x
+ ## compiler-test:	Test AceUnit with different versions of C.
+@@ -46,11 +46,11 @@ install: $(FILES_TO_INSTALL)
+ 
+ $(DESTDIR)$(PREFIX)/bin/aceunit: bin/aceunit
+ 	install -d $(dir $@)
+-	install $^ $@
++	${BSD_INSTALL_SCRIPT} $^ $@
+ 
+ $(DESTDIR)$(PREFIX)/%: %
+ 	install -d $(dir $@)
+-	install -m 644 $^ $@
++	${BSD_INSTALL_DATA} $^ $@
+ 
+ $(DESTDIR)$(PREFIX)/include/aceunit.mk: include/aceunit.mk
+ 	install -d $(dir $@)
