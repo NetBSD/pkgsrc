@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/04 13:23:08 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/StrictIdentity.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/StrictIdentity.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/StrictIdentity.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/strict-identity-${PKGVERSION}/${HS_VERSION}/package-description
+lib/strict-identity-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/Control-Monad-StrictIdentity.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/strict-identity.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/strict-identity-${PKGVERSION}/html/synopsis.png
