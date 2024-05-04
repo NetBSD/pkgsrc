@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2054 2024/04/30 20:59:25 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2055 2024/05/04 17:58:53 leot Exp $
 #
 # This file is in the public domain.
 #
@@ -184,6 +184,20 @@ ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MAKELEVEL=0
 ALL_ENV+=	CONFIG_SITE=${PKGSRC_CONFIG_SITE:U}
 .if !defined(ALLOW_NETWORK_ACCESS)
+
+#ALLOW_NETWORK_ACCESS=
+#	If defined network access is permitted also outside the "fetch" phase.
+#
+#	Network access should be permitted only during the "fetch" phase.
+#	By defining this variable fetching is permitted also in other phases.
+#	This can be useful to MAINTAINERs for fetching distfiles to initialize
+#	a package or for custom packages.
+#
+#	Possible: defined, not defined
+#	Default: undefined
+#
+# Keywords: fetch download network
+
 # try stopping downloads during configure/build/...
 ALL_ENV+=	ftp_proxy=downloads-forbidden-except-during-fetch
 ALL_ENV+=	http_proxy=downloads-forbidden-except-during-fetch
