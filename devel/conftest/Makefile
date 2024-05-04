@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2024/04/05 19:13:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.48 2024/05/04 19:42:06 leot Exp $
 
-DISTNAME=	conftest-0.50.0
-PKGREVISION=	1
+DISTNAME=	conftest-0.52.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
