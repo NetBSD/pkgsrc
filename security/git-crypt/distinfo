@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/12/05 21:57:58 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/05/04 11:07:17 leot Exp $
 
 BLAKE2s (git-crypt-0.7.0.tar.gz) = 742db2743dd7c5daea1658c8028a8024839151eb8a28bb545c6f5e12a5980208
 SHA512 (git-crypt-0.7.0.tar.gz) = 88eb730f0f0b4622c1a3ce64c62fa97a9a4da0716f4cce86fad8d700e2cb248dae8fc9e92996448564903564dbcddaa1f87201cf7ebc77144660f3044ae92904
 Size (git-crypt-0.7.0.tar.gz) = 57621 bytes
-SHA1 (patch-util.cpp) = ed9dee74f7e8d50f72670542323013d0a2d44464
+SHA1 (patch-util.cpp) = 8e856d6e066963ff92d4e08d91f6224b49ca2f8e
