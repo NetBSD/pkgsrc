@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4221 2024/05/02 10:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4222 2024/05/04 06:38:37 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -601,6 +601,7 @@ SUBDIR+=	hs-foldable1-classes-compat
 SUBDIR+=	hs-foldl
 SUBDIR+=	hs-foundation
 SUBDIR+=	hs-fsnotify
+SUBDIR+=	hs-generic-arbitrary
 SUBDIR+=	hs-generic-deriving
 SUBDIR+=	hs-generic-lens
 SUBDIR+=	hs-generic-lens-core
