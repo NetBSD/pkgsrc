@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/04/06 08:05:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/04 10:09:13 nia Exp $
 
 DISTNAME=	sdlpop-1.22
 PKGREVISION=	8
@@ -20,6 +20,11 @@ BUILD_DIRS=	src
 MAKE_FLAGS=	CC=${CC:Q}
 
 CFLAGS+=	-DPKGSRC_DATA_PATH="\"${PREFIX}/share/sdlpop/\""
+
+.include "../../mk/bsd.fast.prefs.mk"
+# "#error This program is not (yet) prepared for big endian CPUs,
+# please contact the author."
+NOT_FOR_PLATFORM+=	${BIGENDIANPLATFORMS}
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
