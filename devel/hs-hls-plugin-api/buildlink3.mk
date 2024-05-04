@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/11/02 06:36:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/05/04 10:42:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-plugin-api
 
 .if !defined(HS_HLS_PLUGIN_API_BUILDLINK3_MK)
 HS_HLS_PLUGIN_API_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=2.4.0.0nb1
+BUILDLINK_API_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=2.7.0
+BUILDLINK_ABI_DEPENDS.hs-hls-plugin-api+=	hs-hls-plugin-api>=2.7.0.0
 BUILDLINK_PKGSRCDIR.hs-hls-plugin-api?=		../../devel/hs-hls-plugin-api
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -27,7 +27,6 @@ BUILDLINK_PKGSRCDIR.hs-hls-plugin-api?=		../../devel/hs-hls-plugin-api
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
-.include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-hw-fingertree/buildlink3.mk"
