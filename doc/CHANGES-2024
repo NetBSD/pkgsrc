@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3066 2024/05/03 20:38:50 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3067 2024/05/04 06:10:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-bcrypt to 4.1.2nb1 [he 2024-05-03]
 	Updated graphics/blender to 4.1.1 [ryoon 2024-05-03]
 	Added fonts/urw-base35-type1 version 4.00 [ryoon 2024-05-03]
+	Updated security/hs-tls to 2.0.5 [pho 2024-05-04]
