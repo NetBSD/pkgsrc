@@ -1,0 +1,3 @@
+Djot (https://djot.net) is a light markup language. This package provides a
+data structure to represent djot documents, a very fast parser, and
+functions to render a parsed document as HTML and as djot.
