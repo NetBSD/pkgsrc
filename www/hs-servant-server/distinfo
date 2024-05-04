@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/31 04:44:52 pho Exp $
+$NetBSD: distinfo,v 1.3 2024/05/04 13:33:08 pho Exp $
 
 BLAKE2s (servant-server-0.20.tar.gz) = 398863406c8022357eb29038ebc48974376415e126e808471100e2c617db0b3e
 SHA512 (servant-server-0.20.tar.gz) = 4db1d8f6b08ce3af835cbc6232951a1fc6d5d8a5d63a713b33c70be1d587f1c4e6825fa3893e27056ab4635477444ebb5479add8825e3e50473833e586c0c397
 Size (servant-server-0.20.tar.gz) = 55745 bytes
-SHA1 (patch-servant-server.cabal) = 81082558eb37055ec40f9b7deff1c7791706e642
