@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/04 11:45:51 pho Exp $
+
+BLAKE2s (djot-0.1.1.3.tar.gz) = 39936fd72e2f27426f755358d16e42ecbd38e809b21c4e1cf6846d29a0f3a316
+SHA512 (djot-0.1.1.3.tar.gz) = aac42f4c25a94660b3b3d657addcde72a416b57adb28a16c7a8dc033ac64ec7fc43b298b7a5a3644f86e883bc6f827642fa1baff8f349bb4d50d5e3032d63d8c
+Size (djot-0.1.1.3.tar.gz) = 124161 bytes
