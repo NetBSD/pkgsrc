@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4223 2024/05/04 06:48:03 pho Exp $
+# $NetBSD: Makefile,v 1.4224 2024/05/04 13:23:24 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -755,6 +755,7 @@ SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storable-tuple
 SUBDIR+=	hs-streaming-commons
 SUBDIR+=	hs-strict
+SUBDIR+=	hs-strict-identity
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tabular
 SUBDIR+=	hs-tagged
