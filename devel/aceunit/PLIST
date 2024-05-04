@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/04 18:06:23 schmonz Exp $
+bin/aceunit
+include/aceunit.h
+include/aceunit.mk
+lib/libaceunit-abort.a
+lib/libaceunit-fork.a
+lib/libaceunit-setjmp.a
+lib/libaceunit-simple.a
+man/man1/aceunit.1
+man/man3/aceunit.3
+share/aceunit/nm.ac
+share/aceunit/objdump.ac
+share/aceunit/readelf.ac
+share/doc/aceunit/copyright

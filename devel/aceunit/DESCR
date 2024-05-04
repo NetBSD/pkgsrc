@@ -1,0 +1,6 @@
+AceUnit is a comfortable unit test framework for C, in the best
+tradition of xUnit frameworks (like JUnit). Its target audience are
+developers using the C programming language to develop firmware,
+drivers, operating systems, and other C programs, like command line
+programs. It is tiny and thus suitable even for extremely
+resource-constrained environments.
