@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/31 04:40:27 pho Exp $
-lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-description
-lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.4 2024/05/04 07:08:48 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/Stats.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/Stats.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/Stats.p_hi
@@ -19,6 +17,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Actio
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Database.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Database.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Database.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Key.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Key.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Key.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Options.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Options.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Graph/Internal/Options.p_hi
@@ -49,12 +50,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hls_graph.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/profile.html
+share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/shake.js
 share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Control-Concurrent-STM-Stats.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Classes.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Database.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Action.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Database.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Key.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Options.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Paths.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Internal-Profile.html
@@ -90,14 +96,10 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-U.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/hls-graph.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/synopsis.png
-share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/profile.html
-share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/shake.js
