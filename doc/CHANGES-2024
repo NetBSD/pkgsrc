@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3096 2024/05/04 21:23:50 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.3097 2024/05/04 21:30:40 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4938,3 +4938,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/opa to 0.64.1 [leot 2024-05-04]
 	Updated devel/conftest to 0.52.0 [leot 2024-05-04]
 	Updated graphics/girara to 0.4.2 [nikita 2024-05-04]
+	Updated print/zathura to 0.5.4 [nikita 2024-05-04]
