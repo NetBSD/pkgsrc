@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/08 13:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/04 12:51:19 pho Exp $
 
 DISTNAME=	hls-hlint-plugin-2.4.0.0
 PKGREVISION=	2
@@ -8,7 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hlint integration plugin with Haskell Language Server
 LICENSE=	apache-2.0
 
-BROKEN+=	"This package is currently broken because devel/hlint is broken."
+# The upstream has already fixed it in git HEAD but hasn't released a new version.
+BROKEN+=	"This package is currently broken because it's incompatible with GHC 9.8"
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-apply-refact/buildlink3.mk"
