@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2023/11/02 06:36:45 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/04 06:58:39 pho Exp $
 
-DISTNAME=	lsp-types-2.0.2.0
-PKGREVISION=	1
+DISTNAME=	lsp-types-2.2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Haskell library for the Microsoft Language Server Protocol, data types
 LICENSE=	mit
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	aeson
+# Do not build or install the example executable. We don't want it in
+# pkgsrc.
+HASKELL_DISABLE_EXECUTABLES+=	\
+	generator
 
 # lib:lsp-types
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -20,17 +21,20 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 .include "../../devel/hs-indexed-traversable/buildlink3.mk"
 .include "../../devel/hs-indexed-traversable-instances/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
-.include "../../converters/hs-lens-aeson/buildlink3.mk"
 .include "../../math/hs-mod/buildlink3.mk"
 .include "../../net/hs-network-uri/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../devel/hs-some/buildlink3.mk"
-.include "../../devel/hs-unordered-containers/buildlink3.mk"
 
 # lib:metamodel
 .include "../../devel/hs-file-embed/buildlink3.mk"
+
+# lib:lsp-types-quickcheck
+.include "../../devel/hs-generic-arbitrary/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-quickcheck-instances/buildlink3.mk"
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

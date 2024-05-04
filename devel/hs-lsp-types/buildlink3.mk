@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/11/02 06:36:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/05/04 06:58:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-lsp-types
 
 .if !defined(HS_LSP_TYPES_BUILDLINK3_MK)
 HS_LSP_TYPES_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.0.2
-BUILDLINK_ABI_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.0.2.0nb1
+BUILDLINK_API_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.2.0
+BUILDLINK_API_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.2.0.0
 BUILDLINK_PKGSRCDIR.hs-lsp-types?=	../../devel/hs-lsp-types
 
 # lib:lsp-types
@@ -18,17 +18,20 @@ BUILDLINK_PKGSRCDIR.hs-lsp-types?=	../../devel/hs-lsp-types
 .include "../../devel/hs-indexed-traversable/buildlink3.mk"
 .include "../../devel/hs-indexed-traversable-instances/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
-.include "../../converters/hs-lens-aeson/buildlink3.mk"
 .include "../../math/hs-mod/buildlink3.mk"
 .include "../../net/hs-network-uri/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../devel/hs-some/buildlink3.mk"
-.include "../../devel/hs-unordered-containers/buildlink3.mk"
 
 # lib:metamodel
 .include "../../devel/hs-file-embed/buildlink3.mk"
+
+# lib:lsp-types-quickcheck
+.include "../../devel/hs-generic-arbitrary/buildlink3.mk"
+.include "../../devel/hs-QuickCheck/buildlink3.mk"
+.include "../../devel/hs-quickcheck-instances/buildlink3.mk"
 .endif	# HS_LSP_TYPES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-lsp-types
