@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Language_PureScript_TypeChecker_Entailment.hs,v 1.1 2023/10/31 07:38:56 pho Exp $
+$NetBSD: patch-src_Language_PureScript_TypeChecker_Entailment.hs,v 1.2 2024/05/04 09:41:24 pho Exp $
 
 Control.Monad.State no longer re-exports functions from Control.Monad.
 
---- src/Language/PureScript/TypeChecker/Entailment.hs.orig	2023-10-31 07:20:17.099461014 +0000
+--- src/Language/PureScript/TypeChecker/Entailment.hs.orig	2023-11-04 02:42:45.000000000 +0000
 +++ src/Language/PureScript/TypeChecker/Entailment.hs
 @@ -14,10 +14,11 @@ import Prelude
- import Protolude (ordNub)
+ import Protolude (ordNub, headMay)
  
  import Control.Arrow (second, (&&&))
 +import Control.Monad (foldM, guard, join, zipWithM, zipWithM_, (<=<))
@@ -18,7 +18,7 @@ Control.Monad.State no longer re-exports functions from Control.Monad.
  
  import Data.Either (lefts, partitionEithers)
  import Data.Foldable (for_, fold, toList)
-@@ -26,6 +27,7 @@ import Data.Functor (($>))
+@@ -26,6 +27,7 @@ import Data.Functor (($>), (<&>))
  import Data.List (delete, findIndices, minimumBy, nubBy, sortOn, tails)
  import Data.Maybe (catMaybes, fromMaybe, listToMaybe, mapMaybe)
  import Data.Map qualified as M
