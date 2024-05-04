@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/31 08:52:38 pho Exp $
-lib/semver-range-${PKGVERSION}/${HS_VERSION}/package-description
-lib/semver-range-${PKGVERSION}/${HS_VERSION}/package-id
+@comment $NetBSD: PLIST,v 1.3 2024/05/04 09:45:01 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SemVer.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/SemVer.hi
@@ -13,15 +11,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/SemVer/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SemVer/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/semver-range-${PKGVERSION}/${HS_VERSION}/package-description
+lib/semver-range-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/Data-SemVer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/doc-index.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/quick-jump.css
-${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/semver-range.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semver-range-${PKGVERSION}/html/synopsis.png
