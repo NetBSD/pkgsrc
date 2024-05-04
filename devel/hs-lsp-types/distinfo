@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/02 01:22:02 pho Exp $
+$NetBSD: distinfo,v 1.5 2024/05/04 06:58:39 pho Exp $
 
-BLAKE2s (lsp-types-2.0.2.0.tar.gz) = 7e2947b704a0feeb06a18940ad198e3ed2d9cf760af5d24f2490251a455df051
-SHA512 (lsp-types-2.0.2.0.tar.gz) = f6c14efddd2d514edc52c033182a8d659f197002538189936050d42d7dde62f5351efe315d939443e45a061296af6c46cae550038e537fda41019903755fdd4f
-Size (lsp-types-2.0.2.0.tar.gz) = 219603 bytes
-SHA1 (patch-lsp-types.cabal) = ea86a9acbdaded83ce516039b2b05b4fcb4847b6
-SHA1 (patch-src_Language_LSP_Protocol_Types_Common.hs) = 83cb285a4bce4a141099a9243f76cfbd744bf43c
+BLAKE2s (lsp-types-2.2.0.0.tar.gz) = 6f78e613885742a5d91c9e1da9bd4c7404af575c2248eebdd4cb808de8d704fe
+SHA512 (lsp-types-2.2.0.0.tar.gz) = d5ffe3b2294794adcbe21ef47cc5da974639fadb58f746a36e1b479ecc773153a64f97d3cc77ea20884a62aab822aee4def470a001c0c9ea14f4f25166cc9b33
+Size (lsp-types-2.2.0.0.tar.gz) = 234764 bytes
