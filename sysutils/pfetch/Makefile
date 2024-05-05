@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/03/12 12:03:39 fox Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/05 07:33:17 fox Exp $
 
-DISTNAME=	pfetch-0.6.0
+DISTNAME=	pfetch-1.0.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Un1q32/}
 
 MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://github.com/dylanaraps/pfetch
+HOMEPAGE=	https://github.com/Un1q32/pfetch
 COMMENT=	Pretty system information tool written in POSIX sh
 LICENSE=	mit
 
