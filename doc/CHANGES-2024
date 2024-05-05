@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3219 2024/05/05 22:24:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3220 2024/05/05 22:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5069,3 +5069,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-Whoosh to 2.7.4nb2 [wiz 2024-05-05]
 	Updated textproc/py-poyo to 0.5.0nb2 [wiz 2024-05-05]
 	Updated time/py-jdcal to 1.4.1nb2 [wiz 2024-05-05]
+	Updated devel/py-test-fixture-config to 1.7.0nb2 [wiz 2024-05-05]
