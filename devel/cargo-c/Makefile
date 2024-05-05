@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/03/22 12:08:54 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/05 16:08:21 pin Exp $
 
-DISTNAME=	cargo-c-0.9.31
+DISTNAME=	cargo-c-0.9.32
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,8 +14,8 @@ SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.75.0
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+RUST_REQ=	1.76.0
+#RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 .include "cargo-depends.mk"
 
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 
-.include "../../devel/libgit2/buildlink3.mk"
+#.include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
