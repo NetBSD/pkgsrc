@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/04/06 08:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/05 21:33:43 wiz Exp $
 
 DISTNAME=	fifengine-0.4.2
 PKGREVISION=	26
@@ -10,7 +10,17 @@ HOMEPAGE=	https://www.fifengine.net/
 COMMENT=	Multi-platform isometric game engine
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
+# https://github.com/fifengine/fifengine/issues/1085
+BROKEN=		"Doesn't support boost-1.85"
+
+TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
+
+.include "../../lang/python/extension.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+.endif
+
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -18,18 +28,11 @@ USE_CXX_FEATURES+=	c++11
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
-TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 PY_PATCHPLIST=	yes
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
