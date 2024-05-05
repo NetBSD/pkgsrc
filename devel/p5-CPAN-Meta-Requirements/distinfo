@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.11 2024/05/05 07:18:06 wiz Exp $
+
+BLAKE2s (CPAN-Meta-Requirements-2.143.tar.gz) = c27c87bca6c35f06c8f987d6c3960ac58bf0bab395f3f11c52739fb3f87935af
+SHA512 (CPAN-Meta-Requirements-2.143.tar.gz) = 01283e54753678bbc731c254f84b989a104a7228faf8a6bc33561b1846d2c410e1ec9219b7ebc073bd41b7e025b22fd96893a6f83f3bf2b07e1eb5766a76833c
+Size (CPAN-Meta-Requirements-2.143.tar.gz) = 32843 bytes
