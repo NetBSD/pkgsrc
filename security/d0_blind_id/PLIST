@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/05 08:53:21 nia Exp $
+bin/blind_id
+include/d0_blind_id/d0.h
+include/d0_blind_id/d0_blind_id.h
+include/d0_blind_id/d0_rijndael.h
+lib/libd0_blind_id.la
+lib/libd0_rijndael.la
+lib/pkgconfig/d0_blind_id.pc
+lib/pkgconfig/d0_rijndael.pc
