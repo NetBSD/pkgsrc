@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.14 2022/05/03 17:38:34 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/05/05 22:35:09 wiz Exp $
 
-BLAKE2s (myhdl-0.10.tar.gz) = b32a10dcfdf4cead07e948d53615655e38bfa20aeaad2ab711e0493851818d21
-SHA512 (myhdl-0.10.tar.gz) = b250c8b09a2cfbd2a70da60d567c8bcb09747c3e8df536cdd28ad49a8a6fbe5a28395295a6ed6046ced745b617fb3804ceb0f83d9b34db7c70701148ae7db25b
-Size (myhdl-0.10.tar.gz) = 1205466 bytes
+BLAKE2s (myhdl-0.11.tar.gz) = cb8e8ffaecf771bb1346ec6242b8cb9d16d7727cbe30a0148887316e2f10e50d
+SHA512 (myhdl-0.11.tar.gz) = 5b81b4e74998d9ee3246aa387ccf3ef42413bbc812087d005b8a77da277ef12371bcaf6d26ef9127b8c84a8450449d726a06cfe8fc533de5fb9a49e885e86a7b
+Size (myhdl-0.11.tar.gz) = 1208654 bytes
 SHA1 (patch-cosimulation_cver_Makefile.lnx) = 64508943117d23f1564c23642dda5843545d741e
-SHA1 (patch-myhdl___always__seq.py) = 2ba91a28a40f5582a7ab509ee8e619ce92333e92
-SHA1 (patch-myhdl_conversion___toVHDL.py) = 85651035475d908749306dfd57895060582a2051
