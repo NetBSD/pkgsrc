@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/04/24 12:54:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/05/05 18:28:05 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -61,7 +61,6 @@ ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/favicon_32.png
 ${PYSITELIB}/coverage/htmlfiles/index.html
 ${PYSITELIB}/coverage/htmlfiles/keybd_closed.png
-${PYSITELIB}/coverage/htmlfiles/keybd_open.png
 ${PYSITELIB}/coverage/htmlfiles/pyfile.html
 ${PYSITELIB}/coverage/htmlfiles/style.css
 ${PYSITELIB}/coverage/htmlfiles/style.scss
