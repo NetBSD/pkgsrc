@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2023/10/31 14:32:29 pho Exp $
-
-BLAKE2s (hls-alternate-number-format-plugin-2.4.0.0.tar.gz) = 9229413353f196347ba88d42b5376d3fccc18db6c3065a4b2b4018809a2bc1e1
-SHA512 (hls-alternate-number-format-plugin-2.4.0.0.tar.gz) = 1d3ff969ffa66c3229cd5ff625a6f9e3a5e8170d40d0fd7b6c2acfd0f9ce36707b1baa6e8a2d3c4c4af9e989ed5762064889f65d8d6763f8e39ce64aefe26805
-Size (hls-alternate-number-format-plugin-2.4.0.0.tar.gz) = 13940 bytes
