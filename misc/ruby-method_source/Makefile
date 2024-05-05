@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/03/23 16:55:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/05 17:03:56 taca Exp $
 
-DISTNAME=	method_source-1.0.0
+DISTNAME=	method_source-1.1.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
