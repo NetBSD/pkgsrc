@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/04/29 02:33:36 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/05 09:01:23 pho Exp $
 
+# When updating this package, be sure to also update the version constraint
+# on sqlite3 in this file and buildlink3.mk.
 DISTNAME=	direct-sqlite-2.3.29
 CATEGORIES=	databases
 
@@ -9,7 +11,7 @@ LICENSE=	modified-bsd
 
 CONFIGURE_ARGS+=	-f systemlib
 
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.32.0
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.45.3
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
