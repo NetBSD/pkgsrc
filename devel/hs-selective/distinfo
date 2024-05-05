@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 08:14:32 pho Exp $
+
+BLAKE2s (selective-0.7.0.1.tar.gz) = a4d015ff48adfe2de344d41b421c129048ed3c768ac128d0fbb7e5f3ad81757a
+SHA512 (selective-0.7.0.1.tar.gz) = 4b1447e9c2526ed42065bfcfd954196bf96c2368056dda0aa9c3e168cefbf7c8b06fe0ad8285da34a20332facbfb8ea20fd250448d36c5c899bfb41f77e16674
+Size (selective-0.7.0.1.tar.gz) = 36061 bytes
