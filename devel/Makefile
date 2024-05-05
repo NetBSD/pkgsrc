@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4263 2024/05/05 16:10:44 taca Exp $
+# $NetBSD: Makefile,v 1.4264 2024/05/05 20:24:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3142,7 +3142,6 @@ SUBDIR+=	py-zope.schema
 SUBDIR+=	py-zope.testing
 SUBDIR+=	py-zope.testrunner
 SUBDIR+=	py27-attrs
-SUBDIR+=	py27-cffi
 SUBDIR+=	py27-game
 SUBDIR+=	py27-pluggy
 SUBDIR+=	pycharm-bin
