@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3165 2024/05/05 11:04:11 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3166 2024/05/05 11:04:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/hs-hls-alternate-number-format-plugin [pho 2024-05-05]
 	Removed devel/hs-hls-splice-plugin [pho 2024-05-05]
 	Removed devel/hs-hls-retrie-plugin [pho 2024-05-05]
+	Removed devel/hs-hls-rename-plugin [pho 2024-05-05]
