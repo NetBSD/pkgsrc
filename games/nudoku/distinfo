@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/05/05 14:31:31 ktnb Exp $
 
-BLAKE2s (nudoku-2.1.0.tar.gz) = a327d3baf97a82693a86eb1b3ca6b99b09ab594ea3fc9e9c13e9c510824d31ca
-SHA512 (nudoku-2.1.0.tar.gz) = dde16d1dccc1cae8d156f57fccf8b112f3fee7d23b912b5cd7ecc092ecbf04a8e85f469e53fa02e6bd2d0b9498e4a65a219e1aad8091f82638dceab32f320670
-Size (nudoku-2.1.0.tar.gz) = 31592 bytes
-SHA1 (patch-src_main.c) = 3e8d32d3830c839727fda4bb74a4c6346553efa9
+BLAKE2s (nudoku-4.0.0.tar.gz) = d4f6fb487457cb71e4aad6a548a5378ee10b4890ee54ec469ab511da23a49db7
+SHA512 (nudoku-4.0.0.tar.gz) = 809af4b235e2fc84dbab846188b00517e594d24798a573a72b33a3d7845d20762b8e56e8ea3cf6c300432188e0d15060c2d02908a31e38c41e7b58ea7b057e2c
+Size (nudoku-4.0.0.tar.gz) = 32748 bytes
+SHA1 (patch-src_main.c) = b31c65451946649e794d0cf580ad4a8f95bdcbf7

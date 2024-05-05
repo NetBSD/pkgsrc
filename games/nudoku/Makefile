@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/06/27 15:29:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/05 14:31:31 ktnb Exp $
 
-DISTNAME=	nudoku-2.1.0
+DISTNAME=	nudoku-4.0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jubalh/}
 
@@ -23,11 +23,10 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
-FAKE_NCURSES=		yes
-
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
