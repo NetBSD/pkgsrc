@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.118 2024/04/07 14:36:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.119 2024/05/05 16:29:35 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -106,6 +106,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.77.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.78.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.79.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.80.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
@@ -268,6 +269,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_row_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_static_cache_updater.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_timestamptz.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
+${GEM_LIBDIR}/lib/sequel/extensions/provenance.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/round_timestamps.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/run_transaction_hooks.rb
