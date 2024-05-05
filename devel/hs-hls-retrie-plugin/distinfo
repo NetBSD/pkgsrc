@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2023/10/31 12:55:10 pho Exp $
-
-BLAKE2s (hls-retrie-plugin-2.4.0.0.tar.gz) = d5efd24b0d46c83cf5335df1de4d475b3578dd81cc48e3c9908429b9de06cb2f
-SHA512 (hls-retrie-plugin-2.4.0.0.tar.gz) = be17c7a73cf303b11db6a8037b21e5f0a664ec56f7b6dbfb496ebad81839828c3de46f015d0fe1275892b6e4004271a05035749e9b62bd2d39cbd97b45977a9e
-Size (hls-retrie-plugin-2.4.0.0.tar.gz) = 15765 bytes
