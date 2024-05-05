@@ -1,0 +1,11 @@
+Lightweight pure data validation based on Applicative and Selective
+functors.
+
+validation-selective is built around the following data type:
+
+    data Validation e a
+        = Failure e
+        | Success a
+
+This data type is similar to Either but allows accumulating all errors
+instead of short-circuiting on the first one.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 08:16:16 pho Exp $
+
+BLAKE2s (validation-selective-0.2.0.0.tar.gz) = 6d160c4edc2eb0bc2ea8bbfea2c3012fe7306c6498054eb1df0ae99a8a136c44
+SHA512 (validation-selective-0.2.0.0.tar.gz) = 3ae95cf549ff7f19aa9b652df0258d02e5c608cf17f11893f6fcf5d92656586e96a336f714c0d367f679ce4b2dc14e052e64b2ee9aa1cda21c00bb8a51ea3cbc
+Size (validation-selective-0.2.0.0.tar.gz) = 22397 bytes
