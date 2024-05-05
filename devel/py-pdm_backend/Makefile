@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/04/21 15:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/05 16:30:09 wiz Exp $
 
-DISTNAME=	pdm_backend-2.2.1
+DISTNAME=	pdm_backend-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
@@ -14,6 +14,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-editables-[0-9]*:../../devel/py-editables
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
 USE_LANGUAGES=	c # for tests
 
