@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/11 13:51:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/05 16:26:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/console.rb
 ${GEM_LIBDIR}/lib/console.rb
 ${GEM_LIBDIR}/lib/console/adapter.rb
-${GEM_LIBDIR}/lib/console/buffer.rb
 ${GEM_LIBDIR}/lib/console/capture.rb
 ${GEM_LIBDIR}/lib/console/clock.rb
 ${GEM_LIBDIR}/lib/console/compatible/logger.rb
 ${GEM_LIBDIR}/lib/console/event.rb
 ${GEM_LIBDIR}/lib/console/event/failure.rb
 ${GEM_LIBDIR}/lib/console/event/generic.rb
-${GEM_LIBDIR}/lib/console/event/progress.rb
 ${GEM_LIBDIR}/lib/console/event/spawn.rb
 ${GEM_LIBDIR}/lib/console/filter.rb
 ${GEM_LIBDIR}/lib/console/format.rb
@@ -18,18 +16,18 @@ ${GEM_LIBDIR}/lib/console/format/safe.rb
 ${GEM_LIBDIR}/lib/console/logger.rb
 ${GEM_LIBDIR}/lib/console/output.rb
 ${GEM_LIBDIR}/lib/console/output/default.rb
-${GEM_LIBDIR}/lib/console/output/json.rb
 ${GEM_LIBDIR}/lib/console/output/null.rb
 ${GEM_LIBDIR}/lib/console/output/sensitive.rb
+${GEM_LIBDIR}/lib/console/output/serialized.rb
 ${GEM_LIBDIR}/lib/console/output/split.rb
-${GEM_LIBDIR}/lib/console/output/text.rb
-${GEM_LIBDIR}/lib/console/output/xterm.rb
+${GEM_LIBDIR}/lib/console/output/terminal.rb
+${GEM_LIBDIR}/lib/console/output/wrapper.rb
 ${GEM_LIBDIR}/lib/console/progress.rb
 ${GEM_LIBDIR}/lib/console/resolver.rb
-${GEM_LIBDIR}/lib/console/serialized/logger.rb
-${GEM_LIBDIR}/lib/console/split.rb
 ${GEM_LIBDIR}/lib/console/terminal.rb
-${GEM_LIBDIR}/lib/console/terminal/logger.rb
+${GEM_LIBDIR}/lib/console/terminal/formatter/failure.rb
+${GEM_LIBDIR}/lib/console/terminal/formatter/progress.rb
+${GEM_LIBDIR}/lib/console/terminal/formatter/spawn.rb
 ${GEM_LIBDIR}/lib/console/terminal/text.rb
 ${GEM_LIBDIR}/lib/console/terminal/xterm.rb
 ${GEM_LIBDIR}/lib/console/version.rb
