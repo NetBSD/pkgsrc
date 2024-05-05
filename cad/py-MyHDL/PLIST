@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2020/05/19 13:59:02 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.13 2024/05/05 22:35:09 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/myhdl/_Cosimulation.py
 ${PYSITELIB}/myhdl/_Cosimulation.pyc
 ${PYSITELIB}/myhdl/_Cosimulation.pyo
@@ -114,6 +115,9 @@ ${PYSITELIB}/myhdl/conversion/_toVerilog.pyo
 ${PYSITELIB}/myhdl/conversion/_verify.py
 ${PYSITELIB}/myhdl/conversion/_verify.pyc
 ${PYSITELIB}/myhdl/conversion/_verify.pyo
+${PYSITELIB}/myhdl/debug.py
+${PYSITELIB}/myhdl/debug.pyc
+${PYSITELIB}/myhdl/debug.pyo
 share/myhdl/cosimulation/cver/Makefile.lnx
 share/myhdl/cosimulation/cver/Makefile.lnx64
 share/myhdl/cosimulation/cver/Makefile.osx
