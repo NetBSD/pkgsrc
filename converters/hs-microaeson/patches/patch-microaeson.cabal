@@ -1,0 +1,28 @@
+$NetBSD: patch-microaeson.cabal,v 1.1 2024/05/05 05:58:34 pho Exp $
+
+Can't use ${HASKELL_UNRESTRICT_DEPENDENCIES} because these constraints are
+multilined.
+
+--- microaeson.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ microaeson.cabal
+@@ -57,16 +57,14 @@ library
+ 
+   build-depends:     array      ^>= 0.5.1.0
+                    , base        >= 4.8.0.0 && < 5
+-                   , bytestring ^>= 0.10.6.0
+-                             || ^>= 0.11.1.0
++                   , bytestring
+                    , containers ^>= 0.5.6.2
+                              || ^>= 0.6.0.1
+-                   , deepseq    ^>= 1.4.1.1
++                   , deepseq
+                    , fail       ^>= 4.9.0.0
+-                   , text       ^>= 1.2.2.2
+-                             || ^>= 2.0
++                   , text
+ 
+-  build-tool-depends: alex:alex ^>= 3.2.0
++  build-tool-depends: alex:alex
+ 
+   ghc-options:       -Wall
+ 

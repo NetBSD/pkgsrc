@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/05 05:58:34 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Parser.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Parser.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Parser.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Scanner.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Scanner.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Micro/Scanner.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/microaeson-${PKGVERSION}/${HS_VERSION}/package-description
+lib/microaeson-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/Data-Aeson-Micro.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/microaeson.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/microaeson-${PKGVERSION}/html/synopsis.png

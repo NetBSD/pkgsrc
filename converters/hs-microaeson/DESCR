@@ -1,0 +1,6 @@
+microaeson aims to provide a RFC 8259 compliant JavaScript Object Notation
+(JSON) implementation. The microaeson package provides a smaller subset of
+the aeson API with less dependencies and a simpler implementation.
+
+The API is designed in such a way to allow to easily convert client code
+written against microaeson's API to use the full aeson API.
