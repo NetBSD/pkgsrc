@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3191 2024/05/05 17:04:11 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3192 2024/05/05 17:06:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-tins to 1.33.0 [taca 2024-05-05]
 	Updated graphics/ruby-RMagick to 6.0.0 [taca 2024-05-05]
 	Updated misc/ruby-method_source to 1.1.0 [taca 2024-05-05]
+	Updated net/ruby-dnsruby to 1.72.1 [taca 2024-05-05]
