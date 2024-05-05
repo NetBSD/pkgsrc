@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/10/24 08:22:12 pho Exp $
+$NetBSD: distinfo,v 1.2 2024/05/05 12:39:47 pho Exp $
 
 BLAKE2s (disk-free-space-0.1.0.1.tar.gz) = d783289857c3dec5b75d4763f5d2171fecceb095715bb14837a8deec5ac9e0b9
 SHA512 (disk-free-space-0.1.0.1.tar.gz) = 7e798e5428a8ee1a226c28172aca93940dae7aeec5f6fc0a7500da0299074a007f3b5a1d53d7282def245e4b829f86ff9f18ee1f8e824fa259052d5f2434729a
 Size (disk-free-space-0.1.0.1.tar.gz) = 2771 bytes
+SHA1 (patch-System_DiskSpace.hsc) = dbedd9eee01c069828029b7609a318d6c13260ba
