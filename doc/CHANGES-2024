@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3217 2024/05/05 22:18:00 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3218 2024/05/05 22:19:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5067,3 +5067,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-test-pythonpath to 0.7.4nb1 [wiz 2024-05-05]
 	Updated devel/py-wrapt to 1.16.0nb1 [wiz 2024-05-05]
 	Updated textproc/py-Whoosh to 2.7.4nb2 [wiz 2024-05-05]
+	Updated textproc/py-poyo to 0.5.0nb2 [wiz 2024-05-05]
