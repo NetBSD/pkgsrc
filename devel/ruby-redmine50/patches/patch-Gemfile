@@ -1,4 +1,4 @@
-$NetBSD: patch-Gemfile,v 1.9 2024/03/10 15:20:02 taca Exp $
+$NetBSD: patch-Gemfile,v 1.10 2024/05/05 14:42:01 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
@@ -54,15 +54,18 @@ $NetBSD: patch-Gemfile,v 1.9 2024/03/10 15:20:02 taca Exp $
    gem "commonmarker", (Gem.ruby_version < Gem::Version.new('2.6.0') ? '0.21.0' : '~> 0.23.8')
    gem "sanitize", "~> 6.0"
    gem 'deckar01-task_list', '2.3.2'
-@@ -75,7 +75,7 @@ if File.exist?(database_file)
+@@ -75,9 +75,9 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /postgresql/
 -        gem "pg", "~> 1.2.2", :platforms => [:mri, :mingw, :x64_mingw]
 +        gem "pg", "~> 1.2", :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlite3/
-         gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
+-        gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
++        gem "sqlite3", ">= 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlserver/
+         gem "tiny_tds", "~> 2.1.2", :platforms => [:mri, :mingw, :x64_mingw]
+         gem "activerecord-sqlserver-adapter", "~> 6.1.0", :platforms => [:mri, :mingw, :x64_mingw]
 @@ -92,6 +92,7 @@ else
    warn("Please configure your config/database.yml first")
  end
