@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/05 20:50:58 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/05 20:56:55 nikita Exp $
 
 DISTNAME=	zls-0.12.0
 CATEGORIES=	devel
@@ -13,7 +13,8 @@ LICENSE=	mit
 
 ZIGSTRIP=	no
 
-BROKEN=	"Temporary broken as a zig build system parser is being finalised"
+# Temporary required, a zig build system parser is being written.
+ALLOW_NETWORK_ACCESS=yes
 
 .include "zig-depends.mk"
 
