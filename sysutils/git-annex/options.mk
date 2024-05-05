@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2023/11/02 03:15:01 pho Exp $
+# $NetBSD: options.mk,v 1.2 2024/05/05 12:54:51 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.git-annex
-PKG_SUPPORTED_OPTIONS=	git-annex-assistant dbus
-PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
+PKG_SUPPORTED_OPTIONS=	${PKG_SUGGESTED_OPTIONS} debug
+PKG_SUGGESTED_OPTIONS=	dbus git-annex-assistant
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -43,4 +43,13 @@ CONFIGURE_ARGS+=	-f Dbus
 .  include "../../sysutils/hs-fdo-notify/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	-f-Dbus
+.endif
+
+###
+### Enable debugging
+###
+.if ${PKG_OPTIONS:Mdebug}
+CONFIGURE_ARGS+=	-f DebugLocks
+.else
+CONFIGURE_ARGS+=	-f-DebugLocks
 .endif
