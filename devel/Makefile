@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4252 2024/05/05 10:56:19 pho Exp $
+# $NetBSD: Makefile,v 1.4253 2024/05/05 10:57:12 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -636,7 +636,6 @@ SUBDIR+=	hs-hls-cabal-fmt-plugin
 SUBDIR+=	hs-hls-cabal-plugin
 SUBDIR+=	hs-hls-call-hierarchy-plugin
 SUBDIR+=	hs-hls-change-type-signature-plugin
-SUBDIR+=	hs-hls-class-plugin
 SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hls-plugin-api
 SUBDIR+=	hs-hls-refactor-plugin
