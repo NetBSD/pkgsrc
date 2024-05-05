@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/04 09:56:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/05 11:33:12 gdt Exp $
 
 DISTNAME=	hashcat-6.2.6
 CATEGORIES=	security
@@ -18,7 +18,7 @@ MAKE_ENV+=	USE_SYSTEM_XXHASH=1
 
 .include "../../mk/bsd.fast.prefs.mk"
 # see include/common.h
-NOT_FOR_PLATFORM+=	${BIGENDIANPLATFORMS}
+BROKEN_ON_PLATFORM+=	${BIGENDIANPLATFORMS}
 
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
