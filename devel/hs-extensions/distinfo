@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 05:49:50 pho Exp $
+
+BLAKE2s (extensions-0.1.0.1.tar.gz) = ec550c8019451460057708d5c6af9bc69230415a13705bb3b8b4fb0898dada74
+SHA512 (extensions-0.1.0.1.tar.gz) = ac9d04a0746bf9c2fd69e389de80522258d73a70064a541698465a5fe7a46be8dd3a8ac485330ef230e84273c4bab2fed90a63e8d1afc7208b6b6a2356b83795
+Size (extensions-0.1.0.1.tar.gz) = 26645 bytes
