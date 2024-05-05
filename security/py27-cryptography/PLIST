@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/21 10:48:49 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/05/05 20:21:18 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.PSF
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cryptography/__about__.py
 ${PYSITELIB}/cryptography/__about__.pyc
 ${PYSITELIB}/cryptography/__about__.pyo
@@ -98,10 +101,8 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/x509.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
-${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.abi3.so
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_openssl.so
-${PLIST.py3x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.abi3.so
-${PLIST.py2x}${PYSITELIB}/cryptography/hazmat/bindings/_padding.so
+${PYSITELIB}/cryptography/hazmat/bindings/_openssl.abi3.so
+${PYSITELIB}/cryptography/hazmat/bindings/_padding.abi3.so
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyo
