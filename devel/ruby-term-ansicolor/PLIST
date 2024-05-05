@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/03/24 14:18:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/05 16:55:09 taca Exp $
 bin/term_cdiff${RUBY_SUFFIX}
 bin/term_colortab${RUBY_SUFFIX}
 bin/term_decolor${RUBY_SUFFIX}
@@ -33,6 +33,7 @@ ${GEM_LIBDIR}/lib/term/ansicolor/attribute/color8.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/attribute/intense_color8.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/attribute/text.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/hsl_triple.rb
+${GEM_LIBDIR}/lib/term/ansicolor/hyperlink.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/movement.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/ppm_reader.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/rgb_color_metrics.rb
@@ -42,6 +43,7 @@ ${GEM_LIBDIR}/term-ansicolor.gemspec
 ${GEM_LIBDIR}/tests/ansicolor_test.rb
 ${GEM_LIBDIR}/tests/attribute_test.rb
 ${GEM_LIBDIR}/tests/hsl_triple_test.rb
+${GEM_LIBDIR}/tests/hyperlink_test.rb
 ${GEM_LIBDIR}/tests/ppm_reader_test.rb
 ${GEM_LIBDIR}/tests/rgb_color_metrics_test.rb
 ${GEM_LIBDIR}/tests/rgb_triple_test.rb

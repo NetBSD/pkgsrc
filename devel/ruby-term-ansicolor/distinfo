@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/03/24 14:18:59 taca Exp $
+$NetBSD: distinfo,v 1.12 2024/05/05 16:55:09 taca Exp $
 
-BLAKE2s (term-ansicolor-1.7.2.gem) = 2ee5fc404ad1d46783679dc519fa6ac4b24404bae7b8161c2483dd2bd7711d4f
-SHA512 (term-ansicolor-1.7.2.gem) = e81fc32f07d5f85eb0f364069afb143f87dea9fab6c6dd03bba95cdcc74495cdfb87ee334f595c8636226e50801274191a083eee5b70c3e8289d04cc49a1acb6
-Size (term-ansicolor-1.7.2.gem) = 44544 bytes
+BLAKE2s (term-ansicolor-1.8.0.gem) = 3ede7e7f323c1ecd2ed9af491f73e09a20684da18473a0b12eeca27a80e4ba55
+SHA512 (term-ansicolor-1.8.0.gem) = 4a13f369c03d3660f48f28068f311d5eb806e2e4724da6a3ee38eb0ed3c195a1ce8ea24215dfe80af5aab8df1f6a86fdd89d54c62ee2fb9b7e782f9e5ed3013f
+Size (term-ansicolor-1.8.0.gem) = 45056 bytes
