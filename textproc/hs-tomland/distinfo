@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 08:21:18 pho Exp $
+
+BLAKE2s (tomland-1.3.3.2.tar.gz) = 8cee0d1ca41118ca4da405eda20885d373c334e8bbc768b13be7dfda1a08e40f
+SHA512 (tomland-1.3.3.2.tar.gz) = 031026c78d2406e2427fd647577901b9588fe3072fe44da616b3228ee42a6ed11250e2fdfd226493669035eeba47c742fe531901765e26eb6524409b100471ac
+Size (tomland-1.3.3.2.tar.gz) = 90337 bytes
