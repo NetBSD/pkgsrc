@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3151 2024/05/05 10:47:07 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3152 2024/05/05 10:51:04 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4994,3 +4994,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/hs-hls-explicit-imports-plugin [pho 2024-05-05]
 	Removed devel/hs-hls-explicit-fixity-plugin [pho 2024-05-05]
 	Removed devel/hs-hls-eval-plugin [pho 2024-05-05]
+	Removed devel/hs-hls-code-range-plugin [pho 2024-05-05]
