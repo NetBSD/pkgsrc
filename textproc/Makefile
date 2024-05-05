@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1465 2024/05/04 11:46:06 pho Exp $
+# $NetBSD: Makefile,v 1.1466 2024/05/05 05:22:35 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -315,6 +315,7 @@ SUBDIR+=	hs-cgrep
 SUBDIR+=	hs-charset
 SUBDIR+=	hs-cheapskate
 SUBDIR+=	hs-citeproc
+SUBDIR+=	hs-clay
 SUBDIR+=	hs-cmark-gfm
 SUBDIR+=	hs-commonmark
 SUBDIR+=	hs-commonmark-extensions
