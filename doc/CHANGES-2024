@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3170 2024/05/05 14:42:29 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3171 2024/05/05 14:43:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5014,3 +5014,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cryptography_vectors to 42.0.6 [adam 2024-05-05]
 	Updated textproc/py-referencing to 0.35.1 [adam 2024-05-05]
 	Updated devel/ruby-redmine50 to 5.0.8nb1 [taca 2024-05-05]
+	Updated devel/ruby-redmine51 to 5.1.2nb1 [taca 2024-05-05]
