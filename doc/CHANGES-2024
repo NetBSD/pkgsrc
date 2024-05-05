@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3214 2024/05/05 22:09:02 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3215 2024/05/05 22:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-extras to 1.0.0nb2 [wiz 2024-05-05]
 	Updated devel/py-test-assume to 2.4.3nb2 [wiz 2024-05-05]
 	Updated devel/py-test-lazy-fixture to 0.6.3nb1 [wiz 2024-05-05]
+	Updated devel/py-test-pythonpath to 0.7.4nb1 [wiz 2024-05-05]
