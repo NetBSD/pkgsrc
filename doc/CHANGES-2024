@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3121 2024/05/05 08:27:08 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3122 2024/05/05 08:33:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4963,3 +4963,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added textproc/hs-tomland version 1.3.3.2 [pho 2024-05-05]
 	Added devel/hs-trial version 0.0.0.0 [pho 2024-05-05]
 	Added devel/hs-trial-optparse-applicative version 0.0.0.0 [pho 2024-05-05]
+	Added textproc/hs-trial-tomland version 0.0.0.0 [pho 2024-05-05]
