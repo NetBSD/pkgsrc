@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2023/10/31 14:42:09 pho Exp $
-
-BLAKE2s (hls-splice-plugin-2.4.0.0.tar.gz) = 097f728b7a7a8a6bbc4a77b05ccd7d9d388fa45430ed5edc2f5cd42a33cd8cb1
-SHA512 (hls-splice-plugin-2.4.0.0.tar.gz) = 62dd3a157d9fd04c686c825cc2309b8208b509a52a435e917677b76375fe85bf34772d47074c1842fc2a8a2b241147c735fd4b655b856e209ec77d692c16e296
-Size (hls-splice-plugin-2.4.0.0.tar.gz) = 14617 bytes
