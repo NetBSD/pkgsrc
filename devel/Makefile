@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4262 2024/05/05 11:05:56 pho Exp $
+# $NetBSD: Makefile,v 1.4263 2024/05/05 16:10:44 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3264,6 +3264,7 @@ SUBDIR+=	ruby-ffi-compiler
 SUBDIR+=	ruby-ffi-yajl
 SUBDIR+=	ruby-fiber-annotation
 SUBDIR+=	ruby-fiber-local
+SUBDIR+=	ruby-fiber-storage
 SUBDIR+=	ruby-filesize
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-forwardable-extended
