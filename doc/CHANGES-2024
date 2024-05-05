@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3128 2024/05/05 09:32:43 nia Exp $
+$NetBSD: CHANGES-2024,v 1.3129 2024/05/05 09:46:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4971,3 +4971,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added converters/pandoc-cli version 3.1.13 [pho 2024-05-05]
 	Updated games/xonotic to 0.8.6 [nia 2024-05-05]
 	Added games/xonotic-dedicated version 0.8.6 [nia 2024-05-05]
+	Updated converters/pandoc to 3.1.13 [pho 2024-05-05]
