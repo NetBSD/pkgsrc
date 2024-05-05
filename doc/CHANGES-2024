@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3198 2024/05/05 18:39:26 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3199 2024/05/05 20:04:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5045,3 +5045,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/py-emoji to 2.11.1 [adam 2024-05-05]
 	Updated devel/py-queuelib to 1.7.0 [adam 2024-05-05]
 	Updated www/py-cheroot to 10.0.1 [adam 2024-05-05]
+	Updated www/py-http_ece to 1.0.5nb2 [wiz 2024-05-05]
