@@ -1,47 +1,35 @@
-# $NetBSD: Makefile,v 1.19 2024/04/06 08:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/05 09:31:36 nia Exp $
 
-DISTNAME=	xonotic-0.8.2
-PKGREVISION=	11
-CATEGORIES=	games
-MASTER_SITES=	https://dl.xonotic.org/
-EXTRACT_SUFX=	.zip
+.include "Makefile.common"
 
-MAINTAINER=	charlotte@NetBSD.org
-HOMEPAGE=	https://xonotic.org/
+CONFLICTS+=	xonotic-dedicated-[0-9]*
+
 COMMENT=	Fast arena-style FPS
-LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake gsed 7za bash zip
-USE_LANGUAGES=	c c++
-
-USE_CXX_FEATURES+=	c++11
-
-WRKSRC=		${WRKDIR}/Xonotic
-BUILD_TARGET=	all-zip-source
-INSTALL_TARGET=	install-data-zip-source install-engine-zip-source install-links
-INSTALL_ENV+=	LIBDIR=${PREFIX}/share/xonotic
+BUILD_TARGET=	both
 
 ICON_SIZES=	16 24 32 64 128 256 512
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-PLIST_SUBST+=	FAKE_PLATFORM="linux64"
-.else
-PLIST_SUBST+=	FAKE_PLATFORM="linux32"
-.endif
-
-.if ${MACHINE_ARCH} == "i386"
-CFLAGS+=	-msse
-.endif
-
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
 .for s in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
 .endfor
+INSTALLATION_DIRS+=	share/xonotic/data
+INSTALLATION_DIRS+=	share/xonotic
 
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/xonotic.desktop \
+CHECK_WRKREF_SKIP+=	share/*
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/source/darkplaces/darkplaces-sdl \
+	    ${DESTDIR}${PREFIX}/bin/xonotic-sdl
+	${INSTALL_PROGRAM} ${WRKSRC}/source/darkplaces/darkplaces-dedicated \
+	    ${DESTDIR}${PREFIX}/bin/xonotic-dedicated
+	${INSTALL_DATA} ${WRKSRC}/key_0.d0pk \
+	    ${DESTDIR}${PREFIX}/share/xonotic
+	${INSTALL_DATA} ${WRKSRC}/data/*.pk3 \
+	    ${DESTDIR}${PREFIX}/share/xonotic/data
+	${INSTALL_DATA} ${WRKSRC}/misc/logos/xonotic.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 .for s in ${ICON_SIZES}
 	${INSTALL_DATA}	${WRKSRC}/misc/logos/icons_png/xonotic_${s}.png \
@@ -52,13 +40,10 @@ post-install:
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

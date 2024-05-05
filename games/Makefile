@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2024/05/02 07:33:19 nia Exp $
+# $NetBSD: Makefile,v 1.545 2024/05/05 09:31:36 nia Exp $
 #
 
 COMMENT=	Games
@@ -471,6 +471,7 @@ SUBDIR+=	xmahjongg
 SUBDIR+=	xmris
 SUBDIR+=	xnibbles
 SUBDIR+=	xonotic
+SUBDIR+=	xonotic-dedicated
 SUBDIR+=	xpat2
 SUBDIR+=	xpilot
 SUBDIR+=	xpipeman

@@ -1,0 +1,40 @@
+# $NetBSD: Makefile.common,v 1.1 2024/05/05 09:31:36 nia Exp $
+
+# used by games/xonotic/Makefile
+# used by games/xonotic-dedicated/Makefile
+
+DISTNAME=	xonotic-0.8.6
+CATEGORIES=	games
+MASTER_SITES=	https://dl.xonotic.org/
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	charlotte@NetBSD.org
+HOMEPAGE=	https://xonotic.org/
+LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	gmake pkg-config
+USE_LANGUAGES=	c c++
+
+DISTINFO_FILE=	${.CURDIR}/../../games/xonotic/distinfo
+PATCHDIR=	${.CURDIR}/../../games/xonotic/patches
+
+USE_CXX_FEATURES+=	c++11
+
+MAKE_ENV+=	DP_LINK_CRYPTO=shared
+MAKE_ENV+=	DP_LINK_CRYPTO_RIJNDAEL=shared
+MAKE_ENV+=	DP_LINK_JPEG=shared
+MAKE_ENV+=	DP_LINK_ZLIB=shared
+
+MAKE_ENV+=	DP_FS_BASEDIR=${PREFIX}/share/xonotic
+
+WRKSRC=		${WRKDIR}/Xonotic
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-msse -msse2
+.endif
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/d0_blind_id/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
