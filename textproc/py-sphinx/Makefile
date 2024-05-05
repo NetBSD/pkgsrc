@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2024/04/24 22:02:32 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2024/05/05 20:28:45 wiz Exp $
 
 DISTNAME=	sphinx-7.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -37,8 +38,12 @@ USE_TOOLS+=	makeinfo
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.0:../../devel/py-importlib-metadata
+.endif
+
+.if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
 
