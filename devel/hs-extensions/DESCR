@@ -1,0 +1,3 @@
+Library and CLI tool to parse Haskell {-# LANGUAGE #-} extensions in source
+files, extract default-extensions from .cabal files and combine together
+default-extensions and per-module extensions.
