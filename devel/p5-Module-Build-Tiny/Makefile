@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/12/18 13:15:53 mef Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/05 07:25:14 wiz Exp $
 
-DISTNAME=	Module-Build-Tiny-0.047
+DISTNAME=	Module-Build-Tiny-0.048
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
@@ -13,11 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-ExtUtils-Config>=0.003:../../devel/p5-ExtUtils-Config
 DEPENDS+=	p5-ExtUtils-Helpers>=0.020:../../devel/p5-ExtUtils-Helpers
 DEPENDS+=	p5-ExtUtils-InstallPaths>=0.002:../../devel/p5-ExtUtils-InstallPaths
+DEPENDS+=	p5-CPAN-Requirements-Dynamic>=0:../../devel/p5-CPAN-Requirements-Dynamic
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/Module/Build/Tiny/.packlist
-# For the tests:
-USE_TOOLS+=		perl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
