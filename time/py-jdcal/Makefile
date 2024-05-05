@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/05 22:24:20 wiz Exp $
 
 DISTNAME=	jdcal-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jdcal/}
 
@@ -11,13 +11,12 @@ HOMEPAGE=	https://github.com/phn/jdcal
 COMMENT=	Julian dates from proleptic Gregorian and Julian calendars
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test_jdcal.py
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
