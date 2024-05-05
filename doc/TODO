@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24414 2024/05/05 16:08:42 pin Exp $
+$NetBSD: TODO,v 1.24415 2024/05/05 16:27:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o diction-1.14
-	o diffsitter-0.8.3
 	o dikt-2s7
 	o dillo-3.1.0
 	o direvent-5.2
@@ -885,8 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-18.1.4 [wip]
-	o llvm-18.1.5
+	o llvm-18.1.5 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
