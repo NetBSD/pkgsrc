@@ -1,4 +1,4 @@
-<!-- $NetBSD: BOOTSTRAP.md,v 1.1 2024/04/28 05:58:57 pho Exp $ -->
+<!-- $NetBSD: BOOTSTRAP.md,v 1.2 2024/05/05 16:16:21 pho Exp $ -->
 
 # We need GHC to build GHC
 
@@ -62,7 +62,7 @@ skip this step. If not, install `misc/cabal-install` and do:
 % cd ${WRKSRC}/hadrian
 % ../../../files/extract-vanilla-package-db ./packages.conf
 (The next command fails with an error but you can safely ignore it.)
-% cabal build --package-db=clear --package-db=./packages.conf --only-configure
+% cabal build --package-db=clear --package-db=./packages.conf --allow-newer
 % cp dist-newstyle/cache/plan.json bootstrap/plan-${BOOT_VERSION}.json
 % cd ./bootstrap
 % cabal build --allow-newer
