@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/10/31 15:24:28 pho Exp $
+$NetBSD: distinfo,v 1.4 2024/05/05 09:16:33 pho Exp $
 
-BLAKE2s (haskell-language-server-2.4.0.0.tar.gz) = 5270d2b009f5c0b89e51daad7c6e21bb6b9f15202fedc02cabd57bdb7dd2fe37
-SHA512 (haskell-language-server-2.4.0.0.tar.gz) = a6982d19c06d3f7c89a31de0f97284b5f9dac63c58ba12c0020ca67f981257041982cc0fb22a957d5e0caa7f3e92da7c18e58adb73fde4bd62c547dfa523f33b
-Size (haskell-language-server-2.4.0.0.tar.gz) = 77669 bytes
+BLAKE2s (haskell-language-server-2.7.0.0.tar.gz) = e04408bde754212c14cd365e0fad659bac9030f6948d7ea6c784e1ef1aa0b10f
+SHA512 (haskell-language-server-2.7.0.0.tar.gz) = 0cfb7cf01ebf4a17747b7aeb58b5401fb77f02799ef245e913b9bee4427f3f99868b37b53495ace7289a0e96648ed4681934b3d5097ed819ec17bfb864233e96
+Size (haskell-language-server-2.7.0.0.tar.gz) = 419132 bytes
