@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.26 2024/04/06 08:05:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/05/05 21:00:42 adam Exp $
 
-DISTNAME=	PDAL-2.5.6-src
+DISTNAME=	PDAL-2.7.1-src
 PKGNAME=	${DISTNAME:S/PDAL/pdal-lib/:S/-src//}
-PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PDAL/}
 GITHUB_PROJECT=	PDAL
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://pdal.io/
 COMMENT=	Point Data Abstraction Library
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 USE_CXX_FEATURES=	c++17 filesystem
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	apps/pdal.pc.in
@@ -49,16 +50,17 @@ CMAKE_ARGS+=	-DWITH_LZMA=ON
 CMAKE_ARGS+=	-DWITH_ZLIB=ON
 CMAKE_ARGS+=	-DWITH_ZSTD=ON
 
-.include "../../geography/gdal-lib/buildlink3.mk"
-.include "../../devel/hdf5-c++/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../geography/libgeotiff/buildlink3.mk"
-.include "../../geography/laszip/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/hdf5-c++/buildlink3.mk"
+.include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../geography/laszip/buildlink3.mk"
+.include "../../geography/libgeotiff/buildlink3.mk"
 .include "../../graphics/pcl/buildlink3.mk"
 .include "../../lang/libunwind/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
