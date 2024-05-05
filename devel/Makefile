@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4232 2024/05/05 08:14:47 pho Exp $
+# $NetBSD: Makefile,v 1.4233 2024/05/05 08:16:33 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -794,6 +794,7 @@ SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-uuid
 SUBDIR+=	hs-uuid-types
+SUBDIR+=	hs-validation-selective
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
 SUBDIR+=	hs-vector-algorithms
