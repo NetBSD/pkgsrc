@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 08:49:34 pho Exp $
+
+BLAKE2s (stylish-haskell-0.14.6.0.tar.gz) = d3bf2a68d491b5890ba77455f944370c7d01a2c061eadb3417e3a68822dc82c0
+SHA512 (stylish-haskell-0.14.6.0.tar.gz) = a87f0ea2c80bc8f855eb606f2d67713f85eb876e13ffa0460795f710241d00f90bbb10b73e7a7ab3d785c2e6f4ada2d656066087bf03eb2fddc873959ddef0e9
+Size (stylish-haskell-0.14.6.0.tar.gz) = 75080 bytes
