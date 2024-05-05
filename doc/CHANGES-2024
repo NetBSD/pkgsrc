@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3180 2024/05/05 16:27:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3181 2024/05/05 16:29:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5024,3 +5024,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-fiber-local to 1.1.0 [taca 2024-05-05]
 	Updated devel/ruby-console to 1.25.2 [taca 2024-05-05]
 	Updated devel/diffsitter to 0.8.3 [wiz 2024-05-05]
+	Updated databases/ruby-sequel to 5.80.0 [taca 2024-05-05]
