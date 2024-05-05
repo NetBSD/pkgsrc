@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/24 10:42:35 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/05/05 10:39:30 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -155,3 +150,11 @@ ${PYSITELIB}/google/api_core/universe.pyo
 ${PYSITELIB}/google/api_core/version.py
 ${PYSITELIB}/google/api_core/version.pyc
 ${PYSITELIB}/google/api_core/version.pyo
+${PYSITELIB}/google/api_core/version_header.py
+${PYSITELIB}/google/api_core/version_header.pyc
+${PYSITELIB}/google/api_core/version_header.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
