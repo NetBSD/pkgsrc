@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/05 20:50:58 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/05 20:56:55 nikita Exp $
 
 DISTNAME=	ncdu-2.4
 CATEGORIES=	sysutils
@@ -11,7 +11,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-BROKEN=	"Temporary broken as a zig build system parser is being finalised"
+# Temporary required, a zig build system parser is being written.
+ALLOW_NETWORK_ACCESS=yes
 
 # TODO: fix "make doc" or patch zig.build to install docs
 post-build:
