@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4226 2024/05/05 05:29:02 pho Exp $
+# $NetBSD: Makefile,v 1.4227 2024/05/05 05:50:05 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -592,6 +592,7 @@ SUBDIR+=	hs-enclosed-exceptions
 SUBDIR+=	hs-enummapset
 SUBDIR+=	hs-errors
 SUBDIR+=	hs-extensible-exceptions
+SUBDIR+=	hs-extensions
 SUBDIR+=	hs-fail
 SUBDIR+=	hs-fgl
 SUBDIR+=	hs-file-embed
