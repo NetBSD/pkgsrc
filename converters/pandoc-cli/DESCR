@@ -1,0 +1,2 @@
+Pandoc-cli provides a command-line executable that uses the pandoc library
+to convert between markup formats.
