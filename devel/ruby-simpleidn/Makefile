@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/08/08 15:46:10 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/05 16:52:47 taca Exp $
 
-DISTNAME=	simpleidn-0.2.1
+DISTNAME=	simpleidn-0.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
