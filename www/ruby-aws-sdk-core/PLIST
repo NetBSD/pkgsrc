@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/04 06:39:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/05 17:26:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -60,6 +60,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/log/formatter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/param_filter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/param_formatter.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/lru_cache.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/pageable_response.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/pager.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/param_converter.rb
@@ -121,10 +122,12 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/rest.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/body.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/builder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/content_type.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/endpoint.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/headers.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/querystring_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/body.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/header_list_parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/headers.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/status_code.rb
