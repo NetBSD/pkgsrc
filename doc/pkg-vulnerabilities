@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.185 2024/05/03 06:00:22 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.186 2024/05/05 07:32:19 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22899,7 +22899,7 @@ blender<2.83.19		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-05
 blender>=2.93<2.93.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0544
 blender<2.83.19		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0545
 blender>=2.93<2.93.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0545
-blender-[0-9]*		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0546
+blender<3.1.0		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0546
 consul<1.9.14		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-24687
 cyrus-sasl<2.1.28	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2022-24407
 drupal<9.2.16		invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-25271
@@ -24277,9 +24277,9 @@ libraw<0.21.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-3553
 libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35532
 libredwg<0.12.4.4608	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-35164
 libredwg-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-45332
-blender-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-2833
-blender-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2832
-blender-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-2831
+blender<3.3.0	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-2833
+blender<3.3.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-2832
+blender<3.3.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-2831
 consul<1.11.9	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-41803
 consul<1.12.5	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2022-40716
 consul<1.24.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2022-3920
@@ -25996,3 +25996,4 @@ ruby32-base>=3.2<3.2.4	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2
 ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 R<4.4.0		arbirary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
 py{27,37,38,39,310,311,312}-aiohttp<3.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-30251
+p5-Email-MIME<1.954	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4140
