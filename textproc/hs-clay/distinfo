@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 05:22:20 pho Exp $
+
+BLAKE2s (clay-0.15.0.tar.gz) = 567eb0cb8c50cdd774c8312be47adfa3add8b628c20dbd1fe2b6335baf46795d
+SHA512 (clay-0.15.0.tar.gz) = 4ecff4f364edb76c76f058837d03eac8c3641175a7f4acf0f6d372f621c086c5a8d8426b4e84c79bdecc79abe7527f70472f764035e8429af2836508b4cc9ba7
+Size (clay-0.15.0.tar.gz) = 43984 bytes
