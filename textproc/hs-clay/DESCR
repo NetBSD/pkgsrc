@@ -1,0 +1,4 @@
+Clay is a CSS preprocessor like LESS and Sass, but implemented as an
+embedded domain specific language (EDSL) in Haskell. This means that all
+CSS selectors and style rules are first class Haskell functions, which
+makes reuse and composability easy.
