@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/29 13:27:52 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/05 20:50:58 nikita Exp $
 
 DISTNAME=	zls-0.12.0
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/zigtools/zls/
 LICENSE=	mit
 
 ZIGSTRIP=	no
+
+BROKEN=	"Temporary broken as a zig build system parser is being finalised"
 
 .include "zig-depends.mk"
 
