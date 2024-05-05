@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 07:29:34 pho Exp $
+
+BLAKE2s (slist-0.2.1.0.tar.gz) = 0ceeb07876567a1f4a7573f18950af6b5d459a248cbad8599114e4b121dfd3ac
+SHA512 (slist-0.2.1.0.tar.gz) = e6c4502c79fa6b77b111541da6667214ae801515e638082ab82903ed93b4e46e9e525c5f78f1d6de0e53170ebdc9a6e4f2fdd5e2d75ed82f683edd5c8bde700d
+Size (slist-0.2.1.0.tar.gz) = 26986 bytes
