@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4235 2024/05/05 08:27:20 pho Exp $
+# $NetBSD: Makefile,v 1.4236 2024/05/05 08:38:09 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -3500,6 +3500,7 @@ SUBDIR+=	spiff
 SUBDIR+=	spin
 SUBDIR+=	splint
 SUBDIR+=	st
+SUBDIR+=	stan
 SUBDIR+=	startbug1
 SUBDIR+=	stfl
 SUBDIR+=	stgit
