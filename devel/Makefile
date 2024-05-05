@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4234 2024/05/05 08:24:20 pho Exp $
+# $NetBSD: Makefile,v 1.4235 2024/05/05 08:27:20 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -781,6 +781,7 @@ SUBDIR+=	hs-timeit
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-trial
+SUBDIR+=	hs-trial-optparse-applicative
 SUBDIR+=	hs-turtle
 SUBDIR+=	hs-type-equality
 SUBDIR+=	hs-uglymemo
