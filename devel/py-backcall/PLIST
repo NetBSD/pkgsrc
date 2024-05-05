@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/22 15:33:55 wiz Exp $
-${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/05/05 21:59:12 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/backcall/__init__.py
 ${PYSITELIB}/backcall/__init__.pyc
 ${PYSITELIB}/backcall/__init__.pyo
