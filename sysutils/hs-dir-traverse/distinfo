@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 05:32:04 pho Exp $
+
+BLAKE2s (dir-traverse-0.2.3.0.tar.gz) = 41e20d3017889e4fc74bc16a4d28f02ee6275961c9b8fb2a08d205834c62b205
+SHA512 (dir-traverse-0.2.3.0.tar.gz) = 3c4a07d228414555a95b738717aff5ba207a88d41ff96885a4ee9ad0f575f4275f0df08e09865eb1e250bfc4b8e2bde036706fa90deb7811a29927b8279f1efb
+Size (dir-traverse-0.2.3.0.tar.gz) = 3185 bytes
