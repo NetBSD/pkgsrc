@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/01/27 03:51:42 wen Exp $
+$NetBSD: distinfo,v 1.23 2024/05/05 07:08:44 wiz Exp $
 
-BLAKE2s (Email-MIME-1.953.tar.gz) = 5872f463adf45c9d8ae5cb772399cee39ee003ebbddf9490a8a6d7cb2dc3317e
-SHA512 (Email-MIME-1.953.tar.gz) = d88704c7f0173198f94180da81beacaad6ea675e3fcd525f92df7c06a85df8664295c63f71ad6aa14ec517f101f23449e6c3818bbd951c1257b8d0080530c5f7
-Size (Email-MIME-1.953.tar.gz) = 124368 bytes
+BLAKE2s (Email-MIME-1.954.tar.gz) = df32e1c9ac703c85c957a7e6ed8fc14f28b9e2c49485a2ed1280eabe65dc40dc
+SHA512 (Email-MIME-1.954.tar.gz) = 2f144796ba716cec199e17b19f1d93ec9571f922c7d3b9c6939b81e0e91e315de8558d2a28c9a879b41ee9cd959452cfec74b1d7843110a5f23bc27cba482f22
+Size (Email-MIME-1.954.tar.gz) = 125093 bytes
