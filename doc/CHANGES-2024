@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3183 2024/05/05 16:35:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3184 2024/05/05 16:41:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5027,3 +5027,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/ruby-sequel to 5.80.0 [taca 2024-05-05]
 	Updated devel/py-pdm_backend to 2.3.0 [wiz 2024-05-05]
 	Updated textproc/py-rapidfuzz to 3.9.0 [wiz 2024-05-05]
+	Updated devel/ruby-async to 2.11.0 [taca 2024-05-05]
