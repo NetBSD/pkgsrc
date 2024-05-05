@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24418 2024/05/05 20:50:38 wiz Exp $
+$NetBSD: TODO,v 1.24419 2024/05/05 22:43:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -794,7 +794,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
 	o ispell-ru-io-0.99g5
-	o iverilog-10.3
+	o iverilog-12.0
 	o ivykis-0.42.4
 	o iwi-firmware3-3.1
 	o iwn-firmware-228.61.2.24
