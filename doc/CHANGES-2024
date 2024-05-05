@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3176 2024/05/05 16:08:42 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3177 2024/05/05 16:11:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5020,3 +5020,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/broot to 1.38.0 [pin 2024-05-05]
 	Updated shells/oh-my-posh to 19.26.1 [pin 2024-05-05]
 	Updated devel/cargo-c to 0.9.32 [pin 2024-05-05]
+	Added devel/ruby-fiber-storage version 0.1.0 [taca 2024-05-05]
