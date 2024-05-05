@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4248 2024/05/05 10:51:57 pho Exp $
+# $NetBSD: Makefile,v 1.4249 2024/05/05 10:53:11 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -642,7 +642,6 @@ SUBDIR+=	hs-hls-module-name-plugin
 SUBDIR+=	hs-hls-ormolu-plugin
 SUBDIR+=	hs-hls-overloaded-record-dot-plugin
 SUBDIR+=	hs-hls-plugin-api
-SUBDIR+=	hs-hls-pragmas-plugin
 SUBDIR+=	hs-hls-refactor-plugin
 SUBDIR+=	hs-hls-rename-plugin
 SUBDIR+=	hs-hls-retrie-plugin
