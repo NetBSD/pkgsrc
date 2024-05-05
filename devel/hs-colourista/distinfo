@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 05:28:36 pho Exp $
+
+BLAKE2s (colourista-0.1.0.2.tar.gz) = bec600339bafe62dfe5c2803c94173bacfe031c5420b26dc984177b200572ba9
+SHA512 (colourista-0.1.0.2.tar.gz) = eb3fd127f0eb1b855c99f8d370993d9485e03d55ab45cdbd2231129417dc9e6299e6afa242b05f26f7e6b5aa7bf94ebb79399fbb41e61ef2006d53bc6037aa7c
+Size (colourista-0.1.0.2.tar.gz) = 11977 bytes
