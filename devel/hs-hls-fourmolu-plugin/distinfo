@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2023/10/31 13:27:47 pho Exp $
-
-BLAKE2s (hls-fourmolu-plugin-2.4.0.0.tar.gz) = 71d9f3472ede36755b5af521df7189eaf8da54666d218a499e1c4b907c9f13f5
-SHA512 (hls-fourmolu-plugin-2.4.0.0.tar.gz) = 95c91a7014f7234c13f1160b3d4c8cc37284d2d77756149d0a59a8c624c69e15d0d2da3b5a0b3c48d220ed5fe1883d6f2f33fa1bdca8991a456b5143fcb3979e
-Size (hls-fourmolu-plugin-2.4.0.0.tar.gz) = 8483 bytes
