@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 16:10:02 taca Exp $
+
+BLAKE2s (fiber-storage-0.1.0.gem) = ec035f0da290cc753e4617eaaa7aa02e5e1ad2a6cab2d3d1cf666963eb7fab7a
+SHA512 (fiber-storage-0.1.0.gem) = 9ab93f9b6ed0657f585a08b7ff89af2eb289bfcf4a1f5dd36363cf6fe622191cf95f4045411e36765f763d19fdc673dc9c2fb7e277f52245d46b6c1ddcc1757f
+Size (fiber-storage-0.1.0.gem) = 10240 bytes
