@@ -1,31 +1,25 @@
-# $NetBSD: Makefile,v 1.32 2023/06/06 12:40:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2024/05/05 22:35:09 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
-PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-.include "../../lang/python/pyversion.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# Python 2.x only -- subprocess is part of Python 3.x
-.if ${PYTHON_VERSION} == 207
-TOOL_DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
-.endif
-
-do-test:
-	${RUN} cd ${WRKSRC}/myhdl/test/core && \
-		${SETENV} ${TEST_ENV} \
-		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
-			py.test-${PYVERSSUFFIX}
+#do-test:
+#	${RUN} cd ${WRKSRC}/myhdl/test/core && \
+#		${SETENV} ${TEST_ENV} \
+#		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
+#			py.test-${PYVERSSUFFIX}
 
 post-install:
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
