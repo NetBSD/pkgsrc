@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2023/06/11 14:28:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/05/05 16:45:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -27,7 +27,7 @@ ${GEM_LIBDIR}/lib/mocha/class_methods.rb
 ${GEM_LIBDIR}/lib/mocha/configuration.rb
 ${GEM_LIBDIR}/lib/mocha/debug.rb
 ${GEM_LIBDIR}/lib/mocha/deprecation.rb
-${GEM_LIBDIR}/lib/mocha/detection/mini_test.rb
+${GEM_LIBDIR}/lib/mocha/detection/minitest.rb
 ${GEM_LIBDIR}/lib/mocha/detection/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/error_with_filtered_backtrace.rb
 ${GEM_LIBDIR}/lib/mocha/exception_raiser.rb
@@ -40,9 +40,9 @@ ${GEM_LIBDIR}/lib/mocha/in_state_ordering_constraint.rb
 ${GEM_LIBDIR}/lib/mocha/inspect.rb
 ${GEM_LIBDIR}/lib/mocha/instance_method.rb
 ${GEM_LIBDIR}/lib/mocha/integration/assertion_counter.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/adapter.rb
-${GEM_LIBDIR}/lib/mocha/integration/mini_test/exception_translation.rb
+${GEM_LIBDIR}/lib/mocha/integration/minitest.rb
+${GEM_LIBDIR}/lib/mocha/integration/minitest/adapter.rb
+${GEM_LIBDIR}/lib/mocha/integration/minitest/exception_translation.rb
 ${GEM_LIBDIR}/lib/mocha/integration/monkey_patcher.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit.rb
 ${GEM_LIBDIR}/lib/mocha/integration/test_unit/adapter.rb
