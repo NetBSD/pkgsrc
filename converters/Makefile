@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2024/05/04 12:25:38 pho Exp $
+# $NetBSD: Makefile,v 1.212 2024/05/05 06:01:50 pho Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -45,6 +45,7 @@ SUBDIR+=	hs-emojis
 SUBDIR+=	hs-hslua-aeson
 SUBDIR+=	hs-json
 SUBDIR+=	hs-lens-aeson
+SUBDIR+=	hs-microaeson
 SUBDIR+=	hs-pandoc
 SUBDIR+=	hs-pandoc-base
 SUBDIR+=	hs-pandoc-lua-engine
