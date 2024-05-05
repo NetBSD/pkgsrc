@@ -1,0 +1,14 @@
+Stan is a command-line tool for analysing Haskell projects. It discovers
+which parts of the code can potentially be improved, and offers suggestions
+on how to do so. Stan is searching for not only performance or error-prone
+code pieces, but it also can help with establishing and applying
+best-practices from the whole Haskell ecosystem.
+
+Although Haskell is a statically typed language, not all properties can be
+encoded in types. Even though GHC is quite a powerful compiler, it tries to
+be library-agnostic and provide only language-specific suggestions, while
+Stan uses the knowledge about the current state of the ecosystem and
+commonly used libraries.
+
+You will find Stan helpful if you enjoy writing in Haskell, but want more
+guarantees from your code, not provided by the Haskell type system or GHC.
