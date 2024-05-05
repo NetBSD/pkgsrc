@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.947 2024/05/04 08:22:12 pho Exp $
+# $NetBSD: Makefile,v 1.948 2024/05/05 08:53:21 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -75,6 +75,7 @@ SUBDIR+=	cy2-sql
 SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-sasl-xoauth2
 SUBDIR+=	cyrus-saslauthd
+SUBDIR+=	d0_blind_id
 SUBDIR+=	dcfldd
 SUBDIR+=	ddos-scan
 SUBDIR+=	dehydrated
