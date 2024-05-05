@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/12/07 08:21:41 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/05/05 10:38:19 wiz Exp $
 
-BLAKE2s (tree-sitter-css-0.20.0.tar.gz) = 2b37ce84cfe4c1c17377290c329bb252e93cf3d4632daeb8f394cba9d14701ff
-SHA512 (tree-sitter-css-0.20.0.tar.gz) = 0b4c45de304a5a18834a85665b5da5eaf7adc968c509de6cb95b98a08b2987be7b13f2cbb7181da04cf23e199942d9daf788a12cd2f4b8d85767ef1250196825
-Size (tree-sitter-css-0.20.0.tar.gz) = 93887 bytes
+BLAKE2s (tree-sitter-css-0.21.0.tar.gz) = b49a7cd3d236b48e107f0bf73bb618132f4ea69c24d80761cea94dd818b2d55d
+SHA512 (tree-sitter-css-0.21.0.tar.gz) = 2f653e74293516d950ced883ece1ed3f6ceb7e895e54207a561c3ae61e63284a4001ae138aaf75afb46fc2efe8e50e3e551c469cd7f675f8cfcc3415e89d07d0
+Size (tree-sitter-css-0.21.0.tar.gz) = 114817 bytes
