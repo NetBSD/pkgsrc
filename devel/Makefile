@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4237 2024/05/05 08:49:50 pho Exp $
+# $NetBSD: Makefile,v 1.4238 2024/05/05 10:37:49 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -663,7 +663,6 @@ SUBDIR+=	hs-hw-fingertree
 SUBDIR+=	hs-hw-prim
 SUBDIR+=	hs-ifelse
 SUBDIR+=	hs-implicit-hie
-SUBDIR+=	hs-implicit-hie-cradle
 SUBDIR+=	hs-indexed-traversable
 SUBDIR+=	hs-indexed-traversable-instances
 SUBDIR+=	hs-ipynb
