@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/05/05 09:31:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/05/05 09:49:52 nia Exp $
 
 # used by games/xonotic/Makefile
 # used by games/xonotic-dedicated/Makefile
@@ -13,12 +13,9 @@ HOMEPAGE=	https://xonotic.org/
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++
 
 DISTINFO_FILE=	${.CURDIR}/../../games/xonotic/distinfo
 PATCHDIR=	${.CURDIR}/../../games/xonotic/patches
-
-USE_CXX_FEATURES+=	c++11
 
 MAKE_ENV+=	DP_LINK_CRYPTO=shared
 MAKE_ENV+=	DP_LINK_CRYPTO_RIJNDAEL=shared
