@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/05 20:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/05 22:45:03 wiz Exp $
 
 DISTNAME=	cryptography-3.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-[0-9]*:../../security/py-cryp
 TEST_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test4
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis4
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
