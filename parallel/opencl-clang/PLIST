@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/14 13:16:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/05 22:30:16 mef Exp $
 include/cclang/module.modulemap
 include/cclang/opencl-c-base.h
 include/cclang/opencl-c.h
 include/cclang/opencl_clang.h
 lib/libopencl-clang.so
-lib/libopencl-clang.so.16
+lib/libopencl-clang.so.17
