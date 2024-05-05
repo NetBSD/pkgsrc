@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/14 09:48:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/05 09:31:36 nia Exp $
 bin/xonotic-dedicated
-bin/xonotic-glx
 bin/xonotic-sdl
 share/applications/xonotic.desktop
 share/icons/hicolor/128x128/apps/xonotic.png
@@ -10,15 +9,11 @@ share/icons/hicolor/256x256/apps/xonotic.png
 share/icons/hicolor/32x32/apps/xonotic.png
 share/icons/hicolor/512x512/apps/xonotic.png
 share/icons/hicolor/64x64/apps/xonotic.png
-share/xonotic/data/font-unifont-20170401.pk3
-share/xonotic/data/font-xolonium-20170401.pk3
-share/xonotic/data/xonotic-20170401-data.pk3
-share/xonotic/data/xonotic-20170401-maps.pk3
-share/xonotic/data/xonotic-20170401-music.pk3
-share/xonotic/data/xonotic-20170401-nexcompat.pk3
-share/xonotic/xonotic-linux-dedicated.sh
-share/xonotic/xonotic-linux-glx.sh
-share/xonotic/xonotic-linux-sdl.sh
-share/xonotic/xonotic-${FAKE_PLATFORM}-dedicated
-share/xonotic/xonotic-${FAKE_PLATFORM}-glx
-share/xonotic/xonotic-${FAKE_PLATFORM}-sdl
+share/xonotic/data/font-unifont-20230620.pk3
+share/xonotic/data/font-xolonium-20230620.pk3
+share/xonotic/data/xonotic-20230620-data.pk3
+share/xonotic/data/xonotic-20230620-maps.pk3
+share/xonotic/data/xonotic-20230620-music.pk3
+share/xonotic/data/xonotic-20230620-nexcompat.pk3
+share/xonotic/data/xonotic-20230620-xoncompat.pk3
+share/xonotic/key_0.d0pk
