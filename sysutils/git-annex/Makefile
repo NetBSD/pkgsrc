@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/08 13:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/05 12:54:51 pho Exp $
 
-DISTNAME=	git-annex-10.20230926
+DISTNAME=	git-annex-10.20240430
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -70,8 +69,8 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../devel/hs-old-locale/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/application.mk"
 .include "../../devel/hs-persistent/buildlink3.mk"
-.include "../../devel/hs-persistent-template/buildlink3.mk"
 .include "../../databases/hs-persistent-sqlite/buildlink3.mk"
+.include "../../devel/hs-persistent-template/buildlink3.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
@@ -87,6 +86,7 @@ CONFIGURE_ARGS+=	-f Benchmark
 .include "../../devel/hs-tasty-hunit/buildlink3.mk"
 .include "../../devel/hs-tasty-quickcheck/buildlink3.mk"
 .include "../../devel/hs-tasty-rerun/buildlink3.mk"
+.include "../../devel/hs-unbounded-delays/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unliftio-core/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
