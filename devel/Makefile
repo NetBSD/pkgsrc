@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4228 2024/05/05 07:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4229 2024/05/05 07:22:26 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -727,6 +727,7 @@ SUBDIR+=	hs-random
 SUBDIR+=	hs-random-shuffle
 SUBDIR+=	hs-refact
 SUBDIR+=	hs-reflection
+SUBDIR+=	hs-relude
 SUBDIR+=	hs-repline
 SUBDIR+=	hs-resource-pool
 SUBDIR+=	hs-resourcet
