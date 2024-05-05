@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2023/10/31 13:57:37 pho Exp $
-
-BLAKE2s (hls-class-plugin-2.4.0.0.tar.gz) = e8a58d31c78d2a18762e8d08f7bc6321fcaaccd42cc24540e6234cf48af3cb0c
-SHA512 (hls-class-plugin-2.4.0.0.tar.gz) = fe97a12bf3aa91635e3474b99874c3944cf43f76d0e862416f0b400dd585a754944500d637cdb5e1e8245b7a46bdf6b18f1d2e41c565f309e08e2a8dfcf1a3c5
-Size (hls-class-plugin-2.4.0.0.tar.gz) = 18602 bytes
