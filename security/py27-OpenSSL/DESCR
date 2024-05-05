@@ -1,7 +1,6 @@
-pyOpenSSL is a Python module that is a rather thin wrapper around (a
-subset of) the OpenSSL library.  A lot of the object methods do
+pyOpenSSL is a Python module that is a rather thin wrapper around
+(a subset of) the OpenSSL library.  A lot of the object methods do
 nothing more than call a corresponding function in the OpenSSL
 library.
 
-This legacy version is the last version supporting non-Rust
-platforms (as well as, coincidentally, Python 2.7).
+This legacy version is the last version supporting non-Rust platforms.
