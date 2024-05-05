@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/05 09:27:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/05 09:56:16 pho Exp $
 bin/pandoc
+man/man1/pandoc-lua.1
+man/man1/pandoc-server.1
+man/man1/pandoc.1
 share/doc/${HS_PLATFORM}/${PKGNAME}/COPYING.md

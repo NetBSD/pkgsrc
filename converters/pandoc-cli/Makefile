@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 09:27:05 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/05 09:56:16 pho Exp $
 
 DISTNAME=	pandoc-cli-3.1.13
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +15,13 @@ LICENSE=	gnu-gpl-v2
 # be launched very frequently by build systems and editors. This wastes
 # storage, but time is more expensive than disks.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+post-install:
+	cd ${WRKSRC}/man && \
+	for f in *.1; do \
+		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$f; \
+	done
 
 .include "options.mk"
 
