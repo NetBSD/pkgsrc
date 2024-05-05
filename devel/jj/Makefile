@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/04/18 14:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/05 10:04:19 wiz Exp $
 
-DISTNAME=	jj-0.16.0
+DISTNAME=	jj-0.17.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=martinvonz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
