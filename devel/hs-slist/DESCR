@@ -1,0 +1,2 @@
+This package implements Slist data structure that stores the size of the
+list along with the list itself.
