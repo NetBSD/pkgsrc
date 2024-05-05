@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 08:37:53 pho Exp $
+
+BLAKE2s (stan-0.1.2.1.tar.gz) = 20e9fe45c2f33ec3e6f8b1afb2b37f56ce187c1c6a5157a488b5fcf378a9f884
+SHA512 (stan-0.1.2.1.tar.gz) = 829600c829b4a47fd13fda23ea6742002b98bcdc9baf36c6ec0b03ca3dc50f25bd93d3cc56c279a6746398eaf62579691117c35281932abad27d1b46d87ac2ed
+Size (stan-0.1.2.1.tar.gz) = 87871 bytes
