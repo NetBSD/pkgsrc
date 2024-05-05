@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2023/11/19 16:17:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/05/05 10:34:33 wiz Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -105,6 +105,9 @@ ${PYSITELIB}/pygments/lexers/_lilypond_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_lua_builtins.py
 ${PYSITELIB}/pygments/lexers/_lua_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_lua_builtins.pyo
+${PYSITELIB}/pygments/lexers/_luau_builtins.py
+${PYSITELIB}/pygments/lexers/_luau_builtins.pyc
+${PYSITELIB}/pygments/lexers/_luau_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_mapping.py
 ${PYSITELIB}/pygments/lexers/_mapping.pyc
 ${PYSITELIB}/pygments/lexers/_mapping.pyo
@@ -504,6 +507,9 @@ ${PYSITELIB}/pygments/lexers/modeling.pyo
 ${PYSITELIB}/pygments/lexers/modula2.py
 ${PYSITELIB}/pygments/lexers/modula2.pyc
 ${PYSITELIB}/pygments/lexers/modula2.pyo
+${PYSITELIB}/pygments/lexers/mojo.py
+${PYSITELIB}/pygments/lexers/mojo.pyc
+${PYSITELIB}/pygments/lexers/mojo.pyo
 ${PYSITELIB}/pygments/lexers/monte.py
 ${PYSITELIB}/pygments/lexers/monte.pyc
 ${PYSITELIB}/pygments/lexers/monte.pyo
@@ -666,6 +672,9 @@ ${PYSITELIB}/pygments/lexers/snobol.pyo
 ${PYSITELIB}/pygments/lexers/solidity.py
 ${PYSITELIB}/pygments/lexers/solidity.pyc
 ${PYSITELIB}/pygments/lexers/solidity.pyo
+${PYSITELIB}/pygments/lexers/soong.py
+${PYSITELIB}/pygments/lexers/soong.pyc
+${PYSITELIB}/pygments/lexers/soong.pyo
 ${PYSITELIB}/pygments/lexers/sophia.py
 ${PYSITELIB}/pygments/lexers/sophia.pyc
 ${PYSITELIB}/pygments/lexers/sophia.pyo
@@ -687,6 +696,9 @@ ${PYSITELIB}/pygments/lexers/stata.pyo
 ${PYSITELIB}/pygments/lexers/supercollider.py
 ${PYSITELIB}/pygments/lexers/supercollider.pyc
 ${PYSITELIB}/pygments/lexers/supercollider.pyo
+${PYSITELIB}/pygments/lexers/tact.py
+${PYSITELIB}/pygments/lexers/tact.pyc
+${PYSITELIB}/pygments/lexers/tact.pyo
 ${PYSITELIB}/pygments/lexers/tal.py
 ${PYSITELIB}/pygments/lexers/tal.pyc
 ${PYSITELIB}/pygments/lexers/tal.pyo
@@ -735,6 +747,9 @@ ${PYSITELIB}/pygments/lexers/trafficscript.pyo
 ${PYSITELIB}/pygments/lexers/typoscript.py
 ${PYSITELIB}/pygments/lexers/typoscript.pyc
 ${PYSITELIB}/pygments/lexers/typoscript.pyo
+${PYSITELIB}/pygments/lexers/typst.py
+${PYSITELIB}/pygments/lexers/typst.pyc
+${PYSITELIB}/pygments/lexers/typst.pyo
 ${PYSITELIB}/pygments/lexers/ul4.py
 ${PYSITELIB}/pygments/lexers/ul4.pyc
 ${PYSITELIB}/pygments/lexers/ul4.pyo
@@ -846,6 +861,9 @@ ${PYSITELIB}/pygments/styles/borland.pyo
 ${PYSITELIB}/pygments/styles/bw.py
 ${PYSITELIB}/pygments/styles/bw.pyc
 ${PYSITELIB}/pygments/styles/bw.pyo
+${PYSITELIB}/pygments/styles/coffee.py
+${PYSITELIB}/pygments/styles/coffee.pyc
+${PYSITELIB}/pygments/styles/coffee.pyo
 ${PYSITELIB}/pygments/styles/colorful.py
 ${PYSITELIB}/pygments/styles/colorful.pyc
 ${PYSITELIB}/pygments/styles/colorful.pyo
