@@ -1,0 +1,5 @@
+colourista is the library that provides a convenient interface for printing
+colourful messages to the terminal. It is based on ansi-terminal, however,
+in contradistinction to this Haskell library, colourista is a high-level
+wrapper focused on easily achieved output modification without low-level
+setup.
