@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/26 07:23:21 nat Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/05 19:20:30 wiz Exp $
 
 VERSION=	0.3
 GITHUB_PROJECT=	tinyx-wscons
@@ -17,10 +17,10 @@ ONLY_FOR_PLATFORM=	NetBSD-* OpenBSD-*
 
 .include "../../mk/bsd.prefs.mk"
 
-
 USE_TOOLS+=		gmake aclocal autoconf automake pkg-config
 INSTALLATION_DIRS=	sbin
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 SPECIAL_PERMS+=		sbin/Xwscons ${SETUID_ROOT_PERMS}
 
