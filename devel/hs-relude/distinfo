@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/05 07:21:22 pho Exp $
+
+BLAKE2s (relude-1.2.1.0.tar.gz) = bb9dbe990545834385c6084cfe2b03c12f07e03af3ac04d8d9c33df5490b8d14
+SHA512 (relude-1.2.1.0.tar.gz) = ef061dd22316a40ed6056774aec15598c536ec85190ce38de5effdaf7ed433a2733a5ecb3facbbdd89ba2dffdb526963ac49d14ffdaca5f36b246c6609b1dfba
+Size (relude-1.2.1.0.tar.gz) = 72581 bytes
