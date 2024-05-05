@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:35 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/05 21:27:35 wiz Exp $
 
 DISTNAME=	ecb-2.50
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	find gmake makeinfo tar
 INFO_FILES=	yes
+
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 MAKE_FLAGS+=		EMACS=${EMACS_BIN}
 MAKE_FLAGS+=		SHELL=${SH:Q}
