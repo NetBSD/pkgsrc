@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4236 2024/05/05 08:38:09 pho Exp $
+# $NetBSD: Makefile,v 1.4237 2024/05/05 08:49:50 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -3504,6 +3504,7 @@ SUBDIR+=	stan
 SUBDIR+=	startbug1
 SUBDIR+=	stfl
 SUBDIR+=	stgit
+SUBDIR+=	stylish-haskell
 SUBDIR+=	stylua
 SUBDIR+=	subversion
 SUBDIR+=	subversion-base
