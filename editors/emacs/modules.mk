@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.36 2024/04/26 14:20:54 wiz Exp $
+# $NetBSD: modules.mk,v 1.37 2024/05/05 19:11:01 wiz Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -42,11 +42,11 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs29, emacs29nox, emacs28, emacs28nox,
-#			emacs27, emacs27nox, emacs26, emacs26nox,
-#			emacs21, emacs21nox,
-#			emacs20, xemacs215, xemacs215nox,
-#			xemacs214, xemacs214nox
+#			emacs29 emacs29nox emacs28 emacs28nox
+#			emacs27 emacs27nox emacs26 emacs26nox
+#			emacs21 emacs21nox
+#			emacs20 xemacs215 xemacs215nox
+#			xemacs214 xemacs214nox
 #		Default value:
 #			emacs29
 #
@@ -57,7 +57,7 @@
 #			List of Emacs LISP modules that the current ELP
 #			needs at run-time.
 #		Possible values:
-#			base, leim
+#			base leim
 #		Default value:
 #			<undefined>
 #
@@ -65,17 +65,17 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs29, emacs29nox, emacs28, emacs28nox,
-#			emacs27, emacs27nox, emacs26, emacs26nox,
-#			emacs21, emacs21nox,
-#			emacs20, xemacs215, xemacs215nox,
-#			xemacs214, xemacs214nox
+#			emacs29 emacs29nox emacs28 emacs28nox
+#			emacs27 emacs27nox emacs26 emacs26nox
+#			emacs21 emacs21nox
+#			emacs20 xemacs215 xemacs215nox
+#			xemacs214 xemacs214nox
 #		Default value:
-#			emacs29, emacs29nox, emacs28, emacs28nox,
-#			emacs27, emacs27nox, emacs26, emacs26nox,
-#			emacs21, emacs21nox,
-#			emacs20, xemacs215, xemacs215nox,
-#			xemacs214, xemacs214nox
+#			emacs29 emacs29nox emacs28 emacs28nox
+#			emacs27 emacs27nox emacs26 emacs26nox
+#			emacs21 emacs21nox
+#			emacs20 xemacs215 xemacs215nox
+#			xemacs214 xemacs214nox
 #
 #	EMACS_BUILDLINK
 #		Description:
