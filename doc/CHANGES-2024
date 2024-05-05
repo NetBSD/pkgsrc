@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3117 2024/05/05 08:14:40 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3118 2024/05/05 08:16:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4959,3 +4959,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/hs-slist version 0.2.1.0 [pho 2024-05-05]
 	Updated sysutils/pfetch to 1.0.1 [fox 2024-05-05]
 	Added devel/hs-selective version 0.7.0.1 [pho 2024-05-05]
+	Added devel/hs-validation-selective version 0.2.0.0 [pho 2024-05-05]
