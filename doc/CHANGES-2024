@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3100 2024/05/04 21:48:41 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.3101 2024/05/05 00:00:35 jym Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -4942,3 +4942,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/zathura-cb to 0.1.10 [nikita 2024-05-04]
 	Updated print/zathura-pdf-mupdf to 0.4.1 [nikita 2024-05-04]
 	Updated print/zathura-pdf-poppler to 0.3.2 [nikita 2024-05-04]
+	Updated mail/py-dkim to 1.1.6nb1 [jym 2024-05-05]
