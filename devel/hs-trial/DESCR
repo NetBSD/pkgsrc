@@ -1,0 +1,3 @@
+The Trial Data Structure is a Either-like structure that keeps events
+history inside. The data type allows to keep track of the Fatality level of
+each such event entry (Warning or Error).
