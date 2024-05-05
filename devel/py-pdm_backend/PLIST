@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/15 05:15:56 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2024/05/05 16:30:09 wiz Exp $
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
@@ -113,9 +109,6 @@ ${PYSITELIB}/pdm/backend/hooks/version/scm.pyo
 ${PYSITELIB}/pdm/backend/intree.py
 ${PYSITELIB}/pdm/backend/intree.pyc
 ${PYSITELIB}/pdm/backend/intree.pyo
-${PYSITELIB}/pdm/backend/macosx_platform.py
-${PYSITELIB}/pdm/backend/macosx_platform.pyc
-${PYSITELIB}/pdm/backend/macosx_platform.pyo
 ${PYSITELIB}/pdm/backend/py.typed
 ${PYSITELIB}/pdm/backend/sdist.py
 ${PYSITELIB}/pdm/backend/sdist.pyc
@@ -129,3 +122,7 @@ ${PYSITELIB}/pdm/backend/utils.pyo
 ${PYSITELIB}/pdm/backend/wheel.py
 ${PYSITELIB}/pdm/backend/wheel.pyc
 ${PYSITELIB}/pdm/backend/wheel.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
