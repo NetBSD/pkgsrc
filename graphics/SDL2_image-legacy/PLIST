@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/06 18:05:31 nia Exp $
+bin/showimage2
+include/SDL2/SDL_image.h
+lib/libSDL2_image.la
+lib/pkgconfig/SDL2_image.pc
