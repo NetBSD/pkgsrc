@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2024/05/06 08:27:50 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/05/06 08:41:56 jperkin Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
@@ -86,14 +86,6 @@ CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
-.include "../../mk/curses.buildlink3.mk"
-
-.if !empty(CURSES_TYPE:M*ncurses*)
-CMAKE_ARGS+=		-DCURSES_NEED_NCURSES=ON
-CMAKE_ARGS+=		-DCURSES_NEED_WIDE=ON
-CPPFLAGS+=		-DHAVE_CURSES_H
-.endif
-
 # We don't clone MariaDB from git, so avoid peeking into
 # the parent repository.
 CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
@@ -129,6 +121,7 @@ PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/krb5.buildlink3.mk"
