@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/04/06 08:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/06 14:37:14 nia Exp $
 
 DISTNAME=	abbayedesmorts-gpl-2.0.2
 PKGNAME=	${DISTNAME:S/-gpl//1}
@@ -14,6 +14,9 @@ COMMENT=	Obsolete video game for a dark passage of history
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake
+
+# src/drawing.c:10: error: 'for' loop initial declaration used outside C99 mode
+FORCE_C_STD=	gnu99
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
