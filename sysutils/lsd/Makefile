@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/03/27 09:52:01 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/06 05:37:46 pin Exp $
 
 DISTNAME=	lsd-1.1.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lsd-rs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,14 +17,10 @@ TOOL_DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
-
 # Use go-md2man to generate manpages and install them
 post-install:
 	go-md2man < ${WRKSRC}/doc/lsd.md > ${WRKSRC}/doc/lsd.1
 	${INSTALL_MAN} ${WRKSRC}/doc/lsd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
-.include "../../devel/libgit2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
