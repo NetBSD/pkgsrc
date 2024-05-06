@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2021/07/13 08:39:28 nia Exp $
+# $NetBSD: Makefile,v 1.47 2024/05/06 08:33:49 jperkin Exp $
 
 DISTNAME=		cdk-5.0-20210324
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
@@ -12,7 +12,6 @@ COMMENT=		Curses Development Kit
 LICENSE=		original-bsd
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_NCURSES=		yes # uses ncurses internals
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/07/17 22:00:24 nia Exp $
+# $NetBSD: Makefile,v 1.42 2024/05/06 08:33:51 jperkin Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -19,7 +19,6 @@ NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* *-*-x86_64 *-*-aarch64
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_TOOLS+=		gmake gsed
-USE_NCURSES=		yes
 PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"

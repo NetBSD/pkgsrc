@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/12/19 14:23:46 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/06 08:33:51 jperkin Exp $
 #
 
 DISTNAME=	tlf-0.9.31-2
@@ -11,7 +11,6 @@ HOMEPAGE=	https://tlf.github.io/
 COMMENT=	Advanced hamradio logging and contest program
 LICENSE=	gnu-gpl-v2
 
-USE_NCURSES=		yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require

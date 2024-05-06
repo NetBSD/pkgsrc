@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/10/14 22:44:57 mef Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/06 08:33:50 jperkin Exp $
 
 DISTNAME=	ncurses-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ncurses-${VER}
@@ -13,7 +13,6 @@ HOMEPAGE=	https://github.com/eclubb/ncurses-ruby
 COMMENT=	Ruby interface to ncurses
 
 VER=			1.2.4
-USE_NCURSES=		YES	# mouse functions
 USE_RUBY_EXTCONF=	YES
 
 DOCS=			COPYING Changes MANIFEST README THANKS TODO VERSION

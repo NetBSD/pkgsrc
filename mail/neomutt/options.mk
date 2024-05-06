@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2024/05/06 08:27:53 jperkin Exp $
+# $NetBSD: options.mk,v 1.23 2024/05/06 08:33:51 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 ### ncurses
 ###
 .if !empty(PKG_OPTIONS:Mncurses)
-USE_NCURSES=		yes
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/05/06 08:27:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2024/05/06 08:33:53 jperkin Exp $
 
 DISTNAME=	wiki-tui-0.8.2
 PKGREVISION=	1
@@ -14,7 +14,6 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_TOOLS+=	pkg-config
-USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
 INSTALLATION_DIRS=	share/applications share/icons/hicolor/scalable/apps
 

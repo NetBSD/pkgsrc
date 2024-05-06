@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2023/12/31 21:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2024/05/06 08:33:53 jperkin Exp $
 
 DISTNAME=		aspell-0.60.8.1
 CATEGORIES=		textproc
@@ -19,7 +19,6 @@ USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-USE_NCURSES=		yes
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
 

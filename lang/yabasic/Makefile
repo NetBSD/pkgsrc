@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/11/06 21:55:58 fcambus Exp $
+# $NetBSD: Makefile,v 1.42 2024/05/06 08:33:51 jperkin Exp $
 
 DISTNAME=		yabasic-2.90.4
 CATEGORIES=		lang
@@ -10,7 +10,6 @@ COMMENT=		Yet another Basic for Unix and Windows
 LICENSE=		mit
 
 GNU_CONFIGURE=		yes
-USE_NCURSES=		yes
 AUTO_MKDIRS=		yes
 
 TEST_TARGET=		check

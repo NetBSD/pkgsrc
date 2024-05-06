@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/06 08:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/06 08:33:53 jperkin Exp $
 
 DISTNAME=		clex-4.6.4
 PKGREVISION=		1
@@ -11,7 +11,6 @@ COMMENT=		File manager with a full-screen user interface
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c99
-USE_NCURSES=		yes # enter_{bold,reverse,underline}_mode
 GNU_CONFIGURE=		yes
 
 # for easy to maintain patches

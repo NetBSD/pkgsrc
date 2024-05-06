@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/05/06 08:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/06 08:33:52 jperkin Exp $
 
 DISTNAME=	ncgopher-0.6.0
 CATEGORIES=	net
@@ -14,7 +14,6 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
-USE_NCURSES=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
