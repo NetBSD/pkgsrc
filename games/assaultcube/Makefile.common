@@ -1,0 +1,56 @@
+# $NetBSD: Makefile.common,v 1.1 2024/05/06 07:46:35 nia Exp $
+# used by games/assaultcube/Makefile
+# used by games/assaultcube-server/Makefile
+
+DISTNAME=	AssaultCube_v1.2.0.2
+PKGNAME=	${DISTNAME:tl:S,_v,-,g}
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_GITHUB:=assaultcube/}
+EXTRACT_SUFX=	.tar.bz2
+GITHUB_PROJECT=	AC
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://assault.cubers.net/
+LICENSE=	zlib AND x11 AND cc-by-nc-nd-v2.5-license
+
+BUILD_DIRS=	source/src
+USE_TOOLS+=	gmake pax pkg-config
+USE_LANGUAGES=	c c++
+
+DISTINFO_FILE=	${.CURDIR}/../../games/assaultcube/distinfo
+FILESDIR=	${.CURDIR}/../../games/assaultcube/files
+PATCHDIR=	${.CURDIR}/../../games/assaultcube/patches
+
+# GCC precompiled headers...
+RELRO_SUPPORTED=	no
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	libexec
+INSTALLATION_DIRS+=	share/assaultcube/config
+INSTALLATION_DIRS+=	share/assaultcube/packages
+INSTALLATION_DIRS+=	share/assaultcube/scripts
+
+CHECK_WRKREF_SKIP+=	share/*
+
+pre-configure:
+	${RM} -f ${WRKSRC}/source/include/libintl.h
+.for prog in ${BUILD_TARGET}
+	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
+                < ${FILESDIR}/assaultcube.sh.in > \
+                ${WRKDIR}/ac_${prog}
+.endfor
+
+do-install:
+.for prog in ${BUILD_TARGET}
+	${INSTALL_SCRIPT} ${WRKDIR}/ac_${prog} \
+            ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/source/src/ac_${prog} \
+	    ${DESTDIR}${PREFIX}/libexec
+.endfor
+.for f in config packages scripts
+	cd ${WRKSRC}/${f} && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/assaultcube/${f}
+.endfor
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../net/enet/buildlink3.mk"
