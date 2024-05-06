@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/08 13:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/06 08:27:50 jperkin Exp $
 
 DISTNAME=	git-branchless-0.8.0
 PKGREVISION=	3
@@ -18,7 +18,7 @@ USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
 INSTALLATION_DIRS=	bin
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
 post-patch:
@@ -30,6 +30,6 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

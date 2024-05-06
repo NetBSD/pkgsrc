@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/11/08 13:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/06 08:27:49 jperkin Exp $
 
 DISTNAME=	centerim5-5.0.1
 PKGREVISION=	17
@@ -39,6 +39,6 @@ pre-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

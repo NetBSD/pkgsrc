@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2024/01/30 14:21:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.114 2024/05/06 08:27:48 jperkin Exp $
 
 DISTNAME=		cmus-2.10.0
 PKGREVISION=		7
@@ -49,5 +49,5 @@ PLIST.coreaudio=	yes
 .include "../../mk/atomic64.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

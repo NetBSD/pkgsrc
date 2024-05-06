@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/11/08 13:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=	lnav-0.11.1
 PKGREVISION=	5
@@ -28,6 +28,6 @@ GCC_REQD+=	8
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

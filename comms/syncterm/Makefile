@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/06 08:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/06 08:27:50 jperkin Exp $
 
 DISTNAME=	syncterm-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -26,7 +26,7 @@ MAKE_FLAGS+=	SYSTEM_LIST_DIR=${PKG_SYSCONFDIR}
 MAKE_FLAGS+=	WITHOUT_CRYPTLIB=1
 
 # incompatible with NetBSD curses - tries to access within cchar_t
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
