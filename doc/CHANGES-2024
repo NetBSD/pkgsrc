@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3238 2024/05/06 13:45:36 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3239 2024/05/06 14:04:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/libspatialite to 5.1.0 [adam 2024-05-06]
 	Updated mail/mu to 1.12.5 [ktnb 2024-05-06]
 	Updated sysutils/fd-find to 10.0.0 [pin 2024-05-06]
+	Updated devel/py-rpds-py to 0.18.1 [he 2024-05-06]
