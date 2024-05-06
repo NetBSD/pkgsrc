@@ -1,23 +1,7 @@
-$NetBSD: distinfo,v 1.6 2024/05/06 12:12:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/05/06 14:04:25 nia Exp $
 
-BLAKE2s (AssaultCube_v1.2.0.2.tar.bz2) = f4d6876aed7f72b5c9c171f1952c54618a596f847ebfbb0a90892b79f2c066e6
-SHA512 (AssaultCube_v1.2.0.2.tar.bz2) = e2a0d3380db6d2ac2773ea90703fd572504729b9214a6c105f39aefa4c06ff48720634c6601efdad8b9b3b22dec9bc3a9ea7e094839042bc3ff5cfdd88eac976
-Size (AssaultCube_v1.2.0.2.tar.bz2) = 48181347 bytes
-SHA1 (patch-source_src_Makefile) = 0283b583e11e381f6bfef038f7a2f7ed3e66e545
-SHA1 (patch-source_src_bot_bot__waypoint.cpp) = 5ded14f79b69ee6ec6c2e9628452a1d6db0d406e
-SHA1 (patch-source_src_command.cpp) = 9bf2127eff468fd213bf66d345daab982b1c0722
-SHA1 (patch-source_src_command.h) = 300f62adb527224c420ed2a6ce3044660fdb4e7a
-SHA1 (patch-source_src_console.cpp) = 7570309666c89a156b980b3757b92f613de9d9b5
-SHA1 (patch-source_src_console.h) = e1cc0060bee43f5c02a9e7107e02a651458f8b93
-SHA1 (patch-source_src_crypto.cpp) = fff2b1cf9cac8c4dd9999fc99ed5ce3200f331fc
-SHA1 (patch-source_src_editing.cpp) = 7bf829a47233358fe14341691e84c9bd5ff880b7
-SHA1 (patch-source_src_entity.h) = ab67abee7df1587eb01877a9aea64a1b28a940ea
-SHA1 (patch-source_src_main.cpp) = 4b3dc7617cb36054ed6de111e8994d22d2e0267b
-SHA1 (patch-source_src_master.cpp) = 95c9630e4f33e79ab9ef646532baada13b92e749
-SHA1 (patch-source_src_platform.h) = b3c5b285093553f2ec3d0d2f8b5962108a1d3328
-SHA1 (patch-source_src_protos.h) = 0944251480debf25e8dc25463307c223ffebbfbb
-SHA1 (patch-source_src_rendercubes.cpp) = 740f5dc169a5e0b331437fd157238a5323a0c866
-SHA1 (patch-source_src_rendertext.cpp) = 3082ca174416c21157ef56fb4d09f3ae3653a47d
-SHA1 (patch-source_src_tools.h) = a6c0ca4a28b51fc437ed69fe3e7ea48f07c711cb
-SHA1 (patch-source_src_world.cpp) = 2b48cddb24109c018dc70a3e94417c43178ae101
-SHA1 (patch-source_src_worldrender.cpp) = fb7341ad70fcb242982a5f02d7ab0fe3759245d0
+BLAKE2s (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = 3bdebf27494ce9587671ab5b52c1fc4d8855a67301c5e57d9659cb0c34eb9dfa
+SHA512 (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = d837e945681a44f76c5a17c651c0578d912fae1161b7d0fa3c5b06524c2639c8701b767c8a1aeb95d14066faa7c4ecb25f2d1ab845c10dce5cf655b59bbafcd9
+Size (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = 52071427 bytes
+SHA1 (patch-source_src_Makefile) = 8f06a6bc3ab3efdde9227abf25d39c32ec2b4076
+SHA1 (patch-source_src_tools.cpp) = 3b59ee5c6348918a844c8c88a870e69bb5a241ae

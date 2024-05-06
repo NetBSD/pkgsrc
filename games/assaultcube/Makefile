@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2024/05/06 12:12:16 nia Exp $
-
-PKGREVISION=	16
+# $NetBSD: Makefile,v 1.22 2024/05/06 14:04:25 nia Exp $
 
 COMMENT=	Cube-based FPS with realistic environments
 
-BUILD_TARGET=	client master server
+BUILD_TARGET=	client server
 
 .include "Makefile.common"
 
@@ -35,9 +33,9 @@ post-install:
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
