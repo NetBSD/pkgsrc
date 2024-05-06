@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1 2024/05/06 18:05:32 nia Exp $
+
+libtool: link: unable to infer tagged configuration
+libtool:   error: specify a tag with '--tag'
+
+Always specify a tag when linking.
+
+--- Makefile.in.orig	2016-01-03 05:52:28.000000000 +0000
++++ Makefile.in
+@@ -124,7 +124,7 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libSDL2_image_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
++libSDL2_image_la_LINK = $(LIBTOOL) --tag=CC $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) \
+ 	$(OBJCFLAGS) $(libSDL2_image_la_LDFLAGS) $(LDFLAGS) -o $@
+ PROGRAMS = $(noinst_PROGRAMS)
+@@ -176,7 +176,7 @@ am__v_OBJC_ = $(am__v_OBJC_@AM_DEFAULT_V
+ am__v_OBJC_0 = @echo "  OBJC    " $@;
+ am__v_OBJC_1 = 
+ OBJCLD = $(OBJC)
+-OBJCLINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++OBJCLINK = $(LIBTOOL) --tag=CC $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_OBJCLD = $(am__v_OBJCLD_@AM_V@)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1050 2024/04/30 11:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.1051 2024/05/06 18:05:31 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -48,6 +48,7 @@ SUBDIR+=	R-viridis
 SUBDIR+=	R-viridisLite
 SUBDIR+=	SDL2_gfx
 SUBDIR+=	SDL2_image
+SUBDIR+=	SDL2_image-legacy
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	adaptagrams
