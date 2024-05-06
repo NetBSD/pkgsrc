@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2023/12/14 10:47:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/05/06 08:13:24 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,9 +8,15 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/import_export/__init__.py
 ${PYSITELIB}/import_export/__init__.pyc
 ${PYSITELIB}/import_export/__init__.pyo
+${PYSITELIB}/import_export/_version.py
+${PYSITELIB}/import_export/_version.pyc
+${PYSITELIB}/import_export/_version.pyo
 ${PYSITELIB}/import_export/admin.py
 ${PYSITELIB}/import_export/admin.pyc
 ${PYSITELIB}/import_export/admin.pyo
+${PYSITELIB}/import_export/declarative.py
+${PYSITELIB}/import_export/declarative.pyc
+${PYSITELIB}/import_export/declarative.pyo
 ${PYSITELIB}/import_export/exceptions.py
 ${PYSITELIB}/import_export/exceptions.pyc
 ${PYSITELIB}/import_export/exceptions.pyo
@@ -73,6 +80,9 @@ ${PYSITELIB}/import_export/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/mixins.py
 ${PYSITELIB}/import_export/mixins.pyc
 ${PYSITELIB}/import_export/mixins.pyo
+${PYSITELIB}/import_export/options.py
+${PYSITELIB}/import_export/options.pyc
+${PYSITELIB}/import_export/options.pyo
 ${PYSITELIB}/import_export/resources.py
 ${PYSITELIB}/import_export/resources.pyc
 ${PYSITELIB}/import_export/resources.pyo
@@ -82,10 +92,12 @@ ${PYSITELIB}/import_export/results.pyo
 ${PYSITELIB}/import_export/signals.py
 ${PYSITELIB}/import_export/signals.pyc
 ${PYSITELIB}/import_export/signals.pyo
-${PYSITELIB}/import_export/static/import_export/action_formats.js
+${PYSITELIB}/import_export/static/import_export/export.css
+${PYSITELIB}/import_export/static/import_export/export_selectable_fields.js
 ${PYSITELIB}/import_export/static/import_export/guess_format.js
 ${PYSITELIB}/import_export/static/import_export/import.css
 ${PYSITELIB}/import_export/templates/admin/import_export/base.html
+${PYSITELIB}/import_export/templates/admin/import_export/change_form.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list_export.html
 ${PYSITELIB}/import_export/templates/admin/import_export/change_list_export_item.html
