@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/05 19:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/06 08:37:18 nia Exp $
 
 VERSION=	0.3
 GITHUB_PROJECT=	tinyx-wscons
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	nat@NetBSD.org
 HOMEPAGE=	https://github.com/AceHusky12/tinyx-wscons
-COMMENT=	Minimal X11 from Tiny Core Linus with wscons support
+COMMENT=	Minimal X11 from Tiny Core Linux with wscons support
 LICENSE=	gnu-gpl-v3
 
 ONLY_FOR_PLATFORM=	NetBSD-* OpenBSD-*
