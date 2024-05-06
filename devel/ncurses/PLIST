@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/11/16 15:19:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/05/06 08:00:28 jperkin Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -937,7 +937,6 @@ man/man5/term.5
 man/man5/terminfo.5
 man/man5/user_caps.5
 man/man7/term.7
-share/examples/ncurses++demo.cc
 share/tabset/std
 share/tabset/stdcrt
 share/tabset/vt100
