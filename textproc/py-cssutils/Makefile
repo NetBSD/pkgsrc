@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/02/12 14:31:15 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/06 16:12:24 adam Exp $
 
-DISTNAME=	cssutils-2.9.0
+DISTNAME=	cssutils-2.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssutils/}
