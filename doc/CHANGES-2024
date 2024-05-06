@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3235 2024/05/06 09:58:37 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3236 2024/05/06 10:16:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5089,3 +5089,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/ncursesw [jperkin 2024-05-06]
 	Updated sysutils/xplr to 0.21.8 [pin 2024-05-06]
 	Updated devel/hs-hfsevents to 0.1.7 [pho 2024-05-06]
+	Updated textproc/freexl to 2.0.0 [adam 2024-05-06]
+	Updated geography/libspatialite to 5.1.0 [adam 2024-05-06]
