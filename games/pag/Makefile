@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/05/06 08:33:51 jperkin Exp $
 #
 
 DISTNAME=	pag-0.92
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Platform Arcade Game
 
 USE_TOOLS+=	gmake
-USE_NCURSES=	yes # missing function stdscr
 
 GNU_CONFIGURE=	yes
 

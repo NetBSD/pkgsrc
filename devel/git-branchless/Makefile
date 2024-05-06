@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/05/06 08:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/06 08:33:50 jperkin Exp $
 
 DISTNAME=	git-branchless-0.8.0
 PKGREVISION=	3
@@ -14,7 +14,6 @@ LICENSE=	mit OR apache-2.0
 .include "cargo-depends.mk"
 
 USE_TOOLS+=	pkg-config
-USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
 INSTALLATION_DIRS=	bin
 

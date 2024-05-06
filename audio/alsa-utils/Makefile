@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/11/23 16:15:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2024/05/06 08:33:49 jperkin Exp $
 
 DISTNAME=	alsa-utils-1.2.10
 CATEGORIES=	audio
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake gsed bash:run
 USE_PKGLOCALEDIR=	yes
-USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 LDFLAGS.Linux+=		-lm -lpthread
