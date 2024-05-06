@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/11/26 15:36:59 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/06 13:21:45 nia Exp $
 
-DISTNAME=	enet-1.3.17
+DISTNAME=	enet-1.3.18
 CATEGORIES=	net
 MASTER_SITES=	http://enet.bespin.org/download/
 
