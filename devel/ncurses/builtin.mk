@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.50 2024/05/06 07:58:24 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.51 2024/05/06 07:59:27 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -104,69 +104,10 @@ CHECK_BUILTIN.ncurses?=	no
 .  if ${USE_BUILTIN.ncurses:tl} == yes
 BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
-BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
-BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
-# NetBSD 8 at least does not have ncurses.pc
-BUILDLINK_TARGETS+=		ncurses-fake-pc
 .  else
 BUILDLINK_TRANSFORM+=		l:form:gnuform
 BUILDLINK_TRANSFORM+=		l:panel:gnupanel
 BUILDLINK_TRANSFORM+=		l:menu:gnumenu
-.  endif
-
-# A full ncurses implementation provides more headers than some curses
-# implementations.  Touch empty replacements for those headers so that
-# packages can continue to use the familiar ncurses header names.
-#
-.  if !target(buildlink-ncurses-extra-includes)
-.PHONY: buildlink-ncurses-extra-includes
-buildlink-ncurses-extra-includes:
-	${RUN}								\
-	extra_includes="include/term.h";				\
-	for f in $$extra_includes; do					\
-		src=${BUILDLINK_PREFIX.ncurses}"/$$f";			\
-		dest=${BUILDLINK_DIR}"/$$f";				\
-		if ${TEST} ! -f "$$src"; then				\
-			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($$f)"; \
-			${MKDIR} `${DIRNAME} "$$dest"`;			\
-			${TOUCH} ${TOUCH_FLAGS} "$$dest";		\
-		fi;							\
-	done
-.  endif
-
-.  if !target(buildlink-curses-ncurses-h)
-.PHONY: buildlink-curses-ncurses-h
-buildlink-curses-ncurses-h:
-	${RUN}								\
-	src=${H_NCURSES:Q};						\
-	for file in ncurses.h ncurses/ncurses.h; do			\
-		dest=${BUILDLINK_DIR}"/include/$$file";			\
-		if ${TEST} ! -f "$$dest" -a -f "$$src"; then		\
-			fname=`${BASENAME} $$src`;			\
-			${ECHO_BUILDLINK_MSG} "Linking $$fname -> $$file."; \
-			${MKDIR} `${DIRNAME} "$$dest"`;			\
-			${LN} -s "$$src" "$$dest";			\
-		fi;							\
-	done
-.  endif
-
-.  if !target(ncurses-fake-pc)
-.PHONY: ncurses-fake-pc
-ncurses-fake-pc:
-	${RUN}						\
-	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
-	src=${NCURSES_PC}				\
-	dst=${BUILDLINK_DIR}/lib/pkgconfig/ncurses.pc;	\
-	if ${TEST} -f $${src}; then \
-		${LN} -sf $${src} $${dst}; \
-	else \
-		{	${ECHO} "Name: ncurses";			\
-			${ECHO} "Description: ncurses library";		\
-			${ECHO} "Version: ${BUILTIN_VERSION.ncurses}";	\
-			${ECHO} "Libs: -L/usr/lib -lncurses";		\
-			${ECHO} "Cflags: -I/usr/include";		\
-		} >$${dst} ;\
-	fi
 .  endif
 
 .endif	# CHECK_BUILTIN.ncurses
