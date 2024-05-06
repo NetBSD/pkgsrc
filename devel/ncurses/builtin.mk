@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.49 2024/05/06 07:57:35 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.50 2024/05/06 07:58:24 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -75,25 +75,6 @@ USE_BUILTIN.ncurses!=							\
 .  endif  # PREFER.ncurses
 .endif
 MAKEVARS+=		USE_BUILTIN.ncurses
-
-# If USE_NCURSES is set to yes, the use of an ncurses implementation
-# is forced.
-.if defined(USE_NCURSES) && ${USE_NCURSES:U:tl} == yes
-.  if ${IS_BUILTIN.ncurses:tl} == no
-USE_BUILTIN.ncurses=	no
-.  endif
-.endif
-# If it is set to chgat, a curses implementation with chgat(3) support
-# is considered good enough.
-.if defined(USE_NCURSES) && ${USE_NCURSES:U:tl} != yes
-.  if ${USE_NCURSES:U} == chgat && ${H_CURSES:U} == __nonexistent__
-USE_BUILTIN.ncurses=	no
-.  endif
-# same for wsyncup(3)
-.  if ${USE_NCURSES:U} == wsyncup && !empty(H_CURSES1:M__nonexistent__)
-USE_BUILTIN.ncurses=	no
-.  endif
-.endif
 
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
 # ncurses library.
