@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.50 2024/05/06 08:24:05 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.51 2024/05/06 15:08:02 jperkin Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -29,6 +29,7 @@ BUILDLINK_CPPFLAGS.ncurses+=	-DNCURSES_WIDECHAR=1
 BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-term-h
+BUILDLINK_TARGETS+=		buildlink-ncursesw-pc
 
 # Some packages will only enable wide curses support if they specifically
 # find it in libncursesw, so redirect requests for it to libncurses.
@@ -37,7 +38,7 @@ BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.ncurses}
 
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
-.PHONY: buildlink-ncurses-term-h
+.PHONY: buildlink-ncurses-term-h buildlink-ncursesw-pc
 buildlink-ncurses-curses-h:
 	${RUN}									\
 	src=${BUILDLINK_PREFIX.ncurses}"/include/ncurses/curses.h";		\
@@ -64,6 +65,16 @@ buildlink-ncurses-term-h:
 	dest=${BUILDLINK_DIR}"/include/term.h";				\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
 		${ECHO_BUILDLINK_MSG} "Linking ncurses/term.h -> term.h.";\
+		${MKDIR} `${DIRNAME} "$$dest"`;					\
+		${LN} -s "$$src" "$$dest";					\
+	fi
+
+buildlink-ncursesw-pc:
+	${RUN}									\
+	src=${BUILDLINK_PREFIX.ncurses}"/lib/pkgconfig/ncurses.pc";		\
+	dest=${BUILDLINK_DIR}"/lib/pkgconfig/ncursesw.pc";			\
+	if ${TEST} ! -f "$$dest" -a -f "$$src"; then				\
+		${ECHO_BUILDLINK_MSG} "Linking ncursesw.pc -> ncurses.pc.";\
 		${MKDIR} `${DIRNAME} "$$dest"`;					\
 		${LN} -s "$$src" "$$dest";					\
 	fi
