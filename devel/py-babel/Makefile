@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2023/12/17 22:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/06 04:42:45 adam Exp $
 
-DISTNAME=	Babel-2.14.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	babel-2.15.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://babel.pocoo.org/
 COMMENT=	Collection of tools for internationalizing Python applications
 LICENSE=	modified-bsd
+
+WHEEL_NAME=	Babel-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
