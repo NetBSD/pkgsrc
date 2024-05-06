@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2024/05/06 14:04:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/05/06 17:30:50 nia Exp $
 
 BLAKE2s (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = 3bdebf27494ce9587671ab5b52c1fc4d8855a67301c5e57d9659cb0c34eb9dfa
 SHA512 (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = d837e945681a44f76c5a17c651c0578d912fae1161b7d0fa3c5b06524c2639c8701b767c8a1aeb95d14066faa7c4ecb25f2d1ab845c10dce5cf655b59bbafcd9
 Size (AssaultCube_v1.3.0.2_LockdownEdition_RC1.tar.bz2) = 52071427 bytes
 SHA1 (patch-source_src_Makefile) = 8f06a6bc3ab3efdde9227abf25d39c32ec2b4076
+SHA1 (patch-source_src_server.cpp) = 77e3a9c90934cbceaf9df7c685aa4570d3edf029
 SHA1 (patch-source_src_tools.cpp) = 3b59ee5c6348918a844c8c88a870e69bb5a241ae

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2024/05/06 14:04:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2024/05/06 17:30:50 nia Exp $
 # used by games/assaultcube/Makefile
 # used by games/assaultcube-server/Makefile
 
@@ -38,6 +38,8 @@ ALL_ENV+=		ac_cv_func_gethostbyaddr_r=no
 .endif
 
 # end of stuff for internal enet
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-lrt
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
