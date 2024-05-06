@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/05/06 04:39:49 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/05/06 07:15:56 wiz Exp $
 
 DISTNAME=	jinja2-3.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://jinja.palletsprojects.com/
 COMMENT=	Small but fast and easy to use stand-alone template engine
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.7:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.0:../../textproc/py-markupsafe
 
