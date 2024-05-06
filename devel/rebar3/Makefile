@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/12 15:15:25 nikita Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/06 16:51:21 wiz Exp $
 
 DISTNAME=	rebar3-3.23.0
 CATEGORIES=	devel
@@ -24,24 +24,12 @@ SUBST_FILES.escript+=	vendor/relx/priv/templates/install_upgrade_escript
 SUBST_FILES.escript+=	vendor/relx/priv/templates/nodetool
 SUBST_SED.escript=	-e 's,/usr/bin/env escript,${PREFIX}/bin/escript,'
 
-SUBST_CLASSES+=		sh
-SUBST_STAGE.escript=	pre-configure
-SUBST_MESSAGE.escript=	Fix default sh sha-bang
-SUBST_FILES.sh=		apps/rebar/src/rebar_prv_local_install.erl
-SUBST_FILES.sh+=	pr2relnotes.sh
-SUBST_FILES.sh+=	vendor/relx/priv/templates/bin
-SUBST_FILES.sh+=	vendor/relx/priv/templates/builtin_hook_pid
-SUBST_FILES.sh+=	vendor/relx/priv/templates/builtin_hook_status
-SUBST_FILES.sh+=	vendor/relx/priv/templates/builtin_hook_wait_for_process
-SUBST_FILES.sh+=	vendor/relx/priv/templates/builtin_hook_wait_for_vm_start
-SUBST_FILES.sh+=	vendor/relx/priv/templates/erl_script
-SUBST_FILES.sh+=	vendor/relx/priv/templates/extended_bin
-SUBST_SED.escript=	-e 's,/usr/bin/env escript,${PREFIX}/bin/escript,'
-
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/examples/rebar3
 
+# We shouldn't have to override http_proxy and https_proxy here
+# https://github.com/erlang/rebar3/issues/2887
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./bootstrap --offline
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} http_proxy= https_proxy= ./bootstrap --offline
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rebar3 ${DESTDIR}${PREFIX}/bin/
