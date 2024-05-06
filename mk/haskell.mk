@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.68 2024/05/04 11:21:26 pho Exp $
+# $NetBSD: haskell.mk,v 1.69 2024/05/06 09:33:22 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -487,57 +487,15 @@ _HASKELL_PKG_DESCR_DIR=		${PREFIX}/lib/${HASKELL_PKG_NAME}/${_HASKELL_VERSION}
 _HASKELL_PKG_DESCR_FILE_OR_DIR=	${_HASKELL_PKG_DESCR_DIR}/package-description
 _HASKELL_PKG_ID_FILE=		${_HASKELL_PKG_DESCR_DIR}/package-id
 
-# Packages may contain internal libraries. If this is the case, "./Setup
-# register --gen-pkg-config" creates a directory containing files named
-# {index}-{pkg-id} for each library. Otherwise it creates a single regular
-# file. "./Setup register --print-ipid" becomes useless in this case, as it
-# only prints the ID of the main library. devel/hs-attoparsec is an example
-# of such packages.
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
-	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
-		./Setup register ${PKG_VERBOSE:D-v} \
-			--gen-pkg-config=dist/package-description \
-			--print-ipid \
-			> dist/package-id && \
-		./Setup copy ${PKG_VERBOSE:D-v} --destdir=${DESTDIR:Q} && \
-		if [ -d dist/package-description ]; then \
-			${INSTALL_DATA_DIR} ${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE_OR_DIR:Q}; \
-			${CAT} /dev/null > dist/package-id; \
-			i=1; \
-			while ${TRUE}; do \
-				found=no; \
-				for f in dist/package-description/$${i}-*; do \
-					if [ ! -f "$$f" ]; then \
-						break; \
-					fi; \
-					${INSTALL_DATA} "$$f" \
-						"${DESTDIR}${_HASKELL_PKG_DESCR_FILE_OR_DIR}/$${i}"; \
-					${ECHO} "$$f" | \
-						${SED} -e "s|dist/package-description/$${i}-||" \
-						>> dist/package-id; \
-					found=yes; \
-					break; \
-				done; \
-				if [ "$$found" = "yes" ]; then \
-					i=`${EXPR} $$i + 1`; \
-				else \
-					break; \
-				fi; \
-			done; \
-			${INSTALL_DATA} dist/package-id \
-				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
-		elif [ -f dist/package-description ]; then \
-			${INSTALL_DATA} dist/package-description \
-				${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE_OR_DIR:Q}; \
-			${INSTALL_DATA} dist/package-id \
-				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
-		fi
-# Executable-only packages tend to create an empty directory tree in
-# lib/ which results in useless @pkgdir in PLIST.
-	${RUN}${FIND} ${DESTDIR:Q}${PREFIX}/lib -type d | \
-		${TAIL} -n 1 | \
-		${XARGS} ${RMDIR} -p 2>/dev/null || ${TRUE}
+	${RUN} ${SH} ../../mk/haskell/install.sh \
+		-s "${WRKSRC}" \
+		-d "${DESTDIR}" \
+		-D "${_HASKELL_PKG_DESCR_FILE_OR_DIR}" \
+		-i "${_HASKELL_PKG_ID_FILE}" \
+		-p "${PREFIX}" \
+		${PKG_VERBOSE:D-v}
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	HASKELL_GLOBAL_PKG_DB=${_HASKELL_GLOBAL_PKG_DB:Q}
