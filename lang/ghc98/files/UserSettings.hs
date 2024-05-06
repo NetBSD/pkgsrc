@@ -1,4 +1,4 @@
--- $NetBSD: UserSettings.hs,v 1.1 2024/04/28 05:58:57 pho Exp $
+-- $NetBSD: UserSettings.hs,v 1.2 2024/05/06 02:26:39 pho Exp $
 --
 -- This is a Hadrian settings file to override some defaults in a way which
 -- isn't possible through command-line options. It is only used during the
@@ -10,6 +10,7 @@ module UserSettings (
     verboseCommand, buildProgressColour, successColour, finalStage
     ) where
 
+import qualified Data.Set as Set
 import Flavour.Type
 import Expression
 import {-# SOURCE #-} Settings.Default
@@ -33,16 +34,16 @@ bootkitFlavour =
   , bignumBackend      = "native"
     -- We only want vanilla libraries and RTS. No profiling, no shared
     -- libraries, no debugging.
-  , libraryWays        = pure [vanilla]
-  , rtsWays            = pure [vanilla]
+  , libraryWays        = Set.fromList <$> pure [vanilla]
+  , rtsWays            = Set.fromList <$> pure [vanilla]
     -- Don't build or use dynamic Haskell libraries.
   , dynamicGhcPrograms = pure False
     -- Build GHC as minimally as possible.
-  , ghciWithDebugger   = False
-  , ghcProfiled        = False
-  , ghcDebugged        = False
-  , ghcDebugAssertions = False
-  , ghcThreaded        = False
+  , ghciWithDebugger   = const False
+  , ghcProfiled        = const False
+  , ghcDebugged        = const False
+  , ghcDebugAssertions = const False
+  , ghcThreaded        = const False
     -- This is a bootstrap compiler. We don't want any kinds of
     -- documentation.
   , ghcDocs            = pure mempty

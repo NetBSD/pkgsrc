@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/28 16:23:44 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/06 02:26:39 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -19,6 +19,7 @@ UNLIMIT_RESOURCES=	cputime datasize virtualsize
 # GHC requires GHC to build itself. We have to prepare stripped-down
 # binaries sufficient to bootstrap compilers for each platform. If you want
 # to build them yourself, follow instructions in files/BOOTSTRAP.md.
+BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-aarch64
 BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64

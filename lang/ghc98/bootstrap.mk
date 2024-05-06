@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2024/05/01 03:22:32 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2024/05/06 02:26:39 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -33,6 +33,12 @@ HADRIAN_BOOT_SOURCE=	ghc-${BOOT_VERSION}-boot-hadrian-ghc9.8.tar.gz
 # NOTE: CDN cached a wrong file due to my mistake. On the next major
 # version uncomment the first definition and remove the second
 # one. [2024-04-27; pho]
+
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	9.4.7
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-aarch64-apple-darwin.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in LOCAL_PORTS
+.endif
 
 .if ${MACHINE_PLATFORM:MDarwin-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 BOOT_VERSION:=	9.4.7
@@ -267,7 +273,7 @@ HADRIAN_ARGS.boot+=	--flavour=bootkit+split_sections
 .if make(bootstrap)
 BOOT_GHC_VERSION_CMD=	ghc --numeric-version
 BOOT_GHC_VERSION!=	(${BOOT_GHC_VERSION_CMD}) 2>/dev/null || ${ECHO}
-HADRIAN_BOOT_SOURCE:=	ghc-${BOOT_GHC_VERSION}-boot-hadrian.tar.gz
+HADRIAN_BOOT_SOURCE:=	${HADRIAN_BOOT_SOURCE:S/${BOOT_VERSION}/${BOOT_GHC_VERSION}/}
 .endif
 
 .PHONY: pre-bootstrap
