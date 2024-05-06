@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/06 08:27:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/06 08:40:24 jperkin Exp $
 
 DISTNAME=	kakoune-2020.01.16
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mawww/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

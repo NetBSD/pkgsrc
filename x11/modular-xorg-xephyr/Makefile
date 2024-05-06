@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/12/13 07:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/06 08:40:33 jperkin Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xephyr-${XORG_VERSION}
+PKGREVISION=	1
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/modular-xorg-server/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/modular-xorg-server/patches

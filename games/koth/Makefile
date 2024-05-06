@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:32:02 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/06 08:40:25 jperkin Exp $
 #
 
 DISTNAME=	koth-0.8.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/games/multiplayer/
 EXTRACT_SUFX=	.tar.bz2

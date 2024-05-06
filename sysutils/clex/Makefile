@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/05/06 08:33:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/06 08:40:32 jperkin Exp $
 
 DISTNAME=		clex-4.6.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.clex.sk/download/
 

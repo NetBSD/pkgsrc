@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2024/05/06 08:33:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/06 08:40:33 jperkin Exp $
 
 DISTNAME=	wiki-tui-0.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
