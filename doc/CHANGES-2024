@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3242 2024/05/06 16:12:43 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3243 2024/05/06 17:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5099,3 +5099,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/cargo-zigbuild version 0.18.4 [nikita 2024-05-06]
 	Updated net/rabbitmq to 3.13.2 [adam 2024-05-06]
 	Updated textproc/py-cssutils to 2.10.2 [adam 2024-05-06]
+	Updated graphics/gimp to 2.10.38 [wiz 2024-05-06]
