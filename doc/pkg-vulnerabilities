@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.186 2024/05/05 07:32:19 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.187 2024/05/06 05:49:59 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25997,3 +25997,5 @@ ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/0
 R<4.4.0		arbirary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
 py{27,37,38,39,310,311,312}-aiohttp<3.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-30251
 p5-Email-MIME<1.954	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4140
+uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34402
+uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34403
