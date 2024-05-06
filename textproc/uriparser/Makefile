@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/07/11 05:55:10 nia Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/06 05:49:28 wiz Exp $
 
-DISTNAME=	uriparser-0.9.6
+DISTNAME=	uriparser-0.9.8
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uriparser/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://uriparser.github.io/
 COMMENT=	URI parsing library
 LICENSE=	modified-bsd
 
-USE_CMAKE=		yes
 USE_FEATURES=		snprintf
 PKGCONFIG_OVERRIDE+=	liburiparser.pc.in
 
@@ -23,4 +22,5 @@ CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
