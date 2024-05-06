@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3220 2024/05/05 22:43:20 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3221 2024/05/06 04:43:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5070,3 +5070,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-poyo to 0.5.0nb2 [wiz 2024-05-05]
 	Updated time/py-jdcal to 1.4.1nb2 [wiz 2024-05-05]
 	Updated devel/py-test-fixture-config to 1.7.0nb2 [wiz 2024-05-05]
+	Updated devel/py-dogpile-cache to 1.3.3 [adam 2024-05-06]
+	Updated devel/py-frozendict to 2.4.3 [adam 2024-05-06]
+	Updated textproc/py-jinja2 to 3.1.4 [adam 2024-05-06]
+	Updated devel/py-babel to 2.15.0 [adam 2024-05-06]
