@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.46 2024/05/06 07:51:21 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.47 2024/05/06 07:56:23 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -71,17 +71,6 @@ USE_BUILTIN.ncurses!=							\
 	fi
 .        endif
 .      endfor
-.    endif
-# XXX
-# XXX By default, assume that the native curses on NetBSD systems is
-# XXX good enough to replace ncurses.  In reality, no version of NetBSD
-# XXX has a curses library that can completely replace ncurses; however,
-# XXX some versions implement enough of ncurses that some packages are
-# XXX happy.
-# XXX
-.    if ${OPSYS} == "NetBSD"
-USE_BUILTIN.ncurses=	yes
-H_NCURSES=		/usr/include/curses.h
 .    endif
 #
 # Some platforms don't have a curses implementation that can replace
