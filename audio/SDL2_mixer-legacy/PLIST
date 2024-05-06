@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/06 18:01:31 nia Exp $
+include/SDL2/SDL_mixer.h
+lib/libSDL2_mixer.la
+lib/pkgconfig/SDL2_mixer.pc
