@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2024/04/05 17:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/05/06 06:22:09 wiz Exp $
 
-DISTNAME=	libgit2-1.7.2
+DISTNAME=	libgit2-1.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://libgit2.org/
 COMMENT=	Portable, pure C implementation of the Git core methods
 LICENSE=	gnu-gpl-v2 # linking exception (linking allowed in more ways)
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
+
+USE_CC_FEATURES+=	c99
+FORCE_C_STD=		c99
 
 CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
 
