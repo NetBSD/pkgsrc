@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2022/06/28 11:31:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2024/05/06 08:24:05 jperkin Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -6,11 +6,20 @@ BUILDLINK_TREE+=	ncurses
 NCURSES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ncurses+=	ncurses>=5.3nb1
-BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses>=6.3nb1
+BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses>=6.5
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 
+BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 BUILDLINK_LIBNAME.ncurses=	ncurses
 BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
+
+# If a package specifies USE_CURSES=wide then we must enable the wide API in
+# the ncurses headers.  Using the NCURSES_WIDECHAR define is much less
+# intrusive than setting _XOPEN_SOURCE_EXTENDED or _XOPEN_SOURCE.
+#
+.if ${USE_CURSES:U:Mwide}
+BUILDLINK_CPPFLAGS.ncurses+=	-DNCURSES_WIDECHAR=1
+.endif
 
 # Many packages expect the ncurses headers and libraries to be usable as
 # <curses.h> and -lcurses and they often only look in include/ rather than
@@ -20,21 +29,12 @@ BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-term-h
-BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 
-# Many packages will prefer ncursesw over ncurses if its available (say as
-# a native library), so unless this file is being included by ncursesw
-# don't allow ncursesw to be used by causing linkage failure.
+# Some packages will only enable wide curses support if they specifically
+# find it in libncursesw, so redirect requests for it to libncurses.
 #
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${PKGPATH} == "devel/ncursesw"
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
-.elif empty(BUILDLINK_TREE:Mncursesw)
-BUILDLINK_TRANSFORM+=		l:ncursesw:__nonexistent__
-BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
-.else
-BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncursesw}
-.endif
+BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILDLINK_LIBNAME.ncurses}
 
 .PHONY: buildlink-ncurses-curses-h buildlink-ncurses-ncurses-h
 .PHONY: buildlink-ncurses-term-h

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.52 2024/03/31 14:13:17 js Exp $
+$NetBSD: distinfo,v 1.53 2024/05/06 08:24:05 jperkin Exp $
 
-BLAKE2s (ncurses-6.4.tar.gz) = bf6718282abda300f0a840bcf03b7fe9444b6200a8ab1ffd826d6181282e97ec
-SHA512 (ncurses-6.4.tar.gz) = 1c2efff87a82a57e57b0c60023c87bae93f6718114c8f9dc010d4c21119a2f7576d0225dab5f0a227c2cfc6fb6bdbd62728e407f35fce5bf351bb50cf9e0fd34
-Size (ncurses-6.4.tar.gz) = 3612591 bytes
+BLAKE2s (ncurses-6.5.tar.gz) = 3de912518d0c9a3cb61cca69d2018bfb28b8b2dbb1a3d68cae70fccaf42da751
+SHA512 (ncurses-6.5.tar.gz) = fc5a13409d2a530a1325776dcce3a99127ddc2c03999cfeb0065d0eee2d68456274fb1c7b3cc99c1937bc657d0e7fca97016e147f93c7821b5a4a6837db821e8
+Size (ncurses-6.5.tar.gz) = 3688489 bytes
 SHA1 (patch-misc_run__tic.in) = a6a8dd89da1a2fbbc5fcabfa6d41ce3a41b75722
 SHA1 (patch-ncurses_base_lib_initscr.c) = 3f47c8ce9b98a82aa8db6b6da55810727559d30c
 SHA1 (patch-ncurses_tinfo_lib_raw.c) = 1adea51819538433b681c209f9754a18d0e37ebb
