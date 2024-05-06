@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/05/06 14:04:25 nia Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/06 17:30:50 nia Exp $
 
 COMMENT=	Cube-based FPS with realistic environments
 
@@ -13,6 +13,9 @@ LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 .if ${OPSYS} == "Darwin"
 LDFLAGS+=	-framework OpenAL
 LDFLAGS+=	-framework OpenGL
+# server part needs SDL2 thread/semaphore functions,
+# but does not link against it
+LDFLAGS+=	-lSDL2
 .else
 .  include "../../audio/openal-soft/buildlink3.mk"
 .  include "../../graphics/MesaLib/buildlink3.mk"
