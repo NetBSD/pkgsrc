@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.14 2021/01/08 18:18:58 schmonz Exp $
+# $NetBSD: options.mk,v 1.15 2024/05/06 11:11:53 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wget
-PKG_SUPPORTED_OPTIONS=		idn inet6 psl
+PKG_SUPPORTED_OPTIONS=		idn inet6 nls psl
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
-PKG_SUGGESTED_OPTIONS=		idn inet6 openssl psl
+PKG_SUGGESTED_OPTIONS=		idn inet6 nls openssl psl
+
+PLIST_VARS+=	nls
 
 .include "../../mk/bsd.options.mk"
 
@@ -49,4 +51,14 @@ CONFIGURE_ARGS+=--with-ssl=no
 CONFIGURE_ARGS+=--with-libpsl
 .else
 CONFIGURE_ARGS+=--without-libpsl
+.endif
+
+###
+### Support NLS
+###
+.if !empty(PKG_OPTIONS:Mnls)
+PLIST.nls=yes
+.include "../../devel/gettext-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=--disable-nls
 .endif
