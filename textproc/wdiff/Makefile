@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/05/06 10:24:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/06 10:25:28 cheusov Exp $
 
 DISTNAME=		wdiff-1.2.2
 PKGREVISION=		1
@@ -18,6 +18,5 @@ INFO_FILES=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
