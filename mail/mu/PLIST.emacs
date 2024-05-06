@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.1 2024/05/02 13:35:48 ktnb Exp $
+@comment $NetBSD: PLIST.emacs,v 1.2 2024/05/06 12:05:52 ktnb Exp $
 info/mu4e.info
 man/man1/mu-add.1
 man/man1/mu-cfind.1
@@ -34,6 +34,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-context.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-context.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-draft.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-draft.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-folders.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-folders.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-headers.el
