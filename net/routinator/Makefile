@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/04/19 11:59:27 he Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/06 13:48:32 he Exp $
 
 DISTNAME=	routinator-0.13.2
 CATEGORIES=	net
@@ -13,6 +13,9 @@ LICENSE=	modified-bsd
 
 # 0.13.0 requires minimum this rust version:
 RUST_REQ=		1.70.0
+
+# This can reportedly go away in 0.14.0:
+ALLOW_NETWORK_ACCESS=	1
 
 .include "cargo-depends.mk"
 
