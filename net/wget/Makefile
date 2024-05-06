@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2024/03/17 14:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.174 2024/05/06 11:11:53 cheusov Exp $
 
 DISTNAME=	wget-1.24.5
 CATEGORIES=	net
@@ -29,5 +29,4 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 .include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
