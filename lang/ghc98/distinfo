@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2024/05/01 03:22:32 pho Exp $
+$NetBSD: distinfo,v 1.4 2024/05/06 02:26:39 pho Exp $
 
+BLAKE2s (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = c771cfa45f5635bdf8175775cf7a67c9541bd5b4d4927ed9b5189e3dcefcd2ba
+SHA512 (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 3d50e4c6605ebfa7eef018d3e9e11e8115cf2f97e24a5adfc05fd1bab152c726e240f9a213d73e220dc7fc5b9358df74eee0d4cb1b77bd5491f28899c831b1a4
+Size (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 109805384 bytes
 BLAKE2s (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = a691117b405b9f7954b954acc382b3357a9ff8c98151514c82d18d83da397940
 SHA512 (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = 1c917a52a020be3a1878f9d7e8e4c47d31180e54248c127a60706c1053a95b2d8a487f79e7fb5daa725178f271a7cc17e4e7b47ce2119f8546e259c63b9864d8
 Size (ghc-9.4.7-boot-aarch64-unknown-netbsd.tar.xz) = 90305900 bytes
@@ -50,6 +53,7 @@ SHA1 (patch-libraries_unix_System_Posix_Env_PosixString.hsc) = 40d464638eb11cb83
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = ee59a04571881382bcfd9fc82bf196ff86a40ed5
 SHA1 (patch-libraries_unix_System_Posix_User.hsc) = b583f591838fe2d7f42241787e02c5385d336939
 SHA1 (patch-libraries_unix_System_Posix_User_ByteString.hsc) = 2a331de2292835ae6904980facd8201705fa63e8
+SHA1 (patch-m4_fp__find__cxx__std__lib.m4) = 35196c70e462df054f6b06c299474937a1b71b58
 SHA1 (patch-m4_fptools__set__haskell__platform__vars.m4) = 8c7a7ab965f4df8a68bedb35c32ee32c59ac2c94
 SHA1 (patch-utils_haddock_driver_Main.hs) = 26b015d3aef9fdff66e66c8e3d9a370a2dbd7067
 SHA1 (patch-utils_haddock_haddock.cabal) = c8a244f2f341b736b65b218590d1a3a8309f55ba
