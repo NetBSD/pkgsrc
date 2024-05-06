@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2024/05/06 07:46:35 nia Exp $
+# $NetBSD: Makefile,v 1.547 2024/05/06 08:07:29 nia Exp $
 #
 
 COMMENT=	Games
@@ -376,6 +376,7 @@ SUBDIR+=	ruby-squib
 SUBDIR+=	sais
 SUBDIR+=	sarien
 SUBDIR+=	sauerbraten
+SUBDIR+=	sauerbraten-server
 SUBDIR+=	scid
 SUBDIR+=	scummvm
 SUBDIR+=	scummvm-bass
