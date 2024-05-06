@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.22 2024/01/13 20:26:47 riastradh Exp $
+# $NetBSD: curses.builtin.mk,v 1.23 2024/05/06 09:35:14 jperkin Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -41,7 +41,7 @@ IS_BUILTIN.curses=	no
 IS_BUILTIN.curses=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.curses
+MAKEVARS+=		IS_BUILTIN.curses
 
 ###
 ### Determine whether we should use the built-in implementation if it
@@ -52,10 +52,10 @@ MAKEVARS+=	IS_BUILTIN.curses
 USE_BUILTIN.curses=	no
 .  else
 USE_BUILTIN.curses=	${IS_BUILTIN.curses}
-.    if defined(BUILTIN_PKG.curses) && !empty(IS_BUILTIN.curses:M[yY][eE][sS])
+.    if defined(BUILTIN_PKG.curses) && ${IS_BUILTIN.curses:tl} == yes
 USE_BUILTIN.curses=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.curses}
-.        if !empty(USE_BUILTIN.curses:M[yY][eE][sS])
+.        if ${USE_BUILTIN.curses:tl} == yes
 USE_BUILTIN.curses!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.curses:Q}; then	\
 		${ECHO} yes;						\
@@ -70,7 +70,7 @@ USE_BUILTIN.curses!=							\
 
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
-.if defined(USE_CURSES) && empty(USE_CURSES:M[yY][eE][sS])
+.if ${USE_CURSES:U:tl} != yes
 .  for func in ${BUILTIN_TEST_CURSES_FUNCS}
 .    if !empty(USE_CURSES:M${func}) && \
 	!empty(H_CURSES_${func:tu}:M__nonexistent__)
@@ -85,9 +85,9 @@ USE_BUILTIN.curses=	no
 .  endfor
 # AFAIK there is no way of working out if a system curses library has wide
 # character support. So be safe and say no unless we know for sure.
-.  if !empty(USE_CURSES:Mwide)
+.  if ${USE_CURSES:U:Mwide}
 .    if ${OPSYS} == "NetBSD"
-.      if !empty(MACHINE_PLATFORM:MNetBSD-[0-4].*-*)
+.      if ${MACHINE_PLATFORM:MNetBSD-[0-4].*-*}
 USE_BUILTIN.curses=	no
 .      endif
 .    else
@@ -112,7 +112,7 @@ MAKEVARS+=	USE_BUILTIN.curses
 # Define BUILTIN_LIBNAME.curses to be the base name of the built-in
 # curses library.
 #
-.if !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+.if ${BUILTIN_LIB_FOUND.curses:U:tl} == yes
 BUILTIN_LIBNAME.curses=		curses
 .endif
 
@@ -123,9 +123,9 @@ BUILTIN_LIBNAME.curses=		curses
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.curses?=	no
-.if !empty(CHECK_BUILTIN.curses:M[nN][oO])
+.if ${CHECK_BUILTIN.curses:tl} == no
 
-.  if !empty(USE_BUILTIN.curses:M[yY][eE][sS])
+.  if ${USE_BUILTIN.curses:tl} == yes
 .    if exists(${TOOLS_CROSS_DESTDIR}${H_CURSES})
 BUILDLINK_INCDIRS.curses?=	${H_CURSES:H}
 .    endif
