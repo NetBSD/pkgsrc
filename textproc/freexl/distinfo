@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:21:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/05/06 10:13:01 adam Exp $
 
-BLAKE2s (freexl-1.0.6.tar.gz) = e4ef6ae74ca66f7b78a9432bdbae8a45f2a181a9f1068a123ca7a8943fe57445
-SHA512 (freexl-1.0.6.tar.gz) = efbbe261e57d5c05167ad8e1d5a5b348a7e702c0a4030b18dd2a8c60a38332caccbb073ff604bdf5bafac827310b41c7b79f9fa519ea512d6de2eafd9c1f71f6
-Size (freexl-1.0.6.tar.gz) = 941179 bytes
+BLAKE2s (freexl-2.0.0.tar.gz) = 2d24507f4d830d4544ccf9e55b184985c8af683accd6361b720cdb70b4995f44
+SHA512 (freexl-2.0.0.tar.gz) = 663ccc321c2f0dcab8ad9255b2a77066c2046d531a0aa723fb114301fa27b53bf980787dd2548c46541036eceef988c5eedf2bec053adf628929470e67ddc17a
+Size (freexl-2.0.0.tar.gz) = 991565 bytes
