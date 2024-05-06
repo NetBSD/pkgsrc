@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2023/01/19 12:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2024/05/06 08:00:28 jperkin Exp $
 
 .include "Makefile.common"
 
 COMMENT=	CRT screen handling and optimization package
-
-INSTALLATION_DIRS+=	share/examples
 
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.terminfo
 
@@ -18,8 +16,6 @@ post-configure:
 	done
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
-		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
 .if ${OPSYS} == "Darwin"
 	# Clashes with "a" versions on case-insensitive file systems
 	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/32/2621A
