@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/06 10:42:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/06 11:03:05 cheusov Exp $
 
 DISTNAME=	dwdiff-2.1.3
 PKGREVISION=	6
@@ -16,7 +16,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .include "../../textproc/icu/buildlink3.mk"
