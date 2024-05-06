@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/03/18 13:29:05 pin Exp $
+# $NetBSD: Makefile,v 1.60 2024/05/06 09:28:22 pin Exp $
 
-DISTNAME=	xplr-0.21.7
+DISTNAME=	xplr-0.21.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,6 +18,8 @@ INSTALLATION_DIRS=	share/examples/xplr share/applications share/icons/hicolor/sc
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
+
+CARGO_NO_DEFAULT_FEATURES=	YES
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/init.lua \
