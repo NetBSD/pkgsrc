@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.48 2024/05/06 07:56:51 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.49 2024/05/06 07:57:35 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -91,13 +91,6 @@ USE_BUILTIN.ncurses=	no
 .  endif
 # same for wsyncup(3)
 .  if ${USE_NCURSES:U} == wsyncup && !empty(H_CURSES1:M__nonexistent__)
-USE_BUILTIN.ncurses=	no
-.  endif
-.endif
-
-# if terminfo is needed and we don't have it, use pkgsrc ncurses
-.if defined(USE_TERMINFO)
-.  if ${BUILTIN_LIB_FOUND.terminfo:U:tl} == no
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
