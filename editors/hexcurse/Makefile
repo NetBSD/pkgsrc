@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/05/06 08:33:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/06 08:40:24 jperkin Exp $
 
 DISTNAME=	hexcurse-1.60.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LonnyGomes/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2024/05/06 08:33:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2024/05/06 08:40:31 jperkin Exp $
 
 DISTNAME=	rtorrent-0.9.8
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	https://rtorrent.net/downloads/
 

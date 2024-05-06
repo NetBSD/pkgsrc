@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/06 08:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/06 08:40:22 jperkin Exp $
 
 DISTNAME=	qodem-1.0.1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qodem/}
 

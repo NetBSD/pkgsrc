@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/06 08:27:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/06 08:40:24 jperkin Exp $
 
 DISTNAME=	dit-0.7
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://hisham.hm/dit/releases/${PKGVERSION_NOREV}/
 

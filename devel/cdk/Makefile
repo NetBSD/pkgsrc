@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2024/05/06 08:33:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2024/05/06 08:40:22 jperkin Exp $
 
 DISTNAME=		cdk-5.0-20210324
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://invisible-mirror.net/archives/cdk/
 EXTRACT_SUFX=		.tgz

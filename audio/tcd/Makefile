@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/11/12 09:10:22 nikita Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/06 08:40:21 jperkin Exp $
 #
 
 DISTNAME=		tcd-2.2.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		https://download.savannah.gnu.org/releases/tcd/
 EXTRACT_SUFX=		.tar.bz2

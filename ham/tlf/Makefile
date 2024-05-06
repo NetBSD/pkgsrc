@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2024/05/06 08:33:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2024/05/06 08:40:27 jperkin Exp $
 #
 
 DISTNAME=	tlf-0.9.31-2
 PKGNAME=	${DISTNAME:C/([0-9])-/\1./}
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://www.aydogan.net/distfiles/ham/
 
