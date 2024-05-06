@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2023/11/08 13:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/05/06 10:15:09 adam Exp $
 
-DISTNAME=	libspatialite-5.0.1
-PKGREVISION=	4
+DISTNAME=	libspatialite-5.1.0
 CATEGORIES=	geography
-MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
+MASTER_SITES=	https://www.gaia-gis.it/gaia-sins/libspatialite-sources/
 
-MAINTAINER=	pkgsrc@NetBSD.org
-HOMEPAGE=	https://www.gaia-gis.it/fossil/libspatialite/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.gaia-gis.it/fossil/libspatialite/index
 COMMENT=	Library intended to extend SQLite core to support Spatial SQL
 LICENSE=	mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1 # or later GPL or LGPL
 
@@ -16,6 +15,7 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-examples
 PKGCONFIG_OVERRIDE=	spatialite.pc.in
+TEST_TARGET=		check
 
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
