@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2024/04/25 13:12:42 wiz Exp $
+# $NetBSD: options.mk,v 1.38 2024/05/06 13:33:23 wiz Exp $
 
 # Global and legacy options
 
@@ -6,13 +6,16 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_OPTIONAL_GROUPS=	db ssl
 PKG_OPTIONS_GROUP.db=		tokyocabinet lmdb
-PKG_OPTIONS_GROUP.display=	curses wide-curses slang
+PKG_OPTIONS_GROUP.display=	curses slang
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 PKG_SUPPORTED_OPTIONS=		debug gpgme idn smime sasl
 PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox mutt-smtp
 PKG_SUPPORTED_OPTIONS+=		gssapi
 PKG_SUGGESTED_OPTIONS=		curses gpgme mutt-hcache mutt-smtp smime openssl
 PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox sasl
+
+# remove after pkgsrc-2024Q3
+PKG_OPTIONS_LEGACY_OPTS+=	wide-curses:curses
 
 # Must be at the top; some other buildlink files indirectly
 # include bdb.buildlink3.mk.
@@ -31,7 +34,7 @@ CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 
 ### curses
 ###
-.if !empty(PKG_OPTIONS:Mcurses) || !empty(PKG_OPTIONS:Mwide-curses)
+.if !empty(PKG_OPTIONS:Mcurses)
 .  include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.curses}
 .  if ${CURSES_TYPE:U} == curses
