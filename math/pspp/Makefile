@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2024/04/07 07:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2024/05/06 08:33:51 jperkin Exp $
 
 DISTNAME=	pspp-0.6.2
 PKGREVISION=	63
@@ -25,7 +25,6 @@ INFO_FILES=		YES
 
 TEST_TARGET=	check
 
-USE_NCURSES=	yes
 # we only want the charset.alias file, so no buildlinkery for libiconv
 DEPENDS+=       libiconv-[0-9]*:../../converters/libiconv
 .include "../../devel/ncurses/buildlink3.mk"

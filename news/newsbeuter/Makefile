@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/05/06 08:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2024/05/06 08:33:52 jperkin Exp $
 
 DISTNAME=	newsbeuter-2.9
 PKGREVISION=	46
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl
 USE_GNU_ICONV=	yes
-USE_NCURSES=	yes
 
 REPLACE_PERL+=	txt2h.pl
 

@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.8 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.9 2024/05/06 08:33:52 jperkin Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -91,7 +91,6 @@ BUILDLINK_LIBNAME.terminfo?=	${BUILTIN_LIBNAME.terminfo}
 BUILDLINK_LDADD.terminfo?=	${BUILDLINK_LIBNAME.terminfo:S/^/-l/:S/^-l$//}
 BUILDLINK_BUILTIN_MK.terminfo=	../../mk/terminfo.builtin.mk
 .elif ${TERMINFO_TYPE} == "ncurses"
-USE_NCURSES=			yes
 .  include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_PREFIX.terminfo?=	${BUILDLINK_PREFIX.ncurses}
 BUILDLINK_LIBNAME.terminfo?=	${BUILDLINK_LIBNAME.ncurses}

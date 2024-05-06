@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2024/04/05 14:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/05/06 08:33:49 jperkin Exp $
 
 DISTNAME=	ekg-20200501
 PKGREVISION=	15
@@ -12,7 +12,6 @@ COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-USE_NCURSES=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ui-ncurses

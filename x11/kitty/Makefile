@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/04/06 08:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/05/06 08:33:53 jperkin Exp $
 
 DISTNAME=	kitty-0.26.5
 PKGREVISION=	5
@@ -23,10 +23,6 @@ BUILDLINK_TRANSFORM+=	rm:-flto
 # code is not perfect
 BUILDLINK_TRANSFORM+=	rm:-Werror
 BUILDLINK_TRANSFORM+=	rm:-pedantic-errors
-
-# kitty's homegrown packaging expects the functionality of tic(1) that
-# comes with ncurses.
-USE_NCURSES=	yes
 
 CHECK_INTERPRETER_SKIP=	lib/kitty/shell-integration/ssh/askpass.py
 

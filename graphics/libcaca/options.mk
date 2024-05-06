@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/11/02 22:37:59 rillig Exp $
+# $NetBSD: options.mk,v 1.7 2024/05/06 08:33:51 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcaca
 PKG_SUPPORTED_OPTIONS=		imlib2
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+=	--disable-imlib2
 .endif
 
 .if !empty(PKG_OPTIONS:Mncurses)
-USE_NCURSES=		yes
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-ncurses
 .else
