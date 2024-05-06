@@ -1,0 +1,58 @@
+# $NetBSD: Makefile.common,v 1.1 2024/05/06 08:07:30 nia Exp $
+# used by games/sauerbraten/Makefile
+# used by games/sauerbraten-server/Makefile
+
+DISTNAME=	sauerbraten_2020_12_27_linux
+PKGNAME=	sauerbraten-2020_12_27
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sauerbraten/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	http://sauerbraten.org/
+LICENSE=	zlib AND cc-by-nc-sa-v3.0-license
+
+USE_TOOLS+=	gmake pkg-config pax
+USE_LANGUAGES=	c c++03
+
+DISTINFO_FILE=	${.CURDIR}/../../games/sauerbraten/distinfo
+FILESDIR=	${.CURDIR}/../../games/sauerbraten/files
+PATCHDIR=	${.CURDIR}/../../games/sauerbraten/patches
+
+WRKSRC=		${WRKDIR}/sauerbraten
+BUILD_DIRS+=	src
+
+# GCC precompiled headers...
+RELRO_SUPPORTED=	no
+
+LDFLAGS.NetBSD+=	-lrt
+LDFLAGS.SunOS+=		-lsocket -lnsl
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	libexec
+INSTALLATION_DIRS+=	share/doc/sauerbraten
+INSTALLATION_DIRS+=	share/sauerbraten/data
+INSTALLATION_DIRS+=	share/sauerbraten/packages
+
+CHECK_WRKREF_SKIP+=	share/*
+
+pre-configure:
+.for prog in ${BUILD_TARGET}
+	${SED}	-e 's,@PREFIX@,${PREFIX},g' \
+		< ${FILESDIR}/sauerbraten.sh.in > \
+		${WRKDIR}/sauer_${prog}
+.endfor
+
+do-install:
+.for prog in ${BUILD_TARGET}
+	${INSTALL_SCRIPT} ${WRKDIR}/sauer_${prog} \
+	    ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/sauer_${prog} \
+	    ${DESTDIR}${PREFIX}/libexec
+.endfor
+	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/doc/sauerbraten
+	cd ${WRKSRC}/data && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/data
+	cd ${WRKSRC}/packages && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/sauerbraten/packages
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../net/enet/buildlink3.mk"
