@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/08 13:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/06 10:42:51 cheusov Exp $
 
 DISTNAME=	dwdiff-2.1.3
 PKGREVISION=	6
@@ -14,9 +14,10 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
-USE_TOOLS+=		msgfmt msgmerge xgettext
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
