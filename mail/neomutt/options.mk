@@ -1,13 +1,16 @@
-# $NetBSD: options.mk,v 1.23 2024/05/06 08:33:51 jperkin Exp $
+# $NetBSD: options.mk,v 1.24 2024/05/06 13:46:13 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
+PKG_OPTIONS_GROUP.display=	curses ncurses
 PKG_SUPPORTED_OPTIONS=		tokyocabinet lmdb
 PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=		notmuch lua
-PKG_SUGGESTED_OPTIONS=		gpgme gssapi ncursesw sasl smime ssl
+PKG_SUGGESTED_OPTIONS=		gpgme gssapi ncurses sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
+
+# remove after pkgsrc-2024Q3
+PKG_OPTIONS_LEGACY_OPTS+=	ncursesw:ncurses
 
 .include "../../mk/bsd.options.mk"
 
@@ -45,19 +48,6 @@ BUILDLINK_PASSTHRU_DIRS.SunOS+=	/usr/xpg4
 CONFIGURE_ARGS.SunOS+=		--with-ncurses=/usr/xpg4
 LDFLAGS.SunOS+=			-L/usr/xpg4/lib${LIBABISUFFIX}
 LDFLAGS.SunOS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
-.endif
-
-###
-### ncursesw
-###
-.if !empty(PKG_OPTIONS:Mncursesw)
-.  include "../../devel/ncurses/buildlink3.mk"
-.else
-SUBST_CLASSES+=		curse
-SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
-SUBST_STAGE.curse=	pre-configure
-SUBST_FILES.curse=	configure.ac
-SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 .endif
 
 ###
