@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/04/05 17:03:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/05/06 06:22:09 wiz Exp $
 bin/git2
 include/git2.h
 include/git2/annotated_commit.h
@@ -69,6 +69,7 @@ include/git2/sys/cred.h
 include/git2/sys/credential.h
 include/git2/sys/diff.h
 include/git2/sys/email.h
+include/git2/sys/errors.h
 include/git2/sys/filter.h
 include/git2/sys/hashsig.h
 include/git2/sys/index.h
@@ -94,6 +95,6 @@ include/git2/types.h
 include/git2/version.h
 include/git2/worktree.h
 lib/libgit2.so
-lib/libgit2.so.1.7
+lib/libgit2.so.1.8
 lib/libgit2.so.${PKGVERSION}
 lib/pkgconfig/libgit2.pc
