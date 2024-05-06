@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/05/06 08:27:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/06 08:33:50 jperkin Exp $
 
 DISTNAME=	tig-2.5.8
 CATEGORIES=	devel scm
@@ -16,7 +16,6 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake gsed
-USE_NCURSES=	yes	# Display issues with NetBSD curses(3)
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}

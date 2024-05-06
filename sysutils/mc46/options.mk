@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/04 21:28:48 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2024/05/06 08:33:53 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
@@ -78,7 +78,6 @@ CONFIGURE_ARGS+=		--without-x
 CONFIGURE_ARGS+=	--with-screen=slang
 .include "../../devel/libslang2/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mncurses)
-USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--with-screen=ncurses
 .include "../../devel/ncurses/buildlink3.mk"
 .else
