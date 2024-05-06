@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2024/05/06 13:45:17 pin Exp $
+
+Don't require higher version of Rust to fix a bug that only affects Windows.
+
+--- Cargo.toml.orig	2024-05-06 13:33:37.617663554 +0000
++++ Cargo.toml
+@@ -18,7 +18,7 @@ readme = "README.md"
+ repository = "https://github.com/sharkdp/fd"
+ version = "10.0.0"
+ edition= "2021"
+-rust-version = "1.77.2"
++rust-version = "1.76.0"
+ 
+ [badges.appveyor]
+ repository = "sharkdp/fd"
