@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/01/28 13:24:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/06 08:27:49 jperkin Exp $
 
 DISTNAME=	ncmpcpp-0.9.2
 PKGREVISION=	16
@@ -21,7 +21,7 @@ USE_CXX_FEATURES+=	c++14
 
 .include "../../mk/curses.buildlink3.mk"
 
-.if ${CURSES_TYPE} != "ncursesw"
+.if ${CURSES_TYPE} != "ncurses"
 CONFIGURE_ENV+=	ncursesw_CFLAGS="-I${BUILDLINK_PREFIX.curses}/include"
 CONFIGURE_ENV+=	ncursesw_LIBS="${BUILDLINK_LDADD.curses}"
 .endif

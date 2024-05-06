@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/05/05 20:56:55 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=	ncdu-2.4
 CATEGORIES=	sysutils
@@ -19,6 +19,6 @@ post-build:
 	mkdir ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/ncdu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/zig/application.mk"
 .include "../../mk/bsd.pkg.mk"

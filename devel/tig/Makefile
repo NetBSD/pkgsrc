@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/02/08 07:43:41 fcambus Exp $
+# $NetBSD: Makefile,v 1.27 2024/05/06 08:27:51 jperkin Exp $
 
 DISTNAME=	tig-2.5.8
 CATEGORIES=	devel scm
@@ -49,6 +49,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tigrc ${DESTDIR}/${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/01/04 21:17:56 roy Exp $
+# $NetBSD: Makefile,v 1.40 2024/05/06 08:27:54 jperkin Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -27,7 +27,7 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 .include "../../mk/curses.buildlink3.mk"
 .if ${CURSES_TYPE} == "curses"
 CONFIGURE_ARGS+=	--with-vcurses
-.elif ${CURSES_TYPE} == "ncurses" || ${CURSES_TYPE} == "ncursesw"
+.elif ${CURSES_TYPE} == "ncurses"
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.curses}
 .endif
 

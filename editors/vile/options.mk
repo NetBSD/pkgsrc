@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/07/20 14:38:51 marino Exp $
+# $NetBSD: options.mk,v 1.4 2024/05/06 08:27:52 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vile
 PKG_SUPPORTED_OPTIONS=	wide-curses
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	wide-curses
 ### Wide curses support; otherwise, default to using narrow curses.
 ###
 .if !empty(PKG_OPTIONS:Mwide-curses)
-.  include "../../devel/ncursesw/buildlink3.mk"
+.  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-screen=ncursesw
 .else
 .  include "../../mk/curses.buildlink3.mk"

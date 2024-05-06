@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2023/07/18 18:13:44 nia Exp $
+# $NetBSD: Makefile.common,v 1.15 2024/05/06 08:27:53 jperkin Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config gmake perl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-CXXFLAGS+=	-DCURSES_INCLUDE_FILE='<ncursesw/ncurses.h>'
+CXXFLAGS+=	-DCURSES_INCLUDE_FILE='<ncurses/ncurses.h>'
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	SAVEDIR='~/.crawl'
@@ -60,7 +60,7 @@ pre-build:
 .include "../../databases/sqlite3/buildlink3.mk"
 # FIXME: Compatibility issue with NetBSD curses
 # https://github.com/crawl/crawl/issues/1661
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/tool.mk"

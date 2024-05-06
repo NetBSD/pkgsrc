@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/27 11:31:18 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/06 08:27:51 jperkin Exp $
 
 DISTNAME=	dit-0.7
 CATEGORIES=	editors
@@ -19,7 +19,7 @@ LUA_VERSIONS_ACCEPTED=	53 52 51
 
 # when compiling with NetBSD curses:
 # error: 'cchar_t' {aka 'struct <anonymous>'} has no member named 'chars'
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

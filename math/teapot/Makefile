@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/06 08:27:53 jperkin Exp $
 
 DISTNAME=	teapot-2.3.0
 PKGREVISION=	2
@@ -17,5 +17,5 @@ CMAKE_ARGS+=	-DENABLE_HELP=NO
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lnsl
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

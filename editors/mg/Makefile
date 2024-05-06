@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/07 23:57:25 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2024/05/06 08:27:52 jperkin Exp $
 
 DISTNAME=	mg-20230501
 PKGREVISION=	1
@@ -44,5 +44,5 @@ pre-install:
 .if ${OPSYS} == "Linux"
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

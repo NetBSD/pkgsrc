@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/11/08 13:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/05/06 08:27:49 jperkin Exp $
 #
 
 DISTNAME=	herrie-2.2
@@ -35,7 +35,7 @@ FAKE_NCURSES=		yes
 
 .include "options.mk"
 
-.if ${CURSES_TYPE} != "ncursesw"
+.if ${CURSES_TYPE} != "ncurses"
 CONFIGURE_ARGS+=	ncurses
 .endif
 

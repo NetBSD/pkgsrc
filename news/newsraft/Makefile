@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/03 13:42:59 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=	newsraft-0.24
 CATEGORIES=	news
@@ -29,7 +29,7 @@ do-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

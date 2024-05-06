@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/11/22 11:19:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/05/06 08:27:52 jperkin Exp $
 # used by games/angband-sdl/Makefile
 # used by games/angband/Makefile
 
@@ -39,4 +39,4 @@ SUBST_SED.nc+=		-e 's|ncursesw5|ncursesw6|g'
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
