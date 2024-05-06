@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/18 04:02:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/06 02:59:21 pho Exp $
 
 DISTNAME=	fuse-s3fs-${PKGVERSION}
 PKGVERSION=	1.94
@@ -11,6 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/s3fs-fuse/s3fs-fuse
 COMMENT=	FUSE file-system and utilities for S3-compatible APIs
 LICENSE=	gnu-gpl-v2
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+# fuse-s3fs wants FUSE 2.9 API but refuse(3) in NetBSD 9 only supports 2.6
+# API.
+PKG_FAIL_REASON+=	"This package does not support NetBSD < 10."
+.endif
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
