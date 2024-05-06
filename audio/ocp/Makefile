@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/04/18 08:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/05/06 08:27:49 jperkin Exp $
 
 DISTNAME=		ocp-0.2.109
 CATEGORIES=		audio
@@ -44,7 +44,7 @@ CFLAGS.SunOS+=		-mimpure-text
 # curses_version(3) was introduced in NetBSD 10.0.
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
 USE_NCURSES=	yes
-.  include "../../devel/ncursesw/buildlink3.mk"
+.  include "../../devel/ncurses/buildlink3.mk"
 .else
 USE_CURSES=	wide
 FAKE_NCURSES=	yes

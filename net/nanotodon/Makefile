@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/03/17 14:00:52 nia Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/06 08:27:54 jperkin Exp $
 
 GITHUB_TAG=	0.3.1
 DISTNAME=	nanotodon-${GITHUB_TAG}
@@ -29,7 +29,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/doc/nanotodon
 
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 # problems rendering UTF-8
 #.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

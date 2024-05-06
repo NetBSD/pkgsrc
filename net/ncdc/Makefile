@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/11/08 13:20:31 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/06 08:27:54 jperkin Exp $
 
 DISTNAME=	ncdc-1.23
 PKGREVISION=	5
@@ -19,5 +19,5 @@ USE_TOOLS+=	pkg-config
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

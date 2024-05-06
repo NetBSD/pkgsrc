@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/11/08 13:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/06 08:27:49 jperkin Exp $
 
 DISTNAME=	swirc-3.4.6
 PKGREVISION=	1
@@ -23,7 +23,7 @@ MAKE_FLAGS+=	DEST_CONFMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/libidn/buildlink3.mk"
 # Relies on ncurses struct internals - cannot use NetBSD libcurses.
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

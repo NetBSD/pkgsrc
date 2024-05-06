@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/11/08 13:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=	newsbeuter-2.9
 PKGREVISION=	46
@@ -32,7 +32,7 @@ SUBST_SED.makefile=	-e 's/^ifneq.*//; s/^endif.*//'
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/stfl/buildlink3.mk"

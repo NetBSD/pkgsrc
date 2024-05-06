@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24422 2024/05/06 06:53:02 wiz Exp $
+$NetBSD: TODO,v 1.24423 2024/05/06 08:27:51 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1529,8 +1529,7 @@ Suggested cleanups in pkgsrc
 	  sysutils/mtoolsfm, sysutils/xnc
 
 	o Convert packages to use mk/curses.buildlink3.mk instead of
-	  devel/ncurses/buildlink3.mk and devel/ncursesw/buildlink3.mk,
-	  test with NetBSD curses.
+	  devel/ncurses/buildlink3.mk, test with NetBSD curses.
 
 	o Convert packages to use OPSYS_VERSION and numeric comparisons
 	  instead of OS_VERSION and string-based comparisons.

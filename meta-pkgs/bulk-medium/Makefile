@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2024/02/27 14:25:07 taca Exp $
+# $NetBSD: Makefile,v 1.111 2024/05/06 08:27:53 jperkin Exp $
 
 DISTNAME=	bulk-medium-20240227
 CATEGORIES=	meta-pkgs
@@ -162,7 +162,6 @@ DEPENDS+=	libidn2-[0-9]*:../../devel/libidn2
 DEPENDS+=	libltdl-[0-9]*:../../devel/libltdl
 DEPENDS+=	libusb1-[0-9]*:../../devel/libusb1
 DEPENDS+=	ncurses-[0-9]*:../../devel/ncurses
-DEPENDS+=	ncursesw-[0-9]*:../../devel/ncursesw
 DEPENDS+=	pango-[0-9]*:../../devel/pango
 DEPENDS+=	pcre-[0-9]*:../../devel/pcre
 DEPENDS+=	popt-[0-9]*:../../devel/popt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/22 22:05:05 wiedi Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=		clex-4.6.4
 PKGREVISION=		1
@@ -18,5 +18,5 @@ GNU_CONFIGURE=		yes
 post-extract:
 	cd ${WRKSRC} && ${RM} -f src/*.orig
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

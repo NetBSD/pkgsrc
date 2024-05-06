@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/04/30 14:57:30 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/06 08:27:52 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -25,5 +25,5 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/cataclysm-dda
 	cd ${WRKSRC} && LOCALE_DIR=${DESTDIR}${PREFIX}/share/locale ${SH} lang/compile_mo.sh
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

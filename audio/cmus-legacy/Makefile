@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/16 17:53:11 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/06 08:27:48 jperkin Exp $
 
 DISTNAME=		cmus-2.7.1
 CATEGORIES=		audio
@@ -59,5 +59,5 @@ PLIST.libao=		yes
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

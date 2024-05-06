@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2023/08/17 08:20:27 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.19 2024/05/06 08:27:50 jperkin Exp $
 #
 # used by databases/mariadb104-client/Makefile
 # used by databases/mariadb104-server/Makefile
@@ -91,11 +91,8 @@ CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 
 .if !empty(CURSES_TYPE:M*ncurses*)
 CMAKE_ARGS+=		-DCURSES_NEED_NCURSES=ON
-CPPFLAGS+=		-DHAVE_CURSES_H
-.endif
-
-.if !empty(CURSES_TYPE:M*ncursesw*)
 CMAKE_ARGS+=		-DCURSES_NEED_WIDE=ON
+CPPFLAGS+=		-DHAVE_CURSES_H
 .endif
 
 CFLAGS.SunOS+=		-fPIC

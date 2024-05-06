@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/08 13:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/06 08:27:55 jperkin Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	6
@@ -31,6 +31,6 @@ SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
