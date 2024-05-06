@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/05/06 08:33:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/06 08:40:24 jperkin Exp $
 
 DISTNAME=	ee-1.5.2.src
 PKGNAME=	${DISTNAME:S,.src,,}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://mirrors.ustc.edu.cn/gentoo/distfiles/
 DIST_SUBDIR=	${PKGNAME_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/09/07 07:56:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/06 08:40:32 jperkin Exp $
 
 DISTNAME=		grdc-20031019
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		time
 MASTER_SITES=		# ftp://ftp.terabyte.com.ua/pub/software/time/
 

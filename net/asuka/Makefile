@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/05/06 08:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/06 08:40:30 jperkin Exp $
 
 DISTNAME=	0.8.5
 PKGNAME=	asuka-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://git.sr.ht/~julienxx/asuka/archive/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/05/06 08:27:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/06 08:40:29 jperkin Exp $
 
 DISTNAME=	teapot-2.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://www.syntax-k.de/projekte/teapot/
 

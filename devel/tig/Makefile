@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/05/06 08:33:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2024/05/06 08:40:24 jperkin Exp $
 
 DISTNAME=	tig-2.5.8
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/04/28 07:26:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/06 08:40:33 jperkin Exp $
 
 DISTNAME=	xrestop-0.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/app/
 EXTRACT_SUFX=	.tar.xz
