@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/01 17:17:00 pho Exp $
+$NetBSD: distinfo,v 1.2 2024/05/06 09:58:13 pho Exp $
 
-BLAKE2s (hfsevents-0.1.6.tar.gz) = 6d5f7c7745e69bfc6ed4aca15f389b33b2ea50802877931dae482059172ac052
-SHA512 (hfsevents-0.1.6.tar.gz) = 698d6e1272f8a45374f144a782701f6aa9dd6e0933fa545d6bf8f63ec20154b4cd9f0b65c4b4d629cb302bb93a7a86b9429eaf4b2526ddc27536d4bc45201298
-Size (hfsevents-0.1.6.tar.gz) = 5774 bytes
+BLAKE2s (hfsevents-0.1.7.tar.gz) = 3e155f2622229a2fb0198aa28bf0f2971ff7302ecc4d405e0f6da11ef317b6e7
+SHA512 (hfsevents-0.1.7.tar.gz) = e201cddae7960c6a732d5723535e9bb58f2a677f80c2c6323a2ce8bb657ab51d65fc26308683a624bf2954c9da00fa32279583deb6bbb4221eddf8be72aaee3d
+Size (hfsevents-0.1.7.tar.gz) = 5785 bytes
