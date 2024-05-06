@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2024/05/01 21:05:18 adam Exp $
+# $NetBSD: Makefile,v 1.203 2024/05/06 10:16:25 adam Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -30,6 +30,9 @@ USE_TOOLS+=		cmake bison flex perl pkg-config
 # with spaces, which are \-quoted in Makefiles, but bmake sees them as
 # separate files.
 USE_TOOLS+=		gmake
+
+# minizip/zip.h shadows zip.h (from libzip)
+BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
 
 PLIST_SRC=		PLIST
 
