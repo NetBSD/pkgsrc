@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24419 2024/05/05 22:43:21 wiz Exp $
+$NetBSD: TODO,v 1.24420 2024/05/06 05:49:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1332,7 +1332,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o unifont-15.0.05
 	o units-2.21
 	o upower-0.99.20 [switches to build with meson]
-	o uriparser-0.9.7
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o userspace-rcu-0.12.2

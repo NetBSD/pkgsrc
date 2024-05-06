@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3225 2024/05/06 05:45:02 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3226 2024/05/06 05:49:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5078,3 +5078,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/lsd to 1.1.2nb1 [pin 2024-05-06]
 	Updated textproc/git-delta to 0.17.0nb1 [pin 2024-05-06]
 	Updated textproc/bat to 0.24.0nb2 [pin 2024-05-06]
+	Updated textproc/uriparser to 0.9.8 [wiz 2024-05-06]
