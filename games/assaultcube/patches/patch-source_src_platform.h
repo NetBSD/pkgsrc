@@ -1,4 +1,4 @@
-$NetBSD: patch-source_src_platform.h,v 1.1 2019/07/05 08:01:31 nia Exp $
+$NetBSD: patch-source_src_platform.h,v 1.2 2024/05/06 12:12:16 nia Exp $
 
 [PATCH] fix some errors and warnings for GCC 6
 
@@ -34,3 +34,18 @@ https://github.com/assaultcube/AC/commit/752950989b4e286459ca9aee3d61a868d7b20fa
  #ifdef __GNUC__
      #include <new>
      #include <signal.h>
+@@ -57,13 +50,12 @@
+ 
+     #include "GL/glext.h"
+ 
++    #include <libintl.h>
+     #ifdef __APPLE__
+-        #include "INTL/libintl.h"
+         #include "OpenAL/al.h"
+         #include "OpenAL/alc.h"
+         #include "Vorbis/vorbisfile.h"
+     #else
+-        #include <libintl.h>
+         #include "AL/al.h"
+         #include "AL/alc.h"
+         #include "vorbis/vorbisfile.h"

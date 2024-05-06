@@ -1,7 +1,9 @@
-$NetBSD: patch-source_src_Makefile,v 1.1 2019/06/30 21:44:30 nia Exp $
+$NetBSD: patch-source_src_Makefile,v 1.2 2024/05/06 12:12:16 nia Exp $
 
 - Do not force a compiler or CXXFLAGS.
 - Use LDFLAGS when linking.
+- Do not hardcore -lX11 -lGL -lopenal since we want this to work on
+  Darwin too.
 - Use libenet from pkgsrc.
 
 --- source/src/Makefile.orig	2013-11-09 23:12:11.000000000 +0000
@@ -29,7 +31,7 @@ $NetBSD: patch-source_src_Makefile,v 1.1 2019/06/30 21:44:30 nia Exp $
 -CLIENT_INCLUDES= $(INCLUDES) -I/usr/include `sdl-config --cflags` -idirafter ../include
 -CLIENT_LIBS= -L../enet/.libs -lenet -L$(USRLIB) -lX11 `sdl-config --libs` -lSDL_image -lz -lGL -lopenal -lvorbisfile -lcurl
 +CLIENT_INCLUDES= $(INCLUDES) `sdl-config --cflags` `pkg-config --cflags libenet` -I../include
-+CLIENT_LIBS= -lX11 `sdl-config --libs` `pkg-config --libs libenet` -lSDL_image -lz -lGL -lopenal -lvorbisfile -lcurl
++CLIENT_LIBS= `sdl-config --libs` `pkg-config --libs libenet` -lSDL_image -lz -lvorbisfile -lcurl
  endif
  
  CLIENT_OBJS= \
