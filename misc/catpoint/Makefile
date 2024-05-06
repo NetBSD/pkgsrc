@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/27 21:09:40 leot Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/06 08:27:53 jperkin Exp $
 
 DISTNAME=	catpoint-v0.2
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
-
-BUILDLINK_TRANSFORM+=	l:ncursesw:${BUILDLINK_LIBNAME.curses}
 
 USE_LANGUAGES=	c99
 

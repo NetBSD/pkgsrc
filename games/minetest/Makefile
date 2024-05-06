@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/01/02 14:18:07 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2024/05/06 08:27:52 jperkin Exp $
 
 PKGNAME=		minetest-5.8.0
 CATEGORIES=		games
@@ -61,7 +61,7 @@ post-extract:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

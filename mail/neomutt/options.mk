@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2023/11/04 00:21:04 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2024/05/06 08:27:53 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -52,7 +52,7 @@ LDFLAGS.SunOS+=			${COMPILER_RPATH_FLAG}/usr/xpg4/lib${LIBABISUFFIX}
 ### ncursesw
 ###
 .if !empty(PKG_OPTIONS:Mncursesw)
-.  include "../../devel/ncursesw/buildlink3.mk"
+.  include "../../devel/ncurses/buildlink3.mk"
 .else
 SUBST_CLASSES+=		curse
 SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/07/18 14:13:23 nia Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/06 08:27:52 jperkin Exp $
 
 DISTNAME=	kakoune-2020.01.16
 CATEGORIES=	editors
@@ -23,5 +23,5 @@ MAKE_FLAGS+=	gzip_man=no
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
