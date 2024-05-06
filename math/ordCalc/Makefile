@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/06 08:40:28 jperkin Exp $
 #
 
 ORDCALCVER=	0.2
 PKGNAME=	ordCalc-${ORDCALCVER}
 DISTNAME=	ordCalc_${ORDCALCVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	math
 MASTER_SITES=	http://mtnmath.com/ord/
 EXTRACT_SUFX=	.tar.bz2

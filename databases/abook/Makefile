@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/05/06 08:33:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2024/05/06 08:40:22 jperkin Exp $
 #
 
 DISTNAME=	abook-0.6.1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://abook.sourceforge.net/devel/
 

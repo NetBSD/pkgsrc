@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2019/11/03 17:04:27 rillig Exp $
+# $NetBSD: Makefile,v 1.66 2024/05/06 08:40:29 jperkin Exp $
 #
 
 DISTNAME=	siag-3.6.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	misc editors math textproc
 MASTER_SITES=	http://siag.nu/pub/siag/
 

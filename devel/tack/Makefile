@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/01/27 20:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/06 08:40:23 jperkin Exp $
 
 DISTNAME=	tack-1.09-20230201
 PKGNAME=	${DISTNAME:S/-20/.20/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://invisible-island.net/archives/ncurses/current/
 EXTRACT_SUFX=	.tgz
