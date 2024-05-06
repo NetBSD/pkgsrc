@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/05/06 07:46:35 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/06 14:04:26 nia Exp $
 
-BUILD_TARGET=	master server
+BUILD_TARGET=	server
 
 .include "../../games/assaultcube/Makefile.common"
 
