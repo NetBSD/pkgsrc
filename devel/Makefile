@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4265 2024/05/06 08:31:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.4266 2024/05/06 14:46:44 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -219,6 +219,7 @@ SUBDIR+=	cargo-c
 SUBDIR+=	cargo-modules
 SUBDIR+=	cargo-outdated
 SUBDIR+=	cargo-upgrades
+SUBDIR+=	cargo-zigbuild
 SUBDIR+=	catch
 SUBDIR+=	catch2
 SUBDIR+=	cbindgen
