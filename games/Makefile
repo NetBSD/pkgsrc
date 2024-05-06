@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2024/05/05 09:31:36 nia Exp $
+# $NetBSD: Makefile,v 1.546 2024/05/06 07:46:35 nia Exp $
 #
 
 COMMENT=	Games
@@ -38,6 +38,7 @@ SUBDIR+=	arx-libertatis
 SUBDIR+=	asc
 SUBDIR+=	asciiquarium
 SUBDIR+=	assaultcube
+SUBDIR+=	assaultcube-server
 SUBDIR+=	astromenace
 SUBDIR+=	atomix
 SUBDIR+=	augustus
