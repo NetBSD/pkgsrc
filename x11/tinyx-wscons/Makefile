@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/06 08:37:18 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/06 12:37:19 nat Exp $
 
 VERSION=	0.3
 GITHUB_PROJECT=	tinyx-wscons
@@ -33,6 +33,7 @@ do-configure:
 
 do-install:
 .for f in Xwscons
+	${STRIP} ${WRKSRC}/kdrive/wscons/${f}
 	${INSTALL_SCRIPT} ${WRKSRC}/kdrive/wscons/${f} ${DESTDIR}${PREFIX}/sbin
 .endfor
 
