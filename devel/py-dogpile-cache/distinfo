@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/02/22 17:35:14 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/05/06 04:36:19 adam Exp $
 
-BLAKE2s (dogpile.cache-1.3.2.tar.gz) = a173046796655b2509d9181295f548f880243c322fb509d261fc17e094694df7
-SHA512 (dogpile.cache-1.3.2.tar.gz) = 4cdc77f5c58ac26dbedd32580ac03a3b1c9ebc7e0526dbc980307704b2a41be604682a24084149e0d09caf535eed3a555a97e47142676b42fdb68276aa04d1a3
-Size (dogpile.cache-1.3.2.tar.gz) = 269742 bytes
+BLAKE2s (dogpile.cache-1.3.3.tar.gz) = 92fc850b17f461cd4872ddf397f5685acee6a6e5b3a62cab4940adae213c89a0
+SHA512 (dogpile.cache-1.3.3.tar.gz) = 80809d072167c62dcc731ab5b265c54bcc6f6a1dc09e3ea88959a34823dc0bb776b61166b8e60812dd47c38e8f23ba55c2be173d600a10c4c400c1334d0339fb
+Size (dogpile.cache-1.3.3.tar.gz) = 272404 bytes
