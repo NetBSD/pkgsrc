@@ -1,13 +1,5 @@
-$NetBSD: distinfo,v 1.38 2024/04/05 17:03:59 wiz Exp $
+$NetBSD: distinfo,v 1.39 2024/05/06 06:22:09 wiz Exp $
 
-BLAKE2s (libgit2-1.7.2.tar.gz) = 51be87fe3dd22b785873c4089c11d33e148814ef0d361fd9020f49b86590d2c4
-SHA512 (libgit2-1.7.2.tar.gz) = 825737e4a1991fba50ea535f15b0e560ebe76ead752e04aeba36925b944d0da77fe9826a70980a1aa3d0bf9afbedfab79dd92e799c9252931384c89ebec9b012
-Size (libgit2-1.7.2.tar.gz) = 7548186 bytes
-SHA1 (patch-deps_ntlmclient_ntlm.c) = 0f7645497b25f6895911cf32027e830ab73bdc55
-SHA1 (patch-src_libgit2_config.c) = f3c131d26bb38e86ff992eb8007ec399846a205a
-SHA1 (patch-src_libgit2_path.c) = b1f5245472ec00ff1c1c6b55b4ecdc88e1f163ac
-SHA1 (patch-src_libgit2_trailer.c) = d8a6e733ff963124024bfb9f7118d8e537815695
-SHA1 (patch-src_libgit2_transports_smart__pkt.c) = 9c4c6ee17512f7bb06d02343ef0a07794361c88e
-SHA1 (patch-src_util_date.c) = 47c56292b8f2483065e904f99dc51832bab0de3d
-SHA1 (patch-src_util_str.c) = 737f658e82b00c623533181126996263a2f1df45
-SHA1 (patch-src_util_util.h) = 54e74097b87af3c2939e7c237f1d2827101b9a72
+BLAKE2s (libgit2-1.8.0.tar.gz) = 45bcf3f8f54b6d7912d75708140fc00335a8024827f9278ef7b58201a496968a
+SHA512 (libgit2-1.8.0.tar.gz) = e5634267bd9c6a594c9a954d09c657e7b8aadf213609bf7dd83b99863d0d0c7109a5277617dd508abc2da54ea3f12c2af1908d1aeb73c000e94056e2f3653144
+Size (libgit2-1.8.0.tar.gz) = 7590126 bytes
