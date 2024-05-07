@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2024/04/06 08:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/05/07 04:11:45 adam Exp $
 
 PKGNAME=	qca2-qt5-${DISTNAME:C/.*-//}
-PKGREVISION=	8
 
-COMMENT=	Cross-platform crypto API for QT5
+COMMENT=	Cross-platform crypto API for Qt5
 
 .include "../../security/qca2-qt5/Makefile.common"
 
