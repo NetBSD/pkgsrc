@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24423 2024/05/06 08:27:51 jperkin Exp $
+$NetBSD: TODO,v 1.24424 2024/05/07 04:12:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -1160,9 +1160,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
-	o qca2-2.3.2
-	o qca2-gnupg-2.3.2
-	o qca2-ossl-2.3.2
 	o qconf-2.5
 	o qtcreator-13.0
 	o quazip-1.1
