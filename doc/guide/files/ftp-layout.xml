@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.15 2019/02/28 10:54:31 leot Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.16 2024/05/07 16:29:54 gdt Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -56,35 +56,30 @@
 	them.</para></listitem>
 
 	<listitem><para><varname>OSVERSION</varname> is the version of
-	the operating system. For version numbers that change often (for
-	example NetBSD-current), the often-changing part should be
-	replaced with an <literal>x</literal>, for example
-	<literal>4.99.x</literal>.</para></listitem>
+	the operating system.  Typically it is the version defining an
+	ABI, e.g. 9.0.</para></listitem>
 
 	<listitem><para><varname>TAG</varname> is either
-	<literal>20<replaceable>xx</replaceable>Q<replaceable>y</replaceable></literal>
-	for a stable branch, or <literal>head</literal> for packages
+	<literal>20<replaceable>YY</replaceable>Q<replaceable>N</replaceable></literal>
+	for a stable branch, or <literal>current</literal> for packages
 	built from the HEAD branch. The latter should only be used when
-	the packages are updated on a regular basis. Otherwise the date
-	from checking out pkgsrc should be appended, for example
-	<literal>head_20071015</literal>.</para></listitem>
+	the packages are updated on a regular basis.</para></listitem>
 
 	</itemizedlist>
 
-	<para>The rationale for exactly this scheme is that the pkgsrc users looking for binary packages
-	can quickly click through the directories on the
-	server and find the best binary packages for their machines. Since they
-	usually know the operating system and the hardware architecture, OPSYS
-	and ARCH are placed first. After these choices, they can select the
-	best combination of OSVERSION and TAG together, since it is usually the
-	case that packages stay compatible between different version of the
-	operating system.</para>
+	<para>The rationale for this scheme is that users can first
+	search by OPSYS and ARCH, since these are more or less
+	unchangeable.  After that, there is a management set of
+	directories with OSVERSION and TAG.</para>
+
+	<para>See also <filename>README.md</filename> in
+	<filename>packages</filename> for more details, including
+	about symlinks.</para>
 
 	<para>In each of these directories, there is a
 	whole binary packages collection for a specific platform. It has a directory called
 	<filename>All</filename> which contains all binary packages.
-	Besides that, there are various category directories that
-	contain symbolic links to the real binary packages.</para>
+	</para>
 
 </sect1>
 <sect1 id="ftp-reports">
