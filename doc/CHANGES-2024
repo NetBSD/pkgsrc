@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3248 2024/05/07 07:27:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3249 2024/05/07 08:40:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5113,3 +5113,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/qca2-qt5-ossl to 2.3.8 [adam 2024-05-07]
 	Updated pkgtools/pkglint to 23.4.2 [rillig 2024-05-07]
 	Removed chat/spectrum [wiz 2024-05-07]
+	Added games/ccleste version 1.4.0 [nia 2024-05-07]
