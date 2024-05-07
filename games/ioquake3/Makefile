@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/04/06 08:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/07 21:48:54 nia Exp $
 #
 
 DISTNAME=	ioquake3-1.36.20200125
@@ -25,25 +25,7 @@ MAKE_FLAGS+=	USE_INTERNAL_OPUS=0
 MAKE_FLAGS+=	USE_INTERNAL_VORBIS=0
 MAKE_FLAGS+=	USE_INTERNAL_ZLIB=0
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_ARCH:M*arm*)
-QUAKE_ARCH=	arm
-.elif !empty(MACHINE_ARCH:M*mips*)
-QUAKE_ARCH=	mips
-.elif !empty(MACHINE_ARCH:M*sh3*)
-QUAKE_ARCH=	sh
-.elif ${MACHINE_ARCH} == "i386"
-QUAKE_ARCH=	x86
-.elif ${MACHINE_ARCH} == "powerpc"
-QUAKE_ARCH=	ppc
-.elif ${MACHINE_ARCH} == "powerpc64"
-QUAKE_ARCH=	ppc64
-.elif ${MACHINE_ARCH} == "sparc64"
-QUAKE_ARCH=	sparc
-.else
-QUAKE_ARCH=	${MACHINE_ARCH}
-.endif
+.include "arch.mk"
 
 MAKE_FLAGS+=	COMPILE_ARCH=${QUAKE_ARCH:Q}
 
