@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 11:29:24 nia Exp $
+$NetBSD: distinfo,v 1.43 2024/05/07 18:06:35 abs Exp $
 
-BLAKE2s (dillo-3.0.5.tar.bz2) = 7644d03e1ebf63ad7abcb1a1b629a112b34e5d82026631ccca1e6e13c4a3ef25
-SHA512 (dillo-3.0.5.tar.bz2) = d0e86f57e50da762debf592b6deb94de5ee58f84e0cae1159890262540a463aea8143d2b99c634021c1f273f91c2fe0918f30d72c3eaf91fdb541e741469b155
-Size (dillo-3.0.5.tar.bz2) = 734472 bytes
-SHA1 (patch-configure) = 18dc67f0fe302ee030cb7be2a5fa5ef5976fcece
-SHA1 (patch-dpi_https.c) = 1f95a8dfdc44a9ad6aa666cb880198708c6a5f1d
+BLAKE2s (dillo-3.1.0.tar.gz) = e15d9a6dafa97a6140047df208647e46675a8fa93f3eb287ff81b77fb150064f
+SHA512 (dillo-3.1.0.tar.gz) = c34995a9b7911458f962b1f7424a06a4b95ad8a3f01a3e84ecbf19fa6e6fd10992c5536712e4942ab45b2137e543e1d383751ffc50b58f95d4da9f5891d05c61
+Size (dillo-3.1.0.tar.gz) = 1514218 bytes
