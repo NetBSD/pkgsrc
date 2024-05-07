@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/05 16:08:21 pin Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/07 07:18:55 wiz Exp $
 
 DISTNAME=	cargo-c-0.9.32
 CATEGORIES=	devel
@@ -15,7 +15,8 @@ SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys
 USE_TOOLS+=	pkg-config
 
 RUST_REQ=	1.76.0
-#RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 .include "cargo-depends.mk"
 
