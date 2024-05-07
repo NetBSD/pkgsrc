@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2024/04/09 16:55:55 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2024/05/07 18:18:05 bsiegert Exp $
 
-BLAKE2s (go1.21.9.src.tar.gz) = 089cdce5fe54fe3f1cab7c8ddb573b1c41e021a2f0c39456e8a40eb8b68020ea
-SHA512 (go1.21.9.src.tar.gz) = e1cf7e458d41f8b343c34b7d35dc4a1696bacbad2ad64abac36dbbeaf1e0a1b71cdb32cebb1686c6e5c90bf0ad3474714d09acea010d6c074730c59d71e79f4e
-Size (go1.21.9.src.tar.gz) = 26993426 bytes
+BLAKE2s (go1.21.10.src.tar.gz) = 5203975dc6fd4bfc94a20962873f586d144d360cf375c373e060b87a58311fa0
+SHA512 (go1.21.10.src.tar.gz) = 90105f977c86a0d5ea4d31e4e699d8611a74178db1e443ddc57679b7a2a648baa328e7fa9ea4a732727487cc29afe07e9597a1e2eb0184cb270973f403349f5a
+Size (go1.21.10.src.tar.gz) = 26993576 bytes
 SHA1 (patch-misc_ios_clangwrap.sh) = 0a06403609cb7bce2e6f65444fd322f486761afe
 SHA1 (patch-src_cmd_dist_build.go) = cbb9576f832806b0cbef121ea38ba6a54db95bc3
 SHA1 (patch-src_crypto_x509_root__bsd.go) = 0b5dead901450967109303f873a2696c65ccac35
