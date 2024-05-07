@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ccleste
+Comment=Portable version of the Celeste Classic 2D platform game
+Exec=ccleste
+Icon=ccleste
+Terminal=false
+Type=Application
+Categories=Game;ActionGame;
