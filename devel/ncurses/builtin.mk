@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.51 2024/05/06 07:59:27 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.52 2024/05/07 10:06:11 jperkin Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -104,10 +104,28 @@ CHECK_BUILTIN.ncurses?=	no
 .  if ${USE_BUILTIN.ncurses:tl} == yes
 BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
+BUILDLINK_TARGETS+=		ncurses-fake-pc
 .  else
 BUILDLINK_TRANSFORM+=		l:form:gnuform
 BUILDLINK_TRANSFORM+=		l:panel:gnupanel
 BUILDLINK_TRANSFORM+=		l:menu:gnumenu
 .  endif
+
+.PHONY: ncurses-fake-pc
+ncurses-fake-pc:
+	${RUN}								\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;			\
+	src=${NCURSES_PC};						\
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/ncurses.pc;			\
+	if ${TEST} -f $${src}; then					\
+		${LN} -sf $${src} $${dst};				\
+	else								\
+		{	${ECHO} "Name: ncurses";			\
+			${ECHO} "Description: ncurses library";		\
+			${ECHO} "Version: ${BUILTIN_VERSION.ncurses}";	\
+			${ECHO} "Libs: -L/usr/lib -lncurses";		\
+			${ECHO} "Cflags: -I/usr/include";		\
+		} >$${dst} ;						\
+	fi
 
 .endif	# CHECK_BUILTIN.ncurses
