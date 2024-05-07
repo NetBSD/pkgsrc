@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/12/01 12:47:23 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2024/05/07 04:11:45 adam Exp $
 
-BLAKE2s (qca-2.3.5.tar.xz) = 380c378b23617c316480a2f899ecc69bec50e9f0b55d495cfde6161a54277473
-SHA512 (qca-2.3.5.tar.xz) = 656e44d4f30c3c0e1a8c04f2703484e3cff2d962b12c6ff9891b9f28127cd61ed30dcd248c059bf9066ac645bf53a9b7c14bdb413a7766c8b3f3d37426478d96
-Size (qca-2.3.5.tar.xz) = 741036 bytes
+BLAKE2s (qca-2.3.8.tar.xz) = b4d96eecaf03eff639064db98acf313f7dafd5ede98e4470927676ade0355a6b
+SHA512 (qca-2.3.8.tar.xz) = ddb410214e8264955c2bb8c68d018e3826cb8ec48f8cc7207c2aec1c36051dc0501455b5049eff927dcf354603c0646f86ca10f2cebebe87789b3fd07a993b68
+Size (qca-2.3.8.tar.xz) = 761340 bytes
 SHA1 (patch-CMakeLists.txt) = 4867c54f8bff523233a11201bdb021e6e81a10ed
