@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/09/01 20:46:51 nat Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/07 11:46:00 nat Exp $
 
 VERSION=	0.5
 GITHUB_PROJECT= diffbreaker
@@ -31,7 +31,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 do-install:
 .for f in diffbreaker
-	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .  if !empty(MANINSTALL:Mcatinstall)
 .    if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
 	${INSTALL_MAN} ${WRKSRC}/${f}.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/${f}.1
