@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2023/08/27 23:12:52 gutteridge Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/07 13:32:48 gutteridge Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
@@ -31,6 +31,7 @@ DEPENDS+=	u-boot-bananapi-[0-9]*:../../sysutils/u-boot-bananapi
 DEPENDS+=	u-boot-bananapro-[0-9]*:../../sysutils/u-boot-bananapro
 DEPENDS+=	u-boot-beagleboard-[0-9]*:../../sysutils/u-boot-beagleboard
 DEPENDS+=	u-boot-beagleboneblack-[0-9]*:../../sysutils/u-boot-beagleboneblack
+DEPENDS+=	u-boot-beaglebonegreen-[0-9]*:../../sysutils/u-boot-beaglebonegreen
 DEPENDS+=	u-boot-beaglebonewhite-[0-9]*:../../sysutils/u-boot-beaglebonewhite
 DEPENDS+=	u-boot-chip-pro-[0-9]*:../../sysutils/u-boot-chip-pro
 DEPENDS+=	u-boot-chip-[0-9]*:../../sysutils/u-boot-chip
