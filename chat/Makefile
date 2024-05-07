@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2024/04/26 15:01:54 wiz Exp $
+# $NetBSD: Makefile,v 1.290 2024/05/07 07:27:26 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -120,7 +120,6 @@ SUBDIR+=	silc-client
 SUBDIR+=	silc-client-icb
 SUBDIR+=	silc-server
 SUBDIR+=	skypeweb-purple
-SUBDIR+=	spectrum
 SUBDIR+=	srain
 SUBDIR+=	ssh-chat
 SUBDIR+=	swirc
