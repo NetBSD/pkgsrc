@@ -1,0 +1,8 @@
+Celeste is a platform game developed and published by indie studio Maddy
+Makes Games. The player controls Madeline, a young woman with anxiety and
+depression who aims to climb Celeste Mountain. During her climb, she encounters
+several characters, including a personification of her self-doubt known as
+Badeline, who attempts to stop her from climbing the mountain.
+
+This is a C source port of the original Celeste (Celeste Classic for the
+PICO-8), designed to be portable.
