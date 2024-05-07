@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/05/06 15:13:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/07 16:01:06 nia Exp $
 
 DISTNAME=	nudoku-4.0.0
 CATEGORIES=	games
@@ -22,11 +22,15 @@ USE_TOOLS+=		autoreconf automake autoconf autopoint gettext
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_CURSES=		wide
+FAKE_NCURSES=		yes
 USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ENV+=		ncursesw_CFLAGS=-I${BUILDLINK_PREFIX.curses}/include
+CONFIGURE_ENV+=		ncursesw_LIBS=${BUILDLINK_LDADD.curses:Q}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
