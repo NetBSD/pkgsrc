@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/03 18:55:35 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/07 21:48:54 nia Exp $
 
 #
 # There will be warnings about missing dependencies while building.
@@ -33,23 +33,7 @@ MAKE_FLAGS+=	COPYDIR=${DESTDIR}${PREFIX}/lib/openarena
 BUILD_TARGET=	release
 INSTALL_TARGET=	copyfiles
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_ARCH:M*arm*)
-QUAKE_ARCH=	arm
-.elif !empty(MACHINE_ARCH:M*mips*)
-QUAKE_ARCH=	mips
-.elif !empty(MACHINE_ARCH:M*sh3*)
-QUAKE_ARCH=	sh
-.elif ${MACHINE_ARCH} == "powerpc"
-QUAKE_ARCH=	ppc
-.elif ${MACHINE_ARCH} == "powerpc64"
-QUAKE_ARCH=	ppc64
-.elif ${MACHINE_ARCH} == "sparc64"
-QUAKE_ARCH=	sparc
-.else
-QUAKE_ARCH=	${MACHINE_ARCH}
-.endif
+.include "../../games/ioquake3/arch.mk"
 
 .if ${MACHINE_ARCH} == "earmv6hf"
 DEPENDS+=	ioquake3-raspberrypi-[0-9]*:../../games/ioquake3-raspberrypi
