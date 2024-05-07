@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2022/12/01 12:47:23 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/05/07 04:11:45 adam Exp $
 #
 # used by security/qca2-qt5-gnupg/Makefile
 # used by security/qca2-qt5-ossl/Makefile
 
-DISTNAME=	qca-2.3.5
+DISTNAME=	qca-2.3.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_KDE:=qca/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v2.1
 PATCHDIR=	${.CURDIR}/../../security/qca2-qt5/patches
 DISTINFO_FILE=	${.CURDIR}/../../security/qca2-qt5/distinfo
 
-USE_TOOLS+=	gmake
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
