@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/07/21 06:20:39 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/05/07 04:03:52 adam Exp $
 
-BLAKE2s (gunicorn-21.2.0.tar.gz) = e4fac4585a9aeeabcb23333b9ab27823f150eb6d2de2a5cfa59e97a1539eee2d
-SHA512 (gunicorn-21.2.0.tar.gz) = 5d3117133ecbf9b8fded9c0ce69206916d273c284726d2a62e1d1d107560f22593baab032afa51e71b004a8b1e47afafd3fd1350b850ca45c1d7064075b795d3
-Size (gunicorn-21.2.0.tar.gz) = 3632557 bytes
+BLAKE2s (gunicorn-22.0.0.tar.gz) = c5281cec2d226fcdf52e4ac0ea18dd9bdf3640b64766047e48664a84225dcdea
+SHA512 (gunicorn-22.0.0.tar.gz) = f015eb6e413469d76e71055efd210460521c549f98bf7c5cbd93d075e55e5b9e354cf417aec2688cc24595840c67e255ff0bf15c0bf87f686b3d9769d01f1a88
+Size (gunicorn-22.0.0.tar.gz) = 3639760 bytes
