@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.101 2024/05/07 13:43:55 osa Exp $
+# $NetBSD: options.mk,v 1.102 2024/05/07 14:15:29 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -6,12 +6,12 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
 PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
-PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
+PKG_SUPPORTED_OPTIONS+=	http3 image-filter luajit mail-proxy memcache
 PKG_SUPPORTED_OPTIONS+=	naxsi njs njs-xml perl push realip redis rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sts sub upload uwsgi vts
 
-PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache realip
+PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 http3 memcache realip
 PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
 
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
@@ -94,6 +94,10 @@ SUBST_NOOP_OK.fix-geo=	yes
 
 .if !empty(PKG_OPTIONS:Mhttp2)
 CONFIGURE_ARGS+=	--with-http_v2_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mhttp3)
+CONFIGURE_ARGS+=	--with-http_v3_module
 .endif
 
 .if !empty(PKG_OPTIONS:Msub)
