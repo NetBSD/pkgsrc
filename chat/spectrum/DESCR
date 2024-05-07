@@ -1,4 +1,0 @@
-spectrum is a XMPP transport using libpurple as a basis.
-
-It provides transports/gateways to a large number of libpurple supported
-IM systems, including AOL, Facebook, ICQ, IRC, Yahoo and MSN.
