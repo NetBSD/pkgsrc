@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.547 2024/05/06 08:07:29 nia Exp $
+# $NetBSD: Makefile,v 1.548 2024/05/07 08:40:18 nia Exp $
 #
 
 COMMENT=	Games
@@ -66,6 +66,7 @@ SUBDIR+=	cataclysm-dda
 SUBDIR+=	cataclysm-dda-sdl
 SUBDIR+=	cbzone
 SUBDIR+=	ccgo
+SUBDIR+=	ccleste
 SUBDIR+=	cgoban
 SUBDIR+=	cgoban-java
 SUBDIR+=	chess-tui
