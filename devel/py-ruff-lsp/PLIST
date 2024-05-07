@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/07 15:40:59 nikita Exp $
+bin/ruff-lsp-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/ruff_lsp/__init__.py
+${PYSITELIB}/ruff_lsp/__init__.pyc
+${PYSITELIB}/ruff_lsp/__init__.pyo
+${PYSITELIB}/ruff_lsp/__main__.py
+${PYSITELIB}/ruff_lsp/__main__.pyc
+${PYSITELIB}/ruff_lsp/__main__.pyo
+${PYSITELIB}/ruff_lsp/py.typed
+${PYSITELIB}/ruff_lsp/server.py
+${PYSITELIB}/ruff_lsp/server.pyc
+${PYSITELIB}/ruff_lsp/server.pyo
+${PYSITELIB}/ruff_lsp/settings.py
+${PYSITELIB}/ruff_lsp/settings.pyc
+${PYSITELIB}/ruff_lsp/settings.pyo
+${PYSITELIB}/ruff_lsp/utils.py
+${PYSITELIB}/ruff_lsp/utils.pyc
+${PYSITELIB}/ruff_lsp/utils.pyo
