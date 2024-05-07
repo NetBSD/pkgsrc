@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/08 22:52:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/07 03:59:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -20,6 +20,24 @@ ${PYSITELIB}/explorer/app_settings.pyo
 ${PYSITELIB}/explorer/apps.py
 ${PYSITELIB}/explorer/apps.pyc
 ${PYSITELIB}/explorer/apps.pyo
+${PYSITELIB}/explorer/assistant/__init__.py
+${PYSITELIB}/explorer/assistant/__init__.pyc
+${PYSITELIB}/explorer/assistant/__init__.pyo
+${PYSITELIB}/explorer/assistant/models.py
+${PYSITELIB}/explorer/assistant/models.pyc
+${PYSITELIB}/explorer/assistant/models.pyo
+${PYSITELIB}/explorer/assistant/prompts.py
+${PYSITELIB}/explorer/assistant/prompts.pyc
+${PYSITELIB}/explorer/assistant/prompts.pyo
+${PYSITELIB}/explorer/assistant/tests.py
+${PYSITELIB}/explorer/assistant/tests.pyc
+${PYSITELIB}/explorer/assistant/tests.pyo
+${PYSITELIB}/explorer/assistant/utils.py
+${PYSITELIB}/explorer/assistant/utils.pyc
+${PYSITELIB}/explorer/assistant/utils.pyo
+${PYSITELIB}/explorer/assistant/views.py
+${PYSITELIB}/explorer/assistant/views.pyc
+${PYSITELIB}/explorer/assistant/views.pyo
 ${PYSITELIB}/explorer/charts.py
 ${PYSITELIB}/explorer/charts.pyc
 ${PYSITELIB}/explorer/charts.pyo
@@ -75,6 +93,12 @@ ${PYSITELIB}/explorer/migrations/0012_alter_queryfavorite_query_alter_queryfavor
 ${PYSITELIB}/explorer/migrations/0013_querylog_error_querylog_success.py
 ${PYSITELIB}/explorer/migrations/0013_querylog_error_querylog_success.pyc
 ${PYSITELIB}/explorer/migrations/0013_querylog_error_querylog_success.pyo
+${PYSITELIB}/explorer/migrations/0014_promptlog.py
+${PYSITELIB}/explorer/migrations/0014_promptlog.pyc
+${PYSITELIB}/explorer/migrations/0014_promptlog.pyo
+${PYSITELIB}/explorer/migrations/0015_explorervalue.py
+${PYSITELIB}/explorer/migrations/0015_explorervalue.pyc
+${PYSITELIB}/explorer/migrations/0015_explorervalue.pyo
 ${PYSITELIB}/explorer/migrations/__init__.py
 ${PYSITELIB}/explorer/migrations/__init__.pyc
 ${PYSITELIB}/explorer/migrations/__init__.pyo
@@ -87,6 +111,7 @@ ${PYSITELIB}/explorer/permissions.pyo
 ${PYSITELIB}/explorer/schema.py
 ${PYSITELIB}/explorer/schema.pyc
 ${PYSITELIB}/explorer/schema.pyo
+${PYSITELIB}/explorer/src/js/assistant.js
 ${PYSITELIB}/explorer/src/js/codemirror-config.js
 ${PYSITELIB}/explorer/src/js/csrf.js
 ${PYSITELIB}/explorer/src/js/explorer.js
@@ -97,6 +122,7 @@ ${PYSITELIB}/explorer/src/js/pivot.js
 ${PYSITELIB}/explorer/src/js/query-list.js
 ${PYSITELIB}/explorer/src/js/schema.js
 ${PYSITELIB}/explorer/src/js/table-to-csv.js
+${PYSITELIB}/explorer/src/scss/assistant.scss
 ${PYSITELIB}/explorer/src/scss/explorer.scss
 ${PYSITELIB}/explorer/src/scss/pivot.css
 ${PYSITELIB}/explorer/src/scss/styles.scss
@@ -114,6 +140,10 @@ ${PYSITELIB}/explorer/static/explorer/styles.css
 ${PYSITELIB}/explorer/tasks.py
 ${PYSITELIB}/explorer/tasks.pyc
 ${PYSITELIB}/explorer/tasks.pyo
+${PYSITELIB}/explorer/telemetry.py
+${PYSITELIB}/explorer/telemetry.pyc
+${PYSITELIB}/explorer/telemetry.pyo
+${PYSITELIB}/explorer/templates/explorer/assistant.html
 ${PYSITELIB}/explorer/templates/explorer/base.html
 ${PYSITELIB}/explorer/templates/explorer/export_buttons.html
 ${PYSITELIB}/explorer/templates/explorer/fullscreen.html
@@ -144,6 +174,9 @@ ${PYSITELIB}/explorer/tests/__init__.pyo
 ${PYSITELIB}/explorer/tests/factories.py
 ${PYSITELIB}/explorer/tests/factories.pyc
 ${PYSITELIB}/explorer/tests/factories.pyo
+${PYSITELIB}/explorer/tests/settings.py
+${PYSITELIB}/explorer/tests/settings.pyc
+${PYSITELIB}/explorer/tests/settings.pyo
 ${PYSITELIB}/explorer/tests/test_actions.py
 ${PYSITELIB}/explorer/tests/test_actions.pyc
 ${PYSITELIB}/explorer/tests/test_actions.pyo
@@ -168,15 +201,15 @@ ${PYSITELIB}/explorer/tests/test_schema.pyo
 ${PYSITELIB}/explorer/tests/test_tasks.py
 ${PYSITELIB}/explorer/tests/test_tasks.pyc
 ${PYSITELIB}/explorer/tests/test_tasks.pyo
+${PYSITELIB}/explorer/tests/test_telemetry.py
+${PYSITELIB}/explorer/tests/test_telemetry.pyc
+${PYSITELIB}/explorer/tests/test_telemetry.pyo
 ${PYSITELIB}/explorer/tests/test_utils.py
 ${PYSITELIB}/explorer/tests/test_utils.pyc
 ${PYSITELIB}/explorer/tests/test_utils.pyo
 ${PYSITELIB}/explorer/tests/test_views.py
 ${PYSITELIB}/explorer/tests/test_views.pyc
 ${PYSITELIB}/explorer/tests/test_views.pyo
-${PYSITELIB}/explorer/tests/urls.py
-${PYSITELIB}/explorer/tests/urls.pyc
-${PYSITELIB}/explorer/tests/urls.pyo
 ${PYSITELIB}/explorer/urls.py
 ${PYSITELIB}/explorer/urls.pyc
 ${PYSITELIB}/explorer/urls.pyo
