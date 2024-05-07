@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2024/02/19 19:39:00 gdt Exp $
+# $NetBSD: options.mk,v 1.9 2024/05/07 23:52:11 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
-# ocaml-cairo is broken
+# ocaml-lablgtk3 is broken
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
