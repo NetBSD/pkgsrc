@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2024/04/12 19:41:39 riastradh Exp $
+# $NetBSD: Makefile,v 1.64 2024/05/07 11:15:18 gdt Exp $
 
+# NB: the 2.42.11 release is broken
+# https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/merge_requests/169
 DISTNAME=	gdk-pixbuf-2.42.10
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
 PKGREVISION=	4
