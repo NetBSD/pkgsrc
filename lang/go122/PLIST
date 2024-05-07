@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/05 18:51:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/07 18:18:05 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -1904,7 +1904,7 @@ go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.9.linux-amd64.t
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.0.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.1.linux-amd64.txt
-go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.3.linux-amd64.txt
+go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go${PKGVERSION}.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.5.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.7.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.9.linux-amd64.txt
@@ -2157,6 +2157,7 @@ go122/src/cmd/go/testdata/script/cover_test_pkgselect.txt
 go122/src/cmd/go/testdata/script/cover_test_race_issue56370.txt
 go122/src/cmd/go/testdata/script/cover_var_init_order.txt
 go122/src/cmd/go/testdata/script/cpu_profile_twice.txt
+go122/src/cmd/go/testdata/script/darwin_lto_library_ldflag.txt
 go122/src/cmd/go/testdata/script/devnull.txt
 go122/src/cmd/go/testdata/script/dist_list_missing.txt
 go122/src/cmd/go/testdata/script/doc.txt
