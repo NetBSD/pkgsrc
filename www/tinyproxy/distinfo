@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2024/05/07 11:01:43 wiz Exp $
+$NetBSD: distinfo,v 1.20 2024/05/07 11:06:27 wiz Exp $
 
 BLAKE2s (tinyproxy-1.11.1.tar.xz) = 5d2b3a931dec6c36e4f5babbc6ab108e799578ed7ffdbb68aa6718b94d41f0ec
 SHA512 (tinyproxy-1.11.1.tar.xz) = 2e3435bbfece3797c11ccce222eef494ed92e00dd82bea2c40a54e454b7e03c8abc8e09b244f2da7192209c39047369439d08974b79eebc996fb3095230d0374
@@ -8,4 +8,4 @@ SHA1 (patch-docs_man8_tinyproxy.txt.in) = 63076c947820380d730cb95004ba1804d31fcc
 SHA1 (patch-etc_Makefile.in) = 05586bae07900c24dd418bddcbf0157ba2b302ef
 SHA1 (patch-etc_tinyproxy.conf.in) = 19481a177119b266034280d8923ea855021d8663
 SHA1 (patch-src_Makefile.in) = b7e404c84674c2feab652047f5c386866bb2f67c
-SHA1 (patch-src_reqs.c) = db2758e4be46aa7cb97c56b48871455bf336c4fd
+SHA1 (patch-src_reqs.c) = a35d5add1233a485a2c3307b38cafae576fdf39d
