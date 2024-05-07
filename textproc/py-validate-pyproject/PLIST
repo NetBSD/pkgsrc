@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/24 06:54:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/07 19:22:07 adam Exp $
 bin/validate-pyproject-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -19,6 +19,9 @@ ${PYSITELIB}/validate_pyproject/_tomllib.pyo
 ${PYSITELIB}/validate_pyproject/api.py
 ${PYSITELIB}/validate_pyproject/api.pyc
 ${PYSITELIB}/validate_pyproject/api.pyo
+${PYSITELIB}/validate_pyproject/caching.py
+${PYSITELIB}/validate_pyproject/caching.pyc
+${PYSITELIB}/validate_pyproject/caching.pyo
 ${PYSITELIB}/validate_pyproject/cli.py
 ${PYSITELIB}/validate_pyproject/cli.pyc
 ${PYSITELIB}/validate_pyproject/cli.pyo
@@ -34,6 +37,9 @@ ${PYSITELIB}/validate_pyproject/extra_validations.pyo
 ${PYSITELIB}/validate_pyproject/formats.py
 ${PYSITELIB}/validate_pyproject/formats.pyc
 ${PYSITELIB}/validate_pyproject/formats.pyo
+${PYSITELIB}/validate_pyproject/http.py
+${PYSITELIB}/validate_pyproject/http.pyc
+${PYSITELIB}/validate_pyproject/http.pyo
 ${PYSITELIB}/validate_pyproject/plugins/__init__.py
 ${PYSITELIB}/validate_pyproject/plugins/__init__.pyc
 ${PYSITELIB}/validate_pyproject/plugins/__init__.pyo
