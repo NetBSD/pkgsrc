@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2024/05/07 03:55:16 adam Exp $
+# $NetBSD: Makefile,v 1.129 2024/05/07 18:16:55 adam Exp $
 
-DISTNAME=	Django-5.0.5
+DISTNAME=	Django-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
