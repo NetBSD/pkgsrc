@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/05/06 08:40:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2024/05/07 17:17:01 nia Exp $
 
 DISTNAME=	sc-im-0.8.3
 PKGREVISION=	3
@@ -40,6 +40,8 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "options.mk"
 
+# tries to access internal cchar_t struct, incompatible with
+# NetBSD curses
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
