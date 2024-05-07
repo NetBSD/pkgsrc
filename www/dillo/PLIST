@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/04/12 02:24:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/05/07 18:06:35 abs Exp $
 bin/dillo
 bin/dillo-install-hyphenation
 bin/dpid
@@ -10,24 +10,16 @@ lib/dillo/dpi/downloads/downloads.dpi
 lib/dillo/dpi/file/file.dpi
 lib/dillo/dpi/ftp/ftp.filter.dpi
 lib/dillo/dpi/hello/hello.filter.dpi
-lib/dillo/dpi/https/https.filter.dpi
 lib/dillo/dpi/vsource/vsource.filter.dpi
 man/man1/dillo.1
-share/doc/dillo/CCCwork.txt
-share/doc/dillo/Cache.txt
+share/applications/dillo.desktop
 share/doc/dillo/Cookies.txt
-share/doc/dillo/Dillo.txt
-share/doc/dillo/Dpid.txt
-share/doc/dillo/Dw.txt
-share/doc/dillo/HtmlParser.txt
-share/doc/dillo/IO.txt
-share/doc/dillo/Images.txt
-share/doc/dillo/Imgbuf.txt
-share/doc/dillo/NC_design.txt
 share/doc/dillo/README
-share/doc/dillo/Selection.txt
 share/doc/dillo/user_help.html
 share/examples/dillo/dillorc
 share/examples/dillo/domainrc
 share/examples/dillo/dpidrc
+share/examples/dillo/hsts_preload
 share/examples/dillo/keysrc
+share/icons/hicolor/128x128/apps/dillo.png
+share/icons/hicolor/48x48/apps/dillo.png

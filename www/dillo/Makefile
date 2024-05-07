@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.89 2023/11/12 13:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/05/07 18:06:35 abs Exp $
 
-DISTNAME=	dillo-3.0.5
-PKGREVISION=	14
+DISTNAME=	dillo-3.1.0
 CATEGORIES=	www
-MASTER_SITES=	https://www.dillo.org/download/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.dillo.org/
+HOMEPAGE=	https://dillo-browser.github.io/
 COMMENT=	Very small and fast graphical web-browser
 LICENSE=	gnu-gpl-v3
 
@@ -29,7 +28,12 @@ INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
+USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl tar
+
 .include "options.mk"
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/dillo
@@ -37,8 +41,9 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 
