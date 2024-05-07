@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.11 2023/10/21 23:24:43 osa Exp $
+# $NetBSD: version.mk,v 1.12 2024/05/07 13:49:33 osa Exp $
 #
 # UNIT_EXTENSION_DIR
 #	Relative path to ${PREFIX} for NGINX Unit's modules.
@@ -12,7 +12,7 @@
 UNITVERSION_MK=	defined
 
 # Define NGINX Unit's version.
-UNIT_VERSION=	1.31.1
+UNIT_VERSION=	1.32.1
 
 # Define NGINX Unit's modules directory
 UNIT_EXTENSION_DIR=	libexec/unit/modules
