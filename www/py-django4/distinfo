@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/03/04 15:48:16 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/05/07 03:56:44 adam Exp $
 
-BLAKE2s (Django-4.2.11.tar.gz) = d31b297037ec0f7c25dee81a761c71f01092e2dc4be795ef0c3e394ab2484e20
-SHA512 (Django-4.2.11.tar.gz) = 5842f0c2592b695ecfd7f00d250075cb9581efc8a7f389f155dbac74d80ac7899f600ffba0d51e3391f15c4a1444554d901b8a673a1091ab7269e24862122ef0
-Size (Django-4.2.11.tar.gz) = 10426858 bytes
+BLAKE2s (Django-4.2.12.tar.gz) = ec2bc49c6f20d9dab912d8163e91e10b32bb347644020c1ea9bcb192de15d43d
+SHA512 (Django-4.2.12.tar.gz) = 5fe9a7b1c12d6e2aee2ff9108eca77719d0bc44bd26990465a6651cd5ea0d705cce49704be1a0e9afcf11b3ec37457232484193ed1902bb8e872e28b3c05c4c1
+Size (Django-4.2.12.tar.gz) = 10498118 bytes
