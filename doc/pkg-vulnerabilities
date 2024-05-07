@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.187 2024/05/06 05:49:59 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.188 2024/05/07 11:07:14 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24704,7 +24704,7 @@ sudo>=1.8.0<1.9.12	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-202
 syslog-ng<3.38.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38725
 dompdf<2.0.1	arbitrary-file-access	https://nvd.nist.gov/vuln/detail/CVE-2022-41343
 mpd<0.23.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-46449
-tinyproxy-[0-9]*	insecure-defaults	https://nvd.nist.gov/vuln/detail/CVE-2022-40468
+tinyproxy<1.11.1nb3	insecure-defaults	https://nvd.nist.gov/vuln/detail/CVE-2022-40468
 syft<0.70.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-24827
 sslh-[0-9]*	remote-code-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-4639
 sofia-sip<1.13.11	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-22741
@@ -25999,3 +25999,4 @@ py{27,37,38,39,310,311,312}-aiohttp<3.9.4	denial-of-service	https://nvd.nist.gov
 p5-Email-MIME<1.954	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4140
 uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34402
 uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34403
+tinyproxy<1.11.1nb2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-49606
