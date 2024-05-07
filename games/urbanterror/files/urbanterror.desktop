@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Urban Terror
+Comment=Hollywood tactical shooter based on the ioquake3 engine
+Exec=urbanterror
+Terminal=false
+Icon=urbanterror
+Type=Application
+Categories=Game;ActionGame;
+Keywords=first person shooter;fps;3d;deathmatch;ctf;capture the flag;
