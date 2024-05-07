@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.105 2024/05/07 13:43:55 osa Exp $
+$NetBSD: distinfo,v 1.106 2024/05/07 14:01:54 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -24,9 +24,9 @@ Size (nbs-system-naxsi-d714f16_GH.tar.gz) = 236940 bytes
 BLAKE2s (nchan-1.3.6.tar.gz) = 1409be69d5589d3643a7cb1f3dd1e4bc8d58c4be801234d52738090c04469255
 SHA512 (nchan-1.3.6.tar.gz) = 0f1c25d460dcf4e3407a1ef4bfcefe17eba7b0ff250f267e5bde0eb4298e9596c1e6992fc58fe35d8420888065353bf3883a1f1bbc5e607a00128992eb1ee6d2
 Size (nchan-1.3.6.tar.gz) = 761436 bytes
-BLAKE2s (nginx-1.25.4.tar.gz) = e702d7e4ffdc3e1f1f26381e136903d5d53cfce310d2ceb88d569e57293c3b84
-SHA512 (nginx-1.25.4.tar.gz) = 72a4aa8ed675f5a27ac723a73e556bbb5ae979a2fe79f9c2f4fb20bd7e719c797af8e2868044b7f2cf58be2a351a268599c8eb1e66719098d4142abab7632bb5
-Size (nginx-1.25.4.tar.gz) = 1236273 bytes
+BLAKE2s (nginx-1.25.5.tar.gz) = 4f2d45ddbe3d3c049ed071de0d3dc2f69a18d1a5dc7946ac0b72c3456dbba1f4
+SHA512 (nginx-1.25.5.tar.gz) = 4a069ec08af46e42a72e263291fc84a67605d817ece1ea7092a5da5babced96ef27eb370ad6f7558b2f5973406080240080aaf4b27fc2d8b41f6853601563cb7
+Size (nginx-1.25.5.tar.gz) = 1244060 bytes
 BLAKE2s (nginx-dav-ext-module-3.0.0.tar.gz) = 8e823ffd605d4fca00eb3ca92a0954ca35fb178397e0b990fea7d47580ee582f
 SHA512 (nginx-dav-ext-module-3.0.0.tar.gz) = d0193ba90f1ef46c4e470630c4394bdf99d94fd2e3bd8be6cb2ba1655ec59944b1269025f032b79dc2c6dad366e54389ef6a6da2ddeb91d535a4027f2162fbde
 Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
