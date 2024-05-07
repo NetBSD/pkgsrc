@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/02/08 22:52:01 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/07 03:59:49 adam Exp $
 
-DISTNAME=	django-sql-explorer-4.0.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_sql_explorer-4.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sql-explorer/}
 
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.4.0:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
