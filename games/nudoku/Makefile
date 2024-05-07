@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2024/05/07 16:01:06 nia Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/07 16:04:24 nia Exp $
 
 DISTNAME=	nudoku-4.0.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jubalh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jubalh.github.io/nudoku/
-COMMENT=	Ncurses based sudoku game
+COMMENT=	Curses based sudoku game
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
