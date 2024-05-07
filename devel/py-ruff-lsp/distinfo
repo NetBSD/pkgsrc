@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/07 15:40:59 nikita Exp $
+
+BLAKE2s (ruff_lsp-0.0.53.tar.gz) = 91b8ac80002d677bceb262a145a7a2ec3a74db892afc3b4ae9d876ba30fd084f
+SHA512 (ruff_lsp-0.0.53.tar.gz) = 0a83be8b1938b72c55230d0aac8839b8e5e004af2ed03fb6ab3e357a2d5fb41bad4110fa168df0ae32c829f65a7236c5eb0c6a4916a78067ed3eecf5c6ab380e
+Size (ruff_lsp-0.0.53.tar.gz) = 40749 bytes
