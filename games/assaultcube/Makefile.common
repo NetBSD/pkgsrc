@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2024/05/06 17:30:50 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2024/05/08 16:10:30 nia Exp $
 # used by games/assaultcube/Makefile
 # used by games/assaultcube-server/Makefile
 
@@ -50,11 +50,14 @@ CHECK_WRKREF_SKIP+=	share/*
 
 pre-configure:
 	${RM} -f ${WRKSRC}/source/include/libintl.h
-.for prog in ${BUILD_TARGET}
 	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
-                < ${FILESDIR}/assaultcube.sh.in > \
-                ${WRKDIR}/ac_${prog}
-.endfor
+                < ${FILESDIR}/ac_server.sh.in > \
+                ${WRKDIR}/ac_server
+.if ${BUILD_TARGET:M*client*}
+	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
+                < ${FILESDIR}/ac_client.sh.in > \
+                ${WRKDIR}/ac_client
+.endif
 
 do-install:
 .for prog in ${BUILD_TARGET}
