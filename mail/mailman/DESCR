@@ -7,3 +7,5 @@ people want in a mailing list management system, including built-in
 archiving, mail-to-news gateways, spam filters, bounce detection, digest
 delivery, and so on.  See the features page (http://www.list.org/features.html)
 for more detail.
+
+This is Mailman 2, rather than the current version 3.
