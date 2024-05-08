@@ -1,0 +1,14 @@
+$NetBSD: patch-meson.build,v 1.1 2024/05/08 18:47:37 adam Exp $
+
+Make sure dependencies (opensc) do not get -pthread.
+
+--- meson.build.orig	2024-05-08 15:33:12.267694241 +0000
++++ meson.build
+@@ -267,7 +267,6 @@ endif
+ pkg = import('pkgconfig')
+ pkg.generate(
+   libraries : '-L${libdir} -lpcsclite',
+-  libraries_private : '-pthread',
+   subdirs : 'PCSC',
+   version : meson.project_version(),
+   name : 'PCSC Lite',
