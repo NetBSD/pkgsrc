@@ -1,0 +1,12 @@
+$NetBSD: patch-sbin_rt-test-dependencies.in,v 1.1 2024/05/08 12:07:01 wiz Exp $
+
+--- sbin/rt-test-dependencies.in.orig	2024-05-08 12:04:21.149583060 +0000
++++ sbin/rt-test-dependencies.in
+@@ -225,7 +225,6 @@ HTML::Scrubber 0.08
+ HTTP::Message 6.0
+ IPC::Run3
+ JSON
+-LWP::Simple
+ List::MoreUtils
+ Locale::Maketext 1.06
+ Locale::Maketext::Fuzzy 0.11
