@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/03/03 11:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/08 15:11:41 adam Exp $
 
-DISTNAME=	poetry-1.8.2
+DISTNAME=	poetry-1.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -18,15 +18,15 @@ DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.21.2:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.18.0:../../textproc/py-fastjsonschema
 DEPENDS+=	${PYPKGPREFIX}-installer>=0.7.0:../../misc/py-installer
 DEPENDS+=	${PYPKGPREFIX}-keyring>=24.0.0:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-packaging>=20.5:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.7.0:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.9.4:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.0.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.8.1:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.9.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-poetry-plugin-export>=1.6.0:../../devel/py-poetry-plugin-export
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=1.0.0:../../devel/py-pyproject_hooks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
+DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=1.0.0:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.5:../../misc/py-shellingham
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.4:../../textproc/py-tomlkit
 DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=2022.5.19:../../misc/py-trove-classifiers
@@ -45,7 +45,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
-DEPENDS+=	${PYPKGPREFIX}-xattr>=0.10.1:../../sysutils/py-xattr
+DEPENDS+=	${PYPKGPREFIX}-xattr>=1.0.0:../../sysutils/py-xattr
 .endif
 
 .include "../../lang/python/pyversion.mk"
