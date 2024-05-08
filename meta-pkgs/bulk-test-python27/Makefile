@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/08 17:14:46 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/08 17:24:40 gdt Exp $
 
 DISTNAME=	bulk-test-python27-20240508
 CATEGORIES=	meta-pkgs
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pksrc-users@NetBSD.org
-COMMENT=	Meta-package for testing Boost
+COMMENT=	Meta-package for testing python 2.7
 
 META_PACKAGE=	yes
 
@@ -18,7 +18,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 #   - it might break if python27 went missing
 #   - some user might care
 #
-# We intentinoally exclude "someone might have a private python 2.7 codebase that
+# We intentionally exclude "someone might have a private python 2.7 codebase that
 # wants to use this as a dependency".
 
 
