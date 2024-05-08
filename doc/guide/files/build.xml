@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.89 2023/01/20 12:21:56 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.90 2024/05/08 10:34:12 cheusov Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -1249,6 +1249,43 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  information on this target.</para>
 	</listitem>
       </varlistentry>
+
+      <varlistentry>
+	<term>rebuild</term>
+
+	<listitem>
+	  <para>If you did a <command>make build</command> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the build with this target, which will ignore
+	  the <quote>already built</quote> flag. This target is
+	  helpful while working with patches.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>repackage</term>
+
+	<listitem>
+	  <para>If you did a <command>make package</command> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the package with this target, which will ignore
+	  the <quote>already packaged</quote> flag. This target is
+	  helpful while working with patches, PLIST* files etc.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>retest</term>
+
+	<listitem>
+	  <para>If you did a <command>make test</command> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the test with this target, which will ignore
+	  the <quote>already tested</quote> flag. This target is
+	  helpful while working with patches.</para>
+	</listitem>
+      </varlistentry>
+
     </variablelist>
   </sect1>
 </chapter>
