@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3274 2024/05/08 12:03:34 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3275 2024/05/08 12:07:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-bitstring to 4.2.1 [adam 2024-05-08]
 	Updated devel/py-astroid to 3.2.0 [adam 2024-05-08]
 	Updated devel/rt5 to 5.0.5nb1 [wiz 2024-05-08]
+	Updated devel/rt4 to 4.2.16nb9 [wiz 2024-05-08]
