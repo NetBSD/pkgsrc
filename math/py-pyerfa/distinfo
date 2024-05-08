@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/20 12:41:48 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/05/08 12:54:39 adam Exp $
 
-BLAKE2s (pyerfa-2.0.1.1.tar.gz) = 284e2e37550b315400b44ff4778ccf3607988cf101b60b5841b1795a9bb61cb7
-SHA512 (pyerfa-2.0.1.1.tar.gz) = 1e268946f72db2012051dfabbd396c2b193198faec8a0a9849a131b6df3279b04cb3376d46f53256d225a7ad78309aa411a361bc801cfea5654bff0c160131e3
-Size (pyerfa-2.0.1.1.tar.gz) = 817669 bytes
+BLAKE2s (pyerfa-2.0.1.4.tar.gz) = db44a25218df66629cbdcec8dd420339f94cd4b5e78d64b9844f0454e9e97396
+SHA512 (pyerfa-2.0.1.4.tar.gz) = 37e5c4592ddd96a9c7951a83711c537ec0439350510863a695759e76d25289e66b6f506bc0883bfcf2aa68aa7c6d40dda81f91eb61ba80dc375696b08d55c405
+Size (pyerfa-2.0.1.4.tar.gz) = 817421 bytes
