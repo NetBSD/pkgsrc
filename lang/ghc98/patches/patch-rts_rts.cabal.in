@@ -1,0 +1,19 @@
+$NetBSD: patch-rts_rts.cabal.in,v 1.1 2024/05/08 02:43:59 pho Exp $
+
+Fix build on Illumos where ld(1) dislikes undefined symbols in executables just like MacOS X.
+
+TODO: Upstream this
+
+--- rts/rts.cabal.in.orig	2024-05-07 09:28:23.509544641 +0000
++++ rts/rts.cabal.in
+@@ -501,6 +501,10 @@ library
+         if !arch(x86_64) && !arch(aarch64)
+            ld-options: -read_only_relocs warning
+ 
++      if os(solaris2)
++        ld-options: "-Wl,-z,nodefs"
++        -- See Note [Undefined symbols in the RTS]
++
+       cmm-sources: Apply.cmm
+                    Compact.cmm
+                    ContinuationOps.cmm
