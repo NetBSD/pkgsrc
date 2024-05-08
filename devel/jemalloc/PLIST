@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/18 15:51:59 gson Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/08 18:16:39 cheusov Exp $
 bin/jemalloc-config
 bin/jemalloc.sh
 bin/jeprof
@@ -8,5 +8,5 @@ lib/libjemalloc.so
 lib/libjemalloc.so.2
 lib/libjemalloc_pic.a
 lib/pkgconfig/jemalloc.pc
-man/man3/jemalloc.3
-share/doc/jemalloc/jemalloc.html
+${PLIST.doc}man/man3/jemalloc.3
+${PLIST.doc}share/doc/jemalloc/jemalloc.html
