@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2024/05/06 10:16:25 adam Exp $
+# $NetBSD: Makefile,v 1.204 2024/05/08 10:33:20 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -6,7 +6,7 @@
 # testing, on the theory that slightly old solid is better than
 # up-to-date with issues.
 DISTNAME=	qgis-3.28.15
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,12 +18,11 @@ HOMEPAGE=	http://www.qgis.org/
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++ fortran77
 USE_CXX_FEATURES=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		cmake bison flex perl pkg-config
+USE_TOOLS+=		bison flex perl pkg-config
 # Building 3.28.1 fails with BSD make.  One issue seem to be a
 # difference of opinion about quoting of $, with gmake wanting
 # "$$area" vs bmake perhaps wanting "$$$$area".  Another is filenames
@@ -95,15 +94,10 @@ CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 # Useful for package development:
 #CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
 .include "../../lang/python/pyversion.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 ##.include "../../devel/qjson/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
