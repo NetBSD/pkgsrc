@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/08 13:48:52 ktnb Exp $
+
+BLAKE2s (ait-1.8-rc4.tar.gz) = 820f8e1b95049886609e43f0483a792ac98ccd541e8739529105597dd648c124
+SHA512 (ait-1.8-rc4.tar.gz) = 97f76e1d27cdb3f846bb82d10ee2a3d3ae8bd64e44812044fad8b7f7bdcee8df85fdf57a29ebb04ba59cbbb85d4f69f54c653664e8424a8267e9f74620c64b1c
+Size (ait-1.8-rc4.tar.gz) = 91294 bytes
