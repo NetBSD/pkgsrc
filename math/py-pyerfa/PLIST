@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/20 12:41:48 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/05/08 12:54:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/erfa/__init__.py
 ${PYSITELIB}/erfa/__init__.pyc
 ${PYSITELIB}/erfa/__init__.pyo
@@ -20,9 +19,6 @@ ${PYSITELIB}/erfa/helpers.pyo
 ${PYSITELIB}/erfa/tests/__init__.py
 ${PYSITELIB}/erfa/tests/__init__.pyc
 ${PYSITELIB}/erfa/tests/__init__.pyo
-${PYSITELIB}/erfa/tests/helper.py
-${PYSITELIB}/erfa/tests/helper.pyc
-${PYSITELIB}/erfa/tests/helper.pyo
 ${PYSITELIB}/erfa/tests/test_erfa.py
 ${PYSITELIB}/erfa/tests/test_erfa.pyc
 ${PYSITELIB}/erfa/tests/test_erfa.pyo
