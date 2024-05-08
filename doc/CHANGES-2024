@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3269 2024/05/08 09:08:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3270 2024/05/08 09:24:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5150,3 +5150,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-flask-cors to 4.0.1 [adam 2024-05-08]
 	Updated converters/py-fastbencode to 0.3.1 [adam 2024-05-08]
 	Updated devel/py-coveralls to 4.0.0 [adam 2024-05-08]
+	Updated textproc/py-json5 to 0.9.25 [adam 2024-05-08]
+	Updated net/py-kombu to 5.3.7 [adam 2024-05-08]
