@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2024/05/08 15:04:34 gdt Exp $
+# $NetBSD: Makefile,v 1.208 2024/05/08 16:26:18 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -94,32 +94,32 @@ CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 # \todo Hoist this to become a general facility where a variable controls
 # actually showing build output.
 
-.include "../../lang/python/pyversion.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-##.include "../../devel/qjson/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
+#.include "../../devel/qjson/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../geography/libspatialite/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
+.include "../../geography/spatialindex/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../www/fcgi/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../geography/libspatialite/buildlink3.mk"
-.include "../../geography/spatialindex/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../www/fcgi/buildlink3.mk"
+.include "../../x11/qt5-qscintilla/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtlocation/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
-.include "../../x11/qt5-qscintilla/buildlink3.mk"
-.include "../../x11/qt5-qtserialport/buildlink3.mk"
-.include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
