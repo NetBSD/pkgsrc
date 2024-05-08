@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/07/25 19:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/08 12:53:30 adam Exp $
 
-DISTNAME=	erfa-2.0.0
+DISTNAME=	erfa-2.0.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,15 +13,12 @@ LICENSE=	modified-bsd
 PKGCONFIG_OVERRIDE+=	erfa.pc.in
 
 USE_LIBTOOL=	yes
-
+USE_TOOLS+=	aclocal autoconf autoheader automake
 GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
-AUTOCONF_REQD=	2.50
-AUTOMAKE_REQD=	1.7.1
-USE_TOOLS+=	aclocal
-USE_TOOLS+=	autoconf
-USE_TOOLS+=	autoheader
-USE_TOOLS+=	automake
+AUTOCONF_REQD+=	2.50
+AUTOMAKE_REQD+=	1.7.1
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
