@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3272 2024/05/08 11:17:27 he Exp $
+$NetBSD: CHANGES-2024,v 1.3273 2024/05/08 12:03:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5154,3 +5154,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-kombu to 5.3.7 [adam 2024-05-08]
 	Updated devel/visualvm to 2.1.8 [abs 2024-05-08]
 	Updated net/unbound to 1.20.0 [he 2024-05-08]
+	Updated sysutils/py-kubernetes to 29.0.0 [adam 2024-05-08]
+	Updated textproc/yq to 3.4.3 [adam 2024-05-08]
+	Updated devel/py-bitstring to 4.2.1 [adam 2024-05-08]
+	Updated devel/py-astroid to 3.2.0 [adam 2024-05-08]
