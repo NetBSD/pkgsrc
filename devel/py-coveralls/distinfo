@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/24 10:16:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/05/08 09:08:17 adam Exp $
 
-BLAKE2s (coveralls-3.3.1.tar.gz) = 726ef602356572fcc77174f334bf8d261b7ce77f787c261a3985ad48b38e64e0
-SHA512 (coveralls-3.3.1.tar.gz) = e101b50b1b6bfaac188360093ad8e0444412187efa2f8bb118c297ce59ff1f5087a45ceb51334be9042c66c6516903e52068c63937504b93c2ca0b7c1cc7ed4d
-Size (coveralls-3.3.1.tar.gz) = 17964 bytes
+BLAKE2s (coveralls-4.0.0.tar.gz) = 487e023724a19e6191af3e1987cac5ac2a6924fc75b7668855dd405ba38e4e89
+SHA512 (coveralls-4.0.0.tar.gz) = c13383489c2ce3a991f2a8b1a28f633c09dbf6b68d25420ded440e93e9b42cc0cfa92ed0a67ee7b6130b8ae3d6683bae82494f090debc0ea3783a9062ac98187
+Size (coveralls-4.0.0.tar.gz) = 12416 bytes
