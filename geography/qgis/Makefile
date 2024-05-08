@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2024/05/08 10:43:57 gdt Exp $
+# $NetBSD: Makefile,v 1.207 2024/05/08 15:04:34 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -32,8 +32,6 @@ USE_TOOLS+=		gmake
 
 # minizip/zip.h shadows zip.h (from libzip)
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
-
-PLIST_SRC=		PLIST
 
 DEPENDS+=		qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
