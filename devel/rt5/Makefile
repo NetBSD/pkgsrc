@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/12/25 13:48:41 spz Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/08 12:03:01 wiz Exp $
 
 DISTNAME=	rt-5.0.5
 PKGNAME=	${DISTNAME:S/rt/rt5/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -167,7 +168,7 @@ RT5DIR=		${PREFIX}/share/rt5
 
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
-		RT5DIR=${RT5DIR}
+		RT5DIR=${RT5DIR} RT5ETCDIR=${RT5DIR}/etc
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure

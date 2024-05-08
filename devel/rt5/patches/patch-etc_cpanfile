@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_cpanfile,v 1.1 2024/05/08 12:03:01 wiz Exp $
+
+LWP::Simple is part of p5-libwww but somehow isn't found by this tool.
+
+--- etc/cpanfile.orig	2024-05-08 11:52:18.116294109 +0000
++++ etc/cpanfile
+@@ -57,7 +57,7 @@ requires 'Locale::Maketext', '>= 1.06';
+ requires 'Locale::Maketext::Fuzzy', '>= 0.11';
+ requires 'Locale::Maketext::Lexicon', '>= 0.32';
+ requires 'Log::Dispatch', '>= 2.30';
+-requires 'LWP::Simple';
++#requires 'LWP::Simple';
+ requires 'Mail::Header', '>= 2.12';
+ requires 'Mail::Mailer', '>= 1.57';
+ requires 'MIME::Entity', '>= 5.504';
