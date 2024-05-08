@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1 2024/05/08 17:14:46 gdt Exp $
+
+DISTNAME=	bulk-test-python27-20240508
+CATEGORIES=	meta-pkgs
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+MAINTAINER=	pksrc-users@NetBSD.org
+COMMENT=	Meta-package for testing Boost
+
+META_PACKAGE=	yes
+
+RESTRICTED=		Just for test build purposes
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+
+# This package intends to contain every package which has both properties:
+#   - it might break if python27 went missing
+#   - some user might care
+#
+# We intentinoally exclude "someone might have a private python 2.7 codebase that
+# wants to use this as a dependency".
+
+
+DEPENDS+=	python27-[0-9]*:../../lang/python27
+
+DEPENDS+=	getmail<6:../../mail/getmail
+DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
+DEPENDS+=	mailman<3:../../mail/mailman
+# omit for now: broken for boost reasons, not py27
+#DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
+DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
+
+.include "../../mk/bsd.pkg.mk"
