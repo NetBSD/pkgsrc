@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/09/06 07:27:56 kleink Exp $
+$NetBSD: distinfo,v 1.8 2024/05/08 08:28:32 adam Exp $
 
-BLAKE2s (Flask-Cors-4.0.0.tar.gz) = 3b6a21a9daa93746a65e34d7b9b122116b098457f12fdaee6bc7cf17223d832f
-SHA512 (Flask-Cors-4.0.0.tar.gz) = 27849efd56b52c126ab287d5adae03f47435e86f9f3806fc7746658bd3c88bdcbaccef3f3ea1d5497962950dae4e22635b119c64c10b3f9e497c0820e21329f9
-Size (Flask-Cors-4.0.0.tar.gz) = 29934 bytes
+BLAKE2s (flask_cors-4.0.1.tar.gz) = abfddad269d522ae381dfb78592f8644036903a39e98840776c1a42b7d37832e
+SHA512 (flask_cors-4.0.1.tar.gz) = 996710fae77e265c6ded90484196a0eed034ba432b1aea297f805cf8c8249d2fea5570ba1b23e6f299b2707e2e084b84f2834cae2de5be8ad0b028b801dec678
+Size (flask_cors-4.0.1.tar.gz) = 30306 bytes
