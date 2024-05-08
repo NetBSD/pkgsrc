@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.66 2024/04/02 18:11:22 adam Exp $
+$NetBSD: distinfo,v 1.67 2024/05/08 15:15:47 adam Exp $
 
-BLAKE2s (SQLAlchemy-2.0.29.tar.gz) = caeb9d7edc75ae1d90449fa9401e28931d9a319ee658bfda7ec3bc7b135443c7
-SHA512 (SQLAlchemy-2.0.29.tar.gz) = d1143c65fb26335d652083b9a90afaecf78ed312cea5c26f989380204e909c341c1bc3bb1e07274353e1c409d21737fad4d7391f186b2d2373814582d3baaf78
-Size (SQLAlchemy-2.0.29.tar.gz) = 9543967 bytes
+BLAKE2s (SQLAlchemy-2.0.30.tar.gz) = 56941d75400d5adc2cd02659775a04af4ee28930e7e038d90a9c8b93a7a8da94
+SHA512 (SQLAlchemy-2.0.30.tar.gz) = b39275a7312609fd0a78ac5bb4fb0f29f2948d7fc81007587c01f38849ff28bff273182a06c8ec830b7e1ba4cd30aea2cd7214bbf971a61125c9b56c6ddbbe52
+Size (SQLAlchemy-2.0.30.tar.gz) = 9579500 bytes
