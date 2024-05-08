@@ -5177,6 +5177,24 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <p>See <a class="xref" href="#print-PLIST" title="19.3. Tweaking output of make print-PLIST">Section 19.3, &#8220;Tweaking output of <span class="command"><strong>make print-PLIST</strong></span>&#8221;</a> for more
 	  information on this target.</p>
 </dd>
+<dt><span class="term">rebuild</span></dt>
+<dd><p>If you did a <span class="command"><strong>make build</strong></span> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the build with this target, which will ignore
+	  the <span class="quote">&#8220;<span class="quote">already built</span>&#8221;</span> flag. This target is
+	  helpful while working with patches.</p></dd>
+<dt><span class="term">repackage</span></dt>
+<dd><p>If you did a <span class="command"><strong>make package</strong></span> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the package with this target, which will ignore
+	  the <span class="quote">&#8220;<span class="quote">already packaged</span>&#8221;</span> flag. This target is
+	  helpful while working with patches, PLIST* files etc.</p></dd>
+<dt><span class="term">retest</span></dt>
+<dd><p>If you did a <span class="command"><strong>make test</strong></span> and you
+	  noticed some further modifications of sources are needed,
+	  you can repeat the test with this target, which will ignore
+	  the <span class="quote">&#8220;<span class="quote">already tested</span>&#8221;</span> flag. This target is
+	  helpful while working with patches.</p></dd>
 </dl></div>
 </div>
 </div>

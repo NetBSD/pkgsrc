@@ -4069,6 +4069,27 @@ print-PLIST
     See Section 19.3, "Tweaking output of make print-PLIST" for more
     information on this target.
 
+rebuild
+
+    If you did a make build and you noticed some further modifications of
+    sources are needed, you can repeat the build with this target, which will
+    ignore the "already built" flag. This target is helpful while working with
+    patches.
+
+repackage
+
+    If you did a make package and you noticed some further modifications of
+    sources are needed, you can repeat the package with this target, which will
+    ignore the "already packaged" flag. This target is helpful while working
+    with patches, PLIST* files etc.
+
+retest
+
+    If you did a make test and you noticed some further modifications of
+    sources are needed, you can repeat the test with this target, which will
+    ignore the "already tested" flag. This target is helpful while working with
+    patches.
+
 Chapter 14. Creating a new pkgsrc package from scratch
 
 Table of Contents
