@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/05/08 18:16:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/08 18:50:24 cheusov Exp $
 
 DISTNAME=	jemalloc-5.3.0
 PKGREVISION=	1
@@ -22,7 +22,7 @@ BUILD_MAKE_FLAGS+=	SHELL=${CONFIG_SHELL}
 
 REPLACE_PERL=		bin/jeprof.in
 
-BUILD_TARGET=		all dist
+BUILD_TARGET=		all
 TEST_TARGET=		check
 TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
