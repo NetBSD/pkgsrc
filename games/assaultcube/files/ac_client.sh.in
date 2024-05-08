@@ -6,4 +6,4 @@ else
 fi
 mkdir -p "${DIR}" && \
 	cd "@PREFIX@/share/assaultcube" && \
-	exec "@PREFIX@/libexec/${0##*/}" "--home=${DIR}" --init "$@"
+	exec "@PREFIX@/libexec/${0##*/}" "--home=${DIR}" --init $@
