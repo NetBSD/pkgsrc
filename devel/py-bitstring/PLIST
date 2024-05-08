@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/23 08:56:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/08 12:00:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,9 +13,9 @@ ${PYSITELIB}/bitstring/__main__.pyo
 ${PYSITELIB}/bitstring/array_.py
 ${PYSITELIB}/bitstring/array_.pyc
 ${PYSITELIB}/bitstring/array_.pyo
-${PYSITELIB}/bitstring/bitarray.py
-${PYSITELIB}/bitstring/bitarray.pyc
-${PYSITELIB}/bitstring/bitarray.pyo
+${PYSITELIB}/bitstring/bitarray_.py
+${PYSITELIB}/bitstring/bitarray_.pyc
+${PYSITELIB}/bitstring/bitarray_.pyo
 ${PYSITELIB}/bitstring/bits.py
 ${PYSITELIB}/bitstring/bits.pyc
 ${PYSITELIB}/bitstring/bits.pyo
@@ -28,6 +28,9 @@ ${PYSITELIB}/bitstring/bitstore_helpers.pyo
 ${PYSITELIB}/bitstring/bitstream.py
 ${PYSITELIB}/bitstring/bitstream.pyc
 ${PYSITELIB}/bitstring/bitstream.pyo
+${PYSITELIB}/bitstring/bitstring_options.py
+${PYSITELIB}/bitstring/bitstring_options.pyc
+${PYSITELIB}/bitstring/bitstring_options.pyo
 ${PYSITELIB}/bitstring/dtypes.py
 ${PYSITELIB}/bitstring/dtypes.pyc
 ${PYSITELIB}/bitstring/dtypes.pyo
@@ -37,12 +40,15 @@ ${PYSITELIB}/bitstring/exceptions.pyo
 ${PYSITELIB}/bitstring/fp8.py
 ${PYSITELIB}/bitstring/fp8.pyc
 ${PYSITELIB}/bitstring/fp8.pyo
+${PYSITELIB}/bitstring/luts.py
+${PYSITELIB}/bitstring/luts.pyc
+${PYSITELIB}/bitstring/luts.pyo
 ${PYSITELIB}/bitstring/methods.py
 ${PYSITELIB}/bitstring/methods.pyc
 ${PYSITELIB}/bitstring/methods.pyo
-${PYSITELIB}/bitstring/options.py
-${PYSITELIB}/bitstring/options.pyc
-${PYSITELIB}/bitstring/options.pyo
+${PYSITELIB}/bitstring/mxfp.py
+${PYSITELIB}/bitstring/mxfp.pyc
+${PYSITELIB}/bitstring/mxfp.pyo
 ${PYSITELIB}/bitstring/py.typed
 ${PYSITELIB}/bitstring/utils.py
 ${PYSITELIB}/bitstring/utils.pyc
