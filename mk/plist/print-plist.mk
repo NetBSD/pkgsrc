@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.36 2020/06/10 16:06:09 leot Exp $
+# $NetBSD: print-plist.mk,v 1.37 2024/05/08 10:49:25 cheusov Exp $
 #
 # Automatic PLIST generation
 #  - files & symlinks first
@@ -7,10 +7,18 @@
 #  - substitute for platform or package specifics substrings
 #
 # Usage:
-#  - make install
+#  - make build
+#  - make do-install
 #  - make print-PLIST | brain >PLIST
 #
 # Keywords: plist print-plist
+
+# A list of pairs (regexp, option) for prefixing PLIST entry
+# with ${PLIST.<option>} if <regexp> matches it.
+.if !empty(PKG_OPTIONS:Mnls)
+_PRINT_PLIST_REGEXP_OPTION_LIST+= \
+	^share\/locale\/.*[.]mo$$			nls
+.endif
 
 _PRINT_PLIST_AWK_SUBST={
 _PRINT_PLIST_AWK_SUBST+=						\
@@ -20,6 +28,10 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub("^${PKGGNUDIR:S/\/$$//}/", "gnu/");			\
 	gsub("^${PKGINFODIR}/", "info/");				\
 	gsub("^${PKGMANDIR}/", "man/");
+
+.for regexp option in ${_PRINT_PLIST_REGEXP_OPTION_LIST}
+_PRINT_PLIST_AWK_SUBST+=	if (/${regexp}/) $$0 = "$${PLIST.${option}}" $$0;
+.endfor
 
 _PRINT_PLIST_AWK_SUBST+=}
 
