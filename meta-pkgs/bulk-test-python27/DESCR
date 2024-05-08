@@ -1,0 +1,2 @@
+Meta-package for testing that packages that need python27 still work
+as python 27 fades out.
