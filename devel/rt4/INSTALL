@@ -1,17 +1,14 @@
 #!@SH@
 #
-# $NetBSD: INSTALL,v 1.2 2016/01/30 23:54:20 ryoon Exp $
+# $NetBSD: INSTALL,v 1.3 2024/05/08 12:07:01 wiz Exp $
 
 WWWGRP="@WWWGRP@"
 WWWOWN="@WWWOWN@"
 RT4DIR="@RT4DIR@"
-RT4ETCDIR="@RT4ETCDIR@"
 
 case "${STAGE}" in
 POST-INSTALL)
-	cd ${RT4DIR} &&
-		${CHOWN} -R ${WWWOWN} ${RT4DIR} &&
-		${CHOWN} -R ${WWWOWN} ${RT4ETCDIR} &&
-		${CHGRP} -R ${WWWGRP} ${RT4DIR}
+	${CHOWN} -R ${WWWOWN} ${RT4DIR}
+	${CHGRP} -R ${WWWGRP} ${RT4DIR}
 	;;
 esac
