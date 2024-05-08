@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/08 12:03:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/08 12:06:01 wiz Exp $
 
 DISTNAME=	rt-5.0.5
 PKGNAME=	${DISTNAME:S/rt/rt5/}
@@ -168,7 +168,7 @@ RT5DIR=		${PREFIX}/share/rt5
 
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
-		RT5DIR=${RT5DIR} RT5ETCDIR=${RT5DIR}/etc
+		RT5DIR=${RT5DIR}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
