@@ -1,0 +1,21 @@
+ait is small yet mighty GNU Emacs style editor. It is inspired by GNU
+Emacs, microEMACS, Plan 9's acme, mle, OpenBSD's mle, and
+vi/vim/neovim. ait uses termbox2 giving it great portability across
+most unix-like systems. Think of ait as microEMACS but with
+traditional Emacs keybindings and some advanced features from the
+editors mentioned above.
+
+Some of ait's features are:
+- Emacs-like keybindings
+- basic window/buffer support
+- isearch
+- find/replace
+- M-x to run shell commands
+- M-o to open files with external command
+- basic unlimited undo/redo
+- keyboard macros
+- jump/zap to char
+- bracket highlighting
+- syntax highlighting for strings and comments
+- quick jump to line and word
+- UTF-8/Unicode Support
