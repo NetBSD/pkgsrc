@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.189 2024/05/08 11:19:51 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.190 2024/05/08 21:49:11 khorben Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26001,3 +26001,4 @@ uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-344
 uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34403
 tinyproxy<1.11.1nb2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-49606
 unbound<1.20.0		denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33655
+phpldapadmin<1.2.6.7	cross-site-scripting	https://github.com/leenooks/phpLDAPadmin/commit/d59cbfef5d8a78da55e4c1919862e9e3968b3715
