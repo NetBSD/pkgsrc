@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2024/05/08 16:26:18 gdt Exp $
+# $NetBSD: Makefile,v 1.209 2024/05/08 16:59:01 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -46,23 +46,23 @@ CMAKE_PREFIX_PATH+=	${QTDIR}
 #TOOL_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
 
 # Disable building of QGIS.app.  \todo Consider building it.
-SUBST_CLASSES+=			xapple
-SUBST_STAGE.xapple=		pre-configure
-SUBST_MESSAGE.xapple=		Disabling APPLE App in cmake scripts
-xapple_FIND_CMD=		cd ${WRKSRC} && \
-				find . -name '*.cmake' -o -name CMakeLists.txt
-SUBST_FILES.xapple=		${xapple_FIND_CMD:sh}
-SUBST_SED.xapple+=		-e 's,APPLE,XAPPLE,'
-SUBST_SED.xapple+=		-e 's,MACOSX_BUNDLE ,,'
-SUBST_NOOP_OK.xapple=		yes # since SUBST_FILES is generated
+SUBST_CLASSES+=		xapple
+SUBST_STAGE.xapple=	pre-configure
+SUBST_MESSAGE.xapple=	Disabling APPLE App in cmake scripts
+xapple_FIND_CMD=	cd ${WRKSRC} && \
+			find . -name '*.cmake' -o -name CMakeLists.txt
+SUBST_FILES.xapple=	${xapple_FIND_CMD:sh}
+SUBST_SED.xapple+=	-e 's,APPLE,XAPPLE,'
+SUBST_SED.xapple+=	-e 's,MACOSX_BUNDLE ,,'
+SUBST_NOOP_OK.xapple=	yes # since SUBST_FILES is generated
 
-SUBST_CLASSES+=			pyqt
-SUBST_STAGE.pyqt=		pre-configure
-SUBST_MESSAGE.pyqt=		Use correct python version for PyQt5 programs
-SUBST_FILES.pyqt=		cmake/PyQtMacros.cmake cmake/FindPyQt5.cmake
-SUBST_SED.pyqt+=		-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
-SUBST_SED.pyqt+=		-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
-SUBST_SED.pyqt+=		-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
+SUBST_CLASSES+=		pyqt
+SUBST_STAGE.pyqt=	pre-configure
+SUBST_MESSAGE.pyqt=	Use correct python version for PyQt5 programs
+SUBST_FILES.pyqt=	cmake/PyQtMacros.cmake cmake/FindPyQt5.cmake
+SUBST_SED.pyqt+=	-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=	-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
