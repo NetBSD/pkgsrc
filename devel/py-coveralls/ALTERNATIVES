@@ -1,0 +1,1 @@
+bin/coveralls @PREFIX@/bin/coveralls-@PYVERSSUFFIX@
