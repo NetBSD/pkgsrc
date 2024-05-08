@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/04/16 03:11:28 khorben Exp $
+# $NetBSD: Makefile,v 1.48 2024/05/08 21:32:18 khorben Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.2:../../devel/php-gettext
 
 USE_TOOLS+=	pax
 
-VERSION=	1.2.6.3
+VERSION=	1.2.6.7
 NO_BUILD=	YES
 
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
