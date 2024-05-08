@@ -1,0 +1,19 @@
+#!/bin/sh
+if [ -z "${XDG_DATA_HOME}" ]; then
+	XDG_DATA_HOME="$HOME/.local/share"
+fi
+printf "using directory %s\n" "${XDG_DATA_HOME}/ac_server"
+mkdir -p "${XDG_DATA_HOME}/ac_server"
+mkdir -p "${XDG_DATA_HOME}/ac_server/logs"
+if ! [ -e "${XDG_DATA_HOME}/ac_server/packages" ]; then
+	printf "copying data files...\n"
+	cp -R @PREFIX@/share/assaultcube/packages \
+		"${XDG_DATA_HOME}/ac_server/packages"
+fi
+if ! [ -e "${XDG_DATA_HOME}/ac_server/config" ]; then
+	printf "copying default config files...\n"
+	cp -R @PREFIX@/share/assaultcube/config \
+		"${XDG_DATA_HOME}/ac_server/config"
+fi
+cd "${XDG_DATA_HOME}/ac_server" && \
+	exec "@PREFIX@/libexec/${0##*/}" $@
