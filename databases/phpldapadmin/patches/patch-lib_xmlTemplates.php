@@ -1,13 +1,16 @@
-$NetBSD: patch-lib_xmlTemplates.php,v 1.1 2022/04/16 03:11:28 khorben Exp $
+$NetBSD: patch-lib_xmlTemplates.php,v 1.2 2024/05/08 21:32:20 khorben Exp $
 
---- lib/xmlTemplates.php.orig	2012-10-01 06:54:14.000000000 +0000
+Avoid deprecation warnings.
+
+--- lib/xmlTemplates.php.orig	2024-01-10 22:23:54.000000000 +0000
 +++ lib/xmlTemplates.php
-@@ -140,7 +140,7 @@ abstract class xmlTemplates {
+@@ -272,6 +272,9 @@ abstract class xmlTemplate {
+ 	# The TEMPLATE attributes as per the template definition, or the DN entry
+ 	protected $attributes = array();
  
- 		if ($changed) {
- 			masort($this->templates,'title');
--			set_cached_item($server_id,$class['item'],'null',$this->templates);
-+			set_cached_item($server_id,$this->templates,$class['item'],'null');
- 		}
- 	}
- 
++	# Additional properties
++	protected $askcontainer;
++
+ 	public function __construct($server_id,$name='',$filename=null,$type=null,$id=null) {
+ 		if (DEBUG_ENABLED && (($fargs=func_get_args())||$fargs='NOARGS'))
+ 			debug_log('Entered (%%)',5,0,__FILE__,__LINE__,__METHOD__,$fargs);
