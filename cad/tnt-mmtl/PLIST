@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/28 12:35:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/08 12:24:53 wiz Exp $
 bin/bem
 bin/tnt-mmtl
 bin/tnt.tcl
@@ -72,6 +72,17 @@ share/tnt-mmtl/user-guide/images.log
 share/tnt-mmtl/user-guide/images.out
 share/tnt-mmtl/user-guide/images.pl
 share/tnt-mmtl/user-guide/images.tex
+share/tnt-mmtl/user-guide/img1.png
+share/tnt-mmtl/user-guide/img10.png
+share/tnt-mmtl/user-guide/img11.png
+share/tnt-mmtl/user-guide/img2.png
+share/tnt-mmtl/user-guide/img3.png
+share/tnt-mmtl/user-guide/img4.png
+share/tnt-mmtl/user-guide/img5.png
+share/tnt-mmtl/user-guide/img6.png
+share/tnt-mmtl/user-guide/img7.png
+share/tnt-mmtl/user-guide/img8.png
+share/tnt-mmtl/user-guide/img9.png
 share/tnt-mmtl/user-guide/index.html
 share/tnt-mmtl/user-guide/internals.pl
 share/tnt-mmtl/user-guide/labels.pl
