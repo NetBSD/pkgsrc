@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2024/05/08 10:33:20 gdt Exp $
+# $NetBSD: Makefile,v 1.205 2024/05/08 10:34:06 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	brook@nmsu.edu
 #MAINTAINER+=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.qgis.org/
+HOMEPAGE=	https://www.qgis.org/
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
