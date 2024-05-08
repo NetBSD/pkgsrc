@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/19 13:32:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/08 22:17:10 khorben Exp $
+bin/osv-reporter
 bin/osv-scanner
