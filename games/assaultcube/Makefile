@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/05/06 17:30:50 nia Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/08 16:10:30 nia Exp $
+
+PKGREVISION=	1
 
 COMMENT=	Cube-based FPS with realistic environments
 
