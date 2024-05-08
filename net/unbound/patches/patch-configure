@@ -1,14 +1,14 @@
-$NetBSD: patch-configure,v 1.5 2022/10/13 12:09:00 he Exp $
+$NetBSD: patch-configure,v 1.6 2024/05/08 11:16:49 he Exp $
 
 Pretend expat.h is found: it is guaranteed by PkgSrc, but on Darwin it might
 be buried inside an SDK; we don't want the SDK path being exposed in CFLAGS.
 
 --- configure.orig	2017-07-09 07:41:42.000000000 +0000
 +++ configure
-@@ -19850,7 +19850,7 @@ fi
+@@ -21900,7 +21900,7 @@ fi
  
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libexpat" >&5
- $as_echo_n "checking for libexpat... " >&6; }
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libexpat" >&5
+ printf %s "checking for libexpat... " >&6; }
 -found_libexpat="no"
 +found_libexpat="yes"
  for dir in $withval ; do
