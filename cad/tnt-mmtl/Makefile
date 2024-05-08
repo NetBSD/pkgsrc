@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2023/11/12 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/05/08 12:24:53 wiz Exp $
 
 DISTNAME=	tnt-1.2.2
 PKGNAME=	${DISTNAME:S/tnt/tnt-mmtl/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mmtl/}
 
