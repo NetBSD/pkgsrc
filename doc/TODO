@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24427 2024/05/07 18:07:27 abs Exp $
+$NetBSD: TODO,v 1.24428 2024/05/08 12:03:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -660,6 +660,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gap-4r4p9
 	o gbrainy-2.43
 	o gcal-4.1
+	o gcc-14.1
 	o gcc-mips-current-7.1.0
 	o gcin-1.5.5
 	o gcombust-0.1.55
