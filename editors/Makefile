@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2024/04/17 14:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.253 2024/05/09 06:32:53 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -9,6 +9,7 @@ SUBDIR+=	Sigil
 SUBDIR+=	TeXmacs
 SUBDIR+=	abiword
 SUBDIR+=	abiword-plugins
+SUBDIR+=	ait
 SUBDIR+=	beav
 SUBDIR+=	beaver
 SUBDIR+=	biew
