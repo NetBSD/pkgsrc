@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.191 2024/05/09 06:41:48 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.192 2024/05/09 06:48:37 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19382,7 +19382,7 @@ py{27,36,37,38}-httplib2<0.18.0	crlf-attack		https://nvd.nist.gov/vuln/detail/CV
 zabbix<3.0.31		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-11800
 qmail-run<20200519	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2005-1513
 adplug<2.3.2	double-free	https://nvd.nist.gov/vuln/detail/CVE-2018-17825
-amarok-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13152
+amarok<3	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2020-13152
 cacti<1.2.11	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2020-13230
 cacti<1.2.11	cross-site-request-forgeries	https://nvd.nist.gov/vuln/detail/CVE-2020-13231
 freerdp<2.1.1	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-13396
