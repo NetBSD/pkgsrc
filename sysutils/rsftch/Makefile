@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/04/12 11:56:29 pin Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 20:42:08 pin Exp $
 
-DISTNAME=	rsftch-0.4.5
+DISTNAME=	rsftch-0.5.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
@@ -12,6 +12,20 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
+USE_TOOLS+=	pkg-config
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
+DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
+.endif
+
+CHECK_WRKREF_SKIP+=	bin/rsftch
+
 .include "../../lang/rust/cargo.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
