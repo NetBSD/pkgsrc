@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 08:27:01 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:16 pho Exp $
 
 DISTNAME=	trial-optparse-applicative-0.0.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

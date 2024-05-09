@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/05/05 08:49:34 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/05/09 01:32:21 pho Exp $
 
 BUILDLINK_TREE+=	stylish-haskell
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	stylish-haskell
 STYLISH_HASKELL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.stylish-haskell+=	stylish-haskell>=0.14.6
-BUILDLINK_ABI_DEPENDS.stylish-haskell+=	stylish-haskell>=0.14.6.0
+BUILDLINK_ABI_DEPENDS.stylish-haskell+=	stylish-haskell>=0.14.6.0nb1
 BUILDLINK_PKGSRCDIR.stylish-haskell?=	../../devel/stylish-haskell
 
 # lib:stylish-haskell

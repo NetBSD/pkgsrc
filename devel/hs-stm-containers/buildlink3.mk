@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/02 06:36:57 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/05/09 01:32:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-stm-containers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-stm-containers
 HS_STM_CONTAINERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-stm-containers+=	hs-stm-containers>=1.2
-BUILDLINK_ABI_DEPENDS.hs-stm-containers+=	hs-stm-containers>=1.2.0.3nb1
+BUILDLINK_ABI_DEPENDS.hs-stm-containers+=	hs-stm-containers>=1.2.0.3nb2
 BUILDLINK_PKGSRCDIR.hs-stm-containers?=		../../devel/hs-stm-containers
 
 .include "../../devel/hs-deferred-folds/buildlink3.mk"

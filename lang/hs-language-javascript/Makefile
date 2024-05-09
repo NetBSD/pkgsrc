@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:37:09 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:23 pho Exp $
 
 DISTNAME=	language-javascript-0.7.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

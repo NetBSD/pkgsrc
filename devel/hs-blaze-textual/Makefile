@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:36:21 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:31:47 pho Exp $
 
 DISTNAME=	blaze-textual-0.2.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

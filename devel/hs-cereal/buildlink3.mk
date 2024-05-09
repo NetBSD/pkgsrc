@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/11/02 06:36:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/05/09 01:31:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-cereal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cereal
 HS_CEREAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cereal+=	hs-cereal>=0.5.8
-BUILDLINK_ABI_DEPENDS.hs-cereal+=	hs-cereal>=0.5.8.3nb3
+BUILDLINK_ABI_DEPENDS.hs-cereal+=	hs-cereal>=0.5.8.3nb4
 BUILDLINK_PKGSRCDIR.hs-cereal?=		../../devel/hs-cereal
 .endif	# HS_CEREAL_BUILDLINK3_MK
 

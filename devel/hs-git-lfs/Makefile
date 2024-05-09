@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/02 08:24:44 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:31:57 pho Exp $
 
 DISTNAME=	git-lfs-1.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 DIST_SUBDIR=	hs-git-lfs # So that it won't conflict with devel/git-lfs
 

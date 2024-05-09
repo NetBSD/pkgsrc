@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/11/02 06:36:30 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/05/09 01:31:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-fsnotify
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-fsnotify
 HS_FSNOTIFY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-fsnotify+=	hs-fsnotify>=0.4.1
-BUILDLINK_ABI_DEPENDS.hs-fsnotify+=	hs-fsnotify>=0.4.1.0nb3
+BUILDLINK_ABI_DEPENDS.hs-fsnotify+=	hs-fsnotify>=0.4.1.0nb4
 BUILDLINK_PKGSRCDIR.hs-fsnotify?=	../../devel/hs-fsnotify
 
 .include "../../mk/bsd.fast.prefs.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/05/04 14:15:59 pho Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/09 01:32:29 pho Exp $
 
 DISTNAME=	hoogle-5.0.18.4
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org

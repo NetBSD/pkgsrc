@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2024/05/02 11:31:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/05/09 01:32:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-skylighting-format-blaze-html
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-skylighting-format-blaze-html
 HS_SKYLIGHTING_FORMAT_BLAZE_HTML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-skylighting-format-blaze-html+=	hs-skylighting-format-blaze-html>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-skylighting-format-blaze-html+=	hs-skylighting-format-blaze-html>=0.1.1.2
+BUILDLINK_ABI_DEPENDS.hs-skylighting-format-blaze-html+=	hs-skylighting-format-blaze-html>=0.1.1.2nb1
 BUILDLINK_PKGSRCDIR.hs-skylighting-format-blaze-html?=		../../textproc/hs-skylighting-format-blaze-html
 
 .include "../../textproc/hs-blaze-html/buildlink3.mk"

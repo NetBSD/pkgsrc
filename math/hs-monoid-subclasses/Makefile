@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/04/29 04:40:08 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/09 01:32:27 pho Exp $
 
 DISTNAME=	monoid-subclasses-1.2.5
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 08:16:16 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:18 pho Exp $
 
 DISTNAME=	validation-selective-0.2.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/04/29 04:29:04 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:30 pho Exp $
 
 DISTNAME=	network-bsd-2.8.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

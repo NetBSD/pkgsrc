@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2024/04/28 11:48:16 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:36 pho Exp $
 
 # NOTE: We can't update this to >=1.5.2 because it requires GHC newer than
 # 9.8.
 DISTNAME=	filepath-bytestring-1.4.2.1.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

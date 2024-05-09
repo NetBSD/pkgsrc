@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/04/28 12:21:19 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:19 pho Exp $
 
 DISTNAME=	vector-stream-0.1.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/05/02 08:09:33 pho Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/09 01:32:29 pho Exp $
 
 DISTNAME=	pager-0.1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 08:49:34 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:21 pho Exp $
 
 DISTNAME=	stylish-haskell-0.14.6.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

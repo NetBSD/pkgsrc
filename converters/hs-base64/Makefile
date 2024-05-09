@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/05/01 14:16:03 pho Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/09 01:31:40 pho Exp $
 
 DISTNAME=	base64-1.0
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

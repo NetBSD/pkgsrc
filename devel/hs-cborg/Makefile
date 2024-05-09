@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/04/29 12:44:07 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/09 01:31:48 pho Exp $
 
 DISTNAME=	cborg-0.2.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

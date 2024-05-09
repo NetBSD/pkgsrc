@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:31:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-criterion
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-criterion
 HS_CRITERION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-criterion+=	hs-criterion>=1.6.3
-BUILDLINK_ABI_DEPENDS.hs-criterion+=	hs-criterion>=1.6.3.0nb1
+BUILDLINK_ABI_DEPENDS.hs-criterion+=	hs-criterion>=1.6.3.0nb2
 BUILDLINK_PKGSRCDIR.hs-criterion?=	../../benchmarks/hs-criterion
 
 .include "../../converters/hs-aeson/buildlink3.mk"

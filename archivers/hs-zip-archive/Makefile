@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/04/29 04:04:12 pho Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/09 01:31:38 pho Exp $
 
 DISTNAME=	zip-archive-0.4.3.2
+PKGREVISION=	1
 CATEGORIES=	archivers
 
 MAINTAINER=	zecrazytux@zecrazytux.net

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/01 17:02:37 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:44 pho Exp $
 
 DISTNAME=	parsers-0.12.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

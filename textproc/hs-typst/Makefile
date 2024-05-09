@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/02 10:49:38 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:48 pho Exp $
 
 DISTNAME=	typst-0.5.0.3
+PKGREVISION=	1
 CATEGORIES=	textproc print
 DIST_SUBDIR=	hs-typst # So that it won't conflict with textproc/typst
 

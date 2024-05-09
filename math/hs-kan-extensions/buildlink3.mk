@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/11/02 06:37:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/05/09 01:32:26 pho Exp $
 
 BUILDLINK_TREE+=	hs-kan-extensions
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-kan-extensions
 HS_KAN_EXTENSIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-kan-extensions+=	hs-kan-extensions>=5.2.5
-BUILDLINK_ABI_DEPENDS.hs-kan-extensions+=	hs-kan-extensions>=5.2.5nb3
+BUILDLINK_ABI_DEPENDS.hs-kan-extensions+=	hs-kan-extensions>=5.2.5nb4
 BUILDLINK_PKGSRCDIR.hs-kan-extensions?=		../../math/hs-kan-extensions
 
 .include "../../math/hs-adjunctions/buildlink3.mk"

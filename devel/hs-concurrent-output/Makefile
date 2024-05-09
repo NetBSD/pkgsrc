@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/01 07:17:48 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:31:49 pho Exp $
 
 DISTNAME=	concurrent-output-1.10.21
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

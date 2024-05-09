@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/11/02 06:36:53 pho Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:09 pho Exp $
 
 DISTNAME=	reflection-2.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

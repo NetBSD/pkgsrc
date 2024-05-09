@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 05:49:50 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:31:53 pho Exp $
 
 # NOTE: Cannot update to >=0.1.0.2 because they depend on GHC 10.
 DISTNAME=	extensions-0.1.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:53 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-resource-pool
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-resource-pool
 HS_RESOURCE_POOL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-resource-pool+=	hs-resource-pool>=0.4.0
-BUILDLINK_ABI_DEPENDS.hs-resource-pool+=	hs-resource-pool>=0.4.0.0nb1
+BUILDLINK_ABI_DEPENDS.hs-resource-pool+=	hs-resource-pool>=0.4.0.0nb2
 BUILDLINK_PKGSRCDIR.hs-resource-pool?=		../../devel/hs-resource-pool
 
 .include "../../devel/hs-hashable/buildlink3.mk"

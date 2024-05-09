@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:36:47 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:04 pho Exp $
 
 DISTNAME=	monad-control-1.0.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

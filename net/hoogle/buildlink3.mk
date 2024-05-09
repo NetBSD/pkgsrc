@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2024/05/04 14:15:59 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2024/05/09 01:32:29 pho Exp $
 
 BUILDLINK_TREE+=	hoogle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hoogle
 HOOGLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hoogle+=	hoogle>=5.0.18
-BUILDLINK_ABI_DEPENDS.hoogle+=	hoogle>=5.0.18.4
+BUILDLINK_ABI_DEPENDS.hoogle+=	hoogle>=5.0.18.4nb1
 BUILDLINK_PKGSRCDIR.hoogle?=	../../net/hoogle
 
 .include "../../converters/hs-aeson/buildlink3.mk"

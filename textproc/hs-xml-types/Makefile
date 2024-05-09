@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/11/02 06:37:41 pho Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/09 01:32:50 pho Exp $
 
 DISTNAME=	xml-types-0.3.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
