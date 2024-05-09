@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/04/25 19:25:11 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/05/09 17:13:36 nia Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -56,7 +56,6 @@ share/openrct2/language/uk-UA.txt
 share/openrct2/language/vi-VN.txt
 share/openrct2/language/zh-CN.txt
 share/openrct2/language/zh-TW.txt
-share/openrct2/object/objects.zip.zipversion
 share/openrct2/object/official/audio/openrct2.audio.additional.parkobj
 share/openrct2/object/official/footpath_item/rct2dlc.footpath_item.litterpa.parkobj
 share/openrct2/object/official/footpath_railings/openrct2.footpath_railings.invisible.json
@@ -2366,14 +2365,11 @@ share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind03.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind04.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind05.json
 share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind06.json
-share/openrct2/openmusic.zip.zipversion
-share/openrct2/opensound.zip.zipversion
 share/openrct2/sequence/openrct2.parkseq
 share/openrct2/sequence/rct1.parkseq
 share/openrct2/sequence/rct1aa.parkseq
 share/openrct2/sequence/rct1aall.parkseq
 share/openrct2/sequence/rct2.parkseq
-share/openrct2/sequence/title-sequences.zip.zipversion
 share/openrct2/shaders/applypalette.frag
 share/openrct2/shaders/applypalette.vert
 share/openrct2/shaders/applytransparency.frag
