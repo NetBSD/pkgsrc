@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/12/29 18:24:40 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/09 14:05:40 nia Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
@@ -30,7 +30,8 @@ SCONS_ARGS+=	--dbg=off # on: argument parsing problem
 SCONS_ARGS+=	--disable-warnings-as-errors
 SCONS_ARGS+=	--release
 SCONS_ARGS+=	--runtime-hardening=off # on: does not produce executables
-SCONS_ARGS+=	--use-system-boost
+# incompatible with latest boost version, missing boost/filesystem/convenience.hpp
+#SCONS_ARGS+=	--use-system-boost
 SCONS_ARGS+=	--use-system-icu
 SCONS_ARGS+=	--use-system-pcre
 SCONS_ARGS+=	--use-system-snappy
@@ -147,8 +148,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/debian/mongod.conf \
 		${DESTDIR}${PREFIX}/share/examples/mongodb
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/scons/buildlink3.mk"
