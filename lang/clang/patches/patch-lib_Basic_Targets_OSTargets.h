@@ -1,12 +1,10 @@
-$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.5 2024/04/22 07:03:35 adam Exp $
+$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.6 2024/05/09 14:15:51 jperkin Exp $
 
-Sync SunOS default defines with a working reality.
-NetBSD __float128, needed to build anything with base libstdc++
-which assumes __float128.
+Sync SunOS default defines with what GCC uses.
 
---- lib/Basic/Targets/OSTargets.h.orig	2023-10-03 06:37:35.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2023-11-28 08:52:28.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -628,22 +638,15 @@ protected:
+@@ -642,22 +642,15 @@ protected:
      DefineStd(Builder, "unix", Opts);
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");
