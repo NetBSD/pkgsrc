@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.190 2024/05/08 21:49:11 khorben Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.191 2024/05/09 06:41:48 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24709,7 +24709,7 @@ syft<0.70.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 sslh-[0-9]*	remote-code-injection	https://nvd.nist.gov/vuln/detail/CVE-2022-4639
 sofia-sip<1.13.11	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-22741
 sleuthkit-[0-9]*	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-45639
-nss-[0-9]*	timing	https://nvd.nist.gov/vuln/detail/CVE-2020-12413
+firefox<79	timing	https://nvd.nist.gov/vuln/detail/CVE-2020-12413
 python37<3.7.17	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-24329
 python38<3.8.17	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-24329
 python39<3.9.17	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-24329
