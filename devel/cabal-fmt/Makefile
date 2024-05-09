@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2024/05/01 09:31:24 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:42 pho Exp $
 
 # NOTE: Cannot update to >=0.1.12 because the require GHC 10.
 DISTNAME=	cabal-fmt-0.1.11
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:37:23 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:35 pho Exp $
 
 DISTNAME=	co-log-core-0.3.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

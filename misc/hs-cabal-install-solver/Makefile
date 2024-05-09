@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/04/30 12:55:44 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:28 pho Exp $
 
 # NOTE: Cannot update to >=3.10.3.0 because they depend on GHC 10.
 DISTNAME=	cabal-install-solver-3.10.2.1
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

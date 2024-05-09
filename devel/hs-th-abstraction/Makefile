@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/05/02 23:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/09 01:32:15 pho Exp $
 
 DISTNAME=	th-abstraction-0.7.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

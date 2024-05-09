@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:01 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/09 01:32:17 pho Exp $
 
 DISTNAME=	unagi-chan-0.4.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

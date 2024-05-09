@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/11/02 06:36:42 pho Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/09 01:32:00 pho Exp $
 
 DISTNAME=	indexed-traversable-0.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

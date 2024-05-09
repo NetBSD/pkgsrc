@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/11/02 06:36:27 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/05/09 01:31:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-echo
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-echo
 HS_ECHO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-echo+=	hs-echo>=0.1.4
-BUILDLINK_ABI_DEPENDS.hs-echo+=	hs-echo>=0.1.4nb7
+BUILDLINK_ABI_DEPENDS.hs-echo+=	hs-echo>=0.1.4nb8
 BUILDLINK_PKGSRCDIR.hs-echo?=	../../devel/hs-echo
 .endif	# HS_ECHO_BUILDLINK3_MK
 

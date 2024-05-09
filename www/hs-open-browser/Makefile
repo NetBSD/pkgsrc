@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/04/28 14:19:03 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:54 pho Exp $
 
 DISTNAME=	open-browser-0.2.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/11/02 06:36:29 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/09 01:31:54 pho Exp $
 
 DISTNAME=	fingertree-0.1.5.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

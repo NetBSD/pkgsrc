@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2024/05/01 14:22:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/05/09 01:32:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-cassava
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cassava
 HS_CASSAVA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cassava+=	hs-cassava>=0.5.3
-BUILDLINK_ABI_DEPENDS.hs-cassava+=	hs-cassava>=0.5.3.1
+BUILDLINK_ABI_DEPENDS.hs-cassava+=	hs-cassava>=0.5.3.1nb1
 BUILDLINK_PKGSRCDIR.hs-cassava?=	../../textproc/hs-cassava
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

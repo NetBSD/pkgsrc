@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 07:21:22 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:09 pho Exp $
 
 DISTNAME=	relude-1.2.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

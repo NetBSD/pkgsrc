@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/11/02 06:37:26 pho Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/09 01:32:37 pho Exp $
 
 DISTNAME=	typed-process-0.2.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pho@cielonegro.org

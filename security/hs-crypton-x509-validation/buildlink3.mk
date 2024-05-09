@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-crypton-x509-validation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-crypton-x509-validation
 HS_CRYPTON_X509_VALIDATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-crypton-x509-validation+=	hs-crypton-x509-validation>=1.6.12
-BUILDLINK_ABI_DEPENDS.hs-crypton-x509-validation+=	hs-crypton-x509-validation>=1.6.12nb1
+BUILDLINK_ABI_DEPENDS.hs-crypton-x509-validation+=	hs-crypton-x509-validation>=1.6.12nb2
 BUILDLINK_PKGSRCDIR.hs-crypton-x509-validation?=	../../security/hs-crypton-x509-validation
 
 .include "../../devel/hs-asn1-encoding/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-crypton-x509-store
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-crypton-x509-store
 HS_CRYPTON_X509_STORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-crypton-x509-store+=	hs-crypton-x509-store>=1.6.9
-BUILDLINK_ABI_DEPENDS.hs-crypton-x509-store+=	hs-crypton-x509-store>=1.6.9nb1
+BUILDLINK_ABI_DEPENDS.hs-crypton-x509-store+=	hs-crypton-x509-store>=1.6.9nb2
 BUILDLINK_PKGSRCDIR.hs-crypton-x509-store?=	../../security/hs-crypton-x509-store
 
 .include "../../devel/hs-asn1-encoding/buildlink3.mk"

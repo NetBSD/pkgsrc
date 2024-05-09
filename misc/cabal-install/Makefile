@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2024/04/30 13:17:56 pho Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/09 01:32:28 pho Exp $
 
 # NOTE: Cannot update to >=3.10.3.0 because they depend on GHC 10.
 DISTNAME=	cabal-install-3.10.2.1
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pho@cielonegro.org

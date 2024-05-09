@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/11/02 06:37:19 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:31 pho Exp $
 
 BUILDLINK_TREE+=	hs-SHA
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-SHA
 HS_SHA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-SHA+=	hs-SHA>=1.6.4
-BUILDLINK_ABI_DEPENDS.hs-SHA+=	hs-SHA>=1.6.4.4nb7
+BUILDLINK_ABI_DEPENDS.hs-SHA+=	hs-SHA>=1.6.4.4nb8
 BUILDLINK_PKGSRCDIR.hs-SHA?=	../../security/hs-SHA
 .endif	# HS_SHA_BUILDLINK3_MK
 

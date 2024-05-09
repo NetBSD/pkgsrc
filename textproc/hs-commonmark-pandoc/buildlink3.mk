@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2024/05/02 11:06:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/05/09 01:32:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-commonmark-pandoc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-commonmark-pandoc
 HS_COMMONMARK_PANDOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-commonmark-pandoc+=	hs-commonmark-pandoc>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-commonmark-pandoc+=	hs-commonmark-pandoc>=0.2.2.1
+BUILDLINK_ABI_DEPENDS.hs-commonmark-pandoc+=	hs-commonmark-pandoc>=0.2.2.1nb1
 BUILDLINK_PKGSRCDIR.hs-commonmark-pandoc?=	../../textproc/hs-commonmark-pandoc
 
 .include "../../textproc/hs-commonmark/buildlink3.mk"

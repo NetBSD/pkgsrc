@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/11/02 06:37:12 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:25 pho Exp $
 
 DISTNAME=	distributive-0.6.2.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	math devel
 
 MAINTAINER=	pho@cielonegro.org
