@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3292 2024/05/09 17:13:46 nia Exp $
+$NetBSD: CHANGES-2024,v 1.3293 2024/05/09 17:28:45 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5129,7 +5129,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/nginx-devel to 1.26.0 [osa 2024-05-07]
 	Updated www/nginx to 1.26.0 [osa 2024-05-07]
 	Added games/urbanterror version 4.3.4 [nia 2024-05-07]
-	Updated devel/py-ruff-lsp to 0.0.53 [nikita 2024-05-07]
+	Added devel/py-ruff-lsp to 0.0.53 [nikita 2024-05-07]
 	Updated www/dillo to 3.1.0 [abs 2024-05-07]
 	Updated lang/nodejs to 22.1.0 [adam 2024-05-07]
 	Updated lang/nodejs20 to 20.13.0 [adam 2024-05-07]
