@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3296 2024/05/09 20:42:29 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3297 2024/05/09 20:47:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ruff-lsp to 0.0.53nb1 [wiz 2024-05-09]
 	Updated x11/gnome-shell to 40.2nb26 [wiz 2024-05-09]
 	Updated sysutils/rsftch to 0.5.3 [pin 2024-05-09]
+	Added net/scaleway-cli version 2.30.0 [leot 2024-05-09]
