@@ -1,1 +1,1 @@
-bin/ruff @PREFIX@/bin/ruff-@PYVERSSUFFIX@
+bin/ruff-lsp @PREFIX@/bin/ruff-lsp-@PYVERSSUFFIX@
