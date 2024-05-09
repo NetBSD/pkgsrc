@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2024/04/25 09:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2024/05/09 14:00:47 nia Exp $
 
 DISTNAME=	mame-0.265
 CATEGORIES=	emulators
@@ -24,16 +24,12 @@ USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	cputime datasize memorysize virtualsize
 MAKE_FILE=		makefile
 
+# complains with earlier versions:
+# "GCC version 10.3 or later needed"
+GCC_REQD+=		10
+
 # Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
 FORCE_CXX_STD=		gnu++17
-
-#
-# Earliest version known to succeed: gcc8 from Rocky Linux 8:
-#
-# ../../../../../3rdparty/bx/include/bx/inline/typetraits.inl:227:30: error: expected primary-expression before ',' token
-#   return !!__is_assignable(Ty, FromT);
-#
-GCC_REQD+=		8
 
 .include "../../mk/bsd.prefs.mk"
 
