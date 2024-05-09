@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/04 13:23:08 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:13 pho Exp $
 
 DISTNAME=	strict-identity-0.1.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/05/02 04:12:34 pho Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:20 pho Exp $
 
 DISTNAME=	ormolu-0.7.4.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

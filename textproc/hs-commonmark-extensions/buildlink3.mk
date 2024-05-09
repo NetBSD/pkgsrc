@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2024/04/29 12:24:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/05/09 01:32:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-commonmark-extensions
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-commonmark-extensions
 HS_COMMONMARK_EXTENSIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-commonmark-extensions+=	hs-commonmark-extensions>=0.2.5
-BUILDLINK_ABI_DEPENDS.hs-commonmark-extensions+=	hs-commonmark-extensions>=0.2.5.4
+BUILDLINK_ABI_DEPENDS.hs-commonmark-extensions+=	hs-commonmark-extensions>=0.2.5.4nb1
 BUILDLINK_PKGSRCDIR.hs-commonmark-extensions?=		../../textproc/hs-commonmark-extensions
 
 .include "../../textproc/hs-commonmark/buildlink3.mk"

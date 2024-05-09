@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/05/02 04:20:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/05/09 01:31:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-foldl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-foldl
 HS_FOLDL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-foldl+=	hs-foldl>=1.4.16
-BUILDLINK_ABI_DEPENDS.hs-foldl+=	hs-foldl>=1.4.16
+BUILDLINK_ABI_DEPENDS.hs-foldl+=	hs-foldl>=1.4.16nb1
 BUILDLINK_PKGSRCDIR.hs-foldl?=		../../devel/hs-foldl
 
 .include "../../math/hs-comonad/buildlink3.mk"

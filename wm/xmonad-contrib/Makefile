@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/04/30 06:04:24 pho Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/09 01:32:51 pho Exp $
 
 DISTNAME=	xmonad-contrib-0.18.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	wm
 
 MAINTAINER=	degroote@NetBSD.org

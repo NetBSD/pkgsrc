@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/05/04 14:10:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/05/09 01:32:29 pho Exp $
 
 BUILDLINK_TREE+=	hs-aws
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-aws
 HS_AWS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-aws+=	hs-aws>=0.24.2
-BUILDLINK_ABI_DEPENDS.hs-aws+=	hs-aws>=0.24.2
+BUILDLINK_ABI_DEPENDS.hs-aws+=	hs-aws>=0.24.2nb1
 BUILDLINK_PKGSRCDIR.hs-aws?=	../../net/hs-aws
 
 .include "../../converters/hs-aeson/buildlink3.mk"

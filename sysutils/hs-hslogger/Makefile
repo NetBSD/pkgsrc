@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/04/29 05:05:09 pho Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/09 01:32:36 pho Exp $
 
 DISTNAME=	hslogger-1.3.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/11/02 06:37:46 pho Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:54 pho Exp $
 
 DISTNAME=	js-dgtable-0.5.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

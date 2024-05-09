@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/11/02 06:36:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/05/09 01:31:45 pho Exp $
 
 BUILDLINK_TREE+=	hs-asn1-types
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-asn1-types
 HS_ASN1_TYPES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-asn1-types+=	hs-asn1-types>=0.3.4
-BUILDLINK_ABI_DEPENDS.hs-asn1-types+=	hs-asn1-types>=0.3.4nb8
+BUILDLINK_ABI_DEPENDS.hs-asn1-types+=	hs-asn1-types>=0.3.4nb9
 BUILDLINK_PKGSRCDIR.hs-asn1-types?=	../../devel/hs-asn1-types
 
 .include "../../time/hs-hourglass/buildlink3.mk"

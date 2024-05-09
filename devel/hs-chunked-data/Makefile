@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:22 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:49 pho Exp $
 
 DISTNAME=	chunked-data-0.3.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/11/02 06:37:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/05/09 01:32:34 pho Exp $
 
 BUILDLINK_TREE+=	hs-pem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pem
 HS_PEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pem+=	hs-pem>=0.2.4
-BUILDLINK_ABI_DEPENDS.hs-pem+=	hs-pem>=0.2.4nb8
+BUILDLINK_ABI_DEPENDS.hs-pem+=	hs-pem>=0.2.4nb9
 BUILDLINK_PKGSRCDIR.hs-pem?=	../../security/hs-pem
 
 .include "../../devel/hs-basement/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/05/01 08:12:49 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:43 pho Exp $
 
 DISTNAME=	hasktags-0.73.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

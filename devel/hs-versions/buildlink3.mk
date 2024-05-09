@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/05/02 03:37:54 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-versions
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-versions
 HS_VERSIONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-versions+=	hs-versions>=6.0.6
-BUILDLINK_ABI_DEPENDS.hs-versions+=	hs-versions>=6.0.6
+BUILDLINK_ABI_DEPENDS.hs-versions+=	hs-versions>=6.0.6nb1
 BUILDLINK_PKGSRCDIR.hs-versions?=	../../devel/hs-versions
 
 .include "../../devel/hs-hashable/buildlink3.mk"

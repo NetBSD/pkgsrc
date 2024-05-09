@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/02 06:37:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/05/09 01:32:25 pho Exp $
 
 BUILDLINK_TREE+=	hs-free
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-free
 HS_FREE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-free+=	hs-free>=5.2
-BUILDLINK_ABI_DEPENDS.hs-free+=	hs-free>=5.2nb1
+BUILDLINK_ABI_DEPENDS.hs-free+=	hs-free>=5.2nb2
 BUILDLINK_PKGSRCDIR.hs-free?=	../../math/hs-free
 
 .include "../../math/hs-comonad/buildlink3.mk"

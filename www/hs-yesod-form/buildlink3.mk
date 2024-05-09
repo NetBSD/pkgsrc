@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:57 pho Exp $
 
 BUILDLINK_TREE+=	hs-yesod-form
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-yesod-form
 HS_YESOD_FORM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-yesod-form+=	hs-yesod-form>=1.7.6
-BUILDLINK_ABI_DEPENDS.hs-yesod-form+=	hs-yesod-form>=1.7.6nb1
+BUILDLINK_ABI_DEPENDS.hs-yesod-form+=	hs-yesod-form>=1.7.6nb2
 BUILDLINK_PKGSRCDIR.hs-yesod-form?=	../../www/hs-yesod-form
 
 .include "../../converters/hs-aeson/buildlink3.mk"

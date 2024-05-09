@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:36:48 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:05 pho Exp $
 
 DISTNAME=	mono-traversable-instances-0.1.1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

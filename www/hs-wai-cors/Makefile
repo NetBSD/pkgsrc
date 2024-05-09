@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/11/02 06:37:47 pho Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/09 01:32:55 pho Exp $
 
 DISTNAME=	wai-cors-0.2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

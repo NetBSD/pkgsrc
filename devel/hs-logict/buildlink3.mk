@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/02 06:36:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/05/09 01:32:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-logict
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-logict
 HS_LOGICT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-logict+=	hs-logict>=0.8.1
-BUILDLINK_ABI_DEPENDS.hs-logict+=	hs-logict>=0.8.1.0nb1
+BUILDLINK_ABI_DEPENDS.hs-logict+=	hs-logict>=0.8.1.0nb2
 BUILDLINK_PKGSRCDIR.hs-logict?=		../../devel/hs-logict
 .endif	# HS_LOGICT_BUILDLINK3_MK
 

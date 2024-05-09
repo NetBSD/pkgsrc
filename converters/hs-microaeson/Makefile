@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 05:58:34 pho Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/09 01:31:41 pho Exp $
 
 DISTNAME=	microaeson-0.1.0.1
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

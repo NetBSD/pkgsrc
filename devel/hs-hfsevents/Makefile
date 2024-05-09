@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/06 09:58:13 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:31:58 pho Exp $
 
 DISTNAME=	hfsevents-0.1.7
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

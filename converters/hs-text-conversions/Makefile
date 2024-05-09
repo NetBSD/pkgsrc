@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/11/02 06:36:13 pho Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/09 01:31:42 pho Exp $
 
 DISTNAME=	text-conversions-0.3.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 
 MAINTAINER=	pho@cielonegro.org

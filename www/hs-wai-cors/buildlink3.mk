@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/11/02 06:37:47 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/05/09 01:32:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai-cors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-wai-cors
 HS_WAI_CORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-wai-cors+=	hs-wai-cors>=0.2.7
-BUILDLINK_ABI_DEPENDS.hs-wai-cors+=	hs-wai-cors>=0.2.7nb3
+BUILDLINK_ABI_DEPENDS.hs-wai-cors+=	hs-wai-cors>=0.2.7nb4
 BUILDLINK_PKGSRCDIR.hs-wai-cors?=	../../www/hs-wai-cors
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/04/30 13:38:14 pho Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/09 01:32:08 pho Exp $
 
 DISTNAME=	protolude-0.3.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

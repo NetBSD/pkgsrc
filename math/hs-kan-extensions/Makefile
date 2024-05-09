@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/11/02 06:37:13 pho Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:26 pho Exp $
 
 DISTNAME=	kan-extensions-5.2.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
