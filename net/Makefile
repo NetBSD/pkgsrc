@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1570 2024/05/02 06:58:49 pho Exp $
+# $NetBSD: Makefile,v 1.1571 2024/05/09 20:46:50 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -891,6 +891,7 @@ SUBDIR+=	sacc
 SUBDIR+=	samba
 SUBDIR+=	samba4
 SUBDIR+=	sayaka
+SUBDIR+=	scaleway-cli
 SUBDIR+=	scamper
 SUBDIR+=	scapy
 SUBDIR+=	scdp
