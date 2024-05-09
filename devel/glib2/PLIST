@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.155 2024/05/08 15:44:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.156 2024/05/09 12:50:37 adam Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gi-compile-repository
@@ -323,22 +323,22 @@ include/glib-2.0/gobject/gvaluetypes.h
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.8000.1
+lib/libgio-2.0.so.0.8000.2
 lib/libgirepository-2.0.so
 lib/libgirepository-2.0.so.0
-lib/libgirepository-2.0.so.0.8000.1
+lib/libgirepository-2.0.so.0.8000.2
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.8000.1
+lib/libglib-2.0.so.0.8000.2
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.8000.1
+lib/libgmodule-2.0.so.0.8000.2
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.8000.1
+lib/libgobject-2.0.so.0.8000.2
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.8000.1
+lib/libgthread-2.0.so.0.8000.2
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/girepository-2.0.pc
@@ -352,8 +352,8 @@ ${PLIST.nococoa}libexec/gio-launch-desktop
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.8000.1-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.8000.1-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.8000.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.8000.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/dtds/gresource.dtd
