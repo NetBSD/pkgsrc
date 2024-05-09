@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82 2024/04/22 07:03:35 adam Exp $
+$NetBSD: distinfo,v 1.83 2024/05/09 14:15:51 jperkin Exp $
 
 BLAKE2s (clang-17.0.6.src.tar.xz) = 888020252b920ca120cc022d13cf411d7dc024f4076ccaff5eccc38dc1e4b438
 SHA512 (clang-17.0.6.src.tar.xz) = da6f670a52d60c46bbe6bfa2870106f6a6714c9566fab293b8c624a555308104a1a05cd065643091d7006ef4533a9a722dff1fccaf26f348a0c0a5c7b9331439
@@ -9,11 +9,10 @@ Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
 BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
 SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
 Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
-SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 4b511871c8a38d57f3fddc4a6c0e921ff53194cb
-SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
-SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = f1f11228408a8872a1d3d57b18b389db14d592e8
-SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 22d1ddef34b8df3cc29c4632108d45904797aff3
+SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 0ec2aaecc77764afd46007239a98e9ea792eb03d
+SHA1 (patch-lib_Driver_ToolChain.cpp) = 06002fa45d16f9b9385f8a7a947aaf3970007938
+SHA1 (patch-lib_Driver_ToolChains_Gnu.cpp) = 2db0a13db660ad0b7cd87199da36653b1e8113b5
 SHA1 (patch-lib_Interpreter_IncrementalParser.cpp) = c5ace959ce566478316447b1621e9bfd9a537cc5
 SHA1 (patch-lib_Lex_InitHeaderSearch.cpp) = d37f5f2fff2fb358911875f73f5bf48446940436
-SHA1 (patch-tools_clang-shlib_CMakeLists.txt) = 2dce9cfc1e114a79fab457211eea1ee93c2198f4
+SHA1 (patch-tools_clang-shlib_CMakeLists.txt) = d6ce7370fca44b4ea4120c1e189931ca5e2bdd5b
 SHA1 (patch-tools_libclang_CMakeLists.txt) = 7e5655fc753ef20c8b08d1de438b26dcd3434525
