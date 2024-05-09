@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-client-restricted
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-client-restricted
 HS_HTTP_CLIENT_RESTRICTED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-client-restricted+=	hs-http-client-restricted>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-http-client-restricted+=	hs-http-client-restricted>=0.1.0nb1
+BUILDLINK_ABI_DEPENDS.hs-http-client-restricted+=	hs-http-client-restricted>=0.1.0nb2
 BUILDLINK_PKGSRCDIR.hs-http-client-restricted?=		../../www/hs-http-client-restricted
 
 .include "../../net/hs-crypton-connection/buildlink3.mk"

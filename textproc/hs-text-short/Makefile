@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/04/29 16:23:37 pho Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:48 pho Exp $
 
 DISTNAME=	text-short-0.1.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

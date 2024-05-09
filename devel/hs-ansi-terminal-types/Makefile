@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/04/28 20:37:47 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/09 01:31:44 pho Exp $
 
 DISTNAME=	ansi-terminal-types-1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

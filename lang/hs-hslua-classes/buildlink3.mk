@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/04/30 13:30:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/05/09 01:32:22 pho Exp $
 
 BUILDLINK_TREE+=	hs-hslua-classes
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hslua-classes
 HS_HSLUA_CLASSES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hslua-classes+=	hs-hslua-classes>=2.3.1
-BUILDLINK_ABI_DEPENDS.hs-hslua-classes+=	hs-hslua-classes>=2.3.1
+BUILDLINK_ABI_DEPENDS.hs-hslua-classes+=	hs-hslua-classes>=2.3.1nb1
 BUILDLINK_PKGSRCDIR.hs-hslua-classes?=		../../lang/hs-hslua-classes
 
 .include "../../lang/hs-hslua-core/buildlink3.mk"

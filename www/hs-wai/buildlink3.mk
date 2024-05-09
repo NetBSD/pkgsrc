@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/05/02 04:27:50 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-wai
 HS_WAI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-wai+=	hs-wai>=3.2.4
-BUILDLINK_ABI_DEPENDS.hs-wai+=	hs-wai>=3.2.4
+BUILDLINK_ABI_DEPENDS.hs-wai+=	hs-wai>=3.2.4nb1
 BUILDLINK_PKGSRCDIR.hs-wai?=	../../www/hs-wai
 
 .include "../../www/hs-http-types/buildlink3.mk"

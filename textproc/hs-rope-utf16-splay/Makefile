@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:36 pho Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:46 pho Exp $
 
 DISTNAME=	rope-utf16-splay-0.4.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

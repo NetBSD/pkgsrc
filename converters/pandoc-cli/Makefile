@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/05/05 09:56:16 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/09 01:31:42 pho Exp $
 
 DISTNAME=	pandoc-cli-3.1.13
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

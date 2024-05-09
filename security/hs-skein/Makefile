@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:21 pho Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/09 01:32:34 pho Exp $
 
 DISTNAME=	skein-1.0.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

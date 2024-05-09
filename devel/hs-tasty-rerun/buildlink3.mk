@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:59 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:14 pho Exp $
 
 BUILDLINK_TREE+=	hs-tasty-rerun
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tasty-rerun
 HS_TASTY_RERUN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tasty-rerun+=	hs-tasty-rerun>=1.1.19
-BUILDLINK_ABI_DEPENDS.hs-tasty-rerun+=	hs-tasty-rerun>=1.1.19nb1
+BUILDLINK_ABI_DEPENDS.hs-tasty-rerun+=	hs-tasty-rerun>=1.1.19nb2
 BUILDLINK_PKGSRCDIR.hs-tasty-rerun?=	../../devel/hs-tasty-rerun
 
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"

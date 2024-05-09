@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/05/01 14:26:59 pho Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/09 01:32:56 pho Exp $
 
 DISTNAME=	websockets-0.13.0.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

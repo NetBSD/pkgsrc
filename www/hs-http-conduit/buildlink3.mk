@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/11/02 06:37:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/05/09 01:32:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-conduit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-conduit
 HS_HTTP_CONDUIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-conduit+=	hs-http-conduit>=2.3.8
-BUILDLINK_ABI_DEPENDS.hs-http-conduit+=	hs-http-conduit>=2.3.8.3nb1
+BUILDLINK_ABI_DEPENDS.hs-http-conduit+=	hs-http-conduit>=2.3.8.3nb2
 BUILDLINK_PKGSRCDIR.hs-http-conduit?=	../../www/hs-http-conduit
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

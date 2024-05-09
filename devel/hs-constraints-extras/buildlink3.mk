@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/11/02 06:36:24 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/05/09 01:31:50 pho Exp $
 
 BUILDLINK_TREE+=	hs-constraints-extras
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-constraints-extras
 HS_CONSTRAINTS_EXTRAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-constraints-extras+=	hs-constraints-extras>=0.4.0
-BUILDLINK_ABI_DEPENDS.hs-constraints-extras+=	hs-constraints-extras>=0.4.0.0nb3
+BUILDLINK_ABI_DEPENDS.hs-constraints-extras+=	hs-constraints-extras>=0.4.0.0nb4
 BUILDLINK_PKGSRCDIR.hs-constraints-extras?=	../../devel/hs-constraints-extras
 
 .include "../../devel/hs-constraints/buildlink3.mk"

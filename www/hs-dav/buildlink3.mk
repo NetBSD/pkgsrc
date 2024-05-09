@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-dav
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dav
 HS_DAV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dav+=	hs-dav>=1.3.4
-BUILDLINK_ABI_DEPENDS.hs-dav+=	hs-dav>=1.3.4nb1
+BUILDLINK_ABI_DEPENDS.hs-dav+=	hs-dav>=1.3.4nb2
 BUILDLINK_PKGSRCDIR.hs-dav?=	../../www/hs-dav
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"

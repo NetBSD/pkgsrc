@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:37:06 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2024/05/09 01:32:21 pho Exp $
 
 BUILDLINK_TREE+=	hs-dotgen
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dotgen
 HS_DOTGEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dotgen+=	hs-dotgen>=0.4.3
-BUILDLINK_ABI_DEPENDS.hs-dotgen+=	hs-dotgen>=0.4.3nb4
+BUILDLINK_ABI_DEPENDS.hs-dotgen+=	hs-dotgen>=0.4.3nb5
 BUILDLINK_PKGSRCDIR.hs-dotgen?=		../../graphics/hs-dotgen
 .endif	# HS_DOTGEN_BUILDLINK3_MK
 
