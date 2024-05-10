@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.263 2024/02/11 15:12:45 ryoon Exp $
+$NetBSD: distinfo,v 1.264 2024/05/10 09:14:06 jperkin Exp $
 
 BLAKE2s (thunderbird-115.7.0.source.tar.xz) = c12e9ad84157466e74a003980d2ccf517d2f84ea1653f145628ac2dad4c90055
 SHA512 (thunderbird-115.7.0.source.tar.xz) = de9edb81cf5da494101bf927a5b963ccdec0cc9bff87ebd72d896c6e25102c1113b326f67302a81abd237048aa1e6150c4a97fe4b1892bc80030cbab9099e2d8
 Size (thunderbird-115.7.0.source.tar.xz) = 532459912 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
+SHA1 (patch-build_moz.configure_init.configure) = 07cb75fad7c2f354b3d1e02e3f6e49cca119f20a
 SHA1 (patch-build_moz.configure_rust.configure) = 72c5fa2e9d1022325d038832cca2e35f7213116d
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
