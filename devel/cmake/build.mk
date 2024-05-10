@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.11 2023/11/20 09:51:48 nia Exp $
+# $NetBSD: build.mk,v 1.12 2024/05/10 08:27:47 nia Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -48,6 +48,11 @@ TOOL_DEPENDS+=	cmake>=${version}:../../devel/cmake
 BUILD_USES_CMAKE=	yes
 
 CMAKE_CONFIGURE_ARGS?=	${CMAKE_ARGS}
+
+# The assumption in pkgsrc is that packages don't download files
+# mid-build.
+CMAKE_CONFIGURE_ARGS+=	-DFETCHCONTENT_FULLY_DISCONNECTED=ON
+
 
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
