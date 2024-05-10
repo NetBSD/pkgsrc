@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2021/08/25 19:00:06 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/05/10 04:56:16 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/babelfish/__init__.py
 ${PYSITELIB}/babelfish/__init__.pyc
 ${PYSITELIB}/babelfish/__init__.pyo
+${PYSITELIB}/babelfish/compat.py
+${PYSITELIB}/babelfish/compat.pyc
+${PYSITELIB}/babelfish/compat.pyo
 ${PYSITELIB}/babelfish/converters/__init__.py
 ${PYSITELIB}/babelfish/converters/__init__.pyc
 ${PYSITELIB}/babelfish/converters/__init__.pyo
