@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2024/05/05 10:37:32 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2024/05/10 11:14:21 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -132,7 +132,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lexical-parse-float-0.8.5
 CARGO_CRATE_DEPENDS+=	lexical-parse-integer-0.8.6
 CARGO_CRATE_DEPENDS+=	lexical-util-0.8.5
-CARGO_CRATE_DEPENDS+=	libc-0.2.153
+CARGO_CRATE_DEPENDS+=	libc-0.2.154
 CARGO_CRATE_DEPENDS+=	libcst-1.3.1
 CARGO_CRATE_DEPENDS+=	libcst_derive-1.3.1
 CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.37
@@ -222,9 +222,9 @@ CARGO_CRATE_DEPENDS+=	schemars_derive-0.8.17
 CARGO_CRATE_DEPENDS+=	scoped-tls-1.0.1
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	seahash-4.1.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.199
+CARGO_CRATE_DEPENDS+=	serde-1.0.200
 CARGO_CRATE_DEPENDS+=	serde-wasm-bindgen-0.6.5
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.199
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.200
 CARGO_CRATE_DEPENDS+=	serde_derive_internals-0.29.0
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.116
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.19
