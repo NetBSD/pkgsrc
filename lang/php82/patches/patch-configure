@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.18 2024/04/13 02:49:41 taca Exp $
+$NetBSD: patch-configure,v 1.19 2024/05/10 15:07:21 taca Exp $
 
 * Do not include "PKG_CONFIG*" in CONFIGURE_OPTIONS.
 * Don't autodetect maintainer-zts.
 * Shell portability.
 
---- configure.orig	2024-04-09 18:46:23.000000000 +0000
+--- configure.orig	2024-05-07 14:19:14.000000000 +0000
 +++ configure
-@@ -3732,6 +3732,10 @@ EOF
+@@ -4366,6 +4366,10 @@ EOF
     else
      break
     fi
@@ -14,10 +14,10 @@ $NetBSD: patch-configure,v 1.18 2024/04/13 02:49:41 taca Exp $
 +       \'PKG_CONFIG\=*)	CURRENT_ARG="'PKG_CONFIG=@TOOLS_PATH.pkg-config@'";;
 +       \'PKG_CONFIG_LIBDIR\=*)	CURRENT_ARG="'PKG_CONFIG_LIBDIR=@PHP_PKGCONFIG_PATH@'";;
 +   esac
-    $as_echo "$CURRENT_ARG \\" >>config.nice
+    printf "%s\n" "$CURRENT_ARG \\" >>config.nice
     CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS $CURRENT_ARG"
    done
-@@ -7023,30 +7027,6 @@ EOF
+@@ -7806,30 +7810,6 @@ EOF
      ;;
    esac
  
@@ -42,18 +42,18 @@ $NetBSD: patch-configure,v 1.18 2024/04/13 02:49:41 taca Exp $
 -
 -    fi
 -  fi
--  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
--$as_echo "yes" >&6; }
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-printf "%s\n" "yes" >&6; }
 -
    PHP_VAR_SUBST="$PHP_VAR_SUBST APXS"
  
  else
-@@ -78313,7 +78293,7 @@ $as_echo "#define HAVE_TIDYBUFFIO_H 1" >
+@@ -84114,7 +84094,7 @@ printf "%s\n" "#define HAVE_TIDYBUFFIO_H
    fi
  
    TIDY_LIBDIR=$TIDY_DIR/$PHP_LIBDIR
 -  if test "$TIDY_LIB_NAME" == 'tidyp'; then
 +  if test "$TIDY_LIB_NAME" = 'tidyp'; then
  
- $as_echo "#define HAVE_TIDYP_H 1" >>confdefs.h
+ printf "%s\n" "#define HAVE_TIDYP_H 1" >>confdefs.h
  
