@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2024/05/06 08:41:56 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/05/10 06:00:34 wiz Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
+# used by databases/mariadb1011-embedded/Makefile
 
 DISTNAME=	mariadb-10.11.7
 CATEGORIES=	databases
