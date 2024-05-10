@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2020/10/01 19:45:02 nils Exp $
+# $NetBSD: options.mk,v 1.11 2024/05/10 19:46:53 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
-PKG_SUPPORTED_OPTIONS=	debug snort-prelude ssl snmp snort-gre
+PKG_SUPPORTED_OPTIONS=	debug ssl snmp snort-gre
 PKG_SUPPORTED_OPTIONS+=	snort-dynamicplugin snort-timestats
 PKG_SUPPORTED_OPTIONS+=	snort-rulestate
 
@@ -65,14 +65,6 @@ CONFIGURE_ARGS+=	--enable-gre
 ###
 .if !empty(PKG_OPTIONS:Msnmp)
 CONFIGURE_ARGS+=	--with-snmp
-.endif
-
-###
-### Enable Prelude support (untested)
-###
-.if !empty(PKG_OPTIONS:Msnort-prelude)
-.include "../../security/libprelude/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-prelude
 .endif
 
 ###
