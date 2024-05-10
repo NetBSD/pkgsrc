@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/11/08 13:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/05/10 19:49:13 jperkin Exp $
 #
 
 DISTNAME=		snort-2.9.16.1
@@ -96,6 +96,10 @@ CONFIGURE_ARGS+=	--disable-so_with_static_lib
 
 TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
+
 pre-build:
 	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
 
@@ -121,9 +125,16 @@ post-install:
 			${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+PLIST_VARS+=		appid
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-open-appid
+.else
+PLIST.appid=		yes
+.include "../../lang/LuaJIT2/buildlink3.mk"
+.endif
+
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/daq/buildlink3.mk"

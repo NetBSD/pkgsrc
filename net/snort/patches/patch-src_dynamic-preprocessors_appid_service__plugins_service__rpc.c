@@ -1,4 +1,4 @@
-$NetBSD: patch-src_dynamic-preprocessors_appid_service__plugins_service__rpc.c,v 1.1 2020/10/01 19:45:02 nils Exp $
+$NetBSD: patch-src_dynamic-preprocessors_appid_service__plugins_service__rpc.c,v 1.2 2024/05/10 19:49:13 jperkin Exp $
 
 endrpcent() is defined in /usr/include/rpc/rpcent.h in NetBSD.
 
@@ -8,7 +8,7 @@ endrpcent() is defined in /usr/include/rpc/rpcent.h in NetBSD.
  #include "rpc/rpc.h"
  #endif
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__sun)
 +#include "rpc/rpcent.h"
 +#endif
 +

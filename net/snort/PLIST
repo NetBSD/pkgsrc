@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.34 2020/02/18 23:00:26 sevan Exp $
-bin/appid_detector_builder.sh
+@comment $NetBSD: PLIST,v 1.35 2024/05/10 19:49:13 jperkin Exp $
+${PLIST.appid}bin/appid_detector_builder.sh
 bin/snort
 bin/u2boat
-bin/u2openappid
+${PLIST.appid}bin/u2openappid
 bin/u2spewfoo
-bin/u2streamer
+${PLIST.appid}bin/u2streamer
 lib/libsf_sorules.la
 lib/pkgconfig/snort.pc
 lib/snort_dynamicengine/libsf_engine.la
-lib/snort_dynamicpreprocessor/libsf_appid_preproc.la
+${PLIST.appid}lib/snort_dynamicpreprocessor/libsf_appid_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dce2_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dnp3_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dns_preproc.la
@@ -100,18 +100,18 @@ share/examples/snort/snort.conf.default
 share/examples/snort/threshold.conf
 share/examples/snort/unicode.map
 share/snort/src/snort_dynamicsrc/Unified2_common.h
-share/snort/src/snort_dynamicsrc/appId.h
-share/snort/src/snort_dynamicsrc/appIdApi.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/appId.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/appIdApi.h
 share/snort/src/snort_dynamicsrc/appdata_adjuster.c
 share/snort/src/snort_dynamicsrc/appdata_adjuster.h
 share/snort/src/snort_dynamicsrc/bitop.h
 share/snort/src/snort_dynamicsrc/cip_common.h
-share/snort/src/snort_dynamicsrc/dns_defs.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/dns_defs.h
 share/snort/src/snort_dynamicsrc/event.h
 share/snort/src/snort_dynamicsrc/file_api.h
 share/snort/src/snort_dynamicsrc/file_mail_common.h
 share/snort/src/snort_dynamicsrc/idle_processing.h
-share/snort/src/snort_dynamicsrc/md5.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/md5.h
 share/snort/src/snort_dynamicsrc/mpse_methods.h
 share/snort/src/snort_dynamicsrc/obfuscation.h
 share/snort/src/snort_dynamicsrc/pcap_pkthdr32.h
@@ -175,8 +175,8 @@ share/snort/src/snort_dynamicsrc/ssl_inspect.h
 share/snort/src/snort_dynamicsrc/ssl_session.h
 share/snort/src/snort_dynamicsrc/str_search.h
 share/snort/src/snort_dynamicsrc/stream_api.h
-share/snort/src/snort_dynamicsrc/thirdparty_appid_api.h
-share/snort/src/snort_dynamicsrc/thirdparty_appid_types.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/thirdparty_appid_api.h
+${PLIST.appid}share/snort/src/snort_dynamicsrc/thirdparty_appid_types.h
 share/snort/src/snort_dynamicsrc/treenodes.h
 share/snort/src/snort_dynamicsrc/util_unfold.c
 share/snort/src/snort_dynamicsrc/util_unfold.h
