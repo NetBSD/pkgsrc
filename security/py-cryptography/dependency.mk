@@ -1,4 +1,4 @@
-# $NetBSD: dependency.mk,v 1.4 2023/06/06 12:42:16 riastradh Exp $
+# $NetBSD: dependency.mk,v 1.5 2024/05/10 11:48:13 wiz Exp $
 #
 # Not for public use - use through versioned_dependencies.mk.
 #
@@ -14,7 +14,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../lang/rust/platform.mk"
-.if ${PLATFORM_SUPPORTS_RUST:tl} == "yes" && empty(PYTHON_VERSION:M2*)
+.if ${PLATFORM_SUPPORTS_RUST:tl} == "yes"
 PYCRYPTOGRAPHY_TYPE?=	rust
 .else
 PYCRYPTOGRAPHY_TYPE?=	c
