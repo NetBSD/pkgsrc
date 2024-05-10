@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2024/05/10 06:33:04 rillig Exp $
+# $NetBSD: Makefile,v 1.139 2024/05/10 06:52:13 rillig Exp $
 
 PKGNAME=	url2pkg-23.3.1
 CATEGORIES=	pkgtools
@@ -22,6 +22,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-extract:
 	${RUN} cd ${FILESDIR} && ${PAX} -rw *.* python/*.py python/*/*.py python/*/*/*.py ${WRKSRC}/
 
+# PY_TEST_FLAGS
+#	Can be used to increase the verbosity of the self-test, by passing
+#	-v or -vvv.
 do-test:
 	${RUN} cd ${WRKSRC} && ${SETENV} PKGSRCDIR=${PKGSRCDIR} MAKE=${MAKE:Q} \
 		${PREFIX}/bin/pytest-${PYVERSSUFFIX} ${PY_TEST_FLAGS:U}
