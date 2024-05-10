@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/03/19 10:58:01 nia Exp $
+# $NetBSD: Makefile,v 1.60 2024/05/10 10:44:25 wiz Exp $
 
 DISTNAME=	urllib3-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
 #DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
 # but also needs unpackaged urlib3-secure-extra
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 # brotli, zstd
 .include "options.mk"
 
@@ -37,8 +39,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
 #pytest-memray==1.5.0; sys_platform!="win32" and implementation_name=="cpython"
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
