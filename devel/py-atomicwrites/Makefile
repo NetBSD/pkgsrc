@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/07/11 10:27:09 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/10 07:57:14 adam Exp $
 
 DISTNAME=	atomicwrites-1.4.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atomicwrites/}
@@ -12,13 +13,12 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
