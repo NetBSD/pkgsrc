@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/11/30 05:50:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/10 09:39:33 adam Exp $
 
 DISTNAME=	toml-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toml/}
 
@@ -11,13 +11,12 @@ HOMEPAGE=	https://github.com/uiri/toml
 COMMENT=	Python Library for Tom's Obvious, Minimal Language
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

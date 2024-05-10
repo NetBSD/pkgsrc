@@ -1,25 +1,26 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/30 05:50:17 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/05/10 09:39:33 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/toml/__init__.py
 ${PYSITELIB}/toml/__init__.pyc
-${PLIST.py3x}${PYSITELIB}/toml/__init__.pyi
+${PYSITELIB}/toml/__init__.pyi
 ${PYSITELIB}/toml/__init__.pyo
 ${PYSITELIB}/toml/decoder.py
 ${PYSITELIB}/toml/decoder.pyc
-${PLIST.py3x}${PYSITELIB}/toml/decoder.pyi
+${PYSITELIB}/toml/decoder.pyi
 ${PYSITELIB}/toml/decoder.pyo
 ${PYSITELIB}/toml/encoder.py
 ${PYSITELIB}/toml/encoder.pyc
-${PLIST.py3x}${PYSITELIB}/toml/encoder.pyi
+${PYSITELIB}/toml/encoder.pyi
 ${PYSITELIB}/toml/encoder.pyo
 ${PYSITELIB}/toml/ordered.py
 ${PYSITELIB}/toml/ordered.pyc
-${PLIST.py3x}${PYSITELIB}/toml/ordered.pyi
+${PYSITELIB}/toml/ordered.pyi
 ${PYSITELIB}/toml/ordered.pyo
 ${PYSITELIB}/toml/tz.py
 ${PYSITELIB}/toml/tz.pyc
-${PLIST.py3x}${PYSITELIB}/toml/tz.pyi
+${PYSITELIB}/toml/tz.pyi
 ${PYSITELIB}/toml/tz.pyo
