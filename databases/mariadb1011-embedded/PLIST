@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/10 06:00:16 wiz Exp $
+bin/mariadb-client-test-embedded
+bin/mariadb-embedded
+bin/mariadb-test-embedded
+bin/mysql_client_test_embedded
+bin/mysql_embedded
+bin/mysqltest_embedded
+bin/test-connect-t
+include/mysql/server/private/embedded_priv.h
+lib/libmariadbd.a
+lib/libmariadbd.so
+lib/libmariadbd.so.19
+lib/libmysqld.a
+lib/libmysqld.so
