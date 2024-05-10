@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2024/04/15 05:30:52 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/10 17:25:52 adam Exp $
 
-DISTNAME=	cargo-bloat-0.12.0
+DISTNAME=	cargo-bloat-0.12.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RazrFalcon/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/RazrFalcon/cargo-bloat/
+HOMEPAGE=	https://github.com/RazrFalcon/cargo-bloat
 COMMENT=	Find out what takes most of the space in your executable
 LICENSE=	mit
 

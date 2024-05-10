@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2024/04/15 05:30:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/05/10 17:25:52 adam Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -6,18 +6,18 @@ Size (aho-corasick-1.1.3.crate) = 183311 bytes
 BLAKE2s (binfarce-0.2.1.crate) = ec3e7927dc72e44d046d1a06f4f3ffd77d642040804adfc37fedcf08978bcf2b
 SHA512 (binfarce-0.2.1.crate) = ffbffaa1f45d62f13537a4402ba7a3b20432c80c652c337be7dcc9df253e143585d531a7406de77ca0f08a4cb7889b85b5a82901765d952c5604ecf4e09ddb91
 Size (binfarce-0.2.1.crate) = 22233 bytes
-BLAKE2s (cargo-bloat-0.12.0.tar.gz) = 5f5e99f2106ce42a22c380d9229e497c284ab3c8186070d0a9d2ad86df853982
-SHA512 (cargo-bloat-0.12.0.tar.gz) = ae28ee5a179745b76b358c39984184a6b36fa5e5486749f0c1e750b25fb75ac1745eefa5c6fae5b4200ce9e6304d29c075bee2f76cc549e921b385c56c5b0a03
-Size (cargo-bloat-0.12.0.tar.gz) = 18698 bytes
+BLAKE2s (cargo-bloat-0.12.1.tar.gz) = 29a01e99dbb5c24fcd6c203d243c7f78b1594699e0291c71d681007d337aff50
+SHA512 (cargo-bloat-0.12.1.tar.gz) = cd9d196e9016d51798a9268e10fbec69472b91fe76df64fc8cdf47027914d2f15bf99902d105a80b9f86d117513c41d4b04a48275e61f34460e7d0677e816e59
+Size (cargo-bloat-0.12.1.tar.gz) = 19003 bytes
 BLAKE2s (fallible-iterator-0.2.0.crate) = a90049d0b6a1e0d61709c8269995dba677c1d676aee4b18975c8bc76a64676c2
 SHA512 (fallible-iterator-0.2.0.crate) = c558fea3fcf3a7756acc0b63d38f76dfe7eeed4dd9c12c46b7a7e8b8bea64d00e0cc115492e8b3a1a19e86e6083477dcf7d2d72ef960b44f24d61819a3077e79
 Size (fallible-iterator-0.2.0.crate) = 18509 bytes
 BLAKE2s (json-0.12.4.crate) = 5b8cd61a85705c0f64bfe88e2bc93a229971fdbebd397a91a13ffb503ec1f432
 SHA512 (json-0.12.4.crate) = bcdf6d873decccc66e018e21775ceed6c0e389c6d0b2011071368321789a38867e1d641d92c9607e3fabc6e8d6b260ec0ccc2a9bc545184bb3e63bae6731a39e
 Size (json-0.12.4.crate) = 105942 bytes
-BLAKE2s (libc-0.2.153.crate) = cb963b9c21c5df7aa0739de05120fabd8b0e1205fed4e764ee5af289fc2afc5a
-SHA512 (libc-0.2.153.crate) = 3f99e3a192974fffdc053ef21e9ad5fb54b7cdbd4755df176704a95dba38047138ccab76763e89c6b565f37f98fd549fe368749f84f6d1638b3209cb07eae9b4
-Size (libc-0.2.153.crate) = 740614 bytes
+BLAKE2s (libc-0.2.154.crate) = a36b89bd4038231095e34745dabfeb7f5fae2708abda0d68c581eb66db527751
+SHA512 (libc-0.2.154.crate) = 891a36cf153a9f4d58793412c104504c57280994e428ce8ba208673a924b2de38cc21eece09b91696eaea3b2359606dbe9f1509f9bf364bdabdb366ef2dd0f61
+Size (libc-0.2.154.crate) = 743304 bytes
 BLAKE2s (memchr-2.7.2.crate) = 58bad593cd29bb59ae79239f6f69364c2c512fa365107c1c46c37878bf53126f
 SHA512 (memchr-2.7.2.crate) = cadcb4239c7f3aaab042592c5186770a225621e32f8583052fd3dbebb4a6d9b99be28f589b39b5ca36cb2d56fb3709e7d4ba91838ebb882e28e51280c02bbc40
 Size (memchr-2.7.2.crate) = 96220 bytes
