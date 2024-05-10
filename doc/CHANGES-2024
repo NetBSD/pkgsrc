@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3305 2024/05/10 09:21:26 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3306 2024/05/10 09:54:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5211,3 +5211,11 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-docstyle3 successor devel/py-docstyle [adam 2024-05-10]
 	Updated devel/cmake to 3.29.3 [adam 2024-05-10]
 	Updated textproc/ugrep to 6.0.0 [adam 2024-05-10]
+	Updated textproc/py-toml to 0.10.2nb3 [adam 2024-05-10]
+	Removed devel/py-test4 [adam 2024-05-10]
+	Removed devel/py-packaging2 [adam 2024-05-10]
+	Removed devel/py-importlib-metadata2 [adam 2024-05-10]
+	Removed devel/py27-pluggy [adam 2024-05-10]
+	Removed devel/py-setuptools_scm5 [adam 2024-05-10]
+	Removed devel/py-prompt_toolkit1 [adam 2024-05-10]
+	Removed archivers/py-zipp1 [adam 2024-05-10]
