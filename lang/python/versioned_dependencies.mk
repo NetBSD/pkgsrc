@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.112 2024/05/10 10:07:26 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.113 2024/05/10 10:24:49 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -26,11 +26,9 @@
 # handling.
 
 _PY_VERS_PKG.default.OpenSSL=	security/py-OpenSSL
-_PY_VERS_PKG.27.OpenSSL=	security/py27-OpenSSL
 _PY_VERS_PKG.dependency.OpenSSL=	yes
 
 _PY_VERS_PKG.default.cryptography=	security/py-cryptography
-_PY_VERS_PKG.27.cryptography=		security/py27-cryptography
 _PY_VERS_PKG.dependency.cryptography=	yes
 
 _PY_VERS_PKG.default.dns=	net/py-dns
