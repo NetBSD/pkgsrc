@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/02/15 20:51:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/10 07:45:46 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -757,6 +757,7 @@ ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/postgres-14.mo
 share/postgresql/errcodes.txt
 share/postgresql/extension/plpgsql--1.0.sql
 share/postgresql/extension/plpgsql.control
+share/postgresql/fix-CVE-2024-4317.sql
 share/postgresql/information_schema.sql
 share/postgresql/pg_hba.conf.sample
 share/postgresql/pg_ident.conf.sample
