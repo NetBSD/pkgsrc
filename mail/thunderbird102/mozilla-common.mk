@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2024/05/10 08:23:15 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2024/05/10 08:29:37 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -15,6 +15,9 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 UNLIMIT_RESOURCES+=	datasize stacksize virtualsize
+
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+OVERRIDE_DIRDEPTH=		4
 
 USE_LANGUAGES+=		c c++
 
