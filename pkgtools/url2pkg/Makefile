@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2024/01/17 18:35:52 rillig Exp $
+# $NetBSD: Makefile,v 1.137 2024/05/10 05:06:12 adam Exp $
 
 PKGNAME=	url2pkg-23.3.0
 CATEGORIES=	pkgtools
@@ -15,13 +15,15 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run pax
 AUTO_MKDIRS=	yes
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-extract:
-	${RUN} cd ${FILESDIR} && pax -rw *.* python/*.py python/*/*.py python/*/*/*.py ${WRKSRC}/
+	${RUN} cd ${FILESDIR} && ${PAX} -rw *.* python/*.py python/*/*.py python/*/*/*.py ${WRKSRC}/
 
 do-test:
-	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} MAKE=${MAKE:Q} \
+	${RUN} cd ${WRKSRC} && ${SETENV} PKGSRCDIR=${PKGSRCDIR} MAKE=${MAKE:Q} \
 		${PREFIX}/bin/pytest-${PYVERSSUFFIX} ${PY_TEST_FLAGS:U}
 
 SUBST_CLASSES+=		up
@@ -42,5 +44,4 @@ do-install:
 	done
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
