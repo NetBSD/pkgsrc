@@ -1,3 +1,0 @@
-This library brings the updated configparser from Python 3.5 to
-Python 2.6-3.5. The ancient ConfigParser module available in
-the standard library 2.x has seen a major update in Python 3.2.
