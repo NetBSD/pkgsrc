@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/05/09 20:42:08 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/05/10 09:58:23 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -273,9 +273,9 @@ Size (regex-syntax-0.8.3.crate) = 347497 bytes
 BLAKE2s (rpm-pkg-count-0.2.1.crate) = cd5f00c306ee9fb2afc010d39d3cf46573a01fc48fab306d667f3df65049acff
 SHA512 (rpm-pkg-count-0.2.1.crate) = 1b4fc91592d935d1faa381eefeabdd9d5aeb09052ba8bd55de7f1eb79c50aaacd04a2913a4318d6f98149386465ba6bfaa15153140b89fc43844072d24409343
 Size (rpm-pkg-count-0.2.1.crate) = 17193 bytes
-BLAKE2s (rsftch-0.5.3.crate) = 3e1d8765a10386be8f79c557b3b503e37f821971036fdc6b7b3ca5c255e4b731
-SHA512 (rsftch-0.5.3.crate) = 5bb2e05f7bfb5b66b74b37ec87a763003ddf7d32208fc2a0db54986ed00680be3eafc726cc9436fa3301b384f1cc8a2816f06516482646453e084352d1034f32
-Size (rsftch-0.5.3.crate) = 33686 bytes
+BLAKE2s (rsftch-0.5.5.crate) = 8463754d1534ee2b93aa679738b4255bacec448361da422d47b16eb273760d56
+SHA512 (rsftch-0.5.5.crate) = aaba60dfcc65df163ba12e1f73792967ae6cb348afa05bbb916bf5f21c48f2fb6137ee5ab43ccfc1591f937b118640ad85b04f45339a2815ff8ea51299391f64
+Size (rsftch-0.5.5.crate) = 34054 bytes
 BLAKE2s (ryu-1.0.18.crate) = 738ae2cbeac90a6adef5e5c05c31be6c18f2860ab8ea4bfdc729325dceb923ae
 SHA512 (ryu-1.0.18.crate) = a9b2beac778ec47e6be303148d7512ee681bd2361f6e4ac6db32c8b4baf86a8c5eb5b0d02eacd6131ae88c7b5105c57018c3050676e0b3dd1ed9c4d2fd650e84
 Size (ryu-1.0.18.crate) = 47713 bytes
