@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/11 13:12:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/10 09:20:59 adam Exp $
 bin/ug
 bin/ug+
 bin/ugrep
 bin/ugrep+
+bin/ugrep-indexer
 man/man1/ug.1
+man/man1/ugrep-indexer.1
 man/man1/ugrep.1
 share/bash-completion/completions/ug
 share/bash-completion/completions/ug+
