@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.14 2024/02/11 15:12:45 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.15 2024/05/10 08:23:15 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -42,6 +42,9 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
 CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
+.elif ${MACHINE_PLATFORM:MSunOS-*-x86_64}
+CONFIGURE_ARGS+=	--host=x86_64-unknown-illumos
+CONFIGURE_ARGS+=	--target=x86_64-unknown-illumos
 .else
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
