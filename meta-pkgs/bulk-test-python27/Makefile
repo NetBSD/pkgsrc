@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/05/10 10:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/10 17:38:53 wiz Exp $
 
 DISTNAME=	bulk-test-python27-20240510
 CATEGORIES=	meta-pkgs
@@ -28,6 +28,7 @@ DEPENDS+=	articfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	getmail<6:../../mail/getmail
 DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	mailman<3:../../mail/mailman
+DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
 DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
