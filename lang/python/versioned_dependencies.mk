@@ -1,10 +1,11 @@
-# $NetBSD: versioned_dependencies.mk,v 1.114 2024/05/10 10:31:29 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.115 2024/05/10 12:11:34 wiz Exp $
 #
-# This file determines which separate distribution of a Python
-# package is used as dependency, depending on the Python version
-# used.
+# This file determines which separate distribution of a Python package
+# is used as dependency, depending on if Rust or C should be used.
+# The C versions are old and unmaintained but on some platforms it is
+# harder to get Rust running.
 #
-# === User-settable variables ===
+# === Package-settable variables ===
 #
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
@@ -15,42 +16,11 @@
 
 .include "../../lang/python/pyversion.mk"
 
-# _PY_VERS_PKG.${PYTHON_VERSION}.${pkg} is the path used for the dependency
-# for a specific Python version. This can be "missing", if this Python
-# version is not supported for this package.
-#
-# _PY_VERS_PKG.default.${pkg} is the fallback version if a specific version
-# isn't known.
-#
-# _PY_VERS_PKG.dependency.${PKG} flags packages that need Rust-specific
-# handling.
-
-_PY_VERS_PKG.default.OpenSSL=	security/py-OpenSSL
-_PY_VERS_PKG.dependency.OpenSSL=	yes
-
-_PY_VERS_PKG.default.cryptography=	security/py-cryptography
-_PY_VERS_PKG.dependency.cryptography=	yes
+_PY_VERS_PKG.OpenSSL=		security/py-OpenSSL
+_PY_VERS_PKG.cryptography=	security/py-cryptography
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 pkg:=	${pattern:C/:.*//}
 type:=	${pattern:C/[^:]*//}
-dir:=	${_PY_VERS_PKG.${_PYTHON_VERSION}.${pkg}:U${_PY_VERS_PKG.default.${pkg}:Umissing}}
-.  if ${dir} == "missing"
-PKG_FAIL_REASON+=	"${pkg} unsupported in PYTHON_VERSIONED_DEPENDENCIES"
-.  else
-.    if ${_PY_VERS_PKG.dependency.${pkg}:Uno} == "yes"
-.      include "../../${_PY_VERS_PKG.default.${pkg}}/dependency.mk"
-.    endif
-.    if "${type}" == ":link"
-.include "../../${dir}/buildlink3.mk"
-.    elif "${type}" == ":build"
-TOOL_DEPENDS:=	${TOOL_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.    elif "${type}" == ":test"
-TEST_DEPENDS:=	${TEST_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.    elif "${type}" == ":tool"
-TOOL_DEPENDS:=	${TOOL_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.    else
-DEPENDS:=	${DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.    endif
-.  endif
+.  include "../../${_PY_VERS_PKG.${pkg}}/dependency.mk"
 .endfor
