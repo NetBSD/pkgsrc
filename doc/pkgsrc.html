@@ -5353,12 +5353,14 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 </pre>
 <p>
 If the packaged software is a Python module, include
-<code class="filename">../../lang/python/wheel.mk</code>.
-Note per PEP-518, the minimum and default requirements to create .whl files
-are py-setuptools plus py-wheel; however, there are various other possible
-tools that projects can use. Thus inclusion of <code class="filename">wheel.mk</code>
-does not imply these defaults are defined as TOOL_DEPENDS. Whatever the project
-specifically requires as packaging tools must be defined in the package Makefile.
+<code class="filename">../../lang/python/wheel.mk</code>.  Note per PEP-518,
+the minimum and default requirements to create .whl files are
+<a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/py-setuptools/index.html" target="_top"><code class="filename">devel/py-setuptools</code></a> plus <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/py-wheel/index.html" target="_top"><code class="filename">devel/py-wheel</code></a>; however, there are various other
+possible tools that projects can use. Thus inclusion of
+<code class="filename">wheel.mk</code> does not imply these defaults are
+defined as <code class="varname">TOOL_DEPENDS</code>. Whatever the project
+specifically requires as packaging tools must be defined in the
+package Makefile.
 </p>
 <p>The package directory should be called
 <span class="quote">&#8220;<span class="quote">py-software</span>&#8221;</span> and <code class="varname">PKGNAME</code> should be set to
@@ -5382,21 +5384,6 @@ For example:
 <pre class="programlisting">
 REPLACE_PYTHON=   *.py
 </pre>
-<p>Some Python modules have separate distributions for Python-2.x
-and Python-3.x support. In pkgsrc this is handled by the
-<code class="filename">versioned_dependencies.mk</code> file. Set
-<code class="varname">PYTHON_VERSIONED_DEPENDENCIES</code> to the list of
-packages that should be depended upon and include
-<span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/versioned_dependencies.mk</code></span>&#8221;</span>,
-then the pkgsrc infrastructure will depend on the appropriate package
-version. For example:
-</p>
-<pre class="programlisting">
-PYTHON_VERSIONED_DEPENDENCIES=dialog
-</pre>
-<p>
-Look inside <code class="filename">versioned_dependencies.mk</code> for a list
-of supported packages.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
