@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3304 2024/05/10 07:59:09 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3305 2024/05/10 09:21:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5209,3 +5209,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/postgresql16 to 16.3 [adam 2024-05-10]
 	Updated devel/py-atomicwrites to 1.4.1nb1 [adam 2024-05-10]
 	Removed devel/py-docstyle3 successor devel/py-docstyle [adam 2024-05-10]
+	Updated devel/cmake to 3.29.3 [adam 2024-05-10]
+	Updated textproc/ugrep to 6.0.0 [adam 2024-05-10]
