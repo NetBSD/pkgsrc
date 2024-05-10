@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2021/03/02 02:53:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.35 2024/05/10 11:53:13 cheusov Exp $
 
-DISTNAME=	mawk-1.3.4-20200120
-PKGNAME=	${DISTNAME:S/-20/.20/}
+DISTNAME=	mawk-1.3.4-20240123
+PKGNAME=	${DISTNAME:S/-24/.24/}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.invisible-island.net/mawk/
+MASTER_SITES=	https://invisible-island.net/archives/mawk/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cheusov@NetBSD.org
@@ -16,12 +16,5 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 TEST_TARGET=		mawk_test fpe_test
-
-.include "../../mk/bsd.prefs.mk"
-
-# mawk configure fails with -ffast-math
-CFLAGS:=	${CFLAGS:S/-ffast-math//}
-
-MAKE_ENV.SunOS+=	CPPFLAGS=
 
 .include "../../mk/bsd.pkg.mk"
