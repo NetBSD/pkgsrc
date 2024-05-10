@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:29 nia Exp $
-
-BLAKE2s (func_timeout-4.3.5.tar.gz) = 83570721fcf9403cd1a6ee103ce774d4c8e8b4b461775125bb85360db5f58770
-SHA512 (func_timeout-4.3.5.tar.gz) = 4ef942b89aa0585d6daea69d66a217916bcdfc0f1070a871f13975f7ad2c375f0137df4248251754b26e3f0f64ef239f5ee110a3641ed3ff8368bbb6fc59f6f9
-Size (func_timeout-4.3.5.tar.gz) = 44264 bytes

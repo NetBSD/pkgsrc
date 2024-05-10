@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4269 2024/05/10 09:53:43 adam Exp $
+# $NetBSD: Makefile,v 1.4270 2024/05/10 10:05:02 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2422,7 +2422,6 @@ SUBDIR+=	py-autopep8
 SUBDIR+=	py-babel
 SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
-SUBDIR+=	py-backports.functools_lru_cache
 SUBDIR+=	py-backports.shutil_get_terminal_size
 SUBDIR+=	py-backports.strenum
 SUBDIR+=	py-backports_abc
@@ -2485,7 +2484,6 @@ SUBDIR+=	py-colorlog
 SUBDIR+=	py-compizconfig
 SUBDIR+=	py-configargparse
 SUBDIR+=	py-configobj
-SUBDIR+=	py-configparser
 SUBDIR+=	py-configupdater
 SUBDIR+=	py-confuse
 SUBDIR+=	py-constantly
@@ -2573,7 +2571,6 @@ SUBDIR+=	py-flufl.testing
 SUBDIR+=	py-freezegun
 SUBDIR+=	py-frozendict
 SUBDIR+=	py-frozenlist
-SUBDIR+=	py-func_timeout
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
 SUBDIR+=	py-functools32

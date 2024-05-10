@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:18:12 nia Exp $
-
-BLAKE2s (backports.functools_lru_cache-1.6.4.tar.gz) = 95eb5c52393d953743c601dc3cef72d036531f88694756dad31789d86e8d9450
-SHA512 (backports.functools_lru_cache-1.6.4.tar.gz) = dab746440aeff8a411438f26f5c9a863929c41139c83bcfae51dcf29650c8e9d394b53a5f03b4e31ab7abd6a57249d719f155672e5585efb5f1851c8fe0a3de5
-Size (backports.functools_lru_cache-1.6.4.tar.gz) = 13904 bytes
