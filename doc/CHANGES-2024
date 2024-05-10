@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3306 2024/05/10 09:54:19 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3307 2024/05/10 09:57:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-setuptools_scm5 [adam 2024-05-10]
 	Removed devel/py-prompt_toolkit1 [adam 2024-05-10]
 	Removed archivers/py-zipp1 [adam 2024-05-10]
+	Updated shells/oh-my-posh to 19.28.0 [pin 2024-05-10]
