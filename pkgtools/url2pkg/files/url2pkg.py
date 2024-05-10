@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.54 2024/01/17 21:01:07 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.55 2024/05/10 06:33:04 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -100,9 +100,11 @@ class Globals:
             self.err.write(f'url2pkg: {msg}\n')
 
     def find_package(self, pkgbase: str) -> str:
-        candidates = list(self.pkgsrcdir.glob(f'*/{pkgbase}'))
-        self.debug('candidates for package {0} are {1}', pkgbase, candidates)
+        makefiles = sorted(self.pkgsrcdir.glob(f'*/{pkgbase}/Makefile'))
+        candidates = [p.parent for p in makefiles]
         if len(candidates) != 1:
+            self.debug('candidates for package {0} are {1}',
+                       pkgbase, candidates)
             return ''
         return str(candidates[0]).replace(str(self.pkgsrcdir), '../..')
 
@@ -896,7 +898,7 @@ class Adjuster:
         def search(f):
             return re.search(what, f) if type(what) == str else what(f)
 
-        return list(sorted(filter(search, self.wrksrc_files)))
+        return sorted(filter(search, self.wrksrc_files))
 
     def wrksrc_grep(self, filename: str,
                     pattern: str) -> List[Union[str, List[str]]]:
@@ -1127,10 +1129,8 @@ class Adjuster:
         Sets abs_wrksrc depending on abs_wrkdir and the files found there.
         """
 
-        def relevant(f: Union[Path, Any]) -> bool:
-            return f.is_dir() and not f.name.startswith('.')
-
-        subdirs = [f.name for f in self.abs_wrkdir.glob('*') if relevant(f)]
+        subdirs = sorted([f.name for f in self.abs_wrkdir.glob('*')
+                          if f.is_dir() and not f.name.startswith('.')])
 
         if len(subdirs) == 1:
             if subdirs[0] != self.makefile_lines.get('DISTNAME'):
@@ -1247,7 +1247,7 @@ class Adjuster:
                  only: Callable[[Path], bool]) -> List[str]:
             relevant = (f for f in basedir.rglob('*') if only(f))
             relative = (str(f.relative_to(basedir)) for f in relevant)
-            return list(sorted((f for f in relative if not f.startswith('.'))))
+            return sorted((f for f in relative if not f.startswith('.')))
 
         self.g.debug('Adjusting the Makefile')
         self.makefile_lines = Lines.read_from(self.g.pkgdir / 'Makefile')
