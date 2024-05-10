@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4268 2024/05/10 07:58:31 adam Exp $
+# $NetBSD: Makefile,v 1.4269 2024/05/10 09:53:43 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2623,7 +2623,6 @@ SUBDIR+=	py-idle
 SUBDIR+=	py-ijson
 SUBDIR+=	py-immutabledict
 SUBDIR+=	py-importlib-metadata
-SUBDIR+=	py-importlib-metadata2
 SUBDIR+=	py-importlib-resources
 SUBDIR+=	py-incremental
 SUBDIR+=	py-iniconfig
@@ -2730,7 +2729,6 @@ SUBDIR+=	py-outcome
 SUBDIR+=	py-overrides
 SUBDIR+=	py-packageurl
 SUBDIR+=	py-packaging
-SUBDIR+=	py-packaging2
 SUBDIR+=	py-parameterized
 SUBDIR+=	py-path
 SUBDIR+=	py-path.py
@@ -2774,7 +2772,6 @@ SUBDIR+=	py-progressbar2
 SUBDIR+=	py-project-api
 SUBDIR+=	py-project-metadata
 SUBDIR+=	py-prompt_toolkit
-SUBDIR+=	py-prompt_toolkit1
 SUBDIR+=	py-proteus
 SUBDIR+=	py-proto-plus
 SUBDIR+=	py-protobuf
@@ -2998,7 +2995,6 @@ SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools44
 SUBDIR+=	py-setuptools_scm
-SUBDIR+=	py-setuptools_scm5
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-slugify
@@ -3061,7 +3057,6 @@ SUBDIR+=	py-test-virtualenv
 SUBDIR+=	py-test-watch
 SUBDIR+=	py-test-xdist
 SUBDIR+=	py-test-xprocess
-SUBDIR+=	py-test4
 SUBDIR+=	py-test_socket
 SUBDIR+=	py-testpath
 SUBDIR+=	py-testrepository
@@ -3143,7 +3138,6 @@ SUBDIR+=	py-zope.testing
 SUBDIR+=	py-zope.testrunner
 SUBDIR+=	py27-attrs
 SUBDIR+=	py27-game
-SUBDIR+=	py27-pluggy
 SUBDIR+=	pycharm-bin
 SUBDIR+=	pynvim
 SUBDIR+=	pystring
