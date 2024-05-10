@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/05/10 04:56:16 adam Exp $
 
-BLAKE2s (babelfish-0.6.0.tar.gz) = 307b57de612fefe6308f9c4d46063b3e80c9541f9263c99bfe61a8f2c765dc43
-SHA512 (babelfish-0.6.0.tar.gz) = f5b6c1394ba3106773ceafd63f65e0a4df94ff7860069cdba1d4bbe91bccf528be4ad0eb1acdd00ce336afcd61f29e71910baab511a1fc26ded6aac7e10fe9cf
-Size (babelfish-0.6.0.tar.gz) = 87807 bytes
+BLAKE2s (babelfish-0.6.1.tar.gz) = 3128f485518e515a33fd811505545c1b18197f9ec2e05bd57061d22482360fbb
+SHA512 (babelfish-0.6.1.tar.gz) = a3e4d13d6ec7eca9c4dcc4f964a54551272e6005544cafa9d0dc71a5da0ab6450f4966c0eaf7f0dfb6e423d0ad63670572e9c1ad75f91006eec6b9dd92ca4456
+Size (babelfish-0.6.1.tar.gz) = 87706 bytes
