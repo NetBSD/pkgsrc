@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:19 nia Exp $
-
-BLAKE2s (configparser-4.0.2.tar.gz) = eaed036154ae0f478132a46ee39aeefa864c7df47b0a49ff06999d7991fbf0dc
-SHA512 (configparser-4.0.2.tar.gz) = 6213348bbaf28432d0f43fed614aaf1005669366c5c29473c6ed5d8de89cf2e06aa42afc6aba8bd44b915203c1828d2fe1d8bbb6d9d6bd1c17638a5bdf79504d
-Size (configparser-4.0.2.tar.gz) = 72498 bytes
