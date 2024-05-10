@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2024/05/06 06:22:09 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2024/05/10 19:08:43 pho Exp $
 
 DISTNAME=	libgit2-1.8.0
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 USE_CC_FEATURES+=	c99
-FORCE_C_STD=		c99
+FORCE_C_STD=		gnu99 # src/cli/opt.c uses alloca(3)
 
 CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
 
