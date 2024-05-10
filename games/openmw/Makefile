@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.81 2024/04/07 07:34:03 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/05/10 09:20:06 nia Exp $
 
 DISTNAME=	openmw-openmw-0.47.0
 PKGNAME=	${DISTNAME:S/^openmw-//1}
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITLAB:=OpenMW/}
 GITLAB_PROJECT=	openmw
 GITLAB_RELEASE=	${PKGNAME_NOREV}
 
 GITHUB_SUBMODULES+=	bulletphysics bullet3 3.17 extern/fetched/bullet
+GITHUB_SUBMODULES+=	recastnavigation recastnavigation \
+			e75adf86f91eb3082220085e42dda62679f9a3ea \
+			extern/fetched/recastnavigation
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://openmw.org/
 COMMENT=	Recreation of The Elder Scrolls III: Morrowind game engine
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -36,7 +38,14 @@ CONF_FILES+=	${EGDIR}/gamecontrollerdb.txt ${PKG_SYSCONFDIR}/gamecontrollerdb.tx
 CONF_FILES+=	${EGDIR}/openmw.cfg ${PKG_SYSCONFDIR}/openmw.cfg
 CONF_FILES+=	${EGDIR}/version ${PKG_SYSCONFDIR}/version
 
+pre-configure:
+	${LN} -s ${WRKSRC}/extern/fetched \
+		${WRKSRC}/components/fetched
+	${LN} -s ${WRKSRC}/extern/fetched \
+		${WRKSRC}/fetched
+
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/unshield/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
