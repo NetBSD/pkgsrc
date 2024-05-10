@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/05/08 18:47:37 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/05/10 11:02:13 wiz Exp $
 
 DISTNAME=	pcsc-lite-2.2.1
 CATEGORIES=	security
@@ -11,7 +11,8 @@ COMMENT=	Middleware to access a smart card using SCard API (PC/SC)
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	flex pkg-config
+# perl for pod2man
+USE_TOOLS+=	flex perl pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
