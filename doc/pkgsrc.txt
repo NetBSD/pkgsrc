@@ -4225,10 +4225,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 If the packaged software is a Python module, include ../../lang/python/
 wheel.mk. Note per PEP-518, the minimum and default requirements to create .whl
-files are py-setuptools plus py-wheel; however, there are various other
-possible tools that projects can use. Thus inclusion of wheel.mk does not imply
-these defaults are defined as TOOL_DEPENDS. Whatever the project specifically
-requires as packaging tools must be defined in the package Makefile.
+files are devel/py-setuptools plus devel/py-wheel; however, there are various
+other possible tools that projects can use. Thus inclusion of wheel.mk does not
+imply these defaults are defined as TOOL_DEPENDS. Whatever the project
+specifically requires as packaging tools must be defined in the package
+Makefile.
 
 The package directory should be called "py-software" and PKGNAME should be set
 to "${PYPKGPREFIX}-${DISTNAME}", e.g.
@@ -4245,16 +4246,6 @@ variable and set it to the list of files (paths relative to WRKSRC) that must
 be corrected. For example:
 
 REPLACE_PYTHON=   *.py
-
-Some Python modules have separate distributions for Python-2.x and Python-3.x
-support. In pkgsrc this is handled by the versioned_dependencies.mk file. Set
-PYTHON_VERSIONED_DEPENDENCIES to the list of packages that should be depended
-upon and include "../../lang/python/versioned_dependencies.mk", then the pkgsrc
-infrastructure will depend on the appropriate package version. For example:
-
-PYTHON_VERSIONED_DEPENDENCIES=dialog
-
-Look inside versioned_dependencies.mk for a list of supported packages.
 
 14.1.2. R packages
 
