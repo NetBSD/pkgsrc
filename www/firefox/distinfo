@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.529 2024/05/03 18:36:13 ryoon Exp $
+$NetBSD: distinfo,v 1.530 2024/05/10 09:14:07 jperkin Exp $
 
 BLAKE2s (firefox-125.0.3.source.tar.xz) = eccdb81aa8ff1abfc867604676dd2cfdff9c3a65192ecb3c645a47a0a2aae1d7
 SHA512 (firefox-125.0.3.source.tar.xz) = 18e705a3093290311ccb5f27f01e43fe243ece94c1769a9ccc4fa53d370e32a1ec6a107cdeb531e9468b9aca1a1fe668161adb7acc1ec65fd383837882c7d484
@@ -7,6 +7,7 @@ BLAKE2s (nodejs-output-125.0.1.tgz) = d71ccbe962c933929c1d60c16932ffeced62f2bbf8
 SHA512 (nodejs-output-125.0.1.tgz) = 008bbb4b7ec535d5144f0bba2eba174f05487063c34f4a5b6b544fca2f91b8d2cea50503cce57d948448f60ab7d5aa58480887b03047ea3b03bdf19345197aa3
 Size (nodejs-output-125.0.1.tgz) = 224740 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
+SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
 SHA1 (patch-config_makefiles_rust.mk) = 788ab8fed45625bc5552c56a3ab05b5ed7d49a8f
