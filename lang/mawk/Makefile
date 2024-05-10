@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2024/05/10 11:53:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.36 2024/05/10 11:56:11 cheusov Exp $
 
 DISTNAME=	mawk-1.3.4-20240123
-PKGNAME=	${DISTNAME:S/-24/.24/}
+PKGNAME=	${DISTNAME:S/-20/.20/}
 CATEGORIES=	lang
 MASTER_SITES=	https://invisible-island.net/archives/mawk/
 EXTRACT_SUFX=	.tgz
