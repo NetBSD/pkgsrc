@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/10 18:52:03 jperkin Exp $
 
 DISTNAME=	daq-2.0.7
 DIST_SUBDIR=	${DISTNAME}	# remove on next update
@@ -13,11 +13,13 @@ COMMENT=	Abstraction layer for libpcap
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
-.include "../../net/libdnet/buildlink3.mk"
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
+
 .include "../../devel/flex/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
