@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.41 2024/03/13 13:47:43 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.42 2024/05/10 12:15:23 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -173,12 +173,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 <para>
 If the packaged software is a Python module, include
-<filename>../../lang/python/wheel.mk</filename>.
-Note per PEP-518, the minimum and default requirements to create .whl files
-are py-setuptools plus py-wheel; however, there are various other possible
-tools that projects can use. Thus inclusion of <filename>wheel.mk</filename>
-does not imply these defaults are defined as TOOL_DEPENDS. Whatever the project
-specifically requires as packaging tools must be defined in the package Makefile.
+<filename>../../lang/python/wheel.mk</filename>.  Note per PEP-518,
+the minimum and default requirements to create .whl files are
+<filename role="pkg">devel/py-setuptools</filename> plus <filename
+role="pkg">devel/py-wheel</filename>; however, there are various other
+possible tools that projects can use. Thus inclusion of
+<filename>wheel.mk</filename> does not imply these defaults are
+defined as <varname>TOOL_DEPENDS</varname>. Whatever the project
+specifically requires as packaging tools must be defined in the
+package Makefile.
 </para>
 
 <para>The package directory should be called
@@ -201,20 +204,6 @@ For example:
 <programlisting>
 REPLACE_PYTHON=   *.py
 </programlisting></para>
-
-<para>Some Python modules have separate distributions for Python-2.x
-and Python-3.x support. In pkgsrc this is handled by the
-<filename>versioned_dependencies.mk</filename> file. Set
-<varname>PYTHON_VERSIONED_DEPENDENCIES</varname> to the list of
-packages that should be depended upon and include
-<quote><filename>../../lang/python/versioned_dependencies.mk</filename></quote>,
-then the pkgsrc infrastructure will depend on the appropriate package
-version. For example:
-<programlisting>
-PYTHON_VERSIONED_DEPENDENCIES=dialog
-</programlisting>
-Look inside <filename>versioned_dependencies.mk</filename> for a list
-of supported packages.</para>
 </sect2>
 
 <sect2 id="creating.R-package">
