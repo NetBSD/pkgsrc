@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4267 2024/05/07 15:40:59 nikita Exp $
+# $NetBSD: Makefile,v 1.4268 2024/05/10 07:58:31 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2528,7 +2528,6 @@ SUBDIR+=	py-distro
 SUBDIR+=	py-doc8
 SUBDIR+=	py-docopt
 SUBDIR+=	py-docstyle
-SUBDIR+=	py-docstyle3
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dotenv
