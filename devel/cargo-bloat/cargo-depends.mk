@@ -1,10 +1,10 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2024/04/15 05:30:52 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2024/05/10 17:25:52 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	binfarce-0.2.1
 CARGO_CRATE_DEPENDS+=	fallible-iterator-0.2.0
 CARGO_CRATE_DEPENDS+=	json-0.12.4
-CARGO_CRATE_DEPENDS+=	libc-0.2.153
+CARGO_CRATE_DEPENDS+=	libc-0.2.154
 CARGO_CRATE_DEPENDS+=	memchr-2.7.2
 CARGO_CRATE_DEPENDS+=	memmap2-0.9.4
 CARGO_CRATE_DEPENDS+=	multimap-0.10.0
