@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2024/03/18 15:42:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.127 2024/05/10 22:52:47 gdt Exp $
 
 DISTNAME=	jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -36,6 +36,9 @@ CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
+# openjdk8's build system objects to wrapper which invokes ccache,
+# when trying to decide if it is gcc or clang, resulting in failure.
+IGNORE_CCACHE=		yes
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
 UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 PLIST_SRC+=		${PLIST_SRC_DFLT}
