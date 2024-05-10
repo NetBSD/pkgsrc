@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2021/11/09 20:28:46 wiz Exp $
-
-BLAKE2s (packaging-20.9.tar.gz) = b58feff10435fb04fcd08bbba0afa6dbc5e8447e8fb24b99223ea81374893d20
-SHA512 (packaging-20.9.tar.gz) = 229b729aa9be7730509b7036dce0ca0750103fb7e2cd45d51f0eeaf2a4731605d63d11e11c10c7c481e228faa5e860c2c8f7bc6bee3190cafd72c22d7b3db264
-Size (packaging-20.9.tar.gz) = 81267 bytes
