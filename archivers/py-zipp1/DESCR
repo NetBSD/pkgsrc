@@ -1,4 +1,0 @@
-A pathlib-compatible Zipfile object wrapper. A backport of the Path
-object.
-
-This package contains the last Python 2.x compatible version.

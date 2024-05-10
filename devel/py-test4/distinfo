@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2022/10/11 11:52:44 adam Exp $
-
-BLAKE2s (pytest-4.6.11.tar.gz) = f252058479aac517794aa5fe7e6a417fa794b0e5cde829a9fd526758d37f8f95
-SHA512 (pytest-4.6.11.tar.gz) = 6fddf4944bd9fab83024aa2d338d54aaf3d164bd5c7f634357376f3b0d2dab6a43d784e7fb567236c2d2f029151c5d9e2cb36c22e9b551c2c8823c52a2246e9c
-Size (pytest-4.6.11.tar.gz) = 952305 bytes

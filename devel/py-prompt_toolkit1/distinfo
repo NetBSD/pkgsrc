@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:47 nia Exp $
-
-BLAKE2s (prompt_toolkit-1.0.18.tar.gz) = a1f723ee60dc205c6787c137a4439c65c427d8e9db68ed04ff8c7542a7407c07
-SHA512 (prompt_toolkit-1.0.18.tar.gz) = 25cb2559084b7769411b0a7ae10e5e8836b7c3fb8841eaefbd4ad784654a144f8e5730fa70d08a6f07c7de9957d308ea8c7b9050564f128fcd875e884963fbe4
-Size (prompt_toolkit-1.0.18.tar.gz) = 242335 bytes
