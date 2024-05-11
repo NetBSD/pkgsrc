@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/02/11 15:20:41 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/05/11 15:25:33 wiz Exp $
 
 DISTNAME=	pygit2-1.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 FORCE_C_STD=	c99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+BROKEN=		"Waiting for release working with libgit2 1.8."
 
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
