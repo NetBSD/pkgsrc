@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2023/07/22 09:43:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/05/11 10:23:23 nia Exp $
 
 BLAKE2s (oa-0.8.8.tar.bz2) = 397a8ff51d1ee16ad38f2b0a99d7b74cc07273e9d43a0b18de482d993a9b3d4a
 SHA512 (oa-0.8.8.tar.bz2) = 517517ea8d8377a6d91d957faf0a55690815b01d8f3e8b1e4a3e6be64750968a6074d26499e707fe2ec5fa7d630ceec022fdc879fdebcbfebbcff8195dd03e2f
@@ -6,9 +6,3 @@ Size (oa-0.8.8.tar.bz2) = 1257831 bytes
 BLAKE2s (openarena-0.8.8.zip) = 8f1c97f354a7167788554e9ee0085ed8ba1c4ece322e3fd2b35be40cbc07efe1
 SHA512 (openarena-0.8.8.zip) = 9fa4dabe8a3428dc3cbec97f3b4d20c04569c14cdd00b60e6391c6dd61e310f246ff5ec97e7549821b3d6f5f94b140eb5411a2ddd83dafcad66937b7f78ea8dd
 Size (openarena-0.8.8.zip) = 425189255 bytes
-SHA1 (patch-Makefile) = 38d8ef69dd9dda1b8c3b1f804db1f84e7b1cec4b
-SHA1 (patch-code_game_g__cmds.c) = a28f1f32e8b0d4461d1d6ac2c64e83abf3777c0b
-SHA1 (patch-code_q3__ui_ui__firstconnect.c) = 999c9040336b790711711f1c96a1af0f04f743be
-SHA1 (patch-code_q3__ui_ui__local.h) = aff4decfa18aed05239af5103dc603c6ca949429
-SHA1 (patch-code_q3__ui_ui__preferences.c) = 06f606580f594509c0bfcc9cc60e970beba394aa
-SHA1 (patch-code_qcommon_q__platform.h) = 523fbe0eccfdde0391fef23f728f0ac01bd7d85d
