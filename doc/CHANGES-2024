@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3315 2024/05/11 05:17:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3316 2024/05/11 05:23:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5237,3 +5237,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-bitstring to 4.2.2 [adam 2024-05-11]
 	Updated textproc/py-numpydoc to 1.7.0 [adam 2024-05-11]
 	Updated textproc/py-patiencediff to 0.2.15 [adam 2024-05-11]
+	Updated net/iperf3 to 3.17 [adam 2024-05-11]
+	Updated databases/postgresql-timescaledb to 2.15.0 [adam 2024-05-11]
