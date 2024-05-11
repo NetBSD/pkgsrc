@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/03 11:17:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/11 16:58:09 wiz Exp $
 
 DISTNAME=	indi-2.0.7
 CATEGORIES=	misc
@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/indilib/indi/
 COMMENT=	Implementation of the Instrument-Neutral-Device-Interface protocol
 #LICENSE=	# TODO: (see mk/license.mk)
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-DINDI_BUILD_SERVER=NO
 
