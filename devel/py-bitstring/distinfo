@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/08 12:00:21 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/05/11 05:06:04 adam Exp $
 
-BLAKE2s (bitstring-4.2.1.tar.gz) = dfba29ece3cda0c55a144d367168d3c8dbddb2045c22a603bc376f241aa1c63a
-SHA512 (bitstring-4.2.1.tar.gz) = e54f5941b357d783e2951da8673cf38f6498d4e51949ab3200a05ce590208ca35ab7a300075013b6b2d6dfe6422cd81aa2d29b55c6a8088d9417d8c7a58f4716
-Size (bitstring-4.2.1.tar.gz) = 249982 bytes
+BLAKE2s (bitstring-4.2.2.tar.gz) = 70a580b5ce834bba75245da21c3a1f3ffb77e19811e75ac76edd96111609a4fb
+SHA512 (bitstring-4.2.2.tar.gz) = 4700b45c9a56c21a09d61c464a4b2de899bb1cbdb1c5057e5c0f7c388adbda8feb260bdd56f073e53e256c39825cf7cd4b105bf9f57dd6d9d4916717941ff4bf
+Size (bitstring-4.2.2.tar.gz) = 249409 bytes
