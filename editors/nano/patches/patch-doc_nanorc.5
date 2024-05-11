@@ -1,19 +1,19 @@
-$NetBSD: patch-doc_nanorc.5,v 1.2 2021/02/27 19:26:28 schwarz Exp $
+$NetBSD: patch-doc_nanorc.5,v 1.3 2024/05/11 20:14:27 schwarz Exp $
 
 * Fix hard-coded pathes.
 
---- doc/nanorc.5.orig	2021-02-24 10:56:32.000000000 +0100
-+++ doc/nanorc.5	2021-02-27 20:12:41.000000000 +0100
+--- doc/nanorc.5.orig	2024-05-01 10:25:05.000000000 +0200
++++ doc/nanorc.5	2024-05-11 21:57:50.000000000 +0200
 @@ -25,7 +25,7 @@
  The \fInanorc\fP files contain the default settings for \fBnano\fP,
- a small and friendly editor.  During startup, if \fB\-\-rcfile\fR
+ a small and friendly text editor.  During startup, if \fB\-\-rcfile\fR
  is not given, \fBnano\fR will read two files: first the
 -system-wide settings, from \fI/etc/nanorc\fP (the exact path might be
 +system-wide settings, from \fI@PKG_SYSCONFDIR@/nanorc\fP (the exact path might be
  different on your system), and then the user-specific settings, either
  from \fI~/.nanorc\fR or from \fI$XDG_CONFIG_HOME/nano/nanorc\fR
  or from \fI~/.config/nano/nanorc\fR, whichever is encountered first.
-@@ -997,13 +997,13 @@
+@@ -1078,13 +1078,13 @@
  
  .SH FILES
  .TP
