@@ -1,0 +1,14 @@
+$NetBSD: patch-gcc-4.6.4_gcc_doc_sourcebuild.texi,v 1.1 2024/05/11 15:19:53 wiz Exp $
+
+@texi should not being a @table
+
+--- gcc-4.6.4/gcc/doc/sourcebuild.texi.orig	2024-05-11 15:13:17.185652141 +0000
++++ gcc-4.6.4/gcc/doc/sourcebuild.texi
+@@ -676,6 +676,7 @@ standard rule in @file{gcc/Makefile.in} 
+ @code{lang_checks}.
+ 
+ @table @code
++@item dummy
+ @itemx all.cross
+ @itemx start.encap
+ @itemx rest.encap
