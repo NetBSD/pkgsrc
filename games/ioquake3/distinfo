@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2023/01/15 05:36:37 mrg Exp $
+$NetBSD: distinfo,v 1.14 2024/05/11 10:05:15 nia Exp $
 
 BLAKE2s (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 73f65b336d36d24d523d96078b61f65c927d5a6e9636bee29413d0197e45472a
 SHA512 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 689a0efa6eaf88fcf98616c100df625b77617c55e351455cc25727fea525748855c58e2288f04d86372d392a556f2ef4926e2c808f75e104ac328baa9458c4d1
 Size (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 7691640 bytes
-SHA1 (patch-Makefile) = 7d11e12f312caa2517f768702fddc3ec15fa81f5
+SHA1 (patch-Makefile) = e855406f2c7499e5defd5af962b4e2a6873282d2
 SHA1 (patch-code_qcommon_q__platform.h) = 7845c7ba9431c7a34c5fbfde702cc0b7e1dc66d5
 SHA1 (patch-code_renderergl1_tr__init.c) = a9968c3035d6558ea65ec1bd00afd628a01eab49
 SHA1 (patch-code_renderergl2_tr__init.c) = c38bb445cbb70f35cac4114b46c7172cacc7d44f
