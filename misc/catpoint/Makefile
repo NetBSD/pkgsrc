@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/06 08:27:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/11 16:18:57 wiz Exp $
 
 DISTNAME=	catpoint-v0.2
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -15,6 +15,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
 USE_LANGUAGES=	c99
+FAKE_NCURSES=	yes
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

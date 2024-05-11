@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/11 15:34:57 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/05/11 16:18:57 wiz Exp $
 
 BLAKE2s (catpoint-v0.2.tgz) = 49958a81ef20ed1dc323829bc2190452d043e78e2b860edea857c676dc18df08
 SHA512 (catpoint-v0.2.tgz) = 9a3ce033dde8854ceaf6601ecb5258464001f125ee15c4efece97a1339e30f83b889d0195bc63be001050a98603c7f9f482b05f94d123fbfaa886b95d7619a74
 Size (catpoint-v0.2.tgz) = 16613 bytes
-SHA1 (patch-Makefile) = e97072db7d569151f44bf54e0139ea9e6af7123f
