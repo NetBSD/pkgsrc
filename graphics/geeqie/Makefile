@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2024/04/07 07:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2024/05/11 03:29:29 pho Exp $
 
 DISTNAME=	geeqie-2.4
 PKGREVISION=	3
@@ -20,6 +20,7 @@ DEPENDS+=	webp-pixbuf-loader-[0-9]*:../../graphics/webp-pixbuf-loader
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
 MESON_ARGS+=	-Ddoxygen=disabled
+MESON_ARGS+=	-Dpandoc=disabled
 # Do not build html documentation.
 # \todo Consider depending on yelp instead
 MESON_ARGS+=	-Dyelp-build=disabled
