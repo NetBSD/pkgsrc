@@ -1,4 +1,4 @@
-$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.2 2024/05/01 03:22:33 pho Exp $
+$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.3 2024/05/11 14:55:51 pho Exp $
 
 Hunk #0, #1:
     bootstrap.py assumes that GHC always has a threaded RTS but our
@@ -11,7 +11,7 @@ Hunk #0, #1:
 Hunk #1-#7:
     Support --jobs=N for parallel compilation. This makes bootstrapping
     hadrian a lot faster.
-    TODO: Upstream this.
+    https://gitlab.haskell.org/ghc/ghc/-/merge_requests/12610
 
 --- hadrian/bootstrap/bootstrap.py.orig	2024-02-22 20:59:45.000000000 +0000
 +++ hadrian/bootstrap/bootstrap.py
