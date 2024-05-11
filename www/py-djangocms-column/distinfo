@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/10 16:49:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/05/11 19:03:14 adam Exp $
 
-BLAKE2s (djangocms-column-2.0.0.tar.gz) = 1b0bebb0ac3b3a58d0958754210740e3d7585ddb85e124103926b71ed484b571
-SHA512 (djangocms-column-2.0.0.tar.gz) = 6ee65cbd475bb9736e79daf1738fbc5736335aa3d5e8caccff2640467a1f8e5b5969ae9f6d8e6fd14b18960471ed0c83fc668441cffb8a358d72f57cfa95b8d3
-Size (djangocms-column-2.0.0.tar.gz) = 30142 bytes
+BLAKE2s (djangocms_column-2.1.0.tar.gz) = 34a89a862be91aa735673f71fc0ed6b0e2ae71b35aaf0bdcea52b7aed1f5c1ae
+SHA512 (djangocms_column-2.1.0.tar.gz) = 407cf25a539ae688001c9093791f3730306a2671d321475c7f3c996d82c2d0b3d71f84ae2e3e6cbe2e2f013e09955ce0e7f6584c7f7dbdba4ad7398cfdd22542
+Size (djangocms_column-2.1.0.tar.gz) = 30403 bytes
