@@ -1,5 +1,34 @@
-$NetBSD: distinfo,v 1.4 2022/10/08 13:26:55 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/05/11 20:54:11 adam Exp $
 
 BLAKE2s (pyqt-qwt-1.02.02.tar.gz) = 70ec253f564f0cbae48901c16a3a89b1c09d797a902cc38f94d8262f3f8736f9
 SHA512 (pyqt-qwt-1.02.02.tar.gz) = 2892827fb7e4e71c0f770ba481ef4653f2ef09a68767c178e4f810bb9c2f1e80362c7a37867c9b5d3525aed8118aef6c503ddc28323db02fe159055efed2a71d
 Size (pyqt-qwt-1.02.02.tar.gz) = 120948 bytes
+SHA1 (patch-sip_qmap__convert.sip) = 60c7c27f2f3409e798cae76d17b817841bee94d8
+SHA1 (patch-sip_qwt__abstract__scale__draw.sip) = 08c7f3bf4326080c41605f0625953c13bb2603a3
+SHA1 (patch-sip_qwt__axis.sip) = f046aab87a5fced13c0391b296cd8456d598f472
+SHA1 (patch-sip_qwt__axis__id.sip) = f653255ddb7c39ecc50d52484122fcf107ac11f4
+SHA1 (patch-sip_qwt__color__map.sip) = a66d68c9f62dcbf7e0586fd85a80b1cbe1c9c750
+SHA1 (patch-sip_qwt__column__symbol.sip) = 42e8039d76a554d5b800360334f4c65947b0d7c0
+SHA1 (patch-sip_qwt__compass__rose.sip) = 099b62186fb91a8bfeb7ed90fcd743234bf4de44
+SHA1 (patch-sip_qwt__curve__fitter.sip) = 4836f5c5781a17f58626752e74b6f61bed57b91c
+SHA1 (patch-sip_qwt__dial__needle.sip) = bf2b5a9f3e2ffd13eed04c8778a0b99f5ccfdb81
+SHA1 (patch-sip_qwt__plot.sip) = 4ce33d3d03e34ca74db6e6a23501c674a01d4ecb
+SHA1 (patch-sip_qwt__plot__barchart.sip) = 03c80d3ddf038cea75edd5fd3b2ded41106756c8
+SHA1 (patch-sip_qwt__plot__curve.sip) = dd1f807d309350386695d11afa7acf7d3e1a9f08
+SHA1 (patch-sip_qwt__plot__histogram.sip) = 2fa2d6807a07a70064d9aec4595038b78fed54e4
+SHA1 (patch-sip_qwt__plot__item.sip) = d993bcbff017a171386dfadd9ecc811a444649f4
+SHA1 (patch-sip_qwt__plot__layout.sip) = 9249a54eb176818f9e82460d1e7dd5af7f9bf9d7
+SHA1 (patch-sip_qwt__plot__marker.sip) = cd14b21031523ca981e0c20c4e89b7907f225aba
+SHA1 (patch-sip_qwt__plot__multi__barchart.sip) = 9026b434272da6b7dadc595cde31f25ee7845394
+SHA1 (patch-sip_qwt__plot__picker.sip) = d22edb5de6596657581865a3efa1edc5886b9e3b
+SHA1 (patch-sip_qwt__plot__rasteritem.sip) = d12e923bf12529fe0b8a8e8ce806356fe81c5793
+SHA1 (patch-sip_qwt__plot__seriesitem.sip) = f8af7cac0c375b66d74e7d42c7d2db721903e4f7
+SHA1 (patch-sip_qwt__plot__spectrogram.sip) = 5c16575d8fd14caf36f1c361cdca7ff8a2e6c217
+SHA1 (patch-sip_qwt__plot__zoomer.sip) = 80f27394b00d1e07afd60e06e29e36dee7dbbddb
+SHA1 (patch-sip_qwt__point__data.sip) = 61a75ae9a2720b24e1ea6a129b70253c3102901e
+SHA1 (patch-sip_qwt__raster__data.sip) = 9d0234ddf52628a841e19d97bfffb3a918780c74
+SHA1 (patch-sip_qwt__scale__engine.sip) = 4033f16b6ea972f12898db283f3a70917508044a
+SHA1 (patch-sip_qwt__spline.sip) = 1bd4331c6a90a39caf715f4e8d4cf762a45b01a5
+SHA1 (patch-sip_qwt__text.sip) = 2c86bbdc9b9dd9a842eb11194686fa5573e62fe4
+SHA1 (patch-sip_qwt__text_engine.sip) = 64d52ec807b792a22e90523ca420b1cffc38c318
+SHA1 (patch-sip_qwt__transform.sip) = 0f1b75ad1c2475aeefa7a76a5edfd8a6de4f9c6c
