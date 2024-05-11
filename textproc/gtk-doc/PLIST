@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/11/13 21:17:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/05/11 18:58:52 adam Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
@@ -11,10 +11,10 @@ bin/gtkdoc-rebase
 bin/gtkdoc-scan
 bin/gtkdoc-scangobj
 bin/gtkdocize
+lib/cmake/GtkDoc/GtkDocConfig.cmake
+lib/cmake/GtkDoc/GtkDocConfigVersion.cmake
+lib/cmake/GtkDoc/GtkDocScanGObjWrapper.cmake
 share/aclocal/gtk-doc.m4
-share/cmake/GtkDoc/GtkDocConfig.cmake
-share/cmake/GtkDoc/GtkDocConfigVersion.cmake
-share/cmake/GtkDoc/GtkDocScanGObjWrapper.cmake
 share/gtk-doc/data/devhelp2.xsd
 share/gtk-doc/data/devhelp2.xsl
 share/gtk-doc/data/gtk-doc.flat.make
@@ -35,6 +35,7 @@ share/gtk-doc/python/gtkdoc/__init__.py
 share/gtk-doc/python/gtkdoc/check.py
 share/gtk-doc/python/gtkdoc/common.py
 share/gtk-doc/python/gtkdoc/config.py
+share/gtk-doc/python/gtkdoc/config_data.py
 share/gtk-doc/python/gtkdoc/fixxref.py
 share/gtk-doc/python/gtkdoc/highlight.py
 share/gtk-doc/python/gtkdoc/md_to_db.py
@@ -60,12 +61,16 @@ share/help/en_GB/gtk-doc-manual/fdl-appendix.xml
 share/help/en_GB/gtk-doc-manual/index.docbook
 share/help/es/gtk-doc-manual/fdl-appendix.xml
 share/help/es/gtk-doc-manual/index.docbook
+share/help/eu/gtk-doc-manual/fdl-appendix.xml
+share/help/eu/gtk-doc-manual/index.docbook
 share/help/fr/gtk-doc-manual/fdl-appendix.xml
 share/help/fr/gtk-doc-manual/index.docbook
 share/help/gl/gtk-doc-manual/fdl-appendix.xml
 share/help/gl/gtk-doc-manual/index.docbook
 share/help/gu/gtk-doc-manual/fdl-appendix.xml
 share/help/gu/gtk-doc-manual/index.docbook
+share/help/hu/gtk-doc-manual/fdl-appendix.xml
+share/help/hu/gtk-doc-manual/index.docbook
 share/help/pt_BR/gtk-doc-manual/fdl-appendix.xml
 share/help/pt_BR/gtk-doc-manual/index.docbook
 share/help/sl/gtk-doc-manual/fdl-appendix.xml
