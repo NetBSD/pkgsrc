@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/12/29 18:25:01 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/05/11 15:37:37 wiz Exp $
 
 DISTNAME=	kde-baseapps-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -21,6 +21,7 @@ CHECK_INTERPRETER_SKIP=	share/kde/templates/.source/Program.desktop
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/xapian/buildlink3.mk"
