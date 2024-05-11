@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1119 2024/05/05 05:32:18 pho Exp $
+# $NetBSD: Makefile,v 1.1120 2024/05/11 10:14:25 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -716,6 +716,7 @@ SUBDIR+=	strace
 SUBDIR+=	strigi
 SUBDIR+=	su2
 SUBDIR+=	sunxi-tools
+SUBDIR+=	superfile
 SUBDIR+=	sux
 SUBDIR+=	swapd
 SUBDIR+=	swatch
