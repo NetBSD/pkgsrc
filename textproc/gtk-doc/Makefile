@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2023/11/08 13:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/05/11 18:58:52 adam Exp $
 
-DISTNAME=	gtk-doc-1.32
-PKGREVISION=	15
+DISTNAME=	gtk-doc-1.34.0
 CATEGORIES=	textproc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,26 +19,34 @@ DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
-GNU_CONFIGURE=		YES
+MESON_REQD+=		0.55
+USE_TOOLS+=		itstool msgfmt pkg-config:run
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
-CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
-USE_TOOLS+=		gmake pkg-config:run msgfmt
-USE_TOOLS+=		itstool
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/tests/gobject/src
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/tests/gobject/src
+TEST_TARGET=	check
 
 SUBST_CLASSES+=		fix-pc
 SUBST_STAGE.fix-pc=	pre-configure
 SUBST_MESSAGE.fix-pc=	Unwrapping pkg-config path in installed helper tools.
 SUBST_FILES.fix-pc+=	gtkdoc-depscan.in
-SUBST_FILES.fix-pc+=	gtkdoc/config.py.in
+SUBST_FILES.fix-pc+=	gtkdoc/config_data.py.in
 SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
+
+SUBST_CLASSES+=		python3
+SUBST_STAGE.python3=	pre-configure
+SUBST_MESSAGE.python3=	Fix python binary name.
+SUBST_FILES.python3=	meson.build
+SUBST_SED.python3=	-e "s,find_installation('python3',find_installation('${PYTHONBIN}',"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-TEST_TARGET=	check
-
-.include "../../lang/python/application.mk"
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
