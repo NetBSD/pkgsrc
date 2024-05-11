@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.193 2024/05/09 08:57:23 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.194 2024/05/11 13:07:13 morr Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26004,3 +26004,4 @@ unbound<1.20.0		denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name
 phpldapadmin<1.2.6.7	cross-site-scripting	https://github.com/leenooks/phpLDAPadmin/commit/d59cbfef5d8a78da55e4c1919862e9e3968b3715
 go121<1.21.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-24787
 go122<1.22.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-24787
+vim<9.1.0404	buffer-overflow			https://github.com/vim/vim/commit/67797191e039196128c69
