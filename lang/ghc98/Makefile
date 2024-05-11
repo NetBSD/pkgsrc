@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/06 02:26:39 pho Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/11 18:37:40 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -54,6 +54,7 @@ USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
 PYTHON_FOR_BUILD_ONLY=		tool
 .include "../../lang/python/tool.mk"
+
 
 # -----------------------------------------------------------------------------
 # Configuration
