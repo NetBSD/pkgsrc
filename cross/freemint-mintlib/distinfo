@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:07:53 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/05/11 15:19:53 wiz Exp $
 
 BLAKE2s (gcc-4.6.4-mint-20130415.patch.bz2) = ca3cc9b4fdeccac20f8fd72c2f0ba521e8c21c4a84850cd50779ad750a0e51bf
 SHA512 (gcc-4.6.4-mint-20130415.patch.bz2) = f04ee11b11297ac31f558cb54b63bac959b599c6c6238988a07ce4d7a6a4130457a0ff4bf12591ba7a2560b1f5998b25f16d308b2ca5d4704784cf17e557136c
@@ -12,4 +12,5 @@ Size (mintlib-CVS-20131219.tar.gz) = 1888097 bytes
 SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.gperf) = da2735f36dc5a2ab19f92cb13f505cea11442fca
 SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.h) = 2a9e8f53bd63c98efa0cda782dacb78b00beb2bc
 SHA1 (patch-gcc-4.6.4_gcc_doc_gcc.texi) = b11ef8d6ad28139623800ddcc5aa67bc45289b07
+SHA1 (patch-gcc-4.6.4_gcc_doc_sourcebuild.texi) = 258d4255c120142a64b7b39a5e9e73bd14540016
 SHA1 (patch-mintlib-CVS-20130415_configvars) = f1d0f2e1fe244c475634cd1ab4dd5ddc2b9a73f3
