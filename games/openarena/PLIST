@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/03 18:55:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/11 10:23:23 nia Exp $
 bin/openarena
 lib/openarena/baseoa/pak0.pk3
 lib/openarena/baseoa/pak1-maps.pk3
@@ -9,13 +9,7 @@ lib/openarena/baseoa/pak5-TA.pk3
 lib/openarena/baseoa/pak6-misc.pk3
 lib/openarena/baseoa/pak6-patch085.pk3
 lib/openarena/baseoa/pak6-patch088.pk3
-lib/openarena/baseq3/cgame${QUAKE_ARCH}.so
-lib/openarena/baseq3/qagame${QUAKE_ARCH}.so
-lib/openarena/baseq3/ui${QUAKE_ARCH}.so
-lib/openarena/missionpack/cgame${QUAKE_ARCH}.so
 lib/openarena/missionpack/mp-pak0.pk3
-lib/openarena/missionpack/qagame${QUAKE_ARCH}.so
-lib/openarena/missionpack/ui${QUAKE_ARCH}.so
 man/man6/openarena.6
 share/applications/openarena.desktop
 share/pixmaps/openarena.png
