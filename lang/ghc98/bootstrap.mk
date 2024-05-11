@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2024/05/06 02:26:39 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2024/05/11 18:37:40 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -109,15 +109,7 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 #
 USE_TOOLS+=	xzcat xz gtar cpp patch # patch is for bootstrap.py
 
-# Bootkits from the pre-Hadrian era has a different name for the top
-# directory in their archives. We can eliminate this conditional once all
-# of our bootkits are updated to 9.4 or later.
-.if ${BOOT_ARCHIVE:M9.2.*}
-BOOT_ARCHIVE_TOP_DIR=	ghc-${BOOT_VERSION}-boot
-.else
 BOOT_ARCHIVE_TOP_DIR=	${BOOT_ARCHIVE:C/\.tar\..z$//}
-.endif
-
 pre-configure:
 	${RUN}${TEST} -f ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} || \
 	${FAIL_MSG}  "Place your trusted bootkit archive at ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
@@ -171,6 +163,7 @@ pre-build:
 # This defines how to run the Hadrian command. Also used in do-build and
 # such.
 HADRIAN_CMD=	${PKGSRC_SET_ENV} ${ALL_ENV} ${WRKSRC}/hadrian/bootstrap/_build/bin/hadrian
+
 
 # -----------------------------------------------------------------------------
 # An unusual target "bootstrap"
