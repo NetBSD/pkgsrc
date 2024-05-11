@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/31 14:01:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/11 15:38:30 wiz Exp $
 bin/fits2bitmap
 bin/fitscheck
 bin/fitsdiff
@@ -8,13 +8,12 @@ bin/samp_hub
 bin/showtable
 bin/volint
 bin/wcslint
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/astropy/CITATION
 ${PYSITELIB}/astropy/__init__.py
 ${PYSITELIB}/astropy/__init__.pyc
