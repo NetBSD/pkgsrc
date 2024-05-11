@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/07 16:33:50 rhialto Exp $
+$NetBSD: distinfo,v 1.5 2024/05/11 05:17:28 adam Exp $
 
-BLAKE2s (patiencediff-0.2.14.tar.gz) = 86e64ad576a92816fd61f603aa3331823fe4ba37b788d1c783e76d46939b2668
-SHA512 (patiencediff-0.2.14.tar.gz) = 624db38a072906557a430555d52f914030d1933237cedda76804faafe26d1ff2ad4a569ec90ad887162e48a57078a1accc19e2f417ab095f5b6435912d280998
-Size (patiencediff-0.2.14.tar.gz) = 29258 bytes
+BLAKE2s (patiencediff-0.2.15.tar.gz) = 0c43171c3f9d09710280290dcd7f2888234c3954335aeef94724545b807d64ee
+SHA512 (patiencediff-0.2.15.tar.gz) = d0cecf461075e3965db16624978b260660bd3444e83fc6121d3efebb96d31b323b7b61fc9e65a4a0098a95284a342a2f321b92f2073c0264cdb1f4b05771938d
+Size (patiencediff-0.2.15.tar.gz) = 27483 bytes
