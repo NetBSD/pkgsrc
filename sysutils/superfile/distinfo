@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/05/11 10:14:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/05/11 10:16:30 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1087,4 +1087,4 @@ BLAKE2s (superfile-1.1.2.tar.gz) = 96fb2645e77ff034071d7a278289aadac0e4176f45fff
 SHA512 (superfile-1.1.2.tar.gz) = c4455543930aea2dca75f021c84957ac180bb234e21cf9d6a9618f067d93fad8900f38e3f112a92a0ab7d806821ae99454d8b448b940beb5d49c96afc4aaddbe
 Size (superfile-1.1.2.tar.gz) = 5982048 bytes
 SHA1 (patch-.._.._github.com_barasher_go-exiftool@v1.10.0_platform__netbsd.go) = d9f2f45befe5e2968fdc4880902299b5b6294491
-SHA1 (patch-go.mod) = ba5555299669e3d32ab415e8cea2544ce9c5ca08
+SHA1 (patch-go.mod) = 114ebd17e387290248fddba2f9bd35a7cee3db9c

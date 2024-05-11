@@ -1,4 +1,6 @@
-$NetBSD: patch-go.mod,v 1.1 2024/05/11 10:14:14 wiz Exp $
+$NetBSD: patch-go.mod,v 1.2 2024/05/11 10:16:31 wiz Exp $
+
+Use patched copy of go-exiftool with NetBSD support.
 
 --- go.mod.orig	2024-05-08 14:43:56.000000000 +0000
 +++ go.mod
