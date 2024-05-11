@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2024/04/06 08:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/05/11 15:45:41 wiz Exp $
 
 DISTNAME=	luminance-hdr-2.6.1.1
 PKGREVISION=	8
@@ -12,6 +12,8 @@ COMMENT=	GUI application that aims to provide a workflow for HDR imaging
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+# "Boost.Math requires C++14"
+FORCE_CXX_STD=	c++14
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
