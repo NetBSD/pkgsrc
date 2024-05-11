@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2024/05/07 18:06:35 abs Exp $
+# $NetBSD: Makefile,v 1.91 2024/05/11 12:07:13 nia Exp $
 
 DISTNAME=	dillo-3.1.0
 CATEGORIES=	www
@@ -45,7 +45,6 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
