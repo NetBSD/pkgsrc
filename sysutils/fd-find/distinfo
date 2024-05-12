@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2024/05/06 13:45:17 pin Exp $
+$NetBSD: distinfo,v 1.14 2024/05/12 19:18:55 wiz Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -108,9 +108,9 @@ Size (faccess-0.2.4.crate) = 7262 bytes
 BLAKE2s (fastrand-2.1.0.crate) = a91ba7ee35e61fcd1cbc8c53ea65622361efca0041a4cb736b56a22fcb9c4e5b
 SHA512 (fastrand-2.1.0.crate) = ce776a3d0fbc108017c93ce9bff7c9e7e65590acb149dcd55c2f349d2077ffdf5ac6427753732f60cd7acf141ef6f89359b2e7d9368016be53b24e8703e71104
 Size (fastrand-2.1.0.crate) = 14907 bytes
-BLAKE2s (fd-find-10.0.0.tar.gz) = da87711074140f14868cec47471b6a73be717ee96e6ca8e24fb366f358ff480b
-SHA512 (fd-find-10.0.0.tar.gz) = d025db852874eabe992a73ad8642d1f293d29a3b3cb89ec783a809ea1c81d1b039de6efe037a0a51be5abfa4379fdaf118c1fce8d304bb938bd09dbe4c335103
-Size (fd-find-10.0.0.tar.gz) = 125330 bytes
+BLAKE2s (fd-find-10.1.0.tar.gz) = da4c169eb7e327859deffd443509f55b0bc2aff3f5c40ffcb5f4886237929579
+SHA512 (fd-find-10.1.0.tar.gz) = 6ab75965cb1852dd677ffb07d51db852c993b59551ab2e3a87bf81560a41c5fff35e63e9e09aa495c6c42cd9d038bf8ad85c491095435c9881101cf6284385df
+Size (fd-find-10.1.0.tar.gz) = 126984 bytes
 BLAKE2s (filetime-0.2.23.crate) = f5d63e8af99ea9f7d218a233e0c643afd435b886c52e3905d076518577b1d986
 SHA512 (filetime-0.2.23.crate) = 8d5ac82482758577d1d0669abbe7b880efc44958687bba745c9ee4a5c16bddb44ec0fbe9c29cf424e7120905f3c3da607f3a7ca1e50287154c0475ddf2148bf3
 Size (filetime-0.2.23.crate) = 14942 bytes
@@ -333,4 +333,4 @@ Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
 BLAKE2s (windows_x86_64_msvc-0.52.5.crate) = cff55ffe9c61794935a56e2c6b21ca5f068efaad263d63575cfb0863d23be29d
 SHA512 (windows_x86_64_msvc-0.52.5.crate) = 81176090dc725d7fe3867e6322fdc4a4065168580847b35e6f8da345f685c4f66a81e35cd1880dbaabdd4cdc82446dde9d6a0e583cf0b7fe47dda8bc8002f1c6
 Size (windows_x86_64_msvc-0.52.5.crate) = 827905 bytes
-SHA1 (patch-Cargo.toml) = 955fc31d57f52d1aba30c23639a5fba93055bf84
+SHA1 (patch-Cargo.toml) = 18a5190a606d4c2ab95bb1f8b88a3afc84febd3b
