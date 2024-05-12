@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3361 2024/05/12 16:14:54 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3362 2024/05/12 16:18:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-rex-text to 0.2.58 [taca 2024-05-12]
 	Updated security/ruby-sshkit to 1.22.2 [taca 2024-05-12]
 	Updated sysutils/ruby-facter to 4.7.0 [taca 2024-05-12]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.7.11 [taca 2024-05-12]
