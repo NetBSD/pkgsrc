@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/07/09 02:52:41 taca Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/12 16:19:51 taca Exp $
 
-DISTNAME=	review-5.8.0
+DISTNAME=	review-5.9.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
