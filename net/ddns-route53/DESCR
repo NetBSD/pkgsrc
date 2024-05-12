@@ -1,0 +1,9 @@
+ddns-route53 is a CLI application written in Go and delivered as a single
+executable that lets you run your own dynamic DNS service with Amazon Route
+53 on a time-based schedule.
+
+This package does not install rc.d(8) scripts. To use it, place a
+configuration file at `/etc/ddns-route53/ddns-route53.yaml' and add the
+following line to crontab(5):
+
+	*/30 * * * * ddns-route53 --log-nocolor | logger -t ddns-route53
