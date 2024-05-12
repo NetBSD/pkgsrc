@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/05/11 16:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/12 07:28:59 wiz Exp $
 
 DISTNAME=	indi-2.0.7
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=indilib/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +25,8 @@ PKGCONFIG_OVERRIDE=	libindi.pc.cmake
 .include "../../geography/libnova/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
 # not checked but used
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
