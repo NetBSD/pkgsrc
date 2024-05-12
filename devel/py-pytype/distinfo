@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/12 17:48:08 wiz Exp $
+
+BLAKE2s (pytype-2024.4.11.tar.gz) = abcf13fcb23d1fb1a22c5dd56c9124a9ab47a42439b30e6c09b10a25dc1d19df
+SHA512 (pytype-2024.4.11.tar.gz) = 74ddf98c83758613c65d64f233c0e68ad671d7cb545b27ebb555edeff847e9187ab601e6774f2bd1e754a83ccb0eafa9b20633a7eff7de18f31f33f608ff1ff8
+Size (pytype-2024.4.11.tar.gz) = 2932344 bytes
