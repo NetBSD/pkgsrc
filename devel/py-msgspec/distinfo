@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/12 17:46:55 wiz Exp $
+
+BLAKE2s (msgspec-0.18.6.tar.gz) = 950e2c8d418d9fa3bf52cb63ab3d8961b3dcd7a10a82792b37a1f69b5049ea23
+SHA512 (msgspec-0.18.6.tar.gz) = d8edd040875f9e632cca6207a6771ec4a876f34a12f032e785f803713bdf27d7923d77ea2d4ac00fee65ae57aebfd7ddf6df7046163fb15e7248bff87ad5cbee
+Size (msgspec-0.18.6.tar.gz) = 216757 bytes
