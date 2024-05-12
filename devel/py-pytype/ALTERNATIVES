@@ -1,0 +1,6 @@
+bin/annotate-ast @PREFIX@/bin/annotate-ast-@PYVERSSUFFIX@
+bin/merge-pyi @PREFIX@/bin/merge-pyi-@PYVERSSUFFIX@
+bin/pytd @PREFIX@/bin/pytd-@PYVERSSUFFIX@
+bin/pytype @PREFIX@/bin/pytype-@PYVERSSUFFIX@
+bin/pytype-single @PREFIX@/bin/pytype-single-@PYVERSSUFFIX@
+bin/pyxref @PREFIX@/bin/pyxref-@PYVERSSUFFIX@
