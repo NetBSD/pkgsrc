@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:24:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/05/12 16:22:24 taca Exp $
 
-BLAKE2s (hitimes-2.0.0.gem) = 257a32db2698b72cae2d1a296c61926156d9e160389125961c7a6ceb74e0a25f
-SHA512 (hitimes-2.0.0.gem) = 06f1c17d9914054bc17244f1a22761c98f7409cb401136e582deec18bbee07358b339ddd49ddfbc01cf9eb46bf84fbf5e2dccd6c77eb36e98c357e99687e8201
-Size (hitimes-2.0.0.gem) = 27136 bytes
+BLAKE2s (hitimes-3.0.0.gem) = b9d8bc43dcaeb6d0418539f6e9e37734996d42ff291a58beb9880e089a3bb7cf
+SHA512 (hitimes-3.0.0.gem) = 7384f30f847d4307960b020212a946c59e14be557728f773962c5a6abbe8c6e2b928b4611ec17abd7f48264765d6b64e1c493cc5e84f0d88b68d2cc5af89caa5
+Size (hitimes-3.0.0.gem) = 18944 bytes
