@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3374 2024/05/12 16:45:48 cheusov Exp $
+$NetBSD: CHANGES-2024,v 1.3375 2024/05/12 16:52:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-selenium-webdriver to 4.20.1 [taca 2024-05-12]
 	Updated www/php-concrete-cms to 9.2.9 [taca 2024-05-12]
 	Updated pkgtools/distbb to 0.48.0 [cheusov 2024-05-12]
+	Updated mail/milter-manager to 2.2.7 [taca 2024-05-12]
