@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24430 2024/05/11 09:35:46 wiz Exp $
+$NetBSD: TODO,v 1.24431 2024/05/12 10:36:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -769,6 +769,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o howm-1.4.7
 	o hplip-3.22.2
+	o hs-pandoc-3.2
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hyperscan-5.4.2
@@ -1052,6 +1053,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o packagekit-0.5.3
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
+	o pandoc-cli-3.2
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
@@ -1129,12 +1131,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.3.4
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.129.0
 	o py-grpcio-1.63.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
@@ -1147,6 +1151,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-poetry-plugin-export-1.8.0
 	o py-postgresql-5.1.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
@@ -1154,6 +1159,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-quixote-3.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools_scm-8.1.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
