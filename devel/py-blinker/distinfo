@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/05/05 10:05:03 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/05/12 10:36:33 wiz Exp $
 
-BLAKE2s (blinker-1.8.1.tar.gz) = 75ea532d4c7bc6661b2dfd3be31e1073bba6dca057b713c268b31e00a2d8d87b
-SHA512 (blinker-1.8.1.tar.gz) = b6adada7f314369863070e830364833aade954e4cedca390643223d632c110a314856fb1c050402cad7e64959500c4d27d149ce7b682ee6bde99a69dc66ea495
-Size (blinker-1.8.1.tar.gz) = 23191 bytes
+BLAKE2s (blinker-1.8.2.tar.gz) = d43e2226255924e74436ab96b10a0acbf40c96a52e635bb430080f89946d0156
+SHA512 (blinker-1.8.2.tar.gz) = 037822e014974aaa9d6faf76805b09c06d697de9555cf4cd1265e639c52f72c5ed905e4698140b49a5e011806d91541636a7cf58082aabdd927c60dffd7df012
+Size (blinker-1.8.2.tar.gz) = 23161 bytes
