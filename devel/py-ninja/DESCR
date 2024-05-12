@@ -1,0 +1,4 @@
+Ninja is a small build system with a focus on speed.
+
+The latest Ninja python wheels provide a ninja executable and
+ninja_syntax.py for generating .ninja files.
