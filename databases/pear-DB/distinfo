@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/02/24 16:11:00 taca Exp $
+$NetBSD: distinfo,v 1.13 2024/05/12 14:29:10 taca Exp $
 
-BLAKE2s (pear/DB-1.12.1.tgz) = 5d4911384194bd3fd980c00cb0afc34dc2f09904b5656b9af6fbfab34f5d5443
-SHA512 (pear/DB-1.12.1.tgz) = 00eed538145ddd0e666b2cb1f7fc3c45f1b1d6ea6e939cf5d200fa7355e0b46bad9bb7525d3df5983d9a35d7affca32610773e4729d5a4f472153bb44fbb6557
-Size (pear/DB-1.12.1.tgz) = 140261 bytes
+BLAKE2s (pear/DB-1.12.2.tgz) = 8f7f95fee612f4e27f1ce6ddb09072bce13b96b49379ba85fede30843273bbc3
+SHA512 (pear/DB-1.12.2.tgz) = fb2db7434239b1cdf5c7af8eb06cf05d366684dda46c1287fbcef77788486df151a3a457520b5966584dc5f1688262d1e550da95b3862a95f1ba953d158a33f6
+Size (pear/DB-1.12.2.tgz) = 137662 bytes
