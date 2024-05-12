@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3365 2024/05/12 16:24:23 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3366 2024/05/12 16:25:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-review to 5.9.0 [taca 2024-05-12]
 	Updated time/ruby-hitimes to 3.0.0 [taca 2024-05-12]
 	Updated www/ruby-aws-partitions to 1.927.0 [taca 2024-05-12]
+	Updated www/ruby-aws-sdk-core to 3.195.0 [taca 2024-05-12]
