@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/06/09 15:29:10 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/12 16:30:02 taca Exp $
 
-DISTNAME=	faraday-retry-2.2.0
+DISTNAME=	faraday-retry-2.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
