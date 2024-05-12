@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/12 17:12:00 wiz Exp $
+
+BLAKE2s (importlab-0.8.1.tar.gz) = fb6ae428214f673f8943d233deecfb44afe4bc48f94a8474160b09fed090a1b0
+SHA512 (importlab-0.8.1.tar.gz) = d89d1d3639b996f77ff66e347e6a2a9374528ff45d69d617f3eb585622389f50de18aca0083a5e691733a2ed09882e0947a4e4df888ff1bda1b5354cb303e9d2
+Size (importlab-0.8.1.tar.gz) = 28856 bytes

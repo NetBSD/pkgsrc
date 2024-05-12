@@ -1,0 +1,7 @@
+Importlab is a library for Python that automatically infers
+dependencies and calculates a dependency graph. It can perform
+dependency ordering of a set of files, including cycle detection.
+
+Importlab's main use case is to work with static analysis tools
+that process one file at a time, ensuring that a file's dependencies
+are analysed before it is.
