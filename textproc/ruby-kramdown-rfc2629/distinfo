@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2024/03/10 15:15:13 taca Exp $
+$NetBSD: distinfo,v 1.34 2024/05/12 16:18:07 taca Exp $
 
-BLAKE2s (kramdown-rfc2629-1.7.8.gem) = d42181daf5f811fa2e6721acaeaf5bf04f43b2f82485147e4f47f88ecb3d481a
-SHA512 (kramdown-rfc2629-1.7.8.gem) = 864774b57f6fbdb73d8619469c234fd8e5393b154e45fb9a121b30ac5e2d2048d75fc2e893ca9d1d2f0a94ea969388b75030a9f3f21d751cf85f2bee3474e738
-Size (kramdown-rfc2629-1.7.8.gem) = 64000 bytes
+BLAKE2s (kramdown-rfc2629-1.7.11.gem) = faec3bd3c3b7ec12aac562eb67fa64b1326ebfd17801c186dfd02d8227b665ff
+SHA512 (kramdown-rfc2629-1.7.11.gem) = 85808be36c0cf502391ec7959e1a183a1d1a0fa6a5b2cb48846936d5a36fdbbfa67176cb7fa136587d8b6accd982977837757e338d62d7c9634673788a4e8794
+Size (kramdown-rfc2629-1.7.11.gem) = 65024 bytes
