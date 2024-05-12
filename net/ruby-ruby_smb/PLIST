@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/12/17 14:40:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/05/12 15:59:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/examples/query_service_status.rb
 ${GEM_LIBDIR}/examples/read_file.rb
 ${GEM_LIBDIR}/examples/read_file_encryption.rb
 ${GEM_LIBDIR}/examples/read_registry_key_value.rb
+${GEM_LIBDIR}/examples/registry_key_security_descriptor.rb
 ${GEM_LIBDIR}/examples/rename_file.rb
 ${GEM_LIBDIR}/examples/tree_connect.rb
 ${GEM_LIBDIR}/examples/virtual_file_server.rb
@@ -122,6 +123,7 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/rpc_security_attributes.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/rrp_rpc_unicode_string.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/rpc_sid.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/sampr_domain_info_buffer.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_close_handle_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_close_handle_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_connect_request.rb
@@ -146,6 +148,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_domain_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_domain_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_user_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_user_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_query_information_domain_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_query_information_domain_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_request.rb
@@ -185,6 +189,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/enum_key_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/enum_key_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/enum_value_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/enum_value_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/get_key_security_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/get_key_security_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/open_key_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/open_key_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/open_root_key_request.rb
@@ -196,6 +202,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/query_value_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/regsam.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/save_key_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/save_key_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/set_key_security_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/set_key_security_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_response.rb
