@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/05 18:30:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/12 15:16:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pcaprub_c.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/FAQ.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -24,4 +23,3 @@ ${GEM_LIBDIR}/lib/pcaprub_c.${RUBY_DLEXT}
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_pcaprub_unit.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.3.0/build_info
