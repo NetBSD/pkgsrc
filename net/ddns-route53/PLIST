@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/12 12:41:57 pho Exp $
+bin/ddns-route53
