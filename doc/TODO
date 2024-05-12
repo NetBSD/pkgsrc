@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24433 2024/05/12 10:42:43 wiz Exp $
+$NetBSD: TODO,v 1.24434 2024/05/12 15:35:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,6 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.22.1
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -624,6 +625,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o facter-2.4.5
 	o fakeroot-1.6.5
 	o fd-3.01j
+	o fd-find-10.1.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
@@ -815,6 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.17.1
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -830,6 +833,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
+	o keepassxc-2.7.8
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -1118,7 +1122,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
-	o prometheus-2.51.2
+	o prometheus-2.52.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1241,11 +1245,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o skype-4.3
 	o smproxy-1.0.3
 	o snd-21.3
+	o snmp_exporter-0.26.0
 	o snobol-2.1.5
 	o snoopy-2.4.14
 	o snort-2.9.17.1
 	o socket-1.2
 	o softhsm-2.6.1
+	o sonic-0.2.0
 	o sparsehash-2.0.4
 	o spcaview-20060501
 	o spiped-1.6.1b
@@ -1320,6 +1326,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-0.22.6
+	o tree-sitter-dockerfile-0.2.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
