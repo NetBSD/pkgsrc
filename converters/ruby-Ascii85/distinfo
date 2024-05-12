@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:06:52 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/05/12 15:02:36 taca Exp $
 
-BLAKE2s (Ascii85-1.1.0.gem) = 3cae6d5d46ace6a2cb62b7c2749d7f625415dfe3161cff4670108dddaa164abf
-SHA512 (Ascii85-1.1.0.gem) = f160dbc06f49aaf1c678ece5b94fab4c3878cf7fe6accc267e64505e412072cb28b9dc28ec1ed8bf01ddbd7c08c920d95fbe182f756072d614b9827f6ec50094
-Size (Ascii85-1.1.0.gem) = 12288 bytes
+BLAKE2s (Ascii85-1.1.1.gem) = e6d0bf66bccfa3259273d6901fbc3358c37c8ed86cbde204bd61f2d2a6a2bf54
+SHA512 (Ascii85-1.1.1.gem) = 6d2f9941ed88d4e7c3867a8c9da1bf56696195447be5f9edd5fc0f62231e60c2786363823703c26da9d614d776866a93a983d7e64a631532315c51b6eb258045
+Size (Ascii85-1.1.1.gem) = 12288 bytes
