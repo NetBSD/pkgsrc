@@ -1,4 +1,4 @@
-$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.7 2024/05/01 21:05:18 adam Exp $
+$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.8 2024/05/12 13:47:30 gdt Exp $
 
 Fix executing dynamically-linked executable from the build directory.
 
@@ -12,7 +12,7 @@ RPATH command to cmake, and discuss with upstream.
      add_custom_target(synccrsdb
        COMMENT "Running crssync"
 -      COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/crssync
-+      COMMAND env LD_LIBRARY_PATH=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/../lib ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/crssync
++      COMMAND env LD_LIBRARY_PATH=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/../lib DYLD_LIBRARY_PATH=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/../lib ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/crssync
        DEPENDS crssync
      )
    endif()

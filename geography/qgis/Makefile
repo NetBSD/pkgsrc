@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.209 2024/05/08 16:59:01 gdt Exp $
+# $NetBSD: Makefile,v 1.210 2024/05/12 13:47:30 gdt Exp $
 
-# This is intentionally 3.28 Long Term Release.  Please do not update
+# This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
-# versions, or to only track one LTR branch.  3.34 LTR is pending
-# testing, on the theory that slightly old solid is better than
-# up-to-date with issues.
-DISTNAME=	qgis-3.28.15
-PKGREVISION=	4
+# versions, or to only track one LTR branch.
+DISTNAME=	qgis-3.34.6
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -60,12 +57,17 @@ SUBST_CLASSES+=		pyqt
 SUBST_STAGE.pyqt=	pre-configure
 SUBST_MESSAGE.pyqt=	Use correct python version for PyQt5 programs
 SUBST_FILES.pyqt=	cmake/PyQtMacros.cmake cmake/FindPyQt5.cmake
-SUBST_SED.pyqt+=	-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
-SUBST_SED.pyqt+=	-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=	-e '/^ *SET/s,pyuic5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=	-e '/^ *SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
+
+# \todo Understand what draco is and perhaps add to pkgsrc.
+CMAKE_ARGS+=		-DWITH_DRACO=FALSE
+# \todo Understand and probably add.
+CMAKE_ARGS+=		-DWITH_3D=FALSE
 
 # Server support is WIP; it has merely been tested that regular use
 # has not been broken.
@@ -102,6 +104,7 @@ CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 #.include "../../devel/qjson/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/libspatialite/buildlink3.mk"
+.include "../../geography/pdal-lib/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../geography/spatialindex/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
