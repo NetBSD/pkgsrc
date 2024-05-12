@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.14 2024/05/05 15:15:24 wiz Exp $
+# $NetBSD: go-module.mk,v 1.15 2024/05/12 19:45:56 wiz Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -80,8 +80,8 @@ SITES.${i:C/[\/!]/_/g}= -https://proxy.golang.org/${i}
 post-extract: post-extract-go
 post-extract-go:
 .for i in ${GO_MODULE_FILES}
-	${MKDIR} ${WRKDIR}/.goproxy/${i:H}
-	cp ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
+	@${MKDIR} ${WRKDIR}/.goproxy/${i:H}
+	@cp ${DISTDIR}/${DIST_SUBDIR}/${i:C/[\/!]/_/g} ${WRKDIR}/.goproxy/${i}
 .endfor
 
 .PHONY: pre-clean-go
