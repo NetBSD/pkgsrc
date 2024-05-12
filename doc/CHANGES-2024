@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3379 2024/05/12 17:48:42 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3380 2024/05/12 17:48:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5306,3 +5306,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/py-ninja version 1.11.1.1 [wiz 2024-05-12]
 	Added devel/py-msgspec version 0.18.6 [wiz 2024-05-12]
 	Added devel/py-pycnite version 2023.10.11 [wiz 2024-05-12]
+	Added devel/py-pytype version 2024.4.11 [wiz 2024-05-12]
