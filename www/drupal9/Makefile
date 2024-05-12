@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/12/30 21:52:22 zafer Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/12 14:36:46 taca Exp $
 
 DISTNAME=	drupal-9.3.22
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=5.4.0:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.4.0:../../databases/php-pdo
 
-PHP_VERSIONS_ACCEPTED=	74 80 81
+PHP_VERSIONS_ACCEPTED=	74 81
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
