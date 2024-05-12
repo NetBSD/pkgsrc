@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2020/03/22 09:38:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/12 16:22:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/HISTORY.md
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/examples/benchmarks.rb
-${GEM_LIBDIR}/examples/stats.rb
+${GEM_LIBDIR}/hitimes.gemspec
 ${GEM_LIBDIR}/lib/hitimes.rb
 ${GEM_LIBDIR}/lib/hitimes/initialize.rb
 ${GEM_LIBDIR}/lib/hitimes/instant.rb
@@ -20,17 +18,4 @@ ${GEM_LIBDIR}/lib/hitimes/timed_metric.rb
 ${GEM_LIBDIR}/lib/hitimes/timed_value_metric.rb
 ${GEM_LIBDIR}/lib/hitimes/value_metric.rb
 ${GEM_LIBDIR}/lib/hitimes/version.rb
-${GEM_LIBDIR}/spec/hitimes_spec.rb
-${GEM_LIBDIR}/spec/interval_spec.rb
-${GEM_LIBDIR}/spec/metric_spec.rb
-${GEM_LIBDIR}/spec/mutex_stats_spec.rb
-${GEM_LIBDIR}/spec/paths_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/stats_spec.rb
-${GEM_LIBDIR}/spec/timed_metric_spec.rb
-${GEM_LIBDIR}/spec/timed_value_metric_spec.rb
-${GEM_LIBDIR}/spec/value_metric_spec.rb
-${GEM_LIBDIR}/spec/version_spec.rb
-${GEM_LIBDIR}/tasks/default.rake
-${GEM_LIBDIR}/tasks/this.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
