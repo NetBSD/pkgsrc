@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/03/24 14:25:47 taca Exp $
+$NetBSD: distinfo,v 1.15 2024/05/12 15:13:18 taca Exp $
 
-BLAKE2s (nio4r-2.7.1.gem) = e2251de32acb21e9956b5e364b123b232d4a119b2304a427a2be3f849524bd33
-SHA512 (nio4r-2.7.1.gem) = acade5696fe343b92f35f4bcfb7fbda48c8d9bbacff8e0571cffa193ade48d0c8f184db3480084bf3d796e5bd9176b285be4a52e4470c406bf867f538f1bfd4a
-Size (nio4r-2.7.1.gem) = 124416 bytes
+BLAKE2s (nio4r-2.7.3.gem) = 9649515df8041bf1be3cd51dcce25a93ef50d4c207ff8418355b6045dbe3e955
+SHA512 (nio4r-2.7.3.gem) = 88c8f74fd5e7d4b3f037d04d7538940f2b3def76e0f86103bf9c585b9d97bad6ef8381d5b4c1eea7c06d20c0659d4d89d1a781a48a2754e32f81cfff810f443a
+Size (nio4r-2.7.3.gem) = 116736 bytes
