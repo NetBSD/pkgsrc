@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3347 2024/05/12 15:01:02 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3348 2024/05/12 15:02:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5274,3 +5274,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/pear-DB to 1.12.2 [taca 2024-05-12]
 	Removed lang/php80 [taca 2024-05-12]
 	Updated www/ruby-rack to 3.0.11 [taca 2024-05-12]
+	Updated converters/ruby-Ascii85 to 1.1.1 [taca 2024-05-12]
