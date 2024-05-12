@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3327 2024/05/12 06:10:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3328 2024/05/12 07:20:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5254,3 +5254,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-pallets-sphinx-themes to 2.1.3 [adam 2024-05-11]
 	Updated editors/nano to 8.0 [schwarz 2024-05-11]
 	Updated filesystems/p5-Path-Tiny to 0.146 [wiz 2024-05-12]
+	Updated graphics/krita to 5.2.2nb4 [wiz 2024-05-12]
