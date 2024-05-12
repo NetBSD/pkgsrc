@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3340 2024/05/12 12:42:05 pho Exp $
+$NetBSD: CHANGES-2024,v 1.3341 2024/05/12 13:47:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cyclonedx-python-lib to 7.3.4 [wiz 2024-05-12]
 	Updated www/py-google-api-python-client to 2.129.0 [wiz 2024-05-12]
 	Added net/ddns-route53 version 2.12.0 [pho 2024-05-12]
+	Updated geography/qgis to 3.34.6 [gdt 2024-05-12]
