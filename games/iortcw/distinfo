@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/05/12 17:51:54 nia Exp $
 
 BLAKE2s (iortcw-1.51c.tar.gz) = 968e1aef1ab2190f6a3b5ecc5a59186a325d0d2306a7b944d7fe998e8e3f1782
 SHA512 (iortcw-1.51c.tar.gz) = bed985e00ba117bfe8c5fae20671575af2fa1c2eeaaba9ef69e6b82485d883084138f7f949299cfdad8171b40209d9baf111879acfd01e5eae16859b63ce77c6
 Size (iortcw-1.51c.tar.gz) = 27246236 bytes
-SHA1 (patch-MP_Makefile) = c3614773c88bbe619a2a049820c0958cbb8ec879
+SHA1 (patch-MP_Makefile) = e9764e935e33916d8d1cac5ad45f73299b26cf4c
 SHA1 (patch-MP_code_qcommon_q__platform.h) = 70a91097da12aef4737feda2c3e3de1767f1e603
-SHA1 (patch-SP_Makefile) = ec6f37f38454c6112aa7443df4baa75feff11582
+SHA1 (patch-MP_code_splines_util__str.cpp) = 57cfb31d04dcf078d48f4253c1d9630cb3817cd1
+SHA1 (patch-SP_Makefile) = 7521a31961811458c438a67426a3a70e18c01e05
 SHA1 (patch-SP_code_qcommon_q__platform.h) = e469aefba31c26bf161a47533c8468b97aabed27
+SHA1 (patch-SP_code_splines_util__str.cpp) = 62c4c7e35ed0cfc46da617149da631f841bfc4a3
