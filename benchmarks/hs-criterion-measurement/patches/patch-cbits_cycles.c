@@ -1,8 +1,8 @@
-$NetBSD: patch-cbits_cycles.c,v 1.1 2024/05/02 05:16:58 pho Exp $
+$NetBSD: patch-cbits_cycles.c,v 1.2 2024/05/12 05:48:30 pho Exp $
 
 Add support for non-Darwin, non-Linux, aarch64 platforms.
 
-TODO: Upstream this.
+https://github.com/haskell/criterion/pull/282
 
 --- cbits/cycles.c.orig	2024-05-02 05:12:32.848662895 +0000
 +++ cbits/cycles.c
