@@ -1,8 +1,8 @@
-$NetBSD: patch-rts_rts.cabal.in,v 1.1 2024/05/08 02:43:59 pho Exp $
+$NetBSD: patch-rts_rts.cabal.in,v 1.2 2024/05/12 03:40:55 pho Exp $
 
 Fix build on Illumos where ld(1) dislikes undefined symbols in executables just like MacOS X.
 
-TODO: Upstream this
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/12613
 
 --- rts/rts.cabal.in.orig	2024-05-07 09:28:23.509544641 +0000
 +++ rts/rts.cabal.in
