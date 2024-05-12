@@ -1,4 +1,4 @@
-$NetBSD: patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs,v 1.1 2024/04/28 16:23:44 pho Exp $
+$NetBSD: patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs,v 1.2 2024/05/12 05:09:57 pho Exp $
 
 Fix a long-standing Cabal bug: when a package to be built contains a
 library that has no Haskell modules, "./Setup register" tries to register
@@ -11,7 +11,7 @@ I kept telling him to just ignore them. I was lazy (as always) and
 repeatedly said something like "oh yeah I'll fix it some time in the
 future" but now the future has finally come! (pho@)
 
-TODO: Upstream this
+https://github.com/haskell/cabal/pull/9997
 
 --- libraries/Cabal/Cabal/src/Distribution/Simple/Register.hs.orig	2024-04-28 14:54:00.713517045 +0000
 +++ libraries/Cabal/Cabal/src/Distribution/Simple/Register.hs
