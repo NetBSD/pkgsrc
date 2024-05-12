@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/04/14 18:00:08 js Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/05/12 13:58:14 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
@@ -242,7 +242,7 @@ include/ObjFWTest/OTTestCase.h
 include/ObjFWTest/ObjFWTest.h
 lib/libobjfw.so
 lib/libobjfw.so.1
-lib/libobjfw.so.1.1.0
+lib/libobjfw.so.1.1.2
 lib/libobjfwtest.a
 lib/objfw-config/ObjFWTest.oc
 share/ofarc/localization/de.json
