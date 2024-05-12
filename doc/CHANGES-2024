@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3333 2024/05/12 08:37:25 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3334 2024/05/12 08:38:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/ncspot to 1.1.1 [pin 2024-05-12]
 	Updated graphics/oculante to 0.8.21 [pin 2024-05-12]
 	Updated graphics/stitchy to 0.1.7 [pin 2024-05-12]
+	Updated misc/rust-kanban to 0.9.6 [pin 2024-05-12]
