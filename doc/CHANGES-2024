@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3339 2024/05/12 10:42:43 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3340 2024/05/12 12:42:05 pho Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5266,3 +5266,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-blinker to 1.8.2 [wiz 2024-05-12]
 	Updated security/py-cyclonedx-python-lib to 7.3.4 [wiz 2024-05-12]
 	Updated www/py-google-api-python-client to 2.129.0 [wiz 2024-05-12]
+	Added net/ddns-route53 version 2.12.0 [pho 2024-05-12]
