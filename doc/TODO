@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24434 2024/05/12 15:35:23 wiz Exp $
+$NetBSD: TODO,v 1.24435 2024/05/12 16:56:38 taca Exp $
 
 Suggested new packages
 ======================
@@ -1060,6 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pandoc-cli-3.2
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
+	o passenger-6.0.20
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
