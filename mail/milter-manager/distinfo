@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 10:54:08 nia Exp $
+$NetBSD: distinfo,v 1.31 2024/05/12 16:51:56 taca Exp $
 
-BLAKE2s (milter-manager-2.1.5.tar.gz) = 396c81148e40b739268864f021aab22a696c635857419f5c24de9581efa04e0c
-SHA512 (milter-manager-2.1.5.tar.gz) = a2f01deb6c8cece24d3686e87cd401e460fcc7d8e4f1a41481815864525cfa37828f0f75533f0eb8d7f8d5c8395d5a77dac177b79b7c15cab49e604ea8ae2668
-Size (milter-manager-2.1.5.tar.gz) = 6583279 bytes
-SHA1 (patch-configure) = ee1f31e83354c4c6b38ae1c0d4fda40f28ad92b6
-SHA1 (patch-module_configuration_ruby_milter-manager-ruby-configuration.c) = 50722053e3db2404d792900f92323ab886ba607a
+BLAKE2s (milter-manager-2.2.7.tar.gz) = 0c4d28a79e8fcfa0bf8862c5ce75f5029f0d1e461ad2b0e26f76273187e12d7c
+SHA512 (milter-manager-2.2.7.tar.gz) = 23d531180fb95271e58ff736c450e7c5e97bfea0892eeac94417c4f6bfa874179fef92e68f0827aca93298fdcbdaeaa30b2d857d2a5f58f17aaf8fde6f534d7b
+Size (milter-manager-2.2.7.tar.gz) = 5278536 bytes

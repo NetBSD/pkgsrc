@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2024/02/10 14:42:38 taca Exp $
+# $NetBSD: Makefile,v 1.55 2024/05/12 16:51:56 taca Exp $
 #
 
 DISTNAME=	milter-manager-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=milter-manager/}
 GITHUB_RELEASE=	${VERSION}
@@ -11,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
 
-VERSION=	2.1.5
+VERSION=	2.2.7
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt
