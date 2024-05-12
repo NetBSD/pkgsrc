@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/07 13:59:05 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/12 14:36:46 taca Exp $
 #
 
 DISTNAME=	concrete-cms-${GITHUB_RELEASE}
@@ -6,7 +6,7 @@ PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=concretecms/}
 GITHUB_PROJECT=	concretecms
-GITHUB_RELEASE=	9.2.8
+GITHUB_RELEASE=	9.2.9
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,7 +24,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.0:../../security/php-pecl-mcrypt
 
 SUPERSEDES+=	${PHP_PKG_PREFIX}-concrete5-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	80 81 82
+PHP_VERSIONS_ACCEPTED=	81 82
 
 # Avoid unzip's warning
 EXTRACT_OPTS_ZIP=	-qo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/12/24 02:19:21 taca Exp $
+# $NetBSD: Makefile,v 1.49 2024/05/12 14:36:46 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=7.4.0:../../archivers/php-bz2
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.4.0:../../converters/php-mbstring
 
-PHP_VERSIONS_ACCEPTED=	74 80 81
+PHP_VERSIONS_ACCEPTED=	74 81
 
 EXTRACT_DIR=	${WRKSRC}
 USE_TOOLS+=	pax
