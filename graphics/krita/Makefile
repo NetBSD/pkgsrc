@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.127 2024/04/07 07:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2024/05/12 07:20:21 wiz Exp $
 
 DISTNAME=		krita-5.2.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
@@ -58,6 +58,7 @@ BUILDLINK_API_DEPENDS.boost-header+=	boost-headers>=1.73.0nb1
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libkdcraw/buildlink3.mk"
+.include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/opencolorio/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/03/14 20:02:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/05/12 07:20:21 wiz Exp $
 bin/AppImageUpdateDummy
 bin/krita
 bin/krita_version
@@ -87,6 +87,7 @@ lib/kritaplugins/kritalogdocker.so
 lib/kritaplugins/kritametadataeditor.so
 lib/kritaplugins/kritamodifyselection.so
 lib/kritaplugins/kritamultigridpatterngenerator.so
+lib/kritaplugins/kritamypaintop.so
 lib/kritaplugins/kritanoisefilter.so
 lib/kritaplugins/kritanormalize.so
 lib/kritaplugins/kritaoffsetimage.so
@@ -444,6 +445,7 @@ share/krita/images/krita-experiment.png
 share/krita/images/krita-filterop.png
 share/krita/images/krita-grid.png
 share/krita/images/krita-hatching.png
+share/krita/images/krita-mypaint.png
 share/krita/images/krita-paintbrush.png
 share/krita/images/krita-particle.png
 share/krita/images/krita-sketch.png
@@ -475,6 +477,20 @@ share/krita/paintoppresets/Sketch.tag
 share/krita/paintoppresets/Textures.tag
 share/krita/paintoppresets/a)_Eraser_Circle.kpp
 share/krita/paintoppresets/b)_Basic-5_Size_default.kpp
+share/krita/paintoppresets/c)_Pencil_1_Sketch_(mypaint).myb
+share/krita/paintoppresets/c)_Pencil_1_Sketch_(mypaint)_prev.png
+share/krita/paintoppresets/c)_Pencil_2b_(mypaint).myb
+share/krita/paintoppresets/c)_Pencil_2b_(mypaint)_prev.png
+share/krita/paintoppresets/d)_Ink_pen_(mypaint).myb
+share/krita/paintoppresets/d)_Ink_pen_(mypaint)_prev.png
+share/krita/paintoppresets/e)_Marker_Medium_(mypaint).myb
+share/krita/paintoppresets/e)_Marker_Medium_(mypaint)_prev.png
+share/krita/paintoppresets/e)_Marker_Plain_(mypaint).myb
+share/krita/paintoppresets/e)_Marker_Plain_(mypaint)_prev.png
+share/krita/paintoppresets/i)_Wet_Knife_Plus_(mypaint).myb
+share/krita/paintoppresets/i)_Wet_Knife_Plus_(mypaint)_prev.png
+share/krita/paintoppresets/i)_Wet_Paint_Plus_(mypaint).myb
+share/krita/paintoppresets/i)_Wet_Paint_Plus_(mypaint)_prev.png
 share/krita/paintoppresets/j)_WaterC_Basic_Lines-Dry.kpp
 share/krita/paintoppresets/j)_WaterC_Basic_Lines-Wet-Pattern.kpp
 share/krita/paintoppresets/j)_WaterC_Basic_Lines-Wet.kpp
