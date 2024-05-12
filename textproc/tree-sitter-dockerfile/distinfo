@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/18 16:38:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/05/12 18:41:18 wiz Exp $
 
-BLAKE2s (tree-sitter-dockerfile-0.1.2.tar.gz) = fac5ce0479dcfc144382d4d29b2380d28263e2c121b20b9f1eedd291b4e1bbda
-SHA512 (tree-sitter-dockerfile-0.1.2.tar.gz) = 7bf41a5217a13067a436af2ba670c0f5a8194a58c3b2a11b475f3a7c7d4a0fa0daafda22a99fb9c8ab710cdbf76e7ec925632c403bd08821ab3846702b3d2094
-Size (tree-sitter-dockerfile-0.1.2.tar.gz) = 40106 bytes
+BLAKE2s (tree-sitter-dockerfile-0.2.0.tar.gz) = c92290c2cc047296ee211990226a97597c47ce37bfc276b6571d75c6a056ade5
+SHA512 (tree-sitter-dockerfile-0.2.0.tar.gz) = 0a41d04f865cdbae79a13a0d5789427a81a56257037bf4c69e62be5ac777445b6aad4618652d252f101c3d2c020ff5a920d850399715fc8f6e2bf5bcf9841bcc
+Size (tree-sitter-dockerfile-0.2.0.tar.gz) = 64994 bytes

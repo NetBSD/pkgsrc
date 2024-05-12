@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/01/20 11:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/12 18:41:18 wiz Exp $
 
-DISTNAME=	tree-sitter-dockerfile-0.1.2
-PKGREVISION=	1
+DISTNAME=	tree-sitter-dockerfile-0.2.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camdencheek/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
