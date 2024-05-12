@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/02/25 14:03:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/12 15:02:36 taca Exp $
 bin/ascii85${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Ascii85.gemspec
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.txt
