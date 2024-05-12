@@ -1,13 +1,13 @@
-$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.8 2024/05/12 13:47:30 gdt Exp $
+$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.9 2024/05/12 19:07:37 gdt Exp $
 
 Fix executing dynamically-linked executable from the build directory.
 
 \todo Understand if this is the right fix, vs some sort of build-time
 RPATH command to cmake, and discuss with upstream.
 
---- src/crssync/CMakeLists.txt.orig	2022-01-14 12:06:34.000000000 +0000
+--- src/crssync/CMakeLists.txt.orig	2024-04-19 12:01:44.000000000 +0000
 +++ src/crssync/CMakeLists.txt
-@@ -23,7 +23,7 @@ else ()
+@@ -21,7 +21,7 @@ else ()
    else()
      add_custom_target(synccrsdb
        COMMENT "Running crssync"
