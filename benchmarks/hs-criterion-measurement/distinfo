@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2024/05/02 05:16:57 pho Exp $
+$NetBSD: distinfo,v 1.3 2024/05/12 05:48:30 pho Exp $
 
 BLAKE2s (criterion-measurement-0.2.1.0.tar.gz) = 65f596677ada8bfe46246ecc9b8879ca647bc6e8e708e9e4c013fbffd3d56423
 SHA512 (criterion-measurement-0.2.1.0.tar.gz) = 8fc9a16a5ef7396a005fb352383c069b65b156d9d1f7e3c3e1fa47667b4d286dcb6fad203d18f5c743eef08710300ca0871f0eabd052f3ede274829660d047b9
 Size (criterion-measurement-0.2.1.0.tar.gz) = 17823 bytes
-SHA1 (patch-cbits_cycles.c) = ce8990e352a384265028fc08a390cb1fc6fd2cf0
+SHA1 (patch-cbits_cycles.c) = f56dee638d6ace3ddd8abefc5165f701a7b6a2bf
