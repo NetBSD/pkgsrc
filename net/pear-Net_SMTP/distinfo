@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/04/07 13:51:31 taca Exp $
+$NetBSD: distinfo,v 1.28 2024/05/12 14:27:02 taca Exp $
 
-BLAKE2s (pear/20231026/Net_SMTP-1.12.0.tgz) = daedf20c41b04bb748447a4ca92ead34ffcf5df8c071f946798d82cecd44dc4b
-SHA512 (pear/20231026/Net_SMTP-1.12.0.tgz) = c37b3baa57e0ff57dfe596991afeafd98ba8d01466743d025fbcc49008c52f3dd7b3eba7e9495e86449fecc3c257dd95a1cc3ee23fdc9b4314d69720d1cec926
-Size (pear/20231026/Net_SMTP-1.12.0.tgz) = 17671 bytes
+BLAKE2s (pear/20231026/Net_SMTP-1.12.1.tgz) = 9d1c7770e9aafc47db202b43470bdf70eaed4ac1afc32242bb64d0217aed01d9
+SHA512 (pear/20231026/Net_SMTP-1.12.1.tgz) = 5c2ed90157aac3ed140ebaa6ded8781e32d738de60ea6061f1e961effd133bedb4e9887cc3bf06bc78b133c6f9cd95c97a85a18a08a860ddeb28cfbfc62862c6
+Size (pear/20231026/Net_SMTP-1.12.1.tgz) = 17679 bytes
