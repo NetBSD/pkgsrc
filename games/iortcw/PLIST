@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/18 16:20:02 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/12 17:51:54 nia Exp $
 bin/iowolfded
 bin/iowolfmp
 bin/iowolfsp
@@ -12,9 +12,9 @@ share/iortcw/iowolfmp_rend2.${IORTCW_ARCH}
 share/iortcw/iowolfsp.${IORTCW_ARCH}
 share/iortcw/iowolfsp_rend2.${IORTCW_ARCH}
 share/iortcw/iowolfspded.${IORTCW_ARCH}
-share/iortcw/main/cgame.mp.${IORTCW_ARCH}.so
-share/iortcw/main/cgame.sp.${IORTCW_ARCH}.so
-share/iortcw/main/qagame.mp.${IORTCW_ARCH}.so
-share/iortcw/main/qagame.sp.${IORTCW_ARCH}.so
-share/iortcw/main/ui.mp.${IORTCW_ARCH}.so
-share/iortcw/main/ui.sp.${IORTCW_ARCH}.so
+share/iortcw/main/cgame.mp.${IORTCW_ARCH}.${SO_EXT}
+share/iortcw/main/cgame.sp.${IORTCW_ARCH}.${SO_EXT}
+share/iortcw/main/qagame.mp.${IORTCW_ARCH}.${SO_EXT}
+share/iortcw/main/qagame.sp.${IORTCW_ARCH}.${SO_EXT}
+share/iortcw/main/ui.mp.${IORTCW_ARCH}.${SO_EXT}
+share/iortcw/main/ui.sp.${IORTCW_ARCH}.${SO_EXT}
