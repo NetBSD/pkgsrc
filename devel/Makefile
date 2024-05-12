@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4272 2024/05/12 17:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4273 2024/05/12 17:48:21 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2709,6 +2709,7 @@ SUBDIR+=	py-more-itertools
 SUBDIR+=	py-more-itertools2
 SUBDIR+=	py-mox
 SUBDIR+=	py-msgpack
+SUBDIR+=	py-msgspec
 SUBDIR+=	py-mulpyplexer
 SUBDIR+=	py-multipledispatch
 SUBDIR+=	py-nampa
@@ -2777,6 +2778,7 @@ SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pybind11
+SUBDIR+=	py-pycnite
 SUBDIR+=	py-pycotap
 SUBDIR+=	py-pydantic
 SUBDIR+=	py-pydantic-core
@@ -2948,6 +2950,7 @@ SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
+SUBDIR+=	py-pytype
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
