@@ -1,10 +1,10 @@
-$NetBSD: patch-m4_fp__find__cxx__std__lib.m4,v 1.1 2024/05/06 02:26:40 pho Exp $
+$NetBSD: patch-m4_fp__find__cxx__std__lib.m4,v 1.2 2024/05/12 02:52:35 pho Exp $
 
 $CXX must not be quoted because it may contain flags. The same goes for
 $CC. This causes a configuration failure on MacOS X 14 where AC_PROG_CXX
 sets $CXX to "clang++ -std=gnu++11".
 
-TODO: Upstream this.
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/12612
 
 --- m4/fp_find_cxx_std_lib.m4.orig	2024-05-05 18:35:55.965776858 +0000
 +++ m4/fp_find_cxx_std_lib.m4
