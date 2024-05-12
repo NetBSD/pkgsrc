@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3382 2024/05/12 18:41:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3383 2024/05/12 18:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5309,3 +5309,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/py-pytype version 2024.4.11 [wiz 2024-05-12]
 	Updated textproc/tree-sitter to 0.22.6 [wiz 2024-05-12]
 	Updated textproc/tree-sitter-dockerfile to 0.2.0 [wiz 2024-05-12]
+	Updated devel/jj to 0.17.1 [wiz 2024-05-12]
