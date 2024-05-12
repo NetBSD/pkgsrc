@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/04/07 13:59:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/12 16:40:58 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -2141,6 +2141,7 @@ ${CC_WEBDIR}/concrete/elements/dashboard/health/grade/score.php
 ${CC_WEBDIR}/concrete/elements/dashboard/health/report/finding/message/search/details.php
 ${CC_WEBDIR}/concrete/elements/dashboard/marketplace_connect_failed.php
 ${CC_WEBDIR}/concrete/elements/dashboard/marketplace_project_page.php
+${CC_WEBDIR}/concrete/elements/dashboard/marketplace_upgrade.php
 ${CC_WEBDIR}/concrete/elements/dashboard/mobile_menu.php
 ${CC_WEBDIR}/concrete/elements/dashboard/navigation/breadcrumb.php
 ${CC_WEBDIR}/concrete/elements/dashboard/navigation/mobile.php
@@ -3172,6 +3173,8 @@ ${CC_WEBDIR}/concrete/images/logo.svg
 ${CC_WEBDIR}/concrete/images/logo_menu.png
 ${CC_WEBDIR}/concrete/images/marketplace_more_fade.png
 ${CC_WEBDIR}/concrete/images/marketplace_review_quote.png
+${CC_WEBDIR}/concrete/images/marketplace_upgrade_addon.png
+${CC_WEBDIR}/concrete/images/marketplace_upgrade_theme.png
 ${CC_WEBDIR}/concrete/images/newsflow_logo_welcome_back.png
 ${CC_WEBDIR}/concrete/images/newsflow_logo_welcome_first_run.png
 ${CC_WEBDIR}/concrete/images/newsflow_next.png
@@ -7110,6 +7113,7 @@ ${CC_WEBDIR}/concrete/src/Announcement/Controller/CollectSiteInformationControll
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/ControllerInterface.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/Traits/SingleSlideTrait.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/Update/Version920Controller.php
+${CC_WEBDIR}/concrete/src/Announcement/Controller/Update/Version929Controller.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/WelcomeController.php
 ${CC_WEBDIR}/concrete/src/Announcement/Icon/AbstractIcon.php
 ${CC_WEBDIR}/concrete/src/Announcement/Icon/IconInterface.php
@@ -10576,6 +10580,7 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20231002142400.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20231207100748.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240119210413.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240122172319.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240506191622.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
@@ -12191,12 +12196,9 @@ ${CC_WEBDIR}/concrete/vendor/doctrine/collections/lib/Doctrine/Common/Collection
 ${CC_WEBDIR}/concrete/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ExpressionBuilder.php
 ${CC_WEBDIR}/concrete/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ReadableCollection.php
 ${CC_WEBDIR}/concrete/vendor/doctrine/collections/lib/Doctrine/Common/Collections/Selectable.php
-${CC_WEBDIR}/concrete/vendor/doctrine/common/.doctrine-project.json
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/LICENSE
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/docs/en/index.rst
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/docs/en/reference/class-loading.rst
-${CC_WEBDIR}/concrete/vendor/doctrine/common/phpstan.neon.dist
-${CC_WEBDIR}/concrete/vendor/doctrine/common/psalm.xml
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/src/ClassLoader.php
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/src/CommonException.php
 ${CC_WEBDIR}/concrete/vendor/doctrine/common/src/Comparable.php
@@ -19624,6 +19626,7 @@ ${CC_WEBDIR}/concrete/vendor/symfony/service-contracts/ServiceProviderInterface.
 ${CC_WEBDIR}/concrete/vendor/symfony/service-contracts/ServiceSubscriberInterface.php
 ${CC_WEBDIR}/concrete/vendor/symfony/service-contracts/ServiceSubscriberTrait.php
 ${CC_WEBDIR}/concrete/vendor/symfony/service-contracts/Test/ServiceLocatorTest.php
+${CC_WEBDIR}/concrete/vendor/symfony/service-contracts/Test/ServiceLocatorTestCase.php
 ${CC_WEBDIR}/concrete/vendor/symfony/stopwatch/LICENSE
 ${CC_WEBDIR}/concrete/vendor/symfony/stopwatch/Section.php
 ${CC_WEBDIR}/concrete/vendor/symfony/stopwatch/Stopwatch.php
