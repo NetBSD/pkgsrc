@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/05/12 03:40:55 pho Exp $
+$NetBSD: distinfo,v 1.10 2024/05/12 05:09:57 pho Exp $
 
 BLAKE2s (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = c771cfa45f5635bdf8175775cf7a67c9541bd5b4d4927ed9b5189e3dcefcd2ba
 SHA512 (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 3d50e4c6605ebfa7eef018d3e9e11e8115cf2f97e24a5adfc05fd1bab152c726e240f9a213d73e220dc7fc5b9358df74eee0d4cb1b77bd5491f28899c831b1a4
@@ -38,7 +38,7 @@ SHA1 (patch-hadrian_src_Rules_BinaryDist.hs) = fb908f74b8b619bccd673fbdb40b1c53a
 SHA1 (patch-hadrian_src_Settings_Builders_Ghc.hs) = e2913e9f83bb36bb0b432a24518c9b6ca2990c6a
 SHA1 (patch-hadrian_src_Settings_Packages.hs) = f21f801727cf5889c3b41e88beb33290a4cc1574
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC.hs) = 9e6028dd6ffc2d3c71493fbb7336adcec9f08f78
-SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs) = 2bfadb25ae6fdc701c3de988d8886eab48999de6
+SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs) = adbb8fe40fc1a0e4afa7cd4bfb1c32b08ab73f15
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
 SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
