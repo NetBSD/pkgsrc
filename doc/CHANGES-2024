@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3377 2024/05/12 17:45:52 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3378 2024/05/12 17:48:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/milter-manager to 2.2.7 [taca 2024-05-12]
 	Added devel/py-importlab version 0.8.1 [wiz 2024-05-12]
 	Added devel/py-ninja version 1.11.1.1 [wiz 2024-05-12]
+	Added devel/py-msgspec version 0.18.6 [wiz 2024-05-12]
