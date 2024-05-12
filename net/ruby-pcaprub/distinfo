@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/28 08:02:29 taca Exp $
+$NetBSD: distinfo,v 1.6 2024/05/12 15:16:09 taca Exp $
 
-BLAKE2s (pcaprub-0.13.1.gem) = 68ac65dd89ee55799ba642326ccccc0e467f350e0e5f81538937f474e84e5788
-SHA512 (pcaprub-0.13.1.gem) = 3079a5f7b29df502b5bbf0afdb7c670c9a43fbb4024163001018ebffd660597197cb0c146005f1ce027f00f2ba4c2e0430a8574cb10c4fac310a8b04411c53dd
-Size (pcaprub-0.13.1.gem) = 36864 bytes
+BLAKE2s (pcaprub-0.13.2.gem) = c2637d0096753b20593e7482ff662ebb107143a1555cd59f2cb4c939f53102c8
+SHA512 (pcaprub-0.13.2.gem) = 1be60a684ead0a91bd113150ac426f86f30b906bc2a300ac334ac9cc323406e4680d9578070d9f39cb479d9a45c2e4f42c11db9ca5531f8d5dee8d1dfc01425f
+Size (pcaprub-0.13.2.gem) = 36864 bytes
