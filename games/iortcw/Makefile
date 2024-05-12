@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2024/04/06 08:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/12 17:51:54 nia Exp $
 
 DISTNAME=	iortcw-1.51c
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=iortcw/}
 
@@ -29,8 +29,6 @@ MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CXX=${CXX:Q}
 MAKE_FLAGS+=	TOOLS_CC=${CC:Q}
 MAKE_FLAGS+=	BUILD_BASEGAME=1
-MAKE_FLAGS+=	USE_OPENAL=1
-MAKE_FLAGS+=	USE_OPENAL_DLOPEN=0
 MAKE_FLAGS+=	USE_CURL=1
 MAKE_FLAGS+=	USE_CURL_DLOPEN=0
 MAKE_FLAGS+=	USE_CODEC_VORBIS=1
@@ -56,6 +54,12 @@ IORTCW_ARCH=	ppc64
 IORTCW_ARCH=	sparc
 .else
 IORTCW_ARCH=	${MACHINE_ARCH}
+.endif
+
+.if ${SHLIB_TYPE} == "dylib"
+PLIST_SUBST+=	SO_EXT="dylib"
+.else
+PLIST_SUBST+=	SO_EXT="so"
 .endif
 
 # shm_open()
@@ -94,7 +98,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/SP/misc/iortcw.svg \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wolfsp.svg
 
-.include "../../audio/openal-soft/buildlink3.mk"
+.include "options.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
