@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/08/28 04:28:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/05/12 15:55:48 taca Exp $
 bin/recog_match${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -38,6 +38,7 @@ ${GEM_LIBDIR}/recog/xml/html_title.xml
 ${GEM_LIBDIR}/recog/xml/http_cookies.xml
 ${GEM_LIBDIR}/recog/xml/http_servers.xml
 ${GEM_LIBDIR}/recog/xml/http_wwwauth.xml
+${GEM_LIBDIR}/recog/xml/http_xpoweredby.xml
 ${GEM_LIBDIR}/recog/xml/imap_banners.xml
 ${GEM_LIBDIR}/recog/xml/ldap_searchresult.xml
 ${GEM_LIBDIR}/recog/xml/mdns_device-info_txt.xml
