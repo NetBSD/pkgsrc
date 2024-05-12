@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2024/02/15 21:10:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2024/05/12 08:37:05 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
@@ -13,15 +13,13 @@ CARGO_CRATE_DEPENDS+=	clap_lex-0.3.3
 CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	crc32fast-1.3.2
 CARGO_CRATE_DEPENDS+=	flate2-1.0.25
-CARGO_CRATE_DEPENDS+=	gif-0.11.4
+CARGO_CRATE_DEPENDS+=	gif-0.13.1
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	home-0.5.4
-CARGO_CRATE_DEPENDS+=	image-0.24.5
+CARGO_CRATE_DEPENDS+=	image-0.24.9
 CARGO_CRATE_DEPENDS+=	itoa-1.0.6
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.3.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
-CARGO_CRATE_DEPENDS+=	num-integer-0.1.45
-CARGO_CRATE_DEPENDS+=	num-rational-0.4.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.15
 CARGO_CRATE_DEPENDS+=	once_cell-1.17.1
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.5.0
@@ -37,7 +35,7 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.94
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.8
 CARGO_CRATE_DEPENDS+=	version_check-0.9.4
-CARGO_CRATE_DEPENDS+=	weezl-0.1.7
+CARGO_CRATE_DEPENDS+=	weezl-0.1.8
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
