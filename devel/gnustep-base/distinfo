@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.39 2023/01/14 01:40:03 manu Exp $
+$NetBSD: distinfo,v 1.40 2024/05/12 00:22:02 manu Exp $
 
 BLAKE2s (gnustep-base-1.29.0.tar.gz) = 2d1d7a4e64a417bc8b224068f741ccf29439ef69ab36fca90a5934c075c87cda
 SHA512 (gnustep-base-1.29.0.tar.gz) = a3ecbabf09c232acee964b59894f59d42a2ab63f7396c3560d10ad64363ceb455af91f9d40aa386e60f1d9671c436960b70e828e7055005c11f4c02372a4fc0b
 Size (gnustep-base-1.29.0.tar.gz) = 3698001 bytes
+SHA1 (patch-Source_Additions_GSXML.m) = ad3be89d60bb08dcc9b31b8cb8c5e489ecf88a02
 SHA1 (patch-Source_NSProcessInfo.m) = 398c03b9b4a6a97bcd0c13215d444cc4a94ecb19
 SHA1 (patch-Source_common.h) = ed8a68a023b01b1562793678b7ddbd641e3a40d8
 SHA1 (patch-aa) = 5b2b61058fcc8f4c8073598d61cccb3c23429a7c
