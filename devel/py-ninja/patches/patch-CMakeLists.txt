@@ -1,0 +1,89 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/05/12 17:45:15 wiz Exp $
+
+Avoid downloading and building ninja.
+We'll just install a link to the pkgsrc copy in the package Makefile
+instead.
+
+--- CMakeLists.txt.orig	2023-10-09 17:05:36.000000000 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,7 @@ set(src_archive "unix_source")
+ if(WIN32)
+   set(src_archive "windows_source")
+ endif()
+-check_archive_var("${src_archive}")
++#check_archive_var("${src_archive}")
+ 
+ #-----------------------------------------------------------------------------
+ # Summary
+@@ -60,21 +60,6 @@ endif()
+ #-----------------------------------------------------------------------------
+ if(NOT DEFINED Ninja_SOURCE_DIR)
+   set(Ninja_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Ninja-src")
+-
+-  # Download selected source archive
+-  ExternalProject_add(download_ninja_source
+-    SOURCE_DIR ${Ninja_SOURCE_DIR}
+-    URL ${${src_archive}_url}
+-    URL_HASH SHA256=${${src_archive}_sha256}
+-    DOWNLOAD_DIR ${ARCHIVE_DOWNLOAD_DIR}
+-    USES_TERMINAL_DOWNLOAD 1
+-    CONFIGURE_COMMAND ""
+-    BUILD_COMMAND ""
+-    BUILD_IN_SOURCE 1
+-    INSTALL_COMMAND ""
+-    ${ep_download_no_progress_args}
+-    )
+-  message(STATUS "download_ninja_source - URL: ${${src_archive}_url}")
+ elseif(NOT EXISTS ${Ninja_SOURCE_DIR})
+   message(FATAL_ERROR "Ninja_SOURCE_DIR is set to a nonexistent directory")
+ endif()
+@@ -102,48 +87,5 @@ foreach(var_name IN ITEMS
+   endif()
+ endforeach()
+ 
+-# _cache_args should not be empty
+-list(APPEND _cache_args -DNINJA_SUPERBUILD:BOOL=true)
+-ExternalProject_add(build_ninja
+-  SOURCE_DIR ${Ninja_SOURCE_DIR}
+-  BINARY_DIR ${Ninja_BINARY_DIR}
+-  DOWNLOAD_COMMAND ""
+-  UPDATE_COMMAND ""
+-  BUILD_ALWAYS 1
+-  USES_TERMINAL_CONFIGURE 1
+-  USES_TERMINAL_BUILD 1
+-  INSTALL_COMMAND ""
+-  CMAKE_CACHE_ARGS ${_cache_args}
+-  DEPENDS
+-    download_ninja_source
+-  )
+-set(ninja_executable ${Ninja_BINARY_DIR}/ninja${CMAKE_EXECUTABLE_SUFFIX})
+-set(NINJA_BUILD_LAST_STEP "build")
+-
+-# This should not be stripped or tested if cross-compiling on Windows
+-if(CMAKE_CROSS_COMPILE OR NOT DEFINED ENV{DIST_EXTRA_CONFIG})
+-  find_program(STRIP_EXECUTABLE strip)
+-  if(STRIP_EXECUTABLE)
+-    ExternalProject_Add_Step(build_ninja strip_executables
+-      DEPENDEES ${NINJA_BUILD_LAST_STEP}
+-      COMMENT "Stripping CMake executables"
+-      COMMAND ${STRIP_EXECUTABLE} ${ninja_executable}
+-      USES_TERMINAL 1
+-      )
+-    set(NINJA_BUILD_LAST_STEP "strip_executables")
+-  endif()
+-
+-  if(RUN_NINJA_TEST)
+-    ExternalProject_Add_Step(build_ninja run_ninja_test_suite
+-      DEPENDEES ${NINJA_BUILD_LAST_STEP}
+-      COMMENT "Running Ninja test suite"
+-      COMMAND ${Ninja_BINARY_DIR}/ninja_test${CMAKE_EXECUTABLE_SUFFIX}
+-      WORKING_DIRECTORY ${Ninja_BINARY_DIR}
+-      USES_TERMINAL 1
+-      )
+-    set(NINJA_BUILD_LAST_STEP "run_ninja_test_suite")
+-  endif()
+-endif()
+-
+ install(FILES ${Ninja_SOURCE_DIR}/misc/ninja_syntax.py DESTINATION src/ninja)
+-install(PROGRAMS ${ninja_executable} DESTINATION src/ninja/data/bin)
++#install(PROGRAMS ${ninja_executable} DESTINATION src/ninja/data/bin)
