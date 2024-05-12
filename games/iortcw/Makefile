@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/05/12 17:51:54 nia Exp $
+# $NetBSD: Makefile,v 1.29 2024/05/12 19:19:25 nia Exp $
 
 DISTNAME=	iortcw-1.51c
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=iortcw/}
 
@@ -77,6 +77,13 @@ CHECK_PORTABILITY_SKIP+=	SP/make-macosx_xcode5.sh
 CHECK_PORTABILITY_SKIP+=	MP/make-macosx_xcode3.sh
 CHECK_PORTABILITY_SKIP+=	MP/make-macosx_xcode4.sh
 CHECK_PORTABILITY_SKIP+=	MP/make-macosx_xcode5.sh
+
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfded.${IORTCW_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfmp.${IORTCW_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfmp_rend2.${IORTCW_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfsp.${IORTCW_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfsp_rend2.${IORTCW_ARCH}
+NOT_PAX_MPROTECT_SAFE+=	share/iortcw/iowolfspded.${IORTCW_ARCH}
 
 post-build:
 .for bin in iowolfded iowolfmp iowolfsp
