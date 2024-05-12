@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:11:07 nia Exp $
+$NetBSD: distinfo,v 1.20 2024/05/12 16:45:32 cheusov Exp $
 
-BLAKE2s (distbb-0.47.2.tar.gz) = b3be61a27daace4ce97925321d82b5b37803b5e55aca59a06fb5ec110579e819
-SHA512 (distbb-0.47.2.tar.gz) = 7724d7dadc6ec3aa244b49ea73903b617eecf02e3861eb76c9b2e56defebf8f4deb4b58be7225e401e5a109f09b8b85e10c2277df042e039da2ed4111cbaa065
-Size (distbb-0.47.2.tar.gz) = 52475 bytes
+BLAKE2s (distbb-0.48.0.tar.gz) = cd6d588d7f4af8cb68e3d4079ed19b7d8887ff1ef961f19400bf743681dc9860
+SHA512 (distbb-0.48.0.tar.gz) = 0ed9ceda0f1ac8d6fddcf3132bd62851aa0d8e230805d8b73621bf7038367c8004a687131f985bcb2fa816a22a76344c9767e2e66773e6ed8e03465e0d7d02ab
+Size (distbb-0.48.0.tar.gz) = 53826 bytes
