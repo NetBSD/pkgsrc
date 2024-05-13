@@ -1,14 +1,13 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2024/04/03 20:05:43 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2024/05/13 06:17:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.16
-CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.5
+CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.8
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.5.0
-CARGO_CRATE_DEPENDS+=	bstr-0.2.17
 CARGO_CRATE_DEPENDS+=	bstr-1.9.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.14.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.90
@@ -64,7 +63,7 @@ CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	mio-0.8.11
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
-CARGO_CRATE_DEPENDS+=	num-traits-0.2.18
+CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.6.1
 CARGO_CRATE_DEPENDS+=	owo-colors-3.5.0
@@ -83,7 +82,6 @@ CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
 CARGO_CRATE_DEPENDS+=	regex-1.9.6
-CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-automata-0.3.9
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.6
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.7.5
