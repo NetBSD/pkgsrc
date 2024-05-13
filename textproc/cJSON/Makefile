@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/01/01 11:49:57 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/13 14:22:16 adam Exp $
 
-DISTNAME=	cJSON-1.7.17
+DISTNAME=	cJSON-1.7.18
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaveGamble/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
