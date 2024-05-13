@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.28 2024/05/13 08:09:30 wiz Exp $
+# $NetBSD: checksum.mk,v 1.29 2024/05/13 08:10:28 wiz Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -8,7 +8,6 @@ _PATCH_DIGEST_ALGORITHMS?=	SHA1
 
 # These variables are set by pkgsrc/mk/fetch/bsd.fetch-vars.mk.
 #_CKSUMFILES?=	# empty
-#_IGNOREFILES?=	# empty
 
 # _COOKIE.checksum
 #       The file whose presence determines whether or not the checksum
