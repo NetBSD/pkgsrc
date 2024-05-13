@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/19 14:24:34 dogcow Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/13 23:08:56 gutteridge Exp $
 
 DISTNAME=		gcc-13.2.0
 PKGNAME=		cross-riscv64-none-elf-${DISTNAME}
@@ -10,7 +10,6 @@ EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DEFAULT_DISTFILES} \
 			newlib-${NEWLIBVER}.tar.gz
 SITES.newlib-${NEWLIBVER}.tar.gz=	https://www.sourceware.org/pub/newlib/
-
 
 MAINTAINER=		port-riscv@NetBSD.org
 HOMEPAGE=		# none
@@ -45,8 +44,6 @@ USE_TOOLS+=		bash gmake gsed makeinfo perl
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
-CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
-
 GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 
 CONFIGURE_ARGS+=	--target=riscv64-none-elf
