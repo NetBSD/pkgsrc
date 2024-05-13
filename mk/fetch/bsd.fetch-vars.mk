@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.26 2022/05/23 21:45:45 nikita Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.27 2024/05/13 08:09:30 wiz Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -81,20 +81,15 @@ DISTFILES+=			${_GITLAB_SM_USER}-${_GITLAB_SM_PROJECT}-${_GITLAB_SM_TAG}${EXTRAC
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 ALLFILES:=	${ALLFILES:O:u}		# remove duplicates
 CKSUMFILES?=	${ALLFILES}
-.for __tmp__ in ${IGNOREFILES}
-CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
-.endfor
 
 # List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
 .if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
 _CKSUMFILES?=	${CKSUMFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
 _DISTFILES?=	${DISTFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
-_IGNOREFILES?=	${IGNOREFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
 _PATCHFILES?=	${PATCHFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
 .else
 _CKSUMFILES?=	${CKSUMFILES}
 _DISTFILES?=	${DISTFILES}
-_IGNOREFILES?=	${IGNOREFILES}
 _PATCHFILES?=	${PATCHFILES}
 .endif
 _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
