@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/04/27 11:49:40 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/05/13 10:59:53 jperkin Exp $
 
 BLAKE2s (qtbase-everywhere-src-6.7.0.tar.xz) = 5fe8cbd71fe5deb94db78ee78fcf08c5d0d664915f1c7ff7e8ee09c8be0ef255
 SHA512 (qtbase-everywhere-src-6.7.0.tar.xz) = 72896cc5a677361779f49d60dbdfc33a21d77bd479e0586b0beb03eee2016d613aee56e798143a489431a07a5e7a7db4c7c046105a11b63dd178768f3a7f195a
@@ -11,7 +11,9 @@ SHA1 (patch-cmake_QtSyncQtHelpers.cmake) = d3aa5d9986ba4e4d9dba23ffc803f8fe7d838
 SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557add515
 SHA1 (patch-qmake_generators_makefile.cpp) = 1bca636dc88f258876df54bd0c6c64114fa7411d
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf984fe3b6af04
+SHA1 (patch-src_corelib_CMakeLists.txt) = 0eb9a57deb694b6b1bd3b3d0f3de31cba9f606a6
 SHA1 (patch-src_corelib_global_qsysinfo.cpp) = adb69aa6e101f1ef4e6d1e9fdffa8d77469139a9
+SHA1 (patch-src_corelib_io_qprocess__unix.cpp) = 7aced93a08934da29884d7a0abe1aae71de123d5
 SHA1 (patch-src_corelib_io_qstandardpaths__unix.cpp) = e4964281da856144f0b0c7bf0326015ad86a3078
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 5d71c52cb77500bb7ba44ecd289bd5ebeed09cb7
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 96dda2094d2d80f1eb7b1301390ff3f123887812
