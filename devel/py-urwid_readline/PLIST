@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/13 09:47:42 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/urwid_readline/__init__.py
+${PYSITELIB}/urwid_readline/__init__.pyc
+${PYSITELIB}/urwid_readline/__init__.pyo
+${PYSITELIB}/urwid_readline/readline_edit.py
+${PYSITELIB}/urwid_readline/readline_edit.pyc
+${PYSITELIB}/urwid_readline/readline_edit.pyo
+${PYSITELIB}/urwid_readline/test_readline_edit.py
+${PYSITELIB}/urwid_readline/test_readline_edit.pyc
+${PYSITELIB}/urwid_readline/test_readline_edit.pyo
