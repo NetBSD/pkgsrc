@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2024/05/06 08:27:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.112 2024/05/13 06:53:30 jperkin Exp $
 
 DISTNAME=	bulk-medium-20240227
 CATEGORIES=	meta-pkgs
@@ -82,7 +82,6 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	php>=7.4<7.5:../../lang/php74
-DEPENDS+=	php>=8.0<8.1:../../lang/php80
 DEPENDS+=	php>=8.1<8.2:../../lang/php81
 DEPENDS+=	php>=8.2<8.3:../../lang/php82
 DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
