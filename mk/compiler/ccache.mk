@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.42 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: ccache.mk,v 1.43 2024/05/13 00:32:34 gdt Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,6 +46,14 @@
 #       doing to the specified file. This is useful for tracking down
 #       problems.
 #
+#
+# CCACHE_RECACHE
+#
+#       If set, instruct ccache to not use cached values, but to store
+#       the results.  This can be used temporarily to recover from
+#       cache corruption, or to verify that removing cache corruption
+#       as a possibility does not change the problem one is chasing.
+#
 # Package-settable variables:
 #
 # IGNORE_CCACHE
@@ -66,7 +74,7 @@
 COMPILER_CCACHE_MK=	defined
 
 _VARGROUPS+=		ccache
-_USER_VARS.ccache=	CCACHE_BASE CCACHE_DIR CCACHE_LOGFILE
+_USER_VARS.ccache=	CCACHE_BASE CCACHE_DIR CCACHE_LOGFILE CCACHE_RECACHE
 _PKG_VARS.ccache=	IGNORE_CCACHE
 
 .include "../bsd.fast.prefs.mk"
@@ -150,6 +158,9 @@ PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
 PKGSRC_MAKE_ENV+=	CCACHE_PATH=${CCPATH:H}:${CXXPATH:H}:${CPPPATH:H}
 .ifdef CCACHE_LOGFILE
 PKGSRC_MAKE_ENV+=	CCACHE_LOGFILE=${CCACHE_LOGFILE:Q}
+.endif
+.ifdef CCACHE_RECACHE
+PKGSRC_MAKE_ENV+=	CCACHE_RECACHE=true
 .endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
