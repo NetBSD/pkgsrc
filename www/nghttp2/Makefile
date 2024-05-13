@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2024/03/23 17:57:13 gdt Exp $
+# $NetBSD: Makefile,v 1.87 2024/05/13 14:53:31 adam Exp $
 
 .include "Makefile.common"
 
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-lib-only
 PKGCONFIG_OVERRIDE+=	lib/libnghttp2.pc.in
 PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in
+TEST_TARGET=		check
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

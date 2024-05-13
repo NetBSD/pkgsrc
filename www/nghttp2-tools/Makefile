@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/03/23 18:26:42 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/13 14:53:31 adam Exp $
 
 .include "../../www/nghttp2/Makefile.common"
 
@@ -9,8 +9,8 @@ COMMENT=	Tools for nghttp2
 CONFLICTS+=	nghttp2<1.53.0nb1 # share/nghttp2/fetch-ocsp-response
 
 # The distfile contains a C library (built via www/nghttp2) and tools
-# (built by this package) in C++14.
-USE_LANGUAGES=		c c++14
+# (built by this package).
+USE_LANGUAGES=		c c++20
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-python-bindings
 CONFIGURE_ARGS+=	--enable-app
 CONFIGURE_ARGS+=	--enable-hpack-tools
 
-GCC_REQD+=		6
+GCC_REQD+=		12
 
 INSTALL_DIRS+=		src script
 
