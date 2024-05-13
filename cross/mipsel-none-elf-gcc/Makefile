@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/31 16:42:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/13 23:08:21 gutteridge Exp $
 
 DISTNAME=		gcc-13.2.0
 PKGNAME=		cross-mipsel-none-elf-${DISTNAME}
@@ -42,8 +42,6 @@ USE_TOOLS+=		bash gmake gsed makeinfo perl
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
-CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
-
 GNU_CONFIGURE_PREFIX=	${MIPSELELF_PREFIX}
 
 CONFIGURE_ARGS+=	--target=mipsel-none-elf
