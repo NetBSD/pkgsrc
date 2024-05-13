@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2024/05/07 07:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2024/05/13 09:50:32 wiz Exp $
 #
 
 COMMENT=	Communication programs
@@ -109,6 +109,8 @@ SUBDIR+=	py-nbxmpp
 SUBDIR+=	py-telethon
 SUBDIR+=	py-tulir-telethon
 SUBDIR+=	py-xmpppy
+SUBDIR+=	py-zulip
+SUBDIR+=	py-zulip-term
 SUBDIR+=	quassel
 SUBDIR+=	quirc
 SUBDIR+=	riece
