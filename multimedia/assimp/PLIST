@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/09 06:28:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/05/13 14:21:01 adam Exp $
 include/assimp/AssertHandler.h
 include/assimp/Base64.hpp
 include/assimp/BaseImporter.h
@@ -94,5 +94,5 @@ lib/cmake/assimp-5.4/assimpTargets-noconfig.cmake
 lib/cmake/assimp-5.4/assimpTargets.cmake
 lib/libassimp.so
 lib/libassimp.so.5
-lib/libassimp.so.5.4.0
+lib/libassimp.so.5.4.1
 lib/pkgconfig/assimp.pc
