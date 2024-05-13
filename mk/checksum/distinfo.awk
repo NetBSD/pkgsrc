@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: distinfo.awk,v 1.5 2018/08/22 20:48:36 maya Exp $
+# $NetBSD: distinfo.awk,v 1.6 2024/05/13 08:08:15 wiz Exp $
 #
 # Copyright (c) 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,7 +50,7 @@
 #
 #	For example:
 #
-#	$NetBSD: distinfo.awk,v 1.5 2018/08/22 20:48:36 maya Exp $
+#	$NetBSD: distinfo.awk,v 1.6 2024/05/13 08:08:15 wiz Exp $
 #
 #	SHA1 (make-3.81.tar.gz) = cd4fa5a3184176492bf0799593a8f250a728210c
 #	RMD160 (make-3.81.tar.gz) = a713a72875cb9a29568677c98022465c6f55cbbf
@@ -88,6 +88,9 @@
 #			the generated distinfo information matches the
 #			contents of the existing distinfo file, or
 #			non-zero otherwise.
+#
+#	-I input	Read the list of distfiles from 'input' instead
+#			of the command line.
 #
 #	-i ignorefile	Generate distinfo information to ignore checksum
 #			verification for ignorefile.  If this option is
@@ -218,6 +221,12 @@ function parse_options(		option) {
 		} else if (option == "-f") {
 			distinfo = ARGV[ARGSTART + 1]
 			ARGSTART += 2
+		} else if (option == "-I") {
+		    while (getline < ARGV[ARGSTART + 1]) {
+			distfiles[D++] = $0
+			cksumfiles[$0] = 1
+		    }
+		    ARGSTART += 2
 		} else if (option == "-i") {
 			distfiles[D++] = ARGV[ARGSTART + 1]
 			ignorefiles[ARGV[ARGSTART + 1]] = 1
@@ -231,7 +240,7 @@ function parse_options(		option) {
 		} else if (match(option, /^-.*/) != 0) {
 			option = substr(option, RSTART + 1, RLENGTH)
 			print self ": unknown option -- " option > "/dev/stderr"
-			print "usage: " self " -- [-a alg] [-c file] [-d distdir] [-f distinfo] [-i ignore] [-p alg] [patch ...]" > "/dev/stderr"
+			print "usage: " self " -- [-a alg] [-c file] [-d distdir] [-f distinfo] [-I inputfile] [-i ignore] [-p alg] [patch ...]" > "/dev/stderr"
 			exit 1
 		} else {
 			break
