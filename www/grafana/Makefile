@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2024/04/05 19:14:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.119 2024/05/13 15:59:53 wiz Exp $
 
-DISTNAME=	grafana-10.3.4
-PKGREVISION=	1
+DISTNAME=	grafana-10.4.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,6 +18,7 @@ FE_DISTNAME=			${DISTNAME}.linux-amd64.tar.gz
 DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://dl.grafana.com/oss/release/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
+EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${FE_DISTNAME}
 
 TOOL_DEPENDS+=			go-wire-[0-9]*:../../devel/go-wire
 
