@@ -1,6 +1,7 @@
-$NetBSD: patch-.._vendor_native-tls-0.2.11_src_lib.rs,v 1.1 2024/04/26 14:53:23 schmonz Exp $
+$NetBSD: patch-.._vendor_native-tls-0.2.11_src_lib.rs,v 1.2 2024/05/13 20:19:04 schmonz Exp $
 
 On all platforms, use OpenSSL as determined by pkgsrc.
+<https://github.com/sfackler/rust-native-tls/pull/291#issuecomment-2079542215>
 
 --- ../vendor/native-tls-0.2.11/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
 +++ ../vendor/native-tls-0.2.11/src/lib.rs

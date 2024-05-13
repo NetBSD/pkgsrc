@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2024/04/26 14:53:23 schmonz Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2024/05/13 20:19:04 schmonz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -14,7 +14,6 @@ CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.0
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.1
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.68
-CARGO_CRATE_DEPENDS+=	base64-0.21.7
 CARGO_CRATE_DEPENDS+=	base64-0.22.0
 CARGO_CRATE_DEPENDS+=	bit_field-0.10.2
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
@@ -199,13 +198,13 @@ CARGO_CRATE_DEPENDS+=	schannel-0.1.22
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	security-framework-2.9.2
 CARGO_CRATE_DEPENDS+=	security-framework-sys-2.9.1
-CARGO_CRATE_DEPENDS+=	serde-1.0.196
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.196
+CARGO_CRATE_DEPENDS+=	serde-1.0.199
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.199
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.113
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.5
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
-CARGO_CRATE_DEPENDS+=	serde_with-3.6.0
-CARGO_CRATE_DEPENDS+=	serde_with_macros-3.6.0
+CARGO_CRATE_DEPENDS+=	serde_with-3.8.1
+CARGO_CRATE_DEPENDS+=	serde_with_macros-3.8.1
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.4
 CARGO_CRATE_DEPENDS+=	shell-words-1.1.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
@@ -263,7 +262,7 @@ CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.11
 CARGO_CRATE_DEPENDS+=	unicode-linebreak-0.1.5
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.22
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.11.0
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.12
 CARGO_CRATE_DEPENDS+=	url-2.4.0
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	valuable-0.1.0
