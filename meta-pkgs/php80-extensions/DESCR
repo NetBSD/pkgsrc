@@ -1,6 +1,0 @@
-PHP 8.0.x is HTML-embedded scripting language.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on other PHP packages.  Its sole purpose is
-to require dependencies so users can install this package only and
-have all the PHP stuff pulled in by the package dependency mechanism.
