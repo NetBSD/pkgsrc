@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3397 2024/05/13 09:49:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3398 2024/05/13 09:50:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5327,3 +5327,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-drf-nested-routers to 0.94.1 [adam 2024-05-13]
 	Added devel/py-urwid_readline version 0.14 [wiz 2024-05-13]
 	Added chat/py-zulip version 0.9.0 [wiz 2024-05-13]
+	Added chat/py-zulip-term version 0.7.0 [wiz 2024-05-13]
