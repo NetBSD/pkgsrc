@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/04/05 17:26:43 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/05/13 09:05:55 adam Exp $
 
-BLAKE2s (gstreamer-vaapi-1.24.1.tar.xz) = 2b9e7893e03bc1616761ada536d7b59e77ca4be6524689d70e890339d743daf1
-SHA512 (gstreamer-vaapi-1.24.1.tar.xz) = f5723d19f7007572a6de8f75dd2d25403779c2034893f60bea8e819743f07a6ae9bbb923cc7d31589bf453c584948ac572b90e41f31458d42d8067a3dfd6d935
-Size (gstreamer-vaapi-1.24.1.tar.xz) = 543060 bytes
+BLAKE2s (gstreamer-vaapi-1.24.3.tar.xz) = 29476582c4f8f9a272a59b153f8a94fc1e0ed2b9cf8a0ef151ceaf29daa64b79
+SHA512 (gstreamer-vaapi-1.24.3.tar.xz) = 3f7fde68468003cc8e83abf3ad81281e475bf83dbbc7c14006bee18d6d66dfa9e7745d049aa8fa1d3147787ea7d9d47145507d9ebb2b7f576ee5e0f849edb043
+Size (gstreamer-vaapi-1.24.3.tar.xz) = 543576 bytes
