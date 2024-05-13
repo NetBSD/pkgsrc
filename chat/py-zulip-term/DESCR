@@ -1,0 +1,14 @@
+Zulip Terminal is the official terminal client for Zulip, providing
+a text-based user interface (TUI).
+
+Specific aims include:
+
+* Providing a broadly similar user experience to the Zulip web
+  client, ultimately supporting all of its features
+* Enabling all actions to be achieved through the keyboard (see
+  Hot keys)
+* Exploring alternative user interface designs suited to the display
+  and input constraints
+* Supporting a wide range of platforms and terminal emulators
+* Making best use of available rows/columns to scale from 80x24
+  upwards (see Small terminal notes)
