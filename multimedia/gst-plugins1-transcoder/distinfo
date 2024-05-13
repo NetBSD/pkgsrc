@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:01:04 nia Exp $
-
-BLAKE2s (gst-transcoder-1.16.0.tar.gz) = b50d70c8a5f62e88bfa26234cd31aed747a30220a702ab35b251797e700381b3
-SHA512 (gst-transcoder-1.16.0.tar.gz) = 481ecce20f29532032ce211ca39a1e5406a4439d2f395a2dc0a9b6a6c83031a566cbd328a2341775cbe94085eae89612573ff3d14d2065c6f2e4089b7d0e5715
-Size (gst-transcoder-1.16.0.tar.gz) = 38543 bytes
-SHA1 (patch-meson.build) = 0ff593512e5c16951f149bdd8760239b0fb8d297
