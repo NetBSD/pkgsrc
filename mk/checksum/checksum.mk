@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.27 2024/05/13 08:08:15 wiz Exp $
+# $NetBSD: checksum.mk,v 1.28 2024/05/13 08:09:30 wiz Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -66,10 +66,6 @@ _DISTINFO_ARGS_COMMON+=	${_DIGEST_ALGORITHMS:S/^/-a /}
 .endif
 .if defined(_PATCH_DIGEST_ALGORITHMS) && !empty(_PATCH_DIGEST_ALGORITHMS)
 _DISTINFO_ARGS_COMMON+=	${_PATCH_DIGEST_ALGORITHMS:S/^/-p /}
-.endif
-
-.if defined(_IGNOREFILES) && !empty(_IGNOREFILES)
-_DISTINFO_ARGS_DISTSUM+=	${_IGNOREFILES:S/^/-i /}
 .endif
 
 _DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/patch-*
