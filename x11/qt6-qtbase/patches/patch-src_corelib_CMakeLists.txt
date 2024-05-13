@@ -1,0 +1,15 @@
+$NetBSD: patch-src_corelib_CMakeLists.txt,v 1.1 2024/05/13 10:59:53 jperkin Exp $
+
+Include qversiontagging on SunOS otherwise the build breaks.
+
+--- src/corelib/CMakeLists.txt.orig	2024-05-13 10:28:48.456738816 +0000
++++ src/corelib/CMakeLists.txt
+@@ -465,7 +465,7 @@ set(core_version_tagging_files
+     global/qversiontagging.cpp
+     global/qversiontagging.h)
+ qt_internal_extend_target(Core
+-    CONDITION TEST_ld_version_script OR APPLE OR WIN32
++    CONDITION TEST_ld_version_script OR APPLE OR WIN32 OR SOLARIS
+     SOURCES ${core_version_tagging_files}
+ )
+ 
