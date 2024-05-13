@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2024/05/12 08:39:09 pin Exp $
+$NetBSD: distinfo,v 1.15 2024/05/13 06:56:46 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -627,9 +627,9 @@ Size (similar-2.5.0.crate) = 51648 bytes
 BLAKE2s (slab-0.4.9.crate) = 910e1c3640a12b3196dec14d77395cbb8ec6b85537612ac3653ee9bee7a415a5
 SHA512 (slab-0.4.9.crate) = b6b5423ae026472920f7c9a4abe0962314140a36dc562c0a9e3fa60725b2b8b7a8b343110d9d4c0e18fb318b0103e14c0ccbc9ae350d5563a5ac80c35f228c40
 Size (slab-0.4.9.crate) = 17108 bytes
-BLAKE2s (slumber-1.2.0.tar.gz) = 946e49be0fff5ba84006ba2d70bc5ab7376b97e24ab72be0f73f2c47375eb1e8
-SHA512 (slumber-1.2.0.tar.gz) = d3744d930785b617c643e496394f8b2434fc4b5e2786656ad8b39b350a775dcbd7b3492dcf82e0dda5b30a3357a35b2891fe71e4aa5e37a98106d6b89c16da57
-Size (slumber-1.2.0.tar.gz) = 471907 bytes
+BLAKE2s (slumber-1.2.1.tar.gz) = 6fdec9f8a07bcb6bc4e4a5ce833562745fda4b1567bf1c98dbadc09b266903f9
+SHA512 (slumber-1.2.1.tar.gz) = ebd2f8ad547e1498dd15ef952239a2a17dcb48307f608e8673508b1ac20747f44d66ecb174a4d0455593413f5288f7261b3d8ae22026af13394d629e59a75c98
+Size (slumber-1.2.1.tar.gz) = 472012 bytes
 BLAKE2s (smallvec-1.13.2.crate) = b0c6aa90972d031feb8f50aa1562ab0dbce3a027e6a54bea2586c819ef8e369b
 SHA512 (smallvec-1.13.2.crate) = a97c758b668e40ad9eb572e65feeae4954e09200a04ab92e26a13b48894381cd3a3d2571070c4b7a5e181182e1ede9688f990650342ec69ecfe1a264d234c679
 Size (smallvec-1.13.2.crate) = 35216 bytes
