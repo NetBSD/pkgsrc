@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/13 09:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/13 13:56:04 jperkin Exp $
 
 DISTNAME=	zulip-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=0.12.1:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 REPLACE_PYTHON+=	integrations/*.py
 REPLACE_PYTHON+=	integrations/*/*
