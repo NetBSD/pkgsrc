@@ -1,0 +1,43 @@
+$NetBSD: patch-.excludes,v 1.1 2024/05/14 08:19:11 wiz Exp $
+
+This patch should be removed in the next update
+See the comments in Makefile
+
+--- .excludes.orig	2024-05-13 19:16:12.486555142 +0000
++++ .excludes
+@@ -4,35 +4,18 @@
+ *.tar
+ */.amarks.el
+ .auditory-icons
+-.bbc
+-.cask
+ .dir-locals.el
+ .excludes
+-.files
+ .git
+ .git*
+ .indent.pro
+-.projectile 
+-.rss
+ .skeleton.el
+-Cask
+-TAGS
+ android
+ announcements
+-chrome_tts_server
+-contrib
+-debian
+-dtk-lite
+-emacspeak-pkg.el
+ git-hooks
+ html
+ js/node/auto
+ js/node/node_modules
+ scapes
+-sounds/3d
+-sounds/ogg-3d
+-sounds/chimes
+-sounds/clock
+-tests
+ tvr
+ utils

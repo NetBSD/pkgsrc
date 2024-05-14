@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/03/13 05:48:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/05/14 08:19:11 wiz Exp $
 
-BLAKE2s (emacspeak-59.0.tar.bz2) = 1c82c51457e2b77215ae872def4fdc52318e0b701ac937a3c7bc0afb386341c5
-SHA512 (emacspeak-59.0.tar.bz2) = 42dda7d09df43611081b9ddaadd23db09bd619439d6d9a9b034f8cf87a93f51d29dc6f878e2dd4434ac6f84dade1e6516b042378521f701c58eeaa5d9719592e
-Size (emacspeak-59.0.tar.bz2) = 7984386 bytes
+BLAKE2s (emacspeak-60.0.tar.gz) = 7eb4c7b82eaa84c03cc431291c30e18c7a02099e798a2a619d2454be54821bd9
+SHA512 (emacspeak-60.0.tar.gz) = 7fef84f7b958d6764df2b35e8f54241095b12a6a2a105ae258f205f16478c7333b8cfbf16930e17ba64d4adf364bb74a49634851284f4e638bae6b68e0adaad1
+Size (emacspeak-60.0.tar.gz) = 115272865 bytes
+SHA1 (patch-.excludes) = 11527fdc9ce2243e72a18e1bef155ce6e1048496
 SHA1 (patch-lisp_emacspeak-bookshare.el) = 12778e71cc620d0ca7668b2c1f2cd204c05a4bd3
 SHA1 (patch-servers_native-espeak_Makefile) = 12e8485b79f8c008ae83bc29ef094d29d2efdd85
-SHA1 (patch-servers_tts-lib.tcl) = 5307ec48cb0d5d13afe8b0a21a2545cb7fda743a
