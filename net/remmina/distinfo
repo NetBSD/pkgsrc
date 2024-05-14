@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/02/13 14:34:36 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2024/05/14 09:38:16 wiz Exp $
 
-BLAKE2s (Remmina-v1.4.29.tar.gz) = dce459ea44bef7757620897d3776f83a7ee19d517cbd41b6fe75ac9b64d63e98
-SHA512 (Remmina-v1.4.29.tar.gz) = 477da48a88efe06f4fa68a6054b4dba83d5e628a1ccffc6f14a712b49b8ce8af44ab0eef4c1e8e078e55d1554132f3539f331a99c30b8302f5b71fc96cb965c6
-Size (Remmina-v1.4.29.tar.gz) = 3557543 bytes
+BLAKE2s (Remmina-v1.4.35.tar.gz) = 3efe8503915573863d4a8b7793e72cea30a5eed44325ff6fae410f200bef0416
+SHA512 (Remmina-v1.4.35.tar.gz) = 71ead3a6a8181bff0bf4f224af70daa86aafc259d3e8e48e02773d7f4ec37a4e72a98829726652370f291f0d96f677e0385256ea9c78c01c204cbb27b630ab0a
+Size (Remmina-v1.4.35.tar.gz) = 3771037 bytes

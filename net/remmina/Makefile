@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2024/04/07 07:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2024/05/14 09:38:16 wiz Exp $
 
-DISTNAME=	Remmina-v1.4.29
+DISTNAME=	Remmina-v1.4.35
 PKGNAME=	${DISTNAME:tl:S/-v/-/1}
-PKGREVISION=	13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITLAB:=Remmina/}
 GITLAB_PROJECT=	Remmina
@@ -42,6 +41,7 @@ LDFLAGS.NetBSD+=	-rdynamic
 .include "../../sysutils/spice-protocol/buildlink3.mk"
 .include "../../sysutils/spice-gtk/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
