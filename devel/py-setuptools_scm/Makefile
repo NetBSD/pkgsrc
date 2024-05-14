@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/11/07 23:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/05/14 08:08:31 wiz Exp $
 
-DISTNAME=	setuptools-scm-8.0.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/_/}
+DISTNAME=	setuptools_scm-8.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
