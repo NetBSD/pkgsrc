@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/14 09:13:54 adam Exp $
+
+BLAKE2s (jaraco_packaging-10.1.0.tar.gz) = f4cd15057bc344f4bb354fe75e28369fcad7ec60d2f953339ccad59154b2fa3f
+SHA512 (jaraco_packaging-10.1.0.tar.gz) = aa83619c3829ac70e2676d525399c21bcc4341acd22010998e3b1ddf56d3cae4552e2423e84a8227135cebdb35652cd27a2456bddbf5120456306139247345e5
+Size (jaraco_packaging-10.1.0.tar.gz) = 13027 bytes
