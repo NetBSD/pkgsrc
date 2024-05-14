@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/23 22:50:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/05/14 21:00:27 bacon Exp $
 bin/munge
 bin/remunge
 bin/unmunge
 include/munge.h
 lib/libmunge.la
 lib/pkgconfig/munge.pc
-lib/systemd/system/munge.service
-lib/tmpfiles.d/munge.conf
 man/man1/munge.1
 man/man1/remunge.1
 man/man1/unmunge.1
@@ -27,9 +25,11 @@ man/man3/munge_enum_str_to_int.3
 man/man3/munge_strerror.3
 man/man7/munge.7
 man/man8/munged.8
+man/man8/mungekey.8
 sbin/munged
-share/examples/munge/default/munge
-share/examples/munge/init.d/munge
+sbin/mungekey
+@pkgdir etc/logrotate.d
 @pkgdir var/run/munge
 @pkgdir var/log/munge
 @pkgdir var/lib/munge
+@pkgdir etc/munge
