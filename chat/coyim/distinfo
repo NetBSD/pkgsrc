@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/10/20 13:59:38 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2024/05/14 22:38:57 wiz Exp $
 
 BLAKE2s (coyim-0.4.1.tar.gz) = 7e8b7f2dc280756407745d68bdf76436cb2d801dafcf3222ac45af1b802cc0b7
 SHA512 (coyim-0.4.1.tar.gz) = 14243c92fb9bcbd9cc30c42a21bdeba040e84e3d069e91e482b78297f6648985a166fcbfc2967d24d485b5ac6b4747c1652b3fdb1a1a206edcaaad165862240c
@@ -285,3 +285,6 @@ Size (howett.net_plist_@v_v0.0.0-20200419221736-3b63eb3a43b5.mod) = 222 bytes
 BLAKE2s (howett.net_plist_@v_v0.0.0-20200419221736-3b63eb3a43b5.zip) = d68ee5b66378bc4d516c7105f2658d1ced52fbab4885af975a7aca20bcdd509d
 SHA512 (howett.net_plist_@v_v0.0.0-20200419221736-3b63eb3a43b5.zip) = b1f9d9cc4feef03562cbb6ec01cc55b7d02de1c3b6d68953bbd58a2c94d94f0708bf5e94389acaeba37a08354f49b46e4c548e7ca15553fa0dc8ae41cec020e0
 Size (howett.net_plist_@v_v0.0.0-20200419221736-3b63eb3a43b5.zip) = 74256 bytes
+SHA1 (patch-.._github.com_awnumar_memcall@v0.1.2_memcall__netbsd.go) = 428d993ad0860193cca0170eda45d1d0635decf1
+SHA1 (patch-.._github.com_awnumar_memcall@v0.1.2_memcall__unix.go) = cc42e87d15701b7853c1cbfb5cee11bf85b31393
+SHA1 (patch-go.mod) = 975b53d6eefd01eeaeba3a3fbc558a5be2611859
