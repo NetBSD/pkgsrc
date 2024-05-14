@@ -1,45 +1,29 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.5 2018/03/24 18:05:58 bacon Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.6 2024/05/14 21:00:28 bacon Exp $
 
-Install configuration into example directory.
+# Conform to pkgsrc
 
---- src/etc/Makefile.in.orig	2017-09-26 21:57:53.000000000 +0000
+--- src/etc/Makefile.in.orig	2024-01-26 00:52:18.921858783 +0000
 +++ src/etc/Makefile.in
-@@ -298,6 +298,7 @@ sbindir = @sbindir@
+@@ -291,6 +291,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
-+sysconfexampledir = $(prefix)/share/examples/munge
- target_alias = @target_alias@
- top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
-@@ -581,15 +582,15 @@ munge.tmpfiles.conf: munge.tmpfiles.conf
++sysconfexampledir = $(prefix)/share/examples
+ sysconfigdir = @sysconfigdir@
+ systemdunitdir = @systemdunitdir@
+ sysvinitddir = @sysvinitddir@
+@@ -602,12 +603,12 @@ install-data-hook: install-dirs install-
+ uninstall-local: uninstall-dirs uninstall-logrotate uninstall-pkgconfig uninstall-systemd uninstall-sysvinit
  
- install-data-local:
- 	test -d "/etc/rc.d/init.d" \
--	    && INITDIR="$(sysconfdir)/rc.d/init.d" \
--	    || INITDIR="$(sysconfdir)/init.d"; \
-+	    && INITDIR="$(sysconfexampledir)/rc.d/init.d" \
-+	    || INITDIR="$(sysconfexampledir)/init.d"; \
- 	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${INITDIR}"; \
- 	  $(INSTALL) -m 0755 \
- 	    "$(builddir)/munge.init" "$(DESTDIR)$${INITDIR}/munge"
- 	:
- 	test -d "/etc/sysconfig" \
--	    && CONFDIR="$(sysconfdir)/sysconfig" \
--	    || CONFDIR="$(sysconfdir)/default"; \
-+	    && CONFDIR="$(sysconfexampledir)/sysconfig" \
-+	    || CONFDIR="$(sysconfexampledir)/default"; \
- 	  $(INSTALL) -m 0755 -d "$(DESTDIR)$${CONFDIR}"; \
- 	  $(INSTALL) -m 0644 \
- 	    "$(builddir)/munge.sysconfig" "$(DESTDIR)$${CONFDIR}/munge"
-@@ -610,8 +611,8 @@ install-data-local:
- 	  "$(builddir)/munge.tmpfiles.conf" \
- 	  "$(DESTDIR)$${TMPFILESDIR}/munge.conf"
- 	:
--	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfdir)"
--	$(INSTALL) -m 0700 -d "$(DESTDIR)$(sysconfdir)/munge"
-+	$(INSTALL) -m 0755 -d "$(DESTDIR)$(sysconfexampledir)"
-+	$(INSTALL) -m 0700 -d "$(DESTDIR)$(sysconfexampledir)/munge"
- 	$(INSTALL) -m 0755 -d "$(DESTDIR)$(localstatedir)"
- 	$(INSTALL) -m 0755 -d "$(DESTDIR)$(localstatedir)/lib"
- 	$(INSTALL) -m 0711 -d "$(DESTDIR)$(localstatedir)/lib/munge"
+ install-dirs:
+-	$(MKDIR_P) -m 0700 '$(DESTDIR)$(sysconfdir)/munge'
++	$(MKDIR_P) -m 0700 '$(DESTDIR)$(sysconfexampledir = $(prefix)/share/examples)/munge'
+ 	$(MKDIR_P) -m 0711 '$(DESTDIR)$(localstatedir)/lib/munge'
+ 	$(MKDIR_P) -m 0700 '$(DESTDIR)$(localstatedir)/log/munge'
+ 
+ uninstall-dirs:
+-	rmdir '$(DESTDIR)$(sysconfdir)/munge' 2>/dev/null || :
++	rmdir '$(DESTDIR)$(sysconfexampledir = $(prefix)/share/examples)/munge' 2>/dev/null || :
+ 	rmdir '$(DESTDIR)$(localstatedir)/lib/munge' 2>/dev/null || :
+ 	rmdir '$(DESTDIR)$(localstatedir)/log/munge' 2>/dev/null || :
+ 	rmdir '$(DESTDIR)$(runstatedir)/munge' 2>/dev/null || :

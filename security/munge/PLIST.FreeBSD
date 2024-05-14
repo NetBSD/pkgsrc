@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.7 2024/05/14 21:00:27 bacon Exp $
+share/examples/munge/default/munge
+share/examples/munge/init.d/munge

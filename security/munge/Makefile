@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2023/10/24 22:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/05/14 21:00:27 bacon Exp $
 
-DISTNAME=	munge-0.5.13
-PKGREVISION=	8
+DISTNAME=	munge-0.5.16
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://dun.github.io/munge/
 COMMENT=	Authentication service for creating and validating credentials
 LICENSE=	gnu-gpl-v3
@@ -15,24 +14,54 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-INSTALLATION_DIRS+=	lib/pkgconfig
 
-OWN_DIRS=	${VARBASE}/lib/munge
-OWN_DIRS+=	${VARBASE}/log/munge
-OWN_DIRS+=	${VARBASE}/run/munge
-OWN_DIRS+=	etc/munge
+.include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	VARBASE
+MUNGE_DIR?=		${PREFIX}/var/lib/munge
+MUNGE_LOG_DIR?=		${PREFIX}/var/log/munge
+MUNGE_RUN_DIR?=		${PREFIX}/var/run/munge
+MUNGE_ETC_DIR?=		${PREFIX}/etc/munge
+MUNGE_USER=		munge
+MUNGE_GROUP=		${MUNGE_USER}
 
-RCD_SCRIPTS+=	munge
+PKG_GROUPS+=		${MUNGE_GROUP}
+PKG_USERS+=		${MUNGE_USER}:${MUNGE_GROUP}
+PKG_GECOS.munge=	Munge user
+PKG_HOME.munge=		${MUNGE_DIR}
 
-SUBST_CLASSES+=		init
-SUBST_STAGE.init=	post-build
-SUBST_FILES.init=	${WRKSRC}/src/etc/munge.init
-SUBST_FILES.init+=	${WRKSRC}/src/etc/munge.sysconfig
-SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
-SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
+OWN_DIRS_PERMS+=	${MUNGE_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
+OWN_DIRS_PERMS+=	${MUNGE_LOG_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
+OWN_DIRS_PERMS+=	${MUNGE_RUN_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0755
+OWN_DIRS_PERMS+=	${MUNGE_ETC_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
+
+RCD_SCRIPTS=		munge
+PKG_RCD_SCRIPTS=	yes
+
+.if ${OPSYS} == Linux
+EGDIR=			${PREFIX}/share/examples/munge
+PKG_SYSCONFSUBDIR=	sysconfig
+CONF_FILES=		${EGDIR}/systemd.sysconfig ${PKG_SYSCONFDIR}/munge
+CONF_FILES+=		${EGDIR}/logrotate.conf ${PREFIX}/etc/logrotate.d/munge
+
+INSTALLATION_DIRS+=	${EGDIR} etc/logrotate.d
+CONFIGURE_ARGS+=	--with-sysconfigdir=${PKG_SYSCONFDIR}
+AUTO_MKDIRS=		yes
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/logrotate.d/munge \
+		${DESTDIR}${PREFIX}/share/examples/munge/logrotate.conf
+	${MV} ${DESTDIR}${PREFIX}/etc/sysconfig/munge \
+		${DESTDIR}${PREFIX}/share/examples/munge/systemd.sysconfig
+.endif
+
+.if ${OPSYS} == Darwin
+# Should not be necessary with AUTO_MKDIRS enabled, but it is
+INSTALLATION_DIRS+=	share/munge/Launchd
+post-install:
+	# ${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
+	${INSTALL_DATA} ${FILESDIR}/*.plist \
+		${DESTDIR}${PREFIX}/share/munge/Launchd
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
