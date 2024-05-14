@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/05 19:13:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/14 23:01:12 wiz Exp $
 
 DISTNAME=	sqlc-1.16.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,9 @@ COMMENT=	Generate type-safe code from SQL
 LICENSE=	mit
 
 USE_LANGUAGES=		c # go
+
+GO_MODULE_EXTRACT+=	github.com_pganalyze_pg_query_go_v2_@v_v2.2.0.zip
+
 GO_BUILD_PATTERN=	./cmd/sqlc
 
 .include "go-modules.mk"
