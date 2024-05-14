@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/04/05 19:14:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2024/05/14 23:01:13 wiz Exp $
 
 DISTNAME=	authelia-4.26.1
 PKGREVISION=	37
@@ -22,6 +22,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.authelia.com/
 COMMENT=	Single Sign-On Multi-Factor portal for web apps
 LICENSE=	apache-2.0
+
+GO_MODULE_EXTRACT+=	broccoli-1.0.3.tar.gz authelia-4.26.1.public_html.tar.gz
 
 CHECK_PORTABILITY_SKIP+=	entrypoint.sh
 
