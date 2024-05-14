@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2024/04/12 15:10:20 nikita Exp $
+$NetBSD: distinfo,v 1.16 2024/05/14 22:44:55 wiz Exp $
 
 BLAKE2s (gotosocial-0.15.0-source-code.tar.gz) = b1741b7e62e38add85f5ccfa678038adee6507b959acbcede71871d3de0d0f9a
 SHA512 (gotosocial-0.15.0-source-code.tar.gz) = de1f17892b3eeb62751ab61a782f74728fc36d80eb9ec27bec7ebdd3317a586850dc78d0be9862d561e9da07b1228ca57223af0f5caaf6ad811e10e0677f3f6a
 Size (gotosocial-0.15.0-source-code.tar.gz) = 75292015 bytes
+SHA1 (patch-vendor_github.com_tdewolff_minify_v2_Makefile) = 2658c6597d4037b2f1ce1e2cf927a288146b21a3
