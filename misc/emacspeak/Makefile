@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2024/03/13 05:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/14 08:19:11 wiz Exp $
 
-DISTNAME=	emacspeak-59.0
+DISTNAME=	emacspeak-60.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tvraman/}
 GITHUB_PROJECT=	emacspeak
-GITHUB_RELEASE=	59
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://emacspeak.sourceforge.net/
 COMMENT=	Speech interface for emacs
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake perl bash pax
+DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
+DEPENDS+=	sox-[0-9]*:../../audio/sox
+
+USE_TOOLS=	gmake perl bash:run pax
 
 REPLACE_PERL=	etc/*
-REPLACE_BASH=	bash-utils/* etc/*
+REPLACE_BASH=	bash-utils/* etc/* sounds/*/*sh
 
 EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
 
@@ -34,8 +35,21 @@ SUBST_CLASSES+=			fix-sox-path
 SUBST_STAGE.fix-sox-path=	pre-configure
 SUBST_MESSAGE.fix-sox-path=	Fixing sox path
 SUBST_FILES.fix-sox-path=	servers/tts-lib.tcl
-SUBST_FILES.fix-sox-path+=	lisp/emacspeak-sounds.el
 SUBST_SED.fix-sox-path=		-E -e 's,/usr/bin/(sox|play),${PREFIX}/bin/\1,'
+
+# Use sox as default player
+SUBST_CLASSES+=			sox-player
+SUBST_STAGE.sox-player=		pre-configure
+SUBST_MESSAGE.sox-player=	Use sox as default player
+SUBST_FILES.sox-player=		servers/tts-lib.tcl
+SUBST_SED.sox-player=		-E -e 's,/usr/bin/paplay,${PREFIX}/bin/play,'
+
+# Change BATCH variable's name
+SUBST_CLASSES+=			es_batch
+SUBST_STAGE.es_batch=		pre-configure
+SUBST_MESSAGE.es_batch=		Change BATCH variable's name
+SUBST_FILES.es_batch=		lisp/Makefile
+SUBST_SED.es_batch=		-E -e 's/BATCH/ES_BATCH/'
 
 USE_LANGUAGES+=	c c++
 
@@ -49,15 +63,19 @@ post-build:
 			etc/forms/apache-clf.el \
 			etc/forms/messages.el \
 			etc/remote.txt \
-			media/welcome.ra \
 			xsl/README; do \
 		${CHMOD} 644 "$$i"; \
 	done; \
 	for i in 	servers/native-espeak/Makefile.orig \
 			lisp/emacspeak-bookshare.el.orig \
-			servers/tts-lib.tcl.orig; do \
+			.excludes.orig; do \
 		rm "$$i"; \
+	done; \
+	for i in $$(cat .excludes); do \
+		rm -rf "$$i"; \
 	done
+# This last for-done and ".excludes.orig; do \" above should be
+# removed in the next release...
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/emacspeak
 
@@ -68,7 +86,6 @@ do-install:
 .include "../../lang/tclx/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../audio/espeak-ng/buildlink3.mk"
-.include "../../audio/sox/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/application.mk"
