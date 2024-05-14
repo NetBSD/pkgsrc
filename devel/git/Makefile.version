@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.version,v 1.125 2024/04/29 18:55:37 adam Exp $
+# $NetBSD: Makefile.version,v 1.126 2024/05/14 18:59:31 adam Exp $
 #
 # used by devel/git/Makefile.common
 # used by devel/git-cvs/Makefile
 # used by devel/git-svn/Makefile
 
-GIT_VERSION=	2.45.0
+GIT_VERSION=	2.45.1
