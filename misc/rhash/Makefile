@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/05/14 14:37:47 nia Exp $
 
 DISTNAME=	rhash-1.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
@@ -21,14 +21,31 @@ CONFIGURE_ARGS+=	--disable-symlinks
 CONFIGURE_ARGS+=	--enable-lib-shared
 CONFIGURE_ARGS+=	--enable-lib-static
 CONFIGURE_ARGS+=	--enable-openssl
-CONFIGURE_ARGS+=	--extra-cflags=-I${PREFIX}/include\ ${CFLAGS:Q}
-CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ ${COMPILER_RPATH_FLAG}${PREFIX}/lib\ ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-INSTALL_TARGET=		install install-pkg-config install-lib-so-link
+INSTALL_TARGET=		build-install-binary install-man
+INSTALL_TARGET+=	install-pkg-config install-lib-shared
+INSTALL_TARGET+=	install-lib-headers
 INSTALLATION_DIRS=	share/examples/rhash
+
+USE_LIBTOOL=		yes
+BUILD_TARGET+=		librhash/librhash.la rhash
 TEST_TARGET=		test
+
+MAKE_FLAGS+=		LIBRHASH_SHARED=librhash/librhash.la
+MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+# posix_memalign
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100600
+LDFLAGS+=	-lMacportsLegacySupport
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
+
+LDFLAGS+=	-lcrypto
 
 PKGCONFIG_OVERRIDE=		dist/librhash.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
@@ -36,7 +53,8 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 CONF_FILES+=	${PREFIX}/share/examples/rhash/rhashrc ${PKG_SYSCONFDIR}/rhashrc
 
 post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/rhashrc ${DESTDIR}${PREFIX}/share/examples/rhash/rhashrc
+	${INSTALL_DATA} ${WRKSRC}/dist/rhashrc.sample \
+		${DESTDIR}${PREFIX}/share/examples/rhash/rhashrc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
