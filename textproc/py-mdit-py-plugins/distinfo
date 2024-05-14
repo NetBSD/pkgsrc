@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/22 16:20:18 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/05/14 19:17:50 adam Exp $
 
-BLAKE2s (mdit_py_plugins-0.4.0.tar.gz) = 419f04889f94a7e61bb2e0fe911611cbd888170e0714fb9103e10905ba1f2117
-SHA512 (mdit_py_plugins-0.4.0.tar.gz) = 085dfc6d949e48dab36b21f9af04f84630478705f94791701664c6aa2150b6e87700bcb052f53a7de9dce9b9c05fe708dcdad6d937ce523f32d34f7c5a61bae3
-Size (mdit_py_plugins-0.4.0.tar.gz) = 41531 bytes
+BLAKE2s (mdit_py_plugins-0.4.1.tar.gz) = 2130903d9fe11858ba72309eba53adb4be652094999b21f44ae4ed5e0c94e2e0
+SHA512 (mdit_py_plugins-0.4.1.tar.gz) = 3457bd7dfc0636a0ae755e138ac3d0aacc7045aed3b71fb7beb807b38c088bac24baf97b84ddeb4885481630678bf488d83d7c4159ee24d18170962679662787
+Size (mdit_py_plugins-0.4.1.tar.gz) = 42713 bytes
