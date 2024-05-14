@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/11/07 23:06:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/05/14 08:08:31 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -30,6 +30,9 @@ ${PYSITELIB}/setuptools_scm/_file_finders/git.pyo
 ${PYSITELIB}/setuptools_scm/_file_finders/hg.py
 ${PYSITELIB}/setuptools_scm/_file_finders/hg.pyc
 ${PYSITELIB}/setuptools_scm/_file_finders/hg.pyo
+${PYSITELIB}/setuptools_scm/_file_finders/pathtools.py
+${PYSITELIB}/setuptools_scm/_file_finders/pathtools.pyc
+${PYSITELIB}/setuptools_scm/_file_finders/pathtools.pyo
 ${PYSITELIB}/setuptools_scm/_get_version_impl.py
 ${PYSITELIB}/setuptools_scm/_get_version_impl.pyc
 ${PYSITELIB}/setuptools_scm/_get_version_impl.pyo
