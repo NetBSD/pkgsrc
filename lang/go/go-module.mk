@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.15 2024/05/12 19:45:56 wiz Exp $
+# $NetBSD: go-module.mk,v 1.16 2024/05/14 23:01:13 wiz Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -20,6 +20,11 @@
 #
 # 	List of additional directories in which to look for go.mod files for
 # 	the show-go-modules target.
+#
+# GO_MODULE_EXTRACT (optional)
+#
+#	List of modules that should be extracted. By default, modules are not
+#	extracted separately. This is needed if you want to patch them.
 #
 # Keywords: go golang
 #
@@ -71,6 +76,7 @@ print-go-modules show-go-modules: ${WRKDIR}/.extract_done
 	${RUN} cd ${WRKDIR}/.gopath/pkg/mod/cache/download && ${FIND} . -type f -a \( -name "*.mod" -o -name "*.zip" \) | ${SED} -e 's/\.\//GO_MODULE_FILES+=	/' | ${SORT}
 
 DISTFILES?=	${DEFAULT_DISTFILES}
+EXTRACT_ONLY?=	${DEFAULT_DISTFILES} ${GO_MODULES_EXTRACT}
 .for i in ${GO_MODULE_FILES}
 DISTFILES+=	${i:C/[\/!]/_/g}
 SITES.${i:C/[\/!]/_/g}= -https://proxy.golang.org/${i}
