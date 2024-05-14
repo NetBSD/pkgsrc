@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/02/23 19:41:25 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/14 17:39:14 jperkin Exp $
 
 # Download https://code.videolan.org/videolan/x264/-/archive/stable/x264-stable.tar.bz2
 # Rename to x264-<last-commit-date>.tar.bz2 and upload to MASTER_SITE_LOCAL.
@@ -14,6 +14,9 @@ COMMENT=	GPL licensed H.264 encoder
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/x264-stable
+
+CONFLICTS+=	x264-devel-[0-9]*
+SUPERSEDES+=	x264-devel-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
