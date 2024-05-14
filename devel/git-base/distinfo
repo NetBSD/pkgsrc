@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.143 2024/04/29 18:55:37 adam Exp $
+$NetBSD: distinfo,v 1.144 2024/05/14 18:59:31 adam Exp $
 
-BLAKE2s (git-2.45.0.tar.xz) = a0f659f49256136cabd2940bcb4cfc5ee1881593d37eae2ade110fd1649b38f6
-SHA512 (git-2.45.0.tar.xz) = 36d438bf9a57dee8fe0536c90cb25d53c552e9f80e7575447d1d2af30cadab08522356f4ecd0f69b7877d5a7f84ab3b9766d8386beae57fe8d411d05d70db214
-Size (git-2.45.0.tar.xz) = 7482988 bytes
+BLAKE2s (git-2.45.1.tar.xz) = 9acb0f4ccd2dda04da9b284756132437480afbda4f81d89ad2f4bf536761b773
+SHA512 (git-2.45.1.tar.xz) = 28461855e03f3dd5af73a1c6d26cc3e2b7b71f5eb90852f1daf582d24503b4dd5c4e4dac359e9eba1c2ba542aeb0940e0482506f19d02a354654b181c56c5317
+Size (git-2.45.1.tar.xz) = 7490268 bytes
 SHA1 (patch-Documentation_Makefile) = 6025adac0fbb4b403f3954e6dac9d690dfb22daa
 SHA1 (patch-Makefile) = bf8cf3ed8168241265b258a29d62210dc59a5f72
 SHA1 (patch-config.mak.uname) = 32b9c120ff3f947ebe3d32107eaaa2be61775a18
