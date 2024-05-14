@@ -1,7 +1,8 @@
-$NetBSD: patch-gio_gdbusconnection.c,v 1.1 2024/05/14 10:39:39 ryoon Exp $
+$NetBSD: patch-gio_gdbusconnection.c,v 1.2 2024/05/14 10:48:11 wiz Exp $
 
 * Revert https://github.com/GNOME/glib/commit/747e3af9987b37847d7d5acbf882d1ee4a6bd91b
   to fix startup of misc/libreoffice.
+  https://gitlab.gnome.org/GNOME/glib/-/issues/3365
 
 --- gio/gdbusconnection.c.orig	2024-05-14 10:29:05.451666538 +0000
 +++ gio/gdbusconnection.c
