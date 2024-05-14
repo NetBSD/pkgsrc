@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/04/05 19:13:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.58 2024/05/14 23:01:12 wiz Exp $
 
 DISTNAME=	influxdb-1.8.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
@@ -14,6 +14,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
+GO_MODULE_EXTRACT+=	github.com_influxdata_flux_@v_v0.65.1.zip
+GO_MODULE_EXTRACT+=	github.com_influxdata_flux_@v_v0.65.1.mod
 
 USE_TOOLS+=	gmake
 
