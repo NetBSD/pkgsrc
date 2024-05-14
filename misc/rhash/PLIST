@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/07/18 06:13:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/14 14:37:47 nia Exp $
 bin/rhash
 include/rhash.h
 include/rhash_torrent.h
-lib/librhash.a
-lib/librhash.so
-lib/librhash.so.${PKGVERSION}
-lib/librhash.so.1
+lib/librhash.la
 lib/pkgconfig/librhash.pc
 man/man1/rhash.1
 share/examples/rhash/rhashrc
