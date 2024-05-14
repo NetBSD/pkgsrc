@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/14 09:12:00 adam Exp $
+
+BLAKE2s (domdf_python_tools-3.8.0.post2.tar.gz) = 58ae8d2862a55cb09ba5ffb436e392b10b675a8645def98c497486c7ba50edaf
+SHA512 (domdf_python_tools-3.8.0.post2.tar.gz) = 620c2247cddeb363d7d071957ac7c599c268c33dc2101830f56131d01b3ec3fed44c1391ed33498b2391804806ccd3292da28737b2600e417bed7314a63251b2
+Size (domdf_python_tools-3.8.0.post2.tar.gz) = 148620 bytes
