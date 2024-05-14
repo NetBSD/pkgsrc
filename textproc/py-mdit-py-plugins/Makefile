@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/01/22 16:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/14 19:17:50 adam Exp $
 
-DISTNAME=	mdit_py_plugins-0.4.0
+DISTNAME=	mdit_py_plugins-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mdit-py-plugins/}
