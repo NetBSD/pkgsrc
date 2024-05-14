@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/04/07 07:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/05/14 22:38:57 wiz Exp $
 
 DISTNAME=	coyim-0.4.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coyim/}
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config gmake
 
+# for patching
+EXTRACT_ONLY=	${DEFAULT_DISTFILES} github.com_awnumar_memcall_@v_v0.1.2.zip
+
 GO_DIST_BASE=		${PKGNAME_NOREV}
 GO_SRCPATH=		github.com/coyim/coyim
 GO_BUILD_PATTERN=	${GO_SRCPATH}
@@ -23,14 +26,12 @@ MAKE_ENV+=	CGO_CFLAGS_ALLOW=".*"
 MAKE_ENV+=	CGO_CXXFLAGS_ALLOW=".*"
 MAKE_ENV+=	CGO_CPPFLAGS_ALLOW=".*"
 
-CHECK_PORTABILITY_SKIP+=	build/mac-bundle/coyim-launcher.sh
-
 COYIM_ICON=		coyim.png
 COYIM_ICON_SRC=		${WRKSRC}/build/osx/mac-bundle/coyim.iconset/icon_32x32@2x.png
 
 INSTALLATION_DIRS+=	share/applications share/pixmaps
 
-CHECK_PORTABILITY_SKIP=	build/osx/mac-bundle/coyim-launcher.sh
+CHECK_PORTABILITY_SKIP+=	build/osx/mac-bundle/coyim-launcher.sh
 
 CHECK_RELRO_SKIP=	bin/coyim
 
