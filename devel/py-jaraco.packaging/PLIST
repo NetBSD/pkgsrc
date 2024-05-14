@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/14 09:13:54 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jaraco/packaging/__init__.py
+${PYSITELIB}/jaraco/packaging/__init__.pyc
+${PYSITELIB}/jaraco/packaging/__init__.pyo
+${PYSITELIB}/jaraco/packaging/make-tree.py
+${PYSITELIB}/jaraco/packaging/make-tree.pyc
+${PYSITELIB}/jaraco/packaging/make-tree.pyo
+${PYSITELIB}/jaraco/packaging/metadata.py
+${PYSITELIB}/jaraco/packaging/metadata.pyc
+${PYSITELIB}/jaraco/packaging/metadata.pyo
+${PYSITELIB}/jaraco/packaging/sphinx.py
+${PYSITELIB}/jaraco/packaging/sphinx.pyc
+${PYSITELIB}/jaraco/packaging/sphinx.pyo
