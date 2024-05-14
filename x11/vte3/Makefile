@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.77 2024/04/07 07:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/05/14 09:30:38 wiz Exp $
 
-DISTNAME=	vte-0.74.2
+DISTNAME=	vte-0.76.1
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://wiki.gnome.org/Apps/Terminal/VTE
 COMMENT=	Terminal widget with improved accessibility and I18N support
 LICENSE=	gnu-lgpl-v2
 
@@ -43,6 +42,7 @@ REPLACE_PYTHON=		src/*.py
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
