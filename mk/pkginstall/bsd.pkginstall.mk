@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.79 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.80 2024/05/14 20:28:32 bacon Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -1020,6 +1020,9 @@ ${_INSTALL_ICON_THEMES_FILE}: ../../mk/pkginstall/icon-themes
 # PKG_RCD_SCRIPTS indicates whether to automatically install rc.d scripts
 #	to ${RCD_SCRIPTS_DIR}.  It is either YES or NO and defaults to
 #	NO.  This variable only takes effect if ${PKG_CONFIG} == "YES".
+#	Unmodified scripts are removed upon deinstall.  Modified scripts
+#	are left in-place and will not be replaced if the package is
+#	reinstalled or upgraded.	
 #
 # PKG_REGISTER_SHELLS indicates whether to automatically register shells
 #	in /etc/shells.  It is either YES or NO and defaults to YES.
