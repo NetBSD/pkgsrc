@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/03/17 13:47:26 tm Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/05/14 11:33:21 wiz Exp $
 sbin/gitea
 share/examples/gitea/app.ini.sample
 share/gitea/options/gitignore/AL
@@ -888,12 +888,12 @@ share/gitea/options/locale/locale_zh-HK.ini
 share/gitea/options/locale/locale_zh-TW.ini
 share/gitea/options/readme/Default
 share/gitea/public/.well-known/security.txt
-share/gitea/public/assets/css/asciinema-player.348ff0a9.css
-share/gitea/public/assets/css/dropzone.46ea72f6.css
+share/gitea/public/assets/css/asciinema-player.b60e711b.css
+share/gitea/public/assets/css/dropzone.0142b04d.css
 share/gitea/public/assets/css/index.css
-share/gitea/public/assets/css/katex.a42245c1.css
-share/gitea/public/assets/css/minicolors.4a2ce0b5.css
-share/gitea/public/assets/css/monaco.18fe49f8.css
+share/gitea/public/assets/css/katex.0c3ffa1d.css
+share/gitea/public/assets/css/minicolors.6d617d3d.css
+share/gitea/public/assets/css/monaco.93c3ef25.css
 share/gitea/public/assets/css/swagger.css
 share/gitea/public/assets/css/theme-arc-green.css
 share/gitea/public/assets/css/theme-auto.css
@@ -1336,8 +1336,8 @@ share/gitea/public/assets/js/dropzone.2e37d03b.js
 share/gitea/public/assets/js/easymde.58e747ca.js
 share/gitea/public/assets/js/eventsource.sharedworker.js
 share/gitea/public/assets/js/index.js
-share/gitea/public/assets/js/index.js.d3d3cc22.map
-share/gitea/public/assets/js/katex.25d07669.js
+share/gitea/public/assets/js/index.js.809e1f42.map
+share/gitea/public/assets/js/katex.5779a130.js
 share/gitea/public/assets/js/mcaptcha-vanilla-glue.149786ce.js
 share/gitea/public/assets/js/mermaid.83a93d40.js
 share/gitea/public/assets/js/minicolors.98bf1283.js
