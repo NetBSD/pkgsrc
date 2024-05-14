@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/02/13 14:34:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/05/14 09:38:16 wiz Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -48,6 +48,8 @@ share/icons/hicolor/scalable/actions/org.remmina.Remmina-keyboard-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-multi-monitor-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pan-down-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pan-up-symbolic.svg
+share/icons/hicolor/scalable/actions/org.remmina.Remmina-password-conceal-symbolic.svg
+share/icons/hicolor/scalable/actions/org.remmina.Remmina-password-reveal-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pin-down-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pin-up-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-preferences-system-symbolic.svg
@@ -67,6 +69,7 @@ share/icons/hicolor/scalable/emblems/org.remmina.Remmina-vnc-ssh-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-vnc-symbolic.svg
 share/locale/ar/LC_MESSAGES/remmina.mo
 share/locale/ast/LC_MESSAGES/remmina.mo
+share/locale/be/LC_MESSAGES/remmina.mo
 share/locale/ber/LC_MESSAGES/remmina.mo
 share/locale/bg/LC_MESSAGES/remmina.mo
 share/locale/bn/LC_MESSAGES/remmina.mo
@@ -138,7 +141,7 @@ share/locale/vi/LC_MESSAGES/remmina.mo
 share/locale/zh_CN/LC_MESSAGES/remmina.mo
 share/locale/zh_TW/LC_MESSAGES/remmina.mo
 share/metainfo/org.remmina.Remmina.appdata.xml
-share/mime/packages/remmina-mime.xml
+share/mime/packages/org.remmina.Remmina-mime.xml
 share/remmina/external_tools/functions.sh
 share/remmina/external_tools/launcher.sh
 share/remmina/external_tools/remmina_filezilla_sftp.sh
