@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:17:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/05/14 21:00:27 bacon Exp $
 
-BLAKE2s (munge-0.5.13.tar.xz) = f7c4764af928a8c4600db32986169af2dacfe3f280095c25c19a44c99927225b
-SHA512 (munge-0.5.13.tar.xz) = 2e024c0438f9208379a037daabd1c31f206820ab74a410e2bb69870755e99f9c9fbf60c294c96941008bc43425fbb31dd2374e5f088b7978479e7c65816e9002
-Size (munge-0.5.13.tar.xz) = 389952 bytes
-SHA1 (patch-src_etc_Makefile.in) = 2133f8cf5e718d786bf2ec86c2f7fd3e2a4cdfee
+BLAKE2s (munge-0.5.16.tar.xz) = c1720fd24852ad31a8aa6d83a24c5935519d0d7a682abdf2fdb535673d6c5885
+SHA512 (munge-0.5.16.tar.xz) = b808deede8e71c96719526182c5fc16250dc09d2129dc9d5cbcb54c5827723e1dbbd47b8c912373328f5f3b8971c75200abb2def5d35ebc896bff1984ab8c305
+Size (munge-0.5.16.tar.xz) = 448120 bytes
+SHA1 (patch-src_etc_Makefile.in) = fbf4e59810c97e4c70353ec435867bebf2bd39bd
