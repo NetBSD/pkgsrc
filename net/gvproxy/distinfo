@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/05/08 19:23:34 bsiegert Exp $
+$NetBSD: distinfo,v 1.10 2024/05/14 22:48:57 wiz Exp $
 
 BLAKE2s (github.com__microsoft_go-winio_@v_v0.6.1.mod) = 4bd807394bfeb117500adf47f39c5f3acfe6ca32f2e1a575fd9f3aa620196a98
 SHA512 (github.com__microsoft_go-winio_@v_v0.6.1.mod) = d896c1a388af6e893df647e6c9f4282df415bb9bd03f5489b32d8889e2a6b174c8b0c2724a93c6754baececa6c7ae17fe5650c11022cf1164ec14000e6986c8f
@@ -579,4 +579,3 @@ Size (inet.af_tcpproxy_@v_v0.0.0-20220326234310-be3ee21c9fa0.mod) = 108 bytes
 BLAKE2s (inet.af_tcpproxy_@v_v0.0.0-20220326234310-be3ee21c9fa0.zip) = 8007cd3fb2a1e9428309e5d0c0bd5e7fcb05500cb5db41062132c3f3fabbed66
 SHA512 (inet.af_tcpproxy_@v_v0.0.0-20220326234310-be3ee21c9fa0.zip) = bb154cb5ed3c02d85aec7843a7e4165b787309973b4ffb5e6b8f5a9f0e238f3daa995d7f6b836f2165113bdec0e2daf7dbcdf56a788e5fc886a0c0da0477f407
 Size (inet.af_tcpproxy_@v_v0.0.0-20220326234310-be3ee21c9fa0.zip) = 39641 bytes
-SHA1 (patch-.._.._pkg_transport_listen__netbsd.go) = 8d3ab7489de0773ebcb181e30b131009c32984c5
