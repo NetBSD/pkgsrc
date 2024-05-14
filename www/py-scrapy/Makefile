@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2024/02/16 19:02:45 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/05/14 19:15:59 adam Exp $
 
-DISTNAME=	Scrapy-2.11.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	scrapy-2.11.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
 
@@ -10,11 +10,15 @@ HOMEPAGE=	https://scrapy.org/
 COMMENT=	High-level Web Crawling and Web Scraping framework
 LICENSE=	modified-bsd
 
+WHEEL_NAME=	Scrapy-${PKGVERSION_NOREV}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
+DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-itemadapter>=0.1.0:../../textproc/py-itemadapter
 DEPENDS+=	${PYPKGPREFIX}-itemloaders>=1.0.1:../../textproc/py-itemloaders
-DEPENDS+=	${PYPKGPREFIX}-lxml>=4.3.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.4.1:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-protego>=0.1.15:../../www/py-protego
