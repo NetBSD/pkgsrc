@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/03/24 17:37:06 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/05/14 09:24:54 adam Exp $
 
-BLAKE2s (pytest-checkdocs-2.11.0.tar.gz) = 848d5ccd145eee3e4cda2ff828cec5208c0492e0ccbfcd84b218169e7d69731c
-SHA512 (pytest-checkdocs-2.11.0.tar.gz) = a0bee6801c369146bbbf3a057682acb9bf42041ab65db26f59c52af64e70946f746506a0a4abf7c71b5fe347ab9b48c451ba85d4d1f11b8f484076682dbe936a
-Size (pytest-checkdocs-2.11.0.tar.gz) = 8465 bytes
+BLAKE2s (pytest_checkdocs-2.13.0.tar.gz) = 6a2b9c6d7b597a8c5b12cf85dd7cdc02a043de9692da48c148696cf218e559ce
+SHA512 (pytest_checkdocs-2.13.0.tar.gz) = 2802c79357c2359add717e2a0ed7cfb36420b769ded85bb67237049d051d31c71a45560b11662b3a24be8902145a6b9e6874e409cae94d7e9f29433f83235105
+Size (pytest_checkdocs-2.13.0.tar.gz) = 8770 bytes
