@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/03/03 15:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/14 19:20:51 adam Exp $
 
-DISTNAME=	pydyf-0.9.0
+DISTNAME=	pydyf-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydyf/}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 TEST_DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-isort-[0-9]*:../../devel/py-isort
 
 USE_LANGUAGES=	# none
 
