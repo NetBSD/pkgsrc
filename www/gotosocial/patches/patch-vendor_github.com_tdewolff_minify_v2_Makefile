@@ -1,0 +1,15 @@
+$NetBSD: patch-vendor_github.com_tdewolff_minify_v2_Makefile,v 1.1 2024/05/14 22:44:55 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- vendor/github.com/tdewolff/minify/v2/Makefile.orig	2024-05-14 22:43:01.734615011 +0000
++++ vendor/github.com/tdewolff/minify/v2/Makefile
+@@ -33,7 +33,7 @@ release:
+ 		\
+ 		cp LICENSE dist/$$t/.; \
+ 		cp cmd/minify/README.md dist/$$t/.; \
+-		if [ "$$os" == "windows" ]; then \
++		if [ "$$os" = "windows" ]; then \
+ 			mv dist/$$t/${NAME} dist/$$t/${NAME}.exe; \
+ 			zip -jq dist/${NAME}_$$t.zip dist/$$t/*; \
+ 			cd dist; \
