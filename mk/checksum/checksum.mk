@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.29 2024/05/13 08:10:28 wiz Exp $
+# $NetBSD: checksum.mk,v 1.30 2024/05/15 08:31:35 wiz Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -90,10 +90,13 @@ distinfo:
 	@rm ${_DISTINFO_INPUTFILE}
 
 makesum:
+.for file in ${_CKSUMFILES}
+	@${ECHO} ${file} >> ${_DISTINFO_INPUTFILE}
+.endfor
 	${RUN}set -e;							\
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
-		${_DISTINFO_ARGS_DISTSUM} > $$newfile;			\
+		-I ${_DISTINFO_INPUTFILE} > $$newfile;			\
 	then								\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
@@ -101,6 +104,7 @@ makesum:
 		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
+	@rm ${_DISTINFO_INPUTFILE}
 
 makepatchsum:
 	${RUN}set -e;							\
