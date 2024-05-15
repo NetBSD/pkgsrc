@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/15 12:44:07 adam Exp $
 
-DISTNAME=	inflect-7.0.0
+DISTNAME=	inflect-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
 
@@ -13,18 +12,15 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
+DEPENDS+=	${PYPKGPREFIX}-typeguard>=4.0.1:../../devel/py-typeguard
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
