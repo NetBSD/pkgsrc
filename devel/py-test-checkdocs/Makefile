@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/05/14 09:24:54 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/15 07:20:41 jperkin Exp $
 
 DISTNAME=	pytest_checkdocs-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
