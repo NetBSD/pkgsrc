@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/02 12:46:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/15 21:13:50 wiz Exp $
 ${PYSITELIB}/grpc_tools/__init__.py
 ${PYSITELIB}/grpc_tools/__init__.pyc
 ${PYSITELIB}/grpc_tools/__init__.pyo
@@ -18,6 +18,9 @@ ${PYSITELIB}/grpc_tools/_protoc_compiler.so
 ${PYSITELIB}/grpc_tools/command.py
 ${PYSITELIB}/grpc_tools/command.pyc
 ${PYSITELIB}/grpc_tools/command.pyo
+${PYSITELIB}/grpc_tools/grpc_version.py
+${PYSITELIB}/grpc_tools/grpc_version.pyc
+${PYSITELIB}/grpc_tools/grpc_version.pyo
 ${PYSITELIB}/grpc_tools/protoc.py
 ${PYSITELIB}/grpc_tools/protoc.pyc
 ${PYSITELIB}/grpc_tools/protoc.pyo
