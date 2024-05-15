@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3440 2024/05/15 12:45:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3441 2024/05/15 12:53:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5387,3 +5387,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/gcc12-libs to 12.3.0nb2 [ryoon 2024-05-15]
 	Updated lang/py-inflect to 7.2.1 [adam 2024-05-15]
 	Updated textproc/py-ini2toml to 0.15 [adam 2024-05-15]
+	Updated devel/py-scikit-build-core to 0.9.4 [adam 2024-05-15]
+	Updated devel/py-urwid to 2.6.12 [adam 2024-05-15]
