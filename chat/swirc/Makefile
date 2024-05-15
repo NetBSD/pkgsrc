@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/05/06 08:40:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/15 09:44:36 wiz Exp $
 
-DISTNAME=	swirc-3.4.6
-PKGREVISION=	2
+DISTNAME=	swirc-3.4.7
 CATEGORIES=	chat
 MASTER_SITES=	https://www.nifty-networks.net/swirc/releases/
 EXTRACT_SUFX=	.tgz
@@ -20,6 +19,8 @@ USE_CXX_FEATURES=	c++17
 MAKE_FLAGS+=	Q= CC="${CC}" CXX="${CXX}" LDFLAGS="${LDFLAGS}"
 MAKE_FLAGS+=	DEST_MANUAL=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	DEST_CONFMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+
+BUILDLINK_TRANSFORM+=	l:gnupanelw:gnupanel
 
 .include "../../devel/libidn/buildlink3.mk"
 # Relies on ncurses struct internals - cannot use NetBSD libcurses.

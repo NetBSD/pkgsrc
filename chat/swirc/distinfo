@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2023/11/07 07:58:36 fcambus Exp $
+$NetBSD: distinfo,v 1.15 2024/05/15 09:44:36 wiz Exp $
 
-BLAKE2s (swirc-3.4.6.tgz) = eb0e9813d4e0ed23af4d8f614630e6b33247f188b086b75e3094669795c16a4e
-SHA512 (swirc-3.4.6.tgz) = 6e83b9f831f605371761d335b4260689872a2d9481c6ebda2c4bb5de772bba465740374f73b5e08656732aeb304ed17c64281f52e4e138c1157f0971e341cc78
-Size (swirc-3.4.6.tgz) = 338724 bytes
+BLAKE2s (swirc-3.4.7.tgz) = ba3e7fa13c6b974fbf312609d6fb1d073bd801d9f57878c6293e25407c4ae27e
+SHA512 (swirc-3.4.7.tgz) = c68a73001f28ee857eb2e0e00d2b57d53f3d9f954b332ccc22a25335109f4ebfba1047cb16ce43d6f9cbb43e0f5d06f815707c9b948e81f474f8f0a786ee9f4b
+Size (swirc-3.4.7.tgz) = 353641 bytes
 SHA1 (patch-src_printtext.cpp) = 4151084851a2fdb7b006ff548da716c2c061d5ab
