@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2024/04/10 10:13:17 adam Exp $
+# $NetBSD: Makefile,v 1.250 2024/05/15 08:13:25 nia Exp $
 
 DISTNAME=	gnutls-3.8.5
 PKGREVISION=	1
@@ -108,8 +108,6 @@ BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
 .include "../../security/libtasn1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.6
 .include "../../security/nettle/buildlink3.mk"
-BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
-.include "../../security/p11-kit/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
