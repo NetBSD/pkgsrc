@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/01/07 21:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/15 20:34:16 wiz Exp $
 
-DISTNAME=	libplacebo-v6.338.1
+DISTNAME=	libplacebo-v6.338.2
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://code.videolan.org/videolan/libplacebo/-/archive/v${PKGVERSION_NOREV}/
