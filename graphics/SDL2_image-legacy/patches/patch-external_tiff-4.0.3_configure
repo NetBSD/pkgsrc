@@ -1,0 +1,15 @@
+$NetBSD: patch-external_tiff-4.0.3_configure,v 1.1 2024/05/15 10:29:49 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- external/tiff-4.0.3/configure.orig	2024-05-15 10:23:47.093939654 +0000
++++ external/tiff-4.0.3/configure
+@@ -18145,7 +18145,7 @@ if test "${with_jpeg12_lib+set}" = set; 
+ fi
+ 
+ 
+-if test "x$enable_jpeg12" == "xyes" ; then
++if test "x$enable_jpeg12" = "xyes" ; then
+ 
+   if test "x$with_jpeg12_lib" != "x" ; then
+     LIBS="$with_jpeg12_lib $LIBS"

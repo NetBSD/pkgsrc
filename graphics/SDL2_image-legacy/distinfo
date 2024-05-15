@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/05/06 18:05:31 nia Exp $
+$NetBSD: distinfo,v 1.2 2024/05/15 10:29:49 wiz Exp $
 
 BLAKE2s (SDL2_image-2.0.1.tar.gz) = 2e4fe1e0d91bba5cf162a9c82bd56320757d54081cbba440202b6fff9a82d13e
 SHA512 (SDL2_image-2.0.1.tar.gz) = 99ed5f7b69966cea5fcf9173e7270167c24b55ab459774f10dbf90f26dcb9d5f118971ffd4e583a83148976f44ca166474669398a561169d24ffba80f852306f
@@ -9,3 +9,4 @@ SHA1 (patch-IMG__lbm.c) = af312c686021cdfbd57bc4f75f0622d86bcaaf81
 SHA1 (patch-IMG__pcx.c) = 20bb260be98a7605712e8a474a98ed0f689e3790
 SHA1 (patch-IMG__xcf.c) = a967a661702cfa8f9f83df7ee88fe958c7d2af80
 SHA1 (patch-Makefile.in) = 3c7dc65fa79fc49cd182f18241415bcb3ef73cd2
+SHA1 (patch-external_tiff-4.0.3_configure) = cb8b7d3a96472939a30998005f2c185e5c4c4bea
