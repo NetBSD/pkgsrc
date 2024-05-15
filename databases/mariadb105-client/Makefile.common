@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2024/05/15 15:59:55 nia Exp $
+# $NetBSD: Makefile.common,v 1.30 2024/05/15 19:21:43 jperkin Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -108,11 +108,18 @@ CHECK_PORTABILITY_SKIP+=	BUILD/compile-pentium-gcov
 PKGCONFIG_OVERRIDE+=	support-files/mariadb.pc.in
 PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 
+.include "../../mk/curses.buildlink3.mk"
+
+# cmake probes for curses.h but then never passes on HAVE_CURSES_H if it is
+# found, which breaks the logic in client/mysql.cc
+.if ${CURSES_TYPE} == "ncurses"
+CPPFLAGS+=	-DHAVE_CURSES_H
+.endif
+
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/krb5.buildlink3.mk"
