@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/05/04 21:30:27 nikita Exp $
+# $NetBSD: Makefile,v 1.64 2024/05/15 08:34:23 nia Exp $
 
 DISTNAME=	zathura-0.5.4
 CATEGORIES=	print
@@ -20,6 +20,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 MESON_ARGS+=	-D convert-icon=disabled
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
+
+USE_CC_FEATURES+=	c17
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-configure
