@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24453 2024/05/15 09:44:46 wiz Exp $
+$NetBSD: TODO,v 1.24454 2024/05/15 11:34:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -564,6 +564,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o deskmenu-1.4.5
 	o diction-1.14
 	o dikt-2s7
+	o dino-0.4.3 [wip]
 	o direvent-5.2
 	o distcc-pump-3.3.5
 	o distccmon-gnome-3.3.5
