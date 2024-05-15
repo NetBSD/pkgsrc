@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2023/12/17 20:49:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/15 07:24:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ujson-stubs/METADATA.toml
 ${PYSITELIB}/ujson-stubs/__init__.pyi
+${PYSITELIB}/ujson-stubs/py.typed
