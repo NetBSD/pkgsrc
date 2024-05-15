@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/04/24 08:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/15 12:45:18 adam Exp $
 
-DISTNAME=	ini2toml-0.14
+DISTNAME=	ini2toml-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ini2toml/}

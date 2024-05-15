@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/04/24 08:09:43 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/05/15 12:45:18 adam Exp $
 
-BLAKE2s (ini2toml-0.14.tar.gz) = 6dd5fbfc19faab142bd03fb0c8b757006c985437838d6ba5d62ed248b360bcb3
-SHA512 (ini2toml-0.14.tar.gz) = d29155ae1069084381aef852145a6c734ea4e1e8c6847174fff98bca497cbb4289ee791b26541c6027b716845dd23fc251dde531c6cb9c62d490e4bfed5f862e
-Size (ini2toml-0.14.tar.gz) = 108296 bytes
+BLAKE2s (ini2toml-0.15.tar.gz) = 8ce26a2c2862a90fdbbc245ec3bf5b52e65282c0c0afdb575d4d55fc1abaaea7
+SHA512 (ini2toml-0.15.tar.gz) = 5726c745972fbdf6a254ccd44133c5c65368f531c17efda3b83323c2c9e450d508fe57f1aa0919c0de6cc6e18d6a974b75dc50ecf29c852d367bc03891f0486c
+Size (ini2toml-0.15.tar.gz) = 109236 bytes
