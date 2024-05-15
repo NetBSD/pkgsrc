@@ -1,9 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2024/05/14 08:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/15 13:30:50 wiz Exp $
 
 DISTNAME=	emacspeak-60.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tvraman/}
 GITHUB_PROJECT=	emacspeak
+# The .tar.bz2 of release 60.0 is broken and upstream won't fix
+# it.  Switch to the auto-generated repository snapshot for the 60.0
+# release instead. This file is much bigger than the .tar.bz2 (100
+# MB vs. 5 MB) so we should switch back to .tar.bz2 on the next
+# release.
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://emacspeak.sourceforge.net/
