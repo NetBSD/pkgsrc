@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2024/05/06 08:41:57 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2024/05/15 15:59:55 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -20,6 +20,8 @@ USE_TOOLS+=	perl:run pkg-config bison
 USE_CURSES=	wide
 
 PLIST_SRC=	${PLIST_SRC_DFLT}
+
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 
