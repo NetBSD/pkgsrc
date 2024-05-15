@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2024/04/18 06:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2024/05/15 10:57:04 wiz Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	
+PKGREVISION=	1
 CATEGORIES=	mail
 
 CONFLICTS+=	esmtp>=1.2 postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
@@ -75,7 +75,9 @@ SUBST_FILES.paths=	${WRKDIR}/mailer.conf
 SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
-REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl
+REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl courier/filters/perlfilter/*.pl
+
+CHECK_WRKREF_SKIP+=	bin/courier-config
 
 SPECIAL_PERMS+=	${DATADIR}/filterctl ${COURIER_USER} ${COURIER_GROUP} 0500
 SPECIAL_PERMS+=	${PREFIX}/sbin/courierfilter  ${COURIER_USER} \

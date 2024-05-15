@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/12 21:06:43 hans Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/05/15 10:57:04 wiz Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -171,6 +171,9 @@ share/courier/perlfilter-ratelimit.pl
 share/courier/perlfilter-wrapper.pl
 share/courier/verifysender
 share/courier/verifysenderfull
+share/doc/courier/FAQ.html
+share/doc/courier/aliases.html
+share/doc/courier/aliaslookup.html
 share/doc/courier/bg.png
 share/doc/courier/cancelmsg.html
 share/doc/courier/courier.html
@@ -204,9 +207,6 @@ share/doc/courier/makehosteddomains.html
 share/doc/courier/makepercentrelay.html
 share/doc/courier/makesmtpaccess.html
 share/doc/courier/menu.html
-share/doc/courier/FAQ.html
-share/doc/courier/aliases.html
-share/doc/courier/aliaslookup.html
 share/doc/courier/mkesmtpdcert.html
 share/doc/courier/modules.html
 share/doc/courier/pop3d.html
