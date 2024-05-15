@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2024/05/15 06:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.594 2024/05/15 06:58:55 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -394,6 +394,7 @@ SUBDIR+=	py-asdf-transform-schemas
 SUBDIR+=	py-asdf-unit-schemas
 SUBDIR+=	py-asdf_astropy
 SUBDIR+=	py-asdf_coordinates_schemas
+SUBDIR+=	py-asdf_wcs_schemas
 SUBDIR+=	py-asteval
 SUBDIR+=	py-astroML
 SUBDIR+=	py-astropy
