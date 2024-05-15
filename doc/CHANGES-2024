@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3431 2024/05/15 07:01:50 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3432 2024/05/15 07:25:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5371,3 +5371,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added math/py-asdf_astropy version 0.6.1 [wiz 2024-05-15]
 	Added math/py-asdf_wcs_schemas version 0.4.0 [wiz 2024-05-15]
 	Updated math/py-gwcs to 0.21.0 [wiz 2024-05-15]
+	Updated devel/wabt to 1.0.35 [adam 2024-05-15]
+	Updated misc/py-platformdirs to 4.2.2 [adam 2024-05-15]
+	Updated devel/py-types-ujson to 5.10.0.20240515 [adam 2024-05-15]
+	Updated devel/py-types-setuptools to 69.5.0.20240513 [adam 2024-05-15]
