@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/21 09:14:32 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/15 15:19:03 adam Exp $
 
-DISTNAME=	fsspec-2024.3.1
+DISTNAME=	fsspec-2024.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fsspec/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/fsspec/filesystem_spec
 COMMENT=	File-system specification
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
