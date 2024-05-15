@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.196 2024/05/15 07:53:36 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.197 2024/05/15 08:18:54 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19158,7 +19158,7 @@ jenkins<2.204.6			security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2020-21
 jenkins<2.204.6			cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2020-2161
 jenkins<2.204.6			cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2020-2162
 jenkins<2.204.6			cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2020-2163
-gst-rtsp-server-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-6095
+gst-rtsp-server<1.17.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-6095
 netbeans-ide<11.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-17560
 netbeans-ide<11.3	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2019-17561
 pam-krb5<4.9	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-10595
@@ -21988,9 +21988,6 @@ libssh<0.9.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3634
 xmill-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2021-21811
 cyrus-imapd<2.4.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-33582
 cyrus-imapd>=3.0<3.0.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-33582
-gst-plugins1-libav-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18778
-gst-plugins1-libav-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18776
-gst-plugins1-libav-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18775
 ffmpeg2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18778
 ffmpeg2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18776
 ffmpeg2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18775
