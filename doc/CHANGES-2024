@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3454 2024/05/15 21:14:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3455 2024/05/15 21:14:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/grpc to 1.63.0 [wiz 2024-05-15]
 	Updated net/py-grpcio to 1.63.0 [wiz 2024-05-15]
 	Updated net/py-grpcio-testing to 1.63.0 [wiz 2024-05-15]
+	Updated net/py-grpcio-tools to 1.63.0 [wiz 2024-05-15]
