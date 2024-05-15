@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/25 09:05:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/15 07:21:13 adam Exp $
 bin/spectest-interp
 bin/wasm-decompile
 bin/wasm-interp
@@ -98,3 +98,4 @@ man/man1/wat2wasm.1
 share/wabt/wasm2c/wasm-rt-exceptions-impl.c
 share/wabt/wasm2c/wasm-rt-impl.c
 share/wabt/wasm2c/wasm-rt-impl.h
+share/wabt/wasm2c/wasm-rt-mem-impl.c
