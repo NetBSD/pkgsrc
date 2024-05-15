@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/12 18:43:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/15 08:08:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -66,6 +66,9 @@ ${PYSITELIB}/sql/tests/test_lateral.pyo
 ${PYSITELIB}/sql/tests/test_literal.py
 ${PYSITELIB}/sql/tests/test_literal.pyc
 ${PYSITELIB}/sql/tests/test_literal.pyo
+${PYSITELIB}/sql/tests/test_merge.py
+${PYSITELIB}/sql/tests/test_merge.pyc
+${PYSITELIB}/sql/tests/test_merge.pyo
 ${PYSITELIB}/sql/tests/test_operators.py
 ${PYSITELIB}/sql/tests/test_operators.pyc
 ${PYSITELIB}/sql/tests/test_operators.pyo
