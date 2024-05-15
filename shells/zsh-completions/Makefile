@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/11/28 19:31:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/15 13:44:31 nikita Exp $
 
-DISTNAME=	zsh-completions-0.27.0
+DISTNAME=	zsh-completions-0.35.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zsh-users/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
