@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/03/17 09:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/15 06:54:27 wiz Exp $
 
 DISTNAME=	asdf_transform_schemas-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -14,6 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
+TEST_DEPENDS+=	${PYPKGPREFIX}-asdf>=2.8.0:../../math/py-asdf
+TEST_DEPENDS+=	${PYPKGPREFIX}-asdf_astropy>=0:../../math/py-asdf_astropy
+TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>=0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
