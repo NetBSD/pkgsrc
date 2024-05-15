@@ -1,12 +1,16 @@
-$NetBSD: patch-main_CMakeLists.txt,v 1.1 2020/06/12 14:20:51 ryoon Exp $
+$NetBSD: patch-main_CMakeLists.txt,v 1.2 2024/05/15 13:11:13 wiz Exp $
 
+Always export symbols to fix startup on BSDs 
 https://github.com/dino/dino/issues/438
 
---- main/CMakeLists.txt.orig	2020-01-29 19:11:48.000000000 +0000
+--- main/CMakeLists.txt.orig	2024-05-15 13:01:44.837890255 +0000
 +++ main/CMakeLists.txt
-@@ -198,3 +198,5 @@ install(FILES
- DESTINATION
-     ${ICON_INSTALL_DIR}/hicolor/scalable/status
- )
-+
+@@ -233,6 +233,8 @@ add_dependencies(dino ${GETTEXT_PACKAGE}
+ target_include_directories(dino PRIVATE src)
+ target_link_libraries(dino libdino ${MAIN_PACKAGES})
+ 
 +set_target_properties(dino PROPERTIES ENABLE_EXPORTS TRUE)
++
+ if(WIN32)
+     target_link_libraries(dino -mwindows)
+ endif(WIN32)
