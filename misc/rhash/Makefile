@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/05/14 14:37:47 nia Exp $
+# $NetBSD: Makefile,v 1.24 2024/05/15 14:06:39 nia Exp $
 
 DISTNAME=	rhash-1.4.4
 PKGREVISION=	2
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--extra-cflags=-I${BUILDLINK_PREFIX.openssl}/include
+CONFIGURE_ARGS+=	--extra-ldflags=-L${BUILDLINK_PREFIX.openssl}/lib\ ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib\ ${LDFLAGS:Q}
 INSTALL_TARGET=		build-install-binary install-man
 INSTALL_TARGET+=	install-pkg-config install-lib-shared
 INSTALL_TARGET+=	install-lib-headers
