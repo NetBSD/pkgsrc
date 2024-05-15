@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/05/06 08:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/15 09:56:07 wiz Exp $
 #
 
 DISTNAME=		ncc-2.8
@@ -43,6 +43,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/hacking.* ${DESTDIR}${PREFIX}/share/doc/ncc
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ncc
 
-.include "../../devel/ncurses/buildlink3.mk"
+FAKE_NCURSES=		yes
+
+.include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
