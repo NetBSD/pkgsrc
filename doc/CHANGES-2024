@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3452 2024/05/15 21:14:06 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3453 2024/05/15 21:14:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5403,3 +5403,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/mpv to 0.38.0 [wiz 2024-05-15]
 	Updated print/mupdf to 1.24.0 [wiz 2024-05-15]
 	Updated net/grpc to 1.63.0 [wiz 2024-05-15]
+	Updated net/py-grpcio to 1.63.0 [wiz 2024-05-15]
