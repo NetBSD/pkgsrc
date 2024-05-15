@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/15 06:42:31 wiz Exp $
+
+BLAKE2s (asdf_coordinates_schemas-0.3.0.tar.gz) = aba983de2899e2617da76fdc8aa4f5fb66cad61fb578bf82bbdb8d1f5faac368
+SHA512 (asdf_coordinates_schemas-0.3.0.tar.gz) = c51212c2a91b6cd7722ee34d244c2a5bda60c28673b125c7daee992cd1f8450fc3f66bd33e0acd235bd16a6daef8849a35d0a1a771cea892340463e98f954cc2
+Size (asdf_coordinates_schemas-0.3.0.tar.gz) = 54499 bytes
