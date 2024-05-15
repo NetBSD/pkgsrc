@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.81 2024/01/01 15:50:13 leot Exp $
+$NetBSD: distinfo,v 1.82 2024/05/15 20:37:20 wiz Exp $
 
-BLAKE2s (mpv-0.37.0.tar.gz) = 0406db57ea2b31c309f653af7ed61373ae2db6c63e8189a184bac159b7e52753
-SHA512 (mpv-0.37.0.tar.gz) = a2f7fb3837312ec59c50427af7be3b2b1b6175a53ccc7463e81503284fc4047dff32cb105d665d80be77ee1ae775d4512b71584f324d6d202c9a7fc1fab53257
-Size (mpv-0.37.0.tar.gz) = 3384190 bytes
+BLAKE2s (mpv-0.38.0.tar.gz) = 030036c0a06177c0eb3478bee5bbd78b001889173d98f965c845777e468c4068
+SHA512 (mpv-0.38.0.tar.gz) = b5b2af59039ef4711814f94bbdfedb37f8ce914301670e42d4ed05fe1900025a3d3a2f3d5e69628a8aad115a647a27c386718959e2df1a18740468b3a84f8975
+Size (mpv-0.38.0.tar.gz) = 3419741 bytes
 SHA1 (patch-audio_out_ao__alsa.c) = c4661d0d22550d6e4eb2b7a42dd04dbcc58123b0
 SHA1 (patch-etc_mpv.conf) = 9e41b2f4bf59c3bfc5ad84af05538661981ed111
-SHA1 (patch-meson.build) = 2ffcbb18391372b694af44d711c16d3d44f871c8
-SHA1 (patch-osdep_threads-posix.h) = 67900f0f14762a7ec7e2ee5fdcf57c32cbfe6b49
+SHA1 (patch-meson.build) = 490a7a3b498cfc3ccd8994778f46ae72dbe70431
+SHA1 (patch-osdep_threads-posix.h) = b7e2626ba490742858bb979ddbc5a541550ecb6b
 SHA1 (patch-stream_stream__libarchive.c) = 2025f994b7f82cc868608ab7e8df0ae89b549922
 SHA1 (patch-video_out_drm__common.c) = 70eb8884f63e9456c0ffe592289cfd81e208955b
