@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2024/05/15 08:13:25 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2024/05/15 08:30:00 tnn Exp $
 
 BUILDLINK_TREE+=	gnutls
 
@@ -14,14 +14,14 @@ BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 .include "../../security/libtasn1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
 .include "../../security/nettle/buildlink3.mk"
-.if ${PKG_BUILD_OPTIONS.gnutls:Mpkcs11}
-.include "../../security/p11-kit/buildlink3.mk"
-.endif
 .include "../../textproc/libunistring/buildlink3.mk"
 pkgbase := gnutls
 .include "../../mk/pkg-build-options.mk"
 .if ${PKG_BUILD_OPTIONS.gnutls:Mdane}
 .include "../../net/unbound/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.gnutls:Mpkcs11}
+.include "../../security/p11-kit/buildlink3.mk"
 .endif
 .endif # GNUTLS_BUILDLINK3_MK
 
