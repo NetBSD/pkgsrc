@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.81 2024/03/21 06:08:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.82 2024/05/15 08:13:25 nia Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
 bin/gnutls-serv
 bin/ocsptool
-bin/p11tool
+${PLIST.pkcs11}bin/p11tool
 bin/psktool
 include/gnutls/abstract.h
 include/gnutls/compat.h
