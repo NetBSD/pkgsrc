@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3446 2024/05/15 13:44:41 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.3447 2024/05/15 15:19:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5394,3 +5394,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/dino to 0.4.3nb1 [wiz 2024-05-15]
 	Updated devel/glib2 to 2.80.2nb2 [wiz 2024-05-15]
 	Updated shells/zsh-completions to 0.35.0 [nikita 2024-05-15]
+	Updated textproc/py-wcmatch to 8.5.2 [adam 2024-05-15]
+	Updated devel/py-coveralls to 4.0.1 [adam 2024-05-15]
+	Updated www/py-django-admin-sortable2 to 2.2 [adam 2024-05-15]
+	Updated sysutils/py-fsspec to 2024.5.0 [adam 2024-05-15]
