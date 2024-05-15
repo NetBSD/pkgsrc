@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4275 2024/05/14 09:13:54 adam Exp $
+# $NetBSD: Makefile,v 1.4276 2024/05/15 06:33:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3017,6 +3017,7 @@ SUBDIR+=	py-tenacity
 SUBDIR+=	py-termcolor
 SUBDIR+=	py-test
 SUBDIR+=	py-test-assume
+SUBDIR+=	py-test-astropy-header
 SUBDIR+=	py-test-asyncio
 SUBDIR+=	py-test-benchmark
 SUBDIR+=	py-test-celery
