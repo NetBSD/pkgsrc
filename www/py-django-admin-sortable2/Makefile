@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/12/02 07:17:54 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/15 15:16:16 adam Exp $
 
-DISTNAME=	django-admin-sortable2-2.1.10
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_admin_sortable2-2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-admin-sortable2/}
 
@@ -12,11 +12,11 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-django>=4:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
