@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/15 06:33:44 wiz Exp $
+
+BLAKE2s (pytest-astropy-header-0.2.2.tar.gz) = 03b3be0cb886f42399746f5ae7cd2d259cfa7bb21a4ea6db2868dd1eda6716be
+SHA512 (pytest-astropy-header-0.2.2.tar.gz) = 790e9bbfe2050298d00ddc435a00f65150a51ab0833ff7ab32090dfd5700a0f0fe07acca3d87c953d7b54b9010a1e2e9bb30b3143956e77f0f283c01490f5c77
+Size (pytest-astropy-header-0.2.2.tar.gz) = 9914 bytes
