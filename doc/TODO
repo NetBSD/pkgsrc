@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24458 2024/05/15 20:37:29 wiz Exp $
+$NetBSD: TODO,v 1.24459 2024/05/15 21:00:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -945,7 +945,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
-	o mupdf-1.24.0
 	o muse-0.9.2
 	o musescore-4.2 [now has a fixed ALSA dependency, and some features were removed]
 	o mypaint-2.0.1
