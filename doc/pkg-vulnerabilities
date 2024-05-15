@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.195 2024/05/14 23:06:15 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.196 2024/05/15 07:53:36 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17102,7 +17102,7 @@ python36<3.6.9		restriction-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-994
 python37<3.7.4		restriction-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-9948
 ImageMagick6<6.9.10.35	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9956
 ImageMagick<7.0.8.35	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9956
-gitea-[0-9]*	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2018-15192
+gitea<1.16.0	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2018-15192
 ap24-auth-mellon<0.14.2	open-redirect		https://nvd.nist.gov/vuln/detail/CVE-2019-3877
 ap24-auth-mellon<0.14.2	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-3878
 xpdf-[0-9]*	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2019-10018
@@ -19461,9 +19461,7 @@ wordpress<5.4.2	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-
 upx<3.96	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-20805
 sane-backends<1.0.30	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-12867
 py{27,36,37,38}-rsa<4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-13757
-grafana-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18624
-grafana-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18625
-grafana-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18623
+grafana<6.0.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-18623
 libvirt>=3.10.0<6.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-10703
 mediawiki<1.35	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-10959
 qemu<4.2.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-13659
@@ -20008,7 +20006,7 @@ mediawiki<1.34.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-
 mediawiki<1.34.4	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-26121
 py{27,36,37,38}-rpyc>=4.1.0<4.1.2	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-16328
 py{27,36,37,38}-djangorestframework<3.12.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25626
-grafana-[0-9]*		signature-forgery	https://nvd.nist.gov/vuln/detail/CVE-2020-15216
+grafana<8.3.1		signature-forgery	https://nvd.nist.gov/vuln/detail/CVE-2020-15216
 vault>=1.5.0<1.5.4	access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-25816
 vault>=1.4.0<1.4.7	access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-25816
 mantis<2.24.3		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25288
@@ -24921,7 +24919,7 @@ lepton-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2022-4104
 binutils<2.40	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-38533
 binutils<2.40	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-4285
 awstats>=7<7.9	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-46391
-assimp-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-45748
+assimp<5.4.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-45748
 knot<5.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-40188
 freeciv>=2.6.7<3.0.3	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-39047
 modular-xorg-server<21.1.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-2319
