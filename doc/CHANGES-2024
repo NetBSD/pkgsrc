@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3435 2024/05/15 08:54:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3436 2024/05/15 09:44:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5381,3 +5381,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-poetry-plugin-export to 1.8.0 [adam 2024-05-15]
 	Updated lang/nodejs20 to 20.13.1 [adam 2024-05-15]
 	Updated security/dropbear to 2024.85 [adam 2024-05-15]
+	Updated chat/swirc to 3.4.7 [wiz 2024-05-15]
