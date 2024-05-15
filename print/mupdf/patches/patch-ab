@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.28 2023/09/07 14:36:54 vins Exp $
+$NetBSD: patch-ab,v 1.29 2024/05/15 21:00:43 wiz Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -10,9 +10,9 @@ $NetBSD: patch-ab,v 1.28 2023/09/07 14:36:54 vins Exp $
 - Avoid internal version of freeglut and try to pick it up via pkg-config and
   set SYS_GLUT_{CFLAGS,LIBS} accordingly.
 
---- Makerules.orig	2023-09-05 11:51:19.000000000 +0000
+--- Makerules.orig	2024-03-19 15:31:58.000000000 +0000
 +++ Makerules
-@@ -42,30 +42,6 @@ endif
+@@ -48,30 +48,6 @@ endif
  
  # System specific features
  
@@ -43,8 +43,8 @@ $NetBSD: patch-ab,v 1.28 2023/09/07 14:36:54 vins Exp $
  SANITIZE_FLAGS += -fsanitize=address
  SANITIZE_FLAGS += -fsanitize=leak
  
-@@ -154,41 +130,7 @@ ifneq "$(CLUSTER)" ""
-   CFLAGS += -DCLUSTER
+@@ -178,37 +154,7 @@ ifeq ($(OS),OpenBSD)
+     LINUX_OR_OPENBSD := yes
  endif
  
 -ifeq ($(OS),MINGW)
@@ -63,7 +63,7 @@ $NetBSD: patch-ab,v 1.28 2023/09/07 14:36:54 vins Exp $
 -  ifneq ($(ARCHFLAGS),)
 -    $(warning "MacOS with ARCHFLAGS set. Assuming we are building for arm64, and setting HAVE_LIBCRYPTO to no.")
 -    HAVE_LIBCRYPTO := no
--  else ifeq (, $(shell which pkg-config))
+-  else ifeq (, $(shell command -v pkg-config))
 -    $(warning "No pkg-config found, install it for proper integration of libcrypto")
 -  else
 -    HAVE_LIBCRYPTO := $(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)
@@ -73,35 +73,30 @@ $NetBSD: patch-ab,v 1.28 2023/09/07 14:36:54 vins Exp $
 -    endif
 -  endif
 -
--else ifeq ($(OS),Linux)
--  ifeq ($(PYODIDE_ROOT),)
+-else ifeq ($(LINUX_OR_OPENBSD),yes)
+-
+-  ifeq ($(OS),Linux)
 -    HAVE_OBJCOPY := yes
--  else
--    # Pyodide's ld does not support -b so we cannot use it to create object
--    # files containing font data, so leave HAVE_OBJCOPY unset. And we need
--    # extra memory when linking.
--    LDFLAGS += -sTOTAL_MEMORY=48MB
 -  endif
 +HAVE_OBJCOPY := no
  
    ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
  	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
-@@ -237,10 +179,10 @@ else ifeq ($(OS),Linux)
- 	SYS_CURL_LIBS := $(shell pkg-config --libs libcurl)
-   endif
+@@ -265,13 +211,8 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
  
--  HAVE_GLUT := yes
--  ifeq ($(HAVE_GLUT),yes)
--	SYS_GLUT_CFLAGS :=
--	SYS_GLUT_LIBS := -lglut -lGL
-+  HAVE_GLUT := $(shell pkg-config --exists glut && echo yes)
-+  ifeq ($(shell pkg-config --exists glut && echo yes),yes)
-+	SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut)
-+	SYS_GLUT_LIBS := $(shell pkg-config --libs glut)
+   HAVE_GLUT := yes
+   ifeq ($(HAVE_GLUT),yes)
+-    ifeq ($(OS),OpenBSD)
+       SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut gl)
+       SYS_GLUT_LIBS := $(shell pkg-config --libs glut gl)
+-    else
+-      SYS_GLUT_CFLAGS :=
+-      SYS_GLUT_LIBS := -lglut -lGL
+-    endif
    endif
  
    HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
-@@ -263,8 +205,6 @@ else ifeq ($(OS),Linux)
+@@ -294,8 +235,6 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
  	PTHREAD_LIBS := -lpthread
    endif
  

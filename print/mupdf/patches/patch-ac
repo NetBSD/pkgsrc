@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
+$NetBSD: patch-ac,v 1.32 2024/05/15 21:00:43 wiz Exp $
 
 - Install target cleanup
 - Also install muthreads and mupkcs7 libraries (needed by various tools)
 - Use sh instead of bash
 
---- Makefile.orig	2023-09-05 11:51:19.000000000 +0000
+--- Makefile.orig	2024-03-19 15:31:58.000000000 +0000
 +++ Makefile
-@@ -214,10 +214,10 @@ endif
+@@ -237,10 +237,10 @@ endif
  
  FONT_GEN := $(FONT_BIN:%=generated/%.c)
  
@@ -21,10 +21,10 @@ $NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
  
  ifeq ($(HAVE_OBJCOPY),yes)
    MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
-@@ -440,29 +440,35 @@ tools: $(TOOL_APPS)
+@@ -465,55 +465,59 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
- install-libs: libs
+ install-headers:
 -	install -d $(DESTDIR)$(incdir)/mupdf
 -	install -d $(DESTDIR)$(incdir)/mupdf/fitz
 -	install -d $(DESTDIR)$(incdir)/mupdf/pdf
@@ -37,6 +37,8 @@ $NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
 +	${BSD_INSTALL_DATA} include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
 +	${BSD_INSTALL_DATA} include/mupdf/fitz/*.h $(DESTDIR)$(incdir)/mupdf/fitz
 +	${BSD_INSTALL_DATA} include/mupdf/pdf/*.h $(DESTDIR)$(incdir)/mupdf/pdf
+ 
+ install-libs: libs install-headers
  ifneq ($(LIBS_TO_INSTALL_IN_LIB),)
 -	install -d $(DESTDIR)$(libdir)
 -	install -m 644 $(LIBS_TO_INSTALL_IN_LIB) $(DESTDIR)$(libdir)
@@ -44,7 +46,6 @@ $NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
 +	for f in $(LIBS_TO_INSTALL_IN_LIB); do \
 +		${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir); \
 +	done
-+
  endif
  
  install-apps: apps
@@ -60,16 +61,86 @@ $NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
 -	install -m 644 docs/man/*.1 $(DESTDIR)$(mandir)/man1
 +	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(mandir)/man1
 +	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(mandir)/man1
-+
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
-+	${BSD_INSTALL_DATA} README COPYING CHANGES $(DESTDIR)$(docdir)
-+	${BSD_INSTALL_DATA} docs/examples/* $(DESTDIR)$(docdir)/examples
  
 -	install -d $(DESTDIR)$(docdir)
 -	install -d $(DESTDIR)$(docdir)/examples
--	install -m 644 README COPYING CHANGES $(DESTDIR)$(docdir)
+-	install -m 644 README CHANGES $(DESTDIR)$(docdir)
+-	install -m 644 $(wildcard COPYING LICENSE) $(DESTDIR)$(docdir)
 -	install -m 644 docs/examples/* $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA} README CHANGES $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} $(wildcard COPYING LICENSE) $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} docs/examples/* $(DESTDIR)$(docdir)/examples
  
  install: install-libs install-apps install-docs
+ 
+ install-docs-html:
+ 	python3 scripts/build-docs.py
+-	install -d $(DESTDIR)$(docdir)
+-	install -d $(DESTDIR)$(docdir)/_images
+-	install -d $(DESTDIR)$(docdir)/_static
+-	install -d $(DESTDIR)$(docdir)/_static/js
+-	install -d $(DESTDIR)$(docdir)/_static/css
+-	install -d $(DESTDIR)$(docdir)/_static/css/fonts
+-	install -m 644 build/docs/html/*.html $(DESTDIR)$(docdir)
+-	install -m 644 build/docs/html/*.inv $(DESTDIR)$(docdir)
+-	install -m 644 build/docs/html/*.js $(DESTDIR)$(docdir)
+-	install -m 644 build/docs/html/_images/* $(DESTDIR)$(docdir)/_images
+-	install -m 644 build/docs/html/_static/*.css $(DESTDIR)$(docdir)/_static
+-	install -m 644 build/docs/html/_static/*.ico $(DESTDIR)$(docdir)/_static
+-	install -m 644 build/docs/html/_static/*.js $(DESTDIR)$(docdir)/_static
+-	install -m 644 build/docs/html/_static/*.png $(DESTDIR)$(docdir)/_static
+-	install -m 644 build/docs/html/_static/*.svg $(DESTDIR)$(docdir)/_static
+-	install -m 644 build/docs/html/_static/js/* $(DESTDIR)$(docdir)/_static/js
+-	install -m 644 build/docs/html/_static/css/*.css $(DESTDIR)$(docdir)/_static/css
+-	install -m 644 build/docs/html/_static/css/fonts/* $(DESTDIR)$(docdir)/_static/css/fonts
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_images
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_static/js
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_static/css
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_static/css/fonts
++	${BSD_INSTALL_DATA} build/docs/html/*.html $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} build/docs/html/*.inv $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} build/docs/html/*.js $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} build/docs/html/_images/* $(DESTDIR)$(docdir)/_images
++	${BSD_INSTALL_DATA} build/docs/html/_static/*.css $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA} build/docs/html/_static/*.ico $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA} build/docs/html/_static/*.js $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA} build/docs/html/_static/*.png $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA} build/docs/html/_static/*.svg $(DESTDIR)$(docdir)/_static
++	${BSD_INSTALL_DATA} build/docs/html/_static/js/* $(DESTDIR)$(docdir)/_static/js
++	${BSD_INSTALL_DATA} build/docs/html/_static/css/*.css $(DESTDIR)$(docdir)/_static/css
++	${BSD_INSTALL_DATA} build/docs/html/_static/css/fonts/* $(DESTDIR)$(docdir)/_static/css/fonts
+ 
+ tarball:
+ 	bash scripts/archive.sh
+@@ -638,23 +642,23 @@ ifneq ($(USE_SYSTEM_LIBS),yes)
+ endif
+ 
+ install-shared-c: install-shared-check shared install-headers
+-	install -d $(DESTDIR)$(libdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(libdir)
+ 	install -m $(SO_INSTALL_MODE) $(OUT)/libmupdf.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/
+ ifneq ($(OS),OpenBSD)
+ 	ln -sf libmupdf.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/libmupdf.$(SO)
+ endif
+ 
+ install-shared-c++: install-shared-c c++
+-	install -m 644 platform/c++/include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
++	${BSD_INSTALL_DATA} platform/c++/include/mupdf/*.h $(DESTDIR)$(incdir)/mupdf
+ 	install -m $(SO_INSTALL_MODE) $(OUT)/libmupdfcpp.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/
+ ifneq ($(OS),OpenBSD)
+ 	ln -sf libmupdfcpp.$(SO)$(SO_VERSION) $(DESTDIR)$(libdir)/libmupdfcpp.$(SO)
+ endif
+ 
+ install-shared-python: install-shared-c++ python
+-	install -d $(DESTDIR)$(pydir)/mupdf
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(pydir)/mupdf
+ 	install -m $(SO_INSTALL_MODE) $(OUT)/_mupdf.$(SO) $(DESTDIR)$(pydir)/mupdf
+-	install -m 644 $(OUT)/mupdf.py $(DESTDIR)$(pydir)/mupdf/__init__.py
++	${BSD_INSTALL_DATA} $(OUT)/mupdf.py $(DESTDIR)$(pydir)/mupdf/__init__.py
+ 
+ else
  
