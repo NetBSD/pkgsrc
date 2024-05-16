@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/05/05 21:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/16 13:38:42 wiz Exp $
 
 DISTNAME=	fifengine-0.4.2
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fifengine/}
 
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fifengine.net/
 COMMENT=	Multi-platform isometric game engine
 LICENSE=	gnu-lgpl-v2.1
-
-# https://github.com/fifengine/fifengine/issues/1085
-BROKEN=		"Doesn't support boost-1.85"
 
 TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
 
