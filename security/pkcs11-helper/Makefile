@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2024/04/14 12:53:05 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2024/05/16 06:15:31 wiz Exp $
 
 DISTNAME=	pkcs11-helper-1.30.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 GITHUB_RELEASE=	${DISTNAME}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2024/04/17 14:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/05/16 06:14:49 wiz Exp $
 
 DISTNAME=	gobby-0.6.0
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobby/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

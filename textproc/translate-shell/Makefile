@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/11/08 13:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/16 06:15:39 wiz Exp $
 
 DISTNAME=	translate-shell-0.9.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soimort/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

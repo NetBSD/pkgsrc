@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/11/08 13:18:28 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/05/16 06:14:41 wiz Exp $
 
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Perl module for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"

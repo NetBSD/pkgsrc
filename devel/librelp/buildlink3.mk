@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/11/08 13:18:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/05/16 06:14:46 wiz Exp $
 
 BUILDLINK_TREE+=	librelp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	librelp
 LIBRELP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librelp+=	librelp>=1.2.12
-BUILDLINK_ABI_DEPENDS.librelp?=	librelp>=1.2.16nb10
+BUILDLINK_ABI_DEPENDS.librelp?=	librelp>=1.2.16nb11
 BUILDLINK_PKGSRCDIR.librelp?=	../../devel/librelp
 
 .include "../../security/gnutls/buildlink3.mk"

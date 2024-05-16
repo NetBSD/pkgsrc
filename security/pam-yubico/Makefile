@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2023/11/08 13:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/16 06:15:31 wiz Exp $
 
 DISTNAME=	pam_yubico-2.27
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubico-pam
