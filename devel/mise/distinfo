@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2024/05/15 02:38:42 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2024/05/16 21:47:45 schmonz Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -498,9 +498,9 @@ Size (miniz_oxide-0.7.2.crate) = 55731 bytes
 BLAKE2s (mio-0.8.11.crate) = 659fce154676d01c5515641898ac4d103d6c8fe5a40b175e29edfb05fe043098
 SHA512 (mio-0.8.11.crate) = 9a2806ea78b0637d0cf92448abcd50bc5d09bd80da0f37752c847bc98d014baae7a5cc4d929de98be6283c76d82ccab1f1467aa6ab583a4e782d97d5592b0bb1
 Size (mio-0.8.11.crate) = 102983 bytes
-BLAKE2s (mise-2024.5.15.tar.gz) = e1c812a2257886abb446718b8f35bff4dac29968e515fce532ed0ac5b823e6ab
-SHA512 (mise-2024.5.15.tar.gz) = b71dfd3b1ca7ece389526c181f03a36dd76b44265d56aa7aad2956be1f05472aea3e961e0e7bfc67d881a1e0917cf34c4879c2a3b3597581dc91ce3950cdbceb
-Size (mise-2024.5.15.tar.gz) = 2906112 bytes
+BLAKE2s (mise-2024.5.16.tar.gz) = 94409f046e2e6d39e0f6eca3fc900fbd8fcc4da1893ebb5cef8619814680e0b4
+SHA512 (mise-2024.5.16.tar.gz) = d0e01592d6154b8d722fb3f95ff174682f24041af274845c53a6c5584a8403f376a8dd44530d4da794c4b81e61708881d8582a0c1e5ce45dc3ea305d81b3b5fe
+Size (mise-2024.5.16.tar.gz) = 2907862 bytes
 BLAKE2s (native-tls-0.2.11.crate) = cca097b3bae5e64ab165e707fdcbe1b04ecd326523f06f813ec735221a89907f
 SHA512 (native-tls-0.2.11.crate) = 7e77959932f2859757f1aeb37b78fdd459b7b6fd02424f4b7399525b94c21d1f499a718775503b8f3dfe3b4b740e1cfbee77052a2ebd0994468addb3fa665e6c
 Size (native-tls-0.2.11.crate) = 29008 bytes
@@ -696,9 +696,9 @@ Size (rustls-pemfile-1.0.4.crate) = 22092 bytes
 BLAKE2s (rustls-webpki-0.101.7.crate) = 75bd5248f25253ef11913a1d6060b981a5303b3901daa1e9d39baa7b1e5cce27
 SHA512 (rustls-webpki-0.101.7.crate) = 680e3d52f699c9d6200e2e738a4245a5114fc7122546c07d3f15f1e6741a52275061b3e016c2240f1dc3eb9f701f7346193bd82e827274fb73b8e9e0d5af4e68
 Size (rustls-webpki-0.101.7.crate) = 168808 bytes
-BLAKE2s (rustversion-1.0.16.crate) = 4a47f7780498a127bbc9ef2ed8c1b5bce25c42a03a829fafba14ffb14e285cbb
-SHA512 (rustversion-1.0.16.crate) = d1c290879c18db18103619356d88d18e8f93ae3b2e8e60682a5de2572ca0ac5b5e42217672f0b2a187c4d8cd3844012ad141f9fe01c34158e7f8cc9134332b8d
-Size (rustversion-1.0.16.crate) = 17510 bytes
+BLAKE2s (rustversion-1.0.17.crate) = 7fbbe1e0271ab4114697e5be2fd023bef7c7dfbceddfe45c6f84efd807091731
+SHA512 (rustversion-1.0.17.crate) = 0565cddecaedae17e7cd99bc34f54cda242d4c29cd4269f8e3b178ff91d49f3682e7ffe66e436bbb138299736c8e55cc143fefb74c076911fefcc41ba98064f3
+Size (rustversion-1.0.17.crate) = 17621 bytes
 BLAKE2s (ryu-1.0.18.crate) = 738ae2cbeac90a6adef5e5c05c31be6c18f2860ab8ea4bfdc729325dceb923ae
 SHA512 (ryu-1.0.18.crate) = a9b2beac778ec47e6be303148d7512ee681bd2361f6e4ac6db32c8b4baf86a8c5eb5b0d02eacd6131ae88c7b5105c57018c3050676e0b3dd1ed9c4d2fd650e84
 Size (ryu-1.0.18.crate) = 47713 bytes
