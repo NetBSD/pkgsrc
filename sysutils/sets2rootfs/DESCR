@@ -1,0 +1,3 @@
+sets2rootfs downloads cksum file for NetBSD/OpenBSD sets, checks the
+checksums and unpacks downloaded sets, thus creating rootfs for the
+system.
