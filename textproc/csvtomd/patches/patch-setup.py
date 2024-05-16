@@ -1,17 +1,14 @@
-$NetBSD: patch-setup.py,v 1.2 2016/07/28 09:54:59 wiz Exp $
+$NetBSD: patch-setup.py,v 1.3 2024/05/16 17:06:25 cheusov Exp $
 
 https://github.com/mplewis/csvtomd/issues/10
 
---- setup.py.orig	2014-07-14 00:13:47.000000000 +0000
+--- setup.py.orig	2016-12-18 21:43:02.000000000 +0000
 +++ setup.py
-@@ -1,7 +1,8 @@
+@@ -1,6 +1,6 @@
  from setuptools import setup
  
 -with open('README.rst') as f:
--    long_description = f.read()
-+#with open('README.rst') as f:
-+#    long_description = f.read()
-+long_description=''
++with open('README.md') as f:
+     long_description = f.read()
  
  setup(
-     name='csvtomd',
