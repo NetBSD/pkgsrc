@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2024/04/15 22:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/05/16 06:15:20 wiz Exp $
 
 DISTNAME=	libfilezilla-0.47.0
+PKGREVISION=	1
 CATEGORIES=	net
 # some kind of direct-download disabling
 #MASTER_SITES=	https://dl3.cdn.filezilla-project.org/libfilezilla/

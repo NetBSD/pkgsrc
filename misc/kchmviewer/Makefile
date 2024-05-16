@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2024/04/06 08:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2024/05/16 06:15:11 wiz Exp $
 
 DISTNAME=		kchmviewer-7.2.1
-PKGREVISION=		71
+PKGREVISION=		72
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kchmviewer/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/11/08 13:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/05/16 06:14:46 wiz Exp $
 
 DISTNAME=	librelp-1.2.16
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	http://download.rsyslog.com/librelp/
 

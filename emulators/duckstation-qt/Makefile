@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/04/06 08:05:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/05/16 06:14:50 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../emulators/duckstation-qt/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/duckstation-/duckstation-qt-/g}

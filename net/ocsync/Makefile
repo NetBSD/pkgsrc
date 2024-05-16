@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/11/08 13:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/05/16 06:15:22 wiz Exp $
 
 DISTNAME=	ocsync-0.90.4
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	net
 MASTER_SITES=	http://download.owncloud.com/desktop/stable/
 EXTRACT_SUFX=	.tar.bz2

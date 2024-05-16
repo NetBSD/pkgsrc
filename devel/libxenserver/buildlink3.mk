@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2023/11/08 13:18:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2024/05/16 06:14:46 wiz Exp $
 
 BUILDLINK_TREE+=	libxenserver
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxenserver
 LIBXENSERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxenserver+=	libxenserver>=5.6.100
-BUILDLINK_ABI_DEPENDS.libxenserver+=	libxenserver>=6.2.0nb31
+BUILDLINK_ABI_DEPENDS.libxenserver+=	libxenserver>=6.2.0nb32
 BUILDLINK_PKGSRCDIR.libxenserver?=	../../devel/libxenserver
 
 .include "../../textproc/libxml2/buildlink3.mk"
