@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2024/04/17 16:34:15 micha Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/05/16 09:21:37 nia Exp $
 
 BUILDLINK_TREE+=	lame
 
@@ -14,6 +14,11 @@ pkgbase:= lame
 
 .if ${PKG_BUILD_OPTIONS.lame:Municode}
 .  include "../../converters/libiconv/buildlink3.mk"
+.endif
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${MACHINE_ARCH} == "alpha"
+.  include "../../math/libffm/buildlink3.mk"
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
