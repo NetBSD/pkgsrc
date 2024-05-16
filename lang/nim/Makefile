@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/04/22 13:23:55 nikita Exp $
+# $NetBSD: Makefile,v 1.37 2024/05/16 09:59:20 pho Exp $
 
 DISTNAME=	nim-2.0.4
 CATEGORIES=	lang
@@ -42,6 +42,23 @@ SITES.${ATLAS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nim-lang/atlas/archive/}${ATLAS_
 # EXTRACT_DIR.${NIMBLE_DISTFILE}=		${WRKSRC}/dist/
 # EXTRACT_DIR.${CHECKSUMS_DISTFILE}=	${WRKSRC}/dist/
 EXTRACT_DIR.${ATLAS_DISTFILE}=		${WRKSRC}/dist/
+
+#
+# Support NetBSD/aarch64:
+#     https://github.com/nim-lang/Nim/pull/23616
+#
+# Please remove this block once the upstream merges it. Also remove
+# nim-2.0.4+netbsd-aarch64.tar.xz from our LOCAL_PORTS; it is a tarball of
+# updated csources that support this platform.
+#
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
+NBAARCH64_DISTFILE=			nim-2.0.4+netbsd-aarch64.tar.xz
+DISTFILES+=				${NBAARCH64_DISTFILE}
+SITES.${NBAARCH64_DISTFILE}=		${MASTER_SITE_LOCAL}
+EXTRACT_DIR.${NBAARCH64_DISTFILE}=	${WRKSRC}/
+.endif
+#
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
