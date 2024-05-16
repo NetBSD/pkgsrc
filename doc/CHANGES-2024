@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3461 2024/05/16 13:38:52 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3462 2024/05/16 13:42:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/wireshark to 4.2.5 [adam 2024-05-16]
 	Updated mail/aerc to 0.17.0nb3 [wiz 2024-05-16]
 	Updated devel/fifengine to 0.4.2nb27 [wiz 2024-05-16]
+	Updated comms/asterisk20 to 20.5.1 [gdt 2024-05-16]
