@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/16 13:55:28 cheusov Exp $
+bin/sets2rootfs
+man/man1/sets2rootfs.1
