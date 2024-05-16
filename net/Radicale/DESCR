@@ -5,3 +5,6 @@ Calendars and address books are available for both local and remote
 access, possibly limited through authentication policies. They can be
 viewed and edited by calendar and contact clients on mobile phones or
 computers.
+
+This version is mainly provided for migration support from version 1
+to newer versions, since version 1 provides an export tool.
