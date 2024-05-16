@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2024/04/01 13:44:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.90 2024/05/16 11:44:55 adam Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -15,10 +15,10 @@ bin/tshark
 ${PLIST.qt}bin/wireshark
 lib/libwireshark.so
 lib/libwireshark.so.17
-lib/libwireshark.so.17.0.4
+lib/libwireshark.so.17.0.5
 lib/libwiretap.so
 lib/libwiretap.so.14
-lib/libwiretap.so.14.1.4
+lib/libwiretap.so.14.1.5
 lib/libwsutil.so
 lib/libwsutil.so.15
 lib/libwsutil.so.15.0.0
