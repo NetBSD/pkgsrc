@@ -1,0 +1,24 @@
+There are many media players around these days, it's true. What's
+missing from most players is a user interface that doesn't get in
+the way of the user. How many buttons do you have to press for
+simply adding some new tracks to the playlist? Amarok tries to be
+a little different, providing a simple drag and drop interface that
+really makes playlist handling easy.
+
+* Quick and simple drag and drop playlist creation
+* Music library
+* Cross platform: Support for Unix, MacOS X and Windows
+* Plays all audio formats known to man
+* Cover art download using Last.fm services
+* Automatic play-statistics generation (iRate style)
+* Full lyrics download
+* Learn about your music with integrated Wikipedia
+* Full Last.fm support
+* gpodder.net support
+* Configurable on screen display for track changes
+* Podcast support
+* iPod support, as well as other media players
+* Powerful scripting interface
+* Integration with Plasma and KDE Applications
+* Integration with multiple web sources including Magnatune,
+  Ampache, and others.
