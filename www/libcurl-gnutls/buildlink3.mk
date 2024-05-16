@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:11:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/16 06:15:41 wiz Exp $
 
 BUILDLINK_TREE+=	libcurl-gnutls
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcurl-gnutls
 LIBCURL_GNUTLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcurl-gnutls+=	libcurl-gnutls>=7.12.3
-BUILDLINK_ABI_DEPENDS.libcurl-gnutls+=	libcurl-gnutls>=8.4.0nb1
+BUILDLINK_ABI_DEPENDS.libcurl-gnutls+=	libcurl-gnutls>=8.7.1nb1
 BUILDLINK_PKGSRCDIR.libcurl-gnutls?=	../../www/libcurl-gnutls
 
 pkgbase:= libcurl-gnutls

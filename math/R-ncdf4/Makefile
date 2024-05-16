@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/02/03 11:24:20 mef Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/16 06:15:09 wiz Exp $
 
 R_PKGNAME=	ncdf4
 R_PKGVER=	1.22
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to Unidata netCDF (Version 4 or Earlier) Format Data Files
+PKGREVISION=	1
 LICENSE=	gnu-gpl-v3
 
 # !pdfTeX error: pdflatex (file tcrm1000): Font tcrm1000 at 600 not found

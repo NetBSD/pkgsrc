@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2024/04/07 07:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/16 06:15:01 wiz Exp $
 
 DISTNAME=	gimp-2.99.18
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz

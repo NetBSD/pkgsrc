@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2024/04/06 08:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/16 06:14:57 wiz Exp $
 
 DISTNAME=	quake2-8.20
 PKGNAME=	y${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://deponie.yamagi.org/quake2/
 EXTRACT_SUFX=	.tar.xz

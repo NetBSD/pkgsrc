@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2023/12/28 23:50:02 zafer Exp $
+# $NetBSD: Makefile,v 1.43 2024/05/16 06:14:34 wiz Exp $
 #
 
 DISTNAME=		mpdas-0.4.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		https://50hz.ws/mpdas/
 

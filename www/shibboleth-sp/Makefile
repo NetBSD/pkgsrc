@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2023/12/29 18:25:00 adam Exp $
+# $NetBSD: Makefile,v 1.54 2024/05/16 06:15:43 wiz Exp $
 #
 
 DISTNAME=	shibboleth-sp-3.1.0
 PKGREVISION=
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
 
