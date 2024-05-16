@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2023/06/06 12:41:36 riastradh Exp $
+# $NetBSD: options.mk,v 1.10 2024/05/16 20:02:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
 PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
@@ -26,6 +26,7 @@ do-build:
 .endif
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 38 312
 DEPENDS+=	${PYPKGPREFIX}-qtgraph-qt5-[0-9]*:../../x11/py-qtgraph-qt5
 .endif
 
