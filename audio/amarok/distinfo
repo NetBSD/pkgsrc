@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.55 2024/05/16 10:24:33 wiz Exp $
+
+BLAKE2s (amarok-3.0.0.tar.xz) = 7ea3cb385bf5b234e44edbed3887e34983a3545744e299963d67717a3cbce86c
+SHA512 (amarok-3.0.0.tar.xz) = 95246aa81af183cb112b99d7966cc2c0056881f5576020206a693d8e28ad2be632943b27576b84cc4791ff8def7f51de857d33acc379e1a5406dcba72c13d014
+Size (amarok-3.0.0.tar.xz) = 47952116 bytes
