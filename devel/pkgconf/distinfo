@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.23 2024/04/07 06:16:55 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2024/05/16 21:31:47 riastradh Exp $
 
 BLAKE2s (pkgconf-2.2.0.tar.gz) = af89943d1d73f0312f6fc3d7f01a63a6bc4b94006c17b3f8c6dd1e6ecc06b0f0
 SHA512 (pkgconf-2.2.0.tar.gz) = 0ca21e4e390c57c3ad8bfeb9f8d92e65c6a60f28c2a962c1b64e268610b8d88fd502febad23264aed45db68a67dd83321b10f4e896718ab869d4ae743d769676
 Size (pkgconf-2.2.0.tar.gz) = 451551 bytes
+SHA1 (patch-cli_main.c) = 95ce1b09ecdff1d78e75f8b2e73e417a8a3f2c23
