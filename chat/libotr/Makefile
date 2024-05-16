@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/02/23 18:07:10 nia Exp $
+# $NetBSD: Makefile,v 1.21 2024/05/16 23:34:12 riastradh Exp $
 
 VERSION=	4.1.1
 DISTNAME=	libotr-${VERSION}
@@ -35,6 +35,12 @@ CONFIGURE_ARGS+=	--disable-gcc-hardening
 # This seems irrelevant, but was on the list to check, and thus is
 # left as a hint to others.
 #CONFIGURE_ARGS+=	--disable-linker-hardening
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	LIBGCRYPT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/libgcrypt-config
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
