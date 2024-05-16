@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.15 2024/04/12 19:57:06 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.16 2024/05/16 13:21:22 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -34,8 +34,9 @@ running NetBSD 6.1 on amd64.
 
 In addition to whatever else you want in your mk.conf for pkgsrc, add:
 
-   # Cross-compile by default.  (Alternatively, you can cross-build
-   # packages with `make package USE_CROSS_COMPILE=no'.)
+   # Cross-compile by default.  (Alternatively, instead of having this
+   # setting in mk.conf, you can cross-build packages by just running
+   # `make package USE_CROSS_COMPILE=yes'.)
    #
    # Note: This must use `?=' so it doesn't override pkgsrc's internal
    # USE_CROSS_COMPILE=no when recursively building toolchain packages
