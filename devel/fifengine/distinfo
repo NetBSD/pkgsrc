@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.4 2022/01/09 15:30:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/05/16 13:38:42 wiz Exp $
 
 BLAKE2s (fifengine-0.4.2.tar.gz) = 8286aae95f0a05ffb3f97559d26f66202590b74e145a023896ba762fb74e3d1b
 SHA512 (fifengine-0.4.2.tar.gz) = 2b92e936d3f900532c5dee235a217c338941c44da479dceb3e48b3e8b93a402b31dc5501a6533391a01af53d6dbd51b6793c74e8ac81301ae6f1fa18271761a4
 Size (fifengine-0.4.2.tar.gz) = 15713939 bytes
 SHA1 (patch-CMakeLists.txt) = 5cc3ade95e7011c460107d87d95f4001dc563ae2
+SHA1 (patch-engine_core_gui_fifechan_fifechanmanager.cpp) = c7abc87a89e617d28d027d4080a263ed0f364f8a
+SHA1 (patch-engine_core_loaders_native_map_atlasloader.cpp) = 74bda50720bcf018bf3fd624bd8c4d1ccadedd85
+SHA1 (patch-engine_core_loaders_native_map_maploader.cpp) = 8255e16bcc0b727c222917a165a257cae521203f
+SHA1 (patch-engine_core_loaders_native_map_objectloader.cpp) = 4ea4dc2fb62dec6c0ca053d7e719d6fd835a56a0
 SHA1 (patch-engine_core_vfs_zip_zipnode.cpp) = da9ac52079b7808efac8b8ba3acd22b3cc76e94a
