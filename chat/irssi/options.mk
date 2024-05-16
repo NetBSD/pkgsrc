@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2020/02/23 14:09:13 nia Exp $
+# $NetBSD: options.mk,v 1.23 2024/05/16 23:34:12 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=		otr perl truecolor
@@ -9,6 +9,9 @@ PKG_SUGGESTED_OPTIONS=		otr perl truecolor
 .if !empty(PKG_OPTIONS:Motr)
 # Build it into the main irssi executable instead of a module.
 CONFIGURE_ARGS+=	--with-otr=static
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	LIBGCRYPT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/libgcrypt-config
+.  endif
 .include "../../chat/libotr/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-otr=no
