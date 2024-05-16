@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2024/05/16 17:06:24 cheusov Exp $
+$NetBSD: distinfo,v 1.6 2024/05/16 20:23:46 wiz Exp $
 
 BLAKE2s (csvtomd-0.2.1.tar.gz) = bc2ae9beb40143f1850095118bf025e915cdcbada690d8a1d3371e70cdb4a652
 SHA512 (csvtomd-0.2.1.tar.gz) = 2f51e8cee9f464ebcdf8ef70931a22d50e642091b74a23412a730323d3254da4017867b3df66223c533951db90a5198bfc15a2dc9809f6207e108559c1438838
 Size (csvtomd-0.2.1.tar.gz) = 6324 bytes
-SHA1 (patch-csvtomd_csvtomd.py) = de931a85a0396bb927558858f586961a9b373918
+SHA1 (patch-csvtomd_csvtomd.py) = 7cc47cd40ee16d52cddbcabbe03520bbe2478bcc
 SHA1 (patch-setup.py) = 917f1a2695cca1f77d027c85ca15f604a93cb286
