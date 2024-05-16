@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.2 2023/12/15 14:18:16 gdt Exp $
+$NetBSD: distinfo,v 1.3 2024/05/16 13:41:59 gdt Exp $
 
-BLAKE2s (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 7c735f257956737dffaf6fe434f291dacb1c6b38c930502cbe35fd4657250e23
-SHA512 (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 4490ceff4fa5f455f2b4ed15e4c58fdc9b4da275006190b7e7e027b5fcc6a96d018574e6f68e69e05090af8303054ad243d34bbbeb0633bb91f253a9963a2a8b
-Size (asterisk-20.5.0/asterisk-20.5.0.tar.gz) = 28214209 bytes
-BLAKE2s (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
-SHA512 (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-20.5.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-BLAKE2s (asterisk-20.5.0/pjproject-2.13.1.md5) = 933be89ea03bc24a3a965d37a8985a2af3ea404e24a8fdd296a2be07d5390de0
-SHA512 (asterisk-20.5.0/pjproject-2.13.1.md5) = 5a8c35e79d10760f74d02332f35aad3517fc3c72e62e2b1c35fcb1d613bbad4d96fa07f1cea89514dba2d237a36a698e94b1242be938d492d20b76a130c0d0f1
-Size (asterisk-20.5.0/pjproject-2.13.1.md5) = 172 bytes
-BLAKE2s (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7c04ae740c66f92502684de834b4055e7f4842bcb35f0efc12f183c8d8c37f7f
-SHA512 (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 2f1eb3cb8f52a5536c355b02b1abfa24c7d2263b5338568a7cd8167d349e007c34afafcdd7ed510bfc4fc859494383fac05e8325e46fd66219dbead86c5c3562
-Size (asterisk-20.5.0/pjproject-2.13.1.tar.bz2) = 7825201 bytes
+BLAKE2s (asterisk-20.5.1/asterisk-20.5.1.tar.gz) = 2f4d9e5a95f62e57ae9e87956479e1d67e6d5545e2b1588b14f123e75b9c40e8
+SHA512 (asterisk-20.5.1/asterisk-20.5.1.tar.gz) = 80e4697a56e4115134cfc1d8cc22c20212e64b9ae7eba2bf722b704d7bbee2d7629208ab9c6276c9e965a11ea7566a34e288cf6661b21b769177794bb6f16375
+Size (asterisk-20.5.1/asterisk-20.5.1.tar.gz) = 28214779 bytes
+BLAKE2s (asterisk-20.5.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
+SHA512 (asterisk-20.5.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-20.5.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+BLAKE2s (asterisk-20.5.1/pjproject-2.13.1.md5) = 933be89ea03bc24a3a965d37a8985a2af3ea404e24a8fdd296a2be07d5390de0
+SHA512 (asterisk-20.5.1/pjproject-2.13.1.md5) = 5a8c35e79d10760f74d02332f35aad3517fc3c72e62e2b1c35fcb1d613bbad4d96fa07f1cea89514dba2d237a36a698e94b1242be938d492d20b76a130c0d0f1
+Size (asterisk-20.5.1/pjproject-2.13.1.md5) = 172 bytes
+BLAKE2s (asterisk-20.5.1/pjproject-2.13.1.tar.bz2) = 7c04ae740c66f92502684de834b4055e7f4842bcb35f0efc12f183c8d8c37f7f
+SHA512 (asterisk-20.5.1/pjproject-2.13.1.tar.bz2) = 2f1eb3cb8f52a5536c355b02b1abfa24c7d2263b5338568a7cd8167d349e007c34afafcdd7ed510bfc4fc859494383fac05e8325e46fd66219dbead86c5c3562
+Size (asterisk-20.5.1/pjproject-2.13.1.tar.bz2) = 7825201 bytes
 SHA1 (patch-Makefile) = 7d278c52ace3e972ee0e17b0aec137549d4b8d7c
 SHA1 (patch-build__tools_make__xml__documentation) = 9ee091af60ea480a88ce036dad2be7b257142ae0
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
