@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2024/05/15 02:38:42 schmonz Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2024/05/16 21:47:45 schmonz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -231,7 +231,7 @@ CARGO_CRATE_DEPENDS+=	rustls-0.21.12
 CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.6.3
 CARGO_CRATE_DEPENDS+=	rustls-pemfile-1.0.4
 CARGO_CRATE_DEPENDS+=	rustls-webpki-0.101.7
-CARGO_CRATE_DEPENDS+=	rustversion-1.0.16
+CARGO_CRATE_DEPENDS+=	rustversion-1.0.17
 CARGO_CRATE_DEPENDS+=	ryu-1.0.18
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schannel-0.1.23
