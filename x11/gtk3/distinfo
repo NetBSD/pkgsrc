@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.102 2024/01/24 23:19:14 adam Exp $
+$NetBSD: distinfo,v 1.103 2024/05/16 11:44:01 adam Exp $
 
-BLAKE2s (gtk+-3.24.41.tar.xz) = 9f899a424d099981c68fb0eff06d91ef509e88f684a7bb146f4aa63eb82e4642
-SHA512 (gtk+-3.24.41.tar.xz) = aaf061d846fac592e71089feace302bdef1bb64bb2ad6ff30d51d90000da9084cad2fa5bf88cb75adcd789c911d94231ae60a2ca7cf97a2f5720687369a3da98
-Size (gtk+-3.24.41.tar.xz) = 13188312 bytes
+BLAKE2s (gtk+-3.24.42.tar.xz) = bc0633f9347cab889f9939d1035e3d17b98d5a2cf581bb358bcd03371d315160
+SHA512 (gtk+-3.24.42.tar.xz) = 53e86e35d33f82384f1d40bd91feee67be68bc9003abd095842991441b1f2ee11a5b431168963270d3ffc0c653d26673ca97cdd55a8f577ef21dbd5d6004b643
+Size (gtk+-3.24.42.tar.xz) = 13226980 bytes
 SHA1 (patch-gdk_wayland_gdkdevice-wayland.c) = e283bd6533ea1307b971c524bc05f0d3ee90453d
 SHA1 (patch-gdk_x11_gdkscreen-x11.h) = 455d6c3de8421984ba3c99baf51cd31982a3df78
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
