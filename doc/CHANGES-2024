@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3457 2024/05/16 10:24:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3458 2024/05/16 11:12:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5409,3 +5409,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-zope.interface to 6.4 [adam 2024-05-16]
 	Updated devel/py-trio to 0.25.1 [adam 2024-05-16]
 	Added audio/amarok version 3.0.0 [wiz 2024-05-16]
+	Updated devel/libgit2 to 1.8.1 [wiz 2024-05-16]
