@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/05/16 12:27:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/16 15:14:26 ktnb Exp $
 
 DISTNAME=	0.17.0
 PKGNAME=	aerc-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
@@ -42,19 +42,19 @@ GO_LDFLAGS+=	-X main.Version=${PKGVERSION_NOREV}
 GO_LDFLAGS+=	-X main.Date=2024-04-05
 GO_LDFLAGS+=	-X git.sr.ht/~rjarry/aerc/config.shareDir=${PREFIX}/share/aerc
 GO_LDFLAGS+=	-X git.sr.ht/~rjarry/aerc/config.libexecDir=${PREFIX}/libexec/aerc
-CGO_LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.notmuch}/lib -L${BUILDLINK_PREFIX.notmuch}/lib
 MAKE_ENV+=	CGO_LDFLAGS=${CGO_LDFLAGS:Q}
 
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
-	    GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build -tags=notmuch -ldflags=${GO_LDFLAGS:Q} -o aerc
+	    GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build ${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q} -o aerc
+
 
 do-install:
 	cd ${WRKSRC} && ${GMAKE} ${INSTALL_MAKE_FLAGS} install
 
+.include "options.mk"
 .include "go-modules.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/go/go-module.mk"
-.include "../../mail/notmuch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
