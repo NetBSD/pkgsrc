@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/16 17:06:24 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/16 20:23:46 wiz Exp $
 bin/csvtomd
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/csvtomd/__init__.py
 ${PYSITELIB}/csvtomd/__init__.pyc
 ${PYSITELIB}/csvtomd/__init__.pyo
