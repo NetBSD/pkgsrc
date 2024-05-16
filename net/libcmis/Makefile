@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/12/29 18:24:56 adam Exp $
+# $NetBSD: Makefile,v 1.45 2024/05/16 06:15:20 wiz Exp $
 
 DISTNAME=	libcmis-0.5.2
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tdf/}
 GITHUB_PROJECT=	libcmis
