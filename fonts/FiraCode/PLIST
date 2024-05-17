@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/10/30 14:50:50 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/17 13:24:08 pho Exp $
 share/fonts/X11/TTF/FiraCode-Bold.ttf
 share/fonts/X11/TTF/FiraCode-Light.ttf
 share/fonts/X11/TTF/FiraCode-Medium.ttf
@@ -6,4 +6,3 @@ share/fonts/X11/TTF/FiraCode-Regular.ttf
 share/fonts/X11/TTF/FiraCode-Retina.ttf
 share/fonts/X11/TTF/FiraCode-SemiBold.ttf
 share/fonts/X11/TTF/FiraCode-VF.ttf
-@pkgdir share/fonts/X11/OTF
