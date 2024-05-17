@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/08/14 05:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/17 15:49:08 sborrill Exp $
 
-DISTNAME=	Radicale-2.1.5
-PKGREVISION=	5
+DISTNAME=	Radicale-2.1.12
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -39,9 +38,6 @@ SUBST_SED.server+=	-e 's,\#filesystem_folder,filesystem_folder,'
 SUBST_FILES.server+=	config
 SUBST_STAGE.server=	pre-configure
 SUBST_MESSAGE.server=	Configure as a daemon by default, and override default collection location
-
-# no options currently available
-# .include "options.mk"
 
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
