@@ -1,5 +1,4 @@
-===> Extracting for caddy-2.7.6
-# $NetBSD: go-modules.mk,v 1.11 2024/03/16 17:09:44 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.12 2024/05/17 11:37:31 jperkin Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/iam/@v/v1.1.2.mod
 GO_MODULE_FILES+=	cloud.google.com/go/iam/@v/v1.1.2.zip
