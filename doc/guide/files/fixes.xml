@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.199 2024/03/13 13:55:53 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.200 2024/05/17 17:06:42 bacon Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -2468,13 +2468,19 @@ PKGCONFIG_OVERRIDE_STAGE=       post-build
 
   <sect2 id="startup-scripts">
     <title>Packages installing startup scripts</title>
-    <para>If a package contains a rc.d script, it won't be copied into
-    the startup directory by default, but you can enable it, by adding
-    the option <varname>PKG_RCD_SCRIPTS=YES</varname> in
-    &mk.conf;. This option will copy the scripts
-    into <filename>/etc/rc.d</filename> when a package is installed, and
-    it will automatically remove the scripts when the package is
-    deinstalled.</para>
+    <para>If a package contains an rc.d script, it won't be copied into
+    the startup directory (<filename>/etc/rc.d</filename>) by default,
+    but you can enable copying by setting the option
+    <varname>PKG_RCD_SCRIPTS=YES</varname> in
+    &mk.conf;.  With <varname>PKG_RCD_SCRIPTS=YES</varname>, rc.d scripts
+    will be copied into <filename>/etc/rc.d</filename> when a package
+    is installed, but only if the target does not already exist.
+    Copies in <filename>/etc/rc.d</filename> will be automatically removed
+    only if they have not been modified.
+    </para>
+
+    <para>Note that this alone does not enable the service: It must still be
+    added to <filename>/etc/rc.conf</filename>.</para>
   </sect2>
 
   <sect2 id="tex-packages">
