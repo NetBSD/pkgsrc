@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/27 12:31:33 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/05/17 13:47:21 cheusov Exp $
 bin/cvs_checksum
 bin/makefiles2deps
 bin/pkg_assignments2pkgpath
@@ -28,6 +28,7 @@ bin/pkg_summary4view
 bin/pkg_uniq_summary
 bin/pkg_update_src_summary
 bin/pkg_update_summary
+bin/rpmdb2summary
 libexec/psu/XB2bin_summary
 libexec/psu/direct_deps
 libexec/psu/enrich_summary
@@ -60,6 +61,7 @@ man/man1/pkg_summary4view.1
 man/man1/pkg_uniq_summary.1
 man/man1/pkg_update_src_summary.1
 man/man1/pkg_update_summary.1
+man/man1/rpmdb2summary.1
 man/man7/pkg_summary-utils.7
 share/doc/pkg_summary-utils/LICENSE
 share/doc/pkg_summary-utils/NEWS
