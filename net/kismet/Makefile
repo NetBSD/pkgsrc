@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/05/06 08:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2024/05/17 10:24:27 jperkin Exp $
 
 DISTNAME=		kismet-2008-05-R1
 PKGNAME=		kismet-2008.05.01
@@ -17,6 +17,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 REPLACE_PERL+=		scripts/gpsmap-helper-earthamaps
 LIBS.NetBSD+=		-lm
+
+# Ugly hack to get this ancient package building with newer ncurses.
+CPPFLAGS+=		-DNCURSES_INTERNALS
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -67,6 +70,5 @@ CFLAGS+=	-DHAVE_NET_BPF_H
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
