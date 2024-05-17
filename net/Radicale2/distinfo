@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:05:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/05/17 15:49:08 sborrill Exp $
 
-BLAKE2s (Radicale-2.1.5.tar.gz) = 5bb861475ab736bf7047bf043075b3a6253ac35f8668d2573f2b262549a96b19
-SHA512 (Radicale-2.1.5.tar.gz) = d86d6dbd83fb33d763b5b8b613ccf9b75b5580b9fb5ea2a7c60f272a548eabf0a2bab1c13e10711000a69978beff6fb87f619479f9a1d9eeeb9a58c8550ab0e7
-Size (Radicale-2.1.5.tar.gz) = 74575 bytes
+BLAKE2s (Radicale-2.1.12.tar.gz) = 90e686602e4de958eca6da4b0a75b1b2fe4971ecd11922ff78c384d0cf86841b
+SHA512 (Radicale-2.1.12.tar.gz) = a708fb1269f7ba8c9e351e101f613a8adb18c12b1239b832ed9e0287476f30aa7ded30f9bc259da9c4b5f3aefe90bbf9980d0d08d98dd07b79cd19930b0e204c
+Size (Radicale-2.1.12.tar.gz) = 109781 bytes
