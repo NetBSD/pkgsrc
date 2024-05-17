@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2024/03/16 17:09:44 bsiegert Exp $
+$NetBSD: distinfo,v 1.20 2024/05/17 11:38:37 jperkin Exp $
 
 BLAKE2s (caddy-2.7.6.tar.gz) = aa6751bde04003847dc4e86459c9c70f60a9dbbbe4b860fd378bed5952c5ae63
 SHA512 (caddy-2.7.6.tar.gz) = ef0cb6fd7f6f2a296290b4bb520300e043ad31cc612e734632ffa25cdaa23fd7d601ac4ceaa1c76285d54a07ee773360f795103ef3c2ec79516a4f18a5e844b5
@@ -2439,3 +2439,6 @@ Size (sigs.k8s.io_yaml_@v_v1.1.0.mod) = 24 bytes
 BLAKE2s (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 540120cf9a874588188b78b9cb2cb50598bfffd4f144e5fb2315313375937a3c
 SHA512 (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 7d863e4af4e480a247bc767d1de96ff8050b12a13a182a9a8fa68c983c2f0b1a16b509d40de3cca552082535f876458034e1510f0f0feef383f16e1f84f81282
 Size (sourcegraph.com_sourcegraph_appdash_@v_v0.0.0-20190731080439-ebfcffb1b5c0.mod) = 43 bytes
+SHA1 (patch-listen.go) = 171d7e880d9ebb062a891a7baabf2722ee813111
+SHA1 (patch-listen__unix.go) = 2c49bc9b3ad8b45aa37bf2b20dc466efcbfc3a1f
+SHA1 (patch-listen__unix__setopt.go) = 6808e3bb54f0ea09350bea80f7a303bb7a2e0e77
