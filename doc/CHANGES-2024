@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3471 2024/05/16 23:39:18 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.3472 2024/05/17 05:26:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/mise to 2024.5.16 [schmonz 2024-05-16]
 	Updated graphics/elementary-xfce-icon-theme to 0.19 [gutteridge 2024-05-16]
 	Updated meta-pkgs/xfce4 to 4.18.1nb15 [gutteridge 2024-05-16]
+	Updated print/libcups to 2.4.8 [wiz 2024-05-17]
