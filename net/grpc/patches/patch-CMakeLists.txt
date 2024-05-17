@@ -1,8 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.12 2022/07/06 15:18:17 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.13 2024/05/17 07:44:35 adam Exp $
 
---- CMakeLists.txt.orig	2022-06-21 20:39:47.000000000 +0000
+Allow linking against not-yet-installed shared libraries.
+Fix build (at least on Darwin) - https://github.com/grpc/grpc/issues/36654
+
+--- CMakeLists.txt.orig	2024-05-16 01:01:03.000000000 +0000
 +++ CMakeLists.txt
-@@ -504,7 +504,7 @@ function(protobuf_generate_grpc_cpp_with
+@@ -605,7 +605,7 @@ function(protobuf_generate_grpc_cpp_with
             "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
             "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
             "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
@@ -11,3 +14,19 @@ $NetBSD: patch-CMakeLists.txt,v 1.12 2022/07/06 15:18:17 adam Exp $
      ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
           --cpp_out=${_gRPC_PROTO_GENS_DIR}
           --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}
+@@ -3682,6 +3682,7 @@ target_include_directories(upb_json_lib
+ )
+ target_link_libraries(upb_json_lib
+   ${_gRPC_ALLTARGETS_LIBRARIES}
++  grpc++_unsecure
+   utf8_range_lib
+   upb_message_lib
+ )
+@@ -3883,6 +3884,7 @@ target_include_directories(upb_textforma
+ )
+ target_link_libraries(upb_textformat_lib
+   ${_gRPC_ALLTARGETS_LIBRARIES}
++  grpc++_unsecure
+   utf8_range_lib
+   upb_message_lib
+ )
