@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/01/16 05:30:48 dholland Exp $
+$NetBSD: distinfo,v 1.7 2024/05/18 08:37:04 nia Exp $
 
 BLAKE2s (ncc-2.8.tar.gz) = 0be9e22d398c275b93ddde1b87624720149bdfbbbed5fba7f1fd701f132504de
 SHA512 (ncc-2.8.tar.gz) = 9fd41e37d5316848127ed4d3d8a5a4e88aa7a4545b62194e74bed9169e22c925ef8dbb612482cc29c16b3ceb0a7bcaa44ba04370aa8c898abfee136e96bbc429
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = feff5d416428a10e9af2355edfd742ce57196c29
 SHA1 (patch-ac) = 437150dbe18e5d2c8c175667f3fa6b1d419f452a
 SHA1 (patch-ad) = 0bc35544a5fe07112ee53ff5864d3a0d0f011e6e
 SHA1 (patch-ae) = 2397a601229a211c379450b83cad69fcfd6d9022
+SHA1 (patch-nccnav_Makefile) = 401ace5acb16664ba2f4a24e5de033bdfc6ae61b
