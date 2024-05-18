@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/15 15:16:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/18 06:05:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -40,6 +40,7 @@ ${PYSITELIB}/adminsortable2/models.pyc
 ${PYSITELIB}/adminsortable2/models.pyo
 ${PYSITELIB}/adminsortable2/static/adminsortable2/css/sortable.css
 ${PYSITELIB}/adminsortable2/static/adminsortable2/icons/drag.png
+${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.js
 ${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.min.js
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/change_list.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-4.2.html
