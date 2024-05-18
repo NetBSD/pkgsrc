@@ -1,0 +1,6 @@
+Tired of futzing around with require statements everywhere, littering
+your code with require File.dirname(__FILE__) crap? What if you could
+just point something at a big directory full of code and have everything
+just automagically load?
+
+Wouldn't that be nice? Well, now you can!

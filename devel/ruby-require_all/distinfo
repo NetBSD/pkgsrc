@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/18 01:43:38 schmonz Exp $
+
+BLAKE2s (require_all-3.0.0.gem) = 7e8ad6bbfa59e794ef498cc884066c6f3a7ba56c356bc5a8659ccd8144b80d5d
+SHA512 (require_all-3.0.0.gem) = 785c3bbb91219335020e8e87c02a163aed120078d49bb51ddda345619ec5b8a70cfeb0b6d70f33a22b7fba07a31e54b763fcfb8f96fdced085d37aacf707bd2b
+Size (require_all-3.0.0.gem) = 13824 bytes
