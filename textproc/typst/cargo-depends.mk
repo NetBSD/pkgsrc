@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/03/18 09:04:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/05/18 07:03:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
@@ -35,7 +35,7 @@ CARGO_CRATE_DEPENDS+=	chrono-0.4.35
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	citationberg-0.3.0
+CARGO_CRATE_DEPENDS+=	citationberg-0.3.1
 CARGO_CRATE_DEPENDS+=	clap-4.5.2
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.2
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.1
@@ -97,7 +97,7 @@ CARGO_CRATE_DEPENDS+=	gif-0.13.1
 CARGO_CRATE_DEPENDS+=	half-2.4.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.3
-CARGO_CRATE_DEPENDS+=	hayagriva-0.5.2
+CARGO_CRATE_DEPENDS+=	hayagriva-0.5.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	hypher-0.1.5
 CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.60
@@ -232,6 +232,7 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.114
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.5
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.8.26
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.32
+CARGO_CRATE_DEPENDS+=	shell-escape-0.1.5
 CARGO_CRATE_DEPENDS+=	simd-adler32-0.3.7
 CARGO_CRATE_DEPENDS+=	simplecss-0.2.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.11
@@ -271,9 +272,9 @@ CARGO_CRATE_DEPENDS+=	toml_edit-0.22.6
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.20.0
 CARGO_CRATE_DEPENDS+=	two-face-0.3.0
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
-CARGO_CRATE_DEPENDS+=	typst-assets-0.11.0
-#Workaround for unpublised crate in the Makefile
-#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.11.0
+CARGO_CRATE_DEPENDS+=	typst-assets-0.11.1
+#Workaround for unpublished crate in the Makefile
+#CARGO_CRATE_DEPENDS+=	typst-dev-assets-0.11.1
 CARGO_CRATE_DEPENDS+=	unic-langid-0.9.4
 CARGO_CRATE_DEPENDS+=	unic-langid-impl-0.9.4
 CARGO_CRATE_DEPENDS+=	unicase-2.7.0
