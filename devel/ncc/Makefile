@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/05/15 09:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/05/18 08:37:04 nia Exp $
 #
 
 DISTNAME=		ncc-2.8
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		devel
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/ncc/
 
@@ -12,6 +12,8 @@ COMMENT=		Compiler that produces program analysis information
 
 BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
+
+FAKE_NCURSES=		yes
 
 USE_LANGUAGES=		c c++
 
@@ -45,6 +47,6 @@ do-install:
 
 FAKE_NCURSES=		yes
 
-.include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

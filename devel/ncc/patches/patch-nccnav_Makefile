@@ -1,0 +1,15 @@
+$NetBSD: patch-nccnav_Makefile,v 1.1 2024/05/18 08:37:04 nia Exp $
+
+Honour LDFLAGS when linking.
+
+--- nccnav/Makefile.orig	2024-05-18 08:34:32.260909906 +0000
++++ nccnav/Makefile
+@@ -6,7 +6,7 @@ CFLAGS = $(LCFLAGS) -c -g
+ OBJDIR = ../objdir
+ 
+ $(OBJDIR)/nccnav: nccnav.C $(OBJDIR)/dbstree.o $(OBJDIR)/inttree.o
+-	$(CC) -g nccnav.C -I.. -lncurses -o nccnav $(OBJDIR)/dbstree.o $(OBJDIR)/inttree.o
++	$(CC) $(LDFLAGS) -g nccnav.C -I.. -lcurses -o nccnav $(OBJDIR)/dbstree.o $(OBJDIR)/inttree.o
+ 
+ $(OBJDIR)/dbstree.o: ../dbstree.[Ch]
+ 	$(CC) $(CFLAGS) ../dbstree.C -c
