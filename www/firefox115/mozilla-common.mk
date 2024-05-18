@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2024/05/18 02:34:12 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2024/05/18 02:41:38 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -241,7 +241,6 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 RUST_REQ=	1.66.0
 .include "../../lang/rust/rust.mk"
-BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.13.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 # TODO: check again, pkgsrc has hunspell 1.7
