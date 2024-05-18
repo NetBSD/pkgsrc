@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/05/14 21:00:27 bacon Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/05/18 22:31:05 bacon Exp $
 bin/munge
 bin/remunge
 bin/unmunge
