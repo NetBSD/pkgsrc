@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/27 09:05:50 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/05/18 06:21:21 adam Exp $
 
-BLAKE2s (itemadapter-0.8.0.tar.gz) = 9f8f80179ca7afe5b2b9fd9f3a835ff7edac5bbdc53a8c8cd7804fb321edb238
-SHA512 (itemadapter-0.8.0.tar.gz) = 8a11122d397c31c80ebcfc8f8972701b2d03ad5818dc7b4ea2cbfb596bc1f51cdd1b3dea7d7a53eaff52c90bd128f1fc8071a89c45b9822296524163e9e5fb07
-Size (itemadapter-0.8.0.tar.gz) = 18791 bytes
+BLAKE2s (itemadapter-0.9.0.tar.gz) = 7d1fa878802b6467c28d5ca434aafb6f857727c913a0f1f7598f540bc1eb616d
+SHA512 (itemadapter-0.9.0.tar.gz) = 9cfbe66a622f02c139e4624d4d281276fa68b44ca9614686108191ba2b9ffb1c8a1b5138b2523f4a1643281715260f3e451cc701e36fa47f985c2a1acf133d63
+Size (itemadapter-0.9.0.tar.gz) = 18922 bytes
