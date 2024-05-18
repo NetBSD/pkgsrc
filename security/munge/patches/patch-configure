@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.3 2024/05/18 22:31:06 bacon Exp $
+
+# Use local strlcpy() without collision
+
+--- configure.orig	2024-05-18 22:10:14.716509177 +0000
++++ configure
+@@ -16348,7 +16348,7 @@ else $as_nop
+ esac
+ 
+ fi
+-ac_fn_c_check_func "$LINENO" "strlcpy" "ac_cv_func_strlcpy"
++ac_fn_c_check_func "$LINENO" "__munge_strlcpy" "ac_cv_func_strlcpy"
+ if test "x$ac_cv_func_strlcpy" = xyes
+ then :
+   printf "%s\n" "#define HAVE_STRLCPY 1" >>confdefs.h

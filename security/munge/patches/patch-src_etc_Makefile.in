@@ -1,4 +1,4 @@
-$NetBSD: patch-src_etc_Makefile.in,v 1.6 2024/05/14 21:00:28 bacon Exp $
+$NetBSD: patch-src_etc_Makefile.in,v 1.7 2024/05/18 22:31:06 bacon Exp $
 
 # Conform to pkgsrc
 
