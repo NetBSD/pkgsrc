@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4276 2024/05/15 06:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4277 2024/05/18 01:44:56 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3374,6 +3374,7 @@ SUBDIR+=	ruby-redmine_theme_changer
 SUBDIR+=	ruby-redmine_work_time
 SUBDIR+=	ruby-ref
 SUBDIR+=	ruby-regexp_parser
+SUBDIR+=	ruby-require_all
 SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-ronn
 SUBDIR+=	ruby-rspec
