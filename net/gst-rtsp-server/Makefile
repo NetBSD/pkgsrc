@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/02/20 20:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/18 15:57:04 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -17,7 +17,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
-PKGCONFIG_OVERRIDE_STAGE=       pre-install
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 MESON_ARGS+=		-Dtests=disabled
 
