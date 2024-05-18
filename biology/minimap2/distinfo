@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2024/04/10 12:36:12 bacon Exp $
+$NetBSD: distinfo,v 1.8 2024/05/18 00:27:16 nia Exp $
 
 BLAKE2s (minimap2-2.28.tar.gz) = 0a0afd89e588dd0d8a93a562264bb5fdfe50f88a18f5f057bf59be51e16bbe0b
 SHA512 (minimap2-2.28.tar.gz) = d8d4bb4381d6effb3eb3e1a66fac7a83bc00c3cf174d2e0537dd4790d0e4a3cc060b92e39ed2e2cafc6e5e713f6fdbee6bac1d279b6b77d4347f77f3e6d3c0d0
 Size (minimap2-2.28.tar.gz) = 260341 bytes
-SHA1 (patch-Makefile.simde) = 850a66c8843119f99bcd4a2b261cfd4bffa38551
+SHA1 (patch-Makefile.simde) = 10dc0a8a511c203611fb2fe65d4f73b17c6ebce6
 SHA1 (patch-example.c) = ccf0c4addfece2e11b90f5a558a6de324f255d7c

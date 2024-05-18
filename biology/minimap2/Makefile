@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/04/10 12:36:12 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/18 00:27:16 nia Exp $
 
 VERSION=	2.28
 DISTNAME=	minimap2-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
 GITHUB_TAG=	v${VERSION}
