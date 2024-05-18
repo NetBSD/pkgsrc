@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/18 01:43:38 schmonz Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/require_all.rb
+${GEM_LIBDIR}/require_all.gemspec
+${GEM_LIBDIR}/spec/autoload_shared.rb
+${GEM_LIBDIR}/spec/autoload_spec.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/class1.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/class1/c.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/module1/a.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/module2/longer_name.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/module2/module3/b.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded/with_wrong_module.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded_rel/modules/module1/first.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded_rel/modules/module2/second.rb
+${GEM_LIBDIR}/spec/fixtures/autoloaded_rel/modules/zero.rb
+${GEM_LIBDIR}/spec/fixtures/error/a.rb
+${GEM_LIBDIR}/spec/fixtures/relative/a.rb
+${GEM_LIBDIR}/spec/fixtures/relative/b/b.rb
+${GEM_LIBDIR}/spec/fixtures/relative/c/c.rb
+${GEM_LIBDIR}/spec/fixtures/relative/d/d.rb
+${GEM_LIBDIR}/spec/fixtures/resolvable/a.rb
+${GEM_LIBDIR}/spec/fixtures/resolvable/b.rb
+${GEM_LIBDIR}/spec/fixtures/resolvable/c.rb
+${GEM_LIBDIR}/spec/fixtures/resolvable/d.rb
+${GEM_LIBDIR}/spec/fixtures/unresolvable/a.rb
+${GEM_LIBDIR}/spec/fixtures/unresolvable/b.rb
+${GEM_LIBDIR}/spec/fixtures/unresolvable/c.rb
+${GEM_LIBDIR}/spec/fixtures/unresolvable/d.rb
+${GEM_LIBDIR}/spec/load_spec.rb
+${GEM_LIBDIR}/spec/require_shared.rb
+${GEM_LIBDIR}/spec/require_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.2.0/plugins
+@pkgdir lib/ruby/gems/3.2.0/extensions
