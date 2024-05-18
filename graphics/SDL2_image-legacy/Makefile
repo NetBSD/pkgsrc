@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/06 18:05:31 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/18 08:40:59 nia Exp $
 
 DISTNAME=	SDL2_image-2.0.1
 CATEGORIES=	graphics devel
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--disable-webp-shared
 
 INSTALLATION_DIRS=	bin
 PKGCONFIG_OVERRIDE=	SDL2_image.pc.in
+
+CHECK_PORTABILITY_SKIP+=	external/*/configure
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
