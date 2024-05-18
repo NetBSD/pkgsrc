@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/14 23:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/18 16:00:25 wiz Exp $
 
 DISTNAME=	superfile-1.1.2
 CATEGORIES=	sysutils
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-GO_MODULES_EXTRACT+=	github.com_barasher_go-exiftool_@v_v1.10.0.zip
+GO_MODULE_EXTRACT+=	github.com_barasher_go-exiftool_@v_v1.10.0.zip
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
