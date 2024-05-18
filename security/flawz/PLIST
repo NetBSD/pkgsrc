@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/18 16:25:11 pin Exp $
+bin/flawz
+bin/flawz-completions
+bin/flawz-mangen
