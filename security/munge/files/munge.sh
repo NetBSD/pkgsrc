@@ -1,5 +1,5 @@
 #!@RCD_SCRIPTS_SHELL@
-# $NetBSD: munge.sh,v 1.2 2024/05/14 21:00:27 bacon Exp $
+# $NetBSD: munge.sh,v 1.3 2024/05/18 22:31:06 bacon Exp $
 #
 # PROVIDE: munge
 # REQUIRE: DAEMON

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2024/05/14 21:00:27 bacon Exp $
+@comment $NetBSD: PLIST.Linux,v 1.7 2024/05/18 22:31:05 bacon Exp $
 lib/systemd/system/munge.service
 share/examples/munge/logrotate.conf
 share/examples/munge/systemd.sysconfig
