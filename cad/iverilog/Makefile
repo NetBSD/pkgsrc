@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/05 22:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/18 14:49:59 mef Exp $
 
 DISTNAME=	verilog-10.1.1
 # There is confision in naming of this software, use iverilog as it's saner
@@ -13,6 +13,7 @@ COMMENT=	Verilog simulation and synthesis tool (stable release version)
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake bison lex
