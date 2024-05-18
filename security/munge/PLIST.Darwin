@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2024/05/14 21:00:27 bacon Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2024/05/18 22:31:05 bacon Exp $
 share/munge/Launchd/org.pkgsrc.munged.plist
