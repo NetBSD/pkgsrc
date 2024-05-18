@@ -1,11 +1,11 @@
-$NetBSD: patch-common.gypi,v 1.11 2023/04/19 17:38:35 adam Exp $
+$NetBSD: patch-common.gypi,v 1.12 2024/05/18 07:05:23 adam Exp $
 
 Add support for NetBSD.
 
---- common.gypi.orig	2023-03-14 15:46:14.000000000 +0000
+--- common.gypi.orig	2024-05-15 12:34:59.000000000 +0000
 +++ common.gypi
-@@ -393,11 +393,11 @@
-           'BUILDING_UV_SHARED=1',
+@@ -482,11 +482,11 @@
+           'NOMINMAX',
          ],
        }],
 -      [ 'OS in "linux freebsd openbsd solaris aix os400"', {
