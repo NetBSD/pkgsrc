@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/04/27 09:05:50 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/18 06:21:21 adam Exp $
 
-DISTNAME=	itemadapter-0.8.0
+DISTNAME=	itemadapter-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/itemadapter/}
@@ -10,9 +10,12 @@ HOMEPAGE=	https://github.com/scrapy/itemadapter
 COMMENT=	Wrapper providing a common interface for objects of different types
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
