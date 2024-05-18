@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.948 2024/05/05 08:53:21 nia Exp $
+# $NetBSD: Makefile,v 1.949 2024/05/18 16:25:50 pin Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -101,6 +101,7 @@ SUBDIR+=	erlang-p1_oauth2
 SUBDIR+=	erlang-pkix
 SUBDIR+=	fail2ban
 SUBDIR+=	flawfinder
+SUBDIR+=	flawz
 SUBDIR+=	fprint-demo
 SUBDIR+=	fsh
 SUBDIR+=	gcr
