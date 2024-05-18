@@ -1,0 +1,4 @@
+A random word generator intended for use in test data factories. This
+library uses a large list (the wordnet corpus) of english words and
+provides an enumerator interface to that corpus that will return the
+words in a random order without repeats.
