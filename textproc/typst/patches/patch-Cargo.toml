@@ -1,15 +1,15 @@
-$NetBSD: patch-Cargo.toml,v 1.5 2024/03/18 09:04:33 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.6 2024/05/18 07:03:55 pin Exp $
 
 Work around unpublished crate.
 
---- Cargo.toml.orig	2024-03-17 17:31:32.009123590 +0000
+--- Cargo.toml.orig	2024-05-18 06:30:37.273901796 +0000
 +++ Cargo.toml
 @@ -26,7 +26,7 @@ typst-svg = { path = "crates/typst-svg",
- typst-syntax = { path = "crates/typst-syntax", version = "0.11.0" }
- typst-timing = { path = "crates/typst-timing", version = "0.11.0" }
- typst-assets = "0.11.0"
--typst-dev-assets = { git = "https://github.com/typst/typst-dev-assets", tag = "v0.11.0" }
-+typst-dev-assets = { path = "typst-dev-assets-e0ef7ad46f28a440c41bc8e78563ace86cc02678" }
+ typst-syntax = { path = "crates/typst-syntax", version = "0.11.1" }
+ typst-timing = { path = "crates/typst-timing", version = "0.11.1" }
+ typst-assets = "0.11.1"
+-typst-dev-assets = { git = "https://github.com/typst/typst-dev-assets", tag = "v0.11.1" }
++typst-dev-assets = { path = "typst-dev-assets-ee8ae61cca138dc92f9d818fc7f2fc046d0148c5" }
  az = "1.2"
  base64 = "0.22"
  bitflags = { version = "2", features = ["serde"] }
