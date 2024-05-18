@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/03/03 11:54:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/05/18 06:17:34 adam Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -43,6 +43,9 @@ ${PYSITELIB}/pylint/checkers/base/comparison_checker.pyo
 ${PYSITELIB}/pylint/checkers/base/docstring_checker.py
 ${PYSITELIB}/pylint/checkers/base/docstring_checker.pyc
 ${PYSITELIB}/pylint/checkers/base/docstring_checker.pyo
+${PYSITELIB}/pylint/checkers/base/function_checker.py
+${PYSITELIB}/pylint/checkers/base/function_checker.pyc
+${PYSITELIB}/pylint/checkers/base/function_checker.pyo
 ${PYSITELIB}/pylint/checkers/base/name_checker/__init__.py
 ${PYSITELIB}/pylint/checkers/base/name_checker/__init__.pyc
 ${PYSITELIB}/pylint/checkers/base/name_checker/__init__.pyo
