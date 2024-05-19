@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24463 2024/05/17 05:26:35 wiz Exp $
+$NetBSD: TODO,v 1.24464 2024/05/19 07:36:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -668,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ghostscript-agpl-10.03.1
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
@@ -730,10 +731,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
+	o grafana-11.0.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.64.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -753,6 +756,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hamster-applet-2.32.1
 	o handbrake-1.7.0
 	o hanzim-3.5
+	o harfbuzz-8.5.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -843,6 +847,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
+	o lgogdownloader-3.13
+	o libass-0.17.2
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libburn-1.5.4
@@ -1117,6 +1123,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-FxA-0.7.8
+	o py-Glances-4.0.5
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
@@ -1131,9 +1139,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-matplotlib-3.9.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
+	o py-networkx-3.3
 	o py-newt-0.52.21
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
@@ -1151,6 +1161,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-trove-classifiers-2024.5.17
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
@@ -1365,6 +1376,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
+	o wxGTK32-3.2.5
 	o wxRemind-101
 	o x2vnc-1.31
 	o xcoral-3.14
