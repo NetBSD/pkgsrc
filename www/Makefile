@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1791 2024/05/02 06:54:58 pho Exp $
+# $NetBSD: Makefile,v 1.1792 2024/05/19 15:45:58 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -89,6 +89,7 @@ SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
 SUBDIR+=	clisp-fastcgi
 SUBDIR+=	cobalt
+SUBDIR+=	cpp-httplib
 SUBDIR+=	cppcms
 SUBDIR+=	crates-io-cli
 SUBDIR+=	crawl
