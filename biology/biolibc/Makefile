@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 20:31:40 bacon Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/19 12:54:59 bacon Exp $
 
-DISTNAME=	biolibc-0.2.6
+DISTNAME=	biolibc-0.2.6.4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
+GITHUB_TAG=	723ac842a111c1cf6c5c41dec34e25f3a049d8be
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc
