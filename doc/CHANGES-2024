@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3500 2024/05/19 11:34:24 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3501 2024/05/19 11:55:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5462,3 +5462,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pygit2 to 1.15.0 [wiz 2024-05-19]
 	Updated mail/thunderbird to 115.11.0 [ryoon 2024-05-19]
 	Updated mail/thunderbird-l10n to 115.11.0 [ryoon 2024-05-19]
+	Updated print/ghostscript-agpl to 10.03.1 [wiz 2024-05-19]
