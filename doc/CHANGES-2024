@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3495 2024/05/18 19:49:47 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3496 2024/05/19 02:36:44 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5457,3 +5457,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added security/flawz version 0.1.0 [pin 2024-05-18]
 	Updated devel/py-pylint to 3.2.1 [adam 2024-05-18]
 	Updated textproc/py-rapidjson to 1.17 [adam 2024-05-18]
+	Updated sysutils/fzf to 0.52.1 [iquiw 2024-05-19]
