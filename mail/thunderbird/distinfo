@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.264 2024/05/10 09:14:06 jperkin Exp $
+$NetBSD: distinfo,v 1.265 2024/05/19 11:33:17 ryoon Exp $
 
-BLAKE2s (thunderbird-115.7.0.source.tar.xz) = c12e9ad84157466e74a003980d2ccf517d2f84ea1653f145628ac2dad4c90055
-SHA512 (thunderbird-115.7.0.source.tar.xz) = de9edb81cf5da494101bf927a5b963ccdec0cc9bff87ebd72d896c6e25102c1113b326f67302a81abd237048aa1e6150c4a97fe4b1892bc80030cbab9099e2d8
-Size (thunderbird-115.7.0.source.tar.xz) = 532459912 bytes
+BLAKE2s (thunderbird-115.11.0.source.tar.xz) = 24b910062ec54f34853f8d4574575efdd02543a0a97d99de27c14870f4a92186
+SHA512 (thunderbird-115.11.0.source.tar.xz) = 002f783cff7f2b50d9a29f20061fe55a1f64487b38a18dcb49217c3d7b99c2852af842decbd0347939aaf4c4c73ae66a8b04527ccd1b6db7f87aab402cb84ca1
+Size (thunderbird-115.11.0.source.tar.xz) = 530402016 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
 SHA1 (patch-build_moz.configure_init.configure) = 07cb75fad7c2f354b3d1e02e3f6e49cca119f20a
 SHA1 (patch-build_moz.configure_rust.configure) = 72c5fa2e9d1022325d038832cca2e35f7213116d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2024/02/11 15:12:45 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.94 2024/05/19 11:33:17 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.sys.mjs
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.sys.mjs
@@ -7004,7 +7004,6 @@ lib/thunderbird/modules/sessionstore/PrivacyLevel.sys.mjs
 lib/thunderbird/modules/sessionstore/SessionHistory.sys.mjs
 lib/thunderbird/modules/sessionstore/SessionStore.jsm
 lib/thunderbird/modules/sessionstore/TabStateFlusher.jsm
-lib/thunderbird/modules/sessionstore/Utils.sys.mjs
 lib/thunderbird/modules/shared/AddressComponent.sys.mjs
 lib/thunderbird/modules/shared/AddressParser.sys.mjs
 lib/thunderbird/modules/shared/CreditCardRuleset.sys.mjs
