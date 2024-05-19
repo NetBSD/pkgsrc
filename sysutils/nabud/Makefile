@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/05/15 04:41:13 thorpej Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/19 19:08:23 thorpej Exp $
 #
 
-NABUD_VERS=	1.3.2
+NABUD_VERS=	1.3.3
 
 GITHUB_PROJECT=	nabud
 GITHUB_TAG=	v${NABUD_VERS}
