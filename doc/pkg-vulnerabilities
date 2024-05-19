@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.198 2024/05/15 13:13:19 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.199 2024/05/19 11:59:02 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26006,3 +26006,5 @@ git-base<2.45.1	insufficient-checks	https://nvd.nist.gov/vuln/detail/CVE-2024-32
 git-base<2.45.1	toctou	https://nvd.nist.gov/vuln/detail/CVE-2024-32021
 git-base<2.45.1	execute-arbitrary-code	https://nvd.nist.gov/vuln/detail/CVE-2024-32465
 dino<0.4.2		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2023-28686
+ghostscript-gpl-[0-9]*		unknown		https://nvd.nist.gov/vuln/detail/CVE-2023-52722
+ghostscript-agpl<10.03.1		unknown		https://nvd.nist.gov/vuln/detail/CVE-2023-52722
