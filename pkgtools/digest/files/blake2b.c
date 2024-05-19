@@ -109,6 +109,9 @@ static const uint8_t blake2b_sigma[12][16] = {
 	{ 14, 10,  4,  8,  9, 15, 13,  6,  1, 12,  0,  2, 11,  7,  5,  3 },
 };
 
+#if defined __vax__ && defined __GNUC__ && __GNUC__ < 10
+__attribute__((__optimize__("O0")))	/* PR toolchain/53947 */
+#endif
 static void
 blake2b_compress(uint64_t h[8], uint64_t c, uint64_t last,
     const uint8_t in[128])
