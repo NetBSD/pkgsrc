@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3496 2024/05/19 02:36:44 iquiw Exp $
+$NetBSD: CHANGES-2024,v 1.3497 2024/05/19 03:35:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pylint to 3.2.1 [adam 2024-05-18]
 	Updated textproc/py-rapidjson to 1.17 [adam 2024-05-18]
 	Updated sysutils/fzf to 0.52.1 [iquiw 2024-05-19]
+	Updated cad/klayout to 0.29.1 [mef 2024-05-19]
