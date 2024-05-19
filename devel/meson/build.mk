@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.26 2024/02/03 22:49:14 nros Exp $
+# $NetBSD: build.mk,v 1.27 2024/05/19 05:37:11 wiz Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -21,7 +21,7 @@ MAKE_ENV+=	LLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 # The default threshold of 64k is too low for pkgsrc.
 MAKE_ENV+=	MESON_RSP_THRESHOLD=262144
 
-.if !defined(USE_CMAKE)
+.if !defined(USE_CMAKE) && empty(USE_TOOLS:Mcmake)
 MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
 .endif
 
