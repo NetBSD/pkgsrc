@@ -1,2 +1,2 @@
-ad2vcf extracts allelic depth info from a SAM stream and adds it to a
+ad2vdf extracts allelic depth info from a SAM stream and adds it to a
 corresponding single-sample VCF file.
