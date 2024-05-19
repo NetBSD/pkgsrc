@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3510 2024/05/19 16:01:37 nia Exp $
+$NetBSD: CHANGES-2024,v 1.3511 2024/05/19 19:09:00 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5472,3 +5472,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added www/cpp-httplib version 0.15.3 [wiz 2024-05-19]
 	Updated graphics/wld to 0.0.0.20230603 [nia 2024-05-19]
 	Updated wm/swc to 0.0.0.20230701 [nia 2024-05-19]
+	Updated sysutils/nabud to 1.3.3 [thorpej 2024-05-19]
