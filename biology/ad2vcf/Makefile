@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2022/12/28 15:27:15 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/19 12:56:54 bacon Exp $
 
-DISTNAME=	ad2vcf-0.1.6
+DISTNAME=	ad2vcf-0.1.6.19
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
+GITHUB_TAG=	f42ae919986d35de2ed6868c22712519d1d0f067
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
