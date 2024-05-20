@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.124 2024/04/07 07:33:41 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2024/05/20 12:59:02 gdt Exp $
 
 DISTNAME=		jpilot-1.8.2
 PKGREVISION=		22
 CATEGORIES=		comms
-MASTER_SITES=		http://www.jpilot.org/
+#MASTER_SITES=		https://www.jpilot.org/ # withdrawn in favor of github
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.jpilot.org/
+HOMEPAGE=		https://www.jpilot.org/
 COMMENT=		Desktop organizer application for the palm pilot
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
