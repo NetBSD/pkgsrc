@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 11:24:44 asau Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/20 13:03:49 gdt Exp $
 #
 
 DISTNAME=	qpage-3.3
 CATEGORIES=	comms
-MASTER_SITES=	http://www.qpage.org/download/
+MASTER_SITES=	http://www.qpage.org/download/ # https times out
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

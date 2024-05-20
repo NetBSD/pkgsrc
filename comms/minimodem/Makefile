@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2024/01/30 14:21:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/20 13:03:49 gdt Exp $
 
 DISTNAME=	minimodem-0.24
 PKGREVISION=	4
 CATEGORIES=	comms audio
-MASTER_SITES=	http://www.whence.com/minimodem/
+MASTER_SITES=	http://www.whence.com/minimodem/ # https times out
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.whence.com/minimodem/
