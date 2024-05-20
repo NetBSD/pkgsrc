@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.46 2024/04/05 11:25:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.47 2024/05/20 10:38:37 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
-DISTNAME=	harfbuzz-8.4.0
+DISTNAME=	harfbuzz-8.5.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -31,7 +31,11 @@ MESON_REQD+=	1.2.0
 MESON_ARGS+=	-Dcairo=disabled
 MESON_ARGS+=	-Dbenchmark=disabled
 
+PLIST_SRC=		PLIST
+
 PLIST_VARS+=		graphite2
+PRINT_PLIST_AWK+=	{ if (/^include\/harfbuzz\/hb-graphite2.h/) $$0 = "$${PLIST.graphite2}" $$0 }
+
 .if ${LIBRSVG_TYPE} == "rust"
 MESON_ARGS+=		-Dgraphite=enabled
 PLIST.graphite2=	yes
@@ -39,7 +43,9 @@ PLIST.graphite2=	yes
 MESON_ARGS+=		-Dgraphite=disabled
 .endif
 
-PLIST_SUBST=		SOVER=60${PKGVERSION_NOREV:S/.//g}
+SOVER=			60${PKGVERSION_NOREV:S/.//g}
+PLIST_SUBST=		SOVER=${SOVER}
+PRINT_PLIST_AWK+=	{ gsub(/${SOVER}/, "$${SOVER}"); }
 PKGCONFIG_OVERRIDE+=	output/meson-private/*.pc
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
@@ -52,6 +58,7 @@ LDFLAGS.OpenBSD+=	-lz
 BUILDLINK_TRANSFORM.MirBSD+=	rm:-fvisibility-inlines-hidden
 
 PLIST_VARS+=	coretext
+PRINT_PLIST_AWK+=	{ if (/^include\/harfbuzz\/hb-coretext.h/) $$0 = "$${PLIST.coretext}" $$0 }
 
 .if ${OPSYS} == "Darwin"
 .  if !empty(OS_VERSION:M[0-8].*)
@@ -68,7 +75,7 @@ MESON_ARGS+=		-Dcoretext=disabled
 
 .  else
 MESON_ARGS+=		-Dcoretext=enabled
-PLIST.coretext=		yes
+PLIST_SRC+=		PLIST.coretext
 .  endif
 .endif
 

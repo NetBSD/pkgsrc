@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.coretext,v 1.1 2024/05/20 10:38:37 wiz Exp $
+include/harfbuzz/hb-coretext.h
