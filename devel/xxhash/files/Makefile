@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/16 10:34:29 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/05/20 11:45:55 nia Exp $
 
 LIBTOOL?=		libtool
 MANDIR?=		man
@@ -43,6 +43,7 @@ libxxhash.pc: libxxhash.pc.in
 		-e "s,@EXECPREFIX@,$(PREFIX)/bin,g" \
 		-e "s,@INCLUDEDIR@,$(PREFIX)/include,g" \
 		-e "s,@LIBDIR@,$(PREFIX)/lib,g" \
+		-e "s,@VERSION@,$(PKGVERSION_NOREV),g" \
 		libxxhash.pc.in > libxxhash.pc
 
 install:
