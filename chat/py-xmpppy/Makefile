@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/05/10 10:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/20 13:06:51 gdt Exp $
 
 DISTNAME=	xmpppy-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=xmpppy/}
 GITHUB_PROJECT=	xmpppy
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://xmpppy.sourceforge.net/
+HOMEPAGE=	https://xmpppy.sourceforge.net/
 COMMENT=	XMPP (Jabber) library for Python
 LICENSE=	gnu-gpl-v2
 
