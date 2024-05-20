@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/01/02 00:37:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/05/20 10:21:50 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -221,6 +221,9 @@ ${PYSITELIB}/networkx/algorithms/boundary.pyo
 ${PYSITELIB}/networkx/algorithms/bridges.py
 ${PYSITELIB}/networkx/algorithms/bridges.pyc
 ${PYSITELIB}/networkx/algorithms/bridges.pyo
+${PYSITELIB}/networkx/algorithms/broadcasting.py
+${PYSITELIB}/networkx/algorithms/broadcasting.pyc
+${PYSITELIB}/networkx/algorithms/broadcasting.pyo
 ${PYSITELIB}/networkx/algorithms/centrality/__init__.py
 ${PYSITELIB}/networkx/algorithms/centrality/__init__.pyc
 ${PYSITELIB}/networkx/algorithms/centrality/__init__.pyo
@@ -392,6 +395,9 @@ ${PYSITELIB}/networkx/algorithms/community/centrality.pyo
 ${PYSITELIB}/networkx/algorithms/community/community_utils.py
 ${PYSITELIB}/networkx/algorithms/community/community_utils.pyc
 ${PYSITELIB}/networkx/algorithms/community/community_utils.pyo
+${PYSITELIB}/networkx/algorithms/community/divisive.py
+${PYSITELIB}/networkx/algorithms/community/divisive.pyc
+${PYSITELIB}/networkx/algorithms/community/divisive.pyo
 ${PYSITELIB}/networkx/algorithms/community/kclique.py
 ${PYSITELIB}/networkx/algorithms/community/kclique.pyc
 ${PYSITELIB}/networkx/algorithms/community/kclique.pyo
@@ -422,6 +428,9 @@ ${PYSITELIB}/networkx/algorithms/community/tests/test_asyn_fluid.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_centrality.pyo
+${PYSITELIB}/networkx/algorithms/community/tests/test_divisive.py
+${PYSITELIB}/networkx/algorithms/community/tests/test_divisive.pyc
+${PYSITELIB}/networkx/algorithms/community/tests/test_divisive.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_kclique.pyo
@@ -886,6 +895,9 @@ ${PYSITELIB}/networkx/algorithms/tests/test_boundary.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_bridges.py
 ${PYSITELIB}/networkx/algorithms/tests/test_bridges.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_bridges.pyo
+${PYSITELIB}/networkx/algorithms/tests/test_broadcasting.py
+${PYSITELIB}/networkx/algorithms/tests/test_broadcasting.pyc
+${PYSITELIB}/networkx/algorithms/tests/test_broadcasting.pyo
 ${PYSITELIB}/networkx/algorithms/tests/test_chains.py
 ${PYSITELIB}/networkx/algorithms/tests/test_chains.pyc
 ${PYSITELIB}/networkx/algorithms/tests/test_chains.pyo
@@ -1183,9 +1195,6 @@ ${PYSITELIB}/networkx/classes/tests/dispatch_interface.pyo
 ${PYSITELIB}/networkx/classes/tests/historical_tests.py
 ${PYSITELIB}/networkx/classes/tests/historical_tests.pyc
 ${PYSITELIB}/networkx/classes/tests/historical_tests.pyo
-${PYSITELIB}/networkx/classes/tests/test_backends.py
-${PYSITELIB}/networkx/classes/tests/test_backends.pyc
-${PYSITELIB}/networkx/classes/tests/test_backends.pyo
 ${PYSITELIB}/networkx/classes/tests/test_coreviews.py
 ${PYSITELIB}/networkx/classes/tests/test_coreviews.pyc
 ${PYSITELIB}/networkx/classes/tests/test_coreviews.pyo
@@ -1647,6 +1656,9 @@ ${PYSITELIB}/networkx/utils/__init__.pyo
 ${PYSITELIB}/networkx/utils/backends.py
 ${PYSITELIB}/networkx/utils/backends.pyc
 ${PYSITELIB}/networkx/utils/backends.pyo
+${PYSITELIB}/networkx/utils/configs.py
+${PYSITELIB}/networkx/utils/configs.pyc
+${PYSITELIB}/networkx/utils/configs.pyo
 ${PYSITELIB}/networkx/utils/decorators.py
 ${PYSITELIB}/networkx/utils/decorators.pyc
 ${PYSITELIB}/networkx/utils/decorators.pyo
@@ -1671,6 +1683,12 @@ ${PYSITELIB}/networkx/utils/tests/__init__.pyo
 ${PYSITELIB}/networkx/utils/tests/test__init.py
 ${PYSITELIB}/networkx/utils/tests/test__init.pyc
 ${PYSITELIB}/networkx/utils/tests/test__init.pyo
+${PYSITELIB}/networkx/utils/tests/test_backends.py
+${PYSITELIB}/networkx/utils/tests/test_backends.pyc
+${PYSITELIB}/networkx/utils/tests/test_backends.pyo
+${PYSITELIB}/networkx/utils/tests/test_config.py
+${PYSITELIB}/networkx/utils/tests/test_config.pyc
+${PYSITELIB}/networkx/utils/tests/test_config.pyo
 ${PYSITELIB}/networkx/utils/tests/test_decorators.py
 ${PYSITELIB}/networkx/utils/tests/test_decorators.pyc
 ${PYSITELIB}/networkx/utils/tests/test_decorators.pyo
