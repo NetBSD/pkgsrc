@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3525 2024/05/20 10:44:53 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3526 2024/05/20 11:59:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5491,3 +5491,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/harfbuzz to 8.5.0 [wiz 2024-05-20]
 	Updated fonts/harfbuzz-icu to 8.5.0 [wiz 2024-05-20]
 	Updated x11/wxGTK32 to 3.2.5 [wiz 2024-05-20]
+	Updated databases/mariadb106-client to 10.6.18 [nia 2024-05-20]
+	Updated databases/mariadb106-server to 10.6.18 [nia 2024-05-20]
