@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2019/11/03 12:04:13 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/20 13:03:49 gdt Exp $
 
 DISTNAME=	xtel-3.3.0
 PKGREVISION=	14
 CATEGORIES=	comms x11
-MASTER_SITES=	http://pficheux.free.fr/xtel/download/
+MASTER_SITES=	http://pficheux.free.fr/xtel/download/ # https times out
 
 PATCHFILES=		xtel-jumbo-patch-20111008.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xtel/
