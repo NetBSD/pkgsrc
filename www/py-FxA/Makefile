@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/06/11 08:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/20 10:10:17 wiz Exp $
 
-DISTNAME=	PyFxA-0.7.7
+DISTNAME=	PyFxA-0.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyFxA/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/mozilla/PyFxA
 COMMENT=	Firefox Accounts client library for Python
 LICENSE=	mpl-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-BrowserID>=0:../../www/py-BrowserID
@@ -29,7 +31,7 @@ USE_TOOLS+=	ftp:test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# test status as of 0.7.7
+# test status as of 0.7.8
 # 18 failed, 97 passed, 1 skipped, 1 warning
 # https://github.com/mozilla/PyFxA/issues/95
 
@@ -39,5 +41,5 @@ pre-test:
 	cd ${WRKSRC}/fxa/tests && ftp https://raw.githubusercontent.com/mozilla/PyFxA/main/fxa/tests/jwks.json
 	cd ${WRKSRC}/fxa/tests && ftp https://raw.githubusercontent.com/mozilla/PyFxA/main/fxa/tests/private-key.json
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
