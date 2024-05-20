@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/27 11:49:41 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/05/20 19:38:26 adam Exp $
 
-BLAKE2s (qtimageformats-everywhere-src-6.7.0.tar.xz) = f282b16530f8f800dd7412c39d924efbe982dbfe0372d1aed222e2273f642277
-SHA512 (qtimageformats-everywhere-src-6.7.0.tar.xz) = 0e30021b028a4e6754c300d343aa72f93ab855cba043ddb2d24855989823c82c78ea67871399d78105dbc092abe2666e0a92caa50aa780ca4e267bf6f05bd914
-Size (qtimageformats-everywhere-src-6.7.0.tar.xz) = 1968344 bytes
+BLAKE2s (qtimageformats-everywhere-src-6.7.1.tar.xz) = 655099958b6004a17d8a221395ea3c670460024ee70b97aafdfe6009f5c0b820
+SHA512 (qtimageformats-everywhere-src-6.7.1.tar.xz) = 992e54d4b7dd2244163989836a534c20719185a8fcccad45bf837708cb35ece75075a02a73e14a2e6ce4d72d405012f45a4ed1f12b66fc5fcfc0cce6f81c049c
+Size (qtimageformats-everywhere-src-6.7.1.tar.xz) = 1971500 bytes

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2024/04/27 11:49:39 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/05/20 19:38:24 adam Exp $
 
-BLAKE2s (qt3d-everywhere-src-6.7.0.tar.xz) = 033539da70d3e46a01d8f7c81fefb80d618c7c6c2622d90e41dced9001100907
-SHA512 (qt3d-everywhere-src-6.7.0.tar.xz) = 538027077f9729b91ecc3a4de4a14be212236d0bc4b1f4533a558753b6cb7aa23e1c169c921fa71d61d5f9cffbb85a0535000bf677ca09962ca62cbfcc60e70d
-Size (qt3d-everywhere-src-6.7.0.tar.xz) = 141570596 bytes
+BLAKE2s (qt3d-everywhere-src-6.7.1.tar.xz) = 1aae81c6e3e2cc5f82f9f1a4b0f7cac5b1c054c736fbf0d06b22b558e4de83da
+SHA512 (qt3d-everywhere-src-6.7.1.tar.xz) = 0fe8f2c0e843332978651c5063d35148e7aea3f8e68b10279e731d6fb4a2b48478e8db3d5a3badf797334dcca04ee24f33935e235a97e8e9ee1f95f2d52f2443
+Size (qt3d-everywhere-src-6.7.1.tar.xz) = 141586868 bytes
 SHA1 (patch-src_plugins_geometryloaders_configure.cmake) = 02401ea3019229fdc448fe2b31c17ebeca69ca76
 SHA1 (patch-src_plugins_geometryloaders_qt__cmdline.cmake) = fce24f88847deab0100ced7b5dc64c129caa30ee
 SHA1 (patch-src_plugins_renderers_opengl_CMakeLists.txt) = 0a94746a8767cd9244ae394d95872b15b6eaefb0

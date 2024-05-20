@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/27 11:49:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/05/20 19:38:25 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsQmlModels.pc
@@ -48,6 +48,7 @@ qt6/bin/qmlscene
 qt6/bin/qmltc
 qt6/bin/qmltestrunner
 qt6/bin/qmltime
+qt6/bin/svgtoqml
 qt6/include/QtLabsAnimation/${PKGVERSION}/QtLabsAnimation/private/qqmlanimationglobal_p.h
 qt6/include/QtLabsAnimation/${PKGVERSION}/QtLabsAnimation/private/qquickboundaryrule_p.h
 qt6/include/QtLabsAnimation/${PKGVERSION}/QtLabsAnimation/private/qtlabsanimationexports_p.h
@@ -2110,6 +2111,14 @@ qt6/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6QuickTestUtilsPrivateDependencies.cmak
 qt6/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6QuickTestUtilsPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6QuickTestUtilsPrivateTargets.cmake
 qt6/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6QuickTestUtilsPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfig.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersion.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsDependencies.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets-release.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets.cmake
+qt6/lib/cmake/Qt6QuickTools/Qt6QuickToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsConfig.cmake
 qt6/lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsConfigVersion.cmake
@@ -2284,7 +2293,7 @@ qt6/lib/libQt6QuickWidgets.prl
 qt6/lib/libQt6QuickWidgets.so
 qt6/lib/libQt6QuickWidgets.so.${PKGVERSION}
 qt6/lib/libQt6QuickWidgets.so.6
-qt6/lib/objects-Release/QmlTypeRegistrarPrivate_resources_1/.rcc/qrc_jsRootMetaTypes_init.cpp.o
+qt6/lib/objects-Release/QmlTypeRegistrarPrivate_resources_1/.qt/rcc/qrc_jsRootMetaTypes_init.cpp.o
 qt6/lib/pkgconfig/Qt6LabsAnimation.pc
 qt6/lib/pkgconfig/Qt6LabsFolderListModel.pc
 qt6/lib/pkgconfig/Qt6LabsQmlModels.pc
