@@ -1,14 +1,16 @@
-$NetBSD: patch-storage_columnstore_CMakeLists.txt,v 1.1 2023/03/07 10:28:02 jperkin Exp $
+$NetBSD: patch-storage_columnstore_CMakeLists.txt,v 1.2 2024/05/20 15:53:42 nia Exp $
 
 Support SunOS.
 
---- storage/columnstore/CMakeLists.txt.orig	2022-11-02 12:37:21.000000000 +0000
+--- storage/columnstore/CMakeLists.txt.orig	2024-05-08 18:05:55.000000000 +0000
 +++ storage/columnstore/CMakeLists.txt
-@@ -12,6 +12,7 @@ macro(APPEND_FOR_CPACK V)
+@@ -12,7 +12,8 @@ macro(APPEND_FOR_CPACK V)
  endmacro()
  
  IF(CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64" OR
+-CMAKE_SYSTEM_PROCESSOR STREQUAL "amd64")
 +   CMAKE_SYSTEM_NAME STREQUAL "SunOS" OR
- CMAKE_SYSTEM_PROCESSOR STREQUAL "amd64")
-     add_subdirectory(columnstore)
++   CMAKE_SYSTEM_PROCESSOR STREQUAL "amd64")
  
+     # https://jira.mariadb.org/browse/MCOL-5611
+     FIND_PACKAGE(Boost 1.53 COMPONENTS system filesystem thread regex date_time chrono atomic)
