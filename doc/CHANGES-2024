@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3526 2024/05/20 11:59:55 nia Exp $
+$NetBSD: CHANGES-2024,v 1.3527 2024/05/20 15:54:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5493,3 +5493,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/wxGTK32 to 3.2.5 [wiz 2024-05-20]
 	Updated databases/mariadb106-client to 10.6.18 [nia 2024-05-20]
 	Updated databases/mariadb106-server to 10.6.18 [nia 2024-05-20]
+	Updated databases/mariadb105-client to 10.5.25 [nia 2024-05-20]
+	Updated databases/mariadb105-server to 10.5.25 [nia 2024-05-20]
