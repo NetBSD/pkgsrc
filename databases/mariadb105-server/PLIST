@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/04/10 19:21:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/05/20 15:53:42 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -8,7 +8,6 @@ bin/aria_s3_copy
 bin/innochecksum
 bin/mariabackup
 bin/mariadb-backup
-bin/mariadb-client-test
 ${PLIST.embedded}bin/mariadb-client-test-embedded
 bin/mariadb-dumpslow
 ${PLIST.embedded}bin/mariadb-embedded
@@ -28,7 +27,6 @@ bin/myisamchk
 bin/myisamlog
 bin/myisampack
 ${PLIST.rocksdb}bin/myrocks_hotbackup
-bin/mysql_client_test
 ${PLIST.embedded}bin/mysql_client_test_embedded
 ${PLIST.embedded}bin/mysql_embedded
 bin/mysql_fix_extensions
