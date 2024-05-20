@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2024/05/18 19:48:27 adam Exp $
+# $NetBSD: Makefile,v 1.97 2024/05/20 19:54:24 adam Exp $
 
-DISTNAME=	pylint-3.2.1
+DISTNAME=	pylint-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.37.1:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-astroid>=3.2.1:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=3.2.2:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.7:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6:../../devel/py-mccabe
