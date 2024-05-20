@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.21 2024/04/10 19:21:45 nia Exp $
+$NetBSD: distinfo,v 1.22 2024/05/20 15:53:41 nia Exp $
 
-BLAKE2s (mariadb-10.5.24.tar.gz) = 3aa31986e277690650783b39d0ebafb6c4e10333e1ee84d4b3d467081a85abac
-SHA512 (mariadb-10.5.24.tar.gz) = 04886d7889c7f52763b8a4ae595627cfa200f28772108ecf9a65355bee496cadfc4138291ae043ba6a9c27801e4765df53738211c237c9994f1bfc6783d7e568
-Size (mariadb-10.5.24.tar.gz) = 115706805 bytes
+BLAKE2s (mariadb-10.5.25.tar.gz) = 4302be25824e86c52059348a346aa09b5982c079369ac0fdb2940a1b5283383f
+SHA512 (mariadb-10.5.25.tar.gz) = 82bc2b8d098a35a6ae2c950e51e710534dac9394defe78f19ebd9c39e0bf5a4fe1af03a585324b8a51764f1b3c33e57576b2ff2d77a357861b5dcf2752851cc2
+Size (mariadb-10.5.25.tar.gz) = 115951936 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
-SHA1 (patch-CMakeLists.txt) = 574131db46854715758c60ba5f026498f5b29564
+SHA1 (patch-CMakeLists.txt) = 96e43de080e7596cc02edfce7e621fe64a13bcb0
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = 89fe80fb66b8791131a8c6d1b209e57082804a01
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-mysys_my__gethwaddr.c) = f4fd827617697ff386099defc839fe8d082e6c3e
-SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = 11f52f5335ac56888d8a367caa03c68059eb61c9
+SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = f6aba24287009124ab964d2c10e25e6ece5cd7dc
 SHA1 (patch-plugin_auth__socket_auth__socket.c) = 850e94faff382a7e962f6d4d6ff960ddddc624c4
 SHA1 (patch-scripts_CMakeLists.txt) = 54591a4d255a8133e06ab5d52bad262acffcddda
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
-SHA1 (patch-storage_columnstore_CMakeLists.txt) = cd5ceb1802831910c6cfa5950c52f5af8eb7dcaa
+SHA1 (patch-storage_columnstore_CMakeLists.txt) = 9b79ccf35992d2a76c4e2a45d8c749835dd0118a
 SHA1 (patch-storage_rocksdb_CMakeLists.txt) = 2ab237df750cc18facf92c6ad997469f5e43c63f
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
