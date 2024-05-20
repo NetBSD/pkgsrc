@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/27 11:49:44 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/20 19:38:28 adam Exp $
 
 DISTNAME=	qtvirtualkeyboard-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtvirtualkeyboard-${QTVERSION}
@@ -13,5 +13,6 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6VirtualKeyboard.pc
 
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
