@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.26 2024/05/15 19:21:43 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.27 2024/05/20 11:59:10 nia Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
 
-DISTNAME=	mariadb-10.6.17
+DISTNAME=	mariadb-10.6.18
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -71,6 +71,8 @@ CMAKE_ARGS+=		-DPLUGIN_FEEDBACK=NO
 
 # Requires Java
 CMAKE_ARGS+=		-DCONNECT_WITH_JDBC=OFF
+
+CMAKE_ARGS+=		-DCONNECT_WITH_LIBXML2=OFF
 
 # Options which affect generation of includes
 CMAKE_ARGS+=		-DWITH_ARIA_STORAGE_ENGINE=ON
