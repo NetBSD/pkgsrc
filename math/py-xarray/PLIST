@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/04/03 07:29:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/05/20 09:55:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -44,9 +44,6 @@ ${PYSITELIB}/xarray/backends/plugins.pyo
 ${PYSITELIB}/xarray/backends/pydap_.py
 ${PYSITELIB}/xarray/backends/pydap_.pyc
 ${PYSITELIB}/xarray/backends/pydap_.pyo
-${PYSITELIB}/xarray/backends/pynio_.py
-${PYSITELIB}/xarray/backends/pynio_.pyc
-${PYSITELIB}/xarray/backends/pynio_.pyo
 ${PYSITELIB}/xarray/backends/scipy_.py
 ${PYSITELIB}/xarray/backends/scipy_.pyc
 ${PYSITELIB}/xarray/backends/scipy_.pyo
@@ -134,12 +131,24 @@ ${PYSITELIB}/xarray/core/dataset.pyo
 ${PYSITELIB}/xarray/core/datatree.py
 ${PYSITELIB}/xarray/core/datatree.pyc
 ${PYSITELIB}/xarray/core/datatree.pyo
+${PYSITELIB}/xarray/core/datatree_mapping.py
+${PYSITELIB}/xarray/core/datatree_mapping.pyc
+${PYSITELIB}/xarray/core/datatree_mapping.pyo
+${PYSITELIB}/xarray/core/datatree_ops.py
+${PYSITELIB}/xarray/core/datatree_ops.pyc
+${PYSITELIB}/xarray/core/datatree_ops.pyo
+${PYSITELIB}/xarray/core/datatree_render.py
+${PYSITELIB}/xarray/core/datatree_render.pyc
+${PYSITELIB}/xarray/core/datatree_render.pyo
 ${PYSITELIB}/xarray/core/dtypes.py
 ${PYSITELIB}/xarray/core/dtypes.pyc
 ${PYSITELIB}/xarray/core/dtypes.pyo
 ${PYSITELIB}/xarray/core/duck_array_ops.py
 ${PYSITELIB}/xarray/core/duck_array_ops.pyc
 ${PYSITELIB}/xarray/core/duck_array_ops.pyo
+${PYSITELIB}/xarray/core/extension_array.py
+${PYSITELIB}/xarray/core/extension_array.pyc
+${PYSITELIB}/xarray/core/extension_array.pyo
 ${PYSITELIB}/xarray/core/extensions.py
 ${PYSITELIB}/xarray/core/extensions.pyc
 ${PYSITELIB}/xarray/core/extensions.pyo
@@ -158,6 +167,9 @@ ${PYSITELIB}/xarray/core/indexes.pyo
 ${PYSITELIB}/xarray/core/indexing.py
 ${PYSITELIB}/xarray/core/indexing.pyc
 ${PYSITELIB}/xarray/core/indexing.pyo
+${PYSITELIB}/xarray/core/iterators.py
+${PYSITELIB}/xarray/core/iterators.pyc
+${PYSITELIB}/xarray/core/iterators.pyo
 ${PYSITELIB}/xarray/core/merge.py
 ${PYSITELIB}/xarray/core/merge.pyc
 ${PYSITELIB}/xarray/core/merge.pyo
@@ -212,6 +224,15 @@ ${PYSITELIB}/xarray/core/variable.pyo
 ${PYSITELIB}/xarray/core/weighted.py
 ${PYSITELIB}/xarray/core/weighted.pyc
 ${PYSITELIB}/xarray/core/weighted.pyo
+${PYSITELIB}/xarray/datatree_/datatree/__init__.py
+${PYSITELIB}/xarray/datatree_/datatree/__init__.pyc
+${PYSITELIB}/xarray/datatree_/datatree/__init__.pyo
+${PYSITELIB}/xarray/datatree_/datatree/common.py
+${PYSITELIB}/xarray/datatree_/datatree/common.pyc
+${PYSITELIB}/xarray/datatree_/datatree/common.pyo
+${PYSITELIB}/xarray/datatree_/datatree/io.py
+${PYSITELIB}/xarray/datatree_/datatree/io.pyc
+${PYSITELIB}/xarray/datatree_/datatree/io.pyo
 ${PYSITELIB}/xarray/indexes/__init__.py
 ${PYSITELIB}/xarray/indexes/__init__.pyc
 ${PYSITELIB}/xarray/indexes/__init__.pyo
@@ -287,6 +308,9 @@ ${PYSITELIB}/xarray/testing/strategies.pyo
 ${PYSITELIB}/xarray/tests/__init__.py
 ${PYSITELIB}/xarray/tests/__init__.pyc
 ${PYSITELIB}/xarray/tests/__init__.pyo
+${PYSITELIB}/xarray/tests/arrays.py
+${PYSITELIB}/xarray/tests/arrays.pyc
+${PYSITELIB}/xarray/tests/arrays.pyo
 ${PYSITELIB}/xarray/tests/conftest.py
 ${PYSITELIB}/xarray/tests/conftest.pyc
 ${PYSITELIB}/xarray/tests/conftest.pyo
@@ -383,6 +407,9 @@ ${PYSITELIB}/xarray/tests/test_dataset.pyo
 ${PYSITELIB}/xarray/tests/test_datatree.py
 ${PYSITELIB}/xarray/tests/test_datatree.pyc
 ${PYSITELIB}/xarray/tests/test_datatree.pyo
+${PYSITELIB}/xarray/tests/test_datatree_mapping.py
+${PYSITELIB}/xarray/tests/test_datatree_mapping.pyc
+${PYSITELIB}/xarray/tests/test_datatree_mapping.pyo
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.py
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.pyc
 ${PYSITELIB}/xarray/tests/test_deprecation_helpers.pyo
