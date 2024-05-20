@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/04/27 11:49:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/05/20 19:38:24 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1790,6 +1790,7 @@ qt6/include/QtNetwork/QNetworkRequest
 qt6/include/QtNetwork/QNetworkRequestFactory
 qt6/include/QtNetwork/QOcspResponse
 qt6/include/QtNetwork/QPasswordDigestor
+qt6/include/QtNetwork/QRestAccessManager
 qt6/include/QtNetwork/QRestReply
 qt6/include/QtNetwork/QSsl
 qt6/include/QtNetwork/QSslCertificate
@@ -3244,7 +3245,7 @@ qt6/lib/libQt6Xml.prl
 qt6/lib/libQt6Xml.so
 qt6/lib/libQt6Xml.so.${PKGVERSION}
 qt6/lib/libQt6Xml.so.6
-qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.rcc/qrc_example_icons_init.cpp.o
+qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
 qt6/lib/pkgconfig/Qt6Concurrent.pc
 qt6/lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}qt6/lib/pkgconfig/Qt6DBus.pc
@@ -3265,6 +3266,7 @@ qt6/libexec/qlalr
 qt6/libexec/qt-cmake-private
 qt6/libexec/qt-cmake-private-install.cmake
 qt6/libexec/qt-cmake-standalone-test
+qt6/libexec/qt-internal-configure-examples
 qt6/libexec/qt-internal-configure-tests
 qt6/libexec/qt-testrunner.py
 qt6/libexec/qvkgen

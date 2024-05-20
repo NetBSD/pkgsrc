@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/04/06 08:06:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/05/20 19:38:25 adam Exp $
 
 BUILDLINK_TREE+=	qt6-qtdeclarative
 
@@ -13,6 +13,10 @@ BUILDLINK_INCDIRS.qt6-qtdeclarative+=	qt6/include
 BUILDLINK_LIBDIRS.qt6-qtdeclarative+=	qt6/lib
 BUILDLINK_LIBDIRS.qt6-qtdeclarative+=	qt6/plugins
 
+.include "../../graphics/qt6-qtimageformats/buildlink3.mk"
+.include "../../graphics/qt6-qtshadertools/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/qt6-qtlanguageserver/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# QT6_QTDECLARATIVE_BUILDLINK3_MK
 
