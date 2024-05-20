@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2024/04/05 11:25:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.76 2024/05/20 10:38:37 wiz Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-ot-shape-closure
 ${PLIST.introspection}bin/hb-shape
@@ -8,7 +8,6 @@ include/harfbuzz/hb-aat.h
 include/harfbuzz/hb-blob.h
 include/harfbuzz/hb-buffer.h
 include/harfbuzz/hb-common.h
-${PLIST.coretext}include/harfbuzz/hb-coretext.h
 include/harfbuzz/hb-cplusplus.hh
 include/harfbuzz/hb-deprecated.h
 include/harfbuzz/hb-draw.h
@@ -135,6 +134,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-3-1.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-4-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-5-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
