@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24470 2024/05/20 10:10:26 wiz Exp $
+$NetBSD: TODO,v 1.24471 2024/05/20 10:22:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1140,7 +1140,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
-	o py-networkx-3.3
 	o py-newt-0.52.21
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
