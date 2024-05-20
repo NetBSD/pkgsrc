@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3511 2024/05/19 19:09:00 thorpej Exp $
+$NetBSD: CHANGES-2024,v 1.3512 2024/05/20 03:02:09 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/wld to 0.0.0.20230603 [nia 2024-05-19]
 	Updated wm/swc to 0.0.0.20230701 [nia 2024-05-19]
 	Updated sysutils/nabud to 1.3.3 [thorpej 2024-05-19]
+	Updated comms/asterisk21 to 21.3.1nb1 [jnemeth 2024-05-20]
