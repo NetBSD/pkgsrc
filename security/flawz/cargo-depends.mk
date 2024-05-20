@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2024/05/18 16:25:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2024/05/20 18:43:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -24,7 +24,7 @@ CARGO_CRATE_DEPENDS+=	bumpalo-3.16.0
 CARGO_CRATE_DEPENDS+=	bytes-1.6.0
 CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
 CARGO_CRATE_DEPENDS+=	castaway-0.2.2
-CARGO_CRATE_DEPENDS+=	cc-1.0.97
+CARGO_CRATE_DEPENDS+=	cc-1.0.98
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.38
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
@@ -125,7 +125,7 @@ CARGO_CRATE_DEPENDS+=	pin-project-internal-1.1.5
 CARGO_CRATE_DEPENDS+=	pin-project-lite-0.2.14
 CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.30
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.82
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.83
 CARGO_CRATE_DEPENDS+=	progress-0.2.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	ratatui-0.26.2
@@ -164,7 +164,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	strum-0.26.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.26.2
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
-CARGO_CRATE_DEPENDS+=	syn-2.0.64
+CARGO_CRATE_DEPENDS+=	syn-2.0.65
 CARGO_CRATE_DEPENDS+=	sync_wrapper-0.1.2
 CARGO_CRATE_DEPENDS+=	system-configuration-0.5.1
 CARGO_CRATE_DEPENDS+=	system-configuration-sys-0.5.0
