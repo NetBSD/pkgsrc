@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2023/02/21 20:18:09 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/20 12:39:04 gdt Exp $
 
 DISTNAME=		bthfp-0.1
 PKGREVISION=		1
 CATEGORIES=		comms
-MASTER_SITES=		http://www.NetBSD.org/~plunky/
+MASTER_SITES=		https://www.NetBSD.org/~plunky/
 DISTFILES=		bthfp-0.1.tar.gz
 
 MAINTAINER=		plunky@NetBSD.org
