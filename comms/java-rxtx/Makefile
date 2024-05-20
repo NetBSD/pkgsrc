@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2021/09/13 11:44:45 dsainty Exp $
+# $NetBSD: Makefile,v 1.15 2024/05/20 13:03:48 gdt Exp $
 #
 
 DISTNAME=	rxtx-2.1-7r2
 PKGNAME=	java-rxtx-2.1.7r2
 PKGREVISION=	3
 CATEGORIES=	comms java
-MASTER_SITES=	http://rxtx.qbang.org/pub/rxtx/
+MASTER_SITES=	http://rxtx.qbang.org/pub/rxtx/ # https old protocol
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	dsainty@NetBSD.org
