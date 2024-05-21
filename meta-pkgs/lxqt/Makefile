@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/04/18 02:06:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/21 09:27:29 pin Exp $
 
 PKGNAME=	lxqt-1.4.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -47,7 +47,5 @@ DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
 # This pulls in quite a lot of dependencies, but, if translations are wanted,
 # it's needed.
 DEPENDS+=	qt5-qttranslations>=5.15.7:../../x11/qt5-qttranslations
-# This is needed to be able to correctly use deadkeys
-DEPENDS+=	uim-[0-9]*:../../inputmethod/uim
 
 .include "../../mk/bsd.pkg.mk"
