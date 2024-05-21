@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4278 2024/05/18 01:47:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.4279 2024/05/21 12:59:42 cheusov Exp $
 #
 
 COMMENT=	Development utilities
@@ -2388,6 +2388,7 @@ SUBDIR+=	py-Spans
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-adb
 SUBDIR+=	py-aenum
+SUBDIR+=	py-agate
 SUBDIR+=	py-ailment
 SUBDIR+=	py-aiofiles
 SUBDIR+=	py-aiosignal
