@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2024/05/10 06:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.709 2024/05/21 13:04:49 cheusov Exp $
 
 COMMENT=	Databases
 
@@ -354,6 +354,7 @@ SUBDIR+=	prometheus
 SUBDIR+=	prometheus-cpp
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-agate-dbf
 SUBDIR+=	py-aiosqlite
 SUBDIR+=	py-alembic
 SUBDIR+=	py-ana
