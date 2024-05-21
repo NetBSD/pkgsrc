@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/05/21 09:43:06 nikita Exp $
+# $NetBSD: Makefile,v 1.46 2024/05/21 11:53:17 nikita Exp $
 
 DISTNAME=	znc-1.9.0
 CATEGORIES=	chat
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
 MANCOMPRESSED=	yes
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++17
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
@@ -59,5 +59,6 @@ post-extract:
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/argon2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
