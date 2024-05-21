@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2024/02/05 08:07:00 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2024/05/21 09:43:06 nikita Exp $
 
-BLAKE2s (znc-1.8.2.tar.gz) = 322e21cda3dcbbecc222944c7f6b5286082955b5972838c8ba0e89a0f0945ae9
-SHA512 (znc-1.8.2.tar.gz) = e821647b50698c3a82fad039e69943e030bf644d8f8e82afa87c6c11da44761bceecddd510a7a956a1b487b1cca6ee46e8ac8818ea03127f0f1ff8f5d1a1a7f9
-Size (znc-1.8.2.tar.gz) = 2101215 bytes
+BLAKE2s (znc-1.9.0.tar.gz) = 92f9baed796e63fa5a4f412eaad84993f426f468f6896ac44f63a83dea6ea013
+SHA512 (znc-1.9.0.tar.gz) = 22b8bd6fd7332643860f7a99ceaa0f6d0c9dd8ba9edac14b3f3731c9301eeb58e03e3af8d09e939e453aa980ff9f24afbe79e66d1106993f81d8779c97731a17
+Size (znc-1.9.0.tar.gz) = 2221116 bytes
 BLAKE2s (znc-palaver-1.2.2.tar.gz) = 4b5a222eb3aa298dbb783a53f81ded4699da1976a26e2e90ef17037c9e34d4f5
 SHA512 (znc-palaver-1.2.2.tar.gz) = b91ba7200cac393557252874293f131c83a4cea83203457e8f6f91a129d8207c16951b983e52848ce4f54750752f69765ca26b8e3f50e74da2a11138eaf2bdce
 Size (znc-palaver-1.2.2.tar.gz) = 14649 bytes
