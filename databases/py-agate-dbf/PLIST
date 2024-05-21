@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/21 13:03:14 cheusov Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/agatedbf/__init__.py
+${PYSITELIB}/agatedbf/__init__.pyc
+${PYSITELIB}/agatedbf/__init__.pyo
+${PYSITELIB}/agatedbf/table.py
+${PYSITELIB}/agatedbf/table.pyc
+${PYSITELIB}/agatedbf/table.pyo
