@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/21 13:03:14 cheusov Exp $
+
+BLAKE2s (agate-dbf-0.2.3.tar.gz) = a72adc68d87b0772cdb37577efdd1cce4d1998ae5c5b714784d414140579f835
+SHA512 (agate-dbf-0.2.3.tar.gz) = c77df50b5d38c4f8b92414d6ed793b13b9c54c02235cba5793865c1f6a60dac5af99933763db7cdb807687bbc1a4efd123037c2ab6f402e850d5d57f0eab2190
+Size (agate-dbf-0.2.3.tar.gz) = 7440 bytes
