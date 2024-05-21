@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2024/05/20 07:57:58 pin Exp $
+# $NetBSD: Makefile,v 1.82 2024/05/21 09:20:32 pin Exp $
 
 DISTNAME=	oculante-0.8.22
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -26,12 +27,12 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 
 # This is needed as pkgsrc defaults to graphics/jpeg.
 # If you have graphics/libjpeg-turbo as a local default, it's most probably
-# possible to build the package with default features on.
-# Though, you might need to add RUSTFLAGS so that the compiler finds the
-# graphics/libjpeg-turbo location.
-# Also note that the 'turbo' feature may require extra dependencies to build.
+# possible to build the package with the turbo feature on.
+# The file_open feature has also been switched-off.
+# Disabling it will enable a custom file dialog. Upstream has highlighted
+# this will probably be the default in the future.
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		file_open avif_native notan/glsl-to-spirv
+CARGO_FEATURES+=		avif_native notan/glsl-to-spirv
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/oculante \
