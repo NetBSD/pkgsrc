@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 09:59:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/05/21 10:35:42 nia Exp $
 
 BLAKE2s (oss-v4.2-build2019-src-bsd.tar.bz2) = fa3aa8707d813de4e871ed276754893f0a5a96f9153d14501d961e2459086799
 SHA512 (oss-v4.2-build2019-src-bsd.tar.bz2) = 9d43fa3e3abe4cf006cabfedf2c9fc51372f8cbe499c2e4bee6ba489291c31eb93b66b312054bcf92fc26df329bc3c7ef14a633fece8af38256bc7198d0c1556
 Size (oss-v4.2-build2019-src-bsd.tar.bz2) = 1723557 bytes
+SHA1 (patch-cmd_ossxmix_ossxmix.c) = 8ee0da82acf2711e40050f4416310c56a2a4d231
