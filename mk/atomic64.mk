@@ -1,4 +1,4 @@
-# $NetBSD: atomic64.mk,v 1.9 2024/05/15 07:37:46 nia Exp $
+# $NetBSD: atomic64.mk,v 1.10 2024/05/21 14:14:37 tsutsui Exp $
 #
 # This Makefile fragment is included by packages that require 64-bit atomic
 # operations, and will attempt to set the appropriate architecture-specific
@@ -22,6 +22,8 @@ CFLAGS+=	-march=i586
     ${MACHINE_ARCH} == "mipsel" || \
     ${MACHINE_ARCH} == "mipseb" || \
     ${MACHINE_ARCH} == "powerpc" || \
+    ${MACHINE_ARCH} == "sh3el" || \
+    ${MACHINE_ARCH} == "sh3eb" || \
     ${MACHINE_ARCH} == "sparc" || \
     ${MACHINE_ARCH} == "vax" || \
     !empty(MACHINE_ARCH:Mearm*))
