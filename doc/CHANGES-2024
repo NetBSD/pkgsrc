@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3534 2024/05/21 09:21:58 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3535 2024/05/21 09:23:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5535,3 +5535,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-pythran to 0.16.0 [adam 2024-05-21]
 	Updated www/py-django-admin-rangefilter to 0.12.5 [adam 2024-05-21]
 	Updated graphics/oculante to 0.8.22nb1 [pin 2024-05-21]
+	Updated shells/oh-my-posh to 20.0.2 [pin 2024-05-21]
