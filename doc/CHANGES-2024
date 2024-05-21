@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3544 2024/05/21 13:07:50 cheusov Exp $
+$NetBSD: CHANGES-2024,v 1.3545 2024/05/21 13:15:45 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/py-agate version 1.10.2 [cheusov 2024-05-21]
 	Added databases/py-agate-dbf version 0.2.3 [cheusov 2024-05-21]
 	Added databases/py-agate-excel version 0.4.1 [cheusov 2024-05-21]
+	Added databases/py-agate-sql version 0.7.2 [cheusov 2024-05-21]
