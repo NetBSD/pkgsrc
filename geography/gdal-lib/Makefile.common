@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2022/12/29 19:45:48 brook Exp $
+# $NetBSD: Makefile.common,v 1.24 2024/05/21 12:42:28 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
@@ -40,5 +40,4 @@ CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
 CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
 
 # force OpenJPEG for JPEG 2000 support
-CONFIGURE_ARGS+=	--without-jasper
 CONFIGURE_ARGS+=	--with-openjpeg
