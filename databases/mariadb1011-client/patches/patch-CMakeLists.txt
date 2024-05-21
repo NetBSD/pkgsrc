@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/10 22:55:49 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/05/21 09:52:52 nia Exp $
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2023-06-05 17:14:07.000000000 +0000
+--- CMakeLists.txt.orig	2024-05-10 21:02:16.000000000 +0000
 +++ CMakeLists.txt
-@@ -426,8 +426,6 @@ ENDIF()
+@@ -441,8 +441,6 @@ ENDIF()
  
  UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
@@ -13,7 +13,7 @@ Allow building a server-only configuration.
  INCLUDE(cpack_tgz)
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
-@@ -438,19 +436,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -453,19 +451,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -33,7 +33,7 @@ Allow building a server-only configuration.
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MariaDB with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER)
-@@ -469,23 +464,26 @@ IF(NOT WITHOUT_SERVER)
+@@ -484,23 +479,26 @@ IF(NOT WITHOUT_SERVER)
      ADD_SUBDIRECTORY(win/upgrade_wizard)
      ADD_SUBDIRECTORY(win/packaging)
    ENDIF()
@@ -65,7 +65,16 @@ Allow building a server-only configuration.
    ENDIF()
    # minimal target to build only binaries for export
    ADD_CUSTOM_TARGET(import_executables DEPENDS ${EXPORTED})
-@@ -569,41 +567,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
+@@ -572,7 +570,7 @@ IF(WIN32 AND SIGNCODE)
+   INSTALL(SCRIPT ${PROJECT_BINARY_DIR}/sign.cmake)
+ ENDIF()
+ 
+-FEATURE_SUMMARY(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES VAR MARIADB_FEATURE_SUMMARY)
++FEATURE_SUMMARY(WHAT ALL VAR MARIADB_FEATURE_SUMMARY)
+ 
+ OPTION(FEATURE_SUMMARY "Print feature summary at the end of configure step" ON)
+ IF (FEATURE_SUMMARY)
+@@ -584,41 +582,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
    MESSAGE(WARNING "
  You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNING} libraries!  You may not distribute the resulting binary. If you do, you will put yourself into a legal problem with the Free Software Foundation.")
  ENDIF()
