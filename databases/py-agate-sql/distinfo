@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/05/21 13:15:24 cheusov Exp $
+
+BLAKE2s (agate-sql-0.7.2.tar.gz) = 7f50452ab2cdf45de78336d54e4fe969fba9e8f5f39ffeda2fcea25e8b28213d
+SHA512 (agate-sql-0.7.2.tar.gz) = c24026d93479003672efaa04654719183eb69bd86d24916f2618ed88ebbe8b51f2dac3c6fcbfd3c18643fbab0a2564670909350e1379eca621ccd42ab411251e
+Size (agate-sql-0.7.2.tar.gz) = 13695 bytes
+SHA1 (patch-tests_test__agatesql.py) = 158fd19be1c60352b58d25396a146eda446af544
