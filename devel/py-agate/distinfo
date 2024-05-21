@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/05/21 12:57:30 cheusov Exp $
+
+BLAKE2s (agate-1.10.2.tar.gz) = 5d41c3c1b4c3bb2bca11f98dc9e10ae230e3b25f620ea260782836f83d9ebe66
+SHA512 (agate-1.10.2.tar.gz) = 87385515e3ffe88afdeaa1202368d69824501dc5816b40e1f475afd027bbd5229c70e7449485e0845f50203e6749f3a736d16f17752d1bdd040dc92cbcc2461a
+Size (agate-1.10.2.tar.gz) = 203542 bytes
+SHA1 (patch-tests_test__data__types.py) = 996104e2185919054ea0fe1307b08fc39cacdf16

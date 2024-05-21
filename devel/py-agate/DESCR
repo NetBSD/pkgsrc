@@ -1,0 +1,10 @@
+Python data analysis library that is optimized for humans instead of
+machines. It is an alternative to numpy and pandas that solves
+real-world problems with readable code.
+
+Agate was previously known as journalism.
+
+Important links:
+    Documentation: https://agate.rtfd.org
+    Repository: https://github.com/wireservice/agate
+    Issues: https://github.com/wireservice/agate/issues
