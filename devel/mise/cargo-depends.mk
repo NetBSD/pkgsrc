@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2024/05/19 13:54:00 schmonz Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2024/05/21 10:56:27 schmonz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -32,7 +32,7 @@ CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	bytes-1.6.0
 CARGO_CRATE_DEPENDS+=	calm_io-0.1.1
 CARGO_CRATE_DEPENDS+=	calmio_filters-0.1.0
-CARGO_CRATE_DEPENDS+=	cc-1.0.97
+CARGO_CRATE_DEPENDS+=	cc-1.0.98
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.38
 CARGO_CRATE_DEPENDS+=	ci_info-0.14.14
@@ -54,10 +54,10 @@ CARGO_CRATE_DEPENDS+=	contracts-0.6.3
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.4
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.6
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.12
-CARGO_CRATE_DEPENDS+=	crc32fast-1.4.0
+CARGO_CRATE_DEPENDS+=	crc32fast-1.4.2
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.19
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.20
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6
 CARGO_CRATE_DEPENDS+=	ctor-0.2.8
 CARGO_CRATE_DEPENDS+=	curve25519-dalek-4.1.2
@@ -212,7 +212,7 @@ CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.9
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.0
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.82
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.83
 CARGO_CRATE_DEPENDS+=	quick-xml-0.23.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
@@ -272,7 +272,7 @@ CARGO_CRATE_DEPENDS+=	strum-0.26.2
 CARGO_CRATE_DEPENDS+=	strum_macros-0.26.2
 CARGO_CRATE_DEPENDS+=	subtle-2.5.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
-CARGO_CRATE_DEPENDS+=	syn-2.0.64
+CARGO_CRATE_DEPENDS+=	syn-2.0.65
 CARGO_CRATE_DEPENDS+=	sync_wrapper-0.1.2
 CARGO_CRATE_DEPENDS+=	sys-info-0.9.1
 CARGO_CRATE_DEPENDS+=	system-configuration-0.5.1
