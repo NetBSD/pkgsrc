@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/21 13:07:36 cheusov Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/agateexcel/__init__.py
+${PYSITELIB}/agateexcel/__init__.pyc
+${PYSITELIB}/agateexcel/__init__.pyo
+${PYSITELIB}/agateexcel/table_xls.py
+${PYSITELIB}/agateexcel/table_xls.pyc
+${PYSITELIB}/agateexcel/table_xls.pyo
+${PYSITELIB}/agateexcel/table_xlsx.py
+${PYSITELIB}/agateexcel/table_xlsx.pyc
+${PYSITELIB}/agateexcel/table_xlsx.pyo
