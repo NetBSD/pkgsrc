@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2024/05/21 13:36:10 gdt Exp $
+# $NetBSD: Makefile.common,v 1.26 2024/05/21 18:21:33 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
@@ -23,47 +23,3 @@ PATCHDIR=	${.CURDIR}/../../geography/gdal-lib/patches
 DISTINFO_FILE=	${.CURDIR}/../../geography/gdal-lib/distinfo
 
 CHECK_PORTABILITY_SKIP+=	mkbindist.sh
-
-# The base gdal and the python bindings have very different dependency
-# footprints.  Sorting content into gdal-lib/Makefile and
-# Makefile.common is already somewhat difficult, and complicated by
-# cmake's habit of finding installed packages that are not buildlinked.
-
-# \todo Consider moving to package Makefiles.
-USE_TOOLS+=		gmake pkg-config
-USE_LANGUAGES=		c99 c++
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-
-# \todo Justify or move to bl3 of json-c
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_JSONC_INTERNAL=ON
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_JSONC=OFF
-
-# Disable things that cmake finds that we didn't bl3.
-# \todo For each, consider if we should intead add a bl3.
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_DEFLATE=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_FREEXL=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_HDF5=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_HEIF=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
-# \todo Resolve LZMA usage.
-# GDAL_USE_LZMA appears in gtif but cmake says it doesn't exist.
-#CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZMA=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PCRE2=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POPPLER=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
-
-# \todo One would think these are unnnecessary.  Check if these
-# can/should be dropped.  If not, explain why we have some and not
-# all.  Commented lines are incompletely translated from autoconf,
-# because there is no obvious analog.
-CMAKE_CONFIGURE_ARGS+=	-DGEOS_DIR=${BUILDLINK_PREFIX.geos}
-CMAKE_CONFIGURE_ARGS+=	-DTIFFDIR=${BUILDLINK_PREFIX.tiff}
-#CMAKE_CONFIGURE_ARGS+=	-Dlibz=${BUILDLINK_PREFIX.zlib}
-CMAKE_CONFIGURE_ARGS+=	-DNetCDF_DIR=${BUILDLINK_PREFIX.netcdf}
-#CMAKE_CONFIGURE_ARGS+=	-Dwebp=${BUILDLINK_PREFIX.libwebp}
-#CMAKE_CONFIGURE_ARGS+=	-Dxerces
-#CMAKE_CONFIGURE_ARGS+=	-Dxerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
-#CMAKE_CONFIGURE_ARGS+=	-Dxerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
