@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/05 08:07:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/21 11:31:14 nikita Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -56,6 +56,7 @@ lib/znc/chansaver.so
 lib/znc/clearbufferonmsg.so
 lib/znc/clientnotify.so
 lib/znc/controlpanel.so
+lib/znc/corecaps.so
 lib/znc/crypt.so
 lib/znc/ctcpflood.so
 lib/znc/dcc.so

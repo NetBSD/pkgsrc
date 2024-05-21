@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.nls,v 1.4 2024/05/21 09:43:06 nikita Exp $
-lib/znc/corecaps.so
+@comment $NetBSD: PLIST.nls,v 1.5 2024/05/21 11:31:14 nikita Exp $
 share/locale/bg_BG/LC_MESSAGES/znc-admindebug.mo
 share/locale/bg_BG/LC_MESSAGES/znc-adminlog.mo
 share/locale/bg_BG/LC_MESSAGES/znc-alias.mo
