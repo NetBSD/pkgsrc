@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/21 13:07:36 cheusov Exp $
+
+BLAKE2s (agate-excel-0.4.1.tar.gz) = d45834f62b807e9bc489c83a72409c09066acf34c9533397a0a2ecd9d90b413d
+SHA512 (agate-excel-0.4.1.tar.gz) = 934e8c0416df2e57b617095454aca14e202df1301779814841934452faf672e27a65628efee344df2873bece3731435fa40a6831321ed59a606810bd472d23b8
+Size (agate-excel-0.4.1.tar.gz) = 271433 bytes
