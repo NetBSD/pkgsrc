@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.11 2024/05/15 19:21:42 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.12 2024/05/21 09:52:52 nia Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
 # used by databases/mariadb1011-embedded/Makefile
 
-DISTNAME=	mariadb-10.11.7
+DISTNAME=	mariadb-10.11.8
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -37,6 +37,7 @@ MARIADB_EXTRA_CHARSET?=	${MYSQL_EXTRA_CHARSET:Uall}
 BUILD_DEFS+=		VARBASE
 
 CMAKE_ARGS+=		-DCOMPILATION_COMMENT="pkgsrc"
+CMAKE_ARGS+=		-DMANUFACTURER="pkgsrc"
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
 
@@ -72,6 +73,8 @@ CMAKE_ARGS+=		-DPLUGIN_FEEDBACK=NO
 
 # Requires Java
 CMAKE_ARGS+=		-DCONNECT_WITH_JDBC=OFF
+
+CMAKE_ARGS+=		-DCONNECT_WITH_LIBXML2=OFF
 
 # Options which affect generation of includes
 CMAKE_ARGS+=		-DWITH_ARIA_STORAGE_ENGINE=ON
