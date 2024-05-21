@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.63 2024/05/16 06:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2024/05/21 13:36:10 gdt Exp $
 
-PKGREVISION= 8
+PKGREVISION= 9
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 #PKGREVISION=	0
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 
+GNU_CONFIGURE=		yes
+
 BUILD_DIRS=	swig/python
 
 MAKE_FILE=	GNUmakefile
+
+# CONFIGURE_DIR=		swig/python	# cmake
+# CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_SPATIALITE=OFF
+# .include "../../devel/cmake/build.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
