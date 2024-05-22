@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2023/04/21 00:44:19 manu Exp $
+# $NetBSD: Makefile.common,v 1.46 2024/05/22 08:43:51 adam Exp $
 #
 # used by databases/openldap-autogroup/Makefile
 # used by databases/openldap-client/Makefile
@@ -40,8 +40,7 @@ PKG_USERS_VARS+=	SLAPD_USER
 # is included by another system header file on Solaris, so subst them.
 SUBST_CLASSES.SunOS+=	conflict
 SUBST_STAGE.conflict=	pre-configure
-SUBST_FILES.conflict=	${WRKSRC}/*/*.h
-SUBST_FILES.conflict+=	${WRKSRC}/*/*/*.c ${WRKSRC}/*/*/*/*.c
+SUBST_FILES.conflict=	*/*.h */*/*.c */*/*/*.c
 SUBST_SED.conflict+=	-e 's,avl_free,openldap_avl_free,g'
 SUBST_SED.conflict+=	-e 's,avl_insert,openldap_avl_insert,g'
 SUBST_SED.conflict+=	-e 's,avl_delete,openldap_avl_delete,g'
@@ -57,7 +56,7 @@ CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR}
 CONFIGURE_ARGS+=	--enable-dynamic
 CONFIGURE_ARGS+=	--with-tls=openssl
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+.if ${USE_CROSS_COMPILE:U:tl} == yes && ${OPSYS} == "NetBSD"
 # Probably true for more than just NetBSD.
 CONFIGURE_ARGS+=	--with-yielding_select=yes
 CONFIGURE_ENV+=		ac_cv_func_memcmp_working=yes
@@ -102,7 +101,7 @@ CPPFLAGS+=	-DOPENLDAP_FD_SETSIZE=${PTH_FDSETSIZE_cmd:sh:Q}
 .endif
 
 # OpenLDAP hardcodes this to 4096, disregarding the OS default.
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
+.if ${MACHINE_PLATFORM:MSunOS-*-x86_64}
 CPPFLAGS+=	-DOPENLDAP_FD_SETSIZE=65536
 .endif
 
