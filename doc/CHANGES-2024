@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3550 2024/05/22 07:20:02 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3551 2024/05/22 07:22:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5556,3 +5556,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-rapidfuzz to 3.9.1 [adam 2024-05-22]
 	Updated databases/py-pymysql to 1.1.1 [adam 2024-05-22]
 	Updated devel/bacon to 2.18.1 [pin 2024-05-22]
+	Updated editors/focuswriter to 1.8.8 [pin 2024-05-22]
