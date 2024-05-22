@@ -1,0 +1,26 @@
+$NetBSD: patch-contrib_slapd-modules_autogroup_Makefile,v 1.1 2024/05/22 08:43:52 adam Exp $
+
+Link against external libraries.
+
+--- contrib/slapd-modules/autogroup/Makefile.orig	2024-05-22 08:01:54.031108527 +0000
++++ contrib/slapd-modules/autogroup/Makefile
+@@ -13,8 +13,7 @@
+ LDAP_SRC = ../../..
+ LDAP_BUILD = $(LDAP_SRC)
+ LDAP_INC = -I$(LDAP_BUILD)/include -I$(LDAP_SRC)/include -I$(LDAP_SRC)/servers/slapd
+-LDAP_LIB = $(LDAP_BUILD)/libraries/libldap/libldap.la \
+-	$(LDAP_BUILD)/libraries/liblber/liblber.la
++LDAP_LIB = -lldap -llber
+ 
+ PLAT = UNIX
+ NT_LIB = -L$(LDAP_BUILD)/servers/slapd -lslapd
+@@ -23,8 +22,7 @@ UNIX_LDFLAGS = -version-info $(LTVER)
+ 
+ LIBTOOL = $(LDAP_BUILD)/libtool
+ INSTALL = /usr/bin/install
+-CC = gcc
+-OPT = -g -O2
++OPT = ${CFLAGS} ${CPPFLAGS}
+ DEFS = 
+ INCS = $(LDAP_INC)
+ LIBS = $($(PLAT)_LIB) $(LDAP_LIB)

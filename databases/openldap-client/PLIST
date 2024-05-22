@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/12/01 12:13:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/05/22 08:43:52 adam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -254,6 +254,7 @@ man/man5/slapo-dyngroup.5
 man/man5/slapo-dynlist.5
 man/man5/slapo-homedir.5
 man/man5/slapo-memberof.5
+man/man5/slapo-nestgroup.5
 man/man5/slapo-otp.5
 man/man5/slapo-pbind.5
 man/man5/slapo-pcache.5
