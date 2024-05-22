@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3555 2024/05/22 13:24:37 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3556 2024/05/22 13:28:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5578,3 +5578,16 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-railties70 to 7.0.8.2 [taca 2024-05-22]
 	Updated textproc/ruby-actiontext70 to 7.0.8.2 [taca 2024-05-22]
 	Updated www/ruby-rails70 to 7.0.8.2 [taca 2024-05-22]
+	Updated devel/ruby-activesupport71 to 7.1.3.3 [taca 2024-05-22]
+	Updated devel/ruby-activemodel71 to 7.1.3.3 [taca 2024-05-22]
+	Updated devel/ruby-activejob71 to 7.1.3.3 [taca 2024-05-22]
+	Updated www/ruby-actionview71 to 7.1.3.3 [taca 2024-05-22]
+	Updated www/ruby-actionpack71 to 7.1.3.3 [taca 2024-05-22]
+	Updated databases/ruby-activerecord71 to 7.1.3.3 [taca 2024-05-22]
+	Updated devel/ruby-activestorage71 to 7.1.3.3 [taca 2024-05-22]
+	Updated mail/ruby-actionmailer71 to 7.1.3.3 [taca 2024-05-22]
+	Updated mail/ruby-actionmailbox71 to 7.1.3.3 [taca 2024-05-22]
+	Updated www/ruby-actioncable71 to 7.1.3.3 [taca 2024-05-22]
+	Updated devel/ruby-railties71 to 7.1.3.3 [taca 2024-05-22]
+	Updated textproc/ruby-actiontext71 to 7.1.3.3 [taca 2024-05-22]
+	Updated www/ruby-rails71 to 7.1.3.3 [taca 2024-05-22]
