@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/02/24 14:49:29 taca Exp $
+$NetBSD: distinfo,v 1.19 2024/05/22 13:23:02 taca Exp $
 
-BLAKE2s (rails-7.0.8.1.gem) = 82026ec0fbcaa6d18236bc6c6f409b2986d1dd38de00c60b7a0dd24f7847fe21
-SHA512 (rails-7.0.8.1.gem) = bec52a2d8b086d9b6ec0a7351286b4d8a6cdbf60f332db5be738fd30bd0cf3bedca582803c951dee6501c327ae9f45b51dfeaa3d5c5665195fa66ce41bcc10d0
-Size (rails-7.0.8.1.gem) = 7168 bytes
+BLAKE2s (rails-7.0.8.2.gem) = 32909f4a9883581d2c9a2e437b4588525a025a01038562f60b56d0e323fa189d
+SHA512 (rails-7.0.8.2.gem) = 4c4ab009ea1c918aa7169fc5fea5f0ff694e135e798ae19b7b0614475580a0c2497f3ccedc7c7189ae2cce2703efbae97eebe632abcc2c8567149c190655b3c7
+Size (rails-7.0.8.2.gem) = 7168 bytes
