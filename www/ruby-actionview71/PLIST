@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/24 14:55:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/22 13:27:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -126,4 +126,5 @@ ${GEM_LIBDIR}/lib/action_view/testing/resolvers.rb
 ${GEM_LIBDIR}/lib/action_view/unbound_template.rb
 ${GEM_LIBDIR}/lib/action_view/version.rb
 ${GEM_LIBDIR}/lib/action_view/view_paths.rb
+${GEM_LIBDIR}/lib/assets/compiled/rails-ujs.js
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
