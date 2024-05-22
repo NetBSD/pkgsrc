@@ -1,4 +1,6 @@
-$NetBSD: patch-tests_test__data__types.py,v 1.1 2024/05/21 12:57:30 cheusov Exp $
+$NetBSD: patch-tests_test__data__types.py,v 1.2 2024/05/22 16:56:17 cheusov Exp $
+
+https://github.com/wireservice/agate/issues/782
 
 Disable locale test for de_DE.UTF_8 because it fails on some systems, for
 example, on NetBSD-10.99.10, where short ids for months are "Jan." (not
