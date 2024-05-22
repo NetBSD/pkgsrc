@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/04/11 17:11:00 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2024/05/22 09:46:12 bouyer Exp $
 
 BLAKE2s (mirror-2.9.tar.gz) = 9af6c135528b0a26418a229f6f943f70913a07fef1fffa2954685fa2d17e4bb6
 SHA512 (mirror-2.9.tar.gz) = afed2e62b95d1dd52aac32f3a608c0e08813c78d1bed8f5066bc4d6ac031c05ffeb7c7594a1c565dbf015086d7b3a907f35132ea850a3b93c31377e69dfa0654
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 75c1433f01da0a38b7983f04d435fce2bb6cc7f7
 SHA1 (patch-af) = d83755dca89242a6822e5531a481b1735089242a
 SHA1 (patch-ag) = f402c883c3fe8967f7dc6b847969915ae367f678
 SHA1 (patch-lsparse.pl) = 9048fc10b06616c87fa7eafd64eb098e30ac3b7e
+SHA1 (patch-mm.pl) = a1162a4abcd744215b5a8b11043d3c4a06b1839f
