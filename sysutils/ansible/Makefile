@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2024/04/29 08:38:59 adam Exp $
+# $NetBSD: Makefile,v 1.74 2024/05/22 05:07:26 adam Exp $
 
-DISTNAME=	ansible-9.5.1
+DISTNAME=	ansible-9.6.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -13,7 +13,7 @@ PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	ansible-core>=2.16.6:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.16.7:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
