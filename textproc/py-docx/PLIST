@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/24 09:12:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/22 09:03:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -226,6 +226,7 @@ ${PYSITELIB}/docx/parts/story.pyo
 ${PYSITELIB}/docx/parts/styles.py
 ${PYSITELIB}/docx/parts/styles.pyc
 ${PYSITELIB}/docx/parts/styles.pyo
+${PYSITELIB}/docx/py.typed
 ${PYSITELIB}/docx/section.py
 ${PYSITELIB}/docx/section.pyc
 ${PYSITELIB}/docx/section.pyo
