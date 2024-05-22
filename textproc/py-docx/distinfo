@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/24 09:12:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/05/22 09:03:56 adam Exp $
 
-BLAKE2s (python-docx-1.1.0.tar.gz) = 66706d58bbe1acd7a9dc6b688e604c890a6f239206641b25bcf7e1c96c26198b
-SHA512 (python-docx-1.1.0.tar.gz) = ad654d68b3f0825bf9483c20092eb559016c3481e75e098d62e3b3b703697409abc244a38854fd0cee8919d852b068d0f88af12478b589885cbd0e80972653d3
-Size (python-docx-1.1.0.tar.gz) = 5650988 bytes
+BLAKE2s (python_docx-1.1.2.tar.gz) = ba889aba71207436cbb10043ab4c423a38f46353c1329dfb28a02671c3c48002
+SHA512 (python_docx-1.1.2.tar.gz) = 3085a5c82920482519aa87ce8280766440063b1713c3bc2e0591ea02b3613480d590e12b0720a710e368d82a6cd0b430ff786970ac6282aa9b39116463c148dc
+Size (python_docx-1.1.2.tar.gz) = 5656581 bytes
