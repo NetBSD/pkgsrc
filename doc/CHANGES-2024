@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3557 2024/05/22 16:29:12 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3558 2024/05/22 19:49:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-rails71 to 7.1.3.3 [taca 2024-05-22]
 	Updated finance/py-stripe to 9.7.0 [adam 2024-05-22]
 	Updated www/py-django-admin-rangefilter to 0.13.0 [adam 2024-05-22]
+	Updated devel/libvterm03 to 0.3.3 [leot 2024-05-22]
