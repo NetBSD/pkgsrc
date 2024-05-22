@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/12/31 22:06:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/05/22 16:28:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -56,8 +56,10 @@ ${PYSITELIB}/rangefilter/models.pyc
 ${PYSITELIB}/rangefilter/models.pyo
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_1_8.html
+${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_4_0.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_range_quick_select_list_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/numeric_filter.html
+${PYSITELIB}/rangefilter/templates/rangefilter/numeric_filter_4_0.html
 ${PYSITELIB}/rangefilter/templatetags/__init__.py
 ${PYSITELIB}/rangefilter/templatetags/__init__.pyc
 ${PYSITELIB}/rangefilter/templatetags/__init__.pyo
