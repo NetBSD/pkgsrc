@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/04/19 03:31:54 pin Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/22 07:24:18 pin Exp $
 
+# Versions >= 0.16.0 require Rust >= 1.78.0
 DISTNAME=	cargo-modules-0.15.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regexident/}
