@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2024/01/28 02:58:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.57 2024/05/22 13:15:59 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -2316,7 +2316,6 @@ share/roundcube/vendor/pear/pear-core-minimal/README.rst
 share/roundcube/vendor/pear/pear-core-minimal/composer.json
 share/roundcube/vendor/pear/pear-core-minimal/src/OS/Guess.php
 share/roundcube/vendor/pear/pear-core-minimal/src/PEAR.php
-share/roundcube/vendor/pear/pear-core-minimal/src/PEAR/Error.php
 share/roundcube/vendor/pear/pear-core-minimal/src/PEAR/ErrorStack.php
 share/roundcube/vendor/pear/pear-core-minimal/src/System.php
 share/roundcube/vendor/pear/pear_exception/LICENSE
@@ -2356,12 +2355,15 @@ share/roundcube/vendor/ralouphie/getallheaders/LICENSE
 share/roundcube/vendor/ralouphie/getallheaders/README.md
 share/roundcube/vendor/ralouphie/getallheaders/composer.json
 share/roundcube/vendor/ralouphie/getallheaders/src/getallheaders.php
+share/roundcube/vendor/roundcube/plugin-installer/.php-cs-fixer.dist.php
 share/roundcube/vendor/roundcube/plugin-installer/README.md
 share/roundcube/vendor/roundcube/plugin-installer/composer.json
-share/roundcube/vendor/roundcube/plugin-installer/src/Roundcube/Composer/ExtensionInstaller.php
-share/roundcube/vendor/roundcube/plugin-installer/src/Roundcube/Composer/PluginInstaller.php
-share/roundcube/vendor/roundcube/plugin-installer/src/Roundcube/Composer/RoundcubeInstaller.php
-share/roundcube/vendor/roundcube/plugin-installer/src/Roundcube/Composer/SkinInstaller.php
+share/roundcube/vendor/roundcube/plugin-installer/phpstan.neon.dist
+share/roundcube/vendor/roundcube/plugin-installer/src/ExtensionInstaller.php
+share/roundcube/vendor/roundcube/plugin-installer/src/PluginInstaller.php
+share/roundcube/vendor/roundcube/plugin-installer/src/RoundcubeInstaller.php
+share/roundcube/vendor/roundcube/plugin-installer/src/SkinInstaller.php
+share/roundcube/vendor/roundcube/plugin-installer/test-composer/composer.json
 share/roundcube/vendor/roundcube/rtf-html-php/CHANGELOG.md
 share/roundcube/vendor/roundcube/rtf-html-php/LICENSE
 share/roundcube/vendor/roundcube/rtf-html-php/README.md
