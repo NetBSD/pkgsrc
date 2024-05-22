@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/02/24 14:55:26 taca Exp $
+$NetBSD: distinfo,v 1.4 2024/05/22 13:27:18 taca Exp $
 
-BLAKE2s (activestorage-7.1.3.2.gem) = 1c0c63ee5f2342a0876b678597f72e1130fef8d5332773e307e105c6924158cc
-SHA512 (activestorage-7.1.3.2.gem) = 0a3da78d2bdd1e89bee0a5ed3deb47022f8ed46ca743e24edd9129665d4bbeba86617d69805405201c9b6e62d587c5536018d5147abb714f585e279fd07ecdc1
-Size (activestorage-7.1.3.2.gem) = 67072 bytes
+BLAKE2s (activestorage-7.1.3.3.gem) = 5354b1c199d03f4b98c698525c1d58321ab396d5937d578369cf6af059053e59
+SHA512 (activestorage-7.1.3.3.gem) = f5b5e550bbed704dd2657d23aebfb1ed2ceeebeda98da35fc8bc8fa9a1eef72a3b4cb30784d8045f7156472dfe1c46afaa9518b47800c439ca69119358a55848
+Size (activestorage-7.1.3.3.gem) = 67072 bytes
 SHA1 (patch-lib_active__storage.rb) = a960f1bdc89285eb961cbba44e04a7599eee6cc8
