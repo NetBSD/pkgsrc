@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3546 2024/05/22 04:34:09 triaxx Exp $
+$NetBSD: CHANGES-2024,v 1.3547 2024/05/22 05:07:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5549,3 +5549,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added databases/py-agate-excel version 0.4.1 [cheusov 2024-05-21]
 	Added databases/py-agate-sql version 0.7.2 [cheusov 2024-05-21]
 	Updated sysutils/duplicity to 2.2.4 [triaxx 2024-05-22]
+	Updated sysutils/ansible-core to 2.17.0 [adam 2024-05-22]
+	Updated sysutils/ansible to 9.6.0 [adam 2024-05-22]
