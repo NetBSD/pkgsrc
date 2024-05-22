@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/12/15 22:13:50 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/22 19:49:44 leot Exp $
 
-DISTNAME=	libvterm-0.3
+DISTNAME=	libvterm-0.3.3
 PKGNAME=	${DISTNAME:S/libvterm/libvterm03/g}
 CATEGORIES=	devel
 MASTER_SITES=	https://www.leonerd.org.uk/code/libvterm/
