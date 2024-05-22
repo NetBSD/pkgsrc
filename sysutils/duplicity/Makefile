@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2024/04/04 13:35:52 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/05/22 04:33:35 triaxx Exp $
 
-DISTNAME=	duplicity-2.2.2
+DISTNAME=	duplicity-2.2.4
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
