@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/01/24 09:12:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/22 09:03:56 adam Exp $
 
-DISTNAME=	python-docx-1.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+DISTNAME=	python_docx-1.1.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-docx/}
 
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.1.0:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-behave>=1.2.3:../../devel/py-behave
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.1:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
