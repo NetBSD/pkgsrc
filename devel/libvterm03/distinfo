@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/15 22:13:50 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/05/22 19:49:44 leot Exp $
 
-BLAKE2s (libvterm-0.3.tar.gz) = a31081d6e81231375decbc199368edf73862a7eb6d365019d5a2d16bb952d247
-SHA512 (libvterm-0.3.tar.gz) = 2a7b6831476465d6a9f7c792406f4e3c4eca0c3dbce4b7031f2646c87e33692128a3d3ce27e1541403772cc0b5eface7bd41325e1e5300c3915bfc0bac97a896
-Size (libvterm-0.3.tar.gz) = 83861 bytes
+BLAKE2s (libvterm-0.3.3.tar.gz) = f7c59f3178bd8e626fe14742dada813b922298fbf5ee26669ead77bc45e4b6f9
+SHA512 (libvterm-0.3.3.tar.gz) = 0117f71988d2c3c1b5e46d0778ce491a8ab9033f3afc9a9905b6d52d0e2adb59ee101667826281470e4c9de5178cbe966f4ecb2c7673e9644c7ca3508491bb49
+Size (libvterm-0.3.3.tar.gz) = 80024 bytes
