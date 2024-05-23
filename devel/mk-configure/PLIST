@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/04/08 18:57:48 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/05/23 10:30:56 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -34,6 +34,7 @@ share/doc/mk-configure/NOTES
 share/doc/mk-configure/README.md
 share/doc/mk-configure/TODO
 share/doc/mk-configure/presentation.pdf
+share/examples/mk-configure/MKCmakefile
 share/examples/mk-configure/Makefile.inc
 share/examples/mk-configure/RBTREE/Makefile
 share/examples/mk-configure/RBTREE/expect.out
@@ -169,10 +170,10 @@ share/examples/mk-configure/dictd/libcommon/Makefile
 share/examples/mk-configure/dictd/libcommon/iswalnum.c
 share/examples/mk-configure/dictd/libcommon/str.c
 share/examples/mk-configure/dictd/libdz/Makefile
+share/examples/mk-configure/dictd/libdz/dz_export.sym
 share/examples/mk-configure/dictd/libdz/dz.c
-share/examples/mk-configure/dictd/libdz/export.sym
 share/examples/mk-configure/dictd/libmaa/Makefile
-share/examples/mk-configure/dictd/libmaa/export.sym
+share/examples/mk-configure/dictd/libmaa/maa_export.sym
 share/examples/mk-configure/dictd/libmaa/log.c
 share/examples/mk-configure/dictd/libmaa/prime.c
 share/examples/mk-configure/dictd/libmaa/set.c
@@ -312,7 +313,19 @@ share/examples/mk-configure/libdeps/progs/foobaz/foobaz.c
 share/examples/mk-configure/libdeps/progs/fooquxfoobar/Makefile
 share/examples/mk-configure/libdeps/progs/fooquxfoobar/fooquxfoobar.c
 share/examples/mk-configure/libdeps/test.mk
-share/examples/mk-configure/makefile
+share/examples/mk-configure/multilibs/Makefile
+share/examples/mk-configure/multilibs/app/Makefile
+share/examples/mk-configure/multilibs/app/app.c
+share/examples/mk-configure/multilibs/expect.out
+share/examples/mk-configure/multilibs/input.in
+share/examples/mk-configure/multilibs/libmultiplier/Makefile
+share/examples/mk-configure/multilibs/libmultiplier/multiplier.c
+share/examples/mk-configure/multilibs/libmultiplier/multiplier.h
+share/examples/mk-configure/multilibs/libsummator/Makefile
+share/examples/mk-configure/multilibs/libsummator/summator.c
+share/examples/mk-configure/multilibs/libsummator/summator.h
+share/examples/mk-configure/multilibs/obj/empty
+share/examples/mk-configure/multilibs/test.mk
 share/examples/mk-configure/pkgconfig3/Makefile
 share/examples/mk-configure/pkgconfig3/expect.out
 share/examples/mk-configure/pkgconfig3/pkgconfig3.c
@@ -609,6 +622,7 @@ share/mk-configure/mk/mkc.subprj.mk
 share/mk-configure/mk/mkc.subprjs.mk
 share/mk-configure/mk/mkc_imp.arch.mk
 share/mk-configure/mk/mkc_imp.checkprogs.mk
+share/mk-configure/mk/mkc_imp.compiler_config.mk
 share/mk-configure/mk/mkc_imp.compiler_settings.mk
 share/mk-configure/mk/mkc_imp.compiler_type.mk
 share/mk-configure/mk/mkc_imp.conf-cleanup.mk
@@ -626,6 +640,7 @@ share/mk-configure/mk/mkc_imp.conf_prototypes.mk
 share/mk-configure/mk/mkc_imp.conf_sizeof.mk
 share/mk-configure/mk/mkc_imp.conf_types.mk
 share/mk-configure/mk/mkc_imp.conf_vars.mk
+share/mk-configure/mk/mkc_imp.cross_compiling.mk
 share/mk-configure/mk/mkc_imp.dep.mk
 share/mk-configure/mk/mkc_imp.dpvars.mk
 share/mk-configure/mk/mkc_imp.f_CIRCLEQ.mk
@@ -682,7 +697,15 @@ share/mk-configure/mk/mkc_imp.mk
 share/mk-configure/mk/mkc_imp.obj.mk
 share/mk-configure/mk/mkc_imp.objdir.mk
 share/mk-configure/mk/mkc_imp.pkg-config.mk
-share/mk-configure/mk/mkc_imp.platform.sys.mk
+share/mk-configure/mk/mkc_imp.platform.AIX.mk
+share/mk-configure/mk/mkc_imp.platform.Darwin.mk
+share/mk-configure/mk/mkc_imp.platform.HP-UX.mk
+share/mk-configure/mk/mkc_imp.platform.IRIX64.mk
+share/mk-configure/mk/mkc_imp.platform.Interix.mk
+share/mk-configure/mk/mkc_imp.platform.OSF1.mk
+share/mk-configure/mk/mkc_imp.platform.SunOS.mk
+share/mk-configure/mk/mkc_imp.platform.UnixWare.mk
+share/mk-configure/mk/mkc_imp.platform.mk
 share/mk-configure/mk/mkc_imp.pod.mk
 share/mk-configure/mk/mkc_imp.preinit.mk
 share/mk-configure/mk/mkc_imp.prog.mk
