@@ -5,3 +5,6 @@ raster abstract data model and single vector abstract data model to
 the calling application for all supported formats.  It also comes with
 a variety of useful command line utilities for data translation and
 processing.
+
+This package intends to build support for all formats subject to using
+only open source code and avoiding unreasonably large dependencies.
