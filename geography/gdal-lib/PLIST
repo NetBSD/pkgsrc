@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.22 2024/05/21 13:36:10 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/05/23 13:42:25 gdt Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_create
+bin/gdal_footprint
 bin/gdal_grid
 bin/gdal_rasterize
 bin/gdal_translate
@@ -26,6 +27,7 @@ bin/ogr2ogr
 bin/ogrinfo
 bin/ogrlineref
 bin/ogrtindex
+bin/sozip
 include/cpl_atomic_ops.h
 include/cpl_auto_close.h
 include/cpl_compressor.h
@@ -39,9 +41,6 @@ include/cpl_http.h
 include/cpl_json.h
 include/cpl_list.h
 include/cpl_minixml.h
-include/cpl_minizip_ioapi.h
-include/cpl_minizip_unzip.h
-include/cpl_minizip_zip.h
 include/cpl_multiproc.h
 include/cpl_port.h
 include/cpl_progress.h
@@ -75,6 +74,7 @@ include/gdalgrid_priv.h
 include/gdaljp2abstractdataset.h
 include/gdaljp2metadata.h
 include/gdalpansharpen.h
+include/gdalsubdatasetinfo.h
 include/gdalwarper.h
 include/gnm.h
 include/gnm_api.h
@@ -85,8 +85,10 @@ include/ogr_core.h
 include/ogr_feature.h
 include/ogr_featurestyle.h
 include/ogr_geocoding.h
+include/ogr_geomcoordinateprecision.h
 include/ogr_geometry.h
 include/ogr_p.h
+include/ogr_recordbatch.h
 include/ogr_spatialref.h
 include/ogr_srs_api.h
 include/ogr_swq.h
@@ -99,8 +101,8 @@ lib/cmake/gdal/GDALConfig.cmake
 lib/cmake/gdal/GDALConfigVersion.cmake
 lib/gdalplugins/drivers.ini
 lib/libgdal.so
-lib/libgdal.so.31
-lib/libgdal.so.31.0.3
+lib/libgdal.so.35
+lib/libgdal.so.35.${PKGVERSION}
 lib/pkgconfig/gdal.pc
 man/man1/gdal-config.1
 man/man1/gdal2tiles.1
@@ -109,6 +111,7 @@ man/man1/gdal_contour.1
 man/man1/gdal_create.1
 man/man1/gdal_edit.1
 man/man1/gdal_fillnodata.1
+man/man1/gdal_footprint.1
 man/man1/gdal_grid.1
 man/man1/gdal_merge.1
 man/man1/gdal_pansharpen.1
@@ -137,12 +140,14 @@ man/man1/gnmanalyse.1
 man/man1/gnmmanage.1
 man/man1/nearblack.1
 man/man1/ogr2ogr.1
+man/man1/ogr_layer_algebra.1
 man/man1/ogrinfo.1
 man/man1/ogrlineref.1
 man/man1/ogrmerge.1
 man/man1/ogrtindex.1
 man/man1/pct2rgb.1
 man/man1/rgb2pct.1
+man/man1/sozip.1
 share/bash-completion/completions/gdal-config
 share/bash-completion/completions/gdal2tiles.py
 share/bash-completion/completions/gdal2xyz.py
@@ -185,7 +190,7 @@ share/gdal/GDALLogoBW.svg
 share/gdal/GDALLogoColor.svg
 share/gdal/GDALLogoGS.svg
 share/gdal/LICENSE.TXT
-share/gdal/bag_template.xml
+share/gdal/MM_m_idofic.csv
 share/gdal/cubewerx_extra.wkt
 share/gdal/default.rsc
 share/gdal/ecw_cs.wkt
@@ -193,9 +198,13 @@ share/gdal/eedaconf.json
 share/gdal/epsg.wkt
 share/gdal/esri_StatePlane_extra.wkt
 share/gdal/gdalicon.png
+share/gdal/gdalinfo_output.schema.json
 share/gdal/gdalmdiminfo_output.schema.json
+share/gdal/gdaltileindex.xsd
 share/gdal/gdalvrt.xsd
+share/gdal/gfs.xsd
 share/gdal/gml_registry.xml
+share/gdal/gml_registry.xsd
 share/gdal/gmlasconf.xml
 share/gdal/gmlasconf.xsd
 share/gdal/grib2_center.csv
@@ -214,6 +223,7 @@ share/gdal/grib2_table_4_2_0_190.csv
 share/gdal/grib2_table_4_2_0_191.csv
 share/gdal/grib2_table_4_2_0_2.csv
 share/gdal/grib2_table_4_2_0_20.csv
+share/gdal/grib2_table_4_2_0_21.csv
 share/gdal/grib2_table_4_2_0_3.csv
 share/gdal/grib2_table_4_2_0_4.csv
 share/gdal/grib2_table_4_2_0_5.csv
@@ -235,6 +245,7 @@ share/gdal/grib2_table_4_2_2_0.csv
 share/gdal/grib2_table_4_2_2_3.csv
 share/gdal/grib2_table_4_2_2_4.csv
 share/gdal/grib2_table_4_2_2_5.csv
+share/gdal/grib2_table_4_2_2_6.csv
 share/gdal/grib2_table_4_2_3_0.csv
 share/gdal/grib2_table_4_2_3_1.csv
 share/gdal/grib2_table_4_2_3_2.csv
@@ -298,6 +309,7 @@ share/gdal/jpfgdgml_WStrL.gfs
 share/gdal/netcdf_config.xsd
 share/gdal/nitf_spec.xml
 share/gdal/nitf_spec.xsd
+share/gdal/ogrinfo_output.schema.json
 share/gdal/ogrvrt.xsd
 share/gdal/osmconf.ini
 share/gdal/ozi_datum.csv
@@ -318,7 +330,6 @@ share/gdal/s57objectclasses.csv
 share/gdal/seed_2d.dgn
 share/gdal/seed_3d.dgn
 share/gdal/stateplane.csv
-share/gdal/template_tiles.mapml
 share/gdal/tms_LINZAntarticaMapTileGrid.json
 share/gdal/tms_MapML_APSTILE.json
 share/gdal/tms_MapML_CBMTILE.json

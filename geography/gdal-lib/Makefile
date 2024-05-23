@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.165 2024/05/21 18:21:33 gdt Exp $
+# $NetBSD: Makefile,v 1.166 2024/05/23 13:42:25 gdt Exp $
 
-PKGREVISION= 11
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 #PKGREVISION=	0
@@ -8,7 +7,7 @@ PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 COMMENT=	Translator library for raster geospatial data formats
 
 USE_LANGUAGES+=		c c++
-USE_C_FEATURES+=	c99
+USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++11
 
 USE_TOOLS+=		gmake
@@ -22,8 +21,12 @@ USE_PKGLOCALEDIR=	yes
 # libtool problem.
 # Therefore this package needs revbumping on every geos update.
 
+# To find out what can be set in the cmake build.
+# \todo Hoist to cmake/build.mk.
+cmake-options:
+	(cd ${WRKSRC}/cmake-pkgsrc-build && cmake -L ..) > OPTIONS
+
 .include "../../devel/cmake/build.mk"
-CMAKE_ARGS+=		-DBUILD_PYTHON_BINDINGS=OFF
 
 # \todo Justify or change to bl3 on json-c
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_JSONC_INTERNAL=ON
@@ -45,12 +48,23 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PCRE2=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POPPLER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
 
+# Disable python bindings because it is in ../py-gdal.  The reasons
+# are to allow multiple python versions, and to remove the dependency
+# on numpy and hence the need for blas and fortran from the base gdal
+# package.
+CMAKE_ARGS+=		-DBUILD_PYTHON_BINDINGS=OFF
+
+# Disable things that we don't want to build, more as documentation
+# than them needing to be forced off.
+CMAKE_ARGS+=		-DBUILD_CSHARP_BINDINGS=OFF
+CMAKE_ARGS+=		-DBUILD_JAVA_BINDINGS=OFF
+
 # \todo One would think these are unnnecessary.  Check if these
 # can/should be dropped.  If not, explain why we have some and not
 # all.  Commented lines are incompletely translated from autoconf,
 # because there is no obvious analog.
 CMAKE_CONFIGURE_ARGS+=	-DGEOS_DIR=${BUILDLINK_PREFIX.geos}
-CMAKE_CONFIGURE_ARGS+=	-DTIFFDIR=${BUILDLINK_PREFIX.tiff}
+CMAKE_CONFIGURE_ARGS+=	-DTiff_DIR=${BUILDLINK_PREFIX.tiff}
 #CMAKE_CONFIGURE_ARGS+=	-Dlibz=${BUILDLINK_PREFIX.zlib}
 CMAKE_CONFIGURE_ARGS+=	-DNetCDF_DIR=${BUILDLINK_PREFIX.netcdf}
 #CMAKE_CONFIGURE_ARGS+=	-Dwebp=${BUILDLINK_PREFIX.libwebp}
