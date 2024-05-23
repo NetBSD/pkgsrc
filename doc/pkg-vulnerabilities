@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.200 2024/05/22 11:47:41 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.201 2024/05/23 10:09:16 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26011,3 +26011,9 @@ ghostscript-agpl<10.03.1		unknown		https://nvd.nist.gov/vuln/detail/CVE-2023-527
 asterisk<18.23.1	authentication-bypass	https://github.com/asterisk/asterisk/security/advisories/GHSA-qqxj-v78h-hrf9
 asterisk>=20<20.8.1	authentication-bypass	https://github.com/asterisk/asterisk/security/advisories/GHSA-qqxj-v78h-hrf9
 asterisk>=21<21.3.1	authentication-bypass	https://github.com/asterisk/asterisk/security/advisories/GHSA-qqxj-v78h-hrf9
+keepassxc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-33900
+keepassxc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-33901
+py{27,37,38,39,310,311,312}-requests<2.32.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-35195
+py{37,38,39,310,311,312}-mysql<1.1.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-36039
+gstreamer-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-4453
+lighttpd-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-3708
