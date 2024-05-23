@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/04/03 18:16:35 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/23 08:18:42 nikita Exp $
 
-DISTNAME=	jose-13
+DISTNAME=	jose-14
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latchset/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
