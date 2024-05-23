@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3572 2024/05/23 14:13:26 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.3573 2024/05/23 14:32:29 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5610,3 +5610,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/gdal-lib to 3.9.0 [gdt 2024-05-23]
 	Updated geography/py-gdal to 3.9.0 [gdt 2024-05-23]
 	Updated geography/libgeotiff to 1.7.2 [gdt 2024-05-23]
+	Updated sysutils/nbase to 9.3.0.2 [cheusov 2024-05-23]
