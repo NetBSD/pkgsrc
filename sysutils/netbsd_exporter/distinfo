@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/12/29 20:55:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/05/23 06:55:00 wiz Exp $
 
-BLAKE2s (netbsd_exporter/0.9.3.tar.gz) = d7238b830d6b70b560b2d71d132356b62960a095286b27663136ef6f350600a2
-SHA512 (netbsd_exporter/0.9.3.tar.gz) = 25e1799638a9649b5230f49e794db6be4117f4348ba3b5457892c958216b4d603c0e1c42d7db4098bba1459d5d89c885dc344750355bfa975480d918716ab48f
-Size (netbsd_exporter/0.9.3.tar.gz) = 4921 bytes
-SHA1 (patch-Makefile) = 4a1714436a125ec03485a24424f41476798fcfde
+BLAKE2s (netbsd_exporter-0.9.4.tar.gz) = bc33ad7771e1845ee29b2ab954a42b1ad4db622a58eadcc92aa13706e890e6fa
+SHA512 (netbsd_exporter-0.9.4.tar.gz) = 1051cf9747a6c72fef728c0900cdb1e034cf7d3a524c2e6e3cec9127e46aa4106f3353f77b6fd0fca000f993f20a7cc85fef4897381664272cb4cb7bba41ed21
+Size (netbsd_exporter-0.9.4.tar.gz) = 4918 bytes
+SHA1 (patch-Makefile) = d6b87c237b179917d2ff932443d66cf34824bcaa
