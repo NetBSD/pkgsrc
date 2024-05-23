@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/05/23 14:32:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/23 14:37:06 cheusov Exp $
 #
 
 DISTNAME=	nbase-9.3.0.2
@@ -18,6 +18,7 @@ USE_TOOLS+=		flex:run byacc
 
 TEST_TARGET=		test
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../devel/mk-configure/mk-c.mk"
 
 .if "${OPSYS}" != "NetBSD" && "${OPSYS}" != "FreeBSD" && "${OPSYS}" != "OpenBSD" && "${OPSYS}" != "DragonFly"
