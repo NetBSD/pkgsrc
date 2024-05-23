@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.50 2024/05/10 09:57:18 pin Exp $
+# $NetBSD: go-modules.mk,v 1.51 2024/05/23 18:29:12 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -49,8 +49,8 @@ GO_MODULE_FILES+=	github.com/fogleman/gg/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.2.6.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.2.mod
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.2.zip
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.3.mod
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.3.zip
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.mod
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.6.mod
