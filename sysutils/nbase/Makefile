@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/23 15:37:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/23 16:34:28 cheusov Exp $
 #
 
 DISTNAME=	nbase-9.3.0.2
@@ -14,12 +14,18 @@ GITHUB_PROJECT=	nbase
 TOOL_DEPENDS+=	mk-configure>=0.34.0:../../devel/mk-configure
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		flex:run byacc
+USE_TOOLS+=		flex:run
 
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/mk-configure/mk-c.mk"
+
+.if "${OPSYS}" == "OpenBSD"
+TOOL_DEPENDS+=	byacc-[0-9]*:../../devel/byacc
+.else
+USE_TOOLS+=	byacc
+.endif
 
 .if "${OPSYS}" != "NetBSD" && "${OPSYS}" != "FreeBSD" && "${OPSYS}" != "OpenBSD" && "${OPSYS}" != "DragonFly" && "${OPSYS}" != "Darwin"
 .include "../../devel/libbsd/buildlink3.mk"
