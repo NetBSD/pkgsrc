@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2023/12/02 12:02:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.42 2024/05/23 10:30:56 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.38.3
+DISTNAME=	mk-configure-0.39.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	bmake-[0-9]*:../../devel/bmake
 
 USE_LANGUAGES=		c c++
-USE_TOOLS=		makeinfo
+USE_TOOLS=		makeinfo pax
 
 BUILD_TARGET=		all all-doc
 INSTALL_TARGET=		install install-doc
@@ -36,7 +36,7 @@ INSTALLATION_DIRS=	${EGDIR}
 TEST_TARGET=		test
 
 post-install:
-	${CP} -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/examples && ${PAX} -wr * ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/presentation/*.pdf \
 		${DESTDIR}${PREFIX}/share/doc/mk-configure
 	${FIND} ${DESTDIR}${PREFIX}/share/mk-configure/mk | \
