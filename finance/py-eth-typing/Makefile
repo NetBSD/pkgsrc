@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/05/01 19:12:45 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/05/23 11:49:19 adam Exp $
 
-DISTNAME=	eth_typing-4.2.2
+DISTNAME=	eth_typing-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-typing/}
