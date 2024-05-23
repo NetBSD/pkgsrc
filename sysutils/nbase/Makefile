@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/23 15:08:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/23 15:37:11 cheusov Exp $
 #
 
 DISTNAME=	nbase-9.3.0.2
@@ -21,7 +21,7 @@ TEST_TARGET=		test
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/mk-configure/mk-c.mk"
 
-.if "${OPSYS}" != "NetBSD" && "${OPSYS}" != "FreeBSD" && "${OPSYS}" != "OpenBSD" && "${OPSYS}" != "DragonFly"
+.if "${OPSYS}" != "NetBSD" && "${OPSYS}" != "FreeBSD" && "${OPSYS}" != "OpenBSD" && "${OPSYS}" != "DragonFly" && "${OPSYS}" != "Darwin"
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
 
