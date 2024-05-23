@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/23 16:34:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/23 20:34:09 cheusov Exp $
 #
 
 DISTNAME=	nbase-9.3.0.2
@@ -33,6 +33,10 @@ USE_TOOLS+=	byacc
 
 .if "${OPSYS}" != "NetBSD"
 .include "../../devel/libmd/buildlink3.mk"
+.endif
+
+.if "${OPSYS}-${OS_VERSION}" == "SunOS-5.10"
+PLIST_SRC=	PLIST.SunOS-5.10
 .endif
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}/nbase \
