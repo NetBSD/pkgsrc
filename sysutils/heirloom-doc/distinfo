@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:19:40 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/05/23 21:48:53 cheusov Exp $
 
 BLAKE2s (heirloom-070715.tar.bz2) = 774b1ce3e23a5fc789e5ebf8b316877712a6e60cb4846a5e4ccc6429bb20a298
 SHA512 (heirloom-070715.tar.bz2) = 0b30b0f4c4c92a10ee2da263ea44666f445d96bac86ca4afb7bbb50d8278986e4145a7bcdf3ed9f75611bb956e93e16fc0e19874498ce3ae1a00e6fbb4f910c9
@@ -17,3 +17,4 @@ SHA1 (patch-ax) = 74949080460cb2f7c16dd22f24fb650f0ad94817
 SHA1 (patch-libcommon_Makefile.mk) = a78061c36c4351a0059a37eb4e62976cbf2df763
 SHA1 (patch-nawk_Makefile.mk) = a09833bec6a235f68888f73907dcda829cf4beb9
 SHA1 (patch-oawk_Makefile.mk) = 97e2d121103c65c41dc8cee2d9c05bb412fd0af5
+SHA1 (patch-tar_tar.c) = ca5c2422f99c192d0f3c9e81fb6229dbf60d5233
