@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3563 2024/05/23 10:05:33 cheusov Exp $
+$NetBSD: CHANGES-2024,v 1.3564 2024/05/23 10:31:13 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5600,3 +5600,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/netbsd_exporter to 0.9.4 [wiz 2024-05-23]
 	Updated textproc/jose to 14 [nikita 2024-05-23]
 	Updated sysutils/sets2rootfs to 0.2.0 [cheusov 2024-05-23]
+	Updated devel/mk-configure to 0.39.0 [cheusov 2024-05-23]
