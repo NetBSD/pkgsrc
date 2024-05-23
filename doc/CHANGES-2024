@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3567 2024/05/23 11:55:20 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3568 2024/05/23 13:36:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated finance/py-eth-utils to 4.1.1 [adam 2024-05-23]
 	Updated textproc/csvlens to 0.9.1 [pin 2024-05-23]
 	Updated shells/oh-my-posh to 20.1.0 [pin 2024-05-23]
+	Updated geography/proj to 8.2.1 [gdt 2024-05-23]
