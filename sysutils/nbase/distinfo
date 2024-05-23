@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:53 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/05/23 14:32:15 cheusov Exp $
 
-BLAKE2s (nbase-7.0.0.7.tar.gz) = c73e96426e6c97cd6e9bb376be5f45ed6cef9ed2f99f4d397f414049782040d6
-SHA512 (nbase-7.0.0.7.tar.gz) = d61d9603e09a47dafdee963f5fc17a656c6aaed09cbdbbbf41c6d82041980787c3ce513af76fcdab6c407cf93f3606d0d4d2098b1477d750dc631033929db9ed
-Size (nbase-7.0.0.7.tar.gz) = 2480386 bytes
+BLAKE2s (nbase-9.3.0.2.tar.gz) = 4b05460e53788aa01433a28da2d7c1ea74bd1b6135496ae271e4e2f0bf18bef3
+SHA512 (nbase-9.3.0.2.tar.gz) = b96ce315d0014564cbb3fa1bfb3ffa11db2d77d31e5c15ce0667c2082fd3f99217dda5d10416ab4c043fdfab26b7480e4b792b805be68129eaab62e607a7b36f
+Size (nbase-9.3.0.2.tar.gz) = 2050862 bytes

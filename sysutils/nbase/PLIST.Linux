@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2019/05/01 12:21:04 cheusov Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2024/05/23 14:32:15 cheusov Exp $
 bin/nb-[
 bin/nb-apply
 bin/nb-asa
@@ -17,6 +17,7 @@ bin/nb-column
 bin/nb-comm
 bin/nb-compress
 bin/nb-cp
+bin/nb-cpio
 bin/nb-csplit
 bin/nb-ctags
 bin/nb-cut
@@ -36,6 +37,7 @@ bin/nb-false
 bin/nb-fgen
 bin/nb-fgrep
 bin/nb-find
+bin/nb-flock
 bin/nb-fmt
 bin/nb-fold
 bin/nb-fpr
@@ -49,11 +51,9 @@ bin/nb-head
 bin/nb-hexdump
 bin/nb-hostname
 bin/nb-id
-bin/nb-indent
 bin/nb-install
 bin/nb-join
 bin/nb-jot
-bin/nb-kill
 bin/nb-lam
 bin/nb-leave
 bin/nb-ln
@@ -70,7 +70,6 @@ bin/nb-menuc
 bin/nb-mkdep
 bin/nb-mkdir
 bin/nb-mkfifo
-bin/nb-mknod
 bin/nb-mkstr
 bin/nb-mktemp
 bin/nb-msgc
@@ -108,13 +107,16 @@ bin/nb-sort
 bin/nb-split
 bin/nb-sum
 bin/nb-sync
+bin/nb-tabs
 bin/nb-tail
+bin/nb-tar
 bin/nb-tee
 bin/nb-test
 bin/nb-timeout
 bin/nb-tr
 bin/nb-true
 bin/nb-tty
+bin/nb-ul
 bin/nb-uncompress
 bin/nb-unexpand
 bin/nb-unifdef
@@ -141,6 +143,7 @@ man/man1/nb-awk.1
 man/man1/nb-banner.1
 man/man1/nb-basename.1
 man/man1/nb-cat.1
+man/man1/nb-chgrp.1
 man/man1/nb-chmod.1
 man/man1/nb-cksum.1
 man/man1/nb-cleantags.1
@@ -172,6 +175,7 @@ man/man1/nb-false.1
 man/man1/nb-fgen.1
 man/man1/nb-fgrep.1
 man/man1/nb-find.1
+man/man1/nb-flock.1
 man/man1/nb-fmt.1
 man/man1/nb-fold.1
 man/man1/nb-fpr.1
@@ -185,11 +189,9 @@ man/man1/nb-head.1
 man/man1/nb-hexdump.1
 man/man1/nb-hostname.1
 man/man1/nb-id.1
-man/man1/nb-indent.1
 man/man1/nb-install.1
 man/man1/nb-join.1
 man/man1/nb-jot.1
-man/man1/nb-kill.1
 man/man1/nb-lam.1
 man/man1/nb-leave.1
 man/man1/nb-ln.1
@@ -240,6 +242,7 @@ man/man1/nb-soelim.1
 man/man1/nb-sort.1
 man/man1/nb-split.1
 man/man1/nb-sum.1
+man/man1/nb-tabs.1
 man/man1/nb-tail.1
 man/man1/nb-tar.1
 man/man1/nb-tee.1
@@ -248,6 +251,7 @@ man/man1/nb-timeout.1
 man/man1/nb-tr.1
 man/man1/nb-true.1
 man/man1/nb-tty.1
+man/man1/nb-ul.1
 man/man1/nb-uncompress.1
 man/man1/nb-unexpand.1
 man/man1/nb-unifdef.1
@@ -268,7 +272,7 @@ man/man1/nb-zegrep.1
 man/man1/nb-zfgrep.1
 man/man1/nb-zgrep.1
 man/man5/nb-uuencode.5
-man/man8/nb-mknod.8
+man/man8/nb-chown.8
 man/man8/nb-mtree.8
 man/man8/nb-renice.8
 man/man8/nb-sync.8
@@ -290,6 +294,7 @@ nbase/bin/column
 nbase/bin/comm
 nbase/bin/compress
 nbase/bin/cp
+nbase/bin/cpio
 nbase/bin/csplit
 nbase/bin/ctags
 nbase/bin/cut
@@ -309,6 +314,7 @@ nbase/bin/false
 nbase/bin/fgen
 nbase/bin/fgrep
 nbase/bin/find
+nbase/bin/flock
 nbase/bin/fmt
 nbase/bin/fold
 nbase/bin/fpr
@@ -322,11 +328,9 @@ nbase/bin/head
 nbase/bin/hexdump
 nbase/bin/hostname
 nbase/bin/id
-nbase/bin/indent
 nbase/bin/install
 nbase/bin/join
 nbase/bin/jot
-nbase/bin/kill
 nbase/bin/lam
 nbase/bin/leave
 nbase/bin/ln
@@ -343,7 +347,6 @@ nbase/bin/menuc
 nbase/bin/mkdep
 nbase/bin/mkdir
 nbase/bin/mkfifo
-nbase/bin/mknod
 nbase/bin/mkstr
 nbase/bin/mktemp
 nbase/bin/msgc
@@ -381,13 +384,16 @@ nbase/bin/sort
 nbase/bin/split
 nbase/bin/sum
 nbase/bin/sync
+nbase/bin/tabs
 nbase/bin/tail
+nbase/bin/tar
 nbase/bin/tee
 nbase/bin/test
 nbase/bin/timeout
 nbase/bin/tr
 nbase/bin/true
 nbase/bin/tty
+nbase/bin/ul
 nbase/bin/uncompress
 nbase/bin/unexpand
 nbase/bin/unifdef
@@ -407,7 +413,6 @@ nbase/bin/yes
 nbase/bin/zegrep
 nbase/bin/zfgrep
 nbase/bin/zgrep
-nbase/lib/libcompatlib.a
 nbase/man/man1/[.1
 nbase/man/man1/apply.1
 nbase/man/man1/asa.1
@@ -415,6 +420,7 @@ nbase/man/man1/awk.1
 nbase/man/man1/banner.1
 nbase/man/man1/basename.1
 nbase/man/man1/cat.1
+nbase/man/man1/chgrp.1
 nbase/man/man1/chmod.1
 nbase/man/man1/cksum.1
 nbase/man/man1/cleantags.1
@@ -446,6 +452,7 @@ nbase/man/man1/false.1
 nbase/man/man1/fgen.1
 nbase/man/man1/fgrep.1
 nbase/man/man1/find.1
+nbase/man/man1/flock.1
 nbase/man/man1/fmt.1
 nbase/man/man1/fold.1
 nbase/man/man1/fpr.1
@@ -459,11 +466,9 @@ nbase/man/man1/head.1
 nbase/man/man1/hexdump.1
 nbase/man/man1/hostname.1
 nbase/man/man1/id.1
-nbase/man/man1/indent.1
 nbase/man/man1/install.1
 nbase/man/man1/join.1
 nbase/man/man1/jot.1
-nbase/man/man1/kill.1
 nbase/man/man1/lam.1
 nbase/man/man1/leave.1
 nbase/man/man1/ln.1
@@ -514,6 +519,7 @@ nbase/man/man1/soelim.1
 nbase/man/man1/sort.1
 nbase/man/man1/split.1
 nbase/man/man1/sum.1
+nbase/man/man1/tabs.1
 nbase/man/man1/tail.1
 nbase/man/man1/tar.1
 nbase/man/man1/tee.1
@@ -522,6 +528,7 @@ nbase/man/man1/timeout.1
 nbase/man/man1/tr.1
 nbase/man/man1/true.1
 nbase/man/man1/tty.1
+nbase/man/man1/ul.1
 nbase/man/man1/uncompress.1
 nbase/man/man1/unexpand.1
 nbase/man/man1/unifdef.1
@@ -542,13 +549,16 @@ nbase/man/man1/zegrep.1
 nbase/man/man1/zfgrep.1
 nbase/man/man1/zgrep.1
 nbase/man/man5/uuencode.5
-nbase/man/man8/mknod.8
+nbase/man/man8/chown.8
 nbase/man/man8/mtree.8
 nbase/man/man8/renice.8
 nbase/man/man8/sync.8
+nbase/sbin/chgrp
+nbase/sbin/chown
 nbase/share/doc/nbase/LICENSE
 nbase/share/doc/nbase/NEWS
 nbase/share/doc/nbase/README.md
 nbase/share/doc/nbase/TODO
 nbase/share/misc/menu_sys.def
 nbase/share/misc/msg_sys.def
+sbin/nb-chown
