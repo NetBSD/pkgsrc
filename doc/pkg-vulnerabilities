@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.201 2024/05/23 10:09:16 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.202 2024/05/23 10:52:37 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26015,5 +26015,5 @@ keepassxc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/deta
 keepassxc-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-33901
 py{27,37,38,39,310,311,312}-requests<2.32.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-35195
 py{37,38,39,310,311,312}-mysql<1.1.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-36039
-gstreamer-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-4453
+gst-plugins1-base<1.24.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-4453
 lighttpd-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-3708
