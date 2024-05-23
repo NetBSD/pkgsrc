@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/16 13:55:28 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2024/05/23 10:05:16 cheusov Exp $
 
-BLAKE2s (sets2rootfs-0.1.0.tar.gz) = a0070475c5ed6250b1ccbf8a0454db05a69b2ec5105d0f5dd6525b38e548ebfa
-SHA512 (sets2rootfs-0.1.0.tar.gz) = fb16a70f4a0154e5326a48f6a913396b5ea220a8972576023f1f602ee90fe11592e3bd10d2423315e4c47b0b7882058c28f82d1638577c016d6cf7f04c327194
-Size (sets2rootfs-0.1.0.tar.gz) = 3470 bytes
+BLAKE2s (sets2rootfs-0.2.0.tar.gz) = 8aa424b39ace6c1a0f0e75d5bd2733a0fcf5bcb632bb4d72358ac4cde83b1a81
+SHA512 (sets2rootfs-0.2.0.tar.gz) = 5bedea44d7cefcc48eb49eeb13d9fddbfef9085fa17cedec6da6767bd10eb190033792d315246cada4e2e1296e285c7281248847d2eebdb25fb8bac50f73d538
+Size (sets2rootfs-0.2.0.tar.gz) = 3844 bytes
