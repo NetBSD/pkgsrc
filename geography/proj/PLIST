@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/11/27 13:30:45 gdt Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/05/23 13:35:58 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -19,7 +19,6 @@ include/proj/io.hpp
 include/proj/metadata.hpp
 include/proj/nn.hpp
 include/proj/util.hpp
-include/proj_api.h
 include/proj_constants.h
 include/proj_experimental.h
 include/proj_symbol_rename.h
@@ -32,6 +31,9 @@ man/man1/gie.1
 man/man1/proj.1
 man/man1/projinfo.1
 man/man1/projsync.1
+share/doc/proj/AUTHORS
+share/doc/proj/COPYING
+share/doc/proj/NEWS
 share/proj/CH
 share/proj/GL27
 share/proj/ITRF2000
