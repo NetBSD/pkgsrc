@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/26 15:08:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/23 13:39:17 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -10,7 +10,7 @@ share/proj/at_bev_GEOID_GRS80_Oesterreich.tif
 share/proj/at_bev_GV_Hoehengrid_V1.tif
 share/proj/at_bev_GV_Hoehengrid_plus_Geoid_V2.tif
 share/proj/at_bev_README.txt
-share/proj/au_ga_AGQG_20191107.tif
+share/proj/au_ga_AGQG_20201120.tif
 share/proj/au_ga_AUSGeoid09_V1.01.tif
 share/proj/au_ga_AUSGeoid2020_20180201.tif
 share/proj/au_ga_AUSGeoid98.tif
@@ -24,6 +24,7 @@ share/proj/au_icsm_National_84_02_07_01.tif
 share/proj/au_icsm_README.txt
 share/proj/be_ign_README.txt
 share/proj/be_ign_bd72lb72_etrs89lb08.tif
+share/proj/be_ign_hBG18.tif
 share/proj/br_ibge_CA61_003.tif
 share/proj/br_ibge_CA7072_003.tif
 share/proj/br_ibge_README.txt
@@ -66,6 +67,8 @@ share/proj/ca_que_mern_na27na83.tif
 share/proj/ch_swisstopo_CHENyx06_ETRS.tif
 share/proj/ch_swisstopo_CHENyx06a.tif
 share/proj/ch_swisstopo_README.txt
+share/proj/ch_swisstopo_chgeo2004_ETRS89_LHN95.tif
+share/proj/ch_swisstopo_chgeo2004_ETRS89_LN02.tif
 share/proj/copyright_and_licenses.csv
 share/proj/de_adv_BETA2007.tif
 share/proj/de_adv_README.txt
@@ -104,6 +107,7 @@ share/proj/fr_ign_CGVD2013RGSPM06.tif
 share/proj/fr_ign_RAC09.tif
 share/proj/fr_ign_RAF09.tif
 share/proj/fr_ign_RAF18.tif
+share/proj/fr_ign_RAF18b.tif
 share/proj/fr_ign_RAGTBT2016.tif
 share/proj/fr_ign_RALD2016.tif
 share/proj/fr_ign_RALDW842016.tif
@@ -156,6 +160,8 @@ share/proj/is_lmi_Icegeoid_ISN93.tif
 share/proj/is_lmi_README.txt
 share/proj/jp_gsi_README.txt
 share/proj/jp_gsi_gsigeo2011.tif
+share/proj/mx_inegi_README.txt
+share/proj/mx_inegi_ggm10.tif
 share/proj/nc_dittt_README.txt
 share/proj/nc_dittt_Ranc08_Circe.tif
 share/proj/nc_dittt_gr3dnc01b.tif
@@ -166,6 +172,12 @@ share/proj/nl_nsgi_naptrans2018.tif
 share/proj/nl_nsgi_nlgeo2018.tif
 share/proj/nl_nsgi_rdcorr2018.tif
 share/proj/nl_nsgi_rdtrans2018.tif
+share/proj/no_kv_CD_above_Ell_ETRS89_v2021a.tif
+share/proj/no_kv_ETRS89NO_NGO48_TIN.json
+share/proj/no_kv_HREF2018B_NN2000_EUREF89.tif
+share/proj/no_kv_NKGETRF14_EPSG7922_2000.tif
+share/proj/no_kv_README.txt
+share/proj/no_kv_href2008a.tif
 share/proj/nz_linz_README.txt
 share/proj/nz_linz_auckht1946-nzvd2016.tif
 share/proj/nz_linz_blufht1955-nzvd2016.tif
@@ -225,6 +237,9 @@ share/proj/nz_linz_ontpht1964-nzvd2016.tif
 share/proj/nz_linz_stisht1977-nzvd2016.tif
 share/proj/nz_linz_taraht1970-nzvd2016.tif
 share/proj/nz_linz_wellht1953-nzvd2016.tif
+share/proj/pl_gugik_README.txt
+share/proj/pl_gugik_geoid2011-PL-EVRF2007-NH.tif
+share/proj/pl_gugik_geoid2011-PL-KRON86-NH.tif
 share/proj/pt_dgt_D73_ETRS89_geo.tif
 share/proj/pt_dgt_DLx_ETRS89_geo.tif
 share/proj/pt_dgt_README.txt
@@ -345,3 +360,5 @@ share/proj/us_noaa_wshpgn.tif
 share/proj/us_noaa_wthpgn.tif
 share/proj/us_noaa_wvhpgn.tif
 share/proj/us_noaa_wyhpgn.tif
+share/proj/za_cdngi_README.txt
+share/proj/za_cdngi_sageoid2010.tif

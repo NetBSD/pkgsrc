@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/11/26 15:08:20 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/23 13:39:17 gdt Exp $
 
-DISTNAME=	proj-data-1.4
+DISTNAME=	proj-data-1.9
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OSGeo/}
-GITHUB_PROJECT=	PROJ-data
-GITHUB_RELEASE=	1.4.0
+MASTER_SITES=	https://download.osgeo.org/proj/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://proj.org/
