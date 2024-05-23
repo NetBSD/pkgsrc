@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.98 2024/03/27 13:53:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.99 2024/05/23 04:15:35 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -15,7 +15,6 @@ include/curl/urlapi.h
 include/curl/websockets.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
-man/man1/curl-config.1
 man/man1/curl.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
@@ -159,6 +158,7 @@ man/man3/CURLOPT_DOH_SSL_VERIFYHOST.3
 man/man3/CURLOPT_DOH_SSL_VERIFYPEER.3
 man/man3/CURLOPT_DOH_SSL_VERIFYSTATUS.3
 man/man3/CURLOPT_DOH_URL.3
+man/man3/CURLOPT_ECH.3
 man/man3/CURLOPT_EGDSOCKET.3
 man/man3/CURLOPT_ERRORBUFFER.3
 man/man3/CURLOPT_EXPECT_100_TIMEOUT_MS.3
@@ -477,6 +477,7 @@ man/man3/curl_multi_socket_all.3
 man/man3/curl_multi_strerror.3
 man/man3/curl_multi_timeout.3
 man/man3/curl_multi_wait.3
+man/man3/curl_multi_waitfds.3
 man/man3/curl_multi_wakeup.3
 man/man3/curl_pushheader_byname.3
 man/man3/curl_pushheader_bynum.3
