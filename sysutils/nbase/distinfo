@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/05/23 14:32:15 cheusov Exp $
+$NetBSD: distinfo,v 1.8 2024/05/23 19:14:07 cheusov Exp $
 
 BLAKE2s (nbase-9.3.0.2.tar.gz) = 4b05460e53788aa01433a28da2d7c1ea74bd1b6135496ae271e4e2f0bf18bef3
 SHA512 (nbase-9.3.0.2.tar.gz) = b96ce315d0014564cbb3fa1bfb3ffa11db2d77d31e5c15ce0667c2082fd3f99217dda5d10416ab4c043fdfab26b7480e4b792b805be68129eaab62e607a7b36f
 Size (nbase-9.3.0.2.tar.gz) = 2050862 bytes
+SHA1 (patch-compatlib_imp__funopen.c) = f52415c9043330ea9afc2aef0f41a4fdef46ddbe
