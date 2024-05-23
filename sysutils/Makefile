@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1121 2024/05/16 13:58:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.1122 2024/05/23 02:55:34 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -691,8 +691,8 @@ SUBDIR+=	screentest
 SUBDIR+=	scriptisto
 SUBDIR+=	scsiinfo
 SUBDIR+=	service-config
-SUBDIR+=	sets2rootfs
 SUBDIR+=	setquota
+SUBDIR+=	sets2rootfs
 SUBDIR+=	sformat
 SUBDIR+=	shc
 SUBDIR+=	shelldap
