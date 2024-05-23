@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/30 00:11:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/23 14:13:17 gdt Exp $
 bin/applygeo
 bin/geotifcp
 bin/listgeo
@@ -26,6 +26,7 @@ include/geotiffio.h
 include/geovalues.h
 include/xtiffio.h
 lib/libgeotiff.la
+lib/pkgconfig/libgeotiff.pc
 man/man1/applygeo.1
 man/man1/geotifcp.1
 man/man1/listgeo.1
