@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/23 14:32:15 cheusov Exp $
 #
 
-DISTNAME=	nbase-7.0.0.7
+DISTNAME=	nbase-9.3.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheusov/}
 
@@ -20,9 +20,18 @@ TEST_TARGET=		test
 
 .include "../../devel/mk-configure/mk-c.mk"
 
+.if "${OPSYS}" != "NetBSD" && "${OPSYS}" != "FreeBSD" && "${OPSYS}" != "OpenBSD" && "${OPSYS}" != "DragonFly"
+DEPENDS+=	libbsd-[0-9]*:../../devel/libbsd
+.endif
+
+.if "${OPSYS}" != "NetBSD"
+DEPENDS+=	libmd-[0-9]*:../../devel/libmd
+.endif
+
 MAKE_FLAGS+=	PREFIX=${PREFIX}/nbase \
 		MANDIR=${PREFIX}/nbase/${PKGMANDIR} \
-		LINKSPREFIX=${PREFIX}
+		LINKSPREFIX=${PREFIX} \
+		USE_NB_PREFIX=nb-
 
 # -Wno-error=unused-result -Werror=strict-aliasing(libnbcompat,)
 MAKE_FLAGS+=	WARNERR=no
