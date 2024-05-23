@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/05/16 06:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/23 14:13:17 gdt Exp $
 
-DISTNAME=	libgeotiff-1.7.1
-PKGREVISION=	9
+VERSION=	1.7.2
+DISTNAME=	libgeotiff-${VERSION}${RC}
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/geotiff/libgeotiff/
 
@@ -9,6 +9,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/OSGeo/libgeotiff
 COMMENT=	Library and tools for reading and writing GeoTIFF data
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/libgeotiff-${VERSION}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
