@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:55:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/05/23 22:08:49 cheusov Exp $
 
 BLAKE2s (liblbfgs-1.10.tar.gz) = 26fa40f50427acca054c48cbc42b575690b9b060821bd15f6a474c9f90e558b8
 SHA512 (liblbfgs-1.10.tar.gz) = 9829f3603bdc870d27af4a87f13779eff823bc480ca018466c49926baf1e763aa075a42ab732f9548bdc8d9eeb3e6185c21d4c7ae692253f933b2f5f557c7750
 Size (liblbfgs-1.10.tar.gz) = 318739 bytes
-SHA1 (patch-configure.in) = 97a3fdb8405343a46a9d6636dc857348f1887253
