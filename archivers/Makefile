@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2024/05/10 09:53:43 adam Exp $
+# $NetBSD: Makefile,v 1.212 2024/05/24 17:30:16 adam Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -112,6 +112,7 @@ SUBDIR+=	pxz
 SUBDIR+=	py-brotli
 SUBDIR+=	py-brotlicffi
 SUBDIR+=	py-bz2file
+SUBDIR+=	py-cramjam
 SUBDIR+=	py-lhafile
 SUBDIR+=	py-libarchive-c
 SUBDIR+=	py-lz4
