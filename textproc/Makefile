@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1469 2024/05/18 01:40:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.1470 2024/05/24 07:55:40 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1123,6 +1123,7 @@ SUBDIR+=	py-openapi-schema-validator
 SUBDIR+=	py-openapi-spec-validator
 SUBDIR+=	py-openapi3
 SUBDIR+=	py-openpyxl
+SUBDIR+=	py-orjson
 SUBDIR+=	py-pallets-sphinx-themes
 SUBDIR+=	py-pandocfilters
 SUBDIR+=	py-parse
