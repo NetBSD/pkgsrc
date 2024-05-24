@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.37 2024/05/24 14:31:05 cheusov Exp $
+$NetBSD: distinfo,v 1.38 2024/05/24 16:59:58 cheusov Exp $
 
 BLAKE2s (mk-configure-0.39.1.tar.gz) = a6aca9e5b42aad69fbf70489222bbbebf8db38a6942a94511ef8bbfd308fc85d
 SHA512 (mk-configure-0.39.1.tar.gz) = b08bffbe6bef5a9d193e3106446e17d5cb1866868db337e6808a51eb88d94ccb00e0e2e145dab3826325e942720dc76fd8c0a9b4009630dba707afcfec6a062b
 Size (mk-configure-0.39.1.tar.gz) = 364708 bytes
+SHA1 (patch-mk_Makefile) = b23643efb23c79bd0a812cda6e3fe52e33e99776
