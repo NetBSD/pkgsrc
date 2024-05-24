@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/02/22 12:07:12 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/05/24 16:51:43 adam Exp $
 
-DISTNAME=	elasticsearch-8.12.1
+DISTNAME=	elasticsearch-8.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elasticsearch/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-elastic-transport>=8:../../databases/py-elastic-transport
+DEPENDS+=	${PYPKGPREFIX}-elastic-transport>=8.13:../../databases/py-elastic-transport
 
 USE_LANGUAGES=	# none
 
