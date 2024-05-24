@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/05/15 13:00:30 nikita Exp $
+$NetBSD: distinfo,v 1.21 2024/05/24 21:39:50 nikita Exp $
 
-BLAKE2s (diffoscope-266.tar.gz) = 2e112286359e4041dd417aab86520ecaf43732a53c5ffbfedd920a58ea44640b
-SHA512 (diffoscope-266.tar.gz) = 41e6e710cfeab174417c0657ad3d05cd4c5dc787be0b1cb94bf70ff276970ddef43b1e6b0087fccfc5e15cd145cd1538183a8eb68e3cf0580fb830d052add397
-Size (diffoscope-266.tar.gz) = 3285463 bytes
+BLAKE2s (diffoscope-268.tar.gz) = a9fd90cc0fc753dc488ad5463ddc4a4be965a3c98105c11170cc86aeec0bb993
+SHA512 (diffoscope-268.tar.gz) = 1e70780850d8928d27f84e6a10a88ea7d90dcc688614a994b373926a85b2795996f272d0e91985789eb77c7ca92d782fdcf79541207600cbe828d8af9790eba8
+Size (diffoscope-268.tar.gz) = 3286666 bytes
