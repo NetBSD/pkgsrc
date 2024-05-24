@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2024/05/24 10:05:36 gdt Exp $
+# $NetBSD: Makefile,v 1.215 2024/05/24 11:57:23 gdt Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -26,6 +26,7 @@ USE_TOOLS+=		bison flex perl pkg-config
 # with spaces, which are \-quoted in Makefiles, but bmake sees them as
 # separate files.
 USE_TOOLS+=		gmake
+.include "../../devel/cmake/build.mk"
 
 # minizip/zip.h shadows zip.h (from libzip)
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
@@ -99,7 +100,6 @@ CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 #.include "../../devel/qjson/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
