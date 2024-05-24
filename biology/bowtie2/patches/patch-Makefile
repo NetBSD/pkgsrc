@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2024/01/18 23:30:12 bacon Exp $
+$NetBSD: patch-Makefile,v 1.6 2024/05/24 11:32:58 bacon Exp $
 
 # Respect pkgsrc env
 
