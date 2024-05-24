@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2024/04/12 11:15:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2024/05/24 08:44:50 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -679,11 +679,6 @@ ${PYSITELIB}/awscli/examples/acm/remove-tags-from-certificate.rst
 ${PYSITELIB}/awscli/examples/acm/request-certificate.rst
 ${PYSITELIB}/awscli/examples/acm/resend-validation-email.rst
 ${PYSITELIB}/awscli/examples/acm/update-certificate-options.rst
-${PYSITELIB}/awscli/examples/alexaforbusiness/create-network-profile.rst
-${PYSITELIB}/awscli/examples/alexaforbusiness/delete-network-profile.rst
-${PYSITELIB}/awscli/examples/alexaforbusiness/get-network-profile.rst
-${PYSITELIB}/awscli/examples/alexaforbusiness/search-network-profiles.rst
-${PYSITELIB}/awscli/examples/alexaforbusiness/update-network-profile.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-api-key.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-authorizer.rst
 ${PYSITELIB}/awscli/examples/apigateway/create-base-path-mapping.rst
@@ -2103,6 +2098,7 @@ ${PYSITELIB}/awscli/examples/ec2/associate-client-vpn-target-network.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-dhcp-options.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-iam-instance-profile.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-instance-event-window.rst
+${PYSITELIB}/awscli/examples/ec2/associate-ipam-resource-discovery.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-nat-gateway-address.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/associate-subnet-cidr-block.rst
@@ -2154,6 +2150,7 @@ ${PYSITELIB}/awscli/examples/ec2/create-instance-event-window.rst
 ${PYSITELIB}/awscli/examples/ec2/create-instance-export-task.rst
 ${PYSITELIB}/awscli/examples/ec2/create-internet-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/create-ipam-pool.rst
+${PYSITELIB}/awscli/examples/ec2/create-ipam-resource-discovery.rst
 ${PYSITELIB}/awscli/examples/ec2/create-ipam-scope.rst
 ${PYSITELIB}/awscli/examples/ec2/create-ipam.rst
 ${PYSITELIB}/awscli/examples/ec2/create-key-pair.rst
@@ -2226,6 +2223,8 @@ ${PYSITELIB}/awscli/examples/ec2/delete-fpga-image.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-instance-connect-endpoint.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-instance-event-window.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-internet-gateway.rst
+${PYSITELIB}/awscli/examples/ec2/delete-ipam-pool.rst
+${PYSITELIB}/awscli/examples/ec2/delete-ipam-resource-discovery.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-ipam-scope.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-ipam.rst
 ${PYSITELIB}/awscli/examples/ec2/delete-key-pair.rst
@@ -2345,6 +2344,8 @@ ${PYSITELIB}/awscli/examples/ec2/describe-instance-types.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-instances.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-internet-gateways.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-ipam-pools.rst
+${PYSITELIB}/awscli/examples/ec2/describe-ipam-resource-discoveries.rst
+${PYSITELIB}/awscli/examples/ec2/describe-ipam-resource-discovery-associations.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-ipam-scopes.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-ipams.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-ipv6-pools.rst
@@ -2445,6 +2446,7 @@ ${PYSITELIB}/awscli/examples/ec2/disable-fast-snapshot-restores.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-image-block-public-access.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-image-deprecation.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-image.rst
+${PYSITELIB}/awscli/examples/ec2/disable-ipam-organization-admin-account.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-serial-console-access.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-transit-gateway-route-table-propagation.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-vgw-route-propagation.rst
@@ -2454,6 +2456,7 @@ ${PYSITELIB}/awscli/examples/ec2/disassociate-address.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-client-vpn-target-network.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-iam-instance-profile.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-instance-event-window.rst
+${PYSITELIB}/awscli/examples/ec2/disassociate-ipam-resource-discovery.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-nat-gateway-address.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-subnet-cidr-block.rst
@@ -2495,6 +2498,9 @@ ${PYSITELIB}/awscli/examples/ec2/get-image-block-public-access-state.rst
 ${PYSITELIB}/awscli/examples/ec2/get-instance-types-from-instance-requirements.rst
 ${PYSITELIB}/awscli/examples/ec2/get-instance-uefi-data.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-address-history.rst
+${PYSITELIB}/awscli/examples/ec2/get-ipam-discovered-accounts.rst
+${PYSITELIB}/awscli/examples/ec2/get-ipam-discovered-public-addresses.rst
+${PYSITELIB}/awscli/examples/ec2/get-ipam-discovered-resource-cidrs.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-pool-allocations.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-pool-cidrs.rst
 ${PYSITELIB}/awscli/examples/ec2/get-ipam-resource-cidrs.rst
@@ -2505,6 +2511,7 @@ ${PYSITELIB}/awscli/examples/ec2/get-network-insights-access-scope-analysis-find
 ${PYSITELIB}/awscli/examples/ec2/get-network-insights-access-scope-content.rst
 ${PYSITELIB}/awscli/examples/ec2/get-password-data.rst
 ${PYSITELIB}/awscli/examples/ec2/get-reserved-instances-exchange-quote.rst
+${PYSITELIB}/awscli/examples/ec2/get-security-groups-for-vpc.rst
 ${PYSITELIB}/awscli/examples/ec2/get-serial-console-access-status.rst
 ${PYSITELIB}/awscli/examples/ec2/get-spot-placement-scores.rst
 ${PYSITELIB}/awscli/examples/ec2/get-subnet-cidr-reservations.rst
@@ -2546,6 +2553,8 @@ ${PYSITELIB}/awscli/examples/ec2/modify-instance-metadata-options.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-instance-placement.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-ipam-pool.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-ipam-resource-cidr.rst
+${PYSITELIB}/awscli/examples/ec2/modify-ipam-resource-discovery.rst
+${PYSITELIB}/awscli/examples/ec2/modify-ipam-scope.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-ipam.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-launch-template.rst
 ${PYSITELIB}/awscli/examples/ec2/modify-managed-prefix-list.rst
@@ -2606,6 +2615,7 @@ ${PYSITELIB}/awscli/examples/ec2/reject-vpc-endpoint-connections.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-vpc-peering-connection.rst
 ${PYSITELIB}/awscli/examples/ec2/release-address.rst
 ${PYSITELIB}/awscli/examples/ec2/release-hosts.rst
+${PYSITELIB}/awscli/examples/ec2/release-ipam-pool-allocation.rst
 ${PYSITELIB}/awscli/examples/ec2/replace-iam-instance-profile-association.rst
 ${PYSITELIB}/awscli/examples/ec2/replace-network-acl-association.rst
 ${PYSITELIB}/awscli/examples/ec2/replace-network-acl-entry.rst
@@ -2780,20 +2790,46 @@ ${PYSITELIB}/awscli/examples/efs/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/efs/tag-resource.rst
 ${PYSITELIB}/awscli/examples/efs/untag-resource.rst
 ${PYSITELIB}/awscli/examples/eks/associate-encryption-config.rst
+${PYSITELIB}/awscli/examples/eks/associate-identity-provider-config.rst
 ${PYSITELIB}/awscli/examples/eks/create-addon.rst
 ${PYSITELIB}/awscli/examples/eks/create-cluster.rst
+${PYSITELIB}/awscli/examples/eks/create-fargate-profile.rst
+${PYSITELIB}/awscli/examples/eks/create-nodegroup.rst
 ${PYSITELIB}/awscli/examples/eks/delete-addon.rst
 ${PYSITELIB}/awscli/examples/eks/delete-cluster.rst
+${PYSITELIB}/awscli/examples/eks/delete-fargate-profile.rst
+${PYSITELIB}/awscli/examples/eks/delete-nodegroup.rst
+${PYSITELIB}/awscli/examples/eks/deregister-cluster.rst
+${PYSITELIB}/awscli/examples/eks/describe-addon-versions.rst
+${PYSITELIB}/awscli/examples/eks/describe-addon.rst
 ${PYSITELIB}/awscli/examples/eks/describe-cluster.rst
+${PYSITELIB}/awscli/examples/eks/describe-fargate-profile.rst
+${PYSITELIB}/awscli/examples/eks/describe-identity-provider-config.rst
+${PYSITELIB}/awscli/examples/eks/describe-nodegroup.rst
 ${PYSITELIB}/awscli/examples/eks/describe-update.rst
+${PYSITELIB}/awscli/examples/eks/disassociate-identity-provider-config.rst
 ${PYSITELIB}/awscli/examples/eks/get-token.rst
+${PYSITELIB}/awscli/examples/eks/list-addons.rst
 ${PYSITELIB}/awscli/examples/eks/list-clusters.rst
+${PYSITELIB}/awscli/examples/eks/list-fargate-profiles.rst
+${PYSITELIB}/awscli/examples/eks/list-identity-provider-configs.rst
+${PYSITELIB}/awscli/examples/eks/list-nodegroups.rst
+${PYSITELIB}/awscli/examples/eks/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/eks/list-update.rst
 ${PYSITELIB}/awscli/examples/eks/list-updates.rst
+${PYSITELIB}/awscli/examples/eks/register-cluster.rst
+${PYSITELIB}/awscli/examples/eks/tag-resource.rst
+${PYSITELIB}/awscli/examples/eks/untag-resource.rst
+${PYSITELIB}/awscli/examples/eks/update-addon.rst
 ${PYSITELIB}/awscli/examples/eks/update-cluster-config.rst
 ${PYSITELIB}/awscli/examples/eks/update-cluster-version.rst
 ${PYSITELIB}/awscli/examples/eks/update-kubeconfig.rst
 ${PYSITELIB}/awscli/examples/eks/update-kubeconfig/_description.rst
+${PYSITELIB}/awscli/examples/eks/update-nodegroup-config.rst
+${PYSITELIB}/awscli/examples/eks/update-nodegroup-version.rst
 ${PYSITELIB}/awscli/examples/eks/wait.rst
+${PYSITELIB}/awscli/examples/eks/wait/cluster-active.rst
+${PYSITELIB}/awscli/examples/eks/wait/cluster-deleted.rst
 ${PYSITELIB}/awscli/examples/elasticache/add-tags-to-resource.rst
 ${PYSITELIB}/awscli/examples/elasticache/authorize-cache-security-group-ingress.rst
 ${PYSITELIB}/awscli/examples/elasticache/batch-apply-update-action.rst
@@ -4120,6 +4156,12 @@ ${PYSITELIB}/awscli/examples/kafka/get-bootstrap-brokers.rst
 ${PYSITELIB}/awscli/examples/kafka/list-clusters.rst
 ${PYSITELIB}/awscli/examples/kafka/update-broker-storage.rst
 ${PYSITELIB}/awscli/examples/kafka/update-cluster-configuration.rst
+${PYSITELIB}/awscli/examples/kendra/create-data-source.rst
+${PYSITELIB}/awscli/examples/kendra/create-index.rst
+${PYSITELIB}/awscli/examples/kendra/describe-data-source.rst
+${PYSITELIB}/awscli/examples/kendra/describe-index.rst
+${PYSITELIB}/awscli/examples/kendra/update-data-source.rst
+${PYSITELIB}/awscli/examples/kendra/update-index.rst
 ${PYSITELIB}/awscli/examples/kinesis/add-tags-to-stream.rst
 ${PYSITELIB}/awscli/examples/kinesis/create-stream.rst
 ${PYSITELIB}/awscli/examples/kinesis/decrease-stream-retention-period.rst
@@ -4177,6 +4219,7 @@ ${PYSITELIB}/awscli/examples/kms/import-key-material.rst
 ${PYSITELIB}/awscli/examples/kms/list-aliases.rst
 ${PYSITELIB}/awscli/examples/kms/list-grants.rst
 ${PYSITELIB}/awscli/examples/kms/list-key-policies.rst
+${PYSITELIB}/awscli/examples/kms/list-key-rotations.rst
 ${PYSITELIB}/awscli/examples/kms/list-keys.rst
 ${PYSITELIB}/awscli/examples/kms/list-resource-tags.rst
 ${PYSITELIB}/awscli/examples/kms/list-retirable-grants.rst
@@ -4184,6 +4227,7 @@ ${PYSITELIB}/awscli/examples/kms/put-key-policy.rst
 ${PYSITELIB}/awscli/examples/kms/re-encrypt.rst
 ${PYSITELIB}/awscli/examples/kms/retire-grant.rst
 ${PYSITELIB}/awscli/examples/kms/revoke-grant.rst
+${PYSITELIB}/awscli/examples/kms/rotate-key-on-demand.rst
 ${PYSITELIB}/awscli/examples/kms/schedule-key-deletion.rst
 ${PYSITELIB}/awscli/examples/kms/sign.rst
 ${PYSITELIB}/awscli/examples/kms/tag-resource.rst
@@ -4586,6 +4630,13 @@ ${PYSITELIB}/awscli/examples/networkmanager/update-device.rst
 ${PYSITELIB}/awscli/examples/networkmanager/update-global-network.rst
 ${PYSITELIB}/awscli/examples/networkmanager/update-link.rst
 ${PYSITELIB}/awscli/examples/networkmanager/update-site.rst
+${PYSITELIB}/awscli/examples/networkmonitor/create-probe.rst
+${PYSITELIB}/awscli/examples/networkmonitor/delete-monitor.rst
+${PYSITELIB}/awscli/examples/networkmonitor/delete-probe.rst
+${PYSITELIB}/awscli/examples/networkmonitor/get-probe.rst
+${PYSITELIB}/awscli/examples/networkmonitor/list-monitors.rst
+${PYSITELIB}/awscli/examples/networkmonitor/update-monitor.rst
+${PYSITELIB}/awscli/examples/networkmonitor/update-probe.rst
 ${PYSITELIB}/awscli/examples/nimble/get-eula.rst
 ${PYSITELIB}/awscli/examples/nimble/get-launch-profile-details.rst
 ${PYSITELIB}/awscli/examples/nimble/get-launch-profile.rst
@@ -4991,6 +5042,7 @@ ${PYSITELIB}/awscli/examples/rds/describe-db-proxies.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-proxy-endpoints.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-proxy-target-groups.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-proxy-targets.rst
+${PYSITELIB}/awscli/examples/rds/describe-db-recommendations.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-security-groups.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-shard-groups.rst
 ${PYSITELIB}/awscli/examples/rds/describe-db-snapshot-attributes.rst
