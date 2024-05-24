@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3587 2024/05/24 16:23:07 roy Exp $
+$NetBSD: CHANGES-2024,v 1.3588 2024/05/24 16:46:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5640,3 +5640,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/py-libcst to 1.4.0 [adam 2024-05-24]
 	Updated www/py-publicsuffixlist to 0.10.0.20240515 [adam 2024-05-24]
 	Updated net/dhcpcd to 10.0.8 [roy 2024-05-24]
+	Updated devel/py-requests to 2.32.2 [adam 2024-05-24]
+	Updated devel/py-requests-file to 2.1.0 [adam 2024-05-24]
