@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/24 07:55:40 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE-APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE-MIT
+${PYSITELIB}/orjson/__init__.py
+${PYSITELIB}/orjson/__init__.pyc
+${PYSITELIB}/orjson/__init__.pyi
+${PYSITELIB}/orjson/__init__.pyo
+${PYSITELIB}/orjson/orjson.so
+${PYSITELIB}/orjson/py.typed
