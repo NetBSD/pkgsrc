@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/18 23:30:12 bacon Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/05/24 11:32:57 bacon Exp $
 bin/bowtie2
 bin/bowtie2-align-l
 bin/bowtie2-align-s
