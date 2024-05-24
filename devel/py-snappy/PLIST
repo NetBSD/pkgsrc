@@ -1,27 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/29 05:46:35 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/05/24 17:34:22 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/snappy/__init__.py
 ${PYSITELIB}/snappy/__init__.pyc
 ${PYSITELIB}/snappy/__init__.pyo
 ${PYSITELIB}/snappy/__main__.py
 ${PYSITELIB}/snappy/__main__.pyc
 ${PYSITELIB}/snappy/__main__.pyo
-${PYSITELIB}/snappy/_snappy.so
-${PYSITELIB}/snappy/hadoop_snappy.py
-${PYSITELIB}/snappy/hadoop_snappy.pyc
-${PYSITELIB}/snappy/hadoop_snappy.pyo
 ${PYSITELIB}/snappy/snappy.py
 ${PYSITELIB}/snappy/snappy.pyc
 ${PYSITELIB}/snappy/snappy.pyo
-${PYSITELIB}/snappy/snappy_cffi.py
-${PYSITELIB}/snappy/snappy_cffi.pyc
-${PYSITELIB}/snappy/snappy_cffi.pyo
-${PYSITELIB}/snappy/snappy_cffi_builder.py
-${PYSITELIB}/snappy/snappy_cffi_builder.pyc
-${PYSITELIB}/snappy/snappy_cffi_builder.pyo
 ${PYSITELIB}/snappy/snappy_formats.py
 ${PYSITELIB}/snappy/snappy_formats.pyc
 ${PYSITELIB}/snappy/snappy_formats.pyo
