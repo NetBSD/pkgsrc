@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2024/05/22 04:33:35 triaxx Exp $
+# $NetBSD: Makefile,v 1.67 2024/05/24 15:08:38 triaxx Exp $
 
 DISTNAME=	duplicity-2.2.4
+PKGREVISION=	1
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -16,7 +17,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5.0.2:../../devel/py-setuptools_sc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
-GPGPATH=	${PREFIX}/bin/gpg2
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	lftp-[0-9]*:../../net/lftp
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
@@ -36,6 +36,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
+GPG=	${PREFIX}/bin/gpg2
+LFTP=	${PREFIX}/bin/lftp
+
 REPLACE_PYTHON+=	bin/duplicity
 REPLACE_PYTHON+=	bin/rdiffdir
 
@@ -48,11 +51,11 @@ SUBST_FILES.fix-paths=		setup.py
 SUBST_SED.fix-paths=		-e 's,share/man/man1,${PKGMANDIR}/man1,'
 SUBST_SED.fix-paths+=		-e 's,share/locale,${PKGLOCALEDIR}/locale,'
 
-SUBST_CLASSES+=			gpgpath
-SUBST_STAGE.gpgpath=		pre-configure
-SUBST_MESSAGE.gpgpath=		Fixing path of GnuPG
-SUBST_FILES.gpgpath=		duplicity/gpginterface.py
-SUBST_VARS.gpgpath=		GPGPATH
+SUBST_CLASSES+=			fix-bins
+SUBST_STAGE.fix-bins=		pre-configure
+SUBST_MESSAGE.fix-bins=		Fixing relative binary paths
+SUBST_FILES.fix-bins=		duplicity/backends/lftpbackend.py duplicity/gpginterface.py
+SUBST_VARS.fix-bins=		GPG LFTP
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"

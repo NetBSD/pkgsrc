@@ -1,6 +1,6 @@
-$NetBSD: patch-duplicity_gpginterface.py,v 1.2 2023/12/18 09:28:38 triaxx Exp $
+$NetBSD: patch-duplicity_gpginterface.py,v 1.3 2024/05/24 15:08:39 triaxx Exp $
 
-Provide path to gpg.
+Replace gpg executable name by absolute path.
 
 --- duplicity/gpginterface.py.orig	2023-10-10 16:25:32.000000000 +0000
 +++ duplicity/gpginterface.py
@@ -9,7 +9,7 @@ Provide path to gpg.
  
      def __init__(self):
 -        self.call = "gpg"
-+        self.call = "@GPGPATH@"
++        self.call = "@GPG@"
          self.passphrase = None
          self.options = Options()
  
