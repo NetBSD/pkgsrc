@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3575 2024/05/24 04:51:03 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3576 2024/05/24 07:59:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5617,3 +5617,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/sqlite3-tcl to 3.46.0 [adam 2024-05-24]
 	Updated devel/lemon to 1.0.3.46.0 [adam 2024-05-24]
 	Updated databases/py-apsw to 3.46.0.0 [adam 2024-05-24]
+	Added textproc/py-orjson version 3.10.3 [adam 2024-05-24]
+	Updated databases/py-tortoise-orm to 0.21.0 [adam 2024-05-24]
