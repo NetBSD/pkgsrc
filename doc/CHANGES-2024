@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3583 2024/05/24 14:31:23 cheusov Exp $
+$NetBSD: CHANGES-2024,v 1.3584 2024/05/24 15:09:24 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5634,3 +5634,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-tifffile to 2024.5.22 [adam 2024-05-24]
 	Updated math/py-asteval to 0.9.33 [adam 2024-05-24]
 	Updated devel/mk-configure to 0.39.1 [cheusov 2024-05-24]
+	Updated sysutils/duplicity to 2.2.4nb1 [triaxx 2024-05-24]
