@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/03/04 08:00:45 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/05/24 11:51:59 adam Exp $
 
-BLAKE2s (asteval-0.9.32.tar.gz) = 0c5be58c5b08839df1f74b029bdd4d6a923576210c91e4ec2341336de06343be
-SHA512 (asteval-0.9.32.tar.gz) = eb47190b4743e20d009946346a766b8e579d4f2f8edbc4dcc92baeccbccf1d5d821e74aa4cf028764c8d7a5131b9f3c028a901e0bdfa71b063b317a6ab13154f
-Size (asteval-0.9.32.tar.gz) = 57215 bytes
+BLAKE2s (asteval-0.9.33.tar.gz) = d2e7d8d48c45ff235d3c783386bd98cf5588ccd0abd457292d1b225f31c2b152
+SHA512 (asteval-0.9.33.tar.gz) = c93ca7d99f8603e96e692a9697e19dd73fb1980a993526db1ed56d584c9c7ef1300ae3940d975053e6a913c4cab0ba196bfb6ec33b3bf4d2ed0624c4b7a6fa57
+Size (asteval-0.9.33.tar.gz) = 57211 bytes
