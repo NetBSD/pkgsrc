@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/20 04:55:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/05/24 15:15:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -624,6 +624,24 @@ ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_unused_imports.pyo
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_remove_imports.py
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_remove_imports.pyc
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_remove_imports.pyo
+${PYSITELIB}/libcst/display/__init__.py
+${PYSITELIB}/libcst/display/__init__.pyc
+${PYSITELIB}/libcst/display/__init__.pyo
+${PYSITELIB}/libcst/display/graphviz.py
+${PYSITELIB}/libcst/display/graphviz.pyc
+${PYSITELIB}/libcst/display/graphviz.pyo
+${PYSITELIB}/libcst/display/tests/__init__.py
+${PYSITELIB}/libcst/display/tests/__init__.pyc
+${PYSITELIB}/libcst/display/tests/__init__.pyo
+${PYSITELIB}/libcst/display/tests/test_dump_graphviz.py
+${PYSITELIB}/libcst/display/tests/test_dump_graphviz.pyc
+${PYSITELIB}/libcst/display/tests/test_dump_graphviz.pyo
+${PYSITELIB}/libcst/display/tests/test_dump_text.py
+${PYSITELIB}/libcst/display/tests/test_dump_text.pyc
+${PYSITELIB}/libcst/display/tests/test_dump_text.pyo
+${PYSITELIB}/libcst/display/text.py
+${PYSITELIB}/libcst/display/text.pyc
+${PYSITELIB}/libcst/display/text.pyo
 ${PYSITELIB}/libcst/helpers/__init__.py
 ${PYSITELIB}/libcst/helpers/__init__.pyc
 ${PYSITELIB}/libcst/helpers/__init__.pyo
@@ -639,6 +657,9 @@ ${PYSITELIB}/libcst/helpers/expression.pyo
 ${PYSITELIB}/libcst/helpers/module.py
 ${PYSITELIB}/libcst/helpers/module.pyc
 ${PYSITELIB}/libcst/helpers/module.pyo
+${PYSITELIB}/libcst/helpers/node_fields.py
+${PYSITELIB}/libcst/helpers/node_fields.pyc
+${PYSITELIB}/libcst/helpers/node_fields.pyo
 ${PYSITELIB}/libcst/helpers/paths.py
 ${PYSITELIB}/libcst/helpers/paths.pyc
 ${PYSITELIB}/libcst/helpers/paths.pyo
@@ -651,6 +672,9 @@ ${PYSITELIB}/libcst/helpers/tests/test_expression.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_module.py
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyo
+${PYSITELIB}/libcst/helpers/tests/test_node_fields.py
+${PYSITELIB}/libcst/helpers/tests/test_node_fields.pyc
+${PYSITELIB}/libcst/helpers/tests/test_node_fields.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_paths.py
 ${PYSITELIB}/libcst/helpers/tests/test_paths.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_paths.pyo
@@ -832,9 +856,6 @@ ${PYSITELIB}/libcst/tests/test_roundtrip.pyo
 ${PYSITELIB}/libcst/tests/test_tabs.py
 ${PYSITELIB}/libcst/tests/test_tabs.pyc
 ${PYSITELIB}/libcst/tests/test_tabs.pyo
-${PYSITELIB}/libcst/tests/test_tool.py
-${PYSITELIB}/libcst/tests/test_tool.pyc
-${PYSITELIB}/libcst/tests/test_tool.pyo
 ${PYSITELIB}/libcst/tests/test_type_enforce.py
 ${PYSITELIB}/libcst/tests/test_type_enforce.pyc
 ${PYSITELIB}/libcst/tests/test_type_enforce.pyo

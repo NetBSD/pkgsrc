@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/04/09 16:41:06 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/05/24 15:15:44 adam Exp $
 
 BLAKE2s (aho-corasick-1.0.4.crate) = 861964cb94973afae58d36b63b9eb923b60aa3ab9962b118a756988cf05e0f77
 SHA512 (aho-corasick-1.0.4.crate) = 7cb8feb3289a508b1345b3cc04b59f2f730b80f561b17c7605ce23bf92780b5b3714ec84f5e3c5f4ba0c3abd47ac44fd0064a8bf4c5a7d00bd580774c6a3aee8
@@ -126,9 +126,9 @@ Size (lazy_static-1.4.0.crate) = 10443 bytes
 BLAKE2s (libc-0.2.149.crate) = 48efe3c00a9d8d822876a0587ac2a8bd98a30e80f340bed8b21fb8880c371875
 SHA512 (libc-0.2.149.crate) = 0def64d400d473d6eed30e985522d36801ee6472b15f90e74dc4592e0a8ffbaf30b731be280de52b30255cf60aeca8efe817b67049227dc7000c807e007d7289
 Size (libc-0.2.149.crate) = 715592 bytes
-BLAKE2s (libcst-1.3.1.tar.gz) = d5553130074b8acee8f9f8ef43d5a7433a6347415f62797d19bd1ed74fa5966e
-SHA512 (libcst-1.3.1.tar.gz) = c5ac467bab0ff2808db4510620444cb7705d1af88f0e3f41c43c9ab493206d58561ca2ffb9ee98f14286ee182b4271103d9ca3c3935fef5a8f8dcf60dfae5b50
-Size (libcst-1.3.1.tar.gz) = 765034 bytes
+BLAKE2s (libcst-1.4.0.tar.gz) = dec9840ebb5b30b34cd6d0084a442f881c722d48d65e39cb0cef9ddad5eaec62
+SHA512 (libcst-1.4.0.tar.gz) = 4f83f072d5adf120be80713b9553261fcd40842fdca4eb29a5d2beb2d6581f02d7c7eb77770845f183860b23f91482907df847e276d385f19e802088568eadce
+Size (libcst-1.4.0.tar.gz) = 771364 bytes
 BLAKE2s (linux-raw-sys-0.4.10.crate) = dbe24409f75c8efc3a24d0d8605f8da3a4f54465bc1abc3f3eb585d0b99f125c
 SHA512 (linux-raw-sys-0.4.10.crate) = 107f61add087bff55869798d5c71bc6ac9ecb27a603d8f9071b856189de8b7b0a7f9243fa1433700f52a0c3020eff5604dbf6e0653109d0dd277b98ab45fae21
 Size (linux-raw-sys-0.4.10.crate) = 1407767 bytes
