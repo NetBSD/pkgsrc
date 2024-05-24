@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/04/26 20:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/24 07:58:52 adam Exp $
 
-DISTNAME=	tortoise_orm-0.20.1
+DISTNAME=	tortoise_orm-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tortoise-orm/}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-pypika-tortoise>=0.1.6:../../databases/py-pypika-tortoi
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.4:../../time/py-pytz
 # accel
 DEPENDS+=	${PYPKGPREFIX}-ciso8601>=2.1.2:../../time/py-ciso8601
+DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.14.0:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
