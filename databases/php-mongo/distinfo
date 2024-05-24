@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/05/24 13:01:44 mef Exp $
 
-BLAKE2s (php-mongo/mongo-1.6.14.tgz) = a868c3fc94746cb31d4d5cb08a3e6218647dca60840da65009c05befd8835b2d
-SHA512 (php-mongo/mongo-1.6.14.tgz) = 7c87e148394085e90f091a6abd3e66a02620d7990098c318b97ee333751668f77f8b45ed5d0fb9806b8169b603998f8306a55a7c607773742fc2c93076f88764
-Size (php-mongo/mongo-1.6.14.tgz) = 210095 bytes
+BLAKE2s (php-mongo/mongo-1.6.16.tgz) = 1ab52ced9d1df99ad410c134818989983d0c90a336a58362449c6f0dc7d5dd31
+SHA512 (php-mongo/mongo-1.6.16.tgz) = 8cba101958fff31c766a41000de04e97235821494b88893521ac832f7c1e2c3eab8956f2da43e5c75cb06e2c74485b539dd28dcc2fdcffb79567b1ec6d6d0be4
+Size (php-mongo/mongo-1.6.16.tgz) = 210341 bytes
