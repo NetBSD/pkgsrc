@@ -1,0 +1,3 @@
+Extremely thin and easy-to-install Python bindings to de/compression algorithms
+in Rust. Allows for using algorithms such as Snappy, without any system or
+other python dependencies.
