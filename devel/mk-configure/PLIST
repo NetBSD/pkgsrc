@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/05/23 10:30:56 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/05/24 14:31:05 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -170,11 +170,11 @@ share/examples/mk-configure/dictd/libcommon/Makefile
 share/examples/mk-configure/dictd/libcommon/iswalnum.c
 share/examples/mk-configure/dictd/libcommon/str.c
 share/examples/mk-configure/dictd/libdz/Makefile
-share/examples/mk-configure/dictd/libdz/dz_export.sym
 share/examples/mk-configure/dictd/libdz/dz.c
+share/examples/mk-configure/dictd/libdz/dz_export.sym
 share/examples/mk-configure/dictd/libmaa/Makefile
-share/examples/mk-configure/dictd/libmaa/maa_export.sym
 share/examples/mk-configure/dictd/libmaa/log.c
+share/examples/mk-configure/dictd/libmaa/maa_export.sym
 share/examples/mk-configure/dictd/libmaa/prime.c
 share/examples/mk-configure/dictd/libmaa/set.c
 share/examples/mk-configure/dictd/test.mk
