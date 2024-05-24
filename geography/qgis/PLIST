@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/05/12 13:47:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/05/24 10:05:36 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_mapserver
@@ -2486,6 +2486,7 @@ share/qgis/i18n/qgis_ja.qm
 share/qgis/i18n/qgis_ko.qm
 share/qgis/i18n/qgis_ky.qm
 share/qgis/i18n/qgis_lt.qm
+share/qgis/i18n/qgis_lv.qm
 share/qgis/i18n/qgis_nb.qm
 share/qgis/i18n/qgis_nl.qm
 share/qgis/i18n/qgis_pl.qm
