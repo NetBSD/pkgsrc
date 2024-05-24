@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.133 2024/04/15 16:43:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.134 2024/05/24 04:48:54 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -693,6 +693,7 @@ share/doc/sqlite3/releaselog/3_45_0.html
 share/doc/sqlite3/releaselog/3_45_1.html
 share/doc/sqlite3/releaselog/3_45_2.html
 share/doc/sqlite3/releaselog/3_45_3.html
+share/doc/sqlite3/releaselog/3_46_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -828,6 +829,7 @@ share/doc/sqlite3/session/objlist.html
 share/doc/sqlite3/session/rebaser.html
 share/doc/sqlite3/session/session.html
 share/doc/sqlite3/session/sqlite3changegroup_add.html
+share/doc/sqlite3/session/sqlite3changegroup_add_change.html
 share/doc/sqlite3/session/sqlite3changegroup_add_strm.html
 share/doc/sqlite3/session/sqlite3changegroup_delete.html
 share/doc/sqlite3/session/sqlite3changegroup_new.html
@@ -974,6 +976,7 @@ share/doc/sqlite3/vtablist.html
 share/doc/sqlite3/wal.html
 share/doc/sqlite3/walformat.html
 share/doc/sqlite3/whentouse.html
+share/doc/sqlite3/whybytecode.html
 share/doc/sqlite3/whyc.html
 share/doc/sqlite3/whynotgit.html
 share/doc/sqlite3/windowfunctions.html
