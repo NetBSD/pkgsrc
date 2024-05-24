@@ -1,29 +1,22 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/19 10:50:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/05/24 15:09:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/emoji/__init__.py
 ${PYSITELIB}/emoji/__init__.pyc
-${PYSITELIB}/emoji/__init__.pyi
 ${PYSITELIB}/emoji/__init__.pyo
 ${PYSITELIB}/emoji/core.py
 ${PYSITELIB}/emoji/core.pyc
-${PYSITELIB}/emoji/core.pyi
 ${PYSITELIB}/emoji/core.pyo
 ${PYSITELIB}/emoji/py.typed
 ${PYSITELIB}/emoji/tokenizer.py
 ${PYSITELIB}/emoji/tokenizer.pyc
-${PYSITELIB}/emoji/tokenizer.pyi
 ${PYSITELIB}/emoji/tokenizer.pyo
 ${PYSITELIB}/emoji/unicode_codes/__init__.py
 ${PYSITELIB}/emoji/unicode_codes/__init__.pyc
-${PYSITELIB}/emoji/unicode_codes/__init__.pyi
 ${PYSITELIB}/emoji/unicode_codes/__init__.pyo
 ${PYSITELIB}/emoji/unicode_codes/data_dict.py
 ${PYSITELIB}/emoji/unicode_codes/data_dict.pyc
-${PYSITELIB}/emoji/unicode_codes/data_dict.pyi
 ${PYSITELIB}/emoji/unicode_codes/data_dict.pyo
-${PYSITELIB}/emoji/unicode_codes/py.typed
