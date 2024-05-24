@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/03/05 17:03:45 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/05/24 15:06:46 adam Exp $
 
-BLAKE2s (aiosmtpd-1.4.5.tar.gz) = d89a9b2887eb0124d7ddbe842b08a7afcd10968f42f2fe4856a6dfde35197ea6
-SHA512 (aiosmtpd-1.4.5.tar.gz) = c9507e25b5aeec442d299e13624ce00777ecf8089eee230b9cb9f92c18816cef890968c25144a56b95fd9b063b1440921841a16add624d717b8f6378d55c85a4
-Size (aiosmtpd-1.4.5.tar.gz) = 152668 bytes
+BLAKE2s (aiosmtpd-1.4.6.tar.gz) = e43977dfdd8dc77ec361106bc659721bda6578db08c0a1d663f3afb11aa1713e
+SHA512 (aiosmtpd-1.4.6.tar.gz) = 5aceaa03d6a00c3c99cd2d53b9320aa3a044d0ee09c22bd4fadf3ee56ea0e307120d1fe4cc798d7a04d53059da674f6dba816a6a6ed7326a510f6caf074e8f90
+Size (aiosmtpd-1.4.6.tar.gz) = 152775 bytes
