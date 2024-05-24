@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/19 19:57:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/24 16:49:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -31,6 +31,9 @@ ${PYSITELIB}/elastic_transport/_node/_base_async.pyo
 ${PYSITELIB}/elastic_transport/_node/_http_aiohttp.py
 ${PYSITELIB}/elastic_transport/_node/_http_aiohttp.pyc
 ${PYSITELIB}/elastic_transport/_node/_http_aiohttp.pyo
+${PYSITELIB}/elastic_transport/_node/_http_httpx.py
+${PYSITELIB}/elastic_transport/_node/_http_httpx.pyc
+${PYSITELIB}/elastic_transport/_node/_http_httpx.pyo
 ${PYSITELIB}/elastic_transport/_node/_http_requests.py
 ${PYSITELIB}/elastic_transport/_node/_http_requests.pyc
 ${PYSITELIB}/elastic_transport/_node/_http_requests.pyo
@@ -43,6 +46,9 @@ ${PYSITELIB}/elastic_transport/_node/_urllib3_chain_certs.pyo
 ${PYSITELIB}/elastic_transport/_node_pool.py
 ${PYSITELIB}/elastic_transport/_node_pool.pyc
 ${PYSITELIB}/elastic_transport/_node_pool.pyo
+${PYSITELIB}/elastic_transport/_otel.py
+${PYSITELIB}/elastic_transport/_otel.pyc
+${PYSITELIB}/elastic_transport/_otel.pyo
 ${PYSITELIB}/elastic_transport/_response.py
 ${PYSITELIB}/elastic_transport/_response.pyc
 ${PYSITELIB}/elastic_transport/_response.pyo
