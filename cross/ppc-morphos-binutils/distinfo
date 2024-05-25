@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/03/27 15:52:32 js Exp $
+$NetBSD: distinfo,v 1.8 2024/05/25 08:56:11 js Exp $
 
 BLAKE2s (sdk-source-20230510.tar.xz) = 777febe845ddbf50cbaec55c2d198085996a5064bc3c4128f44dfe79355d765e
 SHA512 (sdk-source-20230510.tar.xz) = badf3e678d514713ece14779dcce5fe78f3a849c73718e05b3317c1c766fb9879368c8fd58f9441c905023a660e893cf0eec405d2c133e4c6d11fe39acc50418
 Size (sdk-source-20230510.tar.xz) = 588551012 bytes
+SHA1 (patch-bfd_sysdep.h) = 6dacf9e17529fd74c90a07b4531429fa3e33feb3
