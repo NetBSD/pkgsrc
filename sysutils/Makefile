@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1123 2024/05/25 01:35:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1124 2024/05/25 01:40:38 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -398,6 +398,7 @@ SUBDIR+=	lambd
 SUBDIR+=	lastfss
 SUBDIR+=	lavaps
 SUBDIR+=	lf
+SUBDIR+=	libayatana-indicator
 SUBDIR+=	libburn
 SUBDIR+=	libcap
 SUBDIR+=	libcpuid
