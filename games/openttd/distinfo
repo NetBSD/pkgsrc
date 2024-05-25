@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2024/04/28 20:01:49 triaxx Exp $
+$NetBSD: distinfo,v 1.48 2024/05/25 12:59:17 triaxx Exp $
 
-BLAKE2s (openttd-14.0-source.tar.xz) = 1008115055bd7f2f0e6a82e421c3137474974e9587e8c30d55a80a315142dbd6
-SHA512 (openttd-14.0-source.tar.xz) = 8c669f5f8578df116166587b85f7f94c4409876099590f5ee4a12b92cbd0e0f50002b8319df635a14b7cbf3e6308b2905587137a8127d0814146025e174925c4
-Size (openttd-14.0-source.tar.xz) = 7997536 bytes
+BLAKE2s (openttd-14.1-source.tar.xz) = 0655b775cd28c646acf45a8afe7d96f0553e28998756edfa16c664d0012d1552
+SHA512 (openttd-14.1-source.tar.xz) = 194135cc01457d9ed069c09d8961ad3de681bc9936533ca81ff23099f394bb9a83ef84a0852e85525e258f6149e14fd41cfc5f8e683c0643515005c42fb77e3b
+Size (openttd-14.1-source.tar.xz) = 8015032 bytes
 SHA1 (patch-cmake_InstallAndPackage.cmake) = c7af3d74c1d6c22989242a75b2108f6d28cc0164
 SHA1 (patch-cmake_PackageBundle.cmake) = a22c8080c03ac8885beac3fc4b2b1c2f94eafe6b
 SHA1 (patch-src_core_alloc__func.hpp) = 9c5a855316e3262c51c1b4c836de760d53abb759
