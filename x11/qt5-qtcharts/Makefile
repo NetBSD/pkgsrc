@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2024/04/06 08:07:09 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/05/25 14:21:19 adam Exp $
 
 DISTNAME=	qtcharts-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtcharts-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for charts framework
 
 BUILD_TARGET=		sub-src
