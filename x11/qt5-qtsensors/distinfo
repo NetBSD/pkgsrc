@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2024/03/14 07:59:55 adam Exp $
+$NetBSD: distinfo,v 1.34 2024/05/25 14:21:21 adam Exp $
 
-BLAKE2s (qtsensors-everywhere-opensource-src-5.15.13.tar.xz) = 5e804aa91cc70547a2e6cb086f1216b817785b6cee40d0170b3620bdbcfe889a
-SHA512 (qtsensors-everywhere-opensource-src-5.15.13.tar.xz) = d6bd4fe02625272786f8c0f384ecce7497eebc3d691deaf9a42b9b221e4905715c7adb4e56fc04487b39f950b34f2239e8902e6e7880bf793461e808d6c9d245
-Size (qtsensors-everywhere-opensource-src-5.15.13.tar.xz) = 2059796 bytes
+BLAKE2s (qtsensors-everywhere-opensource-src-5.15.14.tar.xz) = ee3b1de020be5ab9d8f2d1dfed67e15bb37f9eeb57954755966045f17b1653bf
+SHA512 (qtsensors-everywhere-opensource-src-5.15.14.tar.xz) = 777882f3bf3ddbfe053132f123c14590538fdf483479877779cfdd3dc242021d86aedc6484a453b67282f1ba4447c73e4f7a04bf3d4b741789b37e646ab67f35
+Size (qtsensors-everywhere-opensource-src-5.15.14.tar.xz) = 2051164 bytes

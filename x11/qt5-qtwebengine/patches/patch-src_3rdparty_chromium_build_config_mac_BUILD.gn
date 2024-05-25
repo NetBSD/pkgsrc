@@ -1,13 +1,16 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_mac_BUILD.gn,v 1.1 2023/04/12 19:24:06 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_mac_BUILD.gn,v 1.2 2024/05/25 14:21:23 adam Exp $
 
+Don't rebase -isysroot.
 Avoid -mmacosx-version-min.
 
---- src/3rdparty/chromium/build/config/mac/BUILD.gn.orig	2023-04-11 09:04:26.000000000 +0000
+--- src/3rdparty/chromium/build/config/mac/BUILD.gn.orig	2023-05-05 08:39:51.000000000 +0000
 +++ src/3rdparty/chromium/build/config/mac/BUILD.gn
-@@ -75,7 +75,6 @@ config("runtime_library") {
+@@ -73,9 +73,6 @@ config("compiler") {
+ # :runtime_library vs. :compiler.
+ config("runtime_library") {
    common_flags = [
-     "-isysroot",
-     rebase_path(sysroot, root_build_dir),
+-    "-isysroot",
+-    rebase_path(sysroot, root_build_dir),
 -    "-mmacosx-version-min=$mac_deployment_target",
    ]
  
