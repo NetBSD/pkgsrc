@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/03/18 18:56:40 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/05/25 14:26:41 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -347,6 +347,7 @@ share/highlight/plugins/outhtml_ansi_esc.lua
 share/highlight/plugins/outhtml_codefold.lua
 share/highlight/plugins/outhtml_copy_clipboard.lua
 share/highlight/plugins/outhtml_curly_brackets_matcher.lua
+share/highlight/plugins/outhtml_focus.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua
 share/highlight/plugins/outhtml_keyword_matcher.lua
 share/highlight/plugins/outhtml_ligature_fonts.lua
