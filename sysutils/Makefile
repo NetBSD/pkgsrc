@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1122 2024/05/23 02:55:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1123 2024/05/25 01:35:20 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -46,6 +46,7 @@ SUBDIR+=	attr
 SUBDIR+=	augeas
 SUBDIR+=	auto-admin
 SUBDIR+=	autorestic
+SUBDIR+=	ayatana-ido
 SUBDIR+=	b2sum
 SUBDIR+=	backuppc
 SUBDIR+=	bacula
