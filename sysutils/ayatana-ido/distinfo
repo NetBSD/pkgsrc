@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/25 01:32:29 gutteridge Exp $
+
+BLAKE2s (ayatana-ido-0.10.2.tar.gz) = 61744763097dfe7cb3e07880477c4489cd73296b3323e4c15f856b782f31bb2d
+SHA512 (ayatana-ido-0.10.2.tar.gz) = c4d143a93331984758755b3c8b2c5dc92a07bccf8994ebaa24688ceec52b32049677144045817686210594df961e49eee90ff0ede5905153950eb2a9d20605c5
+Size (ayatana-ido-0.10.2.tar.gz) = 137434 bytes
