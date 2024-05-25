@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3597 2024/05/25 01:49:46 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.3598 2024/05/25 08:47:09 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5654,3 +5654,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added sysutils/libayatana-indicator version 0.9.4 [gutteridge 2024-05-25]
 	Updated x11/xfce4-indicator-plugin to 2.4.2 [gutteridge 2024-05-25]
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb19 [gutteridge 2024-05-25]
+	Updated devel/mk-configure to 0.39.2 [cheusov 2024-05-25]
