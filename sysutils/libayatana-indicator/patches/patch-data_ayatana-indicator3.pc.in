@@ -1,0 +1,16 @@
+$NetBSD: patch-data_ayatana-indicator3.pc.in,v 1.1 2024/05/25 01:38:20 gutteridge Exp $
+
+Add missing -L argument to Libs.
+https://github.com/AyatanaIndicators/libayatana-indicator/pull/74
+
+--- data/ayatana-indicator3.pc.in.orig	2024-04-22 21:40:44.189702086 +0000
++++ data/ayatana-indicator3.pc.in
+@@ -8,7 +8,7 @@ iconsdir=@CMAKE_INSTALL_FULL_DATADIR@/@P
+ 
+ Cflags: -I${includedir}/libayatana-indicator3-0.@API_VERSION@
+ Requires: gtk+-3.0 libayatana-ido3-0.4
+-Libs: -layatana-indicator3
++Libs: -L${libdir} -layatana-indicator3
+ 
+ Name: libayatana-indicator3
+ Description: libayatana-indicator3.
