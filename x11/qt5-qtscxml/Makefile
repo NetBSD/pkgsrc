@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/04/06 08:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/05/25 14:21:21 adam Exp $
 
 DISTNAME=	qtscxml-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtscxml-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for scxml framework
 
 BUILD_TARGET=		sub-src

@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.pri,v 1.2 2023/06/08 20:38:05 markd Exp $
+$NetBSD: patch-configure.pri,v 1.3 2024/05/25 14:21:23 adam Exp $
 
 Always build on Darwin.
 Build with python 3
 
---- configure.pri.orig	2022-03-30 09:48:18.000000000 +0000
+--- configure.pri.orig	2023-05-05 08:39:51.000000000 +0000
 +++ configure.pri
 @@ -7,20 +7,7 @@ QTWEBENGINE_SOURCE_TREE = $$PWD
  equals(QMAKE_HOST.os, Windows): EXE_SUFFIX = .exe
@@ -55,7 +55,7 @@ Build with python 3
      $${1}.location = $$clean_path($$python)
      export($${1}.location)
      $${1}.cache += location
-@@ -446,24 +433,6 @@ defineTest(qtwebengine_isWindowsPlatform
+@@ -442,28 +429,6 @@ defineTest(qtwebengine_isWindowsPlatform
  }
  
  defineTest(qtwebengine_isMacOsPlatformSupported) {
@@ -75,6 +75,10 @@ Build with python 3
 -    }
 -    !qtwebengine_isMinOSXSDKVersion(10, 13): {
 -        qtwebengine_platformError("requires a macOS SDK version of 10.13 or newer. Current version is $${WEBENGINE_OSX_SDK_PRODUCT_VERSION}.")
+-        return(false)
+-    }
+-    CONFIG(debug, debug|release):isUniversal(){
+-        qtwebengine_platformError("Universal builds can not be done with debug configuration due to large binary size.")
 -        return(false)
 -    }
      return(true)
