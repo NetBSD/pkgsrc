@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/05/23 14:13:17 gdt Exp $
+$NetBSD: distinfo,v 1.12 2024/05/25 00:12:47 gdt Exp $
 
-BLAKE2s (libgeotiff-1.7.2.tar.gz) = a3b5e7b1818dfa23a7fed7b4e90bd0969708c7a924713bdfad37c863e37c9b4a
-SHA512 (libgeotiff-1.7.2.tar.gz) = 11df4071394dfe865e9c70e560c60390a3a4f429f823a1dbd4e97ccd0dd07b02a3a71bd1f516d991571d3ba194d55ad071b5d5d8f98a8826f5325de64d32b2c9
-Size (libgeotiff-1.7.2.tar.gz) = 547522 bytes
+BLAKE2s (libgeotiff-1.7.3.tar.gz) = 647ed040ea3c73dda82fafecbaf7816eda8baca5dd8ccc659d419e52442c79d5
+SHA512 (libgeotiff-1.7.3.tar.gz) = a523d6117c7433fe37b7c0cdcba81698426cd4b084bcb35c7dacc9e87bfda1ab7a4c16a9aa64a69dedb78edc2f85e8032bf8b158411f50909603e04d13821cd3
+Size (libgeotiff-1.7.3.tar.gz) = 547548 bytes
