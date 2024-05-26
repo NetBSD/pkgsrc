@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:37:28 markd Exp $
+include/KF6/KIdleTime/KIdleTime
+include/KF6/KIdleTime/kidletime.h
+include/KF6/KIdleTime/kidletime_export.h
+include/KF6/KIdleTime/kidletime_version.h
+include/KF6/KIdleTime/private/kabstractidletimepoller_p.h
+lib/cmake/KF6IdleTime/KF6IdleTimeConfig.cmake
+lib/cmake/KF6IdleTime/KF6IdleTimeConfigVersion.cmake
+lib/cmake/KF6IdleTime/KF6IdleTimeTargets-noconfig.cmake
+lib/cmake/KF6IdleTime/KF6IdleTimeTargets.cmake
+lib/libKF6IdleTime.so
+lib/libKF6IdleTime.so.6
+lib/libKF6IdleTime.so.${PKGVERSION}
+qt6/plugins/kf6/org.kde.kidletime.platforms/KF6IdleTimeWaylandPlugin.so
+qt6/plugins/kf6/org.kde.kidletime.platforms/KF6IdleTimeXcbPlugin0.so
+qt6/plugins/kf6/org.kde.kidletime.platforms/KF6IdleTimeXcbPlugin1.so
+share/qlogging-categories6/kidletime.categories
+share/qlogging-categories6/kidletime.renamecategories
