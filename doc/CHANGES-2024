@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3627 2024/05/26 15:50:29 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3628 2024/05/26 15:52:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5753,3 +5753,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-rex-core to 0.1.32 [taca 2024-05-26]
 	Updated security/ruby-rex-random_identifier to 0.1.12 [taca 2024-05-26]
 	Updated textproc/ruby-asciidoctor to 2.0.23 [taca 2024-05-26]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.7.13 [taca 2024-05-26]
