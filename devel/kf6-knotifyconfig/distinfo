@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:48:51 markd Exp $
+
+BLAKE2s (knotifyconfig-6.2.0.tar.xz) = e133e380e1011466f5628cb8bb6cb06e8d085de58b288dfa6efd17a6d121eb47
+SHA512 (knotifyconfig-6.2.0.tar.xz) = 858ae9f7b76e24981c380f82ecac9372462c3d80127959c295ac95a0934b8ffc3e79fb44957704328f5a1ffeb516c65ede78446c3d20fe02af4545b8010e0f1e
+Size (knotifyconfig-6.2.0.tar.xz) = 2385456 bytes
