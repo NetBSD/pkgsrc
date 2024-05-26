@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:11:07 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/05/26 10:18:29 cheusov Exp $
 
-BLAKE2s (pkg_online-0.13.1.tar.gz) = 5e38fccce170f3ddbcf361571c1fbd3853b03400966c96aa8092636d3865ad22
-SHA512 (pkg_online-0.13.1.tar.gz) = d037ba19e5d06ff47cbcccf128216c34057e849562b97b2b52327f96b790ee4b249b71fa87b669886b279e7307ab98d4432f622722645ebd275634bf71fd73fb
-Size (pkg_online-0.13.1.tar.gz) = 12211 bytes
+BLAKE2s (pkg_online-0.13.2.tar.gz) = d688f53d3605c346f6816e751626144024d6df47d6caee63ef0d6f5ce4a7b884
+SHA512 (pkg_online-0.13.2.tar.gz) = 60ea6ca3ebef445abd7411ddcff294ff73d9fcb0eebae2e7057e89d3283cd153f48174917ebc970d682009abda44492b1b53cb6603ac843bbe5e56f3445e5018
+Size (pkg_online-0.13.2.tar.gz) = 12240 bytes
