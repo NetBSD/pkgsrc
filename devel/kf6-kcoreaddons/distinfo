@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:26:13 markd Exp $
+
+BLAKE2s (kcoreaddons-6.2.0.tar.xz) = 0f99c257e75ff87e79a074b81ea81695d634ba2efdb3ee303482f76bf8c60e55
+SHA512 (kcoreaddons-6.2.0.tar.xz) = f4134611de25c2e30f22d6d807ea16e83211a856255265fc94b9e767053475fe500f027be720283b85b8d10218443e528f249d4d95cefabb45b30177223810cc
+Size (kcoreaddons-6.2.0.tar.xz) = 2565752 bytes
+SHA1 (patch-src_lib_caching_ksdclock.cpp) = 1d52b3881e415b2ad8a165ac21e9f295e353e69c
+SHA1 (patch-src_lib_io_kautosavefile.cpp) = b50bd37139febd7e82f3087241107171161dec2a
+SHA1 (patch-src_lib_io_kfilesystemtype.cpp) = 67da0515cbcdad0d59c34a0ee922bf0af883377c
