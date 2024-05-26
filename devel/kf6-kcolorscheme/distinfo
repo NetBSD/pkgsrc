@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:19:45 markd Exp $
+
+BLAKE2s (kcolorscheme-6.2.0.tar.xz) = f71db7309edfa916610a4b7e817d0dbc9ddb7d7aff78a202f4a64651df9cd3fe
+SHA512 (kcolorscheme-6.2.0.tar.xz) = 6dbf8ae7704e2d8507f0ea3d7a4eb8f696d0723361f73c34c064a96f3047f00aa787fee259d755abf99f6ad752709e1abfb0cfbafabb20edc7dab53b02e77309
+Size (kcolorscheme-6.2.0.tar.xz) = 43864 bytes
