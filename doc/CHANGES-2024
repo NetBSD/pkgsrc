@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3610 2024/05/26 14:35:50 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3611 2024/05/26 14:38:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5736,3 +5736,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added x11/kf6-kxmlgui version 6.2.0 [markd 2024-05-26]
 	Added x11/kf6-qqc2-desktop-style version 6.2.0 [markd 2024-05-26]
 	Updated databases/ruby-sqlite3 to 2.0.2 [taca 2024-05-26]
+	Updated devel/hoe to 4.2.1 [taca 2024-05-26]
