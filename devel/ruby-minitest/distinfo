@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2024/03/24 14:11:12 taca Exp $
+$NetBSD: distinfo,v 1.39 2024/05/26 14:48:41 taca Exp $
 
-BLAKE2s (minitest-5.22.3.gem) = e37e6a010dafa16299c78e18d591d0459242638cf0241bdf43363488305635f0
-SHA512 (minitest-5.22.3.gem) = 11b5279cbedc1b4c6dc3997530f82a35b17a2fef258140332a21edcc0f880a4013514d811207dd8b79fe094e25fbfc5f8d2481b4313ec7dcdd5d8c70af9cf5bd
-Size (minitest-5.22.3.gem) = 99328 bytes
+BLAKE2s (minitest-5.23.1.gem) = 79c7e5be3a3021048565d74230d269e4a8be6ffd6511e246ea1bc73901898089
+SHA512 (minitest-5.23.1.gem) = 5a235855f6c5c8af957c57598fb0b5febbefbdf57e881f1ded6a58fd6aeb974b9e14fd37b626b184bdb537a332c6f86842d474beab60abed7d0f8562cf4b50d2
+Size (minitest-5.23.1.gem) = 100352 bytes
