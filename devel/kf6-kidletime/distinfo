@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:37:28 markd Exp $
+
+BLAKE2s (kidletime-6.2.0.tar.xz) = a3325e20b1746b9acdd39975b8986ea29beb8842e13966c18632475cafcc5dfd
+SHA512 (kidletime-6.2.0.tar.xz) = ae16fbca9e7e050d28d7ca068ed6c17365e2444456e669e8b96850f613dc5382b1a1fb5963fb3a585e57a3c361b446572892179970c292917c15b5120cd06269
+Size (kidletime-6.2.0.tar.xz) = 30712 bytes
