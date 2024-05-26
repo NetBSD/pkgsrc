@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1792 2024/05/19 15:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.1793 2024/05/26 13:20:58 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -145,6 +145,7 @@ SUBDIR+=	h2o
 SUBDIR+=	hackernews-tui
 SUBDIR+=	haskell-cgi
 SUBDIR+=	heel
+SUBDIR+=	kf6-syndication
 SUBDIR+=	hiawatha
 SUBDIR+=	horde
 SUBDIR+=	hs-HTTP
