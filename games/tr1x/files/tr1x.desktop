@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=TR1X
+Comment=Open source re-implementation of Tomb Raider
+Icon=tr1x
+Exec=tr1x
+Terminal=false
+Categories=Game;ActionGame;
