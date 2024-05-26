@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:33:13 markd Exp $
+
+BLAKE2s (kdoctools-6.2.0.tar.xz) = 9e3d3e01107d086fa362996b89d97e12cacbedbc318cbafc5519eaadb7141450
+SHA512 (kdoctools-6.2.0.tar.xz) = 8bdc956301d6ea0c3095c5170040b43d33fee4e9fcde1a4b907d7eb9baa7a5100b8c37287d181b331488926d2370a31ed6c51c4e5e3428a02a2a13e7a213d5fd
+Size (kdoctools-6.2.0.tar.xz) = 456128 bytes
