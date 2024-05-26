@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1036 2024/05/26 13:29:42 markd Exp $
+# $NetBSD: Makefile,v 1.1037 2024/05/26 13:31:42 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -131,6 +131,7 @@ SUBDIR+=	kf6-frameworkintegration
 SUBDIR+=	kf6-kconfigwidgets
 SUBDIR+=	kf6-kded
 SUBDIR+=	kf6-kglobalaccel
+SUBDIR+=	kf6-kguiaddons
 SUBDIR+=	kglobalaccel
 SUBDIR+=	kguiaddons
 SUBDIR+=	kinit
