@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4299 2024/05/26 12:06:59 markd Exp $
+# $NetBSD: Makefile,v 1.4300 2024/05/26 12:09:29 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -861,6 +861,7 @@ SUBDIR+=	kf6-kpeople
 SUBDIR+=	kf6-kpty
 SUBDIR+=	kf6-krunner
 SUBDIR+=	kf6-kservice
+SUBDIR+=	kf6-ktexteditor
 SUBDIR+=	ki18n
 SUBDIR+=	kidletime
 SUBDIR+=	kio
