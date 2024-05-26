@@ -8,5 +8,6 @@ bin/kramdown-rfc-cache-subseries-bibxml @PREFIX@/bin/kramdown-rfc-cache-subserie
 bin/kramdown-rfc-clean-svg-ids @PREFIX@/bin/kramdown-rfc-clean-svg-ids@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-markdown @PREFIX@/bin/kramdown-rfc-extract-markdown@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-sourcecode @PREFIX@/bin/kramdown-rfc-extract-sourcecode@RUBY_SUFFIX@
+bin/kramdown-rfc-lsr @PREFIX@/bin/kramdown-rfc-lsr@RUBY_SUFFIX@
 bin/kramdown-rfc2629 @PREFIX@/bin/kramdown-rfc2629@RUBY_SUFFIX@
 bin/kramdown-rfc @PREFIX@/bin/kramdown-rfc@RUBY_SUFFIX@
