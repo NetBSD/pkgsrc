@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2023/02/18 22:54:35 fcambus Exp $
+$NetBSD: distinfo,v 1.21 2024/05/26 07:05:45 adam Exp $
 
-BLAKE2s (diffutils-3.9.tar.xz) = fa5b6842550ab43800a5506223e6c3e37258b0837ac40c685fa2ea58ad397164
-SHA512 (diffutils-3.9.tar.xz) = d43280cb1cb2615a8867d971467eb9a3fa037fe9a411028068036f733dab42b10d42767093cea4de71e62b2659a3ec73bd7d1a8f251befd49587e32802682d0f
-Size (diffutils-3.9.tar.xz) = 1587916 bytes
+BLAKE2s (diffutils-3.10.tar.xz) = c191e4b33c082bc3486dd326ab52cddc676b8e4164dc6d9a99ec673932917a33
+SHA512 (diffutils-3.10.tar.xz) = 219d2c815a120690c6589846271e43aee5c96c61a7ee4abbef97dfcdb3d6416652ed494b417de0ab6688c4322540d48be63b5e617beb6d20530b5d55d723ccbb
+Size (diffutils-3.10.tar.xz) = 1624240 bytes
 SHA1 (patch-po_Makefile.in.in) = 0e7ed6eb85613f272e43a911a35a8b9cfbfb0536
 SHA1 (patch-src_Makefile.in) = ad797a73086d177d53207312a7219f78178895e1
