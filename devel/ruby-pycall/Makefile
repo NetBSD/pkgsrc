@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/09/03 16:18:21 taca Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/26 14:52:24 taca Exp $
 
-DISTNAME=	pycall-1.5.1
+DISTNAME=	pycall-1.5.2
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/mrkn/pycall.rb
