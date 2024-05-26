@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 13:04:54 markd Exp $
+
+BLAKE2s (kcompletion-6.2.0.tar.xz) = eeb205bcbedb30087a1fad0a4ca798086a11a26b9c9b80d025434be7b5c8ead0
+SHA512 (kcompletion-6.2.0.tar.xz) = d56f452309daa527f2abeb548800f3589a7c9cebafef35ee21e49b7e905958e67f5ee009310ad9d0dbc5c0fbd040ceca7a7a0ae8a627e4fc957c44a12a2561f9
+Size (kcompletion-6.2.0.tar.xz) = 2323864 bytes
