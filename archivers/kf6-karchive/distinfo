@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:11:01 markd Exp $
+
+BLAKE2s (karchive-6.2.0.tar.xz) = 705ff302c9eaa54fcb620a460b02802eb2148b1909660fcf5298b2ac584d852e
+SHA512 (karchive-6.2.0.tar.xz) = 80af1f2374d32045c428a17ce82f8953a1bc9a1777a70810836c28ab12ecca5ec5d1ee2e556af7a273f45589236a03eedf35b728e2dfb5beec6505f3ce602bbf
+Size (karchive-6.2.0.tar.xz) = 1032308 bytes

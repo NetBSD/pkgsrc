@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2024/05/24 17:30:16 adam Exp $
+# $NetBSD: Makefile,v 1.213 2024/05/26 11:11:00 markd Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -50,6 +50,7 @@ SUBDIR+=	hs-zlib
 SUBDIR+=	innoextract
 SUBDIR+=	jamjar
 SUBDIR+=	karchive
+SUBDIR+=	kf6-karchive
 SUBDIR+=	lbrate
 SUBDIR+=	lcab
 SUBDIR+=	lha
