@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 11:35:31 markd Exp $
+
+BLAKE2s (ki18n-6.2.0.tar.xz) = 3338df1e9588e4cf826b9cf185257742a440f2a3f4dbfd16a80fd21833fa480e
+SHA512 (ki18n-6.2.0.tar.xz) = 92eb1e0bc705b26dbe9acc5ad9f6c56909e5acc01cb71a86edf204802afed4c35af5c117754dd7b0ffe7390557d3a3f541c275d171a9b46ca750ba51a6b2c5b2
+Size (ki18n-6.2.0.tar.xz) = 3106892 bytes
