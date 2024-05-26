@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.53 2023/11/30 00:21:12 taca Exp $
+# $NetBSD: gem.mk,v 1.54 2024/05/26 00:15:32 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -333,6 +333,7 @@ _gem-build-install-root:
 	@${STEP_MSG} "Installing gem into installation root"
 	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
 		${RUBYGEM} install --backtrace ${RUBYGEM_OPTIONS} ${_RUBYGEM_OPTIONS}
+	${RUN} cd ${RUBYGEM_INSTALL_ROOT}${PREFIX}/${GEM_HOME} && rmdir * 2>/dev/null || ${TRUE}
 
 # The ``gem'' command doesn't exit with a non-zero result even if the
 # install of the gem failed, so we do the check and return the proper exit
