@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/05 16:52:47 taca Exp $
+$NetBSD: distinfo,v 1.9 2024/05/26 15:27:54 taca Exp $
 
-BLAKE2s (simpleidn-0.2.2.gem) = e9e022c9c6e6d0a759f938b33493914f03982adc63e93339eb296120cb9df75a
-SHA512 (simpleidn-0.2.2.gem) = 37f15f1a26ffe269ae4835e3f14a269a371b4efd27e43d45ac3d8c704545282552fbc7fc9c3e2b9141a4333d22e81a105b809ecc2099c67a4ed86144528be2eb
-Size (simpleidn-0.2.2.gem) = 140288 bytes
+BLAKE2s (simpleidn-0.2.3.gem) = 1160d3c5ed02a768496ed8ff2d89cfffa039dae7748df38bcb8284fc5a3f6be8
+SHA512 (simpleidn-0.2.3.gem) = 11f8bf47a2848169564a0d60df151a9a58e0d18c8edcf503d9af85e72410da32c903ec3e756b877865007749c6146d9e28bff5aaa8cc636867d9c13b41f503ba
+Size (simpleidn-0.2.3.gem) = 152576 bytes
