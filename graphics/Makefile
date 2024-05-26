@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1054 2024/05/26 12:22:47 markd Exp $
+# $NetBSD: Makefile,v 1.1055 2024/05/26 12:24:52 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -302,6 +302,7 @@ SUBDIR+=	kdiagram
 SUBDIR+=	kf6-kiconthemes
 SUBDIR+=	kf6-kimageformats
 SUBDIR+=	kf6-kplotting
+SUBDIR+=	kf6-ksvg
 SUBDIR+=	kgamma
 SUBDIR+=	kiconthemes
 SUBDIR+=	kimageannotator
