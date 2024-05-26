@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST,v 1.27 2023/09/10 13:08:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/05/26 14:35:16 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/sqlite3/sqlite3_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/API_CHANGES.md
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/ChangeLog.cvs
 ${GEM_LIBDIR}/FAQ.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/INSTALLATION.md
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/LICENSE-DEPENDENCIES
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/dependencies.yml
 ${GEM_LIBDIR}/ext/sqlite3/aggregator.c
@@ -28,6 +24,7 @@ ${GEM_LIBDIR}/ext/sqlite3/sqlite3.c
 ${GEM_LIBDIR}/ext/sqlite3/sqlite3_ruby.h
 ${GEM_LIBDIR}/ext/sqlite3/statement.c
 ${GEM_LIBDIR}/ext/sqlite3/statement.h
+${GEM_LIBDIR}/ext/sqlite3/timespec.h
 ${GEM_LIBDIR}/lib/sqlite3.rb
 ${GEM_LIBDIR}/lib/sqlite3/constants.rb
 ${GEM_LIBDIR}/lib/sqlite3/database.rb
@@ -36,27 +33,6 @@ ${GEM_LIBDIR}/lib/sqlite3/pragmas.rb
 ${GEM_LIBDIR}/lib/sqlite3/resultset.rb
 ${GEM_LIBDIR}/lib/sqlite3/sqlite3_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/sqlite3/statement.rb
-${GEM_LIBDIR}/lib/sqlite3/translator.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/test_backup.rb
-${GEM_LIBDIR}/test/test_collation.rb
-${GEM_LIBDIR}/test/test_database.rb
-${GEM_LIBDIR}/test/test_database_flags.rb
-${GEM_LIBDIR}/test/test_database_readonly.rb
-${GEM_LIBDIR}/test/test_database_readwrite.rb
-${GEM_LIBDIR}/test/test_deprecated.rb
-${GEM_LIBDIR}/test/test_encoding.rb
-${GEM_LIBDIR}/test/test_integration.rb
-${GEM_LIBDIR}/test/test_integration_aggregate.rb
-${GEM_LIBDIR}/test/test_integration_open_close.rb
-${GEM_LIBDIR}/test/test_integration_pending.rb
-${GEM_LIBDIR}/test/test_integration_resultset.rb
-${GEM_LIBDIR}/test/test_integration_statement.rb
-${GEM_LIBDIR}/test/test_pragmas.rb
-${GEM_LIBDIR}/test/test_result_set.rb
-${GEM_LIBDIR}/test/test_sqlite3.rb
-${GEM_LIBDIR}/test/test_statement.rb
-${GEM_LIBDIR}/test/test_statement_execute.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
