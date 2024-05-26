@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/14 14:10:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/26 15:38:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bcrypt_pbkdf_ext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
