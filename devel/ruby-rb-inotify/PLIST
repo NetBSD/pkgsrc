@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/16 14:03:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/26 14:54:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/test.yaml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/rb-inotify.rb
 ${GEM_LIBDIR}/lib/rb-inotify/errors.rb
 ${GEM_LIBDIR}/lib/rb-inotify/event.rb
