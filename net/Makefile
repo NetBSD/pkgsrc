@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1572 2024/05/12 12:42:14 pho Exp $
+# $NetBSD: Makefile,v 1.1573 2024/05/26 12:40:06 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -301,6 +301,7 @@ SUBDIR+=	kdenetwork-strigi-analyzers
 SUBDIR+=	kdnssd
 SUBDIR+=	kdsoap
 SUBDIR+=	kea
+SUBDIR+=	kf6-kdnssd
 SUBDIR+=	kget
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
