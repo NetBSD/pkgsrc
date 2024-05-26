@@ -1,0 +1,18 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/05/26 12:52:35 markd Exp $
+
+Avoid inotify on SunOS.
+
+--- CMakeLists.txt.orig	2022-04-02 10:13:54.000000000 +0000
++++ CMakeLists.txt
+@@ -82,7 +82,11 @@ add_definitions(-DKF_DISABLE_DEPRECATED_
+ find_package(Inotify)
+ set_package_properties(Inotify PROPERTIES
+     PURPOSE "Filesystem alteration notifications using inotify")
++if(CMAKE_SYSTEM_NAME MATCHES "SunOS")
++set(BUILD_KINOTIFY 0)
++else()
+ set(BUILD_KINOTIFY ${Inotify_FOUND})
++endif()
+ 
+ configure_file(config.h.in ${CMAKE_BINARY_DIR}/config.h)
+ 
