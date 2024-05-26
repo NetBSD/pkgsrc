@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4279 2024/05/21 12:59:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.4280 2024/05/26 11:14:35 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -841,6 +841,7 @@ SUBDIR+=	kdesdk-thumbnailers
 SUBDIR+=	kdevelop
 SUBDIR+=	kdiff3
 SUBDIR+=	kdoctools
+SUBDIR+=	kf6-kbookmarks
 SUBDIR+=	ki18n
 SUBDIR+=	kidletime
 SUBDIR+=	kio
