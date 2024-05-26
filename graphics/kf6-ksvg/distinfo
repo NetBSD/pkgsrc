@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 12:24:52 markd Exp $
+
+BLAKE2s (ksvg-6.2.0.tar.xz) = e05f894b0707169302263b856e48a99caf729f8fdd87c68878affcb0d316dc47
+SHA512 (ksvg-6.2.0.tar.xz) = 7df2f5e3fdbd5b828e0747c5bd4e369410e0b5be746588f93fcef8b5e47119794505ddc57f9c0723e004a00a8d2634f339214a8d08dbc502d7f9d497ffb67e2e
+Size (ksvg-6.2.0.tar.xz) = 88896 bytes

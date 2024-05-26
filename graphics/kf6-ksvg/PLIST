@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:24:52 markd Exp $
+include/KF6/KSvg/KSvg/FrameSvg
+include/KF6/KSvg/KSvg/ImageSet
+include/KF6/KSvg/KSvg/Svg
+include/KF6/KSvg/ksvg/framesvg.h
+include/KF6/KSvg/ksvg/imageset.h
+include/KF6/KSvg/ksvg/ksvg_export.h
+include/KF6/KSvg/ksvg/svg.h
+include/KF6/KSvg/ksvg_version.h
+lib/cmake/KF6Svg/KF6SvgConfig.cmake
+lib/cmake/KF6Svg/KF6SvgConfigVersion.cmake
+lib/cmake/KF6Svg/KF6SvgTargets-noconfig.cmake
+lib/cmake/KF6Svg/KF6SvgTargets.cmake
+lib/libKF6Svg.so
+lib/libKF6Svg.so.6
+lib/libKF6Svg.so.${PKGVERSION}
+qt6/qml/org/kde/ksvg/corebindingsplugin.qmltypes
+qt6/qml/org/kde/ksvg/kde-qmlmodule.version
+qt6/qml/org/kde/ksvg/libcorebindingsplugin.so
+qt6/qml/org/kde/ksvg/qmldir
+share/qlogging-categories6/ksvg.categories
