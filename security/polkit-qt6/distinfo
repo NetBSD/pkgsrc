@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 10:52:37 markd Exp $
+
+BLAKE2s (polkit-qt-1-0.200.0.tar.gz) = 6557fa627782aa2c74970c17ba3aabc1e73ece3d1963315b789906bead61582d
+SHA512 (polkit-qt-1-0.200.0.tar.gz) = 79ca2a70993d3bb5e767c4dc921c104ed846b10150c3ac967de35bd873990b9d3b511607f0a0eb277be829ace549c20649e664dd093479f2788e1db33d8636c1
+Size (polkit-qt-1-0.200.0.tar.gz) = 70931 bytes

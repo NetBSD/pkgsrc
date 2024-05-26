@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.950 2024/05/26 10:33:26 markd Exp $
+# $NetBSD: Makefile,v 1.951 2024/05/26 10:52:37 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -424,6 +424,7 @@ SUBDIR+=	pleaser
 SUBDIR+=	polkit
 SUBDIR+=	polkit-qt
 SUBDIR+=	polkit-qt5
+SUBDIR+=	polkit-qt6
 SUBDIR+=	portsentry
 SUBDIR+=	priv
 SUBDIR+=	prngd
