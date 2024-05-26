@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:22:48 markd Exp $
+include/KF6/KPlotting/KPlotAxis
+include/KF6/KPlotting/KPlotObject
+include/KF6/KPlotting/KPlotPoint
+include/KF6/KPlotting/KPlotWidget
+include/KF6/KPlotting/kplotaxis.h
+include/KF6/KPlotting/kplotobject.h
+include/KF6/KPlotting/kplotpoint.h
+include/KF6/KPlotting/kplotting_export.h
+include/KF6/KPlotting/kplotting_version.h
+include/KF6/KPlotting/kplotwidget.h
+lib/cmake/KF6Plotting/KF6PlottingConfig.cmake
+lib/cmake/KF6Plotting/KF6PlottingConfigVersion.cmake
+lib/cmake/KF6Plotting/KF6PlottingTargets-noconfig.cmake
+lib/cmake/KF6Plotting/KF6PlottingTargets.cmake
+lib/libKF6Plotting.so
+lib/libKF6Plotting.so.6
+lib/libKF6Plotting.so.${PKGVERSION}
+qt6/plugins/designer/kplotting6widgets.so
