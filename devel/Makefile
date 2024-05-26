@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4294 2024/05/26 11:50:57 markd Exp $
+# $NetBSD: Makefile,v 1.4295 2024/05/26 11:52:52 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -856,6 +856,7 @@ SUBDIR+=	kf6-kitemmodels
 SUBDIR+=	kf6-knotifications
 SUBDIR+=	kf6-knotifyconfig
 SUBDIR+=	kf6-kpackage
+SUBDIR+=	kf6-kparts
 SUBDIR+=	ki18n
 SUBDIR+=	kidletime
 SUBDIR+=	kio
