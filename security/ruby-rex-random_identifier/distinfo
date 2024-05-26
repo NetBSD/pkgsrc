@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/11/11 14:10:33 taca Exp $
+$NetBSD: distinfo,v 1.9 2024/05/26 15:45:32 taca Exp $
 
-BLAKE2s (rex-random_identifier-0.1.11.gem) = 7e6428cb4584df97e9d2e5ccca2246c318010437427006f5d9eafc8ac8df8604
-SHA512 (rex-random_identifier-0.1.11.gem) = 05d87bef2c119ef116ebe370e41a0abeb3ea34d4a82e96d80515631ad4c9e8a57dd8aed4bb9d678b1bb7dbeed48e330d26d9e98da4f27f944dfb3c3c18f02197
-Size (rex-random_identifier-0.1.11.gem) = 17920 bytes
+BLAKE2s (rex-random_identifier-0.1.12.gem) = 04a6daf7f49217295b5caef82c994a802d7ba566fe38ba187d09fd7d4f7d77c9
+SHA512 (rex-random_identifier-0.1.12.gem) = 4bf3fe40a02ef8db5f85da06c01d7691e765eadfa882b0b3e0edc71b1b672d40f7b5ca3c143c361d47bfd88490fc09e70049983d6fad5add049dc5c0505da54f
+Size (rex-random_identifier-0.1.12.gem) = 15872 bytes
