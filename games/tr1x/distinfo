@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 10:29:06 nia Exp $
+
+BLAKE2s (TR1X-4.1.2.tar.gz) = b91db53189b01c1ddbd4ebed7294b4f7fd12f6893e719cd31ae8c9ff107cf939
+SHA512 (TR1X-4.1.2.tar.gz) = 7eebe9458496cce446604d08c15e133cbdac1ef6b4b50cc26f4fef96967af3cc1e33871e89177750129bb162e75be7683a3126f5394b27dd2dafa5c7062eaecd
+Size (TR1X-4.1.2.tar.gz) = 46366367 bytes
+SHA1 (patch-meson.build) = 596cdf822aeb7e3ed1c2144e64fe3cc4497e9259
+SHA1 (patch-src_specific_s__filesystem.c) = 46c91297f0f4c09b2c3c6d0da2091348988ceb2f
+SHA1 (patch-tools_shared_versioning.py) = e98bb20b90acf1bb2dc8044a539c6474668b32d0

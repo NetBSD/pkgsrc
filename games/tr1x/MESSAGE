@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/05/26 10:29:06 nia Exp $
+
+You must have the data files from an original Tomb Raider release or the
+GOG/Steam release.  For TombATI users, copy the data, fmv, and music
+directories to $HOME/.share/tr1x.
+
+===========================================================================
