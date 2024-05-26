@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/03 07:30:57 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/26 10:46:25 markd Exp $
 include/polkit-qt5-1/PolkitQt1/ActionDescription
 include/polkit-qt5-1/PolkitQt1/Agent/Listener
 include/polkit-qt5-1/PolkitQt1/Agent/Session
@@ -31,13 +31,13 @@ lib/cmake/PolkitQt5-1/PolkitQt5-1Targets-noconfig.cmake
 lib/cmake/PolkitQt5-1/PolkitQt5-1Targets.cmake
 lib/libpolkit-qt5-agent-1.so
 lib/libpolkit-qt5-agent-1.so.1
-lib/libpolkit-qt5-agent-1.so.1.114.0
+lib/libpolkit-qt5-agent-1.so.1.200.0
 lib/libpolkit-qt5-core-1.so
 lib/libpolkit-qt5-core-1.so.1
-lib/libpolkit-qt5-core-1.so.1.114.0
+lib/libpolkit-qt5-core-1.so.1.200.0
 lib/libpolkit-qt5-gui-1.so
 lib/libpolkit-qt5-gui-1.so.1
-lib/libpolkit-qt5-gui-1.so.1.114.0
+lib/libpolkit-qt5-gui-1.so.1.200.0
 lib/pkgconfig/polkit-qt5-1.pc
 lib/pkgconfig/polkit-qt5-agent-1.pc
 lib/pkgconfig/polkit-qt5-core-1.pc
