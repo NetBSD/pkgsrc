@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/01/14 14:10:59 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/26 15:38:47 taca Exp $
 
-DISTNAME=	bcrypt_pbkdf-1.1.0
+DISTNAME=	bcrypt_pbkdf-1.1.1
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
