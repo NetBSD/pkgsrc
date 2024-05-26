@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/19 22:00:31 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/05/26 19:01:03 adam Exp $
 
-DISTNAME=	flask_session-0.6.0
+DISTNAME=	flask_session-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask-session/}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-cachelib-[0-9]*:../../devel/py-cachelib
 DEPENDS+=	${PYPKGPREFIX}-flask>=2.2:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-msgspec>=0.18.6:../../devel/py-msgspec
 
 USE_LANGUAGES=	# none
 
