@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2024/05/26 11:35:31 markd Exp $
+
+BUILDLINK_TREE+=	kf6-ki18n
+
+.if !defined(KF6_KI18N_BUILDLINK3_MK)
+KF6_KI18N_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.kf6-ki18n+=	kf6-ki18n>=6.2.0
+BUILDLINK_PKGSRCDIR.kf6-ki18n?=		../../devel/kf6-ki18n
+
+.endif	# KF6_KI18N_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-kf6-ki18n
