@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 13:38:26 markd Exp $
+
+BLAKE2s (kjobwidgets-6.2.0.tar.xz) = 7724f18b9504ec230501a3dc0f506b635a44d738cfccbe0d9c491c86f8a0c2ba
+SHA512 (kjobwidgets-6.2.0.tar.xz) = 33dafd91c30f055c62e34d18db7ec236b4b5d00b18994aeeae22693291b4fd0a409c7d3ce63d31e3d715d267e05e459999b3429336d2d7bf897acc1d9753defc
+Size (kjobwidgets-6.2.0.tar.xz) = 2256344 bytes
