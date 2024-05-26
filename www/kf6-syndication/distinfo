@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/26 13:20:58 markd Exp $
+
+BLAKE2s (syndication-6.2.0.tar.xz) = 342a92ba947851cb45b0fef40a66c3dd3808bb82be5c28f8a0bbb9251048f6f5
+SHA512 (syndication-6.2.0.tar.xz) = c8c18b9de798d8735eb8f9629aa4729deefba729c0a0c902e7e7b5ba3de6138707f8851dfdb0505ec34a447a8520e7dfe4051b0cb31b06ba084459f72e83eab4
+Size (syndication-6.2.0.tar.xz) = 569496 bytes
