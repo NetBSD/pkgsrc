@@ -1,0 +1,4 @@
+This is a stand-alone implementation of the Kate syntax highlighting engine.
+It's meant as a building block for text editors as well as for simple
+highlighted text rendering (e.g. as HTML), supporting both integration with a
+custom editor as well as a ready-to-use QSyntaxHighlighter sub-class.
