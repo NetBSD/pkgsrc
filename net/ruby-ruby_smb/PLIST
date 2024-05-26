@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/05/12 15:59:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/05/26 15:35:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -94,6 +94,18 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_close_handle_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_close_handle_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_lookup_sids_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_lookup_sids_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy2_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy2_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy2_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy2_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ndr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request.rb
@@ -471,6 +483,18 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/encrypting_file_system/efs_rpc_open_file_
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_server_request_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_server_request_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/icpr/cert_trans_blob_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_close_handle_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_close_handle_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_lookup_sids_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_lookup_sids_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy2_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy2_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_open_policy_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy2_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy2_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/ndr_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_response_spec.rb
