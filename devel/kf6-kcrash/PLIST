@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:28:42 markd Exp $
+include/KF6/KCrash/KCrash
+include/KF6/KCrash/kcrash.h
+include/KF6/KCrash/kcrash_export.h
+include/KF6/KCrash/kcrash_version.h
+lib/cmake/KF6Crash/KF6CrashConfig.cmake
+lib/cmake/KF6Crash/KF6CrashConfigVersion.cmake
+lib/cmake/KF6Crash/KF6CrashTargets-noconfig.cmake
+lib/cmake/KF6Crash/KF6CrashTargets.cmake
+lib/libKF6Crash.so
+lib/libKF6Crash.so.6
+lib/libKF6Crash.so.${PKGVERSION}
+share/qlogging-categories6/kcrash.categories
+share/qlogging-categories6/kcrash.renamecategories
