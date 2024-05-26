@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1472 2024/05/26 13:04:54 markd Exp $
+# $NetBSD: Makefile,v 1.1473 2024/05/26 13:06:40 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -486,6 +486,7 @@ SUBDIR+=	kcodecs
 SUBDIR+=	kcompletion
 SUBDIR+=	kf6-kcodecs
 SUBDIR+=	kf6-kcompletion
+SUBDIR+=	kf6-ktexttemplate
 SUBDIR+=	kpimtextedit
 SUBDIR+=	ktextaddons
 SUBDIR+=	latex2html
