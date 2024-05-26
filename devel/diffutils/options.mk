@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2024/05/01 21:30:47 cheusov Exp $
+# $NetBSD: options.mk,v 1.2 2024/05/26 07:05:45 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.diffutils
-
+PKG_OPTIONS_VAR=	PKG_OPTIONS.diffutils
 PKG_SUPPORTED_OPTIONS+=	nls
-PKG_SUGGESTED_OPTIONS=		nls
+PKG_SUGGESTED_OPTIONS=	nls
 
 PLIST_VARS+=	nls
 
