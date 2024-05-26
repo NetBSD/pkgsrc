@@ -1,0 +1,20 @@
+KDED stands for KDE Daemon which isn't very descriptive.
+KDED runs in the background and performs a number of small tasks.
+Some of these tasks are built in, others are started on demand.
+
+### Built in tasks
+
+* Checking for newly installed software and updating ksycoca when new
+  software is detected. Updating of ksycoca is done by the program kbuildsycoca
+  which gets started by kded. When kded is first started it always runs
+  kbuildsycoca to ensure that ksycoca is up to date.
+
+* Checking for newly installed update files. Applications can install
+  *.upd update files. These *.upd files are used to update configuration files
+  of users, primarily when new versions of applications are installed with
+  (slightly) different configuration file formats. Updating of configuration
+  files is done by kconf_update. kded starts kconf_update when it detects a
+  new update file. When kded is first started it always runs kconf_update to
+  ensure that it has not missed any update files. kconf_update keeps track
+  of which update files have been processed already in the config-file
+  kconf_updaterc. It only performs a certain update once.
