@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.949 2024/05/18 16:25:50 pin Exp $
+# $NetBSD: Makefile,v 1.950 2024/05/26 10:33:26 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -541,6 +541,7 @@ SUBDIR+=	qca2-ossl
 SUBDIR+=	qca2-qt5
 SUBDIR+=	qca2-qt5-gnupg
 SUBDIR+=	qca2-qt5-ossl
+SUBDIR+=	qca2-qt6
 SUBDIR+=	qgpgme
 SUBDIR+=	qident
 SUBDIR+=	qoauth
