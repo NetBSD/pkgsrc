@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3621 2024/05/26 15:33:25 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3622 2024/05/26 15:35:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-zeitwerk to 2.6.15 [taca 2024-05-26]
 	Updated graphics/ruby-RMagick to 6.0.1 [taca 2024-05-26]
 	Updated math/ruby-enumerable-statistics to 2.0.8 [taca 2024-05-26]
+	Updated net/ruby-ruby_smb to 3.3.8 [taca 2024-05-26]
