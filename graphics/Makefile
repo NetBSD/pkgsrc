@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1051 2024/05/06 18:05:31 nia Exp $
+# $NetBSD: Makefile,v 1.1052 2024/05/26 12:18:42 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -299,6 +299,7 @@ SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-strigi-analyzer
 SUBDIR+=	kdegraphics-thumbnailers
 SUBDIR+=	kdiagram
+SUBDIR+=	kf6-kiconthemes
 SUBDIR+=	kgamma
 SUBDIR+=	kiconthemes
 SUBDIR+=	kimageannotator
