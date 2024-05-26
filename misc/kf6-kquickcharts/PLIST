@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:35:12 markd Exp $
+lib/cmake/KF6QuickCharts/KF6QuickChartsConfig.cmake
+lib/cmake/KF6QuickCharts/KF6QuickChartsConfigVersion.cmake
+lib/libQuickCharts.so
+lib/libQuickCharts.so.1
+lib/libQuickCharts.so.${PKGVERSION}
+lib/libQuickChartsControls.so
+lib/libQuickChartsControls.so.1
+lib/libQuickChartsControls.so.${PKGVERSION}
+qt6/qml/org/kde/quickcharts/QuickCharts.qmltypes
+qt6/qml/org/kde/quickcharts/controls/KirigamiTheme.qml
+qt6/qml/org/kde/quickcharts/controls/Legend.qml
+qt6/qml/org/kde/quickcharts/controls/LegendDelegate.qml
+qt6/qml/org/kde/quickcharts/controls/LineChartControl.qml
+qt6/qml/org/kde/quickcharts/controls/PieChartControl.qml
+qt6/qml/org/kde/quickcharts/controls/QuickChartsControls.qmltypes
+qt6/qml/org/kde/quickcharts/controls/Theme.qml
+qt6/qml/org/kde/quickcharts/controls/kde-qmlmodule.version
+qt6/qml/org/kde/quickcharts/controls/libQuickChartsControlsplugin.so
+qt6/qml/org/kde/quickcharts/controls/qmldir
+qt6/qml/org/kde/quickcharts/kde-qmlmodule.version
+qt6/qml/org/kde/quickcharts/libQuickChartsplugin.so
+qt6/qml/org/kde/quickcharts/qmldir
+share/qlogging-categories6/kquickcharts.categories
