@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/05/01 21:30:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.44 2024/05/26 07:05:45 adam Exp $
 
-DISTNAME=	diffutils-3.9
+DISTNAME=	diffutils-3.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=diffutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,10 +10,7 @@ HOMEPAGE=	https://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=	GNU diff utilities - find the differences between files
 LICENSE=	gnu-gpl-v3
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
-
-AUTO_MKDIRS=		yes
+USE_TOOLS+=		gmake
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
@@ -25,7 +22,9 @@ SUBST_STAGE.diff=	pre-configure
 SUBST_FILES.diff=	src/Makefile.in
 SUBST_SED.diff=		-e 's;%DEFAULT_DIFF_PROGRAM%;${PREFIX}/bin/gdiff;'
 
-USE_TOOLS+=		gmake
+.include "options.mk"
+
+INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 post-install:
 .for f in cmp diff diff3 sdiff
