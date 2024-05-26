@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1034 2024/05/26 13:26:05 markd Exp $
+# $NetBSD: Makefile,v 1.1035 2024/05/26 13:27:50 markd Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -129,6 +129,7 @@ SUBDIR+=	keybinder3
 SUBDIR+=	keylaunch
 SUBDIR+=	kf6-frameworkintegration
 SUBDIR+=	kf6-kconfigwidgets
+SUBDIR+=	kf6-kded
 SUBDIR+=	kglobalaccel
 SUBDIR+=	kguiaddons
 SUBDIR+=	kinit
