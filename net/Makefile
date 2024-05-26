@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1573 2024/05/26 12:40:06 markd Exp $
+# $NetBSD: Makefile,v 1.1574 2024/05/26 12:42:00 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -302,6 +302,7 @@ SUBDIR+=	kdnssd
 SUBDIR+=	kdsoap
 SUBDIR+=	kea
 SUBDIR+=	kf6-kdnssd
+SUBDIR+=	kf6-knewstuff
 SUBDIR+=	kget
 SUBDIR+=	kismet
 SUBDIR+=	kmldonkey
