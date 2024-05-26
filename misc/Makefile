@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2024/05/26 12:33:18 markd Exp $
+# $NetBSD: Makefile,v 1.647 2024/05/26 12:35:12 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -157,6 +157,7 @@ SUBDIR+=	kemoticons
 SUBDIR+=	kf6-attica
 SUBDIR+=	kf6-kcontacts
 SUBDIR+=	kf6-kdav
+SUBDIR+=	kf6-kquickcharts
 SUBDIR+=	kfind
 SUBDIR+=	kgeography
 SUBDIR+=	khard
