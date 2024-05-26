@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.51 2024/05/23 18:29:12 pin Exp $
+# $NetBSD: go-modules.mk,v 1.52 2024/05/26 19:04:49 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -27,10 +27,18 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.26.2.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.26.2.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.10.0.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.10.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.26.3.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.26.3.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.11.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.11.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.1.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.1.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/input/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/input/@v/v0.1.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.1.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.1.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/windows/@v/v0.1.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/windows/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
@@ -216,8 +224,6 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.2.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.20.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.20.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.15.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.15.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
