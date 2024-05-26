@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1126 2024/05/26 12:54:23 markd Exp $
+# $NetBSD: Makefile,v 1.1127 2024/05/26 12:56:56 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -393,6 +393,7 @@ SUBDIR+=	kdbusaddons
 SUBDIR+=	kdf
 SUBDIR+=	kf6-baloo
 SUBDIR+=	kf6-kdbusaddons
+SUBDIR+=	kf6-kfilemetadata
 SUBDIR+=	kfilemetadata5
 SUBDIR+=	krusader
 SUBDIR+=	ksystemlog
