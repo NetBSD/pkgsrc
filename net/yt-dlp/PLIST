@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/04/10 08:01:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/05/27 05:04:02 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -450,9 +450,9 @@ ${PYSITELIB}/yt_dlp/extractor/byutv.pyo
 ${PYSITELIB}/yt_dlp/extractor/c56.py
 ${PYSITELIB}/yt_dlp/extractor/c56.pyc
 ${PYSITELIB}/yt_dlp/extractor/c56.pyo
-${PYSITELIB}/yt_dlp/extractor/cableav.py
-${PYSITELIB}/yt_dlp/extractor/cableav.pyc
-${PYSITELIB}/yt_dlp/extractor/cableav.pyo
+${PYSITELIB}/yt_dlp/extractor/caffeinetv.py
+${PYSITELIB}/yt_dlp/extractor/caffeinetv.pyc
+${PYSITELIB}/yt_dlp/extractor/caffeinetv.pyo
 ${PYSITELIB}/yt_dlp/extractor/callin.py
 ${PYSITELIB}/yt_dlp/extractor/callin.pyc
 ${PYSITELIB}/yt_dlp/extractor/callin.pyo
@@ -681,6 +681,9 @@ ${PYSITELIB}/yt_dlp/extractor/dailywire.pyo
 ${PYSITELIB}/yt_dlp/extractor/damtomo.py
 ${PYSITELIB}/yt_dlp/extractor/damtomo.pyc
 ${PYSITELIB}/yt_dlp/extractor/damtomo.pyo
+${PYSITELIB}/yt_dlp/extractor/dangalplay.py
+${PYSITELIB}/yt_dlp/extractor/dangalplay.pyc
+${PYSITELIB}/yt_dlp/extractor/dangalplay.pyo
 ${PYSITELIB}/yt_dlp/extractor/daum.py
 ${PYSITELIB}/yt_dlp/extractor/daum.pyc
 ${PYSITELIB}/yt_dlp/extractor/daum.pyo
@@ -798,9 +801,6 @@ ${PYSITELIB}/yt_dlp/extractor/egghead.pyo
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.py
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.pyc
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.pyo
-${PYSITELIB}/yt_dlp/extractor/einthusan.py
-${PYSITELIB}/yt_dlp/extractor/einthusan.pyc
-${PYSITELIB}/yt_dlp/extractor/einthusan.pyo
 ${PYSITELIB}/yt_dlp/extractor/eitb.py
 ${PYSITELIB}/yt_dlp/extractor/eitb.pyc
 ${PYSITELIB}/yt_dlp/extractor/eitb.pyo
@@ -996,6 +996,9 @@ ${PYSITELIB}/yt_dlp/extractor/gaskrank.pyo
 ${PYSITELIB}/yt_dlp/extractor/gazeta.py
 ${PYSITELIB}/yt_dlp/extractor/gazeta.pyc
 ${PYSITELIB}/yt_dlp/extractor/gazeta.pyo
+${PYSITELIB}/yt_dlp/extractor/gbnews.py
+${PYSITELIB}/yt_dlp/extractor/gbnews.pyc
+${PYSITELIB}/yt_dlp/extractor/gbnews.pyo
 ${PYSITELIB}/yt_dlp/extractor/gdcvault.py
 ${PYSITELIB}/yt_dlp/extractor/gdcvault.pyc
 ${PYSITELIB}/yt_dlp/extractor/gdcvault.pyo
@@ -1041,6 +1044,9 @@ ${PYSITELIB}/yt_dlp/extractor/gmanetwork.pyo
 ${PYSITELIB}/yt_dlp/extractor/go.py
 ${PYSITELIB}/yt_dlp/extractor/go.pyc
 ${PYSITELIB}/yt_dlp/extractor/go.pyo
+${PYSITELIB}/yt_dlp/extractor/godresource.py
+${PYSITELIB}/yt_dlp/extractor/godresource.pyc
+${PYSITELIB}/yt_dlp/extractor/godresource.pyo
 ${PYSITELIB}/yt_dlp/extractor/godtube.py
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyc
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyo
@@ -1242,9 +1248,6 @@ ${PYSITELIB}/yt_dlp/extractor/ixigua.pyo
 ${PYSITELIB}/yt_dlp/extractor/izlesene.py
 ${PYSITELIB}/yt_dlp/extractor/izlesene.pyc
 ${PYSITELIB}/yt_dlp/extractor/izlesene.pyo
-${PYSITELIB}/yt_dlp/extractor/jable.py
-${PYSITELIB}/yt_dlp/extractor/jable.pyc
-${PYSITELIB}/yt_dlp/extractor/jable.pyo
 ${PYSITELIB}/yt_dlp/extractor/jamendo.py
 ${PYSITELIB}/yt_dlp/extractor/jamendo.pyc
 ${PYSITELIB}/yt_dlp/extractor/jamendo.pyo
@@ -1254,6 +1257,9 @@ ${PYSITELIB}/yt_dlp/extractor/japandiet.pyo
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.py
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyo
+${PYSITELIB}/yt_dlp/extractor/jiocinema.py
+${PYSITELIB}/yt_dlp/extractor/jiocinema.pyc
+${PYSITELIB}/yt_dlp/extractor/jiocinema.pyo
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.py
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyc
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyo
@@ -1779,6 +1785,9 @@ ${PYSITELIB}/yt_dlp/extractor/nrk.pyo
 ${PYSITELIB}/yt_dlp/extractor/nrl.py
 ${PYSITELIB}/yt_dlp/extractor/nrl.pyc
 ${PYSITELIB}/yt_dlp/extractor/nrl.pyo
+${PYSITELIB}/yt_dlp/extractor/nts.py
+${PYSITELIB}/yt_dlp/extractor/nts.pyc
+${PYSITELIB}/yt_dlp/extractor/nts.pyo
 ${PYSITELIB}/yt_dlp/extractor/ntvcojp.py
 ${PYSITELIB}/yt_dlp/extractor/ntvcojp.pyc
 ${PYSITELIB}/yt_dlp/extractor/ntvcojp.pyo
@@ -2004,9 +2013,6 @@ ${PYSITELIB}/yt_dlp/extractor/popcorntimes.pyo
 ${PYSITELIB}/yt_dlp/extractor/popcorntv.py
 ${PYSITELIB}/yt_dlp/extractor/popcorntv.pyc
 ${PYSITELIB}/yt_dlp/extractor/popcorntv.pyo
-${PYSITELIB}/yt_dlp/extractor/porn91.py
-${PYSITELIB}/yt_dlp/extractor/porn91.pyc
-${PYSITELIB}/yt_dlp/extractor/porn91.pyo
 ${PYSITELIB}/yt_dlp/extractor/pornbox.py
 ${PYSITELIB}/yt_dlp/extractor/pornbox.pyc
 ${PYSITELIB}/yt_dlp/extractor/pornbox.pyo
@@ -2472,6 +2478,9 @@ ${PYSITELIB}/yt_dlp/extractor/sztvhu.pyo
 ${PYSITELIB}/yt_dlp/extractor/tagesschau.py
 ${PYSITELIB}/yt_dlp/extractor/tagesschau.pyc
 ${PYSITELIB}/yt_dlp/extractor/tagesschau.pyo
+${PYSITELIB}/yt_dlp/extractor/taptap.py
+${PYSITELIB}/yt_dlp/extractor/taptap.pyc
+${PYSITELIB}/yt_dlp/extractor/taptap.pyo
 ${PYSITELIB}/yt_dlp/extractor/tass.py
 ${PYSITELIB}/yt_dlp/extractor/tass.pyc
 ${PYSITELIB}/yt_dlp/extractor/tass.pyo
@@ -2904,9 +2913,6 @@ ${PYSITELIB}/yt_dlp/extractor/voicy.pyo
 ${PYSITELIB}/yt_dlp/extractor/volejtv.py
 ${PYSITELIB}/yt_dlp/extractor/volejtv.pyc
 ${PYSITELIB}/yt_dlp/extractor/volejtv.pyo
-${PYSITELIB}/yt_dlp/extractor/voot.py
-${PYSITELIB}/yt_dlp/extractor/voot.pyc
-${PYSITELIB}/yt_dlp/extractor/voot.pyo
 ${PYSITELIB}/yt_dlp/extractor/voxmedia.py
 ${PYSITELIB}/yt_dlp/extractor/voxmedia.pyc
 ${PYSITELIB}/yt_dlp/extractor/voxmedia.pyo
@@ -3003,12 +3009,12 @@ ${PYSITELIB}/yt_dlp/extractor/xanimu.pyo
 ${PYSITELIB}/yt_dlp/extractor/xboxclips.py
 ${PYSITELIB}/yt_dlp/extractor/xboxclips.pyc
 ${PYSITELIB}/yt_dlp/extractor/xboxclips.pyo
-${PYSITELIB}/yt_dlp/extractor/xfileshare.py
-${PYSITELIB}/yt_dlp/extractor/xfileshare.pyc
-${PYSITELIB}/yt_dlp/extractor/xfileshare.pyo
 ${PYSITELIB}/yt_dlp/extractor/xhamster.py
 ${PYSITELIB}/yt_dlp/extractor/xhamster.pyc
 ${PYSITELIB}/yt_dlp/extractor/xhamster.pyo
+${PYSITELIB}/yt_dlp/extractor/xiaohongshu.py
+${PYSITELIB}/yt_dlp/extractor/xiaohongshu.pyc
+${PYSITELIB}/yt_dlp/extractor/xiaohongshu.pyo
 ${PYSITELIB}/yt_dlp/extractor/ximalaya.py
 ${PYSITELIB}/yt_dlp/extractor/ximalaya.pyc
 ${PYSITELIB}/yt_dlp/extractor/ximalaya.pyo
@@ -3063,12 +3069,6 @@ ${PYSITELIB}/yt_dlp/extractor/younow.pyo
 ${PYSITELIB}/yt_dlp/extractor/youporn.py
 ${PYSITELIB}/yt_dlp/extractor/youporn.pyc
 ${PYSITELIB}/yt_dlp/extractor/youporn.pyo
-${PYSITELIB}/yt_dlp/extractor/yourporn.py
-${PYSITELIB}/yt_dlp/extractor/yourporn.pyc
-${PYSITELIB}/yt_dlp/extractor/yourporn.pyo
-${PYSITELIB}/yt_dlp/extractor/yourupload.py
-${PYSITELIB}/yt_dlp/extractor/yourupload.pyc
-${PYSITELIB}/yt_dlp/extractor/yourupload.pyo
 ${PYSITELIB}/yt_dlp/extractor/youtube.py
 ${PYSITELIB}/yt_dlp/extractor/youtube.pyc
 ${PYSITELIB}/yt_dlp/extractor/youtube.pyo
