@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3651 2024/05/27 08:10:21 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3652 2024/05/27 08:43:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/p5-Spreadsheet-XLSX to 0.18 [wen 2024-05-27]
 	Added textproc/py-mkdocs-get-deps version 0.2.0 [adam 2024-05-27]
 	Updated textproc/py-mkdocs to 1.6.0 [adam 2024-05-27]
+	Updated math/p5-Math-BigInt-Pari to 1.3014 [wen 2024-05-27]
