@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:55:57 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/05/27 08:04:41 wen Exp $
 
-BLAKE2s (Statistics-Descriptive-3.0800.tar.gz) = a092c3351c2bb4a0c13b5e66c9146d236f5b50f47dd749af8756696a24c4eb38
-SHA512 (Statistics-Descriptive-3.0800.tar.gz) = 691a99aca4214149d14c770d71b5d97eaefa2690698b0234b11ed33d7bdbc21e9b478941bb8fa46886ea3362f432eb744a3a3b3607f3d3fe189c4256884efdec
-Size (Statistics-Descriptive-3.0800.tar.gz) = 53611 bytes
+BLAKE2s (Statistics-Descriptive-3.0801.tar.gz) = 6152d62209e9aabe341dd9eedfd641e6b3776dcc538aff0c329edb181bc62e0a
+SHA512 (Statistics-Descriptive-3.0801.tar.gz) = e5901ed4f53807a53779113ad9288549dcf06618d2a81009f388edce0ead9f1178ce63eea07c0a427a3f00b6216f6e211cc2ca9b1c5fa91c82e4994343a33f35
+Size (Statistics-Descriptive-3.0801.tar.gz) = 54174 bytes
