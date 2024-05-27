@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/16 15:33:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/05/27 05:07:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,9 +11,6 @@ ${PYSITELIB}/pyfakefs/__init__.pyo
 ${PYSITELIB}/pyfakefs/_version.py
 ${PYSITELIB}/pyfakefs/_version.pyc
 ${PYSITELIB}/pyfakefs/_version.pyo
-${PYSITELIB}/pyfakefs/extra_packages.py
-${PYSITELIB}/pyfakefs/extra_packages.pyc
-${PYSITELIB}/pyfakefs/extra_packages.pyo
 ${PYSITELIB}/pyfakefs/fake_file.py
 ${PYSITELIB}/pyfakefs/fake_file.pyc
 ${PYSITELIB}/pyfakefs/fake_file.pyo
@@ -29,6 +26,9 @@ ${PYSITELIB}/pyfakefs/fake_filesystem_unittest.pyo
 ${PYSITELIB}/pyfakefs/fake_io.py
 ${PYSITELIB}/pyfakefs/fake_io.pyc
 ${PYSITELIB}/pyfakefs/fake_io.pyo
+${PYSITELIB}/pyfakefs/fake_legacy_modules.py
+${PYSITELIB}/pyfakefs/fake_legacy_modules.pyc
+${PYSITELIB}/pyfakefs/fake_legacy_modules.pyo
 ${PYSITELIB}/pyfakefs/fake_open.py
 ${PYSITELIB}/pyfakefs/fake_open.pyc
 ${PYSITELIB}/pyfakefs/fake_open.pyo
@@ -47,6 +47,9 @@ ${PYSITELIB}/pyfakefs/fake_scandir.pyo
 ${PYSITELIB}/pyfakefs/helpers.py
 ${PYSITELIB}/pyfakefs/helpers.pyc
 ${PYSITELIB}/pyfakefs/helpers.pyo
+${PYSITELIB}/pyfakefs/legacy_packages.py
+${PYSITELIB}/pyfakefs/legacy_packages.pyc
+${PYSITELIB}/pyfakefs/legacy_packages.pyo
 ${PYSITELIB}/pyfakefs/mox3_stubout.py
 ${PYSITELIB}/pyfakefs/mox3_stubout.pyc
 ${PYSITELIB}/pyfakefs/mox3_stubout.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/pyfakefs/tests/fake_filesystem_unittest_test.pyo
 ${PYSITELIB}/pyfakefs/tests/fake_filesystem_vs_real_test.py
 ${PYSITELIB}/pyfakefs/tests/fake_filesystem_vs_real_test.pyc
 ${PYSITELIB}/pyfakefs/tests/fake_filesystem_vs_real_test.pyo
+${PYSITELIB}/pyfakefs/tests/fake_legacy_modules_test.py
+${PYSITELIB}/pyfakefs/tests/fake_legacy_modules_test.pyc
+${PYSITELIB}/pyfakefs/tests/fake_legacy_modules_test.pyo
 ${PYSITELIB}/pyfakefs/tests/fake_open_test.py
 ${PYSITELIB}/pyfakefs/tests/fake_open_test.pyc
 ${PYSITELIB}/pyfakefs/tests/fake_open_test.pyo
@@ -174,6 +180,9 @@ ${PYSITELIB}/pyfakefs/tests/patched_packages_test.pyo
 ${PYSITELIB}/pyfakefs/tests/performance_test.py
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyc
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyo
+${PYSITELIB}/pyfakefs/tests/skip_open.py
+${PYSITELIB}/pyfakefs/tests/skip_open.pyc
+${PYSITELIB}/pyfakefs/tests/skip_open.pyo
 ${PYSITELIB}/pyfakefs/tests/test_utils.py
 ${PYSITELIB}/pyfakefs/tests/test_utils.pyc
 ${PYSITELIB}/pyfakefs/tests/test_utils.pyo
