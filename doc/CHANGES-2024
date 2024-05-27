@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3647 2024/05/27 07:59:44 wen Exp $
+$NetBSD: CHANGES-2024,v 1.3648 2024/05/27 08:02:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5782,3 +5782,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/ffplay7 to 7.0.1 [adam 2024-05-27]
 	Updated misc/p5-Business-ISBN to 3.009 [wen 2024-05-27]
 	Updated misc/p5-Business-ISMN to 1.204 [wen 2024-05-27]
+	Updated misc/p5-Business-ISSN to 1.005 [wen 2024-05-27]
