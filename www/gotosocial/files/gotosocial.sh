@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gotosocial.sh,v 1.1 2022/11/20 20:17:03 nikita Exp $
+# $NetBSD: gotosocial.sh,v 1.2 2024/05/27 20:04:46 nikita Exp $
 #
 # PROVIDE: gotosocial
 # REQUIRE: NETWORKING DAEMON
@@ -15,7 +15,7 @@ rcvar=${name}
 
 command="@PREFIX@/bin/gotosocial"
 : ${gotosocial_config:=@PKG_SYSCONFDIR@/config.yaml}
-command_args="--config-path ${gotosocial_config} server start"
+command_args="--config-path ${gotosocial_config} server start 2>&1 | logger -t ${name} -p daemon.info &"
 required_files="${gotosocial_config}"
 
 start_precmd="gotosocial_precmd"
