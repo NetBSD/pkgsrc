@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/04/07 17:50:23 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2024/05/27 07:52:48 adam Exp $
 
-BLAKE2s (ffmpeg-7.0.tar.xz) = 9712a6ec9d3cbbc3c8a92712a30982c12005abcdefb6f0c56a13fa8f4f0137e5
-SHA512 (ffmpeg-7.0.tar.xz) = f693027b9c142c3757b76b2fe1c09bdafa4bf2580e691b20306bc6621080005173d068122668e80f52bd46dba3ab04a32f0608d709c8e6fd1c73387b4d4881f7
-Size (ffmpeg-7.0.tar.xz) = 10791240 bytes
+BLAKE2s (ffmpeg-7.0.1.tar.xz) = 5cb267bd7d2bc6c82a5bdb3b4a004d730a88ac998d9e73beef3a635ee9643e78
+SHA512 (ffmpeg-7.0.1.tar.xz) = 94e06c4ce64ed3888620547db0e33b29c68a9e78b3ea748346f34280f69723a6d4b7485911f45f1849f9aa3036c0699334abbcf7126d2763bdaa7276673b7daa
+Size (ffmpeg-7.0.1.tar.xz) = 10793572 bytes
 SHA1 (patch-Makefile) = 2d27f218ee49179fdea14bb5c86c506dfb64dbd6
 SHA1 (patch-configure) = bdb43e6d014e0cdfa57b44ee30a2283c75871831
 SHA1 (patch-doc_Makefile) = 35a23c09f3f735131647888cdc1ba725ff0f33ac
@@ -17,6 +17,5 @@ SHA1 (patch-libavdevice_sunau__enc.c) = efe765b99ad6379d0237c619ac0dce41306431be
 SHA1 (patch-libavformat_avformat.h) = fd10d2646728d8340ac4b654e06db8deb9cf8522
 SHA1 (patch-libavformat_mux__utils.c) = a46cdcc8e32251773362406adad06efb367349ca
 SHA1 (patch-libavutil_macros.h) = 7d9770f018a2207d2dcb1fe057564e30be51fd42
-SHA1 (patch-libavutil_ppc_cpu.c) = 0c77fecf2b92fa7b8f786987b216fe70a0d45904
 SHA1 (patch-libavutil_x86_asm.h) = 8f48f9e8ec08b5176bb40fc0021f3bb913dbef22
 SHA1 (patch-libavutil_x86_cpu.c) = 9c97e68fde0fcb19741e034a803d509040ea4487
