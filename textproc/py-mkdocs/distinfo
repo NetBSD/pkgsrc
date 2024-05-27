@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/20 10:05:03 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/05/27 08:09:44 adam Exp $
 
-BLAKE2s (mkdocs-1.5.3.tar.gz) = a159fd9d3e355473171de202aaf74aadb1a81c1421f83f9da934a2a708da8bb8
-SHA512 (mkdocs-1.5.3.tar.gz) = 50a719046b383a68deddd497df557e6252d7a7108b5ed8f4c877d6a92a3b1d1f67ff7f0c33d333973d69a9eaf97bbbc6e89b9518e9d10ee55a4874aa9d79ecda
-Size (mkdocs-1.5.3.tar.gz) = 3654364 bytes
+BLAKE2s (mkdocs-1.6.0.tar.gz) = 9a7d78641925437b8709268cbbbb1d4046a1bf3e0dc3cba46d3522ae5b5b0caa
+SHA512 (mkdocs-1.6.0.tar.gz) = 669fef77a49693be3835fa14ea25fbbb023ff344b61bdbda949b54ecdde0f1eec1904da3fc09a3fc5c857c31c93a8de2b32654ca9bdbecfd27262ad7a8baab17
+Size (mkdocs-1.6.0.tar.gz) = 3888392 bytes
