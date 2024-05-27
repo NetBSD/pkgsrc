@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/04/12 15:10:20 nikita Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/05/27 20:04:46 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -24,6 +24,19 @@ share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon4.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon5.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon6.png
 share/examples/gotosocial/web/assets/default_header.png
+share/examples/gotosocial/web/assets/dist/_colors.css
+share/examples/gotosocial/web/assets/dist/about.css
+share/examples/gotosocial/web/assets/dist/base.css
+share/examples/gotosocial/web/assets/dist/frontend.js
+share/examples/gotosocial/web/assets/dist/index.css
+share/examples/gotosocial/web/assets/dist/page.css
+share/examples/gotosocial/web/assets/dist/prism.css
+share/examples/gotosocial/web/assets/dist/profile.css
+share/examples/gotosocial/web/assets/dist/settings-style.css
+share/examples/gotosocial/web/assets/dist/settings.js
+share/examples/gotosocial/web/assets/dist/status.css
+share/examples/gotosocial/web/assets/dist/tag.css
+share/examples/gotosocial/web/assets/dist/thread.css
 share/examples/gotosocial/web/assets/feditext.svg
 share/examples/gotosocial/web/assets/fonts/OFL.txt
 share/examples/gotosocial/web/assets/fonts/noto-sans-v27-latin-700.woff
@@ -34,6 +47,7 @@ share/examples/gotosocial/web/assets/logo.png
 share/examples/gotosocial/web/assets/logo.svg
 share/examples/gotosocial/web/assets/mastodon.svg
 share/examples/gotosocial/web/assets/plyr.svg
+share/examples/gotosocial/web/assets/swagger.yaml
 share/examples/gotosocial/web/assets/themes/blurple-dark.css
 share/examples/gotosocial/web/assets/themes/blurple-light.css
 share/examples/gotosocial/web/assets/themes/midnight-trip.css
