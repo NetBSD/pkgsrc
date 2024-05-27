@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2024/04/10 08:01:17 adam Exp $
+$NetBSD: distinfo,v 1.34 2024/05/27 05:04:02 adam Exp $
 
-BLAKE2s (yt_dlp-2024.4.9.tar.gz) = 8a23bcc672464544925d5634d8c823c060e3c0b13160f526bdfbcbda5287243d
-SHA512 (yt_dlp-2024.4.9.tar.gz) = 4bb5418cf4af9e817024be8f3de50a7db2a61626170f42772eabc6dbebdd4fa4ead83702338d455430750d4beba116f1d2789949f19e8195be756b467d14f08c
-Size (yt_dlp-2024.4.9.tar.gz) = 2782033 bytes
+BLAKE2s (yt_dlp-2024.5.26.tar.gz) = 7521be3c503c83a77c7f359dfa65544a4dd0da82e180fe90083869a0aee28203
+SHA512 (yt_dlp-2024.5.26.tar.gz) = e847f0aa0f0d0fc7b04b8db5f9f5fb0bb71aeb2fa9d2c10a20826dc24dec56a692446bee7367f3753b0878ff4e3220788036a607f364460a61c1fbb110a717ff
+Size (yt_dlp-2024.5.26.tar.gz) = 2812892 bytes
