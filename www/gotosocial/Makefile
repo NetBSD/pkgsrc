@@ -1,17 +1,24 @@
-# $NetBSD: Makefile,v 1.33 2024/04/12 15:10:20 nikita Exp $
+# $NetBSD: Makefile,v 1.34 2024/05/27 20:04:46 nikita Exp $
 
 DISTNAME=	gotosocial-0.15.0-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT=	gotosocial
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/superseriousbusiness/gotosocial/
 COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax tar
+
+DISTFILES=      gotosocial-0.15.0-source-code.tar.gz
+DISTFILES+=	gotosocial_0.15.0_web-assets.tar.gz
+
+SITES.gotosocial-0.15.0-source-code.tar.gz= \
+	-https://github.com/superseriousbusiness/gotosocial/releases/download/v0.15.0/gotosocial-0.15.0-source-code.tar.gz
+
+SITES.gotosocial_0.15.0_web-assets.tar.gz= \
+	-https://github.com/superseriousbusiness/gotosocial/releases/download/v0.15.0/gotosocial_0.15.0_web-assets.tar.gz
 
 # release archive has no toplevel folder.
 EXTRACT_DIR=	${WRKDIR}/${PKGNAME}
@@ -71,6 +78,8 @@ ONLY_FOR_PLATFORM=	*-*-x86_64
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} scripts/build.sh
+	# cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} && \
+	# go build -o gotosocial ./cmd/gotosocial
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gotosocial ${DESTDIR}/${PREFIX}/bin/
@@ -78,6 +87,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/gotosocial.service ${DESTDIR}/${EGDIR}/gotosocial.service
+	cd ${WRKSRC} && ${TAR} -xzf ${DISTDIR}/gotosocial_0.15.0_web-assets.tar.gz
 	cd ${WRKSRC} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
 
 do-test:
