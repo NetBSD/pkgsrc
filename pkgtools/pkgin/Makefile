@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2024/01/03 12:32:59 gdt Exp $
+# $NetBSD: Makefile,v 1.130 2024/05/27 23:27:10 riastradh Exp $
 
 DISTNAME=		pkgin-23.8.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -49,6 +49,12 @@ CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 DEPENDS+=		pkg_install>=20200701:../../pkgtools/pkg_install
 
 .include "options.mk"
+
+USE_TOOLS+=	autoconf automake
+
+pre-configure:
+	@${STEP_MSG} Regenerating configure
+	${RUN}cd ${WRKSRC} && autoreconf -fiv
 
 # those have official repositories
 .if !empty(PKGIN_REPOSITORY_URL)
