@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/05/27 08:02:04 wen Exp $
 
-BLAKE2s (Business-ISSN-1.004.tar.gz) = 92e0e98e889d7ec2dcee84c5ae67766a7d4e5b7f367804f0a86db559c521cbe6
-SHA512 (Business-ISSN-1.004.tar.gz) = 5f6223c3f42b483fdcce832f21276a20df1e809f933823caa5115d339eb4e37565d2ec63f3a5bed76a02580cfe81127f150fac5ff323410273d9127b22ad4a5e
-Size (Business-ISSN-1.004.tar.gz) = 10175 bytes
+BLAKE2s (Business-ISSN-1.005.tar.gz) = b39efffd27d4864677e663eed248b8f7b7fc7e8c3d4e532856f6c6048096f701
+SHA512 (Business-ISSN-1.005.tar.gz) = e58f5ac852102c9f6e53cb3986a06be0db325ba8acc097b128c554288637cb8bd9029c291b38efdeffc05a8690b1894a98d255ae407162c3f76e5e613405695c
+Size (Business-ISSN-1.005.tar.gz) = 11277 bytes
