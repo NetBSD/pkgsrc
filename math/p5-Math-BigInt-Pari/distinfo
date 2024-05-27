@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/08/02 08:33:24 ast Exp $
+$NetBSD: distinfo,v 1.13 2024/05/27 08:41:54 wen Exp $
 
-BLAKE2s (Math-BigInt-Pari-1.3009.tar.gz) = a7e20fd6c50447f277dac18fbe8979e959e88aba22904b9d6c74f1dde70f76df
-SHA512 (Math-BigInt-Pari-1.3009.tar.gz) = 2552aae1a9f89a9c8085502ff8c73e434ab6c402f102998d61b6dc73d323e888108d48339adb41e4230202651607d58d4ad1ec09826f017250518c6fae036e28
-Size (Math-BigInt-Pari-1.3009.tar.gz) = 2847248 bytes
+BLAKE2s (Math-BigInt-Pari-1.3014.tar.gz) = d66ff92d2bda9790b29ed3980209070fe3a3cf357d88ac7b80b2b12a61aeb964
+SHA512 (Math-BigInt-Pari-1.3014.tar.gz) = 33703297bfb0c1d71dd91d94f826a57e419040816ed9706fba80ffa7bc64328032ba35d2d9af6e6e55df2627a16ae76211e4ccca1f0f20940179ba3ffe32f5fb
+Size (Math-BigInt-Pari-1.3014.tar.gz) = 2638294 bytes
