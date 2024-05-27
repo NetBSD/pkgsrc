@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/12/01 11:39:05 cheusov Exp $
+$NetBSD: distinfo,v 1.19 2024/05/27 21:23:35 cheusov Exp $
 
-BLAKE2s (pkgnih-0.15.2.tar.gz) = f425261634adc003d25f1e2b5e89ad25e948812bc47a8b24a6fb8ca43c85ec64
-SHA512 (pkgnih-0.15.2.tar.gz) = 5d42aa1b2e3840f29ea10a954f9db6fdba4ed699c8f9f2358b4e3682a6e9aa703bd7ea6e896a3759651c5393fafaa9e5950c9ea6db27db85c8d13ad820be7d0f
-Size (pkgnih-0.15.2.tar.gz) = 54127 bytes
+BLAKE2s (pkgnih-0.16.0.tar.gz) = a407a47fa031303e60b2d5a5b7a0d33b80846ba7350633e8cb2a380a7169f260
+SHA512 (pkgnih-0.16.0.tar.gz) = 619d64f9a1ce98da0ea9296e94391785d3db65123683f8a9b2a5f9e5c72c18e6cc2a7059f8d2a06a9884859b9dcc03937e9571a25a7e0045b9f0e581e9ae5d80
+Size (pkgnih-0.16.0.tar.gz) = 55331 bytes
