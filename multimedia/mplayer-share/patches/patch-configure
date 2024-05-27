@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2022/12/14 13:54:19 tsutsui Exp $
+$NetBSD: patch-configure,v 1.6 2024/05/27 19:33:55 rjs Exp $
 
 o Handle properly sh3, evbarm, arm64, and m68k ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
@@ -210,3 +210,12 @@ o use /dev/audio instead of /dev/sound for OSS audio device for NetBSD
        extra_ldflags="$extra_ldflags -lossaudio"
    else
        def_ossaudio_devdsp='#define PATH_DEV_DSP "/dev/dsp"'
+@@ -7940,7 +7971,7 @@ echores "$_tv_v4l1"
+ 
+ 
+ echocheck "Video 4 Linux 2 TV interface"
+-if test "$_tv_v4l2" = auto && test "$_tv" = yes ; then
++if test "$_tv_v4l2" = yes ; then
+     _tv_v4l2=no
+     if linux ; then
+         header_check_broken sys/time.h linux/videodev2.h && _tv_v4l2=yes
