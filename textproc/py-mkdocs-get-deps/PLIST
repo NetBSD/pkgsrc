@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2024/05/27 08:07:11 adam Exp $
+bin/mkdocs-get-deps-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
+${PYSITELIB}/mkdocs_get_deps/__init__.py
+${PYSITELIB}/mkdocs_get_deps/__init__.pyc
+${PYSITELIB}/mkdocs_get_deps/__init__.pyo
+${PYSITELIB}/mkdocs_get_deps/__main__.py
+${PYSITELIB}/mkdocs_get_deps/__main__.pyc
+${PYSITELIB}/mkdocs_get_deps/__main__.pyo
+${PYSITELIB}/mkdocs_get_deps/cache.py
+${PYSITELIB}/mkdocs_get_deps/cache.pyc
+${PYSITELIB}/mkdocs_get_deps/cache.pyo
+${PYSITELIB}/mkdocs_get_deps/py.typed
+${PYSITELIB}/mkdocs_get_deps/yaml_util.py
+${PYSITELIB}/mkdocs_get_deps/yaml_util.pyc
+${PYSITELIB}/mkdocs_get_deps/yaml_util.pyo

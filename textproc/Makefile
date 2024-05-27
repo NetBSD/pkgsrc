@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1475 2024/05/26 13:12:38 markd Exp $
+# $NetBSD: Makefile,v 1.1476 2024/05/27 08:07:11 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1117,6 +1117,7 @@ SUBDIR+=	py-mistune
 SUBDIR+=	py-mkdocs
 SUBDIR+=	py-mkdocs-bootstrap
 SUBDIR+=	py-mkdocs-bootswatch
+SUBDIR+=	py-mkdocs-get-deps
 SUBDIR+=	py-myst-parser
 SUBDIR+=	py-natsort
 SUBDIR+=	py-nltk
