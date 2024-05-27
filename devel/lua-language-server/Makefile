@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/30 22:01:33 nikita Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/27 09:08:22 nia Exp $
 
 DISTNAME=		lua-language-server-3.8.3
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -25,6 +25,12 @@ DEPENDS+=		clang-[0-9]*:../../lang/clang
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++17
 FORCE_CXX_STD=		c++17
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099975
+PKG_FAIL_REASON+=	"Requires EVFILT_USER, unavailable on NetBSD 9.x and prior"
+.endif
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
