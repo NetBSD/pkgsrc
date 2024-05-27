@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/05/27 08:07:11 adam Exp $
+
+BLAKE2s (mkdocs_get_deps-0.2.0.tar.gz) = 4795abb60c15eb8e798250f2530b7adfc49a127b64137cc5b302a0f1301d9b2a
+SHA512 (mkdocs_get_deps-0.2.0.tar.gz) = 3fdf445923b82544fc9feaddd6a99638901f9c88a34f404c38ce510934245bd836d1491a9c5561f7b49ae0aa006c58a83ac946449713b0504c0da788d8233d5e
+Size (mkdocs_get_deps-0.2.0.tar.gz) = 10239 bytes

@@ -1,0 +1,1 @@
+bin/mkdocs-get-deps @PREFIX@/bin/mkdocs-get-deps-@PYVERSSUFFIX@
