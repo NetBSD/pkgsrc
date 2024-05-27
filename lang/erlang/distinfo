@@ -1,18 +1,36 @@
-$NetBSD: distinfo,v 1.113 2024/05/06 06:52:50 wiz Exp $
+$NetBSD: distinfo,v 1.114 2024/05/27 19:07:50 riastradh Exp $
 
 BLAKE2s (erlang-26.2.5.tar.gz) = f846568c846c62db184fc50e30b16e22716a869ea0632f934294dd8f7bb2b821
 SHA512 (erlang-26.2.5.tar.gz) = f06d34290c0d93609aa3efbdc97206e8d3ce17aa2c3f62b6c566c7631ee3a3d45a89b61ce0ace81604b5a94610d03ad98558f27ee888ca90ecdeeeb2759c0184
 Size (erlang-26.2.5.tar.gz) = 62479032 bytes
 SHA1 (patch-erts_emulator_Makefile.in) = b99ccd2669652b1542b2ee99e09f886d864fd8be
-SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = dbe72306aac6be0cec09f45869ff077f1bab1e68
+SHA1 (patch-erts_emulator_beam_erl__init.c) = ccbf4330a0774b97a3aca611fc57ba60062e1390
+SHA1 (patch-erts_emulator_beam_packet__parser.c) = 13cb7fb1d65ddac93221d85df1a44d76332b1cec
+SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = 937280446342ceb00e3d193fe0e2ee47765a9957
+SHA1 (patch-erts_emulator_drivers_common_ram__file__drv.c) = 5c3c05c27b2eec0f5be1e31f2e8fbdee0d9b8885
+SHA1 (patch-erts_emulator_drivers_win32_registry__drv.c) = 5d66b9be1c09f7c471d9675f376df3c8ec3d39be
+SHA1 (patch-erts_emulator_nifs_common_prim__tty__nif.c) = 10843ede3abd4a6c68fa60cbc3e5b434cfc19e31
 SHA1 (patch-erts_emulator_nifs_unix_unix__socket__syncio.c) = 6bad5f82ca72c46d3b8e4e0c5a4a7622ff85d3bf
+SHA1 (patch-erts_emulator_sys_unix_sys.c) = 47c96638408b0a75546114931316181fd3f57909
 SHA1 (patch-erts_emulator_sys_unix_sys__uds.c) = ee131143c177b2bc1453d94097cbf6b3d3cfb899
+SHA1 (patch-erts_etc_common_dialyzer.c) = abeb5377dcb1a438ded5e7013e9f3664e35c9ddb
+SHA1 (patch-erts_etc_common_erlc.c) = 8f15065389b3b16448095888c4a3575f73d2253b
+SHA1 (patch-erts_etc_common_typer.c) = 43b6ad1fa6e4e4be4a08463d13170a47c1098039
 SHA1 (patch-erts_etc_unix_run__erl.c) = b888aaed44cab4eea87474f7f02adba1f904e033
+SHA1 (patch-erts_etc_unix_setuid__socket__wrap.c) = ceb1466192b31c27453e80454f5cf15a9c368909
 SHA1 (patch-erts_lib__src_common_erl__printf.c) = e156722b0617a4a9eb1eb7ea63365cb52ff2e2c9
+SHA1 (patch-erts_lib__src_common_erl__printf__format.c) = 2d5b98a5450c36b0eda4e2161ac3aefa6c08f6bc
+SHA1 (patch-erts_lib__src_pthread_ethread.c) = d4c6e55818061ac465cc022e748cd072abbc2825
 SHA1 (patch-lib_asn1_c__src_Makefile) = d47870e58de5e10a94dfa9f4a274c88261633e5b
 SHA1 (patch-lib_crypto_c__src_Makefile.in) = 025efecaa05f8a190a9024c475cbe5e9ab9286d9
+SHA1 (patch-lib_erl__interface_src_misc_ei__format.c) = 255ad04bd60e1aefe6668f1c6fcefc790d0564df
+SHA1 (patch-lib_erl__interface_src_misc_ei__printterm.c) = 587f17c256c62aa29fda7d36d8056875b4b4193f
+SHA1 (patch-lib_erl__interface_src_prog_erl__call.c) = 3d585d4dbb2a45e1d177b9417fba0c261e5de3fd
+SHA1 (patch-lib_inets_test_inets__socketwrap__SUITE__data_setuid__socket__wrap.c) = d2e0f9f439f641fda53f7226f787678e04ae59d6
 SHA1 (patch-lib_megaco_src_flex_Makefile.in) = 06eb5a76cc2e5adb4294c7db6919bb7c083c425c
+SHA1 (patch-lib_megaco_src_flex_megaco__flex__scanner__drv.flex.src) = de57f4a94cdce3782592b4767a731b3693ba0224
 SHA1 (patch-lib_odbc_c__src_Makefile.in) = 21dc0a123ae0d6f8e86f3fb9ffaf66e26361172b
+SHA1 (patch-lib_odbc_c__src_odbcserver.c) = 59960575f8ea8f6e65b2ad1f89632d48d40e2cfd
 SHA1 (patch-lib_runtime__tools_c__src_Makefile.in) = 98d351192902d5f6d3bd506c6e382caa06642383
 SHA1 (patch-make_otp.mk.in) = 9d1e33ab3660b5cf0faa2b74129158b71aae408f
 SHA1 (patch-make_output.mk.in) = d7b3da58bfb471d52c41242e2a03d1598ce24e62

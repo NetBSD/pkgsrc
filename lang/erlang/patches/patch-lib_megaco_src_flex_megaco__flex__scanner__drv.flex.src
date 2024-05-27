@@ -1,0 +1,33 @@
+$NetBSD: patch-lib_megaco_src_flex_megaco__flex__scanner__drv.flex.src,v 1.1 2024/05/27 19:07:50 riastradh Exp $
+
+Fix ctype(3) misuse.
+
+--- lib/megaco/src/flex/megaco_flex_scanner_drv.flex.src.orig	2024-05-02 13:07:57.000000000 +0000
++++ lib/megaco/src/flex/megaco_flex_scanner_drv.flex.src
+@@ -996,7 +996,7 @@ static void mfs_lower_load_token(ErlDrvT
+ 
+   } else {
+     for ( i = 0; i < yyleng; ++i ) {
+-      dataP->text_ptr[i] = tolower(yytext[i]);
++      dataP->text_ptr[i] = tolower((unsigned char)yytext[i]);
+     }
+     
+     DBG_BUF("mfs_lower_load_token", "dataP->text_ptr", 
+@@ -1302,7 +1302,7 @@ static void mfs_load_map_name()
+ #endif
+   
+   for ( i = 0; i < yyleng; ++i ) {
+-    dataP->text_ptr[i] = tolower(yytext[i]);
++    dataP->text_ptr[i] = tolower((unsigned char)yytext[i]);
+   }
+   
+   dataP->digit_map_name_ptr = dataP->text_ptr;
+@@ -1326,7 +1326,7 @@ static void mfs_load_map_value()
+ #endif
+   
+   for ( i = 0; i < yyleng; ++i ) {
+-    dataP->text_ptr[i] = tolower(yytext[i]);
++    dataP->text_ptr[i] = tolower((unsigned char)yytext[i]);
+   }
+   
+   dataP->digit_map_value_ptr = dataP->text_ptr;
