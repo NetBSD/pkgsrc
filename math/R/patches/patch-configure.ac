@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.8 2024/01/08 23:13:03 mef Exp $
+$NetBSD: patch-configure.ac,v 1.9 2024/05/27 20:45:14 mef Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
 
---- configure.ac.orig	2019-06-08 08:57:35.738653089 +0000
-+++ configure.ac
+--- configure.ac.orig	2024-03-27 08:02:03.000000000 +0900
++++ configure.ac	2024-04-29 00:00:51.788804133 +0900
 @@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
@@ -13,16 +13,25 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
  
  ### * Information on the package.
  
-@@ -290,7 +291,7 @@ AC_ARG_ENABLE([BLAS-shlib],
+@@ -136,7 +137,7 @@ R_CONFIG_ARGS="${ac_configure_args}"
+ AC_SUBST(R_CONFIG_ARGS)
+ 
+ ## Shortcut for musl which refuses to identify itself at C level
+-if test "${host_os}" == "linux-musl"; then
++if test "${host_os}" = "linux-musl"; then
+   AC_DEFINE(OS_MUSL, 1, [Define if running on Linux-musl])
+ fi
+ 
+@@ -316,7 +317,7 @@ AC_ARG_ENABLE([BLAS-shlib],
  
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
 -  LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
-+  LIBR0="@COMPILER_RPATH_FLAG@${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""
++  LIBR0="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""
    LIBR1=-lR
  else
    LIBR0=
-@@ -709,7 +710,7 @@ case "${host_os}" in
+@@ -898,7 +899,7 @@ case "${host_os}" in
      ## Not so bad in later versions of Darwin, 
      ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
      ;;
@@ -31,7 +40,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -1276,7 +1277,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
+@@ -1549,7 +1550,7 @@ rm -f libconftest${DYLIB_EXT} conftest.c
      fpicflags="${darwin_pic}"
      shlib_cxxldflags="${shlib_ldflags}"
      ;;
@@ -40,7 +49,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ## maybe this needs to depend on the compiler:
      ## -export-dynamic used to work, but does not with clang.
      ## Seems FreeBSD has used the GNU linker since at least 3.0 (Oct 1998)
-@@ -1365,6 +1366,12 @@ dnl     ;;
+@@ -1638,6 +1639,12 @@ dnl     ;;
      ;;
    netbsd*)
      ## See the comments about FreeBSD
@@ -53,7 +62,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-Wl,--export-dynamic"
        shlib_ldflags="-shared"
-@@ -1401,22 +1408,22 @@ dnl     ;;
+@@ -1674,22 +1681,22 @@ dnl     ;;
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -80,7 +89,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.	
-@@ -1495,7 +1502,7 @@ fi
+@@ -1768,7 +1775,7 @@ fi
  : ${CXXPICFLAGS="${cxxpicflags}"}
  if test -n "${CXX}" -a -z "${CXXPICFLAGS}"; then
    case "${host_os}" in
@@ -89,7 +98,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
        ;;
      *)
        warn_cxxpicflags="I could not determine CXXPICFLAGS."
-@@ -1555,8 +1562,10 @@ dnl     ;;
+@@ -1828,8 +1835,10 @@ dnl     ;;
      MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[[\.]][[1-9]]$/.0/"` 
      LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
      RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
@@ -101,7 +110,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ;;
  dnl   hpux*)
  dnl     ## Needs to avoid embedding a relative path ../../../bin.
-@@ -2482,7 +2491,7 @@ case "${host_os}" in
+@@ -2825,7 +2834,7 @@ case "${host_os}" in
      r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
      ;;
    solaris*)
@@ -110,3 +119,15 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
      ;;
    *)
      r_ld_library_defaults=
+@@ -2995,9 +3004,9 @@ sdk_OK=no)
+ dnl No longer used as we only build (or not) BLAS and LAPACK shims
+ dnl  AC_DEFINE(USE_NEW_ACCELERATE, 1, [Define to use Apple's (new) Accelerate])
+ fi
+-AM_CONDITIONAL(BUILD_NEW_ACCELERATE, [test "x${use_accelerate}" == xyes])
++AM_CONDITIONAL(BUILD_NEW_ACCELERATE, [test "x${use_accelerate}" = xyes])
+ AM_CONDITIONAL(BUILD_NEW_ACCELERATE_LAPACK,
+-              [test "x${use_accelerate_lapack}" == xyes])
++              [test "x${use_accelerate_lapack}" = xyes])
+ 
+ dnl record compiler versions
+ CC_VER=`${CC} --version | ${SED} -n 1p`
