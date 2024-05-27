@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:59:18 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/05/27 07:42:55 wen Exp $
 
-BLAKE2s (Business-CreditCard-0.36.tar.gz) = 08aac4bb892390ae63008b1a6a1282976c251075c0d0a59a5286c2b60470c03e
-SHA512 (Business-CreditCard-0.36.tar.gz) = ff83bfbae17dcf6372dd09ac542c9bac7015d74c06ef64b51e54c4b94b26741bf077d0b47a7a5d2e8292e778f429084d8714ddd4d0e8d2c10990e5a0827e86e8
-Size (Business-CreditCard-0.36.tar.gz) = 11319 bytes
+BLAKE2s (Business-CreditCard-0.39.tar.gz) = 226b0c724162f4b421ed300003e68f2acd73caa1cb2b22a9130f5557e8045952
+SHA512 (Business-CreditCard-0.39.tar.gz) = c1e9c692f62aa0cc7b055201027fb6d6c6d3898f589935f2511fbdf1d3ef4d7588bb3e95bb2951f1a882a1c004404bae14897cd5ba05d61e7fd42f24d2fa0cbf
+Size (Business-CreditCard-0.39.tar.gz) = 11920 bytes
