@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.121 2024/03/17 18:35:50 nia Exp $
+# $NetBSD: Makefile,v 1.122 2024/05/27 16:19:18 riastradh Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 GITHUB_PROJECT=	otp
@@ -16,7 +17,7 @@ EXTRACT_USING=	bsdtar
 
 WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	awk gmake perl:run flex
+USE_TOOLS+=	awk gmake perl flex
 USE_LANGUAGES+=	c c++
 
 # "This run-time was supposed be compiled with all code below 2Gb,
@@ -30,10 +31,28 @@ MAKE_FLAGS+=	ARCH=arm
 .endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
+
+# Cross-build requires running erlc.
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
+
+# The Erlang cross-build -- particularly the openssl part -- is unhappy
+# if erl_xcomp_sysroot is undefined.  However, the pkgsrc wrappers
+# already handle sysroot -- and passing CROSS_DESTDIR through to
+# erl_xcomp_sysroot causes configure to break in mysterious ways (fails
+# to detect suffix of executables for some reason, can't find
+# conftest.c just for that one test).  So for now we'll pass / through
+# as the sysroot and hope Erlang doesn't try any funny business with
+# files in /usr/include or /usr/lib or anything.
+CONFIGURE_ARGS+=	erl_xcomp_sysroot=/	# handled by pkgsrc
+
 USE_GNU_CONFIGURE_HOST=	yes
+
 .else
+
 USE_GNU_CONFIGURE_HOST=	no
+
 .endif
+
 OVERRIDE_DIRDEPTH=	4
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
