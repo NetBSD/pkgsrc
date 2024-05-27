@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3656 2024/05/27 10:30:45 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3657 2024/05/27 11:19:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5794,3 +5794,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jaraco.develop to 8.14.0 [adam 2024-05-27]
 	Updated textproc/py-deepdiff to 7.0.1 [adam 2024-05-27]
 	Updated sysutils/py-watchdog to 4.0.1 [adam 2024-05-27]
+	Updated sysutils/py-ansible-compat to 24.5.1 [adam 2024-05-27]
+	Updated sysutils/ansible-lint to 24.5.0 [adam 2024-05-27]
