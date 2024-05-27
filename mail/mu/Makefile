@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/15 10:33:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/27 09:16:36 nia Exp $
 
 DISTNAME=	mu-1.12.5
 CATEGORIES=	mail
@@ -19,7 +19,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		build-aux/date.py
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 charconv
 
 .include "options.mk"
 
