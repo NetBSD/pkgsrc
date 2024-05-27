@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.105 2024/04/28 14:26:43 mef Exp $
+$NetBSD: distinfo,v 1.106 2024/05/27 20:45:14 mef Exp $
 
-BLAKE2s (R-4.3.3.tar.gz) = 59e9ead4142a600fdb24f91f957aa89dee798284410d4b6fa17c77cb1eacacd4
-SHA512 (R-4.3.3.tar.gz) = 26291590d935ea5678771cdcaea013a6c030897eb762b0204e42b34b0f1d33aac1ec933f36caa18d2a31a057a4456bf629222e4f5679f24bc48a7a764b1aedbe
-Size (R-4.3.3.tar.gz) = 35861202 bytes
-SHA1 (patch-configure.ac) = 3cd063c424b7b9674f434d49c771b76dde73ac5c
-SHA1 (patch-m4_R.m4) = 48a1d38b5505cbb87bd2c156f262680156c07a02
+BLAKE2s (R-4.4.0.tar.gz) = 31efebb6f183d6e754b82dfb14b4715659a01d5ee95b86048d6127f884d42d6a
+SHA512 (R-4.4.0.tar.gz) = 8f44eac49c58db7f161732135be4d1757f65b18545f3f15c463d499794735d02f4a4cb9bacff90d16e80b624ead8aa0af16899cf7654b6cb91a46868e405bd17
+Size (R-4.4.0.tar.gz) = 37335563 bytes
+SHA1 (patch-configure.ac) = 91bed37afc2ee2f68695f8496c56ae23aaf42b43
+SHA1 (patch-m4_R.m4) = 3e1d390d8aa9895aee7cb479ddab371d82562b88
 SHA1 (patch-src_include_R__ext_Error.h) = bc55a8bba6bf931e3f6794577e63bfafdfc740cf
 SHA1 (patch-src_library_stats_src_Makefile.in) = 4eb93292858392792c37a706399e2cef91821bbe
 SHA1 (patch-src_main_character.c) = c1be2cae404ecbdd547343b70e9d072e9e1d5549
