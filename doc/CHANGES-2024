@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3653 2024/05/27 08:45:58 wen Exp $
+$NetBSD: CHANGES-2024,v 1.3654 2024/05/27 08:48:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-mkdocs to 1.6.0 [adam 2024-05-27]
 	Updated math/p5-Math-BigInt-Pari to 1.3014 [wen 2024-05-27]
 	Updated math/p5-Math-BigInt-GMP to 1.7001 [wen 2024-05-27]
+	Updated math/p5-Math-BigInt to 2.003002 [wen 2024-05-27]
