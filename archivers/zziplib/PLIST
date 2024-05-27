@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/03/02 12:55:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/05/27 05:01:10 adam Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzip-big
@@ -30,30 +30,33 @@ include/zzip/write.h
 include/zzip/zzip.h
 include/zzip/zzip32.h
 include/zziplib.h
+lib/cmake/zziplib/zziplib-config.cmake
+lib/cmake/zziplib/zziplibTargets-release.cmake
+lib/cmake/zziplib/zziplibTargets.cmake
 lib/libzzip-0.${SOEXT}.10
 lib/libzzip-0.${SOEXT}.11
 lib/libzzip-0.${SOEXT}.12
 lib/libzzip-0.so
 lib/libzzip-0.so.13
-lib/libzzip-0.so.13.0.72
+lib/libzzip-0.so.13.0.75
 lib/libzzip.so
 lib/libzzipfseeko-0.${SOEXT}.10
 lib/libzzipfseeko-0.${SOEXT}.11
 lib/libzzipfseeko-0.${SOEXT}.12
 lib/libzzipfseeko-0.so
 lib/libzzipfseeko-0.so.13
-lib/libzzipfseeko-0.so.13.0.72
+lib/libzzipfseeko-0.so.13.0.75
 lib/libzzipfseeko.so
 lib/libzzipmmapped-0.${SOEXT}.10
 lib/libzzipmmapped-0.${SOEXT}.11
 lib/libzzipmmapped-0.${SOEXT}.12
 lib/libzzipmmapped-0.so
 lib/libzzipmmapped-0.so.13
-lib/libzzipmmapped-0.so.13.0.72
+lib/libzzipmmapped-0.so.13.0.75
 lib/libzzipmmapped.so
 lib/libzzipwrap-0.so
 lib/libzzipwrap-0.so.13
-lib/libzzipwrap-0.so.13.0.72
+lib/libzzipwrap-0.so.13.0.75
 lib/libzzipwrap.so
 lib/pkgconfig/zzipfseeko.pc
 lib/pkgconfig/zziplib.pc
@@ -130,6 +133,3 @@ man/man3/zzip_tell32.3
 man/man3/zzip_telldir.3
 man/man3/zzip_telldir32.3
 share/aclocal/zziplib.m4
-share/zziplib/zziplib-config.cmake
-share/zziplib/zziplibTargets-release.cmake
-share/zziplib/zziplibTargets.cmake
