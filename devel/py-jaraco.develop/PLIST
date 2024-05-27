@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/11 09:57:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/27 09:06:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,9 +13,18 @@ ${PYSITELIB}/jaraco/develop/add-github-secret.pyo
 ${PYSITELIB}/jaraco/develop/add-github-secrets.py
 ${PYSITELIB}/jaraco/develop/add-github-secrets.pyc
 ${PYSITELIB}/jaraco/develop/add-github-secrets.pyo
+${PYSITELIB}/jaraco/develop/add-project.py
+${PYSITELIB}/jaraco/develop/add-project.pyc
+${PYSITELIB}/jaraco/develop/add-project.pyo
 ${PYSITELIB}/jaraco/develop/checkout-all.py
 ${PYSITELIB}/jaraco/develop/checkout-all.pyc
 ${PYSITELIB}/jaraco/develop/checkout-all.pyo
+${PYSITELIB}/jaraco/develop/compat/__init__.py
+${PYSITELIB}/jaraco/develop/compat/__init__.pyc
+${PYSITELIB}/jaraco/develop/compat/__init__.pyo
+${PYSITELIB}/jaraco/develop/compat/py38.py
+${PYSITELIB}/jaraco/develop/compat/py38.pyc
+${PYSITELIB}/jaraco/develop/compat/py38.pyo
 ${PYSITELIB}/jaraco/develop/compiler.py
 ${PYSITELIB}/jaraco/develop/compiler.pyc
 ${PYSITELIB}/jaraco/develop/compiler.pyo
@@ -49,6 +58,9 @@ ${PYSITELIB}/jaraco/develop/macos-build-python.pyo
 ${PYSITELIB}/jaraco/develop/merge.py
 ${PYSITELIB}/jaraco/develop/merge.pyc
 ${PYSITELIB}/jaraco/develop/merge.pyo
+${PYSITELIB}/jaraco/develop/migrate-config.py
+${PYSITELIB}/jaraco/develop/migrate-config.pyc
+${PYSITELIB}/jaraco/develop/migrate-config.pyo
 ${PYSITELIB}/jaraco/develop/print-meta.py
 ${PYSITELIB}/jaraco/develop/print-meta.pyc
 ${PYSITELIB}/jaraco/develop/print-meta.pyo
