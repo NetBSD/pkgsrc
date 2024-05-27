@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.186 2024/04/15 17:07:53 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2024/05/27 12:36:13 adam Exp $
 
-DISTNAME=	doxygen-1.10.0.src
+DISTNAME=	doxygen-1.11.0.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://doxygen.nl/files/
 
