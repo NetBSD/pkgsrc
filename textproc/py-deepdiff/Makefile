@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/01/28 21:00:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/27 10:28:40 adam Exp $
 
-DISTNAME=	deepdiff-6.7.1
+DISTNAME=	deepdiff-7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deepdiff/}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4.0.2:../../devel/py-ordered-set
+DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4.1.0:../../devel/py-ordered-set
 # cli
-DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.7:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23.5:../../math/py-numpy
 
