@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/05/11 05:06:04 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/05/27 05:05:48 adam Exp $
 
-DISTNAME=	bitstring-4.2.2
+DISTNAME=	bitstring-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
