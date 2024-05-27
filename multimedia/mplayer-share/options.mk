@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.72 2022/09/30 12:40:45 triaxx Exp $
+# $NetBSD: options.mk,v 1.73 2024/05/27 19:33:55 rjs Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -292,7 +292,10 @@ CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--disable-theora
 .  endif
 
-.  if empty(PKG_OPTIONS:Mv4l2)
+.if !empty(PKG_OPTIONS:Mv4l2)
+CONFIGURE_ARGS+=	--enable-tv-v4l2
+.  include "../../graphics/libv4l/buildlink3.mk"
+.else
 CONFIGURE_ARGS+=	--disable-tv-v4l2
 .  endif
 
