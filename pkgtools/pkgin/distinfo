@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.79 2023/08/22 07:14:18 jperkin Exp $
+$NetBSD: distinfo,v 1.80 2024/05/27 23:27:10 riastradh Exp $
 
 BLAKE2s (pkgin-23.8.1.tar.gz) = eb0f008ba9801a3c0a35de3e2b2503edd554c3cb17235b347bb8274a18794eb7
 SHA512 (pkgin-23.8.1.tar.gz) = 2561d9e4b28a9a77c3c798612ec489dd67dd9a93c61344937095b0683fa89d8432a9ab8e600d0e2995d954888ac2e75a407bab08aa1e8198e375c99d2999f233
 Size (pkgin-23.8.1.tar.gz) = 267029 bytes
+SHA1 (patch-configure.ac) = 53f56351fb602d9fdce2c1ed266d65919a369086
