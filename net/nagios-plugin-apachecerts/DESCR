@@ -1,4 +1,4 @@
-$NetBSD: DESCR,v 1.1 2023/07/19 14:07:03 manu Exp $
+$NetBSD: DESCR,v 1.2 2024/05/28 13:14:28 manu Exp $
 
 This Nagios plugin checks certificate expiration from Apache
 configuration.

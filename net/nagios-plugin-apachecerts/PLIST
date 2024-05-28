@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/07/19 14:07:03 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/28 13:14:28 manu Exp $
 libexec/nagios/check_apachecerts
