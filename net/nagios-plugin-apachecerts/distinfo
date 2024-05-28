@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/07/19 14:07:03 manu Exp $
+$NetBSD: distinfo,v 1.2 2024/05/28 13:14:28 manu Exp $
 
-BLAKE2s (check_apachecerts-0.6.tgz) = 09c110e9b5ac77c545fdbb16f4902f5bbdb86a0acb839b7fc8ccba55a7e6ca40
-SHA512 (check_apachecerts-0.6.tgz) = 1ac40906bd7c729b4cf6dc0b27988fc2e9260f9455f55e11b7d611560d82c1796a9f47c6d4152c2ab30a4255d30460042016585eaed8f2ad590bef27794bdbf9
-Size (check_apachecerts-0.6.tgz) = 5143 bytes
+BLAKE2s (check_apachecerts-0.7.tgz) = 311e9d14445e65262aabeef3d4920f495e56147144502f4e70bdbee1689269ed
+SHA512 (check_apachecerts-0.7.tgz) = e6eae9ae301d606adff956ba11c6fb701561f4d3816558967ca8208e5fc7287a1e6a3f73c012f70f5de6db270fe9ee6d9696cf0cc97815fed8b0e6c19ccf77da
+Size (check_apachecerts-0.7.tgz) = 6254 bytes
