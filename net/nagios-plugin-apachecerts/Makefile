@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/07/19 14:07:03 manu Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/28 13:14:28 manu Exp $
 #
 
-DISTNAME=	check_apachecerts-0.6
+DISTNAME=	check_apachecerts-0.7
 PKGNAME=	nagios-plugin-apachecerts-${DISTNAME:C/.*-//}
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
