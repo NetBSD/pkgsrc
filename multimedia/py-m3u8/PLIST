@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/24 21:51:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/05/28 02:05:18 gutteridge Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -22,3 +22,9 @@ ${PYSITELIB}/m3u8/parser.pyo
 ${PYSITELIB}/m3u8/protocol.py
 ${PYSITELIB}/m3u8/protocol.pyc
 ${PYSITELIB}/m3u8/protocol.pyo
+${PYSITELIB}/m3u8/version_matching.py
+${PYSITELIB}/m3u8/version_matching.pyc
+${PYSITELIB}/m3u8/version_matching.pyo
+${PYSITELIB}/m3u8/version_matching_rules.py
+${PYSITELIB}/m3u8/version_matching_rules.pyc
+${PYSITELIB}/m3u8/version_matching_rules.pyo
