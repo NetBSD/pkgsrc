@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/10/24 22:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2024/05/28 00:46:29 dholland Exp $
 
 DISTNAME=	alpine-2.26
 PKGREVISION=	3
@@ -103,7 +103,7 @@ INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 do-install:
 .for bin in \
 	alpine/alpine alpine/rpdump alpine/rpload	\
- 		pico/pico pico/pilot
+		pico/pico pico/pilot
 	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for man in alpine rpdump rpload pico pilot
@@ -115,10 +115,15 @@ post-install:
 	${RUN}${WRKSRC}/alpine/alpine -conf > ${DESTDIR}${EGDIR}/pine.conf
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|} ${DESTDIR}${DOCDIR}
 
+# This must come first, or at least before gettext-tools, because the
+# latter includes termcap.buildlink3.mk instead; that sets things up
+# to use -ltermcap, not -lterminfo, but the package's makefile uses
+# -lterminfo and then the link fails.
+.include "../../mk/terminfo.buildlink3.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
