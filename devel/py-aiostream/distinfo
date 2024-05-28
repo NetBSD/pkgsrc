@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/11/23 09:01:33 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/05/28 16:16:15 adam Exp $
 
-BLAKE2s (aiostream-0.5.2.tar.gz) = f55310994725e21b1f0d119c9ed1f82eaabb8e73cfb5260f4ce21c99797b69b8
-SHA512 (aiostream-0.5.2.tar.gz) = 5556b4dac536bc1105d9f6a7989e3bd46613b8915ab7017b0fcc55784e06be66d0e8911b1fb4e081f0aa42cbdbaccea2de2b5ab58625e58151b2d4e61b113364
-Size (aiostream-0.5.2.tar.gz) = 35339 bytes
+BLAKE2s (aiostream-0.6.1.tar.gz) = 70f9ee8b8f718f0cb9edd5fc3278ff717741918a7c1374e51385fbaa90e16308
+SHA512 (aiostream-0.6.1.tar.gz) = 4ad9e951cb19eaa3937673eefd6c601594dcf2b93e46cb2e4f1cd28d22b4a5f0d2a6a6cee94572a601fed14b8d19327a1fd88b4ab5a60e0328594b83df82b747
+Size (aiostream-0.6.1.tar.gz) = 66890 bytes
