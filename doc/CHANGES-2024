@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3670 2024/05/28 13:14:28 manu Exp $
+$NetBSD: CHANGES-2024,v 1.3671 2024/05/28 13:38:32 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5814,3 +5814,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-pythran to 0.16.1 [adam 2024-05-28]
 	Updated net/py-unearth to 0.15.3 [adam 2024-05-28]
 	Updated net/nagios-plugin-apachecerts to 0.7 [manu 2024-05-28]
+	Updated lang/gleam to 1.2.0 [nikita 2024-05-28]
