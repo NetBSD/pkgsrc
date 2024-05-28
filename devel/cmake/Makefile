@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2024/05/16 06:14:44 wiz Exp $
+# $NetBSD: Makefile,v 1.217 2024/05/28 00:52:21 riastradh Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -88,6 +88,7 @@ BUILDLINK_API_DEPENDS.rhash+=	rhash>=1.4.2nb1
 .include "../../misc/rhash/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/curses.buildlink3.mk"
 
 .if !exists(${BUILDLINK_INCDIRS.curses}/form.h) && \
