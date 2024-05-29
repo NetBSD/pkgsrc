@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/06 08:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/29 17:28:29 vins Exp $
 
-DISTNAME=	got-portable-0.97
+DISTNAME=	got-portable-0.99
 PKGNAME=	${DISTNAME:S/-portable//}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
 
@@ -17,7 +16,7 @@ PREV_PKGPATH=	devel/got-portable
 
 BUILD_DEFS+=	VARBASE
 
-USE_TOOLS+=	pkg-config yacc
+USE_TOOLS+=	pkg-config yacc ksh:test perl:test
 
 PKG_GROUPS=		_gotd
 PKG_USERS=		_gotd:_gotd
@@ -49,7 +48,14 @@ INSTALLATION_DIRS+=	share/doc/got share/examples/got
 RCD_SCRIPTS=	gotd
 PKG_SHELL=	bin/gotsh
 
-TEST_TARGET=	tests
+# Tests for HTTP protocol support rely on the HTTP::Daemon Perl module.
+TEST_DEPENDS+=		p5-HTTP-Daemon-[0-9]*:../../www/p5-HTTP-Daemon
+TEST_DEPENDS+=		git-[0-9]*:../../devel/git
+INTERACTIVE_STAGE+=	test
+TEST_TARGET=		tests
+
+REPLACE_KSH+=	regress/gotd/repo_write_protected.sh
+REPLACE_KSH+=	regress/tog/log.sh
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
@@ -63,6 +69,12 @@ SUBST_MESSAGE.conf=	Fix configuration file path.
 SUBST_FILES.conf+=	gitwrapper/gitwrapper.1 gotd/gotd.conf.5	\
 			gotd/gotd.h gotd/gotd.8
 SUBST_SED.conf+=	-e "s:/etc/gotd.conf:${PKG_SYSCONFDIR}/gotd.conf:g"
+
+SUBST_CLASSES+=		ncursesw
+SUBST_STAGE.ncursesw=	pre-configure
+SUBST_MESSAGE.ncursesw=	Do not check for ncursesw on NetBSD
+SUBST_FILES.ncursesw=	configure
+SUBST_SED.ncursesw+=	-e "s:gnupanelw:gnupanel:g"
 
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q}
 
@@ -81,11 +93,11 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/gotd.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|} ${DESTDIR}${DOCDIR}
 
-# need libcrypto.so.1.1
-BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1d
-.include "../../security/openssl/buildlink3.mk"
+# needs libtls
+.include "../../security/libretls/buildlink3.mk"
 
 # required for set_panel_userptr(3) and waddwstr(3).
+BUILDLINK_API_DEPENDS.ncurses+=   ncurses>=6.5
 .include "../../devel/ncurses/buildlink3.mk"
 
 # compatibility macros and functions for Linux.
