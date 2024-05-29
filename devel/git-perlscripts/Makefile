@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2023/08/24 09:33:30 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/05/29 02:38:05 riastradh Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-perlscripts-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	Git commands that rely on Perl
 
 CONFLICTS+=	git-base<2.41.0nb1
 
+DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Error>=0.17015:../../devel/p5-Error
 DEPENDS+=	p5-Email-Valid>=0.190:../../mail/p5-Email-Valid
 DEPENDS+=	p5-MailTools>=2.11:../../mail/p5-MailTools
