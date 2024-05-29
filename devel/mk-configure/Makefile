@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/05/27 13:34:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.46 2024/05/29 18:43:50 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.39.3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/mk-configure
+HOMEPAGE=	https://github.com/cheusov/mk-configure
 COMMENT=	Lightweight but powerful replacement for GNU autotools
 LICENSE=	modified-bsd
 
