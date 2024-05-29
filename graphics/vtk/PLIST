@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/07/25 13:44:01 thor Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/05/29 16:33:04 adam Exp $
 bin/vtkProbeOpenGLVersion-${VTKVER}
 include/vtk-${VTKVER}/DICOMAppHelper.h
 include/vtk-${VTKVER}/DICOMCMakeConfig.h
@@ -2722,8 +2722,8 @@ include/vtk-${VTKVER}/vtkXMLWriter.h
 include/vtk-${VTKVER}/vtkXMLWriter2.h
 include/vtk-${VTKVER}/vtkXMLWriterBase.h
 include/vtk-${VTKVER}/vtkXMLWriterC.h
-include/vtk-${VTKVER}/vtkXOpenGLRenderWindow.h
-include/vtk-${VTKVER}/vtkXRenderWindowInteractor.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkXOpenGLRenderWindow.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkXRenderWindowInteractor.h
 include/vtk-${VTKVER}/vtkXYPlotActor.h
 include/vtk-${VTKVER}/vtkXYPlotWidget.h
 include/vtk-${VTKVER}/vtkXYZMolReader.h

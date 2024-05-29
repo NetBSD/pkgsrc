@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/11/08 13:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/29 16:32:12 adam Exp $
 
 DISTNAME=	kyua-0.13
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/kyua/releases/download/${DISTNAME}/}
 

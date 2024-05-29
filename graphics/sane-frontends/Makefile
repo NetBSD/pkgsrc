@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/04/07 07:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2024/05/29 16:33:03 adam Exp $
 
 .include "../../graphics/sane-backends/Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/frontends/uploads/14e5c5a9205b10bd3df04501852eab28/
@@ -6,7 +6,7 @@ MASTER_SITES=	https://gitlab.com/sane-project/frontends/uploads/14e5c5a9205b10bd
 DISTNAME=	sane-frontends-${SANE_VERSION}
 SANE_MINOR=	0
 SANE_MICRO=	14
-PKGREVISION=	62
+PKGREVISION=	63
 
 COMMENT=	Frontends for access to scanners, digital cameras, frame grabbers etc
 

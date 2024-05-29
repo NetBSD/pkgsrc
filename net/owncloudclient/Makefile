@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2024/04/06 08:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/05/29 16:34:00 adam Exp $
 
 DISTNAME=	ownCloud-2.7.6.3261
 PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net
 MASTER_SITES=	https://download.owncloud.com/desktop/ownCloud/stable/${PKGVERSION_NOREV}/source/
 EXTRACT_SUFX=	.tar.xz

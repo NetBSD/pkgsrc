@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/11/08 13:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/05/29 16:34:13 adam Exp $
 
 PKGNAME=	${DISTNAME:S/crudesaml-/cy2-saml-/}
-PKGREVISION=	12
+PKGREVISION=	13
 COMMENT=	Crude SAML assertion validator for bridging WebSSO and SASL
 
 PLUGINDIR=	${PREFIX}/lib/sasl2

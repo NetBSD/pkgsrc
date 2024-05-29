@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/03/21 08:50:43 markd Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/29 16:34:41 adam Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	upmendex-1.08
