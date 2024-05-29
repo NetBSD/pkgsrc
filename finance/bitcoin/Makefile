@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2024/04/06 08:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/05/29 16:32:30 adam Exp $
 
 DISTNAME=	bitcoin-24.0.1
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 

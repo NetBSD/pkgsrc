@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2024/05/16 06:15:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/05/29 16:34:32 adam Exp $
 
 GITHUB_PROJECT=	swtpm
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	swtpm-0.7.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stefanberger/}
 

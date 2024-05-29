@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2024/05/14 11:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2024/05/29 16:34:49 adam Exp $
 
 DISTNAME=	gitea-1.21.11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
+PKGREVISION=	1
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 

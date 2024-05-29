@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2024/05/12 19:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/05/29 16:34:15 adam Exp $
 
 DISTNAME=	keepassxc-2.7.8-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

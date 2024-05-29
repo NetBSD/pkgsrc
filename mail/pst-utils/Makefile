@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2023/11/08 13:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/29 16:33:24 adam Exp $
 
 DISTNAME=		libpst-0.6.76
 PKGNAME=		${DISTNAME:S/libpst/pst-utils/}
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		mail
 MASTER_SITES=		https://www.five-ten-sg.com/libpst/packages/
 

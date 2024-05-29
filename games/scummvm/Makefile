@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2024/05/16 06:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2024/05/29 16:32:43 adam Exp $
 
 DISTNAME=	scummvm-2.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

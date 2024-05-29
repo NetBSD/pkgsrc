@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2024/05/16 06:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/05/29 16:33:26 adam Exp $
 
 R_PKGNAME=	CGIwithR
 R_PKGVER=	0.73-0
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

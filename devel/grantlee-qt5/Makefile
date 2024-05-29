@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2024/04/06 08:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/05/29 16:32:03 adam Exp $
 
 DISTNAME=	grantlee-5.3.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=steveire/}
 GITHUB_PROJECT=	grantlee

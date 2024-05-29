@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/11/08 13:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/29 16:34:17 adam Exp $
 
 DISTNAME=	oath-toolkit-2.6.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://download.savannah.gnu.org/releases/oath-toolkit/
 

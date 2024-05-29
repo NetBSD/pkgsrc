@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2024/05/16 06:14:42 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/05/29 16:31:52 adam Exp $
 
 DISTNAME=	sybase-0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	databases python
 MASTER_SITES=	http://object-craft.com.au/projects/sybase/download/
 

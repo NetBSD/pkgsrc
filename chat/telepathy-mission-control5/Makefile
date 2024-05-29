@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2023/12/30 01:37:43 zafer Exp $
+# $NetBSD: Makefile,v 1.41 2024/05/29 16:31:33 adam Exp $
 
 DISTNAME=	telepathy-mission-control-5.7.9
 PKGNAME=	telepathy-mission-control5-5.7.9
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	chat
 MASTER_SITES=	https://telepathy.freedesktop.org/releases/telepathy-mission-control/
 

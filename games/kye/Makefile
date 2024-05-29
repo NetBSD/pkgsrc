@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2024/04/17 12:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2024/05/29 16:32:41 adam Exp $
 
 DISTNAME=		kye-1.0
-PKGREVISION=		50
+PKGREVISION=		51
 CATEGORIES=		games
 MASTER_SITES=		http://games.moria.org.uk/kye/download/
 

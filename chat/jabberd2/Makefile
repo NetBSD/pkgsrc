@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2023/11/08 13:18:15 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2024/05/29 16:31:30 adam Exp $
 
 DISTNAME=	jabberd-2.7.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jabberd2/jabberd2/releases/download/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz

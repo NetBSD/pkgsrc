@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/04/27 11:49:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/05/29 16:34:55 adam Exp $
 
 DISTNAME=	qtwebchannel-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebchannel-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 webchannel module
 CATEGORIES=	www
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

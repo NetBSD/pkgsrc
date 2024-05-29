@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/05/08 11:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/29 16:31:27 adam Exp $
 
 DISTNAME=	ghdl-3.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ghdl/}
 GITHUB_PROJECT=	ghdl

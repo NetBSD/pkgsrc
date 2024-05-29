@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2024/04/07 07:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/05/29 16:35:17 adam Exp $
 
 DISTNAME=	xvidcap-1.1.7
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2024/05/16 06:14:33 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/05/29 16:31:21 adam Exp $
 
 DISTNAME=	hydrogen-1.0.2
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hydrogen-music/}
 GITHUB_PROJECT=	Hydrogen

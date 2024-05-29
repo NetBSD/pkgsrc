@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/05/16 06:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/05/29 16:34:28 adam Exp $
 
 DISTNAME=	lnav-0.11.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tstack/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

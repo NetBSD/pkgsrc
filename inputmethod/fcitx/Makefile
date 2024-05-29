@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2024/04/07 07:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/05/29 16:33:07 adam Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		inputmethod
 MASTER_SITES=		https://download.fcitx-im.org/fcitx/
 EXTRACT_SUFX=		.tar.xz
