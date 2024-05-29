@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:15:24 nia Exp $
+$NetBSD: distinfo,v 1.19 2024/05/29 15:21:42 cheusov Exp $
 
-BLAKE2s (libmaa-1.4.7.tar.gz) = b32ec893e75d0b259aebd01f8db8c467e2f6185840d1b1e3de1d2fadf3e52e7b
-SHA512 (libmaa-1.4.7.tar.gz) = 6aa0ec6de92d9512152116a2698f5e7d3166631832968d2b7942b8564a4d61ef6eaf304d863e682758636e55a0c5d26fde49db028b18c160abb2286683e8478b
-Size (libmaa-1.4.7.tar.gz) = 173728 bytes
-SHA1 (patch-maa_log.c) = 72bfdee2f4e7c62552c505e613183fbfbf4ad4f8
+BLAKE2s (libmaa-1.5.0.tar.gz) = 6f61ce7390397184bd848dc2b1dba88b4cb6b553975679be2a5f5566d78a3349
+SHA512 (libmaa-1.5.0.tar.gz) = 9c1a31881e814deaf468c7601f6b9f6acfad8497f3334572da64825181d4a930b47bee1bf155b94d79bf005c36a3ca0b39c2d03697614e627877a02fafdfe2fa
+Size (libmaa-1.5.0.tar.gz) = 176882 bytes
