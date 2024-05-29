@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3686 2024/05/29 19:26:09 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.3687 2024/05/29 20:01:50 osa Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5843,3 +5843,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated parallel/paexec to 1.1.5 [cheusov 2024-05-29]
 	Updated devel/mise to 2024.5.24 [schmonz 2024-05-29]
 	Updated devel/swagger-codegen to 3.0.57 [schmonz 2024-05-29]
+	Updated www/nginx-devel to 1.27.0 [osa 2024-05-29]
+	Updated www/nginx to 1.26.1 [osa 2024-05-29]
