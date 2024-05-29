@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.24 2024/04/06 00:01:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/05/29 16:02:15 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -108,6 +114,9 @@ ${PYSITELIB}/google/protobuf/pyext/cpp_message.pyo
 ${PYSITELIB}/google/protobuf/reflection.py
 ${PYSITELIB}/google/protobuf/reflection.pyc
 ${PYSITELIB}/google/protobuf/reflection.pyo
+${PYSITELIB}/google/protobuf/runtime_version.py
+${PYSITELIB}/google/protobuf/runtime_version.pyc
+${PYSITELIB}/google/protobuf/runtime_version.pyo
 ${PYSITELIB}/google/protobuf/service.py
 ${PYSITELIB}/google/protobuf/service.pyc
 ${PYSITELIB}/google/protobuf/service.pyo
@@ -148,9 +157,3 @@ ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
 ${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
