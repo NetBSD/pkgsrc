@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24475 2024/05/25 01:47:39 gutteridge Exp $
+$NetBSD: TODO,v 1.24476 2024/05/29 16:07:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -736,7 +736,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.64.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -778,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ices-mp3-2.0.2
 	o icewm-3.4.0
 	o icinga-base-2.12.3
-	o icu-75.1
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.2.12
