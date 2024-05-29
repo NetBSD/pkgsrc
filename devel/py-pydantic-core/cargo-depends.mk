@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2024/04/15 15:06:45 he Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2024/05/29 07:29:10 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.10
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.2
@@ -34,15 +34,15 @@ CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.8
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.76
-CARGO_CRATE_DEPENDS+=	pyo3-0.21.1
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.21.1
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.21.1
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.21.1
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.21.1
+CARGO_CRATE_DEPENDS+=	pyo3-0.21.2
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.21.2
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.21.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.21.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.21.2
 CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.9
 CARGO_CRATE_DEPENDS+=	quote-1.0.35
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
-CARGO_CRATE_DEPENDS+=	regex-1.10.3
+CARGO_CRATE_DEPENDS+=	regex-1.10.4
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.5
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.2
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.13
@@ -50,7 +50,7 @@ CARGO_CRATE_DEPENDS+=	ryu-1.0.14
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.197
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.197
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.114
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.116
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	speedate-0.14.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
