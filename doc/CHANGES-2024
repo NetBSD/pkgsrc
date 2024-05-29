@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3675 2024/05/29 10:27:13 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3676 2024/05/29 10:42:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5822,3 +5822,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pydantic to 2.7.2 [adam 2024-05-29]
 	Updated www/py-uvicorn to 0.30.0 [adam 2024-05-29]
 	Updated finance/py-stripe to 9.8.0 [adam 2024-05-29]
+	Updated misc/py-watchfiles to 0.22.0 [adam 2024-05-29]
+	Updated devel/py-prompt_toolkit to 3.0.45 [adam 2024-05-29]
