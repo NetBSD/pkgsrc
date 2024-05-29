@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.118 2024/05/07 14:15:29 osa Exp $
+$NetBSD: distinfo,v 1.119 2024/05/29 20:00:23 osa Exp $
 
+BLAKE2s (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 6c3880dc781886fb1f4190fa9b8f1459246cc5d157aaed3b9a24cc7abaf7c5a1
+SHA512 (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = b780bea19736f5db844f11b0b407c159cc6ba7326b50177cefde6f8ee875238d3618e50d29b132a66fe98103cb5656f33895e5989d98d4cdc26cfeaa7f12865f
+Size (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 2453 bytes
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
 Size (array-var-nginx-module-0.06.tar.gz) = 12005 bytes
@@ -24,9 +27,9 @@ Size (nbs-system-naxsi-d714f16_GH.tar.gz) = 236940 bytes
 BLAKE2s (nchan-1.3.6.tar.gz) = 1409be69d5589d3643a7cb1f3dd1e4bc8d58c4be801234d52738090c04469255
 SHA512 (nchan-1.3.6.tar.gz) = 0f1c25d460dcf4e3407a1ef4bfcefe17eba7b0ff250f267e5bde0eb4298e9596c1e6992fc58fe35d8420888065353bf3883a1f1bbc5e607a00128992eb1ee6d2
 Size (nchan-1.3.6.tar.gz) = 761436 bytes
-BLAKE2s (nginx-1.26.0.tar.gz) = f08cfa731c8dabcc66655c830563ef21c3165e8abe5affe1d1cea181ba11679f
-SHA512 (nginx-1.26.0.tar.gz) = 1f604a4a29f1b74eb56de7f1d8b0e5610fa055280b4ad2d3550c56926460de24da81b17485cffb358d8814061d4a9db1e0e5079af7921f1dc329e283e2775791
-Size (nginx-1.26.0.tar.gz) = 1244118 bytes
+BLAKE2s (nginx-1.26.1.tar.gz) = 4ebae7f8ecb81339dc29786112994d5f2a5a36bfe32bea7107502187f0c17da8
+SHA512 (nginx-1.26.1.tar.gz) = dfaadde78eb5cf8c8c3a43ead9ac49fc852c8de3e70e69754e3ffafc88c50c8bc08cdac0cc0ba8a9d8c155bdb334865e2e6c7dc1144c79959c426a9e087b3e37
+Size (nginx-1.26.1.tar.gz) = 1244738 bytes
 BLAKE2s (nginx-dav-ext-module-3.0.0.tar.gz) = 8e823ffd605d4fca00eb3ca92a0954ca35fb178397e0b990fea7d47580ee582f
 SHA512 (nginx-dav-ext-module-3.0.0.tar.gz) = d0193ba90f1ef46c4e470630c4394bdf99d94fd2e3bd8be6cb2ba1655ec59944b1269025f032b79dc2c6dad366e54389ef6a6da2ddeb91d535a4027f2162fbde
 Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
