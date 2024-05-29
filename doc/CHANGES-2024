@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3677 2024/05/29 11:11:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3678 2024/05/29 11:39:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5826,3 +5826,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-prompt_toolkit to 3.0.45 [adam 2024-05-29]
 	Updated devel/catch2 to 3.6.0 [adam 2024-05-29]
 	Updated databases/postgresql-timescaledb to 2.15.1 [adam 2024-05-29]
+	Updated devel/py-typeguard to 4.3.0 [adam 2024-05-29]
+	Updated databases/py-python-sql to 1.5.1 [adam 2024-05-29]
