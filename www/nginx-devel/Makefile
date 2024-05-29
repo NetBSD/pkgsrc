@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2024/05/29 16:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.127 2024/05/29 19:52:18 osa Exp $
 
-DISTNAME=	nginx-1.26.0
+DISTNAME=	nginx-1.27.0
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -11,6 +10,10 @@ MAINTAINER=	osa@NetBSD.org
 HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
+
+PATCH_SITES=		https://github.com/freenginx/nginx/commit/
+PATCHFILES=		1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch
+PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
 CONFLICTS=	nginx-[0-9]*
 
