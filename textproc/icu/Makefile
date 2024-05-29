@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.153 2023/12/14 10:44:23 adam Exp $
+# $NetBSD: Makefile,v 1.154 2024/05/29 15:38:34 adam Exp $
 
-DISTNAME=	icu4c-74_2-src
+DISTNAME=	icu4c-75_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 GITHUB_PROJECT=	icu
-GITHUB_RELEASE=	release-74-2
+GITHUB_RELEASE=	release-75-1
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,8 +15,8 @@ LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c c++
-USE_CC_FEATURES=	c99
-USE_CXX_FEATURES=	c++11
+USE_CC_FEATURES=	c11
+USE_CXX_FEATURES=	c++17
 USE_TOOLS+=		gmake pkg-config
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
