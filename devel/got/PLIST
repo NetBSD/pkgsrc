@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/11 14:47:06 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/05/29 17:28:29 vins Exp $
 bin/gitwrapper
 bin/got
 bin/gotadmin
 bin/gotctl
 bin/gotsh
 bin/tog
+libexec/got-fetch-http
 libexec/got-fetch-pack
 libexec/got-index-pack
+libexec/got-notify-email
+libexec/got-notify-http
 libexec/got-read-blob
 libexec/got-read-commit
 libexec/got-read-gitconfig
