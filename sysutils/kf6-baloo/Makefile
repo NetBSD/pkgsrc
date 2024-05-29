@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/05/26 12:52:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/29 16:34:26 adam Exp $
 
 DISTNAME=	baloo-${KF6VER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks

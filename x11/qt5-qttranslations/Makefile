@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2024/05/25 14:21:22 adam Exp $
+# $NetBSD: Makefile,v 1.93 2024/05/29 16:35:13 adam Exp $
 
 DISTNAME=	qttranslations-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qttranslations-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 translations
 
 MAKE_ENV+=		QTDIR=${QTDIR}

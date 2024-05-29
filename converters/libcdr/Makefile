@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2023/12/30 20:49:58 zafer Exp $
+# $NetBSD: Makefile,v 1.64 2024/05/29 16:31:37 adam Exp $
 
 DISTNAME=	libcdr-0.1.7
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	converters
 MASTER_SITES=	https://dev-www.libreoffice.org/src/libcdr/
 EXTRACT_SUFX=	.tar.xz

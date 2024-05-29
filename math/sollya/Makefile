@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/11/08 13:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/05/29 16:33:28 adam Exp $
 
 DISTNAME=	sollya-8.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	https://www.sollya.org/releases/sollya-8.0/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2024/05/01 12:45:31 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/05/29 16:35:15 adam Exp $
 
 DISTNAME=	qwt-6.2.0
 PKGNAME=	${DISTNAME:S/qwt/qwt6-qt5/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2

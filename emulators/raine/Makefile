@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2024/05/16 06:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/05/29 16:32:27 adam Exp $
 
 DISTNAME=	raine-0.96.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zelurker/}
 

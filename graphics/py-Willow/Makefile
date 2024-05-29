@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2024/04/05 14:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/05/29 16:35:18 adam Exp $
 
 DISTNAME=	willow-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^w/W/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Willow/}
 

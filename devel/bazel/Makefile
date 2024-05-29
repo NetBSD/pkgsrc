@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/01 12:00:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2024/05/29 16:31:58 adam Exp $
 
 # Java project does not work as follows:
 # Error: could not find libjava.so
@@ -10,6 +10,7 @@
 .if UPSTREAM
 DISTNAME=	bazel-6.4.0-dist
 PKGNAME=	${DISTNAME:S/-dist//}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bazelbuild/}
 GITHUB_PROJECT=	bazel
 GITHUB_RELEASE= ${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2024/05/16 06:14:45 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2024/05/29 16:32:02 adam Exp $
 
 DISTNAME=	gnustep-base-1.29.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
@@ -6,7 +6,7 @@ GITHUB_PROJECT=	libs-base
 GITHUB_TAG=	base-1_29_0
 WRKSRC=		${WRKDIR}/libs-base-base-1_29_0
 
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel gnustep
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

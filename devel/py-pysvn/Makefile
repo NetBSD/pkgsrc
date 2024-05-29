@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2024/05/16 06:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/05/29 16:32:18 adam Exp $
 
 VERS=		1.9.20
 DISTNAME=	pysvn-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysvn/}
 

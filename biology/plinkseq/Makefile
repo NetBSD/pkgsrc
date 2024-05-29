@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/04/05 14:00:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/29 16:35:18 adam Exp $
 
 DISTNAME=	plinkseq-0.08
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	biology
 MASTER_SITES=	#
 

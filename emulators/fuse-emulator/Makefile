@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2024/04/07 07:33:56 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/05/29 16:32:26 adam Exp $
 
 DISTNAME=	fuse-1.6.0
 PKGNAME=	${DISTNAME:S/fuse/fuse-emulator/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 

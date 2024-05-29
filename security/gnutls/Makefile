@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.251 2024/05/16 06:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.252 2024/05/29 16:34:14 adam Exp $
 
 DISTNAME=	gnutls-3.8.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz

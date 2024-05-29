@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/11/08 13:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/29 16:34:13 adam Exp $
 
 DISTNAME=	ecap_clamav_adapter-2.0.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	http://www.measurement-factory.com/tmp/ecap/
 

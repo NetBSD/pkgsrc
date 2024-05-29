@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/04/06 08:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/05/29 16:34:17 adam Exp $
 
 DISTNAME=	lxqt-policykit-1.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

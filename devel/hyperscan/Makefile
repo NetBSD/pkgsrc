@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/04/30 13:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/29 16:32:03 adam Exp $
 
 DISTNAME=	hyperscan-5.0.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

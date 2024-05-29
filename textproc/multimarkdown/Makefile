@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/05/16 06:15:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/05/29 16:34:38 adam Exp $
 
 DISTNAME=	multimarkdown-6.5.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fletcher/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	textproc
 GITHUB_PROJECT=	MultiMarkdown-6
 

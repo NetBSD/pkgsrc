@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2024/05/25 14:27:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.51 2024/05/29 16:34:35 adam Exp $
 
+PKGREVISION= 1
 .include "../../textproc/libhighlight/Makefile.common"
 
 MANCOMPRESSED=		yes
