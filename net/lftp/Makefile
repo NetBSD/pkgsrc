@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2024/05/16 06:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2024/05/29 16:33:56 adam Exp $
 
 DISTNAME=	lftp-4.9.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	http://lftp.yar.ru/ftp/
 MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/network/ftp/lftp/

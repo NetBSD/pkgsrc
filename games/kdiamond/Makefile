@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2024/04/06 08:05:29 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/05/29 16:32:37 adam Exp $
 
 DISTNAME=	kdiamond-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kdiamond/

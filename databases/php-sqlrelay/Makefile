@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2024/05/16 06:14:41 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/05/29 16:31:46 adam Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	PHP extension for SQL Relay
 EXTRACT_SUFX=	.tar.gz
 

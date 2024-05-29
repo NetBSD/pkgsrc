@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2024/05/25 14:21:20 adam Exp $
+# $NetBSD: Makefile,v 1.61 2024/05/29 16:35:11 adam Exp $
 
 DISTNAME=	qtmacextras-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmacextras-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for Mac extras
 
 BUILD_TARGET=		sub-src

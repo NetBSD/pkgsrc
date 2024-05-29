@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2024/04/05 14:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/05/29 16:35:19 adam Exp $
 
 COLLECTD_PACKAGE=	pinba
 
 COMMENT=		Statistics collection daemon - pinba plugin
-PKGREVISION=		7
+PKGREVISION=		8
 
 .include "../../devel/protobuf-c/buildlink3.mk"
 COLLECTD_LIB.protobuf-c=${BUILDLINK_PREFIX.protobuf-c}

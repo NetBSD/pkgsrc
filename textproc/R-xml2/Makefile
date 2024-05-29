@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/01/31 21:16:04 mef Exp $
+# $NetBSD: Makefile,v 1.16 2024/05/29 16:34:34 adam Exp $
 
 R_PKGNAME=	xml2
 R_PKGVER=	1.3.6
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

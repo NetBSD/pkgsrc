@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2024/04/06 08:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/05/29 16:34:36 adam Exp $
 
 DISTNAME=	kpimtextedit-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

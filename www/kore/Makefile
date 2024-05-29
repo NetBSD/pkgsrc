@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/05/16 06:15:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/05/29 16:34:51 adam Exp $
 
 DISTNAME=	kore-4.2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	https://kore.io/releases/
 
