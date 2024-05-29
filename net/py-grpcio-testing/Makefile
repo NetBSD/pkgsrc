@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2024/05/15 21:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/05/29 16:06:45 adam Exp $
 
-DISTNAME=	grpcio_testing-1.63.0
+DISTNAME=	grpcio_testing-1.64.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-testing/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
-DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=5.26.1:../../devel/py-protobuf
 
 USE_LANGUAGES=	# none
 
