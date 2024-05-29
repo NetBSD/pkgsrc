@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2024/05/15 21:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2024/05/29 16:06:44 adam Exp $
 
-DISTNAME=	grpc-1.63.0
+DISTNAME=	grpc-1.64.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
