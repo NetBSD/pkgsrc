@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24476 2024/05/29 16:07:29 adam Exp $
+$NetBSD: TODO,v 1.24477 2024/05/29 20:28:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -1410,7 +1410,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xview-3.2.1.4.25.5
 	o xwrits-2.26
 	o xye-0.12.2
-	o xz-5.6.1 [wiz]
 	o yacas-1.6.1
 	o yafc-1.1
 	o yahttp-0.2.1
