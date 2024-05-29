@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.4 2022/11/23 22:18:47 adam Exp $
+$NetBSD: patch-setup.py,v 1.5 2024/05/29 17:51:10 adam Exp $
 
 Add NetBSD support.
 
---- setup.py.orig	2022-10-25 04:31:36.000000000 +0000
+--- setup.py.orig	2024-04-29 20:14:33.000000000 +0000
 +++ setup.py
 @@ -64,6 +64,8 @@ if platform.startswith(('linux', 'gnu'))
      platform = 'linux'
@@ -47,8 +47,8 @@ Add NetBSD support.
  CFLAGS = {
 @@ -141,6 +147,7 @@ CFLAGS = {
      'win32': ['/Zc:wchar_t', '/EHsc'],
-     'sunos5': ['-std=c++11'],
-     'cygwin': ['-D_GNU_SOURCE=1', '-std=c++11'],
+     'sunos5': ['-std=c++17'],
+     'cygwin': ['-D_GNU_SOURCE=1', '-std=c++17'],
 +    'netbsd': [],
  }
  
