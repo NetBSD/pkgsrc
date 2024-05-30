@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/04/28 16:46:29 pho Exp $
+$NetBSD: distinfo,v 1.5 2024/05/30 09:25:48 pho Exp $
 
-BLAKE2s (lua-2.3.2.tar.gz) = f7635fae635e9cceee34e7c02b00ce4ceacd211a40b9a976a2c261355f14645b
-SHA512 (lua-2.3.2.tar.gz) = 070ec278768fdd60365fea2603d2997dede7984d6646b9e97eec9cc43c0b6e13199cd81ef67328893154f4eb13996c19c1fc0ad8c92e8aab500c88c18afbc5c5
-Size (lua-2.3.2.tar.gz) = 264445 bytes
+BLAKE2s (hs-lua/lua-2.3.2.tar.gz) = f7635fae635e9cceee34e7c02b00ce4ceacd211a40b9a976a2c261355f14645b
+SHA512 (hs-lua/lua-2.3.2.tar.gz) = 070ec278768fdd60365fea2603d2997dede7984d6646b9e97eec9cc43c0b6e13199cd81ef67328893154f4eb13996c19c1fc0ad8c92e8aab500c88c18afbc5c5
+Size (hs-lua/lua-2.3.2.tar.gz) = 264445 bytes
