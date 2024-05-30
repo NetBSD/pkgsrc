@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/05/30 06:34:17 adam Exp $
 
-DISTNAME=	sympy-1.12
+DISTNAME=	sympy-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://www.sympy.org/
 COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-mpmath>=0.19:../../math/py-mpmath
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-mpmath>=1.1.0:../../math/py-mpmath
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
@@ -36,5 +36,5 @@ post-install:
 	${MV} ${PKGMANDIR}/man1/isympy.1 ${PKGMANDIR}/man1/isympy-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
