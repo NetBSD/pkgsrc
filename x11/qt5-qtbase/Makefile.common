@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2023/07/19 22:45:56 tnn Exp $
+# $NetBSD: Makefile.common,v 1.53 2024/05/30 06:39:50 ryoon Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -41,7 +41,8 @@ GCC_REQD+=	5
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-USE_LANGUAGES=		c gnu++11
+USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		gnu++17
 USE_TOOLS+=		gmake perl:build pkg-config
 
 # Avoid failures to due 'register' usage in X11 headers.
