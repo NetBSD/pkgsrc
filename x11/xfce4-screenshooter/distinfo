@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/02/08 23:19:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.21 2024/05/30 03:31:45 gutteridge Exp $
 
-BLAKE2s (xfce4-screenshooter-1.10.5.tar.bz2) = e0248bd2542d4819e595b00f46b258e8e27adf88789d6e0a46ed7dbf025b8f40
-SHA512 (xfce4-screenshooter-1.10.5.tar.bz2) = 0040b28514ffc77473b2d9f182c1bc162f8ac21aac97f2e28eb2b5556255dd74f7d4545f049b4060a8db6c0d415831fe5988da581857f22894bed01136aee677
-Size (xfce4-screenshooter-1.10.5.tar.bz2) = 621929 bytes
+BLAKE2s (xfce4-screenshooter-1.10.6.tar.bz2) = f620e6c4f18eb248dfee7c4bd790e7200917867191a80976afd862a51fee8b64
+SHA512 (xfce4-screenshooter-1.10.6.tar.bz2) = 2984ff3a64d0783c62ad5ac33ef54f4ec70fb6d06ac66f4a963940878d04b5e77c100a8121b73788ce6cc0af427fec9d5bf09235465b3591cd57cd16c7d9cda2
+Size (xfce4-screenshooter-1.10.6.tar.bz2) = 813187 bytes
