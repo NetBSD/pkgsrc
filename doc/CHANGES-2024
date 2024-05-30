@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3693 2024/05/30 06:56:24 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3694 2024/05/30 15:01:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-sympy to 1.12.1 [adam 2024-05-30]
 	Updated shells/oh-my-posh to 21.0.0 [pin 2024-05-30]
 	Updated shells/nushell to 0.94.0 [pin 2024-05-30]
+	Updated x11/kitty to 0.35.0 [ktnb 2024-05-30]
