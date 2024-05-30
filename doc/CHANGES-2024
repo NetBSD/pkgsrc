@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3688 2024/05/29 20:28:32 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3689 2024/05/30 03:31:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5847,3 +5847,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/nginx to 1.26.1 [osa 2024-05-29]
 	Updated archivers/xz to 5.6.2 [adam 2024-05-29]
 	Updated net/haproxy to 3.0.0 [adam 2024-05-29]
+	Updated x11/xfce4-screenshooter to 1.10.6 [gutteridge 2024-05-30]
