@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1793 2024/05/26 13:20:58 markd Exp $
+# $NetBSD: Makefile,v 1.1794 2024/05/30 03:11:10 gutteridge Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -145,7 +145,6 @@ SUBDIR+=	h2o
 SUBDIR+=	hackernews-tui
 SUBDIR+=	haskell-cgi
 SUBDIR+=	heel
-SUBDIR+=	kf6-syndication
 SUBDIR+=	hiawatha
 SUBDIR+=	horde
 SUBDIR+=	hs-HTTP
@@ -208,6 +207,7 @@ SUBDIR+=	kahua
 SUBDIR+=	kannel
 SUBDIR+=	kaput-cli
 SUBDIR+=	kdewebkit
+SUBDIR+=	kf6-syndication
 SUBDIR+=	khtml
 SUBDIR+=	kimagemapeditor
 SUBDIR+=	kjs
