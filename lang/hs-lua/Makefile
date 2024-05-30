@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2024/05/09 01:32:23 pho Exp $
+# $NetBSD: Makefile,v 1.11 2024/05/30 09:25:48 pho Exp $
 
 DISTNAME=	lua-2.3.2
 PKGREVISION=	1
 CATEGORIES=	lang
+DIST_SUBDIR=	hs-lua # To prevent it from conflicting with lang/lua*
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Low-level bindings to Lua, an embeddable scripting language
