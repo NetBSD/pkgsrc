@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/04/29 12:20:34 micha Exp $
+# $NetBSD: Makefile,v 1.12 2024/05/31 10:47:15 micha Exp $
 
-DISTNAME=	libcanlock-3.3.0
-PKGREVISION=	2
+DISTNAME=	libcanlock-3.3.1
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://micha.freeshell.org/libcanlock/
 COMMENT=	Standalone RFC 8315 Netnews Cancel-Lock implementation
-LICENSE=	mit AND modified-bsd
+LICENSE=	icu AND modified-bsd
 
 FORCE_C_STD=		c99
 USE_CC_FEATURES+=	c99
