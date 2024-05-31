@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.129 2024/05/29 16:33:15 adam Exp $
+# $NetBSD: Makefile,v 1.130 2024/05/31 21:42:34 ryoon Exp $
 
 DISTNAME=	jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
 GITHUB_PROJECT=	jdk8u
-GITHUB_TAG=	jdk8u402-b06.1
+GITHUB_TAG=	jdk8u412-b08.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
