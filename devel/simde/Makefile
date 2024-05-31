@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/03/28 19:46:09 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/31 17:28:58 ktnb Exp $
 
-DISTNAME=		simde-0.7.2
+DISTNAME=		simde-0.8.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=simd-everywhere/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
