@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/22 13:54:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/05/31 10:59:24 vins Exp $
 bin/FvwmCommand
+${PLIST.go}bin/FvwmPrompt
 bin/fvwm-convert-2.6
 bin/fvwm-menu-desktop
 bin/fvwm-menu-directory
@@ -37,7 +38,7 @@ ${PLIST.doc}man/man1/FvwmIdent.1
 ${PLIST.doc}man/man1/FvwmMFL.1
 ${PLIST.doc}man/man1/FvwmPager.1
 ${PLIST.doc}man/man1/FvwmPerl.1
-${PLIST.doc}man/man1/FvwmPrompt.1
+${PLIST.go}man/man1/FvwmPrompt.1
 ${PLIST.doc}man/man1/FvwmRearrange.1
 ${PLIST.doc}man/man1/FvwmScript.1
 ${PLIST.doc}man/man1/fvwm-convert-2.6.1
