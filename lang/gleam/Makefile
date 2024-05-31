@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/05/28 13:38:22 nikita Exp $
+# $NetBSD: Makefile,v 1.17 2024/05/31 10:38:11 nikita Exp $
 
 GITHUB_PROJECT=	gleam
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	gleam-1.2.0
+DISTNAME=	gleam-1.2.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gleam-lang/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
