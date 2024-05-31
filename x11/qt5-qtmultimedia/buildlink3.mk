@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2024/04/06 08:07:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2024/05/31 06:17:46 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtmultimedia
 
@@ -16,13 +16,13 @@ BUILDLINK_LIBDIRS.qt5-qtmultimedia+=	qt5/plugins
 pkgbase := qt5-qtmultimedia
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mgstreamer)
+.if ${PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mgstreamer}
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mopenal)
+.if ${PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mopenal}
 .include "../../audio/openal-soft/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mpulseaudio)
+.if ${PKG_BUILD_OPTIONS.qt5-qtmultimedia:Mpulseaudio}
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
