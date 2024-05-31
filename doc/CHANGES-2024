@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3696 2024/05/30 20:17:53 yhardy Exp $
+$NetBSD: CHANGES-2024,v 1.3697 2024/05/31 04:22:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5856,3 +5856,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/kitty to 0.35.0 [ktnb 2024-05-30]
 	Updated security/osv-scanner to 1.7.4 [khorben 2024-05-30]
 	Updated lang/fennel to 1.4.2 [yhardy 2024-05-30]
+	Updated multimedia/libvpx to 1.14.1 [adam 2024-05-31]
+	Updated devel/meson to 1.4.1 [adam 2024-05-31]
