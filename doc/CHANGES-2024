@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3697 2024/05/31 04:22:57 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3698 2024/05/31 05:42:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5858,3 +5858,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/fennel to 1.4.2 [yhardy 2024-05-30]
 	Updated multimedia/libvpx to 1.14.1 [adam 2024-05-31]
 	Updated devel/meson to 1.4.1 [adam 2024-05-31]
+	Updated lang/nodejs20 to 20.14.0 [adam 2024-05-31]
+	Updated lang/nodejs18 to 18.20.3 [adam 2024-05-31]
