@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2024/05/28 13:38:22 nikita Exp $
+$NetBSD: distinfo,v 1.16 2024/05/31 10:38:11 nikita Exp $
 
 BLAKE2s (gleam/addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (gleam/addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -267,9 +267,9 @@ Size (gleam/getrandom-0.2.12.crate) = 36163 bytes
 BLAKE2s (gleam/gimli-0.28.1.crate) = fe294fe0616ddcce9e0f60682c7a70ad6e21130f9db99bf3b456cad992419bc1
 SHA512 (gleam/gimli-0.28.1.crate) = 695e46471fc07813dc4a47744458729b097f6efbfceeb57eb3db4165654e99bebb98dde2d73230b90bb5dd7c0ca0c6e77c7c3dc6f2abf70058b830a2fb386d25
 Size (gleam/gimli-0.28.1.crate) = 270497 bytes
-BLAKE2s (gleam/gleam-1.2.0.tar.gz) = c6d9b950bd416d85a3da3a22bd6e9ee52a7e87aabea2b8cd3fab5dd0f7d03c4c
-SHA512 (gleam/gleam-1.2.0.tar.gz) = c043c9058854c194bd981eb4a512da14e6ab8a82303b2ed279d38599ea2ecea9db0bd1da64e3d433a6c1c7a6f90b455a4be4626bcabb6db95bb416b8ac7977bd
-Size (gleam/gleam-1.2.0.tar.gz) = 930482 bytes
+BLAKE2s (gleam/gleam-1.2.1.tar.gz) = 8d166f549a0b4cf61a58eccac2068caba45658d1c2f688f513aafabb177a6a7b
+SHA512 (gleam/gleam-1.2.1.tar.gz) = c842ede06d0a777e42fdd23eee1997d52071328ca485b6f48c09fc212e0248f8f9b1e682ea229ed8686369a0e8e9503799e3d254f133b249092308c557e6954a
+Size (gleam/gleam-1.2.1.tar.gz) = 930812 bytes
 BLAKE2s (gleam/globset-0.4.14.crate) = a3dafdd3184e72c2c4f149f7ded126b4bb885ff3e7384c99466c7ca1f68c6cea
 SHA512 (gleam/globset-0.4.14.crate) = e83e4f5e42a97609e2579b09f49c2cb0a76a94e7e2975c5871f2c5af5d3b809736e0a7b220404c582f4a0c7eebdbfad6cb432e89b26401b58f2b253f8c0151bc
 Size (gleam/globset-0.4.14.crate) = 25090 bytes
@@ -288,9 +288,9 @@ Size (gleam/heck-0.5.0.crate) = 11517 bytes
 BLAKE2s (gleam/hermit-abi-0.3.9.crate) = e79ea390b597a58b10dae2062cf72b653e4f5e9e2032d5cc6ea2caadf1802afd
 SHA512 (gleam/hermit-abi-0.3.9.crate) = f3a5a51d834a6ad55480b53f7e9cdc73a512ab0cc6c246a6ab1e8bf8f9851a0c8a55982f5bba6cb57b5a03b54870e73b0bab0a79195764c308318394a3ea8045
 Size (gleam/hermit-abi-0.3.9.crate) = 16165 bytes
-BLAKE2s (gleam/hexpm-2.4.0.crate) = 868f907918d1f223dbe407a17291b656ed74be8baa10ea9d340b739c99a29818
-SHA512 (gleam/hexpm-2.4.0.crate) = 69578165e3a705e7ff6cd755207e94f9e775a622b43aa6633e4be7e97e5dd378553a04d482b120e6adc6b2db1d25c6eca38989dcb9e7aa6c852cef109792fe6f
-Size (gleam/hexpm-2.4.0.crate) = 417127 bytes
+BLAKE2s (gleam/hexpm-2.4.1.crate) = b9667215621cb8b3e34cb4bf803ba4aca43d1949fcdf8dd88736422cc6298224
+SHA512 (gleam/hexpm-2.4.1.crate) = 0b89f8274a3828702541a15b0fd9039d63565f675ee407635ff71c64497e51142fc2b7482f954f202a365014beb163f5a201a80696186e38c642e1a8138f177b
+Size (gleam/hexpm-2.4.1.crate) = 419095 bytes
 BLAKE2s (gleam/home-0.5.9.crate) = 3ca501737a66c3e850c8337fb10efe9f3fbadabd3f9219e72e15cd380e788f1c
 SHA512 (gleam/home-0.5.9.crate) = 3f1f7b619f1a47694cda92321a11d66ebbb2dc0b0c33446a7a4b886f547ee88231b61c038de04bb82acd50e617f19b5085893b8401206d32cd54502033e04bf1
 Size (gleam/home-0.5.9.crate) = 8760 bytes
