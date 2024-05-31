@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/12/31 09:49:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/05/31 08:07:45 mef Exp $
 share/doc/libtheora-${PKGVERSION}/color.html
 share/doc/libtheora-${PKGVERSION}/doxygen-build.stamp
 share/doc/libtheora-${PKGVERSION}/draft-ietf-avt-rtp-theora-00.txt
@@ -45,6 +45,7 @@ share/doc/libtheora-${PKGVERSION}/html/menudata.js
 share/doc/libtheora-${PKGVERSION}/html/minus.svg
 share/doc/libtheora-${PKGVERSION}/html/minusd.svg
 share/doc/libtheora-${PKGVERSION}/html/modules.html
+share/doc/libtheora-${PKGVERSION}/html/navtree.css
 share/doc/libtheora-${PKGVERSION}/html/nav_f.png
 share/doc/libtheora-${PKGVERSION}/html/nav_fd.png
 share/doc/libtheora-${PKGVERSION}/html/nav_g.png
@@ -53,6 +54,7 @@ share/doc/libtheora-${PKGVERSION}/html/nav_hd.png
 share/doc/libtheora-${PKGVERSION}/html/open.png
 share/doc/libtheora-${PKGVERSION}/html/plus.svg
 share/doc/libtheora-${PKGVERSION}/html/plusd.svg
+share/doc/libtheora-${PKGVERSION}/html/resize.js
 share/doc/libtheora-${PKGVERSION}/html/splitbar.png
 share/doc/libtheora-${PKGVERSION}/html/splitbard.png
 share/doc/libtheora-${PKGVERSION}/html/structth__comment.html
