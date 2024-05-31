@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.36 2024/05/25 14:21:20 adam Exp $
+$NetBSD: distinfo,v 1.37 2024/05/31 06:17:46 adam Exp $
 
 BLAKE2s (qtmultimedia-everywhere-opensource-src-5.15.14.tar.xz) = db7d8e76ca1878a9b300de4c1ae6df3350fc4b706cb80c615c8e3fa30dc91104
 SHA512 (qtmultimedia-everywhere-opensource-src-5.15.14.tar.xz) = 6059bd9aec65888ed6f3a1f87506a94ea567f9e064bb4a586859bc8f76ee4dca573eb256623452ddd9daf2305f49c707673425ea08edca9cd2db7b56bf5cab9c
 Size (qtmultimedia-everywhere-opensource-src-5.15.14.tar.xz) = 3842164 bytes
 SHA1 (patch-src_multimedia_configure.json) = d53c1bf2712e9a32b383beff0025c4ab0b5b6232
+SHA1 (patch-src_plugins_avfoundation_camera_avfcamerautility.mm) = 1849dd537e9fb2ffe8810f2947a39756f18d0438
