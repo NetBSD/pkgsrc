@@ -1,9 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.1 2024/05/30 15:00:54 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.2 2024/05/31 19:19:38 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.zip
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.13.0.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.13.0.zip
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.14.0.mod
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.14.0.zip
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.6.1.mod
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.6.1.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
