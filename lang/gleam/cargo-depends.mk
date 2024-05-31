@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2024/05/28 13:38:22 nikita Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2024/05/31 10:38:11 nikita Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -95,7 +95,7 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.14.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.9
-CARGO_CRATE_DEPENDS+=	hexpm-2.4.0
+CARGO_CRATE_DEPENDS+=	hexpm-2.4.1
 CARGO_CRATE_DEPENDS+=	home-0.5.9
 CARGO_CRATE_DEPENDS+=	hostname-0.4.0
 CARGO_CRATE_DEPENDS+=	http-1.1.0
