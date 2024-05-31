@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/04/29 12:34:31 micha Exp $
+$NetBSD: distinfo,v 1.11 2024/05/31 10:55:37 micha Exp $
 
-BLAKE2s (libcanlock-3.3.0.tar.bz2) = e92e29824779fc262d3775e217c6d76d8a99baf8d55c837c317d0025b53349a3
-SHA512 (libcanlock-3.3.0.tar.bz2) = 100d2b4bf3eadedb7da230317cd37b2c1b259bbd783099a74e0d75fdc6ecddb8a6fd854a2b272bda3629bcf1ac1ae2b3d5657fca9137c17e38aad88f30e4c81c
-Size (libcanlock-3.3.0.tar.bz2) = 625796 bytes
-SHA1 (patch-hp_libcanlock-hp-3.pc.in) = 6005ac26946577840dd7a57b315aa34e9a160cb2
+BLAKE2s (libcanlock-3.3.1.tar.bz2) = 3b93761774657d465b272df887fa9ab7bb1dbe2554a98337762c54f112b9bc72
+SHA512 (libcanlock-3.3.1.tar.bz2) = 31ce1b46d38ab673607952fa6885da5a5b6a324e1ca791ae54cdd180c5e8809562c72443073f8a0cbdce6dc0f54742fd0845e46f7b58f0ef63a9207b51b2b2cc
+Size (libcanlock-3.3.1.tar.bz2) = 636161 bytes
