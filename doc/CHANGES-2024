@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3706 2024/05/31 21:44:52 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3707 2024/05/31 21:45:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/openjdk8 to 1.8.412 [ryoon 2024-05-31]
 	Updated lang/openjdk11 to 1.11.0.23.9 [ryoon 2024-05-31]
 	Updated lang/openjdk17 to 1.17.0.11.9 [ryoon 2024-05-31]
+	Updated lang/openjdk21 to 1.21.0.3.9 [ryoon 2024-05-31]
