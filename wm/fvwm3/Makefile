@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2024/05/29 16:34:45 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/05/31 10:59:24 vins Exp $
 
-DISTNAME=	fvwm3-1.0.9
-PKGREVISION=	2
+DISTNAME=	fvwm3-1.1.0
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/fvwmorg/fvwm3
@@ -17,11 +17,13 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=	pkg-config perl:run
 USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_TOOLS+=	gmake # needed for manpages installation
+USE_TOOLS+=	gmake						# needed for manpages installation
 
-DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg				# fvwm-menu-desktop
+DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg	# needed by fvwm-menu-desktop
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# wants python3
+PYTHON_VERSIONS_INCOMPATIBLE=	27				# wants python3
+
+.include "../../lang/go/go-vars.mk"				# required by golang linker
 
 REPLACE_SH=	utils/*.sh
 REPLACE_PERL=	perllib/FVWM/create-commands
@@ -40,7 +42,10 @@ CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
 CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL5}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/fvwm
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-imagepath=${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps:${PREFIX}/share/pixmaps
 CONFIGURE_ARGS+=	--with-iconv-library=${BUILDLINK_PREFIX.iconv}/lib
+CONFIGURE_ARGS+=	--with-readline-library=${BUILDLINK_PREFIX.readline}/lib
 CONFIGURE_ARGS+=	--with-iconv-includes=${BUILDLINK_PREFIX.iconv}/${BUILDLINK_INCDIRS.iconv:Q}
 
 .include "options.mk"
