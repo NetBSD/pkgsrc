@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/03/28 19:46:09 bacon Exp $
+$NetBSD: distinfo,v 1.2 2024/05/31 17:28:58 ktnb Exp $
 
 BLAKE2s (nemequ-munit-da8f73412998e4f1adf1100dc187533a51af77fd.tar.gz) = 35b0f19230c325017c920ed5235f8b578033ff56a74b2d7b9fdca3070ad6b093
 SHA512 (nemequ-munit-da8f73412998e4f1adf1100dc187533a51af77fd.tar.gz) = cd08c1291a73487f15fdba7bf8675fea9177f0ec9766900f65efb5f00c662532a16499447e9087d304de34ff9138f47d04ebf18713f5aa8aacede22c5e23b98b
 Size (nemequ-munit-da8f73412998e4f1adf1100dc187533a51af77fd.tar.gz) = 27727 bytes
-BLAKE2s (simde-0.7.2.tar.gz) = aabf04b4243c1b75f82120696be0150235cbf94b2738aece7339bebf2100d04b
-SHA512 (simde-0.7.2.tar.gz) = e4ee5a4a7e8453f116f1325d147f91d358a300f41ea5566ea30fc19649bababf3b87e3dc838d5608b578bd152207df4156200ffc7fb98141bc7c0bb60c75f1f5
-Size (simde-0.7.2.tar.gz) = 3821158 bytes
+BLAKE2s (simde-0.8.2.tar.gz) = 70f048cceb570b85c4f4040db566c12a0ce33b07f4420b02dd88223fcf6d32ce
+SHA512 (simde-0.8.2.tar.gz) = 4e42d7140c0afae507773527c6c0c07e6f0cdad59a1d42ebcf4bd223fc9f71e91a2e3db7746aca3c0c5ad2a13333c2322ce1e384c7d699ddfe33bed6f107aec5
+Size (simde-0.8.2.tar.gz) = 7468969 bytes
