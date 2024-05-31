@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3701 2024/05/31 10:56:42 micha Exp $
+$NetBSD: CHANGES-2024,v 1.3702 2024/05/31 17:29:36 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5863,3 +5863,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/gleam to 1.2.1 [nikita 2024-05-31]
 	Updated news/libcanlock to 3.3.1 [micha 2024-05-31]
 	Updated news/canlock-hp to 3.3.1 [micha 2024-05-31]
+	Updated devel/simde to 0.8.2 [ktnb 2024-05-31]
