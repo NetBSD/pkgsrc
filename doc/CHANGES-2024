@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3717 2024/06/01 14:19:29 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3718 2024/06/01 14:20:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5879,3 +5879,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/qcalc to 0.9.5 [pin 2024-06-01]
 	Updated math/four-bar-rs to 7.0.0 [pin 2024-06-01]
 	Updated graphics/matugen to 2.3.0 [pin 2024-06-01]
+	Updated chat/neonmodem to 1.0.5 [pin 2024-06-01]
