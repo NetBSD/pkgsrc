@@ -1,8 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.78 2024/05/05 15:28:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.79 2024/06/01 14:12:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.8
-CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
@@ -194,6 +193,7 @@ CARGO_CRATE_DEPENDS+=	roff-0.2.1
 CARGO_CRATE_DEPENDS+=	roxmltree-0.18.1
 CARGO_CRATE_DEPENDS+=	roxmltree-0.19.0
 CARGO_CRATE_DEPENDS+=	rusqlite-0.24.2
+CARGO_CRATE_DEPENDS+=	rustc-hash-1.1.0
 CARGO_CRATE_DEPENDS+=	rustix-0.38.34
 CARGO_CRATE_DEPENDS+=	rustybuzz-0.10.0
 CARGO_CRATE_DEPENDS+=	ryu-1.0.17
@@ -317,6 +317,4 @@ CARGO_CRATE_DEPENDS+=	xmlwriter-0.1.0
 CARGO_CRATE_DEPENDS+=	xterm-query-0.3.0
 CARGO_CRATE_DEPENDS+=	xterm-query-0.4.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
-CARGO_CRATE_DEPENDS+=	zerocopy-0.7.32
-CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.32
 CARGO_CRATE_DEPENDS+=	zune-inflate-0.2.54
