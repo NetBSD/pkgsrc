@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2024/05/30 06:55:09 pin Exp $
+$NetBSD: distinfo,v 1.46 2024/06/01 14:22:32 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -921,9 +921,9 @@ Size (num_threads-0.1.7.crate) = 7455 bytes
 BLAKE2s (number_prefix-0.4.0.crate) = e2e6caf7fd792ec56ec5665184ed1b66469de944c998ee8e0eee92eb0f7105b5
 SHA512 (number_prefix-0.4.0.crate) = a43b668d7314218b86ca7451daa9dfef71f6c9f6616bc34c12d94ae6030f182bcca9da83905cb46f3d49d0aa81385a787e92e4f3ae239658067adc249f8174df
 Size (number_prefix-0.4.0.crate) = 6922 bytes
-BLAKE2s (nushell-0.94.0.tar.gz) = 4bd369a01a0690afe021c2cca0f3d11dad184d41d5debf06dd07c326a1d16081
-SHA512 (nushell-0.94.0.tar.gz) = 4207560c4f59b47958d08d3784257972b5be79fcb56815fdbebacedd36ad9a95cb632d086185f0ce05b7ed7a3683c7ff642618bae502996ef7c6a96b3b459b0d
-Size (nushell-0.94.0.tar.gz) = 3016455 bytes
+BLAKE2s (nushell-0.94.1.tar.gz) = 93b1f9693296930d4582b3f76be8933b1eb9201fc483fcc584dde44207798d81
+SHA512 (nushell-0.94.1.tar.gz) = d5233a83f617b051c51c52e4aa18a3a9a531381d09519387cee976861ed7b0cf39961f1bc3f55032954e6cbaf970ffdea627550b3ad3bcc5a51654696724cfc6
+Size (nushell-0.94.1.tar.gz) = 3016922 bytes
 BLAKE2s (objc-0.2.7.crate) = e34a570a877d402bef4a22098157a24171ada921812037222da0b82a1424f391
 SHA512 (objc-0.2.7.crate) = 7178870c8e4e9154b4c7b4953b3164946b7ce72c956a02b9ba18889353c72be735824bd73e44a485e42ad5f97994820d9153ac684629342755a6a63711ab5988
 Size (objc-0.2.7.crate) = 22036 bytes
@@ -1998,4 +1998,4 @@ Size (zstd-safe-7.1.0.crate) = 20792 bytes
 BLAKE2s (zstd-sys-2.0.10+zstd.1.5.6.crate) = 4dceb67091ebdc96990c6f6e86ada016124d9f9bf0da5fefa2172f9d6650175c
 SHA512 (zstd-sys-2.0.10+zstd.1.5.6.crate) = 588008a436a9c7751fa7c088620bf04434751e508c9a729e6840e42a14a2cc26c8ee252e8f129a5ae00eb1f76ae6ecfffaac043d854b61381d386f71d80993f9
 Size (zstd-sys-2.0.10+zstd.1.5.6.crate) = 749088 bytes
-SHA1 (patch-Cargo.toml) = 2faae42b142702077789d4075f450d711c066f66
+SHA1 (patch-Cargo.toml) = 124489f15daaa4db9dff7717277aacbcd2d08782
