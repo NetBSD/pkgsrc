@@ -1,0 +1,3620 @@
+From 5b688b03a916a0f6127c7aba891bf613cff0de0b Mon Sep 17 00:00:00 2001
+From: Jonathan Clark <jonathan@libreoffice.org>
+Date: Wed, 17 Apr 2024 09:09:50 -0600
+Subject: [PATCH] tdf#49885 BreakIterator rule upgrades
+
+This change re-bases the BreakIterator rule customizations on top of a
+clean copy of the ICU 74.2 rules.
+
+Change-Id: Iadcf16cab138cc6c869fac61ad64e996e65b5ae4
+---
+ i18npool/CustomTarget_breakiterator.mk        |   6 +-
+ i18npool/qa/cppunit/test_breakiterator.cxx    | 356 +++++----
+ .../source/breakiterator/data/dict_word.txt   | 267 ++++---
+ .../breakiterator/data/dict_word_he.txt       | 139 ----
+ .../breakiterator/data/dict_word_hu.txt       | 324 +++++----
+ .../breakiterator/data/dict_word_nodash.txt   | 147 ----
+ .../data/dict_word_prepostdash.txt            | 288 +++++---
+ .../source/breakiterator/data/edit_word.txt   | 261 ++++---
+ .../breakiterator/data/edit_word_he.txt       | 142 ----
+ .../breakiterator/data/edit_word_hu.txt       | 294 +++++---
+ i18npool/source/breakiterator/data/line.txt   | 680 ++++++------------
+ i18npool/source/breakiterator/data/sent.txt   | 128 ----
+ 12 files changed, 1307 insertions(+), 1725 deletions(-)
+ delete mode 100644 i18npool/source/breakiterator/data/dict_word_he.txt
+ delete mode 100644 i18npool/source/breakiterator/data/dict_word_nodash.txt
+ delete mode 100644 i18npool/source/breakiterator/data/edit_word_he.txt
+ delete mode 100644 i18npool/source/breakiterator/data/sent.txt
+
+diff --git a/i18npool/CustomTarget_breakiterator.mk b/i18npool/CustomTarget_breakiterator.mk
+index 8229a5e8f314..ef951142837a 100644
+--- i18npool/CustomTarget_breakiterator.mk
++++ i18npool/CustomTarget_breakiterator.mk
+@@ -45,16 +45,12 @@ endif
+ 
+ i18npool_BRKTXTS := \
+     count_word.brk \
+-    $(call gb_Helper_optional_locale,he,dict_word_he.brk) \
+     $(call gb_Helper_optional_locale,hu,dict_word_hu.brk) \
+-    dict_word_nodash.brk \
+     dict_word_prepostdash.brk \
+     dict_word.brk \
+-    $(call gb_Helper_optional_locale,he,edit_word_he.brk) \
+     $(call gb_Helper_optional_locale,hu,edit_word_hu.brk) \
+     edit_word.brk \
+-    line.brk \
+-    sent.brk
++    line.brk
+ 
+ # 'gencmn', 'genbrk' and 'genccode' are tools generated and delivered by icu project to process icu breakiterator rules.
+ # The output of gencmn generates warnings under Windows. We want to minimize the patches to external tools,
+diff --git a/i18npool/qa/cppunit/test_breakiterator.cxx b/i18npool/qa/cppunit/test_breakiterator.cxx
+index b33466bee46d..2a35b2eee58f 100644
+--- i18npool/qa/cppunit/test_breakiterator.cxx
++++ i18npool/qa/cppunit/test_breakiterator.cxx
+@@ -184,11 +184,10 @@ void TestBreakIterator::testLineBreaking()
+ 
+         {
+             // Per the bug, the line break should leave -bar clumped together on the next line.
+-            // However, this change was reverted at some point. This test asserts the new behavior.
+             i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
+                 "foo -bar", strlen("foo -ba"), aLocale, 0, aHyphOptions, aUserOptions);
+             CPPUNIT_ASSERT_EQUAL_MESSAGE("Expected a break at the first dash",
+-                                         static_cast<sal_Int32>(5), aResult.breakIndex);
++                                         static_cast<sal_Int32>(4), aResult.breakIndex);
+         }
+     }
+ 
+@@ -198,11 +197,29 @@ void TestBreakIterator::testLineBreaking()
+         aLocale.Country = "US";
+ 
+         {
+-            // Here we want the line break to leave C:\Program Files\ on the first line
++            // Note that the current behavior deviates from the original fix for this bug.
++            //
++            // The original report was filed due to wrapping all of "\Program Files\aaaa" to the
++            // next line, even though only "aaaa" overflowed. The original fix was to simply make
++            // U+005C reverse solidus (backslash) a breaking character.
++            //
++            // However, the root cause for this bug was not the behavior of '\', but rather some
++            // other bug making all of "\Program Files\" behave like a single token, despite it
++            // even containing whitespace.
++            //
++            // Reverting to the ICU line rules fixes this root issue. Now, in the following,
++            // "C:\Program" and "Files\LibreOffice" are treated as separate tokens. This is also
++            // consistent with the behavior of other office programs.
+             i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
+                 "C:\\Program Files\\LibreOffice", strlen("C:\\Program Files\\Libre"), aLocale, 0,
+                 aHyphOptions, aUserOptions);
+-            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(11), aResult.breakIndex);
++
++            // An identical result should be generated for solidus.
++            aResult = m_xBreak->getLineBreak(
++                "C:/Program Files/LibreOffice", strlen("C:/Program Files/Libre"), aLocale, 0,
++                aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(11), aResult.breakIndex);
+         }
+     }
+ 
+@@ -251,23 +268,125 @@ void TestBreakIterator::testLineBreaking()
+         aLocale.Country = "US";
+ 
+         {
++            // The root cause for this bug was the Unicode standard introducing special treatment
++            // for '-' in a number range context. This change makes number ranges (e.g. "100-199")
++            // behave as if they are single tokens for the purposes of line breaking. Unfortunately,
++            // this caused a significant appearance change to existing documents.
++            //
++            // Despite being a user-visible layout change, this isn't exactly a bug. Wrapping
++            // number ranges as a single token is consistent with other applications, including web
++            // browsers, and other office suites as mentioned in the bug discussion. Removing this
++            // customization seems like it would be a major change, however.
++            //
+             // Here we want the line break to leave 100- clumped on the first line.
++
+             i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
+                 "word 100-199 word", strlen("word 100-1"), aLocale, 0, aHyphOptions, aUserOptions);
+-            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(9), aResult.breakIndex);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{9}, aResult.breakIndex);
++        }
++
++        {
++            // From the same bug: "the leading minus must stay with numbers and strings"
++
++            i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
++                    "range of -100.000 to 100.000", strlen("range of -1"), aLocale, 0,
++                    aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{9}, aResult.breakIndex);
++
++            constexpr OUString str = u"range of \u2212100.000 to 100.000"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                    str, strlen("range of -"), aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{9}, aResult.breakIndex);
+         }
+-    }
+ 
+-    // i#83649: Line break should be between typographical quote and left bracket
+-    {
+         aLocale.Language = "de";
+         aLocale.Country = "DE";
+ 
+         {
+-            // Here we want the line break to leave »angetan werden« on the first line
++            // From the same bug: "the leading minus must stay with numbers and strings"
++
++            i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
++                    "EURO is -10,50", strlen("EURO is -1"), aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{8}, aResult.breakIndex);
++
++            // Also the mathematical minus sign:
++
++            constexpr OUString str = u"EURO is \u221210,50"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                    str, strlen("EURO is -"), aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{8}, aResult.breakIndex);
++        }
++
++        {
++            // From the same bug: "the leading minus must stay with numbers and strings"
++
++            i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
++                    "und -kosten", strlen("und -ko"), aLocale, 0,
++                    aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{4}, aResult.breakIndex);
++
++            // But not the non-breaking hyphen:
++
++            constexpr OUString str = u"und \u2011"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                    str, strlen("und -ko"), aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{5}, aResult.breakIndex);
++        }
++    }
++
++    // i#83649: "Line break should be between typographical quote and left bracket"
++    // - Actually: Spaces between quotation mark and opening punctuation not treated as a break.
++    // - Note that per the Unicode standard, prohibiting breaks in this context is intentional
++    // because it may cause issues in certain languages due to the various ways quotation
++    // characters are used.
++    // - We do it anyway by customizing the ICU line breaking rules.
++    {
++        {
++            // This uses the sample text provided in the bug report. Based on usage, it is assumed
++            // they were in the de_DE locale.
++
++            aLocale.Language = "de";
++            aLocale.Country = "DE";
++
++            // Per the bug report, it is expected that »angetan werden« remains on the first line.
+             const OUString str = u"»angetan werden« [Passiv]"_ustr;
+             i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
+-                str, strlen("Xangetan werdenX ["), aLocale, 0, aHyphOptions, aUserOptions);
++                str, str.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
++
++            // The same result should be returned for this and the first case.
++            const OUString str2 = u"»angetan werden« Passiv"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                str2, str2.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
++
++            // Under ICU rules, no amount of spaces would cause this to wrap.
++            const OUString str3 = u"»angetan werden«    [Passiv]"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                str3, str3.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(20), aResult.breakIndex);
++
++            // However, tabs will
++            const OUString str4 = u"»angetan werden«\t[Passiv]"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                str4, str4.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
++        }
++
++        {
++            // The same behavior is seen in English
++
++            aLocale.Language = "en";
++            aLocale.Country = "US";
++
++            const OUString str = u"\"angetan werden\" [Passiv]"_ustr;
++            i18n::LineBreakResults aResult = m_xBreak->getLineBreak(
++                str, str.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
++            CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
++
++            const OUString str2 = u"\"angetan werden\" Passiv"_ustr;
++            aResult = m_xBreak->getLineBreak(
++                str2, str2.getLength() - 4, aLocale, 0, aHyphOptions, aUserOptions);
+             CPPUNIT_ASSERT_EQUAL(static_cast<sal_Int32>(17), aResult.breakIndex);
+         }
+     }
+@@ -355,7 +474,7 @@ void TestBreakIterator::testLineBreaking()
+             auto res = m_xBreak->getLineBreak("Wort -prinzessinnen, wort",
+                                               strlen("Wort -prinzessinnen,"), aLocale, 0,
+                                               aHyphOptions, aUserOptions);
+-            CPPUNIT_ASSERT_EQUAL(sal_Int32{ 6 }, res.breakIndex);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32{ 5 }, res.breakIndex);
+         }
+     }
+ }
+@@ -638,7 +757,8 @@ void TestBreakIterator::testWordBoundaries()
+         CPPUNIT_ASSERT_EQUAL(std::size(aExpected), i);
+     }
+ 
+-    //See https://bz.apache.org/ooo/show_bug.cgi?id=85411
++    // i#85411: ZWSP should be a word separator for spellchecking
++    // - This fix was applied to both dict and edit customizations
+     for (int j = 0; j < 3; ++j)
+     {
+         switch (j)
+@@ -660,21 +780,23 @@ void TestBreakIterator::testWordBoundaries()
+                 break;
+         }
+ 
+-        static constexpr OUString aTest =
+-            u"I\u200Bwant\u200Bto\u200Bgo"_ustr;
++        static constexpr OUString aTest = u"I\u200Bwant\u200Bto\u200Bgo"_ustr;
+ 
+         sal_Int32 nPos = 0;
+-        sal_Int32 aExpected[] = {1, 6, 9, 12};
++        sal_Int32 aExpected[] = { 1, 6, 9, 12 };
+         size_t i = 0;
+         do
+         {
+             CPPUNIT_ASSERT(i < std::size(aExpected));
+-            nPos = m_xBreak->getWordBoundary(aTest, nPos, aLocale,
+-                i18n::WordType::DICTIONARY_WORD, true).endPos;
+-            CPPUNIT_ASSERT_EQUAL(aExpected[i], nPos);
++            auto dwPos = m_xBreak->getWordBoundary(aTest, nPos, aLocale,
++                                                   i18n::WordType::DICTIONARY_WORD, true);
++            CPPUNIT_ASSERT_EQUAL(aExpected[i], dwPos.endPos);
++            auto ewPos = m_xBreak->getWordBoundary(aTest, nPos, aLocale,
++                                                   i18n::WordType::ANYWORD_IGNOREWHITESPACES, true);
++            CPPUNIT_ASSERT_EQUAL(aExpected[i], ewPos.endPos);
++            nPos = dwPos.endPos;
+             ++i;
+-        }
+-        while (nPos++ < aTest.getLength());
++        } while (nPos++ < aTest.getLength());
+         CPPUNIT_ASSERT_EQUAL(std::size(aExpected), i);
+     }
+ 
+@@ -814,121 +936,45 @@ void TestBreakIterator::testWordBoundaries()
+     }
+ 
+     // i#56347: "BreakIterator patch for Hungarian"
+-    // Rules for Hungarian affixes after numbers and certain symbols
+-    {
+-        auto mode = i18n::WordType::DICTIONARY_WORD;
+-        aLocale.Language = "hu";
+-        aLocale.Country = "HU";
+-
+-        OUString aTest = u"szavak 15 15-tel 15%-kal €-val szavak"_ustr;
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 2, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(6), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 7, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(7), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(9), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 11, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(16), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 18, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(17), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(24), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 25, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 27, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 34, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(31), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(37), aBounds.endPos);
+-    }
+-
+     // i#56348: Special chars in first pos not handled by spell checking in Writer (Hungarian)
+-    // Rules for Hungarian affixes after numbers and certain symbols in edit mode.
+-    // The patch was merged, but the original bug was never closed and the current behavior seems
+-    // identical to the ICU default behavior. Added this test to ensure that doesn't change.
++    // Rules for Hungarian affixes after numbers and certain symbols
+     {
+-        auto mode = i18n::WordType::ANY_WORD;
+         aLocale.Language = "hu";
+         aLocale.Country = "HU";
+ 
+         OUString aTest = u"szavak 15 15-tel 15%-kal €-val szavak"_ustr;
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 2, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(6), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 7, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(7), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(9), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 11, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(12), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 11, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(12), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 12, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(12), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(13), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 13, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(13), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(16), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 16, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(16), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(17), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 17, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(17), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(19), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 19, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(19), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(20), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 20, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(20), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(21), aBounds.endPos);
+-
+-        aBounds = m_xBreak->getWordBoundary(aTest, 21, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(21), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(24), aBounds.endPos);
++        for (auto mode :
++             { i18n::WordType::DICTIONARY_WORD, i18n::WordType::ANYWORD_IGNOREWHITESPACES })
++        {
++            aBounds = m_xBreak->getWordBoundary(aTest, 2, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(0), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(6), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 24, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(24), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 7, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(7), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(9), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 25, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(26), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 11, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(16), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 26, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(26), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(27), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 18, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(17), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(24), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 27, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(27), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 25, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 30, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(31), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 27, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(25), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(30), aBounds.endPos);
+ 
+-        aBounds = m_xBreak->getWordBoundary(aTest, 31, aLocale, mode, true);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(31), aBounds.startPos);
+-        CPPUNIT_ASSERT_EQUAL(sal_Int32(37), aBounds.endPos);
++            aBounds = m_xBreak->getWordBoundary(aTest, 34, aLocale, mode, true);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(31), aBounds.startPos);
++            CPPUNIT_ASSERT_EQUAL(sal_Int32(37), aBounds.endPos);
++        }
+     }
+ }
+ 
+@@ -967,6 +1013,56 @@ void TestBreakIterator::testSentenceBoundaries()
+         CPPUNIT_ASSERT_EQUAL(sal_Int32(24), m_xBreak->beginOfSentence(aTest, 26, aLocale));
+         CPPUNIT_ASSERT_EQUAL(sal_Int32(53), m_xBreak->endOfSentence(aTest, 26, aLocale));
+     }
++
++    // i#55063: Sentence selection in Thai should select a space-delimited phrase.
++    // - This customization broke at some point. It works in an English locale in a synthetic test
++    // like this one, but does not work in the Thai locale, nor on Thai text in practice.
++    {
++        static constexpr OUString aTest = u"ว้อย โหลยโท่ยคอร์รัปชันโอเพ่นฮอตดอก โปรโมเตอร์"_ustr;
++
++        aLocale.Language = "en";
++        aLocale.Country = "US";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(46), m_xBreak->endOfSentence(aTest, 23, aLocale));
++
++        aLocale.Language = "th";
++        aLocale.Country = "TH";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(46), m_xBreak->endOfSentence(aTest, 23, aLocale));
++    }
++
++    // i#55063: Thai phrases should delimit English sentence selection.
++    // - This customization broke at some point. It works in an English locale in a synthetic test
++    // like this one, but does not work in the Thai locale, nor on Thai text in practice.
++    {
++        static constexpr OUString aTest = u"ว้อย English usually ends with a period โปรโมเตอร์."_ustr;
++
++        aLocale.Language = "en";
++        aLocale.Country = "US";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(51), m_xBreak->endOfSentence(aTest, 23, aLocale));
++
++        aLocale.Language = "th";
++        aLocale.Country = "TH";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(51), m_xBreak->endOfSentence(aTest, 23, aLocale));
++    }
++
++    // i#55063: Characteristic test for English text delimiting Thai phrases (sentences)
++    // - English text should not delimit Thai phrases.
++    {
++        static constexpr OUString aTest = u"Englishโหลยโท่ยคอร์รัปชันโอเพ่นฮอตดอกEnglish"_ustr;
++
++        aLocale.Language = "en";
++        aLocale.Country = "US";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(44), m_xBreak->endOfSentence(aTest, 23, aLocale));
++
++        aLocale.Language = "th";
++        aLocale.Country = "TH";
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), m_xBreak->beginOfSentence(aTest, 23, aLocale));
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(44), m_xBreak->endOfSentence(aTest, 23, aLocale));
++    }
+ }
+ 
+ //See https://bugs.libreoffice.org/show_bug.cgi?id=40292
+@@ -1501,6 +1597,7 @@ void TestBreakIterator::testLegacyHebrewQuoteInsideWord()
+     aLocale.Language = "he";
+     aLocale.Country = "IL";
+ 
++    // i#51661: Add quotation mark as middle letter for Hebrew
+     {
+         auto aTest = u"פַּרְדּ״ס פַּרְדּ\"ס"_ustr;
+ 
+@@ -1514,6 +1611,21 @@ void TestBreakIterator::testLegacyHebrewQuoteInsideWord()
+         CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
+         CPPUNIT_ASSERT_EQUAL(sal_Int32(19), aBounds.endPos);
+     }
++
++    // i#51661: Add quotation mark as middle letter for Hebrew
++    {
++        auto aTest = u"פַּרְדּ״ס פַּרְדּ\"ס"_ustr;
++
++        i18n::Boundary aBounds = m_xBreak->getWordBoundary(
++            aTest, 3, aLocale, i18n::WordType::ANYWORD_IGNOREWHITESPACES, false);
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(0), aBounds.startPos);
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(9), aBounds.endPos);
++
++        aBounds = m_xBreak->getWordBoundary(aTest, 13, aLocale,
++                                            i18n::WordType::ANYWORD_IGNOREWHITESPACES, false);
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(10), aBounds.startPos);
++        CPPUNIT_ASSERT_EQUAL(sal_Int32(19), aBounds.endPos);
++    }
+ }
+ 
+ void TestBreakIterator::testLegacySurrogatePairs()
+diff --git a/i18npool/source/breakiterator/data/dict_word.txt b/i18npool/source/breakiterator/data/dict_word.txt
+index b1666f44daab..f804b0eec214 100644
+--- i18npool/source/breakiterator/data/dict_word.txt
++++ i18npool/source/breakiterator/data/dict_word.txt
+@@ -1,148 +1,199 @@
+ #
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (C) 2002-2016, International Business Machines Corporation
++# and others. All Rights Reserved.
+ #
+-#   file:  dict_word.txt   
++# file:  word.txt
+ #
+-#   ICU Word Break Rules
++# ICU Word Break Rules
+ #      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
++#      These rules are based on UAX #29 Revision 34 for Unicode Version 12.0
+ #
++# Note:  Updates to word.txt will usually need to be merged into
++#        word_POSIX.txt also.
+ 
+-
+-
+-####################################################################################
++##############################################################################
+ #
+ #  Character class definitions from TR 29
+ #
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-$ALetter   = [[:Alphabetic:] [:name= COMMERCIAL AT:] [:name= HEBREW PUNCTUATION GERESH:]
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = GRAVE ACCENT:] \u0084 [:name = SOFT HYPHEN:] [:name = MIDDLE DOT:] [:name = GREEK TONOS:] [:name= FULL STOP:] 
+-              [:name = HEBREW PUNCTUATION GERSHAYIM:] [:name = DOUBLE VERTICAL LINE:] [:name = LEFT SINGLE QUOTATION MARK:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:] [:name = PRIME:] 
+-              [:name = HYPHEN-MINUS:] ];
+-
+-$SufixLetter = [:name= FULL STOP:];
+-              
+-
+-$MidNum    = [[:LineBreak = Infix_Numeric:] [:name= COMMERCIAL AT:] \u0084 [:name = GREEK TONOS:] [:name = ARABIC DECIMAL SEPARATOR:]
+-             [:name = LEFT SINGLE QUOTATION MARK:] [:name = RIGHT SINGLE QUOTATION MARK:] [:name = SINGLE HIGH-REVERSED-9 QUOTATION MARK:]
+-             [:name = PRIME:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
++##############################################################################
++
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
++
++!!chain;
++!!quoted_literals_only;
++
+ 
+ #
+ #  Character Class Definitions.
+-#    The names are those from TR29.
+ #
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+ 
++$Han                = [:Han:];
+ 
++$CR                 = [\p{Word_Break = CR}];
++$LF                 = [\p{Word_Break = LF}];
++$Newline            = [\p{Word_Break = Newline}];
++$Extend             = [\p{Word_Break = Extend}-$Han];
++$ZWJ                = [\p{Word_Break = ZWJ}];
++$Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
++$Format             = [\p{Word_Break = Format}];
++$Katakana           = [\p{Word_Break = Katakana}];
++$Hebrew_Letter      = [\p{Word_Break = Hebrew_Letter}];
++$ALetter            = [\p{Word_Break = ALetter}];
++$Single_Quote       = [\p{Word_Break = Single_Quote}];
++$Double_Quote       = [\p{Word_Break = Double_Quote}];
++$MidNumLet          = [\p{Word_Break = MidNumLet}];
++$MidNum             = [\p{Word_Break = MidNum}];
++$Numeric            = [\p{Word_Break = Numeric}];
++$ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
++$WSegSpace          = [\p{Word_Break = WSegSpace}];
++$Extended_Pict      = [\p{Extended_Pictographic}];
+ 
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Dictionary words can contain hyphens
++### tdf#49885: Sync custom BreakIterator rules with ICU originals
++### - ICU is now more permissive about punctuation inside words.
++### - For compatibility, exclude certain characters that were previously excluded.
+ 
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
++$IncludedML         = [:name = HYPHEN-MINUS:];
++$ExcludedML         = [[:name = COLON:]
++                       [:name = GREEK ANO TELEIA:]
++                       [:name = PRESENTATION FORM FOR VERTICAL COLON:]
++                       [:name = SMALL COLON:]
++                       [:name = FULLWIDTH COLON:]];
+ 
+-$Format    = [[:Cf:] - $TheZWSP];
++# $MidLetter          = [\p{Word_Break = MidLetter}];
++$MidLetter          = [[\p{Word_Break = MidLetter}]-$ExcludedML $IncludedML];
+ 
++### END CUSTOMIZATION
+ 
++$Hiragana           = [:Hiragana:];
++$Ideographic        = [\p{Ideographic}];
+ 
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
+ 
++#   Dictionary character set, for triggering language-based break engines. Currently
++#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
++#   5.0 or later as the definition of Complex_Context was corrected to include all
++#   characters requiring dictionary break.
+ 
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$SufixLetterEx= $SufixLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
++$Control        = [\p{Grapheme_Cluster_Break = Control}];
++$HangulSyllable = [\uac00-\ud7a3];
++$ComplexContext = [:LineBreak = Complex_Context:];
++$KanaKanji      = [$Han $Hiragana $Katakana];
++$dictionaryCJK  = [$KanaKanji $HangulSyllable];
++$dictionary     = [$ComplexContext $dictionaryCJK];
+ 
++# TODO: check if handling of katakana in dictionary makes rules incorrect/void
+ 
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
++# leave CJK scripts out of ALetterPlus
++$ALetterPlus  = [$ALetter-$dictionaryCJK [$ComplexContext-$Extend-$Control]];
+ 
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* $SufixLetterEx? {200};
+ 
+-[[:P:][:S:]]*;
++## -------------------------------------------------
+ 
++# Rule 3 - CR x LF
+ #
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
++$CR $LF;
+ 
++# Rule 3c   Do not break within emoji zwj sequences.
++#             ZWJ ×  \p{Extended_Pictographic}.  Precedes WB4, so no intervening Extend chars allowed.
+ #
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
++$ZWJ $Extended_Pict;
+ 
++# Rule 3d - Keep horizontal whitespace together.
+ #
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
++$WSegSpace $WSegSpace;
++
++# Rule 4 - ignore Format and Extend characters, except when they appear at the beginning
++#          of a region of Text.
++
++$ExFm  = [$Extend $Format $ZWJ];
++
++^$ExFm+;            # This rule fires only when there are format or extend characters at the
++                    # start of text, or immediately following another boundary. It groups them, in
++                    # the event there are more than one.
++
++[^$CR $LF $Newline $ExFm] $ExFm*;   # This rule rule attaches trailing format/extends to words,
++                                    # with no special rule status value.
++
++$Numeric $ExFm* {100};              # This group of rules also attach trailing format/extends, but
++$ALetterPlus $ExFm* {200};          # with rule status set based on the word's final base character.
++$HangulSyllable {200};
++$Hebrew_Letter $ExFm* {200};
++$Katakana $ExFm* {400};             # note:  these status values override those from rule 5
++$Hiragana $ExFm* {400};             #        by virtue of being numerically larger.
++$Ideographic $ExFm* {400};          #
+ 
+ #
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
++# rule 5
++#    Do not break between most letters.
+ #
++($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 6 and 7
++($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) {200};
++
++# rule 7a
++$Hebrew_Letter $ExFm* $Single_Quote {200};
++
++# rule 7b and 7c
++$Hebrew_Letter $ExFm* $Double_Quote $ExFm* $Hebrew_Letter;
++
++# rule 8
++
++$Numeric $ExFm* $Numeric;
++
++# rule 9
++
++($ALetterPlus | $Hebrew_Letter)  $ExFm* $Numeric;
++
++# rule 10
++
++$Numeric $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 11 and 12
++
++$Numeric $ExFm* ($MidNum | $MidNumLet | $Single_Quote) $ExFm* $Numeric;
++
++# rule 13
++# to be consistent with $KanaKanji $KanaKanhi, changed
++# from 300 to 400.
++# See also TestRuleStatus in intltest/rbbiapts.cpp
++$Katakana $ExFm*  $Katakana {400};
++
++# rule 13a/b
++
++$ALetterPlus   $ExFm* $ExtendNumLet {200};    #  (13a)
++$Hebrew_Letter $ExFm* $ExtendNumLet {200};    #  (13a)
++$Numeric       $ExFm* $ExtendNumLet {100};    #  (13a)
++$Katakana      $ExFm* $ExtendNumLet {400};    #  (13a)
++$ExtendNumLet  $ExFm* $ExtendNumLet {200};    #  (13a)
++
++$ExtendNumLet  $ExFm* $ALetterPlus  {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Hebrew_Letter {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Numeric      {100};    #  (13b)
++$ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
+ 
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
++# rules 15 - 17
++#    Pairs of Regional Indicators stay together.
++#    With incoming rule chaining disabled by ^, this rule will match exactly two of them.
++#    No other rule begins with a Regional_Indicator, so chaining cannot extend the match.
+ #
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $SufixLetter $Extend $Format];
++^$Regional_Indicator $ExFm* $Regional_Indicator;
+ 
+-#!.*;
+-! ($NonStarters* | \n \r) .;
++# special handling for CJK characters: chain for later dictionary segmentation
++$HangulSyllable $HangulSyllable {200};
++$KanaKanji $KanaKanji {400}; # different rule status if both kana and kanji found
+ 
++# Rule 999
++#     Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/dict_word_he.txt b/i18npool/source/breakiterator/data/dict_word_he.txt
+deleted file mode 100644
+index 40197d92a431..000000000000
+--- i18npool/source/breakiterator/data/dict_word_he.txt
++++ /dev/null
+@@ -1,139 +0,0 @@
+-#
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
+-#
+-#   file:  dict_word.txt   
+-#
+-#   ICU Word Break Rules
+-#      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
+-#
+-
+-
+-
+-####################################################################################
+-#
+-#  Character class definitions from TR 29
+-#
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-
+-$ALetter   = [[:Alphabetic:] [:name= COMMERCIAL AT:] [:name= HEBREW PUNCTUATION GERESH:]
+-                           - $Katakana
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = QUOTATION MARK:] [:name = APOSTROPHE:] [:name = GRAVE ACCENT:] \u0084 [:name = SOFT HYPHEN:] [:name = MIDDLE DOT:] [:name = GREEK TONOS:] [:name= FULL STOP:]
+-              [:name = HEBREW PUNCTUATION GERSHAYIM:] [:name = DOUBLE VERTICAL LINE:] [:name = LEFT SINGLE QUOTATION MARK:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:] [:name = PRIME:] [:name = HYPHEN-MINUS:]];  
+-              
+-$SufixLetter = [:name= FULL STOP:];
+-
+-$MidNum    = [[:LineBreak = Infix_Numeric:] [:name= COMMERCIAL AT:] \u0084 [:name = GREEK TONOS:] [:name = ARABIC DECIMAL SEPARATOR:]
+-             [:name = LEFT SINGLE QUOTATION MARK:] [:name = RIGHT SINGLE QUOTATION MARK:] [:name = SINGLE HIGH-REVERSED-9 QUOTATION MARK:]
+-             [:name = PRIME:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
+-
+-#
+-#  Character Class Definitions.
+-#    The names are those from TR29.
+-#
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+-
+-
+-
+-
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
+-
+-$Format    = [[:Cf:] - $TheZWSP];
+-
+-
+-
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
+-
+-
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$SufixLetterEx= $SufixLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$FormatEx     = $Format    $Extend*;
+-
+-
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
+-
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* $SufixLetterEx? {200};
+-
+-[[:P:][:S:]]*;
+-
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
+-
+-#
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-# [:IDEOGRAPHIC:] $Extend* {400};
+-
+-#
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
+-
+-#
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
+-#
+-
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
+-#
+-$NonStarters = [$Numeric $ALetter $Katakana [:P:] [:S:] $MidLetter $MidNum $SufixLetter $Extend $Format];
+-
+-#!.*;
+-! ($NonStarters* | \n \r) .;
+-
+diff --git a/i18npool/source/breakiterator/data/dict_word_hu.txt b/i18npool/source/breakiterator/data/dict_word_hu.txt
+index b0a0276b36a8..88648e6e5716 100644
+--- i18npool/source/breakiterator/data/dict_word_hu.txt
++++ i18npool/source/breakiterator/data/dict_word_hu.txt
+@@ -1,176 +1,222 @@
+ #
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (C) 2002-2016, International Business Machines Corporation
++# and others. All Rights Reserved.
+ #
+-#   file:  dict_word.txt   
++# file:  word.txt
+ #
+-#   ICU Word Break Rules
++# ICU Word Break Rules
+ #      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
++#      These rules are based on UAX #29 Revision 34 for Unicode Version 12.0
+ #
++# Note:  Updates to word.txt will usually need to be merged into
++#        word_POSIX.txt also.
+ 
+-
+-
+-####################################################################################
++##############################################################################
+ #
+ #  Character class definitions from TR 29
+ #
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-
+-# Fix spelling of a)-ban, b)-ben, when the letter is a reference
+-# resulting bad word breaking "ban" and "ben"
+-# (reference fields are not expanded in spell checking, yet, only
+-# for grammar checking).
+-
+-$PrefixLetter = [[:name = RIGHT PARENTHESIS:]];
+-
+-$ALetter   = [[:Alphabetic:] [:name= COMMERCIAL AT:] [:name= HEBREW PUNCTUATION GERESH:]
+-                [:name = PERCENT SIGN:] [:name = PER MILLE SIGN:] [:name = PER TEN THOUSAND SIGN:]
+-                [:name = SECTION SIGN:] [:name = DEGREE SIGN:] [:name = EURO SIGN:]
+-                [:name = HYPHEN-MINUS:] [:name = EN DASH:] [:name = EM DASH:]
+-                [:name = DIGIT ZERO:]
+-                [:name = DIGIT ONE:]
+-                [:name = DIGIT TWO:]
+-                [:name = DIGIT THREE:]
+-                [:name = DIGIT FOUR:]
+-                [:name = DIGIT FIVE:]
+-                [:name = DIGIT SIX:]
+-                [:name = DIGIT SEVEN:]
+-                [:name = DIGIT EIGHT:]
+-                [:name = DIGIT NINE:]
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = GRAVE ACCENT:] \u0084 [:name = SOFT HYPHEN:] [:name = MIDDLE DOT:] [:name = GREEK TONOS:]
+-              [:name = HEBREW PUNCTUATION GERSHAYIM:] [:name = DOUBLE VERTICAL LINE:] [:name = LEFT SINGLE QUOTATION MARK:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:] [:name = PRIME:] [:name = HYPHEN-MINUS:]
+-              [:name = EURO SIGN:] [:name = PERCENT SIGN:] [:name = PER MILLE SIGN:] [:name = PER TEN THOUSAND SIGN:]
+-              [:name = EN DASH:] [:name = EM DASH:]
+-              [:name = RIGHT DOUBLE QUOTATION MARK:]
+-              [:name = LEFT PARENTHESIS:]
+-              [:name = RIGHT PARENTHESIS:]
+-              [:name = RIGHT SQUARE BRACKET:]
+-              [:name = EXCLAMATION MARK:]
+-              [:name = QUESTION MARK:]
+-              [:name = FULL STOP:] [:name = PERCENT SIGN:] [:name = SECTION SIGN:] [:name = DEGREE SIGN:]];  
+-              
+-$SufixLetter = [:name= FULL STOP:];
+-
+-$MidNum    = [[:LineBreak = Infix_Numeric:] [:name= COMMERCIAL AT:] \u0084 [:name = GREEK TONOS:] [:name = ARABIC DECIMAL SEPARATOR:]
+-             [:name = LEFT SINGLE QUOTATION MARK:] [:name = RIGHT SINGLE QUOTATION MARK:] [:name = SINGLE HIGH-REVERSED-9 QUOTATION MARK:]
+-             [:name = PRIME:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
++##############################################################################
++
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
++
++!!chain;
++!!quoted_literals_only;
++
+ 
+ #
+ #  Character Class Definitions.
+-#    The names are those from TR29.
+ #
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+-
+-
+ 
++$Han                = [:Han:];
++
++$CR                 = [\p{Word_Break = CR}];
++$LF                 = [\p{Word_Break = LF}];
++$Newline            = [\p{Word_Break = Newline}];
++$Extend             = [\p{Word_Break = Extend}-$Han];
++$ZWJ                = [\p{Word_Break = ZWJ}];
++$Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
++$Format             = [\p{Word_Break = Format}];
++$Katakana           = [\p{Word_Break = Katakana}];
++$Hebrew_Letter      = [\p{Word_Break = Hebrew_Letter}];
++$Single_Quote       = [\p{Word_Break = Single_Quote}];
++$Double_Quote       = [\p{Word_Break = Double_Quote}];
++$MidNumLet          = [\p{Word_Break = MidNumLet}];
++$MidNum             = [\p{Word_Break = MidNum}];
++$Numeric            = [\p{Word_Break = Numeric}];
++$ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
++$WSegSpace          = [\p{Word_Break = WSegSpace}];
++$Extended_Pict      = [\p{Extended_Pictographic}];
++
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Dictionary words can contain hyphens
++### tdf#49885: Sync custom BreakIterator rules with ICU originals
++### - ICU is now more permissive about punctuation inside words.
++### - For compatibility, exclude certain characters that were previously excluded.
++### tdf#116072: Extend MidLetter in Hungarian word breaking
++### i#56347: BreakIterator patch for Hungarian
++### i#56348: Special chars in first pos not handled by spell checking for Hungarian
++
++$Symbols_hu         = [[:name = PERCENT SIGN:]
++                       [:name = PER MILLE SIGN:]
++                       [:name = PER TEN THOUSAND SIGN:]
++                       [:name = SECTION SIGN:]
++                       [:name = DEGREE SIGN:]
++                       [:name = EURO SIGN:]
++                       [:name = HYPHEN-MINUS:]
++                       [:name = EN DASH:]
++                       [:name = EM DASH:]];
++
++#$ALetter            = [\p{Word_Break = ALetter}];
++$ALetter            = [\p{Word_Break = ALetter} $Symbols_hu];
++
++$IncludedML         = [:name = HYPHEN-MINUS:];
++$ExcludedML         = [[:name = COLON:]
++                       [:name = GREEK ANO TELEIA:]
++                       [:name = PRESENTATION FORM FOR VERTICAL COLON:]
++                       [:name = SMALL COLON:]
++                       [:name = FULLWIDTH COLON:]];
++
++$IncludedML_hu      = [[:name = RIGHT DOUBLE QUOTATION MARK:]
++                       [:name = LEFT PARENTHESIS:]
++                       [:name = RIGHT PARENTHESIS:]
++                       [:name = RIGHT SQUARE BRACKET:]
++                       [:name = EXCLAMATION MARK:]
++                       [:name = QUESTION MARK:]
++                       $Symbols_hu];
++
++# $MidLetter          = [\p{Word_Break = MidLetter}];
++$MidLetter          = [[\p{Word_Break = MidLetter}]-$ExcludedML $IncludedML $IncludedML_hu];
++
++### END CUSTOMIZATION
++
++$Hiragana           = [:Hiragana:];
++$Ideographic        = [\p{Ideographic}];
++
++
++#   Dictionary character set, for triggering language-based break engines. Currently
++#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
++#   5.0 or later as the definition of Complex_Context was corrected to include all
++#   characters requiring dictionary break.
++
++$Control        = [\p{Grapheme_Cluster_Break = Control}];
++$HangulSyllable = [\uac00-\ud7a3];
++$ComplexContext = [:LineBreak = Complex_Context:];
++$KanaKanji      = [$Han $Hiragana $Katakana];
++$dictionaryCJK  = [$KanaKanji $HangulSyllable];
++$dictionary     = [$ComplexContext $dictionaryCJK];
++
++# TODO: check if handling of katakana in dictionary makes rules incorrect/void
++
++# leave CJK scripts out of ALetterPlus
++$ALetterPlus  = [$ALetter-$dictionaryCJK [$ComplexContext-$Extend-$Control]];
++
++
++## -------------------------------------------------
++
++# Rule 3 - CR x LF
++#
++$CR $LF;
+ 
+-####################################################################################
++# Rule 3c   Do not break within emoji zwj sequences.
++#             ZWJ ×  \p{Extended_Pictographic}.  Precedes WB4, so no intervening Extend chars allowed.
+ #
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
++$ZWJ $Extended_Pict;
++
++# Rule 3d - Keep horizontal whitespace together.
+ #
+-####################################################################################
++$WSegSpace $WSegSpace;
+ 
+-$Format    = [[:Cf:] - $TheZWSP];
++# Rule 4 - ignore Format and Extend characters, except when they appear at the beginning
++#          of a region of Text.
+ 
++$ExFm  = [$Extend $Format $ZWJ];
+ 
++^$ExFm+;            # This rule fires only when there are format or extend characters at the
++                    # start of text, or immediately following another boundary. It groups them, in
++                    # the event there are more than one.
+ 
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
++[^$CR $LF $Newline $ExFm] $ExFm*;   # This rule rule attaches trailing format/extends to words,
++                                    # with no special rule status value.
+ 
++$Numeric $ExFm* {100};              # This group of rules also attach trailing format/extends, but
++$ALetterPlus $ExFm* {200};          # with rule status set based on the word's final base character.
++$HangulSyllable {200};
++$Hebrew_Letter $ExFm* {200};
++$Katakana $ExFm* {400};             # note:  these status values override those from rule 5
++$Hiragana $ExFm* {400};             #        by virtue of being numerically larger.
++$Ideographic $ExFm* {400};          #
+ 
+ #
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
++# rule 5
++#    Do not break between most letters.
+ #
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$SufixLetterEx= $SufixLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
++($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter);
+ 
++# rule 6 and 7
++($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) {200};
+ 
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
++# rule 7a
++$Hebrew_Letter $ExFm* $Single_Quote {200};
+ 
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $PrefixLetter? $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* $SufixLetterEx? {200};
++# rule 7b and 7c
++$Hebrew_Letter $ExFm* $Double_Quote $ExFm* $Hebrew_Letter;
+ 
+-[[:P:][:S:]]*;
++# rule 8
+ 
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
++$Numeric $ExFm* $Numeric;
+ 
+-#
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
++# rule 9
+ 
+-#
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
++($ALetterPlus | $Hebrew_Letter)  $ExFm* $Numeric;
+ 
+-#
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
+-#
++# rule 10
++
++$Numeric $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 11 and 12
++
++$Numeric $ExFm* ($MidNum | $MidNumLet | $Single_Quote) $ExFm* $Numeric;
++
++# rule 13
++# to be consistent with $KanaKanji $KanaKanhi, changed
++# from 300 to 400.
++# See also TestRuleStatus in intltest/rbbiapts.cpp
++$Katakana $ExFm*  $Katakana {400};
++
++# rule 13a/b
++
++$ALetterPlus   $ExFm* $ExtendNumLet {200};    #  (13a)
++$Hebrew_Letter $ExFm* $ExtendNumLet {200};    #  (13a)
++$Numeric       $ExFm* $ExtendNumLet {100};    #  (13a)
++$Katakana      $ExFm* $ExtendNumLet {400};    #  (13a)
++$ExtendNumLet  $ExFm* $ExtendNumLet {200};    #  (13a)
++
++$ExtendNumLet  $ExFm* $ALetterPlus  {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Hebrew_Letter {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Numeric      {100};    #  (13b)
++$ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
+ 
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
++# rules 15 - 17
++#    Pairs of Regional Indicators stay together.
++#    With incoming rule chaining disabled by ^, this rule will match exactly two of them.
++#    No other rule begins with a Regional_Indicator, so chaining cannot extend the match.
+ #
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $SufixLetter $Extend $Format];
++^$Regional_Indicator $ExFm* $Regional_Indicator;
+ 
+-#!.*;
+-! ($NonStarters* | \n \r) .;
++# special handling for CJK characters: chain for later dictionary segmentation
++$HangulSyllable $HangulSyllable {200};
++$KanaKanji $KanaKanji {400}; # different rule status if both kana and kanji found
+ 
++# Rule 999
++#     Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/dict_word_nodash.txt b/i18npool/source/breakiterator/data/dict_word_nodash.txt
+deleted file mode 100644
+index 279cc50e5b66..000000000000
+--- i18npool/source/breakiterator/data/dict_word_nodash.txt
++++ /dev/null
+@@ -1,147 +0,0 @@
+-#
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
+-#
+-#   file:  dict_word.txt   
+-#
+-#   ICU Word Break Rules
+-#      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
+-#
+-
+-
+-
+-####################################################################################
+-#
+-#  Character class definitions from TR 29
+-#
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-$ALetter   = [[:Alphabetic:] [:name= COMMERCIAL AT:] [:name= HEBREW PUNCTUATION GERESH:]
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = GRAVE ACCENT:] \u0084 [:name = SOFT HYPHEN:] [:name = MIDDLE DOT:] [:name = GREEK TONOS:] [:name= FULL STOP:] 
+-              [:name = HEBREW PUNCTUATION GERSHAYIM:] [:name = DOUBLE VERTICAL LINE:] [:name = LEFT SINGLE QUOTATION MARK:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:] [:name = PRIME:] ];  
+-
+-$SufixLetter = [:name= FULL STOP:];
+-              
+-
+-$MidNum    = [[:LineBreak = Infix_Numeric:] [:name= COMMERCIAL AT:] \u0084 [:name = GREEK TONOS:] [:name = ARABIC DECIMAL SEPARATOR:]
+-             [:name = LEFT SINGLE QUOTATION MARK:] [:name = RIGHT SINGLE QUOTATION MARK:] [:name = SINGLE HIGH-REVERSED-9 QUOTATION MARK:]
+-             [:name = PRIME:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
+-
+-#
+-#  Character Class Definitions.
+-#    The names are those from TR29.
+-#
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+-
+-
+-
+-
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
+-
+-$Format    = [[:Cf:] - $TheZWSP];
+-
+-
+-
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
+-
+-
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$SufixLetterEx= $SufixLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
+-
+-
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
+-
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* $SufixLetterEx? {200};
+-
+-[[:P:][:S:]]*;
+-
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
+-
+-#
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
+-
+-#
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
+-
+-#
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
+-#
+-
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
+-#
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $SufixLetter $Extend $Format];
+-
+-#!.*;
+-! ($NonStarters* | \n \r) .;
+-
+diff --git a/i18npool/source/breakiterator/data/dict_word_prepostdash.txt b/i18npool/source/breakiterator/data/dict_word_prepostdash.txt
+index fb29b478af21..b39503d1b405 100644
+--- i18npool/source/breakiterator/data/dict_word_prepostdash.txt
++++ i18npool/source/breakiterator/data/dict_word_prepostdash.txt
+@@ -1,157 +1,221 @@
+ #
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (C) 2002-2016, International Business Machines Corporation
++# and others. All Rights Reserved.
+ #
+-#   file:  dict_word.txt   
++# file:  word.txt
+ #
+-#   ICU Word Break Rules
++# ICU Word Break Rules
+ #      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
++#      These rules are based on UAX #29 Revision 34 for Unicode Version 12.0
+ #
++# Note:  Updates to word.txt will usually need to be merged into
++#        word_POSIX.txt also.
+ 
+-
+-
+-####################################################################################
++##############################################################################
+ #
+ #  Character class definitions from TR 29
+ #
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
++##############################################################################
+ 
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
+ 
+-# list of dashes or hyphens that should be accepted as part of the word if a single one of these
+-# pre- or postfixes a word. E.g. in German: "Arbeits-" or "-nehmer" where that hyphen needs to
+-# be part of the word in order to have it properly spell checked etc.
+-$PrePostDashHyphen = [ [:name = HYPHEN-MINUS:] ];
++!!chain;
++!!quoted_literals_only;
+ 
+ 
+-$ALetter   = [[:Alphabetic:] [:name= COMMERCIAL AT:] [:name= HEBREW PUNCTUATION GERESH:]
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = GRAVE ACCENT:] \u0084 [:name = SOFT HYPHEN:] [:name = MIDDLE DOT:] [:name = GREEK TONOS:] [:name= FULL STOP:] 
+-              [:name = HEBREW PUNCTUATION GERSHAYIM:] [:name = DOUBLE VERTICAL LINE:] [:name = LEFT SINGLE QUOTATION MARK:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:] [:name = PRIME:] 
+-              [:name = HYPHEN-MINUS:] ];
++#
++#  Character Class Definitions.
++#
+ 
+-$SufixLetter = [:name= FULL STOP:];
+-              
++$Han                = [:Han:];
+ 
+-$MidNum    = [[:LineBreak = Infix_Numeric:] [:name= COMMERCIAL AT:] \u0084 [:name = GREEK TONOS:] [:name = ARABIC DECIMAL SEPARATOR:]
+-             [:name = LEFT SINGLE QUOTATION MARK:] [:name = RIGHT SINGLE QUOTATION MARK:] [:name = SINGLE HIGH-REVERSED-9 QUOTATION MARK:]
+-             [:name = PRIME:]];
+-$Numeric   = [:LineBreak = Numeric:];
++$CR                 = [\p{Word_Break = CR}];
++$LF                 = [\p{Word_Break = LF}];
++$Newline            = [\p{Word_Break = Newline}];
++$Extend             = [\p{Word_Break = Extend}-$Han];
++$ZWJ                = [\p{Word_Break = ZWJ}];
++$Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
++$Format             = [\p{Word_Break = Format}];
++$Katakana           = [\p{Word_Break = Katakana}];
++$Hebrew_Letter      = [\p{Word_Break = Hebrew_Letter}];
++$ALetter            = [\p{Word_Break = ALetter}];
++$Single_Quote       = [\p{Word_Break = Single_Quote}];
++$Double_Quote       = [\p{Word_Break = Double_Quote}];
++$MidNumLet          = [\p{Word_Break = MidNumLet}];
++$MidNum             = [\p{Word_Break = MidNum}];
++$Numeric            = [\p{Word_Break = Numeric}];
++$ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
++$WSegSpace          = [\p{Word_Break = WSegSpace}];
++$Extended_Pict      = [\p{Extended_Pictographic}];
+ 
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Dictionary words can contain hyphens
++### tdf#49885: Sync custom BreakIterator rules with ICU originals
++### - ICU is now more permissive about punctuation inside words.
++### - For compatibility, exclude certain characters that were previously excluded.
+ 
+-$TheZWSP = \u200b;
++$IncludedML         = [:name = HYPHEN-MINUS:];
++$ExcludedML         = [[:name = COLON:]
++                       [:name = GREEK ANO TELEIA:]
++                       [:name = PRESENTATION FORM FOR VERTICAL COLON:]
++                       [:name = SMALL COLON:]
++                       [:name = FULLWIDTH COLON:]];
+ 
+-#
+-#  Character Class Definitions.
+-#    The names are those from TR29.
+-#
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
++# $MidLetter          = [\p{Word_Break = MidLetter}];
++$MidLetter          = [[\p{Word_Break = MidLetter}]-$ExcludedML $IncludedML];
+ 
++### END CUSTOMIZATION
+ 
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Allow leading and trailing hyphens in certain languages
++### This part of the customization does not replace any rules.
+ 
++$PrePostHyphen      = [:name = HYPHEN-MINUS:];
+ 
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
++### END CUSTOMIZATION
+ 
+-$Format    = [[:Cf:] - $TheZWSP];
++$Hiragana           = [:Hiragana:];
++$Ideographic        = [\p{Ideographic}];
+ 
+ 
++#   Dictionary character set, for triggering language-based break engines. Currently
++#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
++#   5.0 or later as the definition of Complex_Context was corrected to include all
++#   characters requiring dictionary break.
+ 
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
++$Control        = [\p{Grapheme_Cluster_Break = Control}];
++$HangulSyllable = [\uac00-\ud7a3];
++$ComplexContext = [:LineBreak = Complex_Context:];
++$KanaKanji      = [$Han $Hiragana $Katakana];
++$dictionaryCJK  = [$KanaKanji $HangulSyllable];
++$dictionary     = [$ComplexContext $dictionaryCJK];
+ 
++# TODO: check if handling of katakana in dictionary makes rules incorrect/void
+ 
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$SufixLetterEx= $SufixLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
++# leave CJK scripts out of ALetterPlus
++$ALetterPlus  = [$ALetter-$dictionaryCJK [$ComplexContext-$Extend-$Control]];
+ 
+ 
++## -------------------------------------------------
++
++# Rule 3 - CR x LF
+ #
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
++$CR $LF;
+ 
++# Rule 3c   Do not break within emoji zwj sequences.
++#             ZWJ ×  \p{Extended_Pictographic}.  Precedes WB4, so no intervening Extend chars allowed.
+ #
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
++$ZWJ $Extended_Pict;
++
++# Rule 3d - Keep horizontal whitespace together.
+ #
+-# At most one leading or trailing dash/hyphen should be accepted as well.
+-# E.g. in German: "Arbeits-" or "-nehmer" where that hyphen needs to
+-# be part of the word in order to have it properly spell checked etc.
+-$LetterSequence = $PrePostDashHyphen? $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)* $PrePostDashHyphen?;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* $SufixLetterEx? {200};
++$WSegSpace $WSegSpace;
+ 
+-[[:P:][:S:]]*;
++# Rule 4 - ignore Format and Extend characters, except when they appear at the beginning
++#          of a region of Text.
+ 
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
++$ExFm  = [$Extend $Format $ZWJ];
+ 
+-#
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
++^$ExFm+;            # This rule fires only when there are format or extend characters at the
++                    # start of text, or immediately following another boundary. It groups them, in
++                    # the event there are more than one.
+ 
+-#
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
++[^$CR $LF $Newline $ExFm] $ExFm*;   # This rule rule attaches trailing format/extends to words,
++                                    # with no special rule status value.
++
++$Numeric $ExFm* {100};              # This group of rules also attach trailing format/extends, but
++$ALetterPlus $ExFm* {200};          # with rule status set based on the word's final base character.
++$HangulSyllable {200};
++$Hebrew_Letter $ExFm* {200};
++$Katakana $ExFm* {400};             # note:  these status values override those from rule 5
++$Hiragana $ExFm* {400};             #        by virtue of being numerically larger.
++$Ideographic $ExFm* {400};          #
+ 
+ #
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
++# rule 5
++#    Do not break between most letters.
+ #
+ 
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Allow leading and trailing hyphens in certain languages
++
++# ($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter);
++($PrePostHyphen) ? ($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter) ($PrePostHyphen)?;
++
++### END CUSTOMIZATION
++
++# rule 6 and 7
++
++### BEGIN CUSTOMIZATION
++### Unknown issue number: Allow leading and trailing hyphens in certain languages
++
++# ($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) {200};
++($PrePostHyphen)? ($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) ($PrePostHyphen)? {200};
++
++### END CUSTOMIZATION
++
++# rule 7a
++$Hebrew_Letter $ExFm* $Single_Quote {200};
++
++# rule 7b and 7c
++$Hebrew_Letter $ExFm* $Double_Quote $ExFm* $Hebrew_Letter;
++
++# rule 8
++
++$Numeric $ExFm* $Numeric;
++
++# rule 9
++
++($ALetterPlus | $Hebrew_Letter)  $ExFm* $Numeric;
++
++# rule 10
++
++$Numeric $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 11 and 12
++
++$Numeric $ExFm* ($MidNum | $MidNumLet | $Single_Quote) $ExFm* $Numeric;
++
++# rule 13
++# to be consistent with $KanaKanji $KanaKanhi, changed
++# from 300 to 400.
++# See also TestRuleStatus in intltest/rbbiapts.cpp
++$Katakana $ExFm*  $Katakana {400};
++
++# rule 13a/b
++
++$ALetterPlus   $ExFm* $ExtendNumLet {200};    #  (13a)
++$Hebrew_Letter $ExFm* $ExtendNumLet {200};    #  (13a)
++$Numeric       $ExFm* $ExtendNumLet {100};    #  (13a)
++$Katakana      $ExFm* $ExtendNumLet {400};    #  (13a)
++$ExtendNumLet  $ExFm* $ExtendNumLet {200};    #  (13a)
++
++$ExtendNumLet  $ExFm* $ALetterPlus  {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Hebrew_Letter {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Numeric      {100};    #  (13b)
++$ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
++
++# rules 15 - 17
++#    Pairs of Regional Indicators stay together.
++#    With incoming rule chaining disabled by ^, this rule will match exactly two of them.
++#    No other rule begins with a Regional_Indicator, so chaining cannot extend the match.
+ #
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $SufixLetter $Extend $Format];
++^$Regional_Indicator $ExFm* $Regional_Indicator;
+ 
+-#!.*;
+-! ($NonStarters* | \n \r) .;
++# special handling for CJK characters: chain for later dictionary segmentation
++$HangulSyllable $HangulSyllable {200};
++$KanaKanji $KanaKanji {400}; # different rule status if both kana and kanji found
+ 
++# Rule 999
++#     Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/edit_word.txt b/i18npool/source/breakiterator/data/edit_word.txt
+index 92b344c19d41..14fc221aa96e 100644
+--- i18npool/source/breakiterator/data/edit_word.txt
++++ i18npool/source/breakiterator/data/edit_word.txt
+@@ -1,142 +1,199 @@
+ #
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (C) 2002-2016, International Business Machines Corporation
++# and others. All Rights Reserved.
+ #
+-#   file:  edit_word.txt   
++# file:  word.txt
+ #
+-#   ICU Word Break Rules
++# ICU Word Break Rules
+ #      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
++#      These rules are based on UAX #29 Revision 34 for Unicode Version 12.0
+ #
++# Note:  Updates to word.txt will usually need to be merged into
++#        word_POSIX.txt also.
+ 
+-
+-
+-####################################################################################
++##############################################################################
+ #
+ #  Character class definitions from TR 29
+ #
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-$ALetter   = [[:Alphabetic:] [:name= NO-BREAK SPACE:] [:name= HEBREW PUNCTUATION GERESH:] 
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = MIDDLE DOT:]  [:name = HEBREW PUNCTUATION GERSHAYIM:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:]];  
+-              
+-$MidNum    = [[:LineBreak = Infix_Numeric:] - [:name = FULL STOP:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
++##############################################################################
++
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
++
++!!chain;
++!!quoted_literals_only;
++
+ 
+ #
+ #  Character Class Definitions.
+-#    The names are those from TR29.
+ #
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+ 
++$Han                = [:Han:];
+ 
++$CR                 = [\p{Word_Break = CR}];
++$LF                 = [\p{Word_Break = LF}];
++$Newline            = [\p{Word_Break = Newline}];
++$Extend             = [\p{Word_Break = Extend}-$Han];
++$ZWJ                = [\p{Word_Break = ZWJ}];
++$Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
++$Format             = [\p{Word_Break = Format}];
++$Katakana           = [\p{Word_Break = Katakana}];
++$Hebrew_Letter      = [\p{Word_Break = Hebrew_Letter}];
++$ALetter            = [\p{Word_Break = ALetter}];
++$Single_Quote       = [\p{Word_Break = Single_Quote}];
++$Double_Quote       = [\p{Word_Break = Double_Quote}];
++$MidLetter          = [\p{Word_Break = MidLetter}];
++$MidNum             = [\p{Word_Break = MidNum}];
++$Numeric            = [\p{Word_Break = Numeric}];
++$WSegSpace          = [\p{Word_Break = WSegSpace}];
++$Extended_Pict      = [\p{Extended_Pictographic}];
+ 
++### BEGIN CUSTOMIZATION
++### i#13494: For the purposes of editing, standalone punctuation should be treated as a word.
++### This change subtracts undesired characters from the above families
+ 
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
++# $MidNumLet          = [\p{Word_Break = MidNumLet}];
++$MidNumLet          = [\p{Word_Break = MidNumLet}-[:name= FULL STOP:]];
+ 
+-$Format    = [[:Cf:] - $TheZWSP];
++# $ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
++$ExtendNumLet       = [\p{Word_Break = ExtendNumLet}-[:name= LOW LINE:]];
+ 
++### END CUSTOMIZATION
+ 
++$Hiragana           = [:Hiragana:];
++$Ideographic        = [\p{Ideographic}];
+ 
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
+ 
++#   Dictionary character set, for triggering language-based break engines. Currently
++#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
++#   5.0 or later as the definition of Complex_Context was corrected to include all
++#   characters requiring dictionary break.
+ 
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
++$Control        = [\p{Grapheme_Cluster_Break = Control}];
++$HangulSyllable = [\uac00-\ud7a3];
++$ComplexContext = [:LineBreak = Complex_Context:];
++$KanaKanji      = [$Han $Hiragana $Katakana];
++$dictionaryCJK  = [$KanaKanji $HangulSyllable];
++$dictionary     = [$ComplexContext $dictionaryCJK];
+ 
++# TODO: check if handling of katakana in dictionary makes rules incorrect/void
+ 
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
++# leave CJK scripts out of ALetterPlus
++$ALetterPlus  = [$ALetter-$dictionaryCJK [$ComplexContext-$Extend-$Control]];
+ 
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* {200};
+ 
+-# Punctuations by themselves
+-[[:P:][:S:]-[:name = FULL STOP:]]*;
+-[[:name = FULL STOP:]]*;
++## -------------------------------------------------
+ 
++# Rule 3 - CR x LF
+ #
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
++$CR $LF;
+ 
++# Rule 3c   Do not break within emoji zwj sequences.
++#             ZWJ ×  \p{Extended_Pictographic}.  Precedes WB4, so no intervening Extend chars allowed.
+ #
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
++$ZWJ $Extended_Pict;
+ 
++# Rule 3d - Keep horizontal whitespace together.
+ #
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
++$WSegSpace $WSegSpace;
++
++# Rule 4 - ignore Format and Extend characters, except when they appear at the beginning
++#          of a region of Text.
++
++$ExFm  = [$Extend $Format $ZWJ];
++
++^$ExFm+;            # This rule fires only when there are format or extend characters at the
++                    # start of text, or immediately following another boundary. It groups them, in
++                    # the event there are more than one.
++
++[^$CR $LF $Newline $ExFm] $ExFm*;   # This rule rule attaches trailing format/extends to words,
++                                    # with no special rule status value.
++
++$Numeric $ExFm* {100};              # This group of rules also attach trailing format/extends, but
++$ALetterPlus $ExFm* {200};          # with rule status set based on the word's final base character.
++$HangulSyllable {200};
++$Hebrew_Letter $ExFm* {200};
++$Katakana $ExFm* {400};             # note:  these status values override those from rule 5
++$Hiragana $ExFm* {400};             #        by virtue of being numerically larger.
++$Ideographic $ExFm* {400};          #
+ 
+ #
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
++# rule 5
++#    Do not break between most letters.
+ #
++($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 6 and 7
++($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) {200};
++
++# rule 7a
++$Hebrew_Letter $ExFm* $Single_Quote {200};
++
++# rule 7b and 7c
++$Hebrew_Letter $ExFm* $Double_Quote $ExFm* $Hebrew_Letter;
++
++# rule 8
++
++$Numeric $ExFm* $Numeric;
++
++# rule 9
++
++($ALetterPlus | $Hebrew_Letter)  $ExFm* $Numeric;
+ 
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
++# rule 10
++
++$Numeric $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 11 and 12
++
++$Numeric $ExFm* ($MidNum | $MidNumLet | $Single_Quote) $ExFm* $Numeric;
++
++# rule 13
++# to be consistent with $KanaKanji $KanaKanhi, changed
++# from 300 to 400.
++# See also TestRuleStatus in intltest/rbbiapts.cpp
++$Katakana $ExFm*  $Katakana {400};
++
++# rule 13a/b
++
++$ALetterPlus   $ExFm* $ExtendNumLet {200};    #  (13a)
++$Hebrew_Letter $ExFm* $ExtendNumLet {200};    #  (13a)
++$Numeric       $ExFm* $ExtendNumLet {100};    #  (13a)
++$Katakana      $ExFm* $ExtendNumLet {400};    #  (13a)
++$ExtendNumLet  $ExFm* $ExtendNumLet {200};    #  (13a)
++
++$ExtendNumLet  $ExFm* $ALetterPlus  {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Hebrew_Letter {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Numeric      {100};    #  (13b)
++$ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
++
++# rules 15 - 17
++#    Pairs of Regional Indicators stay together.
++#    With incoming rule chaining disabled by ^, this rule will match exactly two of them.
++#    No other rule begins with a Regional_Indicator, so chaining cannot extend the match.
+ #
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $Extend $Format];
++^$Regional_Indicator $ExFm* $Regional_Indicator;
+ 
+-#!.*;
+-! ($NonStarters* | \n \r) .;
++# special handling for CJK characters: chain for later dictionary segmentation
++$HangulSyllable $HangulSyllable {200};
++$KanaKanji $KanaKanji {400}; # different rule status if both kana and kanji found
++
++### BEGIN CUSTOMIZATION
++### i#13494: For the purposes of editing, standalone punctuation should be treated as a word.
++### This customization does not replace any rules.
++[[:P:][:S:]-[:name = FULL STOP:]]*
++[[:name = FULL STOP:]]*;
++### END CUSTOMIZATION
+ 
++# Rule 999
++#     Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/edit_word_he.txt b/i18npool/source/breakiterator/data/edit_word_he.txt
+deleted file mode 100644
+index 0b5908814e08..000000000000
+--- i18npool/source/breakiterator/data/edit_word_he.txt
++++ /dev/null
+@@ -1,142 +0,0 @@
+-#
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
+-#
+-#   file:  edit_word.txt   
+-#
+-#   ICU Word Break Rules
+-#      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
+-#
+-
+-
+-
+-####################################################################################
+-#
+-#  Character class definitions from TR 29
+-#
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-$ALetter   = [[:Alphabetic:] [:name= NO-BREAK SPACE:] [:name= HEBREW PUNCTUATION GERESH:] 
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = QUOTATION MARK:] [:name = APOSTROPHE:] [:name = MIDDLE DOT:] [:name = HEBREW PUNCTUATION GERSHAYIM:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:]];  
+-              
+-$MidNum    = [[:LineBreak = Infix_Numeric:] - [:name = FULL STOP:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
+-
+-#
+-#  Character Class Definitions.
+-#    The names are those from TR29.
+-#
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+-
+-
+-
+-
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
+-
+-$Format    = [[:Cf:] - $TheZWSP];
+-
+-
+-
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
+-
+-
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
+-
+-
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
+-
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* {200};
+-
+-# Punctuations by themselves
+-[[:P:][:S:]-[:name = FULL STOP:]]*;
+-[[:name = FULL STOP:]]*;
+-
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
+-
+-#
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
+-
+-#
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
+-#
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
+-
+-#
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
+-#
+-
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
+-#
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $Extend $Format];
+-
+-#!.*;
+-! ($NonStarters* | \n \r) .;
+-
+diff --git a/i18npool/source/breakiterator/data/edit_word_hu.txt b/i18npool/source/breakiterator/data/edit_word_hu.txt
+index 4a08acab0029..389ad2bacc13 100644
+--- i18npool/source/breakiterator/data/edit_word_hu.txt
++++ i18npool/source/breakiterator/data/edit_word_hu.txt
+@@ -1,159 +1,215 @@
+ #
+-#   Copyright (C) 2002-2003, International Business Machines Corporation and others.
+-#       All Rights Reserved.
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (C) 2002-2016, International Business Machines Corporation
++# and others. All Rights Reserved.
+ #
+-#   file:  edit_word.txt   
++# file:  word.txt
+ #
+-#   ICU Word Break Rules
++# ICU Word Break Rules
+ #      See Unicode Standard Annex #29.
+-#      These rules are based on Version 4.0.0, dated 2003-04-17
++#      These rules are based on UAX #29 Revision 34 for Unicode Version 12.0
+ #
++# Note:  Updates to word.txt will usually need to be merged into
++#        word_POSIX.txt also.
+ 
+-
+-
+-####################################################################################
++##############################################################################
+ #
+ #  Character class definitions from TR 29
+ #
+-####################################################################################
+-$Katakana  = [[:Script = KATAKANA:] [:name = KATAKANA-HIRAGANA PROLONGED SOUND MARK:] 
+-                                   [:name = HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA VOICED SOUND MARK:]
+-                                   [:name = HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK:]];
+-
+-$Ideographic = [:Ideographic:];
+-$Hangul = [:Script = HANGUL:];
+-
+-$ALetter   = [[:Alphabetic:] [:name= NO-BREAK SPACE:] [:name= HEBREW PUNCTUATION GERESH:] 
+-                [:name = PERCENT SIGN:] [:name = PER MILLE SIGN:] [:name = PER TEN THOUSAND SIGN:]
+-                [:name = SECTION SIGN:] [:name = DEGREE SIGN:] [:name = EURO SIGN:]
+-                [:name = HYPHEN-MINUS:] [:name = EN DASH:] [:name = EM DASH:]
+-                [:name = DIGIT ZERO:]
+-                [:name = DIGIT ONE:]
+-                [:name = DIGIT TWO:]
+-                [:name = DIGIT THREE:]
+-                [:name = DIGIT FOUR:]
+-                [:name = DIGIT FIVE:]
+-                [:name = DIGIT SIX:]
+-                [:name = DIGIT SEVEN:]
+-                [:name = DIGIT EIGHT:]
+-                [:name = DIGIT NINE:]
+-                           - $Ideographic
+-                           - $Katakana
+-                           - $Hangul
+-                           - [:Script = Thai:]
+-                           - [:Script = Lao:]
+-                           - [:Script = Hiragana:]];
+-                           
+-$MidLetter = [[:name = APOSTROPHE:] [:name = MIDDLE DOT:]  [:name = HEBREW PUNCTUATION GERSHAYIM:]
+-              [:name = RIGHT SINGLE QUOTATION MARK:] [:name = HYPHENATION POINT:]  
+-              [:name = HYPHEN-MINUS:] [:name = EURO SIGN:] [:name = PERCENT SIGN:] 
+-              [:name = PER MILLE SIGN:] [:name = PER TEN THOUSAND SIGN:]
+-              [:name = EN DASH:] [:name = EM DASH:]
+-              [:name = PERCENT SIGN:] [:name = SECTION SIGN:] [:name = DEGREE SIGN:]];
+-              
+-$MidNum    = [[:LineBreak = Infix_Numeric:] - [:name = FULL STOP:]];
+-$Numeric   = [:LineBreak = Numeric:];
+-
+-
+-$TheZWSP = \u200b;
++##############################################################################
++
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
++
++!!chain;
++!!quoted_literals_only;
++
+ 
+ #
+ #  Character Class Definitions.
+-#    The names are those from TR29.
+ #
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Control    = [[[:Zl:] [:Zp:] [:Cc:] [:Cf:]] - $TheZWSP];
+-$Extend     = [[:Grapheme_Extend = TRUE:]]; 
+ 
++$Han                = [:Han:];
+ 
++$CR                 = [\p{Word_Break = CR}];
++$LF                 = [\p{Word_Break = LF}];
++$Newline            = [\p{Word_Break = Newline}];
++$Extend             = [\p{Word_Break = Extend}-$Han];
++$ZWJ                = [\p{Word_Break = ZWJ}];
++$Regional_Indicator = [\p{Word_Break = Regional_Indicator}];
++$Format             = [\p{Word_Break = Format}];
++$Katakana           = [\p{Word_Break = Katakana}];
++$Hebrew_Letter      = [\p{Word_Break = Hebrew_Letter}];
++$Single_Quote       = [\p{Word_Break = Single_Quote}];
++$Double_Quote       = [\p{Word_Break = Double_Quote}];
++$MidNum             = [\p{Word_Break = MidNum}];
++$Numeric            = [\p{Word_Break = Numeric}];
++$WSegSpace          = [\p{Word_Break = WSegSpace}];
++$Extended_Pict      = [\p{Extended_Pictographic}];
+ 
++### BEGIN CUSTOMIZATION
++### i#13494: For the purposes of editing, standalone punctuation should be treated as a word.
++### This change subtracts undesired characters from the above families
++### i#56347: BreakIterator patch for Hungarian
++### i#56348: Special chars in first pos not handled by spell checking for Hungarian
+ 
+-####################################################################################
+-#
+-#  Word Break Rules.    Definitions and Rules specific to word break begin Here. 
+-#
+-####################################################################################
++$Symbols_hu         = [[:name = PERCENT SIGN:]
++                       [:name = PER MILLE SIGN:]
++                       [:name = PER TEN THOUSAND SIGN:]
++                       [:name = SECTION SIGN:]
++                       [:name = DEGREE SIGN:]
++                       [:name = EURO SIGN:]
++                       [:name = HYPHEN-MINUS:]
++                       [:name = EN DASH:]
++                       [:name = EM DASH:]];
+ 
+-$Format    = [[:Cf:] - $TheZWSP];
++# $ALetter            = [\p{Word_Break = ALetter}];
++$ALetter            = [\p{Word_Break = ALetter} $Symbols_hu];
+ 
++# $MidLetter          = [\p{Word_Break = MidLetter}];
++$MidLetter          = [\p{Word_Break = MidLetter} $Symbols_hu];
+ 
++# $MidNumLet          = [\p{Word_Break = MidNumLet}];
++$MidNumLet          = [\p{Word_Break = MidNumLet}-[:name= FULL STOP:]];
+ 
+-# Rule 3:  Treat a grapheme cluster as if it were a single character.
+-#          Hangul Syllables are easier to deal with here than they are in Grapheme Clusters
+-#          because we don't need to find the boundaries between adjacent syllables -
+-#          they won't be word boundaries.
+-#
++# $ExtendNumLet       = [\p{Word_Break = ExtendNumLet}];
++$ExtendNumLet       = [\p{Word_Break = ExtendNumLet}-[:name= LOW LINE:]];
+ 
++### END CUSTOMIZATION
+ 
+-#
+-#  "Extended"  definitions.  Grapheme Cluster + Format Chars, treated like the base char.
+-#
+-$ALetterEx    = $ALetter   $Extend*; 
+-$NumericEx    = $Numeric   $Extend*;
+-$MidNumEx     = $MidNum    $Extend*;
+-$MidLetterEx  = $MidLetter $Extend*;
+-$KatakanaEx   = $Katakana  $Extend*;
+-$IdeographicEx= $Ideographic  $Extend*;
+-$HangulEx = $Hangul  $Extend*;
+-$FormatEx     = $Format    $Extend*;
++$Hiragana           = [:Hiragana:];
++$Ideographic        = [\p{Ideographic}];
+ 
+ 
+-#
+-#  Numbers.  Rules 8, 11, 12 form the TR.
+-#
+-$NumberSequence = $NumericEx ($FormatEx* $MidNumEx? $FormatEx* $NumericEx)*;
+-$NumberSequence {100};
++#   Dictionary character set, for triggering language-based break engines. Currently
++#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
++#   5.0 or later as the definition of Complex_Context was corrected to include all
++#   characters requiring dictionary break.
+ 
+-#
+-#  Words.  Alpha-numerics.  Rule 5, 6, 7, 9, 10
+-#     - must include at least one letter. 
+-#     - may include both letters and numbers.
+-#     - may include  MideLetter, MidNumber punctuation.
+-#
+-$LetterSequence = $ALetterEx ($FormatEx* $MidLetterEx? $FormatEx* $ALetterEx)*;     # rules #6, #7
+-($NumberSequence $FormatEx*)? $LetterSequence ($FormatEx* ($NumberSequence | $LetterSequence))* {200};
++$Control        = [\p{Grapheme_Cluster_Break = Control}];
++$HangulSyllable = [\uac00-\ud7a3];
++$ComplexContext = [:LineBreak = Complex_Context:];
++$KanaKanji      = [$Han $Hiragana $Katakana];
++$dictionaryCJK  = [$KanaKanji $HangulSyllable];
++$dictionary     = [$ComplexContext $dictionaryCJK];
+ 
+-# Punctuations by themselves
+-[[:P:][:S:]-[:name = FULL STOP:]]*;
+-[[:name = FULL STOP:]]*;
++# TODO: check if handling of katakana in dictionary makes rules incorrect/void
+ 
+-#
+-#  Do not break between Katakana.   Rule #13.
+-#
+-$KatakanaEx ($FormatEx* $KatakanaEx)* {300};
+-[:Hiragana:] $Extend* {300};
++# leave CJK scripts out of ALetterPlus
++$ALetterPlus  = [$ALetter-$dictionaryCJK [$ComplexContext-$Extend-$Control]];
+ 
++
++## -------------------------------------------------
++
++# Rule 3 - CR x LF
+ #
+-#  Ideographic Characters.  Stand by themselves as words.
+-#                           Separated from the "Everything Else" rule, below, only so that they
+-#                           can be tagged with a return value.   TODO:  is this what we want?
+-#
+-$IdeographicEx ($FormatEx* $IdeographicEx)* {400};
+-$HangulEx ($FormatEx* $HangulEx)* {400};
++$CR $LF;
+ 
++# Rule 3c   Do not break within emoji zwj sequences.
++#             ZWJ ×  \p{Extended_Pictographic}.  Precedes WB4, so no intervening Extend chars allowed.
+ #
+-#  Everything Else, with no tag.
+-#                   Non-Control chars combine with $Extend (combining) chars.
+-#                   Controls are do not.
++$ZWJ $Extended_Pict;
++
++# Rule 3d - Keep horizontal whitespace together.
+ #
+-[^$Control [:Ideographic:]] $Extend*;
+-$CR $LF;
++$WSegSpace $WSegSpace;
++
++# Rule 4 - ignore Format and Extend characters, except when they appear at the beginning
++#          of a region of Text.
++
++$ExFm  = [$Extend $Format $ZWJ];
++
++^$ExFm+;            # This rule fires only when there are format or extend characters at the
++                    # start of text, or immediately following another boundary. It groups them, in
++                    # the event there are more than one.
++
++[^$CR $LF $Newline $ExFm] $ExFm*;   # This rule rule attaches trailing format/extends to words,
++                                    # with no special rule status value.
++
++$Numeric $ExFm* {100};              # This group of rules also attach trailing format/extends, but
++$ALetterPlus $ExFm* {200};          # with rule status set based on the word's final base character.
++$HangulSyllable {200};
++$Hebrew_Letter $ExFm* {200};
++$Katakana $ExFm* {400};             # note:  these status values override those from rule 5
++$Hiragana $ExFm* {400};             #        by virtue of being numerically larger.
++$Ideographic $ExFm* {400};          #
+ 
+ #
+-#  Reverse Rules.   Back up over any of the chars that can group together.
+-#                   (Reverse rules do not need to be exact; they can back up  too far,
+-#                   but must back up at least enough, and must stop on a boundary.)
++# rule 5
++#    Do not break between most letters.
+ #
++($ALetterPlus | $Hebrew_Letter) $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 6 and 7
++($ALetterPlus | $Hebrew_Letter)  $ExFm* ($MidLetter | $MidNumLet | $Single_Quote) $ExFm* ($ALetterPlus | $Hebrew_Letter) {200};
++
++# rule 7a
++$Hebrew_Letter $ExFm* $Single_Quote {200};
++
++# rule 7b and 7c
++$Hebrew_Letter $ExFm* $Double_Quote $ExFm* $Hebrew_Letter;
++
++# rule 8
++
++$Numeric $ExFm* $Numeric;
++
++# rule 9
+ 
+-# NonStarters are the set of all characters that can appear at the 2nd - nth position of
+-#    a word.   (They may also be the first.)   The reverse rule skips over these, until it
+-#    reaches something that can only be the start (and probably only) char in a "word".
+-#    A space or punctuation meets the test.
++($ALetterPlus | $Hebrew_Letter)  $ExFm* $Numeric;
++
++# rule 10
++
++$Numeric $ExFm* ($ALetterPlus | $Hebrew_Letter);
++
++# rule 11 and 12
++
++$Numeric $ExFm* ($MidNum | $MidNumLet | $Single_Quote) $ExFm* $Numeric;
++
++# rule 13
++# to be consistent with $KanaKanji $KanaKanhi, changed
++# from 300 to 400.
++# See also TestRuleStatus in intltest/rbbiapts.cpp
++$Katakana $ExFm*  $Katakana {400};
++
++# rule 13a/b
++
++$ALetterPlus   $ExFm* $ExtendNumLet {200};    #  (13a)
++$Hebrew_Letter $ExFm* $ExtendNumLet {200};    #  (13a)
++$Numeric       $ExFm* $ExtendNumLet {100};    #  (13a)
++$Katakana      $ExFm* $ExtendNumLet {400};    #  (13a)
++$ExtendNumLet  $ExFm* $ExtendNumLet {200};    #  (13a)
++
++$ExtendNumLet  $ExFm* $ALetterPlus  {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Hebrew_Letter {200};    #  (13b)
++$ExtendNumLet  $ExFm* $Numeric      {100};    #  (13b)
++$ExtendNumLet  $ExFm* $Katakana     {400};    #  (13b)
++
++# rules 15 - 17
++#    Pairs of Regional Indicators stay together.
++#    With incoming rule chaining disabled by ^, this rule will match exactly two of them.
++#    No other rule begins with a Regional_Indicator, so chaining cannot extend the match.
+ #
+-$NonStarters = [$Numeric $ALetter $Katakana $Ideographic $Hangul [:P:] [:S:] $MidLetter $MidNum $Extend $Format];
++^$Regional_Indicator $ExFm* $Regional_Indicator;
+ 
+-#!.*;
+-! ($NonStarters* | \n \r) .;
++# special handling for CJK characters: chain for later dictionary segmentation
++$HangulSyllable $HangulSyllable {200};
++$KanaKanji $KanaKanji {400}; # different rule status if both kana and kanji found
++
++### BEGIN CUSTOMIZATION
++### i#13494: For the purposes of editing, standalone punctuation should be treated as a word.
++### This customization does not replace any rules.
++[[:P:][:S:]-[:name = FULL STOP:]]*
++[[:name = FULL STOP:]]*;
++### END CUSTOMIZATION
+ 
++# Rule 999
++#     Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/line.txt b/i18npool/source/breakiterator/data/line.txt
+index ff3f3eafc42e..46a618c63cae 100644
+--- i18npool/source/breakiterator/data/line.txt
++++ i18npool/source/breakiterator/data/line.txt
+@@ -1,176 +1,116 @@
+-# Copyright (c) 2002-2006  International Business Machines Corporation and
++# Copyright (C) 2016 and later: Unicode, Inc. and others.
++# License & terms of use: http://www.unicode.org/copyright.html
++# Copyright (c) 2002-2016  International Business Machines Corporation and
+ # others. All Rights Reserved.
+ #
+ #  file:  line.txt
+ #
+ #         Line Breaking Rules
+-#         Implement default line breaking as defined by Unicode Standard Annex #14 version 5.0.0
+-#         http://www.unicode.org/reports/tr14/
+-
+-
++#         Implement default line breaking as defined by
++#         Unicode Standard Annex #14 (https://www.unicode.org/reports/tr14/)
++#         for Unicode 14.0, with the following modification:
++#
++#         Boundaries between hyphens and following letters are suppressed when
++#         there is a boundary preceding the hyphen. See rule 20.9
++#
++#         This corresponds to CSS line-break=strict (BCP47 -u-lb-strict).
++#         It sets characters of class CJ to behave like NS.
+ 
+ #
+ #  Character Classes defined by TR 14.
+ #
+ 
+-!!chain;
+-!!LBCMNoChain;
++### BEGIN CUSTOMIZATION
++### This file contains LibreOffice-specific rule customizations.
++###
++### To aid future maintainability:
++### - The change location should be bracketed by comments of this form.
++### - The original rule should be commented out, and the modified rule placed alongside.
++### - By doing this, maintainers can more easily compare to an upstream baseline.
++###
++### END CUSTOMIZATION
+ 
+-
+-!!lookAheadHardBreak;
+-#
+-#  !!lookAheadHardBreak    Described here because it is (as yet) undocumented elsewhere
+-#                          and only used for the line break rules.
+-#
+-#           It is used in the implementation of the incredibly annoying rule LB 10
+-#           which says to treat any combining mark that is not attached to a base
+-#           character as if it were of class AL  (alphabetic).
+-#
+-#           The problem occurs in the reverse rules.
+-#
+-#           Consider a sequence like, with correct breaks as shown
+-#               LF  ID  CM  AL  AL
+-#                  ^       ^       ^
+-#           Then consider the sequence without the initial ID (ideographic)
+-#                 LF  CM  AL  AL
+-#                    ^           ^
+-#           Our CM, which in the first example was attached to the ideograph,
+-#           is now unattached, becomes an alpha, and joins in with the other
+-#           alphas.
+-#
+-#           When iterating forwards, these sequences do not present any problems
+-#           When iterating backwards, we need to look ahead when encountering
+-#           a CM to see whether it attaches to something further on or not.
+-#           (Look-ahead in a reverse rule is looking towards the start)
+-#
+-#           If the CM is unattached, we need to force a break.
+-#
+-#           !!lookAheadHardBreak forces the run time state machine to
+-#           stop immediately when a look ahead rule ( '/' operator) matches,
+-#           and set the match position to that of the look-ahead operator,
+-#           no matter what other rules may be in play at the time.
+-#
+-#           See rule LB 19 for an example.
+-#
++!!chain;
++!!quoted_literals_only;
+ 
+ $AI = [:LineBreak =  Ambiguous:];
+-$DG = \u00B0;
+-$AL = [[:LineBreak =  Alphabetic:] $DG];
++$AL = [:LineBreak =  Alphabetic:];
+ $BA = [:LineBreak =  Break_After:];
++$HH = [\u2010];     # \u2010 is HYPHEN, default line break is BA.
+ $BB = [:LineBreak =  Break_Before:];
+ $BK = [:LineBreak =  Mandatory_Break:];
+ $B2 = [:LineBreak =  Break_Both:];
+ $CB = [:LineBreak =  Contingent_Break:];
+ $CJ = [:LineBreak =  Conditional_Japanese_Starter:];
+-$CL = [[:LineBreak =  Close_Punctuation:] [:LineBreak = Close_Parenthesis:]]; # tdf#31271
+-$CM = [:LineBreak =  Combining_Mark:];
++$CL = [:LineBreak =  Close_Punctuation:];
++# $CM = [:LineBreak =  Combining_Mark:];
++$CP = [:LineBreak =  Close_Parenthesis:];
+ $CR = [:LineBreak =  Carriage_Return:];
++$EB = [:LineBreak =  EB:];
++$EM = [:LineBreak =  EM:];
+ $EX = [:LineBreak =  Exclamation:];
+ $GL = [:LineBreak =  Glue:];
+ $HL = [:LineBreak =  Hebrew_Letter:];
+ $HY = [:LineBreak =  Hyphen:];
+ $H2 = [:LineBreak =  H2:];
+ $H3 = [:LineBreak =  H3:];
+-$ID = [[:LineBreak =  Ideographic:] - [\ufe30]];
+-$IN = [:LineBreak =  Inseparable:];
+-$IS = [[:LineBreak =  Infix_Numeric:] [\ufe30]];
++$ID = [:LineBreak =  Ideographic:];
++$IN = [:LineBreak =  Inseperable:];
++$IS = [:LineBreak =  Infix_Numeric:];
+ $JL = [:LineBreak =  JL:];
+ $JV = [:LineBreak =  JV:];
+ $JT = [:LineBreak =  JT:];
+ $LF = [:LineBreak =  Line_Feed:];
+ $NL = [:LineBreak =  Next_Line:];
++# NS includes CJ for CSS strict line breaking.
+ $NS = [[:LineBreak =  Nonstarter:] $CJ];
+ $NU = [:LineBreak =  Numeric:];
+-$OP = [[:LineBreak =  Open_Punctuation:] - $DG];
++$OP = [:LineBreak =  Open_Punctuation:];
+ $PO = [:LineBreak =  Postfix_Numeric:];
+-$BS = \u005C;
+-$PR = [[:LineBreak =  Prefix_Numeric:] - $BS];
++$PR = [:LineBreak =  Prefix_Numeric:];
+ $QU = [:LineBreak =  Quotation:];
++$RI = [:LineBreak =  Regional_Indicator:];
+ $SA = [:LineBreak =  Complex_Context:];
+ $SG = [:LineBreak =  Surrogate:];
+ $SP = [:LineBreak =  Space:];
+-$SY = [[:LineBreak =  Break_Symbols:] $BS];
++$SY = [:LineBreak =  Break_Symbols:];
+ $WJ = [:LineBreak =  Word_Joiner:];
+ $XX = [:LineBreak =  Unknown:];
+ $ZW = [:LineBreak =  ZWSpace:];
++$ZWJ = [:LineBreak = ZWJ:];
++
++# OP30 and CP30 are variants of OP and CP that appear in-line in rule LB30 from UAX 14,
++# without a formal name. Because ICU rules require multiple uses of the expressions,
++# give them a single definition with a name
++
++$OP30 = [$OP - [\p{ea=F}\p{ea=W}\p{ea=H}]];
++$CP30 = [$CP - [\p{ea=F}\p{ea=W}\p{ea=H}]];
++
++$ExtPictUnassigned = [\p{Extended_Pictographic} & \p{Cn}];
++
++# By LB9, a ZWJ also behaves as a CM. Including it in the definition of CM avoids having to explicitly
++#         list it in the numerous rules that use CM.
++# By LB1, SA characters with general categor of Mn or Mc also resolve to CM.
++
++$CM = [[:LineBreak = Combining_Mark:] $ZWJ [$SA & [[:Mn:][:Mc:]]]];
++$CMX = [[$CM] - [$ZWJ]];
+ 
+ #   Dictionary character set, for triggering language-based break engines. Currently
+-#   limited to LineBreak=Complex_Context. Note that this set only works in Unicode
+-#   5.0 or later as the definition of Complex_Context was corrected to include all
+-#   characters requiring dictionary break.
++#   limited to LineBreak=Complex_Context (SA).
+ 
+-$dictionary = [:LineBreak = Complex_Context:];
++$dictionary = [$SA];
+ 
+ #
+ #  Rule LB1.  By default, treat AI  (characters with ambiguous east Asian width),
+-#                               SA  (South East Asian: Thai, Lao, Khmer)
++#                               SA  (Dictionary chars, excluding Mn and Mc)
+ #                               SG  (Unpaired Surrogates)
+ #                               XX  (Unknown, unassigned)
+ #                         as $AL  (Alphabetic)
+ #
+-$ALPlus = [$AL $AI $SA $SG $XX];
+-
+-#
+-#  Combining Marks.   X $CM*  behaves as if it were X.  Rule LB6.
+-#
+-$ALcm = $ALPlus $CM*;
+-$BAcm = $BA $CM*;
+-$BBcm = $BB $CM*;
+-$B2cm = $B2 $CM*;
+-$CLcm = $CL $CM*;
+-$EXcm = $EX $CM*;
+-$GLcm = $GL $CM*;
+-$HLcm = $HL $CM*;
+-$HYcm = $HY $CM*;
+-$H2cm = $H2 $CM*;
+-$H3cm = $H3 $CM*;
+-$IDcm = $ID $CM*;
+-$INcm = $IN $CM*;
+-$IScm = $IS $CM*;
+-$JLcm = $JL $CM*;
+-$JVcm = $JV $CM*;
+-$JTcm = $JT $CM*;
+-$NScm = $NS $CM*;
+-$NUcm = $NU $CM*;
+-$OPcm = $OP $CM*;
+-$POcm = $PO $CM*;
+-$PRcm = $PR $CM*;
+-$QUcm = $QU $CM*;
+-$SYcm = $SY $CM*;
+-$WJcm = $WJ $CM*;
++$ALPlus = [$AL $AI $SG $XX [$SA-[[:Mn:][:Mc:]]]];
+ 
+-## -------------------------------------------------
+ 
+-!!forward;
+-
+-#
+-#  Each class of character can stand by itself as an unbroken token, with trailing combining stuff
+-#
+-$ALPlus $CM+;
+-$BA $CM+;
+-$BB $CM+;
+-$B2 $CM+;
+-$CL $CM+;
+-$EX $CM+;
+-$GL $CM+;
+-$HL $CM+;
+-$HY $CM+;
+-$H2 $CM+;
+-$H3 $CM+;
+-$ID $CM+;
+-$IN $CM+;
+-$IS $CM+;
+-$JL $CM+;
+-$JV $CM+;
+-$JT $CM+;
+-$NS $CM+;
+-$NU $CM+;
+-$OP $CM+;
+-$PO $CM+;
+-$PR $CM+;
+-$QU $CM+;
+-$SY $CM+;
+-$WJ $CM+;
++## -------------------------------------------------
+ 
+ #
+ # CAN_CM  is the set of characters that may combine with CM combining chars.
+@@ -186,19 +126,15 @@ $CANT_CM = [ $SP $BK $CR $LF $NL $ZW $CM];       # Bases that can't take CMs
+ #
+ # AL_FOLLOW  set of chars that can unconditionally follow an AL
+ #            Needed in rules where stand-alone $CM s are treated as AL.
+-#            Chaining is disabled with CM because it causes other failures,
+-#            so for this one case we need to manually list out longer sequences.
+ #
+-$AL_FOLLOW_NOCM = [$BK $CR $LF $NL $ZW $SP];
+-$AL_FOLLOW_CM   = [$CL $EX $HL $IS $SY $WJ $GL $QU $BA $HY $NS $IN $NU $ALPlus $OP];
+-$AL_FOLLOW      = [$AL_FOLLOW_NOCM $AL_FOLLOW_CM];
++$AL_FOLLOW      = [$BK $CR $LF $NL $ZW $SP $CL $CP $EX $HL $IS $SY $WJ $GL $OP30 $QU $BA $HY $NS $IN $NU $PR $PO $ALPlus];
+ 
+ 
+ #
+ #  Rule LB 4, 5    Mandatory (Hard) breaks.
+ #
+ $LB4Breaks    = [$BK $CR $LF $NL];
+-$LB4NonBreaks = [^$BK $CR $LF $NL];
++$LB4NonBreaks = [^$BK $CR $LF $NL $CM];
+ $CR $LF {100};
+ 
+ #
+@@ -206,91 +142,124 @@ $CR $LF {100};
+ #
+ $LB4NonBreaks?  $LB4Breaks {100};    # LB 5  do not break before hard breaks.
+ $CAN_CM $CM*    $LB4Breaks {100};
+-$CM+            $LB4Breaks {100};
++^$CM+           $LB4Breaks {100};
+ 
+ # LB 7         x SP
+ #              x ZW
+ $LB4NonBreaks [$SP $ZW];
+ $CAN_CM $CM*  [$SP $ZW];
+-$CM+          [$SP $ZW];
++^$CM+         [$SP $ZW];
+ 
+ #
+ # LB 8         Break after zero width space
++#              ZW SP* ÷
+ #
+ $LB8Breaks    = [$LB4Breaks $ZW];
+ $LB8NonBreaks = [[$LB4NonBreaks] - [$ZW]];
++$ZW $SP* / [^$SP $ZW $LB4Breaks];
+ 
++# LB 8a        ZWJ x            Do not break Emoji ZWJ sequences.
++#
++$ZWJ [^$CM];
+ 
+-# LB 9     Combining marks.      X   $CM needs to behave like X, where X is not $SP, $BK $CR $LF $NL 
+-#                                $CM not covered by the above needs to behave like $AL   
++# LB 9     Combining marks.      X   $CM needs to behave like X, where X is not $SP, $BK $CR $LF $NL
++#                                $CM not covered by the above needs to behave like $AL
+ #                                See definition of $CAN_CM.
+ 
+ $CAN_CM $CM+;                   #  Stick together any combining sequences that don't match other rules.
+-$CM+;
++^$CM+;
+ 
+ #
+ # LB 11  Do not break before or after WORD JOINER & related characters.
+ #
+-$CAN_CM $CM*  $WJcm;
+-$LB8NonBreaks $WJcm;
+-$CM+          $WJcm;
++$CAN_CM $CM*  $WJ;
++$LB8NonBreaks $WJ;
++^$CM+         $WJ;
+ 
+-$WJcm [^$CAN_CM];
+-$WJcm $CAN_CM $CM*;
++$WJ $CM* .;
+ 
+ #
+-# LB 12  Do not break before or after NBSP and related characters.
++# LB 12  Do not break after NBSP and related characters.
++#         GL  x
+ #
+-#         (!SP) x GL
+-[$LB8NonBreaks-$SP] $CM* $GLcm;
+-$CM+               $GLcm;
++$GL $CM* .;
+ 
+-#         GL  x
+-$GLcm ($LB8Breaks | $SP);
+-$GLcm [$LB8NonBreaks-$SP] $CM*;     # Don't let a combining mark go onto $CR, $BK, etc.
+-                              #  TODO:  I don't think we need this rule.
+-                              #         All but $CM will chain off of preceding rule.
+-                              #         $GLcm will pick up the CM case by itself.
++#
++# LB 12a  Do not break before NBSP and related characters ...
++#            [^SP BA HY] x GL
++#
++[[$LB8NonBreaks] - [$SP $BA $HY]] $CM* $GL;
++^$CM+ $GL;
+ 
+ 
+ 
+ 
+-#
+-# LB 13   Don't break before ']' or '!' or ';' or '/', even after spaces.
++# LB 13   Don't break before ']' or '!' or '/', even after spaces.
+ #
+ $LB8NonBreaks $CL;
+ $CAN_CM $CM*  $CL;
+-$CM+          $CL;              # by rule 10, stand-alone CM behaves as AL
++^$CM+         $CL;              # by rule 10, stand-alone CM behaves as AL
++
++$LB8NonBreaks $CP;
++$CAN_CM $CM*  $CP;
++^$CM+         $CP;              # by rule 10, stand-alone CM behaves as AL
+ 
+ $LB8NonBreaks $EX;
+ $CAN_CM $CM*  $EX;
+-$CM+          $EX;              # by rule 10, stand-alone CM behaves as AL
+-
+-$LB8NonBreaks $IS;
+-$CAN_CM $CM*  $IS;
+-$CM+          $IS;              # by rule 10, stand-alone CM behaves as AL
++^$CM+         $EX;              # by rule 10, stand-alone CM behaves as AL
+ 
+ $LB8NonBreaks $SY;
+ $CAN_CM $CM*  $SY;
+-$CM+          $SY;              # by rule 10, stand-alone CM behaves as AL
++^$CM+         $SY;              # by rule 10, stand-alone CM behaves as AL
+ 
+ 
+ #
+-# LB 14  Do not break after OP, even after spaced
++# LB 14  Do not break after OP, even after spaces
++#        Note subtle interaction with "SP IS /" rules in LB14a.
++#        This rule consumes the SP, chaining happens on the IS, effectivley overriding the  SP IS rules,
++#        which is the desired behavior.
++#
++$OP $CM* $SP* .;
++
++$OP $CM* $SP+ $CM+ $AL_FOLLOW?;    # by rule 10, stand-alone CM behaves as AL
++                                   # by rule 8, CM following a SP is stand-alone.
++
++
++# LB 14a Force a break before start of a number with a leading decimal pt, e.g. " .23"
++#        Note: would be simpler to express as "$SP / $IS $CM* $NU;", but ICU rules have limitations.
++#        See issue ICU-20303
++
++
++$CanFollowIS = [$BK $CR $LF $NL $SP $ZW $WJ $GL $CL $CP $EX $IS $SY $QU $BA $HY $NS $ALPlus $HL $IN];
++$SP $IS           / [^ $CanFollowIS $NU $CM];
++$SP $IS $CM* $CMX / [^ $CanFollowIS $NU $CM];
++
+ #
+-$OPcm $SP* $CAN_CM $CM*;
+-$OPcm $SP* $CANT_CM;
++# LB 14b Do not break before numeric separators (IS), even after spaces.
++
++[$LB8NonBreaks - $SP] $IS;
++$SP $IS $CM* [$CanFollowIS {eof}];
++$SP $IS $CM* $ZWJ [^$CM $NU];
++
++$CAN_CM $CM*  $IS;
++^$CM+         $IS;              # by rule 10, stand-alone CM behaves as AL
+ 
+-$OPcm $SP+ $CM+ $AL_FOLLOW?;    # by rule 10, stand-alone CM behaves as AL
+ 
+ # LB 15
+-# $QUcm $SP* $OPcm;
++
++### BEGIN CUSTOMIZATION
++### i#83649: Allow line break between quote and opening punctuation.
++### This customization simply disables rule LB 15.
++###
++# $QU $CM* $SP* $OP;
++###
++### END CUSTOMIZATION
+ 
+ # LB 16
+-$CLcm $SP* $NScm;
++($CL | $CP) $CM* $SP* $NS;
+ 
+ # LB 17
+-$B2cm $SP* $B2cm;
++$B2 $CM* $SP* $B2;
+ 
+ #
+ # LB 18  Break after spaces.
+@@ -301,347 +270,134 @@ $LB18Breaks    = [$LB8Breaks $SP];
+ 
+ # LB 19
+ #         x QU
+-$LB18NonBreaks $CM* $QUcm;
+-$CM+                $QUcm;
++$LB18NonBreaks $CM* $QU;
++^$CM+               $QU;
+ 
+ #         QU  x
+-$QUcm .?;
+-$QUcm $LB18NonBreaks $CM*;    # Don't let a combining mark go onto $CR, $BK, etc.
+-                              #  TODO:  I don't think this rule is needed.
+-
++$QU $CM* .;
+ 
+ # LB 20
+ #        <break>  $CB
+ #        $CB   <break>
+-
++#
+ $LB20NonBreaks = [$LB18NonBreaks - $CB];
+ 
++# LB 20.09    Don't break between Hyphens and Letters when there is a break preceding the hyphen.
++#             Originally added as a Finnish tailoring, now promoted to default ICU behavior.
++#             Note: this is not default UAX-14 behaviour. See issue ICU-8151.
++#
++^($HY | $HH) $CM* $ALPlus;
++
+ # LB 21        x   (BA | HY | NS)
+ #           BB x
+ #
+-$LB20NonBreaks $CM* ($BAcm | $HYcm | $NScm); 
++$LB20NonBreaks $CM* ($BA | $HY | $NS);
+ 
+-$BBcm [^$CB];                                  #  $BB  x
+-$BBcm $LB20NonBreaks $CM*;
+ 
+-# LB 21a Don't break after Hebrew + Hyphen
+-#   HL (HY | BA) x
+-#  
+-$HLcm ($HYcm | $BAcm) [^$CB]?;
++^$CM+ ($BA | $HY | $NS);
+ 
+-# LB 22
+-($ALcm | $HLcm) $INcm;
+-$CM+     $INcm;     #  by rule 10, any otherwise unattached CM behaves as AL
+-$IDcm    $INcm;
+-$INcm    $INcm;
+-$NUcm    $INcm;
++$BB $CM* [^$CB];                                  #  $BB  x
++$BB $CM* $LB20NonBreaks;
+ 
+-
+-# $LB 23
+-$IDcm  $POcm;
+-$ALcm  $NUcm;       # includes $LB19
+-$HLcm  $NUcm;
+-$CM+   $NUcm;       # Rule 10, any otherwise unattached CM behaves as AL
+-$NUcm  $ALcm;
+-$NUcm  $HLcm;
+-
+-#
+-# LB 24
+-#
+-$PRcm $IDcm;
+-$ALcm $PRcm;
+-$PRcm ($ALcm | $HLcm);
+-$POcm ($ALcm | $HLcm);
+-
+-#
+-# LB 25   Numbers.
+-#
+-($PRcm | $POcm)? ($OPcm)? $NUcm ($NUcm | $SYcm | $IScm)* $CLcm? ($PRcm | $POcm)?;
+-
+-# LB 26  Do not break a Korean syllable
++# LB 21a Don't break after Hebrew + Hyphen
++#   HL (HY | BA) x
+ #
+-$JLcm ($JLcm | $JVcm | $H2cm | $H3cm);
+-($JVcm | $H2cm) ($JVcm | $JTcm);
+-($JTcm | $H3cm) $JTcm;
+-
+-# LB 27  Treat korean Syllable Block the same as ID  (don't break it)
+-($JLcm | $JVcm | $JTcm | $H2cm | $H3cm) $INcm;
+-($JLcm | $JVcm | $JTcm | $H2cm | $H3cm) $POcm;
+-$PRcm ($JLcm | $JVcm | $JTcm | $H2cm | $H3cm);
++$HL $CM* ($HY | $BA) $CM* [^$CB]?;
+ 
++# LB 21b (forward) Don't break between SY and HL
++# (break between HL and SY already disallowed by LB 13 above)
++$SY $CM* $HL;
+ 
+-# LB 28   Do not break between alphabetics
++# LB 22  Do not break before ellipses
+ #
+-($ALcm | $HLcm) ($ALcm | $HLcm);
+-$CM+ ($ALcm | $HLcm);      # The $CM+ is from rule 10, an unattached CM is treated as AL
++$LB20NonBreaks $CM*    $IN;
++^$CM+ $IN;
+ 
+-# LB 29
+-$IScm ($ALcm | $NUcm);
+ 
++# LB 23
+ #
+-# Rule 30   Do not break between letters, numbers or ordinary symbols
+-#           and opening or closing punctuation
+-#
+-($ALcm | $HLcm | $NUcm) $OPcm;
+-$CM+ $OPcm;
+-$CLcm ($ALcm | $HLcm | $NUcm);
++($ALPlus | $HL) $CM* $NU;
++^$CM+  $NU;       # Rule 10, any otherwise unattached CM behaves as AL
++$NU $CM* ($ALPlus | $HL);
+ 
++# LB 23a
+ #
+-#  Reverse Rules.
+-#
+-## -------------------------------------------------
++$PR $CM* ($ID | $EB | $EM);
++($ID | $EB | $EM) $CM*  $PO;
+ 
+-!!reverse;
+-
+-$CM+ $ALPlus;
+-$CM+ $BA;
+-$CM+ $BB;
+-$CM+ $B2;
+-$CM+ $CL;
+-$CM+ $EX;
+-$CM+ $GL;
+-$CM+ $HL;
+-$CM+ $HY;
+-$CM+ $H2;
+-$CM+ $H3;
+-$CM+ $ID;
+-$CM+ $IN;
+-$CM+ $IS;
+-$CM+ $JL;
+-$CM+ $JV;
+-$CM+ $JT;
+-$CM+ $NS;
+-$CM+ $NU;
+-$CM+ $OP;
+-$CM+ $PO;
+-$CM+ $PR;
+-$CM+ $QU;
+-$CM+ $SY;
+-$CM+ $WJ;
+-$CM+;
+-
+-
+-#
+-#  Sequences of the form  (shown forwards)
+-#      [CANT_CM]  <break>  [CM]  [whatever]
+-#  The CM needs to behave as an AL
+-#
+-$AL_FOLLOW $CM+ / (
+-          [$BK $CR $LF $NL $ZW {eof}] |
+-          $SP+ $CM+ $SP |
+-          $SP+ $CM* ([^$OP $CM $SP] | [$AL {eof}]));   # if LB 14 will match, need to suppress this break.
+-                                               #  LB14 says    OP SP* x .        
+-                                               #    becomes    OP SP* x AL
+-                                               #    becomes    OP SP* x CM+ AL_FOLLOW
+-                                               #
+-                                               # Further note:  the $AL in [$AL {eof}] is only to work around
+-                                               #                a rule compiler bug which complains about
+-                                               #                empty sets otherwise.
+-          
+-#
+-#  Sequences of the form  (shown forwards)
+-#      [CANT_CM]  <break> [CM]  <break>  [PR]
+-#  The CM needs to behave as an AL
+-#  This rule is concerned about getting the second of the two <breaks> in place.
+-#
+-
+-[$PR   ] / $CM+ [$BK $CR $LF $NL $ZW $SP {eof}];
+-
+-
+-
+-# LB 4, 5, 5
+-
+-$LB4Breaks [$LB4NonBreaks-$CM];
+-$LB4Breaks $CM+ $CAN_CM;
+-$LF $CR;
+-
+-
+-# LB 7         x SP
+-#              x ZW
+-[$SP $ZW] [$LB4NonBreaks-$CM];
+-[$SP $ZW] $CM+ $CAN_CM;
+ 
+-# LB 8 Break after zero width space
+-
+-
+-# LB 9,10  Combining marks.
+-#    X   $CM needs to behave like X, where X is not $SP or controls.
+-#    $CM not covered by the above needs to behave like $AL
+-# Stick together any combining sequences that don't match other rules.
+-$CM+ $CAN_CM;
+-
+-
+-# LB 11
+-$CM* $WJ $CM* $CAN_CM;
+-$CM* $WJ      [$LB8NonBreaks-$CM];
+-
+-     $CANT_CM $CM* $WJ;
+-$CM* $CAN_CM  $CM* $WJ;
+-
+-# LB 12
+-#         x GL
+ #
+-$CM* $GL $CM* [$LB8NonBreaks-$CM-$SP];
++# LB 24
++#
++($PR | $PO) $CM* ($ALPlus | $HL);
++($ALPlus | $HL) $CM* ($PR | $PO);
++^$CM+ ($PR | $PO);       # Rule 10, any otherwise unattached CM behaves as AL
+ 
+ #
+-#     GL  x
++# LB 25   Numbers.
+ #
+-$CANT_CM $CM* $GL;
+-$CM* $CAN_CM $CM* $GL;
++(($PR | $PO) $CM*)? (($OP | $HY) $CM*)? ($IS $CM*)? $NU ($CM* ($NU | $SY | $IS))*
++    ($CM* ($CL | $CP))? ($CM* ($PR | $PO))?;
+ 
++### BEGIN CUSTOMIZATION
++### i#83229: Allow line break after hyphen in number range context.
++### The default ICU rules treat number ranges (e.g. 100-199) as a single token. This change forces
++### a break opportunity after the embedded '-', but only if followed by another numeral.
++###
++### This customization does not replace any existing rule.
++### Maintainers: note that this rule should consist of two instances of the LB 25 numbers rule,
++### separated by a hyphen and an explicit break.
+ 
+-# LB 13
+-$CL $CM+ $CAN_CM;
+-$EX $CM+ $CAN_CM;
+-$IS $CM+ $CAN_CM;
+-$SY $CM+ $CAN_CM;
++((($PR | $PO) $CM*)? (($OP | $HY) $CM*)? ($IS $CM*)? $NU ($CM* ($NU | $SY | $IS))*
++    ($CM* ($CL | $CP))? ($CM* ($PR | $PO))?)
++    ($HY $CM*) /
++((($PR | $PO) $CM*)? (($OP | $HY) $CM*)? ($IS $CM*)? $NU ($CM* ($NU | $SY | $IS))*
++    ($CM* ($CL | $CP))? ($CM* ($PR | $PO))?);
+ 
+-$CL [$LB8NonBreaks-$CM];
+-$EX [$LB8NonBreaks-$CM];
+-$IS [$LB8NonBreaks-$CM];
+-$SY [$LB8NonBreaks-$CM];
++### END CUSTOMIZATION
+ 
+-# Rule 13 & 14 taken together for an edge case.
+-#   Match this, shown forward
+-#     OP SP+  ($CM+ behaving as $AL) (CL | EX | IS | IY)
+-#   This really wants to chain at the $CM+ (which is acting as an $AL)
+-#   except for $CM chaining being disabled.
+-[$CL $EX $IS $SY] $CM+ $SP+ $CM* $OP;  
++### TODO
++### ((PrefixNumeric | PostfixNumeric) CombMark*) ? ((OpenPunc | Hyphen) CombMark*)?
++###    (InfixNumeric CombMark*)? Numeric (CombMark* (Numeric | BreakSym | InfixNumeric))*
++###    (CombMark* (ClosePunc | CloseParen))? (CombMark* (PrefixNumeric | PostfixNumeric))?
+ 
+-# LB 14    OP SP* x
++# LB 26  Do not break a Korean syllable
+ #
+-$CM* $CAN_CM    $SP* $CM* $OP;
+-     $CANT_CM   $SP* $CM* $OP;
+-$AL_FOLLOW? $CM+  $SP $SP* $CM* $OP;     #  by LB 10, behaves like $AL_FOLLOW? $AL $SP* $CM* $OP
+-     
+-     $AL_FOLLOW_NOCM $CM+ $SP+ $CM* $OP;
+-$CM* $AL_FOLLOW_CM   $CM+ $SP+ $CM* $OP;
+-$SY $CM $SP+ $OP;   # TODO:  Experiment.  Remove.
+-
+-
+-
+-# LB 15
+-# $CM* $OP $SP* $CM* $QU;
+-
+-# LB 16
+-$CM* $NS $SP* $CM* $CL;
++$JL $CM* ($JL | $JV | $H2 | $H3);
++($JV | $H2) $CM* ($JV | $JT);
++($JT | $H3) $CM* $JT;
+ 
+-# LB 17
+-$CM* $B2 $SP* $CM* $B2;
+-
+-# LB 18  break after spaces
+-#        Nothing explicit needed here.
+-
+-
+-#
+-# LB 19
+-#
+-$CM* $QU $CM* $CAN_CM;                                #   . x QU
+-$CM* $QU      $LB18NonBreaks;
++# LB 27  Treat korean Syllable Block the same as ID  (don't break it)
++($JL | $JV | $JT | $H2 | $H3) $CM* $PO;
++$PR $CM* ($JL | $JV | $JT | $H2 | $H3);
+ 
+ 
+-$CM* $CAN_CM  $CM* $QU;                               #   QU x .
+-     $CANT_CM $CM* $QU;
+-     
+-#
+-#  LB 20  Break before and after CB.
+-#         nothing needed here.
++# LB 28   Do not break between alphabetics
+ #
+-
+-# LB 21
+-$CM* ($BA | $HY | $NS) $CM* [$LB20NonBreaks-$CM];     #  . x (BA | HY | NS)
+-
+-$CM* [$LB20NonBreaks-$CM] $CM* $BB;                   #  BB x .
+-[^$CB] $CM* $BB;                                      # 
+-
+-# LB21a
+-[^$CB] $CM* ($HY | $BA) $CM* $HL;
+-
+-# LB 22
+-$CM* $IN $CM* ($ALPlus | $HL);
+-$CM* $IN $CM* $ID;
+-$CM* $IN $CM* $IN;
+-$CM* $IN $CM* $NU;
+-
+-# LB 23
+-$CM* $PO $CM* $ID;
+-$CM* $NU $CM* ($ALPlus | $HL);
+-$CM* ($ALPlus | $HL) $CM* $NU;
+-
+-# LB 24
+-$CM* $ID $CM* $PR;
+-$CM* $PR $CM* $ALPlus;
+-$CM* ($ALPlus | $HL) $CM* $PR;
+-$CM* ($ALPlus | $HL) $CM* $PO;
+-
+-$CM* $ALPlus $CM* ($IS | $SY | $HY)+ / $SP;
+-$CM* $NU+ $CM* $HY+ / $SP;
+-
+-# LB 25
+-($CM* ($PR | $PO))? ($CM* $CL)? ($CM* ($NU | $IS | $SY))* $CM* $NU ($CM* ($OP))? ($CM* ($PR | $PO))?;
+-
+-# LB 26
+-$CM* ($H3 | $H2 | $JV | $JL) $CM* $JL;
+-$CM* ($JT | $JV) $CM* ($H2 | $JV);
+-$CM* $JT $CM* ($H3 | $JT);
+-
+-# LB 27
+-$CM* $IN $CM* ($H3 | $H2 | $JT | $JV | $JL);
+-$CM* $PO $CM* ($H3 | $H2 | $JT | $JV | $JL);
+-$CM* ($H3 | $H2 | $JT | $JV | $JL) $CM* $PR;
+-
+-# LB 28
+-$CM* ($ALPlus | $HL) $CM* ($ALPlus | $HL);
++($ALPlus | $HL) $CM* ($ALPlus | $HL);
++^$CM+ ($ALPlus | $HL);      # The $CM+ is from rule 10, an unattached CM is treated as AL
+ 
+ # LB 29
+-$CM* ($NU | $ALPlus) $CM* $IS+ [^$SP];
++$IS $CM* ($ALPlus | $HL);
+ 
+ # LB 30
+-$CM* $OP $CM* ($ALPlus | $HL | $NU);
+-$CM* ($ALPlus | $HL | $NU) $CM* ($CL | $SY)+ [^$SP];
+-
+-
+-## -------------------------------------------------
+-
+-!!safe_reverse;
+-
+-# LB 7
+-$CM+ [^$CM $BK $CR $LF $NL $ZW $SP];
+-$CM+ $SP / .;
+-
+-# LB 9
+-$SP+ $CM* $OP;
+-
+-# LB 10
+-$SP+ $CM* $QU;
+-
+-# LB 11
+-$SP+ $CM* $CL;
+-$SP+ $CM* $B2;
+-
+-# LB 21
+-$CM* ($HY | $BA) $CM* $HL;
+-
+-# LB 18
+-($CM* ($IS | $SY))+ $CM* $NU;
+-$CL $CM* ($NU | $IS | $SY);
+-
+-# For dictionary-based break
+-$dictionary $dictionary;
+-
+-## -------------------------------------------------
+-
+-!!safe_forward;
+-
+-# Skip forward over all character classes that are involved in
+-#   rules containing patterns with possibly more than one char
+-#   of context.
+-#
+-#  It might be slightly more efficient to have specific rules
+-#  instead of one generic one, but only if we could
+-#  turn off rule chaining.  We don't want to move more
+-#  than necessary.
+-#
+-[$CM $OP $QU $CL $B2 $PR $HY $BA $SP $dictionary]+ [^$CM $OP $QU $CL $B2 $PR $HY $BA $dictionary];
+-$dictionary $dictionary;
+-
++($ALPlus | $HL | $NU) $CM* $OP30;
++^$CM+ $OP30;         # The $CM+ is from rule 10, an unattached CM is treated as AL.
++$CP30 $CM* ($ALPlus | $HL | $NU);
++
++# LB 30a  Do not break between regional indicators. Break after pairs of them.
++#         Tricky interaction with LB8a: ZWJ x .   together with ZWJ acting like a CM.
++$RI $CM* $RI                 / [[^$BK $CR $LF $NL $SP $ZW $WJ $CL $CP $EX $IS $SY $GL $QU $BA $HY $NS $IN $CM]];
++$RI $CM* $RI $CM* [$CM-$ZWJ] / [[^$BK $CR $LF $NL $SP $ZW $WJ $CL $CP $EX $IS $SY $GL $QU $BA $HY $NS $IN $CM]];
++$RI $CM* $RI $CM* [$BK $CR $LF $NL $SP $ZW $WJ $CL $CP $EX $IS $SY $GL $QU $BA $HY $NS $IN $ZWJ {eof}];
++# note: the preceding rule includes {eof} rather than having the last [set] term qualified with '?'
++#       because of the chain-out behavior difference. The rule must chain out only from the [set characters],
++#       not from the preceding $RI or $CM, which it would be able to do if the set were optional.
++
++# LB30b Do not break between an emoji base (or potential emoji) and an emoji modifier.
++$EB $CM* $EM;
++$ExtPictUnassigned $CM* $EM;
++
++# LB 31 Break everywhere else.
++#       Match a single code point if no other rule applies.
++.;
+diff --git a/i18npool/source/breakiterator/data/sent.txt b/i18npool/source/breakiterator/data/sent.txt
+deleted file mode 100644
+index 7fada89e6278..000000000000
+--- i18npool/source/breakiterator/data/sent.txt
++++ /dev/null
+@@ -1,128 +0,0 @@
+-#
+-#   Copyright (C) 2002-2006, International Business Machines Corporation and others.
+-#       All Rights Reserved.
+-#
+-#   file:  sent.txt
+-#
+-#   ICU Sentence Break Rules
+-#      See Unicode Standard Annex #29.
+-#      These rules are based on SA 29 version 5.0.0
+-#      Includes post 5.0 changes to treat Japanese half width voicing marks
+-#        as Grapheme Extend.
+-#
+-
+-
+-$VoiceMarks   = [\uff9e\uff9f];
+-$Thai         = [:Script = Thai:];
+-
+-#
+-# Character categories as defined in TR 29
+-#
+-$Sep       = [\p{Sentence_Break = Sep}];
+-$Format    = [\p{Sentence_Break = Format}];
+-$Sp        = [\p{Sentence_Break = Sp}];
+-$Lower     = [\p{Sentence_Break = Lower}];
+-$Upper     = [\p{Sentence_Break = Upper}];
+-$OLetter   = [\p{Sentence_Break = OLetter}-$VoiceMarks];
+-$Numeric   = [\p{Sentence_Break = Numeric}];
+-$ATerm     = [\p{Sentence_Break = ATerm}];
+-$STerm     = [\p{Sentence_Break = STerm}];
+-$Close     = [\p{Sentence_Break = Close}];
+-
+-#
+-# Define extended forms of the character classes,
+-#   incorporate grapheme cluster + format chars.
+-#   Rules 4 and 5.  
+-
+-
+-$CR         = \u000d;
+-$LF         = \u000a;
+-$Extend     = [[:Grapheme_Extend = TRUE:]$VoiceMarks];
+-
+-$SpEx       = $Sp      ($Extend | $Format)*;
+-$LowerEx    = $Lower   ($Extend | $Format)*;
+-$UpperEx    = $Upper   ($Extend | $Format)*;
+-$OLetterEx  = $OLetter ($Extend | $Format)*;
+-$NumericEx  = $Numeric ($Extend | $Format)*;
+-$ATermEx    = $ATerm   ($Extend | $Format)*;
+-$STermEx    = $STerm   ($Extend | $Format)*;
+-$CloseEx    = $Close   ($Extend | $Format)*;
+-
+-
+-## -------------------------------------------------
+-
+-!!chain;
+-!!forward;
+-
+-# Rule 3 - break after separators.  Keep CR/LF together.
+-#
+-$CR $LF;
+-
+-$LettersEx = [$OLetter $Upper $Lower $Numeric $Close $STerm] ($Extend | $Format)*;
+-$LettersEx* $Thai $LettersEx* ($ATermEx | $SpEx)*;
+-
+-# Rule 4 - Break after $Sep.
+-# Rule 5 - Ignore $Format and $Extend
+-#
+-[^$Sep]? ($Extend | $Format)*;
+-
+-
+-# Rule 6
+-$ATermEx $NumericEx;
+-
+-# Rule 7
+-$UpperEx $ATermEx $UpperEx;
+-
+-#Rule 8
+-#  Note:  follows errata for Unicode 5.0 boundary rules.
+-$NotLettersEx = [^$OLetter $Upper $Lower $Sep $ATerm $STerm] ($Extend | $Format)*;
+-$ATermEx $CloseEx* $SpEx* $NotLettersEx* $Lower;
+-
+-# Rule 8a
+-($STermEx | $ATermEx) $CloseEx* $SpEx* ($STermEx | $ATermEx);
+-
+-#Rule 9, 10, 11
+-($STermEx | $ATermEx) $CloseEx* $SpEx* $Sep?;
+-
+-#Rule 12
+-[[^$STerm $ATerm $Close $Sp $Sep $Format $Extend $Thai]{bof}] ($Extend | $Format | $Close | $Sp)* [^$Thai];
+-[[^$STerm $ATerm $Close $Sp $Sep $Format $Extend]{bof}] ($Extend | $Format | $Close | $Sp)* ([$Sep{eof}] | $CR $LF){100};
+-
+-## -------------------------------------------------
+-
+-!!reverse;
+-
+-$SpEx_R       = ($Extend | $Format)* $Sp;
+-$ATermEx_R    = ($Extend | $Format)* $ATerm;
+-$STermEx_R    = ($Extend | $Format)* $STerm;
+-$CloseEx_R    = ($Extend | $Format)* $Close;
+-
+-#
+-#  Reverse rules.
+-#     For now, use the old style inexact reverse rules, which are easier
+-#     to write, but less efficient.
+-#     TODO:  exact reverse rules.  It appears that exact reverse rules
+-#            may require improving support for look-ahead breaks in the
+-#            builder.  Needs more investigation.
+-#
+-
+-[{bof}] (.? | $LF $CR) [^$Sep]* [$Sep {eof}] ($SpEx_R* $CloseEx_R* ($STermEx_R | $ATermEx_R))*;
+-#.*;
+-
+-# Explanation for this rule:
+-#
+-#    It needs to back over
+-#        The $Sep at which we probably begin
+-#        All of the non $Sep chars leading to the preceding $Sep
+-#        The preceding $Sep, which will be the second one that the rule matches.
+-#        Any immediately preceding STerm or ATerm sequences.  We need to see these
+-#              to get the correct rule status when moving forwards again.
+-#        
+-# [{bof}]           inhibit rule chaining.  Without this, rule would loop on itself and match
+-#                   the entire string.
+-#
+-# (.? | $LF $CR)    Match one $Sep instance.  Use .? rather than $Sep because position might be
+-#                   at the beginning of the string at this point, and we don't want to fail.
+-#                   Can only use {eof} once, and it is used later.
+-#
+-
+-- 
+2.39.2
+
