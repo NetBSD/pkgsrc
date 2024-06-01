@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3721 2024/06/01 15:17:36 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.3722 2024/06/01 16:46:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5883,3 +5883,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/oh-my-posh to 21.0.1 [pin 2024-06-01]
 	Updated shells/nushell to 0.94.1 [pin 2024-06-01]
 	Updated www/caddy to 2.8.1 [bsiegert 2024-06-01]
+	Updated net/gh to 2.50.0 [bsiegert 2024-06-01]
