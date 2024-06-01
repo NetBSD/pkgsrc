@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/06/01 14:03:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.36 2024/06/01 14:31:01 nikita Exp $
 
 DISTNAME=	gotosocial-0.15.0-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
@@ -74,6 +74,7 @@ SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 # on FreeBSD, the modernc.org/* packages do not work on arm64:
 # "imports modernc.org/libc/errno: build constraints exclude all Go files in /usr/ports/net-im/gotosocial/work/gotosocial-0.5.2/vendor/modernc.org/libc/errno"
 # BUG: does not build on Sun
+# to unblock: https://github.com/ncruces/go-sqlite3/issues/85
 ONLY_FOR_PLATFORM=	*-*-x86_64
 
 do-build:
