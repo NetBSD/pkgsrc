@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/04/05 19:14:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2024/06/01 14:03:00 bsiegert Exp $
 
 DISTNAME=	httpx-1.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
