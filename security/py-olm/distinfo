@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2023/11/30 06:16:15 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/06/01 17:34:00 tm Exp $
 
 BLAKE2s (python-olm-3.2.16.tar.gz) = 58792cb971a7c886bc267e9349cad60c8352210a4c38b22f17a241f411a1b8b9
 SHA512 (python-olm-3.2.16.tar.gz) = e8c763577fe87387e1c3559b35db17766fe3c20acd8ff59ec118c33f040f980f7a6afde40a9adf4d9626782c904644a577c60d16f31cf05f0fb698e4b6cbffcf
 Size (python-olm-3.2.16.tar.gz) = 2705522 bytes
+SHA1 (patch-libolm_tests_include_doctest.h) = c2855771dcf9139ad3923257f75129508ad95ae9
