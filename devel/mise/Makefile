@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2024/05/29 19:13:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2024/06/01 19:17:45 schmonz Exp $
 
-DISTNAME=		mise-2024.5.24
+DISTNAME=		mise-2024.5.28
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		schmonz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://mise.jdx.dev/
 COMMENT=		Polyglot tool version manager like asdf
 LICENSE=		mit
@@ -16,19 +16,6 @@ USE_TOOLS+=		pkg-config
 .include "cargo-depends.mk"
 
 AUTO_MKDIRS=		yes
-
-.PHONY: maintainer-mise-changelog
-MISE_CHANGELOG_VERSION?=${PKGVERSION_NOREV}
-maintainer-mise-changelog:
-	@fetch -q -o - ${MASTER_SITES}mise/releases/tag/v${MISE_CHANGELOG_VERSION} \
-	| html2text --ignore-links --ignore-emphasis - \
-	| awk '/^v${MISE_CHANGELOG_VERSION}/{flag=1} /^Assets /{flag=0} flag' \
-	| awk '/^This .* was /{flag=1} /^Learn about vigilant mode\.$$/{flag=0; next} !flag' \
-	| perl -pe 's/[^[:ascii:]]//g' \
-	| sed -e 's|#  |# |g' \
-		-e 's|^# v||' \
-		-e 's| by .* in .*$$||' \
-		-e 's|^  \*|*|g'
 
 post-install:
 	${TOUCH} ${DESTDIR}${PREFIX}/lib/mise/.disable-self-update
