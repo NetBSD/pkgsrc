@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/04/26 07:23:21 nat Exp $
+$NetBSD: distinfo,v 1.2 2024/06/01 20:04:03 nat Exp $
 
-BLAKE2s (tinyx-wscons-0.3.zip) = c4f0f0e022bb1640770aa2c322ce663b3ca116ec27fbe0222e8bf455c27af429
-SHA512 (tinyx-wscons-0.3.zip) = 0ba9873e7a9673ac721d3225568397d710362a726721c893180e2d6bd18ccec06e5da5fe12b2f339e7f40d68d91c3280347cfd9483c09b5e271fcd2646b856f0
-Size (tinyx-wscons-0.3.zip) = 1090288 bytes
+BLAKE2s (tinyx-wscons-0.4.zip) = a6803dd9865a57125d7f9093c5d1ab8c31ab6d38191669195715085094a460c0
+SHA512 (tinyx-wscons-0.4.zip) = bd65ddc62c44a65327ace7df3ba650f898e663596f05b42eed6dcbc47dba4d7f60d21df7f57ac3191ba460aebd0c5fc00e090e01d6955380d48ddf953da84f1e
+Size (tinyx-wscons-0.4.zip) = 1090472 bytes
