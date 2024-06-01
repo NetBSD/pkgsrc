@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3710 2024/06/01 14:10:25 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3711 2024/06/01 14:11:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5872,3 +5872,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/libreoffice to 24.2.3.2 [ryoon 2024-06-01]
 	Updated devel/ast-grep to 0.22.4 [pin 2024-06-01]
 	Updated devel/bacon to 2.18.2 [pin 2024-06-01]
+	Updated devel/cargo-about to 0.6.2 [pin 2024-06-01]
