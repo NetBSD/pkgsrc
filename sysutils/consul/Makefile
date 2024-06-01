@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2024/04/05 19:14:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.100 2024/06/01 14:03:02 bsiegert Exp $
 
 DISTNAME=	consul-1.2.3
-PKGREVISION=	60
+PKGREVISION=	61
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 

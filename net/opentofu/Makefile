@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/04/05 19:14:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/01 14:02:57 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	opentofu-1.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
 

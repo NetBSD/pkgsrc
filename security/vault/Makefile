@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2024/04/05 19:14:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.102 2024/06/01 14:03:01 bsiegert Exp $
 
 DISTNAME=	vault-1.6.6
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
