@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/05/07 11:39:33 nat Exp $
+# $NetBSD: Makefile,v 1.6 2024/06/01 20:04:03 nat Exp $
 
-VERSION=	0.3
+VERSION=	0.4
 GITHUB_PROJECT=	tinyx-wscons
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 
