@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3708 2024/06/01 01:32:36 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3709 2024/06/01 14:09:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5870,3 +5870,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/openjdk17 to 1.17.0.11.9 [ryoon 2024-05-31]
 	Updated lang/openjdk21 to 1.21.0.3.9 [ryoon 2024-05-31]
 	Updated misc/libreoffice to 24.2.3.2 [ryoon 2024-06-01]
+	Updated devel/ast-grep to 0.22.4 [pin 2024-06-01]
