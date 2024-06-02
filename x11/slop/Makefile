@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/06/02 14:28:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2024/06/02 14:30:01 ryoon Exp $
 
 DISTNAME=	slop-7.5
 PKGREVISION=	9
@@ -16,7 +16,6 @@ EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 FORCE_CXX_STD=	c++17
-USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
@@ -28,4 +27,5 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
