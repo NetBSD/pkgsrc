@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/29 16:35:07 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/06/02 14:33:25 ryoon Exp $
 
 DISTNAME=	maim-5.7.4
 PKGREVISION=	6
@@ -15,6 +15,7 @@ EXTRACT_USING=	bsdtar
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++17
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
