@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2022/08/31 14:51:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/02 15:23:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/CODEOWNERS
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -12,6 +13,7 @@ ${GEM_LIBDIR}/lib/http-cookie.rb
 ${GEM_LIBDIR}/lib/http/cookie.rb
 ${GEM_LIBDIR}/lib/http/cookie/ruby_compat.rb
 ${GEM_LIBDIR}/lib/http/cookie/scanner.rb
+${GEM_LIBDIR}/lib/http/cookie/uri_parser.rb
 ${GEM_LIBDIR}/lib/http/cookie/version.rb
 ${GEM_LIBDIR}/lib/http/cookie_jar.rb
 ${GEM_LIBDIR}/lib/http/cookie_jar/abstract_saver.rb
