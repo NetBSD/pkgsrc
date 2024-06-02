@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/08/31 14:51:50 taca Exp $
+$NetBSD: distinfo,v 1.8 2024/06/02 15:23:58 taca Exp $
 
-BLAKE2s (http-cookie-1.0.5.gem) = 6d5782448ed947025adef21ec774308414dc4480ee0f5738e0812c19b0d1842c
-SHA512 (http-cookie-1.0.5.gem) = d530d64b5c2fc3757a6de03384fe768317e24a523d4a4215f5bcc6b5bca9e7b94eeaad1e52fbb67548396b7b2ca7c9d8b68ea7b99109e24770fcf34c950469ef
-Size (http-cookie-1.0.5.gem) = 39424 bytes
+BLAKE2s (http-cookie-1.0.6.gem) = 1fb46e63807d9989940307d66efc879f3e614ee08590341fec3c9a50058ac12f
+SHA512 (http-cookie-1.0.6.gem) = 088949816b70c3eea5464b492cb067d1d1cea8608ba8ad791876b5a33cc57c95b036420e3e9872a40e35c84168a37ab6b4615a049ea98b04588000cdf594bc5f
+Size (http-cookie-1.0.6.gem) = 40448 bytes
