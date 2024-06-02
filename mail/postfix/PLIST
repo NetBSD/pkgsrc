@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2022/07/21 15:08:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/06/02 15:43:31 taca Exp $
 bin/mailq
 bin/newaliases
 lib/postfix/libpostfix-dns.so
@@ -74,6 +74,7 @@ man/man5/ldap_table.5
 man/man5/lmdb_table.5
 man/man5/master.5
 man/man5/memcache_table.5
+man/man5/mongodb_table.5
 man/man5/mysql_table.5
 man/man5/nisplus_table.5
 man/man5/pcre_table.5
@@ -146,6 +147,7 @@ share/doc/postfix/CONTENT_INSPECTION_README
 share/doc/postfix/DATABASE_README
 share/doc/postfix/DB_README
 share/doc/postfix/DEBUG_README
+share/doc/postfix/DEPRECATION_README
 share/doc/postfix/DSN_README
 share/doc/postfix/ETRN_README
 share/doc/postfix/FILTER_README
@@ -160,6 +162,7 @@ share/doc/postfix/MAILDROP_README
 share/doc/postfix/MAILLOG_README
 share/doc/postfix/MEMCACHE_README
 share/doc/postfix/MILTER_README
+share/doc/postfix/MONGODB_README
 share/doc/postfix/MULTI_INSTANCE_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
