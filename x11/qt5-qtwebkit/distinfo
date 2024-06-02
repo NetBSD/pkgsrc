@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2024/01/27 18:06:36 wiz Exp $
+$NetBSD: distinfo,v 1.33 2024/06/02 12:26:24 ryoon Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -19,7 +19,7 @@ SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 1e4b8
 SHA1 (patch-Source_WTF_wtf_Assertions.cpp) = 15b8ac40e49cfec78d46de634fd6a1edde2d2a96
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 7ffc086a21f645112ad10296571464a1e15b8b44
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 7dac41bf3e50944e49c3e3c29d482d2c3300665d
-SHA1 (patch-Source_WTF_wtf_Platform.h) = 73e8b07e8d7e718abe986a12b9f0b903dfcc4765
+SHA1 (patch-Source_WTF_wtf_Platform.h) = b1efac1a3c326033eb52b1eed456f84265b172f8
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = bfa570aa20e3508c77bbaebed051821a33f36209
 SHA1 (patch-Source_WebCore_css_makegrammar.pl) = 2f1977c925069243d76379ae6d065e850143b2e3
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = e8972f4b703a9ff45ce313609d2540f89064b4ff
