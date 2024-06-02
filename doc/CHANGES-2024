@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3728 2024/06/02 02:19:41 wen Exp $
+$NetBSD: CHANGES-2024,v 1.3729 2024/06/02 15:17:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5890,3 +5890,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Test-Inter to 1.11 [wen 2024-06-02]
 	Updated devel/p5-Test-HTTP-LocalServer to 0.76 [wen 2024-06-02]
 	Updated devel/p5-Test-Compile to 3.3.3 [wen 2024-06-02]
+	Updated databases/ruby-sequel to 5.81.0 [taca 2024-06-02]
