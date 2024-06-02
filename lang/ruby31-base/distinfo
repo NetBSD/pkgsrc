@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.13 2024/04/25 14:51:53 taca Exp $
+$NetBSD: distinfo,v 1.14 2024/06/02 15:51:51 taca Exp $
 
-BLAKE2s (ruby-3.1.5.tar.xz) = 2392b4d6ae449e5e34b0253abd8aa71f0065e2e0d0dedeb4c9b1e9982621e7cb
-SHA512 (ruby-3.1.5.tar.xz) = a9883f4d074825bb1f54ef3429a9a71341274bd2de1aa8ea32bce19b6b9c1bac5e5dc4c34a92b8e7caa73ba71d7ed7c546a6fec6f1fd3d8986974dce214f6d49
-Size (ruby-3.1.5.tar.xz) = 15293020 bytes
+BLAKE2s (ruby-3.1.6.tar.xz) = b600bf9a44abccd0505a513ac2b53e89ecc91c476eb01d8300e1b52722d19d03
+SHA512 (ruby-3.1.6.tar.xz) = a3159648706d6d11ce9613201141e884b3accc69bf928c756de8a8f2b71d219886e91435d30cf2c30e85af31f87801138e10106344766100f1b80662c7244652
+Size (ruby-3.1.6.tar.xz) = 15273916 bytes
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = 7bce8e1de07e3ff81cc984faef9ba12518557b7a
 SHA1 (patch-ext_openssl_openssl__missing.h) = 3f8d79736fd14806dfaf76e333eec63ff3ff5890
-SHA1 (patch-ext_stringio_stringio.c) = b771382484fdfc1b40b13b8dcb1a94e3f32a546e
 SHA1 (patch-include_ruby_internal_static__assert.h) = 7d5c3ae7ff674b9b34639924fcf08237164de9f8
 SHA1 (patch-lib_mkmf.rb) = 4a3cd18548dbdf43a13695d4e76f817c0347e335
 SHA1 (patch-lib_rdoc_encoding.rb) = 0e82d2942d9bfcb67dc7c994889d7bc5ec2ae85a
@@ -17,12 +16,8 @@ SHA1 (patch-lib_rubygems_dependency__installer.rb) = 1776508907f17547ffe93f637d6
 SHA1 (patch-lib_rubygems_install__update__options.rb) = 0cd0816e1cd7c84c1dab1e091787c4dc38d28273
 SHA1 (patch-lib_rubygems_installer.rb) = 1c94047a24362b3597dac7ea156982a09cb93234
 SHA1 (patch-lib_rubygems_platform.rb) = ea9d0972fb788799d7d8c07b223ac75cbab23158
-SHA1 (patch-lib_uri_rfc2396__parser.rb) = 2c48e781bdad2be2416655c4d81e438136d93f19
-SHA1 (patch-lib_uri_rfc3986__parser.rb) = 8b1bba9338a0e56325140baa1f45e4ee74830aec
-SHA1 (patch-lib_uri_version.rb) = 16ef6469b63b74032a91358cdc7fd70fb5bce87a
 SHA1 (patch-template_Makefile.in) = a4b94293de165e87021b79a0a7f683ba76e168d9
 SHA1 (patch-test_rubygems_test__gem.rb) = 32f7c7d7f8a024c045d78c2bce93944fc3113d04
-SHA1 (patch-test_stringio_test__stringio.rb) = 20ca6e512a99e176547d6599ac7dfc7b9db42c36
 SHA1 (patch-thread__pthread.c) = 7c1231933a2d6ce9d56891ab512371841697fbca
 SHA1 (patch-tool_ifchange) = 1814cd41f0b0a93b181799cb117bd1f57068cf33
 SHA1 (patch-tool_runruby.rb) = 5dd8a3bea5e9776f7521f85955dddd2127e4c4d0
