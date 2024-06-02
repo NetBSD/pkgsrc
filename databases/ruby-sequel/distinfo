@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.122 2024/05/05 16:29:35 taca Exp $
+$NetBSD: distinfo,v 1.123 2024/06/02 15:16:46 taca Exp $
 
-BLAKE2s (sequel-5.80.0.gem) = ff136997f04f4ca5ecb978b501856fc1d8779587b1227dca1a284541718fc7af
-SHA512 (sequel-5.80.0.gem) = f81a4ae412917e38834a5de8a8f70bbb0ab3298b611d4376efe157124c057bdc808c2e965a14c6aeb6943f494350b1fbecaf5900c24bca89ee58f819ae800cde
-Size (sequel-5.80.0.gem) = 842240 bytes
+BLAKE2s (sequel-5.81.0.gem) = 700c4264afb2b3bbad5eb8d70b3b61e43c99372b87037f3ea23bfa8b8f226912
+SHA512 (sequel-5.81.0.gem) = d87cf4a1048ee40bd03b562caa63b787589ecc2cfcc859d4dbf74e85c780671ac1dae9af3c0abe3d4d65a546219cd2bd6a76e2f74fec81788dac87240e5d3ee3
+Size (sequel-5.81.0.gem) = 844288 bytes

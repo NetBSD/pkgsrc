@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.119 2024/05/05 16:29:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.120 2024/06/02 15:16:46 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -107,6 +107,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.78.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.79.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.80.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.81.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
 ${GEM_LIBDIR}/doc/security.rdoc
@@ -293,6 +294,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref_refinement.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as_refinement.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/synchronize_sql.rb
+${GEM_LIBDIR}/lib/sequel/extensions/temporarily_release_connection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/transaction_connection_validator.rb
