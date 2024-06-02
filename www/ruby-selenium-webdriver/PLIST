@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/12/17 16:43:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/06/02 15:31:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -151,6 +151,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/ie/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/commands.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/locator_converter.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/capabilities.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/features.rb
