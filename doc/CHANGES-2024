@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3734 2024/06/02 15:29:56 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3735 2024/06/02 15:32:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5896,3 +5896,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-http-cookie to 1.0.6 [taca 2024-06-02]
 	Updated www/ruby-pygments.rb to 3.0.0 [taca 2024-06-02]
 	Updated www/ruby-rack-contrib to 2.5.0 [taca 2024-06-02]
+	Updated www/ruby-selenium-webdriver to 4.21.1 [taca 2024-06-02]
