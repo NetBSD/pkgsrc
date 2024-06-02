@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/05/29 16:32:24 adam Exp $
+# $NetBSD: Makefile,v 1.122 2024/06/02 12:35:38 ryoon Exp $
 
 VERSION=	2.3
 DISTNAME=	poedit-${VERSION}
@@ -14,6 +14,7 @@ LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++17
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config zip:run
 GNU_CONFIGURE=		yes
