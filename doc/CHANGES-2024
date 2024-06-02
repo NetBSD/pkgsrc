@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3737 2024/06/02 15:46:17 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3738 2024/06/02 15:54:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5906,3 +5906,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/postfix-pcre to 3.9.0 [taca 2024-06-02]
 	Updated mail/postfix-pgsql to 3.9.0 [taca 2024-06-02]
 	Updated mail/postfix-sqlite to 3.9.0 [taca 2024-06-02]
+	Updated lang/ruby31-base to 3.1.6 [taca 2024-06-02]
+	Updated lang/ruby31 to 3.1.6 [taca 2024-06-02]
