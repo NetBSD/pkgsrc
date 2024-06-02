@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2024/05/12 16:35:31 taca Exp $
+$NetBSD: distinfo,v 1.27 2024/06/02 15:31:49 taca Exp $
 
-BLAKE2s (selenium-webdriver-4.20.1.gem) = 51fd12ff5fd4316bed25e1478d4117c737bcf4c3530ab25473d68701b415d9c6
-SHA512 (selenium-webdriver-4.20.1.gem) = 7355a17be29bea67a62adc5f2a18a0b77cfbabd3fd346805417cbb3be9c7091645dcdc1921a9150f21f1ed2d2246828a47dfd96dc62b8f631c712e6fa5d049ec
-Size (selenium-webdriver-4.20.1.gem) = 8578560 bytes
+BLAKE2s (selenium-webdriver-4.21.1.gem) = 77c2f717d92a8d03711810fa53e6925a6d14cf271c28d374a8ce229ee7e48279
+SHA512 (selenium-webdriver-4.21.1.gem) = 6651c9e6691a4984af8bda3d60e0d0ed5ca575a8f729b50c2e7dd91269cd99af799e6b3786dc854b064441aa1277793397578610ee6af7dfe572bc26da861258
+Size (selenium-webdriver-4.21.1.gem) = 8511488 bytes
