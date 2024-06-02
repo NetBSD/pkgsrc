@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/29 16:32:41 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/06/02 12:28:01 ryoon Exp $
 
 DISTNAME=	liblcf-0.7.0
 PKGREVISION=	5
@@ -13,11 +13,8 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES+=	c c++
+FORCE_CXX_STD=	c++17
 USE_LIBTOOL=	yes
-
-# "We require now the C++ language standard C++14.
-# The lowest GCC compiler supporting this fully is GCC5"
-GCC_REQD+=	5
 
 # Expat in pkgsrc is new enough, however, the version checking fails.
 # Remove the version requirement.
