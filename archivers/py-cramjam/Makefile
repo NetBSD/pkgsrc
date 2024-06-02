@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/24 17:30:16 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/02 08:44:01 jperkin Exp $
 
 DISTNAME=	cramjam-2.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-memory-profiler-[0-9]*:../../devel/py-memory-profiler
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "cargo-depends.mk"
 
