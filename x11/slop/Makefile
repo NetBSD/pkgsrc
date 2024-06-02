@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/29 16:35:15 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/06/02 14:28:28 ryoon Exp $
 
 DISTNAME=	slop-7.5
 PKGREVISION=	9
@@ -15,6 +15,7 @@ EXTRACT_USING=	bsdtar
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++17
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
