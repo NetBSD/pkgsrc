@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/18 01:46:32 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/02 15:36:58 taca Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -74,5 +74,3 @@ ${GEM_LIBDIR}/lib/jirametrics/tree_organizer.rb
 ${GEM_LIBDIR}/lib/jirametrics/trend_line_calculator.rb
 ${GEM_LIBDIR}/lib/jirametrics/value_equality.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.2.0/plugins
-@pkgdir lib/ruby/gems/3.2.0/extensions

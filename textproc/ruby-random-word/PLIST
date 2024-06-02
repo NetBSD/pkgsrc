@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/18 01:40:13 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/02 15:36:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -15,5 +15,3 @@ ${GEM_LIBDIR}/lib/random_word.rb
 ${GEM_LIBDIR}/lib/random_word/version.rb
 ${GEM_LIBDIR}/random-word.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.2.0/plugins
-@pkgdir lib/ruby/gems/3.2.0/extensions
