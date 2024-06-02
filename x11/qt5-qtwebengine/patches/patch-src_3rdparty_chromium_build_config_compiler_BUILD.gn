@@ -1,6 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.3 2024/06/02 11:34:20 markd Exp $
 
---- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+use c++17 for icu75 - from ArchLinux.
+
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2023-05-05 08:39:51.000000000 +0000
 +++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
 @@ -241,7 +241,7 @@ config("compiler") {
      configs += [ "//build/config/win:compiler" ]
@@ -11,7 +13,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      configs += [ "//build/config/linux:compiler" ]
      if (is_chromeos) {
        configs += [ "//build/config/chromeos:compiler" ]
-@@ -385,7 +385,7 @@ config("compiler") {
+@@ -386,7 +386,7 @@ config("compiler") {
  
    # Linux/Android/Fuchsia common flags setup.
    # ---------------------------------
@@ -20,7 +22,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      asmflags += [ "-fPIC" ]
      cflags += [ "-fPIC" ]
      ldflags += [ "-fPIC" ]
-@@ -407,7 +407,7 @@ config("compiler") {
+@@ -408,7 +408,7 @@ config("compiler") {
  
      # Compiler instrumentation can introduce dependencies in DSOs to symbols in
      # the executable they are loaded into, so they are unresolved at link-time.
@@ -29,7 +31,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
        ldflags += [
          "-Wl,-z,defs",
          "-Wl,--as-needed",
-@@ -458,7 +458,7 @@ config("compiler") {
+@@ -459,7 +459,7 @@ config("compiler") {
      ldflags += [ "-Wl,--icf=all" ]
    }
  
@@ -38,7 +40,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      cflags += [ "-pthread" ]
      # Do not use the -pthread ldflag here since it becomes a no-op
      # when using -nodefaultlibs, which would cause an unused argument
-@@ -498,7 +498,7 @@ config("compiler") {
+@@ -499,7 +499,7 @@ config("compiler") {
      ldflags += [ "-Wl,-z,keep-text-section-prefix" ]
    }
  
@@ -47,7 +49,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      cflags += [ "-fcrash-diagnostics-dir=" + clang_diagnostic_dir ]
  
      cflags += [
-@@ -531,7 +531,7 @@ config("compiler") {
+@@ -532,7 +532,7 @@ config("compiler") {
    # C11/C++11 compiler flags setup.
    # ---------------------------
    if (is_linux || is_chromeos || is_android || (is_nacl && is_clang) ||
@@ -56,7 +58,16 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      if (target_os == "android") {
        cxx11_override = use_cxx11_on_android
      } else {
-@@ -1148,7 +1148,7 @@ config("compiler_deterministic") {
+@@ -566,7 +566,7 @@ config("compiler") {
+       # Override Chromium's default for projects that wish to stay on C++11.
+       cflags_cc += [ "-std=${standard_prefix}++11" ]
+     } else {
+-      cflags_cc += [ "-std=${standard_prefix}++14" ]
++      cflags_cc += [ "-std=${standard_prefix}++17" ]
+     }
+   } else if (!is_win && !is_nacl) {
+     if (target_os == "android") {
+@@ -1149,7 +1149,7 @@ config("compiler_deterministic") {
        "-Xclang",
        ".",
      ]
@@ -65,7 +76,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
        # We don't use clang -cc1as on Windows (yet? https://crbug.com/762167)
        asmflags = [ "-Wa,-fdebug-compilation-dir,." ]
      }
-@@ -1253,7 +1253,7 @@ config("runtime_library") {
+@@ -1254,7 +1254,7 @@ config("runtime_library") {
    # smaller.
    if (is_win) {
      configs += [ "//build/config/win:runtime_library" ]
@@ -74,7 +85,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      configs += [ "//build/config/linux:runtime_library" ]
    } else if (is_ios) {
      configs += [ "//build/config/ios:runtime_library" ]
-@@ -1550,7 +1550,7 @@ config("default_warnings") {
+@@ -1551,7 +1551,7 @@ config("default_warnings") {
          cflags += [ "-Wno-nonportable-include-path" ]
        }
  
@@ -83,7 +94,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
          # Flags NaCl (Clang 3.7) and Xcode 9.2 (Clang clang-900.0.39.2) do not
          # recognize.
          cflags += [
-@@ -1802,7 +1802,7 @@ config("thin_archive") {
+@@ -1803,7 +1803,7 @@ config("thin_archive") {
    # Mac and iOS use the mac-specific "libtool" command, not ar, which doesn't
    # have a "thin archive" mode (it does accept -T, but it means truncating
    # archive names to 16 characters, which is not what we want).
@@ -92,7 +103,7 @@ $NetBSD: patch-src_3rdparty_chromium_build_config_compiler_BUILD.gn,v 1.2 2022/0
      arflags = [ "-T" ]
    } else if (is_win && use_lld) {
      arflags = [ "/llvmlibthin" ]
-@@ -2385,7 +2385,7 @@ config("symbols") {
+@@ -2386,7 +2386,7 @@ config("symbols") {
      # DWARF info may be corrupt; offsets in a range list entry are in different
      # sections" there.  Maybe just a bug in nacl_switch_32.S.
      if (!is_apple && !is_nacl && current_cpu != "x86" &&
