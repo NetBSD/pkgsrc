@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.279 2024/06/02 15:51:50 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.280 2024/06/02 15:57:58 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -215,7 +215,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 # current supported Ruby's version
 RUBY31_VERSION=		3.1.6
 RUBY32_VERSION=		3.2.4
-RUBY33_VERSION=		3.3.1
+RUBY33_VERSION=		3.3.2
 
 # current API compatible version; used for version of shared library
 RUBY31_API_VERSION=	3.1.0
@@ -491,7 +491,7 @@ RUBY_IO_CONSOLE_VER=		0.7.1
 RUBY_IO_NONBLOCK_VER=		0.3.0
 RUBY_IO_WAIT_VER=		0.3.1
 RUBY_IPADDR_VER=		1.2.6
-RUBY_IRB_VER=			1.11.0
+RUBY_IRB_VER=			1.13.1
 RUBY_JSON_VER=			2.7.1
 RUBY_LOGGER_VER=		1.6.0
 RUBY_MUTEX_M_VER=		0.2.0
@@ -512,7 +512,7 @@ RUBY_PSTORE_VER=		0.1.3
 RUBY_PSYCH_VER=			5.1.2
 RUBY_RDOC_VER=			6.6.3.1
 RUBY_READLINE_VER=		0.0.4
-RUBY_RELINE_VER=		0.4.1
+RUBY_RELINE_VER=		0.5.7
 RUBY_RESOLV_REPLACE_VER=	0.1.1
 RUBY_RESOLV_VER=		0.3.0
 RUBY_RINDA_VER=			0.2.0
@@ -534,7 +534,7 @@ RUBY_UN_VER=			0.3.0
 RUBY_URI_VER=			0.13.0
 RUBY_WEAKREF_VER=		0.1.3
 RUBY_YAML_VER=			0.3.0
-RUBY_ZLIB_VER=			3.1.0
+RUBY_ZLIB_VER=			3.1.1
 
 # bundled gems
 RUBY_DEBUG_VER=			1.9.1
