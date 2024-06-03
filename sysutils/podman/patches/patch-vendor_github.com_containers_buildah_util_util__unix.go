@@ -1,6 +1,7 @@
-$NetBSD: patch-vendor_github.com_containers_buildah_util_util__unix.go,v 1.2 2023/02/14 00:33:13 tnn Exp $
+$NetBSD: patch-vendor_github.com_containers_buildah_util_util__unix.go,v 1.3 2024/06/03 02:07:44 maya Exp $
 
 Add netbsd support (vendor code)
+https://github.com/containers/buildah/pull/5559
 
 --- vendor/github.com/containers/buildah/util/util_unix.go.orig	2023-02-08 19:03:18.000000000 +0000
 +++ vendor/github.com/containers/buildah/util/util_unix.go
