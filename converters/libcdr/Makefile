@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/05/29 16:31:37 adam Exp $
+# $NetBSD: Makefile,v 1.65 2024/06/03 16:46:07 adam Exp $
 
 DISTNAME=	libcdr-0.1.7
 PKGREVISION=	13
@@ -11,6 +11,7 @@ HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libcdr
 COMMENT=	Corel Draw file format importer library
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
+FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
