@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/05/29 16:32:28 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/06/03 14:39:34 ryoon Exp $
 #
 
 DISTNAME=	fuse-darling-dmg-1.0.4.20210411
@@ -14,6 +14,7 @@ COMMENT=	FUSE module for .dmg files (containing an HFS+ filesystem)
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++17
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/cmake/build.mk"
