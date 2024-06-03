@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:18:39 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/06/03 07:47:27 adam Exp $
 
-BLAKE2s (lupa-1.9.tar.gz) = 79758ddfd29dfa35de38edf013b58298197aaac34c4c6423ac921e73d3a6859b
-SHA512 (lupa-1.9.tar.gz) = 4ea8d0ebe7f6481bf9ef4a49d5e30f8baf0ce12c9afb793526858808aea44eb27044ad5c2b5c9532e1ea2220a4eb9b52ce4debb2f7cb2bf53b26abee81541916
-Size (lupa-1.9.tar.gz) = 1014812 bytes
+BLAKE2s (lupa-2.2.tar.gz) = ce2888d4b3e57983e52051e73116cc4c4cb6d29b74514709a6025ab46af9a944
+SHA512 (lupa-2.2.tar.gz) = 98dc4b1fcb7928b915d5f5f8fbcf1b235c21c61dc16ba9db3e4d21a36594c63f8b2c19e7fe9953ce4f32afb5685944c575938ae1452ab6e882ad7ce96ab10e1f
+Size (lupa-2.2.tar.gz) = 7147957 bytes
