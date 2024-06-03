@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/05/29 16:31:43 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/06/03 14:33:41 ryoon Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
-#   c++14
 # and further exists to support net/unifi.
 DISTNAME=	mongodb-src-r3.4.24
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -23,7 +22,7 @@ EXTRACT_USING=	bsdtar
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++14
+FORCE_CXX_STD+=	c++17
 
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--dbg=off # on: argument parsing problem
