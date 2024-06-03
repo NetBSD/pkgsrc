@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3746 2024/06/03 07:28:59 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3747 2024/06/03 07:49:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5916,3 +5916,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/flawz to 0.2.1 [pin 2024-06-03]
 	Updated devel/garden to 1.6.0 [pin 2024-06-03]
 	Updated devel/ast-grep to 0.22.5 [pin 2024-06-03]
+	Updated devel/py-lupa to 2.2 [adam 2024-06-03]
+	Updated security/py-certifi to 2024.6.2 [adam 2024-06-03]
