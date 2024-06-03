@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2024/05/29 16:34:41 adam Exp $
+# $NetBSD: Makefile,v 1.56 2024/06/03 13:44:14 ryoon Exp $
 
 ST_VERSION=	2.28
 PKGNAME=	split-thai-${ST_VERSION}
@@ -20,9 +20,8 @@ SITES.split-thai-${ST_VERSION}.tgz=	${MASTER_SITE_LOCAL}
 SITES.thaidict-${GITHUB_ICU_TAG}.txt=	-${MASTER_SITE_GITHUB:=unicode-org/}/icu/raw/${GITHUB_ICU_TAG}/icu4c/source/data/brkitr/dictionaries/thaidict.txt
 SITES.th_TH-${LIBREOFFICE_VERSION}.dic=	-${LIBREOFFICE_SITE}
 
-# darwin needs 11 to compile icu program
 USE_LANGUAGES=		c++
-FORCE_CXX_STD=		c++11
+FORCE_CXX_STD=		c++17
 
 USE_TOOLS=	pkg-config mkdir cp sh:run env awk cat sort uniq grep wc echo
 USE_TOOLS+=	perl:run
