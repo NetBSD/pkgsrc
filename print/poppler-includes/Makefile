@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/11/15 09:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/06/03 12:22:35 jperkin Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -39,5 +39,8 @@ do-install:
 
 BUILDLINK_DEPMETHOD.fontconfig= build
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
