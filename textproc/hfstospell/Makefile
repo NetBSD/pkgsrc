@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/05/29 16:34:35 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/06/03 13:29:31 ryoon Exp $
 
 DISTNAME=	hfstospell-0.5.4
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config autoreconf autoconf automake aclocal
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-FORCE_CXX_STD=	c++14
+FORCE_CXX_STD=	c++17
 
 PKGCONFIG_OVERRIDE+=	hfstospell.pc.in
 
