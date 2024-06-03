@@ -1,24 +1,12 @@
-$NetBSD: patch-pkg_machine_qemu_machine.go,v 1.3 2023/02/14 00:33:13 tnn Exp $
+$NetBSD: patch-pkg_machine_qemu_machine.go,v 1.4 2024/06/03 02:07:44 maya Exp $
 
-Disable the virtfs volume driver by default.
-Doesn't work yet on NetBSD.
+Add NetBSD support
 
---- pkg/machine/qemu/machine.go.orig	2023-02-08 19:03:18.000000000 +0000
+--- pkg/machine/qemu/machine.go.orig	2024-05-29 00:08:32.713658134 +0000
 +++ pkg/machine/qemu/machine.go
-@@ -46,6 +46,7 @@ func GetVirtualizationProvider() machine
+@@ -1,4 +1,4 @@
+-//go:build linux || freebsd
++//go:build linux || freebsd || netbsd
  
- const (
- 	VolumeTypeVirtfs     = "virtfs"
-+	VolumeTypeNone       = "none"
- 	MountType9p          = "9p"
- 	dockerSock           = "/var/run/docker.sock"
- 	dockerConnectTimeout = 5 * time.Second
-@@ -291,6 +292,8 @@ func (v *MachineVM) Init(opts machine.In
- 	switch opts.VolumeDriver {
- 	case "virtfs":
- 		volumeType = VolumeTypeVirtfs
-+	case "none":
-+		volumeType = VolumeTypeNone
- 	case "": // default driver
- 		volumeType = VolumeTypeVirtfs
- 	default:
+ package qemu
+ 
