@@ -1,8 +1,8 @@
-$NetBSD: patch-pkg_machine_qemu_options__netbsd__arm64.go,v 1.1 2023/02/20 15:35:46 tnn Exp $
+$NetBSD: patch-pkg_machine_qemu_options__netbsd__arm64.go,v 1.2 2024/06/03 02:07:44 maya Exp $
 
 NetBSD support.
 
---- pkg/machine/qemu/options_netbsd_arm64.go.orig	2023-02-20 15:25:44.049225824 +0000
+--- pkg/machine/qemu/options_netbsd_arm64.go.orig	2024-05-28 23:58:18.721596493 +0000
 +++ pkg/machine/qemu/options_netbsd_arm64.go
 @@ -0,0 +1,50 @@
 +package qemu
@@ -17,7 +17,7 @@ NetBSD support.
 +	QemuCommand = "qemu-system-aarch64"
 +)
 +
-+func (v *MachineVM) addArchOptions() []string {
++func (v *QEMUStubber) addArchOptions(_ *setNewMachineCMDOpts) []string {
 +	ovmfDir := getOvmfDir(v.ImagePath.GetPath(), v.Name)
 +	opts := []string{
 +		"-accel", "tcg",
@@ -28,13 +28,13 @@ NetBSD support.
 +	return opts
 +}
 +
-+func (v *MachineVM) prepare() error {
++func (v *QEMUStubber) prepare() error {
 +	ovmfDir := getOvmfDir(v.ImagePath.GetPath(), v.Name)
 +	cmd := []string{"/bin/dd", "if=/dev/zero", "conv=sync", "bs=1m", "count=64", "of=" + ovmfDir}
 +	return exec.Command(cmd[0], cmd[1:]...).Run()
 +}
 +
-+func (v *MachineVM) archRemovalFiles() []string {
++func (v *QEMUStubber) archRemovalFiles() []string {
 +	ovmDir := getOvmfDir(v.ImagePath.GetPath(), v.Name)
 +	return []string{ovmDir}
 +}
