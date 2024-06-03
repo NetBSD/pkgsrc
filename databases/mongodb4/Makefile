@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/05/29 16:31:44 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/06/03 14:27:34 ryoon Exp $
 
 DISTNAME=	mongodb-src-r4.4.28
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -40,7 +40,7 @@ SCONS_BUILD_ARGS+=	--release
 SCONS_BUILD_ARGS+=	--runtime-hardening=off # on: does not produce executables
 #SCONS_BUILD_ARGS+=	--use-system-abseil-cpp
 #SCONS_BUILD_ARGS+=	--use-system-asio
-SCONS_BUILD_ARGS+=	--use-system-boost
+#SCONS_BUILD_ARGS+=	--use-system-boost
 SCONS_BUILD_ARGS+=	--use-system-icu
 SCONS_BUILD_ARGS+=	--use-system-mongo-c
 SCONS_BUILD_ARGS+=	--use-system-pcre
@@ -52,7 +52,7 @@ SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 SCONS_BUILD_ARGS+=	--modules='' # avoid enterprise build
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,7 +61,7 @@ INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
 
 # needed for linking against boost_log, otherwise some symbols are not found
-SCONS_BUILD_ARGS+=	CPPDEFINES=-DBOOST_LOG_DYN_LINK=1
+#SCONS_BUILD_ARGS+=	CPPDEFINES=-DBOOST_LOG_DYN_LINK=1
 SCONS_BUILD_ARGS+=	CC=${CC:Q}
 SCONS_BUILD_ARGS+=	CXX=${CXX:Q}
 SCONS_BUILD_ARGS+=	CFLAGS=${CFLAGS:Q}
@@ -176,8 +176,8 @@ post-install:
 #.include "../../databases/wiredtiger/buildlink3.mk"
 #.include "../../devel/abseil/buildlink3.mk"
 #.include "../../devel/asio/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+#.include "../../devel/boost-headers/buildlink3.mk"
+#.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/scons4/build.mk"
