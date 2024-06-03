@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/29 16:34:48 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/06/03 13:23:11 ryoon Exp $
 
 DISTNAME=	cppcms-1.2.1
 PKGREVISION=	5
@@ -11,7 +11,8 @@ HOMEPAGE=	http://cppcms.com/
 COMMENT=	High performance C++ web development framework
 LICENSE=	mit
 
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	gnu++17
 USE_CMAKE=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	27
