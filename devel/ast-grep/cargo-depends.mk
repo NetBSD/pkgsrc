@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2024/06/01 14:08:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2024/06/03 07:27:38 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -170,7 +170,7 @@ CARGO_CRATE_DEPENDS+=	thread_local-1.1.8
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-CARGO_CRATE_DEPENDS+=	tokio-1.37.0
+CARGO_CRATE_DEPENDS+=	tokio-1.38.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.11
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.6
 CARGO_CRATE_DEPENDS+=	toml_edit-0.22.13
@@ -184,7 +184,7 @@ CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.27
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.32
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.21.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.21.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.21.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.21.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.22.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-css-0.21.0
