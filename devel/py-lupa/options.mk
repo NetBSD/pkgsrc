@@ -1,16 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2023/11/14 08:23:05 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2024/06/03 07:47:27 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-lupa
-PKG_SUPPORTED_OPTIONS=	cython luajit
-PKG_SUGGESTED_OPTIONS+=	cython
+PKG_SUPPORTED_OPTIONS=	luajit
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcython)
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYSETUPBUILDARGS+=	--with-cython
-.include "../../devel/py-cython/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mluajit)
 .include "../../lang/LuaJIT2/buildlink3.mk"
