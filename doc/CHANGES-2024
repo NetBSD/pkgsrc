@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3748 2024/06/03 08:05:08 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3749 2024/06/03 10:57:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5920,3 +5920,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-certifi to 2024.6.2 [adam 2024-06-03]
 	Updated devel/git to 2.45.2 [adam 2024-06-03]
 	Updated databases/py-tortoise-orm to 0.21.3 [adam 2024-06-03]
+	Updated multimedia/mkvtoolnix to 85.0 [adam 2024-06-03]
+	Updated archivers/py-zipp to 3.19.1 [adam 2024-06-03]
+	Updated devel/py-scard to 2.0.10 [adam 2024-06-03]
+	Updated devel/py-typing-extensions to 4.12.1 [adam 2024-06-03]
