@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/29 16:32:45 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/06/03 15:16:21 ryoon Exp $
 
 DISTNAME=	widelands-build21-source
 PKGNAME=	widelands-21
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=	c++17
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
@@ -25,6 +25,7 @@ CMAKE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
 CMAKE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=shadow
+BUILDLINK_TRANSFORM+=	rm:-Werror=uninitialized
 
 # too much spam from boost headers
 BUILDLINK_TRANSFORM+=	rm:-Wold-style-cast
