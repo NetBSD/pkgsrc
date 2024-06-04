@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.37 2024/05/08 10:49:25 cheusov Exp $
+# $NetBSD: print-plist.mk,v 1.38 2024/06/04 13:10:45 cheusov Exp $
 #
 # Automatic PLIST generation
 #  - files & symlinks first
@@ -15,7 +15,7 @@
 
 # A list of pairs (regexp, option) for prefixing PLIST entry
 # with ${PLIST.<option>} if <regexp> matches it.
-.if !empty(PKG_OPTIONS:Mnls)
+.if !empty(PKG_SUPPORTED_OPTIONS:Mnls)
 _PRINT_PLIST_REGEXP_OPTION_LIST+= \
 	^share\/locale\/.*[.]mo$$			nls
 .endif
