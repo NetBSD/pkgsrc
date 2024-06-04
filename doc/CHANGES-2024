@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3758 2024/06/04 07:58:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3759 2024/06/04 08:33:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5935,3 +5935,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/glibmm to 2.66.7 [adam 2024-06-04]
 	Updated devel/atkmm to 2.28.4 [adam 2024-06-04]
 	Updated converters/librevenge to 0.0.5 [adam 2024-06-04]
+	Updated devel/cmake to 3.29.4 [adam 2024-06-04]
+	Updated devel/cmake-gui to 3.29.4 [adam 2024-06-04]
