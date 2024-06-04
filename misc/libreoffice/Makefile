@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2024/06/01 01:32:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.334 2024/06/04 08:34:45 adam Exp $
 
 VERREL=		24.2.3
 VERRC=		2
@@ -371,10 +371,10 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 #BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=1.4.2
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
-.include "../../graphics/box2d/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/box2d/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
