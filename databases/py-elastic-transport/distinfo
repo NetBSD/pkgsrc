@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/24 16:49:52 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/06/04 10:41:24 adam Exp $
 
-BLAKE2s (elastic-transport-8.13.0.tar.gz) = 477dd741df472c35aa2e38b64b749694b19fb7d6cfa09457cf26c47bfeaed552
-SHA512 (elastic-transport-8.13.0.tar.gz) = 0b63f5347da1353202f2f9104d9f8a78a421b7f5df764a152288cf23d2719f28fecfd5d20baa5ffab225bc2f8eae394ca5e444c5103d5470a18dfdb5da8699b3
-Size (elastic-transport-8.13.0.tar.gz) = 72708 bytes
+BLAKE2s (elastic_transport-8.13.1.tar.gz) = 5579c8ca09a95846e8bd156ce900ce5e0decd607bd7fe0bf4f0d554702a86614
+SHA512 (elastic_transport-8.13.1.tar.gz) = 9bba9525647c492492f7d6f328c9cb50d42c1d7bd0a47eda92b3259bc73f080dbc86ea084236f7cf70fe6a1814e31dc863d420887e82f61a7e833832a9cb800e
+Size (elastic_transport-8.13.1.tar.gz) = 72994 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/05/24 16:49:51 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/04 10:41:24 adam Exp $
 
-DISTNAME=	elastic-transport-8.13.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	elastic_transport-8.13.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elastic-transport/}
 
