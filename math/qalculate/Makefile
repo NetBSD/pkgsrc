@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/05/29 16:33:28 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/06/04 20:45:06 markd Exp $
 
-DISTNAME=	libqalculate-5.0.0
-PKGNAME=	qalculate-5.0.0
-PKGREVISION=	2
+DISTNAME=	libqalculate-5.1.1
+PKGNAME=	qalculate-5.1.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Qalculate/}
 GITHUB_PROJECT=	libqalculate
@@ -15,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		gnu++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf automake
