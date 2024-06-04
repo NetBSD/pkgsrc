@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3760 2024/06/04 09:34:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3761 2024/06/04 10:43:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5941,3 +5941,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-grpcio to 1.64.1 [adam 2024-06-04]
 	Updated net/py-grpcio-testing to 1.64.1 [adam 2024-06-04]
 	Updated net/py-grpcio-tools to 1.64.1 [adam 2024-06-04]
+	Updated textproc/py-itemloaders to 1.3.1 [adam 2024-06-04]
+	Updated sysutils/py-sh to 2.0.7 [adam 2024-06-04]
+	Updated databases/py-elastic-transport to 8.13.1 [adam 2024-06-04]
+	Updated www/py-django-sql-explorer to 4.3 [adam 2024-06-04]
