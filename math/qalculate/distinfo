@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2024/04/18 07:56:56 wiz Exp $
+$NetBSD: distinfo,v 1.33 2024/06/04 20:45:06 markd Exp $
 
-BLAKE2s (libqalculate-5.0.0.tar.gz) = 61e61085faf73f9bf52714e31211b8d23724c56520f896d0dd484d3596473081
-SHA512 (libqalculate-5.0.0.tar.gz) = d3467e79e1454a76ee0c4d8795241c105d42580f95321e24b0657d99535ed8827809cc7ec0474c9e75cd668158aa84a500e5bd3a92dd0f4a3d1e4fc91811c399
-Size (libqalculate-5.0.0.tar.gz) = 2674322 bytes
+BLAKE2s (libqalculate-5.1.1.tar.gz) = 976f3a899accdaed9f0b7c22b390d5a3923e6dc0368d0b6e4eb3e5d77d4e8d77
+SHA512 (libqalculate-5.1.1.tar.gz) = 24fcb308e4fe977d8b40b0349bf1cfda3475d28fcf74b2fb03d1d411d43377ba08d10246be969ddeddcc85c665a3e7bb8d2cc0e44df64a2f82b831738ecba769
+Size (libqalculate-5.1.1.tar.gz) = 2688798 bytes
 SHA1 (patch-libqalculate_QalculateDateTime.cc) = 6675f39ecea4d88abab72391bca4cc9331879f85
