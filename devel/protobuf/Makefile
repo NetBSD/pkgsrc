@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2024/05/29 16:02:15 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/06/04 09:30:53 adam Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -9,6 +9,7 @@
 # require a recursive revbump.
 
 DISTNAME=	protobuf-27.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf
@@ -26,6 +27,8 @@ USE_LANGUAGES=		c c++
 FORCE_CXX_STD=		c++14
 
 CMAKE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
+# FIXME: Currently libupd makes net/grpc build fail.
+CMAKE_ARGS+=	-Dprotobuf_BUILD_LIBUPB=OFF
 CMAKE_ARGS+=	-Dprotobuf_BUILD_SHARED_LIBS=ON
 # requires googletest to be checked out in third_party/googletest
 CMAKE_ARGS+=	-Dprotobuf_BUILD_TESTS=OFF
