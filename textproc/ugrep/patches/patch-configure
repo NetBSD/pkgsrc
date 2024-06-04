@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.3 2024/06/04 15:14:20 adam Exp $
+
+Portability fix.
+https://github.com/Genivia/ugrep/issues/402
+
+--- configure.orig	2024-06-04 15:10:47.211941639 +0000
++++ configure
+@@ -11057,7 +11057,7 @@ fi
+ 
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for --enable-static" >&5
+ printf %s "checking for --enable-static... " >&6; }
+-if test "x$enable_static" == "xyes"; then
++if test "x$enable_static" = "xyes"; then
+   CFLAGS="$CFLAGS -static"
+   LDFLAGS="$LDFLAGS -static"
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
