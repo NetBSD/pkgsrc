@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/06/04 01:05:07 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/04 04:18:18 taca Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liuch/}
 GITHUB_PROJECT=	dmarc-srg
@@ -31,8 +32,8 @@ WEBDIR=		share/${PHP_PKG_PREFIX}/${WEBBASE}
 EGDIR=		share/examples/${PHP_PKG_PREFIX}/${WEBBASE}
 
 INSTALLATION_DIRS+=	${WEBDIR}/config ${EGDIR}
-CONF_FILES_PERMS+=	${EGDIR}/conf.php ${WEBDIR}/config/conf.php \
-			${BINOWN} ${APACHE_GROUP} 0640
+OWN_DIRS_PERMS+=	${WEBDIR}/config ${REAL_ROOT_USER} ${APACHE_GROUP} 0750
+CONF_FILES+=		${EGDIR}/conf.php ${WEBDIR}/config/conf.php
 PLIST_SUBST+=		EGDIR=${EGDIR} WEBDIR=${WEBDIR}
 PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
 			{ gsub(/${EGDIR:S|/|\\/|g}/, "$${EGDIR}") }
