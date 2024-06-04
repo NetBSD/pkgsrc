@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3753 2024/06/03 19:48:50 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3754 2024/06/04 04:18:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5928,3 +5928,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added mail/php-dmarc-srg version 2.1 [taca 2024-06-03]
 	Updated devel/git-cliff to 2.3.0 [pin 2024-06-03]
 	Updated sysutils/treegrep to 0.1.4 [pin 2024-06-03]
+	Updated mail/php-dmarc-srg to 2.1nb1 [taca 2024-06-04]
