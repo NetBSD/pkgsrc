@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/02/08 21:33:34 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/06/04 18:33:45 bsiegert Exp $
 
 DISTNAME=	zlib-1.3.1
 CATEGORIES=	devel
@@ -26,6 +26,7 @@ CPPFLAGS.SunOS+=	-DNO_DIVIDE
 .endif
 LDFLAGS.SunOS+=	-Wl,-zignore	# avoid unused reference to libgcc_s.so
 
+CFLAGS.Linux+=	-DZ_HAVE_UNISTD_H
 LDFLAGS.Linux+=	-Wl,--version-script,zlib.map
 
 SUBST_CLASSES+=		pc
