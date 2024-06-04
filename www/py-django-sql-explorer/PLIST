@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/07 03:59:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/04 10:43:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -26,9 +26,6 @@ ${PYSITELIB}/explorer/assistant/__init__.pyo
 ${PYSITELIB}/explorer/assistant/models.py
 ${PYSITELIB}/explorer/assistant/models.pyc
 ${PYSITELIB}/explorer/assistant/models.pyo
-${PYSITELIB}/explorer/assistant/prompts.py
-${PYSITELIB}/explorer/assistant/prompts.pyc
-${PYSITELIB}/explorer/assistant/prompts.pyo
 ${PYSITELIB}/explorer/assistant/tests.py
 ${PYSITELIB}/explorer/assistant/tests.pyc
 ${PYSITELIB}/explorer/assistant/tests.pyo
@@ -99,6 +96,9 @@ ${PYSITELIB}/explorer/migrations/0014_promptlog.pyo
 ${PYSITELIB}/explorer/migrations/0015_explorervalue.py
 ${PYSITELIB}/explorer/migrations/0015_explorervalue.pyc
 ${PYSITELIB}/explorer/migrations/0015_explorervalue.pyo
+${PYSITELIB}/explorer/migrations/0016_alter_explorervalue_key.py
+${PYSITELIB}/explorer/migrations/0016_alter_explorervalue_key.pyc
+${PYSITELIB}/explorer/migrations/0016_alter_explorervalue_key.pyo
 ${PYSITELIB}/explorer/migrations/__init__.py
 ${PYSITELIB}/explorer/migrations/__init__.pyc
 ${PYSITELIB}/explorer/migrations/__init__.pyo
@@ -121,6 +121,7 @@ ${PYSITELIB}/explorer/src/js/pivot-setup.js
 ${PYSITELIB}/explorer/src/js/pivot.js
 ${PYSITELIB}/explorer/src/js/query-list.js
 ${PYSITELIB}/explorer/src/js/schema.js
+${PYSITELIB}/explorer/src/js/schemaService.js
 ${PYSITELIB}/explorer/src/js/table-to-csv.js
 ${PYSITELIB}/explorer/src/scss/assistant.scss
 ${PYSITELIB}/explorer/src/scss/explorer.scss
@@ -129,13 +130,13 @@ ${PYSITELIB}/explorer/src/scss/styles.scss
 ${PYSITELIB}/explorer/src/scss/variables.scss
 ${PYSITELIB}/explorer/static/explorer/bootstrap-icons.woff
 ${PYSITELIB}/explorer/static/explorer/bootstrap-icons.woff2
-${PYSITELIB}/explorer/static/explorer/explorer.js
-${PYSITELIB}/explorer/static/explorer/favorites.js
-${PYSITELIB}/explorer/static/explorer/index.js
-${PYSITELIB}/explorer/static/explorer/main.js
-${PYSITELIB}/explorer/static/explorer/pivot-setup.js
-${PYSITELIB}/explorer/static/explorer/query-list.js
-${PYSITELIB}/explorer/static/explorer/schema.js
+${PYSITELIB}/explorer/static/explorer/explorer.4.3.js
+${PYSITELIB}/explorer/static/explorer/favorites.4.3.js
+${PYSITELIB}/explorer/static/explorer/index.4.3.js
+${PYSITELIB}/explorer/static/explorer/main.4.3.js
+${PYSITELIB}/explorer/static/explorer/pivot-setup.4.3.js
+${PYSITELIB}/explorer/static/explorer/query-list.4.3.js
+${PYSITELIB}/explorer/static/explorer/schema.4.3.js
 ${PYSITELIB}/explorer/static/explorer/styles.css
 ${PYSITELIB}/explorer/tasks.py
 ${PYSITELIB}/explorer/tasks.pyc
