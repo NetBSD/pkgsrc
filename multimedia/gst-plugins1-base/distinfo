@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.64 2024/05/13 09:05:54 adam Exp $
+$NetBSD: distinfo,v 1.65 2024/06/04 15:09:50 adam Exp $
 
-BLAKE2s (gst-plugins-base-1.24.3.tar.xz) = 6b0cd1f8858b1bcc2f5f20b67cea93f668b7e2b80166697f314ebe7373a26beb
-SHA512 (gst-plugins-base-1.24.3.tar.xz) = 8003435416423d99afc10a870cebf062e9d4fdd492d09b216afe0d7bdea908256eb24cc26130556c063d712582110341d62c9d43052449f13dc9a5a145a296c3
-Size (gst-plugins-base-1.24.3.tar.xz) = 2423412 bytes
+BLAKE2s (gst-plugins-base-1.24.4.tar.xz) = 673f6f2e9e775b3acba29f81f618e003118acdf5ba7e6bc502370108bcd8513d
+SHA512 (gst-plugins-base-1.24.4.tar.xz) = 9968b4de613aa7c2667e82cbfc8fbbbdd7ff72c250eeed7512a6150b165e91491f8ccaab23fd2e408ece4548e68e9061fa7735e2f4beed4f67a66bed94f0c692
+Size (gst-plugins-base-1.24.4.tar.xz) = 2425432 bytes
 SHA1 (patch-ext_cdparanoia_gstcdparanoiasrc.h) = 5325f27c81cd9dc2f998bcb7733ef6b0c9a902e8
 SHA1 (patch-meson.build) = 0fae465ac873b12103f693e3812b3bfc6b1f6971
