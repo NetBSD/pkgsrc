@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.66 2023/06/26 19:34:52 adam Exp $
+$NetBSD: distinfo,v 1.67 2024/06/04 07:45:51 adam Exp $
 
-BLAKE2s (glibmm-2.66.6.tar.xz) = 9fefd0c7e78ca798b8173d10df2bb7f34b152affe05c21ddbb2823fefc64af2c
-SHA512 (glibmm-2.66.6.tar.xz) = 64d5ee1904ac645ee5a470889b928a24ab012bb0c310a94631bd725df9d5b7a5c0d2129f114017677db922b724ad12ab33698f1d27cae4aaeccd199b0e883099
-Size (glibmm-2.66.6.tar.xz) = 8668828 bytes
+BLAKE2s (glibmm-2.66.7.tar.xz) = 2bae0035e466f488679545b310f69e1eaefe59a2c1444172175ff4e0970519a4
+SHA512 (glibmm-2.66.7.tar.xz) = 09b99622c051afd264d7a9b23025ee28ec870c6d23a5084ef7192f67b96fb8f16be5dbb2e8a4ff8a1d4ff873d3e73b4e25dee122049266687f471dcd3989b5bb
+Size (glibmm-2.66.7.tar.xz) = 8773780 bytes
 SHA1 (patch-glib_glibmm_ustring.cc) = 626bedb16baa7664eade41afd585f0db339f99af
