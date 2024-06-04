@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/05/29 16:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/06/04 05:38:54 ryoon Exp $
 
 DISTNAME=	libzmf-0.0.2
 PKGREVISION=	30
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++17
 
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--disable-werror
