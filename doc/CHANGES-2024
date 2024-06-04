@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3761 2024/06/04 10:43:45 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3762 2024/06/04 13:25:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5937,6 +5937,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/librevenge to 0.0.5 [adam 2024-06-04]
 	Updated devel/cmake to 3.29.4 [adam 2024-06-04]
 	Updated devel/cmake-gui to 3.29.4 [adam 2024-06-04]
+	Updated www/py-uwsgi to 2.0.25.1nb2 [joerg 2024-06-04]
 	Updated net/grpc to 1.64.1 [adam 2024-06-04]
 	Updated net/py-grpcio to 1.64.1 [adam 2024-06-04]
 	Updated net/py-grpcio-testing to 1.64.1 [adam 2024-06-04]
