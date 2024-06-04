@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/05/29 16:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/06/04 05:38:27 ryoon Exp $
 
 DISTNAME=	libqxp-0.0.2
 PKGREVISION=	22
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
