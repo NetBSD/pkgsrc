@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3757 2024/06/04 06:46:34 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3758 2024/06/04 07:58:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5932,3 +5932,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/nushell to 0.94.2 [pin 2024-06-04]
 	Updated shells/oh-my-posh to 21.2.0 [pin 2024-06-04]
 	Updated misc/rust-kanban to 0.9.7 [pin 2024-06-04]
+	Updated devel/glibmm to 2.66.7 [adam 2024-06-04]
+	Updated devel/atkmm to 2.28.4 [adam 2024-06-04]
+	Updated converters/librevenge to 0.0.5 [adam 2024-06-04]
