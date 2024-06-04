@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/05/29 16:31:37 adam Exp $
+# $NetBSD: Makefile,v 1.59 2024/06/04 05:37:58 ryoon Exp $
 
 DISTNAME=	libmspub-0.1.4
 PKGREVISION=	28
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++17
 CONFIGURE_ARGS+=	--without-docs
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
