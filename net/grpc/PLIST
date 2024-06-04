@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2024/05/29 16:06:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/06/04 09:34:04 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -362,4 +362,5 @@ lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
 lib/pkgconfig/grpc.pc
 lib/pkgconfig/grpc_unsecure.pc
+lib/pkgconfig/grpcpp_otel_plugin.pc
 share/grpc/roots.pem
