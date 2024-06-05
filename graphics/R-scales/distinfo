@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/11 11:23:31 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/06/05 11:56:12 mef Exp $
 
-BLAKE2s (R/scales_1.2.1.tar.gz) = 504ea76a1e0935d8ee12df9c648327bf5c5f8f6fbdda35774bc7085c3afeddef
-SHA512 (R/scales_1.2.1.tar.gz) = fdac134485ce7fc63630ee087b4bb1a3580cd511ca3ae82a0548d9a08295384198fe2994cf8aef3fe6c8aedc1939bc87fce9deeaf898ccd89ea232712800dcc0
-Size (R/scales_1.2.1.tar.gz) = 270609 bytes
+BLAKE2s (R/scales_1.3.0.tar.gz) = fb17d4e29424f33c766b3e7e791abae14e90714b8f42309038d5f8ad0404b14e
+SHA512 (R/scales_1.3.0.tar.gz) = cd5910ac1cc91d7f181eb2526024730a15dd3912cb2518d19426c2c8b95982e4bc473713ee09d90bf4be738e240f26df4d26608a53ae1dd09c4959118050d6a6
+Size (R/scales_1.3.0.tar.gz) = 302544 bytes
