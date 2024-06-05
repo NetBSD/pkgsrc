@@ -1,19 +1,25 @@
-# $NetBSD: Makefile,v 1.11 2023/01/24 18:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/05 13:51:28 adam Exp $
 
-DISTNAME=	libcerf-1.13
+DISTNAME=	libcerf-v2.4
+PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel math
-MASTER_SITES=	http://apps.jcns.fz-juelich.de/src/libcerf/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	https://jugit.fz-juelich.de/mlz/libcerf/-/archive/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jugit.fz-juelich.de/mlz/libcerf
 COMMENT=	Library providing efficient and accurate complex error functions
 LICENSE=	mit
 
-USE_LANGUAGES=		c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 USE_TOOLS+=		pod2man
 PKGCONFIG_OVERRIDE=	libcerf.pc.in
-TEST_TARGET=		test
+
+TEST_TARGET=	test
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
