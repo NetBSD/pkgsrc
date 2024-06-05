@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2024/06/05 16:59:17 ktnb Exp $
+
+Include the required libs
+
+--- Makefile.in.orig	2024-06-05 15:32:28.047674643 +0000
++++ Makefile.in
+@@ -106,7 +106,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ LDFLAGS = @LDFLAGS@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -liconv $(LIBGETOPT)
+ LIBTOOL = @LIBTOOL@
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
