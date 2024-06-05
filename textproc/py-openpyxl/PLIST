@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2023/02/22 12:50:46 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.16 2024/06/05 15:22:59 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENCE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/openpyxl/__init__.py
 ${PYSITELIB}/openpyxl/__init__.pyc
 ${PYSITELIB}/openpyxl/__init__.pyo
@@ -193,6 +193,9 @@ ${PYSITELIB}/openpyxl/descriptors/__init__.pyo
 ${PYSITELIB}/openpyxl/descriptors/base.py
 ${PYSITELIB}/openpyxl/descriptors/base.pyc
 ${PYSITELIB}/openpyxl/descriptors/base.pyo
+${PYSITELIB}/openpyxl/descriptors/container.py
+${PYSITELIB}/openpyxl/descriptors/container.pyc
+${PYSITELIB}/openpyxl/descriptors/container.pyo
 ${PYSITELIB}/openpyxl/descriptors/excel.py
 ${PYSITELIB}/openpyxl/descriptors/excel.pyc
 ${PYSITELIB}/openpyxl/descriptors/excel.pyo
