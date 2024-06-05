@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3787 2024/06/05 17:17:46 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3788 2024/06/05 17:19:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/oto to 0.5 [ktnb 2024-06-05]
 	Updated cad/py-PyRTL to 0.11.1 [ryoon 2024-06-05]
 	Updated cad/ghdl to 4.1.0 [ryoon 2024-06-05]
+	Updated x11/wired-notify to 0.10.6 [pin 2024-06-05]
