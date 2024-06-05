@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3768 2024/06/05 05:17:05 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3769 2024/06/05 06:43:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5953,3 +5953,9 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/yaydl to 0.14.0 [pin 2024-06-04]
 	Updated math/qalculate to 5.1.1 [markd 2024-06-04]
 	Updated shells/oh-my-posh to 21.2.1 [pin 2024-06-05]
+	Removed mail/thunderbird52 [nia 2024-06-05]
+	Removed mail/thunderbird52-l10n [nia 2024-06-05]
+	Removed mail/thunderbird68 [nia 2024-06-05]
+	Removed mail/thunderbird68-l10n [nia 2024-06-05]
+	Removed mail/thunderbird78 [nia 2024-06-05]
+	Removed mail/thunderbird78-l10n [nia 2024-06-05]
