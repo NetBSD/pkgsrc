@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/10/21 17:10:11 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2024/06/05 22:44:57 wiz Exp $
 
 VERSION=		1.0.4
 DISTNAME=		fuse-python-${VERSION}
@@ -18,6 +18,9 @@ EGDIR=			share/examples/${PKGBASE}
 INSTALLATION_DIRS=	${EGDIR}
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 PRINT_PLIST_AWK+=	{ gsub("${PYPKGPREFIX}-", "$${PYPKGPREFIX}-"); }
+
+PYTHON_27_ACCEPTED=	yes
+
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/example/hello.py \
 		${DESTDIR}${PREFIX}/${EGDIR}
