@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/12 16:40:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/05 16:17:03 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -371,6 +371,7 @@ ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_tooltip.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_transitions.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_type.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_utilities.scss
+${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_variables-dark.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/_variables.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/bootstrap-grid.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/bootstrap-reboot.scss
@@ -388,6 +389,8 @@ ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/forms/_validation.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_clearfix.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_color-bg.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_colored-links.scss
+${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_focus-ring.scss
+${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_icon-link.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_position.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_ratio.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/helpers/_stacks.scss
@@ -406,6 +409,7 @@ ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_breakpoints.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_buttons.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_caret.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_clearfix.scss
+${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_color-mode.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_color-scheme.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_container.scss
 ${CC_WEBDIR}/concrete/bedrock/assets/bootstrap/scss/mixins/_deprecate.scss
@@ -1519,6 +1523,7 @@ ${CC_WEBDIR}/concrete/controllers/dialog/file/versions.php
 ${CC_WEBDIR}/concrete/controllers/dialog/frontend/event.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/advanced_search.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/bulk/delete.php
+${CC_WEBDIR}/concrete/controllers/dialog/groups/delete.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/jump_to_folder.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/preset/delete.php
 ${CC_WEBDIR}/concrete/controllers/dialog/groups/preset/edit.php
@@ -1621,6 +1626,7 @@ ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/control/text_options
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/entries/header.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/express/menu.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/files/header.php
+${CC_WEBDIR}/concrete/controllers/element/dashboard/marketplace/extend.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/navigation/mobile.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/navigation/panel/favorites.php
 ${CC_WEBDIR}/concrete/controllers/element/dashboard/navigation/panel/section.php
@@ -1689,6 +1695,7 @@ ${CC_WEBDIR}/concrete/controllers/frontend/select_site.php
 ${CC_WEBDIR}/concrete/controllers/frontend/stylesheet.php
 ${CC_WEBDIR}/concrete/controllers/frontend/switch_language.php
 ${CC_WEBDIR}/concrete/controllers/install.php
+${CC_WEBDIR}/concrete/controllers/marketplace.php
 ${CC_WEBDIR}/concrete/controllers/oauth2.php
 ${CC_WEBDIR}/concrete/controllers/page_types/core_stack.php
 ${CC_WEBDIR}/concrete/controllers/page_types/core_theme_documentation.php
@@ -1860,6 +1867,7 @@ ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/accessibil
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/attributes.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/editor.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/icons.php
+${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/marketplace.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/multilingual.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/multilingual/update.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/basics/name.php
@@ -1902,6 +1910,7 @@ ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/express/entries.p
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/export_options.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/external_file_provider.php
+${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/file_manager.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/filetypes.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/image_editor.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/image_uploading.php
@@ -2139,8 +2148,9 @@ ${CC_WEBDIR}/concrete/elements/dashboard/groups/menu_tree.php
 ${CC_WEBDIR}/concrete/elements/dashboard/health/grade/pass_fail.php
 ${CC_WEBDIR}/concrete/elements/dashboard/health/grade/score.php
 ${CC_WEBDIR}/concrete/elements/dashboard/health/report/finding/message/search/details.php
+${CC_WEBDIR}/concrete/elements/dashboard/marketplace/extend.php
 ${CC_WEBDIR}/concrete/elements/dashboard/marketplace_connect_failed.php
-${CC_WEBDIR}/concrete/elements/dashboard/marketplace_project_page.php
+${CC_WEBDIR}/concrete/elements/dashboard/marketplace_connect_offer.php
 ${CC_WEBDIR}/concrete/elements/dashboard/marketplace_upgrade.php
 ${CC_WEBDIR}/concrete/elements/dashboard/mobile_menu.php
 ${CC_WEBDIR}/concrete/elements/dashboard/navigation/breadcrumb.php
@@ -2206,6 +2216,7 @@ ${CC_WEBDIR}/concrete/elements/form/grouped/bootstrap3.php
 ${CC_WEBDIR}/concrete/elements/form/grouped/bootstrap5.php
 ${CC_WEBDIR}/concrete/elements/form/grouped/composer.php
 ${CC_WEBDIR}/concrete/elements/groups/confirm_list.php
+${CC_WEBDIR}/concrete/elements/groups/delete_options.php
 ${CC_WEBDIR}/concrete/elements/groups/folder_selector.php
 ${CC_WEBDIR}/concrete/elements/groups/roles_list.php
 ${CC_WEBDIR}/concrete/elements/groups/search.php
@@ -3315,10 +3326,12 @@ ${CC_WEBDIR}/concrete/js/ace/ace.js
 ${CC_WEBDIR}/concrete/js/ace/ext-beautify.js
 ${CC_WEBDIR}/concrete/js/ace/ext-chromevox.js
 ${CC_WEBDIR}/concrete/js/ace/ext-code_lens.js
+${CC_WEBDIR}/concrete/js/ace/ext-command_bar.js
 ${CC_WEBDIR}/concrete/js/ace/ext-elastic_tabstops_lite.js
 ${CC_WEBDIR}/concrete/js/ace/ext-emmet.js
 ${CC_WEBDIR}/concrete/js/ace/ext-error_marker.js
 ${CC_WEBDIR}/concrete/js/ace/ext-hardwrap.js
+${CC_WEBDIR}/concrete/js/ace/ext-inline_autocomplete.js
 ${CC_WEBDIR}/concrete/js/ace/ext-keybinding_menu.js
 ${CC_WEBDIR}/concrete/js/ace/ext-language_tools.js
 ${CC_WEBDIR}/concrete/js/ace/ext-linking.js
@@ -3329,6 +3342,7 @@ ${CC_WEBDIR}/concrete/js/ace/ext-prompt.js
 ${CC_WEBDIR}/concrete/js/ace/ext-rtl.js
 ${CC_WEBDIR}/concrete/js/ace/ext-searchbox.js
 ${CC_WEBDIR}/concrete/js/ace/ext-settings_menu.js
+${CC_WEBDIR}/concrete/js/ace/ext-simple_tokenizer.js
 ${CC_WEBDIR}/concrete/js/ace/ext-spellcheck.js
 ${CC_WEBDIR}/concrete/js/ace/ext-split.js
 ${CC_WEBDIR}/concrete/js/ace/ext-static_highlight.js
@@ -3351,7 +3365,9 @@ ${CC_WEBDIR}/concrete/js/ace/mode-applescript.js
 ${CC_WEBDIR}/concrete/js/ace/mode-aql.js
 ${CC_WEBDIR}/concrete/js/ace/mode-asciidoc.js
 ${CC_WEBDIR}/concrete/js/ace/mode-asl.js
+${CC_WEBDIR}/concrete/js/ace/mode-assembly_arm32.js
 ${CC_WEBDIR}/concrete/js/ace/mode-assembly_x86.js
+${CC_WEBDIR}/concrete/js/ace/mode-astro.js
 ${CC_WEBDIR}/concrete/js/ace/mode-autohotkey.js
 ${CC_WEBDIR}/concrete/js/ace/mode-batchfile.js
 ${CC_WEBDIR}/concrete/js/ace/mode-bibtex.js
@@ -3370,6 +3386,7 @@ ${CC_WEBDIR}/concrete/js/ace/mode-csound_score.js
 ${CC_WEBDIR}/concrete/js/ace/mode-csp.js
 ${CC_WEBDIR}/concrete/js/ace/mode-css.js
 ${CC_WEBDIR}/concrete/js/ace/mode-curly.js
+${CC_WEBDIR}/concrete/js/ace/mode-cuttlefish.js
 ${CC_WEBDIR}/concrete/js/ace/mode-d.js
 ${CC_WEBDIR}/concrete/js/ace/mode-dart.js
 ${CC_WEBDIR}/concrete/js/ace/mode-diff.js
@@ -3383,6 +3400,7 @@ ${CC_WEBDIR}/concrete/js/ace/mode-ejs.js
 ${CC_WEBDIR}/concrete/js/ace/mode-elixir.js
 ${CC_WEBDIR}/concrete/js/ace/mode-elm.js
 ${CC_WEBDIR}/concrete/js/ace/mode-erlang.js
+${CC_WEBDIR}/concrete/js/ace/mode-flix.js
 ${CC_WEBDIR}/concrete/js/ace/mode-forth.js
 ${CC_WEBDIR}/concrete/js/ace/mode-fortran.js
 ${CC_WEBDIR}/concrete/js/ace/mode-fsharp.js
@@ -3446,6 +3464,7 @@ ${CC_WEBDIR}/concrete/js/ace/mode-mixal.js
 ${CC_WEBDIR}/concrete/js/ace/mode-mushcode.js
 ${CC_WEBDIR}/concrete/js/ace/mode-mushcode_high_rules.js
 ${CC_WEBDIR}/concrete/js/ace/mode-mysql.js
+${CC_WEBDIR}/concrete/js/ace/mode-nasal.js
 ${CC_WEBDIR}/concrete/js/ace/mode-nginx.js
 ${CC_WEBDIR}/concrete/js/ace/mode-nim.js
 ${CC_WEBDIR}/concrete/js/ace/mode-nix.js
@@ -3453,6 +3472,7 @@ ${CC_WEBDIR}/concrete/js/ace/mode-nsis.js
 ${CC_WEBDIR}/concrete/js/ace/mode-nunjucks.js
 ${CC_WEBDIR}/concrete/js/ace/mode-objectivec.js
 ${CC_WEBDIR}/concrete/js/ace/mode-ocaml.js
+${CC_WEBDIR}/concrete/js/ace/mode-odin.js
 ${CC_WEBDIR}/concrete/js/ace/mode-partiql.js
 ${CC_WEBDIR}/concrete/js/ace/mode-pascal.js
 ${CC_WEBDIR}/concrete/js/ace/mode-perl.js
@@ -3469,6 +3489,7 @@ ${CC_WEBDIR}/concrete/js/ace/mode-prisma.js
 ${CC_WEBDIR}/concrete/js/ace/mode-prolog.js
 ${CC_WEBDIR}/concrete/js/ace/mode-properties.js
 ${CC_WEBDIR}/concrete/js/ace/mode-protobuf.js
+${CC_WEBDIR}/concrete/js/ace/mode-prql.js
 ${CC_WEBDIR}/concrete/js/ace/mode-puppet.js
 ${CC_WEBDIR}/concrete/js/ace/mode-python.js
 ${CC_WEBDIR}/concrete/js/ace/mode-qml.js
@@ -3521,11 +3542,13 @@ ${CC_WEBDIR}/concrete/js/ace/mode-velocity.js
 ${CC_WEBDIR}/concrete/js/ace/mode-verilog.js
 ${CC_WEBDIR}/concrete/js/ace/mode-vhdl.js
 ${CC_WEBDIR}/concrete/js/ace/mode-visualforce.js
+${CC_WEBDIR}/concrete/js/ace/mode-vue.js
 ${CC_WEBDIR}/concrete/js/ace/mode-wollok.js
 ${CC_WEBDIR}/concrete/js/ace/mode-xml.js
 ${CC_WEBDIR}/concrete/js/ace/mode-xquery.js
 ${CC_WEBDIR}/concrete/js/ace/mode-yaml.js
 ${CC_WEBDIR}/concrete/js/ace/mode-zeek.js
+${CC_WEBDIR}/concrete/js/ace/mode-zig.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/abap.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/abc.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/actionscript.js
@@ -3537,7 +3560,9 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/applescript.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/aql.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/asciidoc.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/asl.js
+${CC_WEBDIR}/concrete/js/ace/snippets/assembly_arm32.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/assembly_x86.js
+${CC_WEBDIR}/concrete/js/ace/snippets/astro.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/autohotkey.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/batchfile.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/bibtex.js
@@ -3556,6 +3581,7 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/csound_score.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/csp.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/css.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/curly.js
+${CC_WEBDIR}/concrete/js/ace/snippets/cuttlefish.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/d.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/dart.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/diff.js
@@ -3569,6 +3595,7 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/ejs.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/elixir.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/elm.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/erlang.js
+${CC_WEBDIR}/concrete/js/ace/snippets/flix.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/forth.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/fortran.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/fsharp.js
@@ -3632,6 +3659,7 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/mixal.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/mushcode.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/mushcode_high_rules.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/mysql.js
+${CC_WEBDIR}/concrete/js/ace/snippets/nasal.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/nginx.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/nim.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/nix.js
@@ -3639,6 +3667,7 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/nsis.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/nunjucks.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/objectivec.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/ocaml.js
+${CC_WEBDIR}/concrete/js/ace/snippets/odin.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/partiql.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/pascal.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/perl.js
@@ -3655,6 +3684,7 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/prisma.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/prolog.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/properties.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/protobuf.js
+${CC_WEBDIR}/concrete/js/ace/snippets/prql.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/puppet.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/python.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/qml.js
@@ -3706,17 +3736,21 @@ ${CC_WEBDIR}/concrete/js/ace/snippets/velocity.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/verilog.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/vhdl.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/visualforce.js
+${CC_WEBDIR}/concrete/js/ace/snippets/vue.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/wollok.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/xml.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/xquery.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/yaml.js
 ${CC_WEBDIR}/concrete/js/ace/snippets/zeek.js
+${CC_WEBDIR}/concrete/js/ace/snippets/zig.js
 ${CC_WEBDIR}/concrete/js/ace/theme-ambiance.js
 ${CC_WEBDIR}/concrete/js/ace/theme-chaos.js
 ${CC_WEBDIR}/concrete/js/ace/theme-chrome.js
 ${CC_WEBDIR}/concrete/js/ace/theme-cloud9_day.js
 ${CC_WEBDIR}/concrete/js/ace/theme-cloud9_night.js
 ${CC_WEBDIR}/concrete/js/ace/theme-cloud9_night_low_color.js
+${CC_WEBDIR}/concrete/js/ace/theme-cloud_editor.js
+${CC_WEBDIR}/concrete/js/ace/theme-cloud_editor_dark.js
 ${CC_WEBDIR}/concrete/js/ace/theme-clouds.js
 ${CC_WEBDIR}/concrete/js/ace/theme-clouds_midnight.js
 ${CC_WEBDIR}/concrete/js/ace/theme-cobalt.js
@@ -3726,6 +3760,7 @@ ${CC_WEBDIR}/concrete/js/ace/theme-dracula.js
 ${CC_WEBDIR}/concrete/js/ace/theme-dreamweaver.js
 ${CC_WEBDIR}/concrete/js/ace/theme-eclipse.js
 ${CC_WEBDIR}/concrete/js/ace/theme-github.js
+${CC_WEBDIR}/concrete/js/ace/theme-github_dark.js
 ${CC_WEBDIR}/concrete/js/ace/theme-gob.js
 ${CC_WEBDIR}/concrete/js/ace/theme-gruvbox.js
 ${CC_WEBDIR}/concrete/js/ace/theme-gruvbox_dark_hard.js
@@ -6938,6 +6973,7 @@ ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/accessibility.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/attributes.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/editor.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/icons.php
+${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/marketplace.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/multilingual/update.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/multilingual/view.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/basics/name.php
@@ -6991,6 +7027,7 @@ ${CC_WEBDIR}/concrete/single_pages/dashboard/system/express/entries.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/express/view.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/export_options.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/external_file_provider.php
+${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/file_manager.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/filetypes.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/image_editor.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/image_uploading.php
@@ -7114,9 +7151,11 @@ ${CC_WEBDIR}/concrete/src/Announcement/Controller/ControllerInterface.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/Traits/SingleSlideTrait.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/Update/Version920Controller.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/Update/Version929Controller.php
+${CC_WEBDIR}/concrete/src/Announcement/Controller/Update/Version930Controller.php
 ${CC_WEBDIR}/concrete/src/Announcement/Controller/WelcomeController.php
 ${CC_WEBDIR}/concrete/src/Announcement/Icon/AbstractIcon.php
 ${CC_WEBDIR}/concrete/src/Announcement/Icon/IconInterface.php
+${CC_WEBDIR}/concrete/src/Announcement/Icon/ImgIcon.php
 ${CC_WEBDIR}/concrete/src/Announcement/Icon/SvgIcon.php
 ${CC_WEBDIR}/concrete/src/Announcement/Item/AbstractStandardItem.php
 ${CC_WEBDIR}/concrete/src/Announcement/Item/Factory/WelcomeItemFactory.php
@@ -7654,6 +7693,7 @@ ${CC_WEBDIR}/concrete/src/Block/Exception/BlockNotFoundException.php
 ${CC_WEBDIR}/concrete/src/Block/Menu/Manager.php
 ${CC_WEBDIR}/concrete/src/Block/Menu/Menu.php
 ${CC_WEBDIR}/concrete/src/Block/Traits/GetBlockToEditTrait.php
+${CC_WEBDIR}/concrete/src/Block/Traits/HasSubBlocksTrait.php
 ${CC_WEBDIR}/concrete/src/Block/Traits/ValidateBlockRequestTrait.php
 ${CC_WEBDIR}/concrete/src/Block/View/BlockView.php
 ${CC_WEBDIR}/concrete/src/Block/View/BlockViewTemplate.php
@@ -8805,6 +8845,7 @@ ${CC_WEBDIR}/concrete/src/Form/Service/Widget/Typography.php
 ${CC_WEBDIR}/concrete/src/Form/Service/Widget/UserSelector.php
 ${CC_WEBDIR}/concrete/src/Foundation/AliasClassLoader.php
 ${CC_WEBDIR}/concrete/src/Foundation/ClassAliasList.php
+${CC_WEBDIR}/concrete/src/Foundation/ClassAutoloader.php
 ${CC_WEBDIR}/concrete/src/Foundation/ClassLoader.php
 ${CC_WEBDIR}/concrete/src/Foundation/ClassLoaderInterface.php
 ${CC_WEBDIR}/concrete/src/Foundation/Command/AsyncCommandInterface.php
@@ -9162,10 +9203,33 @@ ${CC_WEBDIR}/concrete/src/Mail/SenderConfiguration/Entry.php
 ${CC_WEBDIR}/concrete/src/Mail/Service.php
 ${CC_WEBDIR}/concrete/src/Mail/Transport/Factory.php
 ${CC_WEBDIR}/concrete/src/Mail/Transport/LimitedSmtp.php
+${CC_WEBDIR}/concrete/src/Marketplace/Connection.php
+${CC_WEBDIR}/concrete/src/Marketplace/ConnectionInterface.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/ErrorSavingRemoteDataException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/Exception.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/InvalidConnectResponseException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/InvalidDownloadResponseException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/InvalidPackageException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/PackageAlreadyExistsException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/UnableToConnectException.php
+${CC_WEBDIR}/concrete/src/Marketplace/Exception/UnableToPlacePackageException.php
 ${CC_WEBDIR}/concrete/src/Marketplace/Marketplace.php
+${CC_WEBDIR}/concrete/src/Marketplace/MarketplaceServiceProvider.php
+${CC_WEBDIR}/concrete/src/Marketplace/Model/ConnectError.php
+${CC_WEBDIR}/concrete/src/Marketplace/Model/ConnectResult.php
+${CC_WEBDIR}/concrete/src/Marketplace/Model/RemotePackage.php
+${CC_WEBDIR}/concrete/src/Marketplace/Model/ValidateResult.php
+${CC_WEBDIR}/concrete/src/Marketplace/PackageRepository.php
+${CC_WEBDIR}/concrete/src/Marketplace/PackageRepositoryInterface.php
+${CC_WEBDIR}/concrete/src/Marketplace/PurchaseConnectionCoordinator.php
 ${CC_WEBDIR}/concrete/src/Marketplace/RemoteItem.php
 ${CC_WEBDIR}/concrete/src/Marketplace/RemoteItemList.php
 ${CC_WEBDIR}/concrete/src/Marketplace/RemoteItemSet.php
+${CC_WEBDIR}/concrete/src/Marketplace/Update/Command/UpdateRemoteDataCommand.php
+${CC_WEBDIR}/concrete/src/Marketplace/Update/Command/UpdateRemoteDataCommandHandler.php
+${CC_WEBDIR}/concrete/src/Marketplace/Update/Inspector.php
+${CC_WEBDIR}/concrete/src/Marketplace/Update/UpdatedField.php
+${CC_WEBDIR}/concrete/src/Marketplace/Update/UpdatedFieldInterface.php
 ${CC_WEBDIR}/concrete/src/Messenger/HandlersLocator.php
 ${CC_WEBDIR}/concrete/src/Messenger/MessageBusAwareInterface.php
 ${CC_WEBDIR}/concrete/src/Messenger/MessageBusAwareTrait.php
@@ -10057,6 +10121,7 @@ ${CC_WEBDIR}/concrete/src/SiteInformation/Question/OrganizationQuestion.php
 ${CC_WEBDIR}/concrete/src/SiteInformation/Question/QuestionInterface.php
 ${CC_WEBDIR}/concrete/src/SiteInformation/Question/RoleQuestion.php
 ${CC_WEBDIR}/concrete/src/SiteInformation/SaverInterface.php
+${CC_WEBDIR}/concrete/src/SiteInformation/SiteInformationSaver.php
 ${CC_WEBDIR}/concrete/src/SiteInformation/SiteInformationSurvey.php
 ${CC_WEBDIR}/concrete/src/SiteInformation/SurveyInterface.php
 ${CC_WEBDIR}/concrete/src/Statistics/UsageTracker/AggregateTracker.php
@@ -10576,11 +10641,15 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230225150942.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230308163514.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230503095900.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230812015937.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230905000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20230924000000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20231002142400.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20231207100748.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240119210413.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240122172319.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240506191622.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240508000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240515173142.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
@@ -10656,6 +10725,7 @@ ${CC_WEBDIR}/concrete/src/User/Exception/UserException.php
 ${CC_WEBDIR}/concrete/src/User/Exception/UserPasswordExpiredException.php
 ${CC_WEBDIR}/concrete/src/User/Exception/UserPasswordResetException.php
 ${CC_WEBDIR}/concrete/src/User/Group/AutomatedGroup/DefaultAutomation.php
+${CC_WEBDIR}/concrete/src/User/Group/CanDeleteGroupsTrait.php
 ${CC_WEBDIR}/concrete/src/User/Group/Command/AddGroupCommand.php
 ${CC_WEBDIR}/concrete/src/User/Group/Command/AddGroupCommandHandler.php
 ${CC_WEBDIR}/concrete/src/User/Group/Command/AddGroupCommandValidator.php
@@ -20510,6 +20580,7 @@ ${CC_WEBDIR}/concrete/views/dialogs/file/upload_complete.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/usage.php
 ${CC_WEBDIR}/concrete/views/dialogs/file/versions.php
 ${CC_WEBDIR}/concrete/views/dialogs/groups/bulk/delete.php
+${CC_WEBDIR}/concrete/views/dialogs/groups/delete.php
 ${CC_WEBDIR}/concrete/views/dialogs/groups/jump_to_folder.php
 ${CC_WEBDIR}/concrete/views/dialogs/groups/search.php
 ${CC_WEBDIR}/concrete/views/dialogs/help/help.php

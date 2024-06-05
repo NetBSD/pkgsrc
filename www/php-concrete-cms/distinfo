@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/12 16:40:58 taca Exp $
+$NetBSD: distinfo,v 1.5 2024/06/05 16:17:03 taca Exp $
 
-BLAKE2s (concrete-cms-9.2.9.zip) = d21df43e58ea5142fd47964dd4ca31a9d95c3934d94ce456d5840de12f1b24b0
-SHA512 (concrete-cms-9.2.9.zip) = a5bd50f36e37f5bf21325b6f429bb0df73b3274daa7f11a6d74ab98a6ae49ce0a5ab5f312d9894146f3016b1c38193c2db1db9b51deac1c55af20b93efae373f
-Size (concrete-cms-9.2.9.zip) = 76209485 bytes
+BLAKE2s (concrete-cms-9.3.2.zip) = 9a4161c6af3d2fdc232169867d907b60df247cba72d37395f41af73d5ec895ba
+SHA512 (concrete-cms-9.3.2.zip) = d3f337f5dbc5af4406432bd12cc3461ace0ac24a9fd5993df8c1d7cd3e225e4371d6d31921c5d1a52cc3fcfacd47ab326ede6c64751cf499bc58eab560a85641
+Size (concrete-cms-9.3.2.zip) = 76443399 bytes
