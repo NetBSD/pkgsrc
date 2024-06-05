@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/02/12 10:27:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/06/05 20:27:46 hauke Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -53,6 +53,7 @@ awstats/cgi-bin/lang/awstats-se.txt
 awstats/cgi-bin/lang/awstats-si.txt
 awstats/cgi-bin/lang/awstats-sk.txt
 awstats/cgi-bin/lang/awstats-sr.txt
+awstats/cgi-bin/lang/awstats-tg.txt
 awstats/cgi-bin/lang/awstats-th.txt
 awstats/cgi-bin/lang/awstats-tr.txt
 awstats/cgi-bin/lang/awstats-tw.txt
@@ -122,6 +123,8 @@ awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/export_to_csv.pm
 awstats/cgi-bin/plugins/geoip.pm
+awstats/cgi-bin/plugins/geoip2_city.pm
+awstats/cgi-bin/plugins/geoip2_country.pm
 awstats/cgi-bin/plugins/geoip6.pm
 awstats/cgi-bin/plugins/geoip_asn_maxmind.pm
 awstats/cgi-bin/plugins/geoip_city_maxmind.pm
@@ -432,6 +435,7 @@ awstats/icon/flags/ma.png
 awstats/icon/flags/mc.png
 awstats/icon/flags/md.png
 awstats/icon/flags/me.png
+awstats/icon/flags/mf.png
 awstats/icon/flags/mg.png
 awstats/icon/flags/mil.png
 awstats/icon/flags/mk.png
@@ -503,6 +507,7 @@ awstats/icon/flags/sr.png
 awstats/icon/flags/st.png
 awstats/icon/flags/su.png
 awstats/icon/flags/sv.png
+awstats/icon/flags/sx.png
 awstats/icon/flags/sy.png
 awstats/icon/flags/sz.png
 awstats/icon/flags/tc.png
@@ -593,6 +598,25 @@ awstats/icon/mime/xls.png
 awstats/icon/mime/xsl.png
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
+awstats/icon/os/android.png
+awstats/icon/os/android10.png
+awstats/icon/os/android11.png
+awstats/icon/os/android12.png
+awstats/icon/os/android13.png
+awstats/icon/os/androidcupcake.png
+awstats/icon/os/androiddonut.png
+awstats/icon/os/androideclair.png
+awstats/icon/os/androidfroyo.png
+awstats/icon/os/androidgingerbread.png
+awstats/icon/os/androidhoneycomb.png
+awstats/icon/os/androidics.png
+awstats/icon/os/androidjellybean.png
+awstats/icon/os/androidkitkat.png
+awstats/icon/os/androidlollipop.png
+awstats/icon/os/androidmarshmallow.png
+awstats/icon/os/androidnougat.png
+awstats/icon/os/androidoreo.png
+awstats/icon/os/androidpie.png
 awstats/icon/os/apple.png
 awstats/icon/os/atari.png
 awstats/icon/os/beos.png
@@ -612,6 +636,7 @@ awstats/icon/os/dos.png
 awstats/icon/os/dreamcast.png
 awstats/icon/os/freebsd.png
 awstats/icon/os/gnu.png
+awstats/icon/os/haiku.png
 awstats/icon/os/hpux.png
 awstats/icon/os/ibm.png
 awstats/icon/os/imode.png
@@ -640,10 +665,15 @@ awstats/icon/os/linuxvine.png
 awstats/icon/os/linuxzenwalk.png
 awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
+awstats/icon/os/macos11.png
+awstats/icon/os/macos12.png
 awstats/icon/os/macosx.png
 awstats/icon/os/macosx10.png
 awstats/icon/os/macosx11.png
 awstats/icon/os/macosx12.png
+awstats/icon/os/macosx13.png
+awstats/icon/os/macosx14.png
+awstats/icon/os/macosx15.png
 awstats/icon/os/macosx4.png
 awstats/icon/os/macosx5.png
 awstats/icon/os/macosx6.png
@@ -671,6 +701,7 @@ awstats/icon/os/webtv.png
 awstats/icon/os/wii.png
 awstats/icon/os/win.png
 awstats/icon/os/win10.png
+awstats/icon/os/win11.png
 awstats/icon/os/win16.png
 awstats/icon/os/win2000.png
 awstats/icon/os/win2003.png
