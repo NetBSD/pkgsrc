@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3770 2024/06/05 06:45:37 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3771 2024/06/05 07:27:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5960,3 +5960,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed mail/thunderbird78 [nia 2024-06-05]
 	Removed mail/thunderbird78-l10n [nia 2024-06-05]
 	Updated shells/oh-my-posh to 21.2.2 [pin 2024-06-05]
+	Updated security/py-cryptography to 42.0.8 [adam 2024-06-05]
+	Updated security/py-cryptography_vectors to 42.0.8 [adam 2024-06-05]
