@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/11/12 12:00:24 gdt Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/06/05 22:33:56 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos.h
@@ -49,6 +49,7 @@ include/geos/coverage/Corner.h
 include/geos/coverage/CoverageBoundarySegmentFinder.h
 include/geos/coverage/CoverageEdge.h
 include/geos/coverage/CoverageGapFinder.h
+include/geos/coverage/CoveragePolygon.h
 include/geos/coverage/CoveragePolygonValidator.h
 include/geos/coverage/CoverageRing.h
 include/geos/coverage/CoverageRingEdges.h
@@ -417,6 +418,7 @@ include/geos/profiler.h
 include/geos/shape/fractal/HilbertCode.h
 include/geos/shape/fractal/HilbertEncoder.h
 include/geos/shape/fractal/MortonCode.h
+include/geos/simplify/ComponentJumpChecker.h
 include/geos/simplify/DouglasPeuckerLineSimplifier.h
 include/geos/simplify/DouglasPeuckerSimplifier.h
 include/geos/simplify/LineSegmentIndex.h
@@ -477,8 +479,8 @@ lib/cmake/GEOS/geos-config.cmake
 lib/cmake/GEOS/geos-targets-release.cmake
 lib/cmake/GEOS/geos-targets.cmake
 lib/libgeos.so
-lib/libgeos.so.3.12.1
+lib/libgeos.so.3.12.2
 lib/libgeos_c.so
 lib/libgeos_c.so.1
-lib/libgeos_c.so.1.18.1
+lib/libgeos_c.so.1.18.2
 lib/pkgconfig/geos.pc
