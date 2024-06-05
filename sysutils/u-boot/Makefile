@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2024/05/07 13:32:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.40 2024/06/05 01:28:42 gutteridge Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
@@ -79,6 +79,7 @@ DEPENDS+=	u-boot-rockpro64-[0-9]*:../../sysutils/u-boot-rockpro64
 DEPENDS+=	u-boot-rpi3-32-[0-9]*:../../sysutils/u-boot-rpi3-32
 DEPENDS+=	u-boot-sopine-baseboard-[0-9]*:../../sysutils/u-boot-sopine-baseboard
 DEPENDS+=	u-boot-tinker-[0-9]*:../../sysutils/u-boot-tinker
+DEPENDS+=	u-boot-udoo-neo-imx6sx-[0-9]*:../../sysutils/u-boot-udoo-neo-imx6sx
 DEPENDS+=	u-boot-zynq-zturn-[0-9]*:../../sysutils/u-boot-zynq-zturn
 DEPENDS+=	u-boot-zynq-zybo-[0-9]*:../../sysutils/u-boot-zynq-zybo
 DEPENDS+=	u-boot-zynq-zybo-z7-[0-9]*:../../sysutils/u-boot-zynq-zybo-z7
