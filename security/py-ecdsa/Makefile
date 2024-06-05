@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/04/10 11:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/06/05 22:44:58 wiz Exp $
 
 DISTNAME=	ecdsa-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
+
+PYTHON_27_ACCEPTED=	yes
 
 do-test:
 	cd ${WRKSRC}/src && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v

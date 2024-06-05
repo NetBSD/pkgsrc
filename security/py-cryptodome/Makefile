@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/01/12 13:15:47 adam Exp $
+# $NetBSD: Makefile,v 1.54 2024/06/05 22:44:58 wiz Exp $
 
 DISTNAME=	pycryptodome-3.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -18,6 +18,7 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP=	appveyor/get_wheels.sh
 
+PYTHON_27_ACCEPTED=	yes
 .include "../../lang/python/egg.mk"
 
 # Python 3 builds of this package get an extra "abi3" suffix added

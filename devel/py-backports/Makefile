@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/03/29 09:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/06/05 22:44:57 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-backports-1.0
 PKGREVISION=	2
@@ -11,6 +11,8 @@ COMMENT=	Namespace for backported Python features
 LICENSE=	python-software-foundation
 
 PY_PATCHPLIST=	yes
+
+PYTHON_27_ACCEPTED=	yes
 
 .include "../../lang/python/pyversion.mk"
 
