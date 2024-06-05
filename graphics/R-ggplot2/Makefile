@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/11 15:05:51 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/05 12:00:07 mef Exp $
 
 R_PKGNAME=	ggplot2
-R_PKGVER=	3.4.2
+R_PKGVER=	3.5.1
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
