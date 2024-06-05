@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.52 2023/12/18 08:22:51 adam Exp $
+$NetBSD: distinfo,v 1.53 2024/06/05 13:56:14 adam Exp $
 
-BLAKE2s (gnuplot-5.4.10.tar.gz) = 76605805bf82eb22387c2bda2687e5f1d481780bc12057cb33a834e31834dc0d
-SHA512 (gnuplot-5.4.10.tar.gz) = fe5226a243dad62e8617d820764dc5923e76a51a68c58a666a699110f5b5be0f5e759e0586e923472a59ca6d1b30d1093d7a65e9c1d3a36fcd33a95df36ab89f
-Size (gnuplot-5.4.10.tar.gz) = 5687565 bytes
+BLAKE2s (gnuplot-6.0.1.tar.gz) = 2737e2499b7d28bd8b77dacac5843fbec0eceab3657ae777ac745d8c36853c14
+SHA512 (gnuplot-6.0.1.tar.gz) = 47e72ac444f35e22a5de111da3333c80846226d87411a3168e45a8433a258e351ad9b6f0ba21d76f2456042b755123a697b685fd2552b4bd9edc5b97fafcbc62
+Size (gnuplot-6.0.1.tar.gz) = 7528936 bytes
 SHA1 (patch-configure) = 51813d74dc2be0e6fcc2e55fcbcbcf2b4678b954
 SHA1 (patch-src_gp__hist.h) = b1549572ba1bacad5ae76e7a5a6b632e693b74a7
-SHA1 (patch-src_plot.c) = a91ef7ff92917c54e37f3cca765e92d9857a47a5
+SHA1 (patch-src_plot.c) = e0e56991a76daadcabbd7dc54a538ddd386947ab
+SHA1 (patch-src_qtterminal_QtGnuplotApplication.h) = de110ef5be8c66a760c8d53fd71e1928e44d4462
+SHA1 (patch-src_qtterminal_QtGnuplotItems.h) = 6079c4174df9e7915b7a0a97fdf6561bec034068
+SHA1 (patch-src_qtterminal_QtGnuplotScene.h) = fd1a539afc7da994dc69e5d1a3681bf71fba72b3
+SHA1 (patch-src_qtterminal_QtGnuplotWidget.h) = 2c04c0e4ee9b564dbdd8ce7ecc9e13271e6bbadb
+SHA1 (patch-src_qtterminal_QtGnuplotWindow.h) = 505759b11e596beb316d98f42f1e56c33444bc90
+SHA1 (patch-src_qtterminal_qt__embed__example.h) = 6aebdcd91e97718ac9a4a085f19055eeaaa85fb8
 SHA1 (patch-src_readline.h) = ae138bb783a5a5e68f89850cdd861cc545399aaf
