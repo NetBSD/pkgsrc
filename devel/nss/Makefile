@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2024/05/29 16:32:16 adam Exp $
+# $NetBSD: Makefile,v 1.260 2024/06/05 03:04:35 ryoon Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -10,7 +10,7 @@ CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
+HOMEPAGE=		https://firefox-source-docs.mozilla.org/security/nss/
 COMMENT=		Libraries to support development of security-enabled applications
 LICENSE=		mpl-2.0
 
