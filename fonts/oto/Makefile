@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2017/09/03 08:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/06/05 16:59:17 ktnb Exp $
 #
 
-DISTNAME=	oto-0.4
-PKGREVISION=	4
+DISTNAME=	oto-0.5
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oto/}
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/oto/
 COMMENT=	List and modify OpenType font files
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
