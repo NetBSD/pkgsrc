@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3772 2024/06/05 07:49:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3773 2024/06/05 08:04:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -5964,3 +5964,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cryptography_vectors to 42.0.8 [adam 2024-06-05]
 	Updated security/openssl to 3.3.1 [adam 2024-06-05]
 	Updated devel/py-test to 8.2.2 [adam 2024-06-05]
+	Updated devel/py-coverage to 7.5.3 [adam 2024-06-05]
+	Updated devel/py-requests to 2.32.3 [adam 2024-06-05]
