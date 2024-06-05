@@ -1,19 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2024/01/02 00:42:03 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2024/06/05 17:17:33 ryoon Exp $
 
 * Support NetBSD for mcode backend. (not used)
-* Support LLVM 16 too.
 
 --- configure.orig	2023-03-08 06:40:01.000000000 +0000
 +++ configure
-@@ -315,6 +315,7 @@ if test $backend = llvm; then
-        check_version 13.0 $llvm_version ||
-        check_version 14.0 $llvm_version ||
-        check_version 15.0 $llvm_version ||
-+       check_version 16.0 $llvm_version ||
-        false; then
-     echo "Debugging is enabled with llvm $llvm_version"
-   else
-@@ -429,6 +430,7 @@ if test $backend = mcode; then
+@@ -429,6 +431,7 @@ if test $backend = mcode; then
      *mingw32*) ortho_flags="Flags_Windows${mcode64}" ;;
      *linux*)   ortho_flags="Flags_Linux${mcode64}" ;;
      *openbsd*) ortho_flags="Flags_Macosx${mcode64}" ;;
