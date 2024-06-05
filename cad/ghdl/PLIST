@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/06/11 03:35:39 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/06/05 17:17:33 ryoon Exp $
 bin/ghdl
 bin/ghdl1-llvm
 bin/ghwdump
@@ -201,7 +201,7 @@ lib/ghdl/vendors/config.sh
 lib/ghdl/vendors/filter.analyze.sh
 lib/ghdl/vendors/shared.psm1
 lib/ghdl/vendors/shared.sh
-lib/libghdl-3_0_0.so
+lib/libghdl-4_1_0.so
 lib/libghdl.a
 lib/libghdl.link
 lib/libghdlvpi.so
