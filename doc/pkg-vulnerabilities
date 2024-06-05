@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.202 2024/05/23 10:52:37 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.203 2024/06/05 12:16:55 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -18114,7 +18114,7 @@ gnucobol-[0-9]*		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2019-16396
 mosquitto>=1.6.0<1.6.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2019-11778
 mosquitto>=1.5.0<1.5.9	stack-overflow https://nvd.nist.gov/vuln/detail/CVE-2019-11779
 mosquitto>=1.6.0<1.6.6	stack-overflow https://nvd.nist.gov/vuln/detail/CVE-2019-11779
-grafana-[0-9]*		information-leak	https://nvd.nist.gov/vuln/detail/CVE-2019-15635
+grafana<6.2.0		information-leak	https://nvd.nist.gov/vuln/detail/CVE-2019-15635
 ming-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16705
 ImageMagick<7.0.8.36	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-16708
 ImageMagick6<6.9.10.36	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-16708
@@ -26017,3 +26017,4 @@ py{27,37,38,39,310,311,312}-requests<2.32.0	sensitive-information-disclosure	htt
 py{37,38,39,310,311,312}-mysql<1.1.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-36039
 gst-plugins1-base<1.24.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-4453
 lighttpd-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-3708
+libarchive<3.7.4	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-26256
