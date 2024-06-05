@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/17 13:29:43 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/05 12:13:51 mef Exp $
 
 R_PKGNAME=	haven
-R_PKGVER=	2.5.2
+R_PKGVER=	2.5.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
