@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2024/05/29 16:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.96 2024/06/05 22:44:58 wiz Exp $
+
+PYTHON_27_ACCEPTED=	yes
 
 PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
