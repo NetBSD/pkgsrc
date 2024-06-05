@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/17 13:29:43 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/06/05 12:13:51 mef Exp $
 
-BLAKE2s (R/haven_2.5.2.tar.gz) = 5c6cef232a92fb211a54d830d91fb52b87d2c055b968060ca7c0469df1520b7f
-SHA512 (R/haven_2.5.2.tar.gz) = 3caff535e26a341b7366b1362b13722a781cec48f22a7585728c7e3ea43599f72a234ef5707b88e4cb026bb669d4965f54a292a4683dcb0efbf42cd0541e0bec
-Size (R/haven_2.5.2.tar.gz) = 313486 bytes
+BLAKE2s (R/haven_2.5.4.tar.gz) = 627c3c5000ebab51e1cf38c0cc290e711edbb2aafb4756a25f9d34b218e044b1
+SHA512 (R/haven_2.5.4.tar.gz) = f778f099d8eb3fe4d0ae9fdc3dbe0a928603d0e4258843f6b72d7e4ecca7dff3b0ddd946c5445027e4f4187f1f5182ac874de46d4a6cb029e7cf18f51ddf8a3b
+Size (R/haven_2.5.4.tar.gz) = 313332 bytes
