@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/04/10 05:23:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/06/05 07:47:33 adam Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -4686,6 +4686,7 @@ man/man3/SSL_set_security_callback.3
 man/man3/SSL_set_security_level.3
 man/man3/SSL_set_session.3
 man/man3/SSL_set_session_id_context.3
+man/man3/SSL_set_session_secret_cb.3
 man/man3/SSL_set_shutdown.3
 man/man3/SSL_set_split_send_fragment.3
 man/man3/SSL_set_srp_server_param.3
@@ -5877,6 +5878,7 @@ man/man3/sk_TYPE_unshift.3
 man/man3/sk_TYPE_value.3
 man/man3/sk_TYPE_zero.3
 man/man3/ssl_ct_validation_cb.3
+man/man3/tls_session_secret_cb_fn.3
 man/man5/config.5
 man/man5/fips_config.5
 man/man5/x509v3_config.5
@@ -6002,6 +6004,7 @@ man/man7/OSSL_PROVIDER-base.7
 man/man7/OSSL_PROVIDER-default.7
 man/man7/OSSL_PROVIDER-legacy.7
 man/man7/OSSL_PROVIDER-null.7
+man/man7/OSSL_STORE-winstore.7
 man/man7/RAND.7
 man/man7/RSA-PSS.7
 man/man7/RSA.7
