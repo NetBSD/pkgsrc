@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2024/05/27 07:44:17 adam Exp $
+# $NetBSD: Makefile,v 1.46 2024/06/05 20:25:16 tnn Exp $
 
 DISTNAME=	pcsc-lite-2.2.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +22,9 @@ MESON_ARGS+=	-Dlibsystemd=false
 MESON_ARGS+=	-Dlibudev=false
 MESON_ARGS+=	-Dserialconfdir=${PKG_SYSCONFDIR}/reader.conf.d
 MESON_ARGS+=	-Dusbdropdir=${PREFIX}/lib/pcsc-lite/drivers
+.if ${OPSYS} != "Linux" && ${OPSYS} != "Darwin"
+MESON_ARGS+=	-Dlibusb=true	# use libusb for hotplug
+.endif
 
 MAKE_DIRS+=	${VARBASE}/pcsc-lite
 MAKE_DIRS+=	${PREFIX}/lib/pcsc-lite
