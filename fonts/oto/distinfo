@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/06/05 16:59:17 ktnb Exp $
 
-BLAKE2s (oto-0.4.tar.gz) = d58bc3884fb6b04fa14e29c351c1e466a684a5cec2fb4268c1f7aa3cd2173de7
-SHA512 (oto-0.4.tar.gz) = 3dd0e726f1da4f3ec26b69faa95656e60f4e0d570d05fbb956b6e7a6f64d31e66244458dd0c28fbab1e0855ccc2130fb1d8893598a6ac2d01b1da94ca6a2a907
-Size (oto-0.4.tar.gz) = 264000 bytes
-SHA1 (patch-aa) = a7ea2508f7d6d57a892c1f8b3f89bfdf464abd6c
+BLAKE2s (oto-0.5.tar.gz) = dd5f5efdaee12c7fa163b06c7c904ef318135b0dc6f2b137c62deeaca2fbcd32
+SHA512 (oto-0.5.tar.gz) = cfcc00f666517618ce7fda5d5ab9dc97f3df4cc7aa5ea5a3172fb3d94748a2096d662df056ebb51effad8513c7bf8b191728f9cead4d28d87959ec637bb4cd28
+Size (oto-0.5.tar.gz) = 588248 bytes
+SHA1 (patch-Makefile.in) = a8819295038a1bd3d328a2e9288fb643b132a0b5
