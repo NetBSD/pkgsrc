@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/24 14:32:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/05 17:16:08 ryoon Exp $
 
 DISTNAME=	pyrtl-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-PyRTL-0.10.2
+PKGNAME=	${PYPKGPREFIX}-PyRTL-0.11.1
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrtl/}
 
@@ -18,9 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	c # for test
 
-EGG_NAME=	${DISTNAME:tl}
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
