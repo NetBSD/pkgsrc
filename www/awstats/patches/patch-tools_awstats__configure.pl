@@ -1,8 +1,8 @@
-$NetBSD: patch-tools_awstats__configure.pl,v 1.1 2020/01/07 18:21:02 adam Exp $
+$NetBSD: patch-tools_awstats__configure.pl,v 1.2 2024/06/05 20:27:46 hauke Exp $
 
 Fix paths.
 
---- tools/awstats_configure.pl.orig	2016-08-27 18:59:01.000000000 +0000
+--- tools/awstats_configure.pl.orig	2019-06-27 09:30:40.000000000 +0000
 +++ tools/awstats_configure.pl
 @@ -28,12 +28,12 @@ $AWSTATS_MODEL_CONFIG
  $AWSTATS_DIRDATA_PATH
@@ -27,7 +27,7 @@ Fix paths.
  '/etc/httpd/httpd.conf',
  '/usr/local/apache/conf/httpd.conf',
  '/usr/local/apache2/conf/httpd.conf',
-+'@PREFIX@/etc/httpd/httpd.conf',
++'@PKG_SYSCONFBASE@/httpd/httpd.conf',
  );
  
  use vars qw/
@@ -67,9 +67,9 @@ Fix paths.
  	$AWSTATS_PATH=~s/tools[\\\/]?$//;
  	$AWSTATS_PATH=~s/[\\\/]$//;
 -	if ($AWSTATS_PATH ne '/Library/WebServer/awstats') {
--		print "Warning: AWStats standard directory on Mac OS X is '/Library/WebServer/awstats'.\n";
+-		print "Warning: AWStats standard directory on macOS is '/Library/WebServer/awstats'.\n";
 +	if ($AWSTATS_PATH ne '@PREFIX@/awstats') {
-+		print "Warning: AWStats standard directory on Mac OS X is '@PREFIX@/awstats'.\n";
++		print "Warning: AWStats standard directory on macOS is '@PREFIX@/awstats'.\n";
  		print "If you want to use standard directory, you should first move all content\n";
  		print "of AWStats distribution from current directory:\n";
  		print "$AWSTATS_PATH\n";
@@ -98,7 +98,7 @@ Fix paths.
  		print "\n".($bidon?"Now, enter":"Enter")." full config file path of your Web server.\n";
  		print "Example: /etc/httpd/httpd.conf\n";
  		print "Example: /usr/local/apache2/conf/httpd.conf\n";
-+		print "Example: @PREFIX@/etc/httpd/httpd.conf\n";
++		print "Example: @PKG_SYSCONFBASE@/httpd/httpd.conf\n";
  		print "Example: c:\\Program files\\apache group\\apache\\conf\\httpd.conf\n";
  		$bidon='';
  		while ($bidon ne 'none' && ! -f "$bidon") {
