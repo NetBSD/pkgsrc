@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.22 2020/11/20 17:25:02 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/06/05 13:56:14 adam Exp $
 bin/gnuplot
 ${PLIST.qt}libexec/gnuplot/${API_VERSION}/gnuplot_qt
 ${PLIST.x11}libexec/gnuplot/${API_VERSION}/gnuplot_x11
+man/ja/man1/gnuplot.1
 man/man1/gnuplot.1
 share/gnuplot/${API_VERSION}/PostScript/8859-1.ps
 share/gnuplot/${API_VERSION}/PostScript/8859-15.ps
