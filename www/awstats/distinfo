@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.40 2021/10/26 11:29:21 nia Exp $
+$NetBSD: distinfo,v 1.41 2024/06/05 20:27:46 hauke Exp $
 
-BLAKE2s (awstats-7.7.tar.gz) = 672eb29431d76ea6321ab43922ca6a19d53aabc11267f4c36a02ad9f583cf522
-SHA512 (awstats-7.7.tar.gz) = 8bf32b0650ef0cc900a16eead866da3847d81c2696e7a90fb49833679c958768833d781e5b4becd9b4f6748c7266e2887ff7ff33d98293ce3a0296a810fbe899
-Size (awstats-7.7.tar.gz) = 2956851 bytes
-SHA1 (patch-tools_awstats__configure.pl) = bb098d890e1ee6a0a354dd9036e57f6eb42d3945
+BLAKE2s (awstats-7.9.tar.gz) = 7b53759425440b42747ba57dc7747bdd93aa9e800aa0f167eda15b8386e8bdf8
+SHA512 (awstats-7.9.tar.gz) = 1270c7486a5558a54abc7b43cd92ffcea356ff4c00271bb824758ef4f5736eff559dd38eb7bc7bff8d45efa970a60ddcc5771762a3c3a32f003b0e39c55814d9
+Size (awstats-7.9.tar.gz) = 2948602 bytes
+SHA1 (patch-tools_awstats__configure.pl) = 71771b2b9450bd667d4f887abb5bba1c1635a879
 SHA1 (patch-wwwroot_cgi-bin_awstats.pl) = edb1fa423ae1a0608e2226b55a8cded7c0c6292f
-SHA1 (patch-wwwroot_cgi-bin_lib_search__engines.pm) = 7f9a3c1d38b8ee47d41fcb72e3aa0c172cd9ac69
