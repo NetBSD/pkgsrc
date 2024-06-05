@@ -14,6 +14,7 @@ amanda-dump-snap	If dump supports -X, use it.
 amanda-fqdn		Use FQDN's in Amanda.
 amanda-smb		Enable SMB backup support.
 amanda-ssh		Enable ssh as a transport.
+amlogic-meson		Build U-Boot for boards based on Amlogic Meson SoCs.
 amtterm-gamt		Build amtterm GUI version (gamt).
 amule-alc		Build aMule LinkCreator GUI version.
 amule-alcc		Build aMule LinkCreator for console.
