@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/11 11:23:31 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/05 11:56:12 mef Exp $
 
 R_PKGNAME=	scales
-R_PKGVER=	1.2.1
+R_PKGVER=	1.3.0
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
