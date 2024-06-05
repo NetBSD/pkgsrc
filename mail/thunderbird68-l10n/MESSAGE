@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2020/09/03 20:25:23 ryoon Exp $
-
-To change the language in Thunderbird,
-1) Enable language packs in Tools->Add-ons->Languages
-2) Go to: Edit -> Preferences ->  Advanced -> General -> Config Editor
-3) Edit the general.useragent.locale property.
-===========================================================================
