@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2024/04/05 10:42:28 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/06/05 12:33:33 wiz Exp $
 
-DISTNAME=	Glances-3.4.0.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	glances-4.0.7
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
 CATEGORIES=	sysutils python
-MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://nicolargo.github.io/glances/
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-ujson>=5.4.0:../../textproc/py-ujson
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	Glances-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -32,11 +33,13 @@ post-extract:
 	${RM} -fR ${WRKSRC}/glances/outputs/static
 
 post-install:
+	# remove pycache below pycache
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/*
+	${RMDIR} ${DESTDIR}${PREFIX}/${PYSITELIB}/glances/plugins/__pycache__/__pycache__/
 	cd ${DESTDIR}${PREFIX} && \
 	${MV} bin/glances bin/glances-${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/glances.1 ${PKGMANDIR}/man1/glances-${PYVERSSUFFIX}.1 && \
-	${MV} share/doc/glances share/doc/glances-${PYVERSSUFFIX} && \
-	${MV} share/examples/glances share/examples/glances-${PYVERSSUFFIX} || ${TRUE}
+	${MV} share/doc/glances share/doc/glances-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
