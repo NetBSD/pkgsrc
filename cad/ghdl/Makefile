@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/05/29 16:31:27 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/06/05 17:17:33 ryoon Exp $
 
-DISTNAME=	ghdl-3.0.0
-PKGREVISION=	3
+DISTNAME=	ghdl-4.1.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ghdl/}
 GITHUB_PROJECT=	ghdl
@@ -11,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://ghdl.github.io/ghdl/
 COMMENT=	Open-source simulator/compiler/analyzer for the VHDL
 LICENSE=	gnu-gpl-v2
-
-BROKEN=		"Does not support llvm 17."
 
 USE_TOOLS+=		bash:run gmake
 
