@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/17 10:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/05 22:44:57 wiz Exp $
 
 DISTNAME=	pyserial-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -18,6 +18,7 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON=	serial/*.py serial/*/*.py
 
 USE_PKG_RESOURCES=	yes
+PYTHON_27_ACCEPTED=	yes
 
 post-install:
 .for bin in pyserial-miniterm pyserial-ports

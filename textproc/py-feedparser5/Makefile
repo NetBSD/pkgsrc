@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/05 22:44:58 wiz Exp $
 
 DISTNAME=		feedparser-5.2.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=		2-clause-bsd
 PREV_PKGPATH=		textproc/py-feedparser
 
 USE_LANGUAGES=		#none
+
+PYTHON_27_ACCEPTED=	yes
 
 .include "../../lang/python/pyversion.mk"
 

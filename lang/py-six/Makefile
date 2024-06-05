@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/04/30 19:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/06/05 22:44:57 wiz Exp $
 
 DISTNAME=	six-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,7 @@ USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
 
+PYTHON_27_ACCEPTED=	yes
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} > 300

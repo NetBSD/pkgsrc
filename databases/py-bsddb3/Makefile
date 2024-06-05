@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2022/01/04 20:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/06/05 22:44:57 wiz Exp $
 
 DISTNAME=	bsddb3-6.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,8 @@ SUBST_FILES.bdb=	${WRKSRC}/setup2.py ${WRKSRC}/setup3.py
 SUBST_SED.bdb=		-e "s,dblib = 'db',dblib = '${BDB_TYPE}',g"
 
 MAKE_ENV+=		YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
+
+PYTHON_27_ACCEPTED=	yes
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} test.py
