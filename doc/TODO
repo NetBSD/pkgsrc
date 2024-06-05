@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24480 2024/06/05 12:33:43 wiz Exp $
+$NetBSD: TODO,v 1.24481 2024/06/05 16:59:43 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -1008,7 +1008,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
-	o oto-0.5
 	o owncloudclient-2.10.1
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
