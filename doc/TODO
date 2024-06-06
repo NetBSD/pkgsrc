@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24482 2024/06/06 07:36:36 wiz Exp $
+$NetBSD: TODO,v 1.24483 2024/06/06 14:18:39 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -779,7 +779,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icdprog-0.5
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
-	o icewm-3.4.0
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
