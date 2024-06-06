@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/07/24 22:21:42 khorben Exp $
-#
+# $NetBSD: Makefile,v 1.51 2024/06/06 10:48:48 jperkin Exp $
 
 DISTNAME=	irssi-icb-0.17
 CATEGORIES=	chat
@@ -11,9 +10,6 @@ MAINTAINER=	jperkin@pkgsrc.org
 HOMEPAGE=	http://www.irssi.org/
 COMMENT=	Irssi plugin to access ICB networks
 LICENSE=	gnu-gpl-v2
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../chat/irssi/Makefile.common"
 
 USE_TOOLS+=	autoreconf autoconf automake gmake
 GNU_CONFIGURE=	yes
