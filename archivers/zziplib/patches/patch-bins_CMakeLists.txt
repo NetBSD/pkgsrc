@@ -1,0 +1,22 @@
+$NetBSD: patch-bins_CMakeLists.txt,v 1.1 2024/06/06 11:59:31 jperkin Exp $
+
+Fix build when "gcov" is not available.
+
+--- bins/CMakeLists.txt.orig	2024-06-06 11:55:50.726376934 +0000
++++ bins/CMakeLists.txt
+@@ -9,7 +9,6 @@ endif(NOT CMAKE_BUILD_TYPE)
+ 
+ include ( GNUInstallDirs )
+ include ( FindPkgConfig )
+-include ( CodeCoverage )
+ 
+ # options ########################################################
+ option(BUILD_SHARED_LIBS "Build a shared library" ON)
+@@ -33,6 +32,7 @@ if(FORTIFY)
+ endif()
+ 
+ if(COVERAGE)
++include ( CodeCoverage )
+ append_coverage_compiler_flags()
+ endif()
+ 
