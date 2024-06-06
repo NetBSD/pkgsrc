@@ -1,0 +1,22 @@
+$NetBSD: patch-zzip_CMakeLists.txt,v 1.5 2024/06/06 11:59:31 jperkin Exp $
+
+Fix build when "gcov" is not available.
+
+--- zzip/CMakeLists.txt.orig	2024-06-06 11:53:41.297570014 +0000
++++ zzip/CMakeLists.txt
+@@ -13,7 +13,6 @@ include ( GNUInstallDirs )
+ include ( JoinPaths )
+ include ( CheckVerboseSymlink )
+ include ( CheckCCompilerFlag )
+-include ( CodeCoverage )
+ 
+ # options ###########################################################
+ option(BUILD_SHARED_LIBS "Build a shared library" ON)
+@@ -140,6 +139,7 @@ if(FORTIFY)
+ endif()
+ 
+ if(COVERAGE)
++include ( CodeCoverage )
+ append_coverage_compiler_flags()
+ endif()
+ 
