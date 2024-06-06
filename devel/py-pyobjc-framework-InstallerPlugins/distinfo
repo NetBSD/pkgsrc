@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/04/02 17:25:52 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/06/06 14:48:36 adam Exp $
 
-BLAKE2s (pyobjc-framework-InstallerPlugins-10.2.tar.gz) = 7fd60c10b88e83b8a2bb227229338eeb943e3debfd6c38ff596d2ef9f0bdbcbb
-SHA512 (pyobjc-framework-InstallerPlugins-10.2.tar.gz) = 12f58291794523326104f5af1585132db0668debc569ffcf418c34b7ad587c715e08bc46aa8981a8c562d2e808aa6cbc6febe484aa000e903a50fcda32b11ec2
-Size (pyobjc-framework-InstallerPlugins-10.2.tar.gz) = 26901 bytes
+BLAKE2s (pyobjc_framework_installerplugins-10.3.tar.gz) = 45b878f549f0790414ebd475594559badc2b5186e08bdfb7447f2333b86d3d07
+SHA512 (pyobjc_framework_installerplugins-10.3.tar.gz) = 80f6760820cda1afc69d65e8bb5f7834ac1222e7ba99393c6711f03ef039677ed77d773086fe33071e8181425e67a5f2c9ec904490046ebf41d6411f1a30e49a
+Size (pyobjc_framework_installerplugins-10.3.tar.gz) = 26494 bytes

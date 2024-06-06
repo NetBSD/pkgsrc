@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/04/02 17:25:50 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/06/06 14:48:34 adam Exp $
 
-BLAKE2s (pyobjc-framework-DiskArbitration-10.2.tar.gz) = 6333a1a59bee2e6ca848497b0b3248fe3eefa4919cec73c0ebece0d4c3c282d0
-SHA512 (pyobjc-framework-DiskArbitration-10.2.tar.gz) = 4c2cbf7d91f9c125cfd855b679856acd2824737ce0708c97bc598266a88018baeb3e4ebff6b02f209daae8a6d6b92221d31e982c02a1d0126a6e272e8d94604e
-Size (pyobjc-framework-DiskArbitration-10.2.tar.gz) = 19573 bytes
+BLAKE2s (pyobjc_framework_diskarbitration-10.3.tar.gz) = be35a57e0d3da36c30bbb15c99e185453a207adfe4e770c196ab8ae828422d2f
+SHA512 (pyobjc_framework_diskarbitration-10.3.tar.gz) = fdd827cb291cb8f420f1516be52013ef7ffb758b5748f9442b751ae19fbf70443d65fd2bc6ad509e71c332c2e2f4750b811cccc00a999f939682116c7a2c3080
+Size (pyobjc_framework_diskarbitration-10.3.tar.gz) = 18672 bytes

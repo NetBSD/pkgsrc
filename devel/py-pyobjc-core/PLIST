@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:02:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/06/06 14:48:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -87,6 +87,9 @@ ${PYSITELIB}/objc/_locking.py
 ${PYSITELIB}/objc/_locking.pyc
 ${PYSITELIB}/objc/_locking.pyo
 ${PYSITELIB}/objc/_machsignals.so
+${PYSITELIB}/objc/_new.py
+${PYSITELIB}/objc/_new.pyc
+${PYSITELIB}/objc/_new.pyo
 ${PYSITELIB}/objc/_objc.so
 ${PYSITELIB}/objc/_properties.py
 ${PYSITELIB}/objc/_properties.pyc

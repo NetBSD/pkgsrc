@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2023/11/19 17:03:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/06 14:48:41 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
-DISTNAME=	pyobjc-framework-PubSub-${PYOBJC_VERS}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+WHEEL_NAME=	pyobjc_framework_PubSub-${PYOBJC_VERS}
+
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-PubSub/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2023/11/19 17:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/06 14:48:29 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
-DISTNAME=	pyobjc-framework-AddressBook-${PYOBJC_VERS}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+WHEEL_NAME=	pyobjc_framework_AddressBook-${PYOBJC_VERS}
+
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-AddressBook/}
 

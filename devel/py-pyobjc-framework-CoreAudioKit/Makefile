@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/11/19 17:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:32 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
-DISTNAME=	pyobjc-framework-CoreAudioKit-${PYOBJC_VERS}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+WHEEL_NAME=	pyobjc_framework_CoreAudioKit-${PYOBJC_VERS}
+
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-CoreAudioKit/}
 

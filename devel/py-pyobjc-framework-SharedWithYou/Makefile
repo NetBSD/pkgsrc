@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/11/19 17:03:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:43 adam Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
-DISTNAME=	pyobjc-framework-SharedWithYou-${PYOBJC_VERS}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+WHEEL_NAME=	pyobjc_framework_SharedWithYou-${PYOBJC_VERS}
+
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-SharedWithYou/}
 
