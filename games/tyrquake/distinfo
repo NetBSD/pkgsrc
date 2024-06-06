@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:44:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/06/06 17:33:14 ktnb Exp $
 
-BLAKE2s (tyrquake-0.62.tar.gz) = 150540d4cb8af17b9863141341b36d656d07185e0e082c6819c5e3ee105f84d7
-SHA512 (tyrquake-0.62.tar.gz) = 16b4c5f6de2e77e09933248c030836ad07c129e8680f7f8b14e526fa865dad15cf94fce25bf2c3cc2e33da9a6ffa849475c02d0a8aa777e5037befd468d1ee4f
-Size (tyrquake-0.62.tar.gz) = 948269 bytes
-SHA1 (patch-Makefile) = 58cd46fcd266d7d766cf3f166c19dc60b1d93e72
+BLAKE2s (tyrquake-0.71.tar.gz) = a3a1030f5b17bfbe6fd3d710d71a0b5b55096f2917f440d9acb1042cf3584d13
+SHA512 (tyrquake-0.71.tar.gz) = ecceeecb43866c10c0669b4362ce2eda7a790c502764b3d644566e7637ffbde0548676c9dcea07963db0d91d83c248e3497603c0a3a2e1a12a1418a82c07179a
+Size (tyrquake-0.71.tar.gz) = 2287864 bytes
+SHA1 (patch-Makefile) = d34b44cfa4c12cdda4a67dfddccd8e2a9ed1bec2
+SHA1 (patch-include_common.h) = e5b3402ff366da2c53fbeedafac83951b4f07ca7
