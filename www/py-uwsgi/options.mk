@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2023/10/29 18:18:03 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2024/06/06 14:53:41 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-uwsgi
 PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid uwsgi-sse_offload yaml
@@ -43,7 +43,7 @@ UWSGI_SSL=                     ssl=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcre)
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 UWSGI_PCRE=                    pcre=true
 .else
 UWSGI_PCRE=                    pcre=false
