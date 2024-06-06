@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/05/28 10:59:58 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/06/06 05:01:25 adam Exp $
 
-BLAKE2s (unearth-0.15.3.tar.gz) = c7ce629227e7db0af3a101d8a8003f394322b8eeb9c9b8b4d404b4d2f783367b
-SHA512 (unearth-0.15.3.tar.gz) = 68cde14908a471e0d1d8c75eb33ec352f4d90d6f54692c21039315961b906c90220fc718881c9e0937a34677e05835108bca1298aa0c825dd0666bb84529f100
-Size (unearth-0.15.3.tar.gz) = 283726 bytes
+BLAKE2s (unearth-0.15.4.tar.gz) = 53fb151426793458ee66f75e3e9c4e9cb76fdb107ebb3d8849b479a25c5cf405
+SHA512 (unearth-0.15.4.tar.gz) = a6f759108ec0bdddafd653cff840549a57d9656af2c768b2bdf745f5e9d0688c4f14ca0bb8ed86ffa8d38cb9e0a8cdcdb076db0585df3734131f24ef0cc5c995
+Size (unearth-0.15.4.tar.gz) = 283788 bytes
