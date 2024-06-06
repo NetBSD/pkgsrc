@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/12/12 16:39:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/06/06 12:05:45 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
-DISTNAME=	certbot-dns-google-${CERTBOT_VERSION}
+DISTNAME=	certbot_dns_google-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-google/}
 
 COMMENT=	Google Cloud DNS Authenticator plugin for Certbot
