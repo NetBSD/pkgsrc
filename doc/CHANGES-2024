@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3800 2024/06/06 14:19:54 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.3801 2024/06/06 14:29:58 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6055,3 +6055,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated wm/icewm to 3.5.0 [ktnb 2024-06-06]
 	Removed wm/icewm13 [ktnb 2024-06-06]
 	Removed wm/icewm14 [ktnb 2024-06-06]	
+	Removed wm/icewm-imlib [ktnb 2024-06-06]
