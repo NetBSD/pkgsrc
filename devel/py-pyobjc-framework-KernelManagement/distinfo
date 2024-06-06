@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/02 17:25:53 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/06/06 14:48:37 adam Exp $
 
-BLAKE2s (pyobjc-framework-KernelManagement-10.2.tar.gz) = 2652dd373389e1ba1d94d4d1d48219dd8df1dc3add9054762cedc2961d6680cd
-SHA512 (pyobjc-framework-KernelManagement-10.2.tar.gz) = 76fe9070cac36435c88de3c8dd2011dd61cd90b8360fc4ec0b0138b986be8f200e42985ce3753458858ef1de1043227e5e9d027b735cf2b5a740640f13f7c5eb
-Size (pyobjc-framework-KernelManagement-10.2.tar.gz) = 11999 bytes
+BLAKE2s (pyobjc_framework_kernelmanagement-10.3.tar.gz) = 9dd7653dab7f94b962ab1ca311b917de403bc74366b34e171abf1fb7c58fb53b
+SHA512 (pyobjc_framework_kernelmanagement-10.3.tar.gz) = aa04b1d6a85838b92a2b6651f9f2783f82a8caef47ed4591b263eae50078846076da301f4d983303daf01cfbdb06286f410b5e4f9ba3ec17808e93afa366bf56
+Size (pyobjc_framework_kernelmanagement-10.3.tar.gz) = 11896 bytes
