@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24481 2024/06/05 16:59:43 ktnb Exp $
+$NetBSD: TODO,v 1.24482 2024/06/06 07:36:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -588,9 +588,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
+	o elixir-1.16.3
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.8.0
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.26
@@ -600,6 +602,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epubcheck-4.0.2
 	o epstool-3.0.9
 	o eric5-5.4.6
+	o erlang-27.0
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -682,6 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-ru-2.10.0
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
+	o gitea-1.22.0
 	o gjs-1.70.1
 	o gkrellm-2.3.11
 	o gkrellm-multiping-2.0.13
@@ -879,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libslang2-2.3.2
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libuninameslist-20240524
 	o libvirt-10.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -908,6 +913,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.266
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mapserver-7.6.2
@@ -1111,6 +1117,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
+	o prometheus-2.52.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1121,14 +1128,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-autopep8-2.2.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.4.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.53.0
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-gi-docgen-2024.1
+	o py-google-api-python-client-2.131.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
@@ -1141,19 +1153,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pkginfo-1.11.0
 	o py-postgresql-5.1.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.4.7
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-70.0.0
 	o py-simpletal-5.1
+	o py-sphinx-autoapi-3.1.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-uwsgi-2.0.26
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1170,6 +1187,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
+	o re2-20240601
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
@@ -1235,6 +1253,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o snort-2.9.17.1
 	o socket-1.2
 	o softhsm-2.6.1
+	o sonic-0.2.0
 	o sparsehash-2.0.4
 	o spcaview-20060501
 	o spiped-1.6.1b
@@ -1309,6 +1328,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-cpp-0.22.1
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1347,6 +1367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vms-empire-1.16
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.14
+	o vulkan-headers-1.3.283.0
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
