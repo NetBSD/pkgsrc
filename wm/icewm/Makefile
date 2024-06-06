@@ -1,17 +1,54 @@
-# $NetBSD: Makefile,v 1.55 2023/11/12 13:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/06/06 14:16:23 ktnb Exp $
 
-COMMENT=		Small, fast and light-weight window manager
-PKGREVISION=		5
+DISTNAME=	icewm-3.5.0
+CATEGORIES=	wm
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/}
 
-CONFLICTS+=		icewm-gnome-[0-9]* icewm-imlib-[0-9]*
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ice-wm.org/
+COMMENT=	Small, fast and light-weight window manager
+LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=	--with-imlib=no
-CONFIGURE_ARGS+=	--with-xpm=${BUILDLINK_PREFIX.libXpm}
+CONFLICTS+=	icewm-imlib-[0-9]*
 
-.include "Makefile.common"
-.include "../../x11/libXext/buildlink3.mk"
+FILESDIR=	${.CURDIR}/../../wm/icewm/files
+
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+
+CONFIGURE_ENV+=		MARKDOWN=multimarkdown
+
+CONFIGURE_ARGS+=	--enable-corefonts
+CONFIGURE_ARGS+=	--enable-i18n
+
+TOOL_DEPENDS+=	multimarkdown-[0-9]*:../../textproc/multimarkdown
+
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake perl autoreconf autoconf automake
+
+REPLACE_PERL=	contrib/icewm-menu-xrandr
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fis
+
+post-extract:
+	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
+
+.include "options.mk"
+
+.include "../../converters/fribidi/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXt?=	build
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
