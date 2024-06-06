@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/02/10 07:15:23 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/06 12:05:45 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
-DISTNAME=	certbot-dns-dnsmadeeasy-${CERTBOT_VERSION}
+DISTNAME=	certbot_dns_dnsmadeeasy-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-dnsmadeeasy/}
 
 COMMENT=	DNS Made Easy DNS Authenticator plugin for Certbot
