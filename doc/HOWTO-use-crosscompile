@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.17 2024/05/16 15:48:46 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.18 2024/06/06 02:38:02 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -84,22 +84,7 @@ SYSCONFBASE=/etc, and VARBASE=/var.
 ** Bootstrapped pkgsrc
 
 You can bootstrap pkgsrc or not; it shouldn't make a difference for
-cross-compilation.  If you do:
-
- - Replace `make' by `bmake' below.
-
- - Make sure any ABI setting in mk.conf is conditionally set
-   appropriately.
-
-   For example, bootstrap on amd64 leaves ABI=64 in mk.conf, which must
-   be left empty or undefined for earmv7hf cross-builds.  So you might
-   need:
-
-      .if ${USE_CROSS_COMPILE:tl} != "yes"
-      ABI=    64 # set for native amd64 build
-      .else
-      ABI=    # empty for earmv7hf cross-build
-      .endif
+cross-compilation.  If you do, replace `make' by `bmake' below:
 
 * Make some packages
 
