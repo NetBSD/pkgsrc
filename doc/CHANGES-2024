@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3806 2024/06/06 18:59:11 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3807 2024/06/06 19:12:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6063,3 +6063,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated news/pan to 0.159 [rhialto 2024-06-06]
 	Updated devel/protobuf to 27.1 [adam 2024-06-06]
 	Updated devel/py-protobuf to 5.27.1 [adam 2024-06-06]
+	Updated graphics/py-matplotlib to 3.9.0 [wiz 2024-06-06]
