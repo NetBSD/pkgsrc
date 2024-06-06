@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:54:33 nia Exp $
-
-BLAKE2s (tmda-1.1.12.tgz) = bde707309257aa453ceb49b4fd732d18f836dd269cedcf22080b44d2ef702625
-SHA512 (tmda-1.1.12.tgz) = 71ca7d0fed69f5a3dd30fa0f1f58d88bdf515249fc709e84c45d1929be9b2d36db1018c1bb58482b757b7006f2681d2b7abf71ab4332d6baf92239c04e7a6585
-Size (tmda-1.1.12.tgz) = 1427638 bytes
-SHA1 (patch-ab) = 4cac0a76d160eebedc06e1789728be5872113fee
