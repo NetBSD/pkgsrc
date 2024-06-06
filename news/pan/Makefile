@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2024/05/29 16:34:07 adam Exp $
+# $NetBSD: Makefile,v 1.145 2024/06/06 18:51:13 rhialto Exp $
 
-PKGNAME=		pan-0.158
-PKGREVISION=		2
+PKGNAME=		pan-0.159
 CATEGORIES=		news
 TAG=			${PKGNAME_NOREV:S/pan-/v/} # e.g. v0.151
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
@@ -17,22 +16,24 @@ TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
-USE_TOOLS+=		autoconf automake
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
+FORCE_CXX_STD=		c++17
 USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-gnutls
-CONFIGURE_ARGS+=	--with-gtkspell
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux"
 LIBS+=			-lcompat
 .endif
 
-LIBS.SunOS+=	-lsocket
+CMAKE_ARGS+=	-DENABLE_MANUAL=1
+CMAKE_ARGS+=	-DWANT_GKR=0
+CMAKE_ARGS+=	-DWANT_GMIME_CRYPTO=1
+CMAKE_ARGS+=	-DWANT_GNUTLS=1
+CMAKE_ARGS+=	-DWANT_GTKSPELL=1
+CMAKE_ARGS+=	-DWANT_NOTIFY=0
 
-pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ./autogen.sh
+LIBS.SunOS+=	-lsocket
 
 # "Build" these files out of thin air, since base msgfmt doesn't know
 # about --xml --desktop.
@@ -40,14 +41,16 @@ pre-build:
 	${CP} ${FILESDIR}/pan.desktop ${WRKSRC}/org.gnome.pan.desktop
 	${CP} ${FILESDIR}/org.gnome.pan.metainfo.xml ${WRKSRC}
 
+.include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gtkspell3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
