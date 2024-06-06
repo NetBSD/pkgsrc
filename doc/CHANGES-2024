@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3797 2024/06/06 11:03:37 jperkin Exp $
+$NetBSD: CHANGES-2024,v 1.3798 2024/06/06 12:06:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6035,3 +6035,20 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/p5-HTTP-Message to 6.46 [wiz 2024-06-06]
 	Updated misc/libreoffice to 24.2.3.2nb1 [wiz 2024-06-06]
 	Updated chat/irssi to 1.4.5 [jperkin 2024-06-06]
+	Updated security/py-acme to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-apache to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-cloudflare to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-digitalocean to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-dnsimple to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-gehirn to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-google to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-linode to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-luadns to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-nsone to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-ovh to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-rfc2136 to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-route53 to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-dns-sakuracloud to 2.11.0 [adam 2024-06-06]
+	Updated security/py-certbot-nginx to 2.11.0 [adam 2024-06-06]
