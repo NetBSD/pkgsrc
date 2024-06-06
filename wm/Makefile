@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2024/06/06 14:30:56 ktnb Exp $
+# $NetBSD: Makefile,v 1.177 2024/06/06 20:20:59 ktnb Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -47,6 +47,7 @@ SUBDIR+=	golem
 SUBDIR+=	herbstluftwm
 SUBDIR+=	i3
 SUBDIR+=	icewm
+SUBDIR+=	icewmconf
 SUBDIR+=	jwm
 SUBDIR+=	larswm
 SUBDIR+=	lefthk
