@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/07/03 19:02:59 nia Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/06 17:33:14 ktnb Exp $
 
-DISTNAME=	tyrquake-0.62
+DISTNAME=	tyrquake-0.71
 CATEGORIES=	games x11
 MASTER_SITES=	https://disenchant.net/files/engine/
 
@@ -10,8 +10,6 @@ COMMENT=	Conservative branch of Quake
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
-
-WRKSRC=		${WRKDIR}/tyrutils-${PKGVERSION_NOREV}
 
 LDFLAGS+=	${LIBOSSAUDIO}
 
