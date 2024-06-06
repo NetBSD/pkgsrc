@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/02 17:25:57 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/06/06 14:48:41 adam Exp $
 
-BLAKE2s (pyobjc-framework-ReplayKit-10.2.tar.gz) = b548e55f3e120d1082d2283e1f1abfd3d5eec1d401d63bc9fba4a74277ef2312
-SHA512 (pyobjc-framework-ReplayKit-10.2.tar.gz) = cb4d607450088dd56319d2f55d78ed5a0877e9c853e8065855624f8e522262a149e19e47712f2024d00e0dacffb867385870c10b88ab2928e11d89d077c3dd8c
-Size (pyobjc-framework-ReplayKit-10.2.tar.gz) = 24126 bytes
+BLAKE2s (pyobjc_framework_replaykit-10.3.tar.gz) = 2161f5335dc932bfcf933743401af703689e22826833d0c3f79efa5ea1a68b9a
+SHA512 (pyobjc_framework_replaykit-10.3.tar.gz) = f71cbd69221621a4d2afea570e982b928c1d925717793a9515e4ea31a8c2fda9246a6c684fff66cefc2752f8dda50b5e4e2dc8d61da878e60ecff2817e970b1b
+Size (pyobjc_framework_replaykit-10.3.tar.gz) = 23394 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/02 17:25:44 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/06/06 14:48:30 adam Exp $
 
-BLAKE2s (pyobjc-framework-AppTrackingTransparency-10.2.tar.gz) = 74ee0dbdfdeeb8ae0528976f6d731825619387dd5778f97b35f565aebb512b0b
-SHA512 (pyobjc-framework-AppTrackingTransparency-10.2.tar.gz) = a9f4b91cd388222e15a16615bbd4b22ba729c42e369a6c6cc2e3a12d83e811efbe920c03fcfe8c97f0acf66c55dbfe978d0854110349c13301787ecc9afa0dd7
-Size (pyobjc-framework-AppTrackingTransparency-10.2.tar.gz) = 12607 bytes
+BLAKE2s (pyobjc_framework_apptrackingtransparency-10.3.tar.gz) = 6dba6225598c3b5dceea6bbe8d506495aea423200e48543edaa2f3945069c4a6
+SHA512 (pyobjc_framework_apptrackingtransparency-10.3.tar.gz) = 78eb1c3113fa7a2076320031c297dc44b831ea385dfd6a37a55f25cbb130f16741938c74eb4a24d5e7d4410b783c7e6278a9dfb5f1b52b96c9534bb8ba658aeb
+Size (pyobjc_framework_apptrackingtransparency-10.3.tar.gz) = 12529 bytes

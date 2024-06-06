@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.6 2023/11/19 17:02:49 adam Exp $
+$NetBSD: patch-setup.py,v 1.7 2024/06/06 14:48:29 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2023-09-16 12:35:53.000000000 +0000
+--- setup.py.orig	2024-05-18 07:57:00.000000000 +0000
 +++ setup.py
 @@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
@@ -14,27 +14,29 @@ Avoid a hack.
      "-fexceptions",
      # Explicitly opt-out of ARC
      "-fno-objc-arc",
-@@ -89,10 +88,6 @@ CFLAGS = [
-     "-Werror",
+@@ -94,8 +93,6 @@ CFLAGS = [
      "-I/usr/include/ffi",
      "-fvisibility=hidden",
--    # "-O0",
+     # "-O0",
 -    "-g",
--    # "-O0",
--    "-O3",
-     "-flto=thin",
+-    "-O0",
+     # "-O3",
+     # "-flto=thin",
      # XXX: Use object_path_lto (during linking?)
-     "-UNDEBUG",
-@@ -113,8 +108,6 @@ OBJC_LDFLAGS = [
+@@ -112,12 +109,10 @@ OBJC_LDFLAGS = [
+     "-framework",
+     "Foundation",
+     # "-fvisibility=protected",
+-    "-g",
+     "-lffi",
      # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
      "-fvisibility=hidden",
      # "-O0",
 -    "-g",
--    "-O3",
-     "-flto=thin",
-     "-fexceptions",
- ]
-@@ -253,8 +246,6 @@ class oc_test(test.test):
+     # "-O3",
+     # "-flto=thin",
+     # "-fexceptions",
+@@ -257,8 +252,6 @@ class oc_test(test.test):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  
