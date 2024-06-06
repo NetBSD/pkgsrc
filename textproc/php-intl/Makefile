@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2024/05/29 16:34:38 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/06/06 12:08:53 jperkin Exp $
 
 MODNAME=		intl
 CATEGORIES+=		textproc
@@ -11,7 +11,7 @@ USE_PHP_EXT_PATCHES=	yes
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 CPPFLAGS+=		-DU_USING_ICU_NAMESPACE=1
 
-USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD+=		c++17
 
 USE_PHP_EXT_PATCHES=	yes
 
