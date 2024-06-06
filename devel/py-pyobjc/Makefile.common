@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2024/04/02 17:25:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2024/06/06 14:48:28 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -150,7 +150,10 @@
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 # used by devel/py-pyobjc-framework-libxpc/Makefile
 
-PYOBJC_VERS=	10.2
+PYOBJC_VERS=	10.3
+
+DISTNAME=	${WHEEL_NAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${WHEEL_NAME:S/_/-/g}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/

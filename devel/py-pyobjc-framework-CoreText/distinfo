@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/04/02 17:25:48 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/06/06 14:48:33 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreText-10.2.tar.gz) = 0c741d4d78eb8dd163d4369d44869d0158b165a3ca73c081f0f6f0ced89bd913
-SHA512 (pyobjc-framework-CoreText-10.2.tar.gz) = 1417627e18cca672287f445fa20fd93937b4241b5b764605681363f7cd8bd805a08959f2ee35abfe1f96cec0453e02c8d8bdead94a2132853e1700e57a2fcd85
-Size (pyobjc-framework-CoreText-10.2.tar.gz) = 271079 bytes
+BLAKE2s (pyobjc_framework_coretext-10.3.tar.gz) = 116dde039337f1ccf187b856856620eed655308abee8f62244adf5fac865e83c
+SHA512 (pyobjc_framework_coretext-10.3.tar.gz) = 6a4b7202f319a318ac16e51cf89b86e6dc1580dcc67c402bd5af68b64d2171d45db59ca13158d5b7866d42d4e2a9f6c37e1f71dacb74721ada13ca9c180f6211
+Size (pyobjc_framework_coretext-10.3.tar.gz) = 233401 bytes

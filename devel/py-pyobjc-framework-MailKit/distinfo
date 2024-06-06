@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/02 17:25:53 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/06/06 14:48:38 adam Exp $
 
-BLAKE2s (pyobjc-framework-MailKit-10.2.tar.gz) = 99258ebc300ce66da331a7290bd41f4eecf26c3eb5688d89e204e2999ec5a66b
-SHA512 (pyobjc-framework-MailKit-10.2.tar.gz) = 898c1e9eaed8eba5c0db2dcd36fc1ae171c4d605af61e09aedc3f0c08a80cb0981e7968b0364d80cb01c262c0c5d1b5fe2d3622e36df04ab935ac29497430d06
-Size (pyobjc-framework-MailKit-10.2.tar.gz) = 31047 bytes
+BLAKE2s (pyobjc_framework_mailkit-10.3.tar.gz) = d628e2e1d4b3f64643b375f15a7c9ea366bb0b841874ac8e7edf3a8131cf5c79
+SHA512 (pyobjc_framework_mailkit-10.3.tar.gz) = 62e6d36d2b9f9c1bac38985f1fd22cd50ca4ecb05954e9c600218de539a88088a53aa490fd551eabeb900b51a1e4db3899ba79fa5a75f49219ba26efc1bdb307
+Size (pyobjc_framework_mailkit-10.3.tar.gz) = 26017 bytes
