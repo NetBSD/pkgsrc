@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:49 nia Exp $
-
-BLAKE2s (Uliweb-0.5.tar.gz) = a719df1dd0e8f571ea07394cbbf5ed40528c9e8125eab3751a34e541610bf098
-SHA512 (Uliweb-0.5.tar.gz) = 1d19b5f8b14515a7dbe37b42409d8fff52200ec4e1861a7a37d18ce3134027d922161b7a1d3bee051080e38bccbbe4d40e046d55a28b44bac7002114cc2d9b92
-Size (Uliweb-0.5.tar.gz) = 564198 bytes
