@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2024/04/06 08:04:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2024/06/06 20:45:16 riastradh Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -15,6 +15,15 @@ BUILDLINK_ABI_DEPENDS.SDL2+=	SDL2>=2.30.2nb1
 BUILDLINK_API_DEPENDS.SDL2+=	SDL2>=2.0
 BUILDLINK_PKGSRCDIR.SDL2?=	../../devel/SDL2
 BUILDLINK_INCDIRS.SDL2+=	include/SDL2
+
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
+# sdl2-config is a shell script that we need to run at build-time to
+# learn about the target system's SDL2 toolchain options.  This is
+# grody but it may not be trivial to replace by something more sensible
+# like pkg-config.
+TOOLS_CREATE+=		sdl2-config
+TOOLS_PATH.sdl2-config=	${CROSS_DESTDIR}${LOCALBASE}/bin/sdl2-config
+.  endif
 
 pkgbase := SDL2
 .include "../../mk/pkg-build-options.mk"
