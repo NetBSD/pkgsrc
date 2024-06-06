@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2024/05/07 13:43:55 osa Exp $
+$NetBSD: distinfo,v 1.6 2024/06/06 13:17:25 jperkin Exp $
 
 BLAKE2s (njs-0.8.4.tar.gz) = 41f4ace141fd0440fc77baccb57c027cad3fa6dacbb379edf515161639ba2401
 SHA512 (njs-0.8.4.tar.gz) = 450f6866141f6f370767149c8749e84c4373f401d6d2237ca85365a851ebe7bdbd8a3c25e85a55747673e8bef2238a979dd237d5fc5c641b2f3f2cf7f26dffc8
 Size (njs-0.8.4.tar.gz) = 743910 bytes
-SHA1 (patch-auto_make) = 050838e7ad8f3103c923669ab4fdf478cab0698c
 SHA1 (patch-src_njs.pc.in) = 163acd71272008f70e95e759eb3c1539ccaabb06
