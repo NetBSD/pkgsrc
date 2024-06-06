@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/04/09 15:14:39 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/06/06 12:05:45 adam Exp $
 
-BLAKE2s (certbot-dns-cloudflare-2.10.0.tar.gz) = 8fbce45bc47826d6a2ce328be819ea676e376d94306d8b6431015b5200c33a90
-SHA512 (certbot-dns-cloudflare-2.10.0.tar.gz) = f2833940d046fc5bc6b44b1913cdf0b815384772872701ab6cd121ef713bfa7bf774bed94cad3e286588098039cf9f763a56bb403db1097be74b7ad8653c2882
-Size (certbot-dns-cloudflare-2.10.0.tar.gz) = 16150 bytes
+BLAKE2s (certbot_dns_cloudflare-2.11.0.tar.gz) = 71b00233dc786af35b8246ebc756bfbc1fb10efdb531b7af7bacf5dd5a04ebba
+SHA512 (certbot_dns_cloudflare-2.11.0.tar.gz) = a23ea7de7d1033d01bbc0f1193c29fd9add8787e79948f27c76da1d684e4515aee66a12fc4a7e6846beb61af10f2794531699c189e999d9d11a4d38dbd144e9e
+Size (certbot_dns_cloudflare-2.11.0.tar.gz) = 16208 bytes

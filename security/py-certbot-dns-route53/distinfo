@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.59 2024/04/09 15:14:41 adam Exp $
+$NetBSD: distinfo,v 1.60 2024/06/06 12:05:46 adam Exp $
 
-BLAKE2s (certbot-dns-route53-2.10.0.tar.gz) = 1edee07371506b8655b080036ff8ab54bac66b2fb8cac1ae2c0c92cb9ae46e99
-SHA512 (certbot-dns-route53-2.10.0.tar.gz) = afa418da72ff36da3d84f9c8fbe076cef5e2c0772e4647b89adef27bd20138b7bb4c05a2160f68884a6f1e105c4f3a5ebffa4c6968d29029b34d7af5c84be988
-Size (certbot-dns-route53-2.10.0.tar.gz) = 15381 bytes
+BLAKE2s (certbot_dns_route53-2.11.0.tar.gz) = 3e496092a56a240954da39762881fe37167b1c09699ffbe1a0cc7927db5d2be5
+SHA512 (certbot_dns_route53-2.11.0.tar.gz) = 8eabd97dd63d52816e15a810849a961d461f90725a1616c2335f90141e5b26280cf6d4c958fa9dddbb3c6c5a01c8143ee561b4c7b8940d7663c136123cb0a58a
+Size (certbot_dns_route53-2.11.0.tar.gz) = 15406 bytes

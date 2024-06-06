@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/02/10 07:15:23 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/06/06 12:05:45 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
-DISTNAME=	certbot-dns-gehirn-${CERTBOT_VERSION}
+DISTNAME=	certbot_dns_gehirn-${CERTBOT_VERSION}
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-gehirn/}
 
 COMMENT=	Gehirn Infrastracture Service DNS Authenticator plugin for Certbot
