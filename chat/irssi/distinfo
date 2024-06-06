@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.58 2023/05/13 13:06:46 nikita Exp $
+$NetBSD: distinfo,v 1.59 2024/06/06 11:03:28 jperkin Exp $
 
-BLAKE2s (irssi-1.4.4.tar.gz) = 0129d3331a1d33328905c890a80b76309db2c73a2f8a03f4b81c554cd823916d
-SHA512 (irssi-1.4.4.tar.gz) = d4e9f6a2cf583ef52e84a7db20ee08fe020dd9f4b5dc79262e80f666f4ca86f08401499e2368c0381d4de78ff67ba94832ef53ad227170c3455410ae0da5de8d
-Size (irssi-1.4.4.tar.gz) = 1928023 bytes
+BLAKE2s (irssi-1.4.5.tar.gz) = 5fac28beda93f44aa407cdef337bc251244d99c7403685b205e59c4ab1b4e2e9
+SHA512 (irssi-1.4.5.tar.gz) = 6569dc786e31f0a9b62a2adf9235b3d168bbf2684a79b7666baacdea3c8e82397c0b2b708cc6e29438d2158d4b323f2de1643794d6a4ed92423dda81800955cf
+Size (irssi-1.4.5.tar.gz) = 1930467 bytes
 SHA1 (patch-ad) = 8cb41612afcd6088b869235166da9a6eb37e6ec7
