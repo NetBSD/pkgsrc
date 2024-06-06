@@ -1,0 +1,24 @@
+$NetBSD: patch-src_meson.build,v 1.1 2024/06/06 19:11:59 wiz Exp $
+
+libdl does not universally exist.
+
+--- src/meson.build.orig	2024-05-19 15:28:50.816599386 +0000
++++ src/meson.build
+@@ -84,7 +84,7 @@ extension_data = {
+     'sources': files(
+       '_c_internal_utils.cpp',
+     ),
+-    'dependencies': [pybind11_dep, dl, ole32, shell32, user32],
++    'dependencies': [pybind11_dep, ole32, shell32, user32],
+   },
+   'ft2font': {
+     'subdir': 'matplotlib',
+@@ -140,7 +140,7 @@ extension_data = {
+     'include_directories': include_directories('.'),
+     # The dl/psapi libraries are needed for finding Tcl/Tk at run time.
+     'dependencies': [
+-      pybind11_dep, agg_dep.partial_dependency(includes: true), dl, comctl32, psapi,
++      pybind11_dep, agg_dep.partial_dependency(includes: true), comctl32, psapi,
+     ],
+   },
+   '_tri': {
