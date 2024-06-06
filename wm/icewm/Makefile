@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2024/06/06 14:16:23 ktnb Exp $
+# $NetBSD: Makefile,v 1.57 2024/06/06 14:29:58 ktnb Exp $
 
 DISTNAME=	icewm-3.5.0
 CATEGORIES=	wm
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ice-wm.org/
 COMMENT=	Small, fast and light-weight window manager
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS+=	icewm-imlib-[0-9]*
 
 FILESDIR=	${.CURDIR}/../../wm/icewm/files
 
