@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/29 16:35:05 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/06/07 13:46:29 gdt Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGNAME=	libkactivities4-4.13.3
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=4.13.3/src/}
 
 CONFLICTS+=	kactivities<4.13.3nb4
 
-USE_CXX_FEATURES+=	c++1
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 
