@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3815 2024/06/07 13:57:43 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3816 2024/06/07 13:59:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6080,3 +6080,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated parallel/paexec to 1.1.6 [cheusov 2024-06-07]
 	Updated lang/php81 to 8.1.29 [taca 2024-06-07]
 	Updated lang/php83 to 8.3.8 [taca 2024-06-07]
+	Updated lang/php82 to 8.2.20 [taca 2024-06-07]
