@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/06/03 14:27:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/07 09:12:26 abs Exp $
 
 DISTNAME=	mongodb-src-r4.4.28
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -187,6 +187,7 @@ _SCONS_BUILD_ARGS+=     ${SCONS_BUILD_ARGS}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
