@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/10/24 22:10:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/07 23:52:41 nikita Exp $
 
 PKGNAME=	arti-1.1.3
 PKGREVISION=	1
 DISTNAME=	arti-arti-v${PKGVERSION_NOREV}
-PKGVERSION=	1
 CATEGORIES=	net
 # TODO: modify gitlab fetch to allow hosted gitlab instances
 MASTER_SITES=	https://gitlab.torproject.org/tpo/core/arti/-/archive/arti-v${PKGVERSION_NOREV}/
@@ -43,7 +42,6 @@ FILES_SUBST+=		ARTI_GROUP=${ARTI_GROUP}
 MAKE_DIRS+=		${VARBASE}/chroot/arti
 AUTO_MKDIRS=		yes
 
-# TODO: how can we avoid this repetion for rust packages?
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
 INSTALLATION_DIRS=	${EGDIR}
@@ -52,7 +50,7 @@ INSTALLATION_DIRS=	${EGDIR}
 DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
 .endif
 
-# TODO: as well as this...
+# error: found a virtual manifest at `/usr/work/net/arti/work/arti-arti-v1.1.3/Cargo.toml` instead of a package manifest
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${PKGBASE} ${DESTDIR}${PREFIX}/bin
 
