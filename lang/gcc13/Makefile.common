@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2024/04/24 10:56:06 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/06/07 10:28:55 adam Exp $
 # used by lang/gcc13-libjit/Makefile
 
 GCC_PKGNAME=		gcc13
@@ -23,7 +23,6 @@ DISTINFO_FILE=		${.CURDIR}/../../lang/gcc13/distinfo
 MKPIE_SUPPORTED=	no
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
-NOT_FOR_PLATFORM+=	Darwin-*-aarch64
 NOT_FOR_PLATFORM+=	Interix-*-*
 
 USE_LANGUAGES=		c c++
@@ -56,13 +55,13 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 .include "options.mk"
 
-#.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-#BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
-#CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-#PATCHFILES=		gcc-13.2.0-arm.diff
-#PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/1d184289/gcc/
-#PATCH_DIST_STRIP=	-p1
-#.endif
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+PATCHFILES=		gcc-13.3.0.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
+PATCH_DIST_STRIP=	-p1
+.endif
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
