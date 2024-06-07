@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2023/05/10 16:30:23 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2024/06/07 15:33:17 abs Exp $
 
-DISTNAME=	unifi-6.5.55
+DISTNAME=	unifi-8.2.93
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
 
 # Updates must be tested to not only build but actually function under
-# at least NetBSD 9/amd64 with actual UBNT hardware.
+# at least NetBSD 10/amd64 with actual UBNT hardware.
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ubnt.com/download/unifi/
 # The content that belongs in NEWS are often in a blog.
@@ -48,8 +48,7 @@ INSTALLATION_DIRS=	unifi share/doc/unifi
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
 # native libaries.
-# NetBSD openjdk11 fails to listen to https, so disable for now
-PKG_JVMS_ACCEPTED=	openjdk8
+PKG_JVMS_ACCEPTED=	openjdk17
 PKGSRC_MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
@@ -82,23 +81,23 @@ post-extract:
 # as far as we know, these are for cloud access to your controller
 	ls -R ${WRKDIR}/UniFi/lib/native
 	rm -rf ${WRKDIR}/UniFi/lib/native/Windows
-.if (${OPSYS} != "Linux")
+.if ${OPSYS} != "Linux"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux
 .else
-.  if (${MACHINE_ARCH} != "aarch64")
+.  if ${MACHINE_ARCH} != "aarch64"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/aarch64
 .  endif
-.  if (${MACHINE_ARCH} != "earmv7")
+.  if ${MACHINE_ARCH} != "earmv7"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/armv7
 .  endif
-.  if (${MACHINE_ARCH} != "x86_64")
+.  if ${MACHINE_ARCH} != "x86_64"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Linux/x86_64
 .  endif
 .endif
-.if (${OPSYS} != "Darwin")
+.if ${OPSYS} != "Darwin"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Mac
 .else
-.  if (${MACHINE_ARCH} != "x86_64")
+.  if ${MACHINE_ARCH} != "x86_64"
 	rm -rf ${WRKDIR}/UniFi/lib/native/Mac/x86_64
 .  endif
 .endif
