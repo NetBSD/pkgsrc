@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2022/12/23 13:17:38 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/07 19:57:36 ryoon Exp $
 
-DISTNAME=	noto-fonts
-PKGNAME=	noto-fonts-20221206
+DISTNAME=	notofonts.github.io-noto-monthly-release-24.6.1
+PKGNAME=	noto-fonts-20240601
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notofonts/}
-GITHUB_PROJECT=	noto-fonts
-GITHUB_TAG=	20bc5918912503bc1537a407a694738c33c048aa
+GITHUB_PROJECT=	notofonts.github.io
+GITHUB_TAG=	noto-monthly-release-24.6.1
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/notofonts/noto-fonts/
+HOMEPAGE=	https://notofonts.github.io/
 COMMENT=	Google Noto fonts, except CJK and Emoji
 LICENSE=	ofl-v1.1
 
@@ -25,16 +25,14 @@ INSTALLATION_DIRS=	share/fonts/X11/TTF
 
 do-install:
 	# `${WRKSRC}/hinted/ttf/Noto*/*.ttf` causes too long argument error.
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/Arimo/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/Cousine/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoK*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoM*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoN*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoR*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoSans*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoSerif*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/NotoT*/*.ttf ${DESTDIR}${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/hinted/ttf/Tinos/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoF*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoK*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoN*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoR*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoSans*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoSerif*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoT*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoZ*/hinted/ttf/*.ttf ${DESTDIR}${FONTDIR}
 
 # Do not install all ttf/otf font files.
 #.include "../../mk/fonts.mk"
