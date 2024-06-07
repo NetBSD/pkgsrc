@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1 2022/09/26 16:07:06 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2024/06/07 20:00:15 ryoon Exp $
 
-BLAKE2s (noto-cjk-fonts-20220816/NotoSansCJK-VF.otf.ttc) = 9979cc93537c61d76fc2894d42df1707138e4f74b0b6af651cbcc4715ad99089
-SHA512 (noto-cjk-fonts-20220816/NotoSansCJK-VF.otf.ttc) = b44200c0b8149004150cba40204af489b1275310f9b574727bebf13e4c3036a99447636a158af1b660a49049325cc1c803ea02b110fa1f58b666808b08dbfd52
-Size (noto-cjk-fonts-20220816/NotoSansCJK-VF.otf.ttc) = 32682580 bytes
-BLAKE2s (noto-cjk-fonts-20220816/NotoSansMonoCJK-VF.otf.ttc) = 5230a06a525a01000378375f3f54c5f43462348409f38143171bbd5f92707617
-SHA512 (noto-cjk-fonts-20220816/NotoSansMonoCJK-VF.otf.ttc) = 840c83fd069c83f7475a12448dfb0bfc6689d5227a7e390e9b7de52b427632f5b1c85f53084d4bd2d53ec3e38d5629e0455242d89ac98fbaf3d0c24fe8ba723b
-Size (noto-cjk-fonts-20220816/NotoSansMonoCJK-VF.otf.ttc) = 31908332 bytes
-BLAKE2s (noto-cjk-fonts-20220816/NotoSerifCJK-VF.otf.ttc) = 8ce9adf131b483d45e858efbed83ba3dd07830eede1452ecde64f44308397a94
-SHA512 (noto-cjk-fonts-20220816/NotoSerifCJK-VF.otf.ttc) = fa6c1ef94ed9d30b046d20eb360311b630e1f8d727288d3f1d73751f4f6d4731558fdce895d2235fc86bbda1b5e52c9c48a4f5fb604a0dbb3d93a71dde749f50
-Size (noto-cjk-fonts-20220816/NotoSerifCJK-VF.otf.ttc) = 56909616 bytes
+BLAKE2s (noto-cjk-fonts-20240508/NotoSansCJK-VF.otf.ttc) = 9979cc93537c61d76fc2894d42df1707138e4f74b0b6af651cbcc4715ad99089
+SHA512 (noto-cjk-fonts-20240508/NotoSansCJK-VF.otf.ttc) = b44200c0b8149004150cba40204af489b1275310f9b574727bebf13e4c3036a99447636a158af1b660a49049325cc1c803ea02b110fa1f58b666808b08dbfd52
+Size (noto-cjk-fonts-20240508/NotoSansCJK-VF.otf.ttc) = 32682580 bytes
+BLAKE2s (noto-cjk-fonts-20240508/NotoSansMonoCJK-VF.otf.ttc) = 5230a06a525a01000378375f3f54c5f43462348409f38143171bbd5f92707617
+SHA512 (noto-cjk-fonts-20240508/NotoSansMonoCJK-VF.otf.ttc) = 840c83fd069c83f7475a12448dfb0bfc6689d5227a7e390e9b7de52b427632f5b1c85f53084d4bd2d53ec3e38d5629e0455242d89ac98fbaf3d0c24fe8ba723b
+Size (noto-cjk-fonts-20240508/NotoSansMonoCJK-VF.otf.ttc) = 31908332 bytes
+BLAKE2s (noto-cjk-fonts-20240508/NotoSerifCJK-VF.otf.ttc) = f483bdc9d9e2559acacca55faa6f7b7d23693ac0ffd0a14e1bac52bffc0796a6
+SHA512 (noto-cjk-fonts-20240508/NotoSerifCJK-VF.otf.ttc) = 87533362980d2447ca798d453999f0e919833e09fe5090bf7915471c40fa82dd653eac6162657240e3c542a6d69be04747966a96c05c59b4ebebfa54cd9769a6
+Size (noto-cjk-fonts-20240508/NotoSerifCJK-VF.otf.ttc) = 56820256 bytes
