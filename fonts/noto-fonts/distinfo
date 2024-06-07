@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/12/23 13:17:38 nikita Exp $
+$NetBSD: distinfo,v 1.3 2024/06/07 19:57:36 ryoon Exp $
 
-BLAKE2s (noto-fonts-20bc5918912503bc1537a407a694738c33c048aa.tar.gz) = d619620bfeb9ad58ea9b1809bd046b10790f049fe761f405ed7700292ef297e2
-SHA512 (noto-fonts-20bc5918912503bc1537a407a694738c33c048aa.tar.gz) = cc087f7cf4357ddda922e2ed0eb2071e5f0173b3779bb620813d71c7cc89c9c2a30a0c2d150b928071efc839c0cb1a142ed7ea28018c5b4879cbf87b6807d31f
-Size (noto-fonts-20bc5918912503bc1537a407a694738c33c048aa.tar.gz) = 860823783 bytes
+BLAKE2s (notofonts.github.io-noto-monthly-release-24.6.1.tar.gz) = 9ca8432dbb568e4e2b8a788056bdd7f784b696365f87299b950b09fd3dc60caf
+SHA512 (notofonts.github.io-noto-monthly-release-24.6.1.tar.gz) = 0017569bbe71f981d44a12ebb570491cda81606751f7224c77c657c0e436814af804a0694fb17f70c039fc355d1c39b3560393bec9197ff84937d8909ba23e13
+Size (notofonts.github.io-noto-monthly-release-24.6.1.tar.gz) = 1067823129 bytes
