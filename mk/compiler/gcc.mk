@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.276 2024/06/07 10:49:54 gdt Exp $
+# $NetBSD: gcc.mk,v 1.277 2024/06/07 11:05:31 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -157,10 +157,12 @@ GCC_REQD+=	2.8.0
 # Most of the time, GCC adds support for features of new C and C++
 # standards incrementally; we define USE_CXX_FEATURES=c++XX as
 # intending to require a compiler that fully supports the standard.
-# We tend towards a gcc version included in a NetBSD release, because
-# those are known to work well, and because it is simpler to limit
-# selection to fewer versions.  This tendency is much stronger for C++
-# versions, and less so for c11.
+#
+# We of course only choose versions in pkgsrc, and tend towards a gcc
+# version included in a NetBSD release, because those are known to
+# work well, and because it is simpler to limit selection to fewer
+# versions.  This tendency is much stronger for C++ versions, and less
+# so for c11.
 #
 # Thus we tend to:
 #   - gcc 4.8, in NetBSD 7 
@@ -179,40 +181,48 @@ GCC_REQD+=	2.8.0
 #
 
 .if !empty(USE_CXX_FEATURES:Mc++23)
-# GCC 11 is the first version to support -std=c++23,
-# but it was never packaged for pkgsrc, so use GCC 12 instead.
+# gcc documents that 14 is required.
+
+# \todo Change to 14 or justify.
 GCC_REQD+=	12
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
+# gcc documents that 11 is required, with a few perhaps-obscure
+# features requiring 12.
+
 # GCC 10 is chosen because it is in NetBSD 10,
 # so is fairly battle-hardened with pkgsrc.
 #
 # We hope that it remains OK for most C++20 in the future...
+# \todo Change to 11 or justify.
 GCC_REQD+=	10
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++17)
+# gcc documents that 7 is required, except for a perhaps-obscure
+# template feature.  However, <charconv> is part of c++17 and that
+# requires gcc 8.
+
 # GCC 7 is chosen because it is in NetBSD 9, so is fairly
 # battle-hardened with pkgsrc.
 GCC_REQD+=	7
+# \todo Change to 8 (<charconv> is not so odd) or justify.
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++14)
+# gcc documents that 5 is required.
 # GCC 5 is chosen because it is in NetBSD 8, so is fairly
 # battle-hardened with pkgsrc.
 GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++11)
-# While gcc "technically" added experimental C++11 support earlier
-# (and there was previously a lot of cargo-culted GCC_REQD in pkgsrc
-# as a result), earlier compiler versions are not so well-tested any more.
-#
+# gcc documents that 4.8.1 is required.  (In addition, versions before
+# 4.7 do not accept -std=c++11 and are thus not acceptable.)
+
 # GCC 4.8 was the version in NetBSD 7 and CentOS 7, so is fairly
 # battle-hardened with pkgsrc.
-#
-# Versions before GCC 4.7 do not accept -std=c++11.
 GCC_REQD+=	4.8
 .endif
 
