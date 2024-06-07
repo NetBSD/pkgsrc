@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/02/16 17:51:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/06/07 20:35:50 adam Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -71,6 +71,7 @@ man/man3/pcre2_set_glob_escape.3
 man/man3/pcre2_set_glob_separator.3
 man/man3/pcre2_set_heap_limit.3
 man/man3/pcre2_set_match_limit.3
+man/man3/pcre2_set_max_pattern_compiled_length.3
 man/man3/pcre2_set_max_pattern_length.3
 man/man3/pcre2_set_max_varlookbehind.3
 man/man3/pcre2_set_newline.3
@@ -174,6 +175,7 @@ share/doc/pcre2/html/pcre2_set_glob_escape.html
 share/doc/pcre2/html/pcre2_set_glob_separator.html
 share/doc/pcre2/html/pcre2_set_heap_limit.html
 share/doc/pcre2/html/pcre2_set_match_limit.html
+share/doc/pcre2/html/pcre2_set_max_pattern_compiled_length.html
 share/doc/pcre2/html/pcre2_set_max_pattern_length.html
 share/doc/pcre2/html/pcre2_set_max_varlookbehind.html
 share/doc/pcre2/html/pcre2_set_newline.html
