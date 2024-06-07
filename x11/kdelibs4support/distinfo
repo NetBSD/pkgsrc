@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:33 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:49 markd Exp $
 
-BLAKE2s (kdelibs4support-5.114.0.tar.xz) = d3c7370a3519c9d1f9dc75f6eff38f68197d2ee8f0db989a3b03a83517926b9c
-SHA512 (kdelibs4support-5.114.0.tar.xz) = c52460602c12a74ac5082abda9a4d2a9ea84d990065404adad343a6dd1070071c9bbeaf490166bb6082052002d43fa50b90cdf4c1db395ea3c32522cd05ee13c
-Size (kdelibs4support-5.114.0.tar.xz) = 3722276 bytes
+BLAKE2s (kdelibs4support-5.116.0.tar.xz) = a66a804e6baa841bed7ad9541427048e3561a396e0a0000cc7e2dbfbd38e5fab
+SHA512 (kdelibs4support-5.116.0.tar.xz) = 87cdc59da0fcaccc48012cf3c34ab3707c2eb159effd17e76b7c24a81feebebef3a27aa1d25dadfb0d5ee7efbc39b2fa7cafc6090476f5ec4cb8e9be616050be
+Size (kdelibs4support-5.116.0.tar.xz) = 3706116 bytes
 SHA1 (patch-autotests_klocaletest.cpp) = 50f1c0b345bd872a5966d4265c0ecae72d3cbc82

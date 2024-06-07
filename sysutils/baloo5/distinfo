@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2024/02/06 10:46:30 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/06/07 23:55:46 markd Exp $
 
-BLAKE2s (baloo-5.114.0.tar.xz) = 62ba2c7273084300ad6d3b7a4ded00704ab9d394b7a0fee81f2bb3c4c52ce9a9
-SHA512 (baloo-5.114.0.tar.xz) = fea17a87ae5dccd25fb0ca05ba1cac749afd6a7f326ee45a3c48bbdb251268c2f20df44cb5ea0a5d5454627ddf25f19cddeca998fd0225322adf5429293aa813
-Size (baloo-5.114.0.tar.xz) = 311000 bytes
+BLAKE2s (baloo-5.116.0.tar.xz) = a4766a95340e73ce0b5f03cd3b1e688ef6bda1247f0ca98347e27129aaf2b289
+SHA512 (baloo-5.116.0.tar.xz) = 956a07009fa83f852fa88a7bcabffc73343072e30650cc7000e385f73e467aa2c7c440b41715405fc0a59d68ad8e533c2587e06de8475f24b49e1fa35d8b2486
+Size (baloo-5.116.0.tar.xz) = 311500 bytes
 SHA1 (patch-CMakeLists.txt) = 6ee8651d42703842cae8a58823f0fd758142fb52
 SHA1 (patch-src_file_timeestimator.cpp) = 9da24f4493911c543cf1f3f65c63c8cc3a96e4f9

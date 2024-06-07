@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:35 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:50 markd Exp $
 
-BLAKE2s (kwindowsystem-5.114.0.tar.xz) = 0f91f5bd812343c1e3edee40a31b05cca78eec88c6ca5f4e948041a1836fe20b
-SHA512 (kwindowsystem-5.114.0.tar.xz) = e05940d13279bad53148608dd482a255547a6fc206732531f53c3c42c7df9ce22eb9807eb3f075ffe8b5830893200be78cd787e7e16e2d14f8dac5088f1f82b6
-Size (kwindowsystem-5.114.0.tar.xz) = 2406512 bytes
+BLAKE2s (kwindowsystem-5.116.0.tar.xz) = 7d1d696e73691330c9c78de34e36be097d0e688fffd0db840b00ad42ae65eab3
+SHA512 (kwindowsystem-5.116.0.tar.xz) = 1b8d45ee0a09161b45f62e6ba4f200f3c2ad937c20eedc03bf65c3a788a5311727ec2a1634db9e1b1208b8ecbe4158273d11c97924a86059a06d3a24d1201157
+Size (kwindowsystem-5.116.0.tar.xz) = 2406688 bytes

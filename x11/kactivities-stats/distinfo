@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:33 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:48 markd Exp $
 
-BLAKE2s (kactivities-stats-5.114.0.tar.xz) = fb28387c27bd6b6a10930a050e53aee4e14217b6a8496ec64b5f70fa56df8425
-SHA512 (kactivities-stats-5.114.0.tar.xz) = 3bf09e88dc8c4d5de860f0dded223b4f00757e58d740621220584ce7b3db28d217987c2d11dc244a3661d0827e135341a007b1840c47964ef0ad5ca60743319b
-Size (kactivities-stats-5.114.0.tar.xz) = 84612 bytes
+BLAKE2s (kactivities-stats-5.116.0.tar.xz) = 0adec5ceeaf7d602f5a39512bb0f32aac07a3a3996607460a1ba57a8450f2d06
+SHA512 (kactivities-stats-5.116.0.tar.xz) = a50b84e989aecc551064c28f8e330ebc9054edc459cf085924ea61f17fcce8fa5037c39c485c5a58acdab5d93898e34648c292f91c450d075a09d0a0a18a610e
+Size (kactivities-stats-5.116.0.tar.xz) = 84584 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:24 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:42 markd Exp $
 
-BLAKE2s (kcrash-5.114.0.tar.xz) = c5f65993dffe8114dcd88675cffda9abfe5d00b14531a4298504124ea106c864
-SHA512 (kcrash-5.114.0.tar.xz) = 824143d06aeba59f17b17f5fe02e56eee939051d4e8760f92768eb3ce6bf1d4420e13f111fb324d3bcc846ef6faa0aab2f0a3a12a81e3e92fd76f55594502166
-Size (kcrash-5.114.0.tar.xz) = 28292 bytes
+BLAKE2s (kcrash-5.116.0.tar.xz) = d6e9dcf3cbdf6ae8ce7149b622a1cf2f71d3c3b5b27c3d151fc288c963ee6fab
+SHA512 (kcrash-5.116.0.tar.xz) = 051ad694f0db1463c1105d3ff37221633a91c282850b6e295dadf07a323ba610046650c7d2e3b45dcd56214709b58989360b727b16dca0ca44dbc9b143f68e07
+Size (kcrash-5.116.0.tar.xz) = 28288 bytes

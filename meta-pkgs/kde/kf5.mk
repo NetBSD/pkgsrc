@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.17 2024/02/06 10:30:14 markd Exp $
+# $NetBSD: kf5.mk,v 1.18 2024/06/07 23:55:42 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -24,7 +24,6 @@
 # used by devel/kwayland/Makefile
 # used by devel/purpose/Makefile
 # used by devel/threadweaver/Makefile
-# used by graphics/breeze-icons/Makefile
 # used by graphics/kiconthemes/Makefile
 # used by graphics/kimageformats/Makefile
 # used by graphics/kplotting/Makefile
@@ -78,7 +77,7 @@
 # used by x11/plasma-framework/Makefile
 # used by x11/qqc2-desktop-style/Makefile
 
-KF5VER=		5.114.0
+KF5VER=		5.116.0
 CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/}
 EXTRACT_SUFX=	.tar.xz

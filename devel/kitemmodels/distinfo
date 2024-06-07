@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:25 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:43 markd Exp $
 
-BLAKE2s (kitemmodels-5.114.0.tar.xz) = 7022e6e7725b94e1f33fc47d3597eef72d977b864d2d500e6bdfb60cec87cf11
-SHA512 (kitemmodels-5.114.0.tar.xz) = 9b59e1ea19eb32c9aa739475cd39f822d3d3adf1e1f5d98d7f54732df0a102129079f6892e2a2b040b5420cb5e7145497f6222327954f00b919f8a901b2f13e7
-Size (kitemmodels-5.114.0.tar.xz) = 407268 bytes
+BLAKE2s (kitemmodels-5.116.0.tar.xz) = 50851f105312e0b8ebca97e21d1c8741c778b4b372ce6c90e2f9b02c85420268
+SHA512 (kitemmodels-5.116.0.tar.xz) = ef3ee4ba45fdf8fac395f3d678421fccb7bfdafec2dacaca203dacf90f65548e31d2d0eb5165c4cb2ce5cf71e4bca289c1af9c9e8dead710f9a19d7831db3bfb
+Size (kitemmodels-5.116.0.tar.xz) = 407312 bytes

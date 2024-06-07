@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2024/02/06 10:46:31 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/06/07 23:55:47 markd Exp $
 
-BLAKE2s (kapidox-5.114.0.tar.xz) = bc8c882d0197a151c9865ec158eb501d493e8cae2a10cc3d9b9d1d931742a2fa
-SHA512 (kapidox-5.114.0.tar.xz) = 2f10a2a87d6dad51aa3869e42e2de32b2db5df9d60511a14534d16bea81fd8123b23702c16304295c5c57e1a7764be810ca85d842d437bc1e0f4800ab0224da9
-Size (kapidox-5.114.0.tar.xz) = 198832 bytes
+BLAKE2s (kapidox-5.116.0.tar.xz) = aba3130d6cd56e1d9d58c4dbae984bc314a267a879dcd88ff346cae8a3d5cfba
+SHA512 (kapidox-5.116.0.tar.xz) = 1c7367125f4538d599ea3779aa6e307edd02c2e55ae87e30d02ad4b4210fe3a72558d7029fdb089b11fe2ea1b418e90e50aebd05fdd647ed00d6d4fc6b1d890b
+Size (kapidox-5.116.0.tar.xz) = 198876 bytes
 SHA1 (patch-CMakeLists.txt) = 515541125a0c1f52874fc13a94e3bab8b5f2304a
