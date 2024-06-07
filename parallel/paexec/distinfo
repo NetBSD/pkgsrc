@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/05/29 18:39:22 cheusov Exp $
+$NetBSD: distinfo,v 1.19 2024/06/07 12:27:25 cheusov Exp $
 
-BLAKE2s (paexec-1.1.5.tar.gz) = 159202acf422dc987843d4e864e25915b125e3d843645592f1d8ec2d09c36607
-SHA512 (paexec-1.1.5.tar.gz) = be1362546f59ac367a70c84db812223e3b9dd31c0a7b095e4692c7e2acf3ca1ce917ad6b22cee387a420a6634d6c649ba7967be61847cce0d6a5782371407648
-Size (paexec-1.1.5.tar.gz) = 152300 bytes
+BLAKE2s (paexec-1.1.6.tar.gz) = eb381686d72ae21c765637c29cba964e8ef711085387e9abd297942c9d2ebf3c
+SHA512 (paexec-1.1.6.tar.gz) = 0cebe2ad13661576b10d9f94a3ce99ab5c2514a28d61faf67ab689a165534c77cb4718a9c3c82ae9132b85b1cfb140cbbd0061f199eb9d0621b4f6add56d3f2d
+Size (paexec-1.1.6.tar.gz) = 153816 bytes
