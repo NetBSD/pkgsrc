@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.2 2023/08/25 18:55:33 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/06/07 10:28:55 adam Exp $
 
-BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
-SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
-Size (gcc-13.2.0.tar.xz) = 87858592 bytes
+BLAKE2s (gcc-13.3.0.diff) = 9b002a64761cf2f2a6a9a8c8decff8408380c0fe94c2d3013e4d84299bacf814
+SHA512 (gcc-13.3.0.diff) = 6165b6201f4ef94ee254ea40410911f5e5e1a05d80d4da2fce90b3db94000c3d5c5a28c9a4ad1a43387faae68d94fbef8e4d24e1ff049b9c0014c00f6f50757b
+Size (gcc-13.3.0.diff) = 570896 bytes
+BLAKE2s (gcc-13.3.0.tar.xz) = d204b8987b4780b569f28226cbfff34ae27124e529857c36ff90d5d40ef0b511
+SHA512 (gcc-13.3.0.tar.xz) = ed5f2f4c6ed2c796fcf2c93707159e9dbd3ddb1ba063d549804dd68cdabbb6d550985ae1c8465ae9a336cfe29274a6eb0f42e21924360574ebd8e5d5c7c9a801
+Size (gcc-13.3.0.tar.xz) = 87909952 bytes
 BLAKE2s (isl-0.24.tar.xz) = a3013b0d39b7fe68a1b3e15dc7e925b347d555348ee946a80f5319a76973cd61
 SHA512 (isl-0.24.tar.xz) = ff6bdcff839e1cd473f2a0c1e4dd4a3612ec6fee4544ccbc62b530a7248db2cf93b4b99bf493a86ddf2aba00e768927265d5d411f92061ea85fd7929073428e8
 Size (isl-0.24.tar.xz) = 1930956 bytes
@@ -25,4 +28,4 @@ SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
-SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6
+SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 891ec8488516592ea2065509b7310c55d7a367ad

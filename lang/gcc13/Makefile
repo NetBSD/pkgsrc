@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/03 13:22:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/07 10:28:55 adam Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC13_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -6,7 +6,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC13_DIST_VERSION}
 ## PKGREVISION of this package!
 COMMENT=	The GNU Compiler Collection (GCC) - 13.0 Release Series
 
-LANGS=			c
+LANGS=		c
 
 .include "Makefile.common"
 
