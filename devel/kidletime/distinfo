@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:25 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:43 markd Exp $
 
-BLAKE2s (kidletime-5.114.0.tar.xz) = 0ce8c7c5798f21fb42ddbf41af07ca9dffed15c37210c752b44248982f391c14
-SHA512 (kidletime-5.114.0.tar.xz) = 5d2a2282a28ca0082adf00244a67602cedbf6988947dc736942156cdfb2d913018a0ad4ebb03d0a9f000ff3da18ce1f19fbb3fba0ea7e7e217df9679ecdb301e
-Size (kidletime-5.114.0.tar.xz) = 30936 bytes
+BLAKE2s (kidletime-5.116.0.tar.xz) = 38bbb038537810d2788e66d2a7b72e27059eb2344dc5cc05f7265d16e3e5e1b5
+SHA512 (kidletime-5.116.0.tar.xz) = a8172a069266e523cc07f37ce1f4c5f65a421c99eb314e26f68cc32630b8f0da783beee9d2ffe2740113d60ae9b4c280ca9de8bb89bd5db8e56c9b31172ec408
+Size (kidletime-5.116.0.tar.xz) = 30928 bytes

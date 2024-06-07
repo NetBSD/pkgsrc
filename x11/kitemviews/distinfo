@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2024/02/28 11:13:18 jperkin Exp $
+$NetBSD: distinfo,v 1.19 2024/06/07 23:55:49 markd Exp $
 
-BLAKE2s (kitemviews-5.114.0.tar.xz) = b1946404734b304ede97c9bbcb80bb8610c4cac75b686111230cd647a7b47b79
-SHA512 (kitemviews-5.114.0.tar.xz) = f431e0db8a0245bea10f76583b259314b2378fa91a89072db516a50cd1835a4526df34f32a9ed2eef8453226f9205f8d96beefd8727ff648cee4379fd1bc54a5
-Size (kitemviews-5.114.0.tar.xz) = 2264800 bytes
+BLAKE2s (kitemviews-5.116.0.tar.xz) = 553e71796a57bc713d3e0a43ce0fda2100d0d8356e907468755b89681ab66899
+SHA512 (kitemviews-5.116.0.tar.xz) = 631454b73785d131bcdf7631939db7955f3ec158078787657e74953818e5df1ad7757065ad00336b6efc898e4cf35876541201fac0727875a5ac7f3abfc3e9d7
+Size (kitemviews-5.116.0.tar.xz) = 2265016 bytes
 SHA1 (patch-src_kcategorydrawer.cpp) = 866d2f7de33e9495a43de26bdc6b8ad4ff2d9d17
