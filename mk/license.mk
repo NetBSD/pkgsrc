@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.119 2024/05/31 09:41:25 micha Exp $
+# $NetBSD: license.mk,v 1.120 2024/06/07 12:26:10 micha Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -175,6 +175,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	sissl-1.1 \
 	sleepycat-public \
 	unicode \
+	unicode-v3 \
 	unlicense \
 	vera-ttf-license \
 	w3c \
