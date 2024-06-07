@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/02/06 10:46:26 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/06/07 23:55:44 markd Exp $
 
-BLAKE2s (kross-5.114.0.tar.xz) = b2f386b7a272c8893039da69dd6c9a0205f2f403b882061f1841dfd1a4df0e20
-SHA512 (kross-5.114.0.tar.xz) = e7111c59e9ba423096e1d59b09892dc389330d575eb7e994e370d7e2474788743b26cf67ed1b22b0aba3215e91f0bf8ee88a9dbaf9f9aa98e228f82da44466eb
-Size (kross-5.114.0.tar.xz) = 2440100 bytes
+BLAKE2s (kross-5.116.0.tar.xz) = e2653d603a17b83aebbeb3d70a9621135f23f4394337495639dc2eab952ca5a9
+SHA512 (kross-5.116.0.tar.xz) = cc6b3e4da7c5ccdbcbe7917405f84930ab89a9d82999ccc7016affa5dbdd540e3da7f5a45bfdc753c5160fefc506cdda9717e424dc33cba7f97ea8323e53564b
+Size (kross-5.116.0.tar.xz) = 2439816 bytes

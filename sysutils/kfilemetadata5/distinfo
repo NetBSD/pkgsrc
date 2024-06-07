@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.19 2024/02/06 10:46:30 markd Exp $
+$NetBSD: distinfo,v 1.20 2024/06/07 23:55:47 markd Exp $
 
-BLAKE2s (kfilemetadata-5.114.0.tar.xz) = f7597365b750c88a3dd755efa9382e34a4165e06effea07cea718166f6de84ed
-SHA512 (kfilemetadata-5.114.0.tar.xz) = 7dc83d62195117af7cd34411efd8750aeb04be1c618775161676c0eca244d31e9432165d2597bafaee8eb9a37edc7ee051b8150c814bc34f1ea2e849af0a24bc
-Size (kfilemetadata-5.114.0.tar.xz) = 527012 bytes
+BLAKE2s (kfilemetadata-5.116.0.tar.xz) = 3b92178c1d1b07cec4e17d46142559dc1bc0d99edba57c8891dcb0722d521f88
+SHA512 (kfilemetadata-5.116.0.tar.xz) = 1c5d264ad2bc123ba0d85882461009efc10c268441e33f82810823d1e2c6fb30209336542b4e2c1eabb96b53cc9184fc3982c27922872a9b92cac38bafe2da0e
+Size (kfilemetadata-5.116.0.tar.xz) = 527164 bytes
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 94c7699d9a62b86f3c188ad162385bc3319b7753
-SHA1 (patch-src_extractors_taglibextractor.cpp) = 0406977c311ee9baefb83dd7c6e81dc8d65618a0
-SHA1 (patch-src_writers_taglibwriter.cpp) = 10b7c8c2afb93928024c3da67c756a0298996dae
