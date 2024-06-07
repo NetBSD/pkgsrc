@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2024/05/29 15:38:34 adam Exp $
+# $NetBSD: Makefile,v 1.155 2024/06/07 12:30:37 micha Exp $
 
 DISTNAME=	icu4c-75_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icu.unicode.org/
 COMMENT=	Robust and full-featured Unicode services
-LICENSE=	mit
+LICENSE=	unicode-v3 AND modified-bsd AND mit
 
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c c++
