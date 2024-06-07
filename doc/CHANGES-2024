@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3821 2024/06/07 19:58:32 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3822 2024/06/07 20:00:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6086,3 +6086,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/thunderbird to 115.11.1 [ryoon 2024-06-07]
 	Updated fonts/noto-fonts to 20240601 [ryoon 2024-06-07]
 	Updated fonts/noto-emoji-ttf to 2.042 [ryoon 2024-06-07]
+	Updated fonts/noto-cjk-fonts to 20240508 [ryoon 2024-06-07]
