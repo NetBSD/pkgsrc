@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3823 2024/06/07 20:45:50 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3824 2024/06/07 21:04:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6091,3 +6091,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/pcre2 to 10.44 [adam 2024-06-07]
 	Updated databases/postgresql-timescaledb to 2.15.2 [adam 2024-06-07]
 	Updated math/py-uncertainties to 3.2.0 [adam 2024-06-07]
+	Updated security/py-authlib to 1.3.1 [adam 2024-06-07]
+	Updated devel/py-zope.exceptions to 5.1 [adam 2024-06-07]
+	Updated sysutils/py-structlog to 24.2.0 [adam 2024-06-07]
+	Updated finance/py-stripe to 9.10.0 [adam 2024-06-07]
