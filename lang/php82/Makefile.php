@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2022/12/11 14:12:29 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2024/06/07 23:11:41 taca Exp $
 # used by lang/php82/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -46,6 +46,16 @@ CONFIGURE_ARGS+=	--enable-xml
 #CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
+
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	Fixing common paths.
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	build/php.m4
+SUBST_FILES.path+=	php.ini-development php.ini-production
+SUBST_FILES.path+=	sapi/cgi/Makefile.frag
+SUBST_VARS.path=	CGIDIR
+SUBST_VARS.path+=	PREFIX
+SUBST_VARS.path+=	TOOLS_PATH.pkg-config PHP_PKGCONFIG_PATH
 
 .include "../../textproc/libxml2/buildlink3.mk"
 

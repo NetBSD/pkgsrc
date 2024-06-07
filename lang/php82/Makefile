@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/06/07 13:58:44 taca Exp $
+# $NetBSD: Makefile,v 1.10 2024/06/07 23:11:41 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -41,16 +41,6 @@ PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 PHP_PKGCONFIG_PATH=	${PKGCONFIG_PATHS:ts:}
 
 REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
-
-SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	Fixing common paths.
-SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	build/php.m4
-SUBST_FILES.path+=	php.ini-development php.ini-production
-SUBST_FILES.path+=	sapi/cgi/Makefile.frag
-SUBST_VARS.path=	CGIDIR
-SUBST_VARS.path+=	PREFIX
-SUBST_VARS.path+=	TOOLS_PATH.pkg-config PHP_PKGCONFIG_PATH
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 

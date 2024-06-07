@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/04/19 08:11:50 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/06/07 23:11:41 taca Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 PKGREVISION=	11
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FPM interface for ${PKG_PHP}
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	autoconf pkg-config
 
 LIBTOOL_OVERRIDE=	# empty
 
@@ -50,6 +50,9 @@ SMF_NAME=		php-fpm
 RCD_SCRIPTS=		php_fpm
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR}
 MESSAGE_SUBST+=		VARBASE=${VARBASE}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/fpm/php-fpm ${DESTDIR}${PREFIX}/sbin/php-fpm
