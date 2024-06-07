@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/09/26 16:07:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/07 20:00:15 ryoon Exp $
 
-PKGNAME=	noto-cjk-fonts-20220816
+PKGNAME=	noto-cjk-fonts-20240508
 CATEGORIES=	fonts
-TAG=		468a39cc0f9b90ad0c5922194657f32597917a8b
+TAG=		07fb9c9a48ec63ba92f7bfd2608ca6fbb01940f1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=googlefonts/noto-cjk/raw/${TAG}/Sans/Variable/OTC/}
 
 MAINTAINER=	ryoon@NetBSD.org
