@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/26 16:07:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/07 20:00:15 ryoon Exp $
 share/fonts/X11/TTF/NotoSansCJK-VF.otf.ttc
 share/fonts/X11/TTF/NotoSansMonoCJK-VF.otf.ttc
 share/fonts/X11/TTF/NotoSerifCJK-VF.otf.ttc
-@pkgdir share/fonts/X11/OTF
