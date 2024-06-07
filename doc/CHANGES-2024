@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3824 2024/06/07 21:04:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3825 2024/06/07 22:30:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6095,3 +6095,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-zope.exceptions to 5.1 [adam 2024-06-07]
 	Updated sysutils/py-structlog to 24.2.0 [adam 2024-06-07]
 	Updated finance/py-stripe to 9.10.0 [adam 2024-06-07]
+	Updated x11/vte3 to 0.76.2 [gutteridge 2024-06-07]
