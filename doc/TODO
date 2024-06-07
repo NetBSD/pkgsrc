@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24487 2024/06/07 06:49:54 wiz Exp $
+$NetBSD: TODO,v 1.24488 2024/06/07 09:12:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o HElib-2.1.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-24.1
+	o MesaLib-24.1.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.1.0
@@ -554,6 +554,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-3.4.3
 	o dap-3.10
+	o dav1d-1.4.2
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -1001,7 +1002,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
-	o opencv-4.9.0
+	o opencv-4.10
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
@@ -1368,6 +1369,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
+	o wayland-1.23
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.38.5 [wip]
