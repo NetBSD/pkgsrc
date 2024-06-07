@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:32 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:48 markd Exp $
 
-BLAKE2s (khtml-5.114.0.tar.xz) = 5f65dd8fd70f9bb966731a2274fa97dcb74b90aec493b2868a747033c7a63001
-SHA512 (khtml-5.114.0.tar.xz) = 93fba2452c45ca3a2786b1e85e8258f48b38080d0bb8811fd9bf1d5b76f1d399bc0b5d9cebbeb2be16e45e93e2b49361e81ea070ed6b8f083de0a867d28b5a3a
-Size (khtml-5.114.0.tar.xz) = 4012000 bytes
+BLAKE2s (khtml-5.116.0.tar.xz) = bb63ec86f53641c5371538be7c20214d5306ca6923392c490d32dcb6b2c47fea
+SHA512 (khtml-5.116.0.tar.xz) = 01fb4322badcc22834cea2730e8f5a9208135892818ad18823d742bf46056871aa0f0ccb88fde934abfe8307d5a05c79752cd727a3a780bbd26b8684c48d60df
+Size (khtml-5.116.0.tar.xz) = 4012276 bytes

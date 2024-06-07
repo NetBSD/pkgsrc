@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/02/06 10:46:35 markd Exp $
+$NetBSD: distinfo,v 1.19 2024/06/07 23:55:50 markd Exp $
 
-BLAKE2s (kxmlgui-5.114.0.tar.xz) = 7a3188a17b5d0ea2bed0d7c7e4b55cc44f72068d2971c1e515f032fe07dc28b5
-SHA512 (kxmlgui-5.114.0.tar.xz) = da580bbdae78aea22becbfbe2b4ea950d549a4d4022bb9550d7901a4fd97b48a4bf72a8dba51ce9de92488aba6f2a37428acb3c705bbc23c345106a92d5838b3
-Size (kxmlgui-5.114.0.tar.xz) = 2953292 bytes
+BLAKE2s (kxmlgui-5.116.0.tar.xz) = fb215347c10ee9cf5af0201674766669184a4a93e9c1fd59803374465963ce1a
+SHA512 (kxmlgui-5.116.0.tar.xz) = e3a205f8eb0dc28869530e73e02ab090c55a5e1a54e3747b2271e34d211e2fb81fc61d07a44fc9ff3b41d37720e2861e4bff04d06419e5813ee526c02681bbef
+Size (kxmlgui-5.116.0.tar.xz) = 2953508 bytes

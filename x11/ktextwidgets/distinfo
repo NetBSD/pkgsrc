@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 10:46:34 markd Exp $
+$NetBSD: distinfo,v 1.18 2024/06/07 23:55:50 markd Exp $
 
-BLAKE2s (ktextwidgets-5.114.0.tar.xz) = 89a0b5288f44186686cba597648af887d9bfee05ae814f8d4d41f78942e9584c
-SHA512 (ktextwidgets-5.114.0.tar.xz) = 3763ed8b591909e6b212dd02ff6dcdff6a7fa7e5030cb76815f14e6436ea8f8ee7db8d258f14cc05b562032011ef7117a3872af0ee21998cf7e0e76da1105d98
-Size (ktextwidgets-5.114.0.tar.xz) = 2552596 bytes
+BLAKE2s (ktextwidgets-5.116.0.tar.xz) = 779225b647d3e4afe438aafff759799b13c9643cc2a63a0533c41c4a3d126303
+SHA512 (ktextwidgets-5.116.0.tar.xz) = 0534a06529e681da51aac627869de8587e3002a5ad3b460725924454ef66a69cb4b72a8b455aa4bf06b50cf0623f54ba6ba267485e2317659dc5ada295092b4c
+Size (ktextwidgets-5.116.0.tar.xz) = 2552684 bytes

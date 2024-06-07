@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/06 10:46:32 markd Exp $
+$NetBSD: distinfo,v 1.14 2024/06/07 23:55:47 markd Exp $
 
-BLAKE2s (kholidays-5.114.0.tar.xz) = 8b1a945c13604c604c23a87a763cd8d4fd0e2754668f9bb870f936298d49f8ab
-SHA512 (kholidays-5.114.0.tar.xz) = b1c1f6e9d10c2194de1ba013e58fe081e665405621c1e294960f0edf6952678cf2f2fc6f64bc71cadfd81208eeb255d4cd1b3198ad2e0665f5144b0d35eca202
-Size (kholidays-5.114.0.tar.xz) = 255936 bytes
+BLAKE2s (kholidays-5.116.0.tar.xz) = 400fb1f01536b7a7d33b916d15ab274f7e20d63c88c4129ed28e6326e3ddd45b
+SHA512 (kholidays-5.116.0.tar.xz) = b12c7a4fd427992d94a79d87d077cf0fbcbd790046ded27afa95b7aaeed1fb0826ec544b555516d7e6dc451577674e6f3151dc0ff80890a3e10753dbc5b861fa
+Size (kholidays-5.116.0.tar.xz) = 256892 bytes

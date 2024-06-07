@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/07/29 02:46:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/06/07 23:55:49 markd Exp $
 include/KF5/Kirigami2/Kirigami/KirigamiPluginFactory
 include/KF5/Kirigami2/Kirigami/PlatformTheme
 include/KF5/Kirigami2/Kirigami/TabletModeWatcher
@@ -161,6 +161,7 @@ share/locale/da/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/de/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/el/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/en_GB/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/eo/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/es/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/et/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/eu/LC_MESSAGES/libkirigami2plugin_qt.qm
