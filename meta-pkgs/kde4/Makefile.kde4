@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde4,v 1.29 2023/06/06 12:41:54 riastradh Exp $
+# $NetBSD: Makefile.kde4,v 1.30 2024/06/07 13:47:28 gdt Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
@@ -19,7 +19,8 @@ TOOL_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 TOOLS_DEPENDS.cmake=	cmake>=2.8.12:../../devel/cmake
 
 USE_TOOLS+=	pkg-config perl
-USE_LANGUAGES=	c gnu++03
+USE_LANGUAGES=	c c++
+USE_CXX_FEATURES+=	gnu++03
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_KDE_build
