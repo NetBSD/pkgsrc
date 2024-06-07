@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/06/03 10:57:20 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/06/07 20:31:18 adam Exp $
 
-BLAKE2s (typing_extensions-4.12.1.tar.gz) = 988c1d382641b26e6bdce9686585dd5be45bbfd900b2314af780ab6450b98b2a
-SHA512 (typing_extensions-4.12.1.tar.gz) = b9084010de271f0193181c77c4a74d72d207a6484d2ccec9f5162cfb288c38a6f7c9d844804e907816ca9a0d2f2aa7a8afcb9b377f7734a2fa927281744b0106
-Size (typing_extensions-4.12.1.tar.gz) = 84923 bytes
+BLAKE2s (typing_extensions-4.12.2.tar.gz) = 26f443f9eb80b3d2fbfe02b617358a99fc7a4bbd1bda06899508e4f2e077d866
+SHA512 (typing_extensions-4.12.2.tar.gz) = b06f26ae55194f37ee48dcb894bf583051c9e74f639f25195990f56330eae7b585ab4b8655ca575539f48254c20f1920628db6db10512953d1f6364e3c076a27
+Size (typing_extensions-4.12.2.tar.gz) = 85321 bytes
