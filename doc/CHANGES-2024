@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3822 2024/06/07 20:00:30 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.3823 2024/06/07 20:45:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6087,3 +6087,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/noto-fonts to 20240601 [ryoon 2024-06-07]
 	Updated fonts/noto-emoji-ttf to 2.042 [ryoon 2024-06-07]
 	Updated fonts/noto-cjk-fonts to 20240508 [ryoon 2024-06-07]
+	Updated devel/py-typing-extensions to 4.12.2 [adam 2024-06-07]
+	Updated devel/pcre2 to 10.44 [adam 2024-06-07]
+	Updated databases/postgresql-timescaledb to 2.15.2 [adam 2024-06-07]
+	Updated math/py-uncertainties to 3.2.0 [adam 2024-06-07]
