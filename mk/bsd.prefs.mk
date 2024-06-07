@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.439 2024/01/26 03:25:47 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.439.2.1 2024/06/07 13:40:13 bsiegert Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -344,6 +344,8 @@ MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9
 # Set this before <bsd.own.mk> does, since it doesn't know about Darwin
 .if ${OPSYS} == "Darwin"
 OBJECT_FMT?=		Mach-O
+.elif ${OPSYS} == "Cygwin"
+OBJECT_FMT?=		PE
 .endif
 
 #
