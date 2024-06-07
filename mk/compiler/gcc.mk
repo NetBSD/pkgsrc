@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.278 2024/06/07 11:13:04 gdt Exp $
+# $NetBSD: gcc.mk,v 1.279 2024/06/07 12:59:36 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -176,6 +176,7 @@ GCC_REQD+=	2.8.0
 #
 # Resources:
 # https://gcc.gnu.org/projects/cxx-status.html
+# https://gcc.gnu.org/onlinedocs/libstdc++/manual/status.html
 # https://gcc.gnu.org/wiki/C11Status
 # https://gcc.gnu.org/c99status.html
 #
@@ -231,9 +232,12 @@ GCC_REQD+=	4.9
 .endif
 
 .if !empty(USE_CC_FEATURES:Mc17)
-# See http://mail-index.netbsd.org/pkgsrc-users/2024/01/02/msg038697.html
-# Actually gcc-9.x is enough, but it is not in any NetBSD
-# base system, thus for convenience
+# \todo Find gcc documentation about c17 support.
+# gcc7 fails with --std=c17
+# gcc8, gcc9 are unknown
+# gcc10 works
+
+# Choose 10 following the limited versions guidance.
 GCC_REQD+=	10.0
 .endif
 
@@ -256,20 +260,31 @@ GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mfilesystem)
-# While GCC 7 supports filesystem under an experimental header, this
-# is not part of GCC 7 as included in NetBSD 9.
-#
+# std::filesystem is part of C++17.
+
 # GCC 8 supports filesystem with explicit linking to the libstdc++fs
-# library, which many packages do not do.
+# library, which many packages do not do.  We assume (without
+# checking) that a requirement to add such a library is nonconforming
+# and thus dismiss 8.
+#
+# gcc documents that 8 is suitable and thus we assume 9 would be ok.
+# We choose 10 under the limited versions guideline.
 GCC_REQD+=	10
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mparallelism_ts)
+# parallism_ts is part of C++17.
+
+# Upstream documentation implies that 9 is required.
+# We therefore choose 10 under the limited versions guideline.
 GCC_REQD+=	10
 .endif
 
-# Don't round to gcc10.
 .if !empty(USE_CXX_FEATURES:Mcharconv)
+# <charconv> is part of C++17.
+
+# gcc7 fails to provide <charconv>, and it is present in gcc8.
+# Explain why the limited versions guideline is not followed.
 GCC_REQD+=	8
 .endif
 
