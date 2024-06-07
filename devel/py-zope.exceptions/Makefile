@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/07/12 16:29:13 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/06/07 20:57:59 adam Exp $
 
-DISTNAME=	zope.exceptions-5.0.1
+DISTNAME=	zope.exceptions-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.exceptions/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.exceptions
 COMMENT=	Zope testing helpers
 LICENSE=	zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 # circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
@@ -18,5 +20,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
