@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.275 2024/03/19 23:22:50 nia Exp $
+# $NetBSD: gcc.mk,v 1.276 2024/06/07 10:49:54 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -157,20 +157,20 @@ GCC_REQD+=	2.8.0
 # Most of the time, GCC adds support for features of new C and C++
 # standards incrementally; we define USE_CXX_FEATURES=c++XX as
 # intending to require a compiler that fully supports the standard.
-# We tend towards a gcc version shipped with a NetBSD release, because
+# We tend towards a gcc version included in a NetBSD release, because
 # those are known to work well, and because it is simpler to limit
 # selection to fewer versions.  This tendency is much stronger for C++
 # versions, and less so for c11.
 #
 # Thus we tend to:
-#   - gcc 4.8, shipped with NetBSD 7 
-#   - gcc 5, shipped with NetBSD 8
-#   - gcc 7, shipped with NetBSD 9
-#   - gcc 10, shipped with NetBSD 10
+#   - gcc 4.8, in NetBSD 7 
+#   - gcc 5, in NetBSD 8
+#   - gcc 7, in NetBSD 9
+#   - gcc 10, in NetBSD 10
 #
 # Other systems have different versions, and we note a few:
 #
-#  - gcc 8, shipped with Enterprise Linux 8
+#  - gcc 8, in Enterprise Linux 8
 #
 # Resources:
 # https://gcc.gnu.org/projects/cxx-status.html
@@ -185,7 +185,7 @@ GCC_REQD+=	12
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
-# GCC 10 is chosen because it is planned to be shipped with NetBSD 10,
+# GCC 10 is chosen because it is in NetBSD 10,
 # so is fairly battle-hardened with pkgsrc.
 #
 # We hope that it remains OK for most C++20 in the future...
@@ -193,13 +193,13 @@ GCC_REQD+=	10
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++17)
-# GCC 7 is chosen because it shipped with NetBSD 9, so is fairly
+# GCC 7 is chosen because it is in NetBSD 9, so is fairly
 # battle-hardened with pkgsrc.
 GCC_REQD+=	7
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++14)
-# GCC 5 is chosen because it shipped with NetBSD 8, so is fairly
+# GCC 5 is chosen because it is in NetBSD 8, so is fairly
 # battle-hardened with pkgsrc.
 GCC_REQD+=	5
 .endif
@@ -209,7 +209,7 @@ GCC_REQD+=	5
 # (and there was previously a lot of cargo-culted GCC_REQD in pkgsrc
 # as a result), earlier compiler versions are not so well-tested any more.
 #
-# GCC 4.8 was the version shipped with NetBSD 7 and CentOS 7, so is fairly
+# GCC 4.8 was the version in NetBSD 7 and CentOS 7, so is fairly
 # battle-hardened with pkgsrc.
 #
 # Versions before GCC 4.7 do not accept -std=c++11.
@@ -256,8 +256,8 @@ GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mfilesystem)
-# GCC 7 supports filesystem under an experimental header, this is not
-# part of GCC 7 as shipped with NetBSD 9.
+# While GCC 7 supports filesystem under an experimental header, this
+# is not part of GCC 7 as included in NetBSD 9.
 #
 # GCC 8 supports filesystem with explicit linking to the libstdc++fs
 # library, which many packages do not do.
