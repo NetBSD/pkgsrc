@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.277 2024/06/07 11:05:31 gdt Exp $
+# $NetBSD: gcc.mk,v 1.278 2024/06/07 11:13:04 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -165,7 +165,7 @@ GCC_REQD+=	2.8.0
 # so for c11.
 #
 # Thus we tend to:
-#   - gcc 4.8, in NetBSD 7 
+#   - gcc 4.8, in NetBSD 7, CentOS 7
 #   - gcc 5, in NetBSD 8
 #   - gcc 7, in NetBSD 9
 #   - gcc 10, in NetBSD 10
@@ -191,9 +191,6 @@ GCC_REQD+=	12
 # gcc documents that 11 is required, with a few perhaps-obscure
 # features requiring 12.
 
-# GCC 10 is chosen because it is in NetBSD 10,
-# so is fairly battle-hardened with pkgsrc.
-#
 # We hope that it remains OK for most C++20 in the future...
 # \todo Change to 11 or justify.
 GCC_REQD+=	10
@@ -204,25 +201,18 @@ GCC_REQD+=	10
 # template feature.  However, <charconv> is part of c++17 and that
 # requires gcc 8.
 
-# GCC 7 is chosen because it is in NetBSD 9, so is fairly
-# battle-hardened with pkgsrc.
 GCC_REQD+=	7
 # \todo Change to 8 (<charconv> is not so odd) or justify.
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++14)
 # gcc documents that 5 is required.
-# GCC 5 is chosen because it is in NetBSD 8, so is fairly
-# battle-hardened with pkgsrc.
 GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++11)
 # gcc documents that 4.8.1 is required.  (In addition, versions before
 # 4.7 do not accept -std=c++11 and are thus not acceptable.)
-
-# GCC 4.8 was the version in NetBSD 7 and CentOS 7, so is fairly
-# battle-hardened with pkgsrc.
 GCC_REQD+=	4.8
 .endif
 
