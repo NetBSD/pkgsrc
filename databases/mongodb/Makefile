@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2024/06/03 14:25:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2024/06/07 13:05:52 gdt Exp $
 
 DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -30,6 +30,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17 filesystem
+# \todo Justify GCC_REQD; the documented languages/features imply 10.
 GCC_REQD+=		11
 
 USE_TOOLS+=	pkg-config
