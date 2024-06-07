@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2024/05/10 15:50:34 taca Exp $
+$NetBSD: distinfo,v 1.8 2024/06/07 13:57:24 taca Exp $
 
-BLAKE2s (php-8.3.7.tar.xz) = 009b796292f0f05c1a21a6f0f40886e1ec5c6a01f4cbae0c7de34a4fc5c9db96
-SHA512 (php-8.3.7.tar.xz) = ff2c16a5cc08b1a59a61eee9df75c4c9a6dda7054d48198b75d104c194e934109fed3665005ba798eeca3d7294d7dc81df3a14e63a527baf9f196e229068d9a3
-Size (php-8.3.7.tar.xz) = 12456020 bytes
-SHA1 (patch-configure) = 3d7106a039a3bffaf9f439c8fed77048f1072749
+BLAKE2s (php-8.3.8.tar.xz) = ba672f712e3d735c0320f301bf5f3a09bbf3440e09abd44813a57ed001a0db57
+SHA512 (php-8.3.8.tar.xz) = 1a2840f0b5dcbea6dfcc3894cb9e38d103bf4110c1b956438199deee0b60e5ae63cce34be25ca6f03ac8d26581a852657f8800f92fefe38345e20443b646bb3e
+Size (php-8.3.8.tar.xz) = 12480896 bytes
+SHA1 (patch-build_php.m4) = c85864ae22556c0a5f14b323d2cf031523625e9b
 SHA1 (patch-ext_enchant_enchant.c) = 7d999de1b2fde2ea11e4a6e16e7b59c085924b9b
 SHA1 (patch-ext_phar_Makefile.frag) = 53ea5c58b0bc27d236118d5750a74b1cba43e5dd
 SHA1 (patch-ext_standard_php__fopen__wrapper.c) = 0a2c19c18f089448a8d842e99738b292ab9e5640
@@ -12,6 +12,7 @@ SHA1 (patch-ext_xsl_php__xsl.h) = cf930c5d6d9dab29b12558d265c67d3534a006fd
 SHA1 (patch-main_streams_streams.c) = d699ce7d3a300ffb39494b3f1fa5e0958f714483
 SHA1 (patch-php.ini-development) = 373d76cc7a022b578f1d5e296d1f0ac88bc26b72
 SHA1 (patch-php.ini-production) = 5ab7fa6bf8403907160b0a62b56c1ee527f8eda6
+SHA1 (patch-sapi_apache2handler_config.m4) = c5650a7d07a8213038fe2e2a6a1ce345d325df82
 SHA1 (patch-sapi_cgi_Makefile.frag) = f4cd64d334884c49787d8854115c8cd69cc79bb8
 SHA1 (patch-sapi_cli_Makefile.frag) = 1cd29d09042863acbf5330e406410fdcf75d06b3
 SHA1 (patch-sapi_fpm_php-fpm.conf.in) = acf9b4e70d4c5ea2b96e37e7bbf9005379ecc4d0
