@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3809 2024/06/07 05:33:30 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3810 2024/06/07 10:34:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6069,3 +6069,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-responses to 0.25.2 [adam 2024-06-07]
 	Updated devel/py-pooch to 1.8.2 [adam 2024-06-07]
 	Updated www/py-tornado to 6.4.1 [adam 2024-06-07]
+	Updated lang/gcc13 to 13.3.0 [adam 2024-06-07]
+	Updated lang/gcc13-libs to 13.3.0nb1 [adam 2024-06-07]
+	Updated net/qbittorrent to 4.6.5 [adam 2024-06-07]
