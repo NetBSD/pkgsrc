@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/06/07 20:45:09 adam Exp $
 
-DISTNAME=	uncertainties-3.1.7
+DISTNAME=	uncertainties-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncertainties/}
@@ -10,12 +10,14 @@ HOMEPAGE=	https://uncertainties-python-package.readthedocs.io/
 COMMENT=	Transparent calculations with uncertainties on the quantities involved
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
