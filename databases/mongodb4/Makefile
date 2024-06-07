@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2024/06/07 09:12:26 abs Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/07 17:39:01 abs Exp $
 
-DISTNAME=	mongodb-src-r4.4.28
-PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	5
+DISTNAME=	mongodb-4.4.29
 CATEGORIES=	databases
-MASTER_SITES=	http://fastdl.mongodb.org/src/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
+GITHUB_TAG=	r${PKGVERSION_NOREV}
+GITHUB_PROJECT=	mongo
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mongodb.com/
@@ -51,6 +51,7 @@ SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 SCONS_BUILD_ARGS+=	--modules='' # avoid enterprise build
+SCONS_BUILD_ARGS+=	MONGO_VERSION=${PKGVERSION_NOREV} # github source does not include version.json
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
@@ -187,7 +188,6 @@ _SCONS_BUILD_ARGS+=     ${SCONS_BUILD_ARGS}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
