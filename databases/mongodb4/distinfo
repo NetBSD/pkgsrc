@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2024/06/03 14:27:34 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2024/06/07 17:39:01 abs Exp $
 
-BLAKE2s (mongodb-src-r4.4.28.tar.gz) = ab50063cd45a22178f894abb7abd4f8e08e00957419daeab2355a10685c9ec07
-SHA512 (mongodb-src-r4.4.28.tar.gz) = f2af1c64ed18dcbda63d2562993259e4dd0dea682831f9c2504f09c10c66106f564051bc2f8c6c0e908df3802f8452f1e45ba66065415a842ce4071f97c070f8
-Size (mongodb-src-r4.4.28.tar.gz) = 51471609 bytes
+BLAKE2s (mongodb-4.4.29.tar.gz) = 53d8f9da9a74edd82a01f4a5dc1fa0a1f08dd79f4a1781e3b2c3d6dd8f3209fb
+SHA512 (mongodb-4.4.29.tar.gz) = 3c32a918c8b5587b04ee9263788c250a9bbd64f34ed2c19939e78607456215697966e596c2cfd160604b629188e4bdf3fff071db268bb3c25de3077a7c2ef335
+Size (mongodb-4.4.29.tar.gz) = 51651007 bytes
 SHA1 (patch-SConstruct) = 2f8402c96d5a94c65a422a063e34785277ef7cc9
 SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
 SHA1 (patch-site__scons_site__tools_libtool.py) = 5663c0095939fa5404776bfb7b472b27cfe3a254
@@ -19,7 +19,7 @@ SHA1 (patch-src_mongo_util_intrusive__counter.h) = 4c8e0d2e834686403a557de489ad5
 SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 6c15ceeddecb9fa81a44fc322081596d0c85969e
 SHA1 (patch-src_mongo_util_time__support.cpp) = d576d8d39b10c496e492c8f0faf7e81f09ca875c
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 3c168389b9288df9055df0b01e8d26cf2f67293e
-SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = aed897879501d74b19dd06a142ded0abf910898d
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = 0f00e7e1b710b3d19a936d5832ab08279bff48ee
 SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
 SHA1 (patch-src_third__party_boost-1.70.0_boost_asio_detail_impl_kqueue__reactor.ipp) = 0808636a4e01f9eda921b79360ca51c04bc43230
 SHA1 (patch-src_third__party_mozjs-60_platform_x86__64_netbsd_build_js-confdefs.h) = 2474fc221f0c59381c8529e986db1f3f67c405ec
