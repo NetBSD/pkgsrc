@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.7 2024/05/17 13:01:48 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.8 2024/06/07 13:53:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -43,4 +43,13 @@ net/bind916: blocklist handling fix (PR bin/58170)
 Pullup ticket #6855 - requested by gutteridge
 www/firefox115: security fix
 www/firefox115-lang: dependent update
+
+Pullup tickets #6853 and #6854 - requested by morr
+editors/vim: security fix
+
+Pullup ticket #6856 - requested by riastradh
+bsd.prefs.mk: Cygwin build fix
+
+Pullup ticket #6857 - requested by taca
+databases/phpldapadmin: security fix
 
