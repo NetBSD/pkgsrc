@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/06/08 20:00:16 mef Exp $
+
+BLAKE2s (R/chemometrics_1.4.4.tar.gz) = 7ac044c7897f32008e97963760dc7d8e8f8ee8e46fcdbe16be41a6d2dd6ee4f3
+SHA512 (R/chemometrics_1.4.4.tar.gz) = 5734d7b87ddae5795dbc5f328dec75abd05bd09dd4e07b95e99d5f25fe1e24cbfc91cd0f1e0d3634396c4ec6fe26c30cd6a71c062a43fc6623cc525b15d10d68
+Size (R/chemometrics_1.4.4.tar.gz) = 6380329 bytes
