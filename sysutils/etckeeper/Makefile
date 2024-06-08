@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2023/11/29 02:54:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2024/06/08 19:12:33 schmonz Exp $
 #
 
 DISTNAME=		etckeeper_1.18.21
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://git.joeyh.name/index.cgi/etckeeper.git/snapshot/
 
@@ -43,6 +44,7 @@ SUBST_FILES.config+=	etckeeper etckeeper.8
 SUBST_FILES.config+=	list-installed.d/50list-installed
 SUBST_FILES.config+=	pre-commit.d/20warn-problem-files
 SUBST_FILES.config+=	pre-commit.d/30store-metadata
+SUBST_FILES.config+=	commit.d/50vcs-commit
 SUBST_FILES.config+=	pre-install.d/10packagelist
 SUBST_FILES.config+=	post-install.d/50vcs-commit
 SUBST_FILES.config+=	bash_completion zsh_completion
