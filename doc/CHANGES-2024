@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3830 2024/06/08 07:40:05 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3831 2024/06/08 07:47:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6182,3 +6182,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-cssutils to 2.11.1 [adam 2024-06-08]
 	Updated lang/python312 to 3.12.4 [adam 2024-06-08]
 	Updated lang/py312-html-docs to 3.12.4 [adam 2024-06-08]
+	Updated sysutils/py-ansible-compat to 24.6.1 [adam 2024-06-08]
+	Updated sysutils/ansible-lint to 24.6.0 [adam 2024-06-08]
