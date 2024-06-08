@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/05/27 11:18:25 adam Exp $
+$NetBSD: distinfo,v 1.21 2024/06/08 07:45:10 adam Exp $
 
-BLAKE2s (ansible_compat-24.5.1.tar.gz) = 97c1fcebf9b270aa25a0885f93c3db6a9b19359a35267a7385cfaa0690d31045
-SHA512 (ansible_compat-24.5.1.tar.gz) = b3afac9ed7579f0343bf751ce170407924c6d7ac289e5e4c243c35a47f5f720db66e142c203fbd4a8ff43ec8a3b0380d280b053c24e9680afa60530646a90d26
-Size (ansible_compat-24.5.1.tar.gz) = 73979 bytes
+BLAKE2s (ansible_compat-24.6.1.tar.gz) = b2f7f5c250e2469c658f35e9127bb8550d9325feb0cc74ab3902ec59fd6cac35
+SHA512 (ansible_compat-24.6.1.tar.gz) = b800fbd03e5d4c0e53ca096e02be2cf056a5f895a4ce902dfb612434c367a47e7feedf99413648b7fae88cf2092589e293ffdd294cf118c5fe52db6d5c764ab9
+Size (ansible_compat-24.6.1.tar.gz) = 79871 bytes
