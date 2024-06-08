@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/06/08 15:33:24 mef Exp $
+
+BLAKE2s (R/som_0.3-5.1.tar.gz) = bb6e3735cfb3378aaf57b977189d26887e45ceb9460a7ece6ec5f60a4187cb3c
+SHA512 (R/som_0.3-5.1.tar.gz) = 96b67d6c1f3fcf6e318fbb5ecb00999e21be5fef322f7a5d5f880d73f256e7cfa3f3fcaa4874151c511febd63ca6125b0ad4082d84c4647c521352e5b4aeef70
+Size (R/som_0.3-5.1.tar.gz) = 209169 bytes
