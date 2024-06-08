@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/05/12 10:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/06/08 12:02:56 wiz Exp $
 
-DISTNAME=	google-api-python-client-2.129.0
+DISTNAME=	google-api-python-client-2.131.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
