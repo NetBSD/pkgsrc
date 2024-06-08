@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2024/04/07 21:16:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2024/06/08 11:59:06 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -15,12 +15,21 @@ ${PYSITELIB}/fontTools/afmLib.pyo
 ${PYSITELIB}/fontTools/agl.py
 ${PYSITELIB}/fontTools/agl.pyc
 ${PYSITELIB}/fontTools/agl.pyo
+${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.py
+${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.pyc
+${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.pyo
+${PYSITELIB}/fontTools/cffLib/CFFToCFF2.py
+${PYSITELIB}/fontTools/cffLib/CFFToCFF2.pyc
+${PYSITELIB}/fontTools/cffLib/CFFToCFF2.pyo
 ${PYSITELIB}/fontTools/cffLib/__init__.py
 ${PYSITELIB}/fontTools/cffLib/__init__.pyc
 ${PYSITELIB}/fontTools/cffLib/__init__.pyo
 ${PYSITELIB}/fontTools/cffLib/specializer.py
 ${PYSITELIB}/fontTools/cffLib/specializer.pyc
 ${PYSITELIB}/fontTools/cffLib/specializer.pyo
+${PYSITELIB}/fontTools/cffLib/transforms.py
+${PYSITELIB}/fontTools/cffLib/transforms.pyc
+${PYSITELIB}/fontTools/cffLib/transforms.pyo
 ${PYSITELIB}/fontTools/cffLib/width.py
 ${PYSITELIB}/fontTools/cffLib/width.pyc
 ${PYSITELIB}/fontTools/cffLib/width.pyo
@@ -204,6 +213,12 @@ ${PYSITELIB}/fontTools/misc/fixedTools.pyo
 ${PYSITELIB}/fontTools/misc/intTools.py
 ${PYSITELIB}/fontTools/misc/intTools.pyc
 ${PYSITELIB}/fontTools/misc/intTools.pyo
+${PYSITELIB}/fontTools/misc/iterTools.py
+${PYSITELIB}/fontTools/misc/iterTools.pyc
+${PYSITELIB}/fontTools/misc/iterTools.pyo
+${PYSITELIB}/fontTools/misc/lazyTools.py
+${PYSITELIB}/fontTools/misc/lazyTools.pyc
+${PYSITELIB}/fontTools/misc/lazyTools.pyo
 ${PYSITELIB}/fontTools/misc/loggingTools.py
 ${PYSITELIB}/fontTools/misc/loggingTools.pyc
 ${PYSITELIB}/fontTools/misc/loggingTools.pyo
@@ -602,6 +617,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/T_T_F_A_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/TupleVariation.py
 ${PYSITELIB}/fontTools/ttLib/tables/TupleVariation.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/TupleVariation.pyo
+${PYSITELIB}/fontTools/ttLib/tables/V_A_R_C_.py
+${PYSITELIB}/fontTools/ttLib/tables/V_A_R_C_.pyc
+${PYSITELIB}/fontTools/ttLib/tables/V_A_R_C_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/V_D_M_X_.py
 ${PYSITELIB}/fontTools/ttLib/tables/V_D_M_X_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/V_D_M_X_.pyo
@@ -887,6 +905,9 @@ ${PYSITELIB}/fontTools/varLib/merger.pyo
 ${PYSITELIB}/fontTools/varLib/models.py
 ${PYSITELIB}/fontTools/varLib/models.pyc
 ${PYSITELIB}/fontTools/varLib/models.pyo
+${PYSITELIB}/fontTools/varLib/multiVarStore.py
+${PYSITELIB}/fontTools/varLib/multiVarStore.pyc
+${PYSITELIB}/fontTools/varLib/multiVarStore.pyo
 ${PYSITELIB}/fontTools/varLib/mutator.py
 ${PYSITELIB}/fontTools/varLib/mutator.pyc
 ${PYSITELIB}/fontTools/varLib/mutator.pyo
