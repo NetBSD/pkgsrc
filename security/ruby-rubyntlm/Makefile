@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/02/03 15:03:05 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/08 15:55:25 taca Exp $
 
-DISTNAME=	rubyntlm-0.6.3
+DISTNAME=	rubyntlm-0.6.4
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
