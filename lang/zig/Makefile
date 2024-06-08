@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/05/29 16:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/06/08 12:35:09 nikita Exp $
 
-DISTNAME=	zig-0.12.0
-PKGREVISION=	2
+DISTNAME=	zig-0.12.1
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +10,7 @@ HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
 
-# Broken at least on *BSD, needs a new release, 0.11.0 does not build
-# stage 3 of the build process (fixed upstream).
+# Fails to build in chroot on netbsd: https://github.com/ziglang/zig/issues/19756
 USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run
@@ -35,6 +33,9 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 
 UNLIMIT_RESOURCES=	stacksize
 
+# again, sigh...
+RELRO_SUPPORTED=	no
+#MKPIE_SUPPORTED=	no
 # TODO: /usr/bin/env + /bin/env in lib/std/zig/system.zig
 
 # after install, because the zig binary ends up in paths like
