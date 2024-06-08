@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/06/08 15:30:08 mef Exp $
+
+BLAKE2s (R/lars_1.3.tar.gz) = cba2e6183967fd824680f964593e9a14da8dfde476a520058164ed91b847f648
+SHA512 (R/lars_1.3.tar.gz) = c8fa58eabde5219b02cffe0441c8f30832e2eaa8483092cd976e9336ab1226f144f0c1ca3ebee06885ac360869920725509fdecfd08467769265a83661a5ef65
+Size (R/lars_1.3.tar.gz) = 184025 bytes
