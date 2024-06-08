@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2020/06/15 15:02:11 taca Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/08 15:58:43 taca Exp $
 
-DISTNAME=	builder-3.2.4
+DISTNAME=	builder-3.3.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://onestepback.org/
+HOMEPAGE=	https://github.com/rails/builder
 COMMENT=	Programatic generation of XML markup in Ruby
 LICENSE=	mit
 
