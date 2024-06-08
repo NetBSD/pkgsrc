@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 11:29:39 nia Exp $
+$NetBSD: distinfo,v 1.43 2024/06/08 20:31:23 nikita Exp $
 
-BLAKE2s (lynx2.8.9rel.1.tar.bz2) = d5430f0c4a27406e7617f629a00f470a5870ff3eb01723416160c2abb1522fe1
-SHA512 (lynx2.8.9rel.1.tar.bz2) = 61edbe082684fcbd91bdbf4f4d27c3baf92358811aaffc2f8af46adf23ca7b48aede1520fc5f2a8fc974a2f4bbf4e57e7e6027a187bfc6101e56878c98178e6d
-Size (lynx2.8.9rel.1.tar.bz2) = 2689171 bytes
-SHA1 (patch-WWW_Library_Implementation_HTTP.c) = 402301685b2cd0a3faa7efab8a9ec69294bef409
+BLAKE2s (lynx2.9.2.tar.bz2) = 1365a0fdc942144abd262abeceffb0907930550b3f002ea72f7f82d5cc77c39f
+SHA512 (lynx2.9.2.tar.bz2) = bb9ed23a5f8664ca8bccd95cc55683849aa707f601e209d84e0acaed151b78cd772316f527881022ff120049c4fc586c05d579f9d616a2b108d9ddfaa5b2159d
+Size (lynx2.9.2.tar.bz2) = 2783769 bytes
 SHA1 (patch-aa) = 85e76c4b2708e01dd1abdc1af764a067bd83bcb9
 SHA1 (patch-ab) = 26fab3bd426a76df530e6780eefe36464059bc6a
