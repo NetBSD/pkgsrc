@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2023/12/18 07:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/08 12:01:23 wiz Exp $
 
-DISTNAME=	gi-docgen-2023.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	gi_docgen-2024.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi-docgen/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi_docgen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/gi-docgen
