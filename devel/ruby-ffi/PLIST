@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/11/11 12:09:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/06/08 15:46:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -58,6 +58,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi.gnu.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc.mk
 ${GEM_LIBDIR}/ext/ffi_c/libffi.vc64.mk
+${GEM_LIBDIR}/ext/ffi_c/libffi/.allow-ai-service
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor.yml
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor/site.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.appveyor/unix-noexec.exp
@@ -308,6 +309,10 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/align_mixed.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/align_stdcall.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/bpo_38748.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/call.exp
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/callback.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/callback2.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/callback3.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/callback4.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/err_bad_typedef.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/ffitest.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/float.c
@@ -622,4 +627,21 @@ ${GEM_LIBDIR}/samples/inotify.rb
 ${GEM_LIBDIR}/samples/pty.rb
 ${GEM_LIBDIR}/samples/qsort.rb
 ${GEM_LIBDIR}/samples/qsort_ractor.rb
+${GEM_LIBDIR}/sig/ffi.rbs
+${GEM_LIBDIR}/sig/ffi/abstract_memory.rbs
+${GEM_LIBDIR}/sig/ffi/auto_pointer.rbs
+${GEM_LIBDIR}/sig/ffi/buffer.rbs
+${GEM_LIBDIR}/sig/ffi/data_converter.rbs
+${GEM_LIBDIR}/sig/ffi/dynamic_library.rbs
+${GEM_LIBDIR}/sig/ffi/enum.rbs
+${GEM_LIBDIR}/sig/ffi/function.rbs
+${GEM_LIBDIR}/sig/ffi/library.rbs
+${GEM_LIBDIR}/sig/ffi/native_type.rbs
+${GEM_LIBDIR}/sig/ffi/pointer.rbs
+${GEM_LIBDIR}/sig/ffi/struct.rbs
+${GEM_LIBDIR}/sig/ffi/struct_by_reference.rbs
+${GEM_LIBDIR}/sig/ffi/struct_by_value.rbs
+${GEM_LIBDIR}/sig/ffi/struct_layout.rbs
+${GEM_LIBDIR}/sig/ffi/struct_layout_builder.rbs
+${GEM_LIBDIR}/sig/ffi/type.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
