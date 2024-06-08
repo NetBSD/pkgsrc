@@ -1,0 +1,4 @@
+Efficient procedures for fitting an entire lasso sequence with the
+cost of a single least squares fit. Least angle regression and
+infinitesimal forward stagewise regression are related to the lasso,
+as described in the paper below.
