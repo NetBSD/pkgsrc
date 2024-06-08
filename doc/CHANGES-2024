@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3844 2024/06/08 12:35:20 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.3845 2024/06/08 12:40:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6197,3 +6197,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/re2 to 20240601 [wiz 2024-06-08]
 	Updated textproc/py-sphinx-autoapi to 3.1.1 [wiz 2024-06-08]
 	Updated lang/zig to 0.12.1 [nikita 2024-06-08]
+	Updated devel/py-setuptools to 70.0.0 [wiz 2024-06-08]
