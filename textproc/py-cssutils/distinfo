@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/05/06 16:12:24 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/06/08 07:31:10 adam Exp $
 
-BLAKE2s (cssutils-2.10.2.tar.gz) = 68fcc3dd4b0129e9acf20ee45a24a27644c51a39cb62beab226e362aabe2294f
-SHA512 (cssutils-2.10.2.tar.gz) = c678b6953b13e8a7ac7b2abbe0b8be26283973537089071828e618b359bcce27df636f382d8b0dc50b13962e0d2dffcce991a47f678954ec018849e57026446d
-Size (cssutils-2.10.2.tar.gz) = 723055 bytes
+BLAKE2s (cssutils-2.11.1.tar.gz) = b9385a2e2851034cc4ae7f55eeb5dba62990c64b3de0e26d48d6d9d400b5ef27
+SHA512 (cssutils-2.11.1.tar.gz) = 7e38f08c5ff340b82ea39bda207d099b39ce6b88c8ac0d7ac1fb29e7b4ae6d8baa341e0a9b27e6d2285e31266112ec51d1fff9ef3e5a17a4bf55546fb4927845
+Size (cssutils-2.11.1.tar.gz) = 711657 bytes
