@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.149 2024/05/29 16:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.150 2024/06/08 20:31:23 nikita Exp $
 
-DISTNAME=	lynx2.8.9rel.1
+DISTNAME=	lynx2.9.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
-PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	https://invisible-mirror.net/archives/lynx/tarballs/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +30,7 @@ CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
 
 # But no dependency on Perl.
 REPLACE_PERL+=			samples/mailto-form.pl
+REPLACE_PERL+=			samples/mhtml-tool
 CHECK_INTERPRETER_SKIP+=	share/lynx/lynx_doc/samples/mailto-form.pl
 CHECK_WRKREF_SKIP+=		bin/lynx
 
