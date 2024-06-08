@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2024/06/08 15:31:54 mef Exp $
+# $NetBSD: Makefile,v 1.598 2024/06/08 15:35:31 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -119,6 +119,7 @@ SUBDIR+=	R-sets
 SUBDIR+=	R-sgeostat
 SUBDIR+=	R-shapefiles
 SUBDIR+=	R-slam
+SUBDIR+=	R-som
 SUBDIR+=	R-sp
 SUBDIR+=	R-spacetime
 SUBDIR+=	R-splancs
