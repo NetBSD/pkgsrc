@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24492 2024/06/08 07:31:34 adam Exp $
+$NetBSD: TODO,v 1.24493 2024/06/08 11:51:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,6 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o arti-1.2.3 [wip]
+	o arti-1.2.4
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -554,7 +555,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-3.4.3
 	o dap-3.10
-	o dav1d-1.4.2
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
