@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/05/26 15:58:15 taca Exp $
+$NetBSD: distinfo,v 1.29 2024/06/08 16:09:46 taca Exp $
 
-BLAKE2s (aws-sdk-secretsmanager-1.95.0.gem) = 3c662ea7189fd6aa8ddf59af9f77ce2fdcfdc934727c1fb7211e446f680fd9f0
-SHA512 (aws-sdk-secretsmanager-1.95.0.gem) = 2ccfb469cb15134e204645300528c1b0d8865df42b5635e131c42e3c755b5371de6f39253aaa646ab7a563f7238dc49bea84159f5edc4f0651417540c30fc9fa
-Size (aws-sdk-secretsmanager-1.95.0.gem) = 64000 bytes
+BLAKE2s (aws-sdk-secretsmanager-1.96.0.gem) = d26af66089baa7a27379ac04126fb1ed1a5df1dbfb4b07c2cd2c69e8c76f5b2c
+SHA512 (aws-sdk-secretsmanager-1.96.0.gem) = ea27acab2ad789f67bcefc061c235719ec659fe6e9ca471c62d087a7a6e341700e40e9d5cef39d2a6bf332a1c1f468c49a8effe4d53260ece0ef4eb439985ea5
+Size (aws-sdk-secretsmanager-1.96.0.gem) = 64000 bytes
