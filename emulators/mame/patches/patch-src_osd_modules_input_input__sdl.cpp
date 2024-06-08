@@ -1,6 +1,7 @@
-$NetBSD: patch-src_osd_modules_input_input__sdl.cpp,v 1.2 2024/06/08 14:43:26 wiz Exp $
+$NetBSD: patch-src_osd_modules_input_input__sdl.cpp,v 1.3 2024/06/08 14:47:48 wiz Exp $
 
 Fix "lround is not a member of std::" on NetBSD.
+https://github.com/mamedev/mame/issues/12458
 
 --- src/osd/modules/input/input_sdl.cpp.orig	2024-05-29 17:42:54.000000000 +0000
 +++ src/osd/modules/input/input_sdl.cpp
