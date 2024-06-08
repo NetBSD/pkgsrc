@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/11 07:53:08 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/06/08 07:22:23 adam Exp $
 
-BLAKE2s (cbor2-5.6.3.tar.gz) = 47a6189a2b3f44c8f9323d7cdde8442209f65bb2372d127e151123c83c8dba6e
-SHA512 (cbor2-5.6.3.tar.gz) = 1ab6a88a95cde178b21a75275fb286038f15d2fbd752059f9fc6fdb64e23eca90f65f7e443cae4bdbb7f451378711b20963909136c06b3bb4f054d52a7a95207
-Size (cbor2-5.6.3.tar.gz) = 100224 bytes
+BLAKE2s (cbor2-5.6.4.tar.gz) = 0c97e25b879e4c2992afb0be0bddfbc55a5840e75bf88f4bada8e73839fa7074
+SHA512 (cbor2-5.6.4.tar.gz) = 794a7b646d7672c8cae9b2fe14e817812dc2afef46664f9be810258fcd1cab132dd28f3d05a036bd188aa510ebf44972f8f175b9acb6eec7339aebe608544b2c
+Size (cbor2-5.6.4.tar.gz) = 100865 bytes
