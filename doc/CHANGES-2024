@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3835 2024/06/08 11:54:52 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3836 2024/06/08 11:55:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/dav1d to 1.4.2 [wiz 2024-06-08]
 	Updated textproc/enchant2 to 2.8.0 [wiz 2024-06-08]
 	Updated x11/libdrm to 2.4.121 [wiz 2024-06-08]
+	Updated textproc/libuninameslist to 20240524 [wiz 2024-06-08]
