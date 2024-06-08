@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2024/02/03 11:13:21 mef Exp $
+# $NetBSD: Makefile,v 1.23 2024/06/08 14:49:19 mef Exp $
 
 R_PKGNAME=	mvtnorm
-R_PKGVER=	1.2-4
+R_PKGVER=	1.2-5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multivariate normal and t distributions
