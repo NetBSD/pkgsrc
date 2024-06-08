@@ -1,11 +1,13 @@
-$NetBSD: patch-commit.d_50vcs-commit,v 1.4 2019/12/24 06:00:24 schmonz Exp $
+$NetBSD: patch-commit.d_50vcs-commit,v 1.5 2024/06/08 19:12:33 schmonz Exp $
 
 Test more carefully for a possibly missing binary. From Nathan Arthur in
 private mail.
 
---- commit.d/50vcs-commit.orig	2019-11-29 15:43:52.000000000 +0000
+Test more portably (given the perl:run dependency) for tty permissions.
+
+--- commit.d/50vcs-commit.orig	2023-11-28 18:09:38.000000000 +0000
 +++ commit.d/50vcs-commit
-@@ -23,9 +23,11 @@ fi
+@@ -31,9 +31,11 @@ fi
  
  hostname=`hostname 2>/dev/null || cat /etc/hostname`
  hostname="${hostname%%.*}"
@@ -20,3 +22,12 @@ private mail.
  fi
  
  ORIG_USER=$USER
+@@ -44,7 +46,7 @@ else
+ 	# try to check tty ownership, in case user su'd to root
+ 	TTY="$(tty 2>/dev/null || true)"
+ 	if [ -n "$TTY" ] && [ -c "$TTY" ]; then
+-		USER="$(find "$TTY" -printf "%u")"
++		USER="$(@PERL5@ -MFile::stat -E "my \$st = stat(qq{$TTY}); say( (getpwuid(\$st->uid))[0] )")"
+ 	fi
+ fi
+ 
