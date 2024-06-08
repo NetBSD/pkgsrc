@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3848 2024/06/08 13:02:52 mef Exp $
+$NetBSD: CHANGES-2024,v 1.3849 2024/06/08 13:10:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6201,3 +6201,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/lgogdownloader to 3.14 [wiz 2024-06-08]
 	Updated graphics/vulkan-headers to 1.3.287 [wiz 2024-06-08]
 	Updated www/R-shiny to 1.8.1.1 [mef 2024-06-08]
+	Updated graphics/R-colourpicker to 1.3.0 [mef 2024-06-08]
