@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/02/04 06:51:49 taca Exp $
+# $NetBSD: Makefile,v 1.36 2024/06/08 16:16:37 taca Exp $
 
-DISTNAME=	faraday-2.9.0
+DISTNAME=	faraday-2.9.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,6 @@ COMMENT=	HTTP/REST API client library
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-faraday-net_http>=2.0<3.2:../../www/ruby-faraday-net_http
-DEPENDS+=	${RUBY_PKGPREFIX}-ruby2_keywords>=0.0.4:../../devel/ruby-ruby2_keywords
 
 USE_LANGUAGES=	# none
 
