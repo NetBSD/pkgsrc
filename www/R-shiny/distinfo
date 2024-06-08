@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/04 02:10:23 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/06/08 13:02:38 mef Exp $
 
-BLAKE2s (R/shiny_1.7.4.tar.gz) = f382cf4814aecb8d06c62fb412101384933115f58289ea37d847b39846f6ac4e
-SHA512 (R/shiny_1.7.4.tar.gz) = 239df2de9b4e7aeda21480ff8fdf9a6cfcd69afe56b507fec5303bb5394191115e8f98f5a3bfbfae07c5d3696b2bb04bee2a1b5cfe2b5a11e1867f8c025216c9
-Size (R/shiny_1.7.4.tar.gz) = 2476288 bytes
+BLAKE2s (R/shiny_1.8.1.1.tar.gz) = fda8db22e4f36ca29ab920eca3f61b4789399ba00cdcb8818043aa9e0235f16c
+SHA512 (R/shiny_1.8.1.1.tar.gz) = bbf49992483fbe7d3be1236fa71d9fe2143fbe9b04b298ff9e3c47bb4f0f64a2fc33274d5994f745f066c72f932456d0e629104bab806fffd2cf69bab0e7c2b6
+Size (R/shiny_1.8.1.1.tar.gz) = 3049516 bytes
