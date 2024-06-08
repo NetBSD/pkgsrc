@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/09 16:57:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/06/08 07:39:40 adam Exp $
 share/doc/python3.12/.buildinfo
 share/doc/python3.12/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.12/_images/hashlib-blake2-tree.png
@@ -111,6 +111,7 @@ share/doc/python3.12/_sources/howto/ipaddress.rst.txt
 share/doc/python3.12/_sources/howto/isolating-extensions.rst.txt
 share/doc/python3.12/_sources/howto/logging-cookbook.rst.txt
 share/doc/python3.12/_sources/howto/logging.rst.txt
+share/doc/python3.12/_sources/howto/mro.rst.txt
 share/doc/python3.12/_sources/howto/perf_profiling.rst.txt
 share/doc/python3.12/_sources/howto/pyporting.rst.txt
 share/doc/python3.12/_sources/howto/regex.rst.txt
@@ -652,6 +653,7 @@ share/doc/python3.12/howto/ipaddress.html
 share/doc/python3.12/howto/isolating-extensions.html
 share/doc/python3.12/howto/logging-cookbook.html
 share/doc/python3.12/howto/logging.html
+share/doc/python3.12/howto/mro.html
 share/doc/python3.12/howto/perf_profiling.html
 share/doc/python3.12/howto/pyporting.html
 share/doc/python3.12/howto/regex.html
