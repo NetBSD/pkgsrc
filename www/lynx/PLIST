@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/03/12 10:13:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/06/08 20:31:23 nikita Exp $
 bin/lynx
 man/man1/lynx.1
 share/examples/lynx/lynx.cfg
@@ -18,6 +18,7 @@ share/locale/it/LC_MESSAGES/lynx.mo
 share/locale/ja/LC_MESSAGES/lynx.mo
 share/locale/nl/LC_MESSAGES/lynx.mo
 share/locale/pt_BR/LC_MESSAGES/lynx.mo
+share/locale/ro/LC_MESSAGES/lynx.mo
 share/locale/ru/LC_MESSAGES/lynx.mo
 share/locale/sl/LC_MESSAGES/lynx.mo
 share/locale/sv/LC_MESSAGES/lynx.mo
@@ -80,6 +81,7 @@ share/lynx/lynx_doc/samples/lynx_bookmarks.htm
 share/lynx/lynx_doc/samples/lynxdump
 share/lynx/lynx_doc/samples/mailcap
 share/lynx/lynx_doc/samples/mailto-form.pl
+share/lynx/lynx_doc/samples/mhtml-tool
 share/lynx/lynx_doc/samples/midnight.lss
 share/lynx/lynx_doc/samples/mild-colors.lss
 share/lynx/lynx_doc/samples/mime.types
@@ -96,6 +98,7 @@ share/lynx/lynx_doc/test/c1.html
 share/lynx/lynx_doc/test/circle.html
 share/lynx/lynx_doc/test/cp-1252.html
 share/lynx/lynx_doc/test/cp-1252a.html
+share/lynx/lynx_doc/test/idna-tr46.html
 share/lynx/lynx_doc/test/image.jpg
 share/lynx/lynx_doc/test/iso-8859-1.html
 share/lynx/lynx_doc/test/iso-8859-1a.html
