@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2023/11/07 22:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/08 12:24:15 wiz Exp $
 
-DISTNAME=	sphinx-autoapi-3.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	sphinx_autoapi-3.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autoapi/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_autoapi/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/readthedocs/sphinx-autoapi
 COMMENT=	Autodoc style documentation for multiple languages
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-anyascii-[0-9]*:../../textproc/py-anyascii
 DEPENDS+=	${PYPKGPREFIX}-astroid>=2.7:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
@@ -27,5 +29,5 @@ TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
