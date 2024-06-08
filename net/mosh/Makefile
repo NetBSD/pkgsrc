@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/05/29 16:35:19 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/06/08 17:52:24 agc Exp $
 
 DISTNAME=	mosh-1.4.0
 PKGREVISION=	4
@@ -15,10 +15,7 @@ USE_TOOLS+=		gmake perl:run pkg-config
 USE_LANGUAGES+=		c c++
 USE_GCC_RUNTIME=	yes
 
-USE_CXX_FEATURES+=	c++14
-
-# USE_CXX_FEATURES does not affect configure phase, but is needed there
-CXXFLAGS+=	-std=c++14
+FORCE_CXX_STD=	c++14
 
 REPLACE_PERL+=	scripts/mosh.pl
 REPLACE_PERL+=	src/tests/genbase64.pl
