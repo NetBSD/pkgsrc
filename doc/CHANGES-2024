@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3853 2024/06/08 15:20:39 mef Exp $
+$NetBSD: CHANGES-2024,v 1.3854 2024/06/08 15:31:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/mame to 0.266 [wiz 2024-06-08]
 	Updated math/R-mvtnorm to 1.2.5 [mef 2024-06-08]
 	Added math/R-pcaPP version 2.0.4 [mef 2024-06-08]
+	Added math/R-lars version 1.3 [mef 2024-06-08]
