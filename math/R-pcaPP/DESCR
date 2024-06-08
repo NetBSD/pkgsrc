@@ -1,0 +1,4 @@
+Provides functions for robust PCA by projection pursuit. The methods
+are described in Croux et al. (2006) <doi:10.2139/ssrn.968376>, Croux
+et al. (2013) <doi:10.1080/00401706.2012.727746>, Todorov and
+Filzmoser (2013) <doi:10.1007/978-3-642-33042-1_31>.
