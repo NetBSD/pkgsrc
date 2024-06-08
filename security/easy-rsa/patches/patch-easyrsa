@@ -1,19 +1,10 @@
-$NetBSD: patch-easyrsa,v 1.5 2023/12/05 18:29:16 adam Exp $
+$NetBSD: patch-easyrsa,v 1.6 2024/06/08 07:14:37 adam Exp $
 
 Set a sane default for config file. Needs to be SUBSTed.
 
---- easyrsa.orig	2023-10-13 22:27:51.000000000 +0000
+--- easyrsa.orig	2024-05-18 12:20:59.000000000 +0000
 +++ easyrsa
-@@ -1443,7 +1443,7 @@ install_data_to_pki() {
- 	# '/usr/local/share/easy-rsa' - Default user installed
- 	# '/usr/share/easy-rsa' - Default system installed
- 	# Room for more..
--	# '/etc/easy-rsa' - Last resort
-+	# '@SYSCONFDIR@' - Last resort
- 
- 	# Find and optionally copy data-files, in specific order
- 	for area in \
-@@ -1453,7 +1453,7 @@ install_data_to_pki() {
+@@ -1475,7 +1475,7 @@ locate_support_files() {
  		"${0%/*}" \
  		'/usr/local/share/easy-rsa' \
  		'/usr/share/easy-rsa' \
@@ -21,4 +12,4 @@ Set a sane default for config file. Needs to be SUBSTed.
 +		'@SYSCONFDIR@' \
  		# EOL
  	do
- 		if [ "$context" = x509-types-only ]; then
+ 		# Find x509-types
