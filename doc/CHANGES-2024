@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3832 2024/06/08 08:36:12 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3833 2024/06/08 11:51:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6185,3 +6185,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-ansible-compat to 24.6.1 [adam 2024-06-08]
 	Updated sysutils/ansible-lint to 24.6.0 [adam 2024-06-08]
 	Updated mail/dovecot2-fts-flatcurve to 1.0.3 [adam 2024-06-08]
+	Updated multimedia/dav1d to 1.4.2 [wiz 2024-06-08]
