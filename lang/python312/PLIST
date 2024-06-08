@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/01 15:56:03 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/08 07:39:40 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -3112,6 +3112,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_mem.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_set.pyo
@@ -4022,6 +4025,18 @@ lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule1.pyo
 lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyc
 lib/python${PY_VER_SUFFIX}/test/test_import/data/package2/submodule2.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/submodule.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/submodule.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package3/submodule.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/submodule.py
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/submodule.pyc
+lib/python${PY_VER_SUFFIX}/test/test_import/data/package4/submodule.pyo
 lib/python${PY_VER_SUFFIX}/test/test_import/data/unwritable/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_import/data/unwritable/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_import/data/unwritable/__init__.pyo
@@ -5511,6 +5526,9 @@ lib/python${PY_VER_SUFFIX}/test/test_weakset.pyo
 lib/python${PY_VER_SUFFIX}/test/test_webbrowser.py
 lib/python${PY_VER_SUFFIX}/test/test_webbrowser.pyc
 lib/python${PY_VER_SUFFIX}/test/test_webbrowser.pyo
+lib/python${PY_VER_SUFFIX}/test/test_winapi.py
+lib/python${PY_VER_SUFFIX}/test/test_winapi.pyc
+lib/python${PY_VER_SUFFIX}/test/test_winapi.pyo
 lib/python${PY_VER_SUFFIX}/test/test_winconsoleio.py
 lib/python${PY_VER_SUFFIX}/test/test_winconsoleio.pyc
 lib/python${PY_VER_SUFFIX}/test/test_winconsoleio.pyo
@@ -5678,6 +5696,9 @@ lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module5.pyo
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module6.py
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module6.pyc
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module6.pyo
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module695.py
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module695.pyc
+lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module695.pyo
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module7.py
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module7.pyc
 lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module7.pyo
