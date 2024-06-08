@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3850 2024/06/08 14:15:07 mef Exp $
+$NetBSD: CHANGES-2024,v 1.3851 2024/06/08 14:43:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6203,3 +6203,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/R-shiny to 1.8.1.1 [mef 2024-06-08]
 	Updated graphics/R-colourpicker to 1.3.0 [mef 2024-06-08]
 	Added math/R-mclust version 6.1.1 [mef 2024-06-08]
+	Updated emulators/mame to 0.266 [wiz 2024-06-08]
