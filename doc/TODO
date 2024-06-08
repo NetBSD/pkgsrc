@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24502 2024/06/08 12:20:56 wiz Exp $
+$NetBSD: TODO,v 1.24503 2024/06/08 12:24:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1154,7 +1154,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-scgi-2.0
 	o py-setuptools-70.0.0
 	o py-simpletal-5.1
-	o py-sphinx-autoapi-3.1.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
