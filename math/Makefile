@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2024/06/08 15:35:31 mef Exp $
+# $NetBSD: Makefile,v 1.599 2024/06/08 15:42:50 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -99,6 +99,7 @@ SUBDIR+=	R-numDeriv
 SUBDIR+=	R-pbkrtest
 SUBDIR+=	R-pcaPP
 SUBDIR+=	R-pixmap
+SUBDIR+=	R-pls
 SUBDIR+=	R-plyr
 SUBDIR+=	R-poweRlaw
 SUBDIR+=	R-pracma
