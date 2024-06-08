@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:23:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/06/08 15:58:43 taca Exp $
 
-BLAKE2s (builder-3.2.4.gem) = b4418f3acfcad97e93167b2cb525d36ab1a75ce2cfb6f53b1d69b4835e40f75f
-SHA512 (builder-3.2.4.gem) = 730317ec0a4af33e183283e309e38d47deb08db0ab6bd6dfebdedcebb7470bd383c6c1d32ad674adc43298e0f86930b97c652fff9827ca8890db2d1d68e792f1
-Size (builder-3.2.4.gem) = 32256 bytes
+BLAKE2s (builder-3.3.0.gem) = 4540c0b52d5380328491d3bdcb2159e88906cb22d400085fb439c70faa40c0c7
+SHA512 (builder-3.3.0.gem) = 33b6ef4d8ebb437afac4bb7243faac0e2e44694dc8f8404df3421c7e0889234675af0d2e32e035594b1563f9fbc90a039910d2484996508329be2fd234c4bc06
+Size (builder-3.3.0.gem) = 30208 bytes

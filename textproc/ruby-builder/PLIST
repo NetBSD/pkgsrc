@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2020/06/15 15:02:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/08 15:58:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -10,9 +12,7 @@ ${GEM_LIBDIR}/doc/jamis.rb
 ${GEM_LIBDIR}/doc/releases/builder-1.2.4.rdoc
 ${GEM_LIBDIR}/doc/releases/builder-2.0.0.rdoc
 ${GEM_LIBDIR}/doc/releases/builder-2.1.1.rdoc
-${GEM_LIBDIR}/lib/blankslate.rb
 ${GEM_LIBDIR}/lib/builder.rb
-${GEM_LIBDIR}/lib/builder/blankslate.rb
 ${GEM_LIBDIR}/lib/builder/version.rb
 ${GEM_LIBDIR}/lib/builder/xchar.rb
 ${GEM_LIBDIR}/lib/builder/xmlbase.rb
@@ -23,8 +23,6 @@ ${GEM_LIBDIR}/rakelib/tags.rake
 ${GEM_LIBDIR}/rakelib/testing.rake
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/performance.rb
-${GEM_LIBDIR}/test/preload.rb
-${GEM_LIBDIR}/test/test_blankslate.rb
 ${GEM_LIBDIR}/test/test_eventbuilder.rb
 ${GEM_LIBDIR}/test/test_markupbuilder.rb
 ${GEM_LIBDIR}/test/test_method_caching.rb
