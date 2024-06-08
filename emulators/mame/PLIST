@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2024/04/25 09:51:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.85 2024/06/08 14:43:26 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -218,6 +218,7 @@ share/mame/hash/cpc_cass.xml
 share/mame/hash/cpc_flop.xml
 share/mame/hash/crvision.xml
 share/mame/hash/ctvboy.xml
+share/mame/hash/cubieboard4.xml
 share/mame/hash/cx3000tc.xml
 share/mame/hash/cz1_cart.xml
 share/mame/hash/dai_cass.xml
@@ -240,22 +241,7 @@ share/mame/hash/easy_karaoke_cart.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/einstein_rom.xml
-share/mame/hash/ekara_japan.xml
-share/mame/hash/ekara_japan_a.xml
-share/mame/hash/ekara_japan_bh.xml
-share/mame/hash/ekara_japan_d.xml
-share/mame/hash/ekara_japan_en.xml
-share/mame/hash/ekara_japan_g.xml
-share/mame/hash/ekara_japan_gk.xml
-share/mame/hash/ekara_japan_kd.xml
-share/mame/hash/ekara_japan_m.xml
-share/mame/hash/ekara_japan_p.xml
-share/mame/hash/ekara_japan_packin.xml
-share/mame/hash/ekara_japan_s.xml
-share/mame/hash/ekara_japan_sp.xml
-share/mame/hash/ekara_japan_web.xml
-share/mame/hash/ekara_pal.xml
-share/mame/hash/ekara_us.xml
+share/mame/hash/ekara_cart.xml
 share/mame/hash/electron_cart.xml
 share/mame/hash/electron_cass.xml
 share/mame/hash/electron_flop.xml
@@ -367,7 +353,6 @@ share/mame/hash/jakks_gamekey_sw.xml
 share/mame/hash/jaminator.xml
 share/mame/hash/jazz.xml
 share/mame/hash/jb3000_flop.xml
-share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/juku.xml
 share/mame/hash/jupace_cass.xml
@@ -378,6 +363,7 @@ share/mame/hash/kc_cart.xml
 share/mame/hash/kc_cass.xml
 share/mame/hash/kc_flop.xml
 share/mame/hash/kim1_cass.xml
+share/mame/hash/kisssite_cd.xml
 share/mame/hash/korvet_flop.xml
 share/mame/hash/kpython2.xml
 share/mame/hash/lanteach.xml
@@ -438,6 +424,7 @@ share/mame/hash/mindset_flop.xml
 share/mame/hash/misterx.xml
 share/mame/hash/mk14_quik.xml
 share/mame/hash/mm1_flop.xml
+share/mame/hash/mm2_flop.xml
 share/mame/hash/mo5_cart.xml
 share/mame/hash/mo5_cass.xml
 share/mame/hash/mo5_flop.xml
@@ -602,6 +589,7 @@ share/mame/hash/r9751.xml
 share/mame/hash/radio86_cart.xml
 share/mame/hash/radio86_cass.xml
 share/mame/hash/rainbow.xml
+share/mame/hash/ramstar.xml
 share/mame/hash/roland_tnsc1.xml
 share/mame/hash/roland_tnsc2.xml
 share/mame/hash/rwtrntcs.xml
@@ -698,6 +686,7 @@ share/mame/hash/ti99_cart.xml
 share/mame/hash/tiki100.xml
 share/mame/hash/timex_cass.xml
 share/mame/hash/timex_dock.xml
+share/mame/hash/tmc600_quik.xml
 share/mame/hash/tntell.xml
 share/mame/hash/to770_cart.xml
 share/mame/hash/to770a_cart.xml
