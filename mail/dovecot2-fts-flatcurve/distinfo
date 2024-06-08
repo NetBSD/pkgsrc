@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/04/06 12:45:25 nikita Exp $
+$NetBSD: distinfo,v 1.2 2024/06/08 08:35:53 adam Exp $
 
-BLAKE2s (dovecot-fts-flatcurve-1.0.2.tar.gz) = 5360df4b79e4c9bfa4ab332ce9bc38646730684fe4f8959a15f0763aa55ea579
-SHA512 (dovecot-fts-flatcurve-1.0.2.tar.gz) = bed437a00b2d6347774028fac5ed7fe9632b71f83e72540684cbaf8b5e98666c9516936a6bb11146c9e0a56179beb2c46881a40c90deb002a573633bc79e507e
-Size (dovecot-fts-flatcurve-1.0.2.tar.gz) = 114767 bytes
+BLAKE2s (dovecot-fts-flatcurve-1.0.3.tar.gz) = a4658809b11f989e3df1a3b694c611efff78083fb0930d7ed7e079a64a108336
+SHA512 (dovecot-fts-flatcurve-1.0.3.tar.gz) = 87c630a78690735be24a5b7f82e0de4044ce35001740b1e8c97646205e7b72c526dbe0945f7c1caadc8ccf36f3ebcddade0db379611e77328f954df26a4d591a
+Size (dovecot-fts-flatcurve-1.0.3.tar.gz) = 114700 bytes
