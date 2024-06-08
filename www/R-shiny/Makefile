@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/04 02:10:23 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/08 13:02:38 mef Exp $
 
 R_PKGNAME=	shiny
-R_PKGVER=	1.7.4
+R_PKGVER=	1.8.1.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,9 +29,16 @@ DEPENDS+=	R-glue-[0-9]*:../../devel/R-glue
 DEPENDS+=	R-ellipsis-[0-9]*:../../math/R-ellipsis
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 
-#  'Cairo', 'testthat', 'ggplot2', 'reactlog', 'shinytest', 'future',
-#  'dygraphs', 'ragg', 'showtext'
+# Packages required but not available:
+#  'httpuv', 'mime', 'xtable', 'fontawesome', 'htmltools',
+#  'sourcetools', 'later', 'promises', 'fastmap', 'commonmark', 'bslib',
+#  'cachem'
+#
+# Packages suggested but not available:
+#  'DT', 'Cairo', 'knitr', 'markdown', 'rmarkdown', 'ggplot2',
+#  'reactlog', 'yaml', 'future', 'dygraphs', 'ragg', 'showtext', 'sass'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+
 
 USE_LANGUAGES=	# none
 
