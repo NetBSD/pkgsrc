@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/18 15:04:56 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/08 13:09:53 mef Exp $
 
 R_PKGNAME=	colourpicker
-R_PKGVER=	1.1.0
+R_PKGVER=	1.3.0
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,10 +13,12 @@ DEPENDS+=	R-htmltools>=0.3.6:../../textproc/R-htmltools
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
 DEPENDS+=	R-htmlwidgets>=0.7:../../www/R-htmlwidgets
 DEPENDS+=	R-miniUI>=0.1.1:../../www/R-miniUI
-DEPENDS+=	R-shiny>=0.11.1:../../www/R-shiny
+DEPENDS+=	R-shiny>=1.8.1.1:../../www/R-shiny
 DEPENDS+=	R-shinyjs>=1.0:../../www/R-shinyjs
 
 USE_LANGUAGES=	# none
+
+# Package suggested but not available: 'shinydisconnect'
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
