@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/06/08 15:36:31 mef Exp $
+
+BLAKE2s (R/pls_2.8-3.tar.gz) = 6ca137e1a885ade4fb4f1fa2aca899e12b1c1ffd0ae63f5cf50d7ecd61004529
+SHA512 (R/pls_2.8-3.tar.gz) = 4b43636c6285b997aca944dc12726f72b2a1c761408b852835c93038a357b6aedfe002ca8c9b3cbfd97e02baf455b4662cce57dd1852db40f3626a5a8cd15d85
+Size (R/pls_2.8-3.tar.gz) = 4365055 bytes
