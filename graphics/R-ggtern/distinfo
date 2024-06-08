@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/15 07:40:26 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/06/08 20:15:29 mef Exp $
 
-BLAKE2s (R/ggtern_3.4.2.tar.gz) = 2840c6a5907c132e5c905841279c18d695f404dd398b68254bb64c58934768c9
-SHA512 (R/ggtern_3.4.2.tar.gz) = fdedef1a7b7aebde077eabc13c4dd82a4f5a282b039fd7f31d71b258c86ef4e64d4544565ccbe0a05811a7c02e8685097840e19585e0060d764848737073f8ae
-Size (R/ggtern_3.4.2.tar.gz) = 568915 bytes
+BLAKE2s (R/ggtern_3.5.0.tar.gz) = 022013d85604978066fc78bb4100e0b51304d6ca2f379902f8e49fc86fffd488
+SHA512 (R/ggtern_3.5.0.tar.gz) = 8b57146efa134ba4288905ebe1dc2415843eeecc5d55422d5bce347e6c9d8455ca930710561f41eb5df84f1a28ddc0000626d549353c276bd71d4c3fa68c2ddf
+Size (R/ggtern_3.5.0.tar.gz) = 566774 bytes
