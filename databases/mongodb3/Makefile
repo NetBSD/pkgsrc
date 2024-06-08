@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2024/06/03 14:33:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2024/06/08 22:49:45 gdt Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
-# and further exists to support net/unifi.
 DISTNAME=	mongodb-src-r3.4.24
 PKGNAME=	${DISTNAME:S/src-r//}
 PKGREVISION=	22
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mongodb.com/
 COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
