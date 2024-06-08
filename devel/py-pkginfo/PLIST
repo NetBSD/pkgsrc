@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/03/11 13:19:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/08 07:24:44 adam Exp $
 bin/pkginfo
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -42,6 +42,9 @@ ${PYSITELIB}/pkginfo/sdist.pyo
 ${PYSITELIB}/pkginfo/tests/__init__.py
 ${PYSITELIB}/pkginfo/tests/__init__.pyc
 ${PYSITELIB}/pkginfo/tests/__init__.pyo
+${PYSITELIB}/pkginfo/tests/conftest.py
+${PYSITELIB}/pkginfo/tests/conftest.pyc
+${PYSITELIB}/pkginfo/tests/conftest.pyo
 ${PYSITELIB}/pkginfo/tests/test_bdist.py
 ${PYSITELIB}/pkginfo/tests/test_bdist.pyc
 ${PYSITELIB}/pkginfo/tests/test_bdist.pyo
