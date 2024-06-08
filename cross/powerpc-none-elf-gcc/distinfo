@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2022/04/15 17:16:09 tnn Exp $
+$NetBSD: distinfo,v 1.6 2024/06/08 14:42:12 cheusov Exp $
 
 BLAKE2s (gcc-8.3.0.tar.xz) = 395b2851da05d2ee21dfe3ec95e33482b63aeea7d37db423ffb7ebefd6547499
 SHA512 (gcc-8.3.0.tar.xz) = 1811337ae3add9680cec64968a2509d085b6dc5b6783fc1e8c295e3e47416196fd1a3ad8dfe7e10be2276b4f62c357659ce2902f239f60a8648548231b4b5802
@@ -7,6 +7,7 @@ BLAKE2s (newlib-3.1.0.tar.gz) = 293c92c6e8e0848083b3193b2c20a249eeb5e2ca318d0de7
 SHA512 (newlib-3.1.0.tar.gz) = efc4c3ab7153387780d141386bca5d3e20c9d25ae3e6b87cf94c8df9d301ce5926dacdff9bd33aeb9781559d933c3d0ae77f4e5b46120d90792f75dbfde702c7
 Size (newlib-3.1.0.tar.gz) = 17958952 bytes
 SHA1 (patch-gcc_config_host-darwin.c) = bb6513d096bed62a3c40a6543c6c854e5c20ef9d
+SHA1 (patch-gcc_plugin.c) = cd5b6a1255104760cf7c8e7092943c250b30e35c
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
