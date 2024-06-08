@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/03 15:56:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/08 15:55:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.devcontainer/devcontainer.json
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/build.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -23,11 +25,13 @@ ${GEM_LIBDIR}/lib/net/ntlm/field_set.rb
 ${GEM_LIBDIR}/lib/net/ntlm/int16_le.rb
 ${GEM_LIBDIR}/lib/net/ntlm/int32_le.rb
 ${GEM_LIBDIR}/lib/net/ntlm/int64_le.rb
+${GEM_LIBDIR}/lib/net/ntlm/md4.rb
 ${GEM_LIBDIR}/lib/net/ntlm/message.rb
 ${GEM_LIBDIR}/lib/net/ntlm/message/type0.rb
 ${GEM_LIBDIR}/lib/net/ntlm/message/type1.rb
 ${GEM_LIBDIR}/lib/net/ntlm/message/type2.rb
 ${GEM_LIBDIR}/lib/net/ntlm/message/type3.rb
+${GEM_LIBDIR}/lib/net/ntlm/rc4.rb
 ${GEM_LIBDIR}/lib/net/ntlm/security_buffer.rb
 ${GEM_LIBDIR}/lib/net/ntlm/string.rb
 ${GEM_LIBDIR}/lib/net/ntlm/target_info.rb
