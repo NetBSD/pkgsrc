@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/26 10:39:42 pho Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/09 08:12:14 pho Exp $
 
 DISTNAME=	pkgchkxx-0.2.1
 CATEGORIES=	pkgtools
@@ -11,7 +11,7 @@ COMMENT=	Complete rewrite of pkg_chk and pkg_rolling-replace in C++
 LICENSE=	modified-bsd AND 2-clause-bsd
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++17 filesystem unique_ptr
+USE_CXX_FEATURES=	c++17 filesystem
 USE_TOOLS=		gmake
 GNU_CONFIGURE=		YES
 
