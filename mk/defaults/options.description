@@ -311,6 +311,7 @@ gnupg2			Use GNU Privacy Guard (GnuPG) Version 2.0
 gnuplot			Enable gnuplot support.
 gnuplot-pdf-doc		Install PDF document.
 gnutls			Enable GNU TLS support.
+go			Enable Go language support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
