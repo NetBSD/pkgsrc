@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.126 2024/04/07 07:35:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.127 2024/06/09 18:35:48 wiz Exp $
 
-.include "Makefile.common"
-
+DISTNAME=	vte-0.28.1
 PKGREVISION=	35
 CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.28/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
@@ -16,14 +16,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
+PKGCONFIG_OVERRIDE+=	vte.pc.in
+
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-# for FC_WIDTH
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1.93
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
