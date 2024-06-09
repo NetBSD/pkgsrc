@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2024/02/19 12:33:17 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2024/06/09 18:08:41 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -26,8 +26,10 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Test status as of 6.6.3
-# Ran 932 tests, 83 skipped, 0 failed.
+# Test status as of 6.7.3
+# Ran 934 tests, 83 skipped, 1 failed.
+# test-profile.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6846
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
