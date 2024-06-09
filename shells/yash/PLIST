@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/24 21:37:56 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/09 07:44:54 vins Exp $
 bin/yash
 man/ja/man1/yash.1
 man/man1/yash.1
@@ -44,6 +44,7 @@ share/yash/completion/diff
 share/yash/completion/dirs
 share/yash/completion/disown
 share/yash/completion/dnf
+share/yash/completion/doas
 share/yash/completion/du
 share/yash/completion/echo
 share/yash/completion/ed
