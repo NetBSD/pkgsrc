@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/04/26 16:12:48 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/06/09 14:06:32 wiz Exp $
 
-BLAKE2s (epoll-shim-0.0.20230411.tar.gz) = 4af045f048218579884c1ff11c53b4d9bb2d7ecfbca8b2cf41394916cca3fb24
-SHA512 (epoll-shim-0.0.20230411.tar.gz) = eed623a3ea48e95c167976ad103a98e9a9f08fb0b300cda67da1b6961c1ac5556b51fd451d6db062b6503b8dcc5d3a267048f6a7ca153a834416ae9949c62f2f
-Size (epoll-shim-0.0.20230411.tar.gz) = 103385 bytes
+BLAKE2s (epoll-shim-0.0.20240608.tar.gz) = 5e877992a30ed30d3f5a99aae1af07e9e5532eeb3395fb727c386506aaec1c54
+SHA512 (epoll-shim-0.0.20240608.tar.gz) = 03f2cf64854dcb7c065284bbe765e6b52a9504969a733b450746226334fb9852e210b3db0d8ae40733abf62d75d35cc539140e9b5fb3507de9e47ebbc15f2ae3
+Size (epoll-shim-0.0.20240608.tar.gz) = 104137 bytes
 SHA1 (patch-epoll-shim.pc.cmakein) = 6a31165678618c40104d9e592cb888e4a00a596c
