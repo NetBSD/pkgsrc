@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/06/09 14:07:17 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/06/09 14:10:57 wiz Exp $
 
 DISTNAME=	glances-4.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-ujson>=5.4.0:../../textproc/py-ujson
+DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 
 USE_LANGUAGES=	# none
 
