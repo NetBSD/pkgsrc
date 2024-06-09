@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/04/28 09:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/09 13:59:19 wiz Exp $
 
-DISTNAME=	ancient-2.1.1
+DISTNAME=	ancient-2.2.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=temisu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
