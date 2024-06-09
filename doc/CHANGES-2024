@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3884 2024/06/09 13:27:14 vins Exp $
+$NetBSD: CHANGES-2024,v 1.3885 2024/06/09 13:59:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6237,3 +6237,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/yash to 2.56.1 [vins 2024-06-09]
 	Updated mail/opensmtpd to 7.5.0p0 [vins 2024-06-09]
 	Updated devel/got to 0.100 [vins 2024-06-09]
+	Updated archivers/ancient to 2.2.0 [wiz 2024-06-09]
