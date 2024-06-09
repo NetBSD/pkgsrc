@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/05/29 17:28:29 vins Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/09 13:25:05 vins Exp $
 
-DISTNAME=	got-portable-0.99
+DISTNAME=	got-portable-0.100
 PKGNAME=	${DISTNAME:S/-portable//}
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
@@ -17,6 +17,8 @@ PREV_PKGPATH=	devel/got-portable
 BUILD_DEFS+=	VARBASE
 
 USE_TOOLS+=	pkg-config yacc ksh:test perl:test
+# required for waddwstr(3)
+USE_NCURSES=	yes
 
 PKG_GROUPS=		_gotd
 PKG_USERS=		_gotd:_gotd
@@ -96,7 +98,7 @@ post-install:
 # needs libtls
 .include "../../security/libretls/buildlink3.mk"
 
-# required for set_panel_userptr(3) and waddwstr(3).
+# needs gnupanelw
 BUILDLINK_API_DEPENDS.ncurses+=   ncurses>=6.5
 .include "../../devel/ncurses/buildlink3.mk"
 
