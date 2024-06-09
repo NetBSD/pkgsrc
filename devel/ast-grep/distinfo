@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2024/06/03 07:27:38 pin Exp $
+$NetBSD: distinfo,v 1.19 2024/06/09 14:34:53 wiz Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -36,9 +36,9 @@ Size (anyhow-1.0.86.crate) = 46741 bytes
 BLAKE2s (assert_cmd-2.0.14.crate) = 62b2c7762e1d651155c155b97f7b58e25107982d9244fb43290aee90c5b1ce26
 SHA512 (assert_cmd-2.0.14.crate) = 112c3f933a013715c0dfcf29889ec023c88097a70fe212a7d98d0a5272d5f6da87df9353da006483830a0ac3c42a12e12d8fabeb90eb62453982edbc75215613
 Size (assert_cmd-2.0.14.crate) = 24591 bytes
-BLAKE2s (ast-grep-0.22.5.tar.gz) = 9fe27bee99134d2e908e05da37ac18cf76e266edab9c11c0a9c11a83bd3a71a7
-SHA512 (ast-grep-0.22.5.tar.gz) = ce83db4a34f354005a825cd80d9bd5030dd683f125180ff1e10064704a3ac3b6c219f88b936e0d4cd7a94e2b287c8130ab1ea5a79fdc5c72fac98473e876bcc0
-Size (ast-grep-0.22.5.tar.gz) = 827485 bytes
+BLAKE2s (ast-grep-0.22.6.tar.gz) = e834caf58c94efdd5c896c25547223daef0115d9cca1bc357f245d9d9324ee5c
+SHA512 (ast-grep-0.22.6.tar.gz) = 49e5dd920aefb81f2bb1752e0a069bd13d5ac2251f4b3a1b6cdfe555a76729dd27b505f497312298107c4ba617d33ef98e806f504d7551f939a2b46f33831503
+Size (ast-grep-0.22.6.tar.gz) = 827687 bytes
 BLAKE2s (async-trait-0.1.80.crate) = 15f1b67e14b1c463ff22d1692667ffc8ebaebf0ff3899a814fdec3214b422145
 SHA512 (async-trait-0.1.80.crate) = 3e92bc8d38feea49ebb5011303e55853bbbf5d0fb7c4f6ed6aa471b9000a2a0ea5475619f98831641e8ee484beaa6fd8880770a96b8a5a7df26e392c1b4b3a19
 Size (async-trait-0.1.80.crate) = 28775 bytes
