@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/06/08 07:24:44 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/06/09 14:14:46 wiz Exp $
 
-BLAKE2s (pkginfo-1.11.0.tar.gz) = 1621a7963ab92ccf91a42a93607d7686b8f040b3f26dbdbd3dd04357bab83918
-SHA512 (pkginfo-1.11.0.tar.gz) = f145d29fa8bd7e9e0264c98fb440fe6e2b53081751e40264860dc50ea3bca4c69b3959ce70ea55669a89db9783a09369cd655ac93bf9a59a73c7d8023335d9c8
-Size (pkginfo-1.11.0.tar.gz) = 376619 bytes
+BLAKE2s (pkginfo-1.11.1.tar.gz) = e16d3625931be71cb4230584404a2984a15af00eb18a5f483f5a50508adbe61c
+SHA512 (pkginfo-1.11.1.tar.gz) = 9bb159e4c9efe6d42c6f564346bb3bfacc700cfdf3498d7dcdddcbbc5e9797df720f3f0a2142a7abd2e84e82ec30823d9807a61304af1c165973a2582ffb2731
+Size (pkginfo-1.11.1.tar.gz) = 376911 bytes
