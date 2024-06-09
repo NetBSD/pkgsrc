@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24524 2024/06/09 18:32:17 wiz Exp $
+$NetBSD: TODO,v 1.24525 2024/06/09 22:19:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1114,7 +1114,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
-	o prometheus-2.52.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
