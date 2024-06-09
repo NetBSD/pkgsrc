@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24508 2024/06/08 18:51:24 wiz Exp $
+$NetBSD: TODO,v 1.24509 2024/06/09 07:19:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,6 +432,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5
 	o amtterm-1.7.1
+	o ancient-2.2.0
 	o ap-Embperl-1.3.6
 	o ap-auth-mellon-0.14.2
 	o ap-auth-pam-1.1.1
@@ -467,6 +468,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.22.6
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -648,6 +650,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fribidi-1.0.15
 	o fricas-1.3.8
 	o frink-2.3.1a2
 	o ftplibpp-2.0.2
@@ -739,6 +742,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.64.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -814,6 +818,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.18.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -853,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
+	o libepoll-shim-0.0.20240608
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -1120,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-Glances-4.0.8
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
@@ -1131,6 +1138,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.132.0
+	o py-google-auth-2.30.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
@@ -1142,7 +1151,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pkginfo-1.11.1
 	o py-postgresql-5.1.2
+	o py-pycnite-2024.5.27
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
@@ -1150,11 +1161,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autodoc-typehints-2.1.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-urwid-2.6.13
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1310,6 +1323,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-cmake-0.5.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
