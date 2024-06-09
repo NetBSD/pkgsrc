@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2023/05/20 07:35:16 wiz Exp $
+$NetBSD: distinfo,v 1.30 2024/06/09 06:11:02 wiz Exp $
 
-BLAKE2s (Alien-Build-2.80.tar.gz) = 7a0ae2550a280519895189d168bef0a017998104f0f608e6f7a3b16a376b979a
-SHA512 (Alien-Build-2.80.tar.gz) = 88f672a04796e22650a211d0504a0d7ab3ae3cdb3b992ca9a4ea996241f578454b6dcfb5fb448d27d69569a2b706308820f067b346913b75f1dc012893aab68e
-Size (Alien-Build-2.80.tar.gz) = 547037 bytes
+BLAKE2s (Alien-Build-2.83.tar.gz) = 3cafbd1431a3afdfd02a1795763526a93e81d000049e1cdf976a798f3c083fe2
+SHA512 (Alien-Build-2.83.tar.gz) = db21995423cd13656ac2a93bfbeb1cfeef8e521774b9895860a9119195b3eeab4104d8c54bc263db0891855da965fa8ffacdfaff89977c817e2d2650ce69d02e
+Size (Alien-Build-2.83.tar.gz) = 547519 bytes
