@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2024/06/08 20:31:23 nikita Exp $
+# $NetBSD: Makefile,v 1.151 2024/06/09 05:57:15 wiz Exp $
 
 DISTNAME=	lynx2.9.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
@@ -32,6 +32,7 @@ CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
 REPLACE_PERL+=			samples/mailto-form.pl
 REPLACE_PERL+=			samples/mhtml-tool
 CHECK_INTERPRETER_SKIP+=	share/lynx/lynx_doc/samples/mailto-form.pl
+CHECK_INTERPRETER_SKIP+=	share/lynx/lynx_doc/samples/mhtml-tool
 CHECK_WRKREF_SKIP+=		bin/lynx
 
 .include "options.mk"
