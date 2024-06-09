@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3902 2024/06/09 21:12:33 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3903 2024/06/09 22:19:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6255,3 +6255,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-mercurial to 6.7.3 [wiz 2024-06-09]
 	Updated devel/py-hg-evolve to 11.1.3 [wiz 2024-06-09]
 	Updated devel/py-hg-git to 1.1.2 [wiz 2024-06-09]
+	Updated databases/prometheus to 2.52.1 [wiz 2024-06-09]
