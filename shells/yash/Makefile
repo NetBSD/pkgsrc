@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2023/08/26 19:05:31 vins Exp $
+# $NetBSD: Makefile,v 1.10 2024/06/09 07:44:54 vins Exp $
 
-DISTNAME=	yash-2.55
-PKGREVISION=	1
+DISTNAME=	yash-2.56.1
 CATEGORIES=	shells
-MASTER_SITES=	http://osdn.dl.osdn.net/yash/79124/
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=magicant/}
+GITHUB_RELEASE= ${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://yash.osdn.jp/index.html.en
+HOMEPAGE=	https://magicant.github.io/yash/
 COMMENT=	POSIX-compliant command line shell
 LICENSE=	gnu-gpl-v2
 
