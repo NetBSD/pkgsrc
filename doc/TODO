@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24523 2024/06/09 14:35:04 wiz Exp $
+$NetBSD: TODO,v 1.24524 2024/06/09 18:32:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -939,6 +939,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mipsel-none-elf-gcc-9.3.0
 	o mit-scheme-bin-9.2
 	o modular-xorg-xwayland-24.1.0
+	o mold-2.32
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o mopher-0.6.0
