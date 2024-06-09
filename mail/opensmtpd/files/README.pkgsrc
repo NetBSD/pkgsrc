@@ -2,6 +2,15 @@
 | Getting started with OpenSMTPD on NetBSD 
 +-----------------------------------------------------------------------
 
+NOTE: If you're upgrading from 7.4.0p*, make sure ${VARBASE}/smtpd/empty
+      exists, and change the home directory for the _smtpd and _smtpq
+      pesudo-users accordingly: 
+
+	$ usermod -d @VARBASE@/smtpd/empty _smptd
+	$ usermod -d @VARBASE@/smtpd/empty _smtpq
+
+------------------------------------------------------------------------
+
 Assuming NetBSD-style mailwrapper(8) and rc(8), few steps are required
 to set up OpenSMTPD for local and outbound delivery on your system: 
 
@@ -16,7 +25,7 @@ to set up OpenSMTPD for local and outbound delivery on your system:
 * Copy the sample rc.d service script provided as
   @PREFIX@/share/examples/rc.d/opensmtpd to @RCD_SCRIPTS_DIR@
 
-* Import the pam policy for the smtp protocol by copying
+* Import the pam policy file for the smtp protocol by copying
   @PREFIX@/share/examples/pam.d/smtp to /etc/pam.d 
 
 * Prepend @PREFIX@/man to the MANPATH environment to avoid conflicting
