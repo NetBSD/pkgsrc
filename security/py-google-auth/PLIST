@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/01/07 16:25:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/06/09 14:20:58 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -107,6 +107,7 @@ ${PYSITELIB}/google/auth/metrics.pyo
 ${PYSITELIB}/google/auth/pluggable.py
 ${PYSITELIB}/google/auth/pluggable.pyc
 ${PYSITELIB}/google/auth/pluggable.pyo
+${PYSITELIB}/google/auth/py.typed
 ${PYSITELIB}/google/auth/transport/__init__.py
 ${PYSITELIB}/google/auth/transport/__init__.pyc
 ${PYSITELIB}/google/auth/transport/__init__.pyo
@@ -170,6 +171,7 @@ ${PYSITELIB}/google/oauth2/gdch_credentials.pyo
 ${PYSITELIB}/google/oauth2/id_token.py
 ${PYSITELIB}/google/oauth2/id_token.pyc
 ${PYSITELIB}/google/oauth2/id_token.pyo
+${PYSITELIB}/google/oauth2/py.typed
 ${PYSITELIB}/google/oauth2/reauth.py
 ${PYSITELIB}/google/oauth2/reauth.pyc
 ${PYSITELIB}/google/oauth2/reauth.pyo
@@ -182,6 +184,15 @@ ${PYSITELIB}/google/oauth2/sts.pyo
 ${PYSITELIB}/google/oauth2/utils.py
 ${PYSITELIB}/google/oauth2/utils.pyc
 ${PYSITELIB}/google/oauth2/utils.pyo
+${PYSITELIB}/google/oauth2/webauthn_handler.py
+${PYSITELIB}/google/oauth2/webauthn_handler.pyc
+${PYSITELIB}/google/oauth2/webauthn_handler.pyo
+${PYSITELIB}/google/oauth2/webauthn_handler_factory.py
+${PYSITELIB}/google/oauth2/webauthn_handler_factory.pyc
+${PYSITELIB}/google/oauth2/webauthn_handler_factory.pyo
+${PYSITELIB}/google/oauth2/webauthn_types.py
+${PYSITELIB}/google/oauth2/webauthn_types.pyc
+${PYSITELIB}/google/oauth2/webauthn_types.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
