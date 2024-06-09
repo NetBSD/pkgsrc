@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2024/06/01 14:03:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.107 2024/06/09 22:55:38 wiz Exp $
 
-DISTNAME=	gitea-1.21.11
+DISTNAME=	gitea-1.22.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	2
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -15,7 +14,7 @@ LICENSE=	mit
 # The front-end files do not change every release, so only bump this when
 # necessary to avoid excessive uploads to LOCAL_PORTS.
 #
-FRONTEND=		gitea-1.21.11-frontend.tar.gz
+FRONTEND=		gitea-1.22.0-frontend.tar.gz
 SITES.${FRONTEND}=	${MASTER_SITE_LOCAL}
 DISTFILES:=		${DEFAULT_DISTFILES} ${FRONTEND}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES} ${FRONTEND}
@@ -30,7 +29,7 @@ BUILD_TARGET=	backend
 # This must not be enabled for normal builds as npm will download a significant
 # number of modules by itself, bypassing the usual pkgsrc distfiles rules.
 #
-# Install nodejs>=10, uncomment the additional BUILD_TARGET and
+# Install nodejs>=18, uncomment the additional BUILD_TARGET and
 # ALLOW_NETWORK_ACCESS, run the generate-frontend target, and compare
 # with the previous contents.  If needed, upload the generated distfile
 # to LOCAL_PORTS and bump FRONTEND.
