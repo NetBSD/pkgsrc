@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.205 2024/06/07 06:49:54 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.206 2024/06/09 18:32:17 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26023,3 +26023,5 @@ nginx<1.26.1	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34
 php>=8.1<8.1.29	argument-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-4577
 php>=8.2<8.2.20	argument-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-4577
 php>=8.3<8.3.8	argument-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-4577
+vte<0.76.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-37535
+vte3<0.76.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-37535
