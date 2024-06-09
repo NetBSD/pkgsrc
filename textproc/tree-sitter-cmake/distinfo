@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/08/24 06:16:29 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/06/09 14:11:45 wiz Exp $
 
-BLAKE2s (tree-sitter-cmake-0.4.1.tar.gz) = e19bd973d044beb6865b592924821627f4df8e0de94543259fdc6165242f263f
-SHA512 (tree-sitter-cmake-0.4.1.tar.gz) = 25318e305aa42bfaa6fd09fb515988a31a00247f535e4d881573226d862d72a74eb30dfdfb3bd2b985a9be96cdf6da6a8a9b945d9c256870755015ae573edd9c
-Size (tree-sitter-cmake-0.4.1.tar.gz) = 50091 bytes
+BLAKE2s (tree-sitter-cmake-0.5.0.tar.gz) = 90ef9f89cec4910ab6001c69021794f5b40ef4dabdf7145e75c707866d79136a
+SHA512 (tree-sitter-cmake-0.5.0.tar.gz) = 47cf1685909d89e9e1626cb9ed98b13f0b51dcd0fa14d905ae71e7e1db81f8c86eb47b54bea2fa37c78feecb64a2a294d82b6e87f3f4fb4c06d387e0342f712a
+Size (tree-sitter-cmake-0.5.0.tar.gz) = 54361 bytes
