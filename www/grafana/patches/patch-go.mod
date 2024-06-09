@@ -1,4 +1,4 @@
-$NetBSD: patch-go.mod,v 1.9 2024/05/13 15:59:54 wiz Exp $
+$NetBSD: patch-go.mod,v 1.10 2024/06/09 22:44:05 wiz Exp $
 
 Bluge upstream is dead, and k8s refuse to support non-Linux platforms, so we're
 stuck carrying these changes.  Previous pull requests:
@@ -19,20 +19,20 @@ Here's how to generate these patches:
 
 Then show-go-modules and mkpatches as normal.
 
---- go.mod.orig	2024-04-10 13:19:40.000000000 +0000
+--- go.mod.orig	2024-05-13 07:34:53.000000000 +0000
 +++ go.mod
-@@ -487,6 +487,7 @@ require github.com/spyzhov/ajson v0.9.0
- require github.com/fullstorydev/grpchan v1.1.1 // @grafana/backend-platform
+@@ -474,6 +474,7 @@ require github.com/grafana/authlib v0.0.
  
  require (
+ 	github.com/bahlo/generic-list-go v0.2.0 // indirect
 +	github.com/blugelabs/ice/v2 v2.0.1 // indirect
- 	github.com/bufbuild/protocompile v0.4.0 // indirect
- 	github.com/grafana/sqlds/v3 v3.2.0 // indirect
- 	github.com/jhump/protoreflect v1.15.1 // indirect
-@@ -520,3 +521,7 @@ replace xorm.io/xorm => ./pkg/util/xorm
- replace github.com/prometheus/alertmanager => github.com/grafana/prometheus-alertmanager v0.25.1-0.20240208102907-e82436ce63e6
+ 	github.com/buger/jsonparser v1.1.1 // indirect
+ 	github.com/bytedance/sonic v1.9.1 // indirect
+ 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
+@@ -519,3 +520,7 @@ exclude github.com/mattn/go-sqlite3 v2.0
  
- exclude github.com/mattn/go-sqlite3 v2.0.3+incompatible
+ // Use our fork xorm. go.work currently overrides this and points to the local ./pkg/util/xorm directory.
+ replace xorm.io/xorm => github.com/grafana/grafana/pkg/util/xorm v0.0.1
 +
 +replace github.com/blugelabs/bluge => github.com/jperkin/bluge v0.0.0-20221115155924-ffd91b43c395
 +
