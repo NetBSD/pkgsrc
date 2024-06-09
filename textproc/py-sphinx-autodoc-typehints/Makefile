@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/04/21 15:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/06/09 14:18:58 wiz Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-2.1.0
+DISTNAME=	sphinx_autodoc_typehints-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
