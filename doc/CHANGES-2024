@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3893 2024/06/09 14:17:20 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3894 2024/06/09 14:19:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6246,3 +6246,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-google-api-python-client to 2.132.0 [wiz 2024-06-09]
 	Updated devel/py-pkginfo to 1.11.1 [wiz 2024-06-09]
 	Updated devel/py-pycnite to 2024.5.27 [wiz 2024-06-09]
+	Updated textproc/py-sphinx-autodoc-typehints to 2.1.1 [wiz 2024-06-09]
