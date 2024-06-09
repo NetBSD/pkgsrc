@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/12 17:47:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/06/09 14:17:11 wiz Exp $
 
-BLAKE2s (pycnite-2023.10.11.tar.gz) = ec8672a17c6b2e633c88cfc0fb8866045d572b396996a2c3f5f621032fcfe4cc
-SHA512 (pycnite-2023.10.11.tar.gz) = e19a81ac480071f7dca4726cfd49da63e86885d032b06303d3ecb8982e98c94de6a45872469de26d2e1bd21ce552ff241da7fb7781b9b5d468e97a68fea7660d
-Size (pycnite-2023.10.11.tar.gz) = 21717 bytes
+BLAKE2s (pycnite-2024.5.27.tar.gz) = 1419cf17c20cf6f2d4c1024c3bb9d18146ef341fbb907843f42d4e4f9c08348f
+SHA512 (pycnite-2024.5.27.tar.gz) = dbd9dfdd6cf418fa9d2f454759f43435efab89dd43edb871e97df9551880ecb589162d8157e0e8555d10821bca7000d9a9aa4f28a9be48a9657e13af3f02cafd
+Size (pycnite-2024.5.27.tar.gz) = 21679 bytes
