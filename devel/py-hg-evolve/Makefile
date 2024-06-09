@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2024/03/17 15:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/06/09 21:10:55 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
-DISTNAME=	hg-evolve-11.1.2
+DISTNAME=	hg-evolve-11.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
@@ -26,13 +26,13 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__init__.py*
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__pycache__/__init__.*
 
-# Test status as of 11.1.0
+# Test status as of 11.1.3
 # Failed test-amend.t: output changed
 # Failed test-check-compat-strings.t: output changed
 # Failed test-check-sdist.t: output changed
 # Failed test-evolve-content-divergent-case-A2.t: output changed
 # Failed test-version-install.t: output changed
-# Ran 230 tests, 6 skipped, 5 failed.
+# Ran 233 tests, 6 skipped, 5 failed.
 
 .if 0
 HG_WRKSRC=	cd ../py-mercurial && ${MAKE} show-var VARNAME=WRKSRC
