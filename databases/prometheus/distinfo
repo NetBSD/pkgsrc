@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2024/05/12 19:52:45 wiz Exp $
+$NetBSD: distinfo,v 1.42 2024/06/09 22:19:35 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -3375,12 +3375,12 @@ Size (k8s.io_utils_@v_v0.0.0-20230726121419-3b25d923346b.mod) = 153 bytes
 BLAKE2s (k8s.io_utils_@v_v0.0.0-20230726121419-3b25d923346b.zip) = abfcef1d21134ff7823a7fcf4b19f66b256b18bf1b2480427dafde0aa8bd3fa8
 SHA512 (k8s.io_utils_@v_v0.0.0-20230726121419-3b25d923346b.zip) = 5f40edea6346495cd84493d3edf83364612686cd96a1b0a87b5d65a80fc31c1360f8b434aaaec4dd301817755512f344777e738ca44310d45c2d40c0cfc154be
 Size (k8s.io_utils_@v_v0.0.0-20230726121419-3b25d923346b.zip) = 206107 bytes
-BLAKE2s (prometheus-2.52.0-react-ui.tar.gz) = 3d6822969ff86d219d2205d69a4a6a21b8cdcc037d3530b05dee2f2272a6fe4a
-SHA512 (prometheus-2.52.0-react-ui.tar.gz) = f368159ba22c66b4a255d3f48c09f17d8e1752e85901d5ae3da733d816f794b95263b475a20b4360ba354640176253ff5eeb4ad5c723bb6a5c8b6e6d4acfe465
-Size (prometheus-2.52.0-react-ui.tar.gz) = 594320 bytes
-BLAKE2s (prometheus-2.52.0.tar.gz) = cfdd0802c8ab606f81acb8ef0489c01d765eafebfe0abf5eacc7e82d2a1e187d
-SHA512 (prometheus-2.52.0.tar.gz) = 6ad5825ee6dfe6ba82ad8f091cb1fd8bfaf323558f0171c8e16fccb070fa99865cc9e9137a60405a5ec7c90706469cefefbe25c47e47bc37c30de671981955e3
-Size (prometheus-2.52.0.tar.gz) = 6192779 bytes
+BLAKE2s (prometheus-2.52.1-react-ui.tar.gz) = 4dca9d814fd8e8a0087a5dfa1a08b996943c59683039aa38baaafb359f26d8bd
+SHA512 (prometheus-2.52.1-react-ui.tar.gz) = 89aed90e4f6b86db20302eb532d2bc3fcdeb75d12a3a2d8fa0d40123a897ccb940cbd76e0e4c73a51c5c5dda33590fb0f128cc7cf0e00b5a6e998b2dc47614dd
+Size (prometheus-2.52.1-react-ui.tar.gz) = 594324 bytes
+BLAKE2s (prometheus-2.52.1.tar.gz) = 77e8c681c2e01cf30362b2e1c0e467d3d292abe5def575c4ffeb36ebad815881
+SHA512 (prometheus-2.52.1.tar.gz) = 990cc0605104745b034c230c3282c0c8d1566972029b381cfd2bcfb7d3e2828f57a1885e29adcde73440bead99b51f5ba4de82eb2773c2304bb3605eaece70aa
+Size (prometheus-2.52.1.tar.gz) = 6192784 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
