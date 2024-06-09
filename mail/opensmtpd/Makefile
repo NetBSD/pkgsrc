@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/03/02 17:01:12 vins Exp $
+# $NetBSD: Makefile,v 1.26 2024/06/09 12:46:28 vins Exp $
 
-VERSION=	7.4.0p1
+VERSION=	7.5.0p0
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -12,7 +11,7 @@ COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
 BUILD_DEFS+=	VARBASE
-SMTPD_HOME=	${VARBASE}/chroot/smtpd
+SMTPD_HOME=	${VARBASE}/smtpd/empty
 
 GNU_CONFIGURE=	yes
 USE_DB185=	yes
@@ -20,7 +19,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	awk pkg-config yacc
 USE_TOOLS+=	automake aclocal autoheader autoconf
 
+CHECK_BUILTIN.openssl:= yes
+.include "../../security/openssl/buildlink3.mk"
+CHECK_BUILTIN.openssl:= no
+.if ${USE_BUILTIN.openssl:U:tl} != yes
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+.endif
 
 PLIST_SRC=	PLIST.common
 
@@ -28,10 +32,12 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKG_GROUPS=		_smtpd _smtpq
 PKG_USERS=		_smtpd:_smtpd _smtpq:_smtpq
-PKG_GECOS._smtpd=	OpenSMTPD pseudo-user
-PKG_HOME._smtpd=	${SMTPD_HOME}
-PKG_GECOS._smtpq=	OpenSMTPD pseudo-user
-PKG_HOME._smtpq=	${SMTPD_HOME}
+PKG_GECOS._smtpd=	OpenSMTPD Daemon
+PKG_GECOS._smtpq=	OpenSMTPD Queue
+.for id in _smptd _smtpq
+PKG_HOME.${id}=		${SMTPD_HOME}
+PKG_SHELL.${id}=	/sbin/nologin
+.endfor
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,7 +47,7 @@ CONFIGURE_ENV+=		MANTYPE=man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-path-CAfile=${SSLCERTS}/ca-certificates.crt
-CONFIGURE_ARGS+=	--with-path-empty=${VARBASE}/empty
+CONFIGURE_ARGS+=	--with-path-empty=${SMTPD_HOME}
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/spool/mail
 .else
@@ -58,8 +64,7 @@ DOCDIR=			${PREFIX}/share/doc/opensmtpd
 CONF_FILES+=		${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
 CONF_FILES+=		${EGDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 
-OWN_DIRS+=	${SMTPD_HOME}
-MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+OWN_DIRS+=	${SMTPD_HOME} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
@@ -72,7 +77,7 @@ SPECIAL_PERMS+=		sbin/smtpctl ${SETUID_ROOT_PERMS}
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
 SUBST_FILES.pkgsrc=	mailer.conf README.pkgsrc
-SUBST_VARS.pkgsrc=	PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_DIR
+SUBST_VARS.pkgsrc=	PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_DIR VARBASE
 SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders.
 
 SUBST_CLASSES+=		paths

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2024/01/16 13:24:00 vins Exp $
+$NetBSD: distinfo,v 1.11 2024/06/09 12:46:28 vins Exp $
 
-BLAKE2s (opensmtpd-7.4.0p1.tar.gz) = fec5c3f3dc2067465644c6a4b7a605cff9429e0a8d8809467a82e04f6574a256
-SHA512 (opensmtpd-7.4.0p1.tar.gz) = 23aad112ed8f45547e808592823ba8818d8b0ac6ca82d9f83ee33c4a61cfa6326488e10b6beaa3c9e40030eb680478f485b552c15c4ae2835c7a71af509ce94f
-Size (opensmtpd-7.4.0p1.tar.gz) = 908307 bytes
+BLAKE2s (opensmtpd-7.5.0p0.tar.gz) = 73be3f629adc87f074e4cb161d06dbfda9263a9800b6497a404a91294a3ab664
+SHA512 (opensmtpd-7.5.0p0.tar.gz) = 1e4bf23e623d40732e4055a8db330b0dc69dbfbd4f3d89ef092ead3359aac4123f8a58feb61661be47d84c58e27d22c706dc308dfa245fa76f1d36ed2bb9a822
+Size (opensmtpd-7.5.0p0.tar.gz) = 926333 bytes
 SHA1 (patch-contrib_libexec_mail.local_mail.local.c) = bec19540fa52c7c6596ab5923f3a67b334ddf168
 SHA1 (patch-mk_smtpd_Makefile.am) = cc3f82922e3e56bc0205085f7e311f2beeda7fc4
 SHA1 (patch-openbsd-compat_getpeereid.c) = 8d60140bffcabb6accf9b7bbe0f419c2c25d352d
