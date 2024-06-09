@@ -1,8 +1,8 @@
-$NetBSD: patch-meson.build,v 1.1 2022/08/04 15:21:26 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2024/06/09 14:29:27 wiz Exp $
 
 Support for NetBSD.
 
---- meson.build.orig	2022-06-30 21:59:11.000000000 +0000
+--- meson.build.orig	2024-05-30 18:59:51.000000000 +0000
 +++ meson.build
 @@ -38,6 +38,18 @@ foreach h: [ 'sys/prctl.h', 'sys/procctl
  	config_h.set('HAVE_' + h.underscorify().to_upper(), cc.has_header(h))
@@ -31,12 +31,14 @@ Support for NetBSD.
  foreach f: have_funcs
  	config_h.set('HAVE_' + f.underscorify().to_upper(), cc.has_function(f))
  endforeach
-@@ -69,7 +82,7 @@ endif
+@@ -69,8 +82,8 @@ endif
  config_h.set10('HAVE_BROKEN_MSG_CMSG_CLOEXEC', have_broken_msg_cmsg_cloexec)
  
  if get_option('libraries')
--	if host_machine.system() == 'freebsd'
-+	if host_machine.system() == 'freebsd' or host_machine.system() == 'netbsd'
- 		# When building for FreeBSD, epoll(7) is provided by a userspace
+-	if host_machine.system() in ['freebsd', 'openbsd']
+-		# When building for FreeBSD, epoll(7) is provided by a userspace
++	if host_machine.system() in ['freebsd', 'netbsd', 'openbsd']
++		# When building for *BSD, epoll(7) is provided by a userspace
  		# wrapper around kqueue(2).
  		epoll_dep = dependency('epoll-shim')
+ 	else
