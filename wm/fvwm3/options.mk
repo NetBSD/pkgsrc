@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2024/05/31 10:59:24 vins Exp $
+# $NetBSD: options.mk,v 1.5 2024/06/09 10:06:30 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fvwm3
-PKG_SUPPORTED_OPTIONS=	doc golang svg
+PKG_SUPPORTED_OPTIONS=	doc go svg
 PKG_SUGGESTED_OPTIONS=	doc
 
 .include "../../mk/bsd.options.mk"
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-mandoc
 #
 # Fvwm modules written in Go
 #
-.if !empty(PKG_OPTIONS:Mgolang)
+.if !empty(PKG_OPTIONS:Mgo)
 
 .  include "../../lang/go/version.mk"
 .  include "go-modules.mk"
