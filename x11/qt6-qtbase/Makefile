@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/05/29 16:35:14 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/06/09 17:26:28 nros Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
@@ -222,6 +222,8 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Test.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Widgets.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
 
+.include "../../devel/wayland/platform.mk"
+
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
@@ -229,6 +231,9 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
+.if !empty(PLATFORM_SUPPORTS_WAYLAND:Myes)
+.include "../../devel/wayland/buildlink3.mk"
+.endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
