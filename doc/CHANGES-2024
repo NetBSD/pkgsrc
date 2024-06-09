@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3891 2024/06/09 14:13:13 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3892 2024/06/09 14:14:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6244,3 +6244,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-Glances to 4.0.8 [wiz 2024-06-09]
 	Updated textproc/tree-sitter-cmake to 0.5.0 [wiz 2024-06-09]
 	Updated www/py-google-api-python-client to 2.132.0 [wiz 2024-06-09]
+	Updated devel/py-pkginfo to 1.11.1 [wiz 2024-06-09]
