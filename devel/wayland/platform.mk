@@ -1,7 +1,7 @@
-# $NetBSD: platform.mk,v 1.7 2022/08/07 23:08:39 tnn Exp $
+# $NetBSD: platform.mk,v 1.8 2024/06/09 14:30:28 wiz Exp $
 
 .if !defined(PLATFORM_SUPPORTS_WAYLAND)
-.  include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .include "../../graphics/MesaLib/features.mk"
 
@@ -11,15 +11,15 @@ WAYLAND_PLATFORMS+=		Linux-*-*
 
 # We can have Wayland without EGL, but a lot of things expect
 # wayland and EGL support together.
-.  if ${OPSYS} == "NetBSD" && !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
+.if ${OPSYS} == "NetBSD" && !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
+PLATFORM_SUPPORTS_WAYLAND=	yes
+.endif
+
+.for _wayland_platform in ${WAYLAND_PLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${_wayland_platform})
 PLATFORM_SUPPORTS_WAYLAND=	yes
 .  endif
-
-.  for _wayland_platform in ${WAYLAND_PLATFORMS}
-.    if !empty(MACHINE_PLATFORM:M${_wayland_platform})
-PLATFORM_SUPPORTS_WAYLAND=	yes
-.    endif
-.  endfor
+.endfor
 PLATFORM_SUPPORTS_WAYLAND?=	no
 
 .endif # !defined(PLATFORM_SUPPORTS_WAYLAND)
