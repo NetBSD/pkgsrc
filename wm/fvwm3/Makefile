@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/06/01 14:03:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2024/06/09 10:06:30 vins Exp $
 
 DISTNAME=	fvwm3-1.1.0
 PKGREVISION=	1
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg	# needed by fvwm-menu-des
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27				# wants python3
 
-.include "../../lang/go/go-vars.mk"				# required by golang linker
+.include "../../lang/go/go-vars.mk"				# required by go linker
 
 REPLACE_SH=	utils/*.sh
 REPLACE_PERL=	perllib/FVWM/create-commands
