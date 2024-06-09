@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.12 2024/05/10 08:27:47 nia Exp $
+# $NetBSD: build.mk,v 1.13 2024/06/09 20:56:52 markd Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -32,11 +32,11 @@
 #
 # TEST_DIRS
 #	Directories relative to WRKSRC/CMAKE_BUILD_DIR in which to run the
-#	tests. Defaults to WRKSRC/CMAKE_BUILD_DIR.
+#	tests. Defaults to BUILD_DIRS.
 #
 # INSTALL_DIRS
 #	Directories relative to WRKSRC/CMAKE_BUILD_DIR in which to run the
-#	'install' step. Defaults to WRKSRC/CMAKE_BUILD_DIR.
+#	'install' step. Defaults to BUILD_DIRS.
 
 CMAKE_REQD?=	0
 .for version in ${CMAKE_REQD}
@@ -70,9 +70,9 @@ _CMAKE_BUILD_TOOL?=	${MAKE_PROGRAM}
 .endif
 
 CONFIGURE_DIR?=		.
-BUILD_DIRS?=		${CONFIGURE_DIR}
-TEST_DIRS?=		${CONFIGURE_DIR}
-INSTALL_DIRS?=		${CONFIGURE_DIR}
+BUILD_DIRS?=		.
+TEST_DIRS?=		${BUILD_DIRS}
+INSTALL_DIRS?=		${BUILD_DIRS}
 
 _CMAKE_CONFIGURE_SETTINGS=	yes
 
@@ -93,7 +93,7 @@ cmake-configure:
 do-build: cmake-build
 cmake-build:
 .  for d in ${BUILD_DIRS}
-	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
+	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/${d} && \
 		${SETENV} ${MAKE_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS} ${BUILD_TARGET}
 .  endfor
@@ -103,7 +103,7 @@ cmake-build:
 do-test: cmake-test
 cmake-test:
 .  for d in ${TEST_DIRS}
-	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
+	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/${d} && \
 		${SETENV} ${TEST_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_BUILD_ARGS} ${TEST_TARGET}
 .  endfor
@@ -113,7 +113,7 @@ cmake-test:
 do-install: cmake-install
 cmake-install:
 .  for d in ${INSTALL_DIRS}
-	${RUN} cd ${WRKSRC}/${d}/${CMAKE_BUILD_DIR} && \
+	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/${d} && \
 		${SETENV} ${INSTALL_ENV} \
 		${_CMAKE_BUILD_TOOL} ${CMAKE_INSTALL_ARGS} ${INSTALL_TARGET}
 .  endfor
