@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/05/12 19:52:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/06/10 17:25:52 wiz Exp $
 bin/prometheus
 bin/promtool
 share/examples/prometheus/console_libraries/menu.lib
@@ -13,6 +13,16 @@ share/examples/prometheus/consoles/prometheus.html
 share/examples/prometheus/prometheus.yml
 share/prometheus/static/css/prom_console.css
 share/prometheus/static/js/prom_console.js
+share/prometheus/static/react/asset-manifest.json
+share/prometheus/static/react/favicon.ico
+share/prometheus/static/react/index.html
+share/prometheus/static/react/manifest.json
+share/prometheus/static/react/static/css/main.e075b686.css
+share/prometheus/static/react/static/js/main.87eaac7d.js
+share/prometheus/static/react/static/js/main.87eaac7d.js.LICENSE.txt
+share/prometheus/static/react/static/media/codicon.b3726f0165bf67ac6849.ttf
+share/prometheus/static/react/static/media/index.cd351d7c31d0d3fccf96.cjs
+share/prometheus/static/react/static/media/prometheus_logo_grey.3cf697e5443028ca5e5255b93c7906c5.svg
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.css.map
 share/prometheus/static/vendor/bootstrap-4.5.2/css/bootstrap-grid.min.css

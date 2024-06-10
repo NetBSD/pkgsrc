@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2024/06/09 22:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2024/06/10 17:25:52 wiz Exp $
 
 # Important: UI has to be manually built when updating. See instructions below.
 
 DISTNAME=	prometheus-2.52.1
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://prometheus.io/
 COMMENT=	The Prometheus monitoring system and time series database
 LICENSE=	apache-2.0
-
-.include "go-modules.mk"
 
 # How to rebuild UI after bumping version:
 # 1. install lang/nodejs (for the npm binary)
@@ -36,6 +35,10 @@ REACT_UI_DIST=		${DISTNAME}-react-ui.tar.gz
 SITES.${REACT_UI_DIST}=	${MASTER_SITE_LOCAL}
 # comment out this when running make update-ui
 DISTFILES=		${DEFAULT_DISTFILES} ${REACT_UI_DIST}
+# go modules only extracts some files, but we need the react GUI extracted for installation
+GO_MODULE_EXTRACT=	${REACT_UI_DIST}
+
+.include "go-modules.mk"
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/prometheus/prometheus
