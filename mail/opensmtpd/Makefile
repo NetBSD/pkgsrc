@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/06/09 12:46:28 vins Exp $
+# $NetBSD: Makefile,v 1.27 2024/06/10 09:48:18 jperkin Exp $
 
 VERSION=	7.5.0p0
 DISTNAME=	opensmtpd-${VERSION}
@@ -36,7 +36,7 @@ PKG_GECOS._smtpd=	OpenSMTPD Daemon
 PKG_GECOS._smtpq=	OpenSMTPD Queue
 .for id in _smptd _smtpq
 PKG_HOME.${id}=		${SMTPD_HOME}
-PKG_SHELL.${id}=	/sbin/nologin
+PKG_SHELL.${id}=	${NOLOGIN}
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
