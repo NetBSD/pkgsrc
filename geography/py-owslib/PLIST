@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/20 06:40:49 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/06/10 11:17:08 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/owslib/__init__.py
 ${PYSITELIB}/owslib/__init__.pyc
 ${PYSITELIB}/owslib/__init__.pyo
@@ -94,6 +95,9 @@ ${PYSITELIB}/owslib/interfaces.pyo
 ${PYSITELIB}/owslib/iso.py
 ${PYSITELIB}/owslib/iso.pyc
 ${PYSITELIB}/owslib/iso.pyo
+${PYSITELIB}/owslib/iso3.py
+${PYSITELIB}/owslib/iso3.pyc
+${PYSITELIB}/owslib/iso3.pyo
 ${PYSITELIB}/owslib/iso_che.py
 ${PYSITELIB}/owslib/iso_che.pyc
 ${PYSITELIB}/owslib/iso_che.pyo
@@ -118,6 +122,9 @@ ${PYSITELIB}/owslib/ogcapi/__init__.pyo
 ${PYSITELIB}/owslib/ogcapi/coverages.py
 ${PYSITELIB}/owslib/ogcapi/coverages.pyc
 ${PYSITELIB}/owslib/ogcapi/coverages.pyo
+${PYSITELIB}/owslib/ogcapi/edr.py
+${PYSITELIB}/owslib/ogcapi/edr.pyc
+${PYSITELIB}/owslib/ogcapi/edr.pyo
 ${PYSITELIB}/owslib/ogcapi/features.py
 ${PYSITELIB}/owslib/ogcapi/features.pyc
 ${PYSITELIB}/owslib/ogcapi/features.pyo
@@ -130,6 +137,9 @@ ${PYSITELIB}/owslib/ogcapi/processes.pyo
 ${PYSITELIB}/owslib/ogcapi/records.py
 ${PYSITELIB}/owslib/ogcapi/records.pyc
 ${PYSITELIB}/owslib/ogcapi/records.pyo
+${PYSITELIB}/owslib/opensearch.py
+${PYSITELIB}/owslib/opensearch.pyc
+${PYSITELIB}/owslib/opensearch.pyo
 ${PYSITELIB}/owslib/ows.py
 ${PYSITELIB}/owslib/ows.pyc
 ${PYSITELIB}/owslib/ows.pyo
