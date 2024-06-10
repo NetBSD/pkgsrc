@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/04/25 13:39:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/06/10 05:46:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -101,7 +101,6 @@ ${PYSITELIB}/setuptools-stubs/config/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/config/expand.pyi
 ${PYSITELIB}/setuptools-stubs/config/pyprojecttoml.pyi
 ${PYSITELIB}/setuptools-stubs/config/setupcfg.pyi
-${PYSITELIB}/setuptools-stubs/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/depends.pyi
 ${PYSITELIB}/setuptools-stubs/discovery.pyi
 ${PYSITELIB}/setuptools-stubs/dist.pyi
