@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2024/06/06 12:46:03 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.40 2024/06/10 21:15:17 jperkin Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -55,8 +55,7 @@ CXXFLAGS+=		-Wno-register
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
-# ld: undefined symbol qt_version_tag
-CFLAGS.SunOS+=		-DQT_NO_VERSION_TAGGING -D__EXTENSIONS__
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # include/openssl/e_os2.h:283:25: error: '_Noreturn' does not name a type
 CXXFLAGS.SunOS+=	-D_Noreturn=""
