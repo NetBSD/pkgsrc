@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/05/15 12:52:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/10 09:47:55 adam Exp $
 
-DISTNAME=	scikit_build_core-0.9.4
+DISTNAME=	scikit_build_core-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -10,18 +10,17 @@ HOMEPAGE=	https://github.com/scikit-build/scikit-build-core
 COMMENT=	Build backend for CMake based projects
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.8:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs>=22.2.0:../../devel/py-cattrs
-# unpackaged
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess>=1.5:../../devel/py-test-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=22:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.11:../../devel/py-pybind11
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess>=1.5:../../devel/py-test-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.28:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 
