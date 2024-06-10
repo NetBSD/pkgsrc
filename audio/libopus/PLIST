@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/07 17:26:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/06/10 15:46:07 wiz Exp $
 include/opus/opus.h
 include/opus/opus_defines.h
 include/opus/opus_multistream.h
@@ -70,6 +70,7 @@ ${PLIST.doc}share/doc/opus/html/nav_fd.png
 ${PLIST.doc}share/doc/opus/html/nav_g.png
 ${PLIST.doc}share/doc/opus/html/nav_h.png
 ${PLIST.doc}share/doc/opus/html/nav_hd.png
+${PLIST.doc}share/doc/opus/html/navtree.css
 ${PLIST.doc}share/doc/opus/html/open.png
 ${PLIST.doc}share/doc/opus/html/opus_8h.html
 ${PLIST.doc}share/doc/opus/html/opus_8h__dep__incl.map
@@ -105,6 +106,7 @@ ${PLIST.doc}share/doc/opus/html/opus__types_8h_source.html
 ${PLIST.doc}share/doc/opus/html/opus_logo.svg
 ${PLIST.doc}share/doc/opus/html/plus.svg
 ${PLIST.doc}share/doc/opus/html/plusd.svg
+${PLIST.doc}share/doc/opus/html/resize.js
 ${PLIST.doc}share/doc/opus/html/search/all_0.js
 ${PLIST.doc}share/doc/opus/html/search/all_1.js
 ${PLIST.doc}share/doc/opus/html/search/all_2.js
