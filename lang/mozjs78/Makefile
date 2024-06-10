@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/05/29 16:33:14 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/06/10 12:22:09 jperkin Exp $
 
 DISTNAME=	mozjs78_78.15.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -35,15 +35,23 @@ CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--with-intl-api
 # --disable-optimize
 
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
+OVERRIDE_DIRDEPTH=		4
+
+CPPFLAGS.SunOS+=	-DSOLARIS
+
 # For rustc/cargo detection
 .include "../../mk/bsd.prefs.mk"
 
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
 # "i486" when attempting to select the Rust compiler target.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
 CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
+.elif ${MACHINE_PLATFORM:MSunOS-*}
+CONFIGURE_ARGS+=	--target=x86_64-unknown-illumos
+CONFIGURE_ARGS+=	--host=x86_64-unknown-illumos
 .else
 CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
