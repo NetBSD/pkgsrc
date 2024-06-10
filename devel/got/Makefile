@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/06/09 13:25:05 vins Exp $
+# $NetBSD: Makefile,v 1.10 2024/06/10 09:47:23 jperkin Exp $
 
 DISTNAME=	got-portable-0.100
 PKGNAME=	${DISTNAME:S/-portable//}
@@ -23,7 +23,7 @@ USE_NCURSES=	yes
 PKG_GROUPS=		_gotd
 PKG_USERS=		_gotd:_gotd
 PKG_GECOS._gotd=	Game of Trees Daemon
-PKG_SHELL._gotd=	/sbin/nologin
+PKG_SHELL._gotd=	${NOLOGIN}
 PKG_HOME._gotd=		/nonexistent
 
 GNU_CONFIGURE=		yes
