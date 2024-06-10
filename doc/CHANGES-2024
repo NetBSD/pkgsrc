@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3924 2024/06/10 19:42:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3925 2024/06/10 20:24:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6288,3 +6288,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-prompt_toolkit to 3.0.47 [adam 2024-06-10]
 	Updated devel/py-more-itertools to 10.3.0 [adam 2024-06-10]
 	Updated devel/py-testtools to 2.7.2 [adam 2024-06-10]
+	Updated net/haproxy to 3.0.1 [adam 2024-06-10]
+	Updated www/py-sparqlwrapper to 2.0.0 [adam 2024-06-10]
