@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3910 2024/06/10 05:58:26 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3911 2024/06/10 07:17:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6265,3 +6265,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-types-setuptools to 70.0.0.20240524 [adam 2024-06-10]
 	Updated lang/py-hy to 0.29.0 [adam 2024-06-10]
 	Updated math/py-uncertainties to 3.2.1 [adam 2024-06-10]
+	Updated devel/cmake to 3.29.5 [adam 2024-06-10]
+	Updated devel/cmake-gui to 3.29.5 [adam 2024-06-10]
