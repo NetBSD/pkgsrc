@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/18 06:10:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/10 07:28:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -858,9 +858,6 @@ ${PYSITELIB}/allauth/socialaccount/providers/base/__init__.pyo
 ${PYSITELIB}/allauth/socialaccount/providers/base/constants.py
 ${PYSITELIB}/allauth/socialaccount/providers/base/constants.pyc
 ${PYSITELIB}/allauth/socialaccount/providers/base/constants.pyo
-${PYSITELIB}/allauth/socialaccount/providers/base/mixins.py
-${PYSITELIB}/allauth/socialaccount/providers/base/mixins.pyc
-${PYSITELIB}/allauth/socialaccount/providers/base/mixins.pyo
 ${PYSITELIB}/allauth/socialaccount/providers/base/provider.py
 ${PYSITELIB}/allauth/socialaccount/providers/base/provider.pyc
 ${PYSITELIB}/allauth/socialaccount/providers/base/provider.pyo
