@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/03 16:00:58 taca Exp $
+$NetBSD: distinfo,v 1.20 2024/06/10 15:18:44 taca Exp $
 
-BLAKE2s (parallel-1.24.0.gem) = 562b5308eb7ea90368985f53e61444d2e197c26b852b0f7b66f969c245df9204
-SHA512 (parallel-1.24.0.gem) = 7436d038306b84013d11750f15d21232ab68d404d25ed4bdb7d7883b97a6c3ab8bf9bd8ca3374e2999e3769ef797ee6a1e660dcd732ac503078e9a4e8e9897e2
-Size (parallel-1.24.0.gem) = 10752 bytes
+BLAKE2s (parallel-1.25.1.gem) = 58feaaf6de74c074743c2d90ea77b049bec26ca80ea3d1fef1a90eb6f693d4c1
+SHA512 (parallel-1.25.1.gem) = 028c561fee510becc71a7e028f5a738237d40a645e3486c7d2648b6b7eb983001dcba21e2223821b263229b8f8bc9f3471d70a92bf870261a403ac0fb611faa2
+Size (parallel-1.25.1.gem) = 10752 bytes
