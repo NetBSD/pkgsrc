@@ -1,0 +1,15 @@
+$NetBSD: patch-js_src_old-configure.in,v 1.1 2024/06/10 12:22:09 jperkin Exp $
+
+Support illumos triple.
+
+--- js/src/old-configure.in.orig	2024-06-10 11:46:00.353580553 +0000
++++ js/src/old-configure.in
+@@ -711,7 +711,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-solaris*)
++*-solaris*|*-illumos)
+     MOZ_FIX_LINK_PATHS="-L${DIST}/bin"
+     ;;
+ 

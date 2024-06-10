@@ -1,0 +1,15 @@
+$NetBSD: patch-build_moz.configure_init.configure,v 1.1 2024/06/10 12:22:09 jperkin Exp $
+
+Support illumos triple.
+
+--- build/moz.configure/init.configure.orig	2024-06-10 11:30:43.622059403 +0000
++++ build/moz.configure/init.configure
+@@ -709,7 +709,7 @@ def split_triplet(triplet, allow_msvc=Fa
+         canonical_os = canonical_kernel = 'NetBSD'
+     elif os.startswith('openbsd'):
+         canonical_os = canonical_kernel = 'OpenBSD'
+-    elif os.startswith('solaris'):
++    elif os.startswith('solaris') or os.startswith('illumos'):
+         canonical_os = canonical_kernel = 'SunOS'
+     else:
+         raise ValueError('Unknown OS: %s' % os)
