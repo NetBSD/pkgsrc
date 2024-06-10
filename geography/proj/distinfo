@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.20 2024/05/23 13:35:58 gdt Exp $
+$NetBSD: distinfo,v 1.21 2024/06/10 09:41:52 jperkin Exp $
 
 BLAKE2s (proj-8.2.1.tar.gz) = 2d7629837ac2cdf2d7a60e9c3717dc2dda5506d81326f78f24b3fb5ee6847ab1
 SHA512 (proj-8.2.1.tar.gz) = c6164771fd492be5aa91d8dd2f2794a19b47431078f148356aa70dee96a4589ec5decbab9d8dd756a7bcb322ad94935750c22e0e7fb16e21c8f59ca474e7137e
 Size (proj-8.2.1.tar.gz) = 5882136 bytes
+SHA1 (patch-src_proj__json__streaming__writer.hpp) = a74be3b825a3967d8575cb3644bdaac5c080fb8b
+SHA1 (patch-src_projections_s2.cpp) = 0afc66d0cc71a8e7ce92527f4538c741775f00f3
