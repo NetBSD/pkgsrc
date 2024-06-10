@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2024/01/10 20:29:14 adam Exp $
+$NetBSD: distinfo,v 1.30 2024/06/10 19:40:09 adam Exp $
 
-BLAKE2s (more-itertools-10.2.0.tar.gz) = b1fee9b260374a0ab9c81f0c181be08b325997ccd0cdeca1da7cdab021d4859e
-SHA512 (more-itertools-10.2.0.tar.gz) = 4357de86ca4e76d840825111cd6e19296af6394a6095c0cc28650f8e2abfe2cb45a24c34382532753652c506e5b261cf0d05d37c799434f5f7cfc8fa387d06f2
-Size (more-itertools-10.2.0.tar.gz) = 114449 bytes
+BLAKE2s (more-itertools-10.3.0.tar.gz) = 0befe038ac068119d82bf4107146cbac419d3e70fb9b86800cc80855f4ce7a19
+SHA512 (more-itertools-10.3.0.tar.gz) = fed7c1b085aafd5c50bbc5304f29a098d4ba96e4b253c2e5ab7fd995e895f5cdf63edada93f039b1a71e0f913c0902d8836f73de270bd1048a5fd8ed4f3d45a4
+Size (more-itertools-10.3.0.tar.gz) = 118147 bytes
