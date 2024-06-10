@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/06/09 15:09:54 taca Exp $
+# $NetBSD: Makefile,v 1.17 2024/06/10 15:21:05 taca Exp $
 
-DISTNAME=	will_paginate-4.0.0
+DISTNAME=	will_paginate-4.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc
 LICENSE=	mit
