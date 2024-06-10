@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/12/11 17:16:19 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/06/10 19:41:54 adam Exp $
 
-DISTNAME=	testtools-2.7.1
+DISTNAME=	testtools-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/testing-cabal/testtools
 COMMENT=	Extensions to the Python standard library unit testing framework
 LICENSE=	mit AND python-software-foundation
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fixtures>=2.0:../../devel/py-fixtures
 # circular test dependency
 # https://github.com/testing-cabal/testscenarios/issues/4
