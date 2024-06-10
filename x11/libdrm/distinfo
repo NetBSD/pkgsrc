@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2024/06/08 11:54:40 wiz Exp $
+$NetBSD: distinfo,v 1.114 2024/06/10 08:01:20 jperkin Exp $
 
 BLAKE2s (libdrm-2.4.121.tar.xz) = 2fab80d2691b2b1f03e06a4781163257ab84b4924b1d2abdfc2dc93215c31478
 SHA512 (libdrm-2.4.121.tar.xz) = cc8816d61884caa0e404348d1caeb0b2952fb50e1dc401716adfe08121096e2a67826db0bda0d8b163d67c5ee048870177670d5eac28a5abe5792d09ba77ab2e
@@ -9,6 +9,7 @@ SHA1 (patch-etnaviv_etnaviv__device.c) = 236b2df05a918c35c4decfee416ff5bfe9c073d
 SHA1 (patch-exynos_exynos__drm.c) = 3fa4c8a592a5f4e0c4001eb6fa1bc7811e398605
 SHA1 (patch-exynos_exynos__fimg2d.c) = 298438b128bdb4ff57a8c0d7d6a081485e64e49a
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
+SHA1 (patch-libsync.h) = 50a6fd7ca2d379997941a9b2c33d086ae99d2d0d
 SHA1 (patch-omap_omap__drm.c) = a23eefa9a57315d3ae77e528fd29de70ff9b2648
 SHA1 (patch-tests_exynos_exynos__fimg2d__test.c) = 9fc874ecc9a42db75327f736d04038f7cf8f00ff
 SHA1 (patch-tests_nouveau_threaded.c) = 30cda11fcce1693b8b3cecec4f7915c08066b62a
