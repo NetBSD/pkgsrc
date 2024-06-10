@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3915 2024/06/10 12:43:46 pin Exp $
+$NetBSD: CHANGES-2024,v 1.3916 2024/06/10 14:52:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6276,3 +6276,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/py-owslib to 0.31.0 [adam 2024-06-10]
 	Updated net/py-mitmproxy_rs to 0.5.2 [adam 2024-06-10]
 	Updated shells/oh-my-posh to 21.4.0 [pin 2024-06-10]
+	Updated devel/nss to 3.101 [wiz 2024-06-10]
