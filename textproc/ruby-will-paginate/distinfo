@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/06/09 15:09:54 taca Exp $
+$NetBSD: distinfo,v 1.19 2024/06/10 15:21:05 taca Exp $
 
-BLAKE2s (will_paginate-4.0.0.gem) = a117145c698ce32833436b642a7c3092d637c4b5142caee8ca62ca21b1087c32
-SHA512 (will_paginate-4.0.0.gem) = c95dd808190d978f648f9bb3a1b34ecc24e74eb108219ed108efc8499578ce1c3c00d751d3deca6509588bf8c9777597702cb7185763b2797a768a36fbb2f2b6
-Size (will_paginate-4.0.0.gem) = 18944 bytes
+BLAKE2s (will_paginate-4.0.1.gem) = 6b93f0960111c1d6e4c0b8986e603e2d88142968a4b71b4967d953d64aea8d99
+SHA512 (will_paginate-4.0.1.gem) = 03f4b6044465e12236511e7d0be20493f3d032c294fff7e53c2c0f037edfec797aac093d9ec70c6430b7c893440048ee00d61f4d5d1c55dd147ebda7c799d65b
+Size (will_paginate-4.0.1.gem) = 18944 bytes
