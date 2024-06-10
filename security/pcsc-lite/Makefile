@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/06/05 20:25:16 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2024/06/10 09:33:58 jperkin Exp $
 
 DISTNAME=	pcsc-lite-2.2.3
 PKGREVISION=	1
@@ -30,6 +30,8 @@ MAKE_DIRS+=	${VARBASE}/pcsc-lite
 MAKE_DIRS+=	${PREFIX}/lib/pcsc-lite
 MAKE_DIRS+=	${PREFIX}/lib/pcsc-lite/drivers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/reader.conf.d
+
+LDFLAGS.SunOS+=	-lsocket
 
 EGDIR=			${PREFIX}/share/examples/pcsc-lite
 

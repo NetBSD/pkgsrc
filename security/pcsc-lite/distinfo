@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.34 2024/05/27 07:44:17 adam Exp $
+$NetBSD: distinfo,v 1.35 2024/06/10 09:33:58 jperkin Exp $
 
 BLAKE2s (pcsc-lite-2.2.3.tar.xz) = 11649836a45dc921f45fcc29ee99167f8905b18c95a4cb84af7a52ccb8513fcb
 SHA512 (pcsc-lite-2.2.3.tar.xz) = 417410f92a14eff78231ff6007ed801d71ae89c62914a88f21e8cd199e4792f00df09c28604e138efe269c7a6df9c8fd891401c6be77fb8cd8639b7890a9e00c
 Size (pcsc-lite-2.2.3.tar.xz) = 207892 bytes
 SHA1 (patch-meson.build) = 34e7c0b0af2191d6dd5f270c154beefb84fbc1b8
+SHA1 (patch-src_configfile.l) = 2283637df38919f1e7b47beb5a8e6a8b3619b12b
