@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/02/06 16:56:10 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/10 08:42:26 adam Exp $
 
-DISTNAME=	django_debug_toolbar-4.3.0
+DISTNAME=	django_debug_toolbar-4.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-debug-toolbar/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.2.0:../../databases/py-sqlparse
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2.4:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2.9:../../www/py-django
 
 USE_LANGUAGES=	# none
 
