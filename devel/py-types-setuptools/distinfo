@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2024/05/15 07:25:05 adam Exp $
+$NetBSD: distinfo,v 1.31 2024/06/10 05:46:07 adam Exp $
 
-BLAKE2s (types-setuptools-69.5.0.20240513.tar.gz) = 89f2d97a57ebe6af4831eb6b5649f0c7ca86c2c26f2ba32a7e764d251b40e873
-SHA512 (types-setuptools-69.5.0.20240513.tar.gz) = fcd7262fc2f54f22480ddc09f9edfa1202dfc0e5f2d0dec3accc6bfb32666bd3f49a6e455e0e834e2166d38ea8782c172dd85c4adb30329b0d7c9bae66f74d7b
-Size (types-setuptools-69.5.0.20240513.tar.gz) = 37766 bytes
+BLAKE2s (types-setuptools-70.0.0.20240524.tar.gz) = 0183f1b30466f2b797e0be26faec0324898d77b86c2027029d94cd1d50b72b13
+SHA512 (types-setuptools-70.0.0.20240524.tar.gz) = 9edace3d84b9bbcb67fb4ff5f0c17ba7416901b1b12359e5394f0a5edb3250bbf81cd39946a4566217f0060fe50b15580df99b1f4e028774e4d36e0b5416a374
+Size (types-setuptools-70.0.0.20240524.tar.gz) = 38370 bytes
