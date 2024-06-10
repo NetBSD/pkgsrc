@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2017/10/07 11:14:42 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/06/10 20:23:24 adam Exp $
+bin/rqw-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.py
 ${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyc
 ${PYSITELIB}/SPARQLWrapper/KeyCaseInsensitiveDict.pyo
@@ -19,3 +22,10 @@ ${PYSITELIB}/SPARQLWrapper/Wrapper.pyo
 ${PYSITELIB}/SPARQLWrapper/__init__.py
 ${PYSITELIB}/SPARQLWrapper/__init__.pyc
 ${PYSITELIB}/SPARQLWrapper/__init__.pyo
+${PYSITELIB}/SPARQLWrapper/main.py
+${PYSITELIB}/SPARQLWrapper/main.pyc
+${PYSITELIB}/SPARQLWrapper/main.pyo
+${PYSITELIB}/SPARQLWrapper/py.typed
+${PYSITELIB}/SPARQLWrapper/sparql_dataframe.py
+${PYSITELIB}/SPARQLWrapper/sparql_dataframe.pyc
+${PYSITELIB}/SPARQLWrapper/sparql_dataframe.pyo
