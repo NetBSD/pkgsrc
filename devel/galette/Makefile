@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2023/04/19 17:25:56 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/10 16:58:27 thorpej Exp $
 
 # There is no tag on Github for 0.3.0, but that's what the program
 # claims to be when you run it.
-GALETTE_VERSION=0.3.0
+GALETTE_VERSION=0.3.0.0.2024.03.08
 
 DISTNAME=	galette-${GALETTE_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simon-frankau/}
-GITHUB_TAG=	e28809d16858ff89d7e62dc7e50c07edcc9e5189
+GITHUB_TAG=	af529870729b1da8794b002cd522f5bf2d53f230
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/simon-frankau/galette
