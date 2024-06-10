@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/04 02:47:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/06/10 08:46:35 adam Exp $
 
-BLAKE2s (django-haystack-3.2.1.tar.gz) = f0f2edb484ed26b30a5a82e5178a5c13676fb3cd4e22a382394a7c4f5c1c7590
-SHA512 (django-haystack-3.2.1.tar.gz) = 60ce7297243ab5a43780b0aed6f25970ef0438aaadf8f7c92f89970e58c045d3f6ba7a5a635a275e21dc73b116fb33cad32a41991a677bd0a9c66aef4b7ff0c2
-Size (django-haystack-3.2.1.tar.gz) = 466580 bytes
+BLAKE2s (django_haystack-3.3.0.tar.gz) = c711d991bb3ecb0a67a5218c95d849ec47e1d624677af28173e6e427e82c1b2c
+SHA512 (django_haystack-3.3.0.tar.gz) = 3f367b4f22a34145c02487ba3a678542c6bc3f8d8c9be2b4c41fea90f9f8d2bc5a6d4566b31455167f5f198865c81029393e4284673cab057dee6a682c9965af
+Size (django_haystack-3.3.0.tar.gz) = 467287 bytes
