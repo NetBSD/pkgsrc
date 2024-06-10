@@ -1,0 +1,18 @@
+$NetBSD: patch-libs_luajit_LuaJIT-src_src_vm__x86.dasc,v 1.4 2024/06/10 09:27:15 jperkin Exp $
+
+Generate SunOS compatible assembly.
+
+--- libs/luajit/LuaJIT-src/src/vm_x86.dasc.orig	2018-01-09 23:43:20.000000000 +0000
++++ libs/luajit/LuaJIT-src/src/vm_x86.dasc
+@@ -5569,7 +5569,11 @@ static void emit_asm_debug(BuildCtx *ctx
+ 	"\t.byte " REG_RA "\n"
+ 	"\t.uleb128 6\n"			/* augmentation length */
+ 	"\t.byte 0x1b\n"			/* pcrel|sdata4 */
++#ifdef __sun
++	"\t.long lj_err_unwind_dwarf@PLT\n"
++#else
+ 	"\t.long lj_err_unwind_dwarf-.\n"
++#endif
+ 	"\t.byte 0x1b\n"			/* pcrel|sdata4 */
+ 	"\t.byte 0xc\n\t.uleb128 " REG_SP "\n\t.uleb128 " SZPTR "\n"
+ 	"\t.byte 0x80+" REG_RA "\n\t.uleb128 0x1\n"
