@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/13 14:18:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/10 15:13:19 taca Exp $
 bin/neovim-ruby-host${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/docs.yml
@@ -31,6 +31,8 @@ ${GEM_LIBDIR}/lib/neovim/message.rb
 ${GEM_LIBDIR}/lib/neovim/plugin.rb
 ${GEM_LIBDIR}/lib/neovim/plugin/dsl.rb
 ${GEM_LIBDIR}/lib/neovim/plugin/handler.rb
+${GEM_LIBDIR}/lib/neovim/remote_module.rb
+${GEM_LIBDIR}/lib/neovim/remote_module/dsl.rb
 ${GEM_LIBDIR}/lib/neovim/remote_object.rb
 ${GEM_LIBDIR}/lib/neovim/ruby_provider.rb
 ${GEM_LIBDIR}/lib/neovim/ruby_provider/buffer_ext.rb
@@ -45,10 +47,13 @@ ${GEM_LIBDIR}/neovim.gemspec
 ${GEM_LIBDIR}/script/ci/download_nvim.sh
 ${GEM_LIBDIR}/script/dump_api.rb
 ${GEM_LIBDIR}/script/generate_docs.rb
+${GEM_LIBDIR}/script/host_wrapper.bat
+${GEM_LIBDIR}/script/host_wrapper.sh
 ${GEM_LIBDIR}/script/j2mp.rb
 ${GEM_LIBDIR}/script/mp2j.rb
 ${GEM_LIBDIR}/script/run_acceptance.rb
 ${GEM_LIBDIR}/spec/acceptance/client_info_spec.vim
+${GEM_LIBDIR}/spec/acceptance/remote_module_spec.vim
 ${GEM_LIBDIR}/spec/acceptance/rplugin_autocmd_spec.vim
 ${GEM_LIBDIR}/spec/acceptance/rplugin_command_spec.vim
 ${GEM_LIBDIR}/spec/acceptance/rplugin_function_spec.vim
@@ -67,7 +72,9 @@ ${GEM_LIBDIR}/spec/acceptance/rubyfile/ruby_interface.rb
 ${GEM_LIBDIR}/spec/acceptance/rubyfile/set_pwd_after.rb
 ${GEM_LIBDIR}/spec/acceptance/rubyfile/set_pwd_before.rb
 ${GEM_LIBDIR}/spec/acceptance/rubyfile_spec.vim
+${GEM_LIBDIR}/spec/acceptance/runtime/example_remote_module.rb
 ${GEM_LIBDIR}/spec/acceptance/runtime/init.vim
+${GEM_LIBDIR}/spec/acceptance/runtime/plugin/example_remote_module.lua
 ${GEM_LIBDIR}/spec/acceptance/runtime/rplugin/ruby/autocmds.rb
 ${GEM_LIBDIR}/spec/acceptance/runtime/rplugin/ruby/commands.rb
 ${GEM_LIBDIR}/spec/acceptance/runtime/rplugin/ruby/functions.rb
