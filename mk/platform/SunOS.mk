@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.89 2024/04/20 13:43:49 nia Exp $
+# $NetBSD: SunOS.mk,v 1.90 2024/06/10 10:25:05 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -49,12 +49,14 @@ INIT_SYSTEM?=		smf
 OPSYS_HAS_POSIX_SPAWN=	# defined
 .endif
 
-# Comes with a builtin implementation based on mit-krb5
+# Comes with a builtin implementation based on mit-krb5, however it's quite
+# old at this point so the default is pkgsrc to avoid build issues.
 KRB5_DEFAULT?=		mit-krb5
 
 # Builtin defaults which make sense for this platform.
 _OPSYS_PREFER.getopt?=		native
 _OPSYS_PREFER.libexecinfo?=	native
+_OPSYS_PREFER.mit-krb5?=	pkgsrc
 _OPSYS_PREFER.openssl?=		pkgsrc
 _OPSYS_PREFER.solaris-pam?=	native
 
