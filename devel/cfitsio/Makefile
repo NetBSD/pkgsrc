@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/05/29 16:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.51 2024/06/10 10:56:15 jperkin Exp $
 
 DISTNAME=	cfitsio-4.2.0
 PKGREVISION=	4
@@ -15,6 +15,9 @@ USE_LANGUAGES=		c # fortran
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
+
+# Does not detect pkgsrc zlib correctly.
+CONFIGURE_ARGS+=	--without-zlib-check
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig share/doc/cfitsio
 
