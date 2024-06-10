@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/04/07 07:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2024/06/10 09:27:15 jperkin Exp $
 
 PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
@@ -11,6 +11,7 @@ COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/lua53
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/luajit
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/potrace
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/pplib
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
