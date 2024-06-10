@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2024/05/29 16:32:30 adam Exp $
+# $NetBSD: Makefile,v 1.77 2024/06/10 19:38:13 adam Exp $
 
-DISTNAME=	bitcoin-24.0.1
-PKGREVISION=	17
+DISTNAME=	bitcoin-27.0
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -12,8 +11,8 @@ LICENSE=	mit
 
 RCD_SCRIPTS=	bitcoind
 
+USE_CXX_FEATURES+=	c++20 filesystem
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17 filesystem
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
