@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/08/13 14:18:52 taca Exp $
+$NetBSD: distinfo,v 1.3 2024/06/10 15:13:19 taca Exp $
 
-BLAKE2s (neovim-0.9.1.gem) = 1e6f8b9c0d509919c6a8887b82a1ff53e986db88214ef2e54d743c12ab1697ec
-SHA512 (neovim-0.9.1.gem) = 93ad413b745ff337036cfe82581575f2f3392212b020323545c8bbd63ecf0d4bb119316a3adce036b4e7d1a5b563501c27934b9eb32b854088920a511115d66d
-Size (neovim-0.9.1.gem) = 45568 bytes
+BLAKE2s (neovim-0.10.0.gem) = 5e5a322a68f5cf8d9130cbbe6eac8eafcc36f0d706be0555eea6538a89d21a3e
+SHA512 (neovim-0.10.0.gem) = f2301c7ec898b68cfa3e37f29199753d9371f439c7becfb06db6085cf8a6219193002c772b8db7b9ec7b3061f54dec416f1c58fec68a56d1a605da738a4d41b5
+Size (neovim-0.10.0.gem) = 47104 bytes
