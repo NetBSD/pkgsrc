@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/06/10 19:27:57 adam Exp $
 
-BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
-SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
-Size (gcc-13.2.0.tar.xz) = 87858592 bytes
+BLAKE2s (gcc-13.3.0.tar.xz) = d204b8987b4780b569f28226cbfff34ae27124e529857c36ff90d5d40ef0b511
+SHA512 (gcc-13.3.0.tar.xz) = ed5f2f4c6ed2c796fcf2c93707159e9dbd3ddb1ba063d549804dd68cdabbb6d550985ae1c8465ae9a336cfe29274a6eb0f42e21924360574ebd8e5d5c7c9a801
+Size (gcc-13.3.0.tar.xz) = 87909952 bytes
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
 SHA1 (patch-gcc_ada_Makefile.rtl) = 59883834af5303b2e86a79d0df30a1a220ced895
