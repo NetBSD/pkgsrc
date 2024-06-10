@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2024/05/29 16:32:27 adam Exp $
+# $NetBSD: Makefile,v 1.344 2024/06/10 16:14:37 wiz Exp $
 
 DISTNAME=	qemu-9.0.0
 PKGREVISION=	2
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-docs
+CONFIGURE_ARGS+=	--enable-fdt=system
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
