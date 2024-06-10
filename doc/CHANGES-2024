@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3913 2024/06/10 09:48:16 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3914 2024/06/10 11:20:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6273,3 +6273,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-import-export to 4.0.7 [adam 2024-06-10]
 	Added devel/py-test-subprocess version 1.5.0 [adam 2024-06-10]
 	Updated devel/py-scikit-build-core to 0.9.5 [adam 2024-06-10]
+	Updated geography/py-owslib to 0.31.0 [adam 2024-06-10]
+	Updated net/py-mitmproxy_rs to 0.5.2 [adam 2024-06-10]
