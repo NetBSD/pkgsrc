@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2023/04/25 03:28:37 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/10 16:48:35 thorpej Exp $
 
 # There is no tag on Github for 2.1, but that's what the program
 # claims to be when you run it.
-GALASM_VERSION=2.1
+GALASM_VERSION=2.1.0.2023.11.29
 
 DISTNAME=	GALasm-${GALASM_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=daveho/}
-GITHUB_TAG=	290d0cf9dcd0d9749167c9019ad694db2c3360dd
+GITHUB_TAG=	c376d566e88d480160b002f6e085810648e36cb5
 
 MAINTAINER=	thorpej@NetBSD.org
 HOMEPAGE=	https://github.com/daveho/GALasm
