@@ -1,0 +1,15 @@
+$NetBSD: patch-libs_luajit_Makefile.in,v 1.7 2024/06/11 05:40:15 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- libs/luajit/Makefile.in.orig	2024-06-11 05:36:50.786262104 +0000
++++ libs/luajit/Makefile.in
+@@ -2051,7 +2051,7 @@ lj_vm_obj.o lj_vm_asm.S: native/buildvm-
+ 
+ lj_vm_obj.lo: lj_vm_obj.o lib_base.lo
+ 	$(AM_V_GEN)sed 's/lib_base/lj_vm_obj/' lib_base.lo >$@ \
+-	  && . ./$@ && test x"$$pic_object" == xnone \
++	  && . ./$@ && test x"$$pic_object" = xnone \
+ 	  || cp lj_vm_obj.o .libs/lj_vm_obj.o
+ 
+ $(ljlib_sources) lj_opt_fold.c: config.force
