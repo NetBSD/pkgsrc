@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/01/16 08:57:52 adam Exp $
-bin/sl-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.14 2024/06/11 09:38:33 adam Exp $
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -676,6 +675,9 @@ ${PYSITELIB}/SoftLayer/CLI/loadbal/protocol_delete.pyo
 ${PYSITELIB}/SoftLayer/CLI/loadbal/protocol_edit.py
 ${PYSITELIB}/SoftLayer/CLI/loadbal/protocol_edit.pyc
 ${PYSITELIB}/SoftLayer/CLI/loadbal/protocol_edit.pyo
+${PYSITELIB}/SoftLayer/CLI/login.py
+${PYSITELIB}/SoftLayer/CLI/login.pyc
+${PYSITELIB}/SoftLayer/CLI/login.pyo
 ${PYSITELIB}/SoftLayer/CLI/metadata.py
 ${PYSITELIB}/SoftLayer/CLI/metadata.pyc
 ${PYSITELIB}/SoftLayer/CLI/metadata.pyo
