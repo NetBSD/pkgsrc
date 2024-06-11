@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/06/07 23:11:40 taca Exp $
+# $NetBSD: Makefile,v 1.24 2024/06/11 13:14:01 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -56,7 +56,7 @@ CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoconf -f
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-development php.ini-production \
