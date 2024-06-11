@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3940 2024/06/11 12:02:35 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.3941 2024/06/11 15:05:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6322,3 +6322,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/py-weasyprint to 62.2 [adam 2024-06-11]
 	Updated net/py-stone to 3.3.6 [adam 2024-06-11]
 	Updated ham/chirp to 20240606 [gdt 2024-06-11]
+	Updated devel/ruby-mixlib-shellout to 3.2.8 [taca 2024-06-11]
