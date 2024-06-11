@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/02/16 22:02:59 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/11 10:43:03 adam Exp $
 
-DISTNAME=	Flask-Limiter-3.5.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	flask_limiter-3.7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Limiter/}
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://flask-limiter.readthedocs.org/
 COMMENT=	Rate limiting for flask applications
 LICENSE=	mit
+
+WHEEL_NAME=	Flask_Limiter-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
