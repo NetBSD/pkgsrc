@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3933 2024/06/11 09:22:06 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3934 2024/06/11 09:39:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6307,3 +6307,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-paste to 3.10.1 [adam 2024-06-11]
 	Updated devel/py-pip-run to 12.6.1 [adam 2024-06-11]
 	Updated security/py-requests-ntlm to 1.3.0 [adam 2024-06-11]
+	Updated www/py-w3lib to 2.2.0 [adam 2024-06-11]
+	Updated sysutils/py-reprotest to 0.7.27 [adam 2024-06-11]
+	Updated devel/py-mocket to 3.12.8 [adam 2024-06-11]
+	Updated net/py-softlayer to 6.2.2 [adam 2024-06-11]
