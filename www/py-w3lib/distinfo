@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/01/14 20:49:07 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/06/11 09:23:23 adam Exp $
 
-BLAKE2s (w3lib-2.1.2.tar.gz) = bde1df67a19b5fbd7febbb02446e472ca4108931f9a4e5f02588778a538d23b3
-SHA512 (w3lib-2.1.2.tar.gz) = cfff2520cab24b84c93223125de3fb813e4d40d23a022f7fc34196c3033adb5dfc01358d62566dcc4b763d40b271e1428eba0250ba997228d07f35cd3721e37e
-Size (w3lib-2.1.2.tar.gz) = 48715 bytes
+BLAKE2s (w3lib-2.2.0.tar.gz) = f18209ea570fd4a9e8cd24a701dfbd08dbfecb95673f5e66edd134a0c5058b4d
+SHA512 (w3lib-2.2.0.tar.gz) = 8ae2fad0bd7d040544d4865a5649c942ea99fd3fa92b3f40937afd0028fc988f9d01c118cbccdb1cc320a0e70880a7ba32a1780fccc29a29895aa5aca66189fb
+Size (w3lib-2.2.0.tar.gz) = 49428 bytes
