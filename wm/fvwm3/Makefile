@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/06/09 10:06:30 vins Exp $
+# $NetBSD: Makefile,v 1.35 2024/06/11 19:32:45 vins Exp $
 
 DISTNAME=	fvwm3-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -32,10 +32,9 @@ REPLACE_PERL=	perllib/FVWM/create-commands
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
-SUBST_FILES.paths=	fvwm/fvwm3.c doc/fvwm3_manpage_source.adoc	\
-			bin/fvwm-menu-desktop.in doc/fvwm-menu-desktop.adoc
-SUBST_SED.paths+=	-e "s:/etc/xdg/menus:${PKG_SYSCONFDIR}/xdg/menus:g"
-SUBST_SED.paths+=	-e "s:/etc/system.fvwm2rc:${PKG_SYSCONFDIR}/fvwm/system.fvwm2rc:g"
+SUBST_FILES.paths=	fvwm/fvwm3.c doc/fvwm3_manpage_source.adoc bin/fvwm-menu-desktop.in
+SUBST_VARS.paths=	PKG_SYSCONFDIR
+SUBST_SED.paths=	-e "s:/etc/system.fvwm2rc:${PKG_SYSCONFDIR}/fvwm/system.fvwm2rc:g"
 SUBST_SED.paths+=	-e "s:/usr/local/share/fvwm:${PREFIX}/share/fvwm:g"
 
 # otherwise we get installed scripts that point to the tools directory.
