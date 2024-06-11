@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3946 2024/06/11 19:42:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3947 2024/06/11 19:54:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6332,3 +6332,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-sphinx-issues to 4.1.0 [adam 2024-06-11]
 	Updated graphics/tesseract to 5.4.1 [adam 2024-06-11]
 	Updated security/py-requests-kerberos to 0.15.0 [adam 2024-06-11]
+	Updated www/py-PasteScript to 3.6.0 [adam 2024-06-11]
+	Updated devel/py-cogapp to 3.4.1 [adam 2024-06-11]
