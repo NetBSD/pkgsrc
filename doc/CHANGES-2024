@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3929 2024/06/11 07:00:28 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3930 2024/06/11 08:37:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6299,3 +6299,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-py2app to 0.28.8 [adam 2024-06-11]
 	Updated emulators/qemu to 9.0.1 [adam 2024-06-11]
 	Updated games/wesnoth to 1.18.1 [adam 2024-06-11]
+	Updated graphics/simp to 3.5.3nb3 [pin 2024-06-11]
