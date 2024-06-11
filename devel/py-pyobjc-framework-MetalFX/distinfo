@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/06/06 14:48:38 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/06/11 16:10:22 adam Exp $
 
-BLAKE2s (pyobjc_framework_metalfx-10.3.tar.gz) = ad12b7350bfcbc15aa6ed1f8e7fbbacd7196de48255b3e00c32fa0d304bb0b13
-SHA512 (pyobjc_framework_metalfx-10.3.tar.gz) = 8b12388e71925333026588fac537f57d5056dc6b1412f03fa50ad33e44c062e437dedde8193227fa7faaff3829130e2da541370b18be46030a81c00a09dcf7b6
-Size (pyobjc_framework_metalfx-10.3.tar.gz) = 21517 bytes
+BLAKE2s (pyobjc_framework_metalfx-10.3.1.tar.gz) = 4248c692f4a1e3fde041e8414f51275523ee56a523f1cd348298e93ee17c641a
+SHA512 (pyobjc_framework_metalfx-10.3.1.tar.gz) = 8d07a2a43b3eaaa8d4e13e6f7cac442831e21cd18a8a7d154f3090ab4812353a06c240560ea3d93e4ae682925c24cabcad2649b78bbcbb97ffa29157c2b1f172
+Size (pyobjc_framework_metalfx-10.3.1.tar.gz) = 21547 bytes

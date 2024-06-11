@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2024/06/06 14:48:28 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2024/06/11 16:10:12 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -150,7 +150,7 @@
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 # used by devel/py-pyobjc-framework-libxpc/Makefile
 
-PYOBJC_VERS=	10.3
+PYOBJC_VERS=	10.3.1
 
 DISTNAME=	${WHEEL_NAME:tl}
 PKGNAME=	${PYPKGPREFIX}-${WHEEL_NAME:S/_/-/g}
