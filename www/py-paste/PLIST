@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2024/01/26 13:59:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/11 09:09:28 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -183,6 +184,9 @@ ${PYSITELIB}/paste/util/PySourceColor.pyo
 ${PYSITELIB}/paste/util/__init__.py
 ${PYSITELIB}/paste/util/__init__.pyc
 ${PYSITELIB}/paste/util/__init__.pyo
+${PYSITELIB}/paste/util/cgitb_hook.py
+${PYSITELIB}/paste/util/cgitb_hook.pyc
+${PYSITELIB}/paste/util/cgitb_hook.pyo
 ${PYSITELIB}/paste/util/classinit.py
 ${PYSITELIB}/paste/util/classinit.pyc
 ${PYSITELIB}/paste/util/classinit.pyo
@@ -198,6 +202,9 @@ ${PYSITELIB}/paste/util/dateinterval.pyo
 ${PYSITELIB}/paste/util/datetimeutil.py
 ${PYSITELIB}/paste/util/datetimeutil.pyc
 ${PYSITELIB}/paste/util/datetimeutil.pyo
+${PYSITELIB}/paste/util/field_storage.py
+${PYSITELIB}/paste/util/field_storage.pyc
+${PYSITELIB}/paste/util/field_storage.pyo
 ${PYSITELIB}/paste/util/filemixin.py
 ${PYSITELIB}/paste/util/filemixin.pyc
 ${PYSITELIB}/paste/util/filemixin.pyo
@@ -207,9 +214,6 @@ ${PYSITELIB}/paste/util/finddata.pyo
 ${PYSITELIB}/paste/util/findpackage.py
 ${PYSITELIB}/paste/util/findpackage.pyc
 ${PYSITELIB}/paste/util/findpackage.pyo
-${PYSITELIB}/paste/util/html.py
-${PYSITELIB}/paste/util/html.pyc
-${PYSITELIB}/paste/util/html.pyo
 ${PYSITELIB}/paste/util/import_string.py
 ${PYSITELIB}/paste/util/import_string.pyc
 ${PYSITELIB}/paste/util/import_string.pyo
