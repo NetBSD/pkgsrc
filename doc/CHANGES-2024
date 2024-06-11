@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3932 2024/06/11 09:07:57 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.3933 2024/06/11 09:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6303,3 +6303,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/qpdf to 11.9.1 [adam 2024-06-11]
 	Updated print/py-pikepdf to 9.0.0 [adam 2024-06-11]
 	Added devel/go-mockery version 2.43.2 [nikita 2024-06-11]
+	Updated archivers/py-rarfile to 4.2 [adam 2024-06-11]
+	Updated www/py-paste to 3.10.1 [adam 2024-06-11]
+	Updated devel/py-pip-run to 12.6.1 [adam 2024-06-11]
+	Updated security/py-requests-ntlm to 1.3.0 [adam 2024-06-11]
