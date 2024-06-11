@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/28 19:57:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/06/11 11:24:04 adam Exp $
 bin/weasyprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -90,6 +90,9 @@ ${PYSITELIB}/weasyprint/layout/flex.pyo
 ${PYSITELIB}/weasyprint/layout/float.py
 ${PYSITELIB}/weasyprint/layout/float.pyc
 ${PYSITELIB}/weasyprint/layout/float.pyo
+${PYSITELIB}/weasyprint/layout/grid.py
+${PYSITELIB}/weasyprint/layout/grid.pyc
+${PYSITELIB}/weasyprint/layout/grid.pyo
 ${PYSITELIB}/weasyprint/layout/inline.py
 ${PYSITELIB}/weasyprint/layout/inline.pyc
 ${PYSITELIB}/weasyprint/layout/inline.pyo
