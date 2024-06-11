@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/21 03:41:33 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/11 06:33:53 adam Exp $
 bin/zipserver
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/zipstream/__init__.py
 ${PYSITELIB}/zipstream/__init__.pyc
 ${PYSITELIB}/zipstream/__init__.pyo
@@ -9,9 +15,3 @@ ${PYSITELIB}/zipstream/ng.pyo
 ${PYSITELIB}/zipstream/server.py
 ${PYSITELIB}/zipstream/server.pyc
 ${PYSITELIB}/zipstream/server.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
