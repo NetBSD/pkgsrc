@@ -1,0 +1,16 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2024/06/11 08:36:49 pin Exp $
+
+RFD crate changed the default features from Gtk to xdg-desktop-portal.
+This breaks functionality on NetBSD. Restore the Gtk feature for now.
+
+--- Cargo.toml.orig	2024-06-11 06:29:01.483993198 +0000
++++ Cargo.toml
+@@ -48,7 +48,7 @@ wgpu = { version = "0.19.1", features = 
+ winit = { version = "0.29.10", features = ["rwh_05"] }
+ 
+ [target.'cfg(not(linux))'.dependencies]
+-rfd = "0.14.0"
++rfd = { version = "0.14.0", default-features = false, features = ["gtk3"] }
+ 
+ [target.'cfg(linux)'.dependencies]
+ rfd = { version = "0.14.0", default-features = false, features = ["xdg-portal"] }
