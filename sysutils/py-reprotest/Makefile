@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/01/24 23:37:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/06/11 09:28:46 adam Exp $
 
-DISTNAME=	reprotest-0.7.26
+DISTNAME=	reprotest-0.7.27
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reprotest/}
@@ -22,13 +22,13 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot \
-			reprotest/virt/autopkgtest-virt-lxc    \
-			reprotest/virt/autopkgtest-virt-lxd    \
-			reprotest/virt/autopkgtest-virt-null   \
-			reprotest/virt/autopkgtest-virt-qemu   \
-			reprotest/virt/autopkgtest-virt-schroot \
-			reprotest/virt/autopkgtest-virt-ssh
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-lxc
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-lxd
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-null
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-qemu
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-schroot
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-ssh
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
