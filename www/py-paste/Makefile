@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2024/01/26 13:59:19 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/06/11 09:09:28 adam Exp $
 
-DISTNAME=	Paste-3.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	paste-3.10.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paste/}
 
@@ -10,9 +10,10 @@ HOMEPAGE=	https://pythonpaste.readthedocs.io/
 COMMENT=	Middleware for Python WSGI applications
 LICENSE=	mit
 
+WHEEL_NAME=	Paste-${PKGVERSION_NOREV}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 
 USE_LANGUAGES=	# none
