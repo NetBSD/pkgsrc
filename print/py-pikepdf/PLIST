@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/04/30 08:14:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/11 08:52:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,9 +24,6 @@ ${PYSITELIB}/pikepdf/_io.pyo
 ${PYSITELIB}/pikepdf/_methods.py
 ${PYSITELIB}/pikepdf/_methods.pyc
 ${PYSITELIB}/pikepdf/_methods.pyo
-${PYSITELIB}/pikepdf/_qpdf.py
-${PYSITELIB}/pikepdf/_qpdf.pyc
-${PYSITELIB}/pikepdf/_qpdf.pyo
 ${PYSITELIB}/pikepdf/_version.py
 ${PYSITELIB}/pikepdf/_version.pyc
 ${PYSITELIB}/pikepdf/_version.pyo
@@ -57,9 +54,6 @@ ${PYSITELIB}/pikepdf/models/encryption.pyo
 ${PYSITELIB}/pikepdf/models/image.py
 ${PYSITELIB}/pikepdf/models/image.pyc
 ${PYSITELIB}/pikepdf/models/image.pyo
-${PYSITELIB}/pikepdf/models/matrix.py
-${PYSITELIB}/pikepdf/models/matrix.pyc
-${PYSITELIB}/pikepdf/models/matrix.pyo
 ${PYSITELIB}/pikepdf/models/metadata.py
 ${PYSITELIB}/pikepdf/models/metadata.pyc
 ${PYSITELIB}/pikepdf/models/metadata.pyo
