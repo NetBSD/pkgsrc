@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/06/11 09:07:26 nikita Exp $
+bin/mockery
