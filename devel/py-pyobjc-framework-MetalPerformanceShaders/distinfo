@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 14:48:39 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/11 16:10:22 adam Exp $
 
-BLAKE2s (pyobjc_framework_metalperformanceshaders-10.3.tar.gz) = ac89bab6d944fa6f35783b33ba1603980599a2ed1c84e74651028ec4a0496bae
-SHA512 (pyobjc_framework_metalperformanceshaders-10.3.tar.gz) = 2d2e1cb07f88efc235c42d29a88cf2790650309ac7327eddd85b96f5e51f479f635b17ababe45bd112c3e604b3bf346d17981f0200d3ad381c67f39a36d6efc9
-Size (pyobjc_framework_metalperformanceshaders-10.3.tar.gz) = 215373 bytes
+BLAKE2s (pyobjc_framework_metalperformanceshaders-10.3.1.tar.gz) = 4d8c91af76859456099acb3e9965e51e0e41502bc9c4e63aeb612731fe27c6d4
+SHA512 (pyobjc_framework_metalperformanceshaders-10.3.1.tar.gz) = f0bd36f02acc1899c3d41f6a6ad4ae62e347d170d5158883eb2b124f398da2cfe9d2636c52a0c2d293df6a9c806ddecadedb3ee56f52034dfed1da7e3d16d099
+Size (pyobjc_framework_metalperformanceshaders-10.3.1.tar.gz) = 215419 bytes
