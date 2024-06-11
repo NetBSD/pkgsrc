@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/23 11:00:22 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/06/11 06:31:46 adam Exp $
 
-BLAKE2s (webcolors-1.13.tar.gz) = c2e856787772b9c61d3b342ddb76ca38a00e0d2a7459b42d715f814693b90e0a
-SHA512 (webcolors-1.13.tar.gz) = 074aaf135ac6b0025b88b731d1d6dfa4c539b4fff7195658cc58a4326bb9f0449a231685d312b4a1ec48ca535a838bfa5c680787fe0e61473a2a092c448937d0
-Size (webcolors-1.13.tar.gz) = 41152 bytes
+BLAKE2s (webcolors-24.6.0.tar.gz) = 28190319c4bd4c7532dc3d8364113ef77688eab0ebf66085cbd1f6a0f505cb84
+SHA512 (webcolors-24.6.0.tar.gz) = 22b4eda3c6b0c06c6cb5873f22b63227db4d1f87c8c673556be8a2f58ea4b27aedd1b115b882602a07d997066c973c1b64ba8162abf538fae96ff54e00f699a5
+Size (webcolors-24.6.0.tar.gz) = 41449 bytes
