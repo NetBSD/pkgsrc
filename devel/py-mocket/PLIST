@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/06 10:42:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/11 09:32:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -30,9 +30,6 @@ ${PYSITELIB}/mocket/plugins/__init__.pyo
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.py
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.pyc
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.pyo
-${PYSITELIB}/mocket/plugins/httpretty/core.py
-${PYSITELIB}/mocket/plugins/httpretty/core.pyc
-${PYSITELIB}/mocket/plugins/httpretty/core.pyo
 ${PYSITELIB}/mocket/plugins/pook_mock_engine.py
 ${PYSITELIB}/mocket/plugins/pook_mock_engine.pyc
 ${PYSITELIB}/mocket/plugins/pook_mock_engine.pyo
