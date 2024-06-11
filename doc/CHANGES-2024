@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3928 2024/06/11 06:37:24 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3929 2024/06/11 07:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6297,3 +6297,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-webcolors to 24.6.0 [adam 2024-06-11]
 	Updated archivers/py-zipstream-ng to 1.7.1 [adam 2024-06-11]
 	Updated devel/py-py2app to 0.28.8 [adam 2024-06-11]
+	Updated emulators/qemu to 9.0.1 [adam 2024-06-11]
+	Updated games/wesnoth to 1.18.1 [adam 2024-06-11]
