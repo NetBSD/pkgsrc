@@ -1,0 +1,1 @@
+bin/cog @PREFIX@/bin/cog-@PYVERSSUFFIX@

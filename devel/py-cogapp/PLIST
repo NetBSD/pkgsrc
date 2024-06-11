@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/22 21:46:57 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/11 19:54:21 adam Exp $
 bin/cog-${PYVERSSUFFIX}
-bin/cog-${PYVERSSUFFIX}.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cogapp/__init__.py
 ${PYSITELIB}/cogapp/__init__.pyc
 ${PYSITELIB}/cogapp/__init__.pyo
 ${PYSITELIB}/cogapp/__main__.py
 ${PYSITELIB}/cogapp/__main__.pyc
 ${PYSITELIB}/cogapp/__main__.pyo
-${PYSITELIB}/cogapp/backward.py
-${PYSITELIB}/cogapp/backward.pyc
-${PYSITELIB}/cogapp/backward.pyo
 ${PYSITELIB}/cogapp/cogapp.py
 ${PYSITELIB}/cogapp/cogapp.pyc
 ${PYSITELIB}/cogapp/cogapp.pyo
@@ -30,6 +28,9 @@ ${PYSITELIB}/cogapp/test_makefiles.pyo
 ${PYSITELIB}/cogapp/test_whiteutils.py
 ${PYSITELIB}/cogapp/test_whiteutils.pyc
 ${PYSITELIB}/cogapp/test_whiteutils.pyo
+${PYSITELIB}/cogapp/utils.py
+${PYSITELIB}/cogapp/utils.pyc
+${PYSITELIB}/cogapp/utils.pyo
 ${PYSITELIB}/cogapp/whiteutils.py
 ${PYSITELIB}/cogapp/whiteutils.pyc
 ${PYSITELIB}/cogapp/whiteutils.pyo
