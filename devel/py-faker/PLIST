@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2024/03/24 20:10:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2024/06/11 10:06:40 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -958,9 +958,15 @@ ${PYSITELIB}/faker/providers/geo/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.py
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/geo/pl_PL/__init__.py
+${PYSITELIB}/faker/providers/geo/pl_PL/__init__.pyc
+${PYSITELIB}/faker/providers/geo/pl_PL/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/pt_PT/__init__.py
 ${PYSITELIB}/faker/providers/geo/pt_PT/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/pt_PT/__init__.pyo
+${PYSITELIB}/faker/providers/geo/sk_SK/__init__.py
+${PYSITELIB}/faker/providers/geo/sk_SK/__init__.pyc
+${PYSITELIB}/faker/providers/geo/sk_SK/__init__.pyo
 ${PYSITELIB}/faker/providers/geo/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/geo/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/geo/tr_TR/__init__.pyo
@@ -1123,6 +1129,9 @@ ${PYSITELIB}/faker/providers/job/bn_BD/__init__.pyo
 ${PYSITELIB}/faker/providers/job/bs_BA/__init__.py
 ${PYSITELIB}/faker/providers/job/bs_BA/__init__.pyc
 ${PYSITELIB}/faker/providers/job/bs_BA/__init__.pyo
+${PYSITELIB}/faker/providers/job/cs_CZ/__init__.py
+${PYSITELIB}/faker/providers/job/cs_CZ/__init__.pyc
+${PYSITELIB}/faker/providers/job/cs_CZ/__init__.pyo
 ${PYSITELIB}/faker/providers/job/da_DK/__init__.py
 ${PYSITELIB}/faker/providers/job/da_DK/__init__.pyc
 ${PYSITELIB}/faker/providers/job/da_DK/__init__.pyo
@@ -1893,6 +1902,7 @@ ${PYSITELIB}/faker/providers/user_agent/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/user_agent/en_US/__init__.pyo
 ${PYSITELIB}/faker/proxy.py
 ${PYSITELIB}/faker/proxy.pyc
+${PYSITELIB}/faker/proxy.pyi
 ${PYSITELIB}/faker/proxy.pyo
 ${PYSITELIB}/faker/py.typed
 ${PYSITELIB}/faker/typing.py
