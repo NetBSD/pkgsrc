@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/01/04 15:23:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/06/11 15:14:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -9,15 +9,10 @@ ${GEM_LIBDIR}/lib/rack.rb
 ${GEM_LIBDIR}/lib/rack/auth/abstract/handler.rb
 ${GEM_LIBDIR}/lib/rack/auth/abstract/request.rb
 ${GEM_LIBDIR}/lib/rack/auth/basic.rb
-${GEM_LIBDIR}/lib/rack/auth/digest.rb
-${GEM_LIBDIR}/lib/rack/auth/digest/md5.rb
-${GEM_LIBDIR}/lib/rack/auth/digest/nonce.rb
-${GEM_LIBDIR}/lib/rack/auth/digest/params.rb
-${GEM_LIBDIR}/lib/rack/auth/digest/request.rb
+${GEM_LIBDIR}/lib/rack/bad_request.rb
 ${GEM_LIBDIR}/lib/rack/body_proxy.rb
 ${GEM_LIBDIR}/lib/rack/builder.rb
 ${GEM_LIBDIR}/lib/rack/cascade.rb
-${GEM_LIBDIR}/lib/rack/chunked.rb
 ${GEM_LIBDIR}/lib/rack/common_logger.rb
 ${GEM_LIBDIR}/lib/rack/conditional_get.rb
 ${GEM_LIBDIR}/lib/rack/config.rb
@@ -28,7 +23,6 @@ ${GEM_LIBDIR}/lib/rack/deflater.rb
 ${GEM_LIBDIR}/lib/rack/directory.rb
 ${GEM_LIBDIR}/lib/rack/etag.rb
 ${GEM_LIBDIR}/lib/rack/events.rb
-${GEM_LIBDIR}/lib/rack/file.rb
 ${GEM_LIBDIR}/lib/rack/files.rb
 ${GEM_LIBDIR}/lib/rack/head.rb
 ${GEM_LIBDIR}/lib/rack/headers.rb
