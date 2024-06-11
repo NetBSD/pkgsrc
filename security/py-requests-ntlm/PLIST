@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/04 18:58:11 joerg Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/06/11 09:19:30 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/requests_ntlm/__init__.py
 ${PYSITELIB}/requests_ntlm/__init__.pyc
 ${PYSITELIB}/requests_ntlm/__init__.pyo
+${PYSITELIB}/requests_ntlm/py.typed
 ${PYSITELIB}/requests_ntlm/requests_ntlm.py
 ${PYSITELIB}/requests_ntlm/requests_ntlm.pyc
 ${PYSITELIB}/requests_ntlm/requests_ntlm.pyo
