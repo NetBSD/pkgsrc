@@ -1,0 +1,3 @@
+mockery provides the ability to easily generate mocks for
+Golang interfaces using the stretchr/testify/mock package.
+It removes the boilerplate coding required to use mocks.
