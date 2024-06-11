@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/08/03 08:20:54 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/06/11 19:42:17 adam Exp $
 
-BLAKE2s (requests-kerberos-0.14.0.tar.gz) = ce5d85717c521d5776a09ba882b652857cec029445b9c379e256d1d0efe6be3f
-SHA512 (requests-kerberos-0.14.0.tar.gz) = 8661d08e2425fbe42fad0e243be14fee9cc9d274f225c5ebd3be5b5db4555993a20e3ca2acb9687fa0b1a25810f127ac89896036e22df1b8f395af58e83f5dec
-Size (requests-kerberos-0.14.0.tar.gz) = 14060 bytes
+BLAKE2s (requests_kerberos-0.15.0.tar.gz) = efc31a4fa1732d14ee3365923758345f3529fb0af5cf86f0c78de8ce64736ba0
+SHA512 (requests_kerberos-0.15.0.tar.gz) = 1c5238793b3414f9e59e66333ae3921433628a479b337fbe455fce6393f832411ef5d8836618a7080b2976c2776d03fad67d3964c25ddd21607fc85cb75a1edf
+Size (requests_kerberos-0.15.0.tar.gz) = 24410 bytes
