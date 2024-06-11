@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/06/06 14:48:42 adam Exp $
+$NetBSD: distinfo,v 1.21 2024/06/11 16:10:26 adam Exp $
 
-BLAKE2s (pyobjc_framework_servicemanagement-10.3.tar.gz) = e5f10905a4c35b710aedddb9e91877dc4314a45560458becb030a3e00bbe0d1b
-SHA512 (pyobjc_framework_servicemanagement-10.3.tar.gz) = e445ae3c96a20910fa3af1e722a6ec7866d1c642d09c530190c2773bcdc8c878d967c95d137181dae4e77c36b8238de0e0fe4d11791241dd0352a6247df0b919
-Size (pyobjc_framework_servicemanagement-10.3.tar.gz) = 15716 bytes
+BLAKE2s (pyobjc_framework_servicemanagement-10.3.1.tar.gz) = 3cff6f6b46fd5863aa6f28d5d26576be4cb285985a80adfed6abc02aae544f61
+SHA512 (pyobjc_framework_servicemanagement-10.3.1.tar.gz) = d650b283b2b9eff353c63a9a6269a70895052010d3297b5231e59738f1f59340e84792b04a7a161187ae682c9f845314c23766ce364c89a987c7d9e9c90cdc19
+Size (pyobjc_framework_servicemanagement-10.3.1.tar.gz) = 15746 bytes

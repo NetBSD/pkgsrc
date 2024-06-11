@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 14:48:40 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/11 16:10:23 adam Exp $
 
-BLAKE2s (pyobjc_framework_oslog-10.3.tar.gz) = 86f967c48392142a60ac52428a45f53087abe3831e2bb4440826e5ddb535e8d6
-SHA512 (pyobjc_framework_oslog-10.3.tar.gz) = 7dc70e320b1dcf9d24c535ec337251771e2982790fd5ecd389ecd44c14255359a282dc0a8d6d512d88af85d7fd656522678790044e0386691a5a711014ffcf6f
-Size (pyobjc_framework_oslog-10.3.tar.gz) = 22267 bytes
+BLAKE2s (pyobjc_framework_oslog-10.3.1.tar.gz) = ac81850f1e16900e0818b4867e15c385e0f45865878dad6fb6c16d6c76dec75d
+SHA512 (pyobjc_framework_oslog-10.3.1.tar.gz) = dea50b08f3c81e0f2bc0c4d23a72f983a62fc5c265d6307260697c77e4e24f84657ddc503b9d8b8d390a40849aa35af6b4ef36bc2961a10ae3baf49b8ee21543
+Size (pyobjc_framework_oslog-10.3.1.tar.gz) = 22288 bytes

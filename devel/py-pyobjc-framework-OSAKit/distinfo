@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 14:48:40 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/11 16:10:23 adam Exp $
 
-BLAKE2s (pyobjc_framework_osakit-10.3.tar.gz) = 6b21b7339037a8f09a9310692c674a1d5c434cb0fc13b7bd6c3a1075fc489af6
-SHA512 (pyobjc_framework_osakit-10.3.tar.gz) = a22c1df164b609217829a72415f5d6f1fd3ad07ddcd8cc58ada81ff23412ed10cb9e9adb0f6a305710fd3263f2cffb6e1bec5916442280edd5e4749199638134
-Size (pyobjc_framework_osakit-10.3.tar.gz) = 18269 bytes
+BLAKE2s (pyobjc_framework_osakit-10.3.1.tar.gz) = 7620225f833b15943b8fe77b8fddf3884fbc20eb25bffe50ab96ced801000bba
+SHA512 (pyobjc_framework_osakit-10.3.1.tar.gz) = 259bdd4ead3048da8c11114d2cf4574186dd54ef2bb502ee83ae6cf8de556024b1cea1beec16b9e7827425f9f40598e3c2edab5f7b26e4ec894743d55cbd8d68
+Size (pyobjc_framework_osakit-10.3.1.tar.gz) = 18286 bytes

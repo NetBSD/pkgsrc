@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/06/06 14:48:32 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/06/11 16:10:15 adam Exp $
 
-BLAKE2s (pyobjc_framework_contactsui-10.3.tar.gz) = ed5e52e5ee67eac84133afc51be8cbf62f938acc60b11a604caa2662a0b05d58
-SHA512 (pyobjc_framework_contactsui-10.3.tar.gz) = 4b74cf7e1acd7bb53fa2d3fadde8de1d5c135cc6b5e16fec8c1abdfe59a4057d695400ca00696afa9dccba0e9d671dd36569e6ef01e8b1330ea17a5556a87653
-Size (pyobjc_framework_contactsui-10.3.tar.gz) = 17901 bytes
+BLAKE2s (pyobjc_framework_contactsui-10.3.1.tar.gz) = aa89ee843c8d29126a59124f996e25fcacb82019d1f8098565bf03ba795c4d4d
+SHA512 (pyobjc_framework_contactsui-10.3.1.tar.gz) = f573fd5c9498f8dff65664a85d359d86a27141bafaf2d2d739d09f71e90419ffb29fb63d62836210e639adbd5698c8b713f13f382db9e42f150bc2cacf5a5314
+Size (pyobjc_framework_contactsui-10.3.1.tar.gz) = 17921 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/06/06 14:48:32 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/06/11 16:10:15 adam Exp $
 
-BLAKE2s (pyobjc_framework_coreaudio-10.3.tar.gz) = 63508fea5356306e241376931bd4e8ee71bff5dbec2f2a2ce2349b4d16b82aa1
-SHA512 (pyobjc_framework_coreaudio-10.3.tar.gz) = 42035d6dbea44208c84de5a9debf5420e7acb36e35597e69b31ec50ab1c38f21e86bb1c9393a078f721b1078564d325dd2ac29406aa867a28be967f504abe68d
-Size (pyobjc_framework_coreaudio-10.3.tar.gz) = 125651 bytes
+BLAKE2s (pyobjc_framework_coreaudio-10.3.1.tar.gz) = 6a97985dc1bb338d6e059798ba7475c262d1e20fd410d6897172e7ee498e5edb
+SHA512 (pyobjc_framework_coreaudio-10.3.1.tar.gz) = 78e8179a28237351f67ac1c25ce47e781cdea13ca5238fc39fa33c1dd40bc947535bf45d7acefc77ee46ab8d6db99d7c5d1e5cd6cdd4ffbce9afa4b1fd7261e5
+Size (pyobjc_framework_coreaudio-10.3.1.tar.gz) = 125676 bytes

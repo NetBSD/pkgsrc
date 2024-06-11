@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/06/06 14:48:31 adam Exp $
+$NetBSD: distinfo,v 1.21 2024/06/11 16:10:15 adam Exp $
 
-BLAKE2s (pyobjc_framework_cocoa-10.3.tar.gz) = a28f2d3b5867ab1cb4c405618388d7b79591c56d26d785a0857e9530a93942ed
-SHA512 (pyobjc_framework_cocoa-10.3.tar.gz) = 0d8d323681baa4884e5655c6db482ff5aca59f8e95b2cf91df3626790d24d80d960937ec49c4be5d881e290a9e31da65d5bba4ab6ddfb67822434bf611641a97
-Size (pyobjc_framework_cocoa-10.3.tar.gz) = 4941370 bytes
+BLAKE2s (pyobjc_framework_cocoa-10.3.1.tar.gz) = d4bb1e59ebd5ad21e26a6abb0c09a3202088fead37d9254c81eb761d3e7dbb95
+SHA512 (pyobjc_framework_cocoa-10.3.1.tar.gz) = f7a54e0f78f70d62d573baba2ab5596638b26e0755bc87f9072e007e10f19b48a73f01810e1c1996ad870adad1d9b91ed48cc3cbc02ac6e01fa238ee0a3cbd7c
+Size (pyobjc_framework_cocoa-10.3.1.tar.gz) = 4941542 bytes
