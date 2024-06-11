@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.32 2024/06/11 10:04:14 adam Exp $
+$NetBSD: distinfo,v 1.33 2024/06/11 19:35:52 adam Exp $
 
 BLAKE2s (tessdata-4.1.0.tar.gz) = 639157a6e38486715a14670ae0d93884e57e7e3c1353ed6dc1fe4ec26cf7d159
 SHA512 (tessdata-4.1.0.tar.gz) = fbb8c43cbbbc74789a78d1930d859ba1631058c04a57c7b67350ef6245d705a1ad1df3f899b54b30bbdf253216a6707bbb0e589a5876062e9de04b2b8cb5f872
 Size (tessdata-4.1.0.tar.gz) = 1387839134 bytes
-BLAKE2s (tesseract-5.4.0.tar.gz) = a4a554cd9b17fb98e526f6b78b0ddcc91dfcddfa0d35835a898579242c6bb809
-SHA512 (tesseract-5.4.0.tar.gz) = c4cc3581ead54a26c73fb310adb50945dcad0bbc9c071d63890b4158d03e1043f5d581fe93db349a684dc80d76718a219f492244541af23239f2b669e55e6e5e
-Size (tesseract-5.4.0.tar.gz) = 1900009 bytes
+BLAKE2s (tesseract-5.4.1.tar.gz) = 7b787cbda078f542e7498b25b7799f799df3c769577bb5073acbb0a9402651fe
+SHA512 (tesseract-5.4.1.tar.gz) = a97a31d1b735930a3e8b17bc2eae24210d8242d31399822f8bc2e9f18903d513cf6d02b2274e2f3ce431183467570b3327e01cbc49dca80e38acb90327cc235e
+Size (tesseract-5.4.1.tar.gz) = 1899949 bytes
 SHA1 (patch-CMakeLists.txt) = e29e3b732d45551795046cb5cd09d6d8735269aa
 SHA1 (patch-tessdata_Makefile.am) = 8fe773d1c6318392296ba06996b51692edf32919
