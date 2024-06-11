@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/11 06:31:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,18 +7,18 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/webcolors/__init__.py
 ${PYSITELIB}/webcolors/__init__.pyc
 ${PYSITELIB}/webcolors/__init__.pyo
-${PYSITELIB}/webcolors/constants.py
-${PYSITELIB}/webcolors/constants.pyc
-${PYSITELIB}/webcolors/constants.pyo
-${PYSITELIB}/webcolors/conversion.py
-${PYSITELIB}/webcolors/conversion.pyc
-${PYSITELIB}/webcolors/conversion.pyo
-${PYSITELIB}/webcolors/html5.py
-${PYSITELIB}/webcolors/html5.pyc
-${PYSITELIB}/webcolors/html5.pyo
-${PYSITELIB}/webcolors/normalization.py
-${PYSITELIB}/webcolors/normalization.pyc
-${PYSITELIB}/webcolors/normalization.pyo
-${PYSITELIB}/webcolors/types.py
-${PYSITELIB}/webcolors/types.pyc
-${PYSITELIB}/webcolors/types.pyo
+${PYSITELIB}/webcolors/_conversion.py
+${PYSITELIB}/webcolors/_conversion.pyc
+${PYSITELIB}/webcolors/_conversion.pyo
+${PYSITELIB}/webcolors/_definitions.py
+${PYSITELIB}/webcolors/_definitions.pyc
+${PYSITELIB}/webcolors/_definitions.pyo
+${PYSITELIB}/webcolors/_html5.py
+${PYSITELIB}/webcolors/_html5.pyc
+${PYSITELIB}/webcolors/_html5.pyo
+${PYSITELIB}/webcolors/_normalization.py
+${PYSITELIB}/webcolors/_normalization.pyc
+${PYSITELIB}/webcolors/_normalization.pyo
+${PYSITELIB}/webcolors/_types.py
+${PYSITELIB}/webcolors/_types.pyc
+${PYSITELIB}/webcolors/_types.pyo
