@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/01/30 07:57:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/06/11 10:04:14 adam Exp $
 bin/ambiguous_words
 bin/classifier_tester
 bin/cntraining
@@ -84,6 +84,7 @@ share/tessdata/configs/lstm.train
 share/tessdata/configs/lstmbox
 share/tessdata/configs/lstmdebug
 share/tessdata/configs/makebox
+share/tessdata/configs/page
 share/tessdata/configs/pdf
 share/tessdata/configs/quiet
 share/tessdata/configs/rebox
