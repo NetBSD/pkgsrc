@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.20 2023/12/07 22:57:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/06/11 12:02:28 gdt Exp $
 bin/chirp
 bin/chirpc
+bin/experttune
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,6 +41,9 @@ ${PYSITELIB}/chirp/chirp_common.pyo
 ${PYSITELIB}/chirp/cli/__init__.py
 ${PYSITELIB}/chirp/cli/__init__.pyc
 ${PYSITELIB}/chirp/cli/__init__.pyo
+${PYSITELIB}/chirp/cli/experttune.py
+${PYSITELIB}/chirp/cli/experttune.pyc
+${PYSITELIB}/chirp/cli/experttune.pyo
 ${PYSITELIB}/chirp/cli/main.py
 ${PYSITELIB}/chirp/cli/main.pyc
 ${PYSITELIB}/chirp/cli/main.pyo
@@ -55,6 +59,9 @@ ${PYSITELIB}/chirp/drivers/__init__.pyo
 ${PYSITELIB}/chirp/drivers/alinco.py
 ${PYSITELIB}/chirp/drivers/alinco.pyc
 ${PYSITELIB}/chirp/drivers/alinco.pyo
+${PYSITELIB}/chirp/drivers/alinco_dr735t.py
+${PYSITELIB}/chirp/drivers/alinco_dr735t.pyc
+${PYSITELIB}/chirp/drivers/alinco_dr735t.pyo
 ${PYSITELIB}/chirp/drivers/anytone.py
 ${PYSITELIB}/chirp/drivers/anytone.pyc
 ${PYSITELIB}/chirp/drivers/anytone.pyo
@@ -364,6 +371,9 @@ ${PYSITELIB}/chirp/drivers/radtel_rt490.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
+${PYSITELIB}/chirp/drivers/retevis_ra87.py
+${PYSITELIB}/chirp/drivers/retevis_ra87.pyc
+${PYSITELIB}/chirp/drivers/retevis_ra87.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rb15.py
 ${PYSITELIB}/chirp/drivers/retevis_rb15.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rb15.pyo
@@ -505,6 +515,9 @@ ${PYSITELIB}/chirp/drivers/uvb5.pyo
 ${PYSITELIB}/chirp/drivers/uvk5.py
 ${PYSITELIB}/chirp/drivers/uvk5.pyc
 ${PYSITELIB}/chirp/drivers/uvk5.pyo
+${PYSITELIB}/chirp/drivers/uvk5_egzumer.py
+${PYSITELIB}/chirp/drivers/uvk5_egzumer.pyc
+${PYSITELIB}/chirp/drivers/uvk5_egzumer.pyo
 ${PYSITELIB}/chirp/drivers/vgc.py
 ${PYSITELIB}/chirp/drivers/vgc.pyc
 ${PYSITELIB}/chirp/drivers/vgc.pyo
@@ -580,6 +593,7 @@ ${PYSITELIB}/chirp/pyPEG.pyo
 ${PYSITELIB}/chirp/settings.py
 ${PYSITELIB}/chirp/settings.pyc
 ${PYSITELIB}/chirp/settings.pyo
+${PYSITELIB}/chirp/share/chirp-logo.png
 ${PYSITELIB}/chirp/share/chirp.desktop
 ${PYSITELIB}/chirp/share/chirp.ico
 ${PYSITELIB}/chirp/share/chirp.png
@@ -587,6 +601,9 @@ ${PYSITELIB}/chirp/share/chirp.svg
 ${PYSITELIB}/chirp/share/chirpw.1
 ${PYSITELIB}/chirp/share/plus-icon.png
 ${PYSITELIB}/chirp/share/welcome_screen.png
+${PYSITELIB}/chirp/share/welcome_screen_es.png
+${PYSITELIB}/chirp/share/welcome_screen_fr.png
+${PYSITELIB}/chirp/share/welcome_screen_it.png
 ${PYSITELIB}/chirp/sources/__init__.py
 ${PYSITELIB}/chirp/sources/__init__.pyc
 ${PYSITELIB}/chirp/sources/__init__.pyo
@@ -606,9 +623,12 @@ ${PYSITELIB}/chirp/sources/repeaterbook.py
 ${PYSITELIB}/chirp/sources/repeaterbook.pyc
 ${PYSITELIB}/chirp/sources/repeaterbook.pyo
 ${PYSITELIB}/chirp/stock_configs/AU NZ UHF Citizens Band.csv
+${PYSITELIB}/chirp/stock_configs/CA Calling Frequencies.csv
+${PYSITELIB}/chirp/stock_configs/CA FRS and GMRS Channels.csv
 ${PYSITELIB}/chirp/stock_configs/DE Freenet Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/EU LPD and PMR Channels.csv
 ${PYSITELIB}/chirp/stock_configs/FR Marine VHF Channels.csv
+${PYSITELIB}/chirp/stock_configs/GR Marine VHF Channels.csv
 ${PYSITELIB}/chirp/stock_configs/PL Calling Frequencies and Simplex.csv
 ${PYSITELIB}/chirp/stock_configs/SE Jaktradio 155MHz.csv
 ${PYSITELIB}/chirp/stock_configs/SE NO KDR444.csv
