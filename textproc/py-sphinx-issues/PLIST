@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/24 15:50:43 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/sphinx_issues.py
-${PYSITELIB}/sphinx_issues.pyc
-${PYSITELIB}/sphinx_issues.pyo
+@comment $NetBSD: PLIST,v 1.2 2024/06/11 19:29:34 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/sphinx_issues/__init__.py
+${PYSITELIB}/sphinx_issues/__init__.pyc
+${PYSITELIB}/sphinx_issues/__init__.pyo
