@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2022/11/29 08:35:01 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/06/11 10:29:51 adam Exp $
 
-BLAKE2s (yara-4.2.3.tar.gz) = fcd5a273fb2f1b7835f9bd80a8963bedf2bc67fa78b971abbcd971571e3fef74
-SHA512 (yara-4.2.3.tar.gz) = 1df23837d14d3f9f72db901190e7412241514a8914d72b753df32ad8a44c7a49ad8f14941a95de83754e4d1dd0f23d712d8e6a43916343341b92cb1bc66f3c09
-Size (yara-4.2.3.tar.gz) = 1288334 bytes
-SHA1 (patch-configure.ac) = 49ad0dddaa2f105a8460304dc163a550d7638b45
+BLAKE2s (yara-4.5.1.tar.gz) = b7c4ddc7bee7d61d5e3235aa3b7c7fb952fff46899b8aba2f9bd879f795c3100
+SHA512 (yara-4.5.1.tar.gz) = 8bf1df7089f9bc5a448dbae0999e04f4ecdec06b4478e2cb5f42a2a3201b99fce68379e3f8f7c67a9db201205366250d7befe5c38451cced807ed692d436422c
+Size (yara-4.5.1.tar.gz) = 2207552 bytes
+SHA1 (patch-configure.ac) = 4451fd7843ef57054f22a7144f93bc7f388daea5

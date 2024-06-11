@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2022/11/28 18:57:19 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/06/11 10:29:51 adam Exp $
 
-BLAKE2s (yara-python-4.2.3.tar.gz) = aa46b829505087358246258600d22d0b1b7d4dc54c392ef642a9f9d4d8f5c7b9
-SHA512 (yara-python-4.2.3.tar.gz) = 588875d820f4e1b2aa5c6bbe83814ba2756f5ed301ba652efd280d5ca9745f7388f1f9eaa3875d11de5644ce9c41dcb76eebbee86269f8d6723c7d16ffa134be
-Size (yara-python-4.2.3.tar.gz) = 34465 bytes
+BLAKE2s (yara_python-4.5.1.tar.gz) = e474d6faf1c91cdc901edc448a457a224378b3d32be9e60c4b195ee846cb6ae7
+SHA512 (yara_python-4.5.1.tar.gz) = fb3d78cea58a5dcb21287d5211805ef7097c07b9117e4fe78a7e56b40f2520950f0e8d6f1eb3c4253a454e10ca782c3826c19613bd17677bef491ae91f9f9d2a
+Size (yara_python-4.5.1.tar.gz) = 39419 bytes
+SHA1 (patch-setup.py) = be89b56b193900004dabbdcaba2faf99fcb75173
