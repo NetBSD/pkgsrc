@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/12 05:34:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/11 09:04:30 adam Exp $
 
-DISTNAME=	rarfile-4.1
+DISTNAME=	rarfile-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rarfile/}
