@@ -1,0 +1,15 @@
+$NetBSD: patch-bin_fvwm-menu-desktop.in,v 1.1 2024/06/11 19:32:45 vins Exp $
+
+Point script to the correct xdg menus location.
+
+--- bin/fvwm-menu-desktop.in.orig	2024-06-11 19:21:23.812516163 +0000
++++ bin/fvwm-menu-desktop.in
+@@ -259,7 +259,7 @@ Standard output is a series Fvwm command
+     icon_dir="~/.fvwm/icons"
+     top='XDGMenu'
+     insert_in_menu = False
+-    install_prefix = ''
++    install_prefix="@PKG_SYSCONFDIR@/xdg/menus"
+     menu_type = ''
+     with_titles = True
+     menu_list_length = 0
