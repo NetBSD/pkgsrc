@@ -1,4 +1,4 @@
-/*	$NetBSD: parse_cross.c,v 1.2 2024/01/26 12:40:04 riastradh Exp $	*/
+/*	$NetBSD: parse_cross.c,v 1.3 2024/06/11 09:11:33 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,8 +7,11 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: parse_cross.c,v 1.2 2024/01/26 12:40:04 riastradh Exp $");
+__RCSID("$NetBSD: parse_cross.c,v 1.3 2024/06/11 09:11:33 wiz Exp $");
 
+#if HAVE_ERR_H
+#include <err.h>
+#endif
 #include "lib.h"
 #include "add.h"
 
