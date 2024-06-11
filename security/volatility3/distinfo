@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/11/29 05:59:16 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/06/11 10:39:50 adam Exp $
 
-BLAKE2s (volatility3-2.0.1.tar.gz) = 365c1321f43811807acd86e1196c635835b2c945376063b552dda5fd4067de19
-SHA512 (volatility3-2.0.1.tar.gz) = 752b3fc23b3668df4329f6dbefa2ff8eb2dd63bc6e22e18774096cebae93053567727e3dc6e5ecbf7a0731459c829c37cea8ac735564c62f96a4f652ad2b6cb9
-Size (volatility3-2.0.1.tar.gz) = 427679 bytes
+BLAKE2s (volatility3-2.7.0.tar.gz) = 4532b5ad0ded40b8bdb1d988f8172976547eca2aa77a0bb9b35ce732459fd016
+SHA512 (volatility3-2.7.0.tar.gz) = bb9f79604ce2e647d42a1003941802a69ecdf845c1400b1d3f67e13494a228c99269478d635fbcdcde8ae67b792b73e07e7e26ce9a8e2e7b80185af7cc7ac3c0
+Size (volatility3-2.7.0.tar.gz) = 523445 bytes
