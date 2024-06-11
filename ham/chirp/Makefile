@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/12/17 01:51:04 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2024/06/11 12:02:28 gdt Exp $
 
-VERSION=	20231213
+VERSION=	20240606
 DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
