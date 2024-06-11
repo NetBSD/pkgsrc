@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 14:48:34 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/11 16:10:17 adam Exp $
 
-BLAKE2s (pyobjc_framework_discrecording-10.3.tar.gz) = 5abc63aac59ca3435b1eb48a3ba6db488dc17634e49bdf4b76577d21c08683c8
-SHA512 (pyobjc_framework_discrecording-10.3.tar.gz) = 16d2bf8f1fe6c8d9b5dc8066577829c01786d8f8218d1de6df459f7fe41e76fdc9f1829f5a270c689c5d8f3af606a9ca07b5ad7f02b7f88b4a6b8d4e2d65fbc4
-Size (pyobjc_framework_discrecording-10.3.tar.gz) = 101592 bytes
+BLAKE2s (pyobjc_framework_discrecording-10.3.1.tar.gz) = ef7ff8577fbc57d250e3202741a6d7611993624bd29fa780721062cd8a46da58
+SHA512 (pyobjc_framework_discrecording-10.3.1.tar.gz) = 6a04d3aeaf47447b52fffcafc7b0c69fc637e50d7863a7c128bafb07a11313de8a9a1edc72a7d7ff530356b38ce71489d3b4e820c328f6e0025e953b234a0251
+Size (pyobjc_framework_discrecording-10.3.1.tar.gz) = 101624 bytes

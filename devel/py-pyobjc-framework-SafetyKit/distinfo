@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/06/06 14:48:41 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/06/11 16:10:25 adam Exp $
 
-BLAKE2s (pyobjc_framework_safetykit-10.3.tar.gz) = e7009b9c2b6aeb950e91db943a2e774340b28e1de7c82063e07315b0e32ab7f7
-SHA512 (pyobjc_framework_safetykit-10.3.tar.gz) = f04480ba614864d613a2b5d14093188d8f390c77d1a1971aab15548272a63b481325cc244f2c8147cf6e20e0de3393ba805bda2936aaea9beee84d473deec810
-Size (pyobjc_framework_safetykit-10.3.tar.gz) = 19027 bytes
+BLAKE2s (pyobjc_framework_safetykit-10.3.1.tar.gz) = d73852cc3b0a1cff21e7f573959c07a4ae69dd1e5c5fd7dd7d6d5f633c030b55
+SHA512 (pyobjc_framework_safetykit-10.3.1.tar.gz) = be042b9a21fc9c611233b75243b7f11b1c079b8cb2f824bb2c0e956390228977ea15fb27507c54f8671c7ab707dd4aca2656c76953c0ff28eead809f2b567a6c
+Size (pyobjc_framework_safetykit-10.3.1.tar.gz) = 19035 bytes

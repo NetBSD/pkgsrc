@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/06/06 14:48:39 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/06/11 16:10:22 adam Exp $
 
-BLAKE2s (pyobjc_framework_naturallanguage-10.3.tar.gz) = ef8336c2b53680581b3f0ed382697953dc904c297e2e8961461edcbc3fd9ebe4
-SHA512 (pyobjc_framework_naturallanguage-10.3.tar.gz) = e57ed97fbfcb1c8fe1111fc0fa90be774e35ad31e3c2d5b271f59a021a1a9ad3ae2301d7eeeb7d4f8f24ada181bce6906e5f845a4c11835a0252f4a09c8b3a83
-Size (pyobjc_framework_naturallanguage-10.3.tar.gz) = 39129 bytes
+BLAKE2s (pyobjc_framework_naturallanguage-10.3.1.tar.gz) = 7d9b7ee8d32c6619a8fa41feddb84ee2f12dc843a5b5c5f1d67230b78a1187c0
+SHA512 (pyobjc_framework_naturallanguage-10.3.1.tar.gz) = f1539905ff93655690d6c52097fbf68f183d42d5ab94fb73321014e640848c70c1e022af76ce4ceecd3c61186aa0152f882da69899a35b81ee1668d900720a7d
+Size (pyobjc_framework_naturallanguage-10.3.1.tar.gz) = 39154 bytes

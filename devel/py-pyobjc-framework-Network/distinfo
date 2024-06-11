@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 14:48:39 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/11 16:10:23 adam Exp $
 
-BLAKE2s (pyobjc_framework_network-10.3.tar.gz) = e6032464355c6e821aa57678c1ea3cb5e11bfc80ef618765b66ee41f397e67d7
-SHA512 (pyobjc_framework_network-10.3.tar.gz) = 429fa83199604c33d9dc8b7228dc73986e0173702a569e7dfe170da23583d8707a3608d089bd152351a4f4d16fec1ee2ee0f4b70396a32b1cee3fb59aab0c0dc
-Size (pyobjc_framework_network-10.3.tar.gz) = 103969 bytes
+BLAKE2s (pyobjc_framework_network-10.3.1.tar.gz) = 376507601b7062f49fdc1edc749b9ffb5915086984f3d1f3239108d10c23b24a
+SHA512 (pyobjc_framework_network-10.3.1.tar.gz) = 12b506171ec185c1fcfce9dc11bda3ea988eeed8b34fcd963c298b3410445bb5b9d320ed22ee41c0de6850feb81b12fc4754f96084bafb83e87855d1f08638b6
+Size (pyobjc_framework_network-10.3.1.tar.gz) = 104030 bytes
