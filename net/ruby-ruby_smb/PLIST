@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/05/26 15:35:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/06/11 15:08:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -108,6 +108,9 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_request.r
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/lsarpc/lsar_query_information_policy_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/ndr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/domain_controller_infow.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/dsr_get_dc_name_ex2_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/dsr_get_dc_name_ex2_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_authenticate3_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/netlogon/netr_server_password_set2_request.rb
