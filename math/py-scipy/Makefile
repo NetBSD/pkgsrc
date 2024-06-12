@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2024/06/04 20:46:45 markd Exp $
+# $NetBSD: Makefile,v 1.82 2024/06/12 08:57:43 adam Exp $
 
-DISTNAME=	scipy-1.13.0
+DISTNAME=	scipy-1.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -14,10 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.8:../../devel/py-cython
 # Package directly expresses a meson minimum; we need higher to pick up our
 # multi-version build fixes.
 TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.15.0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.12:../../devel/py-pybind11
-DEPENDS+=	${PYPKGPREFIX}-pythran>=0.12.0:../../math/py-pythran
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pythran>=0.14.0:../../math/py-pythran
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
 TEST_DEPENDS+=	${PYPKGPREFIX}-pooch-[0-9]*:../../devel/py-pooch
