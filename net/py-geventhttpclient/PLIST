@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/16 11:07:33 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+@comment $NetBSD: PLIST,v 1.4 2024/06/12 06:02:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-MIT
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,9 @@ ${PYSITELIB}/geventhttpclient/__init__.py
 ${PYSITELIB}/geventhttpclient/__init__.pyc
 ${PYSITELIB}/geventhttpclient/__init__.pyo
 ${PYSITELIB}/geventhttpclient/_parser.so
+${PYSITELIB}/geventhttpclient/api.py
+${PYSITELIB}/geventhttpclient/api.pyc
+${PYSITELIB}/geventhttpclient/api.pyo
 ${PYSITELIB}/geventhttpclient/client.py
 ${PYSITELIB}/geventhttpclient/client.pyc
 ${PYSITELIB}/geventhttpclient/client.pyo
@@ -20,6 +23,12 @@ ${PYSITELIB}/geventhttpclient/header.pyo
 ${PYSITELIB}/geventhttpclient/httplib.py
 ${PYSITELIB}/geventhttpclient/httplib.pyc
 ${PYSITELIB}/geventhttpclient/httplib.pyo
+${PYSITELIB}/geventhttpclient/httplib2.py
+${PYSITELIB}/geventhttpclient/httplib2.pyc
+${PYSITELIB}/geventhttpclient/httplib2.pyo
+${PYSITELIB}/geventhttpclient/requests.py
+${PYSITELIB}/geventhttpclient/requests.pyc
+${PYSITELIB}/geventhttpclient/requests.pyo
 ${PYSITELIB}/geventhttpclient/response.py
 ${PYSITELIB}/geventhttpclient/response.pyc
 ${PYSITELIB}/geventhttpclient/response.pyo
