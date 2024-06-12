@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/02/09 06:06:40 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/06/12 17:02:05 adam Exp $
 
-DISTNAME=	celery-5.3.6
+DISTNAME=	celery-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}

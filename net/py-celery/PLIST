@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/09 06:06:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/06/12 17:02:05 adam Exp $
 bin/celery-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -126,6 +126,9 @@ ${PYSITELIB}/celery/backends/elasticsearch.pyo
 ${PYSITELIB}/celery/backends/filesystem.py
 ${PYSITELIB}/celery/backends/filesystem.pyc
 ${PYSITELIB}/celery/backends/filesystem.pyo
+${PYSITELIB}/celery/backends/gcs.py
+${PYSITELIB}/celery/backends/gcs.pyc
+${PYSITELIB}/celery/backends/gcs.pyo
 ${PYSITELIB}/celery/backends/mongodb.py
 ${PYSITELIB}/celery/backends/mongodb.pyc
 ${PYSITELIB}/celery/backends/mongodb.pyo
@@ -231,6 +234,12 @@ ${PYSITELIB}/celery/contrib/__init__.pyo
 ${PYSITELIB}/celery/contrib/abortable.py
 ${PYSITELIB}/celery/contrib/abortable.pyc
 ${PYSITELIB}/celery/contrib/abortable.pyo
+${PYSITELIB}/celery/contrib/django/__init__.py
+${PYSITELIB}/celery/contrib/django/__init__.pyc
+${PYSITELIB}/celery/contrib/django/__init__.pyo
+${PYSITELIB}/celery/contrib/django/task.py
+${PYSITELIB}/celery/contrib/django/task.pyc
+${PYSITELIB}/celery/contrib/django/task.pyo
 ${PYSITELIB}/celery/contrib/migrate.py
 ${PYSITELIB}/celery/contrib/migrate.pyc
 ${PYSITELIB}/celery/contrib/migrate.pyo
