@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/15 17:11:58 kim Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/12 06:53:12 kim Exp $
 bin/tcsh
 man/man1/tcsh.1
 share/examples/tcsh/complete.tcsh
 share/examples/tcsh/csh-mode.el
 ${PLIST.nls}share/locale/C/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/de/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/el/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/es/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/et/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/tcsh.cat
-${PLIST.nls}share/locale/gr/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/it/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/tcsh.cat
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/tcsh.cat
