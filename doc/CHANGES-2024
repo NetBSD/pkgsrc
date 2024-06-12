@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3950 2024/06/12 07:26:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3951 2024/06/12 09:00:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6339,3 +6339,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/tcsh to 6.24.13 [kim 2024-06-12]
 	Updated net/py-asyncio-nats-client to 0.11.5 [adam 2024-06-12]
 	Updated converters/py-cairosvg to 2.7.1 [adam 2024-06-12]
+	Updated math/py-scipy to 1.13.1 [adam 2024-06-12]
+	Updated devel/py-hypothesis to 6.103.1 [adam 2024-06-12]
