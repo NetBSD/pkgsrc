@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/04/08 14:21:13 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/06/12 06:02:39 adam Exp $
 
-DISTNAME=	geventhttpclient-2.0.12
+DISTNAME=	geventhttpclient-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geventhttpclient/}
@@ -15,11 +15,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13:../../net/py-gevent
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
-TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-certifi
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
