@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3952 2024/06/12 10:17:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3953 2024/06/12 11:51:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6344,3 +6344,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/glib2 to 2.80.3 [adam 2024-06-12]
 	Updated devel/glib2-tools to 2.80.3 [adam 2024-06-12]
 	Updated devel/gdbus-codegen to 2.80.3 [adam 2024-06-12]
+	Updated ham/gr-osmosdr to 0.2.6 [adam 2024-06-12]
+	Updated www/py-w3lib to 2.2.1 [adam 2024-06-12]
