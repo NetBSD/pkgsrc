@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/01/30 18:02:31 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/06/12 11:49:58 adam Exp $
 
-BLAKE2s (gr-osmosdr-0.2.4.tar.gz) = ebcf6feb67b705845492bb88dc2df69a5b2d782d55103a5e83ffeceb9d0a95c8
-SHA512 (gr-osmosdr-0.2.4.tar.gz) = 04b54c92e40e58b76a9e6c9c3fb419f97af2599ca2f92cb58858464722e993ebe05896ffee2592ced729521ec65857eac9fac7809567c8b6de62a0ff99f615d5
-Size (gr-osmosdr-0.2.4.tar.gz) = 260745 bytes
-SHA1 (patch-lib_hackrf_hackrf__sink__c.cc) = fecc8e73b15d2fb052ae9a22dea6404598dfc553
+BLAKE2s (gr-osmosdr-0.2.6.tar.gz) = f8497b5179987bc63b46c36b99e5766ad1b332833ae50b1e935559cebed7edf4
+SHA512 (gr-osmosdr-0.2.6.tar.gz) = 61144e76ae1c7909355ee1a499b72e7243d522fed6b50fc469e2a92f9b49857eba43fdab63d654b80a84a05ece4cc1a821dee9c236aa911840963e26ce8c4c53
+Size (gr-osmosdr-0.2.6.tar.gz) = 268206 bytes

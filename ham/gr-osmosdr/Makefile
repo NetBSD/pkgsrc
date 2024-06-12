@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2023/12/29 18:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.55 2024/06/12 11:49:58 adam Exp $
 
-DISTNAME=	gr-osmosdr-0.2.4
-PKGREVISION=	6
+DISTNAME=	gr-osmosdr-0.2.6
 CATEGORIES=	ham
 # main git repo doesn't allow snapshots to be downloaded
 #MASTER_SITES=	https://git.osmocom.org/gr-osmosdr/snapshot/
@@ -16,9 +15,8 @@ LICENSE=	gnu-gpl-v2
 # for docs/doxygen/update_pydoc.py
 TOOL_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
-USE_TOOLS=	cmake
+USE_CXX_FEATURES=	c++11 filesystem
+USE_LANGUAGES=		c c++
 
 # Suppress warning for developer
 CMAKE_ARGS+=	-Wno-dev
@@ -28,14 +26,13 @@ CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
-USE_CXX_FEATURES+=	filesystem
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
