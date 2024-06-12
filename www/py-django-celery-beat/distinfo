@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/09 09:49:18 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/06/12 17:04:10 adam Exp $
 
-BLAKE2s (django-celery-beat-2.5.0.tar.gz) = 4e7c79f465cc28aee0356e315b4dfd7c6d5a10b526f8a250e4e69f34e78efff0
-SHA512 (django-celery-beat-2.5.0.tar.gz) = 1c8ac038c3977c4964089ff723650249419fcbb7348bdc9deb6514fffbbee93552440a139620c12ad1e153020774125102476aff7a8a1ce73e9dccd19ddc9a7b
-Size (django-celery-beat-2.5.0.tar.gz) = 159635 bytes
+BLAKE2s (django-celery-beat-2.6.0.tar.gz) = 7b6bfb601a3438ce72f4576e3e07697fdf44b4ded3921e10d36db4aa44e61de3
+SHA512 (django-celery-beat-2.6.0.tar.gz) = 97f6f09d5d936c1dc5940fcb350a1e6f06e8479f29ff87799fc2ef5552e300bda94733248c0a31bce23746d23b7b6fe48d903b894c7183d6dc08a58508fac5bd
+Size (django-celery-beat-2.6.0.tar.gz) = 160452 bytes
