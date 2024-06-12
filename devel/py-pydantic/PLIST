@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/18 12:26:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/06/12 15:13:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -281,9 +281,6 @@ ${PYSITELIB}/pydantic/v1/typing.pyo
 ${PYSITELIB}/pydantic/v1/utils.py
 ${PYSITELIB}/pydantic/v1/utils.pyc
 ${PYSITELIB}/pydantic/v1/utils.pyo
-${PYSITELIB}/pydantic/v1/v1.py
-${PYSITELIB}/pydantic/v1/v1.pyc
-${PYSITELIB}/pydantic/v1/v1.pyo
 ${PYSITELIB}/pydantic/v1/validators.py
 ${PYSITELIB}/pydantic/v1/validators.pyc
 ${PYSITELIB}/pydantic/v1/validators.pyo
