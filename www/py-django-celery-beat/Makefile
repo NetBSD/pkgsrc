@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/02/09 09:49:18 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/12 17:04:10 adam Exp $
 
-DISTNAME=	django-celery-beat-2.5.0
+DISTNAME=	django-celery-beat-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_celery_beat/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-celery>=5.2.3:../../net/py-celery
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django4
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-timezone-field>=5.0:../../www/py-django-timezone-field
 DEPENDS+=	${PYPKGPREFIX}-cron-descriptor>=1.2.32:../../sysutils/py-cron-descriptor
 DEPENDS+=	${PYPKGPREFIX}-crontab>=2.3.4:../../sysutils/py-crontab
