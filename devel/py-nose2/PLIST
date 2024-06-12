@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/15 07:57:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/06/12 16:55:26 adam Exp $
 bin/nose2-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -13,6 +13,9 @@ ${PYSITELIB}/nose2/__init__.pyo
 ${PYSITELIB}/nose2/__main__.py
 ${PYSITELIB}/nose2/__main__.pyc
 ${PYSITELIB}/nose2/__main__.pyo
+${PYSITELIB}/nose2/_toml.py
+${PYSITELIB}/nose2/_toml.pyc
+${PYSITELIB}/nose2/_toml.pyo
 ${PYSITELIB}/nose2/collector.py
 ${PYSITELIB}/nose2/collector.pyc
 ${PYSITELIB}/nose2/collector.pyo
@@ -545,6 +548,8 @@ ${PYSITELIB}/nose2/tests/functional/support/such/test_such_timing.pyo
 ${PYSITELIB}/nose2/tests/functional/support/such/test_such_without_layers.py
 ${PYSITELIB}/nose2/tests/functional/support/such/test_such_without_layers.pyc
 ${PYSITELIB}/nose2/tests/functional/support/such/test_such_without_layers.pyo
+${PYSITELIB}/nose2/tests/functional/support/toml/a/pyproject.toml
+${PYSITELIB}/nose2/tests/functional/support/toml/b/pyproject.toml
 ${PYSITELIB}/nose2/tests/functional/test_attrib_plugin.py
 ${PYSITELIB}/nose2/tests/functional/test_attrib_plugin.pyc
 ${PYSITELIB}/nose2/tests/functional/test_attrib_plugin.pyo

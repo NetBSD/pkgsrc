@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/05/15 07:57:29 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/06/12 16:55:26 adam Exp $
 
-BLAKE2s (nose2-0.14.2.tar.gz) = 63d2caeccf426df1aac4bde1092ab834ddc08fe9543d115c17224a72a237fba6
-SHA512 (nose2-0.14.2.tar.gz) = 728d6c3f1c037630b6b3a4fc3012a488d91dfdcef5fe1d1f6473b317f71ac6ba16a33d33721de7422caec019eac00137e95190eb2c98edd67c4c5f7f8ee09440
-Size (nose2-0.14.2.tar.gz) = 167874 bytes
+BLAKE2s (nose2-0.15.1.tar.gz) = 686b0e7c558becbadb3ff75efa53f3483a1361839c5887e41065cb003c8fa94e
+SHA512 (nose2-0.15.1.tar.gz) = 118b1144369b72c6af4153b866d19253b31cb019407f8c4b9f80461b105be8851be7b6524a822da8ddca039f733510b5e5d7871608195d0fb8d7be9de1938762
+Size (nose2-0.15.1.tar.gz) = 169809 bytes
