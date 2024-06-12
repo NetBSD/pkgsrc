@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/05/15 07:57:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/06/12 16:55:26 adam Exp $
 
-DISTNAME=	nose2-0.14.2
+DISTNAME=	nose2-0.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose2/}
@@ -12,8 +12,8 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+# coverage_plugin
 DEPENDS+=	${PYPKGPREFIX}-coverage>=4.4.1:../../devel/py-coverage
-DEPENDS+=	${PYPKGPREFIX}-six>=1.7:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
