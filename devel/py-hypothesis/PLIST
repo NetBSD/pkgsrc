@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2024/01/25 10:58:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2024/06/12 09:00:05 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -150,27 +150,27 @@ ${PYSITELIB}/hypothesis/internal/conjecture/shrinker.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/__init__.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/__init__.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/common.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.py
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/dfas.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/floats.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/integer.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.py
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/learned_dfas.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.py
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/shrinking/lexical.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/ordering.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/ordering.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/ordering.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/string.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/string.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/string.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.py
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyo
