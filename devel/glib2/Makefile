@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.304 2024/05/15 13:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.305 2024/06/12 10:15:59 adam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
 
