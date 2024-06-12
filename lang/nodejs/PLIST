@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2024/05/07 17:54:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.83 2024/06/12 16:45:33 adam Exp $
 bin/corepack
 bin/node
 bin/npm
@@ -330,6 +330,8 @@ lib/node_modules/npm/docs/output/commands/npm.html
 lib/node_modules/npm/docs/output/commands/npx.html
 lib/node_modules/npm/docs/output/configuring-npm/folders.html
 lib/node_modules/npm/docs/output/configuring-npm/install.html
+lib/node_modules/npm/docs/output/configuring-npm/npm-global.html
+lib/node_modules/npm/docs/output/configuring-npm/npm-json.html
 lib/node_modules/npm/docs/output/configuring-npm/npm-shrinkwrap-json.html
 lib/node_modules/npm/docs/output/configuring-npm/npmrc.html
 lib/node_modules/npm/docs/output/configuring-npm/package-json.html
@@ -443,9 +445,8 @@ lib/node_modules/npm/lib/utils/installed-shallow.js
 lib/node_modules/npm/lib/utils/is-windows.js
 lib/node_modules/npm/lib/utils/log-file.js
 lib/node_modules/npm/lib/utils/npm-usage.js
-lib/node_modules/npm/lib/utils/open-url-prompt.js
 lib/node_modules/npm/lib/utils/open-url.js
-lib/node_modules/npm/lib/utils/otplease.js
+lib/node_modules/npm/lib/utils/output-error.js
 lib/node_modules/npm/lib/utils/ping.js
 lib/node_modules/npm/lib/utils/queryable.js
 lib/node_modules/npm/lib/utils/read-user-info.js
@@ -458,7 +459,6 @@ lib/node_modules/npm/lib/utils/timers.js
 lib/node_modules/npm/lib/utils/update-workspaces.js
 lib/node_modules/npm/lib/utils/validate-lockfile.js
 lib/node_modules/npm/lib/utils/verify-signatures.js
-lib/node_modules/npm/lib/utils/web-auth.js
 lib/node_modules/npm/man/man1/npm-access.1
 lib/node_modules/npm/man/man1/npm-adduser.1
 lib/node_modules/npm/man/man1/npm-audit.1
@@ -620,6 +620,7 @@ lib/node_modules/npm/node_modules/@npmcli/arborist/lib/node.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/optional-set.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/override-resolves.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/override-set.js
+lib/node_modules/npm/node_modules/@npmcli/arborist/lib/packument-cache.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/peer-entry-sets.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js
 lib/node_modules/npm/node_modules/@npmcli/arborist/lib/printable.js
@@ -801,6 +802,7 @@ lib/node_modules/npm/node_modules/@sigstore/sign/dist/bundler/index.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/bundler/message.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/error.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/external/error.js
+lib/node_modules/npm/node_modules/@sigstore/sign/dist/external/fetch.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/external/fulcio.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/external/rekor.js
 lib/node_modules/npm/node_modules/@sigstore/sign/dist/external/tsa.js
@@ -932,9 +934,6 @@ lib/node_modules/npm/node_modules/binary-extensions/package.json
 lib/node_modules/npm/node_modules/brace-expansion/LICENSE
 lib/node_modules/npm/node_modules/brace-expansion/index.js
 lib/node_modules/npm/node_modules/brace-expansion/package.json
-lib/node_modules/npm/node_modules/builtins/License
-lib/node_modules/npm/node_modules/builtins/index.js
-lib/node_modules/npm/node_modules/builtins/package.json
 lib/node_modules/npm/node_modules/cacache/LICENSE.md
 lib/node_modules/npm/node_modules/cacache/lib/content/path.js
 lib/node_modules/npm/node_modules/cacache/lib/content/read.js
@@ -966,7 +965,7 @@ lib/node_modules/npm/node_modules/ci-info/index.js
 lib/node_modules/npm/node_modules/ci-info/package.json
 lib/node_modules/npm/node_modules/ci-info/vendors.json
 lib/node_modules/npm/node_modules/cidr-regex/LICENSE
-lib/node_modules/npm/node_modules/cidr-regex/index.js
+lib/node_modules/npm/node_modules/cidr-regex/dist/index.js
 lib/node_modules/npm/node_modules/cidr-regex/package.json
 lib/node_modules/npm/node_modules/clean-stack/index.js
 lib/node_modules/npm/node_modules/clean-stack/license
@@ -1244,7 +1243,7 @@ lib/node_modules/npm/node_modules/ip-address/package.json
 lib/node_modules/npm/node_modules/ip-regex/index.js
 lib/node_modules/npm/node_modules/ip-regex/license
 lib/node_modules/npm/node_modules/ip-regex/package.json
-lib/node_modules/npm/node_modules/is-cidr/index.js
+lib/node_modules/npm/node_modules/is-cidr/dist/index.js
 lib/node_modules/npm/node_modules/is-cidr/package.json
 lib/node_modules/npm/node_modules/is-core-module/LICENSE
 lib/node_modules/npm/node_modules/is-core-module/core.json
@@ -1632,7 +1631,7 @@ lib/node_modules/npm/node_modules/p-map/license
 lib/node_modules/npm/node_modules/p-map/package.json
 lib/node_modules/npm/node_modules/pacote/LICENSE
 lib/node_modules/npm/node_modules/pacote/README.md
-lib/node_modules/npm/node_modules/pacote/lib/bin.js
+lib/node_modules/npm/node_modules/pacote/bin/index.js
 lib/node_modules/npm/node_modules/pacote/lib/dir.js
 lib/node_modules/npm/node_modules/pacote/lib/fetcher.js
 lib/node_modules/npm/node_modules/pacote/lib/file.js
@@ -1644,6 +1643,7 @@ lib/node_modules/npm/node_modules/pacote/lib/util/add-git-sha.js
 lib/node_modules/npm/node_modules/pacote/lib/util/cache-dir.js
 lib/node_modules/npm/node_modules/pacote/lib/util/is-package-bin.js
 lib/node_modules/npm/node_modules/pacote/lib/util/npm.js
+lib/node_modules/npm/node_modules/pacote/lib/util/protected.js
 lib/node_modules/npm/node_modules/pacote/lib/util/tar-create-options.js
 lib/node_modules/npm/node_modules/pacote/lib/util/trailing-slashes.js
 lib/node_modules/npm/node_modules/pacote/package.json
@@ -1800,11 +1800,9 @@ lib/node_modules/npm/node_modules/semver/index.js
 lib/node_modules/npm/node_modules/semver/internal/constants.js
 lib/node_modules/npm/node_modules/semver/internal/debug.js
 lib/node_modules/npm/node_modules/semver/internal/identifiers.js
+lib/node_modules/npm/node_modules/semver/internal/lrucache.js
 lib/node_modules/npm/node_modules/semver/internal/parse-options.js
 lib/node_modules/npm/node_modules/semver/internal/re.js
-lib/node_modules/npm/node_modules/semver/node_modules/lru-cache/LICENSE
-lib/node_modules/npm/node_modules/semver/node_modules/lru-cache/index.js
-lib/node_modules/npm/node_modules/semver/node_modules/lru-cache/package.json
 lib/node_modules/npm/node_modules/semver/package.json
 lib/node_modules/npm/node_modules/semver/preload.js
 lib/node_modules/npm/node_modules/semver/range.bnf
