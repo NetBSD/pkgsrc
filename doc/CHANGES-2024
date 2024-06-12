@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3955 2024/06/12 13:44:16 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.3956 2024/06/12 15:16:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6348,3 +6348,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-w3lib to 2.2.1 [adam 2024-06-12]
 	Updated www/firefox115 to 115.12.0 [gutteridge 2024-06-12]
 	Updated www/firefox115-l10n to 115.12.0 [gutteridge 2024-06-12]
+	Updated devel/py-pydantic to 2.7.4 [adam 2024-06-12]
+	Updated devel/py-urwid to 2.6.14 [adam 2024-06-12]
