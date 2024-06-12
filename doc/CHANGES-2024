@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3956 2024/06/12 15:16:06 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3957 2024/06/12 15:43:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6350,3 +6350,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox115-l10n to 115.12.0 [gutteridge 2024-06-12]
 	Updated devel/py-pydantic to 2.7.4 [adam 2024-06-12]
 	Updated devel/py-urwid to 2.6.14 [adam 2024-06-12]
+	Updated audio/py-last to 5.3.0 [adam 2024-06-12]
+	Updated audio/py-mediafile to 0.12.0 [adam 2024-06-12]
+	Updated audio/py-beets to 2.0.0 [adam 2024-06-12]
