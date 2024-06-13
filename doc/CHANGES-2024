@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3964 2024/06/13 12:55:43 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.3965 2024/06/13 13:21:26 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6368,3 +6368,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-waitress to 3.0.0 [adam 2024-06-13]
 	Updated lang/go121 to 1.21.11 [bsiegert 2024-06-13]
 	Updated lang/go122 to 1.22.4 [bsiegert 2024-06-13]
+	Updated www/dillo to 3.1.1 [ktnb 2024-06-13]
