@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/07/08 13:58:55 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/06/13 07:31:47 adam Exp $
 
-BLAKE2s (pyacoustid-1.2.2.tar.gz) = 1e1008d23adbccc5b5f69a8f80e3e8e3fa9b9b4f697cee30c1879a5aca0de581
-SHA512 (pyacoustid-1.2.2.tar.gz) = 5bcb3f017c3013eb8fc9e335540a1f5e6a52fc2fefa53d5ef246ba16e4ff615dd1d1cf08b5c80b1a38b149e0fa7dc0b15e4890dcc3f5478ef874b4ec22cf0813
-Size (pyacoustid-1.2.2.tar.gz) = 15869 bytes
+BLAKE2s (pyacoustid-1.3.0.tar.gz) = d65d961b046a9ab6f312af0ca9c420143f91e6275aee845537c8ac80f1314506
+SHA512 (pyacoustid-1.3.0.tar.gz) = 3b38e580b2deda30df683fe749b338929be0ca23fb3ff462a5df9b98f140db4bde682d74254e7f3a157e394e824ecb6929171392b5e6c9bd92ca05fb6f71ed0a
+Size (pyacoustid-1.3.0.tar.gz) = 17369 bytes

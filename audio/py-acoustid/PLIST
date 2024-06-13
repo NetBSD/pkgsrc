@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2022/07/08 13:58:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/13 07:31:47 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/acoustid.py
 ${PYSITELIB}/acoustid.pyc
 ${PYSITELIB}/acoustid.pyo
 ${PYSITELIB}/chromaprint.py
 ${PYSITELIB}/chromaprint.pyc
 ${PYSITELIB}/chromaprint.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
