@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/06/01 14:02:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2024/06/13 13:47:01 bsiegert Exp $
 
 DISTNAME=	0.17.0
 PKGNAME=	aerc-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc

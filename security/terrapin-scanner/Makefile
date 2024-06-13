@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/06/01 14:03:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/13 13:47:08 bsiegert Exp $
 
 DISTNAME=	Terrapin-Scanner-1.0.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RUB-NDS/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

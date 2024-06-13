@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2024/06/01 14:03:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64 2024/06/13 13:47:07 bsiegert Exp $
 
 DISTNAME=		mkcert-1.4.4
 PKGNAME=		${DISTNAME:S/^/go-/}
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FiloSottile/}
 GITHUB_PROJECT=		mkcert
