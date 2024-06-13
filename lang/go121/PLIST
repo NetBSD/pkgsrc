@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/05/07 18:18:05 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/06/13 12:49:39 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -163,6 +163,7 @@ go121/src/archive/zip/reader.go
 go121/src/archive/zip/reader_test.go
 go121/src/archive/zip/register.go
 go121/src/archive/zip/struct.go
+go121/src/archive/zip/testdata/comment-truncated.zip
 go121/src/archive/zip/testdata/crc32-not-streamed.zip
 go121/src/archive/zip/testdata/dd.zip
 go121/src/archive/zip/testdata/dupdir.zip
@@ -2170,6 +2171,7 @@ go121/src/cmd/go/testdata/script/get_internal_wildcard.txt
 go121/src/cmd/go/testdata/script/get_issue11307.txt
 go121/src/cmd/go/testdata/script/get_issue16471.txt
 go121/src/cmd/go/testdata/script/get_issue22125.txt
+go121/src/cmd/go/testdata/script/get_issue53955.txt
 go121/src/cmd/go/testdata/script/get_legacy.txt
 go121/src/cmd/go/testdata/script/get_non_pkg.txt
 go121/src/cmd/go/testdata/script/get_race.txt
@@ -2196,6 +2198,7 @@ go121/src/cmd/go/testdata/script/gopath_std_vendor.txt
 go121/src/cmd/go/testdata/script/gopath_vendor_dup_err.txt
 go121/src/cmd/go/testdata/script/goroot_executable.txt
 go121/src/cmd/go/testdata/script/goroot_executable_trimpath.txt
+go121/src/cmd/go/testdata/script/gotoolchain_issue66175.txt
 go121/src/cmd/go/testdata/script/gotoolchain_local.txt
 go121/src/cmd/go/testdata/script/gotoolchain_loop.txt
 go121/src/cmd/go/testdata/script/gotoolchain_modcmds.txt
@@ -4597,7 +4600,6 @@ go121/src/crypto/x509/root.go
 go121/src/crypto/x509/root_aix.go
 go121/src/crypto/x509/root_bsd.go
 go121/src/crypto/x509/root_darwin.go
-go121/src/crypto/x509/root_darwin_test.go
 go121/src/crypto/x509/root_linux.go
 go121/src/crypto/x509/root_plan9.go
 go121/src/crypto/x509/root_solaris.go
@@ -4606,7 +4608,6 @@ go121/src/crypto/x509/root_unix.go
 go121/src/crypto/x509/root_unix_test.go
 go121/src/crypto/x509/root_wasm.go
 go121/src/crypto/x509/root_windows.go
-go121/src/crypto/x509/root_windows_test.go
 go121/src/crypto/x509/sec1.go
 go121/src/crypto/x509/sec1_test.go
 go121/src/crypto/x509/test-file.crt
@@ -11641,6 +11642,7 @@ go121/test/fixedbugs/issue6703w.go
 go121/test/fixedbugs/issue6703x.go
 go121/test/fixedbugs/issue6703y.go
 go121/test/fixedbugs/issue6703z.go
+go121/test/fixedbugs/issue67160.go
 go121/test/fixedbugs/issue6750.go
 go121/test/fixedbugs/issue6772.go
 go121/test/fixedbugs/issue6789.dir/a.go
