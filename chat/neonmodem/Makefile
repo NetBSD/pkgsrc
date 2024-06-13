@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/06/01 14:20:21 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/06/13 13:46:55 bsiegert Exp $
 
 DISTNAME=	neonmodem-1.0.5
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrusme/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
