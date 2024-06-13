@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/07 18:18:05 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/06/13 12:55:15 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -164,6 +164,7 @@ go122/src/archive/zip/reader.go
 go122/src/archive/zip/reader_test.go
 go122/src/archive/zip/register.go
 go122/src/archive/zip/struct.go
+go122/src/archive/zip/testdata/comment-truncated.zip
 go122/src/archive/zip/testdata/crc32-not-streamed.zip
 go122/src/archive/zip/testdata/dd.zip
 go122/src/archive/zip/testdata/dupdir.zip
@@ -1904,7 +1905,7 @@ go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.9.linux-amd64.t
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.0.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.1.linux-amd64.txt
-go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go${PKGVERSION}.linux-amd64.txt
+go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.3.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.5.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.7.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.9.linux-amd64.txt
@@ -2202,6 +2203,7 @@ go122/src/cmd/go/testdata/script/gopath_std_vendor.txt
 go122/src/cmd/go/testdata/script/gopath_vendor_dup_err.txt
 go122/src/cmd/go/testdata/script/goroot_executable.txt
 go122/src/cmd/go/testdata/script/goroot_executable_trimpath.txt
+go122/src/cmd/go/testdata/script/gotoolchain_issue66175.txt
 go122/src/cmd/go/testdata/script/gotoolchain_local.txt
 go122/src/cmd/go/testdata/script/gotoolchain_loop.txt
 go122/src/cmd/go/testdata/script/gotoolchain_modcmds.txt
@@ -4636,7 +4638,6 @@ go122/src/crypto/x509/root.go
 go122/src/crypto/x509/root_aix.go
 go122/src/crypto/x509/root_bsd.go
 go122/src/crypto/x509/root_darwin.go
-go122/src/crypto/x509/root_darwin_test.go
 go122/src/crypto/x509/root_linux.go
 go122/src/crypto/x509/root_plan9.go
 go122/src/crypto/x509/root_solaris.go
@@ -4645,7 +4646,6 @@ go122/src/crypto/x509/root_unix.go
 go122/src/crypto/x509/root_unix_test.go
 go122/src/crypto/x509/root_wasm.go
 go122/src/crypto/x509/root_windows.go
-go122/src/crypto/x509/root_windows_test.go
 go122/src/crypto/x509/sec1.go
 go122/src/crypto/x509/sec1_test.go
 go122/src/crypto/x509/test-file.crt
@@ -11938,6 +11938,9 @@ go122/test/fixedbugs/issue6703w.go
 go122/test/fixedbugs/issue6703x.go
 go122/test/fixedbugs/issue6703y.go
 go122/test/fixedbugs/issue6703z.go
+go122/test/fixedbugs/issue67141.go
+go122/test/fixedbugs/issue67160.go
+go122/test/fixedbugs/issue67255.go
 go122/test/fixedbugs/issue6750.go
 go122/test/fixedbugs/issue6772.go
 go122/test/fixedbugs/issue6789.dir/a.go
