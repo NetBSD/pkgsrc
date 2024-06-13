@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/11 07:58:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/06/13 05:17:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -78,6 +78,9 @@ ${PYSITELIB}/openapi_core/contrib/falcon/requests.pyo
 ${PYSITELIB}/openapi_core/contrib/falcon/responses.py
 ${PYSITELIB}/openapi_core/contrib/falcon/responses.pyc
 ${PYSITELIB}/openapi_core/contrib/falcon/responses.pyo
+${PYSITELIB}/openapi_core/contrib/falcon/util.py
+${PYSITELIB}/openapi_core/contrib/falcon/util.pyc
+${PYSITELIB}/openapi_core/contrib/falcon/util.pyo
 ${PYSITELIB}/openapi_core/contrib/falcon/views.py
 ${PYSITELIB}/openapi_core/contrib/falcon/views.pyc
 ${PYSITELIB}/openapi_core/contrib/falcon/views.pyo
