@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2024/06/01 14:02:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.76 2024/06/13 13:46:58 bsiegert Exp $
 
 DISTNAME=		golint-20200301
-PKGREVISION=		45
+PKGREVISION=		46
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		lint
