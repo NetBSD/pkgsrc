@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2024/06/13 12:11:58 wiz Exp $
+bin/syncserver
+share/doc/syncstorage-rs/README.md
+share/doc/syncstorage-rs/config.md
+share/doc/syncstorage-rs/setup.md
+share/examples/syncstorage-rs/local.example.toml

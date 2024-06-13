@@ -1,0 +1,5 @@
+Mozilla Sync Storage built with Rust
+
+This provides a sync storage server (database) and a token server
+(authentication) for synchronizing Firefox configurations across
+multiple hosts.
