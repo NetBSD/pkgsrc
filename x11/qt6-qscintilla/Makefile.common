@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/03/24 12:44:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/06/13 15:24:49 jperkin Exp $
 #
 # used by x11/qt6-qscintilla/Makefile
 # used by x11/py-qt6-qscintilla/Makefile
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/qt6-qscintilla/distinfo
 PATCHDIR=	${.CURDIR}/../../x11/qt6-qscintilla/patches
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
 .include "../../mk/bsd.prefs.mk"
 
