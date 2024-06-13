@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/06/01 14:02:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/13 13:47:01 bsiegert Exp $
 
 DISTNAME=	goplus-1.2.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=goplus/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	gop

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2024/06/01 14:31:01 nikita Exp $
+# $NetBSD: Makefile,v 1.37 2024/06/13 13:47:12 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.15.0-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	nikita@NetBSD.org
