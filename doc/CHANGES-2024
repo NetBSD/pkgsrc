@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3961 2024/06/13 05:08:08 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3962 2024/06/13 05:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6362,3 +6362,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-barman to 3.10.1 [adam 2024-06-13]
 	Updated devel/py-filelock to 3.15.1 [adam 2024-06-13]
 	Updated textproc/py-openpyxl to 3.1.4 [adam 2024-06-13]
+	Updated textproc/py-ramlfications to 0.2.2 [adam 2024-06-13]
+	Updated textproc/py-openapi-core to 0.19.2 [adam 2024-06-13]
