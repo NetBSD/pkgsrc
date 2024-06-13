@@ -1,13 +1,14 @@
-$NetBSD: patch-srs-filter.c,v 1.1 2022/05/25 15:45:32 manu Exp $
+$NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
 
 - Update pidfile after forking
 - Process addresses with or without enclosing brackets
 - Add -u/--user option to use unprivilegied user
 - Add -A/--alias-cmd and -R/--aliad_regex to resolve aliases
 - Add -n/--reverse-null to ensable SRS reverse for null sender <>
+- Bug fix: test srs_milter_connection_data is set before using it
 
---- srs-filter.c.orig	2022-05-11 14:10:11.430909881 +0200
-+++ srs-filter.c	2022-05-17 08:53:10.516904377 +0200
+--- srs-filter.c.orig
++++ srs-filter.c
 @@ -3,11 +3,13 @@
  #include <stdio.h>
  #include <stdlib.h>
@@ -190,6 +191,25 @@ $NetBSD: patch-srs-filter.c,v 1.1 2022/05/25 15:45:32 manu Exp $
          if (!cd->recip[argc]) {
            // memory allocation problem
            cd->state |= SS_STATE_INVALID_MSG;
+@@ -600,15 +668,15 @@
+ xxfi_srs_milter_close(SMFICTX* ctx) {
+   struct srs_milter_connection_data* cd =
+           (struct srs_milter_connection_data*) smfi_getpriv(ctx);
+ 
++  if (!cd)
++    return SMFIS_CONTINUE;
++
+   if (CONFIG_verbose)
+     syslog(LOG_DEBUG, "conn# %d[%i] - xxfi_srs_milter_close()",
+            cd->num, cd->state);
+ 
+-  if (!cd)
+-    return SMFIS_CONTINUE;
+-
+   smfi_setpriv(ctx, NULL);
+ 
+   if (cd->sender)
+     free(cd->sender);
 @@ -669,8 +737,17 @@
      syslog(LOG_ERR, "exiting parent process");
      exit(EXIT_SUCCESS);
