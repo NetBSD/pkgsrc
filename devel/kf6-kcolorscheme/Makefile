@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/13 15:19:48 jperkin Exp $
 
 DISTNAME=	kcolorscheme-${KF6VER}
 PKGREVISION=	1
@@ -7,6 +7,8 @@ CATEGORIES=	devel
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Classes to read and interact with KColorScheme
 LICENSE=	gnu-lgpl-v2.1 AND cc0-1.0-universal AND 2-clause-bsd
+
+USE_TOOLS+=	msgmerge
 
 .include "../../meta-pkgs/kde/kf6.mk"
 
