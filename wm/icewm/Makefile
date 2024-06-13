@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/06/06 14:29:58 ktnb Exp $
+# $NetBSD: Makefile,v 1.58 2024/06/13 21:17:39 gutteridge Exp $
 
 DISTNAME=	icewm-3.5.0
 CATEGORIES=	wm
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-i18n
 TOOL_DEPENDS+=	multimarkdown-[0-9]*:../../textproc/multimarkdown
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake perl autoreconf autoconf automake
+USE_TOOLS+=	pkg-config gmake perl autoreconf autoconf automake autopoint
 
 REPLACE_PERL=	contrib/icewm-menu-xrandr
 
