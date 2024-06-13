@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/03/09 06:56:18 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/13 05:03:15 adam Exp $
 
-DISTNAME=	bandit-1.7.8
+DISTNAME=	bandit-1.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandit/}
