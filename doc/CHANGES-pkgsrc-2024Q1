@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.8 2024/06/07 13:53:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.9 2024/06/13 17:17:53 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -52,4 +52,19 @@ bsd.prefs.mk: Cygwin build fix
 
 Pullup ticket #6857 - requested by taca
 databases/phpldapadmin: security fix
+
+Pullup ticket #6858 - requested by taca
+lang/php83: security fix
+
+Pullup ticket #6866 - requested by taca
+lang/php83: security fix
+
+Pullup ticket #6859 - requested by taca
+www/ruby-rails70: security fix
+
+Pullup ticket #6860 - requested by taca
+www/ruby-rails71: security fix
+
+Pullup ticket #6861 - requested by taca
+www/ruby-rails61: security fix
 
