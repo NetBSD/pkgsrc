@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2024/06/08 20:03:10 mef Exp $
+# $NetBSD: Makefile,v 1.601 2024/06/14 13:27:27 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -478,6 +478,7 @@ SUBDIR+=	sollya
 SUBDIR+=	speedcrunch
 SUBDIR+=	stan-math
 SUBDIR+=	statist
+SUBDIR+=	suitesparse
 SUBDIR+=	sundials
 SUBDIR+=	superlu
 SUBDIR+=	svmlin
