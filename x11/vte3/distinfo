@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2024/06/07 22:30:25 gutteridge Exp $
+$NetBSD: distinfo,v 1.31 2024/06/14 02:03:35 gutteridge Exp $
 
-BLAKE2s (vte-0.76.2.tar.gz) = 12f920ff6f20898bfb2f9ecc9db0d1fcfa6cd516d027a75613f6b7a65e2d3bcd
-SHA512 (vte-0.76.2.tar.gz) = 290ba842af5e8b0f8822eeb9e61c145b989dc333dd3e1fa2a27bc8a16e8cefa5f238b560083c3c80251b643acd56f8cc09c6bf51056d7540721815a8ddb68678
-Size (vte-0.76.2.tar.gz) = 711512 bytes
+BLAKE2s (vte-0.76.3.tar.gz) = b2c132e40a5babfd1a3e3071d784b6918096f42fa0c85c47b113ee0eb29c873f
+SHA512 (vte-0.76.3.tar.gz) = 2b50c68e0eb1ca4f28951aedf484981fdf6bd93c65c65fa6a4a3975ea86c536e74604ee15dcce03a39cec2409c221a8c40bbdd216fe255c93c38d1cf48227149
+Size (vte-0.76.3.tar.gz) = 712057 bytes
 SHA1 (patch-meson.build) = 95cc6aea622e7f6ae991f337667b37bf0b9864bf
 SHA1 (patch-src_app_app.cc) = 2548e01629aa563595387328638a52a5616ff0bd
 SHA1 (patch-src_dumpkeys.c) = 102f24d7404d46b13194f3431d0a864d480e5da7
