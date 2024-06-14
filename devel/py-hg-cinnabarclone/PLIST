@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/06/14 14:13:33 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/14 14:21:02 wiz Exp $
 ${PYSITELIB}/hgext3rd/cinnabarclone.py
-${PYSITELIB}/hgext3rd/__pycache__/cinnabarclone.cpython-${PYVERS}.pyc
-${PYSITELIB}/hgext3rd/__pycache__/cinnabarclone.cpython-${PYVERS}.opt-1.pyc
+${PYSITELIB}/hgext3rd/cinnabarclone.pyc
+${PYSITELIB}/hgext3rd/cinnabarclone.pyo
