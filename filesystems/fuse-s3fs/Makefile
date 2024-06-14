@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2024/05/29 16:32:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/14 15:36:42 cheusov Exp $
 
-DISTNAME=	fuse-s3fs-${PKGVERSION}
-PKGVERSION=	1.94
+DISTNAME=	fuse-s3fs-1.94
 PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=s3fs-fuse/}
 GITHUB_PROJECT=	s3fs-fuse
-GITHUB_TAG=	v${PKGVERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/s3fs-fuse/s3fs-fuse
