@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2024/05/29 16:32:02 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/14 14:13:33 riastradh Exp $
 
-DISTNAME=	git-cinnabar-0.6.3
+# does not contain the git submodules, please update GITHUB_SUBMODULES below
+.include "Makefile.common"
+
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
-# does not contain the git submodules, please update GITHUB_SUBMODULES below
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/glandium/git-cinnabar/
 COMMENT=	Remote helper to use mercurial repositories with git
-LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4304 2024/06/13 05:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4305 2024/06/14 14:13:33 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2633,6 +2633,7 @@ SUBDIR+=	py-hatch-nodejs-version
 SUBDIR+=	py-hatch-vcs
 SUBDIR+=	py-hatchling
 SUBDIR+=	py-hexbytes
+SUBDIR+=	py-hg-cinnabarclone
 SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
