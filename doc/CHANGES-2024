@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3975 2024/06/14 15:20:04 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3976 2024/06/14 15:28:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6382,3 +6382,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-redis to 5.0.6 [adam 2024-06-14]
 	Updated devel/py-packageurl to 0.15.1 [adam 2024-06-14]
 	Updated textproc/py-orjson to 3.10.5 [adam 2024-06-14]
+	Updated www/nghttp3 to 1.4.0 [adam 2024-06-14]
+	Updated net/ngtcp2 to 1.6.0 [adam 2024-06-14]
+	Updated net/haproxy to 3.0.2 [adam 2024-06-14]
+	Updated finance/py-stripe to 9.11.0 [adam 2024-06-14]
