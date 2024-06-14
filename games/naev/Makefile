@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/06/14 13:26:23 ktnb Exp $
+# $NetBSD: Makefile,v 1.30 2024/06/14 13:31:28 ktnb Exp $
 
 DISTNAME=		naev-0.11.5
 CATEGORIES=		games
@@ -57,5 +57,5 @@ SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libunibreak/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/suitesparse/buildlink3.mk"
+.include "../../math/suitesparse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
