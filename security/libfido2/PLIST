@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/07 12:35:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/06/14 15:12:46 adam Exp $
 bin/fido2-assert
 bin/fido2-cred
 bin/fido2-token
@@ -167,6 +167,7 @@ man/man3/fido_cred_pubkey_len.3
 man/man3/fido_cred_pubkey_ptr.3
 man/man3/fido_cred_rp_id.3
 man/man3/fido_cred_rp_name.3
+man/man3/fido_cred_set_attobj.3
 man/man3/fido_cred_set_attstmt.3
 man/man3/fido_cred_set_authdata.3
 man/man3/fido_cred_set_authdata_raw.3
@@ -195,6 +196,9 @@ man/man3/fido_cred_user_name.3
 man/man3/fido_cred_verify.3
 man/man3/fido_cred_verify_self.3
 man/man3/fido_cred_x5c_len.3
+man/man3/fido_cred_x5c_list_count.3
+man/man3/fido_cred_x5c_list_len.3
+man/man3/fido_cred_x5c_list_ptr.3
 man/man3/fido_cred_x5c_ptr.3
 man/man3/fido_credman_del_dev_rk.3
 man/man3/fido_credman_get_dev_metadata.3
@@ -431,6 +435,7 @@ share/doc/libfido2/html/fido_cred_pubkey_len.html
 share/doc/libfido2/html/fido_cred_pubkey_ptr.html
 share/doc/libfido2/html/fido_cred_rp_id.html
 share/doc/libfido2/html/fido_cred_rp_name.html
+share/doc/libfido2/html/fido_cred_set_attobj.html
 share/doc/libfido2/html/fido_cred_set_attstmt.html
 share/doc/libfido2/html/fido_cred_set_authdata.html
 share/doc/libfido2/html/fido_cred_set_authdata_raw.html
@@ -459,6 +464,9 @@ share/doc/libfido2/html/fido_cred_user_name.html
 share/doc/libfido2/html/fido_cred_verify.html
 share/doc/libfido2/html/fido_cred_verify_self.html
 share/doc/libfido2/html/fido_cred_x5c_len.html
+share/doc/libfido2/html/fido_cred_x5c_list_count.html
+share/doc/libfido2/html/fido_cred_x5c_list_len.html
+share/doc/libfido2/html/fido_cred_x5c_list_ptr.html
 share/doc/libfido2/html/fido_cred_x5c_ptr.html
 share/doc/libfido2/html/fido_credman_del_dev_rk.html
 share/doc/libfido2/html/fido_credman_get_dev_metadata.html
