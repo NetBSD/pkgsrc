@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/05/19 15:45:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/14 20:28:47 adam Exp $
 
-DISTNAME=	7z2405-src
-PKGNAME=	7-zip-24.05
+DISTNAME=	7z2406-src
+PKGNAME=	7-zip-24.06
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.7-zip.org/a/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
-
 USE_TOOLS+=	gmake
 
 BUILD_DIRS+=	CPP/7zip/Bundles/Alone2
@@ -39,6 +38,10 @@ SUBST_FILES.crlf+=	CPP/7zip/UI/Common/*
 SUBST_FILES.crlf+=	CPP/Windows/*
 SUBST_FILES.crlf+=	C/*
 SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
+
+# Fix parallel build
+pre-build:
+	${MKDIR} ${WRKSRC}/CPP/7zip/Bundles/Alone2/_o
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/CPP/7zip/Bundles/Alone2/_o/7zz \
