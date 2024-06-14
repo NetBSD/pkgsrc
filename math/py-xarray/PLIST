@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/05/20 09:55:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/06/14 20:11:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -104,6 +104,9 @@ ${PYSITELIB}/xarray/core/alignment.pyo
 ${PYSITELIB}/xarray/core/arithmetic.py
 ${PYSITELIB}/xarray/core/arithmetic.pyc
 ${PYSITELIB}/xarray/core/arithmetic.pyo
+${PYSITELIB}/xarray/core/array_api_compat.py
+${PYSITELIB}/xarray/core/array_api_compat.pyc
+${PYSITELIB}/xarray/core/array_api_compat.pyo
 ${PYSITELIB}/xarray/core/combine.py
 ${PYSITELIB}/xarray/core/combine.pyc
 ${PYSITELIB}/xarray/core/combine.pyo
@@ -131,6 +134,9 @@ ${PYSITELIB}/xarray/core/dataset.pyo
 ${PYSITELIB}/xarray/core/datatree.py
 ${PYSITELIB}/xarray/core/datatree.pyc
 ${PYSITELIB}/xarray/core/datatree.pyo
+${PYSITELIB}/xarray/core/datatree_io.py
+${PYSITELIB}/xarray/core/datatree_io.pyc
+${PYSITELIB}/xarray/core/datatree_io.pyo
 ${PYSITELIB}/xarray/core/datatree_mapping.py
 ${PYSITELIB}/xarray/core/datatree_mapping.pyc
 ${PYSITELIB}/xarray/core/datatree_mapping.pyo
@@ -227,12 +233,6 @@ ${PYSITELIB}/xarray/core/weighted.pyo
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.py
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.pyc
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.pyo
-${PYSITELIB}/xarray/datatree_/datatree/common.py
-${PYSITELIB}/xarray/datatree_/datatree/common.pyc
-${PYSITELIB}/xarray/datatree_/datatree/common.pyo
-${PYSITELIB}/xarray/datatree_/datatree/io.py
-${PYSITELIB}/xarray/datatree_/datatree/io.pyc
-${PYSITELIB}/xarray/datatree_/datatree/io.pyo
 ${PYSITELIB}/xarray/indexes/__init__.py
 ${PYSITELIB}/xarray/indexes/__init__.pyc
 ${PYSITELIB}/xarray/indexes/__init__.pyo
