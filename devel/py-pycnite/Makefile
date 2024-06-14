@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2024/06/09 14:17:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/14 19:52:52 adam Exp $
 
-DISTNAME=	pycnite-2024.5.27
+DISTNAME=	pycnite-2024.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycnite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/pycnite/
+HOMEPAGE=	https://github.com/google/pycnite
 COMMENT=	Python bytecode utilities
 LICENSE=	apache-2.0
 
