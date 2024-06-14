@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3978 2024/06/14 18:56:30 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3979 2024/06/14 19:18:08 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6389,3 +6389,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added textproc/tree-sitter-php version 0.22.5 [wiz 2024-06-14]
 	Updated geography/py-country to 24.6.1 [adam 2024-06-14]
 	Updated net/py-responses to 0.25.3 [adam 2024-06-14]
+	Updated emulators/open-simh to 4.1.0.20240608 [rhialto 2024-06-14]
