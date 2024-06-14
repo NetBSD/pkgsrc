@@ -1,0 +1,15 @@
+$NetBSD: patch-GraphBLAS_CMakeLists.txt,v 1.1 2024/06/14 13:19:54 ktnb Exp $
+
+cpu_features doesn't appear to work properly on NetBSD
+
+--- GraphBLAS/CMakeLists.txt.orig	2024-06-03 15:50:22.420795494 +0000
++++ GraphBLAS/CMakeLists.txt
+@@ -125,7 +125,7 @@ endif ( )
+ # find cpu_features
+ #-------------------------------------------------------------------------------
+ 
+-if ( NOT GBNCPUFEAT )
++if ( NOT GBNCPUFEAT AND NOT CMAKE_SYSTEM_NAME STREQUAL "NetBSD" )
+     # default: enable Google's cpu_features package
+     message ( STATUS "cpu_features (by google.com): enabled " )
+     include_directories ( "cpu_features/include" "cpu_features" "cpu_features/src" "cpu_features/include/internal" )
