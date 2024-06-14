@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1 2024/06/14 14:13:33 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2024/06/14 14:21:02 wiz Exp $
 #
 
 .include "../../devel/git-cinnabar/Makefile.common"
@@ -29,5 +29,5 @@ do-install:
 	${PY_COMPILE_ALL} ${DESTDIR:Q}${PREFIX:Q}/${PYSITELIB:Q}/hgext3rd
 	${PY_COMPILE_O_ALL} ${DESTDIR:Q}${PREFIX:Q}/${PYSITELIB:Q}/hgext3rd
 
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
