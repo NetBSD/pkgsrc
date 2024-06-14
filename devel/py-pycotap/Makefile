@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/14 19:58:35 adam Exp $
 
-DISTNAME=	pycotap-1.2.2
+DISTNAME=	pycotap-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycotap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://el-tramo.be/pycotap
+HOMEPAGE=	https://github.com/remko/pycotap
 COMMENT=	Tiny test runner that outputs TAP results to standard output
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	share/doc/${PYPKGPREFIX}-pycotap
-
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PYPKGPREFIX}-pycotap/
+	${RM} ${DESTDIR}${PREFIX}/COPYING
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
