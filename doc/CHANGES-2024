@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3972 2024/06/14 13:27:50 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3973 2024/06/14 13:31:46 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6375,3 +6375,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/vte3 to 0.76.3 [gutteridge 2024-06-14]
 	Updated cad/klayout to 0.29.2 [mef 2024-06-14]
 	Added math/suitesparse version 7.7.0 [ktnb 2024-06-14]
+	Updated games/naev to 0.11.5 [ktnb 2024-06-14]
