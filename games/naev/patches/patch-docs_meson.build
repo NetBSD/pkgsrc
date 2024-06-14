@@ -1,0 +1,15 @@
+$NetBSD: patch-docs_meson.build,v 1.1 2024/06/14 13:26:24 ktnb Exp $
+
+Put the docs in the right location for pkgsrc.
+
+--- docs/meson.build.orig	2024-06-03 15:10:12.658258930 +0000
++++ docs/meson.build
+@@ -27,7 +27,7 @@ if genCDoc.disabled() == false
+             output     : doxy_output,
+             command    : [doxygen, doxyfile],
+             install    : true,
+-            install_dir: 'doc/naev')
++            install_dir: 'share/doc/naev')
+     endif
+ endif
+ summary('C', is_variable('cdoc'), section: 'Documentation', bool_yn: true)

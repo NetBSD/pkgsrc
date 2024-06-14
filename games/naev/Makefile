@@ -1,47 +1,61 @@
-# $NetBSD: Makefile,v 1.28 2024/05/29 16:32:42 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/06/14 13:26:23 ktnb Exp $
 
-DISTNAME=	naev-0.7.0
-PKGREVISION=	27
-CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=naev/}
-GITHUB_TAG=	naev-${PKGVERSION_NOREV}
+DISTNAME=		naev-0.11.5
+CATEGORIES=		games
+MASTER_SITES=		${MASTER_SITE_GITHUB:=naev/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_SUBMODULES=	naev naev-artwork-production e2d2edab2317d296eb14a830505b1dc41d02dec1 artwork
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	autoreconf autoconf automake
-USE_TOOLS+=	pkg-config
-GNU_CONFIGURE=	yes
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-TOOL_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+USE_TOOLS+=	bash:run pkg-config
 
-BUILD_TARGET=	all ndata.zip
-INSTALL_TARGET=	install install-ndata
+REPLACE_BASH+=	artwork/gfx/outfit/check.sh
+REPLACE_BASH+=	artwork/gfx/spob/check.sh
+REPLACE_BASH+=	artwork/gfx/ship/update.sh
+REPLACE_BASH+=	artwork/snd/music/checkgain.sh
 
-CONFIGURE_ARGS+=	--enable-debug=no
-CONFIGURE_ARGS+=	--enable-lua=shared
-CONFIGURE_ARGS+=	--disable-sdltest
+GAME_DIR=	${PREFIX}/share/naev/
 
-SUBST_CLASSES+=		ndata
-SUBST_STAGE.ndata=	pre-configure
-SUBST_FILES.ndata=	src/ndata.c
-SUBST_SED.ndata=	-e "s,@DATADIR@,${PREFIX}/share/naev,"
+INSTALL_TARGET=	install install-data-local ${GAME_DIR}
 
-pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh
+MESON_ARGS+=		-Dndata_path="${GAME_DIR}"
+
+SUBST_CLASSES+=		alloca
+SUBST_FILES.alloca+=	meson.build
+SUBST_FILES.alloca+=	src/utf8.c
+SUBST_SED.alloca+=	-e "s,HAVE_ALLOCA_H,NAEV_HAVE_ALLOCA_H,"
+SUBST_STAGE.alloca=	post-extract
+SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/lua51/buildlink3.mk"
+.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../math/glpk/buildlink3.mk"
+.include "../../math/openblas/buildlink3.mk"
+.include "../../net/enet/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libunibreak/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/suitesparse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
