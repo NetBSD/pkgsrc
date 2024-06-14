@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1477 2024/05/27 14:39:28 adam Exp $
+# $NetBSD: Makefile,v 1.1478 2024/06/14 18:28:07 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1426,6 +1426,7 @@ SUBDIR+=	tree-sitter-javascript
 SUBDIR+=	tree-sitter-json
 SUBDIR+=	tree-sitter-lua
 SUBDIR+=	tree-sitter-markdown
+SUBDIR+=	tree-sitter-php
 SUBDIR+=	tree-sitter-python
 SUBDIR+=	tree-sitter-ruby
 SUBDIR+=	tree-sitter-rust
