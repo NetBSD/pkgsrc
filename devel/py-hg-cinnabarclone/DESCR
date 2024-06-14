@@ -1,0 +1,5 @@
+"cinnabarclone" is a mercurial server-side extension used to advertise
+the existence of pre-generated, externally hosted git repository or
+bundle providing git-cinnabar metadata corresponding to the mercurial
+repository.  Cloning from such a git repository can be faster than
+cloning from mercurial directly.
