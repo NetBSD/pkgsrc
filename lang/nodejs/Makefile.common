@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2023/11/23 16:57:37 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.56 2024/06/14 08:58:23 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs14/Makefile
 # used by lang/nodejs16/Makefile
@@ -51,7 +51,6 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 REPLACE_NODEJS+=	deps/corepack/dist/*.js
 REPLACE_NODEJS+=	deps/npm/bin/*.js
 REPLACE_PYTHON+=	configure
-REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
 
 .if ${OPSYS} == "NetBSD"
