@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3976 2024/06/14 15:28:48 adam Exp $
+$NetBSD: CHANGES-2024,v 1.3977 2024/06/14 18:28:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/ngtcp2 to 1.6.0 [adam 2024-06-14]
 	Updated net/haproxy to 3.0.2 [adam 2024-06-14]
 	Updated finance/py-stripe to 9.11.0 [adam 2024-06-14]
+	Added textproc/tree-sitter-php version 0.22.5 [wiz 2024-06-14]
