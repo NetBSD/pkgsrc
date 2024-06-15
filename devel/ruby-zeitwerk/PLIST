@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/06 15:05:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/06/15 15:52:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/zeitwerk.rb
+${GEM_LIBDIR}/lib/zeitwerk/cref.rb
 ${GEM_LIBDIR}/lib/zeitwerk/error.rb
 ${GEM_LIBDIR}/lib/zeitwerk/explicit_namespace.rb
 ${GEM_LIBDIR}/lib/zeitwerk/gem_inflector.rb
