@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3990 2024/06/15 11:11:03 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.3991 2024/06/15 15:44:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6404,3 +6404,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-nokogiri to 1.16.6 [tsutsui 2024-06-15]
 	Updated pkgtools/pkg_summary-utils to 0.69.0 [cheusov 2024-06-15]
 	Updated devel/libadwaita to 1.5.1 [wiz 2024-06-15]
+	Updated lang/ruby33 to 3.3.3 [taca 2024-06-15]
