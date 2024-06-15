@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3988 2024/06/15 09:29:03 tsutsui Exp $
+$NetBSD: CHANGES-2024,v 1.3989 2024/06/15 09:39:08 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated inputmethod/ibus to 1.5.30 [tsutsui 2024-06-15]
 	Updated misc/ruby-mini_portile2 to 2.8.7 [tsutsui 2024-06-15]
 	Updated textproc/ruby-nokogiri to 1.16.6 [tsutsui 2024-06-15]
+	Updated pkgtools/pkg_summary-utils to 0.69.0 [cheusov 2024-06-15]
