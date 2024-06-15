@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/06/15 07:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/06/15 11:10:54 wiz Exp $
 
-DISTNAME=	libadwaita-1.4.5
+DISTNAME=	libadwaita-1.5.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libadwaita/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,13 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- xml
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
-
 PKGCONFIG_OVERRIDE+=	output/meson-private/libadwaita-1.pc
 
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
@@ -26,6 +19,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 .include "../../devel/appstream/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
