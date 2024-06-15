@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/11/18 15:45:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/15 09:20:44 tsutsui Exp $
 
-DISTNAME=	mini_portile2-2.8.5
+DISTNAME=	mini_portile2-2.8.7
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
