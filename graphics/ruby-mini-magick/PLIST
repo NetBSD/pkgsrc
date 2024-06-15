@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2021/01/11 13:49:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/06/15 15:56:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/mini_gmagick.rb
 ${GEM_LIBDIR}/lib/mini_magick.rb
