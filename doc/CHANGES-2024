@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.3995 2024/06/15 15:52:19 taca Exp $
+$NetBSD: CHANGES-2024,v 1.3996 2024/06/15 15:56:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6409,3 +6409,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-io-event to 1.6.4 [taca 2024-06-15]
 	Updated devel/ruby-rspec-expectations to 3.13.1 [taca 2024-06-15]
 	Updated devel/ruby-zeitwerk to 2.6.16 [taca 2024-06-15]
+	Updated graphics/ruby-mini-magick to 4.13.1 [taca 2024-06-15]
