@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/15 08:09:11 wiz Exp $
 
-DISTNAME=	git-remote-hg-0.6
-PKGREVISION=	1
+DISTNAME=	git-remote-hg-0.6.0.0.20240307
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=felipec/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+# regex fix post 0.6.0 release, no new release out yet
+GITHUB_TAG=	615cc7fe045d0417ac97f7790ebe941b39652ad2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://felipec.wordpress.com/2012/11/13/git-remote-hg-bzr-2/
