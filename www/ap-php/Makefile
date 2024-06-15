@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/06/07 23:11:41 taca Exp $
+# $NetBSD: Makefile,v 1.58 2024/06/15 08:01:18 jperkin Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		11
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		EXTRA_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 INSTALLATION_DIRS=	lib/httpd
 
 pre-configure:
-	cd ${WRKSRC} && autoconf -f
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 do-install:
 	if [ -f ${WRKSRC}/.libs/libphp${PKG_PHP_MAJOR_VERS}.so ]; then	\
