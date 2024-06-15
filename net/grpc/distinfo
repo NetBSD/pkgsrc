@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.85 2024/06/04 09:34:04 adam Exp $
+$NetBSD: distinfo,v 1.86 2024/06/15 18:54:34 wiz Exp $
 
-BLAKE2s (grpc-1.64.1.tar.gz) = 87707bb92e5063208de892cf11e18ce962d2fc1b234e30585ef6b5f031664bb1
-SHA512 (grpc-1.64.1.tar.gz) = d4a6eb0d168c1b6379a885255d1a67c4d63f3b58a11579af9fb0994f6fdb659450926c171f894d7e5ac542f12d7814518308b1f18275a15ccc7c6e1b53e3e096
-Size (grpc-1.64.1.tar.gz) = 22457740 bytes
+BLAKE2s (grpc-1.64.2.tar.gz) = b71c56edd5576f006406eaefffac256cdebc14a3256d5fabd7f4b57464f38d5d
+SHA512 (grpc-1.64.2.tar.gz) = f9e8976022a52ee57d095fbd02f7e88167e3ddf78f8aef181a5dce4c8f09b2193e0f89689e415ff438b7a3480f06450ea334b8df9359fcf8b05ce4b2f7531b85
+Size (grpc-1.64.2.tar.gz) = 22457489 bytes
 BLAKE2s (opencensus-proto-0.3.0.tar.gz) = be3ce863226f4aa422d9faa997fe29f9bb1743c0e804af3c5fad3c170e60ba42
 SHA512 (opencensus-proto-0.3.0.tar.gz) = 39231a495dfdccfc8267d1e6af2ac624feea611a8691c10ec570de2194b352e4a9c3b0ce1606414fb98e5d77c66873bed4a9e56512efa12b267b8a91e0c5851e
 Size (opencensus-proto-0.3.0.tar.gz) = 163404 bytes
