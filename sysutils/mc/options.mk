@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2024/05/06 08:33:53 jperkin Exp $
+# $NetBSD: options.mk,v 1.21 2024/06/15 20:48:03 cheusov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mc
 PKG_OPTIONS_REQUIRED_GROUPS=	screen
@@ -10,9 +10,10 @@ PKG_SUGGESTED_OPTIONS=		mc-charset slang
 
 ### The charset option enables input/display support for various 8-bit
 ### codepages, chooseable at runtime.
+PLIST_VARS+=		mc-charset
 .if !empty(PKG_OPTIONS:Mmc-charset)
 CONFIGURE_ARGS+=	--enable-charset
-PLIST_SRC+=		${PKGDIR}/PLIST.charset
+PLIST.mc-charset=	yes
 .include "../../converters/libiconv/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-charset
