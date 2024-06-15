@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/04/12 15:29:04 nia Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/06/15 20:48:03 cheusov Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -204,8 +204,8 @@ share/mc/hints/mc.hint.uk
 share/mc/hints/mc.hint.zh
 share/mc/hints/mc.hint.zh_CN
 share/mc/hints/mc.hint.zh_TW
-share/mc/mc.charsets
 share/mc/mc.lib
+${PLIST.mc-charset}share/mc/mc.charsets
 share/mc/skins/dark.ini
 share/mc/skins/darkfar.ini
 share/mc/skins/default.ini
