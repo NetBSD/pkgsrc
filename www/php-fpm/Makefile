@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/06/07 23:11:41 taca Exp $
+# $NetBSD: Makefile,v 1.42 2024/06/15 08:26:25 taca Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 PKGREVISION=	11
@@ -52,7 +52,7 @@ MESSAGE_SUBST+=		CGIDIR=${CGIDIR}
 MESSAGE_SUBST+=		VARBASE=${VARBASE}
 
 pre-configure:
-	cd ${WRKSRC} && autoconf -f
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/fpm/php-fpm ${DESTDIR}${PREFIX}/sbin/php-fpm
