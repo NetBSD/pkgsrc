@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:32:07 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/15 06:22:40 jperkin Exp $
 
 DISTNAME=	kcoreaddons-${KF6VER}
 PKGREVISION=	1
@@ -18,8 +18,7 @@ LDFLAGS.SunOS+=		-lsocket
 .endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt6-qttools= build
-.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
