@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/17 13:47:21 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/15 09:38:55 cheusov Exp $
 bin/cvs_checksum
 bin/makefiles2deps
 bin/pkg_assignments2pkgpath
@@ -12,6 +12,7 @@ bin/pkg_digger
 bin/pkg_digger_backend
 bin/pkg_digger_installed
 bin/pkg_digger_summary
+bin/pkg_enrich_summary
 bin/pkg_grep_summary
 bin/pkg_lint_summary
 bin/pkg_list_all_pkgs
@@ -31,7 +32,6 @@ bin/pkg_update_summary
 bin/rpmdb2summary
 libexec/psu/XB2bin_summary
 libexec/psu/direct_deps
-libexec/psu/enrich_summary
 libexec/psu/get_processed_pkgs
 libexec/psu/grep_summary
 libexec/psu/sig_handler.sh
