@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/12/17 15:52:08 taca Exp $
+$NetBSD: distinfo,v 1.10 2024/06/15 16:30:53 taca Exp $
 
-BLAKE2s (markaby-0.9.3.gem) = 4f1817c87465855d53f9cad0dcdbddc2149cc3ae9afbb767d2dec9338dffe62c
-SHA512 (markaby-0.9.3.gem) = 9b037a6de8e0c402aaf0781fa14755338fbc18f751fa5709991cbe7fca0b51205b2f62805719b659760fd3024562efa6f3dc69cd93a0391ad5709de45501d5b9
-Size (markaby-0.9.3.gem) = 25088 bytes
+BLAKE2s (markaby-0.9.4.gem) = 831cec39bf866c362287b8d2f418f0f416572a49826e8dfb097dea4bc2f3a883
+SHA512 (markaby-0.9.4.gem) = fd3871e4b8f258780662959f329914f231bcff806ffa07b6626d1e66912e80122df1d5ed868a5348de3d8b9f5e6046b454de2bd2917d8285cafbbcafea339ae8
+Size (markaby-0.9.4.gem) = 25600 bytes
