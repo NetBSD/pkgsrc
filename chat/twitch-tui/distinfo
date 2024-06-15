@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/05/21 10:49:21 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2024/06/15 00:18:19 schmonz Exp $
 
 BLAKE2s (addr2line-0.20.0.crate) = 325dbd01710a578526165bf191bc3df1e1b7afa6492f90662ecb33b2c2643d2d
 SHA512 (addr2line-0.20.0.crate) = f9794772a31dd01096b168b4b4ffe311d4850c69fd77dd72c1e532a94ef7b23c31cccb9033848822521510f1fcc2ad0fdd824cf7efb9ed43828dc0165165b319
@@ -771,9 +771,9 @@ Size (tracing-subscriber-0.3.17.crate) = 191711 bytes
 BLAKE2s (try-lock-0.2.4.crate) = 4b69a8f1c883a0a90c13e25e807936a41ced02edf2b71c35e02cf4773fc7e97e
 SHA512 (try-lock-0.2.4.crate) = fbd989589eb0a1fb226de65537d51eceab632603e69710b37708d6109ed09c07333189675d5e560e35cc836e5cd211c726d8ce247186b5ea4529328d46c22632
 Size (try-lock-0.2.4.crate) = 4467 bytes
-BLAKE2s (twitch-tui-2.6.10.tar.gz) = 7219ce07ff2c70544ae6c3929fef47afa84c2c34df9dc2fa0fbee4dc1a5a2dd1
-SHA512 (twitch-tui-2.6.10.tar.gz) = 3da206f93bb98bd78c4885b323863f745d9d73ce0fc03b5b90c3d0b7c3154d3c49c5ba5c483672a834d6e49ceb7d5f6eba097f2af660909ca6d2680dbd1dc3d3
-Size (twitch-tui-2.6.10.tar.gz) = 223511 bytes
+BLAKE2s (twitch-tui-2.6.12.tar.gz) = b371ee6632506192bd186723f095db0e9a75e0f64f3edf35b41f4810f825fd6c
+SHA512 (twitch-tui-2.6.12.tar.gz) = aa8e4ecf66e8de20573b32d166f7c37a40c0f750f5c7f58be5fcc60e83cde047d26ac4e346ab67fc166362a264c7b0e8444d81620effff5d85ec2ca340715cae
+Size (twitch-tui-2.6.12.tar.gz) = 225753 bytes
 BLAKE2s (unicode-bidi-0.3.13.crate) = e6dac6f62a814bed44458d7d113c445681d8619c421c65271162c31bd55da1cb
 SHA512 (unicode-bidi-0.3.13.crate) = fb094fcfd907d90fa7232432aca0143209446e4c5c73d8a0fe6d2dc44b9dbb5b8b926c59b5e3f9a5a0a36f91c04613509b6e430c9c4adf526e7445e6e8d7a3d9
 Size (unicode-bidi-0.3.13.crate) = 44477 bytes
