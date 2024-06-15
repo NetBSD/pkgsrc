@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2024/05/29 16:34:40 adam Exp $
+# $NetBSD: Makefile,v 1.91 2024/06/15 09:28:44 tsutsui Exp $
 
-DISTNAME=	nokogiri-1.16.4
-PKGREVISION=	1
+DISTNAME=	nokogiri-1.16.6
 CATEGORIES=	textproc
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -16,7 +15,7 @@ USE_TOOLS+=		pkg-config
 CPPFLAGS+=		-I${PREFIX}/include/libxml2
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.12.6.tar.gz= \
+OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.12.8.tar.gz= \
 			ports/archives/libxslt-1.1.39.tar.gz=
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
