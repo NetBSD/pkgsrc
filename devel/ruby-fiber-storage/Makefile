@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/05/26 14:46:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/15 15:46:20 taca Exp $
 
-DISTNAME=	fiber-storage-0.1.1
+DISTNAME=	fiber-storage-0.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
