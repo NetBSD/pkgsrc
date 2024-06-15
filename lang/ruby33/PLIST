@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/02 15:57:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/15 15:43:52 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1209,6 +1209,7 @@ ${RUBY_LIB}/rubygems/source_list.rb
 ${RUBY_LIB}/rubygems/spec_fetcher.rb
 ${RUBY_LIB}/rubygems/specification.rb
 ${RUBY_LIB}/rubygems/specification_policy.rb
+${RUBY_LIB}/rubygems/specification_record.rb
 ${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA.pem
 ${RUBY_LIB}/rubygems/ssl_certs/rubygems.org/GlobalSignRootCA_R3.pem
 ${RUBY_LIB}/rubygems/stub_specification.rb
