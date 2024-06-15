@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2024/06/02 16:01:13 taca Exp $
+$NetBSD: distinfo,v 1.30 2024/06/15 16:46:32 taca Exp $
 
-BLAKE2s (rouge-4.2.1.gem) = 09fe21a36828aaac1f1ef3105cdbdd354300127a5805d0f5ebc4ef84777aed1e
-SHA512 (rouge-4.2.1.gem) = 7959780c2da2b77a414e257023d50a0dd44843659c27b7c45d708ba11b9c8d60ffcf2ab5143f50a6b584f04ae5c67caa77aee157cd12b8b38c8c2a41c8b94d0a
-Size (rouge-4.2.1.gem) = 546816 bytes
+BLAKE2s (rouge-4.3.0.gem) = 77adba4dc4f25430bcc55d5dabf51ce0b6cb02a55251b0f6ae95fc37d33f8a19
+SHA512 (rouge-4.3.0.gem) = eb10aa0891db96aa73211c8e995c1bb7f55947ce1f55c7fd8062972064fb9d5bff2514ceb23b891a1bd77561fb2db32df5cbc39e2fd68143ee8aef0073e6d9e0
+Size (rouge-4.3.0.gem) = 548352 bytes
