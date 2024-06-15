@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/11/07 08:13:18 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/06/15 16:46:32 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/http
 ${GEM_LIBDIR}/lib/rouge/demos/hylang
 ${GEM_LIBDIR}/lib/rouge/demos/idlang
 ${GEM_LIBDIR}/lib/rouge/demos/idris
+${GEM_LIBDIR}/lib/rouge/demos/iecst
 ${GEM_LIBDIR}/lib/rouge/demos/igorpro
 ${GEM_LIBDIR}/lib/rouge/demos/ini
 ${GEM_LIBDIR}/lib/rouge/demos/io
@@ -336,6 +337,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/http.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/hylang.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/idlang.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/idris.rb
+${GEM_LIBDIR}/lib/rouge/lexers/iecst.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/igorpro.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ini.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/io.rb
@@ -507,5 +509,3 @@ ${GEM_LIBDIR}/lib/rouge/util.rb
 ${GEM_LIBDIR}/lib/rouge/version.rb
 ${GEM_LIBDIR}/rouge.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/3.1.0/plugins
-@pkgdir lib/ruby/gems/3.1.0/extensions
