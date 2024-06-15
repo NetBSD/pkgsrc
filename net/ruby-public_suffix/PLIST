@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/18 14:22:15 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/06/15 16:50:02 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/2.0-Upgrade.md
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
