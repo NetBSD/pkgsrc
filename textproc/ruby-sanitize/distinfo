@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/09/18 17:37:33 taca Exp $
+$NetBSD: distinfo,v 1.5 2024/06/15 16:32:25 taca Exp $
 
-BLAKE2s (sanitize-6.1.0.gem) = b744e103e1150b98aa601b664aba6b611918c35fe88e9fc3d83bfafb8884cda6
-SHA512 (sanitize-6.1.0.gem) = b73ef5eefc4e53f811c9c3d5d95b0d3505ab3cbb7c7b90249253c5d1538f52270cead76a507e9dde25c3ea0bf44d3cdec5f6bbf18d4fab7020c6c198fb21419c
-Size (sanitize-6.1.0.gem) = 47616 bytes
+BLAKE2s (sanitize-6.1.1.gem) = 38f49a9673ef54433a57c44560388c44ebdf856f8370b7e84d99e4bccfd92b51
+SHA512 (sanitize-6.1.1.gem) = 4b4967fbd3101b47cca435ead1b6555b7af9218933b92f7c2bfbddd41761c48f0dbb2e2ef504e970f4da1231c09171b90cd302f2e59aaf04edf4d274f89067c2
+Size (sanitize-6.1.1.gem) = 47616 bytes
