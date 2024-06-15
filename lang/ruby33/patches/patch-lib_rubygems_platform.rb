@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_rubygems_platform.rb,v 1.1 2024/01/21 08:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems_platform.rb,v 1.2 2024/06/15 15:43:52 taca Exp $
 
 * Don't replace "i486" to "x86".
 * Allow simple "netbsd" as Gem::Platform.
 
---- lib/rubygems/platform.rb.orig	2023-12-25 05:59:38.000000000 +0000
+--- lib/rubygems/platform.rb.orig	2024-06-11 23:54:24.000000000 +0000
 +++ lib/rubygems/platform.rb
 @@ -94,12 +94,7 @@ class Gem::Platform
          arch.last << "-#{extra}"
@@ -26,4 +26,4 @@ $NetBSD: patch-lib_rubygems_platform.rb,v 1.1 2024/01/21 08:22:03 taca Exp $
 +                      when /netbsd/ then                ["netbsd", nil]
                        when /openbsd(\d+\.\d+)?/ then    ["openbsd",   $1]
                        when /solaris(\d+\.\d+)?/ then    ["solaris",   $1]
-                       # test
+                       when /wasi/ then                  ["wasi",      nil]
