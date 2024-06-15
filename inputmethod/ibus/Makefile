@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.105 2024/04/07 07:34:26 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2024/06/15 08:51:03 tsutsui Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--enable-dconf
 CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--enable-gtk3
+CONFIGURE_ARGS+=	--disable-gtk4
 CONFIGURE_ARGS+=	--enable-surrounding-text
 CONFIGURE_ARGS+=	--enable-introspection=yes
 CONFIGURE_ARGS+=	--disable-systemd-services
