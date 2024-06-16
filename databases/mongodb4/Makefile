@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/06/07 17:39:01 abs Exp $
+# $NetBSD: Makefile,v 1.14 2024/06/16 15:28:27 tnn Exp $
 
 DISTNAME=	mongodb-4.4.29
 CATEGORIES=	databases
@@ -56,6 +56,10 @@ SCONS_BUILD_ARGS+=	MONGO_VERSION=${PKGVERSION_NOREV} # github source does not in
 PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "aarch64"
+CXXFLAGS+=		--param=destructive-interference-size=64
+.endif
 
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libbson-1.0
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
@@ -158,6 +162,8 @@ post-extract:
 		${WRKSRC}/src/third_party/wiredtiger/build_netbsd
 	${CP} -R ${WRKSRC}/src/third_party/wiredtiger/build_freebsd \
 		${WRKSRC}/src/third_party/wiredtiger/build_dragonfly
+	${CP} -R ${WRKSRC}/src/third_party/mozjs-60/platform/aarch64/linux \
+		${WRKSRC}/src/third_party/mozjs-60/platform/aarch64/netbsd
 
 # let REPLACE_INTERPRETER kick in
 do-configure:
