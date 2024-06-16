@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/06/07 17:39:01 abs Exp $
+$NetBSD: distinfo,v 1.6 2024/06/16 15:28:27 tnn Exp $
 
 BLAKE2s (mongodb-4.4.29.tar.gz) = 53d8f9da9a74edd82a01f4a5dc1fa0a1f08dd79f4a1781e3b2c3d6dd8f3209fb
 SHA512 (mongodb-4.4.29.tar.gz) = 3c32a918c8b5587b04ee9263788c250a9bbd64f34ed2c19939e78607456215697966e596c2cfd160604b629188e4bdf3fff071db268bb3c25de3077a7c2ef335
@@ -22,6 +22,7 @@ SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h)
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = 0f00e7e1b710b3d19a936d5832ab08279bff48ee
 SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
 SHA1 (patch-src_third__party_boost-1.70.0_boost_asio_detail_impl_kqueue__reactor.ipp) = 0808636a4e01f9eda921b79360ca51c04bc43230
+SHA1 (patch-src_third__party_mozjs-60_platform_aarch64_netbsd_build_js-confdefs.h) = bd4c0a282f898a20f331ce1fcf1451cc92d5677c
 SHA1 (patch-src_third__party_mozjs-60_platform_x86__64_netbsd_build_js-confdefs.h) = 2474fc221f0c59381c8529e986db1f3f67c405ec
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = e97dea310463f246c0a8007a1ba9c5385105036d
