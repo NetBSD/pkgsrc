@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4018 2024/06/16 16:52:54 nikita Exp $
+$NetBSD: CHANGES-2024,v 1.4019 2024/06/16 18:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6432,3 +6432,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/slumber to 1.4.0 [pin 2024-06-16]
 	Updated math/qcalc to 0.9.6 [pin 2024-06-16]
 	Updated www/gotosocial to 0.16.0 [nikita 2024-06-16]
+	Updated games/lgogdownloader to 3.14nb1 [wiz 2024-06-16]
