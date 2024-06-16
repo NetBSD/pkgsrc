@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/06/01 14:13:39 pin Exp $
+$NetBSD: distinfo,v 1.11 2024/06/16 05:54:18 pin Exp $
 
 BLAKE2s (colored-2.1.0.crate) = 4764177a94a676ff10c1723495ba01b335a04f128c3b3eeba28513b0303c2e12
 SHA512 (colored-2.1.0.crate) = fa70f18fb29f6870a727d8243808c96e9497f8302f5f2b1748f9d9e396031e9c53a025b8edc9c8c9a0f8cfca12e5da73250a71e382b3074e9415b85bc004769e
@@ -33,9 +33,9 @@ Size (rayon-1.10.0.crate) = 180155 bytes
 BLAKE2s (rayon-core-1.12.1.crate) = 2402c16b62f8a112b43da9ab8c91e8b00bd22cd9252ea12dae77079bef92c16f
 SHA512 (rayon-core-1.12.1.crate) = 33d0297b682f131c50e1eabc3be583211a5abe790301cbca91bf510e43d6714b7564ca39fab7c4bf6f02aa0df6bb394f386a61320f21ddb6bd7aea1372b5e99e
 Size (rayon-core-1.12.1.crate) = 70701 bytes
-BLAKE2s (rsftch-0.6.4.crate) = 53a7b6b217870df3599ec21679228e702fc950b82fe4c4cc2f76ca38f1191748
-SHA512 (rsftch-0.6.4.crate) = c32b19837a4440eff72d3dff9358f2c9b207e91177c880d05035a761fa96b6e8eb9534845b46dcb65dedd61e9dcfb5b44f0efd5000f19254dbdfe93fe7219067
-Size (rsftch-0.6.4.crate) = 26670 bytes
+BLAKE2s (rsftch-0.6.5.crate) = 27b4f42e3af9c511f4b5e213b0fd7d4d48b183bbf891f9b4990a55ee8a568849
+SHA512 (rsftch-0.6.5.crate) = aa520de32142d3247460e387c989a1595d2da19dc17d98c1bb53142d7cbdd439850062fef9e5b260e84f7458578d14b618b2a557998e5b11af793a41db13ec42
+Size (rsftch-0.6.5.crate) = 26766 bytes
 BLAKE2s (ryu-1.0.18.crate) = 738ae2cbeac90a6adef5e5c05c31be6c18f2860ab8ea4bfdc729325dceb923ae
 SHA512 (ryu-1.0.18.crate) = a9b2beac778ec47e6be303148d7512ee681bd2361f6e4ac6db32c8b4baf86a8c5eb5b0d02eacd6131ae88c7b5105c57018c3050676e0b3dd1ed9c4d2fd650e84
 Size (ryu-1.0.18.crate) = 47713 bytes
