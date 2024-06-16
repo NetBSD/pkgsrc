@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2024/06/16 11:49:52 markd Exp $
+# $NetBSD: Makefile,v 1.173 2024/06/16 12:23:12 gdt Exp $
 
 PKGREVISION= 2
 .include "../../geography/gdal-lib/Makefile.common"
@@ -45,7 +45,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
 # \todo Resolve LZMA usage.
 # GDAL_USE_LZMA appears in gtif but cmake says it doesn't exist.
 #CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZMA=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_MYSQL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PARQUET=OFF
