@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.8 2019/11/03 10:39:17 rillig Exp $
+# $NetBSD: builtin.mk,v 1.9 2024/06/16 11:45:13 markd Exp $
 
 BUILTIN_PKG:=	getopt
 
 BUILTIN_FIND_HEADERS_VAR:=	H_GETOPT
 BUILTIN_FIND_HEADERS.H_GETOPT=	getopt.h
+BUILTIN_FIND_HEADERS.H_GETOPT+=	bits/getopt_ext.h
 BUILTIN_FIND_GREP.H_GETOPT=	int.*getopt_long
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
