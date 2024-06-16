@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24533 2024/06/15 18:54:44 wiz Exp $
+$NetBSD: TODO,v 1.24534 2024/06/16 07:07:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -467,6 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.23.0
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -542,6 +543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cook-2.31
 	o coordgenlibs-2.0.3
 	o coreutils-9.5
+	o cpp-httplib-0.16.0
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
@@ -593,6 +595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.8.1
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.26
@@ -729,6 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o gossip-0.31
+	o govulncheck-1.1.2
 	o gperiodic-3.0.3
 	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
@@ -849,6 +853,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libcups-2.4.9
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libflash-0.4.13
@@ -862,6 +867,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libjit-1.0.2
 	o libkactivities4-5.81.0
 	o liblzo-2.10
+	o libmaxminddb-1.10.0
 	o libmcs-0.7.2
 	o libmilter-8.16.1
 	o libmtag-0.3.6
@@ -962,6 +968,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
+	o nlohmann-json-3.11.3
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1120,13 +1127,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
+	o py-codestyle-2.12.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.4.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flake8-7.1.0
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-genshi-0.7.8
+	o py-google-api-python-client-2.133.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
@@ -1143,6 +1155,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.4.9
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1255,6 +1268,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
+	o syncstorage-rs-0.17.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
