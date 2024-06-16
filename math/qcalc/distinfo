@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/06/01 14:16:08 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/06/16 06:01:37 pin Exp $
 
 BLAKE2s (ahash-0.8.11.crate) = b565d757eebd61e61c4bc77b956fab61c32f9c87787bda573646cff2dac812fe
 SHA512 (ahash-0.8.11.crate) = 47d211b2422de0b381dfe32229faa346406eb7a22dff867dc04c22389609a8671ce3218e662000c49891a06c259d82e0ff4413740f007729d80e097a6c3f0d9d
@@ -87,9 +87,9 @@ Size (paste-1.0.15.crate) = 18374 bytes
 BLAKE2s (proc-macro2-1.0.84.crate) = 3fc7b86167f946c5421c1ad59bbd2c708884204dd16ae7fe11d037538cf526da
 SHA512 (proc-macro2-1.0.84.crate) = 0d0bd0cc1f457b6d5feb9fd6da670f2a0662d15d88e5d20d4d308103c689a103861b3838eb25e5144cf24fb87abffdebb3175989285a03f08730ce3daa55e35e
 Size (proc-macro2-1.0.84.crate) = 48922 bytes
-BLAKE2s (qcalc-0.9.5.crate) = 676ae62adf4fdb5c80b557d8343dfc768e4ce2d4a00dde8757cd21d47aaf07a9
-SHA512 (qcalc-0.9.5.crate) = 4a4884b949b8b50f1f6d816e205fe524d4fe013c0fea8143df3e9554cfad6a8bc2dff3bb0fe8fbd34a83edf4b3127a4533ce769b6ed48b8f83b5ceb090cc0b69
-Size (qcalc-0.9.5.crate) = 25031 bytes
+BLAKE2s (qcalc-0.9.6.crate) = 049bc25be006ed7f8f5700568ae880a425bfc0338d7826257c140b19c2556e9b
+SHA512 (qcalc-0.9.6.crate) = 556ee2ba9dfeccdf0cc0a3c50c231ce740ab68d8e66aafe59d3eacf375b78f3557d03ef6bcacdc70fdd7225166bb2c251e5ed981c3f412c5d4e9ba14a7948225
+Size (qcalc-0.9.6.crate) = 25036 bytes
 BLAKE2s (quote-1.0.36.crate) = 9f7777159f1dce98b3d75c4080f5513185ed124a911edec785e5349ba70541fd
 SHA512 (quote-1.0.36.crate) = f1f002a912692f7ffd4912ca980ec57ff4aca3a7d9e2e42e9e3409e2105c9f59d86c05719f6af309bccaef2f8843b0848a6e3afda3356e045d8e7cc5956ae685
 Size (quote-1.0.36.crate) = 28507 bytes
