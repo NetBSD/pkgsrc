@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/06/13 13:47:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.38 2024/06/16 16:52:43 nikita Exp $
 
-DISTNAME=	gotosocial-0.15.0-source-code
+GOTOVER=	0.16.0
+DISTNAME=	gotosocial-${GOTOVER}-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	nikita@NetBSD.org
@@ -11,14 +11,14 @@ COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
 USE_TOOLS+=	pax tar
 
-DISTFILES=      gotosocial-0.15.0-source-code.tar.gz
-DISTFILES+=	gotosocial_0.15.0_web-assets.tar.gz
+DISTFILES=      gotosocial-${GOTOVER}-source-code.tar.gz
+DISTFILES+=	gotosocial_${GOTOVER}_web-assets.tar.gz
 
-SITES.gotosocial-0.15.0-source-code.tar.gz= \
-	-https://github.com/superseriousbusiness/gotosocial/releases/download/v0.15.0/gotosocial-0.15.0-source-code.tar.gz
+SITES.gotosocial-${GOTOVER}-source-code.tar.gz= \
+	-https://github.com/superseriousbusiness/gotosocial/releases/download/v${GOTOVER}/gotosocial-${GOTOVER}-source-code.tar.gz
 
-SITES.gotosocial_0.15.0_web-assets.tar.gz= \
-	-https://github.com/superseriousbusiness/gotosocial/releases/download/v0.15.0/gotosocial_0.15.0_web-assets.tar.gz
+SITES.gotosocial_${GOTOVER}_web-assets.tar.gz= \
+	-https://github.com/superseriousbusiness/gotosocial/releases/download/v${GOTOVER}/gotosocial_${GOTOVER}_web-assets.tar.gz
 
 # release archive has no toplevel folder.
 EXTRACT_DIR=	${WRKDIR}/${PKGNAME}
