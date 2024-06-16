@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2024/05/21 13:36:10 gdt Exp $
+# $NetBSD: options.mk,v 1.8 2024/06/16 12:23:12 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
 
@@ -23,10 +23,9 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POSTGRESQL=OFF
 # \todo Fix/test MYSQL
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
+CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_MYSQL=ON
 .else
-# The builds says:
-#   -- Could NOT find MySQL (missing: MYSQL_LIBRARY MYSQL_INCLUDE_DIR)
-# but cmake -L does not show the option to turn it off.
+CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_MYSQL=OFF
 .endif
 
 # For now, there is no ODBC option, and hence only the "no ODBC" case.
