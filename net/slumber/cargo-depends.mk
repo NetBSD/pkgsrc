@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2024/05/28 03:28:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2024/06/16 05:55:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -14,6 +14,7 @@ CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.3
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.3
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.86
 CARGO_CRATE_DEPENDS+=	assert-json-diff-2.0.2
+CARGO_CRATE_DEPENDS+=	async-recursion-1.1.1
 CARGO_CRATE_DEPENDS+=	async-trait-0.1.80
 CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.71
@@ -123,6 +124,7 @@ CARGO_CRATE_DEPENDS+=	matchers-0.1.0
 CARGO_CRATE_DEPENDS+=	memchr-2.7.2
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
+CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.3
 CARGO_CRATE_DEPENDS+=	mio-0.8.11
@@ -164,7 +166,7 @@ CARGO_CRATE_DEPENDS+=	ratatui-0.26.3
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.4.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.1
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.5
-CARGO_CRATE_DEPENDS+=	regex-1.10.4
+CARGO_CRATE_DEPENDS+=	regex-1.10.5
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.6
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
@@ -239,6 +241,7 @@ CARGO_CRATE_DEPENDS+=	tracing-core-0.1.32
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.18
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.1.4
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.5
+CARGO_CRATE_DEPENDS+=	unicase-2.7.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.23
