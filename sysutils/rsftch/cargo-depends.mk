@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/06/01 14:13:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/06/16 05:54:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	colored-2.1.0
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
