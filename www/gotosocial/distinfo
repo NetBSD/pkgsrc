@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.17 2024/05/27 20:04:46 nikita Exp $
+$NetBSD: distinfo,v 1.18 2024/06/16 16:52:43 nikita Exp $
 
-BLAKE2s (gotosocial-0.15.0-source-code.tar.gz) = b1741b7e62e38add85f5ccfa678038adee6507b959acbcede71871d3de0d0f9a
-SHA512 (gotosocial-0.15.0-source-code.tar.gz) = de1f17892b3eeb62751ab61a782f74728fc36d80eb9ec27bec7ebdd3317a586850dc78d0be9862d561e9da07b1228ca57223af0f5caaf6ad811e10e0677f3f6a
-Size (gotosocial-0.15.0-source-code.tar.gz) = 75292015 bytes
-BLAKE2s (gotosocial_0.15.0_web-assets.tar.gz) = 41f2a9ff57f136c722c2cd4b43a3be014ee082b61a701280ce2f0bc8e6dd8ab1
-SHA512 (gotosocial_0.15.0_web-assets.tar.gz) = 8ab0a77a58086aa956c8ad9e38ecfc8e7c1485539e685030384a2cca1eb8d11fbda1cf23c29573958747652675762076547b675a3651e05f0fa7709dd7701880
-Size (gotosocial_0.15.0_web-assets.tar.gz) = 1420530 bytes
+BLAKE2s (gotosocial-0.16.0-source-code.tar.gz) = 7becb76f1cc7931a325dc9a04304e8e035325dac3b150146232a087390d4e41e
+SHA512 (gotosocial-0.16.0-source-code.tar.gz) = 3e64a7046921dd80a85b30d7875fa8625b20b72c60aba46b18dcf247a3d8950fde15e11a9056274bb14543bc09a242cbf574f1ca1f924a3964f45aac8cb7ff11
+Size (gotosocial-0.16.0-source-code.tar.gz) = 81006194 bytes
+BLAKE2s (gotosocial_0.16.0_web-assets.tar.gz) = 13a55736e2a6a1492595740189e6d57d2f76382b8c2b27737fe4be2f247ddd72
+SHA512 (gotosocial_0.16.0_web-assets.tar.gz) = c09237e635a6b6236806c0a03e4584c117a857122d0f052eb319605d60b5090783cfddb3a568a5e31bc3ecdab7dfeb4b1db988501610ae01fac34ebc517c9f7e
+Size (gotosocial_0.16.0_web-assets.tar.gz) = 1568511 bytes
 SHA1 (patch-vendor_github.com_tdewolff_minify_v2_Makefile) = 2658c6597d4037b2f1ce1e2cf927a288146b21a3
