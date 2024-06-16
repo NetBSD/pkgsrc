@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:29:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/06/16 18:55:44 wiz Exp $
 
 BLAKE2s (htmlcxx-0.85.tar.gz) = 2da0bbbf805df2a24e0001c647c59eb08b2c9511e01ee799504d3cb31e4a5dcf
 SHA512 (htmlcxx-0.85.tar.gz) = a385b65fb668727b0034a95e5dcda18939e4cd2fa5140bbf3bc63907abc481cb4e6f2f46089eac131cde2b8234a4fc5db4f81253b10e6dff6b42632cea990a61
 Size (htmlcxx-0.85.tar.gz) = 414624 bytes
-SHA1 (patch-html_CharsetConverter.cc) = c06dd6a2ad59ebbf25c65a567b24ace73b58f52f
+SHA1 (patch-html_CharsetConverter.cc) = 9546fcb1ceca786d1f831cb6d0a2a70a97d09187
+SHA1 (patch-html_CharsetConverter.h) = c19c55f6dfede117c73da261fd1ce26025c0fa26
 SHA1 (patch-html_ci__string.h) = 71438e4eea290f5934918d1996d0c80eefd5ffe5

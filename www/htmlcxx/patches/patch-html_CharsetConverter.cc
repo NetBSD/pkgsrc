@@ -1,10 +1,13 @@
-$NetBSD: patch-html_CharsetConverter.cc,v 1.2 2019/10/25 10:29:04 kamil Exp $
+$NetBSD: patch-html_CharsetConverter.cc,v 1.3 2024/06/16 18:55:44 wiz Exp $
 
 Fix build on NetBSD.
 
+Fix build with c++11, from
+https://sourceforge.net/p/htmlcxx/patches/8/
+
 --- html/CharsetConverter.cc.orig	2011-05-15 17:32:10.000000000 +0000
 +++ html/CharsetConverter.cc
-@@ -4,6 +4,15 @@
+@@ -4,10 +4,19 @@
  #include <cerrno>
  #include "CharsetConverter.h"
  
@@ -20,6 +23,11 @@ Fix build on NetBSD.
  using namespace std;
  using namespace htmlcxx;
  
+-CharsetConverter::CharsetConverter(const string &from, const string &to) throw (Exception)
++CharsetConverter::CharsetConverter(const string &from, const string &to)
+ {
+ 	mIconvDescriptor = iconv_open(to.c_str(), from.c_str());
+ 	if (mIconvDescriptor == (iconv_t)(-1))
 @@ -37,7 +46,11 @@ string CharsetConverter::convert(const s
  
  	size_t ret;
