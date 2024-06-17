@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/09/17 15:51:50 pin Exp $
+$NetBSD: distinfo,v 1.9 2024/06/17 09:08:55 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -42,9 +42,9 @@ Size (log-0.4.14.crate) = 34582 bytes
 BLAKE2s (memchr-2.4.0.crate) = ad963b762cf06e8588191edac06d1b5b3ebff79409fb1486be8dd315e8abfdc1
 SHA512 (memchr-2.4.0.crate) = b142e308a5aef8e45910411789031e194349ee540c4ced0e2384d864dc1913299fb63a161ceb5228256e97d0949661b7f83a169ef9d4b78afbd9004cb7b8a2fb
 Size (memchr-2.4.0.crate) = 63392 bytes
-BLAKE2s (molybdenum-0.1.9.tar.gz) = 5663dc09ab687ec1b1da9464e294a040f10a194e3ccbfcdf1f08e689d535a921
-SHA512 (molybdenum-0.1.9.tar.gz) = 3a9a9ab8d2a61adafbcf4d88883ab0f3c52fd79a5c1e3e44c4f9928cea2d5f3f066eb495f32c01abfe7f64d85cdc43b19b96d9795d90fd356838e88d60188a1c
-Size (molybdenum-0.1.9.tar.gz) = 16366 bytes
+BLAKE2s (molybdenum-0.1.10.tar.gz) = 715b500fa78506ed9d3a5252afeb967388452d81c6bda23e7e108914f33bfee4
+SHA512 (molybdenum-0.1.10.tar.gz) = db28c345a1be97455566fb11628eda14db0a926abe10af6ffa2da5f796648be7043b178f0b4414072cbbeb55cc80ed6734f1b9e7f720f30243c2b31700c9fac5
+Size (molybdenum-0.1.10.tar.gz) = 16946 bytes
 BLAKE2s (once_cell-1.7.2.crate) = c9b00e685b9185fb7ab7e8eba9f70ba7a8520b8a3bd79cfb85d646f9651c2b40
 SHA512 (once_cell-1.7.2.crate) = 30cf51249bb73e9881cfbc6a54ead7a3db709d560da8d420fd85cf248e66c727b92e8351b7c0c682913cff12b3f984684a272a69c965c56f8343948eb5a194d6
 Size (once_cell-1.7.2.crate) = 28250 bytes
