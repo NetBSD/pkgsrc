@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2024/05/10 10:44:25 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/06/17 15:26:36 adam Exp $
 
-DISTNAME=	urllib3-2.2.1
+DISTNAME=	urllib3-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -41,13 +41,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 309
 TEST_DEPENDS+=	${PYPKGPREFIX}-backports.zoneinfo>=0.2.1:../../time/py-backports.zoneinfo
 .endif
-
-# as of 2.1.0 with the missing dependencies above
-# 36 failed, 1501 passed, 507 skipped, 108 warnings
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
