@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.64 2023/10/24 22:10:05 wiz Exp $
 
-DISTNAME=	tmux-3.3a
+DISTNAME=	tmux-3.4
 PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
