@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4033 2024/06/17 09:35:41 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4034 2024/06/17 09:36:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6451,3 +6451,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/libmaxminddb to 1.10.0 [wiz 2024-06-17]
 	Updated textproc/nlohmann-json to 3.11.3 [wiz 2024-06-17]
 	Updated security/py-cyclonedx-python-lib to 7.4.1 [wiz 2024-06-17]
+	Updated www/py-genshi to 0.7.8 [wiz 2024-06-17]
