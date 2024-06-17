@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/06/17 09:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/06/17 12:16:51 gdt Exp $
 
 DISTNAME=		enchant-2.8.1
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -12,17 +12,16 @@ HOMEPAGE=		https://abiword.github.io/enchant/
 COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
-USE_TOOLS+=		autoconf gmake groff pkg-config
 USE_LANGUAGES=		c c++
+# Upstream doesn't document, but configure.ac requires C++11.
+USE_CXX_FEATURES+=	c++11
+
+USE_TOOLS+=		autoconf gmake groff pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
-
-# Mostly needed due to hunspell headers making c++98 default unacceptable.
-FORCE_CXX_STD=		c++11
-USE_CXX_FEATURES+=	c++11
 
 # unsupported in pkgsrc - other dictionaries can be used instead
 # avoid PLIST problems
