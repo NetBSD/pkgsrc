@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/09/11 07:52:43 triaxx Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/17 16:43:15 jperkin Exp $
 
 DISTNAME=	libinotify
 PKGNAME=	${DISTNAME}-0.0.${GITHUB_TAG}
@@ -18,8 +18,12 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	autoconf automake autoreconf
 
+.include "../../mk/compiler.mk"
+
 # Avoid error due to use of ATOMIC_VAR_INIT.
+.if ${CC_VERSION:Mclang-1[5-9].*}
 CFLAGS+=	-Wno-deprecated-pragma
+.endif
 
 TEST_TARGET=	test
 
