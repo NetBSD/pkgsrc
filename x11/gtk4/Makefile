@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/05/29 16:35:00 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/06/17 07:18:46 wiz Exp $
 
 DISTNAME=	gtk-4.14.4
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -16,6 +16,10 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 # TODO: add more python dependencies?
 # gi-docgen| subprojects/gi-docgen/meson.build:10:0: Exception: python3 is missing modules: jinja2, markdown, markupsafe, pygments, toml, typogrify
+
+# Gdk-4.0 dumps core with full RELRO
+# http://gnats.netbsd.org/57792
+RELRO_SUPPORTED=	partial
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
