@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/14 08:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/17 09:29:10 wiz Exp $
 
-DISTNAME=	libmaxminddb-1.9.1
+DISTNAME=	libmaxminddb-1.10.0
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,9 +14,13 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+# cmake build doesn't install man pages yet
+# https://github.com/maxmind/libmaxminddb/issues/351
+#CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 USE_CC_FEATURES=	c99
 
 PKGCONFIG_OVERRIDE+=	src/libmaxminddb.pc.in
 
+#.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
