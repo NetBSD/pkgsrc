@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2024/06/03 07:27:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2024/06/17 10:06:14 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -31,10 +31,10 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.4
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.2
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.2
-CARGO_CRATE_DEPENDS+=	clap_derive-4.5.4
+CARGO_CRATE_DEPENDS+=	clap-4.5.6
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.6
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.5
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.5
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.1
@@ -135,7 +135,7 @@ CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.1
-CARGO_CRATE_DEPENDS+=	regex-1.10.4
+CARGO_CRATE_DEPENDS+=	regex-1.10.5
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.6
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.3
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.24
@@ -173,7 +173,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-1.38.0
 CARGO_CRATE_DEPENDS+=	tokio-util-0.7.11
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.6
-CARGO_CRATE_DEPENDS+=	toml_edit-0.22.13
+CARGO_CRATE_DEPENDS+=	toml_edit-0.22.14
 CARGO_CRATE_DEPENDS+=	tower-0.4.13
 CARGO_CRATE_DEPENDS+=	tower-layer-0.3.2
 CARGO_CRATE_DEPENDS+=	tower-lsp-0.20.0
@@ -186,7 +186,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.21.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.21.2
-CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.22.1
+CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.22.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-css-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-dart-0.0.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-elixir-0.2.0
