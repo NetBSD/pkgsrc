@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2024/06/05 22:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/06/17 18:48:25 adam Exp $
 
 PYTHON_27_ACCEPTED=	yes
 
-PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 USE_GCC_RUNTIME=	yes
 
 PYSETUPSUBDIR=	python
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 # python/setup.py looks in various places for libxml2 and libiconv,
@@ -50,7 +49,7 @@ post-install: fix-darwin-install-name
 .PHONY: fix-darwin-install-name
 fix-darwin-install-name:
 	install_name_tool -id ${PREFIX}/${PYSITELIB}/libxml2mod.so \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/libxml2mod.so
+		${DESTDIR}${PREFIX}/${PYSITELIB}/libxml2mod.so
 .endif
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
