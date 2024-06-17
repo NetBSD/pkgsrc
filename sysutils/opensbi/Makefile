@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2024/06/17 11:20:32 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/17 21:53:57 gutteridge Exp $
 #
 
 .include "../../sysutils/opensbi/opensbi-version.mk"
 
 DISTNAME=	opensbi-${OPENSBI_VERSION}
-CATEGORIES=	sysutils 
+CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 
 MAINTAINER=	port-riscv@NetBSD.org
