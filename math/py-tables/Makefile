@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/12/13 20:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/06/17 09:14:17 wiz Exp $
 
 DISTNAME=	tables-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -36,6 +37,7 @@ do-test:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../devel/blosc/buildlink3.mk"
 .include "../../devel/blosc2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
