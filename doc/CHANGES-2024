@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4024 2024/06/17 09:09:51 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4025 2024/06/17 09:11:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6442,3 +6442,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/coreutils to 9.5 [adam 2024-06-17]
 	Updated misc/gnuls to 9.5 [adam 2024-06-17]
 	Updated textproc/molybdenum to 0.1.10 [pin 2024-06-17]
+	Updated shells/oh-my-posh to 21.10.2 [pin 2024-06-17]
