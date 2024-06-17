@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/04/15 05:09:46 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/06/17 07:57:49 adam Exp $
 
-DISTNAME=	argcomplete-3.3.0
+DISTNAME=	argcomplete-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
