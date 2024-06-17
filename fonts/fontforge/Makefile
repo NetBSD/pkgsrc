@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2024/05/29 16:32:31 adam Exp $
+# $NetBSD: Makefile,v 1.147 2024/06/17 18:51:37 adam Exp $
 
 DISTNAME=	fontforge-20230101
 PKGREVISION=	9
@@ -25,6 +25,11 @@ PY_PATCHPLIST=		yes
 CHECK_PORTABILITY_SKIP+=	osx/FontForge.app/Contents/MacOS/*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
