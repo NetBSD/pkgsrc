@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4030 2024/06/17 09:21:43 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4031 2024/06/17 09:29:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6448,3 +6448,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/cpp-httplib to 0.16.0 [wiz 2024-06-17]
 	Updated textproc/enchant2 to 2.8.1 [wiz 2024-06-17]
 	Updated devel/govulncheck to 1.1.2 [wiz 2024-06-17]
+	Updated geography/libmaxminddb to 1.10.0 [wiz 2024-06-17]
