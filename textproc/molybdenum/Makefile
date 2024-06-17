@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/17 15:51:50 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/06/17 09:08:55 pin Exp $
 
-DISTNAME=	molybdenum-0.1.9
+DISTNAME=	molybdenum-0.1.10
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gfannes/}
 GITHUB_TAG=	release-v${PKGVERSION_NOREV}
@@ -11,12 +11,6 @@ COMMENT=	Recursive search and replace CLI application
 LICENSE=	eupl-v1.1
 
 .include "cargo-depends.mk"
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/mo \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
