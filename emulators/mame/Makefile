@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2024/06/08 14:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.197 2024/06/17 19:43:48 adam Exp $
 
 DISTNAME=	mame-0.266
 CATEGORIES=	emulators
@@ -28,10 +28,12 @@ MAKE_FILE=		makefile
 # "GCC version 10.3 or later needed"
 GCC_REQD+=		10
 
+.include "../../mk/bsd.prefs.mk"
+# error: invalid argument '-std=gnu++17' not allowed with 'Objective-C'
+.if ${OPSYS} != "Darwin"
 # Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
 FORCE_CXX_STD=		gnu++17
-
-.include "../../mk/bsd.prefs.mk"
+.endif
 
 MAKE_FLAGS+=		PRECOMPILE=0
 # TODO: set differently when debugging?
