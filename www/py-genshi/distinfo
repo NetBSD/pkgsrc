@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/06/17 09:36:16 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/06/17 12:03:10 adam Exp $
 
-BLAKE2s (Genshi-0.7.8.tar.gz) = a014ea988c6d3bc2e6a8b31f1f7d21f0be859d977d6140f271d96eca5b3481ae
-SHA512 (Genshi-0.7.8.tar.gz) = 25c772e6b2b9793437c4ca82b448f5c1d9b2460b33f36feabd84c5f0b41558106f61795d3c676bef7a0f3ff96fed46e6fad8626cc92da74c73c8eb3fd61cdd48
-Size (Genshi-0.7.8.tar.gz) = 268945 bytes
+BLAKE2s (Genshi-0.7.9.tar.gz) = fbc3f6a0f8e6b22ce8aad6f822e3e4a8d12fc9719b9cfdad98560b6aa6b016d0
+SHA512 (Genshi-0.7.9.tar.gz) = 2e813e4374970e764ce1d7f3cbe6fd3557fb0bd178393f18c62ebe65b6acad0b03b0eaa16b218d337776808b7f25c2499984834ca2e3cd96009998675580862b
+Size (Genshi-0.7.9.tar.gz) = 269399 bytes
