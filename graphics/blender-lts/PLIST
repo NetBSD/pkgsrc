@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2024/02/11 15:29:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/17 13:55:45 ryoon Exp $
 bin/blender
 bin/blender-thumbnailer
 share/applications/blender.desktop
-share/blender/3.6/datafiles/assets/LICENSE
-share/blender/3.6/datafiles/assets/blender_assets.cats.txt
-share/blender/3.6/datafiles/assets/geometry_nodes/procedural_hair_node_assets.blend
 share/blender/3.6/datafiles/colormanagement/config.ocio
 share/blender/3.6/datafiles/colormanagement/filmic/filmic_desat65cube.spi3d
 share/blender/3.6/datafiles/colormanagement/filmic/filmic_false_color.spi3d
