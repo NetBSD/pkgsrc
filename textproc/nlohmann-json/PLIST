@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/21 17:37:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/17 09:32:13 wiz Exp $
 include/nlohmann/adl_serializer.hpp
 include/nlohmann/byte_container_with_subtype.hpp
 include/nlohmann/detail/abi_macros.hpp
@@ -19,6 +19,7 @@ include/nlohmann/detail/iterators/iteration_proxy.hpp
 include/nlohmann/detail/iterators/iterator_traits.hpp
 include/nlohmann/detail/iterators/json_reverse_iterator.hpp
 include/nlohmann/detail/iterators/primitive_iterator.hpp
+include/nlohmann/detail/json_custom_base_class.hpp
 include/nlohmann/detail/json_pointer.hpp
 include/nlohmann/detail/json_ref.hpp
 include/nlohmann/detail/macro_scope.hpp
