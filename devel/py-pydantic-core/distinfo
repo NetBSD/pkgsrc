@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/06/06 05:19:12 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/17 15:17:55 adam Exp $
 
 BLAKE2s (ahash-0.8.10.crate) = 3a62959d74d755d6092d997b3e59717d18a70f245cbef0cb1d9f4fb905b1bfd4
 SHA512 (ahash-0.8.10.crate) = 108872193427773e15463916ba034fd6cebb35523d827da331f374cf13cf27ff251a07c978bff4072db9ec8c307d9df092149ebd963b0702f397ebedd80e87d3
@@ -69,9 +69,9 @@ Size (lexical-parse-integer-0.8.6.crate) = 33647 bytes
 BLAKE2s (lexical-util-0.8.5.crate) = c05508c1daec93f8cee9481cbcf12e11eee33d7533b8f5755e17e3eda17e1547
 SHA512 (lexical-util-0.8.5.crate) = 449c7f2a22c109cd179937c36e14d91c742e1a837a85fcf4fb58c21f05317511d1281b564d216a34760ae54a0df2d0ff5caf49da4aa9d43a8d87fcec0033cc39
 Size (lexical-util-0.8.5.crate) = 85152 bytes
-BLAKE2s (libc-0.2.147.crate) = 84b4227ac3264ec16af0072f1783c1a0bba74399caaa382bc03ae681dbc0fc82
-SHA512 (libc-0.2.147.crate) = bfb3c230b59d623b98726f92b7c3f897b47ba3d22fe9834c15f5b4c1b662289aba35a0ae3acfc704ad74696db8c691ee007b9cc6fa03ae65a18eb6bedc81931e
-Size (libc-0.2.147.crate) = 686772 bytes
+BLAKE2s (libc-0.2.155.crate) = 7d2724d3fdb09b655c8f405ec03a9d9ed8c9c307c38e2461f86edc269f477aab
+SHA512 (libc-0.2.155.crate) = 05354bba532b8338bda1f88f12c7f3893429734a06e33925fca2b99d49548ae5216e2cd84e782d2368a2dfef20b0e035e2dcad8dd13ede7119462a8c639b2807
+Size (libc-0.2.155.crate) = 743539 bytes
 BLAKE2s (lock_api-0.4.10.crate) = 8539fd14b7f4416d0eff6aeaa2146e49cb5b75894e65466ca32d50016abd491e
 SHA512 (lock_api-0.4.10.crate) = ffe8cad8099bc382832181c1ff95e0935993491f247114604201be7d4ddf8402fd4db8fd6499c611f95fbce7d57dc3d3738eddfab31c52f50ab8709e549697db
 Size (lock_api-0.4.10.crate) = 26713 bytes
@@ -108,9 +108,9 @@ Size (portable-atomic-1.6.0.crate) = 140689 bytes
 BLAKE2s (proc-macro2-1.0.76.crate) = 24239de482516bbc12266b9464ad3de5308fa839aea08a67968f1b96f9ba35a4
 SHA512 (proc-macro2-1.0.76.crate) = 2ea7ade475171166489ab3e745e8c526e49c7521bc39b1bfec6dd2fd0807fd3cc5579235f77534be855f9ecab481205e77e66b14ebb22e66d2c3cff842567247
 Size (proc-macro2-1.0.76.crate) = 45660 bytes
-BLAKE2s (pydantic_core-2.18.4.tar.gz) = ebea6b4b4f5db74c6c94ff6c2c9b2f3f7cbc428c9ff5a95a5344541496fa3dcd
-SHA512 (pydantic_core-2.18.4.tar.gz) = 01bdf79a79468e2a6a66f41830b98dc0adfb6d87b221e57e1da5a27b4068dea906aa987b9a7eca3bdc107e97e6bfa9ea164c527bbe2ceb683419ef147747b786
-Size (pydantic_core-2.18.4.tar.gz) = 385098 bytes
+BLAKE2s (pydantic_core-2.19.0.tar.gz) = d0ea01cdfe3cb2cb85dd9fd68d176a11199e942337696d79a5e698284b1d3825
+SHA512 (pydantic_core-2.19.0.tar.gz) = 779e31900ed80c922c7e168f1906795d5073f5aae86abd74af8cf54a53fc366504d42b6779665e59f0f29ea3f4005ed134403bbb5726f90b44b165118ce569bb
+Size (pydantic_core-2.19.0.tar.gz) = 385827 bytes
 BLAKE2s (pyo3-0.21.2.crate) = de000a0097a65d0f84ec8381eec1b108554f50e89f2a37c92d2770f7f57f9aaf
 SHA512 (pyo3-0.21.2.crate) = 5f88cda423e82b62698a74ceaa31fc27e5c1f1d417928accddb2e00337d163fda622f774ae6e24c1cb73c467d6b01e9a2ba866e4454338b1fbfc892ae14ffc53
 Size (pyo3-0.21.2.crate) = 504574 bytes
