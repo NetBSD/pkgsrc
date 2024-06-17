@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.56 2024/06/16 03:46:37 pin Exp $
+# $NetBSD: go-modules.mk,v 1.57 2024/06/17 13:22:40 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -39,7 +39,7 @@ GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/windows/@v/v0.1.2.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/windows/@v/v0.1.2.zip
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.mod
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
@@ -145,8 +145,8 @@ GO_MODULE_FILES+=	github.com/shurcoo!l/gofontwoff/@v/v0.0.0-20181114050219-180f7
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.3.1.mod
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.0.mod
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.0.zip
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.zip
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.mod
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
