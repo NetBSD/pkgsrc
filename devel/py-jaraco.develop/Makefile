@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/05/27 09:06:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/06/17 12:04:23 adam Exp $
 
-DISTNAME=	jaraco_develop-8.14.0
+DISTNAME=	jaraco_develop-8.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.develop/}
