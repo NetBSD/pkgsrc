@@ -1,0 +1,5 @@
+$NetBSD: distinfo-2024.04,v 1.1 2024/06/17 12:33:25 skrll Exp $
+
+BLAKE2s (u-boot-2024.04.tar.bz2) = 34839780694b7d772199fa8f83085db1dd1b58c89843908196ee0f8a82999b66
+SHA512 (u-boot-2024.04.tar.bz2) = a71270302b38e9e68a83b3acdf8f7635f72d9fa75169e3c2241cdfa21eab834b8f25dfd35c281191bccb2fcec1e86d6b64afcf1d2ed5cd4fdc02258cd75fc236
+Size (u-boot-2024.04.tar.bz2) = 20228837 bytes
