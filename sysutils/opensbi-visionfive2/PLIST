@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/06/17 11:25:15 skrll Exp $
+share/opensbi/visionfive2/fw_dynamic.bin
