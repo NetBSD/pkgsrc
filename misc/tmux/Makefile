@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2023/10/24 22:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/06/17 06:50:09 jperkin Exp $
 
-DISTNAME=	tmux-3.3a
-PKGREVISION=	2
+DISTNAME=	tmux-3.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,7 +11,6 @@ COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
-USE_TERMINFO=	yes
 
 USE_TOOLS+=	pkg-config
 USE_FEATURES+=	strnlen
@@ -46,6 +44,5 @@ CONFIGURE_ARGS+=	--enable-utf8proc
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
