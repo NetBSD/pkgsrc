@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/06/17 12:16:51 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2024/06/17 12:23:58 gdt Exp $
 
 DISTNAME=		enchant-2.8.1
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -23,10 +23,12 @@ PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
-# unsupported in pkgsrc - other dictionaries can be used instead
-# avoid PLIST problems
+# Force disable all spell checkers that are not handled in options.mk,
+# to avoid them being unintentionally found if installed.
+CONFIGURE_ARGS+=	--without-nuspell
 CONFIGURE_ARGS+=	--without-hspell
 CONFIGURE_ARGS+=	--without-voikko
+CONFIGURE_ARGS+=	--without-applespell
 
 # needed for testing
 CONFIGURE_ARGS+=	--enable-relocatable
