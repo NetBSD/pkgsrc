@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/06/08 12:02:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/06/17 09:37:55 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -56,6 +56,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v4.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/advisorynotifications.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/aiplatform.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/aiplatform.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/airquality.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/alertcenter.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/alloydb.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/alloydb.v1alpha.json
