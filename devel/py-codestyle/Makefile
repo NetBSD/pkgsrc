@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/10/13 05:47:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/06/17 08:03:38 adam Exp $
 
-DISTNAME=	pycodestyle-2.11.1
+DISTNAME=	pycodestyle-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/PyCQA/pycodestyle
 COMMENT=	Python style guide checker
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_PKG_RESOURCES=	yes
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -20,5 +21,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pycodestyle pycodestyle-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
