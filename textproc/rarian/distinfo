@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2022/06/11 07:23:20 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/06/18 08:56:59 markd Exp $
 
-BLAKE2s (rarian-0.8.1.tar.bz2) = 1744c122dfb4b40f0716a743fe3afe5b3a744bfd7a575bd2d650326df30e614b
-SHA512 (rarian-0.8.1.tar.bz2) = 64f3e7fbe423e45a59453805fe6b4116e0ffad43c7e88fe362d76a326c70936c6b46c4a4dc57cf43e3535c16f2f07fa1b2affa0aaeae637ee3ede48850c1fc60
-Size (rarian-0.8.1.tar.bz2) = 324441 bytes
-SHA1 (patch-librarian_Makefile.in) = 0f41cbaacd43a8f3358671dc9604a1092b7ba971
+BLAKE2s (rarian-0.8.5.tar.bz2) = d69a49e1018ef1a36f8c6dc262582291660c4335b7cb6b55994f03b5ec6dc2f8
+SHA512 (rarian-0.8.5.tar.bz2) = cf9a8229ec4571e821746e1a2ed513791d4284e267b3810126e525f334eb1d1a5d16e84737baa841c31ac3d717dd3459f685259398767486ed8de2b24dc35e5a
+Size (rarian-0.8.5.tar.bz2) = 408968 bytes
+SHA1 (patch-librarian_Makefile.in) = f6fe8eafa6514f60d585aaa4d117db5c3dc59757
 SHA1 (patch-util_rarian-sk-update.in) = e6367bb86e460f771fa6bc9ce0e0489d9d6cefd3
