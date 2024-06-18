@@ -1,0 +1,27 @@
+$NetBSD: patch-configure,v 1.1 2024/06/18 11:48:40 markd Exp $
+
+    Fixes:
+    
+    conftest.c:124:33: error: implicitly declaring library function 'exit'
+    with type 'void (int) __attribute__((noreturn))'
+
+From fedora.
+
+--- configure.orig	2022-03-14 14:29:38.000000000 +0000
++++ configure
+@@ -19223,6 +19223,7 @@ else
+   gq_cv_have_tm_gmtoff=no
+                 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <time.h>
+                                 #include <$ac_cv_struct_tm>
+ 
+@@ -19255,6 +19256,7 @@ else
+   gq_cv_have___tm_gmtoff=no
+                 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <time.h>
+                                 #include <$ac_cv_struct_tm>
+ 
