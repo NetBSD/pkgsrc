@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2022/09/13 10:56:36 tnn Exp $
+$NetBSD: distinfo,v 1.33 2024/06/18 08:49:33 markd Exp $
 
 BLAKE2s (vorbis-tools-1.4.2.tar.gz) = cefdc1b09753f242c4ca59cb47b3451a1946b9527759e0685eeabeb211c5d3f9
 SHA512 (vorbis-tools-1.4.2.tar.gz) = 31681560434054706981aef64406975295eb405a9d2d7c0468af789d6c23edb7cfc1c19d26a28fa7061835524289cdc6d217a4669c43a2eb828189370cc6fcaf
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = 00c0a5a9388baf79fd944e12cda1da65e2e8676c
 SHA1 (patch-ae) = 60ca36c35325e4228ea7f7f5b3a60cd57b56b0cd
 SHA1 (patch-configure) = ede9f755ae5d125325da50948d54367ae6c30d7b
 SHA1 (patch-ogg123_status.c) = 906cf9a5a19afc69cdafdf7d9f98f79072553520
+SHA1 (patch-ogginfo_codec__skeleton.c) = a354e217751a76cd620d40634bc36bbbf7444441
 SHA1 (patch-share_Makefile.in) = 0ee4b3d2289c5fe89cecfed8257fb0ae07da2b9f
