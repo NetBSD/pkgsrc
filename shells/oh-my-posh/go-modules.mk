@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.57 2024/06/17 13:22:40 pin Exp $
+# $NetBSD: go-modules.mk,v 1.58 2024/06/18 11:34:38 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -82,8 +82,8 @@ GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/jandedobbeleer/clipboard/@v/v0.1.4-1.mod
 GO_MODULE_FILES+=	github.com/jandedobbeleer/clipboard/@v/v0.1.4-1.zip
-GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-2.mod
-GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-2.zip
+GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-4.mod
+GO_MODULE_FILES+=	github.com/jandedobbeleer/go-yaml/@v/v1.11.3-4.zip
 GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
