@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4052 2024/06/18 06:15:01 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4053 2024/06/18 08:58:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6476,3 +6476,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/vlc to 3.0.21 [ryoon 2024-06-18]
 	Updated sysutils/py-subprocess-tee to 0.4.2 [adam 2024-06-18]
 	Updated textproc/py-phonenumbers to 8.13.39 [adam 2024-06-18]
+	Updated textproc/rarian to 0.8.5 [markd 2024-06-18]
