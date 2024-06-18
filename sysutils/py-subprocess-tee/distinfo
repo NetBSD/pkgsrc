@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2022/12/18 10:06:39 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/06/18 06:13:34 adam Exp $
 
-BLAKE2s (subprocess-tee-0.4.1.tar.gz) = 7f41b7557f5590b904c774592b37d7dacfcd89ddc00acb4942e2d31847ab610a
-SHA512 (subprocess-tee-0.4.1.tar.gz) = 683813096c4bb78a4263075ba8590a926134ec92db5e2e72ed98ab1db9e231768adc15bb4273ba138f9a1b2a14ae4050d0b6acc76d483d0f3530f376ce8d9eee
-Size (subprocess-tee-0.4.1.tar.gz) = 13599 bytes
+BLAKE2s (subprocess_tee-0.4.2.tar.gz) = 2e6c2a1814bac34cd3c3e012c2ceab5665f7ff3212bcd2f55ecc1d0f5ffbe074
+SHA512 (subprocess_tee-0.4.2.tar.gz) = acb0103b8a9ba6288e42148062e82b37b625f5c518e195c4d6e32efd2d5d9841ac6f2c2b240d223e7cdecc643daaa3d86c63a6bc34ca7b48e187cbf968e5dae5
+Size (subprocess_tee-0.4.2.tar.gz) = 14951 bytes

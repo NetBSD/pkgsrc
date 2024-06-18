@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/18 06:13:34 adam Exp $
 
-DISTNAME=	subprocess-tee-0.4.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	subprocess_tee-0.4.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subprocess-tee/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	https://github.com/pycontribs/subprocess-tee
 COMMENT=	Subprocess-tee
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
