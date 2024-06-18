@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/04/30 08:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/06/18 17:25:44 adam Exp $
 
-DISTNAME=	cairocffi-1.7.0
+DISTNAME=	cairocffi-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairocffi/}
@@ -15,9 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pikepdf-[0-9]*:../../print/py-pikepdf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
