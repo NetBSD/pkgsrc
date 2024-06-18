@@ -1,17 +1,17 @@
-$NetBSD: patch-testsuite_Makefile.in,v 1.6 2020/05/22 08:01:51 adam Exp $
+$NetBSD: patch-testsuite_Makefile.in,v 1.7 2024/06/18 10:45:53 adam Exp $
 
 Use LIBTOOL.
 
---- testsuite/Makefile.in.orig	2020-04-29 18:11:44.000000000 +0000
+--- testsuite/Makefile.in.orig	2024-06-16 15:27:54.000000000 +0000
 +++ testsuite/Makefile.in
-@@ -93,8 +93,8 @@ all: $(EXTRA_TARGETS)
+@@ -108,8 +108,8 @@ all: $(EXTRA_TARGETS)
  # explicit rule for each and every executable.
  
- TEST_OBJS = testutils.$(OBJEXT) ../nettle-internal.$(OBJEXT)
+ TEST_OBJS = testutils.$(OBJEXT) ../non-nettle.$(OBJEXT)
 -LIB_HOGWEED = @IF_HOGWEED@ -lhogweed
 -TEST_LIBS = $(LIB_HOGWEED) -lnettle $(LIBS)
 +LIB_HOGWEED = @IF_HOGWEED@ ../libhogweed.la
 +TEST_LIBS = $(LIB_HOGWEED) ../libnettle.la $(LIBS)
  
- ../nettle-internal.$(OBJEXT):
- 	( cd .. && $(MAKE) nettle-internal.$(OBJEXT) )
+ ../non-nettle.$(OBJEXT):
+ 	( cd .. && $(MAKE) non-nettle.$(OBJEXT) )
