@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2024/06/18 08:40:04 markd Exp $
+
+Avoid implicit int in qsort_t configure check, which can cause
+the check to always fail for stricter C99 compilers.
+From Fedora.
+
+--- configure.orig	2022-06-03 00:14:00.463274817 +0000
++++ configure
+@@ -22034,7 +22034,7 @@ else
+ #endif
+ 
+ extern void *base;
+-extern sortf(const void *, const void *);
++extern int sortf(const void *, const void *);
+ int sortf(a, b)
+   const void *a;
+   const void *b; { return 0; }
