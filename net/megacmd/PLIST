@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/11 07:49:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/18 18:23:15 bsiegert Exp $
 bin/mega-attr
 bin/mega-backup
 bin/mega-cancel
@@ -103,6 +103,7 @@ include/mega/posix/megafs.h
 include/mega/posix/meganet.h
 include/mega/posix/megasys.h
 include/mega/posix/megawaiter.h
+include/mega/process.h
 include/mega/proxy.h
 include/mega/pubkeyaction.h
 include/mega/raid.h
@@ -128,3 +129,4 @@ include/megaapi_impl.h
 lib/libmega.la
 lib/pkgconfig/libmega.pc
 share/bash-completion/completions/megacmd
+share/doc/megacmd/README

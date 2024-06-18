@@ -1,17 +1,20 @@
-$NetBSD: distinfo,v 1.1 2024/03/11 07:49:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/06/18 18:23:15 bsiegert Exp $
 
-BLAKE2s (megacmd-1.6.3.tar.gz) = c3df7a71184d4bc373e41273361e1a9818881d1b4b00ca4703fa1c199cd7093c
-SHA512 (megacmd-1.6.3.tar.gz) = 425584a1350e5965aea8a09076bb447b4d6a00fc0305e9a19ad91ed8292eae5b758e4c1a41ea7c0887c2f8e0644cf1d1154e3b33503ddcf4713e4a13dd80a6f6
-Size (megacmd-1.6.3.tar.gz) = 2085751 bytes
-BLAKE2s (meganz-sdk-v4.17.1d.tar.gz) = e3490a45338f2d1b62cbc607e80aa806906cc693ca8428b77973340bfba9ac39
-SHA512 (meganz-sdk-v4.17.1d.tar.gz) = bc67910b0a5fbbe9bb5d9d6ef9a746f1762dbb9968d9c825fd0ede256ab674670d804c2d99c9c472f72b2f06fd2bac4765bd7fa7dbebb3746cd1e1cfd780d71c
-Size (meganz-sdk-v4.17.1d.tar.gz) = 3695020 bytes
-SHA1 (patch-Makefile.am) = e6e092d8da00df3d2d73e542de61bea37336e9df
-SHA1 (patch-sdk_Makefile.am) = 8fedc590e7423e8a32d3cbe47b9503e8b197cf04
-SHA1 (patch-sdk_configure.ac) = 264edd914b05e24221a2fdd1c9890920f3f00521
-SHA1 (patch-sdk_include_mega_http_h) = 6d2acb2bdfe444d94c27ee523c9499f73f2fb5fe
-SHA1 (patch-sdk_include_mega_posix_megafs_h) = 69b099d0e8b5ac54c70808ec825d834d9edac2a9
-SHA1 (patch-sdk_src_http.cpp) = 23ebb74d092c27ed26c34c41c5a812a1ba835933
-SHA1 (patch-sdk_src_posix_fs.cpp) = a6e2b45e8e4740ae4eb362a11e165b7740daf7c2
-SHA1 (patch-src_include.am) = bd7f0899704b10e5c043ecd075adb750683f2272
-SHA1 (patch-src_megacmdshell_megacmdshellcommunications_cpp) = 99610633144ae5bcfcfbc52da43797c70ab9dd53
+BLAKE2s (megacmd-1.7.0.tar.gz) = 3b0008daa28b220ae909c491aebce7fd32a595607744acf7f7b0a6cef3a956c0
+SHA512 (megacmd-1.7.0.tar.gz) = 9e29a318d062a7d01d2a7e7e7655ef3adf079f2ff64c2eee3c035816821f9c981411f3676c8749a6fc51c44fad06a1428b1db0d6b61f32be5e222553bd9bb0dd
+Size (megacmd-1.7.0.tar.gz) = 2124305 bytes
+BLAKE2s (meganz-sdk-v4.31.0b.tar.gz) = ca471a7fc6fbcb3a5cea04aff2bfedcd77d33ca6cfd741f3954381f9bfc1af94
+SHA512 (meganz-sdk-v4.31.0b.tar.gz) = 525fbdb7bb4bb6e02cc0268a788f744258e41bb39e78c33c3ac1d21c54ad78a630775aa4440529cc3faa4c0679db0a72161f856c49e15d721487a748a0a08969
+Size (meganz-sdk-v4.31.0b.tar.gz) = 3592431 bytes
+SHA1 (patch-Makefile.am) = 68b2a67c0b3ddac4b247fc6e0f6dd7ab068d90bd
+SHA1 (patch-configure.ac) = e05d9a14c7190f450bbb7264fa3641a8b50b3c7f
+SHA1 (patch-sdk_Makefile.am) = 3b83578498bf2917116bc18b31adf09f0c46d9b8
+SHA1 (patch-sdk_configure.ac) = ed55c46f0614a5acc5ea3edc69934fb72f5afd46
+SHA1 (patch-sdk_include_mega_http.h) = a3845e17a6bb5ea9985f1a7de152f1c43a1767ec
+SHA1 (patch-sdk_include_mega_posix_megafs.h) = cee06d1b594588a9fb2c07828d436c74188022e5
+SHA1 (patch-sdk_include_mega_posix_megasys.h) = 02b6259c8932163dee52baeec5e1e07003288279
+SHA1 (patch-sdk_src_http.cpp) = 85b1ef20d4f512e38e336cb4ca2cfbe74372e040
+SHA1 (patch-sdk_src_include.am) = 93eae44fc1fa3ec6f621c7aba8266d63ec835ad7
+SHA1 (patch-sdk_src_posix_fs.cpp) = fdf5129f54a65d3bc52e9a6c6b2e76fdc40026e2
+SHA1 (patch-src_include.am) = 6a7d0dc05a23463066fa74434af1af18f18e0885
+SHA1 (patch-src_megacmdshell_megacmdshellcommunications.cpp) = 7ce41cfcfbc7c8df8f6176bc2abd6a08825fef80

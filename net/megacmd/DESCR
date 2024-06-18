@@ -1,5 +1,8 @@
-MEGAcmd provides non UI access to MEGA services.
-It intends to offer all the functionality with your
-MEGA account via commands. It features synchronization,
-backup of local folders into your MEGA account and
-a webdav/streaming server.
+MEGA is a cloud storage, file and folder sharing
+provider.
+MEGAcmd is a free, open source tool that provides
+non UI access to MEGA services. It intends to offer
+all the functionality with your MEGA account via
+commands. It features synchronization, backup of
+local folders into your MEGA account and a webdav
+or streaming server.
