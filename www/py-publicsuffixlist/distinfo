@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/06/10 21:03:45 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/18 12:38:10 adam Exp $
 
-BLAKE2s (publicsuffixlist-0.10.1.20240605.tar.gz) = 64a3b8478574e877606457cdcc2b86583e9eb972713bc7336fb8778415fd65a8
-SHA512 (publicsuffixlist-0.10.1.20240605.tar.gz) = 7d416d9c66473facadc3b7c12f894c2242a857f4e8dd6c74ce123ceaa6995722768f789c2601edc097d075259d51c2d6008b69c590f79ce8dc521fb548a750cf
-Size (publicsuffixlist-0.10.1.20240605.tar.gz) = 102346 bytes
+BLAKE2s (publicsuffixlist-0.10.1.20240618.tar.gz) = 9f1b1d01636f7e9b705aa7b1d775117fbafba298bd63fc2724fdcd3255f2947d
+SHA512 (publicsuffixlist-0.10.1.20240618.tar.gz) = 3b537b63e619e96c625cc74b3b0e3285dd396ae47587a69cfae1f4a4a3ddabcfcc0d5701f61c1969008f6fd1c058b7096f890cddea919ed87a8338222fb5ac16
+Size (publicsuffixlist-0.10.1.20240618.tar.gz) = 102506 bytes
