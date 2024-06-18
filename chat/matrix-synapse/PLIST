@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2024/04/21 17:30:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.53 2024/06/18 16:49:41 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -186,6 +186,9 @@ ${PYSITELIB}/synapse/config/appservice.pyo
 ${PYSITELIB}/synapse/config/auth.py
 ${PYSITELIB}/synapse/config/auth.pyc
 ${PYSITELIB}/synapse/config/auth.pyo
+${PYSITELIB}/synapse/config/auto_accept_invites.py
+${PYSITELIB}/synapse/config/auto_accept_invites.pyc
+${PYSITELIB}/synapse/config/auto_accept_invites.pyo
 ${PYSITELIB}/synapse/config/background_updates.py
 ${PYSITELIB}/synapse/config/background_updates.pyc
 ${PYSITELIB}/synapse/config/background_updates.pyo
@@ -318,6 +321,9 @@ ${PYSITELIB}/synapse/event_auth.pyo
 ${PYSITELIB}/synapse/events/__init__.py
 ${PYSITELIB}/synapse/events/__init__.pyc
 ${PYSITELIB}/synapse/events/__init__.pyo
+${PYSITELIB}/synapse/events/auto_accept_invites.py
+${PYSITELIB}/synapse/events/auto_accept_invites.pyc
+${PYSITELIB}/synapse/events/auto_accept_invites.pyo
 ${PYSITELIB}/synapse/events/builder.py
 ${PYSITELIB}/synapse/events/builder.pyc
 ${PYSITELIB}/synapse/events/builder.pyo
@@ -810,6 +816,8 @@ ${PYSITELIB}/synapse/res/templates/add_threepid.html
 ${PYSITELIB}/synapse/res/templates/add_threepid.txt
 ${PYSITELIB}/synapse/res/templates/add_threepid_failure.html
 ${PYSITELIB}/synapse/res/templates/add_threepid_success.html
+${PYSITELIB}/synapse/res/templates/already_in_use.html
+${PYSITELIB}/synapse/res/templates/already_in_use.txt
 ${PYSITELIB}/synapse/res/templates/auth_success.html
 ${PYSITELIB}/synapse/res/templates/invalid_token.html
 ${PYSITELIB}/synapse/res/templates/mail-Element.css
@@ -952,6 +960,9 @@ ${PYSITELIB}/synapse/rest/client/login_token_request.pyo
 ${PYSITELIB}/synapse/rest/client/logout.py
 ${PYSITELIB}/synapse/rest/client/logout.pyc
 ${PYSITELIB}/synapse/rest/client/logout.pyo
+${PYSITELIB}/synapse/rest/client/media.py
+${PYSITELIB}/synapse/rest/client/media.pyc
+${PYSITELIB}/synapse/rest/client/media.pyo
 ${PYSITELIB}/synapse/rest/client/models.py
 ${PYSITELIB}/synapse/rest/client/models.pyc
 ${PYSITELIB}/synapse/rest/client/models.pyo
@@ -1099,6 +1110,9 @@ ${PYSITELIB}/synapse/rest/synapse/__init__.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyo
+${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.py
+${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.pyc
+${PYSITELIB}/synapse/rest/synapse/client/federation_whitelist.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/jwks.py
 ${PYSITELIB}/synapse/rest/synapse/client/jwks.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/jwks.pyo
@@ -1123,6 +1137,9 @@ ${PYSITELIB}/synapse/rest/synapse/client/pick_idp.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.py
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/pick_username.pyo
+${PYSITELIB}/synapse/rest/synapse/client/rendezvous.py
+${PYSITELIB}/synapse/rest/synapse/client/rendezvous.pyc
+${PYSITELIB}/synapse/rest/synapse/client/rendezvous.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/saml2/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/client/saml2/__init__.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/saml2/__init__.pyo
@@ -1849,6 +1866,11 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/84/01_auth_links_stats.sql.postgr
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/02_auth_links_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/03_auth_links_analyze.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/84/04_access_token_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/85/01_add_suspended.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/85/02_add_instance_names.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/85/03_new_sequences.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/85/04_cleanup_device_federation_outbox.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/85/05_add_instance_names_converted_pos.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1893,6 +1915,7 @@ ${PYSITELIB}/synapse/synapse_rust/__init__.pyi
 ${PYSITELIB}/synapse/synapse_rust/acl.pyi
 ${PYSITELIB}/synapse/synapse_rust/events.pyi
 ${PYSITELIB}/synapse/synapse_rust/push.pyi
+${PYSITELIB}/synapse/synapse_rust/rendezvous.pyi
 ${PYSITELIB}/synapse/types/__init__.py
 ${PYSITELIB}/synapse/types/__init__.pyc
 ${PYSITELIB}/synapse/types/__init__.pyo
