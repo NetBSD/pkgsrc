@@ -1,5 +1,17 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:47:21 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/06/18 08:44:33 markd Exp $
 
 BLAKE2s (tgif-4.2.5.tar.gz) = 3059cef60cc872e6c739e8f5cc28b27fc69feceb42befccca494bb8956ee09d2
 SHA512 (tgif-4.2.5.tar.gz) = ef9ff515193884ded920322abcd9e0f11cd99e55170ff74cf59ff57ee1429fa622a5c4152b95feb1d4bef96d7304e5fdcc4d80d4bbab159648678a6fe37c4fa8
 Size (tgif-4.2.5.tar.gz) = 3115237 bytes
+SHA1 (patch-exec.c) = 8f9a250ba9d179ab146c1eb545525e12920f6b6a
+SHA1 (patch-file.c) = 46c80d063a6d2d53453a5650f599b022a90e057f
+SHA1 (patch-import.c) = 4c261453821a09834c4481385d7cfc12c939caf8
+SHA1 (patch-polygon.c) = 63f30fc04c440be9043295aab7f5ced048019ad2
+SHA1 (patch-rect.c) = b3a0ff8ac752003c611568a2906c43d9b7ca7c07
+SHA1 (patch-ruler.c) = 765354fdbc8c8819f94f92c0185dd838fb281120
+SHA1 (patch-scroll.c) = 7bd1d0d31a08ba7bdf800a0309f11c37faffe23f
+SHA1 (patch-spline.c) = 62bf6807be3e8b25fb519d21300c135b0c1bc486
+SHA1 (patch-stretch.c) = 27ac231eadf01ebdfc6bf226a2e992f70ea688bc
+SHA1 (patch-tdgtbtn.c) = efcfaee3465e05961be4d7b1342160381761e594
+SHA1 (patch-tdgtlist.c) = e4d2b8fe856290b9dc97181df3c35c1b21c5f1a3
+SHA1 (patch-text.c) = e4730215cb675812fbbeab8490809c02b9aa6bd3
