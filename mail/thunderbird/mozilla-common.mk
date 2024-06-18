@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.16 2024/05/10 08:29:37 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.17 2024/06/18 03:12:25 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -227,7 +227,6 @@ RUST_REQ=	1.41.0
 .include "../../x11/libXt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland
 .if ${PKG_BUILD_OPTIONS.gtk3:Mwayland}
