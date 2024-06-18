@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4054 2024/06/18 10:34:25 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4055 2024/06/18 10:44:00 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6479,3 +6479,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/rarian to 0.8.5 [markd 2024-06-18]
 	Updated security/py-cyclonedx-bom to 4.5.0 [adam 2024-06-18]
 	Updated devel/py-hexbytes to 1.2.1 [adam 2024-06-18]
+	Updated devel/py-h5py to 3.11.0 [markd 2024-06-18]
