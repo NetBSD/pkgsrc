@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2023/02/27 20:08:37 vins Exp $
+$NetBSD: distinfo,v 1.32 2024/06/18 08:40:04 markd Exp $
 
 BLAKE2s (alpine-2.26/WrtAcc.patch.gz) = 0ac2c946dea8f432bdfc1f847f2f31b9ef70d1634244fed1ec252c5baf812747
 SHA512 (alpine-2.26/WrtAcc.patch.gz) = 494d798775a384e8e42639437b14ee09bc174520f705e8830636f2039668cbe0f441011de753cb98f5a4d89059c285ef0fc205249a3a079bb0a88c4389cbd595
@@ -22,6 +22,7 @@ BLAKE2s (alpine-2.26/outgoing.patch.gz) = a7b110e64fe8863b03af14d1f3dccf03a70e02
 SHA512 (alpine-2.26/outgoing.patch.gz) = c5903a9c3869c301e497bda8fcd9201724be90459710bce167758e730051d022a67292893361dd73480a43bfad8909bc4554f10c84839d8f2f3deac781d868f7
 Size (alpine-2.26/outgoing.patch.gz) = 9039 bytes
 SHA1 (patch-alpine_pine-use.c) = 4661d2ead0a12cf94c40967bfe4dbaae72978631
+SHA1 (patch-configure) = 0c5e82a48625afb7c225a3d9b828bedb3f6c82c2
 SHA1 (patch-doc_man1_alpine.1) = 98f144e123b26a949a4ae7bfed5f262d07a7d035
 SHA1 (patch-imap_src_c-client_auth_gss.c) = e6da9ee9dbe0751872d1400237a030112eaa56c6
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
