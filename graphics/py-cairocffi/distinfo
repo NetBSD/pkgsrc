@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/04/30 08:15:20 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/06/18 17:25:44 adam Exp $
 
-BLAKE2s (cairocffi-1.7.0.tar.gz) = 8455d4a4388f16c9fa0dff6ad062662fc7e285c22694dcae52a40dbeec8198bd
-SHA512 (cairocffi-1.7.0.tar.gz) = bfc0f388a6ea1885523d99ad0ccfd59fec89848ef053c240ea9e3e8aab3f3aed5dc343b74de5cc72fb8512d460e55c70ef99a4ae4705fb1dd92d654a4197d7a9
-Size (cairocffi-1.7.0.tar.gz) = 87840 bytes
+BLAKE2s (cairocffi-1.7.1.tar.gz) = a8155d3dedb13c6a2e7d6c1d9a07503c2ddf7f26582e1247ac4bb3f342462a89
+SHA512 (cairocffi-1.7.1.tar.gz) = 1d0c069c0af4ba552312e7fc003461bf321725212888938cafee168574f8927ce7d6860c016ba972343e67cb59a588fc98c198c75ce3ee3d75aa77874364e190
+Size (cairocffi-1.7.1.tar.gz) = 88096 bytes
