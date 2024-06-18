@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2024/06/16 16:52:43 nikita Exp $
+# $NetBSD: Makefile,v 1.39 2024/06/18 09:25:24 nikita Exp $
 
 GOTOVER=	0.16.0
 DISTNAME=	gotosocial-${GOTOVER}-source-code
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-source-code//}
 CATEGORIES=	www
 
@@ -11,7 +12,7 @@ COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
 USE_TOOLS+=	pax tar
 
-DISTFILES=      gotosocial-${GOTOVER}-source-code.tar.gz
+DISTFILES=	gotosocial-${GOTOVER}-source-code.tar.gz
 DISTFILES+=	gotosocial_${GOTOVER}_web-assets.tar.gz
 
 SITES.gotosocial-${GOTOVER}-source-code.tar.gz= \
@@ -28,6 +29,7 @@ MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 GOTOSOCIAL_USER?=	gotosocial
 GOTOSOCIAL_GROUP?=	gotosocial
@@ -75,7 +77,13 @@ SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 # "imports modernc.org/libc/errno: build constraints exclude all Go files in /usr/ports/net-im/gotosocial/work/gotosocial-0.5.2/vendor/modernc.org/libc/errno"
 # BUG: does not build on Sun
 # to unblock: https://github.com/ncruces/go-sqlite3/issues/85
-ONLY_FOR_PLATFORM=	*-*-x86_64
+# Switched to wasmsqlite3, which is maybe still restricted to amd64 + aarch64?
+# There was initially an issue with that driver on the BSD family but that was resolved in the driver before we cut this release.
+# It's safe to use and expected to perform just fine.
+# We're currently keeping it behind a go build tag, wasmsqlite3, and we do consider it slightly experimental.
+# However, the plan is to switch to this Soon™ and a number of people including two of the maintainers run this build on their own instances without any issues.
+# quote from https://github.com/NetBSD/pkgsrc/issues/143
+#ONLY_FOR_PLATFORM=	*-*-x86_64
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} scripts/build.sh
