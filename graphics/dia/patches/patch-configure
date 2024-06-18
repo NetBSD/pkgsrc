@@ -1,8 +1,22 @@
-$NetBSD: patch-aa,v 1.9 2015/06/09 08:55:23 wiz Exp $
+$NetBSD: patch-configure,v 1.1 2024/06/18 09:07:25 markd Exp $
 
---- configure.orig	2014-09-05 11:08:16.000000000 -0400
+c99 removes support for implicit ints, so declare the return type
+of main explicitly. From Fedora
+
+fixes for pkgsrc python - from renamed patch-aa
+
+--- configure.orig	2014-09-05 15:08:16.000000000 +0000
 +++ configure
-@@ -19308,7 +19308,7 @@
+@@ -17571,7 +17571,7 @@ $as_echo_n "checking for png_structp in
+                   png_structp pp;
+ 		  png_infop info;
+ 		  png_colorp cmap;
+-		  main() { void*foo = png_create_read_struct; }
++		  int main() { void*foo = png_create_read_struct; }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+   png_ok=yes
+@@ -19308,7 +19308,7 @@ $as_echo_n "checking for $am_display_PYT
  if ${am_cv_python_pythondir+:} false; then :
    $as_echo_n "(cached) " >&6
  else
@@ -11,7 +25,7 @@ $NetBSD: patch-aa,v 1.9 2015/06/09 08:55:23 wiz Exp $
       echo "$PYTHON_PREFIX/${py_lib}/python$PYTHON_VERSION/site-packages"`
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_python_pythondir" >&5
-@@ -19326,7 +19326,7 @@
+@@ -19326,7 +19326,7 @@ $as_echo_n "checking for $am_display_PYT
  if ${am_cv_python_pyexecdir+:} false; then :
    $as_echo_n "(cached) " >&6
  else
@@ -20,7 +34,7 @@ $NetBSD: patch-aa,v 1.9 2015/06/09 08:55:23 wiz Exp $
       echo "${PYTHON_EXEC_PREFIX}/${py_lib}/python${PYTHON_VERSION}/site-packages"`
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_python_pyexecdir" >&5
-@@ -19420,18 +19420,18 @@
+@@ -19420,18 +19420,18 @@ else
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpython${PYTHON_VERSION}.a" >&5
  $as_echo_n "checking for libpython${PYTHON_VERSION}.a... " >&6; }
  
