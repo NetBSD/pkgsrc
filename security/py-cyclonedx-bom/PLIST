@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/03/24 13:06:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/18 10:31:17 adam Exp $
 bin/cyclonedx-py-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -45,6 +45,9 @@ ${PYSITELIB}/cyclonedx_py/_internal/utils/io.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/license_trove_classifier.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/license_trove_classifier.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/license_trove_classifier.pyo
+${PYSITELIB}/cyclonedx_py/_internal/utils/mimetypes.py
+${PYSITELIB}/cyclonedx_py/_internal/utils/mimetypes.pyc
+${PYSITELIB}/cyclonedx_py/_internal/utils/mimetypes.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/packaging.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/packaging.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/packaging.pyo
@@ -54,6 +57,9 @@ ${PYSITELIB}/cyclonedx_py/_internal/utils/pep610.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/pep621.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/pep621.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/pep621.pyo
+${PYSITELIB}/cyclonedx_py/_internal/utils/pep639.py
+${PYSITELIB}/cyclonedx_py/_internal/utils/pep639.pyc
+${PYSITELIB}/cyclonedx_py/_internal/utils/pep639.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/poetry.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/poetry.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/poetry.pyo
