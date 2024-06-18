@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.279 2024/06/07 12:59:36 gdt Exp $
+# $NetBSD: gcc.mk,v 1.280 2024/06/18 18:27:10 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -184,8 +184,8 @@ GCC_REQD+=	2.8.0
 .if !empty(USE_CXX_FEATURES:Mc++23)
 # gcc documents that 14 is required.
 
-# \todo Change to 14 or justify.
-GCC_REQD+=	12
+# pkgsrc lacks 14, so pick 13.                                                                                                                                                                                             
+GCC_REQD+=     13                                                                                                                                                                                                          
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
