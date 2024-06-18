@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2023/01/18 07:43:16 vins Exp $
+$NetBSD: patch-configure,v 1.4 2024/06/18 09:43:23 markd Exp $
 
 (1)
 Convert install path from fvwm to fvwm2
@@ -7,12 +7,7 @@ CONFIGURE_ARGS+=        --datarootdir=${PREFIX:Q}/share/fvwm2
 this will install fvwm2/fvwm.
 
 (2)
-Avoid following problem on NetBSD/amd64 with clang
-+-----------------
-| conftest.c:38:3: error: non-void function 'main' should return a value [-Wreturn-type]
-|   return;
-|   ^
-+-----------------
+Fixes for C99 compatibility from Fedora
 
 --- configure.orig	2022-10-20 19:05:33.000000000 +0000
 +++ configure
@@ -34,3 +29,34 @@ Avoid following problem on NetBSD/amd64 with clang
   VERSION='2.7.0'
  
  
+@@ -7643,9 +7643,8 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ int
+ main (void)
+ {
+-int i; static j; int *p; char *c;
+-  switch (*p = p = *c) { case 0: printf("%Q", c, p); }
+-  *c = &i; c = p;
++int unused; int *p; char *c;
++  printf("%Q", c, p);
+   while (1 || (unsigned int)3 >= 0 || ((int)-1) == ((unsigned int)1));
+ 
+   ;
+@@ -13512,7 +13511,7 @@ else $as_nop
+ int
+ main (void)
+ {
+-extern select ($ac_cv_type_fd_set_size_t,
++extern int select ($ac_cv_type_fd_set_size_t,
+  $ac_cv_type_fd_set *,	$ac_cv_type_fd_set *, $ac_cv_type_fd_set *,
+  $ac_type_timeval *);
+   ;
+@@ -13615,6 +13614,9 @@ else $as_nop
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifdef HAVE_UNISTD_H
++#include <unistd.h>
++#endif
+ int main(void)
+ {
+   char template[128];
