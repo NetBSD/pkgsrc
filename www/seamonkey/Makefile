@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.270 2024/05/29 16:34:56 adam Exp $
+# $NetBSD: Makefile,v 1.271 2024/06/18 03:17:01 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	14
-SM_VER=		2.53.16
+SM_VER=		2.53.18.2
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
+MASTER_SITES=	https://archive.seamonkey-project.org/releases/${SM_VER}/source/
+#MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
