@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.147 2024/06/17 14:29:07 pin Exp $
+$NetBSD: distinfo,v 1.148 2024/06/18 11:34:38 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -246,12 +246,12 @@ Size (github.com_jandedobbeleer_clipboard_@v_v0.1.4-1.mod) = 35 bytes
 BLAKE2s (github.com_jandedobbeleer_clipboard_@v_v0.1.4-1.zip) = 88c6cb85e9669f4df83bf856743c05275cd942196430e351f27b57002dc7fa72
 SHA512 (github.com_jandedobbeleer_clipboard_@v_v0.1.4-1.zip) = ebd399dfa67f746eed3e0449d3977bb5fec3645a244469ef710999bdfb3bfe493ae7a3095a237c5cd3a8d1a4d6990b6b860629586552f6d16b958b2f2fcf05d4
 Size (github.com_jandedobbeleer_clipboard_@v_v0.1.4-1.zip) = 8924 bytes
-BLAKE2s (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.mod) = 674b449a7be93b013e2848e9d48aa62519fb90f3a905d14cc94143c292b2fb4d
-SHA512 (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.mod) = dc1ca25e104dc5af614545aa15c6d782795aed74338aaa69a1cb3124e0681429b0fc21dd84a7e57b420812b4e6d7b28993cf3e694f192df660bd6ea6c32dcfb4
-Size (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.mod) = 567 bytes
-BLAKE2s (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.zip) = 81480cd070348cd51f7e6f29344e2118dcf3829046dfe3c7eed14a840332590a
-SHA512 (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.zip) = 49af956c32ac5d6caaa196dcb285a4ea04fd55507e02014f714439c67587258c803f27994a90f4ac9dc76a0bc8dd3d3ab81303751c4e266500f7dcd12f4e1da7
-Size (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-2.zip) = 110296 bytes
+BLAKE2s (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.mod) = 674b449a7be93b013e2848e9d48aa62519fb90f3a905d14cc94143c292b2fb4d
+SHA512 (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.mod) = dc1ca25e104dc5af614545aa15c6d782795aed74338aaa69a1cb3124e0681429b0fc21dd84a7e57b420812b4e6d7b28993cf3e694f192df660bd6ea6c32dcfb4
+Size (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.mod) = 567 bytes
+BLAKE2s (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.zip) = fa099141c3f70302cd4ffc29161b846eefde2cb3c59967fd463c532dcc2e0cfa
+SHA512 (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.zip) = f350b5b0b06b7d9b17b17869dd7c91fd637f2151609563957ddcfebafb45e669bbe3a9f2a61f63fd0f34e53603f8334c3446f01550803b5f4d73105a43452977
+Size (github.com_jandedobbeleer_go-yaml_@v_v1.11.3-4.zip) = 110306 bytes
 BLAKE2s (github.com_klauspost_compress_@v_v1.4.1.mod) = 05280ca1b74f6eaa9ff1fc731c41daa120aa2f000a33116cff2f14f465f3133c
 SHA512 (github.com_klauspost_compress_@v_v1.4.1.mod) = 18830e82c89186889b494ac46cc8c4fb398f3aff5416eb1cec3e3b09af281ebd50bb0e8ac7751f6cd89bb1bab3738a354183ba12eb3ea42aa7dab36177b613ec
 Size (github.com_klauspost_compress_@v_v1.4.1.mod) = 37 bytes
@@ -717,8 +717,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-21.12.0.tar.gz) = a3392a36d7281da846002d71a9799de4ce59fe6840c35d79577f745d7b2593eb
-SHA512 (oh-my-posh-21.12.0.tar.gz) = cbb8190cdfa08263c7d4e36b17a7ab49d05b5110f149f222ee699a7467acf84784cc9bdd717895a4674f25327de24acda03686242371617bc57df5a6a26326f2
-Size (oh-my-posh-21.12.0.tar.gz) = 6764991 bytes
+BLAKE2s (oh-my-posh-21.13.1.tar.gz) = 2bb15c62e1d06be1ec3896f3491f6794fd462ae0d91cbe46045be6e52832b274
+SHA512 (oh-my-posh-21.13.1.tar.gz) = 6d5391daf0db48f90837414c89fe83bc4c87e15259c9022c685c55ce71640a81542083a2f04c702815002eed2ed7e2d0d2ccb1fc6e5a3bd4eac04b5309473053
+Size (oh-my-posh-21.13.1.tar.gz) = 6765803 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 37eb1ba8082c0d3dfc287dfd5e35bcd31a00ab6a
