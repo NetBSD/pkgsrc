@@ -1,15 +1,15 @@
-$NetBSD: patch-librarian_Makefile.in,v 1.1 2013/02/23 22:17:02 jperkin Exp $
+$NetBSD: patch-librarian_Makefile.in,v 1.2 2024/06/18 08:56:59 markd Exp $
 
 Don't use -export-symbols-regex, it breaks non-GNU linkers.
 
---- librarian/Makefile.in.orig	2008-09-01 18:44:56.000000000 +0000
+--- librarian/Makefile.in.orig	2023-12-09 03:21:05.000000000 +0000
 +++ librarian/Makefile.in
-@@ -239,7 +239,7 @@ librarian_la_SOURCES = rarian.h rarian-m
- 	rarian-language.h rarian-utils.h rarian-utils.c rarian-info.h \
- 	rarian-info.c rarian-man.c rarian-man.h $(am__append_1)
+@@ -395,7 +395,7 @@ librarian_la_SOURCES = rarian.h rarian-h
+ 	rarian-utils.h rarian-utils.c rarian-info.h rarian-info.c \
+ 	rarian-man.c rarian-man.h $(am__append_1)
  librarian_la_CFLAGS = -DDATADIR=\""$(datadir)"\" -DSYSCONFDIR=\""$(sysconfdir)"\" -DI_KNOW_RARIAN_0_8_IS_UNSTABLE
 -librarian_la_LDFLAGS = -export-symbols-regex "^rrn_.*"
-+librarian_la_LDFLAGS =
++librarian_la_LDFLAGS = 
+ librarian_la_LIBADD = $(RARIAN_LIBS)
  all: all-am
  
- .SUFFIXES:

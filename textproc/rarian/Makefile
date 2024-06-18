@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2024/05/29 16:34:40 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/06/18 08:56:59 markd Exp $
 #
 
-DISTNAME=	rarian-0.8.1
-PKGREVISION=	14
+DISTNAME=	rarian-0.8.5
 CATEGORIES=	textproc
 MASTER_SITES=	https://rarian.freedesktop.org/Releases/
-MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/rarian/0.8/}
+MASTER_SITES+=	https://gitlab.freedesktop.org/rarian/rarian/-/releases/0.8.5/downloads/assets/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,4 +28,5 @@ DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 REQD_DIRS=	share/omf
 
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
