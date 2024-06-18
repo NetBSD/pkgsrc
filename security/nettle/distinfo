@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.28 2023/06/06 05:12:06 adam Exp $
+$NetBSD: distinfo,v 1.29 2024/06/18 10:45:53 adam Exp $
 
-BLAKE2s (nettle-3.9.1.tar.gz) = c00600f7923208032b97baf11deb8a34fdf3a4c104415cd1175c44f4e1b8f57a
-SHA512 (nettle-3.9.1.tar.gz) = 5939c4b43cf9ff6c6272245b85f123c81f8f4e37089fa4f39a00a570016d837f6e706a33226e4bbfc531b02a55b2756ff312461225ed88de338a73069e031ced
-Size (nettle-3.9.1.tar.gz) = 2396741 bytes
+BLAKE2s (nettle-3.10.tar.gz) = ebcde4edeae20cd21482c53e40040038997ab42736b7b8ba529f9940efd74d08
+SHA512 (nettle-3.10.tar.gz) = 18d5b904ce60514aa81b57bff2945e5f7f4366d4775e6a5ffc227b85be2def72b3d2159b983b75ac95a56d3167a2ef1a25b5dfc2fb6193f16a012935c36a7b34
+Size (nettle-3.10.tar.gz) = 2640485 bytes
 SHA1 (patch-Makefile.in) = ea2eed4a6f04d3cd83c1f6267230f9766eb48480
-SHA1 (patch-aa) = 2332668b077a6e3a1add603c87f60167755554ec
 SHA1 (patch-config.make.in) = 708fb3cac9c44825e0d231541cbecade2239c850
-SHA1 (patch-testsuite_Makefile.in) = 6e530041b753336b3eff745e0b05b3b382baec0c
+SHA1 (patch-configure) = 2332668b077a6e3a1add603c87f60167755554ec
+SHA1 (patch-testsuite_Makefile.in) = 23cc958d5b4bc5c3822848ce0e4be5e7f13d2ffc
 SHA1 (patch-tools_Makefile.in) = 743d09935526cb783fe93ffc417c4153e13dcfac
