@@ -1,15 +1,15 @@
-$NetBSD: patch-src_include.am,v 1.1 2024/03/11 07:49:12 wiz Exp $
+$NetBSD: patch-src_include.am,v 1.2 2024/06/18 18:23:15 bsiegert Exp $
 
-* Add NetBSD support
+Fix bash-completion path
 
---- src/include.am.orig	2023-05-05 10:48:34.000000000 +0000
+--- src/include.am.orig	2024-05-20 12:29:43.000000000 +0000
 +++ src/include.am
-@@ -9,7 +9,7 @@ MEGACMD = mega-cmd mega-exec mega-cmd-se
- bin_PROGRAMS += $(MEGACMD)
+@@ -16,7 +16,7 @@ bin_PROGRAMS += $(MEGACMD) $(TESTS)
  $(MEGACMD): $(top_builddir)/sdk/src/libmega.la
- noinst_HEADERS += src/comunicationsmanager.h src/configurationmanager.h src/megacmd.h src/megacmdlogger.h src/megacmdsandbox.h src/megacmdutils.h src/megacmdcommonutils.h src/listeners.h src/megacmdexecuter.h src/megacmdtransfermanager.h src/megacmdversion.h src/megacmdplatform.h src/comunicationsmanagerportsockets.h
+ 
+ #scripst (to install and where)
 -megacmdcompletiondir = $(sysconfdir)/bash_completion.d/
 +megacmdcompletiondir = $(datadir)/bash-completion/completions/
  megacmdcompletion_DATA = src/client/megacmd_completion.sh
  megacmdscripts_bindir = $(bindir)
- 
+ megacmdscripts_bin_SCRIPTS = src/client/mega-attr src/client/mega-cd src/client/mega-confirm src/client/mega-cp src/client/mega-debug src/client/mega-du src/client/mega-df src/client/mega-proxy src/client/mega-export src/client/mega-find src/client/mega-get src/client/mega-help src/client/mega-https src/client/mega-webdav src/client/mega-permissions src/client/mega-deleteversions src/client/mega-transfers src/client/mega-import src/client/mega-invite src/client/mega-ipc src/client/mega-killsession src/client/mega-lcd src/client/mega-log src/client/mega-login src/client/mega-logout src/client/mega-lpwd src/client/mega-ls src/client/mega-backup src/client/mega-mkdir src/client/mega-mount src/client/mega-mv src/client/mega-passwd src/client/mega-preview src/client/mega-put src/client/mega-speedlimit src/client/mega-pwd src/client/mega-quit src/client/mega-reload src/client/mega-rm src/client/mega-session src/client/mega-share src/client/mega-showpcr src/client/mega-signup src/client/mega-sync src/client/mega-exclude src/client/mega-thumbnail src/client/mega-userattr src/client/mega-users src/client/mega-version src/client/mega-whoami src/client/mega-cat src/client/mega-tree src/client/mega-mediainfo src/client/mega-graphics src/client/mega-ftp src/client/mega-cancel src/client/mega-confirmcancel src/client/mega-errorcode
