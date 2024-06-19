@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4067 2024/06/19 09:31:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4068 2024/06/19 09:50:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6506,3 +6506,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake-gui to 3.29.6 [adam 2024-06-19]
 	Updated textproc/po4a to 0.73 [adam 2024-06-19]
 	Updated devel/SDL2 to 2.30.4 [adam 2024-06-19]
+	Updated graphics/py-tifffile to 2024.6.18 [adam 2024-06-19]
+	Updated databases/py-sqlalchemy to 2.0.31 [adam 2024-06-19]
