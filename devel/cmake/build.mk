@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.13 2024/06/09 20:56:52 markd Exp $
+# $NetBSD: build.mk,v 1.14 2024/06/19 12:54:18 jperkin Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -47,6 +47,7 @@ TOOL_DEPENDS+=	cmake>=${version}:../../devel/cmake
 # to add to CMAKE_CONFIGURE_ARGS.
 BUILD_USES_CMAKE=	yes
 
+OPSYSVARS+=		CMAKE_CONFIGURE_ARGS
 CMAKE_CONFIGURE_ARGS?=	${CMAKE_ARGS}
 
 # The assumption in pkgsrc is that packages don't download files
