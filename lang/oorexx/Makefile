@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/02 18:59:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/19 11:11:23 jperkin Exp $
 #
 
 DISTNAME=	oorexx-5.0.0-12583
@@ -26,6 +26,7 @@ WRKSRC=		${WRKDIR}
 
 # Runs the built executable bin/rexx during build.
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/lib
 
 CMAKE_ARGS+=	-DORX_SHEBANG=${PREFIX}/bin/rexx
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Subversion:BOOL=TRUE
