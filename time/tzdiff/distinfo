@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/07/21 09:32:22 taca Exp $
+$NetBSD: distinfo,v 1.3 2024/06/19 11:14:58 taca Exp $
 
-BLAKE2s (tzdiff-1.2.tar.gz) = e20d33d4a85d8ef5d30c2cbd943d89df2178d77cc94a7166b9859804398ffd43
-SHA512 (tzdiff-1.2.tar.gz) = ce133e970c673bdbda815148a9b5a96a63d925807a4a4b04926331084d7b5cc9e3a7368ffb13b30bf9748301eed858bd9ed5184f36addd20ca0494429ff556db
-Size (tzdiff-1.2.tar.gz) = 5856 bytes
+BLAKE2s (tzdiff-1.2.1.tar.gz) = d15efe97ddb96e420f3eaa63c629ac68f0dedbf8b2f357087822c0ffd724d812
+SHA512 (tzdiff-1.2.1.tar.gz) = 806406a2c4b318fb303af83340655bb5ae642a7727de347f1bc1d8879f2396ca6235e023a5f29dfba659966a88af8c7b09a15fc430a276a68d26423904063972
+Size (tzdiff-1.2.1.tar.gz) = 6239 bytes
