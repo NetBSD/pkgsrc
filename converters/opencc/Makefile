@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/06/19 11:01:18 jperkin Exp $
 
 VERSION=	1.1.3
 GITHUB_PROJECT=	OpenCC
@@ -27,6 +27,7 @@ PKGCONFIG_OVERRIDE+=	opencc.pc.in
 USE_GCC_RUNTIME=	yes
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/src
 
 TEST_TARGET=	test
 
