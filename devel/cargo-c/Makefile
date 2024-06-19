@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/05/07 07:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/06/19 08:17:50 pin Exp $
 
+# v0.10.0 requires Rust >= 1.77
 DISTNAME=	cargo-c-0.9.32
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
