@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1128 2024/05/26 13:00:35 markd Exp $
+# $NetBSD: Makefile,v 1.1129 2024/06/19 02:07:24 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -506,6 +506,8 @@ SUBDIR+=	oak
 SUBDIR+=	onefetch
 SUBDIR+=	open-vm-tools
 SUBDIR+=	openipmi
+#SUBDIR+=	opensbi
+SUBDIR+=	opensbi-visionfive2
 SUBDIR+=	openstack_init
 SUBDIR+=	osname
 SUBDIR+=	ovmf
@@ -841,6 +843,7 @@ SUBDIR+=	u-boot-rpi3-32
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-tinker
 SUBDIR+=	u-boot-udoo-neo-imx6sx
+SUBDIR+=	u-boot-visionfive2
 SUBDIR+=	u-boot-zynq-zturn
 SUBDIR+=	u-boot-zynq-zybo
 SUBDIR+=	u-boot-zynq-zybo-z7
