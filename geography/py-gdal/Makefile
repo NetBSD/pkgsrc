@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2024/05/29 16:32:48 adam Exp $
+# $NetBSD: Makefile,v 1.70 2024/06/19 12:00:45 gdt Exp $
 
 PKGREVISION= 3
 .include "../../geography/gdal-lib/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 
-# Beause this package runs cmake for all of gdal, everything that is
+# Because this package runs cmake for all of gdal, everything that is
 # hard-required must be present, separately from whether it is needed
 # for the python bindings.
 USE_LANGUAGES=		c c++
@@ -32,9 +32,12 @@ PYSETUPSUBDIR=		build/swig/python
 #   wheel's build/install targets.
 TOOL_DEPENDS+=	cmake>=0:../../devel/cmake
 TOOL_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
+
+CMAKE_CONFIGURE_ARGS+=	-DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
+
 pre-build:
 	cd ${WRKSRC} && mkdir build && cd build && \
-	cmake .. && \
+	cmake ${CMAKE_CONFIGURE_ARGS} .. && \
 	cd swig/python && \
 	${MAKE} python_generated_files
 

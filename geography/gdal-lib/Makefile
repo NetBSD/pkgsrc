@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2024/06/16 12:23:12 gdt Exp $
+# $NetBSD: Makefile,v 1.174 2024/06/19 12:00:44 gdt Exp $
 
 PKGREVISION= 2
 .include "../../geography/gdal-lib/Makefile.common"
@@ -76,6 +76,18 @@ CMAKE_CONFIGURE_ARGS+=	-DNetCDF_DIR=${BUILDLINK_PREFIX.netcdf}
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
+
+# gdal wants to use rtree, which is technically optional in sqlite3.
+# While it is present in pkgsrc and NetBSD 10, it is missing in NetBSD
+# 9.  This is messy because base sqlite3 is linked via heimdal and
+# python links with base by default.  Resolving this is hard; it
+# basically amounts to declaring that NetBSD 9 sqlite3 is not
+# acceptable in pkgsrc, and then avoiding base sqlite3 via base
+# heimdal.  It seems likely consensus would form around "gdal is
+# deficient on NetBSD 9" rather than upheaval.
+
+# Don't try to force new/rtree sqlite3, and accept lack of rtree.
+#BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.36.0
 CMAKE_CONFIGURE_ARGS+=	-DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
 
 .include "options.mk"
@@ -87,10 +99,6 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 # \todo: Support geopdf by including poppler, PoDoFo, or PDFium.
 # https://gdal.org/drivers/raster/pdf.html
 
-# As an exception to the "cmake change only" rule, enable spatialite because
-# that's easier than working around a bug that causes cmake to fail because
-# of an empty variable leading to a wrong number of args error.
-#
 # NB: spatialite requires sqlite3, so there is the spectre of base/pkg confusion.
 # Therefore, include it first in the baseless hope that helps.
 .include "../../geography/libspatialite/buildlink3.mk"
@@ -99,9 +107,6 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 # .include "../../archivers/zstd/buildlink3.mk"
 
 .include "../../archivers/libarchive/buildlink3.mk"
-# Avoid NetBSD base sqlite3, which is deficient because it lacks rtree.
-# \todo Enhance pkgsrc to be able to declare that modules are needed.
-#BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.36.0
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
