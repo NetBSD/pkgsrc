@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/12/23 20:09:18 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/06/19 18:58:31 schmonz Exp $
 
 BUILDLINK_TREE+=	skalibs
 
 .if !defined(SKALIBS_BUILDLINK3_MK)
 SKALIBS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.skalibs+=		skalibs>=2.14.1.0
+BUILDLINK_API_DEPENDS.skalibs+=		skalibs>=2.14.2.0
 BUILDLINK_PKGSRCDIR.skalibs?=		../../devel/skalibs
 
 SKALIBS_TOLERATE_TARGET_SKEW?=		yes
