@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/08 21:45:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/19 15:19:05 adam Exp $
 include/zconf-ng.h
 include/zlib-ng.h
 include/zlib_name_mangling-ng.h
+lib/cmake/zlib-ng/zlib-ng-config-version.cmake
+lib/cmake/zlib-ng/zlib-ng-config.cmake
 lib/cmake/zlib-ng/zlib-ng-release.cmake
 lib/cmake/zlib-ng/zlib-ng.cmake
 lib/libz-ng.a
