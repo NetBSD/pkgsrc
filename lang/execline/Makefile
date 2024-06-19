@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/04/16 18:26:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2024/06/19 18:58:58 schmonz Exp $
 
-DISTNAME=	execline-2.9.5.1
+DISTNAME=	execline-2.9.6.0
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -11,7 +11,7 @@ COMMENT=	The execline scripting language
 LICENSE=	isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	2.9.5.0.1
+MANPAGES_VERSION=	2.9.6.0.1
 MANPAGES_DIST=		execline-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/execline-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
@@ -34,6 +34,5 @@ do-install-manpages:
 		done \
 	done
 
-BUILDLINK_API_DEPENDS.skalibs+=	skalibs>=2.14.1.1
 .include "../../devel/skalibs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
