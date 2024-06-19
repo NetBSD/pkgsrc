@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/02/19 11:23:20 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/06/19 05:11:36 adam Exp $
 
-DISTNAME=	tempora-5.5.1
+DISTNAME=	tempora-5.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tempora/}
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=1.20:../../devel/py-jaraco.functools
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs-[0-9]*:../../devel/py-test-checkdocs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezer-[0-9]*:../../devel/py-test-freezer
