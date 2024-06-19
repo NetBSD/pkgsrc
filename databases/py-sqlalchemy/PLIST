@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/03/31 19:19:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/06/19 09:49:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -19,7 +19,6 @@ ${PYSITELIB}/sqlalchemy/connectors/asyncio.pyo
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.py
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.pyc
 ${PYSITELIB}/sqlalchemy/connectors/pyodbc.pyo
-${PYSITELIB}/sqlalchemy/cyextension/.gitignore
 ${PYSITELIB}/sqlalchemy/cyextension/__init__.py
 ${PYSITELIB}/sqlalchemy/cyextension/__init__.pyc
 ${PYSITELIB}/sqlalchemy/cyextension/__init__.pyo
