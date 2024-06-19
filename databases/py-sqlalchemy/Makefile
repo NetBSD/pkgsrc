@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2024/05/08 15:15:47 adam Exp $
+# $NetBSD: Makefile,v 1.77 2024/06/19 09:49:58 adam Exp $
 
-DISTNAME=	SQLAlchemy-2.0.30
+DISTNAME=	SQLAlchemy-2.0.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
@@ -18,9 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# test status as of 2.0.28
-# 2 failed, 20790 passed, 10754 skipped, 107 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
