@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.48 2023/06/20 08:38:09 adam Exp $
+$NetBSD: distinfo,v 1.49 2024/06/19 08:46:33 adam Exp $
 
-BLAKE2s (freeradius-server-3.2.3.tar.bz2) = 7a604f1df1c9d9a92dfc561c77d5088eeb212efb9ec600c243cd70ee17cdecd6
-SHA512 (freeradius-server-3.2.3.tar.bz2) = 06767153e262a2baa2d0cc74099bc13c23b33c2316348b5dc8ec0f5834c028571bd09b8c01726a6eabeaab8fdc3050f40bfeba2d5b1c299585d1689abad365ce
-Size (freeradius-server-3.2.3.tar.bz2) = 3454869 bytes
+BLAKE2s (freeradius-server-3.2.4.tar.bz2) = 4f7e10f514d93110cf16e7ec3c1c9ee6d945bd0e84a1cc22367b114458a4fa12
+SHA512 (freeradius-server-3.2.4.tar.bz2) = f0a0ebec906d72e44740cf66069cd8d29d93703bfb976dbb1b7ce062eb86cc2977af167577b908677a8dd4a0d9ee708605d08eb2f0f77f6feb5a0b1a244833fb
+Size (freeradius-server-3.2.4.tar.bz2) = 3495607 bytes
 SHA1 (patch-configure) = ddafb5aafec43d2c9d2c81a824fa514224243ac0
 SHA1 (patch-configure.ac) = ffec1f851d23f560797c12eba5092f2940e4d662
 SHA1 (patch-raddb_radiusd.conf.in) = 353cbed35013777bf055a77cc610b50a637ae7b7
 SHA1 (patch-src_lib_udpfromto.c) = 2457f0a7223b1f3ef86d0af020290b26380e6319
 SHA1 (patch-src_main_command.c) = 1c79b29eb13df341906c710c8dd41860a27473dd
-SHA1 (patch-src_main_listen.c) = 7ffd9a6940b513804b9c77ac5b126d5e038408fa
+SHA1 (patch-src_main_listen.c) = 6516ae11e82cc292f2b306f235b812fff317ba0b
 SHA1 (patch-src_main_util.c) = e8814255c32c8469e81d62f2c7092e8d42744e85

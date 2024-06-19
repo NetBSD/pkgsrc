@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.123 2024/05/29 16:33:51 adam Exp $
+# $NetBSD: Makefile,v 1.124 2024/06/19 08:46:33 adam Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}
@@ -53,9 +52,10 @@ SUBST_VARS.secconf=	RADIUS_USER RADIUS_GROUP
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
 MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR}/certs/bootstrap
 
-REPLACE_PERL+=		src/modules/rlm_counter/rad_counter
 REPLACE_PERL+=		scripts/sql/radsqlrelay
 REPLACE_PERL+=		scripts/sql/rlm_sqlippool_tool
+REPLACE_PERL+=		src/main/radsecret
+REPLACE_PERL+=		src/modules/rlm_counter/rad_counter
 
 EGDIR=		${PREFIX}/share/examples/freeradius
 
