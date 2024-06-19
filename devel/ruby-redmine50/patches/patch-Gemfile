@@ -1,19 +1,19 @@
-$NetBSD: patch-Gemfile,v 1.10 2024/05/05 14:42:01 taca Exp $
+$NetBSD: patch-Gemfile,v 1.11 2024/06/19 11:20:31 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2024-03-04 19:55:01.000000000 +0000
+--- Gemfile.orig	2024-06-12 00:40:01.000000000 +0000
 +++ Gemfile
 @@ -3,9 +3,9 @@ source 'https://rubygems.org'
  ruby '>= 2.5.0', '< 3.2.0'
  gem 'bundler', '>= 1.12.0'
  
--gem 'rails', '6.1.7.7'
+-gem 'rails', '6.1.7.8'
 +gem 'rails', '~> 6.1.7'
  gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 -gem 'rouge', '~> 3.28.0'
-+gem 'rouge', '>= 3.28'
++gem 'rouge', '>= 3.28.0'
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"

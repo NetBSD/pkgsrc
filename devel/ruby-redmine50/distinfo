@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2024/05/05 14:42:01 taca Exp $
+$NetBSD: distinfo,v 1.13 2024/06/19 11:20:31 taca Exp $
 
-BLAKE2s (redmine-5.0.8.tar.gz) = 5eddbf1ec9879585f9f18a9395a69ebee4457e1c691813f75bcec62a458eb26d
-SHA512 (redmine-5.0.8.tar.gz) = 12eb5c4ef90c512b747283b8b2e167157775867d60bc0d8fdec7bcd79ebfa6a86bd8bcd8d9b3acab99fbc8670543c456f12bf699e9d59aafb7b7446ae8ed1123
-Size (redmine-5.0.8.tar.gz) = 3150853 bytes
-SHA1 (patch-Gemfile) = fad9c75653ef362d4d179395dcbc5f15d7bbdd13
+BLAKE2s (redmine-5.0.9.tar.gz) = d52bf1198f63feca79623977d63691658491935c169f0ed8436bce7243b2b21e
+SHA512 (redmine-5.0.9.tar.gz) = 4b4a73164b134bc82826a8d909b5c4434ea03d6eb76f20de7db8ee7d321e47e679f22f03757a2906b858a0fa7543bfbeb5ea53498c097a399ad03fcd1e83aebb
+Size (redmine-5.0.9.tar.gz) = 3151650 bytes
+SHA1 (patch-Gemfile) = 4d20d0d3cdd12651fc9dd7ac182026c73398254f
 SHA1 (patch-config_additional__environment.rb.example) = 7ad913800c5f31fdd9b71aa92294bdbeea7b77fe
 SHA1 (patch-lib_redmine_scm_adapters_mercurial_redminehelper.py) = 87db1005896b2a962b8b93ec5b5b7d313ae6f691
 SHA1 (patch-lib_tasks_initializers.rake) = 73c4594c94abd28e628bbd172565b161f0e54fff
