@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/12/29 16:55:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/19 19:01:04 schmonz Exp $
 
-DISTNAME=		shibari-0.0.1.0
+DISTNAME=		shibari-0.0.1.1
 CATEGORIES=		net
-MASTER_SITES=		https://skarnet.org/software/shibari/
+MASTER_SITES=		${HOMEPAGE}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=		Collection of DNS tools for Unix systems
 LICENSE=		isc
 
 # man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	0.0.1.0.1
+MANPAGES_VERSION=	0.0.1.1.1
 MANPAGES_DIST=		shibari-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/shibari-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
