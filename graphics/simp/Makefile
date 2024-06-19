@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/06/11 08:36:48 pin Exp $
+# $NetBSD: Makefile,v 1.25 2024/06/19 08:18:57 pin Exp $
 
+# 3.6.x series requires Rust >= 1.78
 DISTNAME=	simp-3.5.3
 PKGREVISION=	3
 CATEGORIES=	graphics
