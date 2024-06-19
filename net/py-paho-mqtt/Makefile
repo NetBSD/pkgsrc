@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2024/06/19 14:03:04 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2024/06/19 15:33:03 gdt Exp $
 
 VERSION=	2.1.0
 # Bad distfile name reported upstream via email on 20240619.
 DISTNAME=	paho_mqtt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-paho-mqtt-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paho-mqtt/}
 
