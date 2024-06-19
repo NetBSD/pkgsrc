@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2024/06/16 05:55:34 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2024/06/19 08:15:26 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -103,8 +103,6 @@ CARGO_CRATE_DEPENDS+=	inotify-0.9.6
 CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
 CARGO_CRATE_DEPENDS+=	inventory-0.3.15
 CARGO_CRATE_DEPENDS+=	ipnet-2.9.0
-CARGO_CRATE_DEPENDS+=	is-docker-0.2.0
-CARGO_CRATE_DEPENDS+=	is-wsl-0.4.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.0
 CARGO_CRATE_DEPENDS+=	itertools-0.12.1
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11
@@ -140,14 +138,12 @@ CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
 CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
 CARGO_CRATE_DEPENDS+=	object-0.32.2
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
-CARGO_CRATE_DEPENDS+=	open-5.1.3
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.1.5
 CARGO_CRATE_DEPENDS+=	overload-0.1.1
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.2
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.10
 CARGO_CRATE_DEPENDS+=	paste-1.0.15
-CARGO_CRATE_DEPENDS+=	pathdiff-0.2.1
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	petgraph-0.6.5
 CARGO_CRATE_DEPENDS+=	pin-project-1.1.5
