@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/10 05:17:48 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/06/19 05:08:23 adam Exp $
 
-BLAKE2s (dnsdiag-2.1.0.tar.gz) = 2b8123d5d3b455a1907f433f90f9171637bbe402d591bcdab6aa407438d1db3c
-SHA512 (dnsdiag-2.1.0.tar.gz) = b597c1624858c6a6406837498ec9069313ad7de4d3e3ac7118367bcf7d9dd08946d1270a664cd97cefd2bb678c636e63b115595a812ae2f10970baf3e9c23c69
-Size (dnsdiag-2.1.0.tar.gz) = 17267 bytes
+BLAKE2s (dnsdiag-2.5.0.tar.gz) = 10cdf97f4d9024dafd84a41d4de6bfc8e13fc228aed251289a5965a526c82939
+SHA512 (dnsdiag-2.5.0.tar.gz) = e885a06b8f8c282bc6320fd5da94837b9c0bc5d3ac3af967d8f76db34a8638fedf8026fb35350dd3c7235249e3a6ff4e083cf5a1d742dcff95bd6f1208ba2c5d
+Size (dnsdiag-2.5.0.tar.gz) = 18871 bytes
