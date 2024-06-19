@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2023/06/17 18:19:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2024/06/19 08:46:33 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -7,6 +7,7 @@ bin/radclient
 bin/radcrypt
 bin/radeapclient
 bin/radlast
+bin/radsecret
 bin/radsniff
 bin/radsqlrelay
 bin/radtest
@@ -101,6 +102,7 @@ lib/rlm_date.${SOEXT}
 lib/rlm_detail.${SOEXT}
 lib/rlm_dhcp.${SOEXT}
 lib/rlm_digest.${SOEXT}
+lib/rlm_dpsk.${SOEXT}
 lib/rlm_dynamic_clients.${SOEXT}
 lib/rlm_eap.${SOEXT}
 lib/rlm_eap_fast.${SOEXT}
@@ -110,6 +112,7 @@ lib/rlm_eap_mschapv2.${SOEXT}
 lib/rlm_eap_peap.${SOEXT}
 lib/rlm_eap_pwd.${SOEXT}
 lib/rlm_eap_sim.${SOEXT}
+lib/rlm_eap_teap.${SOEXT}
 lib/rlm_eap_tls.${SOEXT}
 lib/rlm_eap_ttls.${SOEXT}
 lib/rlm_exec.${SOEXT}
@@ -197,8 +200,22 @@ share/doc/freeradius/antora/modules/ROOT/assets/images/networkradius.png
 share/doc/freeradius/antora/modules/ROOT/nav.adoc
 share/doc/freeradius/antora/modules/ROOT/pages/directories.adoc
 share/doc/freeradius/antora/modules/ROOT/pages/index.adoc
+share/doc/freeradius/antora/modules/concepts/nav.adoc
+share/doc/freeradius/antora/modules/concepts/pages/aaa.adoc
+share/doc/freeradius/antora/modules/concepts/pages/index.adoc
+share/doc/freeradius/antora/modules/concepts/pages/modules/ldap/authentication.adoc
+share/doc/freeradius/antora/modules/developers/nav.adoc
+share/doc/freeradius/antora/modules/developers/pages/bugs.adoc
+share/doc/freeradius/antora/modules/developers/pages/coding-methods.adoc
+share/doc/freeradius/antora/modules/developers/pages/contributing.adoc
+share/doc/freeradius/antora/modules/developers/pages/coverage.adoc
+share/doc/freeradius/antora/modules/developers/pages/index.adoc
+share/doc/freeradius/antora/modules/developers/pages/profile.adoc
+share/doc/freeradius/antora/modules/developers/pages/release-method.adoc
 share/doc/freeradius/antora/modules/howto/nav.adoc
 share/doc/freeradius/antora/modules/howto/pages/index.adoc
+share/doc/freeradius/antora/modules/howto/pages/monitoring/index.adoc
+share/doc/freeradius/antora/modules/howto/pages/monitoring/statistics.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/enable.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/index.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/policy.adoc
@@ -216,6 +233,7 @@ share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/index.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_client.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_with_haproxy.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_with_traefik.adoc
+share/doc/freeradius/antora/modules/howto/pages/simultaneous_use.adoc
 share/doc/freeradius/antora/modules/installation/nav.adoc
 share/doc/freeradius/antora/modules/installation/pages/dependencies.adoc
 share/doc/freeradius/antora/modules/installation/pages/index.adoc
@@ -419,6 +437,7 @@ share/examples/freeradius/certs/bootstrap
 share/examples/freeradius/certs/ca.cnf
 share/examples/freeradius/certs/client.cnf
 share/examples/freeradius/certs/inner-server.cnf
+share/examples/freeradius/certs/realms/README.md
 share/examples/freeradius/certs/server.cnf
 share/examples/freeradius/certs/xpextensions
 share/examples/freeradius/clients.conf
@@ -446,6 +465,7 @@ share/examples/freeradius/mods-available/dhcp_passwd
 share/examples/freeradius/mods-available/dhcp_sql
 share/examples/freeradius/mods-available/dhcp_sqlippool
 share/examples/freeradius/mods-available/digest
+share/examples/freeradius/mods-available/dpsk
 share/examples/freeradius/mods-available/dynamic_clients
 share/examples/freeradius/mods-available/eap
 share/examples/freeradius/mods-available/echo
@@ -707,6 +727,7 @@ share/freeradius/dictionary.alcatel
 share/freeradius/dictionary.alcatel-lucent.aaa
 share/freeradius/dictionary.alcatel.esam
 share/freeradius/dictionary.alcatel.sr
+share/freeradius/dictionary.alphion
 share/freeradius/dictionary.alteon
 share/freeradius/dictionary.altiga
 share/freeradius/dictionary.alvarion
@@ -748,6 +769,7 @@ share/freeradius/dictionary.cisco.bbsm
 share/freeradius/dictionary.cisco.vpn3000
 share/freeradius/dictionary.cisco.vpn5000
 share/freeradius/dictionary.citrix
+share/freeradius/dictionary.ckey
 share/freeradius/dictionary.clavister
 share/freeradius/dictionary.cnergee
 share/freeradius/dictionary.colubris
@@ -831,6 +853,7 @@ share/freeradius/dictionary.nomadix
 share/freeradius/dictionary.nortel
 share/freeradius/dictionary.ntua
 share/freeradius/dictionary.openser
+share/freeradius/dictionary.openwifi
 share/freeradius/dictionary.packeteer
 share/freeradius/dictionary.paloalto
 share/freeradius/dictionary.patton
@@ -890,6 +913,7 @@ share/freeradius/dictionary.shasta
 share/freeradius/dictionary.shiva
 share/freeradius/dictionary.siemens
 share/freeradius/dictionary.slipstream
+share/freeradius/dictionary.smartsharesystems
 share/freeradius/dictionary.sofaware
 share/freeradius/dictionary.softbank
 share/freeradius/dictionary.sonicwall
@@ -903,6 +927,7 @@ share/freeradius/dictionary.telebit
 share/freeradius/dictionary.telkom
 share/freeradius/dictionary.telrad
 share/freeradius/dictionary.terena
+share/freeradius/dictionary.tplink
 share/freeradius/dictionary.trapeze
 share/freeradius/dictionary.travelping
 share/freeradius/dictionary.tripplite
