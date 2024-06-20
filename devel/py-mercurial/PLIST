@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.47 2024/03/17 15:12:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2024/06/20 23:55:54 joerg Exp $
+bin/chg
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -1475,6 +1476,7 @@ ${PYSITELIB}/mercurial/worker.py
 ${PYSITELIB}/mercurial/worker.pyc
 ${PYSITELIB}/mercurial/worker.pyo
 ${PYSITELIB}/mercurial/zstd.so
+man/man1/chg.1
 man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
