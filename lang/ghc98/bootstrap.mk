@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.4 2024/05/11 18:37:40 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2024/06/20 12:49:39 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -107,7 +107,18 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz gtar cpp patch # patch is for bootstrap.py
+USE_TOOLS+=	xzcat xz cpp patch # patch is for bootstrap.py
+
+# We must avoid gtar on Darwin because it ends up pulling in libiconv (see
+# Makefile for why that breaks things).  It's possible this is no longer
+# required anyway and has just been cargo-culted around since 2019.
+#
+.if ${OPSYS} == "Darwin"
+GHC_TAR=	${TAR}
+.else
+USE_TOOLS+=	gtar
+GHC_TAR=	${GTAR}
+.endif
 
 BOOT_ARCHIVE_TOP_DIR=	${BOOT_ARCHIVE:C/\.tar\..z$//}
 pre-configure:
@@ -118,7 +129,7 @@ pre-configure:
 	${RUN}${MKDIR} ${WRKDIR}/bootkit-dist
 	${RUN}cd ${WRKDIR}/bootkit-dist && \
 		${XZCAT} ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} | \
-		${GTAR} -xf -
+		${GHC_TAR} -xf -
 
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
 # <kludge>

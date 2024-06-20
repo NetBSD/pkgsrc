@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/11 18:37:40 pho Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/20 12:49:39 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -33,6 +33,13 @@ PKGSRC_OVERRIDE_MKPIE=	yes
 
 .include "options.mk"
 
+# The bootstrap kits are built with native iconv, and unfortunately ghc looks
+# in places it should not, so we have to do everything we can to avoid libiconv
+# being installed as it breaks the build due to iconv_*() vs libiconv_*().
+#
+.if ${OPSYS} == "Darwin"
+PREFER.iconv=	native
+.endif
 
 # -----------------------------------------------------------------------------
 # Distfiles
