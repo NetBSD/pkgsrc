@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2024/06/19 08:18:57 pin Exp $
+# $NetBSD: Makefile,v 1.26 2024/06/20 09:03:21 pin Exp $
 
-# 3.6.x series requires Rust >= 1.78
-DISTNAME=	simp-3.5.3
-PKGREVISION=	3
+DISTNAME=	simp-3.6.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+# We need these post-release commits to fix functionality on NetBSD.
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	289e047448dac285205448493bbe18ac51aa0514
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Kl4rry/simp/
@@ -23,6 +23,15 @@ USE_TOOLS+=	pkg-config
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/simp.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/simp.1
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		gtk3
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk3/buildlink3.mk"
