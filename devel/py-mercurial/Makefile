@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.95 2024/06/09 18:08:41 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2024/06/20 23:55:54 joerg Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -34,7 +35,13 @@ USE_TOOLS+=		bash:test
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
 
+post-build:
+	${RUN} cd ${WRKSRC} && ${BUILD_MAKE_CMD} build-chg
+
 post-install:
+	cd ${WRKSRC} && PYTHON=${PYTHONBIN} make install-chg \
+	    PREFIX=${DESTDIR}/${PREFIX} \
+	    MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.5  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/README.rst  \
