@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2024/05/26 10:29:06 nia Exp $
+# $NetBSD: Makefile,v 1.551 2024/06/20 17:10:29 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -321,6 +321,7 @@ SUBDIR+=	nxengine-evo
 SUBDIR+=	omega
 SUBDIR+=	onscripter
 SUBDIR+=	openarena
+SUBDIR+=	openclonk
 SUBDIR+=	openhexagon
 SUBDIR+=	openjazz
 SUBDIR+=	openjk
