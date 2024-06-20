@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4085 2024/06/19 21:23:27 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.4086 2024/06/20 00:01:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6526,3 +6526,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/shibari to 0.0.1.1 [schmonz 2024-06-19]
 	Updated shells/oh-my-posh to 21.14.0 [pin 2024-06-19]
 	Updated www/php-nextcloud to 28.0.6 [gdt 2024-06-19]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2024Q2 branch [wiz 2024-06-20]
