@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/06/20 17:02:49 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/20 20:23:23 charlotte Exp $
 
 PKGNAME=	openclonk-8.1
 DISTNAME=	openclonk-${PKGVERSION_NOREV}-src
@@ -13,11 +13,11 @@ LICENSE=	isc
 
 WRKSRC=		${WRKDIR}/openclonk-release-${PKGVERSION_NOREV}-src
 EXTRACT_USING=	gtar
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 GCC_REQD+=	4.9
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
