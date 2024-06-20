@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/05/29 16:33:41 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/06/20 12:09:28 gdt Exp $
 
 GITHUB_PROJECT=	XyGrib
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opengribs.org/
 COMMENT=	GRIB file viewer for weather data
 LICENSE=	gnu-gpl-v3
+
+# This program is not maintained upstream.
+# https://github.com/opengribs/XyGrib/issues/313
+
+BROKEN=		"uses now-removed proj API"
+# https://github.com/opengribs/XyGrib/issues/200 (filed 2019-03-13)
+# https://github.com/opengribs/XyGrib/pull/289 (merged but not in a release)
 
 .include "data.mk"
 
