@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/06/20 17:02:49 charlotte Exp $
+
+BLAKE2s (openclonk-8.1-src.tar.bz2) = 3c71fb0de076096b4860cbbbb21d2e45421bbf9f54e88396450633b9e696cbd0
+SHA512 (openclonk-8.1-src.tar.bz2) = b52a2fba0906cc80fffe2ce308bb4631d4e2d4ada6b8442856deb5e729d37d5c473c3c1a50765eb0bd978d9e3c874d83e0d60f67f44d9535a3ac432029849f6c
+Size (openclonk-8.1-src.tar.bz2) = 120149164 bytes
+SHA1 (patch-CMakeLists.txt) = f0d0eac3227c0bf3ff11cb85203ba471de8d9344

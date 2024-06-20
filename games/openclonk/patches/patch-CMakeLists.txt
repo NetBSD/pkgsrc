@@ -1,0 +1,46 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/06/20 17:02:50 charlotte Exp $
+
+Don't attempt to deal with link-time optimization manually; CMake is smart
+enough to figure it out on its own.
+
+--- CMakeLists.txt.orig	2020-02-12 22:30:26.516115047 -0800
++++ CMakeLists.txt	2020-02-12 22:30:36.341115137 -0800
+@@ -91,38 +91,6 @@
+ 	endforeach()
+ endfunction()
+ 
+-CHECK_CXX_COMPILER_FLAG("-flto" USE_GCC_STYLE_LTCG)
+-if(USE_GCC_STYLE_LTCG)
+-	set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -flto")
+-	set(CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} -flto")
+-	add_linker_flags(optimized MODULES exe shared FLAGS -flto)
+-
+-	# Use GCC's ar and ranlib wrappers if necessary, because the plain ones 
+-	# don't understand lto objects without an explicit plugin parameter
+-	if(CMAKE_C_COMPILER MATCHES "gcc$")
+-		set(LTCG_NEEDS_AR_WRAPPER 1)
+-		set(LTCG_AR_WRAPPER_PREFIX "${CMAKE_C_COMPILER}")
+-	elseif(CMAKE_C_COMPILER MATCHES "cc$")
+-		set(LTCG_NEEDS_AR_WRAPPER 1)
+-		set(LTCG_AR_WRAPPER_PREFIX "gcc")
+-	else()
+-		set(LTCG_NEEDS_AR_WRAPPER 0)
+-	endif()
+-
+-	if(LTCG_NEEDS_AR_WRAPPER)
+-		find_program(AR_WRAPPER "${LTCG_AR_WRAPPER_PREFIX}-ar")
+-		if (AR_WRAPPER)
+-			message("Using ${AR_WRAPPER} instead of ${CMAKE_AR} to support lto objects.")
+-			set(CMAKE_AR "${AR_WRAPPER}" CACHE FILEPATH "Path to an ar that supports lto objects." FORCE)
+-		endif()
+-		find_program(RANLIB_WRAPPER "${LTCG_AR_WRAPPER_PREFIX}-ranlib")
+-		if (RANLIB_WRAPPER)
+-			message("Using ${RANLIB_WRAPPER} instead of ${CMAKE_RANLIB} to support lto objects.")
+-			set(CMAKE_RANLIB "${RANLIB_WRAPPER}" CACHE FILEPATH "Path to a ranlib that supports lto objects." FORCE)
+-		endif()
+-	endif()
+-endif()
+-
+ if(MSVC)
+ 	if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+ 		# Set up some additional flags only if we're using the MS compiler,
