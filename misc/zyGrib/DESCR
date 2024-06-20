@@ -17,3 +17,5 @@ Weather data display:
 	wind, temperature, theta-e, relative humidity.
     - Waves : height, direction, period, whitecap probability, for wind waves,
 	swell, and for significant, maximum, primary, secondary waves.
+
+zyGrib is no longer maintained upstream.  See also misc/xygrib.
