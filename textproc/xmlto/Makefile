@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/05/29 16:34:42 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/06/20 17:18:27 schmonz Exp $
 
 DISTNAME=	xmlto-0.0.28
 PKGREVISION=	11
@@ -17,7 +17,7 @@ DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
 
 USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		mktemp
+USE_TOOLS+=		mktemp flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
 CONFIGURE_ENV+=		BASH=${TOOLS_PATH.sh}
