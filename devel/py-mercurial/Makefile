@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2024/06/20 23:55:54 joerg Exp $
+# $NetBSD: Makefile,v 1.97 2024/06/21 19:04:50 joerg Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
