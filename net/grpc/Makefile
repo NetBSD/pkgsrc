@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2024/06/15 18:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/06/21 10:18:19 jperkin Exp $
 
 DISTNAME=	grpc-1.64.2
 CATEGORIES=	net
@@ -24,6 +24,11 @@ CMAKE_ARGS+=	-DgRPC_PROTOBUF_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_RE2_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	cmake/protobuf.cmake
+SUBST_VARS.vars=	BUILDLINK_PREFIX.protobuf
 
 # This should be included in the distfile, but it's not,
 # so CMakeFile.txt will try to download it.
