@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/02/12 21:06:43 hans Exp $
+# $NetBSD: Makefile,v 1.42 2024/06/21 11:11:57 jperkin Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -21,6 +21,10 @@ GNU_CONFIGURE_ICONV=	no
 # out the top-level configure script that thinks it needs
 # courierauthconfig.
 CONFIGURE_ENV+=		ac_cv_path_COURIERAUTHCONFIG=${TRUE:Q}
+
+# Disable inotify support on SunOS (not intended for userland applications).
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=false
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init1=false
 
 # These are files required by the Courier configure scripts.
 WRKSRC_FILES=		courier/courier.c courier-debuild.in config.guess \
