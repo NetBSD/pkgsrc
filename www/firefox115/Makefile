@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/06/12 13:40:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2024/06/21 13:25:26 jperkin Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		115.12
@@ -77,6 +77,9 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}-bin
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKDIR}/build/dist/bin
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/lib
 
 # Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
