@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.317 2024/06/18 03:12:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.318 2024/06/21 13:22:54 jperkin Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -40,6 +40,9 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
 
 # Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKDIR}/build/dist/bin
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
