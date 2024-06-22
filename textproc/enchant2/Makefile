@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/06/17 12:23:58 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2024/06/22 12:39:59 gdt Exp $
 
 DISTNAME=		enchant-2.8.1
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -26,9 +26,13 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 # Force disable all spell checkers that are not handled in options.mk,
 # to avoid them being unintentionally found if installed.
 CONFIGURE_ARGS+=	--without-nuspell
-CONFIGURE_ARGS+=	--without-hspell
-CONFIGURE_ARGS+=	--without-voikko
-CONFIGURE_ARGS+=	--without-applespell
+CONFIGURE_ARGS+=	--without-hspell	# Hebrew
+CONFIGURE_ARGS+=	--without-voikko	# Finnish
+
+# \todo The package previously relied on finding applespell on mac,
+# without forcing it on, and without explaining this.  Change to
+# enable on mac (but not on darwin without mac!).
+#CONFIGURE_ARGS+=	--without-applespell
 
 # needed for testing
 CONFIGURE_ARGS+=	--enable-relocatable
