@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2022/10/03 13:59:05 nros Exp $
+$NetBSD: distinfo,v 1.35 2024/06/22 18:28:02 adam Exp $
 
 BLAKE2s (dar-2.7.7.tar.gz) = 5516960811fd5c2b021cf48d9bb493d6c8cb8224a497f3ee36304058925997e3
 SHA512 (dar-2.7.7.tar.gz) = 984328cff1ed3338707858aced83a6a18e950581f02dd686a2a01668f6c374d0af2d98ba49068a61624641fcfbb139ae893d02e5b5f303b8b26d8e05fcb6a229
@@ -8,3 +8,4 @@ SHA1 (patch-doc_Makefile.in) = bc34aaaaa3415eaf012664718eeec0a081acbd43
 SHA1 (patch-doc_man_Makefile.in) = b3d0474581b480876e2e16d08f20c99559dd6e68
 SHA1 (patch-doc_mini-howto_Makefile.in) = ce9f9b4cd867d818ab7b8aa8bdf658038aea08b9
 SHA1 (patch-src_libdar_secu__string.hpp) = d07190e5330a1c05c91970aa4ed6f4a4f5ba344d
+SHA1 (patch-src_testing_test__truncate.cpp) = 53da28caf35627d1094dd2795ebf853973d9e288
