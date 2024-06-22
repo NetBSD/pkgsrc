@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.209 2024/06/18 06:50:04 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.210 2024/06/22 12:52:25 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23387,7 +23387,7 @@ go117<1.18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-28327
 go118<1.18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27536
 go117<1.17.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-24675
 go118<1.18.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-24675
-ncurses-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-29458
+ncurses<6.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-29458
 ghostscript-gpl-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-25059
 ghostscript-agpl<9.27	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-25059
 redis<6.2.7	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-24736
