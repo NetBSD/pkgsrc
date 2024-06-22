@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2024/06/17 06:50:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2024/06/22 19:48:03 wiz Exp $
 
 DISTNAME=	tmux-3.4
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,6 +12,8 @@ COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--enable-sixel
 
 USE_TOOLS+=	pkg-config
 USE_FEATURES+=	strnlen
