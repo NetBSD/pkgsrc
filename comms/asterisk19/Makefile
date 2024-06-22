@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2024/05/29 16:31:34 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/06/22 00:39:23 gdt Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-19.8.1
-#PKGREVISION=	24
-PKGREVISION=	17
+DISTNAME=	asterisk-19.1.0
+PKGREVISION=	18
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -153,7 +152,7 @@ CONFIGURE_ARGS+=	--without-timerfd
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.12.1
+PJPROJ_VERSION=	2.10
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -192,12 +191,12 @@ SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
 
-## XXX gross hack, gethostbyname_r on NETBSD is for internal use only
-#SUBST_CLASSES.NetBSD+=		gethostbyname_r
-#SUBST_STAGE.gethostbyname_r=	post-configure
-#SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
-#SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
-#SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
+# XXX gross hack, gethostbyname_r on NETBSD is for internal use only
+SUBST_CLASSES.NetBSD+=		gethostbyname_r
+SUBST_STAGE.gethostbyname_r=	post-configure
+SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
+SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
+SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
 
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
