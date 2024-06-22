@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24552 2024/06/22 06:04:13 wiz Exp $
+$NetBSD: TODO,v 1.24553 2024/06/22 19:48:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,6 +554,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-3.4.3
 	o dap-3.10
+	o darktable-4.8
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -884,7 +885,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-18.1.7 [wip]
+	o llvm-18.1.8 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
