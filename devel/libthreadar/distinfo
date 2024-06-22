@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/10/03 13:47:20 nros Exp $
+$NetBSD: distinfo,v 1.2 2024/06/22 18:25:41 adam Exp $
 
 BLAKE2s (libthreadar-1.4.0.tar.gz) = d65d0f493e5b3d627cef4e6762b04b36ef1d60222b11f011e90b50a7bcf3b53f
 SHA512 (libthreadar-1.4.0.tar.gz) = 3665817cf6327d4d24792d8cc2bd0a458bda1651b471e3440c1f63c22f397cfb4c8d81482f937e13f67f5ff1414662b1f69d9c311362a0a7a9249e8bc0236751
 Size (libthreadar-1.4.0.tar.gz) = 445672 bytes
 SHA1 (patch-Makefile.in) = 7c4ddba061da7bfd8dcef93531d5b30124e9b5a6
+SHA1 (patch-src_libthreadar.pc.tmpl.in) = f9f4773a76bbaf46060f567995f79e1fbc96d5a1

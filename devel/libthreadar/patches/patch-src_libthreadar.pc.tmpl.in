@@ -1,0 +1,12 @@
+$NetBSD: patch-src_libthreadar.pc.tmpl.in,v 1.1 2024/06/22 18:25:41 adam Exp $
+
+CXXFLAGS must not be used in CFLAGS.
+
+--- src/libthreadar.pc.tmpl.in.orig	2024-06-22 15:04:53.912334782 +0000
++++ src/libthreadar.pc.tmpl.in
+@@ -8,4 +8,4 @@ Description: C++ classes to work with th
+ Requires:
+ Version: #LIBTHREADAR_VERSION#
+ Libs: -L${libdir} -lthreadar @LIBS@
+-Cflags: -I${includedir} @cxxstdflags@
++Cflags: -I${includedir}
