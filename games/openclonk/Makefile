@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2024/06/20 20:23:23 charlotte Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/23 12:42:27 wiz Exp $
 
-PKGNAME=	openclonk-8.1
-DISTNAME=	openclonk-${PKGVERSION_NOREV}-src
+DISTNAME=	openclonk-8.1-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	games
-MASTER_SITES=	http://www.openclonk.org/builds/release/${VERSION}/
+MASTER_SITES=	http://www.openclonk.org/builds/release/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	charlotte@NetBSD.org
