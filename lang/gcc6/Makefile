@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/04/24 10:56:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2024/06/23 15:47:17 tsutsui Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -120,7 +120,9 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
 .endif
 
+.if !${CC_VERSION:Mgcc-[3-7].*}
 CFLAGS+=		-Wno-missing-attributes
+.endif
 
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
