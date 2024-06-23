@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/06/03 06:13:35 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/23 21:21:24 wiz Exp $
 
-DISTNAME=	flawz-0.2.1
+DISTNAME=	flawz-0.2.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
