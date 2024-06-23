@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2024/06/17 10:06:14 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2024/06/23 21:20:56 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -31,9 +31,9 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.6
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.6
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.5
+CARGO_CRATE_DEPENDS+=	clap-4.5.7
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.7
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.6
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.5
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
@@ -195,6 +195,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-go-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-html-0.20.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.21.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.21.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-sg-0.21.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-0.3.6
