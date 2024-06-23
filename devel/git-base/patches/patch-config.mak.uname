@@ -1,10 +1,10 @@
-$NetBSD: patch-config.mak.uname,v 1.5 2023/06/12 21:41:59 schmonz Exp $
+$NetBSD: patch-config.mak.uname,v 1.5.8.1 2024/06/23 15:58:52 bsiegert Exp $
 
 Use pkgsrc-provided tools on Solarish.
 
---- config.mak.uname.orig	2014-08-15 22:26:55.000000000 +0000
+--- config.mak.uname.orig	2024-04-29 16:19:22.000000000 +0000
 +++ config.mak.uname
-@@ -104,7 +104,7 @@ endif
+@@ -187,7 +187,7 @@ endif
  ifeq ($(uname_S),SunOS)
  	NEEDS_SOCKET = YesPlease
  	NEEDS_NSL = YesPlease
@@ -13,10 +13,10 @@ Use pkgsrc-provided tools on Solarish.
  	SANE_TOOL_PATH = /usr/xpg6/bin:/usr/xpg4/bin
  	HAVE_ALLOCA_H = YesPlease
  	NO_STRCASESTR = YesPlease
-@@ -147,8 +147,6 @@ ifeq ($(uname_S),SunOS)
+@@ -229,8 +229,6 @@ ifeq ($(uname_S),SunOS)
  		NO_STRTOUMAX = YesPlease
  		GIT_TEST_CMP = cmp
- 	endif
+         endif
 -	INSTALL = /usr/ucb/install
 -	TAR = gtar
  	BASIC_CFLAGS += -D__EXTENSIONS__ -D__sun__

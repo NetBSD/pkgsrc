@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.142 2024/02/25 22:24:13 adam Exp $
+$NetBSD: distinfo,v 1.142.2.1 2024/06/23 15:58:52 bsiegert Exp $
 
-BLAKE2s (git-2.44.0.tar.xz) = 6594f19268d55367294816607c87a760955bd5d2f773e71c6bf7d6b03eecd68a
-SHA512 (git-2.44.0.tar.xz) = 9e4b9c8a8e28cd50c0db75a93eae8a3423aa7e51c4312af1e1cdaf408e93f306c23aa747f0a97f27c11ab0e2f5e6283e52c8b61c9fe6be5b9b18673a43ce1780
-Size (git-2.44.0.tar.xz) = 7429952 bytes
+BLAKE2s (git-2.45.1.tar.xz) = 9acb0f4ccd2dda04da9b284756132437480afbda4f81d89ad2f4bf536761b773
+SHA512 (git-2.45.1.tar.xz) = 28461855e03f3dd5af73a1c6d26cc3e2b7b71f5eb90852f1daf582d24503b4dd5c4e4dac359e9eba1c2ba542aeb0940e0482506f19d02a354654b181c56c5317
+Size (git-2.45.1.tar.xz) = 7490268 bytes
 SHA1 (patch-Documentation_Makefile) = 6025adac0fbb4b403f3954e6dac9d690dfb22daa
 SHA1 (patch-Makefile) = bf8cf3ed8168241265b258a29d62210dc59a5f72
-SHA1 (patch-config.mak.uname) = c5985af246310023f63c7b8a9cebef84f53769f7
+SHA1 (patch-config.mak.uname) = 32b9c120ff3f947ebe3d32107eaaa2be61775a18
 SHA1 (patch-contrib_completion_git-completion.zsh) = 695c78c8be7cc2a3792d1c428ebc5739b049852e
 SHA1 (patch-dircompat.h) = f0cf20a95f2144c0dee17a2aa45955c57141452d
-SHA1 (patch-git-gui_Makefile) = 01a1db8e0970b86cb5f4c12ebf4adf1404fb03c7
+SHA1 (patch-git-gui_Makefile) = 1df47148cff8e6ac6883fda6b44e8d1526afc70f
 SHA1 (patch-gitk-git_Makefile) = 028fa483f20f40ae3ec81c2dc7bd2e412a7d17f0
 SHA1 (patch-templates_Makefile) = 0fe03748644aafbd0263c050242eba90ddba11c7
