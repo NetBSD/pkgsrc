@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.175 2024/04/14 12:44:52 tsutsui Exp $
+$NetBSD: distinfo,v 1.176 2024/06/23 13:59:41 mef Exp $
 
 BLAKE2s (webkitgtk-2.36.8.tar.xz) = 277ba5935bda3e3867083b4c736499d974b9c733dbd05bf574510857dde481a1
 SHA512 (webkitgtk-2.36.8.tar.xz) = 50576f13ea84c0634d174ccf0b70d0eb28752589b2b9ce7a82ffeee1b4b6c849a802f7ae83a3c5a74d0da2b7e3321876ead33e819d8006b8153376074cb57036
@@ -28,7 +28,10 @@ SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 9b323aa1fa8e6e5599ac0a7ae08fbbed4348c70e
 SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
 SHA1 (patch-Source_WebCore_inspector_InspectorFrontendHost.cpp) = daf6351a1a0b5a49592a2bb6db0d54620c7b09e3
+SHA1 (patch-Source_WebCore_platform_audio_gstreamer_AudioFileReaderGStreamer.cpp) = 8ad3610d02671c08637926aa5c75eaf059ae5862
+SHA1 (patch-Source_WebCore_platform_audio_gstreamer_AudioSourceProviderGStreamer.cpp) = d398e26a13b3c28088396f1390581ce6d27f2c70
 SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 43f423af652533a64d0793ec6d15150b908da0f8
+SHA1 (patch-Source_WebCore_platform_graphics_gstreamer_ImageDecoderGStreamer.cpp) = 11ee606b7975c8d2e1318c19b49abc83cf6dc76e
 SHA1 (patch-Source_WebCore_platform_network_DNS.h) = dd9fb67aae0029c6a452e7d8f09eeed1235d5700
 SHA1 (patch-Source_WebCore_rendering_RenderLayerBacking.h) = ecf722df1d1cca13573786b34fe1e3d85edf1e1e
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
