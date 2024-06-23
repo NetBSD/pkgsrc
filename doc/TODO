@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24555 2024/06/23 21:21:09 wiz Exp $
+$NetBSD: TODO,v 1.24556 2024/06/23 21:21:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
-	o flawz-0.2.2
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
 	o fop-2.6
