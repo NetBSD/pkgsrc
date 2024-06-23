@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.9 2024/06/13 17:17:53 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.10 2024/06/23 18:23:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -67,4 +67,17 @@ www/ruby-rails71: security fix
 
 Pullup ticket #6861 - requested by taca
 www/ruby-rails61: security fix
+
+Pullup ticket #6862 - requested by taca
+mail/rspamd: NetBSD bugfix
+
+Pullup ticket #6863 - requested by taca
+devel/git: security fix
+
+Pullup ticket #6864 - requested by taca
+mail/roundcube: security fix
+
+Pullup ticket #6869 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
