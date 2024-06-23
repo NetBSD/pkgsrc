@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/06/23 14:20:56 mef Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/23 14:22:00 mef Exp $
 
 DISTNAME=	translate_toolkit-3.13.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -16,7 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.3:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash:run
+
 REPLACE_BASH+=	tools/*
 REPLACE_BASH+=	translate/convert/odfxml
 REPLACE_BASH+=	translate/convert/roundtrip-OOo
