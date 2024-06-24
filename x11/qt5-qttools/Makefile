@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2024/05/29 16:35:13 adam Exp $
+# $NetBSD: Makefile,v 1.104 2024/06/24 14:27:40 jperkin Exp $
 
 DISTNAME=	qttools-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
@@ -15,9 +15,7 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5-qttools
 PKG_SUPPORTED_OPTIONS+=	llvm
-.if ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	llvm
-.endif
 PLIST_VARS+=		llvm
 
 .include "../../mk/bsd.options.mk"
