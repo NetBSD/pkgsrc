@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2023/08/11 08:41:09 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/06/24 14:53:16 jperkin Exp $
 
 BLAKE2s (R/nloptr_2.0.3.tar.gz) = fe92ef7297289695918b121ae1cd1b916c68119516c4ecde393038a8bc58d579
 SHA512 (R/nloptr_2.0.3.tar.gz) = 08f8a6b7ddc20f7b75c567ee7e55abd47228c4fc8db254080dc7f4010311a92ad4c75ca9b593adbb4183308e4142fdc9ab80aed1b7fe5da3b7450a19624b98e6
 Size (R/nloptr_2.0.3.tar.gz) = 2219877 bytes
 SHA1 (patch-configure) = 4cae010fd9245d667bf8c4be45f9dd65303ac9c9
+SHA1 (patch-src_test-C-API.cpp) = c103296303bea8810d7d5f81cf09d91b14841776
