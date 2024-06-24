@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2024/04/07 07:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/06/24 09:35:17 jperkin Exp $
 
 DISTNAME=	qiv-2.3.2
 PKGREVISION=	9
@@ -21,7 +21,7 @@ INSTALLATION_DIRS+=	share/applications
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qiv ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/qiv.1 ${DESTDIR}${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/qiv.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/qiv.png ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/qiv.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/qiv-command.example \
