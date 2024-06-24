@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2024/06/23 21:20:56 wiz Exp $
+$NetBSD: distinfo,v 1.22 2024/06/24 09:41:04 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -36,9 +36,9 @@ Size (anyhow-1.0.86.crate) = 46741 bytes
 BLAKE2s (assert_cmd-2.0.14.crate) = 62b2c7762e1d651155c155b97f7b58e25107982d9244fb43290aee90c5b1ce26
 SHA512 (assert_cmd-2.0.14.crate) = 112c3f933a013715c0dfcf29889ec023c88097a70fe212a7d98d0a5272d5f6da87df9353da006483830a0ac3c42a12e12d8fabeb90eb62453982edbc75215613
 Size (assert_cmd-2.0.14.crate) = 24591 bytes
-BLAKE2s (ast-grep-0.23.1.tar.gz) = a500dc09cf305e9b6963e7d180b3b0383103ba424016aa4d388a1d6b7969c1e5
-SHA512 (ast-grep-0.23.1.tar.gz) = 13f4077fb95532f6d9506bc33a8cb7df656334702f81702a7738826d2f8381493fc211a707b5aded98afb449905b8a494be5e594793051d2cf11aea54c6d82bd
-Size (ast-grep-0.23.1.tar.gz) = 833161 bytes
+BLAKE2s (ast-grep-0.24.0.tar.gz) = bcb1283ce0b3546c5ff4431047d79ffb55d87bbbd305ee70f493b49c32e18c14
+SHA512 (ast-grep-0.24.0.tar.gz) = b8e099ba79123be861b160dd76c4b7a651ba30c7742322f131d34e5d9b781096da1e77209bf7c536a6ce76b635a074700f9972c8f8d0bac4a57088c6b88c1c50
+Size (ast-grep-0.24.0.tar.gz) = 836279 bytes
 BLAKE2s (async-trait-0.1.80.crate) = 15f1b67e14b1c463ff22d1692667ffc8ebaebf0ff3899a814fdec3214b422145
 SHA512 (async-trait-0.1.80.crate) = 3e92bc8d38feea49ebb5011303e55853bbbf5d0fb7c4f6ed6aa471b9000a2a0ea5475619f98831641e8ee484beaa6fd8880770a96b8a5a7df26e392c1b4b3a19
 Size (async-trait-0.1.80.crate) = 28775 bytes
@@ -270,9 +270,9 @@ Size (js-sys-0.3.69.crate) = 81083 bytes
 BLAKE2s (libc-0.2.154.crate) = a36b89bd4038231095e34745dabfeb7f5fae2708abda0d68c581eb66db527751
 SHA512 (libc-0.2.154.crate) = 891a36cf153a9f4d58793412c104504c57280994e428ce8ba208673a924b2de38cc21eece09b91696eaea3b2359606dbe9f1509f9bf364bdabdb366ef2dd0f61
 Size (libc-0.2.154.crate) = 743304 bytes
-BLAKE2s (libloading-0.8.3.crate) = c6748d7af6c503b43107b286bb8ca2e9d039e966976b903973b3b6a34f4a80a6
-SHA512 (libloading-0.8.3.crate) = af8fa5fe2428fa98177d6adfc01bcd6e701b0d77ac18c95b8b8d5abb3a6376f16241ccc71b9fe100782c73c843ca53c9bad465545d8bb7def52320dad0eecef9
-Size (libloading-0.8.3.crate) = 28480 bytes
+BLAKE2s (libloading-0.8.4.crate) = 472e007a9b5b93a6b05e2b024093142eeed46e28189ab5c1101e96ed292e5e25
+SHA512 (libloading-0.8.4.crate) = 670d82fde2ddbfcc28efaf7736d799690e4fe4b7872d95854b9c4320d64f45d4b33c0e1917228302a7625f2e5e55e5ad56e113ee8e67d59fb384b7054a0cc849
+Size (libloading-0.8.4.crate) = 28636 bytes
 BLAKE2s (linux-raw-sys-0.4.13.crate) = fd3daef2f4a801a1a3baa40c270dec6f684699a99c0b958be9fc06e8606b130c
 SHA512 (linux-raw-sys-0.4.13.crate) = 3918da6b667a08ef8a51aa0b087129e2dc5ab101669cbba7690fc98ae2659a36861bf9410a3b87d18522a7549d43ac169b995ea192d3073f7249305a809cac62
 Size (linux-raw-sys-0.4.13.crate) = 1493855 bytes
