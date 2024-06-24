@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.gnu,v 1.2 2023/09/21 12:22:52 vins Exp $
+$NetBSD: patch-Makefile.gnu,v 1.3 2024/06/24 09:42:32 jperkin Exp $
 
 Portability fixes for pkgsrc.
 
@@ -9,7 +9,7 @@ Portability fixes for pkgsrc.
  MAN=		filter-dkimsign.8
  BINDIR=		${LOCALBASE}/libexec/opensmtpd/
 -MANDIR=		${LOCALBASE}/share/man/man8
-+MANDIR=		${LOCALBASE}/man/man8
++MANDIR=		${LOCALBASE}/${PKGMANDIR}/man8
  
  SRCS+=		main.c mheader.c
  
