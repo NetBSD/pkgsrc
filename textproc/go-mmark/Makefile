@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/06/13 13:47:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.71 2024/06/24 09:32:30 jperkin Exp $
 
 DISTNAME=	mmark-2.2.43
 PKGNAME=	go-${DISTNAME}
@@ -14,12 +14,13 @@ COMMENT=	Powerful markdown processor in Go geared towards the IETF
 LICENSE=	2-clause-bsd
 
 GO_BUILD_PATTERN=	.
-INSTALLATION_DIRS+=	man/man1
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "go-modules.mk"
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/mmark.1 ${DESTDIR}${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/mmark.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
