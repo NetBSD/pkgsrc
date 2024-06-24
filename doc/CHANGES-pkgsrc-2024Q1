@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.10 2024/06/23 18:23:25 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.11 2024/06/24 18:13:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -80,4 +80,13 @@ mail/roundcube: security fix
 Pullup ticket #6869 - requested by gutteridge
 www/firefox115: security fix
 www/firefox115-l10n: dependent update
+
+Pullup ticket #6865 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6867 - requested by taca
+lang/php82: security fix
+
+Pullup ticket #6868 - requested by taca
+lang/php81, lang/php82, lang/php83: bugfix
 
