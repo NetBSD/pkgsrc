@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.58 2024/06/18 11:34:38 pin Exp $
+# $NetBSD: go-modules.mk,v 1.59 2024/06/24 06:28:54 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -70,8 +70,8 @@ GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.mod
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.15.zip
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.1.mod
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.20.1.zip
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.21.0.mod
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.21.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.3.3.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.zip
