@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.210 2024/06/22 12:52:25 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.211 2024/06/24 12:26:31 gdt Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26039,3 +26039,7 @@ python39-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues
 python310-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
 python311-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
 python312<3.12.4	ip-range-classification	https://github.com/python/cpython/issues/113171
+emacs29<29.4	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
+emacs28-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
+emacs27-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
+emacs26-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
