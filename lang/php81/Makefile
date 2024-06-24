@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/11/24 06:03:45 taca Exp $
+# $NetBSD: Makefile,v 1.20.4.1 2024/06/24 18:04:51 bsiegert Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -10,7 +10,7 @@ LICENSE=		php
 
 TEST_TARGET=		test
 
-USE_TOOLS+=		gmake lex
+USE_TOOLS+=		autoconf gmake lex
 LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
 
@@ -42,16 +42,6 @@ PHP_PKGCONFIG_PATH=	${PKGCONFIG_PATHS:ts:}
 
 REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 
-SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	Fixing common paths.
-SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	configure
-SUBST_FILES.path+=	php.ini-development php.ini-production
-SUBST_FILES.path+=	sapi/cgi/Makefile.frag
-SUBST_VARS.path=	CGIDIR
-SUBST_VARS.path+=	PREFIX
-SUBST_VARS.path+=	TOOLS_PATH.pkg-config PHP_PKGCONFIG_PATH
-
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 
 # Make sure modules can link correctly
@@ -64,6 +54,9 @@ INSTALL_UNSTRIPPED=	yes
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
 
 post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-development php.ini-production \
