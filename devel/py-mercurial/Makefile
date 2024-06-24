@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2024/06/21 19:04:50 joerg Exp $
+# $NetBSD: Makefile,v 1.98 2024/06/24 09:05:18 jperkin Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -16,6 +16,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	gmake msgfmt
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600	# msg_control
+LDFLAGS.SunOS+=		-lsocket
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
