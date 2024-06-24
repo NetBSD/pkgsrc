@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.149 2024/06/19 20:13:19 pin Exp $
+$NetBSD: distinfo,v 1.150 2024/06/24 06:28:54 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -210,12 +210,12 @@ Size (github.com_gookit_goutil_@v_v0.6.15.mod) = 271 bytes
 BLAKE2s (github.com_gookit_goutil_@v_v0.6.15.zip) = d67121280ae19e951de4b983d7c9f7c305a20a9eb0b1e5e7ecb8306f24253989
 SHA512 (github.com_gookit_goutil_@v_v0.6.15.zip) = 54f5df90e774492d74319212d21109cb56d5780108acdab790afefbe08376f76d7d32dae81c3c593e2f251280567a4740755253cc48c2430ca97c5d9356a183c
 Size (github.com_gookit_goutil_@v_v0.6.15.zip) = 735209 bytes
-BLAKE2s (github.com_hashicorp_hcl_v2_@v_v2.20.1.mod) = a11e7a4bcc0320733431b9bbd8a7e0da2152d00b28dd1e7284160fe18d22107e
-SHA512 (github.com_hashicorp_hcl_v2_@v_v2.20.1.mod) = 92b8acf1a109d245ee77d6c9c41dc55d28ee415a66408c8db7fe8f59e7b5cfa5c3620fc31a27327ce09416d4bc9640a0caf7d3e76ad0800f4e1a3c6d6e432b1f
-Size (github.com_hashicorp_hcl_v2_@v_v2.20.1.mod) = 784 bytes
-BLAKE2s (github.com_hashicorp_hcl_v2_@v_v2.20.1.zip) = eb29d4f4e359d62d70d4356d3654a44ab5527cc3d6c232eeaa1a917216b37f5f
-SHA512 (github.com_hashicorp_hcl_v2_@v_v2.20.1.zip) = ba4be004226be2523fe724cd58b5d538e5f6ee52b068f8d35e3e01eb833b00945b77b1383176fc71d8f8de3702e4b7f0dd7b65d6086b077892a413c711fe9e26
-Size (github.com_hashicorp_hcl_v2_@v_v2.20.1.zip) = 585011 bytes
+BLAKE2s (github.com_hashicorp_hcl_v2_@v_v2.21.0.mod) = 334dbf683c55d5a54a8843135fae87b31d241d85b2bca8c3bdcf3c63e744b8b6
+SHA512 (github.com_hashicorp_hcl_v2_@v_v2.21.0.mod) = 547dadbceafb3f5c29db0aafca87c4a0075fe333c72cbdd6b3eec9666970767407fc454391b989aecbe32fb75d807e71ab0963864dfa79a9b61b77fdf88d567f
+Size (github.com_hashicorp_hcl_v2_@v_v2.21.0.mod) = 784 bytes
+BLAKE2s (github.com_hashicorp_hcl_v2_@v_v2.21.0.zip) = 90ed167289076b07cf2120b50fd74f25e38d0f1c63a84193b181d7c2b4acaa2e
+SHA512 (github.com_hashicorp_hcl_v2_@v_v2.21.0.zip) = 22ee2dfb125b92cf4b39ea16da737c0867b92b69e3e9ed4d5dbec0c027b8de827a2a361afbb0a70da89ea08f669834e6e20b10f224eab161c0afd0099d8e4bf7
+Size (github.com_hashicorp_hcl_v2_@v_v2.21.0.zip) = 588186 bytes
 BLAKE2s (github.com_huandu_xstrings_@v_v1.3.3.mod) = 4704926320c0085d2256b0d8535984bf011e1fa571c4d55d2fbafb2abafa4d9d
 SHA512 (github.com_huandu_xstrings_@v_v1.3.3.mod) = f6d3531d393904144d7c84cb254becfa2dad42f8695ce32e3f44789abe89d60019f01543936a64ae1728f8d395dd96bace969282e3cd9f8a9eda8085d3d1475d
 Size (github.com_huandu_xstrings_@v_v1.3.3.mod) = 43 bytes
@@ -717,8 +717,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-21.14.0.tar.gz) = 9db7494900231fdd743dde2fe3369c8f437e3e7c5a4a6bf9d4b8c545e53109e0
-SHA512 (oh-my-posh-21.14.0.tar.gz) = d444cb07ad1fa78dc26db2e9a1857772f8ef36c5706e34220ba94b5a1e1a58a302fcf24b7c653a9aad2cd6e666a7c1ce2a552d4d93d8ee6f9dc35f505dcaeb39
-Size (oh-my-posh-21.14.0.tar.gz) = 6766415 bytes
+BLAKE2s (oh-my-posh-21.16.0.tar.gz) = ed9f39638a0c59d0535e6e8dac483265900acc8c04305a9c85f4b3f14c6ae63a
+SHA512 (oh-my-posh-21.16.0.tar.gz) = 0c3f045934c893acf8791aaaca1ead6b6703ac86ac2b89a6a0cb760bbb0d27612b6c22260de23790a71707d4c0d4ee9d3224e7729db659e1bcc2d42391c694a7
+Size (oh-my-posh-21.16.0.tar.gz) = 6767344 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 37eb1ba8082c0d3dfc287dfd5e35bcd31a00ab6a
