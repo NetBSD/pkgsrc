@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/21 08:09:47 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/24 09:23:58 jperkin Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-system-kpathsea
 BUILD_MAKE_FLAGS+=	KPATHSEA_LIBS+=-lkpathsea
 
 post-install:
-	rm ${DESTDIR}${PREFIX}/man/man1/bibtexu.1
+	rm ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/bibtexu.1
 	rm -rf ${DESTDIR}${PREFIX}/share/texmf-dist/doc/bibtexu
 
 .include "../../print/kpathsea/buildlink3.mk"
