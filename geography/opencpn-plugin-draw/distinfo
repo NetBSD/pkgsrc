@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:45:12 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/06/24 09:55:43 bouyer Exp $
 
 BLAKE2s (ocpn_draw_pi-1.6.8.tar.gz) = 76d4f1b78fe258108853799538de0fe6523e755a9f60396ad7b6b2e9aac9e185
 SHA512 (ocpn_draw_pi-1.6.8.tar.gz) = 74b575b3ef5ccea56204a95612add60f3a5cf615ec9cc0c6147abcc0f46d632e0c42a0758a12ff04ac1cc2c255f69b13bd8d98d23b2b4351708e4c40ed17a0f1
 Size (ocpn_draw_pi-1.6.8.tar.gz) = 1506472 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = 5c34db1fe0f0ba3bac6d3fe30bca5a417ffba9f9
 SHA1 (patch-cmake_PluginInstall.cmake) = 43a906b0a75a1e358ccd96992e1c14d526d07b4b
+SHA1 (patch-ocpnsrc_glu_libutil_error.c) = 50b510738064fc84a5076c3706fb9bc42d451aaf
