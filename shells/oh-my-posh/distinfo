@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.150 2024/06/24 06:28:54 pin Exp $
+$NetBSD: distinfo,v 1.151 2024/06/24 08:32:40 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -81,12 +81,12 @@ Size (github.com_charmbracelet_bubbles_@v_v0.18.0.mod) = 1082 bytes
 BLAKE2s (github.com_charmbracelet_bubbles_@v_v0.18.0.zip) = 33f8c854632a37d6c1bbefe90740f5e0f5340b86ecf0462c82724a6fa9ffbb3c
 SHA512 (github.com_charmbracelet_bubbles_@v_v0.18.0.zip) = 518591793d0fc8d18ca651f46ac13a995173cac6c055f1df394c969acfb14159ec8ee756bcbafd77a3f0eeb82c2ea60d897421aade331e7592500b8892ad5106
 Size (github.com_charmbracelet_bubbles_@v_v0.18.0.zip) = 85346 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.26.4.mod) = 209fb7eb0d0fba4d33104625b58f60bcce63f49787ff99a7cf4f0a96119d5961
-SHA512 (github.com_charmbracelet_bubbletea_@v_v0.26.4.mod) = 433e686b28005ca1994b40714c9ee511a132fedb69808b15bfe1700ae50f054cd5953aa1f71e5f38128460bc1e78a01729a349feedbaa85463ab58e20ffdd819
-Size (github.com_charmbracelet_bubbletea_@v_v0.26.4.mod) = 726 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.26.4.zip) = 2a220265663a0d8009ce069b1ab612d4b50a8bd763c8465c169e2a4ab23289c6
-SHA512 (github.com_charmbracelet_bubbletea_@v_v0.26.4.zip) = 66cd648d1cf6db0468b11adc91d716b7be6e60480ce8cf98783fc2a322afbbb046795449a5fd763579ffcf8a7138e853544c1c371fb42d88a00326a6d444d8d9
-Size (github.com_charmbracelet_bubbletea_@v_v0.26.4.zip) = 73102 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.26.5.mod) = 26c84cbd454de3b089b67d2b039c8a86c4a9f1bb069b9ece311c942baa09c3e4
+SHA512 (github.com_charmbracelet_bubbletea_@v_v0.26.5.mod) = e933077e3edacca1a9ec4fad02727afe659fd43ea7711573a4e6e901960c78bf3bd4793be69aeb824ef890e05addb1ee8eac99b96fced2b9459a2fe8cc35f0e3
+Size (github.com_charmbracelet_bubbletea_@v_v0.26.5.mod) = 726 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.26.5.zip) = ecdcad7d5caa101961dcbeadae04cc3db19a4545b33e147b456e601ab4622894
+SHA512 (github.com_charmbracelet_bubbletea_@v_v0.26.5.zip) = 70f927cc0a1fcdade4791cd8dad2154e9ad94b0a96e3c21dcbf1de0e1fd22aa212717d944d48cdb9c82356d7f30368c30a6fa4dc33db0a2c53e7a4a729ea4db5
+Size (github.com_charmbracelet_bubbletea_@v_v0.26.5.zip) = 74281 bytes
 BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.11.0.mod) = 5328aeba564c8cb1327f92604343a18139d0de7dc0b417e6c7f2e7b519dd7e0a
 SHA512 (github.com_charmbracelet_lipgloss_@v_v0.11.0.mod) = 06af78bbd7d0b9fdc9052a48a3c9b7426f3e0b10bbd96c06bb15bf551e22db8940a98b513fbdcdf9325cc4f6f0b95440e7c8aa902fa03e6988252cf2cfb04e4c
 Size (github.com_charmbracelet_lipgloss_@v_v0.11.0.mod) = 506 bytes
@@ -717,8 +717,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-21.16.0.tar.gz) = ed9f39638a0c59d0535e6e8dac483265900acc8c04305a9c85f4b3f14c6ae63a
-SHA512 (oh-my-posh-21.16.0.tar.gz) = 0c3f045934c893acf8791aaaca1ead6b6703ac86ac2b89a6a0cb760bbb0d27612b6c22260de23790a71707d4c0d4ee9d3224e7729db659e1bcc2d42391c694a7
-Size (oh-my-posh-21.16.0.tar.gz) = 6767344 bytes
+BLAKE2s (oh-my-posh-21.16.1.tar.gz) = 7b97a8486a85dd6bff20ce838d63a19d0f64c12b0a470418ea861bae243f635f
+SHA512 (oh-my-posh-21.16.1.tar.gz) = a50aa352365ed07583becc1dbacb01e96aaf224091c270b08b14f676464cb80e5b35d441570eb225643640530d22ae87379021474b740aaad7b36a50c71152f5
+Size (oh-my-posh-21.16.1.tar.gz) = 6767398 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 37eb1ba8082c0d3dfc287dfd5e35bcd31a00ab6a
