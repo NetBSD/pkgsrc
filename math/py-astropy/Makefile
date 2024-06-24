@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/11 15:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/24 23:14:28 gutteridge Exp $
 
 DISTNAME=	astropy-5.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
