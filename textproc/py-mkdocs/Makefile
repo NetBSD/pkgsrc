@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/27 08:09:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/06/25 06:15:04 adam Exp $
 
 DISTNAME=	mkdocs-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/mkdocs/mkdocs
 COMMENT=	Fast and simple static site generator for documentation
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-ghp-import>=1.0:../../misc/py-ghp-import
@@ -31,6 +32,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.4:../../devel/py-importlib-metadata
+.endif
+.if ${PYTHON_VERSION} >= 312
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .endif
 
 post-install:
