@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.211 2024/06/24 12:26:31 gdt Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.212 2024/06/25 06:14:02 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26043,3 +26043,5 @@ emacs29<29.4	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhos
 emacs28-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
 emacs27-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
 emacs26-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
+samba4<4.19.7	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
+samba4>=4.20<4.20.2	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
