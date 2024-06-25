@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.11 2024/06/24 18:13:44 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q1,v 1.1.2.12 2024/06/25 18:21:02 bsiegert Exp $
 
 Changes to packages and infrastructure on the $BRANCH branch:
 
@@ -89,4 +89,8 @@ lang/php82: security fix
 
 Pullup ticket #6868 - requested by taca
 lang/php81, lang/php82, lang/php83: bugfix
+
+Pullup ticket #6865 (second part) - requested by taca
+www/ap-php: build fix
+www/php-fpm: build fix
 
