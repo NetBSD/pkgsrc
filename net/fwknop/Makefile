@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/11/07 18:37:02 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2024/06/25 07:08:23 adam Exp $
 
-DISTNAME=	fwknop-2.6.10
-PKGREVISION=	1
+DISTNAME=	fwknop-2.6.11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrash/}
 
@@ -17,7 +16,6 @@ USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
 RCD_SCRIPTS=		fwknopd
 EGDIR=			${PREFIX}/share/examples/fwknop
@@ -32,7 +30,7 @@ INSTALLATION_DIRS+=	${EGDIR}
 INFO_FILES=	yes
 
 pre-configure:
-	cd ${WRKSRC} && sh autogen.sh
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/fwknop/access.conf ${DESTDIR}${EGDIR}/

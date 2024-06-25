@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/06/25 07:08:23 adam Exp $
 
-BLAKE2s (fwknop-2.6.10.tar.gz) = 90f0e81b2d247144c649384a695a67f46c37f41c68d327752363efa8ea1b540c
-SHA512 (fwknop-2.6.10.tar.gz) = e6c34dad012921fc0773826c769df322f06fd9310e8f263d8b786d2acda0310763db566324a436ea539b5e0bd6a08ce22e9499f6566d61d6309d84927faa4cf4
-Size (fwknop-2.6.10.tar.gz) = 3030310 bytes
+BLAKE2s (fwknop-2.6.11.tar.gz) = fcbb47906fa8539ad9df099d7baa288e42bbc29f699ebf3262e65bf44d2d67e4
+SHA512 (fwknop-2.6.11.tar.gz) = 3f8f1d70ae929ab92608e97adb91bc4e14d7b7eb1946b5158f834679e36d6a8a032744a70c42d734239c724329efbabe16ba74ffbabbc2150d5f9fc6840bfc6f
+Size (fwknop-2.6.11.tar.gz) = 3039069 bytes
