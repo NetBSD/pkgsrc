@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/12/18 18:58:29 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2024/06/25 16:24:31 ryoon Exp $
 
---- traceroute.c.orig	2005-12-18 18:53:05.000000000 +0000
+--- traceroute.c.orig	2000-04-03 14:06:53.000000000 +0000
 +++ traceroute.c
 @@ -297,7 +297,6 @@ static char Version[] = "@(#)traceroute.
  #define EXTERN extern
@@ -9,4 +9,25 @@ $NetBSD: patch-ab,v 1.1 2005/12/18 18:58:29 joerg Exp $
 -EXTERN int errno;
  EXTERN res_state_t _res;	/* defined in res_init.c */
  extern char *version;		/* program version number */
+ 
+@@ -982,16 +981,16 @@ check_proto()
+ {
+ 	struct protoent *proto;
+ 
+-	proto = getprotobyname("ip");
++	proto = getprotobyname("ipv4");
+ 	if (proto == NULL)
+ 	{
+-		(void) fprintf(stderr, "ip: unknown protocol\n");
++		(void) fprintf(stderr, "ipv4: unknown protocol\n");
+ 		exit(EX_OSFILE);
+ 	}
+-	if (proto->p_proto != IPPROTO_IP)
++	if (proto->p_proto != IPPROTO_IPV4)
+ 	{
+ 		(void) fprintf(stderr, "ip protocol %d should be %d\n",
+-			proto->p_proto, IPPROTO_IP);
++			proto->p_proto, IPPROTO_IPV4);
+ 		exit(EX_CONFIG);
+ 	}
  
