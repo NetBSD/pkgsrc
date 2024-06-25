@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/10/20 14:16:35 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/06/25 15:13:07 gutteridge Exp $
 
 BLAKE2s (astropy-5.3.4.tar.gz) = 2cac6c3496848cafb28408cad365d174463783a782bd334b447e9f303f96b307
 SHA512 (astropy-5.3.4.tar.gz) = eede24edeb04603ef92c48e040223fe05e12c510873022a2683bb08793b406d95ccbf284f3a46479658144b3f8cbfc6a32ac1bcb6ac5870449630069cfe67842
 Size (astropy-5.3.4.tar.gz) = 7811582 bytes
+SHA1 (patch-astropy_wcs_setup__package.py) = c9f00d41cb8a27845ba0aa6c7964ece9c485f325
