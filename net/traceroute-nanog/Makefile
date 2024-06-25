@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/04/01 19:23:21 schwarz Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/25 16:23:38 ryoon Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://archive.debian.org/debian//pool/main/t/traceroute-nanog/
 
@@ -41,6 +42,8 @@ CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
+SPECIAL_PERMS+=		sbin/traceroute-nanog ${SETUID_ROOT_PERMS}
 
 do-build:
 	cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${LIBS}
