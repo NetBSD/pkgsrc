@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/02/11 20:25:46 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/06/25 05:59:34 adam Exp $
 
 DISTNAME=	Theano-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://deeplearning.net/software/theano/
 COMMENT=	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
