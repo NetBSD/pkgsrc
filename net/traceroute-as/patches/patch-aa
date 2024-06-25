@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
+$NetBSD: patch-aa,v 1.2 2024/06/25 16:24:31 ryoon Exp $
 
---- Makefile.orig	Fri Aug 28 10:40:36 1998
+--- Makefile.orig	1998-08-28 08:40:36.000000000 +0000
 +++ Makefile
 @@ -5,10 +5,10 @@
  # ----------------------------------------------------------------------
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  BINDIR = $(DESTBIN)
  MANDIR = $(DESTMAN)/man8
-@@ -42,7 +42,7 @@
+@@ -42,7 +42,7 @@ SYSDEFS = -DLINUX_IPSUM
  SYSDEFS = -D_BSD_SOURCE
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  # ----------------------------------------------------------------------
  # Configuration definitions.
-@@ -53,7 +53,7 @@
+@@ -53,7 +53,7 @@ SYSDEFS =
  CONFIGDEFS = -DOLD_RES_STATE
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  # ----------------------------------------------------------------------
  # Include file directories.
-@@ -79,7 +79,7 @@
+@@ -79,7 +79,7 @@ DEFS = $(CONFIGDEFS) $(SYSDEFS) $(INCLUD
  COPTS =
  COPTS = -O
  
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  # Select your favorite compiler.
  CC = /usr/ucb/cc			#if defined(solaris) && BSD
-@@ -113,7 +113,7 @@
+@@ -113,7 +113,7 @@ COMPLIB =
  LIBS = -lsocket -lnsl			#if defined(solaris) && not BSD
  LIBS =
  
@@ -51,23 +51,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  LDFLAGS =
  
-@@ -121,10 +121,11 @@
- # Miscellaneous definitions.
- # ----------------------------------------------------------------------
- 
--MAKE = make $(MFLAGS)
--
--# This assumes the BSD install.
--INSTALL = install -c
-+INSTALL_PROGRAM = $(BSD_INSTALL_PROGRAM)
-+INSTALL_PROGRAM_SUID = $(BSD_INSTALL_PROGRAM_SUID)
-+INSTALL_PROGRAM_DIR = $(BSD_INSTALL_PROGRAM_DIR)
-+INSTALL_MAN = $(BSD_INSTALL_MAN)
-+INSTALL_MAN_DIR = $(BSD_INSTALL_MAN_DIR)
- 
- # Grrr
- SHELL = /bin/sh
-@@ -144,13 +145,13 @@
+@@ -144,42 +144,44 @@ FILES = Makefile $(DOCS) $(HDRS) $(SRCS)
  
  UHDR = aslookup.h port.h exit.h
  USRC = aslookup.c vers.c
@@ -83,7 +67,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
  
  # ----------------------------------------------------------------------
  # Rules for installation.
-@@ -161,25 +162,29 @@
+ # ----------------------------------------------------------------------
+ 
+-OWNER = root
+-GROUP = network
++OWNER = ${BINOWN}
++GROUP = ${BINGRP}
  MODE  = 4755
  STRIP = -s
  
@@ -98,14 +87,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/16 22:40:11 seb Exp $
 -install: $(PROG)
 -	$(INSTALL) -m $(MODE) -o $(OWNER) -g $(GROUP) $(STRIP) $(PROG) $(BINDIR)
 +install: $(PROG) $(UTIL) man
-+	$(INSTALL_PROGRAM_DIR) $(BINDIR)
-+	$(INSTALL_PROGRAM_SUID) traceroute $(BINDIR)/traceroute-as
-+	$(INSTALL_PROGRAM) aslookup $(BINDIR)/aslookup
++	$(INSTALL) -m $(MODE) -o $(OWNER) -g $(GROUP) $(STRIP) $(PROG) $(BINDIR)/traceroute-as
++	$(INSTALL) -m $(MODE) -o $(OWNER) -g $(GROUP) $(STRIP) $(UTIL) $(BINDIR)/aslookup
  
  man: $(MANS)
 -	$(INSTALL) -m 444 traceroute.8 $(MANDIR)
-+	$(INSTALL_MAN_DIR) $(MANDIR)
-+	$(INSTALL_MAN) traceroute.8 $(MANDIR)/traceroute-as.8
++	$(INSTALL) -m 444 traceroute.8 $(MANDIR)/traceroute-as.8
  
  clean:
  	rm -f $(CLEANUP) *.o a.out core
