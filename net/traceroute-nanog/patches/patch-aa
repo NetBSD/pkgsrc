@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2012/05/05 22:44:19 schwarz Exp $
+$NetBSD: patch-aa,v 1.3 2024/06/25 16:23:38 ryoon Exp $
 
---- traceroute.c.orig	2012-05-06 00:38:52.000000000 +0200
-+++ traceroute.c	2012-05-06 00:39:12.000000000 +0200
-@@ -758,17 +758,6 @@
+* Fix segfault.
+
+--- traceroute.c.orig	2007-10-10 21:50:07.000000000 +0000
++++ traceroute.c
+@@ -638,6 +638,7 @@ int fixargs(int *, char **, char **);
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #include <arpa/nameser.h>
++#include <arpa/inet.h> /* for inet_addr(3) */
+ #include <sys/time.h>
+ 
+ #ifndef vms                     /* Not VMS */
+@@ -758,17 +759,6 @@ void cksum(u_int16_t *, int, volatile u_
  #undef IP_HDRINCL
  #endif
  
