@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.281 2024/04/11 05:29:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.282 2024/06/25 17:38:40 wiz Exp $
 
-DISTNAME=		openssh-9.6p1
-PKGREVISION=		1
+DISTNAME=		openssh-9.7p1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -73,7 +72,7 @@ CONFIGURE_ENV+=		LD=${CC:Q}
 .  include "../../security/skey/buildlink3.mk"
 .endif
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 .  if exists(/usr/include/utmpx.h)
 # if we have utmpx et al do not try to use login()
 CONFIGURE_ARGS+=	--disable-libutil
