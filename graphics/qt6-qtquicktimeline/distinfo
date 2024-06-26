@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/05/20 19:38:27 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/06/26 16:41:00 adam Exp $
 
-BLAKE2s (qtquicktimeline-everywhere-src-6.7.1.tar.xz) = c559ca338b5003a44af2adc7ffe339e467a54fc5a90c96009d8a1ddac0d65c94
-SHA512 (qtquicktimeline-everywhere-src-6.7.1.tar.xz) = 52a55c09ac64870b522c1f357876c612afdccc76cec8b8ca06a4470be754b04908fffb9ef8f7df031f8a6e4a6f46cf64657ca6011c297bf73b59b4f7135bd58b
-Size (qtquicktimeline-everywhere-src-6.7.1.tar.xz) = 110116 bytes
+BLAKE2s (qtquicktimeline-everywhere-src-6.7.2.tar.xz) = f5f35e7d3d2b1c77a648401eae57a54644d9b7e47d8438855d626634533bf892
+SHA512 (qtquicktimeline-everywhere-src-6.7.2.tar.xz) = cb460db34b726216f539bcd305e257375b01250a4f2df546a9a27c53bf78287e2c9d1ecc81edc336e5d55b87006a271ddc435e5fb57a898947bcf93cf5ea1b90
+Size (qtquicktimeline-everywhere-src-6.7.2.tar.xz) = 110200 bytes
