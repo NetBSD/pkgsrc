@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2024/06/08 12:40:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.89 2024/06/26 17:11:58 wiz Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -514,6 +514,21 @@ ${PYSITELIB}/setuptools/_vendor/tomli/_types.py
 ${PYSITELIB}/setuptools/_vendor/tomli/_types.pyc
 ${PYSITELIB}/setuptools/_vendor/tomli/_types.pyo
 ${PYSITELIB}/setuptools/_vendor/tomli/py.typed
+${PYSITELIB}/setuptools/_vendor/wheel/__init__.py
+${PYSITELIB}/setuptools/_vendor/wheel/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/wheel/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/wheel/macosx_libfile.py
+${PYSITELIB}/setuptools/_vendor/wheel/macosx_libfile.pyc
+${PYSITELIB}/setuptools/_vendor/wheel/macosx_libfile.pyo
+${PYSITELIB}/setuptools/_vendor/wheel/metadata.py
+${PYSITELIB}/setuptools/_vendor/wheel/metadata.pyc
+${PYSITELIB}/setuptools/_vendor/wheel/metadata.pyo
+${PYSITELIB}/setuptools/_vendor/wheel/util.py
+${PYSITELIB}/setuptools/_vendor/wheel/util.pyc
+${PYSITELIB}/setuptools/_vendor/wheel/util.pyo
+${PYSITELIB}/setuptools/_vendor/wheel/wheelfile.py
+${PYSITELIB}/setuptools/_vendor/wheel/wheelfile.pyc
+${PYSITELIB}/setuptools/_vendor/wheel/wheelfile.pyo
 ${PYSITELIB}/setuptools/_vendor/zipp.py
 ${PYSITELIB}/setuptools/_vendor/zipp.pyc
 ${PYSITELIB}/setuptools/_vendor/zipp.pyo
@@ -542,6 +557,9 @@ ${PYSITELIB}/setuptools/command/bdist_egg.pyo
 ${PYSITELIB}/setuptools/command/bdist_rpm.py
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyc
 ${PYSITELIB}/setuptools/command/bdist_rpm.pyo
+${PYSITELIB}/setuptools/command/bdist_wheel.py
+${PYSITELIB}/setuptools/command/bdist_wheel.pyc
+${PYSITELIB}/setuptools/command/bdist_wheel.pyo
 ${PYSITELIB}/setuptools/command/build.py
 ${PYSITELIB}/setuptools/command/build.pyc
 ${PYSITELIB}/setuptools/command/build.pyo
