@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2024/05/05 16:30:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/06/26 16:53:35 wiz Exp $
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
 ${PYSITELIB}/pdm/backend/_vendor/__init__.py
 ${PYSITELIB}/pdm/backend/_vendor/__init__.pyc
 ${PYSITELIB}/pdm/backend/_vendor/__init__.pyo
+${PYSITELIB}/pdm/backend/_vendor/editables/LICENSE.txt
+${PYSITELIB}/pdm/backend/_vendor/editables/__init__.py
+${PYSITELIB}/pdm/backend/_vendor/editables/__init__.pyc
+${PYSITELIB}/pdm/backend/_vendor/editables/__init__.pyo
+${PYSITELIB}/pdm/backend/_vendor/editables/py.typed
+${PYSITELIB}/pdm/backend/_vendor/editables/redirector.py
+${PYSITELIB}/pdm/backend/_vendor/editables/redirector.pyc
+${PYSITELIB}/pdm/backend/_vendor/editables/redirector.pyo
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE.APACHE
 ${PYSITELIB}/pdm/backend/_vendor/packaging/LICENSE.BSD
