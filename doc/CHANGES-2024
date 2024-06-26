@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4136 2024/06/26 16:48:08 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4137 2024/06/26 16:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/qt6-qtwayland to 6.7.2 [adam 2024-06-26]
 	Updated meta-pkgs/qt6 to 6.7.2 [adam 2024-06-26]
 	Updated devel/py-hatchling to 1.25.0 [wiz 2024-06-26]
+	Updated devel/py-importlib-metadata to 7.2.0 [wiz 2024-06-26]
