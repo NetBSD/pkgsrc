@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 18:12:00 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/26 22:49:10 gdt Exp $
 guile/3.0/bin/guild
 guile/3.0/bin/guile
 guile/3.0/bin/guile-config
@@ -145,6 +145,7 @@ guile/3.0/lib/guile/3.0/ccache/ice-9/common-list.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/control.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/copy-tree.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/curried-definitions.go
+guile/3.0/lib/guile/3.0/ccache/ice-9/custom-ports.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/deprecated.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/documentation.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/eval-string.go
@@ -200,6 +201,7 @@ guile/3.0/lib/guile/3.0/ccache/ice-9/scm-style-repl.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/serialize.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/session.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/slib.go
+guile/3.0/lib/guile/3.0/ccache/ice-9/soft-ports.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/stack-catch.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/streams.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/string-fun.go
@@ -228,14 +230,16 @@ guile/3.0/lib/guile/3.0/ccache/language/cps/dump.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/effects-analysis.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/elide-arity-checks.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/graphs.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/guile-vm.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/guile-vm/loop-instrumentation.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/guile-vm/lower-primcalls.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/guile-vm/reify-primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/intmap.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/intset.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/licm.go
-guile/3.0/lib/guile/3.0/ccache/language/cps/loop-instrumentation.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/optimize.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/peel-loops.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/prune-top-level-scopes.go
-guile/3.0/lib/guile/3.0/ccache/language/cps/reify-primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/renumber.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/return-types.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/rotate-loops.go
@@ -280,6 +284,7 @@ guile/3.0/lib/guile/3.0/ccache/language/tree-il/compile-bytecode.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/compile-cps.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/cps-primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/debug.go
+guile/3.0/lib/guile/3.0/ccache/language/tree-il/demux-lambda.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/effects.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/eta-expand.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/fix-letrec.go
@@ -291,6 +296,8 @@ guile/3.0/lib/guile/3.0/ccache/language/tree-il/primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/resolve-free-vars.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/spec.go
 guile/3.0/lib/guile/3.0/ccache/language/value/spec.go
+guile/3.0/lib/guile/3.0/ccache/language/wisp.go
+guile/3.0/lib/guile/3.0/ccache/language/wisp/spec.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/accessors.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops/active-slot.go
@@ -467,7 +474,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.6.0-gdb.scm
+guile/3.0/lib/libguile-3.0.so.1.7.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -484,6 +491,7 @@ guile/3.0/share/guile/3.0/ice-9/common-list.scm
 guile/3.0/share/guile/3.0/ice-9/control.scm
 guile/3.0/share/guile/3.0/ice-9/copy-tree.scm
 guile/3.0/share/guile/3.0/ice-9/curried-definitions.scm
+guile/3.0/share/guile/3.0/ice-9/custom-ports.scm
 guile/3.0/share/guile/3.0/ice-9/deprecated.scm
 guile/3.0/share/guile/3.0/ice-9/documentation.scm
 guile/3.0/share/guile/3.0/ice-9/eval-string.scm
@@ -545,6 +553,7 @@ guile/3.0/share/guile/3.0/ice-9/scm-style-repl.scm
 guile/3.0/share/guile/3.0/ice-9/serialize.scm
 guile/3.0/share/guile/3.0/ice-9/session.scm
 guile/3.0/share/guile/3.0/ice-9/slib.scm
+guile/3.0/share/guile/3.0/ice-9/soft-ports.scm
 guile/3.0/share/guile/3.0/ice-9/stack-catch.scm
 guile/3.0/share/guile/3.0/ice-9/streams.scm
 guile/3.0/share/guile/3.0/ice-9/string-fun.scm
@@ -573,14 +582,16 @@ guile/3.0/share/guile/3.0/language/cps/dump.scm
 guile/3.0/share/guile/3.0/language/cps/effects-analysis.scm
 guile/3.0/share/guile/3.0/language/cps/elide-arity-checks.scm
 guile/3.0/share/guile/3.0/language/cps/graphs.scm
+guile/3.0/share/guile/3.0/language/cps/guile-vm.scm
+guile/3.0/share/guile/3.0/language/cps/guile-vm/loop-instrumentation.scm
+guile/3.0/share/guile/3.0/language/cps/guile-vm/lower-primcalls.scm
+guile/3.0/share/guile/3.0/language/cps/guile-vm/reify-primitives.scm
 guile/3.0/share/guile/3.0/language/cps/intmap.scm
 guile/3.0/share/guile/3.0/language/cps/intset.scm
 guile/3.0/share/guile/3.0/language/cps/licm.scm
-guile/3.0/share/guile/3.0/language/cps/loop-instrumentation.scm
 guile/3.0/share/guile/3.0/language/cps/optimize.scm
 guile/3.0/share/guile/3.0/language/cps/peel-loops.scm
 guile/3.0/share/guile/3.0/language/cps/prune-top-level-scopes.scm
-guile/3.0/share/guile/3.0/language/cps/reify-primitives.scm
 guile/3.0/share/guile/3.0/language/cps/renumber.scm
 guile/3.0/share/guile/3.0/language/cps/return-types.scm
 guile/3.0/share/guile/3.0/language/cps/rotate-loops.scm
@@ -625,6 +636,7 @@ guile/3.0/share/guile/3.0/language/tree-il/compile-bytecode.scm
 guile/3.0/share/guile/3.0/language/tree-il/compile-cps.scm
 guile/3.0/share/guile/3.0/language/tree-il/cps-primitives.scm
 guile/3.0/share/guile/3.0/language/tree-il/debug.scm
+guile/3.0/share/guile/3.0/language/tree-il/demux-lambda.scm
 guile/3.0/share/guile/3.0/language/tree-il/effects.scm
 guile/3.0/share/guile/3.0/language/tree-il/eta-expand.scm
 guile/3.0/share/guile/3.0/language/tree-il/fix-letrec.scm
@@ -636,6 +648,8 @@ guile/3.0/share/guile/3.0/language/tree-il/primitives.scm
 guile/3.0/share/guile/3.0/language/tree-il/resolve-free-vars.scm
 guile/3.0/share/guile/3.0/language/tree-il/spec.scm
 guile/3.0/share/guile/3.0/language/value/spec.scm
+guile/3.0/share/guile/3.0/language/wisp.scm
+guile/3.0/share/guile/3.0/language/wisp/spec.scm
 guile/3.0/share/guile/3.0/oop/goops.scm
 guile/3.0/share/guile/3.0/oop/goops/accessors.scm
 guile/3.0/share/guile/3.0/oop/goops/active-slot.scm
