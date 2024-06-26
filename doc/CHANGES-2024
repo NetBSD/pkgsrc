@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4117 2024/06/25 17:38:48 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4118 2024/06/26 10:33:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6555,5 +6555,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/fwknop to 2.6.11 [adam 2024-06-25]
 	Removed editors/emacs-snapshot [wiz 2024-06-25]
 	Updated net/traceroute-nanog to 6.4.2nb1 [ryoon 2024-06-25]
-	Updated net/traceroute-as to 991603 [ryoon 2024-06-25]
+	Updated net/traceroute-as to 991603nb1 [ryoon 2024-06-25]
 	Updated security/openssh to 9.7p1 [wiz 2024-06-25]
