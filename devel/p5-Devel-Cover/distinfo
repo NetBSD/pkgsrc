@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2024/04/30 01:13:39 wen Exp $
+$NetBSD: distinfo,v 1.33 2024/06/26 23:11:40 wen Exp $
 
-BLAKE2s (Devel-Cover-1.42.tar.gz) = fcfb5efe89dd604cd7459a7c1f867c1f19ccd4881f4bfcef59c3bbddafcc5d40
-SHA512 (Devel-Cover-1.42.tar.gz) = dd2f3c998fcf9b82bda18af66b413a3459261ba3a254ac202266742d262566aa1b101c55bf61a5e438857a1912c382599f1f8666d1940ec371379762310b39b6
-Size (Devel-Cover-1.42.tar.gz) = 1206890 bytes
+BLAKE2s (Devel-Cover-1.44.tar.gz) = 46ec8504e17a7cb0da6668c2b24231ed1082a732a850abe4798eef93a7ed8a5d
+SHA512 (Devel-Cover-1.44.tar.gz) = f414c57c4d42fdf71e2881af7fabde21d01c19c4102c0dd645598a036842ebbebf7eadc51bdd40da788b08bb17d0403f5a25082d56b15d2579f9f3f31062bc87
+Size (Devel-Cover-1.44.tar.gz) = 221547 bytes
