@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:16:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/06/26 16:29:50 wiz Exp $
 
-BLAKE2s (ExtUtils-Helpers-0.026.tar.gz) = 712d0b3fb5a362f7d84e64ff0d9fc92f0503130b981a2a4be1f7538bee2c97a4
-SHA512 (ExtUtils-Helpers-0.026.tar.gz) = 372d801f43003c571758823a84bfe418876f1b48e3d8c35f888ca41469f6771a33aa30cf893a4c4a68ea62c6e8c8c6ab2ef44ee783dbf9f25e18bc0389359399
-Size (ExtUtils-Helpers-0.026.tar.gz) = 15099 bytes
+BLAKE2s (ExtUtils-Helpers-0.027.tar.gz) = 99abb329e8357655d05c924664a05c0979a022d73ba4b8866f71f6c73959da61
+SHA512 (ExtUtils-Helpers-0.027.tar.gz) = 5d89db5aeaa02fb5807dcf14be45b1e0b905f40f16399f442aabfba52be3987d19d6617bd2ebada45ff14a95519b80f6f23ccdc6016c8a5595d28ff7cfa7b702
+Size (ExtUtils-Helpers-0.027.tar.gz) = 16557 bytes
