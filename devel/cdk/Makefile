@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.48 2024/05/06 08:40:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2024/06/26 16:23:34 wiz Exp $
 
-DISTNAME=		cdk-5.0-20210324
+DISTNAME=		cdk-5.0-20240619
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		https://invisible-mirror.net/archives/cdk/
+MASTER_SITES=		https://invisible-island.net/archives/cdk/ \
+			https://invisible-mirror.net/archives/cdk/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://invisible-island.net/cdk/
 COMMENT=		Curses Development Kit
-LICENSE=		original-bsd
+LICENSE=		x11
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes

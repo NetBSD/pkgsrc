@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/04 00:20:10 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/06/26 16:23:34 wiz Exp $
 bin/cdk5-config
 include/cdk.h
 include/cdk/alphalist.h
@@ -6,6 +6,7 @@ include/cdk/binding.h
 include/cdk/button.h
 include/cdk/buttonbox.h
 include/cdk/calendar.h
+include/cdk/cdk.h
 include/cdk/cdk_compat.h
 include/cdk/cdk_config.h
 include/cdk/cdk_objs.h
@@ -46,10 +47,12 @@ lib/libcdk.a
 man/man1/cdk5-config.1
 man/man3/Beep.3
 man/man3/CDKallocStrings.3
+man/man3/CDKchdir.3
 man/man3/CDKcountStrings.3
 man/man3/CDKfreeChtypes.3
 man/man3/CDKfreeStrings.3
 man/man3/CDKgetDirectoryContents.3
+man/man3/CDKopenFile.3
 man/man3/CDKparamNumber.3
 man/man3/CDKparamNumber2.3
 man/man3/CDKparamString.3
@@ -1015,11 +1018,7 @@ man/man3/viewFile.3
 man/man3/viewInfo.3
 man/man3/waitCDKLabel.3
 share/doc/cdk/COPYING
-share/doc/cdk/EXPANDING
-share/doc/cdk/INSTALL
-share/doc/cdk/NOTES
 share/doc/cdk/README
-share/doc/cdk/TODO
 share/examples/cdk/Makefile
 share/examples/cdk/alphalist_ex.c
 share/examples/cdk/bind_ex.c
