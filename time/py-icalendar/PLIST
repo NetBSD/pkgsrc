@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/04/05 10:39:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/06/26 16:29:02 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -50,6 +50,7 @@ ${PYSITELIB}/icalendar/tests/calendars/issue_27_multiple_periods_in_freebusy_mul
 ${PYSITELIB}/icalendar/tests/calendars/issue_27_multiple_periods_in_freebusy_one_freebusy.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_322_expected_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_348_exception_parsing_value.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_350.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_466_convert_tzid_with_slash.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_466_respect_unique_timezone.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_different_events.ics
@@ -62,6 +63,7 @@ ${PYSITELIB}/icalendar/tests/calendars/parsing_error.ics
 ${PYSITELIB}/icalendar/tests/calendars/parsing_error_in_UTC_offset.ics
 ${PYSITELIB}/icalendar/tests/calendars/period_with_timezone.ics
 ${PYSITELIB}/icalendar/tests/calendars/pr_480_summary_with_colon.ics
+${PYSITELIB}/icalendar/tests/calendars/property_params.ics
 ${PYSITELIB}/icalendar/tests/calendars/small_bad_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/time.ics
 ${PYSITELIB}/icalendar/tests/calendars/timezone_rdate.ics
@@ -146,6 +148,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_322_single_strings_characters_split_into
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.py
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.pyo
+${PYSITELIB}/icalendar/tests/test_issue_350.py
+${PYSITELIB}/icalendar/tests/test_issue_350.pyc
+${PYSITELIB}/icalendar/tests/test_issue_350.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.py
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.pyo
