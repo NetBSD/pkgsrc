@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4121 2024/06/26 16:24:14 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4122 2024/06/26 16:24:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6560,3 +6560,4 @@ Changes to the packages collection and infrastructure in 2024:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2024Q2 branch [gdt 2024-06-26]
 	Updated devel/cdk to 5.0.20240619nb1 [wiz 2024-06-26]
 	Updated misc/dialog to 1.3.20240619 [wiz 2024-06-26]
+	Updated x11/libdrm to 2.4.122 [wiz 2024-06-26]
