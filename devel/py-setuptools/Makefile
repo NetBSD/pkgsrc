@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.245 2024/06/08 12:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.246 2024/06/26 17:11:58 wiz Exp $
 
-DISTNAME=	setuptools-70.0.0
+DISTNAME=	setuptools-70.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -17,6 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ini2toml>=0.9:../../textproc/py-ini2toml
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.develop>=7.21:../../devel/py-jaraco.develop
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.envs>=2.2:../../devel/py-jaraco.envs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.path>=3.2.0:../../devel/py-jaraco.path
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=0:../../devel/py-jaraco.test
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=19.1:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs>=2.4:../../devel/py-test-checkdocs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
