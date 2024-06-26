@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/05/20 19:38:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/06/26 16:41:00 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -14,8 +14,10 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcapturablewindow_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qerrorinfo_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamer_platformspecificinterface_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qimagevideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmaybe_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediacapturesession_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
@@ -156,8 +158,6 @@ ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamer
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreameraudiodevice_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreameraudioinput_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreameraudiooutput_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreameraudiosink_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreameraudiosource_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreamerbufferprobe_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreamercamera_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPlugin/${PKGVERSION}/QtQGstreamerMediaPlugin/private/qgstreamerformatinfo_p.h

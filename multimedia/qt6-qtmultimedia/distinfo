@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.11 2024/05/20 19:38:26 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/06/26 16:41:00 adam Exp $
 
-BLAKE2s (qtmultimedia-everywhere-src-6.7.1.tar.xz) = 104bb713c1c343ae8319afdbb8ffb9c088a1e61e584103b7149d0c0906772118
-SHA512 (qtmultimedia-everywhere-src-6.7.1.tar.xz) = 18e7b2036baac68a421cb8741713b43d739f558cad8b9d2b8192e390b2c37cfda17f6bb290c9313ae9e3b7ea2ee4fda52b86a58195201e99179d6f4a4e386783
-Size (qtmultimedia-everywhere-src-6.7.1.tar.xz) = 8362120 bytes
-SHA1 (patch-cmake_FindFFmpeg.cmake) = ef91d94aaa01aadc653f5ee6e3a4c740ea086717
+BLAKE2s (qtmultimedia-everywhere-src-6.7.2.tar.xz) = 18f98c905599e4309cda0c87005d9ab6e5ad60dbe8387b53d80bbd93c23bf145
+SHA512 (qtmultimedia-everywhere-src-6.7.2.tar.xz) = bfcd04a5ba142e2a3bee3b67a261ffb4f651ac4e043e3dcafc0175bd25409de375041aa6fdda4f6899b00e4bad6c06ae9fd0d6a1e7db0b874f1bcf0a578d3c70
+Size (qtmultimedia-everywhere-src-6.7.2.tar.xz) = 8451800 bytes
+SHA1 (patch-cmake_FindFFmpeg.cmake) = d278e4676d2f6a1dbd42f813f9df832ccf77f02f
+SHA1 (patch-src_plugins_multimedia_ffmpeg_CMakeLists.txt) = b64897d43df685b86b918fc627942a7eb597272c
+SHA1 (patch-src_plugins_multimedia_gstreamer_mediacapture_qgstreamercamera.cpp) = 51a750623d77c6ac1c90c16eadb08dad4c47a359

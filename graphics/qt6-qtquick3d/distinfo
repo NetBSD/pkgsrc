@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/05/20 19:38:27 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/06/26 16:41:00 adam Exp $
 
-BLAKE2s (qtquick3d-everywhere-src-6.7.1.tar.xz) = e40689a1910b7ef77905e2adbdbf05b700d183932f4a2174a3bc9b1f6080ba5e
-SHA512 (qtquick3d-everywhere-src-6.7.1.tar.xz) = a26da739a949011c33c989456658c6f91dbc991a2570d7ac2abc78189c3daa78d5e7ea25e0f3f5828e6f9dececbd5c18b2cc67cf9d16badd36c98781fd882a44
-Size (qtquick3d-everywhere-src-6.7.1.tar.xz) = 66184636 bytes
+BLAKE2s (qtquick3d-everywhere-src-6.7.2.tar.xz) = 2a9262419d307df45ce1a437492c757e633cd033126539f75536a03fea0dd5ff
+SHA512 (qtquick3d-everywhere-src-6.7.2.tar.xz) = d5a4557a6f0ea73b43de9238b8cd42fc037c417e72443a8cae96e8be779f82d5fd9efe1a09258a4d5dd55c4791b84192cb72e31bb1d744b618951080fe6fa1e2
+Size (qtquick3d-everywhere-src-6.7.2.tar.xz) = 66202160 bytes
