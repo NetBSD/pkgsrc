@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/12/19 12:16:27 mef Exp $
+$NetBSD: distinfo,v 1.19 2024/06/26 16:30:51 wiz Exp $
 
-BLAKE2s (PAR-Dist-0.52.tar.gz) = 4cce96276b9d48473df8988a7785d22fa50592829c48d0a055de21009e37dbd4
-SHA512 (PAR-Dist-0.52.tar.gz) = 46c79a3156bb66bcb8a63dfb53d67de01624bf1c5ca72c81ebb26820485b8144c13c4a9c6a4ad6475c328d2fbd10fa2d7889a2c89590cab7405fbe688b789864
-Size (PAR-Dist-0.52.tar.gz) = 42768 bytes
+BLAKE2s (PAR-Dist-0.53.tar.gz) = 5ffdb8645da1c52b28336be475a7d478c76e778cc411f241d1d6ac9800e84abe
+SHA512 (PAR-Dist-0.53.tar.gz) = 19dcc9e6afe5de749d68da1f02b622c70c463fa00cedcda454a9efcd31403bd1e39cd29c8c4bf0d5be742cd6d340f8423663f2f30c6cd994a192f8e1fa55a64a
+Size (PAR-Dist-0.53.tar.gz) = 43238 bytes
