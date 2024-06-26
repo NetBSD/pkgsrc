@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/07 19:50:35 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/26 16:16:26 adam Exp $
 include/minizip-ng/mz.h
 include/minizip-ng/mz_crypt.h
 include/minizip-ng/mz_os.h
 include/minizip-ng/mz_strm.h
 include/minizip-ng/mz_strm_buf.h
 include/minizip-ng/mz_strm_bzip.h
+${PLIST.libcomp}include/minizip-ng/mz_strm_libcomp.h
 include/minizip-ng/mz_strm_lzma.h
 include/minizip-ng/mz_strm_mem.h
 include/minizip-ng/mz_strm_os.h
 include/minizip-ng/mz_strm_pkcrypt.h
 include/minizip-ng/mz_strm_split.h
 include/minizip-ng/mz_strm_wzaes.h
-include/minizip-ng/mz_strm_zlib.h
+${PLIST.zlib}include/minizip-ng/mz_strm_zlib.h
 include/minizip-ng/mz_strm_zstd.h
 include/minizip-ng/mz_zip.h
 include/minizip-ng/mz_zip_rw.h
@@ -20,6 +21,6 @@ lib/cmake/minizip-ng/minizip-ng-config.cmake
 lib/cmake/minizip-ng/minizip-ng-noconfig.cmake
 lib/cmake/minizip-ng/minizip-ng.cmake
 lib/libminizip-ng.so
-lib/libminizip-ng.so.4
 lib/libminizip-ng.so.${PKGVERSION}
+lib/libminizip-ng.so.4
 lib/pkgconfig/minizip-ng.pc
