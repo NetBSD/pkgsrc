@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/05/05 16:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/06/26 16:53:35 wiz Exp $
 
-DISTNAME=	pdm_backend-2.3.0
+DISTNAME=	pdm_backend-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
@@ -21,6 +21,7 @@ USE_LANGUAGES=	c # for tests
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 .endif
