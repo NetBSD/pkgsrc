@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/26 17:02:45 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -62,9 +62,6 @@ ${PYSITELIB}/skbuild/command/install_scripts.pyo
 ${PYSITELIB}/skbuild/command/sdist.py
 ${PYSITELIB}/skbuild/command/sdist.pyc
 ${PYSITELIB}/skbuild/command/sdist.pyo
-${PYSITELIB}/skbuild/command/test.py
-${PYSITELIB}/skbuild/command/test.pyc
-${PYSITELIB}/skbuild/command/test.pyo
 ${PYSITELIB}/skbuild/constants.py
 ${PYSITELIB}/skbuild/constants.pyc
 ${PYSITELIB}/skbuild/constants.pyo

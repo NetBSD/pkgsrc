@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/06/10 18:51:13 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/06/26 17:02:45 wiz Exp $
 
-BLAKE2s (scikit_build-0.17.6.tar.gz) = cd6565e4566a00109a78bd73c03e3b4049d9a3cc726560ce87ca904e5c9211ee
-SHA512 (scikit_build-0.17.6.tar.gz) = 92b97146f40d8222bd8415ef8439497d5075b72e5bafc40aba0a3e2911d269a118f2f7d41f468f7add8949f550b1fd7d5a9113d249e42dfac431108182ca9198
-Size (scikit_build-0.17.6.tar.gz) = 272208 bytes
+BLAKE2s (scikit_build-0.18.0.tar.gz) = 653cf2d458d50e5531e9714c3a04e3289fd11a1a5986128d6c0ac1a6b6ac018f
+SHA512 (scikit_build-0.18.0.tar.gz) = a374f86c69a288ddcfe8e8d95b594b2bf94365b4d6d4d25a7912cf871f12dfb1866b1d74694c919ef8e4fef3d166b7afe9de3b32b56add33173840a9bb917c71
+Size (scikit_build-0.18.0.tar.gz) = 273824 bytes
 SHA1 (patch-skbuild_platform__specifics_platform__factory.py) = 49f00521a2ff1110bd8900bbb8f8675f3f7976aa
