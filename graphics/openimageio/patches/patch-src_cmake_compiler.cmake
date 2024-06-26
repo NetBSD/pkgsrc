@@ -1,13 +1,14 @@
-$NetBSD: patch-src_cmake_compiler.cmake,v 1.2 2023/10/15 19:52:09 ryoon Exp $
+$NetBSD: patch-src_cmake_compiler.cmake,v 1.3 2024/06/26 16:26:24 adam Exp $
 
 Disable custom rpath handling that conflicts with pkgsrc.
 
---- src/cmake/compiler.cmake.orig	2023-10-02 01:17:00.000000000 +0000
+--- src/cmake/compiler.cmake.orig	2024-06-01 19:59:05.000000000 +0000
 +++ src/cmake/compiler.cmake
-@@ -600,30 +600,6 @@ endif ()
+@@ -632,27 +632,6 @@ if (DEFINED ENV{${PROJECT_NAME}_CI})
+ endif ()
  
  
- ###########################################################################
+-###########################################################################
 -# Rpath handling at the install step
 -#
 -# set (MACOSX_RPATH ON)
@@ -28,10 +29,6 @@ Disable custom rpath handling that conflicts with pkgsrc.
 -    set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 -    message (VERBOSE "CMAKE_INSTALL_RPATH = ${CMAKE_INSTALL_RPATH}")
 -endif ()
--
--
--
--###########################################################################
- # Macro to install targets to the appropriate locations.  Use this instead
- # of the install(TARGETS ...) signature. Note that it adds it to the
- # export targets list for when we generate config files.
+ 
+ 
+ ###########################################################################
