@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2024/06/17 09:37:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/06/26 17:17:23 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -78,6 +78,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigateway.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigee.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigeeregistry.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apikeys.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/apim.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1beta.json
@@ -348,6 +349,16 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/manufacturers.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/marketingplatformadmin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1beta2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.accounts_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.conversions_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.datasources_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.lfp_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.products_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.promotions_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.quota_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reports_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1beta.json
@@ -402,6 +413,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta.js
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policysimulator.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/policytroubleshooter.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/pollen.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/poly.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1beta1.json
