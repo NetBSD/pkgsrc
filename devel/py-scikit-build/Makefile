@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/26 17:02:45 wiz Exp $
 
-DISTNAME=	scikit_build-0.17.6
+DISTNAME=	scikit_build-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build/}
 
@@ -14,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+DEPENDS+=	cmake>=3.5:../../devel/cmake
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
@@ -25,12 +25,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.4:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 .endif
@@ -41,6 +43,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../devel/cmake/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
