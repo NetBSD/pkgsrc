@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/01/05 20:25:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/06/26 17:06:33 wiz Exp $
 
-DISTNAME=	proto-plus-1.23.0
+DISTNAME=	proto-plus-1.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/proto-plus/}
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.19.0:../../devel/py-protobuf
+# this depends on py-proto-plus:
 TEST_DEPENDS+=	${PYPKGPREFIX}-google-api-core>=1.31.5:../../devel/py-google-api-core
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
