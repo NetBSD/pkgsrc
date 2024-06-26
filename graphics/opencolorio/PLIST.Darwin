@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2024/06/26 16:21:21 adam Exp $
+include/OpenColorIO/oglapphelpers/metalapp.h
+include/OpenColorIO/oglapphelpers/msl.h
+include/OpenColorIO/oglapphelpers/mtltexture.h
