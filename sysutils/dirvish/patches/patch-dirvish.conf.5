@@ -1,0 +1,28 @@
+$NetBSD: patch-dirvish.conf.5,v 1.1 2024/06/27 17:40:34 abs Exp $
+
+Taken from debian - From: Ondřej Surý <ondrej@debian.org>
+Subject: Fix typo in docs about rsync-options which was deprecated
+
+Taken from debian - From: Paul Slootman <paul@debian.org>
+Subject: fix manpage nroff typo
+
+--- dirvish.conf.5.orig	2024-06-20 09:31:51.449735823 +0000
++++ dirvish.conf.5
+@@ -101,7 +101,7 @@ the system-wide configuration files in s
+ than /etc/dirvish.
+ 
+ Multiple configuration files will be loaded by the
+-.DR config ,
++.Dr config ,
+ .D vault
+ and
+ .D branch
+@@ -537,7 +537,7 @@ use the the
+ .B dirvish
+ supplied mechanism for setting it.
+ 
+-.multiple rsync\-options
++.multiple rsync\-option
+ .TP
+ .Br sparse: (B)
+ Try to handle sparse files efficiently so they take up
