@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2023/10/24 22:11:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/06/27 15:26:23 sborrill Exp $
 
-DISTNAME=	e2guardian-5.1.1
-PKGREVISION=	7
+DISTNAME=	e2guardian-5.5.5r
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=e2guardian/}
 GITHUB_PROJECT=	e2guardian
-GITHUB_TAG=	V${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://www.e2guardian.org/
@@ -13,7 +12,7 @@ COMMENT=	Web content filtering proxy
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS=	autoconf automake perl pkg-config
 RCD_SCRIPTS+=	e2guardian
 
@@ -24,7 +23,7 @@ SUBST_MESSAGE.pathfix=	Fixing premature variable expansion
 SUBST_FILES.pathfix=	configs/Makefile.am
 SUBST_FILES.pathfix+=	configs/*/Makefile.am
 SUBST_FILES.pathfix+=	configs/*/*/Makefile.am
-SUBST_SED.pathfix=	-e 's,DGCONFDIR,sysconfdir,'
+SUBST_SED.pathfix=	-e 's,E2CONFDIR,sysconfdir,'
 
 E2G_USER?=		e2grdn
 E2G_GROUP?=		e2grdn
@@ -47,7 +46,6 @@ CONFIGURE_ARGS+=	--with-proxyuser=${E2G_USER}
 CONFIGURE_ARGS+=	--with-proxygroup=${E2G_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/${E2G_LOG}
-CONFIGURE_ARGS+=	--enable-ntlm
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
