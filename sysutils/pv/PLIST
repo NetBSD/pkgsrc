@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2015/05/12 15:45:21 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/27 16:39:58 scole Exp $
 bin/pv
 man/man1/pv.1
-share/doc/pv/README
+share/doc/pv/ACKNOWLEDGEMENTS.md
+share/doc/pv/COPYING
+share/doc/pv/DEVELOPERS.md
+share/doc/pv/INSTALL
+share/doc/pv/NEWS.md
+share/doc/pv/README.md
+share/doc/pv/TODO.md
+share/doc/pv/benchmark.sh
 share/locale/de/LC_MESSAGES/pv.mo
 share/locale/fr/LC_MESSAGES/pv.mo
 share/locale/pl/LC_MESSAGES/pv.mo
