@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.5 2022/08/22 18:34:23 tnn Exp $
+$NetBSD: distinfo,v 1.6 2024/06/27 17:40:34 abs Exp $
 
 BLAKE2s (dirvish-20120107/dirvish-1.2.1.tgz) = 305e41b592c72105a500208f6fabbf3a68f42aba71c91daec0fdcba2d8f6be74
 SHA512 (dirvish-20120107/dirvish-1.2.1.tgz) = 27cfbd3dd83c452a9c3a84d357fba4d5fd4a3a9e55bddf9a609d6f45d4c3ca3458e5d13247a748ec0886de05453c869a585a7bec7e70382211fbc53d2b5ff4b7
 Size (dirvish-20120107/dirvish-1.2.1.tgz) = 48604 bytes
+SHA1 (patch-dirvish-expire.pl) = 4f7ce7d73e6a8fcf02d2ef311ec1a7a500ecec84
+SHA1 (patch-dirvish.conf.5) = 18130e07423ca8f53abc44a23767d2ea8d649669
+SHA1 (patch-dirvish.pl) = c0c9937f48a6f81cbf6a2265df1797459bc31e90
