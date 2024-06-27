@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/07 13:43:55 osa Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/27 16:03:24 osa Exp $
 include/njs.h
 include/njs_addr2line.h
 include/njs_arr.h
@@ -66,5 +66,6 @@ include/njs_value_conversion.h
 include/njs_variable.h
 include/njs_vm.h
 include/njs_vmcode.h
+include/qjs.h
 lib/libnjs.a
 lib/pkgconfig/njs.pc
