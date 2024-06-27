@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2024/05/07 11:15:18 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2024/06/27 15:19:59 adam Exp $
 
-# NB: the 2.42.11 release is broken
-# https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/merge_requests/169
-DISTNAME=	gdk-pixbuf-2.42.10
+DISTNAME=	gdk-pixbuf-2.42.12
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -41,6 +38,8 @@ SUBST_SED.dyld=		-e 's|@LD_LIBRARY_PATH@|LD_LIBRARY_PATH|g'
 .endif
 
 MESON_ARGS+=			-D installed_tests=false
+# https://gitlab.gnome.org/GNOME/gdk-pixbuf/-/merge_requests/169
+MESON_ARGS+=			-D others=enabled
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
 
