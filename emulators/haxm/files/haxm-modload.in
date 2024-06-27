@@ -1,3 +1,0 @@
-#!/bin/sh
-
-modload @PREFIX@/stand/@MACHINE@/@OS_VERSION@/modules/haxm/haxm.kmod
