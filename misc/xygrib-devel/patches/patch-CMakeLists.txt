@@ -1,0 +1,100 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/06/27 12:31:32 bouyer Exp $
+
+* sanitze the names and dirs to search for libs and headers files
+* use PATH_SUFFIX fix to find openjpeg
+* install bins and data into the right directory
+* don't regenerate translations (no need for qttools dependecy)
+* don't install cmake files in the translation directory
+* don't generate an app bundle on MacOS X
+* install icon and desktop files
+* install hi-res maps
+
+--- CMakeLists.txt.orig	2022-05-16 12:16:49.000000000 +0200
++++ CMakeLists.txt	2024-06-24 12:54:25.426142023 +0200
+@@ -57,66 +57,23 @@
+ include_directories(${Qt5Xml_INCLUDE_DIRS})
+ 
+ find_library(LIBNOVA_LIBRARY
+-     NAMES "libnova.a" "libnova.so"
+-     PATHS
+-     $ENV{EXTERNLIBS}/lib
+-     ~/Library/Frameworks
+-     /Library/Frameworks
+-     /usr/local
+-     /usr
+-     /sw
+-     /opt/local
+-     /opt/csw
+-     /opt
+-     PATH_SUFFIXES lib lib64 lib/x86_64-linux-gnu lib/i386-linux-gnu lib/armhf-linux-gnu lib/arm64-linux-gnu
++     NAMES "nova" "libnova"
+      REQUIRED
+  )
+ find_path(LIBNOVA_INCLUDE_DIR
+-     NAMES "libnova/libnova.h" "libnova.h"
+-     PATHS
+-     $ENV{EXTERNLIBS}/include
+-     ~/Library/Frameworks/include
+-     /Library/Frameworks/include
+-     /usr/local/include
+-     /usr/include
+-     /sw/include # Fink
+-     /opt/local/include # DarwinPorts
+-     /opt/csw/include # Blastwave
+-     /opt/include
++     NAMES "libnova/libnova.h"
+      REQUIRED
+  )
+ include_directories(${LIBNOVA_INCLUDE_DIR})
+ 
+ #find_package(OpenJPEG REQUIRED)
+ find_library(OPENJPEG_LIBRARIES
+-#     NAMES "libopenjp2.a" "libopenjp2.so" "libopenjpeg.so.2" "libopenjp2.dll.a"
+-     NAMES "libopenjp2.so.7" "libopenjp2.so" "libopenjp2.a" "libopenjpeg.so.2" "libopenjp2.dll.a"
+-     PATHS
+-     $ENV{EXTERNLIBS}/lib
+-     ~/Library/Frameworks
+-     /Library/Frameworks
+-     /usr/local
+-     /usr
+-     /sw
+-     /opt/local
+-     /opt/csw
+-     /opt
+-     PATH_SUFFIXES lib lib64
++     NAMES "openjp2" "libopenjp2"
+      REQUIRED
+  )
+ find_path(OPENJPEG_INCLUDE_DIR
+      NAMES "openjpeg.h"
+-     PATHS
+-     $ENV{EXTERNLIBS}/include
+-     ~/Library/Frameworks/include
+-     /Library/Frameworks/include
+-     /usr/local/include
+-     /usr/include
+-     /sw/include # Fink
+-     /opt/local/include # DarwinPorts
+-     /opt/csw/include # Blastwave
+-     /opt/include
+-     PATH_SUFFIXES openjpeg-2.3 openjpeg-2.2 openjpeg-2.1
++     PATH_SUFFIXES openjpeg-2.4 openjpeg-2.5
+      REQUIRED
+  )
+ include_directories(${OPENJPEG_INCLUDE_DIR})
+@@ -231,15 +188,6 @@
+ 
+ # Installation
+ # macOS bundle parameters
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/cmake/MacOSXBundleInfo.plist.in")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_STRING "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_ICON_FILE "xyGrib.icns")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
+ # Install data
+ install(DIRECTORY data DESTINATION ${PREFIX_PKGDATA}
+         PATTERN "CMakeFiles" EXCLUDE
