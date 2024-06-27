@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/05/23 13:42:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/06/27 23:32:31 gdt Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_create
@@ -102,7 +102,7 @@ lib/cmake/gdal/GDALConfigVersion.cmake
 lib/gdalplugins/drivers.ini
 lib/libgdal.so
 lib/libgdal.so.35
-lib/libgdal.so.35.${PKGVERSION}
+lib/libgdal.so.35.${VERSION_BASE}
 lib/pkgconfig/gdal.pc
 man/man1/gdal-config.1
 man/man1/gdal2tiles.1

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.70 2024/06/19 12:00:45 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2024/06/27 23:32:31 gdt Exp $
 
-PKGREVISION= 3
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 #PKGREVISION=	0
@@ -21,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
-WHEEL_NAME=		GDAL-${PKGVERSION_NOREV}
+WHEEL_NAME=		GDAL-${VERSION_BASE}
 PYSETUPSUBDIR=		build/swig/python
 
 # Upstream's distfile does not have a ready-to-use python module
