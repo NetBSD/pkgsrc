@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2024/05/08 15:54:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2024/06/27 09:50:27 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -482,6 +482,7 @@ ${PYSITELIB}/samba/tests/blackbox/downgradedatabase.py
 ${PYSITELIB}/samba/tests/blackbox/http_chunk.py
 ${PYSITELIB}/samba/tests/blackbox/http_content.py
 ${PYSITELIB}/samba/tests/blackbox/mdsearch.py
+${PYSITELIB}/samba/tests/blackbox/misc_dfs_widelink.py
 ${PYSITELIB}/samba/tests/blackbox/ndrdump.py
 ${PYSITELIB}/samba/tests/blackbox/netads_dns.py
 ${PYSITELIB}/samba/tests/blackbox/netads_json.py
