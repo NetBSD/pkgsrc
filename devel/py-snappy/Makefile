@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/24 17:34:22 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/06/27 07:29:41 adam Exp $
 
-DISTNAME=	python-snappy-0.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+DISTNAME=	python_snappy-0.7.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-snappy/}
 
