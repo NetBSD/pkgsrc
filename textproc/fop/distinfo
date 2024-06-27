@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:21:54 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/06/27 13:44:26 ktnb Exp $
 
-BLAKE2s (fop-1.1-bin.tar.gz) = 0cd4324eb857b9c718a34dc75480456b751bcdc3ce7f961204238a8caf049b4d
-SHA512 (fop-1.1-bin.tar.gz) = 2f639ed6af993b4367fca35270559e984f82adb08fd999bcf9ace638d0facc40f0ae40c3041784de512aa450b665d44e8c14801093af4ae64378e6e705d4b44e
-Size (fop-1.1-bin.tar.gz) = 22490250 bytes
-SHA1 (patch-aa) = dfbcc411ae6d5f5e092e09643191fb093ecd4357
+BLAKE2s (fop-2.9-bin.tar.gz) = bda37131d608b8fc07cd7b70b35da4d5c07ebed3116ded7edb8c74243b0389db
+SHA512 (fop-2.9-bin.tar.gz) = 8367663e717d5413dc13271d7f33781574be5869a3552dbfc7cfd7d31953b1b8b9e77a92c56b2d5dbcc7d41225f55959afe6800504b13cab614cb012d91867a7
+Size (fop-2.9-bin.tar.gz) = 16800910 bytes
+SHA1 (patch-fop_fop) = 333db21c9414522aaa0d2ef274ab078220682839
