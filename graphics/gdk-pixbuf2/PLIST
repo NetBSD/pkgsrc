@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/04/12 19:41:39 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/06/27 15:19:59 adam Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
@@ -87,6 +87,7 @@ share/locale/is/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/it/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ja/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ka/LC_MESSAGES/gdk-pixbuf.mo
+share/locale/kab/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/kk/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/km/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/kn/LC_MESSAGES/gdk-pixbuf.mo
