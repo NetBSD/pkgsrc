@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4169 2024/06/27 15:27:31 sborrill Exp $
+$NetBSD: CHANGES-2024,v 1.4170 2024/06/27 16:08:37 osa Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6658,3 +6658,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libgsf to 1.14.52 [adam 2024-06-27]
 	Updated graphics/librsvg to 2.58.1 [adam 2024-06-27]
 	Updated www/e2guardian to 5.5.5r [sborrill 2024-06-27]
+	Updated devel/libnjs to 0.8.5 [osa 2024-06-27]
+	Updated lang/njs to 0.8.5 [osa 2024-06-27]
+	Updated www/nginx to 1.26.1nb1 [osa 2024-06-27]
+	Updated www/nginx-devel to 1.27.0nb1 [osa 2024-06-27]
+	Updated www/unit to 1.32.1nb3 [osa 2024-06-27]
