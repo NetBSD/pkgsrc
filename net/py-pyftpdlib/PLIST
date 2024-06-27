@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/02 08:10:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/27 07:32:34 adam Exp $
 bin/ftpbench-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyftpdlib/__init__.py
 ${PYSITELIB}/pyftpdlib/__init__.pyc
 ${PYSITELIB}/pyftpdlib/__init__.pyo
@@ -45,13 +45,16 @@ ${PYSITELIB}/pyftpdlib/test/README
 ${PYSITELIB}/pyftpdlib/test/__init__.py
 ${PYSITELIB}/pyftpdlib/test/__init__.pyc
 ${PYSITELIB}/pyftpdlib/test/__init__.pyo
+${PYSITELIB}/pyftpdlib/test/conftest.py
+${PYSITELIB}/pyftpdlib/test/conftest.pyc
+${PYSITELIB}/pyftpdlib/test/conftest.pyo
 ${PYSITELIB}/pyftpdlib/test/keycert.pem
-${PYSITELIB}/pyftpdlib/test/runner.py
-${PYSITELIB}/pyftpdlib/test/runner.pyc
-${PYSITELIB}/pyftpdlib/test/runner.pyo
 ${PYSITELIB}/pyftpdlib/test/test_authorizers.py
 ${PYSITELIB}/pyftpdlib/test/test_authorizers.pyc
 ${PYSITELIB}/pyftpdlib/test/test_authorizers.pyo
+${PYSITELIB}/pyftpdlib/test/test_cli.py
+${PYSITELIB}/pyftpdlib/test/test_cli.pyc
+${PYSITELIB}/pyftpdlib/test/test_cli.pyo
 ${PYSITELIB}/pyftpdlib/test/test_filesystems.py
 ${PYSITELIB}/pyftpdlib/test/test_filesystems.pyc
 ${PYSITELIB}/pyftpdlib/test/test_filesystems.pyo
@@ -64,9 +67,6 @@ ${PYSITELIB}/pyftpdlib/test/test_functional_ssl.pyo
 ${PYSITELIB}/pyftpdlib/test/test_ioloop.py
 ${PYSITELIB}/pyftpdlib/test/test_ioloop.pyc
 ${PYSITELIB}/pyftpdlib/test/test_ioloop.pyo
-${PYSITELIB}/pyftpdlib/test/test_misc.py
-${PYSITELIB}/pyftpdlib/test/test_misc.pyc
-${PYSITELIB}/pyftpdlib/test/test_misc.pyo
 ${PYSITELIB}/pyftpdlib/test/test_servers.py
 ${PYSITELIB}/pyftpdlib/test/test_servers.pyc
 ${PYSITELIB}/pyftpdlib/test/test_servers.pyo
