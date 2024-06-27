@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2024/04/14 17:25:28 adam Exp $
+$NetBSD: distinfo,v 1.65 2024/06/27 15:25:44 adam Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -339,9 +339,9 @@ Size (libloading-0.8.1.crate) = 27893 bytes
 BLAKE2s (libm-0.2.8.crate) = 0d3b7dfeaca616787fe12841dc46a7de9d9387756fa08cbc1a62f023d334f366
 SHA512 (libm-0.2.8.crate) = 753df71bb2c838abbac360db2e4400c2d931185ecff993da51a979870f2c3f7ac017380fadee4622102fb4b37ebcc1960b0cbd295afc9cd1cb3307524e1f39c5
 Size (libm-0.2.8.crate) = 113450 bytes
-BLAKE2s (librsvg-2.58.0.tar.xz) = 2504981e1ba0b3b4fb301e72481fc5e9f97ea7c02501c00a3422926e28bf04e4
-SHA512 (librsvg-2.58.0.tar.xz) = 56bf2b1b9b524142b4b79fe6f289cb33f334ab8a714f9898dacecc9461fbea8248477c29929446503e7a8d8cd16152ee3b7b7807279e436b6d079cfa6a4b1151
-Size (librsvg-2.58.0.tar.xz) = 5726268 bytes
+BLAKE2s (librsvg-2.58.1.tar.xz) = fe2c6da969ca4bd638575f38dda0a30010cec3306193f652b9aceacda43511aa
+SHA512 (librsvg-2.58.1.tar.xz) = f38bf70cc282071634b791d54af52d0cf32882ba99e504fdc6a5bf79d721163d946f7d22ddbd3c4ebed7bbf39b69eb9f925300389d377a5d220f453e367855dd
+Size (librsvg-2.58.1.tar.xz) = 6217300 bytes
 BLAKE2s (linked-hash-map-0.5.6.crate) = 06eec16c1a2dd3fc12933a669b9ddc465cceeb3845eb15197228e0d319366ce3
 SHA512 (linked-hash-map-0.5.6.crate) = 031a87645381c96beff33572e4bac1a9877e52fd2f99d39918fbede17d72291b35e2eb69e07edec20c3058554c35cc38fe85b8f175c2a3c69366136fcc71f707
 Size (linked-hash-map-0.5.6.crate) = 15049 bytes
