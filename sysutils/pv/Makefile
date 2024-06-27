@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/05/09 21:26:18 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2024/06/27 16:39:58 scole Exp $
 #
 
-DISTNAME=		pv-1.6.20
+DISTNAME=		pv-1.8.10
 CATEGORIES=		sysutils
 MASTER_SITES=		https://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
@@ -30,8 +30,13 @@ CFLAGS.SunOS+=		-DENABLE_LARGEFILE=1
 CONFIGURE_ENV+=		ac_cv_func_stat64=no
 .endif
 
+PV_SHARE_FILES=		ACKNOWLEDGEMENTS.md COPYING DEVELOPERS.md INSTALL \
+			NEWS.md TODO.md benchmark.sh
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+.for i in ${PV_SHARE_FILES}
+	${INSTALL_DATA} ${WRKSRC}/docs/${i} ${DESTDIR}${DOCDIR}
+.endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
