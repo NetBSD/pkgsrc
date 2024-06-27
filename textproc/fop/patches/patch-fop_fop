@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2014/01/22 09:18:40 ryoon Exp $
+$NetBSD: patch-fop_fop,v 1.1 2024/06/27 13:44:26 ktnb Exp $
 
 The fop script needs JAVA_HOME set, so prepare a variable to sed into.
 
---- fop.orig	2010-07-12 19:47:02.000000000 +0000
-+++ fop
-@@ -85,6 +85,8 @@ case "`uname`" in
+--- fop/fop.orig	2024-06-13 19:53:39.993261804 +0000
++++ fop/fop
+@@ -89,6 +89,8 @@ case "`uname`" in
             ;;
  esac
  
