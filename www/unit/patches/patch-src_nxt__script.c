@@ -1,10 +1,10 @@
-$NetBSD: patch-src_nxt__script.c,v 1.1 2024/05/07 13:49:33 osa Exp $
+$NetBSD: patch-src_nxt__script.c,v 1.2 2024/06/27 16:03:25 osa Exp $
 
 Fix build with the recent versions of NGINX JavaScript
 
---- src/nxt_script.c.orig	2023-10-17 14:15:38 UTC
+--- src/nxt_script.c.orig	2024-03-21 13:47:41.000000000 +0000
 +++ src/nxt_script.c
-@@ -37,14 +37,6 @@ static void nxt_script_buf_completion(nxt_task_t *task
+@@ -37,14 +37,6 @@ static void nxt_script_buf_completion(nx
  static nxt_lvlhsh_t  nxt_script_info;
  
  
@@ -19,12 +19,12 @@ Fix build with the recent versions of NGINX JavaScript
  nxt_script_t *
  nxt_script_new(nxt_task_t *task, nxt_str_t *name, u_char *data, size_t size,
      u_char *error)
-@@ -62,8 +54,6 @@ nxt_script_new(nxt_task_t *task, nxt_str_t *name, u_ch
- 
+@@ -63,8 +55,6 @@ nxt_script_new(nxt_task_t *task, nxt_str
      opts.file.start = (u_char *) "default";
      opts.file.length = 7;
--
--    opts.ops = &nxt_js_ops;
  
+-    opts.ops = &nxt_js_ops;
+-
      vm = njs_vm_create(&opts);
      if (nxt_slow_path(vm == NULL)) {
+         return NULL;
