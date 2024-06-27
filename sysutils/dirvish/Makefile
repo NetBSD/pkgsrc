@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/08/22 18:34:23 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2024/06/27 17:40:34 abs Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dirvish.org/
 EXTRACT_SUFX=	.tgz
@@ -30,7 +30,8 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
 			share/doc/dirvish
 
 do-build:
-	cd ${WRKSRC}; \
+	set -e; \
+        cd ${WRKSRC}; \
 	for f in ${EXECUTABLES}; do \
 		${ECHO} "#!${PERL5}" > $$f; \
 		${ECHO} "\$$CONFDIR = \"${PKG_SYSCONFDIR}\";" >> $$f; \
