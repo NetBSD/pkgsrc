@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4168 2024/06/27 15:26:08 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4169 2024/06/27 15:27:31 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6657,3 +6657,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/gdk-pixbuf2 to 2.42.12 [adam 2024-06-27]
 	Updated devel/libgsf to 1.14.52 [adam 2024-06-27]
 	Updated graphics/librsvg to 2.58.1 [adam 2024-06-27]
+	Updated www/e2guardian to 5.5.5r [sborrill 2024-06-27]
