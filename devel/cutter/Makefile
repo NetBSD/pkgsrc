@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.89 2024/05/29 16:31:59 adam Exp $
+# $NetBSD: Makefile,v 1.90 2024/06/28 08:36:17 adam Exp $
 
-DISTNAME=	cutter-1.2.4
-PKGREVISION=	44
+DISTNAME=	cutter-1.2.7
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=clear-code/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cutter.sourceforge.net/
+HOMEPAGE=	https://github.com/clear-code/cutter
 COMMENT=	Unit Testing Framework for C and C++
 LICENSE=	gnu-lgpl-v3
 
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool pkg-config xgettext msgmerge msgfmt
-USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+CONFIGURE_ARGS+=	--disable-gtktest
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	cppcutter.pc.in
 PKGCONFIG_OVERRIDE+=	cutter.pc.in
@@ -23,15 +25,7 @@ PKGCONFIG_OVERRIDE+=	gdkcutter-pixbuf.pc.in
 PKGCONFIG_OVERRIDE+=	libcutter.pc.in
 PKGCONFIG_OVERRIDE+=	soupcutter.pc.in
 
-TEST_TARGET=	check
-
 .include "options.mk"
-
-.include "../../mk/compiler.mk"
-# PR#lib/39986
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000 && ${CC_VERSION:Mgcc*}
-LDFLAGS.NetBSD+=	-lgcc_s
-.endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
