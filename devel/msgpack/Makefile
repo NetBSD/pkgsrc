@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.22 2024/06/28 17:35:09 adam Exp $
 
-DISTNAME=	msgpack-3.3.0
-PKGREVISION=	1
+DISTNAME=	msgpack-c-6.0.2
+PKGNAME=	${DISTNAME:S/-c-/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
 GITHUB_PROJECT=	msgpack-c
-GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
+GITHUB_RELEASE=	c-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://msgpack.org/
 COMMENT=	Binary-based efficient object serialization library
 LICENSE=	boost-license
 
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 PKGCONFIG_OVERRIDE=	msgpack.pc.in
-TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}
-TEST_TARGET=		test
 
-# Note that msgpack currently needs to be built with MSGPACK_CXX17 when
-# googletest is used due to it requiring minimum C++14 in its headers.
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_GTest=ON
-CMAKE_ARGS+=	-DMSGPACK_BUILD_TESTS=OFF
-CMAKE_ARGS+=	-DMSGPACK_CXX11=ON
-
-USE_CXX_FEATURES+=	c++11
-
-#.include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
