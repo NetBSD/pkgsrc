@@ -1,10 +1,10 @@
-$NetBSD: patch-libstdc++-v3_libsupc++_new__opa.cc,v 1.1 2022/06/16 15:43:55 adam Exp $
+$NetBSD: patch-libstdc++-v3_libsupc++_new__opa.cc,v 1.2 2024/06/28 17:55:10 wiz Exp $
 
 Ensure we can find SunOS std::aligned_alloc if using it.
 
---- libstdc++-v3/libsupc++/new_opa.cc.orig	2020-03-04 08:30:03.000000000 +0000
+--- libstdc++-v3/libsupc++/new_opa.cc.orig	2024-06-20 08:08:10.000000000 +0000
 +++ libstdc++-v3/libsupc++/new_opa.cc
-@@ -57,6 +57,10 @@ extern "C"
+@@ -62,6 +62,10 @@ extern "C"
  }
  #endif
  
@@ -13,5 +13,5 @@ Ensure we can find SunOS std::aligned_alloc if using it.
 +#endif
 +
  namespace __gnu_cxx {
- #if _GLIBCXX_HAVE_ALIGNED_ALLOC
- using ::aligned_alloc;
+ // Prefer posix_memalign if available, because it's older than aligned_alloc
+ // and so more likely to be provided by replacement malloc libraries that
