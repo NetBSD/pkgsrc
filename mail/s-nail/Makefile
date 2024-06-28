@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/17 23:43:02 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2024/06/28 13:01:31 ktnb Exp $
 
-DISTNAME=		s-nail-14.9.24
+DISTNAME=		s-nail-14.9.25
 CATEGORIES=		mail
 MASTER_SITES=		https://www.sdaoden.eu/downloads/
 
