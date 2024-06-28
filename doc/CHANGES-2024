@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4194 2024/06/28 17:12:10 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.4195 2024/06/28 17:17:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6691,3 +6691,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/git-svn to 2.45.2nb1 [ryoon 2024-06-28]
 	Updated misc/libreoffice to 24.2.4.2 [ryoon 2024-06-28]
 	Updated wm/icewm to 3.6.0 [gutteridge 2024-06-28]
+	Updated graphics/py-cairo-shared to 1.26.1 [wiz 2024-06-28]
