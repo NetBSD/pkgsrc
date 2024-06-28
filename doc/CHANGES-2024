@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4182 2024/06/28 09:58:31 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4183 2024/06/28 13:20:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6679,3 +6679,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ansible-lint to 24.6.1 [adam 2024-06-28]
 	Updated archivers/bkcrack to 1.7.0 [adam 2024-06-28]
 	Updated www/py-django-compressor to 4.5 [adam 2024-06-28]
+	Updated www/firefox to 127.0.2 [ryoon 2024-06-28]
