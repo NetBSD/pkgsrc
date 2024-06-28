@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4177 2024/06/28 08:06:28 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4178 2024/06/28 08:14:43 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6670,3 +6670,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/lua54 to 5.4.7 [wiz 2024-06-28]
 	Updated mail/py-authheaders to 0.16.3 [adam 2024-06-28]
 	Updated sysutils/py-fsspec to 2024.6.1 [adam 2024-06-28]
+	Updated www/squid6 to 6.10 [sborrill 2024-06-28]
