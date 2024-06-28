@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/08 22:49:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/06/28 09:58:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -141,30 +141,15 @@ ${PYSITELIB}/compressor/tests/precompiler.py
 ${PYSITELIB}/compressor/tests/precompiler.pyc
 ${PYSITELIB}/compressor/tests/precompiler.pyo
 ${PYSITELIB}/compressor/tests/static/CACHE/css/0618b11949aa.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/19dab3491062.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/44f5d1102ce5.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/58a8c0714e59.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/5c6a60375256.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/600674ea1d3d.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/64f74be417da.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/7f02c21025ae.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/919e93a2fea0.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/a15af50e715b.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/block_name.393dbcddb48e.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/block_name.a1e074d0c4ac.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/cd0846966de0.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/dff24a7e6003.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.187e2ce75808.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.20f9b535162f.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.2db2b4d36380.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.4263023f49d6.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.44f040b05f91.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.58a8c0714e59.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.600674ea1d3d.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.7ff52cb38987.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.aca9bcd16bee.css
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.aca9bcd16bee.css.gz
-${PYSITELIB}/compressor/tests/static/CACHE/css/output.c836c9caed5c.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.d5444a1ab4a3.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.e3b0c44298fc.css
 ${PYSITELIB}/compressor/tests/static/CACHE/css/output.e701f86c6430.css
