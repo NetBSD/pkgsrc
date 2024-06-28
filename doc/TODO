@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24577 2024/06/27 13:44:52 ktnb Exp $
+$NetBSD: TODO,v 1.24578 2024/06/28 05:35:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,8 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-1.2.3 [wip]
-	o arti-1.2.4
+	o arti-1.2.5 [wip, https://gitlab.torproject.org/tpo/core/rust-pwd-grp/-/issues/4]
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -897,7 +896,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-mysql-2.4.0
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
-	o lua54-5.4.7
 	o lumina-1.6.2
 	o lxqt-2.0.0
 	o lynis-3.1.1
