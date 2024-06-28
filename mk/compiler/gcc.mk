@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.280 2024/06/18 18:27:10 gdt Exp $
+# $NetBSD: gcc.mk,v 1.281 2024/06/28 18:49:38 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -95,7 +95,7 @@ _DEF_VARS.gcc=	\
 	_LANGUAGES.gcc \
 	_LINKER_RPATH_FLAG \
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
-	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 \
+	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 _NEED_GCC14 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
 	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT \
 	_PKGSRC_GCC_VERSION \
@@ -129,7 +129,7 @@ _USE_VARS.gcc=	\
 	_OPSYS_INCLUDE_DIRS _OPSYS_LIB_DIRS
 _IGN_VARS.gcc=	\
 	_GCC6_PATTERNS _GCC7_PATTERNS _GCC8_PATTERNS _GCC9_PATTERNS \
-	_GCC10_PATTERNS _GCC12_PATTERNS _GCC13_PATTERNS _GCC_AUX_PATTERNS
+	_GCC10_PATTERNS _GCC12_PATTERNS _GCC13_PATTERNS _GCC14_PATTERNS _GCC_AUX_PATTERNS
 _LISTED_VARS.gcc= \
 	MAKEFLAGS IMAKEOPTS LDFLAGS PREPEND_PATH
 .include "../../mk/bsd.prefs.mk"
@@ -183,9 +183,7 @@ GCC_REQD+=	2.8.0
 
 .if !empty(USE_CXX_FEATURES:Mc++23)
 # gcc documents that 14 is required.
-
-# pkgsrc lacks 14, so pick 13.                                                                                                                                                                                             
-GCC_REQD+=     13                                                                                                                                                                                                          
+GCC_REQD+=     14
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
@@ -296,7 +294,7 @@ _NEED_GCC_AUX=yes
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
-_GCC_DIST_NAME:=	gcc13
+_GCC_DIST_NAME:=	gcc14
 .include "../../lang/${_GCC_DIST_NAME}/version.mk"
 _GCC_DIST_VERSION:=	${${_GCC_DIST_NAME:tu}_DIST_VERSION}
 
@@ -321,6 +319,9 @@ _GCC12_PATTERNS= 11 11.* 12 12.*
 
 # _GCC13_PATTERNS matches N s.t. 13.0 <= N < 14.
 _GCC13_PATTERNS= 13 13.*
+
+# _GCC14_PATTERNS matches N s.t. 14.0 <= N < 15.
+_GCC14_PATTERNS= 14 14.*
 
 # _GCC_AUX_PATTERNS matches 8-digit date YYYYMMDD*
 _GCC_AUX_PATTERNS= 20[1-2][0-9][0-1][0-9][0-3][0-9]*
@@ -568,6 +569,20 @@ PKG_FAIL_REASON+=	"Package requires at least gcc 13 to build"
 _NEED_GCC13=	yes
 .  endif
 .endfor
+_NEED_GCC14?=	no
+.for _pattern_ in ${_GCC14_PATTERNS}
+.  if !empty(_GCC_REQD:M${_pattern_})
+# XXX: pin to a version when NetBSD switches to gcc14
+.    if ${OPSYS} == "NetBSD"
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.    endif
+.    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
+PKG_FAIL_REASON+=	"Package requires at least gcc 14 to build"
+.    endif
+_NEED_GCC14=	yes
+.  endif
+.endfor
 # AUX patterns really don't work starting from gcc10-aux
 #_NEED_GCC_AUX?=	no
 #.for _pattern_ in ${_GCC_AUX_PATTERNS}
@@ -579,7 +594,8 @@ _NEED_GCC13=	yes
 .if !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
     !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
     !empty(_NEED_GCC10:M[nN][oO]) && !empty(_NEED_GCC12:M[nN][oO]) && \
-    !empty(_NEED_GCC13:M[nN][oO]) && !empty(_NEED_GCC_AUX:M[nN][oO])
+    !empty(_NEED_GCC13:M[nN][oO]) && !empty(_NEED_GCC14:M[nN][oO]) && \
+    !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC8=	yes
 .endif
 
@@ -594,6 +610,7 @@ _NEED_GCC9=	no
 _NEED_GCC10=	yes
 _NEED_GCC12=	yes
 _NEED_GCC13=	yes
+_NEED_GCC14=	yes
 .endif
 
 # We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
@@ -682,6 +699,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC12:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC13:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
+.elif !empty(_NEED_GCC14:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 #.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
@@ -864,6 +883,27 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc13
 _GCC_DEPENDENCY=	gcc13>=${_GCC_REQD}:../../lang/gcc13
+.    if !empty(_LANGUAGES.gcc:Mc++) || \
+        !empty(_LANGUAGES.gcc:Mfortran) || \
+        !empty(_LANGUAGES.gcc:Mfortran77) || \
+        !empty(_LANGUAGES.gcc:Mgo) || \
+        !empty(_LANGUAGES.gcc:Mobjc) || \
+        !empty(_LANGUAGES.gcc:Mobj-c++)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC14:M[yY][eE][sS])
+#
+# We require gcc-14.x in the lang/gcc14-* directory.
+#
+_GCC_PKGBASE=		gcc14
+.  if ${PKGPATH} == lang/gcc14
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc14
+_GCC_DEPENDENCY=	gcc14>=${_GCC_REQD}:../../lang/gcc14
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
@@ -1200,7 +1240,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
       empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9]) && \
       empty(PKGPATH:Mlang/gcc10) && empty(PKGPATH:Mlang/gcc12) && \
-      empty(PKGPATH:Mlang/gcc13)
+      empty(PKGPATH:Mlang/gcc13) && empty(PKGPATH:Mlang/gcc14)
 .    if !empty(_GCC_PKGBASE:Mgcc6)
 .      include "../../lang/gcc6-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc7)
@@ -1215,6 +1255,8 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .      include "../../lang/gcc12-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc13)
 .      include "../../lang/gcc13-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc14)
+.      include "../../lang/gcc14-libs/buildlink3.mk"
 .    else
 PKG_FAIL_REASON+=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
 .    endif
