@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2024/06/28 17:37:23 adam Exp $
 
 DISTNAME=	fluent-bit-0.13.2
 CATEGORIES=	sysutils
@@ -24,7 +24,7 @@ CONF_FILES=	${EGDIR}/fluent-bit.conf \
 CONF_FILES+=	${EGDIR}/parsers.conf \
 		${PKG_SYSCONFDIR}/${PKGBASE}/parsers.conf
 
-BUILDLINK_TRANSFORM+=	l:msgpackc-static:msgpackc
+BUILDLINK_TRANSFORM+=	l:msgpackc-static:msgpack-c
 
 INSTALLATION_DIRS+=	include/monkey include/jsmn
 
