@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:54:02 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/06/28 13:40:43 ryoon Exp $
 
-BLAKE2s (gmime-3.2.7.tar.xz) = 2e6dfa7e75de63f47c60a1f7d943a367fa1ead4658531db2d38ada7836a3abee
-SHA512 (gmime-3.2.7.tar.xz) = 2c8fecd6eb74c9e956c419ce111bef6280916ea3756a534b6b800a273f0fff260717cda7fefd4bd4c6ddb27973112ec6e73fa971fa74bb9aa04cfe587d45f10b
-Size (gmime-3.2.7.tar.xz) = 2227048 bytes
+BLAKE2s (gmime-3.2.15.tar.xz) = 8eec6d540032133b2052c74eddf52799a0b123ae2b745cf029ef173bea3ba7d7
+SHA512 (gmime-3.2.15.tar.xz) = cafb89854b2441508bf940fd6f991739d30fb137b8928ad33e8e4d2a0293a6460e4d1318e73c3ee9e5a964b692f36e7a4eb5f2930c6998698bd9edf866629655
+Size (gmime-3.2.15.tar.xz) = 2233608 bytes

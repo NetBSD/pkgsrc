@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2023/12/04 14:04:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2024/06/28 13:40:43 ryoon Exp $
 
-DISTNAME=	gmime-3.2.7
+DISTNAME=	gmime-3.2.15
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
-PKGREVISION=	2
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.2/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jstedfast/}
+GITHUB_PROJECT=	gmime
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
