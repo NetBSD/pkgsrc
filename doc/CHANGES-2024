@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4199 2024/06/28 17:55:21 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4200 2024/06/28 17:55:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6697,3 +6697,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/msgpack to 6.0.2 [adam 2024-06-28]
 	Updated devel/php-msgpack to 2.2.0 [adam 2024-06-28]
 	Updated lang/gcc12 to 12.4.0 [wiz 2024-06-28]
+	Updated lang/gcc12-libs to 12.4.0nb1 [wiz 2024-06-28]
