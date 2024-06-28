@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4203 2024/06/28 18:35:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4204 2024/06/28 19:37:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6702,3 +6702,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added lang/gcc14 version 14.1.0 [wiz 2024-06-28]
 	Added lang/gcc14-libjit version 14.1.0 [wiz 2024-06-28]
 	Added lang/gcc14-libs version 14.1.0nb1 [wiz 2024-06-28]
+	Updated x11/xfce4-session to 4.18.4 [gutteridge 2024-06-28]
