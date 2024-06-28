@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/06/28 18:35:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/06/28 19:26:03 adam Exp $
 # used by lang/gcc14-libjit/Makefile
 
 GCC_PKGNAME=		gcc14
@@ -54,6 +54,14 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 .include "../../mk/bsd.prefs.mk"
 
 .include "options.mk"
+
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+PATCHFILES=		gcc-14.1.0.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/82b5c1c/gcc/
+PATCH_DIST_STRIP=	-p1
+.endif
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
