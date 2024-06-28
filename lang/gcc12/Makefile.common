@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/08/29 09:48:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/06/28 17:55:09 wiz Exp $
 # used by lang/gcc12-libjit/Makefile
 
 GCC_PKGNAME=		gcc12
@@ -55,13 +55,14 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 .include "options.mk"
 
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
-CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-12.3.0.diff
-PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/f1188b90/gcc/
-PATCH_DIST_STRIP=	-p1
-.endif
+# TODO: if this is still needed, update this for 12.4.0
+#.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+#BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+#CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+#PATCHFILES=		gcc-12.3.0.diff
+#PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/f1188b90/gcc/
+#PATCH_DIST_STRIP=	-p1
+#.endif
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
