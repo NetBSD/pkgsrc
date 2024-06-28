@@ -1,0 +1,24 @@
+$NetBSD: patch-configure.ac,v 1.3 2024/06/28 17:36:48 adam Exp $
+
+Find newer msgpack.
+
+--- configure.ac.orig	2024-06-27 12:05:01.164196412 +0000
++++ configure.ac
+@@ -201,7 +201,7 @@ fi
+ 
+ PKG_CHECK_MODULES(
+   MSGPACK,
+-  msgpack >= 1.1.0,
++  msgpack-c >= 1.1.0,
+   [
+     CPPFLAGS="$MSGPACK_CFLAGS $CPPFLAGS"
+     LIBS="$MSGPACK_LIBS $LIBS"
+@@ -210,7 +210,7 @@ PKG_CHECK_MODULES(
+   found_msgpack=no
+ )
+ if test "x$found_msgpack" = xno; then
+-  AC_MSG_ERROR("msgpack >= 1.1.0 not found")
++  AC_MSG_ERROR("msgpack-c >= 1.1.0 not found")
+ fi
+ 
+ PKG_CHECK_MODULES(
