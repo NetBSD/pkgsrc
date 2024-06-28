@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/22 13:18:09 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/06/28 08:04:09 adam Exp $
 
-BLAKE2s (authheaders-0.16.2.tar.gz) = 605188656fd21765344256e42c46dcaf70921dba1ecde4831ce8cae60bcd912b
-SHA512 (authheaders-0.16.2.tar.gz) = 2d5390cdbf2f7225a172f23ddd845f9126b909a7fd558ff96334886dd8d9792887c247596ca22d7bc5a0d8fea0f03481ccb61d934835de4790312b27ef6c6bd5
-Size (authheaders-0.16.2.tar.gz) = 111964 bytes
+BLAKE2s (authheaders-0.16.3.tar.gz) = d8b960296a168152dd80c05da334a85d74c1ed1f6789f9203c2d0f63141fdd62
+SHA512 (authheaders-0.16.3.tar.gz) = 94741ec6127aa20b128958ba5b386b63d00f27ae68fe6b5ede3a0308bd6a75a9b940fb40b6066b65fefb07e40e85cb412bd59fde6c76f60099d6bf6872ae9a68
+Size (authheaders-0.16.3.tar.gz) = 115428 bytes
