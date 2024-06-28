@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4197 2024/06/28 17:19:37 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4198 2024/06/28 17:38:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6694,3 +6694,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-cairo-shared to 1.26.1 [wiz 2024-06-28]
 	Updated graphics/py-cairo to 1.26.1 [wiz 2024-06-28]
 	Updated x11/py-qt-builder to 1.16.3 [wiz 2024-06-28]
+	Updated devel/msgpack to 6.0.2 [adam 2024-06-28]
+	Updated devel/php-msgpack to 2.2.0 [adam 2024-06-28]
