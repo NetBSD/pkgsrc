@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4180 2024/06/28 09:04:20 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4181 2024/06/28 09:20:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6675,3 +6675,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cutter to 1.2.7 [adam 2024-06-28]
 	Updated net/py-twine to 5.1.1 [adam 2024-06-28]
 	Updated devel/py-types-setuptools to 70.1.0.20240627 [adam 2024-06-28]
+	Updated sysutils/ansible to 10.1.0 [adam 2024-06-28]
+	Updated sysutils/ansible-lint to 24.6.1 [adam 2024-06-28]
