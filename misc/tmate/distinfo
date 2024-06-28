@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/06/28 17:36:48 adam Exp $
 
 BLAKE2s (tmate-2.4.0.tar.gz) = c9df3ea23c3d6d81383f2fdfb8c5c67d9ffdfa815c6b5d46d2d15370f66dec7f
 SHA512 (tmate-2.4.0.tar.gz) = 92d2ca354b295678bfc2747ca83a45ebafeaec40ebac94bd94c4926af4f820b3f3a087f365147f41c80d1c8ad032f52c697a2421839c39315d84f98f7eccada6
 Size (tmate-2.4.0.tar.gz) = 614179 bytes
 SHA1 (patch-Makefile.am) = 34eeac2f32d09bbde1ae5eda6158881891feb2f2
+SHA1 (patch-configure.ac) = 02f79f1c5befaf22a69307b04d35235102556788
 SHA1 (patch-tmux.h) = 8c26d6ca70b1a8d51e7c920ea54f59d2023968fe
