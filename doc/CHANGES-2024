@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4184 2024/06/28 13:21:38 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.4185 2024/06/28 13:27:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6681,3 +6681,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-compressor to 4.5 [adam 2024-06-28]
 	Updated www/firefox to 127.0.2 [ryoon 2024-06-28]
 	Updated www/firefox-l10n to 127.0.2 [ryoon 2024-06-28]
+	Updated multimedia/libaom to 3.9.1 [ryoon 2024-06-28]
