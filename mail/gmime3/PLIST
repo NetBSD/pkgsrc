@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/28 15:30:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/28 13:40:43 ryoon Exp $
 include/gmime-3.0/gmime/gmime-application-pkcs7-mime.h
 include/gmime-3.0/gmime/gmime-autocrypt.h
 include/gmime-3.0/gmime/gmime-certificate.h
@@ -128,6 +128,7 @@ share/gtk-doc/html/gmime-3.2/classes.html
 share/gtk-doc/html/gmime-3.2/core.html
 share/gtk-doc/html/gmime-3.2/fundamentals.html
 share/gtk-doc/html/gmime-3.2/gmime-3.2.devhelp2
+share/gtk-doc/html/gmime-3.2/gmime-GMimeAutocryptHeader.html
 share/gtk-doc/html/gmime-3.2/gmime-GMimeFormatOptions.html
 share/gtk-doc/html/gmime-3.2/gmime-GMimeParserOptions.html
 share/gtk-doc/html/gmime-3.2/gmime-GMimePartIter.html
@@ -141,7 +142,6 @@ share/gtk-doc/html/gmime-3.2/gmime-changes-3-0.html
 share/gtk-doc/html/gmime-3.2/gmime-compiling.html
 share/gtk-doc/html/gmime-3.2/gmime-data-wrappers.html
 share/gtk-doc/html/gmime-3.2/gmime-filters.html
-share/gtk-doc/html/gmime-3.2/gmime-gmime-autocrypt.html
 share/gtk-doc/html/gmime-3.2/gmime-gmime-charset.html
 share/gtk-doc/html/gmime-3.2/gmime-gmime-encodings.html
 share/gtk-doc/html/gmime-3.2/gmime-gmime-iconv-utils.html
