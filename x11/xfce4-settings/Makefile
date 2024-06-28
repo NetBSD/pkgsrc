@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2024/05/29 16:35:17 adam Exp $
+# $NetBSD: Makefile,v 1.90 2024/06/28 20:02:14 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-settings-4.18.4
+DISTNAME=	xfce4-settings-4.18.6
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${PKGVERSION_NOREV:R}/
 
@@ -41,7 +40,6 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../sysutils/upower/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
