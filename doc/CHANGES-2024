@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4178 2024/06/28 08:14:43 sborrill Exp $
+$NetBSD: CHANGES-2024,v 1.4179 2024/06/28 08:37:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6671,3 +6671,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/py-authheaders to 0.16.3 [adam 2024-06-28]
 	Updated sysutils/py-fsspec to 2024.6.1 [adam 2024-06-28]
 	Updated www/squid6 to 6.10 [sborrill 2024-06-28]
+	Updated misc/goffice0.10 to 0.10.57 [adam 2024-06-28]
+	Updated devel/cutter to 1.2.7 [adam 2024-06-28]
