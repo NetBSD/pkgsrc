@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/02/22 13:18:09 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/06/28 08:04:09 adam Exp $
 
-DISTNAME=	authheaders-0.16.2
+DISTNAME=	authheaders-0.16.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/authheaders/}
