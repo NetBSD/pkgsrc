@@ -2,7 +2,7 @@ Ghostscript is the well-known PostScript interpreter which is available for
 all common and most esoteric platforms and supports many different printers
 and some displays.
 
-Support for Cups is enabled by the "cups" option (off by default).
+Support for Cups is enabled by the "cups" option (on by default).
 
 This is the latest version of Ghostscript, released under the GNU
 Affero General Public License (AGPL).
