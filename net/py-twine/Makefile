@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/05/18 07:07:43 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/06/28 09:02:31 adam Exp $
 
-DISTNAME=	twine-5.1.0
+DISTNAME=	twine-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
