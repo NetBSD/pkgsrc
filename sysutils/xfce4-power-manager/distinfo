@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2023/12/18 02:11:00 gutteridge Exp $
+$NetBSD: distinfo,v 1.13 2024/06/28 19:44:11 gutteridge Exp $
 
-BLAKE2s (xfce4-power-manager-4.18.3.tar.bz2) = 8008404de3ad4a117ef10783664a7fbfd6ecbf74999a599b54f674ccd1483f3d
-SHA512 (xfce4-power-manager-4.18.3.tar.bz2) = 97f198ed78c3a13c5e64f0551d49533ac2efe0c719f4360eab94736790b225411b347a8524e8a2d7e28b14e546df6133df5273c80d8e0eb5766145782e1412fb
-Size (xfce4-power-manager-4.18.3.tar.bz2) = 1244867 bytes
+BLAKE2s (xfce4-power-manager-4.18.4.tar.bz2) = b8e8e9d4591f8615949f7aceb64b8fe8a34fda0b88c9fd3e75ad6f57ece6e0f7
+SHA512 (xfce4-power-manager-4.18.4.tar.bz2) = 829151b99c279a01037544e8a0a2bbe3cb4c1ec90d8943b3159947d819f94e8f73a8e73db255e1151ca59278583a28448b00d6fc002bd1f8a724c1c16c44fb1b
+Size (xfce4-power-manager-4.18.4.tar.bz2) = 1241669 bytes
 SHA1 (patch-src_Makefile.in) = aad658d19417609138d281ea99a708ab5ea49acb
 SHA1 (patch-src_xfpm-pm-helper.c) = 7e21c85c03b0591262e67c8cccf17770e64e00d9
 SHA1 (patch-src_xfpm-suspend.c) = 661a39b0009dded0c0ed90068589424239abcc35
