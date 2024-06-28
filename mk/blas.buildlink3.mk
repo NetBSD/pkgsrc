@@ -1,4 +1,4 @@
-# $NetBSD: blas.buildlink3.mk,v 1.5 2023/12/23 19:24:49 thor Exp $
+# $NetBSD: blas.buildlink3.mk,v 1.6 2024/06/28 13:59:43 ryoon Exp $
 #
 # This Makefile fragment is meant to be included by packages that use any
 # BLAS (Basic Linear Algebra System) implementation instead of one particular
@@ -103,7 +103,7 @@ _BLAS_TYPES=	netlib openblas openblas_pthread openblas_openmp
 BLAS_ACCEPTED?=	${_BLAS_TYPES}
 PKGSRC_BLAS_TYPES?= ${_BLAS_TYPES}
 
-.if !empty(BLAS_INDEX64:Myes)
+.if !empty(BLAS_INDEX64:M[yY][eE][sS])
 _BLAS_64=	64
 .else
 _BLAS_64=
@@ -196,7 +196,7 @@ PKG_FAIL_REASON+=	\
 .include "../../${_BLAS_PKGPATH}/buildlink3.mk"
 .endif
 
-.if !empty(BLAS_C_INTERFACE:Myes)
+.if !empty(BLAS_C_INTERFACE:M[yY][eE][sS])
 .  if defined(_CBLAS_PKGPATH)
 .    include "../../${_CBLAS_PKGPATH}/buildlink3.mk"
 .  endif
