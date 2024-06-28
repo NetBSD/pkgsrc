@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.335 2024/06/06 07:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.336 2024/06/28 15:14:21 ryoon Exp $
 
-VERREL=		24.2.3
+VERREL=		24.2.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -138,11 +137,11 @@ MORE_DISTFILES= \
 	Java-WebSocket-1.5.4.tar.gz \
 	NotoSans-v2.012.zip \
 	NotoSerif-v2.012.zip \
-	NotoSerifHebrew-v2.003.zip \
+	NotoSansHebrew-v2.004.zip \
 	NotoSansArabic-v2.010.zip \
 	NotoKufiArabic-v2.109.zip \
 	NotoNaskhArabic-v2.016.zip \
-	NotoSansHebrew-v2.003.zip \
+	NotoSerifHebrew-v2.004.zip \
 	NotoSansArmenian-v2.008.zip \
 	NotoSerifArmenian-v2.008.zip \
 	NotoSansGeorgian-v2.003.zip \
