@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2023/06/06 01:14:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.40 2024/06/28 19:37:01 gutteridge Exp $
 
-BLAKE2s (xfce4-session-4.18.3.tar.bz2) = de2210dbb4d361adc6639c4ac937e573a3cf51310bb23475cf30a7066933cb34
-SHA512 (xfce4-session-4.18.3.tar.bz2) = 65314472049c973af4b7553ec969691dfe701af2addb8cb63aebb49ff1b61ddb9e1418b2969e5eac69fd32096dd3163b7bf28fefe1d8c130c46bd5dd2bfe126c
-Size (xfce4-session-4.18.3.tar.bz2) = 875517 bytes
+BLAKE2s (xfce4-session-4.18.4.tar.bz2) = dc04702c4446253be4ea18e332beab8cc9137050d0676237d131d87559ca29c2
+SHA512 (xfce4-session-4.18.4.tar.bz2) = dec5006cf69cd44d39c0923d512bfd07123c923627b33a9f232134468cf8a160e329afcf0e61619e7f9a91a453845cbc55a355b6ca9c02e15f55eb7876c8bfc1
+Size (xfce4-session-4.18.4.tar.bz2) = 922274 bytes
 SHA1 (patch-ac) = acbb27c79b5b6f37ff106c6cbbc87d00ecfe19f5
 SHA1 (patch-config.h.in) = d88c22147d46387494d5be929dce810a6c6d8778
 SHA1 (patch-configure) = 94ec4aa0e528ec835929def8d9d401b123982efa
