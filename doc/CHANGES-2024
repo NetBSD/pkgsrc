@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4192 2024/06/28 14:06:20 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.4193 2024/06/28 15:18:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6689,3 +6689,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/thunderbird to 115.12.2 [ryoon 2024-06-28]
 	Updated mail/thunderbird-l10n to 115.12.2 [ryoon 2024-06-28]
 	Updated devel/git-svn to 2.45.2nb1 [ryoon 2024-06-28]
+	Updated misc/libreoffice to 24.2.4.2 [ryoon 2024-06-28]
