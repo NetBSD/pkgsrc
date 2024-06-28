@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.61 2024/05/29 16:33:31 adam Exp $
+# $NetBSD: Makefile,v 1.62 2024/06/28 08:35:05 adam Exp $
 
-DISTNAME=		goffice-0.10.53
-PKGNAME=		${DISTNAME:S/goffice/goffice0.10/}
-PKGREVISION=		10
-CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.10/}
-EXTRACT_SUFX=		.tar.xz
+DISTNAME=	goffice-0.10.57
+PKGNAME=	${DISTNAME:S/goffice/goffice0.10/}
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goffice/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.gnome.org/
-COMMENT=		Library of document-centric objects and utilities
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.gnome.org/
+COMMENT=	Library of document-centric objects and utilities
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
-
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libgoffice.pc.in
-
 TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"

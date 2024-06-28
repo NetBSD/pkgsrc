@@ -1,4 +1,4 @@
-$NetBSD: patch-gofffice_app_io-context.h,v 1.1 2015/08/10 19:30:06 joerg Exp $
+$NetBSD: patch-goffice_app_io-context.h,v 1.1 2024/06/28 08:35:05 adam Exp $
 
 --- goffice/app/io-context.h.orig	2015-08-10 16:19:57.000000000 +0000
 +++ goffice/app/io-context.h
