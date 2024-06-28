@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/22 18:38:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/06/28 09:54:47 adam Exp $
 
-BLAKE2s (bkcrack-1.5.0.tar.gz) = eb36f26126f9a5872793b58c053f95960e96c5419d04fd2af26a9e1dbd6212dd
-SHA512 (bkcrack-1.5.0.tar.gz) = 75dd31f4e8fff1a8c4cf05df3aad6baf4c6bd84692ced27bbc3aa2e7cc5fe535303d401a8130e0430b1524a0d4c4fd16e00c732075629e3f764fc6f1d97722f8
-Size (bkcrack-1.5.0.tar.gz) = 96118 bytes
+BLAKE2s (bkcrack-1.7.0.tar.gz) = 34af0cf94431d512bdb7fedcadfff5cce421d79a3d0cd625454cf5ac1f0023f0
+SHA512 (bkcrack-1.7.0.tar.gz) = d9b3144396ad406df1f448c0d73e6b5c380159b223a855c971c547a055db5558561d87f9561c47ff24f2854659cb7aed50017a76ed313a3eae822ae070b717cd
+Size (bkcrack-1.7.0.tar.gz) = 106018 bytes
