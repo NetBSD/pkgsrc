@@ -1,9 +1,9 @@
-$NetBSD: patch-src_misc.c,v 1.1 2020/07/13 13:12:09 kim Exp $
+$NetBSD: patch-libio_src_misc.c,v 1.1 2024/06/29 01:10:14 fox Exp $
 
 Fix day-of-month format so that strftime(3) will recognize it.
 
---- src/misc.c.orig	2020-05-03 11:05:50.000000000 +0000
-+++ src/misc.c	2020-07-13 13:05:57.180120719 +0000
+--- libio/src/misc.c.orig	2020-05-03 11:05:50.000000000 +0000
++++ libio/src/misc.c	2020-07-13 13:05:57.180120719 +0000
 @@ -42,7 +42,7 @@ date(uintmax_t lclock)
    if (lclock_last != lclock)
    {
