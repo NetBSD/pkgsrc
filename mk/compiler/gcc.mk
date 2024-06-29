@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.281 2024/06/28 18:49:38 wiz Exp $
+# $NetBSD: gcc.mk,v 1.282 2024/06/29 13:08:09 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -544,8 +544,7 @@ _NEED_GCC10=	yes
 _NEED_GCC12?=	no
 .for _pattern_ in ${_GCC12_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-# XXX: pin to a version when NetBSD switches to gcc12
-.    if ${OPSYS} == "NetBSD"
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 109911
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
