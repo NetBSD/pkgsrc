@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/10/23 07:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/06/29 17:07:51 cheusov Exp $
 
 DISTNAME=	xcb-util-wm-0.4.2
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config m4
 
 PKGCONFIG_OVERRIDE+=	ewmh/xcb-ewmh.pc.in
 PKGCONFIG_OVERRIDE+=	icccm/xcb-icccm.pc.in
