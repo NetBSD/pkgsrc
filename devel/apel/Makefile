@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/09/15 23:19:27 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2024/06/30 22:23:13 mef Exp $
 
 DISTNAME=	apel-10.8.0.20201107
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -29,6 +29,7 @@ EMACS_VERSIONS_INCOMPATIBLE=	emacs21 emacs21nox emacs20
 EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
 EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
+EMACS_VERSIONS_ACCEPTED+=	emacs29 emacs29nox
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
