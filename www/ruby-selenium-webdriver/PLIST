@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/06/02 15:31:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/06/30 16:50:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -24,9 +24,11 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/console_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/filter_by.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/generic_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_handler.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/navigate_result.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/struct.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome/features.rb
@@ -103,6 +105,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/platform.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/port_prober.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/profile_helper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/proxy.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/script.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/search_context.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/selenium_manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/service.rb
@@ -149,6 +152,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/ie/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/ie/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/remote/bidi_bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/commands.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/remote/bridge/locator_converter.rb
