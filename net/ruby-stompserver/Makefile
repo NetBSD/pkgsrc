@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/12/22 02:05:55 taca Exp $
+# $NetBSD: Makefile,v 1.13 2024/06/30 06:46:07 taca Exp $
 
 DISTNAME=	drizztbsd-stompserver-1c7a275
 PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
@@ -16,7 +16,7 @@ DISTFILES=	1c7a275272f14ba3ce9d4c7f27402e659f775498
 USE_TOOLS=	gzip tar
 
 DEPENDS+=	${RUBY_PKGPREFIX}-eventmachine>=0.12.10:../../devel/ruby-eventmachine
-DEPENDS+=	${RUBY_PKGPREFIX}-hoe>=3.0.6:../../devel/hoe
+DEPENDS+=	${RUBY_PKGPREFIX}-hoe>=3.0.6:../../devel/ruby-hoe
 DEPENDS+=	${RUBY_PKGPREFIX}-daemons>=1.1.8:../../misc/ruby-daemons
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
