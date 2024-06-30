@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4305 2024/06/14 14:13:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.4306 2024/06/30 06:37:12 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -517,7 +517,6 @@ SUBDIR+=	heirloom-libcommon
 SUBDIR+=	heirloom-what
 SUBDIR+=	hex
 SUBDIR+=	hlint
-SUBDIR+=	hoe
 SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
 SUBDIR+=	hs-HUnit
@@ -3310,6 +3309,7 @@ SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-hike
 SUBDIR+=	ruby-hocon
+SUBDIR+=	ruby-hoe
 SUBDIR+=	ruby-i18n
 SUBDIR+=	ruby-iniparse
 SUBDIR+=	ruby-inline
