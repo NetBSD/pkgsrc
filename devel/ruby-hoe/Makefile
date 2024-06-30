@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/06/30 06:36:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2024/06/30 16:07:42 taca Exp $
 
-DISTNAME=	hoe-4.2.1
+DISTNAME=	hoe-4.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,11 +11,6 @@ LICENSE=	mit
 USE_LANGUAGES=	# empty
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == 31
-DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=1.0.0:../../devel/ruby-minitest
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
