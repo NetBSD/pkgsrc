@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/03/21 05:53:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/30 22:10:43 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -31,6 +31,9 @@ ${PYSITELIB}/importlib_metadata/_text.pyo
 ${PYSITELIB}/importlib_metadata/compat/__init__.py
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyc
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyo
+${PYSITELIB}/importlib_metadata/compat/py311.py
+${PYSITELIB}/importlib_metadata/compat/py311.pyc
+${PYSITELIB}/importlib_metadata/compat/py311.pyo
 ${PYSITELIB}/importlib_metadata/compat/py39.py
 ${PYSITELIB}/importlib_metadata/compat/py39.pyc
 ${PYSITELIB}/importlib_metadata/compat/py39.pyo

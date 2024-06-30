@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/06/26 16:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/06/30 22:10:43 wiz Exp $
 
-DISTNAME=	importlib_metadata-7.2.0
+DISTNAME=	importlib_metadata-8.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -29,6 +29,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .if ${PYTHON_VERSION} < 309
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 .endif
+
+# test status as of 8.0.0
+# 1 failed, 105 passed, 1 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
