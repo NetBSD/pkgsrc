@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24588 2024/06/30 15:42:15 taca Exp $
+$NetBSD: TODO,v 1.24589 2024/06/30 21:55:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
-	o ast-grep-0.24.1
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -509,7 +508,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-7.12.0 [requires py-qt6/py-qt6-webengine]
+	o calibre-7.13.0 [requires py-qt6/py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o carbons-purple-0.2.3
@@ -718,6 +717,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
+	o gnucash-5.7
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
 	o go-ldap-3.3.0
@@ -908,6 +908,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.267
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mapserver-7.6.2
@@ -1149,7 +1150,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-postgresql-5.1.2
 	o py-pybind11-2.13.1
 	o py-pycnite-2024.6.28
-	o py-pylint-3.2.5
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
