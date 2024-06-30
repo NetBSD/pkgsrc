@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1130 2024/06/20 23:22:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1131 2024/06/30 15:24:38 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -84,7 +84,6 @@ SUBDIR+=	burp
 SUBDIR+=	caja
 SUBDIR+=	caja-dropbox
 SUBDIR+=	caja-extensions
-SUBDIR+=	capistrano
 SUBDIR+=	cargo-cache
 SUBDIR+=	ccd2iso
 SUBDIR+=	cchmod
@@ -662,6 +661,7 @@ SUBDIR+=	rsyslog-rabbitmq
 SUBDIR+=	rsyslog-relp
 SUBDIR+=	rsyslog-snmp
 SUBDIR+=	rtty
+SUBDIR+=	ruby-capistrano
 SUBDIR+=	ruby-capistrano-harrow
 SUBDIR+=	ruby-capistrano-stats
 SUBDIR+=	ruby-chef
