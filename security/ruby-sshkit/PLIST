@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/03 16:24:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/06/30 16:29:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.docker/Dockerfile
+${GEM_LIBDIR}/.docker/ubuntu_setup.sh
 ${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/release-drafter.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
@@ -19,7 +21,7 @@ ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/RELEASING.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/Vagrantfile
+${GEM_LIBDIR}/docker-compose.yml
 ${GEM_LIBDIR}/examples/images/example_output.png
 ${GEM_LIBDIR}/examples/images/logo.png
 ${GEM_LIBDIR}/examples/simple_connection.rb
@@ -62,18 +64,16 @@ ${GEM_LIBDIR}/lib/sshkit/runners/parallel.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/sequential.rb
 ${GEM_LIBDIR}/lib/sshkit/version.rb
 ${GEM_LIBDIR}/sshkit.gemspec
-${GEM_LIBDIR}/test/boxes.json
 ${GEM_LIBDIR}/test/functional/backends/netssh_transfer_tests.rb
 ${GEM_LIBDIR}/test/functional/backends/test_local.rb
 ${GEM_LIBDIR}/test/functional/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/functional/backends/test_netssh_scp.rb
 ${GEM_LIBDIR}/test/functional/backends/test_netssh_sftp.rb
-${GEM_LIBDIR}/test/functional/test_ssh_server_comes_up_for_functional_tests.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/known_hosts/github
 ${GEM_LIBDIR}/test/known_hosts/github_hash
 ${GEM_LIBDIR}/test/known_hosts/github_ip
-${GEM_LIBDIR}/test/support/vagrant_wrapper.rb
+${GEM_LIBDIR}/test/support/docker_wrapper.rb
 ${GEM_LIBDIR}/test/unit/backends/test_abstract.rb
 ${GEM_LIBDIR}/test/unit/backends/test_connection_pool.rb
 ${GEM_LIBDIR}/test/unit/backends/test_local.rb
