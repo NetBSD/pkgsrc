@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2024/06/08 16:16:37 taca Exp $
+$NetBSD: distinfo,v 1.34 2024/06/30 16:44:37 taca Exp $
 
-BLAKE2s (faraday-2.9.1.gem) = 40885c6b6ce6fcbe1159fae5b1d374d7ed86787e15c1ae8a4987d3891bdbf01f
-SHA512 (faraday-2.9.1.gem) = 7fc4d415a5a62508827a711a562cffb586ec5def3e79470dc46d950131f6059e386838154fe1cc642d6e844b713c47efa054272ce9e7a1588c7296e8a81b436a
-Size (faraday-2.9.1.gem) = 71680 bytes
+BLAKE2s (faraday-2.9.2.gem) = 2ce9b406327ee91c59b84b10ab9a1f0c8669d711b67dd2e20a543a6164049fac
+SHA512 (faraday-2.9.2.gem) = 71370c4f1c8f44f814ef311b0c016715a05141069245d6e58c4be9e6b6b723b70806438a6c79d5ebd3adddfc1c61e34d4131de729a5ecf74aff8592dcd7b3253
+Size (faraday-2.9.2.gem) = 71680 bytes
