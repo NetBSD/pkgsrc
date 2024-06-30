@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:31:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/06/30 22:11:37 wiz Exp $
 
-BLAKE2s (spawn-fcgi-1.6.4.tar.gz) = bac3d58fa389f01509d23e48a784ee711bc57ea83725ca778fc70695d37640f9
-SHA512 (spawn-fcgi-1.6.4.tar.gz) = 4e24b026c5322f762f000a223642c46a808c6a4f7d4b83b6a2131022ab557dd618cf64ce73119af00c97b935e5245dc20e0c1e769a3a8f3361ae2bb63616c119
-Size (spawn-fcgi-1.6.4.tar.gz) = 110455 bytes
+BLAKE2s (spawn-fcgi-1.6.5.tar.gz) = 739fc6ef697545e2701fff8f841305a52568fe058edb16d3dc1e120b2bc25f49
+SHA512 (spawn-fcgi-1.6.5.tar.gz) = 34db201c7a7ecc15fc1fc69b95a7df699d1afe0d9436e06a36f41560e20228f9ccf28c96ae1371a37133250cbe0a5558c001b2d93cd21f0eba0de185b73a9454
+Size (spawn-fcgi-1.6.5.tar.gz) = 107512 bytes
