@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/06/30 15:23:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/06/30 16:31:39 taca Exp $
 bin/cap${RUBY_SUFFIX}
 bin/capify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.docker/Dockerfile
+${GEM_LIBDIR}/.docker/ssh_key_rsa
+${GEM_LIBDIR}/.docker/ssh_key_rsa.pub
+${GEM_LIBDIR}/.docker/ubuntu_setup.sh
 ${GEM_LIBDIR}/.github/issue_template.md
 ${GEM_LIBDIR}/.github/pull_request_template.md
 ${GEM_LIBDIR}/.github/release-drafter.yml
@@ -12,7 +16,6 @@ ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/DEVELOPMENT.md
-${GEM_LIBDIR}/Dangerfile
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -22,6 +25,7 @@ ${GEM_LIBDIR}/UPGRADING-3.7.md
 ${GEM_LIBDIR}/bin/cap
 ${GEM_LIBDIR}/bin/capify
 ${GEM_LIBDIR}/capistrano.gemspec
+${GEM_LIBDIR}/docker-compose.yml
 ${GEM_LIBDIR}/features/configuration.feature
 ${GEM_LIBDIR}/features/deploy.feature
 ${GEM_LIBDIR}/features/deploy_failure.feature
@@ -33,9 +37,10 @@ ${GEM_LIBDIR}/features/step_definitions/assertions.rb
 ${GEM_LIBDIR}/features/step_definitions/cap_commands.rb
 ${GEM_LIBDIR}/features/step_definitions/setup.rb
 ${GEM_LIBDIR}/features/subdirectory.feature
+${GEM_LIBDIR}/features/support/docker_gateway.rb
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/features/support/remote_command_helpers.rb
-${GEM_LIBDIR}/features/support/vagrant_helpers.rb
+${GEM_LIBDIR}/features/support/remote_ssh_helpers.rb
 ${GEM_LIBDIR}/lib/Capfile
 ${GEM_LIBDIR}/lib/capistrano.rb
 ${GEM_LIBDIR}/lib/capistrano/all.rb
@@ -126,8 +131,6 @@ ${GEM_LIBDIR}/spec/lib/capistrano/upload_task_spec.rb
 ${GEM_LIBDIR}/spec/lib/capistrano/version_validator_spec.rb
 ${GEM_LIBDIR}/spec/lib/capistrano_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/support/.gitignore
-${GEM_LIBDIR}/spec/support/Vagrantfile
 ${GEM_LIBDIR}/spec/support/matchers.rb
 ${GEM_LIBDIR}/spec/support/tasks/database.rake
 ${GEM_LIBDIR}/spec/support/tasks/fail.rake
