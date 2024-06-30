@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/12/01 13:28:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/06/30 13:34:09 gdt Exp $
 bin/sip-build
 bin/sip-distinfo
 bin/sip-install
@@ -6,8 +6,6 @@ bin/sip-module
 bin/sip-sdist
 bin/sip-wheel
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-GPL2
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-GPL3
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +14,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sipbuild/__init__.py
 ${PYSITELIB}/sipbuild/__init__.pyc
 ${PYSITELIB}/sipbuild/__init__.pyo
+${PYSITELIB}/sipbuild/_version.py
+${PYSITELIB}/sipbuild/_version.pyc
+${PYSITELIB}/sipbuild/_version.pyo
 ${PYSITELIB}/sipbuild/abstract_builder.py
 ${PYSITELIB}/sipbuild/abstract_builder.pyc
 ${PYSITELIB}/sipbuild/abstract_builder.pyo
@@ -49,9 +50,6 @@ ${PYSITELIB}/sipbuild/distinfo/__init__.pyo
 ${PYSITELIB}/sipbuild/distinfo/distinfo.py
 ${PYSITELIB}/sipbuild/distinfo/distinfo.pyc
 ${PYSITELIB}/sipbuild/distinfo/distinfo.pyo
-${PYSITELIB}/sipbuild/distinfo/main.py
-${PYSITELIB}/sipbuild/distinfo/main.pyc
-${PYSITELIB}/sipbuild/distinfo/main.pyo
 ${PYSITELIB}/sipbuild/distutils_builder.py
 ${PYSITELIB}/sipbuild/distutils_builder.pyc
 ${PYSITELIB}/sipbuild/distutils_builder.pyo
@@ -175,19 +173,13 @@ ${PYSITELIB}/sipbuild/module/__init__.pyo
 ${PYSITELIB}/sipbuild/module/abi_version.py
 ${PYSITELIB}/sipbuild/module/abi_version.pyc
 ${PYSITELIB}/sipbuild/module/abi_version.pyo
-${PYSITELIB}/sipbuild/module/main.py
-${PYSITELIB}/sipbuild/module/main.pyc
-${PYSITELIB}/sipbuild/module/main.pyo
 ${PYSITELIB}/sipbuild/module/module.py
 ${PYSITELIB}/sipbuild/module/module.pyc
 ${PYSITELIB}/sipbuild/module/module.pyo
 ${PYSITELIB}/sipbuild/module/source/12/LICENSE
-${PYSITELIB}/sipbuild/module/source/12/LICENSE-GPL2
-${PYSITELIB}/sipbuild/module/source/12/LICENSE-GPL3
 ${PYSITELIB}/sipbuild/module/source/12/MANIFEST.in
 ${PYSITELIB}/sipbuild/module/source/12/README.in
 ${PYSITELIB}/sipbuild/module/source/12/apiversions.c
-${PYSITELIB}/sipbuild/module/source/12/bool.cpp
 ${PYSITELIB}/sipbuild/module/source/12/descriptors.c
 ${PYSITELIB}/sipbuild/module/source/12/int_convertors.c
 ${PYSITELIB}/sipbuild/module/source/12/objmap.c
@@ -205,8 +197,6 @@ ${PYSITELIB}/sipbuild/module/source/12/siplib.c
 ${PYSITELIB}/sipbuild/module/source/12/threads.c
 ${PYSITELIB}/sipbuild/module/source/12/voidptr.c
 ${PYSITELIB}/sipbuild/module/source/13/LICENSE
-${PYSITELIB}/sipbuild/module/source/13/LICENSE-GPL2
-${PYSITELIB}/sipbuild/module/source/13/LICENSE-GPL3
 ${PYSITELIB}/sipbuild/module/source/13/MANIFEST.in
 ${PYSITELIB}/sipbuild/module/source/13/README.in
 ${PYSITELIB}/sipbuild/module/source/13/pyproject.toml
@@ -217,7 +207,6 @@ ${PYSITELIB}/sipbuild/module/source/13/sip.pyi
 ${PYSITELIB}/sipbuild/module/source/13/sip.rst.in
 ${PYSITELIB}/sipbuild/module/source/13/sip_array.c
 ${PYSITELIB}/sipbuild/module/source/13/sip_array.h
-${PYSITELIB}/sipbuild/module/source/13/sip_bool.cpp
 ${PYSITELIB}/sipbuild/module/source/13/sip_core.c
 ${PYSITELIB}/sipbuild/module/source/13/sip_core.h
 ${PYSITELIB}/sipbuild/module/source/13/sip_descriptors.c
@@ -248,9 +237,15 @@ ${PYSITELIB}/sipbuild/tools/__init__.pyo
 ${PYSITELIB}/sipbuild/tools/build.py
 ${PYSITELIB}/sipbuild/tools/build.pyc
 ${PYSITELIB}/sipbuild/tools/build.pyo
+${PYSITELIB}/sipbuild/tools/distinfo.py
+${PYSITELIB}/sipbuild/tools/distinfo.pyc
+${PYSITELIB}/sipbuild/tools/distinfo.pyo
 ${PYSITELIB}/sipbuild/tools/install.py
 ${PYSITELIB}/sipbuild/tools/install.pyc
 ${PYSITELIB}/sipbuild/tools/install.pyo
+${PYSITELIB}/sipbuild/tools/module.py
+${PYSITELIB}/sipbuild/tools/module.pyc
+${PYSITELIB}/sipbuild/tools/module.pyo
 ${PYSITELIB}/sipbuild/tools/sdist.py
 ${PYSITELIB}/sipbuild/tools/sdist.pyc
 ${PYSITELIB}/sipbuild/tools/sdist.pyo
