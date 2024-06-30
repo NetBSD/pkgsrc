@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/05/05 10:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/06/30 22:07:06 wiz Exp $
 
-DISTNAME=	google-api-core-2.19.0
+DISTNAME=	google-api-core-2.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -26,8 +26,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# test status as of 2.15.0:
-# 15 failed, 400 passed, 23 skipped, 7 warnings
+# test status as of 2.19.1:
+# 6 failed, 649 passed, 50 skipped, 79 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
