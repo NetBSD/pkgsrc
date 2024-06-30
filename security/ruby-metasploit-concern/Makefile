@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/11/11 13:02:42 taca Exp $
+# $NetBSD: Makefile,v 1.12 2024/06/30 16:20:07 taca Exp $
 
-DISTNAME=	metasploit-concern-5.0.2
+DISTNAME=	metasploit-concern-5.0.3
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 
-RUBY_RAILS_ACCEPTED=	70
+RUBY_RAILS_ACCEPTED=	70 71
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
