@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24587 2024/06/30 13:34:15 gdt Exp $
+$NetBSD: TODO,v 1.24588 2024/06/30 15:42:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -1245,6 +1245,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o socket-1.2
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
+	o spawn-fcgi-1.6.5
 	o spcaview-20060501
 	o spiped-1.6.1b
 	o spl-1.0pre6
