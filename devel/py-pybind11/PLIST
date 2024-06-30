@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/04/06 06:34:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/06/30 22:02:55 wiz Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -59,6 +59,7 @@ ${PYSITELIB}/pybind11/share/cmake/pybind11/FindPythonLibsNew.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Common.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Config.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake
+${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11GuessPythonExtSuffix.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11NewTools.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Targets.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Tools.cmake
