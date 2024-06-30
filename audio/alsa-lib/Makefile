@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/05/13 08:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/06/30 06:02:15 wiz Exp $
 
-DISTNAME=	alsa-lib-1.2.11
+DISTNAME=	alsa-lib-1.2.12
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ COMMENT=	Advanced Linux Sound Architecture (ALSA)
 LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
