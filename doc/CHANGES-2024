@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4219 2024/06/30 15:26:26 taca Exp $
+$NetBSD: CHANGES-2024,v 1.4220 2024/06/30 16:03:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6720,3 +6720,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-openpyxl to 3.1.5 [adam 2024-06-30]
 	Updated x11/py-sip6 to 6.8.5 [gdt 2024-06-30]
 	Moved sysutils/capistrano to sysutils/ruby-capistrano [taca 2024-06-30]
+	Updated devel/ruby-io-event to 1.6.5 [taca 2024-06-30]
