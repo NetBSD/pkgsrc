@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/05 17:26:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/06/30 16:39:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -20,6 +20,10 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_stream_decoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_stream_encoder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/cbor.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/cbor/cbor_engine.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/cbor/decoder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/cbor/encoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring/publisher.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring/request_metrics.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_stubs.rb
@@ -45,6 +49,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/endpoints/rules_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/endpoints/templater.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/endpoints/tree_rule.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/endpoints/url.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/error_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/errors.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/event_emitter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/ini_parser.rb
@@ -93,6 +98,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/json_rpc.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/query.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_json.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_xml.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rpc_v2.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/recursion_detection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/regional_endpoint.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/request_compression.rb
@@ -110,6 +116,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/transfer_encoding.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/user_agent.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/process_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/query/ec2_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/ec2_param_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/param.rb
@@ -119,10 +126,10 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/resources/collection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rest/content_type_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/body.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/builder.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/content_type.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/endpoint.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/headers.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/request/querystring_builder.rb
@@ -131,6 +138,12 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/header_list_parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/headers.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/status_code.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/builder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/content_type_handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/error_handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/handler.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/shared_config.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/shared_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/sso_credentials.rb
@@ -146,6 +159,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/query.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest_json.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest_xml.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rpc_v2.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/stub_data.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/xml_error.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/token.rb
@@ -164,13 +178,13 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/xml/default_map.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/doc_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/error_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/engines/libxml.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/engines/nokogiri.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/engines/oga.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/engines/ox.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/engines/rexml.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/frame.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/libxml_engine.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/nokogiri_engine.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/oga_engine.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/ox_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/parsing_error.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/rexml_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/xml/parser/stack.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/client.rb
