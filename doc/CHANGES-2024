@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4252 2024/06/30 22:10:53 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4253 2024/06/30 22:11:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6753,3 +6753,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-google-api-core to 2.19.1 [wiz 2024-06-30]
 	Updated devel/py-googleapis-common-protos to 1.63.2 [wiz 2024-06-30]
 	Updated devel/py-importlib-metadata to 8.0.0 [wiz 2024-06-30]
+	Updated www/spawn-fcgi to 1.6.5 [wiz 2024-06-30]
