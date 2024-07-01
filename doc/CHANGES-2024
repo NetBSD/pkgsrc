@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4261 2024/07/01 09:19:51 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4262 2024/07/01 14:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6763,3 +6763,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-gast to 0.6.0 [adam 2024-07-01]
 	Updated sysutils/eza to 0.18.21 [fox 2024-07-01]
 	Updated security/openssh to 9.8p1 [wiz 2024-07-01]
+	Updated multimedia/gstreamer1 to 1.24.5 [adam 2024-07-01]
