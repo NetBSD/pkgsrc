@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2024/04/07 07:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/07/01 21:53:07 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -33,7 +33,7 @@ DEPENDS+=	mate-media>=${VERSION:R}.2:../../multimedia/mate-media
 DEPENDS+=	mate-menus>=${VERSION}:../../x11/mate-menus
 DEPENDS+=	mate-netbook>=${VERSION:R}.0:../../wm/mate-netbook
 DEPENDS+=	mate-notification-daemon>=${VERSION}:../../sysutils/mate-notification-daemon
-DEPENDS+=	mate-panel>=${VERSION:R}.4:../../x11/mate-panel
+DEPENDS+=	mate-panel>=${VERSION:R}.6:../../x11/mate-panel
 DEPENDS+=	mate-polkit>=${VERSION}:../../security/mate-polkit
 DEPENDS+=	mate-power-manager>=${VERSION}:../../sysutils/mate-power-manager
 DEPENDS+=	mate-screensaver>=${VERSION:R}.2:../../x11/mate-screensaver
