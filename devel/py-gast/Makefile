@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/04/30 04:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/01 07:46:19 adam Exp $
 
-DISTNAME=	gast-0.5.4
+DISTNAME=	gast-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gast/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/serge-sans-paille/gast
 COMMENT=	Python AST that abstracts the underlying Python version
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-astunparse-[0-9]*:../../devel/py-astunparse
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
