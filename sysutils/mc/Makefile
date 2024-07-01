@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2024/05/06 08:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.133 2024/07/01 14:53:40 cheusov Exp $
 
 DISTNAME=	mc-4.8.28
 PKGREVISION=	4
@@ -60,7 +60,6 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/mc
 CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/mc/${i}
 .endfor
 
-.include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.30.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
