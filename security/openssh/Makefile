@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.282 2024/06/25 17:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.283 2024/07/01 09:19:40 wiz Exp $
 
-DISTNAME=		openssh-9.7p1
+DISTNAME=		openssh-9.8p1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -48,7 +48,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
-CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT:Q}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
@@ -77,12 +76,6 @@ CONFIGURE_ENV+=		LD=${CC:Q}
 # if we have utmpx et al do not try to use login()
 CONFIGURE_ARGS+=	--disable-libutil
 .  endif
-#
-# NetBSD current after 2011/03/12 has incompatible strnvis(3) and
-# prior version don't have it.  So, disable use of strnvis(3) now.
-#
-CONFIGURE_ENV+=		ac_cv_func_strnvis=no
-#
 # workaround for ./configure problem, pkg/50936
 #
 CONFIGURE_ENV+=		ac_cv_func_reallocarray=no
@@ -144,7 +137,6 @@ SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
 SUBST_VARS.patch=	PKG_SYSCONFDIR
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 
 #
 # type of key "ecdsa" isn't always supported depends on OpenSSL.

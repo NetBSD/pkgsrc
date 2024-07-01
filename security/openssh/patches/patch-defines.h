@@ -1,25 +1,9 @@
-$NetBSD: patch-defines.h,v 1.4 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-defines.h,v 1.5 2024/07/01 09:19:40 wiz Exp $
 
 Define ROOTUID, UTMPX_FILE and WTMPX_FILE
 
 --- defines.h.orig	2015-08-21 04:49:03.000000000 +0000
 +++ defines.h
-@@ -30,6 +30,15 @@
- 
- /* Constants */
- 
-+#ifdef HAVE_INTERIX
-+/* Interix has a special concept of "administrator". */
-+# define ROOTUID	197108
-+# define ROOTGID	131616
-+#else
-+# define ROOTUID	0
-+# define ROOTGID	0
-+#endif
-+
- #if defined(HAVE_DECL_SHUT_RD) && HAVE_DECL_SHUT_RD == 0
- enum
- {
 @@ -721,6 +730,24 @@ struct winsize {
  #    endif
  #  endif
