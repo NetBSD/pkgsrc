@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4254 2024/06/30 22:17:43 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4255 2024/07/01 02:23:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6755,3 +6755,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-importlib-metadata to 8.0.0 [wiz 2024-06-30]
 	Updated www/spawn-fcgi to 1.6.5 [wiz 2024-06-30]
 	Updated finance/gnucash to 5.7 [wiz 2024-06-30]
+	Updated textproc/libxslt to 1.1.41 [gutteridge 2024-07-01]
