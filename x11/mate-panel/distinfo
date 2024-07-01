@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/12/04 13:54:04 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2024/07/01 21:42:08 gutteridge Exp $
 
-BLAKE2s (mate-panel-1.26.4.tar.xz) = ccbb42d75051ec600d3f4ea8e4799a68d15bec30cd5a1b99910d8fd6fd48fdb2
-SHA512 (mate-panel-1.26.4.tar.xz) = 90db23f46dab88cb242aafb32737519d16e035843c2ca81da131ff3134a61b08772f19aa9900dbfbd00dcf4579cee3970765aa3fb461664abd1dd3babb8f6ea2
-Size (mate-panel-1.26.4.tar.xz) = 3262004 bytes
+BLAKE2s (mate-panel-1.26.6.tar.xz) = bcdbae92ed5e95d8d71e6795a2a1c0191fdebb4e41c1f5821760de60a656f1e4
+SHA512 (mate-panel-1.26.6.tar.xz) = a8ffcf7b1eee6974e9967d2e579f6e86f3c4de247c5b4f7075fa459cfca67e3366cfc08888f5f9e498180c44d357bfbcd330c1f949389b06a2aeba05e6eeb903
+Size (mate-panel-1.26.6.tar.xz) = 3313140 bytes
