@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2022/10/13 11:22:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2024/07/01 02:23:25 gutteridge Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -35,7 +35,6 @@ lib/xsltConf.sh
 man/man1/xsltproc.1
 man/man3/libexslt.3
 man/man3/libxslt.3
-share/aclocal/libxslt.m4
 share/doc/libxslt/tutorial/images/callouts/1.png
 share/doc/libxslt/tutorial/images/callouts/10.png
 share/doc/libxslt/tutorial/images/callouts/2.png
