@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2024/06/01 15:17:22 bsiegert Exp $
+$NetBSD: distinfo,v 1.22 2024/07/01 18:08:42 bsiegert Exp $
 
-BLAKE2s (caddy-2.8.1.tar.gz) = eac822971aa3228e8cad163f374b1ce7cb5287cb198bfe37fd9bca7719d9aeee
-SHA512 (caddy-2.8.1.tar.gz) = f862b3ec3f7f75494968efef3424bef5f1edde2e187bfea4dac60091f2cf17686b0f5e20a1c198e78b5e96de8f7be1455a8c601b5a25124b2e5b5d386ae1e263
-Size (caddy-2.8.1.tar.gz) = 661498 bytes
+BLAKE2s (caddy-2.8.4.tar.gz) = 6b378c78d5e416e53ceae4081be9453473d4effc25da1297f8fda21d3b09bf76
+SHA512 (caddy-2.8.4.tar.gz) = 5c354d0ceb3e927b918594c8c7de51f658aba798ac23d41b751c55b728f9fc5c46fa1f8c2e86c838e58d7b3514bc11937a765b36fd87971ea1757c92a70e9665
+Size (caddy-2.8.4.tar.gz) = 662064 bytes
 BLAKE2s (filippo.io_edwards25519_@v_v1.1.0.mod) = 933eb82dec6ad79cb75c2858bf3727a8139978c3128c94a8363b4f5dcb920198
 SHA512 (filippo.io_edwards25519_@v_v1.1.0.mod) = 92e352d256622f05facad1f7afc3cc7d92f98fbb014bb2b72334fe7888c8e65a56d1258c9a7608b8a5a940eccb05b749ffbd90d2a97ac3e9f398f5bd9470db01
 Size (filippo.io_edwards25519_@v_v1.1.0.mod) = 40 bytes
@@ -87,12 +87,12 @@ Size (github.com_beorn7_perks_@v_v1.0.1.mod) = 40 bytes
 BLAKE2s (github.com_beorn7_perks_@v_v1.0.1.zip) = bdc71e7834ecb6fb4d1a9d57745efb54b799b5b7c2e2e5b12601821d8c7fced2
 SHA512 (github.com_beorn7_perks_@v_v1.0.1.zip) = f973efba5ce7c651d9c3e4e467a1423b00b102034a054874d09977957b7b55557e05da06fb4c158e693db7bac01bf601f950cae0d411dc92afd0686d7e1de4cf
 Size (github.com_beorn7_perks_@v_v1.0.1.zip) = 14678 bytes
-BLAKE2s (github.com_caddyserver_certmagic_@v_v0.21.2.mod) = 860fc7ea8ad4074811a55b60151197de2f343077e928513dbb4eb509cf470f35
-SHA512 (github.com_caddyserver_certmagic_@v_v0.21.2.mod) = b9cd5f4e15688ed125c2d51483f78eb7648110d6d7e322af1e328f1da57fde00f6d40a9222260eab71aab546a3bb873d3a803664025d2615dd0b9c2a355a2eb1
-Size (github.com_caddyserver_certmagic_@v_v0.21.2.mod) = 618 bytes
-BLAKE2s (github.com_caddyserver_certmagic_@v_v0.21.2.zip) = a905daf9af860b6e033cba886efb47c872d5cdd20f0c4d2ab3797f14ca12fabe
-SHA512 (github.com_caddyserver_certmagic_@v_v0.21.2.zip) = 153c166ddf98c66355a07df8921cd90ce57d781ebeeeb316925023595bfbdadeea8b69afa693fcffaaf79171b999f204fbdd002012b32f3f522d99f6197c4fbe
-Size (github.com_caddyserver_certmagic_@v_v0.21.2.zip) = 161261 bytes
+BLAKE2s (github.com_caddyserver_certmagic_@v_v0.21.3.mod) = 860fc7ea8ad4074811a55b60151197de2f343077e928513dbb4eb509cf470f35
+SHA512 (github.com_caddyserver_certmagic_@v_v0.21.3.mod) = b9cd5f4e15688ed125c2d51483f78eb7648110d6d7e322af1e328f1da57fde00f6d40a9222260eab71aab546a3bb873d3a803664025d2615dd0b9c2a355a2eb1
+Size (github.com_caddyserver_certmagic_@v_v0.21.3.mod) = 618 bytes
+BLAKE2s (github.com_caddyserver_certmagic_@v_v0.21.3.zip) = 2c0dfed3c1f3d516d00cc3a6faa2750376d9809b3bd129d85de197f92a668c20
+SHA512 (github.com_caddyserver_certmagic_@v_v0.21.3.zip) = 3a9f66eea73f94e7566d86d25b1353af9cf0cfec4e6a905ece3721a6584e3660cc5c8aaa2730856fd2974c7455a3ceacf8d408c150c2e67653852195f6c2419f
+Size (github.com_caddyserver_certmagic_@v_v0.21.3.zip) = 161559 bytes
 BLAKE2s (github.com_caddyserver_zerossl_@v_v0.1.3.mod) = 03d2b37f148b5c05b6cdafde5adc541199f63e9faebdd96eab0a711bceeb3e5f
 SHA512 (github.com_caddyserver_zerossl_@v_v0.1.3.mod) = 313c955b432f7b5ea37b9add01111ea26d5c6a74da4d7a8a225404910a0d1d7aae4965e158d70f39a78d1a219cb2cc477e01189419b08811c6542ca629c9c1b7
 Size (github.com_caddyserver_zerossl_@v_v0.1.3.mod) = 49 bytes

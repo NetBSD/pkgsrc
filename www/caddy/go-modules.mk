@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.13 2024/06/01 15:17:22 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.14 2024/07/01 18:08:42 bsiegert Exp $
 
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.1.0.mod
 GO_MODULE_FILES+=	filippo.io/edwards25519/@v/v1.1.0.zip
@@ -18,8 +18,8 @@ GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.2.zip
-GO_MODULE_FILES+=	github.com/caddyserver/certmagic/@v/v0.21.2.mod
-GO_MODULE_FILES+=	github.com/caddyserver/certmagic/@v/v0.21.2.zip
+GO_MODULE_FILES+=	github.com/caddyserver/certmagic/@v/v0.21.3.mod
+GO_MODULE_FILES+=	github.com/caddyserver/certmagic/@v/v0.21.3.zip
 GO_MODULE_FILES+=	github.com/caddyserver/zerossl/@v/v0.1.3.mod
 GO_MODULE_FILES+=	github.com/caddyserver/zerossl/@v/v0.1.3.zip
 GO_MODULE_FILES+=	github.com/cenkalti/backoff/v4/@v/v4.2.1.mod
