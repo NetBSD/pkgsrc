@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.25 2024/07/01 14:53:40 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/07/01 15:15:58 cheusov Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
 bin/mcview
-libexec/mc/cons.saver
 libexec/mc/ext.d/archive.sh
 libexec/mc/ext.d/doc.sh
 libexec/mc/ext.d/image.sh
