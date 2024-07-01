@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.197 2024/06/17 19:43:48 adam Exp $
+# $NetBSD: Makefile,v 1.198 2024/07/01 06:20:08 wiz Exp $
 
-DISTNAME=	mame-0.266
+DISTNAME=	mame-0.267
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -18,7 +18,8 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	cputime datasize memorysize virtualsize
