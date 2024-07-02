@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/05/28 04:11:29 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/07/02 09:04:40 adam Exp $
 
-DISTNAME=	yt_dlp-2024.5.27
+DISTNAME=	yt_dlp-2024.7.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}

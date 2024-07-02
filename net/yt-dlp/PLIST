@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2024/05/27 05:04:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/07/02 09:04:40 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1083,6 +1083,9 @@ ${PYSITELIB}/yt_dlp/extractor/gotostage.pyo
 ${PYSITELIB}/yt_dlp/extractor/gputechconf.py
 ${PYSITELIB}/yt_dlp/extractor/gputechconf.pyc
 ${PYSITELIB}/yt_dlp/extractor/gputechconf.pyo
+${PYSITELIB}/yt_dlp/extractor/graspop.py
+${PYSITELIB}/yt_dlp/extractor/graspop.pyc
+${PYSITELIB}/yt_dlp/extractor/graspop.pyo
 ${PYSITELIB}/yt_dlp/extractor/gronkh.py
 ${PYSITELIB}/yt_dlp/extractor/gronkh.pyc
 ${PYSITELIB}/yt_dlp/extractor/gronkh.pyo
@@ -1344,6 +1347,9 @@ ${PYSITELIB}/yt_dlp/extractor/kuwo.pyo
 ${PYSITELIB}/yt_dlp/extractor/la7.py
 ${PYSITELIB}/yt_dlp/extractor/la7.pyc
 ${PYSITELIB}/yt_dlp/extractor/la7.pyo
+${PYSITELIB}/yt_dlp/extractor/laracasts.py
+${PYSITELIB}/yt_dlp/extractor/laracasts.pyc
+${PYSITELIB}/yt_dlp/extractor/laracasts.pyo
 ${PYSITELIB}/yt_dlp/extractor/lastfm.py
 ${PYSITELIB}/yt_dlp/extractor/lastfm.pyc
 ${PYSITELIB}/yt_dlp/extractor/lastfm.pyo
@@ -1536,9 +1542,6 @@ ${PYSITELIB}/yt_dlp/extractor/microsoftembed.pyo
 ${PYSITELIB}/yt_dlp/extractor/microsoftstream.py
 ${PYSITELIB}/yt_dlp/extractor/microsoftstream.pyc
 ${PYSITELIB}/yt_dlp/extractor/microsoftstream.pyo
-${PYSITELIB}/yt_dlp/extractor/microsoftvirtualacademy.py
-${PYSITELIB}/yt_dlp/extractor/microsoftvirtualacademy.pyc
-${PYSITELIB}/yt_dlp/extractor/microsoftvirtualacademy.pyo
 ${PYSITELIB}/yt_dlp/extractor/mildom.py
 ${PYSITELIB}/yt_dlp/extractor/mildom.pyc
 ${PYSITELIB}/yt_dlp/extractor/mildom.pyo
@@ -2403,6 +2406,9 @@ ${PYSITELIB}/yt_dlp/extractor/springboardplatform.pyo
 ${PYSITELIB}/yt_dlp/extractor/sprout.py
 ${PYSITELIB}/yt_dlp/extractor/sprout.pyc
 ${PYSITELIB}/yt_dlp/extractor/sprout.pyo
+${PYSITELIB}/yt_dlp/extractor/sproutvideo.py
+${PYSITELIB}/yt_dlp/extractor/sproutvideo.pyc
+${PYSITELIB}/yt_dlp/extractor/sproutvideo.pyo
 ${PYSITELIB}/yt_dlp/extractor/srgssr.py
 ${PYSITELIB}/yt_dlp/extractor/srgssr.pyc
 ${PYSITELIB}/yt_dlp/extractor/srgssr.pyo
