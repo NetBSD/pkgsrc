@@ -1,4 +1,4 @@
-$NetBSD: patch-lp__solve_ccc,v 1.5 2017/10/29 22:16:03 khorben Exp $
+$NetBSD: patch-lp__solve_ccc,v 1.6 2024/07/02 12:00:17 tnn Exp $
 
 recent versions of gcc are noisy unless main() is declared returning 'int'
 and isnan() needs a floating argument else NOISNAN is defined causing
@@ -24,7 +24,7 @@ problems.
 +>$tmpdir/platform.c
 +echo '#include <stdlib.h>'>>$tmpdir/platform.c
 +echo '#include <stdio.h>'>>$tmpdir/platform.c
-+echo 'main(){printf("ux%d", (int) (sizeof(void *)*8));}'>>$tmpdir/platform.c
++echo 'int main(){printf("ux%d", (int) (sizeof(void *)*8));}'>>$tmpdir/platform.c
 +$c $tmpdir/platform.c -o $tmpdir/platform
 +PLATFORM=`$tmpdir/platform`
 +rm $tmpdir/platform $tmpdir/platform.c >/dev/null 2>&1

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/07/02 12:00:17 tnn Exp $
 
 BLAKE2s (lp_solve_5.5.2.3_source.tar.gz) = a250b91c74ef961aa62bfc805347acee326778ca8d39f03be944212d18e1c79c
 SHA512 (lp_solve_5.5.2.3_source.tar.gz) = ed4c9e993e6836fdc8bae76d4ff2f48594d6f9ababbedaf83253d0e31815faa8608b110866b03a0336a7334c531efb9987ec231f8e7a62eff7efea683a1868cf
 Size (lp_solve_5.5.2.3_source.tar.gz) = 812420 bytes
 SHA1 (patch-aa) = a77ec29e056252b3b82c1a1acdd463b5ff7f6f6b
 SHA1 (patch-demo_ccc) = dd5d00bce28fa89db343489bf22f0c96d3a9894b
-SHA1 (patch-lp__solve_ccc) = 667fafdffd207d987e2d2480d92ef81fc607e430
+SHA1 (patch-lp__solve_ccc) = b83f2a2c27e28e38c256dc67f9213b912b3be925
 SHA1 (patch-lp__utils.c) = b0774bd7b323f12c97c7bc78c26f64a75c841f34
-SHA1 (patch-lpsolve55_ccc) = c34feffbc0825fa14a46ec2f7733cc774b6ddf68
+SHA1 (patch-lpsolve55_ccc) = fb98260e50f4008585e6017c4fbb502fe99d15e4
