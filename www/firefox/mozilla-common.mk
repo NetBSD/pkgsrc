@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.282 2024/05/10 08:29:37 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.282.2.1 2024/07/02 06:26:42 bsiegert Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -237,7 +237,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.99
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.100
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -248,7 +248,7 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.74.0
+RUST_REQ=	1.76.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
@@ -258,7 +258,7 @@ RUST_REQ=	1.74.0
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
+BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland
