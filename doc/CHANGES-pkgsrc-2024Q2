@@ -1,5 +1,15 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.1 2024/06/26 15:12:51 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.2 2024/07/02 06:32:44 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
+Pullup ticket #6870 - requested by sborrill
+Pullup ticket #6871 - requested by taca
+www/squid6: security fix
+
+Pullup ticket #6872 - requested by taca
+www/firefox: security fix
+www/firefox-l10n: dependent update
+
+Pullup ticket #6874 - requested by wiz
+security/openssh: security fix (RCE)
 
