@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2024/06/10 19:38:13 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/07/02 10:27:24 adam Exp $
 
-DISTNAME=	bitcoin-27.0
+DISTNAME=	bitcoin-27.1
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-hardening # uses -fPIE which is problemtic
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+# Tests take a lot of time to compile.
+CONFIGURE_ARGS+=	--disable-tests
 PKGCONFIG_OVERRIDE=	libbitcoinconsensus.pc.in
 TEST_TARGET=		check
 
@@ -31,10 +33,6 @@ TEST_TARGET=		check
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
-.endif
-
-.if ${OS_VARIANT} == "SmartOS"
-CONFIGURE_ARGS+=	--disable-tests
 .endif
 
 # pkgsrc's db4 package installs as db4_, but bitcoin looks for db_.
