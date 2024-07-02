@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2024/07/02 13:13:25 mef Exp $
+# $NetBSD: Makefile,v 1.38 2024/07/02 13:57:10 mef Exp $
 
 DISTNAME=	emacs-w3m-1.4.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emacs-w3m/}
 GITHUB_TAG=	329cfcfc0448a45a0779ded7b51332a343d02a18
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
