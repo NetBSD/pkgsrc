@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/06/26 16:26:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/07/02 10:34:32 adam Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -72,10 +72,10 @@ lib/cmake/OpenImageIO/OpenImageIOTargets-release.cmake
 lib/cmake/OpenImageIO/OpenImageIOTargets.cmake
 lib/libOpenImageIO.so
 lib/libOpenImageIO.so.2.5
-lib/libOpenImageIO.so.2.5.12
+lib/libOpenImageIO.so.2.5.13
 lib/libOpenImageIO_Util.so
 lib/libOpenImageIO_Util.so.2.5
-lib/libOpenImageIO_Util.so.2.5.12
+lib/libOpenImageIO_Util.so.2.5.13
 lib/pkgconfig/OpenImageIO.pc
 share/doc/OpenImageIO/CHANGES-0.x.md
 share/doc/OpenImageIO/CHANGES-1.x.md
