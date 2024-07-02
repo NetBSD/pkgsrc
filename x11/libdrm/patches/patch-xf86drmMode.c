@@ -1,6 +1,9 @@
-$NetBSD: patch-xf86drmMode.c,v 1.6 2022/03/13 15:20:01 tnn Exp $
+$NetBSD: patch-xf86drmMode.c,v 1.7 2024/07/02 16:24:47 wiz Exp $
 
 FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
+
+NetBSD part:
+https://gitlab.freedesktop.org/mesa/drm/-/merge_requests/384
 
 --- xf86drmMode.c.orig	2021-07-02 12:49:05.459105300 +0000
 +++ xf86drmMode.c
@@ -99,12 +102,3 @@ FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
  	int	fd;
  	struct drm_mode_card_res res;
  	drmModeResPtr r = 0;
-@@ -988,7 +1011,7 @@ drm_public int drmModePageFlipTarget(int
- 
- drm_public int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
- 		    uint32_t fb_id, uint32_t flags,
--		    int32_t crtc_x, int32_t crtc_y,
-+		    uint32_t crtc_x, uint32_t crtc_y,
- 		    uint32_t crtc_w, uint32_t crtc_h,
- 		    uint32_t src_x, uint32_t src_y,
- 		    uint32_t src_w, uint32_t src_h)

@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2012/02/16 20:30:56 hans Exp $
+$NetBSD: patch-ac,v 1.5 2024/07/02 16:24:47 wiz Exp $
+
+Chunk 1: ?
+Chunk 2: https://gitlab.freedesktop.org/mesa/drm/-/merge_requests/384
+Chunk 3: ?
 
 --- xf86drm.h.orig	2010-03-05 23:21:13.000000000 +0000
 +++ xf86drm.h
