@@ -1,6 +1,8 @@
-$NetBSD: patch-amdgpu_amdgpu__cs.c,v 1.3 2022/03/13 15:20:01 tnn Exp $
+$NetBSD: patch-amdgpu_amdgpu__cs.c,v 1.4 2024/07/02 16:24:47 wiz Exp $
 
 libc-supplied compat alloca(3) should not be used
+
+XXX: argue for upstream
 
 --- amdgpu/amdgpu_cs.c.orig	2022-02-16 10:00:13.000000000 +0000
 +++ amdgpu/amdgpu_cs.c

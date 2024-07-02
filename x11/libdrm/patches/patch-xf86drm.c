@@ -1,6 +1,8 @@
-$NetBSD: patch-xf86drm.c,v 1.7 2022/03/13 15:20:01 tnn Exp $
+$NetBSD: patch-xf86drm.c,v 1.8 2024/07/02 16:24:47 wiz Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
+
+https://gitlab.freedesktop.org/mesa/drm/-/merge_requests/384
 
 --- xf86drm.c.orig	2021-07-02 12:49:05.459105300 +0000
 +++ xf86drm.c
