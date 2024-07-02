@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/09/17 06:47:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/07/02 13:13:25 mef Exp $
 info/emacs-w3m-ja.info.gz
 info/emacs-w3m.info.gz
 share/emacs-w3m/COPYING
@@ -355,8 +355,7 @@ ${EMACS_LISPPREFIX}/w3m/w3m-image.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-image.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.elc
-${EMACS_LISPPREFIX}/w3m/w3m-load.el.gz
-${EMACS_LISPPREFIX}/w3m/w3m-load.elc
+${EMACS_LISPPREFIX}/w3m/w3m-load.el
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-namazu.el.gz

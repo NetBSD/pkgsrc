@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2023/09/17 06:47:12 mef Exp $
+$NetBSD: distinfo,v 1.9 2024/07/02 13:13:25 mef Exp $
 
 BLAKE2s (emacs-w3m-1.4.5-329cfcfc0448a45a0779ded7b51332a343d02a18.tar.gz) = d9b637a1ccd60b8ccf9c1f3422a5959fcc5b7e5b7abdf7f7f32c7df5cea0a80f
 SHA512 (emacs-w3m-1.4.5-329cfcfc0448a45a0779ded7b51332a343d02a18.tar.gz) = 2551e4b0a1be1b1fdedc2182e2e3d8c7c5aafaba4e86e7f285997e7e6b0350acbdc54fdeec514a693513abd329d8164d026e2e8c7656a5940f81e56c7cd36ae1
