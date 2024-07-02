@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2024/06/26 16:24:33 wiz Exp $
+$NetBSD: distinfo,v 1.116 2024/07/02 15:46:37 tnn Exp $
 
 BLAKE2s (libdrm-2.4.122.tar.xz) = ab59032d17d00f679a3292f524109acbd355c12c2dacc2e578466868bc68e49d
 SHA512 (libdrm-2.4.122.tar.xz) = ea6bac94416d4ba0e9805e142ae62904236bc49f803d4fc10c92968a4df64c818dd42524ad7a4e988062836783a148e27094050bb2754f751a368627f794ad13
@@ -7,6 +7,7 @@ SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-amdgpu_amdgpu__cs.c) = 125eca62cd3e00a6e039066152780174dcde0705
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
 SHA1 (patch-libsync.h) = 50a6fd7ca2d379997941a9b2c33d086ae99d2d0d
+SHA1 (patch-omap_omap__drm.c) = 39aa7206726649a25f84299e07b40a1659352358
 SHA1 (patch-tests_nouveau_threaded.c) = 30cda11fcce1693b8b3cecec4f7915c08066b62a
 SHA1 (patch-xf86drm.c) = 6e4b3ee406666b37cc0b923ad49b945055919c83
 SHA1 (patch-xf86drmMode.c) = 078b1ecaa4fedd74992d682433701245ee51785b
