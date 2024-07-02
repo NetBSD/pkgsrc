@@ -1,6 +1,8 @@
-$NetBSD: patch-libsync.h,v 1.5 2024/06/10 08:01:20 jperkin Exp $
+$NetBSD: patch-libsync.h,v 1.6 2024/07/02 16:24:47 wiz Exp $
 
 Fix public header on SunOS.
+
+https://gitlab.freedesktop.org/mesa/drm/-/merge_requests/384
 
 --- libsync.h.orig	2024-06-10 07:58:37.832119633 +0000
 +++ libsync.h
