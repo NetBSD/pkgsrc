@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/05/27 13:49:27 sevan Exp $
+@comment $NetBSD: PLIST,v 1.20.34.1 2024/07/02 06:32:11 bsiegert Exp $
 bin/scp
 bin/sftp
 bin/ssh
@@ -10,6 +10,7 @@ libexec/sftp-server
 libexec/ssh-keysign
 libexec/ssh-pkcs11-helper
 libexec/ssh-sk-helper
+libexec/sshd-session
 man/man1/scp.1
 man/man1/sftp.1
 man/man1/ssh-add.1
