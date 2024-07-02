@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/09/17 06:47:12 mef Exp $
+# $NetBSD: Makefile,v 1.37 2024/07/02 13:13:25 mef Exp $
 
 DISTNAME=	emacs-w3m-1.4.5
 CATEGORIES=	www
@@ -37,6 +37,7 @@ WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 EMACS_BUILDLINK=		# empty
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
 				emacs28 emacs28nox \
+				emacs29 emacs29nox \
 				xemacs215 xemacs215nox xemacs214 xemacs214nox
 
 .include "../../editors/emacs/modules.mk"
@@ -51,7 +52,7 @@ PLIST.gui=	yes
 # Work around an xemacs rendering bug for optimized GIFs, see
 # <https://github.com/doitian/emacs-w3m>, 2b
 .if (${EMACS_FLAVOR} == "xemacs")
-DEPENDS+=	gifsicle:../../graphics/gifsicle
+DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 .endif
 
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja
