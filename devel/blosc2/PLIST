@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/13 05:35:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/02 10:28:08 adam Exp $
 include/b2nd.h
 include/blosc2.h
 include/blosc2/blosc2-common.h
@@ -22,5 +22,5 @@ lib/cmake/Blosc2/Modules/toolchain-armsf.cmake
 lib/libblosc2.a
 lib/libblosc2.so
 lib/libblosc2.so.${PKGVERSION}
-lib/libblosc2.so.3
+lib/libblosc2.so.4
 lib/pkgconfig/blosc2.pc
