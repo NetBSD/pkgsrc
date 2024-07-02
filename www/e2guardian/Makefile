@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/06/27 15:26:23 sborrill Exp $
+# $NetBSD: Makefile,v 1.17 2024/07/02 08:24:08 prlw1 Exp $
 
 DISTNAME=	e2guardian-5.5.5r
 CATEGORIES=	www
@@ -11,10 +11,11 @@ HOMEPAGE=	http://www.e2guardian.org/
 COMMENT=	Web content filtering proxy
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS=	autoconf automake perl pkg-config
-RCD_SCRIPTS+=	e2guardian
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
+USE_TOOLS=		autoconf automake perl pkg-config
+RCD_SCRIPTS+=		e2guardian
 
 # Fix bug in configure.ac: the paths are expanded too soon
 SUBST_CLASSES+=		pathfix
