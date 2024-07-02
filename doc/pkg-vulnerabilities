@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.213 2024/06/28 18:59:47 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.214 2024/07/02 20:22:56 adam Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26047,3 +26047,11 @@ samba4<4.19.7	memory-corruption	https://www.openwall.com/lists/oss-security/2024
 samba4>=4.20<4.20.2	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
 mit-krb5>=1.3<1.21.3	truncate-message	https://nvd.nist.gov/vuln/detail/CVE-2024-37370
 mit-krb5>=1.3<1.21.3	invalid-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2024-37371
+apache<2.4.60	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-39573
+apache<2.4.60	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-38477
+apache<2.4.60	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-38476
+apache<2.4.60	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-38475
+apache<2.4.60	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-38474
+apache<2.4.60	bypass-authentication	https://nvd.nist.gov/vuln/detail/CVE-2024-38473
+apache<2.4.60	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-38472
+apache<2.4.60	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-36387
