@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4280 2024/07/03 08:25:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4281 2024/07/03 08:38:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6797,3 +6797,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-trove-classifiers to 2024.7.2 [adam 2024-07-03]
 	Updated net/yt-dlp to 2024.7.2 [adam 2024-07-03]
 	Updated graphics/py-imageio to 2.34.2 [adam 2024-07-03]
+	Updated security/p11-kit to 0.25.4 [adam 2024-07-03]
+	Updated textproc/py-jsonschema-path to 0.3.3 [adam 2024-07-03]
