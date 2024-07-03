@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4274 2024/07/03 05:37:23 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4275 2024/07/03 06:06:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6789,3 +6789,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-rapidfuzz to 3.9.4 [adam 2024-07-03]
 	Updated graphics/py-tifffile to 2024.7.2 [adam 2024-07-03]
 	Updated textproc/py-xml2rfc to 3.22.0 [adam 2024-07-03]
+	Updated security/mozilla-rootcerts to 1.0.20240702 [wiz 2024-07-03]
