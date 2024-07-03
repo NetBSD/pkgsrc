@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.69 2023/05/09 12:16:01 thor Exp $
+# $NetBSD: tools.Linux.mk,v 1.70 2024/07/03 13:27:16 cheusov Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -95,6 +95,9 @@ TOOLS_PLATFORM.find?=		${_path}/find
 .  endif
 .  if exists(${_path}/gettext)
 TOOLS_PLATFORM.gettext?=	${_path}/gettext
+.  endif
+.  if exists(${_path}/git)
+TOOLS_PLATFORM.git?=		${_path}/git
 .  endif
 .  if exists(${_path}/m4)
 TOOLS_PLATFORM.m4?=		${_path}/m4

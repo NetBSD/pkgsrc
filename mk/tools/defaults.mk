@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.65 2024/04/12 19:53:25 riastradh Exp $
+# $NetBSD: defaults.mk,v 1.66 2024/07/03 13:27:16 cheusov Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,6 +82,7 @@ _TOOLS_VARNAME.file=		FILE_CMD
 _TOOLS_VARNAME.find=		FIND
 _TOOLS_VARNAME.gawk=		AWK
 _TOOLS_VARNAME.gem=		GEM
+_TOOLS_VARNAME.git=		GIT
 _TOOLS_VARNAME.gm4=		M4
 _TOOLS_VARNAME.gmake=		GMAKE
 _TOOLS_VARNAME.grep=		GREP

@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.303 2024/04/12 19:55:49 riastradh Exp $
+# $NetBSD: replace.mk,v 1.304 2024/07/03 13:27:16 cheusov Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -428,6 +428,16 @@ TOOLS_ALIASES.gawk=		awk
 TOOLS_DEPENDS.gem?=		${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 TOOLS_CREATE+=			gem
 TOOLS_PATH.gem=			${TOOLBASE}/bin/gem${RUBY_SUFFIX}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.git) && !empty(_USE_TOOLS:Mgit)
+.  if ${PKGPATH} == devel/git-base
+MAKEFLAGS+=			TOOLS_IGNORE.git=
+.  elif !empty(_TOOLS_USE_PKGSRC.git:M[yY][eE][sS])
+TOOLS_DEPENDS.git?=		git-base-[0-9]*:../../devel/git-base
+TOOLS_CREATE+=			git
+TOOLS_PATH.git=		${TOOLBASE}/bin/git
 .  endif
 .endif
 

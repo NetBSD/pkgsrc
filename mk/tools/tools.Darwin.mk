@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.66 2024/03/22 18:59:04 schmonz Exp $
+# $NetBSD: tools.Darwin.mk,v 1.67 2024/07/03 13:27:16 cheusov Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -62,6 +62,9 @@ TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 TOOLS_PLATFORM.gerep?=		/usr/bin/egrep
 TOOLS_PLATFORM.gfrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
+.if exists(/usr/bin/git)
+TOOLS_PLATFORM.git?=		/usr/bin/git
+.endif
 #
 # Avoid using the native gnumake and gm4.  On systems up to and including Big
 # Sur, the version of GNU m4 is from 2006 and unable to build autoconf 2.70.
