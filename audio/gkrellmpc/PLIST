@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/27 10:37:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/03 19:18:39 cheusov Exp $
 lib/gkrellm2/plugins/gkrellmpc.so
 share/doc/gkrellmpc/README.txt
-share/locale/ru/LC_MESSAGES/gkrellmpc.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/gkrellmpc.mo
