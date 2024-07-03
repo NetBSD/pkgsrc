@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/06/13 13:47:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2024/07/03 06:59:24 bsiegert Exp $
 
 DISTNAME=	filter-rspamd-0.1.8
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=poolpOrg/}
 GITHUB_PROJECT=	filter-rspamd
