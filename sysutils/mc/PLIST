@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/07/01 15:15:58 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/07/03 08:30:50 cheusov Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -50,26 +50,26 @@ libexec/mc/extfs.d/urar
 libexec/mc/extfs.d/uwim
 libexec/mc/extfs.d/uzip
 libexec/mc/extfs.d/uzoo
-libexec/mc/fish/README.fish
-libexec/mc/fish/append
-libexec/mc/fish/chmod
-libexec/mc/fish/chown
-libexec/mc/fish/fexists
-libexec/mc/fish/get
-libexec/mc/fish/hardlink
-libexec/mc/fish/info
-libexec/mc/fish/ln
-libexec/mc/fish/ls
-libexec/mc/fish/mkdir
-libexec/mc/fish/mv
-libexec/mc/fish/rmdir
-libexec/mc/fish/send
-libexec/mc/fish/unlink
-libexec/mc/fish/utime
 libexec/mc/mc-wrapper.csh
 libexec/mc/mc-wrapper.sh
 libexec/mc/mc.csh
 libexec/mc/mc.sh
+libexec/mc/shell/README.shell
+libexec/mc/shell/append
+libexec/mc/shell/chmod
+libexec/mc/shell/chown
+libexec/mc/shell/fexists
+libexec/mc/shell/get
+libexec/mc/shell/hardlink
+libexec/mc/shell/info
+libexec/mc/shell/ln
+libexec/mc/shell/ls
+libexec/mc/shell/mkdir
+libexec/mc/shell/mv
+libexec/mc/shell/rmdir
+libexec/mc/shell/send
+libexec/mc/shell/unlink
+libexec/mc/shell/utime
 ${PLIST.nls}man/es/man1/mc.1
 ${PLIST.nls}man/hu/man1/mc.1
 ${PLIST.nls}man/it/man1/mc.1
@@ -83,7 +83,7 @@ share/examples/mc/edit.indent.rc
 share/examples/mc/filehighlight.ini
 share/examples/mc/mc.default.keymap
 share/examples/mc/mc.emacs.keymap
-share/examples/mc/mc.ext
+share/examples/mc/mc.ext.ini
 share/examples/mc/mc.keymap
 share/examples/mc/mc.menu
 share/examples/mc/mcedit.menu
@@ -241,6 +241,7 @@ share/mc/syntax/as.syntax
 share/mc/syntax/aspx.syntax
 share/mc/syntax/assembler.syntax
 share/mc/syntax/awk.syntax
+share/mc/syntax/b.syntax
 share/mc/syntax/c.syntax
 share/mc/syntax/cabal.syntax
 share/mc/syntax/changelog.syntax
@@ -301,6 +302,7 @@ share/mc/syntax/perl.syntax
 share/mc/syntax/php.syntax
 share/mc/syntax/po.syntax
 share/mc/syntax/povray.syntax
+share/mc/syntax/privoxy.syntax
 share/mc/syntax/procmail.syntax
 share/mc/syntax/properties.syntax
 share/mc/syntax/protobuf.syntax
@@ -321,6 +323,7 @@ share/mc/syntax/swig.syntax
 share/mc/syntax/syntax.syntax
 share/mc/syntax/tcl.syntax
 share/mc/syntax/texinfo.syntax
+share/mc/syntax/toml.syntax
 share/mc/syntax/ts.syntax
 share/mc/syntax/tt.syntax
 share/mc/syntax/unknown.syntax

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.133 2024/07/01 14:53:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.134 2024/07/03 08:30:50 cheusov Exp $
 
-DISTNAME=	mc-4.8.28
-PKGREVISION=	4
+DISTNAME=	mc-4.8.31
 CATEGORIES=	sysutils
 # Supports HTTPS, but cert is invalid...
 MASTER_SITES=	http://ftp.midnight-commander.org/
@@ -48,7 +47,7 @@ CONFFILES+=	edit.indent.rc
 CONFFILES+=	filehighlight.ini
 CONFFILES+=	mc.default.keymap
 CONFFILES+=	mc.emacs.keymap
-CONFFILES+=	mc.ext
+CONFFILES+=	mc.ext.ini
 CONFFILES+=	mc.keymap
 CONFFILES+=	mc.menu
 CONFFILES+=	mcedit.menu
@@ -60,6 +59,6 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/mc
 CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/mc/${i}
 .endfor
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.30.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
