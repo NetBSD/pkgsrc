@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/06/13 12:49:39 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/07/03 06:49:54 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -1821,6 +1821,8 @@ go121/src/cmd/go/testdata/mod/example.com_retract_incompatible_v1.0.0.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_incompatible_v2.0.0+incompatible.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.0.0.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.9.0.txt
+go121/src/cmd/go/testdata/mod/example.com_retract_newergoversion_v1.0.0.txt
+go121/src/cmd/go/testdata/mod/example.com_retract_newergoversion_v1.2.0.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_noupgrade_v1.0.0.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-block.txt
 go121/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-blockwithcomment.txt
@@ -2269,6 +2271,7 @@ go121/src/cmd/go/testdata/script/list_perm.txt
 go121/src/cmd/go/testdata/script/list_pkgconfig_error.txt
 go121/src/cmd/go/testdata/script/list_replace_absolute_windows.txt
 go121/src/cmd/go/testdata/script/list_reserved.txt
+go121/src/cmd/go/testdata/script/list_retractions_issue66403.txt
 go121/src/cmd/go/testdata/script/list_shadow.txt
 go121/src/cmd/go/testdata/script/list_split_main.txt
 go121/src/cmd/go/testdata/script/list_std.txt
@@ -2667,6 +2670,7 @@ go121/src/cmd/go/testdata/script/test_flags.txt
 go121/src/cmd/go/testdata/script/test_fullpath.txt
 go121/src/cmd/go/testdata/script/test_fuzz.txt
 go121/src/cmd/go/testdata/script/test_fuzz_cache.txt
+go121/src/cmd/go/testdata/script/test_fuzz_cgo.txt
 go121/src/cmd/go/testdata/script/test_fuzz_chatty.txt
 go121/src/cmd/go/testdata/script/test_fuzz_cleanup.txt
 go121/src/cmd/go/testdata/script/test_fuzz_cov.txt
