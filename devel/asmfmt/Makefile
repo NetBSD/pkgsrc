@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2024/06/13 13:46:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.43 2024/07/03 06:59:19 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	asmfmt-1.3.2
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klauspost/}
 

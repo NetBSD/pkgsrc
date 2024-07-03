@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/06/13 13:46:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/03 06:59:19 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	gce_metadata_server-3.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=salrashid123/}
 
