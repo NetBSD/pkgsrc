@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/06/13 12:55:15 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/03 06:49:54 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -585,6 +585,7 @@ go122/src/cmd/cgo/internal/testplugin/testdata/issue53989/p/p.go
 go122/src/cmd/cgo/internal/testplugin/testdata/issue53989/plugin.go
 go122/src/cmd/cgo/internal/testplugin/testdata/issue62430/main.go
 go122/src/cmd/cgo/internal/testplugin/testdata/issue62430/plugin.go
+go122/src/cmd/cgo/internal/testplugin/testdata/issue67976/plugin.go
 go122/src/cmd/cgo/internal/testplugin/testdata/mangle/plugin.go
 go122/src/cmd/cgo/internal/testplugin/testdata/method/main.go
 go122/src/cmd/cgo/internal/testplugin/testdata/method/plugin.go
@@ -1844,6 +1845,8 @@ go122/src/cmd/go/testdata/mod/example.com_retract_incompatible_v1.0.0.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_incompatible_v2.0.0+incompatible.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.0.0.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.9.0.txt
+go122/src/cmd/go/testdata/mod/example.com_retract_newergoversion_v1.0.0.txt
+go122/src/cmd/go/testdata/mod/example.com_retract_newergoversion_v1.2.0.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_noupgrade_v1.0.0.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-block.txt
 go122/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-blockwithcomment.txt
@@ -1906,7 +1909,7 @@ go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.0.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.1.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.3.linux-amd64.txt
-go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.5.linux-amd64.txt
+go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go${PKGVERSION}.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.7.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.9.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22rc1.linux-amd64.txt
@@ -2274,6 +2277,7 @@ go122/src/cmd/go/testdata/script/list_perm.txt
 go122/src/cmd/go/testdata/script/list_pkgconfig_error.txt
 go122/src/cmd/go/testdata/script/list_replace_absolute_windows.txt
 go122/src/cmd/go/testdata/script/list_reserved.txt
+go122/src/cmd/go/testdata/script/list_retractions_issue66403.txt
 go122/src/cmd/go/testdata/script/list_shadow.txt
 go122/src/cmd/go/testdata/script/list_split_main.txt
 go122/src/cmd/go/testdata/script/list_std.txt
@@ -2664,6 +2668,7 @@ go122/src/cmd/go/testdata/script/test_flags.txt
 go122/src/cmd/go/testdata/script/test_fullpath.txt
 go122/src/cmd/go/testdata/script/test_fuzz.txt
 go122/src/cmd/go/testdata/script/test_fuzz_cache.txt
+go122/src/cmd/go/testdata/script/test_fuzz_cgo.txt
 go122/src/cmd/go/testdata/script/test_fuzz_chatty.txt
 go122/src/cmd/go/testdata/script/test_fuzz_cleanup.txt
 go122/src/cmd/go/testdata/script/test_fuzz_cov.txt
@@ -11908,9 +11913,14 @@ go122/test/fixedbugs/issue6513.dir/main.go
 go122/test/fixedbugs/issue6513.go
 go122/test/fixedbugs/issue65593.go
 go122/test/fixedbugs/issue6572.go
+go122/test/fixedbugs/issue65957.dir/a.go
+go122/test/fixedbugs/issue65957.dir/main.go
+go122/test/fixedbugs/issue65957.go
 go122/test/fixedbugs/issue66066.go
 go122/test/fixedbugs/issue66066b.go
 go122/test/fixedbugs/issue66096.go
+go122/test/fixedbugs/issue66575.go
+go122/test/fixedbugs/issue66575.out
 go122/test/fixedbugs/issue6671.go
 go122/test/fixedbugs/issue6703a.go
 go122/test/fixedbugs/issue6703b.go
