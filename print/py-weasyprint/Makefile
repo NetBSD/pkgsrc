@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/06/11 11:24:04 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/07/03 08:09:36 adam Exp $
 
-DISTNAME=	weasyprint-62.2
+DISTNAME=	weasyprint-62.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weasyprint/}
