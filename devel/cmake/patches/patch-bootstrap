@@ -1,15 +1,15 @@
-$NetBSD: patch-bootstrap,v 1.6 2023/12/07 17:34:27 adam Exp $
+$NetBSD: patch-bootstrap,v 1.7 2024/07/04 06:06:22 adam Exp $
 
 librhash requires -lcrypto when statically linked.
 
---- bootstrap.orig	2023-12-06 13:57:42.000000000 +0000
+--- bootstrap.orig	2024-07-02 14:40:35.000000000 +0000
 +++ bootstrap
-@@ -1797,7 +1797,7 @@ if test "x${bootstrap_system_librhash}"
-     cmake_c_flags="${cmake_c_flags} ${use_librhash_flags}"
-     cmake_cxx_flags="${cmake_cxx_flags} ${use_librhash_flags}"
+@@ -1826,7 +1826,7 @@ if test "x${bootstrap_system_librhash}"
+   else
+     use_librhash_ldflags="-lrhash"
    fi
--  libs="${libs} -lrhash"
-+  libs="${libs} -lrhash -lcrypto"
+-  libs="${libs} ${use_librhash_ldflags}"
++  libs="${libs} ${use_librhash_ldflags} -lcrypto"
  fi
  
  jsoncpp_cxx_flags=

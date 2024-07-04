@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.219 2024/06/04 08:33:04 adam Exp $
+# $NetBSD: Makefile,v 1.220 2024/07/04 06:06:21 adam Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Cross platform make
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
