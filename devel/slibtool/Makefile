@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/08/02 16:30:56 nia Exp $
+# $NetBSD: Makefile,v 1.10 2024/07/04 21:30:48 cheusov Exp $
 
 DISTNAME=	slibtool-0.5.34
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake m4
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
