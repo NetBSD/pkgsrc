@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4293 2024/07/04 22:19:24 taca Exp $
+$NetBSD: CHANGES-2024,v 1.4294 2024/07/04 22:21:32 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6826,3 +6826,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-pillow_heif to 0.17.0 [adam 2024-07-04]
 	Updated chat/ircd-hybrid to 8.2.45 [fox 2024-07-04]
 	Updated lang/php82 to 8.2.21 [taca 2024-07-04]
+	Updated sysutils/py-Glances to 4.1.2 [fox 2024-07-04]
