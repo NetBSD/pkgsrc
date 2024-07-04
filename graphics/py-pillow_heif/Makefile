@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/04/06 09:32:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/07/04 11:26:07 adam Exp $
 
-DISTNAME=	pillow_heif-0.16.0
+DISTNAME=	pillow_heif-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.5.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1.0:../../graphics/py-Pillow
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
