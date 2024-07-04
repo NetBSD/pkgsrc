@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2024/03/20 13:30:24 adam Exp $
+# $NetBSD: Makefile,v 1.45 2024/07/04 10:01:41 adam Exp $
 
-DISTNAME=	ccid-1.5.5
+DISTNAME=	ccid-1.6.0
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ccid.apdu.fr/
@@ -16,7 +16,7 @@ BUILD_DEFS+=	VARBASE
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex perl pkg-config
+USE_TOOLS+=		autoconf automake autoreconf flex perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -39,6 +39,9 @@ REPLACE_PERL=		src/convert_version.pl src/create_Info_plist.pl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	sbin share/doc/ccid
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
