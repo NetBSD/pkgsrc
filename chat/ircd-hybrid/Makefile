@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2024/06/29 01:10:14 fox Exp $
+# $NetBSD: Makefile,v 1.94 2024/07/04 21:59:11 fox Exp $
 
-DISTNAME=	ircd-hybrid-8.2.44
+DISTNAME=	ircd-hybrid-8.2.45
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 EXTRACT_SUFX=	.tgz
@@ -53,9 +53,9 @@ SUBST_SED.mpaths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
 SUBST_SED.mpaths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid|g"
 
 SUBST_CLASSES+=		rpaths
-SUBST_MESSAGE.rpaths=	Adjusting paths in reference.conf
+SUBST_MESSAGE.rpaths=	Adjusting paths in reference.ircd.conf
 SUBST_STAGE.rpaths=	pre-configure
-SUBST_FILES.rpaths=	doc/reference.conf
+SUBST_FILES.rpaths=	doc/reference.ircd.conf
 SUBST_SED.rpaths+=	-e "s|var/log|${VARBASE}/log/ircd-hybrid/logs|g"
 SUBST_SED.rpaths+=	-e "s|var/lib|${VARBASE}/log/ircd-hybrid/lib|g"
 
