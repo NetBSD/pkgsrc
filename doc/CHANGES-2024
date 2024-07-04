@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4289 2024/07/04 11:02:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4290 2024/07/04 11:13:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6816,3 +6816,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-unearth to 0.16.0 [adam 2024-07-04]
 	Updated textproc/py-orjson to 3.10.6 [adam 2024-07-04]
 	Updated databases/py-tortoise-orm to 0.21.4 [adam 2024-07-04]
+	Updated sysutils/py-crontab to 3.2.0 [adam 2024-07-04]
+	Updated textproc/py-validators to 0.30.0 [adam 2024-07-04]
+	Updated devel/py-hypothesis to 6.104.2 [adam 2024-07-04]
+	Updated devel/py-scikit-build-core to 0.9.8 [adam 2024-07-04]
