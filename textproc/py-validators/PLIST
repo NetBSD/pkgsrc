@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/07/02 13:45:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/07/04 11:08:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -32,6 +32,9 @@ ${PYSITELIB}/validators/crypto_addresses/btc_address.pyo
 ${PYSITELIB}/validators/crypto_addresses/eth_address.py
 ${PYSITELIB}/validators/crypto_addresses/eth_address.pyc
 ${PYSITELIB}/validators/crypto_addresses/eth_address.pyo
+${PYSITELIB}/validators/crypto_addresses/trx_address.py
+${PYSITELIB}/validators/crypto_addresses/trx_address.pyc
+${PYSITELIB}/validators/crypto_addresses/trx_address.pyo
 ${PYSITELIB}/validators/domain.py
 ${PYSITELIB}/validators/domain.pyc
 ${PYSITELIB}/validators/domain.pyo

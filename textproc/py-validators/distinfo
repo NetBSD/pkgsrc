@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2024/07/02 13:45:59 adam Exp $
+$NetBSD: distinfo,v 1.27 2024/07/04 11:08:03 adam Exp $
 
-BLAKE2s (validators-0.29.0.tar.gz) = b1a148f4d58075baf7507c8d2d6766088814a5ab9e4570163e4b9056cc182c71
-SHA512 (validators-0.29.0.tar.gz) = e8daedd2878f2e2e51c76c8df2141bf4594c5789ed803e9bec592572b7df4f0be22c3c1a948ae6137654cc3bc7a0c638100b264f05771f5b2a13ee10d62deb79
-Size (validators-0.29.0.tar.gz) = 67150 bytes
+BLAKE2s (validators-0.30.0.tar.gz) = 0129aec4338ee1a28ea2d5367a5c11f2dd82d55bbb02102df5884793c5ef3535
+SHA512 (validators-0.30.0.tar.gz) = 96247ccf9ea5db12f6b405971aac11f834f64a83b7e6efdc6d04c81a9ff2901ece786bc2ad2301c738ff0eae8031a6aa2a1fef629048e61c2f365ab172408f46
+Size (validators-0.30.0.tar.gz) = 68553 bytes
