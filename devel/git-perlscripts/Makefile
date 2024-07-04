@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/07/04 03:29:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/04 05:55:07 wiz Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -8,7 +8,7 @@ COMMENT=	Git commands that rely on Perl
 
 CONFLICTS+=	git-base<2.41.0nb1
 
-DEPENDS+=	git-base[0-9]*:../../devel/git-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	p5-DBD-SQLite>=0:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Error>=0.17015:../../devel/p5-Error
