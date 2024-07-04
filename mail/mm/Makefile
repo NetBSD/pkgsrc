@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/15 12:50:51 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/04 20:18:37 cheusov Exp $
 
 DISTNAME=	mm-0.96.0.14
 CATEGORIES=	mail
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.kermitproject.org/mm/
 COMMENT=	UNIX reimplementation of the TOPS-20 MM program
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax m4
 
 MAKE_FLAGS+=	OPT=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
