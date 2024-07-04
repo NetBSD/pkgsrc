@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/06/12 15:13:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/04 11:24:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -147,6 +147,12 @@ ${PYSITELIB}/pydantic/error_wrappers.pyo
 ${PYSITELIB}/pydantic/errors.py
 ${PYSITELIB}/pydantic/errors.pyc
 ${PYSITELIB}/pydantic/errors.pyo
+${PYSITELIB}/pydantic/experimental/__init__.py
+${PYSITELIB}/pydantic/experimental/__init__.pyc
+${PYSITELIB}/pydantic/experimental/__init__.pyo
+${PYSITELIB}/pydantic/experimental/pipeline.py
+${PYSITELIB}/pydantic/experimental/pipeline.pyc
+${PYSITELIB}/pydantic/experimental/pipeline.pyo
 ${PYSITELIB}/pydantic/fields.py
 ${PYSITELIB}/pydantic/fields.pyc
 ${PYSITELIB}/pydantic/fields.pyo
