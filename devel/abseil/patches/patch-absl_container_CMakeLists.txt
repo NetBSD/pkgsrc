@@ -1,0 +1,15 @@
+$NetBSD: patch-absl_container_CMakeLists.txt,v 1.1 2024/07/04 10:00:23 adam Exp $
+
+Fix configure.
+https://github.com/abseil/abseil-cpp/pull/1536
+
+--- absl/container/CMakeLists.txt.orig	2024-07-04 09:55:59.741137598 +0000
++++ absl/container/CMakeLists.txt
+@@ -213,6 +213,7 @@ absl_cc_library(
+   DEPS
+     absl::config
+     GTest::gmock
++  TESTONLY
+ )
+ 
+ absl_cc_test(

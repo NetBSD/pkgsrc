@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/01/30 18:22:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/07/04 10:00:22 adam Exp $
 include/absl/algorithm/algorithm.h
 include/absl/algorithm/container.h
 include/absl/base/attributes.h
@@ -725,7 +725,6 @@ lib/pkgconfig/absl_strings.pc
 lib/pkgconfig/absl_strings_internal.pc
 lib/pkgconfig/absl_symbolize.pc
 lib/pkgconfig/absl_synchronization.pc
-lib/pkgconfig/absl_test_allocator.pc
 lib/pkgconfig/absl_throw_delegate.pc
 lib/pkgconfig/absl_time.pc
 lib/pkgconfig/absl_time_zone.pc
