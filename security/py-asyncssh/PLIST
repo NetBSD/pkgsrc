@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/12/18 15:52:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/07/04 10:06:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -194,6 +194,9 @@ ${PYSITELIB}/asyncssh/stream.pyo
 ${PYSITELIB}/asyncssh/subprocess.py
 ${PYSITELIB}/asyncssh/subprocess.pyc
 ${PYSITELIB}/asyncssh/subprocess.pyo
+${PYSITELIB}/asyncssh/tuntap.py
+${PYSITELIB}/asyncssh/tuntap.pyc
+${PYSITELIB}/asyncssh/tuntap.pyo
 ${PYSITELIB}/asyncssh/version.py
 ${PYSITELIB}/asyncssh/version.pyc
 ${PYSITELIB}/asyncssh/version.pyo
