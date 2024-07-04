@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4287 2024/07/04 06:15:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4288 2024/07/04 10:07:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6808,3 +6808,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake-gui to 3.30.0 [adam 2024-07-04]
 	Updated devel/SDL2 to 2.30.5 [adam 2024-07-04]
 	Updated multimedia/assimp to 5.4.2 [adam 2024-07-04]
+	Updated devel/abseil to 20240116.2nb1 [adam 2024-07-04]
+	Updated security/ccid to 1.6.0 [adam 2024-07-04]
+	Updated security/gnutls to 3.8.6 [adam 2024-07-04]
+	Updated security/py-asyncssh to 2.15.0 [adam 2024-07-04]
