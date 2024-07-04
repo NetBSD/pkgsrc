@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2024/04/03 09:05:00 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/07/04 11:26:07 adam Exp $
 
-BLAKE2s (pillow_heif-0.16.0.tar.gz) = 16b63d5c1f9c114a0588f43fc06c171df54e07279e66e71c41f06291765e2b2c
-SHA512 (pillow_heif-0.16.0.tar.gz) = 9e4d4c557a520431747813f7bbae6d0e09977d848c7fc363cc25a7087243404c33db1ed4594cdafd1c680e6c1902232eea07a4054302ce4248c8f782f7766620
-Size (pillow_heif-0.16.0.tar.gz) = 14899409 bytes
+BLAKE2s (pillow_heif-0.17.0.tar.gz) = 7932583d6e469f753b34a930091315f950c48506d0d8acfe159be07dd7e65897
+SHA512 (pillow_heif-0.17.0.tar.gz) = ff3baf415c4356ea7c37476c1aca4b6629a12f0d51b6872fe08353b913755d8a5646034377262b6792f472b1e08bb862bd6664d37411e287e7167664643e9a5f
+Size (pillow_heif-0.17.0.tar.gz) = 14900010 bytes
 SHA1 (patch-libheif_linux__build__libs.py) = 27a9b7e53305fd8a9e77307416349fd9f0c834f4
