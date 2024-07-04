@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2024/05/13 14:21:01 adam Exp $
+$NetBSD: distinfo,v 1.15 2024/07/04 06:15:32 adam Exp $
 
-BLAKE2s (assimp-5.4.1.tar.gz) = 2e6d2ea893bc9c622fbfd51db5b8abef31261e1495a327f27e15ec46ce353497
-SHA512 (assimp-5.4.1.tar.gz) = 980db331ca39950359db116d36968b87f5fea4b470be52960dd983e2ec232e019cae754819182b63a095a13b1d98364d64bd02ac29db1ea4f627d095a03da742
-Size (assimp-5.4.1.tar.gz) = 53749203 bytes
-SHA1 (patch-contrib_zip_src_zip.h) = 1eac9382ac0536d4ede0b9c4f9e72c7ef1dfbf63
+BLAKE2s (assimp-5.4.2.tar.gz) = 3ab971e3476ee885044b79998b7becae7af3d9bd5022710eef9b205689825a79
+SHA512 (assimp-5.4.2.tar.gz) = 4bfcc3a1b5a0cf3f382560564cac67088e13c62500c3c77dcef03811e67debe72ff318f5ed145b204d5017b56cb4293f3fe14b4060ca193813cef42b12eebe9d
+Size (assimp-5.4.2.tar.gz) = 53807656 bytes
+SHA1 (patch-contrib_zip_src_zip.h) = 744aa7ffcec42ab3743124c954ef26daa80a8d31
