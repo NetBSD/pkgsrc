@@ -1,10 +1,10 @@
-$NetBSD: patch-contrib_zip_src_zip.h,v 1.3 2022/04/14 13:20:42 nros Exp $
+$NetBSD: patch-contrib_zip_src_zip.h,v 1.4 2024/07/04 06:15:32 adam Exp $
 
 Fix builds on some 32-bit architectures.
 
---- contrib/zip/src/zip.h.orig	2022-03-17 10:35:44.000000000 +0000
+--- contrib/zip/src/zip.h.orig	2024-07-03 19:37:24.000000000 +0000
 +++ contrib/zip/src/zip.h
-@@ -19,16 +19,6 @@
+@@ -34,15 +34,6 @@
  extern "C" {
  #endif
  
@@ -17,7 +17,6 @@ Fix builds on some 32-bit architectures.
 -typedef long ssize_t; /* byte count or error */
 -#endif
 -#endif
--
- #ifndef MAX_PATH
- #define MAX_PATH 32767 /* # chars in a path name including NULL */
- #endif
+ 
+ /**
+  * @mainpage
