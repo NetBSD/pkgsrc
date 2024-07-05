@@ -1,15 +1,15 @@
-$NetBSD: patch-lib_gvc_Makefile.am,v 1.3 2022/11/23 13:10:00 micha Exp $
+$NetBSD: patch-lib_gvc_Makefile.am,v 1.4 2024/07/05 10:34:12 micha Exp $
 
 Link with pthread library, if needed.
 
---- lib/gvc/Makefile.am.orig	2022-07-07 15:43:58.000000000 +0000
+--- lib/gvc/Makefile.am.orig	2024-07-04 07:59:36.000000000 +0000
 +++ lib/gvc/Makefile.am
-@@ -54,7 +54,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
- 	$(top_builddir)/lib/cdt/libcdt.la \
- 	$(top_builddir)/lib/cgraph/libcgraph.la \
+@@ -49,7 +49,7 @@ libgvc_la_LIBADD = $(libgvc_C_la_LIBADD)
  	$(top_builddir)/lib/pathplan/libpathplan.la \
+ 	$(top_builddir)/lib/cgraph/libcgraph.la \
+ 	$(top_builddir)/lib/cdt/libcdt.la \
 -	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS)
 +	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- libgvc_la_DEPENDENCIES = $(libgvc_C_la_DEPENDENCIES)
  
  .3.3.pdf:
+ 	rm -f $@; pdffile=$@; psfile=$${pdffile%pdf}ps; \
