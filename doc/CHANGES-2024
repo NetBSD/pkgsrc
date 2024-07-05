@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4298 2024/07/05 10:35:43 micha Exp $
+$NetBSD: CHANGES-2024,v 1.4299 2024/07/05 19:33:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6832,3 +6832,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-debug-toolbar to 4.4.3 [adam 2024-07-05]
 	Updated finance/gnucash to 5.7nb1 [wiz 2024-07-05]
 	Updated graphics/graphviz to 12.0.0 [micha 2024-07-05]
+	Updated lang/nodejs to 22.4.0 [adam 2024-07-05]
+	Updated security/ccid to 1.6.1 [adam 2024-07-05]
