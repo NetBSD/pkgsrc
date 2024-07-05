@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1574 2024/05/26 12:42:00 markd Exp $
+# $NetBSD: Makefile,v 1.1575 2024/07/05 19:51:46 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -385,6 +385,7 @@ SUBDIR+=	megatools
 SUBDIR+=	messagelib
 SUBDIR+=	mikutter
 SUBDIR+=	mimms
+SUBDIR+=	minikube
 SUBDIR+=	minitube
 SUBDIR+=	miniupnpc
 SUBDIR+=	miniupnpd
