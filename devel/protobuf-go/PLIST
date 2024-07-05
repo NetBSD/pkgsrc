@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/05 20:25:24 maya Exp $
+bin/generate-corpus
+bin/generate-protos
+bin/generate-types
+bin/pbdump
+bin/protoc-gen-go

@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2024/07/05 20:25:24 maya Exp $
+
+BLAKE2s (github.com_golang_protobuf_@v_v1.5.0.mod) = 0acc4b18c31f79cfba3382e00e247754a4ab48bb17f2fd03fe4ff0cebc509f99
+SHA512 (github.com_golang_protobuf_@v_v1.5.0.mod) = 467a3f6fb4c941cd55d8d4b2d6a2015966c60a8614691539c88c4bf0da2f8022055be8561cddd0e60b118f74f010be5998dd128b7b136f14edd2674e5650db2a
+Size (github.com_golang_protobuf_@v_v1.5.0.mod) = 129 bytes
+BLAKE2s (github.com_golang_protobuf_@v_v1.5.0.zip) = c420bb28718fe629af0fa6c580442783149025880b5d6303d8f75dcc2d9bcb90
+SHA512 (github.com_golang_protobuf_@v_v1.5.0.zip) = e91f339e9b4ccbdc3c7d4f8c3c0e23cbb5b55ef7ced715a7a80387232a25dc86918904e40159fda8a4d8bc20ed4404bbc15a425f24cac56d6c3eca1c1abefaec
+Size (github.com_golang_protobuf_@v_v1.5.0.zip) = 206670 bytes
+BLAKE2s (github.com_google_go-cmp_@v_v0.5.5.mod) = 54befdbebc1a7ed8c2f5de2cc688fab3ab3337a212c5f36bde6d427830820200
+SHA512 (github.com_google_go-cmp_@v_v0.5.5.mod) = cb203760fc6ca9c9d64811cf1342752faa5a95f27934c298407dc865f9561081210dd1b82b15ee2f5337b70d4c55d102d8884b5b9a5f70d9cbf85227a32b9713
+Size (github.com_google_go-cmp_@v_v0.5.5.mod) = 105 bytes
+BLAKE2s (github.com_google_go-cmp_@v_v0.5.5.zip) = 00a590848ddfef99577189347b85b13df8becea648322a6ca624712054e5637c
+SHA512 (github.com_google_go-cmp_@v_v0.5.5.zip) = 9cff1690cb177e70b1d67ddd305e4317e3d1ef2825f5f3ed4639210f7f2ee6e89ff03970495757b922f16fade5fafae5cc14c8da2b95694faa3fa48c63f3313d
+Size (github.com_google_go-cmp_@v_v0.5.5.zip) = 130974 bytes
+BLAKE2s (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.mod) = b9082cd5be0cf4d922cd04363acc12692e595a5560e43763d016b9dafa566584
+SHA512 (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.mod) = 659d18a7a3a1be45ff6dc9e7475276b82ee7f11c47d39b0c237d7f872836a1dbdfff0902f21d6cd8093663997865da92e3e5a4acf1ad6129f972dc5e667b4f05
+Size (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.mod) = 37 bytes
+BLAKE2s (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.zip) = 25da7d14b438716f25c63e7d333e680f6fac6a9c28fb3aef706e0d3ea9a670be
+SHA512 (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.zip) = c72b8b73f89624889a2874c1b2445cb82f0e545fccf6a7761a278f3f659eb19f5f1c8585641b8f89f2bcfc3817ad2c0e267751cfeeab949e287e43af5df57e28
+Size (golang.org_x_xerrors_@v_v0.0.0-20191204190536-9bdfabe68543.zip) = 22282 bytes
+BLAKE2s (google.golang.org_protobuf_@v_v1.26.0-rc.1.mod) = f782892e469e3758f9b25ae9ccc69ab8e30396afa00217ce47a7fe80fe3069d4
+SHA512 (google.golang.org_protobuf_@v_v1.26.0-rc.1.mod) = a7b2aad691925341e3d1f6d1d1453b68386902a4e2e1c0deb406bc157d04328c5519a01ce938a33a6e358cbd9dc0c2f862c9822bde5314d2eb9d416d7bf789d2
+Size (google.golang.org_protobuf_@v_v1.26.0-rc.1.mod) = 83 bytes
+BLAKE2s (protobuf-go-1.34.1.tar.gz) = 02ce9e08f3c392ff25c259670340706b66aa2768950620d92cd6d778d2c106aa
+SHA512 (protobuf-go-1.34.1.tar.gz) = b7be230422567a72372f07c79eb2cfd036259ad463debf53c1fc75f823612cf3722217d7bc3fe7c430ff5b147ff2d850dc7d2bf6427936c1b2feee1e2da528b0
+Size (protobuf-go-1.34.1.tar.gz) = 1507906 bytes
