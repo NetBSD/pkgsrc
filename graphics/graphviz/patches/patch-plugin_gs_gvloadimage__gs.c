@@ -1,4 +1,4 @@
-$NetBSD: patch-plugin_gs_gvloadimage__gs.c,v 1.4 2022/10/17 09:12:53 adam Exp $
+$NetBSD: patch-plugin_gs_gvloadimage__gs.c,v 1.5 2024/07/05 10:34:12 micha Exp $
 
 ghostscript-agpl enforces using gserrors.h which is not included
 by default in ghostscript-gpl, so conditionalise based upon which
